@@ -1,0 +1,287 @@
+# SPDX-License-Identifier: CC-BY-4.0
+# Copyright Contributors to the Egeria project.
+
+site_name: Egeria
+site_description: automatically exchanging metadata between tools and platforms, no matter the vendor
+copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2021 contributors to the Egeria project."
+repo_name: odpi/egeria
+repo_url: https://github.com/odpi/egeria
+site_url: https://odpi.github.io/egeria-docs/
+edit_uri: ""
+
+nav:
+  - Home: index.md
+  - Learn more:
+      - The challenge: introduction/challenge.md
+      - Our solution: introduction/overview.md
+      - Key concepts: introduction/key-concepts.md
+      - Patterns:
+          - Metadata server exchange: introduction/patterns/metadata-server-exchange.md # ./open-metadata-publication/website/solutions/metadata-server-exchange
+          - Repository conformance: introduction/patterns/repository-conformance.md
+          - Data manager integration: introduction/patterns/data-manager-integration.md # ./open-metadata-publication/website/solutions/data-manager-integration
+          - File lineage: introduction/patterns/file-lineage.md # ./open-metadata-publication/website/solutions/file-lineage
+  - Getting started:
+      - Dojo:
+          - Dojo introduction: getting-started/dojo/index.md
+          - Day 1:
+              - Egeria introduction: getting-started/dojo/1/introduction.md
+              - Egeria project introduction: getting-started/dojo/1/project-introduction.md
+              - Running Egeria: getting-started/dojo/1/running-egeria.md
+              - Configuring the OMAG Server Platform: getting-started/dojo/1/configuring-the-platform.md
+          - Day 2: getting-started/dojo/2/index.md
+          - Day 3: getting-started/dojo/3/index.md
+      - Hands-on labs:
+          - Hands-on labs overview: getting-started/hands-on-labs/index.md
+          - Options for running:
+              - Docker Compose: getting-started/hands-on-labs/docker-compose.md
+              - Kubernetes: getting-started/hands-on-labs/kubernetes.md
+              - Local machine: getting-started/hands-on-labs/local.md
+  - Guides:
+      - Community guide: guides/community.md
+      - Operations guide: guides/operations.md
+      - Building an asset catalog: guides/asset-catalog.md
+      - Planning guide: guides/planning.md # ./open-metadata-publication/website/planning-guide
+      - Administration:
+          - Administration guide: guides/admin/index.md # ./open-metadata-implementation/admin-services/docs
+          - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
+          - Configure OMAG servers:
+              - General notes: guides/admin/configuring-an-omag-server.md
+              - Configure metadata access point: guides/admin/configuring-a-metadata-access-point.md
+              - Configure metadata server: guides/admin/configuring-a-metadata-server.md
+              - Configure repository proxy: guides/admin/configuring-a-repository-proxy.md
+              - Configure conformance test server: guides/admin/configuring-a-conformance-test-server.md
+              - Configure view server: guides/admin/configuring-a-view-server.md
+              - Configure integration daemon: guides/admin/configuring-an-integration-daemon.md
+              - Configure engine host: guides/admin/configuring-an-engine-host.md
+              - Configure data engine proxy: guides/admin/configuring-a-data-engine-proxy.md
+              - Configure open lineage server: guides/admin/configuring-an-open-lineage-server.md
+      - Developer guide: guides/developer.md # ./open-metadata-publication/website/developer-guide
+      - Diagnostic guide: guides/diagnostic.md # ./open-metadata-publication/website/diagnostic-guide
+      - Conformance Test Suite:
+          - CTS overview: guides/cts/index.md # ./open-metadata-conformance-suite/docs
+          - Platform profiles:
+              - Platform origin: guides/cts/profiles/platform-origin.md
+          - Repository profiles:
+              - Metadata sharing: guides/cts/profiles/metadata-sharing.md
+              - Metadata maintenance: guides/cts/profiles/metadata-maintenance.md
+              - Effectivity dating: guides/cts/profiles/effectivity-dating.md
+              - Dynamic types: guides/cts/profiles/dynamic-types.md
+              - Graph queries: guides/cts/profiles/graph-queries.md
+              - Historical search: guides/cts/profiles/historical-search.md
+              - Entity proxies: guides/cts/profiles/entity-proxies.md
+              - Soft-delete and restore: guides/cts/profiles/soft-delete-restore.md
+              - Undo an update: guides/cts/profiles/undo-update.md
+              - Reidentify instance: guides/cts/profiles/reidentify-instance.md
+              - Retype instance: guides/cts/profiles/retype-instance.md
+              - Rehome instance: guides/cts/profiles/rehome-instance.md
+          - Performance profiles:
+              - Entity creation: guides/cts/profiles/entity-creation.md
+              - Entity search: guides/cts/profiles/entity-search.md
+              - Relationship creation: guides/cts/profiles/relationship-creation.md
+              - Relationship search: guides/cts/profiles/relationship-search.md
+              - Entity classification: guides/cts/profiles/entity-classification.md
+              - Classification search: guides/cts/profiles/classification-search.md
+              - Entity update: guides/cts/profiles/entity-update.md
+              - Relationship update: guides/cts/profiles/relationship-update.md
+              - Classification update: guides/cts/profiles/classification-update.md
+              - Entity undo: guides/cts/profiles/entity-undo.md
+              - Relationship undo: guides/cts/profiles/relationship-undo.md
+              - Entity retrieval: guides/cts/profiles/entity-retrieval.md
+              - Entity history retrieval: guides/cts/profiles/entity-history-retrieval.md
+              - Relationship retrieval: guides/cts/profiles/relationship-retrieval.md
+              - Relationship history retrieval: guides/cts/profiles/relationship-history-retrieval.md
+              - Entity history search: guides/cts/profiles/entity-history-search.md
+              - Relationship history search: guides/cts/profiles/relationship-history-search.md
+              - Graph queries: guides/cts/profiles/graph-queries.md
+              - Graph history queries: guides/cts/profiles/graph-history-queries.md
+              - Entity re-home: guides/cts/profiles/entity-re-home.md
+              - Relationship re-home: guides/cts/profiles/relationship-re-home.md
+              - Entity declassify: guides/cts/profiles/entity-declassify.md
+              - Entity re-type: guides/cts/profiles/entity-retype.md
+              - Relationship re-type: guides/cts/profiles/relationship-retype.md
+              - Entity re-identify: guides/cts/profiles/entity-re-identify.md
+              - Relationship re-identify: guides/cts/profiles/relationship-re-identify.md
+              - Relationship delete: guides/cts/profiles/relationship-delete.md
+              - Entity delete: guides/cts/profiles/entity-delete.md
+              - Entity restore: guides/cts/profiles/entity-restore.md
+              - Relationship restore: guides/cts/profiles/relationship-restore.md
+              - Relationship purge: guides/cts/profiles/relationship-purge.md
+              - Entity purge: guides/cts/profiles/entity-purge.md
+              - Environment: guides/cts/profiles/environment.md
+  - Reference:
+      - Types:
+          - Open Metadata Types:
+              - Overview of types: types/index.md # ./open-metadata-publication/website/open-metadata-types
+              - Area 0 types: types/0.md
+              - Area 1 types: types/1.md
+          - Metamodel: types/metamodel.md
+      - Services:
+          - Repository services (OMRS):
+              - Repository services design: services/omrs/index.md # ./open-metadata-implementation/repository-services/docs
+              - Cohorts: services/omrs/cohort.md
+              - Metadata repositories: services/omrs/metadata-repositories.md
+              - Metadata events: services/omrs/metadata-events.md
+          - Access services (OMAS):
+              - Open Metadata Access Services: services/omas/index.md # ./open-metadata-implementation/access-services/docs
+              - Asset catalog OMAS: services/omas/asset-catalog.md # ./open-metadata-implementation/access-services/asset-catalog/docs
+              - Asset consumer OMAS: services/omas/asset-consumer.md # ./open-metadata-implementation/access-services/asset-consumer/docs
+              - Asset lineage OMAS: services/omas/asset-lineage.md # ./open-metadata-implementation/access-services/asset-lineage/docs
+              - Asset owner OMAS: services/omas/asset-owner.md # ./open-metadata-implementation/access-services/asset-owner/docs
+              - Community profile OMAS: services/omas/community-profile.md # ./open-metadata-implementation/access-services/community-profile/docs
+              - Data engine OMAS: services/omas/data-engine.md # ./open-metadata-implementation/access-services/data-engine/docs
+              - Data manager OMAS: services/omas/data-manager.md # ./open-metadata-implementation/access-services/data-manager/docs
+              - Digital architecture OMAS: services/omas/digital-architecture.md # ./open-metadata-implementation/access-services/digital-architecture/docs
+              - Discovery engine OMAS: services/omas/discovery-engine.md # ./open-metadata-implementation/access-services/discovery-engine/docs
+              - Governance engine OMAS: services/omas/governance-engine.md # ./open-metadata-implementation/access-services/governance-engine/docs
+              - Governance program OMAS: services/omas/governance-program.md # ./open-metadata-implementation/access-services/governance-program/docs
+              - Security officer OMAS: services/omas/security-officer.md # ./open-metadata-implementation/access-services/security-officer/docs
+              - Subject area OMAS: services/omas/subject-area.md # ./open-metadata-implementation/access-services/subject-area/docs
+          - Common services:
+              - Common services overview: services/common/index.md
+              - Metadata security: services/common/security.md # ./open-metadata-implementation/common-services/metadata-security/docs
+              - Generic handlers: services/common/handlers.md # ./open-metadata-implementation/common-services/generic-handlers/docs
+          - Platform services: services/platform.md
+          - Governance servers:
+              - Governance servers overview: services/governance/index.md # ./open-metadata-implementation/governance-servers/docs
+              - Integration daemon services: services/governance/integration-daemon.md # ./open-metadata-implementation/governance-servers/integration-daemon-services/docs
+              - Engine host services: services/governance/engine-host.md # ./open-metadata-implementation/governance-servers/engine-host-services/docs
+              - Open lineage services (OLS): services/governance/ols.md # ./open-metadata-implementation/governance-servers/open-lineage-services/docs
+          - View services (OMVS):
+              - View services overview: services/omvs/index.md
+              - Glossary author view: services/omvs/glossary-author.md # ./open-metadata-implementation/view-services/glossary-author-view/docs
+          - Integration services (OMIS):
+              - Integration services overview: services/omis/index.md
+              - Database integrator: services/omis/database-integrator.md
+      - Frameworks:
+          - Audit logging (ALF): frameworks/alf.md # ./open-metadata-implementation/frameworks/audit-log-framework/docs
+          - Connectors (OCF): frameworks/ocf.md # ./open-metadata-implementation/frameworks/open-connector-framework/docs
+          - Discovery (ODF): frameworks/odf.md # ./open-metadata-implementation/frameworks/open-discovery-framework/docs
+          - Governance action (GAF): frameworks/gaf.md # ./open-metadata-implementation/frameworks/governance-action-framework/docs
+      - Concepts:
+          - General concepts: basic-concepts.md
+          - Egeria concepts:
+              - Archive manager: concepts/archive-manager.md
+              - Audit log: concepts/audit-log.md
+              - Configuration document: concepts/configuration-document.md
+              - Conformance test server: concepts/conformance-test-server.md
+              - Connected asset properties: concepts/connected-asset-properties.md
+              - Connection: concepts/connection.md
+              - Connector: concepts/connector.md
+              - Connector broker: concepts/connector-broker.md
+              - Connector provider: concepts/connector-provider.md
+              - Connector type: concepts/connector-type.md
+              - Data engine proxy: concepts/data-engine-proxy.md
+              - Endpoint: concepts/endpoint.md
+              - Engine host: concepts/engine-host.md
+              - Event bus: concepts/event-bus.md
+              - Integration daemon: concepts/integration-daemon.md
+              - Metadata access point: concepts/metadata-access-point.md
+              - Metadata server: concepts/metadata-server.md
+              - OMAG server: concepts/omag-server.md
+              - OMAG Server Platform: concepts/omag-server-platform.md
+              - OMAG subsystem: concepts/omag-subsystem.md
+              - Open lineage server: concepts/open-lineage-server.md
+              - Open metadata archive: concepts/open-metadata-archive.md
+              - Repository proxy: concepts/repository-proxy.md
+              - View server: concepts/view-server.md
+  - Connectors:
+      - Connectors overview: connectors/index.md
+      - Audit log store: connectors/audit-log-store-connector.md
+      - Cohort registry store: connectors/cohort-registry-store-connector.md
+      - Event mapper: connectors/event-mapper-connector.md
+      - Integration connector: connectors/integration-connector.md
+      - OMRS topic: connectors/omrs-topic-connector.md
+      - Open metadata archive store: connectors/open-metadata-archive-store-connector.md
+      - Open metadata topic: connectors/open-metadata-topic-connector.md
+      - Repository: connectors/repository-connector.md
+  # ./open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector/docs
+  # ./open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/docs
+  # ./open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs
+  - Release notes:
+      - Overview: release-notes/index.md
+      - Latest release: release-notes/latest.md
+      - Next release: release-notes/next.md
+      - Roadmap: release-notes/roadmap/index.md
+      - Older releases:
+          - v2.x:
+              - 2.11: release-notes/2-11.md
+              - "2.10": release-notes/2-10.md
+              - 2.9: release-notes/2-9.md
+              - 2.8: release-notes/2-8.md
+              - 2.7: release-notes/2-7.md
+              - 2.6: release-notes/2-6.md
+              - 2.5: release-notes/2-5.md
+              - 2.4: release-notes/2-4.md
+              - 2.3: release-notes/2-3.md
+              - 2.2: release-notes/2-2.md
+              - 2.1: release-notes/2-1.md
+              - 2.0: release-notes/2-0.md
+          - v1.x:
+              - 1.8: release-notes/1-8.md
+              - 1.7: release-notes/1-7.md
+              - 1.6: release-notes/1-6.md
+              - 1.5: release-notes/1-5.md
+              - 1.4: release-notes/1-4.md
+              - 1.3: release-notes/1-3.md
+              - 1.2: release-notes/1-2.md
+              - 1.1: release-notes/1-1.md
+              - 1.0: release-notes/1-0.md
+
+theme:
+  name: material
+  language: en
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+  palette:
+    - scheme: default
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.ico
+  logo: assets/images/egeria-header.png
+
+extra_css:
+  - assets/stylesheets/egeria.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/odpi/egeria
+      name: Egeria on GitHub
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/odpi
+      name: Egeria on Docker
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/tag/egeria
+      name: Egeria on Medium
+    - icon: fontawesome/brands/slack
+      link: https://lfaifoundation.slack.com/archives/C01F40J2XA8
+      name: Egeria on Slack
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - abbr
+  - pymdownx.snippets
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-[![License](https://img.shields.io/github/license/odpi/egeria)](LICENSE)
+[![License](https://img.shields.io/badge/license-CC--BY--4.0-green)](LICENSE)
 
 # README
 

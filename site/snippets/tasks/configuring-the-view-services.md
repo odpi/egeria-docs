@@ -3,7 +3,7 @@
 
 ## Configure the view services
 
-The [Open Metadata View Services (OMVS's)](/egeria/services/view) run in a [view server](/egeria/concepts/view-server).
+The [Open Metadata View Services (OMVS's)](/egeria-docs/services/view) run in a [view server](/egeria-docs/concepts/view-server).
 
 View services provide task-oriented, domain-specific services
 for user interfaces that integrate with open metadata. View services are part of a multi-tier architecture for
@@ -31,7 +31,7 @@ There are two types of view services, each with a different type of view service
 ### Solution view services
 
 A **solution view service** supports operations needed by a solution-oriented user interface. These are
-typically geared toward a specific [Open Metadata Access Service (OMAS)](/egeria/services/omas).
+typically geared toward a specific [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas).
 For example, the Glossary Author view service supports a user interface for creation and management of
 glossaries using the Subject Area OMAS.
 
@@ -186,7 +186,7 @@ platforms (`PlatformA` and `PlatformB`). The `serverInstanceName` is used to dis
 
 #### List view services
 
-It is possible to list the registered view services for an [OMAG Server Platform](/egeria/concepts/omag-server-platform)
+It is possible to list the registered view services for an [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
 using the following command:
 
 !!! get "GET - list view services"
@@ -235,7 +235,7 @@ various operations described below.
 
 #### List configured view services
 
-It is possible to list the configured view services for an [OMAG server](/egeria/concepts/omag-server)
+It is possible to list the configured view services for an [OMAG server](/egeria-docs/concepts/omag-server)
 using the following command:
 
 !!! get "GET - list configured view services"

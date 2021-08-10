@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically updating existing classifications.
 
-The [Open Metadata Repository Services (OMRS)](/egeria/services/omrs) interface for a metadata
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata
 repository defines optional methods for updating classifications:
 
 | Method | Description |

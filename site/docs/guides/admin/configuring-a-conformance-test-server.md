@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Configuring a [conformance test server](/egeria/concepts/conformance-test-server)
+# Configuring a [conformance test server](/egeria-docs/concepts/conformance-test-server)
 
-Each [type of OMAG Server](/egeria/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/egeria/concepts/configuration-document).
+Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
+a [configuration document](/egeria-docs/concepts/configuration-document).
 
 ![Configuration for a conformance test server](conformance-suite-config.png)
 

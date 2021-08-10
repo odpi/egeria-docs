@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically retrieving inter-related instances across potentially multiple degrees of separation.
 
-The [Open Metadata Repository Services (OMRS)](/egeria/services/omrs) interface for a metadata
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata
 repository defines methods for retrieving inter-related metadata instances across several degrees:
 
 | Method | Description |

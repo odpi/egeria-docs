@@ -3,12 +3,12 @@
 
 ## Configure the integration services
 
-The [integration services](/egeria/services/omis) (or Open Metadata Integration Services (OMIS) to give them
-their full name) run in an [integration daemon](/egeria/concepts/integration-daemon).
+The [integration services](/egeria-docs/services/omis) (or Open Metadata Integration Services (OMIS) to give them
+their full name) run in an [integration daemon](/egeria-docs/concepts/integration-daemon).
 
-Each integration service hosts one or more [integration connectors](/egeria/connectors/integration-connector).
+Each integration service hosts one or more [integration connectors](/egeria-docs/connectors/integration-connector).
 An integration connector is responsible for the exchange of metadata with a specific deployment of a third party technology.
-For example, the [database integrator](/egeria/services/omis/database-integrator) integration service
+For example, the [database integrator](/egeria-docs/services/omis/database-integrator) integration service
 supports integration connectors that work with relational databases (RDBMS).
 A deployment of this integration service in an integration daemon may host, say,
 two integration connectors each loading metadata from their own relational database server.
@@ -33,9 +33,9 @@ It is possible to get a description of each of the registered integration servic
 ### Configure an integration service
 
 Each integration service is configured with the network location of the
-[metadata access point](/egeria/concepts/metadata-access-point) /
-[metadata server](/egeria/concepts/metadata-server)
-running the appropriate [OMAS](/egeria/services/omas).
+[metadata access point](/egeria-docs/concepts/metadata-access-point) /
+[metadata server](/egeria-docs/concepts/metadata-server)
+running the appropriate [OMAS](/egeria-docs/services/omas).
 There are a set of options that the integration service supports
 along with the list of configuration properties for the integration connectors that will be run in the
 integration service.

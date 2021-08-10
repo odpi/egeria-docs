@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Configuring a [view server](/egeria/concepts/view-server)
+# Configuring a [view server](/egeria-docs/concepts/view-server)
 
-Each [type of OMAG Server](/egeria/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/egeria/concepts/configuration-document).
+Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
+a [configuration document](/egeria-docs/concepts/configuration-document).
 
 ![Configuration for a view server](view-server-config.png)
 
@@ -18,8 +18,8 @@ a [configuration document](/egeria/concepts/configuration-document).
 
 ## Configure the presentation server
 
-The [presentation server](/egeria/concepts/presentation-server) is a multi-tenant web application that calls
-view services running in a [view server](/egeria/concepts/view-server) to retrieve information and perform operations
+The [presentation server](/egeria-docs/concepts/presentation-server) is a multi-tenant web application that calls
+view services running in a [view server](/egeria-docs/concepts/view-server) to retrieve information and perform operations
 relating to metadata servers.
 
 A presentation server tenant is designed to support an organization. These may be independent organizations

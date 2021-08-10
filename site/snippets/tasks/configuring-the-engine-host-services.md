@@ -4,7 +4,7 @@
 ## Configure the engine host services
 
 The engine host services provide the base implementation of
-the [engine host](/egeria/concepts/engine-host) OMAG Server.
+the [engine host](/egeria-docs/concepts/engine-host) OMAG Server.
 
 There are two parts to configuring the Engine Host Services:
 
@@ -15,13 +15,13 @@ There are two parts to configuring the Engine Host Services:
 
 ### Specify location of governance engine
 
-The location of the [metadata server](/egeria/concepts/metadata-server) (or [metadata access point](/egeria/concepts/metadata-access-point))
+The location of the [metadata server](/egeria-docs/concepts/metadata-server) (or [metadata access point](/egeria-docs/concepts/metadata-access-point))
 running the Governance Engine OMAS, which will supply the definitions of the governance engines
 that will run in the engine services, is configured using two properties:
 
-- the [server url root](/egeria/concepts/omag-server/#platform-url-root)
+- the [server url root](/egeria-docs/concepts/omag-server/#platform-url-root)
   of the metadata server's OMAG Server Platform, and
-- the [name of the metadata server](/egeria/concepts/omag-server/#server-name).
+- the [name of the metadata server](/egeria-docs/concepts/omag-server/#server-name).
 
 !!! post "POST - specify location of governance engine"
     ```
@@ -40,23 +40,23 @@ that will run in the engine services, is configured using two properties:
 
 ### Configure the engines services
 
-The [engine services](/egeria/services/omes) (or Open Metadata Engine Services (OMES) to give them
+The [engine services](/egeria-docs/services/omes) (or Open Metadata Engine Services (OMES) to give them
 their full name) also run in the engine host.
 
 Each engine service provides support for a particular type of governance engine:
 
-- [Open Discovery Engines](/egeria/frameworks/odf)
-- [Governance Action Engines](/egeria/frameworks/gaf)
+- [Open Discovery Engines](/egeria-docs/frameworks/odf)
+- [Governance Action Engines](/egeria-docs/frameworks/gaf)
 
 Each engine service hosts one or more governance engines. A governance engine is a collection
 of governance services of a specific type.:
 
-- **Asset analysis** hosts [open discovery services](/egeria/frameworks/odf/discovery-engine)
+- **Asset analysis** hosts [open discovery services](/egeria-docs/frameworks/odf/discovery-engine)
   that analyse the content of an asset's real world counterpart,
-  generates [annotations](/egeria/frameworks/odf/discovery-annotation)
-  in an [open discovery analysis report](/egeria/frameworks/odf/discovery-analysis-report)
+  generates [annotations](/egeria-docs/frameworks/odf/discovery-annotation)
+  in an [open discovery analysis report](/egeria-docs/frameworks/odf/discovery-analysis-report)
   that is attached to the asset in the open metadata repositories.
-- **Governance action** hosts [governance action services](/egeria/frameworks/odf/governance-action-service)
+- **Governance action** hosts [governance action services](/egeria-docs/frameworks/odf/governance-action-service)
   that monitor changes in the metadata and initiate updates and other actions as a result.
 
 #### List engine services
@@ -79,9 +79,9 @@ administration services based on the `engineServiceURLMarker` value that you sup
 The other values are supplied on the configuration call.
 
 Each engine service is configured with the network location of the
-[metadata access point](/egeria/concepts/metadata-access-point) /
-[metadata server](/egeria/concepts/metadata-server)
-running the appropriate [OMAS](/egeria/services/omas).
+[metadata access point](/egeria-docs/concepts/metadata-access-point) /
+[metadata server](/egeria-docs/concepts/metadata-server)
+running the appropriate [OMAS](/egeria-docs/services/omas).
 There are a set of options that the engine service supports
 along with the list of configuration properties for the governance engines that will be run in the
 engine service.
@@ -124,8 +124,8 @@ the open metadata server when the engine host server starts up.
 
 Maintaining these definitions is described:
 
-- For discovery engines and services see [Discovery Engine OMAS](/egeria/services/omas/discovery-engine)
-- For governance action engines and services see [Governance Engine OMAS](/egeria/services/omas/governance-engine)
+- For discovery engines and services see [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine)
+- For governance action engines and services see [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine)
 
 ### Remove engine host services
 

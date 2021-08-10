@@ -3,8 +3,8 @@
 
 ## Load metadata
 
-[Open metadata archives](/egeria/concepts/open-metadata-archive)
-contain pre-canned metadata types and instances for [cohort members](/egeria/services/omrs/cohort/#cohort-members).
+[Open metadata archives](/egeria-docs/concepts/open-metadata-archive)
+contain pre-canned metadata types and instances for [cohort members](/egeria-docs/services/omrs/cohort/#cohort-members).
 
 Archives can be
 [added to the configuration document](#configure-metadata-to-load-on-startup) of a server
@@ -31,9 +31,9 @@ following command:
     of the OMAG Server Platform -- and the file name should not have any quotes around it.
 
 Alternatively it is possible to set up the list of open metadata archives as a list of
-[connections](/egeria/concepts/connection).
+[connections](/egeria-docs/concepts/connection).
 These connections refer to
-[open metadata archive connectors](/egeria/connectors/open-metadata-archive-store-connector)
+[open metadata archive connectors](/egeria-docs/connectors/open-metadata-archive-store-connector)
 that can read and retrieve the open metadata archive content.
 
 !!! post "POST - load from connection(s)"
@@ -60,7 +60,7 @@ use the following command:
     of the OMAG Server Platform -- and the file name should not have any quotes around it.
 
 Alternatively it is possible to set up the list of open metadata archives as a list of
-[connections](/egeria/concepts/connection).
+[connections](/egeria-docs/concepts/connection).
 These connections refer to connectors that can read and retrieve the open metadata archive content.
 
 !!! post "POST - specify connection(s) to load"

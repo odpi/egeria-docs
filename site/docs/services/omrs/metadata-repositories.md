@@ -4,7 +4,7 @@
 # Metadata repositories
 
 A metadata repository that supports the open metadata repository standards
-defined by the [Open Metadata Repository Services (OMRS)](../../services/omrs) is
+defined by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is
 called an "open metadata repository".
 
 ## Home metadata repositories
@@ -42,10 +42,10 @@ between members of the cohort when they connect.
 
 A metadata collection refers to a set of metadata instances that are being maintained and accessed as a
 coherent set of information.  These instances are explicitly typed using
-[open metadata type definitions (TypeDefs)](../../../introduction/key-concepts/#metadata-types).
+[open metadata type definitions (TypeDefs)](/egeria-docs/introduction/key-concepts/#metadata-types).
 
 Typically, metadata collections are stored in a single metadata repository.
-However, the [Open Metadata Access Services (OMAS)](../../omas) provide access to
+However, the [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) provide access to
 a federated metadata collection called the [enterprise metadata collection](#enterprise-metadata-collection).
 
 ### Enterprise metadata collection
@@ -53,7 +53,7 @@ a federated metadata collection called the [enterprise metadata collection](#ent
 The enterprise metadata collection is the metadata collection
 that is the combination of metadata from all metadata collections held by the
 open metadata repositories that are members of
-the same [open metadata repository cohorts](../cohort)
+the same [open metadata repository cohorts](cohort.md)
 as the server where the
 [enterprise repository services](../#enterprise-repository-services) are enabled.
 
@@ -80,7 +80,7 @@ OMRS-AUDIT-0001 The Open Metadata Repository Services (OMRS) is initializing
 OMRS-AUDIT-0003 The local repository is initializing with metadata collection id 1b96495f-82d3-4224-9fdd-31bcb84c224c
 ```
 
-If the server is connected to a cohort, the local [cohort registry](../cohort/#registry.md)
+If the server is connected to a cohort, the local [cohort registry](../cohort/#cohort-registry)
 sends the local metadata collection id and a registration event like the following:
 
 ```json linenums="1" hl_lines="3"

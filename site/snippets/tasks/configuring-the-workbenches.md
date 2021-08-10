@@ -13,7 +13,7 @@ The requested workbenches will begin to execute their tests as soon as the OMAG 
 ### Repository workbench
 
 To run a metadata repository through the Repository Workbench, first configure a CTS server in the
-[OMAG Server Platform](/egeria/concepts/omag-server-platform) by configuring its general properties
+[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) by configuring its general properties
 like server type, event bus, cohort, etc. Before starting the CTS server instance, configure the
 repository workbench within it using the following command:
 
@@ -38,7 +38,7 @@ repository workbench within it using the following command:
     tests are.
 
 !!! attention "Start the technology under test _after_ the CTS server"
-    This repository server to test (`myserver` in the example above) should be [configured and started](/egeria/guides/admin/configuring-a-metadata-server)
+    This repository server to test (`myserver` in the example above) should be [configured and started](/egeria-docs/guides/admin/configuring-a-metadata-server)
     _after_ starting the CTS repository workbench instance. Once the CTS server instance is started it will wait for
     the technology under test (the server named by the `tutRepositoryServerName` parameter) to be up and running
     before then starting its suite of tests.

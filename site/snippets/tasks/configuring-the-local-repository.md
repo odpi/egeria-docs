@@ -3,7 +3,7 @@
 
 ## Configure the local repository
 
-A [metadata server](/egeria/concepts/metadata-server) supports a local metadata repository that has
+A [metadata server](/egeria-docs/concepts/metadata-server) supports a local metadata repository that has
 native support for the
 [Open Metadata Repository Services (OMRS) types and instances](../../../repository-services/docs/metadata-meta-model.md).
 
@@ -81,7 +81,7 @@ can be configured for a given metadata server at a time.
 ### Remove the local repository
 
 This command removes all configuration for the local repository.
-This includes the [local metadata collection id](/egeria/services/omrs/metdata-repositories/#metadata-collection-id).
+This includes the [local metadata collection id](/egeria-docs/services/omrs/metdata-repositories/#metadata-collection-id).
 If a new local repository is added, it will have a new local metadata collection id and will
 not be able to automatically re-register with its cohort(s).
 

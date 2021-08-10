@@ -24,7 +24,7 @@ functionality being tested in a _profile_.
 ## Platform workbench
 
 The open metadata conformance platform workbench is responsible for testing
-the various APIs supported by an [Open Metadata and Governance (OMAG) Server Platform](/egeria/concepts/omag-server-platform).
+the various APIs supported by an [Open Metadata and Governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform).
 
 This workbench supports the following profiles:
 
@@ -39,11 +39,11 @@ an open metadata repository to connect and interact with other open metadata rep
 in a conformant way.
 
 It tests both the repository's repository services API and its ability to exchange events
-with the [OMRS cohort event topic](/egeria/services/omrs/metadata-events/#omrs-event-topic).
+with the [OMRS cohort event topic](/egeria-docs/services/omrs/metadata-events/#omrs-event-topic).
 
 The workbench uses the registration information that is passed when the technology
 under test registers with the same
-[open metadata repository cohort](/egeria/services/omrs/cohort)
+[open metadata repository cohort](/egeria-docs/services/omrs/cohort)
 as the conformance suite.
 It will confirm that the information received in the events matches the information returned
 by the technology under test's repository services.

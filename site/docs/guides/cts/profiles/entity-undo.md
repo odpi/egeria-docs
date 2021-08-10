@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically reversing the latest update to an existing entity instance.
 
-The [Open Metadata Repository Services (OMRS)](/egeria/services/omrs) interface for a metadata
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata
 repository defines an optional method for reverting updates on entity instances:
 
 | Method | Description |

@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically searching for existing entities based on their classification(s).
 
-The [Open Metadata Repository Services (OMRS)](/egeria/services/omrs) interface for a metadata
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata
 repository defines an optional method for searching for entity instances based on classification:
 
 | Method | Description |

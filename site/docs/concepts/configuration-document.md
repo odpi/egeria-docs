@@ -43,7 +43,7 @@ At the top of the configuration document are:
 
 - [Local server URL root](omag-server.md#platform-url-root), which defines the root of the network address for
   the [OMAG Server Platform](omag-server-platform.md) where the OMAG server will run.
-- [Event bus config](todo.md), which provides the configuration of the event bus (Apache Kafka or similar)
+- [Event bus config](/egeria-docs/guides/admin/configuring-a-metadata-access-point/#set-up-the-default-event-bus), which provides the configuration of the event bus (Apache Kafka or similar)
   where all the event topics that the server will use are located.
 
 Both of these elements provide default values for other configuration elements.
@@ -58,7 +58,7 @@ and enable performance improvements by allowing the server to ignore activity or
 metadata that is not relevant to its operation.
 
 Find more information on configuring each through the sub-sections of the
-[configuring an OMAG server](/egeria/guides/admin/configuring-an-omag-server) portion of the
+[configuring an OMAG server](/egeria-docs/guides/admin/configuring-an-omag-server) portion of the
 administration guide.
 
 ### Specific subsystem configurations
@@ -67,7 +67,7 @@ Different types of servers can be configured with other specific subsystems, suc
 registering with a cohort, configuring access services or others.
 
 Since these vary depending on the type of OMAG server, find more details in the sub-sections under
-the [configuring an OMAG server](/egeria/guides/admin/configuring-an-omag-server) portion of the administration guide.
+the [configuring an OMAG server](/egeria-docs/guides/admin/configuring-an-omag-server) portion of the administration guide.
 
 ### Audit trail
 
@@ -184,16 +184,16 @@ It is also possible to [write your own implementation :material-github:](https:/
 
 ### Configuring the connector
 
-See [configuring the configuration document store](/egeria/guides/admin/configuring-the-omag-server-platform/#configuration-store)
+See [configuring the configuration document store](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#configuration-store)
 for the command to install a particular configuration document store connector
 into the OMAG Server Platform.
 
 ## Further reading
 
-- [Open Connector Framework (OCF)](/egeria/frameworks/ocf)
+- [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf)
   defines open connectors and connections since many of the sections in the
   configuration document take connection objects for connectors.
-- [Configuring an OMAG server](/egeria/guides/admin/configuring-an-omag-server) provides more detail on
+- [Configuring an OMAG server](/egeria-docs/guides/admin/configuring-an-omag-server) provides more detail on
   the process of creating a configuration document for various types of OMAG servers.
 
 --8<-- "snippets/abbr.md"

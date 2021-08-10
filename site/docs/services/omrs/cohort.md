@@ -3,7 +3,7 @@
 
 # Cohorts
 
-An **open metadata repository cohort** is a collection of [servers](../../guides/admin/concepts/cohort-member.md)
+An **open metadata repository cohort** is a collection of [servers](#cohort-members)
 sharing metadata using the [Open Metadata Repository Services (OMRS)](index.md).
 This sharing is peer-to-peer.
 
@@ -43,8 +43,8 @@ Cohort membership is established dynamically. This is through the [cohort topic(
 
 To join an open metadata repository cohort, a server must integrate
 with the OMRS module. OMRS then manages the metadata exchange. When OMRS running inside the server is
-[configured to join a cohort](../../guides/admin/user/configuring-registration-to-a-cohort.md)
-it first adds a [registration event](../metadata-events/#registry-events) to the Cohort Topic(s).
+[configured to join a cohort](/egeria-docs/guides/admin)
+it first adds a [registration event](../metadata-events/#registry-events) to the cohort topic(s).
 This event identifies the server, its metadata repository (if any) and its capabilities.
 
 ![The first server to join the cohort issues a registration request and waits for others to join](repository-services-formation-of-a-cohort-1.png)
@@ -107,7 +107,7 @@ routed to the home repository by the enterprise repository services:
 
 Finally, as type definitions (TypeDefs) are added and updated, the cohort members send out
 events to allow the other members to verify that this type does not conflict with any of their types.
-Any conflicts in the types causes [audit log messages](component-descriptions/audit-log.md) to be logged in all
+Any conflicts in the types causes [audit log messages](/egeria-docs/concepts/audit-log) to be logged in all
 members, prompting action to resolve the conflicts.
 
 ![TypeDef validation](repository-services-formation-of-a-cohort-5.png)
@@ -122,18 +122,18 @@ This enables the other members to remove the parting member from their registrie
 Egeria provides a number of pre-built
 [cohort members](#cohort-members).
 
-One of them, the [repository proxy](../../guides/admin/concepts/repository-proxy.md)
+One of them, the [repository proxy](/egeria-docs/concepts/repository-proxy)
 provides a simple way to integrate a third party server into a cohort 
-by creating an [OMRS Repository Connector and optional Event Mapper Connector](../../adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors)
+by creating an [OMRS Repository Connector and optional Event Mapper Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh }
 to map between the third party APIs/events and the repository service's equivalents
 
 A more bespoke integration involves:
 
-- Creating an [OMRS repository connector and optional event mapper connector](../../adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors)
+- Creating an [OMRS repository connector and optional event mapper connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh }
 - Designing how to configure the OMRS Services for your metadata repository.
-  Typically this is done by extending the existing administration services of the
+  Typically, this is done by extending the existing administration services of the
   metadata repository, but Egeria also offers
-  some pre-built [administration services](../../guides/admin) that
+  some pre-built [administration services](/egeria-docs/guides/admin) that
   can be used or modified.
 - Plugging the OMRS and any administration services into the metadata repository's security
   module so that requests to the server can be secured against unauthorized access.
@@ -145,7 +145,7 @@ metadata use cases if it supports all integration methods. These are:
 
 - Support for an OMRS repository connector to allow open metadata API calls to the 
   repository to create, query, update and delete metadata stored in the repository.  
-    - The OMRS connectors support the [Open Connector Framework (OCF)](../../frameworks/ocf.md) to provide a call interface to 
+    - The OMRS connectors support the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) to provide a call interface to 
       the metadata repositories.
     - The OMRS Repository Connector API is a standard interface for all metadata repositories. This enables services such
       as the Enterprise OMRS Repository Connector to interact with 1 or many metadata repositories through the same interface.  
@@ -155,14 +155,14 @@ metadata use cases if it supports all integration methods. These are:
 
 ### Cohort members
 
-A **cohort member** is an [OMAG Server](../../guides/admin/concepts/omag-server.md) that is registered with
+A **cohort member** is an [OMAG Server](/egeria-docs/concepts/omag-server) that is registered with
 at least one open metadata repository cohort.
 
 ![Different types of cohort members](cohort-member-types.png)
 
 Management of a server's membership is handled by the [cohort services](../#cohort-services).
 
-The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](../omrs)
+The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
 interfaces which gives fine-grained[^1] metadata notifications and updates. During server start up,
 the repository services detect the configuration of at least one cohort and starts
 the **metadata highway manager**.
@@ -178,13 +178,13 @@ specific collections of valuable objects such as
 
 The types of cohort members include:
 
-- [Metadata Server](metadata-server.md)
-- [Metadata Access Point](metadata-access-point.md)
-- [Repository Proxy](repository-proxy.md)
-- [Conformance Test Server](conformance-test-server.md)
+- [Metadata Server](/egeria-docs/concepts/metadata-server)
+- [Metadata Access Point](/egeria-docs/concepts/metadata-access-point)
+- [Repository Proxy](/egeria-docs/concepts/repository-proxy)
+- [Conformance Test Server](/egeria-docs/concepts/conformance-test-server)
 
 !!! education "Explore hands-on"
-    The administration [hands-on lab](../../../getting-started/hands-on-labs)
+    The administration [hands-on lab](/egeria-docs/getting-started/hands-on-labs)
     called "Understanding Cohort Configuration Lab" provides an opportunity to query the
     cohort registries of cohort members as they exchange metadata for Coco Pharmaceuticals.
 
@@ -199,7 +199,7 @@ assembles a list of all members of the cohort.  This is saved in the
 The list of connections to the remote members of the cohort are passed to the OMRS Enterprise Connector Manager
 that in turn manages the configuration of the Enterprise OMRS Repository Connectors. The Enterprise OMRS
 Connector provides federated query support across the metadata cohort for the
-[Open Metadata Access Services (OMAS)](../omas.md).
+[Open Metadata Access Services (OMAS)](/egeria-docs/services/omas).
 
 When a metadata repository registers with the [cohort registry](#cohort-registry),
 the administrator may either supply a unique server identifier, or ask the OMRS to generate one.

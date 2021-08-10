@@ -1,113 +1,82 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Connected Asset Properties - part of the [Open Connector Framework (OCF)](../..)
+# Connected asset properties
 
-Connected Asset Properties are the properties known about an asset accessed through a connector.
+**Connected asset properties** are the properties known about an asset accessed through a connector,
+and are part of the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf).
 These properties are presented at three levels:
 
-* AssetSummary
-* AssetDetails
-* AssetUniverse
+## Asset summary
 
-## Asset Summary
+`AssetSummary` holds asset properties that are used for displaying details of
+an asset in summary lists or hover text:
 
-AssetSummary holds asset properties that are used for displaying details of
-an asset in summary lists or hover text.  It includes the following properties:
+| Property | Description |
+|---|---|
+| `type` | metadata type information for the asset |
+| `guid` | GUID for the asset |
+| `url` | external link for the asset |
+| `qualifiedName` | The official (unique) name for the asset. This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages. (Sourced from the `qualifiedName` attribute in `Referenceable` - [model 0010](/egeria-docs/types/0/0010-base-model)) |
+| `displayName` | A consumable name for the asset. Often a shortened form of the asset's qualifiedName for use on user interfaces and messages. The asset's displayName should be only be used for audit logs and error messages if the qualifiedName is not set. (Sourced from `displayName` attribute within `Asset` - [model 0010](/egeria-docs/types/0/0010-base-model)))
+| `shortDescription` | Short description about the asset. (Sourced from `assetSummary` within `ConnectionsToAsset` - [model 0205](/egeria-docs/types/2/0205-connection-linkage)) |
+| `description` | Full description of the asset. (Sourced from `description` attribute within `Asset` - [model 0010](/egeria-docs/types/0/0010-base-model)) |
+| `owner` | Name of the person or organization that owns the asset. (Sourced from the `AssetOwnership` classification - [model 0445](/egeria-docs/types/4/0445-governance-roles)) |
+| `zoneMembership` | List of governance zones assigned to the asset. (Sourced from the `AssetZoneMembership` classification - [model 0445](/egeria-docs/types/4/0424-governance-zones)) |
+| `classifications` | Full list of the classifications assigned to the asset along with their properties. |
 
- * **type** - metadata type information for the asset
- * **guid** - globally unique identifier for the asset
- * **url** - external link for the asset
- * **qualifiedName** - The official (unique) name for the asset. This is often defined by the IT systems
-    management organization and should be used (when available) on audit logs and error messages.
-    
-    (Sourced from the qualifiedName attribute in Referenceable - [model 0010](../../../../../open-metadata-publication/website/open-metadata-types/0010-Base-Model.md))
-    
- * **displayName** - A consumable name for the asset.  Often a shortened form of the asset's qualifiedName
-    for use on user interfaces and messages.   The asset's displayName should be only be used for audit logs and error
-    messages if the qualifiedName is not set. 
-    
-    (Sourced from displayName attribute  within Asset - [model 0010](../../../../../open-metadata-publication/website/open-metadata-types/0010-Base-Model.md)))
- 
- * **shortDescription** - short description about the asset.
-    
-    (Sourced from assetSummary within ConnectionsToAsset - [model 0205](../../../../../open-metadata-publication/website/open-metadata-types/0205-Connection-Linkage.md))
- 
- * **description** - full description of the asset.
-    
-    (Sourced from description attribute within Asset - [model 0010](../../../../../open-metadata-publication/website/open-metadata-types/0010-Base-Model.md)))
- 
- * **owner** - name of the person or organization that owns the asset.
-    
-    (Sourced from the AssetOwnership Classification - [model 0445](../../../../../open-metadata-publication/website/open-metadata-types/0445-Governance-Roles.md)).
- 
- * **zoneMembership** - list of governance zones assigned to the asset.
- 
-    (Sourced from the AssetZoneMembership classification - [model 0445](../../../../../open-metadata-publication/website/open-metadata-types/0424-Governance-Zones.md)))
- 
- * **classifications** - full list of the classifications assigned to the asset along with their properties.
+## Asset detail
 
-## Asset Detail
+`AssetDetail` extends `AssetSummary` to provide all the properties directly related to this asset:
 
-AssetDetail extends AssetSummary to provide all of the properties directly related to this asset.  It includes:
+| Property | Description |
+|---|---|
+| `ExternalIdentifiers` | List of identifiers for this asset that are used in other systems. |
+| `RelatedMediaReferences` | List of links to external media (images, audio, video) about this asset. |
+| `NoteLogs` | List of NoteLogs for this asset, often providing more detail on how to use the asset and its current status. |
+| `ExternalReferences` | List of links to additional information about this asset. |
+| `Connections` | List of connections defined to access this asset. |
+| `Licenses` | List of licenses associated with the asset. |
+| `Certifications` | List of certifications that have been awarded to this asset. |
 
- * **ExternalIdentifiers** - list of identifiers for this asset that are used in other systems.
- 
- * **RelatedMediaReferences** - list of links to external media (images, audio, video) about this asset.
- 
- * **NoteLogs** - list of NoteLogs for this asset, often providing more detail on how to use the asset and
-    its current status.
- 
- * **ExternalReferences** - list of links to additional information about this asset.
- 
- * **Connections** - list of connections defined to access this asset.
- 
- * **Licenses** - list of licenses associated with the asset.
- 
- * **Certifications** - list of certifications that have been awarded to this asset.
+## Asset universe
 
-## Asset Universe
+`AssetUniverse` extends `AssetDetail`, and adds information about the
+common open metadata entities related to this asset:
 
-AssetUniverse extends AssetDetail which extend AssetSummary.  AssetUniverse adds information about the
-common open metadata entities related to this asset.
-
- * **meanings** - glossary term(s) assigned to this asset.
- 
- * **schema** - details of the schema type associated with the asset.
- 
- * **feedback** - details of the likes, reviews and comments, that are connected to the asset.
- 
- * **knownLocations** - details of the known locations of the asset.
- 
- * **lineage** - details of the lineage for the asset.
- 
- * **relatedAssets** - details of the assets linked to this asset.
+| Property | Description |
+|---|---|
+| `meanings` | Glossary term(s) assigned to this asset. |
+| `schema` | Details of the schema type associated with the asset. |
+| `feedback` | Details of the likes, reviews and comments, that are connected to the asset. |
+| `knownLocations` | Details of the known locations of the asset. |
+| `lineage` | Details of the lineage for the asset. |
+| `relatedAssets` | Details of the assets linked to this asset. |
 
 ## Implementation details
 
-The [Connector Broker](connector-broker.md) does not have access
+The [connector broker](connector-broker.md) does not have access
 to a metadata repository because the OCF is metadata repository neutral.
 When it creates a connector, the connected asset properties
 are null.
 
-Egeria Open Metadata Access Services (OMASs) such as
-[Asset Consumer OMAS](../../../../access-services/asset-consumer), 
-[Asset Owner OMAS](../../../../access-services/asset-owner) and
-[Discovery Engine OMAS](../../../../access-services/discovery-engine), 
+[Egeria Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) such as
+[Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer), 
+[Asset Owner OMAS](/egeria-docs/services/omas/asset-owner) and
+[Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine), 
 include the connector broker in their clients and 
 support APIs for managing connections and creating
 connectors.
 
 Connectors created by the Egeria access services
-will include the Connected Asset Properties object
+will include the connected asset properties object
 configured to retrieve metadata from the
 same open metadata repository where the OMAS is running.
 
-The Connected Asset Properties
+The connected asset properties
 are retrieved from the open metadata repositories by
 [OCF Metadata Management](../../../../common-services/ocf-metadata-management).
 It will use the same user id that was used to create the
 connector.
-
 
 --8<-- "snippets/abbr.md"

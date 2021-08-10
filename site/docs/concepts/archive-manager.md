@@ -1,31 +1,28 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Archive Manager
+# Archive manager
 
-An [open metadata archive](../open-metadata-archive.md) provides pre-built definitions
+An [open metadata archive](../open-metadata-archive) provides pre-built definitions
 for types and metadata instances.
 
-**OMRSArchiveManager** manages the loading and unloading of open metadata archives for the local OMRS repository.
-It is invoked at server start up for a [cohort member](../cohort-member.md)
+`OMRSArchiveManager` manages the loading and unloading of open metadata archives for the local OMRS repository.
+It is invoked at server start up for a [cohort member](/egeria-docs/services/omrs/cohort/#cohort-members)
 and whenever a new open metadata archive is loaded via a REST API.
  
-During server start up, it first calls the [Repository Content Manager](repository-content-manager.md)
+During server start up, it first calls the [repository content manager](repository-content-manager.md)
 to load the types into the local repository (if any) and to maintain the cache of know and active types in the server.
 
-It then calls the [Local Repository Instance Event Processor](local-repository-instance-event-processor.md) to
-load the instances. 
+It then calls the [local repository instance event processor](local-repository-instance-event-processor.md) to
+load the instances.
 
 ## Related information
 
 A description of the utilities for building archives
-can be found in the [open-metadata-archives](../../../../open-metadata-resources/open-metadata-archives)
+can be found in the [open-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives){ target=gh }
 modules.
 
 Details for configuring a metadata server to load archives can be found in the
-[Administration Guide](../../../admin-services/docs/user).
-
-* [Configuring an open metadata archive in an OMAG Server](../../../admin-services/docs/user/configuring-the-startup-archives.md)
-* [Adding an open metadata archive to a running OMAG Server](../../../admin-services/docs/user/adding-archive-to-running-server.md)
+[administration guide](/egeria-docs/guides/admin/configuring-a-metadata-server/#load-metadata).
 
 --8<-- "snippets/abbr.md"

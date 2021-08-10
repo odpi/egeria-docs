@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-# Configuring a [metadata server](/egeria/concepts/metadata-server)
+# Configuring a [metadata server](/egeria-docs/concepts/metadata-server)
 
-Each [type of OMAG Server](/egeria/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/egeria/concepts/configuration-document).
+Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
+a [configuration document](/egeria-docs/concepts/configuration-document).
 
 A metadata server can be run standalone, without connecting to a cohort:
 

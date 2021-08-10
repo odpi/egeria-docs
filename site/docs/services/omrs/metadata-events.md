@@ -21,15 +21,15 @@ to act on it or ignore it.
 
 ## OMRS event topic
 
-The **OMRS event topic(s)** are one or more [topics](../../../basic-concepts/#topic)
-provided through an [event broker](../../../basic-concepts#event-broker) (typically Apache Kafka)
+The **OMRS event topic(s)** are one or more [topics](/egeria-docs/basic-concepts/#topic)
+provided through an [event broker](/egeria-docs/basic-concepts#event-broker) (typically Apache Kafka)
 that an [open metadata repository cohort](../cohort) uses to synchronize metadata
 between metadata repositories.
 
-They are accessed by the [Open Metadata Repository Services (OMRS)](../../omrs)
-components through the [OMRS topic connector](component-descriptions/connectors/omrs-topic-connector.md).
+They are accessed by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
+components through the [OMRS topic connector](/egeria-docs/connectors/omrs-topic-connector).
 
-The OMRS topic connector is a pluggable [OCF](../../frameworks/ocf.md) connector
+The OMRS topic connector is a pluggable [OCF](/egeria-docs/frameworks/ocf) connector
 that allows the use of different messaging infrastructures to
 support the OMRS event topic(s) without affecting the implementation of the OMRS.
 
@@ -62,16 +62,16 @@ A cohort can be configured to use:
     paid to upgrading the back-level server so it can use the three topics.
 
 Details of configuring the different topic options can be found in the
-[administration guide](../../guides/admin/configuring-registration-to-a-cohort.md).
+[administration guide](/egeria-docs/guides/admin).
 
 ## Enterprise OMRS event topic
 
-The [enterprise repository services](../../omrs/#enterprise-repository-services)
+The [enterprise repository services](/egeria-docs/services/omrs/#enterprise-repository-services)
 combine the [OMRS events](#omrs-events) from all [open metadata repository cohorts](../cohort)
 that the server is connected to and makes them available to each local
-[Open Metadata Access Service (OMAS)](../omas.md).  This is called the
+[Open Metadata Access Service (OMAS)](/egeria-docs/services/omas).  This is called the
 **enterprise OMRS event topic**. By default, it is implemented as an
-[in-memory open metadata topic](../../adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/inmemory-open-metadata-topic-connector).
+[in-memory open metadata topic :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/inmemory-open-metadata-topic-connector){ target=gh }.
 
 ## Event types
 
@@ -85,7 +85,7 @@ Every event has a:
       (The only time this is not set is when a message is sent from a server that does not have a
       local metadata repository configured.)
     - The server name, type and organization are optional descriptive fields used in audit logging and problem determination.
-      These values are set up through the [administration services](../../guides/admin/user).
+      These values are set up through the [administration services](/egeria-docs/guides/admin).
 - Version - the version number of the event (set to `OMRS V1.0` in the initial version).
 
 The setting of the category determines which category-specific section is used.
@@ -111,7 +111,7 @@ Registry events are used by metadata servers to register with an
 TypeDef events are used by members of an
 [open metadata cohort](../cohort)
 to exchange information about the
-[open metadata types](../../../types)
+[open metadata types](/egeria-docs/types)
 they support.
 
 ![TypeDef events](typedef-event-formats.png)

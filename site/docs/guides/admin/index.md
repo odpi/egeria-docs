@@ -3,11 +3,11 @@
 
 # Administration guide
 
-The Egeria technology principally runs on the [Open Metadata and Governance (OMAG) Server Platform](concepts/omag-server-platform.md).
-This platform hosts one or more [OMAG servers](concepts/omag-server.md),
+The Egeria technology principally runs on the [Open Metadata and Governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform).
+This platform hosts one or more [OMAG servers](/egeria-docs/concepts/omag-server),
 each supporting a variety of open metadata and governance capabilities.
 
-![OMAG Server Platforms running in different cloud platforms or data centers, each hosting OMAG Servers that are providing specialist integration capability for different tools](../../introduction/egeria-distributed-operation.png)
+![OMAG Server Platforms running in different cloud platforms or data centers, each hosting OMAG Servers that are providing specialist integration capability for different tools](/egeria-docs/introduction/egeria-distributed-operation.png)
 
 In the illustration above, the OMAG Server Platforms are the blue, rounded boxes
 and the orange circles are the OMAG Servers. The green clouds represent different cloud
@@ -30,21 +30,21 @@ and the different types of OMAG Servers that run on it.
 
 ## OMAG subsystems
 
-An [OMAG server](concepts/omag-server.md) is a set of configured [OMAG subsystems](concepts/omag-subsystem.md)
-supported by the [OMAG Server Platform](concepts/omag-server-platform.md).
+An [OMAG server](/egeria-docs/concepts/omag-server) is a set of configured [OMAG subsystems](/egeria-docs/concepts/omag-subsystem)
+supported by the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
 Each subsystem supports a particular type of technology, so it can exchange metadata with the
 open metadata ecosystem. Some technologies are sources of metadata, others just consume metadata
 and then there are technologies that have a two-way exchange of metadata with the open metadata ecosystem.
 
 The OMAG subsystems that are to be enabled in a specific instance of an OMAG server
-are defined in a [configuration document](concepts/configuration-document.md).
+are defined in a [configuration document](/egeria-docs/concepts/configuration-document).
 When the configuration document is loaded into the OMAG Server Platform, the OMAG server that it describes
 is started, and the subsystems defined in the configuration document are activated for that server.
 
 ## OMAG servers
 
 In an open metadata landscape, there may be multiple
-instances of [OMAG servers](concepts/omag-server.md) running in an [OMAG Server Platform](concepts/omag-server-platform.md),
+instances of [OMAG servers](/egeria-docs/concepts/omag-server) running in an [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform),
 each performing a different role.
 Each of these server instances would have their own configuration document allowing them
 to have different subsystems active.
@@ -62,7 +62,7 @@ omag.server.{serverName}.config
 The administration services that set up this file all begin with a URL like this:
 
 ```
-.../open-metadata/admin-services/users/{adminUserId}/servers/{serverName}/...
+.../open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/...
 ```
 
 The `serverName` specified on these calls determines which configuration
@@ -84,14 +84,14 @@ restarts of the OMAG Server Platform.
 
 ## Examples of configuration calls
 
-The admin-services modules has three [Postman](../../../../developer-resources/tools/Postman.md)
+The admin-services modules has three [Postman :material-github:](https://github.com/odpi/egeria/blob/master/developer-resources/tools/Postman.md){ target=gh }
 collections to illustrate many of the configuration and operation calls:
 
-- [Egeria-admin-services-platform-configuration.postman_environment.json](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-platform-configuration.postman_collection.json) -
+- [Egeria-admin-services-platform-configuration.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-platform-configuration.postman_collection.json){ target=gh } -
   setting up and configuring the OMAG Server Platform.
-- [Egeria-admin-services-server-configuration.postman_environment.json](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-server-configuration.postman_collection.json) -
+- [Egeria-admin-services-server-configuration.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-server-configuration.postman_collection.json){ target=gh } -
   setting up and configuring the variety of OMAG Servers.
-- [Egeria-admin-services-operational.postman_environment.json](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-operational.postman_collection.json) -
+- [Egeria-admin-services-operational.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-operational.postman_collection.json){ target=gh } -
   operating the OMAG Servers.
 
 --8<-- "snippets/abbr.md"

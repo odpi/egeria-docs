@@ -4,7 +4,7 @@
 # Platform origin profile
 
 The platform origin profile requires that an [Open Metadata and
-Governance (OMAG) Server Platform](/egeria/concepts/omag-server-platform) is able to report its origin.
+Governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform) is able to report its origin.
 
 ## Origin identifier
 

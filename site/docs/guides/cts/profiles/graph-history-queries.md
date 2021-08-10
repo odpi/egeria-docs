@@ -11,7 +11,7 @@ hide:
 The performance of programmatically retrieving inter-related instances across potentially multiple degrees of separation,
 for a given point in time.
 
-The [Open Metadata Repository Services (OMRS)](/egeria/services/omrs) interface for a metadata
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata
 repository defines methods for retrieving inter-related metadata instances across several degrees at a given
 point in time in the past, by passing in an `asOfTime` parameter (captured during the execution of the
 [entity update](entity-update.md) profile):

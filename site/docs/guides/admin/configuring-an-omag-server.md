@@ -3,15 +3,15 @@
 
 # Configuring an OMAG server
 
-An [OMAG server](concepts/omag-server.md) is a configured set
+An [OMAG server](/egeria-docs/concepts/omag-server.md) is a configured set
 of services and connectors that support the integration of a particular type of technology.
 
-There are [different types of OMAG Server](concepts/omag-server.md#types-of-omag-server)
+There are [different types of OMAG Server](/egeria-docs/concepts/omag-server.md#types-of-omag-server)
 for each type of technology.
 Each are configured separately and then linked together to form
 a connected ecosystem.
 
-The [configuration document](concepts/configuration-document.md)
+The [configuration document](/egeria-docs/concepts/configuration-document.md)
 for the OMAG server determines which OMAG subsystems (and hence the types of open
 metadata and governance services) should be activated in the OMAG Server.
 For example:
@@ -23,13 +23,13 @@ For example:
 - Which cohorts to connect to.
 
 Each of the configuration commands builds up sections in the configuration document.
-This document is stored in the [configuration store](concepts/configuration-document-store-connector.md) after each
+This document is stored in the [configuration store](/egeria-docs/concepts/configuration-document/#storage) after each
 configuration request, so
 it is immediately available for use each time the open metadata services are activated
 in the OMAG server.
 
 Many of the configuration values are
-[connections](../../../frameworks/open-connector-framework/docs/concepts/connection.md) to allow
+[connections](/egeria-docs/concepts/connection) to allow
 the server to create the connectors to the resources it needs.
 
 These connectors enable Egeria to run in different deployment environments and

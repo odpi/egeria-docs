@@ -10,8 +10,8 @@ Egeria provides [fine-grained security control for metadata access :material-git
 It is implemented in a server security connector
 that is called whenever requests are made for to the server.
 
-Security is configured for a specific [OMAG server](/egeria/concepts/omag-server) by adding a connection
-for this connector to the server's [configuration document](/egeria/concepts/configuration-document)
+Security is configured for a specific [OMAG server](/egeria-docs/concepts/omag-server) by adding a connection
+for this connector to the server's [configuration document](/egeria-docs/concepts/configuration-document)
 using the following command.
 
 !!! post "POST - configure security connector"

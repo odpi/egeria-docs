@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically searching for existing relationship instances.
 
-The [Open Metadata Repository Services (OMRS)](/egeria/services/omrs) interface for a metadata
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata
 repository defines optional methods for searching for relationship instances:
 
 | Method | Description |

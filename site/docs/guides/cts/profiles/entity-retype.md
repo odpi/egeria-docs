@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically changing the type of an existing entity instance.
 
-The [Open Metadata Repository Services (OMRS)](/egeria/services/omrs) interface for a metadata
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata
 repository defines an optional method for changing the type of entity instances:
 
 | Method | Description |

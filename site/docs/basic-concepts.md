@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Basic concepts
+# General concepts
 
 ## Application Programming Interface (API)
 
@@ -11,10 +11,10 @@ the [REST API :material-dock-window:](https://en.wikipedia.org/wiki/Representati
 style that piggy-backs on top of the HTTP protocol that powers the Internet. Egeria makes extensive use of REST APIs.
 
 ??? education "Further information"
-    Details of the different types of APIs provided by Egeria can be found in the [developer guide](guides/developer).
+    Details of the different types of APIs provided by Egeria can be found in the [developer guide](/egeria-docs/guides/developer).
     In addition, it is possible to automatically catalog details of the APIs that your organization uses:
     
-    - [Cataloguing API](../../../open-metadata-implementation/integration-services/api-integrator)
+    - [Cataloguing API :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/api-integrator){ target=gh }
 
 ## Event
 
@@ -24,13 +24,13 @@ It is sent on a [topic](#topic) to share its information with other servers.
 ??? education "Further information"
     Details of the different types of events used by Egeria
 
-    - [OMRS Topic Events](../../../open-metadata-implementation/repository-services/docs/event-descriptions) - for open metadata repository cohorts
-    - [InTopic Events](../../../open-metadata-implementation/access-services/docs/concepts/client-server/in-topic.md) - for outgoing events to an Open Metadata Access Service (OMAS)
-    - [OutTopic Events](../../../open-metadata-implementation/access-services/docs/concepts/client-server/out-topic.md) - for incoming events from an Open Metadata Access Service (OMAS)
+    - [OMRS topic events](/egeria-docs/services/omrs/metadata-events/#omrs-events) - for open metadata repository cohorts
+    - [InTopic Events](/egeria-docs/services/omas/client-server/#in-topic) - for outgoing events to an Open Metadata Access Service (OMAS)
+    - [OutTopic Events](/egeria-docs/services/omas/client-server/#out-topic) - for incoming events from an Open Metadata Access Service (OMAS)
 
     In addition, it is possible to automatically catalog details of the types of events that your organization uses:
     
-    - [Cataloguing topics and event types for an event broker](../../../open-metadata-implementation/integration-services/topic-integrator)
+    - [Cataloguing topics and event types for an event broker :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/topic-integrator){ target=gh }
 
 ## Event Broker
 
@@ -49,12 +49,12 @@ As such, each topic is accessed through an
 [open metadata topic connector](../connector-catalog/runtime-connectors.md#Open Metadata Topic Connectors).
 
 ??? education "Further information"
-    - [Configuring the event broker for Egeria](../../../open-metadata-implementation/admin-services/docs/concepts/event-bus.md)
-    - [Cataloguing topics and event types for an event broker](../../../open-metadata-implementation/integration-services/topic-integrator)
+    - [Configuring the event broker for Egeria](/egeria-docs/concepts/event-bus.md)
+    - [Cataloguing topics and event types for an event broker :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/topic-integrator){ target=gh }
 
 ## Topic
 
-A topic is a service provided by an [Event Broker](event-broker.md) that offers
+A topic is a service provided by an [event broker](#event-broker) that offers
 a publish-subscribe capability for a specific type of event.
 
 Multiple servers can read and write events to a topic.
@@ -66,12 +66,12 @@ order, but that is not necessarily guaranteed since it depends on the type and c
 ??? education "Further information"
     Details of the different types of topics used by Egeria
 
-    - [OMRSTopic](../../../open-metadata-implementation/repository-services/docs/omrs-event-topic.md) - for open metadata repository cohorts
-    - [InTopic](../../../open-metadata-implementation/access-services/docs/concepts/client-server/in-topic.md) - for sending events to an Open Metadata Access Service (OMAS)
-    - [OutTopic](../../../open-metadata-implementation/access-services/docs/concepts/client-server/out-topic.md) - for receiving events from an Open Metadata Access Service (OMAS)
+    - [OMRSTopic](/egeria-docs/services/omrs/metadata-events/#omrs-event-topic) - for open metadata repository cohorts
+    - [InTopic](/egeria-docs/services/omas/client-server/#in-topic) - for sending events to an Open Metadata Access Service (OMAS)
+    - [OutTopic](/egeria-docs/services/omas/client-server/#out-topic) - for receiving events from an Open Metadata Access Service (OMAS)
 
     In addition, it is possible to automatically catalog details of the event brokers that your organization uses:
     
-    - [Cataloguing topics and event types for an event broker](../../../open-metadata-implementation/integration-services/topic-integrator)
+    - [Cataloguing topics and event types for an event broker :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/topic-integrator){ target=gh }
 
 --8<-- "snippets/abbr.md"

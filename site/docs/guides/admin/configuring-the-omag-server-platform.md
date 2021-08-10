@@ -3,16 +3,16 @@
 
 # Configuring the OMAG Server Platform
 
-The [OMAG Server Platform](/egeria/concepts/omag-server-platform) is a JVM process that includes a Tomcat
+The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) is a JVM process that includes a Tomcat
 web server and uses [Spring Boot :material-dock-window:](https://spring.io/){ target=spring } to support REST APIs.
 
 ## Default setup
 
 - REST APIs are registered at `https://localhost:9443`. This address is called the platform's
-  [platform's URL root](/egeria/concepts/omag-server/#platform-url-root)
-  and is configured in a number of places in the [OMAG server's](/egeria/concepts/omag-server) configuration.
+  [platform's URL root](/egeria-docs/concepts/omag-server/#platform-url-root)
+  and is configured in a number of places in the [OMAG server's](/egeria-docs/concepts/omag-server) configuration.
 - The platform supports no specific security authorization.
-- All configuration is stored in encrypted files - one for each [OMAG server](/egeria/concepts/omag-server)
+- All configuration is stored in encrypted files - one for each [OMAG server](/egeria-docs/concepts/omag-server)
   configured to run on it.
 
 !!! attention "Useful for development, be wary for production"
@@ -26,12 +26,12 @@ web server and uses [Spring Boot :material-dock-window:](https://spring.io/){ ta
 
 ### Configuration store
 
-The [configuration document](/egeria/concepts/configuration-document)
-is the place where the configuration for a single [OMAG server](/egeria/concepts/omag-server)
+The [configuration document](/egeria-docs/concepts/configuration-document)
+is the place where the configuration for a single [OMAG server](/egeria-docs/concepts/omag-server)
 is stored. This may include security certificates and passwords.
 
 By default, the configuration document is stored in its own encrypted file in the home
-directory of the [OMAG Server Platform](/egeria/concepts/omag-server-platform), named:
+directory of the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform), named:
 
 ```
 omag.server.{serverName}.config
@@ -56,7 +56,7 @@ You may also wish to:
 
 All of these options are possible because the configuration document
 store is implemented in a
-[configuration document store connector](/egeria/concepts/configuration-document/#storage).
+[configuration document store connector](/egeria-docs/concepts/configuration-document/#storage).
 It is therefore possible to change the implementation or behavior
 of this connector with a simple configuration change to the
 OMAG Server Platform.
@@ -167,9 +167,9 @@ This reverts the store to the default encrypted JSON file store.
 
 ### Platform security
 
-The [OMAG Server Platform](/egeria/concepts/omag-server-platform)
+The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
 provides both configuration and diagnostic services
-for [OMAG servers](/egeria/concepts/omag-server) which in themselves
+for [OMAG servers](/egeria-docs/concepts/omag-server) which in themselves
 provide access to a wide variety of information and control points.
 
 Therefore, it is necessary to provide authorization services
@@ -192,7 +192,7 @@ using the following command.
 
 ??? example "Example: sample platform security connector"
     For example, this is the request body that would
-    set up the [sample platform security connector](../../../../open-metadata-resources/open-metadata-samples/open-metadata-security-samples)
+    set up the [sample platform security connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh }
     provided for the Coco Pharmaceuticals case study:
 
     ```json
@@ -272,7 +272,7 @@ Spring provides [extensive documentation on its standard properties :material-do
 
 ## Auto-starting servers
 
-An [OMAG server](/egeria/concepts/omag-server) is typically started on the [OMAG Server Platform](/egeria/concepts/omag-server-platform)
+An [OMAG server](/egeria-docs/concepts/omag-server) is typically started on the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
 using a command; however, it is possible to set up a list of servers that are automatically started
 whenever the platform is started. These servers are also automatically shutdown when the platform
 is shutdown.
@@ -313,7 +313,7 @@ Transport layer security describes the security applied to API calls made betwee
 The most commonly known transport layer security is SSL.
 
 Egeria uses TLS with certificates to secure the communication to and from the
-[OMAG Server Platforms](/egeria/concepts/omag-server-platform).
+[OMAG Server Platforms](/egeria-docs/concepts/omag-server-platform).
 
 ### Brief background on TLS
 
@@ -343,8 +343,8 @@ is more typical when interconnecting different systems and applications which ar
 ### Certificates for the OMAG Server Platform
 
 !!! attention "Important note on terminology"
-    Egeria's [OMAG Server Platform](/egeria/concepts/omag-server-platform) is a Spring Boot based application.
-    We refer to it as Egeria's "platform", which hosts Egeria [OMAG wervers](/egeria/concepts/omag-server).
+    Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) is a Spring Boot based application.
+    We refer to it as Egeria's "platform", which hosts Egeria [OMAG wervers](/egeria-docs/concepts/omag-server).
 
     However, in the documentation relating to network communications and SSL,
     a "server" is usually seen as an application listening on a network port.
@@ -396,7 +396,7 @@ Note that in the case of Java clients, these are system properties, and do not u
 ### Other clients
 
 Similar principles to those documented for Java should apply. If you need further assistance, please
-contact the team on [Slack :fontawesome-brands-slack:](https://lfaifoundation.slack.com/archives/C01F40J2XA8){ target=slack }.
+contact the team on [Slack :material-slack:](https://lfaifoundation.slack.com/archives/C01F40J2XA8){ target=slack }.
 A pull request (or issue) with contributed documentation is also very welcome!
 
 ### Example to launch Egeria

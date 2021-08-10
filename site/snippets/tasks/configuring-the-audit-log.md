@@ -4,7 +4,7 @@
 ## Configure the audit log
 
 Egeria's audit log provides a configurable set of destinations for audit records and other
-diagnostic logging for an [OMAG server](/egeria/concepts/omag-server). Some destinations also support a query interface
+diagnostic logging for an [OMAG server](/egeria-docs/concepts/omag-server). Some destinations also support a query interface
 to allow an administrator to understand how the server is running.
 
 If the server is a development or test server, then the default audit log configuration is probably

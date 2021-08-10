@@ -3,7 +3,7 @@
 
 # Key concepts
 
-To further explain some of the key concepts of Egeria, let us delve deeper into an
+To further explain some key concepts of Egeria, let us delve deeper into an
 example:
 
 ![Egeria solution composition](egeria-solution-components.png)
@@ -36,7 +36,7 @@ This enables the other members to remove the parting member from their registrie
 ### Federation
 
 The purpose of the registry in each member is to configure its federated query capability
-supported by the [enterprise repository services](todo.md).
+supported by the [enterprise repository services](/egeria-docs/services/omrs/#enterprise-repository-services).
 The registration information includes the URL root and server name of the member. The
 federation capability in each OMAG server allows it to issue metadata create, update,
 delete and search requests to each and every member of the cohort. This is the primary
@@ -54,15 +54,15 @@ to maintain cached copies of the metadata for performance / availability reasons
     to the rest of the cohort through the cohort topic. This mechanism is useful to seed
     the cache in a new member of the cohort and is invoked as a result of a federated
     query issued from the new member. (A federated query occurs automatically whenever
-    an [access service](../services/omas.md) makes a request for metadata.)
+    an [access service](/egeria-docs/services/omas) makes a request for metadata.)
 
 ### Exchange protocol
 
-The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](../services/omrs.md)
+The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
 interfaces, which gives fine-grained metadata notifications and updates[^2]. The server's
-[metadata security connector](todo.md) provides fine-grained control on which metadata is sent,
-received and/or stored by the server. This level of control is necessary for metadata
-repositories that are managing specific collections of valuable objects such as [Assets](todo.md).
+[metadata security connector](/egeria-docs/connectors/metadata-security-connector) provides fine-grained
+control on which metadata is sent, received and/or stored by the server. This level of control is necessary
+for metadata repositories that are managing specific collections of valuable objects such as [Assets](todo.md).
 
 ### Members
 
@@ -70,25 +70,27 @@ repositories that are managing specific collections of valuable objects such as 
 
 A third party metadata server can embed the Egeria libraries in its
 own runtime or, more commonly, use a special OMAG server called the
-**Repository Proxy** to host connectors that map between the events and APIs of the
+[repository proxy](/egeria-docs/concepts/repository-proxy) to host
+connectors that map between the events and APIs of the
 third party metadata server and the Open Metadata events and APIs.
-The repository proxy manages all of the interaction with the other
+The repository proxy manages all the interaction with the other
 members of the cohort.
 
 The cohort protocols are peer-to-peer and the membership is dynamic.
 When a third party metadata server connects to the cohort, either directly
 or through its repository proxy, it automatically begins receiving
-metadata from all of the other members. When it shares metadata,
+metadata from all the other members. When it shares metadata,
 it is shared with all the other members. Each member is free to choose what
 to share and what to process from the other members of the cohort.
 
-Other types of OMAG Servers that can be members of the cohort:
+Other types of OMAG servers that can be members of the cohort:
 
-- The **Conformance Test Server** is used to verify that a member of the
+- The [conformance test server](/egeria-docs/concepts/conformance-test-server)
+  is used to verify that a member of the
   cohort is operating correctly.  It is typically only used in
   test environments because it sends out a lot of test metadata on the cohort
   and validates the responses from the cohort member it is testing.
-- The **Metadata Server** provides a metadata repository
+- The [metadata server](/egeria-docs/concepts/metadata-server) provides a metadata repository
   that supports any type of open metadata.  It is a valuable
   member of the cohort because it is a metadata gap-filler.  By that we mean
   that is can store relationships between metadata
@@ -96,9 +98,10 @@ Other types of OMAG Servers that can be members of the cohort:
   not supported by any of the third party metadata repositories.
   It may optionally have the access services enabled so it can also
   act as a metadata access point.
-- The **Metadata Access Point** supports Egeria's [Open Metadata Access
-  Services (OMAS's)](../services/omas), or access services, for short. These access services
-  provide specialized APIs and events for different types of technologies.
+- The [metadata access point](/egeria-docs/concepts/metadata-access-point) supports
+  Egeria's [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas), or
+  access services, for short. These access services provide specialized APIs and events
+  for different types of technologies.
 
 ## Integrating metadata into solutions
 
@@ -117,8 +120,9 @@ However, once metadata is being exchanged and linked, new
 working in an organization. Therefore we have added servers to
 support browser-based user interfaces:
 
-- The **View Server** provides REST APIs specifically for user interfaces. They are
-  consumed by the Egeria UIs but can also be used by other UIs and tools.
+- The [view server](/egeria-docs/concepts/view-server) provides REST APIs specifically
+  for user interfaces. They are consumed by the Egeria UIs but can also be used by
+  other UIs and tools.
 - The **Presentation Server** ???
 
 ## Metadata instances
@@ -135,9 +139,9 @@ database, field in a schema, and so on. If you think about metadata as a graph, 
 in the graph. They typically describe concepts, people, places and things.
 
 ??? question "How are entities modeled in Egeria?"
-    Egeria models all entities using a general object -- [`EntitySummary`](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntitySummary.java){ target=model }
-    -- from which more detailed representations (like [`EntityDetail`](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntityDetail.java){ target=model })
-    are derived. Note that there is a property called `type` within this object (inherited from [`InstanceAuditHeader`](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=model })
+    Egeria models all entities using a general object -- [`EntitySummary` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntitySummary.java){ target=gh }
+    -- from which more detailed representations (like [`EntityDetail` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntityDetail.java){ target=gh })
+    are derived. Note that there is a property called `type` within this object (inherited from [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh })
     that defines the specific _type_ of metadata the entity represents, rather than having a different
     type-specific object for every different type of entity.
 
@@ -148,8 +152,8 @@ semantic meaning of a relational database column by relating a business vocabula
 database column. In a graph sense, these are the links (edges) that show how entities are related.
 
 ??? question "How are relationships modeled in Egeria?"
-    Egeria models all relationships using a general object -- [`Relationship`](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Relationship.java){ target=model }
-    -- which links together exactly two entities (using [`EntityProxy`](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntityProxy.java){ target=model },
+    Egeria models all relationships using a general object -- [`Relationship` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Relationship.java){ target=gh }
+    -- which links together exactly two entities (using [`EntityProxy` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntityProxy.java){ target=gh },
     itself an extension of EntitySummary).
     
     These `EntityProxy`s act as a sort of "stub" to which the relationship can point, without needing to be
@@ -157,7 +161,7 @@ database column. In a graph sense, these are the links (edges) that show how ent
     important piece of ensuring that relationships are treated as "first-class" objects in their own right.
 
     As with entities, there is a property called `type` within this `Relationship` object (also inherited from
-    [`InstanceAuditHeader`](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=model })
+    [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh })
     that defines the specific _type_ of metadata the relationship represents, rather than having a different
     type-specific object for every different type of relationship.
 
@@ -169,11 +173,11 @@ a particular relational database column should be treated. Classifications descr
 an entity and can be used to identify entities that are similar in a specific aspect.
 
 ??? question "How are classifications modeled in Egeria?"
-    Egeria models all classifications using a general object -- [`Classification`](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Classification.java){ target=model }
+    Egeria models all classifications using a general object -- [`Classification` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Classification.java){ target=gh }
     -- any instance of which is possessed by exactly one entity (within the `EntitySummary`'s  `classifications` property).
 
     As with the other kinds of instances, note that there is a property called `type` within this `Classification`
-    object (also inherited from [`InstanceAuditHeader`](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=model })
+    object (also inherited from [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh })
     that defines the specific _type_ of metadata the classification represents, rather than having a different
     type-specific object for every different type of classification.
 
@@ -227,8 +231,8 @@ There are three categories of AttributeTypeDefs:
     in the `type` property of `InstanceAuditHeader`, from which all entities, relationships, and
     classification instances inherit.
 
-    The TypeDefs themselves are described in detail under the [Types](../../types/types/) tab, and the
-    canonical definitions ultimately [live in the code itself](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-metadata-types/src/main/java/org/odpi/openmetadata/opentypes){ target=code }.
+    The TypeDefs themselves are described in detail under the [types](/egeria-docs/types) reference area, and the
+    canonical definitions ultimately [live in the code itself :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-metadata-types/src/main/java/org/odpi/openmetadata/opentypes){ target=gh }.
 
 ### Homed metadata
 
@@ -246,7 +250,7 @@ Metadata in its home repository is _mutable_: it can be updated and deleted.
     As such, not only can a query for metadata be federated, but indeed even the holistic representation of a
     given piece of metadata (its instance and directly-related instances) is federated across the cohort.
 
-The [Open Metadata Repository Services (OMRS)](../services/omrs) is responsible for sharing this metadata
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is responsible for sharing this metadata
 with other metadata repositories who are members of the same cohort.
 
 ### Reference copies
@@ -281,7 +285,7 @@ Every open metadata instance has a unique identifier called the GUID.
 
 There should be, at most, a _tiny_ chance[^3] that two servers will generate the same GUID. Egeria
 expects this to be exceedingly rare, but not impossible, and therefore if it does happen it is
-detected by the [repository services](../services/omrs/) and at a minimum messages are output on
+detected by the [repository services](/egeria-docs/services/omrs) and at a minimum messages are output on
 the detecting server's audit log. The repository services also have APIs for re-identifying (changing
 the GUID) for a metadata instance to automate the resolution of such conflicts. We can expect that such
 an operation could be resource-intensive; however, this is balanced against the exceeding rareness
@@ -302,14 +306,15 @@ granted the use of an Egeria conformance mark.
     are also immutable through these product-native interfaces -- in order to conform to the Egeria protocol.
 
     For cases where the tool is unable to do so, we are actively investigating other mitigation measures like
-    providing a [Smart Repository Proxy](https://github.com/odpi/egeria/issues/5402){ target=issue }
+    providing a [Smart Repository Proxy :material-github:](https://github.com/odpi/egeria/issues/5402){ target=gh }
     to ensure that any changes to metadata that violate the protocol remain isolated in that third party
     technology and are not inadvertently propagated elsewhere in the cohort.
 
-[^1]: You may want to see the [cohort interactions walkthrough](todo.md) for more details on how cohort participants interact.
+[^1]: You may want to see the [cohort interactions walkthrough](/egeria-docs/services/omrs/cohort/#formation-of-a-cohort)
+      for more details on how cohort participants interact.
 [^2]: You may want to see the [OMRS metamodel](todo.md) for more details on the granularity of metadata exchange.
 [^3]: The rarity will depend on the specific algorithm used, but as an example the algorithm used within Egeria
-      generates type 4 UUIDs, for which the [probability of a collision is so small that it can almost be ignored](https://en.wikipedia.org/wiki/Universally_unique_identifier#Collisions){ target=wiki }.
+      generates type 4 UUIDs, for which the [probability of a collision is so small that it can almost be ignored :material-dock-window:](https://en.wikipedia.org/wiki/Universally_unique_identifier#Collisions){ target=wiki }.
       But as it is not _impossible_, Egeria does still provide the mechanisms to detect and resolve such conflicts.
 
 --8<-- "snippets/abbr.md"

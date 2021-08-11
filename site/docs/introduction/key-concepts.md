@@ -123,7 +123,8 @@ support browser-based user interfaces:
 - The [view server](/egeria-docs/concepts/view-server) provides REST APIs specifically
   for user interfaces. They are consumed by the Egeria UIs but can also be used by
   other UIs and tools.
-- The **Presentation Server** ???
+- The [presentation server](/egeria-docs/concepts/presentation-server) hosts the JavaScript applications that
+  provide an interactive browser-based user interface for Egeria.
 
 ## Metadata instances
 

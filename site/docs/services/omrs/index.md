@@ -184,7 +184,7 @@ that is connected to an [open metadata repository cohort](cohort.md).
 
 Finally, the administration subsystem alone is active in the servers that are not
 [cohort members](cohort/#cohort-members), that is the
-[Governance Servers](../../admin-services/docs/concepts/governance-server-types.md)
+[Governance Servers](/egeria-docs/concepts/governance-server)
 and the
 [view servers](/egeria-docs/concepts/view-server).
 

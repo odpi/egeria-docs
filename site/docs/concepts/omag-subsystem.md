@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -14,10 +19,10 @@ properties in the OMAG server's [configuration document](configuration-document.
 
 The potential subsystems within an [OMAG server](omag-server.md) are as follows:
 
-- [Open Metadata Repository Services (OMRS)](../../../../services/omrs) for supporting access
+- [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) for supporting access
   to metadata stored in metadata repositories and the exchange of metadata between repositories
-  via an [open metadata repository cohort](../../../../services/omrs/cohort).
-  The repository services are further divided into [OMRS subsystems](../../../../services/omrs/#omrs-subsystems) that
+  via an [open metadata repository cohort](/egeria-docs/services/omrs/cohort).
+  The repository services are further divided into [OMRS subsystems](/egeria-docs/services/omrs/#omrs-subsystems) that
   can be activated independently.
 - [Integration daemon services](../../../governance-servers/integration-daemon-services) for running integration
   connectors that exchange metadata with third party technologies.
@@ -26,17 +31,17 @@ The potential subsystems within an [OMAG server](omag-server.md) are as follows:
 - Dynamically registered services provide specialist APIs for particular technologies and user roles.
   Each of these services runs in their own subsystem independent of the other registered services. 
   The implementation may come from Egeria or a third party. The links are to Egeria provided dynamic services.
-    - [Open Metadata Access Services (OMAS)](../../../../services/omas.md) for supporting domain-specific services
+    - [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) for supporting domain-specific services
       for metadata access and governance. Access services run in the [metadata server](metadata-server.md) and
       [metadata access point](metadata-access-point.md) server.
-    - [Open Metadata Engine Services (OMES)](../../../../services/engine.md) for supporting specialized governance
+    - [Open Metadata Engine Services (OMES)](/egeria-docs/services/omes) for supporting specialized governance
       engines that drive governance activity in the open metadata ecosystem.
       The engine services run in the [engine host](engine-host.md) server.
-    - [Open Metadata Integration Services (OMIS)](../../../../services/integration.md) for supporting
+    - [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis) for supporting
       specific types of
-      [integration connectors](../../../governance-servers/integration-daemon-services/docs/integration-connector.md).
+      [integration connectors](/egeria-docs/connectors/integration-connector).
       The integration services run in the [integration daemon](integration-daemon.md) server.
-    - [Open Metadata View Services (OMVS)](../../../view-services) for supporting REST
+    - [Open Metadata View Services (OMVS)](/egeria-docs/services/omvs) for supporting REST
       services for a User Interface (UI). The view services run in a
       [view server](view-server.md).
 

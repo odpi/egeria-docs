@@ -3,22 +3,22 @@
 
 # Integration daemon
 
-An **integration daemon** is an [OMAG server](/egeria/concepts/omag-server)
+An **integration daemon** is an [OMAG server](omag-server.md)
 that provides metadata exchange services between third party
 technology and the open metadata ecosystem.
 
 The integration daemon interacts with the open metadata
-ecosystem through [Open Metadata Access Services (OMAS)](/egeria/services/omas)
-running in a [metadata access point](/egeria/concepts/metadata-access-point) or 
-[metadata server](/egeria/concepts/metadata-server).
+ecosystem through [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas)
+running in a [metadata access point](metadata-access-point.md) or 
+[metadata server](metadata-server.md).
 
 ![Integration daemon sitting between a third party technology and a metadata access point](integration-daemon.png)
 
 Inside the integration daemon are one or more [Open Metadata Integration
-Services (OMIS)](/egeria/services/integration) that each focus on
+Services (OMIS)](/egeria-docs/services/omis) that each focus on
 metadata exchange with
-a specific type of technology.  They are paired with a specific
-[Open Metadata Access Service (OMAS)](/egeria/services/omas)
+a specific type of technology. They are paired with a specific
+[Open Metadata Access Service (OMAS)](/egeria-docs/services/omas)
 running in the metadata access point / metadata server.
 
 To understand how an integration daemon works, it is necessary to
@@ -60,7 +60,7 @@ the integration service.
 
 The integration service also
 listens for events from its access service's
-[Out Topic](../../../access-services/docs/concepts/client-server/out-topic.md).
+[Out Topic](/egeria-docs/services/omas/client-server/#out-topic).
 If there is new metadata that is of interest to the
 third party technology, the access service publishes the
 information and it is picked up by the integration service
@@ -76,8 +76,8 @@ metadata to flow both in and out of the open metadata ecosystem.
 Where an Egeria conformance test exists, this technology has a conformance mark.
 
 An _integrated technology_ is able to interact directly with a
-[metadata access point](/egeria/concepts/metadata-access-point) or
-[metadata server](/egeria/concepts/metadata-server) by calling the open
+[metadata access point](metadata-access-point.md) or
+[metadata server](metadata-server.md) by calling the open
 metadata services or consuming them directly:
 
 ![Integrated technology can call the open metadata services or consume the open metadata services directly](integrated-technology-pattern-implementation.png)
@@ -86,17 +86,17 @@ metadata services or consuming them directly:
 
 The code that manages the specific APIs and formats of the third party technology
 is encapsulated in a special type of connector called an
-[integration connector](/egeria/connectors/integration-connector).
+[integration connector](/egeria-docs/connectors/integration-connector).
 
 The specific interface that the integration connector needs to implement is defined by the
-[integration service](/egeria/services/omis).
+[integration service](/egeria-docs/services/omis).
 This interface enables the integration service to pass 
 a context object to the connector before it is started.
 The context enables the connector to
 register a listener with the associated access service's
-[Out Topic](/egeria/services/omas/client-server/#out-topic), or call its REST API, or to
+[Out Topic](/egeria-docs/services/omas/client-server/#out-topic), or call its REST API, or to
 push events to the access service's 
-[In Topic](/egeria/services/omas/client-server/#in-topic).
+[In Topic](/egeria-docs/services/omas/client-server/#in-topic).
 By default, the context uses the
 integration daemon's userId for requests to the access service
 which means that the metadata created by the integration connector

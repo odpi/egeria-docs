@@ -186,14 +186,19 @@ nav:
               - View server: concepts/view-server.md
   - Connectors:
       - Connectors overview: connectors/index.md
-      - Audit log store: connectors/audit-log-store-connector.md
-      - Cohort registry store: connectors/cohort-registry-store-connector.md
-      - Event mapper: connectors/event-mapper-connector.md
-      - Integration connector: connectors/integration-connector.md
-      - OMRS topic: connectors/omrs-topic-connector.md
-      - Open metadata archive store: connectors/open-metadata-archive-store-connector.md
-      - Open metadata topic: connectors/open-metadata-topic-connector.md
-      - Repository: connectors/repository-connector.md
+      - Connector types:
+          - Audit log store: connectors/audit-log-store-connector.md
+          - Cohort registry store: connectors/cohort-registry-store-connector.md
+          - Event mapper: connectors/event-mapper-connector.md
+          - Integration connector: connectors/integration-connector.md
+          - OMRS topic: connectors/omrs-topic-connector.md
+          - Open metadata archive store: connectors/open-metadata-archive-store-connector.md
+          - Open metadata topic: connectors/open-metadata-topic-connector.md
+          - Repository: connectors/repository-connector.md
+      - Connector catalog:
+          - Exchange connectors: connectors/exchange/index.md
+          - Runtime connectors: connectors/runtime/index.md
+          - Data connectors: connectors/data/index.md
   # ./open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector/docs
   # ./open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/docs
   # ./open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs

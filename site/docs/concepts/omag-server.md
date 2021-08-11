@@ -5,10 +5,11 @@
 
 An **OMAG server** is a software server that
 runs inside the [OMAG Server Platform](omag-server-platform.md).
-It supports the integration of one or more technologies by hosting
+It is therefore sometimes referred to as a "logical" server rather than a physical server
+that runs in its own process. It supports the integration of one or more technologies by hosting
 connectors that interact with that technology, or providing specialist
-[APIs](../../../../basic-concepts/#application-programming-interface-apis) or
-[event topics](../../../../basic-concepts/#topic) (both in and out).
+[APIs](/egeria-docs/basic-concepts/#application-programming-interface-apis) or
+[event topics](/egeria-docs/basic-concepts/#topic) (both in and out).
 
 Because of the wide variety of technologies deployed in organizations today,
 each with very different capabilities and needs,
@@ -61,9 +62,9 @@ service is running.
 
     Object-oriented software engineers would know of this type of relationship as behavior inheritance.
 
-- [Cohort member](../../../../services/omrs/cohort/#cohort-members) - able to exchange metadata through an open metadata repository cohort
+- [Cohort member](/egeria-docs/services/omrs/cohort/#cohort-members) - able to exchange metadata through an open metadata repository cohort
     - [Metadata server](metadata-server.md) - supports a metadata repository that can natively store open metadata types
-      as well as specialized metadata APIs for different types of tools (these APIs are called [access services](../../../../services/omas.md)).
+      as well as specialized metadata APIs for different types of tools (these APIs are called [access services](/egeria-docs/services/omas)).
     - [Metadata access point](metadata-access-point.md) - supports the access services like the metadata server but does not have a repository.
       All metadata it serves up and stores belongs to the metadata repositories in other members of the cohort.
     - [Repository proxy](repository-proxy.md) - acts as an open metadata translator for
@@ -74,8 +75,8 @@ service is running.
       cohort is conforming with the open metadata protocols. This server is typically only seen in development
       and test cohorts rather than production.
 - [View server](view-server.md) - manages specialist services for user interfaces.
-- [Governance server](governance-server-types.md) - supports the use of metadata in the broader IT landscape.
-    - [Engine host](engine-host.md) - provides a runtime for a specific type of [governance engine](../../../../services/engine.md).
+- [Governance server](governance-server.md) - supports the use of metadata in the broader IT landscape.
+    - [Engine host](engine-host.md) - provides a runtime for a specific type of [governance engine](/egeria-docs/services/omes).
     - [Integration daemon](integration-daemon.md) - manages the synchronization with third party technology that
       can not call the access services directly.
     - [Data engine proxy](data-engine-proxy.md) - supports the capture of metadata from a data engine. This includes
@@ -96,12 +97,9 @@ The governance servers connect out to external tools, engines and platforms.
     The configuration for an OMAG Server is defined in a
     [configuration document](configuration-document.md).
     This configuration document is stored by a
-    [configuration document store connector](configuration-document-store-connector.md).
+    [configuration document store connector](../configuration-document/#storage).
 
-    - [Configuring an OMAG server](../configuring-an-omag-server.md)
-    - [Start and stop an OMAG server](../operating-omag-server.md)
-
-There is design information on the OMAG Server and its relationship to
-the OMAG Server Platform [here](../../../../open-metadata-publication/website/omag-server).
+    - [Configuring an OMAG server](/egeria-docs/guides/admin/configuring-an-omag-server.md)
+    - [Start and stop an OMAG server](/egeria-docs/guides/admin/operating-omag-server.md)
 
 --8<-- "snippets/abbr.md"

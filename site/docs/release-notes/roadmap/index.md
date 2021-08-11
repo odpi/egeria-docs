@@ -127,7 +127,7 @@ Its use is described in the [developer's guide](../../guides/developer.md).
       metadata instances themselves.
     - A governance server makes use of open metadata to actively manage an aspect of the digital landscape.
       The [governance server services](../../../open-metadata-implementation/governance-servers) each provide the principle subsystem of a
-      [type of governance server](../../../open-metadata-implementation/admin-services/docs/concepts/governance-server-types.md).
+      [type of governance server](/egeria-docs/concepts/governance-server).
     - The [generic handlers](../../../open-metadata-implementation/common-services/generic-handlers) provide support for the
       type specific maintenance and retrieval of metadata that follows the [open metadata types](../../types).
       This includes managing visibility of metadata through the [Governance Zones](../../../open-metadata-implementation/access-services/docs/concepts/governance-zones),

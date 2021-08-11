@@ -188,12 +188,11 @@ See [configuring the configuration document store](/egeria-docs/guides/admin/con
 for the command to install a particular configuration document store connector
 into the OMAG Server Platform.
 
-## Further reading
-
-- [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf)
-  defines open connectors and connections since many of the sections in the
-  configuration document take connection objects for connectors.
-- [Configuring an OMAG server](/egeria-docs/guides/admin/configuring-an-omag-server) provides more detail on
-  the process of creating a configuration document for various types of OMAG servers.
+!!! education "Further information"
+    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf)
+      defines open connectors and connections since many of the sections in the
+      configuration document take connection objects for connectors.
+    - [Configuring an OMAG server](/egeria-docs/guides/admin/configuring-an-omag-server) provides more detail on
+      the process of creating a configuration document for various types of OMAG servers.
 
 --8<-- "snippets/abbr.md"

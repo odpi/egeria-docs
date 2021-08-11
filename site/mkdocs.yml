@@ -16,10 +16,10 @@ nav:
       - Our solution: introduction/overview.md
       - Key concepts: introduction/key-concepts.md
       - Patterns:
-          - Metadata server exchange: introduction/patterns/metadata-server-exchange.md # ./open-metadata-publication/website/solutions/metadata-server-exchange
+          - Metadata server exchange: introduction/patterns/metadata-server-exchange.md
           - Repository conformance: introduction/patterns/repository-conformance.md
-          - Data manager integration: introduction/patterns/data-manager-integration.md # ./open-metadata-publication/website/solutions/data-manager-integration
-          - File lineage: introduction/patterns/file-lineage.md # ./open-metadata-publication/website/solutions/file-lineage
+          - Data manager integration: introduction/patterns/data-manager-integration.md
+          - File lineage: introduction/patterns/file-lineage.md
   - Getting started:
       - Dojo:
           - Dojo introduction: getting-started/dojo/index.md
@@ -40,9 +40,9 @@ nav:
       - Community guide: guides/community.md
       - Operations guide: guides/operations.md
       - Building an asset catalog: guides/asset-catalog.md
-      - Planning guide: guides/planning.md # ./open-metadata-publication/website/planning-guide
+      - Planning guide: guides/planning.md
       - Administration:
-          - Administration guide: guides/admin/index.md # ./open-metadata-implementation/admin-services/docs
+          - Administration guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
           - Configure OMAG servers:
               - General notes: guides/admin/configuring-an-omag-server.md
@@ -55,10 +55,10 @@ nav:
               - Configure engine host: guides/admin/configuring-an-engine-host.md
               - Configure data engine proxy: guides/admin/configuring-a-data-engine-proxy.md
               - Configure open lineage server: guides/admin/configuring-an-open-lineage-server.md
-      - Developer guide: guides/developer.md # ./open-metadata-publication/website/developer-guide
-      - Diagnostic guide: guides/diagnostic.md # ./open-metadata-publication/website/diagnostic-guide
+      - Developer guide: guides/developer.md
+      - Diagnostic guide: guides/diagnostic.md
       - Conformance Test Suite:
-          - CTS overview: guides/cts/index.md # ./open-metadata-conformance-suite/docs
+          - CTS overview: guides/cts/index.md
           - Platform profiles:
               - Platform origin: guides/cts/profiles/platform-origin.md
           - Repository profiles:
@@ -110,19 +110,64 @@ nav:
               - Environment: guides/cts/profiles/environment.md
   - Reference:
       - Types:
-          - Open Metadata Types:
-              - Overview of types: types/index.md # ./open-metadata-publication/website/open-metadata-types
-              - Area 0 types: types/0.md
-              - Area 1 types: types/1.md
+          - Open metadata types:
+              - Open metadata type system: types/index.md
+              - "00 Base":
+                  - types/0/index.md
+                  - "10 Base model": types/0/0010-base-model.md
+                  - "11 Managing Referenceables": types/0/0011-managing-referenceables.md
+                  - "12 Search keywords": types/0/0012-search-keywords.md
+                  - "15 Linked media": types/0/0015-linked-media.md
+                  - "17 External identifiers": types/0/0017-external-identifiers.md
+                  - "19 More information": types/0/0019-more-information.md
+                  - "20 Property facets": types/0/0020-property-facets.md
+                  - "25 Locations": types/0/0025-locations.md
+                  - "30 Hosts and platforms": types/0/0030-hosts-and-platforms.md
+                  - "35 Complex hosts": types/0/0035-complex-hosts.md
+                  - "37 Software server platforms": types/0/0037-software-server-platforms.md
+                  - "40 Software servers": types/0/0040-software-servers.md
+                  - "42 Software server capabilities": types/0/0042-software-server-capabilities.md
+                  - "45 Servers and assets": types/0/0045-servers-and-assets.md
+                  - "50 Applications and processes": types/0/0050-applications-and-processes.md
+                  - "55 Data processing engines": types/0/0055-data-processing-engines.md
+                  - "57 Integration capabilities": types/0/0057-integration-capabilities.md
+                  - "70 Networks and gateways": types/0/0070-networks-and-gateways.md
+                  - "90 Cloud platforms and services": types/0/0090-cloud-platforms-and-services.md
+              - "01 Collaboration":
+                  - types/1/index.md
+                  - "10 Actors": types/1/0110-actors.md
+                  - "12 People": types/1/0112-people.md
+                  - "15 Teams": types/1/0115-teams.md
+                  - "17 IT profiles": types/1/0117-it-profiles.md
+                  - "20 Collections": types/1/0120-collections.md
+                  - "30 Projects": types/1/0130-projects.md
+                  - "35 Meetings": types/1/0135-meetings.md
+                  - "37 Actions for people": types/1/0137-actions.md
+                  - "40 Communities": types/1/0140-communities.md
+                  - "50 Feedback": types/1/0150-feedback.md
+                  - "55 Crowd sourcing": types/1/0155-crowd-sourcing.md
+                  - "60 Notes": types/1/0160-notes.md
+              - "02 Data assets":
+                  - types/2/index.md
+              - "03 Glossary":
+                  - types/3/index.md
+              - "04 Governance":
+                  - types/4/index.md
+              - "05 Models & reference data":
+                  - types/5/index.md
+              - "06 Metadata discovery":
+                  - types/6/index.md
+              - "07 Lineage":
+                  - types/7/index.md
           - Metamodel: types/metamodel.md
       - Services:
           - Repository services (OMRS):
-              - Repository services design: services/omrs/index.md # ./open-metadata-implementation/repository-services/docs
+              - Repository services design: services/omrs/index.md
               - Cohorts: services/omrs/cohort.md
               - Metadata repositories: services/omrs/metadata-repositories.md
               - Metadata events: services/omrs/metadata-events.md
           - Access services (OMAS):
-              - Open Metadata Access Services: services/omas/index.md # ./open-metadata-implementation/access-services/docs
+              - Open Metadata Access Services: services/omas/index.md
               - Asset catalog OMAS: services/omas/asset-catalog.md # ./open-metadata-implementation/access-services/asset-catalog/docs
               - Asset consumer OMAS: services/omas/asset-consumer.md # ./open-metadata-implementation/access-services/asset-consumer/docs
               - Asset lineage OMAS: services/omas/asset-lineage.md # ./open-metadata-implementation/access-services/asset-lineage/docs
@@ -199,9 +244,6 @@ nav:
           - Exchange connectors: connectors/exchange/index.md
           - Runtime connectors: connectors/runtime/index.md
           - Data connectors: connectors/data/index.md
-  # ./open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector/docs
-  # ./open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/docs
-  # ./open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs
   - Release notes:
       - Overview: release-notes/index.md
       - Latest release: release-notes/latest.md

@@ -207,6 +207,7 @@ nav:
       - Latest release: release-notes/latest.md
       - Next release: release-notes/next.md
       - Roadmap: release-notes/roadmap/index.md
+      - Content status: release-notes/roadmap/content-status.md
       - Older releases:
           - v2.x:
               - 2.11: release-notes/2-11.md

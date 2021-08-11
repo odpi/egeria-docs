@@ -35,9 +35,9 @@ partial function as soon as it is stable and has no impact on released function.
 So you will see support for much more function than is officially released.
 This way you can monitor and feedback on future items as they are developed.
 
-The [roadmap for Egeria](../open-metadata-publication/website/roadmap)
+The [roadmap for Egeria](roadmap)
 describes the end vision for Egeria and our current status.
 
-[^1]: To understand more about what it means to have "released function" see [Egeria content status](../open-metadata-publication/website/content-status).
+[^1]: To understand more about what it means to have "released function" see [Egeria content status](roadmap/content-status).
 
 --8<-- "snippets/abbr.md"

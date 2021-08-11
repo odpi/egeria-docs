@@ -1,10 +1,15 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# OMRS Topic Connector
+# OMRS topic connector
 
-The OMRS Topic Connector provides a common interface to
+The **OMRS topic connector** provides a common interface to
 interact with an instance of the
-[OMRS Event Topic](../../omrs-event-topic.md).
+[OMRS event topic(s)](/egeria-docs/services/omrs/metadata-events/#omrs-event-topic).
 
 --8<-- "snippets/abbr.md"

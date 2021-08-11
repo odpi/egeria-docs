@@ -56,7 +56,7 @@ and begins to receive the registration events from other members. The other memb
 [re-registration events](../metadata-events/#registry-events) to ensure the new member has the latest
 information about the originator's capabilities. The exchange of registration information causes all members to verify
 that they have the latest information about their peers. This is maintained in their own
-[cohort registry store](component-descriptions/connectors/cohort-registry-store-connector.md)
+[cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector)
 so that they can reconfigure themselves on restart
 without needing the other members to resend their registration information.
 
@@ -82,7 +82,7 @@ cohort.
 
 !!! tip "Primary mechanism for accessing metadata"
     This peer-to-peer operation and federated queries are the primary mechanism for accessing
-    metadata, because the [access services](../omas.md) use federated queries for every request they
+    metadata, because the [access services](/egeria-docs/services/omas) use federated queries for every request they
     make for metadata.
 
 ### Metadata exchange
@@ -194,7 +194,7 @@ Each repository in the cohort has a [cohort registry](#cohort-registry) that
 supports the registration of the metadata
 repositories across the cohort. Through the registration process, each cohort registry 
 assembles a list of all members of the cohort.  This is saved in the 
-[OMRS Cohort Registry Store](component-descriptions/connectors/cohort-registry-store-connector.md).
+[OMRS cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector).
 
 The list of connections to the remote members of the cohort are passed to the OMRS Enterprise Connector Manager
 that in turn manages the configuration of the Enterprise OMRS Repository Connectors. The Enterprise OMRS
@@ -230,7 +230,7 @@ The registration process is managed by exchanging [registry events](../metadata-
 over the [cohort topic(s)](../metadata-events/#event-topics).
 
 The cohort registry maintains its record of the membership of the cohort in a
-[cohort registry store](../component-descriptions/connectors/cohort-registry-store-connector.md).
+[cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector).
 
 [^1]: You may want to see the [OMRS metamodel](todo.md) for more details on the granularity of metadata exchange.
 

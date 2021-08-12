@@ -117,7 +117,7 @@ nav:
                   - "10 Base model": types/0/0010-base-model.md
                   - "11 Managing Referenceables": types/0/0011-managing-referenceables.md
                   - "12 Search keywords": types/0/0012-search-keywords.md
-                  - "15 Linked media": types/0/0015-linked-media.md
+                  - "15 Linked media": types/0/0015-linked-media-types.md
                   - "17 External identifiers": types/0/0017-external-identifiers.md
                   - "19 More information": types/0/0019-more-information.md
                   - "20 Property facets": types/0/0020-property-facets.md
@@ -149,16 +149,131 @@ nav:
                   - "60 Notes": types/1/0160-notes.md
               - "02 Data assets":
                   - types/2/index.md
+                  - "01 Connectors and connections": types/2/0201-connectors-and-connections.md
+                  - "05 Connection linkage": types/2/0205-connection-linkage.md
+                  - "10 Data stores": types/2/0210-data-stores.md
+                  - "11 Data sets": types/2/0211-data-sets.md
+                  - "12 Deployed APIs": types/2/0212-deployed-apis.md
+                  - "15 Software components": types/2/0215-software-components.md
+                  - "17 Ports": types/2/0217-ports.md
+                  - "20 Files and folders": types/2/0220-files-and-folders.md
+                  - "21 Document stores": types/2/0221-document-stores.md
+                  - "22 Graph stores": types/2/0222-graph-stores.md
+                  - "23 Events and logs": types/2/0223-events-and-logs.md
+                  - "24 Databases": types/2/0224-databases.md
+                  - "25 Metadata repositories": types/2/0225-metadata-repositories.md
+                  - "27 Keystores": types/2/0227-keystores.md
+                  - "30 Code tables": types/2/0230-code-tables.md
+                  - "35 Information view": types/2/0235-information-view.md
+                  - "39 Reports": types/2/0239-reports.md
+                  - "65 Analytics assets": types/2/0265-analytics-assets.md
+                  - "80 Software development assets": types/2/0280-software-development-assets.md
+                  - "81 Software modules": types/2/0281-software-modules.md
+                  - "82 Released software components": types/2/0282-released-software-components.md
+                  - "85 Analytics development assets": types/2/0285-analytics-development-assets.md
               - "03 Glossary":
                   - types/3/index.md
+                  - "10 Glossary": types/3/0310-glossary.md
+                  - "20 Category hierarchy": types/3/0320-category-hierarchy.md
+                  - "30 Glossary terms": types/3/0330-terms.md
+                  - "35 Primary category": types/3/0335-primary-category.md
+                  - "40 Dictionary": types/3/0340-dictionary.md
+                  - "50 Related terms": types/3/0350-related-terms.md
+                  - "60 Contexts": types/3/0360-contexts.md
+                  - "70 Semantic assignment": types/3/0370-semantic-assignment.md
+                  - "80 Spine objects": types/3/0380-spine-objects.md
+                  - "85 Controlled glossary development": types/3/0385-controlled-glossary-development.md
+                  - "90 Glossary projects": types/3/0390-glossary-projects.md
+                  - "95 Supplementary properties": types/3/0395-supplementary-properties.md
               - "04 Governance":
                   - types/4/index.md
+                  - "01 Governance definitions": types/4/0401-governance-definitions.md
+                  - "05 Governance drivers": types/4/0405-governance-drivers.md
+                  - "15 Governance responses": types/4/0415-governance-responses.md
+                  - "17 Governance projects": types/4/0417-governance-projects.md
+                  - "20 Governance controls": types/4/0420-governance-controls.md
+                  - "21 Governance classification levels": types/4/0421-governance-classification-levels.md
+                  - "22 Governance action classifications": types/4/0422-governance-action-classifications.md
+                  - "23 Security tags": types/4/0423-security-tags.md
+                  - "24 Governance zones": types/4/0424-governance-zones.md
+                  - "25 Subject areas": types/4/0425-subject-areas.md
+                  - "30 Technical controls": types/4/0430-technical-controls.md
+                  - "35 Policy management capabilities": types/4/0435-policy-management-capabilities.md
+                  - "38 Naming standards": types/4/0438-naming-standards.md
+                  - "40 Organizational controls": types/4/0440-organizational-controls.md
+                  - "42 Project charter": types/4/0442-project-charter.md
+                  - "45 Governance roles": types/4/0445-governance-roles.md
+                  - "50 Governance rollout": types/4/0450-governance-rollout.md
+                  - "55 Exception management": types/4/0455-exception-management.md
+                  - "60 Governance execution points": types/4/0460-governance-execution-points.md
+                  - "61 Governance engines": types/4/0461-governance-engines.md
+                  - "62 Governance action types": types/4/0462-governance-action-types.md
+                  - "63 Governance actions": types/4/0463-governance-actions.md
+                  - "65 Duplicate processing": types/4/0465-duplicate-processing.md
+                  - "70 Incident reporting": types/4/0470-incident-reporting.md
+                  - "81 Licenses": types/4/0481-licenses.md
+                  - "82 Certifications": types/4/0482-certifications.md
+                  - "85 Data processing purposes": types/4/0485-data-processing-purposes.md
               - "05 Models & reference data":
                   - types/5/index.md
+                  - "01 Schema elements": types/5/0501-schema-elements.md
+                  - "03 Asset schema": types/5/0503-asset-schema.md
+                  - "04 Implementation snippets": types/5/0504-implementation-snippets.md
+                  - "05 Schema attributes": types/5/0505-schema-attributes.md
+                  - "07 External schema types": types/5/0507-external-schema-type.md
+                  - "11 Map schema element": types/5/0511-map-schema-elements.md
+                  - "12 Derived schema elements": types/5/0512-derived-schema-elements.md
+                  - "20 Process schemas": types/5/0520-process-schemas.md
+                  - "25 Process variables": types/5/0525-process-variables.md
+                  - "30 Tabular schema": types/5/0530-tabular-schemas.md
+                  - "31 Document schemas": types/5/0531-document-schemas.md
+                  - "32 Object schemas": types/5/0532-object-schemas.md
+                  - "33 Graph schema": types/5/0533-graph-schemas.md
+                  - "34 Relational schema": types/5/0534-relational-schemas.md
+                  - "35 Event schema": types/5/0535-event-schemas.md
+                  - "36 API schemas": types/5/0536-api-schemas.md
+                  - "37 Display schemas": types/5/0537-display-schemas.md
+                  - "40 Data classes": types/5/0540-data-classes.md
+                  - "45 Reference data": types/5/0545-reference-data.md
+                  - "50 Instance metadata": types/5/0550-instance-metadata.md
+                  - "65 Design model elements": types/5/0565-design-model-elements.md
+                  - "66 Design model organization": types/5/0566-design-model-organization.md
+                  - "68 Design model scoping": types/5/0568-design-model-scoping.md
+                  - "69 Design model implementation": types/5/0569-design-model-implementation.md
+                  - "70 Metamodels": types/5/0570-metamodels.md
+                  - "71 Concept models": types/5/0571-concept-models.md
+                  - "80 Solution blueprints": types/5/0580-solution-blueprints.md
+                  - "81 Solution ports and wires": types/5/0581-solution-ports-and-wires.md
+                  - "95 Design patterns": types/5/0595-design-patterns.md
               - "06 Metadata discovery":
                   - types/6/index.md
+                  - "01 Open discovery engines and services": types/6/0601-open-discovery-engine.md
+                  - "05 Discovery analysis report": types/6/0605-open-discovery-analysis-reports.md
+                  - "10 Annotation": types/6/0610-annotations.md
+                  - "11 Annotation reviews": types/6/0612-annotation-reviews.md
+                  - "15 Schema extraction": types/6/0615-schema-extraction.md
+                  - "17 Data field analysis": types/6/0617-data-field-analysis.md
+                  - "20 Data profiling": types/6/0620-data-profiling.md
+                  - "25 Data class discovery": types/6/0625-data-class-discovery.md
+                  - "30 Semantic discovery": types/6/0630-semantic-discovery.md
+                  - "35 Classification discovery": types/6/0635-classification-discovery.md
+                  - "40 Quality scores": types/6/0640-quality-scores.md
+                  - "50 Relationship discovery": types/6/0650-relationship-discovery.md
+                  - "55 Asset deduplication": types/6/0655-asset-deduplication.md
+                  - "60 Measurements": types/6/0660-data-source-measurements.md
+                  - "90 Request for action": types/6/0690-request-for-action.md
               - "07 Lineage":
                   - types/7/index.md
+                  - "10 Digital service": types/7/0710-digital-service.md
+                  - "15 Digital service ownership": types/7/0715-digital-service-ownership.md
+                  - "17 Digital service implementation": types/7/0717-digital-service-implementation.md
+                  - "20 Information supply chains": types/7/0720-information-supply-chains.md
+                  - "30 Solution components": types/7/0730-solution-components.md
+                  - "35 Solution ports and wires": types/7/0735-solution-ports-and-wires.md
+                  - "40 Solution blueprints": types/7/0740-solution-blueprints.md
+                  - "50 Data passing": types/7/0750-data-passing.md
+                  - "60 Business lineage": types/7/0760-business-lineage.md
+                  - "70 Lineage mapping": types/7/0770-lineage-mapping.md
           - Metamodel: types/metamodel.md
       - Services:
           - Repository services (OMRS):
@@ -205,7 +320,9 @@ nav:
       - Concepts:
           - General concepts: basic-concepts.md
           - Egeria concepts:
+              - Anchor: concepts/anchor.md
               - Archive manager: concepts/archive-manager.md
+              - Asset: concepts/asset.md
               - Audit log: concepts/audit-log.md
               - Configuration document: concepts/configuration-document.md
               - Conformance test server: concepts/conformance-test-server.md
@@ -227,6 +344,7 @@ nav:
               - OMAG subsystem: concepts/omag-subsystem.md
               - Open lineage server: concepts/open-lineage-server.md
               - Open metadata archive: concepts/open-metadata-archive.md
+              - Referenceable: concepts/referenceable.md
               - Repository proxy: concepts/repository-proxy.md
               - View server: concepts/view-server.md
   - Connectors:

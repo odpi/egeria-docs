@@ -9,24 +9,27 @@ willing to follow the simple processes outlined below, as well as adhere to the
 
 ## Joining the community
 
-### Weekly Zoom calls
+### Live discussions
 
-There are two online meetings every Tuesday. All are welcome.
+We have a variety of weekly and bi-weekly meetings to which all are welcome:
 
-| Call | Purpose | Time | Location |
-|---|---|---|---|
-| Developers call | Discussion on code development (not minuted) | 11am-12pm (Amsterdam/CET) | [https://zoom.us/j/523629111 :material-dock-window:](https://zoom.us/j/523629111){ target=zoom } |
-| Community call | Demos, meetups and other activities going on in the community ([agenda and minutes :material-github:](https://github.com/odpi/data-governance/wiki){ target=gh }) | 3pm-4pm (Amsterdam/CET) | [https://zoom.us/j/523629111 :material-dock-window:](https://zoom.us/j/523629111){ target=zoom } |
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=YjVxaGRyNXFkYmZscDhkbHA3MGxtb2RtMHNmdmlocWxAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%234285F4&amp;showCalendars=0&amp;showPrint=0&amp;title=Egeria%20Calendar" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
-### Slack
+| Call | Purpose |
+|---|---|
+| Developers call | Discussion on code development (not minuted) |
+| Community call | Demos, meetups and other activities going on in the community ([agenda and minutes :material-dock-window:](https://github.com/odpi/data-governance/wiki){ target=wiki }) |
+| TSC call | Strategy, planning and decision-making with the Technical Steering Committee (TSC) |
+
+### Asynchronous dialog
 
 Egeria uses the [LF AI & Data Slack community :material-slack:](https://lfaifoundation.slack.com/archives/C01F40J2XA8){ target=slack } to provide an ongoing dialogue between members.
 This creates a recorded discussion of design decisions and discussions that complement the project meetings.
 
-Follow the link above and register with the LF AI & Data slack service using your email address.
-Once signed in you can see all of the active slack channels.
+Follow the link above and register with the LF AI & Data Slack service using your email address.
+Once signed in you can see all the active Slack channels.
 
-!!! tip "The main slack channel for the Egeria project is called `#egeria-discussion`"
+!!! tip "The main Slack channel for the Egeria project is called `#egeria-discussion`"
 
 Additional channels are added from time to time as new workgroups and discussion topics are established. For Egeria these
 channel names will begin with `#egeria`. You can also view Slack channels from other LF AI & Data projects.

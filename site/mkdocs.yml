@@ -283,19 +283,30 @@ nav:
               - Metadata events: services/omrs/metadata-events.md
           - Access services (OMAS):
               - Open Metadata Access Services: services/omas/index.md
-              - Asset catalog OMAS: services/omas/asset-catalog.md # ./open-metadata-implementation/access-services/asset-catalog/docs
-              - Asset consumer OMAS: services/omas/asset-consumer.md # ./open-metadata-implementation/access-services/asset-consumer/docs
-              - Asset lineage OMAS: services/omas/asset-lineage.md # ./open-metadata-implementation/access-services/asset-lineage/docs
-              - Asset owner OMAS: services/omas/asset-owner.md # ./open-metadata-implementation/access-services/asset-owner/docs
-              - Community profile OMAS: services/omas/community-profile.md # ./open-metadata-implementation/access-services/community-profile/docs
-              - Data engine OMAS: services/omas/data-engine.md # ./open-metadata-implementation/access-services/data-engine/docs
-              - Data manager OMAS: services/omas/data-manager.md # ./open-metadata-implementation/access-services/data-manager/docs
-              - Digital architecture OMAS: services/omas/digital-architecture.md # ./open-metadata-implementation/access-services/digital-architecture/docs
-              - Discovery engine OMAS: services/omas/discovery-engine.md # ./open-metadata-implementation/access-services/discovery-engine/docs
-              - Governance engine OMAS: services/omas/governance-engine.md # ./open-metadata-implementation/access-services/governance-engine/docs
-              - Governance program OMAS: services/omas/governance-program.md # ./open-metadata-implementation/access-services/governance-program/docs
-              - Security officer OMAS: services/omas/security-officer.md # ./open-metadata-implementation/access-services/security-officer/docs
-              - Subject area OMAS: services/omas/subject-area.md # ./open-metadata-implementation/access-services/subject-area/docs
+              - Analytics modeling OMAS: services/omas/analytics-modeling/index.md
+              - Asset catalog OMAS: services/omas/asset-catalog/index.md
+              - Asset consumer OMAS: services/omas/asset-consumer/index.md
+              - Asset lineage OMAS: services/omas/asset-lineage/index.md
+              - Asset owner OMAS: services/omas/asset-owner/index.md
+              - Community profile OMAS: services/omas/community-profile/index.md
+              - Data engine OMAS: services/omas/data-engine/index.md
+              - Data manager OMAS: services/omas/data-manager/index.md
+              - Data privacy OMAS: services/omas/data-privacy/index.md
+              - Data science OMAS: services/omas/data-science/index.md
+              - Design model OMAS: services/omas/design-model/index.md
+              - DevOps OMAS: services/omas/dev-ops/index.md
+              - Digital architecture OMAS: services/omas/digital-architecture/index.md
+              - Digital service OMAS: services/omas/digital-service/index.md
+              - Discovery engine OMAS: services/omas/discovery-engine/index.md
+              - Governance engine OMAS: services/omas/governance-engine/index.md
+              - Governance program OMAS: services/omas/governance-program/index.md
+              - IT infrastructure OMAS: services/omas/it-infrastructure/index.md
+              - Project management OMAS: services/omas/project-management/index.md
+              - Security manager OMAS: services/omas/security-manager/index.md
+              - Security officer OMAS: services/omas/security-officer/index.md
+              - Software developer OMAS: services/omas/software-developer/index.md
+              - Stewardship action OMAS: services/omas/stewardship-action/index.md
+              - Subject area OMAS: services/omas/subject-area/index.md
           - Common services:
               - Common services overview: services/common/index.md
               - Metadata security: services/common/security.md # ./open-metadata-implementation/common-services/metadata-security/docs

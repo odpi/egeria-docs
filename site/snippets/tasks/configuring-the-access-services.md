@@ -3,16 +3,10 @@
 
 ## Configure the access services
 
-The [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) provide the domain-specific
-APIs for metadata management and governance.
-They run in a [metadata server](/egeria-docs/concepts/metadata-server) or 
-[metadata access point](/egeria-docs/concepts/metadata-access-point) and typically offer a
-REST API, Java client and an event-based interface for
-asynchronous interaction.
+The [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) provide the domain-specific APIs for metadata management and governance. They run in a [metadata server](/egeria-docs/concepts/metadata-server) or [metadata access point](/egeria-docs/concepts/metadata-access-point) and typically offer a REST API, Java client and an event-based interface for asynchronous interaction.
 
 !!! attention "Prerequisite configuration"
-    The access service configuration depends on the definitions of the [event bus](#set-up-the-default-event-bus)
-    and the [local server's userId](#set-the-servers-user-id-and-optional-password).
+    The access service configuration depends on the definitions of the [event bus](#set-up-the-default-event-bus) and the [local server's userId](#set-the-servers-user-id-and-optional-password).
 
 ### List available access services
 
@@ -189,17 +183,11 @@ The access services can either all be enabled (with default configuration values
 
 The service URL marker for each service is shown in the example response given above.
 
-In both cases, it is possible to pass a list of properties to the access service
-that controls the behavior of each access service.
-These are sent in the request body.
-More details of which properties are supported
-are documented with each access service.
+In both cases, it is possible to pass a list of properties to the access service that controls the behavior of each access service. These are sent in the request body. More details of which properties are supported are documented with each access service.
 
 ### Disable the access services
 
-The access services can be disabled with the following command.
-This also disables the enterprise repository services since they
-are not being used.
+The access services can be disabled with the following command. This also disables the enterprise repository services since they are not being used.
 
 !!! delete "DELETE - disable the access services"
     ```

@@ -3,12 +3,9 @@
 
 ## Configure the audit log
 
-Egeria's audit log provides a configurable set of destinations for audit records and other
-diagnostic logging for an [OMAG server](/egeria-docs/concepts/omag-server). Some destinations also support a query interface
-to allow an administrator to understand how the server is running.
+Egeria's audit log provides a configurable set of destinations for audit records and other diagnostic logging for an [OMAG server](/egeria-docs/concepts/omag-server). Some destinations also support a query interface to allow an administrator to understand how the server is running.
 
-If the server is a development or test server, then the default audit log configuration is probably
-sufficient: the console audit log destination.
+If the server is a development or test server, then the default audit log configuration is probably sufficient: the console audit log destination.
 
 !!! post "POST - set default audit log destination"
     ```
@@ -17,9 +14,7 @@ sufficient: the console audit log destination.
 
     Using this option overrides all previous audit log destinations.
 
-If this server is a production server then you will probably want to set up the audit log
-destinations explicitly. You can add multiple destinations and each one can be set up
-to process specific severities of log records. The audit log severities are as follows:
+If this server is a production server then you will probably want to set up the audit log destinations explicitly. You can add multiple destinations and each one can be set up to process specific severities of log records. The audit log severities are as follows:
 
 | Severity | Description |
 |---|---|
@@ -64,8 +59,7 @@ There are various destinations that can be configured for the audit log:
         {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/slf4j
         ```
 
-        When configuring slf4j as destination you also need to specify auditlog logger category via the application properties.
-        This is described in [Connecting the OMAG Audit Log Framework](omag-server-platform-logging.md#connecting-the-omag-audit-log-framework) section of the developer logging guide.
+        When configuring slf4j as destination you also need to specify auditlog logger category via the application properties. This is described in [Connecting the OMAG Audit Log Framework](omag-server-platform-logging.md#connecting-the-omag-audit-log-framework) section of the developer logging guide.
 
 === "file"
 
@@ -79,8 +73,7 @@ There are various destinations that can be configured for the audit log:
 === "event"
 
     !!! post "POST - add event-based audit log destination"
-        This writes each log record as an event on the supplied event topic.
-        It assumes that the [event bus](#set-up-the-default-event-bus) is set up first.
+        This writes each log record as an event on the supplied event topic. It assumes that the [event bus](#set-up-the-default-event-bus) is set up first.
 
         ```
         {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/event-topic
@@ -89,10 +82,7 @@ There are various destinations that can be configured for the audit log:
 === "connection"
 
     !!! post "POST - add connection-based audit log destination"
-        This sets up an audit log destination that is described though a
-        [connection](/egeria/concepts/connection).
-        In this case, the connection is passed in the request body and the supported severities can be supplied in the
-        connection's configuration properties.
+        This sets up an audit log destination that is described though a [connection](/egeria/concepts/connection). In this case, the connection is passed in the request body and the supported severities can be supplied in the connection's configuration properties.
 
         ```
         {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/connection

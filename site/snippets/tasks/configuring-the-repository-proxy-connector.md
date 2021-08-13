@@ -3,8 +3,7 @@
 
 ## Configure the repository proxy connector
 
-The mapping between a third party metadata repository and the open metadata protocols
-in a [repository proxy](/egeria-docs/concepts/repository-proxy) is implemented in two connectors:
+The mapping between a third party metadata repository and the open metadata protocols in a [repository proxy](/egeria-docs/concepts/repository-proxy) is implemented in two connectors:
 
 - An [OMRS repository connector](/egeria-docs/connectors/repository-connector)
 - An [OMRS event mapper connector](/egeria-docs/connectors/event-mapper-connector)
@@ -13,9 +12,7 @@ They are configured as follows.
 
 ### Configure the repository connector
 
-The OMAG server can act as a proxy to a vendor's repository.
-This is done by adding the connection
-for the repository proxy as the local repository.
+The OMAG server can act as a proxy to a vendor's repository. This is done by adding the connection for the repository proxy as the local repository.
 
 !!! post "POST - configure the repository connector"
     ```
@@ -53,14 +50,9 @@ for the repository proxy as the local repository.
 
 ### Configure the repository's event mapper
 
-Any open metadata repository that supports its own API may also implement an
-event mapper to ensure the
-[Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is notified when
-metadata is added to the repository without going through the open metadata APIs.
+Any open metadata repository that supports its own API may also implement an event mapper to ensure the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is notified when metadata is added to the repository without going through the open metadata APIs.
 
-The event mapper is a connector that listens for proprietary events
-from the repository and converts them into calls to the OMRS.
-The OMRS then distributes this new metadata.
+The event mapper is a connector that listens for proprietary events from the repository and converts them into calls to the OMRS. The OMRS then distributes this new metadata.
 
 !!! post "POST - configure event mapper"
     ```

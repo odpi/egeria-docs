@@ -3,13 +3,9 @@
 
 ## Load metadata
 
-[Open metadata archives](/egeria-docs/concepts/open-metadata-archive)
-contain pre-canned metadata types and instances for [cohort members](/egeria-docs/services/omrs/cohort/#cohort-members).
+[Open metadata archives](/egeria-docs/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [cohort members](/egeria-docs/services/omrs/cohort/#cohort-members).
 
-Archives can be
-[added to the configuration document](#configure-metadata-to-load-on-startup) of a server
-to ensure their content is loaded each time the server is started. This is intended for
-repositories that do not store the archive content but keep it in memory.
+Archives can be [added to the configuration document](#configure-metadata-to-load-on-startup) of a server to ensure their content is loaded each time the server is started. This is intended for repositories that do not store the archive content but keep it in memory.
 
 Archives can also be [loaded to a running server](#add-to-a-running-server).
 
@@ -19,22 +15,16 @@ Archives can also be [loaded to a running server](#add-to-a-running-server).
 
 ### Add to a running server
 
-Typically, an open metadata archive is stored as JSON format in a file. To load such a file use the
-following command:
+Typically, an open metadata archive is stored as JSON format in a file. To load such a file use the following command:
 
 !!! post "POST - load file"
     ```
     {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/instance/open-metadata-archives/file
     ```
 
-    The body of the request should be the fully-qualified path name or path relative to the startup directory
-    of the OMAG Server Platform -- and the file name should not have any quotes around it.
+    The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
 
-Alternatively it is possible to set up the list of open metadata archives as a list of
-[connections](/egeria-docs/concepts/connection).
-These connections refer to
-[open metadata archive connectors](/egeria-docs/connectors/open-metadata-archive-store-connector)
-that can read and retrieve the open metadata archive content.
+Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/egeria-docs/concepts/connection). These connections refer to [open metadata archive connectors](/egeria-docs/connectors/open-metadata-archive-store-connector) that can read and retrieve the open metadata archive content.
 
 !!! post "POST - load from connection(s)"
     ```
@@ -43,25 +33,20 @@ that can read and retrieve the open metadata archive content.
 
     The body of the request should be the list of connections from which to load archives.
 
-This option can be used when the open metadata archives are not stored in a file, or a different
-file format from the default one for the OMAG Server Platform is required.
+This option can be used when the open metadata archives are not stored in a file, or a different file format from the default one for the OMAG Server Platform is required.
 
 ### Configure metadata to load on startup
 
-Typically, an open metadata archive is stored as JSON format in a file. To configure the load of such a file
-use the following command:
+Typically, an open metadata archive is stored as JSON format in a file. To configure the load of such a file use the following command:
 
 !!! post "POST - specify file to load"
     ```
     POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/open-metadata-archives/file
     ```
 
-    The body of the request should be the fully-qualified path name or path relative to the startup directory
-    of the OMAG Server Platform -- and the file name should not have any quotes around it.
+    The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
 
-Alternatively it is possible to set up the list of open metadata archives as a list of
-[connections](/egeria-docs/concepts/connection).
-These connections refer to connectors that can read and retrieve the open metadata archive content.
+Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/egeria-docs/concepts/connection). These connections refer to connectors that can read and retrieve the open metadata archive content.
 
 !!! post "POST - specify connection(s) to load"
     ```
@@ -70,8 +55,7 @@ These connections refer to connectors that can read and retrieve the open metada
 
     The body of the request should be the list of connections from which to load archives.
 
-This option can be used when the open metadata archives are not stored in a file, or a different
-file connector from the default one for the OMAG Server Platform is required.
+This option can be used when the open metadata archives are not stored in a file, or a different file connector from the default one for the OMAG Server Platform is required.
 
 ### Remove metadata load on startup
 

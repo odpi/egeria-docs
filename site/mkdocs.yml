@@ -11,364 +11,65 @@ edit_uri: ""
 
 nav:
   - Home: index.md
-  - Learn more:
-      - The challenge: introduction/challenge.md
-      - Our solution: introduction/overview.md
-      - Key concepts: introduction/key-concepts.md
+  - Overview:
+      - The Challenge: introduction/challenge.md
+      - Our Solution: introduction/overview.md
+      - Key Concepts: introduction/key-concepts.md
       - Patterns:
-          - Metadata server exchange: introduction/patterns/metadata-server-exchange.md
-          - Repository conformance: introduction/patterns/repository-conformance.md
-          - Data manager integration: introduction/patterns/data-manager-integration.md
-          - File lineage: introduction/patterns/file-lineage.md
-  - Getting started:
+          - Metadata Server Exchange: introduction/patterns/metadata-server-exchange.md
+          - Repository Conformance: introduction/patterns/repository-conformance.md
+          - Data Manager Integration: introduction/patterns/data-manager-integration.md
+          - File Lineage: introduction/patterns/file-lineage.md
+
+  - Using:
+      - Plan:
+          - Planning Guide: guides/planning/index.md
+      - Administer:
+          - Administration Guide: guides/admin/index.md
+          - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
+          - OMAG Servers:
+              - Configure OMAG Servers: guides/admin/configuring-an-omag-server.md
+              - Configure Metadata Access Point: guides/admin/configuring-a-metadata-access-point.md
+              - Configure Metadata Server: guides/admin/configuring-a-metadata-server.md
+              - Configure Repository Proxy: guides/admin/configuring-a-repository-proxy.md
+              - Configure Conformance Test Server: guides/admin/configuring-a-conformance-test-server.md
+              - Configure View Server: guides/admin/configuring-a-view-server.md
+              - Configure Integration Daemon: guides/admin/configuring-an-integration-daemon.md
+              - Configure Engine Host: guides/admin/configuring-an-engine-host.md
+              - Configure Data Engine Proxy: guides/admin/configuring-a-data-engine-proxy.md
+              - Configure Open Lineage Server: guides/admin/configuring-an-open-lineage-server.md
+      - Build:
+          - Building an Asset Catalog: guides/asset-catalog.md
+      - Diagnose:
+          - Diagnostic Guide: guides/diagnostic.md
+  - Learning:
       - Dojo:
-          - Dojo introduction: getting-started/dojo/index.md
+          - Dojo Introduction: getting-started/dojo/index.md
           - Day 1:
-              - Egeria introduction: getting-started/dojo/1/introduction.md
-              - Egeria project introduction: getting-started/dojo/1/project-introduction.md
+              - Egeria Introduction: getting-started/dojo/1/introduction.md
+              - Egeria Project Introduction: getting-started/dojo/1/project-introduction.md
               - Running Egeria: getting-started/dojo/1/running-egeria.md
               - Configuring the OMAG Server Platform: getting-started/dojo/1/configuring-the-platform.md
           - Day 2: getting-started/dojo/2/index.md
           - Day 3: getting-started/dojo/3/index.md
-      - Hands-on labs:
-          - Hands-on labs overview: getting-started/hands-on-labs/index.md
-          - Options for running:
-              - Docker Compose: getting-started/hands-on-labs/docker-compose.md
-              - Kubernetes: getting-started/hands-on-labs/kubernetes.md
-              - Local machine: getting-started/hands-on-labs/local.md
-  - Guides:
-      - Community guide: guides/community.md
-      - Operations guide: guides/operations.md
-      - Building an asset catalog: guides/asset-catalog.md
-      - Planning guide: guides/planning.md
-      - Administration:
-          - Administration guide: guides/admin/index.md
-          - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
-          - Configure OMAG servers:
-              - General notes: guides/admin/configuring-an-omag-server.md
-              - Configure metadata access point: guides/admin/configuring-a-metadata-access-point.md
-              - Configure metadata server: guides/admin/configuring-a-metadata-server.md
-              - Configure repository proxy: guides/admin/configuring-a-repository-proxy.md
-              - Configure conformance test server: guides/admin/configuring-a-conformance-test-server.md
-              - Configure view server: guides/admin/configuring-a-view-server.md
-              - Configure integration daemon: guides/admin/configuring-an-integration-daemon.md
-              - Configure engine host: guides/admin/configuring-an-engine-host.md
-              - Configure data engine proxy: guides/admin/configuring-a-data-engine-proxy.md
-              - Configure open lineage server: guides/admin/configuring-an-open-lineage-server.md
-      - Developer guide: guides/developer.md
-      - Diagnostic guide: guides/diagnostic.md
-      - Conformance Test Suite:
-          - CTS overview: guides/cts/index.md
-          - Platform profiles:
-              - Platform origin: guides/cts/profiles/platform-origin.md
-          - Repository profiles:
-              - Metadata sharing: guides/cts/profiles/metadata-sharing.md
-              - Metadata maintenance: guides/cts/profiles/metadata-maintenance.md
-              - Effectivity dating: guides/cts/profiles/effectivity-dating.md
-              - Dynamic types: guides/cts/profiles/dynamic-types.md
-              - Graph queries: guides/cts/profiles/graph-queries.md
-              - Historical search: guides/cts/profiles/historical-search.md
-              - Entity proxies: guides/cts/profiles/entity-proxies.md
-              - Soft-delete and restore: guides/cts/profiles/soft-delete-restore.md
-              - Undo an update: guides/cts/profiles/undo-update.md
-              - Reidentify instance: guides/cts/profiles/reidentify-instance.md
-              - Retype instance: guides/cts/profiles/retype-instance.md
-              - Rehome instance: guides/cts/profiles/rehome-instance.md
-          - Performance profiles:
-              - Entity creation: guides/cts/profiles/entity-creation.md
-              - Entity search: guides/cts/profiles/entity-search.md
-              - Relationship creation: guides/cts/profiles/relationship-creation.md
-              - Relationship search: guides/cts/profiles/relationship-search.md
-              - Entity classification: guides/cts/profiles/entity-classification.md
-              - Classification search: guides/cts/profiles/classification-search.md
-              - Entity update: guides/cts/profiles/entity-update.md
-              - Relationship update: guides/cts/profiles/relationship-update.md
-              - Classification update: guides/cts/profiles/classification-update.md
-              - Entity undo: guides/cts/profiles/entity-undo.md
-              - Relationship undo: guides/cts/profiles/relationship-undo.md
-              - Entity retrieval: guides/cts/profiles/entity-retrieval.md
-              - Entity history retrieval: guides/cts/profiles/entity-history-retrieval.md
-              - Relationship retrieval: guides/cts/profiles/relationship-retrieval.md
-              - Relationship history retrieval: guides/cts/profiles/relationship-history-retrieval.md
-              - Entity history search: guides/cts/profiles/entity-history-search.md
-              - Relationship history search: guides/cts/profiles/relationship-history-search.md
-              - Graph queries: guides/cts/profiles/graph-queries.md
-              - Graph history queries: guides/cts/profiles/graph-history-queries.md
-              - Entity re-home: guides/cts/profiles/entity-re-home.md
-              - Relationship re-home: guides/cts/profiles/relationship-re-home.md
-              - Entity declassify: guides/cts/profiles/entity-declassify.md
-              - Entity re-type: guides/cts/profiles/entity-retype.md
-              - Relationship re-type: guides/cts/profiles/relationship-retype.md
-              - Entity re-identify: guides/cts/profiles/entity-re-identify.md
-              - Relationship re-identify: guides/cts/profiles/relationship-re-identify.md
-              - Relationship delete: guides/cts/profiles/relationship-delete.md
-              - Entity delete: guides/cts/profiles/entity-delete.md
-              - Entity restore: guides/cts/profiles/entity-restore.md
-              - Relationship restore: guides/cts/profiles/relationship-restore.md
-              - Relationship purge: guides/cts/profiles/relationship-purge.md
-              - Entity purge: guides/cts/profiles/entity-purge.md
-              - Environment: guides/cts/profiles/environment.md
-  - Reference:
-      - Types:
-          - Open metadata types:
-              - Open metadata type system: types/index.md
-              - "00 Base":
-                  - types/0/index.md
-                  - "10 Base model": types/0/0010-base-model.md
-                  - "11 Managing Referenceables": types/0/0011-managing-referenceables.md
-                  - "12 Search keywords": types/0/0012-search-keywords.md
-                  - "15 Linked media": types/0/0015-linked-media-types.md
-                  - "17 External identifiers": types/0/0017-external-identifiers.md
-                  - "19 More information": types/0/0019-more-information.md
-                  - "20 Property facets": types/0/0020-property-facets.md
-                  - "25 Locations": types/0/0025-locations.md
-                  - "30 Hosts and platforms": types/0/0030-hosts-and-platforms.md
-                  - "35 Complex hosts": types/0/0035-complex-hosts.md
-                  - "37 Software server platforms": types/0/0037-software-server-platforms.md
-                  - "40 Software servers": types/0/0040-software-servers.md
-                  - "42 Software server capabilities": types/0/0042-software-server-capabilities.md
-                  - "45 Servers and assets": types/0/0045-servers-and-assets.md
-                  - "50 Applications and processes": types/0/0050-applications-and-processes.md
-                  - "55 Data processing engines": types/0/0055-data-processing-engines.md
-                  - "57 Integration capabilities": types/0/0057-integration-capabilities.md
-                  - "70 Networks and gateways": types/0/0070-networks-and-gateways.md
-                  - "90 Cloud platforms and services": types/0/0090-cloud-platforms-and-services.md
-              - "01 Collaboration":
-                  - types/1/index.md
-                  - "10 Actors": types/1/0110-actors.md
-                  - "12 People": types/1/0112-people.md
-                  - "15 Teams": types/1/0115-teams.md
-                  - "17 IT profiles": types/1/0117-it-profiles.md
-                  - "20 Collections": types/1/0120-collections.md
-                  - "30 Projects": types/1/0130-projects.md
-                  - "35 Meetings": types/1/0135-meetings.md
-                  - "37 Actions for people": types/1/0137-actions.md
-                  - "40 Communities": types/1/0140-communities.md
-                  - "50 Feedback": types/1/0150-feedback.md
-                  - "55 Crowd sourcing": types/1/0155-crowd-sourcing.md
-                  - "60 Notes": types/1/0160-notes.md
-              - "02 Data assets":
-                  - types/2/index.md
-                  - "01 Connectors and connections": types/2/0201-connectors-and-connections.md
-                  - "05 Connection linkage": types/2/0205-connection-linkage.md
-                  - "10 Data stores": types/2/0210-data-stores.md
-                  - "11 Data sets": types/2/0211-data-sets.md
-                  - "12 Deployed APIs": types/2/0212-deployed-apis.md
-                  - "15 Software components": types/2/0215-software-components.md
-                  - "17 Ports": types/2/0217-ports.md
-                  - "20 Files and folders": types/2/0220-files-and-folders.md
-                  - "21 Document stores": types/2/0221-document-stores.md
-                  - "22 Graph stores": types/2/0222-graph-stores.md
-                  - "23 Events and logs": types/2/0223-events-and-logs.md
-                  - "24 Databases": types/2/0224-databases.md
-                  - "25 Metadata repositories": types/2/0225-metadata-repositories.md
-                  - "27 Keystores": types/2/0227-keystores.md
-                  - "30 Code tables": types/2/0230-code-tables.md
-                  - "35 Information view": types/2/0235-information-view.md
-                  - "39 Reports": types/2/0239-reports.md
-                  - "65 Analytics assets": types/2/0265-analytics-assets.md
-                  - "80 Software development assets": types/2/0280-software-development-assets.md
-                  - "81 Software modules": types/2/0281-software-modules.md
-                  - "82 Released software components": types/2/0282-released-software-components.md
-                  - "85 Analytics development assets": types/2/0285-analytics-development-assets.md
-              - "03 Glossary":
-                  - types/3/index.md
-                  - "10 Glossary": types/3/0310-glossary.md
-                  - "20 Category hierarchy": types/3/0320-category-hierarchy.md
-                  - "30 Glossary terms": types/3/0330-terms.md
-                  - "35 Primary category": types/3/0335-primary-category.md
-                  - "40 Dictionary": types/3/0340-dictionary.md
-                  - "50 Related terms": types/3/0350-related-terms.md
-                  - "60 Contexts": types/3/0360-contexts.md
-                  - "70 Semantic assignment": types/3/0370-semantic-assignment.md
-                  - "80 Spine objects": types/3/0380-spine-objects.md
-                  - "85 Controlled glossary development": types/3/0385-controlled-glossary-development.md
-                  - "90 Glossary projects": types/3/0390-glossary-projects.md
-                  - "95 Supplementary properties": types/3/0395-supplementary-properties.md
-              - "04 Governance":
-                  - types/4/index.md
-                  - "01 Governance definitions": types/4/0401-governance-definitions.md
-                  - "05 Governance drivers": types/4/0405-governance-drivers.md
-                  - "15 Governance responses": types/4/0415-governance-responses.md
-                  - "17 Governance projects": types/4/0417-governance-projects.md
-                  - "20 Governance controls": types/4/0420-governance-controls.md
-                  - "21 Governance classification levels": types/4/0421-governance-classification-levels.md
-                  - "22 Governance action classifications": types/4/0422-governance-action-classifications.md
-                  - "23 Security tags": types/4/0423-security-tags.md
-                  - "24 Governance zones": types/4/0424-governance-zones.md
-                  - "25 Subject areas": types/4/0425-subject-areas.md
-                  - "30 Technical controls": types/4/0430-technical-controls.md
-                  - "35 Policy management capabilities": types/4/0435-policy-management-capabilities.md
-                  - "38 Naming standards": types/4/0438-naming-standards.md
-                  - "40 Organizational controls": types/4/0440-organizational-controls.md
-                  - "42 Project charter": types/4/0442-project-charter.md
-                  - "45 Governance roles": types/4/0445-governance-roles.md
-                  - "50 Governance rollout": types/4/0450-governance-rollout.md
-                  - "55 Exception management": types/4/0455-exception-management.md
-                  - "60 Governance execution points": types/4/0460-governance-execution-points.md
-                  - "61 Governance engines": types/4/0461-governance-engines.md
-                  - "62 Governance action types": types/4/0462-governance-action-types.md
-                  - "63 Governance actions": types/4/0463-governance-actions.md
-                  - "65 Duplicate processing": types/4/0465-duplicate-processing.md
-                  - "70 Incident reporting": types/4/0470-incident-reporting.md
-                  - "81 Licenses": types/4/0481-licenses.md
-                  - "82 Certifications": types/4/0482-certifications.md
-                  - "85 Data processing purposes": types/4/0485-data-processing-purposes.md
-              - "05 Models & reference data":
-                  - types/5/index.md
-                  - "01 Schema elements": types/5/0501-schema-elements.md
-                  - "03 Asset schema": types/5/0503-asset-schema.md
-                  - "04 Implementation snippets": types/5/0504-implementation-snippets.md
-                  - "05 Schema attributes": types/5/0505-schema-attributes.md
-                  - "07 External schema types": types/5/0507-external-schema-type.md
-                  - "11 Map schema element": types/5/0511-map-schema-elements.md
-                  - "12 Derived schema elements": types/5/0512-derived-schema-elements.md
-                  - "20 Process schemas": types/5/0520-process-schemas.md
-                  - "25 Process variables": types/5/0525-process-variables.md
-                  - "30 Tabular schema": types/5/0530-tabular-schemas.md
-                  - "31 Document schemas": types/5/0531-document-schemas.md
-                  - "32 Object schemas": types/5/0532-object-schemas.md
-                  - "33 Graph schema": types/5/0533-graph-schemas.md
-                  - "34 Relational schema": types/5/0534-relational-schemas.md
-                  - "35 Event schema": types/5/0535-event-schemas.md
-                  - "36 API schemas": types/5/0536-api-schemas.md
-                  - "37 Display schemas": types/5/0537-display-schemas.md
-                  - "40 Data classes": types/5/0540-data-classes.md
-                  - "45 Reference data": types/5/0545-reference-data.md
-                  - "50 Instance metadata": types/5/0550-instance-metadata.md
-                  - "65 Design model elements": types/5/0565-design-model-elements.md
-                  - "66 Design model organization": types/5/0566-design-model-organization.md
-                  - "68 Design model scoping": types/5/0568-design-model-scoping.md
-                  - "69 Design model implementation": types/5/0569-design-model-implementation.md
-                  - "70 Metamodels": types/5/0570-metamodels.md
-                  - "71 Concept models": types/5/0571-concept-models.md
-                  - "80 Solution blueprints": types/5/0580-solution-blueprints.md
-                  - "81 Solution ports and wires": types/5/0581-solution-ports-and-wires.md
-                  - "95 Design patterns": types/5/0595-design-patterns.md
-              - "06 Metadata discovery":
-                  - types/6/index.md
-                  - "01 Open discovery engines and services": types/6/0601-open-discovery-engine.md
-                  - "05 Discovery analysis report": types/6/0605-open-discovery-analysis-reports.md
-                  - "10 Annotation": types/6/0610-annotations.md
-                  - "11 Annotation reviews": types/6/0612-annotation-reviews.md
-                  - "15 Schema extraction": types/6/0615-schema-extraction.md
-                  - "17 Data field analysis": types/6/0617-data-field-analysis.md
-                  - "20 Data profiling": types/6/0620-data-profiling.md
-                  - "25 Data class discovery": types/6/0625-data-class-discovery.md
-                  - "30 Semantic discovery": types/6/0630-semantic-discovery.md
-                  - "35 Classification discovery": types/6/0635-classification-discovery.md
-                  - "40 Quality scores": types/6/0640-quality-scores.md
-                  - "50 Relationship discovery": types/6/0650-relationship-discovery.md
-                  - "55 Asset deduplication": types/6/0655-asset-deduplication.md
-                  - "60 Measurements": types/6/0660-data-source-measurements.md
-                  - "90 Request for action": types/6/0690-request-for-action.md
-              - "07 Lineage":
-                  - types/7/index.md
-                  - "10 Digital service": types/7/0710-digital-service.md
-                  - "15 Digital service ownership": types/7/0715-digital-service-ownership.md
-                  - "17 Digital service implementation": types/7/0717-digital-service-implementation.md
-                  - "20 Information supply chains": types/7/0720-information-supply-chains.md
-                  - "30 Solution components": types/7/0730-solution-components.md
-                  - "35 Solution ports and wires": types/7/0735-solution-ports-and-wires.md
-                  - "40 Solution blueprints": types/7/0740-solution-blueprints.md
-                  - "50 Data passing": types/7/0750-data-passing.md
-                  - "60 Business lineage": types/7/0760-business-lineage.md
-                  - "70 Lineage mapping": types/7/0770-lineage-mapping.md
-          - Metamodel: types/metamodel.md
-      - Services:
-          - Repository services (OMRS):
-              - Repository services design: services/omrs/index.md
-              - Cohorts: services/omrs/cohort.md
-              - Metadata repositories: services/omrs/metadata-repositories.md
-              - Metadata events: services/omrs/metadata-events.md
-          - Access services (OMAS):
-              - Open Metadata Access Services: services/omas/index.md
-              - Asset catalog OMAS: services/omas/asset-catalog.md # ./open-metadata-implementation/access-services/asset-catalog/docs
-              - Asset consumer OMAS: services/omas/asset-consumer.md # ./open-metadata-implementation/access-services/asset-consumer/docs
-              - Asset lineage OMAS: services/omas/asset-lineage.md # ./open-metadata-implementation/access-services/asset-lineage/docs
-              - Asset owner OMAS: services/omas/asset-owner.md # ./open-metadata-implementation/access-services/asset-owner/docs
-              - Community profile OMAS: services/omas/community-profile.md # ./open-metadata-implementation/access-services/community-profile/docs
-              - Data engine OMAS: services/omas/data-engine.md # ./open-metadata-implementation/access-services/data-engine/docs
-              - Data manager OMAS: services/omas/data-manager.md # ./open-metadata-implementation/access-services/data-manager/docs
-              - Digital architecture OMAS: services/omas/digital-architecture.md # ./open-metadata-implementation/access-services/digital-architecture/docs
-              - Discovery engine OMAS: services/omas/discovery-engine.md # ./open-metadata-implementation/access-services/discovery-engine/docs
-              - Governance engine OMAS: services/omas/governance-engine.md # ./open-metadata-implementation/access-services/governance-engine/docs
-              - Governance program OMAS: services/omas/governance-program.md # ./open-metadata-implementation/access-services/governance-program/docs
-              - Security officer OMAS: services/omas/security-officer.md # ./open-metadata-implementation/access-services/security-officer/docs
-              - Subject area OMAS: services/omas/subject-area.md # ./open-metadata-implementation/access-services/subject-area/docs
-          - Common services:
-              - Common services overview: services/common/index.md
-              - Metadata security: services/common/security.md # ./open-metadata-implementation/common-services/metadata-security/docs
-              - Generic handlers: services/common/handlers.md # ./open-metadata-implementation/common-services/generic-handlers/docs
-          - Platform services: services/platform.md
-          - Governance servers:
-              - Governance servers overview: services/governance/index.md # ./open-metadata-implementation/governance-servers/docs
-              - Integration daemon services: services/governance/integration-daemon.md # ./open-metadata-implementation/governance-servers/integration-daemon-services/docs
-              - Engine host services: services/governance/engine-host.md # ./open-metadata-implementation/governance-servers/engine-host-services/docs
-              - Open lineage services (OLS): services/governance/ols.md # ./open-metadata-implementation/governance-servers/open-lineage-services/docs
-          - View services (OMVS):
-              - View services overview: services/omvs/index.md
-              - Glossary author view: services/omvs/glossary-author.md # ./open-metadata-implementation/view-services/glossary-author-view/docs
-          - Integration services (OMIS):
-              - Integration services overview: services/omis/index.md
-              - Database integrator: services/omis/database-integrator.md
-      - Frameworks:
-          - Audit logging (ALF): frameworks/alf.md # ./open-metadata-implementation/frameworks/audit-log-framework/docs
-          - Connectors (OCF): frameworks/ocf.md # ./open-metadata-implementation/frameworks/open-connector-framework/docs
-          - Discovery (ODF): frameworks/odf.md # ./open-metadata-implementation/frameworks/open-discovery-framework/docs
-          - Governance action (GAF): frameworks/gaf.md # ./open-metadata-implementation/frameworks/governance-action-framework/docs
-      - Concepts:
-          - General concepts: basic-concepts.md
-          - Egeria concepts:
-              - Anchor: concepts/anchor.md
-              - Archive manager: concepts/archive-manager.md
-              - Asset: concepts/asset.md
-              - Audit log: concepts/audit-log.md
-              - Configuration document: concepts/configuration-document.md
-              - Conformance test server: concepts/conformance-test-server.md
-              - Connected asset properties: concepts/connected-asset-properties.md
-              - Connection: concepts/connection.md
-              - Connector: concepts/connector.md
-              - Connector broker: concepts/connector-broker.md
-              - Connector provider: concepts/connector-provider.md
-              - Connector type: concepts/connector-type.md
-              - Data engine proxy: concepts/data-engine-proxy.md
-              - Endpoint: concepts/endpoint.md
-              - Engine host: concepts/engine-host.md
-              - Event bus: concepts/event-bus.md
-              - Integration daemon: concepts/integration-daemon.md
-              - Metadata access point: concepts/metadata-access-point.md
-              - Metadata server: concepts/metadata-server.md
-              - OMAG server: concepts/omag-server.md
-              - OMAG Server Platform: concepts/omag-server-platform.md
-              - OMAG subsystem: concepts/omag-subsystem.md
-              - Open lineage server: concepts/open-lineage-server.md
-              - Open metadata archive: concepts/open-metadata-archive.md
-              - Referenceable: concepts/referenceable.md
-              - Repository proxy: concepts/repository-proxy.md
-              - View server: concepts/view-server.md
-  - Connectors:
-      - Connectors overview: connectors/index.md
-      - Connector types:
-          - Audit log store: connectors/audit-log-store-connector.md
-          - Cohort registry store: connectors/cohort-registry-store-connector.md
-          - Event mapper: connectors/event-mapper-connector.md
-          - Integration connector: connectors/integration-connector.md
-          - OMRS topic: connectors/omrs-topic-connector.md
-          - Open metadata archive store: connectors/open-metadata-archive-store-connector.md
-          - Open metadata topic: connectors/open-metadata-topic-connector.md
-          - Repository: connectors/repository-connector.md
-      - Connector catalog:
-          - Exchange connectors: connectors/exchange/index.md
-          - Runtime connectors: connectors/runtime/index.md
-          - Data connectors: connectors/data/index.md
-  - Release notes:
+      - Hands-on Labs:
+          - Hands-on Labs Overview: getting-started/hands-on-labs/index.md
+  - Contributing:
+      - Community Guide: guides/community.md
+      - Project Operations: guides/project-operations.md
+      - Develop:
+          - Developer Guide: guides/developer.md
+      - Document:
+          - Documentation Guide: guides/documentation/index.md
+          - Formatting Standards: guides/documentation/formatting.md
+          - Style Guide: guides/documentation/style.md
+  - Releases:
       - Overview: release-notes/index.md
-      - Latest release: release-notes/latest.md
-      - Next release: release-notes/next.md
+      - Latest Release: release-notes/latest.md
+      - Next Release: release-notes/next.md
       - Roadmap: release-notes/roadmap/index.md
-      - Content status: release-notes/roadmap/content-status.md
-      - Older releases:
+      - Content Status: release-notes/roadmap/content-status.md
+      - Older Releases:
           - v2.x:
               - 2.11: release-notes/2-11.md
               - "2.10": release-notes/2-10.md
@@ -392,6 +93,326 @@ nav:
               - 1.2: release-notes/1-2.md
               - 1.1: release-notes/1-1.md
               - 1.0: release-notes/1-0.md
+  - Reference:
+      - Types:
+          - Open Metadata Type System: types/index.md
+          - Base:
+              - Area 0: types/0/index.md
+              - Base Model: types/0/0010-base-model.md
+              - Managing Referenceables: types/0/0011-managing-referenceables.md
+              - Search Keywords: types/0/0012-search-keywords.md
+              - Linked Media: types/0/0015-linked-media-types.md
+              - External Identifiers: types/0/0017-external-identifiers.md
+              - More Information: types/0/0019-more-information.md
+              - Property Facets: types/0/0020-property-facets.md
+              - Locations: types/0/0025-locations.md
+              - Hosts and Platforms: types/0/0030-hosts-and-platforms.md
+              - Complex Hosts: types/0/0035-complex-hosts.md
+              - Software Server Platforms: types/0/0037-software-server-platforms.md
+              - Software Servers: types/0/0040-software-servers.md
+              - Software Server Capabilities: types/0/0042-software-server-capabilities.md
+              - Servers and Assets: types/0/0045-servers-and-assets.md
+              - Applications and Processes: types/0/0050-applications-and-processes.md
+              - Data Processing Engines: types/0/0055-data-processing-engines.md
+              - Integration Capabilities: types/0/0057-integration-capabilities.md
+              - Networks and Gateways: types/0/0070-networks-and-gateways.md
+              - Cloud Platforms and Services: types/0/0090-cloud-platforms-and-services.md
+          - Collaboration:
+              - Area 1: types/1/index.md
+              - Actors: types/1/0110-actors.md
+              - People: types/1/0112-people.md
+              - Teams: types/1/0115-teams.md
+              - IT Profiles: types/1/0117-it-profiles.md
+              - Collections: types/1/0120-collections.md
+              - Projects: types/1/0130-projects.md
+              - Meetings: types/1/0135-meetings.md
+              - Actions for People: types/1/0137-actions.md
+              - Communities: types/1/0140-communities.md
+              - Feedback: types/1/0150-feedback.md
+              - Crowd Sourcing: types/1/0155-crowd-sourcing.md
+              - Notes: types/1/0160-notes.md
+          - Data Assets:
+              - Area 2: types/2/index.md
+              - Connectors and Connections: types/2/0201-connectors-and-connections.md
+              - Connection Linkage: types/2/0205-connection-linkage.md
+              - Data Stores: types/2/0210-data-stores.md
+              - Data Sets: types/2/0211-data-sets.md
+              - Deployed APIs: types/2/0212-deployed-apis.md
+              - Software Components: types/2/0215-software-components.md
+              - Ports: types/2/0217-ports.md
+              - Files and Folders: types/2/0220-files-and-folders.md
+              - Document Stores: types/2/0221-document-stores.md
+              - Graph Stores: types/2/0222-graph-stores.md
+              - Events and Logs: types/2/0223-events-and-logs.md
+              - Databases: types/2/0224-databases.md
+              - Metadata Repositories: types/2/0225-metadata-repositories.md
+              - Keystores: types/2/0227-keystores.md
+              - Code Tables: types/2/0230-code-tables.md
+              - Information View: types/2/0235-information-view.md
+              - Reports: types/2/0239-reports.md
+              - Analytics Assets: types/2/0265-analytics-assets.md
+              - Software Development Assets: types/2/0280-software-development-assets.md
+              - Software Modules: types/2/0281-software-modules.md
+              - Released Software Components: types/2/0282-released-software-components.md
+              - Analytics Development Assets: types/2/0285-analytics-development-assets.md
+          - Glossary:
+              - Area 3: types/3/index.md
+              - Glossary: types/3/0310-glossary.md
+              - Category Hierarchy: types/3/0320-category-hierarchy.md
+              - Glossary Terms: types/3/0330-terms.md
+              - Primary Category: types/3/0335-primary-category.md
+              - Dictionary: types/3/0340-dictionary.md
+              - Related Terms: types/3/0350-related-terms.md
+              - Contexts: types/3/0360-contexts.md
+              - Semantic Assignment: types/3/0370-semantic-assignment.md
+              - Spine Objects: types/3/0380-spine-objects.md
+              - Controlled Glossary Development: types/3/0385-controlled-glossary-development.md
+              - Glossary Projects: types/3/0390-glossary-projects.md
+              - Supplementary Properties: types/3/0395-supplementary-properties.md
+          - Governance:
+              - Area 4: types/4/index.md
+              - Governance Definitions: types/4/0401-governance-definitions.md
+              - Governance Drivers: types/4/0405-governance-drivers.md
+              - Governance Responses: types/4/0415-governance-responses.md
+              - Governance Projects: types/4/0417-governance-projects.md
+              - Governance Controls: types/4/0420-governance-controls.md
+              - Governance Classification Levels: types/4/0421-governance-classification-levels.md
+              - Governance Action Classifications: types/4/0422-governance-action-classifications.md
+              - Security Tags: types/4/0423-security-tags.md
+              - Governance Zones: types/4/0424-governance-zones.md
+              - Subject Areas: types/4/0425-subject-areas.md
+              - Technical Controls: types/4/0430-technical-controls.md
+              - Policy Management Capabilities: types/4/0435-policy-management-capabilities.md
+              - Naming Standards: types/4/0438-naming-standards.md
+              - Organizational Controls: types/4/0440-organizational-controls.md
+              - Project Charter: types/4/0442-project-charter.md
+              - Governance Roles: types/4/0445-governance-roles.md
+              - Governance Rollout: types/4/0450-governance-rollout.md
+              - Exception Management: types/4/0455-exception-management.md
+              - Governance Execution Points: types/4/0460-governance-execution-points.md
+              - Governance Engines: types/4/0461-governance-engines.md
+              - Governance Action Types: types/4/0462-governance-action-types.md
+              - Governance Actions: types/4/0463-governance-actions.md
+              - Duplicate Processing: types/4/0465-duplicate-processing.md
+              - Incident Reporting: types/4/0470-incident-reporting.md
+              - Licenses: types/4/0481-licenses.md
+              - Certifications: types/4/0482-certifications.md
+              - Data Processing Purposes: types/4/0485-data-processing-purposes.md
+          - Models and Reference Data:
+              - Area 5: types/5/index.md
+              - Schema Elements: types/5/0501-schema-elements.md
+              - Asset Schema: types/5/0503-asset-schema.md
+              - Implementation Snippets: types/5/0504-implementation-snippets.md
+              - Schema Attributes: types/5/0505-schema-attributes.md
+              - External Schema Types: types/5/0507-external-schema-type.md
+              - Map Schema Elements: types/5/0511-map-schema-elements.md
+              - Derived Schema Elements: types/5/0512-derived-schema-elements.md
+              - Process Schemas: types/5/0520-process-schemas.md
+              - Process Variables: types/5/0525-process-variables.md
+              - Tabular Schemas: types/5/0530-tabular-schemas.md
+              - Document Schemas: types/5/0531-document-schemas.md
+              - Object Schemas: types/5/0532-object-schemas.md
+              - Graph Schemas: types/5/0533-graph-schemas.md
+              - Relational Schemas: types/5/0534-relational-schemas.md
+              - Event Schemas: types/5/0535-event-schemas.md
+              - API Schemas: types/5/0536-api-schemas.md
+              - Display Schemas: types/5/0537-display-schemas.md
+              - Data Classes: types/5/0540-data-classes.md
+              - Reference Data: types/5/0545-reference-data.md
+              - Instance Metadata: types/5/0550-instance-metadata.md
+              - Design Model Elements: types/5/0565-design-model-elements.md
+              - Design Model Organization: types/5/0566-design-model-organization.md
+              - Design Model Scoping: types/5/0568-design-model-scoping.md
+              - Design Model Implementation: types/5/0569-design-model-implementation.md
+              - Metamodels: types/5/0570-metamodels.md
+              - Concept Models: types/5/0571-concept-models.md
+              - Solution Blueprints: types/5/0580-solution-blueprints.md
+              - Solution Ports and Wires: types/5/0581-solution-ports-and-wires.md
+              - Design Patterns: types/5/0595-design-patterns.md
+          - Metadata Discovery:
+              - Area 6: types/6/index.md
+              - Open Discovery Engines and Services: types/6/0601-open-discovery-engine.md
+              - Discovery Analysis Report: types/6/0605-open-discovery-analysis-reports.md
+              - Annotation: types/6/0610-annotations.md
+              - Annotation Reviews: types/6/0612-annotation-reviews.md
+              - Schema Extraction: types/6/0615-schema-extraction.md
+              - Data Field Analysis: types/6/0617-data-field-analysis.md
+              - Data Profiling: types/6/0620-data-profiling.md
+              - Data Class Discovery: types/6/0625-data-class-discovery.md
+              - Semantic Discovery: types/6/0630-semantic-discovery.md
+              - Classification Discovery: types/6/0635-classification-discovery.md
+              - Quality Scores: types/6/0640-quality-scores.md
+              - Relationship Discovery: types/6/0650-relationship-discovery.md
+              - Asset Deduplication: types/6/0655-asset-deduplication.md
+              - Measurements: types/6/0660-data-source-measurements.md
+              - Request for Action: types/6/0690-request-for-action.md
+          - Lineage:
+              - Area 7: types/7/index.md
+              - Digital Service: types/7/0710-digital-service.md
+              - Digital Service Ownership: types/7/0715-digital-service-ownership.md
+              - Digital Service Implementation: types/7/0717-digital-service-implementation.md
+              - Information Supply Chains: types/7/0720-information-supply-chains.md
+              - Solution Components: types/7/0730-solution-components.md
+              - Solution Ports and Wires: types/7/0735-solution-ports-and-wires.md
+              - Solution Blueprints: types/7/0740-solution-blueprints.md
+              - Data Passing: types/7/0750-data-passing.md
+              - Business Lineage: types/7/0760-business-lineage.md
+              - Lineage Mapping: types/7/0770-lineage-mapping.md
+          - Metamodel: types/metamodel.md
+      - Services:
+          - Repository Services (OMRS):
+              - Repository Services Design: services/omrs/index.md
+              - Cohorts: services/omrs/cohort.md
+              - Metadata Repositories: services/omrs/metadata-repositories.md
+              - Metadata Events: services/omrs/metadata-events.md
+          - Access Services (OMAS):
+              - Open Metadata Access Services: services/omas/index.md
+              - Analytics Modeling OMAS: services/omas/analytics-modeling/index.md
+              - Asset Catalog OMAS: services/omas/asset-catalog/index.md
+              - Asset Consumer OMAS: services/omas/asset-consumer/index.md
+              - Asset Lineage OMAS: services/omas/asset-lineage/index.md
+              - Asset Owner OMAS: services/omas/asset-owner/index.md
+              - Community Profile OMAS: services/omas/community-profile/index.md
+              - Data Engine OMAS: services/omas/data-engine/index.md
+              - Data Manager OMAS: services/omas/data-manager/index.md
+              - Data Privacy OMAS: services/omas/data-privacy/index.md
+              - Data Science OMAS: services/omas/data-science/index.md
+              - Design Model OMAS: services/omas/design-model/index.md
+              - DevOps OMAS: services/omas/dev-ops/index.md
+              - Digital Architecture OMAS: services/omas/digital-architecture/index.md
+              - Digital Service OMAS: services/omas/digital-service/index.md
+              - Discovery Engine OMAS: services/omas/discovery-engine/index.md
+              - Governance Engine OMAS: services/omas/governance-engine/index.md
+              - Governance Program OMAS: services/omas/governance-program/index.md
+              - IT Infrastructure OMAS: services/omas/it-infrastructure/index.md
+              - Project Management OMAS: services/omas/project-management/index.md
+              - Security Manager OMAS: services/omas/security-manager/index.md
+              - Security Officer OMAS: services/omas/security-officer/index.md
+              - Software Developer OMAS: services/omas/software-developer/index.md
+              - Stewardship Action OMAS: services/omas/stewardship-action/index.md
+              - Subject Area OMAS: services/omas/subject-area/index.md
+          - Common Services:
+              - Common Services Overview: services/common/index.md
+              - FFDC: services/common/ffdc-services.md
+              - Generic Handlers: services/common/generic-handlers.md
+              - Metadata Security: services/common/metadata-security.md
+          - Engine Services (OMES):
+              - Open Metadata Engine Services: services/omes/index.md
+              - Asset Analysis: services/omes/asset-analysis.md
+              - Governance Action: services/omes/governance-action.md
+          - Integration Services (OMIS):
+              - Integration Services Overview: services/omis/index.md
+              - Database Integrator: services/omis/database-integrator.md
+          - Platform Services: services/platform.md
+          - Governance Servers:
+              - Governance Servers Overview: services/governance/index.md # ./open-metadata-implementation/governance-servers/docs
+              - Integration Daemon Services: services/governance/integration-daemon.md # ./open-metadata-implementation/governance-servers/integration-daemon-services/docs
+              - Engine Host Services: services/governance/engine-host.md # ./open-metadata-implementation/governance-servers/engine-host-services/docs
+              - Open Lineage Services (OLS): services/governance/ols.md # ./open-metadata-implementation/governance-servers/open-lineage-services/docs
+          - View Services (OMVS):
+              - View Services Overview: services/omvs/index.md
+              - Glossary Author View: services/omvs/glossary-author.md # ./open-metadata-implementation/view-services/glossary-author-view/docs
+      - Frameworks:
+          - Audit Logging (ALF): frameworks/alf.md # ./open-metadata-implementation/frameworks/audit-log-framework/docs
+          - Open Connectors (OCF): frameworks/ocf.md # ./open-metadata-implementation/frameworks/open-connector-framework/docs
+          - Open Discovery (ODF): frameworks/odf.md # ./open-metadata-implementation/frameworks/open-discovery-framework/docs
+          - Governance Actions (GAF): frameworks/gaf.md # ./open-metadata-implementation/frameworks/governance-action-framework/docs
+      - Concepts:
+          - General Concepts: basic-concepts.md
+          - Egeria Concepts:
+              - Anchor: concepts/anchor.md
+              - Archive Manager: concepts/archive-manager.md
+              - Asset: concepts/asset.md
+              - Audit Log: concepts/audit-log.md
+              - Configuration Document: concepts/configuration-document.md
+              - Conformance Test Server: concepts/conformance-test-server.md
+              - Connected Asset Properties: concepts/connected-asset-properties.md
+              - Connection: concepts/connection.md
+              - Connector: concepts/connector.md
+              - Connector Broker: concepts/connector-broker.md
+              - Connector Provider: concepts/connector-provider.md
+              - Connector Type: concepts/connector-type.md
+              - Data Engine Proxy: concepts/data-engine-proxy.md
+              - Endpoint: concepts/endpoint.md
+              - Engine Host: concepts/engine-host.md
+              - Event Bus: concepts/event-bus.md
+              - Integration Daemon: concepts/integration-daemon.md
+              - Metadata Access Point: concepts/metadata-access-point.md
+              - Metadata Server: concepts/metadata-server.md
+              - OMAG Server: concepts/omag-server.md
+              - OMAG Server Platform: concepts/omag-server-platform.md
+              - OMAG Subsystem: concepts/omag-subsystem.md
+              - Open Lineage Server: concepts/open-lineage-server.md
+              - Open Metadata Archive: concepts/open-metadata-archive.md
+              - Referenceable: concepts/referenceable.md
+              - Repository Proxy: concepts/repository-proxy.md
+              - View Server: concepts/view-server.md
+      - Connectors:
+          - Connectors Overview: connectors/index.md
+          - Connector Types:
+              - Audit Log Store Connector: connectors/audit-log-store-connector.md
+              - Cohort Registry Store Connector: connectors/cohort-registry-store-connector.md
+              - Event Mapper Connector: connectors/event-mapper-connector.md
+              - Integration Connector: connectors/integration-connector.md
+              - OMRS Topic Connector: connectors/omrs-topic-connector.md
+              - Open Metadata Archive Store Connector: connectors/open-metadata-archive-store-connector.md
+              - Open Metadata Topic Connector: connectors/open-metadata-topic-connector.md
+              - Repository Connector: connectors/repository-connector.md
+          - Connector Catalog:
+              - Exchange Connectors: connectors/exchange/index.md
+              - Runtime Connectors: connectors/runtime/index.md
+              - Data Connectors: connectors/data/index.md
+      - Conformance Test Suite:
+          - CTS overview: guides/cts/index.md
+          - Platform Profiles:
+              - Platform Origin: guides/cts/profiles/platform-origin.md
+          - Repository Profiles:
+              - Metadata Sharing: guides/cts/profiles/metadata-sharing.md
+              - Metadata Maintenance: guides/cts/profiles/metadata-maintenance.md
+              - Effectivity Dating: guides/cts/profiles/effectivity-dating.md
+              - Dynamic Types: guides/cts/profiles/dynamic-types.md
+              - Graph Queries: guides/cts/profiles/graph-queries.md
+              - Historical Search: guides/cts/profiles/historical-search.md
+              - Entity Proxies: guides/cts/profiles/entity-proxies.md
+              - Soft-delete and Restore: guides/cts/profiles/soft-delete-restore.md
+              - Undo an Update: guides/cts/profiles/undo-update.md
+              - Reidentify Instance: guides/cts/profiles/reidentify-instance.md
+              - Retype Instance: guides/cts/profiles/retype-instance.md
+              - Rehome Instance: guides/cts/profiles/rehome-instance.md
+          - Performance Profiles:
+              - Entity Creation: guides/cts/profiles/entity-creation.md
+              - Entity Search: guides/cts/profiles/entity-search.md
+              - Relationship Creation: guides/cts/profiles/relationship-creation.md
+              - Relationship Search: guides/cts/profiles/relationship-search.md
+              - Entity Classification: guides/cts/profiles/entity-classification.md
+              - Classification Search: guides/cts/profiles/classification-search.md
+              - Entity Update: guides/cts/profiles/entity-update.md
+              - Relationship Update: guides/cts/profiles/relationship-update.md
+              - Classification Update: guides/cts/profiles/classification-update.md
+              - Entity Undo: guides/cts/profiles/entity-undo.md
+              - Relationship Undo: guides/cts/profiles/relationship-undo.md
+              - Entity Retrieval: guides/cts/profiles/entity-retrieval.md
+              - Entity History Retrieval: guides/cts/profiles/entity-history-retrieval.md
+              - Relationship Retrieval: guides/cts/profiles/relationship-retrieval.md
+              - Relationship History Retrieval: guides/cts/profiles/relationship-history-retrieval.md
+              - Entity History Search: guides/cts/profiles/entity-history-search.md
+              - Relationship History Search: guides/cts/profiles/relationship-history-search.md
+              - Graph Queries: guides/cts/profiles/graph-queries.md
+              - Graph History Queries: guides/cts/profiles/graph-history-queries.md
+              - Entity Re-home: guides/cts/profiles/entity-re-home.md
+              - Relationship Re-home: guides/cts/profiles/relationship-re-home.md
+              - Entity Declassify: guides/cts/profiles/entity-declassify.md
+              - Entity Re-type: guides/cts/profiles/entity-retype.md
+              - Relationship Re-type: guides/cts/profiles/relationship-retype.md
+              - Entity Re-identify: guides/cts/profiles/entity-re-identify.md
+              - Relationship Re-identify: guides/cts/profiles/relationship-re-identify.md
+              - Relationship Delete: guides/cts/profiles/relationship-delete.md
+              - Entity Delete: guides/cts/profiles/entity-delete.md
+              - Entity Restore: guides/cts/profiles/entity-restore.md
+              - Relationship Restore: guides/cts/profiles/relationship-restore.md
+              - Relationship Purge: guides/cts/profiles/relationship-purge.md
+              - Entity Purge: guides/cts/profiles/entity-purge.md
+              - Environment: guides/cts/profiles/environment.md
 
 theme:
   name: material
@@ -451,3 +472,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true

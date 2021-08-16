@@ -313,25 +313,10 @@ nav:
               - View Services Overview: services/omvs/index.md
               - Glossary Author View: services/omvs/glossary-author.md # ./open-metadata-implementation/view-services/glossary-author-view/docs
       - Frameworks:
-          - Audit Logging:
-              - Audit Log Framework (ALF): frameworks/alf/index.md
-          - Open Connectors:
-              - Open Connector Framework (OCF): frameworks/ocf/index.md
-          - Open Discovery:
-              - Open Discovery Framework (ODF): frameworks/odf/index.md
-          - Governance Actions:
-              - Governance Action Framework (GAF): frameworks/gaf/index.md
-              - Watchdog Governance Service: frameworks/gaf/watchdog-governance-service.md
-              - Verification Governance Service: frameworks/gaf/verification-governance-service.md
-              - Triage Governance Service: frameworks/gaf/triage-governance-service.md
-              - Remediation Governance Service: frameworks/gaf/remediation-governance-service.md
-              - Provisioning Governance Service: frameworks/gaf/provisioning-governance-service.md
-              - Governance Action: frameworks/gaf/governance-action.md # Move from here down to concepts?
-              - Governance Action Process: frameworks/gaf/governance-action-process.md
-              - Governance Action Type: frameworks/gaf/governance-action-type.md
-              - Guard: frameworks/gaf/guard.md
-              - Incident Report: frameworks/gaf/incident-report.md
-              - Governance Pack: frameworks/gaf/governance-pack.md
+          - Audit Logs (ALF): frameworks/alf/index.md
+          - Open Connectors (OCF): frameworks/ocf/index.md
+          - Open Discovery (ODF): frameworks/odf/index.md
+          - Governance Actions (GAF): frameworks/gaf/index.md
       - Concepts:
           - General Concepts: basic-concepts.md
           - Egeria Concepts:

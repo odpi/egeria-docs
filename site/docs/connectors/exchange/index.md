@@ -75,7 +75,7 @@ These connectors act as an adapter to integrate third party metadata repositorie
 
 ## Open discovery services
 
-[Open discovery services](/egeria-docs/frameworks/odf/discovery-service)
+[Open discovery services](/egeria-docs/frameworks/odf/#discovery-service)
 are connectors that analyze the content of resources in the digital landscape and create annotations
 that are attached to the resource's Asset metadata element in the open metadata repositories in the form of an open discovery report.
 
@@ -88,14 +88,14 @@ along with a guide on how to write a discovery service.
 | Connector | Description |
 |---|---|
 | [CSV Discovery Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | extracts the column names from the first line of the file, counts up the number of records in the file and extracts its last modified time |
-| [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/egeria-docs/frameworks/odf/discovery-pipeline)) |
+| [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/egeria-docs/frameworks/odf/#discovery-pipeline)) |
 
 The definition of the connector interfaces for discovery services is
 defined in the [open-discovery-services :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/frameworks/open-discovery-framework/src/main/java/org/odpi/openmetadata/frameworks/discovery){ target=gh } module.
 
 ## Governance action services
 
-[Governance action services](/egeria-docs/frameworks/gaf/governance-action-service)
+[Governance action services](/egeria-docs/frameworks/gaf/#governance-action-service)
 are connectors that perform monitoring of metadata changes, validation of metadata, triage of issues,
 assessment and/or remediation activities on request.
 

@@ -33,17 +33,17 @@ The engine services also run in the engine host OMAG server.
 
 The engine services are:
 
-- **Asset Analysis** - For running [Open Discovery Services](/egeria-docs/frameworks/odf/discovery-service)
+- **Asset Analysis** - For running [Open Discovery Services](/egeria-docs/frameworks/odf/#discovery-service)
   that analyse the content of an asset's real world counterpart in the digital landscape, generates annotations
   in an open discovery analysis report that is attached to the asset in the open metadata repositories.
 
-- **Governance Action** - For running [Governance Action Services](/egeria-docs/frameworks/gaf/governance-action-service).
+- **Governance Action** - For running [Governance Action Services](/egeria-docs/frameworks/gaf/#governance-action-service).
   There are five types of governance action services:                
     - **Watchdog governance service** - Monitors changes in the open metadata repositories and initiates governance activity as a result.
         This is typically by creating a 
-        [governance action](/egeria-docs/frameworks/gaf/governance-action), a 
-        [governance action process](/egeria-docs/frameworks/gaf/governance-action-process) or an
-        [incident report](/egeria-docs/frameworks/gaf/incident-report).
+        [governance action](/egeria-docs/frameworks/gaf/#governance-action), a 
+        [governance action process](/egeria-docs/frameworks/gaf/#governance-action-process) or an
+        [incident report](/egeria-docs/frameworks/gaf/#incident-report).
         One example of a watchdog governance service is to monitor for the addition of a new asset.
     - **Verification governance service** - Runs checks on the metadata properties to ensure they are complete and correct.
       One example of a verification governance service is detection for metadata elements with the same qualified name,

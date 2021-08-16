@@ -25,9 +25,9 @@ The integration connectors can:
 ![Methods implemented by an integration connector](integration-connector-methods.png)
 
 - `initialize` is a standard method for all connectors that is called by the
-  [connector broker](/egeria-docs/concepts/connector-broker)
-  when the connector is created. The [connector](/egeria-docs/concepts/connector) is passed
-  the [connection](/egeria-docs/concepts/connection) object from the
+  [connector broker](/egeria-docs/frameworks/ocf/#connector-broker)
+  when the connector is created. The [connector](/egeria-docs/frameworks/ocf/#connector) is passed
+  the [connection](/egeria-docs/frameworks/ocf/#connection) object from the
   configuration and a unique identifier for this instance of the connector.
 - `setAuditLog` provides a logging destination (see [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf)).
 - `setConnectorName` provides the name of the connector for logging.

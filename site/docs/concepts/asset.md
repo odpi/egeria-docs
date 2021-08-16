@@ -37,9 +37,9 @@ Inheriting from asset is a hierarchy of increasingly-specialized definitions for
 
 Egeria provides an open framework for accessing the content of digital assets and the information about them. It is called the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) and it provides specialized connectors (clients) for accessing specific types of assets and the information about them.
 
-The type of connector to use is specified in the [connection](connection.md) entity that is linked to the asset.
+The type of connector to use is specified in the [connection](/egeria-docs/frameworks/ocf/#connection) entity that is linked to the asset.
 
-[Model 0205](/egeria-docs/types/2/0205-connection-linkage) in the open metadata types shows how an asset is associated with a [connection](connection.md) object. The connection object provides the properties necessary to create a connector to access the asset's contents.
+[Model 0205](/egeria-docs/types/2/0205-connection-linkage) in the open metadata types shows how an asset is associated with a [connection](/egeria-docs/frameworks/ocf/#connection) object. The connection object provides the properties necessary to create a connector to access the asset's contents.
 
 ## APIs and events for managing asset information (metadata)
 

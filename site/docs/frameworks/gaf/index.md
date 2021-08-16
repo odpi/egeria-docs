@@ -71,7 +71,7 @@ The [0470 incident reporting](/egeria-docs/types/4/0470-incident-reporting) mode
 
 ## Governance action services
 
-A *governance action service* is a specialized [connector](/egeria-docs/concepts/connector) that performs monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities on request.
+A *governance action service* is a specialized [connector](/egeria-docs/frameworks/ocf/#connector) that performs monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities on request.
 
 There are five types of governance action services, each of which supports a specialist governance activity (see subsections).
 

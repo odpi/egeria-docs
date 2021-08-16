@@ -58,7 +58,10 @@ nav:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md
       - Develop:
-          - Developer Guide: guides/developer.md
+          - Developer Guide: guides/developer/index.md
+          - Develop Connectors:
+              - Develop Data Asset Connector: guides/developer/data-connector.md
+              - Develop OMRS Connectors: guides/developer/omrs-connector.md
       - Document:
           - Documentation Guide: guides/documentation/index.md
           - Formatting Standards: guides/documentation/formatting.md
@@ -326,14 +329,7 @@ nav:
               - Audit Log: concepts/audit-log.md
               - Configuration Document: concepts/configuration-document.md
               - Conformance Test Server: concepts/conformance-test-server.md
-              - Connected Asset Properties: concepts/connected-asset-properties.md
-              - Connection: concepts/connection.md
-              - Connector: concepts/connector.md
-              - Connector Broker: concepts/connector-broker.md
-              - Connector Provider: concepts/connector-provider.md
-              - Connector Type: concepts/connector-type.md
               - Data Engine Proxy: concepts/data-engine-proxy.md
-              - Endpoint: concepts/endpoint.md
               - Engine Host: concepts/engine-host.md
               - Event Bus: concepts/event-bus.md
               - Integration Daemon: concepts/integration-daemon.md

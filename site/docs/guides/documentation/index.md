@@ -3,7 +3,7 @@
 
 # Documentation guide
 
-We strive to provide complete, concise and maintainable documentation for the project. To achieve these goals, all contributed documentation should adhere to the guidance provided in this **documentation guide**, split into the following sub-guides:
+We strive to provide complete, concise and maintainable documentation for the project. To achieve these goals, all contributed documentation should adhere to the guidance provided in this *documentation guide*, split into the following sub-guides:
 
 - [Formatting standards](formatting) to keep the content of the documentation consistent.
 - [Style guide](style) to keep the documentation clear and understandable.

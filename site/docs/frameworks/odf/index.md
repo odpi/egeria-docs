@@ -18,7 +18,7 @@ The *open discovery framework (ODF)* enables [metadata discovery tools](../../..
 
 A *discovery service* provides specific analysis of the metadata and contents of an [asset](/egeria-docs/concepts/asset) on request.
 
-It is implemented as a specialized [connector](/egeria-docs/concepts/connector).
+It is implemented as a specialized [connector](/egeria-docs/frameworks/ocf/#connector).
 
 A discovery service is initialized with a connector to the asset it is to analyze and details of the results of other discovery services that have run before it if it is part of a [discovery pipeline](#discovery-pipeline).
 

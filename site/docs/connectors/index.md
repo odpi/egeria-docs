@@ -3,7 +3,7 @@
 
 # Connectors overview
 
-A [**connector**](/egeria-docs/concepts/connector) is a Java class that supports the standard [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf)
+A [**connector**](/egeria-docs/frameworks/ocf/#connector) is a Java class that supports the standard [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf)
 APIs. It is a client to a third party technology: Egeria alls the connector, and the connector translates these
 calls into requests to the third party technology.
 
@@ -71,7 +71,7 @@ package.
 All of these connectors support
 the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf)
 which means the OMRS uses the 
-OCF [connector broker](/egeria-docs/concepts/connector-broker)
+OCF [connector broker](/egeria-docs/frameworks/ocf/#connector-broker)
 to create the instances of the connectors it needs.
 The type of connector needed is defined in a connection object.
 

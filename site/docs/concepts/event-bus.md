@@ -25,7 +25,7 @@ it receives each event that is added even if it restarts.
 There are different event broker implementations with greater or
 lesser reliability and performance.
 Many organizations establish a standard choice of their event
-broker service which is why Egeria uses [connectors](connector.md) to implement its event bus.
+broker service which is why Egeria uses [connectors](/egeria-docs/frameworks/ocf/#connector) to implement its event bus.
 
 Egeria's default event broker is [Apache Kafka :material-dock-window:](https://kafka.apache.org/){ target=kafka }.
 Each topic is accessed through an
@@ -60,12 +60,12 @@ The resulting configuration for these nested connectors is as follows:
 1. The common configuration for the event bus is identified and
    configured using the event bus config.
 2. This configuration is encoded in a
-   [connection](connection.md) object for the
+   [connection](/egeria-docs/frameworks/ocf/#connection) object for the
    generic open metadata topic connector.
 3. When the consuming component is configured, a connection object for
    its specialized topic connector is created, with the generic open metadata
    topic connector embedded inside.
-4. When the [connector broker](connector-broker.md)
+4. When the [connector broker](/egeria-docs/frameworks/ocf/#connector-broker)
    inside Egeria's runtime is called upon to create the specialized topic connector at server start up,
    it navigates the hierarchy of connection objects, creating the nested hierarchy of connectors
    as specified.

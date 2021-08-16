@@ -148,15 +148,16 @@ The *connector broker* is a generic factory class for all open connectors. Given
 
 It is implemented in the [`ConnectorBroker` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorBroker.java){ target=gh } class, and is used as follows:
 
-```java
-import org.odpi.openmetadata.frameworks.connectors.Connector;
-import org.odpi.openmetadata.frameworks.connectors.ConnectorBroker;
+!!! example "Example usage of a connector broker"
+    ```java linenums="1"
+    import org.odpi.openmetadata.frameworks.connectors.Connector;
+    import org.odpi.openmetadata.frameworks.connectors.ConnectorBroker;
 
-   :
+    // ...
 
-ConnectorBroker   connectorBroker     = new ConnectorBroker();
-Connector         connector           = connectorBroker.getConnector(connection);
-```
+    ConnectorBroker   connectorBroker     = new ConnectorBroker();
+    Connector         connector           = connectorBroker.getConnector(connection);
+    ```
 
 When the connector instance is requested, the connector broker uses the [*connector type*](#connector-type) properties from the supplied [connection](#connection) to identify the appropriate [connector provider](#connector-provider). The connector broker delegates the connector instance request to the connector provider and returns the result to its caller.
 

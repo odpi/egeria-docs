@@ -195,7 +195,7 @@ following third party connectors:
 ### History
 
 Through 2020, our focus shifted to the integration platform as we added
-[connector implementations](../../guides/developer/what-is-a-connector.md) for popular third party
+[connector implementations](/egeria-docs/guides/developer/#what-is-a-connector) for popular third party
 technologies and standards (see [connector catalog](/egeria-docs/connectors/#catalog))
 and built out the [ecosystem user interface (UI) :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=gh }
 that enables an organization to:

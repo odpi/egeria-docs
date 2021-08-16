@@ -60,8 +60,8 @@ nav:
       - Develop:
           - Developer Guide: guides/developer/index.md
           - Develop Connectors:
-              - Develop Data Asset Connector: guides/developer/data-connector.md
-              - Develop OMRS Connectors: guides/developer/omrs-connector.md
+              - Develop a Connector: guides/developer/implement-a-connector.md
+              - Develop Repository Connector: guides/developer/implement-repository-connector.md
       - Document:
           - Documentation Guide: guides/documentation/index.md
           - Formatting Standards: guides/documentation/formatting.md

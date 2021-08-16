@@ -1,0 +1,12 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- Copyright Contributors to the Egeria project. -->
+
+# Governance Pack
+
+A *governance pack* is a collection of pre-defined governance engines and services definitions plus governance service implementations.
+
+![Governance pack](governance-pack.png)
+
+A team can use the governance pack to distribute the governance engine function to different metadata ecosystems.
+
+--8<-- "snippets/abbr.md"

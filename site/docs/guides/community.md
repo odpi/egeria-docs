@@ -28,7 +28,8 @@ Follow the link above and register with the LF AI & Data Slack service using you
 !!! tip "The main Slack channel for the Egeria project is called `#egeria-discussion`"
     Additional channels are added from time to time as new workgroups and discussion topics are established. For Egeria these channel names will begin with `#egeria`. You can also view Slack channels from other LF AI & Data projects.
 
-More information about Slack is available in the [developer-resources/tools :material-github:](https://github.com/odpi/egeria/blob/master/developer-resources/tools/Slack.md){ target=gh } pages.
+??? question "More information about Slack?"
+    Slack is an instant messaging tool that allows multiple conversations to occur amongst the community members at any one time. Each conversation is called a *channel*. Channels can be set up for a specific event or have a long-term existence.
 
 ### Mailing list
 

@@ -9,12 +9,23 @@ It focuses on providing five types of integration interfaces.
 
 - [Connectors](#what-is-a-connector) that translate between third party APIs and open metadata APIs. These connectors are hosted in the Egeria servers and support the active exchange of metadata with these technologies.
 - [Connectors](#what-is-a-connector) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
-- Java clients for applications to call the [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
-  [Learn more ...](../../../open-metadata-implementation/access-services/docs/user)
-- REST APIs for the Egeria Services. These include the [access services](/egeria-docs/services/omas), admin services and [platform services](/egeria-docs/services/platform).
-  [Learn more ...](../../../open-metadata-implementation/access-services)
+- [Java clients](#using-the-clients) for applications to call the [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
+- [REST APIs](#using-the-rest-apis) for the Egeria Services. These include the [access services](/egeria-docs/services/omas), admin services and [platform services](/egeria-docs/services/platform).
 - Kafka topics with JSON payloads for asynchronous communication (both in and out) with the open metadata ecosystem.
   [Learn more ...](../../../open-metadata-implementation/access-services)
+
+## Using the clients
+
+The Egeria clients wrap calls to Egeria's [REST APIs](#using-the-rest-apis) and topics. The aim is to provide a language-specific interface that manages the marshalling and de-marshalling of the call parameters and responses to these services.
+
+## Using the REST APIs
+
+Egeria supports REST [APIs](/egeria-docs/basic-concepts/#application-programming-interface-api) for making synchronous (request-response) calls between [OMAG servers](/egeria-docs/concepts/omag-server) and between clients and OMAG servers.
+
+!!! attention "REST APIs are intended for internal use"
+    The REST APIs are usable directly for calling from non-Java platforms; however, they are designed for the internal use of Egeria and are not guaranteed to be backwards compatible.
+
+The structure of the URL for an Egeria REST API varies lightly depending on whether it is a call to an [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) service or an [OMAG server](/egeria-docs/concepts/omag-server) service.
 
 ## What is a connector?
 

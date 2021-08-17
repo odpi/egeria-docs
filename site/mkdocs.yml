@@ -59,9 +59,20 @@ nav:
       - Project Operations: guides/project-operations.md
       - Develop:
           - Developer Guide: guides/developer/index.md
-          - Develop Connectors:
-              - Develop a Connector: guides/developer/implement-a-connector.md
-              - Develop Repository Connector: guides/developer/implement-repository-connector.md
+          - Developer Guidelines: guides/developer/guidelines.md
+          - Way of Working: guides/developer/process.md
+          - Specific Guidance:
+              - Programming Languages: guides/developer/languages.md
+              - Tools:
+                  - Development Tools: guides/developer/tools/development.md
+                  - Documentation Tools: guides/developer/tools/documentation.md
+                  - Runtime Tools: guides/developer/tools/runtime.md
+                  - Testing Tools: guides/developer/tools/testing.md
+              - Using Connectors: guides/developer/using-connectors.md
+              - Developing Connectors:
+                  - Develop a Connector: guides/developer/implement-a-connector.md
+                  - Develop Repository Connector: guides/developer/implement-repository-connector.md
+              - Developing Access Services: guides/developer/implement-an-omas.md
       - Document:
           - Documentation Guide: guides/documentation/index.md
           - Formatting Standards: guides/documentation/formatting.md
@@ -441,7 +452,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/odpi/egeria
+      link: https://github.com/odpi?q=egeria
       name: Egeria on GitHub
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/odpi

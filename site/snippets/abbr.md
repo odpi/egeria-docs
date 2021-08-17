@@ -6,6 +6,9 @@
 *[CTS]: Conformance Test Suite
 *[GAF]: Governance Action Framework
 *[GUID]: Globally Unique Identifier
+*[JDK]: Java Development Kit
+*[JRE]: Java Runtime Environment
+*[JVM]: Java Virtual Machine
 *[OCF]: Open Connector Framework
 *[ODF]: Open Discovery Framework
 *[OMAG]: Open Metadata and Governance
@@ -14,3 +17,4 @@
 *[OMIS]: Open Metadata Integration Services
 *[OMRS]: Open Metadata Repository Services
 *[OMVS]: Open Metadata View Services
+*[PR]: Pull Request

@@ -32,6 +32,6 @@ Infrastructure, Process, Referenceable, Server and Host.
 * **[0070 Networks and Gateways](0070-Networks-and-Gateways.md)**
 * **[0090 Cloud Platforms and Services](0090-Cloud-Platforms-and-Services.md)**
 
-![UML Packages](area-0-basic-types-and-infrastructure-overview.png)
+![UML Packages](area-0-basic-types-and-infrastructure-overview.svg)
 
 --8<-- "snippets/abbr.md"

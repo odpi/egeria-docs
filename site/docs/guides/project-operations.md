@@ -28,7 +28,7 @@ All participants in the Egeria community are bound by the project's [Code of Con
 
 As a member you are able to attend our meetings, just to listen, or to play an active part in the discussion. The online meetings are recorded to allow community members to catch up if they are not able to attend the live meeting. When you attend the community meetings specifically, your name will be recorded in the meeting minutes along with any remarks or suggestions you make. The agenda and minutes of our community meetings are publicly available on the [Egeria wiki :material-dock-window:](https://github.com/odpi/egeria/wiki){ target=gh }.
 
-A member may make contributions to the Egeria content by submitting a GitHub pull request on the appropriate Git repository. This will be reviewed and processed by the [Egeria maintainers](#maintainers). The process for making a contribution is described in the [Egeria Dojo](/egeria-docs/getting-started/dojo) education. Each contribution is signed by the contributor to confirm they agree to our [Developer Certificate of Origin (DCO)](developer-resources/why-the-dco.md).
+A member may make contributions to the Egeria content by submitting a GitHub pull request on the appropriate Git repository. This will be reviewed and processed by the [Egeria maintainers](#maintainers). The process for making a contribution is described in the [Egeria Dojo](/egeria-docs/getting-started/dojo) education. Each contribution is signed by the contributor to confirm they agree to our [Developer Certificate of Origin (DCO)](/egeria-docs/guides/developer/guidelines/#sign-commits-to-accept-dco).
 
 Community members can progress to be Egeria [contributors](#contributors) and then Egeria [maintainers](#maintainers).
 
@@ -43,7 +43,7 @@ Egeria *contributors* are members who have actively taken additional steps to pr
 - Contribute where appropriate to documentation and code reviews, specification development, demonstration assets and other artifacts that help move Egeria forward.
 
 !!! tip "How to become a contributor"
-    Being recognized as an Egeria contributor is done by nomination of an Egeria maintainer with a majority vote of Egeria maintainers to confirm. Once confirmed, you will receive [an Egeria Contributor badge](developer-resources/badges) to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria contributor.
+    Being recognized as an Egeria contributor is done by nomination of an Egeria maintainer with a majority vote of Egeria maintainers to confirm. Once confirmed, you will receive [an Egeria Contributor badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-contributor){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria contributor.
 
 Egeria's contributors are recognized in the [contributors list :material-github:](https://github.com/odpi/egeria/blob/master/CONTRIBUTORS.md){ target=gh }
 
@@ -60,9 +60,9 @@ Egeria's contributors are recognized in the [contributors list :material-github:
 !!! tip "How to become a maintainer"
     New maintainers are voted onto the maintainers list by [the existing maintainers :material-github:](https://github.com/odpi/egeria/blob/master/MAINTAINERS.md){ target=gh }.
 
-    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer. The maintainers vote and if a majority agree then the requester is added to the maintainers list and given write access to the [Egeria Git repositories](developer-resources/tools/Git-GitHub.md).
+    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer. The maintainers vote and if a majority agree then the requester is added to the maintainers list and given write access to the [Egeria Git repositories](/egeria-docs/guides/developer/tools/development/#git-github).
 
-    Once confirmed, you will receive an [an Egeria Maintainer badge](developer-resources/badges) to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria maintainer.
+    Once confirmed, you will receive an [an Egeria Maintainer badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-maintainer){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria maintainer.
 
 !!! attention "Losing maintainer status"
     If a maintainer is no longer interested or cannot perform the maintainer duties listed above, they should volunteer to be moved to emeritus status. In extreme cases this can also occur by a vote of the maintainers per the voting process below. Emeritus maintainers can rejoin the maintainer list through a vote of the existing maintainers.
@@ -86,7 +86,7 @@ The Egeria team aim to create an official release of the open metadata and gover
 
 In between official releases, the latest build is also available to developers in GitHub.
 
-The process for creating a release is described in the [developer-resources](developer-resources/Release-Process.md)
+The process for creating a release is described in the [developer guide](/egeria-docs/guides/developer/process/#release-process)
 
 ## Conflict resolution and voting
 

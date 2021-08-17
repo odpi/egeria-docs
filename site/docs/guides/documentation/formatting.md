@@ -52,7 +52,7 @@ Use regular Markdown syntax for images. For example:
 ![Description of what the image depicts](image-filename.svg)
 ```
 
-To make localization easier and enhance accessibility, the preferred image format is SVG. We recommend to use [draw.io :material-dock-window:](https://draw.io){ target=draw } for creating images and diagrams. Use **Export as** to save your image in SVG format. Keep the **Include a copy of my diagram** option checked to allow later loading the SVG in draw.io and be sure to check **Embed images** if you diagram includes any.
+To make localization easier and enhance accessibility, the preferred image format is SVG. We recommend to use [draw.io](/egeria-docs/guides/developer/tools/documentation/#drawio){ target=draw } for creating images and diagrams. Use **Export as** to save your image in SVG format. Keep the **Include a copy of my diagram** option checked to allow later loading the SVG in draw.io and be sure to check **Embed images** if your diagram includes any.
 
 If your diagram depicts a process, try to avoid adding the descriptions of the steps to the diagram. Instead, only add the numbers of the steps to the diagram and add the descriptions of the steps as a numbered list in the document. Ensure that the numbers on the list match the numbers on your diagram.
 
@@ -258,5 +258,23 @@ This ensures that the syntax of the file is appropriately highlighted, that line
 Use a single hyphen (`-`) for unordered lists rather than a single asterisk (`*`).
 
 This should avoid the potential for misinterpretation by the generator that a bulleted list is text that we intended (or not) to be either bolded or italicized.
+
+## Include license header
+
+Every Markdown document should include a license header with the CC-BY-4.0 attribute license:
+
+!!! example "License header for documentation files"
+    ```xml linenums="1"
+    <!-- SPDX-License-Identifier: CC-BY-4.0 -->
+    <!-- Copyright Contributors to the Egeria project. -->
+    ```
+
+## Remove license footer
+
+The MkDocs generator automatically includes a footer at the bottom of every page on the site, which includes displaying overall copyright information and the CC-BY-4.0 license (and link). Therefore, these footers should be removed from the Markdown files themselves.
+
+## Include abbreviations snippet
+
+A list of abbreviations is being maintained under `snippets/abbr.md`. This snippet should therefore be included in every Markdown document to automatically highlight and provide a hover-over expansion for acronyms. Add this line, on its own, to the end of every (non-snippet) Markdown document: `--8<-- "snippets/abbr.md"`
 
 --8<-- "snippets/abbr.md"

@@ -56,7 +56,7 @@ or host a variety of different OMAG servers needed at a particular location.
 
 When the OMAG Server Platform first starts up, a limited set of functionality is available:
 
-![OMAG Server Platform at startup](omag-server-platform-start-up.png)
+![OMAG Server Platform at startup](omag-server-platform-start-up.svg)
 
 The server origin service is operational at this point. It can be used by operational scripts to determine if the
 OMAG Server Platform is still running.
@@ -74,7 +74,7 @@ In the following diagram, the configuration services create three configuration 
 - one for the `stewardshipServer` OMAG Server
 - one for the `dataLakeDiscoveryEngine` OMAG Server
 
-![Creating configuration documents for OMAG servers](omag-server-platform-configure.png)
+![Creating configuration documents for OMAG servers](omag-server-platform-configure.svg)
 
 The [admin guide](/egeria-docs/guides/admin)
 provides detailed instructions on creating configuration documents for various configurations.
@@ -87,14 +87,14 @@ Server Platform that created the configuration document.
 For example, the following diagram shows an OMAG server platform with the `cdoMetadataRepository` local
 OMAG server running.
 
-![Starting an OMAG server through the operational services](omag-server-platform-initialize-logical-omag-server.png)
+![Starting an OMAG server through the operational services](omag-server-platform-initialize-logical-omag-server.svg)
 
 Once the OMAG server has initialized successfully, the open metadata and governance services
 can route requests to it.
 
 An OMAG Server Platform can run multiple OMAG servers at one time:
 
-![An OMAG Server Platform running multiple OMAG servers](omag-server-platform-overview.png)
+![An OMAG Server Platform running multiple OMAG servers](omag-server-platform-overview.svg)
 
 ??? education "Further reading"
     - [Configuring the OMAG Server Platform](/egeria-docs/guides/admin/configuring-the-omag-server-platform)

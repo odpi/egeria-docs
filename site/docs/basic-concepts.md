@@ -46,7 +46,7 @@ Many organizations establish a standard choice of their event
 broker service which is why Egeria uses connectors to connect to the event broker so that Apache Kafka can be swapped out
 for a different event broker implementation.
 As such, each topic is accessed through an
-[open metadata topic connector](../connector-catalog/runtime-connectors.md#Open Metadata Topic Connectors).
+[open metadata topic connector](/egeria-docs/connectors/runtime/#open-metadata-topic-connectors).
 
 ??? education "Further information"
     - [Configuring the event broker for Egeria](/egeria-docs/concepts/event-bus.md)

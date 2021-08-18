@@ -29,7 +29,7 @@ More information on the types of attachments that can be added to an asset can b
 
 Inheriting from asset is a hierarchy of increasingly-specialized definitions for different types of assets. Each definition adds more properties about the asset:
 
-![Asset hierarchy](asset-hierarchy.png)
+![Asset hierarchy](asset-hierarchy.svg)
 
 **[Area 2](/egeria-docs/types/2)** is where the asset hierarchy is built out.
 

@@ -70,7 +70,7 @@ insert additional models in the future.
 
 ## Understanding the models
 
-![Guide to reading the open metadata type models](model-guidance.png)
+![Guide to reading the open metadata type models](model-guidance.svg)
 
 The diagram above shows a few fragments from the models. Each of the UML classes represents
 an open metadata type. The stereotype on the UML class in the double angle brackets

@@ -22,8 +22,8 @@ nav:
           - File Lineage: introduction/patterns/file-lineage.md
 
   - Using:
-      - Plan:
-          - Planning Guide: guides/planning/index.md
+      - Planning Guide: guides/planning/index.md
+      - Diagnostic Guide: guides/diagnostic.md
       - Administer:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -39,9 +39,8 @@ nav:
               - Configure Data Engine Proxy: guides/admin/configuring-a-data-engine-proxy.md
               - Configure Open Lineage Server: guides/admin/configuring-an-open-lineage-server.md
       - Build:
-          - Building an Asset Catalog: guides/asset-catalog.md
-      - Diagnose:
-          - Diagnostic Guide: guides/diagnostic.md
+          - Managing External Identifiers: guides/using/external-identifiers.md
+          - Building an Asset Catalog: guides/using/asset-catalog.md
   - Learning:
       - Dojo:
           - Dojo Introduction: getting-started/dojo/index.md
@@ -54,6 +53,17 @@ nav:
           - Day 3: getting-started/dojo/3/index.md
       - Hands-on Labs:
           - Hands-on Labs Overview: getting-started/hands-on-labs/index.md
+      - Tutorials:
+          - Building Egeria: getting-started/tutorials/building-egeria.md
+          - Docker Tutorial: getting-started/tutorials/docker.md
+          - Git Tutorial: getting-started/tutorials/git-and-github.md
+          - Installing Egeria: getting-started/tutorials/installing-egeria.md
+          - IntelliJ Tutorial: getting-started/tutorials/intellij.md
+          - OMAG Client Tutorial: getting-started/tutorials/omag-client.md
+          - OMAG Server Tutorial: getting-started/tutorials/omag-server.md
+          - Postman Tutorial: getting-started/tutorials/postman.md
+          - Running Samples: getting-started/tutorials/running-samples.md
+          - Testing Tutorial: getting-started/tutorials/testing.md
   - Contributing:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md

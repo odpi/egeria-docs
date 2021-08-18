@@ -7,7 +7,7 @@ The Egeria technology principally runs on the [Open Metadata and Governance (OMA
 This platform hosts one or more [OMAG servers](/egeria-docs/concepts/omag-server),
 each supporting a variety of open metadata and governance capabilities.
 
-![OMAG Server Platforms running in different cloud platforms or data centers, each hosting OMAG Servers that are providing specialist integration capability for different tools](/egeria-docs/introduction/egeria-distributed-operation.png)
+![OMAG Server Platforms running in different cloud platforms or data centers, each hosting OMAG Servers that are providing specialist integration capability for different tools](/egeria-docs/introduction/egeria-distributed-operation.svg)
 
 In the illustration above, the OMAG Server Platforms are the blue, rounded boxes
 and the orange circles are the OMAG Servers. The green clouds represent different cloud

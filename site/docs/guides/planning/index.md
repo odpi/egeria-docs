@@ -11,7 +11,7 @@ Egeria is highly flexible and configurable and so the first piece of advice is t
 
 Egeria exchanges metadata between many types of tools distributed across different data centers and cloud platforms.
 
-![Egeria integrating different tools distributed over many locations](/egeria-docs/introduction/egeria-distributed-operation.png)
+![Egeria integrating different tools distributed over many locations](/egeria-docs/introduction/egeria-distributed-operation.svg)
 
 The green clouds represent each of the deployment locations. The different technologies are shown as grey boxes and Egeria itself is shown in blue and orange.
 

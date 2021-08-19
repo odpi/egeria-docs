@@ -11,18 +11,18 @@ of the aims of the project and a reflection of where we are today.
 
 Egeria aims to deliver against 5 capability layers:
 
-[![Governance Solutions](governance-solution-functional-detail.png)](#governance-solutions)
-[![Education](education-functional-detail.png)](#education)
-[![Integration Platform](integration-platform-functional-detail.png)](#integration-platform)
-[![Developer Platform](developer-platform-functional-detail.png)](#developer-platform)
-[![Deployment Resources](deployment-resources-functional-detail.png)](#deployment-resources)
+[![Governance Solutions](governance-solution-functional-detail.svg)](#governance-solutions)
+[![Education](education-functional-detail.svg)](#education)
+[![Integration Platform](integration-platform-functional-detail.svg)](#integration-platform)
+[![Developer Platform](developer-platform-functional-detail.svg)](#developer-platform)
+[![Deployment Resources](deployment-resources-functional-detail.svg)](#deployment-resources)
 
 ### Governance solutions
 
 Support the leadership team for a governance program providing the ability to create
 common definitions and monitor the success of the governance efforts across the enterprise.
 
-![Governance Solutions](governance-solution-functional-detail.png)
+![Governance Solutions](governance-solution-functional-detail.svg)
 
 The implementation of a governance solution is focused mainly on the extension of
 the Egeria UI to support additional roles and functions.  They make use of
@@ -34,7 +34,7 @@ integration platform.
 
 Provides educational resources for different personas and starting points.
 
-![Education](education-functional-detail.png)
+![Education](education-functional-detail.svg)
 
 Egeria's education aims to broaden the knowledge of people who need to
 work with digital resources about metadata, governance practices and the
@@ -61,7 +61,7 @@ with different skill levels, there are different choices:
 Supports integration of popular technologies by installing and configuring Egeria.
 Minimal coding is still required around unusual and home-grown tools and technologies.
 
-![Integration Platform](integration-platform-functional-detail.png)
+![Integration Platform](integration-platform-functional-detail.svg)
 
 - Ecosystem UIs: server and platform configuration, ecosystem monitoring, type explorer and repository explorer.
 - Utilities and converters: support for different standard formats to load industry standard definitions, models, 
@@ -78,7 +78,7 @@ Minimal coding is still required around unusual and home-grown tools and technol
 Provides frameworks, APIs, and hosting platforms for building an integrated metadata and distributed governance
 solutions.
 
-![Developer Platform](developer-platform-functional-detail.png)
+![Developer Platform](developer-platform-functional-detail.svg)
 
 The developer platform contains the core Egeria implementation and provides support for integrating third party
 technology into the open metadata ecosystem and extending Egeria to run in different environments or to use
@@ -146,7 +146,7 @@ Its use is described in the [developer's guide](/egeria-docs/guides/developer).
 Aim to simplify the process of deploying the OMAG Server Platform and its connectors into
 an operational environment.
 
-![Deployment Resources](deployment-resources-functional-detail.png)
+![Deployment Resources](deployment-resources-functional-detail.svg)
 
 - The [Egeria docker image :material-dock-window:](https://hub.docker.com/r/odpi/egeria){ target=docker }
   is built daily and pushed to DockerHub. It contains an OMAG Server Platform. You can download it and use
@@ -162,7 +162,7 @@ an operational environment.
 
 Following is an overview of the current status of the functions in Egeria today:
 
-![Status of functions found in each capability layer](../latest.png)
+![Status of functions found in each capability layer](../latest.svg)
 
 - Green means that there is function that is either [released or in technical preview](roadmap/content-status).
 - Orange means there is work in progress.

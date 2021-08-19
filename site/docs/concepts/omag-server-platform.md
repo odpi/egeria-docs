@@ -34,7 +34,7 @@ to query details of the servers running on the platform.
 
 The OMAG Server Platform can also host multiple OMAG servers at any one time:
 
-![OMAG server deployment choices](egeria-operations-server-choices-no-description.png)
+![OMAG server deployment choices](egeria-operations-server-choices-no-description.svg)
 
 The choices are as follows:
 

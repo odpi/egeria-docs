@@ -27,7 +27,7 @@ of the corresponding `DataFolder` asset.
 
 ## Configuration
 
-![Operation of the data folder monitor integration connector](data-folder-monitor-integration-connector.png)
+![Operation of the data folder monitor integration connector](data-folder-monitor-integration-connector.svg)
 
 This connector uses the [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator)
 running in the [integration daemon](/egeria-docs/concepts/integration-daemon).

@@ -32,7 +32,7 @@ Specifically:
 
 ## Configuration
 
-![Operation of the data files monitor integration connector](data-files-monitor-integration-connector.png)
+![Operation of the data files monitor integration connector](data-files-monitor-integration-connector.svg)
 
 This connector uses the [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator)
 running in the [integration daemon](/egeria-docs/concepts/integration-daemon).

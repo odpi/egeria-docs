@@ -22,7 +22,7 @@ The OMAG Server Platform is capable of hosting one or more [Open Metadata and Go
 
 It is a simple command to move an OMAG server from one platform instance to another. This means you can start experimenting with a single platform and then add more as your deployment grows. The platform can also run as a node in container technologies such as Docker and Kubernetes.
 
-![OMAG server deployment choices](/egeria-docs/concepts/egeria-operations-server-choices-no-description.png)
+![OMAG server deployment choices](/egeria-docs/concepts/egeria-operations-server-choices-no-description.svg)
 
 Different types of technology need different types of integration and Egeria has OMAG servers to match. Each type of OMAG server is focused on the integration of a specific type of tool, engine or platform:
 

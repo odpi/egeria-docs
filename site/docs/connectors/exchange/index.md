@@ -12,7 +12,7 @@ distribution of metadata to the third party technologies.
 The [integration connectors](/egeria-docs/connectors/integration-connector) support the exchange of metadata with
 third party technologies. This exchange may be inbound, outbound, synchronous, polling or event-driven.
 
-![Integration connectors](integration-connectors.png)
+![Integration connectors](integration-connectors.svg)
 
 ### Files
 
@@ -51,7 +51,7 @@ interface to allow metadata to be communicated and exchanged according to Egeria
 
 These connectors allow different back-ends to act as a native open metadata repositories in a [metadata server](/egeria-docs/concepts/metadata-server).
 
-![Repository connector supporting a native open metadata repository](native-repository-connector.png)
+![Repository connector supporting a native open metadata repository](native-repository-connector.svg)
 
 | Connector | Description |
 |---|---|
@@ -65,7 +65,7 @@ These connectors allow different back-ends to act as a native open metadata repo
 These connectors act as an adapter to integrate third party metadata repositories (catalogs) into an
 [open metadata repository cohort](/egeria-docs/services/omrs/cohort).
 
-![Repository connector and optional event mapper supporting an adapter to a third party metadata catalog](adapter-repository-connector.png)
+![Repository connector and optional event mapper supporting an adapter to a third party metadata catalog](adapter-repository-connector.svg)
 
 | Connector | Description |
 |---|---|
@@ -79,7 +79,7 @@ These connectors act as an adapter to integrate third party metadata repositorie
 are connectors that analyze the content of resources in the digital landscape and create annotations
 that are attached to the resource's Asset metadata element in the open metadata repositories in the form of an open discovery report.
 
-![Discovery services](discovery-service.png)
+![Discovery services](discovery-service.svg)
 
 The interfaces used by a discovery service are defined in
 the [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf)
@@ -99,7 +99,7 @@ defined in the [open-discovery-services :material-github:](https://github.com/od
 are connectors that perform monitoring of metadata changes, validation of metadata, triage of issues,
 assessment and/or remediation activities on request.
 
-![Governance action services](governance-action-service.png)
+![Governance action services](governance-action-service.svg)
 
 They run in the
 [Governance Action Open Metadata Engine Service (OMES)](/egeria-docs/services/omes/governance-action)

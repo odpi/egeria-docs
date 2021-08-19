@@ -129,9 +129,12 @@ nav:
               - External Identifiers: types/0/0017-external-identifiers.md
               - More Information: types/0/0019-more-information.md
               - Property Facets: types/0/0020-property-facets.md
+              - Collections: types/0/0021-collections.md
               - Locations: types/0/0025-locations.md
+              - Endpoints: types/0/0026-endpoints.md
               - Hosts and Platforms: types/0/0030-hosts-and-platforms.md
               - Complex Hosts: types/0/0035-complex-hosts.md
+              - Storage: types/0/0036-storage.md
               - Software Server Platforms: types/0/0037-software-server-platforms.md
               - Software Servers: types/0/0040-software-servers.md
               - Software Server Capabilities: types/0/0042-software-server-capabilities.md

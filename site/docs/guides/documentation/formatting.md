@@ -70,7 +70,12 @@ Avoid wrapping lines after a fixed number of characters or in a middle of a sent
 |---|---|
 | This is a long line. | This is a<br>long line. |
 
-This enhances the maintainability of the documentation by a broader audience, because different people will inevitably have different preferences for screen sizes and widths. Therefore, we do not need to worry about constantly reformatting or scrolling what one or another contributor has decided is their own optimal line-break size.
+This enhances the maintainability of the documentation by a broader audience:
+
+- different people will inevitably have different preferences for screen sizes and widths (we do not need to worry about constantly reformatting or scrolling what one or another contributor has decided is their own optimal line-break size)
+- reviewing a diff of changes will be easier to identify actual content vs spacing / newline positioning changes
+- changes in indentation that may be needed for e.g. bullet lists, inclusion within an admonition, etc will only require indenting the single wrapped line
+- including content into a table in Markdown (which does not allow newlines within it) will be easier
 
 ## Use angle brackets for placeholders
 

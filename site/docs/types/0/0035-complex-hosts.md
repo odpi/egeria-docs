@@ -7,7 +7,6 @@ In today's systems, hardware is managed to get the maximum use out of it. Theref
 
 The complex hosts handle environments where many nodes are acting together as a cluster, and where virtualized containers (such as Docker) are being used.
 
-![UML](0035-complex-hosts.svg)
 
 ## HostCluster
 
@@ -18,5 +17,59 @@ A *`HostCluster`* describes a collection of hosts that together are providing a 
 A *`VirtualContainer`* provides the services of a host to the [software servers](/egeria-docs/types/0/0040-software-servers) deployed on it. When the server makes requests for storage, network access, etc, the `VirtualContainer` delegates the requests to the equivalent services of the actual host it is deployed on.
 
 `VirtualContainer`s can be hosted on other `VirtualContainer`s, but to actually run they need to ultimately be deployed onto a real physical [`Host`](/egeria-docs/types/0/0030-hosts-and-platforms/#host).
+
+----
+
+![UML](0035-complex-hosts.svg)
+
+In the virtualized hardware world there are three broad categories of host: `BareMetalComputer`, `VirtualMachine` and `VirtualContainer`.
+
+## BareMetalComputer
+
+A *`BareMetalComputer`* describes a connected set of physical hardware. The open metadata types today do not attempt to model hardware in detail but this could be easily added if a contributor with the appropriate expertise was willing to work on it.
+
+## VirtualMachine
+
+A *`VirtualMachine`* provides virtualized hardware through a hypervisor that allows a single physical bare metal computer to run multiple virtual machines.
+
+## VirtualContainer
+
+A *`VirtualContainer`* provides the services of a virtualized operating system to the software processes running in it. When the server makes operating system requests, the `VirtualContainer` delegates the requests to the equivalent services of the actual host it is deployed on.
+
+### DockerContainer
+
+*`DockerContainer`* provides a specific type for the popular container type called [docker :material-dock-window:](https://www.docker.com/){ target=docker }.
+
+## HostCluster
+
+A *`HostCluster`* describes a collection of hosts that together are providing a service. Clusters are often used to provide horizontal scaling of services.
+
+There are two specific types of host clusters defined: in both, the hosts that they manage are often referred to as *nodes*.
+
+Within the host cluster is typically a special host (node) that is controlling the execution of the other members. This host is modelled with a [`SoftwareServerPlatform`](/egeria-docs/types/0/0037-software-server-platforms/#softwareserverplatform) that describes the cluster management platform, and a [`SoftwareServer`](/egeria-docs/types/0/0040-software-servers/#softwareserver) that groups the [`SoftwareServerCapabilities`](/egeria-docs/types/0/0042-software-server-capabilities/#softwareservercapability) needed to manage the cluster. These software server capabilities are linked to the [`ITInfrastructure`](/egeria-docs/types/0/0030-hosts-and-platforms/#itinfrastructure) assets that are being managed by the cluster using the [`ServerAssetUse`](/egeria-docs/types/0/0045-servers-and-assets/#serverassetuse) relationship.
+
+### HadoopCluster
+
+*`HadoopCluster`* describes a [Hadoop cluster :material-dock-window:](https://hadoop.apache.org/){ target=apache } that uses multiple bare metal computers/virtual machines to manage big data workloads.
+
+### KuberenetesCluster
+
+*`KubernetesCluster`* describes a [Kubernetes cluster :material-dock-window:](https://kubernetes.io/){ target=k8s } that manages containerized applications across multiple bare metal computers/virtual machines.
+
+The containerized applications managed by Kubernetes are represented as `VirtualContainer`s.
+
+## HostedHost
+
+The hosts can actually be virtualized through many levels. The *`HostedHost`* relationship is used to represent the layers of virtualized hosts.
+
+## HostClusterMember
+
+The host cluster is linked to the hosts it is managing using the *`HostClusterMember`* relationship.
+
+!!! education "Further information"
+    - [0030 Hosts and Platforms](/egeria-docs/types/0/0030-hosts-and-Platforms.md) describes how the software installed on a host is represented.
+
+!!! deprecated "Deprecated types"
+    - `DeployedVirtualContainer` - use `HostedHost`, which is more general.
 
 --8<-- "snippets/abbr.md"

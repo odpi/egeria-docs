@@ -9,7 +9,11 @@
 
 A *`SoftwareService`* provides a well-defined software component that can be called by remote clients across the network. They may offer a request-response or an event-driven interface or both.
 
-Typically, software services implement specific business functions such as on-boarding a new customer, taking an order or sending an invoice. Egeria offers specialized software services related to the capture and management of open metadata. These are shown as specialist types:
+### ApplicationService
+
+Typically, software services implement specific business functions such as on-boarding a new customer, taking an order or sending an invoice. These are called *`ApplicationService`s*
+
+Egeria offers specialized software services related to the capture and management of open metadata. These are shown as specialist types:
 
 ### MetadataIntegrationService
 

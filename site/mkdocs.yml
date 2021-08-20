@@ -87,6 +87,47 @@ nav:
           - Documentation Guide: guides/documentation/index.md
           - Formatting Standards: guides/documentation/formatting.md
           - Style Guide: guides/documentation/style.md
+  - Connectivity:
+      - Connectors Overview: connectors/index.md
+      - Connector Types:
+          - Audit Log Store:
+              - Audit Log Store Connectors: connectors/audit-log-store-connector.md
+          - Cohort Registry Store:
+              - Cohort Registry Store Connector: connectors/cohort-registry-store-connector.md
+          - Discovery:
+              - Open Discovery Services: connectors/discovery/index.md
+          - Event Mapper:
+              - Event Mapper Connectors: connectors/event-mapper/index.md
+          - Governance Actions:
+              - Governance Action Services: connectors/governance-action/index.md
+              - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
+              - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
+              - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
+              - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+          - Integration:
+              - Integration Connectors: connectors/integration/index.md
+              - File Connectors:
+                  - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
+                  - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
+              - Database Connectors:
+                  - PostgreSQL Database Connector: connectors/integration/postgresql-database/index.md
+          - OMRS Topic:
+              - OMRS Topic Connectors: connectors/omrs-topic-connector.md
+          - Open Metadata Archive Store:
+              - Open Metadata Archive Store Connectors: connectors/open-metadata-archive-store-connector.md
+          - Open Metadata Topic:
+              - Open Metadata Topic Connectors: connectors/open-metadata-topic-connector.md
+          - Repository:
+              - Repository Connectors: connectors/repository/index.md
+              - Pluggable Repositories:
+                  - Crux OMRS Repository Connector: connectors/repository/crux/index.md
+                  - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/index.md
+                  - In-memory OMRS Repository Connector: connectors/repository/in-memory/index.md
+                  - Read-only OMRS Repository Connector: connectors/repository/read-only/index.md
+              - Repository Adapters:
+                  - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/index.md
+                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
+                  - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/index.md
   - Releases:
       - Overview: release-notes/index.md
       - Latest Release: release-notes/latest.md
@@ -367,21 +408,6 @@ nav:
               - Referenceable: concepts/referenceable.md
               - Repository Proxy: concepts/repository-proxy.md
               - View Server: concepts/view-server.md
-      - Connectors:
-          - Connectors Overview: connectors/index.md
-          - Connector Types:
-              - Audit Log Store Connector: connectors/audit-log-store-connector.md
-              - Cohort Registry Store Connector: connectors/cohort-registry-store-connector.md
-              - Event Mapper Connector: connectors/event-mapper-connector.md
-              - Integration Connector: connectors/integration-connector.md
-              - OMRS Topic Connector: connectors/omrs-topic-connector.md
-              - Open Metadata Archive Store Connector: connectors/open-metadata-archive-store-connector.md
-              - Open Metadata Topic Connector: connectors/open-metadata-topic-connector.md
-              - Repository Connector: connectors/repository-connector.md
-          - Connector Catalog:
-              - Exchange Connectors: connectors/exchange/index.md
-              - Runtime Connectors: connectors/runtime/index.md
-              - Data Connectors: connectors/data/index.md
       - Conformance Test Suite:
           - CTS overview: guides/cts/index.md
           - Platform Profiles:

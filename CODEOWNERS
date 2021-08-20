@@ -1,0 +1,52 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright Contributors to the Egeria project.
+
+# Code ownership for Egeria documentation - see https://help.github.com/articles/about-codeowners/
+# Note that the LAST matching pattern will be effective so please more generic paths towards the top
+
+# Top level
+
+.github/ @cmgrote
+
+site/ @cmgrote
+site/overrides/ @cmgrote
+site/snippets/ @cmgrote
+
+site/docs/assets/ @cmgrote
+
+site/docs/concepts/ @mandy-chessell
+
+site/docs/connectors/ @mandy-chessell
+
+site/docs/frameworks/ @mandy-chessell
+
+site/docs/getting-started/ @mandy-chessell
+site/docs/getting-started/hands-on-lab/ @mandy-chessell @planetf1
+
+site/docs/guides/ @mandy-chessell
+site/docs/guides/developer/ @mandy-chessell @planetf1
+site/docs/guides/cts/ @cmgrote
+
+site/docs/introduction/ @mandy-chessell
+
+site/docs/release-notes/ @mandy-chessell @planetf1
+
+site/docs/services/ @mandy-chessell
+
+site/docs/services/omas/asset-consumer/ @mandy-chessell
+site/docs/services/omas/asset-owner/ @mandy-chessell
+site/docs/services/omas/community-profile/ @mandy-chessell
+site/docs/services/omas/data-manager/ @mandy-chessell
+site/docs/services/omas/data-engine/ @popa-raluca
+site/docs/services/omas/digital-architecture/ @mandy-chessell
+site/docs/services/omas/enterprise-architecture/ @mandy-chessell
+site/docs/services/omas/glossary-view/ @lcpopa
+site/docs/services/omas/stewardship-action/ @mandy-chessell
+site/docs/services/omas/governance-program/ @mandy-chessell
+site/docs/services/omas/governance-engine/ @mandy-chessell
+site/docs/services/omas/subject-area/ @davidradl
+site/docs/services/omas/asset-lineage/ @lcpopa @popa-raluca
+
+site/docs/services/omvs/ @davidradl
+
+site/docs/types/ @mandy-chessell

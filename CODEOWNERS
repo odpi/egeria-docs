@@ -17,6 +17,9 @@ site/docs/assets/ @cmgrote
 site/docs/concepts/ @mandy-chessell
 
 site/docs/connectors/ @mandy-chessell
+site/docs/connectors/repository/apache-atlas/ @cmgrote
+site/docs/connectors/repository/crux/ @cmgrote
+site/docs/connectors/repository/ibm-information-server/ @cmgrote
 
 site/docs/frameworks/ @mandy-chessell
 

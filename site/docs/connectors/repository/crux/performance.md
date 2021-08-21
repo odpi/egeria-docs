@@ -31,7 +31,7 @@ Following are details on Crux's performance at the latest release of the connect
 ![Graphical comparison](volume_comparison.svg)
 
 Profile | Method | 05-02 (4,630) | 10-05 (9,260) | 20-10 (18,520)
----|---|---|---
+---|---|---|---|---
 Entity creation | addEntity | 51.0 | 45.0 | 44.0
 ... | saveEntityReferenceCopy | 48.0 | 42.0 | 42.0
 Entity search | findEntities | 48.0 | 50.5 | 92.0

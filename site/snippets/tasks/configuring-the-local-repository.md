@@ -11,12 +11,9 @@ Egeria provides a number of implementations of such a repository -- only one of 
 
 === "bi-temporal graph"
 
-    This command enables a Crux-based metadata repository, which itself has a [number of pluggable back-end
-    options for persistence and other configuration options :material-dock-window:](https://odpi.github.io/egeria-connector-crux/getting-started/setup/#options-for-configuring-crux){ target=crux }.
+    This command enables a Crux-based metadata repository, which itself has a [number of pluggable back-end options for persistence and other configuration options](/egeria-docs/connectors/repository/crux/#options-for-configuring-crux).
 
-    This plugin repository is currently the [highest-performing, most fully-functional repository :material-dock-window:](https://odpi.github.io/egeria-connector-crux/cts/testing-overview/){ target=crux }
-    for Egeria, supporting all metadata operations including historical metadata as well as being [highly-available
-    through clustered deployment :material-dock-window:](https://odpi.github.io/egeria-connector-crux/high-availability/sample/){ target=crux }.
+    This plugin repository is currently the [highest-performing, most fully-functional repository](/egeria-docs/connectors/repository/crux/performance) for Egeria, supporting all metadata operations including historical metadata as well as being [highly-available through clustered deployment](/egeria-docs/connectors/repository/crux/#high-availability).
 
     !!! post "POST - enable the bi-temporal graph repository"
         ```
@@ -34,9 +31,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
         ```
 
     !!! attention "Requires additional connector libraries"
-        Note that you will need to [obtain the additional connector libraries required to run the Crux plugin
-        repository :material-dock-window:](https://odpi.github.io/egeria-connector-crux/getting-started/setup/#1-obtain-connector){ target=crux },
-        as these are not embedded in the metadata server itself.
+        Note that you will need to [obtain the additional connector libraries required to run the Crux plugin repository](/egeria-docs/connectors/repository/crux/#pluggable-persistence), as these are not embedded in the metadata server itself.
 
 === "non-temporal graph"
 

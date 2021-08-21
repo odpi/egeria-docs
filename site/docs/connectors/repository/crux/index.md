@@ -3,12 +3,6 @@
 
 # Crux OMRS Repository Connector
 
-??? info "Connector details"
-    A [repository connector](/egeria-docs/connectors/repository), hosted by the [plugin repository proxy](/egeria-docs/services/omrs/todo), running on a [metadata server](/egeria-docs/concepts/metadata-server).
-
-    - Source: [egeria-connector-crux :material-github:](https://github.com/odpi/egeria-connector-crux){ target=gh }
-    - Connector archive: `egeria-connector-crux-{version}-jar-with-dependencies.jar`
-
 ??? success "Fully conformant with all Egeria profiles"
     Last tested on [release 3.0 of Egeria, release 3.0 of connector using release 1.18.1 of Crux](performance.md).
 
@@ -35,11 +29,24 @@
         - The entity search tests could fail a particular long-running query pattern unless Lucene is configured: typically where a query by value or attribute is done without providing any restriction on the type of instances against which the query should run. Configure the connector with Lucene to avoid these timeouts.
         - The [Dynamic types](/egeria-docs/guides/cts/profiles/dynamic-types) profile currently does not have any tests defined, so will be `UNKNOWN_STATUS` for all repositories and connectors.
 
+=== "Latest release"
+    [![Release](https://img.shields.io/maven-central/v/org.odpi.egeria/egeria-connector-crux?label=release)](http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.odpi.egeria&a=egeria-connector-crux&v=RELEASE&c=jar-with-dependencies)
+
+=== "Latest snapshot"
+    [![Development](https://img.shields.io/nexus/s/org.odpi.egeria/egeria-connector-crux?label=development&server=https%3A%2F%2Foss.sonatype.org)](https://oss.sonatype.org/content/repositories/snapshots/org/odpi/egeria/egeria-connector-crux/){ target=dl }
+
+    Navigate to the latest snapshot directory, and within that find the latest connector archive with the name: `egeria-connector-crux-{version}-jar-with-dependencies.jar`
+
+=== "Source"
+    The connector is hosted in its own repository at [odpi/egeria-connector-crux :material-github:](https://github.com/odpi/egeria-connector-crux){ target=gh }, where the source code can be cloned and the connector built from source.
+
 The *Crux OMRS repository connector* enables the use of [Crux :material-dock-window:](https://opencrux.com){ target=crux } and its own pluggable architecture to support a variety of underlying storage back-ends including S3, RocksDB, Apache Kafka, LMDB, JDBC and more.
 
 Crux supports temporal graph queries to provide native support for storing historical information and answering temporal queries. The connector is also capable of running as a highly-available service. In addition, currently this is the highest-performance open source persistent repository for Egeria across all operations: read, write, update, search and purge.
 
 ## How it works
+
+The Crux OMRS Repository Connector is a [repository connector](/egeria-docs/connectors/repository), hosted by the [plugin repository proxy](/egeria-docs/services/omrs/todo), running on a [metadata server](/egeria-docs/concepts/metadata-server).
 
 ![Operation of the Crux OMRS repository connector](crux-connector-overview.svg)
 

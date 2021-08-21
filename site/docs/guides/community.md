@@ -17,7 +17,8 @@ We have a variety of weekly and bi-weekly meetings to which all are welcome:
 |---|---|
 | Developers call | Discussion on code development (not minuted) |
 | Community call | Demos, meetups and other activities going on in the community ([agenda and minutes :material-dock-window:](https://github.com/odpi/data-governance/wiki){ target=wiki }) |
-| TSC call | Strategy, planning and decision-making with the Technical Steering Committee (TSC) |
+| TSC call | Strategy, planning and decision-making with the [Technical Steering Committee (TSC)](https://wiki.lfaidata.foundation/display/EG/Egeria+Technical+Steering+Committee+%28TSC%29+Home) |
+
 
 ### Asynchronous dialog
 

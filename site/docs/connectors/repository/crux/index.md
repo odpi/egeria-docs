@@ -69,9 +69,14 @@ There are many options for configuring Crux itself.
 
 A list of overall persistence modules and deeper configuration options for each can be found through [Crux's own documentation :material-dock-window:](https://opencrux.com/reference/configuration.html){ target=crux }.
 
-To enable persistence, send in the JSON document configuration outlined in [Crux's own documentation :material-dock-window:](https://opencrux.com/reference/configuration.html){ target=crux } directly to the `cruxConfig` key of the `configurationProperties` property of Egeria's connector configuration:
+To enable persistence, there are two options:
 
-!!! example "Example persistent configuration"
+- send in the JSON document configuration outlined in [Crux's own documentation :material-dock-window:](https://opencrux.com/reference/configuration.html){ target=crux } directly to the `cruxConfig` key of the `configurationProperties` property of Egeria's connector configuration
+- send in a string to the `cruxConfigEDN` key of the `configurationProperties` of Egeria's connector configuration, which gives the EDN form of configuration outlined in [Crux's own documentation :material-dock-window:](https://opencrux.com/reference/configuration.html){ target=crux }
+
+Both approaches are valid and should be equally functional, but occasionally a bug may crop up that makes one or the other more or less feasible for a particular configuration.
+
+??? example "Example persistence using JSON configuration"
     ```json linenums="1" hl_lines="8-30"
     {
       "class": "Connection",
@@ -108,42 +113,64 @@ To enable persistence, send in the JSON document configuration outlined in [Crux
     ```
 
     !!! attention "Some of the Lucene configuration will be automatically injected"
-        In the example above, lines 9-11 configure Crux's built-in Lucene index. You should be aware that some additional entries will be automatically injected by Egeria: specifically the `indexer` and `analyzer` entries used to configure the Lucene index optimally for the OMRS-level search interfaces that Egeria defines. If you have defined your own `analyzer` or `indexer` in the configuration, these will be overridden by the connector's injection process -- in other words, any custom configuration you attempt for `analyzer` or `indexer` will be ignored.
+        When using the JSON-based configuration, some additional entries will be automatically injected to the Lucene configuration by Egeria: specifically the `indexer` and `analyzer` entries used to configure the Lucene index optimally for the OMRS-level search interfaces that Egeria defines. If you have defined your own `analyzer` or `indexer` in the configuration, these will be overridden by the connector's injection process -- in other words, any custom configuration you attempt for `analyzer` or `indexer` will be ignored.
 
     It is highly recommended to include the Lucene entry like that above as it offers significant performance improvements for any text-based queries.
 
     The remainder of the configuration in this example defines RocksDB to act as the persistence layer for Crux's index and document stores, as well as its transaction log.
 
-!!! tip "You may need to download additional dependencies"
-    Depending on the persistence you choose to use, you may need to download additional dependencies and place them into the same directory as the connector.
-
-    For example, when using RocksDB you will need the following:
-
-    - [pro.juxt.crux:crux-rocksdb :material-dock-window:](https://search.maven.org/artifact/pro.juxt.crux/crux-rocksdb){ target=dl }
-    - [org.rocksdb:rocksdbjni :material-dock-window:](https://search.maven.org/artifact/org.rocksdb/rocksdbjni){ target=dl }
-    - [com.github.jnr:jnr-ffi :material-dock-window:](https://search.maven.org/artifact/com.github.jnr/jnr-ffi){ target=dl }
-
-    You can generally determine the additional dependencies you will need by looking at the `project.clj` file of relevant Crux module -- specifically its `:dependencies` section. For example, sticking with RocksDB, here is the [project.clj :material-github:](https://github.com/juxt/crux/blob/master/crux-rocksdb/project.clj){ target=crux }:
-
-    ```clojure linenums="1" hl_lines="1 13-14"
-    (defproject pro.juxt.crux/crux-rocksdb "crux-git-version"
-      :description "Crux RocksDB"
-      :plugins [[lein-parent "0.3.8"]]
-      :parent-project {:path "../project.clj"
-                       :inherit [:repositories :deploy-repositories
-                                 :managed-dependencies
-                                 :pedantic? :global-vars
-                                 :license :url :pom-addition]}
-      :scm {:dir ".."}
-      :dependencies [[org.clojure/clojure "1.10.3"]
-                     [pro.juxt.crux/crux-core "crux-git-version"]
-                     [pro.juxt.crux/crux-metrics "crux-git-version" :scope "provided"]
-                     [org.rocksdb/rocksdbjni "6.12.7"]
-                     [com.github.jnr/jnr-ffi "2.1.12"]]
-      :middleware [leiningen.project-version/middleware])
+??? example "Example persistence using EDN configuration"
+    ```json linenums="1" hl_lines="8"
+    {
+      "class": "Connection",
+      "connectorType": {
+        "class": "ConnectorType",
+        "connectorProviderClassName": "org.odpi.egeria.connectors.juxt.crux.repositoryconnector.CruxOMRSRepositoryConnectorProvider"
+      },
+      "configurationProperties": {
+        "cruxConfigEDN": "{:crux/index-store {:kv-store {:crux/module crux.rocksdb/->kv-store :db-dir \"data/servers/crux/rdb-index\"}} :crux/document-store {:crux/module crux.jdbc/->document-store :connection-pool {:dialect {:crux/module crux.jdbc.psql/->dialect} :db-spec {:jdbcUrl \"jdbc:postgresql://myserver.com:5432/mydb?user=myuser&password=mypassword\"}}} :crux/tx-log {:kv-store {:crux/module crux.rocksdb/->kv-store :db-dir \"data/servers/crux/rdb-tx\"}} :crux.lucene/lucene-store {:db-dir \"data/servers/crux/lucene\" :indexer {:crux/module crux.lucene.egeria/->egeria-indexer} :analyzer {:crux/module crux.lucene.egeria/->ci-analyzer}}}"
+      }
+    }
     ```
 
-    Note that its dependencies include `org.rocksdb:rocksdbjni` and `com.github.jnr:jnr-ffi`. The third dependency given in the previous slide is this Crux persistence module itself (`pro.juxt.crux:crux-rocksdb`).
+    !!! attention "The Lucene configuration will NOT be automatically injected"
+        Unlike the JSON-based configuration, when using the EDN-based configuration the necessary Egeria components of the Lucene configuration will not be automatically injected. Therefore, make sure that your EDN configuration string includes in the Lucene configuration the following keys and settings in addition to the `:db-dir`:
+
+        ```clojure hl_lines="3-4"
+        {:crux.lucene/lucene-store {
+            :db-dir "data/servers/crux/lucene"
+            :indexer {:crux/module crux.lucene.egeria/->egeria-indexer}
+            :analyzer {:crux/module crux.lucene.egeria/->ci-analyzer}}
+        ```
+
+        These configure the Lucene index optimally for the OMRS-level search interfaces that Egeria defines.
+
+    The remainder of the configuration in this example defines RocksDB to act as the persistence layer for Crux's index and document stores, as well as its transaction log.
+
+!!! tip "You may need to download additional dependencies"
+    In general the dependent libraries for most persistence (other than JDBC) is included in the connector `.jar` file itself. For JDBC, you will need to download the appropriate driver for your specific data store and make this `.jar` file available in the same directory as the connector.
+
+    For example, when using PostgreSQL you will need [org.postgresql:postgresql :material-dock-window:](https://search.maven.org/artifact/org.postgresql/postgresql){ target=dl }.
+
+    You can generally determine the additional dependencies you will need by looking at the `project.clj` file of the relevant Crux module -- specifically its `:dependencies` section. For example, sticking with JDBC, here is the [project.clj :material-github:](https://github.com/juxt/crux/blob/master/crux-jdbc/project.clj){ target=crux }:
+
+    ```clojure linenums="14" hl_lines="10"
+      :dependencies [[org.clojure/clojure "1.10.3"]
+                 [org.clojure/tools.logging "1.1.0"]
+                 [pro.juxt.crux/crux-core]
+                 [pro.juxt.clojars-mirrors.com.github.seancorfield/next.jdbc "1.2.674"]
+                 [org.clojure/java.data "1.0.86"]
+                 [com.zaxxer/HikariCP "3.4.5"]
+                 [pro.juxt.clojars-mirrors.com.taoensso/nippy "3.1.1"]
+
+                 ;; Sample driver dependencies
+                 [org.postgresql/postgresql "42.2.18" :scope "provided"]
+                 [com.oracle.ojdbc/ojdbc8 "19.3.0.0" :scope "provided"]
+                 [com.h2database/h2 "1.4.200" :scope "provided"]
+                 [org.xerial/sqlite-jdbc "3.28.0" :scope "provided"]
+                 [mysql/mysql-connector-java "8.0.23" :scope "provided"]
+                 [com.microsoft.sqlserver/mssql-jdbc "8.2.2.jre8" :scope "provided"]]
+    ```
 
 ### Connector options
 

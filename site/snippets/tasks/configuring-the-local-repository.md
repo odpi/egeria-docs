@@ -30,8 +30,8 @@ Egeria provides a number of implementations of such a repository -- only one of 
         }
         ```
 
-    !!! attention "Requires additional connector libraries"
-        Note that you will need to [obtain the additional connector libraries required to run the Crux plugin repository](/egeria-docs/connectors/repository/crux/#pluggable-persistence), as these are not embedded in the metadata server itself.
+    !!! attention "May require additional driver libraries"
+        Note that depending on the persistence you configure, you may need to [obtain additional driver libraries for your back-end service](/egeria-docs/connectors/repository/crux/#pluggable-persistence), as not every drvier is embedded in the Crux connector itself.
 
 === "non-temporal graph"
 

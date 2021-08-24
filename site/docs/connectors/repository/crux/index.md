@@ -174,11 +174,14 @@ There are currently two configuration options for the connector itself:
 
 A [sample Helm chart is provided for configuring the Crux connector for high availability :material-github:](https://github.com/odpi/egeria-connector-crux/tree/main/cts/charts/ec-ha-crux){ target=gh }. This chart starts up a number of different elements and configures them in a specific sequence.
 
+!!! attention "Requires a pre-existing JDBC database"
+    The chart relies on a pre-existing JDBC database somewhere to use as the document store, and the moment assumes this will be of a PostgreSQL variety (that's the only driver it downloads). A quick setup would be to use [Enterprise DB's k8s operator :material-dock-window:](https://www.enterprisedb.com/docs/kubernetes/cloud_native_postgresql/installation_upgrade/#directly-using-the-operator-manifest){ target=edb } to quickly start up a PostgreSQL cluster in your kubernetes cluster, which is what the following diagrams illustrate[^1].
+
 ### Startup
 
 ![Kubernetes startup](crux-ha-2.svg)
 
-When it is first deployed, the Helm chart starts a number of pods and services: for Crux, Kafka, execution of the Performance Test Suite and a pod used for configuration.
+When it is first deployed, the Helm chart starts a number of pods and services: for Egeria (purple), Kafka (red), execution of the Performance Test Suite and a pod used for configuration. (As mentioned above, it assumes a pre-existing JDBC database: a vanilla PostgreSQL cluster (grey) deployed and managed independently by EnterpriseDB's k8s operator.)
 
 Each Crux pod runs its own separate [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform), in its own JVM, and a script in the `init-and-report` pod will wait until all three pods' OMAG Server Platforms are running before proceeding to any of the following steps. (The `headless` service allows each pod to be directly addressed, without load-balancing, to do such a check.)
 
@@ -188,7 +191,7 @@ Each Crux pod runs its own separate [OMAG Server Platform](/egeria-docs/concepts
 
 The next script creates a singular configuration document via the `pts` pod, and deploys this common configuration to each of the pods (again using the `headless` service to directly address each one individually): each will have a separate `crux` server configured with the same Crux connector (same [metadata collection ID](/egeria-docs/services/omrs/metadata-repositories/#metadata-collection-id)).
 
-When the `/instance` is called against each pod to start the connector, each will create a local index and instance of the `ICruxAPI` interface: all pointing to the same golden stores (in this example, Kafka) where all persistence for Crux is handled. All servers will refer to the singular `crux` load-balancing service as their root URL.
+When the `/instance` is called against each pod to start the connector, each will create a local index and instance of the `ICruxAPI` interface: all pointing to the same golden stores (in this example, Kafka and EDB) where all persistence for Crux is handled. All servers will refer to the singular `crux` load-balancing service as their root URL.
 
 ![Configure Crux](crux-ha-4.svg)
 
@@ -196,13 +199,22 @@ When the `/instance` is called against each pod to start the connector, each wil
 
 ![Run PTS](crux-ha-5.svg)
 
-Now when we start the Performance Test Suite, all traffic to the technology under test is routed via this `crux` load-balancing service: which will round-robin each request it receives to the underlying pods running the Crux plugin repository connector. Kafka has a similar service, which handles load-balancing across its own pods for all write operations.
+Now when we start the Performance Test Suite, all traffic to the technology under test is routed via this `crux` load-balancing service: which will round-robin each request it receives to the underlying pods running the Crux plugin repository connector.
+
+Kafka has a similar service, which handles load-balancing across its own pods for all write operations.
+
+The underlying JDBC cluster may have a similar load-balancing service again (e.g. if the data store uses sharding), but also may not. In this example the `edb-rw` service layer is instead an abstraction of the primary data store (`edb-1`): all writes will go to this primary data store, while the others act as secondary / standby servers to which EnterpriseDB is automatically handling data replication from the primary. If the primary pod fails, EnterpriseDB can re-point the `edb-rw` service layer to one of these existing secondary stores (which is automatically promoted to primary by EnterpriseDB).
 
 ### Outages
 
 ![Outages](crux-ha-6.svg)
 
-Should there be any outage (in the example above, both a Crux pod and a Kafka pod going down) the Kubernetes services will simply stop routing traffic to those pods and the overall service will continue uninterrupted.
+Should there be any outage (in the example above, an Egeria pod, a Kafka pod, and an EnterpriseDB pod all going down) the Kubernetes services will simply stop routing traffic to those pods and the overall service will continue uninterrupted.
+
+Depending on how the underlying services are managed, they may also be able to self-heal:
+
+- Kafka is deployed as a `StatefulSet` in kubernetes, so if any pod fails kubernetes will automatically attempt to start another in its place to keep the total number of replicas defined by the `StatefulSet` running at all times.
+- EnterpriseDB i nour example was deployed through an operator: this operator self-heals any individual pod failure to e.g. start another standby server pointing at the same `PersistentVolumeClaim` as the failed pod (to pick up the data that was already replicated), switch the primary server to one of the standby servers if the primary server fails, and so on.
 
 ### Limitations
 
@@ -214,7 +226,11 @@ There are a number of limitations to be aware of with the high availability conf
 !!! attention "Read operations are eventually consistent"
     Since the indexes are local to each pod, read operations will be eventually consistent: the specific pod to which a query is routed may not yet have updated its embedded index with the results of the very latest write operations from some other pod.
 
+    (Note in particular that this has a knock-on impact to our test suites, which currently assume immediate consistency: expect various scenarios to fail if you decide to run them against an eventually-consistent HA configuration.)
+
 !!! danger "Cannot yet be dynamically scaled"
     Currently configuration of Egeria requires making a number of REST API calls, which limits how dynamic we can be in adding or removing pods to an already-running cluster (in particular: [we cannot rely on a readiness probe to indicate pod readiness to process actual work, but only its readiness to be configured](https://github.com/odpi/egeria-connector-crux/issues/127#issuecomment-841678140){ target=issue }). We hope to address this soon by allowing configuration and startup to be done without relying on REST calls, at which point we should be able to also support dynamically adding and removing pods from the cluster.
+
+[^1]: For other databases, modify the `JDBC_DRIVER_URL` value in the `configmap.yaml` of the chart to point to the location of the appropriate driver, and replace the use of the `bin/bootstrapConfig.sh` script in the `init-and-report.yaml` template with an inline script in that template (to specify [the appropriate Crux configuration and JDBC dialect to use for the document store :material-dock-window:](https://opencrux.com/reference/1.18.1/jdbc.html#_example_configuration){ target=crux }).
 
 --8<-- "snippets/abbr.md"

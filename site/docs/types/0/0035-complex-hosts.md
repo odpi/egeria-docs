@@ -7,22 +7,7 @@ In today's systems, hardware is managed to get the maximum use out of it. Theref
 
 The complex hosts handle environments where many nodes are acting together as a cluster, and where virtualized containers (such as Docker) are being used.
 
-
-## HostCluster
-
-A *`HostCluster`* describes a collection of hosts that together are providing a service. Clusters are often used to provide horizontal scaling of services.
-
-## VirtualContainer
-
-A *`VirtualContainer`* provides the services of a host to the [software servers](/egeria-docs/types/0/0040-software-servers) deployed on it. When the server makes requests for storage, network access, etc, the `VirtualContainer` delegates the requests to the equivalent services of the actual host it is deployed on.
-
-`VirtualContainer`s can be hosted on other `VirtualContainer`s, but to actually run they need to ultimately be deployed onto a real physical [`Host`](/egeria-docs/types/0/0030-hosts-and-platforms/#host).
-
-----
-
 ![UML](0035-complex-hosts.svg)
-
-In the virtualized hardware world there are three broad categories of host: `BareMetalComputer`, `VirtualMachine` and `VirtualContainer`.
 
 ## BareMetalComputer
 
@@ -34,7 +19,9 @@ A *`VirtualMachine`* provides virtualized hardware through a hypervisor that all
 
 ## VirtualContainer
 
-A *`VirtualContainer`* provides the services of a virtualized operating system to the software processes running in it. When the server makes operating system requests, the `VirtualContainer` delegates the requests to the equivalent services of the actual host it is deployed on.
+A *`VirtualContainer`* provides the services of a host to the [software servers](/egeria-docs/types/0/0040-software-servers) deployed on it. When the server makes requests for storage, network access, etc, the `VirtualContainer` delegates the requests to the equivalent services of the actual host it is deployed on.
+
+`VirtualContainer`s can be hosted on other `VirtualContainer`s, but to actually run they need to ultimately be deployed onto a real physical [`Host`](/egeria-docs/types/0/0030-hosts-and-platforms/#host).
 
 ### DockerContainer
 
@@ -66,10 +53,7 @@ The hosts can actually be virtualized through many levels. The *`HostedHost`* re
 
 The host cluster is linked to the hosts it is managing using the *`HostClusterMember`* relationship.
 
-!!! education "Further information"
-    - [0030 Hosts and Platforms](/egeria-docs/types/0/0030-hosts-and-Platforms.md) describes how the software installed on a host is represented.
-
-!!! deprecated "Deprecated types"
+??? deprecated "Deprecated types"
     - `DeployedVirtualContainer` - use `HostedHost`, which is more general.
 
 --8<-- "snippets/abbr.md"

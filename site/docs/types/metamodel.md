@@ -12,7 +12,7 @@ OMRS's metamodel defines the structures used to represent metadata, and can be b
 
 ## Type definitions
 
-[`TypeDef`s](/egeria-docs/introduction/key-concepts/#metadata-types) define the general characteristics that are used to describe any general type -- whether native or not -- and typically fit into one of the following three general types (`TypeDefCategory`):
+`TypeDef`s define the general characteristics that are used to describe any general type -- whether native or not -- and typically fit into one of the following three general types (`TypeDefCategory`):
 
 - `EntityDef`: the definition of a type of entity
 - `RelationshipDef`: the definition of a type of relationship
@@ -152,9 +152,22 @@ Instances define individual instantiations of the TypeDefs: for example, individ
 
 Implemented instances will generally be objects of one of the following classes:
 
-- `EntitySummary` / `EntityProxy` / `EntityDetail` : information about one specific instance of an entity, at varying levels of detail
-- `Relationship`: information about a relationship between entities; the endpoints of the relationship are specified as `EntityProxy` objects
-- `Classification`: information that provides additional contextual information about a given entity, and is included in both the `EntitySummary` and `EntityDetail` views of an entity
+??? question "How are entities modeled? `EntitySummary`, `EntityProxy` and `EntityDetail`"
+    Egeria models all entities using a general object -- [`EntitySummary` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntitySummary.java){ target=gh } -- from which more detailed representations (like [`EntityDetail` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntityDetail.java){ target=gh }) are derived. Note that there is a property called `type` within this object (inherited from [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh }) that defines the specific *type* of metadata the entity represents, rather than having a different type-specific object for every different type of entity.
+
+??? question "How are relationships modeled? `Relationship` and `EntityProxy`"
+    Egeria models all relationships using a general object -- [`Relationship` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Relationship.java){ target=gh } -- which links together exactly two entities (using [`EntityProxy` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntityProxy.java){ target=gh }, itself an extension of EntitySummary).
+
+    These `EntityProxy`s act as a sort of "stub" to which the relationship can point, without needing to be aware of the entire set of details of each entity involved in the relationship, and are therefore an important piece of ensuring that relationships are treated as "first-class" objects in their own right.
+
+    As with entities, there is a property called `type` within this `Relationship` object (also inherited from [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh }) that defines the specific *type* of metadata the relationship represents, rather than having a different type-specific object for every different type of relationship.
+
+??? question "How are classifications modeled? `Classification`"
+    Egeria models all classifications using a general object -- [`Classification` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Classification.java){ target=gh } -- any instance of which is possessed by exactly one entity (within the `EntitySummary`'s  `classifications` property).
+
+    As with the other kinds of instances, note that there is a property called `type` within this `Classification` object (also inherited from [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh }) that defines the specific *type* of metadata the classification represents, rather than having a different type-specific object for every different type of classification.
+
+    Furthermore, note that classifications in Egeria exist only as part of an entity: unlike `EntitySummary` and `Relationship`, they do **not** extend `InstanceHeader` and therefore are not assigned a GUID through which they could be independently retrieved or updated. Classifications are only retrievable or updatable *through* the entity by which they are possessed.
 
 Each of these will typically be further described by an `InstanceProperties` object that instantiates one or more properties used to describe the entity, classification or relationship.
 

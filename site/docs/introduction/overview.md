@@ -18,22 +18,12 @@ Egeria provides the platform (the blue boxes), called the [*Open Metadata and Go
 
 The OMAG Server Platform is a multi-tenant platform that supports horizontal scale-out in Kubernetes and yet is light enough to run as an edge server on a Raspberry Pi. This platform is used to host the actual metadata integration and automation capabilities.
 
-## OMAG server
+## OMAG servers
 
-Within an instance of the OMAG Server *Platform*, one or more [OMAG servers](/egeria-docs/concepts/omag-server) can be configured (the orange circles). These servers implement the wide range of integration and automation capabilities, for example:
+Within an instance of the OMAG Server *Platform*, one or more [OMAG *servers*](/egeria-docs/concepts/omag-server) can be configured (the orange circles). These servers are collections of activated services that host connectors to the different technologies with which Egeria exchanges metadata.
 
-- [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) enable the low-level exchange of metadata between platforms.
-- [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) provide higher-level, consumer-centric APIs for interacting with subsets of metadata.
-
-... and many more:
-
-- The [Services](/egeria-docs/services/omrs) reference provides an exhaustive list and deeper explanations of each type of service that can be hosted in the platform.
-- The [Connectors](/egeria-docs/connectors) reference provides a list of types of integrations with various tools that are possible, that implement the interfaces defined by the services.
-- The [Frameworks](/egeria-docs/frameworks/alf) reference provides details of the frameworks that both the services and adapters can use to simplify their integrations and provide consistency.
-
-## Summary
-
-Combined, the OMAG Server Platforms and Servers running within them provide an enterprise catalog of data and IT resources that are transparently assessed, governed and consumed through many types of tools and technologies. The enterprise catalog is not a physically-centralized one, but a logical one composed of federated metadata from across this peer-to-peer network.
+!!! summary "Summary"
+    Combined, the OMAG Server Platforms and servers running within them provide an enterprise catalog of data and IT resources that are transparently assessed, governed and consumed through many types of tools and technologies. The enterprise catalog is not a physically-centralized one, but a logical one composed of federated metadata from across this peer-to-peer network.
 
 !!! question "Why open source?"
     Delivering this capability as open source is a critical part of the project, since multiple vendors must buy into this ecosystem. They are not going to do this if one organization dominates the technology base. Thus, the open metadata and governance technology must be freely available with an open source governance model that allows a community of organizations and practitioners to develop and evolve the base, and then use it in their offerings and deployments.

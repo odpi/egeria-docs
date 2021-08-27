@@ -20,7 +20,6 @@ nav:
           - Repository Conformance: introduction/patterns/repository-conformance.md
           - Data Manager Integration: introduction/patterns/data-manager-integration.md
           - File Lineage: introduction/patterns/file-lineage.md
-
   - Using:
       - Planning Guide: guides/planning/index.md
       - Diagnostic Guide: guides/diagnostic.md
@@ -41,6 +40,51 @@ nav:
       - Build:
           - Managing External Identifiers: guides/using/external-identifiers.md
           - Building an Asset Catalog: guides/using/asset-catalog.md
+      - Integrate:
+          - Developer Guide: guides/developer/index.md
+          - Connectors Overview: connectors/index.md
+          - Connector Types:
+              - Audit Log Store:
+                  - Audit Log Store Connectors: connectors/audit-log-store-connector.md
+              - Cohort Registry Store:
+                  - Cohort Registry Store Connector: connectors/cohort-registry-store-connector.md
+              - Discovery:
+                  - Open Discovery Services: connectors/discovery/index.md
+              - Event Mapper:
+                  - Event Mapper Connectors: connectors/event-mapper/index.md
+              - Governance Actions:
+                  - Governance Action Services: connectors/governance-action/index.md
+                  - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
+                  - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
+                  - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
+                  - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+              - Integration:
+                  - Integration Connectors: connectors/integration/index.md
+                  - File Connectors:
+                      - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
+                      - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
+                  - Database Connectors:
+                      - PostgreSQL Database Connector: connectors/integration/postgresql-database/index.md
+              - OMRS Topic:
+                  - OMRS Topic Connectors: connectors/omrs-topic-connector.md
+              - Open Metadata Archive Store:
+                  - Open Metadata Archive Store Connectors: connectors/open-metadata-archive-store-connector.md
+              - Open Metadata Topic:
+                  - Open Metadata Topic Connectors: connectors/open-metadata-topic-connector.md
+              - Repository:
+                  - Repository Connectors: connectors/repository/index.md
+                  - Pluggable Repositories:
+                      - Crux:
+                          - Crux OMRS Repository Connector: connectors/repository/crux/index.md
+                          - Upgrading the Crux Connector: connectors/repository/crux/upgrade.md
+                          - Crux Connector Performance: connectors/repository/crux/performance.md
+                      - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/index.md
+                      - In-memory OMRS Repository Connector: connectors/repository/in-memory/index.md
+                      - Read-only OMRS Repository Connector: connectors/repository/read-only/index.md
+                  - Repository Adapters:
+                      - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/index.md
+                      - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
+                      - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/index.md
   - Learning:
       - Dojo:
           - Dojo Introduction: getting-started/dojo/index.md
@@ -68,7 +112,6 @@ nav:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md
       - Develop:
-          - Developer Guide: guides/developer/index.md
           - Developer Guidelines: guides/developer/guidelines.md
           - Way of Working: guides/developer/process.md
           - Specific Guidance:
@@ -87,50 +130,6 @@ nav:
           - Documentation Guide: guides/documentation/index.md
           - Formatting Standards: guides/documentation/formatting.md
           - Style Guide: guides/documentation/style.md
-  - Connectivity:
-      - Connectors Overview: connectors/index.md
-      - Connector Types:
-          - Audit Log Store:
-              - Audit Log Store Connectors: connectors/audit-log-store-connector.md
-          - Cohort Registry Store:
-              - Cohort Registry Store Connector: connectors/cohort-registry-store-connector.md
-          - Discovery:
-              - Open Discovery Services: connectors/discovery/index.md
-          - Event Mapper:
-              - Event Mapper Connectors: connectors/event-mapper/index.md
-          - Governance Actions:
-              - Governance Action Services: connectors/governance-action/index.md
-              - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
-              - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
-              - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
-              - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-          - Integration:
-              - Integration Connectors: connectors/integration/index.md
-              - File Connectors:
-                  - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
-                  - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
-              - Database Connectors:
-                  - PostgreSQL Database Connector: connectors/integration/postgresql-database/index.md
-          - OMRS Topic:
-              - OMRS Topic Connectors: connectors/omrs-topic-connector.md
-          - Open Metadata Archive Store:
-              - Open Metadata Archive Store Connectors: connectors/open-metadata-archive-store-connector.md
-          - Open Metadata Topic:
-              - Open Metadata Topic Connectors: connectors/open-metadata-topic-connector.md
-          - Repository:
-              - Repository Connectors: connectors/repository/index.md
-              - Pluggable Repositories:
-                  - Crux:
-                      - Crux OMRS Repository Connector: connectors/repository/crux/index.md
-                      - Upgrading the Crux Connector: connectors/repository/crux/upgrade.md
-                      - Crux Connector Performance: connectors/repository/crux/performance.md
-                  - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/index.md
-                  - In-memory OMRS Repository Connector: connectors/repository/in-memory/index.md
-                  - Read-only OMRS Repository Connector: connectors/repository/read-only/index.md
-              - Repository Adapters:
-                  - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/index.md
-                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
-                  - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/index.md
   - Releases:
       - Overview: release-notes/index.md
       - Latest Release: release-notes/latest.md
@@ -331,58 +330,60 @@ nav:
               - Lineage Mapping: types/7/0770-lineage-mapping.md
           - Metamodel: types/metamodel.md
       - Services:
-          - Repository Services (OMRS):
-              - Repository Services Design: services/omrs/index.md
-              - Cohorts: services/omrs/cohort.md
-              - Metadata Repositories: services/omrs/metadata-repositories.md
-              - Metadata Events: services/omrs/metadata-events.md
-          - Access Services (OMAS):
-              - Open Metadata Access Services: services/omas/index.md
-              - Analytics Modeling OMAS: services/omas/analytics-modeling/index.md
-              - Asset Catalog OMAS: services/omas/asset-catalog/index.md
-              - Asset Consumer OMAS: services/omas/asset-consumer/index.md
-              - Asset Lineage OMAS: services/omas/asset-lineage/index.md
-              - Asset Owner OMAS: services/omas/asset-owner/index.md
-              - Community Profile OMAS: services/omas/community-profile/index.md
-              - Data Engine OMAS: services/omas/data-engine/index.md
-              - Data Manager OMAS: services/omas/data-manager/index.md
-              - Data Privacy OMAS: services/omas/data-privacy/index.md
-              - Data Science OMAS: services/omas/data-science/index.md
-              - Design Model OMAS: services/omas/design-model/index.md
-              - DevOps OMAS: services/omas/dev-ops/index.md
-              - Digital Architecture OMAS: services/omas/digital-architecture/index.md
-              - Digital Service OMAS: services/omas/digital-service/index.md
-              - Discovery Engine OMAS: services/omas/discovery-engine/index.md
-              - Governance Engine OMAS: services/omas/governance-engine/index.md
-              - Governance Program OMAS: services/omas/governance-program/index.md
-              - IT Infrastructure OMAS: services/omas/it-infrastructure/index.md
-              - Project Management OMAS: services/omas/project-management/index.md
-              - Security Manager OMAS: services/omas/security-manager/index.md
-              - Security Officer OMAS: services/omas/security-officer/index.md
-              - Software Developer OMAS: services/omas/software-developer/index.md
-              - Stewardship Action OMAS: services/omas/stewardship-action/index.md
-              - Subject Area OMAS: services/omas/subject-area/index.md
-          - Common Services:
-              - Common Services Overview: services/common/index.md
-              - FFDC: services/common/ffdc-services.md
-              - Generic Handlers: services/common/generic-handlers.md
-              - Metadata Security: services/common/metadata-security.md
-          - Engine Services (OMES):
-              - Open Metadata Engine Services: services/omes/index.md
-              - Asset Analysis: services/omes/asset-analysis.md
-              - Governance Action: services/omes/governance-action.md
-          - Integration Services (OMIS):
-              - Integration Services Overview: services/omis/index.md
-              - Database Integrator: services/omis/database-integrator.md
-          - Platform Services: services/platform.md
+          - Fixed Services:
+              - Common Services:
+                  - Common Services Overview: services/common/index.md
+                  - FFDC: services/common/ffdc-services.md
+                  - Generic Handlers: services/common/generic-handlers.md
+                  - Metadata Security: services/common/metadata-security.md
+              - Platform Services: services/platform.md
+          - Registered Services:
+              - Repository Services (OMRS):
+                  - Repository Services Design: services/omrs/index.md
+                  - Cohorts: services/omrs/cohort.md
+                  - Metadata Repositories: services/omrs/metadata-repositories.md
+                  - Metadata Events: services/omrs/metadata-events.md
+              - Access Services (OMAS):
+                  - Open Metadata Access Services: services/omas/index.md
+                  - Analytics Modeling OMAS: services/omas/analytics-modeling/index.md
+                  - Asset Catalog OMAS: services/omas/asset-catalog/index.md
+                  - Asset Consumer OMAS: services/omas/asset-consumer/index.md
+                  - Asset Lineage OMAS: services/omas/asset-lineage/index.md
+                  - Asset Owner OMAS: services/omas/asset-owner/index.md
+                  - Community Profile OMAS: services/omas/community-profile/index.md
+                  - Data Engine OMAS: services/omas/data-engine/index.md
+                  - Data Manager OMAS: services/omas/data-manager/index.md
+                  - Data Privacy OMAS: services/omas/data-privacy/index.md
+                  - Data Science OMAS: services/omas/data-science/index.md
+                  - Design Model OMAS: services/omas/design-model/index.md
+                  - DevOps OMAS: services/omas/dev-ops/index.md
+                  - Digital Architecture OMAS: services/omas/digital-architecture/index.md
+                  - Digital Service OMAS: services/omas/digital-service/index.md
+                  - Discovery Engine OMAS: services/omas/discovery-engine/index.md
+                  - Governance Engine OMAS: services/omas/governance-engine/index.md
+                  - Governance Program OMAS: services/omas/governance-program/index.md
+                  - IT Infrastructure OMAS: services/omas/it-infrastructure/index.md
+                  - Project Management OMAS: services/omas/project-management/index.md
+                  - Security Manager OMAS: services/omas/security-manager/index.md
+                  - Security Officer OMAS: services/omas/security-officer/index.md
+                  - Software Developer OMAS: services/omas/software-developer/index.md
+                  - Stewardship Action OMAS: services/omas/stewardship-action/index.md
+                  - Subject Area OMAS: services/omas/subject-area/index.md
+              - Engine Services (OMES):
+                  - Open Metadata Engine Services: services/omes/index.md
+                  - Asset Analysis: services/omes/asset-analysis.md
+                  - Governance Action: services/omes/governance-action.md
+              - Integration Services (OMIS):
+                  - Integration Services Overview: services/omis/index.md
+                  - Database Integrator: services/omis/database-integrator.md
+              - View Services (OMVS):
+                  - View Services Overview: services/omvs/index.md
+                  - Glossary Author View: services/omvs/glossary-author.md # ./open-metadata-implementation/view-services/glossary-author-view/docs
           - Governance Servers:
               - Governance Servers Overview: services/governance/index.md # ./open-metadata-implementation/governance-servers/docs
               - Integration Daemon Services: services/governance/integration-daemon.md # ./open-metadata-implementation/governance-servers/integration-daemon-services/docs
               - Engine Host Services: services/governance/engine-host.md # ./open-metadata-implementation/governance-servers/engine-host-services/docs
               - Open Lineage Services (OLS): services/governance/ols.md # ./open-metadata-implementation/governance-servers/open-lineage-services/docs
-          - View Services (OMVS):
-              - View Services Overview: services/omvs/index.md
-              - Glossary Author View: services/omvs/glossary-author.md # ./open-metadata-implementation/view-services/glossary-author-view/docs
       - Frameworks:
           - Audit Logs (ALF): frameworks/alf/index.md
           - Open Connectors (OCF): frameworks/ocf/index.md
@@ -400,6 +401,7 @@ nav:
               - Data Engine Proxy: concepts/data-engine-proxy.md
               - Engine Host: concepts/engine-host.md
               - Event Bus: concepts/event-bus.md
+              - Governance Zone: concepts/governance-zone.md
               - Integration Daemon: concepts/integration-daemon.md
               - Metadata Access Point: concepts/metadata-access-point.md
               - Metadata Server: concepts/metadata-server.md

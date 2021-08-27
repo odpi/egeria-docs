@@ -15,7 +15,7 @@ A cohort[^1] can support the exchange of many metadata servers: both internal to
 
 The cohort is self-configuring. At the core it is between one and four shared topics. Each member publishes a registration request on the appropriate topic when they want to join. This is picked up by the existing members who add this new server to their registry of members and re-send their registration through the same topic to allow the new member to build up its own registry.
 
-!!! attention "There is no central cohort controller"
+!!! tip "There is no central cohort controller"
     Note that there is no central cohort control or coordination logic: the registration and so on are all handled in a peer-to-peer manner with each participant communicating with all other participants.
 
 When an OMAG server permanently leaves the cohort, it sends an unregistration request. This enables the other members to remove the parting member from their registries.
@@ -55,6 +55,8 @@ The metadata access point is the bridge to the governance servers (the middle ri
 
 ![Egeria solution composition](egeria-solution-components.svg)
 
+As mentioned above, the metadata access point hosts the access services (OMAS's) for consumption and integration of metadata by various tools.
+
 The addition of the governance servers provides active metadata exchange and governance of any type of third party technology, not just metadata servers. We call this *integrated governance*.
 
 For the most part, Egeria is a background technology. However, once metadata is being exchanged and linked, new *governance solutions* may emerge that bring value directly to individuals working in an organization. Therefore, we have added servers to support browser-based user interfaces:
@@ -62,67 +64,38 @@ For the most part, Egeria is a background technology. However, once metadata is 
 - The [view server](/egeria-docs/concepts/view-server) provides REST APIs specifically for user interfaces. They are consumed by the Egeria UIs but can also be used by other UIs and tools.
 - The [presentation server](/egeria-docs/concepts/presentation-server) hosts the JavaScript applications that provide an interactive browser-based user interface for Egeria.
 
-## Metadata instances
+## Metadata objects
 
-We refer to a specific metadata object, for example the business vocabulary term `Customer`, as a metadata *instance*.
+When referring to metadata, we distinguish between the level of granularity at which you may be thinking about that metadata. For Egeria, that level of granularity broadly splits between:
 
-### Kinds of instances
+- The granular [repository services](/egeria-docs/services/omrs) level, used for the cohort's underlying metadata federation, replication and exchange
+- The more coarse-grained [access services](/egeria-docs/services/omas) level, where most tool- and user-oriented consumption of and integration with metadata would occur
 
-#### Entities
+### Metadata elements
 
-An *entity* is capable of describing a metadata object on its own: for example, a business vocabulary term, database, field in a schema, and so on. If you think about metadata as a graph, these are the nodes (vertices) in the graph. They typically describe concepts, people, places and things.
+At the more coarse-grained level of the access services metadata objects are simply referred to as *metadata elements*. Each access service describes its own model for the metadata elements it handles, and the access service itself determines how these coarse-grained representations are transformed to and from the more granular representations described below.
 
-??? question "How are entities modeled in Egeria?"
-    Egeria models all entities using a general object -- [`EntitySummary` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntitySummary.java){ target=gh } -- from which more detailed representations (like [`EntityDetail` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntityDetail.java){ target=gh }) are derived. Note that there is a property called `type` within this object (inherited from [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh }) that defines the specific *type* of metadata the entity represents, rather than having a different type-specific object for every different type of entity.
+### Metadata instances
 
-#### Relationships
+At the granular level of the repository services, we refer to specific metadata objects as *metadata instances*, which can only be one of the following:
 
-A *relationship* describes a (typically) directional association between two entities: for example, the semantic meaning of a relational database column by relating a business vocabulary term with the relational database column. In a graph sense, these are the links (edges) that show how entities are related.
-
-??? question "How are relationships modeled in Egeria?"
-    Egeria models all relationships using a general object -- [`Relationship` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Relationship.java){ target=gh } -- which links together exactly two entities (using [`EntityProxy` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/EntityProxy.java){ target=gh }, itself an extension of EntitySummary).
-    
-    These `EntityProxy`s act as a sort of "stub" to which the relationship can point, without needing to be aware of the entire set of details of each entity involved in the relationship, and are therefore an important piece of ensuring that relationships are treated as "first-class" objects in their own right.
-
-    As with entities, there is a property called `type` within this `Relationship` object (also inherited from [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh }) that defines the specific *type* of metadata the relationship represents, rather than having a different type-specific object for every different type of relationship.
-
-#### Classifications
-
-While not strictly speaking a kind of metadata instance, a *classification* provides a means to extend an entity with additional facets of information: for example, describing the level of confidentiality with which a particular relational database column should be treated. Classifications describe additional attributes of an entity and can be used to identify entities that are similar in a specific aspect.
-
-??? question "How are classifications modeled in Egeria?"
-    Egeria models all classifications using a general object -- [`Classification` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Classification.java){ target=gh } -- any instance of which is possessed by exactly one entity (within the `EntitySummary`'s  `classifications` property).
-
-    As with the other kinds of instances, note that there is a property called `type` within this `Classification` object (also inherited from [`InstanceAuditHeader` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceAuditHeader.java){ target=gh }) that defines the specific *type* of metadata the classification represents, rather than having a different type-specific object for every different type of classification.
-
-    Furthermore, note that classifications in Egeria exist only as part of an entity: unlike `EntitySummary` and `Relationship`, they do **not** extend `InstanceHeader` and therefore are not assigned a GUID through which they could be independently retrieved or updated. Classifications are only retrievable or updatable *through* the entity by which they are possessed.
+- An *entity* is capable of describing a metadata object on its own: for example, a business vocabulary term, database, field in a schema, and so on. If you think about metadata as a graph, these are the nodes (vertices) in the graph. They typically describe concepts, people, places and things.
+- A *relationship* describes a (typically) directional association between two entities: for example, the semantic meaning of a relational database column by relating a business vocabulary term with the relational database column. In a graph sense, these are the links (edges) that show how entities are related.
+- While not strictly speaking a kind of metadata instance, a *classification* provides a means to extend an entity with additional facets of information: for example, describing the level of confidentiality with which a particular relational database column should be treated. Classifications describe additional attributes of an entity and can be used to identify entities that are similar in a specific aspect.
 
 ### Metadata types
 
-Every metadata instance is linked to an open metadata type definition (`TypeDef`) that describes what it represents and the properties that further describe and differentiate it from other instances of that same type.
+Every metadata *instance* is linked to an [open metadata type definition](/egeria-docs/types/metamodel/#type-definitions) (sometimes referred to as a `TypeDef`) that describes what it represents and the properties that further describe and differentiate it from other instances of that same type.
 
-There are three categories of TypeDefs:
-
-- *EntityDef*: the definition of a type of entity
-- *RelationshipDef*: the definition of a type of relationship
-- *ClassificationDef*: the definition of a type of classification
-
-TypeDefs can inherit from other TypeDefs from the same category: open metadata supports single inheritance.
-
-Each property defined in a TypeDef is defined in part by an `AttributeTypeDef` describing the type of the property itself.
-
-There are three categories of AttributeTypeDefs:
-
-- *EnumDef*: the definition of an enumerated list of valid values.
-- *CollectionDef*: the definition of a collection - such as an array of strings, or a map from string to object.
-- *PrimitiveDef*: a primitive - such as a string, integer or date.
+!!! tip "TypeDef inheritance"
+    TypeDefs can inherit from other TypeDefs from the same category: open metadata supports single inheritance.
 
 ??? example "An example: GlossaryTerm, RelationalColumn and SemanticAssignment"
-    For example, `GlossaryTerm` is a type of entity that is can be used to describe a specific term of business vocabulary. As a type of entity, `GlossaryTerm` is defined using an `EntityDef`. It has a number of properties like a `displayName`, itself defined as a `PrimitiveDef` of type string. And `GlossaryTerm` as a type extends a base type called `Referenceable` which defines common characteristics that many entities possess such as a `qualifiedName` (another `PrimitiveDef` of type string).
+    For example, `GlossaryTerm` is a type of entity that can be used to describe a specific term of business vocabulary. As a type of entity, `GlossaryTerm` is defined using an `EntityDef` (a subtype of `TypeDef` specific to entities). It has a number of properties like a `displayName`, itself defined as a `PrimitiveDef` of type string. And `GlossaryTerm` as a type extends a base entity type called `Referenceable` which defines common characteristics that many entities possess such as a `qualifiedName` (another `PrimitiveDef` of type string).
 
     `RelationalColumn` is another example of an entity, in this case one that can be used to describe relational database columns. Once again it is defined using an `EntityDef`, has a number of properties, and also extends the base type called `Referenceable` and therefore also gains common properties like the `qualifiedName`.
 
-    Finally, let's consider a different type: `SemanticAssignment` is a type of relationship that can be used to describe the meaning of something. Because it is a type of relationship, it is defined using a `RelationshipDef`. As a relationship, the RelationshipDef defines the entities that it can inter-relate: in this example a `GlossaryTerm` and any other `Referenceable` (for example, a `RelationalColumn`).
+    Finally, let's consider a different type: `SemanticAssignment` is a type of relationship that can be used to describe the meaning of something. Because it is a type of relationship, it is defined using a `RelationshipDef` (another subtype of `EntityDef`, this time specific to relationships). As a relationship, the RelationshipDef defines the entities that it can inter-relate: in this example a `GlossaryTerm` and any other `Referenceable` (for example, a `RelationalColumn`).
 
 ??? question "Where are the types modeled?"
     As described in the models for the various kinds of instances, this TypeDef information is inherent in the `type` property of `InstanceAuditHeader`, from which all entities, relationships, and classification instances inherit.
@@ -165,11 +138,6 @@ There should be, at most, a *tiny* chance[^3] that two servers will generate the
 ## Conformance
 
 Adhering to these concepts and the principles by which they behave is the subject of *conformance*. Egeria provides an [automated testing suite to validate that a given repository or third party integration behaves according to these expectations](/egeria-docs/guides/cts), the successful completion of which is a necessary input to a tool being granted the use of an Egeria conformance mark.
-
-!!! attention "A common tripping point for conformance"
-    The routing behavior described for homed metadata instances can only be enforced when the requests go through OMRS itself. For third party tools that provide their own services / user interface through which updates can be made, a common tripping point becomes the fact that these services / user interfaces need to adhere to the same protocol principles outlined above -- specifically, ensuring reference copies are also immutable through these product-native interfaces -- in order to conform to the Egeria protocol.
-
-    For cases where the tool is unable to do so, we are actively investigating other mitigation measures like providing a [Smart Repository Proxy :material-github:](https://github.com/odpi/egeria/issues/5402){ target=gh } to ensure that any changes to metadata that violate the protocol remain isolated in that third party technology and are not inadvertently propagated elsewhere in the cohort.
 
 [^1]: You may want to see the [cohort interactions walkthrough](/egeria-docs/services/omrs/cohort/#formation-of-a-cohort) for more details on how cohort participants interact.
 [^2]: You may want to see the [OMRS metamodel](/egeria-docs/types/metamodel) for more details on the granularity of metadata exchange.

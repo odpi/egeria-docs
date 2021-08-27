@@ -46,7 +46,7 @@ Within each area, the definitions are broken down into numbered packages to help
 
 ![Guide to reading the open metadata type models](model-guidance.svg)
 
-The diagram above shows a few fragments from the models. Each of the UML classes represents an open metadata type. The stereotype on the UML class in the double angle brackets of *entity*, *relationship* and *classification* defines the category of type: [Entity](/egeria-docs/introduction/key-concepts/#entities), [Relationship](/egeria-docs/introduction/key-concepts/#relationships) or [Classification](/egeria-docs/introduction/key-concepts/#classifications) respectively. The line between entities with the big arrow head means "inheritance". A type points to its supertype.
+The diagram above shows a few fragments from the models. Each of the UML classes represents an open metadata type. The stereotype on the UML class in the double angle brackets of *entity*, *relationship* and *classification* defines the [category of type](/egeria-docs/introduction/key-concepts/#metadata-instances). The line between entities with the big arrow head means "inheritance". A type points to its supertype.
 
 ???+ example "The example on the left comes from model [0010](0/0010-base-model)"
     It shows that `Asset` inherits from `Referenceable` which inherits from `OpenMetadataRoot`. This means that `Asset` is a subtype of `Referenceable`, which is a subtype of `OpenMetadataRoot`. Alternatively, `OpenMetadataRoot` is the supertype of `Referenceable`, which is a supertype of `Asset`. This inheritance identifies which attributes (instance properties) are valid for an instance of a particular type since it is the aggregation of the attributes defined explicitly for the type and all of its supertypes.

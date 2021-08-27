@@ -98,9 +98,7 @@ Every metadata *instance* is linked to an [open metadata type definition](/egeri
     Finally, let's consider a different type: `SemanticAssignment` is a type of relationship that can be used to describe the meaning of something. Because it is a type of relationship, it is defined using a `RelationshipDef` (another subtype of `EntityDef`, this time specific to relationships). As a relationship, the RelationshipDef defines the entities that it can inter-relate: in this example a `GlossaryTerm` and any other `Referenceable` (for example, a `RelationalColumn`).
 
 ??? question "Where are the types modeled?"
-    As described in the models for the various kinds of instances, this TypeDef information is inherent in the `type` property of `InstanceAuditHeader`, from which all entities, relationships, and classification instances inherit.
-
-    The TypeDefs themselves are described in detail under the [types](/egeria-docs/types) reference area, and the canonical definitions ultimately [live in the code itself :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-metadata-types/src/main/java/org/odpi/openmetadata/opentypes){ target=gh }.
+    The `TypeDef`s themselves are described in detail under the [types](/egeria-docs/types) reference area, and the canonical definitions ultimately [live in the code itself :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-metadata-types/src/main/java/org/odpi/openmetadata/opentypes){ target=gh }.
 
 ### Homed metadata
 

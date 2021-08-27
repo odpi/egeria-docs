@@ -27,8 +27,7 @@ Details of the software stack can be captured in a [`Collection`](/egeria-docs/t
 
 ## SoftwarePackageManifest
 
-Collections that list software packages can be classified with the `SoftwarePackageManifest`
-classification.
+Collections that list software packages can be classified with the `SoftwarePackageManifest` classification.
 
 Many hosts could have the same operating platform. This means it can be used to represent standardized software stacks and which hosts they have been deployed to. Pipelines that manage the software stacks on these machines can use these elements to manage the rollout and update of the different software packages.
 

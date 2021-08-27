@@ -23,9 +23,7 @@ The notion of a location is variable, and the classifications help to clarify th
 
 *`FixedLocation`* means that the location represents a physical place where, for example, [`Host`s](/egeria-docs/types/0/0030-hosts-and-platforms/#host), [servers](/egeria-docs/types/0/0040-software-servers) and hence data may be located. This could be an area of a data center, the building the data center is located in, or even the country where the server/data is located.
 
-The physical location may be defined using a postal address or coordinates. The coordinates should be accompanied by the type of map projection used. For example, Goode's Homolosine Equal Area Projection,
-Mercator Projection, Gall-Peters Projection, Miller Cylindrical Projection, Mollweide Projection,
-Sinusoidal EqualArea Projection or Robinson Projection.
+The physical location may be defined using a postal address or coordinates. The coordinates should be accompanied by the type of map projection used. For example, Goode's Homolosine Equal Area Projection, Mercator Projection, Gall-Peters Projection, Miller Cylindrical Projection, Mollweide Projection, Sinusoidal EqualArea Projection or Robinson Projection.
 
 ### SecureLocation
 

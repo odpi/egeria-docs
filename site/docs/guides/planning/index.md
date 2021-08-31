@@ -18,23 +18,23 @@ The green clouds represent each of the deployment locations. The different techn
 The blue rounded boxes are Egeria's [Open Metadata and Governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform). This platform is the heart of Egeria's implementation.  Typically you would expect to have at least one OMAG Server Platform deployed in each location. However,
 when you are experimenting with Egeria, it is often sufficient to start with one OMAG Server Platform and expand the number of platforms as you expand the technologies being integrated.
 
-The OMAG Server Platform is capable of hosting one or more [Open Metadata and Governance (OMAG) servers](/egeria-docs/concepts/omag-server). The OMAG servers are the orange circles in the illustration above. They manage the connectors to third party technology as well as the frameworks and intelligence that Egeria brings to distributed metadata management.
+The OMAG Server Platform is capable of hosting one or more [Open Metadata and Governance (OMAG) Servers](/egeria-docs/concepts/omag-server). The OMAG Servers are the orange circles in the illustration above. They manage the connectors to third party technology as well as the frameworks and intelligence that Egeria brings to distributed metadata management.
 
-It is a simple command to move an OMAG server from one platform instance to another. This means you can start experimenting with a single platform and then add more as your deployment grows. The platform can also run as a node in container technologies such as Docker and Kubernetes.
+It is a simple command to move an OMAG Server from one platform instance to another. This means you can start experimenting with a single platform and then add more as your deployment grows. The platform can also run as a node in container technologies such as Docker and Kubernetes.
 
-![OMAG server deployment choices](/egeria-docs/concepts/egeria-operations-server-choices-no-description.svg)
+![OMAG Server deployment choices](/egeria-docs/concepts/egeria-operations-server-choices-no-description.svg)
 
-Different types of technology need different types of integration and Egeria has OMAG servers to match. Each type of OMAG server is focused on the integration of a specific type of tool, engine or platform:
+Different types of technology need different types of integration and Egeria has OMAG Servers to match. Each type of OMAG Server is focused on the integration of a specific type of tool, engine or platform:
 
-![Types of OMAG servers](/egeria-docs/concepts/types-of-omag-servers.png)
+![Types of OMAG Servers](/egeria-docs/concepts/types-of-omag-servers.png)
 
-The way to understand the diagram is that the arrows should be read as **is a**.  For example, the *repository proxy* **is a** *cohort member* and the *cohort member* **is a** *OMAG server*. This means that everything documented about a particular type of server is also true for all server types that point to it through the **is a** arrow, all the way down the hierarchy.
+The way to understand the diagram is that the arrows should be read as **is a**.  For example, the *repository proxy* **is a** *cohort member* and the *cohort member* **is a** *OMAG Server*. This means that everything documented about a particular type of server is also true for all server types that point to it through the **is a** arrow, all the way down the hierarchy.
 
 Object-oriented software engineers would know of this type of relationship as *behavior inheritance*.
 
-## OMAG server interactions
+## OMAG Server interactions
 
-![How the OMAG servers interact](/egeria-docs/concepts/omag-server-ecosystem.png)
+![How the OMAG Servers interact](/egeria-docs/concepts/omag-server-ecosystem.png)
 
 - The [cohort members](/egeria-docs/services/omrs/cohort/#cohort-members) communicate with one another via an [open metadata repository cohort](/egeria-docs/services/omrs/cohort). This means that they exchange metadata through a low level, fine-grained API supported by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs).
 - The [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) are built on top of the repository services. They live in the [metadata access point](/egeria-docs/concepts/metadata-access-point) / [metadata servers](/egeria-docs/concepts/metadata-server). They offer more course-grained interfaces, specialized for particular types of technology.
@@ -45,7 +45,7 @@ Object-oriented software engineers would know of this type of relationship as *b
 
 The servers' integration can be viewed as a series of nested spheres. The inner sphere involves the cohort members and provides metadata exchange between metadata repositories (and conformance test the integrations). The next level out adds the governance servers to automate the exchange of metadata between the metadata repositories and third party tools, engines and platforms. Finally, adding the view server and user interfaces delivers a governance solution to an organization.
 
-![Spheres of interaction between OMAG servers](omag-server-integration-spheres.png)
+![Spheres of interaction between OMAG Servers](omag-server-integration-spheres.png)
 
 This architecture means that you can incrementally add function to your deployment. Here is a suggested approach:
 
@@ -64,22 +64,22 @@ If you discover that there is a third party technology that is not currently sup
 
 ## Identify the scope of the metadata integration
 
-Another useful planning exercise is to identify the community of users and the tools that they use that need to share metadata. This gives you a view of the technology that needs to be integrated. If each community is fairly self-contained with their own tools deployment then you may want to consider deploying an OMAG server platform for this community and deploying the servers they need onto it. This means they can control  their access to open metadata along with the delivery of open metadata to the rest of the organization.
+Another useful planning exercise is to identify the community of users and the tools that they use that need to share metadata. This gives you a view of the technology that needs to be integrated. If each community is fairly self-contained with their own tools deployment then you may want to consider deploying an OMAG Server platform for this community and deploying the servers they need onto it. This means they can control  their access to open metadata along with the delivery of open metadata to the rest of the organization.
 
 More importantly, it helps with the definition of the organization's [governance zones](/egeria-docs/concepts/governance-zone).
 
 ## Deployment checklist
 
-This is a checklist of planning tasks for the deployment of your OMAG Server Platforms and OMAG servers:
+This is a checklist of planning tasks for the deployment of your OMAG Server Platforms and OMAG Servers:
 
 - [ ] [Set up unique certificates](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#transport-layer-security-tls) for your OMAG Server Platforms.
 - [ ] [Use an encrypted configuration document store](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#configuration-store) for your platforms since configuration documents can have certificates and passwords in them.
 - [ ] [Implement the metadata security connectors for your organization](/egeria-docs/services/common/metdata-security) to ensure only authorized users access metadata.
-- [ ] Choose and [configure the audit log destinations](/egeria-docs/guides/admin/configuring-a-metadata-server/#configure-the-audit-log) for your OMAG servers.
+- [ ] Choose and [configure the audit log destinations](/egeria-docs/guides/admin/configuring-a-metadata-server/#configure-the-audit-log) for your OMAG Servers.
 - [ ] Ensure you have at least one [Egeria metadata server](/egeria-docs/guides/admin/configuring-a-metadata-server/#configure-the-local-repository) in each of your [open metadata repository cohorts](/egeria-docs/services/omrs/cohort).
 - [ ] [Assign a separate user id for each of your servers](/egeria-docs/guides/admin/configuring-a-metadata-server/#set-the-servers-user-id-and-optional-password) and ensure they are defined in your user directory and are authorized users according to the metadata security connectors.
 - [ ] Consider where you need to have [multiple instances of the same server running to give continuous availability](/egeria-docs/guides/admin).
-- [ ] Plan your use of the [event bus](/egeria-docs/concepts/event-bus): which technology to use (Apache Kafka is the default) and the names of the topics that your OMAG servers will use.
+- [ ] Plan your use of the [event bus](/egeria-docs/concepts/event-bus): which technology to use (Apache Kafka is the default) and the names of the topics that your OMAG Servers will use.
 - [ ] Design the [governance zones](/egeria-docs/concepts/governance-zone) that you want to use to control the visibility of assets to different communities of users - or processes.
 
 ## More detail to follow...

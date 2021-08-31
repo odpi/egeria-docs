@@ -99,7 +99,7 @@ Maintaining these definitions is described:
 
 ### Remove engine host services
 
-The following command removes the configuration for the engine host services from an OMAG server's configuration document. This may be used if the engine host services have been added in error.
+The following command removes the configuration for the engine host services from an OMAG Server's configuration document. This may be used if the engine host services have been added in error.
 
 !!! delete "DELETE - remove engine host services"
     ```

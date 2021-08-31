@@ -52,7 +52,15 @@ Use regular Markdown syntax for images. For example:
 ![Description of what the image depicts](image-filename.svg)
 ```
 
-To make localization easier and enhance accessibility, the preferred image format is SVG. We recommend to use [draw.io](/egeria-docs/guides/developer/tools/documentation/#drawio){ target=draw } for creating images and diagrams. Use **Export as** to save your image in SVG format. Keep the **Include a copy of my diagram** option checked to allow later loading the SVG in draw.io and be sure to check **Embed images** if your diagram includes any.
+To make localization easier and enhance accessibility, the preferred image format is SVG. Use [draw.io](/egeria-docs/guides/developer/tools/documentation/#drawio){ target=draw } for creating images and diagrams. To save, follow these steps:
+
+1. Select everything you want to include in the diagram (e.g. ++ctrl+a++ / ++cmd+a++ ).
+2. Use **File**, **Export as**, **SVG...** to save your image in SVG format.
+3. Check the **Selection Only** box, and ensure that the **Size** drop-down changes to **Selection Only**.
+4. Check the **Transparent Background** box.
+5. Keep the **Include a copy of my diagram** option checked to allow later loading the SVG in draw.io.
+6. If your diagram contains any embedded images (rare), be sure to check **Embed Images** as well.
+7. Click the **Export** button to save the file.
 
 If your diagram depicts a process, try to avoid adding the descriptions of the steps to the diagram. Instead, only add the numbers of the steps to the diagram and add the descriptions of the steps as a numbered list in the document. Ensure that the numbers on the list match the numbers on your diagram.
 

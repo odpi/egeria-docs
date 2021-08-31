@@ -37,6 +37,7 @@ nav:
               - Configure Engine Host: guides/admin/configuring-an-engine-host.md
               - Configure Data Engine Proxy: guides/admin/configuring-a-data-engine-proxy.md
               - Configure Open Lineage Server: guides/admin/configuring-an-open-lineage-server.md
+          - Egeria in Kubernetes: guides/admin/kubernetes/intro.md
       - Build:
           - Managing External Identifiers: guides/using/external-identifiers.md
           - Building an Asset Catalog: guides/using/asset-catalog.md

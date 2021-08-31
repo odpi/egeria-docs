@@ -6,9 +6,7 @@ _Kubernetes, also known as K8s, is an open-source system for automating deployme
 
 This is how the [official website](https://kubernetes.io/) [describes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) it. It's effectively a standardized way of deploying applications in a very scalable way - from everything such as development prototyping through to massive highly available enterprise solutions.
 
-
 In this document I'll give a very brief summary that should help those of you new to Kubernetes to make your first steps with Egeria.
-
 
 # What are the key concepts in Kubernetes?
 

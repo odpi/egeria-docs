@@ -150,7 +150,7 @@ types and instances. Also `egeria-platform` is the service for egeria itself. In
 
 How these are exposed can be somewhat dependent on the specific kubernetes environment you are using.
 
-In the [lab chart](lab.md) we provided an example of using `kubectl port-forward`. Here we use RedHat OpenShift in IBM Cloud, where you can expose these services via a LoadBalancer using
+In the [lab chart](chart_lab.md) we provided an example of using `kubectl port-forward`. Here we use RedHat OpenShift in IBM Cloud, where you can expose these services via a LoadBalancer using
 
 ```
 kubectl expose service/egeria-presentation --type=LoadBalancer --port=8091 --target-port=8091 --name pres  

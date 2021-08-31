@@ -143,7 +143,7 @@ Governance action engines are hosted in an [Open Metadata Engine Service (OMES)]
 
 Governance action engines are hosted by the [Governance Action OMES](/egeria-docs/services/omes/governance-action).
 
-The engine services run in dedicated OMAG server called the [*engine host*](/egeria-docs/concepts/engine-host). You can find [instructions for configuring the engine services in the engine host](/egeria-docs/guides/admin/configuring-an-engine-host/#configure-the-engine-host-services) in the administration guide.
+The engine services run in dedicated OMAG Server called the [*engine host*](/egeria-docs/concepts/engine-host). You can find [instructions for configuring the engine services in the engine host](/egeria-docs/guides/admin/configuring-an-engine-host/#configure-the-engine-host-services) in the administration guide.
 
 The [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) provides the services for:
 

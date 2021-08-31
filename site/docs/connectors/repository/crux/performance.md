@@ -183,7 +183,7 @@ The [`cts/results` :material-github:](https://github.com/odpi/egeria-connector-c
 - Description of the k8s environment
     - `deployment` - details of the deployed components used for the test
     - `configmap.yaml` - details of the variables used within the components of the test
-- The OMAG server configurations:
+- The OMAG Server configurations:
     - `omag.server.crux.config` - the configuration of the Crux connector (proxy)
     - `omag.server.cts.config` - the configuration of the test workbench
 - The cohort registrations:

@@ -11,18 +11,18 @@ The inner ring, titled *Integrated Metadata*, illustrates the exchange of metada
 
 ## Cohorts
 
-A cohort[^1] can support the exchange of many metadata servers: both internal to Egeria and third party. A cohort is a group of OMAG servers that are exchanging metadata using a peer-to-peer replication protocol and federated queries.
+A cohort[^1] can support the exchange of many metadata servers: both internal to Egeria and third party. A cohort is a group of OMAG Servers that are exchanging metadata using a peer-to-peer replication protocol and federated queries.
 
 The cohort is self-configuring. At the core it is between one and four shared topics. Each member publishes a registration request on the appropriate topic when they want to join. This is picked up by the existing members who add this new server to their registry of members and re-send their registration through the same topic to allow the new member to build up its own registry.
 
 !!! tip "There is no central cohort controller"
     Note that there is no central cohort control or coordination logic: the registration and so on are all handled in a peer-to-peer manner with each participant communicating with all other participants.
 
-When an OMAG server permanently leaves the cohort, it sends an unregistration request. This enables the other members to remove the parting member from their registries.
+When an OMAG Server permanently leaves the cohort, it sends an unregistration request. This enables the other members to remove the parting member from their registries.
 
 ### Federation
 
-The purpose of the registry in each member is to configure its federated query capability supported by the [enterprise repository services](/egeria-docs/services/omrs/#enterprise-repository-services). The registration information includes the URL root and server name of the member. The federation capability in each OMAG server allows it to issue metadata create, update, delete and search requests to each and every member of the cohort. This is the primary mechanism for accessing metadata.
+The purpose of the registry in each member is to configure its federated query capability supported by the [enterprise repository services](/egeria-docs/services/omrs/#enterprise-repository-services). The registration information includes the URL root and server name of the member. The federation capability in each OMAG Server allows it to issue metadata create, update, delete and search requests to each and every member of the cohort. This is the primary mechanism for accessing metadata.
 
 ### Replication
 
@@ -39,11 +39,11 @@ The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](/eg
 
 ![Cohort member types](cohort-member-types.svg)
 
-A third party metadata server can embed the Egeria libraries in its own runtime or, more commonly, use a special OMAG server called the [repository proxy](/egeria-docs/concepts/repository-proxy) to host connectors that map between the events and APIs of the third party metadata server and the Open Metadata events and APIs. The repository proxy manages all the interaction with the other members of the cohort.
+A third party metadata server can embed the Egeria libraries in its own runtime or, more commonly, use a special OMAG Server called the [repository proxy](/egeria-docs/concepts/repository-proxy) to host connectors that map between the events and APIs of the third party metadata server and the Open Metadata events and APIs. The repository proxy manages all the interaction with the other members of the cohort.
 
 The cohort protocols are peer-to-peer and the membership is dynamic. When a third party metadata server connects to the cohort, either directly or through its repository proxy, it automatically begins receiving metadata from all the other members. When it shares metadata, it is shared with all the other members. Each member is free to choose what to share and what to process from the other members of the cohort.
 
-Other types of OMAG servers that can be members of the cohort:
+Other types of OMAG Servers that can be members of the cohort:
 
 - The [conformance test server](/egeria-docs/concepts/conformance-test-server) is used to verify that a member of the cohort is operating correctly. It is typically only used in test environments because it sends out a lot of test metadata on the cohort and validates the responses from the cohort member it is testing.
 - The [metadata server](/egeria-docs/concepts/metadata-server) provides a metadata repository that supports any type of open metadata. It is a valuable member of the cohort because it is a metadata gap-filler.  By that we mean that is can store relationships between metadata from different third party repositories along with additional types of metadata not supported by any of the third party metadata repositories. It may optionally have the access services enabled so it can also act as a metadata access point.

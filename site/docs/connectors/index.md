@@ -9,7 +9,7 @@ Some connectors are also able to listen for notifications from the third party t
 
 Egeria has a growing collection of connectors to third party technologies. These connectors help to accelerate the rollout of your open metadata ecosystem since they can be used to automate the extraction and distribution of metadata to the third party technologies.
 
-Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the [OMAG servers](/egeria-docs/concepts/omag-server). This allows new implementations to be provided and plugged-in over time, without changing the core code of Egeria itself.
+Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the [OMAG Servers](/egeria-docs/concepts/omag-server). This allows new implementations to be provided and plugged-in over time, without changing the core code of Egeria itself.
 
 Connector implementations supplied by the Egeria community can be broadly organized into three categories:
 

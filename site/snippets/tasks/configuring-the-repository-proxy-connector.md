@@ -12,7 +12,7 @@ They are configured as follows.
 
 ### Configure the repository connector
 
-The OMAG server can act as a proxy to a vendor's repository. This is done by adding the connection for the repository proxy as the local repository.
+The OMAG Server can act as a proxy to a vendor's repository. This is done by adding the connection for the repository proxy as the local repository.
 
 !!! post "POST - configure the repository connector"
     ```

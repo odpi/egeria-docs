@@ -20,12 +20,12 @@ The Egeria clients wrap calls to Egeria's [REST APIs](#using-the-rest-apis) and 
 
 ## Using the REST APIs
 
-Egeria supports REST [APIs](/egeria-docs/basic-concepts/#application-programming-interface-api) for making synchronous (request-response) calls between [OMAG servers](/egeria-docs/concepts/omag-server) and between clients and OMAG servers.
+Egeria supports REST [APIs](/egeria-docs/basic-concepts/#application-programming-interface-api) for making synchronous (request-response) calls between [OMAG Servers](/egeria-docs/concepts/omag-server) and between clients and OMAG Servers.
 
 !!! attention "REST APIs are intended for internal use"
     The REST APIs are usable directly for calling from non-Java platforms; however, they are designed for the internal use of Egeria and are not guaranteed to be backwards compatible.
 
-The structure of the URL for an Egeria REST API varies lightly depending on whether it is a call to an [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) service or an [OMAG server](/egeria-docs/concepts/omag-server) service.
+The structure of the URL for an Egeria REST API varies lightly depending on whether it is a call to an [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) service or an [OMAG Server](/egeria-docs/concepts/omag-server) service.
 
 ## What is a connector?
 
@@ -43,10 +43,10 @@ Through the OCF, we can:
 Many subsystems in Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) and [servers](/egeria-docs/concepts/omag-server) support the first approach. They define a specialized interface for the type of connector they support.
 
 1. One or more connector implementations supporting that interface are then written either by the Egeria community or other organizations.
-2. When an Egeria [OMAG server](/egeria-docs/concepts/omag-server) is configured, details of which connector implementation to use is specified in the server's [configuration document](/egeria-docs/concepts/configuration-document).
-3. At start up, the OMAG server passes the connector configuration to the OCF to instantiate the required connector instance.
+2. When an Egeria [OMAG Server](/egeria-docs/concepts/omag-server) is configured, details of which connector implementation to use is specified in the server's [configuration document](/egeria-docs/concepts/configuration-document).
+3. At start up, the OMAG Server passes the connector configuration to the OCF to instantiate the required connector instance.
 
-Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the OMAG servers.
+Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the OMAG Servers.
 
 The second approach is used by organizations that want to make use of metadata directly in applications and tools - or to externalize the security and driver properties needed to call the data source or service. In this case the OCF connector typically has the same interface as the data source's client library (unless you can do better :smile:). This minimizes the learning curve for application developers. The configuration for the connector is stored in an open metadata server and the application uses the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer) client to [request a new instance of the connector](/egeria-docs/services/omas/asset-consumer/scenarios/working-with-connectors.md). The application uses the returned connector instance to access the data source or server along with the metadata stored about it.
 
@@ -104,7 +104,7 @@ Egeria has extended the basic concept of the OCF connector and created specializ
 | Integration Connector         | Implements metadata exchange with third party tools. | [Building Integration Connectors](../../../open-metadata-implementation/governance-servers/integration-daemon-services/docs/integration-connector.md) | [integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors){ target=gh } |
 | Open Discovery Service        | Implements automated metadata discovery.| [Open Discovery Services](/egeria-docs/frameworks/odf/#discovery-service) | [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } |
 | Governance Action Service     | Implements automated governance. | [Governance Action Services](/egeria-docs/frameworks/gaf/#governance-action-service) | [governance-action-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh } |
-| Configuration Document Store  | Persists the configuration document for an OMAG server. | [Configuration Document Store Connectors](/egeria-docs/concepts/configuration-document/#storage) | [configuration-store-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh } |
+| Configuration Document Store  | Persists the configuration document for an OMAG Server. | [Configuration Document Store Connectors](/egeria-docs/concepts/configuration-document/#storage) | [configuration-store-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh } |
 | Platform Security Connector   | Manages service authorization for the OMAG Server Platform. | [Metadata Security Connectors](/egeria-docs/services/common/metadata-security/#metadata-security-connectors) | [open-metadata-security-samples :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } |
 | Server Security Connector     | Manages service and metadata instance authorization for an OMAG Server. | [Metadata Security Connectors](/egeria-docs/services/common/metadata-security/#metadata-security-connectors) | [open-metadata-security-samples :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } |
 | Metadata Collection (repository) Store | Interfaces with a metadata repository API for retrieving and storing metadata. | [OMRS Repository Connectors](/egeria-docs/connectors/repository-connector)| [open-metadata-collection-store-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh } |

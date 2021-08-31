@@ -5,7 +5,7 @@
 
 The [Open Metadata View Services (OMVS's)](/egeria-docs/services/view) run in a [view server](/egeria-docs/concepts/view-server).
 
-View services provide task-oriented, domain-specific services for user interfaces that integrate with open metadata. View services are part of a multi-tier architecture for the provision of multi-tenant user interfaces. The front tier consists of web components that are rendered in a web browser and served by a web application called the [presentation server :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=react }. The presentation server in turn delegates requests to a set of _view services_ that form a second tier running in the view server. Each view service exposes a REST API that supports the domain-specific operations relevant to the service and issues queries and commands to other OMAG servers.
+View services provide task-oriented, domain-specific services for user interfaces that integrate with open metadata. View services are part of a multi-tier architecture for the provision of multi-tenant user interfaces. The front tier consists of web components that are rendered in a web browser and served by a web application called the [presentation server :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=react }. The presentation server in turn delegates requests to a set of _view services_ that form a second tier running in the view server. Each view service exposes a REST API that supports the domain-specific operations relevant to the service and issues queries and commands to other OMAG Servers.
 
 To get a description of each of the registered view services, and each service's `viewServiceURLMarker`, see [list view services](#list-view-services) instructions below.
 
@@ -37,12 +37,12 @@ A solution view service is configured using a `SolutionViewServiceConfig` object
 | `omagServerPlatformRootURL` | required property (see below) |
 | `omagServerName` | required property (see below) |
 
-A solution view service configuration must include `omagServerPlatformRootURL` and  `omagServerName` properties(defined in `OMAGServerClientConfig`). These properties specify the OMAG server to which to send downstream REST calls to an OMAG Server that is running the OMAS needed by the view service.
+A solution view service configuration must include `omagServerPlatformRootURL` and  `omagServerName` properties(defined in `OMAGServerClientConfig`). These properties specify the OMAG Server to which to send downstream REST calls to an OMAG Server that is running the OMAS needed by the view service.
 
 !!! example "Example solution view service configuration"
     Below is an example of a configuration object for a solution view service. In this example, the view service is [Glossary Author View Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/view-services/glossary-author-view){ target=gh }. It would be similar for the other solution view services.
  
-    The configuration contains the name and status of the view service and contains the name and rootURL of the OMAG server to which 'downstream' requests will be sent. In this example the 'downstream' server is the server running the Subject Area OMAS, required by the Glossary Author view service.
+    The configuration contains the name and status of the view service and contains the name and rootURL of the OMAG Server to which 'downstream' requests will be sent. In this example the 'downstream' server is the server running the Subject Area OMAS, required by the Glossary Author view service.
 
     ```
     {
@@ -73,7 +73,7 @@ It additionally has the following configuration properties:
 | `viewServiceWiki` | optional property specifying the location of the view service documentation |
 | `viewServiceOperationalStatus` | required property, set to ENABLED or DISABLED |
 | `viewServiceOptions` | optional property that specifies options needed by a specific view service (refer to the documentation for the specific service for details) |
-| `resourceEndpoints` | required property that lists the platform and server endpoints of the OMAG platforms or servers to which to send downstream REST calls, for example to query metadata repositories (see below) |
+| `resourceEndpoints` | required property that lists the platform and server endpoints of the OMAG Platforms or Servers to which to send downstream REST calls, for example to query metadata repositories (see below) |
 
 An integration view service configuration does not need the `omagServerPlatformRootURL` and  `omagServerName` properties that are required for a solution view service configuration. This is because an integration view service will generally need to perform operations routed to a variety of open metadata servers, selected by the user at runtime. The set of platforms and servers that the user can select are configured by the `resourceEndpoints` configuration property.
 
@@ -83,7 +83,7 @@ The `resourceEndpoints` property is a list of `ResourceEndpointConfig` objects, 
 |---|---|
 | `resourceCategory` | required property, set to either "Platform" or "Server" |
 | `platformName` | required property, a unique name given to a "Platform" resource, or a reference to a named "Platform" resource endpoint from a "Server" resource |
-| `serverName` | required property for a "Server" resource, set to the name of the OMAG server. Not used for a "Platform" resource. |
+| `serverName` | required property for a "Server" resource, set to the name of the OMAG Server. Not used for a "Platform" resource. |
 | `serverInstanceName` | required property for a "Server" resource, a unique name for the combination of server and platform. | 
 | `description` | optional property that is displayed by some integration view services |
 
@@ -190,7 +190,7 @@ This operation is a good way to discover the `serviceURLMarker` property for eac
 
 #### List configured view services
 
-It is possible to list the configured view services for an [OMAG server](/egeria-docs/concepts/omag-server) using the following command:
+It is possible to list the configured view services for an [OMAG Server](/egeria-docs/concepts/omag-server) using the following command:
 
 !!! get "GET - list configured view services"
     ```

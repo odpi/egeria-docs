@@ -8,15 +8,12 @@ hide:
 
 # Open Metadata Archive
 
-An open metadata archive is a document containing open metadata [type definitions](/egeria-docs/introduction/key-concepts/#metadata-types)
-and [instances](/egeria-docs/introduction/key-concepts/#metadata-instances).
+An *open metadata archive* is a document containing open metadata [type definitions](/egeria-docs/introduction/key-concepts/#metadata-types) and [instances](/egeria-docs/introduction/key-concepts/#metadata-instances).
 
 The open metadata archive has two types:
 
-- A **content pack** containing reusable definitions that are generally useful. They may come from the Egeria community or
-  third parties.
-- A **metadata export** containing an export of metadata from a repository. They are used to transfer metadata
-  between repositories that are not connected to the same [cohort](/egeria-docs/services/omrs/cohort).
+- A **content pack** containing reusable definitions that are generally useful. They may come from the Egeria community or third parties.
+- A **metadata export** containing an export of metadata from a repository. They are used to transfer metadata between repositories that are not connected to the same [cohort](/egeria-docs/services/omrs/cohort).
 
 ## Structure
 
@@ -27,17 +24,12 @@ The logical structure of an open metadata archive is as follows:
 Instances are linked together as follows:
 
 - Entities are stored as `EntityDetail` structures.
-- Relationships are stored as `Relationship` structures and link to their entities through the embedded `EntityProxy`
-  structure.
-- The entities will include their classifications; however, for classifications that
-  are attached to entities that are not included in the archive, they are stored in an `ClassificationEntityExtension`
-  structure.
+- Relationships are stored as `Relationship` structures and link to their entities through the embedded `EntityProxy` structure.
+- The entities will include their classifications; however, for classifications that are attached to entities that are not included in the archive, they are stored in an `ClassificationEntityExtension` structure.
 
 ![Instance structures in an open metadata archive](open-metadata-archive-instances.png)
 
-Typically, open metadata archives are encoded in JSON format and stored in a file; however, both
-the format and storage method can be changed by changing the
-[open metadata archive connector](/egeria-docs/connectors/open-metadata-archive-store-connector).
+Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/egeria-docs/connectors/open-metadata-archive-store-connector).
 
 !!! example "Example of the header from the [Cloud Information Model archive :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/design-model-archives){ target=gh }"
     ```json
@@ -69,9 +61,7 @@ Open metadata archives are introduced into the server through the admin services
 
 ![Processing of an open metadata archive](open-metadata-archive-processing.png)
 
-The archive is passed to the repository services' operational services,
-which in turn passes it on to the [archive manager](archive-manager.md).
-Type information is passed to the [repository content manager](repository-content-manager.md).
+The archive is passed to the repository services' operational services, which in turn passes it on to the [archive manager](archive-manager.md). Type information is passed to the [repository content manager](repository-content-manager.md).
 
 Both the types and instances are passed to the local repository (if there is one).
 
@@ -95,13 +85,11 @@ The archive loads in the following order:
     If the server is connected to the cohort, the new content is sent as notifications to the rest of the cohort.
 
 !!! education "Further information"
-    More information about open metadata archives can be found in the
-    [open-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives){ target=gh }
-    module.
+    More information about open metadata archives can be found in the [open-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives){ target=gh } module.
 
     In addition, these articles may be of interest:
 
-    - [Configuring an open metadata archive in an OMAG server](/egeria-docs/guides/admin/configuring-a-metadata-server/#configure-metadata-to-load-on-startup)
+    - [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/configuring-a-metadata-server/#configure-metadata-to-load-on-startup)
     - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/admin/configuring-a-metadata-server/#add-to-a-running-server)
 
 --8<-- "snippets/abbr.md"

@@ -12,7 +12,7 @@ These formatting standards exist to keep the content of the documentation consis
 When linking between pages in the documentation use the regular Markdown linking syntax, but with the absolute path to the Markdown document or area you wish to link to. For example:
 
 ```markdown
-... is a type of [OMAG server](/egeria-docs/concepts/omag-server) that ...
+... is a type of [OMAG Server](/egeria-docs/concepts/omag-server) that ...
 ```
 
 !!! tip "Note that we do not need to point at a specific Markdown file"
@@ -52,7 +52,15 @@ Use regular Markdown syntax for images. For example:
 ![Description of what the image depicts](image-filename.svg)
 ```
 
-To make localization easier and enhance accessibility, the preferred image format is SVG. We recommend to use [draw.io](/egeria-docs/guides/developer/tools/documentation/#drawio){ target=draw } for creating images and diagrams. Use **Export as** to save your image in SVG format. Keep the **Include a copy of my diagram** option checked to allow later loading the SVG in draw.io and be sure to check **Embed images** if your diagram includes any.
+To make localization easier and enhance accessibility, the preferred image format is SVG. Use [draw.io](/egeria-docs/guides/developer/tools/documentation/#drawio){ target=draw } for creating images and diagrams. To save, follow these steps:
+
+1. Select everything you want to include in the diagram (e.g. ++ctrl+a++ / ++cmd+a++ ).
+2. Use **File**, **Export as**, **SVG...** to save your image in SVG format.
+3. Check the **Selection Only** box, and ensure that the **Size** drop-down changes to **Selection Only**.
+4. Check the **Transparent Background** box.
+5. Keep the **Include a copy of my diagram** option checked to allow later loading the SVG in draw.io.
+6. If your diagram contains any embedded images (rare), be sure to check **Embed Images** as well.
+7. Click the **Export** button to save the file.
 
 If your diagram depicts a process, try to avoid adding the descriptions of the steps to the diagram. Instead, only add the numbers of the steps to the diagram and add the descriptions of the steps as a numbered list in the document. Ensure that the numbers on the list match the numbers on your diagram.
 
@@ -120,13 +128,32 @@ Use **bold** to emphasize text that is particularly important. Avoid overusing b
 
 ## Do **not** use capitalization for emphasis
 
-Only use the original capitalization found in the code or configuration files when referencing those values directly. Use back-ticks `` ` ` `` around the referenced value to make the connection explicit. For example, use `MetadataServer`, not `Metadata Server` or `metadata server`.
+Only use the original capitalization found in the code or configuration files when referencing those values directly. Use back-ticks `` ` ` `` around the referenced value to make the connection explicit. For example, use `InstanceHeader`, not `Instance Header` or `instance header`.
 
-If you are not referencing values or code directly, use normal sentence capitalization, for example, "The metadata server configuration takes place through REST API calls."
+If you are not referencing values or code directly, use normal sentence capitalization, for example, "The instance header captures key information about the metadata instance like its GUID."
 
 For code, the `back-tick` form is intended to represent **exactly** what you're referring to, so you should specify it exactly as it is defined: with precisely the same spacing, capitalization, etc.
 
 For non-code values, [mixing capitalization makes the text harder to scan and comprehend, as well as more difficult and therefore stressful to read :material-dock-window:](https://readabilityguidelines.co.uk/grammar-points/capital-letters/){ target=readability }. Therefore, using normal sentence capitalization greatly enhances the readability of the content.
+
+The **only** exceptions to this should be as follows:
+
+- Proper nouns (i.e. Egeria)
+- Any phrase that is prefixed or suffixed with Open Metadata (or an OMxx abbreviation)
+- Any phrase that we commonly abbreviate using an acronym (i.e. frameworks like Open Discovery Framework): check the `snippets/abbr.md` for a list of such common abbreviations.
+
+| Do | Don't |
+|---|---|
+| Egeria | egeria |
+| Open Metadata Repository Services (OMRS) | open metadata repository services |
+| repository services | Repository Services |
+| Asset Consumer OMAS | asset consumer OMAS |
+| OMAG Server Platform | OMAG server platform |
+| OMAG Server | OMAG server |
+| metadata access point | Metadata Access Point |
+| Metadata Access Point OMAG Server | metadata access point OMAG Server |
+| Open Discovery Framework (ODF) | open discovery framework |
+| Audit Log Framework (ALF) | audit log framework |
 
 ## Use *italics* to emphasize new terms
 

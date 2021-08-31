@@ -14,6 +14,6 @@ Within the *`SoftwareServer`* model we capture the `userId` that it operates und
 ??? education "Further information"
     See model [0110 Actors](/egeria-docs/types/0/0110-actors) and [0117 IT Profiles](/egeria-docs/types/1/0117-it-profiles) for details of how user identifiers are correlated with `ActorProfiles` for people and teams. The `ITProfile` makes it possible to define a profile for a server's `userId` so that additional information about the userId can be captured.
 
-An [OMAG server](/egeria-docs/concepts/omag-server) is an example of a `SoftwareServer`.
+An [OMAG Server](/egeria-docs/concepts/omag-server) is an example of a `SoftwareServer`.
 
 --8<-- "snippets/abbr.md"

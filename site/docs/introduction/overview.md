@@ -18,9 +18,9 @@ Egeria provides the platform (the blue boxes), called the [*Open Metadata and Go
 
 The OMAG Server Platform is a multi-tenant platform that supports horizontal scale-out in Kubernetes and yet is light enough to run as an edge server on a Raspberry Pi. This platform is used to host the actual metadata integration and automation capabilities.
 
-## OMAG servers
+## OMAG Servers
 
-Within an instance of the OMAG Server *Platform*, one or more [OMAG *servers*](/egeria-docs/concepts/omag-server) can be configured (the orange circles). These servers are collections of activated services that host connectors to the different technologies with which Egeria exchanges metadata.
+Within an instance of the OMAG Server *Platform*, one or more [OMAG *Servers*](/egeria-docs/concepts/omag-server) can be configured (the orange circles). These servers are collections of activated services that host connectors to the different technologies with which Egeria exchanges metadata.
 
 !!! summary "Summary"
     Combined, the OMAG Server Platforms and servers running within them provide an enterprise catalog of data and IT resources that are transparently assessed, governed and consumed through many types of tools and technologies. The enterprise catalog is not a physically-centralized one, but a logical one composed of federated metadata from across this peer-to-peer network.

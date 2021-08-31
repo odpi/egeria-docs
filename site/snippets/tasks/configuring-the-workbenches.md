@@ -3,9 +3,9 @@
 
 ## Configure the workbenches
 
-The workbenches are configured using the OMAG Server Platform Administration Services. This defines which workbenches to run and how to connect to the technology to test. This configuration defines an OMAG server that will run the requested conformance suite tests.
+The workbenches are configured using the OMAG Server Platform Administration Services. This defines which workbenches to run and how to connect to the technology to test. This configuration defines an OMAG Server that will run the requested conformance suite tests.
 
-Configure the OMAG server that will run the requested conformance suite tests. The requested workbenches will begin to execute their tests as soon as the OMAG server is started.
+Configure the OMAG Server that will run the requested conformance suite tests. The requested workbenches will begin to execute their tests as soon as the OMAG Server is started.
 
 ### Repository workbench
 
@@ -31,7 +31,7 @@ To run a metadata repository through the Repository Workbench, first configure a
 !!! attention "Start the technology under test **after** the CTS server"
     This repository server to test (`myserver` in the example above) should be [configured and started](/egeria-docs/guides/admin/configuring-a-metadata-server) **after** starting the CTS repository workbench instance. Once the CTS server instance is started it will wait for the technology under test (the server named by the `tutRepositoryServerName` parameter) to be up and running before then starting its suite of tests.
 
-The OMAG server also supports a REST API for querying the results of running the conformance suite tests.
+The OMAG Server also supports a REST API for querying the results of running the conformance suite tests.
 These commands include:
 
 - Retrieve the results from a single named workbench.

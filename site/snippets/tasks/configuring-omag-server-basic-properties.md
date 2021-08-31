@@ -3,7 +3,7 @@
 
 ## Configure the basic properties
 
-The basic properties of the OMAG server are used in logging and events originating from the server. They help to document the purpose of the server (which helps with problem determination) and enable performance improvements by allowing the server to ignore activity or metadata that is not relevant to its operation.
+The basic properties of the OMAG Server are used in logging and events originating from the server. They help to document the purpose of the server (which helps with problem determination) and enable performance improvements by allowing the server to ignore activity or metadata that is not relevant to its operation.
 
 The basic properties include two unique identifiers:
 

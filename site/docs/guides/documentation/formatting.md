@@ -12,7 +12,7 @@ These formatting standards exist to keep the content of the documentation consis
 When linking between pages in the documentation use the regular Markdown linking syntax, but with the absolute path to the Markdown document or area you wish to link to. For example:
 
 ```markdown
-... is a type of [OMAG server](/egeria-docs/concepts/omag-server) that ...
+... is a type of [OMAG Server](/egeria-docs/concepts/omag-server) that ...
 ```
 
 !!! tip "Note that we do not need to point at a specific Markdown file"
@@ -120,13 +120,32 @@ Use **bold** to emphasize text that is particularly important. Avoid overusing b
 
 ## Do **not** use capitalization for emphasis
 
-Only use the original capitalization found in the code or configuration files when referencing those values directly. Use back-ticks `` ` ` `` around the referenced value to make the connection explicit. For example, use `MetadataServer`, not `Metadata Server` or `metadata server`.
+Only use the original capitalization found in the code or configuration files when referencing those values directly. Use back-ticks `` ` ` `` around the referenced value to make the connection explicit. For example, use `InstanceHeader`, not `Instance Header` or `instance header`.
 
-If you are not referencing values or code directly, use normal sentence capitalization, for example, "The metadata server configuration takes place through REST API calls."
+If you are not referencing values or code directly, use normal sentence capitalization, for example, "The instance header captures key information about the metadata instance like its GUID."
 
 For code, the `back-tick` form is intended to represent **exactly** what you're referring to, so you should specify it exactly as it is defined: with precisely the same spacing, capitalization, etc.
 
 For non-code values, [mixing capitalization makes the text harder to scan and comprehend, as well as more difficult and therefore stressful to read :material-dock-window:](https://readabilityguidelines.co.uk/grammar-points/capital-letters/){ target=readability }. Therefore, using normal sentence capitalization greatly enhances the readability of the content.
+
+The **only** exceptions to this should be as follows:
+
+- Proper nouns (i.e. Egeria)
+- Any phrase that is prefixed or suffixed with Open Metadata (or an OMxx abbreviation)
+- Any phrase that we commonly abbreviate using an acronym (i.e. frameworks like Open Discovery Framework): check the `snippets/abbr.md` for a list of such common abbreviations.
+
+| Do | Don't |
+|---|---|
+| Egeria | egeria |
+| Open Metadata Repository Services (OMRS) | open metadata repository services |
+| repository services | Repository Services |
+| Asset Consumer OMAS | asset consumer OMAS |
+| OMAG Server Platform | OMAG server platform |
+| OMAG Server | OMAG server |
+| metadata access point | Metadata Access Point |
+| Metadata Access Point OMAG Server | metadata access point OMAG Server |
+| Open Discovery Framework (ODF) | open discovery framework |
+| Audit Log Framework (ALF) | audit log framework |
 
 ## Use *italics* to emphasize new terms
 

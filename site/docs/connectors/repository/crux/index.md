@@ -4,7 +4,7 @@
 # Crux OMRS Repository Connector
 
 ??? success "Fully conformant with all Egeria profiles"
-    Last tested on [release 3.0 of Egeria, release 3.0 of connector using release 1.18.1 of Crux](performance.md).
+    Last tested on [release 3.1 of Egeria, release 3.1 of connector using release 1.18.1 of Crux](performance.md).
 
     Profile | Result
     ---|---

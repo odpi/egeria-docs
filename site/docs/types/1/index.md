@@ -13,7 +13,7 @@ Area 1 collects information from people using their organization's assets. It in
 - [0110 Actors](0110-actors.md) - generic description of a profile describing a person, team or engine.
 - [0112 People](0112-people.md) - profiles and roles for people
 - [0115 Teams](0115-teams.md) - team profiles and structures
-- **[0117 IT Profiles](0117-it-profiles.md)** - profiles for engines
+- [0117 IT Profiles](0117-it-profiles.md) - profiles for engines
 - [0130 Projects](0130-projects.md) - projects for organizing change to the IT landscape
 - [0135 Meetings](0135-meetings.md) - meetings where ideas, situations and plans are discussed and reviewed
 - [0137 Actions for People](0137-actions.md) - descriptions of actions for people

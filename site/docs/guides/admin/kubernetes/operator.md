@@ -64,42 +64,95 @@ A catalog of operators can be found on [OperatorHub](https://operatorhub.io) and
 
 # Building an operator
 
-# Egeria Operator
+Operators can be built in any language than can support making API calls to Kubernetes. For example it would be possible to write a Java based operator. This is complex, and uses low level APIs, with few examples published. 
+
+The [Operator Framework](https://operatorframework.io) is a toolkit to make it easier to develop an operator by including higher level APIs, and tools for code generation. It supports:
+* [Helm](https://helm.sh) - this wraps up a Helm chart as an operator, but as such it only delivers install/upgrade capability. They can be managed and catalogued as an operator.
+* [Ansible](https://www.ansible.com) - an ansible operator can respond to events & run ansible scripts accordingly. This makes them significantly more flexible
+* [Go](https://www.golangprograms.com) - These are full 'native' operators with full access to the Kubernetes API. Kubernetes itself is written in Go. They are therefore very flexible, though more complex to develop. They do however represent the majority of development in this area, providing also the best scope for help from peers.
+
+A more detailed comparison can be found in this [blog](https://cloud.redhat.com/blog/build-your-kubernetes-operator-with-the-right-tool)
+
+For another project aiming to support java see https://github.com/java-operator-sdk/java-operator-sdk
+
+Egeria is implementing a Go operator, using the Operator Framework. This is the most established & flexible approach.
+
+# Egeria Operator Development
 
 The Egeria operator is being developed at https://github.com/odpi/egeria-k8s-operator - see here for
 * [Issues](https://github.com/odpi/egeria-k8s-operator)
 * prereqs/dependencies
 * feedback, getting involved
-* build and install instructions
+* build, install, and usage instructions
 
 ## Design considerations
 
-### Must be able to handle complex Egeria configurations
+### Egeria configurations
 
 Custom Resource definitions allow for a very detailed specification of what we want our Egeria deployment to be. However Egeria itself already has a sophisticated approach to configuration - some elements of which are still evolving.
 
 It could be possible to try and fully expose this configuration as a CRD. However due to the complexity, fluidity, and duplication the Operator instead will add k8s deployment specific information around existing Egeria configurations.
 
-### Support scaling & failover
+### Scaling & failover
 
-###Server authoring should be independent from deployment of a server
+Kubernetes is a useful container solution that scales from a raspberry pi to huge cloud deployments. As such it may be used for anything from development to full enterprise production - and this is a strong part of it's appeal. So the operator must support everything from a small development environment, through to a scalable, reliable cloud environment. 
+
+Egeria has two main deployment units:
+ * [OMAG servers](https://odpi.github.io/egeria-docs/introduction/overview/#omag-servers) - these are collections of activated service that act as a virtual server. It is these servers that are interesting to other systems in the metadata landscape.
+ * [OMAG Server Platform](https://odpi.github.io/egeria-docs/introduction/overview/#omag-server-platform) - this acts as a container for running servers, supporting multi tenancy, and is implemented as a java process. The platform supports interfaces for configuration of the platform. The server also defines the base URL by which a server can be connected to. ssl security context is also defined at this level, and Egeria has a security plugin to manage access.
+
+So how do we scale?
+
+Three main options are:
+
+ * Model both servers & platforms as different Kubernetes resources. This provides the most accurate mapping, but would require the operator to manage 'scheduling' servers on platforms, and allowing for this to change dynamically as workload & requiremenets change. 
+ * Define servers, and automatically create platforms as needed, resulting in a 1:1 relationship between server and platform. This is simple, though server configuration would need to be overloaded with platform configuration (like ssl keys). This would also lead to creating many more platforms which comes at a resource cost (ram, cpu), as this is a process. Servers however are just logical constructs and have minimal overhead.
+ * Handle replication at the level of platform only. This is close to how Kubernetes works with most apps. 
+
+The last of these has been chosen for simplicity.
+
+This has also resulted in the Egeria Platform being the first-class resource we focus on defining for the operator, at least initially. 
+
+### Metadata repositories
+
+The only metadata repository that offers a suitable HA/remote environment &  supported by the Egeria open source project is [Crux](https://opencrux.com/main/index.html), using the [Egeria Crux connector](https://odpi.github.io/egeria-connector-crux/getting-started/setup/). 
+
+Note: At this point, the deployment of Crux itself is outside the scope of the operator.
+
+### Connectors
+
+An Egeria server configuration document contains many references to connectors. These are implemented as java libraries & must be available to the Egeria platform process. This is done by ensuring they are pointed to within the spring loader's 'LOADER_PATH' environment variable.
+
+Several approaches are possible:
+* Build a custom container image based on the [Egeria docker image](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-deployment/docker/egeria) including the desired connectors, and either placing the required additional files into /deployments/server/lib, or placing them elsewhere in the image and ensuring LOADER_PATH is set
+* Dynamically download or mount the required libraries - and dependencies - when the server platform is set up by the operator, for example through an init job.
+
+Currently the operator takes the former, simpler approach. Therefore specifying a custom container image as part of the platform configuration will often be required.
+
+Connectors also often tend to refer to endpoints - for example the location of a Kafka message bus, a server's own address. Currently the server configuration document
+passed to the operator must have correct addresses. As yet there is no manipulation or templating of these addresses, though this may change in future.
+
+### Server authoring should be independent from deployment 
 
 ## Operator Development
 
 As of September 2021, the current operator: 
  - defines a custom CRD (EgeriaPlatform) from which instances can be created
  - can deploy Egeria platforms with a list of servers
- - uses Kubernetes ConfigMaps to store individual server configuration
+ - uses Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/) to store individual server configuration
  - requires the user to use repositories capable of supporting replication (like crux)
 
-Still to do
+### Still to do
  - Helm chart to deploy a complete demo environment (possible coco pharma) with Egeria operator
  - working through the full server authoring lifecycle (alongside Server Author UI & View Services) - including templating of connections which contain host:ip from the authoring environment
- - Evaluating alternative stores of server configuration (at a minimum may need to be a secret)
+ - Evaluating alternative stores of server configuration (at a minimum may need to be a [secret](https://kubernetes.io/docs/concepts/configuration/secret/) as we include auth info - but decided to use ConfigMaps initially for clarity during initial design)
  - Automated testing & packaging (to both a full k8s cluster & using a test framework)
- - Operator Lifecycle Manager integration
- - publish on Operator Hub
+ - [Operator Lifecycle Manager](https://github.com/operator-framework/operator-lifecycle-manager) integration
+ - publish on [Operator Hub](https://operatorhub.io)
  - consideration of more detailed mapping between Egeria Concepts and operator
+ - Further end-user docs on using the operator
+ - Handling upgrades
+ - Integration with [Prometheus](https://prometheus.io)
 
 
 ----

@@ -11,6 +11,8 @@ Operator functionality could include:
  - upgrading an applications, perhaps migrating data
  - taking backups
  - mapping application specific behaviour into more standard kubernetes commands
+
+A summary of some interesting operators can be found [here](https://github.com/odpi/egeria-k8s-operator/blob/master/doc/research/PopularOperatorCapabilities.md)
  
 ## Custom Resources
 
@@ -97,19 +99,34 @@ It could be possible to try and fully expose this configuration as a CRD. Howeve
 
 Kubernetes is a useful container solution that scales from a raspberry pi to huge cloud deployments. As such it may be used for anything from development to full enterprise production - and this is a strong part of it's appeal. So the operator must support everything from a small development environment, through to a scalable, reliable cloud environment. 
 
-Egeria has two main deployment units:
- * [OMAG servers](https://odpi.github.io/egeria-docs/introduction/overview/#omag-servers) - these are collections of activated service that act as a virtual server. It is these servers that are interesting to other systems in the metadata landscape.
- * [OMAG Server Platform](https://odpi.github.io/egeria-docs/introduction/overview/#omag-server-platform) - this acts as a container for running servers, supporting multi tenancy, and is implemented as a java process. The platform supports interfaces for configuration of the platform. The server also defines the base URL by which a server can be connected to. ssl security context is also defined at this level, and Egeria has a security plugin to manage access.
+#### Egeria Platform
+
+The [OMAG server platform](https://odpi.github.io/egeria-docs/introduction/overview/#omag-server-platform) (aka 'server chassis') is effectively a java process that is launched and acts as a container for
+running Egeria servers (below). In itself it has relatively little configuration but does include
+- TLS configuration ie passwords, keys, certs
+- Spring configuration (security, plugins)
+
+It offers an admin interface for defining servers (below) and starting/stopping them. It also provides the base URL which is extended for server access.
+
+The platform's connectors are mostly limited to configuration & security.
+
+#### Egeria Servers
+
+The [OMAG Server](https://odpi.github.io/egeria-docs/introduction/overview/#omag-servers) comes in a number of
+different forms including a repository proxy, a metadata repository, a view server etc
+
+A 'server' is a logical concept that actually executes code within an Egeria Platform but is basically what is defined, started, stopped,
+and also hosts the myriad of REST APIs that egeria supports such as for creating the definition of a data asset.
 
 So how do we scale?
 
 Three main options are:
 
- * Model both servers & platforms as different Kubernetes resources. This provides the most accurate mapping, but would require the operator to manage 'scheduling' servers on platforms, and allowing for this to change dynamically as workload & requiremenets change. 
+ * Model both servers & platforms as different Kubernetes resources. This provides the most accurate mapping, but would require the operator to manage 'scheduling' servers on platforms, and allowing for this to change dynamically as workload & requiremenets change. This would also require having logical URLs unique to each server.
  * Define servers, and automatically create platforms as needed, resulting in a 1:1 relationship between server and platform. This is simple, though server configuration would need to be overloaded with platform configuration (like ssl keys). This would also lead to creating many more platforms which comes at a resource cost (ram, cpu), as this is a process. Servers however are just logical constructs and have minimal overhead.
  * Handle replication at the level of platform only. This is close to how Kubernetes works with most apps. 
 
-The last of these has been chosen for simplicity.
+Whilst initially persuing the first option, due to complexity, the last of these has now been chosen for simplicity.
 
 This has also resulted in the Egeria Platform being the first-class resource we focus on defining for the operator, at least initially. 
 
@@ -121,7 +138,12 @@ Note: At this point, the deployment of Crux itself is outside the scope of the o
 
 ### Connectors
 
-An Egeria server configuration document contains many references to connectors. These are implemented as java libraries & must be available to the Egeria platform process. This is done by ensuring they are pointed to within the spring loader's 'LOADER_PATH' environment variable.
+Much of the capability in Egeria is pluggable. For example we have a connector to the message bus, which could be kafka, but equally
+may be RabbitMQ (if a connector were written). We have connectors that understand data sources such as for Postgres. These are
+implemented as java jars, and are added into the classpath of the egeria platform. Thus the platform can provide a certain capability
+with these additional connectors, but it is the server which defines which ones to use (and refers to the class name to locate)
+
+An Egeria server configuration document therefore contains many references to connectors. The references libraries must be available in the runtime environment ie platform. This is done by ensuring they are pointed to within the spring loader's 'LOADER_PATH' environment variable.
 
 Several approaches are possible:
 * Build a custom container image based on the [Egeria docker image](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-deployment/docker/egeria) including the desired connectors, and either placing the required additional files into /deployments/server/lib, or placing them elsewhere in the image and ensuring LOADER_PATH is set

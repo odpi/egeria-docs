@@ -95,6 +95,13 @@ Custom Resource definitions allow for a very detailed specification of what we w
 
 It could be possible to try and fully expose this configuration as a CRD. However due to the complexity, fluidity, and duplication the Operator instead will add k8s deployment specific information around existing Egeria configurations.
 
+It's therefore imperative we keep the **Authoring** of server configuration distinct from **Deployment**. The deployment environment will be different in a Kubernetes environment (hostnames, service names etc)
+
+Initially the egeria config document will be used verbatim, however if processing is needed, a [Admission Webhook](https://sdk.operatorframework.io/docs/building-operators/golang/webhook/) could be used to validate ([validating](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#validatingadmissionwebhook)) & convert ([mutating](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#mutatingadmissionwebhook)) the config before storing in k8s. This approach could also be used for CR validation.
+
+[Example server configuration documents](https://github.com/odpi/egeria-k8s-operator/tree/master/samples/server)
+
+
 ### Scaling & failover
 
 Kubernetes is a useful container solution that scales from a raspberry pi to huge cloud deployments. As such it may be used for anything from development to full enterprise production - and this is a strong part of it's appeal. So the operator must support everything from a small development environment, through to a scalable, reliable cloud environment. 
@@ -118,7 +125,7 @@ different forms including a repository proxy, a metadata repository, a view serv
 A 'server' is a logical concept that actually executes code within an Egeria Platform but is basically what is defined, started, stopped,
 and also hosts the myriad of REST APIs that egeria supports such as for creating the definition of a data asset.
 
-So how do we scale?
+#### So how do we scale?
 
 Three main options are:
 
@@ -129,6 +136,28 @@ Three main options are:
 Whilst initially persuing the first option, due to complexity, the last of these has now been chosen for simplicity.
 
 This has also resulted in the Egeria Platform being the first-class resource we focus on defining for the operator, at least initially. 
+
+### Stateful set vs Deployment 
+
+A Deployment manages scaling of a set of containers (such as egeria platform) across multiple pods. A Statefulset extends this to provide a unique identity which can be used for unique service definitions, or for maintaining an association with dedicated storage.
+
+In the current Egeria helm chart we use a stateful set that that persistent storage can be allocated uniquely to each
+pod & retained across restarts.
+
+However the assumption in the operator environment is that Egeria is stateless (beyond the config & CR), and that any persistent state is managed
+via the connections to metadata storage etc, and that a unique service address is not needed. This latter point may need to be revisited if the Egeria operator needs to actively interact with the individual replicas for control/config, but this is not yet the case, hence the choice of a simpler deployment initially.
+
+### Configuration updates
+
+
+* If a server config document is changed the initially the platform will be restarted. 
+* Later we will try to just restart/stop the modified server and/or perform a rolling change. Care will need to be taken if the config change leads to a conflict.
+
+### Admin requests
+
+* The operator has no knowledge of the state of egeria servers, discovery engines etc.
+* Attempts to perform any admin ops should be blocked (via security plugins to both platform & server)
+* To refine this will require modeling those concepts in the operator
 
 ### Metadata repositories
 
@@ -154,26 +183,29 @@ Currently the operator takes the former, simpler approach. Therefore specifying 
 Connectors also often tend to refer to endpoints - for example the location of a Kafka message bus, a server's own address. Currently the server configuration document
 passed to the operator must have correct addresses. As yet there is no manipulation or templating of these addresses, though this may change in future.
 
-### Server authoring should be independent from deployment 
-
 ## Operator Development
 
-As of September 2021, the current operator: 
- - defines a custom CRD (EgeriaPlatform) from which instances can be created
- - can deploy Egeria platforms with a list of servers
+### Prerelease 
+ - deploy Egeria platforms with a list of servers
  - uses Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/) to store individual server configuration
  - requires the user to use repositories capable of supporting replication (like crux)
 
-### Still to do
- - Helm chart to deploy a complete demo environment (possible coco pharma) with Egeria operator
+### Still to do for an initial release
+ - Helm chart to deploy a complete demo environment (coco pharma) with Egeria operator & Crux backend.
  - working through the full server authoring lifecycle (alongside Server Author UI & View Services) - including templating of connections which contain host:ip from the authoring environment
  - Evaluating alternative stores of server configuration (at a minimum may need to be a [secret](https://kubernetes.io/docs/concepts/configuration/secret/) as we include auth info - but decided to use ConfigMaps initially for clarity during initial design)
  - Automated testing & packaging (to both a full k8s cluster & using a test framework)
+ - Further end-user docs on using the operator
+ - publish on [Operator Hub](https://operatorhub.io)
+
+
+### Future enhancements
  - [Operator Lifecycle Manager](https://github.com/operator-framework/operator-lifecycle-manager) integration
  - publish on [Operator Hub](https://operatorhub.io)
+ - refinement of configurations (consolidation, admission webhooks)
  - consideration of more detailed mapping between Egeria Concepts and operator
- - Further end-user docs on using the operator
- - Handling upgrades
+ - rolling platform restart (config update, upgrade etc)
+ - Handling upgrades/migration between egeria versions
  - Integration with [Prometheus](https://prometheus.io)
 
 

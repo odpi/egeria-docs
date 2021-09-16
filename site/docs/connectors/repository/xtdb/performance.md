@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Crux Connector Performance
+# XTDB Connector Performance
 
-Following are details on Crux's performance at the latest release of the connector (v3.1, using Crux v1.18.1). All raw metrics and elements used to produce the results are described further under [reproducibility](#reproducibility) below, but the historical details themselves are no longer included below in the interest of being concise.
+Following are details on XTDB's performance at the latest release of the connector (v3.1, using XTDB v1.18.1). All raw metrics and elements used to produce the results are described further under [reproducibility](#reproducibility) below, but the historical details themselves are no longer included below in the interest of being concise.
 
 ??? info "Details on the performance metrics"
     The *median* of all results for that method across all executions for a given set of volume parameters is given (all times in milliseconds) to give an idea of the "typical" result, while limiting potential skew from significant outliers.
@@ -21,9 +21,9 @@ Following are details on Crux's performance at the latest release of the connect
     - The page size is left at a maximum of `10` for subsequent tests so that it is only the volume of instances in total that are doubling each time, rather than also the number of detailed results.
     - Instance counts range from a few thousand (at `5-2`) up to nearly one hundred thousand (at `80-10`).
     
-    In the graphical comparisons, a point plot is used to show the typical execution time of each method at the different volumes / by repository. Each point on the plot represents the _median_ execution time for that method, at a given volume of metadata. (For the repository comparison plots, `pts` = Crux and `janus` = JanusGraph.) The horizontal lines that appear around each point are confidence intervals calculated by a bootstrapping process: in simple terms, the larger the horizontal line, the more variability there is for that particular method's execution time (a singular median value is insufficient to represent such variability on its own).
+    In the graphical comparisons, a point plot is used to show the typical execution time of each method at the different volumes / by repository. Each point on the plot represents the _median_ execution time for that method, at a given volume of metadata. (For the repository comparison plots, `pts` = XTDB and `janus` = JanusGraph.) The horizontal lines that appear around each point are confidence intervals calculated by a bootstrapping process: in simple terms, the larger the horizontal line, the more variability there is for that particular method's execution time (a singular median value is insufficient to represent such variability on its own).
 
-## Crux at varying volumes
+## XTDB at varying volumes
 
 !!! summary
     The retrieval and write operations remain very consistent, with almost no variability, throughout the growth in volume. The search operations, however, begin to clearly degrade at the highest volumes tested. Further investigation into other optimized settings for the search operations for these larger volumes is likely warranted as the next step to continue to improve performance.
@@ -89,23 +89,23 @@ Relationship purge | purgeRelationship | 32.0 | 32.0 | 30.0 | 39.0 | 33.0
 Entity purge | purgeEntity | 40.0 | 40.0 | 40.0 | 52.0 | 45.0
 ... | purgeEntityReferenceCopy | 24.0 | 24.0 | 24.0 | 29.0 | 26.0
 
-## Crux vs JanusGraph
+## XTDB vs JanusGraph
 
 !!! summary
-    In almost all cases, the Crux repository is *significantly* faster than JanusGraph: at most volumes completing all methods in less than 100ms and with very little variability. For JanusGraph, on the other hand, there is significant variability (in particular for methods like `findEntitiesByClassification`), and there are numerous examples of the median execution time taking more than multiple seconds.
+    In almost all cases, the XTDB repository is *significantly* faster than JanusGraph: at most volumes completing all methods in less than 100ms and with very little variability. For JanusGraph, on the other hand, there is significant variability (in particular for methods like `findEntitiesByClassification`), and there are numerous examples of the median execution time taking more than multiple seconds.
 
-    Even at 8 times the volume of metadata the Crux connector still outperforms the JanusGraph connector in almost every method (the only exceptions being a few of the find methods, where the performance is approximately even at 2-4 times the volume).
+    Even at 8 times the volume of metadata the XTDB connector still outperforms the JanusGraph connector in almost every method (the only exceptions being a few of the find methods, where the performance is approximately even at 2-4 times the volume).
 
 !!! attention "Graph queries were disabled for JanusGraph"
     The graph queries were disabled for JanusGraph in order to have results in a timely manner: it would take more than a month to produce results for these queries for the JanusGraph connector.
 
 ![Graphical comparison](repo_comparison.svg)
 
-The Crux results can be difficult to see in detail due to the skew from the Janus results, so it may be easier to look at this more granular comparison that drops the higher scales of Janus for readability of the Crux results:
+The XTDB results can be difficult to see in detail due to the skew from the Janus results, so it may be easier to look at this more granular comparison that drops the higher scales of Janus for readability of the XTDB results:
 
 ![Graphical comparison without large Janus volumes](repo_comparison_granular.svg)
 
-Profile | Method | 05-02 (Crux) | 05-02 (Janus) | 10-05 (Crux) | 10-05 (Janus) | 20-10 (Crux) | 20-10 (Janus) | 40-10 (Crux) | 40-10 (Janus) | 80-10 (Crux) | 80-10 (Janus)
+Profile | Method | 05-02 (XTDB) | 05-02 (Janus) | 10-05 (XTDB) | 10-05 (Janus) | 20-10 (XTDB) | 20-10 (Janus) | 40-10 (XTDB) | 40-10 (Janus) | 80-10 (XTDB) | 80-10 (Janus)
 ---|---|---|---|---|---|---|---|---|---|---|---
 Entity creation | addEntity | 55.0 | 440.0 | 48.0 | 450.0 | 46.0 | 483.0 | 48.0 | 481.0 | 44.0 | DNF
 ... | saveEntityReferenceCopy | 52.0 | 435.0 | 45.0 | 451.0 | 43.0 | 481.0 | 46.0 | 479.0 | 42.0 | DNF
@@ -168,27 +168,27 @@ Entity purge | purgeEntity | 40.0 | 271.0 | 40.0 | 381.0 | 40.0 | 433.5 | 52.0 |
 
 ### Re-running the tests
 
-Two Helm charts are provided, that were used to automate the execution of these suites against the Crux repository connector:
+Two Helm charts are provided, that were used to automate the execution of these suites against the XTDB repository connector:
 
-- [The Helm chart used to execute the CTS suite :material-github:](https://github.com/odpi/egeria-connector-crux/tree/main/cts/charts/ec-cts-crux){ target=gh }
-- [The Helm chart used to execute the PTS suite :material-github:](https://github.com/odpi/egeria-connector-crux/tree/main/cts/charts/ec-pts-crux){ target=gh }
+- [The Helm chart used to execute the CTS suite :material-github:](https://github.com/odpi/egeria-connector-xtdb/tree/main/cts/charts/ec-cts-xtdb){ target=gh }
+- [The Helm chart used to execute the PTS suite :material-github:](https://github.com/odpi/egeria-connector-xtdb/tree/main/cts/charts/ec-pts-xtdb){ target=gh }
 
-These use a default configuration for the Crux repository where Lucene is used as a text index and RocksDB is used for all persistence: index store, document store and transaction log. No additional tuning of any parameters (Crux or RocksDB) is applied: they use all of their default settings.
+These use a default configuration for the XTDB repository where Lucene is used as a text index and RocksDB is used for all persistence: index store, document store and transaction log. No additional tuning of any parameters (XTDB or RocksDB) is applied: they use all of their default settings.
 
 ### Data points
 
-The [`cts/results` :material-github:](https://github.com/odpi/egeria-connector-crux/tree/main/cts/results){ target=gh } directory in the code repository for the connector contains results of running the suites against the Crux connector. For each test suite execution, you will find the following details:
+The [`cts/results` :material-github:](https://github.com/odpi/egeria-connector-xtdb/tree/main/cts/results){ target=gh } directory in the code repository for the connector contains results of running the suites against the XTDB connector. For each test suite execution, you will find the following details:
 
 - `openmetadata_cts_summary.json` - a summary of the results of each profile
 - Description of the k8s environment
     - `deployment` - details of the deployed components used for the test
     - `configmap.yaml` - details of the variables used within the components of the test
 - The OMAG Server configurations:
-    - `omag.server.crux.config` - the configuration of the Crux connector (proxy)
+    - `omag.server.[crux|xtdb].config` - the configuration of the XTDB connector (proxy)
     - `omag.server.cts.config` - the configuration of the test workbench
 - The cohort registrations:
-    - `cohort.coco.crux.local` - the local Crux connector (proxy) cohort registration information
-    - `cohort.coco.crux.remote` - the cohort members considered remote from the Crux connector (proxy)'s perspective
+    - `cohort.coco.[crux|xtdb].local` - the local XTDB connector (proxy) cohort registration information
+    - `cohort.coco.[crux|xtdb].remote` - the cohort members considered remote from the XTDB connector (proxy)'s perspective
     - `cohort.coco.cts.local` - the local test Workbench cohort registration
     - `cohort.coco.cts.remote` - the cohort members considered remote from the test Workbench's perspective
 - Detailed results:

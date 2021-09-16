@@ -11,9 +11,9 @@ Egeria provides a number of implementations of such a repository -- only one of 
 
 === "bi-temporal graph"
 
-    This command enables a Crux-based metadata repository, which itself has a [number of pluggable back-end options for persistence and other configuration options](/egeria-docs/connectors/repository/crux/#options-for-configuring-crux).
+    This command enables a XTDB-based metadata repository, which itself has a [number of pluggable back-end options for persistence and other configuration options](/egeria-docs/connectors/repository/xtdb/#options-for-configuring-xtdb).
 
-    This plugin repository is currently the [highest-performing, most fully-functional repository](/egeria-docs/connectors/repository/crux/performance) for Egeria, supporting all metadata operations including historical metadata as well as being [highly-available through clustered deployment](/egeria-docs/connectors/repository/crux/#high-availability).
+    This plugin repository is currently the [highest-performing, most fully-functional repository](/egeria-docs/connectors/repository/xtdb/performance) for Egeria, supporting all metadata operations including historical metadata as well as being [highly-available through clustered deployment](/egeria-docs/connectors/repository/xtdb/#high-availability).
 
     !!! post "POST - enable the bi-temporal graph repository"
         ```
@@ -25,13 +25,13 @@ Egeria provides a number of implementations of such a repository -- only one of 
           "class": "Connection",
           "connectorType": {
             "class": "ConnectorType",
-            "connectorProviderClassName": "org.odpi.egeria.connectors.juxt.crux.repositoryconnector.CruxOMRSRepositoryConnectorProvider"
+            "connectorProviderClassName": "org.odpi.egeria.connectors.juxt.xtdb.repositoryconnector.XtdbOMRSRepositoryConnectorProvider"
           }
         }
         ```
 
     !!! attention "May require additional driver libraries"
-        Note that depending on the persistence you configure, you may need to [obtain additional driver libraries for your back-end service](/egeria-docs/connectors/repository/crux/#pluggable-persistence), as not every drvier is embedded in the Crux connector itself.
+        Note that depending on the persistence you configure, you may need to [obtain additional driver libraries for your back-end service](/egeria-docs/connectors/repository/xtdb/#pluggable-persistence), as not every driver is embedded in the XTDB connector itself.
 
 === "non-temporal graph"
 

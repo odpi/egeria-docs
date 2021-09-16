@@ -75,10 +75,10 @@ nav:
               - Repository:
                   - Repository Connectors: connectors/repository/index.md
                   - Pluggable Repositories:
-                      - Crux:
-                          - Crux OMRS Repository Connector: connectors/repository/crux/index.md
-                          - Upgrading the Crux Connector: connectors/repository/crux/upgrade.md
-                          - Crux Connector Performance: connectors/repository/crux/performance.md
+                      - XTDB:
+                          - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                          - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                          - XTDB Connector Performance: connectors/repository/xtdb/performance.md
                       - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/index.md
                       - In-memory OMRS Repository Connector: connectors/repository/in-memory/index.md
                       - Read-only OMRS Repository Connector: connectors/repository/read-only/index.md

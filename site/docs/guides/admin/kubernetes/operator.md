@@ -161,9 +161,9 @@ via the connections to metadata storage etc, and that a unique service address i
 
 ### Metadata repositories
 
-The only metadata repository that offers a suitable HA/remote environment &  supported by the Egeria open source project is [Crux](https://opencrux.com/main/index.html), using the [Egeria Crux connector](https://odpi.github.io/egeria-connector-crux/getting-started/setup/). 
+The only metadata repository that offers a suitable HA/remote environment &  supported by the Egeria open source project is [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb }, using the [Egeria XTDB connector](/egeria-docs/connectors/xtdb). 
 
-Note: At this point, the deployment of Crux itself is outside the scope of the operator.
+Note: At this point, the deployment of XTDB itself is outside the scope of the operator.
 
 ### Connectors
 
@@ -188,10 +188,10 @@ passed to the operator must have correct addresses. As yet there is no manipulat
 ### Prerelease 
  - deploy Egeria platforms with a list of servers
  - uses Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/) to store individual server configuration
- - requires the user to use repositories capable of supporting replication (like crux)
+ - requires the user to use repositories capable of supporting replication (like XTDB)
 
 ### Still to do for an initial release
- - Helm chart to deploy a complete demo environment (coco pharma) with Egeria operator & Crux backend.
+ - Helm chart to deploy a complete demo environment (coco pharma) with Egeria operator & XTDB backend.
  - working through the full server authoring lifecycle (alongside Server Author UI & View Services) - including templating of connections which contain host:ip from the authoring environment
  - Evaluating alternative stores of server configuration (at a minimum may need to be a [secret](https://kubernetes.io/docs/concepts/configuration/secret/) as we include auth info - but decided to use ConfigMaps initially for clarity during initial design)
  - Automated testing & packaging (to both a full k8s cluster & using a test framework)

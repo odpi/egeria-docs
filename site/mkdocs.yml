@@ -111,7 +111,8 @@ nav:
           - Running Samples: getting-started/tutorials/running-samples.md
           - Testing Tutorial: getting-started/tutorials/testing.md
       - Webinars:
-          - Previous Webinars: education/webinars/
+          - Previous Webinars: education/previous-webinars/
+          - Planned Webinars: education/planned-webinars/
   - Contributing:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md

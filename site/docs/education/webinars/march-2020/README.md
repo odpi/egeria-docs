@@ -28,16 +28,18 @@ Q&A
 
 * YouTube Day 1 Video:
     <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/watch?v=DvmQSCjGNVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/DvmQSCjGNVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </div>
+[Link to video](https://www.youtube.com/watch?v=DvmQSCjGNVY)
 * YouTube Day 2 Video:
     <div class="video-wrapper">
         <iframe src="https://www.youtube.com/watch?v=uCK7BmgxuqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+[Link to video](https://www.youtube.com/watch?v=uCK7BmgxuqY)
 * YouTube Day 3 Video:
-    <div class="video-wrapper">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/jsq2dcB2IxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+  <div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uCK7BmgxuqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 
 [Link to video](https://www.youtube.com/watch?v=jsq2dcB2IxQ)
 

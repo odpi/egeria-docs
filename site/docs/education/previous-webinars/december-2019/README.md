@@ -16,6 +16,8 @@ that includes correlated personal, performance and financial information.
 The technology involved is all open source and includes ODPi Egeria and Palisade.
 Together they will change the way you think about access control.
 
+* Presentation [:material-microsoft-powerpoint:](./Egeria-Palisade,%205th%20Dec%202019.pptx){ target=slides }"
+
 * YouTube Video:
     <div class="video-wrapper">
        <iframe width="560" height="315" src="https://www.youtube.com/embed/ESmEJxoqLWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -5,8 +5,10 @@
 
 A definition of metadata and why it is essential to your organization.
 
-
-* Link to [recording on YouTube](https://www.youtube.com/watch?v=FPhsnq3xEmo&t=8s)
+* YouTube Video:
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/watch?v=FPhsnq3xEmo&t=8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
 ----
 Return to [Webinar list](..)

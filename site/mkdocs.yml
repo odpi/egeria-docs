@@ -109,7 +109,8 @@ nav:
           - Postman Tutorial: getting-started/tutorials/postman.md
           - Running Samples: getting-started/tutorials/running-samples.md
           - Testing Tutorial: getting-started/tutorials/testing.md
-      - Webinars: education/webinars/readme.md
+      - Webinars:
+          - Previous Webinars: education/webinars/readme.md
   - Contributing:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md

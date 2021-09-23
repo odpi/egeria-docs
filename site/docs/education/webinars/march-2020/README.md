@@ -26,14 +26,9 @@ Egeria and Cloud Pak’s
 Egeria driving Enterprise API's
 Q&A
 
-* [Blog about the event](https://www.odpi.org/blog/2020/01/24/the-egeria-metadata-show-london-24th-march-2020)
 * [Day 1 on YouTube](https://www.youtube.com/watch?v=DvmQSCjGNVY)
 * [Day 2 on YouTube](https://www.youtube.com/watch?v=uCK7BmgxuqY)
 * [Day 3 on YouTube](https://www.youtube.com/watch?v=jsq2dcB2IxQ)
 
 ----
 Return to [Webinar list](..)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

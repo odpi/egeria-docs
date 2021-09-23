@@ -16,12 +16,7 @@ that includes correlated personal, performance and financial information.
 The technology involved is all open source and includes ODPi Egeria and Palisade.
 Together they will change the way you think about access control.
 
-* Link to [event advertising](https://www.odpi.org/event/webinar-new-approaches-to-managing-access-to-sensitive-data)
 * Link to [recording on YouTube](https://www.youtube.com/watch?v=ESmEJxoqLWQ)
 
 ----
 Return to [Webinar list](..)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

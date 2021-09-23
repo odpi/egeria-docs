@@ -18,12 +18,7 @@ Finally we will demonstrate the ODPi's data privacy pack that provides documenta
 
 The ODPi's data privacy pack is the first open source initiative for data privacy. It is being developed by a team of cross-industry, multi-vendor data privacy experts. Join the call to find out more and maybe join the team to build your skills and share your expertise.
 
-* Link to [event advertising](https://www.odpi.org/event/webinar-managing-privacy)
 * Link to [recording on YouTube](https://www.youtube.com/watch?v=_SExbehT5nQ)
 
 ----
 Return to [Webinar list](..)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

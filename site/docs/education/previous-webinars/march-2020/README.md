@@ -26,10 +26,10 @@ Egeria and Cloud Pak’s
 Egeria driving Enterprise API's
 Q&A
 
-* why is Egeria an open source project [:material-microsoft-powerpoint:](./Why%20Egeria%20is%20an%20open%20source%20project.pptx){ target=slides }"
-* Day 1 presentation [:material-microsoft-powerpoint:](./Metadata%20for%20Data%20Driven%20Organizations,%2025th%20March%202020.pptx){ target=slides }"
-* Day 2 presentation [:material-microsoft-powerpoint:](./Deploying%20Egeria,%2025th%20March%202020.pptx){ target=slides }"
-* Day 3 presentation [:material-microsoft-powerpoint:](./Building%20Trusted%20AI,%2026th%20March%202020.pptx){ target=slides }"
+* why is Egeria an open source project [:material-microsoft-powerpoint:](./Why%20Egeria%20is%20an%20open%20source%20project.pptx){ target=slides }
+* Day 1 presentation [:material-microsoft-powerpoint:](./Metadata%20for%20Data%20Driven%20Organizations,%2025th%20March%202020.pptx){ target=slides }
+* Day 2 presentation [:material-microsoft-powerpoint:](./Deploying%20Egeria,%2025th%20March%202020.pptx){ target=slides }
+* Day 3 presentation [:material-microsoft-powerpoint:](./Building%20Trusted%20AI,%2026th%20March%202020.pptx){ target=slides }
 * YouTube Day 1 Video:
     <div class="video-wrapper">
        <iframe width="560" height="315" src="https://www.youtube.com/embed/DvmQSCjGNVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -27,7 +27,3 @@ Please check the calendar has the latest confirmed Webinar information
 ----
 Return to [Git Repository Home Page](..)
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
-

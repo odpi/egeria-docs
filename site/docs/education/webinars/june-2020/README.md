@@ -9,7 +9,10 @@ Data lakes provide a flexible environment for managing many types of data at sca
 In this presentation, we will cover how open metadata can increase the effectiveness and
 protection of the data lake and avoid it running into a mighty data swamp. 
 
-* Link to recording to follow ...
-
+* YouTube Video:
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/watch?v=Re4DC2VaTqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+[Link to video](https://www.youtube.com/watch?v=Re4DC2VaTqs)
 ----
 Return to [Webinar list](..)

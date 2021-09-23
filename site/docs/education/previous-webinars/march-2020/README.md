@@ -3,7 +3,7 @@
 
 # Egeria Virtual Metadata Show
 
-**Date: 24th – 26th March
+**Date:** 24th – 26th March
 
 Find out how metadata can enable enterprise-wide knowledge and understanding for all data assets in an organization. Get the latest information on the Egeria Open Metadata exchange standard and capabilities, that makes it possible for any tool or application repository to share metadata in real-time.
 

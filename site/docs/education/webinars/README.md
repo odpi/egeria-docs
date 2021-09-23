@@ -7,8 +7,13 @@ Webinars on open metadata and governance are run on a regular basis, there was a
 
 Each webinar focuses on a specific audience or issue.  The material for our webinars is stored below
 along with links to the recordings.  
-For the planned webinars see page [https://wiki.lfaidata.foundation/display/EG/Egeria+Webinar+program](https://wiki.lfaidata.foundation/display/EG/Egeria+Webinar+program)
+For the webinars being planned see page [https://wiki.lfaidata.foundation/display/EG/Egeria+Webinar+program](https://wiki.lfaidata.foundation/display/EG/Egeria+Webinar+program)
 
+Please check the calendar has the latest confirmed Webinar information
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=YjVxaGRyNXFkYmZscDhkbHA3MGxtb2RtMHNmdmlocWxAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%234285F4&amp;showCalendars=0&amp;showPrint=0&amp;title=Egeria%20Calendar" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+
+* [Value of Egeria](October-2021) - October 2021
 * [Visualising a metadata eco system](september-2021) - September 2021 
 * [Building a governed data lake with Egeria](june-2020) - June 2020
 * [Building a Data Catalog with Egeria](april-2020) - April 2020

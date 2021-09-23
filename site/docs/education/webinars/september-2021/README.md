@@ -3,7 +3,9 @@
 
 # Visualising a Metadata Ecosystem
 
-**Date:** 13th Septmber 2021
+**Date:** 13th September 2021
+
+Presenter: David Radley
 
 The session is for people looking to
 understand the metadata across their ecosystem in terms of the

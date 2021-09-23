@@ -17,7 +17,8 @@ How these artifacts link together in an open metadata repository (data catalog).
 Finally we will demonstrate the ODPi's data privacy pack that provides documentation and open metadata definitions for a privacy program.
 
 The ODPi's data privacy pack is the first open source initiative for data privacy. It is being developed by a team of cross-industry, multi-vendor data privacy experts. Join the call to find out more and maybe join the team to build your skills and share your expertise.
-* Presentation [:material-microsoft-powerpoint:](./ODPi%20-%20Privacy%20Pack%20-%20Webinar%20-%2011th%20July%202018.pptx){ target=slides }"
+
+* Presentation [:material-microsoft-powerpoint:](./ODPi%20-%20Privacy%20Pack%20-%20Webinar%20-%2011th%20July%202018.pptx){ target=slides }
 * YouTube Video:
     <div class="video-wrapper">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/_SExbehT5nQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -21,7 +21,7 @@ Cohort membership is established dynamically. This is through the [cohort topic(
 
 ### First server
 
-To join an open metadata repository cohort, a server must integrate with the OMRS module. OMRS then manages the metadata exchange. When OMRS running inside the server is [configured to join a cohort](/egeria-docs/guides/admin) it first adds a [registration event](../metadata-events/#registry-events) to the cohort topic(s). This event identifies the server, its metadata repository (if any) and its capabilities.
+To join an open metadata repository cohort, a server must integrate with the OMRS module. OMRS then manages the metadata exchange. When OMRS running inside the server is [configured to join a cohort](/egeria-docs/guides/admin/guide) it first adds a [registration event](../metadata-events/#registry-events) to the cohort topic(s). This event identifies the server, its metadata repository (if any) and its capabilities.
 
 ![The first server to join the cohort issues a registration request and waits for others to join](repository-services-formation-of-a-cohort-1.png)
 
@@ -72,7 +72,7 @@ One of them, the [repository proxy](/egeria-docs/concepts/repository-proxy) prov
 A more bespoke integration involves:
 
 - Creating an [OMRS repository connector and optional event mapper connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh }
-- Designing how to configure the OMRS Services for your metadata repository. Typically, this is done by extending the existing administration services of the metadata repository, but Egeria also offers some pre-built [administration services](/egeria-docs/guides/admin) that can be used or modified.
+- Designing how to configure the OMRS Services for your metadata repository. Typically, this is done by extending the existing administration services of the metadata repository, but Egeria also offers some pre-built [administration services](/egeria-docs/guides/admin/guide) that can be used or modified.
 - Plugging the OMRS and any administration services into the metadata repository's security module so that requests to the server can be secured against unauthorized access.
 - Integrating the OMRS, administration and security capability into your product.
 

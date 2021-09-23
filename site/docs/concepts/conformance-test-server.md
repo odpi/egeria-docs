@@ -8,7 +8,7 @@ hide:
 
 # Conformance Test Server
 
-The *conformance test server* is an [OMAG Server](/egeria-docs/concepts/omag-server) that hosts the [Conformance Test Suite (CTS)](/egeria-docs/guides/cts).
+The *conformance test server* is an [OMAG Server](/egeria-docs/concepts/omag-server) that hosts the [Conformance Test Suite (CTS)](/egeria-docs/guides/cts/overview).
 
 ![Conformance test server hosting the conformance test suite](conformance-test-server.png)
 

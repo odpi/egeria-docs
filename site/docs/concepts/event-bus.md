@@ -21,7 +21,7 @@ Egeria's default event broker is [Apache Kafka :material-dock-window:](https://k
 
 ![The event bus in use by OMAG Servers and other technologies](event-bus-role.png)
 
-Details of open metadata topic connectors are needed in multiple places in a server's [configuration document](configuration-document.md). To simplify this configuration, the event bus config is added to the server's configuration document at the [start of the configuration process](/egeria-docs/guides/admin/configuring-an-omag-server). The event bus config establishes a set of defaults for the open metadata topic connectors. These defaults are used whenever open metadata topic connectors are configured.
+Details of open metadata topic connectors are needed in multiple places in a server's [configuration document](configuration-document.md). To simplify this configuration, the event bus config is added to the server's configuration document at the [start of the configuration process](/egeria-docs/guides/admin/servers). The event bus config establishes a set of defaults for the open metadata topic connectors. These defaults are used whenever open metadata topic connectors are configured.
 
 The subsystems using the event bus have a specialized connector that supports event exchange for a specific type of event. Since it is necessary to be able to swap the event broker implementation, these connectors embed an [open metadata topic connector](/egeria-docs/connectors/open-metadata-topic-connector) within their implementation.
 

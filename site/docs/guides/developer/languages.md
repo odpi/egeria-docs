@@ -43,6 +43,6 @@ Egeria uses Python in the [hands-on labs](/egeria-docs/getting-started/hands-on-
 
 Markdown is a simple tagging language that generates HTML webpages. We use it for documentation (this page is written in Markdown for example), in GitHub comments and in the [Jupyter Notebooks](/egeria-docs/guides/developer/tools/runtime/#jupyter-notebooks) that form the teaching material for the [hand-on labs](/egeria-docs/getting-started/hands-on-labs).
 
-GitHub provides [a useful summary for Markdown :material-dock-window:](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf){ target=gh } and our own [documentation guide](/egeria-docs/guides/documentation) provides Egeria-specific formatting and stylistic pointers, as well as further information on the system we use to translate such `.md` files into the website you are currently reading.
+GitHub provides [a useful summary for Markdown :material-dock-window:](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf){ target=gh } and our own [documentation guide](/egeria-docs/guides/documentation/guide) provides Egeria-specific formatting and stylistic pointers, as well as further information on the system we use to translate such `.md` files into the website you are currently reading.
 
 --8<-- "snippets/abbr.md"

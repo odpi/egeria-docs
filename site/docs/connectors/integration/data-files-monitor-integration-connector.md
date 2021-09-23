@@ -32,7 +32,7 @@ Specifically:
 
 This connector uses the [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator) running in the [integration daemon](/egeria-docs/concepts/integration-daemon).
 
-Following is its connection definition to use on the [administration commands that configure the Files Integrator OMIS](/egeria-docs/guides/admin/configuring-an-integration-daemon/#configure-the-integration-services):
+Following is its connection definition to use on the [administration commands that configure the Files Integrator OMIS](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services):
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="10 12-15"

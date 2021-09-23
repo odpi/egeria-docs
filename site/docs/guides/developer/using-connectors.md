@@ -3,7 +3,7 @@
 
 # Using Connectors
 
-[*Connectors*](/egeria-docs/guides/developer/#) can be created through the following clients:
+[*Connectors*](/egeria-docs/guides/developer/guide/#what-is-a-connector) can be created through the following clients:
 
 - [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer)
 - [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner)

@@ -61,7 +61,7 @@ XTDB itself handles write transactions and persistence guarantees via its APIs, 
 
 ## Configuration
 
-The following options are used to configure this connector, as part of the [*configure the local repository* step when configuring a metadata server](/egeria-docs/guides/admin/configuring-a-metadata-server/#configure-the-local-repository).
+The following options are used to configure this connector, as part of the [*configure the local repository* step when configuring a metadata server](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#configure-the-local-repository).
 
 ### Pluggable persistence
 
@@ -179,7 +179,7 @@ There are currently two configuration options for the connector itself:
 | Option | Description |
 |---|---|
 | `luceneRegexes` | Controls whether the connector will interpret unquoted regexes as Lucene-compatible (true) or not (false): in the latter case ensuring that we fallback to full Java regex checking (which will be significantly slower). |
-| `syncIndex` | Controls whether the connector will wait for the XTDB indexes to be updated before returning from write operations (true) or only that they are transactionally persisted (false). |
+| `syncIndex` | Controls whether the connector will wait for the XTDB indexes to be updated before returning from write operations (true) or only that they are only guaranteed to be persisted (false). |
 
 !!! example "Example configuration showing the default settings"
     ```json
@@ -196,6 +196,13 @@ There are currently two configuration options for the connector itself:
       }
     }
     ```
+
+!!! danger "Be careful with `syncIndex` set to false"
+    The `syncIndex` parameter should only be set to `false` for mass ingestion where you make your own guarantees that the same metadata instances are only created or updated once by that ingestion process. Afterwards, the configuration of the connector for that repository should have the `syncIndex` setting changed back to `true` for business-as-usual operation.
+
+    When set to false, all write operations are guaranteed but are **not** done atomically relative to other read operations. In particular, this means that certain operations that rely on first retrieving some metadata instance's state, changing it, and persisting that change *must* be done only once (up to you to guarantee when `syncIndex` is false) or in synchronous mode (`syncIndex` set to true). Otherwise, there is every possibility that the operation will retrieve a stale version of the metadata instance, update it, and persist that -- ultimately clobbering whatever asynchronous update may have been made in-between.
+
+    This applies to essentially all write operations: `classifyEntity`, `updateEntityClassification`, `declassifyEntity`, `save...ReferenceCopy`, `delete...`, `purge...`, `purge...ReferenceCopy`, `restore...`, `update...Status`, `update...Properties`, `undo...Update`, `reIdentify...`, `reType...`, and `reHome...`
 
 ## High availability
 

@@ -18,8 +18,9 @@ This session will also show how metadata instances can be explored at a low leve
 * Link to [event advertising](https://lfaidata.foundation/blog/2021/08/30/egeria-webinar-visualising-a-metadata-ecosystem/)
 
 * YouTube Video:
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/s-CCzS1Ojss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+  <div class="video-wrapper">
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/s-CCzS1Ojss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 [Link to video](https://youtu.be/s-CCzS1Ojss)
 
 ----

@@ -28,7 +28,7 @@ All participants in the Egeria community are bound by the project's [Code of Con
 
 As a member you are able to attend our meetings, just to listen, or to play an active part in the discussion. The online meetings are recorded to allow community members to catch up if they are not able to attend the live meeting. When you attend the community meetings specifically, your name will be recorded in the meeting minutes along with any remarks or suggestions you make. The agenda and minutes of our community meetings are publicly available on the [Egeria wiki :material-dock-window:](https://github.com/odpi/egeria/wiki){ target=gh }.
 
-A member may make contributions to the Egeria content by submitting a GitHub pull request on the appropriate Git repository. This will be reviewed and processed by the [Egeria maintainers](#maintainers). The process for making a contribution is described in the [Egeria Dojo](/egeria-docs/getting-started/dojo) education. Each contribution is signed by the contributor to confirm they agree to our [Developer Certificate of Origin (DCO)](/egeria-docs/guides/developer/guidelines/#sign-commits-to-accept-dco).
+A member may make contributions to the Egeria content by submitting a GitHub pull request on the appropriate Git repository. This will be reviewed and processed by the [Egeria maintainers](#maintainers). The process for making a contribution is described in the [Egeria Dojo](/egeria-docs/getting-started/dojo/introduction) education. Each contribution is signed by the contributor to confirm they agree to our [Developer Certificate of Origin (DCO)](/egeria-docs/guides/developer/guidelines/#sign-commits-to-accept-dco).
 
 Community members can progress to be Egeria [contributors](#contributors) and then Egeria [maintainers](#maintainers).
 
@@ -82,7 +82,7 @@ For example, the face-to-face meeting may be at a conference that requires you t
 
 ## Releases
 
-The Egeria team aim to create an official release of the open metadata and governance capability every month. This release will be available to include in products and other technology through [Maven's Central Repository :material-dock-window:](https://search.maven.org){ target=mc }, or through a download from the GitHub site. Details of the releases are maintained in the [release notes](/egeria-docs/release-notes).
+The Egeria team aim to create an official release of the open metadata and governance capability every month. This release will be available to include in products and other technology through [Maven's Central Repository :material-dock-window:](https://search.maven.org){ target=mc }, or through a download from the GitHub site. Details of the releases are maintained in the [release notes](/egeria-docs/release-notes/overview).
 
 In between official releases, the latest build is also available to developers in GitHub.
 

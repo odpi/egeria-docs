@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Documentation guide
+# Documentation Guide
 
 We strive to provide complete, concise and maintainable documentation for the project. To achieve these goals, all contributed documentation should adhere to the guidance provided in this *documentation guide*, split into the following sub-guides:
 
@@ -30,5 +30,8 @@ When contributing to the documentation, you can easily use this to test document
 
 !!! tip "Look for warnings"
     As part of running its generator, MkDocs will automatically warn you if it finds any broken links within your documentation. Pay close attention to these, as the PR merge mechanism for documentation will strictly enforce that no broken links are found in order to merge any changes into the main documentation.
+
+!!! warning "Special handling of index.md"
+    Be aware that the specific theme we use will treat every `index.md` as an index page for a section: these behave in special ways depending on the level of the navigation in which they appear. Unless you mean to create an overview of some section of the navigation, do **not** name your Markdown file `index.md`.
 
 --8<-- "snippets/abbr.md"

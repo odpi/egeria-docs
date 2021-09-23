@@ -28,6 +28,6 @@ can be found in the [open-metadata-archives :material-github:](https://github.co
 modules.
 
 Details for configuring a metadata server to load archives can be found in the
-[administration guide](/egeria-docs/guides/admin/configuring-a-metadata-server/#load-metadata).
+[administration guide](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#load-metadata).
 
 --8<-- "snippets/abbr.md"

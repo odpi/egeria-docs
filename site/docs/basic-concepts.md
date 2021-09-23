@@ -11,7 +11,7 @@ the [REST API :material-dock-window:](https://en.wikipedia.org/wiki/Representati
 style that piggy-backs on top of the HTTP protocol that powers the Internet. Egeria makes extensive use of REST APIs.
 
 ??? education "Further information"
-    Details of the different types of APIs provided by Egeria can be found in the [developer guide](/egeria-docs/guides/developer).
+    Details of the different types of APIs provided by Egeria can be found in the [developer guide](/egeria-docs/guides/developer/guide).
     In addition, it is possible to automatically catalog details of the APIs that your organization uses:
     
     - [Cataloguing API :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/api-integrator){ target=gh }

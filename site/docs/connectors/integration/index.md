@@ -45,8 +45,8 @@ The interface that all integration connectors must implement is defined by [`Int
 ??? education "Further information"
     - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) that defines the behavior of
       all connectors.
-    - [Configuring an integration daemon](/egeria-docs/guides/admin/configuring-an-integration-daemon) to
+    - [Configuring an integration daemon](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon) to
       understand how to set up an integration connector.
-    - [Developer guide](/egeria-docs/guides/developer) for more information on writing connectors.
+    - [Developer guide](/egeria-docs/guides/developer/guide) for more information on writing connectors.
 
 --8<-- "snippets/abbr.md"

@@ -67,7 +67,7 @@ Releases are published to [Maven Central :material-dock-window:](https://oss.son
 | [Github Release :material-github:](https://github.com/odpi/egeria/releases){ target=gh } | source code in `zip` and `tar.gz` formats |
 | `git` | `git checkout Vx.y` to get version as-shipped (each release is tagged at the point it is shipped) |
 
-[Release notes are available as part of the online documentation](/egeria-docs/release-notes).
+[Release notes are available as part of the online documentation](/egeria-docs/release-notes/overview).
 
 ### Release process
 
@@ -118,7 +118,7 @@ Releases are published to [Maven Central :material-dock-window:](https://oss.son
 
 ??? success "7. Create a release in GitHub"
     - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y`
-    - Fill in the release notes using a title of `Release x.y` and [copy the notes from the appropriate release notes](/egeria-docs/release-notes)
+    - Fill in the release notes using a title of `Release x.y` and [copy the notes from the appropriate release notes](/egeria-docs/release-notes/overview)
     - Artifacts will be available on Maven Central within around half a day.
     - Source archives will be added to the release on GitHub within an hour or so.
 

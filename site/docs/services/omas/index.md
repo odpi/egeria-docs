@@ -48,7 +48,7 @@ The access services are as follows:
 The OMAS's run in either a [metadata access point](/egeria-docs/concepts/metadata-access-point)
 or a [metadata server](/egeria-docs/concepts/metadata-server).
 They can be configured and activated individually or as a complete set.
-The [administration services](/egeria-docs/guides/admin) provide
+The [administration services](/egeria-docs/guides/admin/guide) provide
 the ability to configure, start and stop the access services.
 
 Each OMAS typically supports a REST API, a topic where it publishes notifications

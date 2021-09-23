@@ -15,7 +15,7 @@ The OMAG Server Platform provides a runtime process and platform for four broad 
 - **Administration services** - used to configure and manage the [OMAG Servers](omag-server.md) running inside the OMAG Server Platform.
 - **Open Metadata and Governance (OMAG) services** - used to work with metadata and govern the assets of an organization.
 
-The OMAG services are configured and activated in [OMAG Servers](omag-server.md) using the [administration services](/egeria-docs/guides/admin). The configuration operations of the admin services create [configuration documents](configuration-document.md), one for each OMAG Server. Inside a configuration document is the definition of which OMAG services to activate in the server. These include the [repository services](/egeria-docs/services/omrs) (any type of server), the [access services](/egeria-docs/services/omas) (for metadata access points and metadata servers), [governance services](/egeria-docs/services/omes) (for governance servers) and [view services](/egeria-docs/services/omvs) (for view servers).
+The OMAG services are configured and activated in [OMAG Servers](omag-server.md) using the [administration services](/egeria-docs/guides/admin/guide). The configuration operations of the admin services create [configuration documents](configuration-document.md), one for each OMAG Server. Inside a configuration document is the definition of which OMAG services to activate in the server. These include the [repository services](/egeria-docs/services/omrs) (any type of server), the [access services](/egeria-docs/services/omas) (for metadata access points and metadata servers), [governance services](/egeria-docs/services/omes) (for governance servers) and [view services](/egeria-docs/services/omvs) (for view servers).
 
 Once a configuration document is defined, the OMAG Server can be started and stopped multiple times by the admin services server instance operations.
 
@@ -53,7 +53,7 @@ In the following diagram, the configuration services create three configuration 
 
 ![Creating configuration documents for OMAG Servers](omag-server-platform-configure.svg)
 
-The [admin guide](/egeria-docs/guides/admin) provides detailed instructions on creating configuration documents for various configurations.
+The [admin guide](/egeria-docs/guides/admin/guide) provides detailed instructions on creating configuration documents for various configurations.
 
 Once a configuration document for an OMAG Server is used by the operational services initialize the requested services in the OMAG Server. The OMAG Server can be started in any OMAG Server Platform: it does not have to be the same OMAG Server Platform that created the configuration document.
 

@@ -1,12 +1,11 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Dojo day 1
+# Dojo Day 1
 
 ## Egeria introduction
 
-In this session, you will learn about the function and value of Egeria
-along with the key concepts and use cases it supports.
+In this session, you will learn about the function and value of Egeria along with the key concepts and use cases it supports.
 
 !!! beginner "Egeria introduction [:material-microsoft-powerpoint:](https://github.com/odpi/data-governance/raw/master/workshops/may-2020/egeria-dojo-day-1-1-introduction.pptx){ target=slides }"
     <div class="video-wrapper">
@@ -27,9 +26,7 @@ along with the key concepts and use cases it supports.
 
 ## Egeria project introduction
 
-In this session, you will learn about the contents of the Egeria project.
-It will also describe the software to download in preparation for
-the next session.
+In this session, you will learn about the contents of the Egeria project. It will also describe the software to download in preparation for the next session.
 
 !!! beginner "Egeria project introduction"
     <div class="video-wrapper">
@@ -38,25 +35,15 @@ the next session.
 
 ### GitHub repositories
 
-[GitHub](https://github.com) is a public service for managing files - particularly files associated
-with a software project. Many open source projects use GitHub and Egeria is no exception.
+[GitHub :material-dock-window:](https://github.com){ target=gh } is a public service for managing files - particularly files associated with a software project. Many open source projects use GitHub and Egeria is no exception.
 
-All of the content for the Egeria project is stored in git repositories.
-For example, these web pages you are reading as part of the dojo are
-managed in [Egeria's main git repository](https://github.com/odpi/egeria/tree/master/open-metadata-publication/website/docs/getting-started/dojo){ target=code }.
-
-Each directory in the repository has a README.md file written in [the Markdown standard](../../../developer-resources/tools/Markdown.md).
-You can either click through on GitHub or link to the [Content Organization](../../../Content-Organization.md)
-that lists the directories with descriptions.
+All content for the Egeria project is stored in git repositories. For example, these web pages you are reading as part of the dojo are managed in [Egeria's documentation git repository :material-github:](https://github.com/odpi/egeria-docs/tree/main/site/docs/getting-started/dojo){ target=gh }.
 
 ### Other resources
 
-The Egeria community love to collaborate on the work they do. Git and GitHub is
-an excellent way to exchange and manage files. In addition, the community
-runs public calls that anyone can join, as well as a number of Slack channels.
+The Egeria community love to collaborate on the work they do. Git and GitHub is an excellent way to exchange and manage files. In addition, the community runs public calls that anyone can join, as well as a number of Slack channels.
 
-Details of the different ways the community operates is described in our
-[Community Guide](../../../guides/community/).
+Details of the different ways the community operates is described in our [community guide](/egeria-docs/guides/community).
 
 ### Test yourself
 
@@ -69,8 +56,7 @@ Details of the different ways the community operates is described in our
 
 ## Running Egeria
 
-In this session, you will learn about the Open Metadata and Governance (OMAG) Server Platform that
-hosts many of the services provided by Egeria.
+In this session, you will learn about the Open Metadata and Governance (OMAG) Server Platform that hosts many of the services provided by Egeria.
 
 !!! intermediate "Running Egeria"
     <div class="video-wrapper">
@@ -87,8 +73,7 @@ Before we get started there are some steps to prepare your machine.
     - [Docker Desktop](todo.md)
     - [Postman](todo.md)
 
-Follow the links below to find out a little bit about these technologies and ensure the software
-is installed.
+Follow the links below to find out a little bit about these technologies and ensure the software is installed.
 
 - [Docker Desktop](../../../developer-resources/tools/Docker.md)
 - [Postman](../../../developer-resources/tools/Postman.md)

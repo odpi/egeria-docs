@@ -89,7 +89,7 @@ The archive loads in the following order:
 
     In addition, these articles may be of interest:
 
-    - [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/configuring-a-metadata-server/#configure-metadata-to-load-on-startup)
-    - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/admin/configuring-a-metadata-server/#add-to-a-running-server)
+    - [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#configure-metadata-to-load-on-startup)
+    - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#add-to-a-running-server)
 
 --8<-- "snippets/abbr.md"

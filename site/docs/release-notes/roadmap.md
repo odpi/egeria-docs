@@ -31,7 +31,7 @@ Provides educational resources for different personas and starting points.
 
 Egeria's education aims to broaden the knowledge of people who need to work with digital resources about metadata, governance practices and the use of Egeria. Since there are many types of professionals involved with different skill levels, there are different choices:
 
-- The [Egeria dojo](/egeria-docs/getting-started/dojo/) is a deep dive into the Egeria code and community. It is aimed at individuals who wish to become contributors.
+- The [Egeria dojo](/egeria-docs/getting-started/dojo/introduction) is a deep dive into the Egeria code and community. It is aimed at individuals who wish to become contributors.
 - The [hands-on labs](/egeria-docs/getting-started/hands-on-labs/) provide practical experiences in running the Egeria code and using the different services. It is based around the [Coco Pharmaceuticals :material-dock-window:](https://opengovernance.odpi.org/coco-pharmaceuticals/){ target=gov } use case and is organized by persona so you can target your learning to your interests.
 - The [guidance on governance :material-dock-window:](https://opengovernance.odpi.org){ target=gov } provides governance best practices and training using the same Coco Pharmaceuticals use cases as the hands-on labs. They aim to guide a team that is setting up or revising their governance program through common governance tasks. They link to the [Egeria code samples](../../../open-metadata-resources/open-metadata-samples) and hands-on labs to show how these best practices could be implemented using Egeria.
 - The **edX courses** are a new idea to provide a full curriculum and certification for governance professionals and architects. It is in the early phases of design.
@@ -45,7 +45,7 @@ Supports integration of popular technologies by installing and configuring Egeri
 - Ecosystem UIs: server and platform configuration, ecosystem monitoring, type explorer and repository explorer.
 - Utilities and converters: support for different standard formats to load industry standard definitions, models, glossaries, and other content packs built on industry standard definitions, models, glossaries and other content packs. Examples include JSON-LD, OWL/RDF, XML, ...
 - Pre-canned connectors to third party technologies: popular metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
-- [Conformance test suite](/egeria-docs/guides/cts): Supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
+- [Conformance test suite](/egeria-docs/guides/cts/overview): Supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
 
 ### Developer platform
 
@@ -55,7 +55,7 @@ Provides frameworks, APIs, and hosting platforms for building an integrated meta
 
 The developer platform contains the core Egeria implementation and provides support for integrating third party technology into the open metadata ecosystem and extending Egeria to run in different environments or to use different infrastructure services.
 
-Its use is described in the [developer's guide](/egeria-docs/guides/developer).
+Its use is described in the [developer's guide](/egeria-docs/guides/developer/guide).
 
 - Open Metadata and Governance (OMAG) registered services are dynamically loaded in the OMAG Server Platform. This means they can be added and removed as needed to create a customized platform. This may include registered services written by the Egeria community and supplied by third parties.
     - The [access services](/egeria-docs/services/omas) provide provide specialist APIs / events for different types of tools. They work with the pre-defined [open metadata types](/egeria-docs/types) and use the [repository services](/egeria-docs/services/omrs) to access metadata.
@@ -65,7 +65,7 @@ Its use is described in the [developer's guide](/egeria-docs/guides/developer).
 - The [open metadata types](/egeria-docs/types) provide common definitions for the different types of metadata needed by an organization. The open metadata type system is extendable; however, by providing a comprehensive starter set, and encouraging tools to use them, Egeria ensures metadata can be seamlessly shared amongst them.
 - The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) provides a multi-tenant runtime platform for [OMAG Servers](/egeria-docs/concepts/omag-server). Each OMAG Server hosts the connectors along with the Egeria services to integrate third party technology.
     - The [server chassis](../../../open-metadata-implementation/server-chassis) uses Spring Boot to provide the web server and REST API support for the platform.
-    - The [administration services](../../../open-metadata-implementation/admin-services) supports configuring and operating the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/egeria-docs/guides/admin)
+    - The [administration services](../../../open-metadata-implementation/admin-services) supports configuring and operating the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/egeria-docs/guides/admin/guide)
     - The [platform services](../../../open-metadata-implementation/platform-services) provide the means to query the OMAG Servers and services running on an OMAG Server Platform.
     - The [multi-tenancy management](../../../open-metadata-implementation/common-services/multi-tenant) module supports multiple OMAG Servers running on an OMAG Server Platform.
     - The [repository services](/egeria-docs/services/omrs) provide the basic ability to share metadata between metadata repositories. The metadata repositories are organized
@@ -97,7 +97,7 @@ Following is an overview of the current status of the functions in Egeria today:
 
 ![Status of functions found in each capability layer](../latest.svg)
 
-- Green means that there is function that is either [released or in technical preview](roadmap/content-status).
+- Green means that there is function that is either [released or in technical preview](content-status).
 - Orange means there is work in progress.
 - Red means it is planned but not started.
 
@@ -112,7 +112,7 @@ Today we have a robust [OMAG Server Platform](/egeria-docs/concepts/omag-server-
 
 ### History
 
-Through 2020, our focus shifted to the integration platform as we added [connector implementations](/egeria-docs/guides/developer/#what-is-a-connector) for popular third party technologies and standards (see [connector catalog](/egeria-docs/connectors/#catalog)) and built out the [ecosystem user interface (UI) :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=gh } that enables an organization to:
+Through 2020, our focus shifted to the integration platform as we added [connector implementations](/egeria-docs/guides/developer/guide/#what-is-a-connector) for popular third party technologies and standards (see [connector catalog](/egeria-docs/connectors/#catalog)) and built out the [ecosystem user interface (UI) :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=gh } that enables an organization to:
 
 - configure OMAG Servers on OMAG Server Platforms
 - visualize the open metadata types through the type explorer (TEX)

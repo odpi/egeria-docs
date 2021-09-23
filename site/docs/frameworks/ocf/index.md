@@ -48,7 +48,7 @@ An OCF connector provides four APIs:
 OCF connectors are not limited to representing assets as they are physically implemented. An OCF connector can represent a simplified logical (virtual) asset, such as a data set, that is designed for the needs of a specific application or tool. This type of connector delegates the requests it receives to one or more physical data resources. It is called a *virtual connector*.
 
 !!! education "Further information"
-    See the [developer guide](/egeria-docs/guides/developer) for information on writing connectors.
+    See the [developer guide](/egeria-docs/guides/developer/guide) for information on writing connectors.
 
 ### Connection
 
@@ -114,7 +114,7 @@ Connections can be created in the open metadata repositories through the followi
 
 #### Configuring connections
 
-The [administration guide](/egeria-docs/guides/admin) describes how to configure Egeria's OMAG Server Platforms and servers. Both the platform and the servers use connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies. This means that the configuration includes connection definitions for these connectors.
+The [administration guide](/egeria-docs/guides/admin/guide) describes how to configure Egeria's OMAG Server Platforms and servers. Both the platform and the servers use connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies. This means that the configuration includes connection definitions for these connectors.
 
 All of these interfaces have Java clients that enable you to set up the connection using the OCF connection bean. However, if you want to use the REST API directly, then you need to specify the connection in JSON.
 
@@ -374,7 +374,7 @@ Open metadata repositories are able to store information needed to use OCF conne
     - The [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer) embeds the OCF to provide client-side support for connectors.
     - The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) make extensive use of OCF connectors for accessing open metadata repository servers and other resources. These connectors are collectively called the [OMRS connectors](#connector).
     - Many of the [Open Metadata Governance Servers](/egeria-docs/concepts/governance-server) make use of OCF connectors to loosely-couple integration with a variety of underlying technologies.
-    - The [developer guide](/egeria-docs/guides/developer) provides more information on writing connectors for Egeria.
+    - The [developer guide](/egeria-docs/guides/developer/guide) provides more information on writing connectors for Egeria.
     - The [connector catalog](/egeria-docs/connectors) lists the pre-built connectors supplied by Egeria.
 
 --8<-- "snippets/abbr.md"

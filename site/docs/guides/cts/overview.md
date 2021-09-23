@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Conformance test suite
+# Conformance Test Suite Overview
 
 The open metadata conformance suite provides a testing framework to help the developers
 integrate a specific technology into the open metadata ecosystem.

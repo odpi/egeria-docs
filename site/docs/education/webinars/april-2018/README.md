@@ -15,5 +15,7 @@ The reference implementation has moved to the [ODPi Egeria project](https://eger
         <iframe src="https://www.youtube.com/watch?v=WVRmRqYvxjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
+[Link to video](https://www.youtube.com/watch?v=WVRmRqYvxjQ)
+
 ----
 Return to [Webinar list](..)

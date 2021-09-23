@@ -26,9 +26,18 @@ Egeria and Cloud Pak’s
 Egeria driving Enterprise API's
 Q&A
 
-* [Day 1 on YouTube](https://www.youtube.com/watch?v=DvmQSCjGNVY)
-* [Day 2 on YouTube](https://www.youtube.com/watch?v=uCK7BmgxuqY)
-* [Day 3 on YouTube](https://www.youtube.com/watch?v=jsq2dcB2IxQ)
+* YouTube Day 1 Video:
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/watch?v=DvmQSCjGNVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+* YouTube Day 2 Video:
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/watch?v=uCK7BmgxuqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+* YouTube Day 3 Video:
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/watch?v=jsq2dcB2IxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
 ----
 Return to [Webinar list](..)

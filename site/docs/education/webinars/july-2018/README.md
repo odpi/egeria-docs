@@ -18,7 +18,9 @@ Finally we will demonstrate the ODPi's data privacy pack that provides documenta
 
 The ODPi's data privacy pack is the first open source initiative for data privacy. It is being developed by a team of cross-industry, multi-vendor data privacy experts. Join the call to find out more and maybe join the team to build your skills and share your expertise.
 
-* Link to [recording on YouTube](https://www.youtube.com/watch?v=_SExbehT5nQ)
-
+* YouTube Video:
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/watch?v=_SExbehT5nQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 ----
 Return to [Webinar list](..)

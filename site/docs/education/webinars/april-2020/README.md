@@ -9,7 +9,9 @@ The **Building a data catalog with Egeria** webinar covers the different APIs an
 that support the creation and maintenance of a catalog of data assets.
 This catalog helps an organization find and use data and related assets effectively.
 
-* Link to [recording on YouTube](https://www.youtube.com/watch?v=FPhsnq3xEmo&t=8s)
-
+* YouTube Video:
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/watch?v=FPhsnq3xEmo&t=8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 ----
 Return to [Webinar list](..)

@@ -20,7 +20,7 @@ The ODPi's data privacy pack is the first open source initiative for data privac
 
 * YouTube Video:
     <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/watch?v=_SExbehT5nQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_SExbehT5nQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
 [Link to video](https://www.youtube.com/watch?v=_SExbehT5nQ)

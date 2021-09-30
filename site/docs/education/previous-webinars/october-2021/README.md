@@ -17,7 +17,7 @@ By the end of the session you should have awareness of the parts of Egeria at a 
 they have been implemented that way and the value that each piece brings.
 
 
-* Link to event advertising TBA
+* Link to [event advertising](https://lfaidata.foundation/blog/2021/09/30/the-value-egeria-brings-to-an-organization/)
 * Link to recording on YouTube TBA
 
 Presentation TBA

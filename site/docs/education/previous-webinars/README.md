@@ -12,8 +12,7 @@ along with links to the recordings.
 * [Visualising a metadata eco system](september-2021) - September 2021 
 * [Building a governed data lake with Egeria](june-2020) - June 2020
 * [Building a Data Catalog with Egeria](april-2020) - April 2020
-* [Egeria virtual metadata show](march-2020) - March 2020
-  * Three days of topics relating to Egeria from ING, IBM and SAS.
+* [Egeria virtual metadata show](march-2020) - March 2020 (Three days of topics relating to Egeria from ING, IBM and SAS).
 * [New Approaches to Managing Access to Sensitive Data](december-2019) - December 2019
 * [Managing data privacy](july-2018) - July 2018
 * [Metadata standards](april-2018) - April 2018

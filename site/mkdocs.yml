@@ -112,6 +112,14 @@ nav:
           - Testing Tutorial: getting-started/tutorials/testing.md
       - Webinars:
           - Previous Webinars: education/previous-webinars/
+            - Visualising a metadata eco system (September 2021): education/previous-webinars/september-2021
+            - Date Lake and Egeria (June 2020): education/previous-webinars/june-2020
+            - Building a Data Catalog (April 2020): education/previous-webinars/april-2020
+            - Metadata for Data Driven Organization (March 2020) : education/previous-webinars/march-2020
+            - Egeria and Palisade (December 2019) : education/previous-webinars/december-2019
+            - Privacy (July 2018): education/previous-webinars/july-2018
+            - Open Metadata Standards (April 2018): education/previous-webinars/april-2018
+            - Free Metadata (October 2017): education/previous-webinars/october-2017
           - Planned Webinars: education/planned-webinars/
   - Contributing:
       - Community Guide: guides/community.md

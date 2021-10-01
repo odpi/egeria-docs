@@ -135,7 +135,7 @@ There should be, at most, a *tiny* chance[^3] that two servers will generate the
 
 ## Conformance
 
-Adhering to these concepts and the principles by which they behave is the subject of *conformance*. Egeria provides an [automated testing suite to validate that a given repository or third party integration behaves according to these expectations](/egeria-docs/guides/cts), the successful completion of which is a necessary input to a tool being granted the use of an Egeria conformance mark.
+Adhering to these concepts and the principles by which they behave is the subject of *conformance*. Egeria provides an [automated testing suite to validate that a given repository or third party integration behaves according to these expectations](/egeria-docs/guides/cts/overview), the successful completion of which is a necessary input to a tool being granted the use of an Egeria conformance mark.
 
 [^1]: You may want to see the [cohort interactions walkthrough](/egeria-docs/services/omrs/cohort/#formation-of-a-cohort) for more details on how cohort participants interact.
 [^2]: You may want to see the [OMRS metamodel](/egeria-docs/types/metamodel) for more details on the granularity of metadata exchange.

@@ -37,7 +37,7 @@ When the server is running, the following command returns the configuration docu
 At the top of the configuration document are:
 
 - [Local server URL root](omag-server.md#platform-url-root), which defines the root of the network address for the [OMAG Server Platform](omag-server-platform.md) where the OMAG Server will run.
-- [Event bus config](/egeria-docs/guides/admin/configuring-a-metadata-access-point/#set-up-the-default-event-bus), which provides the configuration of the event bus (Apache Kafka or similar) where all the event topics that the server will use are located.
+- [Event bus config](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#set-up-the-default-event-bus), which provides the configuration of the event bus (Apache Kafka or similar) where all the event topics that the server will use are located.
 
 Both of these elements provide default values for other configuration elements.
 
@@ -47,13 +47,13 @@ If they are changed, their new values do not affect existing definitions in the 
 
 The basic properties of the OMAG Server are used in logging, events handing and security. They help to document the purpose of the server (which helps with problem determination) and enable performance improvements by allowing the server to ignore activity or metadata that is not relevant to its operation.
 
-Find more information on configuring each through the sub-sections of the [configuring an OMAG Server](/egeria-docs/guides/admin/configuring-an-omag-server) portion of the administration guide.
+Find more information on configuring each through the sub-sections of the [configuring an OMAG Server](/egeria-docs/guides/admin/servers) portion of the administration guide.
 
 ### Specific subsystem configurations
 
 Different types of servers can be configured with other specific subsystems, such as a local metadata repository, registering with a cohort, configuring access services or others.
 
-Since these vary depending on the type of OMAG Server, find more details in the sub-sections under the [configuring an OMAG Server](/egeria-docs/guides/admin/configuring-an-omag-server) portion of the administration guide.
+Since these vary depending on the type of OMAG Server, find more details in the sub-sections under the [configuring an OMAG Server](/egeria-docs/guides/admin/servers) portion of the administration guide.
 
 ### Audit trail
 
@@ -162,6 +162,6 @@ See [configuring the configuration document store](/egeria-docs/guides/admin/con
 
 !!! education "Further information"
     - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) defines open connectors and connections since many of the sections in the configuration document take connection objects for connectors.
-    - [Configuring an OMAG Server](/egeria-docs/guides/admin/configuring-an-omag-server) provides more detail on the process of creating a configuration document for various types of OMAG Servers.
+    - [Configuring an OMAG Server](/egeria-docs/guides/admin/servers) provides more detail on the process of creating a configuration document for various types of OMAG Servers.
 
 --8<-- "snippets/abbr.md"

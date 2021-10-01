@@ -56,7 +56,7 @@ The different types of OMAG Servers connect together as illustrated below. There
     The configuration for an OMAG Server is defined in a [configuration document](configuration-document.md).
     This configuration document is stored by a [configuration document store connector](../configuration-document/#storage).
 
-    - [Configuring an OMAG Server](/egeria-docs/guides/admin/configuring-an-omag-server.md)
+    - [Configuring an OMAG Server](/egeria-docs/guides/admin/servers)
     - [Start and stop an OMAG Server](/egeria-docs/guides/admin/operating-omag-server.md)
 
 --8<-- "snippets/abbr.md"

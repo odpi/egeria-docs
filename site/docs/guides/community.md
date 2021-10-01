@@ -38,7 +38,8 @@ The community tends to use the [mailing list :material-dock-window:](https://lis
 
 ### Other websites and resources
 
-- [Webinars :material-github:](https://github.com/odpi/data-governance/tree/master/webinars){ target=gh } - virtual events covering topics of interest.
+- [Previous Webinars :material-github:](../education/previous-webinars){ target=gh } - previous virtual events covering topics of interest.
+- [Planned Webinars :material-github:](../education/planned-webinars){ target=gh } - planned virtual events covering topics of interest.
 - [Workshops :material-github:](https://github.com/odpi/data-governance/tree/master/workshops){ target=gh } - face-to-face workshops promoting discussion and education on Egeria
 - [Presentations :material-github:](https://github.com/odpi/data-governance/tree/master/presentations){ target=gh } - presentations given at conferences and private gatherings
 

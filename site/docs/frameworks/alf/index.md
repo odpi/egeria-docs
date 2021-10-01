@@ -27,6 +27,6 @@ The audit log destination can be extended to allow routing to different destinat
 The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) provide an extension to the audit log destination that supports audit log store connectors. This means that an [OMAG Server](/egeria-docs/concepts/omag-server) can be configured to route audit log messages to different destinations.
 
 Details of the supported audit log store connectors and how to set them up are described in
-[configuring the audit log](/egeria-docs/guides/admin/configuring-a-metadata-access-point/#configure-the-audit-log).
+[configuring the audit log](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
 
 --8<-- "snippets/abbr.md"

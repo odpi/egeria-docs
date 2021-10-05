@@ -8,10 +8,10 @@ hide:
 
 # Data engine proxy
 
-The **data engine proxy** is a [governance server](governance-server.md)
+The data engine proxy is a [governance server](governance-server.md)
 that can capture metadata about data movement processes (such as ETL jobs)
 from a data engine.  This information results in new
-[process](/egeria-docs/types/0/0010-base-model) assets
+[Process](/egeria-docs/types/0/0010-base-model)
 being defined in open metadata linked to the data sources that it works with.
 This is valuable information for lineage.
 
@@ -21,6 +21,6 @@ in the [data-engine-proxy-connector :material-github:](https://github.com/odpi/e
 module.
 
 !!! education "Further information"
-    - [Setting up the data engine proxy :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/governance-servers/data-engine-proxy-services){ target=gh }
+    - [Setting up the data engine proxy](egeria-docs/guides/admin/configuring-a-data-engine-proxy-server.md)
 
 --8<-- "snippets/abbr.md"

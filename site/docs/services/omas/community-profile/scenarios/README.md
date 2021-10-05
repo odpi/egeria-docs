@@ -206,6 +206,4 @@ Community content can have feedback attached in the form of tags, reviews and li
 * [Community Profile OMAS Concepts](../concepts)
 * [Community Profile OMAS Design](../design)
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

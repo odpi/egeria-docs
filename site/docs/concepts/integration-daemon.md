@@ -5,7 +5,7 @@
 
 An *integration daemon* is an [OMAG Server](omag-server.md) that provides metadata exchange services between third party technology and the open metadata ecosystem.
 
-The integration daemon interacts with the open metadata ecosystem through [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) running in a [metadata access point](metadata-access-point.md) or [metadata server](metadata-server.md).
+The integration daemon interacts with the open metadata ecosystem through [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) running in a [metadata access point](/egeria-docs/concepts/metadata-accces-point) or [metadata server](/egeria-docs/concepts/metadata-server).
 
 ![Integration daemon sitting between a third party technology and a metadata access point](integration-daemon.png)
 
@@ -43,7 +43,7 @@ Thus, the integration services of the integration daemon enable metadata to flow
 
 *Integrated technology* describes technology that integrates with open metadata APIs to events "out of the box." Where an Egeria conformance test exists, this technology has a conformance mark.
 
-An integrated technology is able to interact directly with a [metadata access point](metadata-access-point.md) or [metadata server](metadata-server.md) by calling the open metadata services or consuming them directly:
+An integrated technology is able to interact directly with a [metadata access point](/egeria-docs/concepts/metadata-access-point) or [metadata server](/egeria-docs/concepts/metadata-server) by calling the open metadata services or consuming them directly:
 
 ![Integrated technology can call the open metadata services or consume the open metadata services directly](integrated-technology-pattern-implementation.png)
 

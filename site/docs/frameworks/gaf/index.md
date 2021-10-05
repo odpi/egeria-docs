@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/in-development.md"
+--8<-- "snippets/content-status/tech-preview.md"
 
 # Governance Action Framework (GAF)
   
@@ -89,13 +89,13 @@ The *watchdog governance service* monitors changes in the metadata and initiates
 
 One example of a watchdog governance service is to monitor for new [assets](/egeria-docs/concepts/asset). Another example is to monitor the addition of open discovery reports and take action on their content.
 
-![Governance context for the watchdog governance service](watchdog-governance-service-context.png)
+![Governance context for the watchdog governance service](watchdog-governance-service-context.svg)
 
 ### Verification governance service
 
 *Verification governance services* test the properties of specific open metadata elements to ensure they are set up correctly and do not indicate a situation where governance activity is required. The results returned from the verification governance service can be used to trigger other governance services as part of a [governance action process](#governance-action-process).
 
-![Governance context for the verification governance service](verification-governance-service-context.png)
+![Governance context for the verification governance service](verification-governance-service-context.svg)
 
 The verification services may also publish [guards](#guard) to report on any errors it finds.
 
@@ -105,19 +105,19 @@ For example, it may check that a new asset has an owner, is set up with zones an
 
 *Triage governance services* run triage rules to determine how to manage a situation. This could be to initiate an external workflow, wait for manual decision or initiate a remediation request through either an external workflow or by creating a [`ToDo`](/egeria-docs/types/1/0137-actions/#todo) for a specific person.
 
-![Governance context for the triage governance service](triage-governance-service-context.png)
+![Governance context for the triage governance service](triage-governance-service-context.svg)
 
 ### Remediation governance service
 
 The *remediation governance services* perform updates to metadata. Examples of remediation services are duplicate linking and consolidation.
 
-![Governance context for the remediation governance service](remediation-governance-service-context.png)
+![Governance context for the remediation governance service](remediation-governance-service-context.svg)
 
 ### Provisioning governance service
 
 A *provisioning governance service* invokes a provisioning service whenever a provisioning request is made. Typically, the provisioning service is an external service. It may also create lineage metadata to describe the work of the provisioning engine.
 
-![Governance context for the provisioning governance service](provisioning-governance-service-context.png)
+![Governance context for the provisioning governance service](provisioning-governance-service-context.svg)
 
 ## Implementing governance action services
 
@@ -125,7 +125,7 @@ Governance action services are [open connectors](/egeria-docs/frameworks/ocf) th
 
 A governance action service is passed a *context* as it is started. This provides access to the request type and associated parameters (name-value pairs) used to invoke the governance action service, along with a client to access open metadata through the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine).
 
-![Structure of the governance context](governance-context.png)
+![Structure of the governance context](governance-context.svg)
 
 This context is then specialized for each type of governance action service. Details of the specific context for each service can be found in the links above to the various governance action service types.
 
@@ -133,7 +133,7 @@ This context is then specialized for each type of governance action service. Det
 
 A collection of related governance action services are grouped into governance action engines for deployment. The governance action engine maps *governance action request types* to the governance action service that should be invoked along with.
 
-![Structure of a governance engine definition](governance-action-engine-definitions.png)
+![Structure of a governance engine definition](governance-action-engine-definitions.svg)
 
 These definitions are created through the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) and are stored in the open metadata repositories.
 
@@ -155,7 +155,7 @@ The [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) provi
 
 A *governance pack* is a collection of pre-defined governance engines and services definitions plus governance service implementations.
 
-![Governance pack](governance-pack.png)
+![Governance pack](governance-pack.svg)
 
 A team can use the governance pack to distribute the governance engine function to different metadata ecosystems.
 

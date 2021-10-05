@@ -21,7 +21,7 @@ Each presentation server tenant is designed to support an organization.
 These may be independent organizations or divisions/departments within an organization.  
 
 The tenant is configured with the appropriate view server to use, which in turn routes requests
-to its [governance servers](governance-server.md) and [metadata servers](metadata-server.md).
+to its [governance servers](/egeria-docs/concepts/governance-server) and [metadata servers](/egeria-docs/concepts/metadata-server).
 Therefore, each tenant sees a different collection of metadata and operates in isolation to the other tenants.
 
 !!! education "Further information"

@@ -14,9 +14,4 @@ The concepts introduced by the Governance Engine OMAS are (in alphabetical order
 * [Incident Report](incident-report.md)
 
 
-----
-* Return to [module overview](../..)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

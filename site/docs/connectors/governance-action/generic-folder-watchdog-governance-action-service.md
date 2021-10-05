@@ -9,8 +9,13 @@ hide:
 # Generic Folder Watchdog Governance Action Service
 
 ??? info "Connector details"
-    A [watchdog governance action service](/egeria-docs/frameworks/gaf/#watchdog-governance-service), hosted by the [Governance Action OMES](/egeria-docs/services/omes/governance-action), running on an [engine host](/egeria-docs/concepts/engine-host).
-
+    - Connector Category: [Watchdog Governance Action Service](/egeria-docs/frameworks/gaf/#watchdog-governance-service)
+    - Hosting Service: [Governance Action OMES](/egeria-docs/services/omes/governance-action)
+    - Hosting Server: [Engine Host](/egeria-docs/concepts/engine-host)
+    - Source Module: [governance-action-connectors :material-github:](../../../open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh }
+    - Jar File Name: `governance-action-connectors.jar`
+    - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.watchdog.GenericFolderWatchdogGovernanceActionProvider`
+ 
     - Source: [GenericFolderWatchdogGovernanceActionProvider :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/watchdog/GenericFolderWatchdogGovernanceActionProvider.java){ target=gh }
     - Connector archive: `governance-action-connectors.jar`
 

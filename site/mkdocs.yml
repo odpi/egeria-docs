@@ -59,34 +59,35 @@ nav:
           - User Feedback: features/user-feedback/index.md
       - Integrate:
           - Developer Guide: guides/developer/guide.md
-          - Connector Catalog: connectors/index.md
-                  - Governance Actions:
-                      - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
-                      - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
-                      - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
-                      - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-                  - Integration:
-                      - Integration Connectors: connectors/integration/index.md
-                      - File Connectors:
-                          - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
-                          - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
-                      - Topic Connectors:
-                          - Kafka Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
-                      - API Connectors:
-                            - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
-                  - Repository:
-                      - Pluggable Repositories:
-                          - XTDB:
-                              - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                              - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                              - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                          - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/index.md
-                          - In-memory OMRS Repository Connector: connectors/repository/in-memory/index.md
-                          - Read-only OMRS Repository Connector: connectors/repository/read-only/index.md
-                      - Repository Adapters:
-                          - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/index.md
-                          - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
-                          - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/index.md
+          - Connector Catalog:
+              - Connector Overview: connectors/index.md
+              - Governance Actions:
+                  - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
+                  - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
+                  - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
+                  - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+              - Integration:
+                  - Integration Connectors: connectors/integration/index.md
+                  - File Connectors:
+                      - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
+                      - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
+                  - Topic Connectors:
+                      - Kafka Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
+                  - API Connectors:
+                        - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
+              - Repository:
+                  - Pluggable Repositories:
+                      - XTDB:
+                          - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                          - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                          - XTDB Connector Performance: connectors/repository/xtdb/performance.md
+                      - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/index.md
+                      - In-memory OMRS Repository Connector: connectors/repository/in-memory/index.md
+                      - Read-only OMRS Repository Connector: connectors/repository/read-only/index.md
+                  - Repository Adapters:
+                      - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/index.md
+                      - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
+                      - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/index.md
   - Learning:
       - Dojo:
           - Dojo Introduction: getting-started/dojo/introduction.md

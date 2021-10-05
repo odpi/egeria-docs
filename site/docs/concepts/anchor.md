@@ -8,17 +8,17 @@ hide:
 
 # Anchor
 
-[Anchors](/egeria-docs/types/0/0010-base-model/#anchors) are [Referenceable](referenceable.md) metadata entities that
-group other entities together.
-They act like containers. This means, for example, if the anchor entity is deleted then
+An *anchor* is a [Referenceable](referenceable.md) metadata entity that
+groups other entities together as if they were logically a part of the anchor.
+This means, for example, if the anchor entity is deleted then
 the entities anchored to this entity are also deleted.
 
 The value of establishing this grouping is to ensure that entities that have little meaning without their
 anchor entity are cleaned up properly and are not left to uselessly clutter the repository.
 
 !!! example "Example: personal messages and profiles"
-    For example, if a [personal message](../../community-profile/docs/concepts/personal-message.md) is attached to
-    a [personal profile](../../community-profile/docs/concepts/personal-profile.md) then that personal profile is its anchor.
+    For example, if a [personal message](personal-message.md) is attached to
+    a [personal profile](personal-profile.md) then that personal profile is its anchor.
     If the personal profile is deleted then the personal message is deleted too.
 
 Anchored entities are also bound by the visibility and security restrictions of their anchor. 
@@ -27,7 +27,7 @@ Anchored entities are also bound by the visibility and security restrictions of 
     For example, [Asset](asset.md) visibility is controlled by [governance zones](governance-zones).
     An Asset is only visible through a service if it is a member of that service's **supportedZones**.  Similarly,
     authorization to perform specific operations on an Asset is granted by the
-    [Open Metadata Security Services](../../../common-services/metadata-security).
+    [Open Metadata Security Services](egeria-docs/features/metadata-security).
     When a [SchemaType](/egeria-docs/types/5/0501-schema-elements/#schematype) is attached to an Asset, it is anchored to that Asset.
     Subsequent requests to read or update the SchemaType will result in visibility
     and authorization checks for the requesting user being made with respect to its Asset anchor.
@@ -42,23 +42,7 @@ existence and may be linked to many anchors, without obligation.
     When the personal profile is deleted, the assets are not effected - except that they lose
     their relationship to the personal profile.
 
-## LatestChanges
-
-The [LatestChange](/egeria-docs/types/0/0011-managing-referenceables/#latestchange) classification is attached to each anchor Referenceable.
-It is used to record the latest change to this anchor or any of the entities anchored to it.
-
-!!! example "Example: SchemaElements and Comments"
-    So for example, if a hierarchy of SchemaElements,
-    or a hierarchy of Comments (all Referenceables) were anchored to an Asset
-    (also a Referenceable), then the LatestChange classification goes on the
-    Asset and records changes to any of these entities.
-    This includes changing property values, attaching or detaching entities through relationships
-    as well as any changes to their classifications.
-
-Maintaining LatestChanges on Asset means that it is
-easier to monitor for changes affecting the Asset and any of its anchored entities.
-However, it also means that it must be easy to locate the Asset
-from any of the anchored entities when they change, even though they may not be directly connected.
+# Anchors classification
 
 The [Anchors](/egeria-docs/types/0/0010-base-model/#anchors) classification makes it easier to find the anchor entity.
 It is attached to any entity anchored to a Referenceable.
@@ -116,7 +100,7 @@ many Referenceables over its lifetime.
     ![Examples of other types of entities that are linked to an Asset but not necessarily anchored there](anchors-classifications-on-attached-objects.png#pagewidth)
 
 !!! education "Further information"
-    - [Generic Handlers](../../../common-services/generic-handlers) provide support for the
+    - [Anchor Management](egeria-docs/feaatures/anchor-management) provide support for the
       Anchors and LatestChange classifications.
 
 --8<-- "snippets/abbr.md"

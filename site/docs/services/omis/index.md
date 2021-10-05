@@ -1,0 +1,45 @@
+---
+hide:
+- toc
+---
+
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- Copyright Contributors to the Egeria project. -->
+
+# Open Metadata Integration Services (OMISs)
+
+The integration services run in an [Integration Daemon](/egeria-docs/concepts/integration-daemon) OMAG server.  Each type of integration service focuses on metadata exchange with a particular type of third party technology.
+
+![Figure 1](/egeria-docs/services/servers/integration-daemon/integration-daemon-in-action.svg)
+> **Figure 1:** The integration daemon manages the automatic exchange of open metadata between third party technologies and Metadata Access Points or Metadata Servers that
+are sharing this metadata across the Open Metadata Repository Cohorts that they are connected to
+
+Each integration service provides a specialist API for the [integration connectors](../governance-servers/integration-daemon-services/docs/integration-connector.md) that it manages along with a context manager
+implementation that is used to set up the integration
+connectors inside the integration daemon.
+
+![Figure 2](/egeria-docs/services/servers/integration-daemon/inside-integration-daemon.svg)
+> **Figure 2:** The integration services running in the integration daemon manage the integration connectors and supply them with a context that gives them access to the Egeria services they need.
+
+The integration services available today are:
+
+* [API Integrator](api-integrator) - provides cataloguing for APIs.
+* [Analytics Integrator](analytics-integrator) - provides cataloguing for Analytics tools.
+* [Archive Integrator](archive-integrator) - provides dynamic maintenance for open metadata archives such as content packs and metadata exports.
+* [Catalog Integrator](catalog-integrator) - provides a two-way synchronization for data catalogs.
+* [Database Integrator](database-integrator) - provides metadata extraction from relational databases.
+* [Display Integrator](display-integrator) - provides metadata extraction from systems that provide user displays and forms to capture new data values.
+* [Files Integrator](files-integrator) - collects metadata about files stored in a filesystem or file manager.
+* [Infrastructure Integrator](infrastructure-integrator) - supports the extraction of metadata from IT infrastructure artifacts as well as the use of metadata to maintain IT infrastructure artifacts.
+* [Lineage Integrator](lineage-integrator) - collects metadata about processes, their internal logic and the data assets they work with.
+* [Organization Integrator](organization-integrator) - imports details of an organization's structure - such as teams and departments.
+* [Security Integrator](security-integrator) - distributes security properties to access control enforcement points.
+* [Stewardship Integrator](stewardship-integrator) - exchanges requests for stewardship action (and results) with a human task manager.
+* [Topic Integrator](topic-integrator) - provides cataloguing of topics and event schema for event brokers.
+
+More information about the operation of the integration daemon and the integration services within,
+along with details of how to set up these integration services are
+located in the [Administration Guide](/egeria-docs/concepts/integration-daemon).
+
+
+--8<-- "snippets/abbr.md"

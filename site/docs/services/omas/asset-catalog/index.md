@@ -53,7 +53,7 @@ At this step, the specific relationships are traverse for getting the connection
 This call is using the asset global identifier and the asset type. 
 
 
-![Figure 1: Search](docs/egeria-asset-search.png)
+![Figure 1: Search](egeria-asset-search.png)
 > Figure 1:Integration of search engine
 
 ###Other Services

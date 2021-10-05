@@ -8,13 +8,17 @@ hide:
 
 # Generic Element Watchdog Governance Action Service
 
-??? info "Connector details"
-    A [watchdog governance action service](/egeria-docs/frameworks/gaf/#watchdog-governance-service), hosted by the [Governance Action OMES](/egeria-docs/services/omes/governance-action), running on an [engine host](/egeria-docs/concepts/engine-host).
+??? info "Connector summary"
 
-    - Source: [GenericElementWatchdogGovernanceActionProvider :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/watchdog/GenericElementWatchdogGovernanceActionProvider.java){ target=gh }
-    - Connector archive: `governance-action-connectors.jar`
+    - Connector Category: [Watchdog Governance Action Service](/egeria-docs/frameworks/gaf/#watchdog-governance-service)
+    - Hosting Service: [Governance Action OMES](/egeria-docs/services/omes/governance-action)
+    - Hosting Server: [Engine Host](/egeria-docs/concepts/engine-host)
+    - Source Module: [governance-action-connectors :material-github:](../../../open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh }
+    - Jar File Name: `governance-action-connectors.jar`
+    - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.watchdog/GenericElementWatchdogGovernanceActionProvider.java`
+ 
 
-The *generic element watchdog* governance action service detects changes to requested elements and initiates a governance action process when they occur. It has two modes of operation: 
+The *Generic Element Watchdog* governance action service detects changes to requested elements and initiates a governance action process when they occur. It has two modes of operation: 
 
 - listening for a single event and then terminating when it occurs, or
 - continuously listening for multiple events.
@@ -53,13 +57,16 @@ The rest of the properties are the governance action processes to call for speci
 !!! example "Connection configuration"
     ```json linenums="1"
     {
-      "connection": { 
+      "connection":
+      { 
         "class": "Connection",
-        "connectorType": {
+        "connectorType": 
+        {
           "class": "ConnectorType",
           "connectorProviderClassName": "org.odpi.openmetadata.adapters.connectors.governanceactions.watchdog.GenericElementWatchdogGovernanceActionProvider"           
         },
-        "configurationProperties": {
+        "configurationProperties": 
+        {
           "interestingTypeName": "{{typeName}}",
           "instanceToMonitor": "{{guid}}",
           "newElementProcessName": "{{processQualifiedName}}",

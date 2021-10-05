@@ -29,7 +29,7 @@ The engine services are:
     - **Remediation governance service** - Makes updates to the open metadata or the digital landscape. An example of a remediation governance service could be to link or consolidate metadata elements with the same qualified name. Another remediation governance service may move assets between zones when a particular date is reached.
     - **Provisioning governance service** - Invokes a provisioning service whenever a provisioning request is made. Typically, the provisioning service is an external service. It may also create lineage metadata to describe the work of the provisioning engine.
 
-An engine service is paired with a specific [access service](/egeria-docs/services/omas) running in either a [metadata access point](metadata-access-point.md) or a [metadata server](metadata-server.md). The specific access services are:
+An engine service is paired with a specific [access service](/egeria-docs/services/omas) running in either a [metadata access point](/egeria-docs/concepts/metadata-access-point) or a [metadata server](/egeria-docs/concepts//egeria-docs/concepts/metadata-server). The specific access services are:
 
 - [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine) for Asset Analysis OMES.
 - [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) for Governance Action OMES.

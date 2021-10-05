@@ -19,8 +19,9 @@ they have been implemented that way and the value that each piece brings.
 
 * Link to [event advertising](https://lfaidata.foundation/blog/2021/09/30/the-value-egeria-brings-to-an-organization/)
 * Link to recording on YouTube TBA
-
-Presentation TBA
-
+* Presentation 
+  <div class="video-wrapper">
+  <iframe src="./Egeria%20Webinar,%20The%20Value%20of%20Egeria,%204th%20October%202021.pdf"></iframe>
+  </div> 
 ----
 Return to [Webinar list](..)

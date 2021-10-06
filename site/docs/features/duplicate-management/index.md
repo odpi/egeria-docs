@@ -79,17 +79,17 @@ There is a watchdog governance action that is monitoring for new assets. It init
 
 ## Duplicate management styles
 
-Egeria has two styles of duplicate management that can be actioned automatically or by a steward.  They are peer linking and consolidation.  The open metadata types used in both styles are defined in model [0465 Duplicate Management](/egeria-docs/types/4/0465-Duplicate-Management).
+Egeria has two styles of duplicate management that can be actioned automatically or by a steward.  They are peer linking and consolidation.  The open metadata types used in both styles are defined in model [0465 Duplicate Management](/egeria-docs/types/4/0465-Duplicate-Processing).
 
 ### Peer linking
 
-When duplicate entities are first detected, they are linked together by the [PeerDuplicateLink](/egeria-docs/types/4/0465-Duplicate-Management#PeerDuplicateLink) relationship.  This relationship includes properties that indicate how confident the detecting process is that the entities are duplicates.  No change occurs in the retrieval of these instances at this point.
+When duplicate entities are first detected, they are linked together by the [PeerDuplicateLink](/egeria-docs/types/4/0465-Duplicate-Processing#PeerDuplicateLink) relationship.  This relationship includes properties that indicate how confident the detecting process is that the entities are duplicates.  No change occurs in the retrieval of these instances at this point.
 
-If a steward or automated process confirms the duplicates are correctly identified, [KnownDuplicate](/egeria-docs/types/4/0465-Duplicate-Management#knownDuplicate) classifications added to the entities tell the metadata retrieval functions to [automatically combine the content of the duplicates](#survivorship-rules) when any of them is requested.  This is peer linking.
+If a steward or automated process confirms the duplicates are correctly identified, [KnownDuplicate](/egeria-docs/types/4/0465-Duplicate-Processing#knownDuplicate) classifications added to the entities tell the metadata retrieval functions to [automatically combine the content of the duplicates](#survivorship-rules) when any of them is requested.  This is peer linking.
 
 ### Consolidation
 
-Consolidation is the process where the combined results of the duplicates is pre-calculated, stored as an entity and linked to the duplicate entities using the [ConsolidatedDuplicateLink](/egeria-docs/types/4/0465-Duplicate-Management#consolidatedduplicate-and-consolidatedduplicatelink) relationship.  The assessment of confidence of the deduplication is stored in the [ConsolidatedDuplicate](/egeria-docs/types/4/0465-Duplicate-Management#consolidatedduplicate-and-consolidatedduplicatelink) classification on the instance that contains the combined results.
+Consolidation is the process where the combined results of the duplicates is pre-calculated, stored as an entity and linked to the duplicate entities using the [ConsolidatedDuplicateLink](/egeria-docs/types/4/0465-Duplicate-Processing#consolidatedduplicate-and-consolidatedduplicatelink) relationship.  The assessment of confidence of the deduplication is stored in the [ConsolidatedDuplicate](/egeria-docs/types/4/0465-Duplicate-Processing#consolidatedduplicate-and-consolidatedduplicatelink) classification on the instance that contains the combined results.
 
 ### Metadata retrieval of duplicates
 

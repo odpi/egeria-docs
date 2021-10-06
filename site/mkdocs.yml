@@ -38,10 +38,11 @@ nav:
               - Configure Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
           - Egeria in Kubernetes: guides/admin/kubernetes/intro.md
       - Features:
-          - Anchor Management: features/anchor-management/index.md
-          - Cohort Operation: features/cohort/index.md
-          - Discovery and Stewardship: features/discovery-and-stewardship/index.md
-          - Duplicate Management: features/duplicate-management/index.md
+          - Overview: features/overview.md
+          - Anchor Management: features/anchor-management
+          - Cohort Operation: features/cohort-operation
+          - Discovery and Stewardship: features/discovery-and-stewardship
+          - Duplicate Management: features/duplicate-management
           - Effectivity Dates: features/effectivity-dates/index.md
           - External Identifiers: features/external-identifiers/index.md
           - External References: features/external-references/index.md
@@ -352,7 +353,7 @@ nav:
                     - Open Metadata Repository Services: services/omrs/index.md
                     - Cohorts: services/omrs/cohort.md
                     - Metadata Repositories: services/omrs/metadata-repositories.md
-                    - Metadata Events: services/omrs/metadata-events.md
+                    - Metadata Events: concepts/cohort-events.md
               - Common Services:
                   - Common Services: services/common/index.md
                   - FFDC: services/common/ffdc-services.md
@@ -413,6 +414,7 @@ nav:
               - Asset: concepts/asset.md
               - Asset Log Message: concepts/asset-log-message.md
               - Audit Log: concepts/audit-log.md
+              - Cohort Events: concepts/cohort-events.md
               - Cohort Member: concepts/cohort-member.md
               - Collection: concepts/collection.md
               - Comment: concepts/comment.md

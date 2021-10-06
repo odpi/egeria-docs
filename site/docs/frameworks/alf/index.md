@@ -12,7 +12,7 @@ hide:
 
 The *audit log framework (ALF)* provides interface definitions and classes to enable connectors to support natural language enabled diagnostics such as exception messages and audit log messages.
 
-The audit log framework provides the ability to route [audit log records](egeria-docs/concepts/audit-log.md) to multiple destinations where they can be stored or processed automatically. This second option is particularly important in today's world of continuous operations.
+The audit log framework provides the ability to route [audit log records](/egeria-docs/concepts/audit-log) to multiple destinations where they can be stored or processed automatically. This second option is particularly important in today's world of continuous operations.
 
 Figure 1 shows the main parts of the framework.
 
@@ -23,7 +23,7 @@ When processing activity wishes to log a message to the audit log, it selects a 
 
 The message definition is passed to the audit log where it calls the message formatter, builds a log record and passes it on to the audit destination.
 
-The [audit log destination](egeria-docs/concepts/audit-log.md) can be extended to allow routing to different destinations for review and processing.
+The [audit log destination](/egeria-docs/concepts/audit-log.md) can be extended to allow routing to different destinations for review and processing.
 
 ## Usage
 

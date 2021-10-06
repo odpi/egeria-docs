@@ -75,7 +75,7 @@ that the server is connected to and makes them available to each local
 
 ## Event types
 
-![OMRS event format (version 1)](event-format.png)
+![OMRS event format (version 1)](../services/omrs/event-format.png)
 
 Every event has a:
 
@@ -104,7 +104,7 @@ Other members may pick up the error and act on it as well.
 Registry events are used by metadata servers to register with an
 [open metadata cohort](../cohort).
 
-![Registry events](registry-event-formats.png)
+![Registry events](../services/omrs/registry-event-formats.png)
 
 ### TypeDef events
 
@@ -114,7 +114,7 @@ to exchange information about the
 [open metadata types](/egeria-docs/types)
 they support.
 
-![TypeDef events](typedef-event-formats.png)
+![TypeDef events](../services/omrs/typedef-event-formats.png)
 
 ### Instance events
 
@@ -122,6 +122,6 @@ Instance events are used by members of an
 [open metadata cohort](../cohort)
 to exchange information about changes to metadata instances.
 
-![Instance events](instance-event-formats.png)
+![Instance events](../services/omrs/instance-event-formats.png)
 
 --8<-- "snippets/abbr.md"

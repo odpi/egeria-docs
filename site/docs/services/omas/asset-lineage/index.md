@@ -26,7 +26,7 @@ Most of the interaction with the Asset Lineage OMAS will be driven by the extern
 
 To understand how to configure:
 
-* [Configuring the Asset Lineage OMAS](egeria-docs/guide/admin/configuring-an-open-lineage-server.md)
+* [Configuring the Asset Lineage OMAS](/egeria-docs/guide/admin/configuring-an-open-lineage-server.md)
 
 
 --8<-- "snippets/abbr.md"

@@ -17,17 +17,17 @@ The role of the OMRS is to optimize access to metadata across the cohort by usin
 
 ## Formation of a cohort
 
-Cohort membership is established dynamically. This is through the [cohort topic(s)](../metadata-events/#event-topics).
+Cohort membership is established dynamically. This is through the [cohort topic(s)](/egeria-docs/concepts/cohort-events/#event-topics).
 
 ### First server
 
-To join an open metadata repository cohort, a server must integrate with the OMRS module. OMRS then manages the metadata exchange. When OMRS running inside the server is [configured to join a cohort](/egeria-docs/guides/admin/guide) it first adds a [registration event](../metadata-events/#registry-events) to the cohort topic(s). This event identifies the server, its metadata repository (if any) and its capabilities.
+To join an open metadata repository cohort, a server must integrate with the OMRS module. OMRS then manages the metadata exchange. When OMRS running inside the server is [configured to join a cohort](/egeria-docs/guides/admin/guide) it first adds a [registration event](/egeria-docs/concepts/cohort-events/#registry-events) to the cohort topic(s). This event identifies the server, its metadata repository (if any) and its capabilities.
 
 ![The first server to join the cohort issues a registration request and waits for others to join](repository-services-formation-of-a-cohort-1.png)
 
 ### Subsequent servers
 
-When another server joins the cohort, it also adds its registration event to the cohort topic(s) and begins to receive the registration events from other members. The other members respond with [re-registration events](../metadata-events/#registry-events) to ensure the new member has the latest information about the originator's capabilities. The exchange of registration information causes all members to verify that they have the latest information about their peers. This is maintained in their own [cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector) so that they can reconfigure themselves on restart without needing the other members to resend their registration information.
+When another server joins the cohort, it also adds its registration event to the cohort topic(s) and begins to receive the registration events from other members. The other members respond with [re-registration events](/egeria-docs/concepts/cohort-events/#registry-events) to ensure the new member has the latest information about the originator's capabilities. The exchange of registration information causes all members to verify that they have the latest information about their peers. This is maintained in their own [cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector) so that they can reconfigure themselves on restart without needing the other members to resend their registration information.
 
 ![When another server joins the cohort they exchange registration information](repository-services-formation-of-a-cohort-2.png)
 
@@ -46,7 +46,7 @@ The registration information includes the URL Root and server name of the member
 
 ### Metadata exchange
 
-Once the cohort membership is established, the server begins publishing information using [instance events](../metadata-events/#instance-events) about changes to the [home metadata instances](../metadata-repositories/#home-metadata-repositories) in their repository. These events can be used by other members to maintain a cache of reference copies of this metadata to improve availability of the metadata and retrieval performance. Updates to this metadata will, however, be automatically routed to the home repository by the enterprise repository services:
+Once the cohort membership is established, the server begins publishing information using [instance events](/egeria-docs/concepts/cohort-events/#instance-events) about changes to the [home metadata instances](../metadata-repositories/#home-metadata-repositories) in their repository. These events can be used by other members to maintain a cache of reference copies of this metadata to improve availability of the metadata and retrieval performance. Updates to this metadata will, however, be automatically routed to the home repository by the enterprise repository services:
 
 ![Metadata can also be replicated through the cohort to allow caching for availability and performance](repository-services-formation-of-a-cohort-4.png)
 
@@ -114,7 +114,7 @@ The list of connections to the remote members of the cohort are passed to the OM
 
 When a metadata repository registers with the [cohort registry](#cohort-registry), the administrator may either supply a unique server identifier, or ask the OMRS to generate one. This server identifier (the [metadata collection ID](../metadata-repositories/#metadata-collection-id)) is used in the OMRS event notifications, and on OMRS repository connector calls to identify the location of the home copy of the metadata entities and to identify which repository is requesting a service or supports a particular function.
 
-Once the metadata repository has registered with the [cohort registry](#cohort-registry), it is a member of the metadata repository cohort and can synchronize and share metadata with other repositories in the cohort through the [OMRS topic(s)](../metadata-events/#event-topics).
+Once the metadata repository has registered with the [cohort registry](#cohort-registry), it is a member of the metadata repository cohort and can synchronize and share metadata with other repositories in the cohort through the [OMRS topic(s)](/egeria-docs/concepts/cohort-events/#event-topics).
 
 !!! tip "Registering with multiple cohorts"
     A single metadata repository can register with multiple metadata cohorts as long as its server identifier is unique across all cohorts that it joins and it manages the posting of events to the appropriate OMRS topic for each cohort it registers with.
@@ -125,10 +125,10 @@ Once the metadata repository has registered with the [cohort registry](#cohort-r
 
 The *cohort registry* resides in each [cohort member](#cohort-members). It is responsible for registering a member with a specific open metadata repository cohort and maintaining a list of the other members of this cohort.
 
-The registration process is managed by exchanging [registry events](../metadata-events/#registry-events) over the [cohort topic(s)](../metadata-events/#event-topics).
+The registration process is managed by exchanging [registry events](vegeria-docs/cohort-events/#registry-events) over the [cohort topic(s)](/egeria-docs/concepts/cohort-events/#event-topics).
 
-The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector).
+The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/egeria-docs/guides/developer/runtime-connectors/cohort-registry-store-connector).
 
-[^1]: You may want to see the [OMRS metamodel](/egeria-docs/types/metamodel) for more details on the granularity of metadata exchange.
+[^1]: You may want to see the [OMRS metamodel](/egeria-docs/guides/developer/metamodel) for more details on the granularity of metadata exchange.
 
 --8<-- "snippets/abbr.md"

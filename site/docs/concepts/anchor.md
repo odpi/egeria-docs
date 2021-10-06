@@ -24,10 +24,10 @@ anchor entity are cleaned up properly and are not left to uselessly clutter the 
 Anchored entities are also bound by the visibility and security restrictions of their anchor. 
 
 !!! example "Example: Assets"
-    For example, [Asset](asset.md) visibility is controlled by [governance zones](governance-zones).
+    For example, [Asset](asset.md) visibility is controlled by [governance zones](/egeria-docs/concepts/governance-zones).
     An Asset is only visible through a service if it is a member of that service's **supportedZones**.  Similarly,
     authorization to perform specific operations on an Asset is granted by the
-    [Open Metadata Security Services](egeria-docs/features/metadata-security).
+    [Open Metadata Security Services](/egeria-docs/features/metadata-security).
     When a [SchemaType](/egeria-docs/types/5/0501-schema-elements/#schematype) is attached to an Asset, it is anchored to that Asset.
     Subsequent requests to read or update the SchemaType will result in visibility
     and authorization checks for the requesting user being made with respect to its Asset anchor.
@@ -100,7 +100,7 @@ many Referenceables over its lifetime.
     ![Examples of other types of entities that are linked to an Asset but not necessarily anchored there](anchors-classifications-on-attached-objects.png#pagewidth)
 
 !!! education "Further information"
-    - [Anchor Management](egeria-docs/feaatures/anchor-management) provide support for the
+    - [Anchor Management](/egeria-docs/features/anchor-management) provide support for the
       Anchors and LatestChange classifications.
 
 --8<-- "snippets/abbr.md"

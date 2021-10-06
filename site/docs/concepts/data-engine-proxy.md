@@ -21,6 +21,6 @@ in the [data-engine-proxy-connector :material-github:](https://github.com/odpi/e
 module.
 
 !!! education "Further information"
-    - [Setting up the data engine proxy](egeria-docs/guides/admin/configuring-a-data-engine-proxy-server.md)
+    - [Setting up the data engine proxy](/egeria-docs/guides/admin/configuring-a-data-engine-proxy-server)
 
 --8<-- "snippets/abbr.md"

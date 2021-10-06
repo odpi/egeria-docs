@@ -93,14 +93,14 @@ that uses a particular type of store within an Egeria [Metadata Server](/egeria-
 | Connector | Description |
 |---|---|
 | [JanusGraph OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector){ target=gh } | provides a native repository for a metadata server using [JanusGraph :material-dock-window:](https://janusgraph.org){ target=janus } as the backend. |
-| [XTDB OMRS Repository Connector](egeria-docs/connectors/repository/xtdb) | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the backend. |
+| [XTDB OMRS Repository Connector](/egeria-docs/connectors/repository/xtdb) | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the backend. |
 | [In-memory OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector){ target=gh } | provides a simple native repository implementation that "stores" metadata in HashMaps within the JVM; it is used for testing, or for environments where metadata maintained in other repositories needs to be cached locally for performance/scalability reasons.  |
 | [Read-only OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector){ target=gh } | provides a native repository implementation that does not support the interfaces for create, update, delete; however, it does support the search interfaces and is able to cache metadata -- this means it can be loaded with open metadata archives to provide standard metadata definitions. |
 
 Figure 3 shows the repository connector providing a native open metadata repository
 that uses a particular type of store within an Egeria [Metadata Server](/egeria-docs/concepts/metadata-server).
 
-![Figure 3](/egeria-docs/connectors/repository/adapter-repository-connector.png)
+![Figure 3](/egeria-docs/connectors/repository/adapter-repository-connector.svg)
 > **Figure 3:** Repository connector and optional event mapper supporting an adapter to a third party metadata catalog
 
 | Connector | Description |
@@ -116,7 +116,7 @@ The [repository connectors](/egeria-docs/connectors/repository-connector) implem
 
 [Open discovery services](/egeria-docs/frameworks/odf/#discovery-service) are connectors that analyze the content of resources in the digital landscape and create annotations that are attached to the resource's Asset metadata element in the open metadata repositories in the form of an open discovery report.
 
-![Figure 4](/egeria-docs/connectors/disscovery/discovery-service.svg)
+![Figure 4](/egeria-docs/connectors/discovery/discovery-service.svg)
 > **Figure 4:** Discovery Services
 
 The definition of the connector interfaces for discovery services is defined in the [open-discovery-services :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/frameworks/open-discovery-framework/src/main/java/org/odpi/openmetadata/frameworks/discovery){ target=gh } module.

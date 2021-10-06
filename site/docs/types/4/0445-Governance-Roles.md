@@ -32,19 +32,15 @@ the typical types of responsibility.
 lifetime.  Often these data values flow between systems and the DataItemOwner must be sure it is correct in all places.
 
 Ownership is assigned to a resource by adding the **Ownership** classification to it.
-This classification can assign ownership to an [ActorProfile](0110-Actors.md),
-[UserIdentity](0110-Actors.md) or [PersonRole](0112-People.md).
+This classification can assign ownership to an [ActorProfile](/egeria-docs/1/0110-Actors.md),
+[UserIdentity](/egeria-docs/types/1/0110-Actors.md) or [PersonRole](/egeria-docs/types/1/0112-People.md).
 It does not need to be a GovernanceRole.
 
-## Deprecated types
-
-* **ResponsibilityStaffContact** relationship is deprecated in favour of the more generic **GovernanceResponsibilityAssignment**.
-
-The original ownership types did not allow resources to be owned by a person role.
-They are all replaced by the more generic **Ownership** classification.
-
-* **AssetOwnership** - use **Ownership**
-* **AssetOwnerType** - use **Ownership** properties
-* **OwnerType** - use **Ownership** properties
+??? deprecated "Deprecated types"
+    - *ResponsibilityStaffContact* relationship is deprecated in favour of the more generic **GovernanceResponsibilityAssignment**.
+    The original ownership types did not allow resources to be owned by a person role. They are all replaced by the more generic *Ownership* classification.
+    - *AssetOwnership* - use *Ownership*
+    - *AssetOwnerType** - use *Ownership* properties
+    - *OwnerType* - use *Ownership* properties
 
 --8<-- "snippets/abbr.md"

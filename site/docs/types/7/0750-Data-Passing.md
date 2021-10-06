@@ -17,9 +17,8 @@ These relationships are then overlaid by the [LineageMapping](/egeria-docs/types
 ![UML](0750-Data-Passing.svg)
 
 
-## Deprecated Types
-
-* **ProcessInput**
-* **ProcessOutput**
+??? deprecated "Deprecated types"
+    - *ProcessInput*
+    - *ProcessOutput*
 
 --8<-- "snippets/abbr.md"

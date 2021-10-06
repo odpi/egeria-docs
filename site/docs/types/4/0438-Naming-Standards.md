@@ -12,8 +12,7 @@ Naming standards provide means for classifying glossary terms to allow naming ru
 
 ![UML](0438-Naming-Standards.svg)
 
-## Deprecated Types
-
-* **NamingConventionRule** - use **Modifier**
+??? deprecated "Deprecated types"
+    - *NamingConventionRule* - use *Modifier*
 
 --8<-- "snippets/abbr.md"

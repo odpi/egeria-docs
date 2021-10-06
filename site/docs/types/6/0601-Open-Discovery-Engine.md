@@ -38,8 +38,7 @@ connections of the open discovery services embedded within it.
 
 ![UML](0601-Open-Discovery-Engine.svg)
 
-## Deprecated Types
-
-* **SupportedDiscoveryService** - Use [SupportedGovernanceService](0461-Governance-Engines.md).
+??? deprecated "Deprecated types"
+    - **SupportedDiscoveryService** - Use [SupportedGovernanceService](/egeria-docs/types/4/0461-Governance-Engines).
 
 --8<-- "snippets/abbr.md"

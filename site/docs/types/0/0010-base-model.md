@@ -20,13 +20,13 @@
 *`Asset`* represents the most significant type of `Referenceable`. An `Asset` is something (either physical or digital) that is of value and so needs to be managed and governed.
 
 ??? deprecated "Deprecated attributes"
-    The `Asset` entity has the following deprecated attributes. Their values have been moved to classifications as shown in the table below. Many `Asset`s are created by their hosting technology and locked read-only to the broader metadata ecosystem (see [external metadata provenance](../metadata-provenance) for more detail). By moving the governance related information to a classification, it can be maintained by a different service to the `Asset` creator.
+    The `Asset` entity has the following deprecated attributes. Their values have been moved to classifications as shown in the table below. Many `Asset`s are created by their hosting technology and locked read-only to the broader metadata ecosystem (see [external metadata provenance](/egeria-docs/features/metadata-provenance) for more detail). By moving the governance related information to a classification, it can be maintained by a different service to the `Asset` creator.
 
     | Deprecated attribute | Moved to classification |
     |---|---|
-    | `owner` (type `string`) | [Ownership](../../4/0445-governance-roles/#ownership) |
-    | `ownerType` (type `AssetOwnerType` enum) | [Ownership](../../4/0445-governance-roles/#ownership) |
-    | `zoneMembership` (type `array<string>`) | [AssetZoneMembership](../../4/0424-governance-zones/#assetzonemembership) |
+    | `owner` (type `string`) | [Ownership](../../4/0445-Governance-Roles/#ownership) |
+    | `ownerType` (type `AssetOwnerType` enum) | [Ownership](../../4/0445-Governance-roles/#ownership) |
+    | `zoneMembership` (type `array<string>`) | [AssetZoneMembership](../../4/0424-Governance-Zones/#assetzonemembership) |
     | `latestChange` (type `string`) | [LatestChange](../../0/0011-managing-referenceables/#latestchange) |
 
 `Infrastructure`, `Process` and `DataSet` are examples of `Asset`s.

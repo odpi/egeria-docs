@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Metadata Server Exchange
+# Egeria for Metadata Exchange
 
 The metadata server exchange solution describes how third party metadata servers can exchange metadata through
 an **Open Metadata Repository Cohort** or **Cohort** for short.

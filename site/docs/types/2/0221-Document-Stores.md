@@ -13,9 +13,8 @@ Document stores describes a specialist type of server that manages documents and
 ![UML](0221-Document-Stores.svg)
 
 
-## Deprecated Types
-
-* **ContentManager** - Use **ContentCollectionManager**
+??? deprecated "Deprecated types"
+    - *ContentManager* - Use *ContentCollectionManager*
 
 
 --8<-- "snippets/abbr.md"

@@ -16,9 +16,9 @@ nav:
       - Our Solution: introduction/overview.md
       - Key Concepts: introduction/key-concepts.md
       - Patterns:
-          - Metadata Manager: patterns/metadata-manager/index.md
-          - Metadata Exchange: patterns/metadata-exchange/index.md
-          - Metadata Governancce: patterns/metadata-governance/index.md
+          - Metadata Manager: patterns/metadata-manager
+          - Metadata Exchange: patterns/metadata-exchange
+          - Metadata Governance: patterns/metadata-governance
   - Using:
       - Planning Guide: guides/planning/guide.md
       - Diagnostic Guide: guides/diagnostic.md
@@ -250,11 +250,11 @@ nav:
               - Glossary Terms: types/3/0330-Terms.md
               - Primary Category: types/3/0335-Primary-Category.md
               - Dictionary: types/3/0340-Dictionary.md
-              - Related Terms: types/3/0350-Related-terms.md
+              - Related Terms: types/3/0350-Related-Terms.md
               - Contexts: types/3/0360-Contexts.md
               - Semantic Assignment: types/3/0370-Semantic-Assignment.md
               - Spine Objects: types/3/0380-Spine-Objects.md
-              - Controlled Glossary Development: types/3/0385-Controlled-Glossary-Development.md
+              - Controlled Glossary: types/3/0385-Controlled-Glossary-Development.md
               - Glossary Projects: types/3/0390-Glossary-Projects.md
               - Supplementary Properties: types/3/0395-Supplementary-Properties.md
           - 4. Governance:

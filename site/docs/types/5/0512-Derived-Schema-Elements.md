@@ -19,13 +19,11 @@ in **DerivedSchemaTypeQueryTarget**.
 ![UML](0512-Derived-Schema-Elements.svg)
 
 
-## Deprecated Types
-
-The following types were replaced by **DerivedSchemaTypeQueryTarget**.
-
-* **DerivedSchemaAttribute**
-* **SchemaLinkElement**
-* **LinkedType**
-* **SchemaLinkToType**
+??? deprecated "Deprecated types"
+    The following types were replaced by **DerivedSchemaTypeQueryTarget**.
+    - *DerivedSchemaAttribute*
+    - *SchemaLinkElement*
+    - *LinkedType*
+    - *SchemaLinkToType*
 
 --8<-- "snippets/abbr.md"

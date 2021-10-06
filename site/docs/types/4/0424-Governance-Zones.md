@@ -23,11 +23,9 @@ the performance of the asset processing since the classification flows with the 
 
 ![UML](0424-Governance-Zones.svg)
 
-There is more information on governance zones
-[here](../../../open-metadata-implementation/access-services/docs/concepts/governance-zones).
+There is more information on governance zones in [governance zones](/egeria-docs/features/governance-zones).
 
-## Deprecated Types
-
-* **ZoneGovernance** - use [GovernedBy](0401-Governance-Definitions.md).
+??? deprecated "Deprecated types"
+    - **ZoneGovernance** - use [GovernedBy](0401-Governance-Definitions.md).
 
 --8<-- "snippets/abbr.md"

@@ -36,8 +36,7 @@ should be set up so
 * Negative values mean that the element is not to be trusted because it is, for example,
 obsolete or incorrect.
 
-## Deprecated types
-
-* **GovernanceConfidentialityLevel** - use **GovernanceClassificationLevel**.
+??? deprecated "Deprecated types"
+    - *GovernanceConfidentialityLevel* - use *GovernanceClassificationLevel*.
 
 --8<-- "snippets/abbr.md"

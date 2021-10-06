@@ -129,6 +129,6 @@ The registration process is managed by exchanging [registry events](../metadata-
 
 The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector).
 
-[^1]: You may want to see the [OMRS metamodel](/egeria-docs/types/metamodel) for more details on the granularity of metadata exchange.
+[^1]: You may want to see the [OMRS metamodel](/egeria-docs/guides/developer/repository-connectors/metamodel/metamodel) for more details on the granularity of metadata exchange.
 
 --8<-- "snippets/abbr.md"

@@ -8,7 +8,7 @@ Egeria is designed to simplify the effort necessary to integrate different techn
 It focuses on providing five types of integration interfaces.
 
 - [Connectors](#what-is-a-connector) that translate between third party APIs and open metadata APIs. These connectors are hosted in the Egeria servers and support the active exchange of metadata with these technologies.
-- [Connectors](#what-is-a-connector) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
+- [Connectors](/egeria-docs/guides/developer/using-connectors) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
 - [Java clients](#using-the-clients) for applications to call the [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
 - [REST APIs](#using-the-rest-apis) for the Egeria Services. These include the [access services](/egeria-docs/services/omas), admin services and [platform services](/egeria-docs/services/platform).
 - Kafka topics with JSON payloads for asynchronous communication (both in and out) with the open metadata ecosystem.

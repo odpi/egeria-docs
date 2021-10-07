@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-# Developer Guidelines
+# Coding Guidelines
 
 Egeria provides technology for an open standard that seeks to improve the processing and protection of data across organizations. For its developers, this carries the benefit that their work receives high recognition, but also additional responsibilities to ensure its wide applicability and longevity.
 

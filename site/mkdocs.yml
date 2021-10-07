@@ -16,13 +16,13 @@ nav:
       - Our Solution: introduction/overview.md
       - Key Concepts: introduction/key-concepts.md
       - Patterns:
-          - Metadata Manager: patterns/metadata-manager
-          - Metadata Exchange: patterns/metadata-exchange
-          - Metadata Governance: patterns/metadata-governance
+          - Metadata Manager: patterns/metadata-manager/overview.md
+          - Metadata Exchange: patterns/metadata-exchange/overview.md
+          - Metadata Governance: patterns/metadata-governance/overview.md
   - Using:
       - Planning Guide: guides/planning/guide.md
       - Diagnostic Guide: guides/diagnostic.md
-      - Administer:
+      - Administration:
           - Administration Guide: guides/admin/guide.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
           - Configure OMAG Servers:
@@ -36,28 +36,28 @@ nav:
               - Configure Engine Host: guides/admin/servers/configuring-an-engine-host.md
               - Configure Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy.md
               - Configure Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
+      - Operations:
           - Egeria in Kubernetes: guides/admin/kubernetes/intro.md
       - Features:
-          - Overview: features/overview.md
-          - Anchor Management: features/anchor-management
-          - Cohort Operation: features/cohort-operation
-          - Discovery and Stewardship: features/discovery-and-stewardship
-          - Duplicate Management: features/duplicate-management
-          - Effectivity Dates: features/effectivity-dates/index.md
-          - External Identifiers: features/external-identifiers/index.md
-          - External References: features/external-references/index.md
-          - Governance Zones: features/governance-zones/index.md
-          - Incident Reporting: features/incident-reporting/index.md
-          - Integrated Cataloguing: features/integrated-cataloguing/index.md
-          - Lineage Management: features/lineage-management/index.md
-          - Metadata Archiving: features/metadata-archiving/index.md
-          - Metadata Provenance: features/metadata-provenance/index.md
-          - Metadata Security: features/metadata-security/index.md
-          - People, Roles and Organizations: features/people-roles-organizations/index.md
-          - Reference Data Management: features/reference-data-management/index.md
-          - Synchronized Access Control: features/synchronized-access-control/index.md
-          - Templated Cataloguing: features/templated-cataloguing/index.md
-          - User Feedback: features/user-feedback/index.md
+          - Anchor Management: features/anchor-management/overview.md
+          - Cohort Operation: features/cohort-operation/overview.md
+          - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
+          - Duplicate Management: features/duplicate-management/overview.md
+          - Effectivity Dates: features/effectivity-dates/overview.md
+          - External Identifiers: features/external-identifiers/overview.md
+          - External References: features/external-references/overview.md
+          - Governance Zoning: features/governance-zoning/overview.md
+          - Incident Reporting: features/incident-reporting/overview.md
+          - Integrated Cataloguing: features/integrated-cataloguing/overview.md
+          - Lineage Management: features/lineage-management/overview.md
+          - Metadata Archiving: features/metadata-archiving/overview.md
+          - Metadata Provenance: features/metadata-provenance/overview.md
+          - Metadata Security: features/metadata-security/overview.md
+          - People, Roles and Organizations: features/people-roles-organizations/overview.md
+          - Reference Data Management: features/reference-data-management/overview.md
+          - Synchronized Access Control: features/synchronized-access-control/overview.md
+          - Templated Cataloguing: features/templated-cataloguing/overview.md
+          - User Feedback: features/user-feedback/overview.md
       - Integrate:
           - Developer Guide: guides/developer/guide.md
           - Connector Catalog:
@@ -68,7 +68,6 @@ nav:
                   - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
                   - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
               - Integration:
-                  - Integration Connectors: connectors/integration/index.md
                   - File Connectors:
                       - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
                       - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
@@ -82,13 +81,13 @@ nav:
                           - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
                           - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
                           - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                      - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/index.md
-                      - In-memory OMRS Repository Connector: connectors/repository/in-memory/index.md
-                      - Read-only OMRS Repository Connector: connectors/repository/read-only/index.md
+                      - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
+                      - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
+                      - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
                   - Repository Adapters:
-                      - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/index.md
+                      - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
                       - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
-                      - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/index.md
+                      - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
   - Learning:
       - Dojo:
           - Dojo Introduction: getting-started/dojo/introduction.md
@@ -113,8 +112,8 @@ nav:
           - Running Samples: getting-started/tutorials/running-samples.md
           - Testing Tutorial: getting-started/tutorials/testing.md
       - Scenarios:
-          - Data Manager Integration: scenarios/data-manager-integration
-          - File Lineage: scenarios/file-lineage
+          - Data Manager Integration: scenarios/data-manager-integration/overview.md
+          - File Lineage: scenarios/file-lineage/overview.md
       - Webinars:
           - Previous Webinars:
               - Previous Webinars: education/previous-webinars/index.md
@@ -126,21 +125,20 @@ nav:
               - Privacy July 2018: education/previous-webinars/july-2018/
               - Open Metadata Standards April 2018: education/previous-webinars/april-2018/
               - Free Metadata October 2017: education/previous-webinars/october-2017/
-          - Planned Webinars: education/planned-webinars/
+          - Planned Webinars: education/planned-webinars/overview.md
   - Contributing:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md
       - Develop:
-          - Developer Guidelines: guides/developer/guidelines.md
-          - Way of Working: guides/developer/process.md
+          - Coding Guidelines: guides/contributor/guidelines.md
+          - Way of Working: guides/contributor/process.md
           - Specific Guidance:
               - Programming Languages: guides/developer/languages.md
               - Tools:
-                  - Development Tools: guides/developer/tools/development.md
-                  - Documentation Tools: guides/developer/tools/documentation.md
-                  - Runtime Tools: guides/developer/tools/runtime.md
-                  - Testing Tools: guides/developer/tools/testing.md
-              - Using Connectors: guides/developer/using-connectors.md
+                  - Development Tools: guides/contributor/tools/development.md
+                  - Documentation Tools: guides/contributor/tools/documentation.md
+                  - Runtime Tools: guides/developer/contributor/runtime.md
+                  - Testing Tools: guides/developer/contributor/testing.md
               - Developing Connectors:
                   - Develop a Connector: guides/developer/implement-a-connector.md
                   - Develop Repository Connector: guides/developer/implement-repository-connector.md
@@ -350,21 +348,18 @@ nav:
       - Services:
           - Fixed Services:
               - Repository Services (OMRS):
-                    - Open Metadata Repository Services: services/omrs/index.md
+                    - Open Metadata Repository Services: services/omrs/overview.md
                     - Cohorts: services/omrs/cohort.md
                     - Metadata Repositories: services/omrs/metadata-repositories.md
                     - Metadata Events: concepts/cohort-events.md
-              - Common Services:
-                  - Common Services: services/common/index.md
-                  - FFDC: services/common/ffdc-services.md
-                  - Generic Handlers: services/common/generic-handlers.md
-                  - Metadata Security: services/common/metadata-security.md
+              - FFDC: services/ffdc-services.md
+              - Generic Handlers: services/generic-handlers.md
+              - Metadata Security: services/metadata-security.md
               - Platform Services: services/platform.md
-              - Governance Servers:
-                    - Governance Servers: services/governance/index.md # ./open-metadata-implementation/governance-servers/docs
-                    - Integration Daemon Services: services/governance/integration-daemon.md # ./open-metadata-implementation/governance-servers/integration-daemon-services/docs
-                    - Engine Host Services: services/governance/engine-host.md # ./open-metadata-implementation/governance-servers/engine-host-services/docs
-                    - Open Lineage Services (OLS): services/governance/ols.md # ./open-metadata-implementation/governance-servers/open-lineage-services/docs
+              - Integration Daemon Services: services/integration-daemon-services.md
+              - Engine Host Services: services/engine-host-services.md
+              - Data Engine Proxy Services: services/data-engine-proxy-services.md
+              - Open Lineage Services (OLS): services/open-lineage-services.md
           - Registered Services:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md

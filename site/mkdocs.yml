@@ -36,8 +36,11 @@ nav:
               - Configure Engine Host: guides/admin/servers/configuring-an-engine-host.md
               - Configure Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy.md
               - Configure Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
+      - Migration:
+          - Configuration Documents : guides/migration/migrating-configuration-documents.md
       - Operations:
-          - Egeria in Kubernetes: guides/admin/kubernetes/intro.md
+          - Operate OMAG Server: guides/operations/operating-omaag-server.md
+          - Egeria in Kubernetes: guides/operations/kubernetes/intro.md
       - Features:
           - Anchor Management: features/anchor-management/overview.md
           - Cohort Operation: features/cohort-operation/overview.md
@@ -345,6 +348,7 @@ nav:
               - Business Lineage: types/7/0760-Business-Lineage.md
               - Lineage Mapping: types/7/0770-Lineage-Mapping.md
           - Metamodel: types/metamodel.md
+      - Standards: standards/overview.md
       - Services:
           - Fixed Services:
               - Repository Services (OMRS):

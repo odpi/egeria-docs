@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2019. -->
 
-# Metadata Discovery and stewardship
+# Metadata discovery and stewardship
 
 [Integrated cataloguing](/egeria-docs/features/integraated-cataloguing) typically automates the creation the basic asset entry, its connection and
 optionally, its schema.  This is what is called technical metadata.

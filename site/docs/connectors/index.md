@@ -130,7 +130,7 @@ The definition of the connector interfaces for discovery services is defined in 
 
 [Governance action services](/egeria-docs/frameworks/gaf/#governance-action-service) are connectors that perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities on request.
 
-![Figure 5](/egeria-docs/connectors/disscovery/governance-action-service.png)
+![Figure 5](/egeria-docs/connectors/governance-action/governance-action-service.svg)
 > **Figure 5:** Governance Action Services
 
 They run in the [Governance Action Open Metadata Engine Service (OMES)](/egeria-docs/services/omes/governance-action) hosted by the [Engine Host OMAG Server](/egeria-docs/concepts/engine-host).
@@ -223,7 +223,7 @@ The cohort protocols are peer-to-peer and hence there is a cohort registry
 (with a [cohort registry store](../../../open-metadata-implementation/repository-services/docs/component-descriptions/connectors/cohort-registry-store-connector.md))
 for each [member of a cohort](../../../open-metadata-implementation/admin-services/docs/concepts/cohort-member.md).
 
-![Figure 8](/egeria-docs/connectors/runtime/cohort-registry-connector.svg)
+![Figure 8](/egeria-docs/connectors/runtime/cohort-registry-store-connector.svg)
 > **Figure 8:** Open Metadata Topic Connectors
 
 Egeria provides a single implementation of a
@@ -248,7 +248,7 @@ These archives can be
 [loaded into an OMAG Server at start up](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-startup-archives.md) or
 [added to a running OMAG Server](../../../open-metadata-implementation/admin-services/docs/user/adding-archive-to-running-server.md).
 
-![Figure 9](open-metadata-archive-store-connector.png)
+![Figure 9](/egeria-docs/connectors/runtime/open-metadata-archive-store-connector.svg)
 > **Figure 9:** Open Metadata Archive Store Connector
 
 
@@ -270,7 +270,7 @@ Multiple of these connectors can be [active in an OMAG Server](../../../open-met
 at any one time and they can each be configured to only process particular types of audit log records.
 
 
-![Figure 10](audit-log-destination-connector.png)
+![Figure 10](/egeria-docs/connectors/runtime/audit-log-destination-connector.svg)
 > **Figure 10:** Audit Log Destination Connector
 
 Below are the connector implementations provided by Egeria
@@ -305,7 +305,7 @@ the REST API calls.  Egeria provides a single implementation for Spring.
   
 This is embedded in Egeria's [clients](/egeria-docs/guides/developer/using-egeria-clients).
 
-![Figure 11](rest-client-connector.png)
+![Figure 11](/egeria-docs/connectors/runtime/rest-client-connector.svg)
 > **Figure 11:** REST Client Connector
 
 The definition of the connector interface for these connectors is
@@ -322,7 +322,7 @@ This connector translates calls to retrieve and maintain metadata in the member'
 remote calls to the real repository.
 
 
-![Figure 12](cohort-member-client-connector.png)
+![Figure 12](/egeria-docs/connectors/runtime/cohort-member-client-connector.svg)
 > **Figure 12:** Cohort Member Client Connector used for federating queries across the cohort
 
 Egeria's [Open Metadata Repository Services (OMRS)](../../../open-metadata-implementation/repository-services) provides a default REST API

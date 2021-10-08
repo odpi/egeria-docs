@@ -62,13 +62,15 @@ To make localization easier and enhance accessibility, the preferred image forma
 6. If your diagram contains any embedded images (rare), be sure to check **Embed Images** as well.
 7. Click the **Export** button to save the file.
 
-If your diagram depicts a process, try to avoid adding the descriptions of the steps to the diagram. Instead, only add the numbers of the steps to the diagram and add the descriptions of the steps as a numbered list in the document. Ensure that the numbers on the list match the numbers on your diagram.
-
 The SVG format allows the diagram to be dynamically scaled in the browser without introducing various image artifacts that create noise or otherwise impair visibility of the image: making the diagrams easier to understand.
 
-Providing a description of the image is required for accessibility purposes, as it will act as the alternative text for e.g. screen-readers for anyone who is unable to see the image itself.
+Give each diagram a unique figure number and use this number to refer to the diagram rather than using positional phrases such as "in the diagram above" which presupposes a particular layout that may not be appropriate for all devices.
 
-Avoiding text descriptions and explanations embedded in the diagrams means that the content is also more accessible (again for screen-readers), but also more broadly in that it is then indexed by the documentation site and can be searched. (Text embedded inside a diagram or image is not searchable.)
+Avoiding text descriptions and explanations embedded in the diagrams means that the content is also more accessible (again for screen-readers), but also more broadly in that it is then indexed by the documentation site and can be searched. (Text embedded inside a diagram or image is not searchable.)  In addition, be sure to provide enough description about the diagram in the text so that if the diagram is not visible to the reader for some reason, they can still understand the message.
+
+Providing a description of the image is required for accessibility purposes, as it will act as the alternative text for e.g. screen-readers for anyone who is unable to see the image itself. Be sure to include the figure number in the description so it can be easily associated with the text.
+
+If your diagram depicts a process, try to avoid adding the descriptions of the steps to the diagram. Instead, only add the numbers of the steps to the diagram and add the descriptions of the steps as a numbered list in the document. Ensure that the numbers on the list match the numbers on your diagram.
 
 ## Do **not** wrap lines
 
@@ -85,7 +87,7 @@ This enhances the maintainability of the documentation by a broader audience:
 - changes in indentation that may be needed for e.g. bullet lists, inclusion within an admonition, etc will only require indenting the single wrapped line
 - including content into a table in Markdown (which does not allow newlines within it) will be easier
 
-## Use angle brackets for placeholders
+## Use angle brackets for placeholders in commands
 
 Use angle brackets for placeholders in commands or code samples. Tell the reader what the placeholder represents. For example:
 
@@ -95,6 +97,20 @@ Use angle brackets for placeholders in commands or code samples. Tell the reader
     ```
 
     Where `<pod-name>` is the name of one of your pods.
+
+!!! attention "We may revise this approach in the future"
+    We may revise this approach if / when we start to make use of the theme's [extensive code annotation capabilities :material-dock-window:](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations){ target=material } that allow such descriptions of the placeholders to be embedded more directly within the code block itself.
+
+## Use double curly braces for placeholders in REST API urls
+
+Use double curly braces for placeholders in REST API urls. Tell the reader what the placeholder represents. For example:
+
+1. Start the server:
+    ```shell
+    POST {{baseURL}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{server}}/instance
+    ```
+
+    Where `{{baseURL}}` is the host name and port of the platform where the server is to run; `{{adminUserId}}` is the user id of the administrator and `{{server}}` is the name of the server to start.
 
 !!! attention "We may revise this approach in the future"
     We may revise this approach if / when we start to make use of the theme's [extensive code annotation capabilities :material-dock-window:](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-annotations){ target=material } that allow such descriptions of the placeholders to be embedded more directly within the code block itself.
@@ -154,6 +170,16 @@ The **only** exceptions to this should be as follows:
 | Metadata Access Point OMAG Server | metadata access point OMAG Server |
 | Open Discovery Framework (ODF) | open discovery framework |
 | Audit Log Framework (ALF) | audit log framework |
+
+## Avoid using acronyms
+
+Avoid using acronyms in the text unless they are part of the name of a component or the acronym has been spelt out in full on the page along with its acronym.  Acronyms are convenient short-cuts for experts but they overload novices with the need to constantly look up the meaning of the term. 
+
+| Do | Don't |
+|---|---|
+| The Open Connector Framework (OCF) ... an OCF connector | The OCF ... |
+| An OMAG Server ... `or` An Open Metadata and Governance (OMAG) Server| An Open Metadata and Governance Server |
+
 
 ## Use *italics* to emphasize new terms
 

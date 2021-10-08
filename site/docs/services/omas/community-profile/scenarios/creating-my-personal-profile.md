@@ -28,6 +28,4 @@ the organization then use your employee number.
 The Community Profile OMAS will emit an [event] whenever a new profile is created
 using this approach
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

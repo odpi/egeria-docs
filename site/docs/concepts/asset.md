@@ -8,7 +8,8 @@ hide:
 
 # Asset
 
-An *asset* is either a digital or physical object/property that provides value to the organization that owns it. Examples of an asset include:
+An *asset* is a metadata element that describes either a digital or physical resource.  This resource is described in the metadata catalog because it provides value to the organization that owns it.
+Examples of resources that might be catalogued as assets include:
 
 - Data sources such as databases, files and data feeds.
 - IT infrastructure and applications that automate many aspects of an organization's operation.
@@ -17,13 +18,13 @@ An *asset* is either a digital or physical object/property that provides value t
 - Buildings and other locations.
 - Physical objects that have a unique identity (eg a serial number).
 
-Much governance is centered around an organization's assets since they represent tangible value. This involves maintaining information about each asset and managing events related to the asset in order to keep it protected and to get the maximum value from it.
+Much governance is centered around an organization's resources since they represent tangible value. This involves maintaining information about the associated resource and managing events related to the resource in order to keep it protected in order to get the maximum value from it.
 
-Egeria is particularly focused on providing the ability to maintain the information necessary for managing digital assets and the infrastructure that supports them. It also has a flexible model to allow the definition of asset to be expanded to include a broader range of physical assets.
+Egeria is particularly focused on providing the ability to maintain the information necessary for managing digital resources and the infrastructure that supports them. It also has a flexible type model to allow the definition of asset to be expanded to include a broader range of physical resources.
 
 ## Open metadata types
 
-The information about an asset that is used to describe its characteristics and how it should be managed (that is, the asset's metadata) is stored in a sub-graph of open metadata instances (entities and relationships) with the [Asset](/egeria-docs/types/0/0010-base-model/#asset) entity at the root. The asset entity contains a small amount of information that merely captures the existence of the real asset. Then other entities are linked to it to add more information. It is likely that this additional information is identified, captured and stored by different tools. The open metadata services gather this information together and distribute it to provide the most complete view of the asset's properties.
+The information about a resource that covers its characteristics and how it should be managed is stored in a sub-graph of open metadata instances (entities and relationships) with the [Asset](/egeria-docs/types/0/0010-base-model/#asset) entity at the root. The asset entity contains a small amount of information that merely captures the existence of the real resource. Then other entities are linked to it to add more information. It is likely that this additional information is identified, captured and stored by different tools. The open metadata services gather this information together and distribute it to provide the most complete view of the resource's properties.
 
 More information on the types of attachments that can be added to an asset can be found [here](../../../../../open-metadata-publication/website/cataloging-assets/asset-catalog-contents.md).
 

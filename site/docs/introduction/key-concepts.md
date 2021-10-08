@@ -85,7 +85,7 @@ At the granular level of the repository services, we refer to specific metadata 
 
 ### Metadata types
 
-Every metadata *instance* is linked to an [open metadata type definition](/egeria-docs/types/metamodel/#type-definitions) (sometimes referred to as a `TypeDef`) that describes what it represents and the properties that further describe and differentiate it from other instances of that same type.
+Every metadata *instance* is linked to an [open metadata type definition](/egeria-docs/guides/developer/repository-connectors/metamodel/overview#type-definitions) (sometimes referred to as a `TypeDef`) that describes what it represents and the properties that further describe and differentiate it from other instances of that same type.
 
 !!! tip "TypeDef inheritance"
     TypeDefs can inherit from other TypeDefs from the same category: open metadata supports single inheritance.
@@ -138,7 +138,7 @@ There should be, at most, a *tiny* chance[^3] that two servers will generate the
 Adhering to these concepts and the principles by which they behave is the subject of *conformance*. Egeria provides an [automated testing suite to validate that a given repository or third party integration behaves according to these expectations](/egeria-docs/guides/cts/overview), the successful completion of which is a necessary input to a tool being granted the use of an Egeria conformance mark.
 
 [^1]: You may want to see the [cohort interactions walkthrough](/egeria-docs/services/omrs/cohort/#formation-of-a-cohort) for more details on how cohort participants interact.
-[^2]: You may want to see the [OMRS metamodel](/egeria-docs/types/metamodel) for more details on the granularity of metadata exchange.
+[^2]: You may want to see the [OMRS metamodel](/egeria-docs/guides/developer/repository-connectors/metamodel/overview) for more details on the granularity of metadata exchange.
 [^3]: The rarity will depend on the specific algorithm used, but as an example the algorithm used within Egeria generates type 4 UUIDs, for which the [probability of a collision is so small that it can almost be ignored :material-dock-window:](https://en.wikipedia.org/wiki/Universally_unique_identifier#Collisions){ target=wiki }. But as it is not *impossible*, Egeria does still provide the mechanisms to detect and resolve such conflicts.
 
 --8<-- "snippets/abbr.md"

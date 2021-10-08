@@ -61,7 +61,7 @@ Open metadata archives are introduced into the server through the admin services
 
 ![Processing of an open metadata archive](open-metadata-archive-processing.png)
 
-The archive is passed to the repository services' operational services, which in turn passes it on to the [archive manager](archive-manager.md). Type information is passed to the [repository content manager](repository-content-manager.md).
+The archive is passed to the repository services' operational services, which in turn passes it on to the [archive manager](/egeria-docs/services/omrs/archive-manager). Type information is passed to the [repository content manager](../services/omrs/repository-content-manager.md).
 
 Both the types and instances are passed to the local repository (if there is one).
 

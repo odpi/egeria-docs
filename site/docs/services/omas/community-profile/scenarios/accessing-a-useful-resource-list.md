@@ -10,7 +10,4 @@ or a [community](../concepts/community.md).
 First locate the unique identifier (guid) of the element acting as an anchor ofr
 
 
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

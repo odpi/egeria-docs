@@ -8,11 +8,11 @@ Egeria is designed to simplify the effort necessary to integrate different techn
 It focuses on providing five types of integration interfaces.
 
 - [Connectors](#what-is-a-connector) that translate between third party APIs and open metadata APIs. These connectors are hosted in the Egeria servers and support the active exchange of metadata with these technologies.
-- [Connectors](#what-is-a-connector) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
+- [Connectors](/egeria-docs/guides/developer/using-connectors) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
 - [Java clients](#using-the-clients) for applications to call the [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
 - [REST APIs](#using-the-rest-apis) for the Egeria Services. These include the [access services](/egeria-docs/services/omas), admin services and [platform services](/egeria-docs/services/platform).
 - Kafka topics with JSON payloads for asynchronous communication (both in and out) with the open metadata ecosystem.
-  [Learn more ...](../../../open-metadata-implementation/access-services)
+  [Learn more ...](/egeria-docs/services/omas)
 
 ## Using the clients
 
@@ -29,7 +29,7 @@ The structure of the URL for an Egeria REST API varies lightly depending on whet
 
 ## What is a connector?
 
-[Connectors](/egeria-docs/frameworks/ocf/#connector) are plug-in Java classes that either perform an additional service, or, more typically, enable Egeria to integrate with a third party technology.
+[Connectors](/egeria-docs/frameworks/ocf/#connector) are plug-in Java clients that either perform an additional service, or, more typically, enable Egeria to integrate with a third party technology.
 
 The concept of a connector comes from the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf). The OCF provides a common framework for components that enable one technology to call another, arbitrary technology through a common interface. The implementation of the connector is dynamically loaded based on the connector's configuration.
 

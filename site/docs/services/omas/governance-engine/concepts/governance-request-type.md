@@ -35,15 +35,4 @@ shows how the request type links the governance engine to the
 governance service via the **SupportedGovernanceService** relationship.
 
 
-
-----
-
-* [Return to Governance Engine OMAS Concepts](.)
-* [Return to Governance Engine OMAS Overview](../..)
-
-
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

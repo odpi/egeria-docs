@@ -56,7 +56,7 @@ Once the configuration document is in place, the OMAG Server can be activated an
     - [Configuring the OMAG Server Platform](configuring-the-omag-server-platform.md)
     - [Configuring an OMAG Server](/egeria-docs/guides/admin/servers)
     - [Operating the OMAG Server](operating-omag-server.md)
-    - [Migrating OMAG Server Configuration Documents](migrating-configuration-documents.md)
+    - [Migrating OMAG Server Configuration Documents](../migration/migrating-configuration-documents.md)
 
 ## Examples of configuration calls
 

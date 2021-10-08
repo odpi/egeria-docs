@@ -1,3 +1,6 @@
 # IntelliJ files
 .idea
 *.iml
+
+# Mac files
+.DS_Store

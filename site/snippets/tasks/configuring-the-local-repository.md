@@ -3,7 +3,7 @@
 
 ## Configure the local repository
 
-A [metadata server](/egeria-docs/concepts/metadata-server) supports a local metadata repository that has native support for the [Open Metadata Repository Services (OMRS) types and instances](../../../repository-services/docs/metadata-meta-model.md).
+A [metadata server](/egeria-docs/concepts/metadata-access-store) supports a local metadata repository that has native support for the [Open Metadata Repository Services (OMRS) types and instances](../../../repository-services/docs/metadata-meta-model.md).
 
 ### Choose a repository
 

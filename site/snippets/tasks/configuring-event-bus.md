@@ -13,8 +13,8 @@ Since the event bus is used in multiple places, the configuration document allow
     You need to set up this information before configuring any of the following:
 
     - Using an event topic as the destination for the [audit log](/egeria-docs/concepts/audit-log).
-    - Configuring the [access services](/egeria-docs/services/omas) in a [metadata server](/egeria-docs/concepts/metadata-server) or a [metadata access point](/egeria-docs/concepts/metadata-access-point).
-    - Configuring registration to a [cohort](/egeria-docs/services/omrs/cohort) in a [metadata server](/egeria-docs/concepts/metadata-server), a [metadata access point](/egeria-docs/concepts/metadata-access-point), a [repository proxy](/egeria-docs/concepts/repository-proxy) or a [conformance test server](/egeria-docs/concepts/conformance-test-server).
+    - Configuring the [access services](/egeria-docs/services/omas) in a [metadata access store](/egeria-docs/concepts/metadata-access-store) or a [metadata access point](/egeria-docs/concepts/metadata-access-point).
+    - Configuring registration to a [cohort](/egeria-docs/services/omrs/cohort) in a [metadata access store](/egeria-docs/concepts/metadata-access-store), a [metadata access point](/egeria-docs/concepts/metadata-access-point), a [repository proxy](/egeria-docs/concepts/repository-proxy) or a [conformance test server](/egeria-docs/concepts/conformance-test-server).
 
 The following command creates information about the event bus. This information is used on the subsequent configuration of the OMAG Server subsystems. It does not affect any subsystems that have already been configured in the configuration document and if the event bus is not needed, its values are ignored.
 

@@ -1,0 +1,14 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- Copyright Contributors to the ODPi Egeria project. -->
+
+# Running Egeria in a self-contained environment using Kubernetes
+
+
+With this approach, you do not need to download, install, configure and understand all of the underlying components
+that Egeria itself uses.
+
+
+* [Intro & Setting up Kubernetes & Helm](https://odpi.github.io/egeria-docs/guides/admin/kubernetes/intro/)
+* [Installing the Coco Pharmaceuticals lab chart](https://odpi.github.io/egeria-docs/guides/admin/kubernetes/chart_lab/)
+
+--8<-- "snippets/abbr.md"

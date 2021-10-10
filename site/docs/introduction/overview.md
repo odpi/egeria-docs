@@ -8,7 +8,7 @@ hide:
 
 # Our solution (overview)
 
-![Distrubted operation](egeria-distributed-operation.svg)
+![Distributed operation](egeria-distributed-operation.svg)
 
 Today's organizations have their tools and technologies distributed across multiple data centres and cloud providers (green clouds). Within each location, we can run a platform (blue boxes) that provides integration services tailored to specific types of tools (orange circles).
 

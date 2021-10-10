@@ -3,17 +3,7 @@
 
 # Open Metadata Repository Cohort Operation
 
-An *Open Metadata Repository Cohort* (or more simply, just a *cohort*) is a collection of [servers](#cohort-members) sharing metadata using the [Open Metadata Repository Services (OMRS)](index.md). This sharing is peer-to-peer.
-
-Once a server becomes a member of the cohort, it can share metadata with, and receive metadata from, any other member.
-
-The cohort itself is self-configuring. At the heart of it is between one and four shared topics.
-
-Egeria needs to be flexible to support different performance and availability requirements. For example, where metadata is changing rapidly (such as in a data lake), this metadata should be dynamically queried from the repository where it was created and is being maintained because the rate of updates mean it would cost a lot of network traffic to keep a copy of this metadata up to date. The repository where a piece of metadata (metadata instance) was created and where it is maintained is called its [home metadata repository](/egeria-docs/concepts/home-metadata-repository.md).
-
-On the other hand, governance definitions (such as policies) and glossary terms rarely change. They are often administered centrally by the governance team and then linked to all metadata that describes the organization's data resources. Thus, it makes sense for this metadata to be replicated across the repositories within the cohort. These copies are called [reference copies](../metadata-repositories/#reference-copies) of the metadata, and they are read-only.
-
-The role of the OMRS is to optimize access to metadata across the cohort by using a combination of replication and federated queries, driven by the metadata workload from the connected tools.
+An *Open Metadata Repository Cohort* (or more simply, just a *cohort*) is a collection of [servers](#cohort-members) sharing metadata using a peer-to-peer exchange.  Once a server becomes a member of the cohort, it can share metadata with, and receive metadata from, any other member either through events, or through federated queries.
 
 ## Formation of a cohort
 
@@ -23,13 +13,15 @@ Cohort membership is established dynamically. This is through the [cohort topic(
 
 To join an open metadata repository cohort, a server must integrate with the OMRS module. OMRS then manages the metadata exchange. When OMRS running inside the server is [configured to join a cohort](/egeria-docs/guides/admin/guide) it first adds a [registration event](/egeria-docs/concepts/cohort-events/#registry-events) to the cohort topic(s). This event identifies the server, its metadata repository (if any) and its capabilities.
 
-![The first server to join the cohort issues a registration request and waits for others to join](repository-services-formation-of-a-cohort-1.png)
+![Figure 1](formation-of-a-cohort-1.svg)
+> **Figure 1:** The first server to join the cohort issues a registration request and waits for others to join.
 
 ### Subsequent servers
 
 When another server joins the cohort, it also adds its registration event to the cohort topic(s) and begins to receive the registration events from other members. The other members respond with [re-registration events](/egeria-docs/concepts/cohort-events/#registry-events) to ensure the new member has the latest information about the originator's capabilities. The exchange of registration information causes all members to verify that they have the latest information about their peers. This is maintained in their own [cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector) so that they can reconfigure themselves on restart without needing the other members to resend their registration information.
 
-![When another server joins the cohort they exchange registration information](repository-services-formation-of-a-cohort-2.png)
+![Figure 2](formation-of-a-cohort-2.svg)
+> **Figure 2:** When another server joins the cohort they exchange registration information.
 
 ### Peer-to-peer operation
 
@@ -39,7 +31,8 @@ The management of federated queries and the routing of maintenance requests is m
 
 The registration information includes the URL Root and server name of the member. The federation capability in each member allows it to issue metadata create, update, delete and search requests to each and every member of the cohort.
 
-![Once the registration is complete the cohort members can issue federated queries](repository-services-formation-of-a-cohort-3.png)
+![Figure 3](formation-of-a-cohort-3.svg)
+> **Figure 3:** Once the registration is complete the cohort members can issue federated queries.
 
 !!! tip "Primary mechanism for accessing metadata"
     This peer-to-peer operation and federated queries are the primary mechanism for accessing metadata, because the [access services](/egeria-docs/services/omas) use federated queries for every request they make for metadata.
@@ -48,16 +41,18 @@ The registration information includes the URL Root and server name of the member
 
 Once the cohort membership is established, the server begins publishing information using [instance events](/egeria-docs/concepts/cohort-events/#instance-events) about changes to the [home metadata instances](../metadata-repositories/#home-metadata-repositories) in their repository. These events can be used by other members to maintain a cache of reference copies of this metadata to improve availability of the metadata and retrieval performance. Updates to this metadata will, however, be automatically routed to the home repository by the enterprise repository services:
 
-![Metadata can also be replicated through the cohort to allow caching for availability and performance](repository-services-formation-of-a-cohort-4.png)
+![Figure 4](formation-of-a-cohort-4.svg)
+> **Figure 4:** Metadata can also be replicated through the cohort to allow caching for availability and performance.
 
 !!! tip "Metadata refresh"
-    A member may also request that metadata is "refreshed" across the cohort. The originator of the requested metadata then sends the latest version of this metadata to the rest of the cohort through the cohort topic. This mechanism is useful to seed the cache in a new member of the cohort and is invoked as a result of a federated query issued from the new member.
+    A member may also request that metadata is "refreshed" across the cohort. The originator of the requested metadata then sends the latest version of this metadata to the rest of the cohort through the cohort topic. This mechanism is useful to seed the cache in a new member of the cohort and is invoked as a result of a federated query issued from any cohort member.
 
 ### Dynamic changes to types
 
 Finally, as type definitions (TypeDefs) are added and updated, the cohort members send out events to allow the other members to verify that this type does not conflict with any of their types. Any conflicts in the types causes [audit log messages](/egeria-docs/concepts/audit-log) to be logged in all members, prompting action to resolve the conflicts.
 
-![TypeDef validation](repository-services-formation-of-a-cohort-5.png)
+![Figure 5](formation-of-a-cohort-5.svg)
+> **Figure 5:** TypeDef validation.
 
 ### Leaving the cohort
 
@@ -112,9 +107,9 @@ Each repository in the cohort has a [cohort registry](#cohort-registry) that sup
 
 The list of connections to the remote members of the cohort are passed to the OMRS Enterprise Connector Manager that in turn manages the configuration of the Enterprise OMRS Repository Connectors. The Enterprise OMRS Connector provides federated query support across the metadata cohort for the [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas).
 
-When a metadata repository registers with the [cohort registry](#cohort-registry), the administrator may either supply a unique server identifier, or ask the OMRS to generate one. This server identifier (the [metadata collection ID](../metadata-repositories/#metadata-collection-id)) is used in the OMRS event notifications, and on OMRS repository connector calls to identify the location of the home copy of the metadata entities and to identify which repository is requesting a service or supports a particular function.
+When a metadata repository registers with the [cohort registry](#cohort-registry), the administrator may either supply a unique server identifier, or ask the OMRS to generate one. This server identifier (the [metadata collection id](/egeria-docs/concepts/metadata-collection-id)) is used in the OMRS event notifications, and on OMRS repository connector calls to identify the location of the home copy of the metadata entities and to identify which repository is requesting a service or supports a particular function.
 
-Once the metadata repository has registered with the [cohort registry](#cohort-registry), it is a member of the metadata repository cohort and can synchronize and share metadata with other repositories in the cohort through the [OMRS topic(s)](/egeria-docs/concepts/cohort-events/#event-topics).
+Once the metadata repository has registered with the [cohort registry](#cohort-registry), it is a member of the metadata repository cohort and can synchronize and share metadata with other repositories in the cohort through the [cohort topic(s)](/egeria-docs/concepts/cohort-events/#event-topics).
 
 !!! tip "Registering with multiple cohorts"
     A single metadata repository can register with multiple metadata cohorts as long as its server identifier is unique across all cohorts that it joins and it manages the posting of events to the appropriate OMRS topic for each cohort it registers with.
@@ -125,10 +120,10 @@ Once the metadata repository has registered with the [cohort registry](#cohort-r
 
 The *cohort registry* resides in each [cohort member](#cohort-members). It is responsible for registering a member with a specific open metadata repository cohort and maintaining a list of the other members of this cohort.
 
-The registration process is managed by exchanging [registry events](vegeria-docs/cohort-events/#registry-events) over the [cohort topic(s)](/egeria-docs/concepts/cohort-events/#event-topics).
+The registration process is managed by exchanging [registry events](/egeria-docs/cohort-events/#registry-events) over the [cohort topic(s)](/egeria-docs/concepts/cohort-events/#event-topics).
 
 The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/egeria-docs/guides/developer/runtime-connectors/cohort-registry-store-connector).
 
-[^1]: You may want to see the [OMRS metamodel](/egeria-docs/guides/developer/metamodel) for more details on the granularity of metadata exchange.
+[^1]: You may want to see the [OMRS metamodel](/egeria-docs/guides/developer/metamodel/overview) for more details on the granularity of metadata exchange.
 
 --8<-- "snippets/abbr.md"

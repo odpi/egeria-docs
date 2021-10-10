@@ -10,7 +10,7 @@ hide:
 
 A *metadata access point* is an [OMAG Server](omag-server.md) that can be a [member of a cohort](/egeria-docs/concepts/cohort-member) and supports the [access services](/egeria-docs/services/omas).
 
-![Metadata access point in OMAG Server ecosystem](metadata-access-point.png)
+![Metadata access point in OMAG Server ecosystem](metadata-access-point.svg)
 
 This means it provides specialist metadata APIs to user interfaces and governance servers that embrace metadata from all connected open metadata repository cohorts.
 

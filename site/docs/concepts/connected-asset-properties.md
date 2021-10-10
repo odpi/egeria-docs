@@ -10,6 +10,9 @@ These properties are presented at three levels:
 * AssetDetails
 * AssetUniverse
 
+![Figure 1](connected-asset-properties.svg)
+> **Figure 1:** The structure of the connected asset properties
+
 ## Asset Summary
 
 AssetSummary holds asset properties that are used for displaying details of

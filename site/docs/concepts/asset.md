@@ -18,9 +18,9 @@ Examples of resources that might be catalogued as assets include:
 - Buildings and other locations.
 - Physical objects that have a unique identity (eg a serial number).
 
-Much governance is centered around an organization's resources since they represent tangible value. This involves maintaining information about the associated resource and managing events related to the resource in order to keep it protected in order to get the maximum value from it.
+Much governance is centered around an organization's resources since they represent tangible value. This involves maintaining information about the resource and managing events related to the resource in order to keep it protected and to get the maximum value from it.
 
-Egeria is particularly focused on providing the ability to maintain the information necessary for managing digital resources and the infrastructure that supports them. It also has a flexible type model to allow the definition of asset to be expanded to include a broader range of physical resources.
+Egeria is particularly focused on maintaining the information necessary for managing digital resources and the infrastructure that supports them. It also has a flexible type model to allow the definition of asset to be expanded to include a broader range of physical resources.
 
 ## Open metadata types
 

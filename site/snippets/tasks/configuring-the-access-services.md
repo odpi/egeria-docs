@@ -3,7 +3,7 @@
 
 ## Configure the access services
 
-The [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) provide the domain-specific APIs for metadata management and governance. They run in a [metadata server](/egeria-docs/concepts/metadata-server) or [metadata access point](/egeria-docs/concepts/metadata-access-point) and typically offer a REST API, Java client and an event-based interface for asynchronous interaction.
+The [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) provide the domain-specific APIs for metadata management and governance. They run in a [metadata access store](/egeria-docs/concepts/metadata-access-store) or [metadata access point](/egeria-docs/concepts/metadata-access-point) and typically offer a REST API, Java client and an event-based interface for asynchronous interaction.
 
 !!! attention "Prerequisite configuration"
     The access service configuration depends on the definitions of the [event bus](#set-up-the-default-event-bus) and the [local server's userId](#set-the-servers-user-id-and-optional-password).

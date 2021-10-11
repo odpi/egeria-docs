@@ -9,7 +9,7 @@ There are two parts to configuring the engine host services:
 
 ### Specify location of governance engine
 
-The location of the [metadata server](/egeria-docs/concepts/metadata-server) (or [metadata access point](/egeria-docs/concepts/metadata-access-point)) running the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine), which will supply the definitions of the governance engines that will run in the engine services, is configured using two properties:
+The location of the [metadata access store](/egeria-docs/concepts/metadata-access-store) (or [metadata access point](/egeria-docs/concepts/metadata-access-point)) running the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine), which will supply the definitions of the governance engines that will run in the engine services, is configured using two properties:
 
 - the [server url root](/egeria-docs/concepts/omag-server/#platform-url-root) of the metadata server's OMAG Server Platform, and
 - the [name of the metadata server](/egeria-docs/concepts/omag-server/#server-name).
@@ -60,7 +60,7 @@ Note the `engineServiceURLMarker` for the engine service that you want to config
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `engineServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 
-Each engine service is configured with the network location of the [metadata access point](/egeria-docs/concepts/metadata-access-point) / [metadata server](/egeria-docs/concepts/metadata-server) running the appropriate [OMAS](/egeria-docs/services/omas). There are a set of options that the engine service supports along with the list of configuration properties for the governance engines that will be run in the engine service. The governance engine's configuration properties identify which governance engine to
+Each engine service is configured with the network location of the [metadata access point](/egeria-docs/concepts/metadata-access-point) / [metadata access store](/egeria-docs/concepts/metadata-access-store) running the appropriate [OMAS](/egeria-docs/services/omas). There are a set of options that the engine service supports along with the list of configuration properties for the governance engines that will be run in the engine service. The governance engine's configuration properties identify which governance engine to
 run. The governance engine's definition, including the services it supports are retrieved from the metadata access point / metadata server when the engine service starts up.
 
 !!! post "POST - configure engine service"

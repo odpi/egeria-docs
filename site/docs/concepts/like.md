@@ -3,10 +3,6 @@
 
 # Like
 
-A "like" is an attachment that can be made to
-a personal message, personal note,
-forums and forum contributions, comments, teams and communities.
-
-
+A *like* is an attachment that a user can attach to a [referenceable](/egeria-docs/concepts/referencable) to indicate his/her approval of the element's presence or content.
 
 --8<-- "snippets/abbr.md"

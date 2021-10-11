@@ -7,8 +7,8 @@ Every metadata repository has a unique identifier called the **local-metadata-co
 
 Figure 1 shows the local metadata collection id of `1b96495f-82d3-4224-9fdd-31bcb84c224c` in the server configuration. A new local metadata collection id is assigned when the local repository is set up.
 
-![Figure 1: local metadata collection id in server configuration](local-metadata-collection-id-in-config.png)
-> Figure 1: local metadata collection id in server configuration
+![Figure 1](local-metadata-collection-id-in-config.png)
+> **Figure 1:** local metadata collection id in server configuration
 
 It also appears in an audit log message written at start up.
 

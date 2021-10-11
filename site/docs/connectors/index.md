@@ -3,7 +3,7 @@
 
 # Connector catalog
 
-Egeria has a growing collection of [*connectors*](/egeria-docs/frameworks/ocf/#connector) to third party technologies. These connectors help to accelerate the rollout of your open metadata ecosystem since they can be used to automate the extraction and distribution of metadata to the third party technologies.
+Egeria has a growing collection of *connectors* to third party technologies. These connectors help to accelerate the rollout of your open metadata ecosystem since they can be used to automate the extraction and distribution of metadata to the third party technologies.
 
 A connector is a client to a third party technology. It supports a standard API that Egeria calls and it then translates these calls into requests to the third party technology. Some connectors are also able to listen for notifications from the third party technology. When a notification is received, the connector converts its content into a call to Egeria to distribute the information to the open metadata ecosystem.
 
@@ -35,8 +35,7 @@ may be inbound, outbound, synchronous, polling or event-driven.
 ![Figure 1](/egeria-docs/connectors/integration/integration-connectors.svg)
 > **Figure 1:** Integration Connectors
 
-Details of how integration connectors work is
-described in [the developer guide](/egeria-docs/guides/developer/integration-connector).
+Details of how integration connectors work is described in [the developer guide](/egeria-docs/guides/developer/integration-connectors/overview).
 
 #### Files
 
@@ -84,7 +83,7 @@ The repository connectors provide the ability to integrate a third party metadat
 into an [open metadata repository cohort](/egeria-docs/concepts/cohort-member).
 
 Figure 2 shows the repository connector providing a native open metadata repository
-that uses a particular type of store within an Egeria [Metadata Server](/egeria-docs/concepts/metadata-server).
+that uses a particular type of store within an Egeria [Metadata Access Server](/egeria-docs/concepts/metadata-access-server).
 
 ![Figure 2](/egeria-docs/connectors/repository/native-repository-connector.png)
 > **Figure 2:** Repository connector supporting a native open metadata repository
@@ -98,7 +97,7 @@ that uses a particular type of store within an Egeria [Metadata Server](/egeria-
 | [Read-only OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector){ target=gh } | provides a native repository implementation that does not support the interfaces for create, update, delete; however, it does support the search interfaces and is able to cache metadata -- this means it can be loaded with open metadata archives to provide standard metadata definitions. |
 
 Figure 3 shows the repository connector providing a native open metadata repository
-that uses a particular type of store within an Egeria [Metadata Server](/egeria-docs/concepts/metadata-server).
+that uses a particular type of store within an Egeria [Metadata Access Server](/egeria-docs/concepts/metadata-a-access-server).
 
 ![Figure 3](/egeria-docs/connectors/repository/adapter-repository-connector.svg)
 > **Figure 3:** Repository connector and optional event mapper supporting an adapter to a third party metadata catalog
@@ -109,7 +108,7 @@ that uses a particular type of store within an Egeria [Metadata Server](/egeria-
 | [IBM Information Governance Catalog (IGC) OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh } | implements read-only connectivity to the metadata repository within the [IBM InfoSphere Information Server :material-dock-window:](https://www.ibm.com/analytics/information-server){ target=ibm } suite |
 | [SAS Viya OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh } | implements metadata exchange to the metadata repository within the [SAS Viya Platform :material-dock-window:](https://support.sas.com/en/software/sas-viya.html){ target=sas } |
 
-The [repository connectors](/egeria-docs/connectors/repository-connector) implement the [`OMRSMetadataCollection` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/OMRSMetadataCollection.java){ target=gh } interface to allow metadata to be communicated and exchanged according to Egeria's protocols and [type definitions](/egeria-docs/introduction/key-concepts/#metadata-types).
+The [repository connectors](/egeria-docs/connectors/repository-connector) implement the [`OMRSMetadataCollection` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/OMRSMetadataCollection.java){ target=gh } interface to allow metadata to be communicated and exchanged according to Egeria's protocols and [type definitions](/egeria-docs/types).
 
 
 ## Open Discovery Services

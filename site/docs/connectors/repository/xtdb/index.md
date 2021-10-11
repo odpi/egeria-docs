@@ -46,7 +46,7 @@ XTDB supports temporal graph queries to provide native support for storing histo
 
 ## How it works
 
-The XTDB OMRS Repository Connector is a [repository connector](/egeria-docs/connectors/repository), hosted by the [plugin repository proxy](/egeria-docs/services/omrs/todo), running on a [metadata server](/egeria-docs/concepts/metadata-server).
+The XTDB OMRS Repository Connector is a [repository connector](/egeria-docs/connectors/repository), hosted by the [plugin repository proxy](/egeria-docs/services/omrs/todo), running on a [metadata access store](/egeria-docs/concepts/metadata-access-store).
 
 ![Operation of the XTDB OMRS repository connector](xtdb-connector-overview.svg)
 
@@ -61,7 +61,7 @@ XTDB itself handles write transactions and persistence guarantees via its APIs, 
 
 ## Configuration
 
-The following options are used to configure this connector, as part of the [*configure the local repository* step when configuring a metadata server](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#configure-the-local-repository).
+The following options are used to configure this connector, as part of the [*configure the local repository* step when configuring a metadata server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-local-repository).
 
 ### Pluggable persistence
 
@@ -223,7 +223,7 @@ Each XTDB pod runs its own separate [OMAG Server Platform](/egeria-docs/concepts
 
 ![Configure Egeria](xtdb-ha-3.svg)
 
-The next script creates a singular configuration document via the `pts` pod, and deploys this common configuration to each of the pods (again using the `headless` service to directly address each one individually): each will have a separate `xtdb` server configured with the same XTDB connector (same [metadata collection ID](/egeria-docs/services/omrs/metadata-repositories/#metadata-collection-id)).
+The next script creates a singular configuration document via the `pts` pod, and deploys this common configuration to each of the pods (again using the `headless` service to directly address each one individually): each will have a separate `xtdb` server configured with the same XTDB connector (same [metadata collection id](/egeria-docs/concepts/metadata-collection-id)).
 
 When the `/instance` is called against each pod to start the connector, each will create a local index and instance of the `IXtdb` interface: all pointing to the same golden stores (in this example, Kafka and EDB) where all persistence for XTDB is handled. All servers will refer to the singular `xtdb` load-balancing service as their root URL.
 

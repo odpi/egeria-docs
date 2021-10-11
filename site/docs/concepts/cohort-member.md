@@ -3,27 +3,22 @@
 
 # Cohort Member
 
-A **Cohort Member** is an [OMAG Server](omag-server.md) that is capable of joining an
-**open metadata repository cohort**.
+A *Cohort Member* is an [OMAG Server](omag-server.md) that is capable of joining an *open metadata repository cohort*.
 
-The open metadata repository cohort (or cohort for short) is a group of OMAG servers that
-are exchanging metadata using a peer-to-peer replication
-protocol and federated queries.  This is shown in Figure 1.
+The open metadata repository cohort (or cohort for short) is a group of OMAG servers that are exchanging metadata using a peer-to-peer replication protocol and federated queries.  This is shown in Figure 1.
 
-![Figure 1](cohort-member.png)
+![Figure 1](cohort-member.svg)
 > **Figure 1:** OMAG Servers connected via a cohort
 
 The cohort is self-configuring.  At the heart of it is between one and four shared
-topics.  Each member publishes a registration request on the appropriate topic when they want to join.
-This is picked up by the existing members who add this new server to their
-[registry of members](../../../repository-services/docs/component-descriptions/cohort-registry.md)
+[cohort topics].  Each member publishes a registration request on the appropriate topic when they want to join.  This is picked up by the existing members who add this new server to their registry of members known as the [cohort registry](/egeria-docs/concepts/cohort-registry)
 and re-send their registration through the same topic to allow the new member to build up its own registry.
 
 When an OMAG server permanently leaves the cohort, it sends an unregistration request.
 This enables the other members to remove the parting member from their registries.
 
-The purpose of the registry in each member is to configure its federated query
-capability supported by the [enterprise repository services](../../../repository-services/docs/subsystem-descriptions/enterprise-repository-services.md).
+The purpose of the cohort registry in each member is to configure its federated query
+capability.
 The registration information includes the URL Root and server name
 of the member.  The federation capability in each OMAG server allows it to issue
 metadata create, update, delete and search requests to each and every member of the
@@ -51,11 +46,12 @@ specific collections of valuable objects such as
 Figure 2 shows the different types of cohort members.
 Follow the links below the diagram to find out more about each one's purpose.
 
-![Figure 2](cohort-member-types.png)
+![Figure 2](cohort-member-types.svg)
 > **Figure 2:** Different types of OMAG Servers that can be connected via a cohort
 
-* [Metadata Server](metadata-server.md)
-* [Metadata Access Point](metadata-access-point.md)
+* [Metadata Access Server](metadata-access-server.md)
+   * [Metadata Access Store](metadata-access-store.md)
+   * [Metadata Access Point](metadata-access-point.md)
 * [Repository Proxy](repository-proxy.md)
 * [Conformance Test Server](conformance-test-server.md)
 
@@ -68,6 +64,6 @@ metadata repository cohort in
 The administration hands on lab called "**Understanding Cohort Configuration Lab**"
 provides an opportunities to query the cohort registries of cohort members as they
 exchange metadata for Coco Pharmaceuticals.
-Instructions for running the labs [can be found here](../../../../open-metadata-resources/open-metadata-labs).
+Instructions for running the labs [can be found here](/egeria-docs/education/open-metadata-labs).
 
 --8<-- "snippets/abbr.md"

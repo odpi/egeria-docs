@@ -7,7 +7,7 @@ hide:
 <!-- Copyright Contributors to the Egeria project. -->
 
 # Cohort Registry Store Connectors
-
+p
 The *cohort registry store* stores information about the repositories registered in the [open metadata repository cohort](/egeria-docs/services/omrs/cohort).  
 
 Each server in the open metadata repository cohort has a [cohort registry](/egeria-docs/services/omrs/cohort/#cohort-registry) component to manage its registration with the cohort and maintain the contents of its local cohort registry store.

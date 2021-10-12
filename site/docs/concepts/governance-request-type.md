@@ -12,7 +12,7 @@ along with request parameters to configure the behaviour of the service
 in a [governance engine definition](governance-engine.md) as shown in
 Figure 1.
 
-![Figure 1](../services/omas/governance-engine/governance-request-type.png)
+![Figure 1](governance-request-type.svg)
 > **Figure 1:** Governance request types as part of a governance engine definition
 
 Governance services are run by the

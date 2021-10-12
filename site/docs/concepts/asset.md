@@ -30,7 +30,8 @@ More information on the types of attachments that can be added to an asset can b
 
 Inheriting from asset is a hierarchy of increasingly-specialized definitions for different types of assets. Each definition adds more properties about the asset:
 
-![Asset hierarchy](asset-hierarchy.svg)
+![Figure 1](asset-hierarchy.svg)
+> **Figure 1:** Hierarchy of asset types defined in the open metadata types
 
 **[Area 2](/egeria-docs/types/2)** is where the asset hierarchy is built out.
 
@@ -61,10 +62,14 @@ Some examples:
 | [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview) | provides a service for maintaining information about the IT assets and supporting infrastructure owned or used by an organization. |
 | [Data Science OMAS](/egeria-docs/services/omas/data-science/overview) | provides a service for maintaining information about analytical models and related assets such as python notebooks. |
 
+
+![Figure 2](asset-example.svg)
+> **Figure 2:** Example of the type of information that can be attached to an asset
+
 ## Sharing information about assets
 
-Egeria's [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) provides the ability to store and extract information about assets in a distributed collection of servers called an [open metadata repository cohort](/egeria-docs/services/omrs/cohort). The cohort provides both peer-to-peer exchange of metadata via an event bus topic and federated queries between different members of the cohort. Egeria provides a [metadata server](/egeria-docs/concepts/metadata-server), a [metadata access point](/egeria-docs/concepts/metadata-access-point) and a [repository proxy](/egeria-docs/concepts/repository-proxy) server that are all able to join a cohort. The repository proxy supports the integration of third party servers (typically [asset managers](../server-capabilities/asset-manager.md)) into the cohort. The mapping between the third party server's APIs and the open metadata APIs in this case is implemented in an [repository connector](/egeria-docs/connectors/repository-connector).
+Egeria's [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) provides the ability to store and extract information about assets in a distributed collection of servers called an [open metadata repository cohort](/egeria-docs/concepts/cohort-member). The cohort provides both peer-to-peer exchange of metadata via an event bus topic and federated queries between different members of the cohort. Egeria provides a [metadata access server](/egeria-docs/concepts/metadata-access-server), a [metadata access point](/egeria-docs/concepts/metadata-access-point) and a [repository proxy](/egeria-docs/concepts/repository-proxy) server that are all able to join a cohort. The repository proxy supports the integration of third party servers (typically [asset managers](/egeria-docs/software-server-capability/#asset-manager)) into the cohort. The mapping between the third party server's APIs and the open metadata APIs in this case is implemented in an [repository connector](/egeria-docs/concepts/repository-connector).
 
-It is also possible to manage the exchange of asset metadata with other types of third party technologies using the [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis) running in an [integration daemon](/egeria-docs/concepts/integration-daemon). Using this pattern is simpler to integrate but involves maintaining a copy of the third party technology's metadata in a [metadata server](/egeria-docs/concepts/metadata-server) that can then join one or more open metadata repository cohorts to share this metadata more broadly. The mapping between the third party technology's APIs and the open metadata APIs in this case is implemented in an [integration connector](/egeria-docs/connectors/integration-connector).
+It is also possible to manage the exchange of asset metadata with other types of third party technologies using the [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis) running in an [integration daemon](/egeria-docs/concepts/integration-daemon). Using this pattern is simpler to integrate but involves maintaining a copy of the third party technology's metadata in a [metadata access store](/egeria-docs/concepts/metadata-access-store) that can then join one or more open metadata repository cohorts to share this metadata more broadly. The mapping between the third party technology's APIs and the open metadata APIs in this case is implemented in an [integration connector](/egeria-docs/connectors/integration-connector).
 
 --8<-- "snippets/abbr.md"

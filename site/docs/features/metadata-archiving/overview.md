@@ -42,15 +42,13 @@ This can be used to recover the metadata repository content after a bad load or 
 
 Open metadata archives are created through Java utilities.  There are two approaches:
 
-* Content packs are created using the
-[repository services archive utilities](../../open-metadata-implementation/repository-services/repository-services-archive-utilities).
+* Content packs are created using the repository services archive utilities.
 The Egeria supported utilities for open metadata archives described at the bottom of this page use this
 approach.
 
 * Metadata export archives and repository back-ups are created by using the repository services clients to extract
 the metadata elements from a live repository and the to store them in the
-archive using the
-[repository services archive utilities](../../open-metadata-implementation/repository-services/repository-services-archive-utilities).
+archive using the repository services archive utilities.
 
 ## Loading open metadata archives
 
@@ -79,7 +77,7 @@ The header defines the type of archive and its properties.  Then there is the ty
 This contains new types and updates to types (patches).  Finally there is the instance store.
 This contains new instances (entities, relationships and classifications).
 
-![Figure 4](../../open-metadata-implementation/repository-services/docs/open-metadata-archive-structure.png#pagewidth)
+![Figure 4](open-metadata-archive-structure.svg)
 > **Figure 4:** Inside an Open Metadata Archive
 
 The archive loads in the following order:
@@ -102,7 +100,7 @@ The archive loads in the following order:
   * Classifications
   
 More information about the design of the open metadata archives can be found in
-the [Open Metadata Repository Services (OMRS)](../../open-metadata-implementation/repository-services/docs/open-metadata-archive.md) design documentation.
+the [open metadata archive](/egeria-docs/concepts/open-metadata-archive) concept.
 
 ## Supported utilities for open metadata archives
 

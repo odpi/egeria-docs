@@ -100,7 +100,7 @@ The OMRS is highly configurable and runs in every type of [OMAG Server](/egeria-
 
 ![Local only](omrs-role-local-only.png)
 
-The OMRS can support the OMAS's with access to a single, local-only repository - with no connectivity to other open metadata repositories. This is what runs in a [metadata server](/egeria-docs/concepts/metadata-server) that is not connected to an [open metadata repository cohort](cohort.md).
+The OMRS can support the OMAS's with access to a single, local-only repository - with no connectivity to other open metadata repositories. This is what runs in a [metadata access server](/egeria-docs/concepts/metadata-access-server) that is not connected to an [open metadata repository cohort](cohort.md).
 
 ### Access services (only)
 
@@ -120,13 +120,13 @@ The OMRS can support a server where the OMAS's are not deployed and the local re
 
 Of course, it is also possible to run all the OMRS components together as well, supporting the OMAS's with a local repository and connectivity to other repositories through the cohort servers.
 
-This is what runs in a [metadata server](/egeria-docs/concepts/metadata-server) that is connected to an [open metadata repository cohort](cohort.md).
+This is what runs in a [metadata access server](/egeria-docs/concepts/metadata-access-server) that is connected to an [open metadata repository cohort](cohort.md).
 
 ### Administration subsystem (alone)
 
 ![Governance Servers and View Servers](omrs-role-minimal.png)
 
-Finally, the administration subsystem alone is active in the servers that are not [cohort members](cohort/#cohort-members), that is the [Governance Servers](/egeria-docs/concepts/governance-server) and the
+Finally, the administration subsystem alone is active in the servers that are not [cohort members](/egeria-docs/concepts/cohort-member), that is the [Governance Servers](/egeria-docs/concepts/governance-server) and the
 [view servers](/egeria-docs/concepts/view-server).
 
 ## OMRS components

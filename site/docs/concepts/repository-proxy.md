@@ -10,7 +10,7 @@ hide:
 
 A *repository proxy* is an [OMAG Server](/egeria-docs/concepts/omag-server) that has been configured to act as a proxy to a third party metadata repository. It is used by a technology that is integrating using the [adapter integration pattern](../../../../open-metadata-publication/website/open-metadata-integration-patterns/adapter-integration-pattern.md).
 
-![Repository proxy translating between third party APIs/events and open metadata](repository-proxy.png)
+![Repository proxy translating between third party APIs/events and open metadata](repository-proxy.svg)
 
 The repository proxy hosts a repository connector to wrap the third party metadata server's APIs and an optional event mapper connector.  There are two repository connector implementations included with Egeria:
 

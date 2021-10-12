@@ -9,7 +9,7 @@ A configuration document provides the configuration details for a single [OMAG S
 
 An OMAG Server's configuration document is structured into elements that each describe the configuration properties for each of its desired capabilities.
 
-![Structure of the configuration document](configuration-document-structure.png)
+![Structure of the configuration document](configuration-document-structure.svg)
 
 The sections are as follows:
 

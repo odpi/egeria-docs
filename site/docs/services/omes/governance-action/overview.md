@@ -18,7 +18,7 @@ The governance Action OMES also provides an API to allow a third party tool to v
 
 ## Using the Governance Action OMES
 
-Governance action services are defined and linked to one or more [governance action engines](/egeria-docs/frameworks/gaf/#governance-action-engine) using the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine). The definitions for both the governance action engines and their linked services are stored in a [metadata server](/egeria-docs/concepts/metadata-server).
+Governance action services are defined and linked to one or more [governance action engines](/egeria-docs/frameworks/gaf/#governance-action-engine) using the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine). The definitions for both the governance action engines and their linked services are stored in a [metadata access server](/egeria-docs/concepts/metadata-access-server).
 
 When the Governance Action OMES is configured in the engine host, a list of governance action engines is supplied. This determines which governance action engines and hence governance action services that it supports.
 

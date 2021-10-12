@@ -38,7 +38,7 @@ Through the OCF, we can:
 1. Plug-in different technologies to Egeria.
 2. Plug-in support for open metadata into the client libraries used by applications to access data resources and services.
 
-![How OCF connectors are used in Egeria](compare-use-of-connectors.png)
+![How OCF connectors are used in Egeria](compare-use-of-connectors.svg)
 
 Many subsystems in Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) and [servers](/egeria-docs/concepts/omag-server) support the first approach. They define a specialized interface for the type of connector they support.
 

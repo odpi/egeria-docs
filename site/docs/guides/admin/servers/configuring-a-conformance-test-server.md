@@ -6,7 +6,7 @@
 Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
 a [configuration document](/egeria-docs/concepts/configuration-document).
 
-![Configuration for a conformance test server](conformance-suite-config.png)
+![Configuration for a conformance test server](conformance-suite-config.svg)
 
 --8<-- "snippets/tasks/configuring-event-bus.md"
 

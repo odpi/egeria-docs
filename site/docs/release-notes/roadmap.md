@@ -66,7 +66,7 @@ Its use is described in the [developer's guide](/egeria-docs/guides/developer/gu
 - The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) provides a multi-tenant runtime platform for [OMAG Servers](/egeria-docs/concepts/omag-server). Each OMAG Server hosts the connectors along with the Egeria services to integrate third party technology.
     - The [server chassis](/egeria-docs/services/server-chassis) uses Spring Boot to provide the web server and REST API support for the platform.
     - The [administration services](/egeria-docs/services/admin-services) supports configuring and operating the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/egeria-docs/guides/admin/guide)
-    - The [platform services](/egeria-docs/servvices/platform-services) provide the means to query the OMAG Servers and services running on an OMAG Server Platform.
+    - The [platform services](/egeria-docs/services/platform-services) provide the means to query the OMAG Servers and services running on an OMAG Server Platform.
     - The [multi-tenancy management](/egeria-docs/services/multi-tenant) module supports multiple OMAG Servers running on an OMAG Server Platform.
     - The [repository services](/egeria-docs/services/omrs) provide the basic ability to share metadata between metadata repositories. The metadata repositories are organized
       into [open metadata repository cohorts](/egeria-docs/concepts/cohort-member). These cohorts define the scope of the metadata sharing and ensure metadata is available to all consumers within the cohort.

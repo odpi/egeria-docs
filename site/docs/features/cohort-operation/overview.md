@@ -93,7 +93,7 @@ The server's [metadata security connector](/egeria-docs/features/metadata-securi
 
 The types of cohort members include:
 
-- [Metadata server](/egeria-docs/concepts/metadata-server)
+- [Metadata access store](/egeria-docs/concepts/metadata-access-store)
 - [Metadata access point](/egeria-docs/concepts/metadata-access-point)
 - [Repository proxy](/egeria-docs/concepts/repository-proxy)
 - [Conformance test server](/egeria-docs/concepts/conformance-test-server)

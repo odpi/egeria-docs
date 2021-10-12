@@ -7,12 +7,12 @@ Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-serv
 
 A metadata access store can be run standalone, without connecting to a cohort:
 
-![Standalone metadata access store](standalone-metadata-server-config.png)
+![Standalone metadata access store](standalone-metadata-access-store-config.svg)
 
 Adding the cohort configuration enables the metadata server to communicate with other metadata
 servers:
 
-![Connected metadata access store](connected-metadata-server-config.png)
+![Connected metadata access store](connected-metadata-access-store-config.svg)
 
 --8<-- "snippets/tasks/configuring-event-bus.md"
 

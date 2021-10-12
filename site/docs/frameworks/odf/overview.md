@@ -111,7 +111,7 @@ Egeria's implementation of the discovery engine is provided by the [Asset Analys
 
 ## Discovery server
 
-The *discovery server* is the server environment that hosts one or more [discovery engines](#discovery-engine). Discovery servers are deployed close to the physical assets they are analysing. They connect to the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine) running in a [metadata server](/egeria-docs/concepts/metadata-server) to provide metadata about assets and to store the results of the discovery service's analysis. Many discovery servers can use the same metadata server.
+The *discovery server* is the server environment that hosts one or more [discovery engines](#discovery-engine). Discovery servers are deployed close to the physical assets they are analysing. They connect to the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine) running in a [metadata access server](/egeria-docs/concepts/metadata-access-server) to provide metadata about assets and to store the results of the discovery service's analysis. Many discovery servers can use the same metadata server.
 
 In Egeria, the discovery server is implemented by the [Asset Analysis OMES](/egeria-docs/services/omes/asset-analysis/overview) running in the [engine host](/egeria-docs/concepts/engine-host) OMAG Server.
 

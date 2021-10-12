@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
@@ -17,11 +22,10 @@ This client is accessed
 through the [discovery annotation store](discovery-annotation-store.md).
 
 The discovery analysis report store also enables a long running discovery service
-(typically a [discovery pipeline](discovery-pipeline.md)) to record its current
+(typically a [discovery pipeline](open-discovery-service.md#discovery-pipeline)) to record its current
 analysis step.
 
-
-
 ## Discovery annotations
+
 
 --8<-- "snippets/abbr.md"

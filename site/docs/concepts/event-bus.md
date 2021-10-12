@@ -19,19 +19,19 @@ There are different event broker implementations with greater or lesser reliabil
 
 Egeria's default event broker is [Apache Kafka :material-dock-window:](https://kafka.apache.org/){ target=kafka }. Each topic is accessed through an [open metadata topic connector](/egeria-docs/connectors/#Open Metadata Topic Connectors).
 
-![The event bus in use by OMAG Servers and other technologies](event-bus-role.png)
+![The event bus in use by OMAG Servers and other technologies](event-bus-role.svg)
 
 Details of open metadata topic connectors are needed in multiple places in a server's [configuration document](configuration-document.md). To simplify this configuration, the event bus config is added to the server's configuration document at the [start of the configuration process](/egeria-docs/guides/admin/servers). The event bus config establishes a set of defaults for the open metadata topic connectors. These defaults are used whenever open metadata topic connectors are configured.
 
 The subsystems using the event bus have a specialized connector that supports event exchange for a specific type of event. Since it is necessary to be able to swap the event broker implementation, these connectors embed an [open metadata topic connector](/egeria-docs/connectors/open-metadata-topic-connector) within their implementation.
 
-![Nested topic connectors](nested-topic-connectors.png)
+![Nested topic connectors](nested-topic-connectors.svg)
 
 When the connection for one of these subsystem topic connectors is configured, the defaults from the event bus config are used to set up the nested open metadata topic connection.
 
 The resulting configuration for these nested connectors is as follows:
 
-![Embedded event bus configuration](embedded-event-bus-config.png)
+![Embedded event bus configuration](embedded-event-bus-config.svg)
 
 1. The common configuration for the event bus is identified and configured using the event bus config.
 2. This configuration is encoded in a [connection](/egeria-docs/concepts/connection) object for the generic open metadata topic connector.

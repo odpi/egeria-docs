@@ -6,7 +6,7 @@
 Each [type of OMAG Server](/egeria/concepts/omag-server/#types-of-omag-server) is configured by creating
 a [configuration document](/egeria/concepts/configuration-document).
 
-![Configuration for an integration daemon](integration-daemon-config.png)
+![Configuration for an integration daemon](integration-daemon-config.svg)
 
 --8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
 

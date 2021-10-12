@@ -20,7 +20,7 @@ Many of the configuration values are [connections](/egeria-docs/concepts/connect
 
 These connectors enable Egeria to run in different deployment environments and to connect to different third party technologies.
 
-![Connector types supported by the OMAG Servers](omag-server-connector-types.png)
+![Connector types supported by the OMAG Servers](omag-server-connector-types.svg)
 
 In the descriptions of the configuration commands, there are placeholders for the specific configuration values: they are names of the value in double curly braces. For example:
 

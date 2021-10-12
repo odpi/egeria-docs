@@ -1,7 +1,12 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Connector Type - part of the [Open Connector Framework (OCF)](../..)
+# Connector Type
 
 The connector type is a set of properties that defines the 
 supported capabilities and the identity of the [connector provider](connector-provider.md)
@@ -35,11 +40,9 @@ The connector type is linked to the
 
 ## Further information
 
- * The open metadata type for a connector type is defined in 
-   [model 0201](../../../../../open-metadata-publication/website/open-metadata-types/0201-Connectors-and-Connections.md).
+- The open metadata type for a connector type is defined in [model 0201](/egeria-docs/types/2/0201-Connectors-and-Connections).
 
- * The [open connector archives](../../../../../open-metadata-resources/open-metadata-archives/open-connector-archives) 
-   module provides an open metadata archive that contains connector types for connectors supported by Egeria.
+- The [open connector archives](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-connector-archives)  module provides an open metadata archive that contains connector types for connectors supported by Egeria.
 
 
 --8<-- "snippets/abbr.md"

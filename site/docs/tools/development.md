@@ -21,7 +21,7 @@ The Egeria project's git repositories are located on [GitHub :material-dock-wind
 | Repository | Purpose |
 |---|---|
 | [`egeria` :material-github:](https://github.com/odpi/egeria){ target=gh } | contains the core Egeria function along with samples, tutorials and documentation. |
-| [`egeria-connector-xtdb` :material-github:](https://github.com/odpi/egeria-connector-xtdb){ target=gh } | contains a plugin repository connector to use [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as a pluggable back-end for an Egeria [metadata server](/egeria-docs/concepts/metadata-server). |
+| [`egeria-connector-xtdb` :material-github:](https://github.com/odpi/egeria-connector-xtdb){ target=gh } | contains a plugin repository connector to use [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as a pluggable back-end for an Egeria [metadata access store](/egeria-docs/concepts/metadata-access-store). |
 | [`egeria-connector-hadoop-ecosystem` :material-github:](https://github.com/odpi/egeria-connector-hadoop-ecosystem){ target=gh } | contains connectors to integrate technologies from the Hadoop ecosystem into the open metadata ecosystem. |
 | [`egeria-connector-ibm-information-server` :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh } | contains connectors to integrate IBM Information Server into the open metadata ecosystem. |
 | [`data-governance` :material-github:](https://github.com/odpi/data-governance){ target=gh } | contains Egeria's Guidance on Governance (GoG) as well as large media files such as presentations and movies. |

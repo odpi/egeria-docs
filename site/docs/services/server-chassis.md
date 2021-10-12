@@ -30,16 +30,16 @@ and Governance (OMAG) Servers in the
 [OMAG Server Platform](/egeria-docs/concepts/omag-server).  
 
 The **server-chassis-spring** module is an implementation of the
-server chassis written using [Spring Boot](../../../developer-resources/Spring.md).
+server chassis written using [Spring Boot](/egeria-docs/tools/spring).
 Its **main()** method is located in a Java class called **OMAGServerPlatform**.
 
 When the OMAGServerPlatform is first started, all of its REST APIs
 are visible and callable by an external client.
-However, only the [Administration Services](admin-services) 
-and [Platform Services](platform-services) are operational at this point.
+However, only the [Administration Services](/egeria-docs/services/admin-services) 
+and [Platform Services](/egeria-docs/services/platform-services) are operational at this point.
 The other Open Metadata and Governance (OMAG) services will each give an error response if called.
 
-The [OMAG Subsystems](/egeria-docs/concepts/omag-subsystem.md)
+The [OMAG Subsystems](/egeria-docs/concepts/omag-subsystem)
 supporting the other OMAG services are selectively activated in one or more
 [OMAG Servers](/egeria-docs/concepts/omag-server) that run
 in the OMAGServerPlatform.

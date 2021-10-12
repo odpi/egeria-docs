@@ -34,10 +34,10 @@ Object-oriented software engineers would know of this type of relationship as *b
 
 ## OMAG Server interactions
 
-![How the OMAG Servers interact](/egeria-docs/concepts/omag-server-ecosystem.png)
+![How the OMAG Servers interact](/egeria-docs/concepts/omag-server-ecosystem.svg)
 
-- The [cohort members](/egeria-docs/services/omrs/cohort/#cohort-members) communicate with one another via an [open metadata repository cohort](/egeria-docs/services/omrs/cohort). This means that they exchange metadata through a low level, fine-grained API supported by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs).
-- The [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) are built on top of the repository services. They live in the [metadata access point](/egeria-docs/concepts/metadata-access-point) / [metadata servers](/egeria-docs/concepts/metadata-server). They offer more course-grained interfaces, specialized for particular types of technology.
+- The [cohort members](/egeria-docs/concepts/cohort-members) communicate with one another via an [open metadata repository cohort](/egeria-docs/services/omrs/cohort). This means that they exchange metadata through a low level, fine-grained API supported by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs).
+- The [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) are built on top of the repository services. They live in the [metadata access store](/egeria-docs/concepts/metadata-access-store). They offer more course-grained interfaces, specialized for particular types of technology.
 - The [governance servers](/egeria-docs/concepts/governance-server) are again specialized for particular types of metadata integration or additional governance activity. They connect to a metadata access point / metadata server.
 - Finally, the [view servers](/egeria-docs/concepts/view-server) support the services for the solution user interfaces. They also connect to a metadata access point / metadata server.
 

@@ -15,6 +15,8 @@ from a data engine.  This information results in new
 being defined in open metadata linked to the data sources that it works with.
 This is valuable information for lineage.
 
+![Data Engine Proxy](data-engine-proxy.svg)
+
 The data engine proxy is paired with the [Data Engine OMAS](/egeria-docs/services/omas/data-engine/overview).
 Its connector interfaces are defined
 in the [data-engine-proxy-connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/governance-servers/data-engine-proxy-services/data-engine-proxy-connector){ targett=gh }

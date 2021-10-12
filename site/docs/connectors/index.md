@@ -154,24 +154,24 @@ it needs to operate.  Most of these connectors relate to persistent storage, or 
 ### Open Metadata Topic Connectors
 
 The Open Metadata Topic Connectors are used by Egeria to read and write 
-[events](/egeria-docs/basic-concepts/event.md) to a
-[topic](/egeria-docs/basic-concepts/topic.md) managed by an
-[event broker](/egeria-docs/basic-concepts/event-broker.md).
+[events](/egeria-docs/concepts/basic-concepts/#event) to a
+[topic](/egeria-docs/concepts/basic-concepts/#topic) managed by an
+[event broker](/egeria-docs/concepts/basic-concepts/#event-broker).
 These events contain notifications relating to changes in metadata and the topic provides
 an asynchronous event exchange service hosted in the event broker.
 
 ![Figure 6](/egeria-docs/connectors/runtime/open-metadata-topic-connector.svg)
 > **Figure 6:** Open Metadata Topic Connectors
 
-The Open Metadata Topic Connectors connect servers into an [open metadata repository cohort](../../../open-metadata-implementation/admin-services/docs/concepts/cohort-member.md)
-and exchange notifications through the [Open Metadata Access Services (OMAS)'s](../../../open-metadata-implementation/access-services)
+The Open Metadata Topic Connectors connect servers into an [open metadata repository cohort](/egeria-docs/concepts/cohort-member)
+and exchange notifications through the [Open Metadata Access Services (OMAS)'s](/egeria-docs/services/omas)
 topics called the
 [InTopic](/egeria-docs/concepts/in-topic) and
 [OutTopic](/egeria-docs/concepts/out-topic).
 
 Egeria provides a single implementation of an open metadata connector for Apache Kafka that it uses by default.
 
-* The [Kafka Open Metadata Topic Connector](../../../open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/kafka-open-metadata-topic-connector) implements 
+* The [Kafka Open Metadata Topic Connector](/egeria-docs/connectors/runtime-connectors/kafka-open-metadata-topic-connector) implements 
 an [Apache Kafka](https://kafka.apache.org/) connector for a topic that exchanges
 Java Objects as JSON payloads.
 
@@ -198,10 +198,10 @@ There is one configuration document store connector defined for each
 
 There are two implementations of the configuration document store connector provided by Egeria: one for an encrypted store (default) and the other for a plain text store.
 
-* **[Encrypted File Configuration Store Connector](../../../open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector)** stores each
+* **[Encrypted File Configuration Store Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector)** stores each
 configuration document as an encrypted JSON file.
 
-* **[File Configuration Store](../../../open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector)** stores each
+* **[File Configuration Store](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector)** stores each
 configuration document as a clear text JSON file.
 
 The definition of the connector interface for these connectors is
@@ -228,11 +228,11 @@ for each [member of a cohort](../../../open-metadata-implementation/admin-servic
 Egeria provides a single implementation of a
 cohort registry store connector:
 
-* [Cohort Registry File Store Connector](../../../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors/cohort-registry-file-store-connector)
+* [Cohort Registry File Store Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors/cohort-registry-file-store-connector)
   provides the means to store the cohort registry membership details as a JSON file.
   
 The definition of the connector interface for these connectors is
-defined in the [repository-services-api](../../../open-metadata-implementation/repository-services/repository-services-apis) module
+defined in the [repository-services-api](.https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis) module
 in the
 [org.odpi.openmetadata.repositoryservices.connectors.stores.cohortregistrystore](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/cohortregistrystore) Java package.
 
@@ -240,12 +240,12 @@ in the
 ## Open Metadata Archive Store Connectors
 
 The open metadata archive store connectors can
-read and write [open metadata archives](../../../open-metadata-resources/open-metadata-archives).
+read and write [open metadata archives](/egeria-docs/concepts/open-metadata-archive).
 Open metadata archives store open metadata types and instances for sharing,
 or for back up.
 These archives can be
-[loaded into an OMAG Server at start up](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-startup-archives.md) or
-[added to a running OMAG Server](../../../open-metadata-implementation/admin-services/docs/user/adding-archive-to-running-server.md).
+[loaded into an OMAG Server at start up](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store#configuring-the-startup-archives) or
+[added to a running OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store#adding-archive-to-running-server).
 
 ![Figure 9](/egeria-docs/connectors/runtime/open-metadata-archive-store-connector.svg)
 > **Figure 9:** Open Metadata Archive Store Connector
@@ -253,11 +253,11 @@ These archives can be
 
 Egeria provides a single implementation of the open metadata archive store connector:
 
-* [Open Metadata Archive File Store Connector](../../../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors/open-metadata-archive-file-connector)
+* [Open Metadata Archive File Store Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors/open-metadata-archive-file-connector)
   stores an open metadata archive as a plain text JSON file.
 
 The definition of the connector interface for these connectors is
-defined in the [repository-services-api](../../../open-metadata-implementation/repository-services/repository-services-apis) module
+defined in the [repository-services-api](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis) module
 in the
 [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore) Java package.
 
@@ -274,32 +274,32 @@ at any one time and they can each be configured to only process particular types
 
 Below are the connector implementations provided by Egeria
 
-* [Console Audit Log Connector](../../../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-console-connector)
+* [Console Audit Log Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-console-connector)
   writes selected parts of each audit log record to stdout.
 
-* [slf4j Audit Log Connector](../../../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-slf4j-connector)
+* [slf4j Audit Log Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-slf4j-connector)
   writes full log records to the slf4j ecosystem.
 
-* [File Audit Log Connector](../../../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-file-connector)
+* [File Audit Log Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-file-connector)
   creates log records as JSON files in a shared directory.
 
-* [Event Topic Audit Log Connector](../../../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-event-topic-connector)
+* [Event Topic Audit Log Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-event-topic-connector)
   sends each log record as an event on the supplied event topic.
 
 The definition of the connector interface for these connectors is
-defined in the [repository-services-api](../../../open-metadata-implementation/repository-services/repository-services-apis) module
+defined in the [repository-services-api](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis) module
 in the
 [org.odpi.openmetadata.repositoryservices.connectors.stores.auditlogstore](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/auditlogstore) Java package.
 
-There is more information on the use of audit logging in the [Diagnostic Guide](../diagnostic-guide).
+There is more information on the use of audit logging in the [Diagnostic Guide](/egeria-docs/guides/diagnostic).
 
 ## REST Client Connectors
 
-Egeria makes extensive use of [REST API calls](../basic-concepts/api.md) for synchronous (request-response) communication with
+Egeria makes extensive use of [REST API calls](/egeria-docs/concepts/basic-concepts) for synchronous (request-response) communication with
 its own deployed runtimes and third party technologies.  The client connectors are used to issue
 the REST API calls.  Egeria provides a single implementation for Spring.
 
-* [Spring REST Client Connector](../../../open-metadata-implementation/adapters/open-connectors/rest-client-connectors/spring-rest-client-connector)
+* [Spring REST Client Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/rest-client-connectors/spring-rest-client-connector)
   uses the Spring RESTClient to issue REST API calls.
   
 This is embedded in Egeria's [clients](/egeria-docs/guides/developer/using-egeria-clients).
@@ -308,13 +308,13 @@ This is embedded in Egeria's [clients](/egeria-docs/guides/developer/using-egeri
 > **Figure 11:** REST Client Connector
 
 The definition of the connector interface for these connectors is
-defined in the [rest-client-connector-api](../../../open-metadata-implementation/adapters/open-connectors/rest-client-connectors/rest-client-connectors-api) module in the
+defined in the [rest-client-connector-api](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/rest-client-connectors/rest-client-connectors-api) module in the
 [org.odpi.openmetadata.adapters.connectors.restclients](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/rest-client-connectors/rest-client-connector-api/src/main/java/org/odpi/openmetadata/adapters/connectors/restclients) Java package.
 
 
 ## Cohort Member Client Connector
 
-Members of an [Open Metadata Repository Cohort](../../../open-metadata-implementation/admin-services/docs/concepts/cohort-member.md)
+Members of an [Open Metadata Repository Cohort](/egeria-docs/concepts/cohort-member)
 provide the other cohort members with a
 Connection to a connector that supports the OMRSRepositoryConnector interface during the cohort registration process.
 This connector translates calls to retrieve and maintain metadata in the member's repository into
@@ -324,20 +324,20 @@ remote calls to the real repository.
 ![Figure 12](/egeria-docs/connectors/runtime/cohort-member-client-connector.svg)
 > **Figure 12:** Cohort Member Client Connector used for federating queries across the cohort
 
-Egeria's [Open Metadata Repository Services (OMRS)](../../../open-metadata-implementation/repository-services) provides a default REST API
+Egeria's [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) provides a default REST API
 implementation and a corresponding client:
 
-* [REST Cohort Client Connector](../../../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector)
+* [REST Cohort Client Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector)
   supports remote calls to the OMRS REST API.
   
 The connection for this connector is configured in the `LocalRepositoryRemoteConnection` property of the
 cohort member's [Local Repository Configuration](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-local-repository.md).
 
 The definition of the connector interface for these connectors is
-defined in the [repository-services-api](../../../open-metadata-implementation/repository-services/repository-services-apis) module
+defined in the [repository-services-api](https://github.com/odpi/egeria/tree/master//open-metadata-implementation/repository-services/repository-services-apis) module
 in the
 [org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore.repositoryconnector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/repositoryconnector) Java package.
-It is the same interface as the [repository connectors](exchange-connectors.md#Repository and Event Mapper Connectors) that are used to provide the local repository to a metadata server
+It is the same interface as the [repository connectors](#Repository and Event Mapper Connectors) that are used to provide the local repository to a metadata server
 so that the Open Metadata Repository Services (OMRS)
 issue calls to the same interface irrespective of whether the call is to the local repository or a remote cohort member.
 
@@ -347,28 +347,28 @@ issue calls to the same interface irrespective of whether the call is to the loc
 *Digital resource* connectors provide access to digital resources and their metadata that is stored in the open metadata ecosystem.  These connectors are for use by external applications and tools to connect with resources and services in the digital landscape.  These connectors also supply the Asset metadata from Egeria that describes these resources.
 
 Instances of these connectors are created through the 
-[Asset Consumer OMAS](/egeria-docs/servvices/omas/asset-consumer) or
-[Asset Owner OMAS](/egeria-docs/servvices/omas/asset-owner) interfaces.
+[Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) or
+[Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) interfaces.
 They use the Connection linked to the corresponding Asset in the open metadata ecosystem.
 Connection objects are associated with assets in the
 metadata catalog using the Asset Owner OMAS,
-[Data Manager OMAS](/egeria-docs/servvices/omas/data-manager) and
-[Asset Manager OMAS](/egeria-docs/servvices/omas/asset-manager).
+[Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview) and
+[Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview).
 
 
 ## Files
 
-* The [Avro file connector](../../../open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/avro-file-connector) 
+* The [Avro file connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/avro-file-connector) 
   provides access to an Avro file that has been catalogued using open metadata.
   
-* The [basic file connector](../../../open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector) 
+* The [basic file connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector) 
   provides support to read and write to a file using the Java File object.  
 
-* The [CSV file connector](../../../open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/csv-file-connector) 
+* The [CSV file connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/csv-file-connector) 
   is able to retrieve data from a Comma Separated Values (CSV) file where the contents are stored in logical columns
   with a special character delimiter between the columns.
   
-* The [data folder connector](../../../open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/data-folder-connector)
+* The [data folder connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/data-folder-connector)
   is for accessing data that is
   stored as a number of files within a folder (directory).
   
@@ -376,6 +376,9 @@ metadata catalog using the Asset Owner OMAS,
 
 *More coming ...*
 
+## Kafka
+
+* The [kafka event bus connector](/egeria-docs/connectors/resource-connectors/kafka-event-bus-connector) provides support for receiving or sending plaintext events.
 
 
 --8<-- "snippets/abbr.md"

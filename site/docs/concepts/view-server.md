@@ -12,6 +12,6 @@ A *view server* is an [OMAG Server](/egeria-docs/concepts/view-server) that host
 
 The view services are typically called by the [presentation server](presentation-server.md), but may also be used by third parties. The presentation server hosts the JavaScript that controls the browser display.
 
-![A view server in the open metadata ecosystem](view-server.png)
+![A view server in the open metadata ecosystem](view-server.svg)
 
 --8<-- "snippets/abbr.md"

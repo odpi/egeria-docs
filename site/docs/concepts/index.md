@@ -119,9 +119,9 @@
 * [Informal Tag](/egeria-docs/concepts/informal-tag)
 * [Instance Security](/egeria-docs/features/metadata-security/overview)
 * Instances
-   * [Metadata Instances](/egeria-docs/concepts/open-metadata-instances)
-     * [Instance Events](/egeria-docs/concepts/cohort-events)
-   * [Server Instances](/egeria-docs/concepts/omag-server)
+       * [Metadata Instances](/egeria-docs/concepts/open-metadata-instances)
+             * [Instance Events](/egeria-docs/concepts/cohort-events)
+       * [Server Instances](/egeria-docs/concepts/omag-server)
 * [InTopic](/egeria-docs/concepts/in-topic)
 * [In Memory Repository Connector](/egeria-docs/concepts/repository-connector)
 * [Integration Connectors](/egeria-docs/concepts/integration-connector)

@@ -35,13 +35,13 @@ The [engine services](/egeria-docs/services/omes) (or Open Metadata Engine Servi
 
 Each engine service provides support for a particular type of governance engine:
 
-- [Open Discovery Engines](/egeria-docs/frameworks/odf)
-- [Governance Action Engines](/egeria-docs/frameworks/gaf)
+- [Open Discovery Engines](/egeria-docs/frameworks/odf/overview)
+- [Governance Action Engines](/egeria-docs/frameworks/gaf/overivew)
 
 Each engine service hosts one or more governance engines. A governance engine is a collection of governance services of a specific type:
 
-- [Asset analysis](/egeria-docs/services/omes/asset-analysis) hosts [open discovery services](/egeria-docs/frameworks/odf/discovery-engine) that analyze the content of an asset's real world counterpart, generates [annotations](/egeria-docs/frameworks/odf/discovery-annotation) in an [open discovery analysis report](/egeria-docs/frameworks/odf/discovery-analysis-report) that is attached to the asset in the open metadata repositories.
-- [Governance action](/egeria-docs/services/omes/governance-action) hosts [governance action services](/egeria-docs/frameworks/odf/governance-action-service) that monitor changes in the metadata and initiate updates and other actions as a result.
+- [Asset analysis](/egeria-docs/services/omes/asset-analysis/overview) hosts [open discovery services](/egeria-docs/concepts/open-discovery-service) that analyze the content of an asset's real world counterpart, generates [annotations](/egeria-docs/frameworks/odf/discovery-annotation) in an [open discovery analysis report](/egeria-docs/frameworks/odf/discovery-analysis-report) that is attached to the asset in the open metadata repositories.
+- [Governance action](/egeria-docs/services/omes/governance-action/overview) hosts [governance action services](/egeria-docs//governance-action-service) that monitor changes in the metadata and initiate updates and other actions as a result.
 
 #### List engine services
 
@@ -56,7 +56,7 @@ Note the `engineServiceURLMarker` for the engine service that you want to config
 
 #### Configure engine service
 
-![Configuration document contents for an integration service](engine-service-config.png)
+![Configuration document contents for an integration service](engine-service-config.svg)
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `engineServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 
@@ -94,8 +94,8 @@ The definition of the governance services that are supported by these governance
 
 Maintaining these definitions is described:
 
-- For discovery engines and services see [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine)
-- For governance action engines and services see [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine)
+- For discovery engines and services see [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview)
+- For governance action engines and services see [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview)
 
 ### Remove engine host services
 

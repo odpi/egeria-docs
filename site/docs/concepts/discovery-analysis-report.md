@@ -3,12 +3,12 @@
 
 # Discovery Analysis Report
 
-The discovery analysis report lists the [discovery annotations](discovery-annotation.md)
+The discovery analysis report lists the [discovery annotations](#discovery-annotations)
 that were created during the execution of
-a [discovery service](discovery-service.md).
+a [discovery service](open-discovery-service.md).
 
 The discovery analysis report is created in the open metadata repository
-by the [discovery engine](discovery-engine.md) when it creates the
+by the [discovery engine](open-discovery-engine.md) when it creates the
 discovery service instance.
 The discovery service can retrieve information about the discovery analysis report
 through the [discovery analysis report store](discovery-analysis-report-store.md) client.
@@ -22,5 +22,6 @@ analysis step.
 
 
 
+## Discovery annotations
 
 --8<-- "snippets/abbr.md"

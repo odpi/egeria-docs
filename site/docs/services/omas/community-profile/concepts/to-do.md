@@ -40,8 +40,6 @@ to work with to dos.
 ## Design information
 
 * [ToDo Bean](../../community-profile-api/docs/beans/community-profile-beans-ToDo.md)
-* [Open Metadata Type](../../../../../open-metadata-publication/website/open-metadata-types/0137-Actions.md)
+* [Open Metadata Type](/egeria-docs/types/1/0137-Actions)
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

@@ -86,7 +86,7 @@ The output from a build should be checked to ensure there are no Javadoc warning
 
 ## Log through ALF
 
-Egeria will typically be embedded in complex deployment environments. This means that we cannot rely on standard developer logging provided by components such as SLF4J. Instead, we use [First Failure Data Capture (FFDC)](/egeria-docs/services/common/ffdc-services) through the [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf).
+Egeria will typically be embedded in complex deployment environments. This means that we cannot rely on standard developer logging provided by components such as SLF4J. Instead, we use [First Failure Data Capture (FFDC)](/egeria-docs/services/common/ffdc-services) through the [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview).
 
 ## Be consistent with style and layout
 

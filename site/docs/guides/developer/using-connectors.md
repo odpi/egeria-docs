@@ -11,7 +11,7 @@
 !!! example "Example: [connecting to CSV files using Asset Consumer OMAS :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/access-services-samples/asset-management-samples/asset-reader-csv-sample/src/main/java/org/odpi/openmetadata/accessservices/assetconsumer/samples/readcsvfile/CSVFileReaderSample.java){ target=gh }"
     The code sample below uses the Asset Consumer OMAS client to retrieve a list of assets from a [metadata server](/egeria-docs/concepts/metadata-server) and then create a connector to each one using the `getConnectorToAsset()` method.
 
-    This method assumes that there is a connection object with a [connector type](/egeria-docs/frameworks/ocf/#connector-type) and [endpoint](/egeria-docs/frameworks/ocf/#endpoint) linked to the requested asset in the metadata repository.
+    This method assumes that there is a connection object with a [connector type](/egeria-docs/concepts/connector-type) and [endpoint](/egeria-docs/concepts/endpoint) linked to the requested asset in the metadata repository.
 
     ![An asset with a connection](asset-connection.png)
 

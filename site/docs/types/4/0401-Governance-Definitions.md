@@ -32,7 +32,7 @@ The role of leader of a governance domain is represented as a **GovernanceOffice
 
 **GovernanceDefinition** describes an aspect of a governance program.
 They are authored in the metadata repository.  
-They inherit from [Referenceable](0010-Base-Model.md),
+They inherit from [Referenceable](/egeria-docs/types/0/0010-Base-Model),
 which means they have a unique identifier and link to external references for more information.
 
 **GovernedBy** links the governance definitions to the elements they are governing.

@@ -265,7 +265,7 @@ in the
 ## Audit Log Destination Connectors
 
 The audit log destination connectors support different destinations for audit log records.
-Multiple of these connectors can be [active in an OMAG Server](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-audit-log.md)
+Multiple of these connectors can be [active in an OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log)
 at any one time and they can each be configured to only process particular types of audit log records.
 
 

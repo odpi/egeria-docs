@@ -9,7 +9,7 @@ that needs to be performed on one or more metadata elements, or
 their counterparts in the digital landscape.
 
 A governance action is 
-[represented as a metadata entity](/egeria-docs/types/4/0463-Governance-Actions.md)
+[represented as a metadata entity](/egeria-docs/types/4/0463-Governance-Actions)
 in the open metadata repositories and linked to:
 
 * The source (cause) of the governance action.
@@ -22,9 +22,9 @@ The governance action metadata entity is used to coordinate
 the desired activity in the governance engine, record its current state and
 act as a record of the activity for future audits.
 
-Governance actions can be created through the [Governance Engine OMAS API](../user).
+Governance actions can be created through the [Governance Engine OMAS API](/egeria-docs/services/omas/governance-engine/overview).
 Some governance services (for example, the 
-[Watchdog Governance Action Service](/egeria-docs/frameworks/gaf/watchdog-governance-service.md))
+[Watchdog Governance Action Service](../../../../frameworks/governance-action-framework/docs/watchdog-governance-service.md))
 can create governance actions when they run.  
 
 Governance services produce output strings called **guards** that indicate specific

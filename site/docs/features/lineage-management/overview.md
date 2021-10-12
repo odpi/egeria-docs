@@ -120,7 +120,7 @@ passes both ways between the open lineage world and the open metadata ecosystem.
 > **Figure 6:** Outbound open lineage distribution to other open lineage consumers
 
 Figure 7 shows the open lineage integration connectors running in the
-[Lineage Integrator OMIS](../../../open-metadata-implementation/integration-services/lineage-integrator)
+[Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview)
 within the Integration Daemon.
 
 ![Figure 7](open-lineage-implementation.png)
@@ -142,14 +142,14 @@ By using open metadata, metadata is captured once and used for many purposes.
 * [File Lineage solution using Egeria](../solutions/file-lineage)
 
 APIs for capturing lineage
-* [Asset Manager Open Metadata Access Service (OMAS)](../../../open-metadata-implementation/access-services/asset-manager)
-* [Open Metadata Integration Services (OMISs)](../../../open-metadata-implementation/integration-services)
+* [Asset Manager Open Metadata Access Service (OMAS)](/egeria-docs/services/omas/asset-manager/overview)
+* [Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis)
 
 APIs for retrieving lineage
-* [Open Lineage Services](../../../open-metadata-implementation/governance-servers/open-lineage-services)
-* [Asset Owner](../../../open-metadata-implementation/access-services/asset-owner) and
-[Asset Consumer](../../../open-metadata-implementation/access-services/asset-consumer) through the
-[Open Connector Framework (OCF)](../../../open-metadata-implementation/frameworks/open-connector-framework).
+* [Open Lineage Services](/egeria-docs/services/open-lineage-services)
+* [Asset Owner](/egeria-docs/services/omas/asset-owner) and
+[Asset Consumer](/egeria-docs/services/omas/asset-consumer) through the
+[Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview).
 
 
 --8<-- "snippets/abbr.md"

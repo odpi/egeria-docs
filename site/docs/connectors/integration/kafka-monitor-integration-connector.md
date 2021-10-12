@@ -3,9 +3,9 @@
 
 # Kafka Monitor Integration Connector
 
-* Connector Category: [Integration Connector](../../../open-metadata-implementation/governance-servers/integration-daemon-services/docs/integration-connector.md)
-* Hosting Service: [Topic Integrator OMIS](../../../open-metadata-implementation/integration-services/topic-integrator)
-* Hosting Server: [Integration Daemon](../../../open-metadata-implementation/admin-services/docs/concepts/integration-daemon.md)
+* Connector Category: [Integration Connector](/egeria-docs/concepts/integration-connector)
+* Hosting Service: [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview)
+* Hosting Server: [Integration Daemon](/egeria-docs/concepts/integration-daemon)
 * Source Module: [kafka-integration-connector](../../../open-metadata-implementation/adapters/open-connectors/integration-connectors/kafka-integration-connector)
 * Jar File Name: kafka-integration-connector.jar
 
@@ -24,8 +24,8 @@ KafkaTopic asset is also removed.
 
 ## Configuration
 
-This connector uses the [Topic Integrator OMIS](../../../open-metadata-implementation/integration-services/topic-integrator)
-running in the [Integration Daemon](../../../open-metadata-implementation/admin-services/docs/concepts/integration-daemon.md).
+This connector uses the [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview)
+running in the [Integration Daemon](/egeria-docs/concepts/integration-daemon).
 
 This is its connection definition to use on the 
 [administration commands that configure the Topic Integrator OMIS](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-integration-services.md).

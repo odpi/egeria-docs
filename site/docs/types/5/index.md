@@ -72,19 +72,17 @@ The next set of models describe the content of different types of data models
 
 The final set of models capture architectures and patterns.
 
-* **[0580 Solution Blueprints](0580-Solution-Blueprints.md)**
-* **[0581 Solution Ports and Wires](0581-Solution-Ports-and-Wires.md)**
 * **[0595 Design Patterns](0595-Design-Patterns.md)**
 
 ## Further reading
 
-* [Modelling schemas](../modelling-technology/modelling-schemas.md)
+* [Modelling schemas](/egeria-docs/guides/developer/mapping-technology/modelling-schemas)
 
 * Specific schema structures supported by the integration services
-   * For API Schemas - [API Integrator OMIS](../../../open-metadata-implementation/integration-services/api-integrator)
-   * For File Schemas - [Files Integrator OMIS](../../../open-metadata-implementation/integration-services/files-integrator)
-   * For Database Schemas - [Database Integrator OMIS](../../../open-metadata-implementation/integration-services/database-integrator)
-   * For Event Schemas - [Topic Integrator OMIS](../../../open-metadata-implementation/integration-services/topic-integrator)
-   * For Forms and Report Schemas - [Display Integrator OMIS](../../../open-metadata-implementation/integration-services/display-integrator)
+   * For API Schemas - [API Integrator OMIS](/egeria-docs/services/omis/api-integrator/overview)
+   * For File Schemas - [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
+   * For Database Schemas - [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
+   * For Event Schemas - [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview)
+   * For Forms and Report Schemas - [Display Integrator OMIS](/egeria-docs/services/omis/display-integrator/overview)
 
 --8<-- "snippets/abbr.md"

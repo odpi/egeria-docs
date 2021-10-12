@@ -24,9 +24,9 @@ Egeria is particularly focused on maintaining the information necessary for mana
 
 ## Open metadata types
 
-The information about a resource that covers its characteristics and how it should be managed is stored in a sub-graph of open metadata instances (entities and relationships) with the [Asset](/egeria-docs/types/0/0010-base-model/#asset) entity at the root. The asset entity contains a small amount of information that merely captures the existence of the real resource. Then other entities are linked to it to add more information. It is likely that this additional information is identified, captured and stored by different tools. The open metadata services gather this information together and distribute it to provide the most complete view of the resource's properties.
+The information about a resource that covers its characteristics and how it should be managed is stored in a sub-graph of open metadata instances (entities and relationships) with the [Asset](/egeria-docs/types/0/0010-Base-Model/#asset) entity at the root. The asset entity contains a small amount of information that merely captures the existence of the real resource. Then other entities are linked to it to add more information. It is likely that this additional information is identified, captured and stored by different tools. The open metadata services gather this information together and distribute it to provide the most complete view of the resource's properties.
 
-More information on the types of attachments that can be added to an asset can be found [here](../../../../../open-metadata-publication/website/cataloging-assets/asset-catalog-contents.md).
+More information on the types of attachments that can be added to an asset can be found in [Managing Metadata](/egeria-docs/patterns/managing-metadata/overview).
 
 Inheriting from asset is a hierarchy of increasingly-specialized definitions for different types of assets. Each definition adds more properties about the asset:
 
@@ -36,11 +36,11 @@ Inheriting from asset is a hierarchy of increasingly-specialized definitions for
 
 ## Accessing asset content through connectors
 
-Egeria provides an open framework for accessing the content of digital assets and the information about them. It is called the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) and it provides specialized connectors (clients) for accessing specific types of assets and the information about them.
+Egeria provides an open framework for accessing the content of digital assets and the information about them. It is called the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) and it provides specialized connectors (clients) for accessing specific types of assets and the information about them.
 
-The type of connector to use is specified in the [connection](/egeria-docs/frameworks/ocf/#connection) entity that is linked to the asset.
+The type of connector to use is specified in the [connection](/egeria-docs/concepts/connection) entity that is linked to the asset.
 
-[Model 0205](/egeria-docs/types/2/0205-connection-linkage) in the open metadata types shows how an asset is associated with a [connection](/egeria-docs/frameworks/ocf/#connection) object. The connection object provides the properties necessary to create a connector to access the asset's contents.
+[Model 0205](/egeria-docs/types/2/0205-Connection-Linkage) in the open metadata types shows how an asset is associated with a [connection](/egeria-docs/concepts/connection) object. The connection object provides the properties necessary to create a connector to access the asset's contents.
 
 ## APIs and events for managing asset information (metadata)
 
@@ -50,16 +50,16 @@ Some examples:
 
 | OMAS | Description |
 |---|---|
-| [Analytics Modeling OMAS](/egeria-docs/services/omas/analytics-modeling) | enables business intelligence and data virtualization tools to maintain information about the data views and reporting assets they are maintaining. |
-| [Asset Catalog OMAS](/egeria-docs/services/omas/asset-catalog) | provides a search service for locating assets. |
-| [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer) | provides a service for accessing the content of an asset, extracting additional information that is known about the asset and providing feedback about the asset. It is designed for tools that consume assets to support the work of their users. These users can provide feedback on the asset description and the resource that it describes. |
-| [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager) | provides a service for exchanging metadata about assets and related information with a third party [asset manager](../server-capabilities/asset-manager.md). This API supports the many-to-many correlation of identifiers used in the third party asset manager and the open metadata ecosystem. |
-| [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner) | provides a service for the owner of an asset to classify and manage the asset, and understand how it is being used by the organization. |
-| [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine) | provides a service for adding annotations to an asset's information that has been determined by specific analysis of the asset's contents by a [discovery service](/egeria-docs/frameworks/odf/#discovery-service). |
-| [Data Manager OMAS](/egeria-docs/services/omas/data-manager) | enables a data manager (such as a database or file system) to maintain information about the assets it stores. |
-| [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) | provides the metadata services for [governance action services](/egeria-docs/frameworks/gaf/#governance-action-service) that verify, enhance and correct the properties of assets and their associated elements. |
-| [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure) | provides a service for maintaining information about the IT assets and supporting infrastructure owned or used by an organization. |
-| [Data Science OMAS](/egeria-docs/services/omas/data-science) | provides a service for maintaining information about analytical models and related assets such as python notebooks. |
+| [Analytics Modeling OMAS](/egeria-docs/services/omas/analytics-modeling/overview) | enables business intelligence and data virtualization tools to maintain information about the data views and reporting assets they are maintaining. |
+| [Asset Catalog OMAS](/egeria-docs/services/omas/asset-catalog/overview) | provides a search service for locating assets. |
+| [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) | provides a service for accessing the content of an asset, extracting additional information that is known about the asset and providing feedback about the asset. It is designed for tools that consume assets to support the work of their users. These users can provide feedback on the asset description and the resource that it describes. |
+| [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview) | provides a service for exchanging metadata about assets and related information with a third party [asset manager](/egeria-docs/concepts/server-capability). This API supports the many-to-many correlation of identifiers used in the third party asset manager and the open metadata ecosystem. |
+| [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) | provides a service for the owner of an asset to classify and manage the asset, and understand how it is being used by the organization. |
+| [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview) | provides a service for adding annotations to an asset's information that has been determined by specific analysis of the asset's contents by a [discovery service](/egeria-docs/concepts/open-discovery-service). |
+| [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview) | enables a data manager (such as a database or file system) to maintain information about the assets it stores. |
+| [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview) | provides the metadata services for [governance action services](/egeria-docs/concepts/governance-action-service) that verify, enhance and correct the properties of assets and their associated elements. |
+| [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview) | provides a service for maintaining information about the IT assets and supporting infrastructure owned or used by an organization. |
+| [Data Science OMAS](/egeria-docs/services/omas/data-science/overview) | provides a service for maintaining information about analytical models and related assets such as python notebooks. |
 
 ## Sharing information about assets
 

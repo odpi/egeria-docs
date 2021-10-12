@@ -14,7 +14,7 @@ style that piggy-backs on top of the HTTP protocol that powers the Internet. Ege
     Details of the different types of APIs provided by Egeria can be found in the [developer guide](/egeria-docs/guides/developer/guide).
     In addition, it is possible to automatically catalog details of the APIs that your organization uses:
     
-    - [Cataloguing API :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/api-integrator){ target=gh }
+    - [Cataloguing API](/egeria-docs/services/omis/api-integrator/overview)
 
 ## Event
 
@@ -24,13 +24,13 @@ It is sent on a [topic](#topic) to share its information with other servers.
 ??? education "Further information"
     Details of the different types of events used by Egeria
 
-    - [OMRS topic events](/egeria-docs/services/omrs/metadata-events/#omrs-events) - for open metadata repository cohorts
-    - [InTopic Events](/egeria-docs/services/omas/client-server/#in-topic) - for outgoing events to an Open Metadata Access Service (OMAS)
-    - [OutTopic Events](/egeria-docs/services/omas/client-server/#out-topic) - for incoming events from an Open Metadata Access Service (OMAS)
+    - [OMRS topic events](/egeria-docs/concepts/metadata-events) - for open metadata repository cohorts
+    - [InTopic Events](/egeria-docs/concepts/in-topic) - for outgoing events to an Open Metadata Access Service (OMAS)
+    - [OutTopic Events](/egeria-docs/concepts/out-topic) - for incoming events from an Open Metadata Access Service (OMAS)
 
     In addition, it is possible to automatically catalog details of the types of events that your organization uses:
     
-    - [Cataloguing topics and event types for an event broker :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/topic-integrator){ target=gh }
+    - [Cataloguing topics and event types for an event broker :material-github:](/egeria-docs/services/omis/topic-integrator/overview){ target=gh }
 
 ## Event Broker
 
@@ -49,8 +49,8 @@ As such, each topic is accessed through an
 [open metadata topic connector](/egeria-docs/connectors/runtime/#open-metadata-topic-connectors).
 
 ??? education "Further information"
-    - [Configuring the event broker for Egeria](/egeria-docs/concepts/event-bus.md)
-    - [Cataloguing topics and event types for an event broker :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/topic-integrator){ target=gh }
+    - [Configuring the event broker for Egeria](/egeria-docs/concepts/event-bus)
+    - [Cataloguing topics and event types for an event broker](/egeria-docs/services/omis/topic-integrator/overview)
 
 ## Topic
 
@@ -66,12 +66,12 @@ order, but that is not necessarily guaranteed since it depends on the type and c
 ??? education "Further information"
     Details of the different types of topics used by Egeria
 
-    - [OMRSTopic](/egeria-docs/services/omrs/metadata-events/#omrs-event-topic) - for open metadata repository cohorts
-    - [InTopic](/egeria-docs/services/omas/client-server/#in-topic) - for sending events to an Open Metadata Access Service (OMAS)
-    - [OutTopic](/egeria-docs/services/omas/client-server/#out-topic) - for receiving events from an Open Metadata Access Service (OMAS)
+    - [OMRSTopic](/egeria-docs/concepts/metadata-events) - for open metadata repository cohorts
+    - [InTopic](/egeria-docs/concepts/in-topic) - for sending events to an Open Metadata Access Service (OMAS)
+    - [OutTopic](/egeria-docs/concepts/out-topic) - for receiving events from an Open Metadata Access Service (OMAS)
 
     In addition, it is possible to automatically catalog details of the event brokers that your organization uses:
     
-    - [Cataloguing topics and event types for an event broker :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/integration-services/topic-integrator){ target=gh }
+    - [Cataloguing topics and event types for an event broker](/egeria-docs/services/omis/topic-integrator/overview)}
 
 --8<-- "snippets/abbr.md"

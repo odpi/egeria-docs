@@ -74,7 +74,7 @@ are protected properties that can only be retrieved by privileged connector code
 
 Each connection stored in a metadata repository has a unique identifier.
 An application can request a connector instance through selected Egeria OMAS interfaces, such
-as the [Asset Consumer OMAS](../../../../access-services/asset-consumer), with just the unique identifier or name of a connection.  
+as the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview), with just the unique identifier or name of a connection.  
 
 The OMAS retrieves the connection object from the open metadata repositories and passes it to the [Connector Broker](connector-broker.md)
 factory object.  The Connector Broker (and underlying [Connector Provider](connector-provider.md)) uses the information from the Connection object
@@ -85,17 +85,17 @@ do not need to be hard-coded in the consuming applications and the metadata asso
 can be retrieved via the connectors [Connected Asset Properties](connected-asset-properties.md) interface.
 
 Connections can be created in the open metadata repositories through the following interfaces:
-* [Asset Owner OMAS](../../../../access-services/asset-owner)
-* [Asset Manager OMAS](../../../../access-services/asset-manager)
-* [Data Manager OMAS](../../../../access-services/data-manager)
-* [Database Integrator OMIS](../../../../integration-services/database-integrator)
-* [Files Integrator OMIS](../../../../integration-services/files-integrator)
-* [Governance Action OMES](../../../../engine-services/governance-action)
+* [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)
+* [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview)
+* [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview)
+* [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
+* [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
+* [Governance Action OMES](/egeria-docs/services/omes/governance-action/overview)
  
 
 ## Configuring Egeria Connections
 
-The [Administration Guide](../../../../admin-services/docs/user) describes how to configure Egeria's
+The [Administration Guide](/egeria-docs/guides/admin) describes how to configure Egeria's
 OMAG Server Platforms and Servers.  Both the platform and the servers used connectors for access to the
 external resources to support their basic operation and to coordinate metadata and governance with
 third party technologies.  This means that the configuration includes Connection definitions for these connectors.

@@ -8,7 +8,7 @@ hide:
 
 # Referenceable 
 
-A [referenceable](/egeria-docs/types/0/0010-base-model/#referenceable) is the description of a resource that is
+A [referenceable](/egeria-docs/types/0/0010-Base-Model/#referenceable) is the description of a resource that is
 significant enough to need its own unique name so that it can be referred to accurately in different contexts
 (typically outside of open metadata).
 

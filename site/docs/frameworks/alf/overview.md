@@ -23,7 +23,7 @@ When processing activity wishes to log a message to the audit log, it selects a 
 
 The message definition is passed to the audit log where it calls the message formatter, builds a log record and passes it on to the audit destination.
 
-The [audit log destination](/egeria-docs/concepts/audit-log.md) can be extended to allow routing to different destinations for review and processing.
+The [audit log destination](/egeria-docs/concepts/audit-log) can be extended to allow routing to different destinations for review and processing.
 
 ## Usage
 

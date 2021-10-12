@@ -49,7 +49,7 @@ The servers' integration can be viewed as a series of nested spheres. The inner 
 
 This architecture means that you can incrementally add function to your deployment. Here is a suggested approach:
 
-1. Start with creating an Egeria graph [metadata server](/egeria-docs/guides/admin/servers/configuring-a-metadata-server). This will provide a metadata repository that can store any type of open metadata.
+1. Start with creating an Egeria graph [metadata server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store). This will provide a metadata repository that can store any type of open metadata.
 2. Decide on a name for an [open metadata repository cohort](/egeria-docs/services/omrs/cohort) and configure your graph metadata repository to join it.
 3. If you want to have other third party metadata repositories that you want to share metadata with, configure [repository proxies](/egeria-docs/guides/admin/servers/configuring-a-repository-proxy) for each including registering them to the same cohort as the metadata server.
 4. If you then want to add in metadata synchronization with other types of technology beyond metadata repositories, work out which [integration daemons](/egeria-docs/concepts/integration-daemon) you need and [configure them to connect to the metadata server](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon). Make sure the appropriate [access services](/egeria-docs/services/omas) for these integration daemons are enabled in the metadata server.
@@ -75,9 +75,9 @@ This is a checklist of planning tasks for the deployment of your OMAG Server Pla
 - [ ] [Set up unique certificates](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#transport-layer-security-tls) for your OMAG Server Platforms.
 - [ ] [Use an encrypted configuration document store](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#configuration-store) for your platforms since configuration documents can have certificates and passwords in them.
 - [ ] [Implement the metadata security connectors for your organization](/egeria-docs/services/common/metdata-security) to ensure only authorized users access metadata.
-- [ ] Choose and [configure the audit log destinations](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#configure-the-audit-log) for your OMAG Servers.
-- [ ] Ensure you have at least one [Egeria metadata server](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#configure-the-local-repository) in each of your [open metadata repository cohorts](/egeria-docs/services/omrs/cohort).
-- [ ] [Assign a separate user id for each of your servers](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#set-the-servers-user-id-and-optional-password) and ensure they are defined in your user directory and are authorized users according to the metadata security connectors.
+- [ ] Choose and [configure the audit log destinations](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-audit-log) for your OMAG Servers.
+- [ ] Ensure you have at least one [Egeria metadata access store](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-local-repository) in each of your [open metadata repository cohorts](/egeria-docs/services/omrs/cohort).
+- [ ] [Assign a separate user id for each of your servers](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#set-the-servers-user-id-and-optional-password) and ensure they are defined in your user directory and are authorized users according to the metadata security connectors.
 - [ ] Consider where you need to have [multiple instances of the same server running to give continuous availability](/egeria-docs/guides/admin/guide).
 - [ ] Plan your use of the [event bus](/egeria-docs/concepts/event-bus): which technology to use (Apache Kafka is the default) and the names of the topics that your OMAG Servers will use.
 - [ ] Design the [governance zones](/egeria-docs/concepts/governance-zone) that you want to use to control the visibility of assets to different communities of users - or processes.

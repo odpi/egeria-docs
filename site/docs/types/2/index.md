@@ -13,7 +13,7 @@ of asset that need to be governed in order to make best
 use of them.
 It builds out the core types of assets, extending from Asset,
 Infrastructure, DataSet and Process defined in the 
-[0010 Base Model](0010-Base-Model.md).
+[0010 Base Model](/egeria-docs/types/0/0010-Base-Model).
 
 This includes the data sources, APIs, analytics models,
 transformation functions and rule implementations that store
@@ -21,13 +21,12 @@ and manage data.
 
 The definitions in Area 2 also include connectivity information that
 is used by the
-[Open Connector Framework (OCF)](../../../open-metadata-implementation/frameworks/open-connector-framework/README.md) (and other tools) to
+[Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) (and other tools) to
 get access to the data assets.
 
 * **[0201 Connectors and Connections](0201-Connectors-and-Connections.md)**
 * **[0205 Connection Linkage](0205-Connection-Linkage.md)**
 * **[0210 Data Stores](0210-Data-Stores.md)**
-* **[0211 Data Sets](0211-Data-Sets.md)**
 * **[0212 Deployed APIs](0212-Deployed-APIs.md)**
 * **[0215 Software Components](0215-Software-Components.md)**
 * **[0217 Ports](0217-Ports.md)**

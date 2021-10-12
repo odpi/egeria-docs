@@ -164,6 +164,7 @@
 * [Metadata Instances](/egeria-docs/concepts/open-metadata-instances)
 * [Metadata Provenance](/egeria-docs/features/metadata-provenance/overview)
 * [Metadata Repository](/egeria-docs/concepts/metadata-repository)
+* [Metadata Server](/egeria-docs/concepts/metadata-access-store)
 * [Metadata Types](/egeria-docs/types)
 
 

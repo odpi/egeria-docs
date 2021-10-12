@@ -431,74 +431,6 @@ nav:
           - Open Connectors (OCF): frameworks/ocf/overview.md
           - Open Discovery (ODF): frameworks/odf/overview.md
           - Governance Actions (GAF): frameworks/gaf/overview.md
-      - Concepts:
-          - General Concepts: basic-concepts.md
-          - Egeria Concepts:
-              - Egeria Glossary: concepts/index.md
-              - Anchor: concepts/anchor.md
-              - Asset: concepts/asset.md
-              - Asset Log Message: concepts/asset-log-message.md
-              - Audit Log: concepts/audit-log.md
-              - Cohort Events: concepts/cohort-events.md
-              - Cohort Member: concepts/cohort-member.md
-              - Collection: concepts/collection.md
-              - Comment: concepts/comment.md
-              - Community: concepts/community.md
-              - Configuration Document: concepts/configuration-document.md
-              - Conformance Test Server: concepts/conformance-test-server.md
-              - Connected Asset Properties: concepts/connected-asset-properties.md
-              - Connection: concepts/connection.md
-              - Connector: concepts/connector.md
-              - Connector Broker: concepts/connector-broker.md
-              - Connector Provider: concepts/connector-provider.md
-              - Connector Type: concepts/connector-type.md
-              - Contact Method: concepts/contact-method.md
-              - Data Engine Proxy: concepts/data-engine-proxy.md
-              - Discovery Analysis Report: concepts/discovery-analysis-report.md
-              - Endpoint: concepts/endpoint.md
-              - Engine Host: concepts/engine-host.md
-              - Event Bus: concepts/event-bus.md
-              - External Reference: concepts/external-reference.md
-              - Favorite Collections: concepts/favorite-things-collections.md
-              - Governance Action: concepts/governance-action.md
-              - Governance Action Engine: concepts/governance-action-engine.md
-              - Governance Request Type: concepts/governance-request-type.md
-              - Governance Server: concepts/governance-server.md
-              - Governance Zone: concepts/governance-zone.md
-              - Headcount Limit: concepts/headcount-limit-for-role.md
-              - Home Metadata Repository: concepts/home-metadata-repository.md
-              - In Topic: concepts/in-topic.md
-              - Informal Tag: concepts/informal-tag.md
-              - Integration Daemon: concepts/integration-daemon.md
-              - Karma Point: concepts/karma-point.md
-              - Karma Point Plateau: concepts/karma-point-plateau.md
-              - Like: concepts/like.md
-              - Metadata Access Point: concepts/metadata-access-point.md
-              - Metadata Collection Id: concepts/metadata-collection-id.md
-              - Metadata Server: concepts/metadata-server.md
-              - OMAG Server: concepts/omag-server.md
-              - OMAG Server Platform: concepts/omag-server-platform.md
-              - OMAG Subsystem: concepts/omag-subsystem.md
-              - Open Lineage Server: concepts/open-lineage-server.md
-              - Open Metadata Archive: concepts/open-metadata-archive.md
-              - Out Topic: concepts/out-topic.md
-              - Peer Network: concepts/peer-network.md
-              - Personal Messsge: concepts/personal-message.md
-              - Personal Notes: concepts/personal-notes.md
-              - Personal Profile: concepts/personal-profile.md
-              - Personal Roles: concepts/personal-roles.md
-              - Presentation Server: concepts/presentation-server.md
-              - Referenceable: concepts/referenceable.md
-              - Repository Helper: concepts/repository-helper.md
-              - Repository Proxy: concepts/repository-proxy.md
-              - Repository Validator: concepts/repository-validator.md
-              - Review: concepts/review.md
-              - Star Rating: concepts/review.md
-              - Tag: concepts/informal-tag.md
-              - To Do: concepts/to-do.md
-              - Useful Resource: concepts/useful-resource.md
-              - User Identity: concepts/user-identity.md
-              - View Server: concepts/view-server.md
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md
           - Platform Profiles:
@@ -550,7 +482,97 @@ nav:
               - Relationship Purge: guides/cts/profiles/relationship-purge.md
               - Entity Purge: guides/cts/profiles/entity-purge.md
               - Environment: guides/cts/profiles/environment.md
-
+  - Concepts:
+      - Egeria Glossary: concepts/index.md
+      - Basic Concepts: basic-concepts.md
+      - Anchor: concepts/anchor.md
+      - Asset: concepts/asset.md
+      - Asset Log Message: concepts/asset-log-message.md
+      - Audit Log: concepts/audit-log.md
+      - Cohort Events: concepts/cohort-events.md
+      - Cohort Member: concepts/cohort-member.md
+      - Cohort Registry Store: concepts/cohort-registry-store.md
+      - Collection: concepts/collection.md
+      - Comment: concepts/comment.md
+      - Community: concepts/community.md
+      - Configuration Document: concepts/configuration-document.md
+      - Configuration Properties: concepts/configuration-properties.md
+      - Conformance Test Server: concepts/conformance-test-server.md
+      - Connected Asset Properties: concepts/connected-asset-properties.md
+      - Connection: concepts/connection.md
+      - Connector: concepts/connector.md
+      - Connector Broker: concepts/connector-broker.md
+      - Connector Provider: concepts/connector-provider.md
+      - Connector Type: concepts/connector-type.md
+      - Contact Method: concepts/contact-method.md
+      - Data Engine Proxy: concepts/data-engine-proxy.md
+      - Discovery Analysis Report: concepts/discovery-analysis-report.md
+      - Endpoint: concepts/endpoint.md
+      - Engine Host: concepts/engine-host.md
+      - Event Bus: concepts/event-bus.md
+      - External Reference: concepts/external-reference.md
+      - Favorite Collections: concepts/favorite-things-collections.md
+      - Feedback: concepts/feedback.md
+      - Glossary Term: concepts/glossary-term.md
+      - Governance Action: concepts/governance-action.md
+      - Governance Action Engine: concepts/governance-action-engine.md
+      - Governance Action Process: concepts/governance-action-process.md
+      - Governance Action Type: concepts/governance-action-type.md
+      - Governance Engine: concepts/governance-engine.md
+      - Governance Request Type: concepts/governance-request-type.md
+      - Governance Server: concepts/governance-server.md
+      - Governance Service: concepts/governance-service.md
+      - Governance Zone: concepts/governance-zone.md
+      - Headcount Limit: concepts/person-role.md
+      - Home Metadata Repository: concepts/home-metadata-repository.md
+      - In Topic: concepts/in-topic.md
+      - Incident Report: concepts/incident-report.md
+      - Informal Tag: concepts/informal-tag.md
+      - Integration Connector: concepts/integration-connector.md
+      - Integration Daemon: concepts/integration-daemon.md
+      - Karma Point: concepts/karma-point.md
+      - Karma Point Threshold: concepts/karma-point.md
+      - Karma Point Plateau: concepts/karma-point-plateau.md
+      - Like: concepts/like.md
+      - Metadata Access Point: concepts/metadata-access-point.md
+      - Metadata Access Server: concepts/metadata-access-server.md
+      - Metadata Access Store: concepts/metadata-access-store.md
+      - Metadata Collection Id: concepts/metadata-collection-id.md
+      - Metadata Repository: concepts/metadata-repository.md
+      - Note Log: concepts/note-log.md
+      - OMAG Server: concepts/omag-server.md
+      - OMAG Server Platform: concepts/omag-server-platform.md
+      - OMAG Subsystem: concepts/omag-subsystem.md
+      - Open Discovery Engine: concepts/open-discovery-engine.md
+      - Open Discovery Server: concepts/open-discovery-server.md
+      - Open Lineage Server: concepts/open-lineage-server.md
+      - Open Metadata Archive: concepts/open-metadata-archive.md
+      - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md
+      - Open Metadata Instance: concepts/open-metadata-instances.md
+      - Open Metadata Type Definitions: concepts/open-metadata-type-definitions.md
+      - Out Topic: concepts/out-topic.md
+      - Peer Network: concepts/peer-network.md
+      - Personal Messsge: concepts/personal-message.md
+      - Personal Notes: concepts/personal-notes.md
+      - Personal Profile: concepts/personal-profile.md
+      - Personal Roles: concepts/personal-roles.md
+      - Platform URL Root: concepts/platform-url-root.md
+      - Presentation Server: concepts/presentation-server.md
+      - Project: concepts/project.md
+      - Referenceable: concepts/referenceable.md
+      - Repository Helper: concepts/repository-helper.md
+      - Repository Proxy: concepts/repository-proxy.md
+      - Repository Validator: concepts/repository-validator.md
+      - Resource: concepts/resource.md
+      - Review: concepts/review.md
+      - Server Name: concepts/server-name.md
+      - Software Server Capability: concepts/software-server-capability.md
+      - Star Rating: concepts/review.md
+      - Tag: concepts/informal-tag.md
+      - To Do: concepts/to-do.md
+      - Useful Resource: concepts/useful-resource.md
+      - User Identity: concepts/user-identity.md
+      - View Server: concepts/view-server.md
 theme:
   name: material
   language: en

@@ -104,31 +104,31 @@ Similarly if we just leave it unchanged, it suggests that there is a file in the
 which would be confusing to users of the catalog.
 
 It is possible to move assets out of the
-[governance zones](../../../open-metadata-implementation/access-services/docs/concepts/governance-zones) where
+[governance zones](/egeria-docs/concepts/governance-zone) where
 active users are working with assets.  This ensures the assets are no longer
 visible to these users.  However it also means they are not visible for the lineage graph either.
 
 There is an option to mark assets as deleted whilst sill keeping them in the
 active governance zones.
-This involves adding the [Memento](../open-metadata-types/0010-Base-Model.md) 
+This involves adding the [Memento](/egeria-docs/types/0/0010-Base-Model) 
 classification to the asset.  With this classification in place, the
 asset is only returned on lineage queries.
 
 The **Memento** classification is set in APIs such as the
 `archiveDataFileInCatalog()` methods on the 
-[Data Manager Open Metadata Access Service (OMAS)](../../../open-metadata-implementation/access-services/data-manager)
+[Data Manager Open Metadata Access Service (OMAS)](/egeria-docs/services/omas/data-manager/overview)
 and
-[Files Integrator Open Metadata Integration Service (OMIS)](../../../open-metadata-implementation/integration-services/files-integrator).
+[Files Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/files-integrator/overview).
 
 ## Further reading
 
-* [Modeling technology using open metadata types](../modelling-technology)
+* [Modeling technology using open metadata types](/egeria-docs/guides/developer/mapping-technology)
 
 APIs for capturing lineage
-* [Asset Manager Open Metadata Access Service (OMAS)](../../../open-metadata-implementation/access-services/asset-manager)
-* [Lineage Integrator Open Metadata Integration Server (OMIS)](../../../open-metadata-implementation/integration-services/lineage-integrator)
+* [Asset Manager Open Metadata Access Service (OMAS)](/egeria-docs/services/omas/asset-manager/overview)
+* [Lineage Integrator Open Metadata Integration Server (OMIS)](/egeria-docs/servvices/omis/lineage-integrator/overview)
 
 APIs for retrieving lineage
-* [Open Lineage Services](../../../open-metadata-implementation/governance-servers/open-lineage-services)
+* [Open Lineage Services](/egeria-docs/services/open-lineage-services)
 
 --8<-- "snippets/abbr.md"

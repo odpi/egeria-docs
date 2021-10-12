@@ -1,11 +1,15 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Connector - part of the [Open Connector Framework (OCF)](../..)
+# Connector
 
 A connector is a java client object that provides applications with access to a data source or service
-(known as an [asset](../../../../../open-metadata-implementation/access-services/docs/concepts/assets/README.md))
-along with its related metadata.
+(known as an [resource](/egeria-docs/concepts/resource)) along with its related metadata [(asset)](/egeria-docs/concepts/asset).
 
 An OCF connector provides four APIs.
 
@@ -28,8 +32,7 @@ It is called a virtual connector.
 
 ## Further Information
 
-See the [Egeria Developer Guide](../../../../../open-metadata-publication/website/developer-guide)
-for information on writing connectors.
+See the [Egeria Developer Guide](/egeria-docs/guides/developer) for information on writing connectors.
 
 
 --8<-- "snippets/abbr.md"

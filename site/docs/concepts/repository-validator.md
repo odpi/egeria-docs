@@ -8,7 +8,6 @@ hide:
 
 # Repository validator
 
-The repository validator provides common validation functions for use when working
-with repository services property objects.
+The repository validator provides common validation functions for use when working with repository services property objects.
 
 --8<-- "snippets/abbr.md"

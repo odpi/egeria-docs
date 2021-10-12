@@ -1,29 +1,27 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 # Informal Tag
 
-A tag is a descriptive name with optional description that can be
+An informal tag is a descriptive label with optional description that can be
 attached to resources such as personal profiles, personal messages, personal notes,
 community forums and forum contributions, comments and communities.
 
-The process of adding a tag to an object is called [tagging](../../../docs/concepts/attachments/tagging.md).
+An informal tag can be public (visible to all users) or private (visible only to the user that created it).
 
-A tag can be public (visible to all users) or private (visible only to the user that created it).
+Any user can create, update, delete and assign/unassign public informal tags.  Informal tags can be used to mine user knowledge about a topic.
 
-## Working with tags 
+Support for informal tags is found in the following services:
 
-* [Finding existing tags](../scenarios/finding-a-tag.md)
-* [Accessing resources attached to a tag](../scenarios/accessing-tagged-resources.md)
-* [Accessing my tags](../scenarios/accessing-my-tags.md)
-* [Creating a tag](../scenarios/creating-a-tag.md)
-* [Attaching a tag](../scenarios/attaching-a-tag.md)
-* [Detaching my tag](../scenarios/detaching-my-tag.md)
-* [Detaching a tag from a resource](../scenarios/detaching-a-tag.md)
-* [Deleting my private tag](../scenarios/removing-my-tag.md)
-* [Deleting public tags](../scenarios/removing-a-tag.md)
+  * [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) - informal tagging of assets
+  * [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview) - informal tagging of personal profiles, collaboration content and community content.
 
-
+The process of adding a tag to an object is called *tagging*.
 
 
 --8<-- "snippets/abbr.md"

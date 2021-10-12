@@ -19,7 +19,7 @@ The open metadata archive has two types:
 
 The logical structure of an open metadata archive is as follows:
 
-![Logical structure of an open metadata archive](open-metadata-archive-structure.png)
+![Logical structure of an open metadata archive](open-metadata-archive-structure.svg)
 
 Instances are linked together as follows:
 
@@ -27,7 +27,7 @@ Instances are linked together as follows:
 - Relationships are stored as `Relationship` structures and link to their entities through the embedded `EntityProxy` structure.
 - The entities will include their classifications; however, for classifications that are attached to entities that are not included in the archive, they are stored in an `ClassificationEntityExtension` structure.
 
-![Instance structures in an open metadata archive](open-metadata-archive-instances.png)
+![Instance structures in an open metadata archive](open-metadata-archive-instances.svg)
 
 Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/egeria-docs/connectors/open-metadata-archive-store-connector).
 
@@ -59,7 +59,7 @@ Open metadata archives are introduced into the server through the admin services
 1. provided as part of the contents of the server's configuration document, or
 2. through the operational command that added the archive directly into the running server's repository.
 
-![Processing of an open metadata archive](open-metadata-archive-processing.png)
+![Processing of an open metadata archive](open-metadata-archive-processing.svg)
 
 The archive is passed to the repository services' operational services, which in turn passes it on to the [archive manager](/egeria-docs/services/omrs/archive-manager). Type information is passed to the [repository content manager](../services/omrs/repository-content-manager.md).
 
@@ -89,7 +89,7 @@ The archive loads in the following order:
 
     In addition, these articles may be of interest:
 
-    - [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#configure-metadata-to-load-on-startup)
-    - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-server/#add-to-a-running-server)
+    - [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup)
+    - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#add-to-a-running-server)
 
 --8<-- "snippets/abbr.md"

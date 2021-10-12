@@ -24,11 +24,11 @@ anchor entity are cleaned up properly and are not left to uselessly clutter the 
 Anchored entities are also bound by the visibility and security restrictions of their anchor. 
 
 !!! example "Example: Assets"
-    For example, [Asset](/egeria-docs/concepts/asset) visibility is controlled by [governance zones](/egeria-docs/concepts/governance-zones).
+    For example, [Asset](/egeria-docs/concepts/asset) visibility is controlled by [governance zones](/egeria-docs/concepts/governance-zone).
     An Asset is only visible through a service if it is a member of that service's **supportedZones**.  Similarly,
     authorization to perform specific operations on an Asset is granted by the
     [Open Metadata Security Services](/egeria-docs/features/metadata-security).
-    When a [SchemaType](/egeria-docs/types/5/0501-schema-elements/#schematype) is attached to an Asset, it is anchored to that Asset.
+    When a [SchemaType](/egeria-docs/types/5/0501-Schema-Elements/#schematype) is attached to an Asset, it is anchored to that Asset.
     Subsequent requests to read or update the SchemaType will result in visibility
     and authorization checks for the requesting user being made with respect to its Asset anchor.
 
@@ -44,7 +44,7 @@ existence and may be linked to many anchors, without obligation.
 
 # Anchors classification
 
-The [Anchors](/egeria-docs/types/0/0010-base-model/#anchors) classification makes it easier to find the anchor entity.
+The [Anchors](/egeria-docs/types/0/0010-Base-Model/#anchors) classification makes it easier to find the anchor entity.
 It is attached to any entity anchored to a Referenceable.
 
 !!! example "Example: SchemaElements and Comments"
@@ -58,7 +58,7 @@ It is attached to any entity anchored to a Referenceable.
     The entities that have the Anchors classification are those that are
     anchored to the Asset.
     This includes entities such as Ratings, Likes and Attachments
-    (from the [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf).
+    (from the [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview).
     It is worthwhile maintaining the Anchors classification because reads of and updates to the anchored
     entities will happen many times, and it is rare that an anchored entity will change its anchor during its lifetime.
 
@@ -81,7 +81,7 @@ be their own anchor to allow then to be attached to and detached from
 many Referenceables over its lifetime.
 
 !!! example "Example: NoteLog and Referenceables"
-    For example, these are cases where the [NoteLog](/egeria-docs/conccepts/note-log) is anchored to another Referenceable
+    For example, these are cases where the [NoteLog](/egeria-docs/concepts/note-log) is anchored to another Referenceable
 
     - NoteLogs are used to support the personal blog linked off of the Personal Profile in Community Profile OMAS.
     - Assets may have a NoteLog to record "news" for consumers such as planned maintenance and unexpected situations.
@@ -99,6 +99,6 @@ many Referenceables over its lifetime.
     ![Examples of other types of entities that are linked to an Asset but not necessarily anchored there](anchors-classifications-on-attached-objects.png#pagewidth)
 
 !!! education "Further information"
-    - [Anchor Management](/egeria-docs/features/anchor-management) provide support for the Anchors and LatestChange classifications.
+    - [Anchor Management](/egeria-docs/features/anchor-management/overview) provide support for the Anchors and LatestChange classifications.
 
 --8<-- "snippets/abbr.md"

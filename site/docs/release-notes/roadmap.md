@@ -64,20 +64,20 @@ Its use is described in the [developer's guide](/egeria-docs/guides/developer/gu
     - [View services](/egeria-docs/services/omvs) provide the services used by UIs. They are typically fine-grained services and they run in the [view server](/egeria-docs/concepts/view-server). The use of the separate server (and server platform) enables an extra firewall to be erected between the view servers and the metadata servers and governance servers, hiding the internal systems from end users.
 - The [open metadata types](/egeria-docs/types) provide common definitions for the different types of metadata needed by an organization. The open metadata type system is extendable; however, by providing a comprehensive starter set, and encouraging tools to use them, Egeria ensures metadata can be seamlessly shared amongst them.
 - The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) provides a multi-tenant runtime platform for [OMAG Servers](/egeria-docs/concepts/omag-server). Each OMAG Server hosts the connectors along with the Egeria services to integrate third party technology.
-    - The [server chassis](../../../open-metadata-implementation/server-chassis) uses Spring Boot to provide the web server and REST API support for the platform.
-    - The [administration services](../../../open-metadata-implementation/admin-services) supports configuring and operating the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/egeria-docs/guides/admin/guide)
-    - The [platform services](../../../open-metadata-implementation/platform-services) provide the means to query the OMAG Servers and services running on an OMAG Server Platform.
-    - The [multi-tenancy management](../../../open-metadata-implementation/common-services/multi-tenant) module supports multiple OMAG Servers running on an OMAG Server Platform.
+    - The [server chassis](/egeria-docs/services/server-chassis) uses Spring Boot to provide the web server and REST API support for the platform.
+    - The [administration services](/egeria-docs/services/admin-services) supports configuring and operating the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/egeria-docs/guides/admin/guide)
+    - The [platform services](/egeria-docs/services/platform-services) provide the means to query the OMAG Servers and services running on an OMAG Server Platform.
+    - The [multi-tenancy management](/egeria-docs/services/multi-tenant) module supports multiple OMAG Servers running on an OMAG Server Platform.
     - The [repository services](/egeria-docs/services/omrs) provide the basic ability to share metadata between metadata repositories. The metadata repositories are organized
-      into [open metadata repository cohorts](/egeria-docs/services/omrs/cohort). These cohorts define the scope of the metadata sharing and ensure metadata is available to all consumers within the cohort.
-    - The [metadata security](../../../open-metadata-implementation/common-services/metadata-security) module provides customizable authorization checks for calls to the OMAG Server Platform, OMAG Server and the open metadata instances themselves.
+      into [open metadata repository cohorts](/egeria-docs/concepts/cohort-member). These cohorts define the scope of the metadata sharing and ensure metadata is available to all consumers within the cohort.
+    - The [metadata security](/egeria-docs/services/metadata-security) module provides customizable authorization checks for calls to the OMAG Server Platform, OMAG Server and the open metadata instances themselves.
     - A governance server makes use of open metadata to actively manage an aspect of the digital landscape. The [governance server services](../../../open-metadata-implementation/governance-servers) each provide the principle subsystem of a [type of governance server](/egeria-docs/concepts/governance-server).
-    - The [generic handlers](../../../open-metadata-implementation/common-services/generic-handlers) provide support for the type specific maintenance and retrieval of metadata that follows the [open metadata types](/egeria-docs/types). This includes managing visibility of metadata through the [Governance Zones](../../../open-metadata-implementation/access-services/docs/concepts/governance-zones), calls to [Open Metadata Security](../../../open-metadata-implementation/common-services/metadata-security) and [metadata management using templates](../cataloging-assets/templated-cataloging.md).
+    - The [generic handlers](/egeria-docs/services/generic-handlers) provide support for the type specific maintenance and retrieval of metadata that follows the [open metadata types](/egeria-docs/types). This includes managing visibility of metadata through the [Governance Zones](../../../open-metadata-implementation/access-services/docs/concepts/governance-zones), calls to [Open Metadata Security](../../../open-metadata-implementation/common-services/metadata-security) and [metadata management using templates](../cataloging-assets/templated-cataloging.md).
 - The [open metadata frameworks](/egeria-docs/frameworks) define the interfaces implemented by components that "plug-in" to Egeria, either to integrate calls to third party technology or extend the function of Egeria. The frameworks are as follows:
-    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) - base framework for all types of plug-in components called connectors.
-    - [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf) - specialized connectors called discovery services that support automated metadata discovery,
-    - [Governance Action Framework (GAF)](/egeria-docs/frameworks/gaf) - specialized connectors for the triage and remediation of issues found in the digital landscape.
-    - [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf) - extensions for all types of connectors to enable natural language diagnostics such as exceptions and audit log messages.
+    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) - base framework for all types of plug-in components called connectors.
+    - [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview) - specialized connectors called discovery services that support automated metadata discovery,
+    - [Governance Action Framework (GAF)](/egeria-docs/frameworks/gaf/overview) - specialized connectors for the triage and remediation of issues found in the digital landscape.
+    - [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview) - extensions for all types of connectors to enable natural language diagnostics such as exceptions and audit log messages.
 
 ### Deployment resources
 
@@ -95,7 +95,7 @@ Aim to simplify the process of deploying the OMAG Server Platform and its connec
 
 Following is an overview of the current status of the functions in Egeria today:
 
-![Status of functions found in each capability layer](../latest.svg)
+![Status of functions found in each capability layer](../release-notes/functional-organization-showing-implementation-status-for-2.9.png)
 
 - Green means that there is function that is either [released or in technical preview](content-status).
 - Orange means there is work in progress.

@@ -12,10 +12,10 @@ Although we aim to automate governance as much as possible, it is often necessar
 assign responsibility for specific actions to specific people.
 
 In Figure 1, the responsibilities of someone assigned to managed a
-particular aspect of governing a resource ([Referenceable](0010-Base-Model.md))
+particular aspect of governing a resource ([Referenceable](/egeria-docs/types/0/0010-Base-Model))
 is represented by a **GovernanceRole** entity.
-Since **GovernanceRole** inherits from [PersonRole](0112-People.md)
-an individual is assigned the Governance Role through the [PersonRoleAppointment](0112-People.md)
+Since **GovernanceRole** inherits from [PersonRole](/egeria-docs/types/1/0112-People)
+an individual is assigned the Governance Role through the [PersonRoleAppointment](/egeria-docs/types/1/0112-People)
 relationship.
 
 ![UML](0445-Governance-Roles.svg)
@@ -32,8 +32,8 @@ the typical types of responsibility.
 lifetime.  Often these data values flow between systems and the DataItemOwner must be sure it is correct in all places.
 
 Ownership is assigned to a resource by adding the **Ownership** classification to it.
-This classification can assign ownership to an [ActorProfile](/egeria-docs/1/0110-Actors.md),
-[UserIdentity](/egeria-docs/types/1/0110-Actors.md) or [PersonRole](/egeria-docs/types/1/0112-People.md).
+This classification can assign ownership to an [ActorProfile](/egeria-docs/1/0110-Actors),
+[UserIdentity](/egeria-docs/types/1/0110-Actors) or [PersonRole](/egeria-docs/types/1/0112-People).
 It does not need to be a GovernanceRole.
 
 ??? deprecated "Deprecated types"

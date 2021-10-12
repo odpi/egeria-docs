@@ -20,20 +20,20 @@ In this solution we are going to cover:
 * automatic configuration of data managers based on the data assets in other data managers
 
 Figure 1 shows the set up to extract metadata from one or more data managers and store it in a metadata server.
-It takes an [integration connector](../../../../open-metadata-implementation/governance-servers/integration-daemon-services/docs/integration-connector.md)
+It takes an [integration connector](/egeria-docs/concepts/integration-connector)
 to interface with a specific data manager.  This is
-running in an appropriate [Open Metadata Integration Service (OMIS)](../../../../open-metadata-implementation/integration-services)
-hosted in an [Integration Daemon](../../../../open-metadata-implementation/admin-services/docs/concepts/integration-daemon.md).
+running in an appropriate [Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis)
+hosted in an [Integration Daemon](/egeria-docs/concepts/integration-daemon).
 
 The OMIS to use for different types of technology is shown in the table below.
 
 | Technology | Examples | OMIS   |
 | :--------- | :------- | :--------- |
-| Database | PostgreSQL | [Database Integrator OMIS](../../../../open-metadata-implementation/integration-services/database-integrator) |
-| Filesystems | local disk storage | [Files Integrator OMIS](../../../../open-metadata-implementation/integration-services/files-integrator) |
-| Document/Content Managers | Photo Library | [Files Integrator OMIS](../../../../open-metadata-implementation/integration-services/files-integrator) |
-| Event Brokers | Apache Kafka | [Topic Integrator OMIS](../../../../open-metadata-implementation/integration-services/topic-integrator) |
-| API Managers | Swagger Site | [API Integrator OMIS](../../../../open-metadata-implementation/integration-services/api-integrator) |
+| Database | PostgreSQL | [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview) |
+| Filesystems | local disk storage | [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview) |
+| Document/Content Managers | Photo Library | [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview) |
+| Event Brokers | Apache Kafka | [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview) |
+| API Managers | Swagger Site | [API Integrator OMIS](/egeria-docs/services/omis/api-integrator/overview) |
 
 <br>
 

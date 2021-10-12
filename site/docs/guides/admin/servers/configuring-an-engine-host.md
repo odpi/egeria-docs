@@ -6,7 +6,7 @@
 Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
 a [configuration document](/egeria-docs/concepts/configuration-document).
 
-![Configuration for an engine host](engine-host-config.png)
+![Configuration for an engine host](engine-host-config.svg)
 
 !!! example "Example configuration of a minimal engine host server"
     Below is an example of the configuration for a minimal engine host server. It has

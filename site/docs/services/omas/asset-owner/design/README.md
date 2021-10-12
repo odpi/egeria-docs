@@ -11,13 +11,11 @@ The module structure for the Asset Owner OMAS follows the standard pattern as fo
 * [asset-owner-spring](../../asset-owner-spring) supports
 the REST API using the [Spring](../../../../../developer-resources/Spring.md) libraries.
 
-It makes use of the [ocf-metadata-management](../../../../common-services/ocf-metadata-management)
+It makes use of the [ocf-metadata-management](/egeria-docs/services/ocf-metadata-management)
 for its server side interaction with the metadata repository and so the
 primary function of the Asset Owner OMAS is to manage the
 APIs for the Asset Owner and translate between them and
-the [Open Connector Framework (OCF)](../../../../frameworks/open-connector-framework) oriented interfaces
+the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) oriented interfaces
 of ocf-metadata-management.
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

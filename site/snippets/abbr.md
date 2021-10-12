@@ -12,9 +12,14 @@
 *[OCF]: Open Connector Framework
 *[ODF]: Open Discovery Framework
 *[OMAG]: Open Metadata and Governance
-*[OMAS]: Open Metadata Access Services
-*[OMES]: Open Metadata Engine Services
-*[OMIS]: Open Metadata Integration Services
+*[OMAS]: Open Metadata Access Service
+*[OMASs]: Open Metadata Access Services
+*[OMES]: Open Metadata Engine Service
+*[OMESs]: Open Metadata Engine Services
+*[OMIS]: Open Metadata Integration Service
+*[OMISs]: Open Metadata Integration Services
 *[OMRS]: Open Metadata Repository Services
-*[OMVS]: Open Metadata View Services
+*[OMVS]: Open Metadata View Service
+*[OMVSs]: Open Metadata View Services
 *[PR]: Pull Request
+*[UI]: User Interface

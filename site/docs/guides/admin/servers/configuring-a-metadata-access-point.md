@@ -8,7 +8,7 @@ a [configuration document](/egeria-docs/concepts/configuration-document).
 
 For a metadata access point, the following can be configured:
 
-![Configuration document for a metadata access point](metadata-access-point-config.png)
+![Configuration document for a metadata access point](metadata-access-point-config.svg)
 
 --8<-- "snippets/tasks/configuring-event-bus.md"
 

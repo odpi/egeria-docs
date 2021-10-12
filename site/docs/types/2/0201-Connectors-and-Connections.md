@@ -18,7 +18,7 @@ tool or engine to access this data and other deployed functions.
 A **Connection** metadata entity contains the configuration
 information to allow the OCF's Connector Broker to select and
 configure the appropriate a client application or tool to connect
-to a particular [Endpoint](0026-Endpoints.md).
+to a particular [Endpoint](/egeria-docs/types/0/0026-Endpoints).
 The **ConnectorType** defines which connector implementation
 should be used to connect to the endpoint.
 The **securedProperties** holds authentication properties

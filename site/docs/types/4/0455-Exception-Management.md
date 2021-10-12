@@ -52,7 +52,7 @@ The types of operational logs and associated processing are:
 ![UML](0455-Exception-Management.svg)
 
 
-The [software servers](0040-Software-Servers.md) that are managing operational governance can be
+The [software servers](/egeria-docs/types/0/0040-Software-Servers) that are managing operational governance can be
 classified with the following:
 
 * **StewardshipServer** describes a server that is handling the stewardship processes.

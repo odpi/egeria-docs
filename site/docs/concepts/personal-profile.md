@@ -9,14 +9,14 @@ of the person's userIds.
 
 Each userId is linked to the profile as a [UserIdentity](user-identity.md) object.
 
-> ![Figure 1](profile-user-1.png)
+> ![Figure 1](profile-user-1.svg)
 
 There can be more than one userId for a profile (for example if a user has an administrator userId and a normal userId)
-> ![Figure 2](profile-user-2.png)
+> ![Figure 2](profile-user-2.svg)
 
 However, the same userId can not be linked to two profiles.
 
-> ![Figure 3](profile-user-3.png)
+> ![Figure 3](profile-user-3.svg)
 
 This means we can retrieve a profile from the UserId.
 
@@ -30,19 +30,6 @@ An individual can also maintain collections of their
 favourite Assets, Projects and Communities and control notifications
 about changes to the member of these lists.
 
-> ![Figure 4](contents-of-a-personal-profile.png)
-
-## Working with personal profiles
-
-* [Retrieving my personal profile](../scenarios/retrieving-my-personal-profile.md)
-* [Creating my personal profile](../scenarios/creating-my-personal-profile.md)
-* [Updating my personal profile](../scenarios/updating-my-personal-profile.md)
-* [Removing my personal profile](../scenarios/removing-my-personal-profile.md)
-
-* [Retrieving a personal profile for another user](../scenarios/finding-a-person.md)
-
-* [Loading personal profiles of existing members of an organization](../scenarios/loading-personal-profiles.md)
-* [Synchronizing updates to personal profiles from another system](../scenarios/synchronizing-personal-profiles.md)
-
+> ![Figure 4](contents-of-a-personal-profile.svg)
 
 --8<-- "snippets/abbr.md"

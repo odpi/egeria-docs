@@ -11,7 +11,7 @@ hide:
 Governance servers host specific integration or governance connectors for technology that does
 not integrate directly with open metadata.
 
-![Governance server](governance-server.png)
+![Governance server](governance-server.svg)
 
 These are the different types:
 

@@ -35,17 +35,17 @@ What follows are two possible solutions for managing lineage for files being ing
 ## Metadata capture for an onboarding process that publishes lineage
 
 Figure 1 shows an example of using the 
-[integration daemon](../../../../open-metadata-implementation/admin-services/docs/concepts/integration-daemon.md)
+[integration daemon](/egeria-docs/concepts/integration-daemon)
 to automatically capture lineage from a
 spark job onboarding the files in to a data lake. The spark job operates independently of Egeria
 but is publishing lineage through the Open Lineage API.
 
-There is a [Lineage Integrator OMIS](../../../../open-metadata-implementation/integration-services/lineage-integrator)
+There is a [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview)
 integration connector capturing this lineage from the spark job, correlating this information
 with the Assets being created by the 
-[integration connectors](../../../../open-metadata-implementation/governance-servers/integration-daemon-services/docs/integration-connector.md)
+[integration connectors](/egeria-docs/concepts/integration-connector)
 running in the
-[Files Integrator OMIS](../../../../open-metadata-implementation/integration-services/files-integrator).
+[Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview).
 
 
 ![Figure 4](file-lineage-capture-solution-detail.png)
@@ -65,9 +65,9 @@ running in the
 ## Metadata capture through a provisioning governance action service
 
 Figure 5 is an alternative design where the onboarding process is implemented in a
-[Provisioning Governance Action Service](../../../../open-metadata-implementation/frameworks/governance-action-framework/docs/provisioning-governance-service.md).
+[Provisioning Governance Action Service](/egeria-docs/guides/developer/governance-action-services/provisioning-governance-service.md).
 running in an
-[Engine Host](../../../../open-metadata-implementation/admin-services/docs/concepts/engine-host.md) server.
+[Engine Host](/egeria-docs/concepts/engine-host) server.
 
 The provisioning governance action service records lineage directly in the metadata server as part of its processing.
 This means the Lineage Capture Integration Connector is not needed.
@@ -101,7 +101,7 @@ The files:
 * Week 3 Landed DataFile
 
 are show in a slightly different color.  Ths is to indicate that they have been classified with
-the [Memento Classification](../../open-metadata-types/0010-Base-Model.md) to indicate that the
+the [Memento Classification](/egeria-docs/types/0/0010-Base-Model) to indicate that the
 described real world resource no longer exists and the asset is being kept to maintain the lineage graph.
 
 Figure 7 shows how the memento classification is stored in open metadata.

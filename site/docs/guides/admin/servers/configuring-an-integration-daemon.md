@@ -6,7 +6,7 @@
 Each [type of OMAG Server](/egeria/concepts/omag-server/#types-of-omag-server) is configured by creating
 a [configuration document](/egeria/concepts/configuration-document).
 
-![Configuration for an integration daemon](integration-daemon-config.png)
+![Configuration for an integration daemon](integration-daemon-config.svg)
 
 --8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
 
@@ -19,7 +19,7 @@ a [configuration document](/egeria/concepts/configuration-document).
 ## Further information
 
 - For help in fixing any error you find using the integration daemon, visit the
-  [integration daemon diagnostic guide](../../../../open-metadata-publication/website/diagnostic-guide/integration-daemon-diagnostic-guide.md).
+  [integration daemon diagnostic guide](/egeria-docs/guides/diagnostic-guide/integration-daemon-diagnostic-guide.md).
 - Link to the [Egeria solutions](../../../../open-metadata-publication/website/solutions) to see the integration
   daemon in action.
 - Link to the [integration daemon services](../../../governance-servers/integration-daemon-services) to

@@ -36,7 +36,7 @@ Its **main()** method is located in a Java class called **OMAGServerPlatform**.
 When the OMAGServerPlatform is first started, all of its REST APIs
 are visible and callable by an external client.
 However, only the [Administration Services](admin-services) 
-and [Platform Services](.platform-services) are operational at this point.
+and [Platform Services](platform-services) are operational at this point.
 The other Open Metadata and Governance (OMAG) services will each give an error response if called.
 
 The [OMAG Subsystems](/egeria-docs/concepts/omag-subsystem.md)

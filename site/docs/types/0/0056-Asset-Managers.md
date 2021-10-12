@@ -14,7 +14,7 @@ The *`AssetManager`* classification represents a technology that manages metadat
 
     An Egeria deployment using a [metadata server](/egeria-docs/concepts/metadata-server) and one or more [integration daemons](/egeria-docs/concepts/integration-daemon) can also be enabled as an asset manager.
 
-The `AssetManager` classification on a [`SoftwareServerCapability`](/egeria-docs/types/0/0042-Software-Server-Capabilities/#softwareservercapability) entity is used by the [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager) to represent the third party asset manager that it is exchanging metadata with.
+The `AssetManager` classification on a [`SoftwareServerCapability`](/egeria-docs/types/0/0042-Software-Server-Capabilities/#softwareservercapability) entity is used by the [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview) to represent the third party asset manager that it is exchanging metadata with.
 
 Identities from this third party asset manager are linked to the `AssetManager` entity using the [`ExternalIdScope`](/egeria-docs/types/0/0017-External-Identifiers/#externalidscope) relationship.
 

@@ -354,7 +354,6 @@ nav:
               - Data Passing: types/7/0750-Data-Passing.md
               - Business Lineage: types/7/0760-Business-Lineage.md
               - Lineage Mapping: types/7/0770-Lineage-Mapping.md
-          - Metamodel: types/metamodel.md
       - Standards: standards/overview.md
       - Services:
           - Fixed Services:
@@ -362,7 +361,7 @@ nav:
                     - Open Metadata Repository Services: services/omrs/index.md
                     - Cohorts: services/omrs/cohort.md
                     - Metadata Repositories: services/omrs/metadata-repositories.md
-                    - Metadata Events: concepts/cohort-events.md
+                    - OMRS Topic Events: concepts/cohort-events.md
               - FFDC: services/ffdc-services.md
               - Multi-tenant: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md

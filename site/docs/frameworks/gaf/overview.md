@@ -57,7 +57,7 @@ The governance action type is defined in the [0462 governance action type](/eger
 
 ## Guard
 
-*Guards* are labels that are created by [governance action services](#governance-action-services) and are used by the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) to determine which governance action service to run next.
+*Guards* are labels that are created by [governance action services](#governance-action-services) and are used by the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview) to determine which governance action service to run next.
 
 ## Incident report
 
@@ -123,7 +123,7 @@ A *provisioning governance service* invokes a provisioning service whenever a pr
 
 Governance action services are [open connectors](/egeria-docs/frameworks/ocf) that support the interfaces defined by the GAF. They may produce [audit log records](/egeria-docs/frameworks/alf) and exceptions, and they may make changes to metadata through the [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas).
 
-A governance action service is passed a *context* as it is started. This provides access to the request type and associated parameters (name-value pairs) used to invoke the governance action service, along with a client to access open metadata through the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine).
+A governance action service is passed a *context* as it is started. This provides access to the request type and associated parameters (name-value pairs) used to invoke the governance action service, along with a client to access open metadata through the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview).
 
 ![Structure of the governance context](governance-context.svg)
 
@@ -135,17 +135,17 @@ A collection of related governance action services are grouped into governance a
 
 ![Structure of a governance engine definition](governance-action-engine-definitions.svg)
 
-These definitions are created through the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) and are stored in the open metadata repositories.
+These definitions are created through the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview) and are stored in the open metadata repositories.
 
 Governance action engines are hosted in an [Open Metadata Engine Service (OMES)](/egeria-docs/services/omes) running on one or more [engine hosts](/egeria-docs/concepts/engine-host). The Open Metadata Types used to define the governance action engines are located in [0461 governance action engines](/egeria-docs/types/4/0461-governance-engines).
 
 ## Running governance action services
 
-Governance action engines are hosted by the [Governance Action OMES](/egeria-docs/services/omes/governance-action).
+Governance action engines are hosted by the [Governance Action OMES](/egeria-docs/services/omes/governance-action/overview).
 
 The engine services run in dedicated OMAG Server called the [*engine host*](/egeria-docs/concepts/engine-host). You can find [instructions for configuring the engine services in the engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host/#configure-the-engine-host-services) in the administration guide.
 
-The [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) provides the services for:
+The [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview) provides the services for:
 
 - setting up the definitions of a governance action engine.
 - configuring [governance action processes](#governance-action-process).

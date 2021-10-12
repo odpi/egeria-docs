@@ -9,7 +9,7 @@ hide:
 # Data Files Monitor Integration Connector
 
 ??? info "Connector details"
-    An [integration connector](/egeria-docs/connectors/integration-connector), hosted by the [Files Integrator OMIS](/egeria-docs/services/omis/file-integrator), running on an [integration daemon](/egeria-docs/concepts/integration-daemon).
+    An [integration connector](/egeria-docs/connectors/integration-connector), hosted by the [Files Integrator OMIS](/egeria-docs/services/omis/file-integrator/overview), running on an [integration daemon](/egeria-docs/concepts/integration-daemon).
 
     - Source: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
     - Connector archive: `files-integration-connectors.jar`
@@ -30,7 +30,7 @@ Specifically:
 
 ![Operation of the data files monitor integration connector](data-files-monitor-integration-connector.svg)
 
-This connector uses the [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator) running in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+This connector uses the [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview) running in the [integration daemon](/egeria-docs/concepts/integration-daemon).
 
 Following is its connection definition to use on the [administration commands that configure the Files Integrator OMIS](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services):
 

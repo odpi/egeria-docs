@@ -17,8 +17,8 @@ Note that for such a simple structure, the type information for each column can 
 
 ## Further Information
 
-* [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator)
-* [Data Manager OMAS](/egeria-docs/services/omas/data-manager)
+* [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
+* [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview)
 
 
 

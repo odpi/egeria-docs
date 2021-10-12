@@ -147,8 +147,8 @@ APIs for capturing lineage
 
 APIs for retrieving lineage
 * [Open Lineage Services](/egeria-docs/services/open-lineage-services)
-* [Asset Owner](/egeria-docs/services/omas/asset-owner) and
-[Asset Consumer](/egeria-docs/services/omas/asset-consumer) through the
+* [Asset Owner](/egeria-docs/services/omas/asset-owner/overview) and
+[Asset Consumer](/egeria-docs/services/omas/asset-consumer/overview) through the
 [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview).
 
 

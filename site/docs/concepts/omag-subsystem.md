@@ -18,9 +18,9 @@ The potential subsystems within an [OMAG Server](omag-server.md) are as follows:
 - [Integration daemon services](/egeria-docs/services/integration-daemon-services) for running integration connectors that exchange metadata with third party technologies.
 - [Connected Asset Services](/egeria-docs/services/ocf-metadata-management) for supporting the `ConnectedAsset` interface of a connector.  
 - Dynamically registered services provide specialist APIs for particular technologies and user roles. Each of these services runs in their own subsystem independent of the other registered services. The implementation may come from Egeria or a third party. The links are to Egeria provided dynamic services.
-    - [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) for supporting domain-specific services for metadata access and governance. Access services run in the [metadata access server](metadata-access-server.md).
-    - [Open Metadata Engine Services (OMES)](/egeria-docs/services/omes) for supporting specialized governance engines that drive governance activity in the open metadata ecosystem. The engine services run in the [engine host](engine-host.md) server.
-    - [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis) for supporting specific types of [integration connectors](integration-connector.md). The integration services run in the [integration daemon](integration-daemon.md) server.
-    - [Open Metadata View Services (OMVS)](/egeria-docs/services/omvs) for supporting REST services for a User Interface (UI). The view services run in a [view server](view-server.md).
+    - [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) for supporting domain-specific services for metadata access and governance. Access services run in the [metadata access server](metadata-access-server.md).
+    - [Open Metadata Engine Services (OMESs)](/egeria-docs/services/omes) for supporting specialized governance engines that drive governance activity in the open metadata ecosystem. The engine services run in the [engine host](engine-host.md) server.
+    - [Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis) for supporting specific types of [integration connectors](integration-connector.md). The integration services run in the [integration daemon](integration-daemon.md) server.
+    - [Open Metadata View Services (OMVSs)](/egeria-docs/services/omvs) for supporting REST services for a User Interface (UI). The view services run in a [view server](view-server.md).
 
 --8<-- "snippets/abbr.md"

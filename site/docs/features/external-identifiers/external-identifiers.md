@@ -27,7 +27,7 @@ Now imagine the opposite situation: where it takes multiple open metadata instan
 
 Again, an external identifier is created for each of the external metadata elements and this is linked to the software server capability for `myCatalog`. Each external identifier is then linked to each of the open metadata instances that have properties that map to its equivalent metadata element in the external system/tool.
 
-The use of external identifiers is particularly important to the [integration connectors](/egeria-docs/concepts/integration-connector) running in the [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis), where the ability to maintain consistent metadata stores in both open metadata and third party systems and tools is important.
+The use of external identifiers is particularly important to the [integration connectors](/egeria-docs/concepts/integration-connector) running in the [Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis), where the ability to maintain consistent metadata stores in both open metadata and third party systems and tools is important.
 
 ## Open metadata representation
 
@@ -35,7 +35,7 @@ The open metadata types for external identifier are in [model 0017](/egeria-docs
 
 ## Implementations
 
-The [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview) provides support for external identifier mapping on its APIs. This capability is visible through the [Catalog Integrator OMIS](/egeria-docs/services/omis/catalog-integrator) and the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview) that are based on the Asset Manager OMAS client.
+The [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview) provides support for external identifier mapping on its APIs. This capability is visible through the [Catalog Integrator OMIS](/egeria-docs/services/omis/catalog-integrator/overview) and the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview) that are based on the Asset Manager OMAS client.
 
 The [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) provides the ability to query the external identifiers attached to an asset through the [connected asset properties](/egeria-docs/concepts/connected-asset-properties). This is also visible through the *`AssetUniverse`* interfaces of the:
 

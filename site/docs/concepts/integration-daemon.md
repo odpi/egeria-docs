@@ -5,11 +5,11 @@
 
 An *integration daemon* is an [OMAG Server](omag-server.md) that provides metadata exchange services between third party technology and the open metadata ecosystem.
 
-The integration daemon interacts with the open metadata ecosystem through [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) running in a [metadata access point](/egeria-docs/concepts/metadata-accces-point) or [metadata access store](/egeria-docs/concepts/metadata-access-store).
+The integration daemon interacts with the open metadata ecosystem through [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) running in a [metadata access point](/egeria-docs/concepts/metadata-accces-point) or [metadata access store](/egeria-docs/concepts/metadata-access-store).
 
 ![Integration daemon sitting between a third party technology and a metadata access point](integration-daemon.svg)
 
-Inside the integration daemon are one or more [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis) that each focus on metadata exchange with a specific type of technology. They are paired with a specific [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) running in the metadata access point / metadata server.
+Inside the integration daemon are one or more [Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis) that each focus on metadata exchange with a specific type of technology. They are paired with a specific [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) running in the metadata access point / metadata server.
 
 
 ## Integration connectors

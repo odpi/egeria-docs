@@ -10,7 +10,7 @@ hide:
 
 The integration services run in an [Integration Daemon](/egeria-docs/concepts/integration-daemon) OMAG server.  Each type of integration service focuses on metadata exchange with a particular type of third party technology.
 
-![Figure 1](/egeria-docs/services/servers/integration-daemon/integration-daemon-in-action.svg)
+![Figure 1](/egeria-docs/concepts/integration-daemon-in-action.svg)
 > **Figure 1:** The integration daemon manages the automatic exchange of open metadata between third party technologies and Metadata Access Points or Metadata Servers that
 are sharing this metadata across the Open Metadata Repository Cohorts that they are connected to
 
@@ -18,7 +18,7 @@ Each integration service provides a specialist API for the [integration connecto
 implementation that is used to set up the integration
 connectors inside the integration daemon.
 
-![Figure 2](/egeria-docs/services/servers/integration-daemon/inside-integration-daemon.svg)
+![Figure 2](/egeria-docs/services/integration-daemon-internals.svg)
 > **Figure 2:** The integration services running in the integration daemon manage the integration connectors and supply them with a context that gives them access to the Egeria services they need.
 
 The integration services available today are:

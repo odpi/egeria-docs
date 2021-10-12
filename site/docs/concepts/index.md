@@ -120,7 +120,7 @@
 * [Instance Security](/egeria-docs/features/metadata-security/overview)
 * Instances
        * [Metadata Instances](/egeria-docs/concepts/open-metadata-instances)
-             * [Instance Events](/egeria-docs/concepts/cohort-events)
+       * [Instance Events](/egeria-docs/concepts/cohort-events)
        * [Server Instances](/egeria-docs/concepts/omag-server)
 * [InTopic](/egeria-docs/concepts/in-topic)
 * [In Memory Repository Connector](/egeria-docs/concepts/repository-connector)

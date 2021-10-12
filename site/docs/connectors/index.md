@@ -39,7 +39,7 @@ Details of how integration connectors work is described in [the developer guide]
 
 #### Files
 
-The `files` integration connectors run in the [Files Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/files-integrator) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The `files` integration connectors run in the [Files Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/files-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
 
 | Connector | Description |
 |---|---|
@@ -48,7 +48,7 @@ The `files` integration connectors run in the [Files Integrator Open Metadata In
 
 #### Databases
 
-The database integration connectors run in the [Database Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/database-integrator) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The database integration connectors run in the [Database Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/database-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
 
 | Connector | Description |
 |---|---|
@@ -57,7 +57,7 @@ The database integration connectors run in the [Database Integrator Open Metadat
 
 #### Topics
 
-The topic integration connectors run in the [Topic Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/topic-integrator) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The topic integration connectors run in the [Topic Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/topic-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
 
 | Connector | Description |
 |---|---|
@@ -66,7 +66,7 @@ The topic integration connectors run in the [Topic Integrator Open Metadata Inte
 
 #### APIs
 
-The API integration connectors run in the [API Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/api-integrator) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The API integration connectors run in the [API Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/api-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
 
 | Connector | Description |
 |---|---|

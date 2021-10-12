@@ -103,7 +103,7 @@ The discovery service is passed the discovery annotation store via the [discover
 
 A *discovery engine* is the execution environment for [discovery services](#discovery-service).
 
-The discovery engine configuration defines a set of discovery services. Its definition is stored in an open metadata repository and maintained through the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine).
+The discovery engine configuration defines a set of discovery services. Its definition is stored in an open metadata repository and maintained through the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview).
 
 Discovery engines are hosted in [discovery servers](#discovery-server).
 
@@ -111,7 +111,7 @@ Egeria's implementation of the discovery engine is provided by the [Asset Analys
 
 ## Discovery server
 
-The *discovery server* is the server environment that hosts one or more [discovery engines](#discovery-engine). Discovery servers are deployed close to the physical assets they are analysing. They connect to the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine) running in a [metadata access server](/egeria-docs/concepts/metadata-access-server) to provide metadata about assets and to store the results of the discovery service's analysis. Many discovery servers can use the same metadata server.
+The *discovery server* is the server environment that hosts one or more [discovery engines](#discovery-engine). Discovery servers are deployed close to the physical assets they are analysing. They connect to the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview) running in a [metadata access server](/egeria-docs/concepts/metadata-access-server) to provide metadata about assets and to store the results of the discovery service's analysis. Many discovery servers can use the same metadata server.
 
 In Egeria, the discovery server is implemented by the [Asset Analysis OMES](/egeria-docs/services/omes/asset-analysis/overview) running in the [engine host](/egeria-docs/concepts/engine-host) OMAG Server.
 
@@ -129,6 +129,6 @@ The discovery service is passed the discovery asset catalog store via the [disco
 
 ## Framework implementation
 
-Egeria provides a full implementation of the ODF. It provides a [discovery server](/egeria-docs/services/omes/asset-analysis/overview) as well as an implementation of the metadata server APIs by the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine). There are also implementations of discovery services in the [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } module.
+Egeria provides a full implementation of the ODF. It provides a [discovery server](/egeria-docs/services/omes/asset-analysis/overview) as well as an implementation of the metadata server APIs by the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview). There are also implementations of discovery services in the [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } module.
 
 --8<-- "snippets/abbr.md"

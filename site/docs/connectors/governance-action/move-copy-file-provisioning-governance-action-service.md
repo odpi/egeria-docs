@@ -74,16 +74,16 @@ processing path and the folders represent the data sets.
 Irrespective of the pattern used, the resulting changes to the metadata can lead to the triggering of additional activity
 in the open metadata ecosystem.  For example:
 
-* The [Asset Lineage OMAS](/egeria-docs/services/omas/asset-lineage)
+* The [Asset Lineage OMAS](/egeria-docs/services/omas/asset-lineage/overview)
 may publish the lineage to the [Open Lineage Server](/egeria-docs/concepts/open-lineage-server).
 
-* Additional [Governance Action Services](/egeria-docs/frameworks/gaf/governance-action-service.md)
+* Additional [Governance Action Services](/egeria-docs/concepts/governance-action-service)
 may be triggered.
 
 ## Configuration
 
-This connector uses the [Governance Action OMES](../../../open-metadata-implementation/engine-services/governance-action)
-running in the [Engine Host](../../../open-metadata-implementation/admin-services/docs/concepts/engine-host.md).
+This connector uses the [Governance Action OMES](/egeria-docs/services/omes/governance-action/overview)
+running in the [Engine Host](/egeria-docs/concepts/engine-host).
 
 The following configuration properties can be set to control
 the behavior of the service on every instance.
@@ -173,12 +173,12 @@ On completion, this governance action service uses:
 
 ## Examples of use
 
-* [Open Metadata Labs](../../../open-metadata-resources/open-metadata-labs): this connector is configured
+* [Open Metadata Labs](/egeria-docs/education/open-metadata-labs): this connector is configured
 in the `governDL01` engine host server as part of the **automated curation** asset management lab.
 
 ??? education "Further information"
 
-* [Designing a Provisioning Governance Action Service](../../../open-metadata-implementation/frameworks/governance-action-framework/docs/provisioning-governance-service.md)
+* [Designing a Provisioning Governance Action Service](/egeria-docs/guides/developer/governance-action-services/provisioning-governance-service)
 
 
 ----

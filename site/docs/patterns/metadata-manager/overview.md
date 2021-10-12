@@ -5,7 +5,7 @@
 
 Metadata is collected together, organized and maintained within a catalog service to enable both individuals and automated services to search for, select and retrieve information about relevant resources necessary to perform a specific task.  These resources could be data, systems, applications, software components, processes, ...
 
-Each of these types of resources are represented in open metadata as *[Assets](/egeria-docs/concepts/assets)*.
+Each of these types of resources are represented in open metadata as *[Assets](/egeria-docs/concepts/asset)*.
 
 ## The contents of an asset catalog
 
@@ -41,12 +41,9 @@ This is built on an [extensible type system](egeria-docs/features/open-type-syst
 
 ![Basic Asset Properties](basic-asset-properties.svg)
  
-Each instance of an asset, no matter what its physical type, is represented by an **Asset**
-(or a subtype of this element -
-see [Assets](/egeria-docs/concepts/asset)
-for a list of the supported sub types) in the catalog.
+Each instance of a resource, no matter what its physical type, is represented by a [type of asset](/egeria-docs/concepts/asset) in the catalog.
  
-The Asset contains the following properties:
+Every asset contains the following properties:
 
 * **Open Metadata Unique identifier (GUID)** - this a globally unique id across all metadata  instances.  It is a string of letters and numbers and typically looks something like this  `40d9520b-dbc0-4cc4-9bad-03ab72d027f3` and is assigned by Egeria.
 
@@ -298,22 +295,28 @@ The related assets enables individuals or automated services to locate assets th
 
 Manual cataloging uses no automation beyond the management of the metadata once it is created. Individuals enter information about the assets into Egeria through tools that call Egeria's Open Metadata Access Services (OMASs).
 
-The [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner) is the principle interface for manual cataloging.  It is possible to catalog any type of asset through this interface although it is biased towards cataloging data assets such as data stores, data feeds, files, data sets, APIs and events.
+The [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) is the principle interface for manual cataloging.  It is possible to catalog any type of asset through this interface although it is biased towards cataloging data assets such as data stores, data feeds, files, data sets, APIs and events.
 
 In addition there are specific cataloging interfaces for particular types of subject matter expert.
 
-* [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure) provides specialist interfaces for cataloging infrastructure such as servers, host systems and applications.
+* [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview) provides specialist interfaces for cataloging infrastructure such as servers, host systems and applications.
 
-* [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture) provides specialist interfaces for architects and integration engineers to manually catalog reference data sets and processes.  Reference data sets are assets in their own right, and their content can be used as classifiers to augment the description of other assets.  Processes are also assets that, when linked together, show the lineage of the assets they are partly responsible for maintaining.
+* [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture/overview) provides specialist interfaces for architects and integration engineers to manually catalog reference data sets and processes.  Reference data sets are assets in their own right, and their content can be used as classifiers to augment the description of other assets.  Processes are also assets that, when linked together, show the lineage of the assets they are partly responsible for maintaining.
 
-## Adding automation
+## Asset catalog search services
 
-Below are three types of automation to minimise the effort in managing your asset catalog.
+Once the asset catalog is established, it can offer search interfaces through the following mechanisms.
 
-* [Templated cataloging](templated-cataloging.md) - copying predefined assets.
-* [Integrated cataloging](integrated-cataloging.md) - automated extraction of metadata from third party technologies.
-* [Discovery and stewardship](discovery-and-stewardship.md) - analysis of asset contents to create metadata
+* [Asset Catalog OMAS](/egeria-docs/services/omas/asset-catalog/overview) provides support a comprehensive search interface for all types of asset. It is designed to support a catalog tool.
 
+* [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) provides simple string-based searches for assets and their related information along with support to create connectors to access the content of the actual physical asset and browse through all of the information known about the asset.
+
+* [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture/overview) provides specialist interfaces for querying reference data and processes.
+
+* [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview) provides specialist catalog search capabilities for infrastructure such as servers, host systems and applications.
+
+* [Governance Program OMAS](/egeria-docs/services/omas/governance-program/overview) provides the ability to browse assets in a [governance zone](/egeria-docs/concepts/governance-zone) to assess the effectiveness of the governance program.
+  
 
 ## Scaling the asset catalog through automation
 
@@ -340,37 +343,22 @@ its own organizational maturity required to make it successful.
 
 Egeria offers the following approaches to cataloging assets:
 
-* [Manual cataloging](manual-cataloging.md) - calling the access services to set up each asset.
-* [Templated cataloging](templated-cataloging.md) - copying predefined assets.
-* [Integrated cataloging](integrated-cataloging.md) - automated extraction of metadata from third party technologies.
-* [Discovery and stewardship](discovery-and-stewardship.md) - analysis of asset contents to create metadata
+* [Templated cataloging](/egeria-docs/features/features/templated-cataloging/overview) - copying predefined assets.
+* [Integrated cataloging](/egeria-docs/features/integrated-cataloging/overview) - automated extraction of metadata from third party technologies.
+* [Discovery and stewardship](/egeria-docs/features/discovery-and-stewardship/overview) - analysis of asset contents to create metadata
 
 The idea is that these approaches are selected for each type of asset and blended together to balance
 the investment in the automation, against the time commitment of subject matter experts, against
 the business value of the resulting catalog.
 
-## Asset catalog services
-
-Once the asset catalog is established, it can offer search interfaces through the following mechanisms.
-
-* [Asset Catalog OMAS](/egeria-docs/services/omas/asset-catalog) provides support a comprehensive search interface for all types of asset. It is designed to support a catalog tool.
-
-* [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer) provides simple string-based searches for assets and their related information along with support to create connectors to access the content of the actual physical asset and browse through all of the information known about the asset.
-
-* [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture) provides specialist interfaces for querying reference data and processes.
-
-* [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure) provides specialist catalog search capabilities for infrastructure such as servers, host systems and applications.
-
-* [Governance Program OMAS](/egeria-docs/services/omas/governance-program) provides the ability to browse assets in a [governance zone](/egeria-docs/concepts/governance-zoning) to assess the effectiveness of the governance program.
-  
 
 ## Related information
 
-* The [Asset](/egeria-docs/concepts/assets) page provides more information on the different types of assets supported by open metadata.  The asset types can be extended dynamically if needed.
+* The [Asset](/egeria-docs/concepts/asset) page provides more information on the different types of assets supported by open metadata.  The asset types can be extended dynamically if needed.
   
-* The type definition for the **Asset** entity is found in model [0010 Basic Model](/egeria-docs/types/0/0010-base-model).
+* The type definition for the **Asset** entity is found in model [0010 Basic Model](/egeria-docs/types/0/0010-Base-Model).
 
-* Examples of representing different types of assets using the open metadata types are found in  [Mapping Technology](/egeria-docs/guides/developer/mapping-technology).
+* Examples of representing different types of assets using the open metadata types are found in [Mapping Technology](/egeria-docs/guides/developer/mapping-technology).
   
 * The [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview) provide practical examples showing all of the techniques to manage an asset catalog, allowing you to try each of the features to assess how they could work in your organization.
 

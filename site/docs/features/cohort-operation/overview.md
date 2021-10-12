@@ -74,7 +74,7 @@ A more bespoke integration involves:
 There are different integration patterns available to help you choose the best approach for your product. Each method is optimized for specific use cases and so the metadata repository can only play a full role in the open metadata use cases if it supports all integration methods. These are:
 
 - Support for an OMRS repository connector to allow open metadata API calls to the repository to create, query, update and delete metadata stored in the repository.
-    - The OMRS connectors support the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) to provide a call interface to the metadata repositories.
+    - The OMRS connectors support the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) to provide a call interface to the metadata repositories.
     - The OMRS Repository Connector API is a standard interface for all metadata repositories. This enables services such as the Enterprise OMRS Repository Connector to interact with 1 or many metadata repositories through the same interface.  
     - The connection configuration it passes to the OCF determines which type of OMRS connector is returned by the OCF.
 - Support for the OMRS event notifications that are used to synchronize selective metadata between the metadata repositories.
@@ -83,23 +83,23 @@ There are different integration patterns available to help you choose the best a
 
 A *cohort member* is an [OMAG Server](/egeria-docs/concepts/omag-server) that is registered with at least one open metadata repository cohort.
 
-![Different types of cohort members](cohort-member-types.png)
+![Different types of cohort members](/egeria-docs/concepts/cohort-member-types.svg)
 
 Management of a server's membership is handled by the [cohort services](../#cohort-services).
 
 The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interfaces which gives fine-grained[^1] metadata notifications and updates. During server start up, the repository services detect the configuration of at least one cohort and starts the *metadata highway manager*. The metadata highway manager creates a *cohort manager* for each cohort configuration. The cohort manager manages the initialization and shutdown of the server's connectivity to a cohort, including the management of the [cohort registry](#cohort-registry).
 
-The server's [metadata security connector](../../../common-services/metadata-security) provides fine-grained control on which metadata is sent, received and/or stored by the server. This level of control is necessary for metadata repositories that are managing specific collections of valuable objects such as [Assets](../../../access-services/docs/concepts/assets).
+The server's [metadata security connector](/egeria-docs/features/metadata-security/overview) provides fine-grained control on which metadata is sent, received and/or stored by the server. This level of control is necessary for metadata repositories that are managing specific collections of valuable objects such as [Assets](../../../access-services/docs/concepts/assets).
 
 The types of cohort members include:
 
-- [Metadata server](/egeria-docs/concepts/metadata-server)
+- [Metadata access store](/egeria-docs/concepts/metadata-access-store)
 - [Metadata access point](/egeria-docs/concepts/metadata-access-point)
 - [Repository proxy](/egeria-docs/concepts/repository-proxy)
 - [Conformance test server](/egeria-docs/concepts/conformance-test-server)
 
 !!! education "Explore hands-on"
-    The administration [hands-on lab](/egeria-docs/getting-started/hands-on-labs) called "Understanding Cohort Configuration Lab" provides an opportunity to query the cohort registries of cohort members as they exchange metadata for Coco Pharmaceuticals.
+    The administration [hands-on lab](/egeria-docs/education/open-metadata-labs) called "Understanding Cohort Configuration Lab" provides an opportunity to query the cohort registries of cohort members as they exchange metadata for Coco Pharmaceuticals.
 
 ## Cohort registration
 

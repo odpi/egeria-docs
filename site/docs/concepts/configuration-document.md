@@ -9,7 +9,7 @@ A configuration document provides the configuration details for a single [OMAG S
 
 An OMAG Server's configuration document is structured into elements that each describe the configuration properties for each of its desired capabilities.
 
-![Structure of the configuration document](configuration-document-structure.png)
+![Structure of the configuration document](configuration-document-structure.svg)
 
 The sections are as follows:
 
@@ -161,7 +161,7 @@ It is also possible to [write your own implementation :material-github:](https:/
 See [configuring the configuration document store](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#configuration-store) for the command to install a particular configuration document store connector into the OMAG Server Platform.
 
 !!! education "Further information"
-    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) defines open connectors and connections since many of the sections in the configuration document take connection objects for connectors.
+    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) defines open connectors and connections since many of the sections in the configuration document take connection objects for connectors.
     - [Configuring an OMAG Server](/egeria-docs/guides/admin/servers) provides more detail on the process of creating a configuration document for various types of OMAG Servers.
 
 --8<-- "snippets/abbr.md"

@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
@@ -23,8 +28,7 @@ together to show a detailed conversation on a topic.
 The owner of a personal profile or the administrator of a community
 are able to remove inappropriate or out-of-date comments
 attached to their personal profile or community respectively.
-See:
-* [Removing]
+
 
 
 --8<-- "snippets/abbr.md"

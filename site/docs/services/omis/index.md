@@ -14,7 +14,7 @@ The integration services run in an [Integration Daemon](/egeria-docs/concepts/in
 > **Figure 1:** The integration daemon manages the automatic exchange of open metadata between third party technologies and Metadata Access Points or Metadata Servers that
 are sharing this metadata across the Open Metadata Repository Cohorts that they are connected to
 
-Each integration service provides a specialist API for the [integration connectors](../governance-servers/integration-daemon-services/docs/integration-connector.md) that it manages along with a context manager
+Each integration service provides a specialist API for the [integration connectors](/egeria-docs/concepts/integration-connector) that it manages along with a context manager
 implementation that is used to set up the integration
 connectors inside the integration daemon.
 
@@ -23,23 +23,21 @@ connectors inside the integration daemon.
 
 The integration services available today are:
 
-* [API Integrator](api-integrator) - provides cataloguing for APIs.
-* [Analytics Integrator](analytics-integrator) - provides cataloguing for Analytics tools.
-* [Archive Integrator](archive-integrator) - provides dynamic maintenance for open metadata archives such as content packs and metadata exports.
-* [Catalog Integrator](catalog-integrator) - provides a two-way synchronization for data catalogs.
-* [Database Integrator](database-integrator) - provides metadata extraction from relational databases.
-* [Display Integrator](display-integrator) - provides metadata extraction from systems that provide user displays and forms to capture new data values.
-* [Files Integrator](files-integrator) - collects metadata about files stored in a filesystem or file manager.
-* [Infrastructure Integrator](infrastructure-integrator) - supports the extraction of metadata from IT infrastructure artifacts as well as the use of metadata to maintain IT infrastructure artifacts.
-* [Lineage Integrator](lineage-integrator) - collects metadata about processes, their internal logic and the data assets they work with.
-* [Organization Integrator](organization-integrator) - imports details of an organization's structure - such as teams and departments.
-* [Security Integrator](security-integrator) - distributes security properties to access control enforcement points.
-* [Stewardship Integrator](stewardship-integrator) - exchanges requests for stewardship action (and results) with a human task manager.
-* [Topic Integrator](topic-integrator) - provides cataloguing of topics and event schema for event brokers.
+* [API Integrator](api-integrator/overview) - provides cataloguing for APIs.
+* [Analytics Integrator](analytics-integrator/overview) - provides cataloguing for Analytics tools.
+* [Archive Integrator](archive-integrator/overview) - provides dynamic maintenance for open metadata archives such as content packs and metadata exports.
+* [Catalog Integrator](catalog-integrator/overview) - provides a two-way synchronization for data catalogs.
+* [Database Integrator](database-integrator/overview) - provides metadata extraction from relational databases.
+* [Display Integrator](display-integrator/overview) - provides metadata extraction from systems that provide user displays and forms to capture new data values.
+* [Files Integrator](files-integrator/overview) - collects metadata about files stored in a filesystem or file manager.
+* [Infrastructure Integrator](infrastructure-integrator/overview) - supports the extraction of metadata from IT infrastructure artifacts as well as the use of metadata to maintain IT infrastructure artifacts.
+* [Lineage Integrator](lineage-integrator/overview) - collects metadata about processes, their internal logic and the data assets they work with.
+* [Organization Integrator](organization-integrator/overview) - imports details of an organization's structure - such as teams and departments.
+* [Security Integrator](security-integrator/overview) - distributes security properties to access control enforcement points.
+* [Stewardship Integrator](stewardship-integrator/overview) - exchanges requests for stewardship action (and results) with a human task manager.
+* [Topic Integrator](topic-integrator/overview) - provides cataloguing of topics and event schema for event brokers.
 
-More information about the operation of the integration daemon and the integration services within,
-along with details of how to set up these integration services are
-located in the [Administration Guide](/egeria-docs/concepts/integration-daemon).
+More information about the operation of the integration daemon and the integration services within, along with details of how to set up these integration services are located in the [Administration Guide](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon).
 
 
 --8<-- "snippets/abbr.md"

@@ -26,8 +26,8 @@ for each combination of path name and operation (GET, POST, PUT, DELETE).
 
 ## Configuration
 
-This connector uses the [API Integrator OMIS](../../../open-metadata-implementation/integration-services/api-integrator)
-running in the [Integration Daemon](../../../open-metadata-implementation/admin-services/docs/concepts/integration-daemon.md).
+This connector uses the [API Integrator OMIS](/egeria-docs/services/omis/api-integrator/overview)
+running in the [Integration Daemon](/egeria-docs/concepts/integration-daemon).
 
 This is its connection definition to use on the 
 [administration commands that configure the API Integrator OMIS](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-integration-services.md).

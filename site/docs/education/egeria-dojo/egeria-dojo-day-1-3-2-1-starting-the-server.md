@@ -22,7 +22,7 @@ There are different type of audit log messages
 
 # Optional material
 
-* [Add the file audit log connector to your server configuration](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-audit-log.md).
+* [Add the file audit log connector to your server configuration](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
   Restart your server and then, from Docker Desktop, open the CLI and look at the log record files that have been created.
   
 * The audit log destinations are configured using connections that define how to create an appropriate connector.

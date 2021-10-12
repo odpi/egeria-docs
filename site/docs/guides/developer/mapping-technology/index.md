@@ -4,6 +4,10 @@
 
 # Modelling different types of technology
 
+## Modelling Schema
+
+The [Schema open metadata types](modelling-schemas.md) describe the structure of data.
+
 ## Representing File Assets
 
 

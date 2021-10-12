@@ -3,7 +3,7 @@
 
 # Managing External Identifiers
 
-Every open metadata instance has a unique identifier called its GUID. This provides a means to locate and retrieve the instance from the metadata repository. However, often the GUID is not known in the systems and tools that integrate with open metadata. Metadata instances that inherit from the [`Referenceable`](/egeria-docs/types/0/0010-base-model/#referenceable) type have a property called `qualifiedName`. This is a unique name for the `Referenceable` instance. When such an instance is created, the qualified name can be set up to a unique identifier that is a natural unique name for the resource that it represents (such as the full path name of a file) or a unique identifier from an external tool. The element can then be retrieved using the `qualifiedName`.
+Every open metadata instance has a unique identifier called its GUID. This provides a means to locate and retrieve the instance from the metadata repository. However, often the GUID is not known in the systems and tools that integrate with open metadata. Metadata instances that inherit from the [`Referenceable`](/egeria-docs/types/0/0010-Base-Model/#referenceable) type have a property called `qualifiedName`. This is a unique name for the `Referenceable` instance. When such an instance is created, the qualified name can be set up to a unique identifier that is a natural unique name for the resource that it represents (such as the full path name of a file) or a unique identifier from an external tool. The element can then be retrieved using the `qualifiedName`.
 
 Now consider the situation where each external tool that uses the instance has a different identifier for the instance. There is only one qualified name property in the instance which will not be able to cover all the identifiers from the external systems/tools.
 
@@ -27,20 +27,20 @@ Now imagine the opposite situation: where it takes multiple open metadata instan
 
 Again, an external identifier is created for each of the external metadata elements and this is linked to the software server capability for `myCatalog`. Each external identifier is then linked to each of the open metadata instances that have properties that map to its equivalent metadata element in the external system/tool.
 
-The use of external identifiers is particularly important to the [integration connectors](../../../open-metadata-implementation/governance-servers/integration-daemon-services/docs/integration-connector.md) running in the [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis), where the ability to maintain consistent metadata stores in both open metadata and third party systems and tools is important.
+The use of external identifiers is particularly important to the [integration connectors](/egeria-docs/concepts/integration-connector) running in the [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis), where the ability to maintain consistent metadata stores in both open metadata and third party systems and tools is important.
 
 ## Open metadata representation
 
-The open metadata types for external identifier are in [model 0017](/egeria-docs/types/0/0017-external-identifiers). The [`ExternalIdLink`](/egeria-docs/types/0/0017-external-identifiers/#externalidlink) relationship is between the external identifier and the open metadata instance it represents. The [`ExternalIdScope`](/egeria-docs/types/0/0017-external-identifiers/#externalidscope) is the relationship between the external identifier and the software server capability that represents the external system/tool.
+The open metadata types for external identifier are in [model 0017](/egeria-docs/types/0/0017-External-Identifiers). The [`ExternalIdLink`](/egeria-docs/types/0/0017-External-Identifiers/#externalidlink) relationship is between the external identifier and the open metadata instance it represents. The [`ExternalIdScope`](/egeria-docs/types/0/0017-External-Identifiers/#externalidscope) is the relationship between the external identifier and the software server capability that represents the external system/tool.
 
 ## Implementations
 
-The [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager) provides support for external identifier mapping on its APIs. This capability is visible through the [Catalog Integrator OMIS](/egeria-docs/services/omis/catalog-integrator) and the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator) that are based on the Asset Manager OMAS client.
+The [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview) provides support for external identifier mapping on its APIs. This capability is visible through the [Catalog Integrator OMIS](/egeria-docs/services/omis/catalog-integrator) and the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview) that are based on the Asset Manager OMAS client.
 
-The [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) provides the ability to query the external identifiers attached to an asset through the [connected asset properties](/egeria-docs/frameworks/ocf/#connected-asset-properties). This is also visible through the *`AssetUniverse`* interfaces of the:
+The [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) provides the ability to query the external identifiers attached to an asset through the [connected asset properties](/egeria-docs/concepts/connected-asset-properties). This is also visible through the *`AssetUniverse`* interfaces of the:
 
-- [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer)
-- [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner)
-- [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine)
+- [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview)
+- [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)
+- [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview)
 
 --8<-- "snippets/abbr.md"

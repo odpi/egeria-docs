@@ -46,7 +46,7 @@ The enterprise event topic combines the cohort events from all cohorts that the 
 
 ## Cohort event types
 
-![OMRS event format (version 1)](cohort-event-format.png)
+![OMRS event format (version 1)](cohort-event-format.svg)
 
 Every event has a:
 

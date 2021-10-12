@@ -38,7 +38,7 @@ their relationship to the personal profile.
 
 ## LatestChange and Anchors classification
 
-The [LatestChange](/egeria-docs/types/0/0010-base-model/#Anchors) classification is attached to each anchor Referenceable.
+The [LatestChange](/egeria-docs/types/0/0010-Base-Model/#Anchors) classification is attached to each anchor Referenceable.
 It is used to record the latest change to this anchor or any of the entities anchored to it.
 
 So for example, if a hierarchy of SchemaElements,
@@ -53,7 +53,7 @@ easier to monitor for changes affecting the Asset and any of its anchored entiti
 However it also means that it must be easy to located the Asset
 from any of the anchored entities when they change, even though they may not be directly connected.
 
-The [Anchors](/egeria-docs/types/0/0011-managing-referenceables/#LatestChange) classification makes it easier to find the anchor entity.
+The [Anchors](/egeria-docs/types/0/0011-Managing-Referenceables/#LatestChange) classification makes it easier to find the anchor entity.
 It is attached to any entity anchored to a Referenceable.
 In the example above, Anchors would be on all of the
 SchemaElements and Comments.
@@ -66,7 +66,7 @@ Figure 1 shows an example Asset with a number of entities anchored to it.
 The entities that have the Anchors classification are those that are
 anchored to the Asset.
 This includes entities such as Ratings, Likes and Attachments
-(from the [Open Discovery Framework (ODF)](../../../frameworks/open-discovery-framework).
+(from the [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview).
 It is worthwhile maintaining the Anchors classification because reads of and updates to the anchored
 entities will happen many times, and it is rare that an anchored entity will change its anchor during its life time.
 
@@ -108,11 +108,11 @@ independent of the Asset.
 
 ## Further information
 
-* [Generic Handlers](../../../common-services/generic-handlers) provide support for the
+* [Generic Handlers](/egeria-docs/servvices/generic-handlers) provide support for the
   Anchors and LatestChange classifications.
-* [Open Metadata Type definitions for LatestChange and Anchors classification](../../../../open-metadata-publication/website/open-metadata-types/0011-Managing-Referenceables.md)
-* [Open Metadata security checks for Assets and Connections](../../../common-services/metadata-security/metadata-security-apis)
-* [Governance Zones and Assets](governance-zones)
+* [Open Metadata Type definitions for LatestChange and Anchors classification](/egeria-docs/types/0/0011-Managing-Referenceables.md)
+* [Open Metadata security checks for Assets and Connections](/egeria-docs/features/metadata-security/overview)
+* [Governance Zones and Assets](/egeria-docs/features/governance-zoning/overview)
 
 
 --8<-- "snippets/abbr.md"

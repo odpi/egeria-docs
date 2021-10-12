@@ -3,7 +3,7 @@
 
 # Metadata discovery and stewardship
 
-[Integrated cataloguing](/egeria-docs/features/integraated-cataloguing) typically automates the creation the basic asset entry, its connection and
+[Integrated cataloguing](/egeria-docs/features/integrated-cataloguing) typically automates the creation the basic asset entry, its connection and
 optionally, its schema.  This is what is called technical metadata.
 
 Metadata discovery uses advanced analysis to inspect the content of specific assets to derive new insights that can augment or validate their catalog entry.
@@ -30,13 +30,13 @@ discovery tool may analyse the data content to determine the types and range of 
 maybe determine a quality score for the data).
 
 Some metadata discovery may occur when the asset is first cataloged. For example, the schema of an asset may be stored through the
-[Data Manager OMAS](/egeria-docs/services/omas/data-manager) API.
+[Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview) API.
 This schema may have been automatically extracted by a
-metadata extractor connector hosted in Egeria's Open Metadata Integration Services like [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator) or [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator).
+metadata extractor connector hosted in Egeria's Open Metadata Integration Services like [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview) or [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview).
 
 Egeria also supports more advanced metadata discovery.
 
-The [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf) has open APIs that define how automated discovery services can be managed and interact with an open metadata repository.
+The [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview) has open APIs that define how automated discovery services can be managed and interact with an open metadata repository.
 The metadata repository interfaces provide the metadata discovery service with:
  * the ability to manage discovery configuration,
  * a search function to locate assets in the metadata repository,
@@ -47,5 +47,6 @@ This metadata repository interface for metadata discovery tools is implemented b
 
 Egeria is also able to host automated metadata discovery services that implement the ODF interfaces in its [Asset Analysis OMES](/egeria-docs/services/omes/asset-analysis).
 
+## Managing governance engine configuration
 
 --8<-- "snippets/abbr.md"

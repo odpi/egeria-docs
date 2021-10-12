@@ -17,7 +17,7 @@ A more bespoke integration involves:
 There are different integration patterns available to help you choose the best approach for your product. Each method is optimized for specific use cases and so the metadata repository can only play a full role in the open metadata use cases if it supports all integration methods. These are:
 
 - Support for an OMRS repository connector to allow open metadata API calls to the repository to create, query, update and delete metadata stored in the repository.
-    - The OMRS connectors support the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf) to provide a call interface to the metadata repositories.
+    - The OMRS connectors support the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) to provide a call interface to the metadata repositories.
     - The OMRS Repository Connector API is a standard interface for all metadata repositories. This enables services such as the Enterprise OMRS Repository Connector to interact with 1 or many metadata repositories through the same interface.  
     - The connection configuration it passes to the OCF determines which type of OMRS connector is returned by the OCF.
 - Support for the OMRS event notifications that are used to synchronize selective metadata between the metadata repositories.

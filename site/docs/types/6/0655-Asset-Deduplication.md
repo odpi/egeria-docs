@@ -19,7 +19,7 @@ keep descriptions and other types of attachments synchronized across the copies,
 and governance (OMAG) services need to detect these duplicates and monitor divergent values.
 
 The annotations shown below are used by discovery services to record first that two or more
-[Asset entities](0010-Base-Model.md) seem to
+[Asset entities](/egeria-docs/types/0/0010-Base-Model) seem to
 describe the same (real/physical) asset.  This is the `SuspectDuplicateAnnotation`.  When this annotation
 is recorded, it is processed by the stewardship **Governance Actions** to decide if they are really duplicates or
 not.

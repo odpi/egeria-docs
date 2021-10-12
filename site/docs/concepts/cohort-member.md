@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
@@ -11,7 +16,7 @@ The open metadata repository cohort (or cohort for short) is a group of OMAG ser
 > **Figure 1:** OMAG Servers connected via a cohort
 
 The cohort is self-configuring.  At the heart of it is between one and four shared
-[cohort topics].  Each member publishes a registration request on the appropriate topic when they want to join.  This is picked up by the existing members who add this new server to their registry of members known as the [cohort registry](/egeria-docs/concepts/cohort-registry)
+[cohort topics](/egeria-docs/concepts/cohort-events/#cohort-topics).  Each member publishes a registration request on the appropriate topic when they want to join.  This is picked up by the existing members who add this new server to their registry of members known as the [cohort registry](/egeria-docs/concepts/cohort-registry)
 and re-send their registration through the same topic to allow the new member to build up its own registry.
 
 When an OMAG server permanently leaves the cohort, it sends an unregistration request.
@@ -32,16 +37,16 @@ The originator of the requested metadata then sends the latest version of this m
 the rest of the cohort through the cohort topic.  This mechanism is useful
 to seed the cache in a new member of the cohort and is invoked as a result of a
 federated query issued from the new member. (A federated query occurs whenever an
-[access service](../../../access-services) make a request for metadata.)
+[OMAS](/egeria-docs/services/omas) make a request for metadata.)
 
-The exchange of metadata is using the [Open Metadata Repository Services (OMRS)](../../../repository-services)
+The exchange of metadata is using the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
 interfaces which gives fine-grained metadata notifications and updates.
-(See the [OMRS metamodel](../../../repository-services/docs/metadata-meta-model.md) for more details).
-The server's [metadata security connector](../../../common-services/metadata-security)
+(See the [OMRS metamodel](/egeria-docs/guides/developer/repository-connectors/metamodel/overview) for more details).
+The server's [metadata security connector](/egeria-docs/features/metadata-security/overview)
 provides fine-grained control on which metadata is send, received and/or stored by the server.
 This level of control is necessary for metadata repositories that are managing
 specific collections of valuable objects such as 
-[Assets](../../../access-services/docs/concepts/assets).
+[Assets](/egeria-docs/concepts/asset).
 
 Figure 2 shows the different types of cohort members.
 Follow the links below the diagram to find out more about each one's purpose.
@@ -59,7 +64,7 @@ Follow the links below the diagram to find out more about each one's purpose.
 
 There is more detailed information about the operation of an open
 metadata repository cohort in 
-[Cohort Operation](/egeria-docs/features/cohort-operation).
+[Cohort Operation](/egeria-docs/features/cohort-operation/overivew).
 
 The administration hands on lab called "**Understanding Cohort Configuration Lab**"
 provides an opportunities to query the cohort registries of cohort members as they

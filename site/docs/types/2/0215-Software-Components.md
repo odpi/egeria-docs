@@ -9,13 +9,13 @@ hide:
 # 0215 Software Components
 
 **DeployedSoftwareComponent** describes a code asset that is deployed to implement a 
-[software capability](0042-Software-Server-Capabilities.md).
-Each software component has a well defined interface describe by an [APISchema](0536-API-Schemas.md) that is
-linked to the DeployedSoftwareComponent by the [AssetSchemaType](0503-Asset-Schema.md) relationship.
+[software capability](/egeria-docs/types/0/0042-Software-Server-Capabilities).
+Each software component has a well defined interface describe by an [APISchema](/egeria-docs/types/5/0536-API-Schemas) that is
+linked to the DeployedSoftwareComponent by the [AssetSchemaType](/egeria-docs/types/5/0503-Asset-Schema) relationship.
 
 **DeployedConnector** represents specialist software component called a
 **connector** that provides pluggable access to third party
-technologies.  These connectors implement the [Open Connector Framework (OCF)](../../../open-metadata-implementation/frameworks/open-connector-framework)
+technologies.  These connectors implement the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview)
 interfaces.
 
 **EmbeddedProcess** describes a processing element nested within a DeployedSoftwareComponent.
@@ -35,16 +35,16 @@ the process hierarchy.
 
 #### Related Open Metadata Type Definitions
 
-* [Definition of Process](0010-Base-Model.md)
+* [Definition of Process](/egeria-docs/types/0/0010-Base-Model)
 * [Linking of processes into lineage graphs](Area-7-models.md)
-* [Ports to show specific input and output flows for a process](0217-Ports.md)
-* [PortSchema relationships to describe the structure of data supported by a Port](0520-Process-Schemas.md)
+* [Ports to show specific input and output flows for a process](/egeria-docs/types/2/0217-Ports)
+* [PortSchema relationships to describe the structure of data supported by a Port](/egeria-docs/types/5/0520-Process-Schemas)
 
 
 #### Use of these open metadata types
 
-* [Egeria Developer Guide](../developer-guide) for more information on connectors and how to implement them.
-* [Lineage](../lineage) describes the different types of lineage and how the open metadata types link
+* [Egeria Developer Guide](/egeria-docs/guides/developer-guide) for more information on connectors and how to implement them.
+* [Lineage](/egeria-docs/features/lineage-management/overview) describes the different types of lineage and how the open metadata types link
 together to form lineage graphs.
 
 --8<-- "snippets/abbr.md"

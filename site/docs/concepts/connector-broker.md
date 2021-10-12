@@ -1,9 +1,14 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Connector Broker - part of the [Open Connector Framework (OCF)](../..)
+# Connector Broker
 
-The Connector Broker is the factory class for all open connectors.
+The Connector Broker is the factory class for all [open connectors](connector.md).
 Given a valid [Connection](connection.md) object, the
 Connector Broker is able to create a new instance of a connector.
 This means the caller does not need to know the implementation
@@ -37,8 +42,8 @@ the result to its caller.
 The Connector Broker is used in the client code of the Open Metadata Access Services (OMASs) that provide
 connector instances to their consumers.  Examples include:
 
-* [Asset Consumer OMAS](../../../../access-services/asset-consumer)
-* [Asset Owner OMAS](../../../../access-services/asset-owner)
+* [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview)
+* [Asset Owner OMAS](./egeria-docs/services/omas/asset-owner/overview)
 
 
 ---8<-- "snippets/abbr.md"

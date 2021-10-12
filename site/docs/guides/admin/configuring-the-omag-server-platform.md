@@ -16,7 +16,7 @@ The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) is a JVM 
 
 ## Configuring other options
 
-![What needs to be configured in the server platform](configurability-of-platform.png)
+![What needs to be configured in the server platform](configurability-of-platform.svg)
 
 ### Configuration store
 

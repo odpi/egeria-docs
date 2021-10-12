@@ -3,9 +3,9 @@
 
 # Creating configuration documents for the OMAG Server Platform
 
-The [OMAG server platform](../../../open-metadata-publication/website/omag-server)
+The [OMAG server platform](/egeria-docs/concepts/omag-server-platform)
 provides a software platform for running
-[OMAG Servers](../../../open-metadata-implementation/admin-services/docs/concepts/omag-server.md).
+[OMAG Servers](/egeria-docs/concepts/omag-server).
 
 Each OMAG Server supports selected open metadata and governance services based on its
 configuration. 
@@ -17,17 +17,17 @@ However there are three sets of Administration Service APIs active.
 * **Server Origin** - for discovering the source of the OMAG server platform.  
 (This was used in the previous [task](task-starting-the-omag-server-platform.md).)
 * **Configuration Services** - for creating configuration documents.
-* **Operational Services** - for starting and stopping [OMAG Servers](../../../open-metadata-implementation/admin-services/docs/concepts/omag-server.md)
+* **Operational Services** - for starting and stopping [OMAG Servers](/egeria-docs/concepts/omag-server)
 in the OMAG server platform using the configuration documents.
 
 ## What is a configuration document?
 
-A [configuration document](../../../open-metadata-implementation/admin-services/docs/concepts/configuration-document.md)
+A [configuration document](/egeria-docs/concepts/configuration-document)
 provides the configuration properties for an OMAG server.
 
 It includes:
 * Basic properties of the OMAG server.
-* Defaults to use when configuring the [subsystems](../../../open-metadata-implementation/access-services/docs/concepts/it-infrastructure/subsystem.md)
+* Defaults to use when configuring the [OMAG subsystems](/egeria-docs/concepts/omag-subsystem)
 of the OMAG server.
 * Configuration for selected subsystems within the OMAG server.  The subsystems selected and configured
 determine which open metadata and governance services are supported by the OMAG server.
@@ -293,7 +293,7 @@ If you query the configuration again (this is request **6.** in Postman) you see
 ```
 
 Finally in this exercise, use the following command to enable the
-[Open Metadata Access Services (OMASs)](../../../open-metadata-implementation/access-services) that provide
+[Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) that provide
 the domain specific open metadata and governance APIs.
 
 The access services provide both REST APIs and event-based interaction.

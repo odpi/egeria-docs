@@ -7,8 +7,8 @@ An open discovery service is a component that performs analysis of the contents 
 resource and adds the results to a [discovery analysis report](/egeria-docs/concepts/discovery-analysis-report)
 linked off of the resources's [Asset](/egeria-docs/concepts/asset) on request.
 
-It is implemented as a specialized [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf)
-connector.  The interface and base class are provided by the [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf).
+It is implemented as a specialized [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview)
+connector.  The interface and base class are provided by the [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview).
 
 A discovery service is initialized with a connector to the Asset it is to analyze and details of
 the results of other discovery services that have run before it if it is part of a

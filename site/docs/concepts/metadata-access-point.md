@@ -14,6 +14,6 @@ A *metadata access point* is an [OMAG Server](omag-server.md) that can be a [mem
 
 This means it provides specialist metadata APIs to user interfaces and governance servers that embrace metadata from all connected open metadata repository cohorts.
 
-The basic metadata access point has no metadata repository and metadata is retrieved and stored from remote repositories via the [cohort](/egeria-docs/concepts/cohort-member). It can be upgraded to a [metadata server](/egeria-docs/concepts/metadata-server) by adding a metadata repository which will enable it to store metadata locally.
+The basic metadata access point has no metadata repository and metadata is retrieved and stored from remote repositories via the [cohort](/egeria-docs/concepts/cohort-member). It can be upgraded to a [metadata access store](/egeria-docs/concepts/metadata-access-store) by adding a metadata repository which will enable it to store metadata locally.
 
 --8<-- "snippets/abbr.md"

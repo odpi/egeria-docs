@@ -36,7 +36,7 @@ The exchange of metadata uses the [cohort events](/egeria-docs/concepts/cohort-e
 
 ### Members
 
-![Cohort member types](/egeria-docs/concepts/cohort-member-types.svg)
+![Cohort member types](cohort-member-types.svg)
 
 A third party metadata server can embed the Egeria libraries in its own runtime or, more commonly, use a special OMAG Server called the [repository proxy](/egeria-docs/concepts/repository-proxy) to host connectors that map between the events and APIs of the third party metadata server and the Open Metadata events and APIs. The repository proxy manages all the interaction with the other members of the cohort.
 

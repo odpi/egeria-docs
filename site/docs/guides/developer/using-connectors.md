@@ -5,13 +5,13 @@
 
 [*Connectors*](/egeria-docs/guides/developer/guide/#what-is-a-connector) can be created through the following clients:
 
-- [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer)
-- [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner)
+- [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview)
+- [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)
 
 !!! example "Example: [connecting to CSV files using Asset Consumer OMAS :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/access-services-samples/asset-management-samples/asset-reader-csv-sample/src/main/java/org/odpi/openmetadata/accessservices/assetconsumer/samples/readcsvfile/CSVFileReaderSample.java){ target=gh }"
-    The code sample below uses the Asset Consumer OMAS client to retrieve a list of assets from a [metadata server](/egeria-docs/concepts/metadata-server) and then create a connector to each one using the `getConnectorToAsset()` method.
+    The code sample below uses the Asset Consumer OMAS client to retrieve a list of assets from a [metadata access server](/egeria-docs/concepts/metadata-access-server) and then create a connector to each one using the `getConnectorToAsset()` method.
 
-    This method assumes that there is a connection object with a [connector type](/egeria-docs/frameworks/ocf/#connector-type) and [endpoint](/egeria-docs/frameworks/ocf/#endpoint) linked to the requested asset in the metadata repository.
+    This method assumes that there is a connection object with a [connector type](/egeria-docs/concepts/connector-type) and [endpoint](/egeria-docs/concepts/endpoint) linked to the requested asset in the metadata repository.
 
     ![An asset with a connection](asset-connection.png)
 
@@ -91,7 +91,7 @@
 
 It is possible that an asset can have multiple connections, each with different levels of security access encoded. Egeria is able to determine which one to use by calling the `validateUserForAssetConnectionList()` method of the [Server Security Metadata Connector](/egeria-docs/services/common/metadata-security).
 
-![Multiple connections for an asset](multiple-asset-connections.png)
+![Multiple connections for an asset](multiple-asset-connections.svg)
 
 ## Other links to the connection
 
@@ -101,20 +101,23 @@ For example, there is typically one connector type for each connector implementa
 
 ### Connector Types
 
-![Uses of a connector implementation](uses-of-a-connector-implementation.png)
+![Uses of a connector implementation](uses-of-a-connector-implementation.svg)
 
 The connector types for Egeria's data store connectors are available in an open metadata archive called `DataStoreConnectorTypes.json` that can be loaded into the server. This approach can be used for all of your connector implementations to create the connector type objects in our metadata repository. See the [open-connector-archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } for more detail.
 
+### Connector categories
+
+![Connector Categories](connector-categories.svg)
 
 ### Endpoints
 
 The endpoints are typically linked to the software server that is called by the connector. By navigating from the `Endpoint` to the linked connections it is possible to trace the callers to the software server.
 
-![Connections to a software server](connections-to-a-software-server.png)
+![Connections to a software server](connections-to-a-software-server.svg)
 
 Software servers and endpoints are set up through the [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure).
 
 !!! education "Further information"
-    The [connector catalog](/egeria-docs/connectors/#catalog) lists the connectors available to digital resources.
+    The [connector catalog](/egeria-docs/connectors) lists the connectors available to digital resources.
 
 --8<-- "snippets/abbr.md"

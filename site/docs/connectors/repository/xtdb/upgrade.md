@@ -148,6 +148,10 @@ Once the previous (in-place upgrade) command completes, you should now be able t
 
 There should be no need to actually understand these details, as the connector (and migration) will handle them for you. However, for the interested reader, the following changes were made to the storage layer in the specified release:
 
+### 3.2
+
+- `EntityProxyMapping` no longer maintains a separate namespace for entity properties that are unique; instead, a single namespace is now used for all entity properties (whether a proxy or a "full" entity)
+
 ### 2.9
 
 - `InstanceAuditHeaderMapping` no longer separates the type GUID and supertype GUIDs, but places all such information into a single vector (for improved search performance)

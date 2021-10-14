@@ -128,7 +128,7 @@ Both approaches are valid and should be equally functional, but occasionally a b
         "connectorProviderClassName": "org.odpi.egeria.connectors.juxt.xtdb.repositoryconnector.XtdbOMRSRepositoryConnectorProvider"
       },
       "configurationProperties": {
-        "xtdbConfigEDN": "{:xtdb/index-store {:kv-store {:xtdb/module xtdb.rocksdb/->kv-store :db-dir \"data/servers/xtdb/rdb-index\"}} :xtdb/document-store {:xtdb/module xtdb.jdbc/->document-store :connection-pool {:dialect {:xtdb/module xtdb.jdbc.psql/->dialect} :db-spec {:jdbcUrl \"jdbc:postgresql://myserver.com:5432/mydb?user=myuser&password=mypassword\"}}} :xtdb/tx-log {:kv-store {:xtdb/module xtdb.rocksdb/->kv-store :db-dir \"data/servers/xtdb/rdb-tx\"}} :xtdb.lucene/lucene-store {:db-dir \"data/servers/xtdb/lucene\" :indexer {:xtdb/module xtdb.lucene.egeria/->egeria-indexer} :analyzer {:xtdb/module xtdb.lucene.egeria/->ci-analyzer}}}"
+        "xtdbConfigEDN": "{:xtdb/index-store {:kv-store {:xtdb/module xtdb.rocksdb/->kv-store :db-dir \"data/servers/xtdb/rdb-index\"}} :xtdb/tx-log {:kv-store {:xtdb/module xtdb.rocksdb/->kv-store :db-dir \"data/servers/xtdb/rdb-tx\"}} :xtdb.lucene/lucene-store {:db-dir \"data/servers/xtdb/lucene\" :indexer {:xtdb/module xtdb.lucene.egeria/->egeria-indexer} :analyzer {:xtdb/module xtdb.lucene.egeria/->ci-analyzer}} :xtdb/document-store {:xtdb/module xtdb.jdbc/->document-store :connection-pool {:dialect {:xtdb/module xtdb.jdbc.psql/->dialect} :db-spec {:jdbcUrl \"jdbc:postgresql://myserver.com:5432/mydb?user=myuser&password=mypassword\"}}}}"
       }
     }
     ```
@@ -145,7 +145,8 @@ Both approaches are valid and should be equally functional, but occasionally a b
 
         These configure the Lucene index optimally for the OMRS-level search interfaces that Egeria defines.
 
-    The remainder of the configuration in this example defines RocksDB to act as the persistence layer for XTDB's index and document stores, as well as its transaction log.
+    !!! attention "Ordering of the EDN configuration is important"
+        When configuring one of the components to use JDBC connectivity (such as the document store in the example above), the ordering of the configured services in the EDN configuration is important. Any service using a JDBC configuration should be placed at the very end of the EDN configuration. See [issue #246 :material-github:](https://github.com/odpi/egeria-connector-xtdb/issues/246){ target=gh } for details.
 
 !!! tip "You may need to download additional dependencies"
     In general the dependent libraries for most persistence (other than JDBC) is included in the connector `.jar` file itself. For JDBC, you will need to download the appropriate driver for your specific data store and make this `.jar` file available in the same directory as the connector.
@@ -197,19 +198,22 @@ There are currently two configuration options for the connector itself:
     }
     ```
 
-!!! danger "Be careful with `syncIndex` set to false"
-    The `syncIndex` parameter should only be set to `false` for mass ingestion where you make your own guarantees that the same metadata instances are only created or updated once by that ingestion process. Afterwards, the configuration of the connector for that repository should have the `syncIndex` setting changed back to `true` for business-as-usual operation.
+!!! attention "When `syncIndex` is set to false, all write operations will return null"
+    The `syncIndex` parameter is intended for mass ingestion use only. As of v3.2 the connector now makes use of XTDB's transaction function capability to ensure that all write operations are ACID compliant, even when done asynchronously. This guarantees that:
 
-    When set to false, all write operations are guaranteed but are **not** done atomically relative to other read operations. In particular, this means that certain operations that rely on first retrieving some metadata instance's state, changing it, and persisting that change *must* be done only once (up to you to guarantee when `syncIndex` is false) or in synchronous mode (`syncIndex` set to true). Otherwise, there is every possibility that the operation will retrieve a stale version of the metadata instance, update it, and persist that -- ultimately clobbering whatever asynchronous update may have been made in-between.
+    - the write operation will be persisted and durable when the write operation returns
+    - the write operation will be applied sequentially relative to any other (concurrent) write operations
 
-    This applies to essentially all write operations: `classifyEntity`, `updateEntityClassification`, `declassifyEntity`, `save...ReferenceCopy`, `delete...`, `purge...`, `purge...ReferenceCopy`, `restore...`, `update...Status`, `update...Properties`, `undo...Update`, `reIdentify...`, `reType...`, and `reHome...`
+    However, asynchronous mode explicitly means that the write operation will *not* be immediately indexed (for reading). When running this way, the resulting state of a given write operation will not be known until some point in the future. This means that we cannot return a reliable result from the write operation to the caller when the repository is running in asynchronous mode. Rather than returning something that is potentially incorrect, we have therefore opted to ensure that these write operations always return `null` when operating in asynchronous mode.
+
+    You should therefore be careful that when using asynchronous mode you are not relying on any functionality that makes direct use of the results of write operations, as those results will always be `null` in this mode. (And of course, since the write is asynchronous, there will be some period of time during which doing a read operation for that same object will also return either no results or an older / stale version of the result until the write operation has been indexed.)
 
 ## High availability
 
 A [sample Helm chart is provided for configuring the XTDB connector for high availability :material-github:](https://github.com/odpi/egeria-connector-xtdb/tree/main/cts/charts/ec-ha-xtdb){ target=gh }. This chart starts up a number of different elements and configures them in a specific sequence.
 
-!!! attention "Requires a pre-existing JDBC database"
-    The chart relies on a pre-existing JDBC database somewhere to use as the document store, and the moment assumes this will be of a PostgreSQL variety (that's the only driver it downloads). A quick setup would be to use [Enterprise DB's k8s operator :material-dock-window:](https://www.enterprisedb.com/docs/kubernetes/cloud_native_postgresql/installation_upgrade/#directly-using-the-operator-manifest){ target=edb } to quickly start up a PostgreSQL cluster in your kubernetes cluster, which is what the following diagrams illustrate[^1].
+!!! attention "Sample requires a pre-existing JDBC database"
+    The sample chart relies on a pre-existing JDBC database somewhere to use as the document store, and the moment assumes this will be of a PostgreSQL variety (that's the only driver it downloads). A quick setup would be to use [Enterprise DB's k8s operator :material-dock-window:](https://www.enterprisedb.com/docs/kubernetes/cloud_native_postgresql/installation_upgrade/#directly-using-the-operator-manifest){ target=edb } to quickly start up a PostgreSQL cluster in your kubernetes cluster, which is what the following diagrams illustrate[^1].
 
 ### Startup
 

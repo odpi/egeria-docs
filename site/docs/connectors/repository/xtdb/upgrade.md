@@ -23,7 +23,7 @@ As a very approximate metric, we would expect the in-place upgrade to be capable
 Start by downloading the XTDB repository migrator:
 
 === "Latest release"
-    [![Release](https://img.shields.io/maven-central/v/org.odpi.egeria/egeria-connector-crux-migrator?label=release)](http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.odpi.egeria&a=egeria-connector-crux-migrator&v=RELEASE&c=jar-with-dependencies)
+    [![Release](https://img.shields.io/maven-central/v/org.odpi.egeria/egeria-connector-xtdb-migrator?label=release)](http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.odpi.egeria&a=egeria-connector-xtdb-migrator&v=RELEASE&c=jar-with-dependencies)
 
 === "Latest snapshot"
     [![Development](https://img.shields.io/nexus/s/org.odpi.egeria/egeria-connector-xtdb-migrator?label=development&server=https%3A%2F%2Foss.sonatype.org)](https://oss.sonatype.org/content/repositories/snapshots/org/odpi/egeria/egeria-connector-xtdb-migrator/){ target=dl }

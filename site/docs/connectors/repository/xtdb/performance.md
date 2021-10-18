@@ -3,7 +3,7 @@
 
 # XTDB Connector Performance
 
-Following are details on XTDB's performance at the latest release of the connector (v3.1, using XTDB v1.18.1). All raw metrics and elements used to produce the results are described further under [reproducibility](#reproducibility) below, but the historical details themselves are no longer included below in the interest of being concise.
+Following are details on XTDB's performance at the latest release of the connector (v3.2, using XTDB v1.19.0). All raw metrics and elements used to produce the results are described further under [reproducibility](#reproducibility) below, but the historical details themselves are no longer included below in the interest of being concise.
 
 ??? info "Details on the performance metrics"
     The *median* of all results for that method across all executions for a given set of volume parameters is given (all times in milliseconds) to give an idea of the "typical" result, while limiting potential skew from significant outliers.

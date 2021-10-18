@@ -23,7 +23,7 @@ As a very approximate metric, we would expect the in-place upgrade to be capable
 Start by downloading the XTDB repository migrator:
 
 === "Latest release"
-    [![Release](https://img.shields.io/maven-central/v/org.odpi.egeria/egeria-connector-crux-migrator?label=release)](http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.odpi.egeria&a=egeria-connector-crux-migrator&v=RELEASE&c=jar-with-dependencies)
+    [![Release](https://img.shields.io/maven-central/v/org.odpi.egeria/egeria-connector-xtdb-migrator?label=release)](http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.odpi.egeria&a=egeria-connector-xtdb-migrator&v=RELEASE&c=jar-with-dependencies)
 
 === "Latest snapshot"
     [![Development](https://img.shields.io/nexus/s/org.odpi.egeria/egeria-connector-xtdb-migrator?label=development&server=https%3A%2F%2Foss.sonatype.org)](https://oss.sonatype.org/content/repositories/snapshots/org/odpi/egeria/egeria-connector-xtdb-migrator/){ target=dl }
@@ -147,6 +147,10 @@ Once the previous (in-place upgrade) command completes, you should now be able t
 ## Change log
 
 There should be no need to actually understand these details, as the connector (and migration) will handle them for you. However, for the interested reader, the following changes were made to the storage layer in the specified release:
+
+### 3.2
+
+- `EntityProxyMapping` no longer maintains a separate namespace for entity properties that are unique; instead, a single namespace is now used for all entity properties (whether a proxy or a "full" entity)
 
 ### 2.9
 

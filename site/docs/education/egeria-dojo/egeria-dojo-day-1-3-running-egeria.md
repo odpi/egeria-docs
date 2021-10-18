@@ -36,10 +36,4 @@ There is one more short section to go and you have completed Day 1.
 ----
 * Progress to [Participating in the community](egeria-dojo-day-1-4-participating-in-the-community.md)
 
-
-* Return to [Egeria Project Introduction](egeria-dojo-day-1-2-project-introduction.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

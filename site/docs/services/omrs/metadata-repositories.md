@@ -3,7 +3,7 @@
 
 # Metadata repositories
 
-A metadata repository that supports the open metadata repository standards
+A metadata repository is a store of metadata. A metadata repository that supports the open metadata repository standards
 defined by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is
 called an "open metadata repository".
 
@@ -14,7 +14,7 @@ is called its **home repository**.
 
 !!! attention "Metadata can only be updated and deleted in its home repository"
 
-The [Open Metadata Repository Services (OMRS)](index.md) is responsible
+The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is responsible
 for sharing this metadata with other metadata repositories who are
 members of the same [cohort](cohort.md).
 

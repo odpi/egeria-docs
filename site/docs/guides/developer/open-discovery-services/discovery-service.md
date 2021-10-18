@@ -16,6 +16,4 @@ the results of other discovery services that have run before it if it is part of
 The results of a discovery service are stored in [Annotations](discovery-annotation.md).
 
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

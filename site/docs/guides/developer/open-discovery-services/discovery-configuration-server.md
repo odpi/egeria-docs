@@ -19,6 +19,4 @@ It has a client called `DiscoveryConfigurationClient` that implements the ODF's 
 It also supports event notifications through  the [Discovery Engine OMAS's out topic](/egeria-docs/concepts/out-topic).
 
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

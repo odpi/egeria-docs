@@ -67,9 +67,4 @@ Now it is time to take a break before moving on to the next session.
 * Progress to [Running Egeria on your machine Step-by-Step](egeria-dojo-day-1-3-running-egeria.md)
 
 
-* Return to [Egeria Overview](egeria-dojo-day-1-1-introduction.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

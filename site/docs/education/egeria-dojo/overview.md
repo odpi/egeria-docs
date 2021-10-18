@@ -104,9 +104,4 @@ through the dojo.  The videos are from these sessions.
 * Watch a [video describing the Dojo](https://youtu.be/ECF4m0CAHY4)
 * Link to the [YouTube play list for all of the recorded dojo sessions](https://www.youtube.com/watch?v=ECF4m0CAHY4&list=PLhfwwk2gl_5Y7ZE8kHjGKyuIEZMQ5Hkfp).
 
-----
-* Return to [Tutorials Menu](../tutorials)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

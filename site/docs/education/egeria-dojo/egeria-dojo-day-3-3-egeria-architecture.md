@@ -17,13 +17,6 @@ how they manifest themselves in the project's design and implementation.
 The charts for this session are stored in the
 [data-governance git repository](https://github.com/odpi/data-governance/blob/master/workshops/may-2020/egeria-dojo-day-3-3-egeria-architecture.pptx).
 
-----
+
 * Progress to the [Egeria Social](egeria-dojo-day-3-4-egeria-social.md)
 
-
-* Return to [Becoming a maintainer](egeria-dojo-day-3-2-becoming-a-maintainer.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

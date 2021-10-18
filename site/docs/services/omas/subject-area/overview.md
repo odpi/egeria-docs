@@ -8,22 +8,22 @@
 The Subject Area OMAS supports subject matter experts who are documenting
 their knowledge about a particular subject.  This includes:
 
-* glossary terms
-* reference data
-* validation rules
+- glossary terms
+- reference data
+- validation rules
 
 The Subject Area API enables subject matter experts to author glossary content. The operations include Find, Create, Read, Update and 
 Delete (CRUD) operations on Glossary, Term and Category objects.
 
 These structures are defined as POJO property objects (aka beans).  The implementation is not complete. The following has been implemented : 
 
-* Java and REST API for create, get and update for Glossary, Category, Term , SubjectAreaDefinition.
-* Java and REST API for the Term to Term relationships HAS-A, RelatedTerm, Synonym, Antonym, Translations, used in context,
+- Java and REST API for create, get and update for Glossary, Category, Term , SubjectAreaDefinition.
+- Java and REST API for the Term to Term relationships HAS-A, RelatedTerm, Synonym, Antonym, Translations, used in context,
   preferred terms, valid values, replacement terms, typed by, is a, is a type of.
-* Java and REST API for the Term to Category relationships TermCategorization.  
-* TermAnchor and CategoryAnchor relationships can be created , deleted, purged and restored. As there are no properties, there are no update or replace operations.
-* getTermRelationships, get GlossaryRelationships and getCategoryRelationships
-* findTerm, findCategory and findGlossary  
+- Java and REST API for the Term to Category relationships TermCategorization.  
+- TermAnchor and CategoryAnchor relationships can be created , deleted, purged and restored. As there are no properties, there are no update or replace operations.
+- getTermRelationships, get GlossaryRelationships and getCategoryRelationships
+- findTerm, findCategory and findGlossary  
 
 
 ## Example REST calls: 

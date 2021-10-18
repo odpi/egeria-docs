@@ -45,7 +45,4 @@ to distinguish annotations that refer, primarily to a data field.
 Other more specialist annotations extend these two basic annotation types.
 
 
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

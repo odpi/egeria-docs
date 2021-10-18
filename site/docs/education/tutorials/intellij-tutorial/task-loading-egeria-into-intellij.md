@@ -18,11 +18,4 @@ git repository.
 IntelliJ will then start reading the git repository and creating a project.
 This may take a few minutes so be patient.
 
-----
-* Return to [Dojo Day 2](../../egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
-* Return to [Developer Tools](../../../developer-resources/tools/IntelliJ.md)
-* Return to [IntelliJ tutorial](.)
- 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

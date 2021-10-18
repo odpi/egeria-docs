@@ -6,6 +6,4 @@
 [Delete a process](../../data-engine-server/docs/scenarios/delete-process.md) 
 with the associated ports and process port relationships.
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

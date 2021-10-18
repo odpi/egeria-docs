@@ -5,11 +5,11 @@
 
 ![OMRS system context](omrs-system-context-diagram.png)
 
-On the left-hand side is the *[administration interface](../../governance-servers/README.md)* supported by the OMAG Server. This is where configuration is passed to the OMRS, and status and other relevant information is made available to the OMAG Administration Services.
+On the left-hand side is the *[administration interface](/egeria-docs/services/admin-services)* supported by the OMAG Server. This is where configuration is passed to the OMRS, and status and other relevant information is made available to the OMAG Administration Services.
 
 Along the top is the interface with the [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas). The OMRS provides access to the open metadata repositories through both APIs (see *[Enterprise OMRS Repository Connector](component-descriptions/enterprise-repository-connector.md)*) and events (see *[Enterprise OMRS Topic](omrs-event-topic.md)*).
 
-Along the bottom are the *[six types of connectors](component-descriptions/connectors/README.md)* that provide the OMRS with access to the stores and system resources it needs to support the OMAS.
+Along the bottom are the *[six types of connectors](component-descriptions/connectors)* that provide the OMRS with access to the stores and system resources it needs to support the OMAS.
 
 These connectors enable the OMRS to be deployed into different types of server environments and connect with different types of infrastructure and services.
 

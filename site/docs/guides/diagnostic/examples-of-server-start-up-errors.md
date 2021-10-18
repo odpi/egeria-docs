@@ -173,14 +173,7 @@ Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting fo
 
 * [Integration Daemon Diagnostic Guide](integration-daemon-diagnostic-guide.md) covers specific guidance on
 diagnosing and fixing errors in the Integration Daemon.
-* [Repository Services Design Overview](../../../open-metadata-implementation/repository-services/docs) describes the different repository services subsystems used in the different types of OMAG Servers.
-* [Repository Services Start up Design](../../../open-metadata-implementation/repository-services/docs/subsystem-descriptions) describe the components initialized in an Egeria Metadata Server.
+* [Repository Services Design Overview](/egeria-docs/servvices/omrs) describes the different repository services subsystems used in the different types of OMAG Servers.
+* [Repository Services Start up Design](/egeria-docs/servvices/omrs/subsystem-descriptions) describe the components initialized in an Egeria Metadata Server.
 
-----
-
-* Return to [diagnostic guide](.)
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the Egeria project.
+---8<-- "snippets/abbr.md"

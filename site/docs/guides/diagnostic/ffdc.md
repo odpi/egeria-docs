@@ -226,11 +226,4 @@ Below is an example of the types of information captured in an audit log record.
 * [Configuring the audit log destinations](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
 
 
-----
-
-* Return to [diagnostic guide](.)
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the Egeria project.
+--8<-- "snippets/abbr.md"

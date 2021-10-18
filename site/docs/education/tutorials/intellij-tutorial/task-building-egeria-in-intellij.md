@@ -45,12 +45,4 @@ However, IntelliJ does not understand the egeria structure - only Maven
 does, so the Maven build is important to to verify your changes are
 OK at the project level.
 
-
-----
-* Return to [Dojo Day 2](../../egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
-* Return to [Developer Tools](../../../developer-resources/tools/IntelliJ.md)
-* Return to [IntelliJ tutorial](.)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

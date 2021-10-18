@@ -28,6 +28,4 @@ output on the detecting server's
 The repository services also have APIs for re-identifying (ie changing the guid)
 for a metadata instance.
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

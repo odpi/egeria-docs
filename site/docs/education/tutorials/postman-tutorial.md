@@ -93,7 +93,7 @@ in turn.  You will see them populate the left-hand menu.
 ## Next steps
 
 With the collections loaded, you are ready to
-[return to the Egeria Dojo](../egeria-dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md) to learn more about the
+[return to the Egeria Dojo](../../getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md) to learn more about the
 OMAG Server Platform.
 
 Alternatively you can use the collections to test

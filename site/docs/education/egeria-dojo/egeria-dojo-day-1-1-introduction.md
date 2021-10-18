@@ -33,9 +33,3 @@ The charts for the presentation are located here:
 
 ----
 * Progress to [Egeria Project Overview](egeria-dojo-day-1-2-project-introduction.md)
-
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

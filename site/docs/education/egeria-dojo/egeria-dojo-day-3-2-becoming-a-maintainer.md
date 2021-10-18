@@ -27,9 +27,4 @@ Requirements for being a maintainer is described in Egeria's
 * Progress to [Egeria Architecture and Philosophy - the deep stuff](egeria-dojo-day-3-3-egeria-architecture.md)
 
 
-* Return to [Becoming an advocate](egeria-dojo-day-3-1-becoming-an-advocate.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

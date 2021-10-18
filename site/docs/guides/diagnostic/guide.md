@@ -125,9 +125,4 @@ These can help you to eliminate the obvious causes.
 * [Integration Daemon Diagnostics Guide](integration-daemon-diagnostic-guide.md)
 * [Administration Guide](../../../open-metadata-implementation/admin-services/docs/user)
 
-----
-Return to [Home Page](../../../index.md)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

@@ -28,11 +28,4 @@ so you can run it at you leisure when every you want to.
 In addition, these labs (like everything else in Egeria) is evolving rapidly so it is worth
 checking back from time to time to see what is new.
 
-----
-
-* Return to [Running metadata ecosystems](egeria-dojo-day-1-3-3-running-metadata-ecosystems.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

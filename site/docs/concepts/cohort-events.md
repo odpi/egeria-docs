@@ -64,14 +64,14 @@ If the event is reporting an error, there is also an optional error section.  Th
 
 Registry events are used by metadata servers to register with a cohort.
 
-![Figure 2](cohort-registry-event-formats.png)
+![Figure 2](cohort-registry-event-formats.svg)
 > Figure 2: Different formats of a registry event
 
 ### TypeDef events
 
 TypeDef events are used by members of a cohort to exchange information about the [open metadata types](/egeria-docs/types) they support.
 
-![Figure 3](cohort-typedef-event-formats.png)
+![Figure 3](cohort-typedef-event-formats.svg)
 > Figure 3: Different formats of a TypeDef event
 
 
@@ -79,7 +79,7 @@ TypeDef events are used by members of a cohort to exchange information about the
 
 Instance events are used by members of a cohort to exchange information about changes to metadata instances.
 
-![Figure 4](cohort-instance-event-formats.png)
+![Figure 4](cohort-instance-event-formats.svg)
 > Figure 4: Different formats of an instance event
 
 --8<-- "snippets/abbr.md"

@@ -61,11 +61,4 @@ Start both servers and view their logs via the Docker Desktop - you should see t
 Now use the commands in the `Egeria-repository-services-metadata-highway` to query information about
 the cohort from each server's perspective.
 
-----
-
-* Return to [Running metadata servers](egeria-dojo-day-1-3-2-running-metadata-servers.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

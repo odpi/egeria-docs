@@ -94,13 +94,6 @@ UserNotAuthorizedException{userId='OMAGServer', reportedHTTPCode=400, reportingC
 	at java.base/java.lang.Thread.run(Thread.java:829)
 ```
 
-There is more information on [metadata provenance here](../metadata-provenance).
+There is more information on [metadata provenance here](/egeria-docs/features/metadata-provenance).
 
-----
-
-* Return to [diagnostic guide](.)
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the Egeria project.
+---8<-- "snippets/abbr.md"

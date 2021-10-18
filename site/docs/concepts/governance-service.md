@@ -3,7 +3,7 @@
 
 # Governance Service
 
-A governance service is a specialized [connector](/egeria-docs/concepts/connector) that implements a specific governance activity.
+A governance service is a specialized [connector](/egeria-docs/concepts/connector) that implements a specific [type of governance action](/egeria-docs/concepts/governance-action).
 
 There are six types of governance services:
 

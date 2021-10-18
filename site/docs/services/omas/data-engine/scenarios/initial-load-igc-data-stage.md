@@ -13,6 +13,3 @@ describe the operations needed for creating the open metadata entities correspon
 Check [egeria-connector-ibm-information-server](https://github.com/odpi/egeria-connector-ibm-information-server#ibm-infosphere-information-server-connectors)
 for more details.
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

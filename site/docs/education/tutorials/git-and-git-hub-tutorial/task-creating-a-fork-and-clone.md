@@ -69,6 +69,4 @@ Now you are ready to [create a branch for your changes](task-creating-git-branch
 * Further details on the [fork](https://guides.github.com/activities/forking/) command.
 
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

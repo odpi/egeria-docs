@@ -84,12 +84,4 @@ Day 2 covers the information that you need to become and
 Day 3 covers additional information for advocates
 and those wishing to become **Egeria Maintainers**.
 
-----
-* Progress to [Dojo Overview]() to see the content for day 2.
-
-* Return to [Running Egeria on your machine Step-by-Step](egeria-dojo-day-1-3-running-egeria.md)
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

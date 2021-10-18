@@ -4,6 +4,6 @@
 # Using the Java Clients
 
 
-
+- [Community Profile](community-profile.md) - manage metadata about people, teams, organizations and communities.
 
 --8<-- "snippets/abbr.md"

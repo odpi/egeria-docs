@@ -220,7 +220,7 @@ If you now click on the whitespace of the container's entry, a new section opens
 ----
 
 Congratulations, you are familiar enough with running docker containers to continue with the
-[Egeria Dojo](../egeria-dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md).
+[Egeria Dojo](../../getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md).
 
 
 ---8<-- "snippets/abbr.md"

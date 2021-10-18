@@ -13,6 +13,4 @@ is able to access the results of the discovery services that have run before it.
 
 The results created by a discovery pipeline are stored in [Annotations](discovery-annotation.md)..
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

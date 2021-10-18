@@ -70,10 +70,5 @@ This is the end of the session on the OMAG Server Platform.
 ----
 * Progress to [Configuring a metadata server on the platform](egeria-dojo-day-1-3-1-3-configuring-a-server.md)
 
+---8<-- "snippets/abbr.md"
 
-* Return to [Platform set up and configuration](egeria-dojo-day-1-3-1-platform-set-up-and-configuration.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

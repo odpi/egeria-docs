@@ -27,7 +27,4 @@ Egeria's implementation of the discovery engine is provided by the
 [Asset Analysis Open Metadata Engine Service (OMES)](/egeria-docs/services/omes//asset-analysis/overview).
 
 
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

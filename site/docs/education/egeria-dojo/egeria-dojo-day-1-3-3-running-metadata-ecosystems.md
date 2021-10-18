@@ -16,11 +16,4 @@ Click on the links to get to the session content:
 * [Running Governance Servers](egeria-dojo-day-1-3-3-2-running-governance-servers.md)
 * [Kubernetes and lab notebooks](egeria-dojo-day-1-3-3-3-kubernetes-and-labs.md)
 
-----
-
-* Return to [Running Egeria on your machine - Step-by-Step](egeria-dojo-day-1-3-running-egeria.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

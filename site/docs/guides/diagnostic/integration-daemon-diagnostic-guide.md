@@ -395,14 +395,9 @@ The refresh processing can be an expensive operation, so it should only be reque
 
 ## Further information
 
-* Configuring the [Integration daemon](../../../open-metadata-implementation/admin-services/docs/concepts/integration-daemon.md)
-* Design of the [Integration daemon](../../../open-metadata-implementation/governance-servers/integration-daemon-services)
-* Understanding [Integration connectors](../../../open-metadata-implementation/governance-servers/integration-daemon-services/docs/integration-connector.md)
-* Understanding [Open Metadata Integration Services (OMIS)](../../../open-metadata-implementation/integration-services)
+* Configuring the [Integration daemon](/egeria-docs/concepts/integration-daemon)
+* Design of the [Integration daemon](/egeria-docs/servvices/integration-daemon-services)
+* Understanding [Integration connectors](/egeria-docs/concepts/integration-connector.md)
+* Understanding [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis)
 
-----
-* Return to the [diagnostic guide](.)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the Egeria project.
+--8<-- "snippets/abbr.md"

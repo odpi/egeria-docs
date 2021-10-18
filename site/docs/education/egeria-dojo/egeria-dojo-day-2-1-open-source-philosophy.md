@@ -19,8 +19,4 @@ The presentation is here: [https://github.com/odpi/data-governance/tree/master/w
 ----
 * Progress to [Tools for Contributors](egeria-dojo-day-2-2-tools-for-contributors.md)
 
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

@@ -142,12 +142,6 @@ Caused by: java.io.FileNotFoundException: /home/egeria/open-metadata-implementat
 
 ```
 There is more information on how to set up the trust store for an OMAG Server Platform in the
-[Administration Guide](../../../open-metadata-implementation/admin-services/docs/user/omag-server-platform-transport-level-security.md).
+[Administration Guide](/egeria-docs/guides/admin/omag-server-platform-transport-level-security).
 
-----
-
-* Return to [diagnostic guide](.)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the Egeria project.
+---8<-- "snippets/abbr.md"

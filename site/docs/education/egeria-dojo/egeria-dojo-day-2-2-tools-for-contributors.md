@@ -47,9 +47,4 @@ This is the end of the **Tools for Contributors** Session.
 * Progress to [Contributing to Egeria - Step-by-Step](egeria-dojo-day-2-3-contribution-to-egeria.md)
 
 
-* Return to [Open Source Philosophy](egeria-dojo-day-2-1-open-source-philosophy.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

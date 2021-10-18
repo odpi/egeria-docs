@@ -23,9 +23,4 @@ Once you have finished, take a break and then go on to the next section.
 * Progress to [Running metadata servers](egeria-dojo-day-1-3-2-running-metadata-servers.md)
 
 
-* Return to [Running Egeria on your machine - Step-by-Step](egeria-dojo-day-1-3-running-egeria.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

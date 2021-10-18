@@ -47,6 +47,4 @@ An external tool can [lookup](lookup-registration-tool.md) for the registered ex
 [Initial load](initial-load-igc-data-stage.md) use case illustrates the integration between 
 Data Engine OMAS and IBM's DataStage ETL tool.
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+--8<-- "snippets/abbr.md"

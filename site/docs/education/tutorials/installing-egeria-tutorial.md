@@ -58,7 +58,7 @@ NOTICE			conformance-suite	user-interface
 ```
 
 Under **server** is a directory for the
-[OMAG Server Platform](../../../open-metadata-publication/website/omag-server) that is used to run
+[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) that is used to run
 open metadata and governance services.
 
 Change to the OMAG server platform's directory.
@@ -70,9 +70,5 @@ $ resources				server-chassis-spring-3.3-SNAPSHOT.jar
 
 This means you have completed this tutorial and are ready to choose the next step.
 
-----
-* Return to [Egeria Dojo](../egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
+---8<-- "snippets/abbr.md"
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

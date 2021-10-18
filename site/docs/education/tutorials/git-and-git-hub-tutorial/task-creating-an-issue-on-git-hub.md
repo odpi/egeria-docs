@@ -40,13 +40,4 @@ Make a note of this issue number because you will need it later.
 
 Now you are ready to [work on your contribution](task-creating-a-fork-and-clone.md).
 
-----
-* Return to [Git and GitHub Tutorial](.)
-* Return to [Egeria Dojo - Making a contribution step by step](../../egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
-
-
-* Link to Git/GitHub overview in [developer-resources/tools](../../../developer-resources/tools/Git-GitHub.md)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

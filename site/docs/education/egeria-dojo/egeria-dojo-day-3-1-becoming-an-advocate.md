@@ -16,8 +16,4 @@ Watch the video to hear about being an Egeria advocates from the experts:
 ----
 * Progress to [Becoming a maintainer](egeria-dojo-day-3-2-becoming-a-maintainer.md)
 
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

@@ -40,9 +40,4 @@ and through that you will get a chance to query its content.
 * Progress to [Creating a second server and connecting via a cohort](egeria-dojo-day-1-3-2-4-second-server.md)
 
 
-* Return to [Running metadata servers](egeria-dojo-day-1-3-2-running-metadata-servers.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

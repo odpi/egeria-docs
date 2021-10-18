@@ -9,6 +9,7 @@
 *[JDK]: Java Development Kit
 *[JRE]: Java Runtime Environment
 *[JVM]: Java Virtual Machine
+*[MDM]: Master Data Management
 *[OCF]: Open Connector Framework
 *[ODF]: Open Discovery Framework
 *[OMAG]: Open Metadata and Governance

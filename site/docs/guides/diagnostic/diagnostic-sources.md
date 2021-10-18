@@ -30,11 +30,11 @@ Specifically they are:
 * **Developer Logging** - Developer logging can be used in developer and test environments
   to understand how the code is running.  It is enabled through the OMAG Server Platform's 
   `application.properties` and is activated when the platform starts up.
-  [More information ...](../../../open-metadata-implementation/admin-services/docs/user/omag-server-platform-logging.md).
+  [More information ...](./egeria-docs/guides/admin/omag-server-platform-logging.md).
 
 * **Configuration Document** - the configuration document describes the services and connectors
   defined for a particular OMAG Server.  It helps you to confirm that a server is configured correctly.
-  [More information ...](../../../open-metadata-implementation/admin-services/docs/concepts/configuration-document.md).
+  [More information ...](/egeria-docs/concepts/configuration-document).
 
 * **Guides and Documentation** - documentation for Egeria includes design information to help you understand
   how the technology should work, administration guides and guides on using the services.
@@ -55,13 +55,7 @@ Specifically they are:
   You can [raise an issue](https://github.com/odpi/egeria/issues) that describes the problem you are seeing,
   a description of your runtime topology, the diagnostics you have collected, the conclusions you have come to
   and the help that you need.
-  More information on the Egeria community can be found [here](../../../Community-Guide.md).
+  More information on the Egeria community can be found [here](/egeria-docs/guides/community).
 
 
-----
-
-* Return to [diagnostic guide](.)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the Egeria project.
+---8<-- "snippets/abbr.md"

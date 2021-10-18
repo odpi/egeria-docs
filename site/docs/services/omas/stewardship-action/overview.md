@@ -5,71 +5,15 @@
 
 # Stewardship Action Open Metadata Access Service (OMAS)
 
-The Stewardship Action OMAS provides APIs and events for tools and applications
-focused on resolving issues detected in the data landscape.
+The Stewardship Action OMAS provides APIs and events for tools and applications focused on resolving issues detected in the data landscape that need a human steward to resolve.
 
-It works in partnership with the stewardship server to execute
-functions that detect, report on and implement the resolution of issues.
-These functions are called *stewardship actions*.
+It works in partnership with the [governance engines](/egeria-docs/concepts/governance-engine) running in [engine host servers](/egeria-docs/concepts/engine-host) to execute functions that detect, report on and implement the resolution of issues. These functions are called *[governance actions](/egeria-docs/concepts/governance-actions)*.
 
-For example, when a change is detected in an Asset metadata entity,
-the Stewardship Action OMAS runs the stewardship actions associated with that asset.
-These could be:
-* detect and emit an event if a new asset is created without an owner.
-* create an entry in a maintenance NoteLog to record each change to the Asset.
+For example, when a change is detected in an Asset metadata entity, the governance engine may run a governance action associated with that asset. These could be:
 
-Where a stewardship action creates an event, this is published to the stewardship action
-OMASs OutTopic where it is picked up by the Stewardship server to process.
-The stewardship server is configured with the stewardship actions to
-process ite incoming events.  For example, there could be a stewardship action to assign
-an owner to an Asset without one based on values in a reference table or
-if there was no default owner defined for the asset type, to initiate a workflow
-to enable a human steward to assign it.
+- detect and emit an event if a new asset is created without an owner.
+- create an entry in a maintenance NoteLog to record each change to the Asset.
 
-
-## Implementing Stewardship Actions
-
-The implementation of stewardship actions is through the
-[Governance Action Framework (GAF)](/egeria-docs/frameworks/gaf/overview).
-The GAF defines plug-in components that can be configured and executed by
-the stewardship action OMAS and in the stewardship server.
-
-The the stewardship actions are open connectors
-(see [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview))
-that implement the interfaces defined by the governance action framework.
-
-
-## Configuring the Stewardship Action OMAS
-
-The stewardship action OMAS is controlled by the 
-definition of **StewardshipAction** and **RequestForAction** entities in the metadata
-repositories.  StewardshipAction entities relate to conditions found in the metadata
-and include details of how to detect the condition and the action to take.
-RequestForAction entities refer to issues found in the data landscape itself.
-They do not contain information about how to fix the problem.  This is decided
-in the stewardship server.
-
-These entities are linked to the assets that need the automated stewardship actions.
-They can be created through the stewardship action OMAS API, or by other OMASs.
-For example, the Asset Owner OMAS may set up stewardship actions on behalf of
-the owner of the asset.  A discovery service may use the Discovery Engine OMAS to
-attach RequestForAction entities to an asset as a result of issues it has found in the
-data access through the asset.
-
-The stewardship action OMAS is triggered by listening for metadata changes through its OMRS topic listener.
-It detects new **RequestForAction** entities being created
-and it listens for changes to the assets.
-
-All new RequestForAction entities are actioned by sending an event on the stewardship
-action OMAS OutTopic.
-Asset changes are assessed using information in any attached StewardshipAction
-entities.
-If the assessment determines action is required then an event is sent
-through the stewardship action OMAS OutTopic.
-
-The stewardship server is listening for these events and running the GAF stewardship actions
-specified in the request for action.  These actions may call back to the
-open metadata access services.
-
+Some actions require judgement and this is where the human steward comes in.  The [triage governance action](governance-service) creates a [to do](/egeria-docs/concepts/to-do).  This is picked up by the Stewardship Action OMAS that generates an event on its [OutTopic](/egeria-docs/concepts/out-topic).  This may be received by an external human task manager or the [Stewardship Integrator OMIS](/egeria-docs/services/omis/stewardship-integrator) to push to the human task manager.  The Stewardship Action OMAS provides APIs to perform the requested action and manage the to do through its lifecycle.
 
 --8<-- "snippets/abbr.md"

@@ -38,9 +38,4 @@ The tasks below step through this process
 
 In addition, these are [further tips](further-git-tips.md) for using Git.
 
-----
-* Return to [Egeria Dojo](../../egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

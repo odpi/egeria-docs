@@ -26,10 +26,4 @@ Watch the presentation and demo: [https://youtu.be/gVNbqKjwH94](https://youtu.be
 ----
 * Progress to [Running governance servers](egeria-dojo-day-1-3-3-2-running-governance-servers.md)
 
-
-* Return to [Running metadata ecosystems](egeria-dojo-day-1-3-3-running-metadata-ecosystems.md)
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

@@ -10,6 +10,4 @@ a [discovery service](discovery-service.md) to query the properties of its
 The discovery analysis report store is accessed
 from the [discovery annotation store](discovery-annotation-store.md).
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

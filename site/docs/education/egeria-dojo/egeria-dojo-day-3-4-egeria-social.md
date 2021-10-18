@@ -25,9 +25,4 @@ If you would like to contribute, but are not sure what would be valuable, ask fo
 
 We look forward to working with you in the future.
 
-----
-* Return to [Dojo Overview]()
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

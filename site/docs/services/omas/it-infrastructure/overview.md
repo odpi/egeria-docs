@@ -22,10 +22,10 @@ with the infrastructure.
 ## Basic Concepts
 
 At the base is the notion of a **Host**.  This could be:
-* **BareMetalComputer** - traditional computer hardware or
-* **VirtualMachine** - a virtualized machine (such as VMWare or VirtualBox) that uses a hypervisor to virtualize machine hardware or
-* **VirtualContainer** - a software system using a container library to virtualize the operating system it uses or
-* **HostCluster** - a cluster of Hosts that are operating as a single operational environment (such as a Hadoop cluster or kubernetes cluster).
+- **BareMetalComputer** - traditional computer hardware or
+- **VirtualMachine** - a virtualized machine (such as VMWare or VirtualBox) that uses a hypervisor to virtualize machine hardware or
+- **VirtualContainer** - a software system using a container library to virtualize the operating system it uses or
+- **HostCluster** - a cluster of Hosts that are operating as a single operational environment (such as a Hadoop cluster or kubernetes cluster).
 
 Hosts are composable and reusable.  For example, figure 1 shows a Virtual Container that
 is deployed to two Bare Metal Computers.  The relationship between them is called **HostedHost**.

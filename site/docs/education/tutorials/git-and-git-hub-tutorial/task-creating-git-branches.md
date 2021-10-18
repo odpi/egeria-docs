@@ -58,13 +58,4 @@ upstream https://github.com/odpi/egeria.git (push)
 
 Now you can make your changes to the content.  
 
-----
-* Return to [Git and GitHub Tutorial](.)
-* Return to [Egeria Dojo - Making a contribution step by step](../../egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
-
-
-* Link to Git/GitHub overview in [developer-resources/tools](../../../developer-resources/tools/Git-GitHub.md)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

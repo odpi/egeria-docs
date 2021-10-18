@@ -9,7 +9,4 @@ with access to all of the known metadata about the asset it is to analyse.
 The discovery service is passed the discovery asset store via the
 [discovery context](discovery-context.md).
 
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

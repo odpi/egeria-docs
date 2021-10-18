@@ -223,16 +223,5 @@ Congratulations, you are familiar enough with running docker containers to conti
 [Egeria Dojo](../egeria-dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md).
 
 
-----
-* Return to [Egeria Dojo](../egeria-dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md)
+---8<-- "snippets/abbr.md"
 
-
-* Link to [other tutorials]()
-* Link to [Hands on labs](../open-metadata-labs) there this docker image is used as part of the
-suite of containers that supports the [lab infrastructure](lab-infrastructure-guide).
-
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

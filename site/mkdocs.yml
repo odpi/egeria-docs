@@ -68,20 +68,22 @@ nav:
                             - Kafka Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
                       - API Connectors:
                             - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
-                - Repository:
-                      - Pluggable Repositories:
-                            - XTDB:
-                                  - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                                  - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                                  - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                            - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
-                            - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
-                            - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
-                      - Repository Adapters:
-                            - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
-                            - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
-                            - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
-                    - Repository:
+                - Runtime:
+                      - Repository:
+                            - Pluggable Repositories:
+                                  - XTDB:
+                                        - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                                        - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                                        - XTDB Connector Performance: connectors/repository/xtdb/performance.md
+                                  - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
+                                  - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
+                                  - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
+                            - Repository Adapters:
+                                  - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
+                                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
+                                  - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+                - Digital Resource:
+                      - Kafka Event Bus Connector : connectors/resource-connectors/kafka-event-bus-connector.md
       - Features:
           - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md

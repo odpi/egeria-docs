@@ -16,12 +16,14 @@ at each stage talking about the applicability to solving real world problems.
 By the end of the session you should have awareness of the parts of Egeria at a high level; why
 they have been implemented that way and the value that each piece brings.
 
-
 * Link to [event advertising](https://lfaidata.foundation/blog/2021/09/30/the-value-egeria-brings-to-an-organization/)
-* Link to recording on YouTube TBA
 * Presentation 
   <div class="video-wrapper">
   <iframe src="./Egeria%20Webinar,%20The%20Value%20of%20Egeria,%204th%20October%202021.pdf"></iframe>
   </div> 
+* YouTube Video:
+  <div class="video-wrapper">
+     <iframe width="560" height="315" src="https://youtu.be/yZVYedCNGO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 ----
 Return to [Webinar list](..)

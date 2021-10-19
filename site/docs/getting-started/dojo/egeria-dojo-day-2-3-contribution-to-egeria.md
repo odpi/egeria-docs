@@ -23,24 +23,24 @@ To create your own contribution, click on each step and complete the tasks descr
 * [Review the developer guidelines](../../../developer-resources/Developer-Guidelines.md) to understand the requirements
   for an Egeria contribution.
 
-* [Log on to GitHub](../tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id.md).
+* [Log on to GitHub](../../education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id.md).
 
-* [Create a Git Issue](../tutorials/git-and-git-hub-tutorial/task-creating-an-issue-on-git-hub.md). 
+* [Create a Git Issue](../../education/tutorials/git-and-git-hub-tutorial/task-creating-an-issue-on-git-hub.md). 
   Every contribution begins with a `git issue`. This describes the changes that you plan to make.
   The more detail that you provide, the better the maintainers will understand your contribution and
   be able to process it faster.
   
-* [Create a fork and clone of the git repository](../tutorials/git-and-git-hub-tutorial/task-creating-a-fork-and-clone.md)
+* [Create a fork and clone of the git repository](../../education/tutorials/git-and-git-hub-tutorial/task-creating-a-fork-and-clone.md)
   to bring the Egeria code onto your machine.
 
-* [Create a new git branch](../tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git.md) to contain your change.
+* [Create a new git branch](../../education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git.md) to contain your change.
 
-* [Load Egeria into your IDE](../tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md) so that you can see the project contents.
+* [Load Egeria into your IDE](../../education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md) so that you can see the project contents.
 
-* [Build Egeria](../tutorials/intellij-tutorial/task-building-egeria-in-intellij.md) so it is ready to run.
-  The link assumes you are using IntelliJ.  If you prefer working with the command line try [this link](../tutorials/building-egeria-tutorial/task-building-egeria-source.md)
+* [Build Egeria](../../education/tutorials/intellij-tutorial/task-building-egeria-in-intellij.md) so it is ready to run.
+  The link assumes you are using IntelliJ.  If you prefer working with the command line try [this link](../../education/tutorials/building-egeria-tutorial/task-building-egeria-source.md)
 
-* [Create your contribution](../tutorials/intellij-tutorial/task-creating-content-with-intellij.md) - typically using the IDE.
+* [Create your contribution](../../education/tutorials/intellij-tutorial/task-creating-content-with-intellij.md) - typically using the IDE.
   You need to create a new markdown file, add your message to the file and then add a link to the README.md file.
   Both of these files should use [Markdown](../../../developer-resources/tools/Markdown.md) and
   include license and copyright statements top and bottom of the file just like this file: 
@@ -52,10 +52,10 @@ To create your own contribution, click on each step and complete the tasks descr
   Since this is a document change, there should be no impact on the code - so running these tests is to check that
   nothing has changed by accident.
 
-* [Add and commit changes to Git](../tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git.md).
+* [Add and commit changes to Git](../../education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git.md).
   As you commit your changes, make sure they are signed (see [Why the DCO?](../../../developer-resources/why-the-dco.md)).
 
-* Initiate the [request to include your changes](../tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr.md) into the master branch of Egeria.
+* Initiate the [request to include your changes](../../education/tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr.md) into the master branch of Egeria.
   
 Once the PR is in place, GitHub will check the DCOs for you commits, and then run a full build on Java 8 and Java 11.
 The Egeria maintainers will review your contribution and may ask

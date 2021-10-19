@@ -13,7 +13,7 @@ allowing you to experiment with different concepts and APIs.
 First, go to you Docker Desktop and shut down all of your docker containers that were started
 by docker-compose (your laptop will thank you for that.)
 
-Now go to the [Lab Infrastructure tutorial](../tutorials/lab-infrastructure-guide)
+Now go to the [Lab Infrastructure tutorial](../../education/tutorials/lab-infrastructure-guide)
 and follow the instructions for setting up the lab environment using Kubernetes.
 
 Once it is running, go to the [Open Metadata Labs](../open-metadata-labs) instructions

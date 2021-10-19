@@ -36,7 +36,7 @@ an excellent way to exchange and manage files.  In addition, the community
 runs public calls that anyone can join, as well as a number of slack channels.
 
 Details of the different ways the community operates is described in our
-[Community Guide](../../../Community-Guide.md).  Click on the link to the community guide
+[Community Guide](/egeria-docs/guides/community).  Click on the link to the community guide
 to find out more.
 
 ## Test yourself

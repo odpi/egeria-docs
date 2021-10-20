@@ -46,7 +46,7 @@ XTDB supports temporal graph queries to provide native support for storing histo
 
 ## How it works
 
-The XTDB OMRS Repository Connector is a [repository connector](/egeria-docs/connectors/repository), hosted by the [plugin repository proxy](/egeria-docs/services/omrs/todo), running on a [metadata access store](/egeria-docs/concepts/metadata-access-store).
+The XTDB OMRS Repository Connector is a [repository connector](/egeria-docs/concepts/repository-connector), hosted by the [plugin repository proxy](/egeria-docs/concepts/plugin-repository-proxy), running on a [metadata access store](/egeria-docs/concepts/metadata-access-store).
 
 ![Operation of the XTDB OMRS repository connector](xtdb-connector-overview.svg)
 

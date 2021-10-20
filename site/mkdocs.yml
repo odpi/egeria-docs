@@ -597,6 +597,7 @@ nav:
       - Personal Profile: concepts/personal-profile.md
       - Personal Roles: concepts/personal-roles.md
       - Platform URL Root: concepts/platform-url-root.md
+      - Plugin Repository Proxy: concepts/plugin-repository-proxy.md
       - Presentation Server: concepts/presentation-server.md
       - Project: concepts/project.md
       - Referenceable: concepts/referenceable.md

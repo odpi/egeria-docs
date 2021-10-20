@@ -114,6 +114,6 @@ On completion, this governance action service uses:
 - `CompletionStatus.FAILED` with guard `monitoring-failed` - monitor not configured correctly or failed 
 
 ??? education "Further information"
-    - This connector is configured in the `governDL01` engine host server as part of the *automated curation* asset management [hands-on lab](/egeria-docs/getting-started/hands-on-labs).
+    - This connector is configured in the `governDL01` engine host server as part of the *automated curation* asset management [hands-on lab](/egeria-docs/education/open-metadata-labs).
 
 --8<-- "snippets/abbr.md"

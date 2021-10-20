@@ -16,10 +16,10 @@ by docker-compose (your laptop will thank you for that.)
 Now go to the [Lab Infrastructure tutorial](../../education/tutorials/lab-infrastructure-guide)
 and follow the instructions for setting up the lab environment using Kubernetes.
 
-Once it is running, go to the [Open Metadata Labs](../open-metadata-labs) instructions
+Once it is running, go to the [Open Metadata Labs](/egeria-docs/education/open-metadata-labs) instructions
 to start the first lab notebook.
 
-![First Lab Notebook](../../../developer-resources/tools/jupyter-notebook-browser-window.png)
+![First Lab Notebook](/egeria-docs/tools/jupyter-notebook-browser-window.png)
 
 There is more material to run in the Open metadata Labs than can be done in 30 minutes.
 The purpose of this session is to ensure that you can set up the environment

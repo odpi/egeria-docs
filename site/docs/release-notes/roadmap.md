@@ -32,7 +32,7 @@ Provides educational resources for different personas and starting points.
 Egeria's education aims to broaden the knowledge of people who need to work with digital resources about metadata, governance practices and the use of Egeria. Since there are many types of professionals involved with different skill levels, there are different choices:
 
 - The [Egeria dojo](/egeria-docs/getting-started/dojo/introduction) is a deep dive into the Egeria code and community. It is aimed at individuals who wish to become contributors.
-- The [hands-on labs](/egeria-docs/getting-started/hands-on-labs/) provide practical experiences in running the Egeria code and using the different services. It is based around the [Coco Pharmaceuticals :material-dock-window:](https://opengovernance.odpi.org/coco-pharmaceuticals/){ target=gov } use case and is organized by persona so you can target your learning to your interests.
+- The [hands-on labs](/egeria-docs/education/open-metadata-labs/) provide practical experiences in running the Egeria code and using the different services. It is based around the [Coco Pharmaceuticals :material-dock-window:](https://opengovernance.odpi.org/coco-pharmaceuticals/){ target=gov } use case and is organized by persona so you can target your learning to your interests.
 - The [guidance on governance :material-dock-window:](https://opengovernance.odpi.org){ target=gov } provides governance best practices and training using the same Coco Pharmaceuticals use cases as the hands-on labs. They aim to guide a team that is setting up or revising their governance program through common governance tasks. They link to the [Egeria code samples](../../../open-metadata-resources/open-metadata-samples) and hands-on labs to show how these best practices could be implemented using Egeria.
 - The **edX courses** are a new idea to provide a full curriculum and certification for governance professionals and architects. It is in the early phases of design.
 
@@ -44,7 +44,7 @@ Supports integration of popular technologies by installing and configuring Egeri
 
 - Ecosystem UIs: server and platform configuration, ecosystem monitoring, type explorer and repository explorer.
 - Utilities and converters: support for different standard formats to load industry standard definitions, models, glossaries, and other content packs built on industry standard definitions, models, glossaries and other content packs. Examples include JSON-LD, OWL/RDF, XML, ...
-- Pre-canned connectors to third party technologies: popular metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
+- [Pre-canned connectors to third party technologies](/egeria-docs/connectors): popular metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
 - [Conformance test suite](/egeria-docs/guides/cts/overview): Supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
 
 ### Developer platform
@@ -86,7 +86,7 @@ Aim to simplify the process of deploying the OMAG Server Platform and its connec
 ![Deployment Resources](deployment-resources-functional-detail.svg)
 
 - The [Egeria docker image :material-dock-window:](https://hub.docker.com/r/odpi/egeria){ target=docker } is built daily and pushed to DockerHub. It contains an OMAG Server Platform. You can download it and use it in your own container environments.
-- The [Kubernetes Helm charts :material-dock-window:](https://github.com/odpi/egeria-charts){ target=gh } make use of the docker image to create a rich Egeria deployment used in the [hands-on labs](/egeria-docs/getting-started/hands-on-labs).
+- The [Kubernetes Helm charts :material-dock-window:](https://github.com/odpi/egeria-charts){ target=gh } make use of the docker image to create a rich Egeria deployment used in the [open metadata labs](/egeria-docs/education/open-metadata-labs).
 - The [Kubernetes operators :material-dock-window:](https://github.com/odpi/egeria-k8s-operator){ target=gh } are in development. They will provide an easy way to control an Egeria deployment running on Kubernetes.
 
 ## Understanding the roadmap
@@ -95,7 +95,7 @@ Aim to simplify the process of deploying the OMAG Server Platform and its connec
 
 Following is an overview of the current status of the functions in Egeria today:
 
-![Status of functions found in each capability layer](../release-notes/functional-organization-showing-implementation-status-for-2.9.png)
+![Status of functions found in each capability layer](/egeria-docs/release-notes/functional-organization-showing-implementation-status-for-2.9.png)
 
 - Green means that there is function that is either [released or in technical preview](content-status).
 - Orange means there is work in progress.

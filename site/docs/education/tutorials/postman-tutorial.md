@@ -8,14 +8,14 @@ REST API calls to a server.
 
 If Postman is new to you, and you do not have it installed,
 link to the Postman page in the 
-[developer tools](../../../developer-resources/tools/Postman.md) for
+[developer tools](/egeria-docs/tools/runtime/#postman) for
 installation instructions.
 
 Once Postman is installed, start up the application.
 
 You should see a user interface something like this:
 
-![Postman user interface](../../../developer-resources/tools/postman-client.png)
+![Postman user interface](/egeria-docs/tools/postman-client.png)
 
 The beauty of Postman is that it supports collections of
 environments and requests.  This means we can pre-can
@@ -35,7 +35,7 @@ The Egeria Environment is located on GitHub at this location:
 Copy the link and then click on Postman's Import menu option
 (top left):
 
-![Postman Import Menu](../../../developer-resources/tools/postman-import-menu.png).
+![Postman Import Menu](/egeria-docs/tools/postman-import-menu.png).
 
 Select `Import from Link` and paste the URL of the environment
 file in the URL box.
@@ -43,12 +43,12 @@ file in the URL box.
 Check that the Egeria environment is selected in the
 top left dropdown:
 
-![Egeria environment set in Postman](../../../developer-resources/tools/postman-egeria-environment.png)
+![Egeria environment set in Postman](/egeria-docs/tools/postman-egeria-environment.png)
 
 If you click on the "eye" shaped icon, you can see the
 current values.
 
-![Egeria environment view in Postman](../../../developer-resources/tools/postman-egeria-environment-view-option.png)
+![Egeria environment view in Postman](/egeria-docs/tools/postman-egeria-environment-view-option.png)
 
 Make sure you have an OMAG Server Platform running
 and set the values for your platform in the `CURRENT VALUE` column.
@@ -58,7 +58,7 @@ in either a docker container or kubernetes,
 the `baseURL` variable will probably need to be changed to
 `https://localhost:18080`.
 
-![Egeria environment variable values](../../../developer-resources/tools/postman-egeria-environment-values.png#pagewidth)
+![Egeria environment variable values](/egeria-docs/tools/postman-egeria-environment-values.png)
 
 These values can be changed at any time when you are using
 Postman so you can direct requests to different servers and
@@ -101,6 +101,6 @@ existing function, or modify them to
 test new function.
 
 Instructions for contributing new Postman collections
-are located in the [developer-resources](../../../developer-resources/Postman-Samples.md).
+are located in the [developer-resources](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis).
 
 --8<-- "snippets/abbr.md"

@@ -4,7 +4,7 @@
 # Guide to Running Egeria for the Hands on Labs
 
 There are a number of approaches to running the environment used in
-the [hands on labs](../../open-metadata-labs).
+the [hands on labs](/egeria-docs/education/open-metadata-labs).
 
 If you only want to get the environment running for the hands on labs:
 

@@ -21,13 +21,13 @@ The 2 types of connectors are shown in Figure 1:
 
 Within an OMAG Server Platform there is one instance of the open metadata platform security connector.  This connector is configured once the platform is running using the admin service call:
 ```
-POST /open-metadata/admin-services/users/{{adminUserId}}/platform/security/connection
+POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/platform/security/connection
 ```
 where the `{{adminUserId}}` is the administrator's userId. The connection for the connector and the platform URL root are passed in the request body.  There are `GET` and `DELETE` services with the same URL to retrieve and remove this connector respectively.
 
 The open metadata server security connector is configured for each OMAG server to allow for each server to have a different implementation.  The admin services command to configure a security connector for a server is:
 ```
-POST /open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/security/connection
+POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/security/connection
 ```
 where the `{{adminUserId}}` is the administrator's userId and `{{serverName}}` is the name of the server where the connector is to run. The connection for the server security connector is passed in the request body.  Again, there are `GET` and `DELETE` services with the same URL to retrieve and remove this connector respectively.
 
@@ -106,7 +106,7 @@ The connector that can be defined for an OMAG Server offers a series of layers o
   The methods are given access to the whole asset to allow a variety of values to be tested.
   
   * **setSupportedZonesForUser** - Provides an opportunity to override the deployed module setting of 
-  [supportedZones](/egeria-docs/features/governance-zones) for a user specific list.
+  [supportedZones](/egeria-docs/features/governance-zoning) for a user specific list.
   * **validateUserForAssetCreate** - Tests for whether a specific user should have the right to create an asset.
   * **validateUserForAssetRead** - Tests for whether a specific user should have read access to a specific asset.
   * **validateUserForAssetDetailUpdate** - Tests for whether a specific user should have the right to update an asset.

@@ -8,6 +8,7 @@ Webinars on open metadata and governance are run on a regular basis, there was a
 Each webinar focuses on a specific audience or issue.  The material for our webinars is stored below
 along with links to the recordings.
 
+* [Open Lineage](november-2021) - November 2021
 * [Value of Egeria](october-2021) - October 2021
 * [Visualising a metadata eco system](september-2021) - September 2021 
 * [Building a governed data lake with Egeria](june-2020) - June 2020
@@ -17,6 +18,8 @@ along with links to the recordings.
 * [Managing data privacy](july-2018) - July 2018
 * [Metadata standards](april-2018) - April 2018
 * [Free your metadata](october-2017) - October 2017
+
+[Planned webinars](../planned-webinars/overview)
 
 ----
 Return to [Git Repository Home Page](..)

@@ -61,7 +61,7 @@ Now you are ready to [create a branch for your changes](task-creating-git-branch
 
 ----
 * Return to [Git and GitHub Tutorial](.)
-* Return to [Egeria Dojo - Making a contribution step by step](../../egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
+* Return to [Egeria Dojo - Making a contribution step by step](../../../getting-started/dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
 
 
 * Link to Git/GitHub overview in [developer-resources/tools](../../../developer-resources/tools/Git-GitHub.md)

@@ -19,29 +19,29 @@ Check that it is working by locating the `Get Server Origin` request in the
 `Egeria-platform-services` collection.
 When you click on that request in the left-hand list, a new tab opens and you can click on send to
 issue the request.  You should see the same response as when you issues the platform origin request from
-[Swagger](../tutorials/docker-tutorial) earlier.  Below is this response in Postman.
+[Swagger](/egeria-docs/education/tutorials/docker-tutorial) earlier.  Below is this response in Postman.
 
-![Postman server origin](../../../developer-resources/tools/postman-platform-origin.png#pagewidth)
+![Postman server origin](/egeria-docs/tools/postman-platform-origin.png)
 
 If this does not work, then there is something wrong either in Postman or your platform.
 Check the URL string that was used in the request (shown in orange in the middle of the screen.)
 
 The screen shot below shows the error message when the egeria environment is not set.
 This can be fixed by setting it in the top right-hand dropdown.  If the Egeria environment is not
-listed then you need to load the environment ([Postman tutorial](../tutorials/postman-tutorial)).
+listed then you need to load the environment ([Postman tutorial](/egeria-docs/education/tutorials/postman-tutorial)).
 
-![Postman server origin - no environment](../../../developer-resources/tools/postman-platform-origin-no-environment.png#pagewidth)
+![Postman server origin - no environment](/egeria-docs/tools/postman-platform-origin-no-environment.png)
 
 If the baseURL variable is set to a different value to the server platform then Postman can not connect.
 In the screen capture below, you can see the baseURL is set to the default of `https://localhost:9443` when it should be
 `https://localhost:9443` because the platform is running in docker.
 
-![Postman server origin - wrong base url](../../../developer-resources/tools/postman-platform-origin-wrong-base-url.png#pagewidth)
+![Postman server origin - wrong base url](/egeria-docs/tools/postman-platform-origin-wrong-base-url.png)
 
 Finally, if the OMAG Server Platform is not running the even though everything is set up correctly in
-Postman, it has nothing to connect to.  Restart the platform ([Docker tutorial](../tutorials/docker-tutorial)).
+Postman, it has nothing to connect to.  Restart the platform ([Docker tutorial](/egeria-docs/education/tutorials/docker-tutorial)).
 
-![Postman server origin - platform down](../../../developer-resources/tools/postman-platform-origin-no-platform.png#pagewidth)
+![Postman server origin - platform down](/egeria-docs/tools/postman-platform-origin-no-platform.png)
 
 In last part of this session you will learn how to set up the OMAG Server Platform so that it is secure and
 determine the services and servers that are associated with the platform.

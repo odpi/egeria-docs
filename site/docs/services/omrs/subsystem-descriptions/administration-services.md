@@ -12,11 +12,4 @@ the OMRS.  They include the following components:
 * **[OMRS Archive Manager](../component-descriptions/archive-manager.md)** - manages the loading of open metadata archives.
 
 
-
-----
-* Return to [repository services subsystem descriptions]()
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

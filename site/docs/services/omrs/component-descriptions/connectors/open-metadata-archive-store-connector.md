@@ -48,10 +48,4 @@ module.
 * [Open Metadata Archive Store Connectors in the Connector Catalog](../../../../../open-metadata-publication/website/connector-catalog/runtime-connectors.md)
 * 
 
-----
-Return to [repository services connectors](.).
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+----8<-- "snippets/abbr.md"

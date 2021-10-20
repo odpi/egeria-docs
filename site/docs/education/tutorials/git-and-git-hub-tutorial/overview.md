@@ -6,9 +6,6 @@
 This tutorial covers common tasks associated with using Git and GitHub to
 work with the Egeria content and make a contribution.
 
-For an overview of Git and GitHub see 
-[developer-resources/tools](../../../developer-resources/tools/Git-GitHub.md).
-
 ## General Tasks
 
 * [Getting a GitHub user log in](task-getting-git-hub-id.md) - This is required to add anything - even a comment
@@ -25,7 +22,7 @@ For an overview of Git and GitHub see
 The tasks below describe how to use Git and GitHub to create a contribution to the Egeria project.
 The development process using Git and GitHub is illustrated in Figure 1.
 
-![Figure 1](../../../developer-resources/tools/git-github-flow.png)
+![Figure 1](git-github-flow.svg)
 > **Figure 1:** Git and GitHub development flow
 
 The tasks below step through this process

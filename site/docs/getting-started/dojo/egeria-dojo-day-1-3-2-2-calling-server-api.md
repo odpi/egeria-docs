@@ -16,7 +16,7 @@ For this exercise, you will be using the following Postman collections:
 The aim is to show the differences between the fine-grained repository services APIs and the 
 courser-grained, but more specialized access services APIs.
 
-![Design philosophy](../../../open-metadata-publication/website/images/design-philosophy-omas-omrs.png#pagewidth)
+![Design philosophy](/egeria-docs/guides/developer/design-philosophy-omas-omrs.png)
 
 Start with the the Asset Owner OMAS interface and add a CSV file.  This returns a list of assets it has created,
 one for the directory and one for the filename.  Retrieve these assets using the 
@@ -25,7 +25,7 @@ Now use the repository service API to see how these assets are stored.
 
 What are the differences?
 
-Later on today, you will have a change to work with the [Open Metadata Labs](../open-metadata-labs)
+Later on today, you will have a change to work with the [Open Metadata Labs](/egeria-docs/education/open-metadata-labs)
 that provide a lot more explanation on the APIs and their differences.
 The purpose of this exercise was to giver you direct experience of the REST APIs.
 

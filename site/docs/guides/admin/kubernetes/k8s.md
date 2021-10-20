@@ -186,6 +186,6 @@ See [port forwarding](https://kubernetes.io/docs/tasks/access-application-cluste
 Ingress rules define how traffic directed at your k8s cluster is directed. Their definition tends to vary substantially between different k8s implementations but often is the easiest approach when running with a cloud service.
 
 * [microk8s ingress](https://microk8s.io/docs/addon-ingress) 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+
+---8<-- "snippets/abbr.md"
+

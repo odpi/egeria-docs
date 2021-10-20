@@ -19,18 +19,10 @@ load the instances.
 ## Related information
 
 A description of the utilities for building archives
-can be found in the [open-metadata-archives](../../../../open-metadata-resources/open-metadata-archives)
+can be found in the [open-metadata-archives](/egeria-docs/concepts/open-metadata-archives)
 modules.
 
 Details for configuring a metadata server to load archives can be found in the
-[Administration Guide](../../../admin-services/docs/user).
+[Administration Guide](/egeria-docs/guides/admin).
 
-* [Configuring an open metadata archive in an OMAG Server](../../../admin-services/docs/user/configuring-the-startup-archives.md)
-* [Adding an open metadata archive to a running OMAG Server](../../../admin-services/docs/user/adding-archive-to-running-server.md)
-
-----
-* Return to [repository services component descriptions](.)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

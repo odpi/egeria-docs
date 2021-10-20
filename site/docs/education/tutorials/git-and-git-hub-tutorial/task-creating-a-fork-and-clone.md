@@ -4,7 +4,7 @@
 # Creating a fork and a clone
 
 The git repositories for Egeria are read only to everyone except the
-[Egeria Maintainers](../../../MAINTAINERS.md).  This is to protect the content from
+[Egeria Maintainers](https://github.com/odpi/egeria/blob/master/MAINTAINERS.md).  This is to protect the content from
 accidental or malicious damage.
 
 However, anyone wanting to make a contribution needs
@@ -18,7 +18,7 @@ original.
 
 Figure 1 illustrates the forking process.
 
-![Figure 1](../../../developer-resources/tools/git-hub-fork.png)
+![Figure 1](git-hub-fork.svg)
 > **Figure 1:** Forking an Egeria git repository
 
 To create your fork, from your browser, navigate to the [Egeria GitHub URL](https://github.com/odpi/egeria),
@@ -27,7 +27,7 @@ and logging into the github UI with a
 You will then see a 'Fork' button at the top right, and should click this to 
 create your own fork to work with Egeria. 
 
-![Fork Button](../../../developer-resources/tools/git-hub-fork-button.png#pagewidth)
+![Fork Button](git-hub-fork-button.png)
 
 This only needs to be done once.
 
@@ -38,7 +38,7 @@ This copy is called a **clone**.  You create a clone each time you are starting 
 
 Figure 2 illustrates the cloning process.
 
-![Figure 2](../../../developer-resources/tools/git-clone.png)
+![Figure 2](git-clone.svg)
 > **Figure 2:** Cloning an Egeria git repository
 
 To create a clone on your machine enter the following in a new directory from a terminal/command window.
@@ -59,12 +59,8 @@ $ git remote add upstream https://github.com/odpi/egeria.git
 
 Now you are ready to [create a branch for your changes](task-creating-git-branches.md).
 
-----
-* Return to [Git and GitHub Tutorial](.)
-* Return to [Egeria Dojo - Making a contribution step by step](../../../getting-started/dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
+## Further information
 
-
-* Link to Git/GitHub overview in [developer-resources/tools](../../../developer-resources/tools/Git-GitHub.md)
 * Further details of [GitHub's fork and pull model](https://help.github.com/articles/about-collaborative-development-models/),
 * Further details on the [fork](https://guides.github.com/activities/forking/) command.
 

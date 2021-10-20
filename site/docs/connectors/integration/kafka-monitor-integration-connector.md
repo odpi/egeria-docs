@@ -52,9 +52,4 @@ Replace `{serverURL}` with the network address of Kafka's bootstrap server (for 
 }
 ```
 
-----
-* Return to [Connector Catalog](.)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

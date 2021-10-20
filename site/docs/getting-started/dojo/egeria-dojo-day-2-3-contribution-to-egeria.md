@@ -42,7 +42,7 @@ To create your own contribution, click on each step and complete the tasks descr
 
 * [Create your contribution](../../education/tutorials/intellij-tutorial/task-creating-content-with-intellij.md) - typically using the IDE.
   You need to create a new markdown file, add your message to the file and then add a link to the README.md file.
-  Both of these files should use [Markdown](../../../developer-resources/tools/Markdown.md) and
+  Both of these files should use [Markdown](/egeria-docs/tools/markdown) and
   include license and copyright statements top and bottom of the file just like this file: 
   [License File Example](https://raw.githubusercontent.com/odpi/egeria/master/developer-resources/License-Example-Files/License_for_Markdown_Files.md).
   
@@ -68,8 +68,5 @@ and your contribution is complete.
 
 
 * Return to [Tools for Contributors](egeria-dojo-day-2-2-tools-for-contributors.md)
-* Return to [Dojo Overview]()
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

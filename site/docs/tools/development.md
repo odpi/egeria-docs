@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-# Development Tools
+# Tools for code contributors
 
 ## Git and GitHub
 
@@ -35,13 +35,13 @@ to create a GitHub account. This can be done from [the top of the GitHub home pa
     Interested to learn more?
 
     - GitHub provides some [great introductory guides to git :material-dock-window:](https://guides.github.com/introduction/git-handbook/){ target=gh }.
-    - Egeria provides specific tutorials for [working with Egeria's git repositories](/egeria-docs/getting-started/tutorials/git-and-git-hub-tutorial).
+    - Egeria provides specific tutorials for [working with Egeria's git repositories](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview).
 
 ## IntelliJ IDEA
 
 [*IntelliJ IDEA* :material-dock-window:](https://www.jetbrains.com/idea/){ target=intellij } by JetBrains is the Interactive Development Environment (IDE) used by most of the Egeria developers. The community edition is free to use and covers all the function needed by an Egeria developer.
 
-We provide [our own tutorial for IntelliJ](/egeria-docs/getting-started/tutorials/intellij-tutorial).
+We provide [our own tutorial for IntelliJ](/egeria-docs/education/tutorials/intellij-tutorial/overview).
 
 ### Lombok Plugin
 
@@ -87,7 +87,7 @@ When the Maven command is run, it passes through the hierarchy of modules multip
     mvn clean install
     ```
 
-The [building Egeria tutorial](/egeria-docs/getting-started/tutorials/building-egeria-tutorial) covers more details on the build process.
+The [building Egeria tutorial](/egeria-docs/education/tutorials/building-egeria-tutorial/overview) covers more details on the build process.
 
 !!! cli "Check if Maven is installed"
     ```shell

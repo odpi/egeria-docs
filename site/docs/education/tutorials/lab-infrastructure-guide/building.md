@@ -6,7 +6,7 @@
 These technologies are needed in order to build and develop Egeria.
 
 If you simply want to try out and explore Egeria, or if you find yourself lost in all of these technologies,
-choose one of the [self-contained environments](README.md) instead.
+choose one of the [self-contained environments](overview.md) instead.
 
 ## Supported Platforms
 

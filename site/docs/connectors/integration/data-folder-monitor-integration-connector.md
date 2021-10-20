@@ -47,6 +47,6 @@ Following is its connection definition to use on the [administration commands th
     Replace `{{folderName}}` with the path name of the folder to monitor.
 
 ??? education "Further information"
-    This connector is configured in the `exchangeDL01` integration daemon server in the [open metadata labs](/egeria-docs/getting-started/hands-on-labs)
+    This connector is configured in the `exchangeDL01` integration daemon server in the [open metadata labs](/egeria-docs/education/open-metadata-labs)
 
 --8<-- "snippets/abbr.md"

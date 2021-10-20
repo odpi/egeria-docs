@@ -7,7 +7,7 @@ The open metadata repository services is divided into five subsystems.
 The first four subsystems provide the core capabilities of OMRS:
 
 
-![Figure 1: Functional subsystems](../omrs-role-complete.png#pagewidth)
+![Figure 1: Functional subsystems](../omrs-role-complete.png)
 > Figure 1: Functional subsystems
 
 * **[Enterprise Repository Services](enterprise-repository-services.md)** provides a virtual
@@ -46,12 +46,12 @@ other subsystems are active or not.
 
 Figure 2 shows the components that are found within each subsystem.
 
-![Figure 2: Components within the subsystems](omrs-subsystem-overview-level-2.png#pagewidth)
+![Figure 2: Components within the subsystems](omrs-subsystem-overview-level-2.png)
 > Figure 2: Components within the subsystems (level 2)
 
 Figure 3 shows how they link together
 
-![Figure 3: Components Linkage](component-linkage.png#pagewidth)
+![Figure 3: Components Linkage](component-linkage.png)
 > Figure 3: Components Linkage
 
 Details of an individual component can be found by clicking on the link of their owning subsystem above.
@@ -63,27 +63,27 @@ Below is the start up sequence for a metadata server connected to two cohorts.
 The call to start the OMRS comes from Egeria's Administration services
 when it is called to create a new OMAG Server instance.
 
-![Figure 4: Startup Sequence 1](omrs-startup-sequence-1.png#pagewidth)
+![Figure 4: Startup Sequence 1](omrs-startup-sequence-1.png)
 > Figure 4: Startup Sequence 1 - Egeria Administration Services initiate server start up
 
 The portion of the OMAG Server's configuration document relating to the repository services is
 passes to the OMRS Administration Services to initiate start up.
 The contents of this configuration determine which OMRS subsystems are started.
 
-![Figure 5: Startup Sequence 2](omrs-startup-sequence-2.png#pagewidth)
+![Figure 5: Startup Sequence 2](omrs-startup-sequence-2.png)
 > Figure 5: Startup Sequence 2 - OMRS Administration services started
 
 The enterprise repository services are started first.  The enterprise connector manager
 handles the dynamic management of enterprise connectors for the OMASs
 driven by the changing membership of the cohort.
 
-![Figure 6: Startup Sequence 3](omrs-startup-sequence-3.png#pagewidth)
+![Figure 6: Startup Sequence 3](omrs-startup-sequence-3.png)
 > Figure 6: Startup Sequence 3 - Enterprise connector manager started
 
 Next the enterprise topic is started.  
 It is an in-memory topic used for passing OMRS topic events to the OMASs.
 
-![Figure 7: Startup Sequence 4](omrs-startup-sequence-4.png#pagewidth)
+![Figure 7: Startup Sequence 4](omrs-startup-sequence-4.png)
 > Figure 7: Startup Sequence 4 - Enterprise Topic established for OMASs
 
 Now the local repository services are started including the real repository connector
@@ -100,7 +100,7 @@ archives listed in the server's configuration.  The local
 repository connector produces TypeDef Events for all open metadata types it supports
 and passes it to the outbound event manager.
 
-![Figure 8: Startup Sequence 5](omrs-startup-sequence-5.png#pagewidth)
+![Figure 8: Startup Sequence 5](omrs-startup-sequence-5.png)
 > Figure 8: Startup Sequence 5 - Local repository started (with real repository connector)
 
 If the real repository connector also has an event mapper then it is started at this time,
@@ -108,13 +108,13 @@ connected to the outbound event mapper and responsibility for
 producing events for the local repository is transferred from the 
 local repository metadata collection to the event mapper.
 
-![Figure 9: Startup Sequence 6](omrs-startup-sequence-6.png#pagewidth)
+![Figure 9: Startup Sequence 6](omrs-startup-sequence-6.png)
 > Figure 9: Startup Sequence 6 - Optional Event Mapper started
 
 An event publisher for the enterprise topic is registered with the outbound event manager.
 This means events from the local repository will flow to the OMASs.
 
-![Figure 10: Startup Sequence 7](omrs-startup-sequence-7.png#pagewidth)
+![Figure 10: Startup Sequence 7](omrs-startup-sequence-7.png)
 > Figure 10: Startup Sequence 7 - Local repository events wired to enterprise topic
 
 Now the metadata highway manager starts a cohort manager for each configured cohort.
@@ -131,7 +131,7 @@ When valid registration replies are received, the cohort registry
 notifies the enterprise connector manager of their registration.
 (This includes the Connection for creating the connector to the remote repository.)
 
-![Figure 11: Startup Sequence 8](omrs-startup-sequence-8.png#pagewidth)
+![Figure 11: Startup Sequence 8](omrs-startup-sequence-8.png)
 > Figure 11: Startup Sequence 8 - Metadata highway manager starts cohort manager for each cohort 
 
 Each cohort manager registers two event processors with the inbound
@@ -141,7 +141,7 @@ respectively.  The repository content manager contains the TypeDef manager that
 maintains the list of valid types.  The instance event processor passed validated
 inbound events to the local repository.
 
-![Figure 12: Startup Sequence 9](omrs-startup-sequence-9.png#pagewidth)
+![Figure 12: Startup Sequence 9](omrs-startup-sequence-9.png)
 > Figure 12: Startup Sequence 9 - Cohort events wired to local repository
 
 Finally each cohort manager registers an event publisher with in inbound event manager
@@ -151,7 +151,7 @@ from the cohort registry and the
 local repository are able to flow out to the cohort and inbound events 
 are received and distributed by the inbound event manager.
 
-![Figure 13: Startup Sequence 10](omrs-startup-sequence-10.png#pagewidth)
+![Figure 13: Startup Sequence 10](omrs-startup-sequence-10.png)
 > Figure 13: Startup Sequence 10 - Cohort events wired to enterprise topic
 
 At this point, the OMRS has completed initializing, it is processing events
@@ -164,7 +164,7 @@ It is configured with the local repository connector.
 If there were validated remote members registered then a connector for each of them is
 added to the enterprise connector.
 
-![Figure 14: Startup Sequence 11](omrs-startup-sequence-11.png#pagewidth)
+![Figure 14: Startup Sequence 11](omrs-startup-sequence-11.png)
 > Figure 14: Startup Sequence 11 - Activate the OMASs
 
 When a new member of the cohort sends a registration request,
@@ -172,19 +172,14 @@ it is passed to the cohort registry.  It passes the details of the new partner
 to the enterprise connector manager.
 
 
-![Figure 15: Startup Sequence 12](omrs-startup-sequence-12.png#pagewidth)
+![Figure 15: Startup Sequence 12](omrs-startup-sequence-12.png)
 > Figure 15: Startup Sequence 12 - inbound registration from another repository
 
 The enterprise connector manager adds the connection for the new member to each of the
 enterprise repository connectors and the requests from the OMASs begin to call the new
 member.
 
-![Figure 16: Startup Sequence 13](omrs-startup-sequence-13.png#pagewidth)
+![Figure 16: Startup Sequence 13](omrs-startup-sequence-13.png)
 > Figure 16: Startup Sequence 13 - Remote connection established
 
-----
-Return to [repository services design](../component-descriptions)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

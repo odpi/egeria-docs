@@ -503,7 +503,7 @@ nav:
               - Relationship History Retrieval: guides/cts/profiles/relationship-history-retrieval.md
               - Entity History Search: guides/cts/profiles/entity-history-search.md
               - Relationship History Search: guides/cts/profiles/relationship-history-search.md
-              - Graph Queries: guides/cts/profiles/graph-queries.md
+              - Graph Queries (Performance): guides/cts/profiles/graph-perf-queries.md
               - Graph History Queries: guides/cts/profiles/graph-history-queries.md
               - Entity Re-home: guides/cts/profiles/entity-re-home.md
               - Relationship Re-home: guides/cts/profiles/relationship-re-home.md

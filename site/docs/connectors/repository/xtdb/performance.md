@@ -107,32 +107,32 @@ The XTDB results can be difficult to see in detail due to the skew from the Janu
 
 Profile | Method | 05-02 (XTDB) | 05-02 (Janus) | 10-05 (XTDB) | 10-05 (Janus) | 20-10 (XTDB) | 20-10 (Janus) | 40-10 (XTDB) | 40-10 (Janus) | 80-10 (XTDB) | 80-10 (Janus)
 ---|---|---|---|---|---|---|---|---|---|---|---
-Entity creation | addEntity | 54.0 | 516.0 | 53.0 | 475.0 | 53.0 | 480.0 | 50.0 | WIP | 51.0 | DNF
-... | saveEntityReferenceCopy | 49.0 | 511.0 | 48.0 | 474.0 | 49.0 | 481.0 | 47.0 | WIP | 48.0 | DNF
-Entity search | findEntities | 49.0 | 253.5 | 68.0 | 482.0 | 104.0 | 825.0 | 237.0 | WIP | 590.0 | DNF
-... | findEntitiesByProperty | 31.0 | 41.0 | 38.0 | 52.0 | 52.0 | 65.0 | 98.0 | WIP | 185.0 | DNF
-... | findEntitiesByPropertyValue | 47.0 | 82.0 | 61.0 | 102.0 | 88.5 | 110.0 | 129.0 | WIP | 258.0 | DNF
-Relationship creation | addRelationship | 52.0 | 170.0 | 50.0 | 164.0 | 51.0 | 159.0 | 50.0 | WIP | 51.0 | DNF
-... | saveRelationshipReferenceCopy | 54.0 | 487.0 | 53.0 | 452.5 | 53.0 | 500.0 | 53.0 | WIP | 53.0 | DNF
-Relationship search | findRelationships | 27.0 | 46.0 | 33.0 | 66.0 | 40.0 | 91.0 | 40.0 | WIP | 45.0 | DNF
-... | findRelationshipsByProperty | 30.0 | 49.0 | 37.0 | 64.0 | 54.0 | 85.0 | 114.0 | WIP | 207.0 | DNF
-... | findRelationshipsByPropertyValue | 45.5 | 77.0 | 52.0 | 98.5 | 77.5 | 113.5 | 128.0 | WIP | 256.0 | DNF
-Entity classification | classifyEntity | 83.0 | 1039.5 | 80.0 | 1000.0 | 80.0 | 1065.0 | 80.0 | WIP | 83.0 | DNF
-... | saveClassificationReferenceCopy | 78.0 | 857.5 | 74.0 | 928.0 | 75.0 | 993.5 | 75.0 | WIP | 76.0 | DNF
-Classification search | findEntitiesByClassification | 36.0 | 1277.0 | 46.0 | 2155.0 | 63.0 | 3483.5 | 91.0 | WIP | 125.0 | DNF
-Entity update | nullPropertiesForEntities | 52.0 | 424.0 | 49.0 | 379.0 | 47.0 | 405.0 | 53.0 | WIP | 50.0 | DNF
-... | updateEntityProperties | 54.0 | 789.0 | 54.0 | 737.0 | 57.0 | 761.0 | 54.0 | WIP | 54.0 | DNF
-Relationship update | updateRelationshipProperties | 62.0 | 518.0 | 59.0 | 469.0 | 65.0 | 527.0 | 60.0 | WIP | 58.0 | DNF
-Classification update | updateEntityClassification | 99.0 | 1613.0 | 113.0 | 1540.0 | 102.0 | 1632.0 | 108.0 | WIP | 101.0 | DNF
+Entity creation | addEntity | 54.0 | 516.0 | 53.0 | 475.0 | 53.0 | 480.0 | 50.0 | 513.0 | 51.0 | DNF
+... | saveEntityReferenceCopy | 49.0 | 511.0 | 48.0 | 474.0 | 49.0 | 481.0 | 47.0 | 512.0 | 48.0 | DNF
+Entity search | findEntities | 49.0 | 253.5 | 68.0 | 482.0 | 104.0 | 825.0 | 237.0 | 2214.0 | 590.0 | DNF
+... | findEntitiesByProperty | 31.0 | 41.0 | 38.0 | 52.0 | 52.0 | 65.0 | 98.0 | 126.0 | 185.0 | DNF
+... | findEntitiesByPropertyValue | 47.0 | 82.0 | 61.0 | 102.0 | 88.5 | 110.0 | 129.0 | 178.0 | 258.0 | DNF
+Relationship creation | addRelationship | 52.0 | 170.0 | 50.0 | 164.0 | 51.0 | 159.0 | 50.0 | 168.0 | 51.0 | DNF
+... | saveRelationshipReferenceCopy | 54.0 | 487.0 | 53.0 | 452.5 | 53.0 | 500.0 | 53.0 | 459.0 | 53.0 | DNF
+Relationship search | findRelationships | 27.0 | 46.0 | 33.0 | 66.0 | 40.0 | 91.0 | 40.0 | 170.0 | 45.0 | DNF
+... | findRelationshipsByProperty | 30.0 | 49.0 | 37.0 | 64.0 | 54.0 | 85.0 | 114.0 | 195.0 | 207.0 | DNF
+... | findRelationshipsByPropertyValue | 45.5 | 77.0 | 52.0 | 98.5 | 77.5 | 113.5 | 128.0 | 203.0 | 256.0 | DNF
+Entity classification | classifyEntity | 83.0 | 1039.5 | 80.0 | 1000.0 | 80.0 | 1065.0 | 80.0 | 1002.0 | 83.0 | DNF
+... | saveClassificationReferenceCopy | 78.0 | 857.5 | 74.0 | 928.0 | 75.0 | 993.5 | 75.0 | 940.0 | 76.0 | DNF
+Classification search | findEntitiesByClassification | 36.0 | 1277.0 | 46.0 | 2155.0 | 63.0 | 3483.5 | 91.0 | 8786.0 | 125.0 | DNF
+Entity update | nullPropertiesForEntities | 52.0 | 424.0 | 49.0 | 379.0 | 47.0 | 405.0 | 53.0 | 413.0 | 50.0 | DNF
+... | updateEntityProperties | 54.0 | 789.0 | 54.0 | 737.0 | 57.0 | 761.0 | 54.0 | 775.0 | 54.0 | DNF
+Relationship update | updateRelationshipProperties | 62.0 | 518.0 | 59.0 | 469.0 | 65.0 | 527.0 | 60.0 | 527.0 | 58.0 | DNF
+Classification update | updateEntityClassification | 99.0 | 1613.0 | 113.0 | 1540.0 | 102.0 | 1632.0 | 108.0 | 1598.0 | 101.0 | DNF
 Entity undo | undoEntityUpdate | 49.0 | -- | 51.0 | -- | 50.0 | -- | 49.0 | -- | 47.0 | --
 Relationship undo | undoRelationshipUpdate | 55.0 | -- | 56.0 | -- | 56.0 | -- | 55.0 | -- | 58.0 | --
-Entity retrieval | getEntityDetail | 16.0 | 20.0 | 17.0 | 18.0 | 16.0 | 17.0 | 17.0 | WIP | 18.0 | DNF
-... | getEntitySummary | 16.0 | 19.0 | 16.0 | 17.0 | 16.0 | 16.0 | 17.0 | WIP | 18.0 | DNF
-... | isEntityKnown | 16.0 | 20.0 | 17.0 | 19.0 | 16.0 | 17.0 | 17.0 | WIP | 18.0 | DNF
+Entity retrieval | getEntityDetail | 16.0 | 20.0 | 17.0 | 18.0 | 16.0 | 17.0 | 17.0 | 20.0 | 18.0 | DNF
+... | getEntitySummary | 16.0 | 19.0 | 16.0 | 17.0 | 16.0 | 16.0 | 17.0 | 19.0 | 18.0 | DNF
+... | isEntityKnown | 16.0 | 20.0 | 17.0 | 19.0 | 16.0 | 17.0 | 17.0 | 20.0 | 18.0 | DNF
 Entity history retrieval | getEntityDetail | 19.0 | -- | 20.0 | -- | 20.0 | -- | 21.0 | -- | 22.0 | --
 ... | getEntityDetailHistory | 21.0 | -- | 22.0 | -- | 22.0 | -- | 22.0 | -- | 23.0 | --
-Relationship retrieval | getRelationship | 18.0 | 23.0 | 18.0 | 21.0 | 18.0 | 19.0 | 19.0 | WIP | 18.0 | DNF
-... | isRelationshipKnown | 18.0 | 23.0 | 18.0 | 21.0 | 18.0 | 19.0 | 19.0 | WIP | 18.0 | DNF
+Relationship retrieval | getRelationship | 18.0 | 23.0 | 18.0 | 21.0 | 18.0 | 19.0 | 19.0 | 22.0 | 18.0 | DNF
+... | isRelationshipKnown | 18.0 | 23.0 | 18.0 | 21.0 | 18.0 | 19.0 | 19.0 | 22.0 | 18.0 | DNF
 Relationship history retrieval | getRelationship | 21.0 | -- | 22.0 | -- | 22.0 | -- | 23.0 | -- | 22.0 | --
 ... | getRelationshipHistory | 22.0 | -- | 23.0 | -- | 23.0 | -- | 24.0 | -- | 23.0 | --
 Entity history search | findEntities | 57.0 | -- | 94.5 | -- | 162.0 | -- | 627.0 | -- | 1898.0 | --
@@ -145,24 +145,24 @@ Graph queries | getEntityNeighborhood | 28.0 | -- | 28.0 | -- | 28.0 | -- | -- |
 ... | getLinkingEntities | 22.0 | -- | 27.0 | -- | 30.0 | -- | -- | -- | -- | --
 ... | getRelatedEntities | 507.0 | -- | 1182.0 | -- | 2296.0 | -- | -- | -- | -- | --
 ... | getRelationshipsForEntity | 26.5 | -- | 29.0 | -- | 29.0 | -- | -- | -- | -- | --
-Graph history queries | getEntityNeighborhood | 26.0 | -- | 27.0 | -- | 27.0 | -- | -- | -- | -- | --
+Graph history queries | getEntityNeighborhood | 26.0 | -- | 27.0 | -- | 27.0 | -- | -- | -- | --
 ... | getLinkingEntities | 22.0 | -- | 27.0 | -- | 31.0 | -- | -- | -- | -- | --
 ... | getRelatedEntities | 502.0 | -- | 1183.5 | -- | 2295.0 | -- | -- | -- | -- | --
 ... | getRelationshipsForEntity | 25.0 | -- | 26.0 | -- | 27.0 | -- | -- | -- | -- | --
-Entity re-home | reHomeEntity | 50.0 | 865.0 | 49.0 | 761.0 | 49.0 | 823.0 | 53.0 | WIP | 50.0 | DNF
-Relationship re-home | reHomeRelationship | 46.0 | 456.0 | 46.0 | 398.0 | 45.0 | 435.0 | 49.0 | WIP | 47.0 | DNF
-Entity declassify | declassifyEntity | 62.0 | 1608.5 | 58.5 | 1636.0 | 57.0 | 1736.0 | 62.0 | WIP | 65.0 | DNF
+Entity re-home | reHomeEntity | 50.0 | 865.0 | 49.0 | 761.0 | 49.0 | 823.0 | 53.0 | 813.0 | 50.0 | DNF
+Relationship re-home | reHomeRelationship | 46.0 | 456.0 | 46.0 | 398.0 | 45.0 | 435.0 | 49.0 | 429.0 | 47.0 | DNF
+Entity declassify | declassifyEntity | 62.0 | 1608.5 | 58.5 | 1636.0 | 57.0 | 1736.0 | 62.0 | 1713.0 | 65.0 | DNF
 ... | purgeClassificationReferenceCopy | 59.0 | -- | 56.0 | -- | 53.0 | -- | 57.0 | -- | 58.0 | --
-Entity re-identify | reIdentifyEntity | 57.0 | 1970.0 | 52.0 | 1830.0 | 55.0 | 1972.0 | 64.0 | WIP | 59.0 | DNF
-Relationship re-identify | reIdentifyRelationship | 48.0 | 875.0 | 45.0 | 843.0 | 48.0 | 885.0 | 53.0 | WIP | 49.0 | DNF
-Relationship delete | deleteRelationship | 46.0 | 443.5 | 44.0 | 436.0 | 46.0 | 459.0 | 52.0 | WIP | 47.0 | DNF
-Entity delete | deleteEntity | 51.0 | 919.0 | 49.0 | 911.0 | 50.0 | 1003.0 | 55.0 | WIP | 53.0 | DNF
-Entity restore | restoreEntity | 46.0 | 915.0 | 42.0 | 895.0 | 42.0 | 987.0 | 45.0 | WIP | 44.0 | DNF
-Relationship restore | restoreRelationship | 43.0 | 404.0 | 39.0 | 424.0 | 41.0 | 441.5 | 41.0 | WIP | 41.0 | DNF
-Relationship purge | purgeRelationship | 34.0 | 199.0 | 33.0 | 210.0 | 35.0 | 200.0 | 40.0 | WIP | 37.0 | DNF
-... | purgeRelationshipReferenceCopy | 25.0 | 121.0 | 25.0 | 126.0 | 26.0 | 121.5 | 28.0 | WIP | 27.0 | DNF
-Entity purge | purgeEntity | 45.0 | 381.0 | 43.0 | 428.0 | 48.0 | 431.5 | 56.0 | WIP | 58.0 | DNF
-... | purgeEntityReferenceCopy | 29.0 | 289.0 | 28.0 | 286.0 | 30.0 | 276.0 | 32.0 | WIP | 33.0 | DNF
+Entity re-identify | reIdentifyEntity | 57.0 | 1970.0 | 52.0 | 1830.0 | 55.0 | 1972.0 | 64.0 | 2024.0 | 59.0 | DNF
+Relationship re-identify | reIdentifyRelationship | 48.0 | 875.0 | 45.0 | 843.0 | 48.0 | 885.0 | 53.0 | 913.0 | 49.0 | DNF
+Relationship delete | deleteRelationship | 46.0 | 443.5 | 44.0 | 436.0 | 46.0 | 459.0 | 52.0 | 471.0 | 47.0 | DNF
+Entity delete | deleteEntity | 51.0 | 919.0 | 49.0 | 911.0 | 50.0 | 1003.0 | 55.0 | 904.0 | 53.0 | DNF
+Entity restore | restoreEntity | 46.0 | 915.0 | 42.0 | 895.0 | 42.0 | 987.0 | 45.0 | 859.0 | 44.0 | DNF
+Relationship restore | restoreRelationship | 43.0 | 404.0 | 39.0 | 424.0 | 41.0 | 441.5 | 41.0 | 435.0 | 41.0 | DNF
+Relationship purge | purgeRelationship | 34.0 | 199.0 | 33.0 | 210.0 | 35.0 | 200.0 | 40.0 | 210.0 | 37.0 | DNF
+... | purgeRelationshipReferenceCopy | 25.0 | 121.0 | 25.0 | 126.0 | 26.0 | 121.5 | 28.0 | 126.0 | 27.0 | DNF
+Entity purge | purgeEntity | 45.0 | 381.0 | 43.0 | 428.0 | 48.0 | 431.5 | 56.0 | 431.0 | 58.0 | DNF
+... | purgeEntityReferenceCopy | 29.0 | 289.0 | 28.0 | 286.0 | 30.0 | 276.0 | 32.0 | 285.0 | 33.0 | DNF
 
 ## Reproducibility
 

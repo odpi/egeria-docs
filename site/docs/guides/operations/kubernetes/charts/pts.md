@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Conformance Test Suite Chart (egeria-cts)
+# Performance Test Suite Chart (egeria-pts)
 
-This is a deployment of Egeria that will automatically run the [Conformance Test Suite's repository workbench](/egeria-docs/guides/cts/overview/#repository-workbench) against a deployed [metadata repository](/egeria-docs/concepts/metadata-repository).
+This is a deployment of Egeria that will automatically run the [Performance Test Suite](/egeria-docs/guides/cts/overview/#performance-workbench) against a deployed [metadata repository](/egeria-docs/concepts/metadata-repository).
 
 ??? success "Prerequisites"
     In order to use the chart, you'll first need to have the following installed:
@@ -12,14 +12,14 @@ This is a deployment of Egeria that will automatically run the [Conformance Test
     - [x] the `kubectl` tool in your path
     - [x] [Helm 3.0 :material-dock-window:](https://github.com/helm/helm/releases){ target=helm } or above
 
-No configuration of the chart is required to use defaults, but information is provided below.
+    No configuration of the chart is required to use defaults, but information is provided below.
 
 ## Installation
 
-!!! cli "Install (deploy) the CTS chart"
+!!! cli "Install (deploy) the PTS chart"
     ```shell
-    helm dep update egeria-cts
-    helm install [-f overrides.yaml] <name> egeria-cts
+    helm dep update egeria-pts
+    helm install [-f overrides.yaml] <name> egeria-pts
     ```
 
     The `-f overrides.yaml` is optional, and only necessary if you are overriding any of the configuration (see options below), while the `<name>` is the name you want to give your deployment.
@@ -35,7 +35,7 @@ The primary values you will likely want to override in this chart are as follows
 
 ### Technology under test
 
-The *technology under test* ("tut") defines the repository that you want to run the CTS against. By default, the chart will run the CTS against the built-in graph repository. To configure it to test some other repository, you will need to override one or more of the following:
+The *technology under test* ("tut") defines the repository that you want to run the PTS against. By default, the chart will run the PTS against the built-in graph repository. To configure it to test some other repository, you will need to override one or more of the following:
 
 | Parameter | Description |
 |---|---|
@@ -91,13 +91,19 @@ You do this by overriding the `downloads` value with a list of `filename` and `u
 
 ### Scale of test
 
-There is a single option to configure the scale of the CTS test:
+The volume aspects of the PTS can be configured using the following options:
 
-- `records`: defines the "scale factor" for the CTS, where the number of instances that will be created (per type) is roughly 2x this number, and the maximum number of search results for the paged search tests will be limited to this number
+| Parameter | Description |
+|---|---|
+| `instancesPerType` | The number of instances to create for each type supported by the repository. |
+| `maxSearchResults` | The maximum number of search results to retrieve per page of results. |
+| `waitBetweenScenarios` | How long to wait (in seconds) between test cases. This is primarily useful when testing asynchronous (eventually-consistent) repositories. |
+| `profilesToSkip` | A list of the names of the profiles that should be skipped during the testing. This can be used to avoid testing profiles that are not of interest, or will cause the test to run for far longer than desired. |
+| `methodsToSkip` | A list of the individual metadata collection methods that should be skipped during testing. This can be used to target specific methods that are not of interest, or will cause the test to run for far longer than desired. |
 
 ## Monitoring progress
 
-You can monitor the progress of the CTS execution by looking at the log output of the `init-and-report` log:
+You can monitor the progress of the PTS execution by looking at the log output of the `init-and-report` log:
 
 !!! cli "Get the `init-and-report` pod name"
     ```shell
@@ -111,7 +117,7 @@ You can monitor the progress of the CTS execution by looking at the log output o
     t12-init-and-report-585b47f74-85r8m        1/1     Running   0          39m
     ```
 
-    If you had multiple CTS deployments running in parallel in your cluster, this may return more than one result (as in the example above). The one that starts with the name you used as the name of your deployment is the one that represents your particular deployment.
+    If you had multiple PTS deployments running in parallel in your cluster, this may return more than one result (as in the example above). The one that starts with the name you used as the name of your deployment is the one that represents your particular deployment.
 
 Once you have the pod name, you can then view the log:
 
@@ -124,7 +130,7 @@ Once you have the pod name, you can then view the log:
 
 ??? success "Example output from the `init-and-report` log"
     This opening section simply displays environment variables that have been configured, primarily useful for debugging or other diagnostics purposes:
-    
+
     ```text
     -- Environment variables --
     ...
@@ -138,18 +144,18 @@ Once you have the pod name, you can then view the log:
     ```text
     -- Configuring platform with required servers...
     
-    > Configuring conformance test suite driver:
+    > Configuring performance test suite driver:
     
     {"class":"VoidResponse","relatedHTTPCode":200}
-    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/cts/server-url-root?url=https://t12-platform:9443)
+    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/pts/server-url-root?url=https://t12-platform:9443)
     {"class":"VoidResponse","relatedHTTPCode":200}
-    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/cts/server-type?typeName=Conformance)
+    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/pts/server-type?typeName=Conformance)
     {"class":"VoidResponse","relatedHTTPCode":200}
-    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/cts/event-bus?topicURLRoot=egeria)
+    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/pts/event-bus?topicURLRoot=egeria)
     {"class":"VoidResponse","relatedHTTPCode":200}
-    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/cts/cohorts/cts)
+    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/pts/cohorts/pts)
     {"class":"VoidResponse","relatedHTTPCode":200}
-    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/cts/conformance-suite-workbenches/repository-workbench/repositories)
+    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/pts/conformance-suite-workbenches/repository-workbench/performance)
     
     > Configuring technology under test:
     
@@ -164,42 +170,42 @@ Once you have the pod name, you can then view the log:
     {"class":"VoidResponse","relatedHTTPCode":200}
     (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/tut/local-repository/mode/plugin-repository/connection)
     {"class":"VoidResponse","relatedHTTPCode":200}
-    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/tut/cohorts/cts)
+    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/tut/cohorts/pts)
     
     -- End of configuration
     ```
     
-    The CTS itself is then started up, followed by the technology under test:
+    The PTS itself is then started up, followed by the technology under test:
 
     ```text
-    -- Running the conformance test suite...
+    -- Running the performance test suite...
     
-    > Starting conformance test suite:
+    > Starting performance test suite:
     
-    {"class":"SuccessMessageResponse","relatedHTTPCode":200,"successMessage":"Fri Oct 22 14:43:54 GMT 2021 cts is running the following services: [Open Metadata Repository Services (OMRS), Connected Asset Services, Conformance Suite Services]"}
-    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/cts/instance)
+    {"class":"SuccessMessageResponse","relatedHTTPCode":200,"successMessage":"Fri Oct 22 14:43:54 GMT 2021 pts is running the following services: [Open Metadata Repository Services (OMRS), Connected Asset Services, Conformance Suite Services]"}
+    (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/pts/instance)
     
     > Starting the technology under test:
     
     {"class":"SuccessMessageResponse","relatedHTTPCode":200,"successMessage":"Fri Oct 22 14:44:12 GMT 2021 tut is running the following services: [Open Metadata Repository Services (OMRS)]"}
     (200 - https://t12-platform:9443/open-metadata/admin-services/users/admin/servers/tut/instance)
     
-    -- End of conformance test suite startup
+    -- End of performance test suite startup
     ```
 
-    Once the CTS is running, a busy loop is then run to wait until the CTS has completed. The status of the CTS execution will be re-checked every 30 seconds and an update printed out to the log accordingly:
+    Once the PTS is running, a busy loop is then run to wait until the PTS has completed. The status of the PTS execution will be re-checked every 30 seconds and an update printed out to the log accordingly:
 
     ```text
-    -- Collecting results of the conformance test suite...
+    -- Collecting results of the performance test suite...
     
     > Collecting basic configuration information...
-    > Waiting for the conformance test suite to complete...
+    > Waiting for the performance test suite to complete...
       ... still waiting (0d:00h:01m:00s)
       ... still waiting (0d:00h:01m:30s)
     ...
     ```
 
-    Once completed, the pod will retrieve the detailed results from the CTS itself:
+    Once completed, the pod will retrieve the detailed results from the PTS itself:
 
     ```text
     ...
@@ -238,15 +244,15 @@ Once you have the pod name, you can then view the log:
 
      > Bundling all results into an archive...
 
-    -- End of conformance test suite results collection, download from: /tmp/t12.tar.gz
+    -- End of performance test suite results collection, download from: /tmp/t12.tar.gz
     ```
 
-!!! attention "The pod will continue running after the CTS has completed"
-    Note that the pod itself will continue running after the CTS has completed: this is to provide adequate time to copy the bundled archive file of the results out of the pod. (If the pod were allowed to stop its execution any files within it would be lost.)
+!!! attention "The pod will continue running after the PTS has completed"
+    Note that the pod itself will continue running after the PTS has completed: this is to provide adequate time to copy the bundled archive file of the results out of the pod. (If the pod were allowed to stop its execution any files within it would be lost.)
 
 ## Retrieving results
 
-Once the CTS has completed running and the bundled archive file is available, it can be copied from the pod:
+Once the PTS has completed running and the bundled archive file is available, it can be copied from the pod:
 
 !!! cli "Copy results archive from the pod"
     ```shell
@@ -259,7 +265,7 @@ Once the CTS has completed running and the bundled archive file is available, it
 
 ## Uninstallation
 
-Once you have retrieved the results, or if you want to otherwise cancel or stop the running of the CTS:
+Once you have retrieved the results, or if you want to otherwise cancel or stop the running of the PTS:
 
 !!! cli "Delete the deployment"
     ```shell

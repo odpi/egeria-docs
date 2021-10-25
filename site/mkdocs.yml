@@ -39,7 +39,18 @@ nav:
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
           - Operate OMAG Server: guides/operations/operating-omag-server.md
-          - Egeria in Kubernetes: guides/operations/kubernetes/intro.md
+          - Egeria in Kubernetes:
+              - Egeria in Kubernetes: guides/operations/kubernetes/index.md
+              - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
+              - Introduction to Helm: guides/operations/kubernetes/helm.md
+              - Charts:
+                  - Base Egeria Chart: guides/operations/kubernetes/charts/base.md
+                  - Coco Pharmaceuticals Lab: guides/operations/kubernetes/charts/lab.md
+                  - CTS Chart: guides/operations/kubernetes/charts/cts.md
+                  - PTS Chart: guides/operations/kubernetes/charts/pts.md
+              - Container Images: guides/operations/kubernetes/container-images.md
+              - Custom Deployment: guides/operations/kubernetes/custom-deployment.md
+              - Egeria Operator: guides/operations/kubernetes/operator.md
       - Integrate:
           - Developer Guide:
                 - Developer Overview: guides/developer/index.md
@@ -504,7 +515,7 @@ nav:
               - Relationship History Retrieval: guides/cts/profiles/relationship-history-retrieval.md
               - Entity History Search: guides/cts/profiles/entity-history-search.md
               - Relationship History Search: guides/cts/profiles/relationship-history-search.md
-              - Graph Queries: guides/cts/profiles/graph-queries.md
+              - Graph Queries (Performance): guides/cts/profiles/graph-perf-queries.md
               - Graph History Queries: guides/cts/profiles/graph-history-queries.md
               - Entity Re-home: guides/cts/profiles/entity-re-home.md
               - Relationship Re-home: guides/cts/profiles/relationship-re-home.md

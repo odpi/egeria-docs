@@ -49,10 +49,10 @@ and well as diagnosing any problems you may come across.
 
 ----
 Links to content
-* [Egeria Introduction](egeria-dojo-day-1-1-introduction.md)
-* [Egeria Project Introduction](egeria-dojo-day-1-2-project-introduction.md)
-* [Running Egeria on your Machine - Step-by-Step](egeria-dojo-day-1-3-running-egeria.md)
-* [Participating in the Community](egeria-dojo-day-1-4-participating-in-the-community.md)
+- [Egeria Introduction](egeria-dojo-day-1-1-introduction.md)
+- [Egeria Project Introduction](egeria-dojo-day-1-2-project-introduction.md)
+- [Running Egeria on your Machine - Step-by-Step](egeria-dojo-day-1-3-running-egeria.md)
+- [Participating in the Community](egeria-dojo-day-1-4-participating-in-the-community.md)
 
 
 ----
@@ -69,11 +69,11 @@ and take it all the way through the process to update Egeria's git repository.
 
 ----
 Links to content:
-* [Open Source Philosophy](egeria-dojo-day-2-1-open-source-philosophy.md)
-* [Tools for Contributors](egeria-dojo-day-2-2-tools-for-contributors.md)
-* [Making a contribution - Step-by-Step](egeria-dojo-day-2-3-contribution-to-egeria.md)
-* [Types of Contribution](egeria-dojo-day-2-4-types-of-contribution.md)
-* [Becoming a Contributor](egeria-dojo-day-2-5-becoming-a-contributor.md)
+- [Open Source Philosophy](egeria-dojo-day-2-1-open-source-philosophy.md)
+- [Tools for Contributors](egeria-dojo-day-2-2-tools-for-contributors.md)
+- [Making a contribution - Step-by-Step](egeria-dojo-day-2-3-contribution-to-egeria.md)
+- [Types of Contribution](egeria-dojo-day-2-4-types-of-contribution.md)
+- [Becoming a Contributor](egeria-dojo-day-2-5-becoming-a-contributor.md)
 
 
 ----
@@ -90,10 +90,10 @@ of the project.
 
 ----
 Links to content:
-* [Becoming an advocate](egeria-dojo-day-3-1-becoming-an-advocate.md)
-* [Becoming a maintainer](egeria-dojo-day-3-2-becoming-a-maintainer.png)
-* [Egeria architecture and philosophy (the deep stuff)](egeria-dojo-day-3-3-egeria-architecture.md)
-* [Egeria social](egeria-dojo-day-3-4-egeria-social.md)
+- [Becoming an advocate](egeria-dojo-day-3-1-becoming-an-advocate.md)
+- [Becoming a maintainer](egeria-dojo-day-3-2-becoming-a-maintainer.png)
+- [Egeria architecture and philosophy (the deep stuff)](egeria-dojo-day-3-3-egeria-architecture.md)
+- [Egeria social](egeria-dojo-day-3-4-egeria-social.md)
 
 
 ## Video Links

@@ -34,7 +34,7 @@ nav:
               - View Server: guides/admin/servers/configuring-a-view-server.md
               - Integration Daemon: guides/admin/servers/configuring-an-integration-daemon.md
               - Engine Host: guides/admin/servers/configuring-an-engine-host.md
-              - Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy.md
+              - Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy-server.md
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
@@ -54,7 +54,7 @@ nav:
       - Integrate:
           - Developer Guide:
                 - Developer Overview: guides/developer/index.md
-                - Modelling Schema: guides/developer/modelling-schema.md
+                - Modelling Schema: guides/developer/mapping-technology/modelling-schemas.md
                 - Building Connectors:
                       - Integration Connectors: guides/developer/integration-connectors/overview.md
                       - Repository Connectors: guides/developer/repository-connectors/overview.md
@@ -62,7 +62,7 @@ nav:
                             - Audit Log Store: guides/developer/runtime-connectors/audit-log-store-connector.md
                             - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
                             - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
-                            - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-store-connector.md
+                            - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
                             - Open Metadata Topic: guides/developer/runtime-connectors/open-metadata-topic-connector.md
           - Connector Catalog:
                 - Connector Overview: connectors/index.md
@@ -165,7 +165,7 @@ nav:
       - Tutorials:
           - Building Egeria: getting-started/tutorials/building-egeria-tutorial/overview.md
           - Docker Tutorial: getting-started/tutorials/docker-tutorial.md
-          - Git Tutorial: getting-started/tutorials/git-and-github.md
+          - Git Tutorial: getting-started/tutorials/git-and-github-tutorial/overview.md
           - Installing Egeria: getting-started/tutorials/installing-egeria-tutorial.md
           - IntelliJ Tutorial: getting-started/tutorials/intellij-tutorial/overview.md
           - OMAG Client Tutorial: getting-started/tutorials/omag-client-tutorial.md
@@ -179,14 +179,15 @@ nav:
       - Webinars:
           - Previous Webinars:
               - Previous Webinars: education/previous-webinars/index.md
-              - Visualising a metadata eco system September 2021: education/previous-webinars/september-2021/
-              - Date Lake and Egeria June 2020: education/previous-webinars/june-2020/
-              - Building a Data Catalog April 2020: education/previous-webinars/april-2020/
-              - Metadata for Data Driven Organization March 2020 : education/previous-webinars/march-2020/
-              - Egeria and Palisade December 2019 : education/previous-webinars/december-2019/
-              - Privacy July 2018: education/previous-webinars/july-2018/
-              - Open Metadata Standards April 2018: education/previous-webinars/april-2018/
-              - Free Metadata October 2017: education/previous-webinars/october-2017/
+              - The value of Egeria October 2021: education/previous-webinars/october-2021/README.md
+              - Visualising a metadata eco system September 2021: education/previous-webinars/september-2021/README.md
+              - Date Lake and Egeria June 2020: education/previous-webinars/june-2020/README.md
+              - Building a Data Catalog April 2020: education/previous-webinars/april-2020/README.md
+              - Metadata for Data Driven Organization March 2020 : education/previous-webinars/march-2020/README.md
+              - Egeria and Palisade December 2019 : education/previous-webinars/december-2019/README.md
+              - Privacy July 2018: education/previous-webinars/july-2018/README.md
+              - Open Metadata Standards April 2018: education/previous-webinars/april-2018/README.md
+              - Free Metadata October 2017: education/previous-webinars/october-2017/README.md
           - Planned Webinars: education/planned-webinars/overview.md
   - Contributing:
       - Community Guide: guides/community.md
@@ -537,9 +538,10 @@ nav:
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
+      - Audit Log Store: concepts/audit-log-store-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
-      - Cohort Registry Store: concepts/cohort-registry-store.md
+      - Cohort Registry Store: concepts/cohort-registry-store-connector.md
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md

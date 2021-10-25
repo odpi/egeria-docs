@@ -19,7 +19,7 @@ hide:
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.provisioning.MoveCopyFileGovernanceActionProvider`
  
 
-**Move/Copy File** Provisioning Governance Action Service moves or copies files from one location to another and
+*Move/Copy File* Provisioning Governance Action Service moves or copies files from one location to another and
 optionally creates lineage between them.
 
 This governance action service is highly configurable.
@@ -88,30 +88,30 @@ running in the [Engine Host](/egeria-docs/concepts/engine-host).
 The following configuration properties can be set to control
 the behavior of the service on every instance.
 
-* **provisionUncataloguedFiles** - if this property is set to any value, the service may work with files that are not catalogued
+- **provisionUncataloguedFiles** - if this property is set to any value, the service may work with files that are not catalogued
   in open metadata.  This is used when processing files that are entering the open metadata ecosystem.
  
-* **targetFileNamePattern** - pattern to construct the name of the destination file. If this is not set, the source file name is used.
+- **targetFileNamePattern** - pattern to construct the name of the destination file. If this is not set, the source file name is used.
   
-* **noLineage** - if this property is set to any value, do not produce lineage as part of the provisioning process.
+- **noLineage** - if this property is set to any value, do not produce lineage as part of the provisioning process.
 
-* **processName** - if this property is set, it overrides the default process name (ie the name of this
+- **processName** - if this property is set, it overrides the default process name (ie the name of this
   governance action service) with the value that this property is set to.
   
-* **lineageWithTopLevelProcessOnly** - if this property is set, lineage mappings are connected to the top level process representing
+- **lineageWithTopLevelProcessOnly** - if this property is set, lineage mappings are connected to the top level process representing
   this 
 
-* **lineageToDestinationFolderOnly** - if this property is set, the lineage relationship from the
+- **lineageToDestinationFolderOnly** - if this property is set, the lineage relationship from the
   governance action service to the destination is linked to the destination folder rather than the new file in the destination folder.
   Without this value, the default behavior is to show lineage from governance action process to file.
   
-* **lineageFromSourceFolderOnly** - if this property is set, the lineage relationship from the source to the
+- **lineageFromSourceFolderOnly** - if this property is set, the lineage relationship from the source to the
   governance action service is linked from the source folder rather than the source file.
   Without this value, the default behavior is to show lineage from source file to governance action process.  
 
 This is its connection definition to use when
 creating the definition of the governance action service
-using the [Governance Engine OMAS](../../../open-metadata-implementation/access-services/governance-engine).
+using the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine).
 Remove the configuration properties that are not required.
 Replace `{processName}` and `{pattern}` as required. 
 
@@ -142,49 +142,41 @@ Replace `{processName}` and `{pattern}` as required.
 
 ## Governance Action Settings
 
-When this governance action service is called through a [GovernanceAction](../open-metadata-types/0463-Governance-Actions.md)
-it supports the following options.
+When this governance action service is called through a [GovernanceAction](/egeria-docs/types/0463-Governance-Actions) it supports the following options.
 
 ### Request Types and Parameters
 
 There are three request types:
 
-* **copy-file** to request a file copy
-* **move-file** to request a file move
-* **delete-file** to request a file delete
+- **copy-file** to request a file copy
+- **move-file** to request a file move
+- **delete-file** to request a file delete
 
 The source and destination can be configured as request parameters:
 
-* **source-file**
-* **destination-folder**
+- **source-file**
+- **destination-folder**
 
 Which can be overridden by the following named action targets
 
-* **source-file**
-* **destination-folder**
+- **source-file**
+- **destination-folder**
 
 ### Completion Status and Guards
 
 On completion, this governance action service uses:
 
-* `CompletionStatus.ACTIONED` with guard `provisioning-complete` or
-* `CompletionStatus.FAILED` with guard `provisioning-failed`
+- `CompletionStatus.ACTIONED` with guard `provisioning-complete` or
+- `CompletionStatus.FAILED` with guard `provisioning-failed`
 
 
 ## Examples of use
 
-* [Open Metadata Labs](/egeria-docs/education/open-metadata-labs): this connector is configured
-in the `governDL01` engine host server as part of the **automated curation** asset management lab.
+* [Open Metadata Labs](/egeria-docs/education/open-metadata-labs): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
 
 ??? education "Further information"
 
-* [Designing a Provisioning Governance Action Service](/egeria-docs/guides/developer/governance-action-services/provisioning-governance-service)
-
-
-----
-* Return to the [Connector Catalog](.)
-* Return to the [Governance Action Connectors Overview](../../../open-metadata-implementation/adapters/open-connectors/governance-action-connectors)
-
+- [Designing a Provisioning Governance Action Service](/egeria-docs/guides/developer/governance-action-services/provisioning-governance-service)
 
 
 --8<-- "snippets/abbr.md"

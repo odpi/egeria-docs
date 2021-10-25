@@ -38,7 +38,7 @@ These commands include:
 - Retrieve the results from all workbenches and test cases (beware that the response can be 100's of MB in size, and
   may overflow your JVM heap).
 - Retrieve the results from all failed test cases.
-- Retrieve the IDs of all test cases.
+- Retrieve the Ids of all test cases.
 - Retrieve the results from a specific test cases (for example, iterating through the above call's response).
 - Retrieve the names of all profiles.
 - Retrieve the details of a single profile's results (for example, iterating through the above call's response).

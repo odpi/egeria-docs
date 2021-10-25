@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -28,9 +23,9 @@ Although Egeria is shown above as a centralized solution, it is implemented as a
  
 Today's organizations have their tools and technologies distributed across multiple data centres and cloud providers (green clouds). Each of these locations may be managed by different groups and use different technologies.  This makes a centralized metadata solution impractical from both a funding and operational perspective.
 
-![Distributed operation](egeria-distributed-operation.svg)
-
 Using Egeria, each location runs a platform (blue boxes) that hosts the integration services tailored to specific types of tools (orange circles).
+
+![Distributed operation](egeria-distributed-operation.svg)
 
 ## What is included in Egeria
 

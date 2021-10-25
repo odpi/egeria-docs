@@ -7,7 +7,7 @@ Although it is desirable to synchronize metadata between the tools and platforms
 
 ![Before Egeria](before-egeria.svg)
 
-Using Egeria, you only need to link each tool to Egeria and it is Egeria that manages the complexity of the integration.
+Using Egeria, you only need to link each tool to Egeria and it is Egeria that manages the complexity of the metadata exchange.
 
 ![Egeria concepts](egeria-concept.svg)
 
@@ -29,11 +29,19 @@ Using Egeria, each location runs a platform (blue boxes) that hosts the integrat
 
 ## What is included in Egeria
 
-Egeria implements a set of open [metadata types](/egeria-docs/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  However, the type system is extensible so it is able to support any special needs of your organization.
+## Open Metadata Types
 
-Egeria's [frameworks](/egeria-docs/frameworks) define the interfaces and protocols for pluggable components that enable Egeria to run in many environments and connect to many types of technologies. These pluggable components are called [connectors](/egeria-docs/concept/connector).  Egeria has a [catalog of pre-built connectors](/egeria-docs/connectors) to help speed up your adoption of open metadata and governance.
+Egeria defines a set of open [metadata types](/egeria-docs/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  However, the type system is extensible so it is able to support any special needs of your organization.
+
+## Frameworks
+
+Egeria's [frameworks](/egeria-docs/frameworks) define the interfaces and protocols for pluggable components that enable Egeria to run in many environments and connect to many types of technologies. These pluggable components are called [connectors](/egeria-docs/concepts/connector).  Egeria has a [catalog of pre-built connectors](/egeria-docs/connectors) to help speed up your adoption of open metadata and governance.
+
+## Integration services
 
 Egeria's [integration services](/egeria-docs/services) provide specialized APIs and event exchange protocols to support the major types of tools and platforms.
+
+## Metadata governance
 
 Finally, as metadata is exchanged, the duplication, gaps and inconsistencies of the metadata in an organization's tools and platforms is exposed.  Egeria provides [metadata governance features](/egeria-docs/features) to dynamically improve the quality of your metadata in an ongoing and systematic manner.
 

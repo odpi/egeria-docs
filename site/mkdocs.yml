@@ -167,7 +167,7 @@ nav:
       - Tutorials:
           - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
           - Docker Tutorial: education/tutorials/docker-tutorial.md
-          - Git Tutorial: education/tutorials/git-and-github-tutorial/overview.md
+          - Git Tutorial: education/tutorials/git-and-git-hub-tutorial/overview.md
           - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
           - IntelliJ Tutorial: education/tutorials/intellij-tutorial/overview.md
           - OMAG Client Tutorial: education/tutorials/omag-client-tutorial.md
@@ -266,6 +266,7 @@ nav:
               - Servers and Assets: types/0/0045-Servers-and-Assets.md
               - Applications and Processes: types/0/0050-Applications-and-Processes.md
               - Data Processing Engines: types/0/0055-Data-Processing-Engines.md
+              - Asset Managers: types/0/0056Asset-Managers.md
               - Integration Capabilities: types/0/0057-Software-Services.md
               - Networks and Gateways: types/0/0070-Networks-and-Gateways.md
               - Cloud Platforms and Services: types/0/0090-Cloud-Platforms-and-Services.md
@@ -382,7 +383,7 @@ nav:
               - Area 6 Metadata Discovery: types/6/index.md
               - Open Discovery Engines and Services: types/6/0601-Open-Discovery-Engine.md
               - Discovery Analysis Report: types/6/0605-Open-Discovery-Analysis-Reports.md
-              - Annotation: types/6/0610-Annotations.md
+              - Annotations: types/6/0610-Annotations.md
               - Annotation Reviews: types/6/0612-Annotation-Reviews.md
               - Schema Extraction: types/6/0615-Schema-Extraction.md
               - Data Field Analysis: types/6/0617-Data-Field-Analysis.md
@@ -406,6 +407,8 @@ nav:
               - Data Passing: types/7/0750-Data-Passing.md
               - Business Lineage: types/7/0760-Business-Lineage.md
               - Lineage Mapping: types/7/0770-Lineage-Mapping.md
+              - Code Analysis: types/7/0780-Code-Analysis.md
+              - Incomplete: types/7/0790-Incomplete.md
       - Standards: standards/overview.md
       - Services:
           - Fixed Services:

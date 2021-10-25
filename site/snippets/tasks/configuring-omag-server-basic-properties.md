@@ -42,9 +42,9 @@ The organization name may be the owning organization or department or team suppo
     {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/organization-name?name="{{organizationName}}"
     ```
 
-### Set the server's user ID and optional password
+### Set the server's userId and optional password
 
-The server's user ID is used when processing requests that do not have an end user, such as receiving an event from a topic. The default value is `OMAGServer`. Ideally each server should have its own user ID so it is possible to restrict the resources that each server has access to.
+The server's userId is used when processing requests that do not have an end user, such as receiving an event from a topic. The default value is `OMAGServer`. Ideally each server should have its own user ID so it is possible to restrict the resources that each server has access to.
 
 If the password is specified as well, the userId and password combination are used to provide authentication information on each REST call made by the server.
 

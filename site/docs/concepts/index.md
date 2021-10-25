@@ -25,7 +25,7 @@
 * [Cohort](/egeria-docs/concepts/cohort-member)
 * [Cohort Event](/egeria-docs/concepts/cohort-events)
 * [Cohort Member](/egeria-docs/concepts/cohort-member)
-* [Cohort Registry Store (OMRS)](/egeria-docs/concepts/cohort-registry-store)
+* [Cohort Registry Store (OMRS)](/egeria-docs/concepts/cohort-registry-store-connector)
 * [Cohort Services (OMRS)](/egeria-docs/services/omrs)
 * [Cohort Topic](/egeria-docs/concepts/cohort-events)
 * [Collection](/egeria-docs/concepts/collection)

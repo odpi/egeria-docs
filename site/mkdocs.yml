@@ -93,6 +93,8 @@ nav:
                                   - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
                                   - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
                                   - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+                      - Open Metadata Topic:
+                            - Kafka Open Metadata Topic Connector: connectors/runtime/kafka-open-metadata-topic-connector.md
                 - Digital Resource:
                       - Kafka Event Bus Connector : connectors/resource-connectors/kafka-event-bus-connector.md
       - Features:
@@ -163,16 +165,16 @@ nav:
           - Lab Infrastructure Guide: education/tutorials/lab-infrastructure-guide/overview.md
           - Open Metadata Labs: education/open-metadata-labs.md
       - Tutorials:
-          - Building Egeria: getting-started/tutorials/building-egeria-tutorial/overview.md
-          - Docker Tutorial: getting-started/tutorials/docker-tutorial.md
-          - Git Tutorial: getting-started/tutorials/git-and-github-tutorial/overview.md
-          - Installing Egeria: getting-started/tutorials/installing-egeria-tutorial.md
-          - IntelliJ Tutorial: getting-started/tutorials/intellij-tutorial/overview.md
-          - OMAG Client Tutorial: getting-started/tutorials/omag-client-tutorial.md
-          - OMAG Server Tutorial: getting-started/tutorials/omag-server-tutorial/overview.md
-          - Postman Tutorial: getting-started/tutorials/postman-tutorial.md
-          - Running Samples: getting-started/tutorials/running-samples-tutorial.md
-          - Testing Tutorial: getting-started/tutorials/testing-egeria-tutorial.md
+          - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
+          - Docker Tutorial: education/tutorials/docker-tutorial.md
+          - Git Tutorial: education/tutorials/git-and-github-tutorial/overview.md
+          - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
+          - IntelliJ Tutorial: education/tutorials/intellij-tutorial/overview.md
+          - OMAG Client Tutorial: education/tutorials/omag-client-tutorial.md
+          - OMAG Server Tutorial: education/tutorials/omag-server-tutorial/overview.md
+          - Postman Tutorial: education/tutorials/postman-tutorial.md
+          - Running Samples: education/tutorials/running-samples-tutorial.md
+          - Testing Tutorial: education/tutorials/testing-egeria-tutorial.md
       - Scenarios:
           - Data Manager Integration: scenarios/data-manager-integration/overview.md
           - File Lineage: scenarios/file-lineage/overview.md
@@ -560,6 +562,7 @@ nav:
       - Endpoint: concepts/endpoint.md
       - Engine Host: concepts/engine-host.md
       - Event Bus: concepts/event-bus.md
+      - Event Mapper Connector: concepts/event-mapper-connector.md
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
@@ -620,6 +623,7 @@ nav:
       - Repository Validator: concepts/repository-validator.md
       - Resource: concepts/resource.md
       - Review: concepts/review.md
+      - Schema: concepts/schema.md
       - Server Name: concepts/server-name.md
       - Software Server Capability: concepts/software-server-capability.md
       - Star Rating: concepts/review.md

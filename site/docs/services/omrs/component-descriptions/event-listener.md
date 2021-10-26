@@ -3,12 +3,7 @@
 
 # OMRS Event Listener
 
-The OMRS event listener receives OMRS events from the **[OMRS event topic](../omrs-event-topic.md)**.
+The OMRS event listener receives OMRS events from the **[OMRS event topic](/egeria-docs/concepts/cohort-event)**.
 
 
-----
-* Return to [repository services component descriptions](.)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

@@ -7,14 +7,14 @@ A Connector is a Java class that supports the standard [Open Connector Framework
 The Open Metadata Repository Services (OMRS) defines the following connectors to enable
 support for specific operating platform services to be plugged into the OMRS.
 
-* **[Audit Log Store Connector](audit-log-store-connector.md)** - supports the reading and writing of
+* **[Audit Log Store Connector](../../../../concepts/audit-log-store-connector.md)** - supports the reading and writing of
 audit log records to specific destinations on behalf of the **[OMRS Audit Log](../audit-log.md)**.
 
-* **[Cohort Registry Store Connector](cohort-registry-store-connector.md)** - supports the
+* **[Cohort Registry Store Connector](../../../../concepts/cohort-registry-store-connector.md)** - supports the
 reading and writing of the cohort registry store to specific destinations on behalf of
 the **[Cohort Registry](../cohort-registry.md)**.
 
-* **[Event Mapper Connector](event-mapper-connector.md)** - informs a cohort
+* **[Event Mapper Connector](../../../../concepts/event-mapper-connector.md)** - informs a cohort
 of changes to metadata mastered in a third party metadata repository that
 occurred through the third party technology's own mechanisms.
 It is always paired with the repository connector for

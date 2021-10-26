@@ -40,13 +40,13 @@
 === "Source"
     The connector is hosted in its own repository at [odpi/egeria-connector-xtdb :material-github:](https://github.com/odpi/egeria-connector-xtdb){ target=gh }, where the source code can be cloned and the connector built from source.
 
-The *XTDB OMRS repository connector* enables the use of [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } (formerly known as "Crux") and its own pluggable architecture to support a variety of underlying storage back-ends including S3, RocksDB, Apache Kafka, LMDB, JDBC and more.
+The *XTDB OMRS repository connector* enables the use of [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } (formerly known as "Crux") as a native Egeria repository, including its own pluggable architecture to support a variety of underlying storage back-ends such as S3, RocksDB, Apache Kafka, LMDB, JDBC and more.
 
-XTDB supports temporal graph queries to provide native support for storing historical information and answering temporal queries. The connector is also capable of running as a highly-available service. In addition, currently this is the highest-performance open source persistent repository for Egeria across all operations: read, write, update, search and purge.
+XTDB supports temporal graph queries to provide native support for storing historical information and answering temporal queries. The connector is also capable of running as a highly-available service, including self-managing write consistency across a distributed (multi-node) cluster. In addition, currently this is the highest-performance open source persistent repository for Egeria across all operations: read, write, update, search and purge.
 
 ## How it works
 
-The XTDB OMRS Repository Connector is a [repository connector](/egeria-docs/connectors/repository), hosted by the [plugin repository proxy](/egeria-docs/services/omrs/todo), running on a [metadata access store](/egeria-docs/concepts/metadata-access-store).
+The XTDB OMRS Repository Connector is a [repository connector](/egeria-docs/concepts/repository-connector), hosted by the [plugin repository proxy](/egeria-docs/concepts/plugin-repository-proxy), running on a [metadata access store](/egeria-docs/concepts/metadata-access-store).
 
 ![Operation of the XTDB OMRS repository connector](xtdb-connector-overview.svg)
 

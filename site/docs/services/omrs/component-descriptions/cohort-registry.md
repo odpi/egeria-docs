@@ -13,7 +13,7 @@ The registration process is managed by exchanging [Registry Events](../event-des
 over the [Cohort Topic](../omrs-event-topic.md).
 
 The cohort registry maintains its record of the membership of the cohort in a
-[Cohort Registry Store](../component-descriptions/connectors/cohort-registry-store-connector.md).
+[Cohort Registry Store](../../../concepts/cohort-registry-store-connector.md).
 
 ## Further information
 
@@ -21,9 +21,4 @@ The cohort registry maintains its record of the membership of the cohort in a
 * [Overview of a cohort](../open-metadata-repository-cohort.md)
 
 
-----
-* Return to [repository services component descriptions](.)
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

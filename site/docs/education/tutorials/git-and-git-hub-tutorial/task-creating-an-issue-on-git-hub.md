@@ -8,14 +8,14 @@ Go to [GitHub](https://github.com/odpi/egeria) and click on the second tab marke
 
 ----
 
-![GitHub Issues Tab](../../../developer-resources/tools/git-hub-issues-tab.png#pagewidth)
+![GitHub Issues Tab](git-hub-issues-tab.png)
 ----
 
 Click in the new issue green button on the top right hand side and a form for a new
 issue is displayed.
 
 
-![GitHub New Issue Button](../../../developer-resources/tools/git-hub-new-issue-button.png#pagewidth)
+![GitHub New Issue Button](git-hub-new-issue-button.png)
 ----
 
 Enter a meaningful title and description.  This will help the maintainers understand your contribution
@@ -27,16 +27,16 @@ This is a change to Egeria that is part of the Egeria Dojo session
 [Making a contribution to Egeria - Step-by-Step](https://egeria.odpi.org/open-metadata-resources/open-metadata-tutorials/egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.html).
 It will create a new markdown file in `open-metadata-resources/open-metadata-tutorials/egeria-dojo/egeria-dojo-postcards` and link it to the readme.
 ```
-Notice that it is possible to use [Markdown](../../../developer-resources/tools/Markdown.md)
+Notice that it is possible to use [Markdown](/egeria-docs/tools/markdown)
 tags to create highlights and links to content to explain what you are doing.
 
-![GitHub Create New Issue](../../../developer-resources/tools/git-hub-create-new-issue.png#pagewidth)
+![GitHub Create New Issue](git-hub-create-new-issue.png)
 
 When you are happy with your text, click on `Submit new Issue`.  A new issue is created and
 assigned a new number - `#3091` in this example.
 Make a note of this issue number because you will need it later.
 
-![GitHub New Issue Created](../../../developer-resources/tools/git-hub-new-issue-created.png#pagewidth)
+![GitHub New Issue Created](git-hub-new-issue-created.png)
 
 Now you are ready to [work on your contribution](task-creating-a-fork-and-clone.md).
 

@@ -34,54 +34,71 @@ nav:
               - View Server: guides/admin/servers/configuring-a-view-server.md
               - Integration Daemon: guides/admin/servers/configuring-an-integration-daemon.md
               - Engine Host: guides/admin/servers/configuring-an-engine-host.md
-              - Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy.md
+              - Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy-server.md
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
           - Operate OMAG Server: guides/operations/operating-omag-server.md
-          - Egeria in Kubernetes: guides/operations/kubernetes/intro.md
+          - Egeria in Kubernetes:
+              - Egeria in Kubernetes: guides/operations/kubernetes/index.md
+              - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
+              - Introduction to Helm: guides/operations/kubernetes/helm.md
+              - Charts:
+                  - Base Egeria Chart: guides/operations/kubernetes/charts/base.md
+                  - Coco Pharmaceuticals Lab: guides/operations/kubernetes/charts/lab.md
+                  - CTS Chart: guides/operations/kubernetes/charts/cts.md
+                  - PTS Chart: guides/operations/kubernetes/charts/pts.md
+              - Container Images: guides/operations/kubernetes/container-images.md
+              - Custom Deployment: guides/operations/kubernetes/custom-deployment.md
+              - Egeria Operator: guides/operations/kubernetes/operator.md
       - Integrate:
-            - Developer Guide:
-                  - Developer Overview: guides/developer/index.md
-                  - Modelling Schema: guides/developer/modelling-schema.md
-                  - Building Connectors:
-                        - Integration Connectors: guides/developer/integration-connectors/overview.md
-                        - Repository Connectors: guides/developer/repository-connectors/overview.md
-                        - Runtime Connectors:
-                              - Audit Log Store: guides/developer/runtime-connectors/audit-log-store-connector.md
-                              - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
-                              - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
-                              - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-store-connector.md
-                              - Open Metadata Topic: guides/developer/runtime-connectors/open-metadata-topic-connector.md
-            - Connector Catalog:
-                  - Connector Overview: connectors/index.md
-                  - Governance Actions:
-                        - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
-                        - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
-                        - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
-                        - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-                  - Integration:
-                        - File Connectors:
-                              - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
-                              - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
-                        - Topic Connectors:
-                              - Kafka Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
-                        - API Connectors:
-                              - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
-                  - Repository:
-                        - Pluggable Repositories:
-                              - XTDB:
-                                    - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                                    - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                                    - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                              - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
-                              - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
-                              - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
-                        - Repository Adapters:
-                              - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
-                              - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
-                              - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+          - Developer Guide:
+                - Developer Overview: guides/developer/index.md
+                - Modelling Schema: guides/developer/mapping-technology/modelling-schemas.md
+                - Building Connectors:
+                      - Integration Connectors: guides/developer/integration-connectors/overview.md
+                      - Repository Connectors: guides/developer/repository-connectors/overview.md
+                      - Runtime Connectors:
+                            - Audit Log Store: guides/developer/runtime-connectors/audit-log-store-connector.md
+                            - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
+                            - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
+                            - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
+                            - Open Metadata Topic: guides/developer/runtime-connectors/open-metadata-topic-connector.md
+          - Connector Catalog:
+                - Connector Overview: connectors/index.md
+                - Governance Actions:
+                      - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
+                      - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
+                      - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
+                      - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+                - Integration:
+                      - File Connectors:
+                            - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
+                            - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
+                      - Topic Connectors:
+                            - Kafka Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
+                      - API Connectors:
+                            - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
+                - Runtime:
+                      - Repository:
+                            - Pluggable Repositories:
+                                  - XTDB:
+                                        - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                                        - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                                        - XTDB Connector Performance: connectors/repository/xtdb/performance.md
+                                  - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
+                                  - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
+                                  - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
+                            - Repository Adapters:
+                                  - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
+                                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
+                                  - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+                      - Open Metadata Topic:
+                            - Kafka Open Metadata Topic Connector: connectors/runtime/kafka-open-metadata-topic-connector.md
+                - Digital Resource:
+                      - Kafka Event Bus Connector : connectors/resource-connectors/kafka-event-bus-connector.md
       - Features:
+          - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md
           - Cohort Operation: features/cohort-operation/overview.md
           - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
@@ -102,47 +119,82 @@ nav:
           - Templated Cataloguing: features/templated-cataloguing/overview.md
           - User Feedback: features/user-feedback/overview.md
   - Learning:
-      - Dojo:
-          - Dojo Introduction: getting-started/dojo/introduction.md
+      - Existing Dojo:
+          - Dojo Introduction: getting-started/dojo/index.md
           - Day 1:
-              - Egeria Introduction: getting-started/dojo/1/introduction.md
-              - Egeria Project Introduction: getting-started/dojo/1/project-introduction.md
-              - Running Egeria: getting-started/dojo/1/running-egeria.md
-              - Configuring the OMAG Server Platform: getting-started/dojo/1/configuring-the-platform.md
-          - Day 2: getting-started/dojo/2/index.md
-          - Day 3: getting-started/dojo/3/index.md
+              - Egeria Introduction: getting-started/dojo/egeria-dojo-day-1-1-introduction.md
+              - Egeria Project Introduction: getting-started/dojo/egeria-dojo-day-1-2-project-introduction.md
+              - Running Egeria:
+                - Overview: getting-started/dojo/egeria-dojo-day-1-3-running-egeria.md
+                - Platform Setup and Configuration:
+                  - Overview: getting-started/dojo/egeria-dojo-day-1-3-1-platform-set-up-and-configuration.md
+                  - Prerequisites: getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md
+                  - Configuring the Platform: getting-started/dojo/egeria-dojo-day-1-3-1-2-configuring-the-platform.md
+                  - Confiiguring a Server: getting-started/dojo/egeria-dojo-day-1-3-1-3-configuring-a-server.md
+                - Running Metadata Access Servers:
+                  - Overview: getting-started/dojo/egeria-dojo-day-1-3-2-running-metadata-servers.md
+                  - Starting Server: getting-started/dojo/egeria-dojo-day-1-3-2-1-starting-the-server.md
+                  - Calling Server API: getting-started/dojo/egeria-dojo-day-1-3-2-2-calling-server-api.md
+                  - Working with Archives: getting-started/dojo/egeria-dojo-day-1-3-2-3-working-with-archives.md
+                  - Second Server: getting-started/dojo/egeria-dojo-day-1-3-2-4-second-server.md
+                - Running Metadata Ecosystems:
+                  - Overview: getting-started/dojo/egeria-dojo-day-1-3-3-running-metadata-ecosystems.md
+                  - Running User Interfaces: getting-started/dojo/egeria-dojo-day-1-3-3-1-running-ui.md
+                  - Running Governance Servers: getting-started/dojo/egeria-dojo-day-1-3-3-2-running-governance-servers.md
+                  - Running Kubernetes and Labs: getting-started/dojo/egeria-dojo-day-1-3-3-3-kubernetes-and-labs.md
+              - Participating in the Community: getting-started/dojo/egeria-dojo-day-1-4-participating-in-the-community.md
+          - Day 2:
+              - Open Source Philosophy: getting-started/dojo/egeria-dojo-day-2-1-open-source-philosophy.md
+              - Tools for Contributors: getting-started/dojo/egeria-dojo-day-2-2-tools-for-contributors.md
+              - Contributing to Egeria: getting-started/dojo/egeria-dojo-day-2-3-contribution-to-egeria.md
+              - Type of Contribution: getting-started/dojo/egeria-dojo-day-2-4-types-of-contribution.md
+              - Becoming a Contributor: getting-started/dojo/egeria-dojo-day-2-5-becoming-a-contributor.md
+          - Day 3:
+              - Becoming an Advocate: getting-started/dojo/egeria-dojo-day-3-1-becoming-an-advocate.md
+              - Becoming a Maintainer: getting-started/dojo/egeria-dojo-day-3-2-becoming-a-maintainer.md
+              - Egeria Architecture: getting-started/dojo/egeria-dojo-day-3-3-egeria-architecture.md
+              - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
+      - New Dojo (In Development):
+          - Dojo Overview: education/egeria-dojo/index.md
+          - Running Egeria Day : education/egeria-dojo/running-egeria.md
+          - Developer Day : education/egeria-dojo/developer.md
+          - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
+          - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
+          - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
       - Hands-on Labs:
-          - Hands-on Labs Overview: getting-started/hands-on-labs/index.md
+          - Lab Infrastructure Guide: education/tutorials/lab-infrastructure-guide/overview.md
+          - Open Metadata Labs: education/open-metadata-labs.md
       - Tutorials:
-          - Building Egeria: getting-started/tutorials/building-egeria.md
-          - Docker Tutorial: getting-started/tutorials/docker.md
-          - Git Tutorial: getting-started/tutorials/git-and-github.md
-          - Installing Egeria: getting-started/tutorials/installing-egeria.md
-          - IntelliJ Tutorial: getting-started/tutorials/intellij.md
-          - OMAG Client Tutorial: getting-started/tutorials/omag-client.md
-          - OMAG Server Tutorial: getting-started/tutorials/omag-server.md
-          - Postman Tutorial: getting-started/tutorials/postman.md
-          - Running Samples: getting-started/tutorials/running-samples.md
-          - Testing Tutorial: getting-started/tutorials/testing.md
+          - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
+          - Docker Tutorial: education/tutorials/docker-tutorial.md
+          - Git Tutorial: education/tutorials/git-and-git-hub-tutorial/overview.md
+          - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
+          - IntelliJ Tutorial: education/tutorials/intellij-tutorial/overview.md
+          - OMAG Client Tutorial: education/tutorials/omag-client-tutorial.md
+          - OMAG Server Tutorial: education/tutorials/omag-server-tutorial/overview.md
+          - Postman Tutorial: education/tutorials/postman-tutorial.md
+          - Running Samples: education/tutorials/running-samples-tutorial.md
+          - Testing Tutorial: education/tutorials/testing-egeria-tutorial.md
       - Scenarios:
           - Data Manager Integration: scenarios/data-manager-integration/overview.md
           - File Lineage: scenarios/file-lineage/overview.md
       - Webinars:
           - Previous Webinars:
               - Previous Webinars: education/previous-webinars/index.md
-              - Visualising a metadata eco system September 2021: education/previous-webinars/september-2021/
-              - Date Lake and Egeria June 2020: education/previous-webinars/june-2020/
-              - Building a Data Catalog April 2020: education/previous-webinars/april-2020/
-              - Metadata for Data Driven Organization March 2020 : education/previous-webinars/march-2020/
-              - Egeria and Palisade December 2019 : education/previous-webinars/december-2019/
-              - Privacy July 2018: education/previous-webinars/july-2018/
-              - Open Metadata Standards April 2018: education/previous-webinars/april-2018/
-              - Free Metadata October 2017: education/previous-webinars/october-2017/
+              - The value of Egeria October 2021: education/previous-webinars/october-2021/README.md
+              - Visualising a metadata eco system September 2021: education/previous-webinars/september-2021/README.md
+              - Date Lake and Egeria June 2020: education/previous-webinars/june-2020/README.md
+              - Building a Data Catalog April 2020: education/previous-webinars/april-2020/README.md
+              - Metadata for Data Driven Organization March 2020 : education/previous-webinars/march-2020/README.md
+              - Egeria and Palisade December 2019 : education/previous-webinars/december-2019/README.md
+              - Privacy July 2018: education/previous-webinars/july-2018/README.md
+              - Open Metadata Standards April 2018: education/previous-webinars/april-2018/README.md
+              - Free Metadata October 2017: education/previous-webinars/october-2017/README.md
           - Planned Webinars: education/planned-webinars/overview.md
   - Contributing:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md
-      - Develop:
+      - Code:
           - Coding Guidelines: guides/contributor/guidelines.md
           - Way of Working: guides/contributor/process.md
           - Specific Guidance:
@@ -214,6 +266,7 @@ nav:
               - Servers and Assets: types/0/0045-Servers-and-Assets.md
               - Applications and Processes: types/0/0050-Applications-and-Processes.md
               - Data Processing Engines: types/0/0055-Data-Processing-Engines.md
+              - Asset Managers: types/0/0056Asset-Managers.md
               - Integration Capabilities: types/0/0057-Software-Services.md
               - Networks and Gateways: types/0/0070-Networks-and-Gateways.md
               - Cloud Platforms and Services: types/0/0090-Cloud-Platforms-and-Services.md
@@ -330,7 +383,7 @@ nav:
               - Area 6 Metadata Discovery: types/6/index.md
               - Open Discovery Engines and Services: types/6/0601-Open-Discovery-Engine.md
               - Discovery Analysis Report: types/6/0605-Open-Discovery-Analysis-Reports.md
-              - Annotation: types/6/0610-Annotations.md
+              - Annotations: types/6/0610-Annotations.md
               - Annotation Reviews: types/6/0612-Annotation-Reviews.md
               - Schema Extraction: types/6/0615-Schema-Extraction.md
               - Data Field Analysis: types/6/0617-Data-Field-Analysis.md
@@ -354,6 +407,8 @@ nav:
               - Data Passing: types/7/0750-Data-Passing.md
               - Business Lineage: types/7/0760-Business-Lineage.md
               - Lineage Mapping: types/7/0770-Lineage-Mapping.md
+              - Code Analysis: types/7/0780-Code-Analysis.md
+              - Incomplete: types/7/0790-Incomplete.md
       - Standards: standards/overview.md
       - Services:
           - Fixed Services:
@@ -465,7 +520,7 @@ nav:
               - Relationship History Retrieval: guides/cts/profiles/relationship-history-retrieval.md
               - Entity History Search: guides/cts/profiles/entity-history-search.md
               - Relationship History Search: guides/cts/profiles/relationship-history-search.md
-              - Graph Queries: guides/cts/profiles/graph-queries.md
+              - Graph Queries (Performance): guides/cts/profiles/graph-perf-queries.md
               - Graph History Queries: guides/cts/profiles/graph-history-queries.md
               - Entity Re-home: guides/cts/profiles/entity-re-home.md
               - Relationship Re-home: guides/cts/profiles/relationship-re-home.md
@@ -483,14 +538,15 @@ nav:
               - Environment: guides/cts/profiles/environment.md
   - Concepts:
       - Egeria Glossary: concepts/index.md
-      - Basic Concepts: basic-concepts.md
+      - Basic Concepts: concepts/basic-concepts.md
       - Anchor: concepts/anchor.md
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
+      - Audit Log Store: concepts/audit-log-store-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
-      - Cohort Registry Store: concepts/cohort-registry-store.md
+      - Cohort Registry Store: concepts/cohort-registry-store-connector.md
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md
@@ -509,10 +565,12 @@ nav:
       - Endpoint: concepts/endpoint.md
       - Engine Host: concepts/engine-host.md
       - Event Bus: concepts/event-bus.md
+      - Event Mapper Connector: concepts/event-mapper-connector.md
       - External Reference: concepts/external-reference.md
-      - Favorite Collections: concepts/favorite-things-collections.md
+      - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
       - Glossary Term: concepts/glossary-term.md
+      - GUID: concepts/guid.md
       - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md
       - Governance Action Process: concepts/governance-action-process.md
@@ -544,11 +602,13 @@ nav:
       - OMAG Subsystem: concepts/omag-subsystem.md
       - Open Discovery Engine: concepts/open-discovery-engine.md
       - Open Discovery Server: concepts/open-discovery-server.md
+      - Open Discovery Service: concepts/open-discovery-service.md
       - Open Lineage Server: concepts/open-lineage-server.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
       - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md
       - Open Metadata Instance: concepts/open-metadata-instances.md
       - Open Metadata Type Definitions: concepts/open-metadata-type-definitions.md
+      - Organization: concepts/organization.md
       - Out Topic: concepts/out-topic.md
       - Peer Network: concepts/peer-network.md
       - Personal Messsge: concepts/personal-message.md
@@ -556,14 +616,17 @@ nav:
       - Personal Profile: concepts/personal-profile.md
       - Personal Roles: concepts/personal-roles.md
       - Platform URL Root: concepts/platform-url-root.md
+      - Plugin Repository Proxy: concepts/plugin-repository-proxy.md
       - Presentation Server: concepts/presentation-server.md
       - Project: concepts/project.md
       - Referenceable: concepts/referenceable.md
+      - Repository connector: concepts/repository-connector.md
       - Repository Helper: concepts/repository-helper.md
       - Repository Proxy: concepts/repository-proxy.md
       - Repository Validator: concepts/repository-validator.md
       - Resource: concepts/resource.md
       - Review: concepts/review.md
+      - Schema: concepts/schema.md
       - Server Name: concepts/server-name.md
       - Software Server Capability: concepts/software-server-capability.md
       - Star Rating: concepts/review.md

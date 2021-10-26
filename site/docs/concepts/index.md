@@ -25,7 +25,7 @@
 * [Cohort](/egeria-docs/concepts/cohort-member)
 * [Cohort Event](/egeria-docs/concepts/cohort-events)
 * [Cohort Member](/egeria-docs/concepts/cohort-member)
-* [Cohort Registry Store (OMRS)](/egeria-docs/concepts/cohort-registry-store)
+* [Cohort Registry Store (OMRS)](/egeria-docs/concepts/cohort-registry-store-connector)
 * [Cohort Services (OMRS)](/egeria-docs/services/omrs)
 * [Cohort Topic](/egeria-docs/concepts/cohort-events)
 * [Collection](/egeria-docs/concepts/collection)
@@ -110,6 +110,7 @@
 
 ## H
 
+* [Hands on labs](/egeria-docs/education/open-metadata-labs)
 * [Home Metadata Collection](/egeria-docs/concepts/metadata-collection-id)
 * [Home Metadata Repository](/egeria-docs/concepts/home-metadata-repository)
 
@@ -193,6 +194,7 @@
 * [Open Metadata Conformance Suite](/egeria-docs/guides/cts/overview)
 * [Open Metadata Exchange Rule](/egeria-docs/concepts/open-metadata-exchange-rule)
 * [Open Metadata Instances](/egeria-docs/concepts/open-metadata-instances)
+* [Open Metadata Labs](/egeria-docs/education/open-metadata-labs)
 * [Open Metadata Repository](/egeria-docs/concepts/metadata-repository)
 * [Open Metadata Repository Cohort](/egeria-docs/concepts/cohort-member)
 * [Open Metadata Repository Services](/egeria-docs/services/omrs)

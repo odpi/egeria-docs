@@ -45,7 +45,7 @@ existence and may be linked to many anchors, without obligation.
 # Anchors classification
 
 The [Anchors](/egeria-docs/types/0/0010-Base-Model/#anchors) classification makes it easier to find the anchor entity.
-It is attached to any entity anchored to a Referenceable.
+It is attached to any anchored entity.
 
 !!! example "Example: SchemaElements and Comments"
     In the example above, Anchors would be on all the SchemaElements and Comments.

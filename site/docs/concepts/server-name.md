@@ -8,7 +8,4 @@ and a server name.  The server name is the names of an [OMAG Server](omag-server
 where the desired service is running.
 
 
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

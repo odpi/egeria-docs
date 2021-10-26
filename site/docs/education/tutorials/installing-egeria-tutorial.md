@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Installing ODPi Egeria
+# Installing Egeria
 
 The [egeria build process](building-egeria-tutorial) creates the
 distribution files for Egeria in the **open-metadata-distribution** module.

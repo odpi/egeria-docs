@@ -106,6 +106,6 @@ It is also possible to shutdown the governance action service by setting
 in the governance action.
 
 ??? education "Further information"
-    This connector is configured in the `governDL01` engine host server as part of the *automated curation* asset management [hands-on lab](/egeria-docs/getting-started/hands-on-labs).
+    This connector is configured in the `governDL01` engine host server as part of the *automated curation* asset management [open metadata lab](/egeria-docs/education/open-metadata-labs).
 
 --8<-- "snippets/abbr.md"

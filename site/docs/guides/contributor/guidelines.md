@@ -116,7 +116,7 @@ External APIs (typically they include both a client and a server component) are 
 
 Some connectors are tested via the [Conformance Test Suite](/egeria-docs/guides/cts/overview). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into master. The conformance test suite is also run as part of the release process.
 
-Egeria's [hands on labs](/egeria-docs/getting-started/hands-on-labs) provide a complex multi-server environment and are typically used by contributors to verify that their changes have not regressed any of the
+Egeria's [hands on labs](/egeria-docs/education/open-metadata-labs) provide a complex multi-server environment and are typically used by contributors to verify that their changes have not regressed any of the
 basic function.
 
 We are also interested in building out a comprehensive integration test to allow automated complex multi-server scenarios that can be running continuously.

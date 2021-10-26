@@ -15,7 +15,7 @@ open metadata and governance REST calls, which have the following format
 in their URLs:
 
 ```text
-{platformURLRoot}/servers/{serverName}/<operation-name-and-parameters>
+{{platformURLRoot}}/servers/{{serverName}}/<operation-name-and-parameters>
 ```
 
 The platform URL root is the content of the URL prior to `/servers/`.
@@ -23,11 +23,4 @@ The default value an OMAG Server Platform is **"https://localhost:9443"**.
 
 The `{serverName}` is explained [here](server-name.md).
 
-----
-* Go to [Developer Guide](../../../../open-metadata-publication/website/developer-guide).
-* Go to [Admin Guide](../user).
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

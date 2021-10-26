@@ -3,33 +3,39 @@
 
 # Integrated cataloging
 
-It is possible to add metadata to a metadata repository using no automation beyond the management of the metadata once it is created.  Individuals enter information about the assets into Egeria through tools that call Egeria's [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas).
+## Why automate?
 
-The [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner)
-is the principle interface for such manual cataloguing.  It is possible to catalog any type of
-asset through this interface although it is biased towards cataloging data assets such
-as data stores, data feeds, files, data sets, APIs and events.
+It is possible to add metadata to a metadata repository using no automation beyond the management of the metadata once it is created.  Individuals enter information about digital resources and associates intellectual property into Egeria through tools that call Egeria's [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas).
+
+The [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner) is the principle interface for manual cataloguing of digital resources.  It is possible to catalog any type of digital resource through this interface although it is biased towards cataloging data sources such as data stores, data feeds, files, data sets, APIs and events.  The digital resources are represented in the catalog as [assets](/egeria-docs/concepts/asset).
 
 In addition there are specific cataloguing interfaces for particular types of subject matter expert.
 
 * [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure) provides specialist interfaces for cataloguing infrastructure such as servers, host systems and applications.
 
-* [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture) provides specialist interfaces for architects and integration engineers to manually catalog reference data sets and processes. Reference data sets are assets in their own right, and their content can be used as classifiers to augment the description of other assets. Processes are also assets that, when linked together, show the lineage of the assets they are partly responsible for maintaining.
+* [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture) provides specialist interfaces for architects and integration engineers to manually catalog [reference data sets](/egeria-docs/features/reference-data-management) and processes. Reference data sets are assets in their own right, and their content can be used as classifiers to augment the description of other assets. Processes are also assets that, when linked together, show the [lineage](/egeria-docs/features/lineage-management) of the assets they are partly responsible for maintaining.
 
-Manual cataloguing works well for infrequent cataloguing.  However it is expensive and error prone when aiming to systematially catalog your digital landscape.
- 
-Integrated cataloging uses an [*integration daemon*]((/egeria-docs/concepts/integration-daemon)) to monitor a specific digital technology that hosts particular types of assets and automatically maintain the catalog with information about these assets.
+Manual cataloguing works well for infrequent cataloguing.  However it is expensive and error prone when aiming to systematically catalog your digital landscape since it is complex and continually changing.
 
-For example, an integration daemon may be monitoring a database server, updating the asset catalog each time a new database is added, or a schema is changed.
+## How does integrated cataloguing work?
 
-Integration daemons support different integration patterns to meet the variety of capabilities of digital technologies.  For example, it may poll the technology or listen for events from it that indicate changes in the assets.  They are limited to the metadata supported by the technology they are working with.
+`Integrated cataloging` uses an [*integration daemon*]((/egeria-docs/concepts/integration-daemon)) to monitor a specific digital technology that hosts particular types of digital resources and then automatically maintain the metadata descriptions of these digital resources in the catalog.
+
+![Figure 1](/egeria-docs/concepts/integration-daemon-in-action.svg)
+> **Figure 1:** The integration daemon manages the automatic exchange of open metadata between third party technologies and Metadata Access Servers that are sharing this metadata across the Open Metadata Repository Cohorts that they are connected to
+
+For example, an integration daemon may be monitoring a database server, updating the metadata catalog each time a new database is added, or a schema is changed.
+
+Inside the integration daemon are the [Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis) that provide specialist interfaces to [integration connectors](/egeria-docs/concepts/integration-connector).  
+
+Integration connectors support different [integration patterns](/egeria-docs/patterns/metadata-exchange) to meet the variety of capabilities of digital technologies.  For example, it may poll the technology or listen for events from it that indicate changes in the assets.  They are limited to the metadata supported by the technology they are working with.  However, typically the integration connectors are able to capture `technical metadata` that includes the name of the digital resource (stored in the [asset](/egeria-docs/concepts/asset)) and the structure of the data fields within it (if any).  This structure is described in a [schema](/egeria-docs/concepts/schema).  It may be possible to also extract, or derive the connection information required to connect to the digital resource.  This is stores in a [connection](/egeria-docs/concepts/connection).
 
 ## Other types of automation
 
 Below are other types of automation to minimise the effort in managing your asset catalog.
 
-* [Templated cataloguing](/egeria-docs/features/templated-cataloguing) - copying predefined assets.
-* [Discovery and stewardship](/egeria-docs/features/discovery-and-stewardship) - analysis of asset contents to create metadata.
+* [Templated cataloguing](/egeria-docs/features/templated-cataloguing) - copies the values from an existing catalogued asset into the catalog entry for a new asset. This can reduce the opportunities for error where similar assets are being catalogued.  It can be used both in manual cataloguing and integrated cataloguing.
+* [Discovery and stewardship](/egeria-docs/features/discovery-and-stewardship) - analyses the contents of a digital resource to discover metadata and attach it as annotations to the corresponding asset in the catalog.
 
 
 --8<-- "snippets/abbr.md"

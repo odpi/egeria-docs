@@ -14,12 +14,4 @@ it to act as a member of an open metadata repository cohort.
 * **[OMRS Cohort Registry](../component-descriptions/cohort-registry.md)** - Manages registration exchanges with other members of a
 cohort on behalf of the local server.
 
-
-----
-* Return to [repository services subsystem descriptions]()
-
-
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
-
+---8<-- "snippets/abbr.md"

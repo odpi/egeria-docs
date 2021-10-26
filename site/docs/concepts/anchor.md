@@ -51,7 +51,7 @@ It is attached to any entity anchored to a Referenceable.
     In the example above, Anchors would be on all the SchemaElements and Comments.
     Anchors would contain the unique identifier (GUID) of the anchor Referenceable.
     There is also the unique identifier (GUID) of the SchemaType at the root of a schema structure and the
-    unique identifier (GUID) of the Comment at root of a comment tree to make it easier to process these elements
+    unique identifier (GUID) of the Comment at the root of a comment tree to make it easier to process these elements
     as a group.
 
     Following is an illustration of this example, with the addition of an Asset.

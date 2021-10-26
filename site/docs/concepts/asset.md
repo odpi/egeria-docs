@@ -16,7 +16,7 @@ Examples of resources that might be catalogued as assets include:
 - APIs that provide access to the services offered by the organization.
 - Analytical models and processes.
 - Addresses and other locations. 
-- Physical objects such as buildings that can have with digitized representation with a unique identity (eg a serial number).
+- Physical objects such as buildings that can have a digitized representation with a unique identity (for example, serial number).
 
 Governance activities are often centered around an organization's resources since they represent tangible value. This involves maintaining information about the resource and managing events related to the resource in order to keep it protected and to get the maximum value from it.
 
@@ -24,7 +24,7 @@ Egeria is particularly focused on maintaining the information necessary for mana
 
 ## Open metadata types
 
-The information about a resource that covers its characteristics and how it should be managed is stored in a ***sub-graph of open metadata instances (entities and relationships) with the [Asset](/egeria-docs/types/0/0010-Base-Model/#asset) entity at the root. The asset entity contains a small amount of information that merely captures the existence of the resource. Then other entities are linked to it to add more information. It is likely that this additional information is identified, captured and stored by different tools. The open metadata services gather this information together and distribute it to provide the most complete view of the resource's properties. 
+The information about a resource that covers its characteristics and how it should be managed is stored in a sub-graph of open metadata instances (entities and relationships) with the [Asset](/egeria-docs/types/0/0010-Base-Model/#asset) entity at the root. The asset entity contains a small amount of information that merely captures the existence of the resource. Then other entities are linked to it to add more information. It is likely that this additional information is identified, captured and stored by different tools. The open metadata services gather this information together and distribute it to provide the most complete view of the resource's properties. 
 
 More information on the types of attachments that can be added to an asset can be found in [Managing Metadata](/egeria-docs/patterns/managing-metadata/overview).
 

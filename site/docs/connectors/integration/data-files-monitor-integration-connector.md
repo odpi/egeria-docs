@@ -9,10 +9,11 @@ hide:
 # Data Files Monitor Integration Connector
 
 ??? info "Connector details"
-    An [integration connector](/egeria-docs/connectors/integration-connector), hosted by the [Files Integrator OMIS](/egeria-docs/services/omis/file-integrator/overview), running on an [integration daemon](/egeria-docs/concepts/integration-daemon).
-
-    - Source: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
-    - Connector archive: `files-integration-connectors.jar`
+    - Connector Category: [Integration Connector](/egeria-docs/connectors/integration-connector)
+    - Hosting Service: [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator)
+    - Hosting Server: [Integration Daemon](/egeria-docs/concepts/integration-daemon)
+    - Source Module: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
+    - Jar File Name: `files-integration-connectors.jar`
 
 The data files monitor integration connector monitors changes in a file directory (folder) and updates the open metadata repository/repositories to reflect the changes to both the files and folders underneath it.
 
@@ -28,26 +29,31 @@ Specifically:
 
 ## Configuration
 
-![Operation of the data files monitor integration connector](data-files-monitor-integration-connector.svg)
+![Figure 1](data-files-monitor-integration-connector.svg)
+> **Figure 1:** Operation of the data files monitor integration connector
 
 This connector uses the [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview) running in the [integration daemon](/egeria-docs/concepts/integration-daemon).
 
 Following is its connection definition to use on the [administration commands that configure the Files Integrator OMIS](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services):
 
 !!! example "Connection configuration"
-    ```json linenums="1" hl_lines="10 12-15"
+    ```json linenums="1" hl_lines="13 16-18"
     {
-      "connection": {
+      "connection": 
+      {
         "class": "Connection",
-        "connectorType": {
+        "connectorType": 
+        {
           "class": "ConnectorType",
           "connectorProviderClassName": "org.odpi.openmetadata.adapters.connectors.integration.basicfiles.DataFilesMonitorIntegrationProvider"
         },
-        "endpoint": {
+        "endpoint": 
+        {
           "class": "Endpoint",
           "address": "{{folderName}}"
         },
-        "configurationProperties": {
+        "configurationProperties": 
+        {
           "templateQualifiedName": "{{templateQualifiedName}}",
           "allowCatalogDelete": ""         
         }

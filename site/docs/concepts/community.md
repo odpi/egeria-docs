@@ -12,8 +12,8 @@ Communities are typically long running endeavours.
 Communities have [members](#community-member).  These are the people working together in the
 community.
 
-The community can gather together a [list of useful resources](useful-resource.md)
-and a list of [external references](external-reference.md). ***<dw> are these collections? </dw>***
+The community can gather together a [collection](/egeria-docs/concepts/collection) of [useful resources](useful-resource.md)
+and a collection of [external references](external-reference.md). 
 
 
 The members can create [forums](#community-forum) on different topics to share information.

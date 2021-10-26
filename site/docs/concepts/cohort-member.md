@@ -23,7 +23,7 @@ When an OMAG server permanently leaves the cohort, it sends an unregistration re
 This enables the other members to remove the parting member from their registries.
 
 The purpose of the cohort registry in each member is to configure its federated query
-capability. ***<dw>is this the only purpose?</dw>***
+capability.
 The registration information includes the URL Root and server name
 of the member.  The federation capability in each OMAG server allows it to issue
 metadata create, update, delete and search requests to each and every member of the

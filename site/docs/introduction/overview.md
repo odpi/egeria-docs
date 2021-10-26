@@ -11,7 +11,7 @@ Using Egeria, you only need to link each tool to Egeria and it is Egeria that ma
 
 ![Egeria concepts](egeria-concept.svg)
 
-Each tool is linked via an integration service, tailored for that specific type of tool (orange circles).  The tool may call the integration service directly, or Egeria will host a connector that converts from the specific formats, naming conventions and interface of the specific tool and the open standards and interfaces of Egeria.
+Each tool is linked via an integration service (orange circles), tailored for that specific type of tool.  The tool may call the integration service directly, or Egeria will host a connector that converts from the specific formats, naming conventions and interface of the specific tool and the open standards and interfaces of Egeria.
 
 ![Connecting to Egeria](connecting-to-egeria.svg)
 
@@ -29,19 +29,19 @@ Using Egeria, each location runs a platform (blue boxes) that hosts the integrat
 
 ## What is included in Egeria
 
-## Open Metadata Types
+### Open Metadata Types
 
 Egeria defines a set of open [metadata types](/egeria-docs/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  However, the type system is extensible so it is able to support any special needs of your organization.
 
-## Frameworks
+### Frameworks
 
 Egeria's [frameworks](/egeria-docs/frameworks) define the interfaces and protocols for pluggable components that enable Egeria to run in many environments and connect to many types of technologies. These pluggable components are called [connectors](/egeria-docs/concepts/connector).  Egeria has a [catalog of pre-built connectors](/egeria-docs/connectors) to help speed up your adoption of open metadata and governance.
 
-## Integration services
+### Integration services
 
 Egeria's [integration services](/egeria-docs/services) provide specialized APIs and event exchange protocols to support the major types of tools and platforms.
 
-## Metadata governance
+### Metadata governance
 
 Finally, as metadata is exchanged, the duplication, gaps and inconsistencies of the metadata in an organization's tools and platforms is exposed.  Egeria provides [metadata governance features](/egeria-docs/features) to dynamically improve the quality of your metadata in an ongoing and systematic manner.
 

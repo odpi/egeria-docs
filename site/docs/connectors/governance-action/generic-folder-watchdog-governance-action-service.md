@@ -16,8 +16,6 @@ hide:
     - Jar File Name: `governance-action-connectors.jar`
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.watchdog.GenericFolderWatchdogGovernanceActionProvider`
  
-    - Source: [GenericFolderWatchdogGovernanceActionProvider :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/watchdog/GenericFolderWatchdogGovernanceActionProvider.java){ target=gh }
-    - Connector archive: `governance-action-connectors.jar`
 
 The *generic folder watchdog* governance action service detects changes to the assets in a specific folder and initiates a governance action process when they occur. It has two modes of operation: 
 

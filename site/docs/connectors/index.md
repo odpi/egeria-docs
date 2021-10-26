@@ -26,7 +26,6 @@ The connectors that support the exchange and maintenance of metadata help to acc
 | [Open Discovery Services](#open-discovery-services) | analyze the content of resources in the digital landscape and create annotations that are attached to the resource's [asset](/egeria-docs/concepts/asset) metadata element in the open metadata repositories in the form of an open discovery report |
 | [Governance Action Services](#governance-action-services) | perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities as required. |
 
-
 ## Integration Connectors
 
 The integration connectors support the exchange of metadata with third party technologies.  This exchange
@@ -74,7 +73,20 @@ The API integration connectors run in the [API Integrator Open Metadata Integrat
 
 #### Security Enforcement Engines
 
-TThe security integration connectors run in the [Security Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/security-integrator) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The security integration connectors run in the [Security Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/security-integrator) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+
+#### Lineage
+
+The lineage integration connectors run in the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).  They support [Lineage Management](/egeria-docs/features/lineage-management/overview).
+
+
+| Connector | Description |
+|---|---|
+| [Kafka Open Lineage Receiver integration connector](/egeria-docs/connectors/integration/kafka-open-lineage-receiver-integration-connector) | Connector to receive open lineage events from a kafka topic and publish them to lineage integration connectors with listeners registered in the same instance of the Lineage Integrator OMIS.|
+| [Governance Action to Open Lineage integration connector](/egeria-docs/connectors/integration/governance-action-open-lineage-integration-connector) | Connector to listen for governance actions executing in the open metadata ecosystem, generate open lineage events for them and publish them to the integration connectors running in the same instance of Lineage Integrator OMIS that are listening for OpenLineage events. |
+| [API-based Open Lineage Log Store integration connector](/egeria-docs/connectors/integration/api-based-open-lineage-log-store-integration-connector) | Connector that calls an OpenLineage compliant API to store the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS.|
+| [File-based Open Lineage Log Store integration connector](/egeria-docs/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
+| [Open Lineage Cataloguer integration connector](/egeria-docs/connectors/integration/open-lineage-cataloguer-integration-connector) | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem. |
 
 
 ## Repository and Event Mapper Connectors

@@ -10,7 +10,7 @@ To further explain some key concepts of Egeria, let us delve deeper into an exam
 
 ## Cohorts
 
-A cohort[^1] can support the exchange of many metadata servers: both internal to Egeria and third party. A cohort is a group of servers that are exchanging metadata using a peer-to-peer replication protocol and federated queries.
+A cohort[^1] can support information exchange among many metadata servers: both internal to Egeria and third party. A cohort is a group of servers that are exchanging metadata using a peer-to-peer replication protocol and federated queries.
 
 The cohort is self-configuring. At the core it is between one and four shared topics. Each server publishes a registration request on the appropriate topic when they want to join. This is picked up by the existing members who add this new server to their [registry of members](/egeria-docs/concept/cohort-registry-store) and re-send their registration through the same topic to allow the new member to build up its own registry of cohort members.
 

@@ -17,8 +17,8 @@ The integration daemon also has simple REST API for manually restarting and refr
 to enable the integration daemon to recover from errors.
 
 If a connector is incorrectly configured, the integration daemon's configuration document needs to be changed
-using [administration commands](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-integration-services.md)
-and the integration daemon [restarted](../../../open-metadata-implementation/admin-services/docs/user/starting-and-stopping-omag-server.md).
+using [administration commands](/egeria-docs/user/admin/servers/configuring-an-integration-daemon/#configuring-the-integration-services)
+and the integration daemon [restarted](/egeria-docs/guides/operations/starting-and-stopping-omag-server).
 
 ## Sources of errors
 
@@ -83,9 +83,9 @@ Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMAG-ADMIN-0004 The exchangeDL
 ```
 
 The integration daemon successfully completes start up running the
-[Files Integrator OMIS](../../../open-metadata-implementation/integration-services/files-integrator)
+[Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
 with three integration connectors and the
-[Database Integrator OMIS](../../../open-metadata-implementation/integration-services/database-integrator)
+[Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
 with one connector.
 It then begins its periodic refresh of the connectors (set to every 10 minutes in this configuration).
 
@@ -101,7 +101,7 @@ So the metadata server `cocoMDS1` is down and the connectors can not begin proce
 
 There is also an error with the `OakDeneLandingAreaDatabaseMonitor`
 in that it is configured to work with the
-[Database Integrator OMIS](../../../open-metadata-implementation/integration-services/database-integrator)
+[Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
 but the connector does not implement the right interface for this service.
 
 ```

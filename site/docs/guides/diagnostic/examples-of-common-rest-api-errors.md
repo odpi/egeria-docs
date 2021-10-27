@@ -68,7 +68,7 @@ If the server is not running when a request is made, but the platform is running
 ## A request is using the wrong metadata provenance
 
 The following exception is from an integration daemon that has been set up with a null
-[metadataSourceQualifiedName property](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-integration-services.md)
+[metadataSourceQualifiedName property](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services)
 making it different to that used when the metadata it is managing was created.
 
 The nested message `OMAG-REPOSITORY-HANDLER-400-008` can also occur through other services if metadata is managed with

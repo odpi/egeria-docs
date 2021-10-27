@@ -115,17 +115,17 @@ classification [method for defining the schema type](/egeria-docs/guides/develop
 
 The modules are as follows:
 
-* [files-integrator-api](files-integrator-api) - defines the interface for an integration
+* *files-integrator-api* - defines the interface for an integration
 connector that is supported by the Files Integrator OMIS.  This includes the implementation
 of the context that wraps the Data Manager OMAS's clients.
 
-* [files-integrator-server](files-integrator-server) - implements the context manager for
+* *files-integrator-server* - implements the context manager for
 the Files Integrator OMIS.
 
-* [files-integrator-spring](files-integrator-spring) - implements a rest API for validating that a specific
+* *files-integrator-spring* - implements a rest API for validating that a specific
 integration connector is able to run under this service.
 
-* [files-integrator-client](files-integrator-client) - implements a Java client for the REST API.
+* *files-integrator-client* - implements a Java client for the REST API.
 
 
 

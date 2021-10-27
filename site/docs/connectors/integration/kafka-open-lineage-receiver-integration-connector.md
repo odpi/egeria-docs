@@ -23,7 +23,7 @@ The Kafka OpenLineage Receiver integration connector receives open lineage event
 This connector uses the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview)
 running in the [Integration Daemon](/egeria-docs/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/egeria-docs/guides/admin/configuring-the-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="11-14"
@@ -45,6 +45,6 @@ This is its connection definition to use on the [administration commands that co
     }
     ```
 
-    - Replace `{{folderName}}` with the path name of the folder where the files will be located.
+    - Add details of the connector to the topic in the `embeddedConnections` section.  This will have the topic name in the endpoiint's `networkAddress`.
 
 ---8<-- "snippets/abbr.md"

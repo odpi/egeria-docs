@@ -9,9 +9,9 @@ hide:
 
 # 0770 - Lineage Mapping
 
-Lineage Mapping enables data fields from different schemas or ports to be linked to show how data is
-flowing between assets.  It provides a finer0grained level of lineage
-than the [Data Passing](0750-Data-Passing.md) relationships.
+Lineage Mapping identifies elements that are [equivalent to each other in the lineage graph](/egeria-docs/features/lineage-mangement/#lineage-mapping).  It is used to stitch the lineage graph together.
+
+This is contrast with the [Data Passing](0750-Data-Passing.md) relationships that represent implementation relationships between components.
 
 ![UML](0770-Lineage-Mapping.svg)
 

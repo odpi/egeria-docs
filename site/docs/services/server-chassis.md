@@ -20,7 +20,7 @@ are then routed to the appropriate Egeria subsystem.
 
 Today, Egeria has one server chassis implementation:
 
-* **[Spring Boot Server Chassis](#spring-boot-server-chassis)** - using [Spring Boot](https://spring.io/projects/spring-boot).
+- **[Spring Boot Server Chassis](#spring-boot-server-chassis)** - using [Spring Boot](https://spring.io/projects/spring-boot).
 
 ## Spring Boot Server Chassis
 

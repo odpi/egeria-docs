@@ -3,7 +3,7 @@
 
 # Spring and Spring Boot
 
-**Spring** is a framework and set of annotations for building REST APIs.  **Spring Boot** provides the server chassis
+*Spring* is a framework and set of annotations for building REST APIs.  *Spring Boot* provides the server chassis
 (or `main()` method) for hosting RESTful services in a server.
 
 Spring is used in our client libraries to call REST APIs.  Specifically it provides the

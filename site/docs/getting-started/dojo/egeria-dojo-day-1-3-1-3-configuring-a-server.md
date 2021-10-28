@@ -16,7 +16,7 @@ Watch the overview of this session: [https://youtu.be/c1g2vY_0mYs](https://youtu
 
 Begin by understanding about the different types of OMAG Servers and what they are used for by
 following the link below:
-* [Egeria's OMAG Servers](../../../open-metadata-implementation/admin-services/docs/concepts/omag-server.md)
+* [Egeria's OMAG Servers](/egeria-docs/concepts/omag-server)
 
 In this first exercise you are going to use Postman to configure a simple metadata server called
 `myMetadataServer`.

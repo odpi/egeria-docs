@@ -5,7 +5,7 @@
 
 Once you have [created a configuration document for an OMAG server](task-creating-configuration-documents.md)
 it is started in the
-[OMAG Server Platform](../../../open-metadata-publication/website/omag-server)
+[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
 using the following command (this is request **11.** in Postman).
 
 ```

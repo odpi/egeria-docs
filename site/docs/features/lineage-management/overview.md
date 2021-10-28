@@ -24,7 +24,7 @@ On the left here is an Apache Spark job that reads from a file, looks up a value
 ![Figure 1](lineage-examples.svg)
 > **Figure 1:** Examples of processes
 
-As the importance of lineage is understood, it is becoming common that individual technologies provide a lineage view of their processing similar to figure 1.  This is very useful to the immediate users of that technology.  However from an enterprise perspective these technologies do not run in isolation.  Enterprises need to be able to link the lineage from these technologies together to to show how data flows from its original sources to its ultimate destinations.
+As the importance of lineage is understood, it is becoming common that individual technologies provide a lineage view of their processing similar to figure 1.  This is very useful to the immediate users of that technology.  However from an enterprise perspective these technologies do not run in isolation.  Enterprises need to be able to link the lineage from these technologies together to show how data flows from its original sources to its ultimate destinations.
 
 Figure 2 shows a flow of data through multiple technologies.  It begins with a Relational Database (RDB). This is read by an ETL job that writes all or some of its contents to an Apache Hive table. An Apache Spark job is initiated through an API that reads from the Apache Hive table and invokes an Apache Airflow DAG (process) that writes the information into an Apache Avro file and an event to an Apache Kafka topic. 
 
@@ -46,20 +46,20 @@ Figure 4 shows Egeria's architecture for lineage.  There are three parts to it:
 
 * *Lineage capture* - through the [integration daemon](/egeria-docs/concepts/integration-daemon) and [Data Engine Proxy](/egeria-docs/concepts/data-engine-proxy) servers, metadata about data sources and the processing around them is captured and shared through open metadata.
 
-* *Stewardship* - the lineage information from each of the technologies is linked together.  Where the naming of data sources and processes is consistent, this assembling of the lineage graph is automatic.  However, experience shows that if it can be different, it will be different. Many technologies make there own choices in naming and so governance action services along with human stewardship is required to match and link the graph together.  The governance action services run in the [Engine Host](/egeria-docs/concepts/engine-host) server.  They automatically add the relationships between the lineage contributions from each technology which may need to be verified by a human steward.  The human steward may also manually add relationships where there is no well known pattern that can be encoded in a governance action services.  The stewardship phase also involves analysis of the lineage to ensure the digital landscape is operating as it should.
+* *Stewardship* - the lineage information from each of the technologies is linked together.  Where the naming of data sources and processes is consistent, this assembling of the lineage graph is automatic.  However, experience shows that if it can be different, it will be different. Many technologies make their own choices in naming and so governance action services along with human stewardship is required to match and link the graphs together.  The governance action services run in the [Engine Host](/egeria-docs/concepts/engine-host) server.  They automatically add the relationships between the lineage contributions from each technology that may need to be verified by a human steward.  The human steward may also manually add relationships where there is no well known pattern that can be encoded in a governance action services.  Stewardship also involves analysis of the lineage to ensure the digital landscape is operating as it should.
 
 * *Preservation and Use* - Once the lineage graphs are assembled, the lineage can be viewed and analysed from a business perspective.  Could, for example, the operation of the digital landscape be optimized?  Lineage is accessible through standard open metadata queries. However, since the lineage data is large, lineage is automatically captured and stored in the [Open Lineage Server](/egeria-docs/concepts/open-lineage-server) server.  This optimizes the lineage graphs for quick retrieval and analysis.  Its presence allows lineage data to be regularly archived from the operational open metadata ecosystem.  This is particularly important in regulated industries where lineage for critical reports may need to be kept for many years.
 
 The three parts of the lineage architecture are summarized in figure 4.
 
 ![Figure 4](lineage-architecture.svg)
-> **Figure 4:** The lineage architecture showing the three phases of (1) lineage capture through egeria's automated cataloguing capabilities, (2) automated and human stewardship coordinated by the engine host server to stitch the lineage contributions together into full data flows, and finally (3) lineage preservation and use in the open lineage server.
+> **Figure 4:** The lineage architecture showing the three phases of (1) lineage capture through Egeria's automated cataloguing capabilities, (2) automated and human stewardship coordinated by the engine host server to stitch the lineage contributions together into full data flows, and finally (3) lineage preservation and use in the open lineage server.
 
 ## Lineage capture
 
 Capturing lineage has both a static and a dynamic aspect to it.  
 
-- The *static* aspect involves cataloguing of all of the [resources](/egeria-docs/concepts/resource) that make up your digital landscape.  This defines all of the players such as the data sources and processing engines and how they link together.  
+- The *static* aspect involves cataloguing all of the [resources](/egeria-docs/concepts/resource) that make up your digital landscape.  This defines all of the players such as the data sources and processing engines and how they link together.  
 
 - The *dynamic* aspect captures information about the activity that happens day-to-day and its effects.
 
@@ -67,7 +67,7 @@ Each of these aspects have their challenges.
 
 - the cataloguing of your digital landscape typically involves many different techniques since there are many choices of technologies typically deployed.  These techniques expose inconsistencies in naming, formats and detail.  It is also possible that the same resource is catalogued multiple times.  Ths is why the lineage architecture includes [stewardship](#lineage-stewardship) to reconcile these differences.
 
-- Processing engines either produce no dynamic lineage information (this is the most common) or it is formatted in a unique proprietary format that needs to be transformed before it can linked with the equivalent information from another processing engine.
+- Processing engines either produce no dynamic lineage information (this is the most common) or it is formatted in a unique proprietary format that needs to be transformed before it can be linked with the equivalent information from another processing engine.
 
 - When dynamic lineage information is captured, it produces a huge amount of data, much of which is of low value, or only valuable for a short period of time.  It needs to be actively pruned to prevent it from overwhelming the digital landscape.
 
@@ -77,28 +77,28 @@ The static and dynamic aspects of lineage are typically referred to as design li
 
 So design lineage describes the digital resources and their linkages that are known at the time they are deployed.  Some tools, such as ETL engines, produce design lineage in their tools as part of their design process.  Other technologies rely on design lineage captured in the dev-ops pipeline or the automatic cataloguing of digital resources as they are added to the pre-production or production environment.
 
-Operational lineage is the lineage information produced by a data processing engine when it runs processes. It enables an organization to ensure that processes run at the right time, using the right data and produce the right results.  It primarily focuses on capturing the dynamic aspects of lineage, but may also identify parts of the digital landscape that has not yet been catalogued.
+Operational lineage is the lineage information produced by a data processing engine when it runs processes. It enables an organization to validate that processes run at the right time, using the right data and produce the right results.  It primarily focuses on capturing the dynamic aspects of lineage, but may also identify parts of the digital landscape that have not yet been catalogued.
 
 ### Lineage Styles
 
 Figure 5 illustrates the difference between design lineage and operational lineage for a process copying data from one database to another.  At deployment time the lineage shows the relationships between the process and the two databases.  If the data in the destination database is incorrect, the lineage relationships shows that they could be caused by the behavior of the process, or the values in the source database.
 
-Similarly, if there is a proposal to change the schema of either databases, the lineage relationships identify that the process is likely to be impacted by this change and it will need updating at the same time. 
+Similarly, if there is a proposal to change the schema of either databases, the lineage relationships identify that the process is likely to be impacted by this change and that it will need updating at the same time. 
  
 ![Figure 5](operational-lineage.svg)
 > **Figure 5:** The design lineage known at deployment describes how a particular process reads data from the source database and writes to destination database.  The operational lineage captures a process instance each time the process runs which may include details of the amount of data processed and any errors or issues encountered.
 
 The operational lineage shown at the bottom of figure 5 captures process instance information each time the process runs.  It is then possible to see how often it runs, and how much data it processes each time.  This could uncover that the quality problem identified in the destination database was caused by the fact that although the process should run every hour, it had not run for a week and so the values from the source database have not been transferred.
 
-Some process cause resources to be created, moved and deleted.  This blurs the boundary between design lineage and operational lineage since the operational lineage needs to cause the cataloging of resources that were dynamically created or modified which is logically contributing to design lineage.  
+Running a process instance can cause resources (such as database tables) to be created, moved and deleted.  This blurs the boundary between design lineage and operational lineage since the operational lineage needs to cause the cataloging of resources that were dynamically created or modified which is logically also contributing to design lineage.  
 
 This blurring between design lineage and operational lineage is particularly true when processing files. The next set of images (figures 6-11) show different patterns of lineage that can be chosen for particular circumstances.  The choice comes down to the value that the detail brings against its cost of capture and processing.
 
-Each figure shows the same process that reads a file created dynamically by a predecessor process and after some calculation, writes the result to a destination file.
+Each figure shows the same process that reads a source file created dynamically by a predecessor process and after some calculation, writes the result to a new destination file.
 
 At deployment time, the files do not exist and so the process is not connected to any files except, potentially [templates](../templated-cataloguing) for the operational cataloguing of files when the process is running.
 
-It is not until the process runs that its lineage is capture.  Figures 6-11 show different choices in the level of detail that could be captured.  Figure 6 begins with the capture of every run of the process (that is its process instances) linked the the particular file that was processed.
+It is not until the process runs that its lineage is captured.  Figures 6-11 show different choices in the level of detail that could be captured.  Figure 6 begins with the capture of every run of the process (that is its process instances) linked to the particular file that was processed. 
 
 ![Figure 6](operational-lineage-files-1.svg)
 > **Figure 6:** New files are read and created each time the process runs.  The operational lineage shows which files are associated with each run of the process.
@@ -108,7 +108,7 @@ Figure 6 provides complete information, but imagine it running every second, eve
 In figure 7, only the files are dynamically captured and linked to the process for design lineage.  No process instances are captured. This may not matter if the process runs regularly and the creation times of the files are sufficient to correlate them with the processing.
 
 ![Figure 7](operational-lineage-files-2.svg)
-> **Figure 7:** New files are read and created each time the process runs; these are catalogued and linked to the process as soon as they are detected; however no operation lineage is captured so it is not possible to know which process instance created each file.  
+> **Figure 7:** New files are read and created each time the process runs; these are catalogued and linked to the process as soon as they are detected; however no operation lineage is captured, so it is not possible to know which process instance created each file.  
 
 In figure 8, the attempt to link each of the destination files to the process has been abandoned and only the folder is linked.  The source files are still linked to the process instances because, for example, it is important to know when they were processed.
 

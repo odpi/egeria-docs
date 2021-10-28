@@ -24,7 +24,7 @@ act as a record of the activity for future audits.
 
 Governance actions can be created through the [Governance Engine OMAS API](/egeria-docs/services/omas/governance-engine/overview).
 Some governance services (for example, the 
-[Watchdog Governance Action Service](../../../../frameworks/governance-action-framework/docs/watchdog-governance-service.md))
+[Watchdog Governance Action Service](/egeria-docs/concepts/governance-service))
 can create governance actions when they run.  
 
 Governance services produce output strings called **guards** that indicate specific
@@ -32,15 +32,15 @@ conditions or outcomes.  These guards can be used to trigger new governance acti
 Triggered governance actions are linked to their predecessor so it possible to trace
 through the governance actions that ran.
 
-The [governance action process](governance-action-process.md) defines the flow of governance
-actions.  It uses [governance action types](governance-action-type.md) to build up a template of
+The [governance action process](/egeria-docs/concepts/governance-action-process) defines the flow of governance
+actions.  It uses [governance action types](/egeria-docs/concepts/governance-action-type) to build up a template of
 possible governance actions linked via the guards.
 When the process runs, its linked governance action types control the triggering of new
 governance actions.
 
 If the start date of the governance action is in the future, the
-[Engine Host Services](../../../../governance-servers/engine-host-services)
-running in the same [Engine Host](../../../../admin-services/docs/concepts/engine-host.md)
+[Engine Host Services](/egeria-docs/services/engine-host-services)
+running in the same [Engine Host](/egeria-docs/concepts/engine-host)
 OMAG Server as the nominated governance engine will schedule the
 governance service to run soon after the requested start date.
 If the start date is left blank, the requested governance service is run

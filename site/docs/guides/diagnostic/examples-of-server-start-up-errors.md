@@ -7,7 +7,7 @@ When an OMAG Server is starting, it first outputs a message to the audit log tha
 records the name of the server and its type.
 
 For example, this platform is starting up five OMAG Servers, each of a
-[different type](../../../open-metadata-implementation/admin-services/docs/concepts/omag-server.md).
+[different type](/egeria-docs/concepts/omag-server).
 
 ```
 

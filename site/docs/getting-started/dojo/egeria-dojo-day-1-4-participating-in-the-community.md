@@ -43,19 +43,19 @@ other contributors, or make the contribution yourself.
 ## Getting connected
 
 The processes used by the community are documented
-in the [Community Guide](../../../Community-Guide.md).
+in the [Community Guide](/egeria-docs/guides/community).
 This includes information about how to join the community and participate.
 
 ## Raising your status in the community
 
 The Egeria community has three special roles that you can work towards:
 
-* **Egeria Contributor** - someone who has made multiple quality contributions to the community.
-* **Egeria Maintainer** - an experienced Egeria contributor who is willing to help in the
+- *Egeria Contributor* - someone who has made multiple quality contributions to the community.
+- *Egeria Maintainer* - an experienced Egeria contributor who is willing to help in the
 management of the community and the project contents.
-* **Egeria Project Leader** - individual who is elected by the maintainers to lead the Egeria project.
+- *Egeria Project Leader* - individual who is elected by the maintainers to lead the Egeria project.
 
-These roles are described in the [Operations Guide](../../../Egeria-Operations.md).
+These roles are described in the [Operations Guide](/egeria-docs/guides/project-operations).
 
 ## Egeria badges
 
@@ -67,11 +67,11 @@ we are able to award [Acclaim badges](../../../developer-resources/badges).
 Using the material from the code of conduct and community guide
 answer the following questions.
 
-* What time is the weekly community call in your local timezone?
-* What are the principle communication mechanisms used by the Egeria community?
-* Who nominates an individual to be officially recognized as an Egeria Contributor?
-* To which foundation does the ODPi belong?
-* Give two examples of unacceptable behavior when participating in the community.
+- What time is the weekly community call in your local timezone?
+- What are the principle communication mechanisms used by the Egeria community?
+- Who nominates an individual to be officially recognized as an Egeria Contributor?
+- To which foundation does the ODPi belong?
+- Give two examples of unacceptable behavior when participating in the community.
 
 ## End of Day 1
 

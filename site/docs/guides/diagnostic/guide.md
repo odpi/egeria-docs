@@ -104,7 +104,7 @@ So now consider each phase of the process.
   * **Monitor results** - Finally the changes need to be tested to ensure the problem is fixed and
   there are no unwanted side-effects.  If the solution did not work, then begin again with the
   information gathering process.  It may also be a time to request help from the 
-  [Egeria community](../community.md).  If the situation is worse, you may wish to back out the changes
+  [Egeria community](/egeria-docs/guides/community).  If the situation is worse, you may wish to back out the changes
   you have made before trying the diagnosis process again.
 
 The description above is an overview of what to do to diagnose and fix a problem.
@@ -123,6 +123,6 @@ These can help you to eliminate the obvious causes.
 
 * [First Failure Data Capture (FFDC)](ffdc.md)
 * [Integration Daemon Diagnostics Guide](integration-daemon-diagnostic-guide.md)
-* [Administration Guide](../../../open-metadata-implementation/admin-services/docs/user)
+* [Administration Guide](/egeria-docs/guides/admin)
 
 --8<-- "snippets/abbr.md"

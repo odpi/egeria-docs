@@ -9,11 +9,11 @@ This tutorial will guide you through the process of downloading the ODPi Egeria 
 
 Once you have [downloaded Egeria](#downloading-the-egeria-source-from-github), you can also use
 [Kubernetes](/egeria-docs/education/tutorials/lab-infrastructure-guide/running-kubernetes/overview) to 
-start the lab infrastructure for the [Hands-on Labs](../../open-metadata-labs).
+start the lab infrastructure for the [Hands-on Labs](/egeria-docs/education/open-metadata-labs).
 This does not require you to build Egeria.
 
 Already lost, or are the instructions below not detailed enough? Check out the [Egeria Dojo](../../egeria-dojo),
-or consider jumping straight to the [Hands-on Labs](../../open-metadata-labs), which provide a pre-built environment
+or consider jumping straight to the [Hands-on Labs](/egeria-docs/education/open-metadata-labs), which provide a pre-built environment
 for you and guided instructions on how to use different APIs.
  
 ## Prerequisite Technology for Building Egeria

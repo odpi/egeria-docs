@@ -58,7 +58,7 @@ NOTICE			conformance-suite	user-interface
 ```
 
 Under **server** is a directory for the
-[OMAG Server Platform](../../../open-metadata-publication/website/omag-server) that is used to run
+[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) that is used to run
 open metadata and governance services.
 
 Change to the OMAG server platform's directory.

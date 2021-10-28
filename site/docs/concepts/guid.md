@@ -3,7 +3,7 @@
 
 # Unique Identifiers (GUIDs)
 
-Every [open metadata instance](../../../repository-services/docs/open-metadata-instances.md)
+Every [open metadata instance](/egeria-docs/concepts/open-metadata-instances)
 has a unique identifier called the guid.
 This identifier needs to be globally unique - so even if two metadata repositories
 simultaneously created a metadata instance about the same thing, the GUIDs of these

@@ -27,8 +27,8 @@ $ cd egeria
 You are now ready to [build the egeria source](task-building-egeria-source.md).
 
 Alternatively you can [use Kubernetes](../lab-infrastructure-guide/running-kubernetes.md)
-to set up the infrastructure to run the [Open Metadata Labs](../../open-metadata-labs).
+to set up the infrastructure to run the [Open Metadata Labs](/egeria-docs/education/open-metadata-labs).
 
-If you are working on the Dojo return to [Day 1](../../../getting-started/dojo/egeria-dojo-day-1-3-2-4-second-server.md)
+If you are working on the Dojo return to [Day 1](/egeria-docs/getting-started/dojo/egeria-dojo-day-1-3-2-4-second-server.md)
 
 ---8<-- "snippets/abbr.md"

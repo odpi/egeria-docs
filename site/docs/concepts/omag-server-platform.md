@@ -14,7 +14,7 @@ The OMAG services are configured and activated in [OMAG Servers](omag-server.md)
 
 Once a configuration document is defined, the OMAG Server can be started and stopped multiple times by the admin services server instance operations.
 
-The OMAG Server Platform also supports some [platform services](../../../platform-services) to query details of the servers running on the platform.
+The OMAG Server Platform also supports some [platform services](/egeria-docs/services/platform-services) to query details of the servers running on the platform.
 
 The OMAG Server Platform can also host multiple OMAG Servers at any one time:
 
@@ -58,9 +58,9 @@ The server origin service  is operational at this point.  It can be used by oper
 OMAG server platform is still running.
 
 The administration services are active at this point, while the open metadata and governance services
-will return an error if called since there are no [OMAG servers](../../../open-metadata-implementation/admin-services/docs/concepts/logical-omag-server.md) running.
+will return an error if called since there are no [OMAG servers](/egeria-docs/concepts/omag-server) running.
 
-The configuration services are used to create [configuration documents](../../../open-metadata-implementation/admin-services/docs/concepts/configuration-document.md).  Each configuration document
+The configuration services are used to create [configuration documents](/egeria-docs/concepts/configuration-document).  Each configuration document
 describes the open metadata and governance services that should be activated in a OMAG server.
 
 Figure 2 shows the configuration services creating three configuration documents:

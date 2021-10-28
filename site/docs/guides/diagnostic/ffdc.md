@@ -18,9 +18,9 @@ to turn on debug tracing in a production system.
 FFDC typically requires as much information as possible to be gathered
 at the point where the error is first detected.  This information is added to as the
 call unwinds.  This way it captures:
- * What went wrong precisely
- * What was the server doing when it went wrong
- * What is the consequence of this failure to the caller, or others
+ - What went wrong precisely
+ - What was the server doing when it went wrong
+ - What is the consequence of this failure to the caller, or others
 
 FFDC requires careful design by the developer because they need to anticipate
 the likely errors and design the error handling accordingly.
@@ -28,25 +28,25 @@ Many modules have more error handling code than "happy path code".
 In addition, there is wide spread use of two important components
 throughout Egeria.
 
-* The [FFDC Services](/egeria-docs/services/ffdc-services) -
+- The [FFDC Services](/egeria-docs/services/ffdc-services) -
   provides base services for implementing FFDC in an Egeria module.
 
-     * Common audit log messages and exception codes.
-     * Common exceptions and base exceptions.
-     * Common REST Structures.
-     * Invalid parameter handler for common parameter types.
-     * REST Call logger for debug messages and performance logging.
-     * Handler for common exceptions.
+     - Common audit log messages and exception codes.
+     - Common exceptions and base exceptions.
+     - Common REST Structures.
+     - Invalid parameter handler for common parameter types.
+     - REST Call logger for debug messages and performance logging.
+     - Handler for common exceptions.
      
-* The [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview) -
+- The [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview) -
   provides interface definitions and classes to enable connectors to support natural language enabled
   diagnostics such as exception messages and audit log messages.
 
 The result is the consistent availability of detailed diagnostics when things go wrong.
 
-In addition the [Open Metadata Repository Services (OMRS)](/egeria-docs/conceepts/audit-log.md)
+In addition the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
 provides an extension to the ALF's audit log destination that supports multiple
-[audit log store connectors](../../../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors).
+[audit log store connectors](/egeria-docs/concepts/audit-log-connectors).
 This means that an OMAG Server can be configured to route 
 audit log messages to multiple destinations.
 
@@ -58,26 +58,26 @@ how to set them up are described in
 
 ## FFDC principles practised by the Egeria community
 
-* Each type of message has a unique identifier and
+- Each type of message has a unique identifier and
   the parameters embedded in it are sufficient to determine the
   call parameters and the code path to the exact point where the error
   is detected.
 
-* All parameters are validated both client side and server side.
+- All parameters are validated both client side and server side.
 
-* APIs use different types of exceptions to separate:
-  * Invalid parameters from the caller
-  * User security errors that need administrator action
-  * Temporary problems in the server
-  * Bugs and logic errors (ie reaching a point in the path that should be impossible).
+- APIs use different types of exceptions to separate:
+  - Invalid parameters from the caller
+  - User security errors that need administrator action
+  - Temporary problems in the server
+  - Bugs and logic errors (ie reaching a point in the path that should be impossible).
   
   Typically, the modules use checked exceptions for the first three types of errors and
   runtime exceptions for the last.
   
-* Where there is no direct external caller, errors are logging the Audit Log
+- Where there is no direct external caller, errors are logging the Audit Log
   rather than throwing an exception in a background thread.
   
-* Exception objects containing stack traces never leave the OMAG Server Platform.
+- Exception objects containing stack traces never leave the OMAG Server Platform.
   The full exception is added to the Audit Log so the stack trace can be analysed by the platform team.
   Important diagnostic information - such as the exception type, message, system action and user action
   is captured in the REST response.
@@ -146,29 +146,29 @@ The diagram below illustrates the structure of the audit log records:
 
 The audit log severities supported by the OMAG Servers are as follows:
 
-* **Information** - The server is providing information about its normal operation.
-* **Event** - An event was received from another member of the open metadata repository cohort.
-* **Decision** - A decision has been made related to the interaction of the local metadata repository and the rest of the cohort.
-* **Action** - An Action is required by the administrator. At a minimum, the situation needs to be investigated and 
+- *Information* - The server is providing information about its normal operation.
+- *Event* - An event was received from another member of the open metadata repository cohort.
+- *Decision* - A decision has been made related to the interaction of the local metadata repository and the rest of the cohort.
+- *Action* - An Action is required by the administrator. At a minimum, the situation needs to be investigated and 
   if necessary, corrective action taken.
-* **Error** - An error occurred, possibly caused by an incompatibility between the local metadata repository
+- *Error* - An error occurred, possibly caused by an incompatibility between the local metadata repository
   and one of the remote repositories. The local repository may restrict some of the metadata interchange
   functions as a result.
-* **Exception** - An unexpected exception occurred.  This means that the server needs some administration
+- *Exception* - An unexpected exception occurred.  This means that the server needs some administration
   attention to correct configuration or fix a logic error because it is not operating as a proper peer in the
   open metadata repository cohort.
-* **Security** - Unauthorized access to a service or metadata instance has been attempted.
-* **Startup** - A new component is starting up.
-* **Shutdown** - An existing component is shutting down.
-* **Asset** - An auditable action relating to an asset has been taken.
-* **Types** - Activity is occurring that relates to the open metadata types in use by this server.
-* **Cohort** - The server is exchanging registration information about an open metadata repository cohort that
+- *Security* - Unauthorized access to a service or metadata instance has been attempted.
+- *Startup* - A new component is starting up.
+- *Shutdown* - An existing component is shutting down.
+- *Asset* - An auditable action relating to an asset has been taken.
+- *Types* - Activity is occurring that relates to the open metadata types in use by this server.
+- *Cohort* - The server is exchanging registration information about an open metadata repository cohort that
   it is connecting to.
-* **Trace** - This is additional information on the operation of the server that may be
+- *Trace* - This is additional information on the operation of the server that may be
   of assistance in debugging a problem.  It is not normally logged to any destination, but can be added when needed.,
-* **PerfMon** - This log record contains performance monitoring timing information for 
+- *PerfMon* - This log record contains performance monitoring timing information for 
   specific types of processing. It is not normally logged to any destination, but can be added when needed.
-* **\<Unknown\>** - Uninitialized Severity
+- *\<Unknown\>* - Uninitialized Severity
 
 ### Example of an audit log message
 Below is an example of the types of information captured in an audit log record.

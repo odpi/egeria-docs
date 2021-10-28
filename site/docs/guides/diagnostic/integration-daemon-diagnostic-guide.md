@@ -3,9 +3,9 @@
 
 # Trouble shooting issues with the integration daemon
 
-The [integration daemon](../../../open-metadata-implementation/admin-services/docs/concepts/integration-daemon.md)
+The [integration daemon](/egeria-docs/concepts/integration-daemon)
 is designed to run as a background process.  It hosts 
-[integration connectors](../../../open-metadata-implementation/governance-servers/integration-daemon-services/docs/integration-connector.md)
+[integration connectors](/egeria-docs/concepts/integration-connector)
 that exchange metadata with third party technologies.  It also
 make calls to a metadata server in order to retrieve and maintain metadata in the open metadata ecosystem.
 

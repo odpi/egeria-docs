@@ -68,13 +68,13 @@ $
 ```
 To check it will run, try the `docker run --publish 19443:9443 odpi/egeria`.
 This will start the image as a new docker container.  As the container initializes it starts a single copy of the
-[OMAG Server Platform](../../../open-metadata-implementation/admin-services/docs/concepts/omag-server-platform.md).
+[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
 The OMAG Server Platform is the Egeria runtime platform where the Egeria REST services run.
 
 The `--publish 19443:9443` parameter maps the 9443 port inside the docker that the OMAG Server Platform
 has registered with to port 19443
 
-![Docker container structure](../../../developer-resources/tools/docker-container-overview.png)
+![Docker container structure](/egeria-docs/tools/docker-container-overview.png)
 
 You should see the server logo come up and finally a message 
 `OMAG server platform ready for more configuration`.  This message means it has successfully started.
@@ -154,7 +154,7 @@ is displayed.
 
 Now click on the first blue entry for platform origin. Then press the `Try it Out` button.
 
-![Try it out button on Swagger page](/egeria-docs/developer-resources/tools/swagger-ui-try-it-out-button.png)
+![Try it out button on Swagger page](/egeria-docs/tools/swagger-ui-try-it-out-button.png)
 
 and enter `garygeeke` in the `userId` field and then the `Execute` button.
 

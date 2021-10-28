@@ -6,15 +6,15 @@
 The open metadata archives provide pre-canned content (open metadata types and instances) to load into an open metadata
 repository.  There are three main types of open metadata archive:
 
-* **Content packs** - read only metadata types and instances that are reusable in many organizations.
+- **Content packs** - read only metadata types and instances that are reusable in many organizations.
   The type definitions for the [Open Metadata Types](/egeria-docs/types)
   are managed in a content pack.  They are also used for distributing standard glossaries or other types of definitions.
   
-* **Metadata exports** - metadata exported from a specific open metadata repository that can act as a backup.
+- **Metadata exports** - metadata exported from a specific open metadata repository that can act as a backup.
 It is read-write if loaded into an open metadata repository with the same metadata collection id as the originating
 repository, or read-only if loaded into a repository with a different metadata collection id.
 
-* **Repository backups** - used for creating a back up for an open metadata repository.
+- **Repository backups** - used for creating a back up for an open metadata repository.
 
 Figure 1 shows a content pack being loaded into a metadata repository.  It is stored in the local repository
 and distributed around any connected cohorts.  These types of archives can be provided by the
@@ -42,11 +42,11 @@ This can be used to recover the metadata repository content after a bad load or 
 
 Open metadata archives are created through Java utilities.  There are two approaches:
 
-* Content packs are created using the repository services archive utilities.
+- Content packs are created using the repository services archive utilities.
 The Egeria supported utilities for open metadata archives described at the bottom of this page use this
 approach.
 
-* Metadata export archives and repository back-ups are created by using the repository services clients to extract
+- Metadata export archives and repository back-ups are created by using the repository services clients to extract
 the metadata elements from a live repository and the to store them in the
 archive using the repository services archive utilities.
 
@@ -66,8 +66,8 @@ added to the repository.
 
 These Administration Guide articles describe how to load open metadata archives into a server:
 
-* [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/configuring-the-startup-archives.md)
-* [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/admin/adding-archive-to-running-server.md)
+- [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/configuring-the-startup-archives.md)
+- [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/admin/adding-archive-to-running-server.md)
 
 
 ## Inside an Open Metadata Archive
@@ -82,22 +82,22 @@ This contains new instances (entities, relationships and classifications).
 
 The archive loads in the following order:
 
-* Attribute Type Definitions (AttributeTypeDefs) from the type store.
-  * PrimitiveDefs
-  * CollectionDefs
-  * EnumDefs
+- Attribute Type Definitions (AttributeTypeDefs) from the type store.
+  - PrimitiveDefs
+  - CollectionDefs
+  - EnumDefs
   
-* New Type Definitions (TypeDefs) from the type store.
-  * EntityDefs
-  * RelationshipDefs
-  * ClassificationDefs
+- New Type Definitions (TypeDefs) from the type store.
+  - EntityDefs
+  - RelationshipDefs
+  - ClassificationDefs
   
-* Updates to types (TypeDefPatches)
+- Updates to types (TypeDefPatches)
 
-* New Instances
-  * Entities
-  * Relationships
-  * Classifications
+- New Instances
+  - Entities
+  - Relationships
+  - Classifications
   
 More information about the design of the open metadata archives can be found in
 the [open metadata archive](/egeria-docs/concepts/open-metadata-archive) concept.
@@ -107,19 +107,19 @@ the [open metadata archive](/egeria-docs/concepts/open-metadata-archive) concept
 Egeria supports the following open metadata archives.  Associated with each archive
 are utilities that help you build additional archives of your own content.
 
-* [Open Metadata Types](open-metadata-types) - the Egeria Open Metadata Type Definitions.
+- [Open Metadata Types](open-metadata-types) - the Egeria Open Metadata Type Definitions.
 This archive is always loaded by each OMAG metadata repository server at start-up.
 This is to reduce the chance that new types developed by a third party have names that conflict with the open metadata types.
 There is also a utility to create the archive file for these open metadata types.
-The find out more about the Open Metadata Types [click here](../../open-metadata-publication/website/open-metadata-types).
+To find out more about the Open Metadata Types [click here](/egeria-docs/types).
 
-* [Open Connector Archives](open-connector-archives) - provides utilities for building
+- [Open Connector Archives](open-connector-archives) - provides utilities for building
 open metadata archives containing information about one or more connectors that
-follow the [Open Connector Framework (OCF)](../../open-metadata-implementation/frameworks/open-connector-framework).
+follow the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview).
 In addition, there are utilities for building an open metadata archive containing the connector type
 definitions for Egeria's data store connectors.
 
-* [Design Model Archives](design-model-archives) - provides utilities to
+- [Design Model Archives](design-model-archives) - provides utilities to
 manage common/standard model content from third parties.  It includes
 an example archive for the [Cloud Information Model (CIM)](https://cloudinformationmodel.org).
 

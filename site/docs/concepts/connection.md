@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Connection - part of the [Open Connector Framework (OCF)](../..)
+# Connection
 
 The **Connection** provides the set of properties needed to create and initialize an instance
 of a [connector](connector.md).

@@ -18,13 +18,6 @@ activities run and the actions taken against specific resources (see **TargetFor
 Once the action is complete,
 the GovernanceAction acts as an audit record for the actions taken.
 
-The **GovernanceActionExecutor** identifies the governance engine
-that will run the service that will execute the action.  The specific service is
-identified by the requestType property.
-The governance engine is shown as a [SoftwareServerCapability](/egeria-docs/types/0/0042-Software-Server-Capabilities)
-but is typically either a [DiscoveryEngine](/egeria-docs/types/6/0601-Open-Discovery-Engine) or
-a [GovernanceActionEngine](/egeria-docs/types/4/0461-Governance-Engines).
-
 The **GovernanceActionRequestSource** links the first GovernanceAction
 in a chain to the cause/originator of the action.  This could be, for example,
 a [GovernanceProcess](/egeria-docs/types/4/0430-Technical-Controls) or a
@@ -43,5 +36,7 @@ by the previous action(s).
 
 ![UML](0463-Governance-Actions.svg)
 
-
+??? deprecated "Deprecated types"
+    - **GovernanceActionExecutor** - Use *executorEngineGUID*, *executorEngineName*, *requestType* and *requestParameters* properties in *GovernanceAction* entity to identify the governance engine that will run the service that will execute the action.  The specific service is identified by the requestType property.  The governance engine is typically either a [DiscoveryEngine](/egeria-docs/types/6/0601-Open-Discovery-Engine) or a [GovernanceActionEngine](/egeria-docs/types/4/0461-Governance-Engines).
+    
 --8<-- "snippets/abbr.md"

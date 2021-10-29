@@ -36,7 +36,7 @@ the process hierarchy.
 #### Related Open Metadata Type Definitions
 
 * [Definition of Process](/egeria-docs/types/0/0010-Base-Model)
-* [Linking of processes into lineage graphs](Area-7-models.md)
+* [Linking of processes into lineage graphs](/egeria-docs/types/7)
 * [Ports to show specific input and output flows for a process](/egeria-docs/types/2/0217-Ports)
 * [PortSchema relationships to describe the structure of data supported by a Port](/egeria-docs/types/5/0520-Process-Schemas)
 

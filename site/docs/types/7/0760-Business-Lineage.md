@@ -9,9 +9,7 @@ hide:
 
 # 0760 Business Lineage
 
-Business lineage is a type of lineage where only elements that have been tagged
-as business significant are shown.  This allows
-some of the technical detail to be eliminated from the display.
+Business lineage is a type of lineage where only elements that have been tagged as business significant are shown. This allows some of the technical detail to be eliminated from the display.
 
 ![UML](0760-Business-Lineage.svg)
 

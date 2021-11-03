@@ -170,8 +170,8 @@ Entity purge | purgeEntity | 45.0 | 381.0 | 43.0 | 428.0 | 48.0 | 431.5 | 56.0 |
 
 Two Helm charts are provided, that were used to automate the execution of these suites against the XTDB repository connector:
 
-- [The Helm chart used to execute the CTS suite :material-github:](https://github.com/odpi/egeria-connector-xtdb/tree/main/cts/charts/ec-cts-xtdb){ target=gh }
-- [The Helm chart used to execute the PTS suite :material-github:](https://github.com/odpi/egeria-connector-xtdb/tree/main/cts/charts/ec-pts-xtdb){ target=gh }
+- [The Helm chart used to execute the CTS suite](/egeria-docs/guides/operations/kubernetes/charts/cts)
+- [The Helm chart used to execute the PTS suite](/egeria-docs/guides/operations/kubernetes/charts/pts)
 
 These use a default configuration for the XTDB repository where Lucene is used as a text index and RocksDB is used for all persistence: index store, document store and transaction log. No additional tuning of any parameters (XTDB or RocksDB) is applied: they use all of their default settings.
 

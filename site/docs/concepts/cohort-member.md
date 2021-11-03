@@ -54,17 +54,17 @@ Follow the links below the diagram to find out more about each one's purpose.
 ![Figure 2](cohort-member-types.svg)
 > **Figure 2:** Different types of OMAG Servers that can be connected via a cohort
 
-* [Metadata Access Server](metadata-access-server.md)
-   * [Metadata Access Store](metadata-access-store.md)
-   * [Metadata Access Point](metadata-access-point.md)
-* [Repository Proxy](repository-proxy.md)
-* [Conformance Test Server](conformance-test-server.md)
+- [Metadata Access Server](/egeria-docs/concepts/metadata-access-server)
+   - [Metadata Access Store](/egeria-docs/concepts/metadata-access-store)
+   - [Metadata Access Point](/egeria-docs/concepts/metadata-access-point)
+- [Repository Proxy](/egeria-docs/concepts/repository-proxy)
+- [Conformance Test Server](/egeria-docs/concepts/conformance-test-server)
 
 ## More information
 
 There is more detailed information about the operation of an open
 metadata repository cohort in 
-[Cohort Operation](/egeria-docs/features/cohort-operation/overivew).
+[Cohort Operation](/egeria-docs/features/cohort-operation/overview).
 
 The administration hands on lab called "**Understanding Cohort Configuration Lab**"
 provides an opportunities to query the cohort registries of cohort members as they

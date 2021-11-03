@@ -220,7 +220,7 @@ Since the proxy backend is only supporting one processing engine it can be manag
 
 ### Egeria's OpenLineage support
 
-Egeria offers two approaches to capture OpenLineage events from the processing engines.  The first (figure 23) uses an [integration connector](/egeria-docs/connectors/integration/kafka-open-lineage-receiver-integration-connector) listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
+Egeria offers two approaches to capture OpenLineage events from the processing engines.  The first (figure 23) uses an [integration connector](/egeria-docs/connectors/integration/open-lineage-event-receiver-integration-connector) listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
 
 ![Figure 23](open-lineage-async-egeria-integration.svg)
 > **Figure 23:** Receiving events via the Kafka topic populated by the proxy backend
@@ -255,7 +255,7 @@ The numbers on the diagram refer to the notes below.
 
 2. A third party technology is using the proxy backend to publish OpenLineage event to a Kafka topic.
 
-3. The [Kafka OpenLineage Receiver](/egeria-docs/connectors/integration/kafka-open-lineage-receiver-integration-connector) integration connector is receiving OpenLineage events from the Kafka topic.  It passes them to the Lineage Integrator OMIS's context manager via its own context.
+3. The [OpenLineage Event Receiver](/egeria-docs/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving OpenLineage events from the Kafka topic.  It passes them to the Lineage Integrator OMIS's context manager via its own context.
 
 4. The [Governance Action OpenLineage](/egeria-docs/connectors/integration/governance-action-open-lineage-integration-connector) integration connector has registered a listener to receive events about the [governance actions](/egeria-docs/concepts/governance-action) that are being processed in the open metadata ecosystem.  
 

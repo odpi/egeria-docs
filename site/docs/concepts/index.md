@@ -44,7 +44,7 @@
 - [Community](/egeria-docs/concepts/community)
 - [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview)
 - [Configuration Document](/egeria-docs/concepts/configuration-document)
-- [Configuration Document Store Connector](/egeria-docs/guides/developer/runtime-connectors/configuration-document-store-connector)
+- [Configuration Document Store Connector](/egeria-docs/concepts/configuration-document-store-connector)
 - [Configuration Properties](/egeria-docs/concepts/configuration-properties)
 - [Conformance Test Server](/egeria-docs/concepts/conformance-test-server)
 - [Conformance Test Suite](/egeria-docs/guides/cts/overview)
@@ -106,7 +106,7 @@
 - [Feedback](/egeria-docs/concepts/feedback)
 - Files
   - [omag.server.servername.config](/egeria-docs/concepts/configuration-document)
-  - [servername.cohortname.registrystore](/egeria-docs/guides/developer/runtime-connectors/cohort-registry-store-connector)
+  - [servername.cohortname.registrystore](/egeria-docs/connectors/runtime/file-cohort-registry-store-connector)
 - [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
 - [Frameworks](/egeria-docs/frameworks)
   - [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview)
@@ -320,7 +320,7 @@
 - [Useful Resource](/egeria-docs/concepts/useful-resource)
 - [User Identity](/egeria-docs/concepts/user-identity)
 - [User Roles](/egeria-docs/concepts/person-role)
-- [Users](/egeria-docs/concepts/user-identity)
+- [Users](user-identity)
 
 
 
@@ -328,6 +328,8 @@
 
 - [View Server](/egeria-docs/concepts/view-server)
 - [View Services](/egeria-docs/services/omvs)
+- [Virtual Connection](/egeria-docs/concepts/connection)
+- [Virtual Connector](/egeria-docs/concepts/connector)
 
 ## W
 

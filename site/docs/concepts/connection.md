@@ -17,12 +17,23 @@ It links to an optional **Endpoint** and/or **ConnectorType** object.
 access the Asset.
 * **Endpoint** - this is the object that describes the server endpoint where the asset is accessed from.
 
-Connector types and endpoints can be reused in multiple connections.
+Figure 1 shows the structure of a connection. Connector types and endpoints can be reused in multiple connections.
 
-![Connection Structure](connection.svg)
+![Figure 1](connection.svg)
 > **Figure 1:** Connection structure
 
 Connections are typically managed in a metadata repository but they can also be manually populated.
+
+## Virtual connections
+
+A virtual connection is a connection that provides a hierarchy of connection objects.  It is used to create [virtual connectors](connector.md).  When a virtual connection is used to create a connector, the connector broker looks to see if the resulting connector implements the `VirtualConnectorExtension` interface.  If the connector does implement this interface, the connector broker creates connectors for each of the connections nested in the virtual connection. The resulting connectors are then passed to the virtual connector through the `initializeEmbeddedConnectors` method.
+
+Figure 2 shows an example of a virtual connection with two nested connections (see `EmbeddedConnections`).  One of these connections is also a virtual connection and will be processed in the same way as its parent.
+
+![Figure 2](virtual-connection.svg)
+> **Figure 2:** Example virtual connection structure
+
+The [open metadata topic connector](/egeria-docs/concepts/open-metadata-topic-connector) is an example of a connector that is designed to be nested inside a virtual connector.
 
 ## Connection implementations
 

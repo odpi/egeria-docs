@@ -3,19 +3,9 @@
 
 # Using Connectors
 
-A connector is a client library for accessing an
-[asset](/egeria-docs/concepts/asset).
-Egeria provides a framework
-called the Open Connector Framework (OCF) for writing, configuring and using connectors.
-
-Typically a connector is written to support a specific type of asset.  It has
-two main APIs:
-
-* An API for working with the asset itself
-* An API for retrieving metadata
 
 
-[*Connectors*](/egeria-docs/guides/developer/guide/#what-is-a-connector) can be created through the following clients:
+[*Connectors*](/egeria-docs/concepts/connector) can be created through the following clients:
 
 - [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview)
 - [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)

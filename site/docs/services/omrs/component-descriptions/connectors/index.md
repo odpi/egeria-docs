@@ -3,33 +3,33 @@
 
 # Connectors consumed by the OMRS
 
-A Connector is a Java class that supports the standard [Open Connector Framework (OCF)](../../../../frameworks/open-connector-framework) APIs.
+A Connector is a Java class that supports the standard [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) APIs.
 The Open Metadata Repository Services (OMRS) defines the following connectors to enable
 support for specific operating platform services to be plugged into the OMRS.
 
-* **[Audit Log Store Connector](../../../../concepts/audit-log-store-connector.md)** - supports the reading and writing of
-audit log records to specific destinations on behalf of the **[OMRS Audit Log](../audit-log.md)**.
+* **[Audit Log Destination Connector](/egeria-docs/concepts/audit-log-destination-connector)** - supports the reading and writing of
+audit log records to specific destinations on behalf of the **[OMRS Audit Log](/egeria-docs/concepts/audit-log**.
 
-* **[Cohort Registry Store Connector](../../../../concepts/cohort-registry-store-connector.md)** - supports the
+* **[Cohort Registry Store Connector](/egeria-docs/concepts/cohort-registry-store-connector)** - supports the
 reading and writing of the cohort registry store to specific destinations on behalf of
 the **[Cohort Registry](../cohort-registry.md)**.
 
-* **[Event Mapper Connector](../../../../concepts/event-mapper-connector.md)** - informs a cohort
+* **[Event Mapper Connector](/egeria-docs/concepts/event-mapper-connector)** - informs a cohort
 of changes to metadata mastered in a third party metadata repository that
 occurred through the third party technology's own mechanisms.
 It is always paired with the repository connector for
 the third party technology.
 
 * **[OMRS Topic Connector](omrs-topic-connector.md)** - manages the exchange 
-of **[OMRS Events](../../event-descriptions/README.md)** with
-the **[OMRS Topic](../../omrs-event-topic.md)** by calling
+of **[OMRS Events](/egeria-docs/concepts/cohort-events)** with
+the `OMRS Topic` by calling
 the **[Open Metadata Topic Connector](open-metadata-topic-connector.md)**.
 
-* **[Open Metadata Archive Store Connector](open-metadata-archive-store-connector.md)** - supports the
-reading and writing of **[open metadata archives](../../open-metadata-archive.md)**
+* **[Open Metadata Archive Store Connector](/egeria-docs/concepts/open-metadata-archive-store-connector)** - supports the
+reading and writing of **[open metadata archives](/egeria-docs/conecepts/open-metadata-archive)**
 on behalf of the **[archive manager](../archive-manager.md)**.
 
-* **[Open Metadata Topic Connector](open-metadata-topic-connector.md)** - manages
+* **[Open Metadata Topic Connector](/egeria-docs/concepts/open-metadata-topic-connector)** - manages
 the calls to the **[event bus](../../../../admin-services/docs/concepts/event-bus.md)** to support
 specific topic connectors such as the OMRS Topic Connector described above.
 

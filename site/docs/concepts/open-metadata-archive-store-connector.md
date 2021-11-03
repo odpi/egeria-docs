@@ -1,10 +1,15 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 # Open Metadata Archive Store Connector
 
 The open archive store connector provides a common interface
-for managing stores of [Open Metadata Archives](../../open-metadata-archive.md).
+for managing stores of [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive).
 
 Its interface is defined in `OpenMetadataArchiveStore`
 
@@ -34,13 +39,16 @@ There are 3 sections:
   - TypeStore: a list of new AttributeTypeDefs, new TypeDefs and patches to existing TypeDefs.
   - InstanceStore: a list of new metadata instances (Entities, Relationships and Classifications).
 
-The definition of the connector interface for these connectors is defined in the `repository-services-apis` module in the [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore) Java package.
+The definition of the connector interface for these connectors is
+defined in the `repository-services-api` module
+in the [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore) Java package.
 
-A implementations of this type of connector is located in the [adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementatio/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors) module.
+A implementations of this type of connector is located in the
+[adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors)
+module.
 
 ## Related information
 
 - [Open Metadata Archive Store Connectors in the Connector Catalog](/egeria-docs/connectors/#runtime-connectors)
-
-
-----8<-- "snippets/abbr.md"
+ 
+--8<-- "snippets/abbr.md"

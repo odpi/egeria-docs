@@ -6,7 +6,7 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Audit Log Store Connectors
+# Writing Audit Log Store Connectors
 
 The *audit log store connectors* provide a common interface to an audit log destination. It is used by the [OMAG Server's](/egeria-docs/concepts/omag-server)'s [audit log](/egeria-docs/concepts/audit-log).
 

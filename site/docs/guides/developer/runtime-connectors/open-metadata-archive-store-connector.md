@@ -6,7 +6,7 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Open Metadata Archive Store Connectors
+# Writing Open Metadata Archive Store Connectors
 
 The *open archive store connectors* provide a common interface for managing stores of [open metadata archives](/egeria-docs/concepts/open-metadata-archive).
 

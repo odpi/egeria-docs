@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Kafka Open Lineage Event Receiver Integration Connector
+# Open Lineage Event Receiver Integration Connector
 
 ??? info "Connector details"
     - Connector Category: [Integration Connector](/egeria-docs/connectors/integration-connector)
@@ -42,7 +42,7 @@ Its connection definition to use on the [administration commands that configure 
     }
     ```
 
-    - Add the connection for the open metadata topic connector in the `embeddedConnections` section replacing {{topicConnection}}.  This will have the topic name in the endpoint's `networkAddress`.  The example below shows the  connection for the [Kafka open metadata topic connector](/egeria-docs/connectors/runtime/kafka-open-metadata-to)
+    - Add the connection for the open metadata topic connector in the `embeddedConnections` section replacing {{topicConnection}}.  This will have the topic name in the endpoint's `networkAddress`.  The example below shows the  connection for the [Kafka open metadata topic connector](/egeria-docs/connectors/resource/kafka-open-metadata-topic-connector)
 
     !!! example "Kafka topic connection configuration"
         ```json linenums="1" hl_lines="11-40"

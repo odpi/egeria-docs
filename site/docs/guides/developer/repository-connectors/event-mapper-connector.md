@@ -6,9 +6,9 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Event mapper connector
+# Writing Event mapper connectors
 
-The **event mapper connector** provides a common API for
+The *event mapper connector* provides a common API for
 specific implementations of OMRS event mappers to implement.
 
 Event mappers are needed in [repository proxy](/egeria-docs/concepts/repository-proxy)

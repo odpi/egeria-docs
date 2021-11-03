@@ -6,7 +6,7 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Open Metadata Topic Connector
+# Writing Open Metadata Topic Connectors
 
 The open metadata topic connector provides a topic interface to a generic string event.
 

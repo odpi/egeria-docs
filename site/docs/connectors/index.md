@@ -82,7 +82,7 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/egeria-
 
 | Connector | Description |
 |---|---|
-| [Kafka Open Lineage Receiver integration connector](/egeria-docs/connectors/integration/kafka-open-lineage-receiver-integration-connector) | Connector to receive open lineage events from a kafka topic and publish them to lineage integration connectors with listeners registered in the same instance of the Lineage Integrator OMIS.|
+| [Open Lineage Event Receiver integration connector](/egeria-docs/connectors/integration/open-lineage-event-receiver-integration-connector) | Connector to receive open lineage events from an evvent topic and publish them to lineage integration connectors with listeners registered in the same instance of the Lineage Integrator OMIS.|
 | [Governance Action to Open Lineage integration connector](/egeria-docs/connectors/integration/governance-action-open-lineage-integration-connector) | Connector to listen for governance actions executing in the open metadata ecosystem, generate open lineage events for them and publish them to the integration connectors running in the same instance of Lineage Integrator OMIS that are listening for OpenLineage events. |
 | [API-based Open Lineage Log Store integration connector](/egeria-docs/connectors/integration/api-based-open-lineage-log-store-integration-connector) | Connector that calls an OpenLineage compliant API to store the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS.|
 | [File-based Open Lineage Log Store integration connector](/egeria-docs/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
@@ -161,40 +161,6 @@ The definition of the connector interfaces for governance action services is def
 *Runtime* connectors support Egeria's runtime:
 Connectors enable Egeria to operate in many environments by providing plug-in points for the runtime services
 it needs to operate.  Most of these connectors relate to persistent storage, or connections to distributed services.
-
-
-### Open Metadata Topic Connectors
-
-The Open Metadata Topic Connectors are used by Egeria to read and write 
-[events](/egeria-docs/concepts/basic-concepts/#event) to a
-[topic](/egeria-docs/concepts/basic-concepts/#topic) managed by an
-[event broker](/egeria-docs/concepts/basic-concepts/#event-broker).
-These events contain notifications relating to changes in metadata and the topic provides
-an asynchronous event exchange service hosted in the event broker.
-
-![Figure 6](/egeria-docs/connectors/runtime/open-metadata-topic-connector.svg)
-> **Figure 6:** Open Metadata Topic Connectors
-
-The Open Metadata Topic Connectors connect servers into an [open metadata repository cohort](/egeria-docs/concepts/cohort-member)
-and exchange notifications through the [Open Metadata Access Services (OMAS)'s](/egeria-docs/services/omas)
-topics called the
-[InTopic](/egeria-docs/concepts/in-topic) and
-[OutTopic](/egeria-docs/concepts/out-topic).
-
-Egeria provides a single implementation of an open metadata connector for Apache Kafka that it uses by default.
-
-* The [Kafka Open Metadata Topic Connector](/egeria-docs/connectors/runtime-connectors/kafka-open-metadata-topic-connector) implements 
-an [Apache Kafka](https://kafka.apache.org/) connector for a topic that exchanges
-Java Objects as JSON payloads.
-
-The definition of the connector interface for these connectors is
-defined in the [repository-services-api](../../../open-metadata-implementation/repository-services/repository-services-apis) module
-in the
-[org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/openmetadatatopic) Java package.
-
-It is configured in the Egeria
-[OMAG Servers](../../../open-metadata-implementation/admin-services/docs/concepts/omag-server.md) through the [Event Bus Configuration](../../../open-metadata-implementation/admin-services/docs/concepts/event-bus.md).
-
 
 ## Configuration Document Store Connectors
 
@@ -388,9 +354,35 @@ metadata catalog using the Asset Owner OMAS,
 
 *More coming ...*
 
-## Kafka
 
-* The [kafka event bus connector](/egeria-docs/connectors/resource-connectors/kafka-event-bus-connector) provides support for receiving or sending plaintext events.
+## Open Metadata Topic Connectors
+
+The Open Metadata Topic Connectors are used by Egeria to read and write 
+[events](/egeria-docs/concepts/basic-concepts/#event) to a
+[topic](/egeria-docs/concepts/basic-concepts/#topic) managed by an
+[event broker](/egeria-docs/concepts/basic-concepts/#event-broker).
+These events contain notifications relating to changes in metadata and the topic provides
+an asynchronous event exchange service hosted in the event broker.
+
+![Figure 6](/egeria-docs/connectors/resource/open-metadata-topic-connector.svg)
+> **Figure 6:** Open Metadata Topic Connectors
+
+The Open Metadata Topic Connectors connect servers into an [open metadata repository cohort](/egeria-docs/concepts/cohort-member)
+and exchange notifications through the [Open Metadata Access Services (OMAS)'s](/egeria-docs/services/omas)
+topics called the
+[InTopic](/egeria-docs/concepts/in-topic) and
+[OutTopic](/egeria-docs/concepts/out-topic).
+
+Egeria provides a single implementation of an open metadata connector for Apache Kafka that it uses by default.
+
+* The [Kafka Open Metadata Topic Connector](/egeria-docs/connectors/resource-connectors/kafka-open-metadata-topic-connector) implements 
+an [Apache Kafka](https://kafka.apache.org/) connector for a topic that exchanges
+Java Objects as JSON payloads.
+
+The definition of the connector interface for these connectors is defined in the `repository-services-apis` module in the [org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/openmetadatatopic) Java package.
+
+It is configured in the Egeria [OMAG Servers](/egeria-docs/concepts/omag-server) through the [Event Bus Configuration](/egeria-docs/concepts/event-bus).
+
 
 
 --8<-- "snippets/abbr.md"

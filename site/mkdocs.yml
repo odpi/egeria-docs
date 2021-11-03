@@ -59,7 +59,7 @@ nav:
                       - Integration Connectors: guides/developer/integration-connectors/overview.md
                       - Repository Connectors: guides/developer/repository-connectors/overview.md
                       - Runtime Connectors:
-                            - Audit Log Store: guides/developer/runtime-connectors/audit-log-store-connector.md
+                            - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
                             - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
                             - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
                             - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
@@ -79,6 +79,12 @@ nav:
                             - Kafka Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
                       - API Connectors:
                             - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
+                      - Lineage Connectors:
+                            - OpenLineage Event Receiver : connectors/integration/open-lineage-event-receiver-integration-connector.md
+                            - OpenLineage API Log Store : connectors/integration/api-based-open-lineage-log-store-integration-connector.md
+                            - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
+                            - OpenLineage Cataloguer : connectors/integration/open-lineage-cataloguer-integration-connector.md
+                            - Governance Action OpenLineage Integrator : connectors/integration/governance-action-open-lineage-integration-connector.md
                 - Runtime:
                       - Repository:
                             - Pluggable Repositories:
@@ -93,10 +99,9 @@ nav:
                                   - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
                                   - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
                                   - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
-                      - Open Metadata Topic:
-                            - Kafka Open Metadata Topic Connector: connectors/runtime/kafka-open-metadata-topic-connector.md
                 - Digital Resource:
-                      - Kafka Event Bus Connector : connectors/resource-connectors/kafka-event-bus-connector.md
+                      - Open Metadata Topic:
+                            - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
       - Features:
           - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md
@@ -543,10 +548,10 @@ nav:
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
-      - Audit Log Store: concepts/audit-log-store-connector.md
+      - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
-      - Cohort Registry Store: concepts/cohort-registry-store-connector.md
+      - Cohort Registry Store Connector: concepts/cohort-registry-store-connector.md
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md
@@ -608,6 +613,7 @@ nav:
       - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md
       - Open Metadata Instance: concepts/open-metadata-instances.md
       - Open Metadata Type Definitions: concepts/open-metadata-type-definitions.md
+      - Open Metadata Topic Connector: concepts/open-metadata-topic-connector.md
       - Organization: concepts/organization.md
       - Out Topic: concepts/out-topic.md
       - Peer Network: concepts/peer-network.md

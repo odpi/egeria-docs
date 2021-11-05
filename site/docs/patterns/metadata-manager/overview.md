@@ -5,7 +5,9 @@
 
 Metadata is collected together, organized and maintained within a catalog service to enable both individuals and automated services to search for, select and retrieve information about relevant resources necessary to perform a specific task.  These resources could be data, systems, applications, software components, processes, ...
 
-Each of these types of resources are represented in open metadata as *[Assets](/egeria-docs/concepts/asset)*.
+Each of these resources are represented in open metadata as *[Assets](/egeria-docs/concepts/asset)* and the catalog is often referred to as an asset catalog.
+
+Figure 1 shows the Egeria components that 
 
 ## The contents of an asset catalog
 
@@ -35,6 +37,8 @@ Egeria offers the services to build a catalog with the following types of inform
 - [Related assets](#related-assets)
 
 This is built on an [extensible type system](/egeria-docs/features/open-type-system/overview) that allows further information to be catalogued.  [Automation](#scaling-the-asset-catalog-through-automation) is used to expand the contents of your asset catalog without creating a huge workload for your people.
+
+
  
 ### Basic asset properties
 
@@ -282,7 +286,7 @@ The idea is that these approaches are selected for each type of asset and blende
 ## Related information
 
 - The [Asset](/egeria-docs/concepts/asset) page provides more information on the different types of assets supported by open metadata.  The asset types can be extended dynamically if needed.
-- The type definition for the **Asset** entity is found in model [0010 Basic Model](/egeria-docs/types/0/0010-Base-Model).
+- The type definition for the *Asset* entity is found in model [0010 Basic Model](/egeria-docs/types/0/0010-Base-Model).
 - Examples of representing different types of assets using the open metadata types are found in [Mapping Technology](/egeria-docs/guides/developer/mapping-technology).
 - The [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview) provide practical examples showing all of the techniques to manage an asset catalog, allowing you to try each of the features to assess how they could work in your organization.
 

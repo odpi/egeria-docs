@@ -8,7 +8,7 @@ With this approach, you do not need to download, install, configure and understa
 that Egeria itself uses.
 
 
-* [Intro & Setting up Kubernetes & Helm](https://odpi.github.io/egeria-docs/guides/admin/kubernetes/intro/)
-* [Installing the Coco Pharmaceuticals lab chart](https://odpi.github.io/egeria-docs/guides/admin/kubernetes/chart_lab/)
+* [Intro & Setting up Kubernetes & Helm](/egeria-docs/guides/operations/kubernetes/)
+* [Installing the Coco Pharmaceuticals lab chart](/egeria-docs/guides/operations/kubernetes/charts/lab/)
 
 --8<-- "snippets/abbr.md"

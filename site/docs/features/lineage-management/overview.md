@@ -5,11 +5,11 @@
 
 Lineage shows how data flows from its origins to its various destinations. This includes details of the processing along the way.  It is used to understand:
  
-* whether the data used in reports and analytics models has come from the correct sources and has passed through the correct processing (traceability of data).
+* whether the data used in reports and analytics models has come from the correct sources and has passed through the correct processing (known as *traceability of data*).
   
-* what would be the impact on downstream processing and consumers if something was changed (impact analysis).
+* what would be the impact on downstream processing and consumers if something was changed (known as *impact analysis*).
 
-* whether the operational processes that implement the data flows are executing correctly.
+* whether the operational processes that implement the data flows are executing correctly (known as *governance by expectation*).
 
 
 ## The lineage graph
@@ -26,7 +26,7 @@ On the left here is an Apache Spark job that reads from a file, looks up a value
 
 As the importance of lineage is understood, it is becoming common that individual technologies provide a lineage view of their processing similar to figure 1.  This is very useful to the immediate users of that technology.  However from an enterprise perspective these technologies do not run in isolation.  Enterprises need to be able to link the lineage from these technologies together to show how data flows from its original sources to its ultimate destinations.
 
-Figure 2 shows a flow of data through multiple technologies.  It begins with a Relational Database (RDB). This is read by an ETL job that writes all or some of its contents to an Apache Hive table. An Apache Spark job is initiated through an API that reads from the Apache Hive table and invokes an Apache Airflow DAG (process) that writes the information into an Apache Avro file and an event to an Apache Kafka topic. 
+Figure 2 shows a flow of data through multiple technologies.  It begins with a Relational Database (RDB). This is read by an ETL job that writes all or some of its contents to an Apache Hive table. A report is requested which calls and API to retrieve the data. An Apache Spark job is initiated through the API. It reads from the Apache Hive table, runs an analytics model based on the data from the table and invokes an Apache Airflow DAG (process) before returning the results to the report.  The Apache Airflow DAG writes the information into an Apache Avro file and an event to an Apache Kafka topic. 
 
 ![Figure 2](lineage-capture.svg)
 > **Figure 2:** The lineage graph emerges
@@ -44,7 +44,7 @@ There are also often systems that act as a hub, with many processes extracting d
 
 Figure 4 shows Egeria's architecture for lineage.  There are three parts to it:
 
-* *Lineage capture* - through the [integration daemon](/egeria-docs/concepts/integration-daemon) and [Data Engine Proxy](/egeria-docs/concepts/data-engine-proxy) servers, metadata about data sources and the processing around them is captured and shared through open metadata.
+* *Lineage capture* - through the [integration daemon](/egeria-docs/concepts/integration-daemon) and [Data Engine Proxy](/egeria-docs/concepts/data-engine-proxy) servers, metadata about data sources and the processing around them is captured and shared through open metadata.  It is possible that one service is capturing particular types of data sources and another is capturing processes.
 
 * *Stewardship* - the lineage information from each of the technologies is linked together.  Where the naming of data sources and processes is consistent, this assembling of the lineage graph is automatic.  However, experience shows that if it can be different, it will be different. Many technologies make their own choices in naming and so governance action services along with human stewardship is required to match and link the graphs together.  The governance action services run in the [Engine Host](/egeria-docs/concepts/engine-host) server.  They automatically add the relationships between the lineage contributions from each technology that may need to be verified by a human steward.  The human steward may also manually add relationships where there is no well known pattern that can be encoded in a governance action services.  Stewardship also involves analysis of the lineage to ensure the digital landscape is operating as it should.
 
@@ -53,15 +53,15 @@ Figure 4 shows Egeria's architecture for lineage.  There are three parts to it:
 The three parts of the lineage architecture are summarized in figure 4.
 
 ![Figure 4](lineage-architecture.svg)
-> **Figure 4:** The lineage architecture showing the three phases of (1) lineage capture through Egeria's automated cataloguing capabilities, (2) automated and human stewardship coordinated by the engine host server to stitch the lineage contributions together into full data flows, and finally (3) lineage preservation and use in the open lineage server.
+> **Figure 4:** The lineage architecture showing the three phases of (1) lineage capture typically through Egeria's automated cataloguing capabilities, (2) automated and human stewardship coordinated by the engine host server to stitch the lineage contributions together into full data flows, and finally (3) lineage preservation and use in the open lineage server.
 
 ## Lineage capture
 
 Capturing lineage has both a static and a dynamic aspect to it.  
 
-- The *static* aspect involves cataloguing all of the [resources](/egeria-docs/concepts/resource) that make up your digital landscape.  This defines all of the players such as the data sources and processing engines and how they link together.  
+- The *static* aspect involves cataloguing all of the [resources](/egeria-docs/concepts/resource) that are deployed into your digital landscape.  This defines the data sources and processing engines and how they link together.  Ideally this cataloguing is done as these resources are deployed, which may then be augmented with [automated cataloguing](/egeria-docs/features/inteegrated-cataloguing) of resources and [metadata discovery](/egeria-docs/features/discovery-and-stewardship).  It is also possible that tools may catalogue resources under the guidance of their users and this metadata is [shared with the open metadata ecosystem](/egeria-docs/patterns/metadata-exchange).
 
-- The *dynamic* aspect captures information about the activity that happens day-to-day and its effects.
+- The *dynamic* aspect captures information about the activity that happens day-to-day, such as the running of processes, and its effects.  This could include details of the volumes of data discovered and/or processed along with any analysis of its contents.
 
 Each of these aspects have their challenges.
 
@@ -73,9 +73,9 @@ Each of these aspects have their challenges.
 
 ### Design lineage verses operational lineage
 
-The static and dynamic aspects of lineage are typically referred to as design lineage and operational lineage respectively.
+The static and dynamic aspects of lineage capture contribute to both *design lineage* and *operational lineage*.
 
-So design lineage describes the digital resources and their linkages that are known at the time they are deployed.  Some tools, such as ETL engines, produce design lineage in their tools as part of their design process.  Other technologies rely on design lineage captured in the dev-ops pipeline or the automatic cataloguing of digital resources as they are added to the pre-production or production environment.
+Design lineage describes all of the digital resources and their linkages.  Some tools, such as ETL engines, produce design lineage in their tools as part of their design process.  Other technologies rely on design lineage captured in the dev-ops pipeline or the automatic cataloguing of digital resources as they are added to the pre-production or production environment.
 
 Operational lineage is the lineage information produced by a data processing engine when it runs processes. It enables an organization to validate that processes run at the right time, using the right data and produce the right results.  It primarily focuses on capturing the dynamic aspects of lineage, but may also identify parts of the digital landscape that have not yet been catalogued.
 
@@ -90,7 +90,7 @@ Similarly, if there is a proposal to change the schema of either databases, the 
 
 The operational lineage shown at the bottom of figure 5 captures process instance information each time the process runs.  It is then possible to see how often it runs, and how much data it processes each time.  This could uncover that the quality problem identified in the destination database was caused by the fact that although the process should run every hour, it had not run for a week and so the values from the source database have not been transferred.
 
-Running a process instance can cause resources (such as database tables) to be created, moved and deleted.  This blurs the boundary between design lineage and operational lineage since the operational lineage needs to cause the cataloging of resources that were dynamically created or modified which is logically also contributing to design lineage.  
+Running a process instance can cause resources (such as database tables) to be created, moved and deleted.  This means that the dynamically captured lineage needs to contribute both to design lineage (to catalog the changing resources) and operational lineage.  
 
 This blurring between design lineage and operational lineage is particularly true when processing files. The next set of images (figures 6-11) show different patterns of lineage that can be chosen for particular circumstances.  The choice comes down to the value that the detail brings against its cost of capture and processing.
 
@@ -98,7 +98,7 @@ Each figure shows the same process that reads a source file created dynamically 
 
 At deployment time, the files do not exist and so the process is not connected to any files except, potentially [templates](../templated-cataloguing) for the operational cataloguing of files when the process is running.
 
-It is not until the process runs that its lineage is captured.  Figures 6-11 show different choices in the level of detail that could be captured.  Figure 6 begins with the capture of every run of the process (that is its process instances) linked to the particular file that was processed. 
+It is not until the process runs that its lineage is captured.  Figures 6-11 show different levels of detail that could be captured.  Figure 6 begins with the capture of every run of the process (that is its process instances) linked to the particular file that was processed. 
 
 ![Figure 6](operational-lineage-files-1.svg)
 > **Figure 6:** New files are read and created each time the process runs.  The operational lineage shows which files are associated with each run of the process.
@@ -130,11 +130,11 @@ It is also possible that even the cataloguing of the files themselves is not use
 ![Figure 11](operational-lineage-files-6.svg)
 > **Figure 11:** A simple static lineage flow between the source folder, process and destination folder.
 
-Each of the patterns shown in figures 7-11 reduce the amount of metadata that is needed to capture the full lineage shown in figure 6. The missing metadata can be filled out with knowledge of how the process works. This knowledge may be needed when making use of the lineage at a later date.
+Each of the patterns shown in figures 7-11 reduce the amount of metadata that is captured compared to the full lineage shown in figure 6. The missing metadata can be filled out with knowledge of how the process works. This knowledge may be needed when making use of the lineage at a later date.
 
 ### The OpenLineage Standard
 
-[OpenLineage](https://github.com/OpenLineage/OpenLineage) is a sister open source project to Egeria in the [LF AI and Data Foundation](https://lfaidata.foundation/).  It is very welcome since it defines a standard for [*operational lineage*](#design-lineage-verses-operational-lineage).
+[OpenLineage](https://github.com/OpenLineage/OpenLineage) is a sister open source project to Egeria in the [LF AI and Data Foundation](https://lfaidata.foundation/).  It is very welcome since it defines a standard for [*dynamic lineage capture*](#lineage-capture).
  
  Figure 12 shows the scope of the standard.  When a processing engine such as *Apache Spark* runs a process, it produces a series of events called *RunEvents* that describe the activity of the process.  The standard covers the format of the events and a simple REST API that receives the events.  The REST API only has one operation called `{{urlroot}}/api/v1/lineage` that takes a single event as the request body.
 

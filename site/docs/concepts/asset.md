@@ -24,7 +24,7 @@ Egeria is particularly focused on maintaining the information necessary for mana
 
 ## Open metadata types
 
-The information about a resource that covers its characteristics and how it should be managed is stored in a sub-graph of open metadata instances (entities and relationships) with the [Asset](/egeria-docs/types/0/0010-Base-Model/#asset) entity at the root. The asset entity contains a small amount of information that merely captures the existence of the resource. Then other entities are linked to it to add more information. It is likely that this additional information is identified, captured and stored by different tools. The open metadata services gather this information together and distribute it to provide the most complete view of the resource's properties. 
+The information about a resource is stored as a linked collection of open metadata instances (entities and relationships) with the [Asset](/egeria-docs/types/0/0010-Base-Model/#asset) entity at the root. The asset entity contains a small amount of information that merely captures the existence of the resource. Then other entities are linked to it to add more information. It is likely that this additional information is identified, captured and stored by different tools. The open metadata services gather this information together and distribute it to provide the most complete view of the resource's properties. 
 
 More information on the types of attachments that can be added to an asset can be found in [Managing Metadata](/egeria-docs/patterns/managing-metadata/overview).
 
@@ -33,14 +33,14 @@ Inheriting from asset is a hierarchy of increasingly-specialized definitions for
 ![Figure 1](asset-hierarchy.svg)
 > **Figure 1:** Hierarchy of asset types defined in the open metadata types
 
-**[Area 2](/egeria-docs/types/2)** of the open metadata types is where the asset hierarchy is built out. 
+*[Area 2 of the open metadata types](/egeria-docs/types/2)* of the open metadata types is where the asset hierarchy is built out. 
 
 
 ## Accessing asset content through connectors
 
-Egeria provides an open framework for accessing the content of digitized assets and the information about them. It is called the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) and it provides specialized connectors (clients) for accessing specific types of assets and the information about them.
+Egeria provides an open framework for accessing the content of digitized resources and the information about them. It is called the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) and it provides specialized connectors (clients) for accessing specific types of assets and the information about them.
 
-The type of connector to use is specified in the [connection](/egeria-docs/concepts/connection) entity that is linked to the asset.
+The type of connector to use is specified in the [connection](/egeria-docs/concepts/connection) that is linked to the asset.
 
 [Model 0205](/egeria-docs/types/2/0205-Connection-Linkage) in the open metadata types shows how an asset is associated with a [connection](/egeria-docs/concepts/connection) object. The connection object provides the properties necessary to create a connector to access the asset's contents.
 

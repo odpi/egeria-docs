@@ -359,6 +359,7 @@ Data Engine provides alternative but similar pattern to capture design time line
 Irrespective of how it gets captured, lineage metadata for assets available in the cohort will be consolidated and exported for preservation by [Asset Lineage OMAS](https://odpi.github.io/egeria-docs/services/omas/asset-lineage/overview) and [Open Lineage Server](https://odpi.github.io/egeria-docs/services/open-lineage-services/).
 
 ![Figure 34](open-lineage-server-data-engine-lineage-capture.svg)
+> **Figure 34:** Capturing lineage using Data Engine Proxy and OMAS.
 
 Once the lineage graphs are assembled, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
 
@@ -367,7 +368,7 @@ Once the lineage graphs are assembled, the lineage can be viewed and analyzed fo
 Open Lineage Server is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
 
 ![Figure 35](open-lineage-server-lineage-warehouse.svg)
-
+> **Figure 35:** Open Lineage Server preservation and use details.
 
 1. Metadata instance events from the cohort are distributed to Metadata Access Server running Asset Lineage OMAS. 
 

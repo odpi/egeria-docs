@@ -301,35 +301,26 @@ Once the duplicates are eliminated, there are still likely to be breakages in th
 
 The adding of relationships in the metadata to link the lineage graph together is called *stitching*.  There are two groups of relationships:
 
-- *[Data passing relationships](/egeria-docs/types/7/0750-Data-Passing)* add the links to show which process called another and the style of the invocation.  These reflect the implementation of the components.
+- *[Data passing relationships](/egeria-docs/types/7/0750-Data-Passing)* add the links to show which process called another and the style of the invocation.  Some of these relationships are captured in the automatic cataloguing and the rest are added during stitching.   The type of relationship reflects the implementation of the components.
+    - *DataFlow* - Shows that data is passed between the two processes - typically by the processing engine that hosts them. 
+    - *ControlFlow* - Shows that control is passed between the two processes - typically by the processing engine that hosts them.
+    - *ProcessCall* - Shows that one process makes an explicit call to another.
 
 - *[LineageMapping relationships](/egeria-docs/types/7/0770-Lineage-Mapping)* associates two elements from different assets that are equivalent.  For example an output data field in one process is the input data field in another.  This is a logical association rather than a implemented association.
 
-#### Data passing relationships
+The stitching relationships can be added at different levels of granularity in the lineage graph.  For example, in figure 28, the process call relationship shows one process calling another.
 
-The data passing relationships are:
-
-- *DataFlow* - Shows that data is passed between the two processes - typically by the processing engine that hosts them. 
-- *ControlFlow* - Shows that control is passed between the two processes - typically by the processing engine that hosts them.
-- *ProcessCall* - Shows that one process makes an explicit call to another.
-
-Some of these relationships are captured in the automatic cataloguing and the rest are added during stitching.
-
-#### Lineage mapping relationships
-
-[Lineage mapping](/egeria-docs/types/7/0770-Lineage-Mapping) relationships can be added at different levels of granularity in the lineage graph.  For example, in figure 28, the lineage mapping shows two connected processes that are equivalent.  They are not handled by duplicate processing since they are used in different contexts - potentially showing different types of detail - and so they need to be kept as distinct elements.
-
-![Figure 28](lineage-mapping-process-to-process.svg)
-> **Figure 28:** Lineage mapping between processes
+![Figure 28](lineage-stitching-process-to-process.svg)
+> **Figure 28:** Process between processes
 
 Figure 29 shows lineage mapping between the ports of a process to show that the output of one port is actually the same as the input of another process.
 
-![Figure 29](lineage-mapping-port-to-port.svg)
+![Figure 29](lineage-stitching-port-to-port.svg)
 > **Figure 29:** Lineage mapping between ports
 
 Figure 30 goes down a level further and links specific data fields.  This level of mapping allows the possible paths of individual data fields to be exposed.
 
-![Figure 30](lineage-mapping-data-fields.svg)
+![Figure 30](lineage-stitching-data-fields.svg)
 > **Figure 30:** Lineage mapping between data fields
 
 Some technologies provide metadata of detailed internal processing using the [data passing relationships](/egeria-docs/types/7/0750-Data-Passing).  Figure 31 shows an example.
@@ -349,26 +340,33 @@ As the lineage mappings are added, the lineage graph grows. Figure 33 shows the 
 
 ### Governing expectations
 
+Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/egeria-docs/concepts/governance-service) running in an [engine host](egeria-docs/concepts/engine-host) can be used to read from the [OpenLineage Log Store](#openlineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
+
+![Figure 34](governance-by-expectation.svg)
+> **Figure 34:** A governance action service called *Process Validation Connector running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.
+
 ## Lineage preservation and use
 
-Data Engine provides alternative but similar pattern to capture design time lineage. In this constellation, metadata from third party processing engines can be captured in two different styles:
+Design lineage can be consolidated and exported for preservation by the [Asset Lineage OMAS](/egeria-docs/services/omas/asset-lineage/overview) and then stored in the [open lineage server](/egeria-docs/concepts/open-lineage-server).
 
-- Dedicated governance server [Data Egine Proxy](https://odpi.github.io/egeria-docs/services/data-engine-proxy-services) to poll metadata in automated way or
-- Caller pattern using [Data Engine OMAS](https://odpi.github.io/egeria-docs/services/omas/data-engine/overview) to push metadata.
+Figure 35 shows metadata capture using:
 
-Irrespective of how it gets captured, lineage metadata for assets available in the cohort will be consolidated and exported for preservation by [Asset Lineage OMAS](https://odpi.github.io/egeria-docs/services/omas/asset-lineage/overview) and [Open Lineage Server](https://odpi.github.io/egeria-docs/services/open-lineage-services/).
+- The [data engine proxy](/egeria-docs/concepts/data-engine-proxy) server to poll metadata in automated way.
+- A caller using [Data Engine OMAS's](/egeria-docs/services/omas/data-engine/overview) API.
 
-![Figure 34](open-lineage-server-data-engine-lineage-capture.svg)
-> **Figure 34:** Capturing lineage using Data Engine Proxy, Data Engine OMAS and Asset Lineage OMAS
+Bot mechanisms push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the open lineage server.
 
-Once the lineage graphs are assembled, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
+![Figure 35](open-lineage-server-data-engine-lineage-capture.svg)
+> **Figure 35:** Capturing lineage using Data Engine Proxy, Data Engine OMAS and Asset Lineage OMAS
+
+Once the lineage graphs are assembled in the open lineage server, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
 
 ### Building a lineage warehouse
 
-Open Lineage Server is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
+The [open lineage server](/egeria-docs/concepts/open-lineage-server) is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
 
-![Figure 35](open-lineage-server-lineage-warehouse.svg)
-> **Figure 35:** Open Lineage Server preservation and use details
+![Figure 36](open-lineage-server-lineage-warehouse.svg)
+> **Figure 36:** Open Lineage Server preservation and use details
 
 1. Metadata instance events from the cohort are distributed to Metadata Access Server running Asset Lineage OMAS. 
 
@@ -386,15 +384,15 @@ Open Lineage Server is the warehouse for lineage. It is the destination store fo
 
 Organizations use horizontal lineage view to understand and visualize how their data flows from origin to various destinations enabling comprehensive data traceability. This view can represent both design or operational lineage aspect with different styles and level of details.
 
-![Figure 36](open-lineage-server-horizontal-view.svg)
-> **Figure 36:** Lineage between data stores and processes on different levels
+![Figure 37](open-lineage-server-horizontal-view.svg)
+> **Figure 37:** Lineage between data stores and processes on different levels
 
 #### Vertical lineage
 
 Organizations use vertical lineage view to visualize how business concepts such as glossaries, terms are mapped to data assets and related elements. This allows business users to understand how digital landscape is implemented and perform impact analysis when needed.
 
-![Figure 37](open-lineage-server-vertical-view.svg)
-> **Figure 36:** Lineage between business glossaries and data stores
+![Figure 38](open-lineage-server-vertical-view.svg)
+> **Figure 38:** Lineage between business glossaries and data stores
 
 ## Summary
 

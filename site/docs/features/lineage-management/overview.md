@@ -351,13 +351,50 @@ As the lineage mappings are added, the lineage graph grows. Figure 33 shows the 
 
 ## Lineage preservation and use
 
+Data Engine provides alternative but similar pattern to capture design time lineage. In this constellation, metadata from third party processing engines can be captured in two different styles:
+
+- Dedicated governance server [Data Egine Proxy](https://odpi.github.io/egeria-docs/services/data-engine-proxy-services) to poll metadata in automated way or
+- Caller pattern using [Data Engine OMAS](https://odpi.github.io/egeria-docs/services/omas/data-engine/overview) to push metadata.
+
+Irrespective of how it gets captured, lineage metadata for assets available in the cohort will be consolidated and exported for preservation by [Asset Lineage OMAS](https://odpi.github.io/egeria-docs/services/omas/asset-lineage/overview) and [Open Lineage Server](https://odpi.github.io/egeria-docs/services/open-lineage-services/).
+
+![Figure 34](open-lineage-server-data-engine-lineage-capture.svg)
+> **Figure 34:** Capturing lineage using Data Engine Proxy, Data Engine OMAS and Asset Lineage OMAS
+
+Once the lineage graphs are assembled, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
+
 ### Building a lineage warehouse
+
+Open Lineage Server is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
+
+![Figure 35](open-lineage-server-lineage-warehouse.svg)
+> **Figure 35:** Open Lineage Server preservation and use details
+
+1. Metadata instance events from the cohort are distributed to Metadata Access Server running Asset Lineage OMAS. 
+
+2. Asset Lineage OMAS selects instance types suitable for lineage. It retrieves asset related metadata and completes the asset context portion of the graph. Once ready, this lineage context graph structured as vertices and edges is sent on Lineage Output Topic for further processing and preservation.
+
+3. Lineage context graph events are consumed up by Open Lineage Services Lineage Event listener that in turn uses technology connector to persist the lineage elements building up the large lineage graph.
+
+4. Lineage jobs run in background to a) poll for changes and request updates using REST API; and b) to scan the lineage graph and augment lineage paths for optimized querying. 
+
+5. Lineage REST API is used to query asset lineage for specific business views such as horizontal and vertical.
 
 ### User views
 
+#### Horizontal lineage
+
+Organizations use horizontal lineage view to understand and visualize how their data flows from origin to various destinations enabling comprehensive data traceability. This view can represent both design or operational lineage aspect with different styles and level of details.
+
+![Figure 36](open-lineage-server-horizontal-view.svg)
+> **Figure 36:** Lineage between data stores and processes on different levels
+
 #### Vertical lineage
 
-#### Horizontal lineage
+Organizations use vertical lineage view to visualize how business concepts such as glossaries, terms are mapped to data assets and related elements. This allows business users to understand how digital landscape is implemented and perform impact analysis when needed.
+
+![Figure 37](open-lineage-server-vertical-view.svg)
+> **Figure 36:** Lineage between business glossaries and data stores
 
 ## Summary
 

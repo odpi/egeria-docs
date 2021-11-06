@@ -40,7 +40,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         !!! beginner "Updating an Audit Log Connector (30 mins)"
         !!! beginner "Testing your connector (30 mins)"
         
-    ???+  intermediate "Writing an integration connector (5 hours)"
+    ???+ intermediate "Writing an integration connector (5 hours)"
         !!! intermediate "Design of an integration connector (30 mins)"
         !!! intermediate "Working with the context (30 mins)"
         !!! intermediate "Receiving events from Egeria (30 mins)"

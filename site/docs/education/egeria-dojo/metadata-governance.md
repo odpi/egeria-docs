@@ -74,7 +74,7 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     !!! intermediate "Backup and recovery (30 mins)"
         - Setting up backups and restoring metadata after a failure
 
-    ???+ intermediate Linking metadata governance to your governance program (3 hours)
+    ???+ intermediate "Linking metadata governance to your governance program (3 hours)"
         !!! intermediate "Governance definitions (30 mins)"
             - Governance domains and definitions
         !!! intermediate "Governance by expectation (30 mins)"

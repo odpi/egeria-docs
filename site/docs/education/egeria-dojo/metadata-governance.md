@@ -5,6 +5,8 @@
 
 As metadata is shared and linked, the gaps and inconsistencies in it are exposed.  In the dojo you will learn how to set up a variety of feature in Egeria to actively govern and maintain your metadata environment.
 
+!!! education "Dojo starts here"
+
     !!! beginner "The importance of metadata governance (45 mins)"
         
     !!! intermediate "Designing your metadata supply chains (45 mins)"
@@ -37,7 +39,7 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     
     !!! intermediate "Backup and recovery (30 mins)"
 
-    ???+  intermediate Linking metadata governance to your governance program (3 hours)
+    ???+ intermediate Linking metadata governance to your governance program (3 hours)
         !!! intermediate "Governance definitions (30 mins)"
         !!! intermediate "Governance by expectation (30 mins)"
         !!! intermediate "Integration with DevOps (15 mins)"

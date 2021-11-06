@@ -46,21 +46,45 @@ The schedule also includes estimated times needed to complete each session. Do t
 ## Developer day summary
 
 !!! education "Developer Day"
-    After completing this day of the dojo you should feel comfortable with calling Egeria's APIs and writing connectors.
+    
+    - *Audience*: Developers
+    - *Objectives*: This dojo day combines learning about new concepts, developing simple components and running them using the Egeria technology.  After completing this day of the dojo you should feel comfortable with calling Egeria's APIs and writing connectors.
+    - *Prerequisites*: [Running Egeria day](#running-egeria-day-summary).
+    - *Required skills*: Familiarity with Java programming and using Git and GitHub.  The exercises use the IntelliJ iDE but you can use your own choice of tool.
+    - *Topics*
+       - Locating Egeria modules
+       - Calling Egeria's APIs
+       - Working with event driven interfaces
+       - Developing connectors and deploying to Egeria
+       - Developing open metadata archives
+       - Using the audit log and related diagnostics
+    - *Time to complete* - 12 hours
 
-    !!! beginner "Egeria's APIs (60 mins)"
-
-    !!! beginner "Connector introduction (60 mins)"
-
-    ???+ intermediate "Developing a Connector, step-by-step (3 hrs)"
-        !!! beginner "Setting up a new project (30 mins)"
-        !!! beginner "Updating an Audit Log Connector (30 mins)"
-        !!! intermediate "Testing your connector (30 mins)"
-        !!! intermediate "Writing an integration connector (2 hours)"
-
-    !!! intermediate "Advanced connector features (60 mins)"
-
+    
 ## Metadata Governance Day summary
+
+!!! education "Metadata Governance"
+
+    - *Audience*: Enterprise architects, Deployers and Operations
+    - *Objectives*: This dojo day combines learning about new concepts and trying them out using the Egeria technology.  After completing this day of the dojo you will understand the key principles of governing your metadata and how to set up Egeria to automate most of your requirements.
+    - *Prerequisites*: [Running Egeria day](#running-egeria-day-summary).
+    - *Required skills*: Familiarity with running commands and using tools such as Postman.  No programming experience is required.
+    - *Topics*
+       - The need for metadata governance
+       - Templates
+       - Metadata security
+       - Governance zones
+       - Using open metadata archives
+       - Automating metadata capture
+       - Using governance actions and metadata discovery
+       - Managing lineage metadata
+       - Connecting metadata governance to your governance program
+          - Governance by expectation
+          - Incident management
+          - Stewardship
+    - *Time to complete* - 13 hours
+      
+
 
 ## Egeria Contributor Day summary
 

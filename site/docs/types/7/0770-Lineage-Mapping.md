@@ -9,7 +9,11 @@ hide:
 
 # 0770 - Lineage Mapping
 
+<<<<<<< HEAD
 Lineage Mapping identifies elements that are [equivalent to each other in the lineage graph](/egeria-docs/features/lineage-management/overview/#the-lineage-graph). It is used to stitch the lineage graph together.
+=======
+Lineage Mapping identifies elements that are [equivalent to each other in the lineage graph](/egeria-docs/features/lineage-management/overview/#stitching). It is used to stitch the lineage graph together.
+>>>>>>> 133fa620839fc5a07fea3d8ea0e78306c093be01
 
 This is contrast with the [Data Passing](/egeria-docs/types/7/0750-Data-Passing) relationships that represent implementation relationships between components.
 

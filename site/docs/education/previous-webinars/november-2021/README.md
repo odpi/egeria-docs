@@ -19,8 +19,11 @@ This will include scenarios:
 Links:
 
 * Link to [event advertising](https://lfaidata.foundation/blog/2021/11/05/please-join-us-for-the-next-egeria-webinar-november-8th/)
+* Presentation
+  <div class="video-wrapper">
+  <iframe src="./Egeria%20Webinar,%20Open%20Lineage%20,%208th%20November%202021.pdf"></iframe>
+  </div> 
 * Link to recording on YouTube TBA
-* Presentation TBA
 
 ----
 Return to [Webinar list](..)

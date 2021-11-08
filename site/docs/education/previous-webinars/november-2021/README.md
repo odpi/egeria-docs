@@ -18,7 +18,7 @@ This will include scenarios:
 
 Links:
 
-* Link to event advertising TBA
+* Link to [event advertising](https://lfaidata.foundation/blog/2021/11/05/please-join-us-for-the-next-egeria-webinar-november-8th/)
 * Link to recording on YouTube TBA
 * Presentation TBA
 

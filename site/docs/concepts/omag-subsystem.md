@@ -10,11 +10,11 @@ hide:
 
 A subsystem is a collection of components within a software server that supports one or more related services. Subsystems can be organized in a hierarchy where course-grained subsystems can be decomposed into more fine-grained subsystems.
 
-The [OMAG Server](omag-server.md) is a flexible software server whose subsystems can be activated (or not) through the presence (or absence) of the subsystem's configuration properties in the OMAG Server's [configuration document](configuration-document.md).
+The [OMAG Server](omag-server.md) is a flexible software server whose subsystems can be activated (or not) through the presence (or absence) of the subsystem's configuration properties in the OMAG Server's [configuration document](/egeria-docs/concepts/configuration-document).
 
 The potential subsystems within an [OMAG Server](omag-server.md) are as follows:
 
-- [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) for supporting access to metadata stored in metadata repositories and the exchange of metadata between repositories via an [open metadata repository cohort](cohort-member.md). The repository services are further divided into [OMRS subsystems](/egeria-docs/services/omrs/#omrs-subsystems) that can be activated independently.
+- [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) for supporting access to metadata stored in metadata repositories and the exchange of metadata between repositories via an [open metadata repository cohort](/egeria-docs/concepts/cohort-member). The repository services are further divided into [OMRS subsystems](/egeria-docs/services/omrs/#omrs-subsystems) that can be activated independently.
 - [Integration daemon services](/egeria-docs/services/integration-daemon-services) for running integration connectors that exchange metadata with third party technologies.
 - [Connected Asset Services](/egeria-docs/services/ocf-metadata-management) for supporting the `ConnectedAsset` interface of a connector.  
 - Dynamically registered services provide specialist APIs for particular technologies and user roles. Each of these services runs in their own subsystem independent of the other registered services. The implementation may come from Egeria or a third party. The links are to Egeria provided dynamic services.

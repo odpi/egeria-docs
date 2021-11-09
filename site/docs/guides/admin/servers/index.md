@@ -3,11 +3,11 @@
 
 # Configuring an OMAG Server
 
-An [OMAG Server](/egeria-docs/concepts/omag-server.md) is a configured set of services and connectors that support the integration of a particular type of technology.
+An [OMAG Server](/egeria-docs/concepts/omag-server) is a configured set of services and connectors that support the integration of a particular type of technology.
 
-There are [different types of OMAG Server](/egeria-docs/concepts/omag-server.md#types-of-omag-server) for each type of technology. Each are configured separately and then linked together to form a connected ecosystem.
+There are [different types of OMAG Server](/egeria-docs/concepts/omag-server#types-of-omag-server) for each type of technology. Each are configured separately and then linked together to form a connected ecosystem.
 
-The [configuration document](/egeria-docs/concepts/configuration-document.md) for the OMAG Server determines which OMAG subsystems (and hence the types of open metadata and governance services) should be activated in the OMAG Server. For example:
+The [configuration document](/egeria-docs/concepts/configuration-document) for the OMAG Server determines which OMAG subsystems (and hence the types of open metadata and governance services) should be activated in the OMAG Server. For example:
 
 - Setting basic descriptive properties of the server that are used in logging and events originating from the server.
 - What type of local repository to use.

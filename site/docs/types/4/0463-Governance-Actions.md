@@ -12,7 +12,7 @@ A **GovernanceAction** describes some processing that is part of the governance
 of an organization's asset or the metadata tht describes them.
 
 The creation of a GovernanceAction typically triggers
-services in the [governance engines](../../../open-metadata-implementation/admin-services/docs/concepts/engine-host.md).
+services in the [governance engines](/egeria-docs/concepts/engine-host).
 As the services run, they add information to the GovernanceAction describing the
 activities run and the actions taken against specific resources (see **TargetForAction**).
 Once the action is complete,
@@ -36,9 +36,9 @@ by the previous action(s).
 
 ![UML](0463-Governance-Actions.svg)
 
-??? deprecated "Deprecated types"
-       The following relationship types were deprecated in favor of attributes in the GovernanceAction to reduce the processing load in maintaining these relationships.
-       - **GovernanceActionExecutor** - Use *executorEngineGUID*, *executorEngineName*, *requestType* and *requestParameters* properties in *GovernanceAction* entity to identify the governance engine that will run the service that will execute the action.  The specific service is identified by the requestType property.  The governance engine is typically either a [DiscoveryEngine](/egeria-docs/types/6/0601-Open-Discovery-Engine) or a [GovernanceActionEngine](/egeria-docs/types/4/0461-Governance-Engines).
-       - **GovernanceActionTypeUse** - Use *governanceActionTypeGUID*, *governanceActionTypeName* and *processName* properties in *GovernanceAction* entity to identify the governance action type (and any associated governance action process) that acted as a template when this governance action was initiated.
+???+ deprecated "Deprecated types"
+    The following relationship types were deprecated in favor of attributes in the *GovernanceAction* to reduce the processing load in maintaining these relationships.
+    - *GovernanceActionExecutor* - Use *executorEngineGUID*, *executorEngineName*, *requestType* and *requestParameters* properties in *GovernanceAction* entity to identify the governance engine that will run the service that will execute the action.  The specific service is identified by the requestType property.  The governance engine is typically either a [DiscoveryEngine](/egeria-docs/types/6/0601-Open-Discovery-Engine) or a [GovernanceActionEngine](/egeria-docs/types/4/0461-Governance-Engines).
+    - *GovernanceActionTypeUse* - Use *governanceActionTypeGUID*, *governanceActionTypeName* and *processName* properties in *GovernanceAction* entity to identify the governance action type (and any associated governance action process) that acted as a template when this governance action was initiated.
     
 --8<-- "snippets/abbr.md"

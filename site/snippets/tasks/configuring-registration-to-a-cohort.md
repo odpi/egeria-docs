@@ -70,7 +70,7 @@ attribute of the Connection objects for each of the cohort topics.
 The additional properties supported are specific to the topic connector implementation.
 For example, [see the Apache Kafka Topic Connector Documentation](../../../adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/kafka-open-metadata-topic-connector).
 
-The result of the cohort configuration call fills out an entry in the cohort list of the server's [configuration document](../concepts/configuration-document.md).
+The result of the cohort configuration call fills out an entry in the cohort list of the server's [configuration document](/egeria-docs/concepts/configuration-document).
 The fields in a cohort list entry are show in Figure 2.
 
 

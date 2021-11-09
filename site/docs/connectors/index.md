@@ -148,10 +148,10 @@ They run in the [Governance Action Open Metadata Engine Service (OMES)](/egeria-
 
 | Connector | Description |
 |---|---|
-| [Generic Element Watchdog Governance Action Service](generic-element-watchdog-governance-action-service.md) | listens for changing metadata elements and initiates governance action processes when certain events occur. |
-| [Generic Folder Watchdog Governance Action Service](generic-folder-watchdog-governance-action-service.md) | listens for changing assets linked to a `DataFolder` element and initiates governance actions when specific events occur. This may be for files directly linked to the folder or located in sub-folders.|
-| [Move/Copy File Provisioning Governance Action Service](move-copy-file-provisioning-governance-action-service.md) | moves or copies files from one location to another and maintains the lineage of the action. |
-| [Origin Seeker Remediation Governance Action Service](origin-seeker-remediation-governance-action-service.md) | walks backwards through the lineage mappings to discover the origin of the data |
+| [Generic Element Watchdog Governance Action Service](/egeria-docs/connectors/governance-action/generic-element-watchdog-governance-action-service) | listens for changing metadata elements and initiates governance action processes when certain events occur. |
+| [Generic Folder Watchdog Governance Action Service](/egeria-docs/connectors/governance-action/generic-folder-watchdog-governance-action-service) | listens for changing assets linked to a `DataFolder` element and initiates governance actions when specific events occur. This may be for files directly linked to the folder or located in sub-folders.|
+| [Move/Copy File Provisioning Governance Action Service](/egeria-docs/connectors/governance-action/move-copy-file-provisioning-governance-action-service) | moves or copies files from one location to another and maintains the lineage of the action. |
+| [Origin Seeker Remediation Governance Action Service](/egeria-docs/connectors/governance-action/origin-seeker-remediation-governance-action-service) | walks backwards through the lineage mappings to discover the origin of the data |
 
 The definition of the connector interfaces for governance action services is defined in the [governance-action-framework :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/frameworks/governance-action-framework) module.
 
@@ -165,14 +165,14 @@ it needs to operate.  Most of these connectors relate to persistent storage, or 
 ## Configuration Document Store Connectors
 
 The configuration store connectors contain the connector implementations that manage
-the [Configuration Documents](../../../open-metadata-implementation/admin-services/docs/concepts/configuration-document.md)
-for [OMAG Servers](../../../open-metadata-implementation/admin-services/docs/concepts/omag-server.md).
+the [Configuration Documents](/egeria-docs/concepts/configuration-document)
+for [OMAG Servers](/egeria-docs/concepts/configuration-document).
 
 ![Figure 7](/egeria-docs/connectors/runtime/configuration-document-store-connector.svg)
 > **Figure 7:** Configuration Document Store Connector
 
 There is one configuration document store connector defined for each
-[OMAG Server Platform](../../../open-metadata-implementation/admin-services/docs/concepts/omag-server-platform.md).
+[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
 
 There are two implementations of the configuration document store connector provided by Egeria: one for an encrypted store (default) and the other for a plain text store.
 
@@ -183,22 +183,22 @@ configuration document as an encrypted JSON file.
 configuration document as a clear text JSON file.
 
 The definition of the connector interface for these connectors is
-defined in the [admin-services-api](../../../open-metadata-implementation/admin-services/admin-services-api) module in the
+defined in the [admin-services-api](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/admin-services/admin-services-api) module in the
 [org.odpi.openmetadata.adminservices.store](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/admin-services/admin-services-api/src/main/java/org/odpi/openmetadata/adminservices/store) Java package.
 
 Configuring a configuration store connector in the
-OMAG Server Platform is described in the [Administration Guide](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-configuration-document-store.md).
+OMAG Server Platform is described in the [Administration Guide](/egeria-docs/guides/admin/configuring-the-configuration-document-store).
 If no connector is configured, the OMAG Server Platform uses the Encrypted File Configuration Store Connector.
 
 
 ## Cohort Registry Store Connectors
 
 The cohort registry store connectors store the
-[open metadata repository cohort](../../../open-metadata-implementation/repository-services/docs/open-metadata-repository-cohort.md)
-membership details used and maintained by the [cohort registry](../../../open-metadata-implementation/repository-services/docs/component-descriptions/cohort-registry.md).
+[open metadata repository cohort](/egeria-docs/concepts/cohort-member)
+membership details used and maintained by the [cohort registry](/egeria-doc/services/omrs/component-descriptions/cohort-registry).
 The cohort protocols are peer-to-peer and hence there is a cohort registry
-(with a [cohort registry store](../../../open-metadata-implementation/repository-services/docs/component-descriptions/connectors/cohort-registry-store-connector.md))
-for each [member of a cohort](../../../open-metadata-implementation/admin-services/docs/concepts/cohort-member.md).
+(with a [cohort registry store](/egeria-docs/concepts/cohort-registry-store-connector)
+for each [member of a cohort](/egeria-docs/concepts/cohort-member).
 
 ![Figure 8](/egeria-docs/connectors/runtime/cohort-registry-store-connector.svg)
 > **Figure 8:** Open Metadata Topic Connectors

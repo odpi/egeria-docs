@@ -31,8 +31,8 @@ the lineage may be turned on or off.
 ![Figure 1](move-copy-file-provisioning-governance-action-service.svg)
 > **Figure 1:** Operation of the move/copy file provisioning governance action service
 
-If lineage is requested, it includes adding a new [DataFile](/egeria-docs/types/2/0220-Files-and-Folders.md)
-asset for the new file in the destination folder and creating [LineageMapping](/egeria-docs/types/7/0770-Lineage-Mapping.md)
+If lineage is requested, it includes adding a new [DataFile](/egeria-docs/types/2/0220-Files-and-Folders)
+asset for the new file in the destination folder and creating [LineageMapping](/egeria-docs/types/7/0770-Lineage-Mapping)
 relationships between the process that represents this governance action service and both the
 asset for the original source file and as well as the destination.
 There are four choices for lineage:

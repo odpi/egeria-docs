@@ -2,7 +2,7 @@
 # Copyright Contributors to the Egeria project.
 
 site_name: Egeria
-site_description: automatically exchanging metadata between tools and platforms, no matter the vendor
+site_description: Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms, no matter the vendor
 copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2021 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria

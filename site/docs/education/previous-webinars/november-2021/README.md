@@ -3,7 +3,7 @@
 
 # Open Lineage
 
-**Date:** 8th October 2021
+**Date:** 8th November 2021
 
 Presenter: Mandy Chessell and Ljupcho Palashevski
 
@@ -16,8 +16,11 @@ Links:
   <div class="video-wrapper">
   <iframe src="./Egeria%20Webinar,%20Open%20Lineage,%208th%20November%202021.pdf"></iframe>
   </div>
+* YouTube Video:
+  <div class="video-wrapper">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-LzTdt7NPDY" title="Egeria's Open Lineage - November 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>   
 * [Related documentation](/egeria-docs/features/lineage-management/overview)
-* Link to recording on YouTube TBA
 
 ----
 Return to [Webinar list](..)

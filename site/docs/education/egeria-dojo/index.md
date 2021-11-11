@@ -52,12 +52,12 @@ The schedule also includes estimated times needed to complete each session. Do t
     - *Prerequisites*: [Running Egeria day](#running-egeria-day-summary).
     - *Required skills*: Familiarity with Java programming and using Git and GitHub.  The exercises use the IntelliJ iDE but you can use your own choice of tool.
     - *Topics*
-       - Locating Egeria modules
-       - Calling Egeria's APIs
-       - Working with event driven interfaces
-       - Developing connectors and deploying to Egeria
-       - Developing open metadata archives
-       - Using the audit log and related diagnostics
+        - Locating Egeria modules
+        - Calling Egeria's APIs
+        - Working with event driven interfaces
+        - Developing connectors and deploying to Egeria
+        - Developing open metadata archives
+        - Using the audit log and related diagnostics
     - *Time to complete* - 12 hours
 
     
@@ -70,18 +70,18 @@ The schedule also includes estimated times needed to complete each session. Do t
     - *Prerequisites*: [Running Egeria day](#running-egeria-day-summary).
     - *Required skills*: Familiarity with running commands and using tools such as Postman.  No programming experience is required.
     - *Topics*
-       - The need for metadata governance
-       - Templates
-       - Metadata security
-       - Governance zones
-       - Using open metadata archives
-       - Automating metadata capture
-       - Using governance actions and metadata discovery
-       - Managing lineage metadata
-       - Connecting metadata governance to your governance program
-          - Governance by expectation
-          - Incident management
-          - Stewardship
+        - The need for metadata governance
+        - Templates
+        - Metadata security
+        - Governance zones
+        - Using open metadata archives
+        - Automating metadata capture
+        - Using governance actions and metadata discovery
+        - Managing lineage metadata
+        - Connecting metadata governance to your governance program
+            - Governance by expectation
+            - Incident management
+            - Stewardship
     - *Time to complete* - 13 hours
       
 

@@ -42,19 +42,23 @@ The functions expected of an open metadata repository are numerous. These functi
 
 | Profile | Description |
 |---|---|
-| [Metadata sharing](../profiles/metadata-sharing) | The technology under test is able to share metadata with other members of the cohort. |
-| [Reference copies](../profiles/reference-copies) | The technology under test is able to store reference copies of metadata from other members of the cohort. |
-| [Metadata maintenance](../profiles/metadata-maintenance) | The technology under test supports requests to create, update and purge metadata instances. |
-| [Effectivity dating](../profiles/effectivity-dating) | The technology under test supports effectivity dating properties. |
-| [Dynamic types](../profiles/dynamic-types) | The technology under test supports changes to the list of its supported types while it is running. |
-| [Graph queries](../profiles/graph-queries) | The technology under test supports graph-like queries that return collections of metadata instances. |
-| [Historical search](../profiles/historical-search) | The technology under test supports search for the state of the metadata instances at a specific time in the past. |
-| [Entity proxies](../profiles/entity-proxies) | The technology under test is able to store stubs for entities to use on relationships when the full entity is not available. |
-| [Soft-delete and restore](../profiles/soft-delete-restore) | The technology under test allows an instance to be soft-deleted and restored. |
-| [Undo an update](../profiles/undo-update) | The technology under test is able to restore an instance to its previous version (although the version number is updated). |
-| [Reidentify instance](../profiles/reidentify-instance) | The technology under test supports the command to change the unique identifier (guid) of a metadata instance. |
-| [Retype instance](../profiles/retype-instance) | The technology under test supports the command to change the type of a metadata instance to either its super type or a subtype. |
-| [Rehome instance](../profiles/rehome-instance) | The technology under test supports the command to update the metadata collection id for a metadata instance. |
+| [Metadata sharing](../repository-profiles/metadata-sharing) | The technology under test is able to share metadata with other members of the cohort. |
+| [Reference copies](../repository-profiles/reference-copies) | The technology under test is able to store reference copies of metadata from other members of the cohort. |
+| [Metadata maintenance](../repository-profiles/metadata-maintenance) | The technology under test supports requests to create, update and purge metadata instances. |
+| [Effectivity dating](../repository-profiles/effectivity-dating) | The technology under test supports effectivity dating properties. |
+| [Dynamic types](../repository-profiles/dynamic-types) | The technology under test supports changes to the list of its supported types while it is running. |
+| [Graph queries](../repository-profiles/graph-queries) | The technology under test supports graph-like queries that return collections of metadata instances. |
+| [Historical search](../repository-profiles/historical-search) | The technology under test supports search for the state of the metadata instances at a specific time in the past. |
+| [Entity proxies](../repository-profiles/entity-proxies) | The technology under test is able to store stubs for entities to use on relationships when the full entity is not available. |
+| [Soft-delete and restore](../repository-profiles/soft-delete-restore) | The technology under test allows an instance to be soft-deleted and restored. |
+| [Undo an update](../repository-profiles/undo-update) | The technology under test is able to restore an instance to its previous version (although the version number is updated). |
+| [Reidentify instance](../repository-profiles/reidentify-instance) | The technology under test supports the command to change the unique identifier (guid) of a metadata instance. |
+| [Retype instance](../repository-profiles/retype-instance) | The technology under test supports the command to change the type of a metadata instance to either its super type or a subtype. |
+| [Rehome instance](../repository-profiles/rehome-instance) | The technology under test supports the command to update the metadata collection id for a metadata instance. |
+| [Entity search](../repository-profiles/entity-search) | The technology under test supports the ability to search for entity instances. |
+| [Relationship search](../repository-profiles/relationship-search) | The technology under test supports the ability to search for relationnship instances. |
+| [Entity advanced search](../repository-profiles/entity-advanced-search) | The technology under test supports the use of regular expressions to search for metadata instances. |
+| [Relationship advanced search](../repository-profiles/relationship-advanced-search) | The technology under test supports the use of regular expressions to search for relationship instances. |
 
 ## Performance workbench
 
@@ -69,39 +73,39 @@ This workbench runs the following profiles, in the following order:
 
 | Profile | Description |
 |---|---|
-| [Entity creation](../profiles/entity-creation) | tests the performance of `addEntity` and `saveEntityReferenceCopy` methods |
-| [Entity search](../profiles/entity-search) | tests the performance of `findEntities`, `findEntitiesByProperty` and `findEntitiesByPropertyValue` methods |
-| [Relationship creation](../profiles/relationship-creation) | tests the performance of `addRelationship` and `saveRelationshipReferenceCopy` methods |
-| [Relationship search](../profiles/relationship-search) | tests the performance of `findRelationships`, `findRelationshipsByProperty` and `findRelationshipsByPropertyValue` methods |
-| [Entity classification](../profiles/entity-classification) | tests the performance of `classifyEntity` and `saveClassificationReferenceCopy` methods |
-| [Classification search](../profiles/classification-search) | tests the performance of `findEntitiesByClassification` method |
-| [Entity update](../profiles/entity-update) | tests the performance of `updateEntityProperties` method |
-| [Relationship update](../profiles/relationship-update) | tests the performance of `updateRelationshipProperties` method |
-| [Classification update](../profiles/classification-update) | tests the performance of `updateEntityClassification` method |
-| [Entity undo](../profiles/entity-undo) | tests the performance of `undoEntityUpdate` method |
-| [Relationship undo](../profiles/relationship-undo) | tests the performance of `undoRelationshipUpdate` method |
-| [Entity retrieval](../profiles/entity-retrieval) | tests the performance of `isEntityKnown`, `getEntitySummary` and `getEntityDetail` methods |
-| [Entity history retrieval](../profiles/entity-history-retrieval) | tests the performance of `getEntityDetail` (with non-null `asOfTime`) and `getEntityDetailHistory` methods |
-| [Relationship retrieval](../profiles/relationship-retrieval) | tests the performance of `isRelationshipKnown` and `getRelationship` methods |
-| [Relationship history retrieval](../profiles/relationship-history-retrieval) | tests the performance of `getRelationship` (with non-null `asOfTime`) and `getRelationshipHistory` methods |
-| [Entity history search](../profiles/entity-history-search) | tests the performance of the same search operations as Entity Search, but in each case with a non-null `asOfTime` |
-| [Relationship history search](../profiles/relationship-history-search) | tests the performance of the same search operations as Relationship Search, but in each case with a non-null `asOfTime` |
-| [Graph queries](../profiles/graph-perf-queries) | tests the performance of `getRelationshipsForEntity`, `getEntityNeighborhood`, `getRelatedEntities` and `getLinkingEntities` methods |
-| [Graph history queries](../profiles/graph-history-queries) | tests the performance of the same operations as Graph Queries, but in each case with a non-null `asOfTime` |
-| [Entity re-home](../profiles/entity-re-home) | tests the performance of `reHomeEntity` method |
-| [Relationship re-home](../profiles/relationship-re-home) | tests the performance of `reHomeRelationship` method |
-| [Entity declassify](../profiles/entity-declassify) | tests the performance of `declassifyEntity` and `purgeClassificationReferenceCopy` methods |
-| [Entity re-type](../profiles/entity-retype) | tests the performance of `reTypeEntity` method |
-| [Relationship re-type](../profiles/relationship-retype) | tests the performance of `reTypeRelationship` method |
-| [Entity re-identify](../profiles/entity-re-identify) | tests the performance of `reIdentifyEntity` method |
-| [Relationship re-identify](../profiles/relationship-re-identify) | tests the performance of `reIdentifyRelationship` method |
-| [Relationship delete](../profiles/relationship-delete) | tests the performance of `deleteRelationship` method |
-| [Entity delete](../profiles/entity-delete) | tests the performance of `deleteEntity` method |
-| [Entity restore](../profiles/entity-restore) | tests the performance of `restoreEntity` method |
-| [Relationship restore](../profiles/relationship-restore) | tests the performance of `restoreRelationship` method |
-| [Relationship purge](../profiles/relationship-purge) | tests the performance of `purgeRelationship` and `purgeRelationshipReferenceCopy` methods |
-| [Entity purge](../profiles/entity-purge) | tests the performance of `purgeEntity` and `purgeEntityReferenceCopy` methods |
-| [Environment](../profiles/environment) | does not actually perform any tests, but rather gives statistics about the environment in which the tests were performed (instance counts, etc) |
+| [Entity creation](../performance-profiles/entity-creation) | tests the performance of `addEntity` and `saveEntityReferenceCopy` methods |
+| [Entity search](../performance-profiles/entity-search) | tests the performance of `findEntities`, `findEntitiesByProperty` and `findEntitiesByPropertyValue` methods |
+| [Relationship creation](../performance-profiles/relationship-creation) | tests the performance of `addRelationship` and `saveRelationshipReferenceCopy` methods |
+| [Relationship search](../performance-profiles/relationship-search) | tests the performance of `findRelationships`, `findRelationshipsByProperty` and `findRelationshipsByPropertyValue` methods |
+| [Entity classification](../performance-profiles/entity-classification) | tests the performance of `classifyEntity` and `saveClassificationReferenceCopy` methods |
+| [Classification search](../performance-profiles/classification-search) | tests the performance of `findEntitiesByClassification` method |
+| [Entity update](../performance-profiles/entity-update) | tests the performance of `updateEntityProperties` method |
+| [Relationship update](../performance-profiles/relationship-update) | tests the performance of `updateRelationshipProperties` method |
+| [Classification update](../performance-profiles/classification-update) | tests the performance of `updateEntityClassification` method |
+| [Entity undo](../performance-profiles/entity-undo) | tests the performance of `undoEntityUpdate` method |
+| [Relationship undo](../performance-profiles/relationship-undo) | tests the performance of `undoRelationshipUpdate` method |
+| [Entity retrieval](../performance-profiles/entity-retrieval) | tests the performance of `isEntityKnown`, `getEntitySummary` and `getEntityDetail` methods |
+| [Entity history retrieval](../performance-profiles/entity-history-retrieval) | tests the performance of `getEntityDetail` (with non-null `asOfTime`) and `getEntityDetailHistory` methods |
+| [Relationship retrieval](../performance-profiles/relationship-retrieval) | tests the performance of `isRelationshipKnown` and `getRelationship` methods |
+| [Relationship history retrieval](../performance-profiles/relationship-history-retrieval) | tests the performance of `getRelationship` (with non-null `asOfTime`) and `getRelationshipHistory` methods |
+| [Entity history search](../performance-profiles/entity-history-search) | tests the performance of the same search operations as Entity Search, but in each case with a non-null `asOfTime` |
+| [Relationship history search](../performance-profiles/relationship-history-search) | tests the performance of the same search operations as Relationship Search, but in each case with a non-null `asOfTime` |
+| [Graph queries](../performance-profiles/graph-perf-queries) | tests the performance of `getRelationshipsForEntity`, `getEntityNeighborhood`, `getRelatedEntities` and `getLinkingEntities` methods |
+| [Graph history queries](../performance-profiles/graph-history-queries) | tests the performance of the same operations as Graph Queries, but in each case with a non-null `asOfTime` |
+| [Entity re-home](../performance-profiles/entity-re-home) | tests the performance of `reHomeEntity` method |
+| [Relationship re-home](../performance-profiles/relationship-re-home) | tests the performance of `reHomeRelationship` method |
+| [Entity declassify](../performance-profiles/entity-declassify) | tests the performance of `declassifyEntity` and `purgeClassificationReferenceCopy` methods |
+| [Entity re-type](../performance-profiles/entity-retype) | tests the performance of `reTypeEntity` method |
+| [Relationship re-type](../performance-profiles/relationship-retype) | tests the performance of `reTypeRelationship` method |
+| [Entity re-identify](../performance-profiles/entity-re-identify) | tests the performance of `reIdentifyEntity` method |
+| [Relationship re-identify](../performance-profiles/relationship-re-identify) | tests the performance of `reIdentifyRelationship` method |
+| [Relationship delete](../performance-profiles/relationship-delete) | tests the performance of `deleteRelationship` method |
+| [Entity delete](../performance-profiles/entity-delete) | tests the performance of `deleteEntity` method |
+| [Entity restore](../performance-profiles/entity-restore) | tests the performance of `restoreEntity` method |
+| [Relationship restore](../performance-profiles/relationship-restore) | tests the performance of `restoreRelationship` method |
+| [Relationship purge](../performance-profiles/relationship-purge) | tests the performance of `purgeRelationship` and `purgeRelationshipReferenceCopy` methods |
+| [Entity purge](../performance-profiles/entity-purge) | tests the performance of `purgeEntity` and `purgeEntityReferenceCopy` methods |
+| [Environment](../performance-profiles/environment) | does not actually perform any tests, but rather gives statistics about the environment in which the tests were performed (instance counts, etc) |
 
 In each profile, the methods being tested will be executed a number of times and the elapsed time of each execution captured. These elapsed times are available through the detailed profile results of the Conformance Test Suite reports, and can be extracted to calculate more detailed statistics (min, max, median, mean, etc).
 

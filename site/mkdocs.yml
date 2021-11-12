@@ -2,7 +2,7 @@
 # Copyright Contributors to the Egeria project.
 
 site_name: Egeria
-site_description: automatically exchanging metadata between tools and platforms, no matter the vendor
+site_description: Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms, no matter the vendor
 copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2021 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
@@ -495,52 +495,57 @@ nav:
           - Platform Profiles:
               - Platform Origin: guides/cts/profiles/platform-origin.md
           - Repository Profiles:
-              - Metadata Sharing: guides/cts/profiles/metadata-sharing.md
-              - Metadata Maintenance: guides/cts/profiles/metadata-maintenance.md
-              - Effectivity Dating: guides/cts/profiles/effectivity-dating.md
-              - Dynamic Types: guides/cts/profiles/dynamic-types.md
-              - Graph Queries: guides/cts/profiles/graph-queries.md
-              - Historical Search: guides/cts/profiles/historical-search.md
-              - Entity Proxies: guides/cts/profiles/entity-proxies.md
-              - Soft-delete and Restore: guides/cts/profiles/soft-delete-restore.md
-              - Undo an Update: guides/cts/profiles/undo-update.md
-              - Reidentify Instance: guides/cts/profiles/reidentify-instance.md
-              - Retype Instance: guides/cts/profiles/retype-instance.md
-              - Rehome Instance: guides/cts/profiles/rehome-instance.md
+              - Metadata Sharing: guides/cts/repository-profiles/metadata-sharing.md
+              - Reference Copies: guides/cts/repository-profiles/reference-copies.md
+              - Metadata Maintenance: guides/cts/repository-profiles/metadata-maintenance.md
+              - Effectivity Dating: guides/cts/repository-profiles/effectivity-dating.md
+              - Dynamic Types: guides/cts/repository-profiles/dynamic-types.md
+              - Graph Queries: guides/cts/repository-profiles/graph-queries.md
+              - Historical Search: guides/cts/repository-profiles/historical-search.md
+              - Entity Proxies: guides/cts/repository-profiles/entity-proxies.md
+              - Soft-delete and Restore: guides/cts/repository-profiles/soft-delete-restore.md
+              - Undo an Update: guides/cts/repository-profiles/undo-update.md
+              - Reidentify Instance: guides/cts/repository-profiles/reidentify-instance.md
+              - Retype Instance: guides/cts/repository-profiles/retype-instance.md
+              - Rehome Instance: guides/cts/repository-profiles/rehome-instance.md
+              - Entity Search: guides/cts/repository-profiles/entity-search.md
+              - Relationship Search: guides/cts/repository-profiles/relationship-search.md
+              - Entity Advanced Search: guides/cts/repository-profiles/entity-advanced-search.md
+              - Relationship Advanced Search: guides/cts/repository-profiles/relationship-advanced-search.md
           - Performance Profiles:
-              - Entity Creation: guides/cts/profiles/entity-creation.md
-              - Entity Search: guides/cts/profiles/entity-search.md
-              - Relationship Creation: guides/cts/profiles/relationship-creation.md
-              - Relationship Search: guides/cts/profiles/relationship-search.md
-              - Entity Classification: guides/cts/profiles/entity-classification.md
-              - Classification Search: guides/cts/profiles/classification-search.md
-              - Entity Update: guides/cts/profiles/entity-update.md
-              - Relationship Update: guides/cts/profiles/relationship-update.md
-              - Classification Update: guides/cts/profiles/classification-update.md
-              - Entity Undo: guides/cts/profiles/entity-undo.md
-              - Relationship Undo: guides/cts/profiles/relationship-undo.md
-              - Entity Retrieval: guides/cts/profiles/entity-retrieval.md
-              - Entity History Retrieval: guides/cts/profiles/entity-history-retrieval.md
-              - Relationship Retrieval: guides/cts/profiles/relationship-retrieval.md
-              - Relationship History Retrieval: guides/cts/profiles/relationship-history-retrieval.md
-              - Entity History Search: guides/cts/profiles/entity-history-search.md
-              - Relationship History Search: guides/cts/profiles/relationship-history-search.md
-              - Graph Queries (Performance): guides/cts/profiles/graph-perf-queries.md
-              - Graph History Queries: guides/cts/profiles/graph-history-queries.md
-              - Entity Re-home: guides/cts/profiles/entity-re-home.md
-              - Relationship Re-home: guides/cts/profiles/relationship-re-home.md
-              - Entity Declassify: guides/cts/profiles/entity-declassify.md
-              - Entity Re-type: guides/cts/profiles/entity-retype.md
-              - Relationship Re-type: guides/cts/profiles/relationship-retype.md
-              - Entity Re-identify: guides/cts/profiles/entity-re-identify.md
-              - Relationship Re-identify: guides/cts/profiles/relationship-re-identify.md
-              - Relationship Delete: guides/cts/profiles/relationship-delete.md
-              - Entity Delete: guides/cts/profiles/entity-delete.md
-              - Entity Restore: guides/cts/profiles/entity-restore.md
-              - Relationship Restore: guides/cts/profiles/relationship-restore.md
-              - Relationship Purge: guides/cts/profiles/relationship-purge.md
-              - Entity Purge: guides/cts/profiles/entity-purge.md
-              - Environment: guides/cts/profiles/environment.md
+              - Entity Creation: guides/cts/performance-profiles/entity-creation.md
+              - Entity Search: guides/cts/performance-profiles/entity-search.md
+              - Relationship Creation: guides/cts/performance-profiles/relationship-creation.md
+              - Relationship Search: guides/cts/performance-profiles/relationship-search.md
+              - Entity Classification: guides/cts/performance-profiles/entity-classification.md
+              - Classification Search: guides/cts/performance-profiles/classification-search.md
+              - Entity Update: guides/cts/performance-profiles/entity-update.md
+              - Relationship Update: guides/cts/performance-profiles/relationship-update.md
+              - Classification Update: guides/cts/performance-profiles/classification-update.md
+              - Entity Undo: guides/cts/performance-profiles/entity-undo.md
+              - Relationship Undo: guides/cts/performance-profiles/relationship-undo.md
+              - Entity Retrieval: guides/cts/performance-profiles/entity-retrieval.md
+              - Entity History Retrieval: guides/cts/performance-profiles/entity-history-retrieval.md
+              - Relationship Retrieval: guides/cts/performance-profiles/relationship-retrieval.md
+              - Relationship History Retrieval: guides/cts/performance-profiles/relationship-history-retrieval.md
+              - Entity History Search: guides/cts/performance-profiles/entity-history-search.md
+              - Relationship History Search: guides/cts/performance-profiles/relationship-history-search.md
+              - Graph Queries (Performance): guides/cts/performance-profiles/graph-perf-queries.md
+              - Graph History Queries: guides/cts/performance-profiles/graph-history-queries.md
+              - Entity Re-home: guides/cts/performance-profiles/entity-re-home.md
+              - Relationship Re-home: guides/cts/performance-profiles/relationship-re-home.md
+              - Entity Declassify: guides/cts/performance-profiles/entity-declassify.md
+              - Entity Re-type: guides/cts/performance-profiles/entity-retype.md
+              - Relationship Re-type: guides/cts/performance-profiles/relationship-retype.md
+              - Entity Re-identify: guides/cts/performance-profiles/entity-re-identify.md
+              - Relationship Re-identify: guides/cts/performance-profiles/relationship-re-identify.md
+              - Relationship Delete: guides/cts/performance-profiles/relationship-delete.md
+              - Entity Delete: guides/cts/performance-profiles/entity-delete.md
+              - Entity Restore: guides/cts/performance-profiles/entity-restore.md
+              - Relationship Restore: guides/cts/performance-profiles/relationship-restore.md
+              - Relationship Purge: guides/cts/performance-profiles/relationship-purge.md
+              - Entity Purge: guides/cts/performance-profiles/entity-purge.md
+              - Environment: guides/cts/performance-profiles/environment.md
   - Concepts:
       - Egeria Glossary: concepts/index.md
       - Basic Concepts: concepts/basic-concepts.md

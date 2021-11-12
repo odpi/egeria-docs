@@ -242,7 +242,7 @@ They are connected to each other by the Lineage Integrator OMIS:
 
 - An integration connector may request that an OpenLineage event is published to other integration connectors that have registered an OpenLineage event listener in the same Lineage Integrator OMIS instance.
 
-- An integration connector may register a listener to the Asset Manager OMAS's OutTopics and issue requests to the Asset Manager's REST API in order to correlate the metadata in the open metadata ecosystem with the content of the OpenLineage events.  
+- An integration connector may register a listener to the Asset Manager OMAS's OutTopic and issue requests to the Asset Manager's REST API in order to correlate the metadata in the open metadata ecosystem with the content of the OpenLineage events.  
 
 Figure 25 illustrates these mechanism with the [five pre-build integration connectors](/egeria-docs/connectors/#lineage) supplied by Egeria.
 

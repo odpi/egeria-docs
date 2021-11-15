@@ -17,16 +17,16 @@ However the architecture is clean enough to generalise to the management of all 
 and so it has been included in the open metadata types.
 
 There are five components involved in policy management:
-* **Policy Administration Point (PAP)** - the tool/API used to administer policies.
-* **Policy Decision Point (PDP)** - the component that evaluates policies for a specific situation and selects a
+- *Policy Administration Point (PAP)* - the tool/API used to administer policies.
+- *Policy Decision Point (PDP)* - the component that evaluates policies for a specific situation and selects a
   course of action.
-* **Policy Enforcement Point (PEP)** - the component thar enforces the policy decision made by the PDP.
+- *Policy Enforcement Point (PEP)* - the component thar enforces the policy decision made by the PDP.
   Usually this is the component that is used to access a resource or perform a task. 
   The PEP calls the PDP to find out what the decision that needs to be enforced and then
   enforces the resulting decision in real-time.
-* **Policy Information Point (PIP)** - a component that provides additional information to the PDP
+- *Policy Information Point (PIP)* - a component that provides additional information to the PDP
   to enable it to make a decision.
-* **Policy Retrieval Point (PRP)** - a component used by the PDP to retrieve the policy details that apply to the
+- *Policy Retrieval Point (PRP)* - a component used by the PDP to retrieve the policy details that apply to the
   situation that the PDP is evaluating. 
 
 ## Open Metadata Types

@@ -12,7 +12,7 @@ Area 4 defines how the data assets should be governed.
 This is where the classifications, policies and rules are
 defined for governance.
 
-In a similar way to the glossary ([area 3](Area-3-models.md))
+In a similar way to the glossary ([area 3](/egeria-docs/types/3))
 this information is authored in the metadata repositories and then distributed to the enforcement points and data
 platforms to action and return measurements that can be used to confirm
 that the governance program has a positive effect.
@@ -24,7 +24,7 @@ that the governance program has a positive effect.
 * **[0420 Governance Controls](0420-Governance-Controls.md)**
 * **[0421 Governance Classification Levels](0421-Governance-Classification-Levels.md)**
 * **[0422 Governance Action Classifications](0422-Governance-Action-Classifications.md)**
-* **[0423 Security Tags](0423-Security-Tags.md)**
+* **[0423 Security Definitions](0423-Security-Definitions.md)**
 * **[0424 Governance Zones](0424-Governance-Zones.md)**
 * **[0425 Subject Areas](0425-Subject-Areas.md)**
 * **[0430 Technical Controls](0430-Technical-Controls.md)**

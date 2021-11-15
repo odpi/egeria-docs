@@ -13,6 +13,7 @@ Different organizations and tools can choose the granularity in which the capabi
 
 These are the software server capabilities defined in the open types:
 
+- [`AccessControlManager`](/egeria-docs/types/0/0050-Applications-and-Processes/#apimanager) - A capability that manages access to specific resources.
 - [`APIManager`](/egeria-docs/types/0/0050-Applications-and-Processes/#apimanager) - A capability that manages callable APIs that typically delegate onto Software Services.
 - [`Application`](/egeria-docs/types/0/0050-Applications-and-Processes/#application) - A capability supporting a specific business function.
 - [`Catalog`](/egeria-docs/types/0/0050-Applications-and-Processes/#catalog) - A capability that manages collections of descriptions about people, places, digital assets, things, ...

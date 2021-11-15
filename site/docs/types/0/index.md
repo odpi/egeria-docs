@@ -29,7 +29,7 @@ Area 0 describes base types and infrastructure. This includes types for `Asset`,
 - [0045 Servers and Assets](0045-Servers-and-Assets.md)
 - [0050 Applications and Processes](0050-Applications-and-Processes.md)
 - [0055 Data Processing Engines](0055-Data-Processing-Engines.md)
-- [0057 Integration Capabilities](0057-Integration-Capabilities.md)
+- [0057 Software Services](0057-Software-Services.md)
 - [0070 Networks and Gateways](0070-Networks-and-Gateways.md)
 - [0090 Cloud Platforms and Services](0090-Cloud-Platforms-and-Services.md)
 

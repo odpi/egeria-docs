@@ -12,7 +12,7 @@ For open lineage server following can be configured:
 
 ![Configuration for an open lineage server](open-lineage-server-configuration.svg)
 
-??? question "What are the required configuration elements for this governance server type?"
+??? question "What are the required configuration elements for this server type?"
     - Event Bus Config
     - Audit Log Destination
     - Open Lineage Config
@@ -23,7 +23,9 @@ For open lineage server following can be configured:
 
 --8<-- "snippets/tasks/configuring-the-audit-log.md"
 
---8<-- "snippets/tasks/configuring-the-server-security-connector.md"
+<!-- --8<-- "snippets/tasks/configuring-the-server-security-connector.md" -->
+
+--8<-- "snippets/tasks/configuring-event-bus.md"
 
 
 ## Configuring the Open Lineage Services
@@ -75,7 +77,7 @@ For open lineage server following can be configured:
     }
     ```
 
-#### Open Lineage Services configuration reference
+#### Configuration reference
 
 | Property | Description | Is mandatory |
 |---|---|---|
@@ -87,7 +89,7 @@ lineageGraphConnection | OCF configuration object that defines the Graph store c
 `backgroundJobs[n].jobName` | Key used to match the job name pre-defined in the open lineage server. Supported values `LineageGraphJob` and `AssetLineageUpdateJob` | No |
 `backgroundJobs[n].jobInterval` | Interval (**seconds**) to execute the repetitive task defined by the named job above | No |
 `backgroundJobs[n].jobEnabled` | Controls if the job will be running (enabled) or not (diabled). Omitting the item in the `backgroundJobs` list had the same effect as setting the job to disabled. | No
-`backgroundJobs[n].jobDefaultValue` | Setting initial value for the task, only used in case of  `AssetLineageUpdateJob`. When configured and not present in the store this value becomes the starting point in time to poll for updates. After successful upadate intial value is no longer used and last known value form the store. The value should be always specified in standard internet data-time format `YYYY-MM-DDThh:mm:ss`. See [ISO-8601](https://datatracker.ietf.org/doc/html/rfc3339#ref-ISO8601) for more info and examples. | No |
+`backgroundJobs[n].jobDefaultValue` | Setting initial value for the task, only used in case of  `AssetLineageUpdateJob`. When configured and not present in the store this value becomes the starting point in time to poll for updates. After successful upadate intial value is no longer used and last known value form the store. The value should be always specified in standard internet data-time format `YYYY-MM-DDThh:mm:ss`. See [ISO-8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.8) for more info and examples. | No |
  
 
 #### Removing the Open Lineage Services from the server configuration

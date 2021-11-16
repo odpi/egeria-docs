@@ -4,16 +4,46 @@
 
 # Configuring a Data Engine Proxy Server
 
-1. Start an [OMAG Server Platform](../../../open-metadata-resources/open-metadata-tutorials/omag-server-tutorial)
-1. Configure the Data Engine Proxy Server:
+## Overview 
 
-    **POST** following JSON object (following shows an example for IBM DataStage)
+Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
+a [configuration document](/egeria-docs/concepts/configuration-document). 
+
+For data engine proxy server, followng can be configured:
+
+![Configuration for an data engine proxy server](data-engine-proxy-config.svg)
+
+??? question "What are the required configuration elements for this server type?"
+    - Audit Log Destination
+    - Local In-Memory Repository
+    - Data Engine Proxy Config
+
+--8<-- "snippets/tasks/configuring-local-server-url.md"
+
+--8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
+
+--8<-- "snippets/tasks/configuring-the-audit-log.md"
+
+<!-- --8<-- "snippets/tasks/configuring-the-server-security-connector.md" -->
+
+!!! attention "For the next step it is important to configure in-memory repository type"
+    Since Data Engine Proxy is a stateless service, it only relies on ***in-memory*** repository to operate. The sync state (last sync date) is stored in the external system and managed by the connector.
+
+--8<-- "snippets/tasks/configuring-the-local-repository.md"
+
+## Configuring Date Engine Proxy Services 
+
+!!! post "POST - Configure Date Engine Proxy Services"
+    ```
+    {{serverURLRoot}}/open-metadata/admin-services/users/{{userId}}/servers/{{serverName}}/data-engine-proxy-service/configuration
+
+    ```
 
     ```json
     {
         "class": "DataEngineProxyConfig",
-        "accessServiceRootURL": "{serverURLRoot}",
-        "accessServiceServerName": "{MetadataServerName}",
+        "accessServiceRootURL": "{{{metadata-server-platform-url}}}",
+        "accessServiceServerName": "{{metadata-server-name}}",
         "dataEngineConnection": {
             "class": "Connection",
             "connectorType": {
@@ -22,30 +52,27 @@
             },
             "endpoint": {
                 "class": "Endpoint",
-                "address": "myhost.somewhere.com:9445",
+                "address": "{{data-engine-endpoint}}",
                 "protocol": "https"
             },
-            "userId": "{dataEngineAccessUserId}",
-            "clearPassword": "dataEngineAccessPassword"
+            "userId": "{{data-engine-user}}",
+            "clearPassword": "{{data-engine-password}}"
         },
         "pollIntervalInSeconds": 60
     }
     ```
-    
-    to the following address
+#### Configuration Reference
 
+| Property | Description | Is mandatory |
+|---|---|---|
+dataEngineConnection | OCF connection configuration object that defines the connector type and its properties. Refer to specifc connector for detailed reference. Example provided for [IBM Data Stage connector](https://github.com/odpi/egeria-connector-ibm-information-server/tree/master/datastage-adapter).  | Yes |
+pollIntervalInSeconds | The polling interval in seconds to call the sequence extracting metadata. | Yes | 
+
+#### Removing the Data Engine Services from the server configuration
+
+!!! delete  "DELETE - Remove Data Engine Configuration from the server"
     ```
-    {serverURLRoot}/open-metadata/admin-services/users/{userId}/servers/{serverName}/data-engine-proxy-service/configuration
-    ```
-
-    The object *dataEngineConfig* is the information required to implement the specific proxy connector to the data engine. The keys should be modified based on the information needed by the connector.
-
-1. Start the instance of the OMAG Server Platform
-
-    **POST** to the following address
-    
-    ```
-    {serverURLRoot}/open-metadata/admin-services/users/{userId}/servers/{serverName}/instance
+    {{serverURLRoot}}/open-metadata/admin-services/users/{{userId}}/servers/{{serverName}}/data-engine-proxy-service/configuration
     ```
 
 --8<-- "snippets/abbr.md"

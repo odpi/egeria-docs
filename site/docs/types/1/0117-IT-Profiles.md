@@ -10,9 +10,9 @@ Often [IT infrastructure](/egeria-docs/types/0/0030-Hosts-and-Platforms) runs as
 `ITProfile` extends ['ActorProfile'](/egeria-docs/types/1/0110-Actors/#actorprofile) to describe a piece of IT infrastructure.
 The `ActorProfile` links to the `UserIdentity` entities for this piece of IT infrastructure.
 
-## ITInfrastructureIdentity
+## ITInfrastructureProfile
 
-`iTinfrastructureProfile` links the actor profile to the [`ITInfrastructure`](/egeria-docs/types/0/0030-Hosts-and-Platform) asset that represents the specific piece of IT Infrastructure that it represents.
+`ITinfrastructureProfile` links the actor profile to the [`ITInfrastructure`](/egeria-docs/types/0/0030-Hosts-and-Platform) asset that represents the specific piece of IT Infrastructure that it represents.
 
 
 ![UML](0117-IT-Profiles.svg "Describing an engine's user identities")

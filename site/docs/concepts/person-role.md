@@ -8,27 +8,20 @@ hide:
 
 # Person Role
 
-A person role is a definition of a role that a person can perform.
-They are defined as part of the organization definition and
-describe the different types of responsibilities assumed by a person appointed to the role. 
+A person role is a placeholder in a [team](/egeria-docs/features/people-roles-organizations) that defines a set of skills and responsibilities that one or more individuals can perform.
 
-One or more people may be appointed to a role 
-Each role has an optional [head count](#head-count-limit) that indicated the maximum
-number of people that should be appointed to the role.
 
+Individuals are then appointed to the role.  This creates a relationship between their [profile](/egeria-docs/concepts/personal-profile) and the role.  This relationship is then removed when the individual leaves the role.  It is not unusual for [effectivity dates](/egeria-docs/features/effectivity-dates) to be used with this relationship to allow people to be appointed and removed from roles ahead of time, creating a smooth transition.
+
+It is also common that an individual performs many roles in an organization.
 
 ## Head count limit
 
-The head count limit is an optional value that can be set in a
-[personal role](personal-roles.md).  This determines
-how many people are funded for the role.
+A role has an optional *head count* that indicated the maximum number of people that should be appointed to the role.  You can think of it as a planning or funding value that the organization has set.
 
-Open metadata does not prevent more people than this limit being
-appointed to the role, but it does send a notification to indicate that
-the limit has been breached.
+Egeria does not prevent more people than this limit being appointed to the role, but the [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview) does send a notification (event) to indicate that the limit has been breached.
 
-The organization can choose to increase the head count limit or
-remove one of the appointed people.
+The organization can choose to increase the head count limit or remove one of the appointed people or ignore the situation.
 
 ## Examples of roles
 
@@ -39,24 +32,16 @@ A person who is accountable for the proper use and protection of an
 
 The Asset Owner is supported by the [Asset Owner OMAS](/egeria-docs/concepts/omas/asset-owner/overview).
 
-# Asset Consumer
+# Governance Officer
 
-A person who is making use of the content of one or more
-[Asset](/egeria-docs/concepts/asset).  In practical terms, this is a role that most open metadata
-users play at one time or another which is why there is no special labelling of
-a particular user or 
+A person who is responsible for leading a governance domain is called a governance officer. 
 
-The Asset Consumer is supported by the [Asset Consumer OMAS](/egeria-docs/concepts/omas/asset-consumer/overview).
+The governance officer is supported by the [Governance Program OMAS](/egeria-docs/concepts/omas/governance-program/overview).
 
-# Team Leader
+# Project Manager
 
-A team leader is a person who leads a team.  A team may have multiple leaders
-although typically one person has the authority to decide if there is disagreement amongst the leaders.
+A project manager is a person who leads a [project](/egeria-docs/concepts/project).
 
-# Team Member
-
-A team member is a person who is part of a [team](team.md).
-
-
+The project manager role is supported by the [Project Management OMAS](/egeria-docs/concepts/omas/project-management/overview).
 
 --8<-- "snippets/abbr.md

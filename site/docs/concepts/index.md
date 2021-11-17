@@ -139,6 +139,7 @@
 ## H
 
 - [Hands on labs](/egeria-docs/education/open-metadata-labs)
+- [Head count](/egeria-docs/concepts/person-role/#head-count-limit)
 - [Home Metadata Collection](/egeria-docs/concepts/metadata-collection-id)
 - [Home Metadata Repository](/egeria-docs/concepts/home-metadata-repository)
 
@@ -157,6 +158,7 @@
 - [Integration Connectors](/egeria-docs/concepts/integration-connector)
 - [Integration Daemons](/egeria-docs/concepts/integration-daemon)
 - [Integration Services](/egeria-docs/services/omis)
+- [IsPublic](/egeria-docs/concepts/is-public)
 - [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview)
 
 

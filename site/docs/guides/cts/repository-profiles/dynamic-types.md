@@ -9,6 +9,10 @@ The technology under test supports changes to the list of its supported types wh
 
 The technology under test supports the addition of new type definitions.
 
+!!! attention "Not yet implemented"
+
 ## TypeDef maintenance
 
 The technology under test supports the commands to change a type definition.
+
+!!! attention "Not yet implemented"

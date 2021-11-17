@@ -65,17 +65,29 @@ Tanya Tidie needs to ensure that only the clinical trials team have access to th
 
 ## Linking governance and security to roles
 
+The roles in an organization help to determine who should have access to specific resources.  Egeria's synchronization capability helps in the maintenance of security permissions both:
+
+- When onboarding a new service that has an embedded security system (such as a cloud platform) or even for Egeria itself.
+- When making changes to the organization structure.
+- When setting up new projects.
+
+Egeria provides the means to link information about the organization with the asset descriptions of the resources teams and individuals need and security control information that links into the security authorization services.
+
 ![Figure v](governed-by.svg)
 
 
 ## Onboarding organization data
 
+Information about an organization's teams, roles and people is often managed in an application that has a structure 
 ![Figure x](coco-employees.png)
 ![Figure y](coco-departments.png)
 
 ## Automating the exchange of information
 
 ![Figure z](syncing-org-data.svg)
+
+## Using information about individuals in collaboration
+
 
 
 --8<-- "snippets/abbr.md"

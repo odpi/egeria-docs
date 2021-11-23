@@ -657,6 +657,8 @@ theme:
     - navigation.top
     - navigation.indexes
     - search.highlight
+    - navigation.tracking
+    - content.code.annotate
   palette:
     - scheme: default
       accent: cyan
@@ -699,7 +701,8 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.highlight
   - pymdownx.details
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences
   - pymdownx.keys
   - toc:

@@ -81,9 +81,9 @@ For open lineage server following can be configured:
 
 | Property | Description | Is mandatory |
 |---|---|---|
-lineageGraphConnection | OCF configuration object that defines the Graph store connector type used. See [open-lineage-janus-connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-daemon-connectors/open-lineage-connectors/open-lineage-janus-connector) for more details. | Yes |
+`lineageGraphConnection` | OCF configuration object that defines the Graph store connector type used. See [open-lineage-janus-connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-daemon-connectors/open-lineage-connectors/open-lineage-janus-connector) for more details. | Yes |
 `accessServiceConfig.serverName` | the name of the metadata server where paired Asset Lineage OMAS is running. | Yes
-`accessServiceConfig.serverPlatformUrlRoot` | The URL of the OMAG server platform running the metadata server where paired Asset Lineage OMAS is running. | Yes |
+`accessServiceConfig.serverPlatformUrlRoot` | The URL of the OMAG server platform running the metadata server where paired Asset Lineage OMAS is running. Also see [start-up information](#start-up-information) section. | Yes |
 `accessServiceConfig.user` | The user name to access the server running Asset Lineage OMAS. | Yes |
 `accessServiceConfig.password` | The user password to access the server running Asset Lineage OMAS. Can be left out for non-secured access. | No |
 `backgroundJobs[n].jobName` | Key used to match the job name pre-defined in the open lineage server. Supported values `LineageGraphJob` and `AssetLineageUpdateJob` | No |
@@ -98,5 +98,9 @@ lineageGraphConnection | OCF configuration object that defines the Graph store c
     ```
     {{serverURLRoot}}/open-metadata/admin-services/users/{{userId]}}/servers/{{serverName}}/open-lineage/configuration
     ```
+### Start up information
+
+!!! Info "Runtime consideration"
+    It is important to consider that, to operate, open lineage server depends on the availability of metadata access server and asset linege being up and running. This is the case because open lineage server discovers the event bus connectivity and the topic address from asset lineage during start-up. Consequently, it will always wait and retry until this condition is met and it starts up successfully.
 
 --8<-- "snippets/abbr.md"

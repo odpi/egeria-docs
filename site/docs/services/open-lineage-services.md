@@ -24,8 +24,8 @@ Following sequence explains how different services interact in and out the open 
 
 4. **Lineage jobs** run tasks that get executed in server background to:
 
-    - Poll for changes and request updates using REST API (*AssetLineageUpdateJob*); and 
-    - Scan the lineage graph and augment lineage paths for optimized querying (*LineageGraphJob*).
+    - Poll for changes and request updates using REST API (`AssetLineageUpdateJob`); and 
+    - Scan the lineage graph and augment lineage paths for optimized querying (`LineageGraphJob`).
 
 5. **Lineage query service** provides REST API used to query asset lineage store for specific business views such as horizontal and vertical.
 
@@ -33,7 +33,7 @@ Following sequence explains how different services interact in and out the open 
 
 - Configuring the open lineage server following the [admin guide](/egeria-docs/guides/admin/servers/configuring-an-open-lineage-server/).
 
-- Find out how to configure options for the [Janus Lineage Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-daemon-connectors/open-lineage-connectors/open-lineage-janus-connector) and supported undelying storage and indexing backend technologies.
+- Find out how to configure options for the [Janus Lineage Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-daemon-connectors/open-lineage-connectors/open-lineage-janus-connector) and supported underlying storage and indexing backend technologies.
 
 - [Lineage Management](/egeria-docs/features/lineage-management/overview/) feature overview.
 

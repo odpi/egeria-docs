@@ -65,7 +65,7 @@ For data engine proxy server, followng can be configured:
 
 | Property | Description | Is mandatory |
 |---|---|---|
-dataEngineConnection | OCF connection configuration object that defines the connector type and its properties. Refer to specifc connector for detailed reference. Example provided for [IBM Data Stage connector](https://github.com/odpi/egeria-connector-ibm-information-server/tree/master/datastage-adapter).  | Yes |
+dataEngineConnection | OCF connection configuration object that defines the connector type and its properties. Refer to specific connector for detailed reference. Example provided for [IBM Data Stage connector](https://github.com/odpi/egeria-connector-ibm-information-server/tree/master/datastage-adapter).  | Yes |
 pollIntervalInSeconds | The polling interval in seconds to call the sequence extracting metadata. | Yes | 
 
 #### Removing the Data Engine Services from the server configuration

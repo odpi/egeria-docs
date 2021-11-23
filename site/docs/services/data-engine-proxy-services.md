@@ -18,7 +18,7 @@ This server supports intercommunication from a **Data Engine** and
 the [Data Engine OMAS](/egeria-docs/services/omas/data-engine/overview).
 
 A data engine is a technology that processes data to either copy it to a new location,
-transform it to a new format so it can be consumed in a different way and/or
+transform it to a new format, so it can be consumed in a different way and/or
 derive new values from the data.  The data engine may be retrieving data from
 multiple data sources and also writing to multiple data sources.
 

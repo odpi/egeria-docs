@@ -351,7 +351,7 @@ Design lineage can be consolidated and exported for preservation by the [Asset L
 
 Figure 35 shows metadata capture using:
 
-- The [data engine proxy](/egeria-docs/concepts/data-engine-proxy) server to poll metadata in automated way.
+- The [data engine proxy server](/egeria-docs/services/data-engine-proxy-services/) to poll metadata in automated way.
 - A caller using [Data Engine OMAS's](/egeria-docs/services/omas/data-engine/overview) API.
 
 Bot mechanisms push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the open lineage server.
@@ -405,11 +405,15 @@ By using open metadata, metadata is captured once and used for many purposes.
 - [File Lineage solution using Egeria](/egeria-docs/scenarios/file-lineage/overview)
 
 APIs for capturing lineage
+
 - [Asset Manager Open Metadata Access Service (OMAS)](/egeria-docs/services/omas/asset-manager/overview)
 - [Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis)
+- [Data Engine Open Metadata Access Service (OMAS)](/egeria-docs/services/omas/data-engine/overview/)
 
 APIs for retrieving lineage
+
 - [Open Lineage Services](/egeria-docs/services/open-lineage-services)
+
 - [Asset Owner](/egeria-docs/services/omas/asset-owner/overview) and [Asset Consumer](/egeria-docs/services/omas/asset-consumer/overview) through the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview).
 
 

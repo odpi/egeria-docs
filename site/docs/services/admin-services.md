@@ -10,7 +10,7 @@ hide:
 
 # Administration services
 
-The administration services support the command to both [configure](/egeria-docs/guides/admin/guide) and [operate](/egeria-docs/guides/operations/guide) an [OMAG server](/egeria-docs/concepts/omag-server).
+The administration services support the command to both [configure](/egeria-docs/guides/admin/servers) and [operate](/egeria-docs/guides/operations/operating-omag-server) an [OMAG server](/egeria-docs/concepts/omag-server).
 
 
 --8<-- "snippets/abbr.md"

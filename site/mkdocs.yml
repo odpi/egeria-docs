@@ -161,7 +161,8 @@ nav:
               - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
       - New Dojo (In Development):
           - Dojo Overview: education/egeria-dojo/index.md
-          - Running Egeria Day : education/egeria-dojo/running-egeria.md
+          - Running Egeria Day :
+              - Introduction : education/egeria-dojo/running-egeria/egeria-introduction.md
           - Developer Day : education/egeria-dojo/developer.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md

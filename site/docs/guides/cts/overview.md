@@ -24,7 +24,7 @@ This workbench supports the following profiles:
 
 | Profile | Description |
 |---|---|
-| [Platform origin](profiles/platform-origin) | Does the platform support the `server-platform-origin` API. |
+| [Platform origin](../profiles/platform-origin) | Does the platform support the `server-platform-origin` API. |
 
 ## Repository workbench
 

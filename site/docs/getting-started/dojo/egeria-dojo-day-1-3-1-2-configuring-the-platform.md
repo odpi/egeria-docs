@@ -34,7 +34,7 @@ listed then you need to load the environment ([Postman tutorial](/egeria-docs/ed
 
 If the baseURL variable is set to a different value to the server platform then Postman can not connect.
 In the screen capture below, you can see the baseURL is set to the default of `https://localhost:9443` when it should be
-`https://localhost:9443` because the platform is running in docker.
+`https://localhost:19443` because the platform is running using docker-compose.
 
 ![Postman server origin - wrong base url](/egeria-docs/tools/postman-platform-origin-wrong-base-url.png)
 

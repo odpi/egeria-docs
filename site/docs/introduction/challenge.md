@@ -19,7 +19,7 @@ Today's IT is both at the heart of the problem and can enable the solution. Many
 Our guiding beliefs:
 
 - The maintenance of metadata must be automated to scale to the sheer volumes and variety of data involved in modern business. Similarly, metadata should be used to drive the governance of data and create a business-friendly logical interface to the data landscape.
-- The availability of metadata management must become ubiquitous across all data platforms, regardless of deployment envirohment, so that the processing engines on these platforms can rely on its availability and build capability around it.
+- The availability of metadata management must become ubiquitous across all data platforms, regardless of deployment environment, so that the processing engines on these platforms can rely on its availability and build capability around it.
 - Metadata access must become open and remotely accessible so that tools from different vendors can work with metadata located on different platforms. This implies unique identifiers for metadata elements, some level of standardization in the types and formats for metadata and standard interfaces for manipulating metadata.
 - Wherever possible, discovery and maintenance of metadata has to be an integral part of all tools that access, change and move information.
 

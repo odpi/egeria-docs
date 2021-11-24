@@ -8,7 +8,7 @@ for user interfaces to integrate with open metadata.
 
 The view services are as follows:
 
-* **[Glossary Author](/egeria-docs/services/omvs/glossary-author)** - develop a definition of a subject area including glossary
+* **[Glossary Author](/egeria-docs/services/omvs/glossary-author/overview)** - develop a definition of a subject area including glossary
 terms, reference data and rules. 
 
   The Glossary Author OMVS is for user interfaces that support subject matter experts
@@ -20,7 +20,7 @@ and used by Asset Owner's to improve the findability and understandability
 of their assets by linking their asset's structure to relevant parts of
 the subject area definition.
 
-* **[Repository Explorer](/egeria-docs/services/omvs/rex)** - explorer interface to inspect instances across a cohort of repositories.
+* **[Repository Explorer](/egeria-docs/services/omvs/rex/overview)** - explorer interface to inspect instances across a cohort of repositories.
 
   The Repository Explorer (Rex) OMVS is for user interfaces that support enterprise architects
 who need to inspect, navigate or explore the instance data stored in a repository or a cohort of 
@@ -29,7 +29,7 @@ of the graph of instances connected to those entities. This enables the user to 
 (as a diagram) to visualize the details and connectivity of a group of instances of interest to the 
 user.
 
-* **[Type Explorer](/egeria-docs/services/omvs/tex)** - explorer interface to inspect types across a cohort of repositories.
+* **[Type Explorer](/egeria-docs/services/omvs/tex/overview)** - explorer interface to inspect types across a cohort of repositories.
 
   The Type Explorer (Tex) OMVS is for user interfaces that support enterprise architects
 who need to inspect, navigate or explore the open metadata types supported by a repository or a cohort of 
@@ -37,7 +37,7 @@ repositories. It enables the retrieval of type data (relating to entities, relat
 and exploration of the graphs of entity type inheritance and the supported combinations of entity and
 relationship types.
 
-* **[Dynamic Infrastructure and Operations](/egeria-docs/services/omvs/dino)** - admin interface to inspect servers, services, cohorts and platforms.
+* **[Dynamic Infrastructure and Operations](/egeria-docs/services/omvs/dino/overview)** - admin interface to inspect servers, services, cohorts and platforms.
 
   The Dino OMVS is for user interfaces that support Egeria operators who need to inspect, navigate or explore 
   the open metadata servers, services, cohorts and platforms that are configured or actively running. It is intended 

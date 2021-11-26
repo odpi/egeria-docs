@@ -1,0 +1,1 @@
+--8<-- "docs/release-notes/3-4.md"

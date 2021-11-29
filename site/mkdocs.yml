@@ -161,7 +161,8 @@ nav:
               - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
       - New Dojo (In Development):
           - Dojo Overview: education/egeria-dojo/index.md
-          - Running Egeria Day : education/egeria-dojo/running-egeria.md
+          - Running Egeria Day :
+              - Introduction : education/egeria-dojo/running-egeria/egeria-introduction.md
           - Developer Day : education/egeria-dojo/developer.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
@@ -218,15 +219,18 @@ nav:
           - Formatting Standards: guides/documentation/formatting.md
           - Style Guide: guides/documentation/style.md
   - Releases:
-      - Release Notes: release-notes/overview.md
-      - Latest Release: release-notes/latest.md
-      - Next Release: release-notes/next.md
-      - Roadmap: release-notes/roadmap.md
-      - Content Status: release-notes/content-status.md
-      - Older Releases:
+      - Overview: release-notes/overview.md
+      - Release Notes:
+        - Latest Release: release-notes/latest.md
+        - Next Release: release-notes/next.md
+        - v3.3: release-notes/3-3.md
+        - v3.2: release-notes/3-2.md
+        - v3.1: release-notes/3-1.md
+        - v3.0: release-notes/3-0.md
+        - Older Releases:
           - v2.x:
               - 2.11: release-notes/2-11.md
-              - "2.10": release-notes/2-10.md
+              - 2.10: release-notes/2-10.md
               - 2.9: release-notes/2-9.md
               - 2.8: release-notes/2-8.md
               - 2.7: release-notes/2-7.md
@@ -247,6 +251,8 @@ nav:
               - 1.2: release-notes/1-2.md
               - 1.1: release-notes/1-1.md
               - 1.0: release-notes/1-0.md
+      - Roadmap: release-notes/roadmap.md
+      - Content Status: release-notes/content-status.md
   - Reference:
       - Open Metadata Types:
           - Open Metadata Type System: types/index.md

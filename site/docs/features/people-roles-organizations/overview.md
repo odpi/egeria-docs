@@ -16,7 +16,7 @@ A role has a context. For example, Tessa is a manager, but not for everyone in C
 
 So a role has a scope and roles can be combined together to form the complete “job” that an individual performs.
 
-Now consider what a role is from an organization's perspective. Poles can be thought of as slots, or vacancies, in the organization's teams that individuals are appointed to for a span of time.  A role can have more than one person appointed. [Head count](/egeria-docs/concepts/person-role/#head-count-limit) is an optional attribute that indicates how many people are expected to be assigned to the role.
+Now consider what a role is from an organization's perspective. Roles can be thought of as slots, or vacancies, in the organization's teams that individuals are appointed to for a span of time.  A role can have more than one person appointed. [Head count](/egeria-docs/concepts/person-role/#head-count-limit) is an optional attribute that indicates how many people are expected to be assigned to the role.
 
 The teams are typically organized into one or more hierarchies.  These hierarchies reflect how the work has been divided up to meet the objectives of the organization. Figure 2 shows the general structure.
 
@@ -73,18 +73,61 @@ The roles in an organization help to determine who should have access to specifi
 
 Egeria provides the means to link information about the organization with the asset descriptions of the resources teams and individuals need and security control information that links into the security authorization services.
 
-![Figure v](governed-by.svg)
+![Figure 7](governed-by.svg)
+> **Figure 7;** Security groups are governance definitions.  They can be linked to resources with the *GovernanceBy* relationship to show that the security group is used to govern access to these resources.  The security group can also be linked to an organization, service or business capability using the *ScopedBy* relationship to show that it is only used within the identified scope.
 
 
-## Onboarding organization data
+## Using organization data with open metadata
 
-Information about an organization's teams, roles and people is often managed in an application that has a structure 
-![Figure x](coco-employees.png)
-![Figure y](coco-departments.png)
+Egeria may have one or more of the following uses of organization data and this will effect the scope and coverage of this data that flows through Egeria.
+
+- Egeria is a consumer of the organization data for collaboration and governance.
+- Egeria is a validator of the consistency of the organization data in the different systems.
+- Egeria is a distributor of the organization data between systems.  This may include its only security definitions used to security the access of open metadata through Egeria.
+
+In general, if Egeria is just consuming the organization data then it only needs information about the people and teams using Egeria.  If, however, Egeria is validating or distributing organization data, it tends to hold all of the organization data that is relevant to the sources and consumers of the organization data.
+
+The text below covers all three uses.
+
+## Systems that hold organization data
+
+Organization data is widely distributed across an organization's systems.  Each system holds a different subset of the organization data and is updating some or all of its content.  When planning to integrate organization data into Egeria, it is important to understand where the authoritative source of each attribute is located and how the information in different systems can be correlated together.  Below are the descriptions of three systems in Coco Pharmaceuticals that are responsible for managing organization information.
+
+### HR Information Manager (HRIM)
+
+HRIM is owned by the Human Resources (HR) team in Coco Pharmaceuticals for managing information about employees.  It covers applicants, current employees and those who have left.
+
+![Figure 8](hrim-system.svg)
+
+This is a model of the HRIM data.  You can see it includes not only the employees, but also the department structure.
+
+![Figure 9](hrim-data-model.svg)
+
+### The cocopages company directory
+
+The cocopages application provides contact information for anyone associated with Coco Pharmaceuticals business.  This includes contractors and business partners such as the hospital staff working on clinical trials. It is also owned by the Human Resources (HR) team in Coco Pharmaceuticals but any Coco employee can update their own entry and add third parties to it.
+
+![Figure 10](cocopages-system.svg)
+
+This is a model of the cocopages data.  You can see it covers email addresses and telephone numbers.
+
+![Figure 11](cocopages-data-model.svg)
+
+### Security Administration (SecAdmin)
+
+SecAdmin is owned by the security team in Coco Pharmaceuticals.  It defines who has access to which resources.
+
+![Figure 12](secadmin-system.svg)
+
+This is a model of the SecAdmin data. 
+
+![Figure 13](secadmin-data-model.svg)
+
+![Figure 14](user-types.svg)
 
 ## Automating the exchange of information
 
-![Figure z](syncing-org-data.svg)
+![Figure 15](syncing-org-data.svg)
 
 ## Using information about individuals in collaboration
 

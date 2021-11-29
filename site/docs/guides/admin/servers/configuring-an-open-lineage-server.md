@@ -3,10 +3,19 @@
 
 # Configuring an [open lineage server](/egeria-docs/concepts/open-lineage-servery)
 
+## Overview
+
 Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
 a [configuration document](/egeria-docs/concepts/configuration-document).
 
+For open lineage server following can be configured:
+
 ![Configuration for an open lineage server](open-lineage-server-configuration.svg)
+
+??? question "What are the required configuration elements for this server type?"
+    - Event Bus Config
+    - Audit Log Destination
+    - Open Lineage Config
 
 --8<-- "snippets/tasks/configuring-local-server-url.md"
 
@@ -14,80 +23,84 @@ a [configuration document](/egeria-docs/concepts/configuration-document).
 
 --8<-- "snippets/tasks/configuring-the-audit-log.md"
 
---8<-- "snippets/tasks/configuring-the-server-security-connector.md"
+<!-- --8<-- "snippets/tasks/configuring-the-server-security-connector.md" -->
+
+--8<-- "snippets/tasks/configuring-event-bus.md"
 
 
-Configure the Open Lineage Service, by POSTing a payload like the following
- 
-```json
+## Configuring the Open Lineage Services
+
+!!! post "POST - Configure Open Lineage Services"
+    ```
+    {{serverURLRoot}}/open-metadata/admin-services/users/{{userId}}/servers/{{serverName}}/open-lineage/configuration
+    ```
+
+    ```json
     {
-      "class": "OpenLineageConfig",
-      "inTopicName": "server.omas.omas.assetlineage.outTopic",
-      "lineageGraphConnection": {
-        "class": "Connection",
-        "displayName": "Lineage Graph Connection",
-        "description": "Used for storing lineage in the Open Metadata format",
-        "connectorType": {
-          "class": "ConnectorType",
-          "connectorProviderClassName": "org.odpi.openmetadata.openconnectors.governancedaemonconnectors.openlineageconnectors.janusconnector.graph.LineageGraphConnectorProvider"
+        "class": "OpenLineageConfig",
+        "openLineageDescription": "Open Lineage Service is used for the storage and querying of lineage",
+        "lineageGraphConnection": {
+            "class": "Connection",
+            "displayName": "Lineage Graph Connection",
+            "description": "Used for storing lineage in the Open Metadata format",
+            "connectorType": {
+                "class": "ConnectorType",
+                "connectorProviderClassName": "org.odpi.openmetadata.openconnectors.governancedaemonconnectors.openlineageconnectors.janusconnector.graph.LineageGraphConnectorProvider"
+            },
+            "configurationProperties": {
+                "gremlin.graph": "org.janusgraph.core.JanusGraphFactory",
+                "storage.backend": "berkeleyje",
+                "storage.directory": "data/servers/{{ols-server-name}}/repository/berkeley",
+                "index.search.backend": "lucene",
+                "index.search.directory": "data/servers/{{ols-server-name}}/repository/searchindex"
+            }
         },
-        "configurationProperties": {
-          "gremlin.graph": "org.janusgraph.core.JanusGraphFactory",
-          "storage.backend": "berkeleyje",
-          "storage.directory": "./egeria-lineage-repositories/lineageGraph/berkeley",
-          "index.search.backend": "lucene",
-          "index.search.directory": "./egeria-lineage-repositories/lineageGraph/searchindex"
-        }
-      },
-      "accessServiceConfig": {
-        "serverName": "cocoMDS1",
-        "serverPlatformUrlRoot": "https://localhost:9443",
-        "user": "admin",
-        "password": "admin"
-      },
-      "backgroundJobs": [
-        {
-          "jobName": "LineageGraphJob",
-          "jobInterval": 120,
-          "jobEnabled": false
-        }, 
-        {
-          "jobName": "AssetLineageUpdateJob",
-          "jobInterval": 120,
-          "jobEnabled": true,
-          "jobDefaultValue": "2021-12-03T10:15:30"
-        }
-      ]
-   }
-```
-to the following address
+        "accessServiceConfig": {
+            "serverName": "{{server-name}}",
+            "serverPlatformUrlRoot": "{{server-platform-url}}",
+            "user": "admin",
+            "password": "secret"
+        },
+        "backgroundJobs": [
+            {
+                "jobName": "LineageGraphJob",
+                "jobInterval": 120,
+                "jobEnabled": "false"
+            },
+            {
+                "jobName": "AssetLineageUpdateJob",
+                "jobInterval": 120,
+                "jobEnabled": "false",
+                "jobDefaultValue": "2021-01-01T00:00:00"
+            }
+        ]
+    }
+    ```
 
-```
-    POST {{serverURLRoot}}/open-metadata/admin-services/users/{{userId}}/servers/{{serverName}}/open-lineage/configuration
- ```
+#### Configuration reference
 
-Update the payload with specific configuration values:
-- `inTopicName` - the topic name of Asset Lineage OMAS Out Topic
-- `lineageGraphConnection` - contains the information needed for configuring the 
-[open-lineage-janus-connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-daemon-connectors/open-lineage-connectors/open-lineage-janus-connector)
-- `accessServiceConfig.serverName` - the name of the server where Asset Lineage is running (mandatory value - exception will be thrown during configuration if null)
-- `accessServiceConfig.serverPlatformUrlRoot` - the base URL where the Asset Lineage is running (mandatory value - exception will be thrown during configuration if null)
-- `accessServiceConfig.user` - the user needed for authentication in Asset Lineage (not used at the moment)
-- `accessServiceConfig.password` - the password needed for authentication in Asset Lineage (not user at the moment)
-- `backgroundJobs.jobName` - should be the name of the job class name
-- `backgroundJobs.jobInterval` - interval for Open Lineage Services background processing job. The default is 120 if not specified
-- `backgroundJobs.jobEnabled` - enables or disables the job. The default is true if not specified
-- `backgroundJobs.jobDefaultValue` - value used to specify a particular value for the job. It's used in OLS only for the AssetLineageUpdateJob. It should have the ISO-8601 format, example: '2021-04-06T10:32:22.235'. It offers the chance to avoid the initial load and start publishing entities only starting from the given date and time. It is used only if there is no value saved in the graph to indicate the last update time. If a parsing error occurs, the job and the triggers will be shut down.  
-
-Note that you can configure the connector to run embedded or on a standalone JanusGraph server, by setting the `connectorProviderClassName` parameter to `org.odpi.openmetadata.openconnectors.governancedaemonconnectors.openlineageconnectors.janusconnector.graph.LineageGraphConnectorProvider` (embedded) or `org.odpi.openmetadata.openconnectors.governancedaemonconnectors.openlineageconnectors.janusconnector.graph.LineageGraphRemoteConnectorProvider` (standalone server). 
+| Property | Description | Is mandatory |
+|---|---|---|
+`lineageGraphConnection` | OCF configuration object that defines the Graph store connector type used. See [open-lineage-janus-connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-daemon-connectors/open-lineage-connectors/open-lineage-janus-connector) for more details. | Yes |
+`accessServiceConfig.serverName` | the name of the metadata server where paired Asset Lineage OMAS is running. | Yes
+`accessServiceConfig.serverPlatformUrlRoot` | The URL of the OMAG server platform running the metadata server where paired Asset Lineage OMAS is running. Also see [start-up information](#start-up-information) section. | Yes |
+`accessServiceConfig.user` | The username to access the server running Asset Lineage OMAS. | Yes |
+`accessServiceConfig.password` | The user password to access the server running Asset Lineage OMAS. Can be left out for non-secured access. | No |
+`backgroundJobs[n].jobName` | Key used to match the job name pre-defined in the open lineage server. Supported values `LineageGraphJob` and `AssetLineageUpdateJob` | No |
+`backgroundJobs[n].jobInterval` | Interval (**seconds**) to execute the repetitive task defined by the named job above | No |
+`backgroundJobs[n].jobEnabled` | Controls if the job will be running (enabled) or not (disabled). Omitting the item in the `backgroundJobs` list had the same effect as setting the job to disable. | No
+`backgroundJobs[n].jobDefaultValue` | Setting initial value for the task, only used in case of `AssetLineageUpdateJob`. When configured and not present in the store this value becomes the starting point in time to poll for updates. After successful update initial value is no longer used and last known value form the store. The value should be always specified in standard internet data-time format `YYYY-MM-DDThh:mm:ss`. See [ISO-8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.8) for more info and examples. | No |
  
 
-### Removing the Open Lineage Services from the server configuration
+#### Removing the Open Lineage Services from the server configuration
 
-Remove the Open Lineage Services from the server configuration by issuing the following HTTP request:
-    
-```
-DELETE {{serverURLRoot}}/open-metadata/admin-services/users/{{userId]}}/servers/{{serverName}}/open-lineage/configuration
-```
+!!! delete "DELETE - Remove Open Lineage Configuration from the server"
+    ```
+    {{serverURLRoot}}/open-metadata/admin-services/users/{{userId]}}/servers/{{serverName}}/open-lineage/configuration
+    ```
+### Start up information
+
+!!! info "Runtime consideration"
+    It is important to consider that, to operate, open lineage server depends on the availability of metadata access server and asset lineage being up and running. This is the case because open lineage server discovers the event bus connectivity and the topic address from asset lineage during start-up. Consequently, it will always wait and retry until this condition is met, and it starts up successfully.
 
 --8<-- "snippets/abbr.md"

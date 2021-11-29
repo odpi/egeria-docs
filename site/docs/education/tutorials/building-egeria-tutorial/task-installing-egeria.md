@@ -17,6 +17,7 @@ egeria-3.3-SNAPSHOT-distribution.tar.gz		open-metadata-assemblies-3.3-SNAPSHOT.j
 egeria-3.3-SNAPSHOT-omag-server			rat.txt
 egeria-3.3-SNAPSHOT-omag-server.tar.gz
 ```
+The files in this list will change as Egeria develops. For this exercise it is the files including 'distribution' that are important.
 
 The name of the files is determined by the release level of the code that you
 [downloaded from GitHub](task-downloading-egeria-source.md).  In this example,
@@ -57,15 +58,14 @@ LICENSE			clients			server
 NOTICE			conformance-suite	user-interface
 ```
 
+As before, you may notice different files as Egeria evolves.
+
 Under **server** is a directory for the
 [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) that is used to run
 open metadata and governance services.
 
-Change to the OMAG server platform's directory.
-
 ```bash
-$ cd server
-$ ls
+$ ls server
 $ resources				server-chassis-spring-3.3-SNAPSHOT.jar
 ```
 

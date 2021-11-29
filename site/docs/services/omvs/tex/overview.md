@@ -19,4 +19,4 @@ display also shows the attributes and entity types for each relationship.
 
 This OMVS calls a remote server using the [repository services client](/egeria-docs/services/omrs).
 
----8<-- "snippets/abbr.md"---8<-- "snippets/abbr.md"
+---8<-- "snippets/abbr.md"

@@ -77,7 +77,7 @@ To enable persistence, there are two options:
 Both approaches are valid and should be equally functional, but occasionally a bug may crop up that makes one or the other more or less feasible for a particular configuration.
 
 ??? example "Example persistence using JSON configuration"
-    ```json linenums="1" hl_lines="8-30"
+    ```js linenums="1"
     {
       "class": "Connection",
       "connectorType": {
@@ -85,12 +85,12 @@ Both approaches are valid and should be equally functional, but occasionally a b
         "connectorProviderClassName": "org.odpi.egeria.connectors.juxt.xtdb.repositoryconnector.XtdbOMRSRepositoryConnectorProvider"
       },
       "configurationProperties": {
-        "xtdbConfig": {
-          "xtdb.lucene/lucene-store": {
+        "xtdbConfig": { // (1)
+          "xtdb.lucene/lucene-store": { // (2)
             "db-dir": "data/servers/xtdb/lucene"
           },
           "xtdb/index-store": {
-            "kv-store": {
+            "kv-store": { // (3)
               "xtdb/module": "xtdb.rocksdb/->kv-store",
               "db-dir": "data/servers/xtdb/rdb-index"
             }
@@ -112,12 +112,14 @@ Both approaches are valid and should be equally functional, but occasionally a b
     }
     ```
 
-    !!! attention "Some of the Lucene configuration will be automatically injected"
-        When using the JSON-based configuration, some additional entries will be automatically injected to the Lucene configuration by Egeria: specifically the `indexer` and `analyzer` entries used to configure the Lucene index optimally for the OMRS-level search interfaces that Egeria defines. If you have defined your own `analyzer` or `indexer` in the configuration, these will be overridden by the connector's injection process -- in other words, any custom configuration you attempt for `analyzer` or `indexer` will be ignored.
+    1. Everything in the `xtdbConfig` block should follow the JSON configuration style defined by XTDB.
 
-    It is highly recommended to include the Lucene entry like that above as it offers significant performance improvements for any text-based queries.
+    2. It is highly recommended to include such a Lucene entry as it offers significant performance improvements for any text-based queries.
 
-    The remainder of the configuration in this example defines RocksDB to act as the persistence layer for XTDB's index and document stores, as well as its transaction log.
+        !!! attention "Some of the Lucene configuration will be automatically injected"
+            When using the JSON-based configuration, some additional entries will be automatically injected to the Lucene configuration by Egeria: specifically the `indexer` and `analyzer` entries used to configure the Lucene index optimally for the OMRS-level search interfaces that Egeria defines. If you have defined your own `analyzer` or `indexer` in the configuration, these will be overridden by the connector's injection process -- in other words, any custom configuration you attempt for `analyzer` or `indexer` will be ignored.
+
+    3. RocksDB is used in the rest of the configuration to act as the persistence layer for XTDB's index store, document store, and transaction log.
 
 ??? example "Example persistence using EDN configuration"
     ```json linenums="1" hl_lines="8"
@@ -136,12 +138,15 @@ Both approaches are valid and should be equally functional, but occasionally a b
     !!! attention "The Lucene configuration will NOT be automatically injected"
         Unlike the JSON-based configuration, when using the EDN-based configuration the necessary Egeria components of the Lucene configuration will not be automatically injected. Therefore, make sure that your EDN configuration string includes in the Lucene configuration the following keys and settings in addition to the `:db-dir`:
 
-        ```clojure hl_lines="3-4"
+        ```clojure
         {:xtdb.lucene/lucene-store {
             :db-dir "data/servers/xtdb/lucene"
-            :indexer {:xtdb/module xtdb.lucene.egeria/->egeria-indexer}
-            :analyzer {:xtdb/module xtdb.lucene.egeria/->ci-analyzer}}
+            :indexer {:xtdb/module xtdb.lucene.egeria/->egeria-indexer} ;; (1)
+            :analyzer {:xtdb/module xtdb.lucene.egeria/->ci-analyzer}} ;; (2)
         ```
+
+        1. The `:indexer` defines the custom indexing that must be done for efficient Lucene searches covering both case-sensitive and case-insensitive scenarios.
+        2. The `:analyzer` defines the mechanism to use for catering to these different search techniques against the custom indexing.
 
         These configure the Lucene index optimally for the OMRS-level search interfaces that Egeria defines.
 
@@ -155,7 +160,7 @@ Both approaches are valid and should be equally functional, but occasionally a b
 
     You can generally determine the additional dependencies you will need by looking at the `project.clj` file of the relevant XTDB module -- specifically its `:dependencies` section. For example, sticking with JDBC, here is the [project.clj :material-github:](https://github.com/xtdb/xtdb/blob/master/modules/jdbc/project.clj){ target=xtdb }:
 
-    ```clojure linenums="14" hl_lines="10"
+    ```clojure linenums="14"
       :dependencies [[org.clojure/clojure "1.10.3"]
                      [org.clojure/tools.logging "1.1.0"]
                      [com.xtdb/xtdb-core]
@@ -165,13 +170,16 @@ Both approaches are valid and should be equally functional, but occasionally a b
                      [pro.juxt.clojars-mirrors.com.taoensso/nippy "3.1.1"]
 
                      ;; Sample driver dependencies
-                     [org.postgresql/postgresql "42.2.18" :scope "provided"]
-                     [com.oracle.ojdbc/ojdbc8 "19.3.0.0" :scope "provided"]
+                     [org.postgresql/postgresql "42.2.18" :scope "provided"] ;; (1)
+                     [com.oracle.ojdbc/ojdbc8 "19.3.0.0" :scope "provided"] ;; (2)
                      [com.h2database/h2 "1.4.200" :scope "provided"]
                      [org.xerial/sqlite-jdbc "3.28.0" :scope "provided"]
                      [mysql/mysql-connector-java "8.0.23" :scope "provided"]
                      [com.microsoft.sqlserver/mssql-jdbc "8.2.2.jre8" :scope "provided"]]
     ```
+
+    1. This indicates that version `42.2.18` of the `postgresql` artifact within the `org.postgresql` group is needed to connect to PosgreSQL.
+    2. Similarly, this indicates that version `19.3.0.0` of the `ojdbc8` artifact within the `com.oracle.ojdbc` group is needed to connect to Oracle.
 
 ### Connector options
 
@@ -183,7 +191,7 @@ There are currently two configuration options for the connector itself:
 | `syncIndex` | Controls whether the connector will wait for the XTDB indexes to be updated before returning from write operations (true) or only that they are only guaranteed to be persisted (false). |
 
 !!! example "Example configuration showing the default settings"
-    ```json
+    ```js
     {
       "class": "Connection",
       "connectorType": {
@@ -193,20 +201,23 @@ There are currently two configuration options for the connector itself:
       "configurationProperties": {
         "xtdbConfig": { },
         "luceneRegexes": true,
-        "syncIndex": true
+        "syncIndex": true // (1)
       }
     }
     ```
 
-!!! attention "When `syncIndex` is set to false, all write operations will return null"
-    The `syncIndex` parameter is intended for mass ingestion use only. As of v3.2 the connector now makes use of XTDB's transaction function capability to ensure that all write operations are ACID compliant, even when done asynchronously. This guarantees that:
+    1. Be careful when setting `syncIndex` to false.
 
-    - the write operation will be persisted and durable when the write operation returns
-    - the write operation will be applied sequentially relative to any other (concurrent) write operations
+        !!! attention "When `syncIndex` is set to false, all write operations will return null"
 
-    However, asynchronous mode explicitly means that the write operation will *not* be immediately indexed (for reading). When running this way, the resulting state of a given write operation will not be known until some point in the future. This means that we cannot return a reliable result from the write operation to the caller when the repository is running in asynchronous mode. Rather than returning something that is potentially incorrect, we have therefore opted to ensure that these write operations always return `null` when operating in asynchronous mode.
+            The `syncIndex` parameter is intended for mass ingestion use only. As of v3.2 the connector now makes use of XTDB's transaction function capability to ensure that all write operations are ACID compliant, even when done asynchronously. This guarantees that:
 
-    You should therefore be careful that when using asynchronous mode you are not relying on any functionality that makes direct use of the results of write operations, as those results will always be `null` in this mode. (And of course, since the write is asynchronous, there will be some period of time during which doing a read operation for that same object will also return either no results or an older / stale version of the result until the write operation has been indexed.)
+            - the write operation will be persisted and durable when the write operation returns
+            - the write operation will be applied sequentially relative to any other (concurrent) write operations
+
+            However, asynchronous mode explicitly means that the write operation will *not* be immediately indexed (for reading). When running this way, the resulting state of a given write operation will not be known until some point in the future. This means that we cannot return a reliable result from the write operation to the caller when the repository is running in asynchronous mode. Rather than returning something that is potentially incorrect, we have therefore opted to ensure that these write operations always return `null` when operating in asynchronous mode.
+
+            You should therefore be careful that when using asynchronous mode you are not relying on any functionality that makes direct use of the results of write operations, as those results will always be `null` in this mode. (And of course, since the write is asynchronous, there will be some period of time during which doing a read operation for that same object will also return either no results or an older / stale version of the result until the write operation has been indexed.)
 
 ## High availability
 

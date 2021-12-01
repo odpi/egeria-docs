@@ -223,6 +223,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.4: release-notes/3-4.md
         - v3.3: release-notes/3-3.md
         - v3.2: release-notes/3-2.md
         - v3.1: release-notes/3-1.md
@@ -663,6 +664,8 @@ theme:
     - navigation.top
     - navigation.indexes
     - search.highlight
+    - navigation.tracking
+    - content.code.annotate
   palette:
     - scheme: default
       accent: cyan
@@ -705,7 +708,8 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.highlight
   - pymdownx.details
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences
   - pymdownx.keys
   - toc:

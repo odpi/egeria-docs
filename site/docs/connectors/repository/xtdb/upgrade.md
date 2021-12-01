@@ -38,7 +38,7 @@ Before running the migrator, define the configuration of your repository. The co
     The simplest way to ensure this matches the configuration used by your connector is to copy the `xtdbConfig` property from the request you POST to Egeria to configure your connector. Simply be certain to replace any relative paths with absolute paths to data to ensure the migrator can find the metadata.
 
 ??? example "Example connector configuration in Egeria"
-    ```json linenums="1" hl_lines="9-31"
+    ```js linenums="1" hl_lines="9-31"
     {
       "class": "Connection",
       "connectorType": {
@@ -47,7 +47,7 @@ Before running the migrator, define the configuration of your repository. The co
       },
       "configurationProperties": {
         "xtdbConfig":
-        {
+        { // (1)
           "xtdb/index-store": {
             "kv-store": {
               "xtdb/module": "xtdb.rocksdb/->kv-store",
@@ -73,6 +73,8 @@ Before running the migrator, define the configuration of your repository. The co
       }
     }    
     ```
+
+    1. Everything within this block (immediately within the `xtdbConfig` key) is the JSON-based configuration of XTDB.
 
 ## 3. Make a backup
 
@@ -111,10 +113,10 @@ Run the following command to execute the in-place upgrade:
 
 !!! cli "Execute the in-place upgrade"
     ```shell
-    java -jar egeria-connector-xtdb-migrator-*-jar-with-dependencies.jar config.json
+    java -jar egeria-connector-xtdb-migrator-*-jar-with-dependencies.jar config.json # (1)
     ```
 
-    Where `config.json` is the file containing your repository's configuration.
+    1. Where `config.json` is the file containing your repository's configuration.
 
 If you run the migrator and no migration is actually needed, the output will indicate that your repository is already at the necessary version to work with this version of the connector, and no migration is needed. You can simply proceed with running the connector.
 

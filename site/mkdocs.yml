@@ -187,6 +187,8 @@ nav:
       - Webinars:
           - Previous Webinars:
               - Previous Webinars: education/previous-webinars/index.md
+              - Beyond cataloguing December 2021: education/previous-webinars/december-2021/overview.md
+              - Open Lineage November 2021: education/previous-webinars/november-2021/README.md
               - The value of Egeria October 2021: education/previous-webinars/october-2021/README.md
               - Visualising a metadata eco system September 2021: education/previous-webinars/september-2021/README.md
               - Date Lake and Egeria June 2020: education/previous-webinars/june-2020/README.md

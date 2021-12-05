@@ -225,6 +225,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.4: release-notes/3-4.md
         - v3.3: release-notes/3-3.md
         - v3.2: release-notes/3-2.md
         - v3.1: release-notes/3-1.md

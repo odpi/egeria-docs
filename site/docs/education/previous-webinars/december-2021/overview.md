@@ -18,7 +18,7 @@ The result is that Peter is relieved of the tedious cataloguing tasks and Coco P
 - Link to [event advertising](https://lfaidata.foundation/blog/2021/11/30/what-next-after-you-have-built-a-catalog-part-1/)
 - Presentation
   <div class="video-wrapper">
-  <iframe src="./Egeria%20Webinar,%20Beyond%20Cataloguing,%205th%20December%202021.pdf"></iframe>
+  <iframe src="egeria-webinar-beyond-cataloguing-5th-december-2021.pdf"></iframe>
   </div>
 - Session replay - TBD
 - Related documentation

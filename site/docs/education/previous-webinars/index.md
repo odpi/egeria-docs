@@ -8,6 +8,7 @@ Webinars on open metadata and governance are run on a regular basis, there was a
 Each webinar focuses on a specific audience or issue.  The material for our webinars is stored below
 along with links to the recordings.
 
+* [Beyond Cataloguing](december-2021/overview) - December 2021
 * [Open Lineage](november-2021) - November 2021
 * [Value of Egeria](october-2021) - October 2021
 * [Visualising a metadata eco system](september-2021) - September 2021 

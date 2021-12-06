@@ -124,6 +124,7 @@ nav:
           - Templated Cataloguing: features/templated-cataloguing/overview.md
           - User Feedback: features/user-feedback/overview.md
   - Learning:
+      - Webinars: education/webinar-program/overview.md
       - Existing Dojo:
           - Dojo Introduction: getting-started/dojo/index.md
           - Day 1:
@@ -184,7 +185,6 @@ nav:
       - Scenarios:
           - Data Manager Integration: scenarios/data-manager-integration/overview.md
           - File Lineage: scenarios/file-lineage/overview.md
-      - Webinars: education/webinar-program/overview.md
   - Contributing:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md

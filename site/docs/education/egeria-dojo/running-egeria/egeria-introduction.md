@@ -51,3 +51,5 @@ As you work through this Dojo you may find problems with our documentation - per
 ### Slack 
 
 Another useful resource to help you as you work through these Dojo sessions - whether it is problems, questions, or about topics unrelated to the Dojo, you can [join](https://slack.lfai.foundation) our LF AI & Data Slack workspace. Once you've done so, look at the channels beginning 'egeria-'. '#egeria-dojo' has been set-up to support this learning activity.
+
+--8<-- "snippets/abbr.md"

@@ -30,12 +30,13 @@ Related governance domains can be grouped into **GovernanceDomainSets**.
 
 The role of leader of a governance domain is represented as a **GovernanceOfficer**.
 
-**GovernanceDefinition** describes an aspect of a governance program.
+*GovernanceDefinition* describes an aspect of a governance program.
 They are authored in the metadata repository.  
 They inherit from [Referenceable](/egeria-docs/types/0/0010-Base-Model),
 which means they have a unique identifier and link to external references for more information.
 
-**GovernedBy** links the governance definitions to the elements they are governing.
+*GovernedBy* links the governance definitions to the elements they are governing.
+*ScopedBy* links the governance definitions to the elements (organizations, projects, teams, ...) that are using the governance definition.
 
 ![UML](0401-Governance-Definitions.svg)
 
@@ -50,6 +51,7 @@ which means they have a unique identifier and link to external references for mo
   * [0415 Governance Responses](0415-Governance-Responses.md) - describe the policies that support each of the drivers.
   * [0420 Governance Controls](0420-Governance-Controls.md) - describe how the policies will be implemented.
      * [0430 Technical Controls](0430-Technical-Controls.md) - describe automated behaviour that implements a governance control.
+       * [0423 Security Groups](0423-Security-Definitions.md) - define security groups and the assets and roles associated with them.
        * [0438 Naming Standards](0438-Naming-Standards.md) - defines naming standard rules.
        * [0460 Governance Execution Points](0460-Governance-Execution-Points.md) - describe classifications for software components that link them to a technical control.
        * [0461 Governance Action Engines](0461-Governance-Engines.md) - support the execution of technical controls.

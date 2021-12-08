@@ -28,13 +28,13 @@ Figure 3 shows part of the Coco Pharmaceuticals organization.
 ![Figure 3](coco-org-structure.svg)
 > **Figure 3**: Coco Pharmaceuticals divides its labs and research work from the sales and manufacturing.  The leader of the labs is one of the founders, Terri Daring.  Tessa Tube works for her and Callie Quartile works for Tessa.
 
-Coco Pharmaceuticals is a small company but even so, its organization structure is hard to draw on a flat diagram.  Terri Daring is a founder and a member of the *Founders* team (not shown in figure 3) as well as being a leader of the *Labs* organization.
+Coco Pharmaceuticals is a small company but even so, its organization structure is hard to draw on a flat diagram.  Terri Daring is a founder and a member of the *Founders* team (not shown in figure 3) as well as being a leader of the *London Lab* organization.
 
 ## Projects and communities
 
 An individual acquires their roles from the projects they work on and the communities they belong to as well as their direct team in the organization hierarchy (department).
 
-Figure 4 shows a role attached to a community.  The `CommunityMembership` relationship defined the type of members that perform the role.  So a community may have a community leader role that is separate from the community administrator role for example.
+Figure 4 shows a role attached to a community.  The `CommunityMembership` relationship defines the type of members that perform the role.  So a community may have a community leader role that is separate from the community administrator role for example.
 
 ![Figure 4](community-roles.svg)
 > **Figure 4**: Linking of a role to a community showing the type of membership associated with the role
@@ -42,7 +42,7 @@ Figure 4 shows a role attached to a community.  The `CommunityMembership` relati
 Figure 5 shows the roles associated with a project.  There are the roles associated with the management of the project as well as the project team that performs the work of the project.
 
 ![Figure 5](project-roles.svg)
-> **Figure 5**: Linking of roles to a project.  There is a separation of the roles to manage the project from the team who does the work.
+> **Figure 5**: Linking of roles to a project.  There is a separation of the roles to manage the project from the roles to lead the team that does the work.
 
 
 ## Types of roles
@@ -101,7 +101,7 @@ Figure 11 shows the different types of actor profile as well as a link to a `Use
 ![Figure 11](actor-profile.svg)
 > **Figure 11:** There are three subtypes for ActorProfile: ITProfile for assets, Person for individuals and Team for organized groups of roles.  Any one of these subtypes can have a UserIdentity associated with them.
 
-Unless security is disabled, every action performed in an IT system is associated with a user account.  The linkage of the UserIdentity which represents the user account with the profile males it possible to look up the originator of the action.
+Unless security is disabled, every action performed in an IT system is associated with a user account.  The linkage of the UserIdentity which represents the user account with the profile makes it possible to look up the originator of the action.
 
 User accounts are typically associated with specific running processes and individuals.  However it is also possible to have a shared user account for a team, although this makes it difficult to identify which person performed a specific action.
 
@@ -112,53 +112,94 @@ Figure 12 also shows that a profile can be linked to multiple user identities bu
 ![Figure 12](user-identities.svg)
 > **Figure 12:** Showing the possibility of a profile having multiple user identities associated with it
 
-Figure 13 show that the other elements linked to the profile creates a broader view of the context of an action in the IT systems.
+In summary, figure 13 show that the other elements linked to the profile creates a broader view of the context of an action in the IT systems.
 
 ![Figure 13](profile-context-summary.svg)
-> **Figure 13:** The full context of a user action
+> **Figure 13:** The full context of a user action. At the top is the ITProfile showing which Asset is using a particular user account.  Below that is the Person linked to the associated PersonRoles, which are in turn linked to the scope in which they are defined (community, team or project)
 
 ## Linking governance and security to roles
 
-Access to resources is controlled by identifying which user accounts can access which resources.  Typically similar resources are identified and a user group is defined for them.  The group contains the list of user accounts that are allowed to access the resources.
+Access to [resources](/egeria-doces/concepts/resource) is controlled by identifying which user accounts can access which resources.  Typically similar resources are identified and a *user group* is defined for them.  The group contains the list of user accounts that are allowed to access the associated resources.  Figure 
 
-The roles, teams, projects and communities in an organization help to determine who should have access to specific resources.  The user identities identify the user accounts of the individuals and processes associated with the work that is required.  Egeria also provides the means to defined the security information that  links between the organization and the asset descriptions of the resources.
+![Figure 14](ldap-group.svg)
+> **Figure 14:** Members of an LDAP user group are listed in the group definition.  These users are given access to the resources that are protected by that group.
 
-`SecurityGroups` are entities that describe a user group in a security control system.  They are subtypes of the `GovernanceDefinition` that supports two relationships:
+The roles and their membership of teams, projects and communities in an organization help to determine who should have access to specific resources.  However the access control managers do not work directly with the roles, teams, projects and communities - they only understand the user account. [`UserIdentities`](/egeria-docs/types/1/0110-Actors/#UserIdentity) therefore document the user accounts of the individuals, teams and processes.  Egeria also provides the means to defined the security information that  links between the organization and the asset descriptions of the resources.
 
-- `GovernedBy` - to indicate the resources that are governed by the governance definition.  When the governance definition is a security group it means these are the resources that are protected by the security group.
+[`SecurityGroups`](/egeria-docs/types/4/0423-Security-Definitions) are entities that describe a user group in a security control system.  They are subtypes of the `GovernanceDefinition` that supports two relationships:
 
-- `ScopedBy` - to indicate where the governance definition applies.  For a security group this means the people, roles, teams etch that should be given permission to the security group.
+- [`GovernedBy`](/egeria-docs/types/4/0401-Governance-Definitions) - to indicate the resources that are governed by the governance definition.  When the governance definition is a security group it means these are the resources that are protected by the security group.
 
-Figure 14 shows these two relationships.
+- [`ScopedBy`](/egeria-docs/types/4/0401-Governance-Definitions) - to indicate where the governance definition applies.  For a security group this means the people, roles, teams etc that should be given permission to the security group.
 
-![Figure 14](governed-by.svg)
-> **Figure 14:** Security groups are subtypes of governance definitions.  They can be linked to resources with the *GovernanceBy* relationship to show that the security group is used to govern access to these resources.  The security group can also be linked to an organization, service or business capability using the *ScopedBy* relationship to show that it is only used within the identified scope.
+Figure 15 shows these two relationships.
 
-Figures 15 and 16 show some examples of the security group linking different types of resources to the different parts of the organization.
+![Figure 15](governed-by.svg)
+> **Figure 15:** Security groups are subtypes of governance definitions.  They can be linked to resources with the *GovernanceBy* relationship to show that the security group is used to govern access to these resources.  The security group can also be linked to an organization, service or business capability using the *ScopedBy* relationship to show that it is only used within the identified scope.
 
-![Figure 15](governed-by-example-1.svg)
-> **Figure 15:** Example of associating a security group to a governance zone to give a process that is maintaining the resources in a governance zone.
+Figures 16 and 17 show some examples of the security group linking different types of resources to the different parts of the organization.
 
-![Figure 16](governed-by-example-2.svg)
-> **Figure 16:** Example of associating a security group to a team to give the team members access to the team resources.
+![Figure 16](governed-by-example-1.svg)
+> **Figure 16:** Example of associating a security group to a governance zone to give a process that is maintaining the resources in a governance zone.
+
+![Figure 17](governed-by-example-2.svg)
+> **Figure 17:** Example of associating a security group to a team to give the team members access to the team resources.
 
 
-The navigation between these elements is technically feasible, but time-consuming and difficult to audit.  Egeria also defines a classification for a user identity that lists all of the security groups that should be assigned to a specific user identity.
+The navigation between these elements is technically feasible, but time-consuming and difficult to audit.  Egeria also defines a classification for a user identity that lists all of the security groups that should be assigned to that user identity.  This is shown in figure 18.
 
-![Figure 17](security-group-membership.svg)
-> **Figure 17:** The SecurityGroupMembership classification lists the security groups that the user identity should be added to.
+![Figure 18](security-group-membership.svg)
+> **Figure 18:** The SecurityGroupMembership classification lists the security groups that the user identity should be added to in the user directory (such as LDAP).
 
-Egeria's governance actions can automate the maintenance of the SecurityGroupMembership classification
+Egeria's governance actions can automate the maintenance of the [`SecurityGroupMembership`](/egeria-docs/types/4/0423-Security-Definitions) classification.  For example, Callie Quartile, a Data Scientist at Coco Pharmaceuticals analyses data for both clinical trials and marketing.  She therefore has two roles that each use different data.  The result is that her userId needs access to both the clinical trials data and the marketing data.  Figure 19 shows the navigation that the governance action uses to set up the security groups for Callie's userid.
+
+![Figure 19](setting-security-groups-1.svg)
+> **Figure 19:** Setting the security groups in a governance action involves navigating from the security groups to the linked roles and on to the userIdentities associated with the Person profile.
+
+## Specialist user accounts
+
+Given the different level of access needed to perform each of her roles, Callie becomes concerned that it is difficult for her to separate the data she uses for clinical trials from her marketing work.
+
+Callie is given an additional user account called `callie-marketing` that she can use for her marketing work.  This userId needs to replace the entry in the marketing group.  Callie can switch users to access the different data sets for her two roles
+
+![Figure 20](callies-userids.svg)
+> **Figure 20:** Callie's additional user account called `callie-marketing` and the settings needed in the associated LDAP groups.
+
+Figure 21 shows a possible issue when the second user identity is assigned to Callie since there is no guidance on which user identities should be associated with which security groups.
+
+![Figure 21](setting-security-groups-2.svg)
+> **Figure 21:** Dilemma on setting SecurityGroupMembership.
+
+The solution is to add the role mapping on the profile identity relationship between the person entity and the user identity entity for the new marketing userId.  Only security groups associated with the identified role are assigned to this user identity,  All other security groups go to the unmapped user identity.  This is illustrated in figure 22.
+
+![Figure 22](setting-security-groups-3.svg)
+> **Figure 22:** Setting role information on the profile identity relationship.
+
+## Working with people
+
+![Figure 23](interacting-with-humans.svg)
+> **Figure 23:** Mechanism needed to include an individual in a governance process
+
+
+![Figure 24](governance-action-to-do.svg)
+> **Figure 24:** Including a stewardship step in a governance action process
+
+![Figure 25](governance-action-to-do-assignment.svg)
+> **Figure 25:** Locating the person to assign the to do to
+
+![Figure 26](to-do-processing.svg)
+> **Figure 26:** Overview of the to do processing
+
+![Figure 27](incident-management.svg)
+> **Figure 27:** Overview of the alternative incident management
+
+## Synchronizing organization data with open metadata
 
 Egeria's synchronization capability helps in the maintenance of the organization data and user identities in open metadata followed by the synchronization of the security information in the security access control services:
 
 - When onboarding a new service that has an embedded security system (such as a cloud platform) or even for Egeria itself.
 - When making changes to the organization structure.
 - When setting up new projects and communities.
-
-
-
-## Using organization data with open metadata
 
 Egeria may have one or more of the following uses of organization data and this will effect the scope and coverage of this data that flows through Egeria.
 
@@ -178,11 +219,11 @@ Organization data is widely distributed across an organization's systems.  Each 
 
 HRIM is owned by the Human Resources (HR) team in Coco Pharmaceuticals for managing information about employees.  It covers applicants, current employees and those who have left.
 
-![Figure 8](hrim-system.svg)
+![Figure 19](hrim-system.svg)
 
 This is a model of the HRIM data.  You can see it includes not only the employees, but also the department structure.
 
-![Figure 9](hrim-data-model.svg)
+![Figure 20](hrim-data-model.svg)
 
 ### The cocopages company directory
 

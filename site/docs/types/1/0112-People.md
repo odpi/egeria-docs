@@ -3,11 +3,14 @@
 
 # 0112 People, their personal network and their roles
 
+This model describes the metadata elements that describe a person
+and their roles and contribution in the organization.
+
 ## Person
 
 `Person` extends [`ActorProfile`](/egeria-docs/types/1/0110-Actors/#actorprofile) to capture more information about a person. Many of the properties are inspired by the LDAP `inetOrgPerson` attributes (see [RFC 2798](https://datatracker.ietf.org/doc/rfc2798/)).
 
-Typically the `displayName` is set to a person's preferred name.  The `qualifiedName` may be the identifier from an external system or the `employeeNumber` and/or some combination of names to ensure it is unique.  Then the properties are as follows:
+Typically the `name` is set to a person's preferred name.  The `qualifiedName` may be the identifier from an external system or the `employeeNumber` and/or some combination of names to ensure it is unique.  Then the properties are as follows:
 
 - `title` takes the courtesy title of the person.
 - `givenNames` is set to a space separated list of names that are not the person's surname (or family name).
@@ -15,7 +18,7 @@ Typically the `displayName` is set to a person's preferred name.  The `qualified
 - `surname` holds the person's family name.
 - `fullName` allows the storage of the full legal name, leaving the `displayName` for the person's preferred name and the `qualifiedName` as the employee serial/personnel number plus .
 - `jobTitle` is for the person's job title if that is in use in the organization.
-- `employeeNumber` is the unique identifier in use in the organization to identify the person - often related to an emplyment or partnership contract.
+- `employeeNumber` is the unique identifier in use in the organization to identify the person - often related to an employment or partnership contract.
 - `employeeType` code used by the organization, typically to identify the type of contract they have with the organization.
 - `preferredLanguage` is on or more spoken or written language identifiers preferred by the person.
 - `isPublic` indicates whether the information in the profile can be shared with colleagues or is only visible to the user(s) that connect with one of the linked user identities or systems that are part of the open metadata ecosystem.
@@ -49,7 +52,12 @@ The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppoi
 ![UML](0112-People.svg "Describing the profile for a person")
 
 
-The [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview) provides support for a person's profile.  See [personal profile](/egeria-docs/concepts/personal-profile). It also supports the ability to query a person's roles (see [personal roles](/egeria-docs/concepts/personal-roles)) and their peer network (see [peer network](/egeria-docs/concepts/peer-network))
+## Further information
 
+[People, Roles and Organizations](/egeria-docs/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
+
+The [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview) provides support for managing a [person's profile](/egeria-docs/concepts/personal-profile). It also supports the ability to query a person's [roles](/egeria-docs/concepts/personal-roles) and their [peer network](/egeria-docs/concepts/peer-network).
+
+The [Organization Integrator OMIS](/egeria-docs/services/omis/organization-integrator/overview) supports the synchronization of information about people between open metadata and external systems.
 
 --8<-- "snippets/abbr.md"

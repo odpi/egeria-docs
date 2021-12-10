@@ -5,10 +5,19 @@
 
 ## Person
 
-`Person` extends [`ActorProfile`](/egeria-docs/types/1/0110-Actors/#actorprofile) to capture more information about a person.
+`Person` extends [`ActorProfile`](/egeria-docs/types/1/0110-Actors/#actorprofile) to capture more information about a person. Many of the properties are inspired by the LDAP `inetOrgPerson` attributes (see [RFC 2798](https://datatracker.ietf.org/doc/rfc2798/)).
 
-- `fullName` allows the storage of the full legal name, leaving the `displayName` for the person's preferred name and the `qualifiedName` as the employee serial/personnel number.
+Typically the `displayName` is set to a person's preferred name.  The `qualifiedName` may be the identifier from an external system or the `employeeNumber` and/or some combination of names to ensure it is unique.  Then the properties are as follows:
+
+- `title` takes the courtesy title of the person.
+- `givenNames` is set to a space separated list of names that are not the person's surname (or family name).
+- `initials` takes the first letter of each of a person's given names.   The format may include spaces, periods or both to separate the initials.
+- `surname` holds the person's family name.
+- `fullName` allows the storage of the full legal name, leaving the `displayName` for the person's preferred name and the `qualifiedName` as the employee serial/personnel number plus .
 - `jobTitle` is for the person's job title if that is in use in the organization.
+- `employeeNumber` is the unique identifier in use in the organization to identify the person - often related to an emplyment or partnership contract.
+- `employeeType` code used by the organization, typically to identify the type of contract they have with the organization.
+- `preferredLanguage` is on or more spoken or written language identifiers preferred by the person.
 - `isPublic` indicates whether the information in the profile can be shared with colleagues or is only visible to the user(s) that connect with one of the linked user identities or systems that are part of the open metadata ecosystem.
 
 ## Peer
@@ -35,10 +44,6 @@ The PersonRole entity is extended in multiple places to show different types of 
 ## PersonRoleAppointment
 
 The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppointment* relationship to show that the person has been appointed.  It is common for [effectivity dates](/egeria-docs/features/effectivity-dates) to be set on this relationship.
-
-
-
-
 
 
 ![UML](0112-People.svg "Describing the profile for a person")

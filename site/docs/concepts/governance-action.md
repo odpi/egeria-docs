@@ -25,7 +25,7 @@ act as a record of the activity for future audits.
 Governance actions can be created through the [Governance Engine OMAS API](/egeria-docs/services/omas/governance-engine/overview).
 Some governance services (for example, the 
 [Watchdog Governance Action Service](/egeria-docs/concepts/governance-service))
-can create governance actions when they run.  
+can initiate other governance actions.  
 
 Governance services produce output strings called **guards** that indicate specific
 conditions or outcomes.  These guards can be used to trigger new governance actions.

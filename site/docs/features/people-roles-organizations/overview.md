@@ -9,7 +9,7 @@ Everyone plays multiple roles in their lives: parent, daughter, employee, scout 
 
 For example, figure 1 shows some of the roles that [Tessa Tube](https://opengovernance.odpi.org/coco-pharmaceuticals/personas/tessa-tube.html) performs at [Coco Pharmaceuticals](https://opengovernance.odpi.org/coco-pharmaceuticals/).  *Researcher* is her primary role, but she is also a manager, system owner and information consumer.  Each of these roles needs particular skills and knowledge.  They will also take up some of her time.
 
-![Figure 1](tessa-tubes-roles.png)
+![Figure 1](tessa-tubes-roles.svg)
 > **Figure 1:** Roles that Tessa Tube plays in Coco Pharmaceuticals
 
 A role has a context. For example, Tessa is a manager, but not for everyone in Coco Pharmaceuticals. She is a manager of a specific team. Similarly, she may be a system owner, but not of all systems.
@@ -82,19 +82,19 @@ The hospital appoints an information steward ([Robbie Records](https://opengover
 
 At Coco Pharmaceuticals, Tanya Tidie is appointed as the information custodian for the data.  She takes responsibility for meeting the terms and conditions for the incoming data.
 
-![Figure 9](data-exchange-roles-1.png)
-> **Figure 7:** Robbie Records and Tanya Tidie managing the sharing of data from the hospital
+![Figure 9](data-exchange-roles-1.svg)
+> **Figure 9:** Robbie Records and Tanya Tidie managing the sharing of data from the hospital
 
 Figure 10 shows a broader view the roles of each character when it comes to the transfer of data from the hospital.  The role names are not important.  There is little standardization fo these names in the industry.  Just focus on the fact that the people involved with the clinical data have different roles/responsibilities with respect to its protection and use.
 
-![Figure 10](data-exchange-roles-2.png)
+![Figure 10](data-exchange-roles-2.svg)
 > **Figure 10:** The patient is the information subject.  The information originators are the medical staff making notes and capturing clinical data.  Robbie is the information steward managing the data and its transfer to external organization on the hospital-side.  Tanya Tidie is the receiver of the data and as the information custodian, she is responsible for the proper management of Coco Pharmaceutical's copy of the data. Tessa Tube and Callie Quartile are information consumers.  They read the data and perform analysis on it to determine how well the new drug is helping the patient.
 
 Tanya Tidie needs to ensure that only the clinical trials team have access to the data.  The team also need to be educated on their responsibilities to meet the terms and conditions of the data transfer.
 
 ## Actor Profiles
 
-Figures 2, 3 and 7 show that individuals are represented using a `Person` instance.  Figures 2 and 3 also show `Team` instances for each team.  Both `Person` and `Team` are types of `ActorProfile` (see model 0110).  `ITProfile` is another type of ActorProfile that are linked to [Assets](/egeria-docs/concepts/asset) to show the user information typically of a process such as a connector or a software server.
+Figures 2, 3 and 7 show that individuals are represented using a `Person` instance.  Figures 2 and 3 also show `Team` instances for each team.  Both `Person` and `Team` are types of [`ActorProfile`](/egeria-docs/types/1/0110-Actor-Profile).  [`ITProfile`](/egeria-docs/types/1/0117-IT-Profiles) is another type of ActorProfile that are linked to [Assets](/egeria-docs/concepts/asset) to show the user information typically of a process such as a connector or a software server.
 
 Figure 11 shows the different types of actor profile as well as a link to a `UserIdentity` entity. This describes a user account or userId associated with the profile. 
 
@@ -177,21 +177,32 @@ The solution is to add the role mapping on the profile identity relationship bet
 
 ## Working with people
 
-![Figure 23](interacting-with-humans.svg)
-> **Figure 23:** Mechanism needed to include an individual in a governance process
+There will be situations where a governance action discovers an error, an inconsistency or a gap in the metadata it is working with that needs a person to resolve, either through making a choice, supplying additional information or approve a recommendation from the governance engine.
 
+Individuals do not have a REST API to call.  However they do use different tools and notification mechanisms such as instant messaging and email.  These tools can be used to pass information about the decisions and/or changes that the governance needs the person to perform.  The selected person can then make the desired changes either through the Egeria APIs or another tool that is connected to the open metadata ecosystem.  Once the changes are visible to the governance action(s), they can continue processing. 
+
+![Figure 23](interacting-with-humans.svg)
+> **Figure 23:** Mechanisms needed to include an individual in a governance process include a notification mechanism to alert the selected individual that their help is needed; APIs to investigate the situation and make the changes needed to the open metadata.  These changes can be detected and the governance action(s) can then proceed.
+
+Governance actions uses the open metadata [`ToDo`](/egeria-docs/types/1/0137-Actions) entity to request action from an individual.  This is set up in a governance action implemented by a [*Triage Governance Service*](/egeria-docs/frameworks/gaf/overview/#triage-governance-service).  This service navigates to the role that needs to take the action.  An integration connector typically running in the [Organization Integrator OMIS](/egeria-docs/services/omis/organization-integrator/overview) can then send a notification to the person or people appointed to that role.
+
+Figure 24 shows a [governance action process](/egeria-docs/concepts/governance-action-process) that includes a governance action called `Request Stewardship`.  This creates an appropriate ToDo when the `Assign SecurityGroup` governance action detects there is ambiguity relating to which user groups should be assigned to each user identity for an individual.  It is retried once the ToDo is complete.
 
 ![Figure 24](governance-action-to-do.svg)
-> **Figure 24:** Including a stewardship step in a governance action process
+> **Figure 24:** Including a stewardship step in a governance action process.
+
+The `Request Stewardship` governance action in this example assigns the ToDo to the individual's manager.  Figure 25 shows the navigation from Callie's profile to Tessa's management role
+where the ToDo is then attached.
 
 ![Figure 25](governance-action-to-do-assignment.svg)
-> **Figure 25:** Locating the person to assign the to do to
+> **Figure 25:** Locating the role for the ToDo
+
+Figure 26 summarizes the processing that notifies Tessa of the ToDo and the assignment of the role identifiers needed to set up Callie's security groups in LDAP.
 
 ![Figure 26](to-do-processing.svg)
-> **Figure 26:** Overview of the to do processing
+> **Figure 26:** Overview of the ToDo processing
 
-![Figure 27](incident-management.svg)
-> **Figure 27:** Overview of the alternative incident management
+*ToDos* are good mechanisms when the person responsible for taking action is clear.  All governance actions are also able to create an [Incident Report](/egeria-docs/concepts/incident-report).  This is a report that documents the need to take action.  However, there is no need for the governance action to assign a specific person to the report - this is handled by an [*Incident Management System*](/egeria-docs/features/incident-reporting/overview). 
 
 ## Synchronizing organization data with open metadata
 
@@ -219,37 +230,37 @@ Organization data is widely distributed across an organization's systems.  Each 
 
 HRIM is owned by the Human Resources (HR) team in Coco Pharmaceuticals for managing information about employees.  It covers applicants, current employees and those who have left.
 
-![Figure 19](hrim-system.svg)
+![Figure 28](hrim-system.svg)
 
 This is a model of the HRIM data.  You can see it includes not only the employees, but also the department structure.
 
-![Figure 20](hrim-data-model.svg)
+![Figure 29](hrim-data-model.svg)
 
 ### The cocopages company directory
 
 The cocopages application provides contact information for anyone associated with Coco Pharmaceuticals business.  This includes contractors and business partners such as the hospital staff working on clinical trials. It is also owned by the Human Resources (HR) team in Coco Pharmaceuticals but any Coco employee can update their own entry and add third parties to it.
 
-![Figure 10](cocopages-system.svg)
+![Figure 30](cocopages-system.svg)
 
 This is a model of the cocopages data.  You can see it covers email addresses and telephone numbers.
 
-![Figure 11](cocopages-data-model.svg)
+![Figure 31](cocopages-data-model.svg)
 
 ### Security Administration (SecAdmin)
 
 SecAdmin is owned by the security team in Coco Pharmaceuticals.  It defines who has access to which resources.
 
-![Figure 12](secadmin-system.svg)
+![Figure 32](secadmin-system.svg)
 
 This is a model of the SecAdmin data. 
 
-![Figure 13](secadmin-data-model.svg)
+![Figure 33](secadmin-data-model.svg)
 
-![Figure 14](user-types.svg)
+![Figure 34](user-types.svg)
 
 ## Automating the exchange of information
 
-![Figure 15](syncing-org-data.svg)
+![Figure 35](syncing-org-data.svg)
 
 ## Using information about individuals in collaboration
 

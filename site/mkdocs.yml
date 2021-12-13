@@ -124,6 +124,7 @@ nav:
           - Templated Cataloguing: features/templated-cataloguing/overview.md
           - User Feedback: features/user-feedback/overview.md
   - Learning:
+      - Webinars: education/webinar-program/overview.md
       - Existing Dojo:
           - Dojo Introduction: getting-started/dojo/index.md
           - Day 1:
@@ -184,19 +185,6 @@ nav:
       - Scenarios:
           - Data Manager Integration: scenarios/data-manager-integration/overview.md
           - File Lineage: scenarios/file-lineage/overview.md
-      - Webinars:
-          - Previous Webinars:
-              - Previous Webinars: education/previous-webinars/index.md
-              - The value of Egeria October 2021: education/previous-webinars/october-2021/README.md
-              - Visualising a metadata eco system September 2021: education/previous-webinars/september-2021/README.md
-              - Date Lake and Egeria June 2020: education/previous-webinars/june-2020/README.md
-              - Building a Data Catalog April 2020: education/previous-webinars/april-2020/README.md
-              - Metadata for Data Driven Organization March 2020 : education/previous-webinars/march-2020/README.md
-              - Egeria and Palisade December 2019 : education/previous-webinars/december-2019/README.md
-              - Privacy July 2018: education/previous-webinars/july-2018/README.md
-              - Open Metadata Standards April 2018: education/previous-webinars/april-2018/README.md
-              - Free Metadata October 2017: education/previous-webinars/october-2017/README.md
-          - Planned Webinars: education/planned-webinars/overview.md
   - Contributing:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md
@@ -223,6 +211,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.4: release-notes/3-4.md
         - v3.3: release-notes/3-3.md
         - v3.2: release-notes/3-2.md
         - v3.1: release-notes/3-1.md

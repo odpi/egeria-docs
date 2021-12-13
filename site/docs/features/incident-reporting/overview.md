@@ -3,4 +3,6 @@
 
 # Incident Reporting
 
+![Figure 1](incident-management.svg)
+
 --8<-- "snippets/abbr.md"

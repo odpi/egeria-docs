@@ -3,11 +3,17 @@
 
 --8<-- "snippets/content-status/released.md"
 
+!!! attention "Broken Links"
+
+    We are still working on this content -- you may find some broken links. Until resolved, You can
+    find additional information in the [Egeria repository](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/access-services/asset-consumer/asset-consumer-client/docs/user)
+
+
 # Asset Consumer Open Metadata Access Service (OMAS)
 
 ## Overview
 The Asset Consumer OMAS provides services to an individual who wants to work
-with [assets](/egeria-docs/concepts/assets) such as:
+with [assets](/egeria-docs/concepts/asset) such as:
 
 * data stores, data sets and data feeds
 * reports
@@ -20,13 +26,13 @@ It supports:
 * the creation of a [connector](/egeria-docs/concepts/connector) based on the properties in a connection object.
 * the retrieval of properties about an asset.  These properties are called the [connected asset properties](/egeria-docs/concepts/connected-asset-properties).
 * the adding of feedback (comments, ratings and likes) to an asset.
-* the attachment of [informal tags](/egeria-docs/concepts/informal-tags) to an asset.
+* the attachment of [informal tags](/egeria-docs/concepts/informal-tag) to an asset.
 * the adding of an audit log record for an asset.
 * the publishing of notifications about assets on Asset Consumer OMAS's [out topic](/egeria-docs/concepts/out-topic).
 
-Adding feedback through the Asset Consumer OMAS results in [Karma Points](/egeria-docs/concepts/karma-point) being awarded to the individual.  These are maintained in the individual's profile.  A karma point is awarded for each contribution of feedback through the API. (The awarding of Karma points is managed by the [Community Profile OMAS](/egeria-docs/services/omas/community-profile).)
+Adding feedback through the Asset Consumer OMAS results in [Karma Points](/egeria-docs/concepts/karma-point) being awarded to the individual.  These are maintained in the individual's profile.  A karma point is awarded for each contribution of feedback through the API. (The awarding of Karma points is managed by the [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview).)
 
-The connectors returned by the Asset Consumer OMAS are [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) connectors.  The caller can use the connector to access the contents of the asset itself and the properties about the asset it is accessing.   This service is provided by the [OCF Metadata Management Common Service](../../common-services/ocf-metadata-management).
+The connectors returned by the Asset Consumer OMAS are [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) connectors.  The caller can use the connector to access the contents of the asset itself and the properties about the asset it is accessing.   This service is provided by the [OCF Metadata Management Common Service](/egeria-docs/services/ocf-metadata-management).
 
 ## User Guide
 

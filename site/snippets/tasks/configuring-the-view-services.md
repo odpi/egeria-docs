@@ -11,7 +11,7 @@ To get a description of each of the registered view services, and each service's
 
 To activate a specific view service in a view server, it is necessary to add an entry for the view service to the view server's configuration document.
 
-![Configuration document contents for a view service](view-service-config.svg)
+![Configuration document contents for a view service](/egeria-docs/concepts/view-service-config.svg)
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `viewServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 

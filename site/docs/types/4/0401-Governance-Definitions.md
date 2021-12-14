@@ -43,9 +43,7 @@ which means they have a unique identifier and link to external references for mo
 
 ## Further Information
 
-* The governance definitions are organized into specific subtypes and linked together to provide a complete
-  description of the governance program.  The types for these more specialized definitions can be found
-  on the following pages:
+The governance definitions are organized into specific subtypes and linked together to provide a complete description of the governance program.  The types for these more specialized definitions can be found on the following pages:
   
   - [0405 Governance Drivers](0405-Governance-Drivers.md) - describe the motivations behind the governance program.
   - [0415 Governance Responses](0415-Governance-Responses.md) - describe the policies that support each of the drivers.
@@ -62,14 +60,8 @@ which means they have a unique identifier and link to external references for mo
   - [0482 Certification Types](0482-Certifications.md) - types of certifications used to shw compliance to a specific governance requirement.
   - [0485 Data Processing Purposes](0485-Data-Processing-Purposes.md) - definitions of purposes used in data privacy regulations.
 
-* The [Governance Program OMAS](../../../open-metadata-implementation/access-services/governance-program)
-  provides the APIs for maintaining the definitions of the governance domains, governance definitions and
-  governance officers. It uses the **GovernedBy** relationship to link governance definitions 
-  with [subject area definitions](0425-Subject-Areas.md) and
-  [governance zone definitions](0424-Governance-Zones.md).
+The [Governance Program OMAS](../../../open-metadata-implementation/access-services/governance-program) provides the APIs for maintaining the definitions of the governance domains, governance definitions and governance officers. It uses the **GovernedBy** relationship to link governance definitions with [subject area definitions](0425-Subject-Areas.md) and [governance zone definitions](0424-Governance-Zones.md).
   
-* The [Asset Manager OMAS](../../../open-metadata-implementation/access-services/asset-manager) supports the
-  exchange of governance definitions with third party asset managers and governance tools as well as the
-  use of the **GovernedBy** relationship through its **Governance Exchange Interface**.
+The [Asset Manager OMAS](../../../open-metadata-implementation/access-services/asset-manager) supports the exchange of governance definitions with third party asset managers and governance tools as well as the use of the **GovernedBy** relationship through its **Governance Exchange Interface**.
 
 --8<-- "snippets/abbr.md"

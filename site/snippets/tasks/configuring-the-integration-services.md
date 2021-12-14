@@ -7,7 +7,7 @@ The [integration services](/egeria-docs/services/omis) (or Open Metadata Integra
 
 Each integration service hosts one or more [integration connectors](/egeria-docs/concepts/integration-connector). An integration connector is responsible for the exchange of metadata with a specific deployment of a third party technology. For example, the [database integrator](/egeria-docs/services/omis/database-integrator) integration service supports integration connectors that work with relational databases (RDBMS). A deployment of this integration service in an integration daemon may host, say, two integration connectors each loading metadata from their own relational database server.
 
-![The configuration document contents for an integration service](integration-service-config.svg)
+![The configuration document contents for an integration service](/egeria-docs/concepts/integration-service-config.svg)
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `integrationServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 

@@ -19,12 +19,12 @@ An `ActorProfile` describes an entity to store and link information about the ac
 
 - `contactMethodType` - the type of communication method:
 
-  - EMAIL - email
-  - PHONE - landline or mobile
-  - CHAT - instant messaging
-  - PROFILE - add message to actor profile
-  - ACCOUNT - via an application account
-  - OTHER - another type of contact method
+    * EMAIL - email
+    * PHONE - landline or mobile
+    * CHAT - instant messaging
+    * PROFILE - add message to actor profile
+    * ACCOUNT - via an application account
+    * OTHER - another type of contact method
   
 - `contactMethodService` - the type of service to call to invoke this contact method.
 

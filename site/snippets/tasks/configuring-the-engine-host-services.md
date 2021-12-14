@@ -56,7 +56,7 @@ Note the `engineServiceURLMarker` for the engine service that you want to config
 
 #### Configure engine service
 
-![Configuration document contents for an integration service](engine-service-config.svg)
+![Configuration document contents for an integration service](/egeria-docs/concepts/engine-service-config.svg)
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `engineServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 

@@ -26,7 +26,7 @@ The connectors that support the exchange and maintenance of metadata help to acc
 | [Open Discovery Services](#open-discovery-services) | analyze the content of resources in the digital landscape and create annotations that are attached to the resource's [asset](/egeria-docs/concepts/asset) metadata element in the open metadata repositories in the form of an open discovery report |
 | [Governance Action Services](#governance-action-services) | perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities as required. |
 
-## Integration Connectors
+### Integration Connectors
 
 The integration connectors support the exchange of metadata with third party technologies.  This exchange
 may be inbound, outbound, synchronous, polling or event-driven.
@@ -89,7 +89,7 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/egeria-
 | [Open Lineage Cataloguer integration connector](/egeria-docs/connectors/integration/open-lineage-cataloguer-integration-connector) | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem. |
 
 
-## Repository and Event Mapper Connectors
+### Repository and Event Mapper Connectors
 
 The repository connectors provide the ability to integrate a third party metadata repository
 into an [open metadata repository cohort](/egeria-docs/concepts/cohort-member).
@@ -97,7 +97,7 @@ into an [open metadata repository cohort](/egeria-docs/concepts/cohort-member).
 Figure 2 shows the repository connector providing a native open metadata repository
 that uses a particular type of store within an Egeria [Metadata Access Server](/egeria-docs/concepts/metadata-access-server).
 
-![Figure 2](/egeria-docs/connectors/repository/native-repository-connector.png)
+![Figure 2](/egeria-docs/connectors/repository/native-repository-connector.svg)
 > **Figure 2:** Repository connector supporting a native open metadata repository
 
 
@@ -123,7 +123,7 @@ that uses a particular type of store within an Egeria [Metadata Access Server](/
 The [repository connectors](/egeria-docs/connectors/repository-connector) implement the [`OMRSMetadataCollection` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/OMRSMetadataCollection.java){ target=gh } interface to allow metadata to be communicated and exchanged according to Egeria's protocols and [type definitions](/egeria-docs/types).
 
 
-## Open Discovery Services
+### Open Discovery Services
 
 [Open discovery services](/egeria-docs/frameworks/odf/#discovery-service) are connectors that analyze the content of resources in the digital landscape and create annotations that are attached to the resource's Asset metadata element in the open metadata repositories in the form of an open discovery report.
 
@@ -137,7 +137,7 @@ The definition of the connector interfaces for discovery services is defined in 
 | [CSV Discovery Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | extracts the column names from the first line of the file, counts up the number of records in the file and extracts its last modified time. |
 | [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/egeria-docs/frameworks/odf/#discovery-pipeline)). |
 
-## Governance Action Services
+### Governance Action Services
 
 [Governance action services](/egeria-docs/frameworks/gaf/#governance-action-service) are connectors that perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities on request.
 
@@ -158,18 +158,24 @@ The definition of the connector interfaces for governance action services is def
 
 ## Runtime connectors
 
-*Runtime* connectors support Egeria's runtime:
-Connectors enable Egeria to operate in many environments by providing plug-in points for the runtime services
-it needs to operate.  Most of these connectors relate to persistent storage, or connections to distributed services.
+*Runtime* connectors enable Egeria's [OMAG Server Platform](/egeria docs/concepts/omag-server-platform) and its hosted [OMAG Servers](/egeria-docs/concepts/omag-server) to operate in many environments by providing plug-in points for the runtime services it needs to operate. Most of the runtime connectors relate to persistent storage, or connections to distributed services.
 
-## Configuration Document Store Connectors
+| Type | Description |
+|---|---|
+| [Configuration Document Store Connectors](#configuration-document-store-connectors) | manage the persistence and retrieval of [configuration documents](/egeria-docs/concepts/configuration-document). |
+| [Cohort Registry Store Connectors](#cohort-registry-store-connectors) | The cohort registry store connectors store the [open metadata repository cohort](/egeria-docs/concepts/cohort-member) membership details in the [cohort registry store](/egeria-docs/concepts/cohort-registry-store). |
+| [Open Metadata Archive Store Connectors](#open-metadata-archive-store-connectors) | read and write [open metadata archives](/egeria-docs/concepts/open-metadata-archive). |
+| [Audit Log Destination Connectors](#audit-log-destination-connectors) | support different destinations for audit log records. |
+| [REST Client Connectors](#rest-client-connectors) | issue REST API calls to Egeria's deployed platforms and third party technologies. |
+| [Cohort Member Client Connector](#cohort-member-client-connectors) | supports repository service called to remote cohort members. |
+| [Open Metadata Topic Connectors](#open-metadata-topic-connectors) | send and receive events. |
 
-The configuration store connectors contain the connector implementations that manage
-the [Configuration Documents](/egeria-docs/concepts/configuration-document)
-for [OMAG Servers](/egeria-docs/concepts/configuration-document).
+### Configuration Document Store Connectors
 
-![Figure 7](/egeria-docs/connectors/runtime/configuration-document-store-connector.svg)
-> **Figure 7:** Configuration Document Store Connector
+The configuration store connectors contain the connector implementations that manage the [Configuration Documents](/egeria-docs/concepts/configuration-document) for [OMAG Servers](/egeria-docs/concepts/configuration-document).
+
+![Figure 6](/egeria-docs/connectors/runtime/configuration-document-store-connector.svg)
+> **Figure 6:** Configuration Document Store Connector
 
 There is one configuration document store connector defined for each
 [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
@@ -191,17 +197,14 @@ OMAG Server Platform is described in the [Administration Guide](/egeria-docs/gui
 If no connector is configured, the OMAG Server Platform uses the Encrypted File Configuration Store Connector.
 
 
-## Cohort Registry Store Connectors
+### Cohort Registry Store Connectors
 
 The cohort registry store connectors store the
-[open metadata repository cohort](/egeria-docs/concepts/cohort-member)
-membership details used and maintained by the [cohort registry](/egeria-doc/services/omrs/component-descriptions/cohort-registry).
-The cohort protocols are peer-to-peer and hence there is a cohort registry
-(with a [cohort registry store](/egeria-docs/concepts/cohort-registry-store-connector)
+[open metadata repository cohort](/egeria-docs/concepts/cohort-member) membership details in the [cohort registry store](/egeria-docs/concepts/cohort-registry-store). The cohort protocols are peer-to-peer and hence there is a cohort registry (with a [cohort registry store](/egeria-docs/concepts/cohort-registry-store)
 for each [member of a cohort](/egeria-docs/concepts/cohort-member).
 
-![Figure 8](/egeria-docs/connectors/runtime/cohort-registry-store-connector.svg)
-> **Figure 8:** Open Metadata Topic Connectors
+![Figure 7](/egeria-docs/connectors/runtime/cohort-registry-store-connector.svg)
+> **Figure 7:** Open Metadata Topic Connectors
 
 Egeria provides a single implementation of a
 cohort registry store connector:
@@ -215,18 +218,13 @@ in the
 [org.odpi.openmetadata.repositoryservices.connectors.stores.cohortregistrystore](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/cohortregistrystore) Java package.
 
   
-## Open Metadata Archive Store Connectors
+### Open Metadata Archive Store Connectors
 
 The open metadata archive store connectors can
-read and write [open metadata archives](/egeria-docs/concepts/open-metadata-archive).
-Open metadata archives store open metadata types and instances for sharing,
-or for back up.
-These archives can be
-[loaded into an OMAG Server at start up](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store#configuring-the-startup-archives) or
-[added to a running OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store#adding-archive-to-running-server).
+read and write [open metadata archives](/egeria-docs/concepts/open-metadata-archive).  Open metadata archives store open metadata types and instances for sharing, or for back up.  These archives can be [loaded into an OMAG Server at start up](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store#configuring-the-startup-archives) or [added to a running OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store#adding-archive-to-running-server).
 
-![Figure 9](/egeria-docs/connectors/runtime/open-metadata-archive-store-connector.svg)
-> **Figure 9:** Open Metadata Archive Store Connector
+![Figure 8](/egeria-docs/connectors/runtime/open-metadata-archive-store-connector.svg)
+> **Figure 8:** Open Metadata Archive Store Connector
 
 
 Egeria provides a single implementation of the open metadata archive store connector:
@@ -240,15 +238,15 @@ in the
 [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore) Java package.
 
 
-## Audit Log Destination Connectors
+### Audit Log Destination Connectors
 
 The audit log destination connectors support different destinations for audit log records.
 Multiple of these connectors can be [active in an OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log)
 at any one time and they can each be configured to only process particular types of audit log records.
 
 
-![Figure 10](/egeria-docs/connectors/runtime/audit-log-destination-connector.svg)
-> **Figure 10:** Audit Log Destination Connector
+![Figure 9](/egeria-docs/connectors/runtime/audit-log-destination-connector.svg)
+> **Figure 9:** Audit Log Destination Connector
 
 Below are the connector implementations provided by Egeria
 
@@ -271,10 +269,10 @@ in the
 
 There is more information on the use of audit logging in the [Diagnostic Guide](/egeria-docs/guides/diagnostic).
 
-## REST Client Connectors
+### REST Client Connectors
 
 Egeria makes extensive use of [REST API calls](/egeria-docs/concepts/basic-concepts) for synchronous (request-response) communication with
-its own deployed runtimes and third party technologies.  The client connectors are used to issue
+its own deployed platforms and third party technologies.  The client connectors are used to issue
 the REST API calls.  Egeria provides a single implementation for Spring.
 
 * [Spring REST Client Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/rest-client-connectors/spring-rest-client-connector)
@@ -282,28 +280,25 @@ the REST API calls.  Egeria provides a single implementation for Spring.
   
 This is embedded in Egeria's [clients](/egeria-docs/guides/developer/using-egeria-clients).
 
-![Figure 11](/egeria-docs/connectors/runtime/rest-client-connector.svg)
-> **Figure 11:** REST Client Connector
+![Figure 10](/egeria-docs/connectors/runtime/rest-client-connector.svg)
+> **Figure 10:** REST Client Connector
 
 The definition of the connector interface for these connectors is
 defined in the [rest-client-connector-api](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/rest-client-connectors/rest-client-connectors-api) module in the
 [org.odpi.openmetadata.adapters.connectors.restclients](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/rest-client-connectors/rest-client-connector-api/src/main/java/org/odpi/openmetadata/adapters/connectors/restclients) Java package.
 
 
-## Cohort Member Client Connector
+### Cohort Member Client Connectors
 
 Members of an [Open Metadata Repository Cohort](/egeria-docs/concepts/cohort-member)
-provide the other cohort members with a
-Connection to a connector that supports the OMRSRepositoryConnector interface during the cohort registration process.
-This connector translates calls to retrieve and maintain metadata in the member's repository into
+provide the other cohort members with a Connection to a connector that supports the OMRSRepositoryConnector interface during the cohort registration process. This connector translates calls to retrieve and maintain metadata in the member's repository into
 remote calls to the real repository.
 
 
-![Figure 12](/egeria-docs/connectors/runtime/cohort-member-client-connector.svg)
-> **Figure 12:** Cohort Member Client Connector used for federating queries across the cohort
+![Figure 11](/egeria-docs/connectors/runtime/cohort-member-client-connector.svg)
+> **Figure 11:** Cohort Member Client Connector used for federating queries across the cohort
 
-Egeria's [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) provides a default REST API
-implementation and a corresponding client:
+Egeria's [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) provides a default REST API implementation and a corresponding client:
 
 * [REST Cohort Client Connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector)
   supports remote calls to the OMRS REST API.
@@ -334,7 +329,7 @@ metadata catalog using the Asset Owner OMAS,
 [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview).
 
 
-## Files
+### Files
 
 * The [Avro file connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/avro-file-connector) 
   provides access to an Avro file that has been catalogued using open metadata.
@@ -350,12 +345,12 @@ metadata catalog using the Asset Owner OMAS,
   is for accessing data that is
   stored as a number of files within a folder (directory).
   
-## Databases
+### Databases
 
 *More coming ...*
 
 
-## Open Metadata Topic Connectors
+### Open Metadata Topic Connectors
 
 The Open Metadata Topic Connectors are used by Egeria to read and write 
 [events](/egeria-docs/concepts/basic-concepts/#event) to a
@@ -364,8 +359,8 @@ The Open Metadata Topic Connectors are used by Egeria to read and write
 These events contain notifications relating to changes in metadata and the topic provides
 an asynchronous event exchange service hosted in the event broker.
 
-![Figure 6](/egeria-docs/connectors/resource/open-metadata-topic-connector.svg)
-> **Figure 6:** Open Metadata Topic Connectors
+![Figure 12](/egeria-docs/connectors/resource/open-metadata-topic-connector.svg)
+> **Figure 12:** Open Metadata Topic Connectors
 
 The Open Metadata Topic Connectors connect servers into an [open metadata repository cohort](/egeria-docs/concepts/cohort-member)
 and exchange notifications through the [Open Metadata Access Services (OMAS)'s](/egeria-docs/services/omas)

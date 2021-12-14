@@ -18,7 +18,7 @@ The documentation from the Admin Guide is shown below.
 From Docker Desktop, look at the logs for your docker container to see the audit log messages.
 There are different type of audit log messages
 
-* [Diagnostic Guide](/egeria-docs/guides/diagnostic-guide)
+* [Diagnostic Guide](/egeria-docs/guides/diagnostic/guide)
 
 # Optional material
 

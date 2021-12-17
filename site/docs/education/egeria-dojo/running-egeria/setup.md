@@ -34,7 +34,19 @@ Follow these steps from our [Kubernetes Documentation](/egeria-docs/guides/opera
 Follow these steps to setup Postman
 
   * [Setting up Postman](/egeria-docs/tools/postman/overview)
-  * [Importing Egeria Postman collection](/egeria-docs/tools/postman/import)
 
+## Test yourself
+
+??? question "Test yourself"
+
+* What is Kubernetes?
+* What is Helm?
+* What does Postman let you do?
+* What's a Postman collection?
+* What's a Postman environment?
+
+## Finished
+
+This concludes the setup of the environment that we will use to run the tutorials.
 
 --8<-- "snippets/abbr.md"

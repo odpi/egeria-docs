@@ -79,4 +79,8 @@ Egeria platform. Tutorial content will walk you through this explicitly.
 
 Postman is now ready to be used with egeria. Refer back to the tutorials for specific
 examples, or experiment!
+
+Instructions for contributing new Postman collections
+are located in the [developer-resources](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis).
+
 --8<-- "snippets/abbr.md"

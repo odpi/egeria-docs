@@ -34,7 +34,7 @@ Follow these steps from our [Kubernetes Documentation](/egeria-docs/guides/opera
 Follow these steps to setup Postman
 
   * [Setting up Postman](/egeria-docs/tools/postman/overview)
-  * 
+  * [Importing Egeria Postman collection](/egeria-docs/tools/postman/import)
 
 
 --8<-- "snippets/abbr.md"

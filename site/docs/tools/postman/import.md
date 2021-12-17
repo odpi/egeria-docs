@@ -7,6 +7,9 @@ A Postman environment provides a set of common variable
 that can be used in request definitions to make them
 adaptable to different deployment environments.
 
+For example this will include the IP address of the system we will send requests to,
+and the name of the metadata server we will work on.
+
 The Egeria Environment is located on GitHub at this location:
 
 * [https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-resources/open-metadata-samples/postman-rest-samples/Egeria.postman_environment.json](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-resources/open-metadata-samples/postman-rest-samples/Egeria.postman_environment.json)

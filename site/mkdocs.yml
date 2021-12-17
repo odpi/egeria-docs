@@ -164,6 +164,7 @@ nav:
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
               - Introduction : education/egeria-dojo/running-egeria/egeria-introduction.md
+              - Setup : education/egeria-dojo/running-egeria/setup.md
           - Developer Day : education/egeria-dojo/developer.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
@@ -691,6 +692,7 @@ extra:
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
   - footnotes
   - abbr
   - pymdownx.snippets

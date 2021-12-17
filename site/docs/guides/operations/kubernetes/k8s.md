@@ -164,7 +164,7 @@ Note that in the team's testing we mostly are running Redhat OpenShift on IBM Cl
 
 ## Accessing applications in your cluster
 
-!!! education "Furether information"
+!!! education "Further information"
     See [the Kubernetes docs :material-dock-window:](https://kubernetes.io/docs/tasks/administer-cluster/access-cluster-services/){ target=k8s }.
 
 ### NodePort

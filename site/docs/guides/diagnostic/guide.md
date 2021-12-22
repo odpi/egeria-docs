@@ -9,7 +9,7 @@ and the [OMAG Servers](/egeria-docs/concepts/omag-server)
 that run on it.
 
 If you are having problems building Egeria, please see the
-[Building Egeria](/egeria-docs/education/tutorials/building-egeria-tutorial) tutorial.
+[Building Egeria](/egeria-docs/education/tutorials/building-egeria-tutorial/overview) tutorial.
 
 
 ## The diagnosis process

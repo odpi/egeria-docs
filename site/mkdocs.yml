@@ -165,6 +165,7 @@ nav:
           - Running Egeria Day :
               - Introduction : education/egeria-dojo/running-egeria/introduction.md
               - Setup : education/egeria-dojo/running-egeria/setup.md
+              - Simple Install : education/egeria-dojo/running-egeria/simple-install.md
           - Developer Day : education/egeria-dojo/developer.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md

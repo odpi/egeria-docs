@@ -109,7 +109,7 @@ When running on a separate server or a cloud service this isn't a concern.
     - `kubectl` becomes `microk8s kubectl`
     - `helm` becomes `microk8s helm`
 
-    They can also be aliased on some platforms, for instance using `alias kubectl='microk8s kubect'` in `~/.zshrc` or an equivalent shell startup script.
+    They can also be aliased on some platforms, for instance using `alias kubectl='microk8s kubectl'` in `~/.zshrc` or an equivalent shell startup script.
 
 #### MacOS
 
@@ -119,6 +119,9 @@ Most of the Egeria development team use MacOS, so the instructions are elaborate
 
 !!! attention "Disable firewall stealth mode first"
     Before installing, go into **System Preferences** -> **Security and Privacy**. Click the lock to get into Admin mode. Then ensure **Firewall Options** -> **Enable Stealth Mode** is NOT enabled (no tick). [If it is left enabled, microk8s will not work properly! :material-dock-window:](https://github.com/ubuntu/microk8s/issues/2509){ target=mk8s }
+
+    If you do not make this change the install will end prematurely with an error such as:
+    `An error occurred when trying to execute 'sudo ping -c 1 snapcraft.io' with 'multipass': returned exit code 1.`
 
 - The recommended approach uses [HomeBrew :material-dock-window:](https://docs.brew.sh/Installation){ target=brew }. This offers a suite of tools often found on Linux which are easy to setup on MacOS.
 - If you are concerned over the firewall change, or HomeBrew requirement, refer back to the official k8s documentation and choose another k8s implementation that works for you.
@@ -131,7 +134,7 @@ As an example, the following commands should get you set up, but always check th
     brew install ubuntu/microk8s/microk8s
     microk8s install
     microk8s status --wait-ready
-    microk8s enable dns storage helm3
+    microk8s enable dns storage helm3 dashboard
     microk8s kubectl get all --all-namespaces
     ```
 

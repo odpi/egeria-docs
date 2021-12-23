@@ -19,66 +19,87 @@ You may only have a single node if running a simple environment, but these comma
 confirm you have connectivity to your Kubernetes cluster.
 
 !!! Warning
-    If you have installed 'microk8s' you need to prefix the commands with 'microk8s' and qualify the helm version.
+    If you have not installed 'microk8s', but are using a regular
+    Kubernetes environment, you need to modify the commands accordingly.
+
     
     For example:
 
-    `kubectl` becomes `microk8s kubectl` 
+    `kubectl` becomes `microk8s kubectl` becomes `kubectl`
     
-    `helm` becomes `microk8s helm3` 
+    `helm` becomes `microk8s helm3` becomes `helm`
 
 ```
-jonesn:~/ $ kubectl get pods                                                                                                                                                  [17:19:57]
-No resources found in dojo namespace.
-jonesn:~/ $ kubectl get nodes                                                                                                                                                 [17:20:02]
-NAME         STATUS   ROLES           AGE   VERSION
-10.242.0.5   Ready    master,worker   31h   v1.21.6+81bc627
-10.242.0.6   Ready    master,worker   31h   v1.21.6+81bc627
-10.242.0.7   Ready    master,worker   31h   v1.21.6+81bc627
-10.242.0.8   Ready    master,worker   31h   v1.21.6+81bc627
-jonesn:~/ $ helm list                                                                                                                                                         [17:21:10]
+jonesn:~/ $ microk8s kubectl get all                                                                                                             [10:51:49]
+NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.152.183.1   <none>        443/TCP   2d15h
+jonesn:~/ $ microk8s kubectl get nodes                                                                                                           [10:51:52]
+NAME          STATUS   ROLES    AGE     VERSION
+microk8s-vm   Ready    <none>   2d15h   v1.22.4-3+adc4115d990346
+jonesn:~/ $ microk8s helm3 list                                                                                                                  [10:52:00]
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /var/snap/microk8s/2695/credentials/client.config
 NAME	NAMESPACE	REVISION	UPDATED	STATUS	CHART	APP VERSION
 jonesn:~/ $
 ```
 
+!!! Info
+    The warning about the configuration file is normal with current versions of
+    microk8s (at least on macOS, via Homebrew). There's no need to take action in a test emvironment.
 ## Checking which egeria charts are available
+
+We need to ensure your Kubernetes environment can access the egeria chart repository.
+You may have performed this step previously, but it is harmless to repeat, and is included
+here just in case you missed the instruction earlier.
+```
+jonesn:~/ $ microk8s helm3 repo add egeria https://odpi.github.io/egeria-charts                                                                  [10:56:05]
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /var/snap/microk8s/2695/credentials/client.config
+"egeria" already exists with the same configuration, skipping
+```
 
 First we'll look at what charts are available:
 
 ```
-jonesn:~/ $ helm repo update                                                                                                                                                  [17:23:17]
-Hang tight while we grab the latest from your chart repositories...
-...Successfully got an update from the "strimzi" chart repository
-...Successfully got an update from the "egeria" chart repository
-...Successfully got an update from the "bitnami" chart repository
-Update Complete. ⎈Happy Helming!⎈
-jonesn:~/ $ helm search repo egeria                                                                                                                                           [17:25:39]
+jonesn:~/ $ microk8s helm3 search repo egeria                                                                                                    [10:57:17]
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /var/snap/microk8s/2695/credentials/client.config
 NAME                  	CHART VERSION	APP VERSION	DESCRIPTION
 egeria/egeria-base    	3.4.0        	3.4        	Egeria simple deployment to Kubernetes
 egeria/egeria-cts     	3.4.0        	3.4        	Egeria Conformance Test Suite deployment to Kub...
 egeria/egeria-pts     	3.4.0        	3.4        	Egeria Performance Test Suite deployment to Kub...
 egeria/odpi-egeria-lab	3.4.0        	3.4        	Egeria lab environment
-jonesn:~/ $
 ```
 
 This list will change as the Egeria team continue to develop these charts
 
+!!! Advanced
+    You can add `--devel` to the helm commands to access pre-release versions
+    of the charts. Only do this if directed to by the Egeria team, or if you experience
+    problems.
+    ```
+    jonesn:~/ $ microk8s helm3 search repo egeria --devel                                                                                            [10:57:49]
+    WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /var/snap/microk8s/2695/credentials/client.config
+    NAME                  	CHART VERSION     	APP VERSION	DESCRIPTION
+    egeria/egeria-base    	3.4.1-prelease.2  	3.4        	Egeria simple deployment (platform, react UI)
+    egeria/egeria-cts     	3.4.0             	3.4        	Egeria Conformance Test Suite deployment to Kub...
+    egeria/egeria-pts     	3.4.0             	3.4        	Egeria Performance Test Suite deployment to Kub...
+    egeria/odpi-egeria-lab	3.4.1-prerelease.4	3.4        	Egeria lab environment
+    ```
+
+    The following commands use this flag, as the dojo is still being developed
+    and written (Dec 2020/Jan 2021)
 ## Installing a simple egeria environment
 We'll now install a simple Egeria configuration:
 
 ```
-jonesn:~/ $ helm install base egeria/egeria-base                                                                                                                            [17:29:29]
+jonesn:~/ $ microk8s helm3 install base egeria/egeria-base --devel                                                                               [12:12:21]
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /var/snap/microk8s/2695/credentials/client.config
 NAME: base
-LAST DEPLOYED: Fri Dec 17 17:29:40 2021
-NAMESPACE: dojo
+LAST DEPLOYED: Thu Dec 23 12:12:49 2021
+NAMESPACE: default
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
 ODPi Egeria
-jonesn:~/ $ helm list                                                                                                                                                         [17:42:38]
-NAME  	NAMESPACE	REVISION	UPDATED                           	STATUS  	CHART            	APP VERSION
-base	dojo     	1       	2021-12-17 17:29:40.3691 +0000 UTC	deployed	egeria-base-3.4.0	3.4
 ---
 
 Egeria base environment has now been deployed to Kubernetes.
@@ -95,23 +116,51 @@ Please provide any feeback via a github issue at https://github.com/odpi/egeria 
 join us on slack via https://http://slack.lfai.foundation
 
 - The ODPi Egeria team
-jonesn:~/ $
 ```
 ## Checking what is running in the simple environment
 We can see what pods we are running:
 
 ```
-jonesn:~/ $ kubectl get pods                                                                                                                                                  [17:29:42]
-NAME                                       READY   STATUS     RESTARTS   AGE
-egeria-base-config-z6f58                   0/1     Init:0/2   0          2m1s
-egeria-base-platform-0                     0/1     Running    0          2m1s
-egeria-base-presentation-5d9bdc854-br22v   1/1     Running    0          2m1s
-base-kafka-0                               1/1     Running    1          2m1s
-base-zookeeper-0                           1/1     Running    0          2m1s
+jonesn:~/ $ microk8s kubectl get pods                                                                                                            [12:12:52]
+NAME                                        READY   STATUS              RESTARTS   AGE
+egeria-base-config--1-kp28v                 0/1     Init:0/2            0          93s
+egeria-base-presentation-76997fb899-jhkml   1/1     Running             0          93s
+strimzi-cluster-operator-86cdffd6d7-tsmjx   1/1     Running             0          93s
+base-strimzi-zookeeper-0                    0/1     ContainerCreating   0          32s
+egeria-base-platform-0                      0/1     Running             0          93s
 ```
 
 We can see from this output, that not all of our pods are ready. Before we continue, we need to ensure 
-all the pods are in READY state - this may take up to 10 minutes ie:
+all the pods are in READY state - this may take up to 10 minutes ie wait until
+everything is ready. After several minutes (up to 5), the output should look
+like this:
+```
+jonesn:~/ $ microk8s kubectl get pods                                                                                                            [12:16:21]
+NAME                                            READY   STATUS      RESTARTS   AGE
+egeria-base-presentation-76997fb899-jhkml       1/1     Running     0          5m18s
+strimzi-cluster-operator-86cdffd6d7-tsmjx       1/1     Running     0          5m18s
+egeria-base-platform-0                          1/1     Running     0          5m18s
+base-strimzi-zookeeper-0                        1/1     Running     0          4m17s
+base-strimzi-kafka-0                            1/1     Running     0          3m21s
+base-strimzi-entity-operator-5b64ff6774-brstt   3/3     Running     0          2m53s
+egeria-base-config--1-kp28v                     0/1     Completed   0          5m18s
+```
 
+## Explanation of what has been installed
+
+The install has created the following egeria content:
+ * egeria-base-presentation : a react UI for Egeria
+ * egeria-base-platform : the core Egeria platform
+ * egeria-base-config : A script that configures egeria. Runs once, then exits
+
+We also have several 'strimzi' pods. These provide Kafka support, which
+is needed for different parts of the Egeria platform to communicate.
+
+Egeria has been setup with a default configuration as a demonstration.
+
+Later in this tutorial we will walk through defining your own configuration, but this
+first step helps to ensure your environment is working correctly.
+
+## Testing the installation
 
 --8<-- "snippets/abbr.md"

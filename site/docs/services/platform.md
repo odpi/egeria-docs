@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/released.md"
 
-# Platform Services
+# Platform Operation Services
 
-The platform services provide the APIs for querying the [Open Metadata and Governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform) and discovering information about the [OMAG Servers](/egeria-docs/concepts/omag-server) that it is hosting.
+The platform operation services provide the APIs for querying the [Open Metadata and Governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform) and discovering information about the [OMAG Servers](/egeria-docs/concepts/omag-server) that it is hosting.
 
 There are two parts to the platform services:
 

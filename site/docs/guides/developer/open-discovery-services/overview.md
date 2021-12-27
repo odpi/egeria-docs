@@ -3,45 +3,37 @@
 
 # Writing an Open Discovery Service
 
-The Open Discovery Framework (ODF) provides components and interfaces for building
-discovery services.   
+The [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview) provides components and interfaces for building open discovery services.   
 
-A [Discovery Service](discovery-service.md) provides specific analysis of the metadata and contents of
-an [Asset](/egeria-docs/concepts/asset) on request.
+An [Open Discovery Service](/egeria-docs/guides/developer/open-discovery-services/discovery-service) provides specific analysis of the metadata and contents of
+a [digital resource](/egeria-docs/concepts/resource) on request.
 The result is one or more sets of related properties that the discovery service has
-discovered about the asset, its metadata, structure and/or content.
-These are stored in a set of [Discovery Annotations](discovery-annotation.md) linked off of a
-[Discovery Analysis Report](discovery-analysis-report.md).  The discovery analysis report
-is linked off of the asset definition in the open metadata repository.
+discovered about the resource, its metadata, structure and/or content.
+These are stored in a set of [Discovery Annotations](/egeria-docs/guides/developer/open-discovery-services/discovery-annotation) linked off of a
+[Discovery Analysis Report](/egeria-docs/guides/developer/open-discovery-services/discovery-analysis-report).  The discovery analysis report
+is linked off of the resource's asset definition in the open metadata repository.
 
-Discovery services run in a [Discovery Engine](discovery-engine.md) that is hosted in a
-[Discovery Server](discovery-server.md).
+Open discovery services run in the [Asset Analysis OMES](/egeria-docs/services/omes/asset-analysis) that is hosted in a [Engine Host](/egeria-docs/concepts/engine-host).
 
 
 ## Core Concepts
 
-* [Discovery Analysis Report](discovery-analysis-report.md)
-* [Discovery Analysis Report Store](discovery-analysis-report-store.md)
-* [Discovery Annotation](discovery-annotation.md)
-* [Discovery Annotation Store](discovery-annotation-store.md)
-* [Discovery Asset Catalog Store](discovery-asset-catalog-store.md)
-* [Discovery Asset Store](discovery-asset-store.md)
-* [Discovery Configuration Server](discovery-configuration-server.md)
-* [Discovery Context](discovery-context.md)
-* [Discovery Engine](discovery-engine.md)
-* [Discovery Pipeline](discovery-pipeline.md)
-* [Discovery Request Type](discovery-request-type.md)
-* [Discovery Server](discovery-server.md)
-* [Discovery Service](discovery-service.md)
+* [Discovery Analysis Report](/egeria-docs/guides/developer/open-discovery-services/discovery-analysis-report)
+* [Discovery Analysis Report Store](/egeria-docs/guides/developer/open-discovery-services/discovery-analysis-report-store)
+* [Discovery Annotation](/egeria-docs/guides/developer/open-discovery-services/discovery-annotation)
+* [Discovery Annotation Store](/egeria-docs/guides/developer/open-discovery-services/discovery-annotation-store)
+* [Discovery Asset Catalog Store](/egeria-docs/guides/developer/open-discovery-services/discovery-asset-catalog-store)
+* [Discovery Asset Store](/egeria-docs/guides/developer/open-discovery-services/discovery-asset-store)
+* [Discovery Configuration Server](/egeria-docs/guides/developer/open-discovery-services/discovery-configuration-server)
+* [Discovery Context](/egeria-docs/guides/developer/open-discovery-services/discovery-context)
+* [Discovery Engine](/egeria-docs/guides/developer/open-discovery-services/discovery-engine)
+* [Discovery Pipeline](/egeria-docs/guides/developer/open-discovery-services/discovery-pipeline)
+* [Discovery Request Type](/egeria-docs/guides/developer/open-discovery-services/discovery-request-type)
+* [Discovery Server](/egeria-docs/guides/developer/open-discovery-services/discovery-server)
+* [Discovery Service](/egeria-docs/guides/developer/open-discovery-services/discovery-service)
 
-## Egeria implementation
+## Example implementations
 
-Egeria provides a full implementation of the ODF.  It provides a
-[discovery server](/egeria-docs/services/omes/asset-analysis/overview)
-as well as an implementation of the metadata server APIs by the
-[Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview).
-There are also implementations of discovery services in the
-[discovery-service-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors)
-module.
+There are implementations of discovery services in the [discovery-service-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors) module.
 
 ---8<-- "snippets/abbr.md"

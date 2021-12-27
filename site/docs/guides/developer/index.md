@@ -3,6 +3,20 @@
 
 # Developer Guide
 
+This guide is for developers wishing to customize Egeria so it can run in additional environments, exchange metadata with additional third party technologies and/or augment existing tools and utilities.
+
+It is organized as follows:
+
+- Using the APIs to configure and operate Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
+
+- Building [Connectors](#what-is-a-connector) to integrate different technologies together.
+
+- Working with [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive) to add new open metadata types or standard metadata definitions that can be shared and loaded into multiple metadata repositories.
+
+- Using Egeria's open metadata and governance APIs to create new services or to augment existing services.
+
+- Extending Egeria by adding new [registered services]()
+
 Egeria is designed to simplify the effort necessary to integrate different technologies so that they can actively share and consume metadata from each other.
 
 It focuses on providing five types of integration interfaces.
@@ -115,5 +129,42 @@ Egeria has extended the basic concept of the OCF connector and created specializ
 | Open Metadata Topic Connector | Connects to a topic on an external event bus such as Apache Kafka. | [Open Metadata Topic Connectors](/egeria-docs/concepts/open-metadata-topic-connector) | [open-metadata- topic-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors){ target=gh } |
 
 You can write your own connectors to integrate additional types of technology or extend the capabilities of Egeria - and if you think your connector is more generally useful, you could consider [contributing it to the Egeria project](/egeria-docs/guides/community).
+
+## Registered Services
+  
+Registered services are optional services that plug into Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform). There are 4 types:
+  
+  - [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) provide specialized APIs and events for retrieving and maintaining open metadata.  These services run in a [Metadata Access Server](/egeria-docs/concepts/metadata-access-server).
+  
+  - [Open Metadata Engine Services (OMES)](/egeria-docs/services/omes) provide specialist APIs that support specific types of governance engines.  These services run in an [Engine Host](/egeria-docs/concepts/engine-host) and call an OMAS to retrieve and maintain open metadata.
+  
+  - [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis) provide specialist connector APIs for exchanging open metadata with third party technologies.  These services run in an [Integration Daemon](/egeria-docs/concepts/integration-daemon) and call an OMAS to retrieve and maintain open metadata.
+  
+  - [Open Metadata View Services (OMVS)](/egeria-docs/services/omvs) provide specialist REST APIs for browser-based user interfaces (UIs).  These services run in a [View Server](/egeria-docs/concepts/view-server) and call an OMAS to retrieve and maintain open metadata.
+
+There are many choices of registered services within the Egeria project.  However, you may add your own. The recommended modules for registered services (required if it is to be contributed to the Egeria project) are shown in the table below:
+
+| Module naming | Description | OMAS | OMES | OMIS | OMVS |
+| --------------|-------------|------|------|------|------|
+| *moduleName*-api | Client java interface(s), property beans and rest beans. | CP | CP | CP | P |
+| *moduleName*-client | Java client implementation. | CP | C | C | N |
+| *moduleName*-topic-connectors | Java connectors for sending and receiving events.  | OCP | N | N | N |
+| *moduleName*-server | Server-side REST and event management implementation.  | P | P | P | P |
+| *moduleName*-spring | Server-side REST API.  | P | P | P | P |
+
+**Key:**
+* CP - Required and runs in external clients plus in the OMAG Server Platform.
+* C - Required and runs in external clients.
+* P - Required and runs in the OMAG Server Platform.
+* OCP - Optional and when provided runs in external clients plus in the OMAG Server Platform.
+* N - Not implemented/needed.
+
+The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/egeria-docs/tools/spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds and they are [initialized as part of the platform's capabilities](/egeria-docs/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES, OMIS or OMVS registered service that is dependent on the OMAS to get access to open metadata.
+
+The best guide for building registered services are the existing implementations found in [egeria.git](https://github.com/odpi/egeria/tree/master/open-metadata-implementation){ target=gh }.  You can see the way the code is organized and the services that they depend on.
+
+## Summary
+
+
 
 --8<-- "snippets/abbr.md"

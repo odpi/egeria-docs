@@ -9,7 +9,7 @@
 Spring is used in our client libraries to call REST APIs.  Specifically it provides the
 `org.springframework.web.client.RestTemplate` class for formatting rest calls and parsing the responses.
 
-See the [OMRS REST Repository Connector](../open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector/README.md)
+See the [OMRS REST Repository Connector](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector)
 for an example of the use of RestTemplate to implement calls to the Open Metadata Repository Services (OMRS)
 REST API.
 
@@ -46,7 +46,7 @@ public MetadataCollectionIdResponse getMetadataCollectionId()
 }
 ```
 
-See the [OMRS Server-side REST implementation](../open-metadata-implementation/repository-services/repository-services-spring/README.md)
+See the [OMRS Server-side REST implementation](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-spring)
 for the server-side annotations that process the REST calls from the OMRS REST Connector.
 
 Spring Boot is used in the 

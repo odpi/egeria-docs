@@ -92,15 +92,10 @@ in turn.  You will see them populate the left-hand menu.
 
 ## Next steps
 
-With the collections loaded, you are ready to
-[return to the Egeria Dojo](../../getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md) to learn more about the
-OMAG Server Platform.
+With the collections loaded, you are ready to [return to the Egeria Dojo](/egeria-docs/getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites) to learn more about the OMAG Server Platform.
 
-Alternatively you can use the collections to test
-existing function, or modify them to
-test new function.
+Alternatively you can use the collections to test existing function, or modify them to test new function.
 
-Instructions for contributing new Postman collections
-are located in the [developer-resources](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis).
+Instructions for contributing new Postman collections are located in the [developer-resources](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis).
 
 --8<-- "snippets/abbr.md"

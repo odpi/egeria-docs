@@ -41,21 +41,13 @@ In the case of it supporting an third party metadata repository,
 it is often paired with an event mapper connector described above.
 
 The OMRS defines the interfaces for these connectors and selected implementations
-are located in the **[adapters](../../../../adapters/open-connectors/repository-services-connectors)** package.
+are located in the **[adapters](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors)** module.
 
-All of these connectors support
-the [Open Connector Framework (OCF)](../../../../frameworks/open-connector-framework)
-which means the OMRS uses the 
-OCF [Connector Broker](../../../../frameworks/open-connector-framework/docs/concepts/connector-broker.md)
-to create the instances of the connectors it needs.
-The type of connector needed is defined in a connection object.
+All of these connectors support the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) which means the OMRS uses the OCF [Connector Broker](/egeria-docs/concepts/connector-broker) to create the instances of the connectors it needs. The type of connector needed is defined in a connection object.
 
-The connection objects for OMRS's connectors are defined in the
-OMAG Server configuration document that is passed to the
-server when the open metadata services are activated.
+The connection objects for OMRS's connectors are defined in the OMAG Server configuration document that is passed to the server when the open metadata services are activated.
 
-This means that new implementations can be specified without needing
-to change the OMRS code.
+This means that new implementations can be specified without needing to change the OMRS code.
 
 --8<-- "snippets/abbr.md"
 

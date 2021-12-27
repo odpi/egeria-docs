@@ -3,15 +3,15 @@
 
 # Adding your contribution to Egeria's Git repositories
 
-Once you have [prepared a contribution](task-adding-changes-to-git.md)
+Once you have [prepared a contribution](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git)
 and these changes are added to your clone, you are ready to commit the changes and push them to
 your clone on GitHub.
 
-![Figure 1](../../../developer-resources/tools/git-push-pull.png)
+![Figure 1](git-push-pull.svg)
 > **Figure 1:** Pushing changes to GitHub
 
 Below is the command to commit your changes.  Make sure 
-to use the `-s` option to sign your changes (see [Why the DCO?](../../../developer-resources/why-the-dco.md))
+to use the `-s` option to sign your changes (see [Why the DCO?](https://github.com/odpi/egeria/blob/master/developer-resources/why-the-dco.md))
 and the `-m` option to provide a useful commit message. In the message you can
 make use of [special strings](https://blog.github.com/2011-10-12-introducing-issue-mentions/) to
 directly link to GitHub
@@ -32,7 +32,7 @@ the latest master code prior to completing your changes.
 $ git pull upstream master
 ```
 
-![Figure 2](../../../developer-resources/tools/git-pull-upstream-master.png)
+![Figure 2](git-pull-upstream-master.svg)
 > **Figure 2:** Pulling latest changes from master
 
 and then making any necessary changes to merge conflicts, and commit/push as above.
@@ -41,22 +41,13 @@ and then making any necessary changes to merge conflicts, and commit/push as abo
 
 Pull requests are created on GitHub, so go to your browser window.
 
-The easiest way to create a pull request is by navigating to your local fork of the Egeria repository eg. `https://github.com/USER/egeria`,
-selecting your working branch,
-and clicking on 'pull request'.
-Add an explanation and links to any GitHub Issues that are relevant
-to your change,
-and then submit the pull request.
+The easiest way to create a pull request is by navigating to your local fork of the Egeria repository eg. `https://github.com/USER/egeria`, selecting your working branch, and clicking on 'pull request'. Add an explanation and links to any GitHub Issues that are relevant to your change, and then submit the pull request.
 
-GitHub automatically validates that you have signed all of your commits and
-that any code builds.
+GitHub automatically validates that you have signed all of your commits and that any code builds.
 
-The Egeria maintainers will then review and if all is well, it will be merged
-into the master branch and you have officially made a successful contribution to
-the project.  Congratulations :).
+The Egeria maintainers will then review and if all is well, it will be merged into the master branch and you have officially made a successful contribution to the project.  Congratulations :).
 
-Further changes can be done using the same branch, and will be added to the same pull request
-automatically until the pull request is merged into master.
+Further changes can be done using the same branch, and will be added to the same pull request automatically until the pull request is merged into master.
 
 
 ### Cleaning up

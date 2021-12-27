@@ -3,13 +3,13 @@
 
 # Creating a branch for your work
 
-Once you have a [clone of the git repository](task-creating-a-fork-and-clone.md)
+Once you have a [clone of the git repository](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-creating-a-fork-and-clone)
 there is one more step before you can begin developing. 
 
 Most development work is done on your local clone with occasional calls to GitHub to
 synchronize with its versions of the repository.
 
-![Figure 1](../../../developer-resources/tools/git-development.png)
+![Figure 1](git-development.svg)
 > **Figure 1:** Local development process using git
 
 The top level branch (copy) of a git repository is called `master`.

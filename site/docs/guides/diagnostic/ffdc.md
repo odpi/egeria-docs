@@ -134,7 +134,7 @@ and another example:
 }
 ```
 
-Additional examples of common errors are shown [here](examples-of-common-rest-api-errors.md).
+Additional examples of common errors are shown [here](/egeria-docs/guides/diagnostic/examples-of-common-rest-api-errors).
 
 ## Audit Log Messages
 

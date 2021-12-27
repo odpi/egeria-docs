@@ -9,19 +9,11 @@ The Discovery Engine OMAS provides APIs and events for metadata discovery tools
 that are surveying the data landscape and recording information in
 metadata repositories.
 
-These types of tools are called
-[Discovery Engines](../../frameworks/open-discovery-framework/docs/discovery-engine.md)
-in the [Open Discovery Framework (ODF)](../../frameworks/open-discovery-framework),
-which is why this access service is called the Discovery Engine OMAS.
+These types of tools are called [Open Discovery Engines](/egeria-docs/concepts/open-discovery-engine) in the [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview), which is why this access service is called the Discovery Engine OMAS.
 
-The Open Discovery Framework (ODF) provides a comprehensive set of
-open APIs that describe the interaction between metadata discovery tools
-and a metadata server.  The aim is to make it easy for
-metadata discovery tools to work with open metadata
-repositories.
+The Open Discovery Framework (ODF) provides a comprehensive set of open APIs that describe the interaction between metadata discovery tools and a metadata server.  The aim is to make it easy for metadata discovery tools to work with open metadata repositories.
 
-The capabilities defined in the ODF fall into 4 broad
-categories.
+The capabilities defined in the ODF fall into 4 broad categories.
 
 - The **metadata server APIs** - these are implemented by the Discovery Engine OMAS and include:
   - Discovery configuration API - for configuring discovery engines and services - and also retrieving this configuration.

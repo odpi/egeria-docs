@@ -13,7 +13,7 @@ There are also optional advanced exercises in this session.
 Using Postman, and the `Egeria-admin-services-operational` Postman collection, start your server `myMetadataServer`.
 The documentation from the Admin Guide is shown below.
 
-* [Starting and Stopping OMAG Servers](/egeria-docs/guides/operations/starting-and-stopping-omag-server)
+* [Starting and Stopping OMAG Servers](/egeria-docs/guides/operations/guide/#starting-and-stopping-an-omag-server)
 
 From Docker Desktop, look at the logs for your docker container to see the audit log messages.
 There are different type of audit log messages

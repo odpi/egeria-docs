@@ -18,7 +18,7 @@ to enable the integration daemon to recover from errors.
 
 If a connector is incorrectly configured, the integration daemon's configuration document needs to be changed
 using [administration commands](/egeria-docs/user/admin/servers/configuring-an-integration-daemon/#configuring-the-integration-services)
-and the integration daemon [restarted](/egeria-docs/guides/operations/starting-and-stopping-omag-server).
+and the integration daemon [restarted](/egeria-docs/guides/operations/guide/#starting-and-stopping-an-omag-server).
 
 ## Sources of errors
 

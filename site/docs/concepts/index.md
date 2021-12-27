@@ -98,6 +98,7 @@
 - [Event Bus](/egeria-docs/concepts/event-bus)
 - [Event Broker](/egeria-docs/concepts/basic-concepts/#event-broker)
 - [Event Management Services Subsystem (OMRS)](/egeria-docs/services/omrs)
+- [Extended Properties](/egeria-docs/concepts/extended-properties)
 - [External Identifiers](/egeria-docs/features/external-identifiers/overview)
 - [External References](/egeria-docs/features/external-references/overview)
 
@@ -264,6 +265,7 @@
 - [Ratings](/egeria-docs/concepts/review)
 - [Referenceable](/egeria-docs/concepts/referenceable)
 - [Registry Events](/egeria-docs/concepts/cohort-events)
+- [Registered Services](/egeria-docs/concepts/omag-subsystem)
 - [Repository Connector](/egeria-docs/concepts/repository-connector)
 - [Repository Helper](/egeria-docs/concepts/repository-helper)
 - [Repository Proxy](/egeria-docs/concepts/repository-proxy)
@@ -296,6 +298,7 @@
 - [Stewardship Integrator OMIS](/egeria-docs/services/omis/stewardship-integrator/overview)
 - [Stewardship Server](/egeria-docs/concepts/engine-host)
 - [Subject Area OMAS](/egeria-docs/services/omas/subject-area/overview)
+- [Subsystem](/egeria-docs/concepts/omag-subsystem)
 - [Supported Zones](/egeria-docs/concepts/governance-zone)
 
 

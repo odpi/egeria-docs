@@ -127,7 +127,7 @@ to the OMAG server platform.
 
 ## Swagger
 
-Swagger API documentation is generated with the chassis and is documented in [Swagger Generation](SwaggerGeneration.md).
+Swagger API documentation is generated with the chassis and is documented in [Swagger Generation](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/server-chassis/server-chassis-spring/SwaggerGeneration.md).
 
 ## Spring Boot Actuator
 

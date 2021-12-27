@@ -36,6 +36,6 @@ Changes to be committed:
 	new file:   new-file.java
 ```
 
-Now you are ready to [complete your contribution](task-git-pull-push-pr.md).
+Now you are ready to [complete your contribution](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr).
 
 ---8<-- "snippets/abbr.md"

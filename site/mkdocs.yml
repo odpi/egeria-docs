@@ -38,7 +38,7 @@ nav:
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
-          - Operate OMAG Server: guides/operations/operating-omag-server.md
+          - Operate OMAG Server Platform: guides/operations/guide.md
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
@@ -419,12 +419,12 @@ nav:
                     - Cohorts: services/omrs/cohort.md
                     - Metadata Repositories: services/omrs/metadata-repositories.md
                     - Cohort Events: concepts/cohort-events.md
-              - FFDC: services/ffdc-services.md
-              - Multi-tenant: services/multi-tenant.md
+              - First Failure Data Capture (FFDC): services/ffdc-services.md
+              - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
-              - Metadata Security: services/metadata-security.md
-              - Platform Services: services/platform.md
-              - OCF Metadata Management: services/ocf-metadata-management.md
+              - Metadata Security Services: services/metadata-security.md
+              - Platform Operation Services: services/platform.md
+              - Connected Asset Services: services/ocf-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
               - Data Engine Proxy Services: services/data-engine-proxy-services.md
@@ -573,6 +573,7 @@ nav:
       - Engine Host: concepts/engine-host.md
       - Event Bus: concepts/event-bus.md
       - Event Mapper Connector: concepts/event-mapper-connector.md
+      - Extended Properties: concepts/extended-properties.md
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md

@@ -5,14 +5,14 @@
 
 # Open Discovery Framework (ODF)
   
-The *open discovery framework (ODF)* enables [metadata discovery tools](/egeria-docs/features/discovery-and-stewardship) to integrate with open metadata repositories by defining the interfaces for metadata discovery components (called [discovery services](#discovery-service)) to:
+The *Open Discovery Framework (ODF)* enables [metadata discovery tools](/egeria-docs/features/discovery-and-stewardship) to integrate with open metadata repositories by defining the interfaces for metadata discovery components (called [discovery services](#discovery-service)) to:
 
 - Access metadata discovery configuration.
 - Search for [assets](/egeria-docs/concepts/asset) in the metadata repository.
 - Extract all the metadata known about a specific asset.
 - Record the results of the analysis in the open metadata repository and attach it to the asset's metadata for later processing.
 
-![Discovery context](discovery-context.png)
+![Discovery context](discovery-context.svg)
 
 ## Discovery service
 

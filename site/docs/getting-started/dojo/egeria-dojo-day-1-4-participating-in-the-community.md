@@ -14,37 +14,21 @@ Watch the video of this session: [https://youtu.be/UJ7to5aG2oc](https://youtu.be
 
 ## Mind set
 
-Egeria is an open source project.  This means its most important asset is the community
-that it draws together to collaborate. It is only through
-this community that new ideas and content are contributed,
-and the results deployed into organization to help them
-operate more effectively.
+Egeria is an open source project.  This means its most important asset is the community that it draws together to collaborate. It is only through this community that new ideas and content are contributed, and the results deployed into organization to help them operate more effectively.
 
-This community is stronger if it consists of individuals from different organizations
-and backgrounds.  This means we need a respectful and inclusive
-culture to allow a diverse range of people to participate.
+This community is stronger if it consists of individuals from different organizations and backgrounds.  This means we need a respectful and inclusive culture to allow a diverse range of people to participate.
 
-This culture is reflected in the [Code of Conduct](../../../CODE_OF_CONDUCT.md)
-that every participant must adhere to.
+This culture is reflected in the [Code of Conduct](https://github.com/odpi/egeria/blob/master/CODE_OF_CONDUCT.md) that every participant must adhere to.
 
-Within the community, contributors are focused on making the contributions
-that are meaningful to them, or their employer.  Beyond conforming to
-the rules of the community, they are not required to make changes requested by
-people and organizations outside of the community.
+Within the community, contributors are focused on making the contributions that are meaningful to them, or their employer.  Beyond conforming to the rules of the community, they are not required to make changes requested by people and organizations outside of the community.
 
-Contributions are incorporated into the project at the discretion of the
-maintainers.  For large changes, typically the maintainers look for consensus
-within the community before incorporating it.
+Contributions are incorporated into the project at the discretion of the maintainers.  For large changes, typically the maintainers look for consensus within the community before incorporating it.
 
-This means the only way to influence the progress of the project is to join the community,
-build a reputation as a valuable member of the community and then either influence
-other contributors, or make the contribution yourself.
+This means the only way to influence the progress of the project is to join the community, build a reputation as a valuable member of the community and then either influence other contributors, or make the contribution yourself.
 
 ## Getting connected
 
-The processes used by the community are documented
-in the [Community Guide](/egeria-docs/guides/community).
-This includes information about how to join the community and participate.
+The processes used by the community are documented in the [Community Guide](/egeria-docs/guides/community). This includes information about how to join the community and participate.
 
 ## Raising your status in the community
 
@@ -60,7 +44,7 @@ These roles are described in the [Operations Guide](/egeria-docs/guides/project-
 ## Egeria badges
 
 To recognise individuals who are either contributors or maintainers on the Egeria project,
-we are able to award [Acclaim badges](../../../developer-resources/badges).
+we are able to award [Acclaim badges](https://github.com/odpi/egeria/blob/master/developer-resources/badges).
 
 ## Test yourself
 
@@ -75,13 +59,11 @@ answer the following questions.
 
 ## End of Day 1
 
-Congratulations you have completed all of the sessions in
-Day 1 of the Egeria Dojo.
+Congratulations you have completed all of the sessions in Day 1 of the Egeria Dojo.
 
 Day 2 covers the information that you need to become and
 **Egeria Contributor**.
 
-Day 3 covers additional information for advocates
-and those wishing to become **Egeria Maintainers**.
+Day 3 covers additional information for advocates and those wishing to become **Egeria Maintainers**.
 
 ---8<-- "snippets/abbr.md"

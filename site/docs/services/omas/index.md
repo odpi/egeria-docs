@@ -90,11 +90,11 @@ It can then register a listener with the Enterprise OMRS Topic to receive the co
 
 While running, the OMAS can call the Enterprise OMRS Repository Connector
 directly.  However, there are many common functions that all OMASs need and these
-are provided by the [common services](../../../common-services).
+are provided by the [common services](/egeria-docs/services//common-services).
 
 Figure 3 shows the common services.
 
-![Figure 3](access-services-common-services.png)
+![Figure 3](access-services-common-services.svg)
 > Figure 3: Using the common services
 
 The common services provide most of the metadata management implementation logic for the
@@ -116,6 +116,6 @@ OpenMetadataServerSecurityConnector if it is installed in the server.
 
 ## Further Information
 
-* [Design Guidelines for an OMAS](access-services-design-guidelines.md)
+* [Design Guidelines for an OMAS](/egeria-docs/services/omas/access-services-design-guidelines)
 
 --8<-- "snippets/abbr.md"

@@ -46,7 +46,7 @@ The website is found at `<serverURLroot>/swagger-ui.html`, where `<serverURLroot
 
 The top of the page gives a general description of the OMAG Server Platform plus a link to more documentation.
 
-![Swagger heading](swagger-ui-top.png)
+![Swagger heading](../../education/tutorials/swagger-tutorial/swagger-ui-top.png)
 
 The content for this header is located in the [OMAGServerPlatform.java :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/server-chassis/server-chassis-spring/src/main/java/org/odpi/openmetadata/serverchassis/springboot/OMAGServerPlatform.java){ target=gh } file that provides the `main()` method for the OMAG Server Platform.
 
@@ -86,9 +86,9 @@ The content for this header is located in the [OMAGServerPlatform.java :material
 Beneath the header is a list of the platform's REST APIs.  This is the definition for the
 *operational services* that are part of the *administration services*:
 
-![Swagger service](swagger-ui-service.png)
+![Swagger service](../../education/tutorials/swagger-tutorial/swagger-ui-service.png)
 
-The REST API operations are grouped into services by the following `@Tag` annotation that appears in each [Spring](/egeria-docs/guides/developer/tools/runtime/#spring) resource bean that is part of the service. If the name of the `@Tag` matches then the operations in the resource beans are all part of the same service.
+The REST API operations are grouped into services by the following `@Tag` annotation that appears in each [Spring](/egeria-docs/guides/contributor/runtime/#spring) resource bean that is part of the service. If the name of the `@Tag` matches then the operations in the resource beans are all part of the same service.
 
 !!! example "Swagger annotations in [OperationalServicesResource.java :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/admin-services/admin-services-spring/src/main/java/org/odpi/openmetadata/adminservices/spring/OperationalServicesResource.java){ target=gh }"
     ```java linenums="1"
@@ -101,7 +101,7 @@ The REST API operations are grouped into services by the following `@Tag` annota
 
 Further information can be provided for each operation. This is one of the *operational services* operations:
 
-![Swagger operation](swagger-ui-operation.png)
+![Swagger operation](../../education/tutorials/swagger-tutorial/swagger-ui-operation.png)
 
 This is added to the spring resource bean using the `@Operation` annotation:
 

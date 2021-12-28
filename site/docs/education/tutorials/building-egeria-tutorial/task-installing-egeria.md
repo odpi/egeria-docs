@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Installing Egeria
+### Installing Egeria
 
 The [egeria build process](/egeria-docs/education/tutorials/building-egeria-tutorial/overview) creates the
 distribution files for Egeria in the **open-metadata-distribution** module.
@@ -20,7 +20,7 @@ egeria-3.3-SNAPSHOT-omag-server.tar.gz
 The files in this list will change as Egeria develops. For this exercise it is the files including 'distribution' that are important.
 
 The name of the files is determined by the release level of the code that you
-[downloaded from GitHub](task-downloading-egeria-source.md).  In this example,
+[downloaded from GitHub](../git-and-git-hub-tutorial/task-downloading-egeria-source.md).  In this example,
 the release is **egeria-3.3-SNAPSHOT**.
 
 Create a directory for the install and copy the tar file into it.

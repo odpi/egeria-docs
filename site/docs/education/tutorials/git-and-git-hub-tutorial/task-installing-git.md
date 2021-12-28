@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Installing Git on your local machine
+### Installing Git on your local machine
 
 **Git** is an open source version control system used to store and manage Egeria's files.
 You need it installed on your machine to work with Egeria's git repositories stored on

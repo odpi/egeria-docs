@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Downloading the Egeria Source from GitHub
+### Downloading the Egeria Source from GitHub
 
 The Egeria source is extracted from GitHub using the following `git` command:
 
@@ -17,14 +17,13 @@ Resolving deltas: 100% (31704/31704), done.
 Checking out files: 100% (6669/6669), done.
 ```
 
-A new directory has been created with the ODPi Egeria source code.
-Change to the `egeria` directory.
+A new directory has been created with the core Egeria source code.  Change to the `egeria` directory.
 
 ```bash
 $ cd egeria
 ```
 
-You are now ready to [build the egeria source](task-building-egeria-source.md).
+You are now ready to [build the egeria source](../building-egeria-tutorial/task-building-egeria-source.md).
 
 Alternatively you can [use Kubernetes](../lab-infrastructure-guide/running-kubernetes.md)
 to set up the infrastructure to run the [Open Metadata Labs](/egeria-docs/education/open-metadata-labs).

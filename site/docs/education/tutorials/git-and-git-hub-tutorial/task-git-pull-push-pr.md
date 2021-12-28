@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Adding your contribution to Egeria's Git repositories
+### Adding your contribution to Egeria's Git repositories
 
 Once you have [prepared a contribution](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git)
 and these changes are added to your clone, you are ready to commit the changes and push them to

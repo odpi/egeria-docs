@@ -19,7 +19,7 @@ egeria-3.3-SNAPSHOT-omag-server.tar.gz
 ```
 
 The name of the files is determined by the release level of the code that you
-[downloaded from GitHub](building-egeria-tutorial/task-downloading-egeria-source.md).  In this example,
+[downloaded from GitHub](git-and-git-hub-tutorial/task-downloading-egeria-source.md).  In this example,
 the release is **egeria-3.3-SNAPSHOT**.
 
 Create a directory for the install and copy the tar file into it.
@@ -57,9 +57,7 @@ LICENSE			clients			server
 NOTICE			conformance-suite	user-interface
 ```
 
-Under **server** is a directory for the
-[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) that is used to run
-open metadata and governance services.
+Under **server** is a directory for the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) that is used to run open metadata and governance services.
 
 Change to the OMAG server platform's directory.
 

@@ -17,7 +17,8 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 !!! tip "In preparation ..."
     Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.  
 
-    The exercises make use of code samples in the following git repositories and yo may wish to have a clone of them on your machine.
+    The exercises make use of code samples in the following git repositories and you may wish to have a clone of them on your machine.
+    
     - https://github.com/odpi/egeria-dev-projects
     - https://github.com/odpi/egeria-samples
 

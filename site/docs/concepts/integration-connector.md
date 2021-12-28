@@ -77,6 +77,6 @@ integration service configuration
 all connectors.
 - [Configuring the integration services](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) to
 understand how to set up an integration connector.
-- [Developer guide](/egeria-docs/guides/developer-guide/integration-connectors/overview) for more information on writing connectors.
+- [Developer guide](/egeria-docs/guides/developer/integration-connectors/overview) for more information on writing connectors.
 
 ---8<-- "snippets/abbr.md"

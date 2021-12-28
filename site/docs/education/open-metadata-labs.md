@@ -13,7 +13,7 @@ case study, focusing on a challenge that one or more of the characters face and
 how they approached the solution.
 
 The calls to the Egeria APIs necessary to complete the challenge are encoded in
-the [notebook](https://github.com/odpi/egeria/blob/master/developer-resources/tools/Jupyter-Notebooks.md) so you can experiment with the APIs.
+the [notebook](/egeria-docs/education/tutorials/jupyter-tutprial/overview) so you can experiment with the APIs.
 
 These labs can be used for individual study, as part of a class and / or
 as the basis of a workbook for using Egeria within a specific organization.
@@ -32,7 +32,7 @@ Once the software is in place, you then go to the `JupyterLab` browser window
 This notebook will guide you to the rest of the labs.
 
 
-![Read me first Jupyter Notebook](/egeria-docs/tools/jupyter-notebook-browser-window.png)
+![Read me first Jupyter Notebook](/egeria-docs/education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
 
 
 You can start running a notebook by simply double-clicking the filename in the left pane of the Jupyter interface.

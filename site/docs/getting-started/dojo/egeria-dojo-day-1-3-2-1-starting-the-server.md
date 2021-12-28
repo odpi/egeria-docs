@@ -26,7 +26,7 @@ There are different type of audit log messages
   Restart your server and then, from Docker Desktop, open the CLI and look at the log record files that have been created.
   
 * The audit log destinations are configured using connections that define how to create an appropriate connector.
-  Now link to the [Developer Guide](/egeria-docs/guides/developer-guide)
+  Now link to the [Developer Guide](/egeria-docs/guides/developer)
   to understand more about connectors.
 
 ----

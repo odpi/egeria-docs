@@ -33,7 +33,7 @@ Follow these steps from our [Kubernetes Documentation](/egeria-docs/guides/opera
 
 Follow these steps to setup Postman
 
-  * [Setting up Postman](/egeria-docs/tools/postman/overview)
+  * [Setting up Postman](/egeria-docs/education/tutorials/postman-tutorial/overview)
 
 ## Test yourself
 

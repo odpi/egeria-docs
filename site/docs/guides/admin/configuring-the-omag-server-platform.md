@@ -163,9 +163,11 @@ Security is configured for a specific platform once it is running by using the f
     {
         "class": "PlatformSecurityRequestBody",
         "urlRoot": "{{platformURLRoot}}",
-        "platformSecurityConnection" : {
+        "platformSecurityConnection" : 
+        {
     	    "class": "Connection",
-    	    "connectorType": {
+    	    "connectorType": 
+    	    {
     	        "class": "ConnectorType",
     	        "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider"
     	    }

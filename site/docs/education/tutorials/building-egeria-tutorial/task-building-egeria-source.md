@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Building the Egeria Source
+### Building the Egeria Source
 
-When you [download the egeria source from GitHub](task-downloading-egeria-source.md)
+When you [download the egeria source from GitHub](../git-and-git-hub-tutorial/task-downloading-egeria-source.md)
 a new directory called `egeria` is created that contains all of the source and the build scripts.
 
 The build scripts use [Apache Maven](https://maven.apache.org) to ensure the software is

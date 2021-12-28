@@ -30,7 +30,7 @@ and Governance (OMAG) Servers in the
 [OMAG Server Platform](/egeria-docs/concepts/omag-server).  
 
 The **server-chassis-spring** module is an implementation of the
-server chassis written using [Spring Boot](/egeria-docs/tools/spring).
+server chassis written using [Spring Boot](/egeria-docs/guides/contributor/runtime/#spring).
 Its **main()** method is located in a Java class called **OMAGServerPlatform**.
 
 When the OMAGServerPlatform is first started, all of its REST APIs

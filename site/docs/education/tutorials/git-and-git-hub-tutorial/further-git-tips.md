@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Additional git tips
+## Additional git tips
 
 If you are working locally, and realise you have accidentally been making changes on master instead of another branch:
 

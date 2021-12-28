@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Getting a GitHub Id
+### Getting a GitHub Id
 
 Although all of the git repositories on GitHub are public, it is necessary to
 have a GitHub id to work with the Egeria content.

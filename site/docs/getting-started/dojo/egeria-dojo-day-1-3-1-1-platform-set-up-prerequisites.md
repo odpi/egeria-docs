@@ -19,18 +19,10 @@ What the video for an overview of this session: [https://youtu.be/jnxY2epKgzY](h
 Follow the links below to find out a little bit about these technologies and ensure the software
 is installed.
 
-* [Docker Desktop](/egeria-docs/tools/runtime/#docker)
-* [Postman](/egeria-docs/tools/testing/#postman)
+* [Docker Desktop](/egeria-docs/education/tutorials/docker-tutorial/overview)
+* [Postman](/egeria-docs/education/tutorials/postman-tutorial/overview)
 
-Once these technologies are installed, work through the tutorials - starting with Docker to get the
-OMAG Server Platform running and then Postman to get
-ready to work with the platform and the servers running on top if it.
-
-* [Docker Tutorial](/egeria-docs/education/tutorials/docker-tutorial)
-* [Postman Tutorial](/egeria-docs/education/tutorials/postman-tutorial)
-
-At this point you should have Postman installed with the collections loaded, and Egeria's OMAG Server Platform running
-as a docker container.
+Once these technologies are installed, work through the tutorials - starting with Docker to get the OMAG Server Platform running and then Postman to get ready to work with the platform and the servers running on top if it.
 
 ## Test yourself
 

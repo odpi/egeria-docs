@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Creating a branch for your work
+### Creating a branch for your work
 
 Once you have a [clone of the git repository](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-creating-a-fork-and-clone)
 there is one more step before you can begin developing. 

@@ -3,6 +3,42 @@
 
 # Docker tutorial
 
+**Docker** is a [simple container runtime and standard](https://www.docker.com/why-docker).
+Every day, the egeria build processing creates a docker image of egeria and pushes it to the docker catalog on the **Docker website**.
+
+This docker image provides a simple way to bring a runnable version of Egeria onto your machine.  It also provides the basis for a [Kubernetes](/egeria-docs/guides/operations/kubernetes) deployment of Egeria.
+
+The docker catalog page for egeria is at [https://hub.docker.com/r/odpi/egeria](https://hub.docker.com/r/odpi/egeria). The **Overview** tab describes the docker container.
+
+![Egeria Docker Page Overview Tab](egeria-docker-page-overview.png)
+
+The **Tags** tab shows the different releases that are available.
+
+![Egeria Docker Page Tags Tab](egeria-docker-page-tags.png#pagewidth)
+
+----
+
+### Getting the docker runtime
+
+The docker image needs a runtime to execute.  It can run in the cloud using **Docker Hub** or
+on your machine using the **Docker Desktop**. 
+The description below describes how to use the docker desktop.
+
+Docker Desktop supports running a docker image as a standalone container, or as part of group of containers started with **docker-compose**.
+
+Go to the [Docker website](https://www.docker.com/why-docker) and select the **Download Docker Desktop**.
+
+![DockerHub home page](docker-homepage.png#pagewidth)
+
+Follow the instructions for you operating system.  For macOS, the docker desktop
+is installed like a standard application.
+
+![macOS install of docker desktop](docker-desktop-install.png)
+
+Once it is installed, it can be launched like any
+application, such as through the launchpad/start menu.
+
+
 This tutorial explains how to use the Egeria Docker Image published to the
 docker catalog at [https://hub.docker.com/r/odpi/egeria](https://hub.docker.com/r/odpi/egeria).
 
@@ -20,10 +56,6 @@ Link to [Open Metadata Labs Infrastructure Guide](/egeria-docs/education/lab-inf
 
 ## Working with Egeria's docker image
 
-If docker is new to you and you don't have it installed,
-link to the article on docker in the [developer tools](../../../developer-resources/tools/runtime/Docker.md).
-This provides an overview of docker and installation instructions for Docker Desktop.
-
 Once the docker desktop is installed, start the docker desktop application.
 It may take a little while to complete its start up so check it is running before continuing.
 
@@ -32,7 +64,7 @@ the docker whale icon appears on the top menu bar.  Clicking on the docker whale
 and the status of the desk top is visible. 
 This menu is used to shutdown docker at the end of the dojo.
 
-![macOS running Docker desktop](../../../developer-resources/tools/docker-desktop-running.png)
+![macOS running Docker desktop](docker-desktop-running.png)
 
 ----
 
@@ -74,7 +106,7 @@ The OMAG Server Platform is the Egeria runtime platform where the Egeria REST se
 The `--publish 19443:9443` parameter maps the 9443 port inside the docker that the OMAG Server Platform
 has registered with to port 19443
 
-![Docker container structure](/egeria-docs/tools/docker-container-overview.png)
+![Docker container structure](docker-container-overview.png)
 
 You should see the server logo come up and finally a message 
 `OMAG server platform ready for more configuration`.  This message means it has successfully started.
@@ -108,7 +140,7 @@ The docker desktop **dashboard** makes it easy to control your docker containers
 It is started from the docker desktop menu.  Select the `Dashboard` option.
 You will see something like this:
 
-![Docker Desktop initial view](/egeria-docs/tools/docker-container-down.png)
+![Docker Desktop initial view](docker-container-down.png)
 
 Each time a new docker container is created, it is given a generated name.
 In the example above the name is `gifted-lovelace` which is a great tribute to
@@ -118,59 +150,59 @@ You can see that the container is not running (`EXITED`) because you stopped it 
 
 Hover your mouse pointer over the container entry and some options appear.
 
-![Docker Desktop initial view](/egeria-docs/tools/docker-container-start-options.png)
+![Docker Desktop initial view](docker-container-start-options.png)
 
 The triangular "START" button is to start the container running again and the Bin/Trash can is to delete your container.
 Press the "START" button to start your container again.
 
 When the container is running, more options are available to you when you hover the mouse over the container entry.
 
-![Docker Desktop initial view](/egeria-docs/tools/docker-container-running.png)
+![Docker Desktop initial view](docker-container-running.png)
 
 The first symbol is the "OPEN IN BROWSER" option.  Click on it and your browser opens.  You should see an error displayed:
 
 
-![White label error](/egeria-docs/tools/docker-container-open-in-browser-error.png)
+![White label error](docker-container-open-in-browser-error.png)
 
 Update the URL as follows:
 
-![White label error](/egeria-docs/tools/swagger-ui-url.png)
+![Correct URL](../swagger-tutorial/swagger-ui-url.png)
 
 and press enter.  After a few moments, Egeria's Swagger page should open.  This is an automatically
 generated page that describes the REST APIs of Egeria's OMAG Server Platform.
-There is more information on swagger in the [Developer's tools pages](/egeria-docs/tools/swagger).
+There is more information on swagger in the [Swagger Tutorial](/egeria-docs/education/tutorials/swagger-tutorial/overview).
 
-![Top if Swagger Page](/egeria-docs/tools/swagger-ui-top.png)
+![Top if Swagger Page](../swagger-tutorial/swagger-ui-top.png)
 
 Page down until you see the "Platform Services".  The platform services provide support for
 administrators running Egeria.
 
-![Platform Services Entry on Swagger page](/egeria-docs/tools/swagger-ui-platform-services.png)
+![Platform Services Entry on Swagger page](../swagger-tutorial/swagger-ui-platform-services.png)
 
 Click on the angle bracket on the right hand end of the entry and the list of REST API operations
 is displayed.
 
-![Platform Services detail on Swagger page](/egeria-docs/tools/swagger-ui-platform-services-detail.png)
+![Platform Services detail on Swagger page](../swagger-tutorial/swagger-ui-platform-services-detail.png)
 
 Now click on the first blue entry for platform origin. Then press the `Try it Out` button.
 
-![Try it out button on Swagger page](/egeria-docs/tools/swagger-ui-try-it-out-button.png)
+![Try it out button on Swagger page](../swagger-tutorial/swagger-ui-try-it-out-button.png)
 
 and enter `garygeeke` in the `userId` field and then the `Execute` button.
 
-![Platform Origin execution on Swagger page](/egeria-docs/tools/swagger-ui-platform-origin-execution.png)
+![Platform Origin execution on Swagger page](../swagger-tutorial/swagger-ui-platform-origin-execution.png)
 
 You can see that through the Swagger UI it is possible to try out different REST requests and make sure the
 platform is operating correctly.    The platform origin request is particularly useful for verifying
 what version of the OMAG Server Platform is running.
 
 The Swagger UI is useful for ad hoc testing.
-However, later in the Dojo we will cover a tool called [Postman](/egeria-docs/tools/runtime/#postman)
+However, later in the Dojo we will cover a tool called [Postman](/egeria-docs/education/tutorials/postman-tutorial/overview)
 that provides a more powerful testing experience.
 
 So back to the Docker Desktop.  The second option on the docker desktop is "CLI".  
 
-![Docker Desktop running view](/egeria-docs/tools/docker-desktop-running-options.png)
+![Docker Desktop running view](docker-desktop-running-options.png)
 
 
 This opens the Terminal/Command
@@ -190,13 +222,13 @@ You can check back here from time to time to see the files accumulating.
 If you delete this container then all of the files that the OMAG Server Platform created are lost.
 
 (If you want to know more about the egeria install image, see the
-[Installing Egeria Tutorial](/egeria-docs/education/tutorials/installing-egeria-tutorial/overview).)
+[Installing Egeria Tutorial](/egeria-docs/education/tutorials/installing-egeria-tutorial).)
 
 The third button on the docker desktop is the "STOP" button and the fourth button is "RESTART".
 If you just need to test these buttons, remember to ensure that the docker container is running
 when you have finished because it is needed for the rest of the session.
 
-![Docker Desktop running view](/egeria-docs/tools/docker-desktop-running-options.png)
+![Docker Desktop running view](docker-desktop-running-options.png)
 
 The final button is "DELETE".  As described above, it deletes the container and uoi need to start again with
 `docker run --publish 19443:9443 odpi/egeria`.
@@ -205,22 +237,22 @@ If you now click on the whitespace of the container's entry, a new section opens
 
 "Logs" shows the console logs. Each new run of the container appends new log information to the end of this console.
 
-![Docker Container logs](/egeria-docs/tools/docker-container-logs.png)
+![Docker Container logs](docker-container-logs.png)
 
 "Inspect" shows the settings for the container.
 
-![Docker container settings](/egeria-docs/tools/docker-container-inspect.png)
+![Docker container settings](docker-container-inspect.png)
 
 "Stats" shows the resource usage of the container.
 
-![Docker container stats](/egeria-docs/tools/docker-container-stats.png)
+![Docker container stats](docker-container-stats.png)
 
 ... and that is all you need to know about docker.
 
 ----
 
 Congratulations, you are familiar enough with running docker containers to continue with the
-[Egeria Dojo](../../getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md).
+[Egeria Dojo](../../../getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md).
 
 
 ---8<-- "snippets/abbr.md"

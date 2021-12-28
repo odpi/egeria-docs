@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Adding your changes to you git clone
+### Adding your changes to you git clone
 
 Once you have completed your contribution, you are ready to add it to your git clone.
 

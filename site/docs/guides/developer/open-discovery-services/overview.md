@@ -34,6 +34,6 @@ Open discovery services run in the [Asset Analysis OMES](/egeria-docs/services/o
 
 ## Example implementations
 
-There are implementations of discovery services in the [discovery-service-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors) module.
+There are implementations of discovery services in the [discovery-service-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } module.
 
 ---8<-- "snippets/abbr.md"

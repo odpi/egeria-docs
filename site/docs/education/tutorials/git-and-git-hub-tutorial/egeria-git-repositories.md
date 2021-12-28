@@ -1,25 +1,12 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Git and GitHub
-
-Git is an open source version control system.  It is what we use to:
-
-- Store all of our source code, documentation and other file-based resources.
-- Track changes to the underlying Egeria code as the project evolves
-- Track issues and enhancements, and link these back to the code changes that resolve them
-- Collaborate on and review the issues, enhancements and code changes
-
-As a result, it gives us a definitive source for the latest and greatest source code for
-Egeria itself, its history, and the rationale behind various decisions that are made over
-time.
+## Egeria's git repositories on GitHub
 
 The Egeria project's git repositories are located on [GitHub](https://github.com/odpi).
 GitHub is a free, public git service for sharing code and related files.
 It has a web interface to make it easier for the Egeria community to monitor
 the activity in the project and process new content.
-
-## Egeria git repositories
 
 Egeria has the following repositories:
 
@@ -36,11 +23,5 @@ the Egeria project and the [Palisade](https://github.com/gchq/palisade) project.
 All of these repositories are publicly visible.  However, if you want to contribute new content then you need
 to create a GitHub account.  This can be done from the top of the [GitHub home page](https://github.com).
 
-
-## More tutorials
-
-Interested to learn more?
-* GitHub provides some great [introductory guides](https://guides.github.com/introduction/git-handbook/).
-* Egeria provides specific tutorials for [working with Egeria's git repositories](/egeria-docs/tutorials/git-and-git-hub-tutorial/overview).
 
 ---8<-- "snippets/abbr.md"

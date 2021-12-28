@@ -52,7 +52,7 @@ Use regular Markdown syntax for images. For example:
 ![Description of what the image depicts](image-filename.svg)
 ```
 
-To make localization easier and enhance accessibility, the preferred image format is SVG. Use [draw.io](/egeria-docs/guides/developer/tools/documentation/#drawio){ target=draw } for creating images and diagrams. To save, follow these steps:
+To make localization easier and enhance accessibility, the preferred image format is SVG. Use [draw.io](/egeria-docs/guides/contributor/documentation/#drawio){ target=draw } for creating images and diagrams. To save, follow these steps:
 
 1. Select everything you want to include in the diagram (e.g. ++ctrl+a++ / ++cmd+a++ ).
 2. Use **File**, **Export as**, **SVG...** to save your image in SVG format.

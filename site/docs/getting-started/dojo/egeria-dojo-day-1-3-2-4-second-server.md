@@ -23,7 +23,7 @@ You can delete it if you do not want it any more.
 
 ## Set up environment
 
-Now [download the latest version of Egeria from GitHub](../../education/tutorials/building-egeria-tutorial/task-downloading-egeria-source.md)
+Now [download the latest version of Egeria from GitHub](../../education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md)
 in a new directory on your machine.  This is a direct copy of the latest content from GitHub.
 
 1. From within the `egeria/open-metadata-resources/open-metadata-deployment/compose/tutorials` directory, run the command:

@@ -3,15 +3,29 @@
 
 # Postman
 
-Postman provides an interactive application for issuing
-REST API calls to a server and reviewing responses.
+Postman provides an interactive application for issuing [REST APIs](https://en.wikipedia.org/wiki/Representational_state_transfer) calls to a server and reviewing responses.
 
-Install Postman from [here](https://www.getpostman.com/downloads/). At the time of writing 5.9.0 is 
-current and recommended.
+Basically a REST API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data.  The call is made using a URL - just like requesting a web page from your browser.  In fact, when you request a web page from your browser, the browser is issuing a GET HTTP request for the page.
 
-Once Postman is installed, start up the application.
+REST APIs for services such as the open metadata and governance services of Egeria use the full range of HTTP requests as follows:
 
-You should see an initial page something like this:
+* **GET** - retrieving simple structures.
+* **POST** - creating, updating, deleting complex structures and retrieving long lists of information with paging.
+* **DELETE** - deleting simple structures.
+
+With Postman it is possible issue these HTTP requests and experiment with what they do.
+The Egeria dojos use Postman *collections* to illustrate the calls and save you typing in the full URLs (which can be quite long :).
+
+Egeria by default uses https:// requests with a self-signed certificate. Any Postman users therefore will need to
+go into settings->general and turn off 'SSL certificate verification' or requests will fail.
+
+## Setting up Postman 
+
+Postman is a [free download](https://www.getpostman.com/) with optional enterprise licenses for teams.  It includes a wide variety of [tutorials](https://learning.getpostman.com/concepts/) to help you go from novice to expert.  Familiarity with Postman will help you get the most value from the Egeria tutorials.
+
+Install Postman from [the Postman downloads site](https://www.getpostman.com/downloads/). At the time of writing 5.9.0 is  current and recommended.
+
+Once Postman is installed, start up the application.  You should see an initial page something like this:
 
 ![Postman main window](postman-mainmenu.png)
 

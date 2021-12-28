@@ -64,11 +64,11 @@ This docker image provides a simple way to bring a runnable version of Egeria on
 
 The **Overview** tab describes the docker container.
 
-![Egeria Docker page overview tab](egeria-docker-page-overview.png)
+![Egeria Docker page overview tab](../../education/tutorials/docker-tutorial/egeria-docker-page-overview.png)
 
 The **Tags** tab shows the different releases that are available.
 
-![Egeria Docker page tags tab](egeria-docker-page-tags.png)
+![Egeria Docker page tags tab](../../education/tutorials/docker-tutorial/egeria-docker-page-tags.png)
 
 The docker image needs a runtime to execute. It can run in the cloud using various platforms or on your machine using [*Docker Desktop*](https://www.docker.com/products/docker-desktop){ target=docker }.
 
@@ -76,7 +76,7 @@ Docker Desktop supports running a docker image as a standalone container, or as 
 
 Follow the instructions for you operating system. For MacOS, Docker Desktop is installed like a standard application.
 
-![MacOS install of Docker Desktop](docker-desktop-install.png)
+![MacOS install of Docker Desktop](../../education/tutorials/docker-tutorial/docker-desktop-install.png)
 
 Once it is installed, it can be launched like any other application, such as through the launchpad / start menu.
 
@@ -138,7 +138,7 @@ For each method / operation, the rest of the URL is defined and mapped through a
 
 [Project Jupyter :material-dock-window:](https://jupyter.org){ target=jupyter } provides tools for interactive computing. In particular, we use Jupyter notebooks to provide an interactive environment for running snippets of [Python](/egeria-docs/guides/developer/languages/#python) code, interspersed with [Markdown](/egeria-docs/guides/developer/languages/#markdown) documentation, for our [hands-on labs](/egeria-docs/education/open-metadata-labs).
 
-![Example Jupyter notebook from the hands-on labs](jupyter-notebook-browser-window.png)
+![Example Jupyter notebook from the hands-on labs](../../education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
 
 A free version of the latest Jupyter Notebook support (called [*JupyterHub* :material-dock-window:](https://jupyter.org/hub){ target=jupyter }) can be installed in various ways.
 

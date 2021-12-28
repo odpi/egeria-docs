@@ -153,13 +153,14 @@ There are many choices of registered services within the Egeria project.  Howeve
 | *moduleName*-spring | Server-side REST API.  | P | P | P | P |
 
 **Key:**
+
 * CP - Required and runs in external clients plus in the OMAG Server Platform.
 * C - Required and runs in external clients.
 * P - Required and runs in the OMAG Server Platform.
 * OCP - Optional and when provided runs in external clients plus in the OMAG Server Platform.
 * N - Not implemented/needed.
 
-The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/egeria-docs/tools/spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds and they are [initialized as part of the platform's capabilities](/egeria-docs/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES, OMIS or OMVS registered service that is dependent on the OMAS to get access to open metadata.
+The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/egeria-docs/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds and they are [initialized as part of the platform's capabilities](/egeria-docs/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES, OMIS or OMVS registered service that is dependent on the OMAS to get access to open metadata.
 
 The best guide for building registered services are the existing implementations found in [egeria.git](https://github.com/odpi/egeria/tree/master/open-metadata-implementation){ target=gh }.  You can see the way the code is organized and the services that they depend on.
 

@@ -91,13 +91,13 @@ Once it is installed, it can be launched like any other application, such as thr
 
 Kubernetes is an open source project managed by the [Cloud Native Computing Foundation :material-dock-window:](https://www.cncf.io/){ target=cncf }.
 
-Egeria uses Kubernetes to run all the components in the [Coco Pharmaceuticals hands-on labs](/egeria-docs/education/open-metadata-labs).
+Egeria uses Kubernetes to run all the components in the [Coco Pharmaceuticals hands-on labs](/egeria-docs/education/open-metadata-labs/overview).
 
 ## Helm
 
 [Helm :material-dock-window:](https://helm.sh){ target=helm } is a package manager for [Kubernetes](#kubernetes). Through Helm, a *chart* can be used to deploy multiple containers and other related components as a single deployable unit. This makes it one simple step to deploy what may otherwise be a complex solution composed of multiple runtimes (like Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform), [Apache Kafka](#apache-kafka), [JupyterHub](#jupyter-notebooks), and so on) -- without needing to obtain or download all the various runtimes, know how to operate them, and so on.
 
-The Egeria team maintains an [`odpi-egeria-lab` Helm chart :material-github:](https://github.com/odpi/egeria-charts){ target=gh } that can be used to automatically deploy all the components necessary to run through the [open metadata labs](/egeria-docs/education/open-metadata-labs).
+The Egeria team maintains an [`odpi-egeria-lab` Helm chart :material-github:](https://github.com/odpi/egeria-charts){ target=gh } that can be used to automatically deploy all the components necessary to run through the [open metadata labs](/egeria-docs/education/open-metadata-labs/overview).
 
 ## Spring
 

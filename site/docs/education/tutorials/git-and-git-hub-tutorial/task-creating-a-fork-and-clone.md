@@ -59,10 +59,10 @@ $ git remote add upstream https://github.com/odpi/egeria.git
 
 Now you are ready to [create a branch for your changes](task-creating-git-branches.md).
 
-#### Further information
+??? education "Further information"
 
-* Further details of [GitHub's fork and pull model](https://help.github.com/articles/about-collaborative-development-models/),
-* Further details on the [fork](https://guides.github.com/activities/forking/) command.
+    * Further details of [GitHub's fork and pull model](https://help.github.com/articles/about-collaborative-development-models/),
+    * Further details on the [fork](https://guides.github.com/activities/forking/) command.
 
 
 ---8<-- "snippets/abbr.md"

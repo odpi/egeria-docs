@@ -28,21 +28,21 @@ This tutorial covers common tasks associated with using Git and GitHub to work w
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-installing-git.md"
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
 
-## Additional contributor tasks
+## Using Git and GitHub when making a contribution
 
 The tasks below describe how to use Git and GitHub to create a contribution to the Egeria project.  The contribution process using Git and GitHub is illustrated in Figure 1.
 
 ![Figure 1](git-github-flow.svg)
 > **Figure 1:** Git and GitHub contribution flow
 
-The tasks below step through this process
+The tasks below step through this process:
 
-* [Creating a Fork and a Clone](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-creating-a-fork-and-clone)
-* [Creating a Branch in a git repository](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-creating-git-branches)
-* [Adding your changes to a git repository](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git)
-* [Adding your contribution to Egeria](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr)
+* [Creating a Fork and a Clone](#creating-a-fork-and-a-clone)
+* [Creating a Branch in a git repository](#creating-a-branch-for-your-work)
+* [Adding your changes to a git repository](#adding-your-changes-to-your-git-clone)
+* [Adding your contribution to Egeria](#adding-your-contribution-to-egerias-git-repository)
 
-In addition, these are [further tips](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/further-git-tips) for using Git.
+In addition, there are [further tips](#additional-git-tips) for using Git.
 
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-creating-a-fork-and-clone.md"
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-creating-git-branches.md"

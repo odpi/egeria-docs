@@ -9,9 +9,8 @@ The final session in day one of the Egeria Dojo is to use our Kubernetes helm ch
 
 First, go to you Docker Desktop and shutdown all of your docker containers that were started by docker-compose (your laptop will thank you for that.)
 
-Now go to the [Lab Infrastructure tutorial](/egeria-docs/education/tutorials/lab-infrastructure-guide) and follow the instructions for setting up the lab environment using Kubernetes.
-
-Once it is running, go to the [Open Metadata Labs](/egeria-docs/education/open-metadata-labs) instructions to start the first lab notebook.
+Now go to the [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview) and follow the instructions for setting up the lab environment using Kubernetes.
+Once it is running, go to the instructions to start the first lab notebook.
 
 ![First Lab Notebook](/egeria-docs/education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
 

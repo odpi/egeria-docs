@@ -15,6 +15,7 @@
     ![Turn off self-signed certificate checking](/egeria-docs/education/tutorials/postman-turn-off-certificate-checking.png)
 
 !!! education "Further information"
+
     - [Egeria-specific Postman tutorial](/egeria-docs/education/tutorials/postman-tutorial/overview).
     - [Adding Postman samples](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis)
 

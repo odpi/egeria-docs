@@ -6,18 +6,22 @@
 IntelliJ IDEA by JetBrains is the Interactive Developer Environment (IDE) used by most of the Egeria developers.
 The community edition is free to use and covers all of the function needed by an Egeria developer.
 
+## Installing Intellij
+
 Go to 
 ```
 https://www.jetbrains.com/idea/
 ```
-and what the **Take a Tour** video if you are not familiar with IntelliJ.
+and watch the **Take a Tour** video if you are not familiar with IntelliJ.
 You can download IntelliJ from this site:
 ```
 https://www.jetbrains.com/idea/download/index.html
 ```
 
-There is a [tutorial for IntelliJ](../../open-metadata-resources/open-metadata-tutorials/intellij-tutorial) as part of the
-[Egeria Dojo](../../open-metadata-resources/open-metadata-tutorials/egeria-dojo).
+--8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
+--8<-- "docs/education/tutorials/intellij-tutorial/task-building-egeria-in-intellij.md"
+--8<-- "docs/education/tutorials/intellij-tutorial/task-creating-content-with-intellij.md"
+
 
 ## Lombok Plugin
 

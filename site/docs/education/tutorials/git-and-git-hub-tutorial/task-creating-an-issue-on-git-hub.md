@@ -38,6 +38,6 @@ Make a note of this issue number because you will need it later.
 
 ![GitHub New Issue Created](git-hub-new-issue-created.png)
 
-Now you are ready to [work on your contribution](task-creating-a-fork-and-clone.md).
+Now you are ready to work on your contribution.
 
 ---8<-- "snippets/abbr.md"

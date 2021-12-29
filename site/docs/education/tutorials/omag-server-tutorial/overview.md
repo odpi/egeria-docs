@@ -21,7 +21,7 @@ At the end of this tutorial you will be able to perform the following tasks.
   
 ## Prerequisite Tasks
 
-* [Download and build ODPi Egeria](../building-egeria-tutorial)
+* [Download and build Egeria](../building-egeria-tutorial)
 * [Familiarize yourself with the Postman test tool](/egeria-docs/education/tutorials/postman-tutorial/overview)
 
 ## Tutorial Tasks

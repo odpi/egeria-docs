@@ -9,6 +9,7 @@ in the [Jupyter Notebooks](/egeria-docs/education/tutorialsjupyter-tutorial/over
 [Hand-on Labs](/egeria-docs/education/open-metadata-labs).
 
 This summary for markdown is very useful
+
 * [Markdown Syntax (from GitHub)](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
 Markdown files in the git repositories have a file type of `.md`.  Each directory in the repository

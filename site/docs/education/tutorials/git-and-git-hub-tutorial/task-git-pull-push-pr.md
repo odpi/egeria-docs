@@ -1,14 +1,12 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-### Adding your contribution to Egeria's Git repositories
+### Adding your contribution to an Egeria git repository
 
-Once you have [prepared a contribution](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git)
-and these changes are added to your clone, you are ready to commit the changes and push them to
-your clone on GitHub.
+Once you have prepared a contribution and these changes are added to your clone, you are ready to commit the changes and push them to your clone on GitHub.
 
-![Figure 1](git-push-pull.svg)
-> **Figure 1:** Pushing changes to GitHub
+![Figure 4](git-push-pull.svg)
+> **Figure 4:** Pushing changes to GitHub
 
 Below is the command to commit your changes.  Make sure 
 to use the `-s` option to sign your changes (see [Why the DCO?](https://github.com/odpi/egeria/blob/master/developer-resources/why-the-dco.md))
@@ -32,8 +30,8 @@ the latest master code prior to completing your changes.
 $ git pull upstream master
 ```
 
-![Figure 2](git-pull-upstream-master.svg)
-> **Figure 2:** Pulling latest changes from master
+![Figure 5](git-pull-upstream-master.svg)
+> **Figure 5:** Pulling latest changes from master
 
 and then making any necessary changes to merge conflicts, and commit/push as above.
 

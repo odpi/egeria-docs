@@ -167,17 +167,15 @@ nav:
               - Introduction : education/egeria-dojo/running-egeria/introduction.md
               - Setup : education/egeria-dojo/running-egeria/setup.md
               - Simple Install : education/egeria-dojo/running-egeria/simple-install.md
-          - Developer Day : education/egeria-dojo/developer.md
+          - Developer Day : education/egeria-dojo/developer/overview.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
-      - Hands-on Labs:
-          - Lab Infrastructure Guide: education/tutorials/lab-infrastructure-guide/overview.md
-          - Open Metadata Labs: education/open-metadata-labs.md
+      - Open Metadata Labs: education/open-metadata-labs/overview.md
       - Tutorials:
           - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
           - Using Kubernetes: guides/operations/kubernetes/index.md
-          - Using Docker: education/tutorials/overview.md
+          - Using Docker: education/tutorials/docker-tutorial/overview.md
           - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
           - Using Postman: education/tutorials/postman-tutorial/overview.md
           - Using Kafka: education/tutorials/kafka-tutorial/overview.md

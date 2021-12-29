@@ -20,7 +20,7 @@ egeria-3.3-SNAPSHOT-omag-server.tar.gz
 The files in this list will change as Egeria develops. For this exercise it is the files including 'distribution' that are important.
 
 The name of the files is determined by the release level of the code that you
-[downloaded from GitHub](../git-and-git-hub-tutorial/task-downloading-egeria-source.md).  In this example,
+[downloaded from GitHub](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview/#downloading-the-egeria-source-from-github).  In this example,
 the release is **egeria-3.3-SNAPSHOT**.
 
 Create a directory for the install and copy the tar file into it.
@@ -68,8 +68,5 @@ open metadata and governance services.
 $ ls server
 $ resources				server-chassis-spring-3.3-SNAPSHOT.jar
 ```
-
-This is the end of the [Downloading and Building ODPi Egeria Tutorial](.).    You are now
-ready to [learn about the OMAG Server Platform](../omag-server-tutorial).
 
 --8<-- "snippets/abbr.md"

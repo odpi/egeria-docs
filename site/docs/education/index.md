@@ -19,7 +19,7 @@ Since the original Egeria dojo was written, Egeria's capabilities have grown sig
 
 ## Hands on Labs
 
-The [Hands on Open Metadata Labs](/egeria-docs/education/open-metadata-labs) provide an interactive environment that allow you to experiment with different capabilities of Egeria.  They are organized by role so you can select the roles of interest to you.
+The [Hands on Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview) provide an interactive environment that allow you to experiment with different capabilities of Egeria.  They are organized by role so you can select the roles of interest to you.
 
 ## Individual tutorials
 
@@ -32,10 +32,13 @@ The individual tutorials focus on a specific tool, or group of related tasks.  T
 - [Using Postman](/egeria-docs/education/tutorials/postman-tutorial/overview)
 - [Using Kafka](/egeria-docs/education/tutorials/kafka-tutorial/overview)
 - [Building Egeria](/egeria-docs/education/tutorials/building-egeria-tutorial/overview)
-- [Installing Egeria](/egeria-docs/education/tutorials/installing-egeria-tutorial)
 - [Working with Egeria's Clients](/egeria-docs/education/tutorials/omag-client-tutorial)
 - [Working with OMAG Servers](/egeria-docs/education/tutorials/omag-server-tutorial/overview)
 - [Running Egeria's Samples](/egeria-docs/education/tutorials/running-samples-tutorial)
 - [Testing Egeria](/egeria-docs/education/tutorials/testing-egeria-tutorial)
+
+## Webinars
+
+[Egeria's webinars](/egeria-docs/education/webinar-program/overview) run each month and provide a deep dive into a particular topic.  All webinars are recorded and are available on YouTube.
 
 --8<-- "snippets/abbr.md"

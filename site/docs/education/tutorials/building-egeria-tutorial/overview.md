@@ -19,20 +19,29 @@ Alternatively you can also use [Kubernetes](/egeria-docs/guides/operations/kuber
 
 1. [Downloading the Egeria source from GitHub](#downloading-the-egeria-source-from-github)
 2. [Building the Egeria source with Apache Maven](#building-the-egeria-source)
+3. [Installing Egeria](#installing-egeria)
 
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
 
 You are now ready to [build the egeria source](#building-the-egeria-source).
 
---8<-- "docs/education/tutorials/building-tutorial/task-building-egeria-source.md"
+--8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-egeria-source.md"
+
+
+--8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-egeria.md"
 
 
 ## What next?
 
-* [Run the hands on labs to get experience with using Egeria](/egeria-docs/education/open-metadata-labs)
+This is the end of the *Downloading and Building Egeria Tutorial*.    You are now
+ready to [learn about the OMAG Server Platform](/egeria-docs/education/tutorials/omag-server-tutorial/overview).
+
+Alternatively ...
+
+* [Run the open metadata labs to get experience with using Egeria](/egeria-docs/education/open-metadata-labs/overview)
 or
-* [Learn about installing Egeria in your own environment](/egeria-docs/education/tutorials/installing-egeria-tutorial)
+* [Learn about developing extensions to Egeria](/egeria-docs/guides/developer)
 or
-* [Learn how to make a contribution to Egeria](/egeria-docs/education/egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.md)
+* [Learn how to make a contribution to Egeria](/egeria-docs/education/egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria)
 
 ---8<-- "snippets/abbr.md"

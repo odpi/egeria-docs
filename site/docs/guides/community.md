@@ -50,7 +50,7 @@ The Egeria project uses [GitHub :material-github:](https://github.com/odpi){ tar
 All of these repositories are publicly visible; however, if you want to contribute new content you need to create a GitHub account.  This can be created from the top of the GitHub home page.
 
 If you are not familiar with Git and GitHub, there is additional education in the
-[developer-resources/tools :material-github:](https://github.com/odpi/egeria/blob/master/developer-resources/tools/Git-GitHub.md){ target=gh } pages.
+[Git and GitHub Tutorial](/egeria-docs/education/tutorials/).
 
 ## Steps to contribute content to the project
 

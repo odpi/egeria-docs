@@ -30,7 +30,7 @@ and Governance (OMAG) Servers in the
 [OMAG Server Platform](/egeria-docs/concepts/omag-server).  
 
 The **server-chassis-spring** module is an implementation of the
-server chassis written using [Spring Boot](/egeria-docs/tools/spring).
+server chassis written using [Spring Boot](/egeria-docs/guides/contributor/runtime/#spring).
 Its **main()** method is located in a Java class called **OMAGServerPlatform**.
 
 When the OMAGServerPlatform is first started, all of its REST APIs
@@ -127,7 +127,7 @@ to the OMAG server platform.
 
 ## Swagger
 
-Swagger API documentation is generated with the chassis and is documented in [Swagger Generation](SwaggerGeneration.md).
+Swagger API documentation is generated with the chassis and is documented in [Swagger Generation](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/server-chassis/server-chassis-spring/SwaggerGeneration.md).
 
 ## Spring Boot Actuator
 

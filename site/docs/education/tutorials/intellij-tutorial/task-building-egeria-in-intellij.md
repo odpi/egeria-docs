@@ -1,26 +1,26 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Building Egeria in IntelliJ IDEA
+## Building Egeria in IntelliJ IDEA
 
 Maven is accessed from a sidebar menu in IntelliJ.
 
-![Maven Sidebar](../../../developer-resources/tools/intellij-maven-sidebar-menu.png)
+![Maven Sidebar](intellij-maven-sidebar-menu.png)
 
 When you click on the **Maven** label, a panel opens with
 the list of modules in
 Egeria is displayed.
 
-![Maven Modules](../../../developer-resources/tools/intellij-maven-modules-list.png)
+![Maven Modules](intellij-maven-modules-list.png)
 
 To build the whole project, select the **M** button at the top of the
 maven panel.
 
-![Maven build opens](../../../developer-resources/tools/intellij-run-maven-option.png)
+![Maven build opens](intellij-run-maven-option.png)
 
 Then a dialog box opens.  Enter `mvn clean install`.
 
-![Maven build command](../../../developer-resources/tools/intellij-run-maven-clean-install.png)
+![Maven build command](intellij-run-maven-clean-install.png)
 
 Then the build kicks off.
 
@@ -30,7 +30,7 @@ committing a change.  However it is also possible to build a single module.
 Goto the maven sidebar panel and find the module you are interested in.
 Open up the content for the module and then the lifecycle folder.
 
-![Maven module options](../../../developer-resources/tools/intellij-maven-module-lifecycle-values.png)
+![Maven module options](intellij-maven-module-lifecycle-values.png)
 
 Double-click on install and the build of that module starts.
 

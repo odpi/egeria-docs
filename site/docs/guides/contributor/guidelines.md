@@ -18,11 +18,11 @@ Most developers use MacOS, while our official builds use Linux (Ubuntu/Centos/RH
 !!! attention "Windows is unsupported"
     The traditional Windows environment is not directly supported. It is recommended to use [WSL2 :material-dock-window:](https://docs.microsoft.com/en-us/windows/wsl/){ target=ms } which offers a full Linux environment.
 
-[Apache Maven](/egeria-docs/guides/developer/tools/#maven) is used to control the builds, and 3.5 or higher is required to build Egeria (3.6.x or above is recommended).
+[Apache Maven](https://maven.apache.org/index.html) is used to control the builds, and 3.5 or higher is required to build Egeria (3.6.x or above is recommended).
 
-[Gradle](/egeria-docs/guides/developer/tools/#gradle) is not currently supported but is being developed.
+[Gradle](https://gradle.org/) is not currently supported but is being developed.
 
-IDEs can make navigating the Egeria code easier. Each IDE can vary a lot. Many of our team use [JetBrains IntelliJ](/egeria-docs/guides/developer/tools/#intellij).
+IDEs can make navigating the Egeria code easier. Each IDE can vary a lot. Many of the Egeria community use [JetBrains IntelliJ](/egeria-docs/education/tutorials/intellij-tutorial/overview).
 
 In the case of problems the first problem determination step is to check you can build Egeria normally at the command line i.e. `mvn clean install` from the source root. That will prove at least Java and Maven are correct.
 

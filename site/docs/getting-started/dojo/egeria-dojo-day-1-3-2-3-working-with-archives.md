@@ -29,7 +29,7 @@ https://raw.githubusercontent.com/odpi/egeria/master/content-packs/CloudInformat
 When you execute the request, look at the logs in Docker Desktop to see any errors or to watch the
 archive load.
 
-The [Open Metadata Labs](/egeria-docs/education/open-metadata-labs) has a specific lab for working with this archive
+The [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview) has a specific lab for working with this archive
 and through that you will get a chance to query its content.
 
 # Test yourself

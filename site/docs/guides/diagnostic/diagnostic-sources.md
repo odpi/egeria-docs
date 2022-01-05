@@ -5,7 +5,7 @@
 
 ## OMAG Server Platform
 
-Figure 1 shows the choices you have when [gathering diagnostics](guide.md) for a problem related to the
+Figure 1 shows the choices you have when [gathering diagnostics](/egeria-docs/guides/diagnostic/guide) for a problem related to the
 OMAG Server Platform and the servers and services that run on it.
 These are in addition to the diagnostics from the container services, and the services that either call or are
 called by the services running on the OMAG Server Platform.
@@ -18,7 +18,7 @@ Specifically they are:
 * **Audit Log** - the audit log provides diagnostic information for a running OMAG Server.
   This includes the start up and shutdown of services, unexpected exceptions, events sent and processed,
   and processing errors.  It is the primary source of diagnostic for issues relating to an OMAG Server
-  and the Open Metadata Repository Cohort.  [More information ...](ffdc.md).
+  and the Open Metadata Repository Cohort.  [More information ...](/egeria-docs/guides/diagnostic/ffdc).
   
 * **Prometheus Logging** - the OMAG Server Platform supports a Prometheus Endpoint that logs the
   REST API calls to the platform itself and the servers running on it.  This logging information
@@ -30,7 +30,7 @@ Specifically they are:
 * **Developer Logging** - Developer logging can be used in developer and test environments
   to understand how the code is running.  It is enabled through the OMAG Server Platform's 
   `application.properties` and is activated when the platform starts up.
-  [More information ...](./egeria-docs/guides/admin/omag-server-platform-logging.md).
+  [More information ...](/egeria-docs/guides/admin/omag-server-platform-logging).
 
 * **Configuration Document** - the configuration document describes the services and connectors
   defined for a particular OMAG Server.  It helps you to confirm that a server is configured correctly.
@@ -42,7 +42,7 @@ Specifically they are:
   
 * **API Calls** - The Egeria API calls can be used to understand the state of a particular repository, OMAG Server and/or
   OMAG Server Platform.
-  [More Information ...](diagnostic-apis.md)
+  [More Information ...](/egeria-docs/guides/diagnostic/diagnostic-apis)
 
 * **Egeria UIs** - The Egeria UIs help to visualize the state of the repositories and the Egeria Ecosystem.
   [More Information ...](https://github.com/odpi/egeria-react-ui)

@@ -23,7 +23,7 @@ and can be used to identify entities that are similar in a specific aspect.
 Attributes are optional. They can be primitives, enums, or collections such as arrays and maps.
 
 Linked entities, relationships and classifications can be stored in different repositories in the cohort.
-The graph is broken down into the structures shown in figure 2 to send as events, pass over APIS and and to store in [open metadata archives](open-metadata-archive.md).
+The graph is broken down into the structures shown in figure 2 to send as events, pass over APIS and and to store in [open metadata archives](/egeria-docs/concepts/open-metadata-archive).
 An entity proxy is a subset of an entity.
 
 ![Figure 2](open-metadata-instances-graph-fragments.svg)
@@ -36,7 +36,7 @@ Model is design to allow metadata from one repository to be augmented by another
 
 ## Type definitions
 
-Every metadata instance is linked to an [open metadata type definition (TypeDef)](open-metadata-type-definitions.md)
+Every metadata instance is linked to an [open metadata type definition (TypeDef)](/egeria-docs/concepts/open-metadata-type-definitions)
 that describes what it represents and the properties that may be stored in it.
 
 Although not proper metadata instances, the classifications are also linked to a TypeDef to ensure they

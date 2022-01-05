@@ -62,6 +62,6 @@ The different types of OMAG Servers connect together as illustrated in Figure 2.
     This configuration document is stored by a [configuration document store connector](/egeria-docs/concepts/configuration-document/#storage).
 
     - [Configuring an OMAG Server](/egeria-docs/guides/admin/servers)
-    - [Start and stop an OMAG Server](/egeria-docs/guides/admin/operating-omag-server.md)
+    - [Start and stop an OMAG Server](/egeria-docs/guides/operations/guide/#starting-and-stopping-an-omag-server)
 
 --8<-- "snippets/abbr.md"

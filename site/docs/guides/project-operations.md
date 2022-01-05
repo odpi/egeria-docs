@@ -60,7 +60,7 @@ Egeria's contributors are recognized in the [contributors list :material-github:
 !!! tip "How to become a maintainer"
     New maintainers are voted onto the maintainers list by [the existing maintainers :material-github:](https://github.com/odpi/egeria/blob/master/MAINTAINERS.md){ target=gh }.
 
-    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer. The maintainers vote and if a majority agree then the requester is added to the maintainers list and given write access to the [Egeria Git repositories](/egeria-docs/guides/developer/tools/development/#git-github).
+    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer. The maintainers vote and if a majority agree then the requester is added to the maintainers list and given write access to the [Egeria Git repositories](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview).
 
     Once confirmed, you will receive an [an Egeria Maintainer badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-maintainer){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria maintainer.
 

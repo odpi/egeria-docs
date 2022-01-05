@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Creating an Issue on GitHub
+### Creating an Issue on GitHub
 
 Every contribution begins with a `git issue`.
 Go to [GitHub](https://github.com/odpi/egeria) and click on the second tab marked `Issues`.
@@ -27,7 +27,7 @@ This is a change to Egeria that is part of the Egeria Dojo session
 [Making a contribution to Egeria - Step-by-Step](https://egeria.odpi.org/open-metadata-resources/open-metadata-tutorials/egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.html).
 It will create a new markdown file in `open-metadata-resources/open-metadata-tutorials/egeria-dojo/egeria-dojo-postcards` and link it to the readme.
 ```
-Notice that it is possible to use [Markdown](/egeria-docs/tools/markdown)
+Notice that it is possible to use [Markdown](/egeria-docs/guides/contributor/markdown)
 tags to create highlights and links to content to explain what you are doing.
 
 ![GitHub Create New Issue](git-hub-create-new-issue.png)
@@ -38,6 +38,6 @@ Make a note of this issue number because you will need it later.
 
 ![GitHub New Issue Created](git-hub-new-issue-created.png)
 
-Now you are ready to [work on your contribution](task-creating-a-fork-and-clone.md).
+Now you are ready to work on your contribution.
 
 ---8<-- "snippets/abbr.md"

@@ -7,6 +7,7 @@
 A schema describes the structure of the data associated with an [Asset](/egeria-docs/patterns/metadata-manager).
 The technology that supports the asset often limits the structural choices for data.
 For example:
+
  * A relational database organizes data into collections of tables and columns.
  * Technologies such as JSON or XML, organizes data into nested structures.
  * Graph databases organizes data in nodes and relationships.

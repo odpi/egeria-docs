@@ -8,16 +8,14 @@ linked to the same open metadata cohort as the Asset Consumer OMAS.  It also has
 provides an equivalent interface to the REST API plus connector factory methods supported by an
 embedded Connector Broker.  
 
-The Connector Broker is an [Open Connector Framework (OCF)](../../../../frameworks/open-connector-framework) component
-that is able to create and configure instances of compliant connectors.  It is passed a Connection
+The Connector Broker is an [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) component
+that is able to create and configure instances of compliant connectors.  It is passed a [Connection](/egeria-docs/concepts/connection)
 object which has all of the properties needed to create the connector.  
 
 The Asset Consumer OMAS java client
 extracts the Connection object from the open metadata repositories and then calls the Connector Broker.
 
-The code sample below creates the Asset Consumer OMAS Client.
-It is passed the [server name]() and [platform root URL]() for the metadata server that
-will supply the connection object.
+The code sample below creates the Asset Consumer OMAS Client. It is passed the [server name](/egeria-docs/concepts/server-name) and [platform URL root](/egeria-docs/concepts/platform-url-root) for the metadata access server that will supply the connection object.
 
 ```
       AssetConsumer client = new AssetConsumer(serverName, serverURLRoot);

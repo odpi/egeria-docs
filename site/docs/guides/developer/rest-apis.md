@@ -7,7 +7,7 @@ Egeria uses REST APIs to issue synchronous calls between its servers and platfor
 
 Having said that, each REST API includes parameter validation and technically can be called by third party applications that do not support Java.  You can see examples of this in the [open metadata labs](/egeria-docs/education/open-metadata-labs) where the REST APIs are called from the python notebooks.
 
-Developers and architects experimenting with Egeria also find it useful to call Egeria through the REST APIs using tools such as [postman](/egeria-docs/tools/testing/#postman).  As such the REST APIs are published through Swagger at this URL:
+Developers and architects experimenting with Egeria also find it useful to call Egeria through the REST APIs using tools such as [postman](/egeria-docs/education/tutorials/postman-tutorial/overview).  As such the REST APIs are published through Swagger at this URL:
 
 ```
 

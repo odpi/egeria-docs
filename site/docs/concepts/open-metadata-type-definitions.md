@@ -8,12 +8,12 @@ hide:
 
 # Open Metadata Type Definitions (TypeDefs)
 
-TypeDefs define the characteristics of a particular type of an [open metadata instance](open-metadata-instances.md)
+TypeDefs define the characteristics of a particular type of an [open metadata instance/element](/egeria-docs/concepts/open-metadata-instances)
 There are three categories of TypeDefs (`TypeDefCategory`):
 
-- *EntityDef*: the definition of a type of [entity](open-metadata-instances.md)
-- *RelationshipDef*: the definition of a type of [relationship](open-metadata-instances.md)
-- *ClassificationDef*: the definition of a type of [classification](open-metadata-instances.md)
+- *EntityDef*: the definition of a type of [entity](/egeria-docs/concepts/open-metadata-instances)
+- *RelationshipDef*: the definition of a type of [relationship](/egeria-docs/concepts/open-metadata-instances)
+- *ClassificationDef*: the definition of a type of [classification](/egeria-docs/concepts/open-metadata-instances)
 
 TypeDefs can inherit from other TypeDefs from the same category.  Open metadata support single inheritance.
 

@@ -62,10 +62,10 @@ So now consider each phase of the process.
             
     * **Gather diagnostics** - This is where you are looking to capture the evidence that may identify
     both the source of the error and the nature of the failure.
-    The different types of diagnostics that are available are described [here](diagnostic-sources.md).
+    The different types of diagnostics that are available are described [in Diagnostic Source](/egeria-docs/guides/diagnostic/diagnostic-sources).
     If the problem is in the Egeria code,
     rather than its runtime environment, then the 
-    [Egeria diagnostics may also defined how to fix the problem](ffdc.md).
+    [Egeria diagnostics may also defined how to fix the problem](/egeria-docs/guides/diagnostic/ffdc).
     
 * **Information Integration and Interpretation** - The second phase uses the evidence gathered in the
   to make a diagnosis to determine which component is in error and what it is doing that is incorrect.
@@ -113,16 +113,16 @@ However, whilst some problems are frequently encountered, others are unique to y
 What follows are some descriptions of the diagnostics for problems that are frequently seen.
 These can help you to eliminate the obvious causes.  
 
-* [Examples of OMAG Server Platform startup errors](examples-of-platform-start-up-errors.md)
-* [Examples of OMAG Server startup errors](examples-of-server-start-up-errors.md)
-* [Examples of Open Metadata Repository Cohort errors](examples-of-cohort-errors.md)
-* [Examples of REST API call failures](examples-of-common-rest-api-errors.md)
+* [Examples of OMAG Server Platform startup errors](/egeria-docs/guides/diagnostic/examples-of-platform-start-up-errors)
+* [Examples of OMAG Server startup errors](/egeria-docs/guides/diagnostic/examples-of-server-start-up-errors)
+* [Examples of Open Metadata Repository Cohort errors](/egeria-docs/guides/diagnostic/examples-of-cohort-errors)
+* [Examples of REST API call failures](/egeria-docs/guides/diagnostic/examples-of-common-rest-api-errors)
 
 
 ## Further information
 
-* [First Failure Data Capture (FFDC)](ffdc.md)
-* [Integration Daemon Diagnostics Guide](integration-daemon-diagnostic-guide.md)
+* [First Failure Data Capture (FFDC)](/egeria-docs/guides/diagnostic/ffdc)
+* [Integration Daemon Diagnostics Guide](/egeria-docs/guides/diagnostic/integration-daemon-diagnostic-guide)
 * [Administration Guide](/egeria-docs/guides/admin)
 
 --8<-- "snippets/abbr.md"

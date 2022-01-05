@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Creating a fork and a clone
+### Creating a fork and a clone
 
 The git repositories for Egeria are read only to everyone except the
 [Egeria Maintainers](https://github.com/odpi/egeria/blob/master/MAINTAINERS.md).  This is to protect the content from
@@ -11,7 +11,7 @@ However, anyone wanting to make a contribution needs
 editing access to the repositories to make the change and test it.
 This is achieved with the `git fork` and `git clone`.
 
-## Forking
+#### Forking
 
 Forking creates your own version of the egeria git repository that is linked back to the
 original.
@@ -31,7 +31,7 @@ create your own fork to work with Egeria.
 
 This only needs to be done once.
 
-## Cloning
+#### Cloning
 
 Once you have your fork, you need to create a copy of the repository on your local machine.
 This copy is called a **clone**.  You create a clone each time you are starting a significant piece of work.
@@ -59,10 +59,10 @@ $ git remote add upstream https://github.com/odpi/egeria.git
 
 Now you are ready to [create a branch for your changes](task-creating-git-branches.md).
 
-## Further information
+??? education "Further information"
 
-* Further details of [GitHub's fork and pull model](https://help.github.com/articles/about-collaborative-development-models/),
-* Further details on the [fork](https://guides.github.com/activities/forking/) command.
+    * Further details of [GitHub's fork and pull model](https://help.github.com/articles/about-collaborative-development-models/),
+    * Further details on the [fork](https://guides.github.com/activities/forking/) command.
 
 
 ---8<-- "snippets/abbr.md"

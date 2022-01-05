@@ -43,7 +43,7 @@ the process hierarchy.
 
 #### Use of these open metadata types
 
-* [Egeria Developer Guide](/egeria-docs/guides/developer-guide) for more information on connectors and how to implement them.
+* [Egeria Developer Guide](/egeria-docs/guides/developer) for more information on connectors and how to implement them.
 * [Lineage](/egeria-docs/features/lineage-management/overview) describes the different types of lineage and how the open metadata types link
 together to form lineage graphs.
 

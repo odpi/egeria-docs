@@ -8,7 +8,7 @@ hide:
 
 # Open Metadata Archive
 
-An *open metadata archive* is a document containing open metadata [type definitions](/egeria-docs/introduction/key-concepts/#metadata-types) and [instances](/egeria-docs/introduction/key-concepts/#metadata-instances).
+An *open metadata archive* is a portable collection of open metadata [type definitions](/egeria-docs/introduction/key-concepts/#metadata-types) and [instances](/egeria-docs/introduction/key-concepts/#metadata-instances).  It can be [loaded each time a metadata access server starts up](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup) or [added to a running metadata access server](/egeria-docs/guides/operations/adding-archive-to-a-running-server).
 
 The open metadata archive has two types:
 
@@ -85,11 +85,8 @@ The archive loads in the following order:
     If the server is connected to the cohort, the new content is sent as notifications to the rest of the cohort.
 
 !!! education "Further information"
-    More information about open metadata archives can be found in the [open-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives){ target=gh } module.
-
-    In addition, these articles may be of interest:
 
     - [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup)
-    - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#add-to-a-running-server)
+    - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/operations/adding-archive-to-a-running-server)
 
 --8<-- "snippets/abbr.md"

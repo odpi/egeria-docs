@@ -99,9 +99,14 @@ nav:
                                   - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
                                   - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
                                   - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
-                - Digital Resource:
                       - Open Metadata Topic:
                             - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
+                - Egeria React UI:
+                      - Type Explorer (TEX): guides/react-ui/tex-user-guide.md
+                      - Resource Explorer (REX): guides/react-ui/rex-user-guide.md
+                      - Dino: guides/react-ui/dino-user-guide.md
+                      - Glossary author: guides/react-ui/glossary-author-user-guide.md
+                      - Server author: guides/react-ui/server-author-user-guide.md
       - Features:
           - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md
@@ -124,19 +129,12 @@ nav:
           - Templated Cataloguing: features/templated-cataloguing/overview.md
           - User Feedback: features/user-feedback/overview.md
   - User Interfaces:
-          - User Interface Overview:
-              - User Interface overview: user-interfaces/index.md
-              - React (multi-tenant) User Interface:
-                  - Egeria React User Interface:
-                      - React UI Overview: user-interfaces/react/overview.md
-                      - Prerequisite backend Server setup: user-interfaces/react/server-configure-and-run-presentation-server.md
-                      - Install and setup: user-interfaces/react/react-ui-configure-and-run-presentation-server.md
-                      - Using:
-                           - Type Explorer (TEX):  user-interfaces/react/tex.md
-                           - Resource Explorer (REX): user-interfaces/react/rex.md
-                           - (Dino): user-interfaces/react/dino.md
-                           - Glossary author: user-interfaces/react/glossary-author.md
-                           - Server author: user-interfaces/react/server-author.md
+      - User Interface overview: user-interfaces/index.md
+      - Egeria React User Interface:
+          - Egeria React UI Overview: user-interfaces/react/index.md
+          - Planning: user-interfaces/react/react-ui-planning.md
+          - Setup: user-interfaces/react/react-ui-setup.md
+          - Configure and run presentation server : user-interfaces/react/react-ui-configure-and-run-presentation-server.md
   - Learning:
       - Learning Overview: education/index.md
       - Webinars: education/webinar-program/overview.md

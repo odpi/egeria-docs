@@ -123,6 +123,20 @@ nav:
           - Synchronized Access Control: features/synchronized-access-control/overview.md
           - Templated Cataloguing: features/templated-cataloguing/overview.md
           - User Feedback: features/user-feedback/overview.md
+  - User Interfaces:
+          - User Interface Overview:
+              - User Interface overview: user-interfaces/index.md
+              - React (multi-tenant) User Interface:
+                  - Egeria React User Interface:
+                      - React UI Overview: user-interfaces/react/overview.md
+                      - Prerequisite backend Server setup: user-interfaces/react/server-configure-and-run-presentation-server.md
+                      - Install and setup: user-interfaces/react/react-ui-configure-and-run-presentation-server.md
+                      - Using:
+                           - Type Explorer (TEX):  user-interfaces/react/tex.md
+                           - Resource Explorer (REX): user-interfaces/react/rex.md
+                           - (Dino): user-interfaces/react/dino.md
+                           - Glossary author: user-interfaces/react/glossary-author.md
+                           - Server author: user-interfaces/react/server-author.md
   - Learning:
       - Webinars: education/webinar-program/overview.md
       - Existing Dojo:

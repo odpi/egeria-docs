@@ -14,6 +14,8 @@ The **Presentation Server** is a multi-tenant persona based server that serves a
 The React UI requires the presentation server to run, which in turn requires a view server which
 in turn requires target services. Please refer to the [Egeria Key concepts](../../introduction/key-concepts/) if ypu want to learn more.
 
+Follow this [setup checklist](./react-ui-setup-checklist) to plan your Egeria React UI.
+
 ### UI capability types
 
 There are 2 types of UI capabilities in the Presentation Server.
@@ -26,11 +28,10 @@ There are 2 types of UI capabilities in the Presentation Server.
 | UI Capability | UI Capability type |View Service | View service target | description |
 | ----------- | ----------- | ------ | --- | --- |
 | Type Explorer (Tex) | Ecosystem Tool | tex | OMRS | Exploration of the Egeria Type system loaded on server(s)
-| Resource explorer (Rex) | Ecosystem Tool | rex |  OMRS | Exploration of OMRS entities and relationships present on server(s)
+| Resource Explorer (Rex) | Ecosystem Tool | rex |  OMRS | Exploration of OMRS entities and relationships present on server(s)
 | Dino | Ecosystem Tool |dino | OMRS | Exploration of the operation landscape |
-| Glossary author | Solution | Glossary Author | Subject Area OMAS | Glossary author tasks, including Glossary Terms, Categories and their relationships |
-| Server author | Solution | Server Author | Admin server and platform services | Server author tasks including authoring new server configurations |
+| Glossary Author | Solution | Glossary Author | Subject Area OMAS | Glossary author tasks, including Glossary Terms, Categories and their relationships |
+| Server Author | Solution | Server Author | Admin server and platform services | Server author tasks including authoring new server configurations |
 
-
-Follow these [instructions](./react-ui-setup) to setup the Egeria React UI.
+### Architectural picture.
 

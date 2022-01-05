@@ -3,9 +3,7 @@
 
 # Setup
 
-Ensure you have set up the Egeria servers you need to run the UI. A simple setup is described [here](./prereqs.md).
-
-if you are folloing the [checklist](./react-ui-setup.md) you should have completed the following tasks before proceeding.
+If you are following the [checklist](react-ui-setup-checklist.md) you should have completed the following checked tasks before proceeding.
 
 - [x] [Plan](../../planning/guide/) your Egeria topology- including how many platforms, how many servers, cohort and connectors
 - [x] [Plan your UI](./react-ui-planning) which UI capabilities you require.
@@ -15,6 +13,8 @@ if you are folloing the [checklist](./react-ui-setup.md) you should have complet
 - [x] [Configure and start view services](../../admin-services/view-server)  for each of the UI capabilities you require. The name of the UI capability is the same as the name of the view service.
 - [ ] *Configure and run the presentation server by following the below instructions*
 - [ ] Validate that the presentation server is running as expected.
+
+This page describes the steps required to configure and run the presentation server.
 
 ## 1. Download the Egeria React user interface code.
 

@@ -1,15 +1,4 @@
-<!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the ODPi Egeria project. -->
-
-# Getting Started - prerequisites
-
-Egeria is about integrating metadata from different sources in a peer to peer manner; the open types are the language of this integration. [Egeria Solutions](https://github.com/odpi/egeria/tree/master/open-metadata-publication/website/solutions) can be sophisicated, but to get started with the Egeria React UI you can use a simple setup, with :
-
-* [A Metadata Access Store server](../../concepts/metadata-access-store)
-* [A View server](../../concepts/view-server)
-
-
-### Set up checklist
+### Egeria UI planning checklist
 
 - [ ] [Plan](../../planning/guide/) your Egeria topology- including how many platforms, how many servers, cohort and connectors
 - [ ] [Plan your UI](./react-ui-planning) which UI capabilities you require.

@@ -132,8 +132,8 @@ nav:
       - User Interface overview: user-interfaces/index.md
       - Egeria React User Interface:
           - Egeria React UI Overview: user-interfaces/react/index.md
-          - Planning: user-interfaces/react/react-ui-planning.md
-          - Setup: user-interfaces/react/react-ui-setup.md
+          - Planning: user-interfaces/react/react-ui-planning-checklist.md
+          - Setup: user-interfaces/react/react-ui-setup-checklist.md
           - Configure and run presentation server : user-interfaces/react/react-ui-configure-and-run-presentation-server.md
   - Learning:
       - Learning Overview: education/index.md

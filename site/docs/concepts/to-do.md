@@ -7,7 +7,7 @@ A **to do** is a record of an action.  It includes details of the action to perf
 and the time frame it needs to be completed for.
 
 To dos are normally created as a result of a meeting, or a process, such as a
-[discovery process](../../../../frameworks/open-discovery-framework/docs/discovery-service.md).
+[governance action process](/egeria-docs/conceepts/govvernance-action-process).
 
 The requested action may be ad hoc in nature, or part of a stewardship
 process that identified a specific action for an individual, or group of
@@ -16,8 +16,8 @@ individuals.
 The creator of a to do is called the **originator**.
 The person, or people assigned to complete the task are
 called the **assigned resources**.  Assigned to dos are 
-attached to one of their [roles](personal-roles.md) rather than
-directly to their [personal profile](personal-profile.md).
+attached to one of their [roles](/egeria-docs/concepts/personal-roles) rather than
+directly to their [personal profile](egeria-docs/concepts/personal-profile).
 
 Each to do has a priority and a status:
 * **Open** - no work has started.

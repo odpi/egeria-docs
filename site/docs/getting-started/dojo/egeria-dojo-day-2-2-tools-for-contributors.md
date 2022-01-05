@@ -22,12 +22,12 @@ Then browse the material below ...
 
 Follow the links to learn about the tools used to contribute to Egeria:
 
-* [Markdown](/egeria-docs/tools/markdown) - for web pages and documentation
-* [Git and GitHub](/egeria-docs/tools/git-github) - for managing Egeria's content
-* [IntelliJ](/egeria-docs/tools/development/#intellij) - IDE that is popular with the Egeria community
-* [Maven](/egeria-docs/tools/development/#maven) - build tool
-* [Postman](/egeria-docs/runtime/#postman) - REST API test tool
-* [HTTPie and Curl](/egeria-docs/tools/runtime/#httpie-curl) - Command line HTTP request tools
+* [Markdown](/egeria-docs/guides/contributor/markdown) - for web pages and documentation
+* [Git and GitHub](/egeria-docs/education/tutorials/git-and-github-tutorial/overview) - for managing Egeria's content
+* [IntelliJ](/egeria-docs/education/tutorials/intellij-tutorial/overview) - IDE that is popular with the Egeria community
+* [Maven and Gradle](/egeria-docs/education/tutorials/building-egeria-tutorial/overview) - build tools
+* [Postman](/egeria-docs/education/tutorials/postman-tutorial/overview) - REST API test tool
+* [HTTPie and Curl](/egeria-docs/guides/contributor/runtime/#httpie-curl) - Command line HTTP request tools
 
 ## Test yourself
 

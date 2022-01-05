@@ -38,7 +38,7 @@ nav:
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
-          - Operate OMAG Server: guides/operations/operating-omag-server.md
+          - Operate OMAG Server Platform: guides/operations/guide.md
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
@@ -138,6 +138,7 @@ nav:
                            - Glossary author: user-interfaces/react/glossary-author.md
                            - Server author: user-interfaces/react/server-author.md
   - Learning:
+      - Learning Overview: education/index.md
       - Webinars: education/webinar-program/overview.md
       - Existing Dojo:
           - Dojo Introduction: getting-started/dojo/index.md
@@ -177,25 +178,27 @@ nav:
       - New Dojo (In Development):
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
-              - Introduction : education/egeria-dojo/running-egeria/egeria-introduction.md
-          - Developer Day : education/egeria-dojo/developer.md
+              - Introduction : education/egeria-dojo/running-egeria/introduction.md
+              - Setup : education/egeria-dojo/running-egeria/setup.md
+              - Simple Install : education/egeria-dojo/running-egeria/simple-install.md
+          - Developer Day : education/egeria-dojo/developer/overview.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
-      - Hands-on Labs:
-          - Lab Infrastructure Guide: education/tutorials/lab-infrastructure-guide/overview.md
-          - Open Metadata Labs: education/open-metadata-labs.md
+      - Open Metadata Labs: education/open-metadata-labs/overview.md
       - Tutorials:
+          - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
+          - Using Kubernetes: guides/operations/kubernetes/index.md
+          - Using Docker: education/tutorials/docker-tutorial/overview.md
+          - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
+          - Using Postman: education/tutorials/postman-tutorial/overview.md
+          - Using Kafka: education/tutorials/kafka-tutorial/overview.md
           - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
-          - Docker Tutorial: education/tutorials/docker-tutorial.md
-          - Git Tutorial: education/tutorials/git-and-git-hub-tutorial/overview.md
           - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
-          - IntelliJ Tutorial: education/tutorials/intellij-tutorial/overview.md
-          - OMAG Client Tutorial: education/tutorials/omag-client-tutorial.md
-          - OMAG Server Tutorial: education/tutorials/omag-server-tutorial/overview.md
-          - Postman Tutorial: education/tutorials/postman-tutorial.md
+          - Running OMAG Clients: education/tutorials/omag-client-tutorial.md
+          - Running OMAG Servers: education/tutorials/omag-server-tutorial/overview.md
           - Running Samples: education/tutorials/running-samples-tutorial.md
-          - Testing Tutorial: education/tutorials/testing-egeria-tutorial.md
+          - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
       - Scenarios:
           - Data Manager Integration: scenarios/data-manager-integration/overview.md
           - File Lineage: scenarios/file-lineage/overview.md
@@ -208,10 +211,10 @@ nav:
           - Specific Guidance:
               - Programming Languages: guides/developer/languages.md
               - Tools:
-                  - Development Tools: guides/contributor/tools/development.md
-                  - Documentation Tools: guides/contributor/tools/documentation.md
-                  - Runtime Tools: guides/developer/contributor/runtime.md
-                  - Testing Tools: guides/developer/contributor/testing.md
+                  - Development Tools: guides/contributor/development.md
+                  - Documentation Tools: guides/contributor/documentation.md
+                  - Runtime Tools: guides/contributor/runtime.md
+                  - Testing Tools: guides/contributor/testing.md
               - Developing Connectors:
                   - Develop a Connector: guides/developer/implement-a-connector.md
                   - Develop Repository Connector: guides/developer/implement-repository-connector.md
@@ -220,6 +223,7 @@ nav:
           - Documentation Guide: guides/documentation/guide.md
           - Formatting Standards: guides/documentation/formatting.md
           - Style Guide: guides/documentation/style.md
+          - Markdown: guides/contributor/markdown.md
   - Releases:
       - Overview: release-notes/overview.md
       - Release Notes:
@@ -431,12 +435,12 @@ nav:
                     - Cohorts: services/omrs/cohort.md
                     - Metadata Repositories: services/omrs/metadata-repositories.md
                     - Cohort Events: concepts/cohort-events.md
-              - FFDC: services/ffdc-services.md
-              - Multi-tenant: services/multi-tenant.md
+              - First Failure Data Capture (FFDC): services/ffdc-services.md
+              - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
-              - Metadata Security: services/metadata-security.md
-              - Platform Services: services/platform.md
-              - OCF Metadata Management: services/ocf-metadata-management.md
+              - Metadata Security Services: services/metadata-security.md
+              - Platform Operation Services: services/platform.md
+              - Connected Asset Services: services/ocf-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
               - Data Engine Proxy Services: services/data-engine-proxy-services.md
@@ -585,6 +589,7 @@ nav:
       - Engine Host: concepts/engine-host.md
       - Event Bus: concepts/event-bus.md
       - Event Mapper Connector: concepts/event-mapper-connector.md
+      - Extended Properties: concepts/extended-properties.md
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
@@ -705,6 +710,7 @@ extra:
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
   - footnotes
   - abbr
   - pymdownx.snippets

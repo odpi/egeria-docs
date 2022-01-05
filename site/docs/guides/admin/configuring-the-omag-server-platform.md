@@ -55,7 +55,7 @@ The configuration document store connector is configured in the OMAG Server Plat
 !!! attention "Ensure the connector is available in the classpath"
     In order to use any connector other than the default, you need to also ensure that the Connector and its ConnectorProvider class are available to the server platform (i.e. the jar file containing them is available in the `LOADER_PATH` location of the server platform).
 
-??? example "Exmaple: (unencrypted) file store connector"
+??? example "Example: (unencrypted) file store connector"
     For example, this connection would set up the (unencrypted) file store connector:
 
     ```json linenums="1"
@@ -163,9 +163,11 @@ Security is configured for a specific platform once it is running by using the f
     {
         "class": "PlatformSecurityRequestBody",
         "urlRoot": "{{platformURLRoot}}",
-        "platformSecurityConnection" : {
+        "platformSecurityConnection" : 
+        {
     	    "class": "Connection",
-    	    "connectorType": {
+    	    "connectorType": 
+    	    {
     	        "class": "ConnectorType",
     	        "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider"
     	    }

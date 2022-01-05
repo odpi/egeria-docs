@@ -1,15 +1,15 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Adding your changes to you git clone
+### Adding your changes to your git clone
 
 Once you have completed your contribution, you are ready to add it to your git clone.
 
 Most development work is done on your local clone with occasional calls to GitHub to
 synchronize with its versions of the repository.
 
-![Figure 1](git-development.svg)
-> **Figure 1:** Local development process using git
+![Figure 3](git-development.svg)
+> **Figure 3:** Local development process using git
 
 Issue the `git status` command in a Terminal/Command window to verify all of your changes are
 included.  This will list any new files and files that have been changed, but not yet included
@@ -36,6 +36,6 @@ Changes to be committed:
 	new file:   new-file.java
 ```
 
-Now you are ready to [complete your contribution](task-git-pull-push-pr.md).
+Now you are ready to commit your contribution to your clone.
 
 ---8<-- "snippets/abbr.md"

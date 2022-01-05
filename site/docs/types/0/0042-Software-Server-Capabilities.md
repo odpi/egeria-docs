@@ -7,11 +7,11 @@
 
 ## SoftwareServerCapability
 
-Within a software server are many capabilities.
+[*IT Infrastructure*](/egeria-docs/types/0/0030-Hosts-and-Platforms) contains many capabilities.  Each capability can be catalogued using the `SoftwareServerCapability` entity and linked to the hosting `ITInfrastructure` entity using the `SoftwareServerSupportedCapability` relationship. 
 
-Different organizations and tools can choose the granularity in which the capabilities are captured in order to provide appropriate context to data assets and the decisions made around them.
+Different organizations and tools can choose the granularity in which the capabilities are catalogued in order to provide [appropriate context](/egeria-docs/0/0042-Servers-and-Assets) to [assets](/egeria-docs/types/0/0010-Base-Model) that are managed by the capabilities and the decisions made around them.
 
-These are the software server capabilities defined in the open types:
+These are the sub types of software server capabilities defined in the open metadata types:
 
 - [`AccessControlManager`](/egeria-docs/types/0/0050-Applications-and-Processes/#apimanager) - A capability that manages access to specific resources.
 - [`APIManager`](/egeria-docs/types/0/0050-Applications-and-Processes/#apimanager) - A capability that manages callable APIs that typically delegate onto Software Services.

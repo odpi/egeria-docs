@@ -4,7 +4,7 @@
 # Discovery server
 
 The discovery server is the server environment that hosts one or more
-[discovery engines](/egeria-docs/concepts/open-discovery-engine.md).
+[discovery engines](/egeria-docs/concepts/open-discovery-engine).
 
 In Egeria, the discovery server is implemented by the
 [Asset Analysis](/egeria-docs/services/omes/asset-analysis/overview) running in the

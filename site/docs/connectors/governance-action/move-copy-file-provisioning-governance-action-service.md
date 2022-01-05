@@ -172,7 +172,7 @@ On completion, this governance action service uses:
 
 ## Examples of use
 
-* [Open Metadata Labs](/egeria-docs/education/open-metadata-labs): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
+* [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
 
 ??? education "Further information"
 

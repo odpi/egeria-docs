@@ -18,11 +18,11 @@ using the `UUID.randomUUID().toString()` method and they look something like thi
 
 They are often used on API calls to request a specific instance of metadata.
 However, they are not very consumable for people, so most metadata instances also have
-[qualified names](referenceable.md) - also unique - and display names - not necessarily unique
+[qualified names](/egeria-docs/concepts/referenceable) - also unique - and display names - not necessarily unique
 for displaying information to end users.
 
 There is a tiny chance that two servers will generate the same guid. If this happens, it is
-detected by the [repository services](/egeria-docs/services/omrs) and messages are
+detected by the [repository services](/egeria-docs/services/omrs/overview) and messages are
 output on the detecting server's 
 [audit log](/egeria-docs/concepts/audit-log).
 The repository services also have APIs for re-identifying (ie changing the guid)

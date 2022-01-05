@@ -4,7 +4,7 @@
 # Server Platform Origin Service
 
 The server platform origin service is a simple REST API that returns basic information about an
-[Open Metadata and governance (OMAG) server Platform](/egeria-docs/concepts/omag-server-platform).
+[Open Metadata and governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform).
 
 It is often used by operational scripts controlling the start up and shutdown of
 OMAG Server Platforms to determine if the server platform is running.

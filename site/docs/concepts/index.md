@@ -98,6 +98,7 @@
 - [Event Bus](/egeria-docs/concepts/event-bus)
 - [Event Broker](/egeria-docs/concepts/basic-concepts/#event-broker)
 - [Event Management Services Subsystem (OMRS)](/egeria-docs/services/omrs)
+- [Extended Properties](/egeria-docs/concepts/extended-properties)
 - [External Identifiers](/egeria-docs/features/external-identifiers/overview)
 - [External References](/egeria-docs/features/external-references/overview)
 
@@ -138,7 +139,7 @@
 
 ## H
 
-- [Hands on labs](/egeria-docs/education/open-metadata-labs)
+- [Hands on labs](/egeria-docs/education/open-metadata-labs/overview)
 - [Head count](/egeria-docs/concepts/person-role/#head-count-limit)
 - [Home Metadata Collection](/egeria-docs/concepts/metadata-collection-id)
 - [Home Metadata Repository](/egeria-docs/concepts/home-metadata-repository)
@@ -226,7 +227,7 @@
 - [Open Metadata Conformance Suite](/egeria-docs/guides/cts/overview)
 - [Open Metadata Exchange Rule](/egeria-docs/concepts/open-metadata-exchange-rule)
 - [Open Metadata Instances](/egeria-docs/concepts/open-metadata-instances)
-- [Open Metadata Labs](/egeria-docs/education/open-metadata-labs)
+- [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview)
 - [Open Metadata Repository](/egeria-docs/concepts/metadata-repository)
 - [Open Metadata Repository Cohort](/egeria-docs/concepts/cohort-member)
 - [Open Metadata Repository Services](/egeria-docs/services/omrs)
@@ -264,6 +265,7 @@
 - [Ratings](/egeria-docs/concepts/review)
 - [Referenceable](/egeria-docs/concepts/referenceable)
 - [Registry Events](/egeria-docs/concepts/cohort-events)
+- [Registered Services](/egeria-docs/concepts/omag-subsystem)
 - [Repository Connector](/egeria-docs/concepts/repository-connector)
 - [Repository Helper](/egeria-docs/concepts/repository-helper)
 - [Repository Proxy](/egeria-docs/concepts/repository-proxy)
@@ -296,6 +298,7 @@
 - [Stewardship Integrator OMIS](/egeria-docs/services/omis/stewardship-integrator/overview)
 - [Stewardship Server](/egeria-docs/concepts/engine-host)
 - [Subject Area OMAS](/egeria-docs/services/omas/subject-area/overview)
+- [Subsystem](/egeria-docs/concepts/omag-subsystem)
 - [Supported Zones](/egeria-docs/concepts/governance-zone)
 
 

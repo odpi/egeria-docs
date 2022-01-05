@@ -20,7 +20,7 @@ This guide explains how to configure the OMAG Server Platform and the different 
 
     and once you have your OMAG Servers configured:
 
-    - [Operating an OMAG Server](operating-omag-server.md)
+    - [Operating an OMAG Server](/egeria-docs/guides/operations/guide/#operating-an-omag-server)
 
 ## OMAG subsystems
 
@@ -53,14 +53,14 @@ The OMAG Server Platform typically starts up without any OMAG Servers active. On
 Once the configuration document is in place, the OMAG Server can be activated and deactivated multiple times, across multiple restarts of the OMAG Server Platform.
 
 ??? education "Further information"
-    - [Configuring the OMAG Server Platform](configuring-the-omag-server-platform.md)
+    - [Configuring the OMAG Server Platform](/egeria-docs/guides/admin/configuring-the-omag-server-platform)
     - [Configuring an OMAG Server](/egeria-docs/guides/admin/servers)
-    - [Operating the OMAG Server](operating-omag-server.md)
-    - [Migrating OMAG Server Configuration Documents](../migration/migrating-configuration-documents.md)
+    - [Operating the OMAG Server](/egeria-docs/guides/operations/guide/#operating-an-omag-server)
+    - [Migrating OMAG Server Configuration Documents](/egeria-docs/guides/migration/migrating-configuration-documents)
 
 ## Examples of configuration calls
 
-The admin-services modules has three [Postman :material-github:](https://github.com/odpi/egeria/blob/master/developer-resources/tools/Postman.md){ target=gh } collections to illustrate many of the configuration and operation calls:
+The admin-services modules has three [Postman :material-github:](/egeria-docs/education/tutorials/postman-tutorial/overview) collections to illustrate many of the configuration and operation calls:
 
 - [Egeria-admin-services-platform-configuration.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-platform-configuration.postman_collection.json){ target=gh } - setting up and configuring the OMAG Server Platform.
 - [Egeria-admin-services-server-configuration.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-server-configuration.postman_collection.json){ target=gh } - setting up and configuring the variety of OMAG Servers.

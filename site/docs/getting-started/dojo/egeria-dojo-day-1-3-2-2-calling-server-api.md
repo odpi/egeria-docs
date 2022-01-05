@@ -25,7 +25,7 @@ Now use the repository service API to see how these assets are stored.
 
 What are the differences?
 
-Later on today, you will have a change to work with the [Open Metadata Labs](/egeria-docs/education/open-metadata-labs)
+Later on today, you will have a chance to work with the [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview)
 that provide a lot more explanation on the APIs and their differences.
 The purpose of this exercise was to giver you direct experience of the REST APIs.
 

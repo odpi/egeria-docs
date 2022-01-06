@@ -21,7 +21,7 @@ There are two diagrams, one that shows the entity inheritance hierarchy and anot
 The entity inheritance diagram is a set of expandable/collapsible trees. There are multiple trees because not all entity types inherit from a common root. The entity inheritance diagram will be displayed as soon as the server's types have been retrieved; it does not require that an entity type is chosen as the focus type. The user can select an entity type to focus (by clicking in the diagram or from the type selector) to see the details of that type and highlight it in the diagram.
 <p>
 
-The other diagram is the neighborhood diagram, which is displayed as a radial plot showing the types of relationship that the focus entity type supports. The user needs to have selected a focus entity type in order for the neighborhood diagram to be displayed. For each supported relationship type shownb in the neighborhood diagram, the entity type of the neighboring entity is shown (at the outer end of the radial plot). The user can select any of the entity or relationship types in the neighborhood diagram to change the focus to that type and see more details about it.
+The other diagram is the neighborhood diagram, which is displayed as a radial plot showing the types of relationship that the focus entity type supports. The user needs to have selected a focus entity type in order for the neighborhood diagram to be displayed. For each supported relationship type shown in the neighborhood diagram, the entity type of the neighboring entity is shown (at the outer end of the radial plot). The user can select any of the entity or relationship types in the neighborhood diagram to change the focus to that type and see more details about it.
 <p>
 There are three checkboxes, located just beneath the help icon, that provide finer control of the types that are retrieved from the server and the way that they are displayed.
 
@@ -31,10 +31,10 @@ The `Enterprise` checkbox allows Type Explorer to perform an enterprise scope qu
 
 <p>
 
-The `Include deprecated types` checkbox instructs Type Explorer to retrieve all types from the server, whether or not the types are deprecated. This can be useful for closer inspection of the type system. The name of a deprecated type will be displayed in square brakcets, like this `[<type name>]`. If this option is checked and a deprecated entity type is the focus (i.e. is highlighted in the diagram and its details are shown on the left hand side), then if the `Include deprecated types` is unchecked, Type Explorer will
+The `Include deprecated types` checkbox instructs Type Explorer to retrieve all types from the server, whether or not the types are deprecated. This can be useful for closer inspection of the type system. The name of a deprecated type will be displayed in square brackets. If this option is checked and a deprecated entity type is the focus (i.e. is highlighted in the diagram and its details are shown on the left hand side), then if the `Include deprecated types` is unchecked, Type Explorer will
 automatically clear the focus because the deprecated entity type will no longer be present.
 
 <p>
 
-The `Include deprecated attributes` checkbox instructs Type Explorer to display any deprecated attributes. When this option is checked, any deprecated attributes will be displayed. The name of a deprecated attribute will be displayed in square brakcets, like this `[<attribute name>]`, together with its type and the name of the attribute that replaces it.
+The `Include deprecated attributes` checkbox instructs Type Explorer to display any deprecated attributes. When this option is checked, any deprecated attributes will be displayed. The name of a deprecated attribute will be displayed in square brackets, together with its type and the name of the attribute that replaces it.
 

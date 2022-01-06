@@ -3,10 +3,10 @@
 
 # Setup
 
-If you are following the [checklist](react-ui-setup-checklist.md) you should have completed the following checked tasks before proceeding.
+If you are following the [checklist](react-ui-planning-checklist.md) you should have completed the following checked tasks before proceeding.
 
 - [x] [Plan](../../planning/guide/) your Egeria topology- including how many platforms, how many servers, cohort and connectors
-- [x] [Plan your UI](./react-ui-planning) which UI capabilities you require.
+- [x] [Plan your UI](react-ui-planning-checklist.md) which UI capabilities you require.
 - [x] Start Egeria platform(s)
 - [x] [Configure metadata server platform](../../admin/configuring-the-omag-server-platform) if required (some of the Kubenetes images already configure a metadata server platform)
 - [x] [Configure and start metadata access store server](../../admin/servers/configuring-a-metadata-access-store)  if required (some of the Kubenetes images already configure a metadata access store server)
@@ -16,13 +16,13 @@ If you are following the [checklist](react-ui-setup-checklist.md) you should hav
 
 This page describes the steps required to configure and run the presentation server.
 
-## 1. Download the Egeria React user interface code.
+## 1. Download the Egeria React user interface code
 
 Start by downloading the Egeria React User Interface into a folder on your machine. <p>
 Either
+
 * Download the <a href="https://github.com/odpi/egeria-react-ui/releases/latest" target="_blank">Latest Release</a>.
-The released user interface is supplied in an archive, containing the source code as a <code>zip</code> file and a <code>tar.gz</code> file, which you need to extract.   
-<p>Or<p>
+The released user interface is supplied in an archive, containing the source code as a <code>zip</code> file and a <code>tar.gz</code> file, which you need to extract.
 * <code>git clone</code> the repository using the instructions under the Code button at <a href="https://github.com/odpi/egeria-react-ui" target="_blank">Latest code </a>
   
 You now should have a folder on your machine with the Egeria React User Interface code extracted.
@@ -30,7 +30,7 @@ You now should have a folder on your machine with the Egeria React User Interfac
 ## 2. Set the presentation server environment variable
 
 The presentation server is the node application for the user interface. It serves the web pages, proxies the rest calls and handles the login.
-For a particular tentant the presentation server needs to know which back end server to send requests to. This information is supplied in an
+For a particular tenant the presentation server needs to know which back end server to send requests to. This information is supplied in an
 environment variable(s).
 
 The environment variable is:
@@ -112,4 +112,4 @@ For glossary author use user 'faithbroker' and password 'admin'.
 
 
 ## 5. SSL configuration
-By default the Egeria React UI uses a truststore.p12 and keystore.p12 files for ssl. The p12 files are copies of files 'https://github.com/odpi/egeria/blob/master/keystore.p12' and 'https://github.com/odpi/egeria/blob/master/truststore.p12', which are the definitive sources of these files. The keystore and truststore files allow Egeria to run simply in a demo/development; this is not appropriate for production, which should be appropriately secured.     
+By default the Egeria React UI uses a truststore.p12 and keystore.p12 files for ssl. The p12 files are copies of files [https://github.com/odpi/egeria/blob/master/keystore.p12](https://github.com/odpi/egeria/blob/master/keystore.p12) and [https://github.com/odpi/egeria/blob/master/truststore.p12](https://github.com/odpi/egeria/blob/master/truststore.p12), which are the definitive sources of these files. The keystore and truststore files allow Egeria to run simply in a demo/development; this is not appropriate for production, which should be appropriately secured.     

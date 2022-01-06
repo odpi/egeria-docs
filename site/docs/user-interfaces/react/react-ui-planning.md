@@ -7,8 +7,8 @@
 
 There are 2 types of UI capabilities in the Presentation Server.
 
-* ==Ecosystem Tool== These are low level user exploration oriented user interfaces around resources, types and the operational landscape.
-* ==Solution== These are solution orientated user interfaces for particular personas.
+* **Ecosystem Tool** These are low level user exploration oriented user interfaces around resources, types and the operational landscape.
+* **Solution** These are solution orientated user interfaces for particular personas.
 
 Maybe this Ui is for demonstrations, in which case you may want to configure all its capabilities. 
 You may want to have a solutions orientated Ui or an ecosystem tools oriented UI- as the users of each can be different in an organisation. 

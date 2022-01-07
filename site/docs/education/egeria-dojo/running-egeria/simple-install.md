@@ -5,6 +5,10 @@
 
 For this next exercise we will install a very simple ready-made Egeria environment.
 
+!! Warning
+    These instructions are currently being developed. The initial sections use 'microk8s', however
+    we are seeing some issues and will likely switch the docs over to use 'rancher desktop', 
+
 This will help ensure that your environment is working properly, and helm explain some of
 the egeria concepts before we get you to create your own environment.
 

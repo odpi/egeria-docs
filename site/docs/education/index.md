@@ -28,7 +28,7 @@ The individual tutorials focus on a specific tool, or group of related tasks.  T
 - [Git and GitHub](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview)
 - [Using IntelliJ](/egeria-docs/education/tutorials/intellij-tutorial/overview)
 - [Using Kubernetes](/egeria-docs/guides/operations/kubernetes)
-- [Using Docker](/egeria-docs/education/tutorials/docker-tutorial)
+- [Using Docker](/egeria-docs/education/tutorials/docker-tutorial/overview)
 - [Using Postman](/egeria-docs/education/tutorials/postman-tutorial/overview)
 - [Using Kafka](/egeria-docs/education/tutorials/kafka-tutorial/overview)
 - [Building Egeria](/egeria-docs/education/tutorials/building-egeria-tutorial/overview)

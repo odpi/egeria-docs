@@ -97,7 +97,7 @@ Other alternatives that might come to mind include
 
 ### [microk8s](https://microk8s.io){ target=mk8s } (Linux, Windows, MacOS)
 
-!!! attention "4GB is recommended as the minimum memory requirement"
+!!! attention "6GB is recommended as the minimum memory requirement"
 
 As with most k8s implementations, when running some ongoing cpu will be used, so if running on your laptop/low power device it's recommended to refer to the relevant docs and stop k8s when not in use.
 
@@ -125,6 +125,7 @@ Most of the Egeria development team use MacOS, so the instructions are elaborate
 
 - The recommended approach uses [HomeBrew :material-dock-window:](https://docs.brew.sh/Installation){ target=brew }. This offers a suite of tools often found on Linux which are easy to setup on MacOS.
 - If you are concerned over the firewall change, or HomeBrew requirement, refer back to the official k8s documentation and choose another k8s implementation that works for you.
+- Ensure you allocate 6GB ram for Kubernetes, for example install would be `microk8s install --cpu 4 --mem 6 --disk 10`
 - Ensure you turn on the following services: `storage`, `dns`, `helm3`. `dashboard` is also useful to understand more about k8s and what is running. However, it is currently failing as described in [issue 2507 :material-dock-window:](https://github.com/ubuntu/microk8s/issues/2507){ target=mk8s }
 
 As an example, the following commands should get you set up, but always check the official docs for current details
@@ -132,12 +133,12 @@ As an example, the following commands should get you set up, but always check th
 !!! cli "Installing microk8s on MacOS"
     ```shell
     brew install ubuntu/microk8s/microk8s
-    microk8s install
+    # Use 4 virtual CPUs, 6Gb ram (required minimum) and 10GB disk space
+    microk8s install --cpu 4 --mem 6 --disk 10
     microk8s status --wait-ready
-    microk8s enable dns storage helm3 dashboard
+    microk8s enable dns storage helm3
     microk8s kubectl get all --all-namespaces
     ```
-
     Kubernetes is now running.
 
 #### Windows

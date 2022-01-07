@@ -34,7 +34,7 @@ There are five components involved in policy management:
 The open metadata types are implemented as classifications.  The classifications can be applied to
 [Referenceables](/egeria-docs/types/0/0010-Base-Model) so that they can be used to classify
 [solution components](/egeria-docs/types/7/0730-Solution-Components) during solution design and
-[software server capabilities](/egeria-docs/types/0/0042-Software-Server-Capabilities) for the running implementation.
+[software capabilities](/egeria-docs/types/0/0042-Software-Capabilities) for the running implementation.
 
 
 ![UML](0435-Policy-Management-Capabilities.svg)

@@ -1,35 +1,35 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Software Server Capabilities
+# Software Capabilities
 
 Many software servers are connected to the open metadata ecosystem, each with wildly differing
 capabilities.
 
-A software server capability documents a specific function that a software server is able to perform.
-The open metadata type for a software se
+A software capability documents a specific function that an IT infrastructure asset, such as a host, software server platform and software server, is able to perform.
+The open metadata type for a software capability is [`SoftwareCapability`](/egeria-docs/types/0/0042-Software-Capabilities).
 
-## Metadata managing server capabilities
+## Metadata managing software capabilities
 
-Some server capabilities create and manage metadata - in fact they are the true master of this
+Some software capabilities create and manage metadata - in fact they are the true master of this
 metadata. for example, a database manager (aka database management system or DBMS) is the true
 master of metadata about database schemas.
 
-When metadata managed by such software server capabilities is shared with an
+When metadata managed by such software capabilities is shared with an
 [open metadata repository cohort](/egeria-docs/concepts/cohort-member),
 the members of the cohort need to take note that they should not update this metadata.
 
-The server capabilities that are recognized as managing metadata are:
+The software capabilities that are recognized as managing metadata are:
 
 * [Asset manager](#asset-manager)
 * [Master data manager](#master-data-manager)
 * [Engine](#engine)
 * [Tool](#tool)
 
-The identifiers of these software server capabilities are used to 
+The identifiers of these software capabilities are used to 
 [document the provenance](/egeria-docs/features/metadata-provenance/overview)
 of any metadata that comes from these technologies.
-Metadata instances that are mastered by specific software server capabilities are referred to
+Metadata instances that are mastered by specific software capabilities are referred to
 as **external instances**.
 
 ## Asset Manager
@@ -72,7 +72,7 @@ integrate their data through the [Community Profile OMAS](/egeria-docs/services/
 
 ## Engine
 
-An engine is a server capability that is programmable to automate specific
+An engine is a software capability that is programmable to automate specific
 processes.  Typically these processes manipulate and store data.
 
 Below are examples of engines:

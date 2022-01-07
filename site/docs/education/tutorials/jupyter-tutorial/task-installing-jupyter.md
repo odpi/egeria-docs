@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
 
-# Installing runtime for Jupyter Notebooks
+### Installing runtime for Jupyter Notebooks
 
 The Jupyter project provides two runtime options for Jupyter Notebooks
 

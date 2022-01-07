@@ -39,7 +39,7 @@
 - [0035 Complex hosts](/egeria-docs/types/0/0035-Complex-Hosts)
 - [0037 Software server platforms](/egeria-docs/types/0/0037-Software-Server-Platforms)
 - [0040 Software servers](/egeria-docs/types/0/0040-Software-Servers)
-- [0042 Software server capabilities](/egeria-docs/types/0/0042-Software-Server-Capabilities)
+- [0042 Software capabilities](/egeria-docs/types/0/0042-Software-Capabilities)
 
 ### Process
 

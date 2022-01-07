@@ -31,4 +31,13 @@ An *`EngineHostingService`* describes an [Open Metadata Engine Service (OMES)](/
 
 A *`UserViewService`* describes an [Open Metadata View Service (OMVS)](/egeria-docs/services/omvs) that runs in a [view server](/egeria-docs/concepts/view-server).
 
+### EnterpriseAccessLayer
+
+A *`EnterpriseAccessLayer`* describes the enterprise repository services provided by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) that runs in a [metadata access server](/egeria-docs/concepts/metadata-access-server).
+
+### CohortMember
+
+A *`CohortMember`* service describes the cohort services provided by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) that runs in a [cohort member server](/egeria-docs/concepts/cohort-member).
+
+
 --8<-- "snippets/abbr.md"

@@ -207,11 +207,11 @@ In general an asset is being accessed by processes.  They are either adding/upda
 
 Data often flows from asset to asset via the processes, as they read data from one asset, do some processing and store the results in a different asset.  The end-to-end flow of data is called an information supply chain.  Information supply chains can be modeled and linked to the processes through the [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture). This offers more of an enterprise view of where the data originated from.
 
-The asset itself is hosted by a software capability that is part of a server. Another perspective on the asset's origin is the server capability that is hosting it.
+The asset itself is hosted by a software capability that is part of a server. Another perspective on the asset's origin is the software capability that is hosting it.
 
-Software server capabilities can be linked to a solution component by the  [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture). Solution components are descriptions produced by architects to document the purpose and behavior of a component.  These descriptions add business context to the software server capability definitions.  They are linked to the software server capability when it is deployed into the IT landscape.
+Software capabilities can be linked to a solution component by the  [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture). Solution components are descriptions produced by architects to document the purpose and behavior of a component.  These descriptions add business context to the software capability definitions.  They are linked to the software capability when it is deployed into the IT landscape.
 
-Similarly, the software server capability hosting an asset can be linked to the digital service it is a part of.  Digital Services are anchors for information about the digital services (also known as offerings or products) that the organization is operating. This is a business view of the service that the asset is a part of.
+Similarly, the software capability hosting an asset can be linked to the digital service it is a part of.  Digital Services are anchors for information about the digital services (also known as offerings or products) that the organization is operating. This is a business view of the service that the asset is a part of.
 
 Finally, the asset can include identifiers of other metadata elements from the catalog and related properties in the **AssetOrigin** Classification. This includes:
 

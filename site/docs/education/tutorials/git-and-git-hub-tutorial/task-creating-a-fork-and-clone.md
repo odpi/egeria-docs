@@ -16,10 +16,10 @@ This is achieved with the `git fork` and `git clone`.
 Forking creates your own version of the egeria git repository that is linked back to the
 original.
 
-Figure 1 illustrates the forking process.
+Figure 2 illustrates the forking process.
 
-![Figure 1](git-hub-fork.svg)
-> **Figure 1:** Forking an Egeria git repository
+![Figure 2](git-hub-fork.svg)
+> **Figure 2:** Forking an Egeria git repository
 
 To create your fork, from your browser, navigate to the [Egeria GitHub URL](https://github.com/odpi/egeria),
 and logging into the github UI with a 
@@ -36,10 +36,10 @@ This only needs to be done once.
 Once you have your fork, you need to create a copy of the repository on your local machine.
 This copy is called a **clone**.  You create a clone each time you are starting a significant piece of work.
 
-Figure 2 illustrates the cloning process.
+Figure 3 illustrates the cloning process.
 
-![Figure 2](git-clone.svg)
-> **Figure 2:** Cloning an Egeria git repository
+![Figure 3](git-clone.svg)
+> **Figure 3:** Cloning an Egeria git repository
 
 To create a clone on your machine enter the following in a new directory from a terminal/command window.
 Replace `USER` with your GitHub userId.

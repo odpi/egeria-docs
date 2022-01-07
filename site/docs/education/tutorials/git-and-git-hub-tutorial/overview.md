@@ -3,7 +3,7 @@
 
 # Git and GitHub Tutorial
 
-Git is an open source version control system.  It is what the Egeria project uses to:
+Git is an open source version control system.  The Egeria project uses git to:
 
 - Store all of the source code, documentation and other file-based resources.
 - Track changes to the underlying Egeria code as the project evolves
@@ -12,6 +12,7 @@ Git is an open source version control system.  It is what the Egeria project use
 
 As a result, it gives us a definitive source for the latest and greatest source code for Egeria itself, its history, and the rationale behind various decisions that are made over time.
 
+--8<-- "docs/education/tutorials/git-and-git-hub-tutorial/git-introduction.md"
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/egeria-git-repositories.md"
 
 ## General tasks for all community members

@@ -43,6 +43,12 @@ relationship types.
   the open metadata servers, services, cohorts and platforms that are configured or actively running. It is intended 
   for operations and problem-determination.
 
+* **[Server Author](/egeria-docs/services/omvs/server-author/overview)** - an authoring interface for servers 
+
+  The server Author OMVS is for user interfaces that support Egeria Server authors. This user interface allows the author 
+to create, delete or update a server configuration using an intuitive UI, rather than needing to use the low level admin rest calls
+and associated json payloads.   
+
 
 ## Inside an OMVS
 

@@ -29,9 +29,14 @@ The schedule also includes estimated times needed to complete each session. Do t
 
 ## Running Egeria day summary
 
+The following outline is still in development.
+
+To continue to see the day's content as it's being developed please [go directly to the 'running egeria' content](running-egeria/introduction.md)
+
 !!! education "Running Egeria Day"
     After completing this day of the dojo you should feel comfortable with setting up and running the Egeria technology. It includes sessions on the prerequisite technology that Egeria uses, how to configure Egeria, how to start and stop various capabilities and well as diagnosing any problems you may come across.
 
+    
     !!! beginner "Egeria introduction (30 mins)"
 
     !!! beginner "Egeria project introduction (30 mins)"

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-## Loading Egeria into IntelliJ IDEA
+### Loading Egeria into IntelliJ IDEA
 
 Once you have a branch of a git repository you can load the contents into IntelliJ.
 

@@ -9,8 +9,8 @@ there is one more step before you can begin developing.
 Most development work is done on your local clone with occasional calls to GitHub to
 synchronize with its versions of the repository.
 
-![Figure 3](git-development.svg)
-> **Figure 3:** Local development process using git
+![Figure 4](git-development.svg)
+> **Figure 4:** Local development process using git
 
 The top level branch (copy) of a git repository is called `master`.
 It is recommended not to make any changes directly to master

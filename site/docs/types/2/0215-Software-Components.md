@@ -9,7 +9,7 @@ hide:
 # 0215 Software Components
 
 **DeployedSoftwareComponent** describes a code asset that is deployed to implement a 
-[software capability](/egeria-docs/types/0/0042-Software-Server-Capabilities).
+[software capability](/egeria-docs/types/0/0042-Software-Capabilities).
 Each software component has a well defined interface describe by an [APISchema](/egeria-docs/types/5/0536-API-Schemas) that is
 linked to the DeployedSoftwareComponent by the [AssetSchemaType](/egeria-docs/types/5/0503-Asset-Schema) relationship.
 

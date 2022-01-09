@@ -33,7 +33,7 @@ This relationship includes properties to help to map the `OpenMetadataRoot` to t
 
 ## ExternalIdScope
 
-There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the *`ExternalIdScope`* relationship links the external identifier to the [`Referenceable`](/egeria-docs/types/0/0010-Base-Model/#referenceable) that represents the third party metadata catalog. Typically, this is a type of [`SoftwareServerCapability`](/egeria-docs/types/0/0042-Software-Server-Capabilities/#softwareservercapability), for example, [`AssetManager`](/egeria-docs/types/0/0056-Asset-Managers/#assetmanager).
+There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the *`ExternalIdScope`* relationship links the external identifier to the [`Referenceable`](/egeria-docs/types/0/0010-Base-Model/#referenceable) that represents the third party metadata catalog. Typically, this is a type of [`SoftwareCapability`](/egeria-docs/types/0/0042-Software-Capabilities/#softwarecapability), for example, [`AssetManager`](/egeria-docs/types/0/0056-Resource-Managers/#assetmanager).
 
 ??? education "Further information"
     There is an article on [managing external identifiers](/egeria-docs/features/external-identifiers/overview) to correlate metadata elements from different types of technologies.

@@ -15,10 +15,10 @@ The cloud provider may offer infrastructure as a service (IaaS), in which case, 
 
 ## CloudPlatform
 
-If the cloud provider is offering platform as a service (PaaS), an application may deploy server capability onto the *`CloudPlatform`*.
+If the cloud provider is offering platform as a service (PaaS), an application may deploy software capability onto the *`CloudPlatform`*.
 
 ## CloudService
 
-If the cloud provider is offering Software as a Service (SaaS) then it has provided APIs backed by pre-deployed server capability that an organization can call as a *`CloudService`*.
+If the cloud provider is offering Software as a Service (SaaS) then it has provided APIs backed by pre-deployed software capability that an organization can call as a *`CloudService`*.
 
 --8<-- "snippets/abbr.md"

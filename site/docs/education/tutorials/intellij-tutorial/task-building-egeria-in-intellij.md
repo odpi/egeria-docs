@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-## Building Egeria in IntelliJ IDEA
+### Building Egeria in IntelliJ IDEA
 
 Maven is accessed from a sidebar menu in IntelliJ.
 
@@ -35,7 +35,7 @@ Open up the content for the module and then the lifecycle folder.
 Double-click on install and the build of that module starts.
 
 
-## Using maven rather than using the IntelliJ build?
+#### Using maven rather than using the IntelliJ build?
 
 While you are working on code in IntelliJ, it will be continuously rebuilding
 your code so that it is discovering syntax other coding errors as you type.

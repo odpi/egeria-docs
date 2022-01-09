@@ -5,16 +5,10 @@
 
 Once you have prepared a contribution and these changes are added to your clone, you are ready to commit the changes and push them to your clone on GitHub.
 
-![Figure 4](git-push-pull.svg)
-> **Figure 4:** Pushing changes to GitHub
+![Figure 5](git-push-pull.svg)
+> **Figure 5:** Pushing changes to GitHub
 
-Below is the command to commit your changes.  Make sure 
-to use the `-s` option to sign your changes (see [Why the DCO?](https://github.com/odpi/egeria/blob/master/developer-resources/why-the-dco.md))
-and the `-m` option to provide a useful commit message. In the message you can
-make use of [special strings](https://blog.github.com/2011-10-12-introducing-issue-mentions/) to
-directly link to GitHub
-issues. By doing this others following the issue will see the commits to your fork
-easily so can track the work going on even before you submit to the **egeria** repository.
+Below is the command to commit your changes.  Make sure to use the `-s` option to sign your changes (see [Why the DCO?](https://github.com/odpi/egeria/blob/master/developer-resources/why-the-dco.md)) and the `-m` option to provide a useful commit message. In the message you can make use of [special strings](https://blog.github.com/2011-10-12-introducing-issue-mentions/) to directly link to GitHub issues. By doing this others following the issue will see the commits to your fork easily so can track the work going on even before you submit to the **egeria** repository.
 
 It is also essential to push the changes from your local machine up to GitHub ready for the next step.
 
@@ -23,15 +17,14 @@ $ git commit -s -m 'Best code change ever as per Issue #1433'
 $ git push 
 ```
 
-If you think there is ongoing work in a similar area to that of your changes, you may find it useful to pull
-the latest master code prior to completing your changes.
+If you think there is ongoing work in a similar area to that of your changes, you may find it useful to pull the latest master code prior to completing your changes.
 
 ```bash
 $ git pull upstream master
 ```
 
-![Figure 5](git-pull-upstream-master.svg)
-> **Figure 5:** Pulling latest changes from master
+![Figure 6](git-pull-upstream-master.svg)
+> **Figure 6:** Pulling latest changes from master
 
 and then making any necessary changes to merge conflicts, and commit/push as above.
 

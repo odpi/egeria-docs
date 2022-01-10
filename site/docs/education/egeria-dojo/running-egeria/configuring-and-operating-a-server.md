@@ -89,6 +89,153 @@ Our starting point here is that we have 4 containers running
  * Kafka (used to communicate between servers)
  * Zookeeper (used by Kafka)
 
+However we do not yet have any egeria servers defined. This is what we will now do
+
+### Check the server platform is running ok
+
+![Configuring the OMAG Platform Content](egeria-dojo-day-1-3-1-2-configuring-the-platform.png)
+
+In the previous session you downloaded an application called Postman and loaded collections of
+pre-defined requests.
+This tool makes it easy to issue REST API requests to the OMAG Server Platform.
+
+Check that it is working by locating the `Get Server Origin` request in the 
+`Egeria-platform-services` collection.
+When you click on that request in the left-hand list, a new tab opens and you can click on send to
+issue the request.  Below is this response in Postman.
+
+![Postman server origin](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin.png)
+
+If this does not work, then there is something wrong either in Postman or your platform.
+Check the URL string that was used in the request (shown in orange in the middle of the screen.)
+
+The screen shot below shows the error message when the egeria environment is not set.
+This can be fixed by setting it in the top right-hand dropdown.  If the Egeria environment is not
+listed then you need to load the environment ([Postman tutorial](/egeria-docs/education/tutorials/postman-tutorial/overview)).
+
+![Postman server origin - no environment](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-no-environment.png)
+
+If the baseURL variable is set to a different value to the server platform then Postman can not connect.
+In the screen capture below, you can see the baseURL is set to the default of `https://localhost:9443` - you will need to correct this if wrong
+![Postman server origin - wrong base url](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-wrong-base-url.png)
+
+Finally, if the OMAG Server Platform is not running the even though everything is set up correctly in
+Postman, it has nothing to connect to.  Go back to the helm chart deployment earlier and check this was completed successfully
+
+![Postman server origin - platform down](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-no-platform.png)
+
+### Configuring a metadata server using the REST API
+
+In last part of this session you will learn how to set up the OMAG Server Platform so that it is secure and
+determine the services and servers that are associated with the platform. Information on how to do this is found in [Configuring the OMAG Server Platform](/egeria-docs/guides/admin/configuring-the-omag-server-platform)
+
+You can choose to type the request into postman, or use the requests already defined in the
+`Egeria-admin-services-platform-configuration` Postman collection.
+
+The OMAG Server Platform is able to host one-to-many OMAG servers.
+An OMAG Server is responsible for supporting the integration of different types of
+technology.  There are different types of OMAG Servers in Egeria.
+In this session you are going to learn how to set up particular type of OMAG server called a metadata server.
+
+![Configuring a metadata server Content](egeria-dojo-day-1-3-1-3-configuring-a-server.png)
+
+Watch the overview of this session: [https://youtu.be/c1g2vY_0mYs](https://youtu.be/c1g2vY_0mYs).
+
+Begin by understanding about the different types of OMAG Servers and what they are used for by
+following the link below:
+* [Egeria's OMAG Servers](/egeria-docs/concepts/omag-server)
+
+In this first exercise you are going to use Postman to configure a simple metadata server called
+`myMetadataServer`.
+
+* In the Postman Egeria Environment, update the variable called `server` from `myServer` to `myMetadataServer`.
+
+Using the `Egeria-admin-services-server-configuration` Postman collection and the instructions
+from the [Admin services user guide on metadata access servers](/egeria-docs/concepts/metadata-access-server)
+create the configuration for `myMetadataServer` as follows.  For each value, find the right REST API request in the
+Postman collection.  Then look at where the values come from.  Sometimes you will need to change the variable
+value in the Egeria Environment, sometimes you can type it directly into the request URL and other times,
+the request in Postman is just what you need.
+
+Each time you add a configuration value, 
+[retrieve the server's configuration](/egeria-docs/concepts/configuration-document)
+to see how the effect of your requests are changing the server's configuration.
+
+* **local server URL root** to `https://localhost:19443`
+
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Confguration for Cohort Members/Set local server URL root`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configuring-local-server-url).
+
+* **localServerType** to `Egeria Dojo Metadata Server` (update the value in the request)
+
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Set local server type`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+
+* **organizationName** to your organization name (update the variable `organization_name`).
+ 
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Set organization name`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+ 
+* **localServerUserId** to `myMetadataServerUserId`.
+
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Set local server user Id`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+
+* **localServerPassword** to `myMetadataServerPassword`
+
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Set local server user password`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+
+* **maxPageSize** - the maximum page size that can be set on requests to the server. The default value is 1000.
+
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Set max page size`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+
+* Add a graph-based local repository.  This will store metadata in JanusGraph.
+
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Configuration for Metadata Servers/Enable the graph repository`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-local-repository).
+
+* Configure the **Asset Owner** Open Metadata Access Service (OMAS). URL name for this service is `asset-owner`.
+
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Enable a specific access service`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-access-services).
+
+* Set up the Coco Pharmaceutical **Server** Security connector to provide authorization checks for inbound REST API calls.
+
+  This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
+  `Configuring OMAG Servers/Set Server Security Connection`.
+  
+  The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-server-security-connector).
+
+Once the configuration is complete you are ready to move on to the next section.
+
+### Examining the configuration
+
+Finally, use the `Egeria-admin-services-platform-configuration` Postman collection to experiment with the
+different registered services and and known and active server requests.
+These are useful to know as we move to configure servers on the platform.
+## Test yourself
+
+* What is the name of the place where a server's configuration is assembled?
+* What determines where the server configuration is stored?
+* What is the quickest way to discover what has recently changed in a server's configuration?
 
 
 --8<-- "snippets/abbr.md"

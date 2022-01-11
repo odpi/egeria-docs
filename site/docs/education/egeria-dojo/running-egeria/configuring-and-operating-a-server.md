@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2021. -->
 
-# Manually configuring and operating a server
+# Configuring and operating a server
 
 In the previous exercise we used a demo environment where an Egeria server was setup
 automatically by scripts that ran after you deployed the Helm chart. This provides a quick-start
@@ -15,35 +15,21 @@ In this session we are going to configure the servers via the Egeria platform's 
 We are first going to clean up the Egeria environment you have already created:
 
 ```
-jonesn:~/ $ helm list                                                                                                        [15:19:08]
-NAME	NAMESPACE	REVISION	UPDATED                             	STATUS  	CHART                             	APP VERSION
-lab 	default  	1       	2022-01-06 17:58:06.108272 +0000 UTC	deployed	odpi-egeria-lab-3.4.1-prerelease.2	3.4
-jonesn:~/ $ helm list                                                                                                                  [15:19:17]
-NAME	NAMESPACE	REVISION	UPDATED                             	STATUS  	CHART                             	APP VERSION
-lab 	default  	1       	2022-01-06 17:58:06.108272 +0000 UTC	deployed	odpi-egeria-lab-3.4.1-prerelease.2	3.4
-jonesn:~/ $ helm delete lab                                                                                                            [15:19:19]
-release "lab" uninstalled
-jonesn:~/ $ helm list                                                                                                                  [15:19:37]
-NAME	NAMESPACE	REVISION	UPDATED	STATUS	CHART	APP VERSION
-jonesn:~/ $ kubectl get pods                                                                                                           [15:19:40]
-NAME                                           READY   STATUS        RESTARTS      AGE
-strimzi-cluster-operator-86cdffd6d7-2z7d5      1/1     Terminating   1 (17m ago)   21h
-lab-strimzi-zookeeper-0                        1/1     Terminating   1 (17m ago)   21h
-lab-strimzi-kafka-0                            1/1     Terminating   2 (17m ago)   21h
-lab-strimzi-entity-operator-6f4d5f4f74-vn4d6   3/3     Terminating   5 (14m ago)   21h
-```
-Keep repeating this last command until we finally see no pods remaining (may take a minute or two):
-```
-jonesn:~/ $ kubectl get pods                                                                                                           [15:19:43]
+$ helm list 
+NAME	NAMESPACE	REVISION	UPDATED                             	STATUS  	CHART                       	APP VERSION
+base	default  	1       	2022-01-11 18:50:08.591645 +0000 UTC	deployed	egeria-base-3.4.1-prelease.3	3.4
+$ helm delete base
+release "base" uninstalled
+$ kubectl get pods
 No resources found in default namespace.
 ```
+Keep repeating this last command until we finally see no pods remaining (may take a minute or two):
 
 Now we'll install the same demo again, but this time we are going to set a parameter
 which prevents the servers being automatically configured, so that we can walk through
 this in the tutorial:
 ```
-jonesn:~/ $ helm install base egeria/egeria-base --devel --set egeria.config=false                                                     [16:36:09]
-NAME: base
+$ helm install base egeria/egeria-base --devel --set egeria.config=false
 LAST DEPLOYED: Fri Jan  7 16:36:20 2022
 NAMESPACE: default
 STATUS: deployed
@@ -68,6 +54,14 @@ join us on slack via https://http://slack.lfai.foundation
 
 - The ODPi Egeria team
 ```
+
+!!! note
+    
+    The explanatory note printed to the screen after installing the chart is fixed
+    text, and does not take account of the additional configuration parameter
+    we passed to skip the automatic configuration - which in this case
+    has not been done.
+
 As before, we must check everything is running ok before we continue, so repeat getting
 the status of the pods until all the pods are ready:
 ```
@@ -87,7 +81,7 @@ All of the containers were are running above are configured to output regular lo
 
 In order to view these logs from the command line with Kubernetes try commands such as:
 ```
-jonesn:~/ $ kubectl logs egeria-base-platform-0                                                                                    [15:56:44]
+$ kubectl logs egeria-base-platform-0
 Starting the Java application using /opt/jboss/container/java/run/run-java.sh ...
 INFO exec  java -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -XX:MaxMetaspaceSize=1g -cp "." -jar /deployments/server/server-chassis-spring-3.4.jar
  Project Egeria - Open Metadata and Governance
@@ -112,18 +106,18 @@ You can take a look at the logs of the other containers if you get any issues.
 
 ## Ensuring the local environment can connect to the necessary containers
 
-From the above we know that egeria, and other containers, are running successfully - and since they are deployed in the
+From the above we know that Egeria, and other containers, are running successfully - and since they are deployed in the
 same Kubernetes environment, they will be able to communicate with each other. 
 
 However we need to make sure that we can connect to Egeria, and the UI, from the local environment. This is so that we can use
-postman and a browser.
+Postman and a browser.
 
-This is done by a technique known as 'port forwarding'. We can target either 'pods' or services - but here we chose the latter,
+This is done by a technique known as **port forwarding**. We can target either pods or services - but here we chose the latter,
 mostly for simplicity as the names are more simple and stable.
 
-So first let's see what services we have:
+So first, let's see what services we have:
 ```
-jonesn:~/ $ kubectl get services                                                                                                   [15:56:45]
+$ kubectl get services 
 NAME                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
 kubernetes                ClusterIP   10.43.0.1       <none>        443/TCP                      2d2h
 base-zookeeper-headless   ClusterIP   None            <none>        2181/TCP,2888/TCP,3888/TCP   28h
@@ -136,18 +130,8 @@ base-platform             ClusterIP   10.43.169.147   <none>        9443/TCP    
 
 We could query these further to see which pods they point to, but for now let's carry on and setup a port forward:
 
-To see what 
-## Configuring Egeria servers
-
-Our starting point here is that we have 4 containers running
- * A single egeria platform (egeria-base-platform-0 in the above example)
- * A UI (egeria-base-presentation)
- * Kafka (used to communicate between servers)
- * Zookeeper (used by Kafka)
-
-However we do not yet have any egeria servers defined. This is what we will now do
 ```
-jonesn:~/ $ kubectl port-forward service/base-platform 9443:9443                                                                   [16:05:12]
+$ kubectl port-forward service/base-platform 9443:9443
 Forwarding from 127.0.0.1:9443 -> 9443
 Forwarding from [::1]:9443 -> 9443
 ```
@@ -158,24 +142,34 @@ If you are using a *nix type shell, you could run in the background (add '&' to 
 
 We also want to do the same with the UI:
 ```
-jonesn:~/ $ kubectl port-forward service/base-presentation 8091:8091                                                               [16:06:32]
+$ kubectl port-forward service/base-presentation 8091:8091
 Forwarding from 127.0.0.1:8091 -> 8091
 Forwarding from [::1]:8091 -> 8091
 ```
 
+## Configuring Egeria servers
+
+Our starting point here is that we have 4 containers running
+ * A single egeria platform (egeria-base-platform-0 in the above example)
+ * A UI (egeria-base-presentation)
+ * Kafka (used to communicate between servers)
+ * Zookeeper (used by Kafka)
+
+However we do not yet have any egeria servers defined. We will do this later in this section.
+
 ### Check the server platform is running ok
 
-We've already checked that 
+We've already checked that the local environment is ok, and we know the containers are running ok, so the next step
+is to issue REST calls to the Egeria platform to check it is working correctly.
 
-![Configuring the OMAG Platform Content](egeria-dojo-day-1-3-1-2-configuring-the-platform.png)
+Earlier in this session, you downloaded an application called Postman and loaded collections of
+pre-defined requests. This tool makes it easy to issue REST API requests to the OMAG Server Platform.
 
-In the previous session you downloaded an application called Postman and loaded collections of
-pre-defined requests.
-This tool makes it easy to issue REST API requests to the OMAG Server Platform.
+For the rest of this section, go to Postman and use the **Egeria-platform-services** collection.
 
-Check that it is working by locating the `Get Server Origin` request in the 
-`Egeria-platform-services` collection.
-When you click on that request in the left-hand list, a new tab opens and you can click on send to
+Check that it is working by locating the **Get Server Origin** request,
+
+When you click on that request in the left-hand list, a new tab opens and you can click on **send** to
 issue the request.  Below is this response in Postman.
 
 ![Postman server origin](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin.png)
@@ -194,7 +188,7 @@ In the screen capture below, you can see the baseURL is set to the default of `h
 ![Postman server origin - wrong base url](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-wrong-base-url.png)
 
 Finally, if the OMAG Server Platform is not running the even though everything is set up correctly in
-Postman, it has nothing to connect to.  Go back to the helm chart deployment earlier and check this was completed successfully
+Postman, it has nothing to connect to.  Go back to the helm chart deployment earlier and check this completed successfully.
 
 ![Postman server origin - platform down](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-no-platform.png)
 
@@ -218,12 +212,19 @@ following the link below:
 In this first exercise you are going to use Postman to configure a simple metadata server called
 `myMetadataServer`.
 
-* In the Postman Egeria Environment, update the variable called `server` from `myserver` to `myMetadataServer`.
+Refer to [Admin services user guide on metadata access servers](/egeria-docs/concepts/metadata-access-server) for further
+information on the requests you will need to use.
 
-As a reminder, the environment can be modified by ensuring the 'Egeria' environment is selected, then clicking on the 'eye' icon towards the top right of the Postman UI.
+#### Update environment
+
+* In the Postman Egeria Environment, update the variable called `server` from `myserver` to `myMetadataServer`.
+  As a reminder, the environment can be modified by ensuring the 'Egeria' environment is selected, then clicking on the 'eye' icon towards the top right of the Postman UI.
+
+#### issuing REST calls to configure the server
+
 
 Using the `Egeria-admin-services-server-configuration` Postman collection and the instructions
-from the [Admin services user guide on metadata access servers](/egeria-docs/concepts/metadata-access-server)
+from the 
 create the configuration for `myMetadataServer` as follows.  For each value, find the right REST API request in the
 Postman collection.  Then look at where the values come from.  Sometimes you will need to change the variable
 value in the Egeria Environment, sometimes you can type it directly into the request URL and other times,
@@ -233,79 +234,80 @@ Each time you add a configuration value,
 [retrieve the server's configuration](/egeria-docs/concepts/configuration-document)
 to see how the effect of your requests are changing the server's configuration.
 
-* **local server URL root** to `https://localhost:9443`
 
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+* Set **local server URL root** to `https://localhost:9443`
+
+  This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuring defaults for the Cohort Members/Set local server URL root**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configuring-local-server-url).
 
-* **localServerType** to `Egeria Dojo Metadata Server` (update the value in the request)
+* Set **localServerType** to `Egeria Dojo Metadata Server` (update the value in the request)
 
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+  This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server type name**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
 
-* **organizationName** to your organization name (update the variable `organization_name`).
+* Set **organizationName** to your organization name (update the variable `organization_name`).
  
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+  This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set Organization name**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
  
-* **localServerUserId** to `myMetadataServerUserId`.
+* Set **localServerUserId** to `myMetadataServerUserId`.
 
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+  This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server user Id**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
 
-* **localServerPassword** to `myMetadataServerPassword`
+* Set **localServerPassword** to `myMetadataServerPassword`
 
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+  This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server user password**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
 
-* **maxPageSize** - the maximum page size that can be set on requests to the server. The default value is 1000.
+* Set **maxPageSize** - the maximum page size that can be set on requests to the server. The default value is 1000.
 
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+  This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers//Set max page size**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
 
-* Add a graph-based local repository.  This will store metadata in JanusGraph.
+* Add a graph-based local repository.  This will store metadata in [JanusGraph](https://janusgraph.org).
 
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+  This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Configuration for Metadata Servers/Enable the graph repository**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-local-repository).
 
 * Configure the **Asset Owner** Open Metadata Access Service (OMAS). URL name for this service is `asset-owner`.
 
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+  This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Enable a specific access service**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-access-services).
 
 * Set up the Coco Pharmaceutical **Server** Security connector to provide authorization checks for inbound REST API calls.
 
-  This call is located in the Postman collection **Egeria-admin-services-server-configuration** in folder
+  This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set Server Security Connection**.
   
   The specific documentation for this call is in the Admin Guide [here](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-server-security-connector).
 
-This completes the example configuration. It's important to note that we are only defining the configuration of a server now. We are not starting it.
+This completes the example configuration. 
 
-You are ready to move on to the next section.
+_It's important to note that we are only defining the configuration of a server now. We are not starting it_.
 
 ### Examining the configuration
 
-Finally, use the `Egeria-admin-services-platform-configuration` Postman collection to experiment with the
+Use the **Egeria-admin-services-platform-configuration** Postman collection to experiment with the
 different registered services and and known and active server requests.
 These are useful to know as we move to configure servers on the platform.
-## Test yourself
+### Test yourself
 
 * What is the name of the place where a server's configuration is assembled?
 * What determines where the server configuration is stored?
@@ -321,30 +323,18 @@ The documentation from the Admin Guide is shown below.
 
 * [Starting and Stopping OMAG Servers](/egeria-docs/guides/operations/guide/#starting-and-stopping-an-omag-server)
 
-_TODO: insert section on viewing logs_
+Review the logs to see typical output from the server being started.
+## Calling the metadata server API
 
-# Optional material
-
-* [Add the file audit log connector to your server configuration](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
-  Restart your server and then view the log record files that have been created. You may need to refer to the Kubernetes documentation to 
-  determine how to view a file within your container.
-  
-* The audit log destinations are configured using connections that define how to create an appropriate connector.
-  Now link to the [Developer Guide](/egeria-docs/guides/developer)
-  to understand more about connectors.
-
-  # Calling the metadata server API
-
-In this session, you will learn some of the API calls that are possible on the metadata server.
+We will now issue some of the API calls that are possible on the metadata server.
 
 For this exercise, you will be using the following Postman collections:
+
 * `Egeria-repository-services-local-repository`
 * `Egeria-asset-owner-omas`
 
 The aim is to show the differences between the fine-grained repository services APIs and the 
 course-grained, but more specialized, access services APIs.
-
-![Design philosophy](/egeria-docs/guides/developer/design-philosophy-omas-omrs.png)
 
 Start with the the Asset Owner OMAS interface and add a CSV file.  This returns a list of assets it has created,
 one for the directory and one for the filename.  Retrieve these assets using the repository service API to see how these assets are stored.
@@ -355,23 +345,24 @@ Later on today, you will have a chance to work with the [Open Metadata Labs](/eg
 that provide a lot more explanation on the APIs and their differences.
 The purpose of this exercise was to giver you direct experience of the REST APIs.
 
-# Creating a second server and connecting via a cohort
+## Creating two servers
 
 Metadata servers can exchange metadata via open metadata repository cohorts.
 In this session you will learn how to connect two servers via a cohort.
 But first you need to create a second server.
      
-Repeat the previous server configuration exercise twice - once to create a server called `server1` and again to create a server called `server 2`.
+Using what you learnt earlier in this section, repeat the previous server configuration exercise twice - once to create a server called **server1** and again to create a server called **server 2**.
 
 ## Connect the Servers via a Cohort
 
 Once you have 2 servers configured, add configuration to each of them to connect them via a cohort.
 
-First read about [Open Metadata Repository Cohorts](../../../open-metadata-implementation/repository-services/docs/open-metadata-repository-cohort.md).
+First read about [Open Metadata Repository Cohorts](/egeria-docs/services/omrs/cohort).
 
 Then
-* [Set up the event bus defaults](../../../open-metadata-implementation/admin-services/docs/user/configuring-event-bus.md)
-* Connect then together by [adding cohort configuration](../../../open-metadata-implementation/admin-services/docs/user/configuring-registration-to-a-cohort.md) to each server.
+
+* [Set up the event bus defaults](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/?h=event+bus#set-up-the-default-event-bus)
+* Connect then together by [adding cohort configuration](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/?h=adding+a+access+cohort#remove-the-local-repository) to each server.
 
 Start both servers and view their logs via Kubernetes - you should see that they are communicating.
 

@@ -140,7 +140,7 @@ nav:
   - Learning:
       - Learning Overview: education/index.md
       - Webinars: education/webinar-program/overview.md
-      - Existing Dojo:
+      - Old Dojo (for reference):
           - Dojo Introduction: getting-started/dojo/index.md
           - Day 1:
               - Egeria Introduction: getting-started/dojo/egeria-dojo-day-1-1-introduction.md
@@ -175,7 +175,7 @@ nav:
               - Becoming a Maintainer: getting-started/dojo/egeria-dojo-day-3-2-becoming-a-maintainer.md
               - Egeria Architecture: getting-started/dojo/egeria-dojo-day-3-3-egeria-architecture.md
               - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
-      - New Dojo (In Development):
+      - Dojo (Jan 2022):
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
               - Introduction to 'Running Egeria' day: education/egeria-dojo/running-egeria/introduction.md
@@ -673,6 +673,7 @@ theme:
   language: en
   custom_dir: overrides
   features:
+    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.top

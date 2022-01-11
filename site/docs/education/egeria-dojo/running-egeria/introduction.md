@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2021. -->
 
-# Egeria introduction
+# Egeria Introduction
 
 In this session, you will learn about the function and value of Egeria
 along with the key concepts and use cases it supports.
@@ -41,7 +41,7 @@ Egeria is an open-source project available under the Apache-2.0 license. This is
 
 As with many open-source projects, Egeria is hosted on [GitHub](https://github.com), and divided into a number of repositories. 
 
-Take a look at the [main Egeria repo](https://github.com/odpi/egeria). This is where the core code is stored, and where we track any [Issues](https://github.com/odpi/egeria/issues) in core Egeria.
+Take a look at the main [Egeria repo](https://github.com/odpi/egeria). This is where the core code is stored, and where we track any [Issues](https://github.com/odpi/egeria/issues) in core Egeria.
 
 As you work through this Dojo you may find problems with our documentation - perhaps something is wrong, or unclear. Our Documentation is managed in [egeria-docs](https://github.com/odpi/egeria-docs) and you can raise [Issues](https://github.com/odpi/egeria-docs/issues) there.
 
@@ -50,6 +50,10 @@ As you work through this Dojo you may find problems with our documentation - per
 
 ### Slack 
 
-Another useful resource to help you as you work through these Dojo sessions - whether it is problems, questions, or about topics unrelated to the Dojo, you can [join](https://slack.lfai.foundation) our LF AI & Data Slack workspace. Once you've done so, look at the channels beginning 'egeria-'. '#egeria-dojo' has been set-up to support this learning activity.
+Another useful resource to help you as you work through these Dojo sessions - whether it is problems, questions, or about topics unrelated to the Dojo, you can [join](https://slack.lfai.foundation) our LF AI & Data Slack workspace. Once you've done so, look at the channels beginning **#egeria**-. 
+
+**#egeria-dojo** has been set-up to support this learning activity. 
+
+If you're happy to use Slack, go there now and get connected to your tutors and fellow attendees to say hello & discuss any problems. 
 
 --8<-- "snippets/abbr.md"

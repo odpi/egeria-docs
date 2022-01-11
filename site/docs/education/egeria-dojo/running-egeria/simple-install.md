@@ -167,6 +167,6 @@ first step helps to ensure your environment is working correctly.
 
 ## Testing the installation
 
-
+_TODO: Add simple validation instructions_
 
 --8<-- "snippets/abbr.md"

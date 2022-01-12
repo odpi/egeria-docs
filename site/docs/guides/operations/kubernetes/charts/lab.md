@@ -33,11 +33,8 @@ You no longer need a git clone of this repository to install the chart.
 helm install lab egeria/odpi-egeria-lab
 ```
 
-In the following examples we're using microk8s.
-
 ```bash
-$ helm install lab egeria/odpi-egeria-lab                                                                            [11:47:04]
-WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /var/snap/microk8s/2346/credentials/client.config
+$ helm install lab egeria/odpi-egeria-lab
 NAME: lab
 LAST DEPLOYED: Tue Aug 10 11:47:19 2021
 NAMESPACE: default
@@ -54,7 +51,7 @@ It can take a few seconds for the various components to all spin-up. You can mon
 the readiness by running `kubectl get all` -- when ready, you should see output like the following:
 
 ```bash
-$ kubectl get all                                                                                                     [13:53:43]
+$ kubectl get all
 NAME                                                   READY   STATUS    RESTARTS   AGE
 pod/lab-odpi-egeria-lab-ui-74cc464575-cf8rm            1/1     Running   0          126m
 pod/lab-odpi-egeria-lab-datalake-0                     1/1     Running   0          126m
@@ -105,7 +102,7 @@ statefulset.apps/lab-kafka                      1/1     126m
 statefulset.apps/lab-odpi-egeria-lab-core       1/1     126m
 statefulset.apps/lab-odpi-egeria-lab-datalake   1/1     126m
 statefulset.apps/lab-odpi-egeria-lab-factory    1/1     126m
-````
+```
 
 All of the `pod/...` listed at the top have `Running` as their `STATUS` and `1/1` under `READY`.)
 
@@ -117,7 +114,7 @@ Since k8s implementations vary one simple approach for local testing is to use `
 
 If you look in the list of services above (`kubectl get services`) we have one named 'service/lab-jupyter' so let's try that (with microk8s):
 ```shell
-$ kubectl port-forward service/lab-jupyter 8888:8888                                                                  [13:53:52]
+$ kubectl port-forward service/lab-jupyter 8888:8888
 Forwarding from 127.0.0.1:8888 -> 8888
 Forwarding from [::1]:8888 -> 8888
 ```
@@ -129,7 +126,7 @@ At this point you should be able to access your notebooks by going to this forwa
 
 We repeat the port forwarding above, this time for another service
 ```shell
-$ kubectl port-forward service/lab-presentation 8091:8091                                                             [14:15:37]
+$ kubectl port-forward service/lab-presentation 8091:8091
 Forwarding from 127.0.0.1:8091 -> 8091
 Forwarding from [::1]:8091 -> 8091
 ```

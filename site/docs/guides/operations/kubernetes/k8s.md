@@ -95,13 +95,48 @@ Other alternatives that might come to mind include
 
 [Kubernetes' own Getting Started guide :material-dock-window:](https://kubernetes.io/docs/setup/){ target=k8s } provides links to setting up Kubernetes in many environments. Below we'll take a quick look at some of the simpler examples, especially for new users.
 
-### [microk8s](https://microk8s.io){ target=mk8s } (Linux, Windows, MacOS)
-
-!!! attention "6GB is recommended as the minimum memory requirement"
-
 As with most k8s implementations, when running some ongoing cpu will be used, so if running on your laptop/low power device it's recommended to refer to the relevant docs and stop k8s when not in use.
 
 When running on a separate server or a cloud service this isn't a concern.
+
+Only install **ONE** of the options below.
+
+### [Rancher Desktop](https://rancherdesktop.io){ target=rd } (Linux, Windows, MacOS)
+
+!!! attention Recommended for Dojo
+
+    Rancher Desktop is the **recommended environment** for running our **Dojos** locally, and was used to document and test the scenarios.
+
+
+[Rancher desktop](https://rancherdesktop.io) is an open-source distribution for Kubernetes which is designed to be easy to set up. 
+
+#### MacOS
+
+The [MacOS install :material-dock-window:](https://github.com/rancher-sandbox/rancher-desktop/blob/main/docs/installing.md#installing-rancher-desktop-on-macos){ target=rd } docs cover the steps needed to install Rancher Desktop.
+
+If you have [HomeBrew :material-dock-window:](https://docs.brew.sh/Installation){ target=brew } installed, you can also install the application via  using
+```
+brew install rancher
+```
+### Windows
+
+Follow the [official instructions :material-dock-window:](https://github.com/rancher-sandbox/rancher-desktop/blob/main/docs/installing.md#windows){ target=rd } (untested)
+
+
+#### Linux
+
+Follow the [official instructions :material-dock-window:](https://github.com/rancher-sandbox/rancher-desktop/blob/main/docs/installing.md#linux){ target=rd } (untested)
+
+#### IMPORTANT - Rancher Desktop configuration for all platforms
+
+After installation open the Rancher Desktop app and in preferences under **Kubernetes Settings** set the following:
+ - a minimum of 6GB RAM allocated to Kubernetes. Do not go into the red area
+ - at least 1 less CPU allocated than you have on your machine. Do not go into the red area
+ - check you are using the latest 'stable' kubernetes version
+
+![Kubernetes Setttings](rancherprefs.png)
+
+### [microk8s](https://microk8s.io){ target=mk8s } (Linux, Windows, MacOS)
 
 !!! attention "microk8s uses its own commands to avoid conflicts"
     When using microk8s, note that the standard k8s commands are renamed to avoid clashes, so use the microk8s ones in the remainder of the Egeria documentation:
@@ -145,11 +180,22 @@ As an example, the following commands should get you set up, but always check th
 
 Follow the [official instructions :material-dock-window:](https://microk8s.io/#tab-two__content){ target=mk8s } (untested)
 
+Ensure when installing you specify at least 6GB RAM.
+
 #### Linux
 
 Follow the [official instructions :material-dock-window:](https://microk8s.io/#tab-one__content){ target=mk8s } (untested)
 
+Ensure when installing you specify at least 6GB RAM.
+
 ### [Docker Desktop](https://www.docker.com/products/docker-desktop){ target=docker } (Windows, MacOS)
+
+!!!attention Licensing Changes for Docker Desktop
+    Docker has recently updated their licensing conditions for Docker Desktop.
+
+    As such, it is therefore no longer our preferred/tested environment for Dojos.
+
+    Ensure you are familiar before using. See https://www.docker.com/pricing/faq 
 
 After installing, go into Docker Desktop **Settings** and select **Kubernetes**. Make sure **Enable Kubernetes** is checked. Also, under resources ensure at least 4GB is allocated to Docker.
 

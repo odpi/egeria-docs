@@ -36,11 +36,9 @@ You will need **either**:
 
 We will use Kubernetes as the runtime environment for running Egeria.
 
-_TODO: This following content could be converted to snippets_
-
 Follow these steps from our [Kubernetes Documentation](/egeria-docs/guides/operations/kubernetes):
 
-  * [Setting up Kubernetes](/egeria-docs/guides/operations/kubernetes/k8s)
+  * [Setting up Kubernetes](/egeria-docs/guides/operations/kubernetes/k8s) - follow the instruction for **Rancher Desktop**
   * [Setting up Helm](/egeria-docs/guides/operations/kubernetes/helm)
 
 ## Setting up Postman

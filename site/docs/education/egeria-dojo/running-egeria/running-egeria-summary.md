@@ -5,7 +5,8 @@
 
 We have now nearly reached the end of the Dojo.
 
-During this session we hope you've gained
+During this session we hope you've gained:
+
  - an understanding of what Egeria is
  - an opportunity to run the Egeria code live
  - been able to experiment with some interactions via the API & User Interface

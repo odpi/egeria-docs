@@ -14,13 +14,13 @@ get it running in your environment, so that you can explore more in your own tim
 
 *Hardware Requirements*: A networked MacOS, Windows, or Linux environment with at least 4Gb RAM & 12GB storage or remote access to an existing Kubernetes environment.
 
-*Duration: We expect this will take most of a day, around 6 hours - but you can continue in your own time if this is too much for one session. 
+*Duration*: We expect this will take most of a day, around 6 hours - but you can continue in your own time if this is too much for one session. 
 
 ## About this site
 
-We are using the Egeria docs website at https://odpi.github.io/egeria-docs/ to host these Dojo sessions. You are currently in the 'Education' section and it's suggested you work through the sections of this first day in order. 
+We are using the Egeria docs website at https://odpi.github.io/egeria-docs/ to host these Dojo sessions. You are currently in the *Education* section and it's suggested you work through the sections of this first day in order. 
 
-Use the Previous/Next sections at the bottom of each page to move to the next topic within the Dojo.
+Use the *Previous* / *Next* arrows at the bottom of each page to move to the adjacent topics within the Dojo.
 
 You can also refer to the heading summary towards the top right to navigate through the sections of each individual page.
 
@@ -35,6 +35,6 @@ These are the topics we will work through in this Dojo:
   - Installing a pre-configured Egeria environment (0.5 hour)
   - Configuring Egeria servers ( 2 hours)
   - Running Egeria Jupyter based labs (1.5 hours)
-  - Summary & questions" (0.5 hours)"
+  - Summary & questions" (0.5 hours)
 
 --8<-- "snippets/abbr.md"

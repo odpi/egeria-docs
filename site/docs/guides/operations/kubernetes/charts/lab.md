@@ -29,11 +29,11 @@ You no longer need a git clone of this repository to install the chart.
 
 ## Installation
 
-```bash
+```console
 helm install lab egeria/odpi-egeria-lab
 ```
 
-```bash
+```console
 $ helm install lab egeria/odpi-egeria-lab
 NAME: lab
 LAST DEPLOYED: Tue Aug 10 11:47:19 2021
@@ -50,7 +50,7 @@ Some additional help text is also output, which is truncated for brevity.
 It can take a few seconds for the various components to all spin-up. You can monitor
 the readiness by running `kubectl get all` -- when ready, you should see output like the following:
 
-```bash
+```console
 $ kubectl get all
 NAME                                                   READY   STATUS    RESTARTS   AGE
 pod/lab-odpi-egeria-lab-ui-74cc464575-cf8rm            1/1     Running   0          126m
@@ -113,7 +113,7 @@ We now need to get connectivity to the interesting pods, such as that running th
 Since k8s implementations vary one simple approach for local testing is to use `kubectl port-forward` to connect to the relevant service.
 
 If you look in the list of services above (`kubectl get services`) we have one named 'service/lab-jupyter' so let's try that (with microk8s):
-```shell
+```console
 $ kubectl port-forward service/lab-jupyter 8888:8888
 Forwarding from 127.0.0.1:8888 -> 8888
 Forwarding from [::1]:8888 -> 8888
@@ -125,7 +125,7 @@ At this point you should be able to access your notebooks by going to this forwa
 ## Accessing the React UI
 
 We repeat the port forwarding above, this time for another service
-```shell
+```console
 $ kubectl port-forward service/lab-presentation 8091:8091
 Forwarding from 127.0.0.1:8091 -> 8091
 Forwarding from [::1]:8091 -> 8091
@@ -138,7 +138,7 @@ Now go to https://localhost:8091/coco to access the React UI. Login as 'garygeek
 
 The same applies to the service exposing Egeria UI via nginx
 
-```shell
+```console
 $ kubectl port-forward service/lab-nginx 8443:443
 Forwarding from 127.0.0.1:8443 -> 443
 Forwarding from [::1]:8443 -> 443
@@ -154,7 +154,7 @@ reset the Jupyter notebooks to their original clean state, etc.
 
 To delete the deployment, simply run this:
 
-```bash
+```console
 $ helm delete lab
 ```
 
@@ -166,7 +166,7 @@ Where `lab` is the name you used in your original deployment. (You can see what 
 
 The chart is configured to use a default set of parameters.  You can override these by creating a file such as `lab.yaml` with the  contents of any values you wish to modify, for example:
 
-```
+```console
 service:
   type: NodePort
   nodeport:
@@ -192,7 +192,7 @@ Note however that since this will save the state of your configuration done from
 the tutorial notebooks it may be confusing - as such this is disabled by default. It may be useful if you are modifying the charts for your own use.
 
 You will also need to delete all storage associated with the chart manually if you want to cleanup/reset - for example
-```bash
+```console
 kubectl delete pvc --all
 kubectl delete pv --all
 ```

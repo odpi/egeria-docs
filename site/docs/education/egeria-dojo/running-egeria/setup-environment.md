@@ -41,6 +41,8 @@ Follow these steps from our [Kubernetes Documentation](/egeria-docs/guides/opera
   * [Setting up Kubernetes](/egeria-docs/guides/operations/kubernetes/k8s) - follow the instruction for **Rancher Desktop**
   * [Setting up Helm](/egeria-docs/guides/operations/kubernetes/helm)
 
+**Do not continue in the above sections & install any of the charts at this point** - we will do this later.
+
 ## Setting up Postman
 
 Follow these steps to setup Postman

@@ -42,10 +42,6 @@ Pods are disposable - they will come and go. Other objects are concerned with pr
 
 A [`service` :material-dock-window:](https://kubernetes.io/docs/concepts/services-networking/service/){ target=k8s } provides network accessibility to one or more pods. The service name will be added into local Domain Name Service (DNS) for easy accessibility from other pods. Load can be shared across multiple pods
 
-### Ingres
-
-Think of [`ingress` :material-dock-window:](https://kubernetes.io/docs/concepts/services-networking/ingress/){ target=k8s } as the entry point to Kubernetes services from an external network perspective - so it is these addresses external users would be aware of.
-
 ### Deployment 
 
 A [`deployment` :material-dock-window:](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/){ target=k8s } keeps a set of pods running - including replica copies, ie restarted if stopped, matching resource requirements, handling node failure .
@@ -72,6 +68,30 @@ Pods can request storage - which is known as a persistent volume claim (PVC), wh
 
 See the k8s docs [Persistent Volumes :material-dock-window:](https://kubernetes.io/docs/concepts/storage/persistent-volumes/){ target=k8s }
 
+### Accessing applications in your cluster
+
+!!! education "Further information"
+See [the Kubernetes docs :material-dock-window:](https://kubernetes.io/docs/tasks/administer-cluster/access-cluster-services/){ target=k8s }.
+
+
+#### Port-forward
+
+This can be run at a command line, and directly sets up forwarding from local ports into services running in your cluster. It requires no additional configuration beforehand, and lasts only as long as the port forwarding is running. For this reason it is the approach
+taken in our tutorials.
+
+See [port forwarding :material-dock-window:](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/){ target=k8s } for more information.
+
+#### NodePort
+
+In the sample charts provided an option to use a [`NodePort` :material-dock-window:](https://kubernetes.io/docs/concepts/services-networking/service/#nodeport){ target=k8s } is usually provided.
+
+This is often easiest when running k8s locally, as any of the ip addressable worker nodes in your cluster can service a request on the port provided without needing to leave a proxy running. This is why it's named a *node port* i.e. a port on your node. Some of the egeria charts have direct support for
+specifying nodeports.
+
+#### Ingress
+
+Ingress rules define how traffic directed at your k8s cluster is directed. Their definition tends to vary substantially between different k8s implementations but often is the easiest approach when running with a cloud service. Ingress definitions will often
+use highly available load balancers. 
 
 ## Why are we using Kubernetes?
 
@@ -112,12 +132,15 @@ Only install **ONE** of the options below.
 
 #### MacOS
 
-The [MacOS install :material-dock-window:](https://github.com/rancher-sandbox/rancher-desktop/blob/main/docs/installing.md#installing-rancher-desktop-on-macos){ target=rd } docs cover the steps needed to install Rancher Desktop.
+The [MacOS install :material-dock-window:](https://github.com/rancher-sandbox/rancher-desktop/blob/main/docs/installing.md#installing-rancher-desktop-on-macos){ target=rd } docs cover the steps needed to install Rancher Desktop &
+is the recommended route, as this is the supported approach from the Rancher development team.
 
 If you have [HomeBrew :material-dock-window:](https://docs.brew.sh/Installation){ target=brew } installed, you can also install the application via  using
-```
+```console
 brew install rancher
 ```
+
+You may need to remove other implementations of the kubectl or helm commands in order to use Rancher Desktop
 ### Windows
 
 Follow the [official instructions :material-dock-window:](https://github.com/rancher-sandbox/rancher-desktop/blob/main/docs/installing.md#windows){ target=rd } (untested)
@@ -130,11 +153,17 @@ Follow the [official instructions :material-dock-window:](https://github.com/ran
 #### IMPORTANT - Rancher Desktop configuration for all platforms
 
 After installation open the Rancher Desktop app and in preferences under **Kubernetes Settings** set the following:
- - a minimum of 6GB RAM allocated to Kubernetes. Do not go into the red area
- - at least 1 less CPU allocated than you have on your machine. Do not go into the red area
- - check you are using the latest 'stable' kubernetes version
+  - check you are using the latest 'stable' kubernetes version.
+  - use containerd for the runtime.
+ - a minimum of 6GB RAM allocated to Kubernetes. Do not go into the red area.
+ - at least 1 less CPU allocated than you have on your machine. Do not go into the red area.
 
 ![Kubernetes Setttings](rancherprefs.png)
+
+Also ensure the following symbolic links are set up for helm & kubectl:
+
+![Utility settings](rancherutils.png)
+
 
 ### [microk8s](https://microk8s.io){ target=mk8s } (Linux, Windows, MacOS)
 
@@ -166,7 +195,7 @@ Most of the Egeria development team use MacOS, so the instructions are elaborate
 As an example, the following commands should get you set up, but always check the official docs for current details
 
 !!! cli "Installing microk8s on MacOS"
-    ```shell
+    ```console
     brew install ubuntu/microk8s/microk8s
     # Use 4 virtual CPUs, 6Gb ram (required minimum) and 10GB disk space
     microk8s install --cpu 4 --mem 6 --disk 10

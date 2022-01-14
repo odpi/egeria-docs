@@ -3,7 +3,7 @@
 
 # Egeria Introduction
 
-In this session, you will learn about the function and value of Egeria
+In this section, you will learn about the function and value of Egeria
 along with the key concepts and use cases it supports.
 
 ## About Egeria

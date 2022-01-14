@@ -142,7 +142,7 @@ $
 ## Explanation of what has been installed
 
 The install has created the following Egeria content:
- * egeria-base-presentation : a [react UI for Egeria](https://github.com/odpi/egeria-react-ui).
+ * egeria-base-presentation : a [Ecosystem UI for Egeria](https://github.com/odpi/egeria-react-ui).
  * egeria-base-platform : the [core Egeria platform](https://github.com/odpi/egeria).
  * egeria-base-config : A [script](https://github.com/odpi/egeria-charts/blob/main/charts/egeria-base/scripts/config-egeria.sh) that configures Egeria. Runs once, then exits.
 

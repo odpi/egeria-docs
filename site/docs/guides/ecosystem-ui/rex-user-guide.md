@@ -221,7 +221,7 @@ the diagram:
 
 You can switch back and forth between the layout options.
 
-** Labelling of objects:
+**Labelling of objects:**
 
 Rex has a built-in labeler that assigns a label to each object (entity or relationship) that is retrieved from the
 repository. The labels are used in the diagram and attempts to find a concise, meaningful and hopefully unique label, based on the
@@ -230,6 +230,7 @@ properties of the entity or relationship.
 The labelling strategy behaves differently depending on the type of an object. For some types of object there are
 not many possible labels, but in the default case Rex will examine the instance properties of the object and choose a label
 based on the following precedence order:
+
 * displayName - which should have been set with the expectation that it will be used for display purposes
 * name - which should be easier to read than qualified name
 * qualifiedName - limited to the last 24 characters as qualified names can be long and the last part is often the best
@@ -237,7 +238,7 @@ based on the following precedence order:
 
 If you retrieve a relationship (from Get or Search), the entities at the ends of the relationship will be assigned
 labels based on the information available - which is limited to the unique properties in the EntityProxy. If such
-an entity is subsequently selected (by clicking on it) Rex will retrieve the full entity and if it can identify
+an entity is subsequently selected (by clicking on it), Rex will retrieve the full entity and if it can identify
 a better label, it will update the label associated with the entity in both the diagram and in the details panel.
 
 **Tips for using Rex:**

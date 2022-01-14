@@ -103,12 +103,12 @@ nav:
                       - Open Metadata Topic:
                             - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
       - User Interfaces:
-          - Egeria React UI:
-              - Type Explorer (TEX): guides/react-ui/tex-user-guide.md
-              - Resource Explorer (REX): guides/react-ui/rex-user-guide.md
-              - Dino: guides/react-ui/dino-user-guide.md
-              - Glossary author: guides/react-ui/glossary-author-user-guide.md
-              - Server author: guides/react-ui/server-author-user-guide.md
+          - Egeria Ecosystem UI:
+              - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
+              - Resource Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
+              - Dino: guides/ecosystem-ui/dino-user-guide.md
+              - Glossary author: guides/ecosystem-ui/glossary-author-user-guide.md
+              - Server author: guides/ecosystem-ui/server-author-user-guide.md
       - Features:
           - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md
@@ -132,11 +132,11 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - User Interfaces:
       - User Interface overview: user-interfaces/index.md
-      - Egeria React User Interface:
-          - Egeria React UI Overview: user-interfaces/react/index.md
-          - Planning checklist: user-interfaces/react/react-ui-planning-checklist.md
-          - Planning: user-interfaces/react/react-ui-planning.md
-          - Configure and run presentation server : user-interfaces/react/configure-and-run-presentation-server.md
+      - Egeria Ecosystem User Interface:
+          - Egeria Ecosystem UI Overview: user-interfaces/ecosystemindex.md
+          - Planning checklist: user-interfaces/ecosystem/ecosystem-ui-planning-checklist.md
+          - Planning: user-interfaces/ecosystem/ecosystem-ui-planning.md
+          - Configure and run presentation server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
   - Learning:
       - Learning Overview: education/index.md
       - Webinars: education/webinar-program/overview.md
@@ -146,9 +146,12 @@ nav:
               - Introduction to 'Running Egeria' day: education/egeria-dojo/running-egeria/running-egeria-intro.md
               - Egeria introduction : education/egeria-dojo/running-egeria/egeria-introduction.md
               - Setup of the environment: education/egeria-dojo/running-egeria/setup-environment.md
-              - Simple Install of Egeria : education/egeria-dojo/running-egeria/simple-install.md
+              - Simple Install of Egeria: education/egeria-dojo/running-egeria/simple-install.md
               - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
-              - Introduction to the Egeria UIs : education/egeria-dojo/running-egeria/ui-introduction.md
+              - User Interfaces:
+                  - Introduction to the Egeria UIs : education/egeria-dojo/running-egeria/user-interfaces/ui-introduction.md
+                  - Ecosystem UI:
+                      - Using the Egeria Ecosystem UI: education/egeria-dojo/running-egeria/user-interfaces/ecosystem-ui/ecosystem-ui-start.md
               - Coco Pharmaceuticals : education/egeria-dojo/running-egeria/coco-labs-environment.md
               - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/running-egeria-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md

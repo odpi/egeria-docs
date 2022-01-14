@@ -62,16 +62,15 @@ Update Complete. ⎈Happy Helming!⎈
 First we'll look at what charts are available:
 
 !!! Info
-    You'll see we use `--devel` on these commands. This retrieves the very latest, unreleased, versions of our charts.
-    We're using this as they are still being written and updated. Very soon the charts will be published
-    as new versions, and this parameter will be removed from the documentation.
+    If you need to check out the very latest charts we are developing, you can add `--devel` on these commands. This retrieves the very latest, unreleased, versions of our charts.
+
 ```console
-$ helm search repo egeria --devel
+$ helm search repo egeria 
 NAME                  	CHART VERSION     	APP VERSION	DESCRIPTION
-egeria/egeria-base    	3.4.1-prelease.3  	3.4        	Egeria simple deployment (platform, react UI)
+egeria/egeria-base    	3.4.1           	3.4        	Egeria simple deployment (platform, react UI)
 egeria/egeria-cts     	3.4.0             	3.4        	Egeria Conformance Test Suite deployment to Kub...
 egeria/egeria-pts     	3.4.0             	3.4        	Egeria Performance Test Suite deployment to Kub...
-egeria/odpi-egeria-lab	3.4.1-prerelease.6	3.4        	Egeria lab environment
+egeria/odpi-egeria-lab	3.4.1           	3.4        	Egeria lab environment
 $
 ```
 
@@ -82,7 +81,7 @@ This list will change as the Egeria team continue to develop these charts
 We'll now install a simple Egeria configuration:
 
 ```console
-$ helm install base egeria/egeria-base --devel
+$ helm install base egeria/egeria-base 
 NAME: base
 LAST DEPLOYED: Tue Jan 11 18:44:18 2022
 NAMESPACE: default

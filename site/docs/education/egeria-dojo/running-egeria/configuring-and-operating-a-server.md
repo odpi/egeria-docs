@@ -29,7 +29,7 @@ Now we'll install the same demo again, but this time we are going to set a param
 which prevents the servers being automatically configured, so that we can walk through
 this in the tutorial:
 ```console
-$ helm install base egeria/egeria-base --devel --set egeria.config=false
+$ helm install base egeria/egeria-base  --set egeria.config=false
 LAST DEPLOYED: Fri Jan  7 16:36:20 2022
 NAMESPACE: default
 STATUS: deployed

@@ -21,7 +21,7 @@ $ helm delete base
 
 Now, install the Coco Pharma environment
 ```console
-$ helm install lab egeria/odpi-egeria-lab --devel                               [15:16:18]
+$ helm install lab egeria/odpi-egeria-lab                                [15:16:18]
 NAME: lab
 LAST DEPLOYED: Fri Jan 14 15:16:33 2022
 NAMESPACE: base

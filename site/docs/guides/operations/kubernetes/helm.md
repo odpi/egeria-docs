@@ -46,7 +46,7 @@ Some Kubernetes environments may install Helm as part of their client tooling, r
 If using MacOS with HomeBrew installed, Helm can be simply installed with:
 
 !!! cli "Installing Helm on MacOS"
-    ```shell
+    ```console
     brew install helm
     ```
 
@@ -54,41 +54,92 @@ If using MacOS with HomeBrew installed, Helm can be simply installed with:
 
 See the [Installation Guide :material-dock-window:](https://helm.sh/docs/intro/install/){ target=helm } for more ways to install Helm.
 
-## Accessing the Egeria charts repository
+## Useful Helm commands
+
+This section covers some useful commands for Helm. Do not run these now, but they
+may be useful to refer to as you use the Egeria Helm charts.
+
+It's also worth remember that Helm is primarily a packaging tool to deploy applications to Kubernetes,
+so these commands relate mostly to installing and removing applications.
+
+To actual monitor the details of what has been created - what is running, the network services etc, then you 
+would use the Kubernetes command `kubectl`
 
 Our Helm charts for Egeria are stored [in a repository hosted on GitHub :material-github:](https://github.com/odpi/egeria-charts){ target=gh }, and as charts are updated they are automatically published to a GitHub pages website.
 
 Start by adding this repository to Helm:
 
 !!! cli "Add this repository"
-    ```shell
+    ```console
     helm repo add egeria https://odpi.github.io/egeria-charts
     ```
 
 Before searching or installing, always update your local copy of the repository to ensure you have the latest version of the charts:
 
 !!! cli "Update charts"
-    ```shell
+    ```console
     helm repo update egeria
     ```
 
 You can now list the charts:
 
 !!! cli "List released charts"
-    ```shell
+    ```console
     helm search repo egeria
     ```
 
 !!! cli "List charts that are still in development"
-    ```shell
+    ```console
     helm search repo egeria --devel
     ```
 
 And you can then install (deploy) a chart:
 
 !!! cli "Install (deploy) a chart"
-    ```shell
-    helm install egeria/<chart>
+    ```console
+    helm install <release> egeria/<chart>
     ```
+    release here refers to a user-defined label which is used as part of the naming for many of the resources
+    created
+
+!!! cli "List installed charts"
+    ```console
+    helm list
+    ```
+
+!!! cli "Install a chart with additional properties set"
+    ```console
+    helm install --set-string egeria.serverName=myserver <release> egeria/<chart>
+    ```
+
+!!! cli "Install a chart with additional properties in a modified yaml"
+    ```console
+    helm install -f ~/egeria.yaml metadataserver egeria/egeria-base
+    ```
+    
+ !!! cli "Delete an installed helm chart"
+    ```console
+    helm delete <release>
+    ```
+    
+  !!! cli "List configurable values for chart"
+    ```shell
+    helm inspect values <chart>
+    ```
+  
+  In a helm chart the configuration that has been externalised by the chart writer is specified in the `values.yaml` file which you can find in this directory. However rather than edit this file directly, it's recommended you create an additional file with the required overrides.
+
+As an example, in `values.yaml` we see a value 'serverName' which is set to mds1. If I want to override this I could do
+```console
+helm install --set-string egeria.serverName=myserver base egeria/egeria-base
+```
+However this can get tedious with multiple values to override, and you need to know the correct types to use.
+
+Instead it may be easier to create an additional file. For example let's create a file in my home directory `~/egeria.yaml` containing:
+```yaml
+egeria:
+  serverName: metadataserver
+  viewServerName: presentationview
+```
 
 ---8<-- "snippets/abbr.md"

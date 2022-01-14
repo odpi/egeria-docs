@@ -144,13 +144,12 @@ nav:
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
               - Introduction to 'Running Egeria' day: education/egeria-dojo/running-egeria/running-egeria-intro.md
-              - Egeria introduction : education/egeria-dojo/running-egeria/egeria-egeria-introduction.md
+              - Egeria introduction : education/egeria-dojo/running-egeria/egeria-introduction.md
               - Setup of the environment: education/egeria-dojo/running-egeria/setup-environment.md
               - Simple Install of Egeria : education/egeria-dojo/running-egeria/simple-install.md
               - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
-              - Introduction to the Egeria UIs : education/egeria-dojo/running-egeria/ui-egeria-introduction.md
+              - Introduction to the Egeria UIs : education/egeria-dojo/running-egeria/ui-introduction.md
               - Coco Pharmaceuticals : education/egeria-dojo/running-egeria/coco-labs-environment.md
-              - Using additional connectors : education/egeria-dojo/running-egeria/using-additional-connectors.md
               - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/running-egeria-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md

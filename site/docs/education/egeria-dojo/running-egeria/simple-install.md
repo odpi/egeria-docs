@@ -28,7 +28,7 @@ confirm you have connectivity to your Kubernetes cluster.
     
     `helm` becomes `microk8s helm3` 
 
-```
+```console
 $ kubectl get all
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 service/kubernetes   ClusterIP   10.43.0.1    <none>        443/TCP   2d19h
@@ -50,7 +50,7 @@ charts - effectively application bundles - setup with the code you need to run t
 
 You may have performed this step previously, but it is harmless to repeat, and is included
 here just in case you missed the instruction earlier.
-```
+```console
 $ helm repo add egeria https://odpi.github.io/egeria-charts 
 "egeria" already exists with the same configuration, skipping
 $ helm repo update
@@ -65,7 +65,7 @@ First we'll look at what charts are available:
     You'll see we use `--devel` on these commands. This retrieves the very latest, unreleased, versions of our charts.
     We're using this as they are still being written and updated. Very soon the charts will be published
     as new versions, and this parameter will be removed from the documentation.
-```
+```console
 $ helm search repo egeria --devel
 NAME                  	CHART VERSION     	APP VERSION	DESCRIPTION
 egeria/egeria-base    	3.4.1-prelease.3  	3.4        	Egeria simple deployment (platform, react UI)
@@ -81,7 +81,7 @@ This list will change as the Egeria team continue to develop these charts
 
 We'll now install a simple Egeria configuration:
 
-```
+```console
 $ helm install base egeria/egeria-base --devel
 NAME: base
 LAST DEPLOYED: Tue Jan 11 18:44:18 2022
@@ -113,7 +113,7 @@ join us on slack via https://http://slack.lfai.foundation
 
 We can see what pods we are running:
 
-```
+```console
 $ kubectl get pods
 NAME                                        READY   STATUS              RESTARTS   AGE
 egeria-base-presentation-76997fb899-r2fkj   0/1     ContainerCreating   0          3s
@@ -126,7 +126,7 @@ We can see from this output, that not all of our pods are ready. Before we conti
 all the pods are in **Running** state - this may take up to 10 minutes ie wait until
 everything is ready. After several minutes (up to 5), the output should look
 like this:
-```
+```console
 $ kubectl get pods
 NAME                                            READY   STATUS    RESTARTS   AGE
 egeria-base-presentation-76997fb899-r2fkj       1/1     Running   0          2m27s

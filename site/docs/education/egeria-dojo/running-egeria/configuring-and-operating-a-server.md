@@ -14,7 +14,7 @@ In this session we are going to configure the servers via the Egeria platform's 
 
 We are first going to clean up the Egeria environment you have already created:
 
-```
+```console
 $ helm list 
 NAME	NAMESPACE	REVISION	UPDATED                             	STATUS  	CHART                       	APP VERSION
 base	default  	1       	2022-01-11 18:50:08.591645 +0000 UTC	deployed	egeria-base-3.4.1-prelease.3	3.4
@@ -28,7 +28,7 @@ Keep repeating this last command until we finally see no pods remaining (may tak
 Now we'll install the same demo again, but this time we are going to set a parameter
 which prevents the servers being automatically configured, so that we can walk through
 this in the tutorial:
-```
+```console
 $ helm install base egeria/egeria-base --devel --set egeria.config=false
 LAST DEPLOYED: Fri Jan  7 16:36:20 2022
 NAMESPACE: default
@@ -64,7 +64,7 @@ join us on slack via https://http://slack.lfai.foundation
 
 As before, we must check everything is running ok before we continue, so repeat getting
 the status of the pods until all the pods are ready:
-```
+```console
 jonesn:~/ $ kubectl get pods                                                                                                           [16:38:23]
 NAME                                       READY   STATUS    RESTARTS      AGE
 egeria-base-presentation-d4c97645d-gm925   1/1     Running   0             2m12s
@@ -80,7 +80,7 @@ so now we'll do it by issuing REST API calls to configure.
 All of the containers were are running above are configured to output regular log messages to stdout.
 
 In order to view these logs from the command line with Kubernetes try commands such as:
-```
+```console
 $ kubectl logs egeria-base-platform-0
 Starting the Java application using /opt/jboss/container/java/run/run-java.sh ...
 INFO exec  java -XX:+UseParallelGC -XX:MinHeapFreeRatio=10 -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:+ExitOnOutOfMemoryError -XX:MaxMetaspaceSize=1g -cp "." -jar /deployments/server/server-chassis-spring-3.4.jar
@@ -116,7 +116,7 @@ This is done by a technique known as **port forwarding**. We can target either p
 mostly for simplicity as the names are more simple and stable.
 
 So first, let's see what services we have:
-```
+```console
 $ kubectl get services 
 NAME                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
 kubernetes                ClusterIP   10.43.0.1       <none>        443/TCP                      2d2h
@@ -130,7 +130,7 @@ base-platform             ClusterIP   10.43.169.147   <none>        9443/TCP    
 
 We could query these further to see which pods they point to, but for now let's carry on and setup a port forward:
 
-```
+```console
 $ kubectl port-forward service/base-platform 9443:9443
 Forwarding from 127.0.0.1:9443 -> 9443
 Forwarding from [::1]:9443 -> 9443
@@ -141,7 +141,7 @@ You'll note that this command does not terminate. It is only forwarding data whe
 If you are using a *nix type shell, you could run in the background (add '&' to the invocation). Alternatively just run in a new window
 
 We also want to do the same with the UI:
-```
+```console
 $ kubectl port-forward service/base-presentation 8091:8091
 Forwarding from 127.0.0.1:8091 -> 8091
 Forwarding from [::1]:8091 -> 8091

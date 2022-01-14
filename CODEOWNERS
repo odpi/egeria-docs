@@ -23,6 +23,10 @@ site/docs/connectors/repository/ibm-information-server/ @cmgrote
 
 site/docs/frameworks/ @mandy-chessell
 
+site/docs/education/egeria-dojo @davidradl
+site/docs/education/egeria-dojo/running-egeria/ @planetf1
+site/docs/education/egeria-dojo/developer/ @mandy-chessell
+
 site/docs/getting-started/ @mandy-chessell
 site/docs/getting-started/hands-on-lab/ @mandy-chessell @planetf1
 
@@ -31,6 +35,8 @@ site/docs/guides/developer/ @mandy-chessell @planetf1
 site/docs/guides/cts/ @cmgrote
 
 site/docs/introduction/ @mandy-chessell
+
+site/docs/operations/kubernetes/ @planetf1
 
 site/docs/release-notes/ @mandy-chessell @planetf1
 
@@ -53,3 +59,7 @@ site/docs/services/omas/asset-lineage/ @lcpopa @popa-raluca
 site/docs/services/omvs/ @davidradl
 
 site/docs/types/ @mandy-chessell
+
+site/docs/tutorials/docker-tutorial /  @planetf1
+site/docs/tutorials/open-metadata-labs/ @planetf1
+site/docs/tutorials/postman-tutorial / @mandy-chessell @planetf1

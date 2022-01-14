@@ -4,7 +4,7 @@
 The final session in day one of the Egeria Dojo is to use our Kubernetes helm charts to set up the infrastructure for Egeria's hands on labs.  These labs attempt to show a rich metadata environment in action, allowing you to experiment with different concepts and APIs.
 
 First, delete the Helm chart you used in the last part of the tutorial.
-```
+```console
 $ helm delete base
 ```
 

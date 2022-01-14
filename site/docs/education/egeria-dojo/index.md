@@ -41,7 +41,7 @@ The schedule also includes estimated times needed to complete each session. Do t
     - Installing a pre-configured Egeria environment
     - Configuring Egeria servers
     - Running Egeria jupyter based labs
-    - Using the Egeria React UI
+    - Using the Egeria Ecosystem UI (React UI)
       - *Time to complete* - 7 hours
       
     - *Outline*

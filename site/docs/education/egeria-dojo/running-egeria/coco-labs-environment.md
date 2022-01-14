@@ -92,7 +92,7 @@ From the above list of pods we can see
 
 * Four Egeria platforms (core, datalake, dev, factory) - the use of these will become clear when you start the tutorials
 * The Jupyter server for hosting our notebooks
-* The react UI (as you used earlier in this dojo)
+* The Egeria Ecosystem UI (as you used earlier in this dojo)
 * Kafka/Zookeeper for messaging, as provided by Strimzi
 * An additional UI - one lab will be using this
 

@@ -5,7 +5,8 @@
 Ensure that you have successfully completed the [Simple Install](../../simple-install.md).
 At this point you should have all your pods running.
 
-Firstly you will need to do a port forward
+To use the Ecosystem UI you will need to forward a port so that he browser can communicate with Egeria. 
+At a Terminal run:
 ```
 kubectl port-forward service/base-presentation 8091:8091
 ```
@@ -14,12 +15,12 @@ Leave that running.
 
 You need to use an up to date Chrome browser.
 
-* Login in a browser go to https://localhost:8091/org/login
+* In a browser go to https://localhost:8091/org/login
 You should now see a screen like this 
 ![Login screen](login-screen.png)
 
 *  login with userid <code>garygeeke</code> and password <code>admin</code>
-note the login details here are hard-coded for demonstration purposes.
+Note the login details here are hard-coded for demonstration purposes.
 You should now see a screen like this:
 ![Start Screen](initial-screen.png)
 
@@ -30,35 +31,35 @@ In order to write connectors, work with the internals of Egeria or just to under
 familiarise yourself with the types. There are hundreds of open types. The Type Explorer allows you to explore the types on a server.
 More information can be found in the [Type Explorer User Guide](../../../../guides/react-ui/tex-user-guide.md)
 
-### Using the type explorer
+### Using the Type Explorer
 * Click on the Type Explorer in the left navigation pane.
-* You will see one server called mds1. Click that and you should see:
+* You will see one server called **mds1**. Click that and you should see:
 ![Tex initial screen](tex-initial-screen.png)
 
 The screen shows a horizontal tree showing the entity hierarchy.
 
-* You may want to know more about a particular entity type. You do this by setting the focus on that type. You can do this by:
+* You may want to know more about a particular entity type. You do this by setting the focus on that type by:
    * clicking a node on the canvas. 
    or
-   * selecting an entity from the dropdown 
+   * selecting an entity type from the dropdown 
    Once an entity type has focus, it will be coloured blue and its properties will be displayed. 
    The properties of an entity type include attributes and its relationships. 
-* For this dojo try choosing an entity type - for example Asset. Notice you have see the Asset in a neighbourhood view, by changing the view.
-you should see
+* For this dojo try choosing an entity type - for example Asset.
+* You can toggle the view to neighbourhood view. After changing the view, you should see
   ![Tex asset neighbourhood](asset-neighbourhood-tex.png)
 The neighbourhood view centers around an entity type (in this case Asset) and shows it's possible relationships
 and the type of the entity at the other end of the relationship.
 
-There is a checkbox called <code>Enterprise</code>. When checked this shows an enterprise view of the types- i.e. the selected servers view of all the types it can see including
+There is a checkbox called <code>Enterprise</code>. When checked this shows an enterprise view of the types i.e. the selected servers view of all the types it can see, including
 types from other servers in its [cohorts](../../../../../services/omrs/cohort.md).
 
-The over time new releases of Egeria deprecate types. The deprecated types can still be used, but in time may be removed. Most of the time
-it is not useful to see the deprecated types. It is possible to use tex to explore deprecated types and attributes.
+Over time new releases of Egeria deprecate types. The deprecated types can still be used, but in time may be removed. Most of the time
+it is not useful to see the deprecated types. It is possible to use **Type Explorer** to explore deprecated types and attributes.
 There is a checkbox called <code>Include deprecated types</code> to include deprecated types.
 There is a checkbox called <code>Include deprecated attributes</code> to include deprecated attributes.
 
 ??? question "Test yourself"
-     * Can I find the attributes of the type GlossaryTerm using the type explorer?
+     * Can I find the attributes of the type GlossaryTerm using the Type Explorer?
      * Can I find the GlossaryTerm description? 
      * Why might a GlossaryTerm be useful?  
      * Can I find the possible relationships of the type GlossaryTerm using the type explorer?
@@ -71,8 +72,8 @@ More information can be found in the [Dino User Guide](/guides/react-ui/dino-use
 
 
 ### Using Dino
-* Click on the Glossary Author in the left navigation pane.
-* Choose platform and mds1. As you open sections on the left the operational landscape picture is
+* Click on the **Dino** in the left navigation pane.
+* Choose **platform** and **mds1**. As you open sections on the left navigation pane, the operational landscape picture is
 updated. Here is an example after I opened some sections.
   
 [dino](dino.png)
@@ -88,7 +89,7 @@ More information can be found in the [Glossary Author User Guide](../../../../gu
 ![Glossary Author initial screen](glossary-author-initial.png)
 * Glossaries contain Terms and Categories. This initial screen shows the list of all glossaries, in a system with no glossaries, we expect 
 this screen to be empty.
-* To create a glossary press the <button>+ button, follow the wizard - call it "testglossary1" on the first screen, and press the Create button then finished.
+* To create a glossary press the <button>+</button>, follow the wizard - call it "testglossary1" on the first screen, and press the <button>Create</button> when finished.
 * You should now see
 ![One glossary in card view](one-glossary-card.png)
 * toggle to see the table view
@@ -97,40 +98,40 @@ this screen to be empty.
 ![One selected glossary](one-selected-glossary.png)
 * you will notice that some action buttons have appeared at the top of the screen.
 * the first is to quickly create terms; quickly putting in names and descriptions of terms is 
-something that is useful as part of innovation/ planning sessions to get terms in quickly.
+something that is useful as part of innovation/ planning sessions to get terms defined quickly.
 Known issue: There is a formatting error in the response screen - this is tracked in [issue 325](https://github.com/odpi/egeria-react-ui/issues/325).
 The green ticks indicate that the terms have been created where there was a name.
 
-* Back on the glossary card screen, you will notice that there are other icons tpo the right of the quick terms, respectively they:
+* Back on the glossary card screen, you will notice that there are other icons to the right of the quick terms, respectively they are:
   
-   * shows the children of the glossary, any Terms of categories.
-     if you click on this you will see there are no categories. Switch to the Terms tab and there should be no terms.
-     ![4 terms](4 Terms in card.png)
+   * **Children** icon shows the children of the glossary, any **Terms** or **Categories**.
+      if you click on this you will see there are no **Categories**. Switch to the **Terms** tab and there should be no terms.
       * you can create terms using the <button>+</button> button.
    * edit allows you to update the glossary
    * canvas - this shows a canvas view of the glossary 
    * delete - this allows the glossary to be deleted- this will only work if there is no active content in the glossary.
 * Create 4 terms in the glossary, 
-   * Create terms called term1 and term 2 the Glossary children terms view using the <button>+</button>. create terms called term1 and term2.      
-   * Press the breadcrumb **Glossaries** switch to the Terms tab and use the the <button>+</button>. create terms called term3 and term4.
+   * Create terms called term1 and term2 in the Glossary children terms view using the <button>+</button>.       
+   * Press the breadcrumb **Glossaries** switch to the **Terms** tab and use the <button>+</button>. Create terms called term3 and term4.
+* You should see
+  ![4 terms](4 Terms in card.png)
 * Navigate to the glossary children and select a term (term4) in my example. Press the canvas button.
 ![term canvas](term canvas.png)
   You will notice that there is a node on the canvas that is selected and it's properties are displayed. 
 
-* On the canvas press the Explore button  
+* On the canvas press the <button>Explore</button>  
 ![pre traversal term](glossary-author-pretraversal.png)
 This screen shows you the relationships and nodes that this term is directly connected to. In this case the Term is connected to 
-a glossary via the TermAnchor relationship. We select all and should see
+a glossary via the TermAnchor relationship. <button>Select all</button> and should see
   ![2 nodes on canvas](glossary-author-2-nodes.png)
-* In this canvas view, you cannot delete the starting node, but you can use the other button to explore, create, update content.
-* Try pressing "Create Node", to create a term called term5. This ill be added to the canvas - you may need to scroll down to see this new
+* In this canvas view, you cannot delete the starting node, but you can use the other buttons to explore, create, update content.
+* Try pressing "Create Node", to create a term called term5. This will be added to the canvas - you may need to scroll down to see this new
 Term. You can drag content around the canvas as required.
 ![Term5 on Canvas](term5-on-canvas.png)
 Known issue : there is currently an issue with 'Create relationship', that it does not work . [issue 326](https://github.com/odpi/egeria-react-ui/issues/326) has been raised. 
 * Notice that you can use the breadcrumb to navigate back to previous screens
 * Notice on the card and table views there are paging controls to allow you to alter the number of elements displayed on the screen.
-* You can use the + button on the category tab to create a new category, and optionally specify a parent category. In this way you can 
-author a category hierarchy.
+* You can use the <button>+</button> button on the category tab to create a new category, and optionally specify a parent category. In this way you can author a category hierarchy.
 
 ??? question "Test yourself"
      In the glossary author:
@@ -157,10 +158,9 @@ text search restricted by types. More information can be found in the [Repositor
 If you have are running this UI on an empty system, there will be no entities in the system. If this is the case then you can 
 either run some of the notebooks to create Egeria content or use the glossary author user interface to create glossary content 
 you can then explore.
-<p>
-The following assumes you have created glossary with terms named **term1**  **term2** **term3** and **term4** , also a category called **cat1** with a child category **cat2** using the Glossary Author 
+The following assumes you have created glossary with terms named **term1**  **term2** **term3** and **term4**, also a category called **cat1** with a child category **cat2** using the Glossary Author 
 
-* select the server **mds1** search for dot star of type Glossary
+* select the server **mds1** search for '.*' with type Glossary
   ![rex glossary search](rex-search.png)
 * Click <button>Search for instances</button> You will see the search list showing one glossary
 ![rex glossary](pretraversal glossary.png)
@@ -179,10 +179,10 @@ You should see:
 
 Note that 
 
-* only the additional relationship was added
+* only the additional relationship was added (existing content is augmented, not replaced).
 * you can press <button>Undo</button> to undo the last traversal
 * you can press <button>History</button> to see the history.
-* by default later content is added down the canvas with the **timed based** layout. You can toggle the layout to Proximity-based; to see a layout based on proximity only.
+* by default later content is added down the canvas with the **Time-based** layout. You can toggle the layout to Proximity-based; to see a layout based on proximity only.
 * Nodes on the canvas can be dragged and pinned.
 * There is an **Enterprise** flag, when not set, only entities in a particular repository are shown, otherwise an enterprise view is used. 
 
@@ -191,7 +191,7 @@ Note that
      * What are the 3 sorts of Open Metadata Instances?
      * Can I create glossary term in the glossary author and then find it in Rex? Can I then find its associated glossary and see its guid?
      
-## Server author
+## Server Author
 The Server Author is an authoring UI to create new server configurations. This is currently being developed and 
 will support all the server types. In this dojo you will create a Access Store Server.  
 
@@ -206,7 +206,7 @@ More information can be found in the [Server Author User Guide](../../../../guid
 ![choose server type](access-store-server.png)
 * Click <button>Process to Basic</button>. Call the new server (Server Name) **dojo1** and add a Local user Id of **dojo1**.
 ![Basic screen](server-author-basic.png)
-* Click <button>Process to Repository</button> and choose **Non-temporal local Graph (janus) graph from the dropdown.
+* Click <button>Process to Repository</button> and choose **Non-temporal local Graph (janus) graph** from the dropdown.
 ![repo](janus-graph.png)
 * Click <button>Proceed to Event Bus</button> . This currently defaults, but will be customisable in the near future.
 * Click <button>Proceed to Cohorts</button> and add a name for the cohort you will use.
@@ -224,7 +224,7 @@ Then change the name to be json and the type from the dropdown to be Json. You c
 You will see the default console audit log and your new audit log destination. You can select an audit log and update it or delete it.   
 * Click <button>Proceed To Configured</button> then <button>Finished</button>
 You will not see your server in the list, as the Dojo is running on release 3.4, this issue is fixed in the latest [Egeria Ecosystem UI code](https://github.com/odpi/egeria-react-ui).
-* to see your server in the list, choose rex , then Server Author in the left navigation and you should see the new server
+* to see your server in the list, choose 'Repository Explorer' , then 'Server Author' in the left navigation pane and you should see the new server
 
 ![](./)
 ??? question "Test yourself"

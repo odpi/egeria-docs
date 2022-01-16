@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the ODPi Egeria project 2021. -->
+<!-- Copyright Contributors to the ODPi Egeria project 2022. -->
 
 # Introduction to the hands on labs
 The final session in day one of the Egeria Dojo is to use our Kubernetes helm charts to set up the infrastructure for Egeria's hands on labs.  These labs attempt to show a rich metadata environment in action, allowing you to experiment with different concepts and APIs.
 
-The scenario is based on a hypothetical pharmaceutical company known as 'Coco Pharmaceuticals'. When you
+The scenario is based on a hypothetical pharmaceutical company known as **Coco Pharmaceuticals**. When you
 start working through the labs you'll be able to read a lot more about their business & Egeria environment.
 
 These labs make use of a similar container-based environment to that you have used so far,
@@ -108,7 +108,7 @@ Forwarding from 127.0.0.1:8888 -> 8888
 Forwarding from [::1]:8888 -> 8888
 ```
 
-As you progress through the labs, if if you are interested in experimenting with postman, then you may need to setup port forwarding for other services too. If so, run each in the background, or in separate windows as they must continue running whilst you are working through the labs.
+As you progress through the labs, if you are interested in experimenting with postman, then you may need to setup port forwarding for other services too. If so, run each in the background, or in separate windows as they must continue running whilst you are working through the labs.
 
 # Start working on the labs
 
@@ -118,12 +118,15 @@ You should see a window similar to this:
 
 ![First Lab Notebook](/egeria-docs/education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
 
-In the navigator on the left of this Windows, navigate to the *read-me-first* and start following the instructions. We've tried to add lots of explanation at each stage to guide you through how Egeria can be used in a real environment.
+In the navigator on the left of this Windows, navigate to the **read-me-first** and start following the instructions. We've tried to add lots of explanation at each stage to guide you through how Egeria can be used in a real environment.
 
-There is more material to run in the Open metadata Labs than can be done in 30 minutes. The purpose of this session is to ensure that you can set up the environment so you can run it at you leisure when every you want to.
+There is more material to run in the Open metadata Labs than can be done in this dojo. The purpose of this session is to ensure that you can set up the environment so you can run it at you leisure when every you want to.
 
 In addition, these labs (like everything else in Egeria) is evolving rapidly so it is worth checking back from time to time to see what is new. This also means some of the labs are incomplete. Visit the slack channel to check if you get problems.
 
+## Next step
+
+Let's move on to a [summary](/egeria-docs/education/egeria-dojo/running-egeria/running-egeria-summary)
 
 
 --8<-- "snippets/abbr.md"

@@ -42,6 +42,8 @@ nav:
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
+              - Installing Kubernetes: guides/operations/kubernetes/k8s-install.md
+              - Useful Kubernetes commands: guides/operations/kubernetes/k8s-cmds.md
               - Introduction to Helm: guides/operations/kubernetes/helm.md
               - Charts:
                   - Base Egeria Chart: guides/operations/kubernetes/charts/base.md

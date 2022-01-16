@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the Egeria project 2020. -->
+<!-- Copyright Contributors to the Egeria project 2022. -->
 
 # Dojo Introduction
 
@@ -37,12 +37,12 @@ The schedule also includes estimated times needed to complete each session. Do t
     - *Required skills*: Familarity with *nix shell environment & editing files
     - *Topics*
     - Introduction to Egeria
-    - Installing prereq tools - Kubernetes & Postman
+    - Installing prerequisite tools - Kubernetes & Postman
     - Installing a pre-configured Egeria environment
     - Configuring Egeria servers
     - Running Egeria jupyter based labs
     - Using the Egeria Ecosystem UI (React UI)
-      - *Time to complete* - 7 hours
+    - *Time to complete* - 6 hours
       
     - *Outline*
     - Installing Kubernetes & Postman (1 hour)
@@ -52,7 +52,7 @@ The schedule also includes estimated times needed to complete each session. Do t
 
     !!! beginner "Summary (30 mins)"
 
-    [go directly to the 'running egeria' content](running-egeria/introduction.md)
+    [go directly to the 'running egeria' content](/egeria-docs/education/egeria-dojo/running-egeria/running-egeria-intro)
 
 ## Developer day summary
 

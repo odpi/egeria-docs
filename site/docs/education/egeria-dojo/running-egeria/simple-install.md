@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the ODPi Egeria project 2021. -->
+<!-- Copyright Contributors to the ODPi Egeria project 2022. -->
 
 # Installing Egeria for the first time
 
@@ -13,7 +13,7 @@ the Egeria concepts before you create your own environment.
 In the previous steps you installed Kubernetes and Helm.
 
 First we'll check that you still have the correct environment setup. If you get any errors, check back with the
-[Kubernetes documentation](/egeria-docs/guides/operations/kubernetes/).
+[Kubernetes documentation :material-dock-window:](/egeria-docs/guides/operations/kubernetes/){ target=docs } .
 
 You will likely only have single node if running a simple environment, but these commands should
 confirm you have connectivity to your Kubernetes cluster.
@@ -43,6 +43,7 @@ $
 !!! Info
     If using **microk8s** you may see a warning about the configuration file. This is normal with current versions of
     microk8s (at least on macOS, via Homebrew). There's no need to take action in a test emvironment.
+
 ## Checking which egeria charts are available
 
 We need to ensure your Kubernetes environment can access the Egeria chart repository. In this repository we have
@@ -141,11 +142,12 @@ $
 ## Explanation of what has been installed
 
 The install has created the following Egeria content:
- * egeria-base-presentation : a [Ecosystem UI for Egeria](https://github.com/odpi/egeria-react-ui).
- * egeria-base-platform : the [core Egeria platform](https://github.com/odpi/egeria).
- * egeria-base-config : A [script](https://github.com/odpi/egeria-charts/blob/main/charts/egeria-base/scripts/config-egeria.sh) that configures Egeria. Runs once, then exits.
 
-We also have several [Strimzi](https://strimzi.io) pods. These provide [Kafka](https://kafka.apache.org) support, which
+ * egeria-base-presentation : a [Ecosystem UI for Egeria :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=gh }.
+ * egeria-base-platform : the [core Egeria platform :material-dock-window:](https://github.com/odpi/egeria){ target=gh }.
+ * egeria-base-config : A [script :material-dock-window:](https://github.com/odpi/egeria-charts/blob/main/charts/egeria-base/scripts/config-egeria.sh){ target=gh } that configures Egeria. Runs once, then exits.
+
+We also have several [Strimzi :material-dock-window:](https://strimzi.io){ target=strimzi } pods. These provide [Kafka :material-dock-window:](https://kafka.apache.org){ target=strimzi } support, which
 is needed for different servers running on the Egeria platform to communicate.
 
 Egeria has been set-up with a default configuration as a demonstration.
@@ -159,9 +161,9 @@ As long as all the pods are ready, we know that:
  - charts can be retrieved and installed
  - Kubernetes is working
  - Egeria is running
- - Configuration of Egeria (which includes bringing up egeria servers) is successful
+ - Configuration of Egeria (which includes bringing up egeria servers) is successful.
 
-!!! tip
+## Next step
 
-    TODO: Think how the tutorial could be improved to show what has just been installed
+Let's move on to [configuring and operating a server](/egeria-docs/education/egeria-dojo/running-egeria/configuring-and-operating-a-server)
 --8<-- "snippets/abbr.md"

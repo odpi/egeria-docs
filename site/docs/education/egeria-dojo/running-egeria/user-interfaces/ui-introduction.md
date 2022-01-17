@@ -11,7 +11,7 @@ types of organization.
 capability and is using Egeria to integrate tools into their metadata repository plus add advanced features. It is for the general user.
 
 * **Egeria Ecosystem User Interface** This UI is a multi-tenanted persona based user interface; this user interface will be driven by
-the [community profile](../../../../services/omas/community-profile/overview.md) producing tailored experiences for the different personas and is focussed on supporting all aspects of an organization's metadata integration and governance needs. This user interface makes use of view servers and a thin presentation server. 
+the [community profile :material-dock-window:](/egeria-docs/services/omas/community-profile/overview){ target=docs } producing tailored experiences for the different personas and is focussed on supporting all aspects of an organization's metadata integration and governance needs. This user interface makes use of view servers and a thin presentation server. 
 
 ## Next step
 

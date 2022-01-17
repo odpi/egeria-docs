@@ -371,6 +371,10 @@ Start both servers and view their logs via Kubernetes - you should see that they
 Now use the commands in the `Egeria-repository-services-metadata-highway` to query information about
 the cohort from each server's perspective.
 
+## Using the ecosystem UI
+
+We will not explore the UI in this tutorial. we'll get into more detail on this configuration for your own deployments in a future dojo session.
+
 ## Next step
 
 Let's move on to [Coco Pharmacueticals](/egeria-docs/education/egeria-dojo/running-egeria/coco-labs-environment)

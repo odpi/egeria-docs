@@ -165,5 +165,6 @@ As long as all the pods are ready, we know that:
 
 ## Next step
 
-Let's move on to [configuring and operating a server](/egeria-docs/education/egeria-dojo/running-egeria/configuring-and-operating-a-server)
+Let's move on to the [Egeria UIs](/egeria-docs/education/egeria-dojo/running-egeria/user-interfaces/ui-introduction)
+
 --8<-- "snippets/abbr.md"

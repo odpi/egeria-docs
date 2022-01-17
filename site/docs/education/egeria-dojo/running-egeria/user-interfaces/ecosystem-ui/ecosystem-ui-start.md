@@ -1,35 +1,42 @@
 # Using the Egeria Ecosystem UI
 
-## Prerequisites
+With the simple environment we have set up, we can now start exploring the Egeria Ecosystem UI.
 
-Ensure that you have successfully completed the [Simple Install](../../simple-install.md).
-At this point you should have all your pods running.
+In later labs you can refer back to this documentation and try out the new with the new environment.
 
-To use the Ecosystem UI you will need to forward a port so that he browser can communicate with Egeria. 
+## Setting up connectivity to the UI
+
+To use the Ecosystem UI you will need to forward a port so that the browser can communicate with the Egeria Ecosystem UI application. 
+
 At a Terminal run:
-```
+```console
 kubectl port-forward service/base-presentation 8091:8091
 ```
-Leave that running.
-## Using the UI.
+Leave this running throughout this exploration of the UI.
+
+## Using the UI
 
 You need to use an up to date Chrome browser.
 
-* In a browser go to https://localhost:8091/org/login
+* In the browser go to [https://localhost:8091/org/login :material-dock-window:](https://localhost:8091/org/login){ target=ui }
+
 You should now see a screen like this 
 ![Login screen](login-screen.png)
 
-*  login with userid <code>garygeeke</code> and password <code>admin</code>
+* login with userid <code>garygeeke</code> and password <code>admin</code>
+
 Note the login details here are hard-coded for demonstration purposes.
+
 You should now see a screen like this:
+
 ![Start Screen](initial-screen.png)
 
 ## Type Explorer 
 
-Egeria has a rich set of [open types](../../../../types/) that are used by the [OMRS](../../../../services/omrs/). These types can be for entities, relationships and classifications.
+Egeria has a rich set of [open types :material-dock-window:](/egeria-docs/types/){ target=docs } that are used by the [OMRS :material-dock-window:](/egeria-docs/services/omrs/){ target=docs }. These types can be for entities, relationships and classifications.
 In order to write connectors, work with the internals of Egeria or just to understand the scope of Egeria, you may want to
 familiarise yourself with the types. There are hundreds of open types. The Type Explorer allows you to explore the types on a server.
-More information can be found in the [Type Explorer User Guide](../../../../guides/react-ui/tex-user-guide.md)
+More information can be found in the [Type Explorer User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/tex-user-guide){ target=docs }
 
 ### Using the Type Explorer
 * Click on the Type Explorer in the left navigation pane.
@@ -51,7 +58,7 @@ The neighbourhood view centers around an entity type (in this case Asset) and sh
 and the type of the entity at the other end of the relationship.
 
 There is a checkbox called <code>Enterprise</code>. When checked this shows an enterprise view of the types i.e. the selected servers view of all the types it can see, including
-types from other servers in its [cohorts](../../../../../services/omrs/cohort.md).
+types from other servers in its [cohorts :material-dock-window:](/egeria-docs/services/omrs/cohort){ target=docs }.
 
 Over time new releases of Egeria deprecate types. The deprecated types can still be used, but in time may be removed. Most of the time
 it is not useful to see the deprecated types. It is possible to use **Type Explorer** to explore deprecated types and attributes.
@@ -68,7 +75,7 @@ There is a checkbox called <code>Include deprecated attributes</code> to include
 ## Dino
 
 Dino allows you to explore the operational environment of the Egeria ecosystem. 
-More information can be found in the [Dino User Guide](/guides/react-ui/dino-user-guide.md)
+More information can be found in the [Dino User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/dino-user-guide){ target=docs }
 
 
 ### Using Dino
@@ -76,12 +83,14 @@ More information can be found in the [Dino User Guide](/guides/react-ui/dino-use
 * Choose **platform** and **mds1**. As you open sections on the left navigation pane, the operational landscape picture is
 updated. Here is an example after I opened some sections.
   
-[dino](dino.png)
-Known issue: [issue 327](https://github.com/odpi/egeria-react-ui/issues/327) viewing view server config : 
+![dino](dino.png)
+
+!!! note
+    Known issue: [issue 327 :material-dock-window:](https://github.com/odpi/egeria-react-ui/issues/327){ target=gh } viewing view server config : 
 
 ## Glossary Author
 
-More information can be found in the [Glossary Author User Guide](../../../../guides/react-ui/glossary-author-user-guide.md)
+More information can be found in the [Glossary Author User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/glossary-author-user-guide){ target=docs }
 
 ### Using the Glossary Author
 
@@ -99,7 +108,10 @@ this screen to be empty.
 * you will notice that some action buttons have appeared at the top of the screen.
 * the first is to quickly create terms; quickly putting in names and descriptions of terms is 
 something that is useful as part of innovation/ planning sessions to get terms defined quickly.
-Known issue: There is a formatting error in the response screen - this is tracked in [issue 325](https://github.com/odpi/egeria-react-ui/issues/325).
+
+!!! note
+    Known issue: There is a formatting error in the response screen - this is tracked in [issue 325 :material-dock-window:](https://github.com/odpi/egeria-react-ui/issues/325){ target=gh }.
+
 The green ticks indicate that the terms have been created where there was a name.
 
 * Back on the glossary card screen, you will notice that there are other icons to the right of the quick terms, respectively they are:
@@ -128,7 +140,10 @@ a glossary via the TermAnchor relationship. <button>Select all</button> and shou
 * Try pressing "Create Node", to create a term called term5. This will be added to the canvas - you may need to scroll down to see this new
 Term. You can drag content around the canvas as required.
 ![Term5 on Canvas](term5-on-canvas.png)
-Known issue : there is currently an issue with 'Create relationship', that it does not work . [issue 326](https://github.com/odpi/egeria-react-ui/issues/326) has been raised. 
+
+!!! note
+    Known issue : there is currently an issue with 'Create relationship', that it does not work . [issue 326 :material-dock-window:](https://github.com/odpi/egeria-react-ui/issues/326){ target=gh } has been raised. 
+
 * Notice that you can use the breadcrumb to navigate back to previous screens
 * Notice on the card and table views there are paging controls to allow you to alter the number of elements displayed on the screen.
 * You can use the <button>+</button> button on the category tab to create a new category, and optionally specify a parent category. In this way you can author a category hierarchy.
@@ -145,9 +160,9 @@ Known issue : there is currently an issue with 'Create relationship', that it do
      ??? hint
         ![categorised term](create Categorised term.png)
 ## Repository Explorer
-The Repository Explorer allows the user to explore [Open Metadata Instances](../../../../../concepts/open-metadata-instances.md) 
+The Repository Explorer allows the user to explore [Open Metadata Instances :material-dock-window:](/egeria-docs/concepts/open-metadata-instances){ target=docs }
 If you know the guid of an entity you can enter it and start exploring. More usefully you can start your exploration using a
-text search restricted by types. More information can be found in the [Repository Explorer User Guide](../../../../guides/react-ui/rex-user-guide.md)
+text search restricted by types. More information can be found in the [Repository Explorer User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/rex-user-guide){ target=docs }
 
 
 ### Using the Repository Explorer
@@ -195,7 +210,7 @@ Note that
 The Server Author is an authoring UI to create new server configurations. This is currently being developed and 
 will support all the server types. In this dojo you will create a Access Store Server.  
 
-More information can be found in the [Server Author User Guide](../../../../guides/react-ui/server-author-user-guide.md)
+More information will be found in the [Server Author User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/server-author-user-guide){ target=docs }, but this documentation is still in the process of being written.
 
 ### Using the Server Author
 
@@ -206,7 +221,7 @@ More information can be found in the [Server Author User Guide](../../../../guid
 ![choose server type](access-store-server.png)
 * Click <button>Process to Basic</button>. Call the new server (Server Name) **dojo1** and add a Local user Id of **dojo1**.
 ![Basic screen](server-author-basic.png)
-* Click <button>Process to Repository</button> and choose **Non-temporal local Graph (janus) graph** from the dropdown.
+* Click <button>Process to Repository</button> and choose **Non-temporal local Graph (Janus)** from the dropdown.
 ![repo](janus-graph.png)
 * Click <button>Proceed to Event Bus</button> . This currently defaults, but will be customisable in the near future.
 * Click <button>Proceed to Cohorts</button> and add a name for the cohort you will use.
@@ -223,7 +238,7 @@ Then change the name to be json and the type from the dropdown to be Json. You c
 ![Audit Log list](audit-log-list.png)
 You will see the default console audit log and your new audit log destination. You can select an audit log and update it or delete it.   
 * Click <button>Proceed To Configured</button> then <button>Finished</button>
-You will not see your server in the list, as the Dojo is running on release 3.4, this issue is fixed in the latest [Egeria Ecosystem UI code](https://github.com/odpi/egeria-react-ui).
+You will not see your server in the list, as the Dojo is running on release 3.4, this issue is fixed in the latest [Egeria Ecosystem UI code :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=gh }.
 * to see your server in the list, choose 'Repository Explorer' , then 'Server Author' in the left navigation pane and you should see the new server
 
 ![](./)
@@ -231,7 +246,10 @@ You will not see your server in the list, as the Dojo is running on release 3.4,
      * What is an Egeria OMAG Platform?
      * What is an Egeria OMAG Server?
      * What types of audit log destinations can be associated with a server?
-      
+
+## Next Step
+
+We will now continue looking at [Configuring and operating an Egeria server](/egeria-docs/education/egeria-dojo/running-egeria/configuring-and-operating-a-server)
 
 
 

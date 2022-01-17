@@ -149,11 +149,11 @@ nav:
               - Egeria introduction : education/egeria-dojo/running-egeria/egeria-introduction.md
               - Setup of the environment: education/egeria-dojo/running-egeria/setup-environment.md
               - Simple Install of Egeria: education/egeria-dojo/running-egeria/simple-install.md
-              - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
               - User Interfaces:
-                  - Introduction to the Egeria UIs : education/egeria-dojo/running-egeria/user-interfaces/ui-introduction.md
+                  - Introduction to the Egeria UIs: education/egeria-dojo/running-egeria/user-interfaces/ui-introduction.md
                   - Ecosystem UI:
-                      - Using the Egeria Ecosystem UI: education/egeria-dojo/running-egeria/user-interfaces/ecosystem-ui/ecosystem-ui-start.md
+                      - Using the Egeria Ecosystem UI: education/egeria-dojo/running-egeria/user-interfaces/ecosystem-ui/ecosystem-ui-start.md  -
+              - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
               - Coco Pharmaceuticals : education/egeria-dojo/running-egeria/coco-labs-environment.md
               - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/running-egeria-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md

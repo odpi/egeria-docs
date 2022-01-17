@@ -112,7 +112,7 @@ As you progress through the labs, if you are interested in experimenting with po
 
 # Start working on the labs
 
-Open up a web browser and go to http://localhost:8888
+Open up a web browser and go to [http://localhost:8888 :material-dock-window:](http://localhost:8888){ target=egeria }
 
 You should see a window similar to this:
 
@@ -123,6 +123,19 @@ In the navigator on the left of this Windows, navigate to the **read-me-first** 
 There is more material to run in the Open metadata Labs than can be done in this dojo. The purpose of this session is to ensure that you can set up the environment so you can run it at you leisure when every you want to.
 
 In addition, these labs (like everything else in Egeria) is evolving rapidly so it is worth checking back from time to time to see what is new. This also means some of the labs are incomplete. Visit the slack channel to check if you get problems.
+
+## Using the Ecosystem UI with Coco Labs
+
+As you work through the labs, you may also wish to explore the metadata instances, and server configuration that
+this more complex environment has setup.
+
+Make sure you are still running the required port forwarding for the ui
+```console
+kubectl port-forward base-presentation 8091:8091
+```
+and go to [https://localhost:8091/coco/login :material-dock-window:](https://localhost:8091/coco/login){ target=egeria } in your browser.
+
+You'll notice the URL is slightly different to before. This is because **coco** in the above URL refers to the organization configured in the UI deployment (how to set this up will be covered in a future dojo). For our simple install this defaulted to the name **org**.
 
 ## Next step
 

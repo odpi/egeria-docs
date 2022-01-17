@@ -116,7 +116,7 @@ Ensure when installing you specify at least 6GB RAM.
 
     Ensure you are familiar before using. See https://www.docker.com/pricing/faq 
 
-After installing, go into Docker Desktop **Settings** and select **Kubernetes**. Make sure **Enable Kubernetes** is checked. Also, under resources ensure at least 4GB is allocated to Docker.
+After installing, go into Docker Desktop **Settings** and select **Kubernetes**. Make sure **Enable Kubernetes** is checked. Also, under resources ensure at least 6GB is allocated to Docker.
 
 ## Cloud
 

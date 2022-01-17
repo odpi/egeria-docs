@@ -131,7 +131,7 @@ this more complex environment has setup.
 
 Make sure you are still running the required port forwarding for the ui
 ```console
-kubectl port-forward base-presentation 8091:8091
+kubectl port-forward service/base-presentation 8091:8091
 ```
 and go to [https://localhost:8091/coco/login :material-dock-window:](https://localhost:8091/coco/login){ target=egeria } in your browser.
 

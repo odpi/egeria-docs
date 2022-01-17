@@ -12,7 +12,7 @@ get it running in your environment, so that you can explore more in your own tim
 
 *Skills*: Familarity with *nix shell environment & editing files.
 
-*Hardware Requirements*: A networked MacOS, Windows, or Linux environment with at least 4Gb RAM & 12GB storage or remote access to an existing Kubernetes environment.
+*Hardware Requirements*: A networked MacOS, Windows, or Linux environment with at least 8GB RAM & 12GB storage or remote access to an existing Kubernetes environment.
 
 *Duration*: We expect this will take most of a day, around 6 hours - but you can continue in your own time if this is too much for one session.
 

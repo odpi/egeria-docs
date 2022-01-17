@@ -3,7 +3,7 @@
 
 # Open Metadata and Governance (OMAG) Server
 
-An *OMAG server* is a software server that runs inside the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform.md). It is therefore sometimes referred to as a "logical" server rather than a physical server that runs in its own process. It supports the integration of one or more technologies by hosting connectors that interact with that technology, or providing specialist [APIs](/egeria-docs/basic-concepts/#application-programming-interface-apis) or [event topics](/egeria-docs/basic-concepts/#topic) (both in and out).
+An *OMAG Server* is a software server that runs inside the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform.md). It is therefore sometimes referred to as a "logical" server rather than a physical server that runs in its own process. It supports the integration of one or more technologies by hosting connectors that interact with that technology, or providing specialist [APIs](/egeria-docs/basic-concepts/#application-programming-interface-apis) or [event topics](/egeria-docs/basic-concepts/#topic) (both in and out).
 
 Because of the wide variety of technologies deployed in organizations today, each with very different capabilities and needs, the integration and exchange of metadata needs to be organized. This organization is managed through the Egeria frameworks and services supported by the OMAG Servers. There are different types of OMAG Server, each supporting specific technologies. The OMAG Server ensures this type of technology is integrated appropriately for its needs.
 
@@ -11,7 +11,7 @@ The capabilities that are activated in an OMAG Server are defined in its [config
 
 ## Platform URL root
 
-An OMAG server's *platform URL root* is the network address of the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform.md) where the OMAG Server is going to run. This is often the host name of the computer or container where the platform runs plus the port number allocated to the OMAG Server Platform.
+An OMAG Server's *platform URL root* is the network address of the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform.md) where the OMAG Server is going to run. This is often the host name of the computer or container where the platform runs plus the port number allocated to the OMAG Server Platform.
 
 Its value is needed when creating clients or configuring services that will call the OMAG Server because it provides the root of the URL used to call the server's open metadata and governance REST calls, which have the following format in their URLs:
 
@@ -30,9 +30,10 @@ Most APIs in Egeria require both a [platform URL root](#platform-url-root) and a
 The types of OMAG Server are shown in Figure 1. The hierarchy groups similar types of server together.
 
 ![Figure 1](types-of-omag-servers.svg)
-> **Figure 1:** Types of OMAG server
+> **Figure 1:** Types of OMAG Server
 
 ??? question "Detailed explanation of diagram"
+
     The way to understand the diagram is that the arrows should be read as **IS A**.  For example, the *repository proxy **IS A** cohort member* and the *cohort member **IS A** OMAG Server*. This means that everything documented about a particular type of server is also true for all server types that point to it through the **IS A** arrow, all the way down the hierarchy.
 
     Object-oriented software engineers would know of this type of relationship as behavior inheritance.
@@ -54,10 +55,11 @@ The types of OMAG Server are shown in Figure 1. The hierarchy groups similar typ
 The different types of OMAG Servers connect together as illustrated in Figure 2. There is an inner ring of cohort members communicating via the cohort. Each cohort member is sharing the metadata they receive with the governance servers and view servers that connect to it. The governance servers connect out to external tools, engines and platforms.
 
 ![Figure 2](omag-server-ecosystem.svg)
-> **Figure 2:** The inter-connectivity between OMAG servers
+> **Figure 2:** The inter-connectivity between OMAG Servers
 
 
 !!! education "Further information"
+
     The configuration for an OMAG Server is defined in a [configuration document](/egeria-docs/concepts/configuration-document).
     This configuration document is stored by a [configuration document store connector](/egeria-docs/concepts/configuration-document/#storage).
 

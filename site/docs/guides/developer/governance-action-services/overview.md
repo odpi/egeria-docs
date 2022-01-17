@@ -12,5 +12,7 @@ A governance action service is passed a context as it is started. This provides 
 ![Structure of the governance context](governance-context.svg)
 
 This context is then specialized for each type of governance action service. Details of the specific context for each service can be found in the links to the various governance action service types.         
-  
+
+The definition of the connector interfaces for governance action services is defined in the [governance-action-framework :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/frameworks/governance-action-framework) module.
+ 
 --8<-- "snippets/abbr.md"

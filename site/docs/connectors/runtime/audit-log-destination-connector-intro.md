@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-The audit log destination connector implements a common interface to an audit log destination.  It is used by the *[Audit Log](/egeria-docs/concepts/audit-log)* to pass audit log records to various locations either to store, process or distribute further.
+The [audit log destination connector](/egeria-docs/concepts/audit-log-destination-connector) implements a common interface to an audit log destination.  It is used by the *[Audit Log](/egeria-docs/concepts/audit-log)* to pass audit log records to various locations either to store, process or distribute further.
 
 ![Audit Log Destination Connector](/egeria-docs/connectors/runtime/audit-log-destination-connector.svg)
 

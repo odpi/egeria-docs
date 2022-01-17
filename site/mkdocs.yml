@@ -42,6 +42,8 @@ nav:
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
+              - Installing Kubernetes: guides/operations/kubernetes/k8s-install.md
+              - Useful Kubernetes commands: guides/operations/kubernetes/k8s-cmds.md
               - Introduction to Helm: guides/operations/kubernetes/helm.md
               - Charts:
                   - Base Egeria Chart: guides/operations/kubernetes/charts/base.md
@@ -105,12 +107,12 @@ nav:
                       - Open Metadata Topic:
                             - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
       - User Interfaces:
-          - Egeria React UI:
-              - Type Explorer (TEX): guides/react-ui/tex-user-guide.md
-              - Resource Explorer (REX): guides/react-ui/rex-user-guide.md
-              - Dino: guides/react-ui/dino-user-guide.md
-              - Glossary author: guides/react-ui/glossary-author-user-guide.md
-              - Server author: guides/react-ui/server-author-user-guide.md
+          - Egeria Ecosystem UI:
+              - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
+              - Resource Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
+              - Dino: guides/ecosystem-ui/dino-user-guide.md
+              - Glossary author: guides/ecosystem-ui/glossary-author-user-guide.md
+              - Server author: guides/ecosystem-ui/server-author-user-guide.md
       - Features:
           - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md
@@ -134,59 +136,28 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - User Interfaces:
       - User Interface overview: user-interfaces/index.md
-      - Egeria React User Interface:
-          - Egeria React UI Overview: user-interfaces/react/index.md
-          - Planning checklist: user-interfaces/react/react-ui-planning-checklist.md
-          - Planning: user-interfaces/react/react-ui-planning.md
-          - Configure and run presentation server : user-interfaces/react/configure-and-run-presentation-server.md
+      - Egeria Ecosystem User Interface:
+          - Egeria Ecosystem UI Overview: user-interfaces/ecosystemindex.md
+          - Planning checklist: user-interfaces/ecosystem/ecosystem-ui-planning-checklist.md
+          - Planning: user-interfaces/ecosystem/ecosystem-ui-planning.md
+          - Configure and run presentation server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
   - Learning:
       - Learning Overview: education/index.md
       - Webinars: education/webinar-program/overview.md
-      - Existing Dojo:
-          - Dojo Introduction: getting-started/dojo/index.md
-          - Day 1:
-              - Egeria Introduction: getting-started/dojo/egeria-dojo-day-1-1-introduction.md
-              - Egeria Project Introduction: getting-started/dojo/egeria-dojo-day-1-2-project-introduction.md
-              - Running Egeria:
-                - Overview: getting-started/dojo/egeria-dojo-day-1-3-running-egeria.md
-                - Platform Setup and Configuration:
-                  - Overview: getting-started/dojo/egeria-dojo-day-1-3-1-platform-set-up-and-configuration.md
-                  - Prerequisites: getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md
-                  - Configuring the Platform: getting-started/dojo/egeria-dojo-day-1-3-1-2-configuring-the-platform.md
-                  - Confiiguring a Server: getting-started/dojo/egeria-dojo-day-1-3-1-3-configuring-a-server.md
-                - Running Metadata Access Servers:
-                  - Overview: getting-started/dojo/egeria-dojo-day-1-3-2-running-metadata-servers.md
-                  - Starting Server: getting-started/dojo/egeria-dojo-day-1-3-2-1-starting-the-server.md
-                  - Calling Server API: getting-started/dojo/egeria-dojo-day-1-3-2-2-calling-server-api.md
-                  - Working with Archives: getting-started/dojo/egeria-dojo-day-1-3-2-3-working-with-archives.md
-                  - Second Server: getting-started/dojo/egeria-dojo-day-1-3-2-4-second-server.md
-                - Running Metadata Ecosystems:
-                  - Overview: getting-started/dojo/egeria-dojo-day-1-3-3-running-metadata-ecosystems.md
-                  - Running User Interfaces: getting-started/dojo/egeria-dojo-day-1-3-3-1-running-ui.md
-                  - Running Governance Servers: getting-started/dojo/egeria-dojo-day-1-3-3-2-running-governance-servers.md
-                  - Running Kubernetes and Labs: getting-started/dojo/egeria-dojo-day-1-3-3-3-kubernetes-and-labs.md
-              - Participating in the Community: getting-started/dojo/egeria-dojo-day-1-4-participating-in-the-community.md
-          - Day 2:
-              - Open Source Philosophy: getting-started/dojo/egeria-dojo-day-2-1-open-source-philosophy.md
-              - Tools for Contributors: getting-started/dojo/egeria-dojo-day-2-2-tools-for-contributors.md
-              - Contributing to Egeria: getting-started/dojo/egeria-dojo-day-2-3-contribution-to-egeria.md
-              - Type of Contribution: getting-started/dojo/egeria-dojo-day-2-4-types-of-contribution.md
-              - Becoming a Contributor: getting-started/dojo/egeria-dojo-day-2-5-becoming-a-contributor.md
-          - Day 3:
-              - Becoming an Advocate: getting-started/dojo/egeria-dojo-day-3-1-becoming-an-advocate.md
-              - Becoming a Maintainer: getting-started/dojo/egeria-dojo-day-3-2-becoming-a-maintainer.md
-              - Egeria Architecture: getting-started/dojo/egeria-dojo-day-3-3-egeria-architecture.md
-              - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
-      - New Dojo (In Development):
+      - Dojo (Jan 2022):
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
-              - Introduction to 'Running Egeria' day: education/egeria-dojo/running-egeria/introduction.md
+              - Introduction to 'Running Egeria' day: education/egeria-dojo/running-egeria/running-egeria-intro.md
+              - Egeria introduction : education/egeria-dojo/running-egeria/egeria-introduction.md
               - Setup of the environment: education/egeria-dojo/running-egeria/setup-environment.md
-              - Simple Install of Egeria : education/egeria-dojo/running-egeria/simple-install.md
+              - Simple Install of Egeria: education/egeria-dojo/running-egeria/simple-install.md
+              - User Interfaces:
+                  - Introduction to the Egeria UIs: education/egeria-dojo/running-egeria/user-interfaces/ui-introduction.md
+                  - Ecosystem UI:
+                      - Using the Egeria Ecosystem UI: education/egeria-dojo/running-egeria/user-interfaces/ecosystem-ui/ecosystem-ui-start.md
               - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
               - Introduction to the Egeria UIs : education/egeria-dojo/running-egeria/ui-introduction.md
               - Open metadata labs : education/egeria-dojo/running-egeria/coco-labs-environment.md
-              - Using additional connectors : education/egeria-dojo/running-egeria/using-additional-connectors.md
               - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/day-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
@@ -209,6 +180,41 @@ nav:
       - Scenarios:
           - Data Manager Integration: scenarios/data-manager-integration/overview.md
           - File Lineage: scenarios/file-lineage/overview.md
+      - Old Dojo (deprecated):
+            - Dojo Introduction: getting-started/dojo/index.md
+            - Day 1:
+                  - Egeria Introduction: getting-started/dojo/egeria-dojo-day-1-1-egeria-introduction.md
+                  - Egeria Project Introduction: getting-started/dojo/egeria-dojo-day-1-2-project-egeria-introduction.md
+                  - Running Egeria:
+                        - Overview: getting-started/dojo/egeria-dojo-day-1-3-running-egeria.md
+                        - Platform Setup and Configuration:
+                              - Overview: getting-started/dojo/egeria-dojo-day-1-3-1-platform-set-up-and-configuration.md
+                              - Prerequisites: getting-started/dojo/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites.md
+                              - Configuring the Platform: getting-started/dojo/egeria-dojo-day-1-3-1-2-configuring-the-platform.md
+                              - Confiiguring a Server: getting-started/dojo/egeria-dojo-day-1-3-1-3-configuring-a-server.md
+                        - Running Metadata Access Servers:
+                              - Overview: getting-started/dojo/egeria-dojo-day-1-3-2-running-metadata-servers.md
+                              - Starting Server: getting-started/dojo/egeria-dojo-day-1-3-2-1-starting-the-server.md
+                              - Calling Server API: getting-started/dojo/egeria-dojo-day-1-3-2-2-calling-server-api.md
+                              - Working with Archives: getting-started/dojo/egeria-dojo-day-1-3-2-3-working-with-archives.md
+                              - Second Server: getting-started/dojo/egeria-dojo-day-1-3-2-4-second-server.md
+                        - Running Metadata Ecosystems:
+                              - Overview: getting-started/dojo/egeria-dojo-day-1-3-3-running-metadata-ecosystems.md
+                              - Running User Interfaces: getting-started/dojo/egeria-dojo-day-1-3-3-1-running-ui.md
+                              - Running Governance Servers: getting-started/dojo/egeria-dojo-day-1-3-3-2-running-governance-servers.md
+                              - Running Kubernetes and Labs: getting-started/dojo/egeria-dojo-day-1-3-3-3-kubernetes-and-labs.md
+                  - Participating in the Community: getting-started/dojo/egeria-dojo-day-1-4-participating-in-the-community.md
+            - Day 2:
+                  - Open Source Philosophy: getting-started/dojo/egeria-dojo-day-2-1-open-source-philosophy.md
+                  - Tools for Contributors: getting-started/dojo/egeria-dojo-day-2-2-tools-for-contributors.md
+                  - Contributing to Egeria: getting-started/dojo/egeria-dojo-day-2-3-contribution-to-egeria.md
+                  - Type of Contribution: getting-started/dojo/egeria-dojo-day-2-4-types-of-contribution.md
+                  - Becoming a Contributor: getting-started/dojo/egeria-dojo-day-2-5-becoming-a-contributor.md
+            - Day 3:
+                  - Becoming an Advocate: getting-started/dojo/egeria-dojo-day-3-1-becoming-an-advocate.md
+                  - Becoming a Maintainer: getting-started/dojo/egeria-dojo-day-3-2-becoming-a-maintainer.md
+                  - Egeria Architecture: getting-started/dojo/egeria-dojo-day-3-3-egeria-architecture.md
+                  - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
   - Contributing:
       - Community Guide: guides/community.md
       - Project Operations: guides/project-operations.md
@@ -675,6 +681,7 @@ theme:
   language: en
   custom_dir: overrides
   features:
+    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.top

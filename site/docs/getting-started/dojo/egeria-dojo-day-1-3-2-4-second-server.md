@@ -5,7 +5,7 @@
 
 # Creating a second server and connecting via a cohort
 
-Metadata servers can exchange metadata via open metadata repository cohorts.
+Metadata servers can exchange metadata via open metadata repository cohorts. 
 In this session you will learn how to connect two servers via a cohort.
 But first you need to create a second server.
 

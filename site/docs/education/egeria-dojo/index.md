@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the Egeria project 2020. -->
+<!-- Copyright Contributors to the Egeria project 2022. -->
 
 # Dojo Introduction
 
@@ -29,24 +29,31 @@ The schedule also includes estimated times needed to complete each session. Do t
 
 ## Running Egeria day summary
 
-The following outline is still in development.
-
-To continue to see the day's content as it's being developed please [go directly to the 'running egeria' content](running-egeria/introduction.md)
-
 !!! education "Running Egeria Day"
-    After completing this day of the dojo you should feel comfortable with setting up and running the Egeria technology. It includes sessions on the prerequisite technology that Egeria uses, how to configure Egeria, how to start and stop various capabilities and well as diagnosing any problems you may come across.
 
-    
-    !!! beginner "Egeria introduction (30 mins)"
+    - *Audience*: Anyone who wants to run Egeria 
+    - *Objectives*: This day provides an introduction to running Egeria.
+    - *Prerequisites*: none.
+    - *Required skills*: Familarity with *nix shell environment & editing files
+    - *Topics*
+    - Introduction to Egeria
+    - Installing prerequisite tools - Kubernetes & Postman
+    - Installing a pre-configured Egeria environment
+    - Using the Ecosystem UI
+    - Configuring Egeria servers
+    - Running Egeria jupyter based labs
+    - Using the Egeria Ecosystem UI (React UI)
+    - *Time to complete* - 7 hours
+      
+    - *Outline*
+    - Installing Kubernetes & Postman (1 hour)
+    - Simple pre-built egeria configuration" (0.5 hours)
+    - Configuring Servers (2 hours)
+    - Coco Pharmaceutical labs (1.5 hours)
 
-    !!! beginner "Egeria project introduction (30 mins)"
+    !!! beginner "Summary (30 mins)"
 
-    ???+ intermediate "Running Egeria on your machine, step-by-step (5 hrs)"
-        !!! intermediate "Platform setup and configuration (90 mins)"
-        !!! intermediate "Running metadata servers (2 hours)"
-        !!! advanced "Running metadata ecosystems (90 mins)"
-
-    !!! beginner "Participating in the community (30 mins)"
+    [go directly to the 'running egeria' content](/egeria-docs/education/egeria-dojo/running-egeria/running-egeria-intro)
 
 ## Developer day summary
 

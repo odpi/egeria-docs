@@ -12,6 +12,6 @@ Egeria has two user interfaces.
 
 | User Interface Name | Description |
 |---|---|
-| [Egeria React UI](react) | a multi tenant React based User interface with infrastructure tooling and solutions capabilities.   
-| Egeria UI | todo | 
+| [Egeria Ecosystem UI](ecosystem) | a multi tenant React based User interface with infrastructure tooling and solutions capabilities.   
+| Egeria General UI | todo | 
 

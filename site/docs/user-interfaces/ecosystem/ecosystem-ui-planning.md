@@ -1,6 +1,6 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
-# Egeria React UI Planning
+# Egeria Ecosystem (React) UI Planning
 
 ## UI capability types
 

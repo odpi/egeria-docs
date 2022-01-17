@@ -2,7 +2,6 @@
 
 The Dino interface provides a way to visualize Egeria platforms, servers, the services they are running and the cohorts they have joined. The information is presented both textually (on the left side) and diagrammatically (on the right side).
 
-
 ### Using the Dino Interface
 When the Dino interface first loads, it sends a request to the Dino View Service to load the configured platform and server resources. The platforms are loaded into the `Accessible Platforms` selector at the top of the page. The servers are loaded into the `Direct Server Links` selector at the top of the page.
 

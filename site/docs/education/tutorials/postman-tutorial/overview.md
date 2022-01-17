@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the ODPi Egeria project 2020. -->
+<!-- Copyright Contributors to the ODPi Egeria project 2022. -->
 
 # Postman
 
-Postman provides an interactive application for issuing [REST APIs](https://en.wikipedia.org/wiki/Representational_state_transfer) calls to a server and reviewing responses.
+Postman provides an interactive application for issuing [REST APIs :material-dock-window:](https://en.wikipedia.org/wiki/Representational_state_transfer){ target=wp } calls to a server and reviewing responses.
 
 Basically a REST API is an application program interface (API) that uses HTTP requests to GET, PUT, POST and DELETE data.  The call is made using a URL - just like requesting a web page from your browser.  In fact, when you request a web page from your browser, the browser is issuing a GET HTTP request for the page.
 
@@ -21,9 +21,9 @@ go into settings->general and turn off 'SSL certificate verification' or request
 
 ## Setting up Postman 
 
-Postman is a [free download](https://www.getpostman.com/) with optional enterprise licenses for teams.  It includes a wide variety of [tutorials](https://learning.getpostman.com/concepts/) to help you go from novice to expert.  Familiarity with Postman will help you get the most value from the Egeria tutorials.
+Postman is a [free download :material-dock-window:](https://www.getpostman.com/){ target=pm } with optional enterprise licenses for teams.  It includes a wide variety of [tutorials :material-dock-window:](https://learning.getpostman.com/concepts/){ target=pm } to help you go from novice to expert.  Familiarity with Postman will help you get the most value from the Egeria tutorials.
 
-Install Postman from [the Postman downloads site](https://www.getpostman.com/downloads/). At the time of writing 5.9.0 is  current and recommended.
+Install Postman from [the Postman downloads site :material-dock-window:](https://www.getpostman.com/downloads/){ target=pm }. At the time of writing 5.9.0 is  current and recommended.
 
 Once Postman is installed, start up the application.  You should see an initial page something like this:
 
@@ -95,6 +95,6 @@ Postman is now ready to be used with egeria. Refer back to the tutorials for spe
 examples, or experiment!
 
 Instructions for contributing new Postman collections
-are located in the [developer-resources](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis).
+are located in the [developer-resources :material-dock-window:](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis){ target=docs} .
 
 --8<-- "snippets/abbr.md"

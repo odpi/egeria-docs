@@ -37,9 +37,13 @@ kubectl delete pod <pod-id>
 
 !!! cli "setup port forwarding for a pod"
 ```console
-kubectl port-forward <pod-id> <local-port>:<remote-port>
+kubectl port-forward pod/<pod-id> <local-port>:<remote-port>
 ```
 
+!!! cli "setup port forwarding for a service"
+```console
+kubectl port-forward service/<pod-id> <local-port>:<remote-port>
+```
 
 
 ---8<-- "snippets/abbr.md"

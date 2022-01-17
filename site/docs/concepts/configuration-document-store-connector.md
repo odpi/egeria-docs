@@ -3,4 +3,6 @@
 
 # Configuration Document Store Connector
 
+---8<-- "docs/connectors/runtime/configuration-document-store-connector-intro.md"
+
 --8<-- "snippets/abbr.md"

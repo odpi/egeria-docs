@@ -12,7 +12,7 @@ To further explain some key concepts of Egeria, let us delve deeper into an exam
 
 A cohort[^1] can support information exchange among many metadata servers: both internal to Egeria and third party. A cohort is a group of servers that are exchanging metadata using a peer-to-peer replication protocol and federated queries.
 
-The cohort is self-configuring. At the core it is between one and four shared topics. Each server publishes a registration request on the appropriate topic when they want to join. This is picked up by the existing members who add this new server to their [registry of members](/egeria-docs/concept/cohort-registry-store) and re-send their registration through the same topic to allow the new member to build up its own registry of cohort members.
+The cohort is self-configuring. At the core it is between one and four shared topics. Each server publishes a registration request on the appropriate topic when they want to join. This is picked up by the existing members who add this new server to their [registry of members](/egeria-docs/concepts/cohort-registry) and re-send their registration through the same topic to allow the new member to build up its own registry of cohort members.
 
 !!! tip "There is no central cohort controller"
     Note that there is no central cohort control or coordination logic: the registration and so on are all handled in a peer-to-peer manner with each participant communicating with all other participants.  The [cohort operations](/egeria-docs/features/cohort-operation/overview) feature describes the protocol in more detail.

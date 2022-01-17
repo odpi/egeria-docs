@@ -8,13 +8,13 @@ a [configuration document](/egeria/concepts/configuration-document).
 
 ![Configuration for an integration daemon](integration-daemon-config.svg)
 
---8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
+--8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
 
---8<-- "snippets/tasks/configuring-the-audit-log.md"
+--8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
 
---8<-- "snippets/tasks/configuring-the-server-security-connector.md"
+--8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md"
 
---8<-- "snippets/tasks/configuring-the-integration-services.md"
+--8<-- "docs/guides/admin/servers/configuring-the-integration-services.md"
 
 ## Further information
 

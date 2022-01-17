@@ -1,16 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-# Governance Action Service
+A governance action service is a specialized [connector](/egeria-docs/concepts/connector) that performs monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities on request.  It runs in the [Governance Action Open Metadata Engine Service (OMES)](/egeria-docs/services/omes/governance-action) hosted by the [Engine Host OMAG Server](/egeria-docs/concepts/engine-host).
 
-A governance action service is a specialized [connector](/egeria-docs/concepts/connector)
-that performs monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities on request.
-
-A governance action service is passed a context as it is started. This provides access to the request type and associated parameters (name-value pairs) used to invoke the governance action service, along with a client to access open metadata through the Governance Engine OMAS.
-
-![Structure of the governance context](governance-context.svg)
-
-This context is then specialized for each type of governance action service. Details of the specific context for each service can be found in the links to the various governance action service types.         
+![Governance Action Service](/egeria-docs/connectors/governance-action-service.svg)
 
 There are five types of governance action services:
   
@@ -25,7 +18,7 @@ There are five types of governance action services:
   
 * **[Triage Governance Service](/egeria-docs/guides/developer/governance-action-services/triage-governance-service)** runs triage rules to determine how to manage a situation or request.
   Often this involves a human decision maker.   It may initiate an external workflow, wait for manual
-  decision or create a **To Do** for a specific person.
+  decision or create a *[To Do](/egeria-docs/concepts/to-do)* for a specific person.
   
 * **[Remediation Governance Service](/egeria-docs/guides/developer/governance-action-services/remediation-governance-service)** makes updates to metadata elements, relationships between them
   and classifications. Examples of remediation governance action services are duplicate linking and consolidating.

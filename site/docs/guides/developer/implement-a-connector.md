@@ -1,15 +1,12 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Develop a Connector
-
-When you want to connect to a tool or system from an existing service, you need to create an open connector for that tool or system. For example, you might want to connect a new metadata repository into Egeria, or connect Egeria with a new data processing engine.
 
 To write an open connector you need to complete four steps:
 
 1. Identify the properties for the [connection](/egeria-docs/concepts/connection).
 2. Write the [connector provider](/egeria-docs/concepts/connector-provider).
-3. Understand the interface the connector needs to implement.
+3. Understand the interface that the connector needs to implement and the support provided by its base class.
 4. Write the [connector](/egeria-docs/concepts/connector) itself.
 
 All the code you write to implement these should exist in its own module, and as illustrated by the examples could even be in its own independent code repository. Their implementation will have dependencies on Egeria's:
@@ -19,21 +16,16 @@ All the code you write to implement these should exist in its own module, and as
 - Specific interfaces used by the type of connector
 
 !!! tip "No dependency on Egeria's OMAG Server Platform"
-    Note that there is no dependency on Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) for these specific connector implementations: they could run in another runtime that supported the connector APIs.
+    Note that there is no dependency on Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) for these specific connector implementations: they could run in another runtime that supported the connector APIs.  In fact, even the Egeria interface modules should not be embedded in your jar file to allow your connector to run on any version of the OMAG Server Platform that supports your connector.
 
 ## Identify connection properties
 
-Begin by identifying and designing the properties needed to connect to your tool or system. These will commonly include a network address, protocol, and user credentials, but could also include other information.
+Begin by identifying and designing the properties needed to connect to your tool or system. These will commonly include a network address, protocol, and user credentials, but could also include other information that can be stored in the configuration properties of the connection.
 
 ## Code the connector provider
 
-The [connector provider](/egeria-docs/concepts/connector-provider) is a simple Java factory that implements the creation of the connector type it can instantiate using:
-
-- a GUID for the [connector type](/egeria-docs/concepts/connector-type)
-- a name for the connector type
-- a description of what the connector is for and how to configure it
-- the connector class it instantiates
-- a list of the additional properties, configuration properties and secured properties needed to configure instances of the connector
+--8<-- "docs/guides/developer/connector-provider-into.md"
+--8<-- "docs/guides/developer/implemented-a-connector-provider.md"
 
 !!! example "Example: connector provider for IBM DataStage"
     For example, the [`DataStageConnectorProvider` :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/master/datastage-adapter/src/main/java/org/odpi/egeria/connectors/ibm/datastage/dataengineconnector/DataStageConnectorProvider.java){ target=gh } is used to instantiate connectors to IBM DataStage data processing engines. Therefore, its name and description refer to DataStage, and the connectors it instantiates are [`DataStageConnector`s :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/master/datastage-adapter/src/main/java/org/odpi/egeria/connectors/ibm/datastage/dataengineconnector/DataStageConnector.java){ target=gh }.

@@ -8,11 +8,7 @@ hide:
 
 # Connector Broker
 
-The Connector Broker is the factory class for all [open connectors](connector.md).
-Given a valid [Connection](connection.md) object, the
-Connector Broker is able to create a new instance of a connector.
-This means the caller does not need to know the implementation
-details of the connector - just its interface.
+The *Connector Broker* is the factory class for all [open connectors](/egeria-docs/concepts/connector).  Given a valid [Connection](/egeria-docs/concepts/connection) object, the Connector Broker is able to create a new instance of a connector.  This means the caller does not need to know the implementation details of the connector - just its interface.
 
 It is implemented in the following Java class:
 
@@ -32,15 +28,11 @@ ConnectorBroker   connectorBroker     = new ConnectorBroker();
 Connector         connector           = connectorBroker.getConnector(connection);
 ```
 
-When the connector instance is requested, the Connector Broker uses the ConnectorType properties
-from the supplied Connection to identify the appropriate [Connector Provider](connector-provider.md).
-The Connector Broker delegates the connector instance request to the Connector Provider and returns
-the result to its caller.
+When the connector instance is requested, the Connector Broker uses the ConnectorType properties from the supplied Connection to identify the appropriate [Connector Provider](connector-provider.md).  The Connector Broker delegates the connector instance request to the Connector Provider and returns the result to its caller.
 
 ## Use of the Connector Broker in Egeria
 
-The Connector Broker is used in the client code of the Open Metadata Access Services (OMASs) that provide
-connector instances to their consumers.  Examples include:
+The Connector Broker is used in the client code of the Open Metadata Access Services (OMASs) that provide connector instances to their consumers.  Examples include:
 
 * [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview)
 * [Asset Owner OMAS](./egeria-docs/services/omas/asset-owner/overview)

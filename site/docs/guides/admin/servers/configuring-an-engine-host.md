@@ -105,12 +105,12 @@ a [configuration document](/egeria-docs/concepts/configuration-document).
     }
     ```
 
---8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
+--8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
 
---8<-- "snippets/tasks/configuring-the-audit-log.md"
+--8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
 
---8<-- "snippets/tasks/configuring-the-server-security-connector.md"
+--8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md"
 
---8<-- "snippets/tasks/configuring-the-engine-host-services.md"
+--8<-- "docs/guides/admin/servers/configuring-the-engine-host-services.md"
 
 --8<-- "snippets/abbr.md"

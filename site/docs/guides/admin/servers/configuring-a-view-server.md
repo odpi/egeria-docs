@@ -8,12 +8,12 @@ a [configuration document](/egeria-docs/concepts/configuration-document).
 
 ![Configuration for a view server](view-server-config.svg)
 
---8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
+--8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
 
---8<-- "snippets/tasks/configuring-the-audit-log.md"
+--8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
 
---8<-- "snippets/tasks/configuring-the-server-security-connector.md"
+--8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md"
 
---8<-- "snippets/tasks/configuring-the-view-services.md"
+--8<-- "docs/guides/admin/servers/configuring-the-view-services.md"
 
 --8<-- "snippets/abbr.md"

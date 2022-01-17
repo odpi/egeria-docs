@@ -14,22 +14,22 @@ servers:
 
 ![Connected metadata access store](connected-metadata-access-store-config.svg)
 
---8<-- "snippets/tasks/configuring-event-bus.md"
+--8<-- "docs/guides/admin/servers/configuring-event-bus.md"
 
---8<-- "snippets/tasks/configuring-local-server-url.md"
+--8<-- "docs/guides/admin/servers/configuring-local-server-url.md"
 
---8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
+--8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
 
---8<-- "snippets/tasks/configuring-the-audit-log.md"
+--8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
 
---8<-- "snippets/tasks/configuring-the-server-security-connector.md"
+--8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md"
 
---8<-- "snippets/tasks/configuring-the-local-repository.md"
+--8<-- "docs/guides/admin/servers/configuring-the-local-repository.md"
 
---8<-- "snippets/tasks/configuring-registration-to-a-cohort.md"
+--8<-- "docs/guides/admin/servers/configuring-registration-to-a-cohort.md"
 
---8<-- "snippets/tasks/configuring-the-startup-archives.md"
+--8<-- "docs/guides/admin/servers/configuring-the-startup-archives.md"
 
---8<-- "snippets/tasks/configuring-the-access-services.md"
+--8<-- "docs/guides/admin/servers/configuring-the-access-services.md"
 
 --8<-- "snippets/abbr.md"

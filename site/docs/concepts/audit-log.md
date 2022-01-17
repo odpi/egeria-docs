@@ -15,6 +15,6 @@ It builds on the [Audit Log Framework](/egeria-docs/frameworks/alf/overview) to 
 ![Figure 1](audit-log-record-structure.svg)
 > **Figure 1:** Structure of the audit log record
 
---8<-- "snippets/tasks/configuring-the-audit-log.md"
+--8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
 
 --8<-- "snippets/abbr.md"

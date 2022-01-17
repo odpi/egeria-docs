@@ -18,18 +18,18 @@ For data engine proxy server, followng can be configured:
     - Local In-Memory Repository
     - Data Engine Proxy Config
 
---8<-- "snippets/tasks/configuring-local-server-url.md"
+--8<-- "docs/guides/admin/servers/configuring-local-server-url.md"
 
---8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
+--8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
 
---8<-- "snippets/tasks/configuring-the-audit-log.md"
+--8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
 
-<!-- --8<-- "snippets/tasks/configuring-the-server-security-connector.md" -->
+<!-- --8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md" -->
 
 !!! attention "For the next step it is important to configure in-memory repository type"
     Since Data Engine Proxy is a stateless service, it only relies on ***in-memory*** repository to operate. The sync state (last sync date) is stored in the external system and managed by the connector.
 
---8<-- "snippets/tasks/configuring-the-local-repository.md"
+--8<-- "docs/guides/admin/servers/configuring-the-local-repository.md"
 
 ## Configuring Date Engine Proxy Services 
 

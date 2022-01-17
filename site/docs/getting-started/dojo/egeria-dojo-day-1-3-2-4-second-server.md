@@ -50,7 +50,7 @@ Repeat the previous server configuration exercise twice - once to create a serve
 
 Once you have 2 servers configured, add configuration to each of them to connect them via a cohort.
 
-First read about [Open Metadata Repository Cohorts](../../../open-metadata-implementation/repository-services/docs/open-metadata-repository-cohort.md).
+First read about [Open Metadata Repository Cohorts](/egeria-docs/concepts/cohort-member).
 
 Then
 * [Set up the event bus defaults](../../../open-metadata-implementation/admin-services/docs/user/configuring-event-bus.md)

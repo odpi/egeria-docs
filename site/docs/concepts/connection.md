@@ -4,7 +4,7 @@
 # Connection
 
 The **Connection** provides the set of properties needed to create and initialize an instance
-of a [connector](connector.md).
+of a [connector](/egeria-docs/concepts/connector).
 
 ## Inside a Connection
 
@@ -19,7 +19,7 @@ access the Asset.
 
 Figure 1 shows the structure of a connection. Connector types and endpoints can be reused in multiple connections.
 
-![Figure 1](connection.svg)
+![Figure 1](/egeria-docs/concepts/connection.svg)
 > **Figure 1:** Connection structure
 
 Connections are typically managed in a metadata repository but they can also be manually populated.
@@ -30,7 +30,7 @@ A virtual connection is a connection that provides a hierarchy of connection obj
 
 Figure 2 shows an example of a virtual connection with two nested connections (see `EmbeddedConnections`).  One of these connections is also a virtual connection and will be processed in the same way as its parent.
 
-![Figure 2](virtual-connection.svg)
+![Figure 2](/egeria-docs/concepts/virtual-connection.svg)
 > **Figure 2:** Example virtual connection structure
 
 The [open metadata topic connector](/egeria-docs/concepts/open-metadata-topic-connector) is an example of a connector that is designed to be nested inside a virtual connector.
@@ -43,57 +43,43 @@ The OCF offers two implementations of the Connection.
 org.odpi.openmetadata.frameworks.connectors.properties.beans.Connection
 ```
 
-Connection is a bean implementation of the connection used in REST API requests and events.  It allows properties for be
-set up and retrieved.
+Connection is a bean implementation of the connection used in REST API requests and events.  It allows properties for be set up and retrieved.
 
 ```
 org.odpi.openmetadata.frameworks.connectors.properties.ConnectionProperties
 ```
 
-ConnectionProperties is a read-only wrapper for the Connection properties that is used in client interfaces that do not allow the 
-properties to be updated.
+ConnectionProperties is a read-only wrapper for the Connection properties that is used in client interfaces that do not allow the properties to be updated.
 
 ## Connection properties
 
 The properties for a connection are defined in model 0201.  They include the following identifiers:
  * **guid** - Globally unique identifier for the connection.
  * **url** - URL of the connection definition in the metadata repository.
- * **qualifiedName** - The official (unique) name for the connection.
- This is often defined by the IT systems management organization and should be used (when available) on
- audit logs and error messages.  The qualifiedName is defined in the 0010 model as part of Referenceable.
- * **displayName** - A consumable name for the connection.   Often a shortened form of the qualifiedName for use
- on user interfaces and messages.  The displayName should be only be used for audit logs and error messages
- if the qualifiedName is not set.
+ * **qualifiedName** - The official (unique) name for the connection.  This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages.  The qualifiedName is defined in the 0010 model as part of Referenceable.
+ * **displayName** - A consumable name for the connection.   Often a shortened form of the qualifiedName for use on user interfaces and messages.  The displayName should be only be used for audit logs and error messages if the qualifiedName is not set.
 
 Other properties for the connection include:
 
 * **type** - information about the TypeDef for Connection
-* **description** - A full description of the connection covering details of the assets it connects to
-along with usage and version information.
+* **description** - A full description of the connection covering details of the assets it connects to along with usage and version information.
 * **additionalProperties** - Any additional properties associated with the connection.
 * **configurationProperties** - properties for configuring the connector.
-* **securedProperties** - Protected properties for secure log on by connector to back end server.  These
-are protected properties that can only be retrieved by privileged connector code.
+* **securedProperties** - Protected properties for secure log on by connector to back end server.  These are protected properties that can only be retrieved by privileged connector code.
 * **userId** - name or URI or connecting user.
 * **encryptedPassword** - password for the userId - needs decrypting by connector before use.
 * **clearPassword** - password for userId - ready to use.
-* **[connectorType](connector-type.md)** - Properties that describe the connector type for the connector.
-* **[endpoint](endpoint.md)** - Properties that describe the server endpoint where the connector will retrieve the assets.
+* **[connectorType](/egeria-docs/concepts/connector-type)** - Properties that describe the connector type for the connector.
+* **[endpoint](/egeria-docs/concepts/endpoint)** - Properties that describe the server endpoint where the connector will retrieve the assets.
 
 
 ## Using Connections from open metadata repositories
 
-Each connection stored in a metadata repository has a unique identifier.
-An application can request a connector instance through selected Egeria OMAS interfaces, such
-as the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview), with just the unique identifier or name of a connection.  
+Each connection stored in a metadata repository has a unique identifier. An application can request a connector instance through selected Egeria OMAS interfaces, such as the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview), with just the unique identifier or name of a connection.  
 
-The OMAS retrieves the connection object from the open metadata repositories and passes it to the [Connector Broker](connector-broker.md)
-factory object.  The Connector Broker (and underlying [Connector Provider](connector-provider.md)) uses the information from the Connection object
-to create an instance of the connector.
+The OMAS retrieves the connection object from the open metadata repositories and passes it to the [Connector Broker](/egeria-docs/concepts/connector-broker) factory object.  The Connector Broker (and underlying [Connector Provider](/egeria-docs/concepts/connector-provider)) uses the information from the Connection object to create an instance of the connector.
 
-The advantage of retrieving the connection information from a metadata repository is that the connection properties
-do not need to be hard-coded in the consuming applications and the metadata associated with the linked Asset
-can be retrieved via the connectors [Connected Asset Properties](connected-asset-properties.md) interface.
+The advantage of retrieving the connection information from a metadata repository is that the connection properties do not need to be hard-coded in the consuming applications and the metadata associated with the linked Asset can be retrieved via the connectors [Connected Asset Properties](connected-asset-properties.md) interface.
 
 Connections can be created in the open metadata repositories through the following interfaces:
 * [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)
@@ -106,17 +92,11 @@ Connections can be created in the open metadata repositories through the followi
 
 ## Configuring Egeria Connections
 
-The [Administration Guide](/egeria-docs/guides/admin) describes how to configure Egeria's
-OMAG Server Platforms and Servers.  Both the platform and the servers used connectors for access to the
-external resources to support their basic operation and to coordinate metadata and governance with
-third party technologies.  This means that the configuration includes Connection definitions for these connectors.
+The [Administration Guide](/egeria-docs/guides/admin) describes how to configure Egeria's OMAG Server Platforms and Servers.  Both the platform and the servers used connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies.  This means that the configuration includes Connection definitions for these connectors.
 
-All of these interfaces have Java clients that enable you to set up the connection using the OCF Connection bean.
-However if you want to use the REST API directly, then you need to specify the connection in JSON.
+All of these interfaces have Java clients that enable you to set up the connection using the OCF Connection bean. However if you want to use the REST API directly, then you need to specify the connection in JSON.
 
-Egeria's JSON structures map one-to-ene with the properties in the equivalent Java beans and also include
-a `class` property that includes the name of the class that it maps to.  So a simple Connection object
-would look something like this in JSON:
+Egeria's JSON structures map one-to-ene with the properties in the equivalent Java beans and also include a `class` property that includes the name of the class that it maps to.  So a simple Connection object would look something like this in JSON:
 
 ```json
 {

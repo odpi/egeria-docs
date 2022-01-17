@@ -3,36 +3,29 @@
 
 # Developer Guide
 
-This guide is for developers wishing to customize Egeria so it can run in additional environments, exchange metadata with additional third party technologies and/or augment existing tools and utilities.
+This guide supports developers wishing to customize Egeria to run in additional environments, exchange metadata with additional third party technologies and/or augment existing tools and utilities.
 
 It is organized as follows:
 
-- Using the APIs to configure and operate Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
+- [Working with the platform APIs](#working-with-the-platform-apis) - Using Egeria APIs to configure and operate Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
 
-- Building [Connectors](#what-is-a-connector) to integrate different technologies together.
+- [Using connectors](#using-connectors) - initializing and calling a connector from external services and other connectors.
 
-- Working with [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive) to add new open metadata types or standard metadata definitions that can be shared and loaded into multiple metadata repositories.
+- [Building connectors](#building-connectors) - How to write new [connectors](#what-is-a-connector) to integrate different technologies together.
 
-- Using Egeria's open metadata and governance APIs to create new services or to augment existing services.
+- [Building open metadata archives](#building-open-metadata-archives) - Working with [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive) to add new open metadata types or standard metadata definitions that can be shared and loaded into multiple metadata repositories.
 
-- Extending Egeria by adding new [registered services]()
+- [Working with the open metadata and governance APIs](#working-with-the-open-metadata-and-governance-apis) - Using Egeria's open metadata and governance APIs to create new services or to augment existing services.
 
-Egeria is designed to simplify the effort necessary to integrate different technologies so that they can actively share and consume metadata from each other.
+- [Adding your own registered services](#adding-registered-services) - Extending Egeria by adding new [registered services](/egeria-docs/concepts/omag-subsystem/#registered-services).
 
-It focuses on providing five types of integration interfaces.
+## Working with the platform APIs
 
-- [Connectors](#what-is-a-connector) that translate between third party APIs and open metadata APIs. These connectors are hosted in the Egeria servers and support the active exchange of metadata with these technologies.
-- [Connectors](/egeria-docs/guides/developer/using-connectors) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
-- [Java clients](#using-the-clients) for applications to call the [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
-- [REST APIs](#using-the-rest-apis) for the Egeria Services. These include the [access services](/egeria-docs/services/omas), admin services and [platform services](/egeria-docs/services/platform).
-- Kafka topics with JSON payloads for asynchronous communication (both in and out) with the open metadata ecosystem.
-  [Learn more ...](/egeria-docs/services/omas)
-
-## Using the clients
+### Using the clients
 
 The Egeria clients wrap calls to Egeria's [REST APIs](#using-the-rest-apis) and topics. The aim is to provide a language-specific interface that manages the marshalling and de-marshalling of the call parameters and responses to these services.
 
-## Using the REST APIs
+### Using the REST APIs
 
 Egeria supports REST [APIs](/egeria-docs/basic-concepts/#application-programming-interface-api) for making synchronous (request-response) calls between [OMAG Servers](/egeria-docs/concepts/omag-server) and between clients and OMAG Servers.
 
@@ -41,34 +34,21 @@ Egeria supports REST [APIs](/egeria-docs/basic-concepts/#application-programming
 
 The structure of the URL for an Egeria REST API varies lightly depending on whether it is a call to an [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) service or an [OMAG Server](/egeria-docs/concepts/omag-server) service.
 
-## What is a connector?
+## Using connectors
 
-[Connectors](/egeria-docs/concepts/connector) are plug-in Java clients that either perform an additional service, or, more typically, enable Egeria to integrate with a third party technology.
+--8<-- "docs/guides/developer/using-connectors.md"
 
-The concept of a connector comes from the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview). The OCF provides a common framework for components that enable one technology to call another, arbitrary technology through a common interface. The implementation of the connector is dynamically loaded based on the connector's configuration.
+## Building connectors
 
-Through the OCF, we can:
+--8<-- "docs/guides/developer/inside-a-connector.md"
+--8<-- "docs/guides/developer/implement-a-connector.md"
 
-1. Plug-in different technologies to Egeria.
-2. Plug-in support for open metadata into the client libraries used by applications to access data resources and services.
-
-![How OCF connectors are used in Egeria](compare-use-of-connectors.svg)
-
-Many subsystems in Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) and [servers](/egeria-docs/concepts/omag-server) support the first approach. They define a specialized interface for the type of connector they support.
-
-1. One or more connector implementations supporting that interface are then written either by the Egeria community or other organizations.
-2. When an Egeria [OMAG Server](/egeria-docs/concepts/omag-server) is configured, details of which connector implementation to use is specified in the server's [configuration document](/egeria-docs/concepts/configuration-document).
-3. At start up, the OMAG Server passes the connector configuration to the OCF to instantiate the required connector instance.
-
-Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the OMAG Servers.
-
-The second approach is used by organizations that want to make use of metadata directly in applications and tools - or to externalize the security and driver properties needed to call the data source or service. In this case the OCF connector typically has the same interface as the data source's client library (unless you can do better :smile:). This minimizes the learning curve for application developers. The configuration for the connector is stored in an open metadata server and the application uses the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer) client to [request a new instance of the connector](/egeria-docs/services/omas/asset-consumer/scenarios/working-with-connectors.md). The application uses the returned connector instance to access the data source or server along with the metadata stored about it.
 
 ### Configuration
 
 The configuration for a connector is managed in a [*connection*](/egeria-docs/concepts/connection) object.
 
-A connection contains properties about the specific use of the connector, such as user Id and password, or parameters that control the scope or resources that should be made available to the connector. It links to an optional [*endpoint*](/egeria-docs/concepts/endpoint) and a mandatory [*connector type*](/egeria-docs/concepts/connector-type) object.
+A connection contains properties about the specific use of the connector, such as userId and password, or parameters that control the scope or resources that should be made available to the connector. It links to an optional [*endpoint*](/egeria-docs/concepts/endpoint) and a mandatory [*connector type*](/egeria-docs/concepts/connector-type) object.
 
 - `ConnectorType` describes the type of the connector, its supported configuration properties and its factory object (called the [connector's provider](/egeria-docs/concepts/connector-provider)). This information is used to create an instance of the connector at runtime.
 - `Endpoint` describes the server endpoint where the third party data source or service is accessed from.
@@ -115,7 +95,7 @@ Egeria has extended the basic concept of the OCF connector and created specializ
 
 | Type of Connector             | Description | Documentation | Implementation Examples |
 | :-----------------------------| :---------- | :------------ | :---------------------- |
-| Integration Connector         | Implements metadata exchange with third party tools. | [Building Integration Connectors](../../../open-metadata-implementation/governance-servers/integration-daemon-services/docs/integration-connector.md) | [integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors){ target=gh } |
+| Integration Connector         | Implements metadata exchange with third party tools. | [Building Integration Connectors](/egeria-docs/guides/developer/integration-connectors/overview) | [integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors){ target=gh } |
 | Open Discovery Service        | Implements automated metadata discovery.| [Open Discovery Services](/egeria-docs/frameworks/odf/#discovery-service) | [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } |
 | Governance Action Service     | Implements automated governance. | [Governance Action Services](/egeria-docs/frameworks/gaf/#governance-action-service) | [governance-action-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh } |
 | Configuration Document Store  | Persists the configuration document for an OMAG Server. | [Configuration Document Store Connectors](/egeria-docs/concepts/configuration-document/#storage) | [configuration-store-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh } |
@@ -130,7 +110,11 @@ Egeria has extended the basic concept of the OCF connector and created specializ
 
 You can write your own connectors to integrate additional types of technology or extend the capabilities of Egeria - and if you think your connector is more generally useful, you could consider [contributing it to the Egeria project](/egeria-docs/guides/community).
 
-## Registered Services
+## Building open metadata archives
+
+## Working with the open metadata and governance APIs
+
+## Adding registered services
   
 Registered services are optional services that plug into Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform). There are 4 types:
   
@@ -166,6 +150,16 @@ The best guide for building registered services are the existing implementations
 
 ## Summary
 
+Egeria is designed to simplify the effort necessary to integrate different technologies so that they can actively share and consume metadata from each other.
+
+It focuses on providing five types of integration interfaces.
+
+- [Connectors](#what-is-a-connector) that translate between third party APIs and open metadata APIs. These connectors are hosted in the Egeria servers and support the active exchange of metadata with these technologies.
+- [Connectors](/egeria-docs/guides/developer/using-connectors) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
+- [Java clients](#using-the-clients) for applications to call the [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
+- [REST APIs](#using-the-rest-apis) for the Egeria Services. These include the [access services](/egeria-docs/services/omas), admin services and [platform services](/egeria-docs/services/platform).
+- Kafka topics with JSON payloads for asynchronous communication (both in and out) with the open metadata ecosystem.
+  [Learn more ...](/egeria-docs/services/omas)
 
 
 --8<-- "snippets/abbr.md"

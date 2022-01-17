@@ -10,7 +10,7 @@ get it running in your environment, so that you can explore more in your own tim
 
 *Audience*: Anyone who is interested in Egeria, and wants to get some hands-on time with Egeria.
 
-*Skills*: Familarity with *nix shell environment & editing files.
+*Skills*: Familiarity with *nix shell environment & editing files.
 
 *Hardware Requirements*: A networked MacOS, Windows, or Linux environment with at least 8GB RAM & 12GB storage or remote access to an existing Kubernetes environment.
 

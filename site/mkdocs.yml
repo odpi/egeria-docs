@@ -65,7 +65,9 @@ nav:
                             - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
                             - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
                             - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
-                            - Open Metadata Topic: guides/developer/runtime-connectors/open-metadata-topic-connector.md
+                            - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
+                            - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
+                            - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
           - Connector Catalog:
                 - Connector Overview: connectors/index.md
                 - Governance Actions:
@@ -154,8 +156,9 @@ nav:
                   - Ecosystem UI:
                       - Using the Egeria Ecosystem UI: education/egeria-dojo/running-egeria/user-interfaces/ecosystem-ui/ecosystem-ui-start.md
               - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
-              - Coco Pharmaceuticals : education/egeria-dojo/running-egeria/coco-labs-environment.md
-              - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/running-egeria-summary.md
+              - Introduction to the Egeria UIs : education/egeria-dojo/running-egeria/ui-introduction.md
+              - Open metadata labs : education/egeria-dojo/running-egeria/coco-labs-environment.md
+              - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/day-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
@@ -227,7 +230,7 @@ nav:
                   - Testing Tools: guides/contributor/testing.md
               - Developing Connectors:
                   - Develop a Connector: guides/developer/implement-a-connector.md
-                  - Develop Repository Connector: guides/developer/implement-repository-connector.md
+                  - Develop Repository Connector: guides/developer/repository-connectors/overview.md
               - Developing Access Services: guides/developer/implement-an-omas.md
       - Document:
           - Documentation Guide: guides/documentation/guide.md

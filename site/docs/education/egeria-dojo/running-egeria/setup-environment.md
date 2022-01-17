@@ -42,8 +42,8 @@ We will use Kubernetes as the runtime environment for Egeria.
 
 Follow these steps from our [Kubernetes Documentation :material-dock-window:](/egeria-docs/guides/operations/kubernetes){ target=docs }:
 
-  * [Understanding Kubernetes :material-dock-window:](/egeria-docs/guides/operations/kubernetes/k8s-install/){ target=docs } - read this for some background information.
-  * [Setting up Kubernetes :material-dock-window:](/egeria-docs/guides/operations/kubernetes/k8s){ target=docs } - follow the instruction to install **Rancher Desktop**.
+  * [Understanding Kubernetes :material-dock-window:](/egeria-docs/guides/operations/kubernetes/k8s){ target=docs } - read this for some background information.
+  * [Setting up Kubernetes :material-dock-window:](/egeria-docs/guides/operations/kubernetes/k8s-install){ target=docs } - follow the instruction to install **Rancher Desktop**.
   * [Useful Kubernetes commands :material-dock-window:](/egeria-docs/guides/operations/kubernetes/k8s-install/){ target=docs } - a useful reference. You don't need to issue these commands now, but this may be useful later.
   * [Setting up Helm :material-dock-window:](/egeria-docs/guides/operations/kubernetes/helm){ target = docs } - read about Helm, but you do not need to install it as it comes with **Rancher Desktop**.
 

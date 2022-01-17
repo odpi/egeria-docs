@@ -8,28 +8,67 @@ hide:
 
 # Connector
 
-A connector is a client library for accessing a [resource](/egeria-docs/conceepts/resource) and its associated [asset](/egeria-docs/concepts/asset) metadata.
+A connector is a client library for accessing a [resource](/egeria-docs/concepts/resource) and, optionally, its associated [asset](/egeria-docs/concepts/asset) metadata.
 
-Egeria provides a framework called the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) that defines the generic interfaces for [writing](/egeria-docs/guides/developer), [configuring](/egeria-docs/concepts/connection) and [using connectors](/egeria-docs/guides/developer/using-connectors). A connector has two main APIs:
+The concept of a connector comes from the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview). The OCF provides a common framework for components (ie connectors) that enable one technology to call another, arbitrary technology through a common interface. The implementation of the connector is dynamically loaded based on the connector's configuration.
+
+Through the OCF, we can:
+
+1. Plug-in different technologies to Egeria.
+2. Plug-in support for open metadata into the client libraries used by applications to access data resources and services.
+
+![How OCF connectors are used in Egeria](/egeria-docs/connectors/compare-use-of-connectors.svg)
+
+Many subsystems in Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) and [servers](/egeria-docs/concepts/omag-server) support the first approach. They define a specialized interface for the type of connector they support.
+
+1. One or more connector implementations supporting that interface are then written either by the Egeria community or other organizations.
+2. When an Egeria [OMAG Server](/egeria-docs/concepts/omag-server) is configured, details of which connector implementation to use is specified in the server's [configuration document](/egeria-docs/concepts/configuration-document) using the [connection](/egeria-docs/concepts/connection) structure.
+3. At start up, the OMAG Server passes the connector configuration to the OCF to instantiate the required connector instance.
+
+Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the OMAG Servers.
+
+The second approach is used by organizations that want to make use of metadata directly in applications and tools - or to externalize the security and driver properties needed to call the data source or service. In this case the OCF connector typically has the same interface as the data source's client library (unless you can do better :smile:). This minimizes the learning curve for application developers. The configuration for the connector is stored in an open metadata server and the application uses the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer) client to [request a new instance of the connector](/egeria-docs/developer/#using-connectors). The application uses the returned connector instance to access the data source or server along with the metadata stored about it.
+
+The connector provides two main APIs:
 
 - An standard API called `getConnectedAssetProperties` for retrieving metadata.  This API is defined by the OCF.
 - An API for working with the resource itself.  This interface is specialized for the type of resource and the use it is being put to.
 
-It is configured using a [connection](/egeria-docs/concepts/connection)
+## Specialist connectors that plug into the OMAG Server Platform
 
-## Specialist connectors
+Various Egeria services provide specific interfaces for connectors to support their operation.  For example, the [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis) define the interfaces for [integration-connectors](/egeria-docs/concepts/integration-connector) used to [exchange metadata between Egeria and third party technologies](/egeria-docs/patterns/metadata-exchange/overview). 
 
-Various Egeria services provide specific interfaces for connectors to specific types of resources.  For example, the [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis) define the interfaces for [integration-connectors](/egeria-docs/concepts/integration-connector) used to [exchange metadata between Egeria and third party technologies](/egeria-docs/patterns/metadata-exchange/overview).
+The table below lists the different types of connectors supported by Egeria's services. Connectors that are implemented by the Egeria community or trusted third parties are listed in the [connector catalog](/egeria-docs/connectors).  You may [write your own connectors](/egeria-docs/guides/developer/#building-connectors) to integrate additional types of technology or extend the capabilities of Egeria - and if you think your connector is more generally useful, you could consider [contributing it to the Egeria project](/egeria-docs/guides/community).
+
+
+
+| Type of Connector             | Description | Documentation | Connector Catalog link |
+| :-----------------------------| :---------- | :------------ | :---------------------- |
+| Integration Connector         | Implements metadata exchange with third party tools. | [Building Integration Connectors](/egeria-docs/guides/developer/integration-connectors/overview) | [Integration Connector Catalog](/egeria-docs/connectors/#integration-connectors) |
+| Open Discovery Service        | Implements automated metadata discovery.| [Building Open Discovery Services](/egeria-docs/guides/developer/open-discovery-services/overview) | [Open Discovery Service Catalog](/egeria-docs/connectors/#open-discovery-services) |
+| Governance Action Service     | Implements automated governance. | [Building Governance Action Services](/egeria-docs/guides/developer/governance-action-services/overview) | [Governance Action Services Catalog](/egeria-docs/connectors/#governance-action-services) |
+| Archive Service               | Maintains open metadata archives based in the content of the open metadata repositories. | [Building Archive Services](/egeria-docs/guides/developer/archive-services/overview) | [Archive Service Catalog](/egeria-docs/connectors/#archive-services) |
+| Configuration Document Store  | Persists the [configuration document](/egeria-docs/concepts/configuration-document/#storage) for an OMAG Server. | [Building Configuration Document Store Connectors](/egeria-docs/guides/developer/runtime-connectors/configuration-document-store-connector) | [Configuration Document Store Catalog](/egeria-docs/connectors/#configuration-document-store-connectors) |
+| Platform Security Connector   | Manages [service authorization](/egeria-docs/features/metadata-security) for the OMAG Server Platform. | [Building Platform Metadata Security Connectors](/egeria-docs/guides/developer/runtime-connectors/) | [Platform Metadata Security Connector Catalog](/egeria-docs/connectors/#platform-metadata-security-connectors) |
+| Server Security Connector     | Manages [service and metadata instance authorization](/egeria-docs/features/metadata-security) for an OMAG Server. | [Building Server Metadata Security Connectors](/egeria-docs/guides/developer/runtime-connectors/server-metadata-security-connector) | [Server Metadata Security Connector Catalog](/egeria-docs/connectors/#server-metadata-security-connectors) |
+| Open Metadata Archive Store   | Reads an open metadata archive from a particular type of store. | [OMRS Open Metadata Archive Store Connector](/egeria-docs/concepts/open-metadata-archive-store-connector) | [open-metadata-archive-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors){ target=gh } |
+| Audit Log Store               | Audit logging destination | [OMRS Audit Log Store Connector](/egeria-docs/concepts/audit-log-store-connector) | [audit-log-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors){ target=gh } |
+| Cohort Registry Store         | Local store of membership of an [open metadata repository cohort](/egeria-docs/concepts/cohort-member). | [Building Cohort Registry Store Connectors](/egeria-docs/guides/developer/runtime-connectors/cohort-registry-store-connector) | [cohort-registry-store-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors){ target=gh } |
+| Open Metadata Topic Connector | Sends and received events on a topic hosted by an external [event bus](/egeria-docs/concepts/event-bus) such as Apache Kafka. | [Building Open Metadata Topic Connectors](/egeria-docs/concepts/open-metadata-topic-connector) | [open-metadata- topic-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors){ target=gh } |
+| Metadata Collection (repository) Store | Interfaces with a metadata repository API for retrieving and storing metadata. | [OMRS Repository Connectors](/egeria-docs/concepts/repository-connector)| [open-metadata-collection-store-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh } |
+| Metadata Collection (repository) Event Mapper | Maps events from a third party metadata repository to open metadata events. | [OMRS Event Mappers](/egeria-docs/concepts/event-mapper-connector) | none |
+
+
 
 ## Virtual connectors
 
 OCF connectors are not limited to representing Assets as they are physically implemented. An OCF connector can represent a simplified logical (virtual) asset, such as a data set, that is designed for the needs of a specific application or tool. This type of connector delegates the requests it receives to one or more physical data resources.  It is called a *virtual connector* and us created using a [*virtual connection*](/egeria-docs/concepts/connection/#virtual-connections).
 
-## Further Information
+!!! education "Further information"
 
-The [connector catalog](/egeria-docs/connectors) describes the connectors that are pre-built for the Egeria ecosystem.
+    The [connector catalog](/egeria-docs/connectors) describes the connectors that are pre-built for the Egeria ecosystem.
 
-The [Egeria Developer Guide](/egeria-docs/guides/developer/#what-is-a-connector) describes how to write your own connectors.
+    The [Egeria Developer Guide](/egeria-docs/guides/developer/#building-connectors) describes how to write your own connectors.
 
 --8<-- "snippets/abbr.md"
 

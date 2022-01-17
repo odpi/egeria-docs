@@ -1,9 +1,6 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Using Connectors
-
-
 
 [*Connectors*](/egeria-docs/concepts/connector) can be created through the following clients:
 
@@ -120,6 +117,6 @@ The endpoints are typically linked to the software server that is called by the 
 Software servers and endpoints are set up through the [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure).
 
 !!! education "Further information"
-    The [connector catalog](/egeria-docs/connectors) lists the connectors available to digital resources.
+    The [connector catalog](/egeria-docs/connectors) lists the connectors provided by the Egeria community.
 
 --8<-- "snippets/abbr.md"

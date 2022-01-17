@@ -25,7 +25,6 @@ The integration services available today are:
 
 * [API Integrator](api-integrator/overview) - provides cataloguing for APIs.
 * [Analytics Integrator](analytics-integrator/overview) - provides cataloguing for Analytics tools.
-* [Archive Integrator](archive-integrator/overview) - provides dynamic maintenance for open metadata archives such as content packs and metadata exports.
 * [Catalog Integrator](catalog-integrator/overview) - provides a two-way synchronization for data catalogs.
 * [Database Integrator](database-integrator/overview) - provides metadata extraction from relational databases.
 * [Display Integrator](display-integrator/overview) - provides metadata extraction from systems that provide user displays and forms to capture new data values.

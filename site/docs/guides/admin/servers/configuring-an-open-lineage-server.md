@@ -17,15 +17,15 @@ For open lineage server following can be configured:
     - Audit Log Destination
     - Open Lineage Config
 
---8<-- "snippets/tasks/configuring-local-server-url.md"
+--8<-- "docs/guides/admin/servers/configuring-local-server-url.md"
 
---8<-- "snippets/tasks/configuring-omag-server-basic-properties.md"
+--8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
 
---8<-- "snippets/tasks/configuring-the-audit-log.md"
+--8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
 
-<!-- --8<-- "snippets/tasks/configuring-the-server-security-connector.md" -->
+<!-- --8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md" -->
 
---8<-- "snippets/tasks/configuring-event-bus.md"
+--8<-- "docs/guides/admin/servers/configuring-event-bus.md"
 
 
 ## Configuring the Open Lineage Services

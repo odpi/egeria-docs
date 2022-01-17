@@ -25,9 +25,9 @@ When another server joins the cohort, it also adds its registration event to the
 
 ### Peer-to-peer operation
 
-Once the registration information is exchanged and stored in each member's cohort registry store, it is ready to issue federated queries across the cohort, and respond to requests for metadata from other members. These requests can both retrieve metadata and maintain metadata in the [home metadata repository](../metadata-repositories/#home-metadata-repositories).
+Once the registration information is exchanged and stored in each member's cohort registry store, it is ready to issue federated queries across the cohort, and respond to requests for metadata from other members. These requests can both retrieve metadata and maintain metadata in the [home metadata repository](/egeria-docs/concepts/home-metadata-repository).
 
-The management of federated queries and the routing of maintenance requests is managed by OMRS's [enterprise repository services](../#enterprise-repository-services). The enterprise repository services are configured with the registration information from across the cohort at the same time as the cohort registry store is updated. This process is managed by the [cohort registry](#cohort-registry).
+The management of federated queries and the routing of maintenance requests is managed by OMRS's [enterprise repository services](../#enterprise-repository-services). The enterprise repository services are configured with the registration information from across the cohort at the same time as the cohort registry store is updated. This process is managed by the [cohort registry](#cohort-registration).
 
 The registration information includes the URL Root and server name of the member. The federation capability in each member allows it to issue metadata create, update, delete and search requests to each and every member of the cohort.
 
@@ -85,11 +85,11 @@ A *cohort member* is an [OMAG Server](/egeria-docs/concepts/omag-server) that is
 
 ![Different types of cohort members](/egeria-docs/concepts/cohort-member-types.svg)
 
-Management of a server's membership is handled by the [cohort services](../#cohort-services).
+Management of a server's membership is handled by the [cohort services](/egeria-docs/services/omrs/#cohort-services).
 
 The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interfaces which gives fine-grained[^1] metadata notifications and updates. During server start up, the repository services detect the configuration of at least one cohort and starts the *metadata highway manager*. The metadata highway manager creates a *cohort manager* for each cohort configuration. The cohort manager manages the initialization and shutdown of the server's connectivity to a cohort, including the management of the [cohort registry](#cohort-registry).
 
-The server's [metadata security connector](/egeria-docs/features/metadata-security/overview) provides fine-grained control on which metadata is sent, received and/or stored by the server. This level of control is necessary for metadata repositories that are managing specific collections of valuable objects such as [Assets](../../../access-services/docs/concepts/assets).
+The server's [metadata security connector](/egeria-docs/features/metadata-security/overview) provides fine-grained control on which metadata is sent, received and/or stored by the server. This level of control is necessary for metadata repositories that are managing specific collections of valuable metadata such as [Assets](/egeria-docs/concepts/asset).
 
 The types of cohort members include:
 
@@ -122,7 +122,7 @@ The *cohort registry* resides in each [cohort member](#cohort-members). It is re
 
 The registration process is managed by exchanging [registry events](/egeria-docs/cohort-events/#registry-events) over the [cohort topic(s)](/egeria-docs/concepts/cohort-events/#event-topics).
 
-The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/egeria-docs/guides/developer/runtime-connectors/cohort-registry-store-connector).
+The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/egeria-docs/concepts/cohort-registry-store-connector).
 
 [^1]: You may want to see the [OMRS metamodel](/egeria-docs/guides/developer/metamodel/overview) for more details on the granularity of metadata exchange.
 

@@ -19,6 +19,7 @@ anchor entity are cleaned up properly and are not left to uselessly clutter the 
 
 
 !!! education "Further information"
+    
     - [Anchor Management](/egeria-docs/features/anchor-management/overview) provide support for the Anchors and LatestChange classifications.
 
 --8<-- "snippets/abbr.md"

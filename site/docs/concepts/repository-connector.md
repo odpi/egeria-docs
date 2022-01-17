@@ -8,13 +8,14 @@ hide:
 
 # Repository Connector
 
-Repository Connectors link metadata catalogs into a cohort.
+--8<-- "docs/connectors/repository/repository-connector-intro.md"
 
-The OMRS Repository Connector API defines a call
-interface to create, search, query, update and
-delete metadata stored in a metadata repository.
-The implementation of a specific OMRS connector
-determines which type(s) of metadata repository it is able to access.
+!!! education "Further information"
+    
+    - [Repository Connector Catalog](/egeria-docs/connectors/#repository-and-event-mapper-connectors).
+    - [Configuring a Repository Connector](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-local-repository).
+    - [Writing an repository connector](/egeria-docs/guides/developer/repository-connectors/overview).
+    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview).
 
 --8<-- "snippets/abbr.md"
 

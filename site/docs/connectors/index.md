@@ -80,7 +80,7 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/egeria-
 | [File-based Open Lineage Log Store integration connector](/egeria-docs/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
 | [Open Lineage Cataloguer integration connector](/egeria-docs/connectors/integration/open-lineage-cataloguer-integration-connector) | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem. |
 
-!!! education "Further information"
+??? education "Further information"
     
     - [Configuring an integration connector](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) to understand how to set up an integration connector.
     - [Writing an integration connector](/egeria-docs/guides/developer/integration-connectors/overview) for more information on writing new integration connectors.
@@ -88,7 +88,7 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/egeria-
 
 ### Repository and Event Mapper Connectors
 
----8<-- "docs/connectors/integration/repository-connector-intro.md"
+---8<-- "docs/connectors/repository/repository-connector-intro.md"
 
 The table below lists the repository connectors supporting the native open metadata repositories.
 
@@ -107,9 +107,9 @@ The table below lists the repository connectors that act as an adapter for third
 | [IBM Information Governance Catalog (IGC) OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh } | implements read-only connectivity to the metadata repository within the [IBM InfoSphere Information Server :material-dock-window:](https://www.ibm.com/analytics/information-server){ target=ibm } suite |
 | [SAS Viya OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh } | implements metadata exchange to the metadata repository within the [SAS Viya Platform :material-dock-window:](https://support.sas.com/en/software/sas-viya.html){ target=sas } |
 
-!!! education "Further information"
+??? education "Further information"
     
-    - [Configuring a native repository connector](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/egeria-docs/concepts/metadata-aceess-store).
+    - [Configuring a native repository connector](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
     - [Configuring an adapter repository connector](/egeria-docs/guides/admin/servers/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/egeria-docs/concepts/repository-proxy).
     - [Writing repository and event mapper connectors](/egeria-docs/guides/developer/repository-connectors/overview) for more information on writing new repository and event mapper connectors.
 
@@ -117,17 +117,16 @@ The table below lists the repository connectors that act as an adapter for third
 
 ---8<-- "docs/connectors/discovery/discovery-service-intro.md"
 
-[Open discovery services](/egeria-docs/frameworks/odf/#discovery-service) are connectors that analyze the content of resources in the digital landscape and create annotations that are attached to the resource's Asset metadata element in the open metadata repositories in the form of an open discovery report.
-
-![Figure 4](/egeria-docs/connectors/discovery/discovery-service.svg)
-> **Figure 4:** Discovery Services
-
-The definition of the connector interfaces for discovery services is defined in the [open-discovery-services :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/frameworks/open-discovery-framework/src/main/java/org/odpi/openmetadata/frameworks/discovery){ target=gh } module.
-
 | Connector | Description |
 |---|---|
 | [CSV Discovery Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | extracts the column names from the first line of the file, counts up the number of records in the file and extracts its last modified time. |
 | [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/egeria-docs/frameworks/odf/#discovery-pipeline)). |
+
+??? education "Further information"
+    
+    - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the open discovery services run.
+    - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [open discovery engine](/egeria-docs/concepts/open-discovery-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
+    - [Writing an open discovery service](/egeria-docs/guides/developer/open-discovery-services/overview) for information on writing new open discovery services.
 
 ### Governance Action Services
 
@@ -140,7 +139,11 @@ The definition of the connector interfaces for discovery services is defined in 
 | [Move/Copy File Provisioning Governance Action Service](/egeria-docs/connectors/governance-action/move-copy-file-provisioning-governance-action-service) | moves or copies files from one location to another and maintains the lineage of the action. |
 | [Origin Seeker Remediation Governance Action Service](/egeria-docs/connectors/governance-action/origin-seeker-remediation-governance-action-service) | walks backwards through the lineage mappings to discover the origin of the data |
 
-The definition of the connector interfaces for governance action services is defined in the [governance-action-framework :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/frameworks/governance-action-framework) module.
+??? education "Further information"
+    
+    - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the governance action services run.
+    - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/egeria-docs/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
+    - [Writing a governance action service](/egeria-docs/guides/developer/governance-action-services/overview) for information on writing new governance action services.
 
 ### Archive Services
 
@@ -149,13 +152,10 @@ The definition of the connector interfaces for governance action services is def
 There are currently no archive services supplied by Egeria.
 
 ??? education "Further information"
-    - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up an archive service.
-    - [Overview of connectors)](/egeria-docs/frameworks/ocf/overview) that defines the behavior of all connectors.
 
-??? education "Further information"
+    - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the governance action services run.
+    - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [archive engine](/egeria-docs/concepts/archive-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
     - [Writing an archive service](/egeria-docs/guides/developer/archive-services/overview) to understand how to write an archive service.
-    - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up an archive service.
-    - [Overview of connectors)](/egeria-docs/frameworks/ocf/overview) that defines the behavior of all connectors.
 
 
 ## Runtime connectors

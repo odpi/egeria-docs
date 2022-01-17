@@ -10,6 +10,6 @@ Inside the cohort registry store there is one local registration record describi
 
 ![Internal structure for the information stored inside a single cohort registry store](/egeria-docs/connectors/runtime/cohort-registry-store-contents.svg)
 
-A *cohort registry store connector* manages the persistence of the cohort registry store.  Egeria uses a connector to allow different storage methods for different deployment environments.  Each member may choose their own implementation of the cohort registry store connector.
+A *[cohort registry store connector](/egeria-docs/concepts/cohort-registry-store-connector)* manages the persistence of the cohort registry store.  Egeria uses a connector to allow different storage methods for different deployment environments.  Each member may choose their own implementation of the cohort registry store connector.
 
 ---8<-- "snippets/abbr.md"

@@ -80,7 +80,7 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/egeria-
 | [File-based Open Lineage Log Store integration connector](/egeria-docs/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
 | [Open Lineage Cataloguer integration connector](/egeria-docs/connectors/integration/open-lineage-cataloguer-integration-connector) | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem. |
 
-??? education "Further information"
+??? education "Further information relating to integration connectors"
     
     - [Configuring an integration connector](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) to understand how to set up an integration connector.
     - [Writing an integration connector](/egeria-docs/guides/developer/integration-connectors/overview) for more information on writing new integration connectors.
@@ -107,7 +107,7 @@ The table below lists the repository connectors that act as an adapter for third
 | [IBM Information Governance Catalog (IGC) OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh } | implements read-only connectivity to the metadata repository within the [IBM InfoSphere Information Server :material-dock-window:](https://www.ibm.com/analytics/information-server){ target=ibm } suite |
 | [SAS Viya OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh } | implements metadata exchange to the metadata repository within the [SAS Viya Platform :material-dock-window:](https://support.sas.com/en/software/sas-viya.html){ target=sas } |
 
-??? education "Further information"
+??? education "Further information relating to Repository and Event Mapper connectors"
     
     - [Configuring a native repository connector](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
     - [Configuring an adapter repository connector](/egeria-docs/guides/admin/servers/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/egeria-docs/concepts/repository-proxy).
@@ -122,7 +122,7 @@ The table below lists the repository connectors that act as an adapter for third
 | [CSV Discovery Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | extracts the column names from the first line of the file, counts up the number of records in the file and extracts its last modified time. |
 | [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/egeria-docs/frameworks/odf/#discovery-pipeline)). |
 
-??? education "Further information"
+??? education "Further information relating to Open Discovery Services"
     
     - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the open discovery services run.
     - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [open discovery engine](/egeria-docs/concepts/open-discovery-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
@@ -139,7 +139,7 @@ The table below lists the repository connectors that act as an adapter for third
 | [Move/Copy File Provisioning Governance Action Service](/egeria-docs/connectors/governance-action/move-copy-file-provisioning-governance-action-service) | moves or copies files from one location to another and maintains the lineage of the action. |
 | [Origin Seeker Remediation Governance Action Service](/egeria-docs/connectors/governance-action/origin-seeker-remediation-governance-action-service) | walks backwards through the lineage mappings to discover the origin of the data |
 
-??? education "Further information"
+??? education "Further information relating to Governance Action Services"
     
     - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the governance action services run.
     - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/egeria-docs/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
@@ -151,7 +151,7 @@ The table below lists the repository connectors that act as an adapter for third
 
 There are currently no archive services supplied by Egeria.
 
-??? education "Further information"
+??? education "Further information relating to Archive Services"
 
     - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the governance action services run.
     - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [archive engine](/egeria-docs/concepts/archive-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
@@ -182,6 +182,13 @@ There is one implementation of the platform metadata security connector provided
 
 * **[Coco Pharmaceuticals Platform Metadata Security Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh }** 
 
+??? education "Further information relating to Platform Metadata Security Connectors"
+
+    - [Configuring a Platform Metadata Security Connector](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
+    - [Metadata Security](/egeria-docs/features/metadata-security/overview) to understand the platform metadata security connector in the context of all of the security features.
+    - [Writing a Platform Metadata Security Connector](/egeria-docs/guides/developer/runtime-connectors/platform-metadata-security-connector).
+
+
 ### Server Metadata Security Connectors
 
 ---8<-- "docs/connectors/runtime/server-metadata-security-connector-intro.md"
@@ -189,6 +196,13 @@ There is one implementation of the platform metadata security connector provided
 There is one implementation of the server metadata security connector provided by Egeria.  It is a sample that encodes information from the Coco Pharmaceuticals scenarios.
 
 * **[Coco Pharmaceuticals Server Metadata Security Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh }** 
+
+??? education "Further information relating to Server Metadata Security Connectors"
+
+    - [Configuring a Server Metadata Security Connector](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
+    - [Metadata Security](/egeria-docs/features/metadata-security/overview) to understand the server metadata security connector in the context of all of the security features.
+    - [Writing a Server Metadata Security Connector](/egeria-docs/guides/developer/runtime-connectors/server-metadata-security-connector).
+
 
 ### Configuration Document Store Connectors
 
@@ -201,7 +215,11 @@ There are two implementations of the configuration document store connector prov
 * **[File Configuration Store :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector){ target=gh }** stores each configuration document as a clear text JSON file.
 
 
-Configuring a configuration store connector in the OMAG Server Platform is described in the [Administration Guide](/egeria-docs/guides/admin/configuring-the-configuration-document-store). If no connector is configured, the OMAG Server Platform uses the Encrypted File Configuration Store Connector.
+??? education "Further information relating to Configuration Document Store Connectors"
+
+    - [Configuring a Configuration Document Store Connector](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#configuration-store) in the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
+    - [Writing a Configuration Document Store Connector](/egeria-docs/guides/developer/runtime-connectors/configuration-document-store-connector).
+
 
 ### Cohort Registry Store Connectors
 
@@ -211,7 +229,13 @@ Egeria provides a single implementation of a cohort registry store connector:
 
 * [Cohort Registry File Store Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors/cohort-registry-file-store-connector){ target=gh }
   provides the means to store the cohort registry membership details as a JSON file.
-  
+
+??? education "Further information relating to Cohort Registry Store Connectors"
+
+    - [Configuring a Cohort Registry Store Connector](/egeria-docs/guides/admin/servers/configuring-the-cohort-registry-store-connector) in the [Cohort Member](/egeria-docs/concepts/cohort-member) server
+    - [Cohort Operations](/egeria-docs/features/metadata-security/overview) to understand the way the cohort is formed.
+    - [Writing a Cohort Registry Store Connector](/egeria-docs/guides/developer/runtime-connectors/cohort-registry-store-connector).
+
   
 ### Open Metadata Archive Store Connectors
 
@@ -225,6 +249,12 @@ Egeria provides two implementations of the open metadata archive store connector
 * [Directory-based Open Metadata Archive File Store Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors/open-metadata-archive-directory-connector){ target=gh }
   stores an open metadata archive in a directory structure where each type definition and metadata instance is stored in JSON format in its own file.  
 
+??? education "Further information relating to Open Metadata Archive Store Connectors"
+
+    - [Configuring a Open Metadata Archive Store Connector](/egeria-docs/guides/admin/servers/configuring-the-cohort-registry-store-connector) in the [Cohort Member](/egeria-docs/concepts/cohort-member) server
+    - [Metadata Archiving](/egeria-docs/features/metadata-archiving/overview) to understand the different mechanisms that use open metadata archives.
+    - [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive) to understand structure of an open metadata archive.
+    - [Writing a Open Metadata Archive Store Connector](/egeria-docs/guides/developer/runtime-connectors/open-metadata-archive-store-connector).
 
 
 ### Audit Log Destination Connectors
@@ -246,6 +276,11 @@ Below are the connector implementations provided by Egeria
 * [Event Topic Audit Log Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-event-topic-connector){ target=gh }
   sends each log record as an event on the supplied event topic.
 
+??? education "Further information relating to Audit Log Destination Connectors"
+
+    - [Configuring a Audit Log Destination Connector](/egeria-docs/concepts/audit-log/#configure-the-audit-log) in the [Cohort Member](/egeria-docs/concepts/cohort-member) server
+    - [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview) to understand the framework behind the audit log.
+    - [Writing a Audit Log Destination Connector](/egeria-docs/guides/developer/runtime-connectors/audit-log-destination-connector).
 
 ### REST Client Connectors
 

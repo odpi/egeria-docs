@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-# Configuring Registration to an Open Metadata Repository Cohort
+## Configuring Registration to an Open Metadata Repository Cohort
 
 An [OMAG Server](/egeria-docs/concepts/omag-server) that is capable of being a
 [Cohort Member](/egeria-docs/concepts/cohort-member) can register with one or more
@@ -41,13 +41,13 @@ The choices of topic structure are summarized in Figure 1.
 ![Figure 1](/egeria-docs/concepts/cohort-topic-structure-choices.svg)
 > **Figure 1:** Choices of cohort topic structures referred to as SINGLE_TOPIC, DEDICATED_TOPICS and BOTH_SINGLE_AND_DEDICATED_TOPICS reading left to right
 
-## Configuration commands
+### Configuration commands
 
 The commands for configuring a server as a member of a cohort are shown below.
 Before calling these commands, make sure that the [default settings for the event bus](configuring-event-bus.md)
 are configured and you know the name of the cohort and the topic structure it is using.
 
-### Add access to a cohort
+#### Add access to a cohort
 
 The following command registers the server with a cohort using the default settings.
 This includes the default cohort topic structure
@@ -302,7 +302,7 @@ Below is an example of this structure for a member that is using DEDICATED_TOPIC
 }
 ```
 
-### Controlling the name of the cohort topic(s)
+#### Controlling the name of the cohort topic(s)
 
 Typically a production deployment of an event bus requires the topics to be explicitly defined in its
 configuration.  In addition, many organizations have naming standards for topics.
@@ -367,7 +367,7 @@ The result looks like this with the registration topic showing first, then the t
 }
 ```
 
-### Override the value for the cohort topic
+#### Override the value for the cohort topic
 
 It is also possible to change the name of the topics used by a cohort.
 Any changes must be issued against each member of the cohort so that they are
@@ -404,7 +404,7 @@ POST {platformURLRoot}/open-metadata/admin-services/users/{adminUserId}/servers/
 {newTopicName}
 ```
 
-### Disconnect from a cohort
+#### Disconnect from a cohort
 
 This command unregisters a server from a cohort.
 

@@ -156,8 +156,8 @@ nav:
                   - Ecosystem UI:
                       - Using the Egeria Ecosystem UI: education/egeria-dojo/running-egeria/user-interfaces/ecosystem-ui/ecosystem-ui-start.md
               - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
-              - Open metadata labs : education/egeria-dojo/running-egeria/coco-labs-environment.md
-              - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/day-summary.md
+              - Coco Pharmaceuticals : education/egeria-dojo/running-egeria/coco-labs-environment.md
+              - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/running-egeria-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md

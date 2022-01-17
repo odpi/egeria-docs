@@ -39,10 +39,11 @@ The schedule also includes estimated times needed to complete each session. Do t
     - Introduction to Egeria
     - Installing prerequisite tools - Kubernetes & Postman
     - Installing a pre-configured Egeria environment
+    - Using the Ecosystem UI
     - Configuring Egeria servers
     - Running Egeria jupyter based labs
     - Using the Egeria Ecosystem UI (React UI)
-    - *Time to complete* - 6 hours
+    - *Time to complete* - 7 hours
       
     - *Outline*
     - Installing Kubernetes & Postman (1 hour)

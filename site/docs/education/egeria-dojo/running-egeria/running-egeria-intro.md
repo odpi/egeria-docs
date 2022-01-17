@@ -23,9 +23,12 @@ These are the topics we will work through in this Dojo:
   - Introduction to Egeria (0.5 hour)
   - Installing prereq tools - Kubernetes & Postman (1 hour)
   - Installing a pre-configured Egeria environment (0.5 hour)
+  - Using the Egeria Ecosystem UI (1 hour)
   - Configuring Egeria servers ( 2 hours)
   - Running Egeria Jupyter based labs (1.5 hours)
-  - Summary & questions" (0.5 hours)
+  - Summary & questions (0.5 hours)
+
+Note, the timings are very approximate. 
 
 ## Next step
 

@@ -16,7 +16,7 @@ Leave this running throughout this exploration of the UI.
 
 ## Using the UI
 
-You need to use an up to date Chrome browser.
+**IMPORTANT Use an up to date Chrome browser.**
 
 * In the browser go to [https://localhost:8091/org/login :material-dock-window:](https://localhost:8091/org/login){ target=ui }
 

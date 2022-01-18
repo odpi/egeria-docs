@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -71,7 +66,7 @@ The archive loads in the following order:
     1. PrimitiveDefs
     2. CollectionDefs
     3. EnumDefs
-2. New Type Definitions (`TypeDef`s) from the type store, through `verifyTypeDef()` and `addTypeDef()`:
+2. New Type Definitions (`TypeDef`s) from the type store, through `verifyTypeDef()` and `addTypeDef()` calls to the local repository:
     1. EntityDefs
     2. RelationshipDefs
     3. ClassificationDefs
@@ -84,9 +79,13 @@ The archive loads in the following order:
 !!! tip "Cohort propagation"
     If the server is connected to the cohort, the new content is sent as notifications to the rest of the cohort.
 
-!!! education "Further information"
+--8<-- "docs/guides/admin/servers/configuring-the-startup-archives.md"
 
-    - [Configuring an open metadata archive in an OMAG Server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup)
-    - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/guides/operations/adding-archive-to-a-running-server)
+--8<-- "docs/guides/operations/adding-archive-to-running-server.md"
+
+??? education "Further information"
+
+    - [Metadata Archiving](/egeria-docs/features/metadata-archiving/overview) describing all of the features of Egeria that use the Open Metadata Archives
+    - [The open metadata archive connector](/egeria-docs/concepts/open-metadata-archive-connector)
 
 --8<-- "snippets/abbr.md"

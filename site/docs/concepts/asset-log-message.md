@@ -8,15 +8,14 @@ hide:
 
 # Asset log message
 
-The asset log message is a type of log record that can be added to the local server's
-[audit log](/egeria-docs/concepts/audit-log).
+The asset log message is a type of log record that can be added to the local server's [audit log](/egeria-docs/concepts/audit-log).
 
 It is used to record that a specific action has been taken on an asset.
 
 The log record contains the following information:
 
 * **userId** -              userId of user making request.
-* **requestType** -           unique id for the asset.
+* **assetGUID** -           unique id for the asset.
 * **connectorInstanceId** - (optional) id of connector in use (if any).
 * **connectionName** -      (optional) name of the connection (extracted from the connector).
 * **connectorType** -       (optional) type of connector in use (if any).

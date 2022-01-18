@@ -50,19 +50,17 @@ The Egeria project uses [GitHub :material-github:](https://github.com/odpi){ tar
 All of these repositories are publicly visible; however, if you want to contribute new content you need to create a GitHub account.  This can be created from the top of the GitHub home page.
 
 If you are not familiar with Git and GitHub, there is additional education in the
-[Git and GitHub Tutorial](/egeria-docs/education/tutorials/).
+[Git and GitHub Tutorial](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview).
 
 ## Steps to contribute content to the project
 
-Egeria uses [GitHub's fork and pull model :material-dock-window:](https://help.github.com/articles/about-collaborative-development-models/){ target=gh } to create a contribution. This process is described in detail in the [Egeria dojo education](/egeria-docs/getting-started/dojo/2/contribution-to-egeria).
+Egeria uses [GitHub's fork and pull model :material-dock-window:](https://help.github.com/articles/about-collaborative-development-models/){ target=gh } to create a contribution. This process is described in detail in the [Git snd GitHub tutorial](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview).
 
-Each change should have a [GitHub issue](https://github.com/odpi/egeria/issues) explaining why the change is being made. The new or updated content should follow the Egeria [developer guidelines](https://egeria.odpi.org/developer-resources/Developer-Guidelines).
-
-There are additional resources for contributors under [developer-resources :material-github:](https://github.com/odpi/egeria/tree/master/developer-resources){ target=gh }. Review the [developer guidelines :material-github:](https://github.com/odpi/egeria/blob/master/developer-resources/Developer-Guidelines.md){ target=gh } to understand the requirements associated with new content for Egeria.
+Each change should have a [GitHub issue](https://github.com/odpi/egeria/issues) explaining why the change is being made. The new or updated content should follow the Egeria [developer guidelines](/egeria-docs/guides/contributor/guidelines).
 
 Every contribution is signed to say that the contributor has the rights to make the contribution and agrees with the [Developer Certificate of Origin (DCO) :material-github:](https://github.com/odpi/egeria/blob/master/developer-resources/why-the-dco.md){ target=gh }
 
-### Creating a Linux Foundation account
+## Creating a Linux Foundation account
 
 The Linux Foundation provide build and distribution facilities. You need an account to access some of the reports from the build.
 

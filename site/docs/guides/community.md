@@ -54,7 +54,7 @@ If you are not familiar with Git and GitHub, there is additional education in th
 
 ## Steps to contribute content to the project
 
-Egeria uses [GitHub's fork and pull model :material-dock-window:](https://help.github.com/articles/about-collaborative-development-models/){ target=gh } to create a contribution. This process is described in detail in the [Git snd GitHub tutorial](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview).
+Egeria uses [GitHub's fork and pull model :material-dock-window:](https://help.github.com/articles/about-collaborative-development-models/){ target=gh } to create a contribution. This process is described in detail in the [Git and GitHub tutorial](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview#using-git-and-github-when-making-a-contribution).
 
 Each change should have a [GitHub issue](https://github.com/odpi/egeria/issues) explaining why the change is being made. The new or updated content should follow the Egeria [developer guidelines](/egeria-docs/guides/contributor/guidelines).
 

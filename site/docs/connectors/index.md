@@ -251,10 +251,11 @@ Egeria provides two implementations of the open metadata archive store connector
 
 ??? education "Further information relating to Open Metadata Archive Store Connectors"
 
-    - [Configuring a Open Metadata Archive Store Connector](/egeria-docs/guides/admin/servers/configuring-the-cohort-registry-store-connector) in the [Cohort Member](/egeria-docs/concepts/cohort-member) server
     - [Metadata Archiving](/egeria-docs/features/metadata-archiving/overview) to understand the different mechanisms that use open metadata archives.
     - [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive) to understand structure of an open metadata archive.
     - [Writing a Open Metadata Archive Store Connector](/egeria-docs/guides/developer/runtime-connectors/open-metadata-archive-store-connector).
+    - [Loading an Open Metadata Archive at server statup](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup)
+    - [Loading an Open Metadata Archive in a running server](/egeria-docs/guides/operations/adding-archive-to-running-server)
 
 
 ### Audit Log Destination Connectors

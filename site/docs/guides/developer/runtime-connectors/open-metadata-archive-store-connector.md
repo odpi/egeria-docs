@@ -5,9 +5,10 @@
 
 ---8<-- "docs/connectors/runtime/open-metadata-archive-store-connector-intro.md"
 
-The definition of the open metadata archive connector interface is
-defined in the [repository-services-api :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis){ target=gh } module
-in the [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore){ target=gh } Java package.
+## Interface and Base Classes
+
+
+The definition of the open metadata archive connector interface is defined in the *repository-services-api* module in the [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore){ target=gh } Java package.
 
 Its interface is called [`OpenMetadataArchiveStore` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore/OpenMetadataArchiveStore.java){ target=gh }
 
@@ -46,13 +47,46 @@ The definition of the connector interface for these connectors is
 defined in the `repository-services-api` module
 in the [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore) Java package.
 
+## Example Implementations
 
-An implementations of this type of connector is located in the
+Implementations of this type of connector is located in the
 [adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors){ target=gh } module.
 
-## Related information
+## Build Dependencies
 
-- [Open Metadata Archive Store Connectors in the Connector Catalog](/egeria-docs/connectors/#open-metadata-archive-store-connectors)
- 
+=== "Maven"
+
+    ```xml
+    <dependencies>
+
+        <dependency>
+            <groupId>org.odpi.egeria</groupId>
+            <artifactId>open-connector-framework</artifactId>
+        </dependency>
+        
+         <dependency>
+            <groupId>org.odpi.egeria</groupId>
+            <artifactId>repository-services-apis</artifactId>
+         </dependency>
+
+    </dependencies>
+    ```
+
+=== "gradle"
+
+    ```xml
+    dependencies {
+        implementation project(':open-metadata-implementation:frameworks:open-connector-framework')
+        implementation project(':open-metadata-implementation:repository-services:repository-services-apis')
+    }
+    ```    
+
+## Writing the Connector Provider
+
+--8<-- "docs/guides/developer/implementing-a-connector-provider.md"
+
+## Writing the Connector
+
+
 
 --8<-- "snippets/abbr.md"

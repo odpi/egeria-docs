@@ -23,7 +23,14 @@ The interface that all archive services must implement is defined by [`ArchiveSe
 
 
 ??? education "Further information"
+
+    - [Metadata Archiving](/egeria-docs/features/metadata-archiving/overview) to understand the different mechanisms that use open metadata archives.
+    - [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive) to understand structure of an open metadata archive.
     - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up an archive service.
-    - [Overview of connectors)](/egeria-docs/frameworks/ocf/overview) that defines the behavior of all connectors.
+    - [Defining a governance engine in a content pack](/egeria-docs/guides/developer/open-metadata-archives/creating-governance-engine-content-packs) to add 
+    - [Writing a Open Metadata Archive Store Connector](/egeria-docs/guides/developer/runtime-connectors/open-metadata-archive-store-connector).
+    - [Loading an Open Metadata Archive at server statup](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup)
+    - [Loading an Open Metadata Archive in a running server](/egeria-docs/guides/operations/adding-archive-to-running-server)
+
 
 --8<-- "snippets/abbr.md"

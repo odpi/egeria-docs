@@ -14,7 +14,7 @@ The open metadata archive has two types:
 
 The logical structure of an open metadata archive is as follows:
 
-![Logical structure of an open metadata archive](open-metadata-archive-structure.svg)
+![Logical structure of an open metadata archive](/egeria-docs/guides/developer/open-metadata-archives/open-metadata-archive-structure.svg)
 
 Instances are linked together as follows:
 
@@ -22,30 +22,11 @@ Instances are linked together as follows:
 - Relationships are stored as `Relationship` structures and link to their entities through the embedded `EntityProxy` structure.
 - The entities will include their classifications; however, for classifications that are attached to entities that are not included in the archive, they are stored in an `ClassificationEntityExtension` structure.
 
-![Instance structures in an open metadata archive](open-metadata-archive-instances.svg)
+![Instance structures in an open metadata archive](/egeria-docs/guides/developer/open-metadata-archives/open-metadata-archive-instances.svg)
 
-Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/egeria-docs/connectors/open-metadata-archive-store-connector).
+Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/egeria-docs/concepts/open-metadata-archive-store-connector).
 
-!!! example "Example of the header from the [Cloud Information Model archive :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/design-model-archives){ target=gh }"
-    ```json
-    {
-      "class":"OpenMetadataArchive",
-      "archiveProperties":
-          {
-              "class":"OpenMetadataArchiveProperties",
-              "archiveGUID":"9dc75637-92a7-4926-b47b-a3d407546f89",
-              "archiveName":"Cloud Information Model (CIM) glossary and concept model",
-              "archiveDescription":"Data types for commerce focused cloud applications.",
-              "archiveType":"CONTENT_PACK",
-              "originatorName":"The Cloud Information Model",
-              "originatorLicense":"Apache 2.0",
-              "creationDate":1570383385107,
-              "dependsOnArchives":["bce3b0a0-662a-4f87-b8dc-844078a11a6e"]
-          }, 
-       "archiveTypeStore":{},
-       "archiveInstanceStore":{}
-    }
-    ```
+--8<-- "docs/guides/developer/open-metadata-archives/open-metadata-archive-header-example.md"
 
 ## Processing
 

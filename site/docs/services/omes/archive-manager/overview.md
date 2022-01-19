@@ -12,6 +12,8 @@ hide:
 
 The Archive Manager Open Metadata Engine Service (OMES) runs in an [Engine Host OMAG Server](/egeria-docs/concepts/engine-host). It hosts [archive engines](/egeria-docs/concepts/archive-engines) that consist of one or more related [archive services](/egeria-docs/guides/developer/archive-services/overview).
 
+![Archive Manager OMES](archive-engine-services-internals.svg)
+
 It provides access to the open metadata ecosystem for the [archive services](/egeria-docs/guides/developer/archive-services/overview) through a context. Archive services are pluggable connectors that maintain [open metadata archives](/egeria-docs/concepts/open-metadata-archive) based on the live metadata in the connected open metadata repositories.
 
 The Archive Manager OMES also provides an API to allow a third party tool to validate that a specific archive service implementation will load in the engine host server, and it returns the usage information encoded in the service's implementation.

@@ -108,7 +108,7 @@ is connected to.  Only use this command if the server is being permanently remov
 
 [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archives) contain pre-canned metadata types and instances for [Cohort Members](/egeria-docs/concepts/cohort-member).
 
-Archives can be [added to the configuration document](configuring-the-startup-archives.md) of a server to ensure their content is loaded each time the server is started.  This is intended for:
+Archives can be [added to the configuration document](/egeria-docs/guides/operations/configuring-the-startup-archives) of a server to ensure their content is loaded each time the server is started.  This is intended for:
 
 - Archives containing type definitions.
 - Archives containing instances for repositories that do not store the archive content but keep it in memory.

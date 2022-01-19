@@ -80,7 +80,7 @@ This contains new instances (entities, relationships and classifications).
 ![Figure 7](/egeria-docs/guides/developer/open-metadata-archives/file-based-open-metadata-archive-storage.svg)
 > **Figure 7:** Storing an open metadata archive as a single file
 
-![Figure 8](/egeria-docs/guides/developer/open-metadata-archives/file-based-open-metadata-archive-storage.svg)
+![Figure 8](/egeria-docs/guides/developer/open-metadata-archives/directory-based-open-metadata-archive-storage.svg)
 > **Figure 8:** Storing an open metadata archive in a directory structure
 
 ## Loading open metadata archives
@@ -92,7 +92,7 @@ Open metadata archives may also be loaded while the server is running using a RE
 
 These articles describe how to load open metadata archives into a server:
 
-- [Configuring an open metadata archive in an OMAG Server](/egeria-docs/concepts/open-metadata-archive/#configuring-the-startup-archives.md)
+- [Configuring an open metadata archive in an OMAG Server](/egeria-docs/concepts/open-metadata-archive/#configuring-metadata-to-load-on-startup.md)
 - [Adding an open metadata archive to a running OMAG Server](/egeria-docs/concepts/open-metadata-archive/#adding-archive-to-running-server.md)
 
 The archive loads in the following order:

@@ -8,7 +8,7 @@ hide:
 
 # Open Metadata Engine Services (OMES)
 
-The engine services are each able to host a specific type of governance engine. 
+The engine services are each able to host a specific type of [governance engine](/egeria-docs/concepts/governance-engine). 
 
 Broadly there are three types of governance engines:
 

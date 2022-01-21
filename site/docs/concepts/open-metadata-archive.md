@@ -16,6 +16,8 @@ The logical structure of an open metadata archive is as follows:
 
 ![Logical structure of an open metadata archive](/egeria-docs/guides/developer/open-metadata-archives/open-metadata-archive-structure.svg)
 
+--8<-- "docs/guides/developer/open-metadata-archives/open-metadata-archive-header-example.md"
+
 Instances are linked together as follows:
 
 - Entities are stored as `EntityDetail` structures.
@@ -26,7 +28,6 @@ Instances are linked together as follows:
 
 Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/egeria-docs/concepts/open-metadata-archive-store-connector).
 
---8<-- "docs/guides/developer/open-metadata-archives/open-metadata-archive-header-example.md"
 
 ## Processing
 

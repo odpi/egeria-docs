@@ -8,7 +8,7 @@
 
 ## Interface
 
-The interface that all archive services must implement is defined by [`ArchiveService` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/engine-services/archive-manager/archive-manager-api/src/main/java/org/odpi/openmetadata/engineservices/archivemanager/connectors/ArchiveService.java){ target=gh }:
+The interface that all archive services must implement is defined by [`ArchiveService` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/engine-services/archive-manager/archive-manager-api/src/main/java/org/odpi/openmetadata/engineservices/archivemanager/connector/ArchiveService.java){ target=gh }:
 
 ![Figure 1](archive-service-methods.svg)
 > **Figure 1:** Methods implemented by an archive service

@@ -577,9 +577,10 @@ nav:
       - Egeria Glossary: concepts/index.md
       - Basic Concepts: concepts/basic-concepts.md
       - Anchor: concepts/anchor.md
+      - Atchive Engine: concepts/archive-engine.md
       - Asset: concepts/asset.md
-      - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
+      - Asset Log Message: concepts/asset-log-message.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
@@ -614,6 +615,8 @@ nav:
       - Governance Action Process: concepts/governance-action-process.md
       - Governance Action Type: concepts/governance-action-type.md
       - Governance Engine: concepts/governance-engine.md
+      - Governance Engine Definition: concepts/governance-engine-definition.md
+      - Governance Engine Pack: concepts/governance-engine-pack.md
       - Governance Request Type: concepts/governance-request-type.md
       - Governance Server: concepts/governance-server.md
       - Governance Service: concepts/governance-service.md

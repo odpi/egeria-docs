@@ -10,7 +10,7 @@ hide:
 
 # Asset Analysis Open Metadata Engine Service (OMES)
 
-The Asset Analysis OMES provides support for [open discovery engines](/egeria-docs/frameworks/odf/#discovery-engine) that are part of the [Open Discovery Service (ODF)](/egeria-docs/frameworks/odf).
+The Asset Analysis OMES provides support for [open discovery engines](/egeria-docs/concepts/open-discovery-engine) that are part of the [Open Discovery Service (ODF)](/egeria-docs/frameworks/odf).
 
 ## Open discovery engines
 

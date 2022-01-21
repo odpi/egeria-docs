@@ -26,7 +26,7 @@ Area 0 describes base types and infrastructure. This includes types for `Asset`,
 - [0037 Software Server Platforms](0037-Software-Server-Platforms.md)
 - [0040 Software Servers](0040-Software-Servers.md)
 - [0041 Server Purpose](0041-Server-Purpose.md)
-- [0042 Software Server Capabilities](0042-Software-Capabilities.md)
+- [0042 Software Capabilities](0042-Software-Capabilities.md)
 - [0045 Servers and Assets](0045-Servers-and-Assets.md)
 - [0050 Applications and Processes](0050-Applications-and-Processes.md)
 - [0055 Data Processing Engines](0055-Data-Processing-Engines.md)

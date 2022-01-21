@@ -577,7 +577,7 @@ nav:
       - Egeria Glossary: concepts/index.md
       - Basic Concepts: concepts/basic-concepts.md
       - Anchor: concepts/anchor.md
-      - Atchive Engine: concepts/archive-engine.md
+      - Archive Engine: concepts/archive-engine.md
       - Asset: concepts/asset.md
       - Audit Log: concepts/audit-log.md
       - Asset Log Message: concepts/asset-log-message.md

@@ -24,10 +24,10 @@
 
     | Deprecated attribute | Moved to classification |
     |---|---|
-    | `owner` (type `string`) | [Ownership](../../4/0445-Governance-Roles/#ownership) |
-    | `ownerType` (type `AssetOwnerType` enum) | [Ownership](../../4/0445-Governance-roles/#ownership) |
-    | `zoneMembership` (type `array<string>`) | [AssetZoneMembership](../../4/0424-Governance-Zones/#assetzonemembership) |
-    | `latestChange` (type `string`) | [LatestChange](../../0/0011-Managing-Referenceables/#latestchange) |
+    | `owner` (type `string`) | [Ownership](/egeria-docs/types/4/0445-Governance-Roles/#ownership) |
+    | `ownerType` (type `AssetOwnerType` enum) | [Ownership](/egeria-docs/types/4/0445-Governance-roles/#ownership) |
+    | `zoneMembership` (type `array<string>`) | [AssetZoneMembership](/egeria-docs/types/4/0424-Governance-Zones/#assetzonemembership) |
+    | `latestChange` (type `string`) | [LatestChange](/egeria-docs/types/0/0011-Managing-Referenceables/#latestchange) |
 
 `Infrastructure`, `Process` and `DataSet` are examples of `Asset`s.
 
@@ -43,7 +43,7 @@
 
 ### Process
 
-*`Process`* describes a well-defined set of processing steps and decisions that drive a particular aspect of the organization's business. Most `Process`es are automated with software (see [`DeployedSoftwareComponent`](../../2/0215-Software-Components/#deployedsoftwarecomponent)) but they may also be a manual procedure. An automated process can be invoked from a remote server through a [`DeployedAPI`](../../2/0212-deployed-apis/#deployedapi).
+*`Process`* describes a well-defined set of processing steps and decisions that drive a particular aspect of the organization's business. Most `Process`es are automated with software (see [`DeployedSoftwareComponent`](/egeria-docs/types/2/0215-Software-Components/#deployedsoftwarecomponent)) but they may also be a manual procedure. An automated process can be invoked from a remote server through a [`DeployedAPI`](../../2/0212-deployed-apis/#deployedapi).
 
 ### DataSet
 

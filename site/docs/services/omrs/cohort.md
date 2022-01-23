@@ -94,7 +94,7 @@ Management of a server's membership is handled by the [cohort services](../#coho
 
 The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interfaces which gives fine-grained[^1] metadata notifications and updates. During server start up, the repository services detect the configuration of at least one cohort and starts the *metadata highway manager*. The metadata highway manager creates a *cohort manager* for each cohort configuration. The cohort manager manages the initialization and shutdown of the server's connectivity to a cohort, including the management of the [cohort registry](#cohort-registry).
 
-The server's [metadata security connector](/egeria-docs/features/metadata-security) provides fine-grained control on which metadata is sent, received and/or stored by the server. This level of control is necessary for metadata repositories that are managing specific collections of valuable objects such as [Assets](../../../access-services/docs/concepts/assets).
+The server's [metadata security connector](/egeria-docs/features/metadata-security) provides fine-grained control on which metadata is sent, received and/or stored by the server. This level of control is necessary for metadata repositories that are managing specific collections of valuable objects such as [Assets](/egeria-docs/concepts/asset).
 
 The types of cohort members include:
 

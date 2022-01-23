@@ -1696,7 +1696,7 @@ adapt it to specific environment.  However, the defaults provide a good starting
 The contents of this tutorial cover a very simple OMAG server configuration.
 For guidance on configuring more complex OMAG servers see:
 
-* [Administration Services User Guide](../../../open-metadata-implementation/admin-services/docs/user)
+* [Administration Services User Guide](/egeria-docs/guides/admin)
 
 For instructions on how to set up two OMAG Servers using in memory repositories that are exchanging metadata
 over [Apache Kafka](http://kafka.apache.org/), see:
@@ -1705,6 +1705,6 @@ over [Apache Kafka](http://kafka.apache.org/), see:
 
 ## Next steps
 
-With the configuration document in place, you are ready to [start the OMAG Server](task-starting-omag-server.md).
+With the configuration document in place, you are ready to [start the OMAG Server](/egeria-docs/education/tutorials/omag-server-tutorial/task-starting-omag-server).
 
 --8<-- "snippets/abbr.md"

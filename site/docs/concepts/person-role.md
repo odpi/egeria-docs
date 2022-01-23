@@ -32,16 +32,20 @@ A person who is accountable for the proper use and protection of an
 
 The Asset Owner is supported by the [Asset Owner OMAS](/egeria-docs/concepts/omas/asset-owner/overview).
 
-# Governance Officer
+### Governance Officer
 
 A person who is responsible for leading a governance domain is called a governance officer. 
 
 The governance officer is supported by the [Governance Program OMAS](/egeria-docs/concepts/omas/governance-program/overview).
 
-# Project Manager
+### Project Manager
 
 A project manager is a person who leads a [project](/egeria-docs/concepts/project).
 
 The project manager role is supported by the [Project Management OMAS](/egeria-docs/concepts/omas/project-management/overview).
+
+### Team Leader
+
+### Team Member
 
 --8<-- "snippets/abbr.md

@@ -14,7 +14,7 @@ resources				server-chassis-spring-3.3-SNAPSHOT.jar
 The name of the Java Archive (Jar) file will
 depend on the release of ODPi Egeria that you have installed.  In this example, the release is **3.3-SNAPSHOT**.
 
-The [OMAG Server Platform](../../../open-metadata-publication/website/omag-server) is started with the **java** command.
+The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) is started with the **java** command.
 Ensure you have a Java runtime at Version 8 (Update 151) or above installed on your machine.
 Check the version of Java you have with the command **java -version**
 (You can download Java from [Adoptium](https://adoptopenjdk.net/) and select **OpenJDK 11 (LTS)**

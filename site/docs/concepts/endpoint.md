@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Endpoint - part of the [Open Connector Framework (OCF)](../..)
+# Endpoint - part of the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview)
 
 The endpoint is a set of properties that defines the 
 network address and how to connect to it for a resource deployed in the digital landscape.

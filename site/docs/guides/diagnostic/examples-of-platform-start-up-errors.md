@@ -47,7 +47,7 @@ Process finished with exit code 1
 This may occur because the platform is already running (all be it in a zombie state)
 or it has been set up to use the same port as another process.
 The port is configured in the start up properties of the OMAG Server Platform.
-See the [Administration Guide](../../../open-metadata-implementation/admin-services/docs/user/configuring-the-omag-server-platform.md)
+See the [Administration Guide](/egeria-docs/guides/admin/configuring-the-omag-server-platform)
 for information on how to change the OMAG Server Platform's configuration.
 
 

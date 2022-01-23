@@ -3,7 +3,7 @@
 
 # OMRS Repository Connector
 
-Repository Connectors make use of the Egeria [meta-model](../../metadata-meta-model.md) to represent and communicate metadata.
+Repository Connectors make use of the Egeria [meta-model](/egeria-docs/guides/developer/repository-connectors/metamodel/overview) to represent and communicate metadata.
 
 The OMRS Repository Connector API defines a call
 interface to create, search, query, update and
@@ -12,7 +12,7 @@ The implementation of a specific OMRS connector
 determines which type(s) of metadata repository it is able to access.
 
 The OMRS has three repository connector implementations that form part of the
-core open metadata capability for a [cohort member](../../../../admin-services/docs/concepts/cohort-member.md):
+core open metadata capability for a [cohort member](/egeria-docs/concepts/cohort-member):
 
 * **[Enterprise Repository Connector](../enterprise-repository-connector.md)** -
 	This connector can issue calls to multiple OMRS connectors and aggregate the

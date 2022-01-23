@@ -1,10 +1,10 @@
-<!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the ODPi Egeria project. -->
-
 ---
 hide:
 - toc
 ---
+
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- Copyright Contributors to the ODPi Egeria project. -->
 
 # Governance Engine
 
@@ -15,9 +15,9 @@ A *governance engine* provides services that automate governance activities - fr
 When a governance engine is called, it is passed a [governance request type](/egeria-docs/concepts/governance-request-type) and request parameters.  This is mapped to a call to a governance service through the [governance engine definition](/egeria-docs/concepts/governance-engine-definition).
 
 ![Governance Engine Definition](/egeria-docs/guides/developer/open-metadata-archives/governance-engine-definition.svg)
-> The structure of a governance engine definition
+> The structure of a governance engine definition includes a list of governance request types.  Each governance request type, along with optional request parameters, are linked to a governance service definition.  This indicates which governance service to call when the governance request type is used on a call to the governance engine.  The associated request parameters provide default values for the request parameters passed to the governance service when it is invoked.  The request parameters can be added to and overridden by the caller.  The governance request type and request parameters indicate to the governance service what its action should be.
 
-The unique name of the governance engine defined in the governance engine definition is added to the [OMES configuration](/egeria-docs/guides/admin/servers/configuring-and-engine-host/#configure-engine-service).  When the [engine host](/egeria-docs/concepts/engine-host) starts up the OMES, it reads the *governance engine definition* from its partner [metadata access server](/egeria-docs/concepts/metadata-access-server) to complete its initialization.  The engine host monitors changes in the governance engine definition so the services within the governance engine can be dynamically maintained.
+The unique name of the governance engine defined in the governance engine definition is added to the [OMES configuration](/egeria-docs/guides/admin/servers/configuring-an-engine-host/#configure-engine-service).  When the [engine host](/egeria-docs/concepts/engine-host) starts up the OMES, it reads the *governance engine definition* from its partner [metadata access server](/egeria-docs/concepts/metadata-access-server) to complete its initialization.  The engine host monitors changes in the governance engine definition so the services within the governance engine can be dynamically maintained.
 
 Calls to the governance engine are made by creating [governance actions](/egeria-docs/concepts/governance-action) in the open metadata ecosystem.  The engine host is monitoring for new governance actions for the governance engine.  When one occurs, it claims the governance action and passes on the request to the governance engine to run.  The claim process is used since there may be multiple engine hosts running that governance engine and only one of them should process the request.
 

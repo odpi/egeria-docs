@@ -15,21 +15,21 @@ These are controlled through a combination of technical controls (implemented IT
 
 ## Further Information
 
-* Governance controls are types of **GovernanceDefinitions** which are located in model [0401](0401-Governance-Definitions.md).
-  The governance policies are defined in model [0415](0415-Governance-Responses.md).
+* Governance controls are types of **GovernanceDefinitions** which are located in model [0401](/egeria-docs/types/4/0401-Governance-Definitions).
+  The governance policies are defined in model [0415](/egeria-docs/types/4/0415-Governance-Responses).
 
-* The [Governance Program OMAS](../../../open-metadata-implementation/access-services/governance-program)
+* The [Governance Program OMAS](/egeria-docs/services/omas/governance-program/overview)
   provides support for defining governance policies through its **GovernancePolicyMakingInterface**. 
 
 * There is further detail on the content of the governance controls in the following models:
 
-     * [0430 Technical Controls](0430-Technical-Controls.md) - describe automated behaviour that implements a governance control.
-       * [0438 Naming Standards](0438-Naming-Standards.md) - defines naming standard rules.
-       * [0460 Governance Execution Points](0460-Governance-Execution-Points.md) - describe classifications for software components that link them to a technical control.
-       * [0461 Governance Action Engines](0461-Governance-Engines.md) - support the execution of technical controls.
-       * [0462 Governance Action Types](0462-Governance-Action-Types.md) - provide the choreography of the execution of technical controls.
-     * [0440 Organizational Controls](0440-Organizational-Controls.md) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
-       * [0445 Governance Roles](0445-Governance-Roles.md) - define governance roles and the people associated with them.
+     * [0430 Technical Controls](/egeria-docs/types/4/0430-Technical-Controls) - describe automated behaviour that implements a governance control.
+       * [0438 Naming Standards](/egeria-docs/types/4/0438-Naming-Standards) - defines naming standard rules.
+       * [0460 Governance Execution Points](/egeria-docs/types/4/0460-Governance-Execution-Points) - describe classifications for software components that link them to a technical control.
+       * [0461 Governance Action Engines](/egeria-docs/types/4/0461-Governance-Engines) - support the execution of technical controls.
+       * [0462 Governance Action Types](/egeria-docs/types/4/0462-Governance-Action-Types) - provide the choreography of the execution of technical controls.
+     * [0440 Organizational Controls](/egeria-docs/types/4/0440-Organizational-Controls) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
+       * [0445 Governance Roles](/egeria-docs/types/4/0445-Governance-Roles) - define governance roles and the people associated with them.
 
 
 --8<-- "snippets/abbr.md"

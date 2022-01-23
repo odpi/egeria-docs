@@ -18,7 +18,7 @@ The governance engine is performing some sort of governance operation such as me
 
 Click on the link below to dive into more detail:
 
-* [Overview of the Governance Servers](../../../open-metadata-implementation/admin-services/docs/concepts/governance-server-types.md)
+* [Overview of the Governance Servers](/egeria-docs/concepts/omag-server)
 
 ## Test yourself
 

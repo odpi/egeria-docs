@@ -3,7 +3,7 @@
 
 # OMAG Server Platform Tutorial
 
-The [Open Metadata and Governance (OMAG) Server Platform](../../../open-metadata-publication/website/omag-server)
+The [Open Metadata and Governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform)
 is a flexible server platform that
 can run many different types of open metadata and governance services.
 

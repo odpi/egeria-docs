@@ -43,7 +43,7 @@ The access service option property *KarmaPointPlateau* indicates the multiple of
 
 ## Automated exchange of metadata about people, organizations and communities
 
-The [Organization Integrator OMIS](/egeria-docs/services/omis/organization-integrator) supports [integration connectors](/egeria-docs/concepts/integration-connector) that manage the exchange of metadata about people, organizations and communities with thrid party systems.
+The [Organization Integrator OMIS](/egeria-docs/services/omis/organization-integrator/overview) supports [integration connectors](/egeria-docs/concepts/integration-connector) that manage the exchange of metadata about people, organizations and communities with third party systems.
 
 
 

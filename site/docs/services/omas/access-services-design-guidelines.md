@@ -31,8 +31,8 @@ There may be client interfaces and implementations for different programming lan
 Typically Java is supported and this is assumed in the descriptions that follow.
 * ***omas-name*-server** - a module containing the server-side implementation of the OMAS.
 This module registers with the server administration, supports the implementation or the API and the eventing interface
-and interfaces with the [Open Metadata Repository Services (OMRS)](../../../repository-services).
-* ***omas-name*-spring** - a module containing the server-side API decorated with [Spring](../../../../developer-resources/Spring.md) 
+and interfaces with the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs).
+* ***omas-name*-spring** - a module containing the server-side API decorated with [Spring](/egeria-docs/guides/contributor/runtime/#spring) 
 annotations.  This module is designed to be replaceable with a module using other REST annotation libraries so its
 API should be 1-1 with the *omas-name*-server API.
 
@@ -208,7 +208,7 @@ implementing the OMAS one scenario at a time.
   resource classes that support the REST API.
   
   Add the ***omas-name*/*omas-name*-server-spring** module to the `pom.xml` file for the
-  [OMAG Server Chassis](../../../server-chassis/server-chassis-spring).
+  [OMAG Server Chassis](/egeria-docs/services/server-chassis).
 
 * Design and implement the event handling.
 

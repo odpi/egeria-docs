@@ -10,7 +10,7 @@ load prepared content such as glossaries or standard models into a metadata serv
 
 ![Archives Content](egeria-dojo-day-1-3-2-3-working-with-archives.png)
 
-First read about [Open Metadata Archives](../../education).
+First read about [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive).
 
 Egeria has a number of pre-built content packs in the `content-packs` directory on
 GitHub - [Click to link to it](https://github.com/odpi/egeria/tree/master/content-packs)

@@ -70,15 +70,15 @@ and [add tags to the asset](tagging-an-asset.md).
 
 The Asset Consumer OMAS offers the following types of interface:
 
-* [Java client](../../asset-consumer-client/docs/user/java-client), 
-* [REST API](../../asset-consumer-server/docs/user) and 
-* [Out Topic Events](../../asset-consumer-client/docs/user/java-events) for receiving events about assets.
+* Java client, 
+* REST API and 
+* Out Topic Events for receiving events about assets.
 
 Connectors are only available through the Java client.
 
 ## Configuration
 
-Details of how to configure the Asset Consumer OMAS can be found [here](../../asset-consumer-server/docs/configuration)
+Details of how to configure the Asset Consumer OMAS can be found [in the admin guide](/egeria-docs/guides/admin/services/concfiguring-the-access-services)
 
 ## Scenarios
 

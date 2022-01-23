@@ -3,12 +3,12 @@
 
 # Personal roles
 
-Personal roles are the list of [person roles](../../../docs/concepts/user-roles/person-role.md) that an
+Personal roles are the list of [person roles](/egeria-docs/concepts/person-role) that an
 individual is currently appointed to.
 
-[Community Member](community-member.md),
-[Team Leader](../../../docs/concepts/organizations/team-leader.md) and
-[Team Member](../../../docs/concepts/organizations/team-member.md) are
+[Community Member](/egeria-docs/concepts/community/#community-member),
+[Team Leader](/egeria-docs/concepts/person-role/#team-leader) and
+[Team Member](/egeria-docs/concepts/person-role/#team-member) are
 examples of personal roles.
 
 

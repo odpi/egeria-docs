@@ -15,7 +15,7 @@ for money.
 
 As organizations grow the people who are part of the organization are organized into [teams](#teams).
 Teams can exist for many purposes - for example, a team may be formed to deliver a [project](project.md).
-Teams have their own structures that include [team leaders](person-role.md#team-leader) and [team members](person-role.md#team-member).
+Teams have their own structures that include [team leaders](/egeria-docs/concepts/person-role#team-leader) and [team members](/egeria-docs/concepts/person-role#team-member).
 
 Often an organization has a hierarchy of teams called the [departmental structure](#departmental-structure).
 

@@ -3,7 +3,7 @@
 
 # File Lineage Solutions
 
-[Lineage](../../lineage) shows how data flows from its origins to its various destinations.
+[Lineage](/egeria-docs/features/lineage-management/overview) shows how data flows from its origins to its various destinations.
 Files are often managed through a variety of ad hoc processes.
 They are often copied multiple times or moved from one location to another.
 This means that organizations need a variety of approaches to properly record lineage for files.
@@ -65,7 +65,7 @@ running in the
 ## Metadata capture through a provisioning governance action service
 
 Figure 5 is an alternative design where the onboarding process is implemented in a
-[Provisioning Governance Action Service](/egeria-docs/guides/developer/governance-action-services/provisioning-governance-service.md).
+[Provisioning Governance Action Service](/egeria-docs/guides/developer/governance-action-services/provisioning-governance-service).
 running in an
 [Engine Host](/egeria-docs/concepts/engine-host) server.
 

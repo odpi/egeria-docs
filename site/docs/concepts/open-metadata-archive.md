@@ -3,7 +3,7 @@
 
 # Open Metadata Archive
 
-An *open metadata archive* is a portable collection of open metadata [type definitions](/egeria-docs/introduction/key-concepts/#metadata-types) and [instances](/egeria-docs/introduction/key-concepts/#metadata-instances).  It can be [loaded each time a metadata access server starts up](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup) or [added to a running metadata access server](/egeria-docs/guides/operations/adding-archive-to-a-running-server).
+An *open metadata archive* is a portable collection of open metadata [type definitions](/egeria-docs/introduction/key-concepts/#metadata-types) and [instances](/egeria-docs/introduction/key-concepts/#metadata-instances).  It can be [loaded each time a metadata access server starts up](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup) or [added to a running metadata access server](/egeria-docs/guides/operations/adding-archive-to-running-server).
 
 The open metadata archive has two types:
 

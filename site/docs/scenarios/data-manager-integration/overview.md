@@ -39,7 +39,7 @@ The OMIS to use for different types of technology is shown in the table below.
 
 In Figure 1, integration connector `Database Extractor` is monitoring for schema changes in the Database Server
 and cataloguing them in open metadata through the Database Integrator OMIS.  The Database Integrator OMIS
-calls the [Data Manager OMAS](../../../../open-metadata-implementation/access-services/data-manager) which stores the open metadata in its local repository.
+calls the [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview) which stores the open metadata in its local repository.
 
 Similarly, 
 * Integration connector `File System Extractor` is monitoring for changes to files on the file system and
@@ -53,11 +53,11 @@ cataloguing them in open metadata through the API Integrator OMIS and the Data M
 
 
 
-![Figure 1](data-manager-integration-metadata-extraction.png#pagewidth)
+![Figure 1](data-manager-integration-metadata-extraction.png)
 > **Figure 1:** Set up for metadata extraction from data managers and stored in a local repository
 
 Figure 2 shows a similar set up except that the resulting metadata is being stored in a remote metadata
-repository connected via a [cohort](../../../../open-metadata-implementation/admin-services/docs/concepts/cohort-member.md).
+repository connected via a [cohort](/egeria-docs/concepts/cohort-member).
 
 ![Figure 2](data-manager-integration-metadata-extraction-remote.png)
 > **Figure 2:** Set up for metadata extraction from data managers and stored in a remote repository
@@ -69,7 +69,7 @@ any repository in the cohort.  This `Data Asset Distributor` can distribute this
 Note, `Data Asset Distributor` could be deployed in the same integration daemon as `Database Extractor`
 and `File System Extractor`.  It is show in a different integration daemon for the sake of clarity in the diagram.
 
-![Figure 3](data-manager-integration-metadata-distribution.png#pagewidth)
+![Figure 3](data-manager-integration-metadata-distribution.png)
 > **Figure 3:** Set up for distribution of metadata from data managers
 
 Figure 4 shows two integration connectors that are maintaining database views in a Data Virtualization Engine.
@@ -81,12 +81,11 @@ It is possible for `Database View Maker` to create the metadata for the views th
 However the approach shown in Figure 4 has the advantage that all views created in the Data Virtualization Engine
 are catalogued rather than just the ones created by `Database View Maker`.
 
-![Figure 4](data-manager-integration-metadata-synchronization.png#pagewidth)
+![Figure 4](data-manager-integration-metadata-synchronization.png)
 > **Figure 4:** Set up for distribution of metadata from data managers
 
 ----
 
-* Link to the [Connector Catalog](../../connector-catalog) to understand the integration connectors supplied by Egeria
-* Return to the [Egeria solutions](..) descriptions
+* Link to the [Connector Catalog](/egeria-docs/connectors) to understand the integration connectors supplied by Egeria
 
 --8<-- "snippets/abbr.md"

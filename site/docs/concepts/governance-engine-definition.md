@@ -2,6 +2,12 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
+---
+hide:
+- toc
+---
+
+
 # Governance Engine Definition
 
 A *governance engine definition* describes the [services](/egeria-docs/concepts/governance-service) that can be invoked in a [governance engine](/egeria-docs/concepts/governance-engine).  It consists of a list of [governance request types](/egeria-docs/concepts/governance-request-type) that define the logical names of each of the functions of the governance engine.  Each governance request type is mapped to at least one [governance service](/egeria-docs/concepts/governance-service) implementation along with request parameters to configure the behaviour of the service in a [governance engine definition](/egeria-docs/concepts/governance-engine).

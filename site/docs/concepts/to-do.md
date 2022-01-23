@@ -7,7 +7,7 @@ A **to do** is a record of an action.  It includes details of the action to perf
 and the time frame it needs to be completed for.
 
 To dos are normally created as a result of a meeting, or a process, such as a
-[governance action process](/egeria-docs/conceepts/govvernance-action-process).
+[governance action process](/egeria-docs/conceepts/governance-action-process).
 
 The requested action may be ad hoc in nature, or part of a stewardship
 process that identified a specific action for an individual, or group of

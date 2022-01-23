@@ -3,18 +3,18 @@
 
 ## Configure the engine host services
 
-The engine host services provide the base implementation of the [engine host](/egeria-docs/concepts/engine-host) OMAG Server.
+The [engine host services](/egeria-docs/services/engine-host-services) provide the base implementation of the [engine host](/egeria-docs/concepts/engine-host) OMAG Server.
 
 There are two parts to configuring the engine host services:
 
-### Specify location of governance engine
+### Specify location of governance engine definitions
 
-The location of the [metadata access store](/egeria-docs/concepts/metadata-access-store) (or [metadata access point](/egeria-docs/concepts/metadata-access-point)) running the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine), which will supply the definitions of the governance engines that will run in the engine services, is configured using two properties:
+The location of the [metadata access server](/egeria-docs/concepts/metadata-access-server) running the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) that will supply the definitions of the governance engines, is configured using two properties:
 
-- the [server url root](/egeria-docs/concepts/omag-server/#platform-url-root) of the metadata server's OMAG Server Platform, and
-- the [name of the metadata server](/egeria-docs/concepts/omag-server/#server-name).
+- the [server url root](/egeria-docs/concepts/platform-url-root) of the metadata access server's OMAG Server Platform, and
+- the [name of the metadata access server](/egeria-docs/concepts/server-name).
 
-!!! post "POST - specify location of governance engine"
+!!! post "POST - specify location of governance engine definitions"
     ```
     {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{engineHostServerName}}/engine-definitions/client-config
     ```
@@ -31,17 +31,9 @@ The location of the [metadata access store](/egeria-docs/concepts/metadata-acces
 
 ### Configure the engines services
 
-The [engine services](/egeria-docs/services/omes) (or Open Metadata Engine Services (OMES) to give them their full name) also run in the engine host.
+The [engine services](/egeria-docs/services/omes) (or Open Metadata Engine Services (OMES) to give them their full name) also run in the engine host.  Each engine service provides support for a particular type of governance engine which is in turn, a collection of governance services of a specific type.
 
-Each engine service provides support for a particular type of governance engine:
-
-- [Open Discovery Engines](/egeria-docs/frameworks/odf/overview)
-- [Governance Action Engines](/egeria-docs/frameworks/gaf/overivew)
-
-Each engine service hosts one or more governance engines. A governance engine is a collection of governance services of a specific type:
-
-- [Asset analysis](/egeria-docs/services/omes/asset-analysis/overview) hosts [open discovery services](/egeria-docs/concepts/open-discovery-service) that analyze the content of an asset's real world counterpart, generates [annotations](/egeria-docs/frameworks/odf/discovery-annotation) in an [open discovery analysis report](/egeria-docs/frameworks/odf/discovery-analysis-report) that is attached to the asset in the open metadata repositories.
-- [Governance action](/egeria-docs/services/omes/governance-action/overview) hosts [governance action services](/egeria-docs//governance-action-service) that monitor changes in the metadata and initiate updates and other actions as a result.
+--8<-- "docs/concepts/governance-service-types.md"
 
 #### List engine services
 
@@ -60,8 +52,7 @@ Note the `engineServiceURLMarker` for the engine service that you want to config
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `engineServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 
-Each engine service is configured with the network location of the [metadata access point](/egeria-docs/concepts/metadata-access-point) / [metadata access store](/egeria-docs/concepts/metadata-access-store) running the appropriate [OMAS](/egeria-docs/services/omas). There are a set of options that the engine service supports along with the list of configuration properties for the governance engines that will be run in the engine service. The governance engine's configuration properties identify which governance engine to
-run. The governance engine's definition, including the services it supports are retrieved from the metadata access point / metadata server when the engine service starts up.
+Each engine service is configured with the network location of the [metadata access server](/egeria-docs/concepts/metadata-access-server) running the appropriate partner service. There are a set of options that the engine service supports along with the list of configuration properties for the governance engines that will be run in the engine service. The governance engine's configuration properties identify which governance engine to run. The governance engine's definition, including the services it supports are retrieved from the metadata access server when the engine service starts up.
 
 !!! post "POST - configure engine service"
     ```
@@ -87,15 +78,6 @@ run. The governance engine's definition, including the services it supports are 
 
     - `engineQualifiedName` - set up the qualified name of the governance engine stored in the metadata servers.
     - `connectorUserId` - set up the user id for the engine: if this is null, the engine host's userId is used on requests to the Open Metadata Access Service (OMAS).
-
-#### Further Information
-
-The definition of the governance services that are supported by these governance engines are retrieved from the open metadata server when the engine host server starts up.
-
-Maintaining these definitions is described:
-
-- For discovery engines and services see [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview)
-- For governance action engines and services see [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview)
 
 ### Remove engine host services
 

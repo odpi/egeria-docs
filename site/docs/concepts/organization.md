@@ -19,13 +19,13 @@ Teams have their own structures that include [team leaders](/egeria-docs/concept
 
 Often an organization has a hierarchy of teams called the [departmental structure](#departmental-structure).
 
-# Teams
+## Teams
 
 A team is a group of people working together typically to achieve a common purpose.
 
 Teams can be linked together to form a hierarchy.
 
-# Departmental Structure
+## Departmental Structure
 
 The departmental structure is a hierarchy of [teams](#teams) that includes everyone in
 the organization in at least one of the teams.

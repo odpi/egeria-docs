@@ -46,6 +46,10 @@ The project manager role is supported by the [Project Management OMAS](/egeria-d
 
 ### Team Leader
 
+The leader of a [team](/egeria-docs/concepts/organization/#team).
+
 ### Team Member
+
+A member of a [team](/egeria-docs/concepts/organization/#team).
 
 --8<-- "snippets/abbr.md

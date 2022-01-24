@@ -11,15 +11,18 @@
 - [Anchor](/egeria-docs/concepts/anchor)
 - [API Integrator OMIS](/egeria-docs/services/omis/api-integrator/overview)
 - [Application Programming Interface (API)](/egeria-docs/concepts/basic-concepts)
+- [Archive Context](/egeria-docs/guides/developer/archive-services/overview)
 - [Archive Engine](/egeria-docs/concepts/archive-engine)
 - [Archive Manager OMES](/egeria-docs/services/omes/archive-manager/overview)
 - [Archive Service](/egeria-docs/guides/developer/archive-services/overview)
 - [Archives for Open Metadata](/egeria-docs/concepts/open-metadata-archive)
 - [Asset](/egeria-docs/concepts/asset)
-  - [Governance Zones](/egeria-docs/concepts/governance-zone)
-  - [Feedback](/egeria-docs/concepts/feedback)
-  - [Log Message](/egeria-docs/concepts/asset-log-message)
-  - [Open Metadata Type](/egeria-docs/types/0/0010-Base-Model)
+
+    - [Governance Zones](/egeria-docs/concepts/governance-zone)
+    - [Feedback](/egeria-docs/concepts/feedback)
+    - [Log Message](/egeria-docs/concepts/asset-log-message)
+    - [Open Metadata Type](/egeria-docs/types/0/0010-Base-Model)
+  
 - [Asset Analysis OMES](/egeria-docs/service/omes/asset-analysis/overview)
 - [Asset Catalog OMAS](/egeria-docs/services/omas/asset-catalog/overview)
 - [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview)
@@ -76,17 +79,17 @@
 - [Digital Service OMAS](/egeria-docs/services/omas/digital-service/overview)
 - [Discovery (metadata)](/egeria-docs/features/discovery-and-stewardship/overview)
 - [Discovery Analysis Report](/egeria-docs/concepts/discovery-analysis-report)
-- [Discovery Annotation](/egeria-docs/concepts/disscovery-analysis-report/#discovery-annotation)
-- [Discovery Annotation Store](/egeria-docs/concepts/discovery-context)
-- [Discovery Asset Catalog Store](/egeria-docs/concepts/discovery-context)
-- [Discovery Asset Store](/egeria-docs/concepts/discovery-context)
-- [Discovery Configuration Server](/egeria-docs/services/omas/governaance-engine/overview)
-- [Discovery Context](/egeria-docs/concepts/discovery-context)
+- [Discovery Annotation](/egeria-docs/concepts/discovery-analysis-report/#discovery-annotation)
+- [Discovery Annotation Store](/egeria-docs/guides/developer/open-discovery-services/discovery-context)
+- [Discovery Asset Catalog Store](/egeria-docs/guides/developer/open-discovery-services/discovery-context)
+- [Discovery Asset Store](/egeria-docs/guides/developer/open-discovery-services/discovery-context)
+- [Discovery Configuration Server](/egeria-docs/services/omas/governance-engine/overview)
+- [Discovery Context](/egeria-docs/guides/developer/open-discovery-services/discovery-context)
 - [Discovery Engine](/egeria-docs/concepts/open-discovery-engine)
 - [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview)
-- [Discovery Pipeline](/egeria-docs/concepts/open-discovery-service/#discovery-pipeline)
+- [Discovery Pipeline](/egeria-docs/guides/developer/open-discovery-services/discovery-pipeline)
 - [Discovery Server](/egeria-docs/concepts/engine-host)
-- [Discovery Service](/egeria-docs/concepts/open-discovery-service)
+- [Discovery Service](/egeria-docs/guides/developer/open-discovery-services/overview)
 - [Display Integrator OMIS](/egeria-docs/services/omis/display-integrator/overview)
 
 ## E
@@ -97,7 +100,9 @@
 - [Enterprise Metadata Collection](/egeria-docs/concepts/metadata-collection)
 - [Enterprise Repository Services Subsystem (OMRS)](/egeria-docs/services/omrs)
 - [Event](/egeria-docs/concepts/basic-concepts/#event)
-   - [Cohort Events](/egeria-docs/concepts/cohort-events)
+
+    - [Cohort Events](/egeria-docs/concepts/cohort-events)
+   
 - [Event Bus](/egeria-docs/concepts/event-bus)
 - [Event Broker](/egeria-docs/concepts/basic-concepts/#event-broker)
 - [Event Management Services Subsystem (OMRS)](/egeria-docs/services/omrs)
@@ -109,14 +114,17 @@
 
 - [Feedback](/egeria-docs/concepts/feedback)
 - Files
-  - [omag.server.servername.config](/egeria-docs/concepts/configuration-document)
-  - [servername.cohortname.registrystore](/egeria-docs/connectors/runtime/file-cohort-registry-store-connector)
+
+    - [omag.server.servername.config](/egeria-docs/concepts/configuration-document)
+    - [servername.cohortname.registrystore](/egeria-docs/connectors/runtime/file-cohort-registry-store-connector)
+  
 - [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
 - [Frameworks](/egeria-docs/frameworks)
-  - [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview)
-  - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview)
-  - [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview)
-  - [Governance Action Framework (GAF)](/egeria-docs/frameworks/gaf/overview)
+
+    - [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview)
+    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview)
+    - [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview)
+    - [Governance Action Framework (GAF)](/egeria-docs/frameworks/gaf/overview)
 
 
 ## G
@@ -137,6 +145,7 @@
 - [Governance Service](/egeria-docs/concepts/governance-service)
 - [Governance Zones](/egeria-docs/concepts/governance-zone)
 - [GUIDs](/egeria-docs/concepts/guid)
+
   - [Metadata Collection Id](/egeria-docs/concepts/metadata-collection-id)
 
 
@@ -153,9 +162,11 @@
 - [Informal Tag](/egeria-docs/concepts/informal-tag)
 - [Instance Security](/egeria-docs/features/metadata-security/overview)
 - Instances
-       - [Metadata Instances](/egeria-docs/concepts/open-metadata-instances)
-       - [Instance Events](/egeria-docs/concepts/cohort-events)
-       - [Server Instances](/egeria-docs/concepts/omag-server)
+
+    - [Metadata Instances](/egeria-docs/concepts/open-metadata-instances)
+    - [Instance Events](/egeria-docs/concepts/cohort-events)
+    - [Server Instances](/egeria-docs/concepts/omag-server)
+       
 - [InTopic](/egeria-docs/concepts/in-topic)
 - [In Memory Repository Connector](/egeria-docs/concepts/repository-connector)
 - [Infrastructure Integrator OMIS](/egeria-docs/services/omis/infrastructure-integrator/overview)
@@ -309,15 +320,19 @@
 
 - [Tagging](/egeria-docs/concepts/inforal-tag.md)
 - [Tool](/egeria-docs/concepts/software-server-capability/#tool)
-- Tombstone - see Memento
+- Tombstone - see [Memento](#m)
 - [To Do](/egeria-docs/concepts/to-do)
 - [Topic](/egeria-docs/concepts/basic-concepts/#topic)
+
   - [InTopic](/egeria-docs/concepts/in-topic)
   - [Cohort Topic](/egeria-docs/concepts/cohort-topic)
   - [OutTopic](/egeria-docs/concepts/out-topic)
+  
 - [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview)
 - [Type Definitions (TypeDefs)](/egeria-docs/concepts/open-metadata-type-definitions)
+
   - [TypeDef Events](/egeria-docs/concepts/cohort-events)
+  
 - [Types of Open Metadata](/egeria-docs/types)
 
 

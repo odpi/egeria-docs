@@ -5,7 +5,7 @@
 
 # README
 
-This repository exists to host the documentation for the Egeria project across its various code repositories. The documentation itself should be accessed through GitHub pages at: [https://odpi.github.io/egeria-docs](https://odpi.github.io/egeria-docs).
+This repository exists to host the documentation for the Egeria project across its various code repositories. The documentation itself should be accessed through GitHub pages at: [https://egeria-project.org](https://egeria-project.org).
 
 ## Contributing
 

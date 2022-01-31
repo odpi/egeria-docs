@@ -1,1 +1,1 @@
---8<-- "docs/release-notes/3-4.md"
+--8<-- "docs/release-notes/3-5.md"

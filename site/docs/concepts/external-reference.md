@@ -8,7 +8,7 @@ outside of open metadata.
 
 A list of external references can be attached to 
 a [personal profile](/egeria-docs/concepts/personal-profile),
-a [community](/egeria-docs/concepts/community.md) or
+a [community](/egeria-docs/concepts/community) or
 a [team](/egeria-docs/concepts/organizations/#team)
 
 

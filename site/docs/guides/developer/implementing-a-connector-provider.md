@@ -31,7 +31,7 @@ If your connector implementation matches these requirements, its connector provi
 
 ```java
 /**
- * XXXStoreProvider is the OCF connector provider for the XXX store connector.
+ * XXXStoreProvider is the OCF connector provider for the XXX connector.
  */
 public class XXXStoreProvider extends ConnectorProviderBase
 {
@@ -53,6 +53,17 @@ public class XXXStoreProvider extends ConnectorProviderBase
     private static final String connectorDescription   = "Connector supports ... add details here.";
     private static final String connectorWikiPage      = "Add url to documentation here";
 
+
+    /*
+     * Define the name of the connector implementation.
+     */
+    private static final Class<?> connectorClass = XXXStoreConnector.class;
+    
+    /*
+     * Define the name of configuration properties.
+     */
+    public static final String TEMPLATE_QUALIFIED_NAME_CONFIGURATION_PROPERTY = "templateQualifiedName";
+
     /**
      * Constructor used to initialize the ConnectorProviderBase class.
      */
@@ -63,7 +74,6 @@ public class XXXStoreProvider extends ConnectorProviderBase
         /*
          * Set up the class name of the connector that this provider creates.
          */
-        Class<?> connectorClass = XXXStoreConnector.class;
         super.setConnectorClassName(connectorClass.getName());
 
         /*

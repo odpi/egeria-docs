@@ -37,7 +37,7 @@ Each OMAG Server is isolated within the server platform and so the OMAG Server p
 ## Inside the OMAG Server platform
 
 The **OMAG Server Platform** provides the server environment for running open metadata
-and governance services.  It hosts one or more **[OMAG Servers](omag-server.md)**.  Each server is configured to support specific
+and governance services.  It hosts one or more **[OMAG Servers](/egeria-docs/concepts/omag-server)**.  Each server is configured to support specific
 open metadata and governance services.  Thus each server performance a specific role in an deployment landscape.
 
 The OMAG Server platform is included in the [Egeria Distribution TAR file](https://github.com/odpi/egeria/tree/master/open-metadata-distribution/open-metadata-assemblies)

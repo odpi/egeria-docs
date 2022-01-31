@@ -3,7 +3,7 @@
 
 # Open Metadata and Governance (OMAG) Server
 
-An *OMAG Server* is a software server that runs inside the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform.md). It is therefore sometimes referred to as a "logical" server rather than a physical server that runs in its own process. It supports the integration of one or more technologies by hosting connectors that interact with that technology, or providing specialist [APIs](/egeria-docs/basic-concepts/#application-programming-interface-apis) or [event topics](/egeria-docs/basic-concepts/#topic) (both in and out).
+An *OMAG Server* is a software server that runs inside the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform). It is therefore sometimes referred to as a "logical" server rather than a physical server that runs in its own process. It supports the integration of one or more technologies by hosting connectors that interact with that technology, or providing specialist [APIs](/egeria-docs/basic-concepts/#application-programming-interface-apis) or [event topics](/egeria-docs/basic-concepts/#topic) (both in and out).
 
 Because of the wide variety of technologies deployed in organizations today, each with very different capabilities and needs, the integration and exchange of metadata needs to be organized. This organization is managed through the Egeria frameworks and services supported by the OMAG Servers. There are different types of OMAG Server, each supporting specific technologies. The OMAG Server ensures this type of technology is integrated appropriately for its needs.
 
@@ -11,7 +11,7 @@ The capabilities that are activated in an OMAG Server are defined in its [config
 
 ## Platform URL root
 
-An OMAG Server's *platform URL root* is the network address of the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform.md) where the OMAG Server is going to run. This is often the host name of the computer or container where the platform runs plus the port number allocated to the OMAG Server Platform.
+An OMAG Server's *platform URL root* is the network address of the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) where the OMAG Server is going to run. This is often the host name of the computer or container where the platform runs plus the port number allocated to the OMAG Server Platform.
 
 Its value is needed when creating clients or configuring services that will call the OMAG Server because it provides the root of the URL used to call the server's open metadata and governance REST calls, which have the following format in their URLs:
 

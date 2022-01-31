@@ -8,7 +8,7 @@ hide:
 
 # Event Bus
 
-Egeria's *event bus* is constructed from an [event broker](/egeria-docs/basic-concepts/#event-broker) infrastructure service and a set of well-known [topics](/egeria-docs/basic-concepts/#topic). Collectively they provide the ability to reliably pass events between different [OMAG Servers](omag-server.md):
+Egeria's *event bus* is constructed from an [event broker](/egeria-docs/basic-concepts/#event-broker) infrastructure service and a set of well-known [topics](/egeria-docs/basic-concepts/#topic). Collectively they provide the ability to reliably pass events between different [OMAG Servers](/egeria-docs/concepts/omag-server):
 
 - To register with an [open metadata repository cohort](/egeria-docs/concepts/cohort-members), exchange type definitions and share changes to metadata with other members of the cohort via the [OMRS topic(s)](/egeria-docs/services/omrs/cohort-events).
 - To exchange details of metadata changes through an [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas)'s [InTopic](/egeria-docs/concepts/in-topic) and [OutTopic](/egeria-docs/concepts/out-topic).

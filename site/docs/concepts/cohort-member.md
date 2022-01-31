@@ -8,7 +8,7 @@ hide:
 
 # Cohort Member
 
-A *Cohort Member* is an [OMAG Server](omag-server.md) that is capable of joining an *open metadata repository cohort*.
+A *Cohort Member* is an [OMAG Server](/egeria-docs/concepts/omag-server) that is capable of joining an *open metadata repository cohort*.
 
 The open metadata repository cohort (or cohort for short) is a group of OMAG servers that are exchanging metadata using a peer-to-peer replication protocol and federated queries.  This is shown in Figure 1.
 
@@ -19,20 +19,11 @@ The cohort is self-configuring.  At the heart of it is between one and four shar
 [cohort topics](/egeria-docs/concepts/cohort-events/#cohort-topics).  Each member publishes a registration request on the appropriate topic when they want to join.  This is picked up by the existing members who add this new server to their registry of members known as the [cohort registry](/egeria-docs/concepts/cohort-registry)
 and re-send their registration through the same topic to allow the new member to build up its own registry.
 
-When an OMAG server permanently leaves the cohort, it sends an unregistration request.
-This enables the other members to remove the parting member from their registries.
+When an OMAG server permanently leaves the cohort, it sends an unregistration request. This enables the other members to remove the parting member from their registries.
 
-The purpose of the cohort registry in each member is to configure its federated query
-capability.
-The registration information includes the URL Root and server name
-of the member.  The federation capability in each OMAG server allows it to issue
-metadata create, update, delete and search requests to each and every member of the
-cohort.  This is the primary mechanism for accessing metadata.
+The purpose of the cohort registry in each member is to configure its federated query capability. The registration information includes the URL Root and server name of the member.  The federation capability in each OMAG server allows it to issue metadata create, update, delete and search requests to each and every member of the cohort.  This is the primary mechanism for accessing metadata.
 
-In addition, any change to metadata made by a member is replicated to the other
-members of the cohort through the relevant cohort topic.  This gives the other members
-to opportunity to maintain cached copies of the metadata for performance / availability
-reasons.  A member may also request that metadata is "refreshed" across the cohort.
+In addition, any change to metadata made by a member is replicated to the other members of the cohort through the relevant cohort topic.  This gives the other members to opportunity to maintain cached copies of the metadata for performance / availability reasons.  A member may also request that metadata is "refreshed" across the cohort.
 The originator of the requested metadata then sends the latest version of this metadata to
 the rest of the cohort through the cohort topic.  This mechanism is useful
 to seed the cache in a new member of the cohort and is invoked as a result of a

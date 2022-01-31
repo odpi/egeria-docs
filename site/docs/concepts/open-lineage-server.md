@@ -8,7 +8,7 @@ hide:
 
 # Open lineage server
 
-The open lineage server is a [governance server](governance-server.md)
+The open lineage server is a [governance server](/egeria-docs/concepts/governance-server)
 that manages a historical warehouse of lineage information.
 
 ![Open Lineage Server](open-lineage-server.svg)

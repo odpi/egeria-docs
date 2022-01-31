@@ -11,7 +11,7 @@ hide:
 The **presentation server** hosts the JavaScript applications that provide an interactive browser-based
 user interface for Egeria.
 
-The JavaScript applications call REST API services running in a [view server](view-server.md)
+The JavaScript applications call REST API services running in a [view server](/egeria-docs/concepts/view-server)
 to retrieve information and perform operations relating to open metadata.
 
 ![A presentation server in the open metadata ecosystem](view-server.svg)

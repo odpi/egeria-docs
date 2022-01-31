@@ -79,7 +79,7 @@
 - [Digital Service OMAS](/egeria-docs/services/omas/digital-service/overview)
 - [Discovery (metadata)](/egeria-docs/features/discovery-and-stewardship/overview)
 - [Discovery Analysis Report](/egeria-docs/concepts/discovery-analysis-report)
-- [Discovery Annotation](/egeria-docs/concepts/discovery-analysis-report/#discovery-annotation)
+- [Discovery Annotation](/egeria-docs/guides/developer/open-discovery-services/discovery-annotation)
 - [Discovery Annotation Store](/egeria-docs/guides/developer/open-discovery-services/discovery-context)
 - [Discovery Asset Catalog Store](/egeria-docs/guides/developer/open-discovery-services/discovery-context)
 - [Discovery Asset Store](/egeria-docs/guides/developer/open-discovery-services/discovery-context)
@@ -190,17 +190,17 @@
 
 ## L
 
-- [Likes](/egeria-docs/concepts/like.md)
+- [Likes](/egeria-docs/concepts/like)
 - [Lineage](/egeria-docs/features/lineage-management/overview)
 - [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview)
-- [Local Metadata Collection Id](/egeria-docs/concepts/metadata-collection-id.md)
+- [Local Metadata Collection Id](/egeria-docs/concepts/metadata-collection-id)
 - [Local Repository Services (OMRS)](/egeria-docs/services/omrs)
 
 
 ## M
 
 - [Master Data Manager](/egeria-docs/concepts/software-server-capability/#master-data-manager)
-- [Memento Classification](open-metadata-types/0010-Base-Model.md)
+- [Memento Classification](open-metadata-types/0010-Base-Model)
 - [Metadata Access Point](/egeria-docs/concepts/metadata-access-point)
 - [Metadata Access Server](/egeria-docs/concepts/metadata-access-server)
 - [Metadata Access Store](/egeria-docs/concepts/metadata-access-store)
@@ -318,7 +318,7 @@
 
 ## T
 
-- [Tagging](/egeria-docs/concepts/inforal-tag.md)
+- [Tagging](/egeria-docs/concepts/informal-tag)
 - [Tool](/egeria-docs/concepts/software-server-capability/#tool)
 - Tombstone - see [Memento](#m)
 - [To Do](/egeria-docs/concepts/to-do)

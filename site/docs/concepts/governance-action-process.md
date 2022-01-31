@@ -21,12 +21,12 @@ Details of how to set up governance action process is described in the
 [0462 Governance Action Types](/egeria-docs/types/4/0462-Governance-Action-Types)
 shows the structure of the incident report.
 It is a [Referenceable](/egeria-docs/types/0//0010-Base-Model)
-so it can support comments and have [governance actions](governance-action.md) linked to it.
+so it can support comments and have [governance actions](/egeria-docs/concepts/governance-action) linked to it.
 
 ## Further information
 
 * The [Open Metadata Engine Services (OMES)](/egeria-docs/services/omes) provide the mechanisms
-  that support the different types of [governance engines](/egeria-docs/concepts/governance-engine).  These engines run the [governance services](governance-service.md) that execute the [governance actions](governance-action.md) defined by the governance action process.
+  that support the different types of [governance engines](/egeria-docs/concepts/governance-engine).  These engines run the [governance services](/egeria-docs/concepts/governance-service) that execute the [governance actions](/egeria-docs/concepts/governance-action) defined by the governance action process.
  
  
 

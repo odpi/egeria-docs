@@ -14,7 +14,7 @@ Metadata access servers provide access to open metadata for [governance servers]
 
 These are the different types:
 
-- [Metadata Access Point](metadata-access-point.md) - a [cohort member](cohort-member.md) with support for the [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas).
-- [Metadata Access Store](metadata-access-store.md) - metadata access point with a native metadata repository.
+- [Metadata Access Point](/egeria-docs/concepts/metadata-access-point) - a [cohort member](/egeria-docs/concepts/cohort-member) with support for the [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas).
+- [Metadata Access Store](/egeria-docs/concepts/metadata-access-store) - metadata access point with a native metadata repository.
 
 --8<-- "snippets/abbr.md"

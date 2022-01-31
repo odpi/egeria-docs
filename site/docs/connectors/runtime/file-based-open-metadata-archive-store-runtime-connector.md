@@ -1,11 +1,11 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# API-based Open Lineage Log Store Integration Connector
+# File-based Open Metadata Archive Store Connector
 
 !!! info "Connector details"
-    - Connector Category: [Integration Connector](/egeria-docs/connectors/integration-connector)
-    - Hosting Service: [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator)
+    - Connector Category: [Open Metadata Archive Store Connector](/egeria-docs/connectors/#open-metadata-archive-store-connectors)
+    - Hosting Service: [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
     - Hosting Server: [Integration Daemon](/egeria-docs/concepts/integration-daemon)
     - Source Module: [lineage-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/lineage-integration-connectors){ target=gh }
     - Jar File Name: `lineage-integration-connectors.jar`

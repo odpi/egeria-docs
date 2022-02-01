@@ -3,7 +3,7 @@
 
 ## Set the server URL root
 
-Configure the [local server URL root](/egeria-docs/concepts/omag-server/#platform-url-root) with the value of the OMAG Server Platform where the service will run: in particular if the configuration document will be deployed to a different OMAG Server Platform from the one used to maintain the configuration document.
+Configure the [local server URL root](/concepts/omag-server/#platform-url-root) with the value of the OMAG Server Platform where the service will run: in particular if the configuration document will be deployed to a different OMAG Server Platform from the one used to maintain the configuration document.
 
 !!! post "POST - set server URL root"
     ```

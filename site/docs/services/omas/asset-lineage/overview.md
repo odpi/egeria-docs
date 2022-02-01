@@ -7,7 +7,7 @@
 
 ## Overview 
 
-Asset Lineage is metadata access service (OMAS) that consolidates and exports lineage metadata for [assets](/egeria-docs/concepts/asset){ target=_blank } in a cohort. This is achieved by actively watching the cohort and discovering specific asset types and relationships to other assets or metadata elements. 
+Asset Lineage is metadata access service (OMAS) that consolidates and exports lineage metadata for [assets](/concepts/asset){ target=_blank } in a cohort. This is achieved by actively watching the cohort and discovering specific asset types and relationships to other assets or metadata elements. 
 
 Following asset types are considered:
 
@@ -16,11 +16,11 @@ Following asset types are considered:
 - DataSet
 
 
-Asset Lienage OMAS then builds complex graph structures (sometimes we call this asset context) that are sent to an [out topic](/egeria-docs/concepts/out-topic){ target=_blank } address for further preservation and use with [Open Lineage Server :material-dock-window:](https://odpi.github.io/egeria-docs/services/open-lineage-services/){ target=_blank }. 
+Asset Lienage OMAS then builds complex graph structures (sometimes we call this asset context) that are sent to an [out topic](/concepts/out-topic){ target=_blank } address for further preservation and use with [Open Lineage Server :material-dock-window:](https://odpi.github.io/services/open-lineage-services/){ target=_blank }. 
 
 The above works well for scenario where metadata is actively shared on the cohort while it gets created. In different scenario, additional repository already prepopulated with existing metadata can join the cohort. Asset Lineage OMAS offers endpoint to handle this as well by allowing external system to request (or actively poll) and extract the metadata relevant for building lineage graph.
 
-In all cases, Asset Lineage OMAS always relies on underlying [Enterprise Repository Services :material-dock-window:](/egeria-docs/services/omrs/subsystem-descriptions/enterprise-repository-services){ target=_blank } OMRS subsystem to find and consolidate metadata by combining different elements available across the cohort.
+In all cases, Asset Lineage OMAS always relies on underlying [Enterprise Repository Services :material-dock-window:](/services/omrs/subsystem-descriptions/enterprise-repository-services){ target=_blank } OMRS subsystem to find and consolidate metadata by combining different elements available across the cohort.
 
 
 <!-- ### Metadata model -->
@@ -28,7 +28,7 @@ In all cases, Asset Lineage OMAS always relies on underlying [Enterprise Reposit
 
 ## User Guide
 
-Most of the interaction with the Asset Lineage OMAS will be driven by the external tools used to build lineage using [Data Engine OMAS :material-dock-window:](/egeria-docs/services/omas/data-engine/overview) and [Data Engine Proxy :material-dock-window:](/egeria-docs/services/data-engine-proxy-services) or integrated lineage via [Integration Services OMIS :material-dock-window:](/egeria-docs/services/omis/) like Database integrator or Files integrator. 
+Most of the interaction with the Asset Lineage OMAS will be driven by the external tools used to build lineage using [Data Engine OMAS :material-dock-window:](/services/omas/data-engine/overview) and [Data Engine Proxy :material-dock-window:](/services/data-engine-proxy-services) or integrated lineage via [Integration Services OMIS :material-dock-window:](/services/omis/) like Database integrator or Files integrator. 
 
 When enabled in a OMAG Metadata Access Server, it subscribes to the enterprise cohort topic and uses following events triggers:
 

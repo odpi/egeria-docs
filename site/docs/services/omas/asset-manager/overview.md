@@ -7,16 +7,16 @@
 
 The Asset Manager OMAS provides APIs for supporting the
 exchange of metadata with a third party asset manager.
-An [asset manager](/egeria-docs/concepts/software-server-capability)
-is typically a catalog of [assets](/egeria-docs/concepts/asset).  It is responsible
+An [asset manager](/concepts/software-server-capability)
+is typically a catalog of [assets](/concepts/asset).  It is responsible
 for maintaining details of the assets including their characteristics,
 ownership, assessments and governance requirements.
 
 The Asset Manager OMAS (in conjunction with the
-[Catalog Integrator OMIS](/egeria-docs/services/omis/catalog-integrator/overview))
+[Catalog Integrator OMIS](/services/omis/catalog-integrator/overview))
 provides a new integration path for metadata catalogs the goes
 via an integration service hosted in an
-[integration daemon](/egeria-docs/concepts/integration-daemon).
+[integration daemon](/concepts/integration-daemon).
 
 Catalogs will be able to have a two-way integration through this
 path without needing to conform to the repository service rules
@@ -33,7 +33,7 @@ only impacts the users of that catalog and not the whole cohort.
 A major challenge when exchanging metadata with third party asset managers is that
 there is often a mismatch between the structure of the metadata in a
 third party asset manager and the structure of the
-[open metadata types](/egeria-docs/types)
+[open metadata types](/types)
 used by the Asset Manager OMAS.
 
 For this reason, the Asset Manager OMAS supports the ability to associate multiple
@@ -47,7 +47,7 @@ using external identifiers and the identifier of the third party asset manager.
 
 More information on the use of external identifiers to map between metadata elements in
 third party asset managers and open metadata instances can be found
-[here](/egeria-docs/features/external-identifiers/overview).
+[here](/features/external-identifiers/overview).
 
 
 ## Supplementary Properties
@@ -57,7 +57,7 @@ that include both a technical name and description as well as a business name an
 The Asset Manager OMAS supports this distinction and stores the technical name and
 description in an Asset metadata instance and the business name and description in a glossary term
 metadata instance that is linked to the asset using a
-[**MoreInformation** relationship](/egeria-docs/types/0/0019-More-Information).
+[**MoreInformation** relationship](/types/0/0019-More-Information).
 The properties that are stored in the glossary term are referred to as supplementary properties.
 
 --8<-- "snippets/abbr.md"

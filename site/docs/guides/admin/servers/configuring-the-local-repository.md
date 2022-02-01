@@ -3,7 +3,7 @@
 
 ## Configure the native repository connector
 
-A [metadata access store](/egeria-docs/concepts/metadata-access-store) supports a metadata repository that has native support for the [open metadata types and instances](/egeria-docs/types).  This is enabled by adding a native metadata repository connector to the server's configuration document.
+A [metadata access store](/concepts/metadata-access-store) supports a metadata repository that has native support for the [open metadata types and instances](/types).  This is enabled by adding a native metadata repository connector to the server's configuration document.
 
 ### Add a repository connector implementation
 
@@ -11,9 +11,9 @@ Egeria provides a number of implementations of such a repository -- only one of 
 
 === "bi-temporal graph"
 
-    This command enables a XTDB-based metadata repository, which itself has a [number of pluggable back-end options for persistence and other configuration options](/egeria-docs/connectors/repository/xtdb/#options-for-configuring-xtdb).
+    This command enables a XTDB-based metadata repository, which itself has a [number of pluggable back-end options for persistence and other configuration options](/connectors/repository/xtdb/#options-for-configuring-xtdb).
 
-    This native metadata repository is currently the [highest-performing, most fully-functional repository](/egeria-docs/connectors/repository/xtdb/performance) for Egeria, supporting all metadata operations including historical metadata as well as being [highly-available through clustered deployment](/egeria-docs/connectors/repository/xtdb/#high-availability).
+    This native metadata repository is currently the [highest-performing, most fully-functional repository](/connectors/repository/xtdb/performance) for Egeria, supporting all metadata operations including historical metadata as well as being [highly-available through clustered deployment](/connectors/repository/xtdb/#high-availability).
 
     !!! post "POST - enable the bi-temporal graph repository"
         ```
@@ -31,7 +31,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
         ```
 
     !!! attention "May require additional driver libraries"
-        Note that depending on the persistence you configure, you may need to [obtain additional driver libraries for your back-end service](/egeria-docs/connectors/repository/xtdb/#pluggable-persistence), as not every driver is embedded in the XTDB connector itself.
+        Note that depending on the persistence you configure, you may need to [obtain additional driver libraries for your back-end service](/connectors/repository/xtdb/#pluggable-persistence), as not every driver is embedded in the XTDB connector itself.
 
 === "non-temporal graph"
 
@@ -71,7 +71,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
 
 ### Remove the native repository connector
 
-This command removes all configuration for the local repository. This includes the [local metadata collection id](/egeria-docs/services/omrs/metdata-repositories/#metadata-collection-id). If a new local repository is added, it will have a new local metadata collection id and will not be able to automatically re-register with its cohort(s).
+This command removes all configuration for the local repository. This includes the [local metadata collection id](/services/omrs/metdata-repositories/#metadata-collection-id). If a new local repository is added, it will have a new local metadata collection id and will not be able to automatically re-register with its cohort(s).
 
 !!! delete "DELETE - remove the local repository"
     ```

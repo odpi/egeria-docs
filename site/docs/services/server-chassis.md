@@ -27,34 +27,34 @@ Today, Egeria has one server chassis implementation:
 The Server Chassis
 provides the base server framework to host the Open Metadata
 and Governance (OMAG) Servers in the
-[OMAG Server Platform](/egeria-docs/concepts/omag-server).  
+[OMAG Server Platform](/concepts/omag-server).  
 
 The **server-chassis-spring** module is an implementation of the
-server chassis written using [Spring Boot](/egeria-docs/guides/contributor/runtime/#spring).
+server chassis written using [Spring Boot](/guides/contributor/runtime/#spring).
 Its **main()** method is located in a Java class called **OMAGServerPlatform**.
 
 When the OMAGServerPlatform is first started, all of its REST APIs
 are visible and callable by an external client.
-However, only the [Administration Services](/egeria-docs/services/admin-services) 
-and [Platform Services](/egeria-docs/services/platform-services) are operational at this point.
+However, only the [Administration Services](/services/admin-services) 
+and [Platform Services](/services/platform-services) are operational at this point.
 The other Open Metadata and Governance (OMAG) services will each give an error response if called.
 
-The [OMAG Subsystems](/egeria-docs/concepts/omag-subsystem)
+The [OMAG Subsystems](/concepts/omag-subsystem)
 supporting the other OMAG services are selectively activated in one or more
-[OMAG Servers](/egeria-docs/concepts/omag-server) that run
+[OMAG Servers](/concepts/omag-server) that run
 in the OMAGServerPlatform.
 You can use the administration service to define and configure the subsystems for an OMAG Server.
 This definition is then stored in a configuration document for the server.  This is a one-time activity.
 
 Details of how to set up the configuration document, and activate/deactivate
 the open metadata services can be found in the 
-[OMAG Server Configuration User Guide](/egeria-docs/guides/admin).
+[OMAG Server Configuration User Guide](/guides/admin).
 
 Once the configuration document is in place it is possible to activate and deactivate the
 server in the OMAGServerPlatform many times over multiple platform restarts.
 
 A detailed description of the internals of the OMAGServerPlatform during server start up
-is available [here](/egeria-docs/concepts/omag-server-platform).
+is available [here](/concepts/omag-server-platform).
 
 ## Maven build profiles
 Default maven build will include **full-platform** profile, with all access service 
@@ -115,7 +115,7 @@ To make a new Java package visible to **OMAGServerPlatform**, add its **spring**
 to the **pom.xml** file for **server-chassis-spring** and it will be picked up in the component scan.
 
 For example, this is the snippet of XML in the pom.xml file that adds the
-[Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) services
+[Asset Owner OMAS](/services/omas/asset-owner/overview) services
 to the OMAG server platform.
 
 ```xml

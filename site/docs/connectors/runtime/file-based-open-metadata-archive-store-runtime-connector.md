@@ -4,9 +4,9 @@
 # File-based Open Metadata Archive Store Connector
 
 !!! info "Connector details"
-    - Connector Category: [Open Metadata Archive Store Connector](/egeria-docs/connectors/#open-metadata-archive-store-connectors)
-    - Hosting Service: [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
-    - Hosting Server: [Integration Daemon](/egeria-docs/concepts/integration-daemon)
+    - Connector Category: [Open Metadata Archive Store Connector](/connectors/#open-metadata-archive-store-connectors)
+    - Hosting Service: [Open Metadata Repository Services (OMRS)](/services/omrs)
+    - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [lineage-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/lineage-integration-connectors){ target=gh }
     - Jar File Name: `lineage-integration-connectors.jar`
 
@@ -20,10 +20,10 @@ The API-based OpenLineage Log Store integration connector calls an OpenLineage c
 
 ## Configuration
 
-This connector uses the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview)
-running in the [Integration Daemon](/egeria-docs/concepts/integration-daemon).
+This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
+running in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/egeria-docs/guides/admin/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/guides/admin/configuring-an-integration-daemon/#configure-the-integration-services).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"

@@ -116,7 +116,7 @@ Open up a web browser and go to [http://localhost:8888 :material-dock-window:](h
 
 You should see a window similar to this:
 
-![First Lab Notebook](/egeria-docs/education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
+![First Lab Notebook](/education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
 
 In the navigator on the left of this Windows, navigate to the **read-me-first** and start following the instructions. We've tried to add lots of explanation at each stage to guide you through how Egeria can be used in a real environment.
 
@@ -139,7 +139,7 @@ You'll notice the URL is slightly different to before. This is because **coco** 
 
 ## Next step
 
-Let's move on to a [summary](/egeria-docs/education/egeria-dojo/running-egeria/running-egeria-summary)
+Let's move on to a [summary](/education/egeria-dojo/running-egeria/running-egeria-summary)
 
 
 --8<-- "snippets/abbr.md"

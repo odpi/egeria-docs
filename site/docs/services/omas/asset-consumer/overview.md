@@ -13,7 +13,7 @@
 
 ## Overview
 The Asset Consumer OMAS provides services to an individual who wants to work
-with [assets](/egeria-docs/concepts/asset) such as:
+with [assets](/concepts/asset) such as:
 
 * data stores, data sets and data feeds
 * reports
@@ -22,30 +22,30 @@ with [assets](/egeria-docs/concepts/asset) such as:
 
 It supports:
 
-* the retrieval of [connection](/egeria-docs/concepts/connection) objects from the open metadata repositories.  A connection object is used to create a connector to an asset.
-* the creation of a [connector](/egeria-docs/concepts/connector) based on the properties in a connection object.
-* the retrieval of properties about an asset.  These properties are called the [connected asset properties](/egeria-docs/concepts/connected-asset-properties).
+* the retrieval of [connection](/concepts/connection) objects from the open metadata repositories.  A connection object is used to create a connector to an asset.
+* the creation of a [connector](/concepts/connector) based on the properties in a connection object.
+* the retrieval of properties about an asset.  These properties are called the [connected asset properties](/concepts/connected-asset-properties).
 * the adding of feedback (comments, ratings and likes) to an asset.
-* the attachment of [informal tags](/egeria-docs/concepts/informal-tag) to an asset.
+* the attachment of [informal tags](/concepts/informal-tag) to an asset.
 * the adding of an audit log record for an asset.
-* the publishing of notifications about assets on Asset Consumer OMAS's [out topic](/egeria-docs/concepts/out-topic).
+* the publishing of notifications about assets on Asset Consumer OMAS's [out topic](/concepts/out-topic).
 
-Adding feedback through the Asset Consumer OMAS results in [Karma Points](/egeria-docs/concepts/karma-point) being awarded to the individual.  These are maintained in the individual's profile.  A karma point is awarded for each contribution of feedback through the API. (The awarding of Karma points is managed by the [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview).)
+Adding feedback through the Asset Consumer OMAS results in [Karma Points](/concepts/karma-point) being awarded to the individual.  These are maintained in the individual's profile.  A karma point is awarded for each contribution of feedback through the API. (The awarding of Karma points is managed by the [Community Profile OMAS](/services/omas/community-profile/overview).)
 
-The connectors returned by the Asset Consumer OMAS are [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) connectors.  The caller can use the connector to access the contents of the asset itself and the properties about the asset it is accessing.   This service is provided by the [OCF Metadata Management Common Service](/egeria-docs/services/ocf-metadata-management).
+The connectors returned by the Asset Consumer OMAS are [Open Connector Framework (OCF)](/frameworks/ocf/overview) connectors.  The caller can use the connector to access the contents of the asset itself and the properties about the asset it is accessing.   This service is provided by the [OCF Metadata Management Common Service](/services/ocf-metadata-management).
 
 ## User Guide
 
 The Asset Consumer OMAS is designed for use by an application that is accessing data sources and services through
-[connectors](/egeria-docs/concepts/connector).
-These data sources and services are called [Assets](/egeria-docs/concepts/asset),
+[connectors](/concepts/connector).
+These data sources and services are called [Assets](/concepts/asset),
 hence the name of this OMAS is **Asset Consumer**.
 
 Typically the first action to take is to
 [create the connector](creating-a-connector.md) to 
 get [access to the asset content and its properties](working-with-connectors.md).
 Connectors are created from
-[Connection](/egeria-docs/concepts/connection)
+[Connection](/concepts/connection)
 objects.
 Connection objects can be created by the calling application, or stored
 in one of the open metadata repositories that are accessible to the Asset Consumer OMAS.
@@ -78,7 +78,7 @@ Connectors are only available through the Java client.
 
 ## Configuration
 
-Details of how to configure the Asset Consumer OMAS can be found [in the admin guide](/egeria-docs/guides/admin/services/concfiguring-the-access-services)
+Details of how to configure the Asset Consumer OMAS can be found [in the admin guide](/guides/admin/services/concfiguring-the-access-services)
 
 ## Scenarios
 

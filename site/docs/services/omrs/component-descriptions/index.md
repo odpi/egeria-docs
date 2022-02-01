@@ -7,8 +7,8 @@
 
 * **[Audit Log](audit-log.md)** - Reads and writes audit log messages.
 * **[Connectors](connectors)** - Provides the plug points for connector implementations.
-* **[Events](/egeria-docs/concepts/cohort-events)** - Event formats that flow over the cohort.
-* **[Exceptions](/egeria-docs/services/omrs/exception-descriptions)** - Specific OMRS Exceptions used on the Java APIs.
+* **[Events](/concepts/cohort-events)** - Event formats that flow over the cohort.
+* **[Exceptions](/services/omrs/exception-descriptions)** - Specific OMRS Exceptions used on the Java APIs.
 
 ## Repository Services Implementation
 

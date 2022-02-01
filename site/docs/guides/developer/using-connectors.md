@@ -2,15 +2,15 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
-[*Connectors*](/egeria-docs/concepts/connector) can be created through the following clients:
+[*Connectors*](/concepts/connector) can be created through the following clients:
 
-- [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview)
-- [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)
+- [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
+- [Asset Owner OMAS](/services/omas/asset-owner/overview)
 
 ??? example "Example: [connecting to CSV files using Asset Consumer OMAS :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/access-services-samples/asset-management-samples/asset-reader-csv-sample/src/main/java/org/odpi/openmetadata/accessservices/assetconsumer/samples/readcsvfile/CSVFileReaderSample.java){ target=gh }"
-    The code sample below uses the Asset Consumer OMAS client to retrieve a list of assets from a [metadata access server](/egeria-docs/concepts/metadata-access-server) and then create a connector to each one using the `getConnectorToAsset()` method.
+    The code sample below uses the Asset Consumer OMAS client to retrieve a list of assets from a [metadata access server](/concepts/metadata-access-server) and then create a connector to each one using the `getConnectorToAsset()` method.
 
-    This method assumes that there is a connection object with a [connector type](/egeria-docs/concepts/connector-type) and [endpoint](/egeria-docs/concepts/endpoint) linked to the requested asset in the metadata repository.
+    This method assumes that there is a connection object with a [connector type](/concepts/connector-type) and [endpoint](/concepts/endpoint) linked to the requested asset in the metadata repository.
 
     ![An asset with a connection](asset-connection.png)
 
@@ -88,7 +88,7 @@
 
 ## Connecting to assets with different levels of security
 
-It is possible that an asset can have multiple connections, each with different levels of security access encoded. Egeria is able to determine which one to use by calling the `validateUserForAssetConnectionList()` method of the [Server Security Metadata Connector](/egeria-docs/guides/developer/runtime-connectors/server-metadata-security-connector).
+It is possible that an asset can have multiple connections, each with different levels of security access encoded. Egeria is able to determine which one to use by calling the `validateUserForAssetConnectionList()` method of the [Server Security Metadata Connector](/guides/developer/runtime-connectors/server-metadata-security-connector).
 
 ![Multiple connections for an asset](multiple-asset-connections.svg)
 
@@ -116,9 +116,9 @@ The endpoints are typically linked to the software server that is called by the 
 
 ![Connections to a software server](connections-to-a-software-server.svg)
 
-Software servers and endpoints are set up through the [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure).
+Software servers and endpoints are set up through the [IT Infrastructure OMAS](/services/omas/it-infrastructure).
 
 !!! education "Further information"
-    The [connector catalog](/egeria-docs/connectors) lists the connectors provided by the Egeria community.
+    The [connector catalog](/connectors) lists the connectors provided by the Egeria community.
 
 --8<-- "snippets/abbr.md"

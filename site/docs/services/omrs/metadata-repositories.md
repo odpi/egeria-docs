@@ -4,7 +4,7 @@
 # Metadata repositories
 
 A metadata repository is a store of metadata. A metadata repository that supports the open metadata repository standards
-defined by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is
+defined by the [Open Metadata Repository Services (OMRS)](/services/omrs) is
 called an "open metadata repository".
 
 ## Home metadata repositories
@@ -14,7 +14,7 @@ is called its **home repository**.
 
 !!! attention "Metadata can only be updated and deleted in its home repository"
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is responsible
+The [Open Metadata Repository Services (OMRS)](/services/omrs) is responsible
 for sharing this metadata with other metadata repositories who are
 members of the same [cohort](cohort.md).
 
@@ -29,7 +29,7 @@ These shared copies are called **reference copies**.
 Every metadata repository in a cohort has a unique identifier called the
 [local metadata collection id](#metadata-collection-id).
 This identifier is set up in the server configuration and shared when this
-server [connects to a cohort](/egeria-docs/concepts/cohort-member).
+server [connects to a cohort](/concepts/cohort-member).
 
 When metadata is shared by OMRS, each element is tagged with the metadata
 collection id of its home repository.
@@ -42,10 +42,10 @@ between members of the cohort when they connect.
 
 A metadata collection refers to a set of metadata instances that are being maintained and accessed as a
 coherent set of information.  These instances are explicitly typed using
-[open metadata type definitions (TypeDefs)](/egeria-docs/types).
+[open metadata type definitions (TypeDefs)](/types).
 
 Typically, metadata collections are stored in a single metadata repository.
-However, the [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) provide access to
+However, the [Open Metadata Access Services (OMASs)](/services/omas) provide access to
 a federated metadata collection called the [enterprise metadata collection](#enterprise-metadata-collection).
 
 ### Enterprise metadata collection

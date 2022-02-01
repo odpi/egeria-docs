@@ -53,7 +53,7 @@ The schedule also includes estimated times needed to complete each session. Do t
 
     !!! beginner "Summary (30 mins)"
 
-    [go directly to the 'running egeria' content](/egeria-docs/education/egeria-dojo/running-egeria/running-egeria-intro)
+    [go directly to the 'running egeria' content](/education/egeria-dojo/running-egeria/running-egeria-intro)
 
 ## Developer day summary
 

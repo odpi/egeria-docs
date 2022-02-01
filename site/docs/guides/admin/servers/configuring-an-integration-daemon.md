@@ -19,10 +19,10 @@ a [configuration document](/egeria/concepts/configuration-document).
 ## Further information
 
 - For help in fixing any error you find using the integration daemon, visit the
-  [integration daemon diagnostic guide](/egeria-docs/guides/diagnostic/integration-daemon-diagnostic-guide).
-- Link to the [Egeria solutions](/egeria-docs/patterns/metadata-integration) to see the integration
+  [integration daemon diagnostic guide](/guides/diagnostic/integration-daemon-diagnostic-guide).
+- Link to the [Egeria solutions](/patterns/metadata-integration) to see the integration
   daemon in action.
-- Link to the [integration daemon services](/egeria-docs/services/integration-daemon-services) to
+- Link to the [integration daemon services](/services/integration-daemon-services) to
   understand how the integration daemon is implemented.
 
 --8<-- "snippets/abbr.md"

@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically declassifying existing entity instances from existing classifications.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata repository defines optional methods for declassifying entity instances:
+The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a metadata repository defines optional methods for declassifying entity instances:
 
 | Method | Description |
 |---|---|

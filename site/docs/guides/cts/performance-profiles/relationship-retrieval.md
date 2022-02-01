@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically retrieving existing relationship instances based on their ID.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata repository defines methods for retrieving relationship instances by their ID:
+The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a metadata repository defines methods for retrieving relationship instances by their ID:
 
 | Method | Description |
 |---|---|

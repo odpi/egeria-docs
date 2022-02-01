@@ -18,11 +18,11 @@ org.odpi.openmetadata.frameworks.connectors.ConnectorProviderBase
 This assumes:
 
 - There is a single connector implementation class for the connector.
-- The connector is instantiated with the default constructor. This means all of its configuration information is contained in the [Connection](/egeria-docs/concepts/connection) object supplied on the `initialize()` method.
+- The connector is instantiated with the default constructor. This means all of its configuration information is contained in the [Connection](/concepts/connection) object supplied on the `initialize()` method.
 
 If your connector implementation matches these requirements, its connector provider implementation need only implement a constructor to configure the base class's function with details of itself and the Java class of the connector it needs using:
                
-- a GUID for the [connector type](/egeria-docs/concepts/connector-type)
+- a GUID for the [connector type](/concepts/connector-type)
 - a name for the connector type.
 - a description of what the connector is for and how to configure it.
 - the connector class it instantiates.

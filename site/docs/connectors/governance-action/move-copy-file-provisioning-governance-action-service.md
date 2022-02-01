@@ -11,9 +11,9 @@ hide:
 
 ??? info "Connector summary"
 
-    - Connector Category: [Provisioning Governance Action Service](/egeria-docs/frameworks/gaf/#provisioning-governance-service)
-    - Hosting Service: [Governance Action OMES](/egeria-docs/services/omes/governance-action)
-    - Hosting Server: [Engine Host](/egeria-docs/concepts/engine-host)
+    - Connector Category: [Provisioning Governance Action Service](/frameworks/gaf/#provisioning-governance-service)
+    - Hosting Service: [Governance Action OMES](/services/omes/governance-action)
+    - Hosting Server: [Engine Host](/concepts/engine-host)
     - Source Module: [governance-action-connectors :material-github:](../../../open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh }
     - Jar File Name: `governance-action-connectors.jar`
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.provisioning.MoveCopyFileGovernanceActionProvider`
@@ -31,8 +31,8 @@ the lineage may be turned on or off.
 ![Figure 1](move-copy-file-provisioning-governance-action-service.svg)
 > **Figure 1:** Operation of the move/copy file provisioning governance action service
 
-If lineage is requested, it includes adding a new [DataFile](/egeria-docs/types/2/0220-Files-and-Folders)
-asset for the new file in the destination folder and creating [LineageMapping](/egeria-docs/types/7/0770-Lineage-Mapping)
+If lineage is requested, it includes adding a new [DataFile](/types/2/0220-Files-and-Folders)
+asset for the new file in the destination folder and creating [LineageMapping](/types/7/0770-Lineage-Mapping)
 relationships between the process that represents this governance action service and both the
 asset for the original source file and as well as the destination.
 There are four choices for lineage:
@@ -74,16 +74,16 @@ processing path and the folders represent the data sets.
 Irrespective of the pattern used, the resulting changes to the metadata can lead to the triggering of additional activity
 in the open metadata ecosystem.  For example:
 
-* The [Asset Lineage OMAS](/egeria-docs/services/omas/asset-lineage/overview)
-may publish the lineage to the [Open Lineage Server](/egeria-docs/concepts/open-lineage-server).
+* The [Asset Lineage OMAS](/services/omas/asset-lineage/overview)
+may publish the lineage to the [Open Lineage Server](/concepts/open-lineage-server).
 
-* Additional [Governance Action Services](/egeria-docs/concepts/governance-action-service)
+* Additional [Governance Action Services](/concepts/governance-action-service)
 may be triggered.
 
 ## Configuration
 
-This connector uses the [Governance Action OMES](/egeria-docs/services/omes/governance-action/overview)
-running in the [Engine Host](/egeria-docs/concepts/engine-host).
+This connector uses the [Governance Action OMES](/services/omes/governance-action/overview)
+running in the [Engine Host](/concepts/engine-host).
 
 The following configuration properties can be set to control
 the behavior of the service on every instance.
@@ -111,7 +111,7 @@ the behavior of the service on every instance.
 
 This is its connection definition to use when
 creating the definition of the governance action service
-using the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine).
+using the [Governance Engine OMAS](/services/omas/governance-engine).
 Remove the configuration properties that are not required.
 Replace `{processName}` and `{pattern}` as required. 
 
@@ -142,7 +142,7 @@ Replace `{processName}` and `{pattern}` as required.
 
 ## Governance Action Settings
 
-When this governance action service is called through a [GovernanceAction](/egeria-docs/types/0463-Governance-Actions) it supports the following options.
+When this governance action service is called through a [GovernanceAction](/types/0463-Governance-Actions) it supports the following options.
 
 ### Request Types and Parameters
 
@@ -172,11 +172,11 @@ On completion, this governance action service uses:
 
 ## Examples of use
 
-* [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
+* [Open Metadata Labs](/education/open-metadata-labs/overview): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
 
 ??? education "Further information"
 
-- [Designing a Provisioning Governance Action Service](/egeria-docs/guides/developer/governance-action-services/provisioning-governance-service)
+- [Designing a Provisioning Governance Action Service](/guides/developer/governance-action-services/provisioning-governance-service)
 
 
 --8<-- "snippets/abbr.md"

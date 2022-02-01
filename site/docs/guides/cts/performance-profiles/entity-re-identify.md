@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically changing the GUID of an existing entity instance.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata repository defines an optional method for changing the GUID of entity instances:
+The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a metadata repository defines an optional method for changing the GUID of entity instances:
 
 | Method | Description |
 |---|---|

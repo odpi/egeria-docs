@@ -18,7 +18,7 @@ The actual tests are run by an *open metadata conformance workbench* within the 
 
 ## Platform workbench
 
-The open metadata conformance platform workbench is responsible for testing the various APIs supported by an [Open Metadata and Governance (OMAG) Server Platform](/egeria-docs/concepts/omag-server-platform).
+The open metadata conformance platform workbench is responsible for testing the various APIs supported by an [Open Metadata and Governance (OMAG) Server Platform](/concepts/omag-server-platform).
 
 This workbench supports the following profiles:
 
@@ -30,9 +30,9 @@ This workbench supports the following profiles:
 
 The open metadata conformance repository workbench is responsible for testing the ability of an open metadata repository to connect and interact with other open metadata repositories in a conformant way.
 
-It tests both the repository's repository services API and its ability to exchange events with the [OMRS cohort event topic](/egeria-docs/services/omrs/metadata-events/#omrs-event-topic).
+It tests both the repository's repository services API and its ability to exchange events with the [OMRS cohort event topic](/services/omrs/metadata-events/#omrs-event-topic).
 
-The workbench uses the registration information that is passed when the technology under test registers with the same [open metadata repository cohort](/egeria-docs/services/omrs/cohort) as the conformance suite. It will confirm that the information received in the events matches the information returned by the technology under test's repository services.
+The workbench uses the registration information that is passed when the technology under test registers with the same [open metadata repository cohort](/services/omrs/cohort) as the conformance suite. It will confirm that the information received in the events matches the information returned by the technology under test's repository services.
 
 This workbench works as a pipeline processor, accumulating information from one test and using it to seed subsequent tests. A failure early on in the pipeline may prevent other tests from running.
 

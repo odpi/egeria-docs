@@ -81,7 +81,7 @@ Follow the instructions for you operating system. For MacOS, Docker Desktop is i
 Once it is installed, it can be launched like any other application, such as through the launchpad / start menu.
 
 !!! education "Further information"
-    If you are working through the Egeria Dojo, you can return to the guide for [Day 1 of the Egeria Dojo](/egeria-docs/getting-started/dojo/1/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites)
+    If you are working through the Egeria Dojo, you can return to the guide for [Day 1 of the Egeria Dojo](/getting-started/dojo/1/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites)
 
     Otherwise, use the [Docker tutorial](../../open-metadata-resources/open-metadata-tutorials/docker-tutorial) to get the image up and running in Docker. It describes how to install, set up Docker and make use of Egeria's Docker image.
 
@@ -91,17 +91,17 @@ Once it is installed, it can be launched like any other application, such as thr
 
 Kubernetes is an open source project managed by the [Cloud Native Computing Foundation :material-dock-window:](https://www.cncf.io/){ target=cncf }.
 
-Egeria uses Kubernetes to run all the components in the [Coco Pharmaceuticals hands-on labs](/egeria-docs/education/open-metadata-labs/overview).
+Egeria uses Kubernetes to run all the components in the [Coco Pharmaceuticals hands-on labs](/education/open-metadata-labs/overview).
 
 ## Helm
 
-[Helm :material-dock-window:](https://helm.sh){ target=helm } is a package manager for [Kubernetes](#kubernetes). Through Helm, a *chart* can be used to deploy multiple containers and other related components as a single deployable unit. This makes it one simple step to deploy what may otherwise be a complex solution composed of multiple runtimes (like Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform), [Apache Kafka](#apache-kafka), [JupyterHub](#jupyter-notebooks), and so on) -- without needing to obtain or download all the various runtimes, know how to operate them, and so on.
+[Helm :material-dock-window:](https://helm.sh){ target=helm } is a package manager for [Kubernetes](#kubernetes). Through Helm, a *chart* can be used to deploy multiple containers and other related components as a single deployable unit. This makes it one simple step to deploy what may otherwise be a complex solution composed of multiple runtimes (like Egeria's [OMAG Server Platform](/concepts/omag-server-platform), [Apache Kafka](#apache-kafka), [JupyterHub](#jupyter-notebooks), and so on) -- without needing to obtain or download all the various runtimes, know how to operate them, and so on.
 
-The Egeria team maintains an [`odpi-egeria-lab` Helm chart :material-github:](https://github.com/odpi/egeria-charts){ target=gh } that can be used to automatically deploy all the components necessary to run through the [open metadata labs](/egeria-docs/education/open-metadata-labs/overview).
+The Egeria team maintains an [`odpi-egeria-lab` Helm chart :material-github:](https://github.com/odpi/egeria-charts){ target=gh } that can be used to automatically deploy all the components necessary to run through the [open metadata labs](/education/open-metadata-labs/overview).
 
 ## Spring
 
-[Spring :material-dock-window:](https://spring.io/){ target=spring } is a framework and set of annotations for building REST APIs. *Spring Boot* provides the server chassis (or `main()` method) for hosting RESTful services in a server. It is used in the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) to provide the server chassis that searches for all REST API definitions to start them in a server.
+[Spring :material-dock-window:](https://spring.io/){ target=spring } is a framework and set of annotations for building REST APIs. *Spring Boot* provides the server chassis (or `main()` method) for hosting RESTful services in a server. It is used in the [OMAG Server Platform](/concepts/omag-server-platform) to provide the server chassis that searches for all REST API definitions to start them in a server.
 
 Spring is used in our client libraries to call REST APIs. Specifically it provides the `org.springframework.web.client.RestTemplate` class for formatting REST calls and parsing the responses.
 
@@ -136,7 +136,7 @@ For each method / operation, the rest of the URL is defined and mapped through a
 
 ## Jupyter Notebooks
 
-[Project Jupyter :material-dock-window:](https://jupyter.org){ target=jupyter } provides tools for interactive computing. In particular, we use Jupyter notebooks to provide an interactive environment for running snippets of [Python](/egeria-docs/guides/developer/languages/#python) code, interspersed with [Markdown](/egeria-docs/guides/developer/languages/#markdown) documentation, for our [hands-on labs](/egeria-docs/education/open-metadata-labs).
+[Project Jupyter :material-dock-window:](https://jupyter.org){ target=jupyter } provides tools for interactive computing. In particular, we use Jupyter notebooks to provide an interactive environment for running snippets of [Python](/guides/developer/languages/#python) code, interspersed with [Markdown](/guides/developer/languages/#markdown) documentation, for our [hands-on labs](/education/open-metadata-labs).
 
 ![Example Jupyter notebook from the hands-on labs](../../education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
 

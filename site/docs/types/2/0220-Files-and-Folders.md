@@ -12,7 +12,7 @@ A metadata catalog typically contains information about the data files that can 
 
 ## DataFile
 
-`DataFile` catalogs a physical file.  It inherits from [`DataStore`](/egeria-docs/types/2/0210-Data-Stores) to declare that it is a physical artifact.  There are subtypes for `DataFile` that identify the format of the file:
+`DataFile` catalogs a physical file.  It inherits from [`DataStore`](/types/2/0210-Data-Stores) to declare that it is a physical artifact.  There are subtypes for `DataFile` that identify the format of the file:
 
 - `CSVFile` contains comma-separated values.
 - `AvroFile` is organized according to the [Apache Avro](https://avro.apache.org) specification.
@@ -46,9 +46,9 @@ Files can also have a symbolic link (`LinkedFile`) to a element to show that it 
 
 The diagram below illustrates the structure of a file system.
 
-The [`FileSystem`](/egeria-docs/types/0/0056-Resource-Managers) is typically a [Software Capability](/egeria-docs/types/0/0042-Software-Capabilities).
+The [`FileSystem`](/types/0/0056-Resource-Managers) is typically a [Software Capability](/types/0/0042-Software-Capabilities).
 The root folders (of type `FileFolder`) are connected to it using the
-[`ServerAssetUse`](/egeria-docs/types/0/0045-Servers-and-Assets) relationship.
+[`ServerAssetUse`](/types/0/0045-Servers-and-Assets) relationship.
 Beneath that are `FileFolder`s with `DataFile`s nested beneath them.
  
 

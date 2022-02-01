@@ -3,7 +3,7 @@
 
 # Performance Test Suite Chart (egeria-pts)
 
-This is a deployment of Egeria that will automatically run the [Performance Test Suite](/egeria-docs/guides/cts/overview/#performance-workbench) against a deployed [metadata repository](/egeria-docs/concepts/metadata-repository).
+This is a deployment of Egeria that will automatically run the [Performance Test Suite](/guides/cts/overview/#performance-workbench) against a deployed [metadata repository](/concepts/metadata-repository).
 
 ??? success "Prerequisites"
     In order to use the chart, you'll first need to have the following installed:

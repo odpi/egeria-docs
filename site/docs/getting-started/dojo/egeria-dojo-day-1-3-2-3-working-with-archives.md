@@ -10,7 +10,7 @@ load prepared content such as glossaries or standard models into a metadata serv
 
 ![Archives Content](egeria-dojo-day-1-3-2-3-working-with-archives.png)
 
-First read about [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive).
+First read about [Open Metadata Archives](/concepts/open-metadata-archive).
 
 Egeria has a number of pre-built content packs in the `content-packs` directory on
 GitHub - [Click to link to it](https://github.com/odpi/egeria/tree/master/content-packs)
@@ -29,7 +29,7 @@ https://raw.githubusercontent.com/odpi/egeria/master/content-packs/CloudInformat
 When you execute the request, look at the logs in Docker Desktop to see any errors or to watch the
 archive load.
 
-The [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview) has a specific lab for working with this archive
+The [Open Metadata Labs](/education/open-metadata-labs/overview) has a specific lab for working with this archive
 and through that you will get a chance to query its content.
 
 # Test yourself

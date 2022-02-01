@@ -7,6 +7,6 @@
 
 ## ServerAssetUse
 
-[`Asset`s](/egeria-docs/types/0/0010-Base-Model/#asset) are managed or consumed by [`SoftwareCapabilities`](/egeria-docs/types/0/0042-Software-Capabilities/#softwarecapability), which is captured by the *`ServerAssetUse`* relationship.
+[`Asset`s](/types/0/0010-Base-Model/#asset) are managed or consumed by [`SoftwareCapabilities`](/types/0/0042-Software-Capabilities/#softwarecapability), which is captured by the *`ServerAssetUse`* relationship.
 
 --8<-- "snippets/abbr.md"

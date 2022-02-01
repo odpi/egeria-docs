@@ -32,7 +32,7 @@ The role of leader of a governance domain is represented as a **GovernanceOffice
 
 *GovernanceDefinition* describes an aspect of a governance program.
 They are authored in the metadata repository.  
-They inherit from [Referenceable](/egeria-docs/types/0/0010-Base-Model),
+They inherit from [Referenceable](/types/0/0010-Base-Model),
 which means they have a unique identifier and link to external references for more information.
 
 *GovernedBy* links the governance definitions to the elements they are governing.
@@ -60,8 +60,8 @@ The governance definitions are organized into specific subtypes and linked toget
   - [0482 Certification Types](0482-Certifications.md) - types of certifications used to shw compliance to a specific governance requirement.
   - [0485 Data Processing Purposes](0485-Data-Processing-Purposes.md) - definitions of purposes used in data privacy regulations.
 
-The [Governance Program OMAS](/egeria-docs/services/omas/governance-program/overview) provides the APIs for maintaining the definitions of the governance domains, governance definitions and governance officers. It uses the **GovernedBy** relationship to link governance definitions with [subject area definitions](0425-Subject-Areas.md) and [governance zone definitions](0424-Governance-Zones.md).
+The [Governance Program OMAS](/services/omas/governance-program/overview) provides the APIs for maintaining the definitions of the governance domains, governance definitions and governance officers. It uses the **GovernedBy** relationship to link governance definitions with [subject area definitions](0425-Subject-Areas.md) and [governance zone definitions](0424-Governance-Zones.md).
   
-The [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview) supports the exchange of governance definitions with third party asset managers and governance tools as well as the use of the **GovernedBy** relationship through its **Governance Exchange Interface**.
+The [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of governance definitions with third party asset managers and governance tools as well as the use of the **GovernedBy** relationship through its **Governance Exchange Interface**.
 
 --8<-- "snippets/abbr.md"

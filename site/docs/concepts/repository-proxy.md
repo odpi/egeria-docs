@@ -8,7 +8,7 @@ hide:
 
 # Repository Proxy
 
-A *repository proxy* is an [OMAG Server](/egeria-docs/concepts/omag-server) that has been configured to act as a proxy to a third party metadata repository. 
+A *repository proxy* is an [OMAG Server](/concepts/omag-server) that has been configured to act as a proxy to a third party metadata repository. 
 
 ![Repository proxy translating between third party APIs/events and open metadata](repository-proxy.svg)
 

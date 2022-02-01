@@ -10,16 +10,16 @@ information about people, teams and communities.
 
 Most of the interaction with the Community Profile OMAS will be driven by individuals.
  
-- All users will be able to manage their [personal profile](/egeria-docs/concepts/personal-profile)
-  and [lists of favourite assets, projects and communities](/egeria-docs/concepts/favorite-things-collection).
+- All users will be able to manage their [personal profile](/concepts/personal-profile)
+  and [lists of favourite assets, projects and communities](/concepts/favorite-things-collection).
   
-- All users will be able to manage any [to dos](/egeria-docs/concepts/to-do) that have been assigned to them.
+- All users will be able to manage any [to dos](/concepts/to-do) that have been assigned to them.
   
-- All users will be able to create a [community](/egeria-docs/concepts/community) and administer it.
+- All users will be able to create a [community](/concepts/community) and administer it.
   This includes managing members, the communities resources and the notifications sent to the members.
   
-- All users can also query the [communities](/egeria-docs/concepts/community) and
-  [teams](/egeria-docs/concepts/organization/#team.md) they are a member of. 
+- All users can also query the [communities](/concepts/community) and
+  [teams](/concepts/organization/#team.md) they are a member of. 
 
 - All users will be able to search for people, teams and communities.
 
@@ -33,7 +33,7 @@ Below are the list of tasks supported by the Community Profile OMAS.
 ### One time set up by the administrator
 
 Many organizations already have [a system that maintains information about their employees
-and/or customers and/or business partners](/egeria-docs/concepts/software-server-capability/#master-data-manager).
+and/or customers and/or business partners](/concepts/software-server-capability/#master-data-manager).
 The Community Profile OMAS therefore supports an event exchange with such a system
 to keep the profiles synchronized. 
 The following tasks cover the work of the IT team to integrate the Community Profile
@@ -46,7 +46,7 @@ OMAS with other systems.
   into an open metadata repository.
 - [Synchronizing the organization's departmental structure with another system](#synchronizing-departmental-structure)
 - [Capturing karma point plateaus](#capturing-karma-point-plateaus)
-  emitted from the Community Profile OMAS [OutTopic](/egeria-docs/concepts/out-topic).
+  emitted from the Community Profile OMAS [OutTopic](/concepts/out-topic).
 - [Synchronizing collaboration activity with another system](#synchronizing-collaboration-activity)
 
 
@@ -73,7 +73,7 @@ Loading an organization's departmental structure.
 
 ### Individuals working with their personal profile
 
-A [personal profile](/egeria-docs/concepts/personal-profile) provides a place for
+A [personal profile](/concepts/personal-profile) provides a place for
 an individual to share information about themselves
 with the other people they are collaborating with.
 
@@ -89,14 +89,14 @@ an individual can maintain their own profile.
 - [Updating my personal profile](#updating-my-personal-profile)
 - [Removing my personal profile](#removing-my-personal-profile)
 
-Once an individual has a personal profile, they will be awarded [karma points](/egeria-docs/concepts/karma-point)
+Once an individual has a personal profile, they will be awarded [karma points](/concepts/karma-point)
 when they contribute content to open metadata.  An individual can query their karma points.
 
 - [Retrieving my karma points](#retrieving-my-karma-points)
 
-The individual can also maintain [collections](/egeria-docs/concepts/favorite-things-collection) of their
-favourite [Assets](/egeria-docs/concepts/asset), [Projects](../../../docs/concepts/project)
-and [Communities](/egeria-docs/concepts/community) and control notifications
+The individual can also maintain [collections](/concepts/favorite-things-collection) of their
+favourite [Assets](/concepts/asset), [Projects](../../../docs/concepts/project)
+and [Communities](/concepts/community) and control notifications
 about changes to the contents of these lists.
 
 - [Accessing my favorite assets](#accessing-my-favorite-assets)
@@ -106,7 +106,7 @@ about changes to the contents of these lists.
 - [Accessing my favorite communities](#accessing-my-favorite-communities)
 - [Managing my favorite communities](#managing-my-favorite-communities).
 
-An individual can link other [resources](/egeria-docs/concepts/useful-resource) such as glossaries, and external references to their profile.
+An individual can link other [resources](/concepts/useful-resource) such as glossaries, and external references to their profile.
 
 - [Finding resources](#finding-a-resource)
 - [Accessing my resource list](#accessing-my-resource-list)
@@ -124,20 +124,20 @@ They are visible to other users who can comment on and review the content.
 - [Updating a personal note](#updating-a-personal-note)
 - [Removing a personal note](#removing-a-personal-note)
 
-An individual can query the [teams](/egeria-docs/concepts/organization/#team) and
-[communities](/egeria-docs/concepts/community) they belong to.
+An individual can query the [teams](/concepts/organization/#team) and
+[communities](/concepts/community) they belong to.
 
 - [Accessing my communities](#accessing-my-communities)
 - [Accessing my teams](#accessing-my-teams)
 
 An individual can access an manage a list of close colleagues
-called their [peer network](/egeria-docs/concepts/peer-network).
+called their [peer network](/concepts/peer-network).
 
 - [Accessing my peer network](#accessing-my-peer-network)
 - [Managing my peer network](#managing-my-peer-network)
 
-An individual can query their [roles](/egeria-docs/concepts/personal-roles) in the organization
-and any [actions (to dos)](/egeria-docs/concepts/to-do)
+An individual can query their [roles](/concepts/personal-roles) in the organization
+and any [actions (to dos)](/concepts/to-do)
 that have been assigned to them as part of one of these roles.
 
 - [Accessing my roles](#accessing-my-roles)
@@ -167,7 +167,7 @@ It is possible to add comments, likes and reviews to a personal note.
 - [Adding a like to a personal note](#adding-a-like-to-a-personal-note)
 - [Removing a like from a personal note](#removing-my-like-from-a-personal-note)
 
-It is possible to create and attach [tags](/egeria-docs/concepts/informal-tag) to
+It is possible to create and attach [tags](/concepts/informal-tag) to
 personal profiles, personal notes,
 and comments either for your personal profile or someone else's.
 
@@ -196,7 +196,7 @@ Below are different ways to locate people in the organization.
 
 ## Communities
 
-[Communities](/egeria-docs/concepts/community) collect
+[Communities](/concepts/community) collect
 together resources, best practices and ideas for a group of people
 who are collaborating on a specific topic or skill.
 
@@ -204,15 +204,15 @@ Anyone can create a community.
 
 - [Creating a community](#creating-a-community)
 
-The person creating the community is the [community leader](/egeria-docs/concepts/community-leader).
-They can then add other people as [community members](/egeria-docs/concepts/community-member)
-with different [community roles](/egeria-docs/concepts/community-roles).
+The person creating the community is the [community leader](/concepts/community-leader).
+They can then add other people as [community members](/concepts/community-member)
+with different [community roles](/concepts/community-roles).
 
 - [Adding a new community member](#adding-a-new-community-member)
 - [Changing a community member's role](#changing-community-member-role)
 - [Removing a community member](#removing-a-community-member)
 
-Community leaders and [administrators](/egeria-docs/concepts/community/#community-administrator)
+Community leaders and [administrators](/concepts/community/#community-administrator)
 can remove inappropriate content from a community and close it.
 
 - [Removing a comment from a community](#removing-a-community-comment)
@@ -251,9 +251,9 @@ Community content can have feedback attached in the form of tags, reviews and li
 
 ### Accessing a useful resource list
 
-It is possible to maintain a list of [useful resources](/egeria-docs/concepts/useful-resource)
-with a [personal profile](/egeria-docs/concepts/personal-profile), a [team](/egeria-docs/concepts/organizations/#team)
-or a [community](/egeria-docs/concepts/community).
+It is possible to maintain a list of [useful resources](/concepts/useful-resource)
+with a [personal profile](/concepts/personal-profile), a [team](/concepts/organizations/#team)
+or a [community](/concepts/community).
 
 First locate the unique identifier (guid) of the element acting as an anchor for the resource.
 
@@ -286,7 +286,7 @@ First locate the unique identifier (guid) of the element acting as an anchor for
 
 ### Accessing my informal tags
 
-[Tags](/egeria-docs/concepts/informal-tag) provide an informal way of identifying particular types of resources.
+[Tags](/concepts/informal-tag) provide an informal way of identifying particular types of resources.
 
 ### Accessing the team I am a member of
 
@@ -398,7 +398,7 @@ the organization then use your employee number.
 
 #### Design note
 
-The Community Profile OMAS will emit an [event](/egeria-docs/concepts/out-topic) whenever a new profile is created
+The Community Profile OMAS will emit an [event](/concepts/out-topic) whenever a new profile is created
 using this approach
 
 
@@ -551,11 +551,11 @@ Can do if own the review.
 #### Retrieving my karma points
 
 If an individual has a
-[Personal profile](/egeria-docs/concepts/personal-profile)
+[Personal profile](/concepts/personal-profile)
 the Community Profile OMAS will reward him/her whenever
 they contribute to open metadata.
 These rewards are in the form of
-[karma points](/egeria-docs/concepts/karma-point).
+[karma points](/concepts/karma-point).
 
 The Community Profile OMAS is responsible for maintaining the count of
 the karma points.  It does this by listening to the metadata changes
@@ -587,7 +587,7 @@ This identity is used for authentication, authorization and auditing of activity
 related to open metadata and governance.
 
 Optionally a user identity can be associated with a
-[personal profile](/egeria-docs/concepts/personal-profile).
+[personal profile](/concepts/personal-profile).
 This provides information about the user behind the userId
 and aims to improve collaboration across the organization.
 

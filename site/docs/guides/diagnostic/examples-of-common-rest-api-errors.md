@@ -68,7 +68,7 @@ If the server is not running when a request is made, but the platform is running
 ## A request is using the wrong metadata provenance
 
 The following exception is from an integration daemon that has been set up with a null
-[metadataSourceQualifiedName property](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services)
+[metadataSourceQualifiedName property](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services)
 making it different to that used when the metadata it is managing was created.
 
 The nested message `OMAG-REPOSITORY-HANDLER-400-008` can also occur through other services if metadata is managed with
@@ -94,6 +94,6 @@ UserNotAuthorizedException{userId='OMAGServer', reportedHTTPCode=400, reportingC
 	at java.base/java.lang.Thread.run(Thread.java:829)
 ```
 
-There is more information on [metadata provenance here](/egeria-docs/features/metadata-provenance).
+There is more information on [metadata provenance here](/features/metadata-provenance).
 
 ---8<-- "snippets/abbr.md"

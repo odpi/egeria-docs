@@ -17,7 +17,7 @@ Below is the list of tasks supported by Data Engine OMAS.
 #### External Tool registration
 
 Typically the first action to take for an external tool is to [register](register-data-engine-tool.md) as a 
-[software-server-capability](/egeria-docs/concepts/software-server-capability).
+[software-server-capability](/concepts/software-server-capability).
 
 #### External Tool lookup
 

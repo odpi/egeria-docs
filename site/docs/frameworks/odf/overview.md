@@ -5,10 +5,10 @@
 
 # Open Discovery Framework (ODF)
   
-The *Open Discovery Framework (ODF)* enables [metadata discovery tools](/egeria-docs/features/discovery-and-stewardship) to integrate with open metadata repositories by defining the interfaces for metadata discovery components (called [discovery services](#discovery-service)) to:
+The *Open Discovery Framework (ODF)* enables [metadata discovery tools](/features/discovery-and-stewardship) to integrate with open metadata repositories by defining the interfaces for metadata discovery components (called [discovery services](#discovery-service)) to:
 
 - Access metadata discovery configuration.
-- Search for [assets](/egeria-docs/concepts/asset) in the metadata repository.
+- Search for [assets](/concepts/asset) in the metadata repository.
 - Extract all the metadata known about a specific asset.
 - Record the results of the analysis in the open metadata repository and attach it to the asset's metadata for later processing.
 
@@ -16,9 +16,9 @@ The *Open Discovery Framework (ODF)* enables [metadata discovery tools](/egeria-
 
 ## Discovery service
 
-A *discovery service* provides specific analysis of the metadata and contents of an [asset](/egeria-docs/concepts/asset) on request.
+A *discovery service* provides specific analysis of the metadata and contents of an [asset](/concepts/asset) on request.
 
-It is implemented as a specialized [connector](/egeria-docs/concepts/connector).
+It is implemented as a specialized [connector](/concepts/connector).
 
 A discovery service is initialized with a connector to the asset it is to analyze and details of the results of other discovery services that have run before it if it is part of a [discovery pipeline](#discovery-pipeline).
 
@@ -41,11 +41,11 @@ Each discovery request type is associated with a discovery service. When a disco
 ## Implementation in Egeria
 
 Egeria's discovery configuration server support is implemented by the
-[Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview).
+[Discovery Engine OMAS](/services/omas/discovery-engine/overview).
 It has a client called `DiscoveryConfigurationClient` that
 implements the ODF's  `DiscoveryConfigurationServer` interface.
 It also supports event notifications through
-the [Discovery Engine OMAS's out topic](/egeria-docs/concepts/out-topic).
+the [Discovery Engine OMAS's out topic](/concepts/out-topic).
 
 ## Discovery pipeline
 
@@ -55,7 +55,7 @@ The aim of the discovery pipeline is to enable a detailed picture of the propert
 
 ## Discovery annotation
 
-A *discovery annotation* describes one or more related properties about an [asset](/egeria-docs/concepts/asset) that has been discovered by a [discovery service](#discovery-service).
+A *discovery annotation* describes one or more related properties about an [asset](/concepts/asset) that has been discovered by a [discovery service](#discovery-service).
 
 Some discovery annotations refer to an entire asset and others refer to a data field within an asset. The annotations that describe a single data field are called *data field annotations*.
 
@@ -73,9 +73,9 @@ Some discovery annotations refer to an entire asset and others refer to a data f
 | Semantic annotation | Documents suggested meanings for this data based on the values and name of the field. |
 | Suspect duplicate annotation | Identifies other asset definitions that seem to point to the same physical asset. |
 
-The open metadata types for a discovery annotations are described in [area 6](/egeria-docs/types/6) of the model.
+The open metadata types for a discovery annotations are described in [area 6](/types/6) of the model.
 
-The main entity type is called [`Annotation`](/egeria-docs/types/6/0610-Annotations). It is extended by [`DataFieldAnnotation`](/egeria-docs/types/6/0617-Data-Field-Analysis) to distinguish annotations that refer, primarily to a data field. Other more specialist annotations extend these two basic annotation types.
+The main entity type is called [`Annotation`](/types/6/0610-Annotations). It is extended by [`DataFieldAnnotation`](/types/6/0617-Data-Field-Analysis) to distinguish annotations that refer, primarily to a data field. Other more specialist annotations extend these two basic annotation types.
 
 ## Discovery analysis report
 
@@ -103,17 +103,17 @@ The discovery service is passed the discovery annotation store via the [discover
 
 A *discovery engine* is the execution environment for [discovery services](#discovery-service).
 
-The discovery engine configuration defines a set of discovery services. Its definition is stored in an open metadata repository and maintained through the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview).
+The discovery engine configuration defines a set of discovery services. Its definition is stored in an open metadata repository and maintained through the [Discovery Engine OMAS](/services/omas/discovery-engine/overview).
 
 Discovery engines are hosted in [discovery servers](#discovery-server).
 
-Egeria's implementation of the discovery engine is provided by the [Asset Analysis OMES](/egeria-docs/services/omes/asset-analysis/overview).
+Egeria's implementation of the discovery engine is provided by the [Asset Analysis OMES](/services/omes/asset-analysis/overview).
 
 ## Discovery server
 
-The *discovery server* is the server environment that hosts one or more [discovery engines](#discovery-engine). Discovery servers are deployed close to the physical assets they are analysing. They connect to the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview) running in a [metadata access server](/egeria-docs/concepts/metadata-access-server) to provide metadata about assets and to store the results of the discovery service's analysis. Many discovery servers can use the same metadata server.
+The *discovery server* is the server environment that hosts one or more [discovery engines](#discovery-engine). Discovery servers are deployed close to the physical assets they are analysing. They connect to the [Discovery Engine OMAS](/services/omas/discovery-engine/overview) running in a [metadata access server](/concepts/metadata-access-server) to provide metadata about assets and to store the results of the discovery service's analysis. Many discovery servers can use the same metadata server.
 
-In Egeria, the discovery server is implemented by the [Asset Analysis OMES](/egeria-docs/services/omes/asset-analysis/overview) running in the [engine host](/egeria-docs/concepts/engine-host) OMAG Server.
+In Egeria, the discovery server is implemented by the [Asset Analysis OMES](/services/omes/asset-analysis/overview) running in the [engine host](/concepts/engine-host) OMAG Server.
 
 ### Discovery configuration server
 
@@ -129,6 +129,6 @@ The discovery service is passed the discovery asset catalog store via the [disco
 
 ## Framework implementation
 
-Egeria provides a full implementation of the ODF. It provides a [discovery server](/egeria-docs/services/omes/asset-analysis/overview) as well as an implementation of the metadata server APIs by the [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview). There are also implementations of discovery services in the [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } module.
+Egeria provides a full implementation of the ODF. It provides a [discovery server](/services/omes/asset-analysis/overview) as well as an implementation of the metadata server APIs by the [Discovery Engine OMAS](/services/omas/discovery-engine/overview). There are also implementations of discovery services in the [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } module.
 
 --8<-- "snippets/abbr.md"

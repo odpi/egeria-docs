@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically hard-deleting (irreversibly) existing entity instances.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata repository defines optional methods for hard-deleting entity instances:
+The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a metadata repository defines optional methods for hard-deleting entity instances:
 
 | Method | Description |
 |---|---|

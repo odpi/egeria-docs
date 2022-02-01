@@ -5,9 +5,9 @@
 
 The open metadata topic connector provides a topic interface to a generic string event.
 
-It is the interface implemented by specific [event buses](/egeria-docs/concepts/event-bus).
+It is the interface implemented by specific [event buses](/concepts/event-bus).
 
-Topic connectors for specific types of events (such as the [OMRS Topic Connector](/egeria-docs/services/omrs/connectors/omrs-topic-connector)) are configured with an instance of an open metadata topic connector embedded inside it.
+Topic connectors for specific types of events (such as the [OMRS Topic Connector](/services/omrs/connectors/omrs-topic-connector)) are configured with an instance of an open metadata topic connector embedded inside it.
 
 The open metadata topic connector means that only one connector need be implemented for each type of event bus - rather than one for each type of topic that Egeria supports.
 
@@ -15,7 +15,7 @@ Implementations of this type of connector are located in the [adapters/open-conn
 
 ## Open metadata topic connector interface
 
-The [open metadata repository services (OMRS)](/egeria-docs/services/omrs) api module, [repository-services-apis](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/openmetadatatopic), provides the base classes for implementing an open metadata topic connector.  
+The [open metadata repository services (OMRS)](/services/omrs) api module, [repository-services-apis](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/openmetadatatopic), provides the base classes for implementing an open metadata topic connector.  
 
 There are two parts to this API:
 

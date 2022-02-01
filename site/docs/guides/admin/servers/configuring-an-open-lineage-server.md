@@ -1,12 +1,12 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Configuring an [open lineage server](/egeria-docs/concepts/open-lineage-servery)
+# Configuring an [open lineage server](/concepts/open-lineage-servery)
 
 ## Overview
 
-Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/egeria-docs/concepts/configuration-document).
+Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating
+a [configuration document](/concepts/configuration-document).
 
 For open lineage server following can be configured:
 

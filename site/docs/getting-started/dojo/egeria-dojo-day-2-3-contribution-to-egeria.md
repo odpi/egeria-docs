@@ -21,40 +21,40 @@ There are two videos for this session:
 
 To create your own contribution, click on each step and complete the tasks described:
 
-* [Review the contributor guidelines](/egeria-docs/guides/contributor/guidelines) to understand the requirements for an Egeria contribution.
+* [Review the contributor guidelines](/guides/contributor/guidelines) to understand the requirements for an Egeria contribution.
 
-* [Log on to GitHub](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id).
+* [Log on to GitHub](/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id).
 
-* [Create a Git Issue](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-creating-an-issue-on-git-hub). 
+* [Create a Git Issue](/education/tutorials/git-and-git-hub-tutorial/task-creating-an-issue-on-git-hub). 
   Every contribution begins with a `git issue`. This describes the changes that you plan to make.
   The more detail that you provide, the better the maintainers will understand your contribution and
   be able to process it faster.
   
-* [Create a fork and clone of the git repository](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-creating-a-fork-and-clone) to bring the Egeria code onto your machine.
+* [Create a fork and clone of the git repository](/education/tutorials/git-and-git-hub-tutorial/task-creating-a-fork-and-clone) to bring the Egeria code onto your machine.
 
-* [Create a new git branch](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git) to contain your change.
+* [Create a new git branch](/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git) to contain your change.
 
-* [Load Egeria into your IDE](/egeria-docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij) so that you can see the project contents.
+* [Load Egeria into your IDE](/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij) so that you can see the project contents.
 
-* [Build Egeria](/egeria-docs/education/tutorials/intellij-tutorial/task-building-egeria-in-intellij) so it is ready to run.
-  The link assumes you are using IntelliJ.  If you prefer working with the command line try [this link](/egeria-docs/education/tutorials/building-egeria-tutorial/task-building-egeria-source)
+* [Build Egeria](/education/tutorials/intellij-tutorial/task-building-egeria-in-intellij) so it is ready to run.
+  The link assumes you are using IntelliJ.  If you prefer working with the command line try [this link](/education/tutorials/building-egeria-tutorial/task-building-egeria-source)
 
-* [Create your contribution](/egeria-docs/education/tutorials/intellij-tutorial/task-creating-content-with-intellij) - typically using the IDE.
+* [Create your contribution](/education/tutorials/intellij-tutorial/task-creating-content-with-intellij) - typically using the IDE.
   You need to create a new markdown file, add your message to the file and then add a link to the README.md file.
-  Both of these files should use [Markdown](/egeria-docs/guides/contributor/markdown) and
+  Both of these files should use [Markdown](/guides/contributor/markdown) and
   include license and copyright statements top and bottom of the file just like this file: 
   [License File Example](https://raw.githubusercontent.com/odpi/egeria/master/developer-resources/License-Example-Files/License_for_Markdown_Files.md).
   
-  (There is more information on licences in the [Contributor Guidelines](/egeria-docs/guides/contributor/guidelines).)
+  (There is more information on licences in the [Contributor Guidelines](/guides/contributor/guidelines).)
 
-* [Test your changes](/egeria-docs/education/tutorials/testing-egeria-tutorial) to make sure your new function works and nothing else has broken.
+* [Test your changes](/education/tutorials/testing-egeria-tutorial) to make sure your new function works and nothing else has broken.
   Since this is a document change, there should be no impact on the code - so running these tests is to check that
   nothing has changed by accident.
 
-* [Add and commit changes to Git](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git).
+* [Add and commit changes to Git](/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git).
   As you commit your changes, make sure they are signed (see [Why the DCO?](https://github.com/odpi/egeria/tree/master/developer-resources/why-the-dco.md)).
 
-* Initiate the [request to include your changes](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr) into the master branch of Egeria.
+* Initiate the [request to include your changes](/education/tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr) into the master branch of Egeria.
   
 Once the PR is in place, GitHub will check the DCOs for you commits, and then run a full build on Java 8 and Java 11.
 The Egeria maintainers will review your contribution and may ask

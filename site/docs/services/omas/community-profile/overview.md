@@ -7,9 +7,9 @@
 
 The Community Profile OMAS provides APIs and events for tools and applications that are managing information about people and the way they work together.
 
-In particular the Community Profile OMAS supports [personal profiles](/egeria-docs/concepts/personal-profile), [organizations](/egeria-docs/concepts/organization) and [teams](/egeria-docs/concepts/organizations/#teams) along with  [communities](/egeria-docs/concepts/community) of people collaborating around data.
+In particular the Community Profile OMAS supports [personal profiles](/concepts/personal-profile), [organizations](/concepts/organization) and [teams](/concepts/organizations/#teams) along with  [communities](/concepts/community) of people collaborating around data.
 
-With this information, open metadata reduces the friction between people from different silos of an organization that can prevent the effective use of data. For example, an [Asset Owner](/egeria-docs/concepts/person-role/#asset-owner) can monitor who is using their [asset](/egeria-docs/concepts/asset) and for what purposes.   At the same time, [consumers or assets](/egeria-docs/concepts/person-role/#asset-consumer), such as a data scientist or business analyst, can find out which assets their colleagues are using, and any feedback that they gave, which helps to guide them to the most appropriate assets for their work.
+With this information, open metadata reduces the friction between people from different silos of an organization that can prevent the effective use of data. For example, an [Asset Owner](/concepts/person-role/#asset-owner) can monitor who is using their [asset](/concepts/asset) and for what purposes.   At the same time, [consumers or assets](/concepts/person-role/#asset-consumer), such as a data scientist or business analyst, can find out which assets their colleagues are using, and any feedback that they gave, which helps to guide them to the most appropriate assets for their work.
 
 ## Is this metadata ?
 
@@ -21,19 +21,19 @@ With or without MDM, it is important that the Community Profile OMAS can operate
 
 ## Using the Community Profile OMAS
 
-The Community Profile OMAS may be called directly through its [Java client](/egeria-docs/guides/developer/java-clients/community-profile).  This will call the Community Profile OMAS REST API running in the requested [metadata access server](/egeria-docs/concepts/metadata-access-server).
+The Community Profile OMAS may be called directly through its [Java client](/guides/developer/java-clients/community-profile).  This will call the Community Profile OMAS REST API running in the requested [metadata access server](/concepts/metadata-access-server).
 
-The Community Profile OMAS running in the metadata access server is also monitoring changes to open metadata. It will emit an [event](/egeria-docs/concepts/out-topic) whenever profile, organizational or community related metadata is created or changed in some way.  The java client provides a mechanism for third party technology to register a listener to receive these events.
+The Community Profile OMAS running in the metadata access server is also monitoring changes to open metadata. It will emit an [event](/concepts/out-topic) whenever profile, organizational or community related metadata is created or changed in some way.  The java client provides a mechanism for third party technology to register a listener to receive these events.
 
 
 ## Karma points 
 
 If an individual has a
-[Personal profile](/egeria-docs/concepts/personal-profile)
+[Personal profile](/concepts/personal-profile)
 the Community Profile OMAS will reward him/her whenever
 they contribute to open metadata.
 These rewards are in the form of
-[karma points](/egeria-docs/concepts/karma-point).
+[karma points](/concepts/karma-point).
 
 The Community Profile OMAS is responsible for maintaining the count of the karma points for an individual based on their contributions to open metadata.  It does this by listening to the metadata changes occurring in the metadata repositories and updates the personal profile of each user making a contribution.
 
@@ -43,7 +43,7 @@ The access service option property *KarmaPointPlateau* indicates the multiple of
 
 ## Automated exchange of metadata about people, organizations and communities
 
-The [Organization Integrator OMIS](/egeria-docs/services/omis/organization-integrator/overview) supports [integration connectors](/egeria-docs/concepts/integration-connector) that manage the exchange of metadata about people, organizations and communities with third party systems.
+The [Organization Integrator OMIS](/services/omis/organization-integrator/overview) supports [integration connectors](/concepts/integration-connector) that manage the exchange of metadata about people, organizations and communities with third party systems.
 
 
 

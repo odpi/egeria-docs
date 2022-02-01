@@ -40,12 +40,12 @@ You will need a system with **either**:
 
 We will use Kubernetes as the runtime environment for Egeria.
 
-Follow these steps from our [Kubernetes Documentation :material-dock-window:](/egeria-docs/guides/operations/kubernetes){ target=docs }:
+Follow these steps from our [Kubernetes Documentation :material-dock-window:](/guides/operations/kubernetes){ target=docs }:
 
-  * [Understanding Kubernetes :material-dock-window:](/egeria-docs/guides/operations/kubernetes/k8s){ target=docs } - read this for some background information.
-  * [Setting up Kubernetes :material-dock-window:](/egeria-docs/guides/operations/kubernetes/k8s-install){ target=docs } - follow the instruction to install **Rancher Desktop**.
-  * [Useful Kubernetes commands :material-dock-window:](/egeria-docs/guides/operations/kubernetes/k8s-install/){ target=docs } - a useful reference. You don't need to issue these commands now, but this may be useful later.
-  * [Setting up Helm :material-dock-window:](/egeria-docs/guides/operations/kubernetes/helm){ target = docs } - read about Helm, but you do not need to install it as it comes with **Rancher Desktop**.
+  * [Understanding Kubernetes :material-dock-window:](/guides/operations/kubernetes/k8s){ target=docs } - read this for some background information.
+  * [Setting up Kubernetes :material-dock-window:](/guides/operations/kubernetes/k8s-install){ target=docs } - follow the instruction to install **Rancher Desktop**.
+  * [Useful Kubernetes commands :material-dock-window:](/guides/operations/kubernetes/k8s-install/){ target=docs } - a useful reference. You don't need to issue these commands now, but this may be useful later.
+  * [Setting up Helm :material-dock-window:](/guides/operations/kubernetes/helm){ target = docs } - read about Helm, but you do not need to install it as it comes with **Rancher Desktop**.
 
 **Do not continue in the above sections & install any of the charts at this point** - we will do this later.
 
@@ -53,7 +53,7 @@ Follow these steps from our [Kubernetes Documentation :material-dock-window:](/e
 
 Follow these steps to setup Postman
 
-  * [Setting up Postman :material-dock-window:](/egeria-docs/education/tutorials/postman-tutorial/overview){ target=docs }
+  * [Setting up Postman :material-dock-window:](/education/tutorials/postman-tutorial/overview){ target=docs }
 
 ## Test yourself
 
@@ -75,6 +75,6 @@ Take a look over your environment, discuss with your fellow attendees & take a b
 
 ## Next step
 
-Let's move on to a [Simple Egeria setup](/egeria-docs/education/egeria-dojo/running-egeria/simple-install)
+Let's move on to a [Simple Egeria setup](/education/egeria-dojo/running-egeria/simple-install)
 
 --8<-- "snippets/abbr.md"

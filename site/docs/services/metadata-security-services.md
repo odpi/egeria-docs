@@ -10,6 +10,6 @@ hide:
 
 # Metadata security services
 
-The metadata security services supports the connector interfaces and the [mechanisms to invoke any configured security connectors](/egeria-docs/features/metadata-security/overview).
+The metadata security services supports the connector interfaces and the [mechanisms to invoke any configured security connectors](/features/metadata-security/overview).
 
 --8<-- "snippets/abbr.md"

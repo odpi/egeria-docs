@@ -4,9 +4,9 @@
 
 ## Adding an archive to a running Metadata Access Store
 
-[Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [Cohort Members](/egeria-docs/concepts/cohort-member.md).
+[Open Metadata Archives](/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [Cohort Members](/concepts/cohort-member.md).
 
-Archives can be [added to the configuration document](/egeria-docs/concepts/open-metadata-archive/#configure-metadata-to-load-on-startup) of a server to ensure their content is loaded each time the server is started.  This is intended for:
+Archives can be [added to the configuration document](/concepts/open-metadata-archive/#configure-metadata-to-load-on-startup) of a server to ensure their content is loaded each time the server is started.  This is intended for:
 
 - Archives containing type definitions.
 - Archives containing instances for repositories that do not store the archive content but keep it in memory.
@@ -24,7 +24,7 @@ Typically, an open metadata archive is stored as JSON format in a file. To load 
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
 
-Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/egeria-docs/concepts/connection). These connections refer to [open metadata archive store connectors](/egeria-docs/concepts/open-metadata-archive-store-connector) that can read and retrieve the open metadata archive content.
+Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/concepts/connection). These connections refer to [open metadata archive store connectors](/concepts/open-metadata-archive-store-connector) that can read and retrieve the open metadata archive content.
 
 !!! post "POST - load from connection(s)"
     ```

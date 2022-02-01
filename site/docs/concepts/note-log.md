@@ -3,6 +3,6 @@
 
 # Note log
 
-A *note log* is an attachment to a [referenceable](/egeria-docs/concepts/referencable) that acts as a series of ordered notes.
+A *note log* is an attachment to a [referenceable](/concepts/referencable) that acts as a series of ordered notes.
 
 --8<-- "snippets/abbr.md"

@@ -10,12 +10,12 @@ hide:
 
 # Data engine proxy services
 
-The data engine proxy services support the behavior of the [data engine proxy](/egeria-docs/concepts/data-engine-proxy).
+The data engine proxy services support the behavior of the [data engine proxy](/concepts/data-engine-proxy).
 
 ![Figure 1 - Data Engine Proxy Server](data-engine-proxy-server.svg)
 
 This server supports intercommunication from a **Data Engine** and
-the [Data Engine OMAS](/egeria-docs/services/omas/data-engine/overview).
+the [Data Engine OMAS](/services/omas/data-engine/overview).
 
 A data engine is a technology that processes data to either copy it to a new location,
 transform it to a new format, so it can be consumed in a different way and/or
@@ -27,7 +27,7 @@ details of the processing it is doing is needed to provide lineage for the
 data sources.  This is why it is important that we capture information about a data engine's
 processing in open metadata.
 
-The [Data Engine OMAS](/egeria-docs/services/omas/data-engine/overview) provides the API for capturing the processing of a
+The [Data Engine OMAS](/services/omas/data-engine/overview) provides the API for capturing the processing of a
 data engine.
 
 Where a Data Engine does not have direct support for publishing details of its processing to the
@@ -41,7 +41,7 @@ responsible for hosting the data engine proxy connector.
 
 # Further information
 
-- Configuring the Data Engine Proxy Server following the [admin guide](/egeria-docs/guides/admin/servers/configuring-a-data-engine-proxy-server/).
+- Configuring the Data Engine Proxy Server following the [admin guide](/guides/admin/servers/configuring-a-data-engine-proxy-server/).
 
 - Configuring Data Engine Proxy with [IBM Data Stage connector](https://github.com/odpi/egeria-connector-ibm-information-server/tree/master/datastage-adapter).
 

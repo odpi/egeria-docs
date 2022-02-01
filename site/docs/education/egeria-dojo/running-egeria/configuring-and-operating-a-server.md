@@ -173,30 +173,30 @@ Check that it is working by locating the **Get Server Origin** request,
 When you click on that request in the left-hand list, a new tab opens and you can click on **send** to
 issue the request.  Below is this response in Postman.
 
-![Postman server origin](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin.png)
+![Postman server origin](/education/tutorials/postman-tutorial/postman-platform-origin.png)
 
 If this does not work, then there is something wrong either in Postman or your platform.
 Check the URL string that was used in the request (shown in orange in the middle of the screen.)
 
 The screen shot below shows the error message when the egeria environment is not set.
 This can be fixed by setting it in the top right-hand dropdown.  If the Egeria environment is not
-listed then you need to load the environment ([Postman tutorial :material-dock-window:](/egeria-docs/education/tutorials/postman-tutorial/overview){ target=pm }).
+listed then you need to load the environment ([Postman tutorial :material-dock-window:](/education/tutorials/postman-tutorial/overview){ target=pm }).
 
-![Postman server origin - no environment](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-no-environment.png)
+![Postman server origin - no environment](/education/tutorials/postman-tutorial/postman-platform-origin-no-environment.png)
 
 If the baseURL variable is set to a different value to the server platform then Postman can not connect.
 In the screen capture below, you can see the baseURL is set to the default of `https://localhost:9443` - you will need to correct this if wrong
-![Postman server origin - wrong base url](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-wrong-base-url.png)
+![Postman server origin - wrong base url](/education/tutorials/postman-tutorial/postman-platform-origin-wrong-base-url.png)
 
 Finally, if the OMAG Server Platform is not running the even though everything is set up correctly in
 Postman, it has nothing to connect to.  Go back to the helm chart deployment earlier and check this completed successfully.
 
-![Postman server origin - platform down](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-no-platform.png)
+![Postman server origin - platform down](/education/tutorials/postman-tutorial/postman-platform-origin-no-platform.png)
 
 ### Configuring a metadata server using the REST API
 
 In last part of this session you will learn how to set up the OMAG Server Platform so that it is secure and
-determine the services and servers that are associated with the platform. Information on how to do this is found in [Configuring the OMAG Server Platform :material-dock-window:](/egeria-docs/guides/admin/configuring-the-omag-server-platform){ target=docs }.
+determine the services and servers that are associated with the platform. Information on how to do this is found in [Configuring the OMAG Server Platform :material-dock-window:](/guides/admin/configuring-the-omag-server-platform){ target=docs }.
 
 You can choose to type the request into Postman, or use the requests already defined in the
 `Egeria-admin-services-platform-configuration` Postman collection.
@@ -209,12 +209,12 @@ In this session you are going to learn how to set up particular type of OMAG ser
 Begin by understanding about the different types of OMAG Servers and what they are used for by
 following the link below:
 
-* [Egeria's OMAG Servers :material-dock-window:](/egeria-docs/concepts/omag-server){ target=docs }
+* [Egeria's OMAG Servers :material-dock-window:](/concepts/omag-server){ target=docs }
 
 In this first exercise you are going to use Postman to configure a simple metadata server called
 `myMetadataServer`.
 
-Refer to [Admin services user guide on metadata access servers :material-dock-window:](/egeria-docs/concepts/metadata-access-server){ target=docs } for further
+Refer to [Admin services user guide on metadata access servers :material-dock-window:](/concepts/metadata-access-server){ target=docs } for further
 information on the requests you will need to use.
 
 #### Update environment
@@ -233,7 +233,7 @@ value in the Egeria Environment, sometimes you can type it directly into the req
 the request in Postman is just what you need.
 
 Each time you add a configuration value, 
-[retrieve the server's configuration :material-dock-window:](/egeria-docs/concepts/configuration-document){ target=docs }
+[retrieve the server's configuration :material-dock-window:](/concepts/configuration-document){ target=docs }
 to see how the effect of your requests are changing the server's configuration.
 
 
@@ -242,63 +242,63 @@ to see how the effect of your requests are changing the server's configuration.
   This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuring defaults for the Cohort Members/Set local server URL root**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configuring-local-server-url){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-point/#configuring-local-server-url){ target=docs }.
 
 * Set **localServerType** to `Egeria Dojo Metadata Server` (update the value in the request)
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server type name**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
 
 * Set **organizationName** to your organization name (update the variable `organization_name`).
  
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set Organization name**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs}.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs}.
  
 * Set **localServerUserId** to `myMetadataServerUserId`.
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server user Id**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
 
 * Set **localServerPassword** to `myMetadataServerPassword`
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server user password**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
 
 * Set **maxPageSize** - the maximum page size that can be set on requests to the server. The default value is 1000.
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers//Set max page size**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
 
 * Add a graph-based local repository.  This will store metadata in [JanusGraph :material-dock-window:](https://janusgraph.org){ target=jg }.
 
   This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Configuration for Metadata Servers/Enable the graph repository**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-local-repository){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-local-repository){ target=docs }.
 
 * Configure the **Asset Owner** Open Metadata Access Service (OMAS). URL name for this service is `asset-owner`.
 
   This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Enable a specific access service**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-access-services){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-access-services){ target=docs }.
 
 * Set up the Coco Pharmaceutical **Server** Security connector to provide authorization checks for inbound REST API calls.
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set Server Security Connection**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-server-security-connector){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-server-security-connector){ target=docs }.
 
 This completes the example configuration. 
 
@@ -323,7 +323,7 @@ There are also optional advanced exercises in this session.
 Using Postman, and the **Egeria-admin-services-operational** Postman collection, start your server `myMetadataServer`.
 The documentation from the Admin Guide is shown below.
 
-* [Starting and Stopping OMAG Servers :material-dock-window:](/egeria-docs/guides/operations/guide/#starting-and-stopping-an-omag-server){ target=docs }
+* [Starting and Stopping OMAG Servers :material-dock-window:](/guides/operations/guide/#starting-and-stopping-an-omag-server){ target=docs }
 
 Review the logs to see typical output from the server being started.
 ## Calling the metadata server API
@@ -359,12 +359,12 @@ Using what you learnt earlier in this section, repeat the previous server config
 
 Once you have 2 servers configured, add configuration to each of them to connect them via a cohort.
 
-First read about [Open Metadata Repository Cohorts :material-dock-window:](/egeria-docs/services/omrs/cohort){ target=docs }.
+First read about [Open Metadata Repository Cohorts :material-dock-window:](/services/omrs/cohort){ target=docs }.
 
 Then
 
-* [Set up the event bus defaults :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/?h=event+bus#set-up-the-default-event-bus){ target=docs }
-* Connect then together by [adding cohort configuration :material-dock-window:](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/?h=adding+a+access+cohort#remove-the-local-repository){ target=docs } to each server.
+* [Set up the event bus defaults :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-point/?h=event+bus#set-up-the-default-event-bus){ target=docs }
+* Connect then together by [adding cohort configuration :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/?h=adding+a+access+cohort#remove-the-local-repository){ target=docs } to each server.
 
 Start both servers and view their logs via Kubernetes - you should see that they are communicating.
 
@@ -377,6 +377,6 @@ We will not explore the UI in this tutorial. we'll get into more detail on this 
 
 ## Next step
 
-Let's move on to [Coco Pharmacueticals](/egeria-docs/education/egeria-dojo/running-egeria/coco-labs-environment)
+Let's move on to [Coco Pharmacueticals](/education/egeria-dojo/running-egeria/coco-labs-environment)
 
 --8<-- "snippets/abbr.md"

@@ -4,11 +4,11 @@
 # Governance Action Engine
 
 The governance action engine describes a set of related
-[governance action services](/egeria-docs/guides/developer/governance-action-services/overview).
-It is hosted in the [Governance Action Open Metadata Engine Service (OMES)](/egeria-docs/services/omes)
-running on one or more [Engine Host OMAG Servers](/egeria-docs/concepts/engine-host).
+[governance action services](/guides/developer/governance-action-services/overview).
+It is hosted in the [Governance Action Open Metadata Engine Service (OMES)](/services/omes)
+running on one or more [Engine Host OMAG Servers](/concepts/engine-host).
 
-The Open Metadata Types used to define the governance action engines are located in model **[0461 Governance Engines](/egeria-docs/types/4/0461-Governance-Engines)**.
+The Open Metadata Types used to define the governance action engines are located in model **[0461 Governance Engines](/types/4/0461-Governance-Engines)**.
 
 
 

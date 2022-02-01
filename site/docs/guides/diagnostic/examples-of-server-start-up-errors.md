@@ -7,7 +7,7 @@ When an OMAG Server is starting, it first outputs a message to the audit log tha
 records the name of the server and its type.
 
 For example, this platform is starting up five OMAG Servers, each of a
-[different type](/egeria-docs/concepts/omag-server).
+[different type](/concepts/omag-server).
 
 ```
 
@@ -171,8 +171,8 @@ Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting fo
 
 ## Further information
 
-* [Integration Daemon Diagnostic Guide](/egeria-docs/guides/diagnostic/integration-daemon-diagnostic-guide) covers specific guidance on diagnosing and fixing errors in the Integration Daemon.
-* [Repository Services Design Overview](/egeria-docs/services/omrs) describes the different repository services subsystems used in the different types of OMAG Servers.
-* [Repository Services Start up Design](/egeria-docs/services/omrs/subsystem-descriptions) describe the components initialized in an Egeria Metadata Server.
+* [Integration Daemon Diagnostic Guide](/guides/diagnostic/integration-daemon-diagnostic-guide) covers specific guidance on diagnosing and fixing errors in the Integration Daemon.
+* [Repository Services Design Overview](/services/omrs) describes the different repository services subsystems used in the different types of OMAG Servers.
+* [Repository Services Start up Design](/services/omrs/subsystem-descriptions) describe the components initialized in an Egeria Metadata Server.
 
 ---8<-- "snippets/abbr.md"

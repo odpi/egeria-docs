@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically changing the type of an existing relationship instance.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata repository defines an optional method for changing the type of relationship instances:
+The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a metadata repository defines an optional method for changing the type of relationship instances:
 
 | Method | Description |
 |---|---|

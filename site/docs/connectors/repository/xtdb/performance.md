@@ -171,8 +171,8 @@ The XTDB results can be difficult to see in detail due to the skew from the Janu
 
 Two Helm charts are provided, that were used to automate the execution of these suites against the XTDB repository connector:
 
-- [The Helm chart used to execute the CTS suite](/egeria-docs/guides/operations/kubernetes/charts/cts)
-- [The Helm chart used to execute the PTS suite](/egeria-docs/guides/operations/kubernetes/charts/pts)
+- [The Helm chart used to execute the CTS suite](/guides/operations/kubernetes/charts/cts)
+- [The Helm chart used to execute the PTS suite](/guides/operations/kubernetes/charts/pts)
 
 These use a default configuration for the XTDB repository where Lucene is used as a text index and RocksDB is used for all persistence: index store, document store and transaction log. No additional tuning of any parameters (XTDB or RocksDB) is applied: they use all of their default settings.
 

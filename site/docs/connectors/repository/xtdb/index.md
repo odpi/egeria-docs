@@ -8,26 +8,26 @@
 
     Profile | Result
     ---|---
-    [Metadata sharing](/egeria-docs/guides/cts/profiles/metadata-sharing) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Reference copies](/egeria-docs/guides/cts/profiles/reference-copies) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Metadata maintenance](/egeria-docs/guides/cts/profiles/metadata-maintenance) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Dynamic types](/egeria-docs/guides/cts/profiles/dynamic-types) | :material-help: UNKNOWN_STATUS
-    [Graph queries](/egeria-docs/guides/cts/profiles/graph-queries) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Historical search](/egeria-docs/guides/cts/profiles/historical-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Entity proxies](/egeria-docs/guides/cts/profiles/entity-proxies) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Soft-delete and restore](/egeria-docs/guides/cts/profiles/soft-delete-and-restore) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Undo an update](/egeria-docs/guides/cts/profiles/undo-an-update) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Reidentify instance](/egeria-docs/guides/cts/profiles/reidentify-instance) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Retype instance](/egeria-docs/guides/cts/profiles/retype-instance) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Rehome instance](/egeria-docs/guides/cts/profiles/rehome-instance) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Entity search](/egeria-docs/guides/cts/profiles/entity-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Relationship search](/egeria-docs/guides/cts/profiles/relationship-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Entity advanced search](/egeria-docs/guides/cts/profiles/entity-advanced-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
-    [Relationship advanced search](/egeria-docs/guides/cts/profiles/relationship-advanced-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Metadata sharing](/guides/cts/profiles/metadata-sharing) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Reference copies](/guides/cts/profiles/reference-copies) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Metadata maintenance](/guides/cts/profiles/metadata-maintenance) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Dynamic types](/guides/cts/profiles/dynamic-types) | :material-help: UNKNOWN_STATUS
+    [Graph queries](/guides/cts/profiles/graph-queries) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Historical search](/guides/cts/profiles/historical-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Entity proxies](/guides/cts/profiles/entity-proxies) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Soft-delete and restore](/guides/cts/profiles/soft-delete-and-restore) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Undo an update](/guides/cts/profiles/undo-an-update) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Reidentify instance](/guides/cts/profiles/reidentify-instance) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Retype instance](/guides/cts/profiles/retype-instance) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Rehome instance](/guides/cts/profiles/rehome-instance) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Entity search](/guides/cts/profiles/entity-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Relationship search](/guides/cts/profiles/relationship-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Entity advanced search](/guides/cts/profiles/entity-advanced-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
+    [Relationship advanced search](/guides/cts/profiles/relationship-advanced-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
 
     ??? info "Additional notes"
         - The entity search tests could fail a particular long-running query pattern unless Lucene is configured: typically where a query by value or attribute is done without providing any restriction on the type of instances against which the query should run. Configure the connector with Lucene to avoid these timeouts.
-        - The [Dynamic types](/egeria-docs/guides/cts/profiles/dynamic-types) profile currently does not have any tests defined, so will be `UNKNOWN_STATUS` for all repositories and connectors.
+        - The [Dynamic types](/guides/cts/profiles/dynamic-types) profile currently does not have any tests defined, so will be `UNKNOWN_STATUS` for all repositories and connectors.
 
 === "Latest release"
     [![Release](https://img.shields.io/maven-central/v/org.odpi.egeria/egeria-connector-xtdb?label=release)](http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.odpi.egeria&a=egeria-connector-xtdb&v=RELEASE&c=jar-with-dependencies)
@@ -46,7 +46,7 @@ XTDB supports temporal graph queries to provide native support for storing histo
 
 ## How it works
 
-The XTDB OMRS Repository Connector is a [repository connector](/egeria-docs/concepts/repository-connector), hosted by the [plugin repository proxy](/egeria-docs/concepts/plugin-repository-proxy), running on a [metadata access store](/egeria-docs/concepts/metadata-access-store).
+The XTDB OMRS Repository Connector is a [repository connector](/concepts/repository-connector), hosted by the [plugin repository proxy](/concepts/plugin-repository-proxy), running on a [metadata access store](/concepts/metadata-access-store).
 
 ![Operation of the XTDB OMRS repository connector](xtdb-connector-overview.svg)
 
@@ -61,7 +61,7 @@ XTDB itself handles write transactions and persistence guarantees via its APIs, 
 
 ## Configuration
 
-The following options are used to configure this connector, as part of the [*configure the local repository* step when configuring a metadata server](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-local-repository).
+The following options are used to configure this connector, as part of the [*configure the local repository* step when configuring a metadata server](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-local-repository).
 
 ### Pluggable persistence
 
@@ -232,13 +232,13 @@ A [sample Helm chart is provided for configuring the XTDB connector for high ava
 
 When it is first deployed, the Helm chart starts a number of pods and services: for Egeria (purple), Kafka (red), execution of the Performance Test Suite and a pod used for configuration. (As mentioned above, it assumes a pre-existing JDBC database: a vanilla PostgreSQL cluster (grey) deployed and managed independently by EnterpriseDB's k8s operator.)
 
-Each XTDB pod runs its own separate [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform), in its own JVM, and a script in the `init-and-report` pod will wait until all three pods' OMAG Server Platforms are running before proceeding to any of the following steps. (The `headless` service allows each pod to be directly addressed, without load-balancing, to do such a check.)
+Each XTDB pod runs its own separate [OMAG Server Platform](/concepts/omag-server-platform), in its own JVM, and a script in the `init-and-report` pod will wait until all three pods' OMAG Server Platforms are running before proceeding to any of the following steps. (The `headless` service allows each pod to be directly addressed, without load-balancing, to do such a check.)
 
 ### Configure
 
 ![Configure Egeria](xtdb-ha-3.svg)
 
-The next script creates a singular configuration document via the `pts` pod, and deploys this common configuration to each of the pods (again using the `headless` service to directly address each one individually): each will have a separate `xtdb` server configured with the same XTDB connector (same [metadata collection id](/egeria-docs/concepts/metadata-collection-id)).
+The next script creates a singular configuration document via the `pts` pod, and deploys this common configuration to each of the pods (again using the `headless` service to directly address each one individually): each will have a separate `xtdb` server configured with the same XTDB connector (same [metadata collection id](/concepts/metadata-collection-id)).
 
 When the `/instance` is called against each pod to start the connector, each will create a local index and instance of the `IXtdb` interface: all pointing to the same golden stores (in this example, Kafka and EDB) where all persistence for XTDB is handled. All servers will refer to the singular `xtdb` load-balancing service as their root URL.
 

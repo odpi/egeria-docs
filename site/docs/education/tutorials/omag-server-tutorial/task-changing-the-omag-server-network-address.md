@@ -3,14 +3,14 @@
 
 # Changing the OMAG Server Platform's Network Address
 
-By default the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) registers with the network
+By default the [OMAG Server Platform](/concepts/omag-server-platform) registers with the network
 using **https://localhost:9443**.  This is ok for testing, or
 where you only want to run one instance of the OMAG Server Platform
 on a single machine, but for many situations it is not sufficient.
 
 This tutorial covers changing the network address.
 
-The [OMAG Server Platform's installation directory](/egeria-docs/education/tutorials/building-egeria-tutorial/task-installing-egeria)
+The [OMAG Server Platform's installation directory](/education/tutorials/building-egeria-tutorial/task-installing-egeria)
 there is the Java Archive (Jar) file for the OMAG server platform
 and a **resources** directory.
 
@@ -30,7 +30,7 @@ application.properties	banner.txt
 ```
 
 The **application.properties** file provides a means to add configuration
-to the [Spring Boot Server Chassis](/egeria-docs/services/server-chassis)
+to the [Spring Boot Server Chassis](/services/server-chassis)
 that acts as a base for the OMAG Server Platform.
 
 ```bash
@@ -63,7 +63,7 @@ logging.level.root=OFF
 server.address=https://localhost:9444
 ```
 
-[Start the OMAG server platform again](/egeria-docs/education/tutorials/omag-server-tutorial/task-starting-omag-server)
+[Start the OMAG server platform again](/education/tutorials/omag-server-tutorial/task-starting-omag-server)
 and issue the following REST call to check the server is running with the new server address.
 
 ```bash

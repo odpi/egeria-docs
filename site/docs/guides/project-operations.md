@@ -28,7 +28,7 @@ All participants in the Egeria community are bound by the project's [Code of Con
 
 As a member you are able to attend our meetings, just to listen, or to play an active part in the discussion. The online meetings are recorded to allow community members to catch up if they are not able to attend the live meeting. When you attend the community meetings specifically, your name will be recorded in the meeting minutes along with any remarks or suggestions you make. The agenda and minutes of our community meetings are publicly available on the [Egeria wiki :material-dock-window:](https://github.com/odpi/egeria/wiki){ target=gh }.
 
-A member may make contributions to the Egeria content by submitting a GitHub pull request on the appropriate Git repository. This will be reviewed and processed by the [Egeria maintainers](#maintainers). The process for making a contribution is described in the [Egeria Dojo](/egeria-docs/getting-started/dojo/introduction) education. Each contribution is signed by the contributor to confirm they agree to our [Developer Certificate of Origin (DCO)](/egeria-docs/guides/developer/guidelines/#sign-commits-to-accept-dco).
+A member may make contributions to the Egeria content by submitting a GitHub pull request on the appropriate Git repository. This will be reviewed and processed by the [Egeria maintainers](#maintainers). The process for making a contribution is described in the [Egeria Dojo](/getting-started/dojo/introduction) education. Each contribution is signed by the contributor to confirm they agree to our [Developer Certificate of Origin (DCO)](/guides/developer/guidelines/#sign-commits-to-accept-dco).
 
 Community members can progress to be Egeria [contributors](#contributors) and then Egeria [maintainers](#maintainers).
 
@@ -60,7 +60,7 @@ Egeria's contributors are recognized in the [contributors list :material-github:
 !!! tip "How to become a maintainer"
     New maintainers are voted onto the maintainers list by [the existing maintainers :material-github:](https://github.com/odpi/egeria/blob/master/MAINTAINERS.md){ target=gh }.
 
-    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer. The maintainers vote and if a majority agree then the requester is added to the maintainers list and given write access to the [Egeria Git repositories](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview).
+    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer. The maintainers vote and if a majority agree then the requester is added to the maintainers list and given write access to the [Egeria Git repositories](/education/tutorials/git-and-git-hub-tutorial/overview).
 
     Once confirmed, you will receive an [an Egeria Maintainer badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-maintainer){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria maintainer.
 
@@ -82,11 +82,11 @@ For example, the face-to-face meeting may be at a conference that requires you t
 
 ## Releases
 
-The Egeria team aim to create an official release of the open metadata and governance capability every month. This release will be available to include in products and other technology through [Maven's Central Repository :material-dock-window:](https://search.maven.org){ target=mc }, or through a download from the GitHub site. Details of the releases are maintained in the [release notes](/egeria-docs/release-notes/overview).
+The Egeria team aim to create an official release of the open metadata and governance capability every month. This release will be available to include in products and other technology through [Maven's Central Repository :material-dock-window:](https://search.maven.org){ target=mc }, or through a download from the GitHub site. Details of the releases are maintained in the [release notes](/release-notes/overview).
 
 In between official releases, the latest build is also available to developers in GitHub.
 
-The process for creating a release is described in the [developer guide](/egeria-docs/guides/developer/process/#release-process)
+The process for creating a release is described in the [developer guide](/guides/developer/process/#release-process)
 
 ## Conflict resolution and voting
 

@@ -3,6 +3,6 @@
 
 # 0120 Collections
 
-Collections are now located in model [0021](/egeria-docs/types/0/0021-Collections/#collection).
+Collections are now located in model [0021](/types/0/0021-Collections/#collection).
 
 --8<-- "snippets/abbr.md"

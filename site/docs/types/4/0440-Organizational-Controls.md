@@ -29,10 +29,10 @@ Linked to the *OrganizationalControl* via the *BusinessCapabilityControls* relat
 
 ## Organization
 
-*Organization* is a special type of [team](/egeria-docs/types/1/0115-Teams) that is the root of a hierarchy of teams and represents a collection of people and resources with a particular purpose such as a business, non-profit organization or governance department.
+*Organization* is a special type of [team](/types/1/0115-Teams) that is the root of a hierarchy of teams and represents a collection of people and resources with a particular purpose such as a business, non-profit organization or governance department.
 
 ## AssetOrigin
 
-*[Asset](/egeria-docs/types/0/0010-Basic-Model)* entities describe [resources](/egeria-docs/concepts/resource) used by an organization.  This use could be by many teams.  The *AssetOrigin* classification describes the part of the organization that the resource originated in.  For example, it may show that a data set with personal information originated from the Swiss part of the organization and is therefore subject to specific controls.
+*[Asset](/types/0/0010-Basic-Model)* entities describe [resources](/concepts/resource) used by an organization.  This use could be by many teams.  The *AssetOrigin* classification describes the part of the organization that the resource originated in.  For example, it may show that a data set with personal information originated from the Swiss part of the organization and is therefore subject to specific controls.
 
 --8<-- "snippets/abbr.md"

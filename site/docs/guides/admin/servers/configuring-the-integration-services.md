@@ -3,11 +3,11 @@
 
 ## Configure the integration services
 
-The [integration services](/egeria-docs/services/omis) (or Open Metadata Integration Services (OMIS) to give them their full name) run in an [integration daemon](/egeria-docs/concepts/integration-daemon).
+The [integration services](/services/omis) (or Open Metadata Integration Services (OMIS) to give them their full name) run in an [integration daemon](/concepts/integration-daemon).
 
-Each integration service hosts one or more [integration connectors](/egeria-docs/concepts/integration-connector). An integration connector is responsible for the exchange of metadata with a specific deployment of a third party technology. For example, the [database integrator](/egeria-docs/services/omis/database-integrator) integration service supports integration connectors that work with relational databases (RDBMS). A deployment of this integration service in an integration daemon may host, say, two integration connectors each loading metadata from their own relational database server.
+Each integration service hosts one or more [integration connectors](/concepts/integration-connector). An integration connector is responsible for the exchange of metadata with a specific deployment of a third party technology. For example, the [database integrator](/services/omis/database-integrator) integration service supports integration connectors that work with relational databases (RDBMS). A deployment of this integration service in an integration daemon may host, say, two integration connectors each loading metadata from their own relational database server.
 
-![The configuration document contents for an integration service](/egeria-docs/concepts/integration-service-config.svg)
+![The configuration document contents for an integration service](/concepts/integration-service-config.svg)
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `integrationServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 
@@ -24,7 +24,7 @@ It is possible to get a description of each of the registered integration servic
 
 ### Configure an integration service
 
-Each integration service is configured with the network location of the [metadata access point](/egeria-docs/concepts/metadata-access-point) / [metadata access store](/egeria-docs/concepts/metadata-access-store) running the appropriate [OMAS](/egeria-docs/services/omas). There are a set of options that the integration service supports along with the list of configuration properties for the integration connectors that will be run in the integration service. The integration connector's configuration properties defines which connector implementation to use and how it should be operated.
+Each integration service is configured with the network location of the [metadata access point](/concepts/metadata-access-point) / [metadata access store](/concepts/metadata-access-store) running the appropriate [OMAS](/services/omas). There are a set of options that the integration service supports along with the list of configuration properties for the integration connectors that will be run in the integration service. The integration connector's configuration properties defines which connector implementation to use and how it should be operated.
 
 !!! post "POST - configure an integration service"
     ```

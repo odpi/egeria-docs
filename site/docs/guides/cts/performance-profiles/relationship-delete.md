@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically soft-deleting an existing relationship instance.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata repository defines an optional method for deleting relationship instances:
+The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a metadata repository defines an optional method for deleting relationship instances:
 
 | Method | Description |
 |---|---|

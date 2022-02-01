@@ -13,21 +13,21 @@
 
 *`Referenceable`* is the super type for many of the open metadata entity types. A `Referenceable` is something that is important enough to be assigned a unique (qualified) name within its type. This unique name is often used outside the open metadata ecosystem as its unique identifier. `Referenceable` also has provision for storing additional properties. This is a set of name-value pairs (i.e. a map) where the values are all strings.
 
-[Further information on the use of Referenceable.](/egeria-docs/concepts/referenceable)
+[Further information on the use of Referenceable.](/concepts/referenceable)
 
 ## Asset
 
 *`Asset`* represents the most significant type of `Referenceable`. An `Asset` is something (either physical or digital) that is of value and so needs to be managed and governed.
 
 ??? deprecated "Deprecated attributes"
-    The `Asset` entity has the following deprecated attributes. Their values have been moved to classifications as shown in the table below. Many `Asset`s are created by their hosting technology and locked read-only to the broader metadata ecosystem (see [external metadata provenance](/egeria-docs/features/metadata-provenance/overview) for more detail). By moving the governance related information to a classification, it can be maintained by a different service to the `Asset` creator.
+    The `Asset` entity has the following deprecated attributes. Their values have been moved to classifications as shown in the table below. Many `Asset`s are created by their hosting technology and locked read-only to the broader metadata ecosystem (see [external metadata provenance](/features/metadata-provenance/overview) for more detail). By moving the governance related information to a classification, it can be maintained by a different service to the `Asset` creator.
 
     | Deprecated attribute | Moved to classification |
     |---|---|
-    | `owner` (type `string`) | [Ownership](/egeria-docs/types/4/0445-Governance-Roles/#ownership) |
-    | `ownerType` (type `AssetOwnerType` enum) | [Ownership](/egeria-docs/types/4/0445-Governance-roles/#ownership) |
-    | `zoneMembership` (type `array<string>`) | [AssetZoneMembership](/egeria-docs/types/4/0424-Governance-Zones/#assetzonemembership) |
-    | `latestChange` (type `string`) | [LatestChange](/egeria-docs/types/0/0011-Managing-Referenceables/#latestchange) |
+    | `owner` (type `string`) | [Ownership](/types/4/0445-Governance-Roles/#ownership) |
+    | `ownerType` (type `AssetOwnerType` enum) | [Ownership](/types/4/0445-Governance-roles/#ownership) |
+    | `zoneMembership` (type `array<string>`) | [AssetZoneMembership](/types/4/0424-Governance-Zones/#assetzonemembership) |
+    | `latestChange` (type `string`) | [LatestChange](/types/0/0011-Managing-Referenceables/#latestchange) |
 
 `Infrastructure`, `Process` and `DataSet` are examples of `Asset`s.
 
@@ -35,27 +35,27 @@
 
 *`Infrastructure`* represents both the physical and digital assets that the organization runs its business on. There is more information on `Infrastructure` in:
 
-- [0030 Hosts and platforms](/egeria-docs/types/0/0030-Hosts-and-Platforms)
-- [0035 Complex hosts](/egeria-docs/types/0/0035-Complex-Hosts)
-- [0037 Software server platforms](/egeria-docs/types/0/0037-Software-Server-Platforms)
-- [0040 Software servers](/egeria-docs/types/0/0040-Software-Servers)
-- [0042 Software capabilities](/egeria-docs/types/0/0042-Software-Capabilities)
+- [0030 Hosts and platforms](/types/0/0030-Hosts-and-Platforms)
+- [0035 Complex hosts](/types/0/0035-Complex-Hosts)
+- [0037 Software server platforms](/types/0/0037-Software-Server-Platforms)
+- [0040 Software servers](/types/0/0040-Software-Servers)
+- [0042 Software capabilities](/types/0/0042-Software-Capabilities)
 
 ### Process
 
-*`Process`* describes a well-defined set of processing steps and decisions that drive a particular aspect of the organization's business. Most `Process`es are automated with software (see [`DeployedSoftwareComponent`](/egeria-docs/types/2/0215-Software-Components/#deployedsoftwarecomponent)) but they may also be a manual procedure. An automated process can be invoked from a remote server through a [`DeployedAPI`](../../2/0212-deployed-apis/#deployedapi).
+*`Process`* describes a well-defined set of processing steps and decisions that drive a particular aspect of the organization's business. Most `Process`es are automated with software (see [`DeployedSoftwareComponent`](/types/2/0215-Software-Components/#deployedsoftwarecomponent)) but they may also be a manual procedure. An automated process can be invoked from a remote server through a [`DeployedAPI`](../../2/0212-deployed-apis/#deployedapi).
 
 ### DataSet
 
-*`DataSet`* represents a collection of related data. This data does not need to be stored together. See [`DataStore`](/egeria-docs/types/2/0210-Data-Stores/#datastore) for the `Asset` that represents a physical store.
+*`DataSet`* represents a collection of related data. This data does not need to be stored together. See [`DataStore`](/types/2/0210-Data-Stores/#datastore) for the `Asset` that represents a physical store.
 
-More information on assets can be found in [Metadata Manager](/egeria-docs/patterns/metadata-manager/overview).
+More information on assets can be found in [Metadata Manager](/patterns/metadata-manager/overview).
 
 ## Anchors
 
 The *`Anchors`* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an asset to store the GUID of that asset.
 
-[Further information on the use of Anchors.](/egeria-docs/concepts/anchor)
+[Further information on the use of Anchors.](/concepts/anchor)
 
 ## Memento
 

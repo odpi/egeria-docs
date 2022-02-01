@@ -28,7 +28,7 @@ This means the only way to influence the progress of the project is to join the 
 
 ## Getting connected
 
-The processes used by the community are documented in the [Community Guide](/egeria-docs/guides/community). This includes information about how to join the community and participate.
+The processes used by the community are documented in the [Community Guide](/guides/community). This includes information about how to join the community and participate.
 
 ## Raising your status in the community
 
@@ -39,7 +39,7 @@ The Egeria community has three special roles that you can work towards:
 management of the community and the project contents.
 - *Egeria Project Leader* - individual who is elected by the maintainers to lead the Egeria project.
 
-These roles are described in the [Operations Guide](/egeria-docs/guides/project-operations).
+These roles are described in the [Operations Guide](/guides/project-operations).
 
 ## Egeria badges
 

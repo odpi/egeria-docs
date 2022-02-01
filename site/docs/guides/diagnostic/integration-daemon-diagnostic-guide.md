@@ -3,9 +3,9 @@
 
 # Trouble shooting issues with the integration daemon
 
-The [integration daemon](/egeria-docs/concepts/integration-daemon)
+The [integration daemon](/concepts/integration-daemon)
 is designed to run as a background process.  It hosts 
-[integration connectors](/egeria-docs/concepts/integration-connector)
+[integration connectors](/concepts/integration-connector)
 that exchange metadata with third party technologies.  It also
 make calls to a metadata server in order to retrieve and maintain metadata in the open metadata ecosystem.
 
@@ -17,8 +17,8 @@ The integration daemon also has simple REST API for manually restarting and refr
 to enable the integration daemon to recover from errors.
 
 If a connector is incorrectly configured, the integration daemon's configuration document needs to be changed
-using [administration commands](/egeria-docs/user/admin/servers/configuring-an-integration-daemon/#configuring-the-integration-services)
-and the integration daemon [restarted](/egeria-docs/guides/operations/guide/#starting-and-stopping-an-omag-server).
+using [administration commands](/user/admin/servers/configuring-an-integration-daemon/#configuring-the-integration-services)
+and the integration daemon [restarted](/guides/operations/guide/#starting-and-stopping-an-omag-server).
 
 ## Sources of errors
 
@@ -83,9 +83,9 @@ Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMAG-ADMIN-0004 The exchangeDL
 ```
 
 The integration daemon successfully completes start up running the
-[Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
+[Files Integrator OMIS](/services/omis/files-integrator/overview)
 with three integration connectors and the
-[Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
+[Database Integrator OMIS](/services/omis/database-integrator/overview)
 with one connector.
 It then begins its periodic refresh of the connectors (set to every 10 minutes in this configuration).
 
@@ -101,7 +101,7 @@ So the metadata server `cocoMDS1` is down and the connectors can not begin proce
 
 There is also an error with the `OakDeneLandingAreaDatabaseMonitor`
 in that it is configured to work with the
-[Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
+[Database Integrator OMIS](/services/omis/database-integrator/overview)
 but the connector does not implement the right interface for this service.
 
 ```
@@ -168,7 +168,7 @@ You can see the same errors that where recorded in the start up messages.
             "integrationServiceFullName": "Database Integrator OMIS",
             "integrationServiceURLMarker": "database-integrator",
             "integrationServiceDescription": "Extract metadata such as schema, tables and columns from database managers.",
-            "integrationServiceWiki": "https://odpi.github.io/egeria-docs/services/omis/database-integrator/overview/",
+            "integrationServiceWiki": "https://odpi.github.io/services/omis/database-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaDatabaseMonitor",
@@ -207,37 +207,37 @@ which returns a list of the valid integration services:
             "serviceName": "Files Integrator OMIS",
             "serviceURLMarker": "files-integrator",
             "serviceDescription": "Extract metadata about files stored in a file system or file manager.",
-            "serviceWiki": "https://odpi.github.io/egeria-docs/services/omis/files-integrator/overview/"
+            "serviceWiki": "https://odpi.github.io/services/omis/files-integrator/overview/"
         },
         {
             "serviceName": "Security Integrator OMIS",
             "serviceURLMarker": "security-integrator",
             "serviceDescription": "Distribute security properties to security enforcement points.",
-            "serviceWiki": "https://odpi.github.io/egeria-docs/services/omis/security-integrator/overview/"
+            "serviceWiki": "https://odpi.github.io/services/omis/security-integrator/overview/"
         },
         {
             "serviceName": "Database Integrator OMIS",
             "serviceURLMarker": "database-integrator",
             "serviceDescription": "Extract metadata such as schema, tables and columns from database managers.",
-            "serviceWiki": "https://odpi.github.io/egeria-docs/services/omis/database-integrator/overview/"
+            "serviceWiki": "https://odpi.github.io/services/omis/database-integrator/overview/"
         },
         {
             "serviceName": "Lineage Integrator OMIS",
             "serviceURLMarker": "lineage-integrator",
             "serviceDescription": "Manage capture of lineage from a third party tool.",
-            "serviceWiki": "https://odpi.github.io/egeria-docs/services/omis/lineage-integrator/overview/"
+            "serviceWiki": "https://odpi.github.io/services/omis/lineage-integrator/overview/"
         },
         {
             "serviceName": "Catalog Integrator OMIS",
             "serviceURLMarker": "catalog-integrator",
             "serviceDescription": "Exchange metadata with third party data catalogs.",
-            "serviceWiki": "https://odpi.github.io/egeria-docs/services/omis/catalog-integrator/overview/"
+            "serviceWiki": "https://odpi.github.io/services/omis/catalog-integrator/overview/"
         },
         {
             "serviceName": "Organization Integrator OMIS",
             "serviceURLMarker": "organization-integrator",
             "serviceDescription": "Load information about the teams and people in an organization and return collaboration activity.",
-            "serviceWiki": "https://odpi.github.io/egeria-docs/services/omis/organization-integrator/overview/"
+            "serviceWiki": "https://odpi.github.io/services/omis/organization-integrator/overview/"
         }
     ]
 }
@@ -256,7 +256,7 @@ Once the Files Integrator OMIS connectors are restarted, the status changes.  Di
             "integrationServiceFullName": "Files Integrator OMIS",
             "integrationServiceURLMarker": "files-integrator",
             "integrationServiceDescription": "Extract metadata about files stored in a file system or file manager.",
-            "integrationServiceWiki": "https://odpi.github.io/egeria-docs/services/omis/files-integrator/overview/",
+            "integrationServiceWiki": "https://odpi.github.io/services/omis/files-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaFilesMonitor",
@@ -289,7 +289,7 @@ Once the Files Integrator OMIS connectors are restarted, the status changes.  Di
             "integrationServiceFullName": "Database Integrator OMIS",
             "integrationServiceURLMarker": "database-integrator",
             "integrationServiceDescription": "Extract metadata such as schema, tables and columns from database managers.",
-            "integrationServiceWiki": "https://odpi.github.io/egeria-docs/services/omis/database-integrator/overview/",
+            "integrationServiceWiki": "https://odpi.github.io/services/omis/database-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaDatabaseMonitor",
@@ -319,7 +319,7 @@ Once the expected directories (folders) are created, the files integration conne
             "integrationServiceFullName": "Files Integrator OMIS",
             "integrationServiceURLMarker": "files-integrator",
             "integrationServiceDescription": "Extract metadata about files stored in a file system or file manager.",
-            "integrationServiceWiki": "https://odpi.github.io/egeria-docs/services/omis/files-integrator/overview/",
+            "integrationServiceWiki": "https://odpi.github.io/services/omis/files-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaFilesMonitor",
@@ -349,7 +349,7 @@ Once the expected directories (folders) are created, the files integration conne
             "integrationServiceFullName": "Database Integrator OMIS",
             "integrationServiceURLMarker": "database-integrator",
             "integrationServiceDescription": "Extract metadata such as schema, tables and columns from database managers.",
-            "integrationServiceWiki": "https://odpi.github.io/egeria-docs/services/omis/database-integrator/overview/",
+            "integrationServiceWiki": "https://odpi.github.io/services/omis/database-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaDatabaseMonitor",
@@ -395,9 +395,9 @@ The refresh processing can be an expensive operation, so it should only be reque
 
 ## Further information
 
-* Configuring the [Integration daemon](/egeria-docs/concepts/integration-daemon)
-* Design of the [Integration daemon](/egeria-docs/services/integration-daemon-services)
-* Understanding [Integration connectors](/egeria-docs/concepts/integration-connector)
-* Understanding [Open Metadata Integration Services (OMIS)](/egeria-docs/services/omis)
+* Configuring the [Integration daemon](/concepts/integration-daemon)
+* Design of the [Integration daemon](/services/integration-daemon-services)
+* Understanding [Integration connectors](/concepts/integration-connector)
+* Understanding [Open Metadata Integration Services (OMIS)](/services/omis)
 
 --8<-- "snippets/abbr.md"

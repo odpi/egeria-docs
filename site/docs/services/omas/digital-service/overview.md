@@ -11,7 +11,7 @@ digital services that support the operation of the organization.
 Digital services are business services that are implemented in software.  An example of a digital service
 is one that allows a customer to buy a product from the organization.
 
-Digital services are implemented using a variety of software components.  These components are defined and deployed using the [Software Developer OMAS](/egeria-docs/services/omas/software-developer/overview) and [DevOps OMAS](/egeria-docs/services/omas/dev-ops/overview) respectively.
+Digital services are implemented using a variety of software components.  These components are defined and deployed using the [Software Developer OMAS](/services/omas/software-developer/overview) and [DevOps OMAS](/services/omas/dev-ops/overview) respectively.
 
 The Digital Service OMAS is responsible for:
 

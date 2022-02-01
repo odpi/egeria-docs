@@ -14,16 +14,16 @@ The Database Integrator OMIS supports the exchange of data assets and their rela
 connection information between an external relational database manager
 and the open metadata ecosystem.
 
-It supports a type of [integration connector](/egeria-docs/concepts/integration-connector)
-that are able to create [Database](/egeria-docs/types/2/0224-Databases)
-and [DeployedDatabaseSchema](/egeria-docs/types/2/0224-Databases)
-assets along with is associated [tables and columns](/egeria-docs/types/5/0534-Relational-Schemas).
-Optionally, this metadata can be tied to a [Database Manager](/egeria-docs/types/2/0224-Databases)
+It supports a type of [integration connector](/concepts/integration-connector)
+that are able to create [Database](/types/2/0224-Databases)
+and [DeployedDatabaseSchema](/types/2/0224-Databases)
+assets along with is associated [tables and columns](/types/5/0534-Relational-Schemas).
+Optionally, this metadata can be tied to a [Database Manager](/types/2/0224-Databases)
 also known as a Database Management System (DBMS).
 
 Figure 1 shows the types of metadata that integrators connectors can create with this integration service.
 
-![Figure 1](/egeria-docs/services/omas/data-manager/relational-database-model.svg)
+![Figure 1](/services/omas/data-manager/relational-database-model.svg)
 > **Figure 1:** Database metadata supported by the Database Integrator OMIS 
 
 The structure of a database schema consist of a number of database tables and database views.
@@ -35,46 +35,46 @@ The structure of both the database tables and database views are describes by da
 
 Database columns have a types that represent a single value.  This can be stored, or derived using a query.
 If the column presents the unique for a row within the table, it can be decorated with the
-[PrimaryKey](/egeria-docs/types/5/0534-Relational-Schemas) classification.
+[PrimaryKey](/types/5/0534-Relational-Schemas) classification.
 If a column contains values that are the primary key of another table then the two columns can be linked using the
-[ForeignKey](/egeria-docs/types/5/0534-Relational-Schemas) relationship.
+[ForeignKey](/types/5/0534-Relational-Schemas) relationship.
 
 Figure 2 shows the open metadata types used to represent the metadata created through this service.
 
-![Figure 2](/egeria-docs/services/omas/data-manager/relational-database-open-metadata-types.svg)
+![Figure 2](/services/omas/data-manager/relational-database-open-metadata-types.svg)
 > **Figure 2:** Database open metadata types supported by the Database Integrator OMIS 
 
 A database schema is represented using the
-[DeployedDatabaseSchema](/egeria-docs/types/2/0224-Databases) entity,
+[DeployedDatabaseSchema](/types/2/0224-Databases) entity,
 the database table is represented using the 
-[RelationalTable](/egeria-docs/types/5/0534-Relational-Schemas) entity
+[RelationalTable](/types/5/0534-Relational-Schemas) entity
 and the database column is represented using the 
-[RelationalColumn](/egeria-docs/types/5/0534-Relational-Schemas) entity.
+[RelationalColumn](/types/5/0534-Relational-Schemas) entity.
 A database view is a 
-[RelationalTable](/egeria-docs/types/5/0534-Relational-Schemas) entity
-with the [Calculated Value](/egeria-docs/types/5/0512-Derived-Schema-Elements)
+[RelationalTable](/types/5/0534-Relational-Schemas) entity
+with the [Calculated Value](/types/5/0512-Derived-Schema-Elements)
 classification attached.
 
 If a DatabaseManager is defined, any Database created is automatically linked to it using the
-[ServerAssetUse](/egeria-docs/types/0/0045-Servers-and-Assets)
+[ServerAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 When a DeployedDatabaseSchema is created for the Database,
 the service automatically inserts the
-[DataContentForDataSet](/egeria-docs/types/5/0503-Asset-Schema) relationship.
+[DataContentForDataSet](/types/5/0503-Asset-Schema) relationship.
 (The database schema is a DataSet over the database which is a type of DataStore).
 
 When a RelationalTable is created for the DeployedDatabaseSchema,
 the service automatically inserts the
-[AssetSchemaType](/egeria-docs/types/5/0503-Asset-Schema) relationship,
-[RelationalDBSchemaType](/egeria-docs/types/5/0534-Relational-Schemas) entity and
-[AttributeForSchema](/egeria-docs/types/5/0505-Schema-Attributes) relationship
+[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[RelationalDBSchemaType](/types/5/0534-Relational-Schemas) entity and
+[AttributeForSchema](/types/5/0505-Schema-Attributes) relationship
 in between the DeployedAPI entity and the RelationalTable entity.
 
-The SchemaType for a RelationalTable is [RelationalTableType](/egeria-docs/types/5/0534-Relational-Schemas).
+The SchemaType for a RelationalTable is [RelationalTableType](/types/5/0534-Relational-Schemas).
 The schema attributes for RelationalTable and RelationalColumn also use
-the [TypeEmbeddedAttribute](/egeria-docs/types/5/0505-Schema-Attributes)
-classification [method for defining the schema type](/egeria-docs/guides/developer/mapping-technology/modelling-schemas).
+the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
+classification [method for defining the schema type](/guides/developer/mapping-technology/modelling-schemas).
 
-This integration service is paired with the [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview).
+This integration service is paired with the [Data Manager OMAS](/services/omas/data-manager/overview).
 
 ---8<-- "snippets/abbr.md"

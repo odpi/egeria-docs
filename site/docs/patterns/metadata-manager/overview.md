@@ -5,7 +5,7 @@
 
 Metadata is collected together, organized and maintained within a catalog service to enable both individuals and automated services to search for, select and retrieve information about relevant resources necessary to perform a specific task.  These resources could be data, systems, applications, software components, processes, ...
 
-Each of these resources are represented in open metadata as *[Assets](/egeria-docs/concepts/asset)* and the catalog is often referred to as an asset catalog.
+Each of these resources are represented in open metadata as *[Assets](/concepts/asset)* and the catalog is often referred to as an asset catalog.
 
 Figure 1 shows the Egeria components that 
 
@@ -36,7 +36,7 @@ Egeria offers the services to build a catalog with the following types of inform
 - [Asset lineage](#asset-lineage)
 - [Related assets](#related-assets)
 
-This is built on an [extensible type system](/egeria-docs/features/open-type-system/overview) that allows further information to be catalogued.  [Automation](#scaling-the-asset-catalog-through-automation) is used to expand the contents of your asset catalog without creating a huge workload for your people.
+This is built on an [extensible type system](/features/open-type-system/overview) that allows further information to be catalogued.  [Automation](#scaling-the-asset-catalog-through-automation) is used to expand the contents of your asset catalog without creating a huge workload for your people.
 
 
  
@@ -44,7 +44,7 @@ This is built on an [extensible type system](/egeria-docs/features/open-type-sys
 
 ![Basic asset properties](basic-asset-properties.svg)
  
-Each instance of a resource, no matter what its physical type, is represented by a [type of asset](/egeria-docs/concepts/asset) in the catalog.
+Each instance of a resource, no matter what its physical type, is represented by a [type of asset](/concepts/asset) in the catalog.
  
 Every asset contains the following properties:
 
@@ -87,7 +87,7 @@ A schema describes the individual data fields and operations of the asset.It is 
     With the schema in place, it is possible to search for assets based on the type of data, or type of operations that the asset supports.
 
 ??? education "More information"
-    [Modelling Schema](/egeria-docs/guides/developer/mapping-technology/modelling-schemas)
+    [Modelling Schema](/guides/developer/mapping-technology/modelling-schemas)
 
 ### Asset ownership
 
@@ -95,7 +95,7 @@ A schema describes the individual data fields and operations of the asset.It is 
 
 Asset ownership defines who is responsible for the asset. This covers ensuring the catalog entry is correct, the contents of the asset are complete and correct and controlling access to the asset.
 
-The owner can be defined as a user identity, an actor profile or a person's role. These definitions are managed by the [Community Profile OMAS](/egeria-docs/services/omas/community-profile) and [Governance Program OMAS](/egeria-docs/services/omas/governance-program).
+The owner can be defined as a user identity, an actor profile or a person's role. These definitions are managed by the [Community Profile OMAS](/services/omas/community-profile) and [Governance Program OMAS](/services/omas/governance-program).
 
 !!! summary "Usage"
     With an owner established, it records who is responsible for the protection and quality of the asset. It is possible to route requests from the consumers of the asset to the owner. An example of this is in managing queries about the content of the asset and requests for access to its contents.
@@ -104,7 +104,7 @@ The owner can be defined as a user identity, an actor profile or a person's role
 
 ![Asset zone membership](asset-zone-membership.svg)
 
-[Governance zones](/egeria-docs/concepts/governance-zone) group assets according to their usage. Governance Zones are defined by the [Governance Program OMAS](/egeria-docs/services/omas/governance-program). It is possible to assign `SupportedZones` to [OMASs](/egeria-docs/services/omas) to limit the scope of assets that are returned from searches. More information on the use of governance zones is described in the [governance zoning](/egeria-docs/features/governance-zoning) feature.
+[Governance zones](/concepts/governance-zone) group assets according to their usage. Governance Zones are defined by the [Governance Program OMAS](/services/omas/governance-program). It is possible to assign `SupportedZones` to [OMASs](/services/omas) to limit the scope of assets that are returned from searches. More information on the use of governance zones is described in the [governance zoning](/features/governance-zoning) feature.
 
 !!! summary "Usage"
     Using governance zones allows the organization to scope the assets that are returned to a community of users who are using the asset catalog.
@@ -174,7 +174,7 @@ Feedback, such as comments, likes, star ratings and reviews can be added to an a
 
 The author of the feedback can choose whether it is public or private feedback.  Public feedback is visible by everyone.  Private feedback is visible to the author of the feedback and the owner of the asset.
 
-Feedback can only be changed by the author of the feedback. It can be added to an asset through [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer), [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner) and [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture).
+Feedback can only be changed by the author of the feedback. It can be added to an asset through [Asset Consumer OMAS](/services/omas/asset-consumer), [Asset Owner OMAS](/services/omas/asset-owner) and [Digital Architecture OMAS](/services/omas/digital-architecture).
 
 !!! summary "Usage"
     Feedback helps to share expertise and use the experience of the assets' consumers to improve the quality of both the asset contents and its description.
@@ -183,7 +183,7 @@ Feedback can only be changed by the author of the feedback. It can be added to a
 
 ![Asset note logs](asset-note-logs.svg)
 
-Note logs consist of a series of posts (called notes) that are added over time (like a blog). An asset's note log can be maintained through the [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner), [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture) and [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure).
+Note logs consist of a series of posts (called notes) that are added over time (like a blog). An asset's note log can be maintained through the [Asset Owner OMAS](/services/omas/asset-owner), [Digital Architecture OMAS](/services/omas/digital-architecture) and [IT Infrastructure OMAS](/services/omas/it-infrastructure).
 
 !!! summary "Usage"
     Note logs can be used by the asset owner or operations team to post status or usage information about the asset to inform individuals who are using the asset of important information.
@@ -192,7 +192,7 @@ Note logs consist of a series of posts (called notes) that are added over time (
 
 ![Asset external descriptions](asset-external-descriptions.svg)
 
-Not everything that is known about an asset is stored in Egeria. There may be documents, web resources, images, videos and audio files that provide more detail. Through [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner) it is possible to add links to external resources and media.
+Not everything that is known about an asset is stored in Egeria. There may be documents, web resources, images, videos and audio files that provide more detail. Through [Asset Owner OMAS](/services/omas/asset-owner) it is possible to add links to external resources and media.
 
 !!! summary "Usage"
     Using the links to external resources, an individual is able to learn a lot more about the asset they are considering to use to complete their task.
@@ -205,11 +205,11 @@ Lineage describes the origin of the data that is held by the asset.  There are d
 
 In general an asset is being accessed by processes.  They are either adding/updating/deleting data or reading it. So one perspective of lineage is to see the processes that are providing and using the asset.
 
-Data often flows from asset to asset via the processes, as they read data from one asset, do some processing and store the results in a different asset.  The end-to-end flow of data is called an information supply chain.  Information supply chains can be modeled and linked to the processes through the [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture). This offers more of an enterprise view of where the data originated from.
+Data often flows from asset to asset via the processes, as they read data from one asset, do some processing and store the results in a different asset.  The end-to-end flow of data is called an information supply chain.  Information supply chains can be modeled and linked to the processes through the [Digital Architecture OMAS](/services/omas/digital-architecture). This offers more of an enterprise view of where the data originated from.
 
 The asset itself is hosted by a software capability that is part of a server. Another perspective on the asset's origin is the software capability that is hosting it.
 
-Software capabilities can be linked to a solution component by the  [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture). Solution components are descriptions produced by architects to document the purpose and behavior of a component.  These descriptions add business context to the software capability definitions.  They are linked to the software capability when it is deployed into the IT landscape.
+Software capabilities can be linked to a solution component by the  [Digital Architecture OMAS](/services/omas/digital-architecture). Solution components are descriptions produced by architects to document the purpose and behavior of a component.  These descriptions add business context to the software capability definitions.  They are linked to the software capability when it is deployed into the IT landscape.
 
 Similarly, the software capability hosting an asset can be linked to the digital service it is a part of.  Digital Services are anchors for information about the digital services (also known as offerings or products) that the organization is operating. This is a business view of the service that the asset is a part of.
 
@@ -233,11 +233,11 @@ Related assets returns other assets that are linked together or are part of the 
 
 Collections allow individuals and automated processes to maintain groups of related assets. For example, an individual may maintain a collection of their favorite assets.  A project team may maintain a collection of the assets in use by the project. An automated process may use the retention classification to build a collection of assets that need to be archived. These types of collections are maintained through the following Open Metadata Access Services (OMASs):
 
-- [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer)
-- [Community Profile OMAS](/egeria-docs/services/omas/community-profile)
-- [Project Management OMAS](/egeria-docs/services/omas/project-management)
+- [Asset Consumer OMAS](/services/omas/asset-consumer)
+- [Community Profile OMAS](/services/omas/community-profile)
+- [Project Management OMAS](/services/omas/project-management)
 
-In addition, there are natural relationships between assets that are created as the asset is cataloged.  For example, a file is related to the folder (also known as a directory) it is located in.  Both the file and the folder could be assets in the asset catalog and they would be automatically linked together by the [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner) when these assets were created.
+In addition, there are natural relationships between assets that are created as the asset is cataloged.  For example, a file is related to the folder (also known as a directory) it is located in.  Both the file and the folder could be assets in the asset catalog and they would be automatically linked together by the [Asset Owner OMAS](/services/omas/asset-owner) when these assets were created.
 
 !!! summary "Usage"
     The related assets enables individuals or automated services to locate assets that are related. For example, a process may use the related assets to step through and process the cataloged files in a folder, or the assets in a specific collection.
@@ -246,22 +246,22 @@ In addition, there are natural relationships between assets that are created as 
 
 Manual cataloging uses no automation beyond the management of the metadata once it is created. Individuals enter information about the assets into Egeria through tools that call Egeria's Open Metadata Access Services (OMASs).
 
-The [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) is the principle interface for manual cataloging.  It is possible to catalog any type of asset through this interface although it is biased towards cataloging data assets such as data stores, data feeds, files, data sets, APIs and events.
+The [Asset Owner OMAS](/services/omas/asset-owner/overview) is the principle interface for manual cataloging.  It is possible to catalog any type of asset through this interface although it is biased towards cataloging data assets such as data stores, data feeds, files, data sets, APIs and events.
 
 In addition there are specific cataloging interfaces for particular types of subject matter expert.
 
-- [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview) provides specialist interfaces for cataloging infrastructure such as servers, host systems and applications.
-- [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture/overview) provides specialist interfaces for architects and integration engineers to manually catalog reference data sets and processes.  Reference data sets are assets in their own right, and their content can be used as classifiers to augment the description of other assets.  Processes are also assets that, when linked together, show the lineage of the assets they are partly responsible for maintaining.
+- [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview) provides specialist interfaces for cataloging infrastructure such as servers, host systems and applications.
+- [Digital Architecture OMAS](/services/omas/digital-architecture/overview) provides specialist interfaces for architects and integration engineers to manually catalog reference data sets and processes.  Reference data sets are assets in their own right, and their content can be used as classifiers to augment the description of other assets.  Processes are also assets that, when linked together, show the lineage of the assets they are partly responsible for maintaining.
 
 ## Asset catalog search services
 
 Once the asset catalog is established, it can offer search interfaces through the following mechanisms.
 
-- [Asset Catalog OMAS](/egeria-docs/services/omas/asset-catalog/overview) provides support a comprehensive search interface for all types of asset. It is designed to support a catalog tool.
-- [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) provides simple string-based searches for assets and their related information along with support to create connectors to access the content of the actual physical asset and browse through all of the information known about the asset.
-- [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture/overview) provides specialist interfaces for querying reference data and processes.
-- [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview) provides specialist catalog search capabilities for infrastructure such as servers, host systems and applications.
-- [Governance Program OMAS](/egeria-docs/services/omas/governance-program/overview) provides the ability to browse assets in a [governance zone](/egeria-docs/concepts/governance-zone) to assess the effectiveness of the governance program.
+- [Asset Catalog OMAS](/services/omas/asset-catalog/overview) provides support a comprehensive search interface for all types of asset. It is designed to support a catalog tool.
+- [Asset Consumer OMAS](/services/omas/asset-consumer/overview) provides simple string-based searches for assets and their related information along with support to create connectors to access the content of the actual physical asset and browse through all of the information known about the asset.
+- [Digital Architecture OMAS](/services/omas/digital-architecture/overview) provides specialist interfaces for querying reference data and processes.
+- [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview) provides specialist catalog search capabilities for infrastructure such as servers, host systems and applications.
+- [Governance Program OMAS](/services/omas/governance-program/overview) provides the ability to browse assets in a [governance zone](/concepts/governance-zone) to assess the effectiveness of the governance program.
   
 ## Scaling the asset catalog through automation
 
@@ -277,17 +277,17 @@ Therefore, as we look at the different types of automation, each comes with its 
 
 Egeria offers the following approaches to cataloging assets:
 
-- [Templated cataloging](/egeria-docs/features/features/templated-cataloging/overview) - copying predefined assets.
-- [Integrated cataloging](/egeria-docs/features/integrated-cataloging/overview) - automated extraction of metadata from third party technologies.
-- [Discovery and stewardship](/egeria-docs/features/discovery-and-stewardship/overview) - analysis of asset contents to create metadata
+- [Templated cataloging](/features/features/templated-cataloging/overview) - copying predefined assets.
+- [Integrated cataloging](/features/integrated-cataloging/overview) - automated extraction of metadata from third party technologies.
+- [Discovery and stewardship](/features/discovery-and-stewardship/overview) - analysis of asset contents to create metadata
 
 The idea is that these approaches are selected for each type of asset and blended together to balance the investment in the automation, against the time commitment of subject matter experts, against the business value of the resulting catalog.
 
 ## Related information
 
-- The [Asset](/egeria-docs/concepts/asset) page provides more information on the different types of assets supported by open metadata.  The asset types can be extended dynamically if needed.
-- The type definition for the *Asset* entity is found in model [0010 Basic Model](/egeria-docs/types/0/0010-Base-Model).
-- Examples of representing different types of assets using the open metadata types are found in [Mapping Technology](/egeria-docs/guides/developer/mapping-technology).
-- The [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview) provide practical examples showing all of the techniques to manage an asset catalog, allowing you to try each of the features to assess how they could work in your organization.
+- The [Asset](/concepts/asset) page provides more information on the different types of assets supported by open metadata.  The asset types can be extended dynamically if needed.
+- The type definition for the *Asset* entity is found in model [0010 Basic Model](/types/0/0010-Base-Model).
+- Examples of representing different types of assets using the open metadata types are found in [Mapping Technology](/guides/developer/mapping-technology).
+- The [Open Metadata Labs](/education/open-metadata-labs/overview) provide practical examples showing all of the techniques to manage an asset catalog, allowing you to try each of the features to assess how they could work in your organization.
 
 --8<-- "snippets/abbr.md"

@@ -95,6 +95,6 @@ Postman is now ready to be used with egeria. Refer back to the tutorials for spe
 examples, or experiment!
 
 Instructions for contributing new Postman collections
-are located in the [developer-resources :material-dock-window:](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis){ target=docs} .
+are located in the [developer-resources :material-dock-window:](/guides/contributor/guidelines/#postman-artifacts-for-apis){ target=docs} .
 
 --8<-- "snippets/abbr.md"

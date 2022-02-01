@@ -8,7 +8,7 @@ hide:
 
 # Cohort Member
 
-A *Cohort Member* is an [OMAG Server](/egeria-docs/concepts/omag-server) that is capable of joining an *open metadata repository cohort*.
+A *Cohort Member* is an [OMAG Server](/concepts/omag-server) that is capable of joining an *open metadata repository cohort*.
 
 The open metadata repository cohort (or cohort for short) is a group of OMAG servers that are exchanging metadata using a peer-to-peer replication protocol and federated queries.  This is shown in Figure 1.
 
@@ -16,7 +16,7 @@ The open metadata repository cohort (or cohort for short) is a group of OMAG ser
 > **Figure 1:** OMAG Servers connected via a cohort
 
 The cohort is self-configuring.  At the heart of it is between one and four shared
-[cohort topics](/egeria-docs/concepts/cohort-events/#cohort-topics).  Each member publishes a registration request on the appropriate topic when they want to join.  This is picked up by the existing members who add this new server to their registry of members known as the [cohort registry](/egeria-docs/concepts/cohort-registry)
+[cohort topics](/concepts/cohort-events/#cohort-topics).  Each member publishes a registration request on the appropriate topic when they want to join.  This is picked up by the existing members who add this new server to their registry of members known as the [cohort registry](/concepts/cohort-registry)
 and re-send their registration through the same topic to allow the new member to build up its own registry.
 
 When an OMAG server permanently leaves the cohort, it sends an unregistration request. This enables the other members to remove the parting member from their registries.
@@ -28,16 +28,16 @@ The originator of the requested metadata then sends the latest version of this m
 the rest of the cohort through the cohort topic.  This mechanism is useful
 to seed the cache in a new member of the cohort and is invoked as a result of a
 federated query issued from the new member. (A federated query occurs whenever an
-[OMAS](/egeria-docs/services/omas) make a request for metadata.)
+[OMAS](/services/omas) make a request for metadata.)
 
-The exchange of metadata is using the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
+The exchange of metadata is using the [Open Metadata Repository Services (OMRS)](/services/omrs)
 interfaces which gives fine-grained metadata notifications and updates.
-(See the [OMRS metamodel](/egeria-docs/guides/developer/repository-connectors/metamodel/overview) for more details).
-The server's [metadata security connector](/egeria-docs/features/metadata-security/overview)
+(See the [OMRS metamodel](/guides/developer/repository-connectors/metamodel/overview) for more details).
+The server's [metadata security connector](/features/metadata-security/overview)
 provides fine-grained control on which metadata is send, received and/or stored by the server.
 This level of control is necessary for metadata repositories that are managing
 specific collections of valuable objects such as 
-[Assets](/egeria-docs/concepts/asset).
+[Assets](/concepts/asset).
 
 Figure 2 shows the different types of cohort members.
 Follow the links below the diagram to find out more about each one's purpose.
@@ -45,21 +45,21 @@ Follow the links below the diagram to find out more about each one's purpose.
 ![Figure 2](cohort-member-types.svg)
 > **Figure 2:** Different types of OMAG Servers that can be connected via a cohort
 
-- [Metadata Access Server](/egeria-docs/concepts/metadata-access-server)
-   - [Metadata Access Store](/egeria-docs/concepts/metadata-access-store)
-   - [Metadata Access Point](/egeria-docs/concepts/metadata-access-point)
-- [Repository Proxy](/egeria-docs/concepts/repository-proxy)
-- [Conformance Test Server](/egeria-docs/concepts/conformance-test-server)
+- [Metadata Access Server](/concepts/metadata-access-server)
+   - [Metadata Access Store](/concepts/metadata-access-store)
+   - [Metadata Access Point](/concepts/metadata-access-point)
+- [Repository Proxy](/concepts/repository-proxy)
+- [Conformance Test Server](/concepts/conformance-test-server)
 
 ## More information
 
 There is more detailed information about the operation of an open
 metadata repository cohort in 
-[Cohort Operation](/egeria-docs/features/cohort-operation/overview).
+[Cohort Operation](/features/cohort-operation/overview).
 
 The administration hands on lab called "**Understanding Cohort Configuration Lab**"
 provides an opportunities to query the cohort registries of cohort members as they
 exchange metadata for Coco Pharmaceuticals.
-Instructions for running the labs [can be found here](/egeria-docs/education/open-metadata-labs/overview).
+Instructions for running the labs [can be found here](/education/open-metadata-labs/overview).
 
 --8<-- "snippets/abbr.md"

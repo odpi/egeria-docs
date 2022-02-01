@@ -5,6 +5,6 @@
 
 This day is designed to introduce you to Egeria, and show how you can run Egeria and start using it.
 
-Jump straight to the [content](/egeria-docs/education/egeria-dojo/running-egeria/running-egeria-intro) of this day.
+Jump straight to the [content](/education/egeria-dojo/running-egeria/running-egeria-intro) of this day.
 
 --8<-- "snippets/abbr.md"

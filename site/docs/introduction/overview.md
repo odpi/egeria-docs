@@ -31,29 +31,29 @@ Using Egeria, each location runs a platform (blue boxes) that hosts the integrat
 
 ### Open Metadata Types
 
-Egeria defines a set of open [metadata types](/egeria-docs/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  However, the type system is extensible so it is able to support any special needs of your organization.
+Egeria defines a set of open [metadata types](/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  However, the type system is extensible so it is able to support any special needs of your organization.
 
 ### Frameworks
 
-Egeria's [frameworks](/egeria-docs/frameworks) define the interfaces and protocols for pluggable components that enable Egeria to run in many environments and connect to many types of technologies. These pluggable components are called [connectors](/egeria-docs/concepts/connector).  Egeria has a [catalog of pre-built connectors](/egeria-docs/connectors) to help speed up your adoption of open metadata and governance.
+Egeria's [frameworks](/frameworks) define the interfaces and protocols for pluggable components that enable Egeria to run in many environments and connect to many types of technologies. These pluggable components are called [connectors](/concepts/connector).  Egeria has a [catalog of pre-built connectors](/connectors) to help speed up your adoption of open metadata and governance.
 
 ### Integration services
 
-Egeria's [integration services](/egeria-docs/services) provide specialized APIs and event exchange protocols to support the major types of tools and platforms.
+Egeria's [integration services](/services) provide specialized APIs and event exchange protocols to support the major types of tools and platforms.
 
 ### Metadata governance
 
-Finally, as metadata is exchanged, the duplication, gaps and inconsistencies of the metadata in an organization's tools and platforms is exposed.  Egeria provides [metadata governance features](/egeria-docs/features) to dynamically improve the quality of your metadata in an ongoing and systematic manner.
+Finally, as metadata is exchanged, the duplication, gaps and inconsistencies of the metadata in an organization's tools and platforms is exposed.  Egeria provides [metadata governance features](/features) to dynamically improve the quality of your metadata in an ongoing and systematic manner.
 
 ### OMAG Server Platform
 
-Egeria's platform (the blue boxes) is called the [*Open Metadata and Governance (OMAG) Server Platform*](/egeria-docs/concepts/omag-server-platform).
+Egeria's platform (the blue boxes) is called the [*Open Metadata and Governance (OMAG) Server Platform*](/concepts/omag-server-platform).
 
 The OMAG Server Platform is a multi-tenant platform that supports horizontal scale-out in Kubernetes and yet is light enough to run as an edge server on a Raspberry Pi. This platform is used to host the actual metadata integration and automation capabilities.
 
 ### OMAG Servers
 
-Within an instance of the *OMAG Server Platform*, one or more [*OMAG Servers*](/egeria-docs/concepts/omag-server) can be configured (the orange circles). These servers are collections of activated integration services that host connectors to the different technologies with which Egeria exchanges metadata.
+Within an instance of the *OMAG Server Platform*, one or more [*OMAG Servers*](/concepts/omag-server) can be configured (the orange circles). These servers are collections of activated integration services that host connectors to the different technologies with which Egeria exchanges metadata.
 
 !!! summary "Summary"
     Combined, the OMAG server platforms and their OMAG servers provide an enterprise metadata catalog of data and IT resources that are transparently assessed, governed and consumed through many types of tools and technologies. The catalog is not physically-centralized, but instead it is composed of metadata repositories from many tools and technologies that are operating together via Egeria.

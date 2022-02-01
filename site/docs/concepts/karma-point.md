@@ -11,9 +11,9 @@ This may be for:
 * Linking information together
 * Removing obsolete information
 
-Karma points are awarded automatically.  They are stored in an individual's [personal profile](/egeria-docs/concepts/personal-profile).
+Karma points are awarded automatically.  They are stored in an individual's [personal profile](/concepts/personal-profile).
 When an individual's karma point total reaches a multiple of the karma point notification threshold,
-the Community Profile OMAS sends a notification on its [OutTopic](/egeria-docs/concepts/out-topic).
+the Community Profile OMAS sends a notification on its [OutTopic](/concepts/out-topic).
 
 
 

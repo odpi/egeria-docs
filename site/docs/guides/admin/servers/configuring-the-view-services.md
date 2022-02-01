@@ -3,7 +3,7 @@
 
 ## Configure the view services
 
-The [Open Metadata View Services (OMVS's)](/egeria-docs/services/view) run in a [view server](/egeria-docs/concepts/view-server).
+The [Open Metadata View Services (OMVS's)](/services/view) run in a [view server](/concepts/view-server).
 
 View services provide task-oriented, domain-specific services for user interfaces that integrate with open metadata. View services are part of a multi-tier architecture for the provision of multi-tenant user interfaces. The front tier consists of web components that are rendered in a web browser and served by a web application called the [presentation server :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=react }. The presentation server in turn delegates requests to a set of _view services_ that form a second tier running in the view server. Each view service exposes a REST API that supports the domain-specific operations relevant to the service and issues queries and commands to other OMAG Servers.
 
@@ -11,7 +11,7 @@ To get a description of each of the registered view services, and each service's
 
 To activate a specific view service in a view server, it is necessary to add an entry for the view service to the view server's configuration document.
 
-![Configuration document contents for a view service](/egeria-docs/concepts/view-service-config.svg)
+![Configuration document contents for a view service](/concepts/view-service-config.svg)
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `viewServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 
@@ -19,7 +19,7 @@ There are two types of view services, each with a different type of view service
 
 ### Solution view services
 
-A *solution view service* supports operations needed by a solution-oriented user interface. These are typically geared toward a specific [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas). For example, the Glossary Author view service supports a user interface for creation and management of glossaries using the Subject Area OMAS.
+A *solution view service* supports operations needed by a solution-oriented user interface. These are typically geared toward a specific [Open Metadata Access Service (OMAS)](/services/omas). For example, the Glossary Author view service supports a user interface for creation and management of glossaries using the Subject Area OMAS.
 
 A solution view service is configured using a `SolutionViewServiceConfig` object which has the following properties:
 
@@ -143,7 +143,7 @@ In an Egeria deployment, a server may be deployed to multiple platforms; this is
 
 #### List view services
 
-It is possible to list the registered view services for an [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) using the following command:
+It is possible to list the registered view services for an [OMAG Server Platform](/concepts/omag-server-platform) using the following command:
 
 !!! get "GET - list view services"
     ```
@@ -190,7 +190,7 @@ This operation is a good way to discover the `serviceURLMarker` property for eac
 
 #### List configured view services
 
-It is possible to list the configured view services for an [OMAG Server](/egeria-docs/concepts/omag-server) using the following command:
+It is possible to list the configured view services for an [OMAG Server](/concepts/omag-server) using the following command:
 
 !!! get "GET - list configured view services"
     ```

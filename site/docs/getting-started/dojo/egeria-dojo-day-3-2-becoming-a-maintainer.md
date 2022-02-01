@@ -18,7 +18,7 @@ on Egeria.
 ## Further information
 
 Requirements for being a maintainer is described in Egeria's
-[Operation Guide](/egeria-docs/guides/project-operations).
+[Operation Guide](/guides/project-operations).
 
 **Note**: a maintainer on Egeria is equivalent to a "committer" in the 
 [Apache Software Foundation (ASF)](http://apache.org/foundation/how-it-works.html).

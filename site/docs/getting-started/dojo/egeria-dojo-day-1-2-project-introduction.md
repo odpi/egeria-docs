@@ -25,7 +25,7 @@ For example, these web pages you are reading as part of the dojo are
 managed in Egeria's main git repository
 [here](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-tutorials/egeria-dojo).
 
-Each directory in the repository has a README.md file written in [the Markdown standard](/egeria-docs/guides/contributor/markdown).
+Each directory in the repository has a README.md file written in [the Markdown standard](/guides/contributor/markdown).
 You can either click through on GitHub or link to the [Content Organization](https://github.com/odpi/egeria/blob/master/Content-Organization.md)
 that lists the directories with descriptions.
 
@@ -36,7 +36,7 @@ an excellent way to exchange and manage files.  In addition, the community
 runs public calls that anyone can join, as well as a number of slack channels.
 
 Details of the different ways the community operates is described in our
-[Community Guide](/egeria-docs/guides/community).  Click on the link to the community guide
+[Community Guide](/guides/community).  Click on the link to the community guide
 to find out more.
 
 ## Test yourself
@@ -55,8 +55,8 @@ It is time for a break now. However, if you want to save time,
 the next session makes use of Docker containers to run Egeria and Postman to issue REST API calls.
 The links below provide information on how to download these tools during the break.
 
-* [Docker Desktop](/egeria-docs/education/tutorials/docker-tutorial/overview)
-* [Postman](/egeria-docs/education/tutorials/postman-tutorial/overview)
+* [Docker Desktop](/education/tutorials/docker-tutorial/overview)
+* [Postman](/education/tutorials/postman-tutorial/overview)
 
 These download instructions will be presented again in the appropriate
 session so it is not a problem if you do not download them now.

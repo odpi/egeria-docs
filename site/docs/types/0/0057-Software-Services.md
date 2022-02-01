@@ -17,27 +17,27 @@ Egeria offers specialized software services related to the capture and managemen
 
 ### MetadataIntegrationService
 
-A *`MetadataIntegrationService`* describes an [Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis) that runs in an [integration daemon](/egeria-docs/concepts/integration-daemon).
+A *`MetadataIntegrationService`* describes an [Open Metadata Integration Service (OMIS)](/services/omis) that runs in an [integration daemon](/concepts/integration-daemon).
 
 ### MetadataAccessService
 
-A *`MetadataAccessService`* describes an [Open Metadata Access Service (OMAS)](/egeria-docs/services/omas) that runs in a [metadata access point](/egeria-docs/concepts/metadata-access-point).
+A *`MetadataAccessService`* describes an [Open Metadata Access Service (OMAS)](/services/omas) that runs in a [metadata access point](/concepts/metadata-access-point).
 
 ### EngineHostingService
 
-An *`EngineHostingService`* describes an [Open Metadata Engine Service (OMES)](/egeria-docs/services/omes) that runs in an [engine host](/egeria-docs/concepts/engine-host).
+An *`EngineHostingService`* describes an [Open Metadata Engine Service (OMES)](/services/omes) that runs in an [engine host](/concepts/engine-host).
 
 ### UserViewService
 
-A *`UserViewService`* describes an [Open Metadata View Service (OMVS)](/egeria-docs/services/omvs) that runs in a [view server](/egeria-docs/concepts/view-server).
+A *`UserViewService`* describes an [Open Metadata View Service (OMVS)](/services/omvs) that runs in a [view server](/concepts/view-server).
 
 ### EnterpriseAccessLayer
 
-A *`EnterpriseAccessLayer`* describes the enterprise repository services provided by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) that runs in a [metadata access server](/egeria-docs/concepts/metadata-access-server).
+A *`EnterpriseAccessLayer`* describes the enterprise repository services provided by the [Open Metadata Repository Services (OMRS)](/services/omrs) that runs in a [metadata access server](/concepts/metadata-access-server).
 
 ### CohortMember
 
-A *`CohortMember`* service describes the cohort services provided by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) that runs in a [cohort member server](/egeria-docs/concepts/cohort-member).
+A *`CohortMember`* service describes the cohort services provided by the [Open Metadata Repository Services (OMRS)](/services/omrs) that runs in a [cohort member server](/concepts/cohort-member).
 
 
 --8<-- "snippets/abbr.md"

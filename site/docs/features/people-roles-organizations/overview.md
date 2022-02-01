@@ -16,7 +16,7 @@ A role has a context. For example, Tessa is a manager, but not for everyone in C
 
 So a role has a scope, and roles can be combined together to form the complete “job” that an individual performs.
 
-Now consider what a role is from an organization's perspective. Roles can be thought of as slots, or vacancies, in the organization's teams that individuals are appointed to for a span of time.  A role can have more than one person appointed. [Head count](/egeria-docs/concepts/person-role/#head-count-limit) is an optional attribute that indicates how many people are expected to be assigned to the role.
+Now consider what a role is from an organization's perspective. Roles can be thought of as slots, or vacancies, in the organization's teams that individuals are appointed to for a span of time.  A role can have more than one person appointed. [Head count](/concepts/person-role/#head-count-limit) is an optional attribute that indicates how many people are expected to be assigned to the role.
 
 The teams are typically organized into one or more hierarchies.  These hierarchies reflect how the work has been divided up to meet the objectives of the organization. Figure 2 shows the general structure.
 
@@ -47,7 +47,7 @@ Figure 5 shows the roles associated with a project.  There are the roles associa
 
 ## Types of roles
 
-Egeria's [open metadata types](/egeria-docs/types) represent a role using the [`PersonRole`](/egeria-docs/types/1/0122-People) entity type.  Figure 6 shows a hierarchy of subtypes for 'PersonRole' that are also included in the open metadata types to help structure your organization's role types into broad groups that identify particular skill sets.  For example, Coco Pharmaceuticals may define role types of `Researcher` and `Data Scientist` that inherit from `PersonRole`; a role type of `DepartmentManager` that inherits from `TeamLeader`; and a role type of `ClinicalTrialLeader` that inherits from `ProjectLeader`. 
+Egeria's [open metadata types](/types) represent a role using the [`PersonRole`](/types/1/0122-People) entity type.  Figure 6 shows a hierarchy of subtypes for 'PersonRole' that are also included in the open metadata types to help structure your organization's role types into broad groups that identify particular skill sets.  For example, Coco Pharmaceuticals may define role types of `Researcher` and `Data Scientist` that inherit from `PersonRole`; a role type of `DepartmentManager` that inherits from `TeamLeader`; and a role type of `ClinicalTrialLeader` that inherits from `ProjectLeader`. 
 
 ![Figure 6](person-role-types.svg)
 > **Figure 6**: Inheriting from PersonRole (from model 0112) are the team roles (from model 0115) of TeamMember and TeamLeader; the ProjectLeader role (from model 0130); the CommunityMember role (from model 0140) and the GovernanceRole roles (from model 0445) of Governance Officer, Asset Owner, SubjectAreaOwner ComponentOwner and DataItemOwner.
@@ -94,7 +94,7 @@ Tanya Tidie needs to ensure that only the clinical trials team have access to th
 
 ## Actor Profiles
 
-Figures 2, 3 and 7 show that individuals are represented using a `Person` instance.  Figures 2 and 3 also show `Team` instances for each team.  Both `Person` and `Team` are types of [`ActorProfile`](/egeria-docs/types/1/0110-Actor-Profile).  [`ITProfile`](/egeria-docs/types/1/0117-IT-Profiles) is another type of ActorProfile that are linked to [Assets](/egeria-docs/concepts/asset) to show the user information typically of a process such as a connector or a software server.
+Figures 2, 3 and 7 show that individuals are represented using a `Person` instance.  Figures 2 and 3 also show `Team` instances for each team.  Both `Person` and `Team` are types of [`ActorProfile`](/types/1/0110-Actor-Profile).  [`ITProfile`](/types/1/0117-IT-Profiles) is another type of ActorProfile that are linked to [Assets](/concepts/asset) to show the user information typically of a process such as a connector or a software server.
 
 Figure 11 shows the different types of actor profile as well as a link to a `UserIdentity` entity. This describes a user account or userId associated with the profile. 
 
@@ -124,13 +124,13 @@ Access to [resources](/egeria-doces/concepts/resource) is controlled by identify
 ![Figure 14](ldap-group.svg)
 > **Figure 14:** Members of an LDAP user group are listed in the group definition.  These users are given access to the resources that are protected by that group.
 
-The roles and their membership of teams, projects and communities in an organization help to determine who should have access to specific resources.  However the access control managers do not work directly with the roles, teams, projects and communities - they only understand the user account. [`UserIdentities`](/egeria-docs/types/1/0110-Actors/#UserIdentity) therefore document the user accounts of the individuals, teams and processes.  Egeria also provides the means to defined the security information that  links between the organization and the asset descriptions of the resources.
+The roles and their membership of teams, projects and communities in an organization help to determine who should have access to specific resources.  However the access control managers do not work directly with the roles, teams, projects and communities - they only understand the user account. [`UserIdentities`](/types/1/0110-Actors/#UserIdentity) therefore document the user accounts of the individuals, teams and processes.  Egeria also provides the means to defined the security information that  links between the organization and the asset descriptions of the resources.
 
-[`SecurityGroups`](/egeria-docs/types/4/0423-Security-Definitions) are entities that describe a user group in a security control system.  They are subtypes of the `GovernanceDefinition` that supports two relationships:
+[`SecurityGroups`](/types/4/0423-Security-Definitions) are entities that describe a user group in a security control system.  They are subtypes of the `GovernanceDefinition` that supports two relationships:
 
-- [`GovernedBy`](/egeria-docs/types/4/0401-Governance-Definitions) - to indicate the resources that are governed by the governance definition.  When the governance definition is a security group it means these are the resources that are protected by the security group.
+- [`GovernedBy`](/types/4/0401-Governance-Definitions) - to indicate the resources that are governed by the governance definition.  When the governance definition is a security group it means these are the resources that are protected by the security group.
 
-- [`ScopedBy`](/egeria-docs/types/4/0401-Governance-Definitions) - to indicate where the governance definition applies.  For a security group this means the people, roles, teams etc that should be given permission to the security group.
+- [`ScopedBy`](/types/4/0401-Governance-Definitions) - to indicate where the governance definition applies.  For a security group this means the people, roles, teams etc that should be given permission to the security group.
 
 Figure 15 shows these two relationships.
 
@@ -151,7 +151,7 @@ The navigation between these elements is technically feasible, but time-consumin
 ![Figure 18](security-group-membership.svg)
 > **Figure 18:** The SecurityGroupMembership classification lists the security groups that the user identity should be added to in the user directory (such as LDAP).
 
-Egeria's governance actions can automate the maintenance of the [`SecurityGroupMembership`](/egeria-docs/types/4/0423-Security-Definitions) classification.  For example, Callie Quartile, a Data Scientist at Coco Pharmaceuticals analyses data for both clinical trials and marketing.  She therefore has two roles that each use different data.  The result is that her userId needs access to both the clinical trials data and the marketing data.  Figure 19 shows the navigation that the governance action uses to set up the security groups for Callie's userid.
+Egeria's governance actions can automate the maintenance of the [`SecurityGroupMembership`](/types/4/0423-Security-Definitions) classification.  For example, Callie Quartile, a Data Scientist at Coco Pharmaceuticals analyses data for both clinical trials and marketing.  She therefore has two roles that each use different data.  The result is that her userId needs access to both the clinical trials data and the marketing data.  Figure 19 shows the navigation that the governance action uses to set up the security groups for Callie's userid.
 
 ![Figure 19](setting-security-groups-1.svg)
 > **Figure 19:** Setting the security groups in a governance action involves navigating from the security groups to the linked roles and on to the userIdentities associated with the Person profile.
@@ -184,9 +184,9 @@ Individuals do not have a REST API to call.  However they do use different tools
 ![Figure 23](interacting-with-humans.svg)
 > **Figure 23:** Mechanisms needed to include an individual in a governance process include a notification mechanism to alert the selected individual that their help is needed; APIs to investigate the situation and make the changes needed to the open metadata.  These changes can be detected and the governance action(s) can then proceed.
 
-Governance actions uses the open metadata [`ToDo`](/egeria-docs/types/1/0137-Actions) entity to request action from an individual.  This is set up in a governance action implemented by a [*Triage Governance Service*](/egeria-docs/frameworks/gaf/overview/#triage-governance-service).  This service navigates to the role that needs to take the action.  An integration connector typically running in the [Organization Integrator OMIS](/egeria-docs/services/omis/organization-integrator/overview) can then send a notification to the person or people appointed to that role.
+Governance actions uses the open metadata [`ToDo`](/types/1/0137-Actions) entity to request action from an individual.  This is set up in a governance action implemented by a [*Triage Governance Service*](/frameworks/gaf/overview/#triage-governance-service).  This service navigates to the role that needs to take the action.  An integration connector typically running in the [Organization Integrator OMIS](/services/omis/organization-integrator/overview) can then send a notification to the person or people appointed to that role.
 
-Figure 24 shows a [governance action process](/egeria-docs/concepts/governance-action-process) that includes a governance action called `Request Stewardship`.  This creates an appropriate ToDo when the `Assign SecurityGroup` governance action detects there is ambiguity relating to which user groups should be assigned to each user identity for an individual.  It is retried once the ToDo is complete.
+Figure 24 shows a [governance action process](/concepts/governance-action-process) that includes a governance action called `Request Stewardship`.  This creates an appropriate ToDo when the `Assign SecurityGroup` governance action detects there is ambiguity relating to which user groups should be assigned to each user identity for an individual.  It is retried once the ToDo is complete.
 
 ![Figure 24](governance-action-to-do.svg)
 > **Figure 24:** Including a stewardship step in a governance action process.
@@ -202,7 +202,7 @@ Figure 26 summarizes the processing that notifies Tessa of the ToDo and the assi
 ![Figure 26](to-do-processing.svg)
 > **Figure 26:** Overview of the ToDo processing
 
-*ToDos* are good mechanisms when the person responsible for taking action is clear.  All governance actions are also able to create an [Incident Report](/egeria-docs/concepts/incident-report).  This is a report that documents the need to take action.  However, there is no need for the governance action to assign a specific person to the report - this is handled by an [*Incident Management System*](/egeria-docs/features/incident-reporting/overview). 
+*ToDos* are good mechanisms when the person responsible for taking action is clear.  All governance actions are also able to create an [Incident Report](/concepts/incident-report).  This is a report that documents the need to take action.  However, there is no need for the governance action to assign a specific person to the report - this is handled by an [*Incident Management System*](/features/incident-reporting/overview). 
 
 ## Synchronizing organization data with open metadata
 

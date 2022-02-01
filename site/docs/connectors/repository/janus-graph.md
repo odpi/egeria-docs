@@ -8,7 +8,7 @@
 The Graph Repository provides a local repository that uses a graph store as its persistence store.
 
 ## Configuration
-To configure an [Metadata Access Store](/egeria-docs/concepts/metadata-access-store) to use the Graph Repository, set the repository-mode to 'local-graph-repository'. For example:
+To configure an [Metadata Access Store](/concepts/metadata-access-store) to use the Graph Repository, set the repository-mode to 'local-graph-repository'. For example:
 
 ```
 POST <serverURLRoot>/open-metadata/admin-services/users/<userName>/servers/<serverName>/local-repository/mode/local-graph-repository

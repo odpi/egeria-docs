@@ -11,6 +11,6 @@ Lineage shows how data flows from its origins to its various destinations. This 
 
 * whether the operational processes that implement the data flows are executing correctly (known as *governance by expectation*).
 
-[Lineage Management](/egeria-docs/features/lineage-management/overview) describes how lineage is collected, managed and used in Egeria.
+[Lineage Management](/features/lineage-management/overview) describes how lineage is collected, managed and used in Egeria.
 
 --8<-- "snippets/abbr.md"

@@ -9,7 +9,7 @@ hide:
 # 0690 Request for Action
 
 A RequestForAction entity (RfA) is used to trigger the
-[Stewardship Action OMAS](/egeria-docs/services/omas/stewardship-action).
+[Stewardship Action OMAS](/services/omas/stewardship-action).
 
 It is used when the discovery service performs a test on the
 data (such as a discovery rule) or has discovered an anomaly in

@@ -26,7 +26,7 @@ Finally, the generic handlers maintain the LatestChange classification on anchor
 
 Further information:
 
-* [Anchor management](/egeria-docs/features/anchor-management/overview).
-* [Metadata Security](/egeria-docs/features/metadata-security/overview).
+* [Anchor management](/features/anchor-management/overview).
+* [Metadata Security](/features/metadata-security/overview).
 
 --8<-- "snippets/abbr.md"

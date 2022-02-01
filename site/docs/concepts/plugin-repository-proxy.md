@@ -8,7 +8,7 @@ hide:
 
 # Plugin Repository Proxy
 
-A *plugin repository proxy* is an [OMAG Server](/egeria-docs/concepts/omag-server) that has been configured to act as a pluggable, native Egeria metadata repository backed by a non-Egeria persistent store.
+A *plugin repository proxy* is an [OMAG Server](/concepts/omag-server) that has been configured to act as a pluggable, native Egeria metadata repository backed by a non-Egeria persistent store.
 
 ![Plugin repository proxy translating between a back-end persistence layer and open metadata](plugin-repository-proxy.svg)
 

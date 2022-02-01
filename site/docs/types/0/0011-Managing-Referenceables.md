@@ -9,11 +9,11 @@
 
 ## LatestChange
 
-The *`LatestChange`* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring [`Referenceable`s](/egeria-docs/types/0/0010-Base-Model/#referenceable) can use the open metadata events related to classifications to maintain a complete picture of the asset.
+The *`LatestChange`* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring [`Referenceable`s](/types/0/0010-Base-Model/#referenceable) can use the open metadata events related to classifications to maintain a complete picture of the asset.
 
 ## Template
 
-The *`Template`* classification indicates that a [`Referenceable`](/egeria-docs/types/0/0010-Base-Model/#referenceable) is a good element be used as a template when creating a new element of the same type. There is no restriction on using `Referenceable`s without this classification as templates. The `Template` classification is simply a useful marker to enable templates to be found.  
+The *`Template`* classification indicates that a [`Referenceable`](/types/0/0010-Base-Model/#referenceable) is a good element be used as a template when creating a new element of the same type. There is no restriction on using `Referenceable`s without this classification as templates. The `Template` classification is simply a useful marker to enable templates to be found.  
 
 ## SourcedFrom
 
@@ -26,7 +26,7 @@ The *`SourcedFrom`* relationship is used to show the provenance of the informati
     - `LastAttachmentLink` - use `LatestChange` instead
 
 ??? education "Further information"
-    - [Anchor Management](/egeria-docs/features/anchor-management/overview)
-    - [Using templates](/egeria-docs/features/templated-cataloging/overview)
+    - [Anchor Management](/features/anchor-management/overview)
+    - [Using templates](/features/templated-cataloging/overview)
 
 --8<-- "snippets/abbr.md"

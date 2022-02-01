@@ -3,7 +3,7 @@
 
 # Operations Guide
 
-The operations guide describes the commands and actions that can be performed on a running [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) to discover its status, and the status of the servers and connectors that it is hosting.
+The operations guide describes the commands and actions that can be performed on a running [OMAG Server Platform](/concepts/omag-server-platform) to discover its status, and the status of the servers and connectors that it is hosting.
 
 ## Platform Origin Service
 
@@ -56,11 +56,11 @@ An OMAG Server Platform has fixed services as well as optional registered servic
 
 ## Operating an OMAG Server
 
-Once an [OMAG Server](/egeria-docs/concepts/omag-server) is [configured](/egeria-docs/guides/admin/servers) it can be started and stopped multiple times.
+Once an [OMAG Server](/concepts/omag-server) is [configured](/guides/admin/servers) it can be started and stopped multiple times.
 
 * [Starting and stopping an OMAG Server](#starting-and-stopping-an-omag-server)
 
-It is possible to load an [Open Metadata Archive](/egeria-docs/concepts/open-metadata-archives) into running OMAG Servers that are of type [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
+It is possible to load an [Open Metadata Archive](/concepts/open-metadata-archives) into running OMAG Servers that are of type [Metadata Access Store](/concepts/metadata-access-store).
 
 * [Adding an Open Metadata Archive to a running Metadata Access Store](#adding-an-archive-to-a-running-metadata-access-store)
 
@@ -75,8 +75,8 @@ Egeria also has an interactive graph-based user interface (UI) that enables you 
 
 ### Starting and Stopping an OMAG server
 
-Once a [configuration document](/egeria-docs/concepts/configuration-document) has been completed
-for an [OMAG Server](/egeria-docs/concepts/omag-server), it can be started using the following
+Once a [configuration document](/concepts/configuration-document) has been completed
+for an [OMAG Server](/concepts/omag-server), it can be started using the following
 REST call:
 
 ```
@@ -106,9 +106,9 @@ is connected to.  Only use this command if the server is being permanently remov
 
 ### Adding an archive to a running Metadata Access Store
 
-[Open Metadata Archives](/egeria-docs/concepts/open-metadata-archives) contain pre-canned metadata types and instances for [Cohort Members](/egeria-docs/concepts/cohort-member).
+[Open Metadata Archives](/concepts/open-metadata-archives) contain pre-canned metadata types and instances for [Cohort Members](/concepts/cohort-member).
 
-Archives can be [added to the configuration document](/egeria-docs/guides/operations/configuring-the-startup-archives) of a server to ensure their content is loaded each time the server is started.  This is intended for:
+Archives can be [added to the configuration document](/guides/operations/configuring-the-startup-archives) of a server to ensure their content is loaded each time the server is started.  This is intended for:
 
 - Archives containing type definitions.
 - Archives containing instances for repositories that do not store the archive content but keep it in memory.
@@ -126,7 +126,7 @@ Typically, an open metadata archive is stored as JSON format in a file. To load 
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
 
-Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/egeria-docs/concepts/connection). These connections refer to [open metadata archive connectors](/egeria-docs/connectors/open-metadata-archive-store-connector) that can read and retrieve the open metadata archive content.
+Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/concepts/connection). These connections refer to [open metadata archive connectors](/connectors/open-metadata-archive-store-connector) that can read and retrieve the open metadata archive content.
 
 !!! post "POST - load from connection(s)"
     ```

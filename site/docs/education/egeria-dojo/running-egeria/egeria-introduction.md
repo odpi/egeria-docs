@@ -47,7 +47,7 @@ We will revisit some of these other repositories & explain what they are used fo
 
 ### Documentation
 
-We are using the Egeria docs website at [https://odpi.github.io/egeria-docs/ :material-dock-window:](https://odpi.github.io/egeria-docs/){ target=docs } to host these Dojo sessions. You are currently in the **Education** section. This is also where you will find 
+We are using the Egeria docs website at [https://odpi.github.io/ :material-dock-window:](https://odpi.github.io/){ target=docs } to host these Dojo sessions. You are currently in the **Education** section. This is also where you will find 
 other documentation for Egeria.
 
 Use the **Previous** / **Next** arrows at the bottom of each page to move to the adjacent topics within the Dojo.
@@ -58,7 +58,7 @@ As you follow through the instructions, in some place a link will be provided fo
 
 If you're looking for further background, open up other topics in a new tab, and use the Search box towards the top of this page as needed.
 
-As you work through this Dojo you may find problems with our documentation - perhaps something is wrong, or unclear. Our Documentation is managed in [egeria-docs :material-dock-window:](https://github.com/odpi/egeria-docs){ target=gh } and you can raise [Issues :material-dock-window:](https://github.com/odpi/egeria-docs/issues){ target=gh } there.
+As you work through this Dojo you may find problems with our documentation - perhaps something is wrong, or unclear. Our Documentation is managed in [egeria-docs :material-dock-window:](https://github.com/odpi/egeria-docs){ target=gh } and you can raise [Issues :material-dock-window:](https://github.com/odpi/issues){ target=gh } there.
 
 
 ### Slack 
@@ -71,12 +71,12 @@ If you're happy to use Slack, go there now and get connected to your tutors and 
 
 ### Meetings & calendars
 
-The Egeria team run regular weekly meetings which you can find a link to in our [Community Guide :material-dock-window:](/egeria-docs/guides/community/){ target=docs }. We hope you'll be interested to join in the direct discussion there
+The Egeria team run regular weekly meetings which you can find a link to in our [Community Guide :material-dock-window:](/guides/community/){ target=docs }. We hope you'll be interested to join in the direct discussion there
 are you learn more about Egeria, and inevitable have questions about how it's best used, or new ideas to propose!
 
 ## Next Step
 
-Let's move on to an [setting up the environment](/egeria-docs/education/egeria-dojo/running-egeria/setup-environment)
+Let's move on to an [setting up the environment](/education/egeria-dojo/running-egeria/setup-environment)
 
 
 

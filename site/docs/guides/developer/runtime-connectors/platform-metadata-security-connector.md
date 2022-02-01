@@ -3,9 +3,9 @@
 
 # Writing Platform Metadata Security Connectors
 
-The *platform metadata security connector* provides authorization support for requests to the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
+The *platform metadata security connector* provides authorization support for requests to the [OMAG Server Platform](/concepts/omag-server-platform).
 
-![Figure 1](/egeria-docs/connectors/runtime/platform-metadata-security-connector.svg)
+![Figure 1](/connectors/runtime/platform-metadata-security-connector.svg)
 > **Figure 1:** Platform Metadata Security Connector
 
 ## Interface and Base Classes

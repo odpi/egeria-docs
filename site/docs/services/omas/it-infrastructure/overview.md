@@ -9,7 +9,7 @@ The IT Infrastructure OMAS provides APIs for tools and applications managing the
 IT infrastructure that supports the data assets and software.
 
 It is typically used by the
-[Infrastructure Integrator OMIS](/egeria-docs/services/omis/infrastructure-integrator/overview)
+[Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview)
 to capture metadata from deployment artifacts, or to generate
 deployment artifacts from open metadata.
 
@@ -175,7 +175,7 @@ or deployment artifacts that the metadata is derived from are either manually cr
 or maintained by multiple process, the infrastructure manager identifiers are left blank
 so the resulting metadata elements are editable by any authorized caller.
 
-See [Metadata Provenance](/egeria-docs/features/metadata-provenance/overview)
+See [Metadata Provenance](/features/metadata-provenance/overview)
 for more information about the use of external source identifiers.
 
 

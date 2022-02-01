@@ -7,9 +7,9 @@
 
 ![OMRS system context](omrs-system-context-diagram.png)
 
-On the left-hand side is the *[administration interface](/egeria-docs/services/admin-services)* supported by the OMAG Server. This is where configuration is passed to the OMRS, and status and other relevant information is made available to the OMAG Administration Services.
+On the left-hand side is the *[administration interface](/services/admin-services)* supported by the OMAG Server. This is where configuration is passed to the OMRS, and status and other relevant information is made available to the OMAG Administration Services.
 
-Along the top is the interface with the [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas). The OMRS provides access to the open metadata repositories through both APIs (see *[Enterprise OMRS Repository Connector](component-descriptions/enterprise-repository-connector.md)*) and events (see *[Enterprise OMRS Topic](omrs-event-topic.md)*).
+Along the top is the interface with the [Open Metadata Access Services (OMAS)](/services/omas). The OMRS provides access to the open metadata repositories through both APIs (see *[Enterprise OMRS Repository Connector](component-descriptions/enterprise-repository-connector.md)*) and events (see *[Enterprise OMRS Topic](omrs-event-topic.md)*).
 
 Along the bottom are the *[six types of connectors](component-descriptions/connectors)* that provide the OMRS with access to the stores and system resources it needs to support the OMAS.
 
@@ -36,7 +36,7 @@ The services include the following components:
     - Enterprise OMRS Metadata Collection - Manages calls to the list of open metadata repositories registered with the OMRS Enterprise Connector Manager on behalf of the Enterprise OMRS Repository Connector.
     - Enterprise OMRS Connector Properties - Provides the connected asset properties for the Enterprise OMRS Repository Connector.
 
-The enterprise repository services are enabled automatically in a metadata server when one or more [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) are configured.
+The enterprise repository services are enabled automatically in a metadata server when one or more [Open Metadata Access Services (OMAS)](/services/omas) are configured.
 
 ### Administration services
 
@@ -96,25 +96,25 @@ The event management services include the following components:
 
 ## Patterns
 
-The OMRS is highly configurable and runs in every type of [OMAG Server](/egeria-docs/concepts/omag-server). The figures below show the different combinations.
+The OMRS is highly configurable and runs in every type of [OMAG Server](/concepts/omag-server). The figures below show the different combinations.
 
 ### Local repository (only)
 
 ![Local only](omrs-role-local-only.png)
 
-The OMRS can support the OMAS's with access to a single, local-only repository - with no connectivity to other open metadata repositories. This is what runs in a [metadata access server](/egeria-docs/concepts/metadata-access-server) that is not connected to an [open metadata repository cohort](cohort.md).
+The OMRS can support the OMAS's with access to a single, local-only repository - with no connectivity to other open metadata repositories. This is what runs in a [metadata access server](/concepts/metadata-access-server) that is not connected to an [open metadata repository cohort](cohort.md).
 
 ### Access services (only)
 
 ![Access services](omrs-role-access-layer.png)
 
-The OMRS can also support a server without any local repository - so that all metadata for the OMAS's is coming through the cohort services from remote metadata repositories. This is the [caller integration pattern](../../../open-metadata-publication/website/open-metadata-integration-patterns/caller-integration-pattern.md) supported by the [metadata access point OMAG Server](/egeria-docs/concepts/metadata-access-point).
+The OMRS can also support a server without any local repository - so that all metadata for the OMAS's is coming through the cohort services from remote metadata repositories. This is the [caller integration pattern](../../../open-metadata-publication/website/open-metadata-integration-patterns/caller-integration-pattern.md) supported by the [metadata access point OMAG Server](/concepts/metadata-access-point).
 
 ### Repository proxy
 
 ![Repository proxy](omrs-role-repository-proxy.png)
 
-The OMRS can support a server where the OMAS's are not deployed and the local repository is configured to connect as an adapter for a non-native open metadata repository. The cohort services connect this metadata repository with other members in one or more cohorts. This is called the *[adapter integration pattern](../../../open-metadata-publication/website/open-metadata-integration-patterns/adapter-integration-pattern.md)* and is used in a [repository proxy OMAG Server](/egeria-docs/concepts/repository-proxy).
+The OMRS can support a server where the OMAS's are not deployed and the local repository is configured to connect as an adapter for a non-native open metadata repository. The cohort services connect this metadata repository with other members in one or more cohorts. This is called the *[adapter integration pattern](../../../open-metadata-publication/website/open-metadata-integration-patterns/adapter-integration-pattern.md)* and is used in a [repository proxy OMAG Server](/concepts/repository-proxy).
 
 ### Connected metadata server
 
@@ -122,14 +122,14 @@ The OMRS can support a server where the OMAS's are not deployed and the local re
 
 Of course, it is also possible to run all the OMRS components together as well, supporting the OMAS's with a local repository and connectivity to other repositories through the cohort servers.
 
-This is what runs in a [metadata access server](/egeria-docs/concepts/metadata-access-server) that is connected to an [open metadata repository cohort](cohort.md).
+This is what runs in a [metadata access server](/concepts/metadata-access-server) that is connected to an [open metadata repository cohort](cohort.md).
 
 ### Administration subsystem (alone)
 
 ![Governance Servers and View Servers](omrs-role-minimal.png)
 
-Finally, the administration subsystem alone is active in the servers that are not [cohort members](/egeria-docs/concepts/cohort-member), that is the [Governance Servers](/egeria-docs/concepts/governance-server) and the
-[view servers](/egeria-docs/concepts/view-server).
+Finally, the administration subsystem alone is active in the servers that are not [cohort members](/concepts/cohort-member), that is the [Governance Servers](/concepts/governance-server) and the
+[view servers](/concepts/view-server).
 
 ## OMRS components
 

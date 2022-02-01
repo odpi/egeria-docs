@@ -20,7 +20,7 @@ Links:
   <div class="video-wrapper">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/-LzTdt7NPDY" title="Egeria's Open Lineage - November 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>   
-* [Related documentation](/egeria-docs/features/lineage-management/overview)
+* [Related documentation](/features/lineage-management/overview)
 
 ----
 Return to [Webinar list](..)

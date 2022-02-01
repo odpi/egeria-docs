@@ -12,6 +12,6 @@ hide:
 
 The Stewardship Integrator OMIS supports the of stewardship request with an external human task manager.
 
-This integration service is paired with the [Stewardship Action OMAS](/egeria-docs/services/stewardship-action/overview).
+This integration service is paired with the [Stewardship Action OMAS](/services/stewardship-action/overview).
 
 --8<-- "snippets/abbr.md"

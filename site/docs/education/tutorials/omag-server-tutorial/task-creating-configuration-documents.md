@@ -3,9 +3,9 @@
 
 # Creating configuration documents for the OMAG Server Platform
 
-The [OMAG server platform](/egeria-docs/concepts/omag-server-platform)
+The [OMAG server platform](/concepts/omag-server-platform)
 provides a software platform for running
-[OMAG Servers](/egeria-docs/concepts/omag-server).
+[OMAG Servers](/concepts/omag-server).
 
 Each OMAG Server supports selected open metadata and governance services based on its
 configuration. 
@@ -17,17 +17,17 @@ However there are three sets of Administration Service APIs active.
 * **Server Origin** - for discovering the source of the OMAG server platform.  
 (This was used in the previous [task](task-starting-the-omag-server-platform.md).)
 * **Configuration Services** - for creating configuration documents.
-* **Operational Services** - for starting and stopping [OMAG Servers](/egeria-docs/concepts/omag-server)
+* **Operational Services** - for starting and stopping [OMAG Servers](/concepts/omag-server)
 in the OMAG server platform using the configuration documents.
 
 ## What is a configuration document?
 
-A [configuration document](/egeria-docs/concepts/configuration-document)
+A [configuration document](/concepts/configuration-document)
 provides the configuration properties for an OMAG server.
 
 It includes:
 * Basic properties of the OMAG server.
-* Defaults to use when configuring the [OMAG subsystems](/egeria-docs/concepts/omag-subsystem)
+* Defaults to use when configuring the [OMAG subsystems](/concepts/omag-subsystem)
 of the OMAG server.
 * Configuration for selected subsystems within the OMAG server.  The subsystems selected and configured
 determine which open metadata and governance services are supported by the OMAG server.
@@ -293,7 +293,7 @@ If you query the configuration again (this is request **6.** in Postman) you see
 ```
 
 Finally in this exercise, use the following command to enable the
-[Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) that provide
+[Open Metadata Access Services (OMASs)](/services/omas) that provide
 the domain specific open metadata and governance APIs.
 
 The access services provide both REST APIs and event-based interaction.
@@ -1696,7 +1696,7 @@ adapt it to specific environment.  However, the defaults provide a good starting
 The contents of this tutorial cover a very simple OMAG server configuration.
 For guidance on configuring more complex OMAG servers see:
 
-* [Administration Services User Guide](/egeria-docs/guides/admin)
+* [Administration Services User Guide](/guides/admin)
 
 For instructions on how to set up two OMAG Servers using in memory repositories that are exchanging metadata
 over [Apache Kafka](http://kafka.apache.org/), see:
@@ -1705,6 +1705,6 @@ over [Apache Kafka](http://kafka.apache.org/), see:
 
 ## Next steps
 
-With the configuration document in place, you are ready to [start the OMAG Server](/egeria-docs/education/tutorials/omag-server-tutorial/task-starting-omag-server).
+With the configuration document in place, you are ready to [start the OMAG Server](/education/tutorials/omag-server-tutorial/task-starting-omag-server).
 
 --8<-- "snippets/abbr.md"

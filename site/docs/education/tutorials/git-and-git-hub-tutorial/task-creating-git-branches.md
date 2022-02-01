@@ -3,7 +3,7 @@
 
 ### Creating a branch for your work
 
-Once you have a [clone of the git repository](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview/#cloning)
+Once you have a [clone of the git repository](/education/tutorials/git-and-git-hub-tutorial/overview/#cloning)
 there is one more step before you can begin developing. 
 
 Most development work is done on your local clone with occasional calls to GitHub to

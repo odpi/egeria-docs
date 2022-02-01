@@ -30,7 +30,7 @@ integration connector is able to run under this service.
 
 * [organization-integrator-client](organization-integrator-client) - implements a Java client for the REST API.
 
-This integration service is paired with the [Community Profile](/egeria-docs/services/omas/community-profile/overview)
+This integration service is paired with the [Community Profile](/services/omas/community-profile/overview)
 Open Metadata Access Service (OMAS).
 
 --8<-- "snippets/abbr.md"

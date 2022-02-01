@@ -32,9 +32,9 @@ There are five components involved in policy management:
 ## Open Metadata Types
 
 The open metadata types are implemented as classifications.  The classifications can be applied to
-[Referenceables](/egeria-docs/types/0/0010-Base-Model) so that they can be used to classify
-[solution components](/egeria-docs/types/7/0730-Solution-Components) during solution design and
-[software capabilities](/egeria-docs/types/0/0042-Software-Capabilities) for the running implementation.
+[Referenceables](/types/0/0010-Base-Model) so that they can be used to classify
+[solution components](/types/7/0730-Solution-Components) during solution design and
+[software capabilities](/types/0/0042-Software-Capabilities) for the running implementation.
 
 
 ![UML](0435-Policy-Management-Capabilities.svg)
@@ -42,8 +42,8 @@ The open metadata types are implemented as classifications.  The classifications
 
 ## Using the Policy Management Capabilities open metadata types
 
-The [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture/overview)
-and [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview)
+The [Digital Architecture OMAS](/services/omas/digital-architecture/overview)
+and [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview)
 provide mechanisms to set up the Policy Management Capabilities classifications on metadata elements.
 
 ## Implementation of Policy Management Capabilities in Egeria
@@ -52,22 +52,22 @@ Not only does Egeria support the use of the Policy Management Capabilities in yo
 metadata, we have also the concepts in the design of Egeria itself.
 
 In Egeria, the Policy Administration Point is
-[Governance Program OMAS](/egeria-docs/services/omas/governance-program/overview).
+[Governance Program OMAS](/services/omas/governance-program/overview).
 Services such as 
-[Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview)
+[Governance Engine OMAS](/services/omas/governance-engine/overview)
 act as a Policy Retrieval Points to push policy information to external Policy Enforcement Points such as
 [Apache Ranger](http://ranger.apache.org/).
 
-Egeria's [metadata access points](/egeria-docs/concepts/metadata-access-point)
-and [metadata access store](/egeria-docs/concepts/metadata-access-store)
+Egeria's [metadata access points](/concepts/metadata-access-point)
+and [metadata access store](/concepts/metadata-access-store)
 can act as Policy Information Points.
 
 Egeria's
-[Metadata Security](/egeria-docs/features/metadata-security/overview)
+[Metadata Security](/features/metadata-security/overview)
 module is a Policy Enforcement Point, calling the metadata security connectors as Policy Decision Points.
 
-The [Engine Services](/egeria-docs/services/omes)
-running in the [Engine Host OMAG Server](/egeria-docs/concepts/engine-host)
+The [Engine Services](/services/omes)
+running in the [Engine Host OMAG Server](/concepts/engine-host)
 can act as Policy Enforcement Points. 
 
 --8<-- "snippets/abbr.md"

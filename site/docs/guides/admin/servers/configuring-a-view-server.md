@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Configuring a [view server](/egeria-docs/concepts/view-server)
+# Configuring a [view server](/concepts/view-server)
 
-Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/egeria-docs/concepts/configuration-document).
+Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating
+a [configuration document](/concepts/configuration-document).
 
 ![Configuration for a view server](view-server-config.svg)
 

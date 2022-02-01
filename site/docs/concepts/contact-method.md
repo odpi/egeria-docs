@@ -9,7 +9,7 @@ hide:
 # Contact method
 
 A contact method provides a means to send a person or a team a message.
-This includes email, phone, or through their [personal profile](/egeria-docs/concepts/personal-profile).
+This includes email, phone, or through their [personal profile](/concepts/personal-profile).
 
 
 

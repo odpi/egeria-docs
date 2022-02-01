@@ -3,8 +3,8 @@
 
 # Starting and Stopping the OMAG server
 
-Once a [configuration document](/egeria-docs/concepts/configuration-document) has been completed
-for an [OMAG Server](/egeria-docs/concepts/omag-server), it can be started using the following
+Once a [configuration document](/concepts/configuration-document) has been completed
+for an [OMAG Server](/concepts/omag-server), it can be started using the following
 REST call:
 
 ```

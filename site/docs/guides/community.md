@@ -50,13 +50,13 @@ The Egeria project uses [GitHub :material-github:](https://github.com/odpi){ tar
 All of these repositories are publicly visible; however, if you want to contribute new content you need to create a GitHub account.  This can be created from the top of the GitHub home page.
 
 If you are not familiar with Git and GitHub, there is additional education in the
-[Git and GitHub Tutorial](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview).
+[Git and GitHub Tutorial](/education/tutorials/git-and-git-hub-tutorial/overview).
 
 ## Steps to contribute content to the project
 
-Egeria uses [GitHub's fork and pull model :material-dock-window:](https://help.github.com/articles/about-collaborative-development-models/){ target=gh } to create a contribution. This process is described in detail in the [Git and GitHub tutorial](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview#using-git-and-github-when-making-a-contribution).
+Egeria uses [GitHub's fork and pull model :material-dock-window:](https://help.github.com/articles/about-collaborative-development-models/){ target=gh } to create a contribution. This process is described in detail in the [Git and GitHub tutorial](/education/tutorials/git-and-git-hub-tutorial/overview#using-git-and-github-when-making-a-contribution).
 
-Each change should have a [GitHub issue](https://github.com/odpi/egeria/issues) explaining why the change is being made. The new or updated content should follow the Egeria [developer guidelines](/egeria-docs/guides/contributor/guidelines).
+Each change should have a [GitHub issue](https://github.com/odpi/egeria/issues) explaining why the change is being made. The new or updated content should follow the Egeria [developer guidelines](/guides/contributor/guidelines).
 
 Every contribution is signed to say that the contributor has the rights to make the contribution and agrees with the [Developer Certificate of Origin (DCO) :material-github:](https://github.com/odpi/egeria/blob/master/developer-resources/why-the-dco.md){ target=gh }
 

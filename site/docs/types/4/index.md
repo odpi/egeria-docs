@@ -12,7 +12,7 @@ Area 4 defines how the data assets should be governed.
 This is where the classifications, policies and rules are
 defined for governance.
 
-In a similar way to the glossary ([area 3](/egeria-docs/types/3))
+In a similar way to the glossary ([area 3](/types/3))
 this information is authored in the metadata repositories and then distributed to the enforcement points and data
 platforms to action and return measurements that can be used to confirm
 that the governance program has a positive effect.

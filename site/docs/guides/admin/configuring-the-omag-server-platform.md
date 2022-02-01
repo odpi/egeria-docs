@@ -3,13 +3,13 @@
 
 # Configuring the OMAG Server Platform
 
-The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) is a JVM process that includes a Tomcat web server and uses [Spring Boot :material-dock-window:](https://spring.io/){ target=spring } to support REST APIs.
+The [OMAG Server Platform](/concepts/omag-server-platform) is a JVM process that includes a Tomcat web server and uses [Spring Boot :material-dock-window:](https://spring.io/){ target=spring } to support REST APIs.
 
 ## Default setup
 
-- REST APIs are registered at `https://localhost:9443`. This address is called the platform's [platform's URL root](/egeria-docs/concepts/omag-server/#platform-url-root) and is configured in a number of places in the [OMAG Server's](/egeria-docs/concepts/omag-server) configuration.
+- REST APIs are registered at `https://localhost:9443`. This address is called the platform's [platform's URL root](/concepts/omag-server/#platform-url-root) and is configured in a number of places in the [OMAG Server's](/concepts/omag-server) configuration.
 - The platform supports no specific security authorization.
-- All configuration is stored in encrypted files - one for each [OMAG Server](/egeria-docs/concepts/omag-server) configured to run on it.
+- All configuration is stored in encrypted files - one for each [OMAG Server](/concepts/omag-server) configured to run on it.
 
 !!! attention "Useful for development, be wary for production"
     These defaults are suitable for a development environment; however, for production the platform should be configured with platform security because this ensures configuration is managed by authorized users.
@@ -20,9 +20,9 @@ The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) is a JVM 
 
 ### Configuration store
 
-The [configuration document](/egeria-docs/concepts/configuration-document) is the place where the configuration for a single [OMAG Server](/egeria-docs/concepts/omag-server) is stored. This may include security certificates and passwords.
+The [configuration document](/concepts/configuration-document) is the place where the configuration for a single [OMAG Server](/concepts/omag-server) is stored. This may include security certificates and passwords.
 
-By default, the configuration document is stored in its own encrypted file in the home directory of the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform), named:
+By default, the configuration document is stored in its own encrypted file in the home directory of the [OMAG Server Platform](/concepts/omag-server-platform), named:
 
 ```
 omag.server.{serverName}.config
@@ -40,7 +40,7 @@ You may also wish to:
 - Move the location of the configuration documents
 - Write you own alternative store for the configuration documents
 
-All of these options are possible because the configuration document store is implemented in a [configuration document store connector](/egeria-docs/concepts/configuration-document/#storage). It is therefore possible to change the implementation or behavior of this connector with a simple configuration change to the OMAG Server Platform.
+All of these options are possible because the configuration document store is implemented in a [configuration document store connector](/concepts/configuration-document/#storage). It is therefore possible to change the implementation or behavior of this connector with a simple configuration change to the OMAG Server Platform.
 
 The configuration document store connector is configured in the OMAG Server Platform using the following command:
 
@@ -140,7 +140,7 @@ This reverts the store to the default encrypted JSON file store.
 
 ### Platform security
 
-The [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) provides both configuration and diagnostic services for [OMAG Servers](/egeria-docs/concepts/omag-server) which in themselves provide access to a wide variety of information and control points.
+The [OMAG Server Platform](/concepts/omag-server-platform) provides both configuration and diagnostic services for [OMAG Servers](/concepts/omag-server) which in themselves provide access to a wide variety of information and control points.
 
 Therefore, it is necessary to provide authorization services relating to the use of the platform services.
 
@@ -232,7 +232,7 @@ Spring provides [extensive documentation on its standard properties :material-do
 
 ## Auto-starting servers
 
-An [OMAG Server](/egeria-docs/concepts/omag-server) is typically started on the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) using a command; however, it is possible to set up a list of servers that are automatically started whenever the platform is started. These servers are also automatically shutdown when the platform is shutdown.
+An [OMAG Server](/concepts/omag-server) is typically started on the [OMAG Server Platform](/concepts/omag-server-platform) using a command; however, it is possible to set up a list of servers that are automatically started whenever the platform is started. These servers are also automatically shutdown when the platform is shutdown.
 
 OMAG Servers can be automatically activated at startup by setting spring-boot property `startup.server.list`, typically in the `application.properties` file. The server names are listed without quotes. For example:
 
@@ -265,7 +265,7 @@ When the platform shuts down, if any of the servers that were in the startup lis
 
 Transport layer security describes the security applied to API calls made between servers. The most commonly known transport layer security is SSL.
 
-Egeria uses TLS with certificates to secure the communication to and from the [OMAG Server Platforms](/egeria-docs/concepts/omag-server-platform).
+Egeria uses TLS with certificates to secure the communication to and from the [OMAG Server Platforms](/concepts/omag-server-platform).
 
 ### Brief background on TLS
 
@@ -288,7 +288,7 @@ With two-way (mutual) SSL exchange, trust is established both ways. This [mutual
 ### Certificates for the OMAG Server Platform
 
 !!! attention "Important note on terminology"
-    Egeria's [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) is a Spring Boot based application. We refer to it as Egeria's "platform", which hosts Egeria [OMAG Servers](/egeria-docs/concepts/omag-server).
+    Egeria's [OMAG Server Platform](/concepts/omag-server-platform) is a Spring Boot based application. We refer to it as Egeria's "platform", which hosts Egeria [OMAG Servers](/concepts/omag-server).
 
     However, in the documentation relating to network communications and SSL, a "server" is usually seen as an application listening on a network port. For Egeria, this "server" would be the OMAG Server Platform. It is important to be aware of this terminology difference when reading the links and references mentioned here.
 

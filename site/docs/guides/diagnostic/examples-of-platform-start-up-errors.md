@@ -47,7 +47,7 @@ Process finished with exit code 1
 This may occur because the platform is already running (all be it in a zombie state)
 or it has been set up to use the same port as another process.
 The port is configured in the start up properties of the OMAG Server Platform.
-See the [Administration Guide](/egeria-docs/guides/admin/configuring-the-omag-server-platform)
+See the [Administration Guide](/guides/admin/configuring-the-omag-server-platform)
 for information on how to change the OMAG Server Platform's configuration.
 
 
@@ -142,6 +142,6 @@ Caused by: java.io.FileNotFoundException: /home/egeria/open-metadata-implementat
 
 ```
 There is more information on how to set up the trust store for an OMAG Server Platform in the
-[Administration Guide](/egeria-docs/guides/admin/omag-server-platform-transport-level-security).
+[Administration Guide](/guides/admin/omag-server-platform-transport-level-security).
 
 ---8<-- "snippets/abbr.md"

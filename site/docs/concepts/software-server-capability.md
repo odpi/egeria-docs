@@ -7,7 +7,7 @@ Many software servers are connected to the open metadata ecosystem, each with wi
 capabilities.
 
 A software capability documents a specific function that an IT infrastructure asset, such as a host, software server platform and software server, is able to perform.
-The open metadata type for a software capability is [`SoftwareCapability`](/egeria-docs/types/0/0042-Software-Capabilities).
+The open metadata type for a software capability is [`SoftwareCapability`](/types/0/0042-Software-Capabilities).
 
 ## Metadata managing software capabilities
 
@@ -16,7 +16,7 @@ metadata. for example, a database manager (aka database management system or DBM
 master of metadata about database schemas.
 
 When metadata managed by such software capabilities is shared with an
-[open metadata repository cohort](/egeria-docs/concepts/cohort-member),
+[open metadata repository cohort](/concepts/cohort-member),
 the members of the cohort need to take note that they should not update this metadata.
 
 The software capabilities that are recognized as managing metadata are:
@@ -27,7 +27,7 @@ The software capabilities that are recognized as managing metadata are:
 * [Tool](#tool)
 
 The identifiers of these software capabilities are used to 
-[document the provenance](/egeria-docs/features/metadata-provenance/overview)
+[document the provenance](/features/metadata-provenance/overview)
 of any metadata that comes from these technologies.
 Metadata instances that are mastered by specific software capabilities are referred to
 as **external instances**.
@@ -35,7 +35,7 @@ as **external instances**.
 ## Asset Manager
 
 An **asset manager**
-is typically a service that provides a catalog of [assets](/egeria-docs/concepts/asset).  It is responsible
+is typically a service that provides a catalog of [assets](/concepts/asset).  It is responsible
 for maintaining details of the assets including their characteristics,
 ownership, assessments and governance requirements.
 
@@ -49,17 +49,17 @@ A Configuration Management Database (CMDB) is an asset manager of infrastructure
 An asset manager may integrate with the open metadata ecosystem using one of three methods:
 
  * as a
-[cohort member](/egeria-docs/concepts/cohort-member)
+[cohort member](/concepts/cohort-member)
 through the
-[Open Metadata Repository Services (OMRS) connectors](/egeria-docs/concepts/repository-connector)
+[Open Metadata Repository Services (OMRS) connectors](/concepts/repository-connector)
 or 
 
-* using the [Catalog Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/catalog-integrator/overview)
-through an [integration connector](/egeria-docs/concepts/integration-connector) or
+* using the [Catalog Integrator Open Metadata Integration Service (OMIS)](/services/omis/catalog-integrator/overview)
+through an [integration connector](/concepts/integration-connector) or
 
-* Through direct calls to the [Asset Manager Open Metadata Access Service (OMAS)](/egeria-docs/services/omas/asset-manager/overview).
+* Through direct calls to the [Asset Manager Open Metadata Access Service (OMAS)](/services/omas/asset-manager/overview).
 
-The [Metadata Server Exchange](/egeria-docs/patterns/metadata-server-exchange/overview)
+The [Metadata Server Exchange](/patterns/metadata-server-exchange/overview)
 pattern provides more information on these options.
 
 ## Master data manager
@@ -68,7 +68,7 @@ A master data manager is a capability in a software server to manage an authorit
 collection of master data, typically about people, organizations, products and accounts.
 
 Master data managers that hold information about the people and organizations using open metadata
-integrate their data through the [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview).
+integrate their data through the [Community Profile OMAS](/services/omas/community-profile/overview).
 
 ## Engine
 

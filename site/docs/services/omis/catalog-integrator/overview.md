@@ -18,7 +18,7 @@ This involves:
 to the open metadata APIs and types.
 * the mapping of identifiers from the third party technology.
 
-This integration service is paired with the [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview).
+This integration service is paired with the [Asset Manager OMAS](/services/omas/asset-manager/overview).
 
 
 --8<-- "snippets/abbr.md"

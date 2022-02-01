@@ -44,11 +44,11 @@ There are also often systems that act as a hub, with many processes extracting d
 
 Figure 4 shows Egeria's architecture for lineage.  There are three parts to it:
 
-* *Lineage capture* - through the [integration daemon](/egeria-docs/concepts/integration-daemon) and [Data Engine Proxy](/egeria-docs/concepts/data-engine-proxy) servers, metadata about data sources and the processing around them is captured and shared through open metadata.  It is possible that one service is capturing particular types of data sources and another is capturing processes.
+* *Lineage capture* - through the [integration daemon](/concepts/integration-daemon) and [Data Engine Proxy](/concepts/data-engine-proxy) servers, metadata about data sources and the processing around them is captured and shared through open metadata.  It is possible that one service is capturing particular types of data sources and another is capturing processes.
 
-* *Stewardship* - the lineage information from each of the technologies is linked together.  Where the naming of data sources and processes is consistent, this assembling of the lineage graph is automatic.  However, experience shows that if it can be different, it will be different. Many technologies make their own choices in naming and so governance action services along with human stewardship is required to match and link the graphs together.  The governance action services run in the [Engine Host](/egeria-docs/concepts/engine-host) server.  They automatically add the relationships between the lineage contributions from each technology that may need to be verified by a human steward.  The human steward may also manually add relationships where there is no well known pattern that can be encoded in a governance action services.  Stewardship also involves analysis of the lineage to ensure the digital landscape is operating as it should.
+* *Stewardship* - the lineage information from each of the technologies is linked together.  Where the naming of data sources and processes is consistent, this assembling of the lineage graph is automatic.  However, experience shows that if it can be different, it will be different. Many technologies make their own choices in naming and so governance action services along with human stewardship is required to match and link the graphs together.  The governance action services run in the [Engine Host](/concepts/engine-host) server.  They automatically add the relationships between the lineage contributions from each technology that may need to be verified by a human steward.  The human steward may also manually add relationships where there is no well known pattern that can be encoded in a governance action services.  Stewardship also involves analysis of the lineage to ensure the digital landscape is operating as it should.
 
-* *Preservation and Use* - Once the lineage graphs are assembled, the lineage can be viewed and analysed from a business perspective.  Could, for example, the operation of the digital landscape be optimized?  Lineage is accessible through standard open metadata queries. However, since the lineage data is large, lineage is automatically captured and stored in the [Open Lineage Server](/egeria-docs/concepts/open-lineage-server) server.  This optimizes the lineage graphs for quick retrieval and analysis.  Its presence allows lineage data to be regularly archived from the operational open metadata ecosystem.  This is particularly important in regulated industries where lineage for critical reports may need to be kept for many years.
+* *Preservation and Use* - Once the lineage graphs are assembled, the lineage can be viewed and analysed from a business perspective.  Could, for example, the operation of the digital landscape be optimized?  Lineage is accessible through standard open metadata queries. However, since the lineage data is large, lineage is automatically captured and stored in the [Open Lineage Server](/concepts/open-lineage-server) server.  This optimizes the lineage graphs for quick retrieval and analysis.  Its presence allows lineage data to be regularly archived from the operational open metadata ecosystem.  This is particularly important in regulated industries where lineage for critical reports may need to be kept for many years.
 
 The three parts of the lineage architecture are summarized in figure 4.
 
@@ -59,7 +59,7 @@ The three parts of the lineage architecture are summarized in figure 4.
 
 Capturing lineage has both a static and a dynamic aspect to it.  
 
-- The *static* aspect involves cataloguing all of the [resources](/egeria-docs/concepts/resource) that are deployed into your digital landscape.  This defines the data sources and processing engines and how they link together.  Ideally this cataloguing is done as these resources are deployed, which may then be augmented with [automated cataloguing](/egeria-docs/features/inteegrated-cataloguing) of resources and [metadata discovery](/egeria-docs/features/discovery-and-stewardship).  It is also possible that tools may catalogue resources under the guidance of their users and this metadata is [shared with the open metadata ecosystem](/egeria-docs/patterns/metadata-exchange).
+- The *static* aspect involves cataloguing all of the [resources](/concepts/resource) that are deployed into your digital landscape.  This defines the data sources and processing engines and how they link together.  Ideally this cataloguing is done as these resources are deployed, which may then be augmented with [automated cataloguing](/features/inteegrated-cataloguing) of resources and [metadata discovery](/features/discovery-and-stewardship).  It is also possible that tools may catalogue resources under the guidance of their users and this metadata is [shared with the open metadata ecosystem](/patterns/metadata-exchange).
 
 - The *dynamic* aspect captures information about the activity that happens day-to-day, such as the running of processes, and its effects.  This could include details of the volumes of data discovered and/or processed along with any analysis of its contents.
 
@@ -220,17 +220,17 @@ Since the proxy backend is only supporting one processing engine it can be manag
 
 ### Egeria's OpenLineage support
 
-Egeria offers two approaches to capture OpenLineage events from the processing engines.  The first (figure 23) uses an [integration connector](/egeria-docs/connectors/integration/open-lineage-event-receiver-integration-connector) listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
+Egeria offers two approaches to capture OpenLineage events from the processing engines.  The first (figure 23) uses an [integration connector](/connectors/integration/open-lineage-event-receiver-integration-connector) listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
 
 ![Figure 23](open-lineage-async-egeria-integration.svg)
 > **Figure 23:** Receiving events via the Kafka topic populated by the proxy backend
 
-Egeria's [integration daemon](/egeria-docs/concepts/integration-daemon) also supports the OpenLineage API for local processing engines.  It is one of the operations supported by the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview).
+Egeria's [integration daemon](/concepts/integration-daemon) also supports the OpenLineage API for local processing engines.  It is one of the operations supported by the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview).
 
 ![Figure 24](open-lineage-direct-egeria-integration.svg)
 > **Figure 24:** Receiving events via the OpenLineage API directly into the integration daemon
 
-The Lineage Integrator OMIS inside the integration daemon hosts the integration connectors that [process the OpenLineage events](/egeria-docs/connectors/#lineage).  They are divided in to two groups:
+The Lineage Integrator OMIS inside the integration daemon hosts the integration connectors that [process the OpenLineage events](/connectors/#lineage).  They are divided in to two groups:
 
 - the integration connectors that are acquiring or creating the OpenLineage events.
 
@@ -244,7 +244,7 @@ They are connected to each other by the Lineage Integrator OMIS:
 
 - An integration connector may register a listener to the Asset Manager OMAS's OutTopic and issue requests to the Asset Manager's REST API in order to correlate the metadata in the open metadata ecosystem with the content of the OpenLineage events.  
 
-Figure 25 illustrates these mechanism with the [five pre-build integration connectors](/egeria-docs/connectors/#lineage) supplied by Egeria.
+Figure 25 illustrates these mechanism with the [five pre-build integration connectors](/connectors/#lineage) supplied by Egeria.
 
 ![Figure 25](open-lineage-integration-connectors.svg)
 > **Figure 25:** The pre-built integration connectors supplied by Egeria
@@ -255,25 +255,25 @@ The numbers on the diagram refer to the notes below.
 
 2. A third party technology is using the proxy backend to publish OpenLineage event to a Kafka topic.
 
-3. The [OpenLineage Event Receiver](/egeria-docs/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving OpenLineage events from the Kafka topic.  It passes them to the Lineage Integrator OMIS's context manager via its own context.
+3. The [OpenLineage Event Receiver](/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving OpenLineage events from the Kafka topic.  It passes them to the Lineage Integrator OMIS's context manager via its own context.
 
-4. The [Governance Action OpenLineage](/egeria-docs/connectors/integration/governance-action-open-lineage-integration-connector) integration connector has registered a listener to receive events about the [governance actions](/egeria-docs/concepts/governance-action) that are being processed in the open metadata ecosystem.  
+4. The [Governance Action OpenLineage](/connectors/integration/governance-action-open-lineage-integration-connector) integration connector has registered a listener to receive events about the [governance actions](/concepts/governance-action) that are being processed in the open metadata ecosystem.  
 
 5. The Governance Action OpenLineage integration connector creates OpenLineage events to represent the processing by the governance actions and passes them to the Lineage Integrator OMIS's context manager via its own context.
 
 6. An integration connector that wishes to receive OpenLineage events must register a listener with the Lineage Integrator OMIS's context manager via its own context.  Once it is registered, it receives all OpenLineage events that are subsequently passed to the context manager.
 
-7. The [API-based OpenLineage Log Store](/egeria-docs/connectors/integration/api-based-open-lineage-log-store-integration-connector) registers a listener for OpenLineage events and passes each one received to a remote server supporting the OpenLineage API (such as [Marquez](https://marquezproject.github.io/marquez/)).
+7. The [API-based OpenLineage Log Store](/connectors/integration/api-based-open-lineage-log-store-integration-connector) registers a listener for OpenLineage events and passes each one received to a remote server supporting the OpenLineage API (such as [Marquez](https://marquezproject.github.io/marquez/)).
 
-8. The [File-based OpenLineage Log Store](/egeria-docs/connectors/integration/file-based-open-lineage-log-store-integration-connector) registers a listener for OpenLineage events and stores each event received as a file in a nominated folder on the file system.
+8. The [File-based OpenLineage Log Store](/connectors/integration/file-based-open-lineage-log-store-integration-connector) registers a listener for OpenLineage events and stores each event received as a file in a nominated folder on the file system.
 
-9. The [OpenLineage Cataloguer](/egeria-docs/connectors/integration/open-lineage-cataloguer-integration-connector) registers a listener for OpenLineage events and ensures the jobs describe in them are catalogued as [Processes](/egeria-docs/types/2/0215-Software-Components) in open metadata.  Depending on its configuration, it may also catalog each run as a *TransientEmbeddedProcess* entity linked to the job's process entity.
+9. The [OpenLineage Cataloguer](/connectors/integration/open-lineage-cataloguer-integration-connector) registers a listener for OpenLineage events and ensures the jobs describe in them are catalogued as [Processes](/types/2/0215-Software-Components) in open metadata.  Depending on its configuration, it may also catalog each run as a *TransientEmbeddedProcess* entity linked to the job's process entity.
 
 ### OpenLineage Log Store
 
 The OpenLineage log store is a destination where OpenLineage events can be written.  This enables them to be queried by governance processes that are validating the behavior of the operational environment.
 
-Figure 26 shows the capture of OpenLineage events into the OpenLineage log store which is a directory (folder) in the filesystem.  The content of the log store is later queried by the *ProcessValidatorConnector* (a [governance verification service](/egeria-docs/concepts/governance-service) running in an [engine host](/egeria-docs/concepts/engine-host)) to determine if the [processes are operating as expected](#governing-expectations).
+Figure 26 shows the capture of OpenLineage events into the OpenLineage log store which is a directory (folder) in the filesystem.  The content of the log store is later queried by the *ProcessValidatorConnector* (a [governance verification service](/concepts/governance-service) running in an [engine host](/concepts/engine-host)) to determine if the [processes are operating as expected](#governing-expectations).
 
 ![Figure 26](open-lineage-example-deployment.svg)
 > **Figure 26:** An example deployment of Egeria that is capturing and processing OpenLineage events. On the left hand side the integration connectors running in the integration daemon are capturing the events, storing them in the OpenLineage log store and creating additional metadata as appropriate.  On the right hand side of the diagram, are the stewardship processes that are stitching together the lineage and validating that the digital landscape is operating as expected.
@@ -301,12 +301,12 @@ Once the duplicates are eliminated, there are still likely to be breakages in th
 
 The adding of relationships in the metadata to link the lineage graph together is called *stitching*.  There are two groups of relationships:
 
-- *[Data passing relationships](/egeria-docs/types/7/0750-Data-Passing)* add the links to show which process called another and the style of the invocation.  Some of these relationships are captured in the automatic cataloguing and the rest are added during stitching.   The type of relationship reflects the implementation of the components.
+- *[Data passing relationships](/types/7/0750-Data-Passing)* add the links to show which process called another and the style of the invocation.  Some of these relationships are captured in the automatic cataloguing and the rest are added during stitching.   The type of relationship reflects the implementation of the components.
     - *DataFlow* - Shows that data is passed between the two processes - typically by the processing engine that hosts them. 
     - *ControlFlow* - Shows that control is passed between the two processes - typically by the processing engine that hosts them.
     - *ProcessCall* - Shows that one process makes an explicit call to another.
 
-- *[LineageMapping relationships](/egeria-docs/types/7/0770-Lineage-Mapping)* associates two elements from different assets that are equivalent.  For example an output data field in one process is the input data field in another.  This is a logical association rather than a implemented association.
+- *[LineageMapping relationships](/types/7/0770-Lineage-Mapping)* associates two elements from different assets that are equivalent.  For example an output data field in one process is the input data field in another.  This is a logical association rather than a implemented association.
 
 The stitching relationships can be added at different levels of granularity in the lineage graph.  For example, in figure 28, the process call relationship shows one process calling another.
 
@@ -323,7 +323,7 @@ Figure 30 goes down a level further and links specific data fields.  This level 
 ![Figure 30](lineage-stitching-data-fields.svg)
 > **Figure 30:** Lineage mapping between data fields
 
-Some technologies provide metadata of detailed internal processing using the [data passing relationships](/egeria-docs/types/7/0750-Data-Passing).  Figure 31 shows an example.
+Some technologies provide metadata of detailed internal processing using the [data passing relationships](/types/7/0750-Data-Passing).  Figure 31 shows an example.
 
 ![Figure 31](lineage-mapping-complex-process.svg)
 > **Figure 31:** In a complex nested process, the elements may be already linked with the data passing relationships.
@@ -340,19 +340,19 @@ As the lineage mappings are added, the lineage graph grows. Figure 33 shows the 
 
 ### Governing expectations
 
-Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/egeria-docs/concepts/governance-service) running in an [engine host](egeria-docs/concepts/engine-host) can be used to read from the [OpenLineage Log Store](#openlineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
+Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](egeria-docs/concepts/engine-host) can be used to read from the [OpenLineage Log Store](#openlineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
 
 ![Figure 34](governance-by-expectation.svg)
 > **Figure 34:** A governance action service called *Process Validation Connector running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.
 
 ## Lineage preservation and use
 
-Design lineage can be consolidated and exported for preservation by the [Asset Lineage OMAS](/egeria-docs/services/omas/asset-lineage/overview) and then stored in the [open lineage server](/egeria-docs/concepts/open-lineage-server).
+Design lineage can be consolidated and exported for preservation by the [Asset Lineage OMAS](/services/omas/asset-lineage/overview) and then stored in the [open lineage server](/concepts/open-lineage-server).
 
 Figure 35 shows metadata capture using:
 
-- The [data engine proxy server](/egeria-docs/services/data-engine-proxy-services/) to poll metadata in automated way.
-- A caller using [Data Engine OMAS's](/egeria-docs/services/omas/data-engine/overview) API.
+- The [data engine proxy server](/services/data-engine-proxy-services/) to poll metadata in automated way.
+- A caller using [Data Engine OMAS's](/services/omas/data-engine/overview) API.
 
 Bot mechanisms push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the open lineage server.
 
@@ -363,7 +363,7 @@ Once the lineage graphs are assembled in the open lineage server, the lineage ca
 
 ### Building a lineage warehouse
 
-The [open lineage server](/egeria-docs/concepts/open-lineage-server) is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
+The [open lineage server](/concepts/open-lineage-server) is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
 
 ![Figure 36](open-lineage-server-lineage-warehouse.svg)
 > **Figure 36:** Open Lineage Server preservation and use details
@@ -402,19 +402,19 @@ By using open metadata, metadata is captured once and used for many purposes.
 
 ## Further reading
 
-- [File Lineage solution using Egeria](/egeria-docs/scenarios/file-lineage/overview)
+- [File Lineage solution using Egeria](/scenarios/file-lineage/overview)
 
 APIs for capturing lineage
 
-- [Asset Manager Open Metadata Access Service (OMAS)](/egeria-docs/services/omas/asset-manager/overview)
-- [Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis)
-- [Data Engine Open Metadata Access Service (OMAS)](/egeria-docs/services/omas/data-engine/overview/)
+- [Asset Manager Open Metadata Access Service (OMAS)](/services/omas/asset-manager/overview)
+- [Open Metadata Integration Services (OMISs)](/services/omis)
+- [Data Engine Open Metadata Access Service (OMAS)](/services/omas/data-engine/overview/)
 
 APIs for retrieving lineage
 
-- [Open Lineage Services](/egeria-docs/services/open-lineage-services)
+- [Open Lineage Services](/services/open-lineage-services)
 
-- [Asset Owner](/egeria-docs/services/omas/asset-owner/overview) and [Asset Consumer](/egeria-docs/services/omas/asset-consumer/overview) through the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview).
+- [Asset Owner](/services/omas/asset-owner/overview) and [Asset Consumer](/services/omas/asset-consumer/overview) through the [Open Connector Framework (OCF)](/frameworks/ocf/overview).
 
 
 --8<-- "snippets/abbr.md"

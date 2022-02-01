@@ -3,7 +3,7 @@
 
 # Conformance Test Suite Chart (egeria-cts)
 
-This is a deployment of Egeria that will automatically run the [Conformance Test Suite's repository workbench](/egeria-docs/guides/cts/overview/#repository-workbench) against a deployed [metadata repository](/egeria-docs/concepts/metadata-repository).
+This is a deployment of Egeria that will automatically run the [Conformance Test Suite's repository workbench](/guides/cts/overview/#repository-workbench) against a deployed [metadata repository](/concepts/metadata-repository).
 
 ??? success "Prerequisites"
     In order to use the chart, you'll first need to have the following installed:

@@ -8,7 +8,7 @@ hide:
 
 # 0217 Ports
 
-Ports are used to define the interfaces of [Processes](/egeria-docs/types/0/0010-Base-Model).
+Ports are used to define the interfaces of [Processes](/types/0/0010-Base-Model).
 
 ![UML](0217-Ports.svg)
 
@@ -22,8 +22,8 @@ Ports are used to define the interfaces of [Processes](/egeria-docs/types/0/0010
 
 ## Further Information
 
-* [Base definition of Process](/egeria-docs/types/0/0010-Base-Model)
-* [LineageMapping relationships](/egeria-docs/types/7/0770-Lineage-Mapping)
-* [Process Hierarchies](/egeria-docs/types/2/0215-Software-Components)
+* [Base definition of Process](/types/0/0010-Base-Model)
+* [LineageMapping relationships](/types/7/0770-Lineage-Mapping)
+* [Process Hierarchies](/types/2/0215-Software-Components)
 
 --8<-- "snippets/abbr.md"

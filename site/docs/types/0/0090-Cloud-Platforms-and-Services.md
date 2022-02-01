@@ -9,9 +9,9 @@ The cloud platforms and services model shows that cloud computing is not so diff
 
 ## CloudProvider
 
-The *`CloudProvider`* is the organization that provides and runs the infrastructure for a cloud service. Typically, the host it offers is actually a [`HostCluster`](/egeria-docs/types/0/0035-Complex-Hosts/#hostcluster). 
+The *`CloudProvider`* is the organization that provides and runs the infrastructure for a cloud service. Typically, the host it offers is actually a [`HostCluster`](/types/0/0035-Complex-Hosts/#hostcluster). 
 
-The cloud provider may offer infrastructure as a service (IaaS), in which case, an organization can deploy [`VirtualContainer`s](/egeria-docs/types/0/0035-Complex-Hosts/#virtualcontainer) onto the cloud provider's `HostCluster`.
+The cloud provider may offer infrastructure as a service (IaaS), in which case, an organization can deploy [`VirtualContainer`s](/types/0/0035-Complex-Hosts/#virtualcontainer) onto the cloud provider's `HostCluster`.
 
 ## CloudPlatform
 

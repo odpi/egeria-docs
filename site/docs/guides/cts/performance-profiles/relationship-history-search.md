@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically searching for relationship instances as they existed in the past.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata repository defines optional methods for searching for relationship instances based on their details in the past, by passing in an `asOfTime` parameter (captured during the execution of the [relationship update](relationship-update.md) profile):
+The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a metadata repository defines optional methods for searching for relationship instances based on their details in the past, by passing in an `asOfTime` parameter (captured during the execution of the [relationship update](relationship-update.md) profile):
 
 | Method | Description |
 |---|---|

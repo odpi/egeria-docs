@@ -33,10 +33,10 @@ You should now see a screen like this:
 
 ## Type Explorer 
 
-Egeria has a rich set of [open types :material-dock-window:](/egeria-docs/types/){ target=docs } that are used by the [OMRS :material-dock-window:](/egeria-docs/services/omrs/){ target=docs }. These types can be for entities, relationships and classifications.
+Egeria has a rich set of [open types :material-dock-window:](/types/){ target=docs } that are used by the [OMRS :material-dock-window:](/services/omrs/){ target=docs }. These types can be for entities, relationships and classifications.
 In order to write connectors, work with the internals of Egeria or just to understand the scope of Egeria, you may want to
 familiarise yourself with the types. There are hundreds of open types. The Type Explorer allows you to explore the types on a server.
-More information can be found in the [Type Explorer User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/tex-user-guide){ target=docs }
+More information can be found in the [Type Explorer User Guide :material-dock-window:](/guides/ecosystem-ui/tex-user-guide){ target=docs }
 
 ### Using the Type Explorer
 * Click on the Type Explorer in the left navigation pane.
@@ -58,7 +58,7 @@ The neighbourhood view centers around an entity type (in this case Asset) and sh
 and the type of the entity at the other end of the relationship.
 
 There is a checkbox called <code>Enterprise</code>. When checked this shows an enterprise view of the types i.e. the selected servers view of all the types it can see, including
-types from other servers in its [cohorts :material-dock-window:](/egeria-docs/services/omrs/cohort){ target=docs }.
+types from other servers in its [cohorts :material-dock-window:](/services/omrs/cohort){ target=docs }.
 
 Over time new releases of Egeria deprecate types. The deprecated types can still be used, but in time may be removed. Most of the time
 it is not useful to see the deprecated types. It is possible to use **Type Explorer** to explore deprecated types and attributes.
@@ -75,7 +75,7 @@ There is a checkbox called <code>Include deprecated attributes</code> to include
 ## Dino
 
 Dino allows you to explore the operational environment of the Egeria ecosystem. 
-More information can be found in the [Dino User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/dino-user-guide){ target=docs }
+More information can be found in the [Dino User Guide :material-dock-window:](/guides/ecosystem-ui/dino-user-guide){ target=docs }
 
 
 ### Using Dino
@@ -90,7 +90,7 @@ updated. Here is an example after I opened some sections.
 
 ## Glossary Author
 
-More information can be found in the [Glossary Author User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/glossary-author-user-guide){ target=docs }
+More information can be found in the [Glossary Author User Guide :material-dock-window:](/guides/ecosystem-ui/glossary-author-user-guide){ target=docs }
 
 ### Using the Glossary Author
 
@@ -160,9 +160,9 @@ Term. You can drag content around the canvas as required.
      ??? hint
         ![categorised term](create Categorised term.png)
 ## Repository Explorer
-The Repository Explorer allows the user to explore [Open Metadata Instances :material-dock-window:](/egeria-docs/concepts/open-metadata-instances){ target=docs }
+The Repository Explorer allows the user to explore [Open Metadata Instances :material-dock-window:](/concepts/open-metadata-instances){ target=docs }
 If you know the guid of an entity you can enter it and start exploring. More usefully you can start your exploration using a
-text search restricted by types. More information can be found in the [Repository Explorer User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/rex-user-guide){ target=docs }
+text search restricted by types. More information can be found in the [Repository Explorer User Guide :material-dock-window:](/guides/ecosystem-ui/rex-user-guide){ target=docs }
 
 
 ### Using the Repository Explorer
@@ -210,7 +210,7 @@ Note that
 The Server Author is an authoring UI to create new server configurations. This is currently being developed and 
 will support all the server types. In this dojo you will create a Access Store Server.  
 
-More information will be found in the [Server Author User Guide :material-dock-window:](/egeria-docs/guides/ecosystem-ui/server-author-user-guide){ target=docs }, but this documentation is still in the process of being written.
+More information will be found in the [Server Author User Guide :material-dock-window:](/guides/ecosystem-ui/server-author-user-guide){ target=docs }, but this documentation is still in the process of being written.
 
 ### Using the Server Author
 
@@ -249,7 +249,7 @@ You will not see your server in the list, as the Dojo is running on release 3.4,
 
 ## Next Step
 
-We will now continue looking at [Configuring and operating an Egeria server](/egeria-docs/education/egeria-dojo/running-egeria/configuring-and-operating-a-server)
+We will now continue looking at [Configuring and operating an Egeria server](/education/egeria-dojo/running-egeria/configuring-and-operating-a-server)
 
 
 

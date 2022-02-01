@@ -21,13 +21,13 @@ Cohort membership is established dynamically. This is through the [cohort topic(
 
 ### First server
 
-To join an open metadata repository cohort, a server must integrate with the OMRS module. OMRS then manages the metadata exchange. When OMRS running inside the server is [configured to join a cohort](/egeria-docs/guides/admin/guide) it first adds a [registration event](../metadata-events/#registry-events) to the cohort topic(s). This event identifies the server, its metadata repository (if any) and its capabilities.
+To join an open metadata repository cohort, a server must integrate with the OMRS module. OMRS then manages the metadata exchange. When OMRS running inside the server is [configured to join a cohort](/guides/admin/guide) it first adds a [registration event](../metadata-events/#registry-events) to the cohort topic(s). This event identifies the server, its metadata repository (if any) and its capabilities.
 
 ![The first server to join the cohort issues a registration request and waits for others to join](repository-services-formation-of-a-cohort-1.png)
 
 ### Subsequent servers
 
-When another server joins the cohort, it also adds its registration event to the cohort topic(s) and begins to receive the registration events from other members. The other members respond with [re-registration events](../metadata-events/#registry-events) to ensure the new member has the latest information about the originator's capabilities. The exchange of registration information causes all members to verify that they have the latest information about their peers. This is maintained in their own [cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector) so that they can reconfigure themselves on restart without needing the other members to resend their registration information.
+When another server joins the cohort, it also adds its registration event to the cohort topic(s) and begins to receive the registration events from other members. The other members respond with [re-registration events](../metadata-events/#registry-events) to ensure the new member has the latest information about the originator's capabilities. The exchange of registration information causes all members to verify that they have the latest information about their peers. This is maintained in their own [cohort registry store](/connectors/cohort-registry-store-connector) so that they can reconfigure themselves on restart without needing the other members to resend their registration information.
 
 ![When another server joins the cohort they exchange registration information](repository-services-formation-of-a-cohort-2.png)
 
@@ -42,7 +42,7 @@ The registration information includes the URL Root and server name of the member
 ![Once the registration is complete the cohort members can issue federated queries](repository-services-formation-of-a-cohort-3.png)
 
 !!! tip "Primary mechanism for accessing metadata"
-    This peer-to-peer operation and federated queries are the primary mechanism for accessing metadata, because the [access services](/egeria-docs/services/omas) use federated queries for every request they make for metadata.
+    This peer-to-peer operation and federated queries are the primary mechanism for accessing metadata, because the [access services](/services/omas) use federated queries for every request they make for metadata.
 
 ### Metadata exchange
 
@@ -55,7 +55,7 @@ Once the cohort membership is established, the server begins publishing informat
 
 ### Dynamic changes to types
 
-Finally, as type definitions (TypeDefs) are added and updated, the cohort members send out events to allow the other members to verify that this type does not conflict with any of their types. Any conflicts in the types causes [audit log messages](/egeria-docs/concepts/audit-log) to be logged in all members, prompting action to resolve the conflicts.
+Finally, as type definitions (TypeDefs) are added and updated, the cohort members send out events to allow the other members to verify that this type does not conflict with any of their types. Any conflicts in the types causes [audit log messages](/concepts/audit-log) to be logged in all members, prompting action to resolve the conflicts.
 
 ![TypeDef validation](repository-services-formation-of-a-cohort-5.png)
 
@@ -67,50 +67,50 @@ When an OMAG Server permanently leaves the cohort, it sends an unregistration re
 
 Egeria provides a number of pre-built [cohort members](#cohort-members).
 
-One of them, the [repository proxy](/egeria-docs/concepts/repository-proxy) provides a simple way to integrate a third party server into a cohort by creating an [OMRS Repository Connector and optional Event Mapper Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh } to map between the third party APIs/events and the repository service's equivalents
+One of them, the [repository proxy](/concepts/repository-proxy) provides a simple way to integrate a third party server into a cohort by creating an [OMRS Repository Connector and optional Event Mapper Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh } to map between the third party APIs/events and the repository service's equivalents
 
 A more bespoke integration involves:
 
 - Creating an [OMRS repository connector and optional event mapper connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh }
-- Designing how to configure the OMRS Services for your metadata repository. Typically, this is done by extending the existing administration services of the metadata repository, but Egeria also offers some pre-built [administration services](/egeria-docs/guides/admin/guide) that can be used or modified.
+- Designing how to configure the OMRS Services for your metadata repository. Typically, this is done by extending the existing administration services of the metadata repository, but Egeria also offers some pre-built [administration services](/guides/admin/guide) that can be used or modified.
 - Plugging the OMRS and any administration services into the metadata repository's security module so that requests to the server can be secured against unauthorized access.
 - Integrating the OMRS, administration and security capability into your product.
 
 There are different integration patterns available to help you choose the best approach for your product. Each method is optimized for specific use cases and so the metadata repository can only play a full role in the open metadata use cases if it supports all integration methods. These are:
 
 - Support for an OMRS repository connector to allow open metadata API calls to the repository to create, query, update and delete metadata stored in the repository.
-    - The OMRS connectors support the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) to provide a call interface to the metadata repositories.
+    - The OMRS connectors support the [Open Connector Framework (OCF)](/frameworks/ocf/overview) to provide a call interface to the metadata repositories.
     - The OMRS Repository Connector API is a standard interface for all metadata repositories. This enables services such as the Enterprise OMRS Repository Connector to interact with 1 or many metadata repositories through the same interface.  
     - The connection configuration it passes to the OCF determines which type of OMRS connector is returned by the OCF.
 - Support for the OMRS event notifications that are used to synchronize selective metadata between the metadata repositories.
 
 ### Cohort members
 
-A *cohort member* is an [OMAG Server](/egeria-docs/concepts/omag-server) that is registered with at least one open metadata repository cohort.
+A *cohort member* is an [OMAG Server](/concepts/omag-server) that is registered with at least one open metadata repository cohort.
 
 ![Different types of cohort members](cohort-member-types.png)
 
 Management of a server's membership is handled by the [cohort services](../#cohort-services).
 
-The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interfaces which gives fine-grained[^1] metadata notifications and updates. During server start up, the repository services detect the configuration of at least one cohort and starts the *metadata highway manager*. The metadata highway manager creates a *cohort manager* for each cohort configuration. The cohort manager manages the initialization and shutdown of the server's connectivity to a cohort, including the management of the [cohort registry](#cohort-registry).
+The exchange of metadata uses the [Open Metadata Repository Services (OMRS)](/services/omrs) interfaces which gives fine-grained[^1] metadata notifications and updates. During server start up, the repository services detect the configuration of at least one cohort and starts the *metadata highway manager*. The metadata highway manager creates a *cohort manager* for each cohort configuration. The cohort manager manages the initialization and shutdown of the server's connectivity to a cohort, including the management of the [cohort registry](#cohort-registry).
 
-The server's [metadata security connector](/egeria-docs/features/metadata-security) provides fine-grained control on which metadata is sent, received and/or stored by the server. This level of control is necessary for metadata repositories that are managing specific collections of valuable objects such as [Assets](/egeria-docs/concepts/asset).
+The server's [metadata security connector](/features/metadata-security) provides fine-grained control on which metadata is sent, received and/or stored by the server. This level of control is necessary for metadata repositories that are managing specific collections of valuable objects such as [Assets](/concepts/asset).
 
 The types of cohort members include:
 
-- [Metadata access store](/egeria-docs/concepts/metadata-access-store)
-- [Metadata access point](/egeria-docs/concepts/metadata-access-point)
-- [Repository proxy](/egeria-docs/concepts/repository-proxy)
-- [Conformance test server](/egeria-docs/concepts/conformance-test-server)
+- [Metadata access store](/concepts/metadata-access-store)
+- [Metadata access point](/concepts/metadata-access-point)
+- [Repository proxy](/concepts/repository-proxy)
+- [Conformance test server](/concepts/conformance-test-server)
 
 !!! education "Explore hands-on"
-    The administration [hands-on lab](/egeria-docs/education/open-metadata-labs) called "Understanding Cohort Configuration Lab" provides an opportunity to query the cohort registries of cohort members as they exchange metadata for Coco Pharmaceuticals.
+    The administration [hands-on lab](/education/open-metadata-labs) called "Understanding Cohort Configuration Lab" provides an opportunity to query the cohort registries of cohort members as they exchange metadata for Coco Pharmaceuticals.
 
 ## Cohort registration
 
-Each repository in the cohort has a [cohort registry](#cohort-registry) that supports the registration of the metadata repositories across the cohort. Through the registration process, each cohort registry assembles a list of all members of the cohort. This is saved in the [cohort registry store](/egeria-docs/connectors/cohort-registry-store-connector).
+Each repository in the cohort has a [cohort registry](#cohort-registry) that supports the registration of the metadata repositories across the cohort. Through the registration process, each cohort registry assembles a list of all members of the cohort. This is saved in the [cohort registry store](/connectors/cohort-registry-store-connector).
 
-The list of connections to the remote members of the cohort are passed to the OMRS Enterprise Connector Manager that in turn manages the configuration of the Enterprise OMRS Repository Connectors. The Enterprise OMRS Connector provides federated query support across the metadata cohort for the [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas).
+The list of connections to the remote members of the cohort are passed to the OMRS Enterprise Connector Manager that in turn manages the configuration of the Enterprise OMRS Repository Connectors. The Enterprise OMRS Connector provides federated query support across the metadata cohort for the [Open Metadata Access Services (OMAS)](/services/omas).
 
 When a metadata repository registers with the [cohort registry](#cohort-registry), the administrator may either supply a unique server identifier, or ask the OMRS to generate one. This server identifier (the [metadata collection ID](../metadata-repositories/#metadata-collection-id)) is used in the OMRS event notifications, and on OMRS repository connector calls to identify the location of the home copy of the metadata entities and to identify which repository is requesting a service or supports a particular function.
 
@@ -125,10 +125,10 @@ Once the metadata repository has registered with the [cohort registry](#cohort-r
 
 The *cohort registry* resides in each [cohort member](#cohort-members). It is responsible for registering a member with a specific open metadata repository cohort and maintaining a list of the other members of this cohort.
 
-The registration process is managed by exchanging [registry events](/egeria-docs/conceepts/metadata-events/#registry-events) over the [cohort topic(s)](/egeria-docs/concepts//metadata-events/#event-topics).
+The registration process is managed by exchanging [registry events](/conceepts/metadata-events/#registry-events) over the [cohort topic(s)](/concepts//metadata-events/#event-topics).
 
-The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/egeria-docs/concepts/cohort-registry-store).
+The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/concepts/cohort-registry-store).
 
-[^1]: You may want to see the [OMRS metamodel](/egeria-docs/guides/developer/repository-connectors/metamodel/overview) for more details on the granularity of metadata exchange.
+[^1]: You may want to see the [OMRS metamodel](/guides/developer/repository-connectors/metamodel/overview) for more details on the granularity of metadata exchange.
 
 --8<-- "snippets/abbr.md"

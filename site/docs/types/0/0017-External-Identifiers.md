@@ -27,15 +27,15 @@ The *`ExternalId`* entity describes an external identifier from a specific third
 
 ## ExternalIdLink
 
-The mapping of identifiers can be many-to-many, which is why you see that the *`ExternalIdLink`* relationship between the [`OpenMetadataRoot`](/egeria-docs/types/0/0010-Base-Model/#openmetadataroot) (open metadata resources) and the `ExternalId` is also many-to-many.
+The mapping of identifiers can be many-to-many, which is why you see that the *`ExternalIdLink`* relationship between the [`OpenMetadataRoot`](/types/0/0010-Base-Model/#openmetadataroot) (open metadata resources) and the `ExternalId` is also many-to-many.
 
 This relationship includes properties to help to map the `OpenMetadataRoot` to the external identifier.
 
 ## ExternalIdScope
 
-There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the *`ExternalIdScope`* relationship links the external identifier to the [`Referenceable`](/egeria-docs/types/0/0010-Base-Model/#referenceable) that represents the third party metadata catalog. Typically, this is a type of [`SoftwareCapability`](/egeria-docs/types/0/0042-Software-Capabilities/#softwarecapability), for example, [`AssetManager`](/egeria-docs/types/0/0056-Resource-Managers/#assetmanager).
+There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the *`ExternalIdScope`* relationship links the external identifier to the [`Referenceable`](/types/0/0010-Base-Model/#referenceable) that represents the third party metadata catalog. Typically, this is a type of [`SoftwareCapability`](/types/0/0042-Software-Capabilities/#softwarecapability), for example, [`AssetManager`](/types/0/0056-Resource-Managers/#assetmanager).
 
 ??? education "Further information"
-    There is an article on [managing external identifiers](/egeria-docs/features/external-identifiers/overview) to correlate metadata elements from different types of technologies.
+    There is an article on [managing external identifiers](/features/external-identifiers/overview) to correlate metadata elements from different types of technologies.
 
 --8<-- "snippets/abbr.md"

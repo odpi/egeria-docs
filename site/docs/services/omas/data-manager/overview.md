@@ -7,22 +7,22 @@
 
 The Data Manager OMAS provides APIs for technologies wishing to register new data assets, connections and related schema from data resources located in database servers, file systems, event brokers, API gateways and file managers and content managers.
 
-The caller of this interface may be the data manager itself, or an [integration daemon](/egeria-docs/concepts/integration-daemon) if the data manager does not support open metadata directly.
+The caller of this interface may be the data manager itself, or an [integration daemon](/concepts/integration-daemon) if the data manager does not support open metadata directly.
 The integration daemon calls the Data Manager OMAS client through the following
-[integration services](/egeria-docs/services/omis).
+[integration services](/services/omis).
 
-* [API Integrator OMIS](/egeria-docs/services/omis/api-integrator/overview) for API Gateways
-* [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview) for database managers
-* [Display Integrator OMIS](/egeria-docs/services/omis/display-integrator/overview) for reports and forms
-* [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview) for file systems and file managers
-* [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview) for event-based brokers and managers
+* [API Integrator OMIS](/services/omis/api-integrator/overview) for API Gateways
+* [Database Integrator OMIS](/services/omis/database-integrator/overview) for database managers
+* [Display Integrator OMIS](/services/omis/display-integrator/overview) for reports and forms
+* [Files Integrator OMIS](/services/omis/files-integrator/overview) for file systems and file managers
+* [Topic Integrator OMIS](/services/omis/topic-integrator/overview) for event-based brokers and managers
 
 There are specific APIs for different types of data managers and assets.  These reflect
 the terminology typically associated with the specific type of data manager to make it easier
 for people to map the Data Manager OMAS APIs and events to the actual technology.
 However, the specific implementation objects supported by these APIs all inherit from common
 open metadata types so it is possible to work with the resulting metadata in a technology
-agnostic manner using services such as the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview).
+agnostic manner using services such as the [Asset Consumer OMAS](/services/omas/asset-consumer/overview).
 
 ## Basic metadata model
 
@@ -34,7 +34,7 @@ Figure 1 shows the types of metadata captured by the Data Manager OMAS.
 These are:
 
 * **Asset** - Asset describes the data asset such as the data set, database schema, topic, API etc.
-* **Connection**, **Connector Type** and **Endpoint** are used to create a [connector](/egeria-docs/concepts/connector)
+* **Connection**, **Connector Type** and **Endpoint** are used to create a [connector](/concepts/connector)
 to access the data in the data asset.
 * **Schema Element(s)** describe the structure of the data managed by the data asset.
 
@@ -77,9 +77,9 @@ The Data Manager OMAS Supports the following types of data managers:
 
 ## More information
 
-* [What is an Asset?](/egeria-docs/concepts/asset)
-* [Building an asset catalog](/egeria-docs/metadata-manager)
-* [Modeling schema structures](/egeria-docs/guides/developer/mapping-technology/modelling-schemas)
+* [What is an Asset?](/concepts/asset)
+* [Building an asset catalog](/metadata-manager)
+* [Modeling schema structures](/guides/developer/mapping-technology/modelling-schemas)
 
 
 --8<-- "snippets/abbr.md"

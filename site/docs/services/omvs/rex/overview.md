@@ -17,6 +17,6 @@ The purpose of this interface is to enable a technical user (such as an Enterpri
 retrieve metadata instances from repositories and explore the connectivity of those instances to other metadata objects. 
 The interface enables retrieval and search and the construction of a visualization of a graph of connected objects. 
 
-This view service calls a remote server using the [repository services client](/egeria-docs/services/omrs).
+This view service calls a remote server using the [repository services client](/services/omrs).
 
 ---8<-- "snippets/abbr.md"

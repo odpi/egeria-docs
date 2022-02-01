@@ -3,7 +3,7 @@
 
 # OMRS Repository Connector
 
-Repository Connectors make use of the Egeria [meta-model](/egeria-docs/guides/developer/repository-connectors/metamodel/overview) to represent and communicate metadata.
+Repository Connectors make use of the Egeria [meta-model](/guides/developer/repository-connectors/metamodel/overview) to represent and communicate metadata.
 
 The OMRS Repository Connector API defines a call
 interface to create, search, query, update and
@@ -12,7 +12,7 @@ The implementation of a specific OMRS connector
 determines which type(s) of metadata repository it is able to access.
 
 The OMRS has three repository connector implementations that form part of the
-core open metadata capability for a [cohort member](/egeria-docs/concepts/cohort-member):
+core open metadata capability for a [cohort member](/concepts/cohort-member):
 
 * **[Enterprise Repository Connector](../enterprise-repository-connector.md)** -
 	This connector can issue calls to multiple OMRS connectors and aggregate the
@@ -36,7 +36,7 @@ These are the "real" OMRS Repository Connector implementations that provide open
 to specific types of metadata repositories.
 
 * **[Apache Atlas Repository Connector](https://github.com/odpi/egeria-connector-hadoop-ecosystem)** -
-This is the connector that runs in an Egeria [repository proxy](/egeria-docs/concepts/repository-proxy) server, pulling in the key parts of
+This is the connector that runs in an Egeria [repository proxy](/concepts/repository-proxy) server, pulling in the key parts of
 Egeria it needs to support the open metadata standards.
 It calls directly to Apache Atlas's REST API interface for the metadata repository.
 
@@ -44,18 +44,18 @@ It calls directly to Apache Atlas's REST API interface for the metadata reposito
 This is the connector for retrieving metadata from IBM's Information Governance Catalog (aka IGC).
 This connector translates the calls to its OMRS Connector API to IGC's REST API and
 then translates the results of these calls to appropriate responses on its API.
-This connector also runs in a [repository proxy](/egeria-docs/concepts/repository-proxy) server.
+This connector also runs in a [repository proxy](/concepts/repository-proxy) server.
 
 * **[In-memory OMRS Repository Connector](../../../../adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector)** -
 This connector provides a simple in-memory repository for testing/demos or
 small-scale environments where metadata is being managed remotely and cached locally.
 It has native support for the open metadata types an instances
-and so runs in a [metadata server](/egeria-docs/concepts/metadata-access-store).
+and so runs in a [metadata server](/concepts/metadata-access-store).
 
 * **[Graph OMRS Repository Connector](../../../../adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector)** -
 This connector is provides a high functioning open metadata repository implementation
 built on JanusGraph.
 It also has native support for the open metadata types an instances
-and so runs in a [metadata access server](/egeria-docs/concepts/metadata-access-store).
+and so runs in a [metadata access server](/concepts/metadata-access-store).
 
 --8<-- "snippets/abbr.md"

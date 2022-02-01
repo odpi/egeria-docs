@@ -53,24 +53,24 @@ Most metadata repositories are run in a secure mode requiring incoming requests 
 
 The subtypes of *ActorProfile* add further information about actors:
 
-- [Person](/egeria-docs/types/1/0112-People) for profiles describing individuals.
-- [Team](/egeria-docs/types/1/0115-Teams) for profiles describing teams.
-- [ITProfile](/egeria-docs/types/1/0117-IT-Profiles) for profiles describing specific IT processes and systems.
+- [Person](/types/1/0112-People) for profiles describing individuals.
+- [Team](/types/1/0115-Teams) for profiles describing teams.
+- [ITProfile](/types/1/0117-IT-Profiles) for profiles describing specific IT processes and systems.
 
-[People, Roles and Organizations](/egeria-docs/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
+[People, Roles and Organizations](/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
 
 The following APIs support actor profiles:
 
-- The [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview) provides support for managing metadata about people and teams.
+- The [Community Profile OMAS](/services/omas/community-profile/overview) provides support for managing metadata about people and teams.
 
-- The [Organization Integrator OMIS](/egeria-docs/services/omis/organization-integrator/overview) supports the synchronization of information about people and teams between open metadata and external systems.
+- The [Organization Integrator OMIS](/services/omis/organization-integrator/overview) supports the synchronization of information about people and teams between open metadata and external systems.
 
-- The [IT Infrastructure OMAS](/egeria-docs/services/omas/it-infrastructure/overview) provides support for managing profile and user identity metadata for assets such as processes and connectors.
+- The [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview) provides support for managing profile and user identity metadata for assets such as processes and connectors.
 
-- The [Infrastructure Integrator OMIS](/egeria-docs/services/omis/infrastructure-integrator/overview) supports the synchronization of IT profiles between open metadata and external system definitions.
+- The [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview) supports the synchronization of IT profiles between open metadata and external system definitions.
 
-- The [Security Manager OMAS](/egeria-docs/services/omas/security-manager/overview) provides support for retrieving metadata for all types of actor profiles and user identities metadata.
+- The [Security Manager OMAS](/services/omas/security-manager/overview) provides support for retrieving metadata for all types of actor profiles and user identities metadata.
 
-- The [Security Integrator OMIS](/egeria-docs/services/omis/security-integrator/overview) supports the publishing of all types of actor profiles and user identities between open metadata and external security management systems.
+- The [Security Integrator OMIS](/services/omis/security-integrator/overview) supports the publishing of all types of actor profiles and user identities between open metadata and external security management systems.
 
 --8<-- "snippets/abbr.md"

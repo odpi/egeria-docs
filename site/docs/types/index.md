@@ -46,14 +46,14 @@ Within each area, the definitions are broken down into numbered packages to help
 
 ![Guide to reading the open metadata type models](model-guidance.svg)
 
-The diagram above shows a few fragments from the models. Each of the UML classes represents an open metadata type. The stereotype on the UML class in the double angle brackets of *entity*, *relationship* and *classification* defines the [category of type](/egeria-docs/introduction/key-concepts/#metadata-instances). The line between entities with the big arrow head means "inheritance". A type points to its supertype.
+The diagram above shows a few fragments from the models. Each of the UML classes represents an open metadata type. The stereotype on the UML class in the double angle brackets of *entity*, *relationship* and *classification* defines the [category of type](/introduction/key-concepts/#metadata-instances). The line between entities with the big arrow head means "inheritance". A type points to its supertype.
 
-???+ example "The example on the left comes from model [0010](/egeria-docs/types/0/0010-Base-Model)"
+???+ example "The example on the left comes from model [0010](/types/0/0010-Base-Model)"
     It shows that `Asset` inherits from `Referenceable` which inherits from `OpenMetadataRoot`. This means that `Asset` is a subtype of `Referenceable`, which is a subtype of `OpenMetadataRoot`. Alternatively, `OpenMetadataRoot` is the supertype of `Referenceable`, which is a supertype of `Asset`. This inheritance identifies which attributes (instance properties) are valid for an instance of a particular type since it is the aggregation of the attributes defined explicitly for the type and all of its supertypes.
 
     For example, `Asset` has two attributes defined: `name` and `description`. It also supports `qualifiedName` and `additionalProperties` because they are inherited from `Referenceable`. `OpenMetadataRoot` does not have any attributes defined so `Asset` gets nothing from it.
 
-???+ example "The example on the right comes from model [0011](/egeria-docs/types/0/0011-Managing-Referenceables)"
+???+ example "The example on the right comes from model [0011](/types/0/0011-Managing-Referenceables)"
     It shows the classification called `Template` that can be connected to a `Referenceable`. Since `Referenceable` is already defined in model 0010, it is shown without the white box where the attributes are show (called the "attribute container" in UML parlance).
 
     `SourcedFrom` is a relationship that connects two instances of `Referenceable` and any of its subtypes. This means `SourcedFrom` could connect two instances of type `Asset` together. The types of the instances connected do not need to be the same - `SourcedFrom` could connect a `Referenceable` instance with an `Asset` instance.

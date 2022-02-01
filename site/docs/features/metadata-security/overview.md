@@ -97,7 +97,7 @@ The connector that can be defined for an OMAG Server offers a series of layers o
   * **validateRelationshipReferenceCopySave** - Tests for whether a reference copy should be saved to the repository.
 
 * **OpenMetadataEventsSecurity** - defines security checks for sending and receiving events on the
-[open metadata repository cohorts](/egeria-docs/concepts/cohort-member).
+[open metadata repository cohorts](/concepts/cohort-member).
   
   * **validateInboundEvent** - Validates whether an event received from another member of the cohort should be processed by this server.   May also remove content from the event before it is processed by the server.
   * **validateOutboundEvent** - Validates whether an event should be sent to the other members of the cohort by this server.   May also remove content from the event before it is sent to the cohort.
@@ -106,7 +106,7 @@ The connector that can be defined for an OMAG Server offers a series of layers o
   The methods are given access to the whole asset to allow a variety of values to be tested.
   
   * **setSupportedZonesForUser** - Provides an opportunity to override the deployed module setting of 
-  [supportedZones](/egeria-docs/features/governance-zoning) for a user specific list.
+  [supportedZones](/features/governance-zoning) for a user specific list.
   * **validateUserForAssetCreate** - Tests for whether a specific user should have the right to create an asset.
   * **validateUserForAssetRead** - Tests for whether a specific user should have read access to a specific asset.
   * **validateUserForAssetDetailUpdate** - Tests for whether a specific user should have the right to update an asset.

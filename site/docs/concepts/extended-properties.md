@@ -3,11 +3,11 @@
 
 # Extended Properties
 
-Extended properties provide a means to maintain the properties of elements that are [subtypes of the types](/egeria-docs/concepts/open-metadata-type-definitions) supported directly on an API.
+Extended properties provide a means to maintain the properties of elements that are [subtypes of the types](/concepts/open-metadata-type-definitions) supported directly on an API.
 
-For example, the [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview) has support for maintaining metadata about *Topics*.  Topics are special types of [*assets*](/egeria-docs/concepts/asset) that provide a destination for exchanging events.  
+For example, the [Data Manager OMAS](/services/omas/data-manager/overview) has support for maintaining metadata about *Topics*.  Topics are special types of [*assets*](/concepts/asset) that provide a destination for exchanging events.  
 
-Model [0223 Events and Logs](/egeria-docs/types/2/0223-Events-and-Logs) extends the `Topic` type with a new type called `KafkaTopic` that introduces two new properties: `partitions` and `replicas`.  `KafkaTopic` is used to represent a topic that is owned and managed by [*Apache Kafka*](https://kafka.apache.org/).  The full type hierarchy for `KafkaTopic` is shown in Figure 1.
+Model [0223 Events and Logs](/types/2/0223-Events-and-Logs) extends the `Topic` type with a new type called `KafkaTopic` that introduces two new properties: `partitions` and `replicas`.  `KafkaTopic` is used to represent a topic that is owned and managed by [*Apache Kafka*](https://kafka.apache.org/).  The full type hierarchy for `KafkaTopic` is shown in Figure 1.
 
 ![Figure 1](extended-properties-type-hierarchy.svg)
 **Figure 1:** The type inheritance hierarchy for KafkaTopic.  This shows all of the properties that are valid for an element of type `KafkaTopic`.  Properties `qualifiedName` and `additionalProperties` are inherited from `Referenceable`; properties `name` and `description` are inherited from `Asset`; finally `topicType` is inherited from `Topic`.  All of these properties are supported natively by the Data Manager OMAS.  The `partitions` and `replicas` properties introduced by the `KafkaTopic` type are maintainable through `extendedProperties`.

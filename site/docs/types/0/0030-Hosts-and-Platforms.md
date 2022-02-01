@@ -9,13 +9,13 @@ The host and platform metadata entities provide a simple model for the IT infras
 
 ## ITInfrastructure
 
-*`ITInfrastructure`* is a type of [`Asset`](/egeria-docs/types/0/0010-Base-Model/#asset) that supports the running of software systems.
+*`ITInfrastructure`* is a type of [`Asset`](/types/0/0010-Base-Model/#asset) that supports the running of software systems.
 
 ## Host
 
 In today's systems, hardware is managed to get the maximum use out of it. Therefore, the concept of a *`Host`* is abstracted to describe a deployment environment that has access to hardware and has a basic software stack, typically including the operating systems.
 
-The host can be linked to its location through the [`AssetLocation`](/egeria-docs/types/0/0025-Locations/#assetlocation) relationship.
+The host can be linked to its location through the [`AssetLocation`](/types/0/0025-Locations/#assetlocation) relationship.
 
 ## OperatingPlatform
 
@@ -23,7 +23,7 @@ The *`OperatingPlatform`* is an informational structure to describe the hardware
 
 ## OperatingPlatformManifest
 
-Details of the software stack can be captured in a [`Collection`](/egeria-docs/types/0/0021-Collections/#collection) linked to the operating platform using the *`OperatingPlatformManifest`*. The collection may contain different types of details such as configuration files and software packages that can be organized into nested collections.
+Details of the software stack can be captured in a [`Collection`](/types/0/0021-Collections/#collection) linked to the operating platform using the *`OperatingPlatformManifest`*. The collection may contain different types of details such as configuration files and software packages that can be organized into nested collections.
 
 ## SoftwarePackageManifest
 
@@ -32,7 +32,7 @@ Collections that list software packages can be classified with the `SoftwarePack
 Many hosts could have the same operating platform. This means it can be used to represent standardized software stacks and which hosts they have been deployed to. Pipelines that manage the software stacks on these machines can use these elements to manage the rollout and update of the different software packages.
 
 ??? education "Further information"
-    - [0035 Complex Hosts](/egeria-docs/types/0/0035-Complex-Hosts) describes how hardware is virtualized.
-    - [0037 Software Server Platform](/egeria-docs/types/0/0037-Software-Server-Platforms) describes the software process that run on a host.
+    - [0035 Complex Hosts](/types/0/0035-Complex-Hosts) describes how hardware is virtualized.
+    - [0037 Software Server Platform](/types/0/0037-Software-Server-Platforms) describes the software process that run on a host.
 
 --8<-- "snippets/abbr.md"

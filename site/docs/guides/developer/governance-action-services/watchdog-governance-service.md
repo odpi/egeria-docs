@@ -6,9 +6,9 @@
 The watchdog governance service monitors changes in the metadata and initiates one of the
 following as a result.
 
-* [governance action](/egeria-docs/concepts/governance-action)
-* [governance action process](/egeria-docs/concepts/governance-action-process) 
-* [incident report](/egeria-docs/concepts/incident-report)
+* [governance action](/concepts/governance-action)
+* [governance action process](/concepts/governance-action-process) 
+* [incident report](/concepts/incident-report)
 
 One example of a watchdog governance service is to monitor for new assets. 
 Another example is to monitor the addition of

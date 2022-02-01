@@ -29,12 +29,12 @@ The material for our past webinars is listed below along with links to the recor
     - Link to [event advertising](https://lfaidata.foundation/blog/2021/11/30/what-next-after-you-have-built-a-catalog-part-1/)
     - Presentation
       <div class="video-wrapper">
-      <iframe src="https://odpi.github.io/egeria-docs/education/webinar-program/egeria-webinar-beyond-cataloguing-5th-december-2021.pdf"></iframe>
+      <iframe src="https://odpi.github.io/education/webinar-program/egeria-webinar-beyond-cataloguing-5th-december-2021.pdf"></iframe>
       </div>
     - Session replay - TBD 
     ??? education "Related Documentation"
-        - [Asset](/egeria-docs/concepts/asset)
-        - [Templated Cataloguing](/egeria-docs/features/templated-cataloguing/overview)
+        - [Asset](/concepts/asset)
+        - [Templated Cataloguing](/features/templated-cataloguing/overview)
 
 ???+ education "Open Lineage - November 2021 - Mandy Chessell and Ljupcho Palashevski"
     
@@ -45,13 +45,13 @@ The material for our past webinars is listed below along with links to the recor
     - Link to [event advertising](https://lfaidata.foundation/blog/2021/11/05/please-join-us-for-the-next-egeria-webinar-november-8th/)
     - Presentation
       <div class="video-wrapper">
-      <iframe src="https://odpi.github.io/egeria-docs/education/webinar-program/egeria-webinar-open-lineage-8th-november-2021.pdf"></iframe>
+      <iframe src="https://odpi.github.io/education/webinar-program/egeria-webinar-open-lineage-8th-november-2021.pdf"></iframe>
       </div>
     - YouTube Video:
       <div class="video-wrapper">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/-LzTdt7NPDY" title="Egeria's Open Lineage - November 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>   
-    - [Related documentation](/egeria-docs/features/lineage-management/overview)
+    - [Related documentation](/features/lineage-management/overview)
 
     
 ???+ education "The Value of Egeria - October 2021 - Mandy Chessell"
@@ -68,7 +68,7 @@ The material for our past webinars is listed below along with links to the recor
     * Link to [event advertising](https://lfaidata.foundation/blog/2021/09/30/the-value-egeria-brings-to-an-organization/)
     * Presentation 
       <div class="video-wrapper">
-      <iframe src="https://odpi.github.io/egeria-docs/education/webinar-program/egeria-webinar-the-value-of-egeria-4th-october-2021.pdf"></iframe>
+      <iframe src="https://odpi.github.io/education/webinar-program/egeria-webinar-the-value-of-egeria-4th-october-2021.pdf"></iframe>
       </div> 
     * YouTube Video:
       <div class="video-wrapper">
@@ -80,7 +80,7 @@ The material for our past webinars is listed below along with links to the recor
     This session is for people looking to understand the metadata across their ecosystem in terms of the Egeria open types and instances using visualisations in the Egeria React User Interface. Understanding the types is important knowledge when  developing connectors and new APIs like OMAS’s. This session will also show how metadata instances can be explored at a low level. This will be contrasted with an exploration of semantic data that is based on the Subject Area Open Metadata Access Service (OMAS).
     
     - Link to [event advertising](https://lfaidata.foundation/blog/2021/08/30/egeria-webinar-visualising-a-metadata-ecosystem/)
-    - Presentation [:material-microsoft-powerpoint:](https://odpi.github.io/egeria-docs/education/webinar-program/egeria-webinar-visualising-a-metadata-ecosystem-september-2021.pptx){ target=slides }
+    - Presentation [:material-microsoft-powerpoint:](https://odpi.github.io/education/webinar-program/egeria-webinar-visualising-a-metadata-ecosystem-september-2021.pptx){ target=slides }
     - YouTube Video:
       <div class="video-wrapper">
          <iframe width="560" height="315" src="https://www.youtube.com/embed/s-CCzS1Ojss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -88,13 +88,13 @@ The material for our past webinars is listed below along with links to the recor
 
 ## Older webinars
 
-- [Building a governed data lake with Egeria](/egeria-docs/education/previous-webinars/june-2020) - June 2020
-- [Building a Data Catalog with Egeria](/egeria-docs/education/previous-webinars/april-2020) - April 2020
-- [Egeria virtual metadata show](/egeria-docs/education/previous-webinars/march-2020) - March 2020 (Three days of topics relating to Egeria from ING, IBM and SAS).
-- [New Approaches to Managing Access to Sensitive Data](/egeria-docs/education/previous-webinars/december-2019) - December 2019
-- [Managing data privacy](/egeria-docs/education/previous-webinars/july-2018) - July 2018
-- [Metadata standards](/egeria-docs/education/previous-webinars/april-2018) - April 2018
-- [Free your metadata](/egeria-docs/education/previous-webinars/october-2017) - October 2017
+- [Building a governed data lake with Egeria](/education/previous-webinars/june-2020) - June 2020
+- [Building a Data Catalog with Egeria](/education/previous-webinars/april-2020) - April 2020
+- [Egeria virtual metadata show](/education/previous-webinars/march-2020) - March 2020 (Three days of topics relating to Egeria from ING, IBM and SAS).
+- [New Approaches to Managing Access to Sensitive Data](/education/previous-webinars/december-2019) - December 2019
+- [Managing data privacy](/education/previous-webinars/july-2018) - July 2018
+- [Metadata standards](/education/previous-webinars/april-2018) - April 2018
+- [Free your metadata](/education/previous-webinars/october-2017) - October 2017
 
 --8<-- "snippets/abbr.md"
 

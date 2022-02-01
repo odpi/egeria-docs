@@ -33,12 +33,12 @@ The module structure for the Asset Catalog OMAS is as follows:
 * [asset-catalog-api](asset-catalog-api) supports the common Java classes that are used both by the client and the server.
 * [asset-catalog-server](asset-catalog-server) supports the server side implementation of the access service.
  This includes the
-  * interaction with the [administration services](/egeria-docs/services/admin-services) for
+  * interaction with the [administration services](/services/admin-services) for
     registration, configuration, initialization and termination of the access service.
-  * interaction with the [repository services](/egeria-docs/services/omrs) to work with open metadata from the
-    [cohort](/egeria-docs/concepts/cohort-member).
+  * interaction with the [repository services](/services/omrs) to work with open metadata from the
+    [cohort](/concepts/cohort-member).
   * support for the access service's API and its related event management.
-* [asset-catalog-spring](asset-catalog-spring) supports the REST API using the [Spring](/egeria-docs/guides/contributor/runtime/#spring) libraries.
+* [asset-catalog-spring](asset-catalog-spring) supports the REST API using the [Spring](/guides/contributor/runtime/#spring) libraries.
 
 
 ###Search solution

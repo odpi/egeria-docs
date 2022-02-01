@@ -12,9 +12,9 @@ The `isPublic` flag is used on the open metadata types that relate to individual
 
 The `isPublic` flag is defined in the following open metadata type models:
 
-- [0112 People](/egeria-docs/types/1/0112-People)
-- [0150 Feedback](/egeria-docs/types/1/0150-Feedback)
-- [0160 Notes](/egeria-docs/types/1/0160-Notes)
+- [0112 People](/types/1/0112-People)
+- [0150 Feedback](/types/1/0150-Feedback)
+- [0160 Notes](/types/1/0160-Notes)
 
 
 --8<-- "snippets/abbr.md"

@@ -37,13 +37,13 @@ In this session, you will learn about the contents of the Egeria project. It wil
 
 [GitHub :material-dock-window:](https://github.com){ target=gh } is a public service for managing files - particularly files associated with a software project. Many open source projects use GitHub and Egeria is no exception.
 
-All content for the Egeria project is stored in git repositories. For example, these web pages you are reading as part of the dojo are managed in [Egeria's documentation git repository :material-github:](https://github.com/odpi/egeria-docs/tree/main/site/docs/getting-started/dojo){ target=gh }.
+All content for the Egeria project is stored in git repositories. For example, these web pages you are reading as part of the dojo are managed in [Egeria's documentation git repository :material-github:](https://github.com/odpi/tree/main/site/docs/getting-started/dojo){ target=gh }.
 
 ### Other resources
 
 The Egeria community love to collaborate on the work they do. Git and GitHub is an excellent way to exchange and manage files. In addition, the community runs public calls that anyone can join, as well as a number of Slack channels.
 
-Details of the different ways the community operates is described in our [community guide](/egeria-docs/guides/community).
+Details of the different ways the community operates is described in our [community guide](/guides/community).
 
 ### Test yourself
 
@@ -75,8 +75,8 @@ Before we get started there are some steps to prepare your machine.
 
 Follow the links below to find out a little bit about these technologies and ensure the software is installed.
 
-- [Docker Desktop](/egeria-docs/education/tutorials/docker-tutorial/overview)
-- [Postman](/egeria-docs/education/tutorials/postman-tutorial/overview)
+- [Docker Desktop](/education/tutorials/docker-tutorial/overview)
+- [Postman](/education/tutorials/postman-tutorial/overview)
 
 Once these technologies are installed, work through the tutorials - starting with Docker to get the OMAG Server Platform running and then Postman to get ready to work with the platform and the servers running on top if it.
 
@@ -106,29 +106,29 @@ Check that it is working by locating the `Get Server Origin` request in the
 `Egeria-platform-services` collection.
 When you click on that request in the left-hand list, a new tab opens and you can click on send to
 issue the request.  You should see the same response as when you issues the platform origin request from
-[Swagger](/egeria-docs/education/tutorials/docker-tutorial/overview) earlier.  Below is this response in Postman.
+[Swagger](/education/tutorials/docker-tutorial/overview) earlier.  Below is this response in Postman.
 
-![Postman server origin](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin.png)
+![Postman server origin](/education/tutorials/postman-tutorial/postman-platform-origin.png)
 
 If this does not work, then there is something wrong either in Postman or your platform.
 Check the URL string that was used in the request (shown in orange in the middle of the screen.)
 
 The screen shot below shows the error message when the egeria environment is not set.
 This can be fixed by setting it in the top right-hand dropdown.  If the Egeria environment is not
-listed then you need to load the environment ([Postman tutorial](/egeria-docs/education/tutorials/postman-tutorial/overview)).
+listed then you need to load the environment ([Postman tutorial](/education/tutorials/postman-tutorial/overview)).
 
-![Postman server origin - no environment](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-no-environment.png)
+![Postman server origin - no environment](/education/tutorials/postman-tutorial/postman-platform-origin-no-environment.png)
 
 If the baseURL variable is set to a different value to the server platform then Postman can not connect.
 In the screen capture below, you can see the baseURL is set to the default of `https://localhost:9443` when it should be
 `https://localhost:9443` because the platform is running in docker.
 
-![Postman server origin - wrong base url](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-wrong-base-url.png)
+![Postman server origin - wrong base url](/education/tutorials/postman-tutorial/postman-platform-origin-wrong-base-url.png)
 
 Finally, if the OMAG Server Platform is not running the even though everything is set up correctly in
-Postman, it has nothing to connect to.  Restart the platform ([Docker tutorial](/egeria-docs/education/tutorials/docker-tutorial/overview)).
+Postman, it has nothing to connect to.  Restart the platform ([Docker tutorial](/education/tutorials/docker-tutorial/overview)).
 
-![Postman server origin - platform down](/egeria-docs/education/tutorials/postman-tutorial/postman-platform-origin-no-platform.png)
+![Postman server origin - platform down](/education/tutorials/postman-tutorial/postman-platform-origin-no-platform.png)
 
 In last part of this session you will learn how to set up the OMAG Server Platform so that it is secure and
 determine the services and servers that are associated with the platform.
@@ -144,14 +144,14 @@ determine the services and servers that are associated with the platform.
 
 Review the description of the OMAG Server Platform configuration:
 
-* [Configuring the OMAG Server Platform](/egeria-docs/guides/admin/configuring-the-omag-server-platform)
+* [Configuring the OMAG Server Platform](/guides/admin/configuring-the-omag-server-platform)
 
 The link below takes you to a task description in the Egeria Administration User Guide.
 The user guide describes the REST API call(s) needed to complete the task.
 You can choose to type the request into postman, or use the requests already defined in the
 `Egeria-admin-services-platform-configuration` Postman collection.
 
-* [Add the Coco Pharmaceuticals platform security connector to the platform](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#platform-security)
+* [Add the Coco Pharmaceuticals platform security connector to the platform](/guides/admin/configuring-the-omag-server-platform/#platform-security)
   Try running the platform origin command again - it should fail with a security error.  Change the `user` variable
   in the Egeria environment from `me` to `garygeeke` and rerun the request.  It will work again because
   `garygeeke` is the user id of the Coco Pharmaceuticals IT infrastructure lead and has permission to run the platform

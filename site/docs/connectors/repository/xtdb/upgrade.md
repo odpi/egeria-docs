@@ -144,7 +144,7 @@ If a migration is necessary, it will immediately begin to run. The output will i
 
 ## 5. Start the connector
 
-Once the previous (in-place upgrade) command completes, you should now be able to start your connector. See the [instructions on configuring the connector](/egeria-docs/connectors/repository/xtdb/#configuration) for more details.
+Once the previous (in-place upgrade) command completes, you should now be able to start your connector. See the [instructions on configuring the connector](/connectors/repository/xtdb/#configuration) for more details.
 
 ## Change log
 

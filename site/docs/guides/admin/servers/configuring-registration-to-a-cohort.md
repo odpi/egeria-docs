@@ -4,14 +4,14 @@
 
 ## Configuring Registration to an Open Metadata Repository Cohort
 
-An [OMAG Server](/egeria-docs/concepts/omag-server) that is capable of being a
-[Cohort Member](/egeria-docs/concepts/cohort-member) can register with one or more
+An [OMAG Server](/concepts/omag-server) that is capable of being a
+[Cohort Member](/concepts/cohort-member) can register with one or more
 open metadata repository cohorts.  
 
 Each cohort has a memorable name - eg `cocoCohort`.  This name needs to be used in the
 configuration of each member.
 At the heart of a cohort are 1-4 cohort topics.
-These are topics on an [event bus](/egeria-docs/concepts/event-bus) that the members use to exchange information.
+These are topics on an [event bus](/concepts/event-bus) that the members use to exchange information.
 
 There is a choice of topic structure for the cohort.
 
@@ -38,7 +38,7 @@ member can be upgraded.
 
 The choices of topic structure are summarized in Figure 1.
 
-![Figure 1](/egeria-docs/concepts/cohort-topic-structure-choices.svg)
+![Figure 1](/concepts/cohort-topic-structure-choices.svg)
 > **Figure 1:** Choices of cohort topic structures referred to as SINGLE_TOPIC, DEDICATED_TOPICS and BOTH_SINGLE_AND_DEDICATED_TOPICS reading left to right
 
 ### Configuration commands
@@ -70,11 +70,11 @@ attribute of the Connection objects for each of the cohort topics.
 The additional properties supported are specific to the topic connector implementation.
 For example, [see the Apache Kafka Topic Connector Documentation](../../../adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/kafka-open-metadata-topic-connector).
 
-The result of the cohort configuration call fills out an entry in the cohort list of the server's [configuration document](/egeria-docs/concepts/configuration-document).
+The result of the cohort configuration call fills out an entry in the cohort list of the server's [configuration document](/concepts/configuration-document).
 The fields in a cohort list entry are show in Figure 2.
 
 
-![Figure 2](/egeria-docs/concepts/cohort-configuration.svg)
+![Figure 2](/concepts/cohort-configuration.svg)
 > **Figure 2:** Fields in an entry in a server's cohort list
 
 It is possible to update any of these fields directly using the following command:

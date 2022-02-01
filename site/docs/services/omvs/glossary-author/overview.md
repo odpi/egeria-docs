@@ -13,6 +13,6 @@ hide:
 Develop a definition of a subject area by authoring glossaries, including terms for use by a user interface. The Glossary Author OMVS is for user interfaces that support subject matter experts
 who are defining glossaries, reference data and rules around data for a specific subject area, such as "customer data". 
 
-This OMVS calls a remote server using the [Subject Area OMAS](/egeria-docs/services/omas/subject-area/overview).
+This OMVS calls a remote server using the [Subject Area OMAS](/services/omas/subject-area/overview).
 
 ---8<-- "snippets/abbr.md"

@@ -6,9 +6,9 @@
 
 ??? info "Connector summary"
 
-    - Connector Category: [Remediation Governance Action Service](/egeria-docs/concepts/governance-service)
-    - Hosting Service: [Governance Action OMES](/egeria-docs/services/omes/governance-action)
-    - Hosting Server: [Engine Host](/egeria-docs/concepts/engine-host)
+    - Connector Category: [Remediation Governance Action Service](/concepts/governance-service)
+    - Hosting Service: [Governance Action OMES](/services/omes/governance-action)
+    - Hosting Server: [Engine Host](/concepts/engine-host)
     - Source Module: [governance-action-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors)
     - Jar File Name: `governance-action-connectors.jar`
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.remediation.OriginSeekerGovernanceActionProvider`
@@ -42,9 +42,9 @@ Finally the origin is not assigned because there are no origin classifications i
 
 ## Configuration
 
-This connector uses the [Governance Action OMES](/egeria-docs/services/omes/governance-action) running in the [Engine Host](/egeria-docs/concepts/engine-host).
+This connector uses the [Governance Action OMES](/services/omes/governance-action) running in the [Engine Host](/concepts/engine-host).
 
-This is its connection definition to use when creating the definition of the governance action service using the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine). Note that is does not use configuration properties. 
+This is its connection definition to use when creating the definition of the governance action service using the [Governance Engine OMAS](/services/omas/governance-engine). Note that is does not use configuration properties. 
 
 
 ```json
@@ -63,7 +63,7 @@ This is its connection definition to use when creating the definition of the gov
 
 ## Governance Action Settings
 
-When this governance action service is called through a [GovernanceAction](/egeria-docs/types/0463-Governance-Actions) it supports the following options.
+When this governance action service is called through a [GovernanceAction](/types/0463-Governance-Actions) it supports the following options.
 
 #### Request Types and Parameters
 
@@ -87,12 +87,12 @@ These are the responses that origin seeker produces:
 
 ## Examples of use
 
-The [Open Metadata Labs](/egeria-docs/education/open-metadata-labs): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
+The [Open Metadata Labs](/education/open-metadata-labs): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
 
 ## Related Information
 
-* See the *Asset Lineage* section in [Asset Catalog Contents](/egeria-docs/patterns/metadata-manager/#asset-lineage).
-* [Designing a Remediation Governance Action Service](/egeria-docs/guides/developer/governance-action-services/remediation-governance-service).
+* See the *Asset Lineage* section in [Asset Catalog Contents](/patterns/metadata-manager/#asset-lineage).
+* [Designing a Remediation Governance Action Service](/guides/developer/governance-action-services/remediation-governance-service).
 
 ## Suggested Enhancements
 

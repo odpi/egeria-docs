@@ -7,7 +7,7 @@ Egeria has a growing collection of *connectors* to third party technologies. The
 
 A connector is a client to a third party technology. It supports a standard API that Egeria calls and it then translates these calls into requests to the third party technology. Some connectors are also able to listen for notifications from the third party technology. When a notification is received, the connector converts its content into a call to Egeria to distribute the information to the open metadata ecosystem.
 
-Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the [OMAG servers](/egeria-docs/concepts/omag-server). The Connector Catalog list the connector implementations supplied by the Egeria community. There are three broad categories of connectors and the connector catalog is organized accordingly:
+Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the [OMAG servers](/concepts/omag-server). The Connector Catalog list the connector implementations supplied by the Egeria community. There are three broad categories of connectors and the connector catalog is organized accordingly:
 
 * Connectors that support the [exchange and maintenance of metadata](#metadata-exchange-and-maintenance-connectors). This includes the integration connectors, repository connectors, discovery services and governance action services.
 
@@ -21,9 +21,9 @@ The connectors that support the exchange and maintenance of metadata help to acc
 
 | Type of Connector | Description |
 |---|---|
-| [Integration connectors](#integration-connectors) | manage the metadata exchange to a third party technology through an [integration service](/egeria-docs/services/omis). |
-| [Repository and Event Mapper connectors](#repository-and-event-mapper-connectors) | integrate metadata repositories into the open metadata ecosystem so that they can interact with one or more [open metadata repository cohorts](/egeria-docs/services/omrs/cohort). |
-| [Open Discovery Services](#open-discovery-services) | analyze the content of [resources](/egria-docs/concepts/resource) in the digital landscape and create annotations that are attached to the resource's [asset](/egeria-docs/concepts/asset) metadata element in the open metadata repositories in the form of an open discovery report |
+| [Integration connectors](#integration-connectors) | manage the metadata exchange to a third party technology through an [integration service](/services/omis). |
+| [Repository and Event Mapper connectors](#repository-and-event-mapper-connectors) | integrate metadata repositories into the open metadata ecosystem so that they can interact with one or more [open metadata repository cohorts](/services/omrs/cohort). |
+| [Open Discovery Services](#open-discovery-services) | analyze the content of [resources](/egria-docs/concepts/resource) in the digital landscape and create annotations that are attached to the resource's [asset](/concepts/asset) metadata element in the open metadata repositories in the form of an open discovery report |
 | [Governance Action Services](#governance-action-services) | perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities as required. |
 
 ### Integration Connectors
@@ -32,16 +32,16 @@ The connectors that support the exchange and maintenance of metadata help to acc
 
 #### Cataloguing Files
 
-The *files* integration connectors run in the [Files Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/files-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The *files* integration connectors run in the [Files Integrator Open Metadata Integration Service (OMIS)](/services/omis/files-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
 
 | Files Integration Connectors | Description |
 |---|---|
-| [Data files monitor](/egeria-docs/connectors/integration/data-files-monitor-integration-connector) | maintains a `DataFile` asset for each file in the directory (or any subdirectory). When a new file is created, a new DataFile asset is created.  If a file is modified, the lastModified property of the corresponding DataFile asset is updated.  When a file is deleted, its corresponding DataFile asset is also deleted (or archived if it is still needed for lineage). |
-| [Data folder monitor](/egeria-docs/connectors/integration/data-folder-monitor-integration-connector) | maintains a `DataFolder` asset for the directory.  The files and directories underneath it are assumed to be elements/records in the DataFolder asset and so each time there is a change to the files and directories under the monitored directory, it results in an update to the lastModified property of the corresponding DataFolder asset. |
+| [Data files monitor](/connectors/integration/data-files-monitor-integration-connector) | maintains a `DataFile` asset for each file in the directory (or any subdirectory). When a new file is created, a new DataFile asset is created.  If a file is modified, the lastModified property of the corresponding DataFile asset is updated.  When a file is deleted, its corresponding DataFile asset is also deleted (or archived if it is still needed for lineage). |
+| [Data folder monitor](/connectors/integration/data-folder-monitor-integration-connector) | maintains a `DataFolder` asset for the directory.  The files and directories underneath it are assumed to be elements/records in the DataFolder asset and so each time there is a change to the files and directories under the monitored directory, it results in an update to the lastModified property of the corresponding DataFolder asset. |
 
 #### Cataloguing Databases and their Schemas
 
-The *database* integration connectors run in the [Database Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/database-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The *database* integration connectors run in the [Database Integrator Open Metadata Integration Service (OMIS)](/services/omis/database-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
 
 | Database Integration Connectors | Description |
 |---|---|
@@ -49,41 +49,41 @@ The *database* integration connectors run in the [Database Integrator Open Metad
 
 #### Cataloguing event topics and the structure of their events
 
-The *topic* integration connectors run in the [Topic Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/topic-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The *topic* integration connectors run in the [Topic Integrator Open Metadata Integration Service (OMIS)](/services/omis/topic-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
 
 | Topic Integration Connector | Description |
 |---|---|
-| [Kafka Monitor topic integration connector](/egeria-docs/connectors/integration/kafka-monitor-integration-connector) | automatically maintains the open metadata instances for the topics hosted on an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka }.|
+| [Kafka Monitor topic integration connector](/connectors/integration/kafka-monitor-integration-connector) | automatically maintains the open metadata instances for the topics hosted on an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka }.|
 
 #### Cataloguing APIs
 
-The *API* integration connectors run in the [API Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/api-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The *API* integration connectors run in the [API Integrator Open Metadata Integration Service (OMIS)](/services/omis/api-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
 
 | API Integration Connectors | Description |
 |---|---|
-| [Open API Monitor integration connector](/egeria-docs/connectors/integration/open-api-monitor-integration-connector) | automatically maintains the open metadata instances for the APIs extracted from the Open API Specification extracted from an application.|
+| [Open API Monitor integration connector](/connectors/integration/open-api-monitor-integration-connector) | automatically maintains the open metadata instances for the APIs extracted from the Open API Specification extracted from an application.|
 
 #### Populating security enforcement engines
 
-The security integration connectors run in the [Security Integrator Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis/security-integrator) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).
+The security integration connectors run in the [Security Integrator Open Metadata Integration Service (OMIS)](/services/omis/security-integrator) hosted in the [integration daemon](/concepts/integration-daemon).
 
 #### Capturing and publishing Lineage
 
-The lineage integration connectors run in the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview) hosted in the [integration daemon](/egeria-docs/concepts/integration-daemon).  They support [Lineage Management](/egeria-docs/features/lineage-management/overview).
+The lineage integration connectors run in the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).  They support [Lineage Management](/features/lineage-management/overview).
 
 
 | Lineage Integration Connectors | Description |
 |---|---|
-| [Open Lineage Event Receiver integration connector](/egeria-docs/connectors/integration/open-lineage-event-receiver-integration-connector) | Connector to receive open lineage events from an event topic and publish them to lineage integration connectors with listeners registered in the same instance of the Lineage Integrator OMIS.|
-| [Governance Action to Open Lineage integration connector](/egeria-docs/connectors/integration/governance-action-open-lineage-integration-connector) | Connector to listen for governance actions executing in the open metadata ecosystem, generate open lineage events for them and publish them to the integration connectors running in the same instance of Lineage Integrator OMIS that are listening for OpenLineage events. |
-| [API-based Open Lineage Log Store integration connector](/egeria-docs/connectors/integration/api-based-open-lineage-log-store-integration-connector) | Connector that calls an OpenLineage compliant API to store the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS.|
-| [File-based Open Lineage Log Store integration connector](/egeria-docs/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
-| [Open Lineage Cataloguer integration connector](/egeria-docs/connectors/integration/open-lineage-cataloguer-integration-connector) | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem. |
+| [Open Lineage Event Receiver integration connector](/connectors/integration/open-lineage-event-receiver-integration-connector) | Connector to receive open lineage events from an event topic and publish them to lineage integration connectors with listeners registered in the same instance of the Lineage Integrator OMIS.|
+| [Governance Action to Open Lineage integration connector](/connectors/integration/governance-action-open-lineage-integration-connector) | Connector to listen for governance actions executing in the open metadata ecosystem, generate open lineage events for them and publish them to the integration connectors running in the same instance of Lineage Integrator OMIS that are listening for OpenLineage events. |
+| [API-based Open Lineage Log Store integration connector](/connectors/integration/api-based-open-lineage-log-store-integration-connector) | Connector that calls an OpenLineage compliant API to store the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS.|
+| [File-based Open Lineage Log Store integration connector](/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
+| [Open Lineage Cataloguer integration connector](/connectors/integration/open-lineage-cataloguer-integration-connector) | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem. |
 
 ??? education "Further information relating to integration connectors"
     
-    - [Configuring an integration connector](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) to understand how to set up an integration connector.
-    - [Writing an integration connector](/egeria-docs/guides/developer/integration-connectors/overview) for more information on writing new integration connectors.
+    - [Configuring an integration connector](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) to understand how to set up an integration connector.
+    - [Writing an integration connector](/guides/developer/integration-connectors/overview) for more information on writing new integration connectors.
 
 
 ### Repository and Event Mapper Connectors
@@ -95,7 +95,7 @@ The table below lists the repository connectors supporting the native open metad
 | Native Repository Connector | Description |
 |---|---|
 | [JanusGraph OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector){ target=gh } | provides a native repository for a metadata server using [JanusGraph :material-dock-window:](https://janusgraph.org){ target=janus } as the backend. |
-| [XTDB OMRS Repository Connector](/egeria-docs/connectors/repository/xtdb) | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the persistent store. |
+| [XTDB OMRS Repository Connector](/connectors/repository/xtdb) | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the persistent store. |
 | [In-memory OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector){ target=gh } | provides a simple native repository implementation that "stores" metadata in HashMaps within the JVM; it is used for testing, or for environments where metadata maintained in other repositories needs to be cached locally for performance/scalability reasons.  |
 | [Read-only OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector){ target=gh } | provides a native repository implementation that does not support the interfaces for create, update, delete; however, it does support the search interfaces and is able to cache metadata -- this means it can be loaded with open metadata archives to provide standard metadata definitions. |
 
@@ -109,9 +109,9 @@ The table below lists the repository connectors that act as an adapter for third
 
 ??? education "Further information relating to Repository and Event Mapper connectors"
     
-    - [Configuring a native repository connector](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
-    - [Configuring an adapter repository connector](/egeria-docs/guides/admin/servers/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/egeria-docs/concepts/repository-proxy).
-    - [Writing repository and event mapper connectors](/egeria-docs/guides/developer/repository-connectors/overview) for more information on writing new repository and event mapper connectors.
+    - [Configuring a native repository connector](/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/concepts/metadata-access-store).
+    - [Configuring an adapter repository connector](/guides/admin/servers/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/concepts/repository-proxy).
+    - [Writing repository and event mapper connectors](/guides/developer/repository-connectors/overview) for more information on writing new repository and event mapper connectors.
 
 ### Open Discovery Services
 
@@ -120,13 +120,13 @@ The table below lists the repository connectors that act as an adapter for third
 | Connector | Description |
 |---|---|
 | [CSV Discovery Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | extracts the column names from the first line of the file, counts up the number of records in the file and extracts its last modified time. |
-| [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/egeria-docs/frameworks/odf/#discovery-pipeline)). |
+| [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)). |
 
 ??? education "Further information relating to Open Discovery Services"
     
-    - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the open discovery services run.
-    - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [open discovery engine](/egeria-docs/concepts/open-discovery-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
-    - [Writing an open discovery service](/egeria-docs/guides/developer/open-discovery-services/overview) for information on writing new open discovery services.
+    - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the open discovery services run.
+    - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [open discovery engine](/concepts/open-discovery-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
+    - [Writing an open discovery service](/guides/developer/open-discovery-services/overview) for information on writing new open discovery services.
 
 ### Governance Action Services
 
@@ -134,16 +134,16 @@ The table below lists the repository connectors that act as an adapter for third
 
 | Connector | Description |
 |---|---|
-| [Generic Element Watchdog Governance Action Service](/egeria-docs/connectors/governance-action/generic-element-watchdog-governance-action-service) | listens for changing metadata elements and initiates governance action processes when certain events occur. |
-| [Generic Folder Watchdog Governance Action Service](/egeria-docs/connectors/governance-action/generic-folder-watchdog-governance-action-service) | listens for changing assets linked to a `DataFolder` element and initiates governance actions when specific events occur. This may be for files directly linked to the folder or located in sub-folders.|
-| [Move/Copy File Provisioning Governance Action Service](/egeria-docs/connectors/governance-action/move-copy-file-provisioning-governance-action-service) | moves or copies files from one location to another and maintains the lineage of the action. |
-| [Origin Seeker Remediation Governance Action Service](/egeria-docs/connectors/governance-action/origin-seeker-remediation-governance-action-service) | walks backwards through the lineage mappings to discover the origin of the data |
+| [Generic Element Watchdog Governance Action Service](/connectors/governance-action/generic-element-watchdog-governance-action-service) | listens for changing metadata elements and initiates governance action processes when certain events occur. |
+| [Generic Folder Watchdog Governance Action Service](/connectors/governance-action/generic-folder-watchdog-governance-action-service) | listens for changing assets linked to a `DataFolder` element and initiates governance actions when specific events occur. This may be for files directly linked to the folder or located in sub-folders.|
+| [Move/Copy File Provisioning Governance Action Service](/connectors/governance-action/move-copy-file-provisioning-governance-action-service) | moves or copies files from one location to another and maintains the lineage of the action. |
+| [Origin Seeker Remediation Governance Action Service](/connectors/governance-action/origin-seeker-remediation-governance-action-service) | walks backwards through the lineage mappings to discover the origin of the data |
 
 ??? education "Further information relating to Governance Action Services"
     
-    - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the governance action services run.
-    - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/egeria-docs/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
-    - [Writing a governance action service](/egeria-docs/guides/developer/governance-action-services/overview) for information on writing new governance action services.
+    - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the governance action services run.
+    - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
+    - [Writing a governance action service](/guides/developer/governance-action-services/overview) for information on writing new governance action services.
 
 ### Archive Services
 
@@ -153,22 +153,22 @@ There are currently no archive services supplied by Egeria.
 
 ??? education "Further information relating to Archive Services"
 
-    - [Configuring an engine host](/egeria-docs/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/egeria-docs/concepts/engine-host) server where the governance action services run.
-    - [Setting up a governance engine content pack](/egeria-docs/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [archive engine](/egeria-docs/concepts/archive-engine) definition to load into a [Metadata Access Store](/egeria-docs/concepts/metadata-access-store).
-    - [Writing an archive service](/egeria-docs/guides/developer/archive-services/overview) to understand how to write an archive service.
+    - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the governance action services run.
+    - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [archive engine](/concepts/archive-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
+    - [Writing an archive service](/guides/developer/archive-services/overview) to understand how to write an archive service.
 
 
 ## Runtime connectors
 
-*Runtime* connectors enable Egeria's [OMAG Server Platform](/egeria docs/concepts/omag-server-platform) and its hosted [OMAG Servers](/egeria-docs/concepts/omag-server) to operate in many environments by providing plug-in points for the runtime services it needs to operate. Most of the runtime connectors relate to persistent storage, or connections to distributed services.
+*Runtime* connectors enable Egeria's [OMAG Server Platform](/egeria docs/concepts/omag-server-platform) and its hosted [OMAG Servers](/concepts/omag-server) to operate in many environments by providing plug-in points for the runtime services it needs to operate. Most of the runtime connectors relate to persistent storage, or connections to distributed services.
 
 | Type | Description |
 |---|---|
 | [Platform Metadata Security Connectors](#platform-metadata-security-connectors) | manage authorization requests for the OMAG Server Platform's services. |
 | [Server Metadata Security Connectors](#server-metadata-security-connectors) | manage authorization requests for the OMAG Server's services. |
-| [Configuration Document Store Connectors](#configuration-document-store-connectors) | manage the persistence and retrieval of [configuration documents](/egeria-docs/concepts/configuration-document). |
-| [Cohort Registry Store Connectors](#cohort-registry-store-connectors) | store the [open metadata repository cohort](/egeria-docs/concepts/cohort-member) membership details in the [cohort registry store](/egeria-docs/concepts/cohort-registry-store). |
-| [Open Metadata Archive Store Connectors](#open-metadata-archive-store-connectors) | read and write [open metadata archives](/egeria-docs/concepts/open-metadata-archive). |
+| [Configuration Document Store Connectors](#configuration-document-store-connectors) | manage the persistence and retrieval of [configuration documents](/concepts/configuration-document). |
+| [Cohort Registry Store Connectors](#cohort-registry-store-connectors) | store the [open metadata repository cohort](/concepts/cohort-member) membership details in the [cohort registry store](/concepts/cohort-registry-store). |
+| [Open Metadata Archive Store Connectors](#open-metadata-archive-store-connectors) | read and write [open metadata archives](/concepts/open-metadata-archive). |
 | [Audit Log Destination Connectors](#audit-log-destination-connectors) | support different destinations for audit log records. |
 | [REST Client Connectors](#rest-client-connectors) | issue REST API calls to Egeria's deployed platforms and third party technologies. |
 | [Cohort Member Client Connector](#cohort-member-client-connectors) | supports repository service called to remote cohort members. |
@@ -184,9 +184,9 @@ There is one implementation of the platform metadata security connector provided
 
 ??? education "Further information relating to Platform Metadata Security Connectors"
 
-    - [Configuring a Platform Metadata Security Connector](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
-    - [Metadata Security](/egeria-docs/features/metadata-security/overview) to understand the platform metadata security connector in the context of all of the security features.
-    - [Writing a Platform Metadata Security Connector](/egeria-docs/guides/developer/runtime-connectors/platform-metadata-security-connector).
+    - [Configuring a Platform Metadata Security Connector](/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/concepts/omag-server-platform)
+    - [Metadata Security](/features/metadata-security/overview) to understand the platform metadata security connector in the context of all of the security features.
+    - [Writing a Platform Metadata Security Connector](/guides/developer/runtime-connectors/platform-metadata-security-connector).
 
 
 ### Server Metadata Security Connectors
@@ -199,9 +199,9 @@ There is one implementation of the server metadata security connector provided b
 
 ??? education "Further information relating to Server Metadata Security Connectors"
 
-    - [Configuring a Server Metadata Security Connector](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
-    - [Metadata Security](/egeria-docs/features/metadata-security/overview) to understand the server metadata security connector in the context of all of the security features.
-    - [Writing a Server Metadata Security Connector](/egeria-docs/guides/developer/runtime-connectors/server-metadata-security-connector).
+    - [Configuring a Server Metadata Security Connector](/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/concepts/omag-server-platform)
+    - [Metadata Security](/features/metadata-security/overview) to understand the server metadata security connector in the context of all of the security features.
+    - [Writing a Server Metadata Security Connector](/guides/developer/runtime-connectors/server-metadata-security-connector).
 
 
 ### Configuration Document Store Connectors
@@ -217,8 +217,8 @@ There are two implementations of the configuration document store connector prov
 
 ??? education "Further information relating to Configuration Document Store Connectors"
 
-    - [Configuring a Configuration Document Store Connector](/egeria-docs/guides/admin/configuring-the-omag-server-platform/#configuration-store) in the [OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
-    - [Writing a Configuration Document Store Connector](/egeria-docs/guides/developer/runtime-connectors/configuration-document-store-connector).
+    - [Configuring a Configuration Document Store Connector](/guides/admin/configuring-the-omag-server-platform/#configuration-store) in the [OMAG Server Platform](/concepts/omag-server-platform)
+    - [Writing a Configuration Document Store Connector](/guides/developer/runtime-connectors/configuration-document-store-connector).
 
 
 ### Cohort Registry Store Connectors
@@ -232,9 +232,9 @@ Egeria provides a single implementation of a cohort registry store connector:
 
 ??? education "Further information relating to Cohort Registry Store Connectors"
 
-    - [Configuring a Cohort Registry Store Connector](/egeria-docs/guides/admin/servers/configuring-the-cohort-registry-store-connector) in the [Cohort Member](/egeria-docs/concepts/cohort-member) server
-    - [Cohort Operations](/egeria-docs/features/metadata-security/overview) to understand the way the cohort is formed.
-    - [Writing a Cohort Registry Store Connector](/egeria-docs/guides/developer/runtime-connectors/cohort-registry-store-connector).
+    - [Configuring a Cohort Registry Store Connector](/guides/admin/servers/configuring-the-cohort-registry-store-connector) in the [Cohort Member](/concepts/cohort-member) server
+    - [Cohort Operations](/features/metadata-security/overview) to understand the way the cohort is formed.
+    - [Writing a Cohort Registry Store Connector](/guides/developer/runtime-connectors/cohort-registry-store-connector).
 
   
 ### Open Metadata Archive Store Connectors
@@ -251,11 +251,11 @@ Egeria provides two implementations of the open metadata archive store connector
 
 ??? education "Further information relating to Open Metadata Archive Store Connectors"
 
-    - [Metadata Archiving](/egeria-docs/features/metadata-archiving/overview) to understand the different mechanisms that use open metadata archives.
-    - [Open Metadata Archives](/egeria-docs/concepts/open-metadata-archive) to understand structure of an open metadata archive.
-    - [Writing a Open Metadata Archive Store Connector](/egeria-docs/guides/developer/runtime-connectors/open-metadata-archive-store-connector).
-    - [Loading an Open Metadata Archive at server statup](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup)
-    - [Loading an Open Metadata Archive in a running server](/egeria-docs/guides/operations/adding-archive-to-running-server)
+    - [Metadata Archiving](/features/metadata-archiving/overview) to understand the different mechanisms that use open metadata archives.
+    - [Open Metadata Archives](/concepts/open-metadata-archive) to understand structure of an open metadata archive.
+    - [Writing a Open Metadata Archive Store Connector](/guides/developer/runtime-connectors/open-metadata-archive-store-connector).
+    - [Loading an Open Metadata Archive at server statup](/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup)
+    - [Loading an Open Metadata Archive in a running server](/guides/operations/adding-archive-to-running-server)
 
 
 ### Audit Log Destination Connectors
@@ -279,9 +279,9 @@ Below are the connector implementations provided by Egeria
 
 ??? education "Further information relating to Audit Log Destination Connectors"
 
-    - [Configuring a Audit Log Destination Connector](/egeria-docs/concepts/audit-log/#configure-the-audit-log) in the [Cohort Member](/egeria-docs/concepts/cohort-member) server
-    - [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview) to understand the framework behind the audit log.
-    - [Writing a Audit Log Destination Connector](/egeria-docs/guides/developer/runtime-connectors/audit-log-destination-connector).
+    - [Configuring a Audit Log Destination Connector](/concepts/audit-log/#configure-the-audit-log) in the [Cohort Member](/concepts/cohort-member) server
+    - [Audit Log Framework (ALF)](/frameworks/alf/overview) to understand the framework behind the audit log.
+    - [Writing a Audit Log Destination Connector](/guides/developer/runtime-connectors/audit-log-destination-connector).
 
 ### REST Client Connectors
 
@@ -292,26 +292,26 @@ Egeria provides a single implementation for Spring.
 * [Spring REST Client Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/rest-client-connectors/spring-rest-client-connector){ target=gh }
   uses the Spring RESTClient to issue REST API calls.
   
-This is embedded in Egeria's [clients](/egeria-docs/guides/developer/using-egeria-clients).
+This is embedded in Egeria's [clients](/guides/developer/using-egeria-clients).
 
 
 ### Cohort Member Client Connectors
 
 ---8<-- "docs/connectors/runtime/cohort-member-client-connector-intro.md"
 
-Egeria's [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) provides a default REST API implementation and a corresponding client:
+Egeria's [Open Metadata Repository Services (OMRS)](/services/omrs) provides a default REST API implementation and a corresponding client:
 
 * [REST Cohort Client Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector){ target=gh }
   supports remote calls to the OMRS REST API.
   
 The connection for this connector is configured in the `LocalRepositoryRemoteConnection` property of the
-cohort member's [Local Repository Configuration](/egeria-docs/user/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-local-repository).
+cohort member's [Local Repository Configuration](/user/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-local-repository).
 
 ## Digital resource connectors
 
 *Digital resource* connectors provide access to digital resources and their metadata that is stored in the open metadata ecosystem.  These connectors are for use by external applications and tools to connect with resources and services in the digital landscape.  These connectors also supply the Asset metadata from Egeria that describes these resources.
 
-Instances of these connectors are created through the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) or [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) interfaces. They use the Connection linked to the corresponding Asset in the open metadata ecosystem. Connection objects are associated with assets in the metadata catalog using the Asset Owner OMAS, [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview) and [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview).
+Instances of these connectors are created through the [Asset Consumer OMAS](/services/omas/asset-consumer/overview) or [Asset Owner OMAS](/services/omas/asset-owner/overview) interfaces. They use the Connection linked to the corresponding Asset in the open metadata ecosystem. Connection objects are associated with assets in the metadata catalog using the Asset Owner OMAS, [Data Manager OMAS](/services/omas/data-manager/overview) and [Asset Manager OMAS](/services/omas/asset-manager/overview).
 
 
 ### Files
@@ -335,10 +335,10 @@ Instances of these connectors are created through the [Asset Consumer OMAS](/ege
 
 Egeria provides a single implementation of an open metadata connector for Apache Kafka that it uses by default.
 
-* The [Kafka Open Metadata Topic Connector](/egeria-docs/connectors/resource-connectors/kafka-open-metadata-topic-connector) implements  an [Apache Kafka](https://kafka.apache.org/) connector for a topic that exchanges Java Objects as JSON payloads.
+* The [Kafka Open Metadata Topic Connector](/connectors/resource-connectors/kafka-open-metadata-topic-connector) implements  an [Apache Kafka](https://kafka.apache.org/) connector for a topic that exchanges Java Objects as JSON payloads.
 
 
-It is configured in the Egeria [OMAG Servers](/egeria-docs/concepts/omag-server) through the [Event Bus Configuration](/egeria-docs/concepts/event-bus).
+It is configured in the Egeria [OMAG Servers](/concepts/omag-server) through the [Event Bus Configuration](/concepts/event-bus).
 
 
 

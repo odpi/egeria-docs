@@ -12,32 +12,32 @@ Communities are typically long running endeavours.
 Communities have [members](#community-member).  These are the people working together in the
 community.
 
-The community can gather together a [collection](/egeria-docs/concepts/collection) of [useful metadata elements, such as assets, projects, glossary terms](/egeria-docs/concepts/useful-resource), and a collection of [external references](/egeria-docs/conceepts/external-reference). 
+The community can gather together a [collection](/concepts/collection) of [useful metadata elements, such as assets, projects, glossary terms](/concepts/useful-resource), and a collection of [external references](/conceepts/external-reference). 
 
 The members can create [forums](#community-forum) on different topics to share information.
 
-The members can attach [comments](/egeria-docs/concepts/comment) to the community itself and to forum
+The members can attach [comments](/concepts/comment) to the community itself and to forum
 contributions, and add replies to them.
 
-Members can also provide [reviews](/egeria-docs/concepts/review) to forum contributions.  This includes a star rating and
+Members can also provide [reviews](/concepts/review) to forum contributions.  This includes a star rating and
 review comment.
 
 Members can add tags to the community and any of its contents.
 
-Members can also add [a like](/egeria-docs/concepts/like) to the community and any of its contents.
+Members can also add [a like](/concepts/like) to the community and any of its contents.
 
 ## Community Member
 
-A community member is a person whose profile is linked to a [community](/egeria-docs/concepts/community).
+A community member is a person whose profile is linked to a [community](/concepts/community).
 
 There are different [roles](#community-roles) a community member can be assigned to.
 Each has different privileges.
 
 ## Community Forum
 
-A community forum provides a place for a [community](/egeria-docs/concepts/community) to store notes and comments
+A community forum provides a place for a [community](/concepts/community) to store notes and comments
 about a specific topic.  Forums can be
-created by [community contributors, administrators and leaders](/egeria-docs/concepts/community/#community-roles).
+created by [community contributors, administrators and leaders](/concepts/community/#community-roles).
 
 Each forum has a name, description and a list of
 **forum contributions**.

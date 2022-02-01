@@ -7,7 +7,7 @@ Egeria is an open source project that is delivered both as source code as well a
 
 This tutorial will guide you through the process of downloading the core Egeria source code from [GitHub](https://github.com/) and building it so that you can run it on your local machine.  
 
-Alternatively you can also use [Kubernetes](/egeria-docs/guides/operations/kubernetes) to run Egeria.  This uses the published builds of Egeria and does not require you to build Egeria on your machine.
+Alternatively you can also use [Kubernetes](/guides/operations/kubernetes) to run Egeria.  This uses the published builds of Egeria and does not require you to build Egeria on your machine.
 
 ## Prerequisite technology for building Egeria
 
@@ -34,14 +34,14 @@ You are now ready to [build the egeria source](#building-the-egeria-source).
 ## What next?
 
 This is the end of the *Downloading and Building Egeria Tutorial*.    You are now
-ready to [learn about the OMAG Server Platform](/egeria-docs/education/tutorials/omag-server-tutorial/overview).
+ready to [learn about the OMAG Server Platform](/education/tutorials/omag-server-tutorial/overview).
 
 Alternatively ...
 
-* [Run the open metadata labs to get experience with using Egeria](/egeria-docs/education/open-metadata-labs/overview)
+* [Run the open metadata labs to get experience with using Egeria](/education/open-metadata-labs/overview)
 or
-* [Learn about developing extensions to Egeria](/egeria-docs/guides/developer)
+* [Learn about developing extensions to Egeria](/guides/developer)
 or
-* [Learn how to make a contribution to Egeria](/egeria-docs/education/egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria)
+* [Learn how to make a contribution to Egeria](/education/egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria)
 
 ---8<-- "snippets/abbr.md"

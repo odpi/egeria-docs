@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Endpoint - part of the [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview)
+# Endpoint - part of the [Open Connector Framework (OCF)](/frameworks/ocf/overview)
 
 The endpoint is a set of properties that defines the 
 network address and how to connect to it for a resource deployed in the digital landscape.
@@ -30,7 +30,7 @@ access the Asset.
 ## Further information
 
  * The open metadata type for an endpoint is defined in 
-   [model 0026](/egeria-docs/types/0/0026-Endpoints).
+   [model 0026](/types/0/0026-Endpoints).
 
 
 --8<-- "snippets/abbr.md"

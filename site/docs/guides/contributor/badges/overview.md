@@ -22,6 +22,6 @@ Awarded when an individual becomes an Egeria maintainer.
 ![Egeria Maintainers Badge](maintainer-badge.png)
 
 Both of these roles are described in more detail in the
-[Egeria Operations Guide](/egeria-docs/guides/project-operations).
+[Egeria Operations Guide](/guides/project-operations).
 
 --8<-- "snippets/abbr.md"

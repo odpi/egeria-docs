@@ -10,9 +10,9 @@ hide:
 
 ??? info "Connector summary"
 
-    - Connector Category: [Watchdog Governance Action Service](/egeria-docs/frameworks/gaf/#watchdog-governance-service)
-    - Hosting Service: [Governance Action OMES](/egeria-docs/services/omes/governance-action)
-    - Hosting Server: [Engine Host](/egeria-docs/concepts/engine-host)
+    - Connector Category: [Watchdog Governance Action Service](/frameworks/gaf/#watchdog-governance-service)
+    - Hosting Service: [Governance Action OMES](/services/omes/governance-action)
+    - Hosting Server: [Engine Host](/concepts/engine-host)
     - Source Module: [governance-action-connectors :material-github:](../../../open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh }
     - Jar File Name: `governance-action-connectors.jar`
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.watchdog/GenericElementWatchdogGovernanceActionProvider.java`
@@ -33,7 +33,7 @@ It is possible to listen for:
 
 ## Configuration
 
-This connector uses the [Governance Action OMES](/egeria-docs/omes/governance-action) running in the [engine host](/egeria-docs/concepts/engine-host).
+This connector uses the [Governance Action OMES](/omes/governance-action) running in the [engine host](/concepts/engine-host).
 
 The following properties can be set up in its connection's configuration properties and overridden by the request parameters:
 
@@ -83,11 +83,11 @@ The rest of the properties are the governance action processes to call for speci
     }
     ```
 
-    This is its connection definition to use when creating the definition of the governance action service using the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine). Remove the configuration properties that are not required. Replace `{{typeName}}`, `{{guid}}` and `{{processQualifiedName}}` as required.
+    This is its connection definition to use when creating the definition of the governance action service using the [Governance Engine OMAS](/services/omas/governance-engine). Remove the configuration properties that are not required. Replace `{{typeName}}`, `{{guid}}` and `{{processQualifiedName}}` as required.
 
 ## Governance action settings
 
-When this governance action service is called through a [`GovernanceAction`](/egeria-docs/types/4/0463-governance-actions/#governanceaction) it supports the following options:
+When this governance action service is called through a [`GovernanceAction`](/types/4/0463-governance-actions/#governanceaction) it supports the following options:
 
 ### Request types and parameters
 
@@ -114,6 +114,6 @@ On completion, this governance action service uses:
 - `CompletionStatus.FAILED` with guard `monitoring-failed` - monitor not configured correctly or failed 
 
 ??? education "Further information"
-    - This connector is configured in the `governDL01` engine host server as part of the *automated curation* asset management [hands-on lab](/egeria-docs/education/open-metadata-labs/overview).
+    - This connector is configured in the `governDL01` engine host server as part of the *automated curation* asset management [hands-on lab](/education/open-metadata-labs/overview).
 
 --8<-- "snippets/abbr.md"

@@ -11,7 +11,7 @@ Projects are used to organize a specific activity. The project is used to contro
 
 Projects organize resources to build new capability or improve existing capability. Related projects can be organized into campaigns. Small items of work, typically performed by a single person, can be defined as tasks for a project.
 
-Notice that the project acts as an anchor for collections of resources that the project is using. Since it is a Referenceable, it can have links to external URLs, such as the project home page, project plan or APIs as well as images (see [0015 Linked Media Types](/egeria-docs/types/0/0015-Linked-Media-Types) in Area 0).
+Notice that the project acts as an anchor for collections of resources that the project is using. Since it is a Referenceable, it can have links to external URLs, such as the project home page, project plan or APIs as well as images (see [0015 Linked Media Types](/types/0/0015-Linked-Media-Types) in Area 0).
 
 The description attribute should be used instead of the scopeDescription in ProjectScope; the scopeDescription attribute has been deprecated.  
 

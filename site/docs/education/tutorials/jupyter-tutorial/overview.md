@@ -4,7 +4,7 @@
 
 # Working with Jupyter Notebooks
 
-The [Jupyter project :material-dock-window:](https://jupyter.org){ target=jupyter } provides tools for interactive computing. The Egeria project uses Jupyter Notebooks to provide an interactive environment for running snippets of [Python](/egeria-docs/guides/developer/languages/#python) code, interspersed with [Markdown](/egeria-docs/guides/developer/languages/#markdown) documentation, for our [open metadata labs](/egeria-docs/education/open-metadata-labs/overview).
+The [Jupyter project :material-dock-window:](https://jupyter.org){ target=jupyter } provides tools for interactive computing. The Egeria project uses Jupyter Notebooks to provide an interactive environment for running snippets of [Python](/guides/developer/languages/#python) code, interspersed with [Markdown](/guides/developer/languages/#markdown) documentation, for our [open metadata labs](/education/open-metadata-labs/overview).
 
 ![Example Jupyter notebook from the hands-on labs](jupyter-notebook-browser-window.png)
 

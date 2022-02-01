@@ -7,9 +7,9 @@
 
 ## Application
 
-`Application`s provide business or management logic. They are often custom-built but may also be brought as a package. They are deployed onto a server as a [`SoftwareCapability`](/egeria-docs/types/0/0042-Software-Capabilities/#softwarecapability).
+`Application`s provide business or management logic. They are often custom-built but may also be brought as a package. They are deployed onto a server as a [`SoftwareCapability`](/types/0/0042-Software-Capabilities/#softwarecapability).
 
 ??? deprecated "Deprecated types"
-    The `RuntimeForProcess` relationship is superfluous: use [`ServerAssetUse`](/egeria-docs/types/0/0045-Servers-and-Assets/#serverassetuse) since `Application` is a `SoftwareServerCapability`.
+    The `RuntimeForProcess` relationship is superfluous: use [`ServerAssetUse`](/types/0/0045-Servers-and-Assets/#serverassetuse) since `Application` is a `SoftwareServerCapability`.
 
 --8<-- "snippets/abbr.md"

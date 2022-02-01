@@ -20,26 +20,26 @@ In this solution we are going to cover:
 * automatic configuration of data managers based on the data assets in other data managers
 
 Figure 1 shows the set up to extract metadata from one or more data managers and store it in a metadata server.
-It takes an [integration connector](/egeria-docs/concepts/integration-connector)
+It takes an [integration connector](/concepts/integration-connector)
 to interface with a specific data manager.  This is
-running in an appropriate [Open Metadata Integration Service (OMIS)](/egeria-docs/services/omis)
-hosted in an [Integration Daemon](/egeria-docs/concepts/integration-daemon).
+running in an appropriate [Open Metadata Integration Service (OMIS)](/services/omis)
+hosted in an [Integration Daemon](/concepts/integration-daemon).
 
 The OMIS to use for different types of technology is shown in the table below.
 
 | Technology | Examples | OMIS   |
 | :--------- | :------- | :--------- |
-| Database | PostgreSQL | [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview) |
-| Filesystems | local disk storage | [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview) |
-| Document/Content Managers | Photo Library | [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview) |
-| Event Brokers | Apache Kafka | [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview) |
-| API Managers | Swagger Site | [API Integrator OMIS](/egeria-docs/services/omis/api-integrator/overview) |
+| Database | PostgreSQL | [Database Integrator OMIS](/services/omis/database-integrator/overview) |
+| Filesystems | local disk storage | [Files Integrator OMIS](/services/omis/files-integrator/overview) |
+| Document/Content Managers | Photo Library | [Files Integrator OMIS](/services/omis/files-integrator/overview) |
+| Event Brokers | Apache Kafka | [Topic Integrator OMIS](/services/omis/topic-integrator/overview) |
+| API Managers | Swagger Site | [API Integrator OMIS](/services/omis/api-integrator/overview) |
 
 <br>
 
 In Figure 1, integration connector `Database Extractor` is monitoring for schema changes in the Database Server
 and cataloguing them in open metadata through the Database Integrator OMIS.  The Database Integrator OMIS
-calls the [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview) which stores the open metadata in its local repository.
+calls the [Data Manager OMAS](/services/omas/data-manager/overview) which stores the open metadata in its local repository.
 
 Similarly, 
 * Integration connector `File System Extractor` is monitoring for changes to files on the file system and
@@ -57,7 +57,7 @@ cataloguing them in open metadata through the API Integrator OMIS and the Data M
 > **Figure 1:** Set up for metadata extraction from data managers and stored in a local repository
 
 Figure 2 shows a similar set up except that the resulting metadata is being stored in a remote metadata
-repository connected via a [cohort](/egeria-docs/concepts/cohort-member).
+repository connected via a [cohort](/concepts/cohort-member).
 
 ![Figure 2](data-manager-integration-metadata-extraction-remote.png)
 > **Figure 2:** Set up for metadata extraction from data managers and stored in a remote repository
@@ -86,6 +86,6 @@ are catalogued rather than just the ones created by `Database View Maker`.
 
 ----
 
-* Link to the [Connector Catalog](/egeria-docs/connectors) to understand the integration connectors supplied by Egeria
+* Link to the [Connector Catalog](/connectors) to understand the integration connectors supplied by Egeria
 
 --8<-- "snippets/abbr.md"

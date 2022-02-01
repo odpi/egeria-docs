@@ -14,9 +14,9 @@ which [discovery services](discovery-service.md) they map to.
 ## Implementation in Egeria
 
 Egeria's discovery configuration server support is implemented by the
-[Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview).
+[Discovery Engine OMAS](/services/omas/discovery-engine/overview).
 It has a client called `DiscoveryConfigurationClient` that implements the ODF's  `DiscoveryConfigurationServer` interface.
-It also supports event notifications through  the [Discovery Engine OMAS's out topic](/egeria-docs/concepts/out-topic).
+It also supports event notifications through  the [Discovery Engine OMAS's out topic](/concepts/out-topic).
 
 
 ---8<-- "snippets/abbr.md"

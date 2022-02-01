@@ -16,7 +16,7 @@ using metadata to generate deployment artifacts.
 
 ## Module Implementation
 
-This integration service is paired with the [IT Infrastructure](/egeria-docs/services/omas/it-infrastructure/overview)
+This integration service is paired with the [IT Infrastructure](/services/omas/it-infrastructure/overview)
 Open Metadata Access Service (OMAS).
 
 --8<-- "snippets/abbr.md"

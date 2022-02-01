@@ -12,13 +12,13 @@
     Interested to learn more?
 
     - GitHub provides some [great introductory guides to git :material-dock-window:](https://guides.github.com/introduction/git-handbook/){ target=gh }.
-    - Egeria provides specific tutorials for [working with Egeria's git repositories](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview).
+    - Egeria provides specific tutorials for [working with Egeria's git repositories](/education/tutorials/git-and-git-hub-tutorial/overview).
 
 ## IntelliJ IDEA
 
 [*IntelliJ IDEA* :material-dock-window:](https://www.jetbrains.com/idea/){ target=intellij } by JetBrains is the Interactive Development Environment (IDE) used by most of the Egeria developers. The community edition is free to use and covers all the function needed by an Egeria developer.
 
-We provide [our own tutorial for IntelliJ](/egeria-docs/education/tutorials/intellij-tutorial/overview).
+We provide [our own tutorial for IntelliJ](/education/tutorials/intellij-tutorial/overview).
 
 ## Apache Maven and Gradle
 
@@ -35,6 +35,6 @@ Maven 3.5 or higher is required to build Egeria. 3.6.x or above is recommended.
 
 Our direction is for a Gradle build to replace Maven; however, [that work is still underway :material-dock-window:](https://github.com/odpi/egeria/issues/3370){ target=gh }. As such, our supported build environment remains [Maven](#apache-maven)
 
-The [building Egeria tutorial](/egeria-docs/education/tutorials/building-egeria-tutorial/overview) covers more details on the build process.
+The [building Egeria tutorial](/education/tutorials/building-egeria-tutorial/overview) covers more details on the build process.
 
 --8<-- "snippets/abbr.md"

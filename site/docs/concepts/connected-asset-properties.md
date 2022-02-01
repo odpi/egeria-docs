@@ -26,27 +26,27 @@ AssetSummary holds asset properties that are used for displaying details of an a
  - *url* - external link for the asset
  - *qualifiedName* - The official (unique) name for the asset. This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages.
     
-    (Sourced from the qualifiedName attribute in Referenceable - [model 0010](/egeria-docs/types/0//egeria-docs/types/0/0010-Base-Model))
+    (Sourced from the qualifiedName attribute in Referenceable - [model 0010](/types/0//types/0/0010-Base-Model))
     
  - *displayName* - A consumable name for the asset.  Often a shortened form of the asset's qualifiedName for use on user interfaces and messages.   The asset's displayName should be only be used for audit logs and error messages if the qualifiedName is not set. 
     
-    (Sourced from displayName attribute  within Asset - [model 0010](/egeria-docs/types/0/0010-Base-Model)))
+    (Sourced from displayName attribute  within Asset - [model 0010](/types/0/0010-Base-Model)))
  
  - *shortDescription* - short description about the asset.
     
-    (Sourced from assetSummary within ConnectionsToAsset - [model 0205](/egeria-docs/types/2/0205-Connection-Linkage))
+    (Sourced from assetSummary within ConnectionsToAsset - [model 0205](/types/2/0205-Connection-Linkage))
  
  - *description* - full description of the asset.
     
-    (Sourced from description attribute within Asset - [model 0010](/egeria-docs/types/0/0010-Base-Model)))
+    (Sourced from description attribute within Asset - [model 0010](/types/0/0010-Base-Model)))
  
  - *owner* - name of the person or organization that owns the asset.
     
-    (Sourced from the AssetOwnership Classification - [model 0445](/egeria-docs/types/4/0445-Governance-Roles)).
+    (Sourced from the AssetOwnership Classification - [model 0445](/types/4/0445-Governance-Roles)).
  
  - *zoneMembership* - list of governance zones assigned to the asset.
  
-    (Sourced from the AssetZoneMembership classification - [model 0445](/egeria-docs/types/4/0424-Governance-Zones)))
+    (Sourced from the AssetZoneMembership classification - [model 0445](/types/4/0424-Governance-Zones)))
  
  - *classifications* - full list of the classifications assigned to the asset along with their properties.
 
@@ -86,12 +86,12 @@ AssetUniverse extends AssetDetail which extend AssetSummary.  AssetUniverse adds
 
 ## Implementation details
 
-The [Connector Broker](/egeria-docs/concepts/connector-broker) does not have access to a metadata repository because the OCF is metadata repository neutral. When it creates a connector, the connected asset properties are null.
+The [Connector Broker](/concepts/connector-broker) does not have access to a metadata repository because the OCF is metadata repository neutral. When it creates a connector, the connected asset properties are null.
 
-Egeria Open Metadata Access Services (OMASs) such as [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview), [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) and [Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview),  include the connector broker in their clients and support APIs for managing connections and creating connectors.
+Egeria Open Metadata Access Services (OMASs) such as [Asset Consumer OMAS](/services/omas/asset-consumer/overview), [Asset Owner OMAS](/services/omas/asset-owner/overview) and [Discovery Engine OMAS](/services/omas/discovery-engine/overview),  include the connector broker in their clients and support APIs for managing connections and creating connectors.
 
 Connectors created by the Egeria access services will include the Connected Asset Properties object configured to retrieve metadata from the same open metadata repository where the OMAS is running.
 
-The Connected Asset Properties are retrieved from the open metadata repositories by [OCF Metadata Management](/egeria-docs/services/ocf-metadata-management). It will use the same user id that was used to create the connector.
+The Connected Asset Properties are retrieved from the open metadata repositories by [OCF Metadata Management](/services/ocf-metadata-management). It will use the same user id that was used to create the connector.
 
 --8<-- "snippets/abbr.md"

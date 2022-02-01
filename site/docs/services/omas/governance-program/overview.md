@@ -31,33 +31,33 @@ It covers:
 
 ## Related OMASs
 
-- The [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview) supports the definition of the profiles for people and teams that will support the governance program.  These are linked to the governance roles defined by the governance program.
+- The [Community Profile OMAS](/services/omas/community-profile/overview) supports the definition of the profiles for people and teams that will support the governance program.  These are linked to the governance roles defined by the governance program.
 
-* The [Project Management OMAS](/egeria-docs/services/omas/project-management/overview) supports the rollout of the governance program by commissioning campaigns and projects to implement the governance controls and the collection of measurements to assess the success of the program.
+* The [Project Management OMAS](/services/omas/project-management/overview) supports the rollout of the governance program by commissioning campaigns and projects to implement the governance controls and the collection of measurements to assess the success of the program.
 
-* The [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture/overview) provides the set up of the digital landscape that supports the governance program.  This includes the definitions of the information supply chains and solution components that support the organization's activities.
+* The [Digital Architecture OMAS](/services/omas/digital-architecture/overview) provides the set up of the digital landscape that supports the governance program.  This includes the definitions of the information supply chains and solution components that support the organization's activities.
 
-* The [Digital Service OMAS](/egeria-docs/services/omas/digital-service/overview) documents the business capabilities along with their digital services that are supported by the governance program.
+* The [Digital Service OMAS](/services/omas/digital-service/overview) documents the business capabilities along with their digital services that are supported by the governance program.
 
-* The [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine/overview) supports the implementation of technical controls and the choreography of their execution.
+* The [Governance Engine OMAS](/services/omas/governance-engine/overview) supports the implementation of technical controls and the choreography of their execution.
 
-* The [Stewardship Action OMAS](/egeria-docs/services/omas/stewardship-action/overview) supports the stewards as they manage the exceptions detected to the governance program.
+* The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) supports the stewards as they manage the exceptions detected to the governance program.
   
-* The [Data Privacy OMAS](/egeria-docs/services/omas/data-privacy/overview) supports the operational aspects of managing privacy as part of the organization's activities.
+* The [Data Privacy OMAS](/services/omas/data-privacy/overview) supports the operational aspects of managing privacy as part of the organization's activities.
 
-* The [Subject Area OMAS](/egeria-docs/services/omas/subject-area/overview) supports the definitions of the vocabularies associated with a subject area.
+* The [Subject Area OMAS](/services/omas/subject-area/overview) supports the definitions of the vocabularies associated with a subject area.
 
-* The [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview) support the automated cataloging of assets and configuration of technology that is managing them.
+* The [Data Manager OMAS](/services/omas/data-manager/overview) support the automated cataloging of assets and configuration of technology that is managing them.
 
-* The [Security Manager OMAS](/egeria-docs/services/omas/security-manager/overview) support the configuration of technology that is managing the security of assets.
+* The [Security Manager OMAS](/services/omas/security-manager/overview) support the configuration of technology that is managing the security of assets.
 
-* The [Security Officer OMAS](/egeria-docs/services/omas/security-officer/overview) support the definitions of users and groups and related definitions that make up the user directory.
+* The [Security Officer OMAS](/services/omas/security-officer/overview) support the definitions of users and groups and related definitions that make up the user directory.
 
-* The [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview) supports the automated exchange of governance definitions between catalogs and asset managers to create a consistent rollout of governance requirements.
+* The [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the automated exchange of governance definitions between catalogs and asset managers to create a consistent rollout of governance requirements.
   
-* The [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) supports the linking of governance definitions and classifications to assets to define how they should be governed.
+* The [Asset Owner OMAS](/services/omas/asset-owner/overview) supports the linking of governance definitions and classifications to assets to define how they should be governed.
 
-* The [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) supports the visibility of the governance definitions and classification by consumers of the assets.
+* The [Asset Consumer OMAS](/services/omas/asset-consumer/overview) supports the visibility of the governance definitions and classification by consumers of the assets.
 
 
 --8<-- "snippets/abbr.md"

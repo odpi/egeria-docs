@@ -58,14 +58,14 @@ This classification makes it easy to locate all of the subject area's content.
 The following Open Metadata Access Services (OMASs) support
 subject areas:
 
-* [Governance Program OMAS](/egeria-docs/services/omas/governance-program/overview)
+* [Governance Program OMAS](/services/omas/governance-program/overview)
   supports the maintenance of the hierarchy of subject area definitions
   and the associated governance definitions.
 
-* [Subject Area OMAS](/egeria-docs/services/omas/subject-area/overview) supports the subject matter experts in building
+* [Subject Area OMAS](/services/omas/subject-area/overview) supports the subject matter experts in building
   the glossary and valid values for a subject area.
   
-* [Digital Architecture OMAS](/egeria-docs/services/omas/digital-architecture/overview)
+* [Digital Architecture OMAS](/services/omas/digital-architecture/overview)
   is for use by technical architects to define reference data, common data models and schema
   and rule implementations for the data and associated processing of the subject area.
 

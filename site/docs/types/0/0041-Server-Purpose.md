@@ -3,7 +3,7 @@
 
 # 0041 Server Purposes
 
-The server purpose classifications allow more detail about the type of middleware software that are embedded in an instance of [`ITInfrastructure`](/egeria-docs/types/0/0030-Hosts-and-Platforms).  Typically these classifications are used with [`SoftwareServerPlatform`s](/egeria-docs/types/0/0037-Software-Server-Platforms) and [`SoftwareServer`s](/egeria-docs/types/0/0040-Software-Servers).
+The server purpose classifications allow more detail about the type of middleware software that are embedded in an instance of [`ITInfrastructure`](/types/0/0030-Hosts-and-Platforms).  Typically these classifications are used with [`SoftwareServerPlatform`s](/types/0/0037-Software-Server-Platforms) and [`SoftwareServer`s](/types/0/0040-Software-Servers).
 
 ## ServerPurpose
 

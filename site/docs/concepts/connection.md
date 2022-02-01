@@ -4,7 +4,7 @@
 # Connection
 
 The **Connection** provides the set of properties needed to create and initialize an instance
-of a [connector](/egeria-docs/concepts/connector).
+of a [connector](/concepts/connector).
 
 ## Inside a Connection
 
@@ -19,7 +19,7 @@ access the Asset.
 
 Figure 1 shows the structure of a connection. Connector types and endpoints can be reused in multiple connections.
 
-![Figure 1](/egeria-docs/concepts/connection.svg)
+![Figure 1](/concepts/connection.svg)
 > **Figure 1:** Connection structure
 
 Connections are typically managed in a metadata repository but they can also be manually populated.
@@ -30,10 +30,10 @@ A virtual connection is a connection that provides a hierarchy of connection obj
 
 Figure 2 shows an example of a virtual connection with two nested connections (see `EmbeddedConnections`).  One of these connections is also a virtual connection and will be processed in the same way as its parent.
 
-![Figure 2](/egeria-docs/concepts/virtual-connection.svg)
+![Figure 2](/concepts/virtual-connection.svg)
 > **Figure 2:** Example virtual connection structure
 
-The [open metadata topic connector](/egeria-docs/concepts/open-metadata-topic-connector) is an example of a connector that is designed to be nested inside a virtual connector.
+The [open metadata topic connector](/concepts/open-metadata-topic-connector) is an example of a connector that is designed to be nested inside a virtual connector.
 
 ## Connection implementations
 
@@ -69,30 +69,30 @@ Other properties for the connection include:
 * **userId** - name or URI or connecting user.
 * **encryptedPassword** - password for the userId - needs decrypting by connector before use.
 * **clearPassword** - password for userId - ready to use.
-* **[connectorType](/egeria-docs/concepts/connector-type)** - Properties that describe the connector type for the connector.
-* **[endpoint](/egeria-docs/concepts/endpoint)** - Properties that describe the server endpoint where the connector will retrieve the assets.
+* **[connectorType](/concepts/connector-type)** - Properties that describe the connector type for the connector.
+* **[endpoint](/concepts/endpoint)** - Properties that describe the server endpoint where the connector will retrieve the assets.
 
 
 ## Using Connections from open metadata repositories
 
-Each connection stored in a metadata repository has a unique identifier. An application can request a connector instance through selected Egeria OMAS interfaces, such as the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview), with just the unique identifier or name of a connection.  
+Each connection stored in a metadata repository has a unique identifier. An application can request a connector instance through selected Egeria OMAS interfaces, such as the [Asset Consumer OMAS](/services/omas/asset-consumer/overview), with just the unique identifier or name of a connection.  
 
-The OMAS retrieves the connection object from the open metadata repositories and passes it to the [Connector Broker](/egeria-docs/concepts/connector-broker) factory object.  The Connector Broker (and underlying [Connector Provider](/egeria-docs/concepts/connector-provider)) uses the information from the Connection object to create an instance of the connector.
+The OMAS retrieves the connection object from the open metadata repositories and passes it to the [Connector Broker](/concepts/connector-broker) factory object.  The Connector Broker (and underlying [Connector Provider](/concepts/connector-provider)) uses the information from the Connection object to create an instance of the connector.
 
 The advantage of retrieving the connection information from a metadata repository is that the connection properties do not need to be hard-coded in the consuming applications and the metadata associated with the linked Asset can be retrieved via the connectors [Connected Asset Properties](connected-asset-properties.md) interface.
 
 Connections can be created in the open metadata repositories through the following interfaces:
-* [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)
-* [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview)
-* [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview)
-* [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
-* [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
-* [Governance Action OMES](/egeria-docs/services/omes/governance-action/overview)
+* [Asset Owner OMAS](/services/omas/asset-owner/overview)
+* [Asset Manager OMAS](/services/omas/asset-manager/overview)
+* [Data Manager OMAS](/services/omas/data-manager/overview)
+* [Database Integrator OMIS](/services/omis/database-integrator/overview)
+* [Files Integrator OMIS](/services/omis/files-integrator/overview)
+* [Governance Action OMES](/services/omes/governance-action/overview)
  
 
 ## Configuring Egeria Connections
 
-The [Administration Guide](/egeria-docs/guides/admin) describes how to configure Egeria's OMAG Server Platforms and Servers.  Both the platform and the servers used connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies.  This means that the configuration includes Connection definitions for these connectors.
+The [Administration Guide](/guides/admin) describes how to configure Egeria's OMAG Server Platforms and Servers.  Both the platform and the servers used connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies.  This means that the configuration includes Connection definitions for these connectors.
 
 All of these interfaces have Java clients that enable you to set up the connection using the OCF Connection bean. However if you want to use the REST API directly, then you need to specify the connection in JSON.
 

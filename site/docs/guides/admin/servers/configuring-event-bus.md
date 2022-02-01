@@ -3,7 +3,7 @@
 
 ## Set up the default event bus
 
-An [OMAG Server](/egeria-docs/concepts/omag-server) uses an event bus such as [Apache Kafka :material-dock-window:](https://kafka.apache.org){ target=kafka } to exchange events with other servers and tools.
+An [OMAG Server](/concepts/omag-server) uses an event bus such as [Apache Kafka :material-dock-window:](https://kafka.apache.org){ target=kafka } to exchange events with other servers and tools.
 
 Egeria manages the specific topic names and the event payloads; however, it needs to know where the event bus is deployed and any properties needed to configure it.
 
@@ -12,9 +12,9 @@ Since the event bus is used in multiple places, the configuration document allow
 !!! attention "Important sequencing information"
     You need to set up this information before configuring any of the following:
 
-    - Using an event topic as the destination for the [audit log](/egeria-docs/concepts/audit-log).
-    - Configuring the [access services](/egeria-docs/services/omas) in a [metadata access store](/egeria-docs/concepts/metadata-access-store) or a [metadata access point](/egeria-docs/concepts/metadata-access-point).
-    - Configuring registration to a [cohort](/egeria-docs/services/omrs/cohort) in a [metadata access store](/egeria-docs/concepts/metadata-access-store), a [metadata access point](/egeria-docs/concepts/metadata-access-point), a [repository proxy](/egeria-docs/concepts/repository-proxy) or a [conformance test server](/egeria-docs/concepts/conformance-test-server).
+    - Using an event topic as the destination for the [audit log](/concepts/audit-log).
+    - Configuring the [access services](/services/omas) in a [metadata access store](/concepts/metadata-access-store) or a [metadata access point](/concepts/metadata-access-point).
+    - Configuring registration to a [cohort](/services/omrs/cohort) in a [metadata access store](/concepts/metadata-access-store), a [metadata access point](/concepts/metadata-access-point), a [repository proxy](/concepts/repository-proxy) or a [conformance test server](/concepts/conformance-test-server).
 
 The following command creates information about the event bus. This information is used on the subsequent configuration of the OMAG Server subsystems. It does not affect any subsystems that have already been configured in the configuration document and if the event bus is not needed, its values are ignored.
 

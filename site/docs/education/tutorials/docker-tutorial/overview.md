@@ -6,7 +6,7 @@
 **Docker** is a [simple container runtime and standard](https://www.docker.com/why-docker).
 Every day, the egeria build processing creates a docker image of egeria and pushes it to the docker catalog on the **Docker website**.
 
-This docker image provides a simple way to bring a runnable version of Egeria onto your machine.  It also provides the basis for a [Kubernetes](/egeria-docs/guides/operations/kubernetes) deployment of Egeria.
+This docker image provides a simple way to bring a runnable version of Egeria onto your machine.  It also provides the basis for a [Kubernetes](/guides/operations/kubernetes) deployment of Egeria.
 
 The docker catalog page for egeria is at [https://hub.docker.com/r/odpi/egeria](https://hub.docker.com/r/odpi/egeria). The **Overview** tab describes the docker container.
 
@@ -45,14 +45,14 @@ docker catalog at [https://hub.docker.com/r/odpi/egeria](https://hub.docker.com/
 Egeria's docker image includes the Egeria install image.  When the image is started
 using docker, a new egeria docker container is created.  As it starts up, an instance of
 the Egeria runtime - that is the
-[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) -
+[OMAG Server Platform](/concepts/omag-server-platform) -
 is started at port https 9443.
 
 This container can be incorporated into larger container orchestration environments or used standalone.
-This tutorial describes how to use it standalone.  The [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview)
+This tutorial describes how to use it standalone.  The [Open Metadata Labs](/education/open-metadata-labs/overview)
 use this container with `Kubernetes`
 container services to create a complete open metadata solution.
-Link to [Open Metadata Labs](/egeria-docs/education/open-metadata-labs/overview) to learn more.
+Link to [Open Metadata Labs](/education/open-metadata-labs/overview) to learn more.
 
 ## Working with Egeria's docker image
 
@@ -100,7 +100,7 @@ $
 ```
 To check it will run, try the `docker run --publish 19443:9443 odpi/egeria`.
 This will start the image as a new docker container.  As the container initializes it starts a single copy of the
-[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform).
+[OMAG Server Platform](/concepts/omag-server-platform).
 The OMAG Server Platform is the Egeria runtime platform where the Egeria REST services run.
 
 The `--publish 19443:9443` parameter maps the 9443 port inside the docker that the OMAG Server Platform
@@ -170,7 +170,7 @@ Update the URL as follows:
 
 and press enter.  After a few moments, Egeria's Swagger page should open.  This is an automatically
 generated page that describes the REST APIs of Egeria's OMAG Server Platform.
-There is more information on swagger in the [Swagger Tutorial](/egeria-docs/education/tutorials/swagger-tutorial/overview).
+There is more information on swagger in the [Swagger Tutorial](/education/tutorials/swagger-tutorial/overview).
 
 ![Top if Swagger Page](../swagger-tutorial/swagger-ui-top.png)
 
@@ -197,7 +197,7 @@ platform is operating correctly.    The platform origin request is particularly 
 what version of the OMAG Server Platform is running.
 
 The Swagger UI is useful for ad hoc testing.
-However, later in the Dojo we will cover a tool called [Postman](/egeria-docs/education/tutorials/postman-tutorial/overview)
+However, later in the Dojo we will cover a tool called [Postman](/education/tutorials/postman-tutorial/overview)
 that provides a more powerful testing experience.
 
 So back to the Docker Desktop.  The second option on the docker desktop is "CLI".  
@@ -222,7 +222,7 @@ You can check back here from time to time to see the files accumulating.
 If you delete this container then all of the files that the OMAG Server Platform created are lost.
 
 (If you want to know more about the egeria install image, see the
-[Installing Egeria Tutorial](/egeria-docs/education/tutorials/installing-egeria-tutorial).)
+[Installing Egeria Tutorial](/education/tutorials/installing-egeria-tutorial).)
 
 The third button on the docker desktop is the "STOP" button and the fourth button is "RESTART".
 If you just need to test these buttons, remember to ensure that the docker container is running

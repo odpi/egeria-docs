@@ -17,6 +17,6 @@ of entity type inheritance and the possible relationships in which each entity t
 detailed textual description of the attributes and possible relationships and classification for each entity type. The textual
 display also shows the attributes and entity types for each relationship.
 
-This OMVS calls a remote server using the [repository services client](/egeria-docs/services/omrs).
+This OMVS calls a remote server using the [repository services client](/services/omrs).
 
 ---8<-- "snippets/abbr.md"

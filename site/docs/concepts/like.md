@@ -3,6 +3,6 @@
 
 # Like
 
-A *like* is an attachment that a user can attach to a [referenceable](/egeria-docs/concepts/referencable) to indicate his/her approval of the element's presence or content.
+A *like* is an attachment that a user can attach to a [referenceable](/concepts/referencable) to indicate his/her approval of the element's presence or content.
 
 --8<-- "snippets/abbr.md"

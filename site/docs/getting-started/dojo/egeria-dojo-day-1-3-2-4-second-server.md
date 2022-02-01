@@ -23,7 +23,7 @@ You can delete it if you do not want it any more.
 
 ## Set up environment
 
-Now [download the latest version of Egeria from GitHub](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source)
+Now [download the latest version of Egeria from GitHub](/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source)
 in a new directory on your machine.  This is a direct copy of the latest content from GitHub.
 
 1. From within the `egeria/open-metadata-resources/open-metadata-deployment/compose/tutorials` directory, run the command:
@@ -50,11 +50,11 @@ Repeat the previous server configuration exercise twice - once to create a serve
 
 Once you have 2 servers configured, add configuration to each of them to connect them via a cohort.
 
-First read about [Open Metadata Repository Cohorts](/egeria-docs/concepts/cohort-member).
+First read about [Open Metadata Repository Cohorts](/concepts/cohort-member).
 
 Then
-* [Set up the event bus defaults](/egeria-docs/guides/admin/servers/configuring-event-bus)
-* Connect then together by [adding cohort configuration](/egeria-docs/guides/admim/servers/configuring-registration-to-a-cohort) to each server.
+* [Set up the event bus defaults](/guides/admin/servers/configuring-event-bus)
+* Connect then together by [adding cohort configuration](/guides/admim/servers/configuring-registration-to-a-cohort) to each server.
 
 Start both servers and view their logs via the Docker Desktop - you should see that they are communicating.
 

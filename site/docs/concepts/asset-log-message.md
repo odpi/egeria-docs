@@ -8,7 +8,7 @@ hide:
 
 # Asset log message
 
-The asset log message is a type of log record that can be added to the local server's [audit log](/egeria-docs/concepts/audit-log).
+The asset log message is a type of log record that can be added to the local server's [audit log](/concepts/audit-log).
 
 It is used to record that a specific action has been taken on an asset.
 

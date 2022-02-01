@@ -3,16 +3,16 @@
 
 ## Configure the engine host services
 
-The [engine host services](/egeria-docs/services/engine-host-services) provide the base implementation of the [engine host](/egeria-docs/concepts/engine-host) OMAG Server.
+The [engine host services](/services/engine-host-services) provide the base implementation of the [engine host](/concepts/engine-host) OMAG Server.
 
 There are two parts to configuring the engine host services:
 
 ### Specify location of governance engine definitions
 
-The location of the [metadata access server](/egeria-docs/concepts/metadata-access-server) running the [Governance Engine OMAS](/egeria-docs/services/omas/governance-engine) that will supply the definitions of the governance engines, is configured using two properties:
+The location of the [metadata access server](/concepts/metadata-access-server) running the [Governance Engine OMAS](/services/omas/governance-engine) that will supply the definitions of the governance engines, is configured using two properties:
 
-- the [server url root](/egeria-docs/concepts/platform-url-root) of the metadata access server's OMAG Server Platform, and
-- the [name of the metadata access server](/egeria-docs/concepts/server-name).
+- the [server url root](/concepts/platform-url-root) of the metadata access server's OMAG Server Platform, and
+- the [name of the metadata access server](/concepts/server-name).
 
 !!! post "POST - specify location of governance engine definitions"
     ```
@@ -31,7 +31,7 @@ The location of the [metadata access server](/egeria-docs/concepts/metadata-acce
 
 ### Configure the engines services
 
-The [engine services](/egeria-docs/services/omes) (or Open Metadata Engine Services (OMES) to give them their full name) also run in the engine host.  Each engine service provides support for a particular type of governance engine which is in turn, a collection of governance services of a specific type.
+The [engine services](/services/omes) (or Open Metadata Engine Services (OMES) to give them their full name) also run in the engine host.  Each engine service provides support for a particular type of governance engine which is in turn, a collection of governance services of a specific type.
 
 --8<-- "docs/concepts/governance-service-types.md"
 
@@ -48,11 +48,11 @@ Note the `engineServiceURLMarker` for the engine service that you want to config
 
 #### Configure engine service
 
-![Configuration document contents for an integration service](/egeria-docs/concepts/engine-service-config.svg)
+![Configuration document contents for an integration service](/concepts/engine-service-config.svg)
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `engineServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 
-Each engine service is configured with the network location of the [metadata access server](/egeria-docs/concepts/metadata-access-server) running the appropriate partner service. There are a set of options that the engine service supports along with the list of configuration properties for the governance engines that will be run in the engine service. The governance engine's configuration properties identify which governance engine to run. The governance engine's definition, including the services it supports are retrieved from the metadata access server when the engine service starts up.
+Each engine service is configured with the network location of the [metadata access server](/concepts/metadata-access-server) running the appropriate partner service. There are a set of options that the engine service supports along with the list of configuration properties for the governance engines that will be run in the engine service. The governance engine's configuration properties identify which governance engine to run. The governance engine's definition, including the services it supports are retrieved from the metadata access server when the engine service starts up.
 
 !!! post "POST - configure engine service"
     ```

@@ -10,7 +10,7 @@ hide:
 
 The performance of programmatically creating new relationship instances.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) interface for a metadata repository defines optional methods for creating relationship instances:
+The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a metadata repository defines optional methods for creating relationship instances:
 
 | Method | Description |
 |---|---|

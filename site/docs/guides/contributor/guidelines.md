@@ -11,7 +11,7 @@ As such, these guidelines exist to remind us of these broader responsibilities.
 
 ## Build environment
 
-The core of Egeria is written primarily in [Java](/egeria-docs/guides/developer/languages/#java), and the minimum level required to build and run it is 11.
+The core of Egeria is written primarily in [Java](/guides/developer/languages/#java), and the minimum level required to build and run it is 11.
 
 Most developers use MacOS, while our official builds use Linux (Ubuntu/Centos/RHEL should all be fine).
 
@@ -22,7 +22,7 @@ Most developers use MacOS, while our official builds use Linux (Ubuntu/Centos/RH
 
 [Gradle](https://gradle.org/) is not currently supported but is being developed.
 
-IDEs can make navigating the Egeria code easier. Each IDE can vary a lot. Many of the Egeria community use [JetBrains IntelliJ](/egeria-docs/education/tutorials/intellij-tutorial/overview).
+IDEs can make navigating the Egeria code easier. Each IDE can vary a lot. Many of the Egeria community use [JetBrains IntelliJ](/education/tutorials/intellij-tutorial/overview).
 
 In the case of problems the first problem determination step is to check you can build Egeria normally at the command line i.e. `mvn clean install` from the source root. That will prove at least Java and Maven are correct.
 
@@ -86,7 +86,7 @@ The output from a build should be checked to ensure there are no Javadoc warning
 
 ## Log through ALF
 
-Egeria will typically be embedded in complex deployment environments. This means that we cannot rely on standard developer logging provided by components such as SLF4J. Instead, we use [First Failure Data Capture (FFDC)](/egeria-docs/services/common/ffdc-services) through the [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview).
+Egeria will typically be embedded in complex deployment environments. This means that we cannot rely on standard developer logging provided by components such as SLF4J. Instead, we use [First Failure Data Capture (FFDC)](/services/common/ffdc-services) through the [Audit Log Framework (ALF)](/frameworks/alf/overview).
 
 ## Be consistent with style and layout
 
@@ -101,7 +101,7 @@ There are many coding and layout styles that provide clear and readable code. De
 
 In Egeria, date / time instants are always represented as Unix Epoch time with millisecond precision (milliseconds elapsed since January 1, 1970).
 
-- The Egeria [OMRS](/egeria-docs/services/omrs) layer handles date / time as either `java.lang.Long` or as `java.util.Date` objects. It does not store localised versions of the date / time.
+- The Egeria [OMRS](/services/omrs) layer handles date / time as either `java.lang.Long` or as `java.util.Date` objects. It does not store localised versions of the date / time.
 - In other Egeria APIs that might be developed, it is **strongly recommended** to store dates and times as a Long or Date.
 - In addition, it is possible to expose localised date representations if required.
 
@@ -112,11 +112,11 @@ Egeria is an integration technology which means that it uses a comprehensive mul
 Modules include unit tests. These unit tests should focus on simple validation of Java beans, utilities and code that can easily be tested in isolation. The unit tests run as part of the build and a pull request
 cannot be incorporated into master if any unit tests are failing. They should not significantly extend the time of the build since this impacts all the contributors' productivity. Our preferred Java frameworks for unit testing are [TestNG :material-dock-window:](http://testng.org){ target=test } and [Mockito :material-dock-window:](http://mockito.org){ target=test }.
 
-External APIs (typically they include both a client and a server component) are tested using functional verification tests (FVTs). These are located in the [open-metadata-test/open-metadata-fvt :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-test/open-metadata-fvt) module. The aim of these tests is to check that the APIs validate all of their parameters and function correctly in a single server environment. These tests also operate as part of the build but are not run as part of the PR process. Modules should ensure they include some FVTs as they move [from development to technical preview](/egeria-docs/release-notes/content-status). By the time the module is moving to released function, the FVTs should be able to validate that this function is stable and correct.
+External APIs (typically they include both a client and a server component) are tested using functional verification tests (FVTs). These are located in the [open-metadata-test/open-metadata-fvt :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-test/open-metadata-fvt) module. The aim of these tests is to check that the APIs validate all of their parameters and function correctly in a single server environment. These tests also operate as part of the build but are not run as part of the PR process. Modules should ensure they include some FVTs as they move [from development to technical preview](/release-notes/content-status). By the time the module is moving to released function, the FVTs should be able to validate that this function is stable and correct.
 
-Some connectors are tested via the [Conformance Test Suite](/egeria-docs/guides/cts/overview). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into master. The conformance test suite is also run as part of the release process.
+Some connectors are tested via the [Conformance Test Suite](/guides/cts/overview). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into master. The conformance test suite is also run as part of the release process.
 
-Egeria's [hands on labs](/egeria-docs/education/open-metadata-labs) provide a complex multi-server environment and are typically used by contributors to verify that their changes have not regressed any of the
+Egeria's [hands on labs](/education/open-metadata-labs) provide a complex multi-server environment and are typically used by contributors to verify that their changes have not regressed any of the
 basic function.
 
 We are also interested in building out a comprehensive integration test to allow automated complex multi-server scenarios that can be running continuously.
@@ -157,7 +157,7 @@ As a reviewer, you need to look at the code changes and satisfy yourself that:
 - If new dependencies have been added, these are documented in the developer resources.
 - If changes to the types have been made, these changes are:
     - only made to the current release's types (that is, in `OpenMetadataTypesArchive.java`). It is permissible to correct typos in the other files but not change the shape of the types in the types created in previous releases (in files called `OpenMetadataTypesArchiveX_X.java`).
-    - documented in [UML diagrams in the drawio files](/egeria-docs/types) and the diagram has been exported as an image.
+    - documented in [UML diagrams in the drawio files](/types) and the diagram has been exported as an image.
 
 If you are also the code owner of the changed code then you also need to be sure that the changes are consistent with the current and intended future design of the module.
 
@@ -316,6 +316,6 @@ This will run (and create a file for each module):
         MAVEN_OPTS="-Xmx5000M -Xss512M -XX:MaxPermSize=2048M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC" mvn clean install -DfindBugs
         ```
 
-For more information on how potential security issues are handled, see [security hardening](/egeria-docs/guides/developer/process/#security-hardening).
+For more information on how potential security issues are handled, see [security hardening](/guides/developer/process/#security-hardening).
 
 --8<-- "snippets/abbr.md"

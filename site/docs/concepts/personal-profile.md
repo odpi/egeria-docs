@@ -7,7 +7,7 @@ A personal profile provides a place for an individual to share information about
 with the other people they are collaborating with.  It is associated with one or more
 of the person's userIds.
 
-Each userId is linked to the profile as a [UserIdentity](/egeria-docs/concepts/user-identity) object.
+Each userId is linked to the profile as a [UserIdentity](/concepts/user-identity) object.
 
 > ![Figure 1](profile-user-1.svg)
 

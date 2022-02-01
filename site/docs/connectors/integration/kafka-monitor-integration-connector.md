@@ -4,9 +4,9 @@
 # Kafka Monitor Integration Connector
 
 ??? info "Connector details"
-    - Connector Category: [Integration Connector](/egeria-docs/connectors/integration-connector)
-    - Hosting Service: [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator)
-    - Hosting Server: [Integration Daemon](/egeria-docs/concepts/integration-daemon)
+    - Connector Category: [Integration Connector](/connectors/integration-connector)
+    - Hosting Service: [Topic Integrator OMIS](/services/omis/topic-integrator)
+    - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [kafka-integration-connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/kafka-integration-connector){ target=gh }
     - Jar File Name: `kafka-integration-connector.jar`
 
@@ -14,7 +14,7 @@
 
 The kafka monitor integration connector monitors an Apache Kafka server a
 creates a 
-[KafkaTopic](/egeria-docs/types/0223-Events-and-Logs)
+[KafkaTopic](/types/0223-Events-and-Logs)
 asset for each topic that is known to the server.
 If the topic is removed from the Apache Kafka Server, its corresponding
 KafkaTopic asset is also removed.
@@ -25,10 +25,10 @@ KafkaTopic asset is also removed.
 
 ## Configuration
 
-This connector uses the [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview)
-running in the [Integration Daemon](/egeria-docs/concepts/integration-daemon).
+This connector uses the [Topic Integrator OMIS](/services/omis/topic-integrator/overview)
+running in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"

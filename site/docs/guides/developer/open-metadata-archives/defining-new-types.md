@@ -3,13 +3,13 @@
 
 # Defining new types
 
-Egeria supports a [wide variety of open metadata types](/egeria-docs/types) that cover a broad range of metadata.  These types can be extended through the normal contribution process of the Egeria project.   It is also possible to create your own type definitions that can be exchanged across the [open metadata repository cohort](/egeria-docs/concepts/cohort-member) and may also be maintained through Egeria's APIs using [extended properties](/egeria-docs/concepts/extended-properties).
+Egeria supports a [wide variety of open metadata types](/types) that cover a broad range of metadata.  These types can be extended through the normal contribution process of the Egeria project.   It is also possible to create your own type definitions that can be exchanged across the [open metadata repository cohort](/concepts/cohort-member) and may also be maintained through Egeria's APIs using [extended properties](/concepts/extended-properties).
 
 Type definitions need to be governed because they must be consistent across a cohort - during the whole time that one or more instances of the type are stored in the repositories.
 
 ## Dynamic definitions of types not recommended
 
-Egeria does have an API for dynamically defining types but it is recommended that you only use it went experimenting with types and instances.  Instead, you should manage your types in an [open metadata archive](/egeria-docs/concepts/open-metadata-archive) that is loaded in the [metadata access servers](/egeria-docs/concepts/metadata-access-servers) during [each server start up](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup).
+Egeria does have an API for dynamically defining types but it is recommended that you only use it went experimenting with types and instances.  Instead, you should manage your types in an [open metadata archive](/concepts/open-metadata-archive) that is loaded in the [metadata access servers](/concepts/metadata-access-servers) during [each server start up](/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup).
 
 ## Creating your own type archive
 

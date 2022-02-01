@@ -23,9 +23,9 @@ OMRS's metamodel defines the structures used to represent metadata, and can be b
 ![Type definitions](metadata-meta-model-typedef-detail.svg)
 
 ??? example "Examples of type definitions"
-    For example, the native [open metadata types](/egeria-docs/types) that Egeria defines include:
+    For example, the native [open metadata types](/types) that Egeria defines include:
 
-    - a generic [`Referenceable`](/egeria-docs/types/0/0010-Base-Model/#referenceable) entity type,
+    - a generic [`Referenceable`](/types/0/0010-Base-Model/#referenceable) entity type,
     - a `GlossaryCategory` entity type,
     - a `GlossaryTerm` entity type,
     - (and many others!)

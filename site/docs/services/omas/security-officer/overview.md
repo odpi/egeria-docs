@@ -5,6 +5,6 @@
 
 # Security Officer Open Metadata Access Service (OMAS)
 
-The Security Officer Open Metadata Access Service (OMAS) supports security officers monitoring the security settings associated with [assets](/egeria-docs/concepts/asset).
+The Security Officer Open Metadata Access Service (OMAS) supports security officers monitoring the security settings associated with [assets](/concepts/asset).
 
 --8<-- "snippets/abbr.md"

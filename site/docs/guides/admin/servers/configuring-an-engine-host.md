@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Configuring an [engine host](/egeria-docs/concepts/engine-host)
+# Configuring an [engine host](/concepts/engine-host)
 
-Each [type of OMAG Server](/egeria-docs/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/egeria-docs/concepts/configuration-document).
+Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating
+a [configuration document](/concepts/configuration-document).
 
 ![Configuration for an engine host](engine-host-config.svg)
 

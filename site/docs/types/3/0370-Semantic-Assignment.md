@@ -9,7 +9,7 @@ hide:
 # 0370 Semantic Assignment
 
 **SemanticAssignment** is a relationship used to assign a term
-to a [referenceable](/egeria-docs/types/0/0010-Base-Model) object.
+to a [referenceable](/types/0/0010-Base-Model) object.
 This means that the term describes the meaning of the 
 referenceable object.  The semantic assignment needs to be a controlled relationship when glossary definitions are used to provide classifications for the data assets and hence define how the data is to be governed. 
 

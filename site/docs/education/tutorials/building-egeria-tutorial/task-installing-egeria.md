@@ -3,7 +3,7 @@
 
 ### Installing Egeria
 
-The [egeria build process](/egeria-docs/education/tutorials/building-egeria-tutorial/overview) creates the
+The [egeria build process](/education/tutorials/building-egeria-tutorial/overview) creates the
 distribution files for Egeria in the **open-metadata-distribution** module.
 The assemblies are located from the egeria build directory as follows:
 
@@ -20,7 +20,7 @@ egeria-3.3-SNAPSHOT-omag-server.tar.gz
 The files in this list will change as Egeria develops. For this exercise it is the files including 'distribution' that are important.
 
 The name of the files is determined by the release level of the code that you
-[downloaded from GitHub](/egeria-docs/education/tutorials/git-and-git-hub-tutorial/overview/#downloading-the-egeria-source-from-github).  In this example,
+[downloaded from GitHub](/education/tutorials/git-and-git-hub-tutorial/overview/#downloading-the-egeria-source-from-github).  In this example,
 the release is **egeria-3.3-SNAPSHOT**.
 
 Create a directory for the install and copy the tar file into it.
@@ -61,7 +61,7 @@ NOTICE			conformance-suite	user-interface
 As before, you may notice different files as Egeria evolves.
 
 Under **server** is a directory for the
-[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform) that is used to run
+[OMAG Server Platform](/concepts/omag-server-platform) that is used to run
 open metadata and governance services.
 
 ```bash

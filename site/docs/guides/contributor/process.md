@@ -21,7 +21,7 @@ All PRs should have an associated issue to facilitate discussion. You should inc
 
 ### Triaging new issues
 
-New issues are triaged by [maintainers](/egeria-docs/guides/project-operations/#maintainers), who will:
+New issues are triaged by [maintainers](/guides/project-operations/#maintainers), who will:
 
 - Assign the issue to someone who can take care of what is reported - even if not the final owner
 - Assign a milestone if it is immediately obvious that the issue relates to capability set out in a release plan, or is needed very soon, otherwise leave blank
@@ -67,7 +67,7 @@ Releases are published to [Maven Central :material-dock-window:](https://oss.son
 | [Github Release :material-github:](https://github.com/odpi/egeria/releases){ target=gh } | source code in `zip` and `tar.gz` formats |
 | `git` | `git checkout Vx.y` to get version as-shipped (each release is tagged at the point it is shipped) |
 
-[Release notes are available as part of the online documentation](/egeria-docs/release-notes/overview).
+[Release notes are available as part of the online documentation](/release-notes/overview).
 
 ### Release process
 
@@ -118,7 +118,7 @@ Releases are published to [Maven Central :material-dock-window:](https://oss.son
 
 ??? success "7. Create a release in GitHub"
     - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y`
-    - Fill in the release notes using a title of `Release x.y` and [copy the notes from the appropriate release notes](/egeria-docs/release-notes/overview)
+    - Fill in the release notes using a title of `Release x.y` and [copy the notes from the appropriate release notes](/release-notes/overview)
     - Artifacts will be available on Maven Central within around half a day.
     - Source archives will be added to the release on GitHub within an hour or so.
 

@@ -76,13 +76,13 @@ The final set of models capture architectures and patterns.
 
 ## Further reading
 
-* [Modelling schemas](/egeria-docs/guides/developer/mapping-technology/modelling-schemas)
+* [Modelling schemas](/guides/developer/mapping-technology/modelling-schemas)
 
 * Specific schema structures supported by the integration services
-   * For API Schemas - [API Integrator OMIS](/egeria-docs/services/omis/api-integrator/overview)
-   * For File Schemas - [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
-   * For Database Schemas - [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
-   * For Event Schemas - [Topic Integrator OMIS](/egeria-docs/services/omis/topic-integrator/overview)
-   * For Forms and Report Schemas - [Display Integrator OMIS](/egeria-docs/services/omis/display-integrator/overview)
+   * For API Schemas - [API Integrator OMIS](/services/omis/api-integrator/overview)
+   * For File Schemas - [Files Integrator OMIS](/services/omis/files-integrator/overview)
+   * For Database Schemas - [Database Integrator OMIS](/services/omis/database-integrator/overview)
+   * For Event Schemas - [Topic Integrator OMIS](/services/omis/topic-integrator/overview)
+   * For Forms and Report Schemas - [Display Integrator OMIS](/services/omis/display-integrator/overview)
 
 --8<-- "snippets/abbr.md"

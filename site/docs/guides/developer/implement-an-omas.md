@@ -32,7 +32,7 @@ Typically Java is supported and this is assumed in the descriptions that follow.
 * ***omas-name*-server** - a module containing the server-side implementation of the OMAS.
 This module registers with the server administration, supports the implementation or the API and the eventing interface
 and interfaces with the [Open Metadata Repository Services (OMRS)](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services).
-* ***omas-name*-spring** - a module containing the server-side API decorated with [Spring](/egeria-docs/guides/contributor/runtime/#spring) 
+* ***omas-name*-spring** - a module containing the server-side API decorated with [Spring](/guides/contributor/runtime/#spring) 
 annotations.  This module is designed to be replaceable with a module using other REST annotation libraries so its
 API should be 1-1 with the *omas-name*-server API.
 
@@ -77,7 +77,7 @@ implementing the OMAS one scenario at a time.
   clarify who the consumer is if it is a person.
   
   Use the vocabulary that is familiar to the consumer community in your description, rather than the vocabulary used in the
-  [open metadata types](/egeria-docs/types) (mapping to the open metadata types comes later).
+  [open metadata types](/types) (mapping to the open metadata types comes later).
  
    * Document this as a summary for the top-level README.md for the OMAS (***omas-name*/README.md**) and a
      more detailed description as an introduction to the user documentation in ***omas-name*/docs/user/README.md**.
@@ -86,7 +86,7 @@ implementing the OMAS one scenario at a time.
      Add links to these files wherever the concept is first used in other markdown files.
      Create a README.md in the same directory (ie ***omas-name*/docs/concepts/README.md**) that lists and links to each of the key concepts.
   
-   * Add a link to each of the core concepts descriptions in the [open metadata glossary](/egeria-docs/concepts) markdown file.
+   * Add a link to each of the core concepts descriptions in the [open metadata glossary](/concepts) markdown file.
   
 * Think about the typical situations where the consumer would use the OMAS and define the typical scenarios they would follow.
   This process often causes you to add more core concepts to the list defined above.
@@ -145,7 +145,7 @@ implementing the OMAS one scenario at a time.
   Ultimately, they will run as part of the centralized build.
  
 * Design the event payloads that are sent and received through the OMAS's 
-  [OutTopic](/egeria-docs/concepts/out-topic) and [InTopic](/egeria-docs/concepts/in-topic) respectively.
+  [OutTopic](/concepts/out-topic) and [InTopic](/concepts/in-topic) respectively.
 
 * Design the FVT test for the Events.
 
@@ -208,7 +208,7 @@ implementing the OMAS one scenario at a time.
   resource classes that support the REST API.
   
   Add the ***omas-name*/*omas-name*-server-spring** module to the `pom.xml` file for the
-  [OMAG Server Chassis](/egeria-docs/services/server-chassis).
+  [OMAG Server Chassis](/services/server-chassis).
 
 * Design and implement the event handling.
 

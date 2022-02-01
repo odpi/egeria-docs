@@ -14,14 +14,14 @@ assets that are delivering the highest value, or operating with the greatest eff
 
 A value that should be captured to demonstrate the effectiveness of the governance program
 is documented using the **GovernanceMetric** entity.  It is linked to the appropriate
-[GovernanceDefinition](/egeria-docs/types/4/0401-Governance-Definitions)
-and can be linked to a [DatSet](/egeria-docs/types/0/0010-Base-Model) where the specific measurements are
+[GovernanceDefinition](/types/4/0401-Governance-Definitions)
+and can be linked to a [DatSet](/types/0/0010-Base-Model) where the specific measurements are
 being gathered.
 
 The calculation of governance metrics is often a summary of many other measurements
 associated with specific resources (such as data sources and processes) operating under the
 scope of the governance program.
-These resources are catalogued as [Assets](/egeria-docs/types/0/0010-Base-Model).
+These resources are catalogued as [Assets](/types/0/0010-Base-Model).
 The definition of their expected behavior or content can be capture using the
 **GovernanceExpectations** classification attached to the Asset.
 The measurements that support the assessment of a particular resource

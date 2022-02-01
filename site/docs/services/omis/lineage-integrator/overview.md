@@ -10,9 +10,9 @@ hide:
 
 # Lineage Integrator Open Metadata Integration Service (OMIS)
 
-The Lineage Integrator OMIS supports the following services for its hosted [integration connectors](/egeria-docs/concepts/integration-connector):
+The Lineage Integrator OMIS supports the following services for its hosted [integration connectors](/concepts/integration-connector):
 
-- Registering a listener for [OpenLineage events](/egeria-docs/features/lineage-management/overview/#openlineage-standard) received either:
+- Registering a listener for [OpenLineage events](/features/lineage-management/overview/#openlineage-standard) received either:
     - through the Lineage Integrator OMIS's OpenLineage REST API or 
     - published by other integration connectors running in the same Lineage Integrator OMIS.
     
@@ -32,9 +32,9 @@ Both of these REST APIs are callable through Lineage Integrator OMIS's java clie
 
 
 !!! education "Further information"
-    - [Lineage Management](/egeria-docs/features/lineage-management/overview) describes how to set up Egeria to capture, steward, preserve and use lineage.
-    - [Lineage Integration Connectors](/egeria-docs/connectors/#lineage) describe the pre-built connectors that run in the Lineage Integrator OMIS.
-    - [Writing an Integration Connector](/egeria-docs/guides/developer/integration-connectors/overview) describes how to wrote your own integration connectors for the Lineage Integrator OMAS.
+    - [Lineage Management](/features/lineage-management/overview) describes how to set up Egeria to capture, steward, preserve and use lineage.
+    - [Lineage Integration Connectors](/connectors/#lineage) describe the pre-built connectors that run in the Lineage Integrator OMIS.
+    - [Writing an Integration Connector](/guides/developer/integration-connectors/overview) describes how to wrote your own integration connectors for the Lineage Integrator OMAS.
 
 
 ## Module Implementation
@@ -53,7 +53,7 @@ integration connector is able to run under this service.
 
 - *lineage-integrator-client* - implements a Java client for the REST API.  There are two operations. To query
 
-This integration service is paired with the [Asset Manager](/egeria-docs/services/omas/asset-manager/overview)
+This integration service is paired with the [Asset Manager](/services/omas/asset-manager/overview)
 Open Metadata Access Service (OMAS).
 
 --8<-- "snippets/abbr.md"

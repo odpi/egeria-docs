@@ -19,7 +19,7 @@ supported by these repositories.
   * Enterprise OMRS Connector Properties - Provides the connected asset properties for the Enterprise OMRS Repository Connector.
   
 The enterprise repository services are enabled automatically in a metadata server when one or more
-[Open Metadata Access Services (OMASs)](/egeria-docs/services/omas) are configured.
+[Open Metadata Access Services (OMASs)](/services/omas) are configured.
 
 
 

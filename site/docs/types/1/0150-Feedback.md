@@ -11,10 +11,10 @@ An important principle of good metadata it to be continually capturing the exper
 
 Comments and ratings are a key mechanism for providing feedback on the metadata definitions by any user.  
 
-*Note:* that because comments inherit from [Referenceable](/egeria-docs/types/0/0010-Base-Model/#referenceable) they can be tagged, rated and commented on.
+*Note:* that because comments inherit from [Referenceable](/types/0/0010-Base-Model/#referenceable) they can be tagged, rated and commented on.
 
 ## More Information
 
-* [More details on the different types of feedback](/egeria-docs/concepts/feedback)
+* [More details on the different types of feedback](/concepts/feedback)
 
 --8<-- "snippets/abbr.md"

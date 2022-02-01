@@ -5,7 +5,7 @@
 
 The OMRS Topic Connector provides a common interface to
 interact with an instance of the
-[Cohort Topic](/egeria-docs/concepts/cohort-events).
+[Cohort Topic](/concepts/cohort-events).
 
 
 ---8<-- "snippets/abbr.md"

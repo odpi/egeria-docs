@@ -7,9 +7,9 @@
 
 !!! education "Further information"
     
-    - [Integration connector catalog](/egeria-docs/connectors/#integration-connectors).
-    - [Configuring an integration connector](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
-    - [Writing an integration connector](/egeria-docs/guides/developer/integration-connectors/overview).
-    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview).
+    - [Integration connector catalog](/connectors/#integration-connectors).
+    - [Configuring an integration connector](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
+    - [Writing an integration connector](/guides/developer/integration-connectors/overview).
+    - [Open Connector Framework (OCF)](/frameworks/ocf/overview).
 
 ---8<-- "snippets/abbr.md"

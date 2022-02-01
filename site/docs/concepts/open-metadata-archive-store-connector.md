@@ -12,6 +12,6 @@ hide:
 
 ## Related information
 
-- [Open Metadata Archive Store Connector Catalog](/egeria-docs/connectors/#open-metadata-archive-store-connectors)
+- [Open Metadata Archive Store Connector Catalog](/connectors/#open-metadata-archive-store-connectors)
  
 --8<-- "snippets/abbr.md"

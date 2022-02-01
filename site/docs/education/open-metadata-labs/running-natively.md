@@ -9,7 +9,7 @@ on your system.
 
 Just be aware that running them natively on your system will require the additional effort of downloading, installing,
 configuring and operating each one -- which the self-contained environments largely take care of for you. To make use
-of the latest Egeria software, you will likely also need to be familiar with how to [build Egeria](/egeria-docs/education/tutorials/building-egeria-tutorial/overview) in
+of the latest Egeria software, you will likely also need to be familiar with how to [build Egeria](/education/tutorials/building-egeria-tutorial/overview) in
 order to use it natively.
 
 ## Installing and configuring prerequisite software
@@ -26,7 +26,7 @@ order to use it natively.
 
 ## Starting up your environment
 
-Follow the [OMAG Server Platform tutorial](/egeria-docs/education/tutorials/omag-server-tutorial/overview)
+Follow the [OMAG Server Platform tutorial](/education/tutorials/omag-server-tutorial/overview)
 for instructions on how to set up and run a platform yourself.
 You need to start four OMAG Server Platforms at the following URLs - remembering to use the `-Dserver.port=nnnn` option:
 

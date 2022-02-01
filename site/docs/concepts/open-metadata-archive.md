@@ -3,18 +3,18 @@
 
 # Open Metadata Archive
 
-An *open metadata archive* is a portable collection of open metadata [type definitions](/egeria-docs/introduction/key-concepts/#metadata-types) and [instances](/egeria-docs/introduction/key-concepts/#metadata-instances).  It can be [loaded each time a metadata access server starts up](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup) or [added to a running metadata access server](/egeria-docs/guides/operations/adding-archive-to-running-server).
+An *open metadata archive* is a portable collection of open metadata [type definitions](/introduction/key-concepts/#metadata-types) and [instances](/introduction/key-concepts/#metadata-instances).  It can be [loaded each time a metadata access server starts up](/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup) or [added to a running metadata access server](/guides/operations/adding-archive-to-running-server).
 
 The open metadata archive has two types:
 
 - A **content pack** containing reusable definitions that are generally useful. They may come from the Egeria community or third parties.
-- A **metadata export** containing an export of metadata from a repository. They are used to transfer metadata between repositories that are not connected to the same [cohort](/egeria-docs/services/omrs/cohort).
+- A **metadata export** containing an export of metadata from a repository. They are used to transfer metadata between repositories that are not connected to the same [cohort](/services/omrs/cohort).
 
 ## Structure
 
 The logical structure of an open metadata archive is as follows:
 
-![Logical structure of an open metadata archive](/egeria-docs/guides/developer/open-metadata-archives/open-metadata-archive-structure.svg)
+![Logical structure of an open metadata archive](/guides/developer/open-metadata-archives/open-metadata-archive-structure.svg)
 
 --8<-- "docs/guides/developer/open-metadata-archives/open-metadata-archive-header-example.md"
 
@@ -24,9 +24,9 @@ Instances are linked together as follows:
 - Relationships are stored as `Relationship` structures and link to their entities through the embedded `EntityProxy` structure.
 - The entities will include their classifications; however, for classifications that are attached to entities that are not included in the archive, they are stored in an `ClassificationEntityExtension` structure.
 
-![Instance structures in an open metadata archive](/egeria-docs/guides/developer/open-metadata-archives/open-metadata-archive-instances.svg)
+![Instance structures in an open metadata archive](/guides/developer/open-metadata-archives/open-metadata-archive-instances.svg)
 
-Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/egeria-docs/concepts/open-metadata-archive-store-connector).
+Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/concepts/open-metadata-archive-store-connector).
 
 
 ## Processing
@@ -38,7 +38,7 @@ Open metadata archives are introduced into the server through the admin services
 
 ![Processing of an open metadata archive](open-metadata-archive-processing.svg)
 
-The archive is passed to the repository services' operational services, which in turn passes it on to the [archive manager](/egeria-docs/services/omrs/archive-manager). Type information is passed to the [repository content manager](../services/omrs/repository-content-manager.md).
+The archive is passed to the repository services' operational services, which in turn passes it on to the [archive manager](/services/omrs/archive-manager). Type information is passed to the [repository content manager](../services/omrs/repository-content-manager.md).
 
 Both the types and instances are passed to the local repository (if there is one).
 
@@ -67,7 +67,7 @@ The archive loads in the following order:
 
 ??? education "Further information"
 
-    - [Metadata Archiving](/egeria-docs/features/metadata-archiving/overview) describing all of the features of Egeria that use the Open Metadata Archives
-    - [The open metadata archive connector](/egeria-docs/concepts/open-metadata-archive-connector)
+    - [Metadata Archiving](/features/metadata-archiving/overview) describing all of the features of Egeria that use the Open Metadata Archives
+    - [The open metadata archive connector](/concepts/open-metadata-archive-connector)
 
 --8<-- "snippets/abbr.md"

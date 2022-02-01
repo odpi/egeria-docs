@@ -11,21 +11,21 @@ hide:
 # Integration Daemon Services
 
 The integration daemon services provide the implementation
-of the [Integration Daemon](/egeria-docs/concepts/integration-daemon)
+of the [Integration Daemon](/concepts/integration-daemon)
 OMAG Server which is responsible for operating the 
-[Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis).
+[Open Metadata Integration Services (OMISs)](/services/omis).
 The integration services are responsible for running connectors that exchange metadata with third party
 technology.
 
 
-![Figure 1](/egeria-docs/concepts/integration-daemon-in-action.svg)
+![Figure 1](/concepts/integration-daemon-in-action.svg)
 > **Figure 1:** Integration daemon exchanging metadata with many types of third party technologies
 
 
 Each type of integration service supports a particular type of connector interface that is designed to exchange
-metadata with a specific [Open Metadata Access Services (OMASs)](/egeria-docs/services/omas).
-For example, the [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview) calls the
-[Data Manager OMAS](/egeria-docs/omas/data-manager/overview).  
+metadata with a specific [Open Metadata Access Services (OMASs)](/services/omas).
+For example, the [Database Integrator OMIS](/services/omis/database-integrator/overview) calls the
+[Data Manager OMAS](/omas/data-manager/overview).  
 
 ![Figure 2](integration-daemon-omis-omas-pair.svg)
 > **Figure 2:** The pairing of the integration services with the access services
@@ -40,9 +40,9 @@ exchange of metadata with third party technology.
 
 ## Further information
 
-* [Trouble shooting issues](/egeria-docs/guides/diagnostic/integration-daemon-diagnostic-guide) with the integration daemon
-* [Configuring](/egeria-docs/concepts/integration-daemon) the integration daemon
-* Learning more about [integration connectors](/egeria-docs/concepts/integration-connector)
-* [Solutions](/egeria-docs/solutions/data-manager-integration) using the integration daemon
+* [Trouble shooting issues](/guides/diagnostic/integration-daemon-diagnostic-guide) with the integration daemon
+* [Configuring](/concepts/integration-daemon) the integration daemon
+* Learning more about [integration connectors](/concepts/integration-connector)
+* [Solutions](/solutions/data-manager-integration) using the integration daemon
 
 --8<-- "snippets/abbr.md"

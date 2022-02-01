@@ -5,7 +5,7 @@
 
 # Open Connector Framework (OCF)
 
-The *open connector framework* (OCF), as the name suggests, is an open framework for supporting [connectors](#connector). Connector provide client-side access to remote digital resources such as data sets, APIs and software components. OCF connectors also provide access to metadata about the resource ([assets](/egeria-docs/concepts/asset)) and may call the [Audit Log Framework](/egeria-docs/frameworks/alf/overview) to log audit messages.
+The *open connector framework* (OCF), as the name suggests, is an open framework for supporting [connectors](#connector). Connector provide client-side access to remote digital resources such as data sets, APIs and software components. OCF connectors also provide access to metadata about the resource ([assets](/concepts/asset)) and may call the [Audit Log Framework](/frameworks/alf/overview) to log audit messages.
 
 ## Benefits
 
@@ -25,7 +25,7 @@ The following factors influenced the design of the OCF.
 
 - There are many existing connectors and connector frameworks in the industry today. It is important that these existing connectors can be incorporated into the OCF. Thus, the OCF includes placeholders for adapters to external connector providers and connectors.
 - Application developers will only adopt a connector framework if it is easy to use. Thus, the connector interfaces allow for the use of native data APIs to minimize the effort an application developer has to take in order to use the OCF connectors.
-- Access to the all properties known about an asset should be available to the consumers of the corresponding resource.  Therefore, the OCF provides a standard interface for accessing these properties. Different providers of these properties can plug into the OCF. Egeria provides an implementation of this interface to supply asset properties stored in open metadata repositories in the [OCF metadata management common service](/egeria-docs/services/common/ocf-metadata-management).
+- Access to the all properties known about an asset should be available to the consumers of the corresponding resource.  Therefore, the OCF provides a standard interface for accessing these properties. Different providers of these properties can plug into the OCF. Egeria provides an implementation of this interface to supply asset properties stored in open metadata repositories in the [OCF metadata management common service](/services/common/ocf-metadata-management).
 
 ## Terminology
 
@@ -47,7 +47,7 @@ An OCF connector provides four APIs:
 OCF connectors are not limited to representing assets as they are physically implemented. An OCF connector can represent a simplified logical (virtual) asset, such as a data set, that is designed for the needs of a specific application or tool. This type of connector delegates the requests it receives to one or more physical data resources. It is called a *virtual connector*.
 
 !!! education "Further information"
-    See the [developer guide](/egeria-docs/guides/developer/guide) for information on writing connectors.
+    See the [developer guide](/guides/developer/guide) for information on writing connectors.
 
 ### Connection
 
@@ -75,13 +75,13 @@ The OCF offers two implementations of the connection:
 
 #### Connection properties
 
-The properties for a connection are defined in [model 0201](/egeria-docs/types/2/0201-connectors-and-connections) and include:
+The properties for a connection are defined in [model 0201](/types/2/0201-connectors-and-connections) and include:
 
 | Property | Description |
 |---|---|
 | `guid` | GUID for the connection. |
 | `url` | URL of the connection definition in the metadata repository. |
-| `qualifiedName` | The official (unique) name for the connection. This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages. (Sourced from the `qualifiedName` attribute in `Referenceable` - [model 0010](/egeria-docs/types/0/0010-Base-Model))
+| `qualifiedName` | The official (unique) name for the connection. This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages. (Sourced from the `qualifiedName` attribute in `Referenceable` - [model 0010](/types/0/0010-Base-Model))
 | `displayName` | A consumable name for the connection. Often a shortened form of the qualifiedName for use on user interfaces and messages. The displayName should be only be used for audit logs and error messages if the qualifiedName is not set. |
 | `type` | Information about the TypeDef for the connection. |
 | `description` | A full description of the connection covering details of the assets it connects to along with usage and version information. |
@@ -96,7 +96,7 @@ The properties for a connection are defined in [model 0201](/egeria-docs/types/2
 
 #### Using Connections from open metadata repositories
 
-Each connection stored in a metadata repository has a unique identifier. An application can request a connector instance through selected Egeria OMAS interfaces, such as the [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer), with just the unique identifier or name of a connection.
+Each connection stored in a metadata repository has a unique identifier. An application can request a connector instance through selected Egeria OMAS interfaces, such as the [Asset Consumer OMAS](/services/omas/asset-consumer), with just the unique identifier or name of a connection.
 
 The OMAS retrieves the connection object from the open metadata repositories and passes it to the [connector broker](#connector-broker) factory object. The connector broker (and underlying [connector provider](#connector-provider)) uses the information from the connection object to create an instance of the connector.
 
@@ -104,16 +104,16 @@ The advantage of retrieving the connection information from a metadata repositor
 
 Connections can be created in the open metadata repositories through the following interfaces:
 
-- [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)
-- [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview)
-- [Data Manager OMAS](/egeria-docs/services/omas/data-manager/overview)
-- [Database Integrator OMIS](/egeria-docs/services/omis/database-integrator/overview)
-- [Files Integrator OMIS](/egeria-docs/services/omis/files-integrator/overview)
-- [Governance Action OMES](/egeria-docs/services/omes/governance-action/overview)
+- [Asset Owner OMAS](/services/omas/asset-owner/overview)
+- [Asset Manager OMAS](/services/omas/asset-manager/overview)
+- [Data Manager OMAS](/services/omas/data-manager/overview)
+- [Database Integrator OMIS](/services/omis/database-integrator/overview)
+- [Files Integrator OMIS](/services/omis/files-integrator/overview)
+- [Governance Action OMES](/services/omes/governance-action/overview)
 
 #### Configuring connections
 
-The [administration guide](/egeria-docs/guides/admin/guide) describes how to configure Egeria's OMAG Server Platforms and servers. Both the platform and the servers use connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies. This means that the configuration includes connection definitions for these connectors.
+The [administration guide](/guides/admin/guide) describes how to configure Egeria's OMAG Server Platforms and servers. Both the platform and the servers use connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies. This means that the configuration includes connection definitions for these connectors.
 
 All of these interfaces have Java clients that enable you to set up the connection using the OCF connection bean. However, if you want to use the REST API directly, then you need to specify the connection in JSON.
 
@@ -160,10 +160,10 @@ It is implemented in the [`ConnectorBroker` :material-github:](https://github.co
 
 When the connector instance is requested, the connector broker uses the [*connector type*](#connector-type) properties from the supplied [connection](#connection) to identify the appropriate [connector provider](#connector-provider). The connector broker delegates the connector instance request to the connector provider and returns the result to its caller.
 
-The connector broker is used in the client code of the [Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) that provide connector instances to their consumers, for example:
+The connector broker is used in the client code of the [Open Metadata Access Services (OMAS)](/services/omas) that provide connector instances to their consumers, for example:
 
-- [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview)
-- [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview)
+- [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
+- [Asset Owner OMAS](/services/omas/asset-owner/overview)
 
 ### Connector type
 
@@ -187,7 +187,7 @@ The connector type is linked to the [connection](#connection) objects that reque
 ![Connection Structure](connection.png)
 
 !!! education "Further information"
-    - The open metadata type for a connector type is defined in [model 0201](/egeria-docs/types/2/0201-Connectors-and-Connections).
+    - The open metadata type for a connector type is defined in [model 0201](/types/2/0201-Connectors-and-Connections).
     - The [open connector archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } module provides an open metadata archive that contains connector types for connectors supported by Egeria.
 
 ### Connector provider
@@ -286,7 +286,7 @@ The [`ConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/b
 
 ### Connected asset properties
 
-*Connected asset properties* are the properties known about an asset accessed through a connector, hosted by a [metadata access server](/egeria-docs/concepts/metadata-access-server). These properties are presented at three levels:
+*Connected asset properties* are the properties known about an asset accessed through a connector, hosted by a [metadata access server](/concepts/metadata-access-server). These properties are presented at three levels:
 
 #### Asset summary
 
@@ -297,12 +297,12 @@ The [`ConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/b
 | `type` | metadata type information for the asset |
 | `guid` | GUID for the asset |
 | `url` | external link for the asset |
-| `qualifiedName` | The official (unique) name for the asset. This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages. (Sourced from the `qualifiedName` attribute in `Referenceable` - [model 0010](/egeria-docs/types/0/0010-Base-Model)) |
-| `displayName` | A consumable name for the asset. Often a shortened form of the asset's qualifiedName for use on user interfaces and messages. The asset's displayName should be only be used for audit logs and error messages if the qualifiedName is not set. (Sourced from `displayName` attribute within `Asset` - [model 0010](/egeria-docs/types/0/0010-Base-Model)))
-| `shortDescription` | Short description about the asset. (Sourced from `assetSummary` within `ConnectionsToAsset` - [model 0205](/egeria-docs/types/2/0205-Connection-Linkage)) |
-| `description` | Full description of the asset. (Sourced from `description` attribute within `Asset` - [model 0010](/egeria-docs/types/0/0010-Base-Model)) |
-| `owner` | Name of the person or organization that owns the asset. (Sourced from the `AssetOwnership` classification - [model 0445](/egeria-docs/types/4/0445-Governance-Roles)) |
-| `zoneMembership` | List of governance zones assigned to the asset. (Sourced from the `AssetZoneMembership` classification - [model 0445](/egeria-docs/types/4/0424-Governance-Zones)) |
+| `qualifiedName` | The official (unique) name for the asset. This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages. (Sourced from the `qualifiedName` attribute in `Referenceable` - [model 0010](/types/0/0010-Base-Model)) |
+| `displayName` | A consumable name for the asset. Often a shortened form of the asset's qualifiedName for use on user interfaces and messages. The asset's displayName should be only be used for audit logs and error messages if the qualifiedName is not set. (Sourced from `displayName` attribute within `Asset` - [model 0010](/types/0/0010-Base-Model)))
+| `shortDescription` | Short description about the asset. (Sourced from `assetSummary` within `ConnectionsToAsset` - [model 0205](/types/2/0205-Connection-Linkage)) |
+| `description` | Full description of the asset. (Sourced from `description` attribute within `Asset` - [model 0010](/types/0/0010-Base-Model)) |
+| `owner` | Name of the person or organization that owns the asset. (Sourced from the `AssetOwnership` classification - [model 0445](/types/4/0445-Governance-Roles)) |
+| `zoneMembership` | List of governance zones assigned to the asset. (Sourced from the `AssetZoneMembership` classification - [model 0445](/types/4/0424-Governance-Zones)) |
 | `classifications` | Full list of the classifications assigned to the asset along with their properties. |
 
 #### Asset detail
@@ -337,12 +337,12 @@ common open metadata entities related to this asset:
 
 The [connector broker](#connector-broker) does not have access to a metadata repository because the OCF is metadata repository neutral. When it creates a connector, the connected asset properties are null.
 
-[Egeria Open Metadata Access Services (OMAS)](/egeria-docs/services/omas) such as [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview), [Asset Owner OMAS](/egeria-docs/services/omas/asset-owner/overview) and
-[Discovery Engine OMAS](/egeria-docs/services/omas/discovery-engine/overview), include the connector broker in their clients and support APIs for managing connections and creating connectors.
+[Egeria Open Metadata Access Services (OMAS)](/services/omas) such as [Asset Consumer OMAS](/services/omas/asset-consumer/overview), [Asset Owner OMAS](/services/omas/asset-owner/overview) and
+[Discovery Engine OMAS](/services/omas/discovery-engine/overview), include the connector broker in their clients and support APIs for managing connections and creating connectors.
 
 Connectors created by the Egeria access services will include the connected asset properties object configured to retrieve metadata from the same open metadata repository where the OMAS is running.
 
-The connected asset properties are retrieved from the open metadata repositories by [OCF Metadata Management common services](/egeria-docs/services/common/ocf-metadata-management). It will use the same user id that was used to create the connector.
+The connected asset properties are retrieved from the open metadata repositories by [OCF Metadata Management common services](/services/common/ocf-metadata-management). It will use the same user id that was used to create the connector.
 
 ### Endpoint
 
@@ -364,16 +364,16 @@ The *endpoint* is a set of properties that defines the network address and how t
 
 Open metadata repositories are able to store information needed to use OCF connectors. Details of the types involved are as follows:
 
-- [Model 0040](/egeria-docs/types/0/0040-Software-Servers) defines the structure of an `Endpoint`.
-- [Model 0201](/egeria-docs/types/2/0201-Connectors-and-Connections) defines the structures for `Connection`s and `ConnectorType`s.
-- [Model 0205](/egeria-docs/types/2/0205-Connection-Linkage) defines the linkage between the connection and the connected asset.
+- [Model 0040](/types/0/0040-Software-Servers) defines the structure of an `Endpoint`.
+- [Model 0201](/types/2/0201-Connectors-and-Connections) defines the structures for `Connection`s and `ConnectorType`s.
+- [Model 0205](/types/2/0205-Connection-Linkage) defines the linkage between the connection and the connected asset.
 
 !!! education "Further information"
-    - The [OCF Metadata Management](/egeria-docs/services/ocf-metadata-management) supports the retrieval of connection and connected asset properties from the open metadata repository/repositories.
-    - The [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) embeds the OCF to provide client-side support for connectors.
-    - The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) make extensive use of OCF connectors for accessing open metadata repository servers and other resources. These connectors are collectively called the [OMRS connectors](#connector).
-    - Many of the [Open Metadata Governance Servers](/egeria-docs/concepts/governance-server) make use of OCF connectors to loosely-couple integration with a variety of underlying technologies.
-    - The [developer guide](/egeria-docs/guides/developer/guide) provides more information on writing connectors for Egeria.
-    - The [connector catalog](/egeria-docs/connectors) lists the pre-built connectors supplied by Egeria.
+    - The [OCF Metadata Management](/services/ocf-metadata-management) supports the retrieval of connection and connected asset properties from the open metadata repository/repositories.
+    - The [Asset Consumer OMAS](/services/omas/asset-consumer/overview) embeds the OCF to provide client-side support for connectors.
+    - The [Open Metadata Repository Services (OMRS)](/services/omrs) make extensive use of OCF connectors for accessing open metadata repository servers and other resources. These connectors are collectively called the [OMRS connectors](#connector).
+    - Many of the [Open Metadata Governance Servers](/concepts/governance-server) make use of OCF connectors to loosely-couple integration with a variety of underlying technologies.
+    - The [developer guide](/guides/developer/guide) provides more information on writing connectors for Egeria.
+    - The [connector catalog](/connectors) lists the pre-built connectors supplied by Egeria.
 
 --8<-- "snippets/abbr.md"

@@ -108,7 +108,7 @@ Kubernetes is a useful container solution that scales from a raspberry pi to hug
 
 #### Egeria Platform
 
-The [OMAG server platform](https://odpi.github.io/egeria-docs/introduction/overview/#omag-server-platform) (aka 'server chassis') is effectively a java process that is launched and acts as a container for
+The [OMAG server platform](https://odpi.github.io/introduction/overview/#omag-server-platform) (aka 'server chassis') is effectively a java process that is launched and acts as a container for
 running Egeria servers (below). In itself it has relatively little configuration but does include
 - TLS configuration ie passwords, keys, certs
 - Spring configuration (security, plugins)
@@ -119,7 +119,7 @@ The platform's connectors are mostly limited to configuration & security.
 
 #### Egeria Servers
 
-The [OMAG Server](https://odpi.github.io/egeria-docs/introduction/overview/#omag-servers) comes in a number of
+The [OMAG Server](https://odpi.github.io/introduction/overview/#omag-servers) comes in a number of
 different forms including a repository proxy, a metadata repository, a view server etc
 
 A 'server' is a logical concept that actually executes code within an Egeria Platform but is basically what is defined, started, stopped,
@@ -161,7 +161,7 @@ via the connections to metadata storage etc, and that a unique service address i
 
 ### Metadata repositories
 
-The only metadata repository that offers a suitable HA/remote environment &  supported by the Egeria open source project is [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb }, using the [Egeria XTDB connector](/egeria-docs/connectors/xtdb). 
+The only metadata repository that offers a suitable HA/remote environment &  supported by the Egeria open source project is [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb }, using the [Egeria XTDB connector](/connectors/xtdb). 
 
 Note: At this point, the deployment of XTDB itself is outside the scope of the operator.
 

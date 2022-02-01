@@ -7,7 +7,7 @@
 
 ## Interface and Base Classes
 
-The [audit log](/egeria-docs/concepts/audit-log) running in an [OMAG Server](/egeria-docs/concepts/omag-server) is implemented by the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs).  It is called `OMRSAuditLog` and is an extension to the `AuditLog` interface defined in the [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview).  The ALF supports an audit log with a single destination.  The OMRS extends this capability by implementing the ALF destination as an audit log record distributor that passes audit log records to each of the audit log destination connectors configured in the OMAG Server, depending on the severity of the audit log record and the connector's supported severities.
+The [audit log](/concepts/audit-log) running in an [OMAG Server](/concepts/omag-server) is implemented by the [Open Metadata Repository Services (OMRS)](/services/omrs).  It is called `OMRSAuditLog` and is an extension to the `AuditLog` interface defined in the [Audit Log Framework (ALF)](/frameworks/alf/overview).  The ALF supports an audit log with a single destination.  The OMRS extends this capability by implementing the ALF destination as an audit log record distributor that passes audit log records to each of the audit log destination connectors configured in the OMAG Server, depending on the severity of the audit log record and the connector's supported severities.
 
 The OMRS also defines the list of severities used by Egeria and extends the audit log record to include details of the originating server.  It adds these values to each audit log record before it is passed to any of the audit log destination connectors.
 
@@ -21,7 +21,7 @@ In that package you will see the following Java classes:
 * `OMRSAuditLogStore` is the main interface of the audit log destination connector.  It includes the following methods:
 
    * `getDestinationName` - used by the OMRS in its logging.
-   * `getSupportedSeverities` - returns the list of audit log record severities that have been configured for this destination instance.  These are passed to the connector in its [configuration properties](/egeria-docs/concepts/configuration-properties) passed in its [connection](/egeria-docs/concepts/connection) that is set up in the server's [configuration document](/egeria-docs/concepts/configuration-document).  The name of the property is `supportedSeverities`.
+   * `getSupportedSeverities` - returns the list of audit log record severities that have been configured for this destination instance.  These are passed to the connector in its [configuration properties](/concepts/configuration-properties) passed in its [connection](/concepts/connection) that is set up in the server's [configuration document](/concepts/configuration-document).  The name of the property is `supportedSeverities`.
    * `storeLogRecord` - called for each log record that has a severity from the supported severities.
    * `getAuditLogRecord` - optional method to retrieve a specific log record.
    * `getAuditLogRecordsByTimeStamp` - optional method to retrieve a list of log records written in a specified time period.  The offset and maximumRecords parameters support paging.
@@ -86,11 +86,11 @@ org.odpi.openmetadata.frameworks.connectors.ConnectorProviderBase
 This assumes:
 
 - There is a single connector implementation class for the connector.
-- The connector is instantiated with the default constructor. This means all of its configuration information is contained in the [Connection](/egeria-docs/concepts/connection) object supplied on the `initialize()` method.
+- The connector is instantiated with the default constructor. This means all of its configuration information is contained in the [Connection](/concepts/connection) object supplied on the `initialize()` method.
 
 If your connector implementation matches these requirements, its connector provider implementation need only implement a constructor to configure the base class's function with details of itself and the Java class of the connector it needs using:
                
-- a GUID for the [connector type](/egeria-docs/concepts/connector-type)
+- a GUID for the [connector type](/concepts/connector-type)
 - a name for the connector type.
 - a description of what the connector is for and how to configure it.
 - the connector class it instantiates.

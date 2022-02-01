@@ -50,7 +50,7 @@ This connector also runs in a [repository proxy](../../../../admin-services/docs
 This connector provides a simple in-memory repository for testing/demos or
 small-scale environments where metadata is being managed remotely and cached locally.
 It has native support for the open metadata types an instances
-and so runs in a [metadata access-store](/egeria-docs/concepts/metadata-access-store).
+and so runs in a [metadata access-store](/concepts/metadata-access-store).
 
 * **[Graph OMRS Repository Connector](../../../../adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector)** -
 This connector is provides a high functioning open metadata repository implementation

@@ -7,9 +7,9 @@ External references describe and contain a URL to a document or online resource
 outside of open metadata.
 
 A list of external references can be attached to 
-a [personal profile](/egeria-docs/concepts/personal-profile),
-a [community](/egeria-docs/concepts/community) or
-a [team](/egeria-docs/concepts/organizations/#team)
+a [personal profile](/concepts/personal-profile),
+a [community](/concepts/community) or
+a [team](/concepts/organizations/#team)
 
 
 --8<-- "snippets/abbr.md"

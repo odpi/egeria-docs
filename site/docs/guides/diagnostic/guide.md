@@ -4,12 +4,12 @@
 # Egeria diagnostic guide
 
 This guide focuses on diagnosing and fixing issues running Egeria's
-[OMAG Server Platform](/egeria-docs/concepts/omag-server-platform)
-and the [OMAG Servers](/egeria-docs/concepts/omag-server)
+[OMAG Server Platform](/concepts/omag-server-platform)
+and the [OMAG Servers](/concepts/omag-server)
 that run on it.
 
 If you are having problems building Egeria, please see the
-[Building Egeria](/egeria-docs/education/tutorials/building-egeria-tutorial/overview) tutorial.
+[Building Egeria](/education/tutorials/building-egeria-tutorial/overview) tutorial.
 
 
 ## The diagnosis process
@@ -62,10 +62,10 @@ So now consider each phase of the process.
             
     * **Gather diagnostics** - This is where you are looking to capture the evidence that may identify
     both the source of the error and the nature of the failure.
-    The different types of diagnostics that are available are described [in Diagnostic Source](/egeria-docs/guides/diagnostic/diagnostic-sources).
+    The different types of diagnostics that are available are described [in Diagnostic Source](/guides/diagnostic/diagnostic-sources).
     If the problem is in the Egeria code,
     rather than its runtime environment, then the 
-    [Egeria diagnostics may also defined how to fix the problem](/egeria-docs/guides/diagnostic/ffdc).
+    [Egeria diagnostics may also defined how to fix the problem](/guides/diagnostic/ffdc).
     
 * **Information Integration and Interpretation** - The second phase uses the evidence gathered in the
   to make a diagnosis to determine which component is in error and what it is doing that is incorrect.
@@ -104,7 +104,7 @@ So now consider each phase of the process.
   * **Monitor results** - Finally the changes need to be tested to ensure the problem is fixed and
   there are no unwanted side-effects.  If the solution did not work, then begin again with the
   information gathering process.  It may also be a time to request help from the 
-  [Egeria community](/egeria-docs/guides/community).  If the situation is worse, you may wish to back out the changes
+  [Egeria community](/guides/community).  If the situation is worse, you may wish to back out the changes
   you have made before trying the diagnosis process again.
 
 The description above is an overview of what to do to diagnose and fix a problem.
@@ -113,16 +113,16 @@ However, whilst some problems are frequently encountered, others are unique to y
 What follows are some descriptions of the diagnostics for problems that are frequently seen.
 These can help you to eliminate the obvious causes.  
 
-* [Examples of OMAG Server Platform startup errors](/egeria-docs/guides/diagnostic/examples-of-platform-start-up-errors)
-* [Examples of OMAG Server startup errors](/egeria-docs/guides/diagnostic/examples-of-server-start-up-errors)
-* [Examples of Open Metadata Repository Cohort errors](/egeria-docs/guides/diagnostic/examples-of-cohort-errors)
-* [Examples of REST API call failures](/egeria-docs/guides/diagnostic/examples-of-common-rest-api-errors)
+* [Examples of OMAG Server Platform startup errors](/guides/diagnostic/examples-of-platform-start-up-errors)
+* [Examples of OMAG Server startup errors](/guides/diagnostic/examples-of-server-start-up-errors)
+* [Examples of Open Metadata Repository Cohort errors](/guides/diagnostic/examples-of-cohort-errors)
+* [Examples of REST API call failures](/guides/diagnostic/examples-of-common-rest-api-errors)
 
 
 ## Further information
 
-* [First Failure Data Capture (FFDC)](/egeria-docs/guides/diagnostic/ffdc)
-* [Integration Daemon Diagnostics Guide](/egeria-docs/guides/diagnostic/integration-daemon-diagnostic-guide)
-* [Administration Guide](/egeria-docs/guides/admin)
+* [First Failure Data Capture (FFDC)](/guides/diagnostic/ffdc)
+* [Integration Daemon Diagnostics Guide](/guides/diagnostic/integration-daemon-diagnostic-guide)
+* [Administration Guide](/guides/admin)
 
 --8<-- "snippets/abbr.md"

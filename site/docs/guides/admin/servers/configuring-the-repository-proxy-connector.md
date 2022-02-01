@@ -3,16 +3,16 @@
 
 ## Configure the connectors to the third party metadata repository
 
-The mapping between a third party metadata repository and the open metadata protocols in a [repository proxy](/egeria-docs/concepts/repository-proxy) is implemented by two connectors:
+The mapping between a third party metadata repository and the open metadata protocols in a [repository proxy](/concepts/repository-proxy) is implemented by two connectors:
 
-- A [repository connector](/egeria-docs/concepts/repository-connector)
-- A [event mapper connector](/egeria-docs/concepts/event-mapper-connector)
+- A [repository connector](/concepts/repository-connector)
+- A [event mapper connector](/concepts/event-mapper-connector)
 
 They are configured as follows.
 
 ### Configure the repository connector
 
-The repository proxy can act as a proxy to a third party metadata repository. This is done by adding the connection for the [repository connector](/egeria-docs/concepts/repository-connector) as follows.
+The repository proxy can act as a proxy to a third party metadata repository. This is done by adding the connection for the [repository connector](/concepts/repository-connector) as follows.
 
 !!! post "POST - configure the repository connector"
     ```
@@ -46,13 +46,13 @@ The repository proxy can act as a proxy to a third party metadata repository. Th
 
 ### Configure the event mapper connector
 
-Any open metadata repository that supports its own API **must** also implement an event mapper to ensure the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is notified when metadata is added to the repository without going through the open metadata APIs.
+Any open metadata repository that supports its own API **must** also implement an event mapper to ensure the [Open Metadata Repository Services (OMRS)](/services/omrs) is notified when metadata is added to the repository without going through the open metadata APIs.
 
-The [event mapper is a connector](/egeria-docs/concepts/event-mapper-connector) that listens for proprietary events from the repository and converts them into calls to the OMRS. The OMRS then distributes this new metadata.
+The [event mapper is a connector](/concepts/event-mapper-connector) that listens for proprietary events from the repository and converts them into calls to the OMRS. The OMRS then distributes this new metadata.
 
 !!! post "POST - configure event mapper"
     ```
     {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/event-mapper-details?connectorProvider={{fullyQualifiedJavaClassName}}&eventSource={{resourceName}}
     ```
 
-    The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/egeria-docs/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).
+    The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).

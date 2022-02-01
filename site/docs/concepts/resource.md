@@ -12,6 +12,6 @@ The term *resource* is used throughout the Egeria documentation to refer to some
 
 Resources are described in metadata as [Assets](asset.md).
 
-In addition, the organization may capture intellectual property in metadata as, for example, a [glossary term](/egeria-docs/concepts/glossary-term) or a governance definition.
+In addition, the organization may capture intellectual property in metadata as, for example, a [glossary term](/concepts/glossary-term) or a governance definition.
 
 --8<-- "snippets/abbr.md"

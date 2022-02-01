@@ -3,13 +3,13 @@
 
 # Discovery Annotations
 
-A discovery annotation describes one or more related properties about an [Asset](/egeria-docs/concepts/asset) that has been
+A discovery annotation describes one or more related properties about an [Asset](/concepts/asset) that has been
 discovered by a [discovery service](discovery-service.md).
 
 Some discovery annotations refer to an entire asset and others refer to a data field within
 an asset.   The annotations that describe a single data field are called *data field annotations*.
 
-The annotation types defined in the  [Open Discovery Framework (ODF)](/egeria-docs/frameworks/odf/overview) are as follows:
+The annotation types defined in the  [Open Discovery Framework (ODF)](/frameworks/odf/overview) are as follows:
 
 * **Classification Annotation** - Captures a recommendation of which classifications to
   attach to this asset.  It can be made at the asset or data field level.
@@ -34,12 +34,12 @@ The annotation types defined in the  [Open Discovery Framework (ODF)](/egeria-do
 ## Open Metadata Types for Discovery Annotations
 
 The open metadata types for a discovery annotations are describe in
-[Area 6](/egeria-docs/types/6).
+[Area 6](/types/6).
 
 The main entity type is called
-[Annotation](/egeria-docs/types/6/0610-Annotations).
+[Annotation](/types/6/0610-Annotations).
 It is extended by
-[DataFieldAnnotation](/egeria-docs/types/6/0617-Data-Field-Analysis.md)
+[DataFieldAnnotation](/types/6/0617-Data-Field-Analysis.md)
 to distinguish annotations that refer, primarily to a data field.
 Other more specialist annotations extend these two basic annotation types.
 

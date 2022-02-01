@@ -12,7 +12,7 @@ The metadata repository where a metadata entity or relationship is created is ca
 
 Metadata in its home repository can be updated and deleted.
 
-The [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs) is responsible for sharing this metadata with other metadata repositories who are members of the same [cohort](cohort-member.md).
+The [Open Metadata Repository Services (OMRS)](/services/omrs) is responsible for sharing this metadata with other metadata repositories who are members of the same [cohort](cohort-member.md).
 
 The shared copies are called *reference copies* and are read-only. Update requests to a reference copy are automatically redirected to the home repository by Egeria, without the caller being aware.
 

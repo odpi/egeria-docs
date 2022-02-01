@@ -21,9 +21,9 @@ in an organization's approach to governance.
 
 ## Related Information
 
-* Governance Drivers are types of **GovernanceDefinitions** which are located in model [0401](/egeria-docs/types/4/0401-Governance-Definitions).
+* Governance Drivers are types of **GovernanceDefinitions** which are located in model [0401](/types/4/0401-Governance-Definitions).
 
-* The [Governance Program OMAS](/egeria-docs/services/omas/governance-program/overview)
+* The [Governance Program OMAS](/services/omas/governance-program/overview)
   provides support for defining governance drivers through its **GovernanceDriversInterface**. 
 
 --8<-- "snippets/abbr.md"

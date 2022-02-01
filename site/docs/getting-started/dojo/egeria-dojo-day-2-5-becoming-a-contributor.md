@@ -14,12 +14,12 @@ Watch the video to find out more: [https://youtu.be/e3pEXZ6iatE](https://youtu.b
 ## What does it mean to be recognized as an Egeria contributor?
 
 An **Egeria Contributor** is someone who has made multiple quality contributions to the Egeria community.
-This role is described in the [Operations Guide](/egeria-docs/guides/project-operations).
+This role is described in the [Operations Guide](/guides/project-operations).
 
 ## Egeria badges
 
 To recognise individuals who are established contributors to the Egeria project,
-the Egeria community is able to award [Acclaim badges](/egeria-docs/contributor/badges/overview).
+the Egeria community is able to award [Acclaim badges](/contributor/badges/overview).
 
 ## Test yourself
 

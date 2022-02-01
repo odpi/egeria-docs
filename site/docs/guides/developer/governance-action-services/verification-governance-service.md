@@ -7,7 +7,7 @@
 Verification Governance Services test the properties of specific open metadata elements
 to ensure they are set up correctly and do not indicate a situation where governance activity is required. 
 The results returned from the verification governance service can be used to trigger other
-governance services as part of a [Governance Action Process](/egeria-docs/concepts/governance-action-process).
+governance services as part of a [Governance Action Process](/concepts/governance-action-process).
 
 
 ![Figure 1](verification-governance-service-context.svg)

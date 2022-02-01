@@ -12,8 +12,8 @@ hide:
 
 The repository handler supports the following features:
 
-* Selection of elements to return based on their [effectivity dates](/egeria-docs/features/effectivity-dates/overview).
-* [Deduplication](/egeria-docs/features/duplicate-management/overview).
-* [Metadata provenance](/egeria-docs/features/metadata-provenance/overview) validation.
+* Selection of elements to return based on their [effectivity dates](/features/effectivity-dates/overview).
+* [Deduplication](/features/duplicate-management/overview).
+* [Metadata provenance](/features/metadata-provenance/overview) validation.
 
 --8<-- "snippets/abbr.md"

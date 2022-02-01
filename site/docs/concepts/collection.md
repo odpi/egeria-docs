@@ -8,7 +8,7 @@ hide:
 
 # Collections
 
-A collection is a reusable list of metadata elements.  [Assets](/egeria-docs/concepts/asset) and other resources can be linked to a collection. The collection itself can then be added to a another collection, say for a [community](/egeria-docs/concepts/community) or a [personal profile](/egeria-docs/concepts/personal-profile).
+A collection is a reusable list of metadata elements.  [Assets](/concepts/asset) and other resources can be linked to a collection. The collection itself can then be added to a another collection, say for a [community](/concepts/community) or a [personal profile](/concepts/personal-profile).
 
 
 

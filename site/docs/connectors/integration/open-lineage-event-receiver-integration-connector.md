@@ -4,9 +4,9 @@
 # Open Lineage Event Receiver Integration Connector
 
 ??? info "Connector details"
-    - Connector Category: [Integration Connector](/egeria-docs/connectors/integration-connector)
-    - Hosting Service: [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator)
-    - Hosting Server: [Integration Daemon](/egeria-docs/concepts/integration-daemon)
+    - Connector Category: [Integration Connector](/connectors/integration-connector)
+    - Hosting Service: [Lineage Integrator OMIS](/services/omis/lineage-integrator)
+    - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [lineage-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/lineage-integration-connectors){ target=gh }
     - Jar File Name: `lineage-integration-connectors.jar`
 
@@ -20,10 +20,10 @@ The OpenLineage Event Receiver integration connector receives open lineage event
 
 ## Configuration
 
-This connector uses the [Lineage Integrator OMIS](/egeria-docs/services/omis/lineage-integrator/overview)
-running in the [Integration Daemon](/egeria-docs/concepts/integration-daemon).
+This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
+running in the [Integration Daemon](/concepts/integration-daemon).
 
-Its connection definition to use on the [administration commands that configure the API Integrator OMIS](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/egeria-docs/concepts/open-metadata-topic-connector). 
+Its connection definition to use on the [administration commands that configure the API Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="11"
@@ -42,7 +42,7 @@ Its connection definition to use on the [administration commands that configure 
     }
     ```
 
-    - Add the connection for the open metadata topic connector in the `embeddedConnections` section replacing {{topicConnection}}.  This will have the topic name in the endpoint's `networkAddress`.  The example below shows the  connection for the [Kafka open metadata topic connector](/egeria-docs/connectors/resource/kafka-open-metadata-topic-connector)
+    - Add the connection for the open metadata topic connector in the `embeddedConnections` section replacing {{topicConnection}}.  This will have the topic name in the endpoint's `networkAddress`.  The example below shows the  connection for the [Kafka open metadata topic connector](/connectors/resource/kafka-open-metadata-topic-connector)
 
     !!! example "Kafka topic connection configuration"
         ```json linenums="1" hl_lines="11-40"

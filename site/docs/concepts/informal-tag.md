@@ -18,8 +18,8 @@ Any user can create, update, delete and assign/unassign public informal tags.  I
 
 Support for informal tags is found in the following services:
 
-  * [Asset Consumer OMAS](/egeria-docs/services/omas/asset-consumer/overview) - informal tagging of assets
-  * [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview) - informal tagging of personal profiles, collaboration content and community content.
+  * [Asset Consumer OMAS](/services/omas/asset-consumer/overview) - informal tagging of assets
+  * [Community Profile OMAS](/services/omas/community-profile/overview) - informal tagging of personal profiles, collaboration content and community content.
 
 The process of adding a tag to an object is called *tagging*.
 

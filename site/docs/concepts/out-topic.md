@@ -3,7 +3,7 @@
 
 # OMAS OutTopic
 
-The OutTopic of an [Open Metadata Access Service](/egeria-docs/services/omas) is the location where the OMAS will sent
+The OutTopic of an [Open Metadata Access Service](/services/omas) is the location where the OMAS will sent
 outgoing events to its consumers.
 
 

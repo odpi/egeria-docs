@@ -16,6 +16,6 @@ retrieve information about servers, services, cohorts and platforms.
 The interface supports the exploration of an Egeria topology and displays it both visually, as graphs and using  
 detailed textual description of each type of artefact. The textual display provides summary and detailed views.
 
-This OMVS calls a remote server using the [repository services client](/egeria-docs/services/omrs).
+This OMVS calls a remote server using the [repository services client](/services/omrs).
 
 ---8<-- "snippets/abbr.md"

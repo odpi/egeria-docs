@@ -22,11 +22,11 @@ The `AssetManager` classification represents a technology that manages metadata 
 !!! example "Examples of asset managers"
     [Amundsen :material-dock-window:](https://www.amundsen.io/amundsen/){ target=md }, [Marquez :material-dock-window:](https://marquezproject.github.io/marquez/){ target=md } and [Apache Atlas :material-dock-window:](https://atlas.apache.org){ target=md } are examples of data catalogs, and therefore of asset managers.
 
-    An Egeria deployment using a [metadata access server](/egeria-docs/concepts/metadata-access-server) and one or more [integration daemons](/egeria-docs/concepts/integration-daemon) is also an asset manager.
+    An Egeria deployment using a [metadata access server](/concepts/metadata-access-server) and one or more [integration daemons](/concepts/integration-daemon) is also an asset manager.
 
-The `AssetManager` classification on a [`SoftwareCapability`](/egeria-docs/types/0/0042-Software-Capabilities/#softwarecapability) entity is used by the [Asset Manager OMAS](/egeria-docs/services/omas/asset-manager/overview) to represent the third party asset manager that it is exchanging metadata with.
+The `AssetManager` classification on a [`SoftwareCapability`](/types/0/0042-Software-Capabilities/#softwarecapability) entity is used by the [Asset Manager OMAS](/services/omas/asset-manager/overview) to represent the third party asset manager that it is exchanging metadata with.
 
-Identities from this third party asset manager are linked to the `AssetManager` entity using the [`ExternalIdScope`](/egeria-docs/types/0/0017-External-Identifiers/#externalidscope) relationship.
+Identities from this third party asset manager are linked to the `AssetManager` entity using the [`ExternalIdScope`](/types/0/0017-External-Identifiers/#externalidscope) relationship.
 
 ## UserProfileManager
 
@@ -42,11 +42,11 @@ A `MasterDataManager` classification describes a server that manages the rationa
 
 ## ContentCollectionManager
 
-A `ContentCollectionManager` classification describes a server that manages a [collection of documents or media files](/egeria-docs/types/2/0221-Document-Stores).
+A `ContentCollectionManager` classification describes a server that manages a [collection of documents or media files](/types/2/0221-Document-Stores).
 
 ## NotificationManager
 
-A `NotificationManager` classification describes a server that manages the distribution of [events](/egeria-docs/types/2/0223-Events-and-Logs) to multiple destinations.
+A `NotificationManager` classification describes a server that manages the distribution of [events](/types/2/0223-Events-and-Logs) to multiple destinations.
 
 ## SourceControlLibrary
 

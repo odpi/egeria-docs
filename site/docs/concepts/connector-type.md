@@ -9,8 +9,8 @@ hide:
 # Connector Type
 
 The *connector type* is a set of properties that defines the 
-supported capabilities and the identity of the [connector provider](/egeria-docs/concepts/connector-provider)
-for a [connector](/egeria-docs/concepts/connector).  Its properties are:
+supported capabilities and the identity of the [connector provider](/concepts/connector-provider)
+for a [connector](/concepts/connector).  Its properties are:
 
  - **guid** - Globally unique identifier for the connector type.
  - **url** - External link address for the connector type properties in the metadata repository.  
@@ -23,16 +23,16 @@ for a [connector](/egeria-docs/concepts/connector).  Its properties are:
  - **recognizedSecuredProperties** - these are the Connection secured properties recognized by the connector implementation
  - **additionalProperties** - Any additional properties that the connector provider needs to know in order to create connector instances.  
 
-The connector type is linked to the [Connection](/egeria-docs/concepts/connection) objects that request this type of connector.
+The connector type is linked to the [Connection](/concepts/connection) objects that request this type of connector.
 
 
-![Connection Structure](/egeria-docs/concepts/connection.svg)
+![Connection Structure](/concepts/connection.svg)
 > **Figure 1:** Connection structure
 
 
 !!! education "Further information"
 
-    - The open metadata type for a connector type is defined in [model 0201](/egeria-docs/types/2/0201-Connectors-and-Connections).
+    - The open metadata type for a connector type is defined in [model 0201](/types/2/0201-Connectors-and-Connections).
     - The [open connector archives](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-connector-archives)  module provides an open metadata archive that contains connector types for data connectors supported by Egeria.
 
 

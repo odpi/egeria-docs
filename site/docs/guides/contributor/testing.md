@@ -7,17 +7,17 @@
 
 [Postman :material-dock-window:](https://www.postman.com/){ target=postman } is an interactive tool for calling REST APIs. The Egeria community uses Postman for demos and education as well as testing APIs during development.
 
-![Postman client](/egeria-docs/education/tutorials/postman-tutorial/postman-client.png)
+![Postman client](/education/tutorials/postman-tutorial/postman-client.png)
 
 !!! attention "Disable SSL certificate verification"
     Egeria by default uses secure HTTP requests (`https://`) with a self-signed certificate. By default, Postman does not allow self-signed certificates. Any Postman users will therefore need to go into **Preferences** -> **Settings** and on the **General** tab, turn off **SSL certificate verification** or requests will fail.
 
-    ![Turn off self-signed certificate checking](/egeria-docs/education/tutorials/postman-turn-off-certificate-checking.png)
+    ![Turn off self-signed certificate checking](/education/tutorials/postman-turn-off-certificate-checking.png)
 
 !!! education "Further information"
 
-    - [Egeria-specific Postman tutorial](/egeria-docs/education/tutorials/postman-tutorial/overview).
-    - [Adding Postman samples](/egeria-docs/guides/contributor/guidelines/#postman-artifacts-for-apis)
+    - [Egeria-specific Postman tutorial](/education/tutorials/postman-tutorial/overview).
+    - [Adding Postman samples](/guides/contributor/guidelines/#postman-artifacts-for-apis)
 
 ## Command-line request tools
 

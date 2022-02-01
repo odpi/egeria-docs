@@ -32,7 +32,7 @@ Note, the timings are very approximate.
 
 ## Next step
 
-Let's move on to an [Introduction to the Egeria project](/egeria-docs/education/egeria-dojo/running-egeria/egeria-introduction)
+Let's move on to an [Introduction to the Egeria project](/education/egeria-dojo/running-egeria/egeria-introduction)
 
 
 --8<-- "snippets/abbr.md"

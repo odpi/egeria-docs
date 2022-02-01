@@ -23,10 +23,10 @@ An integration connector can:
 
 - Listen on a blocking call, waiting for the third party technology to send a notification.
 - Register with an external notification service that sends notifications on its own thread.
-- Register a listener with its context to act on notifications from the partner OMAS's [Out Topic](/egeria-docs/concepts/out-topic).
+- Register a listener with its context to act on notifications from the partner OMAS's [Out Topic](/concepts/out-topic).
 - Poll the third party technology each time that the `refresh()` method is called.
 
-The [Open Metadata Integration Services (OMISs)](/egeria-docs/services/omis) each define the interface that an integration connector must implements if they are to run under that service.  The interfaces for each integration service is listed in the table below.
+The [Open Metadata Integration Services (OMISs)](/services/omis) each define the interface that an integration connector must implements if they are to run under that service.  The interfaces for each integration service is listed in the table below.
 
 | Integration Service | Type of technology supported | Link to integration connector base class |
 |---|---|---|
@@ -48,21 +48,21 @@ All of these base classes define the shape of the context object that the integr
 ![Figure 1](integration-connector-methods.svg)
 > **Figure 1:** Methods implemented by an integration connector
 
-- `initialize` is a standard method for all connectors that is called by the [connector broker](/egeria-docs/concepts/connector-broker) when a request is made to create an instance of the connector. The connector broker uses the initialize method to pass the [connection](/egeria-docs/concepts/connection) object used to create the connector instance and a unique identifier for this instance of the connector.
+- `initialize` is a standard method for all connectors that is called by the [connector broker](/concepts/connector-broker) when a request is made to create an instance of the connector. The connector broker uses the initialize method to pass the [connection](/concepts/connection) object used to create the connector instance and a unique identifier for this instance of the connector.
 
-- `setAuditLog` provides a [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview) compatible logging destination.
+- `setAuditLog` provides a [Audit Log Framework (ALF)](/frameworks/alf/overview) compatible logging destination.
 
 - `setConnectorName` provides the name of the connector from the configuration so it can be used for logging.
 
 - `setContext` sets up the integration service specific context object. This provides an interface to the services of the OMAS that the integration service is paired with. Although the interfaces vary from integration service to integration service, they typically offer the following types of method call for each type of metadata it supports:
 
-    - The ability to register a listener to receive events from the OMAS's [Out Topic](/egeria-docs/concepts/out-topic), or send events to the OMAS's [In Topic](/egeria-docs/concepts/in-topic).
+    - The ability to register a listener to receive events from the OMAS's [Out Topic](/concepts/out-topic), or send events to the OMAS's [In Topic](/concepts/in-topic).
     - The ability to create and update metadata instances.
     - For assets, the ability to change an asset's visibility by changing its zone membership using the `publish` and `withdraw` methods.
     - The ability to delete metadata.
     - Various retrieval methods to help when comparing the metadata in the open metadata repositories with the metadata in the third party technology.
     
-- `start` indicates that the connector is completely configured and can begin processing. This call can be used to register with non-blocking services. For example, it can register a listener for events from the OMAS [Out Topic](/egeria-docs/concepts/out-topic) through the context.
+- `start` indicates that the connector is completely configured and can begin processing. This call can be used to register with non-blocking services. For example, it can register a listener for events from the OMAS [Out Topic](/concepts/out-topic) through the context.
 
 - `engage` is used when the connector is configured to need to issue blocking calls to wait for new metadata. It is called from its own thread. It is recommended that the `engage()` method returns when each blocking call completes. The integration daemon will pause a second and then call `engage()` again. This pattern enables the calling thread to detect the shutdown of its hosting integration daemon server.
 
@@ -91,8 +91,8 @@ Location is determined from the endpoints that are stored in open metadata.  The
 An integration connector can choose to support one of these patterns or switch dynamically depending on the presence of the endpoint in the connector's configuration. 
 
 ??? education "Further information"
-    - [Open Connector Framework (OCF)](/egeria-docs/frameworks/ocf/overview) that defines the behavior of all connectors.
-    - [Configuring an integration daemon](/egeria-docs/guides/admin/servers/configuring-an-integration-daemon) to understand how to set up an integration connector.
-    - [Developer guide](/egeria-docs/guides/developer) for more information on writing connectors.
+    - [Open Connector Framework (OCF)](/frameworks/ocf/overview) that defines the behavior of all connectors.
+    - [Configuring an integration daemon](/guides/admin/servers/configuring-an-integration-daemon) to understand how to set up an integration connector.
+    - [Developer guide](/guides/developer) for more information on writing connectors.
 
 --8<-- "snippets/abbr.md"

@@ -19,9 +19,9 @@ A *`VirtualMachine`* provides virtualized hardware through a hypervisor that all
 
 ## VirtualContainer
 
-A *`VirtualContainer`* provides the services of a host to the [software servers](/egeria-docs/types/0/0040-Software-Servers) deployed on it. When the server makes requests for storage, network access, etc, the `VirtualContainer` delegates the requests to the equivalent services of the actual host it is deployed on.
+A *`VirtualContainer`* provides the services of a host to the [software servers](/types/0/0040-Software-Servers) deployed on it. When the server makes requests for storage, network access, etc, the `VirtualContainer` delegates the requests to the equivalent services of the actual host it is deployed on.
 
-`VirtualContainer`s can be hosted on other `VirtualContainer`s, but to actually run they need to ultimately be deployed onto a real physical [`Host`](/egeria-docs/types/0/0030-Hosts-and-Platforms/#host).
+`VirtualContainer`s can be hosted on other `VirtualContainer`s, but to actually run they need to ultimately be deployed onto a real physical [`Host`](/types/0/0030-Hosts-and-Platforms/#host).
 
 ### DockerContainer
 
@@ -33,7 +33,7 @@ A *`HostCluster`* describes a collection of hosts that together are providing a 
 
 There are two specific types of host clusters defined: in both, the hosts that they manage are often referred to as *nodes*.
 
-Within the host cluster is typically a special host (node) that is controlling the execution of the other members. This host is modelled with a [`SoftwareServerPlatform`](/egeria-docs/types/0/0037-Software-Server-Platforms/#softwareserverplatform) that describes the cluster management platform, and optional [`SoftwareServer`](/egeria-docs/types/0/0040-Software-Servers/#softwareserver) assets.  [`SoftwareCapabilities`](/egeria-docs/types/0/0042-Software-Capabilities/#softwarecapability) needed to manage the cluster are linked to these [`ITInfrastructure`](/egeria-docs/types/0/0030-Hosts-and-Platforms/#itinfrastructure) using the [`ServerAssetUse`](/egeria-docs/types/0/0045-Servers-and-Assets/#serverassetuse) relationship.
+Within the host cluster is typically a special host (node) that is controlling the execution of the other members. This host is modelled with a [`SoftwareServerPlatform`](/types/0/0037-Software-Server-Platforms/#softwareserverplatform) that describes the cluster management platform, and optional [`SoftwareServer`](/types/0/0040-Software-Servers/#softwareserver) assets.  [`SoftwareCapabilities`](/types/0/0042-Software-Capabilities/#softwarecapability) needed to manage the cluster are linked to these [`ITInfrastructure`](/types/0/0030-Hosts-and-Platforms/#itinfrastructure) using the [`ServerAssetUse`](/types/0/0045-Servers-and-Assets/#serverassetuse) relationship.
 
 ### HadoopCluster
 

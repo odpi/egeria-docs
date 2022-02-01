@@ -28,7 +28,7 @@ Many modules have more error handling code than "happy path code".
 In addition, there is wide spread use of two important components
 throughout Egeria.
 
-- The [FFDC Services](/egeria-docs/services/ffdc-services) -
+- The [FFDC Services](/services/ffdc-services) -
   provides base services for implementing FFDC in an Egeria module.
 
      - Common audit log messages and exception codes.
@@ -38,23 +38,23 @@ throughout Egeria.
      - REST Call logger for debug messages and performance logging.
      - Handler for common exceptions.
      
-- The [Audit Log Framework (ALF)](/egeria-docs/frameworks/alf/overview) -
+- The [Audit Log Framework (ALF)](/frameworks/alf/overview) -
   provides interface definitions and classes to enable connectors to support natural language enabled
   diagnostics such as exception messages and audit log messages.
 
 The result is the consistent availability of detailed diagnostics when things go wrong.
 
-In addition the [Open Metadata Repository Services (OMRS)](/egeria-docs/services/omrs)
+In addition the [Open Metadata Repository Services (OMRS)](/services/omrs)
 provides an extension to the ALF's audit log destination that supports multiple
-[audit log store connectors](/egeria-docs/concepts/audit-log-connectors).
+[audit log store connectors](/concepts/audit-log-connectors).
 This means that an OMAG Server can be configured to route 
 audit log messages to multiple destinations.
 
-![Using different log destination](/egeria-docs/frameworks/alf/audit-log-framework-overview.svg)
+![Using different log destination](/frameworks/alf/audit-log-framework-overview.svg)
 
 Details of the supported audit log store connectors and
 how to set them up are described in
-[Configuring the Audit Log](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
+[Configuring the Audit Log](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
 
 ## FFDC principles practised by the Egeria community
 
@@ -134,13 +134,13 @@ and another example:
 }
 ```
 
-Additional examples of common errors are shown [here](/egeria-docs/guides/diagnostic/examples-of-common-rest-api-errors).
+Additional examples of common errors are shown [here](/guides/diagnostic/examples-of-common-rest-api-errors).
 
 ## Audit Log Messages
 
 The diagram below illustrates the structure of the audit log records:
 
-![Audit log record structure](/egeria-docs/concepts/audit-log-record.svg)
+![Audit log record structure](/concepts/audit-log-record.svg)
 
 ### Audit Log Record Severities
 
@@ -223,7 +223,7 @@ Below is an example of the types of information captured in an audit log record.
 
 ## Further information
 
-* [Configuring the audit log destinations](/egeria-docs/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
+* [Configuring the audit log destinations](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
 
 
 --8<-- "snippets/abbr.md"

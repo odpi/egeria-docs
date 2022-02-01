@@ -8,9 +8,9 @@ hide:
 
 # 0205 Connection Linkage
 
-The purpose of a [connector](/egeria-docs/concepts/connector) is to access the content and related properties (metadata) about an [Asset](/egeria-docs/concepts/asset) owned or used by an organization.
+The purpose of a [connector](/concepts/connector) is to access the content and related properties (metadata) about an [Asset](/concepts/asset) owned or used by an organization.
 
-In order for the connector to provide details of the know properties of an Asset, the open metadata types support a relationship between a [Connection](/egeria-docs/concepts/connection) and the Asset.
+In order for the connector to provide details of the know properties of an Asset, the open metadata types support a relationship between a [Connection](/concepts/connection) and the Asset.
 
 Notice that the connection can only be associated with one asset, although an Asset may support multiple connections, each providing a different class of service, or security permissions to the consumer.
 
@@ -20,7 +20,7 @@ In addition, some connectors are virtual connectors - by that we mean they imple
 
 ??? education "Further information"
 
-    [Using connectors](/egeria-docs/guides/developer/using-connectors)
+    [Using connectors](/guides/developer/using-connectors)
     
 --8<-- "snippets/abbr.md"
  

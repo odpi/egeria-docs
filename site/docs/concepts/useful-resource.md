@@ -8,8 +8,8 @@ Examples of resources include glossaries, or categories and terms from a glossar
 governance definitions, models, system definitions or process definitions.
 
 It is possible to maintain a list of useful resources for a
-[personal profile](/egeria-docs/concepts/personal-profile), 
-a [team](/egeria-docs/concepts/organizations/#team) or a [community](/egeria-docs/concepts/community).
+[personal profile](/concepts/personal-profile), 
+a [team](/concepts/organizations/#team) or a [community](/concepts/community).
 
 
 

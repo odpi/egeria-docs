@@ -13,7 +13,7 @@ the Egeria concepts before you create your own environment.
 In the previous steps you installed Kubernetes and Helm.
 
 First we'll check that you still have the correct environment setup. If you get any errors, check back with the
-[Kubernetes documentation :material-dock-window:](/egeria-docs/guides/operations/kubernetes/){ target=docs } .
+[Kubernetes documentation :material-dock-window:](/guides/operations/kubernetes/){ target=docs } .
 
 You will likely only have single node if running a simple environment, but these commands should
 confirm you have connectivity to your Kubernetes cluster.
@@ -165,6 +165,6 @@ As long as all the pods are ready, we know that:
 
 ## Next step
 
-Let's move on to the [Egeria UIs](/egeria-docs/education/egeria-dojo/running-egeria/user-interfaces/ui-introduction)
+Let's move on to the [Egeria UIs](/education/egeria-dojo/running-egeria/user-interfaces/ui-introduction)
 
 --8<-- "snippets/abbr.md"

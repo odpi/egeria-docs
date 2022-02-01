@@ -3,13 +3,13 @@
 
 ## Configure metadata to load on startup
 
-[Open metadata archives](/egeria-docs/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [cohort members](/egeria-docs/concepts/cohort-members).
+[Open metadata archives](/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [cohort members](/concepts/cohort-members).
 
 Archives can be [added to the configuration document](#adding-an-archive-to-the-configuration-document) of a server to ensure their content is loaded each time the server is started. This is intended for repositories that do not store the archive content but keep it in memory.
 
-Archives can also be [loaded to a running server](/egeria-docs/guides/operations/adding-archive-to-a-running-server).
+Archives can also be [loaded to a running server](/guides/operations/adding-archive-to-a-running-server).
 
-![Metadata Archive Section in Configuration Document](/egeria-docs/guides/admin/servers/configuration-docs-section-metadata-archives.svg)
+![Metadata Archive Section in Configuration Document](/guides/admin/servers/configuration-docs-section-metadata-archives.svg)
 
 !!! attention "Loading the same archive multiple times"
     If an archive is loaded multiple times, its content is only added to the local repository once - that is if the repository does not have the content already.  No errors are recorded if the content is already in the repository.
@@ -25,7 +25,7 @@ Typically, an open metadata archive is stored as JSON format in a file. To confi
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
 
-Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/egeria-docs/concepts/connection). These connections refer to connectors that can read and retrieve the open metadata archive content.
+Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/concepts/connection). These connections refer to connectors that can read and retrieve the open metadata archive content.
 
 !!! post "POST - specify connection(s) to load"
     ```

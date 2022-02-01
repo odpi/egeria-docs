@@ -14,7 +14,7 @@ Either way, user identities should not be shared between people or automated pro
 
 A user identity may be associated with a
 [personal profile](personal-profile.md).
-This is managed through the [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview)
+This is managed through the [Community Profile OMAS](/services/omas/community-profile/overview)
 and is designed to support collaboration.
 
 

@@ -8,7 +8,7 @@ and their roles and contribution in the organization.
 
 ## Person
 
-`Person` extends [`ActorProfile`](/egeria-docs/types/1/0110-Actors/#actorprofile) to capture more information about a person. Many of the properties are inspired by the LDAP `inetOrgPerson` attributes (see [RFC 2798](https://datatracker.ietf.org/doc/rfc2798/)).
+`Person` extends [`ActorProfile`](/types/1/0110-Actors/#actorprofile) to capture more information about a person. Many of the properties are inspired by the LDAP `inetOrgPerson` attributes (see [RFC 2798](https://datatracker.ietf.org/doc/rfc2798/)).
 
 Typically the `name` is set to a person's preferred name.  The `qualifiedName` may be the identifier from an external system or the `employeeNumber` and/or some combination of names to ensure it is unique.  Then the properties are as follows:
 
@@ -29,7 +29,7 @@ The *Peer* relationship links two people together as peers in an organization.  
 
 ## Contribution Record
 
-The *ContributionRecord* accumulates achievements of an individual. Specifically Egeria supports [Karma Points](/egeria-docs/concepts/karma-point). These are awarded for participation in open metadata and governance. The number of karma points awarded to the individual is recorded in their *ContributionRecord* entity.
+The *ContributionRecord* accumulates achievements of an individual. Specifically Egeria supports [Karma Points](/concepts/karma-point). These are awarded for participation in open metadata and governance. The number of karma points awarded to the individual is recorded in their *ContributionRecord* entity.
 
 - `isPublic` indicates whether the values in the contribution record can be shared with colleagues or is only visible to user(s) that connect with one of the linked user identities or systems that are part of the open metadata ecosystem.
 - `karmaPoints` captures the total number of points that the individual has earned from their activity.
@@ -40,13 +40,13 @@ Open metadata separates the person from the roles they perform. This is because 
 
 The PersonRole entity is extended in multiple places to show different types of roles. For example:
 
-- ['TeamLeader'](/egeria-docs/types/1/0115-Teams/#teamleader) and ['TeamMember'](/egeria-docs/types/1/0115-Teams/#teammember)
-- ['GovernanceRole'](/egeria-docs/types/4/0445-Governance-Roles/#governancerole)
-- ['ProjectManager'](/egeria-docs/types/1/0130-Projects)
+- ['TeamLeader'](/types/1/0115-Teams/#teamleader) and ['TeamMember'](/types/1/0115-Teams/#teammember)
+- ['GovernanceRole'](/types/4/0445-Governance-Roles/#governancerole)
+- ['ProjectManager'](/types/1/0130-Projects)
 
 ## PersonRoleAppointment
 
-The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppointment* relationship to show that the person has been appointed.  It is common for [effectivity dates](/egeria-docs/features/effectivity-dates) to be set on this relationship.
+The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppointment* relationship to show that the person has been appointed.  It is common for [effectivity dates](/features/effectivity-dates) to be set on this relationship.
 
 
 ![UML](0112-People.svg "Describing the profile for a person")
@@ -54,10 +54,10 @@ The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppoi
 
 ## Further information
 
-[People, Roles and Organizations](/egeria-docs/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
+[People, Roles and Organizations](/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
 
-The [Community Profile OMAS](/egeria-docs/services/omas/community-profile/overview) provides support for managing a [person's profile](/egeria-docs/concepts/personal-profile). It also supports the ability to query a person's [roles](/egeria-docs/concepts/personal-roles) and their [peer network](/egeria-docs/concepts/peer-network).
+The [Community Profile OMAS](/services/omas/community-profile/overview) provides support for managing a [person's profile](/concepts/personal-profile). It also supports the ability to query a person's [roles](/concepts/personal-roles) and their [peer network](/concepts/peer-network).
 
-The [Organization Integrator OMIS](/egeria-docs/services/omis/organization-integrator/overview) supports the synchronization of information about people between open metadata and external systems.
+The [Organization Integrator OMIS](/services/omis/organization-integrator/overview) supports the synchronization of information about people between open metadata and external systems.
 
 --8<-- "snippets/abbr.md"

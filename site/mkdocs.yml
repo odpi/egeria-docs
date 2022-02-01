@@ -6,7 +6,7 @@ site_description: Open metadata and governance for enterprises - automatically c
 copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2021 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
-site_url: https://odpi.github.io/egeria-docs
+site_url: https://odpi.github.io
 edit_uri: ""
 
 nav:

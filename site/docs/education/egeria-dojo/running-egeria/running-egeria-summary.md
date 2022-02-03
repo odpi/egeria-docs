@@ -16,7 +16,7 @@ During this session we hope you've gained:
 
 We hope this Dojo has been a useful experience for you & we'd love to hear your feedback about how it went.
 
-Please let us know via the #egeria-dojo slack channel, or via a [github issue :material-dock-window:](https://github.com/odpi/issues){ target=gh }
+Please let us know via the #egeria-dojo slack channel, or via a [github issue :material-dock-window:](https://github.com/odpi/egeria-docs/issues){ target=gh }
 
 We're keen to take your feedback on board, and improve the sessions for the future.
 

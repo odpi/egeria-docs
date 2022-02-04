@@ -9,7 +9,7 @@ Metadata discovery uses advanced analysis to inspect the content of specific ass
 
 The results can either be automatically applied to the asset's catalog entry or it can go through a stewardship process to have a subject matter expert confirm the findings (or not).
 
-Discovery and stewardship are the most advanced form of automation for asset cataloging. Egeria provides the server runtime environment and component framework to allow third parties to create discovery services and governance action implementations. It has only simple implementations of these components, mostly for demonstration purposes. This is the area where vendors and other open source projects are expected to provide additional value.
+Discovery and stewardship are the most advanced form of automation for asset cataloging. Egeria provides the server runtime environment and component framework to allow third parties to create discovery services and governance action implementations. It has only simple implementations of these components, mostly for demonstration purposes. This is an area where vendors and other open source projects are expected to provide additional value.
 
 ## Metadata Discovery
 
@@ -27,7 +27,7 @@ The [Open Discovery Framework (ODF)](/frameworks/odf/overview) has open APIs tha
 
  * the ability to manage discovery configuration,
  * a search function to locate assets in the metadata repository,
- * access all of the metadata known about each asset including its connector and
+ * access to all of the metadata known about each asset including its connector and
  * the ability to record the results of its analysis.
 
 This metadata repository interface for metadata discovery tools is implemented by the [Discovery Engine OMAS](/services/omas/discovery-engine).

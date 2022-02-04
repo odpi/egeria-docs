@@ -24,7 +24,7 @@ The anchor is also important in [templated cataloguing](/features/templated-cata
 
 ## Anchors classification
 
-The [Anchors](/types/0/0010-Basic-Model/#Anchors) classification contains the unique identifier (GUID) of an anchor entity.  It is attached to an anchored entity and makes it easier to navigate from an anchored entity to its anchored entity.
+The [Anchors](/types/0/0010-Basic-Model/#Anchors) classification contains the unique identifier (GUID) of an anchor entity.  A GUID is attached to an anchored entity which makes it easier to navigate from an anchored entity to other entities anchored to it.
 
 
 !!! example "Example: SchemaElements and Comments"
@@ -33,7 +33,7 @@ The [Anchors](/types/0/0010-Basic-Model/#Anchors) classification contains the un
     ![Figure 1](anchors-classifications-on-dependant-objects.svg)
     > **Figure 1:** Examples of dependent entities that are anchored to an Asset
 
-If a [GlossaryTerm](/concepts/glossary-term), or [InformalTag](/concepts/informal-tag) is attached to the Asset, they are not anchored to it. GlossaryTerms and InformalTags are independent entities. They are not anchored to the Asset and hence do not have an Anchors classification. Any change to these entities does not reflect in the LatestChange classification of the Asset. However, the act of attaching them to, or detaching them from the Asset is recorded in the Asset's LatestChange classification. Since the GlossaryTerm is also an anchor, when the GlossaryTerm and the Asset are linked together, this change is reflected in both of their LatestChange classifications because they are both Referenceable anchors.
+If a [GlossaryTerm](/concepts/glossary-term), or [InformalTag](/concepts/informal-tag) is attached to an Asset through a relationship, they are not anchored to it. GlossaryTerms and InformalTags are independent entities. They are not anchored to the Asset and hence do not have an Anchors classification. Any change to these entities does not reflect in the LatestChange classification of the Asset. However, the act of attaching them to, or detaching them from the Asset is recorded in the Asset's LatestChange classification. Since the GlossaryTerm is also an anchor, when the GlossaryTerm and the Asset are linked together, this change is reflected in both of their LatestChange classifications because they are both Referenceable anchors.
 
 NoteLogs are Referenceables that can be attached to many other Referenceables. They can be set up either to be anchored with a single Referenceable or to be their own anchor to allow then to be attached to and detached from many Referenceables over its lifetime.
 
@@ -56,7 +56,7 @@ NoteLogs are Referenceables that can be attached to many other Referenceables. T
     ![Figure 2](anchors-classifications-on-attached-objects.svg)
     > **Figure 2:** Examples of other types of entities that are linked to an Asset but not necessarily anchored there
     
-It is worthwhile maintaining the `Anchors` classification because reads of and updates to the anchored entities will happen many times, and it is rare that an anchored entity will change its anchor during its life time.
+It is worthwhile maintaining the `Anchors` classification because reads of, and updates to the anchored entities will happen many times, and it is rare that an anchored entity will change its anchor during its life time.
     
 ## LatestChange classification
 
@@ -64,7 +64,7 @@ The [`LatestChange`](/types/0/0011-Managing-Referenceables/#LatestChange) classi
 
 So for example, if a hierarchy of SchemaElements, or a hierarchy of Comments (all Referenceables) were anchored to an Asset (also a Referenceable), then the LatestChange classification goes on the Asset and records changes to any of these entities. This includes changing property values, attaching or detaching entities through relationships as well ans any changes to their classifications.
 
-Maintaining "LatestChange" on Assets means that it is easier to monitor for changes affecting the Asset and any of its anchored entities. However it also means that it must be easy to located the Asset from any of the anchored entities when they change, even though they may not be directly connected.
+Maintaining "LatestChange" on Assets means that it is easier to monitor for changes affecting the Asset and any of its anchored entities. However it also means that it must be easy to locate the Asset from any of the anchored entities when they change, even though they may not be directly connected.
     
 !!! education "Further information"
     - [Generic Handlers](/services/generic-handlers) maintain the Anchors and LatestChange classifications.

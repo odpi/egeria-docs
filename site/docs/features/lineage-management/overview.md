@@ -26,7 +26,7 @@ On the left here is an Apache Spark job that reads from a file, looks up a value
 
 As the importance of lineage is understood, it is becoming common that individual technologies provide a lineage view of their processing similar to figure 1.  This is very useful to the immediate users of that technology.  However from an enterprise perspective these technologies do not run in isolation.  Enterprises need to be able to link the lineage from these technologies together to show how data flows from its original sources to its ultimate destinations.
 
-Figure 2 shows a flow of data through multiple technologies.  It begins with a Relational Database (RDB). This is read by an ETL job that writes all or some of its contents to an Apache Hive table. A report is requested which calls and API to retrieve the data. An Apache Spark job is initiated through the API. It reads from the Apache Hive table, runs an analytics model based on the data from the table and invokes an Apache Airflow DAG (process) before returning the results to the report.  The Apache Airflow DAG writes the information into an Apache Avro file and an event to an Apache Kafka topic. 
+Figure 2 shows a flow of data through multiple technologies.  It begins with a Relational Database (RDB). This is read by an ETL job that writes all or some of its contents to an Apache Hive table. A report is requested which calls an API to retrieve the data. An Apache Spark job is initiated through the API. It reads from the Apache Hive table, runs an analytics model based on the data from the table and invokes an Apache Airflow DAG (process) before returning the results to the report.  The Apache Airflow DAG writes information into an Apache Avro file and an event to an Apache Kafka topic. 
 
 ![Figure 2](lineage-capture.svg)
 > **Figure 2:** The lineage graph emerges
@@ -38,7 +38,7 @@ Figure 3 abstracts the example shown in figure 2.  From this you can see that th
 ![Figure 3](basic-concept-of-lineage.svg)
 > **Figure 3:** The abstract lineage graph
 
-There are also often systems that act as a hub, with many processes extracting data, performing processing and then storing the results back into the same system.  Other stores act as a consolidation point, receiving data from many systems and then distributing to multiple downstream stores.  So the graph also involves loops and fan-in-fan-out structures.
+There may also be systems that act as a hub, with many processes extracting data, performing processing and then storing the results back into the same system.  Other stores act as a consolidation point, receiving data from many systems and then distributing to multiple downstream stores.  So the graph also involves loops and fan-in-fan-out structures.
 
 ## Lineage architecture
 
@@ -67,7 +67,7 @@ Each of these aspects have their challenges.
 
 - the cataloguing of your digital landscape typically involves many different techniques since there are many choices of technologies typically deployed.  These techniques expose inconsistencies in naming, formats and detail.  It is also possible that the same resource is catalogued multiple times.  Ths is why the lineage architecture includes [stewardship](#lineage-stewardship) to reconcile these differences.
 
-- Processing engines either produce no dynamic lineage information (this is the most common) or it is formatted in a unique proprietary format that needs to be transformed before it can be linked with the equivalent information from another processing engine.
+- Processing engines either produce no dynamic lineage information (this is the most common) or produce lineage information formatted in a unique proprietary format that needs to be transformed before it can be linked with the equivalent information from another processing engine.
 
 - When dynamic lineage information is captured, it produces a huge amount of data, much of which is of low value, or only valuable for a short period of time.  It needs to be actively pruned to prevent it from overwhelming the digital landscape.
 
@@ -343,7 +343,7 @@ As the lineage mappings are added, the lineage graph grows. Figure 33 shows the 
 Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](egeria-docs/concepts/engine-host) can be used to read from the [OpenLineage Log Store](#openlineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
 
 ![Figure 34](governance-by-expectation.svg)
-> **Figure 34:** A governance action service called *Process Validation Connector running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.
+> **Figure 34:** A governance action service called *Process Validation Connector* running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.
 
 ## Lineage preservation and use
 

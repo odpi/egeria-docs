@@ -7,7 +7,7 @@ Duplicate management covers the identification of multiple instances of metadata
 
 ## What is a duplicate?
 
-Duplicates occur when the same concept or resource is captured in multiple tools.  They are not noticed as duplicates when the tools operate independently.  However, when these tools are connected together through Egeria, the inconsistencies between them create partial results and possible errors in decisions made using this information.
+Duplicates occur when the same concept or resource is captured in multiple tools.  They are not noticed as duplicates when the tools operate independently.  However, when these tools are connected together through Egeria, inconsistencies between them can create partial results and lead to possible errors in decisions made that use this information.
 
 Figure 1 shows a simple duplicate where each instance originates from a different repository.  Although each instance has a different unique identifier (GUID), the rest of the metadata is consistent.  This makes it easy to spot when both are returned in a search query.  However, a query to count, say, the number of glossary terms would give misleading results.
 
@@ -107,7 +107,7 @@ The survivorship rules operate on the following principles:
 * The cardinality of relationships must be respected.
 * If multiple peer entities point to the same target entity with the same type of uni-link relationship then the target entity is processed only once.
 
-Figure 7 shows two glossary terms linked as peer duplicates. When entity is queried by GUID, properties from requested entity are returned with combination of classifications.  Conflicts in classifications are recorded on the audit log.  The latest values are used. 
+Figure 7 shows two glossary terms linked as peer duplicates. When an entity is queried by GUID, properties from the requested entity are returned with a combination of classifications.  Conflicts in classifications are recorded on the audit log.  The latest values are used. 
 
 When the relationships of an identified duplicate are queried, the combination from all duplicates is returned unless only one instance of a relationship is allowed in which case the latest values are used.  
 

@@ -219,7 +219,13 @@ nav:
       - Project Operations: guides/project-operations.md
       - Code:
           - Coding Guidelines: guides/contributor/guidelines.md
-          - Way of Working: guides/contributor/process.md
+          - Way of Working:
+              - Overview: guides/contributor/process.md
+              - Working with Releases:
+                  - Release process: guides/contributor/release-process/index.md
+                  - Egeria Core Release process: guides/contributor/release-process/egeria-core-release.md
+                  - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
+                  - Egeria charts Release process: guides/contributor/release-process/egeria-charts-release.md
           - Specific Guidance:
               - Programming Languages: guides/developer/languages.md
               - Tools:
@@ -613,7 +619,7 @@ nav:
       - GUID: concepts/guid.md
       - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md
-      - Governance Action Process: concepts/governance-action-process.md
+      - Governance Action Process: concepts/governance-action-release-process.md
       - Governance Action Type: concepts/governance-action-type.md
       - Governance Engine: concepts/governance-engine.md
       - Governance Engine Definition: concepts/governance-engine-definition.md

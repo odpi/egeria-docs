@@ -32,7 +32,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     ??? tip "Installing Apache Kafka ..."
         --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
 
-    The exercises make use of code samples in the following git repositories and you may wish to have a clone of them on your machine.
+    The dojo makes use of egeria libraries and code samples in the following git repositories and you will needd a clone of them on your machine.
     
     - https://github.com/odpi/egeria
     - https://github.com/odpi/egeria-samples

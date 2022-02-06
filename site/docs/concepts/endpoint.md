@@ -27,10 +27,8 @@ the endpoint.
 access the Asset.
 
 
-## Further information
-
- * The open metadata type for an endpoint is defined in 
-   [model 0026](/types/0/0026-Endpoints).
+!!! education "Further information"
+    * The open metadata type for an endpoint is defined in [model 0026](/types/0/0026-Endpoints).
 
 
 --8<-- "snippets/abbr.md"

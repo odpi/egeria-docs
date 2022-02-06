@@ -74,4 +74,52 @@ order, but that is not necessarily guaranteed since it depends on the type and c
     
     - [Cataloguing topics and event types for an event broker](/services/omis/topic-integrator/overview)}
 
+## Engine
+
+An *engine* is a software capability that is programmable to automate specific processes.  Typically these processes manipulate and store data.
+
+Below are examples of engines:
+
+* Workflow engine - for automating processes that coordinate the activity of people and systems.
+* Data movement engine - for automating the movement of data from one store to another.
+* Data virtualization engine - for automating the federation and transformation
+of data in response to a real-time query.
+* Reporting engine - for extracting data and formatting into specific reports.
+* Analytics engine - for executing analytical processes.
+
+The metadata used by an engine relates to the processing it is performing and the data sources it is working with.
+
+Most engines have associated tools to create the process definitions and manage the metadata, leaving the engines themselves to run the automated processes and create lineage metadata.
+
+## Master data manager
+
+A *master data manager* is a capability in a software server to manage an authoritative
+collection of master data, typically about people, organizations, products and accounts.
+
+Master data managers that hold information about the people and organizations using open metadata
+integrate their data through the [Community Profile OMAS](../../../community-profile).
+
+## Asset Manager
+
+An *asset manager* is typically a service that provides a catalog of [assets](/concepts/asset).  It is responsible for maintaining details of the assets including their characteristics, ownership, assessments and governance requirements.
+
+Often an asset manager is specialized for particular types of assets. For example, you may see a **data catalog** cataloging information about data sets and data stores for a data lake. A Configuration Management Database (CMDB) is an asset manager of infrastructure assets.
+
+### Open metadata support for asset managers
+
+An asset manager may integrate with the open metadata ecosystem using one of three methods:
+
+* as a [cohort member](/concepts/cohort-member) through the [Open Metadata Repository Services (OMRS) connectors](/connectors/#repository-and-event-mapper-connectors) or 
+
+* using the [Catalog Integrator Open Metadata Integration Service (OMIS)](/services/omis/catalog-integrator/overview) through an [integration connector](/concepts/integration-connector) or
+
+* through direct calls to the [Asset Manager Open Metadata Access Service (OMAS)](/services/omas/asset-manager/overview).
+
+The [Metadata Server Exchange](/patterns/metadata-server-exchange/overview) solution provides more information on these options.
+
+## Subsystem
+
+A subsystem is a component within a software server or software server platform that supports one or more services.  Subsystems can be decomposed into smaller subsystems.
+
+
 --8<-- "snippets/abbr.md"

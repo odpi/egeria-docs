@@ -9,15 +9,15 @@ The code for Egeria is downloaded from each git repository one at a time.  The c
 
     Create a new directory for Egeria's main libraries. In the example below it is called `egeria-main-libraries`:
 
-     ```bash
+    ```bash
     mkdir egeria-main-libraries
     ```
     
     Change to your new directory.
     
-     ```bash
-     cd egeria-main-libraries
-     ```
+    ```bash
+    cd egeria-main-libraries
+    ```
     
     Egeria's source is extracted from GitHub using the following `git` command:
     
@@ -36,15 +36,15 @@ The code for Egeria is downloaded from each git repository one at a time.  The c
 
     Create a new directory for Egeria's main libraries. In the example below it is called `egeria-samples-source`:
 
-     ```bash
+    ```bash
     mkdir egeria-samples-source
     ```
     
     Change to your new directory.
     
-     ```bash
-     cd egeria-samples-source
-     ```
+    ```bash
+    cd egeria-samples-source
+    ```
     
     Egeria's samples source is extracted from GitHub using the following `git` command:
     
@@ -62,15 +62,15 @@ The code for Egeria is downloaded from each git repository one at a time.  The c
 
     Create a new directory for Egeria's developer projects. In the example below it is called `egeria-dev-projects-source`:
 
-     ```bash
+    ```bash
     mkdir egeria-dev-projects-source
     ```
     
     Change to your new directory.
     
-     ```bash
-     cd egeria-dev-projects-source
-     ```
+    ```bash
+    cd egeria-dev-projects-source
+    ```
     
     Egeria's source is extracted from GitHub using the following `git` command:
     

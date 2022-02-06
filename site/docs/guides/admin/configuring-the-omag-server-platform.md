@@ -225,7 +225,7 @@ This removes all authorization checking from the platform services.
 Since the OMAG Server Platform is a Spring Boot application, there are other values that can be set in its **application.properties** file found in the **resources** subdirectory:
 
 - Defining the port that the OMAG Server Platform will listen on for REST API calls.
-- Controlling the level of developer logging that the platform produces when it is running. See [Configuring logging options](omag-server-platform-logging.md) for more details.
+- Controlling the level of developer logging that the platform produces when it is running. See [Configuring logging options](/guides/admin/omag-server-platform-logging) for more details.
 - Defining where the connector implementations should be loaded from.
 
 Spring provides [extensive documentation on its standard properties :material-dock-window:](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html){ target=spring }.

@@ -2,17 +2,9 @@
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
 
-### Installing Intellij
+### Installing Intellij 
 
-Go to 
-```
-https://www.jetbrains.com/idea/
-```
-and watch the **Take a Tour** video if you are not familiar with IntelliJ.
-You can download IntelliJ from this site:
-```
-https://www.jetbrains.com/idea/download/index.html
-```
+Link to the [download](https://www.jetbrains.com/idea/download/) page and follow the instructions.
 
 #### Setting up Lombok Plugin
 

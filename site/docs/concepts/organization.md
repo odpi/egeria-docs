@@ -32,8 +32,4 @@ the organization in at least one of the teams.
 
 The departmental structure can be loaded into an open metadata repository through the [Community Profile OMAS](/features/people-roles-organizations/overview).
 
-* [Loading an organization's Departmental Structure](../../../community-profile/docs/scenarios/loading-departmental-structure.md)
-* [Synchronizing an organization's Departmental Structure with another system](../../../community-profile/docs/scenarios/synchronizing-departmental-structure.md)
-
-
 --8<-- "snippets/abbr.md"

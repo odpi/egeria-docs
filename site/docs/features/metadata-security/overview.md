@@ -4,7 +4,7 @@
 
 # Open Metadata Security
 
-Open Metadata Security provides fine-grained authorization services for open metadata services, types and instances. Since each organization will have different security requirements, the support is implemented through connectors. Egeria defines the interfaces and when it will call the connector.  You define the behavior when the connector is called and Egeria acts on the returned decision.
+Open Metadata Security provides fine-grained authorization services for open metadata services, types and instances. Since each organization will have different security requirements, the support is implemented through connectors. Egeria defines the interfaces and when it will call the connector.  You define the behavior the connector implements, and Egeria acts on the returned decision.
 
 The `metadata-security` module defines the base classes and interfaces for the open metadata security connectors as well as the server implementation to host and call them.
 
@@ -31,7 +31,7 @@ POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/serv
 ```
 where the `{{adminUserId}}` is the administrator's userId and `{{serverName}}` is the name of the server where the connector is to run. The connection for the server security connector is passed in the request body.  Again, there are `GET` and `DELETE` services with the same URL to retrieve and remove this connector respectively.
 
-The security implementation in a server potentially invokes the server security connector multiple types as the request (shown as dotted white arrow) penetrates the server code. Figure 2 shows the different layers of checks.  Each layer is optional and so the server security connector can be implemented to support the most appropriate granularity of security for the situation. Details of the implementation choices are given in the [security connector API](#metadata-security-apis).
+The security implementation in a server potentially invokes the server security connector multiple times as the request (shown as dotted white arrow) is handled by the server code. Figure 2 shows the different layers of checks.  Each layer is optional and so the server security connector can be implemented to support the most appropriate granularity of security for the situation. Details of the implementation choices are given in the [security connector API](#metadata-security-apis).
 
 ![Figure 2](layers-of-security-checks.svg)
 > **Figure 2:** layers of security checks within the server
@@ -118,7 +118,7 @@ The connector that can be defined for an OMAG Server offers a series of layers o
    ratings, tags and likes, to the asset.
   * **validateUserForAssetDelete** - Tests for whether a specific user should have the right to delete an asset.
     
-* **OpenMetadataConnectionSecurity** - defines the interface of a connector that is validating whether a specific user should be given access to a specific Connection object.  This connection information has been retrieved from an open metadata repository.  It is used to create a Connector to an Asset.  It may include user credentials that could enhance the access to data and function within the Asset that is far above the specific user's approval.  This is why this optional check is performed by any open metadata service that is returning a Connection object (or a Connector created with the Connection object) to an external party.
+* **OpenMetadataConnectionSecurity** - defines the interface of a connector that is validating whether a specific user should be given access to a specific Connection object.  This connection information is retrieved from an open metadata repository.  It is used to create a Connector to an Asset.  It may include user credentials that could enhance the access to data and function within the Asset that is far above the specific user's approval.  This is why this optional check is performed by any open metadata service that is returning a Connection object (or a Connector created with the Connection object) to an external party.
 
   * **validateUserForConnection** - Tests for whether a specific user should have access to a connection.
   * **validateUserForAssetConnectionList** - Selects an appropriate connection for a user from the list of connections attached to an Asset.

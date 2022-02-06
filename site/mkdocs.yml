@@ -110,7 +110,7 @@ nav:
           - Egeria Ecosystem UI:
               - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
               - Resource Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
-              - Dino: guides/ecosystem-ui/dino-user-guide.md
+              - Dynamic Operations (Dino): guides/ecosystem-ui/dino-user-guide.md
               - Glossary author: guides/ecosystem-ui/glossary-author-user-guide.md
               - Server author: guides/ecosystem-ui/server-author-user-guide.md
       - Features:
@@ -137,7 +137,7 @@ nav:
   - User Interfaces:
       - User Interface overview: user-interfaces/index.md
       - Egeria Ecosystem User Interface:
-          - Egeria Ecosystem UI Overview: user-interfaces/ecosystemindex.md
+          - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
           - Planning checklist: user-interfaces/ecosystem/ecosystem-ui-planning-checklist.md
           - Planning: user-interfaces/ecosystem/ecosystem-ui-planning.md
           - Configure and run presentation server : user-interfaces/ecosystem/configure-and-run-presentation-server.md

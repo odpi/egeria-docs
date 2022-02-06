@@ -1,4 +1,4 @@
 - Agree on appropriate dates for branching given expected duration for testing, vacation / public holidays
-    - Typically, allow 1-2 weeks between branching and availability
+    - Typically, allow 2-4 days between branching and availability
     - Communicate with team on regular calls, and via #egeria-github on Slack
     - In the last week before branching discuss holding off on any big changes in master that could destabilize the codebase

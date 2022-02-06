@@ -32,7 +32,7 @@
     - Create a PR, have reviewed / approved and merged as usual - aim to do this as quickly as reasonable so that there is no potential for version clash
 
 ??? success "5. Test, merge any remaining required changes into branch"
-    - Run appropriate tests for the release. For example, in addition to automated tests: check notebooks, run the CTS and check for compliance, check the user interface.
+    - Run appropriate tests for the release. Run each of the parts of the UI to ensure they return results (TODO more details required).
     - Raise issues for any changes required as usual
     - Note that approval is required for changes going into a release branch
     - PR builds are run as usual; however, merge builds, Sonar, etc do not run

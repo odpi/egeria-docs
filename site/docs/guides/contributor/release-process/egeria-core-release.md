@@ -12,6 +12,8 @@
 
 ### Core Egeria Release process
 
+Open up an issue in core egeria using the 'release' template. This contains check boxes for the activities that should be performed
+
 ??? success "1. Agree schedule"
     --8<-- "docs/guides/contributor/release-steps/agree-schedule.md"
 ??? success "2. Track remaining issues and PRs"
@@ -21,6 +23,7 @@
     - Ensure local update `git pull upstream master`
     - Create branch `git branch egeria-release-x.y`
     - Push to upstream `git push upstream egeria-release-x.y`
+    - after this check my master REALLY IS the same as upstream with `git reset --hard upstream/master` (noting that this could override any local changes)
 
 ??? success "4. Update master from `x.y-SNAPSHOT` to `x.z-SNAPSHOT`"
     - `git checkout master`

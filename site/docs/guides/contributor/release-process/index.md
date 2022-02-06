@@ -3,7 +3,12 @@
 
 New releases can be created by Egeria maintainers that have the appropriate access on each GitHub repository.
 
-Releases are published to [Maven Central :material-dock-window:](https://oss.sonatype.org){ target=maven }.
+Releases are published to
+
+[Maven Central :material-dock-window:](https://oss.sonatype.org){ target=maven }
+[Maven Central :material-dock-window:](https://quay.io/odpi){ target=maven }
+[Maven Central :material-dock-window:](https://docker.io/odpi){ target=maven }
+
 
 ### Overall release policy
 
@@ -24,10 +29,10 @@ Releases are published to [Maven Central :material-dock-window:](https://oss.son
 The Egeria project is split across different git repositories, so that each repository can be built independently and can have its own community.
 Here are the release processes for Egeria repositories:
 
-[Egeria core Release process](docs/guides/contributor/release-process/egeria-core-release.md")
-[Egeria React UI Release process](docs/guides/contributor/release-process/egeria-react-ui-release.md")
-[Egeria charts Release process](docs/guides/contributor/release-process/egeria-charts-release.md")
+[Egeria core Release process](docs/guides/contributor/release-process/egeria-core-release.md)
+[Egeria React UI Release process](docs/guides/contributor/release-process/egeria-react-ui-release.md)
+[Egeria charts Release process](docs/guides/contributor/release-process/egeria-charts-release.md)
 
-TODO - othe Git repositories
+TODO - other Git repositories
 
 --8<-- "snippets/abbr.md"

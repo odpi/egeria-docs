@@ -17,12 +17,34 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 --8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 
 !!! tip "In preparation ..."
-    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.  
+    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.
+    
+    ??? tip "Installing Java ..."
+        --8<-- "docs/education/building-egeria-tutorial/task-installing-java.md"
+
+    You will need to build Egeria's source which needs Apache Maven installed
+    
+    ??? tip "Installing Apache Maven ..."
+        --8<-- "docs/education/building-egeria-tutorial/task-installing-maven.md"
+
+    During the dojo you will running Apache Kafka to experiment with event notifications
+    
+    ??? tip "Installing Apache Kafka ..."
+        --8<-- "docs/education/kafka-tutorial/task-installing-kafka.md"
 
     The exercises make use of code samples in the following git repositories and you may wish to have a clone of them on your machine.
     
-    - https://github.com/odpi/egeria-dev-projects
+    - https://github.com/odpi/egeria
     - https://github.com/odpi/egeria-samples
+    - https://github.com/odpi/egeria-dev-projects
+    
+    ??? tip "Downloading (cloning) Egeria's git repositories ..."
+        --8<-- "docs/education/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+
+    Many of the contributors to the Egeria project use the *[IntelliJ IDEA IDE](https://www.jetbrains.com/idea/)*.  Jetbrains offers a [free community edition of IntelliJ](https://www.jetbrains.com/idea/download/) which is sufficient to work with Egeria.  You are free to use any IDE during the dojo, however the instructions will focus on IntelliJ IDEA.
+
+    ??? tip "Installing IntelliJ IDEA ..."
+        Link to the [download](https://www.jetbrains.com/idea/download/) page and follow the instructions.  Egeria offers a [tutorial for IntelliJ](/education/tutorials/intellij-tutorial/overview) to help you get familiar with the tool.
 
 ???+ education "Developer Dojo starts here"
 

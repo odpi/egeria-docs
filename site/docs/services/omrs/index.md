@@ -7,7 +7,7 @@
 
 ![OMRS system context](omrs-system-context-diagram.png)
 
-On the left-hand side is the *[administration interface](/services/admin-services)* supported by the OMAG Server. This is where configuration is passed to the OMRS, and status and other relevant information is made available to the OMAG Administration Services.
+On the left-hand side is the *[administration interface](/services/admin-services/overview)* supported by the OMAG Server. This is where configuration is passed to the OMRS, and status and other relevant information is made available to the OMAG Administration Services.
 
 Along the top is the interface with the [Open Metadata Access Services (OMAS)](/services/omas). The OMRS provides access to the open metadata repositories through both APIs (see *[Enterprise OMRS Repository Connector](component-descriptions/enterprise-repository-connector.md)*) and events (see *[Enterprise OMRS Topic](omrs-event-topic.md)*).
 

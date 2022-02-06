@@ -55,7 +55,7 @@ and associated json payloads.
 User Interfaces can connect to an OMVS through its REST API. The REST API interacts with a remote OMAG Server.
 The OMVS APIs are deployed together in a single web application. 
 
-The [administration services](/services/admin-services) provide the ability to configure, start and stop the view services.
+The [administration services](/services/admin-services/overview) provide the ability to configure, start and stop the view services.
 An example configuration document for a view server called 'viewserver', configured to communicate with a
 remote server called 'Server1' is:
 ```javascript

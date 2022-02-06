@@ -18,7 +18,7 @@ Fixed services that are always present in the platform:
 
 - [Server Chassis](/services/server-chassis) provides the main class of the OMAG Server Platform that manages the start up and shutdown of a platform instance.
 
-- [Administration Services](/services/admin-services) support the configuration and operation (such as starting and stopping) of [OMAG Servers](/concepts/omag-servers).
+- [Administration Services](/services/admin-services/overview) support the configuration and operation (such as starting and stopping) of [OMAG Servers](/concepts/omag-servers).
 
 - [First Failure Data Capture (FFDC) services](/services/ffdc-services) support the capture of diagnostics.
 

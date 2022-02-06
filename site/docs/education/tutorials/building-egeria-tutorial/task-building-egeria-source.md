@@ -58,7 +58,7 @@ When the Maven command is run, it passes through the hierarchy of modules multip
 
 === "egeria-dev-projects.git"
 
-    The `egeria-dev-projects.git` repository does not have a top-level pom file.  Each dev project is built separately. When you want to build a dev project, change to the dev project's directory where the `pom.xml` file is located and issue `mvn clean install`.  
+    The `egeria-dev-projects.git` repository has a top-level pom fileo all of the modules can be built using one `mvn clean install` command from the top-level `egeria-dev-projects` directory.  
 
 The build can take 15 minutes to over an hour depending on the repository and on the speed/load on your machine.  However eventually you will see the message:
 

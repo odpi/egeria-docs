@@ -28,6 +28,6 @@ then deploy a server that has been configured onto a particular platform.
 
 In this view server API, platforms and servers are referred to by name, to ease consumption by a user interface.
 
-This view service calls a remote platform using the [admin client](/services/admin-services).
+This view service calls a remote platform using the [admin client](/services/admin-services/overview).
 
 ---8<-- "snippets/abbr.md"

@@ -7,25 +7,13 @@ The Egeria "dojo" is an intensive course to help you learn about Egeria. It is d
 
 The objectives of the five days are as follows:
 
-- **Running Egeria** day: Learning about setting up and running Egeria.
+- **[Running Egeria](#running-egeria-day-summary)** day: Learning about setting up and running Egeria.
 - **Developer** day: Learning how to call Egeria's APIs and develop new connectors to integration third party technologies.
 - **Metadata Governance** day: Learning how to improve the quality and expand the content of your metadata.
 - **Egeria Contributor** day: Learning how to make a contribution to Egeria. Learning how to go on to become either an advocate or a maintainer.
 - **Egeria in Production** day: Learning how to run Egeria in production with high availability and resilience.
 
-The sessions are color-coded like ski runs:
-
-!!! beginner "Beginner session"
-
-!!! intermediate "Intermediate session"
-
-!!! advanced "Advanced session"
-
-!!! expert "Expert session"
-
-As you progress through the dojo, the colors of the sessions show how advanced your knowledge is becoming.
-
-The schedule also includes estimated times needed to complete each session. Do take breaks whenever needed!
+--8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 
 ## Running Egeria day summary
 
@@ -50,10 +38,9 @@ The schedule also includes estimated times needed to complete each session. Do t
     - Simple pre-built egeria configuration" (0.5 hours)
     - Configuring Servers (2 hours)
     - Coco Pharmaceutical labs (1.5 hours)
+    - Summary (30 mins)"
 
-    !!! beginner "Summary (30 mins)"
-
-    [go directly to the 'running egeria' content](/education/egeria-dojo/running-egeria/running-egeria-intro)
+    [Go directly to the *Running Egeria* dojo](/education/egeria-dojo/running-egeria/running-egeria-intro)
 
 ## Developer day summary
 
@@ -72,7 +59,8 @@ The schedule also includes estimated times needed to complete each session. Do t
         - Using the audit log and related diagnostics
     - *Time to complete* - 12 hours
 
-    
+    [Go directly to the *Developer* dojo](/education/egeria-dojo/developer/overview)
+
 ## Metadata Governance Day summary
 
 !!! education "Metadata Governance"
@@ -96,6 +84,7 @@ The schedule also includes estimated times needed to complete each session. Do t
             - Stewardship
     - *Time to complete* - 13 hours
       
+    [Go directly to the *metadata-governance* dojo](/education/egeria-dojo/metadata-governance/overview)
 
 
 ## Egeria Contributor Day summary

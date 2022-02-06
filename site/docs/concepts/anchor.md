@@ -8,7 +8,7 @@ hide:
 
 # Anchor
 
-An *anchor* is a [Referenceable](https://egeria-project.org/concepts/referenceable) metadata entity that
+An *anchor* is a [Referenceable](/concepts/referenceable) metadata entity that
 groups other entities together as if they were logically a part of the anchor.
 This means, for example, if the anchor entity is deleted then
 the entities anchored to this entity are also deleted.
@@ -20,6 +20,6 @@ anchor entity are cleaned up properly and are not left to uselessly clutter the 
 
 !!! education "Further information"
     
-    - [Anchor Management](https://egeria-project.org/features/anchor-management/overview) provide support for the Anchors and LatestChange classifications.
+    - [Anchor Management](/features/anchor-management/overview) provide support for the Anchors and LatestChange classifications.
 
 --8<-- "snippets/abbr.md"

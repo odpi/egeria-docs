@@ -12,7 +12,9 @@ Connectors can also be called in your applications to access third party technol
 
 Finally, Egeria's open metadata archives have a wide set of uses in distributing standard definitions and types.
 
-After completing developer day of the egeria dojo you should feel comfortable with calling Egeria's APIs,  writing connectors and working with open metadata archives.
+After completing developer day of the egeria dojo you should feel comfortable with calling Egeria's APIs, writing connectors and working with open metadata archives.
+
+--8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 
 !!! tip "In preparation ..."
     Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.  
@@ -24,13 +26,18 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
 ???+ education "Developer Dojo starts here"
 
+    ??? beginner "Developer choices when customizing Egeria (30 mins)"
+    
+    ??? beginner "Setting up your IDE to use Egeria (15 mins)"
+        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-egeria-source.md"
+        - Setting up dependencies and test environment  
+
     ??? beginner "Calling Egeria's APIs (2.5 hours)"
         ??? beginner "Different types of APIs and their uses (30 mins)"
             - Why are there so many APIs
             - How to choose the right API
             - Where is the documentation
-        ??? beginner "Setting up your IDE to use Egeria (15 mins)"
-            - Setting up dependencies and test environment  
+        
         ??? beginner "Writing a simple client program that creates, updates, finds and deletes metadata. (60 mins)"
             - Initializing a client
             - Creating properties
@@ -81,7 +88,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         ??? intermediate "Receiving events from Egeria (30 mins)"
             - Implementing and registering a listener
         ??? intermediate "Testing your connector (60 mins)"
-            - Installling, configuring and driving the connector
+            - Installing, configuring and driving the connector
             - Verifying the metadata is correct
         ??? advanced "Nested connectors (60 mins)"
             - Why nest connectors

@@ -8,8 +8,7 @@ hide:
 
 # Templated cataloging
 
-When a new resource is catalogued, the catalog entry of a similar
-resource can be supplied and it is used as a template to set up the new resource.
+When a new resource is catalogued, the catalog entry of a similar resource can be used as a template to set up the asset for the new resource.  This means that the new asset can contain governance metadata attachments, not just the technical metadata extracted from the digital resource.
 
 Templated cataloguing is useful for situations where new resources are regularly catalogued that are of the same kind.
 
@@ -25,26 +24,35 @@ Figure 1 shows Peter making calls to Egeria to catalog the first set of measurem
 ![Figure 1](cataloging-assets-week-1.svg)
 > **Figure 1:** In week 1, Peter manually creates the asset and links it to the governance elements needed to ensure the data set is used and protected as laid out in the license.
 
-The catalog entry for the Week 1 measurements can then be used as a template for cataloguing the subsequent weeks' measurements as shown in figure 2.
+Without templating, Peter would need to issue the same sequence of requests to catalog each of the weekly results rom each of the hospitals.  This is a lot of work from Peter, particularly as the number of clinical trials, and participating hospitals rises.  He may then make a mistake and forget one of the steps in the cataloguing process.
+
+What if the catalog entry for the Week 1 measurements could be used as a template for cataloguing the subsequent weeks' measurements as shown in figure 2?
 
 ![Figure 2](cataloging-assets-week-2.svg)
-> **Figure 2:** For subsequent weeks, the week 1 entry is used as a template for cataloguing subsequent weeks.  The result is an asset for each data set with a connector, a schema along with the ownership and zone membership classifications.  All of the assets are linked to the license and the data fields in each schema are linked to the correct glossary terms.
+> **Figure 2:** For subsequent weeks, the week 1 entry could be used as a template for cataloguing subsequent weeks.  The result is an asset for each data set with a connector, a schema along with the ownership and zone membership classifications.  All of the assets are linked to the license and the data fields in each schema are linked to the correct glossary terms.
 
-Egeria uses the [anchor](/features/anchor-management/overview) classification to determine which entities are duplicated from the template and which entities are just linked to.  In figure 2, the connection and schema are anchored to the asset whilst the glossary terms and license are not.
+This is the idea behind *templated cataloguing*.  A template that defines the common settings for a set of digital resources is defined and this template is used when cataloguing the resources.
 
-## SourcedFrom relationship and Template classification
+Figure 3 shows a set of templates used by Coco Pharmaceuticals when cataloguing their digital landscape.  There are different templates for different types of digital resources. Each would include the classifications and relationships that are relevant for the resources that they catalog.  They are decorated with the [`Template`](/types/0/0011-Managing-Referenceables) classification to identify that they do not represent real digital resource and should be used as templates.
 
-An entity that is being used as a template can be given the [`Template`](/types/0/0011-Managing-Referenceables) classification to make it easier to find and understand what it is used for.
+![Figure 3](template-classification.svg)
+> **Figure 3:** A set of templates defined to use when cataloguing digital resources
 
-When an entity is used as a template, it is linked to the resulting new entity with the [`SourcedFrom`](/types/0/0011-Managing-Referenceables) relationship.  This makes it easier to identity the entities that need changing if the template needs to be corrected or enhanced.
+When a template is used in cataloguing a digital asset, the caller needs to supply the values that must be unique for the digital asset.  This is typically the `qualifiedName`, `displayName`, `description` and may also include the `networkAddress` for its connection's endpoint.  These values override those in the template.
+
+Egeria uses the [anchor](/features/anchor-management/overview) classification to determine which elements linked to the template are duplicated and which elements are just linked to by the new catalog entry.  In figure 2, for example, the connection and schema are anchored to the asset whilst the glossary terms and license are not.  This means that copies of the connection and schema elements are made for the new catalog entry whilst the glossary terms and and licence just receive new relationships to the new catalog entry.
+
+Finally, when a template is used, it is linked to the resulting element with the [`SourcedFrom`](/types/0/0011-Managing-Referenceables) relationship.  This makes it easier to identity the elements that need changing if the template needs to be corrected or enhanced at a later date.
+
+![Figure 4](sourced-from-relationship.svg)
+> **Figure 4:** The `SourcedFrom` relationship links a template to the elements that are created from it
 
 ## Support for templated cataloguing
 
-The [Asset Owner OMAS](/services/omas/asset-owner),
-[IT Infrastructure OMAS](/services/omas/it-infrastructure) and [Digital Architecture OMAS](/services/omas/digital-architecture) provides the ability to set up and use templates to catalog new assets.
+The [Asset Owner OMAS](/services/omas/asset-owner/overview), [Asset Manager OMAS](/services/omas/asset-manager/overview), [Data Manager OMAS](/services/omas/data-manager/overview), [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview) and [Digital Architecture OMAS](/services/omas/digital-architecture/overview) provides the ability to set up and use templates to catalog new assets.
 
 ## Adding automation
 
-It is also possible to use templates in the connectors running during [Integrated cataloguing](/feaatures/integrated-cataloguing).
+It is also possible to use templates in the integration connectors running during [Integrated cataloguing](/feaatures/integrated-cataloguing).  The connector is typically passed the qualified name of the template that it should use in its configuration properties.
 
 --8<-- "snippets/abbr.md"

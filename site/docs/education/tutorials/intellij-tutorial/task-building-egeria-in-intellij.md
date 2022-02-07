@@ -5,7 +5,7 @@
 
 Maven is accessed from a sidebar menu in IntelliJ.
 
-![Maven Sidebar](intellij-maven-sidebar-menu.png)
+![Maven Sidebar](/education/tutorials/intellij-tutorial/intellij-maven-sidebar-menu.png)
 
 When you click on the **Maven** label, a panel opens with the list of modules in the git repository is displayed.  The instructions for building each repository are shown below:
 

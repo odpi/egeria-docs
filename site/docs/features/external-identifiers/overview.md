@@ -3,17 +3,22 @@
 
 # Managing External Identifiers
 
-Every open metadata instance has a unique identifier called its GUID. This provides a means to locate and retrieve the instance from the metadata repository. However, often the GUID is not known in the systems and tools that integrate with open metadata. Metadata instances that inherit from the [`Referenceable`](/types/0/0010-Base-Model/#referenceable) type have a property called `qualifiedName`. This is a unique name for the `Referenceable` instance. When such an instance is created, the qualified name can be set up to a unique identifier that is a natural unique name for the resource that it represents (such as the full path name of a file) or a unique identifier from an external tool. The element can then be retrieved using the `qualifiedName`.
+Every open metadata instance has a unique identifier called its GUID. This provides a means to locate and retrieve the instance from the metadata repository. However, often the GUID is not known in external systems and tools that integrate with open metadata. Metadata instances that inherit from the [`Referenceable`](/types/0/0010-Base-Model/#referenceable) type have a property called `qualifiedName`. This is a unique name for the `Referenceable` instance. When such an instance is created, the qualified name can be set up to be a unique identifier that is a natural unique name for the resource that it represents (such as the full path name of a file) or a unique identifier from an external system or tool. The element can then be retrieved using the `qualifiedName`.
 
-Now consider the situation where each external tool that uses the instance has a different identifier for the instance. There is only one qualified name property in the instance which will not be able to cover all the identifiers from the external systems/tools.
+
+Now consider the situation where each external system/tool that uses the instance has a different identifier for the instance. There is only one qualified name property in the instance which will not be able to cover all the identifiers from the external systems/tools.
 
 In this situation it is possible to set up multiple *external identifiers* for an open metadata instance. Each external identifier is linked to the open metadata instance it represents and the software capability of the external system/tool that uses it. You can think of this link to the software capability as providing a scope in which the external identifier is valid.
+
+
+![Synchronizing between an external asset manager an the open metadata ecosystem](external-asset-manager.svg)
+> Using an integration connector to perform a two-way synchronization between an external asset manager, such as a data catalog or configuration management database (CMDB).  In this situation, it is often necessary to use external identifiers to correlate the identifiers between the open metadata and the external asset managers.
 
 The external identifiers can support both one-to-many, many-to-one and many-to-many between metadata elements from external systems/tools and open metadata instances.
 
 ## Many-to-one
 
-Imagine situation where an external tool called `myCatalog` uses two metadata elements: one for a type it refers to as *BusinessTerm* and the other of type *Example*, to represent all the properties that are stored in one open metadata [`GlossaryTerm`](/types/3/0330-terms/#glossaryterm).
+Imagine a situation where an external system/tool called `myCatalog` uses two metadata elements: one for a type it refers to as *BusinessTerm* and the other of type *Example*, to represent all the properties that are stored in one open metadata [`GlossaryTerm`](/types/3/0330-terms/#glossaryterm).
 
 ![Many external metadata elements mapping to one open metadata instance](external-identifiers-many-to-one-mapping.svg)
 

@@ -3,25 +3,91 @@
 
 ### Downloading the Egeria Source from GitHub
 
-The Egeria source is extracted from GitHub using the following `git` command:
+The code for Egeria is downloaded from each git repository one at a time.  The commands shown below create a clone (copy) of the egeria git repositories for your own use.  If you want to make a contribution to Egeria, you need to [clone your own fork](/education/tutorials/git-and-git-hub-tutorial/#creating-a-fork-and-a-clone) of a repository rather than the main repository itself. 
+
+=== "egeria.git"
+
+    Create a new directory for Egeria's main libraries. In the example below it is called `egeria-main-libraries`:
+
+    ```bash
+    mkdir egeria-main-libraries
+    ```
+    
+    Change to your new directory.
+    
+    ```bash
+    cd egeria-main-libraries
+    ```
+    
+    Egeria's source is extracted from GitHub using the following `git` command:
+    
+    ```bash
+    git clone https://github.com/odpi/egeria.git
+    ```
+    
+    A new directory has been created with the core Egeria source code.  Change to the `egeria` directory and you are ready to build the source.
+    
+    ```bash
+    cd egeria
+    ```
+  
+
+=== "egeria-samples.git"
+
+    Create a new directory for Egeria's main libraries. In the example below it is called `egeria-samples-source`:
+
+    ```bash
+    mkdir egeria-samples-source
+    ```
+    
+    Change to your new directory.
+    
+    ```bash
+    cd egeria-samples-source
+    ```
+    
+    Egeria's samples source is extracted from GitHub using the following `git` command:
+    
+    ```bash
+    git clone https://github.com/odpi/egeria-samples.git
+    ```
+    
+    A new directory has been created with the samples' source code.  Change to the `egeria-samples` directory and you are ready to build the source.
+    
+    ```bash
+    cd egeria-samples
+    ```
+    
+=== "egeria-dev-projects.git"
+
+    Create a new directory for Egeria's developer projects. In the example below it is called `egeria-dev-projects-source`:
+
+    ```bash
+    mkdir egeria-dev-projects-source
+    ```
+    
+    Change to your new directory.
+    
+    ```bash
+    cd egeria-dev-projects-source
+    ```
+    
+    Egeria's source is extracted from GitHub using the following `git` command:
+    
+    ```bash
+    git clone https://github.com/odpi/egeria-dev-projects.git
+    ```
+    
+    A new directory has been created with the developer projects source code.  Change to the `egeria-dev-projects` directory and you are ready to build the source.
+    
+    ```bash
+    cd egeria-dev-projects
+    ```
+
+The `ls` command allows you to list the files from the repository:
 
 ```bash
-$ git clone https://github.com/odpi/egeria.git
-Cloning into 'egeria'...
-remote: Enumerating objects: 38, done.
-remote: Counting objects: 100% (38/38), done.
-remote: Compressing objects: 100% (24/24), done.
-remote: Total 50419 (delta 8), reused 29 (delta 7), pack-reused 50381
-Receiving objects: 100% (50419/50419), 36.35 MiB | 5.23 MiB/s, done.
-Resolving deltas: 100% (31704/31704), done.
-Checking out files: 100% (6669/6669), done.
-```
-
-A new directory has been created with the core Egeria source code.  Change to the `egeria` directory and list the contents.
-
-```bash
-$ cd egeria
-$ ls
+ls
 ```
 
 It should be the same as the contents of the git repository on GitHub.

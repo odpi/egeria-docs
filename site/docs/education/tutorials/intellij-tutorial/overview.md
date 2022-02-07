@@ -5,6 +5,8 @@
 
 [*IntelliJ IDEA* :material-dock-window:](https://www.jetbrains.com/idea/){ target=intellij } by JetBrains is the Interactive Development Environment (IDE) used by most of the Egeria developers. The community edition is free to use and covers all the function needed by an Egeria developer.
 
+See the overview video of IntelliJ on its homepage.
+
 --8<-- "docs/education/tutorials/intellij-tutorial/task-installing-intellij.md"
 --8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
 --8<-- "docs/education/tutorials/intellij-tutorial/task-building-egeria-in-intellij.md"

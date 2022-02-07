@@ -15,7 +15,7 @@ assets that are delivering the highest value, or operating with the greatest eff
 A value that should be captured to demonstrate the effectiveness of the governance program
 is documented using the **GovernanceMetric** entity.  It is linked to the appropriate
 [GovernanceDefinition](/types/4/0401-Governance-Definitions)
-and can be linked to a [DatSet](/types/0/0010-Base-Model) where the specific measurements are
+and can be linked to a [DataSet](/types/0/0010-Base-Model) where the specific measurements are
 being gathered.
 
 The calculation of governance metrics is often a summary of many other measurements

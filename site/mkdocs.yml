@@ -101,7 +101,7 @@ nav:
                                   - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
                             - Repository Adapters:
                                   - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
-                                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/ibm-information-server/index.md
+                                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/index.md
                                   - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
                 - Digital Resource:
                       - Open Metadata Topic:
@@ -110,7 +110,7 @@ nav:
           - Egeria Ecosystem UI:
               - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
               - Resource Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
-              - Dino: guides/ecosystem-ui/dino-user-guide.md
+              - Dynamic Operations (Dino): guides/ecosystem-ui/dino-user-guide.md
               - Glossary author: guides/ecosystem-ui/glossary-author-user-guide.md
               - Server author: guides/ecosystem-ui/server-author-user-guide.md
       - Features:
@@ -137,7 +137,7 @@ nav:
   - User Interfaces:
       - User Interface overview: user-interfaces/index.md
       - Egeria Ecosystem User Interface:
-          - Egeria Ecosystem UI Overview: user-interfaces/ecosystemindex.md
+          - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
           - Planning checklist: user-interfaces/ecosystem/ecosystem-ui-planning-checklist.md
           - Planning: user-interfaces/ecosystem/ecosystem-ui-planning.md
           - Configure and run presentation server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
@@ -159,7 +159,7 @@ nav:
               - Coco Pharmaceuticals : education/egeria-dojo/running-egeria/coco-labs-environment.md
               - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/running-egeria-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md
-          - Metadata Governance Day : education/egeria-dojo/metadata-governance.md
+          - Metadata Governance Day : education/egeria-dojo/metadata-governance/overview.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
       - Open Metadata Labs: education/open-metadata-labs/overview.md
@@ -182,8 +182,8 @@ nav:
       - Old Dojo (deprecated):
             - Dojo Introduction: getting-started/dojo/index.md
             - Day 1:
-                  - Egeria Introduction: getting-started/dojo/egeria-dojo-day-1-1-egeria-introduction.md
-                  - Egeria Project Introduction: getting-started/dojo/egeria-dojo-day-1-2-project-egeria-introduction.md
+                  - Egeria Introduction: getting-started/dojo/egeria-dojo-day-1-1-introduction.md
+                  - Egeria Project Introduction: getting-started/dojo/egeria-dojo-day-1-2-project-introduction.md
                   - Running Egeria:
                         - Overview: getting-started/dojo/egeria-dojo-day-1-3-running-egeria.md
                         - Platform Setup and Configuration:
@@ -227,7 +227,7 @@ nav:
                   - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
                   - Egeria charts Release process: guides/contributor/release-process/egeria-charts-release.md
           - Specific Guidance:
-              - Programming Languages: guides/developer/languages.md
+              - Programming Languages: guides/contributor/languages.md
               - Tools:
                   - Development Tools: guides/contributor/development.md
                   - Documentation Tools: guides/contributor/documentation.md
@@ -458,7 +458,7 @@ nav:
               - First Failure Data Capture (FFDC): services/ffdc-services.md
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
-              - Metadata Security Services: services/metadata-security.md
+              - Metadata Security Services: services/metadata-security-services.md
               - Platform Operation Services: services/platform.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
@@ -501,7 +501,6 @@ nav:
                   - Open Metadata Integration Services: services/omis/index.md
                   - Analytics Integrator: services/omis/analytics-integrator/overview.md
                   - API Integrator: services/omis/api-integrator/overview.md
-                  - Archive Integrator: services/omis/archive-integrator/overview.md
                   - Catalog Integrator: services/omis/catalog-integrator/overview.md
                   - Database Integrator: services/omis/database-integrator/overview.md
                   - Display Integrator: services/omis/display-integrator/overview.md
@@ -650,8 +649,7 @@ nav:
       - OMAG Server Platform: concepts/omag-server-platform.md
       - OMAG Subsystem: concepts/omag-subsystem.md
       - Open Discovery Engine: concepts/open-discovery-engine.md
-      - Open Discovery Server: concepts/open-discovery-server.md
-      - Open Discovery Service: concepts/open-discovery-service.md
+      - Open Discovery Service: guides/developer/open-discovery-services/overview.md
       - Open Lineage Server: concepts/open-lineage-server.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
       - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md

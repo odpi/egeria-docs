@@ -3,13 +3,26 @@
 
 # Developer Guide
 
-This guide supports developers wishing to customize Egeria to run in additional environments, exchange metadata with additional third party technologies and/or augment existing tools and utilities.
+This guide supports developers wishing to customize Egeria to run in additional environments, exchange metadata with additional third party technologies and/or augment existing tools and utilities. 
 
-It is organized as follows:
+--8<-- "docs/guides/developer/developer-choices.md"
+
+??? attention "REST APIs are intended for internal use"
+    The REST APIs are usable directly for calling from non-Java platforms; however, they are designed for the internal use of Egeria and are not guaranteed to be backwards compatible.
+    
+    The structure of the URL for an Egeria REST API varies lightly depending on whether it is a call to an [OMAG Server Platform](/concepts/omag-server-platform) service or an [OMAG Server](/concepts/omag-server) service.
+
+## Working with Egeria's Java Clients
+
+
+
+## Getting Started
+
+The developer guide is organized as follows:
 
 - [Working with the platform APIs](#working-with-the-platform-apis) - Using Egeria APIs to configure and operate Egeria's [OMAG Server Platform](/concepts/omag-server-platform).
 
-- [Using connectors](#using-connectors) - initializing and calling a connector from external services and other connectors.
+- [Using connectors](#using-connectors) - initializing and calling a digital resource connector from external services and other connectors.
 
 - [Building connectors](#building-connectors) - How to write new [connectors](#what-is-a-connector) to integrate different technologies together.
 
@@ -19,20 +32,8 @@ It is organized as follows:
 
 - [Adding your own registered services](#adding-registered-services) - Extending Egeria by adding new [registered services](/concepts/omag-subsystem/#registered-services).
 
+
 ## Working with the platform APIs
-
-### Using the clients
-
-The Egeria clients wrap calls to Egeria's [REST APIs](#using-the-rest-apis) and topics. The aim is to provide a language-specific interface that manages the marshalling and de-marshalling of the call parameters and responses to these services.
-
-### Using the REST APIs
-
-Egeria supports REST [APIs](/basic-concepts/#application-programming-interface-api) for making synchronous (request-response) calls between [OMAG Servers](/concepts/omag-server) and between clients and OMAG Servers.
-
-!!! attention "REST APIs are intended for internal use"
-    The REST APIs are usable directly for calling from non-Java platforms; however, they are designed for the internal use of Egeria and are not guaranteed to be backwards compatible.
-
-The structure of the URL for an Egeria REST API varies lightly depending on whether it is a call to an [OMAG Server Platform](/concepts/omag-server-platform) service or an [OMAG Server](/concepts/omag-server) service.
 
 ## Using connectors
 

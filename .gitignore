@@ -2,6 +2,9 @@
 .idea
 *.iml
 
+# DrawIO temporary files
+*.dtmp
+
 # Mac files
 .DS_Store
 /site/site

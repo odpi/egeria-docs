@@ -12,25 +12,55 @@ Connectors can also be called in your applications to access third party technol
 
 Finally, Egeria's open metadata archives have a wide set of uses in distributing standard definitions and types.
 
-After completing developer day of the egeria dojo you should feel comfortable with calling Egeria's APIs,  writing connectors and working with open metadata archives.
+After completing developer day of the egeria dojo you should feel comfortable with calling Egeria's APIs, writing connectors and working with open metadata archives.
+
+--8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 
 !!! tip "In preparation ..."
-    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.  
-
-    The exercises make use of code samples in the following git repositories and you may wish to have a clone of them on your machine.
+    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.
     
-    - https://github.com/odpi/egeria-dev-projects
+    ??? tip "Installing Java ..."
+        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
+
+    You will need to build Egeria's source which needs Apache Maven installed.
+    
+    ??? tip "Installing Apache Maven ..."
+        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
+
+    During the dojo you will running Apache Kafka to experiment with event notifications.
+    
+    ??? tip "Installing Apache Kafka ..."
+        --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
+
+    The dojo makes use of egeria libraries and code samples in the following git repositories and you will needd a clone of them on your machine.
+    
+    - https://github.com/odpi/egeria
     - https://github.com/odpi/egeria-samples
+    - https://github.com/odpi/egeria-dev-projects
+    
+    ??? tip "Downloading (cloning) Egeria's git repositories ..."
+        --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+
+    Many of the contributors to the Egeria project use the *[IntelliJ IDEA](https://www.jetbrains.com/idea/)* IDE.  Jetbrains offers a [free community edition of IntelliJ](https://www.jetbrains.com/idea/download/) which is sufficient to work with Egeria.  You are free to use any IDE during the dojo, however the instructions will focus on IntelliJ IDEA.
+
+    ??? tip "Setting up IntelliJ IDEA for your 3 git repositories ..."
+        --8<-- "docs/education/tutorials/intellij-tutorial/task-installing-intellij.md"
+        --8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
+        --8<-- "docs/education/tutorials/intellij-tutorial/task-building-egeria-in-intellij.md"
 
 ???+ education "Developer Dojo starts here"
+
+    ??? beginner "Developer choices when customizing Egeria (15 mins reading)"
+        --8<-- "docs/guides/developer/developer-choices.md"
+    
+    ??? beginner "Setting up your IDE to use Egeria (15 mins)"
 
     ??? beginner "Calling Egeria's APIs (2.5 hours)"
         ??? beginner "Different types of APIs and their uses (30 mins)"
             - Why are there so many APIs
             - How to choose the right API
             - Where is the documentation
-        ??? beginner "Setting up your IDE to use Egeria (15 mins)"
-            - Setting up dependencies and test environment  
+        
         ??? beginner "Writing a simple client program that creates, updates, finds and deletes metadata. (60 mins)"
             - Initializing a client
             - Creating properties
@@ -81,7 +111,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         ??? intermediate "Receiving events from Egeria (30 mins)"
             - Implementing and registering a listener
         ??? intermediate "Testing your connector (60 mins)"
-            - Installling, configuring and driving the connector
+            - Installing, configuring and driving the connector
             - Verifying the metadata is correct
         ??? advanced "Nested connectors (60 mins)"
             - Why nest connectors

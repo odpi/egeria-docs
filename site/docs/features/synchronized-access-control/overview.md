@@ -87,32 +87,32 @@ The links below take you to each service's description that includes how to conf
 
 ### Catalog Services
 
-- [Catalog Integrator OMIS](/services/omis/catalog-integrator)
-- [Lineage Integrator OMIS](/services/omis/lineage-integrator)
-- [API Integrator OMIS](/services/omis/api-integrator)
-- [Display Integrator OMIS](/services/omis/display-integrator)
-- [Files Integrator OMIS](/services/omis/files-integrator)
-- [Database Integrator OMIS](/services/omis/database-integrator)
+- [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
+- [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
+- [API Integrator OMIS](/services/omis/api-integrator/overview)
+- [Display Integrator OMIS](/services/omis/display-integrator/overview)
+- [Files Integrator OMIS](/services/omis/files-integrator/overview)
+- [Database Integrator OMIS](/services/omis/database-integrator/overview)
 
 ### Augmentation Services
 
-- [Asset Owner OMAS](/services/omas/asset-owner)
-- [Asset Analysis OMES](/services/omes/asset-analysis)
-- [Governance Action OMES](/services/omes/governance-action)
-- [Stewardship Action OMAS](/services/omas/stewardship-action)
+- [Asset Owner OMAS](/services/omas/asset-owner/overview)
+- [Asset Analysis OMES](/services/omes/asset-analysis/overview)
+- [Governance Action OMES](/services/omes/governance-action/overview)
+- [Stewardship Action OMAS](/services/omas/stewardship-action/overview)
 
 ### Consolidation Services
 
-- [Governance Action OMES](/services/omes/governance-action)
+- [Governance Action OMES](/services/omes/governance-action/overview)
 
 
 ### Distribution Services
 
-- [Security Integrator OMIS](/services/omis/security-integrator)
+- [Security Integrator OMIS](/services/omis/security-integrator/overview)
 
 ### Audit Services
 
-- [Security Officer OMAS](/services/omas/security-officer)
+- [Security Officer OMAS](/services/omas/security-officer/overview)
 
 
 

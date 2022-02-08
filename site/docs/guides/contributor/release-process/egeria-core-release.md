@@ -54,6 +54,6 @@ Open up an issue in core egeria using the 'release' template. This contains chec
     - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y`
     - Fill in the release notes using a title of `Release x.y` and [copy the notes from the appropriate release notes](/release-notes/overview)
     - Artifacts will be available on Maven Central within around half a day.
-    - Source archives will be added to the release on GitHub within an hour or so.
+    - Source archives will be added to the release on GitHub.
 
 --8<-- "snippets/abbr.md"

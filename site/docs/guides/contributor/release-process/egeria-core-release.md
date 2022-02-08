@@ -23,15 +23,13 @@ Open up an issue in core egeria using the 'release' template. This contains chec
     - Ensure local update `git pull upstream master`
     - Create branch `git branch egeria-release-x.y`
     - Push to upstream `git push upstream egeria-release-x.y`
-    - after this check my master REALLY IS the same as upstream with `git reset --hard upstream/master` (noting that this could override any local changes)
+    - after this check my master **REALLY IS** the same as upstream with `git reset --hard upstream/master` (noting that this could override any local changes)
 
 ??? success "4. Update master from `x.y-SNAPSHOT` to `x.z-SNAPSHOT`"
     - `git checkout master`
     - `git pull upstream master`
-    - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with the next version, e.g. change `1.3-SNAPSHOT` to `3.1-SNAPSHOT`. Most of the changes are in `pom.xml` files, however some code and documentation also has references to our versions and all need modifying.
+    - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with the next version, e.g. change `1.3-SNAPSHOT` to `1.4-SNAPSHOT`. Most of the changes are in `pom.xml` or gradle files, however some code and documentation also has references to our versions and all need modifying.
     - If using an IDE like IntelliJ, make sure you have all hits by searching again as [by default only a limited number of hits are shown :material-dock-window:](https://youtrack.jetbrains.com/issue/IDEA-157855){ target=intellij }.
-    - Commit
-    - Now remove all the release notes from the `release-notes` directory other than README.md - so users will always get directed to the latest in master
     - Commit
     - Create a PR, have reviewed / approved and merged as usual - aim to do this as quickly as reasonable so that there is no potential for version clash
 

@@ -5,7 +5,7 @@
 
 Metadata that is being aggregated from different sources is likely to need comprehensive access controls.
 
-Egeria provides [fine-grained security control for metadata access :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/common-services/metadata-security){ target=gh }. It is implemented in a server security connector that is called whenever requests are made for to the server.
+Egeria provides [fine-grained security control for metadata access](/services/metadata-security-services). It is implemented in a [server metadata security connector](/concepts/server-metadata-security-connector) that is called whenever requests are made for to the server.
 
 Security is configured for a specific [OMAG Server](/concepts/omag-server) by adding a connection for this connector to the server's [configuration document](/concepts/configuration-document)using the following command.
 

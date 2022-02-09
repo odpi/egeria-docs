@@ -65,23 +65,34 @@ Figure 4 shows an Apache Ranger rule that works with a security property `expire
 
 ### Catalog
 
-Cataloguing of assets and their schemas (often called technical metadata) may be managed by individuals calling the 
+[Cataloguing of assets](/features/integrated-cataloguing/overview) and their schemas (often called technical metadata) may be manually catalogued by individuals/tools or through the integration daemon.
+
 ### Augment
+
+Using [templates](/features/templated-cataloguing/overview), [metadata discovery](/features/discovery-and-stewardship/overview) or [governance action services](/guides/developer/governance-action-services/overview), governance metadata is added to the assets that provide the business and jurisdictional context to the assets.
 
 ### Consolidate
 
+A [governance action service](/guides/developer/governance-action-services/overview) trawls the metadata about the asset and sets up the `SecurityTags` classification.
+
 ### Distribute
+
+Through an [integration connector](/concepts/integration-connector) running in the [Security Integrator OMIS](/services/omis/security-integrator/overview) hosted by the [Integration Daemon](/concepts/integration-daemon), the security tags are synchronized with the external security manager that is manage access control.
 
 ### Audit
 
 Audit of security set up is possible because both governance metadata and the resulting security tags are available.  These can then be verified against the rules in the security policy enforcement engines.
 
+![Figure 6](security-tags-deployment.svg)
+> **Figure 6:** Deployment of the synchronized access control technology showing the capture of the technical metadata, plus any additional governance metadata through the use of templates through the Integration Daemon on the top left-hand side.  The augmentation and consolidation is running in the Engine Host at the bottom left-hand side and the distribution to the external security manager through another Integration Daemon is shown on the right-hand side.  The separation of the connectors across different integration daemons and their use of different cohort members is purely to help with the layout of the diagram.  You are free to distribute these connectors and services as you choose.
+
+
 ## Summary of the services that support synchronized access control
 
-Figure 6 provides a summary of the registered services involved in supporting synchronized access control.
+Figure 7 provides a summary of the registered services involved in supporting synchronized access control.
 
-![Figure 6](security-tags-technology-summary.svg)
-> **Figure 6:** Summary of the services that support synchronized access control
+![Figure 7](security-tags-technology-summary.svg)
+> **Figure 7:** Summary of the services that support synchronized access control
 
 The links below take you to each service's description that includes how to configure and use these services.
 

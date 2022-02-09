@@ -54,6 +54,8 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         --8<-- "docs/guides/developer/developer-choices.md"
     
     ??? beginner "Setting up your IDE to use Egeria (15 mins)"
+        --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
+        --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
 
     ??? beginner "Calling Egeria's APIs (2.5 hours)"
         ??? beginner "Different types of APIs and their uses (30 mins)"
@@ -62,6 +64,17 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             - Where is the documentation
         
         ??? beginner "Writing a simple client program that creates, updates, finds and deletes metadata. (60 mins)"
+            ??? beginner "Create a new project for your utility"
+                ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-new-project.md"
+            ??? beginner "Create a new java package"
+                ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-java-package.md"
+            ??? beginner "Create a new java class"
+                ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-java-class.md"
+            ??? beginner "Paste in the skeleton code"
+                ---8<-- "docs/education/egeria-dojo/developer/asset-set-up-skeleton.md"
+            ??? beginner "Create a Maven POM file"
+                ---8<-- "docs/guides/developer/building-utilities/creating-pom-file-in-intellij.md"
+
             - Initializing a client
             - Creating properties
             - Using GUIDs and qualifiedNames

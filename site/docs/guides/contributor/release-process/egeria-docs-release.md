@@ -6,16 +6,16 @@
 you should
 
 ??? success "1. Fork and clone the Egeria docs repository"
---8<-- * Issue fork for [Egeria docs repository](https://github.com/odpi/egeria-docs)
-* Clone the repository into your local workspace
+    * Issue fork for [Egeria docs repository](https://github.com/odpi/egeria-docs)
+    * Clone the repository into your local workspace
 ??? success "2. Ask the community for release guide content"
---8<-- * Hopefully people have been updating the release guide with changes that they make
-* If not you could ask on the community call in slack for any more content for th release guide
+    * Hopefully people have been updating the release guide with changes that they make
+    * If not you could ask on the community call in slack for any more content for th release guide
 ??? success "3. change the release guide content"
---8<-- * make a new link for the new release and point to a new page for example [https://egeria-project.org/release-notes/3-5/](https://egeria-project.org/release-notes/3-5/)
-* Copy the latest content to the new release page
-* Ensure that the [Latest Release Notes](https://egeria-project.org/release-notes/latest/) are updated
-* Ensure the [Next Release Notes](/release-notes/overview/next) is updated
+    * make a new link for the new release and point to a new page for example [https://egeria-project.org/release-notes/3-5/](https://egeria-project.org/release-notes/3-5/)
+    * Copy the latest content to the new release page
+    * Ensure that the [Latest Release Notes](https://egeria-project.org/release-notes/latest/) are updated
+    * Ensure the [Next Release Notes](/release-notes/overview/next) is updated
 ??? success "4. test locally"
 ??? success "5. merge changes"
 

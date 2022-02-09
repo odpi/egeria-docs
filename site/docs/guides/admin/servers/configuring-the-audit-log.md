@@ -59,7 +59,7 @@ There are various destinations that can be configured for the audit log:
         {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/slf4j
         ```
 
-        When configuring slf4j as destination you also need to specify auditlog logger category via the application properties. This is described in [Connecting the OMAG Audit Log Framework](omag-server-platform-logging.md#connecting-the-omag-audit-log-framework) section of the developer logging guide.
+        When configuring slf4j as destination you also need to specify audit log logger category via the application properties. This is described in [Connecting the OMAG Audit Log Framework](/guides/admin/omag-server-platform-logging/#connecting-the-omag-audit-log-framework) section of the developer logging guide.
 
 === "file"
 

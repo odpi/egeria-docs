@@ -17,20 +17,43 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 --8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 
 !!! tip "In preparation ..."
-    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.  
-
-    The exercises make use of code samples in the following git repositories and you may wish to have a clone of them on your machine.
+    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.
     
-    - https://github.com/odpi/egeria-dev-projects
+    ??? tip "Installing Java ..."
+        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
+
+    You will need to build Egeria's source which needs Apache Maven installed.
+    
+    ??? tip "Installing Apache Maven ..."
+        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
+
+    During the dojo you will running Apache Kafka to experiment with event notifications.
+    
+    ??? tip "Installing Apache Kafka ..."
+        --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
+
+    The dojo makes use of egeria libraries and code samples in the following git repositories and you will needd a clone of them on your machine.
+    
+    - https://github.com/odpi/egeria
     - https://github.com/odpi/egeria-samples
+    - https://github.com/odpi/egeria-dev-projects
+    
+    ??? tip "Downloading (cloning) Egeria's git repositories ..."
+        --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+
+    Many of the contributors to the Egeria project use the *[IntelliJ IDEA](https://www.jetbrains.com/idea/)* IDE.  Jetbrains offers a [free community edition of IntelliJ](https://www.jetbrains.com/idea/download/) which is sufficient to work with Egeria.  You are free to use any IDE during the dojo, however the instructions will focus on IntelliJ IDEA.
+
+    ??? tip "Setting up IntelliJ IDEA for your 3 git repositories ..."
+        --8<-- "docs/education/tutorials/intellij-tutorial/task-installing-intellij.md"
+        --8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
+        --8<-- "docs/education/tutorials/intellij-tutorial/task-building-egeria-in-intellij.md"
 
 ???+ education "Developer Dojo starts here"
 
-    ??? beginner "Developer choices when customizing Egeria (30 mins)"
+    ??? beginner "Developer choices when customizing Egeria (15 mins reading)"
+        --8<-- "docs/guides/developer/developer-choices.md"
     
     ??? beginner "Setting up your IDE to use Egeria (15 mins)"
-        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-egeria-source.md"
-        - Setting up dependencies and test environment  
 
     ??? beginner "Calling Egeria's APIs (2.5 hours)"
         ??? beginner "Different types of APIs and their uses (30 mins)"

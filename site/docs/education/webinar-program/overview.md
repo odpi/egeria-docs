@@ -18,6 +18,23 @@ Please check the calendar has the latest confirmed Webinar information
 
 The material for our past webinars is listed below along with links to the recordings.
 
+???+ education "Using Integration connectors - February 2022 - Mandy Chessell"
+
+    This session is about using integration connectors to provide automatic integration of different technologies
+    using Egeria.
+
+    - Link to [event advertising](https://lfaidata.foundation/blog/2022/02/02/using-an-integration-connector/)
+    - Presentation
+      <div class="video-wrapper">
+      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-using-integration-connectors-6th-february-2022.pdf"></iframe>
+      </div>
+    - Session replay - TBD 
+    ??? education "Related Documentation"
+        - [Integraiton connectors](https://egeria-project.org/connectors/?h=integration+connectors#integration-connectors)
+
+
+
+
 ???+ education "Beyond cataloguing - December 2021 - Mandy Chessell"
 
     Peter Profile from Coco Pharmaceuticals is responsible for cataloging the weekly incoming data from the hospitals that are involved in their latest clinical trial.  The data scientists that use the catalog to locate and work with this data are full of praise for Peter's work. However, Peter is getting fed up with the repetitive, time-consuming nature of the cataloguing activity.  How can we help Peter to automate this cataloguing and extend the value of the catalog to the organization?
@@ -29,7 +46,7 @@ The material for our past webinars is listed below along with links to the recor
     - Link to [event advertising](https://lfaidata.foundation/blog/2021/11/30/what-next-after-you-have-built-a-catalog-part-1/)
     - Presentation
       <div class="video-wrapper">
-      <iframe src="https://odpi.github.io/education/webinar-program/egeria-webinar-beyond-cataloguing-5th-december-2021.pdf"></iframe>
+      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-beyond-cataloguing-5th-december-2021.pdf"></iframe>
       </div>
     - Session replay - TBD 
     ??? education "Related Documentation"
@@ -45,7 +62,7 @@ The material for our past webinars is listed below along with links to the recor
     - Link to [event advertising](https://lfaidata.foundation/blog/2021/11/05/please-join-us-for-the-next-egeria-webinar-november-8th/)
     - Presentation
       <div class="video-wrapper">
-      <iframe src="https://odpi.github.io/education/webinar-program/egeria-webinar-open-lineage-8th-november-2021.pdf"></iframe>
+      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-open-lineage-8th-november-2021.pdf"></iframe>
       </div>
     - YouTube Video:
       <div class="video-wrapper">
@@ -68,7 +85,7 @@ The material for our past webinars is listed below along with links to the recor
     * Link to [event advertising](https://lfaidata.foundation/blog/2021/09/30/the-value-egeria-brings-to-an-organization/)
     * Presentation 
       <div class="video-wrapper">
-      <iframe src="https://odpi.github.io/education/webinar-program/egeria-webinar-the-value-of-egeria-4th-october-2021.pdf"></iframe>
+      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-the-value-of-egeria-4th-october-2021.pdf"></iframe>
       </div> 
     * YouTube Video:
       <div class="video-wrapper">
@@ -80,7 +97,7 @@ The material for our past webinars is listed below along with links to the recor
     This session is for people looking to understand the metadata across their ecosystem in terms of the Egeria open types and instances using visualisations in the Egeria React User Interface. Understanding the types is important knowledge when  developing connectors and new APIs like OMAS’s. This session will also show how metadata instances can be explored at a low level. This will be contrasted with an exploration of semantic data that is based on the Subject Area Open Metadata Access Service (OMAS).
     
     - Link to [event advertising](https://lfaidata.foundation/blog/2021/08/30/egeria-webinar-visualising-a-metadata-ecosystem/)
-    - Presentation [:material-microsoft-powerpoint:](https://odpi.github.io/education/webinar-program/egeria-webinar-visualising-a-metadata-ecosystem-september-2021.pptx){ target=slides }
+    - Presentation [:material-microsoft-powerpoint:](https://egeria-project.org/education/webinar-program/egeria-webinar-visualising-a-metadata-ecosystem-september-2021.pptx){ target=slides }
     - YouTube Video:
       <div class="video-wrapper">
          <iframe width="560" height="315" src="https://www.youtube.com/embed/s-CCzS1Ojss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

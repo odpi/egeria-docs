@@ -141,25 +141,27 @@ There are two main integration approaches:
 - Integrating using a repository proxy, brings the third party metadata server into the heart of the open metadata ecosystem, enabling queries to its repository to be made by other open metadata services.
 - Integrating via an integration daemon has the third party metadata server on the edge of the open metadata ecosystem.  It is not being queried directly, but can engage in two-way metadata exchange through the integration daemon.
 
-## Further information
+!!! education "Further information"
 
-More about the different types of [Cohort Members](/concepts/cohort-member)
-including information on how to configure them.  Specifically 
-- [Repository Proxy](/concepts/repository-proxy) to host repository connectors to a third party metadata repository.
-- [Integration Daemon](/concepts/integration-daemon) to host integration connectors to a third party metadata repository.
-- [Metadata Access Point](/concepts/metadata-access-point) to provide new APIs to the federated metadata.
-- [Metadata Access Store](/concepts/metadata-access-store) to provide the store for new metadata.
+    More about the different types of [Cohort Members](/concepts/cohort-member)including information on how to configure them.  Specifically 
 
-There is also specific configuration information for the IBM Information Governance Catalog (IGC) and Apache Atlas setup below:
+    - [Repository Proxy](/concepts/repository-proxy) to host repository connectors to a third party metadata repository.
+    - [Integration Daemon](/concepts/integration-daemon) to host integration connectors to a third party metadata repository.
+    - [Metadata Access Point](/concepts/metadata-access-point) to provide new APIs to the federated metadata.
+    - [Metadata Access Store](/concepts/metadata-access-store) to provide the store for new metadata.
 
-- [IBM Information Governance Catalog (IGC)](https://github.com/odpi/egeria-connector-ibm-information-server)
-- [Apache Atlas](https://github.com/odpi/egeria-connector-hadoop-ecosystem)
+    There is also specific configuration information for the IBM Information Governance Catalog (IGC) and Apache Atlas setup below:
+
+    - [IBM Information Governance Catalog (IGC)](https://github.com/odpi/egeria-connector-ibm-information-server)
+    - [Apache Atlas](https://github.com/odpi/egeria-connector-hadoop-ecosystem)
   
-These are links to more information about cohorts
-- [Operation of the Open Metadata Repository Cohort](/features/cohort-operation/overview)
-- [Querying the members of an Open Metadata Repository Cohort](../../../../open-metadata-implementation/repository-services/docs/component-descriptions/omrs-rest-services.md)
+    These are links to more information about cohorts
 
-This link provides guidance if you are interested in writing your own repository connectors:
-- [Writing repository connectors for a third party metadata repository](https://wiki.lfaidata.foundation/display/EG/Implement+an+Open+Metadata+Repository+Connector)
+    - [Operation of the Open Metadata Repository Cohort](/features/cohort-operation/overview)
+    - [Querying the members of an Open Metadata Repository Cohort](/guides/operations/guide)
+
+    This link provides guidance if you are interested in writing your own repository connectors:
+
+    - [Writing repository connectors for a third party metadata repository](https://wiki.lfaidata.foundation/display/EG/Implement+an+Open+Metadata+Repository+Connector)
 
 --8<-- "snippets/abbr.md"

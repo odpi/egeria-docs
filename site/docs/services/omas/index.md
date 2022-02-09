@@ -90,7 +90,7 @@ It can then register a listener with the Enterprise OMRS Topic to receive the co
 
 While running, the OMAS can call the Enterprise OMRS Repository Connector
 directly.  However, there are many common functions that all OMASs need and these
-are provided by the [common services](/services//common-services).
+are provided by the [common services](/services/#common-services).
 
 Figure 3 shows the common services.
 

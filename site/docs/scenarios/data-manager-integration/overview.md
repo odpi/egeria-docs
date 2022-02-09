@@ -5,8 +5,7 @@
 
 A data manager is a technology that manages collections of data.  Examples include database management systems, document/content managers, event brokers, API gateways and file systems.
 
-The data manager typically maintains a catalog of the data it is managing and the purpose of the data manager integration is to bring this metadata into the open metadata ecosystem. Once it is in the open metadata ecosystem, the metadata can be distributed and enhanced with classifications and relationships to glossary terms, tags and reference data sets to help people find these assets and to
-enable governance engines to manage them.
+The data manager typically maintains a catalog of the data it is managing and the purpose of the data manager integration is to bring this metadata into the open metadata ecosystem. Once it is in the open metadata ecosystem, the metadata can be distributed and enhanced with classifications and relationships to glossary terms, tags and reference data sets to help people find these assets and to enable governance engines to manage them.
 
 In this solution we are going to cover:
 

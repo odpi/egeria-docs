@@ -144,7 +144,7 @@ The [OMAG Server Platform](/concepts/omag-server-platform) provides both configu
 
 Therefore, it is necessary to provide authorization services relating to the use of the platform services.
 
-Egeria provides [a platform security authorization capability :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/common-services/metadata-security){ target=gh }. It is implemented in a platform security connector that is called whenever requests are made to the server platform services.
+Egeria provides [a platform security authorization capability](/services/metadata-security-services). It is implemented in a [platform metadata security connector](/concepts/platform-metadata-security-connector) that is called whenever requests are made to the server platform services.
 
 Security is configured for a specific platform once it is running by using the following command.
 

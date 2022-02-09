@@ -1,9 +1,10 @@
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# OMAG Common Services (common-services)
+## OMAG Common Services (common-services)
 
-This module provides common services to clients and the registered services that run in the [OMAG Server Platform](/concepts/omag-server-platform).
+The common services support clients and the registered services that run in the [OMAG Server Platform](/concepts/omag-server-platform).
 
 * **[First-Failure Data Capture (FFDC) Services](/services/ffdc-services)** - supports common exceptions and error handling.  It can but used by clients and server-side services.
 

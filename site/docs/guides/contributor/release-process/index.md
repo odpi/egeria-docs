@@ -30,10 +30,10 @@ Here are the release processes for Egeria repositories:
 
 | Git repository | Description | Update process |
 | ----------- | ----------- | -------------- |
-| [https://github.com/odpi/egeria](https://github.com/odpi/egeria) | Egeria core | [Egeria core Release process](docs/guides/contributor/release-process/egeria-core-release.md)  |
-| [https://github.com/odpi/egeria-react-ui](https://github.com/odpi/egeria-react-ui)  | Egeria React UI        | [Egeria React UI Release process](docs/guides/contributor/release-process/egeria-react-ui-release.md)| 
-| [https://github.com/odpi/egeria-charts](https://github.com/odpi/egeria-charts)  | Egeria charts | [Egeria charts Release process](docs/guides/contributor/release-process/egeria-charts-release.md) |
-| [https://github.com/odpi/egeria-docs](https://github.com/odpi/egeria-docs)  | Release guide | [Egeria Update Release Guide process](docs/guides/contributor/release-process/egeria-charts-release.md) |
+| [https://github.com/odpi/egeria](https://github.com/odpi/egeria) | Egeria core | [Egeria core Release process](/guides/contributor/release-process/egeria-core-release)  |
+| [https://github.com/odpi/egeria-react-ui](https://github.com/odpi/egeria-react-ui)  | Egeria React UI        | [Egeria React UI Release process](/guides/contributor/release-process/egeria-react-ui-release)| 
+| [https://github.com/odpi/egeria-charts](https://github.com/odpi/egeria-charts)  | Egeria charts | [Egeria charts Release process](/guides/contributor/release-process/egeria-charts-release) |
+| [https://github.com/odpi/egeria-docs](https://github.com/odpi/egeria-docs)  | Release guide | [Egeria Update Release Guide process](/guides/contributor/release-process/egeria-charts-release) |
 | TODO | Other Egeria Git repositories | TODO |
 
 

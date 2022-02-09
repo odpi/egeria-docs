@@ -28,18 +28,18 @@ agnostic manner using services such as the [Asset Consumer OMAS](/services/omas/
 
 Figure 1 shows the types of metadata captured by the Data Manager OMAS.
 
-![Figure 1](docs/basic-model.png)
+![Figure 1](basic-model.svg)
 > **Figure 1:** Basic metadata capture by the Data Manager OMAS
 
 These are:
 
-* **Asset** - Asset describes the data asset such as the data set, database schema, topic, API etc.
+* **Asset** - Asset describes the digital resource such as the data set, database schema, topic, API etc.
 * **Connection**, **Connector Type** and **Endpoint** are used to create a [connector](/concepts/connector)
 to access the data in the data asset.
 * **Schema Element(s)** describe the structure of the data managed by the data asset.
 
 To make it possible to search for particular types of asset, there are many specialized asset types defined in Egeria.
-The full list is shown [here](../docs/concepts/assets), however Data Manager OMAS supports
+The full list is shown [here](/concepts/asset), however Data Manager OMAS supports
 the following subtypes of Asset (and any additional subtypes of these types that you wish to define yourself).
 
 * **DeployedAPI** for API descriptions.
@@ -52,6 +52,7 @@ the following subtypes of Asset (and any additional subtypes of these types that
 * **DeployedDatabaseSchema** for schemas within a database.
 * **DeployedReport** for reports.
 * **Form** for interactive forms.
+* **InformationView** for queries.
 
 
 The Data Manager OMAS APIs needs to accommodate slight variations between different vendor
@@ -78,7 +79,7 @@ The Data Manager OMAS Supports the following types of data managers:
 ## More information
 
 * [What is an Asset?](/concepts/asset)
-* [Building an asset catalog](/metadata-manager)
+* [Building an asset catalog](/concepts/basic-concepts/#metadata-manager)
 * [Modeling schema structures](/guides/developer/mapping-technology/modelling-schemas)
 
 

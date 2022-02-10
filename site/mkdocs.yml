@@ -652,6 +652,7 @@ nav:
       - Open Discovery Engine: concepts/open-discovery-engine.md
       - Open Discovery Service: guides/developer/open-discovery-services/overview.md
       - Open Lineage Server: concepts/open-lineage-server.md
+      - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
       - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md
       - Open Metadata Instance: concepts/open-metadata-instances.md
@@ -684,6 +685,19 @@ nav:
       - Useful Resource: concepts/useful-resource.md
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md
+  - Practices:
+      - Governance Basics: practices/governance-basics/overview.md
+      - Governing Systems: practices/governing-systems/overview.md
+      - Governance of Data: practices/governance-of-data/overview.md
+      - Governance Maturity Model: practices/maturity-model/overview.md
+      - Common Data Definitions: practices/common-data-definitions/overview.md
+      - Governance Roles: practices/roles/overview.md
+      - Digital Services: practices/digital-services/overview.md
+      - Coco Pharmaceuticals:
+          - Personas: practices/coco-pharmaceuticals/personas/overview.md
+          - Roles vs Personas: practices/coco-pharmaceuticals/overview.md
+          - Scenarios: practices/coco-pharmaceuticals/scenarios/overview.md
+
 theme:
   name: material
   language: en

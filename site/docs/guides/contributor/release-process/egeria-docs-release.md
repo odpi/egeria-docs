@@ -16,8 +16,8 @@ you should
     * Copy the latest content to the new release page
     * Ensure that the [Latest Release Notes](https://egeria-project.org/release-notes/latest/) are updated
     * Ensure the [Next Release Notes](/release-notes/overview/next) is updated
-??? success "4. test locally"
-??? success "5. merge changes"
+!!! success "4. test locally"
+!!! success "5. merge changes"
 
 ### Tell the community the release has been made
 

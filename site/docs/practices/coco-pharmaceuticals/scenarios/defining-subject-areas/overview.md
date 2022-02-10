@@ -21,73 +21,33 @@ Peter reminds Erin that they worked on an enterprise information model (EIM) a f
 ![Figure 1](coco-pharmaceuticals-eim-data-domains.png)
 > Figure 1: Data domains from Coco Pharmaceutical’s existing EIM
 
-The EIM turned out to be a good reflection of today’s business since there is a clear separation between the
-data used in the product development and research work that [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) leads, the sales process,
-manufacturing and finance.
+The EIM turned out to be a good reflection of today’s business since there is a clear separation between the data used in the product development and research work that [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) leads, the sales process, manufacturing and finance.
 
-They compared this model with the catalog of systems that [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) has created as part of his
-new role as the IT Infrastructure governance leader.
+They compared this model with the catalog of systems that [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) has created as part of his new role as the IT Infrastructure governance leader.
 
-Again, there was a surprisingly straight-forward mapping between the systems owned by each part of the business
-and the subject areas.  Erin concluded that there was little data sharing going on today beyond the common
-use of the product catalog and customer list by Sales and Distribution from Manufacturing.
-The finance teams had the biggest overlap with the other parts of the business because income and expenses all
-flowed to them.
+Again, there was a surprisingly straight-forward mapping between the systems owned by each part of the business and the subject areas.  Erin concluded that there was little data sharing going on today beyond the common use of the product catalog and customer list by Sales and Distribution from Manufacturing.  The finance teams had the biggest overlap with the other parts of the business because income and expenses all flowed to them.
 
-Erin guessed that personalised medicine may well increase the data sharing between the research and development
-teams and the clinicians in the hospitals.  She was not so sure if sales and manufacturing were affected.
+Erin guessed that personalised medicine may well increase the data sharing between the research and development teams and the clinicians in the hospitals.  She was not so sure if sales and manufacturing were affected.
 
 ## View from manufacturing
 
-Erin spoke to [Stew Faster](/practices/coco-pharmaceuticals/personas/stew-faster) from manufacturing.
-He has been looking at modernization of the manufacturing line
-to make it ready for their new lines of drugs.
-He said their future plant would use a lot more data and automation
-since they needed to be able to manufacture much smaller batch runs,
-maybe even down to a single patient dose for some drugs.
+Erin spoke to [Stew Faster](/practices/coco-pharmaceuticals/personas/stew-faster) from manufacturing. He has been looking at modernization of the manufacturing line to make it ready for their new lines of drugs. He said their future plant would use a lot more data and automation since they needed to be able to manufacture much smaller batch runs, maybe even down to a single patient dose for some drugs.
 
-He said today, once a new drug is approved, they effectively get a recipe from the research team and works with their
-procurement team to find suppliers.  He then designed the manufacturing and quality control processes.
-Big batches of each drug are manufactured, a small percentage is pulled to one side for quality testing and once approved,
-the rest is packages and distributed to the customers (typically hospitals).
+He said today, once a new drug is approved, they effectively get a recipe from the research team and works with their procurement team to find suppliers.  He then designed the manufacturing and quality control processes. Big batches of each drug are manufactured, a small percentage is pulled to one side for quality testing and once approved, the rest is packages and distributed to the customers (typically hospitals).
 
-Going forward he sees them needing to support a much broader list of manufactured products, with short
-lead times to first put a manufacturing process into place and then to create small batches on demand.
-The distribution process needs a big overhaul as the resulting drugs need to be sent to the right clinician
-in the right hospital for the right patient at the right time.
-This is very different from a regular delivery of a fixed order to each hospital.
+Going forward he sees them needing to support a much broader list of manufactured products, with short lead times to first put a manufacturing process into place and then to create small batches on demand. The distribution process needs a big overhaul as the resulting drugs need to be sent to the right clinician in the right hospital for the right patient at the right time. This is very different from a regular delivery of a fixed order to each hospital.
 
 ## View from Sales
 
-Erin then goes to talk to [Harry Hopeful](/practices/coco-pharmaceuticals/personas/harry-hopeful) from Sales.
-Harry is an experienced sales person and knows everyone in the research hospitals where Coco Pharmaceuticals
-has their main business.  Erin asked how the sales process would change.
-He said that today he works with the consultants and persuades them of the value of the drugs offered by Coco Pharmaceuticals.
-Harry then works with the consultants to put pressure on the procurement department to approve the desired products.
-Procurement then orders batches of the drugs as the consultants use up the stock.
-Harry gets paid for each order that comes in.
+Erin then goes to talk to [Harry Hopeful](/practices/coco-pharmaceuticals/personas/harry-hopeful) from Sales.  Harry is an experienced sales person and knows everyone in the research hospitals where Coco Pharmaceuticals has their main business.  Erin asked how the sales process would change.  He said that today he works with the consultants and persuades them of the value of the drugs offered by Coco Pharmaceuticals.  Harry then works with the consultants to put pressure on the procurement department to approve the desired products. Procurement then orders batches of the drugs as the consultants use up the stock.  Harry gets paid for each order that comes in.
 
-Prior to talking to Erin, Harry had expecting that much of the same selling process will continue as before.
-However he realises that the orders will need to come in in smaller batches, based on treatment need.
-Coco pharmaceuticals needs to begin working with the procurement teams at the hospitals now to change the
-approval process for orders since they can not be delayed for the standard procurement process.
-At the same time the procurement teams will need some role to control costs so he imagines he will be more involved
-with them as they jointly monitor usage over time.
+Prior to talking to Erin, Harry had expecting that much of the same selling process will continue as before. However he realises that the orders will need to come in in smaller batches, based on treatment need. Coco Pharmaceuticals needs to begin working with the procurement teams at the hospitals now to change the approval process for orders since they can not be delayed for the standard procurement process.  At the same time the procurement teams will need some role to control costs so he imagines he will be more involved with them as they jointly monitor usage over time.
 
 ## Conclusions
 
-Erin is getting a picture from these conversations that the notion of Patient, Clinician and Treatment
-needs to become more prominent in the subject areas, and this is linked to the clinical measurements, symptoms and outcomes.
-The clinical teams focus on these to determine the treatment for the patient.
-A prescribed treatment configures the desired product which drives manufacturing.
-Finance produces the invoices for the product orders and pays the suppliers as they deliver raw materials.
-But the stock management becomes more critical as manufacturing is driven on a patient demand basis.
+Erin is getting a picture from these conversations that the notion of Patient, Clinician and Treatment needs to become more prominent in the subject areas, and this is linked to the clinical measurements, symptoms and outcomes. The clinical teams focus on these to determine the treatment for the patient. A prescribed treatment configures the desired product which drives manufacturing. Finance produces the invoices for the product orders and pays the suppliers as they deliver raw materials. But the stock management becomes more critical as manufacturing is driven on a patient demand basis.
 
-Erin is surprised how much shifting her focus towards the needs of their business transformations has affected
-the subject area model.  Her original EIM matched the organisational structure of the business.
-It challenged nothing in the status quo.
-The new subject area model has drawn out the most important subject areas for the business that need
-focus and attention now.
+Erin is surprised how much shifting her focus towards the needs of their business transformations has affected the subject area model.  Her original EIM matched the organisational structure of the business. It challenged nothing in the status quo. The new subject area model has drawn out the most important subject areas for the business that need focus and attention now.
 
 ![Figure 2](coco-pharmaceuticals-core-subject-areas.png)
 > Figure 2: Coco Pharmaceutical’s new candidate subject area model

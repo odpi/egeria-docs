@@ -3,12 +3,10 @@
 
 # Planning for common data definitions
 
-Part of [Jules Keeper's](/practices/coco-pharmaceuticals/personas/jules-keeper) [data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy)
-includes creating common data definitions.
-The board of Coco Pharmaceuticals asked for more details on what this means,
-how they would be defined and used as well as the likely cost.
+Part of [Jules Keeper's](/practices/coco-pharmaceuticals/personas/jules-keeper) [data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy) includes creating common data definitions. The board of Coco Pharmaceuticals asked for more details on what this means, how they would be defined and used as well as the likely cost.
 
 Working with [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview), they seek to outline the following questions:
+
 * What is a [common data definition](/practices/common-data-definitions/overview)?
 * How does it help the business?
 * How are common data definitions created and managed?
@@ -16,6 +14,7 @@ Working with [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overv
 * How are common data definitions use in the IT systems?
 
 For Coco Pharmaceuticals, Jules and Erin decide they will:
+
 * Define the broad topics of data that are key to personalised medicine - these are called subject areas.
 * For each subject area, they will define a glossary term for each of the key concepts.
 * The glossary terms will be organized into categories and linked together.

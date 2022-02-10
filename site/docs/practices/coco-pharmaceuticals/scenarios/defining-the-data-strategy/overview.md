@@ -59,13 +59,13 @@ Jules is not discouraged by the feedback - in fact, he is pleased that his colle
 
 He begins to work on the next level of detail:
 
-* [Planning for common definitions](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions)
-* [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources)
-* [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview)
-* [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains)
-* [Defining what is meant by continuous analytics](/practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics)
-* [Defining how employees can be data-enabled](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees)
-* [Defining why a multi-faceted governance model is needed](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance)
+* [Planning for common definitions](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
+* [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
+* [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview)
+* [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview)
+* [Defining what is meant by continuous analytics](/practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview)
+* [Defining how employees can be data-enabled](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
+* [Defining why a multi-faceted governance model is needed](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview)
 
 
 

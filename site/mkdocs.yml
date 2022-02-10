@@ -695,7 +695,7 @@ nav:
       - Digital Services: practices/digital-services/overview.md
       - Coco Pharmaceuticals:
           - Personas: practices/coco-pharmaceuticals/personas/overview.md
-          - Roles vs Personas: practices/coco-pharmaceuticals/overview.md
+          - Roles vs Personas: practices/coco-pharmaceuticals/roles-vs-personas/overview.md
           - Scenarios: practices/coco-pharmaceuticals/scenarios/overview.md
 
 theme:

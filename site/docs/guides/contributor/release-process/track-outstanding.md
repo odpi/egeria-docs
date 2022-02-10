@@ -1,4 +1,0 @@
-  - Ensure any required issues / PRs for the release have the correct milestone set
-    - Move any issues / PRs not expected to make / not required for the release to a future milestone
-    - Aim to branch when most issues / PRs are complete to minimize back-porting from master, but not at the expense of impacting ongoing master development
-    - Agree final branch date / criteria

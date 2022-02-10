@@ -14,9 +14,15 @@
 
 
 ??? success "1. Agree schedule"
-    --8<-- "docs/guides/contributor/release-steps/agree-schedule.md"
-??? success "2. Track remaining issues and PRs" 
-    --8<-- "docs/guides/contributor/release-steps/track-outstanding.md"
+    - Agree on appropriate dates for branching given expected duration for testing, vacation / public holidays
+        - Typically, allow 2-4 days between branching and availability
+        - Communicate with team on regular calls, and via #egeria-github on Slack
+        - In the last week before branching discuss holding off on any big changes in master that could destabilize the codebase
+??? success "2. Track remaining issues and PRs"
+    - Ensure any required issues / PRs for the release have the correct milestone set
+        - Move any issues / PRs not expected to make / not required for the release to a future milestone
+        - Aim to branch when most issues / PRs are complete to minimize back-porting from master, but not at the expense of impacting ongoing master development
+        - Agree final branch date / criteria
 ??? success "3. Create branch"
     - Checkout master `git checkout main`
     - Ensure local update `git pull upstream main`

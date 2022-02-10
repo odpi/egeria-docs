@@ -26,13 +26,14 @@ The material for our past webinars is listed below along with links to the recor
     - Link to [event advertising](https://lfaidata.foundation/blog/2022/02/02/using-an-integration-connector/)
     - Presentation
       <div class="video-wrapper">
-      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-using-integration-connectors-6th-february-2022.pdf"></iframe>
+      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-using-integration-connector-6th-february-2022.pdf"></iframe>
       </div>
-    - Session replay - TBD 
+    - YouTube Video:
+      <div class="video-wrapper">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/0o2EQKoO-GI" title="Using Integration connectors - February 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div> 
     ??? education "Related Documentation"
-        - [Integraiton connectors](https://egeria-project.org/connectors/?h=integration+connectors#integration-connectors)
-
-
+        - [Integration connectors](https://egeria-project.org/connectors/?h=integration+connectors#integration-connectors)
 
 
 ???+ education "Beyond cataloguing - December 2021 - Mandy Chessell"

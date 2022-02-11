@@ -36,7 +36,7 @@ These personas are responsible for the planning and operation of the IT systems 
 
 ## IT project team
 
-This is the IT Project Team enhancing the IT Systems to create a supplier/customer hub, provide end to end monitoring of the manufacturing process and support for a data lake for the clinical research teams.
+This is the IT Project Team enhancing the IT Systems to create a supplier/customer hub, to provide end to end monitoring of the manufacturing process, and to provide support for a data lake for the clinical research teams.
 
 Bob Nitter supports the multitude of application systems that the company runs. Lemmie Stage does the integration backbone implementation that supports the information supply chains that shift data between the applications.  Bob and Lemmie work for Polly.  Polly has engaged external consultants [Nancy Noah](/practices/coco-pharmaceuticals/personas/nancy-noah) and [Des Signa](/practices/coco-pharmaceuticals/personas/des-signa) to help with their development of the new personalized medicine capabilities.
 
@@ -63,7 +63,7 @@ This is the first use of the company’s data lake.
 
 * [Callie Quartile](/practices/coco-pharmaceuticals/personas/callie-quartile) - Data Scientist
 * [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) - Lead Researcher
-* [Tania Tidie](/practices/coco-pharmaceuticals/personas/tanya-tidie) - Clinical Records Clerk
+* [Tanya Tidie](/practices/coco-pharmaceuticals/personas/tanya-tidie) - Clinical Records Clerk
 * [Angela Cummings](/practices/coco-pharmaceuticals/personas/angela-cummings) - Nurse
 * [Grant Able](/practices/coco-pharmaceuticals/personas/grant-able) - Consultant
 * [Julie Stitched](/practices/coco-pharmaceuticals/personas/julie-stitched) - Surgeon

@@ -5,7 +5,7 @@
 Each Java client has multiple constructors.  The constructors set up the connection to the [metadata access server](/concepts/metadata-access-server). The parameters are passed in different combinations to control security and logging.
 
 * `serverName` - the name of the metadata access server.
-* `serverPlatformURlRoot` - the [platform url root](/concepts/platform-url-root) of the OMAG Server Platform where the metadata access server is running.
+* `serverPlatformURLRoot` - the [platform url root](/concepts/platform-url-root) of the OMAG Server Platform where the metadata access server is running.
 * `auditLog` - logging destination for audit log messages.
 * `userId` - this is the optional userId that is embedded in all REST calls.  Think of it as the client's user Id rather than the userId of the end user.
 * `password` - this is the password that goes with the client's userId.  The userId and password should both be supplied or neither.

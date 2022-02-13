@@ -4,7 +4,8 @@
 
 Each Java client has multiple constructors. The constructors set up the connection to the [OMAG Server Platform](/concepts/omag-server-platform). The parameters are passed in different combinations to control security and logging.
 
-* `serverPlatformURlRoot` - the [platform url root](/concepts/platform-url-root) of the OMAG Server Platform.
+* `platformName` - the descriptive name of the OMAG Server Platform for error logging.
+* `platformURLRoot` - the [platform url root](/concepts/platform-url-root) of the OMAG Server Platform.
 * `auditLog` - logging destination for audit log messages.
 * `userId` - this is the optional userId that is embedded in all REST calls.  Think of it as the client's user Id rather than the userId of the end user.
 * `password` - this is the password that goes with the client's userId.  The userId and password should both be supplied or neither.

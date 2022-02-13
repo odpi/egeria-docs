@@ -12,10 +12,6 @@ This guide supports developers wishing to customize Egeria to run in additional 
     
     The structure of the URL for an Egeria REST API varies lightly depending on whether it is a call to an [OMAG Server Platform](/concepts/omag-server-platform) service or an [OMAG Server](/concepts/omag-server) service.
 
-## Working with Egeria's Java Clients
-
-
-
 ## Getting Started
 
 The developer guide is organized as follows:
@@ -34,6 +30,37 @@ The developer guide is organized as follows:
 
 
 ## Working with the platform APIs
+
+The platform APIs fall into three categories:
+
+* Configuring the [OMAG Server Platform](/concepts/omag-server-platform) and [OMAG Servers](/concepts/omag-server).
+* Starting and stopping OMAG Servers
+* Querying the status of the platform and its servers.
+
+The Java clients for a specific platform API are located in its `-client` module.
+
+--8<-- "docs/guides/developer/java-clients/platform-constructor-parameters.md"
+
+Below is an example of using the [Administration Services](/services/admin-services/overview) to construct its `MetadataAccessStoreConfigurationClient` client.  As the name suggests, this client is used to configure a new [metadata access store](/concepts/metadata-access-store) server.
+
+```
+          MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
+```
+Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/MetadataAccessStoreConfigurationClient.html){ target=javadoc }.  For example, the code below adds a [like](/concepts/like) to an added and then queries its properties and all of the metadata elements attached to it.
+```
+          client.setServerDescription("Metadata Access Store called " + serverName + " running on platform " + platformURLRoot);
+          client.setServerUserId(serverName + "npa");
+          client.setServerType(null); // Let the admin service set up the server types
+          client.setOrganizationName(organizationName);
+          client.setMaxPageSize(maxPageSize);
+
+```
+!!! education "Further information"
+    
+    - [Administration Services](/services/admin-services/overview) for both configuring the OMAG Server Platform and OMAG Servers as well as starting and stopping them.
+    - [Platform Operation Services](/services/admin-services/overview) for querying the status of the platform.
+    - [Egeria's Javadoc](https://odpi.github.io/egeria/index.html).
+  
 
 ## Using connectors
 
@@ -113,7 +140,69 @@ You can write your own connectors to integrate additional types of technology or
 
 ## Building open metadata archives
 
+
 ## Working with the open metadata and governance APIs
+
+The open metadata and governance APIs are provided by the [Open Metadata Access Services (OMASs)](/services/omas) and the [Open Metadata View Services (OMVSs)](/services/omvs).  The OMASs run in the [metadata access server](/concepts/metadata-access-server) and provide specialized services for querying and maintaining metadata in the local metadata repository (if any) and any metadata repository connected via [cohorts](/concepts/cohort-member).  The clients of the OMASs are written in Java and are designed to be used by applications running behind the fire-wall with the metadata repositories.  The OMVSs run in the [view server](/concepts/view-server) and are designed to be consumed by user interface code typically written in JavaScript.  These interfaces are called directly as REST API calls.
+
+### Using the OMAS clients
+
+The Java clients for an OMAS are located in its `-client` module.
+
+--8<-- "docs/guides/developer/java-clients/omas-constructor-parameters.md"
+
+Below is an example of using the [Asset Consumer OMAS](/services/omas/asset-consumer/overview) to construct its `AssetConsumer` client.
+
+```
+          AssetConsumer client = new AssetConsumer(serverName, platformURLRoot);
+```
+Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetconsumer/client/AssetConsumer.html){ target=javadoc }.  For example, the code below adds a [like](/concepts/like) to an added and then queries its properties and all of the metadata elements attached to it.
+```
+          client.addLikeToAsset(clientUserId, assetGUID, true);
+          
+          AssetUniverse assetUniverse = client.getAssetProperties(clientUserId, assetGUID);
+
+```
+Each OMAS has its own specialized API and its own style, but typically there are methods for creating, updating and deleting elements along with methods for linking them together and unlinking them - also maintaining classifications.  If the OMAS is maintaining assets, you may see methods for publishing and withdrawing assets.  The publish method updates the asset's zones to the OMAS's `PublishedZones` and the withdraw method updates the asset's zones to the OMAS's `DefaultZones`.  Typically the asset is only visible to most users when the published zones are in use.  The default zones are used while the asset is being set up.
+
+The `findXXX` methods typically take a regular expression and look for the value in all properties.  The `getXXXByName` style method does not use wild cards and retrieves the element if there is an exact match in the `qualifiedName` or `displayName`.  Finally, it is typical to have methods to retrieve a single element via its unique identifier (guid).
+
+#### Registering a listener
+
+Some OMASs offer an event interface for receiving events from the [out topic](/concepts/out-topic).  To use it, your java class needs to extend the event listener interface and implement the abstract `processEvent` method.  Below is a simple example from Asset Consumer OMAS.  The event type is used to determine which java class to use to cast the event so its payload can be accessed.
+
+```java
+public class AssetLookUp extends AssetConsumerEventListener
+{
+    /**
+     * Process an event that was published by the Asset Consumer OMAS.
+     *
+     * @param event event object - call getEventType to find out what type of event.
+     */
+    public void processEvent(AssetConsumerEvent event)
+    {
+       if (event.getEventType() == AssetConsumerEventType.NEW_ASSET_EVENT)
+       {
+           NewAssetEvent assetEvent = (NewAssetEvent)event;
+                   
+           System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID());
+       }
+       else if (event.getEventType() == AssetConsumerEventType.UPDATED_ASSET_EVENT)
+       {
+           UpdatedAssetEvent assetEvent = (UpdatedAssetEvent)event;
+       
+           System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID() + " - at " + assetEvent.getUpdateTime());
+       } 
+    }
+}
+```
+
+!!! education "Further information"
+    
+    - [Specific documentation for each OMAS](/services/omas).
+    - [Egeria's Javadoc](https://odpi.github.io/egeria/index.html).
+  
+
 
 ## Adding registered services
   

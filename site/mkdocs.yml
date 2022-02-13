@@ -461,7 +461,7 @@ nav:
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
               - Metadata Security Services: services/metadata-security-services.md
-              - Platform Operation Services: services/platform.md
+              - Platform Operation Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md

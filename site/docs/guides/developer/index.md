@@ -43,22 +43,26 @@ The Java clients for a specific platform API are located in its `-client` module
 
 Below is an example of using the [Administration Services](/services/admin-services/overview) to construct its `MetadataAccessStoreConfigurationClient` client.  As the name suggests, this client is used to configure a new [metadata access store](/concepts/metadata-access-store) server.
 
-```
-          MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
-```
-Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/MetadataAccessStoreConfigurationClient.html){ target=javadoc }.  For example, the code below adds a [like](/concepts/like) to an added and then queries its properties and all of the metadata elements attached to it.
-```
-          client.setServerDescription("Metadata Access Store called " + serverName + " running on platform " + platformURLRoot);
-          client.setServerUserId(serverName + "npa");
-          client.setServerType(null); // Let the admin service set up the server types
-          client.setOrganizationName(organizationName);
-          client.setMaxPageSize(maxPageSize);
+??? example "Example: Creating the configuration client for a Metadata Access Store"
+    ```java linenums="1"
+    MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
+    ```
 
-```
+Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/MetadataAccessStoreConfigurationClient.html){ target=javadoc }.  For example, the code below adds a [like](/concepts/like) to an added and then queries its properties and all of the metadata elements attached to it.
+
+??? example "Example: Calling the configuration client for a Metadata Access Store"
+    ```java linenums="1"
+    client.setServerDescription("Metadata Access Store called " + serverName + " running on platform " + platformURLRoot);
+    client.setServerUserId(serverName + "npa");
+    client.setServerType(null); // Let the admin service set up the server types
+    client.setOrganizationName(organizationName);
+    client.setMaxPageSize(maxPageSize);
+    ```
+    
 !!! education "Further information"
     
     - [Administration Services](/services/admin-services/overview) for both configuring the OMAG Server Platform and OMAG Servers as well as starting and stopping them.
-    - [Platform Operation Services](/services/admin-services/overview) for querying the status of the platform.
+    - [Platform Operation Services](/services/platform-services/overview) for querying the status of the platform.
     - [Egeria's Javadoc](https://odpi.github.io/egeria/index.html).
   
 
@@ -247,7 +251,7 @@ It focuses on providing five types of integration interfaces.
 - [Connectors](#what-is-a-connector) that translate between third party APIs and open metadata APIs. These connectors are hosted in the Egeria servers and support the active exchange of metadata with these technologies.
 - [Connectors](/guides/developer/using-connectors) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
 - [Java clients](#using-the-clients) for applications to call the [Open Metadata Access Service (OMAS)](/services/omas) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
-- [REST APIs](#using-the-rest-apis) for the Egeria Services. These include the [access services](/services/omas), admin services and [platform services](/services/platform).
+- [REST APIs](#using-the-rest-apis) for the Egeria Services. These include the [access services](/services/omas), admin services and [platform services](/services/platform-services/overview).
 - Kafka topics with JSON payloads for asynchronous communication (both in and out) with the open metadata ecosystem.
   [Learn more ...](/services/omas)
 

@@ -24,7 +24,7 @@ Fixed services that are always present in the platform:
 
 - [Multi-tenant Services](/services/multi-tenant) manages information about the running servers so REST API requests made to the platform can be routed to the correct server. 
 
-- [Platform Operation Services](/services/platform-services) retrieves information about a running platform instance and its associated servers.
+- [Platform Operation Services](/services/platform-services/overview) retrieves information about a running platform instance and its associated servers.
 
 - [Open Metadata Repository Services (OMRS)](/services/omrs) for supporting access to metadata stored in metadata repositories and the exchange of metadata between repositories via an [open metadata repository cohort](/concepts/cohort-member). The repository services are further divided into [OMRS subsystems](/services/omrs/#omrs-subsystems) that can be activated independently.
 

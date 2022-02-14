@@ -47,9 +47,9 @@ Chose the build option for your work ...
      Note: this option does not rebuild the assembly and so if you are using the OMAG Server Platform from the assembly to test your changes, you may need to do a full build to incorporate your change into the platform. 
 
 
-The build kicks off in a new pane (typically at the bottom of your intelliJ window).  
+The build kicks off in a new pane (typically at the bottom of your IntelliJ window).  
 
-The build can take 15 minutes to over an hour depending on the speed/load on your machine.  However eventually you will see the message:
+The build can take 15 minutes to over an hour depending on the build method and speed/load on your machine.  However eventually you will see the message:
 
 ```text
 [INFO] ------------------------------------------------------------------------

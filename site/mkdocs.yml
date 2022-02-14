@@ -451,6 +451,7 @@ nav:
       - Standards: standards/overview.md
       - Services:
           - Fixed Services:
+              - Administration Services: services/admin-services/overview.md
               - Repository Services (OMRS):
                     - Open Metadata Repository Services: services/omrs/index.md
                     - Cohorts: services/omrs/cohort.md
@@ -460,7 +461,7 @@ nav:
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
               - Metadata Security Services: services/metadata-security-services.md
-              - Platform Operation Services: services/platform.md
+              - Platform Operation Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
@@ -675,6 +676,7 @@ nav:
       - Repository Proxy: concepts/repository-proxy.md
       - Repository Validator: concepts/repository-validator.md
       - Resource: concepts/resource.md
+      - REST client connector: concepts/rest-client-connector.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md
       - Server Name: concepts/server-name.md

@@ -3,6 +3,7 @@
 
 # Using the Java Clients
 
+The Java clients 
 
 - [Community Profile](community-profile.md) - manage metadata about people, teams, organizations and communities.
 

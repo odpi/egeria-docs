@@ -14,7 +14,7 @@ The OMAG services are configured and activated in [OMAG Servers](/concepts/omag-
 
 Once a configuration document is defined, the OMAG Server can be started and stopped multiple times by the admin services server instance operations.
 
-The OMAG Server Platform also supports some [platform services](/services/platform-services) to query details of the servers running on the platform.
+The OMAG Server Platform also supports some [platform operation services](/services/platform-services/overview) to query details of the servers running on the platform.
 
 The OMAG Server Platform can also host multiple OMAG Servers at any one time:
 

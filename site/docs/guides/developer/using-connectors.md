@@ -7,18 +7,19 @@
 - [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
 - [Asset Owner OMAS](/services/omas/asset-owner/overview)
 
+The code sample below uses the Asset Consumer OMAS client to retrieve a list of assets from a [metadata access server](/concepts/metadata-access-server) and then create a connector to each one using the `getConnectorToAsset()` method.
+
+This method assumes that there is a connection object with a [connector type](/concepts/connector-type) and [endpoint](/concepts/endpoint) linked to the requested asset in the metadata repository.
+
+![An asset with a connection](asset-connection.png)
+
+An exception is thrown if an asset does not have a connection. 
+
+In the sample, the connector returned by the Asset Consumer OMAS client is then cast to the `CSVFileConnector`. Assets that are not CSV files will have a different connector implementation and so the casting to `CSVFileConnector` also results in an exception.
+
+Assets that do not have a `CSVFileConnector` are ignored. The result is that the sample method returns a connector for the first CSV file asset retrieved from the metadata repository.
+
 ??? example "Example: [connecting to CSV files using Asset Consumer OMAS :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/access-services-samples/asset-management-samples/asset-reader-csv-sample/src/main/java/org/odpi/openmetadata/accessservices/assetconsumer/samples/readcsvfile/CSVFileReaderSample.java){ target=gh }"
-    The code sample below uses the Asset Consumer OMAS client to retrieve a list of assets from a [metadata access server](/concepts/metadata-access-server) and then create a connector to each one using the `getConnectorToAsset()` method.
-
-    This method assumes that there is a connection object with a [connector type](/concepts/connector-type) and [endpoint](/concepts/endpoint) linked to the requested asset in the metadata repository.
-
-    ![An asset with a connection](asset-connection.png)
-
-    An exception is thrown if an asset does not have a connection. 
-
-    In the sample, the connector returned by the Asset Consumer OMAS client is then cast to the `CSVFileConnector`. Assets that are not CSV files will have a different connector implementation and so the casting to `CSVFileConnector` also results in an exception.
-
-    Assets that do not have a `CSVFileConnector` are ignored. The result is that the sample method returns a connector for the first CSV file asset retrieved from the metadata repository.
 
     ```java linenums="1"
     /**
@@ -86,31 +87,31 @@
     }
     ```
 
-## Connecting to assets with different levels of security
+### Connecting to assets with different levels of security
 
 It is possible that an asset can have multiple connections, each with different levels of security access encoded. Egeria is able to determine which one to use by calling the `validateUserForAssetConnectionList()` method of the [Server Security Metadata Connector](/guides/developer/runtime-connectors/server-metadata-security-connector).
 
 ![Multiple connections for an asset](multiple-asset-connections.svg)
 
-## Other links to the connection
+### Other links to the connection
 
 Open metadata is a connected network (graph) of information. The connector type and endpoint that a connection object links to are typically shared with many connections. This creates some interesting insight.
 
 For example, there is typically one connector type for each connector implementation. By retrieving the relationships from the connector type to the connections, it is possible to see the extent to which the connector is used.
 
-### Connector Types
+#### Connector Types
 
 ![Uses of a connector implementation](uses-of-a-connector-implementation.svg)
 
 The connector types for Egeria's data store connectors are available in an open metadata archive called `DataStoreConnectorTypes.json` that can be loaded into the server. This approach can be used for all of your connector implementations to create the connector type objects in our metadata repository. See the [open-connector-archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } for more detail.
 
-### Connector categories
+#### Connector categories
 
 By default, connector implementations are assume to support the OCF. However, many vendor platforms have their own connector frameworks. The ConnectorCategory allows equivalent connector types from different connector frameworks to be gathered together so that the connector type from a connection can be swapped for an equivalent connector type for the locally supported connector framework.
 
 ![Connector Categories](connector-categories.svg)
 
-### Endpoints
+#### Endpoints
 
 The endpoints are typically linked to the software server that is called by the connector. By navigating from the `Endpoint` to the linked connections it is possible to trace the callers to the software server.
 

@@ -25,6 +25,7 @@ The connectors that support the exchange and maintenance of metadata help to acc
 | [Repository and Event Mapper connectors](#repository-and-event-mapper-connectors) | integrate metadata repositories into the open metadata ecosystem so that they can interact with one or more [open metadata repository cohorts](/services/omrs/cohort). |
 | [Open Discovery Services](#open-discovery-services) | analyze the content of [resources](/egria-docs/concepts/resource) in the digital landscape and create annotations that are attached to the resource's [asset](/concepts/asset) metadata element in the open metadata repositories in the form of an open discovery report |
 | [Governance Action Services](#governance-action-services) | perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities as required. |
+| [Governance Daemon Connectors](#governance-daemon-connectors) | contain specialist connectors for the governance servers that make active use of open metadata.
 
 ### Integration Connectors
 
@@ -145,6 +146,15 @@ The table below lists the repository connectors that act as an adapter for third
     - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the governance action services run.
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing a governance action service](/guides/developer/governance-action-services/overview) for information on writing new governance action services.
+
+### Governance Daemon Connectors
+
+---8<-- "docs/connectors/governance-daemon/governance-daemon-intro.md"
+
+| Connector | Description |
+|---|---|
+| [Open Lineage Janus Connector](/connectors/runtime/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/services/open-lineage-services) that allow the Open Lineage Services to connect with databases.
+
 
 ### Archive Services
 

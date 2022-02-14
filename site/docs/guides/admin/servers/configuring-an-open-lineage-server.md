@@ -81,7 +81,7 @@ For open lineage server following can be configured:
 
 | Property | Description | Is mandatory |
 |---|---|---|
-`lineageGraphConnection` | OCF configuration object that defines the Graph store connector type used. See [open-lineage-janus-connector](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-daemon-connectors/open-lineage-connectors/open-lineage-janus-connector) for more details. | Yes |
+`lineageGraphConnection` | OCF configuration object that defines the Graph store connector type used. See [open-lineage-janus-connector](/connectors/runtime/open-lineage-janus-connector) for more details. | Yes |
 `accessServiceConfig.serverName` | the name of the metadata server where paired Asset Lineage OMAS is running. | Yes
 `accessServiceConfig.serverPlatformUrlRoot` | The URL of the OMAG server platform running the metadata server where paired Asset Lineage OMAS is running. Also see [start-up information](#start-up-information) section. | Yes |
 `accessServiceConfig.user` | The username to access the server running Asset Lineage OMAS. | Yes |

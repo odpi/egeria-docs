@@ -3,7 +3,7 @@
 
 # Open Lineage Janus Connector
 
-The Open Lineage Janus connector allows the Open Lineages Services to connect with a JanusGraph database.
+The Open Lineage Janus connector allows the Open Lineage Services to connect with a JanusGraph database.
 
 The Connector can be configured to connect to either an embedded JanusGraph database or a standalone JanusGraph server.
 For more details on possible configurations please use the documentation [offered by JanusGraph](https://docs.janusgraph.org/basics/deployment/).
@@ -11,7 +11,7 @@ For more details on possible configurations please use the documentation [offere
 Configuring the properties of the JanusGraph client when connecting to the database should be done following the [official documentation](https://docs.janusgraph.org/basics/configuration/).
    
 --
-- Embedded JanusGraph
+## Embedded JanusGraph
 
 In order to configure the connector with an embedded JanusGraph lineageGraphConnection configuration should be configured with the following `connectorProviderClassName`:
 
@@ -46,7 +46,7 @@ and that you ensure './data' or a subdirectory mapped to a mapped volume or k8s 
 elsewhere in Egeria.
 
 ---
-- Standalone JanusGraph server
+## Standalone JanusGraph server
 
 In order to have the client connect to a standalone database, the following configuration needs to be provided:
 

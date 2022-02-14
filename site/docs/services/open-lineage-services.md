@@ -20,7 +20,7 @@ Following sequence explains how different services interact in and out the open 
 
 2. [Asset Lineage OMAS](/services/omas/asset-lineage/overview) feeds the lineage warehouse by selecting and sending the instance types suitable for lineage. It retrieves asset related metadata and completes the asset context portion of the graph. Once ready, this lineage context graph structured as vertices and edges is sent on Lineage Output Topic for further processing and preservation.
 
-3. **Lineage event listener** consumes asset context events and uses technology connector such as [Lineage Janus Connector](/connectors/runtime/open-lineage-janus-connector) to persist these lineage elements building up the large lineage graph. 
+3. **Lineage event listener** consumes asset context events and uses technology connector such as [Lineage Janus Connector](/connectors/governance-daemon/open-lineage-janus-connector) to persist these lineage elements building up the large lineage graph. 
 
 4. **Lineage jobs** run tasks that get executed in server background to:
 
@@ -33,7 +33,7 @@ Following sequence explains how different services interact in and out the open 
 
 - Configuring the open lineage server following the [admin guide](/guides/admin/servers/configuring-an-open-lineage-server/).
 
-- Find out how to configure options for the [Janus Lineage Connector](/connectors/runtime/open-lineage-janus-connector) and supported underlying storage and indexing backend technologies.
+- Find out how to configure options for the [Janus Lineage Connector](/connectors/governance-daemon/open-lineage-janus-connector) and supported underlying storage and indexing backend technologies.
 
 - [Lineage Management](/features/lineage-management/overview/) feature overview.
 

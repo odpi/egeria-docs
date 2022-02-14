@@ -153,7 +153,7 @@ The table below lists the repository connectors that act as an adapter for third
 
 | Connector | Description |
 |---|---|
-| [Open Lineage Janus Connector](/connectors/runtime/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/services/open-lineage-services) that allow the Open Lineage Services to connect with databases.
+| [Open Lineage Janus Connector](/connectors/governance-daemon/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/services/open-lineage-services) that allow the Open Lineage Services to connect with databases.
 
 
 ### Archive Services
@@ -184,7 +184,6 @@ There are currently no archive services supplied by Egeria.
 | [REST Client Connectors](#rest-client-connectors) | issue REST API calls to Egeria's deployed platforms and third party technologies. |
 | [Cohort Member Client Connector](#cohort-member-client-connectors) | supports repository service called to remote cohort members. |
 | [Open Metadata Topic Connectors](#open-metadata-topic-connectors) | send and receive events. |
-| [Open Lineage Janus Connector](/connectors/runtime/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/concepts/open-lineage-server) that allow the Open Lineage Services to connect with databases.
 
 
 ### Platform Metadata Security Connectors

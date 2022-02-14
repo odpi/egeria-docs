@@ -79,6 +79,8 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/service
 | [API-based Open Lineage Log Store integration connector](/connectors/integration/api-based-open-lineage-log-store-integration-connector) | Connector that calls an OpenLineage compliant API to store the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS.|
 | [File-based Open Lineage Log Store integration connector](/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
 | [Open Lineage Cataloguer integration connector](/connectors/integration/open-lineage-cataloguer-integration-connector) | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem. |
+| [Open Lineage Janus Connector](/connectors/integration/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/concepts/open-lineage-server) that allow the Open Lineage Services to connect with databases.
+
 
 ??? education "Further information relating to integration connectors"
     

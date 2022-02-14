@@ -25,6 +25,7 @@ The connectors that support the exchange and maintenance of metadata help to acc
 | [Repository and Event Mapper connectors](#repository-and-event-mapper-connectors) | integrate metadata repositories into the open metadata ecosystem so that they can interact with one or more [open metadata repository cohorts](/services/omrs/cohort). |
 | [Open Discovery Services](#open-discovery-services) | analyze the content of [resources](/egria-docs/concepts/resource) in the digital landscape and create annotations that are attached to the resource's [asset](/concepts/asset) metadata element in the open metadata repositories in the form of an open discovery report |
 | [Governance Action Services](#governance-action-services) | perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities as required. |
+| [Governance Daemon Connectors](#governance-daemon-connectors) | contain specialist connectors for the governance servers that make active use of open metadata.
 
 ### Integration Connectors
 
@@ -79,6 +80,7 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/service
 | [API-based Open Lineage Log Store integration connector](/connectors/integration/api-based-open-lineage-log-store-integration-connector) | Connector that calls an OpenLineage compliant API to store the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS.|
 | [File-based Open Lineage Log Store integration connector](/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
 | [Open Lineage Cataloguer integration connector](/connectors/integration/open-lineage-cataloguer-integration-connector) | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem. |
+
 
 ??? education "Further information relating to integration connectors"
     
@@ -145,6 +147,15 @@ The table below lists the repository connectors that act as an adapter for third
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing a governance action service](/guides/developer/governance-action-services/overview) for information on writing new governance action services.
 
+### Governance Daemon Connectors
+
+---8<-- "docs/connectors/governance-daemon/governance-daemon-intro.md"
+
+| Connector | Description |
+|---|---|
+| [Open Lineage Janus Connector](/connectors/governance-daemon/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/services/open-lineage-services) that allow the Open Lineage Services to connect with databases.
+
+
 ### Archive Services
 
 ---8<-- "docs/connectors/archive/archive-service-intro.md"
@@ -173,6 +184,7 @@ There are currently no archive services supplied by Egeria.
 | [REST Client Connectors](#rest-client-connectors) | issue REST API calls to Egeria's deployed platforms and third party technologies. |
 | [Cohort Member Client Connector](#cohort-member-client-connectors) | supports repository service called to remote cohort members. |
 | [Open Metadata Topic Connectors](#open-metadata-topic-connectors) | send and receive events. |
+
 
 ### Platform Metadata Security Connectors
 

@@ -1,17 +1,18 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-## Building Egeria in IntelliJ IDEA
+### Building Egeria in IntelliJ IDEA
 
-The build process is different for each git repository.  Click on the table for the repository that you are building
+The build process is different for each git repository.  Click on the table for the repository that you are building:
+
 === "egeria.git"
-    ---8<-- "docs/education/tutorials/intellij-tutorial/building-egeria-git.md"
+    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-git.md"
     
-=== "egeria-samples.git"
-    ---8<-- "docs/education/tutorials/intellij-tutorial/building-egeria-samples-git.md"
+=== "egeria-samples.git" 
+    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-samples-git.md"
 
 === "egeria-dev-projects.git"
-    ---8<-- "docs/education/tutorials/intellij-tutorial/building-egeria-dev-projects-git.md"
+    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-dev-projects-git.md"
 
 
 #### Using maven rather than using the IntelliJ build?

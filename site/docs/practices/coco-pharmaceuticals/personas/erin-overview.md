@@ -14,7 +14,7 @@ Scope: Organization-wide
 Job:
 
 * Erin is an information architect. She supports requests for data from different parts of the business.
-* Since [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper), The Chief Data Officer joined, Erin's role has evolved to include a more strategic look at the information provision at Coco Pharmaceuticals.
+* Since [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper), The Chief Data Officer joined, Erin's role has evolved to include a more strategic look at the information landscape at Coco Pharmaceuticals.
 * She is now responsible for setting the IT standards and architecture that support the policies laid down by [Jules](/practices/coco-pharmaceuticals/personas/jules-keeper).  Her standards are used in the development of new systems and in the integration of external systems. 
 * Erin also focuses on the optimization and integrity of the information supply chains that synchronize information between the IT systems.
 
@@ -41,7 +41,7 @@ Top challenges:
 * So many systems, each with their own data and no easy way to manage complexity.
 * Constant demand for data extracts from the business teams.
 * New software packages being deployed with no thought for
-how the data within it will be supported.
+how the data requirements within them will be supported.
 * No budget to increase the size of her team – nor
 automate some of the common requests.
 

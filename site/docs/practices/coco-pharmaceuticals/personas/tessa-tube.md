@@ -32,7 +32,7 @@ Hears:
 * Many different aspects of the cancer treatment that are not being recorded.
 
 Says/Does
-* Tessa spends a lot of time discussion the progress of the trial with
+* Tessa spends a lot of time discussing the progress of the trial with
 the patients and medical staff involved in the trial,
 trying to capture as much information as possible.
 

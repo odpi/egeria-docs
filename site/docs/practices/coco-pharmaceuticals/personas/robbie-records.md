@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Robbie Records - Patient Data Manager
+# Robbie Records - Hospital Patient Data Manager
 
 ![Icon](robbie-records.png)
 
@@ -27,7 +27,7 @@ Hears:
 * Demands for more types of data to be maintained.
 
 Says/Does:
-* Robbie maintains a very hard lined attitude to new uses of patient data.
+* Robbie maintains a very hard-line attitude to new uses of patient data.
 His default answer is “no” unless he can see a clear description of
 where the data is going, how it is to be used, the safe-guards around
 it – and what happens at the end of the project.

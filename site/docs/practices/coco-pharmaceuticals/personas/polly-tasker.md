@@ -26,7 +26,7 @@ that can result in data corruption and performance issues.
 Hears:
 * How much her team struggles with basic aspects of integration such as
 knowing where data is, the best way to access it, when and where
-values are returned and the expected quality of the data.
+values are returned, and the expected quality of the data.
 * Proposals for new data services that are beyond her team's
 capability and capacity to deliver.
 

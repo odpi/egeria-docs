@@ -2,6 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
+
 The [egeria build process](/education/tutorials/building-egeria-tutorial/overview) creates the distribution files for Egeria in the `open-metadata-distribution` module.   To see its contents, use the following `cd` command to change to the `target` directory:
 
 ```bash
@@ -11,7 +12,7 @@ List the files:
 ```bash
 ls -l
 ```
-The name of the files is determined by the release level of the code that you [downloaded from GitHub](/education/tutorials/git-and-git-hub-tutorial/overview/#downloading-the-egeria-source-from-github).  In this example, the release is **egeria-3.3-SNAPSHOT**.  The files in this list will also change as Egeria develops. 
+The name of the files is determined by the release level of the code that you [downloaded from GitHub](/education/tutorials/git-and-git-hub-tutorial/overview/#downloading-the-egeria-source-from-github).  In this example, the release is **egeria-3.6-SNAPSHOT**.  The files in this list will also change as Egeria develops. 
 ```bash
 antrun                                                  egeria-3.6-SNAPSHOT-distribution
 archive-tmp                                             egeria-3.6-SNAPSHOT-distribution.tar.gz

@@ -286,6 +286,7 @@
 - [Repository Services](/services/omrs)
 - [Repository Validator](/concepts/repository-validator)
 - [Resource](/concepts/resource)
+- [REST Client Connector](/concepts/rest-client-connector)
 - [REST Repository Connector](/connectors/runtime/omrs-rest-repository-connector)
 - [Reviews](/concepts/review)
 - [Role](/concepts/person-role)

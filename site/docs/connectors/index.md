@@ -295,7 +295,11 @@ Egeria provides a single implementation for Spring.
 * [Spring REST Client Connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/rest-client-connectors/spring-rest-client-connector){ target=gh }
   uses the Spring RESTClient to issue REST API calls.
   
-This is embedded in Egeria's [clients](/guides/developer/using-egeria-clients).
+This is embedded in Egeria's Java clients. See
+
+    - Egeria's [Platform API clients](/guides/developer/#working-with-the-platform-apis).
+    - Egeria's [OMAS clients](/guides/developer/#working-with-the-open-metadata-and-governance-apis).
+
 
 
 ### Cohort Member Client Connectors

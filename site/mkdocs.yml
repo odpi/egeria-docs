@@ -75,6 +75,8 @@ nav:
                       - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
                       - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
                       - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+                - Governance Daemon:
+                      - Open Lineage Janus Connector: connectors/governance-daemon/open-lineage-janus-connector.md
                 - Integration:
                       - File Connectors:
                             - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md

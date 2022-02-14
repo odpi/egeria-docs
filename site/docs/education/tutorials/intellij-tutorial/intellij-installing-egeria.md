@@ -16,7 +16,7 @@ Once you have a successful build and you see:
 Process finished with exit code 0
 ```
 
-Click on the `Terminal` tab - typically at the bottom of the Intellij window to open the terminal window.
+Click on the `Terminal` tab - typically at the bottom of the IntelliJ window to open the terminal window.
 
 
 --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-egeria.md"

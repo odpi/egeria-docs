@@ -1,7 +1,13 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the ODPi Egeria project. -->
+<!-- Copyright Contributors to the Egeria project. -->
 
 # Open Lineage Janus Connector
+
 
 The Open Lineage Janus connector allows the Open Lineage Services to connect with a JanusGraph database.
 
@@ -10,7 +16,7 @@ For more details on possible configurations please use the documentation [offere
 
 Configuring the properties of the JanusGraph client when connecting to the database should be done following the [official documentation](https://docs.janusgraph.org/basics/configuration/).
    
---
+
 ## Embedded JanusGraph
 
 In order to configure the connector with an embedded JanusGraph lineageGraphConnection configuration should be configured with the following `connectorProviderClassName`:
@@ -20,23 +26,25 @@ In order to configure the connector with an embedded JanusGraph lineageGraphConn
 ```
 
 Example:
- ```
-"lineageGraphConnection": {
-    "class": "Connection",
-    "displayName": "Lineage Graph Connection",
-    "description": "Used for storing lineage in the Open Metadata format",
-    "connectorType": {
-        "class": "ConnectorType",
-        "connectorProviderClassName": "org.odpi.openmetadata.openconnectors.governancedaemonconnectors.openlineageconnectors.janusconnector.graph.LineageGraphConnectorProvider"
-    },
-   "configurationProperties": {
-        "gremlin.graph": "org.janusgraph.core.JanusGraphFactory",
-        "storage.backend": "berkeleyje",
-        "storage.directory": "./egeria-lineage-repositories/lineageGraph/berkeley",
-        "index.search.backend": "lucene",
-        "index.search.directory": "./egeria-lineage-repositories/lineageGraph/searchindex"
+
+
+```
+    "lineageGraphConnection": {
+        "class": "Connection",
+        "displayName": "Lineage Graph Connection",
+        "description": "Used for storing lineage in the Open Metadata format",
+        "connectorType": {
+            "class": "ConnectorType",
+            "connectorProviderClassName": "org.odpi.openmetadata.openconnectors.governancedaemonconnectors.openlineageconnectors.janusconnector.graph.LineageGraphConnectorProvider"
+        },
+       "configurationProperties": {
+            "gremlin.graph": "org.janusgraph.core.JanusGraphFactory",
+            "storage.backend": "berkeleyje",
+            "storage.directory": "./egeria-lineage-repositories/lineageGraph/berkeley",
+            "index.search.backend": "lucene",
+            "index.search.directory": "./egeria-lineage-repositories/lineageGraph/searchindex"
+        }
     }
-}
 ```
 
 The above example configures the server with an embedded JanusGraph that uses BerkeleyDB as the storing solution and Lucene for the indexing.
@@ -60,31 +68,33 @@ The `configurationProperties` provided are passed to the Gremlin driver when cre
 More details about the options available can be found on tinkerpop [configuration section](https://tinkerpop.apache.org/docs/current/reference/#_configuration).
 
 Example:
+
 ```
-"lineageGraphConnection": {
-    "class": "Connection",
-    "displayName": "Lineage Graph Connection",
-    "description": "Used for storing lineage in the Open Metadata format",
-    "connectorType": {
-        "class": "ConnectorType",
-        "connectorProviderClassName": "org.odpi.openmetadata.openconnectors.governancedaemonconnectors.openlineageconnectors.janusconnector.graph.LineageGraphRemoteConnectorProvider"
+    "lineageGraphConnection": {
+        "class": "Connection",
+        "displayName": "Lineage Graph Connection",
+        "description": "Used for storing lineage in the Open Metadata format",
+        "connectorType": {
+            "class": "ConnectorType",
+            "connectorProviderClassName": "org.odpi.openmetadata.openconnectors.governancedaemonconnectors.openlineageconnectors.janusconnector.graph.LineageGraphRemoteConnectorProvider"
+        },
+       "configurationProperties": {
+            "port": "8182",
+            "hosts": ["localhost"],
+            "serializer.className": "org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0",
+            "serializer.config.ioRegistries": [
+                "org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerIoRegistryV3d0",
+                "org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry"
+            ],
+            "gremlin.remote.driver.sourceName": "g",
+            "remote.schemaManagement.enable": true
+        }
     },
-   "configurationProperties": {
-        "port": "8182",
-        "hosts": ["localhost"],
-        "serializer.className": "org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0",
-        "serializer.config.ioRegistries": [
-            "org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerIoRegistryV3d0",
-            "org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry"
-        ],
-        "gremlin.remote.driver.sourceName": "g",
-        "remote.schemaManagement.enable": true
-    }
-},
 ```
+
 In this example, the connector accesses a standalone JanusGraph server running on the local machine, on port 8182.
 The indexing and storage technologies used by the JanusGraph server are irrelevant for the client in this situation.
 
 Please note that the server needs to have the same ioRegistries configured for the serializer to work properly.
 
----8<-- "snippets/abbr.md"
+--8<-- "snippets/abbr.md"

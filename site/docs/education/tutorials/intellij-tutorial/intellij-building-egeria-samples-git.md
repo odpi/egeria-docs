@@ -20,7 +20,7 @@ First double-click on `clean` and the build of that module runs.
 Once the clean is complete, double-click on `install` and the build of that module starts.
 
 
-The build kicks off in a new pane (typically at the bottom of your intelliJ window).  
+The build kicks off in a new pane (typically at the bottom of your IntelliJ window).  
 
 The build takes a few minutes depending on the speed/load on your machine.  However eventually you will see the message:
 

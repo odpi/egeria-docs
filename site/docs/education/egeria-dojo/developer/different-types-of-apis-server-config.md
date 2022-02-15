@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
-Servers are configured through the [Administration Services](/services/admin-services/overview/#configure-an-omag-server).  It involves a sequence of calls that sets up its name and properties, the registered services that it will run along with the connectors that it will host.
+Servers are configured through the [Administration Services](/services/admin-services/overview/#configure-an-omag-server){ target=dojo-support }.  It involves a sequence of calls that sets up its name and properties, the registered services that it will run along with the connectors that it will host.
 
 In `egeria-dev-projects` is a module called `egeria-config-utility`.  It contains a utility called `ServerConfig` that includes the method calls to create different types of servers, to make changes to a server's configuration and to delete a server's configuration. Navigate to the `ServerConfig` class and run it using the right-mouse menu as before.
 
@@ -37,7 +37,7 @@ Enter `create-metadata-store mds1` in the space under the menu and press return.
 
 Rerun `EgeriaPlatformReport` (select from the configurations box dropdown) and you notice that the exception relating to the missing configuration directory has gone and the report now displays details of the new `mds1` server. [Markdown version of report for reference](/education/egeria-dojo/developer/egeria-platform-report-mds1-configured).
 
-There is a lot of detail - much of it retrieved from the server's [configuration document](/concepts/configuration-document).  The [Administration Services' `ConfigurationManagementClient`](/services/admin-services/overview/#managing-configuration-documents) is able to retrieve, update and deploy configuration documents to different OMAG Server Platforms.  `EgeriaPlatformReport` used the following method call to retrieve all of the available configuration documents before printing them out to the report.
+There is a lot of detail - much of it retrieved from the server's [configuration document](/concepts/configuration-document){ target=dojo-support }.  The [Administration Services' `ConfigurationManagementClient`](/services/admin-services/overview/#managing-configuration-documents){ target=dojo-support } is able to retrieve, update and deploy configuration documents to different OMAG Server Platforms.  `EgeriaPlatformReport` used the following method call to retrieve all of the available configuration documents before printing them out to the report.
 
 ```java linenums="1"
 ConfigurationManagementClient configurationManagementClient = new ConfigurationManagementClient(clientUserId, platformURLRoot);
@@ -60,7 +60,7 @@ Particular points to note about the `mds1` server configuration:
             Location: <null>
 ```
 
-* The `mds1` server is using an in-memory local metadata repository.  This means that its metadata repository is emptied each time the server is started up - which is very useful when testing new utilities.  The remote connector for the local repository is the connector that other servers would use to call `mds1`.  It is sent out on [cohort registration exchanges](/features/cohort-operation/overview) whenever `mds1` registers with a [cohort](/concepts/cohort-member.)
+* The `mds1` server is using an in-memory local metadata repository.  This means that its metadata repository is emptied each time the server is started up - which is very useful when testing new utilities.  The remote connector for the local repository is the connector that other servers would use to call `mds1`.  It is sent out on [cohort registration exchanges](/features/cohort-operation/overview){ target=dojo-support } whenever `mds1` registers with a [cohort](/concepts/cohort-member.){ target=dojo-support }
 
 ```bash
          Local Repository
@@ -73,7 +73,7 @@ Particular points to note about the `mds1` server configuration:
                Location: https://localhost:9443/servers/mds1
 ```
 
-* Finally, the [Open Metadata Access Services (OMASs)](/services/omas) are listed including: [Asset Manager OMAS](/services/omas/asset-manager/overview), [Community Profile OMAS](/services/omas/community-profile/overview), [Data Manager OMAS](/services/omas/data-manager/overview), [Digital Architecture OMAS](/services/omas/digital-architecture/overview), [Asset Consumer OMAS](/services/omas/asset-consumer/overview), [Governance Program OMAS](/services/omas/governance-program/overview) and [Asset Owner OMAS](/services/omas/asset-owner/overview).  Below is a snippet from the report showing Asset Manager OMAS.
+* Finally, the [Open Metadata Access Services (OMASs)](/services/omas){ target=dojo-support } are listed including: [Asset Manager OMAS](/services/omas/asset-manager/overview){ target=dojo-support }, [Community Profile OMAS](/services/omas/community-profile/overview){ target=dojo-support }, [Data Manager OMAS](/services/omas/data-manager/overview){ target=dojo-support }, [Digital Architecture OMAS](/services/omas/digital-architecture/overview){ target=dojo-support }, [Asset Consumer OMAS](/services/omas/asset-consumer/overview){ target=dojo-support }, [Governance Program OMAS](/services/omas/governance-program/overview){ target=dojo-support } and [Asset Owner OMAS](/services/omas/asset-owner/overview){ target=dojo-support }.  Below is a snippet from the report showing Asset Manager OMAS.
 
 ```bash
          Services
@@ -94,9 +94,9 @@ Particular points to note about the `mds1` server configuration:
 ```
 The `Service Options` control the behaviour of the OMAS.  
 
-* `SupportedZones` defines the [governance zones that an asset must belong](/features/governance-zoning/overview) to in order to be retrievable through the OMAS.  
+* `SupportedZones` defines the [governance zones that an asset must belong](/features/governance-zoning/overview){ target=dojo-support } to in order to be retrievable through the OMAS.  
 * `DefaultZones` defines the governance zones assigned to a new asset created through this interface.
 * `PublishZones` are the governance zones that are set in the asset when the publishXXX() method is called (more later).
 
-You can also see from the implementation that the Asset Manager OMAS is configured to use Apache Kafka for its [In Topic](/concepts/in-topic) and [Out Topic](/concepts/out-topic).
+You can also see from the implementation that the Asset Manager OMAS is configured to use Apache Kafka for its [In Topic](/concepts/in-topic){ target=dojo-support } and [Out Topic](/concepts/out-topic){ target=dojo-support }.
 

@@ -3,6 +3,6 @@
 
 Paste this code between the curly braces of the `DojoArchive` class.
 
-```java linenum=1
+```java linenums="1"
 
 ```

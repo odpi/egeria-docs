@@ -3,7 +3,7 @@
 
 Paste this code between the curly braces of the `AssetListen` class.
 
-```java linenum=1
+```java linenums="1"
     private String serverName;
     private String platformURLRoot;
     private String clientUserId;

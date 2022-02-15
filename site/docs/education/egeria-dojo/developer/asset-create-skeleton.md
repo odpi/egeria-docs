@@ -3,7 +3,7 @@
 
 Paste this code between the curly braces of the `AssetCreate` class.
 
-```java linenum=1
+```java linenums="1"
     private static final String fileName1  = "sample-data/oak-dene-drop-foot-weekly-measurements/week1.csv";
     private static final String fileName2  = "sample-data/oak-dene-drop-foot-weekly-measurements/week2.csv";
     private static final String fileName3  = "sample-data/oak-dene-drop-foot-weekly-measurements/week3.csv";

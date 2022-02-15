@@ -23,7 +23,7 @@ Add the HTTPHelper module as a dependency in your `pom.xml` file.
 
 Then add this line to your main program before any call is made to a Java client.
 
-```java linenum=1
+```java linenums="1"
 
 HttpHelper.noStrictSSLIfConfigured();
 

@@ -61,7 +61,7 @@ The *known servers* are those servers that have run on the platform since it sta
 
 The *active servers* are those servers running on the platform. The `getActiveServers` returns a list of names of the servers running when the request was made.
 
-??? example "Example: Retrieving the list of known servers"
+??? example "Example: Retrieving the list of active servers"
     ```java linenums="1"
     List<String> serverList = platformServicesClient.getActiveServers(clientUserId);
 

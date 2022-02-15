@@ -3,71 +3,21 @@
 
 # Open Metadata Archive
 
-An *open metadata archive* is a portable collection of open metadata [type definitions](/introduction/key-concepts/#metadata-types) and [instances](/introduction/key-concepts/#metadata-instances).  It can be [loaded each time a metadata access server starts up](/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup) or [added to a running metadata access server](/guides/operations/adding-archive-to-running-server).
+--8<-- "docs/concepts/open-metadata-archive-intro.md"
 
-The open metadata archive has two types:
+## Structure of an Open Metadata Archive
 
-- A **content pack** containing reusable definitions that are generally useful. They may come from the Egeria community or third parties.
-- A **metadata export** containing an export of metadata from a repository. They are used to transfer metadata between repositories that are not connected to the same [cohort](/services/omrs/cohort).
+--8<-- "docs/concepts/open-metadata-archive-structure.md"
 
-## Structure
+## What happens when the archive is loaded into the server
 
-The logical structure of an open metadata archive is as follows:
-
-![Logical structure of an open metadata archive](/guides/developer/open-metadata-archives/open-metadata-archive-structure.svg)
-
---8<-- "docs/guides/developer/open-metadata-archives/open-metadata-archive-header-example.md"
-
-Instances are linked together as follows:
-
-- Entities are stored as `EntityDetail` structures.
-- Relationships are stored as `Relationship` structures and link to their entities through the embedded `EntityProxy` structure.
-- The entities will include their classifications; however, for classifications that are attached to entities that are not included in the archive, they are stored in an `ClassificationEntityExtension` structure.
-
-![Instance structures in an open metadata archive](/guides/developer/open-metadata-archives/open-metadata-archive-instances.svg)
-
-Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/concepts/open-metadata-archive-store-connector).
-
-
-## Processing
-
-Open metadata archives are introduced into the server through the admin services either:
-
-1. provided as part of the contents of the server's configuration document, or
-2. through the operational command that added the archive directly into the running server's repository.
-
-![Processing of an open metadata archive](open-metadata-archive-processing.svg)
-
-The archive is passed to the repository services' operational services, which in turn passes it on to the [archive manager](/services/omrs/archive-manager). Type information is passed to the [repository content manager](../services/omrs/repository-content-manager.md).
-
-Both the types and instances are passed to the local repository (if there is one).
-
-The archive loads in the following order:
-
-1. Attribute Type Definitions (`AttributeTypeDef`s) from the type store, through `verifyAttributeTypeDef()` and then `addAttributeTypeDef()`:
-    1. PrimitiveDefs
-    2. CollectionDefs
-    3. EnumDefs
-2. New Type Definitions (`TypeDef`s) from the type store, through `verifyTypeDef()` and `addTypeDef()` calls to the local repository:
-    1. EntityDefs
-    2. RelationshipDefs
-    3. ClassificationDefs
-3. Updates to types (`TypeDefPatch`es)
-4. Instances, as reference copies:
-    1. Entities
-    2. Relationships
-    3. Classifications
-
-!!! tip "Cohort propagation"
-    If the server is connected to the cohort, the new content is sent as notifications to the rest of the cohort.
-
---8<-- "docs/guides/admin/servers/configuring-the-startup-archives.md"
-
---8<-- "docs/guides/operations/adding-archive-to-running-server.md"
+--8<-- "docs/concepts/open-metadata-archive-processing.md"
 
 ??? education "Further information"
 
-    - [Metadata Archiving](/features/metadata-archiving/overview) describing all of the features of Egeria that use the Open Metadata Archives
-    - [The open metadata archive connector](/concepts/open-metadata-archive-connector)
+    - [Configuring a server to load an archive on start up](/guides/admin/servers/configuring-the-startup-archives)
+    - [Adding an archive to a running server](/guides/operations/adding-archive-to-running-server)
+    - [Metadata Archiving](/features/metadata-archiving/overview) describes all of the features of Egeria that use the Open Metadata Archives.
+    - [The open metadata archive connector](/concepts/open-metadata-archive-connector) is the connector used to read and write open metadata archives.
 
 --8<-- "snippets/abbr.md"

@@ -34,7 +34,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     ??? tip "Installing Apache Kafka ..."
         --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
 
-    The dojo makes use of egeria libraries and code samples in the following git repositories and you will needd a clone of them on your machine.
+    The dojo makes use of egeria libraries and code samples in the following git repositories and you will need a clone of them on your machine.
     
     - https://github.com/odpi/egeria
     - https://github.com/odpi/egeria-samples
@@ -63,11 +63,12 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
         You need to bring the main `egeria.git` code into IntelliJ to build its platform and clients.
         
-        ??? beginner "Building Egeria's core libraries (15 mins)"
+        ??? beginner "Open egeria.git in IntelliJ"
             --8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
             
-            Now build the egeria.git repository.  For the Dojo, it is OK to use the *Quick Build* option when offered.
-            
+        Now build the egeria.git repository.  For the Dojo, it is OK to use the *Quick Build* option when offered.
+
+        ??? beginner "Building Egeria's core libraries (15 mins)"
             --8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-git.md"
         
         Once Egeria's core libraries are built, it is helpful to install Egeria in a directory that is easy to find.
@@ -79,12 +80,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
     ??? beginner "Setting up your Test environment (30 mins)"
     
-        The `egeria-dev-projects.git` repository contains the utilities to support your Egeria test environment. This was one of the git repositories that you cloned in the prerequisite tasks.  Open this git repository in IntelliJ.
-        
-        ??? tip "Opening egeria-dev-projects.git in IntelliJ IDEA ..."
-            Use **File**->**Open...** and select the top-level `egeria-dev-projects` directory that was downloaded from GitHub in the file selection window. Click the **Open** button.
-
-        Now build the `egeria-dev-projects` code ...
+        The `egeria-dev-projects.git` repository contains the utilities to support your Egeria test environment. This was one of the git repositories that you cloned in the prerequisite tasks.  Open this git repository in IntelliJ.  Now build the `egeria-dev-projects` code ...
         
         ??? beginner "Building egeria-dev-projects.git in IntelliJ IDEA ..."
             --8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-dev-projects-git.md"
@@ -93,9 +89,11 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
         ??? beginner "Set up IntelliJ to run the OMAG Server Platform ..."
 
-            ---8<-- "docs/education/egeria-dojo/developer/intellij-runs-omag-server-platform.md"
+            ---8<-- "docs/education/egeria-dojo/developer/intellij-run-omag-server-platform.md"
 
     ??? beginner "Calling Egeria's APIs (2.5 hours)"
+        
+        Now that you have Egeria's OMAG Server Platform running, you are ready to use its APIs.
         
         ??? beginner "Different types of APIs and their uses (30 mins)"
             
@@ -104,20 +102,20 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             ??? beginner "Understanding how a platform has been deployed"
                 ---8<-- "docs/education/egeria-dojo/developer/different-types-of-apis-platform-deployment.md"
                 
-            ![EgeriaPlatformReport calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-1.svg)
-            > Your development landscape showing the EgeriaPlatformReport calling EgeriaPlatform.
+                ![EgeriaPlatformReport calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-1.svg)
+                > Your development landscape showing the EgeriaPlatformReport calling EgeriaPlatform.
 
             ??? beginner "Understanding how a server has been configured"
                 ---8<-- "docs/education/egeria-dojo/developer/different-types-of-apis-server-config.md"
 
-            ![ServerConfig calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-2.svg)
-            > Your development landscape adding ServerConfig calling EgeriaPlatform to create server configuration documents.
+                ![ServerConfig calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-2.svg)
+                > Your development landscape adding ServerConfig calling EgeriaPlatform to create server configuration documents.
 
             ??? beginner "Understanding how a server is running"
                 ---8<-- "docs/education/egeria-dojo/developer/different-types-of-apis-server-running.md"
                 
-            ![ServerOps calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-3.svg)
-            > Your development landscape adding ServerOps calling EgeriaPlatform to start and stop servers.
+                ![ServerOps calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-3.svg)
+                > Your development landscape adding ServerOps calling EgeriaPlatform to start and stop servers.
 
             !!! education "Summary and further study"
                 From this section of the developer dojo, you should have an understanding of the behaviour of the Platform Operations Services and Administration Services.
@@ -167,8 +165,8 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 
                 Start `AssetListen` running and it will wait for new assets to be created.  So lets create some assets...
             
-            ![AssetListen calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-4.svg)
-            > Your development landscape now has AssetListen calling the mds1 server running on EgeriaPlatform to receive notifications of new assets.
+                ![AssetListen calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-4.svg)
+                > Your development landscape now has AssetListen calling the mds1 server running on EgeriaPlatform to receive notifications of new assets.
             
             ??? intermediate "Develop AssetCreate"
                 
@@ -186,24 +184,24 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 
                 Navigate to the `AssetCreate` class and run it using the right-mouse menu as in earlier exercises.  It will fail with the certificate error.  Edit `AssetCreate`'s newly created configuration and add `-Dstrict.ssl=false` to the `VM Options` and click `OK` to save the configuration to turn off the need for a certificate.
 
-            ![AssetCreate calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-5.svg)
-            > Your development landscape now has added AssetCreate calling the mds1 server running on EgeriaPlatform to create new assets.  These assets arethen received by AssetListen.
+                ![AssetCreate calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-5.svg)
+                > Your development landscape now has added AssetCreate calling the mds1 server running on EgeriaPlatform to create new assets.  These assets arethen received by AssetListen.
                
         ??? intermediate "Handling errors (15 mins read)"
             - Meaning of InvalidParameterException, UserNotAuthorizedException and PropertyServerErrorException
     
-    ??? beginner "Connector introduction (1.5 hours)"
+    ??? beginner "Connector introduction (5 mins read)"
     
         In the previous exercises you have been building utilities that run outside of the OMAG Server Platform, simply making calls to its services.  In the next two exercises you will be writing connectors that run inside the OMAG Server Platform.  Once they are written, they need to be packaged up and added to your egeria install directory so they are visible to the OMAG Server Platform.  Then you will set up the configuration of an OMAG Server to use the connector.
         
-        ??? beginner "What is a connector and why do we need them? (10 mins read)"
-            [Connectors](/concepts/connector) are plug-in Java clients that either perform an additional service, or, more typically, enable Egeria to integrate with a third party technology.
+        ??? beginner "What is a connector and why do we need them?"
+            [Connectors](/concepts/connector){ target=dojo-support } are plug-in Java clients that either perform an additional service, or, more typically, enable Egeria to integrate with a third party technology.
 
             The concept of a connector comes from the [Open Connector Framework (OCF)](/frameworks/ocf/overview){ target=dojo-support }. The OCF provides a common framework for components that enable one technology to call another, arbitrary technology through a common interface. The implementation of the connector is dynamically loaded based on the connector's configuration.  This is supplied in a [connection object](/concepts/connection){ target=dojo-support }.
 
     ??? intermediate "Developing a simple audit logging connector, step-by-step (1.5 hours)"
     
-        The *Audit Log Destination Connector* is one of Egeria's runtime connectors.  This means it is used to support Egeria's runtime services - the [Open Metadata Repository Services (OMRS](/services/omrs){ target=dojo-support } in this instance.  When a service or a connector running in an OMAG Server writes a message to the [Audit Log](/concepts/audit-log){ target=dojo-support }, the OMRS is responsible for routing the audit log message to all of the destinations configured for that server.  The destinations are implemented as *Audit Log Destination Connectors* and each makes a choice on what to do with the message based on its configuration and the severity of the audit log message.
+        The *Audit Log Destination Connector* is one of Egeria's runtime connectors.  This means it is used to support Egeria's runtime services - the [Open Metadata Repository Services (OMRS](/services/omrs){ target=dojo-support } in this case.  When a service or a connector running in an OMAG Server writes a message to the [Audit Log](/concepts/audit-log){ target=dojo-support }, the OMRS is responsible for routing the audit log message to all of the destinations configured for that server.  The destinations are implemented as *Audit Log Destination Connectors* and each makes a choice on what to do with the message based on its configuration and the severity of the audit log message.
         
         If you observed the audit log messages from `mds1` on the console log, these where written out using the `ConsoleAuditLogDestinationConnector`.  When this console connector logs events, it deliberately does not include the payload of the event since it may contain sensitive information.  
         
@@ -219,7 +217,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
         Create a new IntelliJ project called `egeria-dojo3` with an IntelliJ module called `event-logging-connector`.  
         
-        Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingProvider.  This will contain the connector provider for your connector.  The connector provider is the factory class for the connector and also provides information to administrators and operators about the behaviour and capbility of the connector.
+        Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingProvider`.  This will contain the connector provider for your connector.  The connector provider is the factory class for the connector and also provides information to administrators and operators about the behaviour and capbility of the connector.
         
         ??? intermediate "Paste the skeleton code into the EventLoggingProvider class"
             ---8<-- "docs/education/egeria-dojo/developer/event-logging-provider-skeleton.md"
@@ -227,9 +225,9 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         Create a `pom.xml` file for the connector module.
                 
         ??? intermediate "Paste the skeleton structure into the `pom.xml` file"                
-            ---8<-- "docs/education/egeria-dojo/developer/event-logging-pom-skeleton.md"
+            ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-pom-skeleton.md"
         
-        Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingConnector.  This will contain the actual code of the connector.
+        Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingConnector`.  This will contain the actual code of the connector.
                 
         ??? intermediate "Paste the skeleton code into the EventLoggingConnector class"
             ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-skeleton.md"    
@@ -240,7 +238,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
         ??? intermediate "Testing your connector"
             
-            ??? intermediate "Install the connector into Egeria's platform"
+            ??? intermediate "Install the connector into Egeria's platform ..."
             
                 The maven build has created a jar file in the `target` directory of your IntelliJ project.  In fact there are three jar files created:
                 
@@ -254,14 +252,18 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 ```bash
                 cp target/event-logging-connector-3.6-SNAPSHOT.jar ~/egeria-install/egeria-omag-*/server/lib
                 ```
+            
+            ??? intermediate "Reconfigure mds1 to use the new connector ..."
+ 
+                Restart `EgeriaPlatform` so it picks up the new classes. Use the `ServerConfig` utility and issue the following command to add your connector to the configuration document of `mds1`.
+            
+                ```bash
+                log-event-contents mds1 egeria.dojo.connector.eventlogging.EventLoggingProvider
+                ```  
                 
-            Restart `EgeriaPlatform` so it picks up the new classes. Use the `ServerConfig` utility and issue the following command to add your connector to the configuration document of `mds1`.
-            
-            ```bash
-            log-event-contents mds1 egeria.dojo.connector.eventlogging.EventLoggingProvider
-            ```  
-            
-            Start your `mds1` server using `ServerOps` and re-run `AssetCreate`.  Look at the console log of `EgeriaPlatform` and you will see the addtional logging that your connector has enabled.
+            ??? intermediate "Run your test ..."
+
+                Start your `mds1` server using `ServerOps` and re-run `AssetCreate`.  Look at the console log of `EgeriaPlatform` and you will see the addtional logging that your connector has enabled.
             
         ![Audit log destination connector in mds1](/education/egeria-dojo/developer/developer-dojo-architecture-6.svg)
         > Your development landscape showing your new audit log destination connector running in the mds1 server logging additional information about EVENT audit log messages.
@@ -271,11 +273,22 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         Integration connectors run in an [Integration Daemon](/concepts/integration-daemon) which is a type of OMAG Server.  Its role is to either capture metadata from a third party technology and catalog it in Egeria, monitor changes to metadata in Egeria and push those changes to interested third party technologies, or both.
         
         ??? advanced "Design of an integration connector (20 mins read)"
-            ---8<-- "docs/guides/developer/integration-connectors/overview.md"
+            ### Integration connectors
+            
+            ---8<-- "docs/connectors/integration/integration-connector-intro.md"
+            
+            #### Writing the connector provider for an integration connector
+        
+            ---8<-- "docs/guides/developer/connector-provider-intro.md"
+        
+            ---8<-- "docs/guides/developer/implementing-a-connector-provider.md"
+        
+            #### Integration connector interface
+        
+            ---8<-- "docs/guides/developer/integration-connectors/integration-connector-interface.md"
+        
        
         The integration connector that you are going to build today is very simple, but illustrates the process of building and testing integration connectors.  It will connect to Apache Kafka and retrieve a list of the topics that are defined.  It will then create `KafkaTopic` assets that will be stored in `mds1`'s metadata repository.  `mds1` will also send events to `AssetListen` about these new assets.
-
-        Create a new project in IntelliJ called `egeria-dojo4`.  Add a module called `dojo-archive-connector` containing a Java class called `egeria.dojo.archive.DojoArchive`.
         
         Create a new IntelliJ project called `egeria-dojo4` with an IntelliJ module called `topic-cataloguing-connector`.  
                 
@@ -287,11 +300,11 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         Create a `pom.xml` file for the connector module.
                         
         ??? advanced "Paste the skeleton structure into the `pom.xml` file"                
-            ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-pom-skeleton.md"
+            ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-connector-pom-skeleton.md"
                 
-        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingConnectorfor the code of the connector.
+        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingConnector` for the code of the connector.
                         
-        ??? advanced "Paste the skeleton code into the TopicCataloguingConnectorfor class"
+        ??? advanced "Paste the skeleton code into the TopicCataloguingConnector class"
             ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-connector-skeleton.md"    
                             
         Resolve the Egeria dependencies in both of the java classes for your connector.
@@ -311,23 +324,31 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                         
              Start your servers using `ServerOps` command `start mds1 daemon1`.  The `daemon1` server will create an instance of your topic cataloguing connector.  You should see the KafkaTopic assets being catalogued and appearing as events in `AssetListen`.
         
-        ![Topic cataloging connector in mds1](/education/egeria-dojo/developer/developer-dojo-architecture-8.svg)
+        ![Topic cataloging connector in mds1](/education/egeria-dojo/developer/developer-dojo-architecture-7.svg)
         > Your development landscape showing your new integration connector running in the daemon1 server cataloguing new KafkaTopic assets.
 
     ??? expert "Working with open metadata archives (1.5 hours)"
     
         In this section you will be creating a utility that builds an *Open Metadata Archive* containing a new *Open Metadata Type* and an instance of that type.
         
-        ??? expert "The structure of an archive (15 mins read)"
-            --8<-- "docs/concepts/open-metadata-archive.md"
+        ??? expert "What is an open metadata archive? (15 mins read)"
+        
+            --8<-- "docs/concepts/open-metadata-archive-intro.md"
+            
+            ??? expert "The structure of an optn metadata archive"
+                --8<-- "docs/concepts/open-metadata-archive-structure.md"
+            
+            ??? expert "How and open metadata archive is processed"
+                --8<-- "docs/concepts/open-metadata-archive-structure.md"
             
         Create a new project in IntelliJ called `egeria-dojo5`.  Add a module called `dojo-archive` containing a Java class called `egeria.dojo.archive.DojoArchive`.
         
         ??? expert "Paste in the skeleton code"
             ---8<-- "docs/education/egeria-dojo/developer/dojo-archive-skeleton.md"
-            
-        ??? expert "Create a Maven POM file"
-            ---8<-- "docs/guides/developer/building-utilities/creating-pom-file-in-intellij.md"
+
+        Create a `pom.xml` file for the connector module.
+                        
+        ??? expert "Paste the skeleton structure into the `pom.xml` file"               
             ---8<-- "docs/education/egeria-dojo/developer/dojo-archive-pom-skeleton.md"
             
         Add the `logback.xml` resource file to control developer logging.
@@ -336,7 +357,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             Run `DojoArchive` to create the `dojo-archive.json` file.
             
-            Copy the resulting file into your egeria install directory under content-packs.  From your IntelliJ terminal window of the egeria-dojo5 project:
+            Copy the resulting file into your egeria install directory under `content-packs`.  From your IntelliJ terminal window of the `egeria-dojo5` project:
             
             ```bash
             cp dojo-archive.json ~/egeria-install/egeria-omag-*/content-packs
@@ -344,7 +365,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             Use the `add-startup-archive mds1 content-packs/dojo-archive.json` command with `ServerConfig` to add the archive to `mds1`'s configuration document.  Restart `mds1` using `ServerOps` and observe your new MRIScan asset being received by `AssetListen`.
 
-        ![dojo-archive loading into in mds1](/education/egeria-dojo/developer/developer-dojo-architecture-9.svg)
+        ![dojo-archive loading into in mds1](/education/egeria-dojo/developer/developer-dojo-architecture-8.svg)
         > Your development landscape showing your new Open Metadata Archive loading into mds1 each time this server start up.
 
     ??? beginner "Congratulations, you have completed the developer day dojo"

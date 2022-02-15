@@ -22,7 +22,7 @@ Job:
 Thinks/Feels:
 
 * Tanya is confident in performing her Job as defined today, but is concerned about the increasing workload.
-* She feels threaten by the new types of data being collected as she does not understand it. Tanya is deeply committed to the success of the clinical trials.
+* She feels threatened by the new types of data being collected as she does not understand it. Tanya is deeply committed to the success of the clinical trials.
 
 Hears:
 

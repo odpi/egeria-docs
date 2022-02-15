@@ -33,7 +33,7 @@ Click on the white down arrow of the configurations box and select `Edit Configu
 
 Add `-Dstrict.ssl=false` to the `VM Options` and click `OK` to save the configuration.  This turns off the need for a certificate. 
 
-![egeria-platform-report configuration fixed](/education/egeria-dojo/developer/egeria-platform-report-configuration-fixed.png)
+![egeria-platform-report configuration fixed](/education/egeria-dojo/developer/egeria-platform-report-configuration-fixed.png){ target=dojo-support }
 
 Re-run `EgeriaPlatformReport` by clicking on the green arrow on the *Run* tab.  There is more output this time even though it still seems to fail in the end. It begins with the report header that records the platform it is running against.
 
@@ -63,7 +63,7 @@ PlatformServicesClient platformServicesClient = new PlatformServicesClient("MyPl
      
 String platformOrigin = platformServicesClient.getPlatformOrigin(clientUserId);
 ```
-The connectors configured for the platform are retreived using the [Administration Service's `OMAGServerPlatformConfigurationClient`](/services/admin-services/overview/#configuring-the-omag-server-platform)
+The connectors configured for the platform are retrieved using the [Administration Service's `OMAGServerPlatformConfigurationClient`](/services/admin-services/overview/#configuring-the-omag-server-platform){ target=dojo-support }
 
 ```java linenums="1"
 
@@ -122,7 +122,7 @@ Next is the list of *Registered services*.  These are optional services that can
       Type Explorer OMVS: Explore the open metadata types in a repository or cohort.
       Server Author OMVS: Author servers.
 ```
-The registered are also retrieved through the [Platform Operations Services](/services/platform-services/overview/) using the `getXXXServices` method as follows:
+The registered are also retrieved through the [Platform Operations Services](/services/platform-services/overview){ target=dojo-support } using the `getXXXServices` method as follows:
 
 ```java linenums="1"
 List<RegisteredOMAGService> registeredOMASs = platformServicesClient.getAccessServices(clientUserId);
@@ -131,7 +131,7 @@ List<RegisteredOMAGService> registeredOMISs = platformServicesClient.getIntegrat
 List<RegisteredOMAGService> registeredOMVSs = platformServicesClient.getViewServices(clientUserId);
 ```
 
-Finally, `EgeriaPlatformReport` calls the [Adminstration Services](/services/admin-services/overview) to request the list of configured servers.  At this stage, there are none.  In fact, the directory where they are kept has not even been created which is why an exception occurs.  It is printed out to show which directory (`data/servers`), relative to the working directory set up in the `EgeriaPlatform` configuration (`~/egeria-install/egeria-omag*`).
+Finally, `EgeriaPlatformReport` calls the [Administration Services](/services/admin-services/overview){ target=dojo-support } to request the list of configured servers.  At this stage, there are none.  In fact, the directory where they are kept has not even been created which is why an exception occurs.  It is printed out to show which directory (`data/servers`), relative to the working directory set up in the `EgeriaPlatform` configuration (`~/egeria-install/egeria-omag*`).
 ```bash      
    Platform servers
 There was an org.odpi.openmetadata.adminservices.ffdc.exception.OMAGConfigurationErrorException exception when calling the platform.  Error message is: OMAG-ADMIN-500-002 Method retrieveAllServerConfigs returned an unexpected exception of org.odpi.openmetadata.frameworks.connectors.ffdc.OCFRuntimeException with message ENCRYPTED-DOC-STORE-400-014  Unable to retrieve the encrypted configuration files; exception was java.nio.file.NoSuchFileException with message data/servers, while attempting access file data/servers/null/config/null.config

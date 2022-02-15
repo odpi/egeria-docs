@@ -5,23 +5,167 @@ Paste this code between the curly braces of the `AssetListen` class.
 
 ```java linenum=1
     private String serverName;
-    private String serverURLRoot;
+    private String platformURLRoot;
     private String clientUserId;
+
+    private AssetConsumer client;
 
     /**
      * Set up the parameters for the utility.
      *
      * @param serverName server to call
-     * @param serverURLRoot location of server
+     * @param platformURLRoot location of server
      * @param clientUserId userId to access the server
      */
     private AssetListen(String serverName,
-                        String serverURLRoot,
+                        String platformURLRoot,
                         String clientUserId)
     {
         this.serverName = serverName;
-        this.serverURLRoot = serverURLRoot;
+        this.platformURLRoot = platformURLRoot;
         this.clientUserId = clientUserId;
+
+        try
+        {
+            client = new AssetConsumer(serverName, platformURLRoot);
+        }
+        catch (Exception error)
+        {
+            System.out.println("There was an exception when creating the Asset Consumer OMAS client.  Error message is: " + error.getMessage());
+        }
+    }
+
+
+    /**
+     * Process an event that was published by the Asset Consumer OMAS.
+     *
+     * @param event event object - call getEventType to find out what type of event.
+     */
+    public void processEvent(AssetConsumerEvent event)
+    {
+        if (event.getEventType() == AssetConsumerEventType.NEW_ASSET_EVENT)
+        {
+            NewAssetEvent assetEvent = (NewAssetEvent)event;
+
+            System.out.println("------------------------------------------------------------------------");
+            System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID());
+
+            this.printAsset(assetEvent.getAsset());
+        }
+        else if (event.getEventType() == AssetConsumerEventType.UPDATED_ASSET_EVENT)
+        {
+            UpdatedAssetEvent assetEvent = (UpdatedAssetEvent)event;
+
+            System.out.println("------------------------------------------------------------------------");
+            System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID() + " - at " + assetEvent.getUpdateTime());
+
+            this.printAsset(assetEvent.getAsset());
+        }
+    }
+
+
+    /**
+     * This method displays some of the data from the CSV File.
+     *
+     * @param connector connector to the CSV file
+     */
+    private void displayFile(CSVFileStoreConnector connector)
+    {
+        try
+        {
+            System.out.println("    ===============================");
+
+            System.out.println("    Accessing file: " + connector.getFileName());
+
+            long         numberOfRecords  = connector.getRecordCount();
+            long         displayedRecords = 10;
+
+            System.out.println("Number of records: " + numberOfRecords);
+            
+            if (numberOfRecords < displayedRecords)
+            {
+                displayedRecords = numberOfRecords;
+                System.out.println("All records ...");
+            }
+            else
+            {
+                System.out.println("First 10 records ...");
+            }
+
+            if (displayedRecords > 0)
+            {
+                List<String> columnNames = connector.getColumnNames();
+                int          startingFrom = 0;
+                
+                if (columnNames == null)
+                {
+                    /*
+                     * Column names are first line of the file - not in the metadata
+                     */
+                    columnNames = connector.readRecord(0);
+                    startingFrom = 1;
+                }
+
+                System.out.println("    File content:");
+
+                System.out.println("    ------------------------------------------------------------------------");
+                System.out.println("      " + columnNames);
+                System.out.println("    ------------------------------------------------------------------------");
+
+                for (int i = startingFrom; i < displayedRecords; i++)
+                {
+                    List<String> columns = connector.readRecord(i);
+
+                    System.out.println("      " + columns);
+                }
+
+                System.out.println("    ------------------------------------------------------------------------");
+            }
+
+        }
+        catch (FileReadException error)
+        {
+            System.out.println("The connector is unable to retrieve the requested record because the file is too short.");
+        }
+        catch (Exception exception)
+        {
+            System.out.println("Exception " + exception.getMessage());
+        }
+    }
+
+
+    /**
+     * Print out details of an asset.
+     * 
+     * @param asset retrieved asset
+     */
+    private void printAsset(Asset asset)
+    {
+        System.out.println("------------------------------------------------------------------------");
+
+        System.out.println("  Asset Details:");
+        System.out.println("    guid: " + asset.getGUID());
+        System.out.println("    qualifiedName: " + asset.getQualifiedName());
+        System.out.println("    displayName: " + asset.getDisplayName());
+        System.out.println("    description: " + asset.getDescription());
+        System.out.println("    member of zones: " + asset.getZoneMembership());
+        
+        try
+        {
+            /*
+             * Is there a connector associated with the asset?
+             */
+            Connector connector = client.getConnectorForAsset(clientUserId, asset.getGUID());
+
+            if (connector instanceof CSVFileStoreConnector)
+            {
+                displayFile((CSVFileStoreConnector)connector);
+            }
+        }
+        catch (Exception error)
+        {
+            System.out.println("Unable to use connector for asset: " + asset.getGUID());
+        }
     }
 
 
@@ -32,12 +176,15 @@ Paste this code between the curly braces of the `AssetListen` class.
     {
         try
         {
-            // Listener code goes here
+            AssetConsumerEventClient eventClient = new AssetConsumerEventClient(serverName,
+                                                                                platformURLRoot,
+                                                                                null,
+                                                                                null,
+                                                                                10,
+                                                                                null,
+                                                                                this.getClass().getName());
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Press enter to stop listening and exit ");
-
-            br.readLine();
+            eventClient.registerListener(clientUserId,this);
         }
         catch (Exception error)
         {
@@ -80,6 +227,8 @@ Paste this code between the curly braces of the `AssetListen` class.
         System.out.println("Focused on server: " + serverName);
         System.out.println("Using userId: " + clientUserId);
         System.out.println();
+
+        HttpHelper.noStrictSSLIfConfigured();
 
         try
         {

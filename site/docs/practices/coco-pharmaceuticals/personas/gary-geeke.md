@@ -43,6 +43,7 @@ Top challenges:
 * Maintaining a social life with the anti-social hours he is working.
 
 Desired Outcome:
+
 * Fully automated operations with appropriate alerting and diagnostics.
 * Time to work on new projects that expand his skills.
 

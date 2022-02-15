@@ -13,30 +13,34 @@ Scope: Cancer Research Team
 
 Job:
 
-Callie is a data scientist looking at clinical data and other types of research results to uncover insight into the treatments for cancer. Callie works for [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube).
+* Callie is a data scientist looking at clinical data and other types of research results to uncover insight into the treatments for cancer. 
+* Callie works for [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube).
 
 Thinks/Feels:
 
-Callie sees her Job in uncovering insights from data as the future of medical research.  The old methods of experimentation and test tubes are not going to get to the level of understanding necessary to support personalized medicine. Her mother died of cancer and she is very committed to finding new treatments.
+* Callie sees her Job in uncovering insights from data as the future of medical research.  The old methods of experimentation and test tubes are not going to get to the level of understanding necessary to support personalized medicine. Her mother died of cancer and she is very committed to finding new treatments.
 
 Hears:
 
-Discussions around how the research team move to personalized cancer care.
+* Discussions around how the research team move to personalized cancer care.
 
 Says/Does:
 
-Callie is working with [Erin](/practices/coco-pharmaceuticals/personas/erin-overview) on the design of a data lake. In the meantime she has built her own personal data lake with extracts from many sources. There is some patient data in there but she is very careful with her logon password to keep it safe.
+* Callie is working with [Erin](/practices/coco-pharmaceuticals/personas/erin-overview) on the design of a data lake. 
+* In the meantime she has built her own personal data lake with extracts from many sources. There is some patient data in there but she is very careful with her logon password to keep it safe.
 
 Sees:
 
-Callie sees her workload increasing as data analytics becomes a core part of medical research.
+* Callie sees her workload increasing as data analytics becomes a core part of medical research.
 
 Top challenges:
 
-Getting access to data. Each of the research team’s systems is independent. Plus there are the reports from the clinical trials that mainly come in as notes from the medical staff. [Tanya](/practices/coco-pharmaceuticals/personas/tanya-tidie) does her best at collating this information for Callie but it needs to be faster and more automated.
+* Getting access to data. 
+* Each of the research team’s systems is independent. 
+* Reports from the clinical trials that mainly come in as notes from the medical staff. [Tanya](/practices/coco-pharmaceuticals/personas/tanya-tidie) does her best at collating this information for Callie but it needs to be faster and more automated.
 
 Desired Outcome:
 
-Callie wants a data lake of all their information that she can explore to uncover new insight.  
+* Callie wants a data lake of all their information that she can explore to uncover new insight.  
 
 --8<-- "snippets/abbr.md"

@@ -1,13 +1,13 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Grant Able - Oncology Consultant
+# Grant Able - Oncology Medical Consultant
 
 ![Icon](grant-able.png)
 
 Age: 57
 
-Skills: Cancer specialist working in a research hospital.
+Skills: Cancer specialist physician working in a research hospital.
 
 Scope: Oncology department.
 

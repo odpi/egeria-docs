@@ -5,7 +5,7 @@
 
 ![Icon](julie-stitched.png)
 
-Age: 29
+Age: 35
 
 Skills: Medical surgery.
 

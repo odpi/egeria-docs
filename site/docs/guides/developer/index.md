@@ -48,7 +48,8 @@ Below is an example of using the [Administration Services](/services/admin-servi
     MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
     ```
 
-Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/MetadataAccessStoreConfigurationClient.html){ target=javadoc }.  For example, the code below adds a [like](/concepts/like) to an added and then queries its properties and all of the metadata elements attached to it.
+Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/MetadataAccessStoreConfigurationClient.html){ target=javadoc }.  
+For example, the code below sets up the descriptive properties of the server.
 
 ??? example "Example: Calling the configuration client for a Metadata Access Store"
     ```java linenums="1"

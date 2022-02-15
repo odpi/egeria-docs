@@ -31,5 +31,7 @@ The project manages the files for your utility.
 
 ### Creating a Maven POM file
 
+---8<-- "docs/guides/developer/building-utilities/creating-pom-file-in-intellij.md"
+
 
 --8<-- "snippets/abbr.md"

@@ -35,9 +35,11 @@ Says/Does:
 on an ad hoc basis from the existing systems.
 
 Sees:
+
 * The requests for data increasing and she is not sure how much more she can do.
 
 Top challenges:
+
 * So many systems, each with their own data and no easy way to manage complexity.
 * Constant demand for data extracts from the business teams.
 * New software packages being deployed with no thought for
@@ -46,6 +48,7 @@ how the data requirements within them will be supported.
 automate some of the common requests.
 
 Desired Outcome:
+
 * A catalog of data sources and a way to measure and monitor
 their quality and how the information is flowing between them.
 * An easy way to communicate with the developers and

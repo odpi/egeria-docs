@@ -19,9 +19,8 @@ Job:
 Thinks/Feels:
 
 * Feels let down by the IT team because:
-
-(1) The financial data his team uses is very poor quality.
-(2) The IT team are not responsive in supplying additional information he needs to complete the fraud investigation.
+	1. The financial data his team uses is very poor quality.
+	2. The IT team are not responsive in supplying additional information he needs to complete the fraud investigation.
 
 Hears:
 

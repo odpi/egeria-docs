@@ -53,7 +53,7 @@ If you are deploying into a container environment and storing to file, ie via Be
 and that you ensure './data' or a subdirectory mapped to a mapped volume or k8s pvc. This follows the default pattern used
 elsewhere in Egeria.
 
-However, since BerkeleyDB is limited in the number of concurrent requests it can handle efficiently because it runs on a single machine, it is not well suited for applications with many concurrent users mutating the graph, even if that graph is small to medium size. This storage backend is ideally suited for unit testing of application code using JanusGraph. Therefore, when it comes to production environments we strongly recommend to use JanusGraph in [conjuction with Cassandra](https://docs.janusgraph.org/storage-backend/bdb/)
+However, since [BerkeleyDB](https://docs.janusgraph.org/storage-backend/bdb/) is limited in the number of concurrent requests it can handle efficiently because it runs on a single machine, it is not well suited for applications with many concurrent users mutating the graph, even if that graph is small to medium size. This storage backend is ideally suited for unit testing of application code using JanusGraph. Therefore, when it comes to production environments we strongly recommend to use JanusGraph in conjuction with Cassandra
 
 ---
 ## Standalone JanusGraph server

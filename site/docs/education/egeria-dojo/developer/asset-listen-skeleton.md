@@ -121,12 +121,14 @@ Paste this code between the curly braces of the `AssetListen` class.
         System.out.println("------------------------------------------------------------------------");
 
         System.out.println("  Asset Details:");
+        System.out.println("    type: " + asset.getType().getElementTypeName());
         System.out.println("    guid: " + asset.getGUID());
         System.out.println("    qualifiedName: " + asset.getQualifiedName());
         System.out.println("    displayName: " + asset.getDisplayName());
         System.out.println("    description: " + asset.getDescription());
         System.out.println("    member of zones: " + asset.getZoneMembership());
         
+        List<E
         try
         {
             /*

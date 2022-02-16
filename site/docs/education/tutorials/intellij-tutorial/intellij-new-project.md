@@ -26,7 +26,7 @@ Click on the `Finish` button.  If the directory is new, you may get this pop-up 
 
 Once the wizard completes IntelliJ will open up your new project, ready to begin coding.  The `src` directory is where your code will go.
 
-![Step 6](/education/tutorials/intellij-tutorial/intellij-add-java-package-1.png)
+![Step 6](/education/tutorials/intellij-tutorial/intellij-new-project-6.png)
 
 
 

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-To add add a new Java package to your project, right-mouse click on the `src` folder.
+To add a new Java package to your project, right-mouse click on the `src` folder.
 
 ![Step 1](/education/tutorials/intellij-tutorial/intellij-add-java-package-1.png)
 
@@ -14,4 +14,4 @@ Java package names are in lowercase and are dot (`.`) separated.
 
 ![Step 3](/education/tutorials/intellij-tutorial/intellij-add-java-package-3.png)
 
-The new package appears in the project list.
+The new package appears under `src` in the project list.

@@ -78,10 +78,7 @@ Paste this code between the curly braces of the `AssetCreate` class.
                 List<String> assetGUIDs = client.addCSVFileToCatalog(clientUserId,
                                                                      fileName,
                                                                      "This is a new CSV file asset created by AssetCreate.",
-                                                                     fileName,
-                                                                     columnHeaders,
-                                                                     ',',
-                                                                     '\'');
+                                                                     fileName);
 
                 if (assetGUIDs != null)
                 {
@@ -149,9 +146,3 @@ Paste this code between the curly braces of the `AssetCreate` class.
         }
     }
 ```
-
-On the right-hand side of the editor you will see a square of yellow and 4 little yellow lines.  
-
-![Warnings](/education/egeria-dojo/developer/asset-create-skeleton-warnings.png)
-
-The yellow lines are warnings that the code is incomplete.  You can hover the mouse pointer over these lines and the reason for the warning is displayed.   As you add content to the file during this exercise, these lines should disappear.  If you make a syntax error, you will see a red line in this column showing which line is in error.  The yellow box at the top is a summary of the findings of the static analysis.  Hovering the mouse pointer over this area will show the report.  It will change colour to indicate the most serious finding.  You are aiming for a green tick, which means no errors have been found.

@@ -22,7 +22,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
     !!! attention "Think about your machine type ..."
 
-        The instructions below cover fairly standard machine architectures and set ups.  If you are using, say the new M1 chip in your Mac, or are running a work machine that has been locked down by your company, then you may need to take additional actions, install additional software and enable additional permissions. In all cases, check that the software bein installed is correct for your machine type and its approved uses.
+        The instructions below cover fairly standard machine architectures and set ups.  If you are using, say the new M1 chip in your Mac, or are running a work machine that has been locked down by your company, then you may need to take additional actions, install additional software and enable additional permissions. In all cases, check that the software being installed is correct for your machine type and its approved uses.
     
     Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.
     
@@ -85,7 +85,11 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
     ??? beginner "Setting up your Test environment (30 mins)"
     
-        The `egeria-dev-projects.git` repository contains the utilities to support your Egeria test environment. This was one of the git repositories that you cloned in the prerequisite tasks.  Open this git repository in IntelliJ.  Now build the `egeria-dev-projects` code ...
+        The `egeria-dev-projects.git` repository contains the utilities to support your Egeria test environment. This was one of the git repositories that you cloned in the prerequisite tasks.  
+        
+        Open the `egeria-dev-projects.git` repository in a **new window** in IntelliJ.  (You may still want to look at the `egeria.git` code later.)  
+        
+        Now build the `egeria-dev-projects` code ...
         
         ??? beginner "Building egeria-dev-projects.git in IntelliJ IDEA ..."
             --8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-dev-projects-git.md"
@@ -126,7 +130,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                     > Your development landscape adding the ServerOps utility calling EgeriaPlatform to start and stop servers.
 
             !!! education "Summary and further study"
-                From this section of the developer dojo, you should have an understanding of the behaviour of the Platform Operations Services and Administration Services.
+                From this exercise of the developer dojo, you should have an understanding of the behaviour of the Platform Operations Services and Administration Services.
                 
                 * `ServerConfig` is using the Administration Services to configure different types of OMAG Servers.
                 * `ServerOps` is using the Administration Services to start and stop named OMAG Servers.
@@ -134,19 +138,16 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 
                 The [`egeria-dev-projects`](https://github.com/odpi/egeria-dev-projects){ target=gh } utilities are designed to illustrate how to use these services and you may want to take time to review the code and make changes to explore new functions or customize them to your working environment.
                 
-                Itching to code? The next section gives you an opportunity to write your own utilities that work with the OMAS APIs.  This may be a good time to take a break :)
+                Itching to code? The next exercise gives you an opportunity to write your own utilities that work with the OMAS APIs.  This may be a good time to take a break :)
                    
         ??? beginner "Writing simple utilities that work with metadata. (60 mins)"
         
-            In this section, you will be creating two new utilities: one called `AssetCreate` that catalogs a collection of files as assets; the other is called `AssetListen` which listens for newly created asset events and prints out details about the asset.  You can think of it as a game of catch: `AssetCreate` is throwing assets into the catalog and `AssetListen` is catching them.
+            In this exercise, you will be creating two new utilities: one called `AssetCreate` that catalogs a collection of files as assets; the other is called `AssetListen` which listens for newly created asset events and prints out details about the asset.  You can think of it as a game of catch: `AssetCreate` is throwing assets into the catalog and `AssetListen` is catching them.
             
             ??? beginner "Develop AssetListen"
 
                 ??? beginner "Create a new IntelliJ project for AssetListen called `egeria-dojo1`"
                     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-new-project.md"
-                
-                ??? beginner "Create a new IntelliJ module called `asset-listen`"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-java-module.md"
                 
                 ??? beginner "Create a new java package called `egeria.dojo.assetlisten`"
                     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-java-package.md"
@@ -156,14 +157,17 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 
                 ??? beginner "Paste in the skeleton code"
                     ---8<-- "docs/education/egeria-dojo/developer/asset-listen-skeleton.md"
-                
+                    
+                    ??? beginner "What is HTTPHelper?"
+                        ---8<-- "docs/guides/developer/http-helper/overview.md"
+
                 ??? beginner "Create a Maven POM file"
                     ---8<-- "docs/guides/developer/building-utilities/creating-pom-file-in-intellij.md"
                     ---8<-- "docs/education/egeria-dojo/developer/asset-listen-pom-skeleton.md"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-maven-module.md"
+                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-as-maven-project.md"
 
                 ??? beginner "Resolve Egeria dependencies in AssetListen"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-resolve-dependencies.md"
+                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies.md"
 
                 Navigate to the `AssetListen` class and run it using the right-mouse menu as in earlier exercises.
                                 
@@ -180,7 +184,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             ??? intermediate "Develop AssetCreate"
                 
-                Create a new IntelliJ project called `egeria-dojo2`.  Add an IntelliJ module called `asset-create` containing an empty Java class called `egeria.dojo.assetcreate.AssetCreate`.
+                Create a new IntelliJ project (in a new window) called `egeria-dojo2` and add an empty Java class called `egeria.dojo.assetcreate.AssetCreate`.
                  
                 ??? intermediate "Paste the skeleton code into the AssetCreate class"
                     ---8<-- "docs/education/egeria-dojo/developer/asset-create-skeleton.md"
@@ -190,15 +194,20 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 ??? intermediate "Paste the skeleton structure into the `pom.xml` file"                
                     ---8<-- "docs/education/egeria-dojo/developer/asset-create-pom-skeleton.md"
                     
-                Resolve the Egeria dependencies in your `AssetCreate` java class and add the `logback.xml` resource file to control developer logging.
+                Select the pom file and add it as a maven project. Resolve the Egeria dependencies in your `AssetCreate` java class and add the `logback.xml` resource file to control developer logging.
                 
                 Navigate to the `AssetCreate` class and run it using the right-mouse menu as in earlier exercises.  It will fail with the certificate error.  Edit `AssetCreate`'s newly created configuration and add `-Dstrict.ssl=false` to the `VM Options` and click `OK` to save the configuration to turn off the need for a certificate.
 
+                Rerun `AssetCreate`.  It requests that you hit enter to create an asset.  As you repeatedly press enter, observe the assets being created:
+                
+                * Look in the console of `EgeriaPlatform` to see the events flowing.
+                * Look at `AssetListen` to see the assets being displayed.
+                
                 !!! education "Your development landscape ..."
                     ![AssetCreate calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-5.svg)
                     > Your development landscape now has added AssetCreate calling the mds1 server running on EgeriaPlatform to create new assets.  These assets arethen received by AssetListen.
                
-        ??? intermediate "Handling errors (10 mins read)"
+        ??? beginner "Handling errors (10 mins read)"
             There are three exceptions that occur on many of the OMAS APIs:
             
             - *InvalidParameterException* means that your API has not provided some needed value, or the values provided are invalid at that time.
@@ -245,8 +254,8 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingConnector`.  This will contain the actual code of the connector.
                 
         ??? intermediate "Paste the skeleton code into the EventLoggingConnector class"
-            ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-skeleton.md"    
-                    
+            ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-skeleton.md"
+            
         Resolve the Egeria dependencies in both of the java classes for your connector.
         
         Run maven with the `clean install` options to create the jar file and you are ready to test your new connector.
@@ -321,8 +330,8 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingConnector` for the code of the connector.
                         
         ??? advanced "Paste the skeleton code into the TopicCataloguingConnector class"
-            ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-connector-skeleton.md"    
-                            
+            ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-connector-skeleton.md"
+            
         Resolve the Egeria dependencies in both of the java classes for your connector.
                 
         Run maven with the `clean install` options to create the jar file and you are ready to test your new connector.
@@ -350,7 +359,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
     ??? expert "Working with open metadata archives (1.5 hours)"
     
-        In this section you will be creating a utility that builds an *Open Metadata Archive* containing a new *Open Metadata Type* and an instance of that type.
+        In this exercise you will be creating a utility that builds an *Open Metadata Archive* containing a new *Open Metadata Type* and an instance of that type.
         
         ??? expert "What is an open metadata archive? (15 mins read)"
         

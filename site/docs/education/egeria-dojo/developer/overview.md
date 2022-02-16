@@ -19,6 +19,11 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 ## Preparing your machine for the Dojo
 
 !!! tip "In preparation ..."
+
+    !!! attention "Think about your machine type ..."
+
+        The instructions below cover fairly standard machine architectures and set ups.  If you are using, say the new M1 chip in your Mac, or are running a work machine that has been locked down by your company, then you may need to take additional actions, install additional software and enable additional permissions. In all cases, check that the software bein installed is correct for your machine type and its approved uses.
+    
     Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.
     
     ??? tip "Installing Java ..."
@@ -328,7 +333,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             Restart `EgeriaPlatform` so it picks up the new classes. Use the `ServerConfig` utility and issue the following commands to create an integration daemon server called `daemon1` and add your connector to its configuration document.  The third command is option but installs your audit log destination connector from the previous exercise into `daemon1`.
                         
              ```bash
-             create-integration-daemmon daemon1 mds1
+             create-integration-daemon daemon1 mds1
              ```
              ```bash
              add-topic-connector daemon1 egeria.dojo.connector.topics.TopicCataloguingProvider

@@ -156,7 +156,7 @@ Entity events to feed the changes assets that are crated or updated:
 
     ```json
     {
-        "glossaryTermLineageEventsChunkSize": 100,
+        "LineagePublisherBatchSize": 100,
         "LineageClassificationTypes": [
             "PrimaryCategory",
             "Confidentiality",

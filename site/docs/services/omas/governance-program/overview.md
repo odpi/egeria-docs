@@ -47,7 +47,7 @@ Governance domains are the areas of an organization's operation that receive spe
 
 Governance domains are represented by *[Governance Domain Descriptions](/types/4/0401-Governance-Definitions)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".  
 
-It is possible to set up a default list of domains using the [`createStandardGovernanceDomains`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html#createStandardGovernanceDomains(java.lang.String) method.
+It is possible to set up a default list of domains using the [`createStandardGovernanceDomains`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html) method.
 
 ## Subject areas
 
@@ -108,15 +108,15 @@ There are three types:
 
 The ExecutionPointDefinition elements are created during the design of the governance program. They characterize the types of execution points that are needed to support the governance requirements. They are linked to the Governance Definition that they support using the ExecutionPointUse relationship. Typically the governance definitions linked to the governance execution point definitions are:
 
-    * Governance Processes
-    * Governance Procedures
+* Governance Processes
+* Governance Procedures
 
 Often execution points need to be integrated with the normal activity of the business, but they may also represent additional standalone activity.
 
 The classifications ControlPoint, VerificationPoint and EnforcementPoint are used to label governance implementation elements with the type of execution point and the qualified name of the corresponding definition if any. They are often found on element such as:
 
-    * Governance Action Types
-    * Governance Actions
+* Governance Action Types
+* Governance Actions
 
 These classifications help in the review of the implementation of the governance program and can be used to drive additional audit logging. 
 

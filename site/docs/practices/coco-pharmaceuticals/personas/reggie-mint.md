@@ -14,14 +14,13 @@ Scope: Organization-wide
 Job:
 
 * Reggie has been CFO for the company since it started. His skills and knowledge of financial management has grown with the company and he is very comfortable with the role.
-* Specifically, he is responsible for the financial health of the company. This includes managing the cash flow and reporting the financial position of the company to tax office and other regulators.
+* Specifically, he is responsible for the financial health of the company. This includes managing the cash flow and reporting the financial position of the company to the tax office and other regulators.
 
 Thinks/Feels:
 
 * Feels let down by the IT team because:
-
-(1) The financial data his team uses is very poor quality.
-(2) The IT team are not responsive in supplying additional information he needs to complete the fraud investigation.
+	1. The financial data his team uses is very poor quality.
+	2. The IT team are not responsive in supplying additional information he needs to complete the fraud investigation.
 
 Hears:
 
@@ -37,7 +36,7 @@ Sees:
 
 Top challenges:
 
-* There has been a recent incident of counterfeit ingredients entering their supply chain.  Further investigation has revealed that their information about suppliers and the accounting procedures around them have weakness that need to be addressed if they are to pass the next regulatory audit.
+* There has been a recent incident of counterfeit ingredients entering their supply chain.  Further investigation has revealed that their information about suppliers and the accounting procedures around them have weaknesses that need to be addressed if they are to pass the next regulatory audit.
 
 Desired Outcome:
 

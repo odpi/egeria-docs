@@ -39,7 +39,8 @@ Top challenges:
 * Getting access to production systems to run the profiler and quality rules that Peter defines.
 
 Desired Outcome:
-A steady improvement in the quality of information in each of the key repositories.
+
+* A steady improvement in the quality of information in each of the key repositories.
 
 
 

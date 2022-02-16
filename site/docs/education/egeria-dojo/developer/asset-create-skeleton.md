@@ -3,7 +3,7 @@
 
 Paste this code between the curly braces of the `AssetCreate` class.
 
-```java linenum=1
+```java linenums="1"
     private static final String fileName1  = "sample-data/oak-dene-drop-foot-weekly-measurements/week1.csv";
     private static final String fileName2  = "sample-data/oak-dene-drop-foot-weekly-measurements/week2.csv";
     private static final String fileName3  = "sample-data/oak-dene-drop-foot-weekly-measurements/week3.csv";
@@ -16,7 +16,7 @@ Paste this code between the curly braces of the `AssetCreate` class.
     private static final String fileName10 = "sample-data/old-market-drop-foot-weekly-measurements/week5.csv";
 
     private String serverName;
-    private String serverURLRoot;
+    private String platformURLRoot;
     private String clientUserId;
 
     private List<String> fileNames = new ArrayList<>();
@@ -25,15 +25,15 @@ Paste this code between the curly braces of the `AssetCreate` class.
      * Set up the parameters for the utility.
      *
      * @param serverName server to call
-     * @param serverURLRoot location of server
+     * @param platformURLRoot location of server
      * @param clientUserId userId to access the server
      */
     private AssetCreate(String serverName,
-                        String serverURLRoot,
+                        String platformURLRoot,
                         String clientUserId)
     {
         this.serverName = serverName;
-        this.serverURLRoot = serverURLRoot;
+        this.platformURLRoot = platformURLRoot;
         this.clientUserId = clientUserId;
 
         /*
@@ -50,23 +50,46 @@ Paste this code between the curly braces of the `AssetCreate` class.
         this.fileNames.add(fileName9);
         this.fileNames.add(fileName10);
     }
-    
-    
+
+
     /**
      * This runs the utility
      */
     private void run()
     {
+        List<String> columnHeaders = new ArrayList<>();
+
+        columnHeaders.add("PatientId");
+        columnHeaders.add("Date");
+        columnHeaders.add("Angle");
+
+
         try
         {
+            CSVFileAssetOwner client = new CSVFileAssetOwner(serverName, platformURLRoot);
+
             for (String fileName : fileNames)
             {
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
                 System.out.println("Press enter to create asset for next file: " + fileName);
-                
+
                 br.readLine();
 
-                // The code to create the asset goes here.
+                List<String> assetGUIDs = client.addCSVFileToCatalog(clientUserId,
+                                                                     fileName,
+                                                                     "This is a new CSV file asset created by AssetCreate.",
+                                                                     fileName,
+                                                                     columnHeaders,
+                                                                     ',',
+                                                                     '\'');
+
+                if (assetGUIDs != null)
+                {
+                    for (String assetGUID : assetGUIDs)
+                    {
+                        client.publishAsset(clientUserId, assetGUID);
+                    }
+                }
             }
         }
         catch (Exception error)
@@ -110,6 +133,8 @@ Paste this code between the curly braces of the `AssetCreate` class.
         System.out.println("Focused on server: " + serverName);
         System.out.println("Using userId: " + clientUserId);
         System.out.println();
+
+        HttpHelper.noStrictSSLIfConfigured();
 
         try
         {

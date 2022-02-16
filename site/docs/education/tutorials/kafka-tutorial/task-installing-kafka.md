@@ -21,7 +21,7 @@ For Egeria, the Kafka server needs to be running a `PLAINTEXT` listener. From th
 !!! example "Example: Kafka configuration"
     ```text
     listeners=PLAINTEXT://localhost:9092
-    advertised.listeners=PLAINTEXT://localhost:5092
+    advertised.listeners=PLAINTEXT://localhost:9092
     ```
 
     The example above uses `localhost:9092` for simplicity, assuming you are running Kafka locally on the same machine where you are doing your development. If running elsewhere, replace this with a name that is fully network resolveable (i.e. by both the host running Kafka and the client machines that will connect to Kafka from other hosts).

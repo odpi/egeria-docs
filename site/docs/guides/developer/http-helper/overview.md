@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-### HTTP Helper
+### Using HTTP Helper to turn off certificate checking 
 
 The *HTTPHelper* is a Java class that is used to control HTTP settings.  Its most common use is in development environments to turn off certificate checking in a utility.
 
@@ -21,11 +21,11 @@ Add the HTTPHelper module as a dependency in your `pom.xml` file.
 </dependency>
 ```
 
-The add this line to your main program before any call is made to a Java client.
+Then add this line to your main program before any call is made to a Java client.
 
-```java linenum=1
+```java linenums="1"
 
-
+HttpHelper.noStrictSSLIfConfigured();
 
 ```
 

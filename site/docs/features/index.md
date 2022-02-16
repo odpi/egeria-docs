@@ -12,7 +12,6 @@ The Egeria features describe the value-add features that Egeria adds to its abil
 - [Effectivity Dating](/features/effectivity-dates/overview) - adding an optional start and end date to metadata elements to limit *when* they can be returned on a metadata query.
 - [External Identifiers](/features/external-identifiers/overview) - attaching the identifiers that metadata elements are known as in external tools and platforms to make it easier to match metadata from each system when synchronizing metadata.
 - [External References](/features/external-references/overview) - enriching metadata elements with links to related external material.
-- [Governance Definition](/features/governance-definition/overview) - Open metadata definitons used to set up your governance program.
 - [Governance Zones](/features/governance-zoning/overview) - grouping [assets](/concepts/asset) that have similar uses and/or governance requirements into governance zones. The assets in a zone can be queried and managed as a group.
 - [Incident Reporting](/features/incident-reporting/overview) - reporting and managing the actions associated with a detected incident or issue relating to a metadata element or associated [resource](/concepts/resource).
 - [Integrated Cataloguing](/features/integrated-cataloguing/overview) - using automation to automatically synchronize metadata between Egeria and external tools and platforms.

@@ -52,6 +52,14 @@ Erin is surprised how much shifting her focus towards the needs of their busines
 ![Figure 2](coco-pharmaceuticals-core-subject-areas.png)
 > Figure 2: Coco Pharmaceutical’s new candidate subject area model
 
+!!! education "Further information"
+    
+    * [Governance Program OMAS](/services/omas/governance-program/overview/#subject-areas) provides the API for creating subject areas in open metadata.
+    
+    * There are two code samples associated with this set of subject areas:
+    
+        * [Setting up the subject area definitions :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-subject-area-sample){ target=gh }
+        * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
 
 
 --8<-- "snippets/abbr.md"

@@ -7,7 +7,7 @@ There is a lot of interest in governance topics such the fairness of AI; ownersh
 
 Governments have responded with more exacting regulation that demands greater transparency in an organization's operation and provision for individual's rights relating to their data and their treatment by automated processes. The European Union's [General Data Protection Regulation (GDPR)](https://ec.europa.eu/commission/priorities/justice-and-fundamental-rights/data-protection/2018-reform-eu-data-protection-rules_en) is a well-known example.
 
-Although seeming to fit in the purview of **data governance**, the impact of these regulations is much broader, covering the process for designing and building software, the secure operation of IT systems, data privacy as well as the traditional data management concerns.
+Although seeming to fit in the purview of *data governance*, the impact of these regulations is much broader, covering the process for designing and building software, the secure operation of IT systems, data privacy as well as the traditional data management concerns.
 
 Egeria is dedicated to helping organizations build out their broader governance capability around their digital services to meet these new challenges.  At is core is the [Egeria Open Metadata and Governance software](https://github.com/odpi/egeria) that provides the technology to support governance. Egeria's *practices* provides guidance to help you design an effective and holistic governance capability in your organization.
 
@@ -26,8 +26,6 @@ The two streams cross-reference each other and include links to software samples
 Egeria is a rapidly evolving project and new material and software is being added all of the time so it is worthwhile checking on the latest material from time to time.  Below is some of the most recently created guidance.  
 
 * [Governance Basics](/practices/governance-basics/overview) provides a simple definition for governance along with a description of its key capabilities and requirements and how they operate withing an organization.
-* [Governing Systems](/practices/governing-systems/overview/) describes the capabilities of the systems that support governance.
-* [Governance of Data](/practices/governance-of-data/overview) explains what makes data governance particularly challenging. 
 * [Governance Maturity Model](/practices/maturity-model/overview) shows the technological development of the governance technology needed by an organization to broaden its use of data.
 * [Common Data Definitions](/practices/common-data-definitions/overview) describes how to build a glossary of standard terms.
 * [Governance Roles](/practices/roles/overview) describes the different roles that people perform in a governance program.

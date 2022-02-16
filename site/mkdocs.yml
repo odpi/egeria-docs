@@ -691,8 +691,6 @@ nav:
       - View Server: concepts/view-server.md
   - Practices:
       - Governance Basics: practices/governance-basics/overview.md
-      - Governing Systems: practices/governing-systems/overview.md
-      - Governance of Data: practices/governance-of-data/overview.md
       - Governance Maturity Model: practices/maturity-model/overview.md
       - Common Data Definitions: practices/common-data-definitions/overview.md
       - Governance Roles: practices/roles/overview.md

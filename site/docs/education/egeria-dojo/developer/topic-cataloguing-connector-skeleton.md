@@ -261,7 +261,7 @@ Paste this code between the curly braces of the `TopicCataloguingConnector` clas
         }
     }
 
-
+n
     /**
      * Shutdown kafka monitoring
      *

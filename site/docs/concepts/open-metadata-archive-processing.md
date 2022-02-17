@@ -7,7 +7,7 @@ Open metadata archives are introduced into the server through the admin services
 1. provided as part of the contents of the server's configuration document, or
 2. through the operational command that added the archive directly into the running server's repository.
 
-![Processing of an open metadata archive](open-metadata-archive-processing.svg)
+![Processing of an open metadata archive](/concepts/open-metadata-archive-processing.svg)
 
 The archive is passed to the repository services' operational services, which in turn passes it on to the [archive manager](/services/omrs/archive-manager). Type information is passed to the [repository content manager](../services/omrs/repository-content-manager.md).
 

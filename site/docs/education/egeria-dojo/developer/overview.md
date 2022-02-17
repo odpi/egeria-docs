@@ -45,6 +45,9 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     - https://github.com/odpi/egeria-samples
     - https://github.com/odpi/egeria-dev-projects
     
+    ??? tip "Create a GitHub account ..."
+        --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id.md"
+            
     ??? tip "Downloading (cloning) Egeria's git repositories ..."
         --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
 
@@ -71,6 +74,11 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         ??? beginner "Open egeria.git in IntelliJ"
             --8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
             
+        ??? beginner "Get the latest code - for SNAPSHOT releases"
+            If you are using a SNAPSHOT release of Egeria, it is worthwhile pulling down the latest code from the git repository.
+            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
+            Use the `git pull` command to get the latest code onto your machine.
+            
         Now build the egeria.git repository.  For the Dojo, it is OK to use the *Quick Build* option when offered.
 
         ??? beginner "Building Egeria's core libraries (15 mins)"
@@ -87,8 +95,12 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     
         The `egeria-dev-projects.git` repository contains the utilities to support your Egeria test environment. This was one of the git repositories that you cloned in the prerequisite tasks.  
         
-        Open the `egeria-dev-projects.git` repository in a **new window** in IntelliJ.  (You may still want to look at the `egeria.git` code later.)  
+        Open the `egeria-dev-projects.git` repository in a **new window** in IntelliJ.  (You will want to look at the `egeria.git` code later.)  
         
+        ??? beginner "Get the latest code for `egeria-dev-projects.git` ..."
+            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
+            Use the `git pull` command to get the latest code onto your machine.
+
         Now build the `egeria-dev-projects` code ...
         
         ??? beginner "Building egeria-dev-projects.git in IntelliJ IDEA ..."
@@ -239,7 +251,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
         However for a development environment, it is useful to be able to see the event payloads.  This exercise creates a new audit log destination connector that outputs the payload of an EVENT audit log message to the console.
         
-        Create a new IntelliJ project called `egeria-dojo3` with an IntelliJ module called `event-logging-connector`.  
+        Create a new IntelliJ project called `egeria-dojo3`.  
         
         Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingProvider`.  This will contain the connector provider for your connector.  The connector provider is the factory class for the connector and also provides information to administrators and operators about the behaviour and capbility of the connector.
         
@@ -315,11 +327,21 @@ After completing developer day of the egeria dojo you should feel comfortable wi
        
         The integration connector that you are going to build today is very simple, but illustrates the process of building and testing integration connectors.  It will connect to Apache Kafka and retrieve a list of the topics that are defined.  It will then create `KafkaTopic` assets that will be stored in `mds1`'s metadata repository.  `mds1` will also send events to `AssetListen` about these new assets.
         
-        Create a new IntelliJ project called `egeria-dojo4` with an IntelliJ module called `topic-cataloguing-connector`.  
-                
+        Create a new IntelliJ project called `egeria-dojo4`.  
+         
+        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingAuditCode` for your connector's audit log message definitions.  Logging and error handling are an important part of a connector's design.  It did not feature in the audit log destination connector because that connector was part of the audit logging system.  However it will feature in all other connectors that your write.  
+        
+        ??? advanced "Paste the skeleton code into the `TopicCataloguingAuditCode` class"
+            ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-audit-skeleton.md"
+
+        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingErrorCode` for your connector's exception message definitions.  Exceptions are sent between processing environments and Egeria's exceptions include [First Failure Data Capture (FFDC)](/guides/diagnistic/ffdc) information in them to aid inter=system problem determination.
+               
+        ??? advanced "Paste the skeleton code into the `TopicCataloguingErrorCode` class"
+            ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-error-skeleton.md"
+
         Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingProvider` for the connector provider.
                 
-        ??? advanced "Paste the skeleton code into the TopicCataloguingProvider class"
+        ??? advanced "Paste the skeleton code into the `TopicCataloguingProvider` class"
             ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-provider-skeleton.md"
                 
         Create a `pom.xml` file for the connector module.
@@ -331,9 +353,9 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                         
         ??? advanced "Paste the skeleton code into the TopicCataloguingConnector class"
             ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-connector-skeleton.md"
-            
-        Resolve the Egeria dependencies in both of the java classes for your connector.
-                
+                            
+        Resolve the Egeria dependencies in all 4 of the java classes for your connector.
+
         Run maven with the `clean install` options to create the jar file and you are ready to test your new connector.
         
         ??? advanced "Testing your connector"

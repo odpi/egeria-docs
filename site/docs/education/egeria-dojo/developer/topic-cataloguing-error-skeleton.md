@@ -81,3 +81,4 @@ Paste this code between the curly braces of the `TopicCataloguingErrorCode` clas
                        '}';
     }
 ```
+The error code for an exception is similar to the audit log message definition since there is a unique message identifier, message, a system action and user response.  Instead of a severity there is a code that follows the conventions used in the HTTP code.  This indicates the severity of the situation.  

@@ -200,5 +200,7 @@ Paste this code between the curly braces of the `TopicCataloguingAuditCode` clas
                 ", systemAction='" + systemAction + '\'' +
                 ", userAction='" + userAction + '\'' +
                 '}';
-    }
+    }    
 ```
+
+Each entry in the enum is a different message for the audit log.  Notice that they each have a unique message identifier, the severity of the message (this is what your audit log connector was testing) and the message text that is displayed in the console.  The system action describes what the system did in response to the situation and the user response is what the operator/administrator should do when they see the message.

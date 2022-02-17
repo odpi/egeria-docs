@@ -16,7 +16,7 @@ Paste this structure into your `pom.xml` class.
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>Topics Cataloguing Integration Connector</name>
+    <name>Topic Cataloguing Integration Connector</name>
     <description>
         Monitors the topics in a Kafka Broker and creates a list of KafkaTopic assets for each topic.
     </description>

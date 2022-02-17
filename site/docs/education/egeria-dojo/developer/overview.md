@@ -390,20 +390,20 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             ??? expert "The structure of an open metadata archive"
                 --8<-- "docs/concepts/open-metadata-archive-structure.md"
             
-            ??? expert "How and open metadata archive is processed"
-                --8<-- "docs/concepts/open-metadata-archive-structure.md"
+            ??? expert "How an open metadata archive is processed"
+                --8<-- "docs/concepts/open-metadata-archive-processing.md"
         
         This session is marked as an expert session since it presents a challenge - to use the skills from the earlier exercises, the `egeria-samples.git` as a guide and the helper classes in `egeria.git` to build your own archive writer.
         
         ??? expert "In memory archive construction (15 mins read)"
-            --8<-- "docs/guides/developer/open-metadata-archives/in-memory-archive-construction.md"
+            --8<-- "/guides/developer/open-metadata-archives/in-memory-archive-construction.md"
         
         ??? expert "Explore `coco-metadata-samples` (15 mins)"
             In the `egeria-samples.git` repository that you downloaded in the prereqs there is a module called `coco-metadata-archives` (under `sample-metadata-archives`). This has examples of 4 archive writers.  In particular, `CocoTypesArchiveWriter` creates an open metadata archive with type definitions and `CocoGovernanceEngineArchives` creates instances.
             
             Load this git repository into Intellij and look at the code (remembering to use `git pull` to get the latest versions).  This will help you in the exercise that follows. 
 
-        Create a new project in IntelliJ called `egeria-dojo5`.  Add a module called `dojo-archive` containing a Java class called `egeria.dojo.archive.DojoArchiveWriter`.  `DojoArchiveWriter` is the class that you will write, with its accompanying `pom.xml` and `logback.xml` file.  It extends `OMRSArchiveWriter` from the `repository-services-archive-utilities`.
+        Create a new project in IntelliJ called `egeria-dojo5`.  Add a Java class called `egeria.dojo.archive.DojoArchiveWriter`.  `DojoArchiveWriter` is the class that you will write, with its accompanying `pom.xml` and `logback.xml` file.  It extends `OMRSArchiveWriter` from the `repository-services-archive-utilities`.
         
         Your archive will write to the `egeria-dojo-archive.json` file and have header properties of:
         
@@ -442,7 +442,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             Run `DojoArchiveWriter` to create the `dojo-archive.json` file.
             
-            ??? expert 'Copy the resulting file into your egeria install directory under `content-packs`".  
+            ??? expert "Copy the resulting file into your egeria install directory under `content-packs`".  
                 From your IntelliJ terminal window of the `egeria-dojo5` project:
             
                 ```bash
@@ -453,7 +453,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
         !!! education "Your development landscape ..."
             ![dojo-archive loading into in mds1](/education/egeria-dojo/developer/developer-dojo-architecture-8.svg)
-            > Your development landscape showing your new Open Metadata Archive loading into mds1 each time this server start up.
+            > Your final development landscape showing your new Open Metadata Archive loading into mds1 each time this server start up.
 
     ??? beginner "Congratulations, you have completed the developer day dojo"
         The Egeria community hopes you have enjoyed this dojo.  It aims to give you the skills to use IntelliJ to build utilities and connectors for Egeria.  There are, of course, many more APIs and types of connectors than you have experienced today, but they all follow similar patterns.  The links below provide some suggestions for further reading.

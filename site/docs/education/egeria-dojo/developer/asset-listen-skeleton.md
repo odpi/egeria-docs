@@ -128,7 +128,6 @@ Paste this code between the curly braces of the `AssetListen` class.
         System.out.println("    description: " + asset.getDescription());
         System.out.println("    member of zones: " + asset.getZoneMembership());
         
-        List<E
         try
         {
             /*

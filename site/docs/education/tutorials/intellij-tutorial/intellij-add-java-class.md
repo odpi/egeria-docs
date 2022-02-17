@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
-To add add a new Java class to your project, right-mouse click on the package name and select `New` then `Java Class` on the sub menu.
+To add a new Java class to your project, right-mouse click on the package name and select `New` then `Java Class` on the sub menu.
 
 ![Step 1](/education/tutorials/intellij-tutorial/intellij-add-java-class-1.png)
 

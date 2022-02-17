@@ -20,24 +20,24 @@ In general, organizations are not universally at one level of maturity. They adj
 
 The maturity levels are:
 
-??? tip "Asset Awareness Maturity Level - where is the organization's data and what does it contain?"
+??? tip "Asset Awareness Maturity Level - where is the organization's resource and what are their properties?"
     ### Asset Awareness
     
-    An organization has achieved *asset awareness* when it has a catalog of its assets that shows the properties of the assets, who owns them and their lineage (how they were created).
+    An organization has achieved *asset awareness* when it has a catalog of its [resources](/concepts/resource) that shows the properties of the resources, who owns them and their lineage (how they were created).  The catalog entry for a resource is called an [*asset*](/concepts/asset).
     
-    These catalogs ideally need to cover all types of asset, from data stores, data feeds, APIs and the processes/applications that work with them.  In addition, the catalog can include information about the logical structure (schema) of the data, its format (for example, XML, JSON) the values stored and what the data elements within the asset mean to the organization.
+    These catalogs ideally need to cover all types of resources, from data stores, data feeds, APIs and the processes/applications that work with them.  In addition, the catalog can include information about the logical structure (schema) of the data, its format (for example, XML, JSON) the values stored and what the data elements within the asset mean to the organization.
     
-    Figure 3 shows the different types of tools that can be used to build up the data catalog and make it searchable through a user interface.
+    Figure 3 shows the different types of tools that can be used to build up the asset catalog and make it searchable through a user interface.
     
     ![Figure 3](asset-awareness.svg)
-    > **Figure 3:** Capabilities needed to achieve Data Awareness
+    > **Figure 3:** Capabilities needed to achieve Asset Awareness
 
 ??? tip "Governance Awareness Maturity Level - how should data be governed?"
     ### Governance Awareness
     
-    Governance awareness is where the governance requirements are attached to the descriptions of the assets in the asset catalog. This means that someone wishing to use a data asset can easily understand the governance requirements they must meet to use it responsibility.
+    Governance awareness is where the governance requirements are attached to the descriptions of the assets in the asset catalog. This means that someone wishing to use a resource can easily understand the governance requirements they must meet to use it responsibility.
     
-    Most organizations use governance classifications.  These are labels that are attached to the asset descriptions, or the data elements descriptions where they exist.
+    Most organizations use governance classifications.  These are labels that are attached to the asset descriptions within the catalog.
     
     The governance classifications each define a list of governance requirements for different situations. For example a governance classification could be "confidential". The governance program would then describe the governance requirements for confidential data when, for example:
      
@@ -45,9 +45,9 @@ The maturity levels are:
      * passed to an external person,
      * stored etc
     
-    The governance program educated employees on the use and meaning of the governance classifications so they know how to manage any data with that classification.
+    The governance program educates employees on the use and meaning of the governance classifications so they know how to manage any resource with that classification.
     
-    Classifications can be added directly to an digital resource's metadata description, or the descriptions of the data elements within the asset, or indirectly to the glossary terms that are linked to the asset/data element descriptions.
+    Classifications can be added directly to an digital resource's asset, or the detailed element descriptions within the asset, or indirectly to the glossary terms that are linked to the asset/element descriptions.
     
     Figure 4 shows both options for adding classifications to the catalog. Classifying through the glossary terms creates greater consistency in the way that data is classified,but it does requirement that the attachment of glossary terms to the descriptions of assets/data elements is comprehensive.
     

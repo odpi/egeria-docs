@@ -33,7 +33,11 @@ Click on the white down arrow of the configurations box and select `Edit Configu
 
 Add `-Dstrict.ssl=false` to the `VM Options` and click `OK` to save the configuration.  This turns off the need for a certificate. 
 
-![egeria-platform-report configuration fixed](/education/egeria-dojo/developer/egeria-platform-report-configuration-fixed.png){ target=dojo-support }
+??? tip "Don't see VM Options in the configuration form?"
+    You may need to use the `Modify Options` dropdown to `Add VM Options` to your configuration form.
+    ![Add VM Options](/education/egeria-dojo/developer/intellij-vm-options.png)
+
+![egeria-platform-report configuration fixed](/education/egeria-dojo/developer/egeria-platform-report-configuration-fixed.png)
 
 Re-run `EgeriaPlatformReport` by clicking on the green arrow on the *Run* tab.  There is more output this time even though it still seems to fail in the end. It begins with the report header that records the platform it is running against.
 

@@ -28,6 +28,8 @@ Enter a command along with the server name and any optional parameters. Press en
   - add-topic-connector       <serverName> <optionalConnectorProviderClassName> 
   - log-event-contents        <serverName> <optionalConnectorProviderClassName> 
   - add-cohort-member         <serverName> <optionalCohortName> 
+  - add-startup-archive       <serverName> <archiveFileName>
+  - update-server-user-id     <serverName> <newUserId> 
   - delete-server             <serverName>  
   - exit  
 ```

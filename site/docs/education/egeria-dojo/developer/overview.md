@@ -365,33 +365,67 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
             --8<-- "docs/concepts/open-metadata-archive-intro.md"
             
-            ??? expert "The structure of an optn metadata archive"
+            ??? expert "The structure of an open metadata archive"
                 --8<-- "docs/concepts/open-metadata-archive-structure.md"
             
             ??? expert "How and open metadata archive is processed"
                 --8<-- "docs/concepts/open-metadata-archive-structure.md"
-            
-        Create a new project in IntelliJ called `egeria-dojo5`.  Add a module called `dojo-archive` containing a Java class called `egeria.dojo.archive.DojoArchive`.
         
-        ??? expert "Paste in the skeleton code"
-            ---8<-- "docs/education/egeria-dojo/developer/dojo-archive-skeleton.md"
-
-        Create a `pom.xml` file for the connector module.
-                        
-        ??? expert "Paste the skeleton structure into the `pom.xml` file"               
-            ---8<-- "docs/education/egeria-dojo/developer/dojo-archive-pom-skeleton.md"
+        This session is marked as an expert session since it presents a challenge - to use the skills from the earlier exercises, the `egeria-samples.git` as a guide and the helper classes in `egeria.git` to build your own archive writer.
+        
+        ??? expert "In memory archive construction (15 mins read)"
+            --8<-- "docs/guides/developer/open-metadata-archives/in-memory-archive-construction.md"
+        
+        ??? expert "Explore `coco-metadata-samples` (15 mins)"
+            In the `egeria-samples.git` repository that you downloaded in the prereqs there is a module called `coco-metadata-archives` (under `sample-metadata-archives`). This has examples of 4 archive writers.  In particular, `CocoTypesArchiveWriter` creates an open metadata archive with type definitions and `CocoGovernanceEngineArchives` creates instances.
             
-        Add the `logback.xml` resource file to control developer logging.
+            Load this git repository into Intellij and look at the code (remembering to use `git pull` to get the latest versions).  This will help you in the exercise that follows. 
+
+        Create a new project in IntelliJ called `egeria-dojo5`.  Add a module called `dojo-archive` containing a Java class called `egeria.dojo.archive.DojoArchiveWriter`.  `DojoArchiveWriter` is the class that you will write, with its accompanying `pom.xml` and `logback.xml` file.  It extends `OMRSArchiveWriter` from the `repository-services-archive-utilities`.
+        
+        Your archive will write to the `egeria-dojo-archive.json` file and have header properties of:
+        
+        * archiveGUID        = "eede2744-5afa-4d61-89c9-e7a7447075bb";        
+        * archiveName        = "DojoArchive";                                   
+        * archiveLicense     = "Apache 2.0";                                  
+        * archiveDescription = "An experimental open metadata archive."; 
+        * archiveType        = OpenMetadataArchiveType.CONTENT_PACK;          
+        * originatorName     = "Egeria Dojo Exercise";                              
+        * creationDate       = new Date();
+        * versionNumber      = 1L;
+        * versionName        = "1.0";
+        
+        It will be dependent on (in fact it extends) Egeria's open metadata types.  
+        
+        In your archive's type store will be 1 new type:
+        
+        * typeGUID        = "dd54e751-87d9-4875-86a9-6da2f775e3d2"
+        * typeName        = "MRIScan"
+        * typeDescription = "An MRI scan for a patient."
+        * superTypeName   = "DataSet" 
+        
+        *Note:* `DataSet` is a type of asset.  
+        
+        In your archive's instance store will be 1 new entity instance:
+        
+        * typeName        = "MRIScan"
+        * qualifiedName   = "MRIScan:FlorencePaynter:" + new Date()
+        * displayName     = "MRI scan for Florence Paynter"
+        * description     = "MRI scan for Florence Paynter focussed on left arm."
+        * governanceZones = { "data-lake" }
+        
+        If you want to add more to the example, think about how you would add a property called "focusArea" to the MRIScan type and populate a value in the instance.
         
         ??? expert "Deploying and testing your archive (30 mins)"
             
-            Run `DojoArchive` to create the `dojo-archive.json` file.
+            Run `DojoArchiveWriter` to create the `dojo-archive.json` file.
             
-            Copy the resulting file into your egeria install directory under `content-packs`.  From your IntelliJ terminal window of the `egeria-dojo5` project:
+            ??? expert 'Copy the resulting file into your egeria install directory under `content-packs`".  
+                From your IntelliJ terminal window of the `egeria-dojo5` project:
             
-            ```bash
-            cp dojo-archive.json ~/egeria-install/egeria-omag-*/content-packs
-            ```
+                ```bash
+                cp dojo-archive.json ~/egeria-install/egeria-omag-*/content-packs
+                ```
             
             Use the `add-startup-archive mds1 content-packs/dojo-archive.json` command with `ServerConfig` to add the archive to `mds1`'s configuration document.  Restart `mds1` using `ServerOps` and observe your new MRIScan asset being received by `AssetListen`.
 

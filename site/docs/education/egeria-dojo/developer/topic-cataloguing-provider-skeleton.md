@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-Add ` extends IntegrationConnectorProvider` after `public class EventLoggingProvider`.
+Add ` extends IntegrationConnectorProvider` after `public class TopicCataloguingProvider`.
 
 Paste this code between the curly braces of the `TopicCataloguingProvider` class.
 

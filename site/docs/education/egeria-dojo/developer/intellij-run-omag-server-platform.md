@@ -13,7 +13,7 @@ Enter:
 
 * `EgeriaPlatform` at the top under `Name:`
 * `Path to Jar` is set to the directory where the OMAG Server Platform jar is located
-* `VM Options` is set to `-Dstrict.ssl=false -Dloader.path=server/lib -Dserver.port=9443`.  This turns of SSL checking, points to the `lib` directory where you will be adding your new connector jar files and requests that the OMAG Server listens on port `9443`.
+* `VM Options` is set to `-Dstrict.ssl=false -Dloader.path=server/lib -Dserver.port=9443`.  This turns off SSL checking, points to the `lib` directory where you will be adding your new connector jar files and requests that the OMAG Server listens on port `9443`.
 * `Working Directory` is set to the parent directory above the directory with the OMAG Server Platform jar.  This directory includes the `truststore.p12` certificate file needed for the platform to start successfully.
 
 The example below is from a machine where the directory used to install Egeria was `/Users/mandy-chessell/egeria-install`. Notice the directory name needs to be specified in full, - the `~` notation does not work here. In this example, the Egeria release used was `3.6-SNAPSHOT`.

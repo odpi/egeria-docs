@@ -5,7 +5,7 @@
 
 Once you have prepared a contribution and these changes are added to your clone, you are ready to commit the changes and push them to your clone on GitHub.
 
-![Figure 5](git-push-pull.svg)
+![Figure 5](/education/tutorials/git-and-git-hub—tutorial/git-push-pull.svg)
 > **Figure 5:** Pushing changes to GitHub
 
 Below is the command to commit your changes.  Make sure to use the `-s` option to sign your changes (see [Why the DCO?](https://github.com/odpi/egeria/blob/master/developer-resources/why-the-dco.md)) and the `-m` option to provide a useful commit message. In the message you can make use of [special strings](https://blog.github.com/2011-10-12-introducing-issue-mentions/) to directly link to GitHub issues. By doing this others following the issue will see the commits to your fork easily so can track the work going on even before you submit to the **egeria** repository.
@@ -23,7 +23,7 @@ If you think there is ongoing work in a similar area to that of your changes, yo
 $ git pull upstream master
 ```
 
-![Figure 6](git-pull-upstream-master.svg)
+![Figure 6](/education/tutorials/git-and-git-hub—tutorial/git-pull-upstream-master.svg)
 > **Figure 6:** Pulling latest changes from master
 
 and then making any necessary changes to merge conflicts, and commit/push as above.

@@ -8,7 +8,7 @@ Once you have completed your contribution, you are ready to add it to your git c
 Most development work is done on your local clone with occasional calls to GitHub to
 synchronize with its versions of the repository.
 
-![Figure 4](git-development.svg)
+![Figure 4](/education/tutorials/git-and-git-hub—tutorial/git-development.svg)
 > **Figure 4:** Local development process using git
 
 Issue the `git status` command in a Terminal/Command window to verify all of your changes are

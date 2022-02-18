@@ -24,7 +24,7 @@ This tutorial covers common tasks associated with using Git and GitHub to work w
 
 The tasks below describe how to use Git and GitHub to create a contribution to the Egeria project.  The contribution process using Git and GitHub is illustrated in Figure 1.
 
-![Figure 1](/education/tutorials/git-and-git-hub—tutorial/git-github-flow.svg)
+![Figure 1](/education/tutorials/git-and-git-hub-tutorial/git-github-flow.svg)
 > **Figure 1:** Git and GitHub contribution flow
 
 The tasks below step through this process:

@@ -79,6 +79,13 @@ Paste this structure into your `pom.xml` class.
             <scope>provided</scope>
             <version>${open-metadata.version}</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.odpi.egeria</groupId>
+            <artifactId>integration-daemon-services-api</artifactId>
+            <scope>provided</scope>
+            <version>${open-metadata.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.kafka</groupId>

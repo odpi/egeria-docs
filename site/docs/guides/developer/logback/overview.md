@@ -27,18 +27,23 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 Controlling the level of developer logging is handled by a `logback.xml` file located in a resource directory at top level of your module.
 
 ??? tip "Creating the `logback.xml` file"
-    Select your module name and using the right-mouse menu select `New` then `Directory`.  
-    ![Select New Directory](new-directory.png)
+    Select your top-level code directory (module) and using the right-mouse menu select `New` then `Directory`.  
+    ![Select New Directory](/guides/developer/logback/new-directory.png)
+    
     Enter the directory name as `resources`.
-    ![Enter name](enter-directory-name.png)
+    ![Enter name](/guides/developer/logback/enter-directory-name.png)
+    
     Select the new `resources` directory. Use the right-mouse menu to select `Mark Directory as` and then `Resources Root`.
-    ![Make resources root](mark-directory-as.png)
+    ![Make resources root](/guides/developer/logback/mark-directory-as.png)
+    
     The icon of the directory changes.
-    ![New icon](new-resources-icon.png)
+    ![New icon](/guides/developer/logback/new-resources-icon.png)
+    
     Select the `resources` directory again. Use the right-mouse menu to select `New` and then `File`.
-    ![New file](new-file.png)
+    ![New file](/guides/developer/logback/new-file.png)
+    
     Enter the filename of `logback.xml` and click ok
-    ![Enter name](logback-xml-file-name.png)
+    ![Enter name](/guides/developer/logback/logback-xml-file-name.png)
 
 
 The content of the `logback.xml` defines the level of logging.  This is a suggested starting set of values for logback that turns developer logging off.  You can the enable the logging as required. 

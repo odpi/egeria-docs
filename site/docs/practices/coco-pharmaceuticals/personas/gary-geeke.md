@@ -5,7 +5,7 @@
 
 ![Icon](gary-geeke.png)
 
-Age: 23
+Age: 29
 
 Skills: Systems and technology, automation
 

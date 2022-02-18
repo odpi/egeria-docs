@@ -5,7 +5,7 @@
 
 <img src="https://raw.githubusercontent.com/odpi/data-governance/master/docs/coco-pharmaceuticals/personas/faith-broker.png" style="float:left">
 
-Age: 35
+Age: 40
 
 Skills: Regulation compliance, business controls and auditing.
 Human Resources.

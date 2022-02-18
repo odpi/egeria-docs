@@ -4,7 +4,7 @@
 
 ![Icon](stew-faster.png)
 
-Age: 48
+Age: 54
 
 Skills: Chemical Engineering, manufacturing processes and management.
 

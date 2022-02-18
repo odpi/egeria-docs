@@ -5,7 +5,7 @@
 
 ![Icon](tessa-tube.png)
 
-Age: 37
+Age: 47
 
 Skills:
 Cancer specialist working on new drugs to improve the effectiveness of

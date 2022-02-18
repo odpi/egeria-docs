@@ -5,7 +5,7 @@
 
 ![Icon](sally-counter.png)
 
-Age: 55
+Age: 53
 
 Skills: Finance administration.
 

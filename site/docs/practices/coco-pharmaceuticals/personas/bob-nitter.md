@@ -5,7 +5,7 @@
 
 ![Icon](bob-nitter.png)
 
-Age: 38
+Age: 47
 
 Skills: Software systems, programming languages, simple integration concepts (JMS, Services).
 

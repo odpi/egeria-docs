@@ -5,7 +5,7 @@
 
 ![Icon](reggie-mint.png)
 
-Age: 55
+Age: 61
 
 Skills: executive decision making, strategy, financial management, business change.
 

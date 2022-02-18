@@ -6,7 +6,7 @@
 ![Icon](angela-cummings.png)
 
 
-Age: 21
+Age: 25
 
 Skills: Cancer nurse.
 

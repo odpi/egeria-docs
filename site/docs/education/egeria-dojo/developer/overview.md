@@ -287,17 +287,13 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             ??? intermediate "Install the connector into Egeria's platform ..."
             
-                The maven build has created a jar file in the `target` directory of your IntelliJ project.  In fact there are three jar files created:
+                The maven build has created a jar file in the `target` directory of your IntelliJ project called  `event-logging-connector-3.6-SNAPSHOT.jar`
                 
-                * `event-logging-connector-3.6-SNAPSHOT.jar` - this has the executable code in it.
-                * `event-logging-connector-3.6-SNAPSHOT-javadoc.jar` - this has the javadoc packaged up.
-                * `event-logging-connector-3.6-SNAPSHOT-sources.jar` - this has the source code packaged up.
-                
-                The release number used in the name is controlled by the `<version>3.6-SNAPSHOT</version>` entry in your `pom.xml` file.  The three jar files are used when publishing the module to a shared code repository such as *Maven Central*.   However, for this exercise, you only need the first one.
+                The release number used in the name is controlled by the `<version>3.6-SNAPSHOT</version>` entry in your `pom.xml` file.  
                 
                 From your `egeria-dojo3` IntelliJ project's terminal window enter the following to copy the connector's jar file into your egeria-install server lib directory, making adjustments for your connector's release as appropriate.
                 ```bash
-                cp target/event-logging-connector-3.6-SNAPSHOT.jar ~/egeria-install/egeria-omag-*/server/lib
+                cp target/event-logging-connector*.jar ~/egeria-install/egeria-omag-*/server/lib
                 ```
             
             ??? intermediate "Reconfigure mds1 to use the new connector ..."
@@ -370,7 +366,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         Run maven with the `clean install` options to create the jar file and you are ready to test your new connector.
         
         ??? advanced "Testing your connector"
-            Install the connector into your egeria install server lib directory.
+            Install the connector jar file into your egeria install server lib directory.
             
             Restart `EgeriaPlatform` so it picks up the new classes. Use the `ServerConfig` utility and issue the following commands to create an integration daemon server called `daemon1` and add your connector to its configuration document.  The third command is option but installs your audit log destination connector from the previous exercise into `daemon1`.
                         

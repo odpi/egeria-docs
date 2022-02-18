@@ -258,17 +258,28 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         ??? intermediate "Paste the skeleton code into the EventLoggingProvider class"
             ---8<-- "docs/education/egeria-dojo/developer/event-logging-provider-skeleton.md"
         
-        Create a `pom.xml` file for the connector module.
-                
-        ??? intermediate "Paste the skeleton structure into the `pom.xml` file"                
-            ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-pom-skeleton.md"
-        
         Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingConnector`.  This will contain the actual code of the connector.
                 
         ??? intermediate "Paste the skeleton code into the EventLoggingConnector class"
             ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-skeleton.md"
             
-        Resolve the Egeria dependencies in both of the java classes for your connector.
+        Create a `pom.xml` file for the connector module.
+                
+        ??? intermediate "Paste the skeleton structure into the `pom.xml` file"                
+            ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-pom-skeleton.md"
+        
+        Resolve the Egeria dependencies in both of the java classes for your connector. When you are offered a choice on `InvalidParameterException`, select the one from the Open Metadata Repository Services (OMRS) - that is `import org.odpi.openmetadata.repositoryservices.ffdc.exception.InvalidParameterException;`.  
+        
+        ![Choice](/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies-4.png)
+
+        
+        The way to discover the answer is to click on the green circle next to the method name in the left-hand margin.  This takes you to the super class `OMRSAuditLogStoreConnectorBase`.  
+               
+        ![Navigate](/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies-5.png)
+            
+        Then go to the top of the file to discover which version it is using.
+        
+        ![Discover](/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies-6.png)
         
         Run maven with the `clean install` options to create the jar file and you are ready to test your new connector.
 

@@ -20,18 +20,20 @@ The material for our past webinars is listed below along with links to the recor
 
 ???+ education "Using Integration connectors - February 2022 - Mandy Chessell"
 
-    This session is about using integration connectors to provide automatic integration of different technologies
-    using Egeria.
-
-    - Link to [event advertising](https://lfaidata.foundation/blog/2022/02/02/using-an-integration-connector/)
-    - Presentation
-      <div class="video-wrapper">
-      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-using-integration-connector-6th-february-2022.pdf"></iframe>
-      </div>
-    - YouTube Video:
-      <div class="video-wrapper">
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/0o2EQKoO-GI" title="Using Integration connectors - February 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div> 
+    This session is about using integration connectors to provide automatic integration of different technologies using Egeria.  [Event advertising](https://lfaidata.foundation/blog/2022/02/02/using-an-integration-connector/)
+    
+    ???+ education "Presentation ..."
+         [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-using-integration-connector-6th-february-2022.pdf)
+         
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-using-integration-connector-6th-february-2022.pdf"></iframe>
+         </div>
+         
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/0o2EQKoO-GI" title="Using Integration connectors - February 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div> 
+         
     ??? education "Related Documentation"
         - [Integration connectors](https://egeria-project.org/connectors/?h=integration+connectors#integration-connectors)
 
@@ -42,67 +44,71 @@ The material for our past webinars is listed below along with links to the recor
 
     In this session, follow Peter's journey from manual cataloging, to using automated integration and templating to create business relevant catalog entries.  He also adds metadata discovery to extract profile information about the incoming data values and enables metadata governance features (such as deduplication) to improve the quality of the catalog.  Finally, he creates automated notifications to the stewards responsible for the data if any issues occur that need a human touch.
 
-    The result is that Peter is relieved of the tedious cataloguing tasks and Coco Pharmaceuticals sees increased value from their catalog.
-
-    - Link to [event advertising](https://lfaidata.foundation/blog/2021/11/30/what-next-after-you-have-built-a-catalog-part-1/)
-    - Presentation
-      <div class="video-wrapper">
-      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-beyond-cataloguing-5th-december-2021.pdf"></iframe>
-      </div>
-    - Session replay - TBD 
+    The result is that Peter is relieved of the tedious cataloguing tasks and Coco Pharmaceuticals sees increased value from their catalog. [Event advertising](https://lfaidata.foundation/blog/2021/11/30/what-next-after-you-have-built-a-catalog-part-1/)
+    
+    ???+ education "Presentation ..."
+         [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-beyond-cataloguing-5th-december-2021.pdf)
+         
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-beyond-cataloguing-5th-december-2021.pdf"></iframe>
+         </div>
+    
+    ???+ education "Session Replay ..."
+         TBA
+    
     ??? education "Related Documentation"
         - [Asset](/concepts/asset)
         - [Templated Cataloguing](/features/templated-cataloguing/overview)
 
 ???+ education "Open Lineage - November 2021 - Mandy Chessell and Ljupcho Palashevski"
     
-    This session describes how to capture, manage and use lineage.
+    This session describes how to capture, manage and use lineage. [event advertising](https://lfaidata.foundation/blog/2021/11/05/please-join-us-for-the-next-egeria-webinar-november-8th/)
+       
+    ???+ education "Presentation ..."
+         [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-open-lineage-8th-november-2021.pdf)
+         
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-open-lineage-8th-november-2021.pdf"></iframe>
+         </div>
+   
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/-LzTdt7NPDY" title="Egeria's Open Lineage - November 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>   
     
-    Links:
-    
-    - Link to [event advertising](https://lfaidata.foundation/blog/2021/11/05/please-join-us-for-the-next-egeria-webinar-november-8th/)
-    - Presentation
-      <div class="video-wrapper">
-      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-open-lineage-8th-november-2021.pdf"></iframe>
-      </div>
-    - YouTube Video:
-      <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/-LzTdt7NPDY" title="Egeria's Open Lineage - November 2021" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>   
-    - [Related documentation](/features/lineage-management/overview)
+    ??? education "Related Documentation"
+        - [Related documentation](/features/lineage-management/overview)
 
     
 ???+ education "The Value of Egeria - October 2021 - Mandy Chessell"
 
-    This session is for people wanting to understand the value of Egeria in enabling data 
-    centric, metadata driven integration. The session will start with the core Egeria 
-    constructs, including entities, explaining the principles behind why they are as they are. 
-    The session will go through the layers and aspects of the Egeria architecture,
-    at each stage talking about the applicability to solving real world problems. 
+    This session is for people wanting to understand the value of Egeria in enabling data centric, metadata driven integration. The session will start with the core Egeria constructs, including entities, explaining the principles behind why they are as they are.  The session will go through the layers and aspects of the Egeria architecture, at each stage talking about the applicability to solving real world problems. 
     
-    By the end of the session you should have awareness of the parts of Egeria at a high level; why
-    they have been implemented that way and the value that each piece brings.
+    By the end of the session you should have awareness of the parts of Egeria at a high level; why they have been implemented that way and the value that each piece brings.  [event advertising](https://lfaidata.foundation/blog/2021/09/30/the-value-egeria-brings-to-an-organization/)
     
-    * Link to [event advertising](https://lfaidata.foundation/blog/2021/09/30/the-value-egeria-brings-to-an-organization/)
-    * Presentation 
-      <div class="video-wrapper">
-      <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-the-value-of-egeria-4th-october-2021.pdf"></iframe>
-      </div> 
-    * YouTube Video:
-      <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/yZVYedCNGO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div> 
+    ???+ education "Presentation ..."
+         [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-the-value-of-egeria-4th-october-2021.pdf)
+         
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-the-value-of-egeria-4th-october-2021.pdf"></iframe>
+         </div> 
+    
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/yZVYedCNGO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div> 
    
 ???+ education "Visualising a metadata ecosystem - September 2021 - David Radley"
  
-    This session is for people looking to understand the metadata across their ecosystem in terms of the Egeria open types and instances using visualisations in the Egeria React User Interface. Understanding the types is important knowledge when  developing connectors and new APIs like OMAS’s. This session will also show how metadata instances can be explored at a low level. This will be contrasted with an exploration of semantic data that is based on the Subject Area Open Metadata Access Service (OMAS).
+    This session is for people looking to understand the metadata across their ecosystem in terms of the Egeria open types and instances using visualisations in the Egeria React User Interface. Understanding the types is important knowledge when  developing connectors and new APIs like OMAS’s. This session will also show how metadata instances can be explored at a low level. This will be contrasted with an exploration of semantic data that is based on the Subject Area Open Metadata Access Service (OMAS).  [Event advertising](https://lfaidata.foundation/blog/2021/08/30/egeria-webinar-visualising-a-metadata-ecosystem/)
     
-    - Link to [event advertising](https://lfaidata.foundation/blog/2021/08/30/egeria-webinar-visualising-a-metadata-ecosystem/)
-    - Presentation [:material-microsoft-powerpoint:](https://egeria-project.org/education/webinar-program/egeria-webinar-visualising-a-metadata-ecosystem-september-2021.pptx){ target=slides }
-    - YouTube Video:
-      <div class="video-wrapper">
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/s-CCzS1Ojss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+    ???+ education "Presentation ..."
+         [:material-microsoft-powerpoint:](https://egeria-project.org/education/webinar-program/egeria-webinar-visualising-a-metadata-ecosystem-september-2021.pptx){ target=slides }
+    
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/s-CCzS1Ojss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>
 
 ## Older webinars
 

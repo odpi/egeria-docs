@@ -62,7 +62,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
 ???+ education "Developer Dojo starts here"
 
-    ??? beginner "Developer choices when customizing Egeria (15 mins reading)"
+    ??? beginner "Developer choices when customizing Egeria (10 mins reading)"
         --8<-- "docs/guides/developer/developer-choices.md"
         
         In this dojo, you will have an opportunity to build and run Java utilities and connectors.  However before you get to the coding, you will spend some time setting up your development and test environment.

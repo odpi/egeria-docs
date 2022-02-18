@@ -18,16 +18,16 @@ original.
 
 Figure 2 illustrates the forking process.
 
-![Figure 2](/education/tutorials/git-and-git-hub—tutorial/git-hub-fork.svg)
+![Figure 2](/education/tutorials/git-and-git-hub-tutorial/git-hub-fork.svg)
 > **Figure 2:** Forking an Egeria git repository
 
 To create your fork, from your browser, navigate to the [Egeria GitHub URL](https://github.com/odpi/egeria),
 and logging into the github UI with a 
-[your GitHub id](/education/tutorials/git-and-git-hub—tutorial/task-getting-git-hub-id).
+[your GitHub id](/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id).
 You will then see a 'Fork' button at the top right, and should click this to 
 create your own fork to work with Egeria. 
 
-![Fork Button](/education/tutorials/git-and-git-hub—tutorial/git-hub-fork-button.png)
+![Fork Button](/education/tutorials/git-and-git-hub-tutorial/git-hub-fork-button.png)
 
 This only needs to be done once.
 
@@ -38,7 +38,7 @@ This copy is called a **clone**.  You create a clone each time you are starting 
 
 Figure 3 illustrates the cloning process.
 
-![Figure 3](/education/tutorials/git-and-git-hub—tutorial/git-clone.svg)
+![Figure 3](/education/tutorials/git-and-git-hub-tutorial/git-clone.svg)
 > **Figure 3:** Cloning an Egeria git repository
 
 To create a clone on your machine enter the following in a new directory from a terminal/command window.
@@ -57,7 +57,7 @@ You should also set the upstream repository to connect your clone to the main Eg
 $ git remote add upstream https://github.com/odpi/egeria.git
 ```
 
-Now you are ready to [create a branch for your changes](/education/tutorials/git-and-git-hub—tutorial/task-creating-git-branches).
+Now you are ready to [create a branch for your changes](/education/tutorials/git-and-git-hub-tutorial/task-creating-git-branches).
 
 ??? education "Further information"
 

@@ -1,9 +1,14 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
+Add ` extends AssetConsumerEventListener` after `public class AssetListen`.  
+The `AssetConsumerEventListener` is the class that all listeners of events from [Asset Consumer OMAS](/services/omas/asset-consumer/overview) must extend. See [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetconsumer/api/AssetConsumerEventListener.html) for more details. Notice that extending this class requires `AssetListen` to implement the `processEvent` method.  This is the method that is called each time an event is received. 
+
+The `AssetConsumerEventListener` is highlighted in red in your code.  This is because the class is unrecognized and IntelliJ needs a `pom.xml` file to tell it where the code is.  You will create the `pom.xml` file in a later step, but use this highlighting as an opportunity to identify the calls to Egeria.
+
 Paste this code between the curly braces of the `AssetListen` class.
 
-```java linenum=1
+```java linenums="1"
     private String serverName;
     private String platformURLRoot;
     private String clientUserId;
@@ -32,34 +37,6 @@ Paste this code between the curly braces of the `AssetListen` class.
         catch (Exception error)
         {
             System.out.println("There was an exception when creating the Asset Consumer OMAS client.  Error message is: " + error.getMessage());
-        }
-    }
-
-
-    /**
-     * Process an event that was published by the Asset Consumer OMAS.
-     *
-     * @param event event object - call getEventType to find out what type of event.
-     */
-    public void processEvent(AssetConsumerEvent event)
-    {
-        if (event.getEventType() == AssetConsumerEventType.NEW_ASSET_EVENT)
-        {
-            NewAssetEvent assetEvent = (NewAssetEvent)event;
-
-            System.out.println("------------------------------------------------------------------------");
-            System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID());
-
-            this.printAsset(assetEvent.getAsset());
-        }
-        else if (event.getEventType() == AssetConsumerEventType.UPDATED_ASSET_EVENT)
-        {
-            UpdatedAssetEvent assetEvent = (UpdatedAssetEvent)event;
-
-            System.out.println("------------------------------------------------------------------------");
-            System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID() + " - at " + assetEvent.getUpdateTime());
-
-            this.printAsset(assetEvent.getAsset());
         }
     }
 
@@ -144,6 +121,7 @@ Paste this code between the curly braces of the `AssetListen` class.
         System.out.println("------------------------------------------------------------------------");
 
         System.out.println("  Asset Details:");
+        System.out.println("    type: " + asset.getType().getElementTypeName());
         System.out.println("    guid: " + asset.getGUID());
         System.out.println("    qualifiedName: " + asset.getQualifiedName());
         System.out.println("    displayName: " + asset.getDisplayName());
@@ -165,6 +143,34 @@ Paste this code between the curly braces of the `AssetListen` class.
         catch (Exception error)
         {
             System.out.println("Unable to use connector for asset: " + asset.getGUID());
+        }
+    }
+
+
+    /**
+     * Process an event that was published by the Asset Consumer OMAS.
+     *
+     * @param event event object - call getEventType to find out what type of event.
+     */
+    public void processEvent(AssetConsumerEvent event)
+    {
+        if (event.getEventType() == AssetConsumerEventType.NEW_ASSET_EVENT)
+        {
+            NewAssetEvent assetEvent = (NewAssetEvent)event;
+
+            System.out.println("------------------------------------------------------------------------");
+            System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID());
+
+            this.printAsset(assetEvent.getAsset());
+        }
+        else if (event.getEventType() == AssetConsumerEventType.UPDATED_ASSET_EVENT)
+        {
+            UpdatedAssetEvent assetEvent = (UpdatedAssetEvent)event;
+
+            System.out.println("------------------------------------------------------------------------");
+            System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID() + " - at " + assetEvent.getUpdateTime());
+
+            this.printAsset(assetEvent.getAsset());
         }
     }
 
@@ -243,3 +249,14 @@ Paste this code between the curly braces of the `AssetListen` class.
         }
     }
 ```
+
+
+
+Starting at the bottom of the code:
+
+* The `main` method is called when `AssetListen` is run.  Its job is to process the parameters and kick off the `AssetListen`'s `run()` method.
+* The `run` method is where `AssetListen` registers itself as a listener to the [Asset Consumer OMAS](/services/omas/asset-consumer/overview).
+* The `processEvent` method is next.  It inspects the type of event before deciding how to process the event.
+* The `displayAsset` and `displayFile` pull details about the asset out of the event and call the Asset Consumer OMAS to get more information about it.
+* The constructor at the top of the file saves the parameters passed from `main` for later use by the other methods.
+

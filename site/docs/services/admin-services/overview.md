@@ -261,11 +261,11 @@ The [`ConfigurationManagementClient`](https://odpi.github.io/egeria/org/odpi/ope
 
 ## Starting and stopping OMAG Servers
 
-The [`OMAGServerOperationsClient`](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/ConfigurationManagementClient.html){ target=javadoc } supports the starting and stopping of OMAG Servers on an OMAG Server Platform.
+The [`OMAGServerOperationsClient`](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/ConfigurationManagementClient.html){ target=javadoc } supports the starting and stopping of OMAG Servers on an OMAG Server Platform. 
 
 The code sample shows the method calls to start and stop named OMAG Servers.
 
-??? example "Example: retrieving all available configuration documents"
+??? example "Example: starting and stopping servers"
     ```java linenums="1"
     /**
      * Start the named server on the platform.  This will fail if the platform is not running,
@@ -314,6 +314,32 @@ The code sample shows the method calls to start and stop named OMAG Servers.
         }
     }
     ```
+
+It is also able to retrieve the status of the services running within an active server.
+
+??? example "Example: retrieving the status of the services in an active server"
+    ```java linenums="1"
+    OMAGServerOperationsClient serverOperationsClient = new OMAGServerOperationsClient(clientUserId, serverName, platformURLRoot);
+    
+    ServerStatus adminServerStatus = serverOperationsClient.getServerStatus();
+    
+    if (adminServerStatus != null)
+    {
+        System.out.println(adminServerStatus.getServerActiveStatus());
+        System.out.println(adminServerStatus.getServerType());
+        System.out.println(adminServerStatus.getServices());
+    }
+    ````
+
+The status of the server (and its nested services) is one of 5 values:
+
+- Unknown - The state of the server is unknown.  This is equivalent to a null value.
+- Starting - The server is starting.
+- Running - The server has completed start up and is running.
+- Stopping - The server has received a request to shutdown.
+- Inactive - The server is not running.
+
+The server type is derived by the administration services when it starts the server.  It is based on an assessment of the services requested in the configuration document.
 
 !!! education "Further information"
 

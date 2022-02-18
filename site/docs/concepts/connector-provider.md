@@ -11,6 +11,8 @@ hide:
 
 --8<-- "docs/guides/developer/connector-provider-into.md"
 
+## Writing the Connector Provider
+
 --8<-- "docs/guides/developer/implementing-a-connector-provider.md"
 
 

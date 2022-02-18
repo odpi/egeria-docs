@@ -156,7 +156,7 @@ Entity events to feed the changes assets that are crated or updated:
 
     ```json
     {
-        "glossaryTermLineageEventsChunkSize": 100,
+        "LineagePublisherBatchSize": 100,
         "LineageClassificationTypes": [
             "PrimaryCategory",
             "Confidentiality",
@@ -170,7 +170,7 @@ Detailed description of the properties
 
 | Property | Description |
 |---|---|
-| glossaryTermLineageEventsChunkSize | Batch size used for publish lineage process. This background process is triggered via API rest call /publish-entities/{{entityTypeName}} |
-| LineageClassificationTypes | List of classification types considered while producing lineage events. All supported types are listed in the example request body |
+| LineagePublisherBatchSize | Number of elements to be sent in a single event. This parameter is used to optimize event payload size and allow multiple elements to be grouped in a batch. Default is 1. |
+| LineageClassificationTypes | List of classification types considered while producing lineage events. The access service is always preconfigured with the default set listed in the example request body. Additional types can be added when necessary, they are always merged with the default set. |
 
 --8<-- "snippets/abbr.md"

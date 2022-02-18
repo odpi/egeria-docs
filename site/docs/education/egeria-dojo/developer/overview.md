@@ -116,7 +116,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
         Now that you have Egeria's OMAG Server Platform running, you are ready to use its APIs.
         
-        ??? beginner "Different types of APIs and their uses (30 mins)"
+        ??? beginner "Different types of APIs and their uses (60 mins)"
             
             ---8<-- "docs/education/egeria-dojo/developer/different-types-of-apis.md"
 
@@ -219,7 +219,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                     ![AssetCreate calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-5.svg)
                     > Your development landscape now has added AssetCreate calling the mds1 server running on EgeriaPlatform to create new assets.  These assets arethen received by AssetListen.
                
-        ??? beginner "Handling errors (10 mins read)"
+        ??? beginner "Handling errors (2 mins read)"
             There are three exceptions that occur on many of the OMAS APIs:
             
             - *InvalidParameterException* means that your API has not provided some needed value, or the values provided are invalid at that time.

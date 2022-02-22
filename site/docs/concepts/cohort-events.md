@@ -21,7 +21,8 @@ A cohort can be configured to use:
 
 This is shown in figure 1.
 
-
+[Figure 1](cohort-topic-structure-choices.svg)
+> **Figure 1:** Configuration choices for the cohort topics
 
 !!! question "Which to use?"
     Using the single cohort topic is ok for small environments. However, the use of the three topics gives
@@ -38,7 +39,7 @@ This is shown in figure 1.
     paid to upgrading the back-level server so it can use the three topics.
 
 Details of configuring the different topic options can be found in the
-[administration guide](guides/admin/servers/configuring-a-metadata-access-store/#add-access-to-a-cohort).
+[administration guide](/guides/admin/servers/configuring-a-metadata-access-store/#add-access-to-a-cohort).
 
 ## Enterprise event topic
 

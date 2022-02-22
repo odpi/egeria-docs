@@ -24,7 +24,7 @@ Scroll to the bottom of the page to see the contents of the README.md displayed.
 These pages are also used to create Egeria's webpages using a technology called **GitHub pages**.
 Click on the next link to display the tools directory in the website.
 
-* [https://odpi.github.io/guides/contributor/markdown](https://github.com/odpi/blob/main/site/docs/guides/contributor/markdown)
+* [https://egeria-project.org/guides/contributor/markdown](https://github.com/odpi/blob/main/site/docs/guides/contributor/markdown)
 
 Now you see the same markdown content formatted using the website styling.
 

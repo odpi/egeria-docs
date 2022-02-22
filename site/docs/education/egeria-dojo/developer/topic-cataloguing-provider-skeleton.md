@@ -22,7 +22,7 @@ Paste this code between the curly braces of the `TopicCataloguingProvider` class
     private static final String connectorQualifiedName = "EgeriaDojo:IntegrationConnector:Topics:TopicCataloguingConnector";
     private static final String connectorDisplayName   = "Topic Cataloging Integration Connector";
     private static final String connectorDescription   = "Connector maintains a list of KafkaTopic assets associated with an Apache Kafka event broker.";
-    private static final String connectorWikiPage      = "https://odpi.github.io/egeria-docs/connectors/integration/integration-connector/";
+    private static final String connectorWikiPage      = "https://egeria-project.org/concepts/integration-connector";
 
     /*
      * Class of the connector.

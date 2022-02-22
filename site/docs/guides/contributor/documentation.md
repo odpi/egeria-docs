@@ -96,7 +96,7 @@ The REST API operations are grouped into services by the following `@Tag` annota
          description="The operational administration services support the management " +
                      "of OMAG Server instances.  This includes starting and stopping the servers as well as querying and changing their operational state.",
          externalDocs=@ExternalDocumentation(description="Further information",
-                                             url="https://odpi.github.io/guides/operations/guide.html"))
+                                             url="https://egeria-project.org/guides/operations/guide"))
     ```
 
 Further information can be provided for each operation. This is one of the *operational services* operations:

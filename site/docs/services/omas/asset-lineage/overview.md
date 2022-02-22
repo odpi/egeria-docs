@@ -16,7 +16,7 @@ Following asset types are considered:
 - DataSet
 
 
-Asset Lienage OMAS then builds complex graph structures (sometimes we call this asset context) that are sent to an [out topic](/concepts/out-topic){ target=_blank } address for further preservation and use with [Open Lineage Server :material-dock-window:](https://odpi.github.io/services/open-lineage-services/){ target=_blank }. 
+Asset Lienage OMAS then builds complex graph structures (sometimes we call this asset context) that are sent to an [out topic](/concepts/out-topic){ target=_blank } address for further preservation and use with [Open Lineage Server :material-dock-window:](https://egeria-project.org/services/open-lineage-services/){ target=_blank }. 
 
 The above works well for scenario where metadata is actively shared on the cohort while it gets created. In different scenario, additional repository already prepopulated with existing metadata can join the cohort. Asset Lineage OMAS offers endpoint to handle this as well by allowing external system to request (or actively poll) and extract the metadata relevant for building lineage graph.
 

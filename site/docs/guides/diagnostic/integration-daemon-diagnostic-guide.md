@@ -168,7 +168,7 @@ You can see the same errors that where recorded in the start up messages.
             "integrationServiceFullName": "Database Integrator OMIS",
             "integrationServiceURLMarker": "database-integrator",
             "integrationServiceDescription": "Extract metadata such as schema, tables and columns from database managers.",
-            "integrationServiceWiki": "https://odpi.github.io/services/omis/database-integrator/overview/",
+            "integrationServiceWiki": "https://egeria-project.org/services/omis/database-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaDatabaseMonitor",
@@ -207,37 +207,37 @@ which returns a list of the valid integration services:
             "serviceName": "Files Integrator OMIS",
             "serviceURLMarker": "files-integrator",
             "serviceDescription": "Extract metadata about files stored in a file system or file manager.",
-            "serviceWiki": "https://odpi.github.io/services/omis/files-integrator/overview/"
+            "serviceWiki": "https://egeria-project.org/services/omis/files-integrator/overview/"
         },
         {
             "serviceName": "Security Integrator OMIS",
             "serviceURLMarker": "security-integrator",
             "serviceDescription": "Distribute security properties to security enforcement points.",
-            "serviceWiki": "https://odpi.github.io/services/omis/security-integrator/overview/"
+            "serviceWiki": "https://egeria-project.org/services/omis/security-integrator/overview/"
         },
         {
             "serviceName": "Database Integrator OMIS",
             "serviceURLMarker": "database-integrator",
             "serviceDescription": "Extract metadata such as schema, tables and columns from database managers.",
-            "serviceWiki": "https://odpi.github.io/services/omis/database-integrator/overview/"
+            "serviceWiki": "https://egeria-project.org/services/omis/database-integrator/overview/"
         },
         {
             "serviceName": "Lineage Integrator OMIS",
             "serviceURLMarker": "lineage-integrator",
             "serviceDescription": "Manage capture of lineage from a third party tool.",
-            "serviceWiki": "https://odpi.github.io/services/omis/lineage-integrator/overview/"
+            "serviceWiki": "https://egeria-project.org/services/omis/lineage-integrator/overview/"
         },
         {
             "serviceName": "Catalog Integrator OMIS",
             "serviceURLMarker": "catalog-integrator",
             "serviceDescription": "Exchange metadata with third party data catalogs.",
-            "serviceWiki": "https://odpi.github.io/services/omis/catalog-integrator/overview/"
+            "serviceWiki": "https://egeria-project.org/services/omis/catalog-integrator/overview/"
         },
         {
             "serviceName": "Organization Integrator OMIS",
             "serviceURLMarker": "organization-integrator",
             "serviceDescription": "Load information about the teams and people in an organization and return collaboration activity.",
-            "serviceWiki": "https://odpi.github.io/services/omis/organization-integrator/overview/"
+            "serviceWiki": "https://egeria-project.org/services/omis/organization-integrator/overview/"
         }
     ]
 }
@@ -256,7 +256,7 @@ Once the Files Integrator OMIS connectors are restarted, the status changes.  Di
             "integrationServiceFullName": "Files Integrator OMIS",
             "integrationServiceURLMarker": "files-integrator",
             "integrationServiceDescription": "Extract metadata about files stored in a file system or file manager.",
-            "integrationServiceWiki": "https://odpi.github.io/services/omis/files-integrator/overview/",
+            "integrationServiceWiki": "https://egeria-project.org/services/omis/files-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaFilesMonitor",
@@ -289,7 +289,7 @@ Once the Files Integrator OMIS connectors are restarted, the status changes.  Di
             "integrationServiceFullName": "Database Integrator OMIS",
             "integrationServiceURLMarker": "database-integrator",
             "integrationServiceDescription": "Extract metadata such as schema, tables and columns from database managers.",
-            "integrationServiceWiki": "https://odpi.github.io/services/omis/database-integrator/overview/",
+            "integrationServiceWiki": "https://egeria-project.org/services/omis/database-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaDatabaseMonitor",
@@ -319,7 +319,7 @@ Once the expected directories (folders) are created, the files integration conne
             "integrationServiceFullName": "Files Integrator OMIS",
             "integrationServiceURLMarker": "files-integrator",
             "integrationServiceDescription": "Extract metadata about files stored in a file system or file manager.",
-            "integrationServiceWiki": "https://odpi.github.io/services/omis/files-integrator/overview/",
+            "integrationServiceWiki": "https://egeria-project.org/services/omis/files-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaFilesMonitor",
@@ -349,7 +349,7 @@ Once the expected directories (folders) are created, the files integration conne
             "integrationServiceFullName": "Database Integrator OMIS",
             "integrationServiceURLMarker": "database-integrator",
             "integrationServiceDescription": "Extract metadata such as schema, tables and columns from database managers.",
-            "integrationServiceWiki": "https://odpi.github.io/services/omis/database-integrator/overview/",
+            "integrationServiceWiki": "https://egeria-project.org/services/omis/database-integrator/overview/",
             "integrationConnectorReports": [
                 {
                     "connectorName": "OakDeneLandingAreaDatabaseMonitor",

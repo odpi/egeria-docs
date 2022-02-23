@@ -693,12 +693,12 @@ nav:
       - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md
       - Governance Maturity Model: practices/maturity-model/overview.md
+      - Governance Roles: practices/roles/overview.md
+      - Digital Services: practices/digital-services/overview.md
       - Common Data Definitions:
           - Overview: practices/common-data-definitions/overview.md
           - Anatomy of a Glossary: practices/common-data-definitions/anatomy-of-a-glossary.md
           - Open Metadata Implementation: practices/common-data-definitions/open-metadata-for-common-definitions.md
-      - Governance Roles: practices/roles/overview.md
-      - Digital Services: practices/digital-services/overview.md
       - Coco Pharmaceuticals:
           - Coco Pharmaceuticals: practices/coco-pharmaceuticals/index.md
           - Personas: practices/coco-pharmaceuticals/personas/overview.md

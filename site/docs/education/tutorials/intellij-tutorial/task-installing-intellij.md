@@ -11,5 +11,6 @@ Start up IntelliJ and set up Maven to the version that you downloaded by selecti
 
 The three dots after the directory name enables you to select your Maven install directory.
 
+---8<-- "docs/education/tutorials/intellij-tutorial/intellij-memory-settings.md"
 
 ---8<-- "snippets/abbr.md"

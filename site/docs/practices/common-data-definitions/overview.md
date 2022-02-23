@@ -10,10 +10,10 @@ Typically the common data definitions consist of:
 * Names and descriptions for concepts described by the data.
 * Relationships between these concepts.
 * Classifications of the concepts to indicate how they are used.
-* Definitions of the valid data values for specific concepts.
+* Definitions of the valid data values for specific concepts and associated governance rules.
 * Preferred logical and physical data formats for storing data about these concepts.
 
-The common data definitions are managed in a metadata catalog.  The core definitions that cover the meaning of data are described in one or more [glossaries](/practices/common-data-definitions/anatomy-of-a-glossary).
+The common data definitions are managed in a metadata catalog and are grouped into [subject areas](/concepts/subject-area).  The core definitions that cover the meaning of data are described in one or more [glossaries](/practices/common-data-definitions/anatomy-of-a-glossary).  These are augmented
 
 Governance classifications may be added to these definitions which in turn link to governance requirements.   This determines how data that is linked to these common definitions should be governed.
 
@@ -38,10 +38,10 @@ The **consuming** activity is where the common definitions are transformed and m
 
 The **delivering value** activity is where the common definitions are beign used to deliver business function and governance in the production systems.
 
-## Further information
+!!! education "Further information"
 
-* [Open metadata for common data definitions](/practices/common-data-definitions/open-metadata-for-common-definitions)
-* [Common Information Models for an open, analytical and agile world](http://www.ibmpressbooks.com/store/common-information-models-for-an-open-analytical-and-9780133366341)
+    * [Open metadata for common data definitions](/practices/common-data-definitions/open-metadata-for-common-definitions)
+    * [Common Information Models for an open, analytical and agile world](http://www.ibmpressbooks.com/store/common-information-models-for-an-open-analytical-and-9780133366341)
 
 
 --8<-- "snippets/abbr.md"

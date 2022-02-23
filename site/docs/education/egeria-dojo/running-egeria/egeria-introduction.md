@@ -12,13 +12,14 @@ along with the key concepts and use cases it supports.
     If you have already watched the Egeria introduction presentations you may find you
     can skip this section
 
-* YouTube Video:
-  <div class="video-wrapper">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/s249ofNoETY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div> 
-  
-* Presentation : [Egeria Introduction](https://github.com/odpi/data-governance/raw/master/workshops/may-2020/egeria-dojo-day-1-1-introduction.pptx)
- 
+Read through the following presentation to understand more about Egeria:
+
+???+ education "Presentation ..."
+     [Download](https://egeria-project.org/education/egeria-dojo/running-egeria/presentations/Dojo-Egeria-Intro-16th-January-2022.pptx)
+     <div class="video-wrapper">
+         <iframe src="https://egeria-project.org/education/egeria-dojo/running-egeria/presentations/Dojo-Egeria-Intro-16th-January-2022.pptx"></iframe>
+     </div>
+
 
 ??? question "Test yourself"
 

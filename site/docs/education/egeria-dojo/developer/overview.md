@@ -62,7 +62,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
 ???+ education "Developer Dojo starts here"
 
-    ??? beginner "Developer choices when customizing Egeria (15 mins reading)"
+    ??? beginner "Developer choices when customizing Egeria (10 mins reading)"
         --8<-- "docs/guides/developer/developer-choices.md"
         
         In this dojo, you will have an opportunity to build and run Java utilities and connectors.  However before you get to the coding, you will spend some time setting up your development and test environment.
@@ -116,7 +116,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
         Now that you have Egeria's OMAG Server Platform running, you are ready to use its APIs.
         
-        ??? beginner "Different types of APIs and their uses (30 mins)"
+        ??? beginner "Different types of APIs and their uses (60 mins)"
             
             ---8<-- "docs/education/egeria-dojo/developer/different-types-of-apis.md"
 
@@ -152,7 +152,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 
                 Itching to code? The next exercise gives you an opportunity to write your own utilities that work with the OMAS APIs.  This may be a good time to take a break :)
                    
-        ??? beginner "Writing simple utilities that work with metadata. (60 mins)"
+        ??? beginner "Writing simple utilities that work with metadata (60 mins)"
         
             In this exercise, you will be creating two new utilities: one called `AssetCreate` that catalogs a collection of files as assets; the other is called `AssetListen` which listens for newly created asset events and prints out details about the asset.  You can think of it as a game of catch: `AssetCreate` is throwing assets into the catalog and `AssetListen` is catching them.
             
@@ -161,10 +161,13 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 ??? beginner "Create a new IntelliJ project for AssetListen called `egeria-dojo1`"
                     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-new-project.md"
                 
-                ??? beginner "Create a new java package called `egeria.dojo.assetlisten`"
+                ??? beginner "Create a new *Sources Root* in `egeria-dojo1` under `src` called `main/java`"
+                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-sources-root.md"
+                    
+                ??? beginner "Create a new java package called `egeria.dojo.assetlisten` under the `java` directory"
                     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-java-package.md"
                 
-                ??? beginner "Create a new java class called `AssetListen`"
+                ??? beginner "Create a new java class called `AssetListen` in the `egeria.dojo.assetlisten` package"
                     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-java-class.md"
                 
                 ??? beginner "Paste in the skeleton code"
@@ -196,7 +199,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             ??? intermediate "Develop AssetCreate"
                 
-                Create a new IntelliJ project (in a new window) called `egeria-dojo2` and add an empty Java class called `egeria.dojo.assetcreate.AssetCreate`.
+                Create a new IntelliJ project (in a new window) called `egeria-dojo2`. Create a new sources root called `java` under `src/main` and add an empty Java class called `egeria.dojo.assetcreate.AssetCreate` under `java`.
                  
                 ??? intermediate "Paste the skeleton code into the AssetCreate class"
                     ---8<-- "docs/education/egeria-dojo/developer/asset-create-skeleton.md"
@@ -219,7 +222,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                     ![AssetCreate calling EgeriaPlatform](/education/egeria-dojo/developer/developer-dojo-architecture-5.svg)
                     > Your development landscape now has added AssetCreate calling the mds1 server running on EgeriaPlatform to create new assets.  These assets arethen received by AssetListen.
                
-        ??? beginner "Handling errors (10 mins read)"
+        ??? beginner "Handling errors (2 mins read)"
             There are three exceptions that occur on many of the OMAS APIs:
             
             - *InvalidParameterException* means that your API has not provided some needed value, or the values provided are invalid at that time.
@@ -251,24 +254,34 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
         However for a development environment, it is useful to be able to see the event payloads.  This exercise creates a new audit log destination connector that outputs the payload of an EVENT audit log message to the console.
         
-        Create a new IntelliJ project called `egeria-dojo3`.  
+        Create a new IntelliJ project called `egeria-dojo3`.  Create a directory `main/java` under `src` and make `java` the sources root.
         
-        Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingProvider`.  This will contain the connector provider for your connector.  The connector provider is the factory class for the connector and also provides information to administrators and operators about the behaviour and capbility of the connector.
+        Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingProvider` under `java`.  This will contain the connector provider for your connector.  The connector provider is the factory class for the connector and also provides information to administrators and operators about the behaviour and capbility of the connector.
         
         ??? intermediate "Paste the skeleton code into the EventLoggingProvider class"
             ---8<-- "docs/education/egeria-dojo/developer/event-logging-provider-skeleton.md"
         
-        Create a `pom.xml` file for the connector module.
-                
-        ??? intermediate "Paste the skeleton structure into the `pom.xml` file"                
-            ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-pom-skeleton.md"
-        
-        Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingConnector`.  This will contain the actual code of the connector.
+        Create a Java class called `egeria.dojo.connector.eventlogging.EventLoggingConnector` under `java`.  This will contain the actual code of the connector.
                 
         ??? intermediate "Paste the skeleton code into the EventLoggingConnector class"
             ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-skeleton.md"
             
-        Resolve the Egeria dependencies in both of the java classes for your connector.
+        Create a `pom.xml` file at the top of the project (same level as `src`).
+                
+        ??? intermediate "Paste the skeleton structure into the `pom.xml` file"                
+            ---8<-- "docs/education/egeria-dojo/developer/event-logging-connector-pom-skeleton.md"
+        
+        Resolve the Egeria dependencies in both of the java classes for your connector. When you are offered a choice on `InvalidParameterException`, select the one from the Open Metadata Repository Services (OMRS) - that is `import org.odpi.openmetadata.repositoryservices.ffdc.exception.InvalidParameterException;`.  
+        
+        ![Choice](/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies-4.png)
+
+        The way to discover the answer is to click on the green circle next to the method name in the left-hand margin.  This takes you to the super class `OMRSAuditLogStoreConnectorBase`.  
+               
+        ![Navigate](/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies-5.png)
+            
+        Then go to the top of the file to discover which version it is using.
+        
+        ![Discover](/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies-6.png)
         
         Run maven with the `clean install` options to create the jar file and you are ready to test your new connector.
 
@@ -276,17 +289,13 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             ??? intermediate "Install the connector into Egeria's platform ..."
             
-                The maven build has created a jar file in the `target` directory of your IntelliJ project.  In fact there are three jar files created:
+                The maven build has created a jar file in the `target` directory of your IntelliJ project called  `event-logging-connector-3.6-SNAPSHOT.jar`
                 
-                * `event-logging-connector-3.6-SNAPSHOT.jar` - this has the executable code in it.
-                * `event-logging-connector-3.6-SNAPSHOT-javadoc.jar` - this has the javadoc packaged up.
-                * `event-logging-connector-3.6-SNAPSHOT-sources.jar` - this has the source code packaged up.
-                
-                The release number used in the name is controlled by the `<version>3.6-SNAPSHOT</version>` entry in your `pom.xml` file.  The three jar files are used when publishing the module to a shared code repository such as *Maven Central*.   However, for this exercise, you only need the first one.
+                The release number used in the name is controlled by the `<version>3.6-SNAPSHOT</version>` entry in your `pom.xml` file.  
                 
                 From your `egeria-dojo3` IntelliJ project's terminal window enter the following to copy the connector's jar file into your egeria-install server lib directory, making adjustments for your connector's release as appropriate.
                 ```bash
-                cp target/event-logging-connector-3.6-SNAPSHOT.jar ~/egeria-install/egeria-omag-*/server/lib
+                cp target/event-logging-connector*.jar ~/egeria-install/egeria-omag-*/server/lib
                 ```
             
             ??? intermediate "Reconfigure mds1 to use the new connector ..."
@@ -327,39 +336,39 @@ After completing developer day of the egeria dojo you should feel comfortable wi
        
         The integration connector that you are going to build today is very simple, but illustrates the process of building and testing integration connectors.  It will connect to Apache Kafka and retrieve a list of the topics that are defined.  It will then create `KafkaTopic` assets that will be stored in `mds1`'s metadata repository.  `mds1` will also send events to `AssetListen` about these new assets.
         
-        Create a new IntelliJ project called `egeria-dojo4`.  
+        Create a new IntelliJ project called `egeria-dojo4`.  Create a directory `main/java` under `src` and make `java` the sources root.
          
-        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingAuditCode` for your connector's audit log message definitions.  Logging and error handling are an important part of a connector's design.  It did not feature in the audit log destination connector because that connector was part of the audit logging system.  However it will feature in all other connectors that your write.  
+        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingAuditCode` under `java` for your connector's audit log message definitions.  Logging and error handling are an important part of a connector's design.  It did not feature in the audit log destination connector because that connector was part of the audit logging system.  However it will feature in all other connectors that your write.  
         
         ??? advanced "Paste the skeleton code into the `TopicCataloguingAuditCode` class"
             ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-audit-skeleton.md"
 
-        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingErrorCode` for your connector's exception message definitions.  Exceptions are sent between processing environments and Egeria's exceptions include [First Failure Data Capture (FFDC)](/guides/diagnistic/ffdc) information in them to aid inter=system problem determination.
+        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingErrorCode` under `java` for your connector's exception message definitions.  Exceptions are sent between processing environments and Egeria's exceptions include [First Failure Data Capture (FFDC)](/guides/diagnistic/ffdc) information in them to aid inter=system problem determination.
                
         ??? advanced "Paste the skeleton code into the `TopicCataloguingErrorCode` class"
             ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-error-skeleton.md"
 
-        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingProvider` for the connector provider.
+        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingProvider` under `java` for the connector provider.
                 
         ??? advanced "Paste the skeleton code into the `TopicCataloguingProvider` class"
             ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-provider-skeleton.md"
-                
-        Create a `pom.xml` file for the connector module.
+        
+        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingConnector` under `java` for the code of the connector.
+                                
+        ??? advanced "Paste the skeleton code into the TopicCataloguingConnector class"
+            ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-connector-skeleton.md"
+            
+        Create a `pom.xml` file for the connector at the top level of the project.
                         
         ??? advanced "Paste the skeleton structure into the `pom.xml` file"                
             ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-connector-pom-skeleton.md"
-                
-        Create a Java class called `egeria.dojo.connector.topics.TopicCataloguingConnector` for the code of the connector.
-                        
-        ??? advanced "Paste the skeleton code into the TopicCataloguingConnector class"
-            ---8<-- "docs/education/egeria-dojo/developer/topic-cataloguing-connector-skeleton.md"
                             
         Resolve the Egeria dependencies in all 4 of the java classes for your connector.
 
         Run maven with the `clean install` options to create the jar file and you are ready to test your new connector.
         
         ??? advanced "Testing your connector"
-            Install the connector into your egeria install server lib directory.
+            Install the connector jar file into your egeria install server lib directory.
             
             Restart `EgeriaPlatform` so it picks up the new classes. Use the `ServerConfig` utility and issue the following commands to create an integration daemon server called `daemon1` and add your connector to its configuration document.  The third command is option but installs your audit log destination connector from the previous exercise into `daemon1`.
                         

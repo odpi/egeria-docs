@@ -57,7 +57,7 @@ Jules works with other members of the company to define more detailed policies a
 
 * How do they automate the measurement and monitoring of these principles.
 
-For example, for the principle *Information users are identified* Ivan may define additional security principles such as
+For example, for the principle *Information users are identified* Ivor may define additional security principles such as
 
 * *Everyone has their own user logon*
 * *Passwords must be changed frequently*

@@ -690,12 +690,14 @@ nav:
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md
   - Practices:
+      - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md
       - Governance Maturity Model: practices/maturity-model/overview.md
       - Common Data Definitions: practices/common-data-definitions/overview.md
       - Governance Roles: practices/roles/overview.md
       - Digital Services: practices/digital-services/overview.md
       - Coco Pharmaceuticals:
+          - Coco Pharmaceuticals: practices/coco-pharmaceuticals/index.md
           - Personas: practices/coco-pharmaceuticals/personas/overview.md
           - Roles vs Personas: practices/coco-pharmaceuticals/roles-vs-personas/overview.md
           - Scenarios: practices/coco-pharmaceuticals/scenarios/overview.md

@@ -57,20 +57,24 @@ Glossary terms can be linked together in pairs to show that they are related in 
 > Figure 4: Glossary term relationships
 
 The relationships between glossary terms are divided into two groups:
+
 * Relationships that show how the meanings of terms are related.  This includes:
-  * *RelatedTerm* is a relationship used to say that the linked glossary term may also be of interest. It is like a "see also" link in a dictionary.
-  * *Synonym* is a relationship between glossary terms that have the same, or a very similar meaning.
-  * *Antonym* is a relationship between glossary terms that have the opposite (or near opposite) meaning.
-  * *PreferredTerm* is a relationship that indicates that one term should be used in place of the other term linked by the relationship.
-  * *ReplacementTerm* is a relationship that indicates that one term must be used instead of the other. This is stronger version of the PreferredTerm.
-  * *Translation* is a relationship that defines that the linked terms represent the same meaning but each are written in a different language. Hence one is a translation of the other. The language of each term is defined in the Glossary that owns the term.
-  * *IsA* is a relationship that defines that the one term is a more generic term than the other term. For example, this relationship would be use to say that "Cat" IsA "Animal".
+  
+    * *RelatedTerm* is a relationship used to say that the linked glossary term may also be of interest. It is like a "see also" link in a dictionary.
+    * *Synonym* is a relationship between glossary terms that have the same, or a very similar meaning.
+    * *Antonym* is a relationship between glossary terms that have the opposite (or near opposite) meaning.
+    * *PreferredTerm* is a relationship that indicates that one term should be used in place of the other term linked by the relationship.
+    * *ReplacementTerm* is a relationship that indicates that one term must be used instead of the other. This is stronger version of the PreferredTerm.
+    * *Translation* is a relationship that defines that the linked terms represent the same meaning but each are written in a different language. Hence one is a translation of the other. The language of each term is defined in the Glossary that owns the term.
+    * *IsA* is a relationship that defines that the one term is a more generic term than the other term. For example, this relationship would be use to say that "Cat" IsA "Animal".
+
 * Relationships that show how terms are typically used together.
-  * *UsedInContext* links a term to another term that describes a context.  This helps to distinguish between
+    
+    * *UsedInContext* links a term to another term that describes a context.  This helps to distinguish between
 terms that have the same name but different meanings depending on the context.
-  * *HasA* is a term relationship between a term representing a *SpineObject* (see glossary term classifications below) and a term representing a *SpineAttribute*.
-  * *IsATypeOf* is a term relationship between two SpineObjects saying that one is the subtype (specialisation) of the other.
-  * *TypedBy* is a term relationship between a SpineAttribute and a SpineObject to say that the SpineAttribute is implemented using a type represented by the SpineObject.
+    * *HasA* is a term relationship between a term representing a *SpineObject* (see glossary term classifications below) and a term representing a *SpineAttribute*.
+    * *IsATypeOf* is a term relationship between two SpineObjects saying that one is the subtype (specialisation) of the other.
+    * *TypedBy* is a term relationship between a SpineAttribute and a SpineObject to say that the SpineAttribute is implemented using a type represented by the SpineObject.
 
 ## Glossary classifications
 

@@ -21,7 +21,7 @@ A cohort can be configured to use:
 
 This is shown in figure 1.
 
-[Figure 1](cohort-topic-structure-choices.svg)
+![Figure 1](cohort-topic-structure-choices.svg)
 > **Figure 1:** Configuration choices for the cohort topics
 
 !!! question "Which to use?"

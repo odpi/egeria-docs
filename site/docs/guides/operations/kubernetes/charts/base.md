@@ -27,11 +27,14 @@ No configuration of the chart is required to use defaults, but information is pr
 
 ## Installation
 
-```console
-helm install base egeria/egeria-base
+```shell
+helm repo add egeria https://odpi.github.io/egeria-charts
+helm repo update
+helm install [-f overrides.yaml] <name> egeria/egeria-base
 ```
+where <name> is whatever you want to call your installed chart, and the -f is optional, if you have overriding values to supply.
 
-**THE INSTALL WILL TAKE SEVERAL MINUTES** to complete
+**THE INSTALL WILL TAKE SEVERAL MINUTES** to complete in the background, after the chart has deployed.
 
 This is because it is not only creating the required
 objects in Kubernetes to run the platforms, but also is configuring egeria itself - which involves waiting

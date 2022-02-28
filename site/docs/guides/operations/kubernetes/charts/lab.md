@@ -29,10 +29,14 @@ You no longer need a git clone of this repository to install the chart.
 
 ## Installation
 
-```console
-helm install lab egeria/odpi-egeria-lab
+```shell
+helm repo add egeria https://odpi.github.io/egeria-charts
+helm repo update
+helm install [-f overrides.yaml] <name> egeria/odpi-egeria-lab
 ```
+where <name> is whatever you want to call your installed chart, and the -f is optional, if you have overriding values to supply.
 
+Example output: 
 ```console
 $ helm install lab egeria/odpi-egeria-lab
 NAME: lab

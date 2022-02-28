@@ -18,8 +18,9 @@ This is a deployment of Egeria that will automatically run the [Performance Test
 
 !!! cli "Install (deploy) the PTS chart"
     ```shell
-    helm dep update egeria-pts
-    helm install [-f overrides.yaml] <name> egeria-pts
+    helm repo add egeria https://odpi.github.io/egeria-charts
+    helm repo update
+    helm install [-f overrides.yaml] <name> egeria/egeria-pts
     ```
 
     The `-f overrides.yaml` is optional, and only necessary if you are overriding any of the configuration (see options below), while the `<name>` is the name you want to give your deployment.

@@ -160,25 +160,25 @@ It is possible to list the registered view services for an [OMAG Server Platform
                 "serviceName": "Glossary Author",
                 "serviceURLMarker": "glossary-author",
                 "serviceDescription": "View Service for glossary authoring.",
-                "serviceWiki": "https://odpi.github.io/egeria/open-metadata-implementation/access-services/subject-area/"
+                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/glossary-author/overview/"
             },
             {
                 "serviceName": "Repository Explorer",
                 "serviceURLMarker": "rex",
                 "serviceDescription": "Explore open metadata instances.",
-                "serviceWiki": "https://odpi.github.io/egeria/open-metadata-implementation/view-services/rex-view/"
+                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/rex/overview/"
             },
             {
                 "serviceName": "Type Explorer",
                 "serviceURLMarker": "tex",
                 "serviceDescription": "Explore the open metadata types.",
-                "serviceWiki": "https://odpi.github.io/egeria/open-metadata-implementation/view-services/tex-view/"
+                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/tex/overview/"
             },
             {
                 "serviceName": "Dino",
                 "serviceURLMarker": "dino",
                 "serviceDescription": "Operate an open metadata topology.",
-                "serviceWiki": "https://odpi.github.io/egeria/open-metadata-implementation/view-services/dino-view/"
+                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/dino/overview/"
             }
         ]
     }
@@ -209,19 +209,19 @@ It is possible to list the configured view services for an [OMAG Server](/concep
                 "serviceName": "Glossary Author",
                 "serviceURLMarker": "glossary-author",
                 "serviceDescription": "View Service for glossary authoring.",
-                "serviceWiki": "https://odpi.github.io/egeria/open-metadata-implementation/access-services/subject-area/"
+                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/glossary-author/overview/"
             },
             {
                 "serviceName": "Repository Explorer",
                 "serviceURLMarker": "rex",
                 "serviceDescription": "Explore open metadata instances.",
-                "serviceWiki": "https://odpi.github.io/egeria/open-metadata-implementation/view-services/rex-view/"
+                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/rex/overview/"
             },
             {
                 "serviceName": "Type Explorer",
                 "serviceURLMarker": "tex",
                 "serviceDescription": "Explore the open metadata types.",
-                "serviceWiki": "https://odpi.github.io/egeria/open-metadata-implementation/view-services/tex-view/"
+                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/tex/overview""
             }
         ]
     }

@@ -64,6 +64,8 @@ Governance Program OMAS provides an [interface to create subject area definition
 
 !!! education "Further information"
     
+    * [Common Data Definitions](/practices/common-data-definitions/overview) describes the management and use of subject areas.
+    
     * The [Defining Subject Areas](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview/) scenario for Coco Pharmaceuticals walks through the process of setting up.
     
     * There are two code samples associated with this set of subject areas:

@@ -618,7 +618,7 @@ nav:
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
-      - Glossary Term: concepts/glossary-term.md
+      - Glossary Term: /principles/common-data-definitions/anatomy-of-a-glossary.md
       - GUID: concepts/guid.md
       - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md
@@ -690,12 +690,17 @@ nav:
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md
   - Practices:
+      - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md
       - Governance Maturity Model: practices/maturity-model/overview.md
-      - Common Data Definitions: practices/common-data-definitions/overview.md
       - Governance Roles: practices/roles/overview.md
       - Digital Services: practices/digital-services/overview.md
+      - Common Data Definitions:
+          - Overview: practices/common-data-definitions/overview.md
+          - Anatomy of a Glossary: practices/common-data-definitions/anatomy-of-a-glossary.md
+          - Open Metadata Implementation: practices/common-data-definitions/open-metadata-for-common-definitions.md
       - Coco Pharmaceuticals:
+          - Coco Pharmaceuticals: practices/coco-pharmaceuticals/index.md
           - Personas: practices/coco-pharmaceuticals/personas/overview.md
           - Roles vs Personas: practices/coco-pharmaceuticals/roles-vs-personas/overview.md
           - Scenarios: practices/coco-pharmaceuticals/scenarios/overview.md

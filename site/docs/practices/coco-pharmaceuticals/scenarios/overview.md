@@ -8,18 +8,18 @@ set up their new roles and meet the challenges their new responsibilities bring.
 
 * [Defining the data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview)
    
-   * [Planning for common data definitions](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
-   * [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
-   * [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview)
-   * [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview)
-   * [Defining what is meant by continuous analytics](/practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview)
-   * [Defining how employees can be data-enabled](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
-   * [Defining why a multi-faceted governance model is needed](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview)
+    - [Planning for common data definitions](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
+    - [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
+    - [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview)
+    - [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview)
+    - [Defining what is meant by continuous analytics](/practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview)
+    - [Defining how employees can be data-enabled](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
+    - [Defining why a multi-faceted governance model is needed](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview)
 
 * Defining common data definitions
 
-   * [Defining the subject areas for data](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview)
-   * [Defining a glossary](/practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview)
+    - [Defining the subject areas for data](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview)
+    - [Defining a glossary](/practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview)
 
 * [Building the multi-faceted governance team](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview)
 

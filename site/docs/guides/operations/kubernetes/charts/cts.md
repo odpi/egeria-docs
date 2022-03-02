@@ -92,7 +92,7 @@ You do this by overriding the `downloads` value with a list of `filename` and `u
     ```yaml
     downloads:
       - filename: egeria-connector-xtdb-LATEST_SNAPSHOT-jar-with-dependencies.jar
-        url: "http://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots\&g=org.odpi.egeria&a=egeria-connector-xtdb&v=3.6-SNAPSHOT&c=jar-with-dependencies"
+        url: "http://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=org.odpi.egeria&a=egeria-connector-xtdb&v=3.6-SNAPSHOT&c=jar-with-dependencies"
 
 ??? question "Why both filename and URL?"
     As illustrated in the examples above, some URLs may dynamically redirect and resolve to a given filename, for example to always download the latest release of a given file. Because we have minimal utilities installed in the pod to actually dynamically do these downloads, there are cases (like the example above) where the utilities are not able to automatically determine the filename to produce from such dynamic URLs.

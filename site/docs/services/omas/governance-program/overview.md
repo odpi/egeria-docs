@@ -119,7 +119,7 @@ The values used in governance classifications show the specific group that the c
 ![Figure 5](governance-program-level-definition.svg)
 > **Figure 5:** Governance classifications that use governance level definitions
 
-Egeria has a set of default values that can be set up using the 
+Egeria has a set of default values that can be set up using the [`createStandardGovernanceClassificationLevels`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceClassificationLevelInterface.html#createStandardGovernanceClassificationLevels(java.lang.String,java.lang.String) method.
 
 ## Measures and metrics
 

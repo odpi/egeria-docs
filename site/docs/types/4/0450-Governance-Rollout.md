@@ -22,7 +22,7 @@ The calculation of governance metrics is often a summary of many other measureme
 associated with specific resources (such as data sources and processes) operating under the
 scope of the governance program.
 These resources are catalogued as [Assets](/types/0/0010-Base-Model).
-The definition of their expected behavior or content can be capture using the
+The definition of their expected behavior or content can be captured using the
 **GovernanceExpectations** classification attached to the Asset.
 The measurements that support the assessment of a particular resource
 can be gathered and stored in a **GovernanceMeasurements** classification attached to its Asset.

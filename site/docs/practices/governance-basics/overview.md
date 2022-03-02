@@ -5,9 +5,9 @@
 
 Governance enables all types of organizations (multi-nationals, small businesses, government services, non-profits ...) to operate effectively and ethically.
 
-It delivers management system that focuses on the culture of the organization and the way it develops, maintains and uses resources.
+It delivers a management system that focuses on the culture of the organization and the way it develops, maintains and uses resources. Just as metadata is data about data, governance can be thought of as "meta-management" - it focuses on managing and improving the management of the organization.
 
-Both of these aspects are of extreme importance to modern organizations because:
+Both efficient and ethical operations are of extreme importance to modern organizations because:
 
 * Natural resources need to be used in an efficient and sustainable manner.
 * Digital services operate at a scale beyond an individuals ability to understand, monitor and control.  The technology is moving rapidly and the complexity of modern systems means that the people operating them need specific automated help to ensure they are secure and operating correctly.
@@ -22,6 +22,7 @@ Consider figure 1:
 
 ![Figure 1](simple-model-of-an-org.svg)
 > Figure 1: simple model of an organization
+
 > 1. An organization is formed by stakeholders for a specific purpose.
 > 2. The organization employs people and resources to deliver goods and/or services in line with its purpose.
 > 3. Customers/consumers consume the goods and/or services and return some sort of reward plus feedback that reflects the value they have received.
@@ -71,7 +72,7 @@ Governance covers both the employees and the organization's resources. Often the
 However, their work is inter-related and [follows a common pattern](#governing-systems).
 
 
-# Governance of data
+## Governance of data
 
 Although Egeria supports all types of governance, it has a specific focus on data governance because (1) data is so critical to modern digital business and (2) data by its very nature needs special treatment.
 
@@ -118,6 +119,7 @@ Figure 4 details the type of capabilities provided by the governing systems show
 
 ![Figure 4](capabilities-of-the-governing-systems.svg)
 > Figure 4: Capabilities of the governing systems
+
 > 1. For each type of resource that the organization plans to manage, the governing systems cover the onboarding of new resource, the protection and maintenance of resources during their active use and the decommissioning of obsolete resources.
 > 2. Onboarding of resources includes the assessment of the resources to ensure it meets the needs of the organization, cataloging it and deploying it to where it is needed.   The process of cataloging the resources includes creating an accurate description, classifying it to ensure it is properly managed, adding it to the appropriate zones and assigning an owner to it so there is someone responsible for it.
 > 3. Resources need to be protected from in proper use, damage (whether accidental or malicious) and theft.   For some resources, such as digital resources, this is an ongoing battle requiring a dedicated team to maintain a string defence.
@@ -128,10 +130,37 @@ Figure 4 details the type of capabilities provided by the governing systems show
 > 8. Monitoring gathers measurements of how each capability is performing.
 > 9. Assessment takes the current measurements from monitoring and matches them to a set of metrics (formula) and targets that the governance team is using to justify and give the organization's governance activities.
 > 10. The assessment metrics are driven by pertinent regulations and the organization's strategy.  The current measurements for the resources are assessed against their past performance so that the trajectory and direction of change can be determined.
-
+> 11. The results of the assessment, along with the changes to the governance drivers, are used to drive change in the way both the governing and governed systems are operating.
 
 
 Underpinning the capabilities of the governing system is a knowledge base about the resources, their relationships and the activity related to their management. This knowledge base is called the asset catalog and it is one of the functions provided by a metadata repository. 
+
+## The governance program life-cycle
+
+The governance program is managed in an iterative lifecycle.  It is driven from input from stakeholders and regulations.  These are captured and organized using the governance definitions to translate goals into actions.  These actions are implemented as a series of projects that change/improve the operation of the organization.  Part of the change includes instrumentation that provides data to measure the value of the changes inline with the expectations set out in the governance definitions.
+
+The review of the measurements (and changes in the governance drivers) influence the rollout campaign and the cycle continues.
+
+![Figure 5](governance-program-lifecycle.svg)
+> Figure 5: Life-cycle of the governance program
+
+
+## Rolling out a governance program
+
+Figure 4 is focused on the types of technology that is rolled out in support of a governance program and figure 5 implies that it is a mechanical process that systematically rolls out the changes.  It is important to remember, however, that technology is only a part of governance - it is critical to consider the people involved and the processes they use, since this will have as great an impact on your governance program as the technology you choose.
+
+Different teams will have their own perspectives on what they need - often small changes to allow what they do today a little more efficiently.  Few people vote for radical change in their own work - but are happy for other teams to change.  Changing a team's operation, or event tools takes time, education and patience.
+
+Locked into a team's operation are their own processes and methods.  They often collect useful information and provide points in the process where information is shared and decisions are made.  Connecting the governance program into these points and helping in the capture and availability of information to support these key decision points is often effective - as well as removing tedious tasks from people, particularly relating to rework to correct error.  Most people want to look good to their boss,so enhancing their ability to impress, and deliver on the teams targets is critical.
+
+This means that each project needs to ensure the people and teams get value from their participation in governance activities.  It must be more than additional checklists, forms to fill in and rules that seem to hinder innovation.
+
+If significant change is needed in a team's operation, they need support, encouragement and training so they can see themselves successful in their new roles.  Without this they will block change.
+
+Similarly, the measurements made by the organization as the teams transform their work should show the value they are delivering to the organization - to reinforce the positive messages and ensure the people who are changing are recognized and rewarded.
+
+There are many books that cover how to make change in an organization and so there is not need to go into much more detail on this site about how to affect organizational change.  Suffice it to say that governance programs aim to improve an organization's efficiency, effectiveness and sustainability.  To do this, change is inevitable, and a change management program is needed to drive that change.
+
 
 !!! education "Further information"
     * [Governance maturity model](/practices/maturity-model/overview)

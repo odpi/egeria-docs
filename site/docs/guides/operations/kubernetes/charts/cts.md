@@ -18,8 +18,9 @@ No configuration of the chart is required to use defaults, but information is pr
 
 !!! cli "Install (deploy) the CTS chart"
     ```shell
-    helm dep update egeria-cts
-    helm install [-f overrides.yaml] <name> egeria-cts
+    helm repo add egeria https://odpi.github.io/egeria-charts
+    helm repo update
+    helm install [-f overrides.yaml] <name> egeria/egeria-cts
     ```
 
     The `-f overrides.yaml` is optional, and only necessary if you are overriding any of the configuration (see options below), while the `<name>` is the name you want to give your deployment.

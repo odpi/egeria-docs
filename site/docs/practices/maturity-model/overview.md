@@ -11,7 +11,7 @@ The governance maturity model shown in Figure 1 was first published in 2018:
 ![Figure 1](governance-maturity-model.svg)
 > **Figure 1:** Governance Maturity Model
 
-It shows five levels of maturity that build on one another until the organization is able to support a wide range of advanced data use along with appropriate self-service access to data for a majority of people in the organization. This is the capability that Forrester calls [Data Citizenship](https://www.forrester.com/webinar/Data+Governance+20+The+Journey+Toward+Data+Citizenship/-/E-WEB21683).
+It shows five levels of maturity that build on one another until the organization is able to support a wide range of advanced resource and data use along with appropriate self-service access to data for a majority of people in the organization. This is the capability that Forrester calls [Data Citizenship](https://www.forrester.com/webinar/Data+Governance+20+The+Journey+Toward+Data+Citizenship/-/E-WEB21683).
 
 In general, organizations are not universally at one level of maturity. They adjust their investment to focus on the types of data that will bring the most value.  So their coverage looks more like figure 2.
 
@@ -57,17 +57,21 @@ The maturity levels are:
 ??? tip "Embedded Governance Maturity Level - how can governance be automated?"
     ### Embedded Governance
     
-    With embedded governance, the technology that is managing data has the governance requirements directly encoded into its operations.  This can be done with code or configuration depending on the capability of the technology.
+    With embedded governance, the technology that is managing resources such as IT systems and data has the governance requirements directly encoded into its operations.  This can be done with code or configuration depending on the capability of the technology.
     
-    Figure 5 shows the IT team implementing the governance requirements.  This needs to be repeated for all of the key infrastructure that is managing the assets.
+    Figure 5 shows the IT team implementing the governance requirements.  This needs to be repeated for all of the key infrastructure that is managing the resources.
     
     ![Figure 5](embedded-governance.svg)
     > **Figure 5:** Capabilities needed to achieve Emdedded Governance
     
+    At this stage, there is a focus on the automation of metadata capture and maintenance about the resources and the activity around them.  This cataloguing is pro-active - often driven by the deployment pipelines thhat brings new digital capability online, so the metadata becomes, comprehensive, accurate and up-to-date.
+    
+    This increase in the breadth and reliability of metadata offers a trusted context that can configure the technology (all or in part) that is managing the resources. 
+    
 ??? tip "Business Driven Governance Maturity Level - how can the business leaders take ownership of data and governance?"
     ### Business Driven Governance
     
-    Business driven governance is where the implementations of governance within the IT systems is driven by the governance classifications and other metadata settings.  As the asset owners change the classifications attached to the asset descriptions, then the runtime governance functions change their treatment of the assets.
+    Business driven governance is where the implementations of governance within the IT systems is driven by the governance classifications and other metadata settings.  These settings are controlled by subject matter experts, owners and stewards in the business.  As the settings change, then the runtime governance functions change their treatment of the resources.
     
     The big change that this brings is that the runtime governance functions need reliable and performant access to the metadata.  Typically this is provided by an operational metadata catalog that its tuned for the needs of the runtime governance components.
     
@@ -100,10 +104,13 @@ Egeria provides libraries and integration servers to simplify the integration of
 
 It provides an extensible, open metadata type system that covers most if not all of the types of metadata that an organization needs to exchange, APIs and event formats to support the exchange of metadata along with embeddable libraries that support the underlying protocols.
 
-Figure 1 shows an example of using the egeria technology (shown in bright blue) to integrate metadata repositories and governance functions.  Notice that the egeria libraries are embedded in many technologies, and there are also servers (called Open Metadata and Governance (OMAG) servers) that provide governance APIs to different types of tools.
+Figure 8 shows an example of using the egeria technology (shown in bright blue) to integrate metadata repositories and governance functions.  Notice that the egeria libraries are embedded in many technologies, and there are also servers (called Open Metadata and Governance (OMAG) servers) that provide governance APIs to different types of tools.
 
-![Figure 3](maturity-with-egeria.svg)
-> **Figure 3:** Using Egeria to grow governance maturity
+![Figure 8](maturity-with-egeria.svg)
+> **Figure 8:** Using Egeria to grow governance maturity
 
+!!! education "Further information"
+    * [Common Data Definitions](/practices/common-data-definitions/overview) describe how to improve consistency in your IT landscape which helps to speed up your organization's growing maturity.
+    * [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) scenarios show the rollout of their governance functions that are enabling their business transformation to personalized patient medicine.
 
 --8<-- "snippets/abbr.md"

@@ -221,7 +221,7 @@ It is possible to list the configured view services for an [OMAG Server](/concep
                 "serviceName": "Type Explorer",
                 "serviceURLMarker": "tex",
                 "serviceDescription": "Explore the open metadata types.",
-                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/tex/overview""
+                "serviceWiki": "https://odpi.github.io/egeria-docs/services/omvs/tex/overview"
             }
         ]
     }

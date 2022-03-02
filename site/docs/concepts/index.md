@@ -129,7 +129,9 @@
 
 ## G
 
-- [Glossary Term](/concepts/glossary-term)
+- [Glossary](/principles/common-data-definitions/anatomy-of-a-glossary)
+- [Glossary Category](/principles/common-data-definitions/anatomy-of-a-glossary/#glossary-categories)
+- [Glossary Term](/principles/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term)
 - [Governance Action](/concepts/governance-action)
 - [Governance Action Engine](/concepts/governance-action-engine)
 - [Governance Action OMES](/service/omes/governance-action/overview)

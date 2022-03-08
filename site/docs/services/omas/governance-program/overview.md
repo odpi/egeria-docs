@@ -47,7 +47,18 @@ Governance domains are the areas of an organization's operation that receive spe
 
 Governance domains are represented by *[Governance Domain Descriptions](/types/4/0401-Governance-Definitions)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".  
 
-It is possible to set up a default list of domains using the [`createStandardGovernanceDomains`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html) method.
+It is possible to set up a default list of domains using the [`createStandardGovernanceDomains`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html) method. This will give you the following governance domain definitions:
+
+| Domain Identifier | Description |
+| :-------- | :----- |
+| 1 | DATA - the governance of data and its use.
+| 2 | PRIVACY - the support for data privacy.
+| 3 | SECURITY - the governance that ensures IT systems and the data they hold are secure.
+| 4 | IT_INFRASTRUCTURE - the governance of the configuration and management of IT infrastructure and the software that runs on it.
+| 5 | SOFTWARE_DEVELOPMENT - the governance of the software development lifecycle.
+| 6 | CORPORATE - the governance of the organization as a legal entity.
+| 7 | ASSET_MANAGEMENT - the governance of physical assets.
+
 
 ## Subject areas
 
@@ -76,24 +87,60 @@ Governance Program OMAS provides an [interface to create subject area definition
 
 ## Governance classification, tagging and linking
 
+One of the ways to reduce the cost of governance is to define groups of similar assets/resources along with the governance definitions that apply to members of the group.  This avoids having to make decisions on how to manage each asset/resource.  The cataloguing process just needs to work out which group(s) to place the asset in.  Labels such as classifications, and tags of different types are used to identify these group assignments.  When a governance process is operating on the asset/resource, it looks up the labels and follows the governance definitions for the group.
+
 ![Figure 4](divide-and-conquer-landscape.svg)
 > **Figure 4:** Different types of tags used to group assets for governance
 
+The different types of labels used to group assets/resources are used for different purposes and may indicate how official they are:
+
+* [Governance Zones](/concepts/governance-zone) group assets according to their use.  They are typically is used for [controlling visibility to the resource's asset definition](/features/governance-zoning/overview).
+
+* [Governance Classifications](#setting-up-the-levels-for-your-governance-classifications) define the groups used for specific types of governance.
+
+    * Confidence Governance Classification defines the level of confidence that should be placed in the accuracy of related data items.  This limits the scope that the data can be used in.
+    * Confidentiality Governance Classification defines the level of confidentiality or secrecy needed with particular data.
+    * Criticality Governance Classification defines how critical the related resources are to the continued operation of the organization.
+    * Impact Governance Classification defines how much of an impact a particular situation is to the operation of the organization.
+    * Retention Governance Classification defines how long a resource (typically data) must be retained by the organization.
+
+* License Types define the contract aka (terms and conditions) that define how the asset/resource can be used.
+
+* Certification Types define specific characteristics of an asset/resource that has been verified for a particular span of time.
+
+* [SecurityTags](/concepts/security-tags) identify labels and properties that are used in determining which data protection rules should be executed when particular data is requests. They can be attached to assets or schema elements depending on the scope of data that the security tags apply to. The synchronized access control feature describes how security tags are set up and used.
+
+The labels may be assigned directly to the asset, or to elements, such as schemas and glossary terms that are linked to the asset.
+
 ## Setting up the levels for your governance classifications
+
+The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined and they can be set up in [`GovernanceClassificationLevel`](/types/4/0421-Governance-Classification-Levels/) definitions.
 
 ![Figure 5](governance-program-level-definition.svg)
 > **Figure 5:** Governance classifications that use governance level definitions
 
+Egeria has a set of default values that can be set up using the [`createStandardGovernanceClassificationLevels`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceClassificationLevelInterface.html) method.
+
 ## Measures and metrics
+
+As important aspect of the governance program is the ability to measure its effectiveness and identify the assets that are delivering the highest value, or operating with the greatest efficiency etc.
+
+A value that should be captured to demonstrate the effectiveness of the governance program is documented using the `GovernanceMetric` entity. It is linked to the appropriate governance definition and can be linked to a data set where the specific measurements are being gathered.
+
+The calculation of governance metrics is often a summary of many other measurements associated with specific resources (such as data sources and processes) operating under the scope of the governance program. These resources are catalogued as [`Assets`](/concepts/asset). 
 
 ![Figure 6](governance-metrics-with-measurements-dataset.svg)
 > **Figure 6:** Measuring governance through an external data set
 
+The definition of their expected behavior or content can be captured using the `GovernanceExpectations` classification attached to the `Asset`. The measurements that support the assessment of a particular resource can be gathered and stored in a `GovernanceMeasurements` classification attached to its `Asset`.
+
 ![Figure 7](expectations-vs-measurements.svg)
 > **Figure 7:** Setting expectations and gathering results in classifications
 
+The measurement classification may be attached to a related element that describes an aspect for its operation.  For example, in figure 8 the measurement is attached to a process instance that captures a specific run of a process.  The expected values are attached to its parent process.
+
 ![Figure 8](expectations-vs-measurements-example.svg)
-> **Figure 8:** Use of 
+> **Figure 8:** Attaching the measurements to related elements
 
 
 ## Execution points

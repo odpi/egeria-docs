@@ -19,6 +19,7 @@ During his first few weeks at Coco Pharmaceuticals, Jules spent his time underst
 
 To date they have developed one new personalised treatment that is designed for patients with a specific genomic marker.
 The impact on the business was as follows:
+
 * The research cycle was quicker since developing proof of a drug's efficacy was simpler.
 * Since the new drug was only designed for a subset of patients, the hospitals are not willing to order big batches of the drug.   They are looking for a more on-demand ordering model.
 * The manufacturing team realized that they will need to operate a hybrid model where all existing drugs are manufactured according to the existing batch processes, and the new drugs need more agile planning, manufacturing and delivery processes.  This has a knock on effect to their suppliers and finance.
@@ -26,6 +27,7 @@ The impact on the business was as follows:
 As Jules dug deeper he noticed that the exchange of data between different parts of Coco Pharmaceuticals was pretty minimal, focused on the regularly scheduled processing of orders, manufacturing and deliveries.  Going forward, Jules could see that key people in Coco Pharmaceuticals are going to need accurate real-time data that helps them manage a dynamic and constantly changing business.
 
 In particular:
+
 * The physicians and supporting medical staff will need interactive support for drug choices based on their patients' characteristics and responses.
 * The new team that works with the hospitals supporting new orders, validating results, liaising with manufacturing and research will need up to date information about the clinicians and patients under treatment.   They need to be supported by predictive analytics driven by the treatment plans and patient trends.
 * Measurements from existing treatments could provide active data to supplement the research team as they look for new opportunities to cure different cancers for a broader range of patients.

@@ -1,21 +1,22 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Kafka Monitor Integration Connector
+# Kafka Topics Audit Integration Connector
 
 ??? info "Connector details"
     - Connector Category: [Integration Connector](/connectors/integration-connector)
     - Hosting Service: [Topic Integrator OMIS](/services/omis/topic-integrator)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
-    - Source Module: [kafka-integration-connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/kafka-integration-connector){ target=gh }
-    - Jar File Name: `kafka-integration-connector.jar`
+    - Source Module: [kafka-topics-audit-connector :material-github:](https://github.com/odpi/egeria-dev-projects/tree/master/kafka-topics-audit-connector){ target=gh }
+    - Jar File Name: `kafka-topics-audit-connector.jar`
 
 ## Overview
 
-The kafka monitor integration connector monitors an Apache Kafka server and creates a [KafkaTopic](/types/2/0223-Events-and-Logs) asset for each topic that is known to the server. If the topic is removed from the Apache Kafka Server, its corresponding KafkaTopic asset is also removed.
+The kafka topics audit integration connector monitors an Apache Kafka server and validates that a  [KafkaTopic](/types/2/0223-Events-and-Logs) asset is catalogued for each topic that is known to the server.
 
-![Figure 1](kafka-monitor-integration-connector.svg)
-> **Figure 1:** Operation of the kafka monitor integration connector
+
+![Figure 1](kafka-topics-audit-integration-connector.svg)
+> **Figure 1:** Operation of the kafka topics audit integration connector
 
 
 ## Configuration
@@ -35,7 +36,7 @@ This is its connection definition to use on the [administration commands that co
                         "connectorType" : 
                         {
                             "class" : "ConnectorType",
-                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.kafka.KafkaMonitorIntegrationProvider"
+                            "connectorProviderClassName" : "org.odpi.openmetadata.devprojects.connectors.integration.kafka.KafkaTopicsAuditIntegrationProvider"
                         },
                         "endpoint" :
                         {

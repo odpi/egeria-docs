@@ -35,7 +35,7 @@ This is its connection definition to use on the [administration commands that co
                         "connectorType" : 
                         {
                             "class" : "ConnectorType",
-                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.lineage.GovernanceActionOpenLineageIntegrationProvider"
+                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.openlineage.GovernanceActionOpenLineageIntegrationProvider"
                         },
                     }
     }

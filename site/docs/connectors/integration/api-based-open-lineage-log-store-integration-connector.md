@@ -35,7 +35,7 @@ This is its connection definition to use on the [administration commands that co
                         "connectorType" : 
                         {
                             "class" : "ConnectorType",
-                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.lineage.APIBasedOpenLineageLogStoreProvider"
+                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.openlineage.APIBasedOpenLineageLogStoreProvider"
                         },
                         "endpoint" :
                         {

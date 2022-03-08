@@ -3,11 +3,22 @@
 
 # 0035 Complex Hosts
 
+The host entity provides a simple model for the IT infrastructure (nodes, computers, etc) that data resources are hosted on.
 In today's systems, hardware is managed to get the maximum use out of it. Therefore, the concept of a *host* is typically virtualized to allow a single computer to be used for many hosts and for multiple computers to collectively support a single host.
 
 The complex hosts handle environments where many nodes are acting together as a cluster, and where virtualized containers (such as Docker) are being used.
 
 ![UML](0035-Complex-Hosts.svg)
+
+## Host
+
+The concept of a *`Host`* is abstracted to describe a deployment environment that has access to hardware and has a basic software stack, typically including the operating systems.
+
+The host can be linked to its location through the [`AssetLocation`](/types/0/0025-Locations/#assetlocation) relationship.
+
+## DeployedOn
+
+The `DeployedOn` relationship shows where IT Infrastructure is deployed to.
 
 ## BareMetalComputer
 

@@ -86,6 +86,8 @@ nav:
                             - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
                       - API Connectors:
                             - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
+                      - infrastructure Connectors:
+                            - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
                       - Lineage Connectors:
                             - OpenLineage Event Receiver : connectors/integration/open-lineage-event-receiver-integration-connector.md
                             - OpenLineage API Log Store : connectors/integration/api-based-open-lineage-log-store-integration-connector.md

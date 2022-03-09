@@ -21,12 +21,16 @@ Below is an example of the code used to construct the `PlatformServicesClient`.
     PlatformServicesClient platformServicesClient = new PlatformServicesClient("MyPlatform", platformURLRoot);
     ```
 
+## Platform origin
+
 Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/platformservices/client/PlatformServicesClient.html). For example, the code below queries the platform origin. This indicates the release of Egeria that is running in the platform.
 
 ??? example "Example: Retrieving the platform origin"
     ```java linenums="1"
     String platformOrigin = platformServicesClient.getPlatformOrigin(clientUserId);
     ```
+
+## Registered services
 
 It is also possible to list the [registered services](/services/#registered-services) that are available in the platform.
 
@@ -37,6 +41,8 @@ It is also possible to list the [registered services](/services/#registered-serv
     List<RegisteredOMAGService> registeredOMISs = platformServicesClient.getIntegrationServices(clientUserId);
     List<RegisteredOMAGService> registeredOMVSs = platformServicesClient.getViewServices(clientUserId);
     ```
+
+## Known servers
 
 The *known servers* are those servers that have run on the platform since it started.  The `getKnownServers` method returns a list of server names which is useful for stepping through each of the servers in a `for` loop.
 
@@ -58,6 +64,8 @@ The *known servers* are those servers that have run on the platform since it sta
     }
 
     ```
+
+## Active servers
 
 The *active servers* are those servers running on the platform. The `getActiveServers` returns a list of names of the servers running when the request was made.
 

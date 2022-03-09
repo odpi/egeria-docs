@@ -245,7 +245,7 @@ The sample code below shows a series of calls to the `MetadataAccessStoreConfigu
 
     ```
 
-## Managing Configuration documents
+## Managing configuration documents
 
 The [`ConfigurationManagementClient`](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/ConfigurationManagementClient.html){ target=javadoc } supports the retrieval of a single OMAG Server's configuration document, or all available configuration documents.  It also supports the deployment of configuration documents to different OMAG Server Platforms.
 
@@ -314,6 +314,8 @@ The code sample shows the method calls to start and stop named OMAG Servers.
         }
     }
     ```
+
+## Querying the active server status
 
 It is also able to retrieve the status of the services running within an active server.
 

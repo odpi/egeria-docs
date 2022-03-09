@@ -23,7 +23,7 @@ The OpenLineage Cataloguer integration connector registers an OpenLineage listen
 This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
 running in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/guides/admin//servers/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin//servers/configuring-an-integration-daemon/#configure-the-integration-services).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"

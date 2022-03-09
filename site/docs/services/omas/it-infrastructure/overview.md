@@ -9,16 +9,15 @@ The IT Infrastructure OMAS provides APIs for tools and applications managing the
 
 ![Infrastructure Stack](infrastructure-stack.svg)
 
-
 It is typically used by the [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview) to capture metadata from deployment artifacts, or to generate deployment artifacts from open metadata.
 
-The other major use of IT Infrastructure OMAS is to manually catalog the key pieces of IT Infrastructure used by an organization. Often the creation of this metadata is used to kick off the automated cataloging of the capabilities and assets associated with the infrastructure.
+The other major use of IT Infrastructure OMAS is to [manually catalog the key pieces of IT Infrastructure used by an organization](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview). The creation of this metadata may be used to kick off the automated cataloging of the capabilities and assets associated with the infrastructure.
 
 ## Basic Concepts
 
 At the base is the notion of a **Host**.  This could be:
 
-- *BareMetalCompute** - traditional computer hardware or
+- *BareMetalComputer* - traditional computer hardware or
 - *VirtualMachine* - a virtualized machine (such as VMWare or VirtualBox) that uses a hypervisor to virtualize machine hardware or
 - *VirtualContainer* - a software system using a container library to virtualize the operating system it uses or
 - *HostCluster* - a cluster of Hosts that are operating as a single operational environment (such as a Hadoop cluster or kubernetes cluster).
@@ -48,7 +47,7 @@ The Operating Platform can be linked to many hosts through the *OperatingPlatfor
 ![Figure 4](operating-platform-deployment.svg)
 > **Figure 4:** A collection of hosts using the same operating platform
 
-The *SoftwarePackageManifest* shown in figure 5 details the software stack for the operating platform.  It is represented as a *Collection* linked to the operating platform using the *OperatingPlatformManifest** relationship.
+The *SoftwarePackageManifest* shown in figure 5 details the software stack for the operating platform.  It is represented as a *Collection* linked to the operating platform using the *OperatingPlatformManifest* relationship.
 
 ![Figure 5](operating-platform-definition.svg)
 > **Figure 5:** The software stack definition for an operating platform
@@ -144,6 +143,7 @@ The following classifications are typically associated with the **DataManager**:
 * *File Manager* - A manager of a collection of files and folders.
 
 The following are more generally applied.
+
 * *Notification Manager* - A software capability that is distributing events from a topic to its subscriber list.
 * *Cloud Service* - A software capability enabled for a tenant on a cloud platform.
 
@@ -155,9 +155,13 @@ Figure 10 shows some examples.  The relationships used to link the endpoint indi
 
 * *ConnectionEndpoint* links an endpoint to a connection.  The connection provides the information used to connect to the [resource](/concepts/resource) described by an asset.
 
-* *ServerEndpoint* indicates that the real-world counterpart of an IT infrastructure asset is listening for requests at this address.
+* *ServerEndpoint* indicates that the real-world counterpart of an IT infrastructure asset is called for requests at this address. The REST API paths are examples of server endpoints. So is Egeria's [platform ULR root](/concepts/platform-url-root).
 
-* *NetworkEndpoint* indicates that the endpoint address is visible through the linked network.
+* *NetworkEndpoint* indicates that the endpoint address represents a connection to the network.
+
+* *VisibleEndpoint* indicates that the endpoint address is visible through the linked network.  
+
+The *NetworkEndpoint* and *VisibleEndpoint* are used in threat modelling.
 
 ![Figure 10](types-of-endpoints.svg)
 > **Figure 10:** Types of endpoints
@@ -165,8 +169,7 @@ Figure 10 shows some examples.  The relationships used to link the endpoint indi
 
 ### Technology Examples
 
-Using the basic concepts described above, here are some examples
-of metadata for different types of technologies.
+Using the basic concepts described above, here are some examples of metadata for different types of technologies.
 
 Figure 11 shows the example of the software stack for Apache Kafka.
 
@@ -182,25 +185,19 @@ Figure 12 shows the example of the software stack for a database.
 
 ### Attachments and Classifications
 
-* Locations
-* Zones
-* Ownership
-* External References
+In addition, the IT Infrastructure assets can be linked to governance metadata as follows:
 
-## Infrastructure Managers
+* Locations - the IT Infrastructure assets can be linked to the locations defined in the [Digital Architecture OMAS](/services/omas/digital-architecture/overview).
+* Zones - the IT Infrastructure assets can be published and withdrawn to control their visibility while they are being maintained
+* Ownership and origin - the *AssetOwnership* and *AssetOrigin* classifications can be applied.
+* External References - links to external online documentation can be added.
+* Non-personal accounts (NPAs) - *ITProfiles* and *UserIdentities* can be set up to describe system users and assigned to the IT Infrastructure assets that are using them.
 
-When the IT Infrastructure OMAS is capturing metadata from deployment artifacts
-that are managed wholly by a specific technology or automated process,
-this technology should be catalogued as a **SoftwareCapability**
-and its guid and qualifiedName passed as the infrastructureManagerGUID and infrastructureManagerName
-parameters on the API.  This will mark the metadata elements as managed by an external source
-which makes the metadata read-only to all but the caller
-responsible for cataloguing the artifact.
+## Infrastructure Managers (external sources)
 
-Where Egeria is the primary catalog of the infrastructure metadata,
-or deployment artifacts that the metadata is derived from are either manually created
-or maintained by multiple process, the infrastructure manager identifiers are left blank
-so the resulting metadata elements are editable by any authorized caller.
+When the IT Infrastructure OMAS is capturing metadata from deployment artifacts that are managed wholly by a specific technology or automated process, this technology should be catalogued as a *SoftwareCapability* and its guid and qualifiedName passed as the infrastructureManagerGUID and infrastructureManagerName parameters on the API.  This will mark the metadata elements as managed by an external source which makes the metadata read-only to all but the caller responsible for cataloguing the artifact.
+
+Where Egeria is the primary catalog of the infrastructure metadata, or deployment artifacts that the metadata is derived from are either manually created or maintained by multiple process, the infrastructure manager identifiers are left blank so the resulting metadata elements are editable by any authorized caller.
 
 See [Metadata Provenance](/features/metadata-provenance/overview)
 for more information about the use of external source identifiers.

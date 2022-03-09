@@ -35,7 +35,7 @@ Its connection definition to use on the [administration commands that configure 
                         "connectorType" : 
                         {
                             "class" : "ConnectorType",
-                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.lineage.OpenLineageEventReceiverIntegrationProvider"
+                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.openlineage.OpenLineageEventReceiverIntegrationProvider"
                         },
                         "embeddedConnections" : [ {{topicConnection}} ]
                     }
@@ -54,7 +54,7 @@ Its connection definition to use on the [administration commands that configure 
                             "connectorType" : 
                             {
                                 "class" : "ConnectorType",
-                                "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.lineage.OpenLineageEventReceiverIntegrationProvider"
+                                "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.openlineage.OpenLineageEventReceiverIntegrationProvider"
                             },
                             "embeddedConnections" : [
                             {

@@ -289,9 +289,9 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             ??? intermediate "Install the connector into Egeria's platform ..."
             
-                The maven build has created a jar file in the `target` directory of your IntelliJ project called  `event-logging-connector-3.6-SNAPSHOT.jar`
+                The maven build has created a jar file in the `target` directory of your IntelliJ project called  `event-logging-connector-3.7-SNAPSHOT.jar`
                 
-                The release number used in the name is controlled by the `<version>3.6-SNAPSHOT</version>` entry in your `pom.xml` file.  
+                The release number used in the name is controlled by the `<version>3.7-SNAPSHOT</version>` entry in your `pom.xml` file.  
                 
                 From your `egeria-dojo3` IntelliJ project's terminal window enter the following to copy the connector's jar file into your egeria-install server lib directory, making adjustments for your connector's release as appropriate.
                 ```bash

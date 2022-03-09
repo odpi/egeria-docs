@@ -56,9 +56,13 @@ nav:
       - Integrate:
           - Developer Guide:
                 - Developer Overview: guides/developer/index.md
+                - Building Utilities: guides/developer/building-utilities/overview.md
                 - Modelling Schema: guides/developer/mapping-technology/modelling-schemas.md
                 - Building Connectors:
                       - Integration Connectors: guides/developer/integration-connectors/overview.md
+                      - Open Discovery Services: guides/developer/open-discovery-services/overview.md
+                      - Governance Action Services: guides/developer/governance-action-services/overview.md
+                      - Archive Services: guides/developer/archive-services/overview.md
                       - Repository Connectors: guides/developer/repository-connectors/overview.md
                       - Runtime Connectors:
                             - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
@@ -67,6 +71,9 @@ nav:
                             - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
                             - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
                             - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
+                            - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+                      - Resource Connectors:
+                            - New types of connectors: guides/developer/resource-connectors/overview.md
                             - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
           - Connector Catalog:
                 - Connector Overview: connectors/index.md
@@ -82,9 +89,12 @@ nav:
                             - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
                             - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
                       - Topic Connectors:
-                            - Kafka Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
+                            - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
+                            - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
                       - API Connectors:
                             - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
+                      - Infrastructure Connectors:
+                            - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
                       - Lineage Connectors:
                             - OpenLineage Event Receiver : connectors/integration/open-lineage-event-receiver-integration-connector.md
                             - OpenLineage API Log Store : connectors/integration/api-based-open-lineage-log-store-integration-connector.md
@@ -297,8 +307,8 @@ nav:
               - Collections: types/0/0021-Collections.md
               - Locations: types/0/0025-Locations.md
               - Endpoints: types/0/0026-Endpoints.md
-              - Hosts and Platforms: types/0/0030-Hosts-and-Platforms.md
-              - Complex Hosts: types/0/0035-Complex-Hosts.md
+              - Operating Platforms: types/0/0030-Hosts-and-Platforms.md
+              - Hosts: types/0/0035-Complex-Hosts.md
               - Storage: types/0/0036-Storage.md
               - Software Server Platforms: types/0/0037-Software-Server-Platforms.md
               - Software Servers: types/0/0040-Software-Servers.md
@@ -307,7 +317,7 @@ nav:
               - Servers and Assets: types/0/0045-Servers-and-Assets.md
               - Applications and Processes: types/0/0050-Applications-and-Processes.md
               - Data Processing Engines: types/0/0055-Data-Processing-Engines.md
-              - Asset Managers: types/0/0056-Resource-Managers.md
+              - Resource Managers: types/0/0056-Resource-Managers.md
               - Software Services: types/0/0057-Software-Services.md
               - Networks and Gateways: types/0/0070-Networks-and-Gateways.md
               - Cloud Platforms and Services: types/0/0090-Cloud-Platforms-and-Services.md

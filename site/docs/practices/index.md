@@ -9,7 +9,7 @@ Governments have responded with more exacting regulation that demands greater tr
 
 Although seeming to fit in the purview of *data governance*, the impact of these regulations is much broader, covering the process for designing and building software, the secure operation of IT systems, data privacy as well as the traditional data management concerns.
 
-Egeria is dedicated to helping organizations build out their broader governance capability around their digital services to meet these new challenges.  At is core is the [Egeria Open Metadata and Governance software](https://github.com/odpi/egeria) that provides the technology to support governance. Egeria's *practices* provides guidance to help you design an effective and holistic governance capability in your organization.
+Egeria is dedicated to helping organizations build out their broader governance capability around their digital services to meet these new challenges.  At its core is the [Egeria Open Metadata and Governance software](https://github.com/odpi/egeria) that provides the technology to support governance. Egeria's *practices* provides guidance to help you design an effective and holistic governance capability in your organization.
 
 The practices consider (1) the people involved, (2) the data they need to make good decisions, (3) the processes they need to follow and (4) the technology that automates much of the routine work.
 

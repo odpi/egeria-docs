@@ -99,7 +99,7 @@ Open metadata is a connected network (graph) of information. The connector type 
 
 For example, there is typically one connector type for each connector implementation. By retrieving the relationships from the connector type to the connections, it is possible to see the extent to which the connector is used.
 
-#### Connector Types
+#### Connector types
 
 ![Uses of a connector implementation](uses-of-a-connector-implementation.svg)
 

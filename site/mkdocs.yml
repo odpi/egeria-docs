@@ -56,9 +56,13 @@ nav:
       - Integrate:
           - Developer Guide:
                 - Developer Overview: guides/developer/index.md
+                - Building Utilities: guides/developer/building-utilities/overview.md
                 - Modelling Schema: guides/developer/mapping-technology/modelling-schemas.md
                 - Building Connectors:
                       - Integration Connectors: guides/developer/integration-connectors/overview.md
+                      - Open Discovery Services: guides/developer/open-discovery-services/overview.md
+                      - Governance Action Services: guides/developer/governance-action-services/overview.md
+                      - Archive Services: guides/developer/archive-services/overview.md
                       - Repository Connectors: guides/developer/repository-connectors/overview.md
                       - Runtime Connectors:
                             - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
@@ -67,6 +71,9 @@ nav:
                             - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
                             - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
                             - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
+                            - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+                      - Resource Connectors:
+                            - New types of connectors: guides/developer/resource-connectors/overview.md
                             - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
           - Connector Catalog:
                 - Connector Overview: connectors/index.md
@@ -86,7 +93,7 @@ nav:
                             - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
                       - API Connectors:
                             - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
-                      - infrastructure Connectors:
+                      - Infrastructure Connectors:
                             - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
                       - Lineage Connectors:
                             - OpenLineage Event Receiver : connectors/integration/open-lineage-event-receiver-integration-connector.md

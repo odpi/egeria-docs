@@ -27,7 +27,7 @@ These are the subtypes of software capabilities defined in the open metadata typ
     - [`DataMovementEngine`](/types/0/0055-Data-Processing-Engines/#datamovementengine) - An engine capable of copying data from one data store to another.
     - [`DataVirtualizationEngine`](/types/0/0055-Data-Processing-Engines/#datavirtualizationengine) - An engine capable of creating new data sets by dynamically combining data from one or more data stores or data sets.
 - [`EventBroker`](/types/0/0050-Applications-and-Processes/#eventbroker) - A capability that supports event-based services, typically around topics.
-- [`SoftwareService`s](/types/0/0057-Software-Services/#softwareservice) - A capability that provides externally callable functions to other services.
+- [`SoftwareService`](/types/0/0057-Software-Services/#softwareservice) - A capability that provides externally callable functions to other services.
     - [`ApplicationService`](/types/0/0057-Software-Services/#applicationservice) - A software service that supports a reusable business function.
     - [`MetadataIntegrationService`](/types/0/0057-Software-Services/#metadataintegrationservice) - A software service that exchanges metadata between servers.
     - [`MetadataAccessService`](/types/0/0057-Software-Services/#metadataaccessservice) - A software service that provides access to stored metadata.

@@ -36,5 +36,5 @@ The data privacy pack is made up of documentation and pre-built metadata element
 loaded into an open metadata compliant repository and shared across an open metadata
 repository cohort.   It is also driving changes into Egeria to provide specific
 privacy services through the
-[Data Privacy Open Metadata Access Service (OMAS)](https://odpi.github.io/egeria/open-metadata-implementation/access-services/data-privacy/).
+[Data Privacy Open Metadata Access Service (OMAS)](/services/omas/data-privacy/overview).
 

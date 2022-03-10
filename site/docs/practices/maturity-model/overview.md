@@ -13,7 +13,7 @@ The governance maturity model shown in Figure 1 was first published in 2018:
 
 It shows five levels of maturity that build on one another until the organization is able to support a wide range of advanced resource and data use along with appropriate self-service access to data for a majority of people in the organization. This is the capability that Forrester calls [Data Citizenship](https://www.forrester.com/webinar/Data+Governance+20+The+Journey+Toward+Data+Citizenship/-/E-WEB21683).
 
-In general, organizations are not universally at one level of maturity. They adjust their investment to focus on the types of data that will bring the most value.  So their coverage looks more like figure 2.
+In general, organizations are not universally at one level of maturity. They adjust their investment to focus on the types of data and processes that will bring the most value.  So their coverage looks more like figure 2.
 
 ![Figure 2](governance-maturity-model-progress.svg)
 > **Figure 2:** Staging maturity
@@ -25,7 +25,7 @@ The maturity levels are:
     
     An organization has achieved *asset awareness* when it has a catalog of its [resources](/concepts/resource) that shows the properties of the resources, who owns them and their lineage (how they were created).  The catalog entry for a resource is called an [*asset*](/concepts/asset).
     
-    These catalogs ideally need to cover all types of resources, from data stores, data feeds, APIs and the processes/applications that work with them.  In addition, the catalog can include information about the logical structure (schema) of the data, its format (for example, XML, JSON) the values stored and what the data elements within the asset mean to the organization.
+    These catalogs ideally should cover all types of resources, from data stores, data feeds, APIs and the processes/applications that work with them.  In addition, the catalog can include information about the logical structure (schema) of the data, its format (for example, XML, JSON) the values stored and what the data elements within the asset mean to the organization.
     
     Figure 3 shows the different types of tools that can be used to build up the asset catalog and make it searchable through a user interface.
     
@@ -35,21 +35,21 @@ The maturity levels are:
 ??? tip "Governance Awareness Maturity Level - how should data be governed?"
     ### Governance Awareness
     
-    Governance awareness is where the governance requirements are attached to the descriptions of the assets in the asset catalog. This means that someone wishing to use a resource can easily understand the governance requirements they must meet to use it responsibility.
+    Governance awareness is where the governance requirements are attached to the descriptions of the assets in the asset catalog. This means that someone wishing to use a resource can easily understand the governance requirements they must meet to use it responsibly.
     
     Most organizations use governance classifications.  These are labels that are attached to the asset descriptions within the catalog.
     
     The governance classifications each define a list of governance requirements for different situations. For example a governance classification could be "confidential". The governance program would then describe the governance requirements for confidential data when, for example:
      
-     * it is shared with a colleague,
-     * passed to an external person,
-     * stored etc
+     * it can be shared with a colleague,
+     * it can be passed to an external person,
+     * it is stored etc
     
     The governance program educates employees on the use and meaning of the governance classifications so they know how to manage any resource with that classification.
     
-    Classifications can be added directly to an digital resource's asset, or the detailed element descriptions within the asset, or indirectly to the glossary terms that are linked to the asset/element descriptions.
+    Classifications can be added directly to a digital resource's asset, or the detailed element descriptions within the asset, or indirectly to the glossary terms that are linked to the asset/element descriptions.
     
-    Figure 4 shows both options for adding classifications to the catalog. Classifying through the glossary terms creates greater consistency in the way that data is classified,but it does requirement that the attachment of glossary terms to the descriptions of assets/data elements is comprehensive.
+    Figure 4 shows both options for adding classifications to the catalog. Classifying through the glossary terms creates greater consistency in the way that data is classified,but it does require that the attachment of glossary terms to the descriptions of assets/data elements is comprehensive.
     
     ![Figure 4](governance-awareness.svg)
     > **Figure 4:** Capabilities needed to achieve Governance Awareness
@@ -102,7 +102,7 @@ Opening the sections reveals more detail about each level. You will notice that 
 
 Egeria provides libraries and integration servers to simplify the integration of metadata repositories and governance functions.
 
-It provides an extensible, open metadata type system that covers most if not all of the types of metadata that an organization needs to exchange, APIs and event formats to support the exchange of metadata along with embeddable libraries that support the underlying protocols.
+It provides an extensible, open metadata type system that covers most, if not all of the types of metadata that an organization needs to exchange, APIs and event formats to support the exchange of metadata along with embeddable libraries that support the underlying protocols.
 
 Figure 8 shows an example of using the egeria technology (shown in bright blue) to integrate metadata repositories and governance functions.  Notice that the egeria libraries are embedded in many technologies, and there are also servers (called Open Metadata and Governance (OMAG) servers) that provide governance APIs to different types of tools.
 

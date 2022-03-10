@@ -80,7 +80,7 @@ Roles that interact with the organization:
     
     [Icon](regulator-role.png)
     
-    The regulator is the names authority for a regulation.  They define the rules, issue guidance on how to be compliant and investigate suspected breaches in the regulation.
+    The regulator is the authority for a regulation.  They define the rules, issue guidance on how to be compliant and investigate suspected breaches in the regulation.
 
 
 ## Governance Leadership roles
@@ -92,8 +92,8 @@ Roles that occur when governance programs are in place:
     
     [Icon](data-officer-role.png)
     
-    The data officer is responsible for setting the data strategy andleading the data governance program.
-    
+    The data officer is responsible for setting the data strategy and leading the data governance program.
+     
     The data officer supports asset owners as they plan the investments in key assets with expertise and research into the latest data capture and processing capabilities.  
     
     #### Further information
@@ -105,7 +105,7 @@ Roles that occur when governance programs are in place:
     
     [Icon](security-officer-role.png)
     
-    The supplier is a business partner that provides goods and/or services to the organization.
+    The Security Officer is responsible for the protection of data and data privacy through the management and enforcement of security policies.
     
     #### Further information
     
@@ -138,11 +138,11 @@ Roles that occur when governance programs are in place:
 Roles that lead in data privacy discussions:
 
 ??? tip "Privacy Officer Role." 
-    ### Data Subject Role
+    ### Privacy Officer Role
     
-    [Icon](data-subject-role.png)
+    [Icon](privacy-officer-role.png)
     
-    The data subject is the person that personal data is about.
+    The privacy officer sets and enforces policies to establish and manage the data rights of data subjects based on the expressed intent of data subjects and in accordance to regulations and company policies.
     
     #### Further information
     
@@ -177,9 +177,9 @@ Roles involved in the day-to-day use of data (and related) assets:
     
     Most employees in an organization will be an owner of at least one asset. The size and importance of the asset in question will determine the level of seniority of the individual that is the asset owner.
     
-    The asset owner is responsible for investment decision related to the asset.  This includes decisions to extend or update the asset and when to dispose of it. They also make choices on investment in security infrastructure and support verses new function.
+    The asset owner is responsible for investment decisions related to the asset.  This includes decisions to extend or update the asset and when to dispose of it. They also make choices on investment in security infrastructure and support verses new function.
     
-    As such the governance team need to ensure that the asset owner is responsible for planning for the asset as well it functionality.
+    As such, the governance team need to ensure that the asset owner is responsible for planning for the asset as well its functionality.
     
     Assets can be transferred between owners. However, there should never be a time when the asset has no owner.
     
@@ -245,10 +245,10 @@ Roles for building and using digital services:
     
     #### Architect Specialities
     
-    As organizations and the number of IT systems grows, specialisms in architecture emerge.  For example,
+    As organizations and the number of IT systems grow, specializations in architecture emerge.  For example,
     
     * *Enterprise Architect* - There are architects that take an enterprise view - looking at how the
-    systems and organization around then are supporting the organization's need.
+    systems and organization around then are supporting the organization's needs.
     These are called enterprise architects.
     
     * *Information Architect* -  There are architects that focus on the structure and flow of information around the organization.  They are called information architects.

@@ -59,7 +59,7 @@ If you still see issues, contact the [Rancher desktop community](https://github.
 
 ![Kubernetes Setttings](rancherprefs.png)
 
-Also ensure the following symbolic links are set up for helm & kubectl:
+Also ensure the following symbolic links are set up for helm & kubectl. If you are only using Rancher it's recommended to enable all the links.
 
 ![Utility settings](rancherutils.png)
 

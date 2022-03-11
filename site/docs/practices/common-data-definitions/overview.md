@@ -13,7 +13,7 @@ Typically the common data definitions consist of:
 * Definitions of the valid data values for specific concepts and associated governance rules.
 * Preferred logical and physical data formats for storing data about these concepts.
 
-The common data definitions are managed in a metadata catalog and are grouped into [subject areas](/concepts/subject-area).  The core definitions that cover the meaning of data are described in one or more [glossaries](/practices/common-data-definitions/anatomy-of-a-glossary).  These are augmented
+The common data definitions are managed in a metadata catalog and are grouped into [subject areas](/concepts/subject-area).  The core definitions that cover the meaning of data are described in one or more [glossaries](/practices/common-data-definitions/anatomy-of-a-glossary).These are augmented by valid values, reference data and quality rules.
 
 Governance classifications may be added to these definitions which in turn link to governance requirements.   This determines how data that is linked to these common definitions should be governed.
 

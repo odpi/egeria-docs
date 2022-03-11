@@ -45,8 +45,17 @@ Follow the [official instructions :material-dock-window:](https://docs.rancherde
 After installation open the Rancher Desktop app and in preferences under **Kubernetes Settings** set the following:
   - check you are using the latest 'stable' kubernetes version.
   - use containerd for the runtime.
- - a minimum of 6GB RAM allocated to Kubernetes. Do not go into the red area.
- - at least 1 less CPU allocated than you have on your machine. Do not go into the red area.
+  - a minimum of 6GB RAM allocated to Kubernetes. Do not go into the red area.
+  - at least 1 less CPU allocated than you have on your machine. Do not go into the red area.
+
+### Rancher: Error starting Kubernetes
+
+If you see an error such as 
+**Error Starting Kubernetes** from the Rancher UI, similar to that below, make sure you are not running any other k8s implementation. For example ensure either microk8s or docker desktop are fully shut down or uninstalled, and then try restarting Rancher Desktop. If that fails reboot and try again.
+
+If you still see issues, contact the [Rancher desktop community](https://github.com/rancher-sandbox/rancher-desktop) for advice.
+
+![Rancher Error Starting Kubernetes](rancher-starterror.png)
 
 ![Kubernetes Setttings](rancherprefs.png)
 

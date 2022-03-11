@@ -10,7 +10,7 @@ hide:
 
 The spine object model adds the relationships that enable a
 glossary to contain the definition of spine objects that can be
-used to control access to data, and the guild the design of new
+used to control access to data, and to guide the design of new
 data stores and APIs.
 
 Model 0380 shows the relationships and classifications used to

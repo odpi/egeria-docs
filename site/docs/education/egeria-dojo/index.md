@@ -7,11 +7,11 @@ The Egeria "dojo" is an intensive course to help you learn about Egeria. It is d
 
 The objectives of the five days are as follows:
 
-- **[Running Egeria](#running-egeria-day-summary)** day: Learning about setting up and running Egeria.
-- **Developer** day: Learning how to call Egeria's APIs and develop new connectors to integration third party technologies.
-- **Metadata Governance** day: Learning how to improve the quality and expand the content of your metadata.
-- **Egeria Contributor** day: Learning how to make a contribution to Egeria. Learning how to go on to become either an advocate or a maintainer.
-- **Egeria in Production** day: Learning how to run Egeria in production with high availability and resilience.
+- *Running Egeria* day: Learning about setting up and running Egeria.
+- *Developer* day: Learning how to call Egeria's APIs and develop new connectors to integration third party technologies.
+- *Metadata Governance* day: Learning how to improve the quality and expand the content of your metadata.
+- *Egeria Contributor* day: Learning how to make a contribution to Egeria. Learning how to go on to become either an advocate or a maintainer.
+- *Egeria in Production* day: Learning how to run Egeria in production with high availability and resilience.
 
 --8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 
@@ -24,21 +24,20 @@ The objectives of the five days are as follows:
     - *Prerequisites*: none.
     - *Required skills*: Familarity with *nix shell environment & editing files
     - *Topics*
-    - Introduction to Egeria
-    - Installing prerequisite tools - Kubernetes & Postman
-    - Installing a pre-configured Egeria environment
-    - Using the Ecosystem UI
-    - Configuring Egeria servers
-    - Running Egeria jupyter based labs
-    - Using the Egeria Ecosystem UI (React UI)
+        - Introduction to Egeria
+        - Installing prerequisite tools - Kubernetes & Postman
+        - Installing a pre-configured Egeria environment
+        - Using the Ecosystem UI
+        - Configuring Egeria servers
+        - Running Egeria jupyter based labs
+        - Using the Egeria Ecosystem UI (React UI)
     - *Time to complete* - 7 hours
-      
     - *Outline*
-    - Installing Kubernetes & Postman (1 hour)
-    - Simple pre-built egeria configuration" (0.5 hours)
-    - Configuring Servers (2 hours)
-    - Coco Pharmaceutical labs (1.5 hours)
-    - Summary (30 mins)"
+        - Installing Kubernetes & Postman (1 hour)
+        - Simple pre-built egeria configuration" (0.5 hours)
+        - Configuring Servers (2 hours)
+        - Coco Pharmaceutical labs (1.5 hours)
+        - Summary (30 mins)"
 
     [Go directly to the *Running Egeria* dojo](/education/egeria-dojo/running-egeria/running-egeria-intro)
 
@@ -89,26 +88,30 @@ The objectives of the five days are as follows:
 
 ## Egeria Contributor Day summary
 
-!!! education "Egeria Contributor Day"
-    Egeria Contributor Day is all about making changes to the Egeria project. This may be to add code, documentation or samples. You will have an opportunity to add a new file to the Egeria project and take it all the way through the process to update Egeria's git repository. It also prepares you to become an Egeria professional - either as an advocate of the technology or a maintainer. It goes much deeper into the philosophy, design and processes of the project.
-
-    !!! beginner "Open source philosophy (30 mins)"
-
-    !!! beginner "Tools for contributors (90 mins)"
-
-    !!! intermediate "Making a contribution, step-by-step (90 mins)"
-
-    !!! beginner "Types of contribution (60 mins)"
-
-    !!! beginner "Becoming a contributor (30 mins)"
-
-    !!! intermediate "Becoming an advocate (90 mins)"
-
-    !!! advanced "Becoming a maintainer (90 mins)"
-
-    !!! expert "Egeria architecture and philosophy (the "deep stuff") (90 mins)"
+    - *Audience*: Anyone interested in contributing to Egeria
+    - *Objectives*: This dojo day combines learning about new concepts and trying them out using the Egeria technology.  After completing this day of the dojo you will understand the key principles of governing your metadata and how to set up Egeria to automate most of your requirements.
+    - *Prerequisites*: None.
+    - *Required skills*: None.
+    - *Topics*
+        - Open source philosophy (30 mins)
+        - Tools for contributors (90 mins)
+        - Making a contribution, step-by-step (90 mins)
+        - Types of contribution (60 mins)
+        - Becoming a contributor (30 mins)
+        - Becoming an advocate (90 mins)
+        - Becoming a maintainer (90 mins)
+        - Egeria architecture and philosophy (the "deep stuff") (90 mins)"
+    - *Time to complete* - 8 hours
 
 ## Egeria in Production Day summary
+
+    - *Audience*: Anyone wishing to plan to move Egeria into production
+    - *Objectives*: This dojo day walks through the considerations for moving an Egeria deployment into production
+    - *Prerequisites*: [Running Egeria day](#running-egeria-day-summary).
+    - *Required skills*: Understanding of production requirements in your organization.
+    - *Topics*:
+        - TBD
+    - *Time to complete* - 8 hours
 
 
 --8<-- "snippets/abbr.md"

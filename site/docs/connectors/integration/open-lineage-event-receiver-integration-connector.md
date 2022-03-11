@@ -23,7 +23,7 @@ The OpenLineage Event Receiver integration connector receives open lineage event
 This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
 running in the [Integration Daemon](/concepts/integration-daemon).
 
-Its connection definition to use on the [administration commands that configure the API Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
+Its connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="11"
@@ -35,7 +35,7 @@ Its connection definition to use on the [administration commands that configure 
                         "connectorType" : 
                         {
                             "class" : "ConnectorType",
-                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.lineage.OpenLineageEventReceiverIntegrationProvider"
+                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.openlineage.OpenLineageEventReceiverIntegrationProvider"
                         },
                         "embeddedConnections" : [ {{topicConnection}} ]
                     }
@@ -54,7 +54,7 @@ Its connection definition to use on the [administration commands that configure 
                             "connectorType" : 
                             {
                                 "class" : "ConnectorType",
-                                "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.lineage.OpenLineageEventReceiverIntegrationProvider"
+                                "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.openlineage.OpenLineageEventReceiverIntegrationProvider"
                             },
                             "embeddedConnections" : [
                             {

@@ -108,7 +108,7 @@ Kubernetes is a useful container solution that scales from a raspberry pi to hug
 
 #### Egeria Platform
 
-The [OMAG server platform](https://odpi.github.io/introduction/overview/#omag-server-platform) (aka 'server chassis') is effectively a java process that is launched and acts as a container for
+The [OMAG server platform](/concepts/omag-server-platform) (aka 'server chassis') is effectively a java process that is launched and acts as a container for
 running Egeria servers (below). In itself it has relatively little configuration but does include
 - TLS configuration ie passwords, keys, certs
 - Spring configuration (security, plugins)
@@ -119,7 +119,7 @@ The platform's connectors are mostly limited to configuration & security.
 
 #### Egeria Servers
 
-The [OMAG Server](https://odpi.github.io/introduction/overview/#omag-servers) comes in a number of
+The [OMAG Server](/concepts/omag-server) comes in a number of
 different forms including a repository proxy, a metadata repository, a view server etc
 
 A 'server' is a logical concept that actually executes code within an Egeria Platform but is basically what is defined, started, stopped,

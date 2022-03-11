@@ -12,7 +12,7 @@ Our dojos are designed to provide guided learning to help you get up to speed qu
 
 We are currently in the process of rewriting our Dojos. If you are starting in 2022 it is recommended
 you start with our new [Egeria Dojo](/education/egeria-dojo) which now has a complete
-[Day 1](/education/egeria-dojo/running-egeria/running-egeria-intro)
+[Day 1](/education/egeria-dojo/running-egeria/running-egeria-intro) and [Day 2](/education/egeria-dojo/developer/overview)
 
 You can still also see the [Original Egeria Dojo](/getting-started/egeria-dojo) but it is no longer recommended you
 work through these, and instead look for future days of the updated dojo.

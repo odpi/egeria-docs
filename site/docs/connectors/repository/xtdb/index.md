@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
+--8<-- "snippets/content-status/stable.md"
+
 # XTDB OMRS Repository Connector
 
 ??? success "Fully conformant with all Egeria profiles"

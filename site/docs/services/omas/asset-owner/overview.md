@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/released.md"
+--8<-- "snippets/content-status/stable.md"
 
 # Asset Owner Open Metadata Access Service (OMAS)
 

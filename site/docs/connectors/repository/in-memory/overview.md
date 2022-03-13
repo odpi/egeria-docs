@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
---8<-- "snippets/content-status/released.md"
+--8<-- "snippets/content-status/stable.md"
 
 # In Memory Repository Connector
 

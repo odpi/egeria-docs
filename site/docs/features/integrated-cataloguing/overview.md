@@ -21,7 +21,7 @@ Manual cataloguing works well for infrequent cataloguing.  However it is expensi
 
 `Integrated cataloging` uses an [*integration daemon*](/concepts/integration-daemon) to monitor a specific digital technology that hosts particular types of digital resources and then automatically maintains the metadata descriptions of these digital resources in the catalog.
 
-![Figure 1](/concepts/integration-daemon-in-action.svg)
+![Figure 1](/services/integration-daemon-in-action.svg)
 > **Figure 1:** The integration daemon manages the automatic exchange of open metadata between third party technologies and Metadata Access Servers that are sharing this metadata as Open Metadata Repository Cohorts.
 
 For example, an integration daemon may be monitoring a database server, updating the metadata catalog each time a new database is added, or a schema is changed.

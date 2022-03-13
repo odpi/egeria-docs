@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+--8<-- "snippets/content-status/sample.md"
+
 # Kafka Topics Audit Integration Connector
 
 ??? info "Connector details"

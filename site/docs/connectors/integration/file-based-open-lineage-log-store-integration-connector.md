@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+--8<-- "snippets/content-status/tech-preview.md"
+
 # File-based Open Lineage Log Store Integration Connector
 
 ??? info "Connector details"

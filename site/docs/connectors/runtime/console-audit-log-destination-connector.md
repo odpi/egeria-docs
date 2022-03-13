@@ -6,6 +6,8 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+--8<-- "snippets/content-status/stable.md"
+
 # Console audit log destination connector
 
 This [audit log destination connector](/concepts/audit-log-destination-connector)  writes selected parts of an [audit log](/concept) record to `stdout`.

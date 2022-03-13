@@ -97,7 +97,7 @@ Following is an overview of the current status of the functions in Egeria today:
 
 ![Status of functions found in each capability layer](/release-notes/functional-organization-showing-implementation-status-for-2.9.png)
 
-- Green means that there is function that is either [released or in technical preview](content-status).
+- Green means that there is function that is either [stable or in technical preview](content-status).
 - Orange means there is work in progress.
 - Red means it is planned but not started.
 

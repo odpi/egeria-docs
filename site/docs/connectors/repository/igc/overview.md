@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
---8<-- "snippets/content-status/released.md"
+--8<-- "snippets/content-status/stable.md"
 
 # IBM Information Governance Catalog (IGC) OMRS Repository Connector 
                                  

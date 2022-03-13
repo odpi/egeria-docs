@@ -111,4 +111,6 @@ openlineage-integration-connectors-3.7-SNAPSHOT.jar
 spring-rest-client-connector-3.7-SNAPSHOT.jar
 ```
 
+Copy the jar files for any additional connectors not added by default into the `lib` directory.  The connectors available for Egeria are listed in the [Connector Catalog](/connectors).
+
 --8<-- "snippets/abbr.md"

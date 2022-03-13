@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+--8<-- "snippets/content-status/in-development.md"
+
 # Egeria Infrastructure Cataloguing Integration Connector
 
 ??? info "Connector details"

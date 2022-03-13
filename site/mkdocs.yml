@@ -486,6 +486,7 @@ nav:
                   - Asset Catalog OMAS: services/omas/asset-catalog/overview.md
                   - Asset Consumer OMAS: services/omas/asset-consumer/overview.md
                   - Asset Lineage OMAS: services/omas/asset-lineage/overview.md
+                  - Asset Manager OMAS: services/omas/asset-manager/overview.md
                   - Asset Owner OMAS: services/omas/asset-owner/overview.md
                   - Community Profile OMAS: services/omas/community-profile/overview.md
                   - Data Engine OMAS: services/omas/data-engine/overview.md
@@ -497,6 +498,7 @@ nav:
                   - Digital Architecture OMAS: services/omas/digital-architecture/overview.md
                   - Digital Service OMAS: services/omas/digital-service/overview.md
                   - Discovery Engine OMAS: services/omas/discovery-engine/overview.md
+                  - Glossary View OMAS: services/omas/glossary-view/overview.md
                   - Governance Engine OMAS: services/omas/governance-engine/overview.md
                   - Governance Program OMAS: services/omas/governance-program/overview.md
                   - IT Infrastructure OMAS: services/omas/it-infrastructure/overview.md

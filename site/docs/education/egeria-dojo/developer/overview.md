@@ -327,7 +327,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         
             ---8<-- "docs/guides/developer/connector-provider-intro.md"
         
-            ---8<-- "docs/guides/developer/implementing-a-connector-provider.md"
+            ---8<-- "docs/guides/developer/implementing-an-integration-connector-provider.md"
         
             #### Integration connector interface
         

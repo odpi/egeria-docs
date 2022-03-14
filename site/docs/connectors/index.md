@@ -55,7 +55,7 @@ The *topic* integration connectors run in the [Topic Integrator Open Metadata In
 | Topic Integration Connector | Description |
 |---|---|
 | [Kafka Monitor topic integration connector](/connectors/integration/kafka-monitor-integration-connector) | automatically maintains the open metadata instances for the topics hosted on an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka }.|
-| [Kafka Audit topic integration connector](/connectors/integration/kafka-audit-integration-connector) | Validates that topics that are active in an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka } are also catalogued in open metadata.  Creates an audit log record for each topic that is not catalogued. |
+| [Kafka Audit topic integration connector](/connectors/integration/kafka-topics-audit-integration-connector) | Validates that topics that are active in an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka } are also catalogued in open metadata.  Creates an audit log record for each topic that is not catalogued. |
 
 #### Cataloguing APIs
 

@@ -260,6 +260,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.6: release-notes/3-6.md
         - v3.5: release-notes/3-5.md
         - v3.4: release-notes/3-4.md
         - v3.3: release-notes/3-3.md

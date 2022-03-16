@@ -18,6 +18,25 @@ Please check the calendar has the latest confirmed Webinar information
 
 The material for our past webinars is listed below along with links to the recordings.
 
+???+ education "Building Integration connectors - March 2022 - Mandy Chessell"
+
+    This session is about building integration connectors to provide automatic integration of different technologies using Egeria.  [Event advertising](https://lfaidata.foundation/blog/2022/03/02/please-join-us-for-the-next-egeria-webinar-building-an-integration-connector-march-7th/)
+    
+    ???+ education "Presentation ..."
+         [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-writing-integration-connectors-14th-march-2022.pdf)
+
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-writing-integration-connectors-14th-march-2022.pdf"></iframe>
+         </div>
+         
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+            TODO
+          </div> 
+         
+    ??? education "Related Documentation"
+        - [Writing Integration connectors](https://egeria-project.org/guides/developer/integration-connectors/overview/)
+
 ???+ education "Using Integration connectors - February 2022 - Mandy Chessell"
 
     This session is about using integration connectors to provide automatic integration of different technologies using Egeria.  [Event advertising](https://lfaidata.foundation/blog/2022/02/02/using-an-integration-connector/)

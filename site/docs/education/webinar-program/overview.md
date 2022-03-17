@@ -31,8 +31,8 @@ The material for our past webinars is listed below along with links to the recor
          
     ???+ education "Session Replay ..."
          <div class="video-wrapper">
-            TODO
-          </div> 
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/kSHsUvATOWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+         </div> 
          
     ??? education "Related Documentation"
         - [Writing Integration connectors](https://egeria-project.org/guides/developer/integration-connectors/overview/)

@@ -78,15 +78,24 @@ In addition to the general technology under test configuration outlined above, w
 
 You do this by overriding the `downloads` value with a list of `filename` and `url` pairs.
 
-??? example "Example `downloads` override for XTDB"
+??? example "Example `downloads` override for XTDB" - for latest RELEASE of connector
     ```yaml
     downloads:
       - filename: egeria-connector-xtdb-LATEST_RELEASE-jar-with-dependencies.jar
         url: "http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=org.odpi.egeria&a=egeria-connector-xtdb&v=RELEASE&c=jar-with-dependencies"
     ```
 
+??? example "Example `downloads` override for XTDB" - for latest SNAPSHOT of connector
+    Only use this to use development level code for the connector. You will need to explicitly specify
+    the version, in this case 3.6-SNAPSHOT.
+
+    ```yaml
+    downloads:
+      - filename: egeria-connector-xtdb-LATEST_SNAPSHOT-jar-with-dependencies.jar
+        url: "http://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=org.odpi.egeria&a=egeria-connector-xtdb&v=3.6-SNAPSHOT&c=jar-with-dependencies"
+
 ??? question "Why both filename and URL?"
-    As illustrated in the example above, some URLs may dynamically redirect and resolve to a given filename, for example to always download the latest release of a given file. Because we have minimal utilities installed in the pod to actually dynamically do these downloads, there are cases (like the example above) where the utilities are not able to automatically determine the filename to produce from such dynamic URLs.
+    As illustrated in the examples above, some URLs may dynamically redirect and resolve to a given filename, for example to always download the latest release of a given file. Because we have minimal utilities installed in the pod to actually dynamically do these downloads, there are cases (like the example above) where the utilities are not able to automatically determine the filename to produce from such dynamic URLs.
 
     Therefore, by specifying both the URL and the filename we can ensure that the file is downloaded and stored as an expected output (like a `.jar` file) to ensure it can be automatically resolved by e.g. Java's class loader.
 

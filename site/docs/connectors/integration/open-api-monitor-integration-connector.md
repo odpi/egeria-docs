@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+--8<-- "snippets/content-status/tech-preview.md"
+
 # Open API Monitor Integration Connector
 
 ??? info "Connector details"
@@ -22,7 +24,7 @@ The Open API monitor integration connector connects to an endpoint and extracts 
 
 This connector uses the [API Integrator OMIS](/services/omis/api-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).  
+This is its connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).  
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="15"

@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+--8<-- "snippets/content-status/tech-preview.md"
+
 # Open Lineage Cataloguer Integration Connector
 
 ??? info "Connector details"
@@ -23,7 +25,7 @@ The OpenLineage Cataloguer integration connector registers an OpenLineage listen
 This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
 running in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the API Integrator OMIS](/guides/admin//servers/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin//servers/configuring-an-integration-daemon/#configure-the-integration-services).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"
@@ -35,7 +37,7 @@ This is its connection definition to use on the [administration commands that co
                         "connectorType" : 
                         {
                             "class" : "ConnectorType",
-                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.lineage.OpenLineageCataloguerIntegrationProvider"
+                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.openlineage.OpenLineageCataloguerIntegrationProvider"
                         }
                     }
     }

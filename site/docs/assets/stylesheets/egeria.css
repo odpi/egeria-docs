@@ -465,6 +465,24 @@
           mask-image: var(--md-admonition-icon--check-decagram);
 }
 
+
+/* Custom admonition for stable status */
+.md-typeset .admonition.stable,
+.md-typeset details.stage {
+    border-color: rgb(79, 197, 80);
+}
+.md-typeset .stable > .admonition-title,
+.md-typeset .stable > summary {
+    background-color: rgba(79, 197, 80, 0.1);
+    border-color: rgb(79, 197, 80);
+}
+.md-typeset .stable > .admonition-title::before,
+.md-typeset .stable > summary::before {
+    background-color: rgb(79, 197, 80);
+    -webkit-mask-image: var(--md-admonition-icon--check-decagram);
+    mask-image: var(--md-admonition-icon--check-decagram);
+}
+
 /* Embed videos (16:9 aspect ratio): https://github.com/squidfunk/mkdocs-material/issues/492#issuecomment-336640342 */
 .video-wrapper {
   position: relative;

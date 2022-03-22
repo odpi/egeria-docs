@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+--8<-- "snippets/content-status/stable.md"
+
 # File-based Open Metadata Archive Store Connector
 
 !!! info "Connector details"

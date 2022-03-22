@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-![Released](../../../../../../open-metadata-publication/website/images/egeria-content-status-released.png#pagewidth)
+--8<-- "snippets/content-status/stable.md"
 
 # Event topic audit log destination connector
 

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# 0030 Hosts and Platforms
+# 0030 Operating Platforms
 
 The host and platform metadata entities provide a simple model for the IT infrastructure (nodes, computers, etc) that data resources are hosted on.
 
@@ -11,15 +11,13 @@ The host and platform metadata entities provide a simple model for the IT infras
 
 *`ITInfrastructure`* is a type of [`Asset`](/types/0/0010-Base-Model/#asset) that supports the running of software systems.
 
-## Host
-
-In today's systems, hardware is managed to get the maximum use out of it. Therefore, the concept of a *`Host`* is abstracted to describe a deployment environment that has access to hardware and has a basic software stack, typically including the operating systems.
-
-The host can be linked to its location through the [`AssetLocation`](/types/0/0025-Locations/#assetlocation) relationship.
-
 ## OperatingPlatform
 
 The *`OperatingPlatform`* is an informational structure to describe the hardware characteristics and software stack (operating system, etc) of the host.
+
+## OperatingPlatformUse
+
+The *`OperatingPlatformUse`* is a relationship showing where an operating platform is located.
 
 ## OperatingPlatformManifest
 
@@ -35,4 +33,8 @@ Many hosts could have the same operating platform. This means it can be used to 
     - [0035 Complex Hosts](/types/0/0035-Complex-Hosts) describes how hardware is virtualized.
     - [0037 Software Server Platform](/types/0/0037-Software-Server-Platforms) describes the software process that run on a host.
 
+
+??? deprecated "Deprecated types"
+    - `HostOperatingPlatform` is deprecated in favor of `OperatingPlatformUse`.
+  
 --8<-- "snippets/abbr.md"

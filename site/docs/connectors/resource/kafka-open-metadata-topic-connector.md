@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
   
+--8<-- "snippets/content-status/stable.md"
+
 # Kafka Open Metadata Topic Connector
 
 The Kafka Open Metadata Topic Connector implements 

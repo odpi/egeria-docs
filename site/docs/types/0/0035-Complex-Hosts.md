@@ -1,13 +1,22 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# 0035 Complex Hosts
+# 0035 Hosts
 
+The host entity provides a simple model for the IT infrastructure (nodes, computers, etc) that data resources are hosted on.
 In today's systems, hardware is managed to get the maximum use out of it. Therefore, the concept of a *host* is typically virtualized to allow a single computer to be used for many hosts and for multiple computers to collectively support a single host.
 
-The complex hosts handle environments where many nodes are acting together as a cluster, and where virtualized containers (such as Docker) are being used.
-
 ![UML](0035-Complex-Hosts.svg)
+
+## Host
+
+The concept of a *`Host`* is abstracted to describe a deployment environment that has access to hardware and has a basic software stack, typically including the operating systems.
+
+The host can be linked to its location through the [`AssetLocation`](/types/0/0025-Locations/#assetlocation) relationship.
+
+## DeployedOn
+
+The `DeployedOn` relationship shows where IT Infrastructure is deployed to.
 
 ## BareMetalComputer
 
@@ -45,15 +54,12 @@ Within the host cluster is typically a special host (node) that is controlling t
 
 The containerized applications managed by Kubernetes are represented as `VirtualContainer`s.
 
-## HostedHost
-
-The hosts can actually be virtualized through many levels. The *`HostedHost`* relationship is used to represent the layers of virtualized hosts.
 
 ## HostClusterMember
 
 The host cluster is linked to the hosts it is managing using the *`HostClusterMember`* relationship.
 
 ??? deprecated "Deprecated types"
-    - `DeployedVirtualContainer` - use `HostedHost`, which is more general.
+    - `DeployedVirtualContainer` - use `DeployedOn`, which is more general.
 
 --8<-- "snippets/abbr.md"

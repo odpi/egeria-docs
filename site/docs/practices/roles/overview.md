@@ -30,7 +30,7 @@ Roles that lead in an organization:
 ??? tip "Manager Role."
     ### Manager Role
 
-    [Icon](manager-role.png)
+    ![Icon](manager-role.png)
 
     The manager is responsible for coordinating the work of other employees. They are often also responsible for the well-being, recognition and rewards of these employees.
 
@@ -39,7 +39,7 @@ Roles that lead in an organization:
 ??? tip "Executive Role."
     ### Executive Role
     
-    [Icon](executive-role.png)
+    ![Icon](executive-role.png)
     
     The executive is responsible for leading the direction of the organization and speaking on its behalf.  Executives are responsible for the organization's compliance to regulation.
     
@@ -55,7 +55,7 @@ Roles that interact with the organization:
 ??? tip "Supplier Role."
     ### Supplier Role
     
-    [Icon](supplier-role.png)
+    ![Icon](supplier-role.png)
     
     The supplier is a business partner that provides goods and/or services to the organization.
     
@@ -67,7 +67,7 @@ Roles that interact with the organization:
 ??? tip "Customer Role."
     ### Customer Role
     
-    [Icon](customer-role.png)
+    ![Icon](customer-role.png)
     
     The customer is responsible for choosing an asset offered by the organization and then setting up the agreements and contracts necessary before the asset can be used.
     
@@ -78,9 +78,9 @@ Roles that interact with the organization:
 ??? tip "Regulator Role."
     ### Regulator Role
     
-    [Icon](regulator-role.png)
+    ![Icon](regulator-role.png)
     
-    The regulator is the names authority for a regulation.  They define the rules, issue guidance on how to be compliant and investigate suspected breaches in the regulation.
+    The regulator is the named authority for a regulation.  They define the rules, issue guidance on how to be compliant and investigate suspected breaches in the regulation.
 
 
 ## Governance Leadership roles
@@ -90,9 +90,9 @@ Roles that occur when governance programs are in place:
 ??? tip "Data Officer Role."
     ### Data Officer Role
     
-    [Icon](data-officer-role.png)
+    ![Icon](data-officer-role.png)
     
-    The data officer is responsible for setting the data strategy andleading the data governance program.
+    The data officer is responsible for setting the data strategy and leading the data governance program.
     
     The data officer supports asset owners as they plan the investments in key assets with expertise and research into the latest data capture and processing capabilities.  
     
@@ -103,9 +103,9 @@ Roles that occur when governance programs are in place:
 ??? tip "Security Officer Role."
     ### Security Officer Role
     
-    [Icon](security-officer-role.png)
+    ![Icon](security-officer-role.png)
     
-    The supplier is a business partner that provides goods and/or services to the organization.
+    The  security officer is responsible for the protection of data and resources through the management and enforcement of security policies.
     
     #### Further information
     
@@ -115,7 +115,7 @@ Roles that occur when governance programs are in place:
 ??? tip "Incident Owner Role."
     ### Incident Owner Role
     
-    [Icon](incident-owner-role.png)
+    ![Icon](incident-owner-role.png)
     
     The incident owner role is responsible for coordinating the activity and resolution of a specific incident that is detected by the organization.
     
@@ -128,7 +128,7 @@ Roles that occur when governance programs are in place:
 ??? tip "Subject Area Owner Role."    
     ### Subject Area Owner Role
     
-    [Icon](subject-area-owner-role.png)
+    ![Icon](subject-area-owner-role.png)
     
     The subject area owner role is responsible for the definition of a subject area.
     
@@ -138,12 +138,11 @@ Roles that occur when governance programs are in place:
 Roles that lead in data privacy discussions:
 
 ??? tip "Privacy Officer Role." 
-    ### Data Subject Role
+    ### Privacy Officer Role
     
-    [Icon](data-subject-role.png)
+    ![Icon](privacy-officert-role.png)
     
-    The data subject is the person that personal data is about.
-    
+    The privacy officer sets and enforces policies to establish and manage data rights of data subjects base on the expressed intent of the data subjects and in accordance to regulations and company policies.
     #### Further information
     
     * [Data Privacy Pack](/practices/data-privacy-pack/overview)
@@ -151,7 +150,7 @@ Roles that lead in data privacy discussions:
 ??? tip "Data Subject Role."
     ### Data Subject Role
     
-    [Icon](data-subject-role.png)
+    ![Icon](data-subject-role.png)
     
     The data subject is the person that personal data is about.
     
@@ -167,7 +166,7 @@ Roles involved in the day-to-day use of data (and related) assets:
 ??? tip "Asset Owner Role."
     ### Asset Owner Role
     
-    [Icon](asset-owner-role.png)
+    ![Icon](asset-owner-role.png)
     
     Asset owners are individuals that own one or more of the following:
     
@@ -177,9 +176,9 @@ Roles involved in the day-to-day use of data (and related) assets:
     
     Most employees in an organization will be an owner of at least one asset. The size and importance of the asset in question will determine the level of seniority of the individual that is the asset owner.
     
-    The asset owner is responsible for investment decision related to the asset.  This includes decisions to extend or update the asset and when to dispose of it. They also make choices on investment in security infrastructure and support verses new function.
+    The asset owner is responsible for investment decisions related to the asset.  This includes decisions to extend or update the asset and when to dispose of it. They also make choices on investment in security infrastructure and support verses new function.
     
-    As such the governance team need to ensure that the asset owner is responsible for planning for the asset as well it functionality.
+    As such the governance team need to ensure that the asset owner is responsible for planning for the asset as well its functionality.
     
     Assets can be transferred between owners. However, there should never be a time when the asset has no owner.
     
@@ -194,7 +193,7 @@ Roles involved in the day-to-day use of data (and related) assets:
 ??? tip "Asset Consumer Role."
     ### Asset Consumer Role
     
-    [Icon](asset-consumer-role.png)
+    ![Icon](asset-consumer-role.png)
     
     The asset consumer is an individual that consumes an asset.  This may be a data set or a digital service, or both.
     
@@ -206,14 +205,14 @@ Roles involved in the day-to-day use of data (and related) assets:
 ??? tip "Data Steward Role."
     ### Data Steward Role
     
-    [Icon](data-steward-role.png)
+    ![Icon](data-steward-role.png)
     
     The data steward is responsible for ensuring data is fit for purpose. This may involve correcting errors in the data, improving its metadata  description and responding to questions about the data.
 
 ??? tip "Data Custodian Role."
     ### Data Custodian Role
     
-    [Icon](data-custodian-role.png)
+    ![Icon](data-custodian-role.png)
     
     The data custodian is responsible for ensuring data from a third party is managed and used according to its licence.
     
@@ -225,7 +224,7 @@ Roles for building and using digital services:
 ??? tip "Advocate Role."
     ### Advocate Role
     
-    [Icon](advocate-role.png)
+    ![Icon](advocate-role.png)
     
     The advocate is responsible for the selling the value of an asset to potential asset consumers.  This may be an internal role, or one that involves contracts and other agreements before the asset can be used.
     
@@ -237,7 +236,7 @@ Roles for building and using digital services:
 ??? tip "Architect Role."
     ### Architect Role
     
-    [Icon](architect-role.png)
+    ![Icon](architect-role.png)
         
     The architect is responsible for the structural design of digital systems ensuring it is fit for purpose, resilient, secure and cost effective.
     
@@ -245,10 +244,10 @@ Roles for building and using digital services:
     
     #### Architect Specialities
     
-    As organizations and the number of IT systems grows, specialisms in architecture emerge.  For example,
+    As organizations and the number of IT systems grows, specializations in architecture emerge.  For example,
     
     * *Enterprise Architect* - There are architects that take an enterprise view - looking at how the
-    systems and organization around then are supporting the organization's need.
+    systems and organization around then are supporting the organization's needs.
     These are called enterprise architects.
     
     * *Information Architect* -  There are architects that focus on the structure and flow of information around the organization.  They are called information architects.
@@ -263,7 +262,7 @@ Roles for building and using digital services:
 ??? tip "Project Lead Role."
     ### Project Lead Role
     
-    [Icon](project-lead-role.png)
+    ![Icon](project-lead-role.png)
     
     The project lead role is responsible for the delivery of a project on time and within budget.
     
@@ -274,7 +273,7 @@ Roles for building and using digital services:
     
     ### Developer Role
     
-    [Icon](developer-role.png)
+    ![Icon](developer-role.png)
     
     The developer is responsible for designing, coding and testing software.
     
@@ -286,7 +285,7 @@ Roles for building and using digital services:
 ??? tip "Systems Administrator Role."
     ### Systems Administrator Role
 
-    [Icon](systems-administrator-role.png)
+    ![Icon](systems-administrator-role.png)
 
     The systems administrator manages the IT infrastructure of an organization
 

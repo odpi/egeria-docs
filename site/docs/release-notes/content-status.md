@@ -14,7 +14,7 @@ Basically, a module will go through the phases in this order:
 
 --8<-- "snippets/content-status/in-development.md"
 --8<-- "snippets/content-status/tech-preview.md"
---8<-- "snippets/content-status/released.md"
+--8<-- "snippets/content-status/stable.md"
 --8<-- "snippets/content-status/deprecated.md"
 
 The current phase is shown at the top of the page.

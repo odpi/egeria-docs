@@ -6,6 +6,8 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+--8<-- "snippets/content-status/tech-preview.md"
+
 # Data Folder Monitor Integration Connector
 
 ??? info "Connector details"

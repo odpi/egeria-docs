@@ -1,13 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/released.md"
-
-!!! attention "Broken Links"
-
-    We are still working on this content -- you may find some broken links. Until resolved, You can
-    find additional information in the [Egeria repository](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/access-services/asset-consumer/asset-consumer-client/docs/user)
-
+--8<-- "snippets/content-status/stable.md"
 
 # Asset Consumer Open Metadata Access Service (OMAS)
 

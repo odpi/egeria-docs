@@ -25,6 +25,8 @@ set up their new roles and meet the challenges their new responsibilities bring.
 
 * [Setting up the data governance program](/practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview)
 
+* [Cataloguing Infrastructure](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview)
+
 * [Investigating suspicious activity](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview)
 
 * [Receiving patient data from a hospital](/practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview)

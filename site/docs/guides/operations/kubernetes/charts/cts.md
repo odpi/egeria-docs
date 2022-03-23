@@ -107,32 +107,33 @@ There is a single option to configure the scale of the CTS test:
 
 ## Monitoring progress
 
-You can monitor the progress of the CTS execution by looking at the log output of the `init-and-report` log:
+You can monitor the progress of the CTS execution by looking at the log output from the initialization and reporting pods:
 
-!!! cli "Get the `init-and-report` pod name"
+!!! cli "Get the init and report pod names"
     ```shell
-    kubectl get pods -l app.kubernetes.io/component=init-and-report
-    ```
+    kubectl get pods -l 'app.kubernetes.io/component in (init,report)'    ```
 
-??? success "Example output for retrieving the `init-and-report` pod name"
+??? success "Example output for retrieving the `init` pod name"
     ```text
     NAME                                       READY   STATUS    RESTARTS   AGE
-    p320-10-init-and-report-5845c9bb79-5ddwh   1/1     Running   0          45h
-    t12-init-and-report-585b47f74-85r8m        1/1     Running   0          39m
+    p320-10-init-5845c9bb79-5ddwh   1/1     Running   0          45h
+    t12-init-585b47f74-85r8m        1/1     Running   0          39m
     ```
 
     If you had multiple CTS deployments running in parallel in your cluster, this may return more than one result (as in the example above). The one that starts with the name you used as the name of your deployment is the one that represents your particular deployment.
+  
+    You will also see reporting pods once the tests start - and after finishing the init pod will go away.
 
 Once you have the pod name, you can then view the log:
 
-!!! cli "Review the `init-and-report` pod logs"
+!!! cli "Review the `init` pod logs"
     ```shell
     kubectl logs -f <podname>
     ```
 
-    Where the `<podname>` is the name of the pod discovered in the command above (e.g. `t12-init-and-report-585b47f74-85r8m`).
+    Where the `<podname>` is the name of the pod discovered in the command above (e.g. `t12-init-585b47f74-85r8m`).
 
-??? success "Example output from the `init-and-report` log"
+??? success "Example output from the `init` log"
     This opening section simply displays environment variables that have been configured, primarily useful for debugging or other diagnostics purposes:
     
     ```text
@@ -251,21 +252,25 @@ Once you have the pod name, you can then view the log:
     -- End of conformance test suite results collection, download from: /tmp/t12.tar.gz
     ```
 
-!!! attention "The pod will continue running after the CTS has completed"
-    Note that the pod itself will continue running after the CTS has completed: this is to provide adequate time to copy the bundled archive file of the results out of the pod. (If the pod were allowed to stop its execution any files within it would be lost.)
+!!! attention "The report pod will continue running after the CTS has completed"
+    Note that the report pod itself will continue running after the CTS has completed: this is to provide adequate time to copy the bundled archive file of the results out of the pod. (If the pod were allowed to stop its execution any files within it would be lost.)
 
 ## Retrieving results
 
-Once the CTS has completed running and the bundled archive file is available, it can be copied from the pod:
+Once the CTS has completed running and the bundled archive file is available, it can be copied from the report pod:
 
 !!! cli "Copy results archive from the pod"
     ```shell
-    kubectl cp <podname>:/tmp/<name>.tar.gz <filename>
+    kubectl exec cts-report--1-d8p6k -- sh -c 'cat /export/pipe' | tar -xvf -
     ```
 
-    Where the `<podname>` is the name of the pod as discovered above (e.g. `t12-init-and-report-585b47f74-85r8m`) and the `<name>` is the name of the Helm deployment. (Alternatively, you could just copy the location from the log output as shown above in the monitoring section.)
+    Where the `<podname>` is the name of the pod as discovered above (e.g. `t12-report-585b47f74-85r8m`) and the `<name>` is the name of the Helm deployment. (Alternatively, you could just copy the location from the log output as shown above in the monitoring section.)
 
-    `<filename>` is the location on your local filesystem to which you want to copy the archive.
+    This will create a local file ie:
+    ```shell
+    $ kubectl exec cts-report--1-d8p6k -- sh -c 'cat /export/pipe' | tar -xvf -
+    Defaulted container "wait-for-retrieval" out of: wait-for-retrieval, wait-for-platform (init), wait-for-kafka (init), wait-for-init (init), report (init)
+    x export/cts.tar.gztar.gz
 
 ## Uninstallation
 

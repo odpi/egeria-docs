@@ -97,12 +97,12 @@ base-strimzi-zookeeper-nodes    ClusterIP      None             <none>          
 ```
 
 The **base-presentation** service is very useful to expose as this provides a useful UI where you can explore
-types and instances. Also **egeria-platform** is the service for Egeria itself. 
+types and instances. Also **egeria-platform** is the service for Egeria itself.
 In production you might want this only exposed very carefully to other systems - and not other users or the internet, but for experimenting with Egeria let's assume you do.
 
 How these are exposed can be somewhat dependent on the specific kubernetes environment you are using.
 
-In the [lab chart](chart_lab.md) we provided an example of using `kubectl port-forward`. Here we use RedHat OpenShift in IBM Cloud, where you can expose these services via a LoadBalancer using
+In the [lab chart](/guides/operations/kubernetes/charts/lab) we provided an example of using `kubectl port-forward`. Here we use RedHat OpenShift in IBM Cloud, where you can expose these services via a LoadBalancer using
 
 ```console
 kubectl expose service/egeria-presentation --type=LoadBalancer --port=8091 --target-port=8091 --name pres  

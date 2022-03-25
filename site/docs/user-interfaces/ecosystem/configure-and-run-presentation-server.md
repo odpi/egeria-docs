@@ -56,6 +56,8 @@ We can see this is set as we expect
 $ echo $EGERIA_PRESENTATIONSERVER_SERVER_aaa
 {"remoteServerName":"cocoView1","remoteURL":"https://localhost:9443"}
 ```
+Another way to set this variable is to use a .env file. A sample .env_sample file is included in the <code>cra-server</code> folder. If you go this route change the file name to .env and set the EGERIA_PRESENTATIONSERVER_SERVER_aaa in it.
+
 To get an initial environment up-and-running just download the `truststore.p12`
 file from: [https://github.com/odpi/egeria/raw/master/truststore.p12](https://github.com/odpi/egeria/raw/master/truststore.p12).
 
@@ -74,6 +76,7 @@ file from: [https://github.com/odpi/egeria/raw/master/truststore.p12](https://gi
     Authority).
 
     Additional details on TLS for Egeria can be found in [the Egeria documentation](../../concepts/omag-server.html).
+The cra-client also needs the cert and key defined and provided for. A sample .env_sample file is included in the <code>cra-client</code> folder. If you go this route change the file name to .env and set the SSL_CRT_FILE and SSL_CRT_FILE properties in it. By default they point to the self signed cert/keys in the <code>ssl</code> folder. 
 
 ## 3. Running the presentation server 
 To run on a different machine, copy over the cra-client and cra-server/build folders, maintaining their relative locations to the target machine.
@@ -102,7 +105,11 @@ Once you have the code where you want to run it:
 
 If you have used the sample environment variables and are using the  <a href="https://egeria.odpi.org/open-metadata-resources/open-metadata-tutorials/egeria-dojo/">Egeria Dojo setup</a>, then you can login as follows.  
 
-In your web browser go to <code>https://localhost:9443/aaa/ </code>  Replace host/port accordingly
+=== "In production mode"
+    In your web browser go to <code>https://localhost:9443/aaa/ </code>  Replace host/port accordingly
+
+=== "In development mode"
+    In your web browser go to <code>https://localhost:3000/aaa/ </code>  Replace host/port accordingly
 
 * In this example `aaa` is the tenant name we used above when defining the environment variable
 * The trailing / is currently required to allow the login page to load

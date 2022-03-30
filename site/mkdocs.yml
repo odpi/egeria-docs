@@ -20,8 +20,8 @@ nav:
           - Metadata Exchange: patterns/metadata-exchange/overview.md
           - Metadata Governance: patterns/metadata-governance/overview.md
   - Using:
-      - Planning Guide: guides/planning/guide.md
-      - Diagnostic Guide: guides/diagnostic/guide.md
+      - Planning Guide: guides/planning/overview.md
+      - Diagnostic Guide: guides/diagnostic/overview.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -38,7 +38,7 @@ nav:
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
-          - Operate OMAG Server Platform: guides/operations/guide.md
+          - Operate OMAG Server Platform: guides/operations/overview.md
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md

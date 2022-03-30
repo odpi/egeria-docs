@@ -58,7 +58,7 @@ Paste this code between the curly braces of the `AssetListen` class.
             long         displayedRecords = 10;
 
             System.out.println("Number of records: " + numberOfRecords);
-            
+
             if (numberOfRecords < displayedRecords)
             {
                 displayedRecords = numberOfRecords;
@@ -73,7 +73,7 @@ Paste this code between the curly braces of the `AssetListen` class.
             {
                 List<String> columnNames = connector.getColumnNames();
                 int          startingFrom = 0;
-                
+
                 if (columnNames == null)
                 {
                     /*
@@ -113,7 +113,7 @@ Paste this code between the curly braces of the `AssetListen` class.
 
     /**
      * Print out details of an asset.
-     * 
+     *
      * @param asset retrieved asset
      */
     private void printAsset(Asset asset)
@@ -127,7 +127,44 @@ Paste this code between the curly braces of the `AssetListen` class.
         System.out.println("    displayName: " + asset.getDisplayName());
         System.out.println("    description: " + asset.getDescription());
         System.out.println("    member of zones: " + asset.getZoneMembership());
-        
+
+        List<String>          classifications = new ArrayList<>();
+        ElementClassification latestChange = null;
+
+        if (asset.getClassifications() != null)
+        {
+            for (ElementClassification classification : asset.getClassifications())
+            {
+                if (classification != null)
+                {
+                    if ("LatestChange".equals(classification.getClassificationName()))
+                    {
+                        latestChange = classification;
+                    }
+                    else
+                    {
+                        classifications.add(classification.getClassificationName());
+                    }
+                }
+            }
+        }
+
+        if (latestChange != null)
+        {
+            System.out.println("    latest change:");
+
+            if (latestChange.getClassificationProperties() != null)
+            {
+                for (String propertyName : latestChange.getClassificationProperties().keySet())
+                {
+                    System.out.println("       " + propertyName + ": " + latestChange.getClassificationProperties().get(propertyName));
+                }
+            }
+
+        }
+
+        System.out.println("    other classifications: " + classifications.toString());
+
         try
         {
             /*

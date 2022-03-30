@@ -323,7 +323,7 @@ There are also optional advanced exercises in this session.
 Using Postman, and the **Egeria-admin-services-operational** Postman collection, start your server `myMetadataServer`.
 The documentation from the Admin Guide is shown below.
 
-* [Starting and Stopping OMAG Servers :material-dock-window:](/guides/operations/guide/#starting-and-stopping-an-omag-server){ target=docs }
+* [Starting and Stopping OMAG Servers :material-dock-window:](/guides/operations/overview/#starting-and-stopping-an-omag-server){ target=docs }
 
 Review the logs to see typical output from the server being started.
 ## Calling the metadata server API

@@ -323,7 +323,7 @@ It is also able to retrieve the status of the services running within an active 
     ```java linenums="1"
     OMAGServerOperationsClient serverOperationsClient = new OMAGServerOperationsClient(clientUserId, serverName, platformURLRoot);
     
-    ServerStatus adminServerStatus = serverOperationsClient.getServerStatus();
+    ServerServicesStatus adminServerStatus = serverOperationsClient.getServerStatus();
     
     if (adminServerStatus != null)
     {
@@ -346,6 +346,6 @@ The server type is derived by the administration services when it starts the ser
 !!! education "Further information"
 
     * The [administration guide](/guides/admin) describes how to use the administration services to configure OMAG Server Platforms and OMAG Servers.
-    * The [operations guide](/guides/operations/guide) describes how to use the administration services to start/stop OMAG Servers on OMAG Server Platforms and retrieve diagnostics.
+    * The [operations guide](/guides/operations/overview) describes how to use the administration services to start/stop OMAG Servers on OMAG Server Platforms and retrieve diagnostics.
     
 --8<-- "snippets/abbr.md"

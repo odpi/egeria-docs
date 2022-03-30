@@ -18,7 +18,7 @@ to enable the integration daemon to recover from errors.
 
 If a connector is incorrectly configured, the integration daemon's configuration document needs to be changed
 using [administration commands](/user/admin/servers/configuring-an-integration-daemon/#configuring-the-integration-services)
-and the integration daemon [restarted](/guides/operations/guide/#starting-and-stopping-an-omag-server).
+and the integration daemon [restarted](/guides/operations/overview/#starting-and-stopping-an-omag-server).
 
 ## Sources of errors
 

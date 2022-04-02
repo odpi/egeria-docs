@@ -21,7 +21,7 @@ Servers are configured through the [Administration Services](/services/admin-ser
     ===============================
     OMAG Server Operations Utility:    Mon Feb 14 09:33:07 GMT 2022
     ===============================
-    Running against platform: https://localhost:9443 - Egeria OMAG Server Platform (version 3.7-SNAPSHOT)
+    Running against platform: https://localhost:9443 - Egeria OMAG Server Platform (version 3.8-SNAPSHOT)
     Using userId: garygeeke
     
     Enter a command along with the server name and any optional parameters. Press enter to execute request.

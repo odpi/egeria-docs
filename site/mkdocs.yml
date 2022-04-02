@@ -239,6 +239,7 @@ nav:
                   - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
                   - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                   - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
+                  - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
           - Specific Guidance:
               - Programming Languages: guides/contributor/languages.md
               - Tools:

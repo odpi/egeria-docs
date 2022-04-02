@@ -696,7 +696,7 @@ nav:
       - Review: concepts/review.md
       - Schema: concepts/schema.md
       - Server Name: concepts/server-name.md
-      - Software Server Capability: concepts/software-server-capability.md
+      - Software Capability: concepts/software-capability.md
       - Star Rating: concepts/review.md
       - Tag: concepts/informal-tag.md
       - To Do: concepts/to-do.md

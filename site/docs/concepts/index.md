@@ -27,7 +27,7 @@
 - [Asset Catalog OMAS](/services/omas/asset-catalog/overview)
 - [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
 - [Asset Catalog OMAS](/services/omas/asset-catalog/overview)
-- [Asset Manager](/concepts/software-server-capability/#asset-manager)
+- [Asset Manager](/concepts/software-capability/#asset-manager)
 - [Asset Manager OMAS](/services/omas/asset-manager/overview)
 - [Asset Owner OMAS](/services/omas/asset-owner/overview)
 - [Audit Log](/concepts/audit-log)
@@ -95,7 +95,7 @@
 ## E
 
 - [Endpoint](/concepts/endpoint)
-- [Engine](/concepts/software-server-capability/#engine)
+- [Engine](/concepts/software-capability/#engine)
 - [Engine Host](/concepts/engine-host)
 - [Enterprise Metadata Collection](/concepts/metadata-collection)
 - [Enterprise Repository Services Subsystem (OMRS)](/services/omrs)
@@ -201,7 +201,7 @@
 
 ## M
 
-- [Master Data Manager](/concepts/software-server-capability/#master-data-manager)
+- [Master Data Manager](/concepts/software-capability/#master-data-manager)
 - [Memento Classification](open-metadata-types/0010-Base-Model)
 - [Metadata Access Point](/concepts/metadata-access-point)
 - [Metadata Access Server](/concepts/metadata-access-server)
@@ -300,7 +300,7 @@
 - [Security Integrator OMIS](/services/omis/security-integrator/overview)
 - [Security Manager OMAS](/services/omas/security-manager/overview)
 - [Security Officer OMAS](/services/omas/security-officer/overview)
-- [Server Capabilities](/concepts/software-server-capability)
+- [Server Capabilities](/concepts/software-capability)
 - [Server Chassis](/services/server-chassis)
 - [Servers for Governance](/concepts/governance-server)
 - [Server Name](/concepts/server-name)
@@ -308,7 +308,7 @@
 - [Server Types](/concepts/omag-server)
 - [Server URL Root](/concepts/platform-url-root)
 - [Software Developer OMAS](/services/omas/software-developer/overview)
-- [Software Server Capability](/concepts/software-server-capability)
+- [Software Server Capability](/concepts/software-capability)
 - [Star Ratings](/concepts/review)
 - [Stewardship Action OMAS](/services/omas/stewardship-action/overview)
 - [Stewardship Engine](/concepts/governance-engine)
@@ -322,7 +322,7 @@
 ## T
 
 - [Tagging](/concepts/informal-tag)
-- [Tool](/concepts/software-server-capability/#tool)
+- [Tool](/concepts/software-capability/#tool)
 - Tombstone - see [Memento](#m)
 - [To Do](/concepts/to-do)
 - [Topic](/concepts/basic-concepts/#topic)

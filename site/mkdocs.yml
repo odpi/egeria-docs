@@ -20,8 +20,8 @@ nav:
           - Metadata Exchange: patterns/metadata-exchange/overview.md
           - Metadata Governance: patterns/metadata-governance/overview.md
   - Using:
-      - Planning Guide: guides/planning/guide.md
-      - Diagnostic Guide: guides/diagnostic/guide.md
+      - Planning Guide: guides/planning/overview.md
+      - Diagnostic Guide: guides/diagnostic/overview.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -38,7 +38,7 @@ nav:
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
-          - Operate OMAG Server Platform: guides/operations/guide.md
+          - Operate OMAG Server Platform: guides/operations/overview.md
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
@@ -239,6 +239,7 @@ nav:
                   - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
                   - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                   - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
+                  - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
           - Specific Guidance:
               - Programming Languages: guides/contributor/languages.md
               - Tools:
@@ -260,6 +261,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.7: release-notes/3-7.md
         - v3.6: release-notes/3-6.md
         - v3.5: release-notes/3-5.md
         - v3.4: release-notes/3-4.md
@@ -695,7 +697,7 @@ nav:
       - Review: concepts/review.md
       - Schema: concepts/schema.md
       - Server Name: concepts/server-name.md
-      - Software Server Capability: concepts/software-server-capability.md
+      - Software Capability: concepts/software-capability.md
       - Star Rating: concepts/review.md
       - Tag: concepts/informal-tag.md
       - To Do: concepts/to-do.md

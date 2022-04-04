@@ -96,7 +96,7 @@ The REST API operations are grouped into services by the following `@Tag` annota
          description="The operational administration services support the management " +
                      "of OMAG Server instances.  This includes starting and stopping the servers as well as querying and changing their operational state.",
          externalDocs=@ExternalDocumentation(description="Further information",
-                                             url="https://odpi.github.io/guides/operations/guide.html"))
+                                             url="https://egeria-project.org/guides/operations/overview.html"))
     ```
 
 Further information can be provided for each operation. This is one of the *operational services* operations:
@@ -110,7 +110,7 @@ This is added to the spring resource bean using the `@Operation` annotation:
     @Operation(summary="Activate server with stored configuration document",
                description="Activate the named OMAG server using the appropriate configuration document found in the configuration store.",
                externalDocs=@ExternalDocumentation(description="Configuration Documents",
-               url="https://egeria.odpi.org/open-metadata-implementation/admin-services/docs/concepts/configuration-document.html"))
+               url="https://egeria-project.org/open-metadata-implementation/admin-services/docs/concepts/configuration-document.html"))
     ```
 
 --8<-- "snippets/abbr.md"

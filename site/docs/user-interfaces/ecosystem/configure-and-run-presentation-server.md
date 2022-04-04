@@ -3,14 +3,14 @@
 
 # Setup
 
-If you are following the [checklist](ecosystem-ui-planning-checklist.md) you should have completed the following checked tasks before proceeding.
+If you are following the [checklist](/user-interfaces/ecosystem/ecosystem-ui-planning-checklist.md) you should have completed the following checked tasks before proceeding.
 
-- [x] [Plan](../../planning/guide/) your Egeria topology- including how many platforms, how many servers, cohort and connectors
-- [x] [Plan your UI](ecosystem-ui-planning-checklist.md) which UI capabilities you require.
+- [x] [Plan](/guides/planning/overview) your Egeria topology- including how many platforms, how many servers, cohort and connectors
+- [x] [Plan your UI](/user-interfaces/ecosystem/ecosystem-ui-planning-checklist) which UI capabilities you require.
 - [x] Start Egeria platform(s)
-- [x] [Configure metadata server platform](../../admin/configuring-the-omag-server-platform) if required (some of the Kubenetes images already configure a metadata server platform)
-- [x] [Configure and start metadata access store server](../../admin/servers/configuring-a-metadata-access-store)  if required (some of the Kubenetes images already configure a metadata access store server)
-- [x] [Configure and start view services](../../admin-services/view-server)  for each of the UI capabilities you require. The name of the UI capability is the same as the name of the view service.
+- [x] [Configure OMAG Server Platform](/guides/admin/configuring-the-omag-server-platform) if required (some of the Kubenetes images already configure a metadata server platform)
+- [x] [Configure and start metadata access store](/guides/admin/servers/configuring-a-metadata-access-store)  if required (some of the Kubenetes images already configure a metadata access store server)
+- [x] [Configure and start view services](/guides/admin/servers/configuring-a-view-server)  for each of the UI capabilities you require. The name of the UI capability is the same as the name of the view service.
 - [ ] *Configure and run the presentation server by following the below instructions*
 - [ ] Validate that the presentation server is running as expected.
 

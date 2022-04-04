@@ -8,9 +8,11 @@ hide:
 
 # Egeria Services
 
-The Egeria services provide the support for the OMAG Server Platform and its Open Metadata and governance services.
+The Egeria services provide the support for the OMAG Server Platform and its Open Metadata and Governance services.
 
-## Platform Support Services
+![Server Chassis Structure](server-chassis-structure.svg)
+
+## Base Platform Support Services
 
 * [Administration Services](/services/admin-services/overview) - for configuring and operating [OMAG Servers](/concepts/omag-server)
 * [Platform Operation Services](/services/platform-services/overview) - for managing the OMAG Servers when they are running.

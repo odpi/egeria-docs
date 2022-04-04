@@ -5,7 +5,7 @@
 
 ## OMAG Server Platform
 
-Figure 1 shows the choices you have when [gathering diagnostics](/guides/diagnostic/guide) for a problem related to the
+Figure 1 shows the choices you have when [gathering diagnostics](/guides/diagnostic/overview) for a problem related to the
 OMAG Server Platform and the servers and services that run on it.
 These are in addition to the diagnostics from the container services, and the services that either call or are
 called by the services running on the OMAG Server Platform.

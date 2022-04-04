@@ -25,6 +25,9 @@ The material for our past webinars is listed below along with links to the recor
     ???+ education "Presentation ..."
          [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-catalog-connector-comparison-4th-April-2022.pdf)
          
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-catalog-connector-comparison-4th-April-2022.pdf"></iframe>
+         </div>
     ??? education "Related Documentation"
         - [Repository Connectors](https://egeria-project.org/concepts/repository-connector/?h=repository)
         - [Integration connectors](https://egeria-project.org/connectors/?h=integration+connectors#integration-connectors)

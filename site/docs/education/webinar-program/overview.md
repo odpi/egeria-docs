@@ -18,6 +18,18 @@ Please check the calendar has the latest confirmed Webinar information
 
 The material for our past webinars is listed below along with links to the recordings.
 
+???+ education "Connector comparison - choices on how to bring your data catalog to Egeria.  April 2022 - Mandy Chessell"
+
+    This session compares integration and repository connectors 
+    
+    ???+ education "Presentation ..."
+         [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-catalog-connector-comparison-4th-April-2022.pdf)
+         
+    ??? education "Related Documentation"
+        - [Repository Connectors](https://egeria-project.org/concepts/repository-connector/?h=repository)
+        - [Integration connectors](https://egeria-project.org/connectors/?h=integration+connectors#integration-connectors)
+
+
 ???+ education "Building Integration connectors - March 2022 - Mandy Chessell"
 
     This session is about building integration connectors to provide automatic integration of different technologies using Egeria.  [Event advertising](https://lfaidata.foundation/blog/2022/03/02/please-join-us-for-the-next-egeria-webinar-building-an-integration-connector-march-7th/)

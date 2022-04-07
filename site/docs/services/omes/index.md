@@ -16,8 +16,8 @@ Broadly there are three types of governance engines:
 
 - *[Governance action engines](/concepts/governance-action-engine)* that manage the processing supporting governance processing such as the resolution of issues reported in the open metadata ecosystem or the assets it supports.  They implement the engine interface defined in the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
 
-- *[Archive engines](/concepts/archvie-engine)* that maintain [Open Metadata Archives](/concepts/open-meetadata-archive) based on the live content of the open metadata repositories.
+- *[Repository governance engines](/concepts/repository-governance-engine)* that govern open metadata repository such as maintain [Open Metadata Archives](/concepts/open-meetadata-archive) based on the live content of the open metadata repositories.
 
-These engines are supported by the [Asset Analysis OMES](/services/omes/asset-analysis/overview), [Governance Action OMES](/services/omes/governance-action/overview) and [Archive Manager OMES](/services/omes/archive-manager/overview) respectively.
+These engines are supported by the [Asset Analysis OMES](/services/omes/asset-analysis/overview), [Governance Action OMES](/services/omes/governance-action/overview) and [Repository Governance OMES](/services/omes/repository-governance/overview) respectively.
 
 --8<-- "snippets/abbr.md"

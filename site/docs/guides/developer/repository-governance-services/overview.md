@@ -1,16 +1,16 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-# Writing Archive Services
+# Writing Repository Governance Services
 
----8<-- "docs/connectors/archive/archive-service-intro.md"
+---8<-- "docs/connectors/repository-governance/repository-governance-service-intro.md"
 
 
 ## Interface
 
-The interface that all archive services must implement is defined by [`ArchiveService` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/engine-services/archive-manager/archive-manager-api/src/main/java/org/odpi/openmetadata/engineservices/archivemanager/connector/ArchiveService.java){ target=gh }:
+The interface that all repository governance services must implement is defined by [`RepositoryGovernanceService` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/engine-services/repository-governance/repository-governance-api/src/main/java/org/odpi/openmetadata/engineservices/repositorygovernance/connector/RepositoryGovernanceService.java){ target=gh }:
 
-![Figure 1](archive-service-methods.svg)
+![Figure 1](repository-governance-service-methods.svg)
 > **Figure 1:** Methods implemented by an archive service
 
 - `initialize` is a standard method for all connectors that is called by the [connector broker](/concepts/connector-broker) when the connector is created. The [connector](/frameworks/ocf/#connector) is passed the [connection](/frameworks/ocf/#connection) object from the configuration and a unique identifier for this instance of the connector.

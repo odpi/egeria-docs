@@ -515,7 +515,7 @@ nav:
                   - Open Metadata Engine Services: services/omes/index.md
                   - Asset Analysis: services/omes/asset-analysis/overview.md
                   - Governance Action: services/omes/governance-action/overview.md
-                  - Archive Manager: services/omes/archive-manager/overview.md
+                  - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
                   - Analytics Integrator: services/omis/analytics-integrator/overview.md

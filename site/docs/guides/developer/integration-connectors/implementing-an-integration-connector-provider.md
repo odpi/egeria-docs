@@ -7,10 +7,7 @@ Each connector provider for an integration connector extends the following base 
 ```
 org.odpi.openmetadata.governanceservers.integrationdaemonservices.connectors.IntegrationConnectorProvider
 ```
-This assumes:
-
-- There is a single connector implementation class for the connector.
-- The connector is instantiated with the default constructor. This means all of its configuration information is contained in the [Connection](/concepts/connection) object supplied on the `initialize()` method.
+This assumes the integration connector's implementation class is instantiated with the default constructor. This means all of its configuration information is contained in the [Connection](/concepts/connection) object supplied on the `initialize()` method.
 
 If your connector implementation matches these requirements, its connector provider implementation need only implement a constructor to configure the base class's function with details of itself and the Java class of the connector it needs using:
                
@@ -40,7 +37,7 @@ public class XXXStoreProvider extends IntegrationConnectorProviderBase
     /*
      * Descriptive information about the connector for the connector type and audit log.
      */
-    private static final String connectorQualifiedName = "MyOrg:XXXStoreConnector";
+    private static final String connectorQualifiedName = "MyOrg:Integration:XXXStoreConnector";
     private static final String connectorDisplayName   = "XXX Store Connector";
     private static final String connectorDescription   = "Connector supports ... add details here.";
     private static final String connectorWikiPage      = "Add url to documentation here";

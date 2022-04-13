@@ -4,7 +4,7 @@
 
 The structure of an *open metadata archive writer* that builds an open metadata archive as a json file, uses
 
-* One or more *Archive Helper* classes to construct the elements for the archive.
+* One or more *archive helper* classes to construct the elements for the archive.
 * An *archive builder* class that holds the archive content in memory as it is assembled.
 
 Your archive writer class then extracts the content from the builder to write out the archive file.

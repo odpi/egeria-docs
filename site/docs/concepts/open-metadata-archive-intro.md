@@ -7,7 +7,7 @@ An *open metadata archive* is a portable collection of open metadata [type defin
 The open metadata archive has two types:
 
 - A **content pack** containing reusable definitions that are generally useful. They may come from the Egeria community or third parties.
-- A **metadata export** containing an export of metadata from a repository. They are used to transfer metadata between repositories that are not connected to the same [cohort](/services/omrs/cohort).
+- A **metadata export** containing an export of metadata from a repository. They are used to transfer metadata between repositories that are not connected to the same [cohort](/concept/cohort-member).
 
 
 --8<-- "snippets/abbr.md"

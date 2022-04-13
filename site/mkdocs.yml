@@ -662,13 +662,14 @@ nav:
       - Metadata Access Server: concepts/metadata-access-server.md
       - Metadata Access Store: concepts/metadata-access-store.md
       - Metadata Collection Id: concepts/metadata-collection-id.md
+      - Metadata Discovery: features/discovery-and-stewardship/overview.md
       - Metadata Repository: concepts/metadata-repository.md
       - Note Log: concepts/note-log.md
       - OMAG Server: concepts/omag-server.md
       - OMAG Server Platform: concepts/omag-server-platform.md
       - OMAG Subsystem: concepts/omag-subsystem.md
       - Open Discovery Engine: concepts/open-discovery-engine.md
-      - Open Discovery Service: guides/developer/open-discovery-services/overview.md
+      - Open Discovery Service: concepts/open-discovery-service.md
       - Open Lineage Server: concepts/open-lineage-server.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md

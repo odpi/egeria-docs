@@ -3,7 +3,7 @@
 
 An *open discovery service* is a component that performs specific analysis of the contents of a [digital resource](/concepts/resource) on request.  Each time it runs, it creates a new [discovery analysis report](/concepts/discovery-analysis-report) linked off of the digital resource's [Asset](/concepts/asset) metadata element.  
 
-![Asset with discovery analysis reports](/guides/developer/open-discovery-services/discovery-analysis-report-structure.svg)
+![Asset with discovery analysis reports](/guides/developer/open-discovery-services/asset-to-discovery-analysis-reports.svg)
 
 The *discovery analysis report* contains one or more sets of related properties that the discovery service has discovered about the resource, its metadata, structure and/or content.  These are stored in a set of [*discovery annotations*](/guides/developer/open-discovery-services/overview/#discovery-annotations) linked off of the discovery analysis report.
 

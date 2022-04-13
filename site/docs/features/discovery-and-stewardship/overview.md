@@ -27,9 +27,10 @@ Discovery and stewardship are the most advanced form of automation for asset cat
 
 ## Open discovery services
 
+![Open Discovery Service](/connectors/discovery/discovery-service.svg)
+
 Open discovery services run in the [Asset Analysis OMES](/services/omes/asset-analysis) that is hosted in a [Engine Host](/concepts/engine-host).  The metadata repository interface for metadata discovery tools is implemented by the [Discovery Engine OMAS](/services/omas/discovery-engine).
 
-![Open Discovery Service](/connectors/discovery/discovery-service.svg)
 
 --8<-- "docs/guides/developer/open-discovery-services/operation-of-a-discovery-service.md"
 
@@ -40,9 +41,13 @@ The discovery analysis report structures the annotations in two ways:
 * Annotations that describe a characteristic of the whole digital resource.
 * Annotations that describe a characteristic of a single data field within the digital resource.
 
+The annotations for the data fields are linked off of the data fields created by schema analysis.
+
 ![Discovery analysis report structure](/guides/developer/open-discovery-services/discovery-analysis-report-structure.svg)
 
 ## Discovery actions
+
+Open discovery can be used for the following types of analysis.
 
 ### Schema extraction
 
@@ -52,35 +57,64 @@ The discovery analysis report structures the annotations in two ways:
 
 ### Data Profiling
 
+Profiling analysis looks at the data values in the resource and summarizes their characteristics.
+
 ![Open discovery data profiling](/guides/developer/open-discovery-services/open-discovery-data-profiling.svg)
 
 ### Data class discovery
+
+Data class discovery captures the analysis on how close a data field matches the specification defined in a [data class](/concepts/data-class).
 
 ![Data class discovery](/guides/developer/open-discovery-services/open-discovery-data-class-discovery.svg)
 
 ### Semantic discovery
 
+Semantic discovery is attempting to define the meaning of the data values in the asset. The result is a recommended glossary term stored as an annotation.
+
 ![Semantic discovery](/guides/developer/open-discovery-services/open-discovery-semantic-discovery.svg)
 
+These annotations are the discovery engine equivalent of the *Informal Tag* shown in [0150 - Feedback](/types/1/0150-feedback) in Area 1.
+It typically takes confirmation by a subject-matter expert to convert this into a [Semantic Assignment](/types/3/0370-Semantic-Assignment).
+
 ### Classification discovery
+Classification discovery adds recommendations for how the data could be classified. 
 
 ![Classification discovery](/guides/developer/open-discovery-services/open-discovery-classification-discovery.svg)
 
 ### Calculating quality scores
 
+Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.
+
 ![Quality Scores](/guides/developer/open-discovery-services/open-discovery-quality-scores.svg)
 
 ### Relationship discovery
+
+Relationship discovery identifies relationships between different resources (or data fields), such as two columns that have a foreign key relationship.
+
+It is possible to create the relationship as a relationship annotation or attach a relationship advice to the discovery analysis report.
 
 ![Relationship discovery](/guides/developer/open-discovery-services/open-discovery-relationship-discovery.svg)
 
 ### Capturing measurements
 
-![Data source measurements](/guides/developer/open-discovery-services/open-discovery-data-source-measurements.svg)
+The measurement annotations capture a snapshot of the physical dimensions and activity levels at a particular moment in time.
+For example, it may calculate the size of the data source or the number of users accessing it.
+
+![Data source measurements](/guides/developer/open-discovery-services/open-discovery-data-source-measurement.svg)
 
 ### Requesting stewardship action
 
+A RequestForAction entity (RfA) is used when an open discovery service performs a test on the data (such as a discovery rule) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.
+
 ![Request for action](/guides/developer/open-discovery-services/open-discovery-request-for-action.svg)
+
+The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) is designed to respond to the requests for actions (RfAs).
+
+## Open discovery pipelines
+
+Many of the data field analysis rely on schema extraction setting up the data field structure.  
+
+---8<-- "docs/guides/developer/open-discovery-services/discovery-pipeline-intro.md"
 
 ## Working with external engines
 

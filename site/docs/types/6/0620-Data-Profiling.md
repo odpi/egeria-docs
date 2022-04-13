@@ -8,8 +8,7 @@ hide:
 
 # 0620 Data Profiling
 
-Profiling analysis looks at the data values
-in the asset and summarizes their characteristics.
+Profiling analysis looks at the data values in the resource and summarizes their characteristics.
 
 ![UML](0620-Data-Profiling.svg)
 

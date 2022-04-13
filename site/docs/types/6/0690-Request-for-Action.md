@@ -8,16 +8,10 @@ hide:
 
 # 0690 Request for Action
 
-A RequestForAction entity (RfA) is used to trigger the
-[Stewardship Action OMAS](/services/omas/stewardship-action).
+A RequestForAction entity (RfA) is used to trigger the [Stewardship Action OMAS](/services/omas/stewardship-action/overview).
 
-It is used when the discovery service performs a test on the
-data (such as a discovery rule) or has discovered an anomaly in
-the data landscape compared to its metadata that potentially needs
-a steward or a curator's action.
+It is used when an [open discovery service](/concepts/open-discovery-service) performs a test on the data (such as a discovery rule) or has discovered an anomaly in  the data landscape compared to its metadata that potentially needs a steward or a curator's action.
 
-The governance action framework is configured to
-respond to the requests for actions (RfAs).
 
 ![UML](0690-Request-for-Action.svg)
 

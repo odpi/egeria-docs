@@ -230,7 +230,7 @@ The annotation types defined in the  [Open Discovery Framework (ODF)](/framework
 * **Semantic Annotation** - documents suggested meanings for this data based on the values and name of the field.
 * **Suspect Duplicate Annotation** - identifies other asset definitions that seem to point to the same physical asset.
 
-??? "education" Open Metadata Types for Discovery Annotations
+??? education "Open Metadata Types for Discovery Annotations"
 
     The open metadata types for a discovery annotations are describe in [Area 6](/types/6).
 

@@ -6,7 +6,7 @@
 Metadata discovery is an automated process that extracts metadata about a [digital resource](/concepts/resource). This metadata may be:
 
 * embedded within the asset (for example a digital photograph has embedded metadata), or
-* managed by the platform that is hosting the asset (for example, a relational database platform maintains schema information about the data store in its databases) or
+* managed by the platform that is hosting the asset (for example, a relational database platform maintains schema information about the data store in its databases), or
 * determined by analysing the content of the asset (for example a quality tool may analyse the data content to determine the types and range of values it contains and, maybe from that analysis, determine a quality score for the data).
 
 Some metadata discovery may occur when the digital resource is first catalogued as an [asset](/concepts/asset).  [Integrated cataloguing](/features/integrated-cataloguing) typically automates the creation the basic asset entry, its connection and optionally, its schema.  This is sometimes called *technical metadata*.  
@@ -29,7 +29,7 @@ Discovery and stewardship are the most advanced form of automation for asset cat
 
 ![Open Discovery Service](/connectors/discovery/discovery-service.svg)
 
-Open discovery services run in the [Asset Analysis OMES](/services/omes/asset-analysis) that is hosted in a [Engine Host](/concepts/engine-host).  The metadata repository interface for metadata discovery tools is implemented by the [Discovery Engine OMAS](/services/omas/discovery-engine).
+Open discovery services run in the [Asset Analysis OMES](/services/omes/asset-analysis) that is hosted in a [Engine Host](/concepts/engine-host).  The metadata repository interface for metadata discovery tools is implemented by the [Discovery Engine OMAS](/services/omas/discovery-engine) that runs in a [Metadata Access Server](/concepts/metadata-access-server).  Calls to open discovery services are initiated by creating [governance actions](/concepts/governance-action).
 
 
 --8<-- "docs/guides/developer/open-discovery-services/operation-of-a-discovery-service.md"
@@ -116,9 +116,15 @@ Many of the data field analysis rely on schema extraction setting up the data fi
 
 ---8<-- "docs/guides/developer/open-discovery-services/discovery-pipeline-intro.md"
 
+![pipe;ine-example](/guides/developer/open-discovery-services/open-discovery-pipeline-example.svg)
+
 ## Working with external engines
 
 Open discovery services may directly implement the analysis function or may invoke an external service to create the annotations.
+
+## Initiating stewardship
+
+Stewardship is initiated either through the creation of a *Request for Action* annotation or when the *discovery analysis report's* status changes to COMPLETE.
 
 !!! education "Further information"
     * [Open discovery services supplied by the Egeria project](/connectors/#open-discovery-services)

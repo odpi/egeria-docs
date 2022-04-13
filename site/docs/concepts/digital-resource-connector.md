@@ -5,6 +5,7 @@
 
 ---8<-- "docs/connectors/resource/digital-resource-connector-intro.md"
 
+## 
 !!! education "Further information"
     
     - [Digital resource connector catalog](/connectors/#digital-resource-connectors).

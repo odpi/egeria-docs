@@ -604,8 +604,8 @@ nav:
       - Anchor: concepts/anchor.md
       - Archive Engine: concepts/archive-engine.md
       - Asset: concepts/asset.md
-      - Audit Log: concepts/audit-log.md
       - Asset Log Message: concepts/asset-log-message.md
+      - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
@@ -613,6 +613,7 @@ nav:
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md
+      - Component Description: concepts/component-description.md
       - Configuration Document: concepts/configuration-document.md
       - Configuration Properties: concepts/configuration-properties.md
       - Conformance Test Server: concepts/conformance-test-server.md
@@ -623,7 +624,9 @@ nav:
       - Connector Provider: concepts/connector-provider.md
       - Connector Type: concepts/connector-type.md
       - Contact Method: concepts/contact-method.md
+      - Data Class: concepts/data-class.md
       - Data Engine Proxy: concepts/data-engine-proxy.md
+      - Digital Resource Connector: concepts/digital-resource-connector.md
       - Discovery Analysis Report: concepts/discovery-analysis-report.md
       - Endpoint: concepts/endpoint.md
       - Engine Host: concepts/engine-host.md
@@ -647,6 +650,8 @@ nav:
       - Governance Service: concepts/governance-service.md
       - Governance Zone: concepts/governance-zone.md
       - Headcount Limit: concepts/person-role.md
+      - Guard: concepts/guard.md
+      - GUID: concepts/guid.md
       - Home Metadata Repository: concepts/home-metadata-repository.md
       - In Topic: concepts/in-topic.md
       - Incident Report: concepts/incident-report.md
@@ -705,6 +710,7 @@ nav:
       - Useful Resource: concepts/useful-resource.md
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md
+      - Virtual Connection: concepts/connection.md
   - Practices:
       - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md

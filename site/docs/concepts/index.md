@@ -27,10 +27,12 @@
 - [Asset Catalog OMAS](/services/omas/asset-catalog/overview)
 - [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
 - [Asset Catalog OMAS](/services/omas/asset-catalog/overview)
+- [Asset log Message](/concepts/asset-log-message)
 - [Asset Manager](/concepts/software-capability/#asset-manager)
 - [Asset Manager OMAS](/services/omas/asset-manager/overview)
 - [Asset Owner OMAS](/services/omas/asset-owner/overview)
 - [Audit Log](/concepts/audit-log)
+- [Audit Log Destination Connector](/concepts/audit-log-destination-connector)
 
 
 ## B
@@ -49,6 +51,7 @@
 - [Comments](/concepts/comments)
 - [Community](/concepts/community)
 - [Community Profile OMAS](/services/omas/community-profile/overview)
+- [Component Description](/concepts/component-description)
 - [Configuration Document](/concepts/configuration-document)
 - [Configuration Document Store Connector](/concepts/configuration-document-store-connector)
 - [Configuration Properties](/concepts/configuration-properties)
@@ -64,6 +67,8 @@
 
 ## D
 
+- [Data Class](/concepts/data-class)
+- [Data Connector](/concepts/digital-resource-connector)
 - [Data Engine OMAS](/services/omas/data-engine/overview)
 - [Data Engine Proxy](/concepts/data-engine-proxy)
 - [Data Manager](/services/omas/data-manager/overview)
@@ -76,20 +81,21 @@
 - [Design Model OMAS](/services/omas/design-model/overview)
 - [DevOps OMAS](/services/omas/dev-ops/overview)
 - [Digital Architecture OMAS](/services/omas/digital-architecture/overview)
+- [Digital Resource Connector](/concepts/digital-resource-connector)
 - [Digital Service OMAS](/services/omas/digital-service/overview)
 - [Discovery (metadata)](/features/discovery-and-stewardship/overview)
 - [Discovery Analysis Report](/concepts/discovery-analysis-report)
-- [Discovery Annotation](/guides/developer/open-discovery-services/discovery-annotation)
-- [Discovery Annotation Store](/guides/developer/open-discovery-services/discovery-context)
-- [Discovery Asset Catalog Store](/guides/developer/open-discovery-services/discovery-context)
-- [Discovery Asset Store](/guides/developer/open-discovery-services/discovery-context)
+- [Discovery Annotation](/concepts/discovery-analysis-report/#discovery-annotations)
+- [Discovery Annotation Store](/guides/developer/open-discovery-services/overview/#discovery-context)
+- [Discovery Asset Catalog Store](/guides/developer/open-discovery-services/overview/#discovery-context)
+- [Discovery Asset Store](/guides/developer/open-discovery-services/overview/#discovery-context)
 - [Discovery Configuration Server](/services/omas/governance-engine/overview)
-- [Discovery Context](/guides/developer/open-discovery-services/discovery-context)
+- [Discovery Context](/guides/developer/open-discovery-services/overview/#discovery-context)
 - [Discovery Engine](/concepts/open-discovery-engine)
 - [Discovery Engine OMAS](/services/omas/discovery-engine/overview)
-- [Discovery Pipeline](/guides/developer/open-discovery-services/discovery-pipeline)
+- [Discovery Pipeline](/concepts/open-discovery-service/#open-discovery-pipeline)
 - [Discovery Server](/concepts/engine-host)
-- [Discovery Service](/guides/developer/open-discovery-services/overview)
+- [Discovery Service](/concepts/open-discovery-service)
 - [Display Integrator OMIS](/services/omis/display-integrator/overview)
 
 ## E
@@ -112,6 +118,7 @@
 
 ## F
 
+- [Favorite Things Collections](/concepts/favorite-things-collection)
 - [Feedback](/concepts/feedback)
 - Files
 
@@ -146,6 +153,7 @@
 - [Governance Servers](/concepts/governance-server)
 - [Governance Service](/concepts/governance-service)
 - [Governance Zones](/concepts/governance-zone)
+- [Guard](/concepts/guard)
 - [GUIDs](/concepts/guid)
 
   - [Metadata Collection Id](/concepts/metadata-collection-id)
@@ -172,8 +180,8 @@
 - [InTopic](/concepts/in-topic)
 - [In Memory Repository Connector](/concepts/repository-connector)
 - [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview)
-- [Integration Connectors](/concepts/integration-connector)
-- [Integration Daemons](/concepts/integration-daemon)
+- [Integration Connector](/concepts/integration-connector)
+- [Integration Daemon](/concepts/integration-daemon)
 - [Integration Services](/services/omis)
 - [IsPublic](/concepts/is-public)
 - [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview)
@@ -214,6 +222,8 @@
 - [Metadata Instances](/concepts/open-metadata-instances)
 - [Metadata Provenance](/features/metadata-provenance/overview)
 - [Metadata Repository](/concepts/metadata-repository)
+- [Metadata Security Connector for OMAG Server](/concepts/server-metadata-security-connector)
+- [Metadata Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)
 - [Metadata Server](/concepts/metadata-access-store)
 - [Metadata Types](/types)
 
@@ -226,8 +236,10 @@
 ## O
 
 - [omag.server.servername.config file](/concepts/configuration-document)
-- [OMAG Server Platform](/concepts/omag-server-platform)
 - [OMAG Server](/concepts/omag-server)
+- [OMAG Server Metadata Security Connector](/concepts/server-metadata-security-connector)
+- [OMAG Server Platform](/concepts/omag-server-platform)
+- [OMAG Server Platform Metadata Security Connector](/concepts/platform-metadata-security-connector)
 - [OMAG Subsystems](/concepts/omag-subsystem)
 - [OMRS](/services/omrs)
 - [OMRS Event Topic](/concepts/cohort-topic)
@@ -263,6 +275,7 @@
 - [Personal Message](/concepts/personal-message)
 - [Personal Note](/concepts/personal-note)
 - [Personal Roles](/concepts/personal-roles)
+- [Platform Metadata Security Connector](/concepts/platform-metadata-security-connector)
 - [Platform Security](/features/metadata-security/overview)
 - [Platform URL Root](/concepts/platform-url-root)
 - [Presentation Server](/concepts/presentation-server)
@@ -291,6 +304,7 @@
 - [Repository Services](/services/omrs)
 - [Repository Validator](/concepts/repository-validator)
 - [Resource](/concepts/resource)
+- [Resource Connector](/concepts/digital-resource-connector)
 - [REST Client Connector](/concepts/rest-client-connector)
 - [REST Repository Connector](/connectors/runtime/omrs-rest-repository-connector)
 - [Reviews](/concepts/review)
@@ -300,6 +314,8 @@
 ## S
 
 - [Security](/features/metadata-security/overview)
+- [Security Connector for OMAG Server](/concepts/server-metadata-security-connector)
+- [Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)
 - [Security Integrator OMIS](/services/omis/security-integrator/overview)
 - [Security Manager OMAS](/services/omas/security-manager/overview)
 - [Security Officer OMAS](/services/omas/security-officer/overview)
@@ -313,6 +329,7 @@
 - [Software Developer OMAS](/services/omas/software-developer/overview)
 - [Software Server Capability](/concepts/software-capability)
 - [Star Ratings](/concepts/review)
+- [Stewardship](/features/discovery-and-stewardship/overview)
 - [Stewardship Action OMAS](/services/omas/stewardship-action/overview)
 - [Stewardship Engine](/concepts/governance-engine)
 - [Stewardship Integrator OMIS](/services/omis/stewardship-integrator/overview)

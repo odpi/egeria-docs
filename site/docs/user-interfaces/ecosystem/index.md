@@ -17,11 +17,11 @@ Egeria Ecosystem User interface using the following technologies:
 This repository is separate from the main [Egeria](https://github.com/odpi/egeria) repository, because the technology and build infrastructure is sufficiently different for the User interface.
 Egeria Ecosystem User Interface developers work with nodejs, develop in javascript, use the React framework and use npm; whereas the main Egeria repository attracts developers with Java skills.
 
-The **Presentation Server** is a multi-tenant persona based server that serves a user interface - it issues rest calls downstream primarily to [view servers](../../concepts/view-server.md)
+The **Presentation Server** is a multi-tenant persona based server that serves a user interface - it issues rest calls downstream primarily to [view servers](/concepts/view-server)
 The Ecosystem UI requires the presentation server to run, which in turn requires a view server which
-in turn requires target services. Please refer to the [Egeria Key concepts](../../introduction/key-concepts/) if you want to learn more.
+in turn requires target services. Please refer to the [key concepts](/introduction/key-concepts) if you want to learn more.
 
-Follow this [UI Planning checklist](./ecosystem-ui-planning-checklist) to plan your Egeria Ecosystem UI.
+Follow this [UI Planning checklist](/user-interfaces/ecosystem/ecosystem-ui-planning/#planning-checklist) to plan your Egeria Ecosystem UI.
 
 
 

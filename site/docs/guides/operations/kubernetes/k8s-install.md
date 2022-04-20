@@ -22,7 +22,7 @@ Only install **ONE** of the options below.
 
 ### MacOS
 
-The [install :material-dock-window:](https://docs.rancherdesktop.io/installation){ target=rd } docs cover the steps needed to install Rancher Desktop on macOS and this
+The [install :material-dock-window:](https://docs.rancherdesktop.io/getting-started/installation/#macos){target=rd} docs cover the steps needed to install Rancher Desktop on macOS and this
 is the recommended route, as this is the supported approach from the Rancher development team.
 
 If you have [HomeBrew :material-dock-window:](https://docs.brew.sh/Installation){ target=brew } installed, you can also install the application via  using
@@ -33,12 +33,12 @@ brew install rancher
 You may need to remove other implementations of the kubectl or helm commands in order to use Rancher Desktop
 ### Windows
 
-Follow the [official instructions :material-dock-window:](https://docs.rancherdesktop.io/installation){ target=rd } (untested)
+Follow the [official instructions :material-dock-window:](https://docs.rancherdesktop.io/getting-started/installation/#windows){target=rd} (untested)
 
 
 ### Linux
 
-Follow the [official instructions :material-dock-window:](https://docs.rancherdesktop.io/installation){ target=rd } (untested)
+Follow the [official instructions :material-dock-window:](https://docs.rancherdesktop.io/getting-started/installation/#linux){target=rd} (untested)
 
 ### IMPORTANT - Rancher Desktop configuration for all platforms
 

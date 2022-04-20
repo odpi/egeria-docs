@@ -1,9 +1,11 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
+
 # Egeria Ecosystem UI Overview
 
-The Ecosystem UI (Egeria React UI) is a React multi tenant User Interface for Open Metadata and Governance. It is part of the [Egeria](https://github.com/odpi/egeria/blob/master/README.md) project; as such it is bound by the same code of conduct, governance etc and is part of the Egeria community (and community calls).
-The code for the lives in the Egeria React UI Git repository [https://github.com/odpi/egeria-react-ui](https://github.com/odpi/egeria-react-ui).
+The Ecosystem UI (Egeria React UI) is a React User Interface for Open Metadata and Governance.
+The code lives in the [Egeria React UI Git repository](https://github.com/odpi/egeria-react-ui).
+
 The Egeria Ecosystem User Interface (UI) provides a multi tenanted, persona based interface for users to work with Egeria solutions and Egeria ecosystem tools.
 Egeria Ecosystem User interface using the following technologies:
 

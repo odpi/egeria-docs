@@ -3,7 +3,7 @@
 
 site_name: Egeria
 site_description: Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms, no matter the vendor
-copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2021 contributors to the Egeria project."
+copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2022 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
 site_url: https://egeria-project.org
@@ -20,8 +20,9 @@ nav:
           - Metadata Exchange: patterns/metadata-exchange/overview.md
           - Metadata Governance: patterns/metadata-governance/overview.md
   - Using:
-      - Planning Guide: guides/planning/overview.md
-      - Diagnostic Guide: guides/diagnostic/overview.md
+      - Planning Guide:
+          - Planning Overview: guides/planning/overview.md
+          - User Interfaces: user-interfaces/ecosystem/ecosystem-ui-planning.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -36,6 +37,7 @@ nav:
               - Engine Host: guides/admin/servers/configuring-an-engine-host.md
               - Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy-server.md
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
+              - Presentation Server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
           - Operate OMAG Server Platform: guides/operations/overview.md
@@ -53,6 +55,10 @@ nav:
               - Container Images: guides/operations/kubernetes/container-images.md
               - Custom Deployment: guides/operations/kubernetes/custom-deployment.md
               - Egeria Operator: guides/operations/kubernetes/operator.md
+      - Diagnostic Guide:
+          - Diagnostic Process: guides/diagnostic/overview.md
+          - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
+          - First failure data capture (FFDC): guides/diagnostic/ffdc.md
       - Integrate:
           - Developer Guide:
                 - Developer Overview: guides/developer/index.md
@@ -119,7 +125,9 @@ nav:
                       - Open Metadata Topic:
                             - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
       - User Interfaces:
+          - User Interface overview: user-interfaces/index.md
           - Egeria Ecosystem UI:
+              - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
               - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
               - Resource Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
               - Dynamic Operations (Dino): guides/ecosystem-ui/dino-user-guide.md
@@ -146,13 +154,6 @@ nav:
           - Synchronized Access Control: features/synchronized-access-control/overview.md
           - Templated Cataloguing: features/templated-cataloguing/overview.md
           - User Feedback: features/user-feedback/overview.md
-  - User Interfaces:
-      - User Interface overview: user-interfaces/index.md
-      - Egeria Ecosystem User Interface:
-          - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
-          - Planning checklist: user-interfaces/ecosystem/ecosystem-ui-planning-checklist.md
-          - Planning: user-interfaces/ecosystem/ecosystem-ui-planning.md
-          - Configure and run presentation server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
   - Learning:
       - Learning Overview: education/index.md
       - Webinars: education/webinar-program/overview.md

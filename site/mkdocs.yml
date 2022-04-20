@@ -129,7 +129,7 @@ nav:
           - Egeria Ecosystem UI:
               - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
               - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
-              - Resource Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
+              - Repository Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
               - Dynamic Operations (Dino): guides/ecosystem-ui/dino-user-guide.md
               - Glossary author: guides/ecosystem-ui/glossary-author-user-guide.md
               - Server author: guides/ecosystem-ui/server-author-user-guide.md

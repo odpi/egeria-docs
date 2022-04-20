@@ -13,7 +13,7 @@
 | URL Marker               | asset-owner                                                                                                                                                                                    |
 
 
-The Asset Owner OMAS provides APIs and notifications for tools and applications supporting the work of [*Asset Owners*](/practices/roles/overview/) in protecting and enhancing their assets.
+The Asset Owner OMAS provides APIs and notifications for tools and applications supporting the work of *Asset Owners* in protecting and enhancing their assets.
 
 ## What is an Asset Owner?
 

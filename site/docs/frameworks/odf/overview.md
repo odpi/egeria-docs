@@ -41,9 +41,13 @@ Each discovery request type is associated with a discovery service. When a disco
 ## Implementation in Egeria
 
 Egeria's discovery configuration server support is implemented by the
+[Governance Engine OMAS](/services/omas/governance-engine/overview).
+It has a client called `GovernanceEngineConfigurationClient` that
+implements the method equivalent to ODF's  `DiscoveryConfigurationServer` interface.
+
+The services used by the discovery services when they are running is implemented by the
 [Discovery Engine OMAS](/services/omas/discovery-engine/overview).
-It has a client called `DiscoveryConfigurationClient` that
-implements the ODF's  `DiscoveryConfigurationServer` interface.
+
 It also supports event notifications through
 the [Discovery Engine OMAS's out topic](/concepts/out-topic).
 

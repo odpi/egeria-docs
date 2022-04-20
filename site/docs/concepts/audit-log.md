@@ -13,7 +13,7 @@ hide:
 
 ??? education "Further information"
     
-    * There is more information on the use of audit logging in the [Diagnostic Guide](/guides/diagnostic).
+    * There is more information on the use of audit logging in the [Diagnostic Guide](/guides/diagnostic/diagnositc-sources).
     * [Configuring the audit Log](/guides/admin/servers/configuring-the-audit-log)"
 
 --8<-- "snippets/abbr.md"

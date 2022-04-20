@@ -11,7 +11,7 @@ hide:
 Although we aim to automate governance as much as possible, it is often necessary to
 assign responsibility for specific actions to specific people.
 
-In Figure 1, the responsibilities of someone assigned to managed a
+In Figure 1, the responsibilities of someone assigned to manage a
 particular aspect of governing a resource ([Referenceable](/types/0/0010-Base-Model))
 is represented by a **GovernanceRole** entity.
 Since **GovernanceRole** inherits from [PersonRole](/types/1/0112-People)

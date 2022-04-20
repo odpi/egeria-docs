@@ -42,6 +42,15 @@ It is also possible to list the [registered services](/services/#registered-serv
     List<RegisteredOMAGService> registeredOMVSs = platformServicesClient.getViewServices(clientUserId);
     ```
 
+Each entry in `RegisteredOMAGService` details:
+
+* `serviceId` - the component identifier used by the service when it registers with the audit log.
+* `serviceName` - the name of the service.        
+* `serviceDevelopmentStatus` - the status of the service.
+* `serviceURLMarker` - the unique string used in this service's REST API path names.
+* `serviceDescription` - the description of the service.
+* `serviceWiki` - the page in Egeria's documentation that provides more detail of the service.        
+
 ## Known servers
 
 The *known servers* are those servers that have run on the platform since it started.  The `getKnownServers` method returns a list of server names which is useful for stepping through each of the servers in a `for` loop.

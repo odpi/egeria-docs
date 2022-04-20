@@ -10,85 +10,32 @@ hide:
 
 # OMAG Server Chassis
 
-The **Server Chassis** provides the base server framework, such as the web server and
-the REST API endpoint support for the
-[Open Metadata and Governance (OMAG) Server Platform](https://egeria.odpi.org/open-metadata-publication/website/omag-server). 
+The *Server Chassis* provides the base server framework, such as the web server and the REST API endpoint support for the [Open Metadata and Governance (OMAG) Server Platform](/concepts/omag-server-platform).   Calls to the server chassis are then routed to the appropriate [OMAG subsystem](/concepts/omag-subsystem).
 
-
-Calls to the server chassis
-are then routed to the appropriate Egeria subsystem.
-
-Today, Egeria has one server chassis implementation:
-
-- **[Spring Boot Server Chassis](#spring-boot-server-chassis)** - using [Spring Boot](https://spring.io/projects/spring-boot).
-
-## Spring Boot Server Chassis
-
-The Server Chassis
-provides the base server framework to host the Open Metadata
-and Governance (OMAG) Servers in the
-[OMAG Server Platform](/concepts/omag-server).  
-
-The **server-chassis-spring** module is an implementation of the
-server chassis written using [Spring Boot](/guides/contributor/runtime/#spring).
-Its **main()** method is located in a Java class called **OMAGServerPlatform**.
-
-When the OMAGServerPlatform is first started, all of its REST APIs
-are visible and callable by an external client.
-However, only the [Administration Services](/services/admin-services/overview) 
-and [Platform Services](/services/platform-services/overview) are operational at this point.
-The other Open Metadata and Governance (OMAG) services will each give an error response if called.
-
-The [OMAG Subsystems](/concepts/omag-subsystem)
-supporting the other OMAG services are selectively activated in one or more
-[OMAG Servers](/concepts/omag-server) that run
-in the OMAGServerPlatform.
-You can use the administration service to define and configure the subsystems for an OMAG Server.
-This definition is then stored in a configuration document for the server.  This is a one-time activity.
-
-Details of how to set up the configuration document, and activate/deactivate
-the open metadata services can be found in the 
-[OMAG Server Configuration User Guide](/guides/admin).
-
-Once the configuration document is in place it is possible to activate and deactivate the
-server in the OMAGServerPlatform many times over multiple platform restarts.
-
-A detailed description of the internals of the OMAGServerPlatform during server start up
-is available [here](/concepts/omag-server-platform).
+Today, Egeria has one server chassis implementation called [*server-chassis-spring*](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/server-chassis/server-chassis-spring) that uses [Spring Boot](https://spring.io/projects/spring-boot).  Its `main()` method is located in a Java class called `OMAGServerPlatform`.
 
 ## Maven build profiles
-Default maven build will include **full-platform** profile, with all access service 
-and view server functionality. Please be aware this behavior might be subject of a future change.
-Default behavior might be change with **-DadminChassisOnly** option which will disable **full-platform** profile.
 
-By running 
-```
-mvn clean install -DadminChassisOnly
-```
- the server-chassis-spring will contain only the following services:
- * Administration Services - Operational
- * Administration Services - Platform Configuration
- * Administration Services - Server Configuration
- * Administration Services - Server Configurations
- * Platform Services
- 
- In this case, for any extra functionality, such as desired access services or view server, 
- use [ **loader.path** spring-boot functionality ](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-executable-jar-format.html#executable-jar-property-launcher-features).
- 
+Egeria's default maven build will include the *full-platform* profile, that includes [all available services](/services) in the running OMAG Server Platform. 
+
+There is a build option called `-DadminChassisOnly` that will not include any [registered services](/services/#registered-services).
+
+Selective registered services can then be activated using the [ **loader.path** spring-boot functionality ](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-executable-jar-format.html#executable-jar-property-launcher-features).
+
+The `-DadminChassisOnly` is used for creating a cut down OMAG Server Platform
+for a specific deployment.
  
 ## Application properties
 
-Since this is a Spring Boot application, OMAGServerPlatform can be
-[customized using the application.properties](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
-file found in the `resources` directory and using environment variables.
+Since the OMAG Server Platform is a Spring Boot application, it can be
+[customized using the application.properties](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html) file found in the `resources` directory and using environment variables.
 
-For example, OMAG servers can be automatically activated at startup 
-by setting spring-boot property `startup.server.list`, typically in the `application.properties` file.
-The server names are listed without quotes.
-For example:
+For example, OMAG servers can be automatically activated at startup by setting spring-boot property `startup.server.list`, typically in the `application.properties` file. The server names are listed without quotes. For example:
+
 ```
 startup.server.list=cocoMDS1, cocoMDS2
 ```
+
 Each server is started with the administration user id set in the spring-boot property `startup.user`.
 
 For example:
@@ -97,26 +44,21 @@ startup.user=garygeeke
 ```
 By default, this user id is set to the user id `system`.
 
-When the platform shuts down, if any of the servers that were in the startup list are still running,
-they will be shut down before the server completes.
+When the platform shuts down, if any of the servers that were in the startup list are still running, they will be shut down before the server completes.
 
 If `startup.server.list` is null then no servers are automatically started or stopped.
+
 ```
 startup.server.list=
 ```
 
-## Adding a new subsystem to the OMAGServerPlatform
+## Adding a new subsystem to the OMAG Server Platform
 
-When the **OMAGServerPlatform** class is called, Spring Boot does a component scan for all Spring
-services that are in Java packages stemming from `org.odpi.openmetadata.*`
-and that are visible to this module.
+When the **OMAGServerPlatform** class is called, Spring Boot does a component scan for all Spring services that are in Java packages stemming from `org.odpi.openmetadata.*` and that are visible to this module.
 
-To make a new Java package visible to **OMAGServerPlatform**, add its **spring** package
-to the **pom.xml** file for **server-chassis-spring** and it will be picked up in the component scan.
+To make a new Java package visible to **OMAGServerPlatform**, add its **spring** package to the **pom.xml** file for **server-chassis-spring** and it will be picked up in the component scan.
 
-For example, this is the snippet of XML in the pom.xml file that adds the
-[Asset Owner OMAS](/services/omas/asset-owner/overview) services
-to the OMAG server platform.
+For example, this is the snippet of XML in the pom.xml file that adds the [Asset Owner OMAS](/services/omas/asset-owner/overview) services to the OMAG server platform.
 
 ```xml
 <dependency>
@@ -131,23 +73,22 @@ Swagger API documentation is generated with the chassis and is documented in [Sw
 
 ## Spring Boot Actuator
 
-Spring Boot Actuator is used to expose operational information about the running application such as health, metrics, info, dump. 
-It uses HTTP endpoints or JMX beans to enable us to interact with it. 
+Spring Boot Actuator is used to expose operational information about the running application such as health, metrics, info, dump.  It uses HTTP endpoints or JMX beans to enable us to interact with it. 
 
-A “discovery page” is added with links to all the endpoints. The “discovery page” is available on /actuator by default.
-Once this dependency is on the class-path /info and /health endpoints are available out of the box. 
+A “discovery page” is added with links to all the endpoints. The “discovery page” is available on /actuator by default. Once this dependency is on the class-path /info and /health endpoints are available out of the box. 
 
 In order to expose all endpoints over HTTP, use the following property:
 ```
 management.endpoints.web.exposure.inlude=*
 ```
 
-The `exclude` property lists the IDs of the endpoints that should not be exposed.
-For example, to expose everything over HTTP except the env and beans endpoints, use the following properties:
+The `exclude` property lists the IDs of the endpoints that should not be exposed. For example, to expose everything over HTTP except the env and beans endpoints, use the following properties:
+
 ```
 management.endpoints.web.exposure.include=*
 management.endpoints.web.exposure.exclude=env,beans
 ```
+
 The exclude property takes precedence over the include property.
 
 --8<-- "snippets/abbr.md"

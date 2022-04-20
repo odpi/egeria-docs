@@ -45,7 +45,7 @@ The issue owner (assignee) will then:
 - If an issue is closed accidentally or prematurely, reopen and add appropriate comments
 
 ## Release process
-Follow [these steps]("docs/guides/contributor/release-process/index.md") to create a new Egeria release for each Egeria repository.
+Follow [these steps](/guides/contributor/release-process) to create a new Egeria release for each Egeria repository.
 
 
 ## Security hardening

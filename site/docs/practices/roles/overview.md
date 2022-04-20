@@ -11,7 +11,7 @@ A role is assigned to a person with a scope.  This makes them responsible for pe
 
 The scope defines the specific data sets and/or processing that this person must perform the tasks for.
 
-For example, the data stewardship role lists all of the tasks related to making a data set fit for purpose, such as correcting errors in it. There may be a data steward assigned to customer records, another for supplier records and another for the financial accounts.
+For example, the data stewardship role lists all the tasks related to making a data set fit for purpose, such as correcting errors in it. There may be a data steward assigned to customer records, another for supplier records and another for the financial accounts.
 
 Where data is flowing from system to system, responsibility may be handed off from one data steward to another as the data moves between their scopes of responsibility.
 
@@ -87,30 +87,38 @@ Roles that interact with the organization:
 
 Roles that occur when governance programs are in place:
 
-??? tip "Data Officer Role."
-    ### Data Officer Role
+??? tip "Governance Officer"
+    ### Governance Officer Role
     
-    ![Icon](data-officer-role.png)
+    A person who is responsible for leading a governance domain is called a governance officer.
+    The governance officer is supported by the [Governance Program OMAS](/concepts/omas/governance-program/overview).
+    Below are specific examples of governance officers.
+
+    ??? tip "Data Officer Role."
+        ### Data Officer Role
     
-    The data officer is responsible for setting the data strategy and leading the data governance program.
+        ![Icon](data-officer-role.png)
     
-    The data officer supports asset owners as they plan the investments in key assets with expertise and research into the latest data capture and processing capabilities.  
+        The data officer is responsible for setting the data strategy and leading the data governance program.
     
-    #### Further information
+        The data officer supports asset owners as they plan the investments in key assets with expertise and research into the latest data capture and processing capabilities.  
     
-    * [Extensions to the data officer role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
+        #### Further information
     
-??? tip "Security Officer Role."
-    ### Security Officer Role
+        * [Extensions to the data officer role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
     
-    ![Icon](security-officer-role.png)
+    ??? tip "Security Officer Role."
+        ### Security Officer Role
     
-    The  security officer is responsible for the protection of data and resources through the management and enforcement of security policies.
+        ![Icon](security-officer-role.png)
     
-    #### Further information
+        The  security officer is responsible for the protection of data and resources through the management and enforcement of security policies.
     
-    * [Extensions to the security officer role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
+        #### Further information
     
+        * [Extensions to the security officer role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
+        * The security officer is supported by the [Security Officer OMAS](/concepts/omas/security-officer/overview).
+
 
 ??? tip "Incident Owner Role."
     ### Incident Owner Role
@@ -140,9 +148,9 @@ Roles that lead in data privacy discussions:
 ??? tip "Privacy Officer Role." 
     ### Privacy Officer Role
     
-    ![Icon](privacy-officert-role.png)
+    ![Icon](privacy-officer-role.png)
     
-    The privacy officer sets and enforces policies to establish and manage data rights of data subjects base on the expressed intent of the data subjects and in accordance to regulations and company policies.
+    The privacy officer sets and enforces policies to establish and manage data rights of data subjects base on the expressed intent of the data subjects and in accordance to regulations and company policies.  They are a [Governance Officer](#governance-officer) that leads the privacy governance domain.
     #### Further information
     
     * [Data Privacy Pack](/practices/data-privacy-pack/overview)
@@ -159,26 +167,22 @@ Roles that lead in data privacy discussions:
     * [Data Privacy Pack](/practices/data-privacy-pack/overview)
     
 
-## Data (and related Asset) Management
+## Resource (Data and related IT) Management
 
-Roles involved in the day-to-day use of data (and related) assets:
+Roles involved in the day-to-day use of an organization's resources:
 
-??? tip "Asset Owner Role."
+??? tip "Asset Owner Role"
     ### Asset Owner Role
     
     ![Icon](asset-owner-role.png)
     
-    Asset owners are individuals that own one or more of the following:
+    A person who is accountable for the proper use and protection of a [Resource](/concepts/resource).  This includes the maintenance of the resource's [Asset](/concepts/asset).
+ 
+    Most employees in an organization will be an owner of at least one resource. The size and importance of the resource in question will determine the level of seniority of the individual that is the asset owner.
     
-    * A data set
-    * A system that processes and stores data
-    * A digital service that uses data sets and systems to support a service offered by the business.  This digital service may be either for internal or external use.
+    The asset owner is responsible for investment decisions related to the resource.  This includes decisions to extend or update the resource and when to dispose of it. They also make choices on investment in security infrastructure and support verses new function.
     
-    Most employees in an organization will be an owner of at least one asset. The size and importance of the asset in question will determine the level of seniority of the individual that is the asset owner.
-    
-    The asset owner is responsible for investment decisions related to the asset.  This includes decisions to extend or update the asset and when to dispose of it. They also make choices on investment in security infrastructure and support verses new function.
-    
-    As such the governance team need to ensure that the asset owner is responsible for planning for the asset as well its functionality.
+    As such the governance team need to ensure that the asset owner is responsible for planning for the resource as well its functionality.
     
     Assets can be transferred between owners. However, there should never be a time when the asset has no owner.
     
@@ -189,7 +193,8 @@ Roles involved in the day-to-day use of data (and related) assets:
     #### Further information
     
     * [Extensions to the asset owner role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
-    
+    * The Asset Owner is supported by the [Asset Owner OMAS](/concepts/omas/asset-owner/overview).
+
 ??? tip "Asset Consumer Role."
     ### Asset Consumer Role
     
@@ -259,12 +264,16 @@ Roles for building and using digital services:
     * [Extensions to the architect role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
     
 
-??? tip "Project Lead Role."
-    ### Project Lead Role
+??? tip "Project Manager Role."
+    ### Project Manager Role
     
     ![Icon](project-lead-role.png)
-    
-    The project lead role is responsible for the delivery of a project on time and within budget.
+
+    A project manager is a person who leads a [project](/concepts/project).  They are responsible for the delivery of a project on time and within budget.
+
+    #### Further information
+
+    * The project manager role is supported by the [Project Management OMAS](/concepts/omas/project-management/overview).
     
 
 ??? tip "Developer Role."
@@ -289,12 +298,18 @@ Roles for building and using digital services:
 
     The systems administrator manages the IT infrastructure of an organization
 
-
     #### Further information
 
     * [Extensions to the systems administrator role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
 
 
+??? tip "Team Leader"
+    ### Team Leader
+    The leader of a [team](/concepts/organization/#team).
+
+??? tip "Team Member"
+    ### Team Member
+    A member of a [team](/concepts/organization/#team).
 
 
 

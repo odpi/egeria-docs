@@ -4,7 +4,7 @@
 # Platform report for: https://localhost:9443
 
 ## Platform deployment
-* **Egeria version**: Egeria OMAG Server Platform (version 3.7-SNAPSHOT)
+* **Egeria version**: Egeria OMAG Server Platform (version 3.8-SNAPSHOT)
 * **Configuration document store connector**: *null*
 * **Platform security connector**: *null*
 ## Registered services
@@ -34,7 +34,7 @@
 * **Governance Engine OMAS**: Set up an operational governance engine
 * **Data Privacy OMAS**: Manage governance of privacy
 * **Security Manager OMAS**: Manages exchange of metadata with a security service
-* **Archive Manager OMES**: Maintains open metadata archives based on the activity in the connected cohorts.
+* **Repository Governance OMES**: Maintains open metadata archives based on the activity in the connected cohorts.
 * **Governance Action OMES**: Executes requested governance action services to monitor, assess and maintain metadata and its real-world counterparts.
 * **Asset Analysis OMES**: Analyses the content of an asset's real world counterpart, generates annotations in an open discovery report that is attached to the asset in the open metadata repositories.
 * **Files Integrator OMIS**: Extract metadata about files stored in a file system or file manager.

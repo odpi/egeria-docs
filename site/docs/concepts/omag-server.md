@@ -64,6 +64,6 @@ The different types of OMAG Servers connect together as illustrated in Figure 2.
     This configuration document is stored by a [configuration document store connector](/concepts/configuration-document/#storage).
 
     - [Configuring an OMAG Server](/guides/admin/servers)
-    - [Start and stop an OMAG Server](/guides/operations/guide/#starting-and-stopping-an-omag-server)
+    - [Start and stop an OMAG Server](/guides/operations/overview/#starting-and-stopping-an-omag-server)
 
 --8<-- "snippets/abbr.md"

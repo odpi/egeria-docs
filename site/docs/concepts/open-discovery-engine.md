@@ -17,7 +17,7 @@ When an open discovery engine is called, it is passed a governance request type 
 ![Open Discovery Engine Definition Structure](/guides/developer/open-metadata-archives/open-discovery-engine-definition.svg)
 > Logical structure of an open discovery engine definition showing how the governance request types map to the open discovery service definitions
 
-??? education "Further information"
+!!! education "Further information"
 
     The Open Metadata Types used to define the open discovery engines are located in [model 0601 Open Discovery Engines](/types/6/0601-Open-Discovery-Engine).
 

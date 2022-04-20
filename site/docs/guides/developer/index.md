@@ -93,6 +93,8 @@ Each OMAS has its own specialized API and its own style, but typically there are
 
 The `findXXX` methods typically take a regular expression and look for the value in all properties.  The `getXXXByName` style method does not use wild cards and retrieves the element if there is an exact match in the `qualifiedName` or `displayName`.  Finally, it is typical to have methods to retrieve a single element via its unique identifier (guid).
 
+
+    
 #### Registering a listener
 
 Some OMASs offer an event interface for receiving events from the [out topic](/concepts/out-topic).  To use it, your java class needs to extend the event listener interface and implement the abstract `processEvent` method.  Below is a simple example from Asset Consumer OMAS.  The event type is used to determine which java class to use to cast the event so its payload can be accessed.
@@ -141,6 +143,11 @@ Process finished with exit code 0
         </dependency>
 
 ```
+
+!!! education "Further information"
+    
+    - [Specific documentation for each OMAS](/services/omas).
+    - [Egeria's Javadoc](https://odpi.github.io/egeria/index.html).
 
 ## Using connectors
 
@@ -192,11 +199,12 @@ You can write your own connectors to integrate additional types of technology or
 
 ## Building open metadata archives
 
+--8<-- "docs/concepts/open-metadata-archive-intro.md"
 
-!!! education "Further information"
-    
-    - [Specific documentation for each OMAS](/services/omas).
-    - [Egeria's Javadoc](https://odpi.github.io/egeria/index.html).
+Open metadata archives are typically built using a java program.  There are three components:
+
+* An *archive helper* that formats 
+
   
 
 

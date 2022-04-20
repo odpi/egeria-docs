@@ -24,7 +24,7 @@ logging.level.org.odpi.openmetadata=ERROR
 ## Connecting the OMAG Audit Log Framework
 
 While the default logging framework enables generic interface for system logging is not adequate option for diagnostic and auditing.
-For this purpose in OMAG Server platform [Audit Log Framework (ALF)](/frameworks/alf/overview) is used. You can find out more about this on Egeria website [Diagnostics Guide](/guides/diagnostic/guide).
+For this purpose in OMAG Server platform [Audit Log Framework (ALF)](/frameworks/alf/overview) is used. You can find out more about this on Egeria website [Diagnostics Guide](/guides/diagnostic/overview).
  
 Audit Logging framework is configured as part of the OMAG configuration document by choosing from the available destination systems.  
 By default, the system will use the stdout - system standard output as a destination. 

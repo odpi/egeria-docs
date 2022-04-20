@@ -20,8 +20,8 @@ nav:
           - Metadata Exchange: patterns/metadata-exchange/overview.md
           - Metadata Governance: patterns/metadata-governance/overview.md
   - Using:
-      - Planning Guide: guides/planning/guide.md
-      - Diagnostic Guide: guides/diagnostic/guide.md
+      - Planning Guide: guides/planning/overview.md
+      - Diagnostic Guide: guides/diagnostic/overview.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -38,7 +38,7 @@ nav:
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
-          - Operate OMAG Server Platform: guides/operations/guide.md
+          - Operate OMAG Server Platform: guides/operations/overview.md
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
@@ -239,6 +239,7 @@ nav:
                   - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
                   - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                   - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
+                  - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
           - Specific Guidance:
               - Programming Languages: guides/contributor/languages.md
               - Tools:
@@ -260,6 +261,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.7: release-notes/3-7.md
         - v3.6: release-notes/3-6.md
         - v3.5: release-notes/3-5.md
         - v3.4: release-notes/3-4.md
@@ -463,6 +465,7 @@ nav:
               - Incomplete: types/7/0790-Incomplete.md
       - Standards: standards/overview.md
       - Services:
+          - Services: services/index.md
           - Fixed Services:
               - Administration Services: services/admin-services/overview.md
               - Repository Services (OMRS):
@@ -513,7 +516,7 @@ nav:
                   - Open Metadata Engine Services: services/omes/index.md
                   - Asset Analysis: services/omes/asset-analysis/overview.md
                   - Governance Action: services/omes/governance-action/overview.md
-                  - Archive Manager: services/omes/archive-manager/overview.md
+                  - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
                   - Analytics Integrator: services/omis/analytics-integrator/overview.md
@@ -602,8 +605,8 @@ nav:
       - Anchor: concepts/anchor.md
       - Archive Engine: concepts/archive-engine.md
       - Asset: concepts/asset.md
-      - Audit Log: concepts/audit-log.md
       - Asset Log Message: concepts/asset-log-message.md
+      - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
@@ -611,6 +614,7 @@ nav:
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md
+      - Component Description: concepts/component-description.md
       - Configuration Document: concepts/configuration-document.md
       - Configuration Properties: concepts/configuration-properties.md
       - Conformance Test Server: concepts/conformance-test-server.md
@@ -621,7 +625,9 @@ nav:
       - Connector Provider: concepts/connector-provider.md
       - Connector Type: concepts/connector-type.md
       - Contact Method: concepts/contact-method.md
+      - Data Class: concepts/data-class.md
       - Data Engine Proxy: concepts/data-engine-proxy.md
+      - Digital Resource Connector: concepts/digital-resource-connector.md
       - Discovery Analysis Report: concepts/discovery-analysis-report.md
       - Endpoint: concepts/endpoint.md
       - Engine Host: concepts/engine-host.md
@@ -645,6 +651,8 @@ nav:
       - Governance Service: concepts/governance-service.md
       - Governance Zone: concepts/governance-zone.md
       - Headcount Limit: concepts/person-role.md
+      - Guard: concepts/guard.md
+      - GUID: concepts/guid.md
       - Home Metadata Repository: concepts/home-metadata-repository.md
       - In Topic: concepts/in-topic.md
       - Incident Report: concepts/incident-report.md
@@ -660,13 +668,14 @@ nav:
       - Metadata Access Server: concepts/metadata-access-server.md
       - Metadata Access Store: concepts/metadata-access-store.md
       - Metadata Collection Id: concepts/metadata-collection-id.md
+      - Metadata Discovery: features/discovery-and-stewardship/overview.md
       - Metadata Repository: concepts/metadata-repository.md
       - Note Log: concepts/note-log.md
       - OMAG Server: concepts/omag-server.md
       - OMAG Server Platform: concepts/omag-server-platform.md
       - OMAG Subsystem: concepts/omag-subsystem.md
       - Open Discovery Engine: concepts/open-discovery-engine.md
-      - Open Discovery Service: guides/developer/open-discovery-services/overview.md
+      - Open Discovery Service: concepts/open-discovery-service.md
       - Open Lineage Server: concepts/open-lineage-server.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
@@ -695,13 +704,14 @@ nav:
       - Review: concepts/review.md
       - Schema: concepts/schema.md
       - Server Name: concepts/server-name.md
-      - Software Server Capability: concepts/software-server-capability.md
+      - Software Capability: concepts/software-capability.md
       - Star Rating: concepts/review.md
       - Tag: concepts/informal-tag.md
       - To Do: concepts/to-do.md
       - Useful Resource: concepts/useful-resource.md
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md
+      - Virtual Connection: concepts/connection.md
   - Practices:
       - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md

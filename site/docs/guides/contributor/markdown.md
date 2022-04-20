@@ -21,7 +21,7 @@ click on this link to display the tools directory where this file lives on GitHu
 
 Scroll to the bottom of the page to see the contents of the README.md displayed.
 
-These pages are also used to create Egeria's webpages using a technology called **GitHub pages**.
+These pages are also used to create Egeria's web pages using a technology called **GitHub pages**.
 Click on the next link to display the tools directory in the website.
 
 * [https://odpi.github.io/guides/contributor/markdown](https://github.com/odpi/blob/main/site/docs/guides/contributor/markdown)

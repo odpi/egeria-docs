@@ -34,6 +34,7 @@ Here are the release processes for Egeria repositories:
 | [https://github.com/odpi/egeria-react-ui](https://github.com/odpi/egeria-react-ui)  | Egeria React UI        | [Egeria React UI Release process](/guides/contributor/release-process/egeria-react-ui-release)| 
 | [https://github.com/odpi/egeria-charts](https://github.com/odpi/egeria-charts)  | Egeria charts | [Egeria charts Release process](/guides/contributor/release-process/egeria-charts-release) |
 | [https://github.com/odpi/egeria-docs](https://github.com/odpi/egeria-docs)  | Release guide | [Egeria Update Release Guide process](/guides/contributor/release-process/egeria-charts-release) |
+| [https://github.com/odpi/egeria-connector-xtdb](https://github.com/odpi/egeria-connector-xtdb)  | XTDB connector | [XTDB connector release process](/guides/contributor/release-process/egeria-connector-xtdb-release) |
 | TODO | Other Egeria Git repositories | TODO |
 
 

@@ -465,6 +465,7 @@ nav:
               - Incomplete: types/7/0790-Incomplete.md
       - Standards: standards/overview.md
       - Services:
+          - Services: services/index.md
           - Fixed Services:
               - Administration Services: services/admin-services/overview.md
               - Repository Services (OMRS):

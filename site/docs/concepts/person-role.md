@@ -23,33 +23,10 @@ Egeria does not prevent more people than this limit being appointed to the role,
 
 The organization can choose to increase the head count limit or remove one of the appointed people or ignore the situation.
 
-## Examples of roles
+!!! education "Further information"
 
-### Asset Owner
+    * [Examples of roles](/practices/roles/overview)
 
-A person who is accountable for the proper use and protection of an
-[Asset](/concepts/asset).
 
-The Asset Owner is supported by the [Asset Owner OMAS](/concepts/omas/asset-owner/overview).
-
-### Governance Officer
-
-A person who is responsible for leading a governance domain is called a governance officer. 
-
-The governance officer is supported by the [Governance Program OMAS](/concepts/omas/governance-program/overview).
-
-### Project Manager
-
-A project manager is a person who leads a [project](/concepts/project).
-
-The project manager role is supported by the [Project Management OMAS](/concepts/omas/project-management/overview).
-
-### Team Leader
-
-The leader of a [team](/concepts/organization/#team).
-
-### Team Member
-
-A member of a [team](/concepts/organization/#team).
 
 --8<-- "snippets/abbr.md

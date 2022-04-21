@@ -7,10 +7,11 @@ Egeria is a large project with many activities adding content to the project. Th
 
 ## Capability layers
 
-Egeria aims to deliver against 5 capability layers:
+Egeria aims to deliver against 6 capability layers:
 
 [![Governance Solutions](governance-solution-functional-detail.svg)](#governance-solutions)
 [![Education](education-functional-detail.svg)](#education)
+[![UIs](ui-functional-detail.svg)](#user-interfaces)
 [![Integration Platform](integration-platform-functional-detail.svg)](#integration-platform)
 [![Developer Platform](developer-platform-functional-detail.svg)](#developer-platform)
 [![Deployment Resources](deployment-resources-functional-detail.svg)](#deployment-resources)
@@ -37,13 +38,21 @@ Egeria's education aims to broaden the knowledge of people who need to work with
 - The *Samples* are distributed between the [egeria.git :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples){ target=gh }, [egeria-samples.git :material-github:](https://github.com/odpi/egeria-samples){ target=gh } and [egeria-dev-projects.git :material-github:](https://github.com/odpi/egeria-dev-projects){ target=gh } repositories.
 - The *edX courses* are a new idea to provide a full curriculum and certification for governance professionals and architects. It is in the early phases of design.
 
+### User Interfaces
+
+Egeria's user interfaces (UIs) provide individuals with access to search, review and update open metadata through a browser-based experience.
+
+![UIs](ui-functional-detail.svg)
+
+- [Egeria Ecosystem UI](/user-interfaces/ecosystem): server and platform configuration, ecosystem monitoring, type explorer and repository explorer.
+- [Egeria General User UI](/user-interfaces): data catalog search, glossary browser, lineage explorer.
+
 ### Integration platform
 
 Supports integration of popular technologies by installing and configuring Egeria. Minimal coding is still required around unusual and home-grown tools and technologies.
 
 ![Integration Platform](integration-platform-functional-detail.svg)
 
-- [Ecosystem UIs](/user-interfaces): server and platform configuration, ecosystem monitoring, type explorer and repository explorer.
 - *Utilities and converters*: support for different standard formats to load industry standard definitions, models, glossaries, and other content packs built on industry standard definitions, models, glossaries and other content packs. Examples include JSON-LD, OWL/RDF, XML, ...
 - [Pre-canned connectors to third party technologies](/connectors): popular metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
 - [Conformance test suite](/guides/cts/overview): Supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
@@ -96,9 +105,9 @@ Aim to simplify the process of deploying the OMAG Server Platform and its connec
 
 Following is an overview of the current status of the functions in Egeria today:
 
-![Status of functions found in each capability layer](/release-notes/functional-organization-showing-implementation-status-for-3.8.svg)
+![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-3.8.svg)
 
-- Green means that there is function that is either [stable or in technical preview](content-status).
+- Green means that there is function that is either [stable or in technical preview](/release-notes/content-status).
 - Orange means there is work in progress.
 - Red means it is planned but not started.
 

@@ -58,7 +58,7 @@ Open up an issue in core egeria using the 'release' template. This contains chec
 
 ??? success "7. Create a release in GitHub"
     - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y`
-    - Fill in the release notes using a title of `Release x.y` and [copy the notes from the appropriate release notes](/release-notes/overview)
+    - Fill in the release notes using a title of `Release x.y`. Select the option to include automated release notes. The content will need to be trimmed by deleting from the top to the point where the release being worked on appears ie for release 3.8, look for the update to 3.8-SNAPSHOT and cut up until that point.
     - Artifacts will be available on Maven Central within around half a day.
     - Source archives will be added to the release on GitHub.
 

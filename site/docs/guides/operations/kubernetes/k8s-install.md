@@ -68,6 +68,25 @@ If you experience problems setting these links you can can do one of
  * Use your own local install of [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl){ target=k8s } or [helm](https://helm.sh/docs/intro/install/){ target=helm }
  * set your PATH to point directly to the Rancher binaries
 
+### Can't connect to k8s from CLI - multiple k8s contexts
+
+The `kubectl` and `helm` commands make use of a local k8s configuration to determine which cluster to connect to.
+
+If you are already using k8s you may need to check or switch contexts.
+
+To view configured contexts
+```shell
+kubectl config get-contexts
+```
+
+The one in use will be prefixed with an asterisk
+
+To switch to the Rancher context:
+```shell
+kubectl config use-context rancher-desktop
+```
+
+
 For further help, visit the Rancher community site.
 
 ## [microk8s](https://microk8s.io){ target=mk8s } (Linux, Windows, MacOS)

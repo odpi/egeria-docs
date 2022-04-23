@@ -4,9 +4,6 @@
 
 ### Building egeria.git
 
-??? attention "Check your lombok setup"
-    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-lombok-plugin.md"
-
 Maven is accessed from a sidebar menu in IntelliJ.
 
 ![Maven Sidebar](/education/tutorials/intellij-tutorial/intellij-maven-sidebar-menu.png)

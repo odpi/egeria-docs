@@ -5,7 +5,7 @@
 
 Egeria has an extensive set of APIs and asynchronous event interactions for retrieving and maintaining metadata.    It is also possible to write connectors that execute in Egeria's runtime and either:
 
-- Provide Egeria access to third party technology and resources.
+- Provide Egeria with access to third party technology and resources.
 - Provide the mechanism to synchronize metadata between a third party technology and the open metadata ecosystem that Egeria orchestrates.
 
 Connectors can also be called in your applications to access third party technology along with its associated metadata.
@@ -240,7 +240,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 
     ??? intermediate "Developing a simple audit logging connector, step-by-step (1.5 hours)"
     
-        The *Audit Log Destination Connector* is one of Egeria's runtime connectors.  This means it is used to support Egeria's runtime services - the [Open Metadata Repository Services (OMRS](/services/omrs){ target=dojo-support } in this case.  When a service or a connector running in an OMAG Server writes a message to the [Audit Log](/concepts/audit-log){ target=dojo-support }, the OMRS is responsible for routing the audit log message to all of the destinations configured for that server.  The destinations are implemented as *Audit Log Destination Connectors* and each makes a choice on what to do with the message based on its configuration and the severity of the audit log message.
+        The *Audit Log Destination Connector* is one of Egeria's runtime connectors.  This means it is used to support Egeria's runtime services - the [Open Metadata Repository Services (OMRS)](/services/omrs){ target=dojo-support } in this case.  When a service or a connector running in an OMAG Server writes a message to the [Audit Log](/concepts/audit-log){ target=dojo-support }, the OMRS is responsible for routing the audit log message to all of the destinations configured for that server.  The destinations are implemented as *Audit Log Destination Connectors* and each makes a choice on what to do with the message based on its configuration and the severity of the audit log message.
         
         If you observed the audit log messages from `mds1` on the console log, these where written out using the `ConsoleAuditLogDestinationConnector`.  When this console connector logs events, it deliberately does not include the payload of the event since it may contain sensitive information.  
         
@@ -405,7 +405,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         This session is marked as an expert session since it presents a challenge - to use the skills from the earlier exercises, the `egeria-samples.git` as a guide and the helper classes in `egeria.git` to build your own archive writer.
         
         ??? expert "In memory archive construction (15 mins read)"
-            --8<-- "/guides/developer/open-metadata-archives/in-memory-archive-construction.md"
+            --8<-- "docs/guides/developer/open-metadata-archives/in-memory-archive-construction.md"
         
         ??? expert "Explore `coco-metadata-samples` (15 mins)"
             In the `egeria-samples.git` repository that you downloaded in the prereqs there is a module called `coco-metadata-archives` (under `sample-metadata-archives`). This has examples of 4 archive writers.  In particular, `CocoTypesArchiveWriter` creates an open metadata archive with type definitions and `CocoGovernanceEngineArchives` creates instances.
@@ -451,14 +451,14 @@ After completing developer day of the egeria dojo you should feel comfortable wi
             
             Run `DojoArchiveWriter` to create the `dojo-archive.json` file.
             
-            ??? expert "Copy the resulting file into your egeria install directory under `content-packs`".  
+            ??? expert "Copy the resulting file into your egeria install directory under `content-packs`"
                 From your IntelliJ terminal window of the `egeria-dojo5` project:
             
                 ```bash
                 cp dojo-archive.json ~/egeria-install/egeria-omag-*/content-packs
                 ```
             
-            Use the `add-startup-archive mds1 content-packs/dojo-archive.json` command with `ServerConfig` to add the archive to `mds1`'s configuration document.  Restart `mds1` using `ServerOps` and observe your new MRIScan asset being received by `AssetListen`.
+            Use the `add-startup-archive mds1 content-packs/dojo-archive.json` command with the `ServerConfig` utility to add the archive to `mds1`'s configuration document.  Restart `mds1` using `ServerOps` and observe your new MRIScan asset being received by `AssetListen`.
 
         !!! education "Your development landscape ..."
             ![dojo-archive loading into in mds1](/education/egeria-dojo/developer/developer-dojo-architecture-8.svg)

@@ -4,6 +4,7 @@
 
 # DrawIO temporary files
 *.dtmp
+*.bkp
 
 # Mac files
 .DS_Store

@@ -43,13 +43,13 @@ Figure 2 shows the different values of Element Origin and how they tie into the 
 
 Egeria ensures that only the owner of a metadata instance is permitted to update it. This enforcement makes use of the metadata provenance information in the metadata instance's header.
 
-Typically the owner is the originator of the metadata instance, but the section below describes how to move a metadata instance's home from one metadata collection.  This effectively changes the owner to the new metadata collection.
+Typically, the owner is the originator of the metadata instance, but the section below describes how to move a metadata instance's home from one metadata collection.  This effectively changes the owner to the new metadata collection.
 
 ## Changing the metadata collection that a metadata instance belongs to
 
 The [Open Metadata Repository Services](/services/omrs) supports commands to change the metadata collection that a metadata instance belongs to.  This should be done only if the instance needs to be edited and the technology supporting the original metadata collection is no longer available. For example, for instances belonging to a deregistered repository.  The change needs to be made with care and planning ensuring that all members of the cohort are connected when the command is issued so that the change of ownership can be recorded consistently in all repositories.
   
-??? "education" Further Information
+??? education "Further information"
 
     * Find out more about [membership of a cohort](/concepts/cohort-member).
     * Learn about how [external sources can integrate with the open metadata ecosystem](/concepts/integration-daemon).

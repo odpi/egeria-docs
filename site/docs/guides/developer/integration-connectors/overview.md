@@ -64,7 +64,7 @@ The `refresh` method of your connector is called periodically to ensure the meta
 
 Your integration connector needs to be able to map between the elements in the third party technology and in the open metadata ecosystem.  Each will use different unique identifiers that it is unlikely that you can control.  Design the `qualifiedName` of the open metadata elements to be constructable from the identifier of the equivalent metadata element in the third party technology.
 
-??? "tip" What if there is not a one-to-one correspondence between elements
+??? tip "What if there is not a one-to-one correspondence between elements"
     The [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) supports [external identifiers](/features/external-identifiers/overview) which can help to correlate complex relationships between the third party technology and open metadata.
     
 ## Controlling external source metadata provenance

@@ -11,7 +11,7 @@ Egeria currently supports building on *nix, Linux & Linux-like operating systems
      
 Our official build pipelines are based on x86_64 architecture, but it is expected the build will run on other architectures, subject to the availability of the required tools and interpreters/jvms/runtimes on that platform (for example Java, Python, Docker/containerd/k8s etc).
 
-#### Additional Platforms - linux, macOS
+#### Additional Platforms - Windows
 
 Currently the Egeria team does not regularly test or use Windows, so there may be areas that are not documented as well, or not work. We'd very much
 welcome any interested developers who use Windows on a daily basis to join us and help improve this area!
@@ -24,6 +24,7 @@ From the command line everything should work just as for macOS & linux, includin
 However IDE use may be a little different. Some IDEs can run the GUI in Windows natively, and then use the WSL environment to perform build and execution.
 
 With IntelliJ the following process is most likely to work:
+
  * Ensure an Ubuntu environment is setup using WSL2
  * Install a java sdk, and maven as for mac/linux
  * ensure a build at the command line works ok 
@@ -38,7 +39,8 @@ This is likely to work, but could perform sluggishly. Microsoft are improving th
 graphics to work well. It's also outside the scope of this summary.
 
 Egeria provides both maven and gradle build scripts. On Wndows we've seen issues with maven which can cause IntelliJ 
-to be busy or unresponsive for hours. If this happens you could try to use the gradle build instead. To do this in IntelliJ
+to be busy or unresponsive for hours. If this happens you could try to use the gradle build instead. To do this in IntelliJ:
+
 * Navigate to your maven tool window,click the top level maven project 'Egeria' & 'Unlink Maven Projects' - and confirm.
 * In the left project tree right click on the top level build.gradle and 'Link gradle project' 
 

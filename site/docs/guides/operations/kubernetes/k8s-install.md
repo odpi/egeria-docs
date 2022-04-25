@@ -11,7 +11,7 @@ When running on a separate server or a cloud service this isn't a concern.
 
 Only install **ONE** of the options below.
 
-## [rRancher Desktop](https://rancherdesktop.io){ target=rd } (Linux, Windows, MacOS)
+## [Rancher Desktop](https://rancherdesktop.io){ target=rd } (Linux, Windows, MacOS)
 
 !!! attention Recommended for Dojo
 

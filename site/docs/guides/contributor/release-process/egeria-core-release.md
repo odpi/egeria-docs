@@ -62,4 +62,20 @@ Open up an issue in core egeria using the 'release' template. This contains chec
     - Artifacts will be available on Maven Central within around half a day.
     - Source archives will be added to the release on GitHub.
 
+??? amendments "8. Make amendments to the release"
+    - on master issue `git log` and note the commit id `<cid>` that you want to put into the branch
+    - set your local git to the release using `git reset --hard upstream/egeria-release-x.y` 
+    - create a local branch  `git checkout local1`
+    - apply the commit you need `git cherry-pick  -s <cid>` 
+    - commit the change `git commit -s -m"descriptive message"`
+    - push the change `git push`
+    - in the git hub ui, create pr as usual but specify the release as the target.
+    - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y.z` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y.z`
+    - Fill in the release notes using a title of `Release x.y.z`. Select the option to include automated release notes. 
+    - Artifacts will be available on Maven Central within around half a day.
+    - Source archives will be added to the release on GitHub.
+
+
+
 --8<-- "snippets/abbr.md"
+    

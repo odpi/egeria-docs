@@ -200,6 +200,22 @@ the type and parameters of each operation and the entities and relationships tha
 operation. The types of operation include retrieval using a GUID, search and traversal. In each case the GUID,
 search string or traversal parameters are recorded.
 
+**Historical Query:**
+
+Historical Query is activated using a toggle. When the toggle is not set, then all queries are issued in the present.
+
+When the toggle is set, you can specify a date and a time in the past, and all queries will be issued using that date and time.
+
+Some considerations when using historical query:
+  * Historical queries result in OMRS queries with the asOfTime parameter set.
+  * Egeria repositories may or may not support the asOfTime parameter
+  * if a future date is selected, the query is rejected
+  * If an Egeria repository does not support the asOfTime , then there will be a popup indicating this.
+  * At this time, the in memory and XTDB native OMRS repositories support the asOfTime parameter
+  * At this time, the Janus Graph native OMRS repository does not support the asOfTime parameter
+  * When the date and time is changed, the canvas and all history is lost.
+  * Using the enterprise option will only return data from repositories that support the asOfTime.
+
 **Diagram layouts:**
 
 There is currently one type of diagram - called the 'Network Diagram'. Other types of diagram may be added later.

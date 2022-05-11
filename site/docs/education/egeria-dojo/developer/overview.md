@@ -5,7 +5,7 @@
 
 Egeria has an extensive set of APIs and asynchronous event interactions for retrieving and maintaining metadata.    It is also possible to write connectors that execute in Egeria's runtime and either:
 
-- Provide Egeria access to third party technology and resources.
+- Provide Egeria with access to third party technology and resources.
 - Provide the mechanism to synchronize metadata between a third party technology and the open metadata ecosystem that Egeria orchestrates.
 
 Connectors can also be called in your applications to access third party technology along with its associated metadata.

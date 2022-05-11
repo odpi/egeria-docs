@@ -25,6 +25,9 @@ Discovery and stewardship are the most advanced form of automation for asset cat
 ## Open discovery services
 
 ---8<-- "docs/connectors/discovery/discovery-service-intro.md"
+
+## Open discovery pipelines
+
 ---8<-- "docs/guides/developer/open-discovery-services/discovery-pipeline-intro.md"
 
 ## Inside the discovery analysis report

@@ -15,7 +15,7 @@ Other connectors or data sources may also provide APIs for schema extraction.
 The schema is first added as an annotation that links together the data fields found.
 
 This is then either matched with an existing schema or
-a new schema is created (see [Area 5](Area-5-models.md)).
+a new schema is created (see [Area 5](/types/5)).
 This may be completely automated, or with stewards assistance.
 
 ![UML](0615-Schema-Extraction.svg)

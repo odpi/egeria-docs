@@ -3,25 +3,26 @@
 
 # Metadata Governance Day
 
-As metadata is shared and linked, the gaps and inconsistencies in it are exposed.  In the dojo you will learn how to set up a variety of feature in Egeria to actively govern and maintain your metadata environment.
+As metadata is shared and linked, the gaps and inconsistencies in it are exposed.  In the dojo you will learn how to set up a variety of features in Egeria to actively govern and maintain your metadata environment.
 
 ???+ education "Metadata Governance Dojo starts here"
 
     ??? beginner "The importance of metadata governance (45 mins)"
-        - Need trusted metadata if going to drive decisions (human and automated)
-        - How is this achieved:
-            - Authoritative sources that are actively managed and distributed along well known supply chains
-            - Standard definitions that organizate and provide benchmarks to measure against as well as setting expectations
-            - Monitoring and testing to ensure the authoritative sources are up-to-date and supply chains are operating as expected
+        --8<-- "docs/education/egeria-dojo/metadata-governance/metadata-governance-intro.md"
         
     ??? intermediate "Designing your metadata supply chains (45 mins)"
         - Home and reference copies - metadata provenance
         - Types of standard definitions and governance classifications
     
     ??? beginner "Working with templates (30 mins)"
-        - How templates work
-        - Setting up and managing templates
-        - Using templates in APIs and connectors
+        
+    --8<-- "docs/features/templated-cataloguing/templated-cataloguing-intro.md"
+
+    ### An example
+
+    --8<-- "docs/features/templated-cataloguing/templated-cataloguing-example.md"
+
+    - Using templates in APIs and connectors
     
     ??? beginner "Standard definitions (2 hours)"
         ??? intermediate "Creating glossaries (30 mins)"
@@ -70,9 +71,6 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
         - What is lineage and how it is used?
         - How is it captured?
         - Using the lineage warehouse
-    
-    ??? intermediate "Backup and recovery (30 mins)"
-        - Setting up backups and restoring metadata after a failure
 
     ??? intermediate "Linking metadata governance to your governance program (3 hours)"
         ??? intermediate "Governance definitions (30 mins)"

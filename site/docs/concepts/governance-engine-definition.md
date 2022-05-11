@@ -25,7 +25,7 @@ There are three types of governance engine and they each support a specialist ty
 
 Each governance engine definition describes a single engine and its specialized services as illustrated below.
 
-![Repository Governance Engine Definition Structure](/guides/developer/open-metadata-archives/archive-engine-definition.svg)
+![Repository Governance Engine Definition Structure](/guides/developer/open-metadata-archives/repository-governance-engine-definition.svg)
 > Logical structure of a repository governance engine definition showing how the governance request types map to the repository governance service definitions
 
 ![Governance Action Engine Definition Structure](/guides/developer/open-metadata-archives/governance-action-engine-definition.svg)

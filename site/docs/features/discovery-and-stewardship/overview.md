@@ -51,15 +51,40 @@ Open discovery can be used for the following types of analysis.
 
 ### Schema extraction
 
-*Schema extraction* established the data fields discovered in the digital resource and if the schema is attached to the asset, it will attempt to match the data fields it finds to its schema attributes.
+For digital resources that include structured data, *schema extraction* documents the data fields present in the digital resource and if the schema is attached to the asset, it will attempt to match the data fields it finds to its schema attributes.
+
+Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Extraction).  It is linked directly off of the discovery analysis report.
+
+[Data field](/types/6/0615-Schema-Extraction) entities, one for each data field in the digital resource, are then linked together to show the structure of the data in the digital resource and this structure is linked off of the schema analysis annotation.
 
 ![Open discovery schema extraction](/guides/developer/open-discovery-services/open-discovery-schema-extraction.svg)
 
-### Data Profiling
+The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *AssetSchemaType* relationship.  This may be established before the open discovery service runs, or may be derived by a [governance action](/concepts/governance-action) once the open discovery service has run.
 
-Profiling analysis looks at the data values in the resource and summarizes their characteristics.
+If the schema is defined, the open discovery service that creates the data fields may maintain relationships between the schema and the data fields:
+
+* The *SchemaTypeDefinition* links the schema analysis annotation to the top level schema type.
+* The *SchemaAttributeDefinition* links a data field to is corresponding schema attribute.
+
+Alternatively, these relationships can be established by a governance action that is processing the results of the schema extraction.  They are useful for consumers of the asset to be able to navigate to the specific data field annotations from the schema.
+
+![Schema Extraction in Report](/guides/developer/open-discovery-services/open-discovery-schema-extraction-with-schema-links.svg)
+
+Where a digital resource has a fixed structure that does not support repeating fields, such as a relational database, the schema extraction can use the schema to create the data fields since the result will always be one-to-one (assuming the schema is being actively maintained).
+
+However, if there are repeating groups in the digital resource's data fields then the schema extraction needs to work off of the data in the digital resource.
+
+### Data profiling
+
+Profiling analysis looks at the data values in the resource and summarizes their characteristics.  There are three types of annotations used in data profiling.
+
+* [Data Profile Annotation](/types/6/0620-Data-Profiling) - Capture the characteristics of the data values stored in a specific data field in a data source.
+* [Data Profile Log Annotation](/types/6/0620-Data-Profiling) - Capture the named of the log files where profile characteristics of the data values stored in a specific data field.  This is used when the profile results are too large to store in open metadata.
+* [Fingerprint Annotation](/types/6/0620-Data-Profiling) - Capture the characteristics of the data values stored in a specific data field or the whole digital resource and express it as a single value.
 
 ![Open discovery data profiling](/guides/developer/open-discovery-services/open-discovery-data-profiling.svg)
+
+For structured data, data profiling needs to run after schema extraction to allow the data profiling annotations that refer to a specific data field to be linked from the appropriate data field entity.
 
 ### Data class discovery
 
@@ -67,17 +92,20 @@ Data class discovery captures the analysis on how close a data field matches the
 
 ![Data class discovery](/guides/developer/open-discovery-services/open-discovery-data-class-discovery.svg)
 
+The recommendation for a specific data class are stored in a [data class annotation](/types/6/0625-Data-Class-Discovery) linked off of the appropriate data field.  Data class discovery needs to run after schema extraction.  It often builds on the information provided by data profiling.
+
 ### Semantic discovery
 
-Semantic discovery is attempting to define the meaning of the data values in the asset. The result is a recommended glossary term stored as an annotation.
+Semantic discovery is attempting to define the meaning of the data values in the asset. The result is a recommended glossary term stored as a [semantic annotation](/types/6/0630-Semantic-Discovery).
 
 ![Semantic discovery](/guides/developer/open-discovery-services/open-discovery-semantic-discovery.svg)
 
-These annotations are the discovery engine equivalent of the *Informal Tag* shown in [0150 - Feedback](/types/1/0150-feedback) in Area 1.
-It typically takes confirmation by a subject-matter expert to convert this into a [Semantic Assignment](/types/3/0370-Semantic-Assignment).
+These annotations are the metadata discovery equivalent of the *Informal Tag* shown in [0150 - Feedback](/types/1/0150-feedback) in Area 1.  It typically takes confirmation by a subject-matter expert to convert this into a [Semantic Assignment](/types/3/0370-Semantic-Assignment).  Semantic discovery needs to run after schema extraction.  It often builds on the information provided by data profiling and data class discovery.
 
 ### Classification discovery
-Classification discovery adds recommendations for how the data could be classified. 
+
+Classification discovery adds recommendations for new classifications that should either be added to the asset, or to a schema attribute in the asset.  It uses the [classification annotation](/types/6/0635-Classification-Discovery) to describe the classification and its properties.
+If the classification is for the asset, the classification annotation is linked off of the discovery analysis report.  If it is for a specific schema attribute, it is linked off of the corresponding data field.
 
 ![Classification discovery](/guides/developer/open-discovery-services/open-discovery-classification-discovery.svg)
 
@@ -97,8 +125,7 @@ It is possible to create the relationship as a relationship annotation or attach
 
 ### Capturing measurements
 
-The measurement annotations capture a snapshot of the physical dimensions and activity levels at a particular moment in time.
-For example, it may calculate the size of the data source or the number of users accessing it.
+The measurement annotations capture a snapshot of the physical dimensions and activity levels at a particular moment in time.  For example, it may calculate the size of the data source or the number of users accessing it.
 
 ![Data source measurements](/guides/developer/open-discovery-services/open-discovery-data-source-measurement.svg)
 

@@ -206,7 +206,7 @@ The discovery annotation store provides an open discovery service with access to
 
 The discovery asset catalog store provides an open discovery service with access to all the known metadata about the digital resource it is to analyse.  It is able to create a connector to the digital resource based on the connection(s) attached to the asset.
 
-### Discovery Analysis Report Store
+#### Discovery Analysis Report Store
 
 The discovery analysis report store is a client to an open metadata server that enables an open discovery service to query the properties of its discovery analysis report and update the analysis step that is currently executing and the status of its processing.
 

@@ -27,12 +27,8 @@ Discovery and stewardship are the most advanced form of automation for asset cat
 
 ## Open discovery services
 
-![Open Discovery Service](/connectors/discovery/discovery-service.svg)
-
-Open discovery services run in the [Asset Analysis OMES](/services/omes/asset-analysis) that is hosted in a [Engine Host](/concepts/engine-host).  The metadata repository interface for metadata discovery tools is implemented by the [Discovery Engine OMAS](/services/omas/discovery-engine) that runs in a [Metadata Access Server](/concepts/metadata-access-server).  Calls to open discovery services are initiated by creating [governance actions](/concepts/governance-action).
-
-
---8<-- "docs/guides/developer/open-discovery-services/operation-of-a-discovery-service.md"
+---8<-- "docs/connectors/discovery/discovery-service-intro.md"
+---8<-- "docs/connectors/discovery/discovery-pipeline-intro.md"
 
 ## Inside the discovery analysis report
 
@@ -41,7 +37,7 @@ The discovery analysis report structures the annotations in two ways:
 * Annotations that describe a characteristic of the whole digital resource.
 * Annotations that describe a characteristic of a single data field within the digital resource.
 
-The annotations for the data fields are linked off of the data fields created by schema analysis.
+The annotations for the data fields are linked off of the data fields created by [schema extraction](#schema-extraction).
 
 ![Discovery analysis report structure](/guides/developer/open-discovery-services/discovery-analysis-report-structure.svg)
 
@@ -136,14 +132,6 @@ A RequestForAction entity (RfA) is used when an open discovery service performs 
 ![Request for action](/guides/developer/open-discovery-services/open-discovery-request-for-action.svg)
 
 The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) is designed to respond to the requests for actions (RfAs).
-
-## Open discovery pipelines
-
-Many of the data field analysis rely on schema extraction setting up the data field structure.  
-
----8<-- "docs/guides/developer/open-discovery-services/discovery-pipeline-intro.md"
-
-![pipe;ine-example](/guides/developer/open-discovery-services/open-discovery-pipeline-example.svg)
 
 ## Working with external engines
 

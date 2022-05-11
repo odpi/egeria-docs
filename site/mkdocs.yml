@@ -3,7 +3,7 @@
 
 site_name: Egeria
 site_description: Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms, no matter the vendor
-copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2021 contributors to the Egeria project."
+copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2022 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
 site_url: https://egeria-project.org
@@ -20,8 +20,9 @@ nav:
           - Metadata Exchange: patterns/metadata-exchange/overview.md
           - Metadata Governance: patterns/metadata-governance/overview.md
   - Using:
-      - Planning Guide: guides/planning/overview.md
-      - Diagnostic Guide: guides/diagnostic/overview.md
+      - Planning Guide:
+          - Planning Overview: guides/planning/overview.md
+          - User Interfaces: user-interfaces/ecosystem/ecosystem-ui-planning.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -36,6 +37,7 @@ nav:
               - Engine Host: guides/admin/servers/configuring-an-engine-host.md
               - Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy-server.md
               - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
+              - Presentation Server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
           - Operate OMAG Server Platform: guides/operations/overview.md
@@ -53,6 +55,10 @@ nav:
               - Container Images: guides/operations/kubernetes/container-images.md
               - Custom Deployment: guides/operations/kubernetes/custom-deployment.md
               - Egeria Operator: guides/operations/kubernetes/operator.md
+      - Diagnostic Guide:
+          - Diagnostic Process: guides/diagnostic/overview.md
+          - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
+          - First failure data capture (FFDC): guides/diagnostic/ffdc.md
       - Integrate:
           - Developer Guide:
                 - Developer Overview: guides/developer/index.md
@@ -119,9 +125,11 @@ nav:
                       - Open Metadata Topic:
                             - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
       - User Interfaces:
+          - User Interface overview: user-interfaces/index.md
           - Egeria Ecosystem UI:
+              - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
               - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
-              - Resource Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
+              - Repository Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
               - Dynamic Operations (Dino): guides/ecosystem-ui/dino-user-guide.md
               - Glossary author: guides/ecosystem-ui/glossary-author-user-guide.md
               - Server author: guides/ecosystem-ui/server-author-user-guide.md
@@ -146,13 +154,6 @@ nav:
           - Synchronized Access Control: features/synchronized-access-control/overview.md
           - Templated Cataloguing: features/templated-cataloguing/overview.md
           - User Feedback: features/user-feedback/overview.md
-  - User Interfaces:
-      - User Interface overview: user-interfaces/index.md
-      - Egeria Ecosystem User Interface:
-          - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
-          - Planning checklist: user-interfaces/ecosystem/ecosystem-ui-planning-checklist.md
-          - Planning: user-interfaces/ecosystem/ecosystem-ui-planning.md
-          - Configure and run presentation server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
   - Learning:
       - Learning Overview: education/index.md
       - Webinars: education/webinar-program/overview.md
@@ -239,6 +240,7 @@ nav:
                   - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
                   - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                   - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
+                  - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
           - Specific Guidance:
               - Programming Languages: guides/contributor/languages.md
               - Tools:
@@ -260,6 +262,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.8: release-notes/3-8.md
         - v3.7: release-notes/3-7.md
         - v3.6: release-notes/3-6.md
         - v3.5: release-notes/3-5.md
@@ -464,6 +467,7 @@ nav:
               - Incomplete: types/7/0790-Incomplete.md
       - Standards: standards/overview.md
       - Services:
+          - Services: services/index.md
           - Fixed Services:
               - Administration Services: services/admin-services/overview.md
               - Repository Services (OMRS):
@@ -514,7 +518,7 @@ nav:
                   - Open Metadata Engine Services: services/omes/index.md
                   - Asset Analysis: services/omes/asset-analysis/overview.md
                   - Governance Action: services/omes/governance-action/overview.md
-                  - Archive Manager: services/omes/archive-manager/overview.md
+                  - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
                   - Analytics Integrator: services/omis/analytics-integrator/overview.md
@@ -603,8 +607,8 @@ nav:
       - Anchor: concepts/anchor.md
       - Archive Engine: concepts/archive-engine.md
       - Asset: concepts/asset.md
-      - Audit Log: concepts/audit-log.md
       - Asset Log Message: concepts/asset-log-message.md
+      - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
@@ -612,6 +616,7 @@ nav:
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md
+      - Component Description: concepts/component-description.md
       - Configuration Document: concepts/configuration-document.md
       - Configuration Properties: concepts/configuration-properties.md
       - Conformance Test Server: concepts/conformance-test-server.md
@@ -622,7 +627,9 @@ nav:
       - Connector Provider: concepts/connector-provider.md
       - Connector Type: concepts/connector-type.md
       - Contact Method: concepts/contact-method.md
+      - Data Class: concepts/data-class.md
       - Data Engine Proxy: concepts/data-engine-proxy.md
+      - Digital Resource Connector: concepts/digital-resource-connector.md
       - Discovery Analysis Report: concepts/discovery-analysis-report.md
       - Endpoint: concepts/endpoint.md
       - Engine Host: concepts/engine-host.md
@@ -646,6 +653,8 @@ nav:
       - Governance Service: concepts/governance-service.md
       - Governance Zone: concepts/governance-zone.md
       - Headcount Limit: concepts/person-role.md
+      - Guard: concepts/guard.md
+      - GUID: concepts/guid.md
       - Home Metadata Repository: concepts/home-metadata-repository.md
       - In Topic: concepts/in-topic.md
       - Incident Report: concepts/incident-report.md
@@ -661,13 +670,14 @@ nav:
       - Metadata Access Server: concepts/metadata-access-server.md
       - Metadata Access Store: concepts/metadata-access-store.md
       - Metadata Collection Id: concepts/metadata-collection-id.md
+      - Metadata Discovery: features/discovery-and-stewardship/overview.md
       - Metadata Repository: concepts/metadata-repository.md
       - Note Log: concepts/note-log.md
       - OMAG Server: concepts/omag-server.md
       - OMAG Server Platform: concepts/omag-server-platform.md
       - OMAG Subsystem: concepts/omag-subsystem.md
       - Open Discovery Engine: concepts/open-discovery-engine.md
-      - Open Discovery Service: guides/developer/open-discovery-services/overview.md
+      - Open Discovery Service: concepts/open-discovery-service.md
       - Open Lineage Server: concepts/open-lineage-server.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
@@ -696,13 +706,14 @@ nav:
       - Review: concepts/review.md
       - Schema: concepts/schema.md
       - Server Name: concepts/server-name.md
-      - Software Server Capability: concepts/software-server-capability.md
+      - Software Capability: concepts/software-capability.md
       - Star Rating: concepts/review.md
       - Tag: concepts/informal-tag.md
       - To Do: concepts/to-do.md
       - Useful Resource: concepts/useful-resource.md
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md
+      - Virtual Connection: concepts/connection.md
   - Practices:
       - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md

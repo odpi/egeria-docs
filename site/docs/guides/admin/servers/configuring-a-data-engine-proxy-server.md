@@ -26,11 +26,6 @@ For data engine proxy server, followng can be configured:
 
 <!-- --8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md" -->
 
-!!! attention "For the next step it is important to configure in-memory repository type"
-    Since Data Engine Proxy is a stateless service, it only relies on ***in-memory*** repository to operate. The sync state (last sync date) is stored in the external system and managed by the connector.
-
---8<-- "docs/guides/admin/servers/configuring-the-local-repository.md"
-
 ## Configuring Date Engine Proxy Services 
 
 !!! post "POST - Configure Date Engine Proxy Services"

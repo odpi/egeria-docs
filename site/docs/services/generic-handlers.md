@@ -24,9 +24,9 @@ A key part of the capability of the generic handlers is to manage the authorizat
 
 Finally, the generic handlers maintain the LatestChange classification on anchor Referenceables and the Anchors classification vor all entities that are anchored to a referenceable.
 
-Further information:
+!!! education "Further information"
 
-* [Anchor management](/features/anchor-management/overview).
-* [Metadata Security](/features/metadata-security/overview).
+    * [Anchor management](/features/anchor-management/overview).
+    * [Metadata Security](/features/metadata-security/overview).
 
 --8<-- "snippets/abbr.md"

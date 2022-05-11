@@ -7,7 +7,7 @@
 
 The Asset Manager OMAS provides APIs for supporting the
 exchange of metadata with a third party asset manager.
-An [asset manager](/concepts/software-server-capability)
+An [asset manager](/concepts/software-capability)
 is typically a catalog of [assets](/concepts/asset).  It is responsible
 for maintaining details of the assets including their characteristics,
 ownership, assessments and governance requirements.

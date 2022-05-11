@@ -21,7 +21,7 @@ Each release will also upgrade the level of its dependencies to ensure Egeria is
 
 Our master branch is currently taking code for all future releases. Many of the features are large and the teams integrate code for partial function as soon as it is stable and has no impact on released function. So you will see support for much more function than is officially released. This way you can monitor and feedback on future items as they are developed.
 
-The [roadmap for Egeria](roadmap) describes the end vision for Egeria and our current status.
+The [roadmap for Egeria](/release-notes/roadmap) describes the end vision for Egeria and our current status.
 
 [^1]: To understand more about what it means to have "released function" see [Egeria content status](content-status).
 

@@ -22,7 +22,7 @@ Only install **ONE** of the options below.
 
 ### MacOS
 
-The [install :material-dock-window:](https://docs.rancherdesktop.io/installation){ target=rd } docs cover the steps needed to install Rancher Desktop on macOS and this
+The [install :material-dock-window:](https://docs.rancherdesktop.io/getting-started/installation/#macos){target=rd} docs cover the steps needed to install Rancher Desktop on macOS and this
 is the recommended route, as this is the supported approach from the Rancher development team.
 
 If you have [HomeBrew :material-dock-window:](https://docs.brew.sh/Installation){ target=brew } installed, you can also install the application via  using
@@ -33,12 +33,12 @@ brew install rancher
 You may need to remove other implementations of the kubectl or helm commands in order to use Rancher Desktop
 ### Windows
 
-Follow the [official instructions :material-dock-window:](https://docs.rancherdesktop.io/installation){ target=rd } (untested)
+Follow the [official instructions :material-dock-window:](https://docs.rancherdesktop.io/getting-started/installation/#windows){target=rd} (untested)
 
 
 ### Linux
 
-Follow the [official instructions :material-dock-window:](https://docs.rancherdesktop.io/installation){ target=rd } (untested)
+Follow the [official instructions :material-dock-window:](https://docs.rancherdesktop.io/getting-started/installation/#linux){target=rd} (untested)
 
 ### IMPORTANT - Rancher Desktop configuration for all platforms
 
@@ -63,6 +63,31 @@ Also ensure the following symbolic links are set up for helm & kubectl. If you a
 
 ![Utility settings](rancherutils.png)
 
+If you experience problems setting these links you can can do one of
+ * create the links manually. For instance on macOS using brew, these can be seen with `ls -la /usr/local/bin | grep Rancher`
+ * Use your own local install of [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl){ target=k8s } or [helm](https://helm.sh/docs/intro/install/){ target=helm }
+ * set your PATH to point directly to the Rancher binaries
+
+### Can't connect to k8s from CLI - multiple k8s contexts
+
+The `kubectl` and `helm` commands make use of a local k8s configuration to determine which cluster to connect to.
+
+If you are already using k8s you may need to check or switch contexts.
+
+To view configured contexts
+```shell
+kubectl config get-contexts
+```
+
+The one in use will be prefixed with an asterisk
+
+To switch to the Rancher context:
+```shell
+kubectl config use-context rancher-desktop
+```
+
+
+For further help, visit the Rancher community site.
 
 ## [microk8s](https://microk8s.io){ target=mk8s } (Linux, Windows, MacOS)
 

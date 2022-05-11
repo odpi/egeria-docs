@@ -33,7 +33,7 @@ Below are the list of tasks supported by the Community Profile OMAS.
 ### One time set up by the administrator
 
 Many organizations already have [a system that maintains information about their employees
-and/or customers and/or business partners](/concepts/software-server-capability/#master-data-manager).
+and/or customers and/or business partners](/concepts/software-capability/#master-data-manager).
 The Community Profile OMAS therefore supports an event exchange with such a system
 to keep the profiles synchronized. 
 The following tasks cover the work of the IT team to integrate the Community Profile

@@ -5,6 +5,7 @@
 
 The operations guide describes the commands and actions that can be performed on a running [OMAG Server Platform](/concepts/omag-server-platform) to discover its status, and the status of the servers and connectors that it is hosting.
 
+## 
 ## Platform Origin Service
 
 The platform origin service is a simple REST API that returns basic information about an OMAG Server Platform. It is often used by operational scripts controlling the start up and shutdown of OMAG Server Platforms to determine if the server platform is running.
@@ -28,7 +29,7 @@ which has an endpoint of `https://localhost:9443`.  Gary Geeke (`garygeeke`) is 
 
 ```bash
 $ curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform-origin
-Egeria OMAG Server Platform (version 3.4-SNAPSHOT)
+Egeria OMAG Server Platform (version 3.7-SNAPSHOT)
 ```
 
 ## Listing Registered Services

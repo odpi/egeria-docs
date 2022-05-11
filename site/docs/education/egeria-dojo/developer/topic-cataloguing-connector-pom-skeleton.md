@@ -39,7 +39,7 @@ Paste this structure into your `pom.xml` class.
          <open-metadata.version>3.8-SNAPSHOT</open-metadata.version>
     
          <!-- Versions of other dependent libraries -->
-         <kafka.version>3.0.0</kafka.version>
+         <kafka.version>3.1.0</kafka.version>
 
     </properties>
 

@@ -672,6 +672,7 @@ nav:
       - Metadata Collection Id: concepts/metadata-collection-id.md
       - Metadata Discovery: features/discovery-and-stewardship/overview.md
       - Metadata Repository: concepts/metadata-repository.md
+      - Multi-link Relationships: concepts/uni-multi-link.md
       - Note Log: concepts/note-log.md
       - OMAG Server: concepts/omag-server.md
       - OMAG Server Platform: concepts/omag-server-platform.md
@@ -688,7 +689,7 @@ nav:
       - Organization: concepts/organization.md
       - Out Topic: concepts/out-topic.md
       - Peer Network: concepts/peer-network.md
-      - Personal Messsge: concepts/personal-message.md
+      - Personal Message: concepts/personal-message.md
       - Personal Notes: concepts/personal-notes.md
       - Personal Profile: concepts/personal-profile.md
       - Personal Roles: concepts/personal-roles.md
@@ -710,6 +711,7 @@ nav:
       - Star Rating: concepts/review.md
       - Tag: concepts/informal-tag.md
       - To Do: concepts/to-do.md
+      - Uni-link Relationships: concepts/uni-multi-link.md
       - Useful Resource: concepts/useful-resource.md
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md

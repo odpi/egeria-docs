@@ -46,8 +46,10 @@ Follow the links below the diagram to find out more about each one's purpose.
 > **Figure 2:** Different types of OMAG Servers that can be connected via a cohort
 
 - [Metadata Access Server](/concepts/metadata-access-server)
+   
    - [Metadata Access Store](/concepts/metadata-access-store)
    - [Metadata Access Point](/concepts/metadata-access-point)
+  
 - [Repository Proxy](/concepts/repository-proxy)
 - [Conformance Test Server](/concepts/conformance-test-server)
 

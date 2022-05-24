@@ -133,32 +133,46 @@ A federated query combines metadata retrieved from all members of the connected 
 ![Federated Query](federated-query.svg)
 > Federated query visiting the local repository and then calling all other servers connected via the cohort(s).
 
-The list of servers that are called by a federated query is built dynamically from the [cohort registration requests](#cohort-registration) events.  These events take information from the [configuration document](/concepts/configuration-document) for the server.  In the *Local Repository* section are two connections for [repository connectors](/concepts/repository-connector):
+The list of servers that are called by a federated query is built dynamically from the [cohort registration request](#cohort-registration) events.  These events take information from the [configuration document](/concepts/configuration-document) for the server.  
 
-* *LocalRepositoryLocalConnection* is the connector to the repository for this local server.
-* *LocalRepositoryRemoteConnection* is the connector that remote servers should use in their federated queries to retrieve information from this local repository.
+### Configuring the local repository for federated queries
+
+In the *Local Repository* section of the configuration document are two connections:
+
+* *LocalRepositoryLocalConnection* is the [connector to the metadata repository](/concepts/repository-connector) for this local server.
+* *LocalRepositoryRemoteConnection* is the [connector that remote servers](/connectors/#cohort-member-client-connectors) should use in their federated queries to retrieve information from this local repository.
 
 ![Local Repository Configuration](remote-connection.svg)
 > Configuration document showing the both the local and remote connections for the local repository in a [metadata access store](/concepts/metadata-access-store) or [repository proxy](/concepts/repository-proxy).  In a [metadata access point](/concepts/metadata-access-point), both connections are null. In a metadata access store that does not support federated queries, LocalRepositoryRemoteConnection is null.
 
-The LocalRepositoryRemoteConnection is sent to the other cohort members in the registration request events. The default value specifies the [OMRS Rest Repository Connector](/connectors/#cohort-member-client-connectors) as the remote repository connector.
+The LocalRepositoryRemoteConnection is sent to the other cohort members in the registration request events. The default value specifies the [OMRS REST Repository Connector](/connectors/#cohort-member-client-connectors) as the remote repository connector.
 
 ![Default Remote Repository Connector](default-remote-connector.svg)
 > The default remote-repository connector is a REST API client for the Repository REST API supported by Egeria OMAG Server Platform.
 
-When the registration request is accepted, the receiving system uses the LocalRepositoryRemoteConnection to configure the remote repository connector in the *Enterprise Repository Connector* from the [enterprise repository services](/services/omrs/subsystem-descriptions/enterprise-respository-services) that is responsible for executing the federated queries.
+When the registration request is accepted, the receiving system uses the LocalRepositoryRemoteConnection to configure the remote repository connector in the *Enterprise Repository Connector* from the [enterprise repository services](/services/omrs/#enterprise-repository-services) that is responsible for executing the federated queries.
 
 ![Enterprise Repository Connector](remote-connector-in-use.svg)
 > The remote repository connectors are established dynamically in the enterprise repository connector using information from the registration events.
 
+### Making federated queries
+
+Whenever an [Open Metadata Access Service (OMAS)](/services/omas) is called, it uses the enterprise repository connector to create, retrieve, update and delete metadata.
+
 The operation of the enterprise repository connector depends on the type of request.  When metadata is retrieved, the request is passed to all connected repositories and the results are combined.
 
 ![Retrieve federated query operation](retrieve-federated-query-operation.svg)
-> When metadata is retrieved, the enterprise repository connector calls the local repository and each of the registered remote repositories.  The metadata returned is combined and pass to caller.
+> When metadata is retrieved, the enterprise repository connector calls the local repository and each of the registered remote repositories.  The metadata returned is combined and passed to caller.
 
-Updates are targeted to the home repository that is encoded in the header of the metadata element.
+Updates and deletes are targeted to the home repository of the instance.  The metadata collection identifier of the home repository is encoded in the header of the metadata instance.  This identifier is also known to each of the remote repository connectors, so it is possible to match the instance with its home repository.
 
 ![Home Metadata Collection](home-metadata-collection.svg)
 > The home metadata collection is identified in the header of each metadata element.
+
+When the home repository makes the change to the instance, it sends an event with the latest version of the instance to the rest of the cohort.
+
+Create requests are passed first to the local repository, and if it can not support the requested type of metadata, then the enterprise repository connector tries each of the remote repository connectors until one of them returns to say that the new instance is created.
+
+Whichever repository created the instance, becomes that instance's home repository, and it sends out an event to the rest of the cohort to announce that the new instance is available.
 
 --8<-- "snippets/abbr.md"

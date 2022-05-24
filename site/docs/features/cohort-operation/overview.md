@@ -124,11 +124,11 @@ The registration process is managed by exchanging [registry events](/cohort-even
 
 The cohort registry maintains its record of the membership of the cohort in a [cohort registry store](/concepts/cohort-registry-store-connector).
 
-[^1]: You may want to see the [OMRS metamodel](/guides/developer/metamodel/overview) for more details on the granularity of metadata exchange.
+[^1]: You may want to see the [OMRS metamodel](/guides/developer/repository-connectors/metamodel/overview) for more details on the granularity of metadata exchange.
 
 ## Federated queries
 
-A federated query combines metadata retrieved from all members of all cohorts that the querying server is connected to.
+A federated query combines metadata retrieved from all members of the connected cohorts.
 
 ![Federated Query](federated-query.svg)
 > Federated query visiting the local repository and then calling all other servers connected via the cohort(s).
@@ -141,23 +141,22 @@ The list of servers that are called by a federated query is built dynamically fr
 ![Local Repository Configuration](remote-connection.svg)
 > Configuration document showing the both the local and remote connections for the local repository in a [metadata access store](/concepts/metadata-access-store) or [repository proxy](/concepts/repository-proxy).  In a [metadata access point](/concepts/metadata-access-point), both connections are null. In a metadata access store that does not support federated queries, LocalRepositoryRemoteConnection is null.
 
-The LocalRepositoryRemoteConnection is sent to the other cohort members in the registration requests.
+The LocalRepositoryRemoteConnection is sent to the other cohort members in the registration request events. The default value specifies the [OMRS Rest Repository Connector](/connectors/#cohort-member-client-connectors) as the remote repository connector.
 
-The default connection specified the [OMRS Rest Repository Connector](/connectors/#cohort-member-client-connectors) as the 
 ![Default Remote Repository Connector](default-remote-connector.svg)
 > The default remote-repository connector is a REST API client for the Repository REST API supported by Egeria OMAG Server Platform.
 
-When the registration request is accepted, the receiving system uses the LocalRepositoryRemoteConnection to configure the *Enterprise Repository Connector* in the [enterprise repository services](/services/omrs/subsystem-descriptions/enterprise-respository-services) that is responsible for executing the federated queries.
+When the registration request is accepted, the receiving system uses the LocalRepositoryRemoteConnection to configure the remote repository connector in the *Enterprise Repository Connector* from the [enterprise repository services](/services/omrs/subsystem-descriptions/enterprise-respository-services) that is responsible for executing the federated queries.
 
 ![Enterprise Repository Connector](remote-connector-in-use.svg)
-> The remote repository connectors are established dynamically in the enterprise repository connector.
+> The remote repository connectors are established dynamically in the enterprise repository connector using information from the registration events.
 
-Retrieves come from all repositories.
+The operation of the enterprise repository connector depends on the type of request.  When metadata is retrieved, the request is passed to all connected repositories and the results are combined.
 
 ![Retrieve federated query operation](retrieve-federated-query-operation.svg)
 > When metadata is retrieved, the enterprise repository connector calls the local repository and each of the registered remote repositories.  The metadata returned is combined and pass to caller.
 
-Updates are targeted to the home repository.
+Updates are targeted to the home repository that is encoded in the header of the metadata element.
 
 ![Home Metadata Collection](home-metadata-collection.svg)
 > The home metadata collection is identified in the header of each metadata element.

@@ -20,8 +20,8 @@ an [operator](https://github.com/odpi/egeria-k8s-operator) which will be more fl
 
 In order to use the chart, you'll first need to have the following installed:
 
-- A [Kubernetes cluster](../k8s) at 1.15 or above with the `kubectl` tool in your path.
-- [Helm](../helm) 3.0 or above, configured with the Egeria repository.
+- A [Kubernetes cluster](/kubernetes/k8s) at 1.15 or above with the `kubectl` tool in your path.
+- [Helm](/kubernetes/helm) 3.0 or above, configured with the Egeria repository.
 
 No configuration of the chart is required to use defaults, but information is provided below
 

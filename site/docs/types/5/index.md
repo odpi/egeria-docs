@@ -76,7 +76,7 @@ The final set of models capture architectures and patterns.
 
 ## Further reading
 
-* [Modelling schemas](/guides/developer/mapping-technology/modelling-schemas)
+* [Modelling schemas](/concepts/schema)
 
 * Specific schema structures supported by the integration services
    * For API Schemas - [API Integrator OMIS](/services/omis/api-integrator/overview)

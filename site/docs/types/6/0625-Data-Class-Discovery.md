@@ -8,8 +8,7 @@ hide:
 
 # 0625 Data Class Discovery
 
-Data class discovery captures the analysis on how close a data field matches the specification
-defined in a data class.
+Data class discovery captures the analysis on how close a data field matches the specification defined in a [data class](/concepts/data-class).
 
 ![UML](0625-Data-Class-Discovery.svg)
 

@@ -90,6 +90,8 @@ Data class discovery captures the analysis on how close a data field matches the
 
 The recommendation for a specific data class are stored in a [data class annotation](/types/6/0625-Data-Class-Discovery) linked off of the appropriate data field.  Data class discovery needs to run after schema extraction.  It often builds on the information provided by data profiling.
 
+Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the [*DataClassAssignment*](/types/5/0540-Data-Classes) relationship.
+
 ### Semantic discovery
 
 Semantic discovery is attempting to define the meaning of the data values in the asset. The result is a recommended glossary term stored as a [semantic annotation](/types/6/0630-Semantic-Discovery).
@@ -107,7 +109,7 @@ If the classification is for the asset, the classification annotation is linked 
 
 ### Calculating quality scores
 
-Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.
+Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.   This type of annotation is often used within a [data quality program](/features/data-quality/overview) to provide assessments of the data for different purposes.
 
 ![Quality Scores](/guides/developer/open-discovery-services/open-discovery-quality-scores.svg)
 
@@ -127,7 +129,7 @@ The measurement annotations capture a snapshot of the physical dimensions and ac
 
 ### Requesting stewardship action
 
-A RequestForAction entity (RfA) is used when an open discovery service performs a test on the data (such as a discovery rule) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.
+A RequestForAction entity (RfA) is used when an open discovery service performs a test on the data (such as a [quality rule](/features/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.
 
 ![Request for action](/guides/developer/open-discovery-services/open-discovery-request-for-action.svg)
 

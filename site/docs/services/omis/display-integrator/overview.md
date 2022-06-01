@@ -79,7 +79,7 @@ The **DataContainers** and **DataFields** for a queries are represented as
 
 All of these types are subtypes of schema attributes that
 the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
-classification [method for defining the schema type](/guides/developer/mapping-technology/modelling-schemas).
+classification [method for defining the schema type](/concepts/schema).
 
 The different subtypes enable metadata searches to narrow the results to this type of display metadata.
 

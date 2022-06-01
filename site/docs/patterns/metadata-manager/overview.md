@@ -87,7 +87,7 @@ A schema describes the individual data fields and operations of the asset.It is 
     With the schema in place, it is possible to search for assets based on the type of data, or type of operations that the asset supports.
 
 ??? education "More information"
-    [Modelling Schema](/guides/developer/mapping-technology/modelling-schemas)
+    [Modelling Schema](/concepts/schema)
 
 ### Asset ownership
 

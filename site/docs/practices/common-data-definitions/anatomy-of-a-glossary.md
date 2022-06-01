@@ -5,7 +5,7 @@
 
 A *glossary* is a collection of semantic definitions, typically focused on defining the meaning of data. An organization may have multiple glossaries that represent different collections of definitions, each reflecting a scope of use or a source of the definitions.
 
-Each glossary defined should have a well defined content and an owner, who is responsible for ensuring that the contributed content meets the needs of its consumers.
+Each glossary defined should have a well-defined content and an owner, who is responsible for ensuring that the contributed content meets the needs of its consumers.
 
 Figure 1 shows the typical content of a glossary.
 

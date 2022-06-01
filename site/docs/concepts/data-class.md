@@ -3,13 +3,18 @@
 
 # Data class
 
-Data classes provide the specification of a logical data type. This goes beyond the type used to store the data value and includes a specification of the values that are found in this logical type.  For example, a credit card number is typically stored as a string.  However, it has a well-defined pattern of four groups of four digits.  The data class allows the capture of the specification of a credit card number type that can be used by discovery engines to find more information out about the data values within a resource.
+Data classes provide the specification of a logical data type. This goes beyond the type used to store the data value and includes a specification of the values that are found in this logical type.  
+
+For example, a credit card number is typically stored as a string.  However, it has a well-defined pattern of four groups of four digits.  The data class allows the capture of the specification of a credit card number type that can be used by discovery engines to find more information out about the data values within a resource.
 
 Data classes can be specialized to define the logical data type more precisely than the implementing technology can support.  The specialization relationship enables automated curation and stewards to move up and down the levels of specialization.
 
+The example below defines the data class for an *Address* and also identifies two variations: one for USA addresses and one for UK addresses.
+
 ![Address specialization](/features/data-quality/address-data-class-specialization.svg)
 
-Complex data types can be broken down into fields to allow more detailed understanding of its content.
+Complex data types can be broken down into fields to allow more detailed understanding of its content.  In the diagram below, the structure of the US and UK addresses is shown.
+
 The data classes can be augmented with valid value sets and validation rules to enable [automated quality processes](/features/data-quality/overview) to be metadata-driven.
 
 ![Address composition](/features/data-quality/address-data-class-composition.svg)
@@ -18,6 +23,7 @@ Data classes can be linked to glossary terms to show how data fo a specific mean
 
 ![Semantic context](/features/data-quality/data-quality-semantic-context.svg)
 
+Finally, data classes can be linked to [Implementation Snippets](/types/5/0504-Implementation-Snippets) that show how it is represented in different programming languages and technical formats.  This aids discovery as well as gneration of artifacts from metadata.
 
 !!! education "Further information"
 

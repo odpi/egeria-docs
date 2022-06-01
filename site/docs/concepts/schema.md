@@ -3,7 +3,7 @@
 
 # Schema
 
-A *schema* describes the structure of the data associated with an [Asset](/patterns/metadata-manager).
+A *schema* describes the structure of the data associated with an [Asset](/concepts/asset).
 The technology that supports the asset often limits the structural choices for data.
 For example:
 
@@ -16,6 +16,9 @@ data governance is concerned with the accuracy and appropriate use of individual
 This is very expensive if each data item was governed individually so the data governance practices aim to group
 like data together, so they can be governed in a consistent way.  As such, the open metadata types
 provide a root set of types that all the specific schema structures inherit from.
+
+## Schema Elements
+
 The schema root type is called [Schema Element](/types/5/0501-Schema-Elements)
 which is then dividing into a **Schema Attribute** (think of this as a variable) and a **Schema Type**.
 The schema type describes the structure of the data associated with the schema attribute.
@@ -39,6 +42,7 @@ Figure 2 shows the new types for representing a schema attribute and its type.
 > **Figure 2:** Collapsing SchemaAttribute and SchemaType into an entity with a classification
 
 Schema type entities are still used:
+
 * to connect [Assets](/types/5/0503-Asset-Schema) and [Ports](/types/5/0520-Process-Schemas) to their schemas
 * to connect structural schema types such as [maps](/types/5/0511-Map-Schema-Elements)
   and [external schemas](/types/5/0507-External-Schema-Type) to other types that represent their contents.
@@ -48,7 +52,7 @@ Figure 3 shows the use of the schema type:
 ![Figure 3](/guides/developer/mapping-technology/generic-schema-type.svg)
 > **Figure 3:** The SchemaType is still used as the top level element in a schema and for complex structures
 
-## Specific SchemaTypes
+## Specific Schema Types
 
 The root SchemaType and SchemaAttribute are specialized to support different structures.
 The diagrams show how the structure is represented for a SchemaAttribute on the left and
@@ -121,6 +125,10 @@ The relationship between the StructSchemaType and its nested schema attributes i
 
 ## Related Information
 
+[Data classes](/concepts/data-class) provide the ability to define logical data types to complement the schema elements.
+
+### Open Metadata Types
+
 Open Metadata types for connecting schemas to other types of elements:
 
 * **[0503 Asset Schema](/types/5/0503-Asset-Schema)** - for the relationship between an Asset and
@@ -149,6 +157,7 @@ For example, a query for relational columns with a particular characteristic.
 * **[0535 Event Schema](/types/5/0535-Event-Schemas)** - for EventTypeList, EventType and EventSchemaAttribute.
 * **[0536 API Schemas](/types/5/0536-API-Schemas)** - for types associated with APIs.
 
+### Open Metadata and Governance APIs
 APIs that support the definition of schemas:
 
 * [Asset Owner OMAS](/services/omas/asset-owner/overview)

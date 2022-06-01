@@ -18,6 +18,17 @@ Data quality can be assessed along different dimensions such as:
 
 Data quality needs to blend various techniques to deliver quality to each consumer.  Aspects of data quality need to be applied throughout the information supply chain.
 
+Consider an information supply chain that has these types of data sets in it
+![Information Supply Chain](example-info-supply-chain.png)
+
+At each stage in the information supply chain, different sets of quality rules can be applied.
+
+![Data Quality Pipeline](data-quality-pipeline.png)
+
+Detected errors are [captured as exceptions](#correction-of-data) and routed to the appropriate stewards.
+
+## Data quality management process
+
 The management of data quality involves:
 
 * [Understanding the source data values](#understanding-data-values) - Analysing the content of a [data resource](/concepts/resource), typically running [open discovery services](/features/discovery-and-stewardship/overview), to get an assessment of the data values it contains. This may be simple fact gathering using *data profiling* or executing *quality rules* to determine how well it fits to the data specifications needed for its different purposes.
@@ -46,9 +57,9 @@ The first stage to understanding data is to determine if it has a [schema](/conc
 
 ![Adding the data schema](data-schema-added.svg)
 
-This helps in the understanding of where the data fields, and in some cases, it is possible to understand the meaning of the data values.
+The schema helps in the understanding of where the data fields, and in some cases, it is possible to understand the meaning of the data values. 
 
-If the schema 
+When the data source is catalogued in open metadata, an abstract representation of the schema is captured as [Schema Elements](/concepts/schema/#schema-elements).  These schema elements include *Schema Attributes* that represent the data fields and their associated *Schema Types* that record the actual data types used in the data.
 
 ![Cataloguing the schema](data-asset.svg)
 
@@ -57,28 +68,25 @@ If the schema
 
 Open metadata provides mechanisms to augment the asset and its schema with context information that guides the data quality processes.
 
-* [Data classes](/concepts/data-class) - these are logical types for the data
+* [Data classes](/concepts/data-class) - these are logical types for the data.
 * Semantic assignments - these are links to [glossary terms](/practices/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term) that describe the meaning of typically a data field, but may also be assigned to describe the meaning of the data resource as a whole.
 * [Origin and lineage](/features/lineage-management/overview) can be added to indicate scope and the context of the data source.
 
+In the diagram below, the *Employee Data Of Birth* glossary term is linked to a data class called *Adult Data Of Birth*.  This detects that a date of birth is not only a valid date but also describes someone older than 18 years old.  The sample data shown below includes a date of birth of a young infant.  Either the date of birth is incorrect, or this individual should not be an employee!
 
 ![Mapping data classes to glossary terms](date-data-class-example.svg)
 
-
 ## Correction of data
 
-Consider an information supply chain that has these types of data sets in it
-![Information Supply Chain](example-info-supply-chain.png)
+The execution of data quality rules can be embedded into [open discovery services](/features/discovery-and-stewardship/overview) and the results recorded in [*QualityScoreAnnotations*](/features/discovery-and-stewardship/overview/#calculating-quality-scores).
 
-At each stage in the information supply chain, different sets of quality rules can be applied.
+Any errors detected can result in a [request for action](/features/discovery-and-stewardship/overview/#requesting-stewardship-action) that notifies an appropriate steward to correct the data.
 
-![Data Quality Pipeline](data-quality-pipeline.png)
-
-Detected errors are captured as exceptions and routed to the appropriate stewards.
+Alternatively, an error may be corrected automatically using [reference data](/features/reference-data-management/overview).
 
 ## Extending data quality capability
 
-The process of [data profiling](/features/discovery-and-stewardship/overview) captures list of data values found in a data source.  These values can be mined to create candidate data classes and valid value sets to use in future data quality assessments.
+The process of [data profiling](/features/discovery-and-stewardship/overview/#data-profiling) captures list of data values found in a data source.  These values can be mined to create candidate data classes and valid value sets to use in future data quality assessments.
 
 !!! education "Further information"
     * [Open discovery services supplied by the Egeria project](/connectors/#open-discovery-services)

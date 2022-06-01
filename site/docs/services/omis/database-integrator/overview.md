@@ -73,7 +73,7 @@ in between the DeployedAPI entity and the RelationalTable entity.
 The SchemaType for a RelationalTable is [RelationalTableType](/types/5/0534-Relational-Schemas).
 The schema attributes for RelationalTable and RelationalColumn also use
 the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
-classification [method for defining the schema type](/guides/developer/mapping-technology/modelling-schemas).
+classification [method for defining the schema type](/concepts/schema).
 
 This integration service is paired with the [Data Manager OMAS](/services/omas/data-manager/overview).
 

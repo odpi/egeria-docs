@@ -30,7 +30,7 @@ which in turn have optional
 [APIParameterList](/types/5/0536-API-Schemas)s
 for the header, request and response.
 The details of these payloads are described using
-[SchemaAttributes and SchemaTypes](/guides/developer/mapping-technology/modelling-schemas).
+[SchemaAttributes and SchemaTypes](/concepts/schema).
 
 Figure 2 shows the open metadata types used to represent the metadata created through this service.
 
@@ -51,7 +51,7 @@ Any schema attributes created through this interface will use the
 [APIParameter](/types/5/0536-API-Schemas) subtype
 to allow for find requests that only return schema information for APIs.  The schema attributes also use
 the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
-classification [method for defining the schema type](/guides/developer/mapping-technology/modelling-schemas).
+classification [method for defining the schema type](/concepts/schema).
 
 
 This integration service is paired with the [Data Manager OMAS](/services/omas/data-manager/overview).

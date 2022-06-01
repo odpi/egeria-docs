@@ -5,7 +5,7 @@
 
 Common data definitions (also known as the common information model or CIM) create a shared understanding of data. They are critical where data is to be shared between different systems and or groups of people.
 
-Typically the common data definitions consist of:
+Typically, the common data definitions consist of:
 
 * Names and descriptions for concepts described by the data.
 * Relationships between these concepts.

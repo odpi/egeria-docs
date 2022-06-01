@@ -63,7 +63,6 @@ nav:
           - Developer Guide:
                 - Developer Overview: guides/developer/index.md
                 - Building Utilities: guides/developer/building-utilities/overview.md
-                - Modelling Schema: guides/developer/mapping-technology/modelling-schemas.md
                 - Building Connectors:
                       - Integration Connectors: guides/developer/integration-connectors/overview.md
                       - Open Discovery Services: guides/developer/open-discovery-services/overview.md
@@ -137,6 +136,7 @@ nav:
           - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md
           - Cohort Operation: features/cohort-operation/overview.md
+          - Data Quality: features/data-quality/overview.md
           - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
           - Duplicate Management: features/duplicate-management/overview.md
           - Effectivity Dates: features/effectivity-dates/overview.md
@@ -149,6 +149,7 @@ nav:
           - Metadata Archiving: features/metadata-archiving/overview.md
           - Metadata Provenance: features/metadata-provenance/overview.md
           - Metadata Security: features/metadata-security/overview.md
+          - Open Type System: features/open-type-system/overview.md
           - People, Roles and Organizations: features/people-roles-organizations/overview.md
           - Reference Data Management: features/reference-data-management/overview.md
           - Synchronized Access Control: features/synchronized-access-control/overview.md

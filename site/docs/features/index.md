@@ -7,6 +7,7 @@ The Egeria features describe the value-add features that Egeria adds to its abil
 
 - [Anchor Management](/features/anchor-management/overview) - grouping metadata elements into larger objects so that they can share a common lifecycle.
 - [Cohort Operation](/features/cohort-operation/overview) - How does an open metadata repository cohort work.
+- [Data Quality](/features/data-quality/overview) - manage the quality of data for specific purposes.
 - [Discovery and Stewardship](/features/discovery-and-stewardship/overview) - automated metadata discovery and stewardship of results.
 - [Duplicate Management](/features/duplicate-management/overview) - linking metadata elements that represent the same [resource](/concepts/resource) so that these duplicates are automatically merged and do not bloat metadata query results.
 - [Effectivity Dating](/features/effectivity-dates/overview) - adding an optional start and end date to metadata elements to limit *when* they can be returned on a metadata query.

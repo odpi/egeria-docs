@@ -47,7 +47,7 @@ in between the file and the TabularColumn.
 
 The tabular columns use
 the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
-classification [method for defining the schema type](/guides/developer/mapping-technology/modelling-schemas).
+classification [method for defining the schema type](/concepts/schema).
 
 
 ## Avro Files
@@ -78,7 +78,7 @@ Any object attributes created through this interface will use the
 [ObjectAttribute](/types/5/0532-Object-Schemas) subtype
 to allow for find requests that only return schema information for object type schemas.  The schema attributes also use
 the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
-classification [method for defining the schema type](/guides/developer/mapping-technology/modelling-schemas).
+classification [method for defining the schema type](/concepts/schema).
 
 ## JSON Files
 
@@ -108,7 +108,7 @@ Any object attributes created through this interface will use the
 [DocumentSchemaAttribute](/types/5/0532-Object-Schemas) subtype
 to allow for find requests that only return schema information for object type schemas.  The schema attributes also use
 the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
-classification [method for defining the schema type](/guides/developer/mapping-technology/modelling-schemas).
+classification [method for defining the schema type](/concepts/schema).
 
 
 ## Module Implementation

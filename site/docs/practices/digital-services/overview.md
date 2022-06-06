@@ -3,9 +3,9 @@
 
 # Digital Services
 
-A **digital service** is an automated service delivered via the Internet or private network.
+A **digital service** is an automated service that is of significance to its owning organization. It may be delivered via the Internet or private network.
 
-Typically it has a well-defined interface for requesting actions and data. This interface may include one, or a combination of the following:
+Typically, a digital service has a well-defined interface for requesting actions and data. This interface may include one, or a combination of the following:
 
 * A user interface, such as a browser, application (eg Mobile App), or specialized device that allows
 a person to interact with the service.  
@@ -19,9 +19,10 @@ Organizations today increasingly rely on digital services to transact their busi
 
 Privacy regulations such as the EU's General Data Protection Regulation require an organization to guarantee that they are only processing personal data with the consent of the **[data subject](/practices/roles/data-subject-role)**. This means an organization needs to understand and manage the personal data consumed by their digital services.
 
-## Further Information
+!!! education "Further Information"
 
-* [The lifecycle of a digital service](/practices/digital-services/digital-service-lifecycle)
+    * [The lifecycle of a digital service](/practices/digital-services/digital-service-lifecycle)
+    * [Digital service metadata](/types/7/0710-Digital-Service)
 
 
 

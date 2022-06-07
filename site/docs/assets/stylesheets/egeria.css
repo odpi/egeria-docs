@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: CC-BY-4.0 */
 /* Copyright Contributors to the Egeria project. */
 
-:root {
+:root > * {
     --goreleaser-primary-color:   #3b5672;
     --md-primary-fg-color:        rgb(0, 174, 185);
     --md-primary-fg-color--light: rgb(0, 174, 185);

@@ -11,7 +11,6 @@ The request type is mapped to a [governance service](/concepts/governance-servic
 ![Figure 1](/guides/developer/open-metadata-archives/governance-engine-definition.svg)
 > **Figure 1:** Governance request types as part of a governance engine definition
 
-Governance services are run by the [Open Metadata Engine Services (OMES)](/services/omes) in an [Engine Host](/concepts/engine-host) OMAG Server.  The [Engine Host Services](/services/engine-host-services) in the engine host call the [Governance Engine OMAS](/services/omas/governance-engine/overview) to retrieve the governance engine definition.  When a [governance action](/concepts/governance-action) request is made, the supplied request type is used by the OMES to determine which [Governance Service](/concepts/governance-service) to run.
 
 
 ??? education "Further information"

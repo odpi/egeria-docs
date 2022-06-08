@@ -9,7 +9,7 @@ A governance action service runs in the [Governance Action Open Metadata Engine 
 
 Governance action services implement interfaces defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview). The GAF offers embeddable functions and APIs to simplify the implementation of governance action services, and their integration into the broader digital landscape, whilst being resilient and with good performance.
 
-It is possible to implement complex governance actions in a single governance action service.  Alternatively there are five specialized types of governance action services that help you to break down your governance function into reusable components that can be choreographed by [governance action processes](/concepts/governance-action-process)to maximise the flexibility of your governance automation.  When a governance action service completes, it produces [guards](/concepts/guard) that define what needs to be done next along with a list of [action targets](/concepts/action-target).
+It is possible to implement complex governance actions in a single governance action service.  Alternatively there are five specialized types of governance action services that help you to break down your governance function into reusable components that can be choreographed by [governance action processes](/concepts/governance-action-process) to maximise the flexibility of your governance automation.  When a governance action service completes, it produces [guards](/concepts/guard) that define what needs to be done next along with a list of [action targets](/concepts/action-target).
   
 * *[Watchdog Governance Action Service](/guides/developer/governance-action-services/overview/#watchdog-context-methods)* listens for changes to metadata and initiates new [governance actions](/concepts/governance-action), [governance action processes](/concepts/governance-action-process) or an [incident report](/concepts/incident-report).
   
@@ -32,7 +32,7 @@ The interfaces for governance action services is defined in the [governance-acti
 
     ![Data onboarding scenario](/guides/developer/governance-action-services/data-onboarding-example-scenario.svg)
 
-    ??? education "Operation of the data onboarding process"
+    !!! education "Operation of the data onboarding process"
         
         ??? education "Initialization"
             At the start, there is an integration connector called *Data Files Monitoring Integration Connector* that will detect new files in the landing area folder and create an Asset metadata element to describe the file.

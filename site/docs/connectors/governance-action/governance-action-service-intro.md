@@ -19,8 +19,8 @@ It is possible to implement complex governance actions in a single governance ac
   
 * *[Remediation Governance Action Service](/guides/developer/governance-action-services/overview/#remediation-context-methods)* makes updates to metadata elements, relationships between them and classifications. Examples of remediation governance action services include:
   
-  * Classification and linking of metadata elements such as adding owners, governance zones and origin classifications to assets.
-  * Duplicate detection, linking and consolidating.
+    * Classification and linking of metadata elements such as adding owners, governance zones and origin classifications to assets.
+    * Duplicate detection, linking and consolidating.
 
 * *[Provisioning Governance Action Service](/guides/developer/governance-action-services/overview/#provisioning-governance-action-service)*  invokes a provisioning service whenever a provisioning request is made.  Typically, the provisioning service is an external service.  It may also create lineage metadata to describe the work of the provisioning service if the provisioning service is not able to create lineage itself.
 

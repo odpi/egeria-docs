@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: CC-BY-4.0 */
 /* Copyright Contributors to the Egeria project. */
 
-:root {
+:root > * {
     --goreleaser-primary-color:   #3b5672;
     --md-primary-fg-color:        rgb(0, 174, 185);
     --md-primary-fg-color--light: rgb(0, 174, 185);
@@ -500,4 +500,11 @@
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/*Making SVG images from content when dark mode white background and 10px padding*/
+body[data-md-color-scheme="slate"] .md-content img[src $= "svg"],
+body[data-md-color-scheme="slate"] .md-content img[src $= "png"]{
+    background-color: white;
+    padding: 10px;
 }

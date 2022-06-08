@@ -26,7 +26,7 @@ It is a simple command to move an OMAG Server from one platform instance to anot
 
 Different types of technology need different types of integration and Egeria has OMAG Servers to match. Each type of OMAG Server is focused on the integration of a specific type of tool, engine or platform:
 
-![Types of OMAG Servers](/concepts/types-of-omag-servers.png)
+![Types of OMAG Servers](/concepts/types-of-omag-servers.svg)
 
 The way to understand the diagram is that the arrows should be read as **is a**.  For example, the *repository proxy* **is a** *cohort member* and the *cohort member* **is a** *OMAG Server*. This means that everything documented about a particular type of server is also true for all server types that point to it through the **is a** arrow, all the way down the hierarchy.
 

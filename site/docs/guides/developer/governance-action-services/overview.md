@@ -3,69 +3,134 @@
 
 # Governance Action Service
 
----8<-- "docs/connectors/governance-action/governance-action-service-intro.md"
+--8<-- "docs/connectors/governance-action/governance-action-service-intro.md"
 
 ## Governance action context
 
-A governance action service is passed a context as it is started. This provides access to the request type and associated request parameters (name-value pairs) used to invoke the governance action service, along with a client to access open metadata through the Governance Engine OMAS.
+A governance action service is passed a context as it is started. This provides access to the [request type and associated request parameters (name-value pairs)](/concepts/request-type) used to invoke the governance action service, along with its [action targets](/concepts/action-target).  There is also a client to access open metadata through the Governance Engine OMAS.
 
 ![Structure of the governance context](/frameworks/gaf/governance-action-service-with-context.svg)
 
+The methods of the context are colour-coded.  The methods shown in white are available for all types of governance action services.  These are divided into three groups:
 
-* Governance Action Request Type - The governance action request type defines the descriptive name of a specific governance action that the organization wishes to run. They are used by the [Governance Action Engines](/concepts/governance-action-engine)
-to determine which governance action service to run.
-* Governance Action Request Parameters - The governance action request parameters are a collection of name-value properties that are passed to a [governance action service](/guides/developer/governance-action-services/governance-action-service) in the [governance context](/guides/developer/governance-action-services/governance-context) when it starts.
+* Understanding the request
 
-!!! info "Open Metadata Types"
-    The Open Metadata Type model *[0461 Governance Action Engines](/types/4/0461-Governance-Engines)* shows how the request type links the governance action engine to the governance action service via the **SupportedGovernanceActionService** relationship.
+  * getRequestType - returns the [governance request type](/concept/governance-request-type) used to invoke the governance action service.
+  * getRequestParameters - returns the name-value pairs of properties passed with the request type.
+  * getRequestSourceElements - returns details of the process that invoked the governance action.
+  * getActionTargetElements - returns the list of [action target](/concepts/action-target) elements that this governance action service is to work on.
+  
+* Performing the action
+
+  * getOpenMetadataStore - returns a client to the Governance Engine OMAS that supports the retrieval of metadata elements, their classifications and relationships.
+  * createIncidentReport - creates an [incident report](/concept/incident-report) that can provide a focal point for collaboration to resolve a particular issue.  Incident reports are often managed by an [incident management tool](/features/incident-reporting/overview).
+  
+* Recording the outcome of the processing
+
+  * updateActionTargetStatus - records that the governance action service has completed processing a specific [action target](/concepts/action-target).  This is optional, but useful to show progress when a governance action process is performing action on a long list of action targets.
+  * recordCompletionStatus - declares that the governance action service has completed processing.  It has three parameters:
+
+    * completionStatus - with values:
+    
+      * Actioned - the governance action service has successfully completed processing.
+      * Invalid - the governance action service has not performed the requested action because it is not appropriate (for example, a false positive).
+      * Failed - The governance action service failed to execute the requested action.
+      * Other - Undefined or unknown completion status.
+
+    * outputGuards - the list of [guards](/concepts/guards) that are used to determine which governance action to run next.
+    * newActionTargets - the list of [action targets](/concepts/action-target) that the follow-on governance services should process.
+    
+  * getCompletionStatus - returns the status passed on recordCompletionStatus or null if no status has been posted.  It is used to coordinate the shutdown of multiple threads operated by the governance action service.
+
+The methods in blue are addition services offered to governance action services implementing a *watchdog* capability:
+
+* registerListener - requests that it is called whenever certain open metadata events occur.  It is able to specify a range of conditions from receiving all event, events for particular actions (such as creation of a new metadata element), events for particular metadata types or events on particular instances.
+* initiateGovernanceAction - requests that a new [governance action](/concepts/governance-action) is run.
+* initiateGovernanceActionProcess - requests that a new [governance action process](/concepts/governance-action-process) is run.
+
+The methods in purple are additional services offered to governance action services implementing a *provisioning* capability to record lineage:
+
+* createAsset - create an asset - typically the destination of the provisioning.
+* createProcess - create a representation of the provisioning process.
+* createPort - create a port for the process
+* createLineageMapping - create a lineage relationship.
+
+There are no additional services for governance action services implementing a *verification* capability which is why the green box is empty.
+
+The methods in yellow are additional services offered to governance action services implementing a *triage* capability to initiate a stewardship action:
+
+* createToDo - create a [ToDo](/concepts/to-do) that is assigned to an individual.
+
+The methods in red are additional services offered to governance action services implementing a *remediation* capability to make updates to open metadata.  They are divided into four groups:
+
+* Working with metadata elements
+
+  * createMetadataElement
+  * updateMetadataElement
+  * updateMetadataElementStatus
+  * deleteMetadataElement
+
+* Working with classification on a metadata element
+
+  * classifyMetadataElement
+  * reclassifyMetadataElement
+  * updateClassificationStatus
+  * unclassifyMetadataElement
+
+* Working with relationships (links) between metadata elements
+
+  * createRelatedElements
+  * updateRelatedElements
+  * updateRelatedElementsStatus
+  * deleteRelatedElements
+
+* Performing specialist governance actions
+
+  * linkElementsAsPeerDuplicates
+  * LinkConsolidatedDuplicate
+
+A governance action service has a choice of base classes to extend that controls the methods provided in the governance action context:
+
+* *GovernanceActionService* - for the complete context
+* *WatchdogGovernanceActionService* - for the white and blue methods
+* *ProvisioningGovernanceActionService* - for the white and purple methods
+* *VerificationGovernanceActionService* - for the white and green methods
+* *TriageGovernanceActionService* - for the white and yellow methods
+* *RemediationGovernanceActionService* - for the white and red methods
+
+The [Writing the governance action service connector](#writing-the-governance-action-service-connector) section provides more information on how to use the methods.
+
+## Writing the connector provider
+
+The connector provider for your governance action service provides the factory method to create an instance of the governance action service.  It also supports methods to describe the options that the governance action servvice provides.
 
 
-### Watchdog governance action service
+
+## Writing the governance action service connector
+
+
+### Generic methods
+
+### Watchdog governance action service methods
 
 --8<-- "docs/frameworks/gaf/watchdog-governance-action-service-intro.md"
 
-### Verification governance action service
+### Verification governance action service methods
 
 --8<-- "docs/frameworks/gaf/verification-governance-action-service-intro.md"
 
-### Triage governance action service
+### Triage governance action service methods
 
 --8<-- "docs/frameworks/gaf/triage-governance-action-service-intro.md"
 
-### Remediation governance action service
+### Remediation governance action service methods
 
 --8<-- "docs/frameworks/gaf/remediation-governance-action-service-intro.md"
 
-### Provisioning governance action service
+### Provisioning governance action service methods
 
 --8<-- "docs/frameworks/gaf/provisioning-governance-action-service-intro.md"
 
-## Data onboarding example
-
-
-![Data onboarding scenario](data-onboarding-example-scenario.svg)
-
-??? education "Operation of the data onboarding process"
-    ??? education "Initialization"
-    ![Data onboarding startup](data-onboarding-example-1.svg)
-    ??? education "New files arrive"
-    ![Data onboarding startup](data-onboarding-example-2.svg)
-    ??? education "Provisioning to the data lake"
-    ![Data onboarding startup](data-onboarding-example-3.svg)
-    ??? education "Archive the asset for the landing area"
-    ![Data onboarding startup](data-onboarding-example-4.svg)
-
-
-![Data onboarding overview](data-onboarding-example-overview.svg)
-
-1. New file detected by Integration Connector
-2. File asset created in metadata server
-3. New Asset event passed to Watchdog Governance Service
-4. New Governance Action created that results in notification to Engine Host
-5. Engine Host claims Governance Action and activates Provisioning Governance Service
-6. Provisioning Governance Service moves file and writes lineage
-7. Deleted file is detected
-8. File's Asset archived
 
 !!! education "Next steps"
 

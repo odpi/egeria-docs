@@ -7,7 +7,7 @@ A **to do** is a record of an action.  It includes details of the action to perf
 and the time frame it needs to be completed for.
 
 To dos are normally created as a result of a meeting, or a process, such as a
-[governance action process](/conceepts/governance-action-process).
+[governance action process](/concepts/governance-action-process).
 
 The requested action may be ad hoc in nature, or part of a stewardship
 process that identified a specific action for an individual, or group of
@@ -20,6 +20,7 @@ attached to one of their [roles](/concepts/personal-roles) rather than
 directly to their [personal profile](egeria-docs/concepts/personal-profile).
 
 Each to do has a priority and a status:
+
 * **Open** - no work has started.
 * **In Progress** - work is ongoing.
 * **Waiting** - work is on hold, typically blocked.

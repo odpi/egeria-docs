@@ -7,7 +7,7 @@ hide:
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-## Governance Action
+# Governance Action
 
 A *governance action* describes a specific governance activity that needs to be performed on one or more metadata elements, or their counterparts in the digital landscape.
 

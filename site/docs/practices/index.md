@@ -16,7 +16,7 @@ The practices consider (1) the people involved, (2) the data they need to make g
 ![Figure 1](governance-components.svg)
 > Figure 1: The components of a governance program
 
-The guidance is in two streams.  There is a theoretical set of guidance that covers various governance topics in general terms. Then there is a parallel set of material that chronicles a fictitious organization called [Coco Pharmaceuticals](/practices/coco-pharmaceuticals/overview) as they create a governance capability that will support and drive their business transformation to delivering personalized medicine.
+The guidance is in two streams.  There is a theoretical set of guidance that covers various governance topics in general terms. Then there is a parallel set of material that chronicles a fictitious organization called [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) as they create a governance capability that will support and drive their business transformation to delivering personalized medicine.
 
 The two streams cross-reference each other and include links to software samples using the Egeria software.  
 
@@ -31,7 +31,7 @@ Egeria is a rapidly evolving project and new material and software is being adde
 * [Governance Roles](/practices/roles/overview) describes the different roles that people perform in a governance program.
 * [Digital Services](/practices/digital-services/overview) describes concept of a digital service and the lifecycle stages it goes through.
 
-* [Coco Pharmaceuticals Personas and Scenarios](/practices/coco-pharmaceuticals/overview) describes the personas and scenarios that are driving the work of the Egeria community.
+* [Coco Pharmaceuticals Personas and Scenarios](/practices/coco-pharmaceuticals) describes the personas and scenarios that are driving the work of the Egeria community.
 
 
 --8<-- "snippets/abbr.md"

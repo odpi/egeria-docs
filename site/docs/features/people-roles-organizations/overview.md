@@ -7,7 +7,7 @@
 
 Everyone plays multiple roles in their lives: parent, daughter, employee, scout leader, … even within an organization it is not uncommon, particularly for more experienced people, to be assigned to multiple roles.
 
-For example, figure 1 shows some of the roles that [Tessa Tube](https://opengovernance.odpi.org/coco-pharmaceuticals/personas/tessa-tube.html) performs at [Coco Pharmaceuticals](https://opengovernance.odpi.org/coco-pharmaceuticals/).  *Researcher* is her primary role, but she is also a manager, system owner and information consumer.  Each of these roles needs particular skills and knowledge.  They will also take up some of her time.
+For example, figure 1 shows some of the roles that [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) performs at [Coco Pharmaceuticals](/practices/coco-pharmaceuticals).  *Researcher* is her primary role, but she is also a manager, system owner and information consumer.  Each of these roles needs particular skills and knowledge.  They will also take up some of her time.
 
 ![Figure 1](tessa-tubes-roles.svg)
 > **Figure 1:** Roles that Tessa Tube plays in Coco Pharmaceuticals
@@ -78,7 +78,7 @@ Figure 9 shows how the roles - and hence the responsibilities - or individuals v
 
 The hospital has a close association with the information subjects (patients) and information originators (medical staff) who are typically the information owners.
 
-The hospital appoints an information steward ([Robbie Records](https://opengovernance.odpi.org/coco-pharmaceuticals/personas/robbie-records.html)) to work with the information owners on the terms and conditions that must be met by external organizations using the data.  Robbie also chases down data quality issues and ensures their data practices are clean.
+The hospital appoints an information steward ([Robbie Records](/practices/coco-pharmaceuticals/personas/robbie-records)) to work with the information owners on the terms and conditions that must be met by external organizations using the data.  Robbie also chases down data quality issues and ensures their data practices are clean.
 
 At Coco Pharmaceuticals, Tanya Tidie is appointed as the information custodian for the data.  She takes responsibility for meeting the terms and conditions for the incoming data.
 

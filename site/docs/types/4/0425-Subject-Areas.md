@@ -71,9 +71,9 @@ subject areas:
 
 ## Further Information
 
-The [Coco Pharmaceuticals case study](https://opengovernance.odpi.org/coco-pharmaceuticals/) includes
-* [Planning for Common Data Definitions](https://opengovernance.odpi.org/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/)
-* [Defining Subject Area](https://opengovernance.odpi.org/coco-pharmaceuticals/scenarios/defining-subject-areas/)
+The [Coco Pharmaceuticals case study](/practices/coco-pharmaceuticals) includes
+* [Planning for Common Data Definitions](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
+* [Defining Subject Area](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview)
 
 ??? deprecated "Deprecated types"
     - *SubjectAreaGovernance* - use [GovernedBy](0401-Governance-Definitions.md) relationship instead.

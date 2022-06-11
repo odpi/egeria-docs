@@ -6,7 +6,7 @@
 # XTDB OMRS Repository Connector
 
 ??? success "Fully conformant with all Egeria profiles"
-    Last tested on [release 3.6 of Egeria, release 3.6 of connector using release 1.20.0 of XTDB](performance.md).
+    Last tested on [release 3.9 of Egeria, release 3.9 of connector using release 1.21.0 of XTDB](performance.md).
 
     Profile | Result
     ---|---

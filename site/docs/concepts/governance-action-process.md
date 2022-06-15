@@ -5,12 +5,34 @@
 
 A *governance action process* is a predefined sequence of [governance actions](/concepts/governance-action) that are coordinated by the [Governance Engine OMAS](/services/omas/governance-engine/overview).
 
-The steps in a governance action process are defined by linked [governance action types](/concepts/governance-action-type).  Each governance action type provides the specification of the governance action to run.  The links between then show which [guards](/concepts/guard) cause the governance action to run.
+The steps in a governance action process are defined by linked [governance action types](/concepts/governance-action-type) stored in the open metadata ecosystem.  Each governance action type provides the specification of the governance action to run.  The links between them show which [guards](/concepts/guard) cause the governance action to run.
+
+The governance action process support enables governance professionals to assemble and monitor governance processes without needing to be a Java programmer.
 
 ## Examples
 
+In the two examples below, each of the rounded boxes represent a governance action and the links between them is a possible flow - where the label on the link is the guard that must be provided by the predecessor if the linked governance action is to run.
+
+The governance actions in example 1 are all implemented using [governance action services](/concepts/governance-action-service).  When these services complete, they supply a completion status.  If a service completed successfully, they optionally supply one or more guards and a list of [action targets](/concepts/action-target) for the subsequent governance action(s) to process.  
+
+The first governance action in example 1 is called when a new asset is created.  For example the [Generic Element Watchdog Governance Action Service](/connectors/governance-action/generic-element-watchdog-governance-action-service) could be configured to monitor for new/refresh events for particular types of assets and initiate this governance process then this type of event occurs.
+
+The first governance action to run is *Validate Asset*.  It retrieves the asset and tests that it has the expected classifications assigned.  The guards it produces control with actions follow.
+
+Governance actions from the same governance action processes can run in parallel if the predecessor governance actions produces multiple guards. 
+
 ![Example 1](governance-action-process-example-1.svg)
+> **Example 1:** Governance Action Process to validate and augment a newly created asset
+
+Governance action processes can include any [type of governance service](/concepts/governance-service).
+Example 2 shows an [open discovery service](/concepts/open-discovery-service) amongst the [governance action services](/concepts/governance-action-service).
+
 ![Example 2](governance-action-process-example-2.svg)
+> **Example 2:** Governance Action Process to validate and augment a newly created asset
+
+## Governance Action Process Lifecycle
+
+![Lifecycle](governance-action-process-lifecycle.svg)
 
 
 !!! education "Further information"

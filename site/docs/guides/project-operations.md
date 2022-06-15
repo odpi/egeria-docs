@@ -41,9 +41,25 @@ Egeria *contributors* are members who have actively taken additional steps to pr
 - Promote the goals of Egeria and the benefits of open metadata to the IT community (deliver presentations, informal talks, assist at trade shows, independent blogs, etc.)
 - Assist in the recruitment of new members.
 - Contribute where appropriate to documentation and code reviews, specification development, demonstration assets and other artifacts that help move Egeria forward.
+- Being a defined contributor will also give you greater access to the Egeria repositories where you can assign/be assigned issues and reviews.
 
 !!! tip "How to become a contributor"
-    Being recognized as an Egeria contributor is done by nomination of an Egeria maintainer with a majority vote of Egeria maintainers to confirm. Once confirmed, you will receive [an Egeria Contributor badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-contributor){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria contributor.
+    Being recognized as an Egeria contributor is done by nomination of an Egeria maintainer with a majority vote of Egeria maintainers to confirm. 
+
+    A person wishing to become a contributor may send a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a contributor.
+
+    A maintainer can then propose this and the other maintainers will review. They will look for participation in the community..
+
+    If agreed, you will receive [an Egeria Contributor badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-contributor){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria contributor.
+
+!!! note "Contributor approval process"
+
+    - A maintainer sends an email to other maintainers on the [egeria maintainers](https://lists.lfaidata.foundation/g/egeria-maintainers/messages) mailing list with subject beginning 'New Contributor Proposal' proposing the new contributor(s) and reasons why. (this list is private to Egeria maintainers).
+    - maintainers should vote and reply promptly to the email thread with a clear YES/NO along with further comments.
+    - votes should be done within 7 days.
+    - Voting is by simple majority.
+    - If approved, a github admin will add the new contributor to /CONTRIBUTORS.md in the egeria repository, and also add to the 'Egeria Contributors' team, which grants 'read' access to our repositories.
+
 
 Egeria's contributors are recognized in the [contributors list :material-github:](https://github.com/odpi/egeria/blob/master/CONTRIBUTORS.md){ target=gh }
 
@@ -56,13 +72,23 @@ Egeria's contributors are recognized in the [contributors list :material-github:
 - Triage GitHub issues and perform pull request reviews for other maintainers and the community.
 - Make sure that ongoing git pull requests are moving forward at the right pace or closing them.
 - In general continue to be willing to spend at least 25% of one's time working on the project (approximately 1.25 business days per week).
+- Sustained contributions
 
 !!! tip "How to become a maintainer"
     New maintainers are voted onto the maintainers list by [the existing maintainers :material-github:](https://github.com/odpi/egeria/blob/master/MAINTAINERS.md){ target=gh }.
 
-    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer. The maintainers vote and if a majority agree then the requester is added to the maintainers list and given write access to the [Egeria Git repositories](/education/tutorials/git-and-git-hub-tutorial/overview).
+    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer.
 
-    Once confirmed, you will receive an [an Egeria Maintainer badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-maintainer){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria maintainer.
+    If agreed, you will receive an [an Egeria Maintainer badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-maintainer){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria maintainer.
+
+!!! note "Maintainer approval process"
+
+    - Whilst some initial comments may be made on the technical list, the main voting should take place on our maintainer email list.
+    - An existing maintainer sends an email to other maintainers on the [egeria maintainers](https://lists.lfaidata.foundation/g/egeria-maintainers/messages) mailing list with subject beginning 'New Maintainer Proposal' proposing the new maintainer(s) and reasons why. (this list is private to Egeria maintainers).
+    - maintainers should vote and reply promptly to the email thread with a clear YES/NO along with further comments.
+    - votes should be done within 14 days.
+    - Voting is by simple majority.
+    - If approved, a github admin will add the new contributor to /MAINTAINERS.md in the egeria repository, and also add to the 'Egeria Maintainers' team, which grants 'maintain' access to our repositories.
 
 !!! attention "Losing maintainer status"
     If a maintainer is no longer interested or cannot perform the maintainer duties listed above, they should volunteer to be moved to emeritus status. In extreme cases this can also occur by a vote of the maintainers per the voting process below. Emeritus maintainers can rejoin the maintainer list through a vote of the existing maintainers.

@@ -32,12 +32,16 @@ Example 2 shows an [open discovery service](/concepts/open-discovery-service) am
 
 ## Governance Action Process Lifecycle
 
+The diagram below shows a governance action process assembly tool taking in information from a [governance engine pack](/concepts/governance-engine-pack) to build a governance action process flow.  This is shared with the open metadata ecosystem either through direct called to the [Governance Engine OMAS](/services/omas/governance-engone/overview) or via a [open metadata archive](/concepts/open-metadata-archive) (possibly the archive that holds the governance engine definition.
+
+Once the definition of the governance action process is available, an instance of the process can be started, either by a [watchdog governance action service](/concepts/governance-action-service) or through a direct call to the Governance Engine OMAS.  Whichever mechanism is used, it results in the Governance Engine OMAS using the definition to choreograph the creation of [governance action](/concepts/governance-action) entities that drive the execution of the governance services in the [Engine Host](/concepts/engine-host).
+
 ![Lifecycle](governance-action-process-lifecycle.svg)
 
 
 !!! education "Further information"
     - The [0462 Governance Action Types](/types/4/0462-Governance-Action-Types) model shows how the governance action process flow is built out of [governance action types](/concepts/governance-action-type).
-    - Governance action processes are defined using the [Governance Engine OMAS](/services/omas/governance-engine/overview) API.
+    - Governance action processes may be created using the [Governance Engine OMAS](/services/omas/governance-engine/overview) API.
     - The [Open Metadata Engine Services (OMES)](/services/omes) provide the mechanisms that support the different types of [governance engines](/concepts/governance-engine). These engines run the [governance services](/concepts/governance-service) that execute the [governance actions](/concepts/governance-action) defined by the governance action process.
 
 

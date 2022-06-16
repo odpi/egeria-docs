@@ -43,21 +43,23 @@ A *Governance Definition* is a metadata element that describes the context or pu
 Governance domains are the areas of an organization's operation that receive specific focus from a governance point of view.
 
 ![Figure 2](governance-domain-examples.svg)
-> **Figure 2:** Examples of different governance domains within an organization.  Each domain is typically the responsibility of a different executive in the organization.  They may use slightly different terminology and often different tools but in fact they are very similar in the way that the operate.  Egeria allows the teams from the different governance domains to collaborate and benefit from each others efforts.
+> **Figure 2:** Examples of different governance domains within an organization.  Each domain is typically the responsibility of a different executive in the organization.  They may use slightly different terminology and often different tools but in fact they are very similar in the way that they operate.  Egeria allows the teams from the different governance domains to collaborate and benefit from each others efforts.
 
 Governance domains are represented by *[Governance Domain Descriptions](/types/4/0401-Governance-Definitions)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".  
 
 It is possible to set up a default list of domains using the [`createStandardGovernanceDomains`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html) method. This will give you the following governance domain definitions:
 
-| Domain Identifier | Description |
-| :-------- | :----- |
-| 1 | DATA - the governance of data and its use.
-| 2 | PRIVACY - the support for data privacy.
-| 3 | SECURITY - the governance that ensures IT systems and the data they hold are secure.
-| 4 | IT_INFRASTRUCTURE - the governance of the configuration and management of IT infrastructure and the software that runs on it.
-| 5 | SOFTWARE_DEVELOPMENT - the governance of the software development lifecycle.
-| 6 | CORPORATE - the governance of the organization as a legal entity.
-| 7 | ASSET_MANAGEMENT - the governance of physical assets.
+
+| Domain Identifier | Domain Name | Description                                                                                                           |
+| :-------- | :-------- |:----------------------------------------------------------------------------------------------------------------------|
+| 1 | DATA | The governance of data and its use. |
+| 2 | PRIVACY | The support for data privacy. |
+| 3 | SECURITY | The governance that ensures IT systems and the data they hold are secure. |
+| 4 | IT_INFRASTRUCTURE | The governance of the configuration and management of IT infrastructure and the software that runs on it. |
+| 5 | SOFTWARE_DEVELOPMENT | The governance of the software development lifecycle.|
+| 6 | CORPORATE | The governance of the organization as a legal entity.|
+| 7 | ASSET_MANAGEMENT | The governance of physical assets.| 
+
 
 
 ## Subject areas

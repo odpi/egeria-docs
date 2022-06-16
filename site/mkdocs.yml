@@ -649,6 +649,7 @@ nav:
       - Governance Action Process: concepts/governance-action-process.md
       - Governance Action Service: concepts/governance-action-service.md
       - Governance Action Type: concepts/governance-action-type.md
+      - Governance Domain: concepts/governance-domain.md
       - Governance Engine: concepts/governance-engine.md
       - Governance Engine Definition: concepts/governance-engine-definition.md
       - Governance Engine Pack: concepts/governance-engine-pack.md

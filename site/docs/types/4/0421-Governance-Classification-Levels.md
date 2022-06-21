@@ -12,7 +12,7 @@ Most organizations already define their standard levels for
 governance classifications such as confidentiality.
 Although the Open Metadata Types include
 [Standard Enumerations](0422-Governance-Action-Classifications.md)
-for these classification, the **GovernanceClassificationLevel**
+for these classifications, the **GovernanceClassificationLevel**
 allows an organization to make use of their own definitions.
 
 An organization creates one of these entities for each of their confidentiality levels.

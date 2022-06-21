@@ -61,7 +61,7 @@ The interfaces for governance action services is defined in the [governance-acti
 
     This is a summary of the flow:
     
-    ![Data onboarding overview](data-onboarding-example-overview.svg)
+    ![Data onboarding overview](/guides/developer/governance-action-services/data-onboarding-example-overview.svg)
 
     1. New file detected by the Integration Connector.
     2. An Asset describing the file is created in the Metadata Access Server.

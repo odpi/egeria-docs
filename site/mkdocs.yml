@@ -62,12 +62,16 @@ nav:
       - Integrate:
           - Developer Guide:
                 - Developer Overview: guides/developer/index.md
+                - Building Archives:
+                      - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
+                      - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
+                      - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
                 - Building Utilities: guides/developer/building-utilities/overview.md
                 - Building Connectors:
                       - Integration Connectors: guides/developer/integration-connectors/overview.md
                       - Open Discovery Services: guides/developer/open-discovery-services/overview.md
                       - Governance Action Services: guides/developer/governance-action-services/overview.md
-                      - Archive Services: guides/developer/archive-services/overview.md
+                      - Repository Governance Services: guides/developer/repository-governance-services/overview.md
                       - Repository Connectors: guides/developer/repository-connectors/overview.md
                       - Runtime Connectors:
                             - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
@@ -118,11 +122,19 @@ nav:
                                   - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
                             - Repository Adapters:
                                   - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
-                                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/index.md
+                                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
                                   - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+                      - Audit Log Destination:
+                            - Console: connectors/runtime/console-audit-log-destination-connector.md
+                            - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
+                      - Open Metadata Archive Store:
+                            - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
+                      - Cohort Registry Store:
+                            - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
                 - Digital Resource:
                       - Open Metadata Topic:
                             - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
+                            - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
           - Egeria Ecosystem UI:
@@ -169,8 +181,8 @@ nav:
                   - Introduction to the Egeria UIs: education/egeria-dojo/running-egeria/user-interfaces/ui-introduction.md
                   - Ecosystem UI:
                       - Using the Egeria Ecosystem UI: education/egeria-dojo/running-egeria/user-interfaces/ecosystem-ui/ecosystem-ui-start.md
-              - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
-              - Coco Pharmaceuticals : education/egeria-dojo/running-egeria/coco-labs-environment.md
+              - Configuring and Operating a Server: education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
+              - Coco Pharmaceuticals Lab: education/egeria-dojo/running-egeria/coco-labs-environment.md
               - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/running-egeria-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance/overview.md
@@ -457,7 +469,6 @@ nav:
               - Area 7 Lineage: types/7/index.md
               - Digital Service: types/7/0710-Digital-Service.md
               - Digital Service Ownership: types/7/0715-Digital-Service-Ownership.md
-              - Digital Service Implementation: types/7/0717-Digital-Service-Implementation.md
               - Information Supply Chains: types/7/0720-Information-Supply-Chains.md
               - Solution Components: types/7/0730-Solution-Components.md
               - Solution Ports and Wires: types/7/0735-Solution-Ports-and-Wires.md
@@ -608,19 +619,20 @@ nav:
       - Basic Concepts: concepts/basic-concepts.md
       - Action Target: concepts/action-target.md
       - Anchor: concepts/anchor.md
-      - Archive Engine: concepts/archive-engine.md
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
+      - Cohort Registry: concepts/cohort-registry.md
       - Cohort Registry Store Connector: concepts/cohort-registry-store-connector.md
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md
       - Component Description: concepts/component-description.md
       - Configuration Document: concepts/configuration-document.md
+      - Configuration Document Store Connector: concepts/configuration-document-store-connector.md
       - Configuration Properties: concepts/configuration-properties.md
       - Conformance Test Server: concepts/conformance-test-server.md
       - Connected Asset Properties: concepts/connected-asset-properties.md
@@ -688,6 +700,7 @@ nav:
       - Open Lineage Server: concepts/open-lineage-server.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
+      - Open Metadata Archive Store Connector: concepts/open-metadata-archive-store-connector.md
       - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md
       - Open Metadata Instance: concepts/open-metadata-instances.md
       - Open Metadata Type Definitions: concepts/open-metadata-type-definitions.md
@@ -699,12 +712,15 @@ nav:
       - Personal Notes: concepts/personal-notes.md
       - Personal Profile: concepts/personal-profile.md
       - Personal Roles: concepts/personal-roles.md
+      - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
       - Platform URL Root: concepts/platform-url-root.md
       - Plugin Repository Proxy: concepts/plugin-repository-proxy.md
       - Presentation Server: concepts/presentation-server.md
       - Project: concepts/project.md
       - Referenceable: concepts/referenceable.md
-      - Repository connector: concepts/repository-connector.md
+      - Repository Connector: concepts/repository-connector.md
+      - Repository Governance Engine: concepts/repository-governance-engine.md
+      - Repository Governance Service: concepts/repository-governance-service.md
       - Repository Helper: concepts/repository-helper.md
       - Repository Proxy: concepts/repository-proxy.md
       - Repository Validator: concepts/repository-validator.md
@@ -712,8 +728,11 @@ nav:
       - REST client connector: concepts/rest-client-connector.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md
+      - Security Tags: concepts/security-tags.md
+      - Server Metadata Security Connector: concepts/server-metadata-security-connector.md
       - Server Name: concepts/server-name.md
       - Software Capability: concepts/software-capability.md
+      - Software Server Capability: concepts/software-server-capability.md
       - Star Rating: concepts/review.md
       - Subject Area: concepts/subject-area.md
       - Tag: concepts/informal-tag.md
@@ -735,9 +754,53 @@ nav:
           - Open Metadata Implementation: practices/common-data-definitions/open-metadata-for-common-definitions.md
       - Coco Pharmaceuticals:
           - Coco Pharmaceuticals: practices/coco-pharmaceuticals/index.md
-          - Personas: practices/coco-pharmaceuticals/personas/overview.md
+          - Personas:
+              - Overview: practices/coco-pharmaceuticals/personas/overview.md
+              - Angela Cummings: practices/coco-pharmaceuticals/personas/angela-cummings.md
+              - Bob Nitter: practices/coco-pharmaceuticals/personas/bob-nitter.md
+              - Callie Quartile: practices/coco-pharmaceuticals/personas/callie-quartile.md
+              - Des Signa: practices/coco-pharmaceuticals/personas/des-signa.md
+              - Erin Overview: practices/coco-pharmaceuticals/personas/erin-overview.md
+              - Faith Broker: practices/coco-pharmaceuticals/personas/faith-broker.md
+              - Florence Paynter: practices/coco-pharmaceuticals/personas/florence-paynter.md
+              - Gary Geeke: practices/coco-pharmaceuticals/personas/gary-geeke.md
+              - George Pie: practices/coco-pharmaceuticals/personas/george-pie.md
+              - Grant Able: practices/coco-pharmaceuticals/personas/grant-able.md
+              - harry Hopeful: practices/coco-pharmaceuticals/personas/harry-hopeful.md
+              - Ivor Padlock: practices/coco-pharmaceuticals/personas/ivor-padlock.md
+              - Jules Keeper: practices/coco-pharmaceuticals/personas/jules-keeper.md
+              - Julie Stitched: practices/coco-pharmaceuticals/personas/julie-stitched.md
+              - Lemmie Stage: practices/coco-pharmaceuticals/personas/lemmie-stage.md
+              - Nancy Noah: practices/coco-pharmaceuticals/personas/nancy-noah.md
+              - Peter Profile: practices/coco-pharmaceuticals/personas/peter-profile.md
+              - Polly Tasker: practices/coco-pharmaceuticals/personas/polly-tasker.md
+              - Reggie Mint: practices/coco-pharmaceuticals/personas/reggie-mint.md
+              - Robbie Records: practices/coco-pharmaceuticals/personas/robbie-records.md
+              - Sally Counter: practices/coco-pharmaceuticals/personas/sally-counter.md
+              - Signey Seeker: practices/coco-pharmaceuticals/personas/sidney-seeker.md
+              - Stew Faster: practices/coco-pharmaceuticals/personas/stew-faster.md
+              - Tanya Tidie: practices/coco-pharmaceuticals/personas/tanya-tidy.md
+              - Tessa Tube: practices/coco-pharmaceuticals/personas/tessa-tube.md
+              - Tom Tally: practices/coco-pharmaceuticals/personas/tom-tally.md
           - Roles vs Personas: practices/coco-pharmaceuticals/roles-vs-personas/overview.md
-          - Scenarios: practices/coco-pharmaceuticals/scenarios/overview.md
+          - Scenarios:
+              - Introduction: practices/coco-pharmaceuticals/scenarios/overview.md
+              - Authoritative Sources: practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview.md
+              - Cataloguing Infrastructure: practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview.md
+              - Coommon Data Definitions: practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview.md
+              - Continuous Analytics: practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview.md
+              - Data Enabled Employees: practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview.md
+              - Data Strategy: practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview.md
+              - Glossaries: practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview.md
+              - Governance Program: practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview.md
+              - Governance Team: practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview.md
+              - Information Supply Chains: practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview.md
+              - Multi-Faceted Governance: practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview.md
+              - New Systems Archiecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview.md
+              - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
+              - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
+              - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md
+              - Suspicious Activity: practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview.md
 
 theme:
   name: material

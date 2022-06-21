@@ -24,7 +24,7 @@ A discovery service is initialized with a connector to the asset it is to analyz
 
 The result is one or more sets of related properties that the discovery service has discovered about the asset, its metadata, structure and/or content. These are stored in a set of [discovery annotations](#discovery-annotation) linked off of a [discovery analysis report](#discovery-analysis-report). The discovery analysis report is linked off of the asset definition in the open metadata repository.
 
-Discovery services run in a [discovery engine](discovery-engine.md) that is hosted in a [discovery server](#discovery-server).
+Discovery services run in a [discovery engine](#discovery-engine) that is hosted in a [discovery server](#discovery-server).
 
 ### Discovery context
 
@@ -85,7 +85,7 @@ The main entity type is called [`Annotation`](/types/6/0610-Annotations). It is 
 
 The *discovery analysis report* lists the [discovery annotations](#discovery-annotation) that were created during the execution of a [discovery service](#discovery-service).
 
-The discovery analysis report is created in the open metadata repository by the [discovery engine](#discovery-engine) when it creates the discovery service instance. The discovery service can retrieve information about the discovery analysis report through the [discovery analysis report store](discovery-analysis-report-store.md) client.
+The discovery analysis report is created in the open metadata repository by the [discovery engine](#discovery-engine) when it creates the discovery service instance. The discovery service can retrieve information about the discovery analysis report through the [discovery analysis report store](/guides/developer/open-discovery-ervices/overview/#discovery-analysis-report-store) client.
 
 ### Discovery analysis report store
 

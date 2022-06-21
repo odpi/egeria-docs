@@ -8,5 +8,6 @@
 The cohort registry file store connector provides the means to store
 the cohort registry membership details as a JSON file.
 
+--8<-- "snippets/abbr.md"
 
 

@@ -7,7 +7,7 @@
 ??? info "Connector summary"
 
     - Connector Category: [Remediation Governance Action Service](/concepts/governance-service)
-    - Hosting Service: [Governance Action OMES](/services/omes/governance-action)
+    - Hosting Service: [Governance Action OMES](/services/omes/governance-action/overview)
     - Hosting Server: [Engine Host](/concepts/engine-host)
     - Source Module: [governance-action-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors)
     - Jar File Name: `governance-action-connectors.jar`
@@ -104,11 +104,6 @@ This governance action service could be enhanced as follows:
 * Provide logic to blend the origin properties when multiple origins are detected.
   This type of change would need knowledge of the origin properties used in the installation
   to know which are valid to combine.
-
-----
-* Return to the [Connector Catalog](.)
-* Return to the [Governance Action Connectors Overview](/concepts/governance-action-service)
-
 
 ----
 License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),

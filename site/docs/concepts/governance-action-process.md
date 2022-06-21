@@ -30,6 +30,10 @@ Example 2 shows an [open discovery service](/concepts/open-discovery-service) am
 ![Example 2](governance-action-process-example-2.svg)
 > **Example 2:** Governance Action Process to validate and augment a newly created asset
 
+## Capturing lineage for a governance action process
+
+The [governance actions](/concepts/governance-action) generated when a governance action process runs provide a complete audit trace of the governance services that ran and their results.  The [Governance Action Open Lineage Integration Connector](/connectors/integration/governance-action-open-lineage-integration-connector) is able to monitor the operation of the governance actions and produce [OpenLineage events](/features/lineage-management/overview/#the-openlineage-standard) to provide operational lineage for governance action processes.  Egeria is also able to [capture these events](/connectors/#capturing-and-publishing-lineage) (along with OpenLineage events from other technologies) for later analysis.
+
 ## Governance Action Process Lifecycle
 
 The diagram below shows a governance action process assembly tool taking in information from a [governance engine pack](/concepts/governance-engine-pack) to build a governance action process flow.  This is shared with the open metadata ecosystem either through direct called to the [Governance Engine OMAS](/services/omas/governance-engone/overview) or via a [open metadata archive](/concepts/open-metadata-archive) (possibly the archive that holds the governance engine definition.

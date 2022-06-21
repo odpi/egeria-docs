@@ -3,8 +3,7 @@
 
 # Transport Level Security (TLS) and Certificates
 
-Egeria uses TLS with certificates to secure the communication to and from the
-[OMAG Server Platforms](../concepts/omag-server-platform.md).
+Egeria uses TLS with certificates to secure the communication to and from the [OMAG Server Platforms](/concepts/omag-server-platform).
 
 In this document you'll find information on:
  * A background to TLS
@@ -42,7 +41,7 @@ and applications which are known in advance.
 ## Certificates for the OMAG Server Platform
 
 Egeria's OMAG Server Platform is a Spring boot based application.
-We refer to it as Egeria's 'platform', which hosts Egeria [OMAG Servers](../concepts/omag-server.md).
+We refer to it as Egeria's 'platform', which hosts Egeria [OMAG Servers](/concepts/omag-server).
 
 However in the documentation relating to network communications and SSL,
 a "server" is usually seen as an application listening on a network port.
@@ -103,7 +102,7 @@ is very welcome !
 
 ## Example script to launch Egeria
 
-Example certificates are provided [here](../../../../open-metadata-resources/open-metadata-deployment/certificates) 
+Example certificates are provided [on GitHub](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-deployment/certificates) 
 
 As an example of running the Egeria server chassis with the certificates generated above, add
 the following options when launching the OMAG Server Platform jar file:

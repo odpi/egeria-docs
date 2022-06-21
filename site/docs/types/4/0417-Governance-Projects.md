@@ -8,11 +8,8 @@ hide:
 
 # 0417 Governance Projects
 
-The roll-out of a governance program is typically divided into projects that are grouped together into a campaign
-(see [Projects](0130-Projects.md) in Area 1).
-The **GovernanceProject** classification tags these projects
-so they are easy for the governance team to identify when it comes
-to reporting.
+The roll-out of a governance program is typically divided into projects that are grouped together into a campaign (see [Projects](/types/1/0130-Projects) in Area 1).
+The **GovernanceProject** classification tags these projects to make it easy for the governance team to identify them.
 
 ![UML](0417-Governance-Projects.svg)
 

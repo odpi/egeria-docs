@@ -17,7 +17,7 @@ The glossary is made up of terms, each one describing a word or short phrase.
 The terms can be linked together to show the relationships
 between different types of terminology.
 
-Most glossary terms are created through a manual process by subject matter experts.
+Most glossary terms are created through a manual process by subject-matter experts.
 They may be part of a trade or industry organization, or experts within the business.
 This investment is typically made using a specialist tool and then replicated automatically into other metadata
 repositories.
@@ -28,7 +28,7 @@ This is the definitions of terms and concepts and how
 they relate to one another.
 
 Linking the concepts/terms defined in the glossary
-to the data assets in [Area 2](Area-2-models.md), defines the meaning of the
+to the data assets in [Area 2](/types/2), defines the meaning of the
 data that is managed by the data assets.
 This is a key relationship that helps people locate and
 understand the data assets they are working with.
@@ -49,7 +49,5 @@ understand the data assets they are working with.
 * **[0390 Glossary Projects](0390-Glossary-Projects.md)**
 * **[0395 Supplementary Properties](0395-Supplementary-Properties.md)**
 
-
-Return to [Overview](.).
 
 --8<-- "snippets/abbr.md"

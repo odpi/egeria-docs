@@ -3,30 +3,31 @@
 
 # Duplicate Management
 
-Duplicate management identifies multiple metadata instances that represent the same concept or resource.  These *duplicate instances*, as they are called, are then linked and classified so that when metadata is being retrieved from the open metadata ecosystem, the information from the duplicates is combined to give a meaningful result.
+Duplicate management identifies multiple metadata instances that represent the same concept or resource. These *duplicate instances*, as they are called, occur when the same concept or resource is captured in multiple tools.  They are not noticed as duplicates when the tools operate independently.  However, when these tools are connected together through Egeria, the duplicates are shared.  The result is the appearance of more resources than there are, and any inconsistencies between them can lead to possible errors in decisions made using this information.
 
-## What is a duplicate?
+It is rarely possible to simply delete all but one of the duplicate instances because each copy is often needed by its originating tool.  Egeria needs a mechanism to handle these duplicates.
 
-Duplicates occur when the same concept or resource is captured in multiple tools.  They are not noticed as duplicates when the tools operate independently.  However, when these tools are connected together through Egeria, inconsistencies between them can create partial results and lead to possible errors in decisions made that use this information.
+Egeria's duplicate management ensures duplicate instances are linked and classified so that on retrieval, the information from the duplicates is combined to give a meaningful result.
 
-Figure 1 shows a simple duplicate where each instance originates from a different repository.  Although each instance has a different unique identifier (GUID), the rest of the metadata is consistent.  This makes it easy to spot when both are returned in a search query.  However, a query to count, say, the number of glossary terms would give misleading results.
+
+## Examples duplicate instances
+
+Figure 1 shows a simple case where each duplicate instance originates from a different tool.  Although each instance has a different unique identifier (GUID), the rest of the metadata is consistent.  This makes it easy to spot when both are returned in a search query.  However, a query to count, say, the number of glossary terms would give misleading results.
 
 ![Figure 1](simple-duplicate.svg)
 > **Figure 1:** Two copies of the same glossary term originating from different repositories
 
-When related information is required (for example, which assets are linked to the glossary term `customer`) the request needs to be issued for each duplicate instance to retrieve the complete picture.  Figure 2 shows that the users of one repository have linked their copy of the glossary term to assets 1 and 2 whereas the users of the other repository have linked their copy of the glossary term to asset 3.
+When related information is required (for example, which assets are linked to the glossary term `customer`) the request needs to be issued for each duplicate instance to retrieve the complete picture.  Figure 2 shows that the users of one tool have linked their copy of the glossary term to assets 1 and 2 whereas the users of the other tool have linked their copy of the glossary term to asset 3.
 
 ![Figure 2](simple-duplicate-relationships.svg)
 > **Figure 2:** Different sets of relationships associated with each duplicate
-
-It is often not possible to delete one of the duplicate instances because many repositories are not able to store metadata from other repositories and so each copy is needed by its originating repository.  Egeria needs a mechanism to handle these duplicates.
 
 Some duplicates are not so easy to identify.  Figure 3 shows an example of duplicate assets where the values in the assets are different, but the fact that they describe the same resource can be deduced by the fact that the related endpoints point to the same location.
 
 ![Figure 3](subtle-duplicate.svg)
 >**Figure 3:** Duplicate assets identified through their endpoints
 
-In some circumstances the metadata is correctly cataloguing the existence of two resources however the resources themselves are duplicates of one another.  Figure 4 shows two copies of the same image.  The metadata records the name of each copy but has no knowledge that their contents are the same.
+In some circumstances the tools are correctly cataloguing the existence of two resources however the resources themselves are duplicates of one another.  Figure 4 shows two copies of the same image.  The tools record the name of each copy but have no knowledge that their contents are the same.
 
 ![Figure 4](duplicate-resource.png)
 > **Figure 4:** Two copies of the same resource are catalogued as two assets.  There is no shared values in the metadata.
@@ -34,9 +35,7 @@ In some circumstances the metadata is correctly cataloguing the existence of two
 
 ## Avoiding duplicates
 
-Duplicates can add a significant burden to your data processing.  Therefore, there is value in controlling the copying of data and ensuring that resources are catalogued only once.
-
-However, some duplication can not be avoided and Egeria has mechanisms to handle them.
+Duplicates can add a significant burden to your data processing.  Therefore, there is value in controlling the copying of data and ensuring that resources are catalogued only once. However, some duplication can not be avoided and Egeria has mechanisms to handle them.
 
 ## How are duplicates managed in Egeria?
 
@@ -44,8 +43,8 @@ Duplicate management has four parts to it:
 
 * Detecting duplicate resources
 * Detecting duplicate metadata entries for the same resource or concept.
-* Linking duplicates together so that they can be processed together.
-* Combining duplicates so that they can be retrieved as if they were one.
+* Linking duplicate instances together so that they can be processed together.
+* Combining duplicate instances so that they can be retrieved as if they were one.
 
 Figure 5 shows the architecture of an Egeria duplicate management solution.
 
@@ -83,13 +82,13 @@ Egeria has two styles of duplicate management that can be actioned automatically
 
 ### Peer linking
 
-When duplicate entities are first detected by a governance action, they are linked together by the [PeerDuplicateLink](/types/4/0465-Duplicate-Processing#PeerDuplicateLink) relationship.  This relationship includes properties that indicate how confident the detecting process is that the entities are duplicates.  No change occurs in the retrieval of these instances at this point.
+When duplicate entities are first detected by a governance action, they are linked together by the [PeerDuplicateLink](/types/4/0465-Duplicate-Processing#PeerDuplicateLink) relationship.  This relationship includes properties that indicate how confident the detecting process is that the entities are duplicate instances.  No change occurs in the retrieval of these instances at this point.
 
-If a steward or automated process confirms the duplicates are correctly identified, [KnownDuplicate](/types/4/0465-Duplicate-Processing#knownDuplicate) classifications added to the entities tell the metadata retrieval functions to [automatically combine the content of the duplicates](#survivorship-rules) when any of them is requested.  This is *peer linking*.
+If a steward or automated process confirms the duplicate instances are correctly identified, [KnownDuplicate](/types/4/0465-Duplicate-Processing#knownDuplicate) classifications added to the entities tell the metadata retrieval functions to [automatically combine the content of the duplicates](#survivorship-rules) when any of them is requested.  This is *peer linking*.
 
 ### Consolidation
 
-Consolidation is the process where the combined results of the duplicates is pre-calculated, stored as an entity and linked to the duplicate entities using the [ConsolidatedDuplicateLink](/types/4/0465-Duplicate-Processing#consolidatedduplicate-and-consolidatedduplicatelink) relationship.  The assessment of confidence of the deduplication is stored in the [ConsolidatedDuplicate](/types/4/0465-Duplicate-Processing#consolidatedduplicate-and-consolidatedduplicatelink) classification on the instance that contains the combined results.
+Consolidation is the process where the combined results of the duplicates is pre-calculated, stored as a new entity and linked to the duplicate instances using the [ConsolidatedDuplicateLink](/types/4/0465-Duplicate-Processing#consolidatedduplicate-and-consolidatedduplicatelink) relationship.  The assessment of confidence of the deduplication is stored in the [ConsolidatedDuplicate](/types/4/0465-Duplicate-Processing#consolidatedduplicate-and-consolidatedduplicatelink) classification on the instance that contains the combined results.
 
 ### Metadata retrieval of duplicates
 
@@ -107,7 +106,7 @@ The survivorship rules operate on the following principles:
 * The cardinality of relationships must be respected.
 * If multiple peer entities point to the same target entity with the same type of uni-link relationship then the target entity is processed only once.
 
-Figure 7 shows two glossary terms linked as peer duplicates. When an entity is queried by GUID, properties from the requested entity are returned with a combination of classifications.  Conflicts in classifications are recorded on the audit log.  The latest values are used. 
+Figure 7 shows two glossary terms linked as peer duplicates. When an entity is queried by GUID, properties from the most recently updated duplicate instance are returned with a combination of classifications.  Conflicts in classifications are recorded on the audit log.  The latest values from the conflicting classifications are used. 
 
 When the relationships of an identified duplicate are queried, the combination of relationships from all duplicate entities is returned unless only one instance of a relationship is allowed in which case the latest values are used.  
 

@@ -39,8 +39,8 @@ API should be 1-1 with the *omas-name*-server API.
 Each OMAS should also have an FVT test suite called ***omas-name*-fvt** implemented
 under the [access-services-fvt](https://github.com/odpi/egeria/tree/master/open-metadata-test/open-metadata-fvt/access-services-fvt) module.
 This is in addition to the unit tests for the module's components that are implemented within each module.
-The FVT test suite should test all of the API calls through to the repository to show that the OMAS
-can find, create, update and delete all of the necessary metadata on behalf of its consumer.
+The FVT test suite should test all the API calls through to the repository to show that the OMAS
+can find, create, update and delete all the necessary metadata on behalf of its consumer.
 
 It is also expected that each OMAS will feature in multiple demos, samples and scenarios found under
 [open-metadata-resources](https://github.com/odpi/egeria/tree/master/open-metadata-resources).  However, these are not the responsibility of
@@ -48,7 +48,7 @@ the OMAS component owner.
 
 ### Java package names
 
-The java package name root to use for all of the Java implementation of the OMAS is:
+The java package name root to use for all the Java implementation of the OMAS is:
  
  > `org.odpi.openmetadata.accessservices.`*omasname*.
 
@@ -73,7 +73,7 @@ implementing the OMAS one scenario at a time.
 
 * Define who the intended consumer(s) of the OMAS is/are, the types of information they need from the metadata
   repository and the tasks they need to perform on that metadata.   Ideally pick one or two appropriate persona
-  from [Coco Pharmaceuticals](https://odpi.github.io/data-governance/coco-pharmaceuticals/personas/) to help
+  from [Coco Pharmaceuticals](/practices/coco-pharmaceuticals/personas/overview) to help
   clarify who the consumer is if it is a person.
   
   Use the vocabulary that is familiar to the consumer community in your description, rather than the vocabulary used in the
@@ -145,7 +145,7 @@ implementing the OMAS one scenario at a time.
   Ultimately, they will run as part of the centralized build.
  
 * Design the event payloads that are sent and received through the OMAS's 
-  [OutTopic](../concepts/client-server/out-topic.md) and [InTopic](../concepts/client-server/in-topic.md) respectively.
+  [OutTopic](/concepts/out-topic) and [InTopic](/concepts/in-topic) respectively.
 
 * Design the FVT test for the Events.
 

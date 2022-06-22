@@ -12,7 +12,7 @@ Connectors can also be called in your applications to access third party technol
 
 Finally, Egeria's open metadata archives have a wide set of uses in distributing standard definitions and types.
 
-After completing developer day of the egeria dojo you should feel comfortable with calling Egeria's APIs, writing connectors and working with open metadata archives.
+After completing developer day of the egeria dojo you should feel comfortable calling Egeria's APIs, writing connectors and working with open metadata archives.
 
 --8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 

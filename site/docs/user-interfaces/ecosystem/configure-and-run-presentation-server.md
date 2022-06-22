@@ -73,7 +73,7 @@ file from: [https://github.com/odpi/egeria/raw/master/truststore.p12](https://gi
     in the interactions (which would typically be achieved through an independent Certificate
     Authority).
 
-    Additional details on TLS for Egeria can be found in [the Egeria documentation](../../concepts/omag-server.html).
+    Additional details on TLS for Egeria can be found in [the Egeria documentation](/concepts/omag-server).
 
 ## 3. Running the presentation server 
 To run on a different machine, copy over the cra-client and cra-server/build folders, maintaining their relative locations to the target machine.
@@ -88,7 +88,7 @@ Once you have the code where you want to run it:
 === "In production mode"
     To run the presentation server in production mode, the javascript and resources need to be [minified](https://reactjs.org/docs/optimizing-performance.html).
     <ol> 
-    <li>Navigate into <code>cra-client</code>, then run  <code>npm run build</code>. The cra-client folder now should contain a <code>build</code> folder containing the artifiacts to run in production.</li>  
+    <li>Navigate into <code>cra-client</code>, then run  <code>npm run build</code>. The cra-client folder now should contain a <code>build</code> folder containing the artifacts to run in production.</li>  
     <li>Run <code>npm run prod</code> in the <code>cra-server folder</code>.</li>
     </ol>
 === "In development mode"

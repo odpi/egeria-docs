@@ -14,7 +14,27 @@ See [Helm](../helm.md) for information on configuring Helm to be able to access 
 * [cts](cts.md) - Supports testing repository connectors using our Conformance Test Suite. Can be configured to support other repositories via simple values.
 * [pts](pts.md) - Performance test suite to aid in measuring the performance of repository connectors.
 
-## Caveat: Strimzi: permissions and co-existance
+## Issues & Advanced usage: 
+
+### Use of 'default' namespace with OpenShift
+
+Do not install either strimzi or egeria charts into the 'default' namespace using OpenShift. *They will not work due to the way that a scc is not applied*. 
+
+**Red Hat recommend that the default namespace should not be used for applications**.
+
+Instead create a new project first, for example with
+```
+oc create project lab
+```
+Your context will be switched to this after creation, you can return at any time with
+```
+oc project lab
+```
+An scc will be correctly applied, and the security context of `{}` used by the chart as provided will allow the container to be correctly assigned a user/group within the permitted range. Storage volumes will also be assigned the correct permissions. This will not happen with 'default'.
+
+A similar issue may apply in other kubernetes environments. Generally use of the default namespace is discouraged - though it remains common when running locally.
+
+### Strimzi: permissions and co-existance
 
 When any of the above charts are deployed, they include the install of the Strimzi operator (for kafka). However Strimzi deploys some cluster-scoped resources which has two implications:
 

@@ -5,14 +5,14 @@
 
 This set of charts has been built to assist in learning & demonstration activities, testing, and may also form a basis for production deployments.
 
-See [../helm](Helm) for information on configuring Helm to be able to access these charts via a repository.
+See [Helm](../helm.md) for information on configuring Helm to be able to access these charts via a repository.
 
 # Available Charts
 
-* [base](base) - creates a simple Egeria environment with a single metadata server. Includes the Ecosystem UI so that metadata can be searched, browsed.
-* [odpi-egeria-lab](lab) - Demo scenario for 'Coco Pharmaceuticals'. Multiple platorms, metadata repositories, cohorts. Demonstration script via Juypter notebooks. Includes both the Ecosystem UI & business UI 
-* [cts](cts) - Supports testing repository connectors using our Conformance Test Suite. Can be configured to support other repositories via simple values.
-* [pts](pts) - Performance test suite to aid in measuring the performance of repository connectors.
+* [base](base.md) - creates a simple Egeria environment with a single metadata server. Includes the Ecosystem UI so that metadata can be searched, browsed.
+* [odpi-egeria-lab](lab.md) - Demo scenario for 'Coco Pharmaceuticals'. Multiple platorms, metadata repositories, cohorts. Demonstration script via Juypter notebooks. Includes both the Ecosystem UI & business UI 
+* [cts](cts.md) - Supports testing repository connectors using our Conformance Test Suite. Can be configured to support other repositories via simple values.
+* [pts](pts.md) - Performance test suite to aid in measuring the performance of repository connectors.
 
 # Caveat: Strimzi: permissions and co-existance
 

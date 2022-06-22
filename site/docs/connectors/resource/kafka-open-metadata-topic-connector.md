@@ -45,12 +45,12 @@ Java Objects as JSON payloads.
 | bring.up.retries | 10 |
 | bring.up.minSleepTime | 5000 |
 
-#  Security
+## Security
 
 By default kafka security is not configured. The exact configuration may depend on the specific kafka service being used. Service specific notes
 are below. They may work for other providers, and feedback is welcome so that this documentation can be updated accordingly.
 
-## IBM Event Streams on IBM Cloud
+### Example: IBM Event Streams on IBM Cloud
 
 There are 2 key pieces of information that are provided in the documentation for your configured cloud service
 
@@ -71,22 +71,28 @@ An example of a use of this configuration can be found in the virtual data conne
 
 ## Handling Kafka Cluster Bring Up Issues
 
-In some environments users have encountered issues when the Kafka Cluster hasn't become fully available, when attempting a connection to the Kafka Cluster.
-The Egeria KafkaTopicConnector provides a mechanism that verifies that the Kafka Cluster is actually running brokers before attempting to connect.
+It's strongly recommended that you ensure Kafka is started before starting any Egeria servers, for example in Kubernetes you may add an init container into a pod running Egeria to validate Kafka is ok, before the main container is launched. The Helm charts that are provided by the Egeria team typically take this approach. You should also ensure that you have a highly available Kafka deployment with multiple brokers.
+
+However in some environments users have encountered issues where the Kafka Cluster hasn't become fully available. To mitigate this, the Egeria Kafka Topic Connector provides a mechanism that verifies that the Kafka Cluster brokers are available before attempting to connect.
+
 This mechanism is controlled by two properties.
 
 * bring.up.retries
 * bring.up.minSleepTime
 
-bring.up.retries 
+`bring.up.retries` 
 defaults to 10 and specifies the number of times the Egeria KafkaTopicConnector will retry verification before reporting a failure.
  
-bring.up.minSleepTime is set to 5000ms by default and is the minimum amount of time to wait before attempting a verification retry. 
-If a Kafka verification attempt takes longer than this value the KafkaTopicConnector does not pause before retring the verification.
+`bring.up.minSleepTime` is set to 5000ms by default and is the minimum amount of time to wait before attempting a verification retry. 
+If a Kafka verification attempt takes longer than this value the KafkaTopicConnector does not pause before retring the verification. 
+
+Different Kafka issues will result in differing overall times. For example, if the Kafka brokers are not resolveable (typical if waiting for a Kubernetes service to start), the Kafka library API calls will immediately fail, and so the connector will impose the minimum delay of 5s, each iteration will therefore take 5s by default. If instead the network address is uncontactable, the Kafka client library will typically wait for 60s. As this is greater than 5s, no additional wait will be added.
+
+If any capabilities of Egeria require Kafka and the topic connector cannot initialize, then the initialization of that capability will fail. For example attempting to start a server which is a member of a Cohort will fail if the Kafka Cluster is not accessible.
 
 ## Topic Creation
 
-In addition many enterprise kafka services do not allow automatic topic creation.
+Many enterprise Kafka services do not allow automatic topic creation.
 
 You will need to manually create topics of the following form
 

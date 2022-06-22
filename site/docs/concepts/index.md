@@ -146,6 +146,8 @@
 - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
 - [Governance Action Process](/concepts/governance-action-type)
 - [Governance Action Type](/concepts/governance-action-process)
+- [Governance Domain](/concepts/governance-domain)
+- [Governance Domain Identifier](/concepts/governance-domain)
 - [Governance Engine](/concepts/governance-engine)
 - [Governance Engine OMAS](/services/omas/governance-engine/overview)
 - [Governance Program](/services/omas/governance-program/overview)

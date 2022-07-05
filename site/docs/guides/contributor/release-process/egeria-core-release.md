@@ -4,20 +4,15 @@
 ### Egeria Core Release process
 
 #### Obtaining releases / artifacts for Core Egeria
-| Location                                                                                                                       | Usage                                                                                                                                                              |
-|--------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Maven Central core Egeria release :material-dock-window:](https://mvnrepository.com/artifact/org.odpi.egeria){ target=maven } | typically used by other developers integrating with our code                                                                                                       |
-| [Github core Egeria Release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }                           | source code in `zip` and `tar.gz` formats                                                                                                                          |
-| `git`                                                                                                                          | `git checkout Vx.y` to get version as-shipped (each release is tagged at the point it is shipped)                                                                  |
-| [Container images :material-dock-window:](https://quay.io/odpi){ target=quay }                                                 | Ready to run container images for egeria platform & supporting tasks. Can use directly, and also used from our [Helm charts](/guides/operations/kubernetes/charts) |
+| Location | Usage |
+|---|---|
+| [Maven Central core Egeria release :material-dock-window:](https://mvnrepository.com/artifact/org.odpi.egeria){ target=maven } | typically used by other developers integrating with our code |
+| [Github core Egeria Release :material-github:](https://github.com/odpi/egeria/releases){ target=gh } | source code in `zip` and `tar.gz` formats |
+| `git` | `git checkout Vx.y` to get version as-shipped (each release is tagged at the point it is shipped) |
 
 ### Core Egeria Release process
 
-Open up an issue in core egeria using the 'release' template. This contains check boxes for the activities that should be performed.
-
-Release names follow the V.R pattern typically ie 2.8, 3.10, 4.0.
-
-If an urgent release is required with, for example, a critical security fix, then we may ship a V.R.M release it 2.8.1, 3.10.1, 3.10.2. The overall process is similar but refer to point 8 for more detail.
+Open up an issue in core egeria using the 'release' template. This contains check boxes for the activities that should be performed
 
 ??? success "1. Agree schedule"
      - Agree on appropriate dates for branching given expected duration for testing, vacation / public holidays
@@ -64,15 +59,12 @@ If an urgent release is required with, for example, a critical security fix, the
 ??? success "7. Create a release in GitHub"
     - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y`
     - Fill in the release notes using a title of `Release x.y`. Select the option to include automated release notes. The content will need to be trimmed by deleting from the top to the point where the release being worked on appears ie for release 3.8, look for the update to 3.8-SNAPSHOT and cut up until that point.
-    - Contact the release lead (Nigel Jones) to release the updated maven artifacts (this copies them from the staging repository on oss.sonatype.org to the release repository, which is what is picked up via maven central search)
-    - Artifacts will be available on Maven Central within minutes, but may take a few hours to appear in searches.
+    - Artifacts will be available on Maven Central within around half a day.
     - Source archives will be added to the release on GitHub.
-    - this step will also create and publish container images to quay.io and docker.io .
 
 ??? amendments "8. Make amendments to the release"
-    - The following instructions are the github amendments you need to make for point release x.y.z. 
-    - Changes should occur on the x.y release branch. For example if it's intended to ship release 3.10.1 with an urgent security fix, we work with the egeria-release-3.10 branch.
-    - update the project version ie 3.10.1-SNAPSHOT or similar. 
+    - == The process for this is being worked on - as the Maven artifacts also need to be updated to have matccing numbers ==
+    - The following instructions are the github amendments you need to make for point release Vx.y.z. 
     - On master issue `git log` and note the commit id `<cid>` that you want to put into the branch
     - Set your local git to the release using `git reset --hard upstream/egeria-release-x.y` 
     - Create a local branch  `git checkout local1`
@@ -80,18 +72,10 @@ If an urgent release is required with, for example, a critical security fix, the
     - Commit the change `git commit -s -m"descriptive message"`
     - Push the change `git push`
     - In the github ui, create pr as usual but specify the release as the target.
-    - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y.z` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y`
+    - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y.z` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y.z`
     - Fill in the release notes using a title of `Release x.y.z`. Select the option to include automated release notes. 
-    - Contact the release lead to move the artifacts from the maven staging repository to final release as in 7. above
+    - TODO sort out process for Maven artifacts. [https://github.com/odpi/egeria/issues/6522](https://github.com/odpi/egeria/issues/6522)
 
-??? success "9. Release notes in egeria-docs"
-    - In addition to the automated release notes above, update the release
-      notes published on the egeria-docs website.
-    - Refer to the files at https://github.com/odpi/egeria-docs/tree/main/site/docs/release-notes
-    - Create a new file for the release you are working on ie '3-9.md' where the '.' for the version is replaced by a hyphen '-'
-    - Add the new release to mkdocs.yml (for the left navigation bar)
-    - update 'latest.md' and 'next.md' to point to the current/next release accordingly
-    - List known issues, breaking changes, major enhancements in this release (refer to previous release notes for examples)
 
 
 --8<-- "snippets/abbr.md"

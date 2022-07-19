@@ -125,6 +125,7 @@ nav:
               - Useful Kubernetes commands: guides/operations/kubernetes/k8s-cmds.md
               - Introduction to Helm: guides/operations/kubernetes/helm.md
               - Charts:
+                  - Egeria Chart overview: guides/operations/kubernetes/charts/overview.md
                   - Base Egeria Chart: guides/operations/kubernetes/charts/base.md
                   - Coco Pharmaceuticals Lab: guides/operations/kubernetes/charts/lab.md
                   - CTS Chart: guides/operations/kubernetes/charts/cts.md

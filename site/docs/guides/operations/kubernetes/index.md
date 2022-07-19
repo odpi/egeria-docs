@@ -7,8 +7,7 @@ Kubernetes offers one standard way of deploying the Egeria platform into a varie
 
 - [Introduction to Kubernetes](k8s.md)
 - [Introduction to Helm](helm.md)
-- [Sample chart - the Coco Pharmaceuticals lab](charts/lab.md)
-- [Sample chart - base egeria setup](charts/base.md)
+- [Egeria charts](charts/overview)
 - [Container images](container-images.md)
 - [Developing a custom deployment](custom-deployment.md)
 - [Egeria Operator](operator.md)

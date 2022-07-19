@@ -44,7 +44,7 @@ throughout Egeria.
 
 The result is the consistent availability of detailed diagnostics when things go wrong.
 
-In addition the [Open Metadata Repository Services (OMRS)](/services/omrs)
+In addition, the [Open Metadata Repository Services (OMRS)](/services/omrs)
 provides an extension to the ALF's audit log destination that supports multiple
 [audit log store connectors](/concepts/audit-log-connectors).
 This means that an OMAG Server can be configured to route 

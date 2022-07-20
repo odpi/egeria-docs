@@ -23,6 +23,83 @@ nav:
       - Planning Guide:
           - Planning Overview: guides/planning/overview.md
           - User Interfaces: user-interfaces/ecosystem/ecosystem-ui-planning.md
+      - Integration:
+          - Integration Guide: guides/integration/overview.md
+          - Connector Catalog:
+              - Connector Overview: connectors/index.md
+              - Governance Actions:
+                  - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
+                  - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
+                  - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
+                  - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+              - Governance Daemon:
+                  - Open Lineage Janus Connector: connectors/governance-daemon/open-lineage-janus-connector.md
+              - Integration:
+                  - File Connectors:
+                      - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
+                      - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
+                  - Topic Connectors:
+                      - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
+                      - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
+                  - API Connectors:
+                      - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
+                  - Infrastructure Connectors:
+                      - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
+                  - Lineage Connectors:
+                      - OpenLineage Event Receiver: connectors/integration/open-lineage-event-receiver-integration-connector.md
+                      - OpenLineage API Log Store: connectors/integration/api-based-open-lineage-log-store-integration-connector.md
+                      - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
+                      - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
+                      - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
+              - Runtime:
+                  - Repository:
+                      - Pluggable Repositories:
+                          - XTDB:
+                              - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                              - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                              - XTDB Connector Performance: connectors/repository/xtdb/performance.md
+                          - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
+                          - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
+                          - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
+                      - Repository Adapters:
+                          - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
+                          - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
+                          - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+                  - Audit Log Destination:
+                      - Console: connectors/runtime/console-audit-log-destination-connector.md
+                      - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
+                  - Open Metadata Archive Store:
+                      - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
+                  - Cohort Registry Store:
+                      - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
+              - Digital Resource:
+                  - Open Metadata Topic:
+                      - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
+                      - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
+          - Developer Guide:
+              - Developer Overview: guides/developer/index.md
+              - Building Archives:
+                  - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
+                  - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
+                  - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
+              - Building Utilities: guides/developer/building-utilities/overview.md
+              - Building Connectors:
+                  - Integration Connectors: guides/developer/integration-connectors/overview.md
+                  - Open Discovery Services: guides/developer/open-discovery-services/overview.md
+                  - Governance Action Services: guides/developer/governance-action-services/overview.md
+                  - Repository Governance Services: guides/developer/repository-governance-services/overview.md
+                  - Repository Connectors: guides/developer/repository-connectors/overview.md
+                  - Runtime Connectors:
+                      - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
+                      - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
+                      - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
+                      - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
+                      - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
+                      - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
+                      - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+                  - Resource Connectors:
+                      - New types of connectors: guides/developer/resource-connectors/overview.md
+                      - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -60,82 +137,6 @@ nav:
           - Diagnostic Process: guides/diagnostic/overview.md
           - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
           - First failure data capture (FFDC): guides/diagnostic/ffdc.md
-      - Integrate:
-          - Developer Guide:
-                - Developer Overview: guides/developer/index.md
-                - Building Archives:
-                      - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
-                      - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
-                      - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
-                - Building Utilities: guides/developer/building-utilities/overview.md
-                - Building Connectors:
-                      - Integration Connectors: guides/developer/integration-connectors/overview.md
-                      - Open Discovery Services: guides/developer/open-discovery-services/overview.md
-                      - Governance Action Services: guides/developer/governance-action-services/overview.md
-                      - Repository Governance Services: guides/developer/repository-governance-services/overview.md
-                      - Repository Connectors: guides/developer/repository-connectors/overview.md
-                      - Runtime Connectors:
-                            - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
-                            - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
-                            - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
-                            - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
-                            - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
-                            - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
-                            - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
-                      - Resource Connectors:
-                            - New types of connectors: guides/developer/resource-connectors/overview.md
-                            - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
-          - Connector Catalog:
-                - Connector Overview: connectors/index.md
-                - Governance Actions:
-                      - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
-                      - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
-                      - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
-                      - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-                - Governance Daemon:
-                      - Open Lineage Janus Connector: connectors/governance-daemon/open-lineage-janus-connector.md
-                - Integration:
-                      - File Connectors:
-                            - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
-                            - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
-                      - Topic Connectors:
-                            - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
-                            - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
-                      - API Connectors:
-                            - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
-                      - Infrastructure Connectors:
-                            - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
-                      - Lineage Connectors:
-                            - OpenLineage Event Receiver : connectors/integration/open-lineage-event-receiver-integration-connector.md
-                            - OpenLineage API Log Store : connectors/integration/api-based-open-lineage-log-store-integration-connector.md
-                            - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
-                            - OpenLineage Cataloguer : connectors/integration/open-lineage-cataloguer-integration-connector.md
-                            - Governance Action OpenLineage Integrator : connectors/integration/governance-action-open-lineage-integration-connector.md
-                - Runtime:
-                      - Repository:
-                            - Pluggable Repositories:
-                                  - XTDB:
-                                        - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                                        - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                                        - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                                  - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
-                                  - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
-                                  - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
-                            - Repository Adapters:
-                                  - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
-                                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
-                                  - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
-                      - Audit Log Destination:
-                            - Console: connectors/runtime/console-audit-log-destination-connector.md
-                            - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
-                      - Open Metadata Archive Store:
-                            - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
-                      - Cohort Registry Store:
-                            - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
-                - Digital Resource:
-                      - Open Metadata Topic:
-                            - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
-                            - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
           - Egeria Ecosystem UI:
@@ -241,36 +242,38 @@ nav:
                   - Becoming a Maintainer: getting-started/dojo/egeria-dojo-day-3-2-becoming-a-maintainer.md
                   - Egeria Architecture: getting-started/dojo/egeria-dojo-day-3-3-egeria-architecture.md
                   - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
-  - Contributing:
+  - Community:
       - Community Guide: guides/community.md
-      - Project Operations: guides/project-operations.md
-      - Code:
-          - Coding Guidelines: guides/contributor/guidelines.md
-          - Way of Working:
-              - Overview: guides/contributor/process.md
-              - Working with Releases:
-                  - Release process: guides/contributor/release-process/index.md
-                  - Egeria Core Release process: guides/contributor/release-process/egeria-core-release.md
-                  - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
-                  - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
-                  - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
-                  - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
-          - Specific Guidance:
-              - Programming Languages: guides/contributor/languages.md
-              - Tools:
-                  - Development Tools: guides/contributor/development.md
-                  - Documentation Tools: guides/contributor/documentation.md
-                  - Runtime Tools: guides/contributor/runtime.md
-                  - Testing Tools: guides/contributor/testing.md
-              - Developing Connectors:
-                  - Develop a Connector: guides/developer/implement-a-connector.md
-                  - Develop Repository Connector: guides/developer/repository-connectors/overview.md
-              - Developing Access Services: guides/developer/implement-an-omas.md
-      - Document:
-          - Documentation Guide: guides/documentation/guide.md
-          - Formatting Standards: guides/documentation/formatting.md
-          - Style Guide: guides/documentation/style.md
-          - Markdown: guides/contributor/markdown.md
+      - Integration Guide: guides/integration/overview.md
+      - Contributing:
+          - Project Operations: guides/project-operations.md
+          - Code:
+              - Coding Guidelines: guides/contributor/guidelines.md
+              - Way of Working:
+                  - Overview: guides/contributor/process.md
+                  - Working with Releases:
+                      - Release process: guides/contributor/release-process/index.md
+                      - Egeria Core Release process: guides/contributor/release-process/egeria-core-release.md
+                      - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
+                      - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
+                      - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
+                      - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
+              - Specific Guidance:
+                  - Programming Languages: guides/contributor/languages.md
+                  - Tools:
+                      - Development Tools: guides/contributor/development.md
+                      - Documentation Tools: guides/contributor/documentation.md
+                      - Runtime Tools: guides/contributor/runtime.md
+                      - Testing Tools: guides/contributor/testing.md
+                  - Developing Connectors:
+                      - Develop a Connector: guides/developer/implement-a-connector.md
+                      - Develop Repository Connector: guides/developer/repository-connectors/overview.md
+                  - Developing Access Services: guides/developer/implement-an-omas.md
+          - Document:
+              - Documentation Guide: guides/documentation/guide.md
+              - Formatting Standards: guides/documentation/formatting.md
+              - Style Guide: guides/documentation/style.md
+              - Markdown: guides/contributor/markdown.md
   - Releases:
       - Overview: release-notes/overview.md
       - Release Notes:

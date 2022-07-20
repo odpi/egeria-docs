@@ -243,6 +243,7 @@ nav:
                   - Egeria Architecture: getting-started/dojo/egeria-dojo-day-3-3-egeria-architecture.md
                   - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
   - Community:
+      - Community Recognition: community/index.md
       - Community Guide: guides/community.md
       - Integration Guide: guides/integration/overview.md
       - Contributing:

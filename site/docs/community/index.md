@@ -25,8 +25,12 @@ The Egeria project is highly appreciative of the organizations that support and 
 
 Egeria is pleased to announce integration with the following technologies:
 
-* Avro
+* Apache Kafka
 * PostgreSQL
+* Files
+* OpenLineage
+* OpenAPISpecification
+* Apache Avro
 
 
 !!! info "Further Information"

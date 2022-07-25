@@ -53,6 +53,11 @@ In addition, it is possible to augment software capabilities with the following 
 
 Defines the relationship between a `SoftwareCapability` and the `ITInfrastructure` asset that hosts it.
 
+## ProcessingState
+
+Defines a classification for a `SoftwareCapability`. The `ProcessingState` can be used to describe additional runtime processing information used by various SoftwareCapabilities.
+
+
 ??? deprecated "Deprecated types"
     - `SoftwareServerSupportedCapability` is deprecated in favor of `SupportedSoftwareCapability`.
     

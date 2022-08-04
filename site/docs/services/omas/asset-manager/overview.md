@@ -5,34 +5,96 @@
 
 # Asset Manager Open Metadata Access Service (OMAS)
 
-The Asset Manager OMAS provides APIs for supporting the exchange of metadata with a third party asset manager.  An [asset manager](/concepts/software-capability) is typically a catalog of [assets](/concepts/asset).  It is responsible for maintaining details of the assets including their characteristics, ownership, assessments and governance requirements.
+*Data Catalogs* and *Configuration Management Databases (CMDBs)* are examples of asset managers.  They maintain a catalog of [resources](/concepts/resource) for their users as [assets](/concepts/asset) along with catalog search and governance functions to support the maintenance and use of these resources.  Such technologies might integrate with the open metadata ecosystem to receive additional information about their resources, or to distribute the information they have to other tools.
 
-The Asset Manager OMAS (in conjunction with the [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)) provides a new integration path for metadata catalogs the goes via an integration service hosted in an [integration daemon](/concepts/integration-daemon).
+![Common types of asset manager](types-of-asset-managers.svg)
 
-Catalogs will be able to have a two-way integration through this path without needing to conform to the repository service rules for managing home and reference copies. This is possible for two reasons:
+The Asset Manager OMAS provides APIs and outbound events to support the exchange of metadata between a third party *asset manager* and the open metadata ecosystem.
 
-* Since the metadata from the catalog passes through an OMAS, Egeria will be able to have a better control of the metadata from the catalog.
-* Since the catalog is not part of a federated query, any inconsistent updates to metadata that occurs in its repository, only impacts the users of that catalog and not the whole cohort.
+## Types of metadata supported by the Asset Manager OMAS
 
-## Identifying your asset manager
+Asset Manager OMAS provides search and query APIs for these types of metadata elements along with the APIs to maintain their values.
 
-The Asset Manager OMAS provides an API for managing an element that represents your asset manager.  This element can then be linked to the assets and their properties contributed from your asset manager to show where the metadata came from and the scope of any identifiers that are mapped to 
+* Data Assets and schema
+* Connections, connector types and endpoints
+* IT Infrastructure (hosts, platforms, servers, storage, capabilities)
+* Processes and Lineage
+* Collaboration (comments, tags other forms of feedback)
+* Stewardship actions
+* Reference data (valid values)
+* Glossaries and external references
+* Governance definitions such as quality rules
+
+The Asset Manager OMAS OutTopic provides a notification service for any changes to these types of elements.
+
+![Asset Manager OMAS capabilities](asset-manager-overview.svg)
+
+## Integration
+
+Asset managers often have their own integration mechanisms for both the collection of metadata and its distribution.  Therefore, it may be possible to integrate calls to the Asset Manager OMAS directly into the asset manager's runtime, either via the Java client or by calls to the REST API/OutTopic.  This is shown on the left of the diagram below.  The alternative is to create an [integration connector](/concepts/integration-connector) that uses the [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) running in an [Integration Daemon](/concepts/integration-daemon) .
+
+![Integration Choices](integration-choices.svg)
+
+
 
 ## External Identifiers
 
-A major challenge when exchanging metadata with third party asset managers is that there is often a mismatch between the structure of the metadata in a third party asset manager and the structure of the[open metadata types](/types)used by the Asset Manager OMAS.
+A major challenge when exchanging metadata with third party asset managers is that there is often a mismatch between the structure of the metadata in a third party asset manager and the structure of the [open metadata types](/types) used by the Asset Manager OMAS.
 
-For this reason, the Asset Manager OMAS supports the ability to [associate multiple external identifiers with an open metadata instance](/features/external-identifiers/overview).  These external identifiers are scoped to a particular third party asset manager so that there is no confusion if two third party asset managers happen to use the same unique identifier within their repositories. Each of these external identifiers can be mapped to the appropriate open metadata instances without confusion.
-
+For this reason, the Asset Manager OMAS supports the ability to [associate one or more external identifiers with an open metadata instance](/features/external-identifiers/overview).  These external identifiers are scoped to a particular third party asset manager so that there is no confusion if two third party asset managers happen to use the same unique identifier within their repositories. Each of these external identifiers can be mapped to the appropriate open metadata instances without confusion.
 
 There are also API calls for querying open metadata instances using external identifiers and the identifier of the third party asset manager.
 
+### Identifying your asset manager
 
+The Asset Manager OMAS provides an API for managing an element that represents your asset manager.  This is a [software capability](/concepts/software-capability) of type *Catalog* with the *AssetManager* classification attached. This element can then be linked to the assets and their properties contributed from your asset manager to show where the metadata came from and the scope of any identifiers that are mapped to these elements.
 
+### Defining an external identifier
 
-## KeyPattern
+The code snippet below shows the Asset Manager OMAS method to create a glossary term in open metadata.  It includes five properties (all include `glossaryTermExternalIdentifier` in their name) that are used to define the external identifier for the new element.  In addition, the `assetManagerGUID` and `assetManagerName` properties are used to tie the external identifier to software capability for the external identifier and `mappingProperties` are used to provide additional values used to guide the mapping process between the open metadata elements and the elements in the third party asset manager.
 
-*KeyPattern* describes the pattern used for the identifier (how it is generated and managed). These are the values it can take, with the default (and most used) being `LOCAL_KEY`:
+```java
+    /**
+     * Create a new metadata element to represent a glossary term.
+     *
+     * @param userId calling user
+     * @param assetManagerGUID unique identifier of software capability representing the caller
+     * @param assetManagerName unique name of software capability representing the caller
+     * @param glossaryGUID unique identifier of the glossary where the term is located
+     * @param glossaryTermExternalIdentifier unique identifier of the glossary term in the external asset manager
+     * @param glossaryTermExternalIdentifierName name of property for the external identifier in the external asset manager
+     * @param glossaryTermExternalIdentifierUsage optional usage description for the external identifier when calling the external asset manager
+     * @param glossaryTermExternalIdentifierSource component that issuing this request.
+     * @param glossaryTermExternalIdentifierKeyPattern pattern for the external identifier within the external asset manager (default is LOCAL_KEY)
+     * @param mappingProperties additional properties to help with the mapping of the elements in the external asset manager and open metadata
+     * @param glossaryTermProperties properties for the glossary term
+     *
+     * @return unique identifier of the new metadata element for the glossary term
+     *
+     * @throws InvalidParameterException  one of the parameters is invalid
+     * @throws UserNotAuthorizedException the user is not authorized to issue this request
+     * @throws PropertyServerException    there is a problem reported in the open metadata server(s)
+     */
+    String createGlossaryTerm(String                 userId,
+                              String                 assetManagerGUID,
+                              String                 assetManagerName,
+                              String                 glossaryGUID,
+                              String                 glossaryTermExternalIdentifier,
+                              String                 glossaryTermExternalIdentifierName,
+                              String                 glossaryTermExternalIdentifierUsage,
+                              String                 glossaryTermExternalIdentifierSource,
+                              KeyPattern             glossaryTermExternalIdentifierKeyPattern,
+                              Map<String, String>    mappingProperties,
+                              GlossaryTermProperties glossaryTermProperties) throws InvalidParameterException,
+                                                                                    UserNotAuthorizedException,
+                                                                                    PropertyServerException;
+```
+*glossaryTermExternalIdentifier* contains the value of the identifier. The other properties provide additional context information:
+
+* *glossaryTermExternalIdentifierName* is the name of the property where the identifier is stored in the third party asset manager.
+* *glossaryTermExternalIdentifierUsage* describes how the external identifier is used
+* *glossaryTermExternalIdentifierSource* describes the process that created the extern identifier
+* *glossaryTermExternalIdentifierKeyPattern* describes the pattern used for the identifier (how it is generated and managed). These are the values it can take, with the default (and most used) being `LOCAL_KEY`:
 
 | Enumeration   | Value | Name             | Description                                                                                                   |
 |---------------|-------|------------------|---------------------------------------------------------------------------------------------------------------|
@@ -63,7 +125,7 @@ There are also API calls for querying open metadata instances using external ide
 *DataItemSortOrder* provides the valid values for the *sortOrder* property of SchemaAttribute.  It indicates whether the rows/instances of the data stored in this schema appear in any particular order or not.
 
 | Enumeration | Value | Name           | Description                                                                       |
-|-------------|-------|----------------|--------------------------------------------------------------------------------------------------|
+|-------------|-------|----------------|----------------------------------------------------------------|
 | UNKNOWN     | 0     | "<Unknown>"    | "The sort order is not specified. |
 | ASCENDING   | 1     | "Ascending"    | "The attribute instances are organized so that the smallest/lowest value is first and the rest of the instances follow in ascending order. |
 | DESCENDING  | 2     | "Descending"   | The attribute instances are organized so that the largest/highest value is first and the rest of the instances follow in descending order. |
@@ -77,7 +139,7 @@ that include both a technical name and description as well as a business name an
 The Asset Manager OMAS supports this distinction and stores the technical name and
 description in an Asset metadata instance and the business name and description in a glossary term
 metadata instance that is linked to the asset using a
-[**MoreInformation** relationship](/types/0/0019-More-Information).
+[**SupplementaryProperties** relationship](/types/3/0395-Supplementary-Properties).
 The properties that are stored in the glossary term are referred to as supplementary properties.
 
 --8<-- "snippets/abbr.md"

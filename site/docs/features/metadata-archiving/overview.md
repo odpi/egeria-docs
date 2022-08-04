@@ -57,7 +57,7 @@ The archive logic can either be an [offline utility](#supported-utilities-for-op
 
 ## Inside an Open Metadata Archive
 
-The open metadata archive has three parts to it.  This is shown in **Figure 4**. The header defines the type of archive and its properties.  Then there is the type store. This contains new attribute type definitions, new type definitions and updates to type definitions (patches).  Finally there is the instance store. This contains new instances (entities, relationships and classifications).
+The open metadata archive has three parts to it.  This is shown in **Figure 4**. The header defines the type of archive and its properties.  Then there is the type store. This contains new attribute type definitions, new type definitions and updates to type definitions (patches).  Finally, there is the instance store. This contains new instances (entities, relationships and classifications).
 
 ![Figure 6](/guides/developer/open-metadata-archives/open-metadata-archive-structure.svg)
 > **Figure 6:** Inside an Open Metadata Archive
@@ -78,25 +78,28 @@ A metadata server's configuration document can list the archives to load each ti
 
 These articles describe how to load open metadata archives into a server:
 
-- [Configuring an open metadata archive in an OMAG Server](/concepts/open-metadata-archive/#configuring-metadata-to-load-on-startup.md)
-- [Adding an open metadata archive to a running OMAG Server](/concepts/open-metadata-archive/#adding-archive-to-running-server.md)
+- [Configuring an open metadata archive in an OMAG Server](/concepts/open-metadata-archive/#configuring-metadata-to-load-on-startup)
+- [Adding an open metadata archive to a running OMAG Server](/concepts/open-metadata-archive/#adding-archive-to-running-server)
 
 
 The archive loads in the following order:
 
 - Attribute Type Definitions (AttributeTypeDefs) from the type store.
+
   - PrimitiveDefs
   - CollectionDefs
   - EnumDefs
   
 - New Type Definitions (TypeDefs) from the type store.
+
   - EntityDefs
   - RelationshipDefs
   - ClassificationDefs
   
-- Updates to types (TypeDefPatches)
+- Updates to type definitions (TypeDefPatches)
 
 - New Instances
+
   - Entities
   - Relationships
   - Classifications

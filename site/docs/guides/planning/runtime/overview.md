@@ -1,9 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-# Planning Guide
-
-The planning guide provides information to help you plan the deployment of Egeria in your organization.
+# Planning Runtime Deployment Guide
 
 Egeria is highly flexible and configurable and so the first piece of advice is to start small and simple and then expand as your experience and understanding of your workloads grows.
 

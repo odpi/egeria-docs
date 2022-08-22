@@ -21,8 +21,15 @@ nav:
           - Metadata Governance: patterns/metadata-governance/overview.md
   - Using:
       - Planning Guide:
-          - Planning Overview: guides/planning/overview.md
-          - User Interfaces: user-interfaces/ecosystem/ecosystem-ui-planning.md
+          - Planning Guide: guides/planning/index.md
+          - Planning Deployment:
+              - Planning Runtime: guides/planning/runtime/overview.md
+              - User Interfaces:
+                  - Ecosystem UI: user-interfaces/ecosystem/ecosystem-ui-planning.md
+          - Preparing Metadata Ecosystem:
+              - Metadata Valid Values: guides/planning/valid-values/overview.md
+              - Onboarding Organization: guides/planning/organization/overview.md
+              - Governance Program: guides/planning/governance-program/overview.md
       - Integration:
           - Integration Guide: guides/integration/overview.md
           - Connector Catalog:
@@ -499,6 +506,7 @@ nav:
               - Metadata Security Services: services/metadata-security-services.md
               - Platform Operation Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
+              - Metadata Store Services: services/gaf-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
               - Data Engine Proxy Services: services/data-engine-proxy-services.md

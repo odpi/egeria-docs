@@ -20,8 +20,7 @@ Organizational controls describe governance controls that are implemented throug
 
 ![UML](0440-Organizational-Controls.svg)
 
-Linked to the *OrganizationalControl* via the *BusinessCapabilityControls* relationship are the business capabilities that are part of the scope of the control.
-
+Linked to the *OrganizationalControl* via the [*GovernanceDefinitionScope*](/types/4/0401-Governance-Definitions) relationship are the business capabilities that are part of the scope of the control.
 
 ## BusinessCapability
 
@@ -33,6 +32,9 @@ Linked to the *OrganizationalControl* via the *BusinessCapabilityControls* relat
 
 ## AssetOrigin
 
-*[Asset](/types/0/0010-Basic-Model)* entities describe [resources](/concepts/resource) used by an organization.  This use could be by many teams.  The *AssetOrigin* classification describes the part of the organization that the resource originated in.  For example, it may show that a data set with personal information originated from the Swiss part of the organization and is therefore subject to specific controls.
+*[Asset](/types/0/0010-Basic-Model)* entities describe [resources](/concepts/resource) used by an organization.  The *AssetOrigin* classification describes the part of the organization that the resource originated in.  For example, it may show that a data set with personal information originated from the Swiss part of the organization and is therefore subject to specific controls.
+
+??? deprecated "Deprecated types"
+    - *BusinessCapabilityControls* relationship is deprecated in favour of the more generic [*GovernanceDefinitionScope*](/types/4/0401-Governance-Definitions).
 
 --8<-- "snippets/abbr.md"

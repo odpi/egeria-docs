@@ -10,16 +10,7 @@ hide:
 
 # OCF Metadata Management
 
-OCF metadata management provides common services for
-[Open Metadata Access Services (OMASs)](/services/omas) that are supporting [Open Connector Framework (OCF)](/frameworks/ocf/overview) connectors to [digital resources](/concepts/resource).  These resources are catalogued in open metadata as [Assets](/concepts/asset).
-
-## Client-side support for connectors
-
-OCF metadata management provides a common base class for OMAS clients that supports the retrieval of [Connection](/concepts/connection) objects from the open metadata repositories and the creation of OCF connector instances.  It is used by:
-
-- [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
-- [Asset Owner OMAS](/services/omas/asset-owner/overview)
-- [Data Engine OMAS](/services/omas/discovery-engine/overview)
+OCF metadata management implements the *Connected Asset Services* from the [Open Connector Framework (OCF)](/frameworks/ocf/overview). These services are available through all [Open Metadata Access Services (OMASs)](/services/omas).
 
 ## Connected Asset Services
 

@@ -7,4 +7,8 @@ The *AssignmentScope* identifies the people, teams, projects or other types of a
 
 ![UML](0120-Assignment-Scopes.svg)
 
+## Stakeholder
+
+The *Stakeholder* relationship identifies the actors, such as [ActorProfiles](/types/1/0110-Actors) or [PersonRoles](/types/1/0112-people) that commissioned work (such as a project or a community) or a capability, service or assets.
+
 --8<-- "snippets/abbr.md"

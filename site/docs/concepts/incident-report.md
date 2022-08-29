@@ -8,7 +8,7 @@ An *incident report* describes a situation that is out of line with the governan
 
 As the incident is handled, details of the cause, affected resources and actions taken are attached to the incident report to create a complete record of the incident for future analysis.
 
-Incident reports are typically created by [governance action services](/concept/governance-action-service) or an external incident management tool.
+Incident reports are typically created by [governance action services](/concepts/governance-action-service) or an external incident management tool.
 
 
 ## Open Metadata Types

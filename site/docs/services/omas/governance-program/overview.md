@@ -5,9 +5,9 @@
 
 # Governance Program Open Metadata Access Service (OMAS)
 
-The Governance Program OMAS provides APIs and events for tools and applications focused on defining a data strategy, planning support for a regulation and/or developing a governance program for the data landscape.
+The Governance Program OMAS provides APIs and events for tools and applications focused on defining a transformation strategy, planning support for a regulation and/or developing a governance program for your organization.
 
-It assumes an organization is operating an active governance program that is iteratively reviewed and developed.
+It assumes an organization wishes (or is already) operating an active governance program that is iteratively reviewed and developed.
 
 It covers:
 
@@ -31,19 +31,27 @@ It covers:
   
    - adjusting the governance definitions and metrics as necessary.
 
-## Governance Definitions
-
-A *Governance Definition* is a metadata element that describes the context or purpose for an activity that supports the organization's operation. Figure 1 shows the main types of governance definition and how they link together to create a coherent response to a business strategy or regulation.
-
-![Figure 1](traceability-from-business-drivers-to-action.svg)
-> **Figure 1:** Using governance definitions to provide traceability from business drivers and regulations to actions.
 
 ## Governance domains
 
-Governance domains are the areas of an organization's operation that receive specific focus from a governance point of view.
+Governance domains are the areas of an organization's operation that need a specific governance focus.  A domain typically involves the ongoing cooperation of multiple teams from different business areas.  There is often a business strategy and a set of targets associated with the domain since its purpose is to provide some level of improvement or benefit to the organization.
 
-![Figure 2](governance-domain-examples.svg)
-> **Figure 2:** Examples of different governance domains within an organization.  Each domain is typically the responsibility of a different executive in the organization.  They may use slightly different terminology and often different tools but in fact they are very similar in the way that they operate.  Egeria allows the teams from the different governance domains to collaborate and benefit from each others efforts.
+Each domain is typically the responsibility of a different executive in the organization.  Different domains may use slightly different terminology and often run different tools but in fact they are very similar in the way that they operate.  Egeria allows the teams from the different governance domains to collaborate and benefit from each other's efforts.
+
+
+??? info "Examples of governance domains"
+    The governance domains can vary in scope and importance to the business.  In the example below, *Corporate Governance* ensures that the business operates legally. It is the key focus of the board or directors and includes financial reporting.  At the heart of the organization's operation are three governance domains that are often run separately, but in fact are highly dependent on one another:
+
+    * Data (or Information) Governance focuses on the appropriate use and management of data.
+    * Security focuses on the security of the IT Systems (and sometimes the physical security of buildings and plant).
+    * IT Infrastructure ensures systems are correctly set up and managed.
+
+    Software development needs governance to ensure it is properly designed, built and tested - and fit of purpose.  This governance is typically guided by a software development method, such as *Agile Development* and covers all aspects of the software development lifecycle.
+
+    
+    
+    ![Figure 2](governance-domain-examples.svg)
+    > **Figure 2:** Examples of different governance domains within an organization.
 
 Governance domains are represented by *[Governance Domain Descriptions](/types/4/0401-Governance-Definitions)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".  
 
@@ -85,6 +93,14 @@ Governance Program OMAS provides an [interface to create subject area definition
     
         * [Setting up the subject area definitions :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-subject-area-sample){ target=gh }
         * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
+
+
+## Governance Definitions
+
+A *Governance Definition* is a metadata element that describes the context or purpose for an activity that supports the organization's operation. Figure 1 shows the main types of governance definition and how they link together to create a coherent response to a business strategy or regulation.
+
+![Figure 1](traceability-from-business-drivers-to-action.svg)
+> **Figure 1:** Using governance definitions to provide traceability from business drivers and regulations to actions.
 
 
 ## Governance classification, tagging and linking
@@ -182,7 +198,7 @@ These classifications help in the review of the implementation of the governance
 
 * The [Project Management OMAS](/services/omas/project-management/overview) supports the rollout of the governance program by commissioning campaigns and projects to implement the governance controls and the collection of measurements to assess the success of the program.
 
-* The [Digital Architecture OMAS](/services/omas/digital-architecture/overview) provides the set up of the digital landscape that supports the governance program.  This includes the definitions of the information supply chains and solution components that support the organization's activities.
+* The [Digital Architecture OMAS](/services/omas/digital-architecture/overview) provides the setup of the digital landscape that supports the governance program.  This includes the definitions of the information supply chains and solution components that support the organization's activities.
 
 * The [Digital Service OMAS](/services/omas/digital-service/overview) documents the business capabilities along with their digital services that are supported by the governance program.
 

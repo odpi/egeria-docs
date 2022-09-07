@@ -5,7 +5,7 @@
 
 ## Meetings
 
-*Meetings* allows a record of meetings for projects or the governance program to be associated with the appropriate metadata elements.
+*Meetings* allow a record of meetings for projects or the governance program to be associated with the appropriate metadata elements.
 
 ![UML](0135-Meetings.svg)
 

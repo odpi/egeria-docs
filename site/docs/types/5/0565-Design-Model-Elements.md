@@ -8,13 +8,9 @@ hide:
 
 # 0565 Design Model Elements
 
-Design models are used during the development of data structures and their
-related software to provide templates and abstractions
-of the implementation(s).
+Design models are used during the development of data structures and their related software to provide templates and abstractions of the implementation(s).
 
-Representations of design models are supported in the open metadata
-types to support implementation generation and to show the lineage of
-software components from their design to implementation.
+Representations of design models are supported in the open metadata types to support implementation generation and to show the lineage of software components from their design to implementation.
 
 Model 0565 shows the definition of a generic model element.
 

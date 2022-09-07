@@ -3,13 +3,13 @@
 
 # 0011 Managing Referenceables
 
-`Referenceable`s can have chains of related feedback and additional knowledge attached to them. The following types help a metadata manager to process these collections of elements more efficiently.
+[`Referenceable`s](/types/0/0010-Basic-Model) can have chains of related feedback and additional knowledge attached to them. The following types help a metadata manager to process these collections of elements more efficiently.
 
 ![UML](0011-Managing-Referenceables.svg)
 
 ## LatestChange
 
-The *`LatestChange`* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring [`Referenceable`s](/types/0/0010-Base-Model/#referenceable) can use the open metadata events related to classifications to maintain a complete picture of the asset.
+The *`LatestChange`* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring [`Referenceable`s](/types/0/0010-Base-Model/#referenceable) can use the open metadata events related to classifications to maintain a complete picture of the `Referenceable`.
 
 ## Template
 
@@ -27,6 +27,6 @@ The *`SourcedFrom`* relationship is used to show the provenance of the informati
 
 ??? education "Further information"
     - [Anchor Management](/features/anchor-management/overview)
-    - [Using templates](/features/templated-cataloging/overview)
+    - [Using templates](/features/templated-cataloguing/overview)
 
 --8<-- "snippets/abbr.md"

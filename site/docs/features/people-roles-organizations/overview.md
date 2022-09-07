@@ -7,14 +7,14 @@
 
 Everyone plays multiple roles in their lives: parent, daughter, employee, scout leader, … even within an organization it is not uncommon, particularly for more experienced people, to be assigned to multiple roles.
 
-For example, figure 1 shows some of the roles that [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) performs at [Coco Pharmaceuticals](/practices/coco-pharmaceuticals).  *Researcher* is her primary role, but she is also a manager, system owner and information consumer.  Each of these roles needs particular skills and knowledge.  They will also take up some of her time.
+For example, figure 1 shows some roles that [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) performs at [Coco Pharmaceuticals](/practices/coco-pharmaceuticals).  *Researcher* is her primary role, but she is also a manager, system owner and information consumer.  Each of these roles needs particular skills and knowledge.  They will also take up some of her time.
 
 ![Figure 1](tessa-tubes-roles.svg)
 > **Figure 1:** Roles that Tessa Tube plays in Coco Pharmaceuticals
 
 A role has a context. For example, Tessa is a manager, but not for everyone in Coco Pharmaceuticals. She is a manager of a specific team. Similarly, she may be a system owner, but not of all systems.
 
-So a role has a scope, and roles can be combined together to form the complete “job” that an individual performs.
+So a role has a scope, and roles can be combined to form the complete “job” that an individual performs.
 
 Now consider what a role is from an organization's perspective. Roles can be thought of as slots, or vacancies, in the organization's teams that individuals are appointed to for a span of time.  A role can have more than one person appointed. [Head count](/concepts/person-role/#head-count-limit) is an optional attribute that indicates how many people are expected to be assigned to the role.
 
@@ -85,7 +85,7 @@ At Coco Pharmaceuticals, Tanya Tidie is appointed as the information custodian f
 ![Figure 9](data-exchange-roles-1.svg)
 > **Figure 9:** Robbie Records and Tanya Tidie managing the sharing of data from the hospital
 
-Figure 10 shows a broader view the roles of each character when it comes to the transfer of data from the hospital.  The role names are not important.  There is little standardization fo these names in the industry.  Just focus on the fact that the people involved with the clinical data have different roles/responsibilities with respect to its protection and use.
+Figure 10 shows a broader view the roles of each character when it comes to the transfer of data from the hospital.  The role names are not important.  There is little standardization for these names in the industry.  Just focus on the fact that the people involved with the clinical data have different roles/responsibilities with respect to its protection and use.
 
 ![Figure 10](data-exchange-roles-2.svg)
 > **Figure 10:** The patient is the information subject.  The information originators are the medical staff making notes and capturing clinical data.  Robbie is the information steward managing the data and its transfer to external organization on the hospital-side.  Tanya Tidie is the receiver of the data and as the information custodian, she is responsible for the proper management of Coco Pharmaceutical's copy of the data. Tessa Tube and Callie Quartile are information consumers.  They read the data and perform analysis on it to determine how well the new drug is helping the patient.
@@ -212,49 +212,49 @@ Egeria's synchronization capability helps in the maintenance of the organization
 - When making changes to the organization structure.
 - When setting up new projects and communities.
 
-Egeria may have one or more of the following uses of organization data and this will effect the scope and coverage of this data that flows through Egeria.
+Egeria may have one or more of the following uses of organization data and this will affect the scope and coverage of this data that flows through Egeria.
 
 - Egeria is a consumer of the organization data for collaboration and governance.
 - Egeria is a validator of the consistency of the organization data in the different systems.
 - Egeria is a distributor of the organization data between systems.  This may include its only security definitions used to security the access of open metadata through Egeria.
 
-In general, if Egeria is just consuming the organization data then it only needs information about the people and teams using Egeria.  If, however, Egeria is validating or distributing organization data, it tends to hold all of the organization data that is relevant to the sources and consumers of the organization data.
+In general, if Egeria is just consuming the organization data then it only needs information about the people and teams using Egeria.  If, however, Egeria is validating or distributing organization data, it needs to hold all the organization data that is relevant to the sources and consumers of the organization data.
 
-The text below covers all three uses.
+The example below covers all three uses.
 
 ## Systems that hold organization data
 
 Organization data is widely distributed across an organization's systems.  Each system holds a different subset of the organization data and is updating some or all of its content.  When planning to integrate organization data into Egeria, it is important to understand where the authoritative source of each attribute is located and how the information in different systems can be correlated together.  Below are the descriptions of three systems in Coco Pharmaceuticals that are responsible for managing organization information.
 
-### HR Information Manager (HRIM)
+!!! example "HR Information Manager (HRIM)"
+    HRIM is owned by the Human Resources (HR) team in Coco Pharmaceuticals for managing information about employees.  It covers applicants, current employees and those who have left.
 
-HRIM is owned by the Human Resources (HR) team in Coco Pharmaceuticals for managing information about employees.  It covers applicants, current employees and those who have left.
+    ![Figure 28](hrim-system.svg)
 
-![Figure 28](hrim-system.svg)
+    This is a model of the HRIM data.  You can see it includes not only the employees, but also the department structure.
 
-This is a model of the HRIM data.  You can see it includes not only the employees, but also the department structure.
+    ![Figure 29](hrim-data-model.svg)
 
-![Figure 29](hrim-data-model.svg)
+!!! example "The cocopages company directory"
 
-### The cocopages company directory
+    The cocopages application provides contact information for anyone associated with Coco Pharmaceuticals business.  This includes contractors and business partners such as the hospital staff working on clinical trials. It is also owned by the Human Resources (HR) team in Coco Pharmaceuticals but any Coco employee can update their own entry and add third parties to it.
 
-The cocopages application provides contact information for anyone associated with Coco Pharmaceuticals business.  This includes contractors and business partners such as the hospital staff working on clinical trials. It is also owned by the Human Resources (HR) team in Coco Pharmaceuticals but any Coco employee can update their own entry and add third parties to it.
+    ![Figure 30](cocopages-system.svg)
 
-![Figure 30](cocopages-system.svg)
+    This is a model of the cocopages data.  You can see it covers email addresses and telephone numbers.
 
-This is a model of the cocopages data.  You can see it covers email addresses and telephone numbers.
+    ![Figure 31](cocopages-data-model.svg)
 
-![Figure 31](cocopages-data-model.svg)
+!!! example "Security Administration (SecAdmin)"
 
-### Security Administration (SecAdmin)
+    SecAdmin is owned by the security team in Coco Pharmaceuticals.  It defines who has access to which resources.
 
-SecAdmin is owned by the security team in Coco Pharmaceuticals.  It defines who has access to which resources.
+    ![Figure 32](secadmin-system.svg)
 
-![Figure 32](secadmin-system.svg)
+    This is a model of the SecAdmin data. 
 
-This is a model of the SecAdmin data. 
+    ![Figure 33](secadmin-data-model.svg)
 
-![Figure 33](secadmin-data-model.svg)
 
 ![Figure 34](user-types.svg)
 

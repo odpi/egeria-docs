@@ -55,7 +55,8 @@ Defines the relationship between a `SoftwareCapability` and the `ITInfrastructur
 
 ## ProcessingState
 
-Defines a classification for a `SoftwareCapability`. It stores the last sync timestamp for critical elements. 
+Defines a classification for a `SoftwareCapability`. The `ProcessingState` can be used to describe additional runtime processing information used by various SoftwareCapabilities.
+
 
 ??? deprecated "Deprecated types"
     - `SoftwareServerSupportedCapability` is deprecated in favor of `SupportedSoftwareCapability`.

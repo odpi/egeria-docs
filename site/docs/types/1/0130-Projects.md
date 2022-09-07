@@ -17,5 +17,6 @@ The description attribute should be used instead of the scopeDescription in Proj
 
 ??? deprecated "Deprecated types"
     - *ProjectScope* relationship is deprecated in favour of the more generic [*AssignmentScope*](/types/1/0120-Assignment-Scopes).
+    - *status* attribute on *Project* is deprecated in favour of the more specific *projectStatus* attribute, which makes it easier to align with an appropriate valid value set.
 
 --8<-- "snippets/abbr.md"

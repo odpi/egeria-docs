@@ -15,7 +15,7 @@ The methods of the context are colour-coded.  The methods shown in white are ava
 
 * Understanding the request
 
-    * getRequestType - returns the [governance request type](/concept/governance-request-type) used to invoke the governance action service.
+    * getRequestType - returns the [governance request type](/concepts/governance-request-type) used to invoke the governance action service.
     * getRequestParameters - returns the name-value pairs of properties passed with the request type.
     * getRequestSourceElements - returns details of the process that invoked the governance action.
     * getActionTargetElements - returns the list of [action target](/concepts/action-target) elements that this governance action service is to work on.
@@ -23,7 +23,7 @@ The methods of the context are colour-coded.  The methods shown in white are ava
 * Performing the action
 
     * getOpenMetadataStore - returns a client to the Governance Engine OMAS that supports the retrieval of metadata elements, their classifications and relationships.
-    * createIncidentReport - creates an [incident report](/concept/incident-report) that can provide a focal point for collaboration to resolve a particular issue.  Incident reports are often managed by an [incident management tool](/features/incident-reporting/overview).
+    * createIncidentReport - creates an [incident report](/concepts/incident-report) that can provide a focal point for collaboration to resolve a particular issue.  Incident reports are often managed by an [incident management tool](/features/incident-reporting/overview).
   
 * Recording the outcome of the processing
 
@@ -106,7 +106,7 @@ The connector provider for your governance action service provides the factory m
 
 Below is the implementation of the connector provider for the [Move Copy File Provisioning Governance Action Service](/connectors/governance-action/move-copy-file-provisioning-governance-action-service).  This is a highly configurable governance action service that can be instructed to move, copy or delete a file, and has different styles of lineage it can create.  The action it performs is supplied in the governance request type.  The source file and destination folder can be supplied either through the request parameters or as action targets.  There are two guards: "provisioning-complete" for success and "provisioning-failed" if something went wrong.
 
-The methods of the connector provider enables a tool that is configuring [governance actions](/concepts/governance-action) or [governance action processes](/concept/governance-action-process) to query the capabilities of the corresponding governance action service.
+The methods of the connector provider enables a tool that is configuring [governance actions](/concepts/governance-action) or [governance action processes](/concepts/governance-action-process) to query the capabilities of the corresponding governance action service.
 
 ```java
 public class MoveCopyFileGovernanceActionProvider extends GovernanceActionServiceProviderBase

@@ -11,17 +11,24 @@ It assumes an organization wishes (or is already) operating an active governance
 
 It covers:
 
-- Understanding the business drivers and regulations that provide the motivation and direction to the governance program.
+- [Dividing your governance program into domains](#governance-domains), such as data, security, privacy.  Each domain provides a specific focus.
 
-- Laying down the governance policies (principles, obligations and approaches) that frame the governance program.
+- [Setting up the leadership of the domain](#governance-domain-leadership) to drive its definition and operations.  This includes:
 
-- Planning and defining the governance controls that detail how these governance policies will be implemented in the organization, and enumerating the implications of these decisions and the expected outcomes.
+- [Managing ]
+    - Understanding the business drivers and regulations that provide the motivation and direction to the governance program.
 
-- Defining the organization's roles and responsibilities that will support the governance program.
+    - Laying down the governance policies (principles, obligations and approaches) that frame the governance program.
 
-- Defining the classifications and governance zones that will organize the assets being governed.
+    - Planning and defining the governance controls that detail how these governance policies will be implemented in the organization, and enumerating the implications of these decisions and the expected outcomes.
 
-- Defining the subject areas that will organize the data-oriented definitions such as glossary terms, valid values and quality rules.
+    - Defining the organization's roles and responsibilities that will support the governance program.
+
+    - Defining the classifications and governance zones that will organize the assets being governed.
+
+    - Defining the subject areas that will organize the data-oriented definitions such as glossary terms, valid values and quality rules.
+
+    - Defining the 
 
 - Reviewing the impact of the governance program.
   
@@ -69,6 +76,7 @@ It is possible to set up a default list of domains using the [`createStandardGov
 | 7 | ASSET_MANAGEMENT | The governance of physical assets.| 
 
 
+## Governance domain leadership
 
 ## Subject areas
 

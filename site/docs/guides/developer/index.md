@@ -200,12 +200,11 @@ You can write your own connectors to integrate additional types of technology or
 ## Building open metadata archives
 
 --8<-- "docs/concepts/open-metadata-archive-intro.md"
+--8<-- "docs/guides/developer/open-metadata-archives/in-memory-archive-construction.md"
 
-Open metadata archives are typically built using a java program.  There are three components:
-
-* An *archive helper* that formats 
-
-  
+??? example "Open metadata archive examples"
+    * [Defining new types](/guides/developer/open-metadata-archive/defining-new-types)
+    * [Code samples of archive builders containing Coco Pharmaceuticals metadata](https://github.com/odpi/egeria-samples/tree/master/sample-metadata-archives/coco-metadata-archives)
 
 
 ## Adding registered services

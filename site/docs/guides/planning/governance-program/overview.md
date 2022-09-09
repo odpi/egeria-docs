@@ -52,21 +52,83 @@ Governance domains are represented by [*Governance Domain Descriptions*](/types/
 | 6                 | Corporate Governance           | The governance of the organization as a legal entity.                                                     |
 | 7                 | Physical Asset Management      | The governance of physical assets.                                                                        | 
 
+!!! education "Defining governance domains"
+Governance domain descriptions can be defined in an [Open Metadata Archive](/concepts/open-metadata-archive) or through the Open Metadata Access Services (OMASs).
 
-### Governance Domain Communities
+    * The [Governance Program OMAS](/services/omas/goverance-program/overview) supports the setting up of governance domains.
+    * The [egeria-samples.git repository](https://github.com/odpi/egeria-samples) includes a sample called [Sample metadata archives for Coco Pharmaceuticals](https://github.com/odpi/egeria-samples/tree/master/sample-metadata-archives/coco-metadata-archives) that creates open metadata archives with basic definitions for Coco Pharmaceuticals.  This includes the definition of this organization's governance domains with their communities and governance officers.
+
+
+## Governance Roles
+
+
+
+![Governance Roles](governance-roles.svg)
+
+
+!!! education "Defining governance roles"
+Governance roles can be defined 
+    * The [Governance Program OMAS](/services/omas/goverance-program/overview) supports the setting up of governance domains.
+    * The [Community Profile OMAS](/services/omas/community-profile/overview) supports the setting up of communities and person roles.
+    * The [Project Management OMAS](/services/omas/project-management/overview) supports the setting up of campaigns, projects and tasks.
+    * The [egeria-samples.git repository](https://github.com/odpi/egeria-samples) includes a sample called [Sample metadata archives for Coco Pharmaceuticals](https://github.com/odpi/egeria-samples/tree/master/sample-metadata-archives/coco-metadata-archives) that creates open metadata archives with basic definitions for Coco Pharmaceuticals.  This includes the definition of this organization's governance domains with their communities and governance officers.
+
+### Governance Leadership 
+
+### Governance Leadership Communities
+
+
+
+
+#### Governance Domain Communities
 
 
 
 ![Governance Communities](governance-domain-community.svg)
 
-### Governance Roles
-
-![Governance Roles](governance-roles.svg)
-
-
-### Governance Leadership Community
+#### Governance Leaders Community
 
 ![Governance Leadership Community](governance-leadership-community.svg)
+
+
+
+## Governance Process
+
+Most activity within each governance domain is iteratively developer and reviewed.
+
+The governance program OMAS provides APIs and events for tools and applications focused on defining a transformation strategy, planning support for a regulation and/or developing a governance program for your organization.
+
+It assumes an organization wishes (or is already) operating an active governance program that is iteratively reviewed and developed.
+
+It covers:
+
+- [Dividing your governance program into domains](#governance-domains), such as data, security, privacy.  Each domain provides a specific focus.
+
+- [Setting up the leadership of the domain](#governance-domain-leadership) to drive its definition and operations.  This includes:
+
+- [Managing ]
+    - Understanding the business drivers and regulations that provide the motivation and direction to the governance program.
+
+    - Laying down the governance policies (principles, obligations and approaches) that frame the governance program.
+
+    - Planning and defining the governance controls that detail how these governance policies will be implemented in the organization, and enumerating the implications of these decisions and the expected outcomes.
+
+    - Defining the organization's roles and responsibilities that will support the governance program.
+
+    - Defining the classifications and governance zones that will organize the assets being governed.
+
+    - Defining the subject areas that will organize the data-oriented definitions such as glossary terms, valid values and quality rules.
+
+    - Defining the
+
+- Reviewing the impact of the governance program.
+
+    - adjusting governance definitions and metrics as necessary.
+
+- Reviewing the strategy, business and regulatory landscape.
+
+    - adjusting the governance definitions and metrics as necessary.
+
 
 
 ### Governance Projects
@@ -74,13 +136,6 @@ Governance domains are represented by [*Governance Domain Descriptions*](/types/
 ![Governance Projects](governance-projects.svg)
 ![Governance Campaigns](governance-campaign.svg)
 
-!!! education "Defining governance domains"
-    Governance domain descriptions can be defined in an [Open Metadata Archive](/concepts/open-metadata-archive) or through the Open Metadata Access Services (OMASs).
-
-    * The [Governance Program OMAS](/services/omas/goverance-program/overview) supports the setting up of governance domains.
-    * The [Community Profile OMAS](/services/omas/community-profile/overview) supports the setting up of communities and person roles.
-    * The [Project Management OMAS](/services/omas/project-management/overview) supports the setting up of campaigns, projects and tasks.
-    * The [samples.git repository](https://github.com/odpi/egeria-samples) includes a sample called [Sample metadata archives for Coco Pharmaceuticals](https://github.com/odpi/egeria-samples/tree/master/sample-metadata-archives/coco-metadata-archives) that creates open metadata archives with basic definitions for Coco Pharmaceuticals.  This includes the definition of this organization's governance domains with their communities and governance officers.
 
 
 ## Subject areas

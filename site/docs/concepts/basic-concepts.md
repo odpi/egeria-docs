@@ -8,7 +8,7 @@
 An API is a well-defined interface that can be called from a remote process.
 There are many styles and protocols available to enable calls to APIs. The most popular at the moment is
 the [REST API :material-dock-window:](https://en.wikipedia.org/wiki/Representational_state_transfer){ target=wikipedia }
-style that piggy-backs on top of the HTTP protocol that powers the Internet. Egeria makes extensive use of REST APIs.
+style that piggybacks on top of the HTTP protocol that powers the Internet. Egeria makes extensive use of REST APIs.
 
 ??? education "Further information"
     Details of the different types of APIs provided by Egeria can be found in the [developer guide](/guides/developer/guide).

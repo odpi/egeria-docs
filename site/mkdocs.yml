@@ -107,6 +107,8 @@ nav:
                   - Resource Connectors:
                       - New types of connectors: guides/developer/resource-connectors/overview.md
                       - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+              - Javadoc: https://odpi.github.io/egeria/index.html
+              - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md

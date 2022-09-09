@@ -23,7 +23,7 @@ Paste this structure into your `pom.xml` class.
 
     <groupId>egeria.dojo</groupId>
     <artifactId>asset-listen</artifactId>
-    <version>3.8-SNAPSHOT</version>
+    <version>3.12-SNAPSHOT</version>
 
     <properties>
 
@@ -36,7 +36,7 @@ Paste this structure into your `pom.xml` class.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Versions of Egeria libraries -->
-        <open-metadata.version>3.8-SNAPSHOT</open-metadata.version>
+        <open-metadata.version>3.12-SNAPSHOT</open-metadata.version>
 
         <!-- Versions of dependent libraries -->
         <logback.version>1.2.10</logback.version>

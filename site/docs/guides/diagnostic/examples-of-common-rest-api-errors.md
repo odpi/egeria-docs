@@ -96,4 +96,17 @@ UserNotAuthorizedException{userId='OMAGServer', reportedHTTPCode=400, reportingC
 
 There is more information on [metadata provenance here](/features/metadata-provenance).
 
+## The connectors for the platform are built at the wrong level
+
+If you see the following response from a REST call that you know was working - particularly if you have upgraded your level of Egeria - then check that the connectors you have in your lib path are compatible with the platform.
+
+```json
+{
+    "timestamp": "2022-09-03T09:03:48.626+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "path": "/servers/cocoMDS1/open-metadata/access-services/asset-owner/users/peterprofile/assets/data-files/csv"
+}
+```
+
 ---8<-- "snippets/abbr.md"

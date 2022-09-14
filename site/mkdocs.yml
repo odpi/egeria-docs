@@ -488,6 +488,7 @@ nav:
               - Information Supply Chains: types/7/0720-Information-Supply-Chains.md
               - Solution Components: types/7/0730-Solution-Components.md
               - Solution Ports and Wires: types/7/0735-Solution-Ports-and-Wires.md
+              - Solution Implementation: types/7/0737-Solution-Implementation.md
               - Solution Blueprints: types/7/0740-Solution-Blueprints.md
               - Data Passing: types/7/0750-Data-Passing.md
               - Business Lineage: types/7/0760-Business-Lineage.md

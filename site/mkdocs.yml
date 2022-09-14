@@ -28,6 +28,7 @@ nav:
                   - Ecosystem UI: user-interfaces/ecosystem/ecosystem-ui-planning.md
           - Preparing Metadata Ecosystem:
               - Metadata Valid Values: guides/planning/valid-values/overview.md
+              - Language Translations: guides/planning/translations/overview.md
               - Onboarding Organization: guides/planning/organization/overview.md
               - Governance Program: guides/planning/governance-program/overview.md
       - Integration:

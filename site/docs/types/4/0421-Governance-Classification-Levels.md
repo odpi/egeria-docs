@@ -8,7 +8,7 @@ hide:
 
 # Governance Classification Levels
 
-Most organizations already define their standard levels for governance classifications such as confidentiality. Although the Open Metadata Types include[Standard Enumerations](/types/4/0422-Governance-Action-Classifications)for these classifications, the *GovernanceClassificationLevel* allows an organization to make use of their own definitions.
+Most organizations already define their standard levels for governance classifications such as confidentiality. Although the Open Metadata Types include [Standard Enumerations](/types/4/0422-Governance-Action-Classifications) for these classifications, the *GovernanceClassificationLevel* allows an organization to make use of their own definitions.
 
 An organization creates one of these entities for each of their confidentiality levels. The levelIdentifier value is then used in the classifications. It can be programmatically examined by security processing to, for example, compare the confidentiality of an asset against a person's access.
 

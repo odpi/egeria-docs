@@ -15,7 +15,7 @@ A governance domain typically involves the ongoing cooperation of multiple teams
 
 Each domain is typically the responsibility of a different executive in the organization.  Different domains may use slightly different terminology and often run different tools but in fact they are very similar in the way that they operate.  Egeria allows the teams from the different governance domains to collaborate and benefit from each other's efforts.
 
-!!! info "Examples of governance domains"
+??? info "Examples of governance domains"
     The governance domains can vary in scope and importance to the business.  In the example below, *Corporate Governance* ensures that the business operates legally. It is the key focus of the board or directors and includes financial reporting.  
 
     At the heart of the organization's operation are three governance domains that are often run separately, but in fact are highly dependent on one another:
@@ -39,12 +39,12 @@ Each domain is typically the responsibility of a different executive in the orga
     ![Governance Domain Examples](governance-domain-examples.svg)
     > Examples of different governance domains within an organization.
 
-Governance domains are represented by [*Governance Domain Descriptions*](/types/4/0401-Governance-Definitions/#governancedefinitiondescription) entities in open metadata.  These definitions include the *domainIdentifier* property, a *displayName* and a *description*.
+Governance domains are represented by [*Governance Domain Descriptions*](/types/4/0401-Governance-Definitions/#governancedomaindescription) entities in open metadata.  They are organized into a *GovernanceDomainSet* collection.
 
 ![Governance Domain Descriptions](governance-domain-definitions.svg)
 > The governance domain descriptions organized in a governance domain set
 
-The *domainIdentifier* property is an integer and by convention "0" means "applies to all domains".  For example:
+The governance domain descriptions include the *domainIdentifier* property, a *displayName* and a *description*.  The *domainIdentifier* property is an integer and by convention "0" means "applies to all domains".  For example:
 
 | Domain Identifier | Display Name                   | Description                                                                                               |
 |:------------------|:-------------------------------|:----------------------------------------------------------------------------------------------------------|
@@ -59,7 +59,7 @@ The *domainIdentifier* property is an integer and by convention "0" means "appli
 
 
 ??? education "Defining governance domains"
-    Governance domain descriptions can be defined in an [Open Metadata Archive](/concepts/open-metadata-archive) or through the [Governance Program OMAS](/services/omas/goverance-program/overview).
+    Governance domain descriptions can be defined in an [Open Metadata Archive](/concepts/open-metadata-archive) or through the [Governance Program OMAS](/services/omas/governance-program/overview).
     
     The [egeria-samples.git repository](https://github.com/odpi/egeria-samples) includes a sample called [Sample metadata archives for Coco Pharmaceuticals](https://github.com/odpi/egeria-samples/tree/master/sample-metadata-archives/coco-metadata-archives) that creates open metadata archives with basic definitions for Coco Pharmaceuticals.  This includes the definition of this organization's governance domains with their communities and governance officers.
 
@@ -96,7 +96,7 @@ These different approaches allow you to have enough detail in your open metadata
 
     ![Governance Roles](governance-roles.svg)
 
-    The [Governance Program OMAS](/services/omas/goverance-program/overview) supports the setting up of governance roles. The [Community Profile OMAS](/services/omas/community-profile/overview) supports the appointment of people to roles.
+    The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of governance roles. The [Community Profile OMAS](/services/omas/community-profile/overview) supports the appointment of people to roles.
 
 
 ## Governance Leadership Communities
@@ -111,7 +111,7 @@ Each governance domain would typically have a community, led by the governance d
 
 As the governance roles are defined, they are added to the governance domain community using the [CommunityMembership](/types/1/0140-Communities) relationship.  As people are appointed to the roles, they automatically become a member of the community.
 
-#### Governance Leaders Community
+### Governance Leaders Community
 
 Often the leaders of the governance domains need a forum to share ideas and collaborate.  This can be achieved by setting up a community for the governance leaders.  This means the governance domain leader is the head of their governance domain community and is a member of the governance leadership community. 
 
@@ -161,7 +161,7 @@ A *Governance Definition* is a metadata element that describes the context or pu
 
 ## Subject areas
 
-Subject areas are topics or domains of knowledge that are of interest to the governance domains.  Some subject areas are common to multiple governance domains; others are specialized within a domain.  Each is represented 
+Subject areas are topics or domains of knowledge that are of interest to the governance domains.  Some subject areas are common to multiple governance domains; others are specialized within a domain.  Each is represented using a [SubjectAreaDefinition](/types/4/0425-Subject-Areas).
 
 ![Figure 3](subject-area-definition.svg)
 > **Figure 3:** Defining a subject area
@@ -174,7 +174,7 @@ Governance Program OMAS provides an [interface to create subject area definition
 
 !!! education "Further information"
 
-    * The [Governance Program OMAS](/services/omas/goverance-program/overview) supports the setting up of subject area definitions.
+    * The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of subject area definitions.
     * [Common Data Definitions](/practices/common-data-definitions/overview) describes the management and use of subject areas.
     
     * The [Defining Subject Areas](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview/) scenario for Coco Pharmaceuticals walks through the process of setting up the subject areas for Coco Pharmaceuticals.
@@ -220,11 +220,12 @@ The values used in governance classifications show the specific group that the c
 
 Egeria has a set of default values that can be set up using the [`createStandardGovernanceClassificationLevels`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceClassificationLevelInterface.html) method.
 
+
 ## Measures and metrics
 
 As important aspect of the governance program is the ability to measure its effectiveness and identify the assets that are delivering the highest value, or operating with the greatest efficiency etc.
 
-A value that should be captured to demonstrate the effectiveness of the governance program is documented using the `GovernanceMetric` entity. It is linked to the appropriate governance definition and can be linked to a data set where the specific measurements are being gathered.
+A value that should be captured to demonstrate the effectiveness of the governance program is documented using the [*GovernanceMetric*](/types/4/0450-Governance-Rollout) entity. It is linked to the appropriate governance definition and can be linked to a data set where the specific measurements are being gathered.
 
 The calculation of governance metrics is often a summary of many other measurements associated with specific resources (such as data sources and processes) operating under the scope of the governance program. These resources are catalogued as [`Assets`](/concepts/asset). 
 
@@ -254,7 +255,7 @@ There are three types:
 
 * An Enforcement Point describes processing that enforces an specific condition. For example, data may need to be encrypted at a certain point in the processing. The encryption processing is an enforcement point.
 
-The ExecutionPointDefinition elements are created during the design of the governance program. They characterize the types of execution points that are needed to support the governance requirements. They are linked to the Governance Definition that they support using the ExecutionPointUse relationship. Typically the governance definitions linked to the governance execution point definitions are:
+The ExecutionPointDefinition elements are created during the design of the governance program. They characterize the types of execution points that are needed to support the governance requirements. They are linked to the Governance Definition that they support using the ExecutionPointUse relationship. Typically, the governance definitions linked to the governance execution point definitions are:
 
 * Governance Processes
 * Governance Procedures
@@ -285,7 +286,7 @@ These classifications help in the review of the implementation of the governance
 
 !!! education "How the Open Metadata Access Services (OMASs) support the governance program"
 
-    * The [Governance Program OMAS](/services/omas/goverance-program/overview) supports the setting up of governance domain and its associated definition elements.
+    * The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of governance domain and its associated definition elements.
 
     * The [Community Profile OMAS](/services/omas/community-profile/overview) supports the definition of the profiles for people and teams that will support the governance program.  These are linked to the governance roles defined by the governance program.
 

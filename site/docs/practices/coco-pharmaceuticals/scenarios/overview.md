@@ -27,6 +27,8 @@ set up their new roles and meet the challenges their new responsibilities bring.
 
 * [Cataloguing Infrastructure](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview)
 
+* [Adding a sustainability governance domain](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview)
+
 * [Investigating suspicious activity](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview)
 
 * [Receiving patient data from a hospital](/practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview)

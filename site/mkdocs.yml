@@ -820,6 +820,7 @@ nav:
               - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
               - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
               - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md
+              - Sustainability: practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview.md
               - Suspicious Activity: practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview.md
 
 theme:

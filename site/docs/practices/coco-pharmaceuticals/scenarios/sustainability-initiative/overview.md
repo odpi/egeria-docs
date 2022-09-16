@@ -5,18 +5,19 @@
 
 Climate change is upon us. Public and private institutions recognize the role that each have in reaching sustainability goals to slow climate change as well as mitigate and adapt to the various risks that climate change is driving.
 
-The Board of Directors for Coco pharmaceuticals has come to recognize the need for a formal sustainability program. This is a major cross-cutting initiative with many complexities that will effect many parts of the business, provide opportunities for innovation, differentiation and cost-savings over time - as well as meet commitments to shareholders, partners and regulators.
+The Board of Directors for Coco pharmaceuticals has come to recognize the need for a formal sustainability program. This is a major cross-cutting initiative with many complexities that will affect many parts of the business, provide opportunities for innovation, differentiation and cost-savings over time - as well as meet commitments to shareholders, partners and regulators.
 
 These initiatives require careful consideration, planning and collaboration - often over many years. It is important to choose a good starting point that is tangible, understandable  and incrementally achievable. The board is aware of emerging regulatory reporting requirements for sustainability and decides that it would be beneficial to be proactive and start with this as a focus area.
 
-The foundation for much of sustainability reporting is accounting for the  carbon emissions (and their equivalence) by following protocols such as the GHG Protocols. This can help all stake holders establish:
+The foundation for much of sustainability reporting is accounting for the  carbon emissions (and their equivalence) by following protocols such as the GHG Protocols. This can help all stakeholders establish:
+
 * Coco’s direct and indirect carbon emissions baseline
 * goals and targets to reduce these emissions
 * campaigns and projects to achieve these goals
 * Progress monitoring and reporting
 * Auditable results to publish to stakeholders - governmental, financial and market.
 
-* With this mission in mind, the Coco board decides to establish a sustainability program.
+With this mission in mind, the Coco board decides to establish a sustainability program.
 
 ## Leadership
 

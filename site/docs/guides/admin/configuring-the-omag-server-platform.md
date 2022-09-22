@@ -261,6 +261,17 @@ When the platform shuts down, if any of the servers that were in the startup lis
 
     This is the default setting.
 
+## Additional HTTP headers
+
+By default, the security connectors use only basic authentication. To improve the security checks there is the possibility to add additional headers that will be passed to the security plugins and even further, propagated on federated queries.
+
+How it works:
+
+When `header.name.list` is set, the HttpRequestHeadersFilter puts all specified headers in a ThreadLocal variable. By default, this list is empty.
+
+ThreadLocal ensures headers consistency between different requests (threads). The HttpHeadersThreadLocal class which holds the ThreadLocal is in the http-helper module; therefore this functionality can be used in any module that includes http-helper.
+
+
 ## Transport Layer Security (TLS)
 
 Transport layer security describes the security applied to API calls made between servers. The most commonly known transport layer security is SSL.

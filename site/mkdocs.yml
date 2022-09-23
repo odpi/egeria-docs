@@ -59,6 +59,8 @@ nav:
                       - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
                       - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
+                  - Database:
+                      - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
               - Runtime:
                   - Repository:
                       - Pluggable Repositories:
@@ -84,6 +86,8 @@ nav:
                   - Open Metadata Topic:
                       - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
                       - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
+                  - Database:
+                        - JDBC Connector: connectors/resource/jdbc-resource-connector.md
           - Developer Guide:
               - Developer Overview: guides/developer/index.md
               - Building Archives:

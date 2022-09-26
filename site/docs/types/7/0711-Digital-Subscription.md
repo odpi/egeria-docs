@@ -12,7 +12,7 @@ The *DigitalSubscription* entity is a specialized [Agreement](/type/4/0484-Agree
 
 The *DigitalSubscriber* relationship links to the element that represents the subscriber.  For example, this could be a [UserIdentifier](/types/1/0110-Actors), [PersonRole](/types/1/0112-People), [ActorProfile](/types/1/0110-Actors) or [Asset](/types/0/0010-Base-Model) such has a system.
 
-![UML](0483-Terms-And-Conditions.svg)
+![UML](0711-Digital-Subscription.svg)
 
 
 

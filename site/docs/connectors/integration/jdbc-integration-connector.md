@@ -6,10 +6,10 @@
 # JDBC Integration Connector
 
 ??? info "Connector details"
-    - Connector Category: [Integration Connector](/connectors/integration-connector)
-    - Hosting Service: [Database Integrator OMIS](/services/omis/database-integrator)
+    - Connector Category: [Integration Connector](/connectors/#integration-connector)
+    - Hosting Service: [Database Integrator OMIS](/services/omis/database-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
-    - Source Module: [jdbc-integration-connectors :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-integration-connector){ target=gh }
+    - Source Module: [jdbc-integration-connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-integration-connector){ target=gh }
     - Jar File Name: `jdbc-integration-connectors.jar`
 
 ## Overview
@@ -24,7 +24,7 @@ The JDBC integration connector catalogs a database, extracting schemas, tables, 
 This connector uses the [Database Integrator OMIS](/services/omis/database-integrator/overview)
 running in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the Database Integrator OMIS](/guides/admin/server/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the Database Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"
@@ -60,8 +60,8 @@ This is its connection definition to use on the [administration commands that co
     }
     ```
 
-    - Replace `{{useId}}` and `{{clearPassword}}` with the database username and password.
-    - Replace `{{address}}` with the database jdbc url.
-    - Replace `{{connectorTypeQualifiedName}}` with a connector type already saved. Required to construct the connection information   
+    - Replace '{{useId}}' and '{{clearPassword}}' with the database username and password.
+    - Replace '{{address}}' with the database jdbc url.
+    - Replace '{{connectorTypeQualifiedName}}' with a connector type already saved. Required to construct the connection information   
 
----8<-- "snippets/abbr.md"
+---8<-- "snippets/content-status/tech-preview.md"

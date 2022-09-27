@@ -43,6 +43,8 @@ that the governance program has a positive effect.
 * **[0470 Incident Reporting](0470-Incident-Reporting.md)**
 * **[0481 Licenses](0481-Licenses.md)**
 * **[0482 Certifications](0482-Certifications.md)**
+* **[0483 Terms and Conditions](0483-Terms-And-Conditions.md)**
+* **[0484 Agreements](0484-Agreements.md)**
 * **[0485 Data Processing Purposes](0485-Data-Processing-Purposes.md)**
 
 ![UML Packages](area-4-governance-overview.svg)

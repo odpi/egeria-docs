@@ -28,6 +28,7 @@ nav:
                   - Ecosystem UI: user-interfaces/ecosystem/ecosystem-ui-planning.md
           - Preparing Metadata Ecosystem:
               - Metadata Valid Values: guides/planning/valid-values/overview.md
+              - Language Translations: guides/planning/translations/overview.md
               - Onboarding Organization: guides/planning/organization/overview.md
               - Governance Program: guides/planning/governance-program/overview.md
       - Integration:
@@ -107,6 +108,8 @@ nav:
                   - Resource Connectors:
                       - New types of connectors: guides/developer/resource-connectors/overview.md
                       - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+              - Javadoc: https://odpi.github.io/egeria/index.html
+              - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -338,6 +341,7 @@ nav:
               - More Information: types/0/0019-More-Information.md
               - Property Facets: types/0/0020-Property-Facets.md
               - Collections: types/0/0021-Collections.md
+              - Translations: types/0/0022-Translations.md
               - Locations: types/0/0025-Locations.md
               - Endpoints: types/0/0026-Endpoints.md
               - Operating Platforms: types/0/0030-Hosts-and-Platforms.md
@@ -433,6 +437,8 @@ nav:
               - Incident Reporting: types/4/0470-Incident-Reporting.md
               - Licenses: types/4/0481-Licenses.md
               - Certifications: types/4/0482-Certifications.md
+              - Terms and Conditions: types/4/0483-Terms-And-Conditions.md
+              - Agreements: types/4/0484-Agreements.md
               - Data Processing Purposes: types/4/0485-Data-Processing-Purposes.md
           - 5. Structures:
               - Area 5 Structures: types/5/index.md
@@ -482,10 +488,12 @@ nav:
           - 7. Lineage:
               - Area 7 Lineage: types/7/index.md
               - Digital Service: types/7/0710-Digital-Service.md
+              - Digital Subscription: types/7/0711-Digital-Subscription.md
               - Digital Service Ownership: types/7/0715-Digital-Service-Ownership.md
               - Information Supply Chains: types/7/0720-Information-Supply-Chains.md
               - Solution Components: types/7/0730-Solution-Components.md
               - Solution Ports and Wires: types/7/0735-Solution-Ports-and-Wires.md
+              - Solution Implementation: types/7/0737-Solution-Implementation.md
               - Solution Blueprints: types/7/0740-Solution-Blueprints.md
               - Data Passing: types/7/0750-Data-Passing.md
               - Business Lineage: types/7/0760-Business-Lineage.md
@@ -815,6 +823,7 @@ nav:
               - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
               - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
               - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md
+              - Sustainability: practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview.md
               - Suspicious Activity: practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview.md
 
 theme:

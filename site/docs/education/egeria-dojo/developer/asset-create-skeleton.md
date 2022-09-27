@@ -15,11 +15,11 @@ Paste this code between the curly braces of the `AssetCreate` class.
     private static final String fileName9  = "sample-data/old-market-drop-foot-weekly-measurements/week4.csv";
     private static final String fileName10 = "sample-data/old-market-drop-foot-weekly-measurements/week5.csv";
 
-    private String serverName;
-    private String platformURLRoot;
-    private String clientUserId;
+    private final String serverName;
+    private final String platformURLRoot;
+    private final String clientUserId;
 
-    private List<String> fileNames = new ArrayList<>();
+    private final List<String> fileNames = new ArrayList<>();
 
     /**
      * Set up the parameters for the utility.
@@ -54,8 +54,13 @@ Paste this code between the curly braces of the `AssetCreate` class.
 
     /**
      * This runs the utility
+     * 
+     * @throws InvalidParameterException null or invalid parameter passed to Egeria
+     * @throws PropertyServerException problem with the operation of the metadata server
+     * @throws UserNotAuthorizedException userId not set up correctly in the metadata server
+     * @throws IOException unable to read the file
      */
-    private void run()
+    private void run() throws InvalidParameterException, PropertyServerException, UserNotAuthorizedException, IOException
     {
         List<String> columnHeaders = new ArrayList<>();
 
@@ -78,7 +83,10 @@ Paste this code between the curly braces of the `AssetCreate` class.
                 List<String> assetGUIDs = client.addCSVFileToCatalog(clientUserId,
                                                                      fileName,
                                                                      "This is a new CSV file asset created by AssetCreate.",
-                                                                     fileName);
+                                                                     fileName,
+                                                                     columnHeaders,
+                                                                     ',',
+                                                                     '\'');
 
                 if (assetGUIDs != null)
                 {
@@ -92,6 +100,7 @@ Paste this code between the curly braces of the `AssetCreate` class.
         catch (Exception error)
         {
             System.out.println("There was a " + error.getClass().getName() + " exception when calling the OMAG Server Platform.  Error message is: " + error.getMessage());
+            throw error;
         }
     }
 

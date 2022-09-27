@@ -8,10 +8,14 @@ hide:
 
 # 0531 Document Schemas
 
-Model 0531 shows the definitions for structured documents such as JSON or XML.
+Model 0531 shows the definitions for describing the schema of structured documents such as JSON or XML.  They are typically attached to assets that are [files](/types/2/0220-Files-and-Folders) or [document stores](/types/2/0221-Document-Stores).
 
-Note that the type information for each attribute within these structures can be directly embedded
-on the **DocumentSchemaAttribute** through the [TypeEmbeddedAttribute](0505-Schema-Attributes.md) classification. Also
+The root of the schema is represented by an entity of type *DocumentSchemaType*.  This would [link to the asset](/types/5/0503-Asset-Schema) that represents the document, or the [port where the document is passed to a process](/types/5/0520-Process-Schemas).
+
+Each data field in the schema is represented by a *DocumentSchemaAttribute* entity.  
+
+
+Note that the type information for each attribute within these structures can be directly embedded on the *DocumentSchemaAttribute* through the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes) classification. Also
 recall that the [NestedSchemaAttribute](0505-Schema-Attributes.md) relationship can be used to capture nested
 (hierarchical) structures within such documents.
 

@@ -5,58 +5,15 @@
 
 # Governance Program Open Metadata Access Service (OMAS)
 
-The Governance Program OMAS provides APIs and events for tools and applications focused on defining a transformation strategy, planning support for a regulation and/or developing a governance program for your organization.
-
-It assumes an organization wishes (or is already) operating an active governance program that is iteratively reviewed and developed.
-
-It covers:
-
-- Understanding the business drivers and regulations that provide the motivation and direction to the governance program.
-
-- Laying down the governance policies (principles, obligations and approaches) that frame the governance program.
-
-- Planning and defining the governance controls that detail how these governance policies will be implemented in the organization, and enumerating the implications of these decisions and the expected outcomes.
-
-- Defining the organization's roles and responsibilities that will support the governance program.
-
-- Defining the classifications and governance zones that will organize the assets being governed.
-
-- Defining the subject areas that will organize the data-oriented definitions such as glossary terms, valid values and quality rules.
-
-- Reviewing the impact of the governance program.
-  
-   - adjusting governance definitions and metrics as necessary.
-  
-- Reviewing the strategy, business and regulatory landscape.
-  
-   - adjusting the governance definitions and metrics as necessary.
-
+The Governance Program OMAS provides APIs and events for tools and applications focused on defining a transformation strategy, planning support for a regulation and/or developing a [governance program](/guides/planning/governance-program/overview) for your organization.
 
 ## Governance domains
 
-Governance domains are the areas of an organization's operation that need a specific governance focus.  A domain typically involves the ongoing cooperation of multiple teams from different business areas.  There is often a business strategy and a set of targets associated with the domain since its purpose is to provide some level of improvement or benefit to the organization.
+[Governance domains](/guides/planning/governance-program/overivew/#governance-domains) are the areas of an organization's operation that need a specific governance focus.  Governance domains are represented by *[Governance Domain Descriptions](/types/4/0401-Governance-Definitions)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".
 
-Each domain is typically the responsibility of a different executive in the organization.  Different domains may use slightly different terminology and often run different tools but in fact they are very similar in the way that they operate.  Egeria allows the teams from the different governance domains to collaborate and benefit from each other's efforts.
+Governance domains are managed through the [GovernanceDomainManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceDomainManager.html) client implementing the [GovernanceDomainInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html)
 
-
-??? info "Examples of governance domains"
-    The governance domains can vary in scope and importance to the business.  In the example below, *Corporate Governance* ensures that the business operates legally. It is the key focus of the board or directors and includes financial reporting.  At the heart of the organization's operation are three governance domains that are often run separately, but in fact are highly dependent on one another:
-
-    * Data (or Information) Governance focuses on the appropriate use and management of data.
-    * Security focuses on the security of the IT Systems (and sometimes the physical security of buildings and plant).
-    * IT Infrastructure ensures systems are correctly set up and managed.
-
-    Software development needs governance to ensure it is properly designed, built and tested - and fit of purpose.  This governance is typically guided by a software development method, such as *Agile Development* and covers all aspects of the software development lifecycle.
-
-    
-    
-    ![Figure 2](governance-domain-examples.svg)
-    > **Figure 2:** Examples of different governance domains within an organization.
-
-Governance domains are represented by *[Governance Domain Descriptions](/types/4/0401-Governance-Definitions)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".  
-
-It is possible to set up a default list of domains using the [`createStandardGovernanceDomains`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html) method. This will give you the following governance domain definitions:
-
+It is possible to set up a default list of domains using the [`createStandardGovernanceDomains()`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html) method. This will give you the following governance domain definitions:
 
 | Domain Identifier | Domain Name | Description                                                                                                           |
 | :-------- | :-------- |:----------------------------------------------------------------------------------------------------------------------|
@@ -69,15 +26,15 @@ It is possible to set up a default list of domains using the [`createStandardGov
 | 7 | ASSET_MANAGEMENT | The governance of physical assets.| 
 
 
+## Governance role
+
+Governance roles identify the additional responsibilities that exist in the organization in order to support the governance domain.  The governance roles are set up during the work to establish the governance domain.  People are appointed to these roles (many of which are part-time, augmenting the existing roles in the organization) as the governance domain is rolled out.
+
+Governance roles are set up through the [GovernanceRoleManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceRoleManager.html) client that implements the [GovernanceRolesInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceRolesInterface.html).  People can also be appointed to the governance roles through the [Community Profile OMAS](/services/omas/community-profile/overview) since they are types of *PersonRoles* and all methods that work with person roles can be used to work with governance roles.
 
 ## Subject areas
 
-Subject areas are topics or domains of knowledge that are of interest to the governance leaders.
-
-![Figure 3](subject-area-definition.svg)
-> **Figure 3:** Defining a subject area
-
-Governance Program OMAS provides an [interface to create subject area definitions](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/SubjectAreasInterface.html).  The work is then handed off to the subject area owners:
+Subject areas are topics or domains of knowledge that are of interest to the governance leaders.  Governance Program OMAS provides an [interface to create subject area definitions](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/SubjectAreasInterface.html) that is implemented by the [SubjectAreaManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/SubjectAreaManager.html) client.  The work is then handed off to the subject area owners:
 
 * [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.  
 * [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.
@@ -97,22 +54,16 @@ Governance Program OMAS provides an [interface to create subject area definition
 
 ## Governance Definitions
 
-A *Governance Definition* is a metadata element that describes the context or purpose for an activity that supports the organization's operation. Figure 1 shows the main types of governance definition and how they link together to create a coherent response to a business strategy or regulation.
-
-![Figure 1](traceability-from-business-drivers-to-action.svg)
-> **Figure 1:** Using governance definitions to provide traceability from business drivers and regulations to actions.
+A [*Governance Definition*](/types/4/0401-Governance-Definition) is a metadata element that describes the context or purpose for an activity that supports the organization's operation.  Governance definitions can be maintained and linked through the [GovernanceDefinitionManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceDefinitionManager.html) client which supports the [GovernanceDefinitionsInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDefinitionsInterface.html)
 
 
 ## Governance classification, tagging and linking
 
 One of the ways to reduce the cost of governance is to define groups of similar assets/resources along with the governance definitions that apply to members of the group.  This avoids having to make decisions on how to manage each asset/resource.  The cataloguing process just needs to work out which group(s) to place the asset in.  Labels such as classifications, and tags of different types are used to identify these group assignments.  When a governance process is operating on the asset/resource, it looks up the labels and follows the governance definitions for the group.
 
-![Figure 4](divide-and-conquer-landscape.svg)
-> **Figure 4:** Different types of tags used to group assets for governance
-
 The different types of labels used to group assets/resources are used for different purposes and may indicate how official they are:
 
-* [Governance Zones](/concepts/governance-zone) group assets according to their use.  They are typically is used for [controlling visibility to the resource's asset definition](/features/governance-zoning/overview).
+* [Governance Zones](/concepts/governance-zone) group assets according to their use.  They are typically is used for [controlling visibility to the resource's asset definition](/features/governance-zoning/overview). Governance zones are managed through the [GovernanceZoneManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceZoneManager.html) client implementing the [GovernanceZonesInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceZonesInterface.html).
 
 * [Governance Classifications](#setting-up-the-levels-for-your-governance-classifications) define the groups used for specific types of governance.
 
@@ -122,74 +73,34 @@ The different types of labels used to group assets/resources are used for differ
     * Impact Governance Classification defines how much of an impact a particular situation is to the operation of the organization.
     * Retention Governance Classification defines how long a resource (typically data) must be retained by the organization.
 
-* License Types define the contract aka (terms and conditions) that define how the asset/resource can be used.
+* [License Types](/types/4/0481-Licenses) define the contract aka (terms and conditions) that define how the asset/resource can be used. License 
+types and the linking to assets is managed through the [RightsManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/RightsManager.html) client implementing the [RightsManagementInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/RightsManagementInterface.html).
 
-* Certification Types define specific characteristics of an asset/resource that has been verified for a particular span of time.
+* [Certification Types](/types/4/0482-Certifications) define specific characteristics of an asset/resource that has been verified for a particular span of time.  Certification types and the process of certifying assets is managed through the [CertificationManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/CertificationManager.html) client implementing the [CertificationManagerInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/CertificationManagementInterface.html)
 
 * [SecurityTags](/concepts/security-tags) identify labels and properties that are used in determining which data protection rules should be executed when particular data is requests. They can be attached to assets or schema elements depending on the scope of data that the security tags apply to. The synchronized access control feature describes how security tags are set up and used.
 
-The labels may be assigned directly to the asset, or to elements, such as schemas and glossary terms that are linked to the asset.
+The labels may be assigned directly to the asset, or to elements, such as schemas and glossary terms that are linked to the asset.  Security tags are managed through the [Asset Owner OMAS](/services/omas/asset-owner/overview).
 
 ## Setting up the levels for your governance classifications
 
-The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined and they can be set up in [`GovernanceClassificationLevel`](/types/4/0421-Governance-Classification-Levels/) definitions.
+The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined ,and they can be set up in [`GovernanceClassificationLevel`](/types/4/0421-Governance-Classification-Levels/) definitions.
 
-![Figure 5](governance-program-level-definition.svg)
-> **Figure 5:** Governance classifications that use governance level definitions
+Egeria has a set of default values that can be set up using the [`createStandardGovernanceClassificationLevels`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceClassificationLevelInterface.html) method.  Alternatively you can set up your own values through the [GovernanceClassificationManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceClassificationLevelManager.html) client.
 
-Egeria has a set of default values that can be set up using the [`createStandardGovernanceClassificationLevels`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceClassificationLevelInterface.html) method.
+## Governance Status Identifiers
+
+Many entities, relationships and classifications have a *statusIdentifier* property.  This indicates the confidence in the setting up of the element.  Generally,
+
+* Positive values relate to statuses which mean the element is ok to use.
+* Zero means the element has just been created, but not vetted, so use with caution.
+* Negative values mean that the element is not to be trusted because it is, for example, obsolete or incorrect.
+
+The meanings of specific *statusIdentifiers* can be set up using the [GovernanceStatusLevelManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceStatusLevelManager.html) that implements the [GovernanceStatusLevelInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceStatusLevelInterface.html).
 
 ## Measures and metrics
 
-As important aspect of the governance program is the ability to measure its effectiveness and identify the assets that are delivering the highest value, or operating with the greatest efficiency etc.
-
-A value that should be captured to demonstrate the effectiveness of the governance program is documented using the `GovernanceMetric` entity. It is linked to the appropriate governance definition and can be linked to a data set where the specific measurements are being gathered.
-
-The calculation of governance metrics is often a summary of many other measurements associated with specific resources (such as data sources and processes) operating under the scope of the governance program. These resources are catalogued as [`Assets`](/concepts/asset). 
-
-![Figure 6](governance-metrics-with-measurements-dataset.svg)
-> **Figure 6:** Measuring governance through an external data set
-
-The definition of their expected behavior or content can be captured using the `GovernanceExpectations` classification attached to the `Asset`. The measurements that support the assessment of a particular resource can be gathered and stored in a `GovernanceMeasurements` classification attached to its `Asset`.
-
-![Figure 7](expectations-vs-measurements.svg)
-> **Figure 7:** Setting expectations and gathering results in classifications
-
-The measurement classification may be attached to a related element that describes an aspect for its operation.  For example, in figure 8 the measurement is attached to a process instance that captures a specific run of a process.  The expected values are attached to its parent process.
-
-![Figure 8](expectations-vs-measurements-example.svg)
-> **Figure 8:** Attaching the measurements to related elements
-
-
-## Execution points
-
-A governance execution point defines specific activity that is supporting governance.
-
-There are three types:
-
-* A Control Point is a place in the processing where a decision needs to be made. It may be a choice on whether to tolerate a reported situation or to resolve it - or it may be a decision on how to solve it.
-
-* A Verification Point describes processing that is testing if a desired condition is true. Quality rules are examples of verification points. The result of a verification point is the output of the test. It may, for example, be a boolean, classification or a set of invalid values.
-
-* An Enforcement Point describes processing that enforces an specific condition. For example, data may need to be encrypted at a certain point in the processing. The encryption processing is an enforcement point.
-
-The ExecutionPointDefinition elements are created during the design of the governance program. They characterize the types of execution points that are needed to support the governance requirements. They are linked to the Governance Definition that they support using the ExecutionPointUse relationship. Typically the governance definitions linked to the governance execution point definitions are:
-
-* Governance Processes
-* Governance Procedures
-
-Often execution points need to be integrated with the normal activity of the business, but they may also represent additional standalone activity.
-
-The classifications ControlPoint, VerificationPoint and EnforcementPoint are used to label governance implementation elements with the type of execution point and the qualified name of the corresponding definition if any. They are often found on element such as:
-
-* Governance Action Types
-* Governance Actions
-
-These classifications help in the review of the implementation of the governance program and can be used to drive additional audit logging. 
-
-
-![Figure 9](governance-action-process-example.svg)
-> Implementing the actions defined in your governance definitions.
+As important aspect of the governance program is the ability to [measure its effectiveness](/guides/planning/goverance-program/overview/#measures-and-metrics) and identify the assets that are delivering the highest value, or operating with the greatest efficiency etc.  Governance metrics can be managed through the [GovernanceMetricsManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceMetricsManager.html) client that supports the [GovernanceMetricsInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceMetricsInterface.html)
 
 
 ## Related OMASs

@@ -10,7 +10,7 @@
     - Hosting Service: [Database Integrator OMIS](/services/omis/database-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [jdbc-integration-connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-integration-connector){ target=gh }
-    - Jar File Name: `jdbc-integration-connectors.jar`
+    - Jar File Name: `jdbc-integration-connector.jar`
 
 ## Overview
 

@@ -64,4 +64,4 @@ This is its connection definition to use on the [administration commands that co
     - Replace '{{address}}' with the database jdbc url.
     - Replace '{{connectorTypeQualifiedName}}' with a connector type already saved. Required to construct the connection information   
 
----8<-- "snippets/content-status/tech-preview.md"
+

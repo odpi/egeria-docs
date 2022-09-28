@@ -10,6 +10,5 @@ The JDBC Resource Connector provides a DataSource, which in turn is used to get 
 ![Figure 1](jdbc-resource-connector-generic-model.svg)
 > **Figure 1:** JDBC Resource connector
 
---8<-- "snippets/abbr.md"
 
 

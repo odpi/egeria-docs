@@ -290,6 +290,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.12: release-notes/3-12.md
         - v3.11: release-notes/3-11.md
         - v3.10: release-notes/3-10.md
         - v3.9: release-notes/3-9.md

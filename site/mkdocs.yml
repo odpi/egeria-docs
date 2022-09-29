@@ -831,7 +831,6 @@ theme:
   language: en
   custom_dir: overrides
   features:
-    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.top

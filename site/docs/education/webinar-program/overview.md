@@ -18,6 +18,21 @@ Please check the calendar has the latest confirmed Webinar information
 
 The material for our past webinars is listed below along with links to the recordings.
 
+???+ education "Building a native Egeria Connector.  September 2022 - Chris Grote"
+
+    This session goes through how to build a native connector.
+    
+    ???+ education "Presentation ..."
+         [Download]()
+         
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-catalog-connector-comparison-4th-April-2022.pdf"></iframe>
+         </div>
+    ??? education "Related Documentation"
+        - [Repository Connectors](https://egeria-project.org/concepts/repository-connector/?h=repository)
+
+
+
 ???+ education "Connector comparison - choices on how to bring your data catalog to Egeria.  April 2022 - Mandy Chessell"
 
     This session compares integration and repository connectors 

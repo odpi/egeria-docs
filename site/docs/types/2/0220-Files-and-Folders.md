@@ -1,14 +1,11 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 # 0220 Files and Folders
 
 A metadata catalog typically contains information about the data files that can be processed and their location.   Files and folders describe physical files and how they are organized on the file system.
+
+![UML](0220-Files-and-Folders.svg)
 
 ## DataFile
 
@@ -29,8 +26,6 @@ There are subtypes for *DataFile* that identify the format of the file:
 ## FileFolder
 
 A *FileFolder* entity represents a folder or directory used to group related files together. It adds the *pathName* property which contains the fully qualified path name of the folder.
-
-![UML](0220-Files-and-Folders.svg)
 
 
 ## FolderHierarchy

@@ -3,7 +3,7 @@
 
 # Projects
 
-Projects define a scope of managed activity.
+Projects define a scope of managed activity that has a fixed duration.
 
 
 

@@ -42,8 +42,7 @@ In addition, the [Open Metadata Repository Services (OMRS)](/services/omrs) prov
 
 ![Using different log destination](/frameworks/alf/audit-log-framework-overview.svg)
 
-Details of the supported audit log store connectors and
-how to set them up are described in [Configuring the Audit Log](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
+Details of the supported audit log store connectors and how to set them up are described in [Configuring the Audit Log](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
 
 ## FFDC principles practised by the Egeria community
 

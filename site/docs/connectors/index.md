@@ -104,11 +104,12 @@ The table below lists the repository connectors supporting the native open metad
 
 The table below lists the repository connectors that act as an adapter for third party metadata repositories.
 
-| Adapter Repository Connectors | Description |
-|---|---|
-| [Apache Atlas OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-hadoop-ecosystem){ target=gh } | implements read-only connectivity to the [Apache Atlas :material-dock-window:](https://atlas.apache.org){ target=atlas } metadata repository |
+| Adapter Repository Connectors                                                                                                                                        | Description                                                                                                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Apache Atlas OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-hadoop-ecosystem){ target=gh }                                   | implements read-only connectivity to the [Apache Atlas :material-dock-window:](https://atlas.apache.org){ target=atlas } metadata repository                                                             |
 | [IBM Information Governance Catalog (IGC) OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh } | implements read-only connectivity to the metadata repository within the [IBM InfoSphere Information Server :material-dock-window:](https://www.ibm.com/analytics/information-server){ target=ibm } suite |
-| [SAS Viya OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh } | implements metadata exchange to the metadata repository within the [SAS Viya Platform :material-dock-window:](https://support.sas.com/en/software/sas-viya.html){ target=sas } |
+| [SAS Viya OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh }                                               | implements metadata exchange to the metadata repository within the [SAS Viya Platform :material-dock-window:](https://support.sas.com/en/software/sas-viya.html){ target=sas }                           |
+| [Sample Repository proxy (adapter) using polling to access files :material-github:](https://github.com/odpi/egeria-connector-repository-file-sample){ target=gh }    | implements metadata exchange to a file system using a polling pattern and an embedded OMRS repository.                                                                                                   |
 
 ??? education "Further information relating to Repository and Event Mapper connectors"
     

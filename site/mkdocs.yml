@@ -21,8 +21,95 @@ nav:
           - Metadata Governance: patterns/metadata-governance/overview.md
   - Using:
       - Planning Guide:
-          - Planning Overview: guides/planning/overview.md
-          - User Interfaces: user-interfaces/ecosystem/ecosystem-ui-planning.md
+          - Planning Guide: guides/planning/index.md
+          - Planning Deployment:
+              - Planning Runtime: guides/planning/runtime/overview.md
+              - User Interfaces:
+                  - Ecosystem UI: user-interfaces/ecosystem/ecosystem-ui-planning.md
+          - Preparing Metadata Ecosystem:
+              - Metadata Valid Values: guides/planning/valid-values/overview.md
+              - Language Translations: guides/planning/translations/overview.md
+              - Onboarding Organization: guides/planning/organization/overview.md
+              - Governance Program: guides/planning/governance-program/overview.md
+      - Integration:
+          - Integration Guide: guides/integration/overview.md
+          - Connector Catalog:
+              - Connector Overview: connectors/index.md
+              - Governance Actions:
+                  - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
+                  - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
+                  - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
+                  - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+              - Governance Daemon:
+                  - Open Lineage Janus Connector: connectors/governance-daemon/open-lineage-janus-connector.md
+              - Integration:
+                  - File Connectors:
+                      - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
+                      - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
+                  - Topic Connectors:
+                      - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
+                      - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
+                  - API Connectors:
+                      - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
+                  - Infrastructure Connectors:
+                      - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
+                  - Lineage Connectors:
+                      - OpenLineage Event Receiver: connectors/integration/open-lineage-event-receiver-integration-connector.md
+                      - OpenLineage API Log Store: connectors/integration/api-based-open-lineage-log-store-integration-connector.md
+                      - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
+                      - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
+                      - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
+              - Runtime:
+                  - Repository:
+                      - Pluggable Repositories:
+                          - XTDB:
+                              - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                              - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                              - XTDB Connector Performance: connectors/repository/xtdb/performance.md
+                          - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
+                          - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
+                          - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
+                      - Repository Adapters:
+                          - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
+                          - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
+                          - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+                  - Audit Log Destination:
+                      - Console: connectors/runtime/console-audit-log-destination-connector.md
+                      - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
+                  - Open Metadata Archive Store:
+                      - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
+                  - Cohort Registry Store:
+                      - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
+              - Digital Resource:
+                  - Open Metadata Topic:
+                      - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
+                      - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
+          - Developer Guide:
+              - Developer Overview: guides/developer/index.md
+              - Building Archives:
+                  - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
+                  - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
+                  - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
+              - Building Utilities: guides/developer/building-utilities/overview.md
+              - Building Connectors:
+                  - Integration Connectors: guides/developer/integration-connectors/overview.md
+                  - Open Discovery Services: guides/developer/open-discovery-services/overview.md
+                  - Governance Action Services: guides/developer/governance-action-services/overview.md
+                  - Repository Governance Services: guides/developer/repository-governance-services/overview.md
+                  - Repository Connectors: guides/developer/repository-connectors/overview.md
+                  - Runtime Connectors:
+                      - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
+                      - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
+                      - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
+                      - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
+                      - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
+                      - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
+                      - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+                  - Resource Connectors:
+                      - New types of connectors: guides/developer/resource-connectors/overview.md
+                      - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+              - Javadoc: https://odpi.github.io/egeria/index.html
+              - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -48,6 +135,7 @@ nav:
               - Useful Kubernetes commands: guides/operations/kubernetes/k8s-cmds.md
               - Introduction to Helm: guides/operations/kubernetes/helm.md
               - Charts:
+                  - Egeria Chart overview: guides/operations/kubernetes/charts/overview.md
                   - Base Egeria Chart: guides/operations/kubernetes/charts/base.md
                   - Coco Pharmaceuticals Lab: guides/operations/kubernetes/charts/lab.md
                   - CTS Chart: guides/operations/kubernetes/charts/cts.md
@@ -59,71 +147,6 @@ nav:
           - Diagnostic Process: guides/diagnostic/overview.md
           - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
           - First failure data capture (FFDC): guides/diagnostic/ffdc.md
-      - Integrate:
-          - Developer Guide:
-                - Developer Overview: guides/developer/index.md
-                - Building Utilities: guides/developer/building-utilities/overview.md
-                - Modelling Schema: guides/developer/mapping-technology/modelling-schemas.md
-                - Building Connectors:
-                      - Integration Connectors: guides/developer/integration-connectors/overview.md
-                      - Open Discovery Services: guides/developer/open-discovery-services/overview.md
-                      - Governance Action Services: guides/developer/governance-action-services/overview.md
-                      - Archive Services: guides/developer/archive-services/overview.md
-                      - Repository Connectors: guides/developer/repository-connectors/overview.md
-                      - Runtime Connectors:
-                            - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
-                            - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
-                            - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
-                            - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
-                            - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
-                            - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
-                            - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
-                      - Resource Connectors:
-                            - New types of connectors: guides/developer/resource-connectors/overview.md
-                            - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
-          - Connector Catalog:
-                - Connector Overview: connectors/index.md
-                - Governance Actions:
-                      - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
-                      - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
-                      - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
-                      - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-                - Governance Daemon:
-                      - Open Lineage Janus Connector: connectors/governance-daemon/open-lineage-janus-connector.md
-                - Integration:
-                      - File Connectors:
-                            - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
-                            - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
-                      - Topic Connectors:
-                            - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
-                            - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
-                      - API Connectors:
-                            - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
-                      - Infrastructure Connectors:
-                            - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
-                      - Lineage Connectors:
-                            - OpenLineage Event Receiver : connectors/integration/open-lineage-event-receiver-integration-connector.md
-                            - OpenLineage API Log Store : connectors/integration/api-based-open-lineage-log-store-integration-connector.md
-                            - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
-                            - OpenLineage Cataloguer : connectors/integration/open-lineage-cataloguer-integration-connector.md
-                            - Governance Action OpenLineage Integrator : connectors/integration/governance-action-open-lineage-integration-connector.md
-                - Runtime:
-                      - Repository:
-                            - Pluggable Repositories:
-                                  - XTDB:
-                                        - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                                        - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                                        - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                                  - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
-                                  - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
-                                  - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
-                            - Repository Adapters:
-                                  - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
-                                  - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/index.md
-                                  - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
-                - Digital Resource:
-                      - Open Metadata Topic:
-                            - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
           - Egeria Ecosystem UI:
@@ -137,6 +160,7 @@ nav:
           - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md
           - Cohort Operation: features/cohort-operation/overview.md
+          - Data Quality: features/data-quality/overview.md
           - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
           - Duplicate Management: features/duplicate-management/overview.md
           - Effectivity Dates: features/effectivity-dates/overview.md
@@ -149,6 +173,7 @@ nav:
           - Metadata Archiving: features/metadata-archiving/overview.md
           - Metadata Provenance: features/metadata-provenance/overview.md
           - Metadata Security: features/metadata-security/overview.md
+          - Open Type System: features/open-type-system/overview.md
           - People, Roles and Organizations: features/people-roles-organizations/overview.md
           - Reference Data Management: features/reference-data-management/overview.md
           - Synchronized Access Control: features/synchronized-access-control/overview.md
@@ -168,8 +193,8 @@ nav:
                   - Introduction to the Egeria UIs: education/egeria-dojo/running-egeria/user-interfaces/ui-introduction.md
                   - Ecosystem UI:
                       - Using the Egeria Ecosystem UI: education/egeria-dojo/running-egeria/user-interfaces/ecosystem-ui/ecosystem-ui-start.md
-              - Configuring and Operating a Server : education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
-              - Coco Pharmaceuticals : education/egeria-dojo/running-egeria/coco-labs-environment.md
+              - Configuring and Operating a Server: education/egeria-dojo/running-egeria/configuring-and-operating-a-server.md
+              - Coco Pharmaceuticals Lab: education/egeria-dojo/running-egeria/coco-labs-environment.md
               - Summary of 'Running Egeria' day : education/egeria-dojo/running-egeria/running-egeria-summary.md
           - Developer Day : education/egeria-dojo/developer/overview.md
           - Metadata Governance Day : education/egeria-dojo/metadata-governance/overview.md
@@ -227,41 +252,48 @@ nav:
                   - Becoming a Maintainer: getting-started/dojo/egeria-dojo-day-3-2-becoming-a-maintainer.md
                   - Egeria Architecture: getting-started/dojo/egeria-dojo-day-3-3-egeria-architecture.md
                   - Egeria Social: getting-started/dojo/egeria-dojo-day-3-4-egeria-social.md
-  - Contributing:
+  - Community:
+      - Community Recognition: community/index.md
       - Community Guide: guides/community.md
-      - Project Operations: guides/project-operations.md
-      - Code:
-          - Coding Guidelines: guides/contributor/guidelines.md
-          - Way of Working:
-              - Overview: guides/contributor/process.md
-              - Working with Releases:
-                  - Release process: guides/contributor/release-process/index.md
-                  - Egeria Core Release process: guides/contributor/release-process/egeria-core-release.md
-                  - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
-                  - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
-                  - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
-                  - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
-          - Specific Guidance:
-              - Programming Languages: guides/contributor/languages.md
-              - Tools:
-                  - Development Tools: guides/contributor/development.md
-                  - Documentation Tools: guides/contributor/documentation.md
-                  - Runtime Tools: guides/contributor/runtime.md
-                  - Testing Tools: guides/contributor/testing.md
-              - Developing Connectors:
-                  - Develop a Connector: guides/developer/implement-a-connector.md
-                  - Develop Repository Connector: guides/developer/repository-connectors/overview.md
-              - Developing Access Services: guides/developer/implement-an-omas.md
-      - Document:
-          - Documentation Guide: guides/documentation/guide.md
-          - Formatting Standards: guides/documentation/formatting.md
-          - Style Guide: guides/documentation/style.md
-          - Markdown: guides/contributor/markdown.md
+      - Integration Guide: guides/integration/overview.md
+      - Contributing:
+          - Project Operations: guides/project-operations.md
+          - Code:
+              - Coding Guidelines: guides/contributor/guidelines.md
+              - Way of Working:
+                  - Overview: guides/contributor/process.md
+                  - Working with Releases:
+                      - Release process: guides/contributor/release-process/index.md
+                      - Egeria Core Release process: guides/contributor/release-process/egeria-core-release.md
+                      - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
+                      - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
+                      - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
+                      - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
+              - Specific Guidance:
+                  - Programming Languages: guides/contributor/languages.md
+                  - Tools:
+                      - Development Tools: guides/contributor/development.md
+                      - Documentation Tools: guides/contributor/documentation.md
+                      - Runtime Tools: guides/contributor/runtime.md
+                      - Testing Tools: guides/contributor/testing.md
+                  - Developing Connectors:
+                      - Develop a Connector: guides/developer/implement-a-connector.md
+                      - Develop Repository Connector: guides/developer/repository-connectors/overview.md
+                  - Developing Access Services: guides/developer/implement-an-omas.md
+          - Document:
+              - Documentation Guide: guides/documentation/guide.md
+              - Formatting Standards: guides/documentation/formatting.md
+              - Style Guide: guides/documentation/style.md
+              - Markdown: guides/contributor/markdown.md
   - Releases:
       - Overview: release-notes/overview.md
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.12: release-notes/3-12.md
+        - v3.11: release-notes/3-11.md
+        - v3.10: release-notes/3-10.md
+        - v3.9: release-notes/3-9.md
         - v3.8: release-notes/3-8.md
         - v3.7: release-notes/3-7.md
         - v3.6: release-notes/3-6.md
@@ -310,6 +342,7 @@ nav:
               - More Information: types/0/0019-More-Information.md
               - Property Facets: types/0/0020-Property-Facets.md
               - Collections: types/0/0021-Collections.md
+              - Translations: types/0/0022-Translations.md
               - Locations: types/0/0025-Locations.md
               - Endpoints: types/0/0026-Endpoints.md
               - Operating Platforms: types/0/0030-Hosts-and-Platforms.md
@@ -332,7 +365,7 @@ nav:
               - People: types/1/0112-People.md
               - Teams: types/1/0115-Teams.md
               - IT Profiles: types/1/0117-IT-Profiles.md
-              - Collections: types/1/0120-Collections.md
+              - Assignment Scopes: types/1/0120-Assignment-Scopes.md
               - Projects: types/1/0130-Projects.md
               - Meetings: types/1/0135-Meetings.md
               - Actions for People: types/1/0137-Actions.md
@@ -405,6 +438,8 @@ nav:
               - Incident Reporting: types/4/0470-Incident-Reporting.md
               - Licenses: types/4/0481-Licenses.md
               - Certifications: types/4/0482-Certifications.md
+              - Terms and Conditions: types/4/0483-Terms-And-Conditions.md
+              - Agreements: types/4/0484-Agreements.md
               - Data Processing Purposes: types/4/0485-Data-Processing-Purposes.md
           - 5. Structures:
               - Area 5 Structures: types/5/index.md
@@ -454,11 +489,12 @@ nav:
           - 7. Lineage:
               - Area 7 Lineage: types/7/index.md
               - Digital Service: types/7/0710-Digital-Service.md
+              - Digital Subscription: types/7/0711-Digital-Subscription.md
               - Digital Service Ownership: types/7/0715-Digital-Service-Ownership.md
-              - Digital Service Implementation: types/7/0717-Digital-Service-Implementation.md
               - Information Supply Chains: types/7/0720-Information-Supply-Chains.md
               - Solution Components: types/7/0730-Solution-Components.md
               - Solution Ports and Wires: types/7/0735-Solution-Ports-and-Wires.md
+              - Solution Implementation: types/7/0737-Solution-Implementation.md
               - Solution Blueprints: types/7/0740-Solution-Blueprints.md
               - Data Passing: types/7/0750-Data-Passing.md
               - Business Lineage: types/7/0760-Business-Lineage.md
@@ -481,6 +517,7 @@ nav:
               - Metadata Security Services: services/metadata-security-services.md
               - Platform Operation Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
+              - Metadata Store Services: services/gaf-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
               - Data Engine Proxy Services: services/data-engine-proxy-services.md
@@ -604,20 +641,22 @@ nav:
   - Concepts:
       - Egeria Glossary: concepts/index.md
       - Basic Concepts: concepts/basic-concepts.md
+      - Action Target: concepts/action-target.md
       - Anchor: concepts/anchor.md
-      - Archive Engine: concepts/archive-engine.md
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
+      - Cohort Registry: concepts/cohort-registry.md
       - Cohort Registry Store Connector: concepts/cohort-registry-store-connector.md
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md
       - Component Description: concepts/component-description.md
       - Configuration Document: concepts/configuration-document.md
+      - Configuration Document Store Connector: concepts/configuration-document-store-connector.md
       - Configuration Properties: concepts/configuration-properties.md
       - Conformance Test Server: concepts/conformance-test-server.md
       - Connected Asset Properties: concepts/connected-asset-properties.md
@@ -639,12 +678,14 @@ nav:
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
-      - Glossary Term: /principles/common-data-definitions/anatomy-of-a-glossary.md
+      - Glossary Term: /practices/common-data-definitions/anatomy-of-a-glossary.md
       - GUID: concepts/guid.md
       - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md
-      - Governance Action Process: concepts/governance-action-release-process.md
+      - Governance Action Process: concepts/governance-action-process.md
+      - Governance Action Service: concepts/governance-action-service.md
       - Governance Action Type: concepts/governance-action-type.md
+      - Governance Domain: concepts/governance-domain.md
       - Governance Engine: concepts/governance-engine.md
       - Governance Engine Definition: concepts/governance-engine-definition.md
       - Governance Engine Pack: concepts/governance-engine-pack.md
@@ -666,6 +707,7 @@ nav:
       - Karma Point Threshold: concepts/karma-point.md
       - Karma Point Plateau: concepts/karma-point-plateau.md
       - Like: concepts/like.md
+      - Lineage: concepts/lineage.md
       - Metadata Access Point: concepts/metadata-access-point.md
       - Metadata Access Server: concepts/metadata-access-server.md
       - Metadata Access Store: concepts/metadata-access-store.md
@@ -682,6 +724,7 @@ nav:
       - Open Lineage Server: concepts/open-lineage-server.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
+      - Open Metadata Archive Store Connector: concepts/open-metadata-archive-store-connector.md
       - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md
       - Open Metadata Instance: concepts/open-metadata-instances.md
       - Open Metadata Type Definitions: concepts/open-metadata-type-definitions.md
@@ -693,12 +736,15 @@ nav:
       - Personal Notes: concepts/personal-notes.md
       - Personal Profile: concepts/personal-profile.md
       - Personal Roles: concepts/personal-roles.md
+      - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
       - Platform URL Root: concepts/platform-url-root.md
       - Plugin Repository Proxy: concepts/plugin-repository-proxy.md
       - Presentation Server: concepts/presentation-server.md
       - Project: concepts/project.md
       - Referenceable: concepts/referenceable.md
-      - Repository connector: concepts/repository-connector.md
+      - Repository Connector: concepts/repository-connector.md
+      - Repository Governance Engine: concepts/repository-governance-engine.md
+      - Repository Governance Service: concepts/repository-governance-service.md
       - Repository Helper: concepts/repository-helper.md
       - Repository Proxy: concepts/repository-proxy.md
       - Repository Validator: concepts/repository-validator.md
@@ -706,9 +752,13 @@ nav:
       - REST client connector: concepts/rest-client-connector.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md
+      - Security Tags: concepts/security-tags.md
+      - Server Metadata Security Connector: concepts/server-metadata-security-connector.md
       - Server Name: concepts/server-name.md
       - Software Capability: concepts/software-capability.md
+      - Software Server Capability: concepts/software-server-capability.md
       - Star Rating: concepts/review.md
+      - Subject Area: concepts/subject-area.md
       - Tag: concepts/informal-tag.md
       - To Do: concepts/to-do.md
       - Uni-link Relationships: concepts/uni-multi-link.md
@@ -728,16 +778,60 @@ nav:
           - Open Metadata Implementation: practices/common-data-definitions/open-metadata-for-common-definitions.md
       - Coco Pharmaceuticals:
           - Coco Pharmaceuticals: practices/coco-pharmaceuticals/index.md
-          - Personas: practices/coco-pharmaceuticals/personas/overview.md
+          - Personas:
+              - Overview: practices/coco-pharmaceuticals/personas/overview.md
+              - Angela Cummings: practices/coco-pharmaceuticals/personas/angela-cummings.md
+              - Bob Nitter: practices/coco-pharmaceuticals/personas/bob-nitter.md
+              - Callie Quartile: practices/coco-pharmaceuticals/personas/callie-quartile.md
+              - Des Signa: practices/coco-pharmaceuticals/personas/des-signa.md
+              - Erin Overview: practices/coco-pharmaceuticals/personas/erin-overview.md
+              - Faith Broker: practices/coco-pharmaceuticals/personas/faith-broker.md
+              - Florence Paynter: practices/coco-pharmaceuticals/personas/florence-paynter.md
+              - Gary Geeke: practices/coco-pharmaceuticals/personas/gary-geeke.md
+              - George Pie: practices/coco-pharmaceuticals/personas/george-pie.md
+              - Grant Able: practices/coco-pharmaceuticals/personas/grant-able.md
+              - harry Hopeful: practices/coco-pharmaceuticals/personas/harry-hopeful.md
+              - Ivor Padlock: practices/coco-pharmaceuticals/personas/ivor-padlock.md
+              - Jules Keeper: practices/coco-pharmaceuticals/personas/jules-keeper.md
+              - Julie Stitched: practices/coco-pharmaceuticals/personas/julie-stitched.md
+              - Lemmie Stage: practices/coco-pharmaceuticals/personas/lemmie-stage.md
+              - Nancy Noah: practices/coco-pharmaceuticals/personas/nancy-noah.md
+              - Peter Profile: practices/coco-pharmaceuticals/personas/peter-profile.md
+              - Polly Tasker: practices/coco-pharmaceuticals/personas/polly-tasker.md
+              - Reggie Mint: practices/coco-pharmaceuticals/personas/reggie-mint.md
+              - Robbie Records: practices/coco-pharmaceuticals/personas/robbie-records.md
+              - Sally Counter: practices/coco-pharmaceuticals/personas/sally-counter.md
+              - Signey Seeker: practices/coco-pharmaceuticals/personas/sidney-seeker.md
+              - Stew Faster: practices/coco-pharmaceuticals/personas/stew-faster.md
+              - Tanya Tidie: practices/coco-pharmaceuticals/personas/tanya-tidie.md
+              - Tessa Tube: practices/coco-pharmaceuticals/personas/tessa-tube.md
+              - Tom Tally: practices/coco-pharmaceuticals/personas/tom-tally.md
           - Roles vs Personas: practices/coco-pharmaceuticals/roles-vs-personas/overview.md
-          - Scenarios: practices/coco-pharmaceuticals/scenarios/overview.md
+          - Scenarios:
+              - Introduction: practices/coco-pharmaceuticals/scenarios/overview.md
+              - Authoritative Sources: practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview.md
+              - Cataloguing Infrastructure: practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview.md
+              - Coommon Data Definitions: practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview.md
+              - Continuous Analytics: practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview.md
+              - Data Enabled Employees: practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview.md
+              - Data Strategy: practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview.md
+              - Glossaries: practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview.md
+              - Governance Program: practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview.md
+              - Governance Team: practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview.md
+              - Information Supply Chains: practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview.md
+              - Multi-Faceted Governance: practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview.md
+              - New Systems Archiecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview.md
+              - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
+              - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
+              - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md
+              - Sustainability: practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview.md
+              - Suspicious Activity: practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview.md
 
 theme:
   name: material
   language: en
   custom_dir: overrides
   features:
-    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.top

@@ -16,7 +16,7 @@ Egeria provides the following utility modules in `egeria.git` to help you create
 * Module `repository-services-archive-utilities` - located in `open-metadata-implementation/repository-services` - provides the functions for archive building using [Open Metadata Repository Service (OMRS)](/services/omrs) type definitions and instances.  These are the objects that are stored in the archive and all of this modules classes begin `OMRS`. 
 * Module `content-pack-helpers` - located in `open-metadata-reources/open-metadata-archives` - has archive helper classes for building instances of well known types such as assets, connections and schema.
         
-Using these utilities, your archive writer inherits from `OMRSArchiveWriter` which does all of the work of formatting the archive and writing it to disk.
+Using these utilities, your archive writer inherits from `OMRSArchiveWriter` which does all the work of formatting the archive and writing it to disk.
 
 Your archive writer creates an instance of `OMRSArchiveBuilder` to accumulate the content of the archive.  
 
@@ -76,7 +76,7 @@ The `content-pack-helpers` all use `OMRSArchiveHelper` in their implementation t
     }
 ```
 
-Once all of the type definitions and instances have been created, your archive writer extracts the content of the archive from the archive builder.  It is returned as an `OpenMetadataArchive` object which it passes to its super class (`OMRSArchiveWriter`) along with the file name of and the new open metadata archive is written to disk.
+Once all the type definitions and instances have been created, your archive writer extracts the content of the archive from the archive builder.  It is returned as an `OpenMetadataArchive` object which it passes to its super class (`OMRSArchiveWriter`) along with the file name of and the new open metadata archive is written to disk.
 
 ```java linenums="1"
 

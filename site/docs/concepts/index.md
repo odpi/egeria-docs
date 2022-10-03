@@ -82,6 +82,7 @@
 - [DevOps OMAS](/services/omas/dev-ops/overview)
 - [Digital Architecture OMAS](/services/omas/digital-architecture/overview)
 - [Digital Resource Connector](/concepts/digital-resource-connector)
+- [Digital Service](/practices/digital-services/overview)
 - [Digital Service OMAS](/services/omas/digital-service/overview)
 - [Discovery (metadata)](/features/discovery-and-stewardship/overview)
 - [Discovery Analysis Report](/concepts/discovery-analysis-report)
@@ -136,15 +137,17 @@
 
 ## G
 
-- [Glossary](/principles/common-data-definitions/anatomy-of-a-glossary)
-- [Glossary Category](/principles/common-data-definitions/anatomy-of-a-glossary/#glossary-categories)
-- [Glossary Term](/principles/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term)
+- [Glossary](/practices/common-data-definitions/anatomy-of-a-glossary)
+- [Glossary Category](/practices/common-data-definitions/anatomy-of-a-glossary/#glossary-categories)
+- [Glossary Term](/practices/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term)
 - [Governance Action](/concepts/governance-action)
 - [Governance Action Engine](/concepts/governance-action-engine)
 - [Governance Action OMES](/service/omes/governance-action/overview)
 - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
 - [Governance Action Process](/concepts/governance-action-type)
 - [Governance Action Type](/concepts/governance-action-process)
+- [Governance Domain](/concepts/governance-domain)
+- [Governance Domain Identifier](/concepts/governance-domain)
 - [Governance Engine](/concepts/governance-engine)
 - [Governance Engine OMAS](/services/omas/governance-engine/overview)
 - [Governance Program](/services/omas/governance-program/overview)

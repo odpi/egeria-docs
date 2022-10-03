@@ -80,7 +80,7 @@ The Data Manager OMAS Supports the following types of data managers:
 
 * [What is an Asset?](/concepts/asset)
 * [Building an asset catalog](/concepts/basic-concepts/#metadata-manager)
-* [Modeling schema structures](/guides/developer/mapping-technology/modelling-schemas)
+* [Modeling schema structures](/concepts/schema)
 
 
 --8<-- "snippets/abbr.md"

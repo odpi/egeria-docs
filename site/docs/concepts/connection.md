@@ -54,6 +54,7 @@ ConnectionProperties is a read-only wrapper for the Connection properties that i
 ## Connection properties
 
 The properties for a connection are defined in model 0201.  They include the following identifiers:
+
  * **guid** - Globally unique identifier for the connection.
  * **url** - URL of the connection definition in the metadata repository.
  * **qualifiedName** - The official (unique) name for the connection.  This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages.  The qualifiedName is defined in the 0010 model as part of Referenceable.
@@ -82,6 +83,7 @@ The OMAS retrieves the connection object from the open metadata repositories and
 The advantage of retrieving the connection information from a metadata repository is that the connection properties do not need to be hard-coded in the consuming applications and the metadata associated with the linked Asset can be retrieved via the connectors [Connected Asset Properties](connected-asset-properties.md) interface.
 
 Connections can be created in the open metadata repositories through the following interfaces:
+
 * [Asset Owner OMAS](/services/omas/asset-owner/overview)
 * [Asset Manager OMAS](/services/omas/asset-manager/overview)
 * [Data Manager OMAS](/services/omas/data-manager/overview)

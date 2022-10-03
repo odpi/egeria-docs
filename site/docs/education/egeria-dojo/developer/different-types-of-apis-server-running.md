@@ -18,7 +18,7 @@ Now it is time to start `mds1` and observe the changes to `EgeriaPlatformReport`
     ===============================
     OMAG Server Operations Utility:    Mon Feb 14 10:39:52 GMT 2022
     ===============================
-    Running against platform: https://localhost:9443 - Egeria OMAG Server Platform (version 3.8-SNAPSHOT)
+    Running against platform: https://localhost:9443 - Egeria OMAG Server Platform (version 3.12)
     Using userId: garygeeke
     
     Available servers: [mds1]

@@ -11,16 +11,17 @@
 
 ## Referenceable
 
-*`Referenceable`* is the super type for many of the open metadata entity types. A `Referenceable` is something that is important enough to be assigned a unique (qualified) name within its type. This unique name is often used outside the open metadata ecosystem as its unique identifier. `Referenceable` also has provision for storing additional properties. This is a set of name-value pairs (i.e. a map) where the values are all strings.
+*Referenceable* is the super type for many of the open metadata entity types. A Referenceable entity is something that is important enough to be assigned a unique (qualified) name within its type. This unique name is often used outside the open metadata ecosystem as its unique identifier. Referenceable also has provision for storing additional properties. This is a set of name-value pairs (i.e. a map) where the values are all strings.
 
 [Further information on the use of Referenceable.](/concepts/referenceable)
 
 ## Asset
 
-*`Asset`* represents the most significant type of `Referenceable`. An `Asset` is something (either physical or digital) that is of value and so needs to be managed and governed.
+An [Asset](/concepts/asset) is a metadata entity that describes a [resource](/concepts/resource) (either physical or digital) that is of value and so needs to be managed and governed.
+`Infrastructure`, `Process` and `DataSet` are examples of Assets.
 
 ??? deprecated "Deprecated attributes"
-    The `Asset` entity has the following deprecated attributes. Their values have been moved to classifications as shown in the table below. Many `Asset`s are created by their hosting technology and locked read-only to the broader metadata ecosystem (see [external metadata provenance](/features/metadata-provenance/overview) for more detail). By moving the governance related information to a classification, it can be maintained by a different service to the `Asset` creator.
+    The `Asset` entity has the following deprecated attributes. Their values have been moved to classifications as shown in the table below. Many Assets are created by their hosting technology and locked read-only to the broader metadata ecosystem (see [external metadata provenance](/features/metadata-provenance/overview) for more detail). By moving the governance related information to a classification, it can be maintained by a different service to the Asset's creator.
 
     | Deprecated attribute | Moved to classification |
     |---|---|
@@ -29,7 +30,6 @@
     | `zoneMembership` (type `array<string>`) | [AssetZoneMembership](/types/4/0424-Governance-Zones/#assetzonemembership) |
     | `latestChange` (type `string`) | [LatestChange](/types/0/0011-Managing-Referenceables/#latestchange) |
 
-`Infrastructure`, `Process` and `DataSet` are examples of `Asset`s.
 
 ### Infrastructure
 
@@ -47,18 +47,18 @@
 
 ### DataSet
 
-*`DataSet`* represents a collection of related data. This data does not need to be stored together. See [`DataStore`](/types/2/0210-Data-Stores/#datastore) for the `Asset` that represents a physical store.
+*`DataSet`* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet.  See [`DataStore`](/types/2/0210-Data-Stores) for the `Asset` that represents a physical store and the [`DataContentForDataSet`](/types/2/0210-Data-Stores/#datacontentfordataset) relationship links the DataSet to the asset(s) that describe the data sources.
 
 More information on assets can be found in [Metadata Manager](/patterns/metadata-manager/overview).
 
 ## Anchors
 
-The *`Anchors`* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an asset to store the GUID of that asset.
+The *`Anchors`* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an entity to store the GUID of that entity.
 
 [Further information on the use of Anchors.](/concepts/anchor)
 
 ## Memento
 
-Finally, the *`Memento`* classification identifies that the `Referenceable` refers to a real-world asset/artifact that has either been deleted or archived offline. The metadata element has been retained to show its role in the [lineage of other assets/artifacts](../lineage). The properties in this classification identifies the archive processing and any information that helps to locate the asset/artifact in the archive (if applicable).
+Finally, the *Memento* classification identifies that the Referenceable refers to a real-world asset/artifact that has either been deleted or archived offline. The metadata element has been retained to show its role in the [lineage of other assets/artifacts](/features/lineage-management/overview). The properties in this classification identifies the archive processing and any information that helps to locate the asset/artifact in the archive (if applicable).
 
 --8<-- "snippets/abbr.md"

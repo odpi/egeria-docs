@@ -16,7 +16,7 @@ This guide explains how to configure the OMAG Server Platform and the different 
 
     - [Configuring the OMAG Server Platform](configuring-the-omag-server-platform.md)
     - [Configuring an OMAG Server to run on an OMAG Server Platform](/guides/admin/servers)
-    - [Configuring the Presentation Server (for UIs)](configuring-the-presentation-server.md)
+    - [Configuring the Presentation Server (for UIs)](/user-interfaces/ecosystem/configure-and-run-presentation-server)
 
     and once you have your OMAG Servers configured:
 

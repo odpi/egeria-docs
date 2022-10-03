@@ -37,7 +37,7 @@ direct inclusion in an implementation.
 * **[0504 Implementation Snippets](0504-Implementation-Snippets.md)**
 
 The next set of models are specializations of the abstract schema elements
-described aimed at different types of technology.
+described aimed at different types of technology. 
 
 * **[0530 Tabular Schema](0530-Tabular-Schemas.md)**
 * **[0531 Document Schemas](0531-Document-Schemas.md)**
@@ -76,7 +76,7 @@ The final set of models capture architectures and patterns.
 
 ## Further reading
 
-* [Modelling schemas](/guides/developer/mapping-technology/modelling-schemas)
+* [Modelling schemas](/concepts/schema)
 
 * Specific schema structures supported by the integration services
    * For API Schemas - [API Integrator OMIS](/services/omis/api-integrator/overview)

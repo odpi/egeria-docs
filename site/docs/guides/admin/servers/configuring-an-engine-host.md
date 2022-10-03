@@ -3,8 +3,7 @@
 
 # Configuring an [engine host](/concepts/engine-host)
 
-Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/concepts/configuration-document).
+Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating a [configuration document](/concepts/configuration-document).
 
 ![Configuration for an engine host](engine-host-config.svg)
 

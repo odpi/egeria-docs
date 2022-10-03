@@ -11,7 +11,7 @@ hide:
 # Topic Integrator Open Metadata Integration Service (OMIS)
 
 The Topic Integrator OMIS supports the exchange of topic-based assets and the open metadata ecosystem.
-Typically these topics are managed by an event broker such as Apache Kafka.
+Typically, these topics are managed by an event broker such as Apache Kafka.
 
 It supports a type of [integration connector](/concepts/integration-connector)
 that are able to create [Topic](/types/2/0223-Events-and-Logs)
@@ -25,7 +25,7 @@ Figure 1 shows the types of metadata that integrators connectors can create with
 
 The structure of an event is called an [EventType](/types/5/0535-Event-Schemas).
 The details of this structure such as the data fields in the event are described using
-[SchemaAttributes and SchemaTypes](/guides/developer/mapping-technology/modelling-schemas).
+[SchemaAttributes and SchemaTypes](/concepts/schema).
 
 Figure 2 shows the open metadata types used to represent the metadata created through this service.
 
@@ -46,7 +46,7 @@ Any schema attributes created through this interface will use the
 [EventSchemaAttribute](/types/5/0535-Event-Schemas) subtype
 to allow for find requests that only return schema information for events.  The schema attributes also use
 the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
-classification [method for defining the schema type](/guides/developer/mapping-technology/modelling-schemas).
+classification [method for defining the schema type](/concepts/schema).
 
 This integration service is paired with the [Data Manager](/services/omas/data-manager/overview)
 Open Metadata Access Service (OMAS).

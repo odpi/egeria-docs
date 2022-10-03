@@ -8,16 +8,17 @@ hide:
 
 # Area 7 Models - Lineage
 
-Lineage basically describes the origin of something such as an asset, component or data values.
+Lineage describes the *origin* of a [resource](/concepts/resource).  This origin may be the development/deployment process that the technology went through to implement the element, the business or organization that caused it to be created, or the processing that populated the data and other history managed within the resource.
 
-Area 7 provides the structures for adding context to asset definitions to help explain their origin.  The aim is to provide information that allows a consumer of data to be sure they are looking at the right data from an authoritative source and the intermediate processing is correct.
+Area 7 provides the structures for adding context to the asset definition of a resource to help explain its origin.  The aim is to provide information that allows a consumer of the resource to be sure they are looking at the right data from an authoritative source and the intermediate processing is correct.
 
 - [0710 Digital Service](/types/7/0710-Digital-Service)
+- [0711 Digital Subscription](/types/7/0711-Digital-Subscription)
 - [0715 Digital Service Ownership](/types/7/0715-Digital-Service-Ownership)
-- [0717 Digital Service Implementation](/types/7/0717-Digital-Service-Implementation)
 - [0720 Information Supply Chains](/types/7/0720-Information-Supply-Chains)
 - [0730 Solution Components](/types/7/0730-Solution-Components)
 - [0735 Solution Ports and Wires](/types/7/0735-Solution-Ports-and-Wires)
+- [0737 Solution Implementation](/types/7/0737-Solution-Implementation)
 - [0740 Solution Blueprints](/types/7/0740-Solution-Blueprints)
 - [0750 Data Passing](/types/7/0750-Data-Passing)
 - [0760 Business Lineage](/types/7/0760-Business-Lineage)

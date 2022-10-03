@@ -15,7 +15,7 @@ A *governance engine definition* describes the [governance services](/concepts/g
 ![Governance Engine Definition Structure](/guides/developer/open-metadata-archives/governance-engine-definition.svg)
 > **Figure 1:** Logical structure of a governance engine definition showing how the governance request types map to the governance service definitions
 
-There are three types of governance engine and they each support a specialist type of governance service.  Therefore the governance engine definitions include definitions of governance services that are consistent with the type of governance engine.
+There are three types of governance engine and they each support a specialist type of governance service.  Therefore, the governance engine definitions include definitions of governance services that are consistent with the type of governance engine.
 
 | Type of Governance Engine | Type of Governance Service | Description |
 |---|---|---|

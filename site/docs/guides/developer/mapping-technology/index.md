@@ -6,7 +6,7 @@
 
 ## Modelling Schema
 
-The [Schema open metadata types](modelling-schemas.md) describe the structure of data.
+The [Schema open metadata types](/concepts/schema) describe the structure of data.
 
 ## Representing File Assets
 

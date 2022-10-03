@@ -7,7 +7,7 @@
 ??? info "Connector summary"
 
     - Connector Category: [Remediation Governance Action Service](/concepts/governance-service)
-    - Hosting Service: [Governance Action OMES](/services/omes/governance-action)
+    - Hosting Service: [Governance Action OMES](/services/omes/governance-action/overview)
     - Hosting Server: [Engine Host](/concepts/engine-host)
     - Source Module: [governance-action-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors)
     - Jar File Name: `governance-action-connectors.jar`
@@ -42,9 +42,9 @@ Finally the origin is not assigned because there are no origin classifications i
 
 ## Configuration
 
-This connector uses the [Governance Action OMES](/services/omes/governance-action) running in the [Engine Host](/concepts/engine-host).
+This connector uses the [Governance Action OMES](/services/omes/governance-action/overview) running in the [Engine Host](/concepts/engine-host).
 
-This is its connection definition to use when creating the definition of the governance action service using the [Governance Engine OMAS](/services/omas/governance-engine). Note that is does not use configuration properties. 
+This is its connection definition to use when creating the definition of the governance action service using the [Governance Engine OMAS](/services/omas/governance-engine/overview). Note that is does not use configuration properties. 
 
 
 ```json
@@ -63,7 +63,7 @@ This is its connection definition to use when creating the definition of the gov
 
 ## Governance Action Settings
 
-When this governance action service is called through a [GovernanceAction](/types/0463-Governance-Actions) it supports the following options.
+When this governance action service is called through a [GovernanceAction](/types/4/0463-Governance-Actions) it supports the following options.
 
 #### Request Types and Parameters
 
@@ -87,12 +87,12 @@ These are the responses that origin seeker produces:
 
 ## Examples of use
 
-The [Open Metadata Labs](/education/open-metadata-labs): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
+The [Open Metadata Labs](/education/open-metadata-labs/overview): this connector is configured in the `governDL01` engine host server as part of the **automated curation** asset management lab.
 
 ## Related Information
 
-* See the *Asset Lineage* section in [Asset Catalog Contents](/patterns/metadata-manager/#asset-lineage).
-* [Designing a Remediation Governance Action Service](/guides/developer/governance-action-services/remediation-governance-service).
+* See the *Asset Lineage* section in [Asset Catalog Contents](/patterns/metadata-manager/overview/#asset-lineage).
+* [Designing a Remediation Governance Action Service](/guides/developer/governance-action-services/overview/#remediation-context-methods).
 
 ## Suggested Enhancements
 
@@ -104,11 +104,6 @@ This governance action service could be enhanced as follows:
 * Provide logic to blend the origin properties when multiple origins are detected.
   This type of change would need knowledge of the origin properties used in the installation
   to know which are valid to combine.
-
-----
-* Return to the [Connector Catalog](.)
-* Return to the [Governance Action Connectors Overview](../../../open-metadata-implementation/adapters/open-connectors/governance-action-connectors)
-
 
 ----
 License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),

@@ -230,7 +230,7 @@ Egeria's [integration daemon](/concepts/integration-daemon) also supports the Op
 ![Figure 24](open-lineage-direct-egeria-integration.svg)
 > **Figure 24:** Receiving events via the OpenLineage API directly into the integration daemon
 
-The Lineage Integrator OMIS inside the integration daemon hosts the integration connectors that [process the OpenLineage events](/connectors/#lineage).  They are divided in to two groups:
+The Lineage Integrator OMIS inside the integration daemon hosts the integration connectors that [process the OpenLineage events](https://egeria-project.org/connectors/#capturing-and-publishing-lineage).  They are divided into two groups:
 
 - the integration connectors that are acquiring or creating the OpenLineage events.
 
@@ -244,7 +244,7 @@ They are connected to each other by the Lineage Integrator OMIS:
 
 - An integration connector may register a listener to the Asset Manager OMAS's OutTopic and issue requests to the Asset Manager's REST API in order to correlate the metadata in the open metadata ecosystem with the content of the OpenLineage events.  
 
-Figure 25 illustrates these mechanism with the [five pre-build integration connectors](/connectors/#lineage) supplied by Egeria.
+Figure 25 illustrates these mechanisms with the [five pre-build integration connectors](/connectors/#capturing-and-publishing-lineage) supplied by Egeria.
 
 ![Figure 25](open-lineage-integration-connectors.svg)
 > **Figure 25:** The pre-built integration connectors supplied by Egeria

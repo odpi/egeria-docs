@@ -14,7 +14,7 @@
 
 ## Overview
 
-The Open API monitor integration connector connects to an endpoint and extracts the open API specification through the `GET {{serverURL}}/v3/api-docs` request.  It creates a [DeployedAPI](/types/0212-Deployed-APIs) asset for each API Tag that is known to the server. A new [APIOperation](/types/0536-API-Schemas) is created for each combination of path name and operation (GET, POST, PUT, DELETE).
+The Open API monitor integration connector connects to an endpoint and extracts the open API specification through the `GET {{serverURL}}/v3/api-docs` request.  It creates a [DeployedAPI](/types/2/0212-Deployed-APIs) asset for each API Tag that is known to the server. A new [APIOperation](/types/5/0536-API-Schemas) is created for each combination of path name and operation (GET, POST, PUT, DELETE).
 
 ![Figure 1](open-api-monitor-integration-connector.svg)
 > **Figure 1:** Operation of the Open API monitor integration connector

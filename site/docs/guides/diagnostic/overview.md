@@ -3,19 +3,14 @@
 
 # Egeria diagnostic guide
 
-This guide focuses on diagnosing and fixing issues running Egeria's
-[OMAG Server Platform](/concepts/omag-server-platform)
-and the [OMAG Servers](/concepts/omag-server)
-that run on it.
+This guide focuses on diagnosing and fixing issues running Egeria's [OMAG Server Platform](/concepts/omag-server-platform) and the [OMAG Servers](/concepts/omag-server) that run on it.
 
-If you are having problems building Egeria, please see the
-[Building Egeria](/education/tutorials/building-egeria-tutorial/overview) tutorial.
+If you are having problems building Egeria, please see the [Building Egeria](/education/tutorials/building-egeria-tutorial/overview) tutorial.
 
 
 ## The diagnosis process
 
-The OMAG Server Platform has many functions itself, and is typically be embedded in complex deployment environments.
-This means that diagnosing (and most importantly fixing them) needs to be done in a
+The OMAG Server Platform has many functions itself, and is typically be embedded in complex deployment environments.  This means that diagnosing (and most importantly fixing them) needs to be done in a
 systematic way.  
 
 Figure 1 shows a view of the diagnostic process.  
@@ -23,13 +18,7 @@ Figure 1 shows a view of the diagnostic process.
 ![Diagnostic Process](diagnostic-process.svg)
 > **Figure 1:** The diagnostic process
 
-The diagram shows three phases linked together in sequence with a return arrow from the third phase,
-looping back to the first.  It is an example of process that appears rational in hindsight.
-When you are in the middle of the process you may find that you are iterating backwards and
-forwards between the different stages, particularly if it is a puzzling problem.
-However, it is often helpful to step back and look at each step in the process and
-assemble your thoughts along these lines.  The diagnostic guide is organized according to
-this process and at the very least, it will help you to find the information that you need.
+The diagram shows three phases linked together in sequence with a return arrow from the third phase, looping back to the first.  It is an example of process that appears rational in hindsight. When you are in the middle of the process you may find that you are iterating backwards and forwards between the different stages, particularly if it is a puzzling problem. However, it is often helpful to step back and look at each step in the process and assemble your thoughts along these lines.  The diagnostic guide is organized according to this process and at the very least, it will help you find the information that you need.
 
 So now consider each phase of the process.
 
@@ -102,15 +91,15 @@ So now consider each phase of the process.
   * **Make necessary changes** - Once the approach has been agreed, the changes need to be made.
   
   * **Monitor results** - Finally the changes need to be tested to ensure the problem is fixed and
-  there are no unwanted side-effects.  If the solution did not work, then begin again with the
+  there are no unwanted side effects.  If the solution did not work, then begin again with the
   information gathering process.  It may also be a time to request help from the 
   [Egeria community](/guides/community).  If the situation is worse, you may wish to back out the changes
   you have made before trying the diagnosis process again.
 
 The description above is an overview of what to do to diagnose and fix a problem.
 This may be enough to help you resolve the issues you are seeing.
-However, whilst some problems are frequently encountered, others are unique to your situation.
-What follows are some descriptions of the diagnostics for problems that are frequently seen.
+However, whilst some types of issues are frequently encountered, others are unique to your situation.
+What follows are some descriptions of the diagnostics for issues that are frequently seen.
 These can help you to eliminate the obvious causes.  
 
 * [Examples of OMAG Server Platform startup errors](/guides/diagnostic/examples-of-platform-start-up-errors)

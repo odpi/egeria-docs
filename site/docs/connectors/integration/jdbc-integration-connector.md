@@ -60,7 +60,7 @@ This is its connection definition to use on the [administration commands that co
     }
     ```
 
-    - Replace '{{useId}}' and '{{clearPassword}}' with the database username and password.
+    - Replace '{{userId}}' and '{{clearPassword}}' with the database username and password.
     - Replace '{{address}}' with the database jdbc url.
     - Replace '{{connectorTypeQualifiedName}}' with a connector type already saved. Required to construct the connection information   
 

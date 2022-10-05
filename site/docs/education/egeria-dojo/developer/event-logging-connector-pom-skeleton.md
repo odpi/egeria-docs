@@ -22,7 +22,7 @@ Paste this structure into your `pom.xml` class.
 
     <groupId>egeria.dojo</groupId>
     <artifactId>event-logging-connector</artifactId>
-    <version>3.12-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
     
@@ -35,7 +35,7 @@ Paste this structure into your `pom.xml` class.
          <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     
          <!-- Versions of Egeria libraries -->
-         <open-metadata.version>3.12-SNAPSHOT</open-metadata.version>
+         <open-metadata.version>3.12</open-metadata.version>
     
     </properties>
 

@@ -294,6 +294,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.12: release-notes/3-12.md
         - v3.11: release-notes/3-11.md
         - v3.10: release-notes/3-10.md
         - v3.9: release-notes/3-9.md
@@ -441,6 +442,8 @@ nav:
               - Incident Reporting: types/4/0470-Incident-Reporting.md
               - Licenses: types/4/0481-Licenses.md
               - Certifications: types/4/0482-Certifications.md
+              - Terms and Conditions: types/4/0483-Terms-And-Conditions.md
+              - Agreements: types/4/0484-Agreements.md
               - Data Processing Purposes: types/4/0485-Data-Processing-Purposes.md
           - 5. Structures:
               - Area 5 Structures: types/5/index.md
@@ -490,6 +493,7 @@ nav:
           - 7. Lineage:
               - Area 7 Lineage: types/7/index.md
               - Digital Service: types/7/0710-Digital-Service.md
+              - Digital Subscription: types/7/0711-Digital-Subscription.md
               - Digital Service Ownership: types/7/0715-Digital-Service-Ownership.md
               - Information Supply Chains: types/7/0720-Information-Supply-Chains.md
               - Solution Components: types/7/0730-Solution-Components.md
@@ -832,7 +836,6 @@ theme:
   language: en
   custom_dir: overrides
   features:
-    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.top

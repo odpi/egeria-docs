@@ -293,7 +293,7 @@ The implementation of the OpenLineage log store is pluggable so an OpenLineage l
 
 ### Deduplicating
 
-One of the causes of disconnected lineage graphs is multiple catalog entries for the same resource and different parts of the lineage graph are attached to the different copies.  It is necessary to either eliminate the duplicates if possible and connect the lineage to the remaining copy, or link the duplicates together so the graph is connected.  [Duplicate Management](../duplicate-management) covers the techniques to perform these tasks.
+One of the causes of disconnected lineage graphs is multiple catalog entries for the same resource and different parts of the lineage graph are attached to the different copies.  It is necessary to either eliminate the duplicates if possible and connect the lineage to the remaining copy, or link the duplicates together so the graph is connected.  [Duplicate Management](/features/duplicate-management/overview) covers the techniques to perform these tasks.
 
 ### Stitching
 

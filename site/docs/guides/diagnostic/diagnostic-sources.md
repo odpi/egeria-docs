@@ -52,7 +52,7 @@ Specifically they are:
   [https://github.com/odpi/egeria](https://github.com/odpi/egeria).
 
 * **Egeria Community** - If you are completely stuck, or believe there is a bug in the Egeria content,
-  You can [raise an issue](https://github.com/odpi/egeria/issues) that describes the problem you are seeing,
+  you can [raise an issue](https://github.com/odpi/egeria/issues) that describes the problem you are seeing,
   a description of your runtime topology, the diagnostics you have collected, the conclusions you have come to
   and the help that you need.
   More information on the Egeria community can be found [here](/guides/community).

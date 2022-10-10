@@ -44,9 +44,10 @@ The *files* integration connectors run in the [Files Integrator Open Metadata In
 
 The *database* integration connectors run in the [Database Integrator Open Metadata Integration Service (OMIS)](/services/omis/database-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
 
-| Database Integration Connectors | Description |
-|---|---|
-| [PostgreSQL database connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/egeria-connector-postgres){ target=gh } | automatically maintains the open metadata instances for the databases hosted on a [PostgreSQL server :material-dock-window:](https://www.postgresql.org){ target=psql } This includes the database schemas, tables, columns, primary keys and foreign keys.|
+| Database Integration Connectors                                                                                                                        | Description                                                                                                                                                                                                                                                 |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [PostgreSQL database connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/egeria-connector-postgres){ target=gh } | automatically maintains the open metadata instances for the databases hosted on a [PostgreSQL server :material-dock-window:](https://www.postgresql.org){ target=psql } This includes the database schemas, tables, columns, primary keys and foreign keys. |
+| [JDBC integration connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-integration-connector){ target=gh }   | automatically maintains the open metadata instances on a database server via JDBC. This includes the database schemas, tables, columns, primary keys and foreign keys.                                                                                      |
 
 #### Cataloguing event topics and the structure of their events
 
@@ -343,8 +344,7 @@ cohort member's [Local Repository Configuration](/user/guides/admin/servers/conf
   
 ### Databases
 
-*More coming ...*
-
+* The [jdbc resource connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-resource-connector){ target=gh } is for accessing a database server.
 
 ### Open Metadata Topic Connectors
 

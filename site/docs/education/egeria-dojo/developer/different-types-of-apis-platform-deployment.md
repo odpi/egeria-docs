@@ -60,7 +60,7 @@ In `egeria-dev-projects`, there is a module called `egeria-platform-report`.  Th
     
     ```bash
        Platform deployment
-          Egeria version: Egeria OMAG Server Platform (version 3.12-SNAPSHOT)
+          Egeria version: Egeria OMAG Server Platform (version 3.12)
           Configuration document store connector: <null>
           Platform security connector: <null>
     ```

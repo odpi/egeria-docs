@@ -59,6 +59,8 @@ nav:
                       - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
                       - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
+                  - Database:
+                      - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
               - Runtime:
                   - Repository:
                       - Pluggable Repositories:
@@ -84,6 +86,8 @@ nav:
                   - Open Metadata Topic:
                       - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
                       - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
+                  - Database:
+                        - JDBC Connector: connectors/resource/jdbc-resource-connector.md
           - Developer Guide:
               - Developer Overview: guides/developer/index.md
               - Building Archives:
@@ -290,6 +294,7 @@ nav:
       - Release Notes:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.12: release-notes/3-12.md
         - v3.11: release-notes/3-11.md
         - v3.10: release-notes/3-10.md
         - v3.9: release-notes/3-9.md
@@ -831,7 +836,6 @@ theme:
   language: en
   custom_dir: overrides
   features:
-    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.top

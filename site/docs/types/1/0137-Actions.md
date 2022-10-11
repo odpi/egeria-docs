@@ -3,7 +3,7 @@
 
 # 0137 Actions for People
 
-In an ideal world, most governance activity is automated by the ['GovernanceEngines'](/types/4/0461-Governance-Engines/#governanceengines). However there are inevitably actions that require a person to do. An item of work for a person is described in a ToDo.
+In an ideal world, most governance activity is automated by the [GovernanceEngines](/types/4/0461-Governance-Engines/#governanceengines). However there are inevitably actions that require a person to do. An item of work for a person is described in a ToDo.
 
 ![UML](0137-Actions.svg "Describing an action for a person")
 

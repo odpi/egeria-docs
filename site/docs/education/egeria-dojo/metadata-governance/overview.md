@@ -16,13 +16,13 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     
     ??? beginner "Working with templates (30 mins)"
         
-    --8<-- "docs/features/templated-cataloguing/templated-cataloguing-intro.md"
+        --8<-- "docs/features/templated-cataloguing/templated-cataloguing-intro.md"
 
-    ### An example
+        ### An example
 
-    --8<-- "docs/features/templated-cataloguing/templated-cataloguing-example.md"
+        --8<-- "docs/features/templated-cataloguing/templated-cataloguing-example.md"
 
-    - Using templates in APIs and connectors
+        - Using templates in APIs and connectors
     
     ??? beginner "Standard definitions (2 hours)"
         ??? intermediate "Creating glossaries (30 mins)"

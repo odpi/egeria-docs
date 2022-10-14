@@ -3,7 +3,7 @@
 
 # 0534 Relational Schemas
 
-Model 0534 describes the parts of a relational schema. These are used in relational databases represented by the [Database](/types/2/0224-databases) or [DeployedDatabaseSchema](/types/2/0224-databases) entity. There are multiple tables and views defined within the relational schema.   The columns are within both the tables and views.
+Model 0534 describes the parts of a relational schema. These are used in relational databases represented by the [Database](/types/2/0224-Databases) or [DeployedDatabaseSchema](/types/2/0224-Databases) entity. There are multiple tables and views defined within the relational schema.   The columns are within both the tables and views.
 
 ![UML](0534-Relational-Schemas.svg)
 
@@ -36,7 +36,7 @@ The *RelationalTable* entity represents a table in a relational schema.  *Relati
 
 ## RelationalColumn
 
-A *RelationalColumn* entity represents a column in a relational table.  It inherits from [*SchemaAttribute*](/types/5/0505-Schema-Attributes)
+A *RelationalColumn* entity represents a column in a relational table.  It inherits from [*SchemaAttribute*](/types/5/0505-Schema-Attributes).
 
 ??? info "Choices on representing the schema type for a relational column"
     The type information for each column is typically embedded in the *RelationalColumn* through the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes) classification.  The *typeName* attribute in the classification is set to the name of the SchemaType that represents the type of data stored in the column.

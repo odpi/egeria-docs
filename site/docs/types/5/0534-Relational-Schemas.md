@@ -48,8 +48,20 @@ A *RelationalColumn* entity represents a column in a relational table.  It inher
 
     Columns that are calculated on retrieval are called derived relational columns.  Such a derived relational column is represented by a *RelationalColumn* entity with an attached [*CalculatedValue*](/types/5/0512-Derived-Schema-Elements) classification.
 
+## PrimaryKey
+
+The *PrimaryKey* classification can be attached to a *RelationalColumn* to indicate that the value stored for this column in each row of the table is a unique identifier for the row.
+
+## ForeignKey
+
+The *ForeignKey* relationship links a relational column in one relational table to a relational column in another relational table.
+
+It indicates that the values stored in the first relational column are values from the second relational column.  Typically, the second relational column is a *PrimaryKey*.
+
+Foreign keys are used to represent relationships between relational tables.
+
 ??? deprecated "Deprecated types"
-     - The supertype of *RelationalTableType* has be changed to **ComplexSchemaType** rather than **TabularColumnType** since [TabularColumnType](/types/5/0530-Tabular-Schemas) is now deprecated.
+     - The supertype of *RelationalTableType* has be changed to *ComplexSchemaType* rather than *TabularColumnType* since [TabularColumnType](/types/5/0530-Tabular-Schemas) is now deprecated.
      - *DerivedRelationalColumn* has been replaced by [CalculatedValue](/types/5/0512-Derived-Schema-Elements)and [DerivedSchemaTypeQueryTarget](/types/5/0512-Derived-Schema-Elements).
      - *RelationalView* has been replaced by [CalculatedValue](/types/5/0512-Derived-Schema-Elements).
 

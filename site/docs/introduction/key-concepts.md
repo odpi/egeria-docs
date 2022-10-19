@@ -58,10 +58,10 @@ For the most part, Egeria is a background technology. However, once metadata is 
 
 ## Metadata objects
 
-When referring to metadata, we distinguish between the level of granularity at which you may be thinking about that metadata. For Egeria, that level of granularity broadly splits between:
+Metadata inside the open metadata ecosystem is broken down into small metadata objects.  For Egeria, the level of granularity of the metadata objects broadly splits between:
 
 - The granular [repository services](/services/omrs) level, used for the cohort's underlying metadata federation, replication and exchange.
-- The more coarse-grained [access services](/services/omas) level, where most tool- and user-oriented consumption of and integration with metadata would occur.
+- The more coarse-grained [access services](/services/omas) level, where most tool-oriented and user-oriented consumption would occur.
 
 ### Metadata elements
 
@@ -69,11 +69,7 @@ At the more coarse-grained level of the access services metadata objects are sim
 
 ### Metadata instances
 
-At the granular level of the repository services, we refer to specific metadata objects as *metadata instances*, which can only be one of the following:
-
-- An *entity* is capable of describing a metadata object on its own: for example, a business vocabulary term, database, field in a schema, and so on. If you think about metadata as a graph, these are the nodes (vertices) in the graph. They typically describe concepts, people, places and things.
-- A *relationship* describes a (typically) directional association between two entities: for example, the semantic meaning of a relational database column by relating a business vocabulary term with the relational database column. In a graph sense, these are the links (edges) that show how entities are related.
-- While not strictly speaking a kind of metadata instance, a *classification* provides a means to extend an entity with additional facets of information: for example, describing the level of confidentiality with which a particular relational database column should be treated. Classifications describe additional attributes of an entity and can be used to identify entities that are similar in a specific aspect.
+--8<-- "docs/introduction/metadata-instances.md"
 
 ### Metadata types
 

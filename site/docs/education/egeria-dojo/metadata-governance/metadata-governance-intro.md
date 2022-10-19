@@ -4,23 +4,23 @@
 
 ## The importance of metadata governance
 
-Data, and the metadata that describes it, enables individuals and automated processes to make decisions.  As the trust grows in the availability, accuracy, timeliness and completeness of the data/metadata, its use increases and your organization sees greater value.
+Data, and the metadata that describes it, enables individuals and automated processes to make decisions.  As the trust grows in the availability, accuracy, timeliness, usefulness and completeness of the data/metadata, its use increases and your organization sees greater value.
 
 ## Building trust
 
-Trust is hard to build and easy to destroy.  Maintaining trust begins with authoritative sources of data/metadata that are actively managed and distributed along well known information supply chains.  This flow needs to be transparent and reliable - that is explicitly defined and verifiable through monitoring, testing and remediation.
+Trust is hard to build and easy to destroy.  Maintaining trust begins with authoritative sources of data/metadata that are actively managed and distributed along well known information supply chains.  This flow needs to be transparent and reliable - that is explicitly defined and verifiable through monitoring, inspection, testing and remediation.  It needs to be tailored to meet the specific needs of its consumers.
 
 Consider this story ...
 
 !!! example "A tale about trust"
     --8<-- "docs/education/egeria-dojo/metadata-governance/sams-story.md"
 
-Is there any problem with the way that the bus company is operating?  How confident do you think Sam is that the bus company will provide a reliable service to get him to work every day?  What is the impact if Sam buys a car because he decides the bus company is not to be trusted?
+Is there any problem with the way that the bus company is operating?  How confident do you think Sam is that the bus company will provide a reliable service to get him to work every day?  What is the impact if Sam buys a car or uses a bike because he decides the bus company is not to be trusted?
 
 !!! info "Some thoughts on the case ..."
     Sam is likely to conclude that the bus company does not care about its customers - and is not focused on attracting new business by encouraging people to try new routes.  This suggests it is doomed in the long run. If he misses the bus again because the bus times change then he is motivated to look for alternative solutions.  
 
-    His perception of the quality of the bus service is as much affected by the quality of information about the buses as the actual frequency and reliability of the service itself.
+    **His perception of the quality of the bus service is as much affected by the quality of information about the buses as the actual frequency and reliability of the service itself.**
 
 If we translate this story to the digital world, organizations often provide shared services and/or data sets that other parts of the business rely on.  It is not sufficient that these services/data sets are useful with high availability/quality.  If potential consumers can not find out about them, or existing consumers are disrupted by unexpected change, then the number of consumers will dwindle as they seek their own solutions, and the shared service looses relevance to the business.
 
@@ -34,7 +34,7 @@ It is often the case that if something is not being done, either:
 
 * no-one is responsible for it, or
 * it is very low on the priorities of the person who is responsible for it, or
-* the person responsible for it does not have the resources to do the work
+* the person responsible for it does not have the resources to do the work.
 
 Therefore, step one in solving such a problem is to appoint someone who is responsible for it, and ensure they have the motivation and resources to do the work.  
 
@@ -54,7 +54,7 @@ We can generalise this process as follows, and this is a reusable specification 
 
 For example, if a new deployment of a database occurs, it would trigger a metadata update to capture any schema changes and then information about these changes is disseminated to the tools and consumers that need the information.
 
-The dissemination of specific changes to metadata can also act as a trigger for other metadata updates.  For example, the publishing of changes to a database schema could trigger a data profile process of the database contents.
+The dissemination of specific changes to metadata can also act as a trigger for other metadata updates.  For example, the publishing of changes to a database schema could trigger a data profiling process against the database contents.  The data profiling process adds new metadata elements to the existing metadata, and hence the knowledge graph of metadata grows.
 
 ![Linked metadata updates](linked-metadata-updates.svg)
 
@@ -62,18 +62,33 @@ The specification pattern above applies whether the governance is manual or auto
 
 Triggers may be time-based, or an unsolicited update to metadata by an individual.  For example, data profiling may be triggered once a week as well as whenever the schema changes.  A comment attached to a database description that reports errors in the data may trigger a data correction initiative.
 
+Consider metadata as a collection of linked facts making up a knowledge graph that describes the resources and their use by the organization.  The role of the tools, people and open metadata technology is to build, maintain and consume this knowledge graph to improve the operation of the organization.
+
 !!! example "Enriching customer service"
     --8<-- "docs/education/egeria-dojo/metadata-governance/enriching-customer-service.md"
-    
-When metadata governance is done well, a rich conversation develops between service providers and their consumers.  This improves understanding of how the service is used, with a resulting improvement in the quality of the service.
+
+When metadata governance is done well, a rich conversation develops between service providers and their consumers that can lead to both improvements in the quality of the services and the expansion in the variety and amount of consumption; the real value of the service is measured by consumption.
+
+Hopefully new uses for the services will then emerge...
 
 ## The open metadata ecosystem
 
 The content of the data/metadata shared between teams needs to follow standards that ensure clarity both in meaning and how it should be used and managed.  Its completeness and quality need to be appropriate for the organization's uses.  These uses will change over time.
 
-Finally, the ecosystem that supplies and uses this data/metadata must evolve and adapt to the changing and growing needs of the organization because trust is required not just for today's operation but also into the future.
+The ecosystem that supplies and uses this data/metadata must evolve and adapt to the changing and growing needs of the organization because trust is required not just for today's operation but also into the future.
 
-You can make your own choices on how to build trust in your data/metadata.  Egeria provides both *mechanisms* and *practices* built from industry experiences and best practices that help in the maintenance of data/metadata.  
+You can make your own choices on how to build trust in your data/metadata.  Egeria provides *standards*, *mechanisms* and *practices* built from industry experiences and best practices that help in the maintenance of data/metadata:
+
+* Egeria defines a standard format for storing metadata.  This includes an extendable type system so that any type of metadata that you need can be supported.
+
+* Egeria provides technology to manage, store, distribute this standardized metadata.  This technology is inherently distributed, enabling you to work across multiple cloud platforms, data centres and other distributed environments. Collectively, a deployment of this technology is referred to as the *open metadata ecosystem*.
+
+* Egeria provides connector interfaces to allow third party technology to plug into the open metadata ecosystem.  These connectors translate metadata from the third party technology's native format to the open metadata format.  This allows:
+  * Collaboration
+  * Blending automation and manual processes
+  * Comprehensive security and privacy controls
+
+* Egeria's documentation provides guidance on how to use this technology to deliver business value.
 
 In this dojo we will cover these mechanisms and practices, showing how they fit in the metadata update specification pattern described above.  You can then select which are appropriate to your organization and when/where to consider using them.
 
@@ -104,7 +119,7 @@ Collecting and maintaining technical metadata builds an inventory of your digita
 
 ### Data content analysis results
 
-The technical metadata typical describes the structure and configuration for digital resources.  Analysis tools can add to this information by analysing the data content of the digital resources.  The results create a characterization of the data content that helps potential consumers select the digital resources that they need.
+The technical metadata typically describes the structure and configuration for digital resources. Analysis tools can add to this information by analysing the data content of the digital resources. The results create a characterization of the data content that helps potential consumers select the digital resources best suited for their needs.
 
 Data content analysis is often triggered periodically, based on the update frequency that the digital resource experiences.  It can also be triggered when the technical metadata is first catalogued or updated.
 
@@ -117,9 +132,9 @@ Metadata update triggers should focus around the tools where the consumer metada
 
 ### Common definitions
 
-*Common definitions* describe standards for your data and its use.  They are organized into [subject areas](/concepts/subject-area), also known as topic areas or data domains, and their aim is to create a common understanding and processing across your digital landscape, improving the consistency of the data copies supporting your organization.
+*Common definitions* describe standards for your data and its use.  They are organized into [subject areas](/concepts/subject-area), also known as topic areas or data domains, and their aim is to create a common understanding and processing across your digital landscape, improving the consistency of the different stores of data supporting your organization.
 
-Updates to the related common definitions are typically edited offline and then disseminated together as a new release.  Therefore, the metadata update trigger is often related to the release of a collection of common definitions.
+Updates to the related common definitions are typically edited offline, collected, and then disseminated together as a new release. Therefore, the metadata update trigger is often related to the release of a collection of common definitions.
 
 ### Governance metadata
 
@@ -136,15 +151,15 @@ Governance action can trigger the creation of new roles and appointments to thes
 
 ### Process metadata
 
-Data is copied, combined and transformed by applications, services, processes and activities running in the digital landscape.  Capturing the structure of this processing shows which components are accessing and changing the data.  This information is a key element in providing [lineage](/concepts/lineage), used for traceability, impact analysis and data observability.
+Data is copied, combined and transformed by applications, services, processes and activities running in the digital landscape.  Capturing the structure of this processing shows which components are accessing and changing the data.  This *Process Metadata* is a key element in providing [lineage](/concepts/lineage), used for traceability, impact analysis and data observability.
 
 The capture and maintenance of process metadata is typically triggered as process implementations are deployed into production.
 
 ### Operational metadata
 
-*Operational metadata* describes the activity running in the digital landscape.  For example, process metadata could describe the steps in an ETL job that copies data from one database to another.  The operational metadata which capture how often it runs, how many rows it processed and the errors it found.
+*Operational metadata* describes the activity running in the digital landscape.  For example, process metadata could describe the steps in an ETL job that copies data from one database to another.  The operational metadata captures how often it runs, how many rows it processed and the errors it found.
 
-Operational metadata is often captured in log files.  As they are created, they trigger the cataloging and linking of their information into the other types of metadata.  
+Operational metadata is often captured in log files. As they are created, they trigger the cataloging and linking of their information into other types of metadata.
 
 ### Metadata relationships and classifications
 
@@ -152,9 +167,9 @@ The other types of trigger to consider is when/where the metadata elements descr
 
 This linking and augmentation of metadata has a multiplying effect on the value of your metadata.  
 
-You can think of the metadata described above as the facts about your organization's resources and operation.  *Metadata relationships* that show how one element relates to another begin to show the context in which decisions are made and these resources are used.
+You can think of the metadata described above as the facts about your organization's resources and operation.  *Metadata relationships* that show how one element relates to another, begin to show the context in which decisions are made and these resources are used.
 
-*Metadata classifications* are used to label metadata as having particular characteristics.  This helps group together  similar elements, or elements that represent resources that need similar processing
+*Metadata classifications* are used to label metadata as having particular characteristics.  This helps group together similar elements, or elements that represent resources that need similar processing
 
 ## Types of metadata repository
 
@@ -162,13 +177,10 @@ Many metadata repositories are *data catalogs*.  They focus on gathering and org
 
 There are also metadata repositories that focus on providing metadata to the whole enterprise. These repositories have a focus on common definitions and automation of metadata maintenance and stewardship.  They are deployed and controlled as a centralized service.  Some of these repositories are specialized for different types of use cases and often includes support for governance - for example, it may have a focus on Data Governance, IT Infrastructure Governance or Security Governance.
 
-There are many tools and platforms that capture metadata as part of their operation.  For example, a relational database has structural information about the data it stores (called the database schema) that is used to identify the data that should be returned by a query.
-
-This metadata is then useful in tools that are building queries to the database - such as reporting, profiling and application development tools.
+There are many tools and platforms that capture metadata as part of their operation. For example, a relational database has information about the data it stores (called the database schema) that is used to define and execute a query.  This metadata is used in tools that are building queries to the database - such as reporting, profiling and application development tools.
 
 ## Summary
 
-Hopefully the discussion above has help to illustrate that metadata is varied and can be built into a rich knowledge base that drives organizational change through increased visibility of an organization's operation, communication and collaboration.
-
+Hopefully the discussion above has helped to illustrate that metadata is varied and can be built into a rich knowledge base that drives organizational objectives  through increased visibility, utilization and management of an organization's digital assets.
 
 --8<-- "snippets/abbr.md"

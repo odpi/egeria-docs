@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
@@ -11,11 +16,9 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
         --8<-- "docs/education/egeria-dojo/metadata-governance/metadata-governance-intro.md"
         
     ??? intermediate "Designing your metadata supply chains (45 mins)"
-        - Home and reference copies - metadata provenance
-        - Types of standard definitions and governance classifications
+        --8<-- "docs/education/egeria-dojo/metadata-governance/metadata-supply-chains.md"
     
     ??? beginner "Working with templates (30 mins)"
-        
         --8<-- "docs/features/templated-cataloguing/templated-cataloguing-intro.md"
 
         ### An example

@@ -17,7 +17,7 @@ Read through the following presentation to understand more about Egeria:
 ???+ education "Presentation ..."
      [Download](https://egeria-project.org/education/egeria-dojo/running-egeria/presentations/Dojo-Egeria-Intro-16th-January-2022.pptx)
      <div class="video-wrapper">
-         <iframe src="https://egeria-project.org/education/egeria-dojo/running-egeria/presentations/Dojo-Egeria-Intro-16th-January-2022.pptx"></iframe>
+         <iframe src="https://egeria-project.org/education/egeria-dojo/running-egeria/presentations/Dojo-Egeria-Intro-16th-January-2022.pdf"></iframe>
      </div>
 
 

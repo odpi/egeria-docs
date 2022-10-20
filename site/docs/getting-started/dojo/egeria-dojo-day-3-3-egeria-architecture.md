@@ -15,7 +15,7 @@ how they manifest themselves in the project's design and implementation.
 * [https://youtu.be/n-Xm8_WIyBM](https://youtu.be/n-Xm8_WIyBM)
 
 The charts for this session are stored in the
-[data-governance git repository](https://github.com/odpi/data-governance/blob/master/workshops/may-2020/egeria-dojo-day-3-3-egeria-architecture.pptx).
+[data-governance git repository](https://github.com/odpi/data-governance/blob/main/workshops/may-2020/egeria-dojo-day-3-3-egeria-architecture.pptx).
 
 
 * Progress to the [Egeria Social](egeria-dojo-day-3-4-egeria-social.md)

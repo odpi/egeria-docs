@@ -12,7 +12,7 @@ Operator functionality could include:
  - taking backups
  - mapping application specific behaviour into more standard kubernetes commands
 
-A summary of some interesting operators can be found [here](https://github.com/odpi/egeria-k8s-operator/blob/master/doc/research/PopularOperatorCapabilities.md)
+A summary of some interesting operators can be found [here](https://github.com/odpi/egeria-k8s-operator/blob/main/doc/research/PopularOperatorCapabilities.md)
  
 ## Custom Resources
 
@@ -99,7 +99,7 @@ It's therefore imperative we keep the **Authoring** of server configuration dist
 
 Initially the egeria config document will be used verbatim, however if processing is needed, a [Admission Webhook](https://sdk.operatorframework.io/docs/building-operators/golang/webhook/) could be used to validate ([validating](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#validatingadmissionwebhook)) & convert ([mutating](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#mutatingadmissionwebhook)) the config before storing in k8s. This approach could also be used for CR validation.
 
-[Example server configuration documents](https://github.com/odpi/egeria-k8s-operator/tree/master/samples/server)
+[Example server configuration documents](https://github.com/odpi/egeria-k8s-operator/tree/main/samples/server)
 
 
 ### Scaling & failover
@@ -175,7 +175,7 @@ with these additional connectors, but it is the server which defines which ones 
 An Egeria server configuration document therefore contains many references to connectors. The references libraries must be available in the runtime environment ie platform. This is done by ensuring they are pointed to within the spring loader's 'LOADER_PATH' environment variable.
 
 Several approaches are possible:
-* Build a custom container image based on the [Egeria docker image](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-deployment/docker/egeria) including the desired connectors, and either placing the required additional files into /deployments/server/lib, or placing them elsewhere in the image and ensuring LOADER_PATH is set
+* Build a custom container image based on the [Egeria docker image](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/docker/egeria) including the desired connectors, and either placing the required additional files into /deployments/server/lib, or placing them elsewhere in the image and ensuring LOADER_PATH is set
 * Dynamically download or mount the required libraries - and dependencies - when the server platform is set up by the operator, for example through an init job.
 
 Currently the operator takes the former, simpler approach. Therefore specifying a custom container image as part of the platform configuration will often be required.

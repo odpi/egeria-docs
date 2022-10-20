@@ -45,7 +45,7 @@ Entity events to feed the changes assets that are crated or updated:
 
 ## Interface choices
 
-- [Java client :material-dock-window:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/access-services/asset-lineage/asset-lineage-client/docs/user/java-client){ target=gh } to integrate within Java programs,
+- [Java client :material-dock-window:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/access-services/asset-lineage/asset-lineage-client/docs/user/java-client){ target=gh } to integrate within Java programs,
 - [REST API](#rest-api) to interact with external/remote systems,
 - [Out Topic Events](#out-topic-events) to publish lineage related events.
 

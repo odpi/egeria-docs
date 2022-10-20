@@ -7,7 +7,7 @@
 
 | Description              | Value                                                                                                                                                                                          |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Link to Implementation   | [open-metadata-implementation/access-services/asset-owner :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/access-services/asset-owner){ target=gh } |
+| Link to Implementation   | [open-metadata-implementation/access-services/asset-owner :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/access-services/asset-owner){ target=gh } |
 | Audit Log Component Id   | 205                                                                                                                                                                                            |
 | Audit Log Message Prefix | OMAS-ASSET-OWNER                                                                                                                                                                               |
 | URL Marker               | asset-owner                                                                                                                                                                                    |

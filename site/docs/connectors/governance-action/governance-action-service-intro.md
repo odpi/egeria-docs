@@ -24,7 +24,7 @@ It is possible to implement complex governance actions in a single governance ac
 
 * *[Provisioning Governance Action Service](/guides/developer/governance-action-services/overview/#provisioning-governance-action-service)*  invokes a provisioning service whenever a provisioning request is made.  Typically, the provisioning service is an external service.  It may also create lineage metadata to describe the work of the provisioning service if the provisioning service is not able to create lineage itself.
 
-The interfaces for governance action services is defined in the [governance-action-framework :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/frameworks/governance-action-framework) module.
+The interfaces for governance action services is defined in the [governance-action-framework :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/frameworks/governance-action-framework) module.
 
 ??? education "Governance action service example - data onboarding process"
 

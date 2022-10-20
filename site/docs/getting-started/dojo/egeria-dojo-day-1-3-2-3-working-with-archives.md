@@ -13,7 +13,7 @@ load prepared content such as glossaries or standard models into a metadata serv
 First read about [Open Metadata Archives](/concepts/open-metadata-archive).
 
 Egeria has a number of pre-built content packs in the `content-packs` directory on
-GitHub - [Click to link to it](https://github.com/odpi/egeria/tree/master/content-packs)
+GitHub - [Click to link to it](https://github.com/odpi/egeria/tree/main/content-packs)
 
 Using Postman, try to create a new request that loads this archive.
 
@@ -24,7 +24,7 @@ POST {{baseURL}}/open-metadata/admin-services/users/{{user}}/servers/{{server}}/
 ```
 Where the filename is a TEXT request body.  This is the file name you need to specify
 ```
-https://raw.githubusercontent.com/odpi/egeria/master/content-packs/CloudInformationModel.json`
+https://raw.githubusercontent.com/odpi/egeria/main/content-packs/CloudInformationModel.json`
 ```
 When you execute the request, look at the logs in Docker Desktop to see any errors or to watch the
 archive load.

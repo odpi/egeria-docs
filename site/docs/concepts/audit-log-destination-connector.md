@@ -12,7 +12,7 @@ An [OMAG Server](/concepts/omag-server) can have [multiple audit log destination
 The implementation for the audit log destination connector can make further choices about how each log record is processed.
 
 The interface for audit log destination connectors is located in the
-[repository-services-apis](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/auditlogstore) module.  The audit log destination connectors implemented by Egeria are described in the [connector catalog](/connectors/#audit-log-destination-connectors).
+[repository-services-apis](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/auditlogstore) module.  The audit log destination connectors implemented by Egeria are described in the [connector catalog](/connectors/#audit-log-destination-connectors).
 
 
 ---8<-- "snippets/abbr.md"

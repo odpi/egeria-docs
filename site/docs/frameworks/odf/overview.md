@@ -133,6 +133,6 @@ The discovery service is passed the discovery asset catalog store via the [disco
 
 ## Framework implementation
 
-Egeria provides a full implementation of the ODF. It provides a [discovery server](/services/omes/asset-analysis/overview) as well as an implementation of the metadata server APIs by the [Discovery Engine OMAS](/services/omas/discovery-engine/overview). There are also implementations of discovery services in the [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } module.
+Egeria provides a full implementation of the ODF. It provides a [discovery server](/services/omes/asset-analysis/overview) as well as an implementation of the metadata server APIs by the [Discovery Engine OMAS](/services/omas/discovery-engine/overview). There are also implementations of discovery services in the [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } module.
 
 --8<-- "snippets/abbr.md"

@@ -9,7 +9,7 @@
     - Connector Category: [Integration Connector](/connectors/integration-connector)
     - Hosting Service: [API Integrator OMIS](/services/omis/api-integrator)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
-    - Source Module: [openapi-integration-connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/openapi-integration-connector){ target=gh }
+    - Source Module: [openapi-integration-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openapi-integration-connector){ target=gh }
     - Jar File Name: `openapi-integration-connector.jar`
 
 ## Overview

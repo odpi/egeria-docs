@@ -12,7 +12,7 @@ The *data engine proxy* is a [governance server](/concepts/governance-server) th
 
 ![Data Engine Proxy](data-engine-proxy.svg)
 
-The data engine proxy is paired with the [Data Engine OMAS](/services/omas/data-engine/overview). Its connector interfaces are defined in the [data-engine-proxy-connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/governance-servers/data-engine-proxy-services/data-engine-proxy-connector){ target=gh } module.
+The data engine proxy is paired with the [Data Engine OMAS](/services/omas/data-engine/overview). Its connector interfaces are defined in the [data-engine-proxy-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/governance-servers/data-engine-proxy-services/data-engine-proxy-connector){ target=gh } module.
 
 !!! education "Further information"
     - [Setting up the data engine proxy](/guides/admin/configuring-a-data-engine-proxy-server)

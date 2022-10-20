@@ -24,7 +24,7 @@ Anyone can become a *member* of the Egeria community by signing up to the Egeria
 
 The [community guide](community.md) describes how to connect to these channels.
 
-All participants in the Egeria community are bound by the project's [Code of Conduct :material-github:](https://github.com/odpi/egeria/blob/master/CODE_OF_CONDUCT.md){ target=gh }.
+All participants in the Egeria community are bound by the project's [Code of Conduct :material-github:](https://github.com/odpi/egeria/blob/main/CODE_OF_CONDUCT.md){ target=gh }.
 
 As a member you are able to attend our meetings, just to listen, or to play an active part in the discussion. The online meetings are recorded to allow community members to catch up if they are not able to attend the live meeting. When you attend the community meetings specifically, your name will be recorded in the meeting minutes along with any remarks or suggestions you make. The agenda and minutes of our community meetings are publicly available on the [Egeria wiki :material-dock-window:](https://github.com/odpi/egeria/wiki){ target=gh }.
 
@@ -61,7 +61,7 @@ Egeria *contributors* are members who have actively taken additional steps to pr
     - If approved, a github admin will add the new contributor to /CONTRIBUTORS.md in the egeria repository, and also add to the 'Egeria Contributors' team, which grants 'read' access to our repositories.
 
 
-Egeria's contributors are recognized in the [contributors list :material-github:](https://github.com/odpi/egeria/blob/master/CONTRIBUTORS.md){ target=gh }
+Egeria's contributors are recognized in the [contributors list :material-github:](https://github.com/odpi/egeria/blob/main/CONTRIBUTORS.md){ target=gh }
 
 ### Maintainers
 
@@ -75,7 +75,7 @@ Egeria's contributors are recognized in the [contributors list :material-github:
 - Sustained contributions
 
 !!! tip "How to become a maintainer"
-    New maintainers are voted onto the maintainers list by [the existing maintainers :material-github:](https://github.com/odpi/egeria/blob/master/MAINTAINERS.md){ target=gh }.
+    New maintainers are voted onto the maintainers list by [the existing maintainers :material-github:](https://github.com/odpi/egeria/blob/main/MAINTAINERS.md){ target=gh }.
 
     A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer.
 

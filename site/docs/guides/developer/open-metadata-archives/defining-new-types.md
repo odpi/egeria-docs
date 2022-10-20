@@ -13,7 +13,7 @@ Egeria does have an API for dynamically defining types, but it is recommended th
 
 ## Creating your own type archive
 
-A type archive is created using a Java program that uses the [repository services archive utilities](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services/repository-services-archive-utilities) to add your new type definitions to an open metadata archive file.
+A type archive is created using a Java program that uses the [repository services archive utilities](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-archive-utilities) to add your new type definitions to an open metadata archive file.
 
 
 Begin by setting up your build file - this is an example using Maven.  The Java class where the `main()` method is located is called `cocopharma.openmetadata.types.CocoTypesArchiveUtility` in this example.
@@ -496,7 +496,7 @@ There are three main components.  A builder that constructs the archive in memor
     
     ```
 
-This example is located in the `egeria-samples.git` repository in the [coco-metadata-archives](https://github.com/odpi/egeria-samples/tree/master/sample-metadata-archives/coco-metadata-archives) module.
+This example is located in the `egeria-samples.git` repository in the [coco-metadata-archives](https://github.com/odpi/egeria-samples/tree/main/sample-metadata-archives/coco-metadata-archives) module.
 
 
 --8<-- "snippets/abbr.md"

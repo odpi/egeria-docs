@@ -20,6 +20,6 @@ The plugin repository proxy hosts a repository connector to wrap the non-Egeria 
 There are two plugin repository connector implementations included with Egeria:
 
 - [XTDB repository connector :material-github:](https://github.com/odpi/egeria-connector-xtdb){ target=xtdb }
-- [JanusGraph repository connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector){ target=janus }
+- [JanusGraph repository connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector){ target=janus }
 
 --8<-- "snippets/abbr.md"

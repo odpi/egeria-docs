@@ -5,7 +5,7 @@
 
 The repository connector's API is provided by the [Open Metadata Repository Services (OMRS)](/services/omrs).  It defines a call interface to create, search, query, update and delete metadata stored in the metadata repository.
 
-The [repository connectors](/connectors/repository-connector) implement the [`OMRSMetadataCollection` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/OMRSMetadataCollection.java){ target=gh } interface to allow metadata to be communicated and exchanged according to Egeria's protocols and [type definitions](/types).
+The [repository connectors](/connectors/repository-connector) implement the [`OMRSMetadataCollection` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/OMRSMetadataCollection.java){ target=gh } interface to allow metadata to be communicated and exchanged according to Egeria's protocols and [type definitions](/types).
 
 You may want to see the [OMRS metamodel](/guides/developer/metamodel/overview) for more details on the granularity of metadata exchange.
 

@@ -57,10 +57,10 @@ $ echo $EGERIA_PRESENTATIONSERVER_SERVER_aaa
 {"remoteServerName":"cocoView1","remoteURL":"https://localhost:9443"}
 ```
 To get an initial environment up-and-running just download the `truststore.p12`
-file from: [https://github.com/odpi/egeria/raw/master/truststore.p12](https://github.com/odpi/egeria/raw/master/truststore.p12).
+file from: [https://github.com/odpi/egeria/raw/main/truststore.p12](https://github.com/odpi/egeria/raw/main/truststore.p12).
 
 ??? question "Transport-level security"
-    The [truststore.p12](https://github.com/odpi/egeria/raw/master/truststore.p12)
+    The [truststore.p12](https://github.com/odpi/egeria/raw/main/truststore.p12)
     file provides a local truststore for Java. This allows the self-signed certificate embedded
     within the server chassis (by default) to be trusted.
 
@@ -112,4 +112,4 @@ For glossary author use user 'faithbroker' and password 'admin'.
 
 
 ## 5. SSL configuration
-By default the Egeria Ecosystem UI uses a truststore.p12 and keystore.p12 files for ssl. The p12 files are copies of files [https://github.com/odpi/egeria/blob/master/keystore.p12](https://github.com/odpi/egeria/blob/master/keystore.p12) and [https://github.com/odpi/egeria/blob/master/truststore.p12](https://github.com/odpi/egeria/blob/master/truststore.p12), which are the definitive sources of these files. The keystore and truststore files allow Egeria to run simply in a demo/development; this is not appropriate for production, which should be appropriately secured.     
+By default the Egeria Ecosystem UI uses a truststore.p12 and keystore.p12 files for ssl. The p12 files are copies of files [https://github.com/odpi/egeria/blob/main/keystore.p12](https://github.com/odpi/egeria/blob/main/keystore.p12) and [https://github.com/odpi/egeria/blob/main/truststore.p12](https://github.com/odpi/egeria/blob/main/truststore.p12), which are the definitive sources of these files. The keystore and truststore files allow Egeria to run simply in a demo/development; this is not appropriate for production, which should be appropriately secured.     

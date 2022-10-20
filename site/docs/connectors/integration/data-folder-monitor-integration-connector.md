@@ -14,7 +14,7 @@ hide:
     - Connector Category: [Integration Connector](/connectors/integration-connector)
     - Hosting Service: [Files Integrator OMIS](/services/omis/files-integrator)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
-    - Source Module: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
+    - Source Module: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
     - Jar File Name: `files-integration-connectors.jar`
 
 The data folder monitor integration connector monitor changes in a file directory (folder) and maintains a [`DataFolder`](/types/2/0220-files-and-folders/#datafolder) asset for the folder. The files and directories underneath it are assumed to be elements/records in the `DataFolder` asset and so each time there is a change to the files and directories under the monitored directory, it results in an update to the `lastModified` property of the corresponding `DataFolder` asset.

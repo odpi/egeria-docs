@@ -27,7 +27,7 @@ Security is configured for a specific [OMAG Server](/concepts/omag-server) by ad
     ```
 
 ??? example "Example: set up the sample server security connector"
-    For example, this is the connection that would set up the [sample server security connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } provided for the Coco Pharmaceuticals case study:
+    For example, this is the connection that would set up the [sample server security connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } provided for the Coco Pharmaceuticals case study:
 
     ```json
     {

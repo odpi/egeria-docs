@@ -13,9 +13,9 @@ With this information, open metadata reduces the friction between people from di
 
 ## Is this metadata ?
 
-Data about people and organizations is not strictly metadata.  It is master data.  This means it is a type of data that is widely duplicated across an organization's systems but mercifully slowly changing.  Open metadata is therefore only one of many systems making use of this data.
+Data about people and organizations is not strictly metadata.  It is main data.  This means it is a type of data that is widely duplicated across an organization's systems but mercifully slowly changing.  Open metadata is therefore only one of many systems making use of this data.
 
-Many organizations use a centralized user directory, such as LDAP, for their employees. In addition large organizations with thousands of systems may also have a master data management (MDM) program to keep their data about people and organization's synchronized amongst their systems.
+Many organizations use a centralized user directory, such as LDAP, for their employees. In addition large organizations with thousands of systems may also have a main data management (MDM) program to keep their data about people and organization's synchronized amongst their systems.
 
 With or without MDM, it is important that the Community Profile OMAS can operate as a downstream consumer of this data, rather than operating as an independent island. This way it adds value to the organization by enabling the recording of asset ownership, use and feedback, without an excessive amount of additional administration.
 

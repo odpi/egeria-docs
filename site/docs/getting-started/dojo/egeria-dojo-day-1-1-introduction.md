@@ -18,7 +18,7 @@ using a presentation.
 Watch a video of the presentation: [https://youtu.be/s249ofNoETY](https://youtu.be/s249ofNoETY).
 
 The charts for the presentation are located here:
-[https://github.com/odpi/data-governance/tree/master/workshops/may-2020/egeria-dojo-day-1-1-introduction.pptx](https://github.com/odpi/data-governance/tree/master/workshops/may-2020).
+[https://github.com/odpi/data-governance/tree/main/workshops/may-2020/egeria-dojo-day-1-1-introduction.pptx](https://github.com/odpi/data-governance/tree/main/workshops/may-2020).
 
 
 ## Test yourself

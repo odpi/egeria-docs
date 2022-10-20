@@ -70,8 +70,8 @@ Connections are typically managed in a metadata repository, but they can also be
 
 The OCF offers two implementations of the connection:
 
-- [`Connection` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/properties/beans/Connection.java){ target=gh } is a bean implementation of the connection used in REST API requests and events. It allows properties to be set up and retrieved.
-- [`ConnectionProperties` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/properties/ConnectionProperties.java){ target=gh } is a read-only wrapper for the connection properties that is used in client interfaces that do not allow the properties to be updated.
+- [`Connection` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/properties/beans/Connection.java){ target=gh } is a bean implementation of the connection used in REST API requests and events. It allows properties to be set up and retrieved.
+- [`ConnectionProperties` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/properties/ConnectionProperties.java){ target=gh } is a read-only wrapper for the connection properties that is used in client interfaces that do not allow the properties to be updated.
 
 #### Connection properties
 
@@ -145,7 +145,7 @@ All of these interfaces have Java clients that enable you to set up the connecti
 
 The *connector broker* is a generic factory class for all open connectors. Given a valid [connection](#connection) object, the connector broker is able to create a new instance of a [connector](#connector). This means the caller does not need to know the implementation details of the connector - just its interface.
 
-It is implemented in the [`ConnectorBroker` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorBroker.java){ target=gh } class, and is used as follows:
+It is implemented in the [`ConnectorBroker` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorBroker.java){ target=gh } class, and is used as follows:
 
 !!! example "Example usage of a connector broker"
     ```java linenums="1"
@@ -188,21 +188,21 @@ The connector type is linked to the [connection](#connection) objects that reque
 
 !!! education "Further information"
     - The open metadata type for a connector type is defined in [model 0201](/types/2/0201-Connectors-and-Connections).
-    - The [open connector archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } module provides an open metadata archive that contains connector types for connectors supported by Egeria.
+    - The [open connector archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } module provides an open metadata archive that contains connector types for connectors supported by Egeria.
 
 ### Connector provider
 
 A *connector provider* is the factory for a particular type of [connector](#connector). It is typically
 called from the [connector broker](#connector-broker), although it may be called directly.
 
-Each connector provider implements the [`ConnectorProvider` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorProvider.java){ target=gh } interface.
+Each connector provider implements the [`ConnectorProvider` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorProvider.java){ target=gh } interface.
 
 It has two types of methods:
 
 - Return the [connector type](#connector-type) object that is added to a [connection](#connection) object used to hold the properties needed to create an instance of the [connector](#connector).
 - Return a new instance of the [connector](#connector) based on the properties in a [connection](#connection) object. The connection object that has all the properties needed to create and configure the instance of the connector.
 
-The [`ConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorProviderBase.java){ target=gh } class provides much of the implementation for a connector provider.
+The [`ConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorProviderBase.java){ target=gh } class provides much of the implementation for a connector provider.
 
 ??? example "Example implementation of the connector provider for a simple connector"
     If you have a simple connector implementation then your connector provider follows the following template. It assumes the connector is for the `XXXStore` and is called `XXXStoreConnector`.
@@ -242,7 +242,7 @@ The [`ConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/b
     }
     ```
 
-??? example "Actual implementation of the connector provider for the [basic file connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector){ target=gh }"
+??? example "Actual implementation of the connector provider for the [basic file connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector){ target=gh }"
     ```java linenums="1"
     /* SPDX-License-Identifier: Apache-2.0 */
     /* Copyright Contributors to the Egeria project. */

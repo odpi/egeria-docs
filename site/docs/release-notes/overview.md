@@ -19,7 +19,7 @@ Each release will also upgrade the level of its dependencies to ensure Egeria is
 
     You can also follow our discussions by joining us on [Slack :fontawesome-brands-slack:](https://lfaifoundation.slack.com/archives/C01F40J2XA8){ target=slack }.
 
-Our master branch is currently taking code for all future releases. Many of the features are large and the teams integrate code for partial function as soon as it is stable and has no impact on released function. So you will see support for much more function than is officially released. This way you can monitor and feedback on future items as they are developed.
+Our main branch is currently taking code for all future releases. Many of the features are large and the teams integrate code for partial function as soon as it is stable and has no impact on released function. So you will see support for much more function than is officially released. This way you can monitor and feedback on future items as they are developed.
 
 The [roadmap for Egeria](/release-notes/roadmap) describes the end vision for Egeria and our current status.
 

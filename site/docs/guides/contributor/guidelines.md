@@ -110,11 +110,11 @@ In Egeria, date / time instants are always represented as Unix Epoch time with m
 Egeria is an integration technology which means that it uses a comprehensive multi-level approach to testing.
 
 Modules include unit tests. These unit tests should focus on simple validation of Java beans, utilities and code that can easily be tested in isolation. The unit tests run as part of the build and a pull request
-cannot be incorporated into master if any unit tests are failing. They should not significantly extend the time of the build since this impacts all the contributors' productivity. Our preferred Java frameworks for unit testing are [TestNG :material-dock-window:](http://testng.org){ target=test } and [Mockito :material-dock-window:](http://mockito.org){ target=test }.
+cannot be incorporated into main if any unit tests are failing. They should not significantly extend the time of the build since this impacts all the contributors' productivity. Our preferred Java frameworks for unit testing are [TestNG :material-dock-window:](http://testng.org){ target=test } and [Mockito :material-dock-window:](http://mockito.org){ target=test }.
 
-External APIs (typically they include both a client and a server component) are tested using functional verification tests (FVTs). These are located in the [open-metadata-test/open-metadata-fvt :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-test/open-metadata-fvt) module. The aim of these tests is to check that the APIs validate all of their parameters and function correctly in a single server environment. These tests also operate as part of the build but are not run as part of the PR process. Modules should ensure they include some FVTs as they move [from development to technical preview](/release-notes/content-status). By the time the module is moving to released function, the FVTs should be able to validate that this function is stable and correct.
+External APIs (typically they include both a client and a server component) are tested using functional verification tests (FVTs). These are located in the [open-metadata-test/open-metadata-fvt :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-test/open-metadata-fvt) module. The aim of these tests is to check that the APIs validate all of their parameters and function correctly in a single server environment. These tests also operate as part of the build but are not run as part of the PR process. Modules should ensure they include some FVTs as they move [from development to technical preview](/release-notes/content-status). By the time the module is moving to released function, the FVTs should be able to validate that this function is stable and correct.
 
-Some connectors are tested via the [Conformance Test Suite](/guides/cts/overview). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into master. The conformance test suite is also run as part of the release process.
+Some connectors are tested via the [Conformance Test Suite](/guides/cts/overview). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into main. The conformance test suite is also run as part of the release process.
 
 Egeria's [hands on labs](/education/open-metadata-labs) provide a complex multi-server environment and are typically used by contributors to verify that their changes have not regressed any of the
 basic function.
@@ -172,7 +172,7 @@ We tend to use [Postman :material-dock-window:](https://www.getpostman.com){ tar
 
 When developing a new API in Egeria, you may want to make similar samples available to both provide examples of using the API and for basic testing purposes. These should be developed as follows:
 
-1. Wherever possible, re-use the environment variables that are already defined in [Egeria.postman_environment.json :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/postman-rest-samples/Egeria.postman_environment.json){ target=gh }. If you need another variable that is not already defined, add it to this environment definition.
+1. Wherever possible, re-use the environment variables that are already defined in [Egeria.postman_environment.json :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-samples/postman-rest-samples/Egeria.postman_environment.json){ target=gh }. If you need another variable that is not already defined, add it to this environment definition.
 
     This way we have a single environment definition that covers all possible sample configurations.
 
@@ -180,7 +180,7 @@ When developing a new API in Egeria, you may want to make similar samples availa
 
     Once ready for sharing, export the collection into a file and commit your collection into GitHub wherever is most appropriate for the anticipated users of the samples.
 
-1. Create a descriptive entry in [postman-rest-samples/README.md :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/postman-rest-samples/README.md){ target=gh } under a sub-section of the **Sample Collections** heading, linking to your new collection within GitHub. Use the existing samples defined there for guidance: provide a limited introductory description to any pre-requisites for your collection, if it needs to be run after some other collection define these in a sequence, etc.
+1. Create a descriptive entry in [postman-rest-samples/README.md :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-samples/postman-rest-samples/README.md){ target=gh } under a sub-section of the **Sample Collections** heading, linking to your new collection within GitHub. Use the existing samples defined there for guidance: provide a limited introductory description to any pre-requisites for your collection, if it needs to be run after some other collection define these in a sequence, etc.
 
     If your description for use requires more than 1-2 simple sentences, consider linking to more detailed instructions rather than putting these all into the general `README`. (See samples where we link out to more information on loading Coco Pharmaceuticals samples rather than embedding all of this detail directly in the one `README`.)
 

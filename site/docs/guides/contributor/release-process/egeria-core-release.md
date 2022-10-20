@@ -23,22 +23,22 @@ If an urgent release is required with, for example, a critical security fix, the
      - Agree on appropriate dates for branching given expected duration for testing, vacation / public holidays
          - Typically, allow 2-4 days between branching and availability
          - Communicate with team on regular calls, and via #egeria-github on Slack
-         - In the last week before branching discuss holding off on any big changes in master that could destabilize the codebase
+         - In the last week before branching discuss holding off on any big changes in main that could destabilize the codebase
 ??? success "2. Track remaining issues and PRs"
     - Ensure any required issues / PRs for the release have the correct milestone set
         - Move any issues / PRs not expected to make / not required for the release to a future milestone
-        - Aim to branch when most issues / PRs are complete to minimize back-porting from master, but not at the expense of impacting ongoing master development
+        - Aim to branch when most issues / PRs are complete to minimize back-porting from main, but not at the expense of impacting ongoing main development
         - Agree final branch date / criteria
 ??? success "3. Create branch"
-    - Checkout master `git checkout master`
-    - Ensure local update `git pull upstream master`
+    - Checkout main `git checkout main`
+    - Ensure local update `git pull upstream main`
     - Create branch `git branch egeria-release-x.y`
     - Push to upstream `git push upstream egeria-release-x.y`
-    - after this check my master **REALLY IS** the same as upstream with `git reset --hard upstream/master` (noting that this could override any local changes)
+    - after this check my main **REALLY IS** the same as upstream with `git reset --hard upstream/main` (noting that this could override any local changes)
 
-??? success "4. Update master from `x.y-SNAPSHOT` to `x.z-SNAPSHOT`"
-    - `git checkout master`
-    - `git pull upstream master`
+??? success "4. Update main from `x.y-SNAPSHOT` to `x.z-SNAPSHOT`"
+    - `git checkout main`
+    - `git pull upstream main`
     - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with the next version, e.g. change `1.3-SNAPSHOT` to `1.4-SNAPSHOT`. Most of the changes are in `pom.xml` or gradle files, however some code and documentation also has references to our versions and all need modifying.
     - If using an IDE like IntelliJ, make sure you have all hits by searching again as [by default only a limited number of hits are shown :material-dock-window:](https://youtrack.jetbrains.com/issue/IDEA-157855){ target=intellij }.
     - Commit
@@ -49,7 +49,7 @@ If an urgent release is required with, for example, a critical security fix, the
     - Raise issues for any changes required as usual
     - Note that approval is required for changes going into a release branch
     - PR builds are run as usual; however, merge builds, Sonar, etc do not run
-    - To backport changes from `master`, first wait until the PR is merged into `master`, then use `git cherrypick -s <commithash>` to apply to `egeria-release-x.y`, then push as usual.
+    - To backport changes from `main`, first wait until the PR is merged into `main`, then use `git cherrypick -s <commithash>` to apply to `egeria-release-x.y`, then push as usual.
     - In some cases a merge commit will need to be made using `git cherrypick -s -m 1 <commithash>`
     - If code has diverged significantly a manual recode may be easiest
 
@@ -73,7 +73,7 @@ If an urgent release is required with, for example, a critical security fix, the
     - The following instructions are the github amendments you need to make for point release x.y.z. 
     - Changes should occur on the x.y release branch. For example if it's intended to ship release 3.10.1 with an urgent security fix, we work with the egeria-release-3.10 branch.
     - update the project version ie 3.10.1-SNAPSHOT or similar. 
-    - On master issue `git log` and note the commit id `<cid>` that you want to put into the branch
+    - On main issue `git log` and note the commit id `<cid>` that you want to put into the branch
     - Set your local git to the release using `git reset --hard upstream/egeria-release-x.y` 
     - Create a local branch  `git checkout local1`
     - Apply the commit you need `git cherry-pick  -s <cid>` 
@@ -95,4 +95,3 @@ If an urgent release is required with, for example, a critical security fix, the
 
 
 --8<-- "snippets/abbr.md"
-    

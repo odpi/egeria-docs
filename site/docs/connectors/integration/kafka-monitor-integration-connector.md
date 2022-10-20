@@ -9,7 +9,7 @@
     - Connector Category: [Integration Connector](/connectors/integration-connector)
     - Hosting Service: [Topic Integrator OMIS](/services/omis/topic-integrator)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
-    - Source Module: [kafka-integration-connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/kafka-integration-connector){ target=gh }
+    - Source Module: [kafka-integration-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/kafka-integration-connector){ target=gh }
     - Jar File Name: `kafka-integration-connector.jar`
 
 ## Overview

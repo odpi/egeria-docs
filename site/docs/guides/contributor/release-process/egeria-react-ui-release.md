@@ -17,11 +17,11 @@
     - Agree on appropriate dates for branching given expected duration for testing, vacation / public holidays
         - Typically, allow 2-4 days between branching and availability
         - Communicate with team on regular calls, and via #egeria-github on Slack
-        - In the last week before branching discuss holding off on any big changes in master that could destabilize the codebase
+        - In the last week before branching discuss holding off on any big changes in main that could destabilize the codebase
 ??? success "2. Track remaining issues and PRs"
     - Ensure any required issues / PRs for the release have the correct milestone set
         - Move any issues / PRs not expected to make / not required for the release to a future milestone
-        - Aim to branch when most issues / PRs are complete to minimize back-porting from master, but not at the expense of impacting ongoing master development
+        - Aim to branch when most issues / PRs are complete to minimize back-porting from main, but not at the expense of impacting ongoing main development
         - Agree final branch date / criteria
 ??? success "3. Check for vulnerabilities"
      - issue npm audit on cra-client and cra-server, and decide if you want to update any of the packages.

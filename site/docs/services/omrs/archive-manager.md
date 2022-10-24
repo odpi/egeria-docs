@@ -19,7 +19,7 @@ It then calls the [local repository instance event processor](local-repository-i
 
 ## Related information
 
-A description of the utilities for building archives can be found in the [open-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives){ target=gh } modules.
+A description of the utilities for building archives can be found in the [open-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives){ target=gh } modules.
 
 Details for configuring a metadata server to load archives can be found in the [administration guide](/guides/admin/servers/configuring-a-metadata-access-store/#load-metadata).
 

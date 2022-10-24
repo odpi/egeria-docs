@@ -111,7 +111,7 @@ The connector that can be defined for an OMAG Server offers a series of layers o
 
 ## Sample connectors
 
-There are sample implementations of the security connectors for [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) in the samples module under [open-metadata-security-samples](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/open-metadata-security-samples)
+There are sample implementations of the security connectors for [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) in the samples module under [open-metadata-security-samples](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples)
 
 
 --8<-- "snippets/abbr.md"

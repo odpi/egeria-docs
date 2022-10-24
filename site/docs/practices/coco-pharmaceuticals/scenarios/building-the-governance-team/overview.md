@@ -19,10 +19,10 @@ The result is as follows:
 [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) is also appointed the CDO for IT systems.  This makes her a deputy for Jules and recognizes her role in ensure data is properly managed by IT.
 
 Egeria includes a sample client
-([docs](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-leadership.md), 
-[code](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/src/main/java/org/odpi/openmetadata/accessservices/governanceprogram/samples/GovernanceLeadershipSample.java))
+([docs](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-leadership.md), 
+[code](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/src/main/java/org/odpi/openmetadata/accessservices/governanceprogram/samples/GovernanceLeadershipSample.java))
 that issues the appropriate API calls to set up this team through the
-[Governance Program OMAS](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/access-services/governance-program/README.md) Governance Leadership Interface.
+[Governance Program OMAS](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/access-services/governance-program/README.md) Governance Leadership Interface.
 
 
 

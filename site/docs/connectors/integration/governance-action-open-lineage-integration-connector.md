@@ -9,7 +9,7 @@
     - Connector Category: [Integration Connector](/connectors/integration-connector)
     - Hosting Service: [Lineage Integrator OMIS](/services/omis/lineage-integrator)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
-    - Source Module: [lineage-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/lineage-integration-connectors){ target=gh }
+    - Source Module: [lineage-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/lineage-integration-connectors){ target=gh }
     - Jar File Name: `lineage-integration-connectors.jar`
 
 ## Overview

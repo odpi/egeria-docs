@@ -102,7 +102,7 @@ is very welcome !
 
 ## Example script to launch Egeria
 
-Example certificates are provided [on GitHub](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-deployment/certificates) 
+Example certificates are provided [on GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/certificates) 
 
 As an example of running the Egeria server chassis with the certificates generated above, add
 the following options when launching the OMAG Server Platform jar file:

@@ -7,7 +7,7 @@
 
 In this session, you will be guided on how to make a simple change to the Egeria project.
 This change is to add a new file to the
-[egeria-dojo-postcards directory](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-tutorials/egeria-dojo-postcards)
+[egeria-dojo-postcards directory](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-tutorials/egeria-dojo-postcards)
 and link to it in the `README.md` file of the same directory.
 
 ![Making a contribution to Egeria](egeria-dojo-day-2-3-contribution-to-egeria.png)
@@ -43,7 +43,7 @@ To create your own contribution, click on each step and complete the tasks descr
   You need to create a new markdown file, add your message to the file and then add a link to the README.md file.
   Both of these files should use [Markdown](/guides/contributor/markdown) and
   include license and copyright statements top and bottom of the file just like this file: 
-  [License File Example](https://raw.githubusercontent.com/odpi/egeria/master/developer-resources/License-Example-Files/License_for_Markdown_Files.md).
+  [License File Example](https://raw.githubusercontent.com/odpi/egeria/main/developer-resources/License-Example-Files/License_for_Markdown_Files.md).
   
   (There is more information on licences in the [Contributor Guidelines](/guides/contributor/guidelines).)
 
@@ -52,13 +52,13 @@ To create your own contribution, click on each step and complete the tasks descr
   nothing has changed by accident.
 
 * [Add and commit changes to Git](/education/tutorials/git-and-git-hub-tutorial/task-adding-changes-to-git).
-  As you commit your changes, make sure they are signed (see [Why the DCO?](https://github.com/odpi/egeria/tree/master/developer-resources/why-the-dco.md)).
+  As you commit your changes, make sure they are signed (see [Why the DCO?](https://github.com/odpi/egeria/tree/main/developer-resources/why-the-dco.md)).
 
-* Initiate the [request to include your changes](/education/tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr) into the master branch of Egeria.
+* Initiate the [request to include your changes](/education/tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr) into the main branch of Egeria.
   
 Once the PR is in place, GitHub will check the DCOs for you commits, and then run a full build on Java 8 and Java 11.
 The Egeria maintainers will review your contribution and may ask
-ask you to make changes to it.  When it is acceptable, they will merge it into master
+ask you to make changes to it.  When it is acceptable, they will merge it into main
 and your contribution is complete.
 
 

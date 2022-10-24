@@ -9,7 +9,7 @@
     - Connector Category: [Remediation Governance Action Service](/concepts/governance-service)
     - Hosting Service: [Governance Action OMES](/services/omes/governance-action/overview)
     - Hosting Server: [Engine Host](/concepts/engine-host)
-    - Source Module: [governance-action-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/governance-action-connectors)
+    - Source Module: [governance-action-connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors)
     - Jar File Name: `governance-action-connectors.jar`
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.remediation.OriginSeekerGovernanceActionProvider`
     

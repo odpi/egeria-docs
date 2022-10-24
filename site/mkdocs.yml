@@ -875,7 +875,7 @@ extra:
       link: https://medium.com/tag/egeria
       name: Egeria on Medium
     - icon: fontawesome/brands/slack
-      link: https://lfaifoundation.slack.com/archives/C01F40J2XA8
+      link: https://slack.lfaidata.foundation
       name: Egeria on Slack
 
 markdown_extensions:

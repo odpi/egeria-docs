@@ -112,7 +112,7 @@ Each repository in the cohort has a [cohort registry](#cohort-registry) that sup
 
 The list of connections to the remote members of the cohort are passed to the OMRS Enterprise Connector Manager that in turn manages the configuration of the Enterprise OMRS Repository Connectors. The Enterprise OMRS Connector provides federated query support across the metadata cohort for the [Open Metadata Access Services (OMAS)](/services/omas).
 
-When a metadata repository registers with the [cohort registry](#cohort-registry), the administrator may either supply a unique server identifier, or ask the OMRS to generate one. This server identifier (the [metadata collection ID](../metadata-repositories/#metadata-collection-id)) is used in the OMRS event notifications, and on OMRS repository connector calls to identify the location of the home copy of the metadata entities and to identify which repository is requesting a service or supports a particular function.
+When a metadata repository registers with the [cohort registry](#cohort-registry), the administrator may either supply a unique server identifier, or ask the OMRS to generate one. This server identifier (the [metadata collection id](../metadata-repositories/#metadata-collection-id)) is used in the OMRS event notifications, and on OMRS repository connector calls to identify the location of the home copy of the metadata entities and to identify which repository is requesting a service or supports a particular function.
 
 Once the metadata repository has registered with the [cohort registry](#cohort-registry), it is a member of the metadata repository cohort and can synchronize and share metadata with other repositories in the cohort through the [OMRS topic(s)](../metadata-events/#event-topics).
 

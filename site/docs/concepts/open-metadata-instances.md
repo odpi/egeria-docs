@@ -90,4 +90,8 @@ The [*Relationship*](https://odpi.github.io/egeria/org/odpi/openmetadata/reposit
 
 The [*Classification*](https://odpi.github.io/egeria/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/Classification.html) is the structure for a classification introduced in the EntitySummary.
 
+### InstanceProperties
+
+The [*InstanceProperties*](https://odpi.github.io/egeria/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/properties/instances/InstanceProperties.html)  store the effective dates of the element, along with the attributes defined by its [type](#instancetype)
+
 --8<-- "snippets/abbr.md"

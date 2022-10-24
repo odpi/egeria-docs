@@ -22,7 +22,7 @@ We have a variety of weekly and bi-weekly meetings to which all are welcome:
 
 ### Asynchronous dialog
 
-Egeria uses the [LF AI & Data Slack community :material-slack:](https://lfaifoundation.slack.com/archives/C01F40J2XA8){ target=slack } to provide an ongoing dialogue between members. This creates a recorded discussion of design decisions and discussions that complement the project meetings.
+Egeria uses the [LF AI & Data Slack community :material-slack:](https://slack.lfaidata.foundation){ target=slack } to provide an ongoing dialogue between members. This creates a recorded discussion of design decisions and discussions that complement the project meetings.
 
 Follow the link above and register with the LF AI & Data Slack service using your email address. Once signed in you can see all the active Slack channels.
 

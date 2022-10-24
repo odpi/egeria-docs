@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Metadata Collection Identifier
+# Local Metadata Collection Identifier
 
-Every metadata repository has a unique identifier called the *local-metadata-collection-id*.  This identifier is assigned automatically during the configuration of the local repository but can be overridden through administrative commands.
+Every [cohort member](/concepts/cohort-member) with a [metadata repository](/concepts/open-metadata-repository) has a unique identifier called the *local-metadata-collection-id*.  This identifier is assigned automatically during the configuration of its local repository but can be overridden through administrative commands.
 
 Figure 1 shows the local metadata collection id of `1b96495f-82d3-4224-9fdd-31bcb84c224c` in the server configuration. A new local metadata collection id is assigned when the local repository is set up.
 

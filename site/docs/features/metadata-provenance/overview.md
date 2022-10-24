@@ -7,6 +7,10 @@ The open metadata ecosystem draws together metadata from many sources. Metadata 
 
 ## Metadata Collections
 
+Inside the [native open metadata repository](/concepts/open-metadata-repository) found in a [Metadata Access Store](/concepts/metadata-access-store), metadata is organized into *Metadata Collections*.  It has one *local metadata collection* which it uses to store the metadata elements that it *homes*.  Each metadata element has one home metadata collection.  Typically, this is the place where it was first created.  The metadata element can only be updated in its home metadata collection.
+
+The native open metadata repository can also store metadata elements from other metadata collections.  These metadata elements are called *reference copies*, and they are read-only.
+
 The metadata that a specific technology instance creates and maintains is referred to as a *metadata collection*.  For example, in figure 1, there are (at least) three metadata collections.  There is one in the database server on the left, (at least) one in the open metadata ecosystem and one in the downstream database server on the right.
 
 ![Figure 1](metadata-provenance-examples.svg)
@@ -23,7 +27,7 @@ Metadata inside the open metadata ecosystem is broken down into small elements c
 
 ## Metadata Collection Identifiers
 
-In open metadata, each metadata collection has a unique identifier, called the *metadata collection id* and an optional *metadata collection name*. When a metadata instance from the collection is shared within the broader open metadata ecosystem, it includes the metadata collection id and metadata collection name in its header.  This identifies the *home* metadata collection of the metadata instance.
+In open metadata, each metadata collection has a unique identifier, called the *metadata collection id* and an optional *metadata collection name*. When a metadata instance from the metadata collection is shared within the broader open metadata ecosystem, it includes the metadata collection id and metadata collection name in its header.  This identifies the *home* metadata collection of the metadata instance.
  
 The metadata instance header also includes a category name that describes how the metadata was introduced into the open metadata ecosystem. This category name is called the *Instance Provenance Type* by the [Open Metadata Repository Services (OMRS)](/services/omrs) and *Element Origin* by the [Open Connector Framework (OCF)](/frameworks/ocf/overview) and most of the [Open Metadata Access Services (OMASs)](/services/omas).  We will use *Element Origin* for the rest of this description since it is the most commonly used name.
 

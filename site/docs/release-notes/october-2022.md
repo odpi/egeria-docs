@@ -40,7 +40,7 @@ Congratulations to [Dan Wolfson](https://github.com/dwolfson) who becomes our la
 The *Core Egeria* technology is located in the [egeria.git](https://github.com/odpi/egeria) repository.  It provides the [OMAG Server Platform](/concepts/omag-server-platform), java clients for the [OMAG Servers](/concepts/omag-server) that run on the OMAG Server Platform along with the [Conformance Test Suite (CTS)](/guides/cts/overview).  
 
 !!! info "Core Egeria Releases"
-    [Release 3.12](/release-notes/3.12) was shipped in October 2022.  The work this month is contributing to [Release 3.13](/release-notes/3.13).
+    [Release 3.12](/release-notes/3-12) was shipped in October 2022.  The work this month is contributing to [Release 3.13](/release-notes/3-13).
 
 The database support for the Data Manager OMAS REST API has had a major refactor to improve its consistency with other parts of the REST API and to allow databases to be catalogued in the [Local Cohort](/concepts/metadata-collection) metadata collections.
 

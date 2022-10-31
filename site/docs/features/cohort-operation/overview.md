@@ -3,7 +3,7 @@
 
 # Open Metadata Repository Cohort Operation
 
-An *Open Metadata Repository Cohort* (or more simply, just a *cohort*) is a collection of [servers](#cohort-members) sharing metadata using a peer-to-peer exchange.  Once a server becomes a member of the cohort, it can share metadata with, and receive metadata from, any other member either through events, or through [federated queries](#federated-queries).
+An *Open Metadata Repository Cohort* (or more simply, just a *cohort*) is a collection of [servers](#cohort-members) sharing metadata using a peer-to-peer exchange protocol.  Once a server becomes a member of the cohort, it can share metadata with, and receive metadata from, any other member either through events, or through [federated queries](#federated-queries).
 
 ## Formation of a cohort
 

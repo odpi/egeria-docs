@@ -291,7 +291,9 @@ nav:
               - Markdown: guides/contributor/markdown.md
   - Releases:
       - Overview: release-notes/overview.md
-      - Release Notes:
+      - Monthly News:
+        - October 2022: release-notes/october-2022.md
+      - Core Egeria:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
         - v3.12: release-notes/3-12.md
@@ -682,7 +684,7 @@ nav:
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
-      - Glossary Term: /practices/common-data-definitions/anatomy-of-a-glossary.md
+      - Glossary Term: practices/common-data-definitions/anatomy-of-a-glossary.md
       - GUID: concepts/guid.md
       - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md

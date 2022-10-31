@@ -32,7 +32,7 @@ The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a m
     | `repository-entity-search-history-performance-findEntitiesByProperty-any` | Repository performs historical search by two property values, sorting by the second property, of first page of instances of a type. |
     | `repository-entity-search-history-performance-findEntitiesByProperty-none` | Repository performs historical search by two property value, sorting by the first property, of first page of instances of a type. |
     | `repository-entity-history-retrieval-performance-findEntities` | See the detailed logic of the [entity retrieval](entity-retrieval.md) profile. |
-    | `repository-graph-history-query-performance-findEntities` | See the detailed logic of the [graph history query](graph-history-query.md) profile. |
+    | `repository-graph-history-query-performance-findEntities` | See the detailed logic of the [graph history query](graph-history-queries.md) profile. |
 
 !!! tip "Search variations"
     When `findEntitiesByProperty` is run by the assertions starting with `repository-entity-search-history-performance...`, the tests prefer non-string properties (if any exist for the type) given that the `findEntitiesByPropertyValue` searches will already heavily exercise string-based queries.

@@ -36,7 +36,7 @@ The workbench uses the registration information that is passed when the technolo
 
 This workbench works as a pipeline processor, accumulating information from one test and using it to seed subsequent tests. A failure early on in the pipeline may prevent other tests from running.
 
-In addition, this workbench dynamically generates tests based on the types returned by the repository. So for example, the [repository TypeDef test case](test-cases/repository-typedef-test-case.md) runs for each TypeDef returned by the repository. A failure in the early set up test cases will prevent the repository workbench from generating the full suite of test cases for the repository under test.
+In addition, this workbench dynamically generates tests based on the types returned by the repository. So for example, the *Repository TypeDef test case* runs for each TypeDef returned by the repository. A failure in the early set up test cases will prevent the repository workbench from generating the full suite of test cases for the repository under test.
 
 The functions expected of an open metadata repository are numerous. These functions are broken down into the profiles listed below. An open metadata repository needs to support at least one profile to be conformant: in practice, metadata sharing is required in order to support any of the other profiles, so it is mandatory.
 

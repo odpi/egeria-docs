@@ -717,6 +717,7 @@ nav:
       - Metadata Access Point: concepts/metadata-access-point.md
       - Metadata Access Server: concepts/metadata-access-server.md
       - Metadata Access Store: concepts/metadata-access-store.md
+      - Metadata Collection: concepts/metadata-collection.md
       - Metadata Collection Id: concepts/metadata-collection-id.md
       - Metadata Discovery: features/discovery-and-stewardship/overview.md
       - Metadata Repository: concepts/metadata-repository.md

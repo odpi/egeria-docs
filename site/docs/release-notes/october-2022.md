@@ -46,11 +46,28 @@ The database support for the Data Manager OMAS REST API has had a major refactor
 
 The [Open Connector Framework (OCF)](/frameworks/ocf/overview) beans and its corresponding [Connected Asset API](/services/ocf-metadata-management) now support schemas for APIs and events.
 
+## Events
+
+### Egeria Dojos
+
+The next run of an Egeria Dojo will be the new [Metadata Governance Dojo](/education/egeria-dojo/metadata-governance/overview) on Monday 21st November 2022. 
+
+### Community Meetings
+
+Over the last few community meetings we have reviewed the Egeria education curriculum from [Pragmatic Data Research](https://pdr-associates.com/), and a new Open Metadata Lab that demonstrates the workings of an [Open Metadata Repository Cohort](/concepts/cohort-member).
+
+### Conference Presentations
+
+Last month, the Egeria community gave two presentations at the European Open Source Summit in Dublin.
+
+* [Building an Open Metadata and Governance Ecosystem](https://www.youtube.com/watch?v=C-hglq31mfQ) - An overview and demo of Egeria
+* [Truly Open Lineage](https://www.youtube.com/watch?v=eNbGa1iDri4) - covering the integration of the Egeria, Marquez and OpenLineage projects.
+
 ## Future items
 
 ### Annual Project Review
 
-The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is scheduled for 15th December 2022.
+The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is scheduled for 15th December 2022.  Please encourage people who work with Egeria to *Star* each of our repositories on Github as we are trying to get [our total count to 1000](https://landscape.lfai.foundation/?selected=egeria).
 
 ### Moving to Gradle
 

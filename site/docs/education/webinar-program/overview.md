@@ -146,13 +146,13 @@ The material for our past webinars is listed below along with links to the recor
 
 ## Older webinars
 
-- [Building a governed data lake with Egeria](/education/previous-webinars/june-2020) - June 2020
-- [Building a Data Catalog with Egeria](/education/previous-webinars/april-2020) - April 2020
-- [Egeria virtual metadata show](/education/previous-webinars/march-2020) - March 2020 (Three days of topics relating to Egeria from ING, IBM and SAS).
-- [New Approaches to Managing Access to Sensitive Data](/education/previous-webinars/december-2019) - December 2019
-- [Managing data privacy](/education/previous-webinars/july-2018) - July 2018
-- [Metadata standards](/education/previous-webinars/april-2018) - April 2018
-- [Free your metadata](/education/previous-webinars/october-2017) - October 2017
+- [Building a governed data lake with Egeria](/education/previous-webinars/june-2020/overview) - June 2020
+- [Building a Data Catalog with Egeria](/education/previous-webinars/april-2020/overview) - April 2020
+- [Egeria virtual metadata show](/education/previous-webinars/march-2020/overview) - March 2020 (Three days of topics relating to Egeria from ING, IBM and SAS).
+- [New Approaches to Managing Access to Sensitive Data](/education/previous-webinars/december-2019/overview) - December 2019
+- [Managing data privacy](/education/previous-webinars/july-2018/overview) - July 2018
+- [Metadata standards](/education/previous-webinars/april-2018/overview) - April 2018
+- [Free your metadata](/education/previous-webinars/october-2017/overview) - October 2017
 
 --8<-- "snippets/abbr.md"
 

@@ -5,8 +5,8 @@
 
 # JDBC Integration Connector
 
-??? info "Connector details"
-    - Connector Category: [Integration Connector](/connectors/#integration-connector)
+!!! info "Connector details"
+    - Connector Category: [Integration Connector](/concepts/integration-connector)
     - Hosting Service: [Database Integrator OMIS](/services/omis/database-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [jdbc-integration-connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-integration-connector){ target=gh }

@@ -218,7 +218,7 @@ Finally, the asset can include identifiers of other metadata elements from the c
 - Unique identifier (GUID) of the business capability that owns the asset.  Examples of a business capabilities include "Finance", "Human Resources", "Manufacturing", "Sales", etc.
 - Unique identifier (GUID) of the organization that owns the asset.  This could be a unit within the organization or an external organization.
 
-Both organization and business capability information is maintained through the [Community Profile OMAS](../../../open-metadata-implementation/access-services/community-profile) and documented in the asset by the [Asset Owner OMAS](../../../open-metadata-implementation/access-services/asset-owner).
+Both organization and business capability information is maintained through the [Community Profile OMAS](/services/omas/community-profile/overview) and documented in the asset by the [Asset Owner OMAS](/services/omas/asset-owner/overview).
 
 !!! summary "Usage"
     Lineage information helps consumers (individuals and/or automated processes) make choices about which is the appropriate asset to use for a certain task.  It gives a sense of whether the asset contains data from an authoritative source/business capability/organization/process.

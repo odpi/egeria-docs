@@ -8,12 +8,12 @@ hide:
 
 # Generic Element Watchdog Governance Action Service
 
-??? info "Connector summary"
+!!! info "Connector summary"
 
-    - Connector Category: [Watchdog Governance Action Service](/frameworks/gaf/#watchdog-governance-service)
-    - Hosting Service: [Governance Action OMES](/services/omes/governance-action)
+    - Connector Category: [Governance Action Service](/concepts/governance-action-service)
+    - Hosting Service: [Governance Action OMES](/services/omes/governance-action/overview)
     - Hosting Server: [Engine Host](/concepts/engine-host)
-    - Source Module: [governance-action-connectors :material-github:](../../../open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh }
+    - Source Module: [governance-action-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh }
     - Jar File Name: `governance-action-connectors.jar`
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.watchdog/GenericElementWatchdogGovernanceActionProvider.java`
  

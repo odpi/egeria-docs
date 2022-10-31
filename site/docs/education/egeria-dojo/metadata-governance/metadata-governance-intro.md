@@ -47,12 +47,14 @@ In the example above, the managing director identified where the action was occu
 
 When a change to the timetable occurred, the bus drivers' manager triggered the assistant to update the master bus timetable.  The updated timetable was then transformed into multiple formats and disseminated to all the places where their customers are likely to notice the change.  Their challenge is to both create awareness that the change has happened and provide the updated information.
 
-We can generalise this process as follows, and this is a reusable specification pattern for metadata governance:
+## Metadata governance three-step process
+
+We can generalise this process as follows, creating a reusable specification pattern for metadata governance:
 
 ![Metadata Update Specification Pattern](metadata-update-specification-pattern.svg)
 > A three-step specification pattern of *Trigger*, *Maintain Metadata* and *Make Visible*.
 
-For example, if a new deployment of a database occurs, it would trigger a metadata update to capture any schema changes and then information about these changes is disseminated to the tools and consumers that need the information.
+For example, if a new deployment of a database occurs in the digital world, it could trigger a metadata update to capture any schema changes and then information about these changes is disseminated to the tools and consumers that need the information.
 
 The dissemination of specific changes to metadata can also act as a trigger for other metadata updates.  For example, the publishing of changes to a database schema could trigger a data profiling process against the database contents.  The data profiling process adds new metadata elements to the existing metadata, and hence the knowledge graph of metadata grows.
 
@@ -69,118 +71,7 @@ Consider metadata as a collection of linked facts making up a knowledge graph th
 
 When metadata governance is done well, a rich conversation develops between service providers and their consumers that can lead to both improvements in the quality of the services and the expansion in the variety and amount of consumption; the real value of the service is measured by consumption.
 
-Hopefully new uses for the services will then emerge...
+New uses for the services will then emerge ... growing the vitality and value to the organization.
 
-## The open metadata ecosystem
-
-The content of the data/metadata shared between teams needs to follow standards that ensure clarity both in meaning and how it should be used and managed.  Its completeness and quality need to be appropriate for the organization's uses.  These uses will change over time.
-
-The ecosystem that supplies and uses this data/metadata must evolve and adapt to the changing and growing needs of the organization because trust is required not just for today's operation but also into the future.
-
-You can make your own choices on how to build trust in your data/metadata.  Egeria provides *standards*, *mechanisms* and *practices* built from industry experiences and best practices that help in the maintenance of data/metadata:
-
-* Egeria defines a standard format for storing metadata.  This includes an extendable type system so that any type of metadata that you need can be supported.
-
-* Egeria provides technology to manage, store, distribute this standardized metadata.  This technology is inherently distributed, enabling you to work across multiple cloud platforms, data centres and other distributed environments. Collectively, a deployment of this technology is referred to as the *open metadata ecosystem*.
-
-* Egeria provides connector interfaces to allow third party technology to plug into the open metadata ecosystem.  These connectors translate metadata from the third party technology's native format to the open metadata format.  This allows:
-  * Collaboration
-  * Blending automation and manual processes
-  * Comprehensive security and privacy controls
-
-* Egeria's documentation provides guidance on how to use this technology to deliver business value.
-
-In this dojo we will cover these mechanisms and practices, showing how they fit in the metadata update specification pattern described above.  You can then select which are appropriate to your organization and when/where to consider using them.
-
-## Categories of metadata
-
-Metadata is often described as *data about data*.  However, this definition does not fully convey the breadth and depth of information that is needed to govern your digital operations.
-
-The categories of metadata listed below help you organize your metadata needs around specific triggers that drive your metadata ecosystem.
-
-### Technical metadata
-
-The most commonly collected metadata is *technical metadata* that describes the way something is implemented.  For example, technical metadata for common [digital resources](/concepts/resource) includes:
-
-* The databases and their database schema (table and column definitions) configured in a database server.
-* APIs and their interface specification implemented by applications and other software services to request actions and query data.
-* The events and their schemas used to send notifications between applications, services and servers to help synchronized their activity.
-* The files stored on the file system.
-
-Technical metadata is the easiest type of metadata to maintain since many technologies provide APIs/events to query the technical metadata for the digital resources it is managing.
-
-To keep your technical metadata up-to-date you need to consider the following types of metadata update triggers:
-
-* whenever new digital resources are deployed into production, 
-* events that indicate that the digital resources have changed
-* regular scanning of the deployment to validate that all technical metadata has been captured.
-
-Collecting and maintaining technical metadata builds an inventory of your digital resources that can be used to count each type of digital resources and act as a list to work through when regular maintenance is required.  It also helps people locate specific types of digital resources.
-
-### Data content analysis results
-
-The technical metadata typically describes the structure and configuration for digital resources. Analysis tools can add to this information by analysing the data content of the digital resources. The results create a characterization of the data content that helps potential consumers select the digital resources best suited for their needs.
-
-Data content analysis is often triggered periodically, based on the update frequency that the digital resource experiences.  It can also be triggered when the technical metadata is first catalogued or updated.
-
-### Consumer metadata
-
-*Consumer metadata* includes the comments, reviews, tags added by the users that are consuming the metadata and the digital resources it describes.  This metadata is gathered from the tools through which the users consume the metadata and the digital resources.  It is then used to assess the value and popularity of the metadata and digital resources to their consumers.
-
-Metadata update triggers should focus around the tools where the consumer metadata is captured.  Typically, each piece of consumer feedback is treated as a separate trigger.
-
-
-### Common definitions
-
-*Common definitions* describe standards for your data and its use.  They are organized into [subject areas](/concepts/subject-area), also known as topic areas or data domains, and their aim is to create a common understanding and processing across your digital landscape, improving the consistency of the different stores of data supporting your organization.
-
-Updates to the related common definitions are typically edited offline, collected, and then disseminated together as a new release. Therefore, the metadata update trigger is often related to the release of a collection of common definitions.
-
-### Governance metadata
-
-*Governance metadata* describe the requirements of a particular [Governance Domain](/concepts/governance-domain) and their associated controls, metrics and implementations.  They are managed in releases in a similar way to common definitions.  Therefore, their releases act a triggers. 
-
-
-### Organizational metadata
-
-*Organizational metadata* describe the teams, people, roles, projects and communities in the organization.  This metadata is used to coordinate the responsibilities and activities of the people in the organization.  For example, roles can be defined for the owners of specific resources, and they can be linked to the profiles of the individuals appointed as owner.  This information can be used to route requests and feedback to the right person.
-
-Organization metadata is often managed in existing applications run by Human Resources and Corporate Security.  Therefore, updates in these applications are used to trigger updates to the organizational metadata in the open metadata ecosystem.
-
-Governance action can trigger the creation of new roles and appointments to these roles.  These elements can be then be disseminated on to the appropriate applications for information, verification and/or approval.
-
-### Process metadata
-
-Data is copied, combined and transformed by applications, services, processes and activities running in the digital landscape.  Capturing the structure of this processing shows which components are accessing and changing the data.  This *Process Metadata* is a key element in providing [lineage](/concepts/lineage), used for traceability, impact analysis and data observability.
-
-The capture and maintenance of process metadata is typically triggered as process implementations are deployed into production.
-
-### Operational metadata
-
-*Operational metadata* describes the activity running in the digital landscape.  For example, process metadata could describe the steps in an ETL job that copies data from one database to another.  The operational metadata captures how often it runs, how many rows it processed and the errors it found.
-
-Operational metadata is often captured in log files. As they are created, they trigger the cataloging and linking of their information into other types of metadata.
-
-### Metadata relationships and classifications
-
-The other types of trigger to consider is when/where the metadata elements described above can be connected together and augmented.
-
-This linking and augmentation of metadata has a multiplying effect on the value of your metadata.  
-
-You can think of the metadata described above as the facts about your organization's resources and operation.  *Metadata relationships* that show how one element relates to another, begin to show the context in which decisions are made and these resources are used.
-
-*Metadata classifications* are used to label metadata as having particular characteristics.  This helps group together similar elements, or elements that represent resources that need similar processing
-
-## Types of metadata repository
-
-Many metadata repositories are *data catalogs*.  They focus on gathering and organizing information about data sources for a team of data professionals.  Each data source is catalogued under the guidance of its users.  There is some automation for maintaining the catalogued data sources.  The aim is to provide the metadata needed by the local team.
-
-There are also metadata repositories that focus on providing metadata to the whole enterprise. These repositories have a focus on common definitions and automation of metadata maintenance and stewardship.  They are deployed and controlled as a centralized service.  Some of these repositories are specialized for different types of use cases and often includes support for governance - for example, it may have a focus on Data Governance, IT Infrastructure Governance or Security Governance.
-
-There are many tools and platforms that capture metadata as part of their operation. For example, a relational database has information about the data it stores (called the database schema) that is used to define and execute a query.  This metadata is used in tools that are building queries to the database - such as reporting, profiling and application development tools.
-
-## Summary
-
-Hopefully the discussion above has helped to illustrate that metadata is varied and can be built into a rich knowledge base that drives organizational objectives  through increased visibility, utilization and management of an organization's digital assets.
 
 --8<-- "snippets/abbr.md"

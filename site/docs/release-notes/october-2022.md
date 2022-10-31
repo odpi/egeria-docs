@@ -23,7 +23,7 @@ The Open Metadata and Governance APIs for core Egeria now support API Tokens.  T
 
 ## Database support
 
-Testing of the new [JDBC Resource Connector](/connectors/resource/jdbc-resource-connector) and [JDBC Integration Connector](/connectors/integration/jdbc-integration-connector) is going well with support for PostgreSQL and MariaDB proven.
+Testing of the new [JDBC Resource Connector](/connectors/resource/jdbc-resource-connector) and [JDBC Integration Connector](/connectors/integration/jdbc-integration-connector) is going well with support for **PostgreSQL** and **MariaDB** demonstrated.
 
 ## Data products
 
@@ -62,6 +62,14 @@ Last month, the Egeria community gave two presentations at the European Open Sou
 
 * [Building an Open Metadata and Governance Ecosystem](https://www.youtube.com/watch?v=C-hglq31mfQ) - An overview and demo of Egeria
 * [Truly Open Lineage](https://www.youtube.com/watch?v=eNbGa1iDri4) - covering the integration of the Egeria, Marquez and OpenLineage projects.
+
+## New documentation pages
+
+Each month we will select a some new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org) so you can keep up-to-date with how it is evolving.
+
+* [Open metadata instances](/concepts/open-metadata-instances)
+* [Metadata collection](/concepts/metadata-collection)
+* [0530 Tabular Schemas](/types/5/0530-Tabular-Schemas)
 
 ## Future items
 

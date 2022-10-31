@@ -3,7 +3,7 @@
 
 # OMRS Event Publisher
 
-The OMRS event publisher sends OMRS events to the **[OMRS event topic](../omrs-event-topic.md)**.
+The OMRS event publisher sends OMRS events to the **[OMRS event topic](/concepts/event-topics)**.
 
 
 ---8<-- "snippets/abbr.md"

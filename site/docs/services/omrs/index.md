@@ -29,8 +29,8 @@ The *enterprise repository services* provide a virtual metadata repository by co
 
 The services include the following components:
 
-- *[Enterprise Connector Manager](../component-descriptions/enterprise-connector-manager.md)* - Manages the list of open metadata repositories that the Enterprise OMRS Repository Connector should call to retrieve an enterprise view of the metadata collections supported by these repositories.
-- *[Enterprise Repository Connector](../component-descriptions/enterprise-repository-connector.md)* - Supports federated queries.
+- *[Enterprise Connector Manager](component-descriptions/enterprise-connector-manager.md)* - Manages the list of open metadata repositories that the Enterprise OMRS Repository Connector should call to retrieve an enterprise view of the metadata collections supported by these repositories.
+- *[Enterprise Repository Connector](component-descriptions/enterprise-repository-connector.md)* - Supports federated queries.
     - Enterprise OMRS Connector Provider - The OCF Connector Provider factory for the Enterprise OMRS Repository Connector.
     - Enterprise OMRS Repository Connector - Implements the OMRS Repository Connector interface that supports enterprise access to the list of open metadata repositories registered with the OMRS Enterprise Connector Manager.
     - Enterprise OMRS Metadata Collection - Manages calls to the list of open metadata repositories registered with the OMRS Enterprise Connector Manager on behalf of the Enterprise OMRS Repository Connector.
@@ -49,30 +49,30 @@ The *administration services* drive the initialization of the OMRS at server sta
 
 The administration services include the following components:
 
-- *[OMRS Operational Services](../component-descriptions/operational-services.md)* - supports the admin interface for the OMRS.
-- *[OMRS Configuration Factory](../component-descriptions/configuration-factory.md)* - manages default values and creation of connectors.
-- *[OMRS Audit Log](../component-descriptions/audit-log.md)* - manages the storage and retrieval of audit log records.
-- *[OMRS Archive Manager](../component-descriptions/archive-manager.md)* - manages the loading of open metadata archives.
+- *[OMRS Operational Services](component-descriptions/operational-services.md)* - supports the admin interface for the OMRS.
+- *[OMRS Configuration Factory](component-descriptions/configuration-factory.md)* - manages default values and creation of connectors.
+- *[OMRS Audit Log](component-descriptions/audit-log.md)* - manages the storage and retrieval of audit log records.
+- *[OMRS Archive Manager](component-descriptions/archive-manager.md)* - manages the loading of open metadata archives.
 
 ### Cohort services
 
-The *cohort services* manage the exchange of metadata between a repository and other members of an *[open metadata repository cohort](../open-metadata-repository-cohort.md)*. It includes the following components:
+The *cohort services* manage the exchange of metadata between a repository and other members of an *[open metadata repository cohort](cohort.md)*. It includes the following components:
 
 - *OMRS Metadata Highway Manager* - manages the OMRS Cohort Manager for each open metadata repository cohort that the local server belongs to.
 - *OMRS Cohort Manager* - manages the components needed in the local server for it to act as a member of an open metadata repository cohort.
-- [OMRS Cohort Registry](cohort/#cohort-registry) - manages registration exchanges with other members of a cohort on behalf of the local server.
+- [OMRS Cohort Registry](/concepts/cohort-registry) - manages registration exchanges with other members of a cohort on behalf of the local server.
 
 ### Local repository services
 
 The *local repository services* manage the interaction with the local server's metadata collection (stored in the local repository). They include the following components:
 
-- *[Local OMRS Repository Connector](../component-descriptions/local-repository-connector.md)* - Implements the OMRS Repository Connector interface that supports access to the local metadata repository.
+- *[Local OMRS Repository Connector](component-descriptions/local-repository-connector.md)* - Implements the OMRS Repository Connector interface that supports access to the local metadata repository.
     - Local OMRS Connector Provider - The OCF Connector Provider factory for the Local OMRS Repository Connector.
     - Local OMRS Metadata Collection - Manages metadata requests for the local repository.
-- *[Local OMRS Repository Content Manager](../component-descriptions/typedef-manager.md)* - Provides an in-memory cache of open metadata type definitions (TypeDefs) that are used for validating of TypeDefs from other open metadata repositories and creation of new open metadata instances (entities and relationships).
-- *[Local OMRS Instance Event Processor](../component-descriptions/local-repository-instance-event-processor.md)* - Processes inbound Instance Events on behalf of the local repository. These events may come from one of the connected open metadata repository cohorts or the OMRS Archive Manager.
-- *[OMRS REST Repository Services](../component-descriptions/omrs-rest-services.md)* - Implements the server-side of the In-memory OMRS Repository Connector.
-- *[OMRS REST Repository Connector](../component-descriptions/rest-repository-connector.md)* - Implements the OMRS Repository Connector interface that supports metadata access to a remote open metadata repository service via the OMRS Repository REST API.
+- *[Local OMRS Repository Content Manager](component-descriptions/typedef-manager.md)* - Provides an in-memory cache of open metadata type definitions (TypeDefs) that are used for validating of TypeDefs from other open metadata repositories and creation of new open metadata instances (entities and relationships).
+- *[Local OMRS Instance Event Processor](component-descriptions/local-repository-instance-event-processor.md)* - Processes inbound Instance Events on behalf of the local repository. These events may come from one of the connected open metadata repository cohorts or the OMRS Archive Manager.
+- *[OMRS REST Repository Services](component-descriptions/omrs-rest-services.md)* - Implements the server-side of the In-memory OMRS Repository Connector.
+- *[OMRS REST Repository Connector](component-descriptions/rest-repository-connector.md)* - Implements the OMRS Repository Connector interface that supports metadata access to a remote open metadata repository service via the OMRS Repository REST API.
     - OMRS REST Connector Provider - The OCF Connector Provider factory for the OMRS REST Repository Connector.
     - OMRS REST Metadata Collection - Manages calls to the OMRS REST Repository Services in a remote open metadata repository.
 
@@ -90,9 +90,9 @@ The event management services ensure that the other subsystems do not need to be
 
 The event management services include the following components:
 
-- **[OMRS Repository Event Manager](../component-descriptions/event-manager.md)** - Manages the distribution of repository events (TypeDef and Instance Events) within the local server's OMRS components.
-- **[OMRS Event Listener](../component-descriptions/event-listener.md)** - Receives Registry and Repository (TypeDef and Instance) events from the OMRS Topic for a cohort.
-- **[OMRS Event Publisher](../component-descriptions/event-publisher.md)** - Sends Registry and Repository (TypeDef and Instance) events to the OMRS Topic. This may be the OMRS Topic for a cohort, or the OMRS Topic used by the Open Metadata Access Services (OMAS).
+- **[OMRS Repository Event Manager](component-descriptions/event-manager.md)** - Manages the distribution of repository events (TypeDef and Instance Events) within the local server's OMRS components.
+- **[OMRS Event Listener](component-descriptions/event-listener.md)** - Receives Registry and Repository (TypeDef and Instance) events from the OMRS Topic for a cohort.
+- **[OMRS Event Publisher](component-descriptions/event-publisher.md)** - Sends Registry and Repository (TypeDef and Instance) events to the OMRS Topic. This may be the OMRS Topic for a cohort, or the OMRS Topic used by the Open Metadata Access Services (OMAS).
 
 ## Patterns
 
@@ -108,13 +108,13 @@ The OMRS can support the OMAS's with access to a single, local-only repository -
 
 ![Access services](omrs-role-access-layer.png)
 
-The OMRS can also support a server without any local repository - so that all metadata for the OMAS's is coming through the cohort services from remote metadata repositories. This is the [caller integration pattern](../../../open-metadata-publication/website/open-metadata-integration-patterns/caller-integration-pattern.md) supported by the [metadata access point OMAG Server](/concepts/metadata-access-point).
+The OMRS can also support a server without any local repository - so that all metadata for the OMAS's is coming through the cohort services from remote metadata repositories. This is the [caller integration pattern](https://egeria-project.org/patterns/metadata-exchange/overview/#metadata-exchange-patterns) supported by the [metadata access point OMAG Server](/concepts/metadata-access-point).
 
 ### Repository proxy
 
 ![Repository proxy](omrs-role-repository-proxy.png)
 
-The OMRS can support a server where the OMAS's are not deployed and the local repository is configured to connect as an adapter for a non-native open metadata repository. The cohort services connect this metadata repository with other members in one or more cohorts. This is called the *[adapter integration pattern](../../../open-metadata-publication/website/open-metadata-integration-patterns/adapter-integration-pattern.md)* and is used in a [repository proxy OMAG Server](/concepts/repository-proxy).
+The OMRS can support a server where the OMAS's are not deployed and the local repository is configured to connect as an adapter for a non-native open metadata repository. The cohort services connect this metadata repository with other members in one or more cohorts. This is called the *[adapter integration pattern](/patterns/metadata-exchange/overview/#metadata-exchange-patterns)* and is used in a [repository proxy OMAG Server](/concepts/repository-proxy).
 
 ### Connected metadata server
 

@@ -8,14 +8,14 @@ hide:
 
 # Archive manager
 
-An [open metadata archive](../open-metadata-archive) provides pre-built definitions
+An [open metadata archive](/concepts/open-metadata-archive) provides pre-built definitions
 for types and metadata instances.
 
 `OMRSArchiveManager` manages the loading and unloading of open metadata archives for the local OMRS repository. It is invoked at server start up for a [cohort member](/services/omrs/cohort/#cohort-members) and whenever a new open metadata archive is loaded via a REST API.
  
 During server start up, it first calls the [repository content manager](repository-content-manager.md) to load the types into the local repository (if any) and to maintain the cache of know and active types in the server.
 
-It then calls the [local repository instance event processor](local-repository-instance-event-processor.md) to load the instances.
+It then calls the [local repository instance event processor](component-descriptions/local-repository-instance-event-processor.md) to load the instances.
 
 ## Related information
 

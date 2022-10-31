@@ -14,7 +14,7 @@ determines which type(s) of metadata repository it is able to access.
 The OMRS has three repository connector implementations that form part of the
 core open metadata capability for a [cohort member](/concepts/cohort-member):
 
-* **[Enterprise Repository Connector](../enterprise-repository-connector.md)** -
+* **[Enterprise Repository Connector](component-descriptions/enterprise-repository-connector.md)** -
 	This connector can issue calls to multiple OMRS connectors and aggregate the
 results as if the metadata was stored in a single repository.
 This is how metadata queries are federated across open metadata repositories.  
@@ -23,14 +23,14 @@ This is how metadata queries are federated across open metadata repositories.
 the Enterprise Repository Connector is able to work with
 a heterogeneous collection of repositories.
 
-* **[Local OMRS Repository Connector](../local-repository-connector.md)** - 
+* **[Local OMRS Repository Connector](component-descriptions/local-repository-connector.md)** - 
 This connector wraps a "real" repository connector (see below) and manages
 events and validation for this connector.
 
-* **[OMRS REST Repository Connector](../../../../adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector)** -
+* **[OMRS REST Repository Connector](component-descriptions/rest-repository-connector.md)** -
 	This is the connector used by the Enterprise Repository Connector to make
 a direct call to another open metadata repository through
-the [OMRS REST API](../omrs-rest-services.md). 
+the [OMRS REST API](component-descriptions/omrs-rest-services.md). 
 
 These are the "real" OMRS Repository Connector implementations that provide open metadata access
 to specific types of metadata repositories.
@@ -46,15 +46,14 @@ This connector translates the calls to its OMRS Connector API to IGC's REST API 
 then translates the results of these calls to appropriate responses on its API.
 This connector also runs in a [repository proxy](/concepts/repository-proxy) server.
 
-* **[In-memory OMRS Repository Connector](../../../../adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector)** -
+* **[In-memory OMRS Repository Connector](/connectors/repository/in-memory/overview)** -
 This connector provides a simple in-memory repository for testing/demos or
 small-scale environments where metadata is being managed remotely and cached locally.
 It has native support for the open metadata types an instances
 and so runs in a [metadata server](/concepts/metadata-access-store).
 
-* **[Graph OMRS Repository Connector](../../../../adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector)** -
-This connector is provides a high functioning open metadata repository implementation
-built on JanusGraph.
+* **[Graph OMRS Repository Connector](/connectors/repository/janus-graph/overview)** -
+This connector is provides a high functioning open metadata repository implementation built on JanusGraph.
 It also has native support for the open metadata types an instances
 and so runs in a [metadata access server](/concepts/metadata-access-store).
 

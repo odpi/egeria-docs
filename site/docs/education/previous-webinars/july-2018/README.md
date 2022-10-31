@@ -25,4 +25,4 @@ The ODPi's data privacy pack is the first open source initiative for data privac
     </div>
 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

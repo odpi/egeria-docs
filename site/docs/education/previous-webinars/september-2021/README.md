@@ -23,4 +23,4 @@ This session will also show how metadata instances can be explored at a low leve
   </div>
 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

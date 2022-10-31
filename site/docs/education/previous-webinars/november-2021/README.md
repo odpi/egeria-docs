@@ -23,4 +23,4 @@ Links:
 * [Related documentation](/features/lineage-management/overview)
 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

@@ -26,4 +26,4 @@ they have been implemented that way and the value that each piece brings.
   <iframe width="560" height="315" src="https://www.youtube.com/embed/yZVYedCNGO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div> 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

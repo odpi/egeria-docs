@@ -16,4 +16,4 @@ protection of the data lake and avoid it running into a mighty data swamp.
     </div>
 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

@@ -5,9 +5,9 @@
 
 # Kafka Topics Audit Integration Connector
 
-??? info "Connector details"
-    - Connector Category: [Integration Connector](/connectors/integration-connector)
-    - Hosting Service: [Topic Integrator OMIS](/services/omis/topic-integrator)
+!!! info "Connector details"
+    - Connector Category: [Integration Connector](/concepts/integration-connector)
+    - Hosting Service: [Topic Integrator OMIS](/services/omis/topic-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [kafka-topics-audit-connector :material-github:](https://github.com/odpi/egeria-dev-projects/tree/main/kafka-topics-audit-connector){ target=gh }
     - Jar File Name: `kafka-topics-audit-connector.jar`

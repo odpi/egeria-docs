@@ -10,9 +10,9 @@ hide:
 
 # Data Folder Monitor Integration Connector
 
-??? info "Connector details"
-    - Connector Category: [Integration Connector](/connectors/integration-connector)
-    - Hosting Service: [Files Integrator OMIS](/services/omis/files-integrator)
+!!! info "Connector details"
+    - Connector Category: [Integration Connector](/concepts/integration-connector)
+    - Hosting Service: [Files Integrator OMIS](/services/omis/files-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
     - Jar File Name: `files-integration-connectors.jar`

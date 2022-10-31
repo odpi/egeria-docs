@@ -6,4 +6,5 @@
 
 # Apache Atlas OMRS Repository Connector
 
+
 --8<-- "snippets/abbr.md"

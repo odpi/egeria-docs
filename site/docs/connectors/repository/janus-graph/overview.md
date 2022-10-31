@@ -3,12 +3,21 @@
 
 --8<-- "snippets/content-status/stable.md"
 
-# Graph Repository
+# JanusGraph Repository
+
+!!! info "Connector summary"
+
+    - Connector Category: [Native Repository Connector](/concepts/repository-connector)
+    - Hosting Service: [Open Metadata Reposiotry Services (OMRS)](/services/omrs)
+    - Hosting Server: [Metadata Access Store](/concepts/metdata-access-store)
+    - Source Module: [graph-repository-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector){ target=gh }
+    - Jar File Name: `graph-repository-connector.jar`
+    - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.repositoryservices.graphrepository.repositoryconnector/GraphOMRSRepositoryConnectorProvider.java`
 
 The Graph Repository provides a local repository that uses a graph store as its persistence store.
 
 ## Configuration
-To configure an [Metadata Access Store](/concepts/metadata-access-store) to use the Graph Repository, set the repository-mode to 'local-graph-repository'. For example:
+To configure a [Metadata Access Store](/concepts/metadata-access-store) to use the Graph Repository, set the repository-mode to 'local-graph-repository'. For example:
 
 ```
 POST <serverURLRoot>/open-metadata/admin-services/users/<userName>/servers/<serverName>/local-repository/mode/local-graph-repository

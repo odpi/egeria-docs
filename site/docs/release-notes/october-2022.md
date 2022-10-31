@@ -71,6 +71,17 @@ Each month we will select a some new pages that where added/updated in the last 
 * [Metadata collection](/concepts/metadata-collection)
 * [0530 Tabular Schemas](/types/5/0530-Tabular-Schemas)
 
+## Postman collections
+
+There is new postman collect for the [Asset Consumer OMAS](/services/omas/asset-consumer/overview) REST API.
+
+* [Link on GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/access-services/asset-consumer)
+
+The postman collection for [Data Manager OMAS](/services/omas/data-manager/overview) needs updating since the updates to its REST API.
+
+* [Link on GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/access-services/data-manager)
+
+
 ## Future items
 
 ### Annual Project Review

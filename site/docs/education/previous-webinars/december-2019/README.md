@@ -23,4 +23,4 @@ Together they will change the way you think about access control.
     </div>
 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

@@ -22,7 +22,7 @@
     --8<-- "docs/education/egeria-dojo/metadata-governance/using-metadata-discovery.md"
 
 ??? advanced "Monitoring your governance processes (60 mins)"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/monitoring-governance-processes.md"
+    --8<-- "docs/education/egeria-dojo/metadata-governance/monitoring-your-governance-processes.md"
 
 !!! education "Further information"
     - [Governance Action Services](/guides/developer/governance-action-services/overview)

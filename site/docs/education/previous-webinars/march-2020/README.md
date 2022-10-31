@@ -46,4 +46,4 @@ Q&A
   </div>
 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

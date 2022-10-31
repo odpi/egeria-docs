@@ -20,4 +20,4 @@ Day 3 [:material-microsoft-powerpoint:](./ODPI%20-%20Open%20Metadata%20Standards
     </div>
 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

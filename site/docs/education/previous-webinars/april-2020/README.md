@@ -16,4 +16,4 @@ This catalog helps an organization find and use data and related assets effectiv
     </div>
 
 ----
-Return to [Webinar list](..)
+Return to [Webinar list](/education/previous-webinars/overview)

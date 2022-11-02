@@ -71,6 +71,8 @@ Each month we will select a some new pages that where added/updated in the last 
 * [Metadata collection](/concepts/metadata-collection)
 * [0530 Tabular Schemas](/types/5/0530-Tabular-Schemas)
 
+Also notice the new buttons on the homepage [https://egeria-project.org/](https://egeria-project.org/).
+
 ## Postman collections
 
 There is new postman collect for the [Asset Consumer OMAS](/services/omas/asset-consumer/overview) REST API.
@@ -86,7 +88,7 @@ The postman collection for [Data Manager OMAS](/services/omas/data-manager/overv
 
 ### Annual Project Review
 
-The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is scheduled for 15th December 2022.  Please encourage people who work with Egeria to *Star* each of our repositories on Github as we are trying to get [our total count to 1000](https://landscape.lfai.foundation/?selected=egeria).
+The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is scheduled for 15th December 2022.  Please encourage people who work with Egeria to *Star* each of our repositories on GitHub as we are trying to get [our total count to 1000](https://landscape.lfai.foundation/?selected=egeria).
 
 ### Moving to Gradle
 

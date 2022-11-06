@@ -22,9 +22,9 @@ The open metadata conformance platform workbench is responsible for testing the 
 
 This workbench supports the following profiles:
 
-| Profile | Description |
-|---|---|
-| [Platform origin](../profiles/platform-origin) | Does the platform support the `server-platform-origin` API. |
+| Profile                                                                    | Description |
+|----------------------------------------------------------------------------|---|
+| [Platform origin](/guides/cts/platform-workbench/profiles/platform-origin) | Does the platform support the `server-platform-origin` API. |
 
 ## Repository workbench
 
@@ -40,25 +40,25 @@ In addition, this workbench dynamically generates tests based on the types retur
 
 The functions expected of an open metadata repository are numerous. These functions are broken down into the profiles listed below. An open metadata repository needs to support at least one profile to be conformant: in practice, metadata sharing is required in order to support any of the other profiles, so it is mandatory.
 
-| Profile | Description |
-|---|---|
-| [Metadata sharing](../repository-profiles/metadata-sharing) | The technology under test is able to share metadata with other members of the cohort. |
-| [Reference copies](../repository-profiles/reference-copies) | The technology under test is able to store reference copies of metadata from other members of the cohort. |
-| [Metadata maintenance](../repository-profiles/metadata-maintenance) | The technology under test supports requests to create, update and purge metadata instances. |
-| [Effectivity dating](../repository-profiles/effectivity-dating) | The technology under test supports effectivity dating properties. |
-| [Dynamic types](../repository-profiles/dynamic-types) | The technology under test supports changes to the list of its supported types while it is running. |
-| [Graph queries](../repository-profiles/graph-queries) | The technology under test supports graph-like queries that return collections of metadata instances. |
-| [Historical search](../repository-profiles/historical-search) | The technology under test supports search for the state of the metadata instances at a specific time in the past. |
-| [Entity proxies](../repository-profiles/entity-proxies) | The technology under test is able to store stubs for entities to use on relationships when the full entity is not available. |
-| [Soft-delete and restore](../repository-profiles/soft-delete-restore) | The technology under test allows an instance to be soft-deleted and restored. |
-| [Undo an update](../repository-profiles/undo-update) | The technology under test is able to restore an instance to its previous version (although the version number is updated). |
-| [Reidentify instance](../repository-profiles/reidentify-instance) | The technology under test supports the command to change the unique identifier (guid) of a metadata instance. |
-| [Retype instance](../repository-profiles/retype-instance) | The technology under test supports the command to change the type of a metadata instance to either its super type or a subtype. |
-| [Rehome instance](../repository-profiles/rehome-instance) | The technology under test supports the command to update the metadata collection id for a metadata instance. |
-| [Entity search](../repository-profiles/entity-search) | The technology under test supports the ability to search for entity instances. |
-| [Relationship search](../repository-profiles/relationship-search) | The technology under test supports the ability to search for relationnship instances. |
-| [Entity advanced search](../repository-profiles/entity-advanced-search) | The technology under test supports the use of regular expressions to search for metadata instances. |
-| [Relationship advanced search](../repository-profiles/relationship-advanced-search) | The technology under test supports the use of regular expressions to search for relationship instances. |
+| Profile                                                                             | Description |
+|-------------------------------------------------------------------------------------|---|
+| [Metadata sharing](/guides/cts/repository-workbench/profiles/metadata-sharing)               | The technology under test is able to share metadata with other members of the cohort. |
+| [Reference copies](/guides/cts/repository-workbench/profiles/reference-copies)                         | The technology under test is able to store reference copies of metadata from other members of the cohort. |
+| [Metadata maintenance](/guides/cts/repository-workbench/profiles/metadata-maintenance)                 | The technology under test supports requests to create, update and purge metadata instances. |
+| [Effectivity dating](/guides/cts/repository-workbench/profiles/effectivity-dating)                     | The technology under test supports effectivity dating properties. |
+| [Dynamic types](/guides/cts/repository-workbench/profiles/dynamic-types)                               | The technology under test supports changes to the list of its supported types while it is running. |
+| [Graph queries](/guides/cts/repository-workbench/profiles/graph-queries)                               | The technology under test supports graph-like queries that return collections of metadata instances. |
+| [Historical search](/guides/cts/repository-workbench/profiles/historical-search)                       | The technology under test supports search for the state of the metadata instances at a specific time in the past. |
+| [Entity proxies](/guides/cts/repository-workbench/profiles/entity-proxies)                             | The technology under test is able to store stubs for entities to use on relationships when the full entity is not available. |
+| [Soft-delete and restore](/guides/cts/repository-workbench/profiles/soft-delete-restore)               | The technology under test allows an instance to be soft-deleted and restored. |
+| [Undo an update](/guides/cts/repository-workbench/profiles/undo-update)                                | The technology under test is able to restore an instance to its previous version (although the version number is updated). |
+| [Reidentify instance](/guides/cts/repository-workbench/profiles/reidentify-instance)                   | The technology under test supports the command to change the unique identifier (guid) of a metadata instance. |
+| [Retype instance](/guides/cts/repository-workbench/profiles/retype-instance)                           | The technology under test supports the command to change the type of a metadata instance to either its super type or a subtype. |
+| [Rehome instance](/guides/cts/repository-workbench/profiles/rehome-instance)                           | The technology under test supports the command to update the metadata collection id for a metadata instance. |
+| [Entity search](/guides/cts/repository-workbench/profiles/entity-search)                               | The technology under test supports the ability to search for entity instances. |
+| [Relationship search](/guides/cts/repository-workbench/profiles/relationship-search)                   | The technology under test supports the ability to search for relationnship instances. |
+| [Entity advanced search](/guides/cts/repository-workbench/profiles/entity-advanced-search)             | The technology under test supports the use of regular expressions to search for metadata instances. |
+| [Relationship advanced search](/guides/cts/repository-workbench/profiles/relationship-advanced-search) | The technology under test supports the use of regular expressions to search for relationship instances. |
 
 ## Performance workbench
 

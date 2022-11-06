@@ -7,7 +7,19 @@ Metadata is collected together, organized and maintained within a catalog servic
 
 Each of these resources are represented in open metadata as *[Assets](/concepts/asset)* and the catalog is often referred to as an asset catalog.
 
-Figure 1 shows the Egeria components that 
+The diagram below shows the Egeria components that make up the catalog.
+
+![Metadata Manager](metadata-manager-overview.svg)
+
+It includes:
+
+* [Metadata Access Store](/concepts/metadata-access-store) that provides the metadata management APIs and repository.
+* [Egeria General User Interface](/user-interfaces/general/overview) that provides asset search and lineage.
+* [Egeria Ecosystem User Interface](/user-interfaces/ecosystem) that supports editing metadata and managing the open metadata ecosystem.
+
+Egeria's Metadata Access Store supports metadata defined by the [Open Metadata Types](/types).  These types cover a wide range of metadata, and are dynamically extensible.
+
+--8<-- "docs/patterns/metadata-manager/categories-of-metadata.md"
 
 ## The contents of an asset catalog
 
@@ -269,7 +281,7 @@ Automation is critical when it comes to managing an asset catalog. It reduces th
 
 Some automation is easy and reliable, particularly for information that can be extracted directly from the digital technologies used to implement the assets. Other automation involves analytics to create a candidate result that may need to be confirmed and approved by a subject matter expert.  However, even when this human validation is necessary, the effort required is significantly less that manual maintenance of the catalog.
 
-Whenever subject matter experts are involved, it typically requires a change to their role in order to accommodate the time spent on the catalog. Often these experts are from a different part of the organization to the people receiving the benefit of their expertise, and so the organization's appreciation and use of the asset catalog needs to have matured to allow this to happen.
+Whenever subject-matter experts are involved, it typically requires a change to their role in order to accommodate the time spent on the catalog. Often these experts are from a different part of the organization to the people receiving the benefit of their expertise, and so the organization's appreciation and use of the asset catalog needs to have matured to allow this to happen.
 
 Therefore, as we look at the different types of automation, each comes with its own organizational maturity required to make it successful.
 

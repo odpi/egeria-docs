@@ -18,12 +18,15 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     ??? beginner "The open metadata ecosystem (10 mins)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/open-metadata-ecosystem.md"
         
-    ??? beginner "Different types of metadata (10 mins)"
-        --8<-- "docs/education/egeria-dojo/metadata-governance/categories-of-metadata.md"
+    ??? beginner "Different categories of metadata (10 mins)"
+        --8<-- "docs/patterns/metadata-manager/categories-of-metadata.md"
+
+    ??? beginner "Different types of metadata repository (10 mins)"
+        --8<-- "docs/education/egeria-dojo/metadata-governance/types-of-metadata-repository.md"
 
     ??? intermediate "Designing your metadata supply chains (45 mins)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/metadata-supply-chains.md"
-    
+
     ??? intermediate "Automating metadata capture (1.5 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/automating-metadata-capture.md"
 

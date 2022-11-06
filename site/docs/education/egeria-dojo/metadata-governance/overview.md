@@ -13,7 +13,7 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
 ???+ education "Metadata Governance Dojo starts here"
 
     ??? beginner "The importance of metadata governance (25 mins)"
-        --8<-- "docs/education/egeria-dojo/metadata-governance/metadata-governance-intro.md"
+        --8<-- "docs/patterns/metadata-governance/metadata-governance-intro.md"
 
     ??? beginner "The open metadata ecosystem (10 mins)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/open-metadata-ecosystem.md"

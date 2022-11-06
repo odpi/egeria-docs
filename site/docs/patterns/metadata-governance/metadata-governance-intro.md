@@ -13,7 +13,7 @@ Trust is hard to build and easy to destroy.  Maintaining trust begins with autho
 Consider this story ...
 
 !!! example "A tale about trust"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/sams-story.md"
+    --8<-- "docs/patterns/metadata-governance/sams-story.md"
 
 Is there any problem with the way that the bus company is operating?  How confident do you think Sam is that the bus company will provide a reliable service to get him to work every day?  What is the impact if Sam buys a car or uses a bike because he decides the bus company is not to be trusted?
 
@@ -27,8 +27,7 @@ If we translate this story to the digital world, organizations often provide sha
 The team providing the shared service should consider the documentation about it to be a key part of their deliverables.  Capturing this documentation as metadata and publishing it to the open metadata ecosystem increases its findability and comprehensibility.
 
 !!! example "Meanwhile, back at the bus company ..."
-    --8<-- "docs/education/egeria-dojo/metadata-governance/meanwhile-at-bus-company.md"
-
+    --8<-- "docs/patterns/metadata-governance/meanwhile-at-bus-company.md"
 
 It is often the case that if something is not being done, either:
 
@@ -41,7 +40,7 @@ Therefore, step one in solving such a problem is to appoint someone who is respo
 In metadata governance, we refer to the person responsible for ensuring that metadata about a service or dataset is complete, accurate and up-to-date as the *owner*.  The owner may not personally maintain the metadata since this may be automated, or be handled by others.  However, if there are problems with the metadata, the owner is the person responsible for sorting it out.
 
 !!! example "Fixing the bus timetables"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/fixing-the-bus-timetables.md"
+    --8<-- "docs/patterns/metadata-governance/fixing-the-bus-timetables.md"
 
 In the example above, the managing director identified where the action was occurring that should trigger the change.  She assigned an owner and ensured they had the resources (ie the new assistant) to ensure the updates were done.
 
@@ -51,14 +50,14 @@ When a change to the timetable occurred, the bus drivers' manager triggered the 
 
 We can generalise this process as follows, creating a reusable specification pattern for metadata governance:
 
-![Metadata Update Specification Pattern](metadata-update-specification-pattern.svg)
+![Metadata Update Specification Pattern](/patterns/metadata-governance/metadata-update-specification-pattern.svg)
 > A three-step specification pattern of *Trigger*, *Maintain Metadata* and *Make Visible*.
 
 For example, if a new deployment of a database occurs in the digital world, it could trigger a metadata update to capture any schema changes and then information about these changes is disseminated to the tools and consumers that need the information.
 
 The dissemination of specific changes to metadata can also act as a trigger for other metadata updates.  For example, the publishing of changes to a database schema could trigger a data profiling process against the database contents.  The data profiling process adds new metadata elements to the existing metadata, and hence the knowledge graph of metadata grows.
 
-![Linked metadata updates](linked-metadata-updates.svg)
+![Linked metadata updates](/patterns/metadata-governance/linked-metadata-updates.svg)
 
 The specification pattern above applies whether the governance is manual or automated.  All that changes is the mechanism.  
 
@@ -67,7 +66,7 @@ Triggers may be time-based, or an unsolicited update to metadata by an individua
 Consider metadata as a collection of linked facts making up a knowledge graph that describes the resources and their use by the organization.  The role of the tools, people and open metadata technology is to build, maintain and consume this knowledge graph to improve the operation of the organization.
 
 !!! example "Enriching customer service"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/enriching-customer-service.md"
+    --8<-- "docs/patterns/metadata-governance/enriching-customer-service.md"
 
 When metadata governance is done well, a rich conversation develops between service providers and their consumers that can lead to both improvements in the quality of the services and the expansion in the variety and amount of consumption; the real value of the service is measured by consumption.
 

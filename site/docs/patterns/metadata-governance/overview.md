@@ -3,6 +3,7 @@
 
 # Egeria for Metadata Governance
 
+--8<-- "docs/patterns/metadata-governance/metadata-governance-intro.md"
 
 
 --8<-- "snippets/abbr.md"

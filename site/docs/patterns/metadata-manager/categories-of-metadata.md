@@ -39,7 +39,6 @@ Data content analysis is often triggered periodically, based on the update frequ
 
 Metadata update triggers should focus around the tools where the consumer metadata is captured.  Typically, each piece of consumer feedback is treated as a separate trigger.
 
-
 ### Common definitions
 
 *Common definitions* describe standards for your data and its use.  They are organized into [subject areas](/concepts/subject-area), also known as topic areas or data domains, and their aim is to create a common understanding and processing across your digital landscape, improving the consistency of the different stores of data supporting your organization.
@@ -49,7 +48,6 @@ Updates to the related common definitions are typically edited offline, collecte
 ### Governance metadata
 
 *Governance metadata* describe the requirements of a particular [Governance Domain](/concepts/governance-domain) and their associated controls, metrics and implementations.  They are managed in releases in a similar way to common definitions.  Therefore, their releases act a triggers. 
-
 
 ### Organizational metadata
 
@@ -81,15 +79,7 @@ You can think of the metadata described above as the facts about your organizati
 
 *Metadata classifications* are used to label metadata as having particular characteristics.  This helps group together similar elements, or elements that represent resources that need similar processing
 
-## Types of metadata repository
-
-Many metadata repositories are *data catalogs*.  They focus on gathering and organizing information about data sources for a team of data professionals.  Each data source is catalogued under the guidance of its users.  There is some automation for maintaining the catalogued data sources.  The aim is to provide the metadata needed by the local team.
-
-There are also metadata repositories that focus on providing metadata to the whole enterprise. These repositories have a focus on common definitions and automation of metadata maintenance and stewardship.  They are deployed and controlled as a centralized service.  Some of these repositories are specialized for different types of use cases and often includes support for governance - for example, it may have a focus on Data Governance, IT Infrastructure Governance or Security Governance.
-
-There are many tools and platforms that capture metadata as part of their operation. For example, a relational database has information about the data it stores (called the database schema) that is used to define and execute a query.  This metadata is used in tools that are building queries to the database - such as reporting, profiling and application development tools.
-
-## Summary
+### Summary
 
 Hopefully the discussion above has helped to illustrate that metadata is varied and can be built into a rich knowledge base that drives organizational objectives  through increased visibility, utilization and management of an organization's digital assets.
 

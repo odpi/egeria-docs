@@ -3,8 +3,20 @@
 
 ## Metadata supply chains
 
-The open metadata ecosystem collects, links and disseminates metadata from many sources.  Inevitably there will be inconsistencies and errors in the metadata and there need to be standards and rules that help identify the source of metadata and control how it is updated.
+The open metadata ecosystem collects, links and disseminates metadata from many sources.  However, it is designed in an iterative, agile manner, adding new use cases and capabilities over time.
 
-Metadata is broken down into 
+Each stage of development considers a particular source of metadata and where it needs to be distributed to.  Consider this scenario...  
+
+There is a database server that is used to store application data that is of interest to other teams.  An initiative is started to automatically capture the schemas of the databases on this database server.  This schema information will be replicated to two destinations:
+
+* An analytics tool that is in use by a data science team.  This tool uses schema information in its own catalog to show the data science team what data is available.
+* Another database server in a different data centre that will only be used in an emergency to load the back-up of the original database server.
+
+![metadata supply chain scenario](metadata-supply-chains-scenario.svg)
+
+
+
+
+
 
 --8<-- "snippets/abbr.md"

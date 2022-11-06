@@ -1,17 +1,17 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Trouble shooting issues with the integration daemon
+# Troubleshooting issues with the integration daemon
 
 The [integration daemon](/concepts/integration-daemon)
 is designed to run as a background process.  It hosts 
 [integration connectors](/concepts/integration-connector)
 that exchange metadata with third party technologies.  It also
-make calls to a metadata server in order to retrieve and maintain metadata in the open metadata ecosystem.
+makes calls to a metadata server in order to retrieve and maintain metadata in the open metadata ecosystem.
 
 Most of the time an integration daemon operates without intervention.  However, because digital landscapes are
 dynamic, the integration daemon outputs messages to the audit log when it is starting, stopping,
-refreshing the connectors and also if one of the connectors throws a exception.
+refreshing the connectors and also if one of the connectors throws an exception.
 This allows a remote operator to monitor for issues.
 The integration daemon also has simple REST API for manually restarting and refreshing the connectors
 to enable the integration daemon to recover from errors.
@@ -48,8 +48,8 @@ and any errors or failures.
 
 #### Server start up messages
 
-The start up messages confirm that the integration daemon started successfully.
-Here is an example of the start up of a server:
+The start-up messages confirm that the integration daemon started successfully.
+Here is an example of the start-up of a server:
 
 ```
 Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMRS-AUDIT-0064 The Open Metadata Repository Services (OMRS) has initialized the audit log for the Integration Daemon called exchangeDL01
@@ -112,18 +112,16 @@ of the correct type to run in the Database Integrator OMIS integration service.
 It must inherit from org.odpi.openmetadata.integrationservices.database.connector.DatabaseIntegratorConnector
 ```
 
-This is will not be resolved until either the code is corrected to implement the Database Integrator OMIS connector interface, 
+This will not be resolved until either the code is corrected to implement the Database Integrator OMIS connector interface, 
 or the connector is reconfigured to run in the integration service that matches its implementation.
 
 ### Retrieving status of the connectors
 
-It is also possible to retrieve the status of the connectors in the
-integration daemon through the following command:
+It is also possible to retrieve the status of the connectors in the integration daemon through the following command:
 ```
 GET {serverRootURL}/servers/{serverName}/open-metadata/integration-daemon/users/{userId}/status
 ```
-Provided the integration daemon is running, it returns a list of connectors with their statuses.
-You can see the same errors that where recorded in the start up messages.
+Provided the integration daemon is running, it returns a list of connectors with their statuses. You can see the same errors that where recorded in the start-up messages.
 
 ```json
 {
@@ -183,16 +181,13 @@ You can see the same errors that where recorded in the start up messages.
     ]
 }
 ```
-If the `cocoMDS1` metadata server is restarted, the status of the connectors does not change.
-This is because once a connector goes into **FAILED**
-status (caused by the connector throwing an exception on one of its standard methods), it needs to be restarted before the integration daemon will start calling it again.  It is possible to restart all connectors
-registered with an integration service with the following command:
+
+If the `cocoMDS1` metadata server is restarted, the status of the connectors does not change. This is because once a connector goes into **FAILED** status (caused by the connector throwing an exception on one of its standard methods), it needs to be restarted before the integration daemon will start calling it again.  It is possible to restart all connectors registered with an integration service with the following command:
 
 ```
 GET {serverRootURL}/servers/{serverName}/open-metadata/integration-daemon/users/{userId}/integration-service/{service-url-marker}/restart
 ```
-If you only want to restart a single connector, add the connector name to the request body.
-The `service-url-marker` for each integration services can be located using the following command:
+If you only want to restart a single connector, add the connector name to the request body. The `service-url-marker` for each integration services can be located using the following command:
 
 ```
 GET {serverRootURL}/servers/{serverName}/platform-services/users/{userId}/server-platform/registered-services/integration-services
@@ -246,6 +241,7 @@ So the `service-url-marker` for the Files Integrator OMIS is `files-integrator`.
 
 
 Once the Files Integrator OMIS connectors are restarted, the status changes.  Disappointingly, there are still problems.
+
 ```json
 {
     "class": "IntegrationDaemonStatusResponse",
@@ -304,10 +300,9 @@ Once the Files Integrator OMIS connectors are restarted, the status changes.  Di
     ]
 }
 ```
-However, it is clear from the message identifier `BASIC-FILES-INTEGRATION-CONNECTORS-404-001` that the problem is
-being reported by the connector itself.  This means the integration service is now working ok even if the connectors are not.
+However, it is clear from the message identifier `BASIC-FILES-INTEGRATION-CONNECTORS-404-001` that the problem is being reported by the connector itself.  This means the integration service is now working ok even if the connectors are not.
 
-Once the expected directories (folders) are created, the files integration connectors and be restarted and begin to work:
+Once the expected directories (folders) are created, the *files* integration connectors and be restarted and begin to work:
 
 ```json
 {
@@ -367,25 +362,21 @@ Once the expected directories (folders) are created, the files integration conne
 
 ## Resynchronizing after a failure
 
-If a connector has been unavailable for a while, it is possible it has missed some metadata changes
-either in the third party technology or in the open metadata ecosystem.  The integration daemon
-has a REST API to call `refresh` on:
+If a connector has been unavailable for a while, it is possible it has missed some metadata changes either in the third party technology or in the open metadata ecosystem.  The integration daemon has a REST API to call `refresh` on:
+* 
 * All connectors
 * All connectors in an integration service
 * A single connector
 
-The refresh command requests that the connector does a comparision of the metadata in its
-third party technology and the open metadata ecosystem and make good any discrepancies it finds.
+The refresh command requests that the connector does a comparison of the metadata in its third party technology and the open metadata ecosystem and make good any discrepancies it finds.
 
-These are the three forms of the refresh call in the order listed above.
-The first refreshes all connectors running in the integration daemon.
+These are the three forms of the refresh call in the order listed above. The first refreshes all connectors running in the integration daemon.
 
 ```
 POST {serverRootURL}/servers/{serverName}/open-metadata/integration-daemon/users/{userId}/refresh
 ```
 
-This second command refreshes all connectors running under an integration service.
-If the name of a connector is included in the request body then just that connector is refreshed.
+This second command refreshes all connectors running under an integration service. If the name of a connector is included in the request body then just that connector is refreshed.
 
 ```
 POST {serverRootURL}/servers/{serverName}/open-metadata/integration-daemon/users/{userId}/integration-service/{service-url-marker}/refresh

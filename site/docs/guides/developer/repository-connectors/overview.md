@@ -14,4 +14,16 @@ You may want to see the [OMRS metamodel](/guides/developer/metamodel/overview) f
 
     For cases where the tool is unable to do so, we are actively investigating other mitigation measures like providing a [Smart Repository Proxy :material-github:](https://github.com/odpi/egeria/issues/5402){ target=gh } to ensure that any changes to metadata that violate the protocol remain isolated in that third party technology and are not inadvertently propagated elsewhere in the cohort.
 
+
+!!! info "Consider integrating Catalogs with Asset Manager OMAS"
+
+    The [Asset Manager OMAS](/services/omas/asset-manager-overview) (in conjunction with the [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)) provides a new integration path for asset managers that goes via an integration service hosted in an [integration daemon](/concepts/integration-daemon).
+
+    Catalogs will be able to have a two-way integration through this path without needing to conform to the repository service rules for managing home and reference copies. This is possible for two reasons:
+
+    * Since the metadata from the catalog passes through an OMAS, Egeria will be able to have a better control of the metadata from the catalog.
+    * Since the catalog is not part of a federated query, any inconsistent updates to metadata that occurs in its repository, only impacts the users of that catalog and not the whole cohort.
+
+    If your catalog is not able to support reference copies, you may want to considerthis option
+
 --8<-- "snippets/abbr.md"

@@ -3,7 +3,7 @@
 
 # Repository find attribute type definitions by category test case
 
-This test validates that all of the supported AttributeTypeDefs can be retrieved by category.
+This test validates that all the supported AttributeTypeDefs can be retrieved by category.
 
 ## Operation
 
@@ -53,6 +53,4 @@ the original complied lists.
 }
 ```
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

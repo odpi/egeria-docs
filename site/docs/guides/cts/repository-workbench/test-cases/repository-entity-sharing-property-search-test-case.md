@@ -5,7 +5,7 @@
 
 This test validates that a repository connector supports `findEntitiesByProperty` using match properties
 and `findEntitiesByPropertyValue` using search criteria, where the repository does not support the
-creation of metadat instances through the metadata collection interface. Such a repository does not
+creation of metadata instances through the metadata collection interface. Such a repository does not
 support methods like addEntity() or addRelationship(). This testcase relies on there being existing instances
 in the repository; it performs a broad search to retrieve an initial set of instances, and then performs
 finer-grain searches and verifies that the results are consistent with the initial instance set and the
@@ -61,6 +61,4 @@ There are no discovered properties for this test - the search capabilities are p
 
 
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.
+---8<-- "snippets/abbr.md"

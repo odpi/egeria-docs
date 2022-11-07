@@ -151,8 +151,12 @@ nav:
           - Diagnostic Process: guides/diagnostic/overview.md
           - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
           - First failure data capture (FFDC): guides/diagnostic/ffdc.md
+          - Server Diagnostic Guides:
+              - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
+              - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
+          - Egeria General User UI: user-interfaces/general/overview
           - Egeria Ecosystem UI:
               - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
               - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md

@@ -3,9 +3,6 @@
 
 ## Configuring the integration daemon
 
-!!! info "Covering ..."
-    - Using the connector catalog
-    - Configuring connectors in the integration daemon
 
 The integration daemon's configuration contains a list of integration connectors that the integration daemon is to run.  The configuration for each integration connector describes the connector implementation to use, how often to call it and the open metadata services that it needs.
 

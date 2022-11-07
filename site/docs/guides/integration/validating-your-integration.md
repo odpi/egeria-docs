@@ -3,9 +3,6 @@
 
 ## Validating your integration
 
-!!! info "Covering ..."
-    - Reviewing diagnostics and resulting metadata
-
 Once the integration daemon is configured it can be started.  It will read the configuration and start up the integration connectors described within.
 
 Once it is running, the following command can be used to show the status of the integration connectors

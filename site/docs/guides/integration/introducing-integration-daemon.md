@@ -19,7 +19,7 @@ Running in the integration daemon are [integration connectors](/concepts/integra
 
 An integration connector is specialized for a particular technology.  The integration daemon provides specialized services based of different types of technology, in order to simplify the work of the integration connector.  These specialized services are called the [Open Metadata Integration Services (OMISs)](/services/omis).  Each integration connector is paired with an OMIS and, the OMIS is paired with a relevant [Open Metadata Access Service (OMAS)](/services/omas) running in the [Metadata Access Server](/concepts/metadata-access-server).
 
-
+![Inside Integration Daemon](/services/integration-daemon-internals.svg)
 
 
 --8<-- "snippets/abbr.md"

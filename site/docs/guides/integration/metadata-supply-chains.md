@@ -8,7 +8,7 @@ The open metadata ecosystem collects, links and disseminates metadata from many 
 Each stage of development considers a particular source of metadata and where it needs to be distributed to.  Consider this scenario...  
 
 !!! example "Database schema capture and distribution"
-    There is a database server (*Database Server 1*)that is used to store application data that is of interest to other teams.  An initiative is started to automatically capture the schemas of the databases on this database server.  This schema information will be replicated to two destinations:
+    There is a database server (*Database Server 1*) that is used to store application data that is of interest to other teams.  An initiative is started to automatically capture the schemas of the databases on this database server.  This schema information will be replicated to two destinations:
 
     * Another database server (*Database Server 2*) is used by a data science team as a source of data for their work.  An ETL job runs every day to refresh the data in this database with data from the first database.  The data is anonymized by the ETL job, but the schema and data profile remains consistent.  If the schema in the first database changes, the schema in the second database must be updated consistently before the ETL job runs; otherwise it will fail.
     * The analytics tool that is also used by the data science team has a catalog of data sources to show the data science team what data is available.  This needs to be kept consistent with the structure of the databases.  The tool does provide a feature to refresh the data source schema in its catalog, but the team are often unaware of changes, or simply forget to do it, and only discover the inconsistency when their models fail to run properly.
@@ -25,14 +25,15 @@ The integration of these third party technologies with the open metadata ecosyst
 ![metadata supply chain integration points](/guides/integration/integration-points.svg)
 > Four integration steps to capture and distribute the database schema metadata from *Database Server 1*.
 
+Here is another view of the process, but shown as a flow from left to right.
+
+![Metadata supply chain integration points](/guides/integration/metadata-supply-chain.svg)
+
 At each stage, there is a trigger (typically detecting something has changed), metadata is assembled, updated and when it is read, made visible through the open metadata ecosystem.
 
 ![Metadata Update Specification Pattern](/patterns/metadata-governance/metadata-update-specification-pattern.svg)
 > A three-step specification pattern of *Trigger*, *Maintain Metadata* and *Make Visible*.
 
-Here is another view of the process, but shown as a flow from left to right.
-
-![Metadata supply chain integration points](metadata-supply-chain.svg)
 
 The implementation of the three-step pattern for each part of the integration is located in an [integration connector](/concepts/integration-connector).  Integration connectors are configurable components that are designed to work with a specific third party technology.  There would be 4 configured integration connectors to support the scenario above.  However, the implementation of the integration connectors for parts 1 and 3 would be the same implementation, just 2 instances, each configured to work with a different database server.
 
@@ -44,7 +45,7 @@ The diagram below shows the decentralized option.
 
 ![Decentralized deployment](/guides/integration/decentralized-integration-daemons.svg)
 
-The value of this type of deployment choice is that control of the metadata integration remains with the teams that own the third party technology, and so upgrades, back-ups and outages can be coordinated.
+This type of deployment choice keeps control of the metadata integration with the teams that own the third party technology, and so upgrades, back-ups and outages can be coordinated.
 
 The implementation of the open metadata ecosystem that connects the integration daemons can also be centralized or decentralized.  This first diagram shows two integration daemons connecting into a centralized [metadata access store](/concepts/metadata-access-store) that provides the open metadata repository.
 
@@ -74,13 +75,13 @@ ETL engines have a long history of capturing lineage, since it is a common requi
 
 ### Summary
 
-In this guide your have seen that integration with the open metadata ecosystem is built up iteratively using *integration connectors* running in an *integration daemon*.  Open metadata is store in *metadata access stores* and shared across the open metadata ecosystem using a *cohort*.  It is also possible to plug in a third party metadata repository using a *repository proxy*.
+In this guide your have seen that integration with the open metadata ecosystem is built up iteratively using *integration connectors* running in an *integration daemon*.  Open metadata is stored in *metadata access stores* and shared across the open metadata ecosystem using a *cohort*.  It is also possible to plug in a third party metadata repository using a *repository proxy*.
 
 ![Complete integration solution](/guides/integration/integrated-solution.svg)
 
 !!! education "Related information"
     - [Choosing the integration style for metadata repositories/catalogs](/guides/integration/types-of-metadata-repository)
-    - [Building an integration connector](/guides/developer/integration-connectors)
-    - [Building a repository connector](/guides/developer/repository-connectors)
+    - [Building an integration connector](/guides/developer/integration-connectors/overview)
+    - [Building a repository connector](/guides/developer/repository-connectors/overview)
 
 --8<-- "snippets/abbr.md"

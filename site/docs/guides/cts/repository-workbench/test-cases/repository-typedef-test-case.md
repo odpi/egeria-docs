@@ -23,7 +23,7 @@ is valid and consistent with other calls.
   Each type definition should have a unique identifier.  The combination
   of the name and guid is often used to ensure the correct type is being used
   since it is possible that two repositories may define different types
-  with the same name.  These two types are unlikely to have the same guid so it
+  with the same name.  These two types are unlikely to have the same guid, so it
   is possible to identify the conflict.
   
 * **repository-typedef-`type name`-03** - type definition has a version number.
@@ -40,7 +40,7 @@ is valid and consistent with other calls.
   
 * **repository-typedef-`type name`-05** - type definition has a valid category.
 
-  Each type definition has a category that indicates whether the it is
+  Each type definition has a category that indicates whether it is
   an entity definition (EntityDef), a relationship definition (RelationshipDef)
   or a classification definition (ClassificationDef).
   
@@ -150,7 +150,5 @@ is valid and consistent with other calls.
 ```
 
 
+--8<-- "snippets/abbr.md"
 
-----
-License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
-Copyright Contributors to the ODPi Egeria project.

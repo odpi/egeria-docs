@@ -15,6 +15,7 @@ You can make your own choices on how to build trust in your data/metadata.  Eger
 * Egeria provides technology to manage, store, distribute this standardized metadata.  This technology is inherently distributed, enabling you to work across multiple cloud platforms, data centres and other distributed environments. Collectively, a deployment of this technology is referred to as the *open metadata ecosystem*.
 
 * Egeria provides connector interfaces to allow third party technology to plug into the open metadata ecosystem.  These connectors translate metadata from the third party technology's native format to the open metadata format.  This allows:
+  
   * Collaboration
   * Blending automation and manual processes
   * Comprehensive security and privacy controls

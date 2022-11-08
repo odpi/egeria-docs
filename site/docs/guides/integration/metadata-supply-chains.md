@@ -10,7 +10,7 @@ Each stage of development considers a particular source of metadata and where it
 !!! example "Database schema capture and distribution"
     There is a database server (*Database Server 1*) that is used to store application data that is of interest to other teams.  An initiative is started to automatically capture the schemas of the databases on this database server.  This schema information will be replicated to two destinations:
 
-    * Another database server (*Database Server 2*) is used by a data science team as a source of data for their work.  An ETL job runs every day to refresh the data in this database with data from the first database.  The data is anonymized by the ETL job, but the schema and data profile remains consistent.  If the schema in the first database changes, the schema in the second database must be updated consistently before the ETL job runs; otherwise it will fail.
+    * Another database server (*Database Server 2*) is used by a data science team as a source of data for their work.  An ETL job runs every day to refresh the data in this database with data from the first database.  The data is anonymized by the ETL job, but the schema and data profile remains consistent.  If the schema in the first database changes, the ETL job is updated at the same time.  However, the schema in the second database is not updated because the team making the change do not have access to it.  Nevertheless it must be updated consistently before the ETL job runs; otherwise it will fail.
     * The analytics tool that is also used by the data science team has a catalog of data sources to show the data science team what data is available.  This needs to be kept consistent with the structure of the databases.  The tool does provide a feature to refresh the data source schema in its catalog, but the team are often unaware of changes, or simply forget to do it, and only discover the inconsistency when their models fail to run properly.
 
     ![metadata supply chain scenario](/guides/integration/metadata-supply-chains-scenario.svg)
@@ -47,7 +47,7 @@ The diagram below shows the decentralized option.
 
 This type of deployment choice keeps control of the metadata integration with the teams that own the third party technology, and so upgrades, back-ups and outages can be coordinated.
 
-The implementation of the open metadata ecosystem that connects the integration daemons can also be centralized or decentralized.  This first diagram shows two integration daemons connecting into a centralized [metadata access store](/concepts/metadata-access-store) that provides the open metadata repository.
+The implementation of the open metadata ecosystem that connects the integration daemons can also be centralized or decentralized.  This next diagram shows two integration daemons connecting into a centralized [metadata access store](/concepts/metadata-access-store) that provides the open metadata repository.
 
 ![Centralized metadata store](/guides/integration/centralized-metadata-store.svg)
 
@@ -65,7 +65,7 @@ In the scenario above, data from *Database Server 1* is extracted, anonymized an
 
 The data scientist team want to know the source of each of the databases they are working with.  The metadata that describes the source of data is called [lineage](/concepts/lineage).  Ideally it is captured by the ETL engine to ensure it is accurate.
 
-ETL engines have a long history of capturing lineage, since it is a common requirement by regulated industries.  The diagram below shows three choices on how an ETL engine may handle its lineage metadata.
+ETL engines have a long history of capturing lineage, since it is a common requirement in regulated industries.  The diagram below shows three choices on how an ETL engine may handle its lineage metadata.
 
 * In the first box on the left, the ETL engine has its own metadata repository and so it is integrated into the open metadata ecosystems via the integration daemon (in the same way as the database and analytics workbench).
 * In the middle box, the ETL engine is producing lineage events that follow the [OpenLineage Standard](/features/lineage-management/overview/#the-openlineage-standard).  The integration daemon has native support for this standard and so the ETL Engine can send these events directly to the integration daemon which will pass them to any integration connector that is configured to receive them.

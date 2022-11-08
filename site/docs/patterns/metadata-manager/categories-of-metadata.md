@@ -14,16 +14,18 @@ The most commonly collected metadata is *technical metadata* that describes the 
 
 * The databases and their database schema (table and column definitions) configured in a database server.
 * APIs and their interface specification implemented by applications and other software services to request actions and query data.
-* The events and their schemas used to send notifications between applications, services and servers to help synchronized their activity.
+* The events and their schemas used to send notifications between applications, services and servers to help synchronize their activity.
 * The files stored on the file system.
 
-Technical metadata is the easiest type of metadata to maintain since many technologies provide APIs/events to query the technical metadata for the digital resources it is managing.
+Technical metadata is the easiest type of metadata to maintain since many technologies provide APIs/events to query the technical metadata for the digital resources being managed.
 
 To keep your technical metadata up-to-date you need to consider the following types of metadata update triggers:
 
 * whenever new digital resources are deployed into production, 
 * events that indicate that the digital resources have changed
-* regular scanning of the deployment to validate that all technical metadata has been captured.
+* regular scanning of the deployed IT environment to validate that all technical metadata has been captured (and nothing rogue has been added).
+
+Ideally you want your metadata governance to engage in the lifecycles that drive changes in the technical metadata - for example, adding management of technical metadata as part of the software development lifecycle (SDLC) or CI/CD pipelines.
 
 Collecting and maintaining technical metadata builds an inventory of your digital resources that can be used to count each type of digital resources and act as a list to work through when regular maintenance is required.  It also helps people locate specific types of digital resources.
 
@@ -31,23 +33,36 @@ Collecting and maintaining technical metadata builds an inventory of your digita
 
 The technical metadata typically describes the structure and configuration for digital resources. Analysis tools can add to this information by analysing the data content of the digital resources. The results create a characterization of the data content that helps potential consumers select the digital resources best suited for their needs.
 
-Data content analysis is often triggered periodically, based on the update frequency that the digital resource experiences.  It can also be triggered when the technical metadata is first catalogued or updated.
+Data content analysis is often triggered periodically, based on the update frequency that the digital resource typically experiences.  It can also be triggered when the technical metadata is first catalogued or updated.  If the digital resource is really important, and used in Analytics/AI you need to check more often to validate that no significant changes have occurred.
 
 ### Consumer metadata
 
-*Consumer metadata* includes the comments, reviews, tags added by the users that are consuming the metadata and the digital resources it describes.  This metadata is gathered from the tools through which the users consume the metadata and the digital resources.  It is then used to assess the value and popularity of the metadata and digital resources to their consumers.
+*Consumer metadata* includes the comments, reviews, tags added by the users that are consuming the metadata and the digital resources it describes.  This metadata is gathered from the tools through which the users consume the metadata and the digital resources.  It is then used to assess the value and popularity of the metadata and digital resources to the broader community.
 
 Metadata update triggers should focus around the tools where the consumer metadata is captured.  Typically, each piece of consumer feedback is treated as a separate trigger.
 
 ### Common definitions
 
-*Common definitions* describe standards for your data and its use.  They are organized into [subject areas](/concepts/subject-area), also known as topic areas or data domains, and their aim is to create a common understanding and processing across your digital landscape, improving the consistency of the different stores of data supporting your organization.
+*Common definitions* describe standards for your data and its use.  It typically involves:
+
+* [Glossary definitions](/practices/common-data-definitions/anatomy-of-a-glossary) describing the meaning of data values, 
+* [Reference data](/types/5/0545-Reference-Data) describing valid values and mappings for data values,
+* [Technical controls](/types/4/0430-Technical-Controls) defining quality rules and processing rules - such as anonymization/encryption requirements, 
+* [Terms and conditions](/types/4/0483-Terms-And-Conditions) of use,
+* [Governance action classifications](/types/4/0422-Governance-Action-Classifications) such as level of confidentiality, expected retention period, how critical this type of data is ...,
+* [Data classes](/concepts/data-class) are logical types for data used to characterize data during analysis.
+* [Standard/preferred schemas](/concepts/schema) and [associated implementation snippets](/types/5/0504-Implementation-Snippets) to guide developers to improve the consistency of data representation across the digital landscape.
+
+Common definitions are organized into [subject areas](/concepts/subject-area), also known as topic areas or data domains, and their aim is to create a common understanding of the content and standard processing rules across your digital landscape, improving the consistency of the values in different stores of data supporting your organization.
 
 Updates to the related common definitions are typically edited offline, collected, and then disseminated together as a new release. Therefore, the metadata update trigger is often related to the release of a collection of common definitions.
 
+??? info "Further reading ..."
+   [Open Metadata Types for Common Definitions](/practices/common-data-definitions/open-metadata-for-common-definitions)
+
 ### Governance metadata
 
-*Governance metadata* describe the requirements of a particular [Governance Domain](/concepts/governance-domain) and their associated controls, metrics and implementations.  They are managed in releases in a similar way to common definitions.  Therefore, their releases act a triggers. 
+*Governance metadata* describe the requirements of a particular [Governance Domain](/concepts/governance-domain) and their associated controls, metrics and implementations.  They are managed in releases in a similar way to common definitions.  Therefore, their releases act a triggers to further actions. 
 
 ### Organizational metadata
 
@@ -55,7 +70,7 @@ Updates to the related common definitions are typically edited offline, collecte
 
 Organization metadata is often managed in existing applications run by Human Resources and Corporate Security.  Therefore, updates in these applications are used to trigger updates to the organizational metadata in the open metadata ecosystem.
 
-Governance action can trigger the creation of new roles and appointments to these roles.  These elements can be then be disseminated on to the appropriate applications for information, verification and/or approval.
+Governance actions can trigger the creation of new roles and appointments to these roles.  These elements can be then be disseminated to the appropriate applications for information, verification and/or approval.
 
 ### Process metadata
 

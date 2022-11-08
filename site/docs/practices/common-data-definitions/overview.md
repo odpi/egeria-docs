@@ -15,7 +15,7 @@ Typically, the common data definitions consist of:
 
 The common data definitions are managed in a metadata catalog and are grouped into [subject areas](/concepts/subject-area).  The core definitions that cover the meaning of data are described in one or more [glossaries](/practices/common-data-definitions/anatomy-of-a-glossary).These are augmented by valid values, reference data and quality rules.
 
-Governance classifications may be added to these definitions which in turn link to governance requirements.   This determines how data that is linked to these common definitions should be governed.
+[Governance action classifications](/types/4/0422-Governance-Action-Classifications) may be added to these definitions which in turn link to governance requirements.   This determines how data that is linked to these common definitions should be governed.
 
 Tools used by the organization to, for example, create new data stores, data visualizations, or APIs, or analytics models are pre-populated with concrete data definitions by automated tool bridges. Each tool bridge extracts the relevant definitions from the metadata catalog, generates the concrete definitions and loads them into the tool.  Where possible, these definitions include tags that link the definitions back to the common data definitions.
 

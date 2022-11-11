@@ -15,6 +15,6 @@ Egeria uses javadoc extensively in its Java runtime.  The Javadoc website produc
 ??? education "Further information"
     
     * [How to create javadoc](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javadoc.html)
-    * [Egeria's coding standards](/guides/contributor/guidelines/#javadoc)"
+    * [Egeria's coding standards](/guides/contributor/guidelines/#javadoc)
 
 --8<-- "snippets/abbr.md"

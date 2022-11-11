@@ -91,6 +91,7 @@ Its connection definition to use on the [administration commands that configure 
                             }]
                         }
         }
+        ```
         
         - Add the name of the topic in {{openLineageTopicName}}; the integration daemon's server id in {{localServerId}} and the enpoint for Apache Kafka (for example localhost:9092) in {{kafkaEndpoint}}.
 

@@ -715,6 +715,7 @@ nav:
       - Integration Connector: concepts/integration-connector.md
       - Integration Daemon: concepts/integration-daemon.md
       - IsPublic: concepts/is-public.md
+      - Javadoc: concepts/javadoc.md
       - Karma Point: concepts/karma-point.md
       - Karma Point Threshold: concepts/karma-point.md
       - Karma Point Plateau: concepts/karma-point-plateau.md

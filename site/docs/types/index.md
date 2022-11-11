@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -10,22 +5,24 @@ hide:
 
 Knowledge about data is spread amongst many people and systems. One of the roles of a metadata repository is to provide a place where this knowledge can be collected and correlated, as automated as possible. To enable different tools and processes to populate the metadata repository we need agreement on what data should be stored and in what format (structures).
 
-The different areas of metadata that we need to support for a wide range of metadata management and governance tasks include:
+## Open metadata subject areas
+
+The different subject areas of metadata that we need to support for a wide range of metadata management and governance tasks include:
 
 ![Open metadata areas](open-metadata-areas.png)
 
 This metadata may be spread across different metadata repositories that each specialize in particular use cases or communities of users.
 
-| Area | Description |
-|---|---|
-| [Area 0](0) | describes base types and infrastructure. This includes the root type for all open metadata entities called `OpenMetadataRoot` and types for `Asset`, `DataSet`, `Infrastructure`, `Process`, `Referenceable`, `SoftwareServer` and `Host`. |
-| [Area 1](1) | collects information from people using the data assets. It includes their use of the assets and their feedback.  It also manages crowd-sourced enhancements to the metadata from other areas before it is approved and incorporated into the governance program. |
-| [Area 2](2) | describes the data assets. These are the data sources, APIs, analytics models, transformation functions and rule implementations that store and manage data. The definitions in Area 2 include connectivity information that is used by the open connector framework (and other tools) to get access to the data assets. |
+| Area | Description                                                                                                                                                                                                                                                                                                                                                             |
+|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Area 0](0) | describes base types and infrastructure. This includes the root type for all open metadata entities called `OpenMetadataRoot` and types for `Asset`, `DataSet`, `Infrastructure`, `Process`, `Referenceable`, `SoftwareServer` and `Host`.                                                                                                                              |
+| [Area 1](1) | collects information from people using the data assets. It includes their use of the assets and their feedback.  It also manages crowd-sourced enhancements to the metadata from other areas before it is approved and incorporated into the governance program.                                                                                                        |
+| [Area 2](2) | describes the data assets. These are the data sources, APIs, analytics models, transformation functions and rule implementations that store and manage data. The definitions in Area 2 include connectivity information that is used by the open connector framework (and other tools) to get access to the data assets.                                                |
 | [Area 3](3) | describes the glossary. This is the definitions of terms and concepts and how they relate to one another.  Linking the concepts/terms defined in the glossary to the data assets in Area 2 defines the meaning of the data that is managed by the data assets. This is a key relationship that helps people locate and understand the data assets they are working with. |
-| [Area 4](4) | defines how the data assets should be governed. This is where the classifications, policies and rules are defined. |
-| [Area 5](5) | is where standards are established. This includes data models, schema fragments and reference data that are used to assist developers and architects in using best practice data structures and valid values as they develop new capabilities around the data assets. |
-| [Area 6](6) | provides the additional information that automated metadata discovery engines have discovered about the data assets. This includes profile information, quality scores and suggested classifications. |
-| [Area 7](7) | provides the structures for recording lineage. |
+| [Area 4](4) | defines how the data assets should be governed. This is where the classifications, policies and rules are defined.                                                                                                                                                                                                                                                      |
+| [Area 5](5) | is where standards are established. This includes data models, schema fragments and reference data that are used to assist developers and architects in using best practice data structures and valid values as they develop new capabilities around the data assets.                                                                                                   |
+| [Area 6](6) | provides the additional information that automated metadata discovery engines have discovered about the data assets. This includes profile information, quality scores and suggested classifications.                                                                                                                                                                   |
+| [Area 7](7) | provides the structures for recording lineage and providing traceability to the business.                                                                                                                                                                                                                                                                        |
 
 The following diagram provides more detail of the metadata structures in each area and how they link together:
 
@@ -64,7 +61,15 @@ The UML model diagrams show the currently active types. Some types and attribute
 
 ## Attribute type definitions
 
-The properties defined on each open metadata type will be one of the following attribute types:
+The properties defined on each open metadata type must be a defined attribute type.  There are three choices:
+
+* Primitives (described by *PrimitiveDefs*).
+* Collections such as arrays and maps (described by *CollectionDefs*).
+* Enumerations - that is lists of valid values (described by *EnumDefs*).
+
+### Primitives
+
+The primitive defined in the open metadata types are:
 
 - `object` 
 - `boolean`
@@ -79,6 +84,11 @@ The properties defined on each open metadata type will be one of the following a
 - `bigdecimal`
 - `string`
 - `date`
+
+### Collections
+
+The collections defined in the opn metadata types are:
+
 - `map<string,string>`
 - `map<string,boolean>`
 - `map<string,int>`
@@ -86,5 +96,10 @@ The properties defined on each open metadata type will be one of the following a
 - `map<string,object>`
 - `array<string>`
 - `array<int>`
+
+### Enumerations
+
+The enumerations are defined with the [open metadata types for entities, relationships and classifications](#open-metadata-subject-areas).
+
 
 --8<-- "snippets/abbr.md"

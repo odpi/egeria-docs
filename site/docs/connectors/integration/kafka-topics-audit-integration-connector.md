@@ -14,7 +14,7 @@
 
 ## Overview
 
-The kafka topics audit integration connector monitors an Apache Kafka server and validates that a  [KafkaTopic](/types/2/0223-Events-and-Logs) asset is catalogued for each topic that is known to the server.
+The kafka topics audit integration connector monitors an [Apache Kafka](https://kafka.apache.org/) server and validates that a  [KafkaTopic](/types/2/0223-Events-and-Logs) asset is catalogued for each topic that is known to the server.
 
 
 ![Figure 1](kafka-topics-audit-integration-connector.svg)
@@ -23,8 +23,7 @@ The kafka topics audit integration connector monitors an Apache Kafka server and
 
 ## Configuration
 
-This connector uses the [Topic Integrator OMIS](/services/omis/topic-integrator/overview)
-running in the [Integration Daemon](/concepts/integration-daemon).
+This connector uses the [Topic Integrator OMIS](/services/omis/topic-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
 
 This is its connection definition to use on the [administration commands that configure the Topic Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
 

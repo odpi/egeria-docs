@@ -6,7 +6,7 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Event Bus
+# Event Bus Connectors
 
 Egeria's *event bus* is constructed from an [event broker](/basic-concepts/#event-broker) infrastructure service and a set of well-known [topics](/basic-concepts/#topic). Collectively they provide the ability to reliably pass events between different [OMAG Servers](/concepts/omag-server):
 
@@ -15,9 +15,9 @@ Egeria's *event bus* is constructed from an [event broker](/basic-concepts/#even
 
 Each topic maintains a pointer to the last event that a server has read so that it receives each event that is added even if it restarts.
 
-There are different event broker implementations with greater or lesser reliability and performance. Many organizations establish a standard choice of their event broker service which is why Egeria uses [connectors](/concepts/connector) to implement its event bus.
+There are different event broker implementations with greater or lesser reliability and performance. Many organizations establish a standard choice of their event broker service which is why Egeria uses an [open metadata topic connector](/concepts/open-metadata-topic-connector) to access each connector.
 
-Egeria's default event broker is [Apache Kafka :material-dock-window:](https://kafka.apache.org/){ target=kafka }. Each topic is accessed through an [open metadata topic connector](/concepts/open-metadata-topic-connector).
+Egeria's default event broker is [Apache Kafka :material-dock-window:](https://kafka.apache.org/){ target=kafka } and it typically uses the [Kafka Open Metadata Topic Connector](/connectors/resource/kafka-open-metadata-topic-connector). 
 
 ![The event bus in use by OMAG Servers and other technologies](event-bus-role.svg)
 

@@ -28,7 +28,7 @@ There are five main design decisions to make before you start coding:
 
 * How is the work of the connector triggered - explicitly through the connection object contents or by listening for events from either the third party technology or open metadata?
 * Which direction the metadata synchronization is going.  Is the third party technology the source of metadata or is metadata the open metadata ecosystem being pushed to the third party technology?  
-* How are elements from the third party technology correlated with the elements in open metadata.
+* How are elements from the third party technology mapped to and correlated with the elements in open metadata.
 * If the third party technology is the source, should the metadata created in the open metadata ecosystem be read-only so that it can not be changed by other tools.  This is achieved using [External source metadata provenance](/features/metadata-provenance/overview).
 * How is the third party technology to be called?  Ideally, your 
 
@@ -83,8 +83,9 @@ Your integration connector needs to be able to map between the elements in the t
     
 ## Controlling external source metadata provenance
 
-The [configuration for an integration connector](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) in the Integration Daemon includes a *metadataSourceQualifiedName*.  It specifies the 
-Some integration services allow the integration connector to control whether external source metadata provenance is used if it is configured.  If it is set to true, external source metadata provenance is used, otherwise it is local cohort metadata provenance.
+The [configuration for an integration connector](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) in the Integration Daemon includes a *metadataSourceQualifiedName*.  The default value is null which means store the metadata in any [metadata collection](/concepts/metadata-collection) that is owned by the locally connected cohorts.  Alternatively, it specifies the [qualifiedName](/concepts/referenceable) of a [software capability](/concept/software-capability) entity that represents the third party technology.   This is automatically catalogued by the integration daemon if it is not found in the open metadata ecosystem.  The guid and qualifiedName of this entity is used to identify the [external metadata collection](/concepts/metadata-collection) that any open metadata elements created by the integration connector will be stored in.  This prevents processes other than the integration connector from modifying the metadata elements.
+
+Some integration services allow the integration connector code to control which metadata collection to use if the *metadataSourceQualifiedName* is configured.  If it is set to true, the external metadata collection is used, otherwise it is one of the local cohort's collection.
 
 | Integration Service | Method to control external source metadata provenance                                                                                         |
 |---|-----------------------------------------------------------------------------------------------------------------------------------------------|

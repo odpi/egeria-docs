@@ -110,10 +110,9 @@ nav:
                       - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
                       - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
                       - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
-                      - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
                   - Resource Connectors:
                       - New types of connectors: guides/developer/resource-connectors/overview.md
-                      - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+                      - Open Metadata Topic Connector: guides/developer/resource-connectors/open-metadata-topic-connector.md
               - Javadoc: https://odpi.github.io/egeria/index.html
               - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Administration:
@@ -537,7 +536,6 @@ nav:
           - Registered Services:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md
-                  - Analytics Modeling OMAS: services/omas/analytics-modeling/overview.md
                   - Asset Catalog OMAS: services/omas/asset-catalog/overview.md
                   - Asset Consumer OMAS: services/omas/asset-consumer/overview.md
                   - Asset Lineage OMAS: services/omas/asset-lineage/overview.md
@@ -570,7 +568,6 @@ nav:
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
-                  - Analytics Integrator: services/omis/analytics-integrator/overview.md
                   - API Integrator: services/omis/api-integrator/overview.md
                   - Catalog Integrator: services/omis/catalog-integrator/overview.md
                   - Database Integrator: services/omis/database-integrator/overview.md

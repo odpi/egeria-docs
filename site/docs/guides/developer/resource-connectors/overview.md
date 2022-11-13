@@ -1,14 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Creating  resource connectors
+# Creating digital resource connectors
 
 ![Digital Resource Connector](digital-resource-connector.svg)
-
-## Designing a new type of resource connector
-
-
-## Writing a resource connector implementation
 
 To write an open connector you need to complete four steps:
 

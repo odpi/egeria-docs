@@ -22,7 +22,6 @@ Each integration service provides a specialist API for the [integration connecto
 The integration services available today are:
 
 * [API Integrator](/services/omis/api-integrator/overview) - provides cataloguing for APIs.
-* [Analytics Integrator](/services/omis/analytics-integrator/overview) - provides cataloguing for Analytics tools.
 * [Catalog Integrator](/services/omis/catalog-integrator/overview) - provides a two-way synchronization for data catalogs.
 * [Database Integrator](/services/omis/database-integrator/overview) - provides metadata extraction from relational databases.
 * [Display Integrator](/services/omis/display-integrator/overview) - provides metadata extraction from systems that provide user displays and forms to capture new data values.

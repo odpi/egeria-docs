@@ -34,7 +34,9 @@ Governance roles are set up through the [GovernanceRoleManager](https://odpi.git
 
 ## Subject areas
 
-Subject areas are topics or domains of knowledge that are of interest to the governance leaders.  Governance Program OMAS provides an [interface to create subject area definitions](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/SubjectAreasInterface.html) that is implemented by the [SubjectAreaManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/SubjectAreaManager.html) client.  The work is then handed off to the subject area owners:
+Subject areas are topics or domains of knowledge that are of interest to the governance leaders.  
+
+Governance Program OMAS provides an [interface to create subject area definitions](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/SubjectAreasInterface.html) that is implemented by the [SubjectAreaManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/SubjectAreaManager.html) client.  The work is then handed off to the subject area owners:
 
 * [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.  
 * [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.

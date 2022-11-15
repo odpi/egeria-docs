@@ -156,25 +156,37 @@ Most activity within each governance domain is iteratively developed and reviewe
 
 A *Governance Definition* is a metadata element that describes the context or purpose for an activity that supports the organization's operation. The picture shows the main types of governance definition and how they link together to create a coherent response to a business strategy or regulation.
 
-![Figure 1](traceability-from-business-drivers-to-action.svg)
+![Traceability through governance definitions](traceability-from-business-drivers-to-action.svg)
 > Using governance definitions to provide traceability from business drivers and regulations to actions.
 
 ## Subject areas
 
-Subject areas are topics or domains of knowledge that are of interest to the governance domains.  Some subject areas are common to multiple governance domains; others are specialized within a domain.  Each is represented using a [SubjectAreaDefinition](/types/4/0425-Subject-Areas).
+[Subject areas](/concepts/subject-area) are topics or domains of knowledge that are important to the organization.  Typically, they cover types of assets (such as data) that are widely shared across the organization and there is business value in maintaining consistency in the data values in each copy.
 
-![Figure 3](subject-area-definition.svg)
-> **Figure 3:** Defining a subject area
+The role of a [subject area definition](/types/4/0425-Subject-Areas) is to act as a collection point for all the subject area materials.  This includes:
 
-Governance Program OMAS provides an [interface to create subject area definitions](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/SubjectAreasInterface.html).  The work is then handed off to the subject area owners:
+* A [glossary of terms](/types/3/0310-Glossary) that describe the key concepts in the subject area.
+* Lists and hierarchies of [reference data](/types/5/0545-Reference-Data) that relate to particular data values in the subject area.
+* [Quality rules](/types/4/0430-Technical-Controls) for specific data values in the subject area.
+* Preferred [data structures and schemas](/types/5/0501-Schema-Elements).
 
-* [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.
-* [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.
-* [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of subject area information with other catalogs and quality tools.
+The common definitions that are part of the subject area are classified as such using the [SubjectArea](/types/4/0425-Subject-Areas) classification.
+
+![Subject Area Definition](subject-area-definition.svg)
+> Defining a subject area
+
+Each subject area has an owner (see [SubjectAreaOwner](/types/4/0445-Governance-Roles)) who is responsible for the common definitions relating to the subject area.  Often the subject area owner is a senior person in the organization with expertise in the subject area.  He/she coordinates other subject-matter experts to author and maintain the common definitions and standards.  It is helpful to set up a [community](/concepts/community) of people working on the subject area's common definitions, to coordinates email distribution lists, news and events.
+
+![Subject Area Community](subject-area-community.svg)
+> People working on a subject area come together in a community
+
+The subject area definition can be linked to [governance definitions](#governance-definitions) via the [*GovernanceBy*](/types/4/0401-Governance-Definitions) relationship.
+
+The organization of the subject areas is orthogonal to the governance domains. Some subject areas are common to multiple governance domains; others are specialized within a governance domain. Similarly, an organization can create governance definitions that are applicable to all subject areas, or are specific to the subject area they are linked to.  Typically, they will have a mixture of these.
+
 
 !!! education "Further information"
 
-    * The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of subject area definitions.
     * [Common Data Definitions](/practices/common-data-definitions/overview) describes the management and use of subject areas.
     
     * The [Defining Subject Areas](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview/) scenario for Coco Pharmaceuticals walks through the process of setting up the subject areas for Coco Pharmaceuticals.
@@ -183,6 +195,11 @@ Governance Program OMAS provides an [interface to create subject area definition
     
         * [Setting up the subject area definitions :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-subject-area-sample){ target=gh }
         * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
+    
+    * The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of subject area definitions.
+    * [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.
+    * [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.
+    * [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of subject area information with other catalogs and quality tools.
 
 ## Governance classification, tagging and linking
 
@@ -253,7 +270,7 @@ There are three types:
 
 * A Verification Point describes processing that is testing if a desired condition is true. Quality rules are examples of verification points. The result of a verification point is the output of the test. It may, for example, be a boolean, classification or a set of invalid values.
 
-* An Enforcement Point describes processing that enforces an specific condition. For example, data may need to be encrypted at a certain point in the processing. The encryption processing is an enforcement point.
+* An Enforcement Point describes processing that enforces a specific condition. For example, data may need to be encrypted at a certain point in the processing. The encryption processing is an enforcement point.
 
 The ExecutionPointDefinition elements are created during the design of the governance program. They characterize the types of execution points that are needed to support the governance requirements. They are linked to the Governance Definition that they support using the ExecutionPointUse relationship. Typically, the governance definitions linked to the governance execution point definitions are:
 

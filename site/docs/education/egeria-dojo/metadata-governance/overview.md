@@ -27,8 +27,8 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     ??? intermediate "Automating metadata capture (1.5 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/automating-metadata-capture.md"
 
-    ??? beginner "Standard definitions (2 hours)"
-        --8<-- "docs/education/egeria-dojo/metadata-governance/standard-definitions.md"
+    ??? beginner "Common definitions (2 hours)"
+        --8<-- "docs/education/egeria-dojo/metadata-governance/common-definitions.md"
 
     ??? beginner "Working with templates (30 mins)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/working-with-templates.md"

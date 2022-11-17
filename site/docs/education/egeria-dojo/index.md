@@ -88,6 +88,8 @@ The objectives of the five days are as follows:
 
 ## Egeria Contributor Day summary
 
+!!! education "Contributing to Egeria"
+
     - *Audience*: Anyone interested in contributing to Egeria
     - *Objectives*: This dojo day combines learning about new concepts and trying them out using the Egeria technology.  After completing this day of the dojo you will understand the key principles of governing your metadata and how to set up Egeria to automate most of your requirements.
     - *Prerequisites*: None.
@@ -104,6 +106,8 @@ The objectives of the five days are as follows:
     - *Time to complete* - 8 hours
 
 ## Egeria in Production Day summary
+
+!!! education "Egeria in Production"
 
     - *Audience*: Anyone wishing to plan to move Egeria into production
     - *Objectives*: This dojo day walks through the considerations for moving an Egeria deployment into production

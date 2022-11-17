@@ -53,12 +53,13 @@ Metadata update triggers should focus around the tools where the consumer metada
 * [Data classes](/concepts/data-class) are logical types for data used to characterize data during analysis.
 * [Standard/preferred schemas](/concepts/schema) and [associated implementation snippets](/types/5/0504-Implementation-Snippets) to guide developers to improve the consistency of data representation across the digital landscape.
 
-Common definitions are organized into [subject areas](/concepts/subject-area), also known as topic areas or data domains, and their aim is to create a common understanding of the content and standard processing rules across your digital landscape, improving the consistency of the values in different stores of data supporting your organization.
+Common definitions are organized into [subject areas](/concepts/subject-area), also known as topic areas, and their aim is to create a common understanding of the content and standard processing rules across your digital landscape, improving the consistency of the values in different stores of data supporting your organization.
+[Assets](/concepts/asset) that are managed using the subject area's common definitions are said to be part of the subject area's domain.  This is called the *Subject Area Domain* and is synonymous with *Data Domain* - although a subject area domain may manage assets that are not data assets (such as systems and infrastructure) which is why open metadata uses a more generic name.
 
 Updates to the related common definitions are typically edited offline, collected, and then disseminated together as a new release. Therefore, the metadata update trigger is often related to the release of a collection of common definitions.
 
 ??? info "Further reading ..."
-   [Open Metadata Types for Common Definitions](/practices/common-data-definitions/open-metadata-for-common-definitions)
+    There is a whole section on common definitions later in the dojo.
 
 ### Governance metadata
 

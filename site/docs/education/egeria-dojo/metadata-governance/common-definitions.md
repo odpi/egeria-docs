@@ -13,7 +13,7 @@
 --8<-- "docs/practices/common-data-definitions/semantic-to-implementation.md"
 
 
-!!! education "Further information"
+??? education "Using common definitions in Egeria"
 
     - [Governance Program OMAS](/services/omas/governance-program/overview/#subject-areas) provide support for the definition of subject areas and the ability to retrieve details of the common definitions that are part of the subject area.
     - [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.
@@ -25,18 +25,6 @@
     
         * [Setting up the subject area definitions :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-subject-area-sample){ target=gh }
         * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
-
-
-
-!!! info "Coming up next ..."
-    - Structure of the glossary and how to set up and distribute
-    - How to use the glossary in governance
-    - What is reference data; how is it used
-    - How to represent reference data in metadata
-    - How to distribute and govern reference data
-    - How to use reference data for classification
-    - Why archives are important
-    - How to use them
 
 
 ??? intermediate "Creating glossaries (30 mins)"

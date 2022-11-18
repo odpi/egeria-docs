@@ -92,8 +92,8 @@ lineage status as the point shown in figure 1.
 ![Figure 6](file-lineage-output-example.png)
 > **Figure 6:** Lineage at the point shown in figure 1
 
-An organization may choose to the show the archive folder in lineage or it may not.
-It depends if it is useful to the catalog users.  This is therefore shown as optional.
+An organization may choose to the show the archive folder in lineage, or it may not.
+It depends on whether it is useful to the catalog users.  This is therefore shown as optional.
 
 The files:
 * Week 1 Landed DataFile

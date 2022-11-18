@@ -19,9 +19,9 @@ nav:
           - Metadata Manager: patterns/metadata-manager/overview.md
           - Metadata Exchange: patterns/metadata-exchange/overview.md
           - Metadata Governance: patterns/metadata-governance/overview.md
-      - Try Egeria: snippets/getting-started.md
+      - Try Egeria: try-egeria/index.md
   - Using:
-      - Try Egeria: snippets/getting-started.md
+      - Try Egeria: try-egeria/index.md
       - Planning Guide:
           - Planning Guide: guides/planning/index.md
           - Planning Deployment:
@@ -192,7 +192,7 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - Learning:
       - Learning Overview: education/index.md
-      - Try Egeria: snippets/getting-started.md
+      - Try Egeria: try-egeria/index.md
       - Webinars: education/webinar-program/overview.md
       - Dojo (Jan 2022):
           - Dojo Overview: education/egeria-dojo/index.md

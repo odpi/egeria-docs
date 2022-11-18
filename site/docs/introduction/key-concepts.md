@@ -6,7 +6,9 @@
 To further explain some key concepts of Egeria, let us delve deeper into an example.  In figure 1, the inner ring, titled *Integrated Metadata*, illustrates the exchange of metadata between metadata servers. The servers are connected together through an *[Open Metadata Repository Cohort](/concepts/cohort-member)* or just *cohort* for short.
 
 ![Figure 1](egeria-solution-components.svg)
-> **Figure 1:** Different types of OMAG servers connected together in a solution.  They are organized into three rings.  The inner-ring comprising of the metadata access server, repository proxy and conformance test server are cohort members communicating via Egeria's peer-to-peer protocols. In the next ring out are the governance servers connected to the metadata access server and in the outer ring are the view server and presentation server also connected to the metadata access server
+> **Figure 1:** Different types of OMAG servers connected together in a solution.  They are organized into three rings.  The inner-ring comprises the metadata access server, repository proxy and conformance test server are cohort members communicating via Egeria's peer-to-peer protocols. In the next ring out are the governance servers connected to the metadata access server and in the outer ring are the view server and presentation server also connected to the metadata access server
+
+--8<-- "snippets/getting-started.md"
 
 ## Cohorts
 
@@ -125,7 +127,9 @@ There should be, at most, a *tiny* chance[^3] that two servers will generate the
 
 Adhering to these concepts and the principles by which they behave is the subject of *conformance*. Egeria provides an [automated testing suite to validate that a given repository or third party integration behaves according to these expectations](/guides/cts/overview), the successful completion of which is a necessary input to a tool being granted the use of an Egeria conformance mark.
 
-[^1]: You may want to see the [cohort interactions walkthrough](/features/cohort-operation/overview) for more details on how cohort participants interact.
+--8<-- "snippets/getting-started.md"
+
+[^1]: You may want to see the [cohort interactions walk through](/features/cohort-operation/overview) for more details on how cohort participants interact.
 [^2]: You may want to see the [OMRS metamodel](/guides/developer/repository-connectors/metamodel/overview) for more details on the granularity of metadata exchange.
 [^3]: The rarity will depend on the specific algorithm used, but as an example the algorithm used within Egeria generates type 4 UUIDs, for which the [probability of a collision is so small that it can almost be ignored :material-dock-window:](https://en.wikipedia.org/wiki/Universally_unique_identifier#Collisions){ target=wiki }. But as it is not *impossible*, Egeria does still provide the mechanisms to detect and resolve such conflicts.
 

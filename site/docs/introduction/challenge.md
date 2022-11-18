@@ -26,4 +26,6 @@ Our guiding beliefs:
 !!! tip "Code talks"
     Egeria provides an Apache 2.0 licensed platform to support vendors that sign up to the open metadata and governance manifesto.
 
+--8<-- "snippets/getting-started.md"
+
 --8<-- "snippets/abbr.md"

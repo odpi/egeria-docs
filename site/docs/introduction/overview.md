@@ -27,6 +27,8 @@ Using Egeria, each location runs a platform (blue boxes) that hosts the integrat
 
 ![Distributed operation](egeria-distributed-operation.svg)
 
+--8<-- "snippets/getting-started.md"
+
 ## What is included in Egeria
 
 ### Open Metadata Types
@@ -60,5 +62,7 @@ Within an instance of the *OMAG Server Platform*, one or more [*OMAG Servers*](/
 
 !!! question "Why open source?"
     Delivering this capability as open source is a critical part of the project, since multiple vendors must buy into this ecosystem. They are not going to do this if one organization dominates the technology base. Thus, the open metadata and governance technology must be freely available with an open source governance model that allows a community of organizations and practitioners to develop and evolve the base, and then use it in their offerings and deployments.
+
+--8<-- "snippets/getting-started.md"
 
 --8<-- "snippets/abbr.md"

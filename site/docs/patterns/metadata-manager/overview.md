@@ -19,6 +19,8 @@ It includes:
 
 Egeria's Metadata Access Store supports metadata defined by the [Open Metadata Types](/types).  These types cover a wide range of metadata, and are dynamically extensible.
 
+--8<-- "snippets/getting-started.md"
+
 --8<-- "docs/patterns/metadata-manager/categories-of-metadata.md"
 
 ## The contents of an asset catalog
@@ -295,11 +297,13 @@ Egeria offers the following approaches to cataloging assets:
 
 The idea is that these approaches are selected for each type of asset and blended together to balance the investment in the automation, against the time commitment of subject matter experts, against the business value of the resulting catalog.
 
-## Related information
+!!! info "Related information"
 
-- The [Asset](/concepts/asset) page provides more information on the different types of assets supported by open metadata.  The asset types can be extended dynamically if needed.
-- The type definition for the *Asset* entity is found in model [0010 Basic Model](/types/0/0010-Base-Model).
-- Examples of representing different types of assets using the open metadata types are found in [Mapping Technology](/guides/developer/mapping-technology).
-- The [Open Metadata Labs](/education/open-metadata-labs/overview) provide practical examples showing all of the techniques to manage an asset catalog, allowing you to try each of the features to assess how they could work in your organization.
+    - The [Asset](/concepts/asset) page provides more information on the different types of assets supported by open metadata.  The asset types can be extended dynamically if needed.
+    - The type definition for the *Asset* entity is found in model [0010 Basic Model](/types/0/0010-Base-Model).
+    - Examples of representing different types of assets using the open metadata types are found in [Mapping Technology](/guides/developer/mapping-technology).
+    - The [Open Metadata Labs](/education/open-metadata-labs/overview) provide practical examples showing all of the techniques to manage an asset catalog, allowing you to try each of the features to assess how they could work in your organization.
+
+--8<-- "snippets/getting-started.md"
 
 --8<-- "snippets/abbr.md"

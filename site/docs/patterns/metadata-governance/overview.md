@@ -5,5 +5,6 @@
 
 --8<-- "docs/patterns/metadata-governance/metadata-governance-intro.md"
 
+--8<-- "snippets/getting-started.md"
 
 --8<-- "snippets/abbr.md"

@@ -141,7 +141,7 @@ There are two main integration approaches:
 - Integrating using a repository proxy, brings the third party metadata server into the heart of the open metadata ecosystem, enabling queries to its repository to be made by other open metadata services.
 - Integrating via an integration daemon has the third party metadata server on the edge of the open metadata ecosystem.  It is not being queried directly, but can engage in two-way metadata exchange through the integration daemon.
 
-!!! education "Further information"
+!!! info "Further information"
 
     More about the different types of [Cohort Members](/concepts/cohort-member)including information on how to configure them.  Specifically 
 
@@ -163,5 +163,7 @@ There are two main integration approaches:
     This link provides guidance if you are interested in writing your own repository connectors:
 
     - [Writing repository connectors for a third party metadata repository](https://wiki.lfaidata.foundation/display/EG/Implement+an+Open+Metadata+Repository+Connector)
+
+--8<-- "snippets/getting-started.md"
 
 --8<-- "snippets/abbr.md"

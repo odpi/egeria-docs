@@ -7,7 +7,7 @@
 
 The JDBC Resource Connector provides a DataSource, which in turn is used to get a connection to underlying database.  It provides access to both the schema metadata and the business data content.
 
-![Figure 1](jdbc-resource-connector-generic-model.svg)
+![Figure 1](jdbc-resource-connector.svg)
 > **Figure 1:** JDBC resource connector
 
 

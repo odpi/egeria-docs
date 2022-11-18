@@ -19,9 +19,9 @@ nav:
           - Metadata Manager: patterns/metadata-manager/overview.md
           - Metadata Exchange: patterns/metadata-exchange/overview.md
           - Metadata Governance: patterns/metadata-governance/overview.md
-      - Try Egeria: try-egeria/index.md
+      - Try Egeria: try-egeria/overview.md
   - Using:
-      - Try Egeria: try-egeria/index.md
+      - Using Overview: guides/index.md
       - Planning Guide:
           - Planning Guide: guides/planning/index.md
           - Planning Deployment:
@@ -192,8 +192,6 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - Learning:
       - Learning Overview: education/index.md
-      - Try Egeria: try-egeria/index.md
-      - Webinars: education/webinar-program/overview.md
       - Dojo (Jan 2022):
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
@@ -213,6 +211,7 @@ nav:
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
       - Open Metadata Labs: education/open-metadata-labs/overview.md
+      - Webinars: education/webinar-program/overview.md
       - Tutorials:
           - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
           - Using Kubernetes: guides/operations/kubernetes/index.md

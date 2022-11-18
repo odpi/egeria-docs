@@ -7,7 +7,7 @@ Although it is desirable to synchronize metadata between the tools and platforms
 
 ![Before Egeria](before-egeria.svg)
 
-Using Egeria, you only need to link each tool to Egeria and it is Egeria that manages the complexity of the metadata exchange.
+Using Egeria, you only need to link each tool to Egeria, and it is Egeria that manages the complexity of the metadata exchange.
 
 ![Egeria concepts](egeria-concept.svg)
 
@@ -33,7 +33,7 @@ Using Egeria, each location runs a platform (blue boxes) that hosts the integrat
 
 ### Open Metadata Types
 
-Egeria defines a set of open [metadata types](/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  However, the type system is extensible so it is able to support any special needs of your organization.
+Egeria defines a set of open [metadata types](/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  However, the type system is extensible, so it is able to support any special needs of your organization.
 
 ### Frameworks
 

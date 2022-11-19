@@ -27,7 +27,6 @@
     * *TypedBy* is a term relationship between a SpineAttribute and a SpineObject to say that the SpineAttribute is implemented using a type represented by the SpineObject
 
     !!! education "Further information"
-        * See [Anatomy of a glossary](/practices/common-data-definitions/anatomy-of-a-glossary) for more information about creating glossaries.
         * See [Area 3](/types/3) in the *Open Metadata Types* to understand how these concepts are represented on open metadata.
 
 ??? info "Data classes"
@@ -36,9 +35,9 @@
 
     The data class specification defines how to identify data fields of its type by inspecting the data values stored in them.  The specification is independent of a particular technology, which is why they are often described as *logical data types*.  The specification may include preferred implementation types for different technologies using *Implementation Snippets*.
 
-    Data classes are used during [metadata discovery](#metadata-discovery) to identify the types of data in the discovered data fields.  This is an important step in understanding the meaning and business value of the data fields.
+    Data classes are used during *metadata discovery* (see below) to identify the types of data in the discovered data fields.  This is an important step in understanding the meaning and business value of the data fields.
 
-    Data classes can be linked together in part-of and is-a hierarchies to create a logical type system for a subject area. Each data class can be linked to a glossary term via an *ImplementedBy* relationship to identify the preferred data class to use when implementing a data field with meaning described in the glossary term.  A data class can be linked to glossary term that describes the meaning of the data class via a *SemanticAssignment* relationship.
+    Data classes can be linked together in part-of and is-a hierarchies to create a logical type system for a subject area. A glossary term can be linked to a data class via an *ImplementedBy* relationship to identify the preferred data class to use when implementing a data field with meaning described in the glossary term.  A data class can be linked to glossary term that describes the meaning of the data class via a *SemanticAssignment* relationship.
 
     ![Figure 2](/practices/common-data-definitions/semantic-to-implementation-data-classes.svg)
     > Figure 2: Data classes for describing the logical data types and implementation options
@@ -79,22 +78,22 @@
 
 ??? info "Schemas and assets"
 
-    An [asset](/concepts/asset) describes a valuable [resource](/concepts/resource) (typically digital).  Assets include databases, data files, documents, APIs, data feeds, and applications. A digital resource can be dependent on other digital resource to fulfill their implementation.  This relationship is also captured in open metadata with relationships such as [DataContentForDataSet](/types/2/0210-Data-Stores).  These relationships help to highlight inconsistencies in the assets' linkage to the common definitions which may be errors in either the metadata or the implementation/deployment/use of the digital resources.
+    An [asset](/concepts/asset) describes a valuable [resource](/concepts/resource) (typically digital).  Such resources include databases, data files, documents, APIs, data feeds, and applications. A digital resource can be dependent on other digital resource to fulfill their implementation.  This relationship is also captured in open metadata with relationships such as [DataContentForDataSet](/types/2/0210-Data-Stores).  These relationships help to highlight inconsistencies in the assets' linkage to the common definitions which may be errors in either the metadata or the implementation/deployment/use of the digital resources.
 
     ![Figure 5](/practices/common-data-definitions/semantic-to-implementation-assets-and-schemas-dependencies.svg)
     > Figure 5: Dependencies between digital resources are reflected in open metadata by relationships between assets
 
-    Since schema types describe the structure of data, they can be attached to assets using the *AssetSchemaType* relationship to indicate that this asset's data is organized as described by the schema.  Schemas are important because they show how individual data values are organizes.  Governance is often concerned with the meaning, correctness and use of individual data values since they are used to influence the decisions made within the organization.  Therefore, even though the content of a schema bulks up the size and complexity of the metadata it is necessary to capture this detail.
+    Since schema types describe the structure of data, they can be attached to assets using the *AssetSchemaType* relationship to indicate that this asset's data is organized as described by the schema.  Schemas are important because they show how individual data values are organized.  Governance is often concerned with the meaning, correctness and use of individual data values since they are used to influence the decisions made within the organization.  Therefore, even though the content of a schema bulks up the size and complexity of the metadata, it is necessary to capture this detail.
 
     ![Figure 6](/practices/common-data-definitions/semantic-to-implementation-assets-and-schemas.svg)
     > Figure 6: Schemas describe the structure of the data store in a digital resource (described by the asset in the catalog)
 
-    A schema is typically attached to only one asset since it is classified and linked to assuming that is describes the particular collection of data stored in the associated digital resource.  However, there is still a role for the common definitions to provide preferred schema structures for software developers, data engineers and data scientists to use when they create implementations for new digital resources.
+    A schema is typically attached to only one asset since it is classified and linked to other elements assuming that the asset/schema combinations describes the particular collection of data stored in the associated digital resource.  However, there is still a role for the common definitions to provide preferred schema structures for software developers, data engineers and data scientists to use when they create implementations of new digital resources.
 
     When a new asset is created, the schema definition in the subject area can be used as a template to define the schema for the asset (see figure 7). Then:
 
-    * The digital resource can be generated from the asset/schema.
-    * [Metadata discovery](#metadata-discovery) can be used to validate that the schema defined in the digital resource matches the schema associated with the asset.
+    * The digital resource can be generated from the asset/schema, or
+    * *Metadata discovery* (see below) can be used to validate that the schema defined in the digital resource matches the schema associated with the asset.
 
     ![Figure 7](/practices/common-data-definitions/semantic-to-implementation-assets-and-schemas-templates.svg)
     > Figure 7: Using a schema from a subject are as a template for a new asset
@@ -107,12 +106,12 @@
     !!! education "Further information"
         * See [Model 0503](/types/5/0503-Asset-Schema) in the *Open Metadata Types* to understand the *AssetSchemaType* relationship.
         * See [Model 0501](/types/5/0501-Schema-Elements) in the *Open Metadata Types* to understand how schemas are represented on open metadata.
-        * See [Model 0505](/types/5/0505-Schema-Attributes) in the *Open Metadata Types* to understand how schemas are represented on open metadata.
+        * See [Model 0505](/types/5/0505-Schema-Attributes) in the *Open Metadata Types* to understand how schema attributes are represented on open metadata.
 
 
 ??? info "Reference Value Assignments"
 
-    A subject area may define sets of values used to label assets to show that they are in a particular state or have a specific characteristic that is important in the subject area.  For example, a subject area about people may include the notion of an *Adult* and a *Child* (or *Minor*).  The age of majority is different in each country and so a simple label assigned to a [Person](/types/1/0112-People) profile that indicates that a person is an adult would allow the knowledge of how to determine if someone is an adult to be contained around the maintenance of the person profiles, while the reference data value is used in multiple places.
+    The common deinfitions for a subject area may include sets of values used to label assets to show that they are in a particular state or have a specific characteristic that is important in the subject area.  For example, a subject area about people may include the notion of an *Adult* and a *Child* (or *Minor*).  The age of majority is different in each country and so a simple label assigned to a [Person](/types/1/0112-People) profile that indicates that a person is an adult would allow the knowledge of how to determine if someone is an adult to be contained around the maintenance of the person profiles, while the reference data value is used in multiple places.
 
     These labels are called *reference data values* and are managed in [Valid Value Sets](/types/5/0545-Reference-Data).  The association between a reference data value and a metadata element is [ReferenceValueAssignment](/types/5/0545-Reference-Data).
 
@@ -126,7 +125,7 @@
 
     Figure 10 show three types of assignments between the metadata associated with a digital resource ([technical metadata](/patterns/metadata-manager/overview/#technical-metadata)) and the common definitions:
 
-    * [SemanticAssignment](/types/3/0340-Semantic-Assignment) - Semantic assignments indicate that the data stored in the associated data field has the meaning described in the glossary term.
+    * [SemanticAssignment](/types/3/0370-Semantic-Assignment) - Semantic assignments indicate that the data stored in the associated data field has the meaning described in the glossary term.
     * [ValidValuesAssignment](/types/5/0545-Reference-Data) - Valid value sets define a list of valid values.  They can be used to the values that are allowed to be stored in a particular data field if it can be described as a discrete set.  
     * [DataClassAssignment](/types/5/0540-Data-Classes) - A data class assignment means that the data in the data field conforms to the type described in the data class.
 
@@ -137,13 +136,13 @@
 
 ??? info "Governance action classifications"
 
-    [Governance action classifications](/types/4/0422-Governance-Action-Classifications) can be attached to most types of metadata elements.  They can also be assigned to glossary terms to indicate that the classification applies to all data values associated with the glossary term.  The governance action classifications have attributes that identify a particular *level* that applies to the attached element. The definition for each [level](/types/4/0421-Governance-Classification-Levels) can be linked to appropriate Governance Definitions that define how digital resources classified at that level should be governed.  Governance Classification Levels are linked to Governance Definitions using the [GovernedBy](/types/4/0401/Governance-Definitions) relationship.
+    [Governance action classifications](/types/4/0422-Governance-Action-Classifications) can be attached to most types of metadata elements.  They can also be assigned to glossary terms to indicate that the classification applies to all data values associated with the glossary term.  The governance action classifications have attributes that identify a particular *level* that applies to the attached element. The definition for each [level](/types/4/0421-Governance-Classification-Levels) can be linked to appropriate Governance Definitions that define how digital resources classified at that level should be governed.  Governance Classification Levels are linked to Governance Definitions using the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.
 
     ![Figure 11](/practices/common-data-definitions/semantic-to-implementation-governance-classification.svg)
     > Figure 11: Classifying glossary terms to identify the governance definitions that apply to all data values associated with the glossary term 
 
     !!! education "Further information"
-        * [Setting up your Governance Program](/guides/planning/overview) describes how different types of governance metadata are used.
+        * [Setting up your Governance Program](guides/planning/governance-program/overview/) describes how different types of governance metadata are used.
 
 
 ??? info "Connectors and connections"
@@ -152,15 +151,14 @@
 
     Sometimes there are multiple connectors to access a specific type of asset, each offering a different interface for  the application to use.
 
-    Instances of connectors are created using the *Connector Broker*.  The connector broker creates the connector instance using the information stored in a *Connection*.  These can be created by the application or retrieved from the metadata repositories.
+    Instances of connectors are created using the *[Connector Broker](/concepts/connector-broker)*.  The connector broker creates the connector instance using the information stored in a *[Connection](/concepts/connection)*.  These can be created by the application or retrieved from the open metadata stores.
 
-    A connection is stored in the metadata repository and linked to the appropriate asset for the digital resource.
+    A connection is stored in the open metadata stores and linked to the appropriate asset for the digital resource.
 
     ![Figure 12](/practices/common-data-definitions/semantic-to-implementation-connectors.svg)
     > Figure 12: Connection information needed to access the data held by an asset
 
     !!! education "Further information"
-        * See [Connections](/concepts/connection) to understand how connectors are configured.
         * See the [connector catalog](/connectors) to understand how connectors are used in Egeria.
         * See [Model 0201](/types/2/0201/Connectors-and-Connections) in the *Open Metadata Types* to understand how connections are represented.
 
@@ -168,9 +166,9 @@
 
     An [open discovery service](/concepts/open-discovery-service) is a process that runs a pipeline of analytics to describe the data content of a resource. It uses statistical analysis, reference data and other techniques to determine the data class and range of values stored, potentially what the data means and its level of quality. The result of the analysis is stored in metadata objects called [annotations](/concepts/discovery-analysis-report/#discovery-annotations).
 
-    Part of the discovery process is called *Schema Extraction*.  This is where the discovery service inspects the schema in the digital resource and builds a matching structure of *DataFields* elements in open metadata.  As it goes on to analyse the content of a particular data field in the resource, it can add its results to an annotation that is attached to the DataField element.  It can also maintain a link between the DataField element and its corresponding SchemaAttribute element if the schema has already been attached.  Through ths process it is possible to detect any anomalies between the documented schema and what is actually implemented.
+    Part of the discovery process is called *Schema Extraction*.  This is where the discovery service inspects the schema in the digital resource and builds a matching structure of *[DataField]/types/6/0615-Schema-Extraction/)* elements in open metadata.  As it goes on to analyse the content of a particular data field in the resource, it can add its results to an annotation that is attached to the DataField element.  It can also maintain a link between the DataField element and its corresponding SchemaAttribute element if the schema has already been attached.  Through ths process it is possible to detect any anomalies between the documented schema and what is actually implemented.
 
-    Part of the analysis of a single data field may be to identify its [data class](#data-classes) (or a list of possible data classes if the analysis is not conclusive).  THe data class in turn may identify a list of possible glossary terms that could apply to the data field.
+    Part of the analysis of a single data field may be to identify its *data class* (or a list of possible data classes if the analysis is not conclusive).  THe data class in turn may identify a list of possible glossary terms that could apply to the data field.
 
     For example, there may be a data class called address.  A discovery service may detect that an address is stored in a digital resource.  The data class may be linked to glossary terms for *Home Address*, *Work Location*, *Delivery Address*, ...  The discovery service may not be able to determine which glossary term is appropriate in order to establish the [SemanticAssignment](/types/3/0370-Semantic-Assignment) relationship, but providing a steward with a short list is a considerable saving.
 
@@ -181,7 +179,7 @@
         * See [Discovery and Stewardship](/features/discovery-and-stewardship/overview) to understand how metadata discovery works.
         * See [Area 6](/types/6) in the *Open Metadata Types* to understand how discovery metadata is represented.
 
-!!! summary Bringing it all together
+??? summary "Bringing it all together"
 
     Figure 13 summarizes how the common definitions create a rich picture around the resources used by your organization.  As they link to the technical metadata, they complement and reinforce the understanding of your data. In a real-world deployment, the aim is to automate as much of this linkage as possible. This is made considerably easier if the implementation landscape is reasonable consistent.  However, where the stored data values do not match the expected types defined in the schema, the metadata model reveals the inconsistencies and often requires human intervention to ensure the links are correct.
 

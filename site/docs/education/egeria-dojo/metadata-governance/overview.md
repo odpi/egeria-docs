@@ -10,6 +10,8 @@ hide:
 
 As metadata is shared and linked, the gaps and inconsistencies in it are exposed.  In the dojo you will learn how to set up a variety of features in Egeria to actively govern and maintain your metadata environment.
 
+--8<-- "docs/education/egeria-dojo/ski-run-colours.md"
+
 ???+ education "Metadata Governance Dojo starts here"
 
     ??? beginner "The importance of metadata governance (25 mins)"

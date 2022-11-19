@@ -42,7 +42,16 @@ Figure 4 shows specializations of concepts being linked into a type hierarchy.
 
 As new concepts are added to the glossary, Erin and Faith make choices on how much detail to add to its glossary term depending on its importance - and the need to uncover new concepts.
 
+## Reflecting on the process
 
+After a few hours work, Erin and Faith reviewed their process. Initially it was hard work to be precise on the definition of words they use every day.  However, they discovered that it got easier as the core concepts they had already defined could be used in the definition of new terms.  They also realised that building a glossary is not the work of a committee.  It takes the focus of 2-3 experts to lay out the core concepts.  Then begin to bring in new people, taking them through the work so far, incorporating their feedback and working with them on defining additional terms they are interested in.  Through this process the team and knowledge expands and individual members and create subteams, with new people to fill out different sections of the glossary.  All the time there is constant review and validation that the terms are consistent, and discrete.
+
+## Organizing the glossary
+
+As new terms are defined, Erin begins to organize them into categories in a similar way that files are organized into directories (folders) on a disk.  Terms can appear in multiple categories - in fact they can appear in categories from other glossaries.
+
+!!! info "Anatomy of a glossary"
+    [Anatomy of a glossary](/practices/common-definitions/anatomy-of-a-glossary) describes the different organization options for a glossary.
 
 
 --8<-- "snippets/abbr.md"

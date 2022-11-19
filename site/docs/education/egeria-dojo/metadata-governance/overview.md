@@ -42,7 +42,7 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
         --8<-- "docs/education/egeria-dojo/metadata-governance/using-automated-governance-actions.md"
 
     ??? intermediate "Securing your metadata (1.5 hours)"
-        --8<-- "docs/features/metadata-security/overview/.md"
+        --8<-- "docs/features/metadata-security/overview.md"
 
     ??? intermediate "Linking metadata governance to your governance program (3 hours)"
         --8<-- "docs/guides/planning/governance-program/overview.md"

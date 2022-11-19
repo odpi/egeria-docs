@@ -8,19 +8,19 @@ The open metadata ecosystem collects, links and disseminates metadata from many 
 ??? beginner "The shearing layers of governance actions"
     --8<-- "docs/patterns/metadata-governance/governance-engines.md"
 
-??? intermediate "Designing your governance processes (60 mins)"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/designing-your-governance-processes.md"
+??? intermediate "Designing your governance processes (30 mins)"
+    --8<-- "docs/concepts/governance-action-process.md"
 
 ??? beginner "Setting up an engine host, governance engines and services (30 mins)"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/setting-up-engine-host.md"
+    --8<-- "docs/patterns/metadata-governance/setting-up-the-engine-host.md"
 
 ??? advanced "Using metadata discovery (60 mins)"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/using-metadata-discovery.md"
+    --8<-- "docs/features/discovery-and-stewardship/overview.md"
 
-??? advanced "Monitoring your governance processes (60 mins)"
+??? advanced "Monitoring your governance processes (30 mins)"
     --8<-- "docs/education/egeria-dojo/metadata-governance/monitoring-your-governance-processes.md"
 
 !!! education "Further information"
-    - [Governance Action Services](/guides/developer/governance-action-services/overview)
+    - [Writing Governance Action Services](/guides/developer/governance-action-services/overview)
 
 --8<-- "snippets/abbr.md"

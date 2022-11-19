@@ -21,7 +21,7 @@ This `GovernanceAction` metadata entity is used to coordinate the desired activi
 
 Governance actions can be created through the [Governance Engine OMAS API](/services/omas/governance-engine/overview). Some governance services (for example, the  [Watchdog Governance Action Service](/guides/developer/governance-action-services/watchdog-governance-service)) can initiate other governance actions.  
 
-Governance services produce output strings called [*guards*](/concepts/guard) that indicate specific conditions or outcomes.  These guards can be used to trigger new governance actions. Triggered governance actions are linked to their predecessor so it possible to trace through the governance actions that ran.
+Governance services produce output strings called [*guards*](/concepts/guard) that indicate specific conditions or outcomes.  These guards can be used to trigger new governance actions. Triggered governance actions are linked to their predecessor, so it is possible to trace through the governance actions that ran.
 
 The [governance action process](/concepts/governance-action-process) defines the flow of governance actions.  It uses [governance action types](/concepts/governance-action-type) to build up a template of possible governance actions linked via the guards.  When the process runs, its linked governance action types control the triggering of new governance actions.
 

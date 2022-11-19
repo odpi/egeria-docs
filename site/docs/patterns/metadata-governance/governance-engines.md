@@ -5,13 +5,15 @@ The building industry has the principle of *shearing layers* in the design of a 
 
 *... Things that need to change frequently should be easy to change.  Those aspects that change infrequently can take more effort and time.*
 
-In Egeria, the shearing layer principle is evident in the design of automated governance.  An organization that is maturing their governance capability, needs to be able to quickly design and deploy new governance automations to cover new situations.  These automations need to be quick to create and quick to change.  There is no time to wait for a software developer to code each one.  
+In Egeria, the shearing layer principle is evident in the design of automated governance.  An organization that is maturing their governance capability needs to be able to move fast.  These automations need to be quick to create and quick to change.  There is no time to wait for a software developer to code each one.  
 
-Egeria defines flexible components called [governance services](/concepts/governance-services) that can be re-configured and reused in many situations.  Collectively the governance services form a pallet of configurable governance functions.  The governance team script them together every time they need a new governance automation.
+Egeria defines flexible components called [governance services](/concepts/governance-service) that can be re-configured and reused in many situations.  Collectively the governance services form a pallet of configurable governance functions.  The governance team link them together into a new process every time they need a new governance automation.
 
-The advantage is the ability to rapidly scale out your governance capability.  The downside is that there are more concepts to understand in order to design your automation process.
+The advantage of this approach is the ability to rapidly scale out your governance capability.  The downside is that there are more moving parts and concepts to understand.
 
-The diagram below summarizes this process.  
+The diagram below summarizes how Egeria's governance automation works.  
+
+![Layers of governance automation](/patterns/metadata-governance/governance-engines-layering.svg)
 
 ??? info "At the base are the governance service components"
     Governance services are [coded in java](/guides/developer/#extending-egeria-using-connectors) and packaged in Java Archives (Jar files).  They need to be passed information about the function to perform and the metadata elements on which to operate since this will different each time they are called.
@@ -21,10 +23,7 @@ The diagram below summarizes this process.
     * A description of the connector's function
     * Names of *configuration properties* that can modify the behaviour of the governance service.
     * A list of *request types* that select which function it is to perform.
-    * Names of *request parameters*  that can be supplied (typically by the caller) that can:
-
-      * override the configuration properties and/or,
-      * provide the identifier(s) of any metadata element(s) to work on.
+    * Names of *request parameters*  that can be supplied (typically by the caller) that can override the configuration properties and/or provide the identifier(s) of any metadata element(s) to work on.
   
     * Names of supported action targets that provide links to the metadata element(s) to work on.  The [action target](/concepts/action-target) mechanism is typically used when governance services are being called in a sequence.  The action types are used to pass details of the metadata elements to work on from service to service.
 
@@ -46,7 +45,6 @@ The diagram below summarizes this process.
 ??? info "Governance action processes"
     Governance action processes are defined in metadata using a set of linked [governance action types](/concepts/governance-action-type).  They are choreographed in a [Metadata Access Server](/concepts/metadata-access-server) running the [Governance Engine OMAS](/services/omas/governance-engine/overview). When the process is called to run, the Governance Engine OMAS navigates to the first governance action type in the governance process definition.  It creates a matching governance action entity.  This is picked up by the engine host and executed in the governance engine just as if it was called independently.  The guards are returned to the governance action entity as normal.  This change is detected by Governance Engine OMAS which uses the guards to navigate to the next governance action type(s) found in the governance action process definition.  A governance action is created for each of the next governance action types and the cycle is repeats until there are no more governance action types to navigate to in the governance action process definition.
 
-![Layers of governance automation](governance-engines-layering.svg)
 
 A governance process can be run many times with different parameters.  It can be changed, simply by updating the governance action type metadata entities in the governance action process definition.  New processes can be created by creating the appropiate governane process definition.
 

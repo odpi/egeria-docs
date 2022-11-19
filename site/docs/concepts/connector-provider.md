@@ -9,7 +9,7 @@ hide:
 # Connector Provider
 
 
---8<-- "docs/guides/developer/connector-provider-into.md"
+--8<-- "docs/guides/developer/connector-provider-intro.md"
 
 ## Writing the Connector Provider
 

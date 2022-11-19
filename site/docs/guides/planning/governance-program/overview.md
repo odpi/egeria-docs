@@ -41,7 +41,7 @@ Each domain is typically the responsibility of a different executive in the orga
 
 Governance domains are represented by [*Governance Domain Descriptions*](/types/4/0401-Governance-Definitions/#governancedomaindescription) entities in open metadata.  They are organized into a *GovernanceDomainSet* collection.
 
-![Governance Domain Descriptions](governance-domain-definitions.svg)
+![Governance Domain Descriptions](/guides/planning/governance-program/governance-domain-definitions.svg)
 > The governance domain descriptions organized in a governance domain set
 
 The governance domain descriptions include the *domainIdentifier* property, a *displayName* and a *description*.  The *domainIdentifier* property is an integer and by convention "0" means "applies to all domains".  For example:
@@ -83,11 +83,11 @@ For example, you may have 100 data assets and each needs at least one person to 
 
 * You may want to organize the data assets into different [groups](#governance-classification-tagging-and-linking) and appoint different people to grant access to the assets in each group.  In this case, you would have a governance role instance for each group.  They would be linked to the element that represents the group via the [*AssignmentScope*](/types/1/0120-Assignment-Scopes) relationship.
 
-  ![Governance roles with specific assignment scopes](governance-role-assignment-scope.svg)
+  ![Governance roles with specific assignment scopes](/guides/planning/governance-program/governance-role-assignment-scope.svg)
 
 * You may want to have specific roles for each data asset.  This could be a lot of overhead to defined roles explicitly.  You could choose to have a generic role where the appointment and scope is handled via the [*Ownership*](/types/4/0445-Governance-Roles) classification.
 
-  ![Using the ownership classification to create an explicit assignment of responsibility](ownership-classification-example.svg)
+  ![Using the ownership classification to create an explicit assignment of responsibility](/guides/planning/governance-program/ownership-classification-example.svg)
 
 These different approaches allow you to have enough detail in your open metadata definitions to configure tools and report on governance activity, whilst minimising effort to keep the definitions up to date.
 
@@ -107,7 +107,7 @@ The governance domain covers activity occurring in different parts of the busine
 
 Each governance domain would typically have a community, led by the governance domain leader and with a membership consisting of the people appointed to the governance roles supporting the governance domain.
 
-![Governance Communities](governance-domain-community.svg)
+![Governance Communities](/guides/planning/governance-program/governance-domain-community.svg)
 
 As the governance roles are defined, they are added to the governance domain community using the [CommunityMembership](/types/1/0140-Communities) relationship.  As people are appointed to the roles, they automatically become a member of the community.
 
@@ -115,7 +115,7 @@ As the governance roles are defined, they are added to the governance domain com
 
 Often the leaders of the governance domains need a forum to share ideas and collaborate.  This can be achieved by setting up a community for the governance leaders.  This means the governance domain leader is the head of their governance domain community and is a member of the governance leadership community. 
 
-![Governance Leadership Community](governance-leadership-community.svg)
+![Governance Leadership Community](/guides/planning/governance-program/governance-leadership-community.svg)
 
 Defining the governance communities' membership in Egeria means that as people are appointed or removed from roles, Egeria can automatically maintain access control lists and email list for the membership.
 
@@ -156,7 +156,7 @@ Most activity within each governance domain is iteratively developed and reviewe
 
 A *Governance Definition* is a metadata element that describes the context or purpose for an activity that supports the organization's operation. The picture shows the main types of governance definition and how they link together to create a coherent response to a business strategy or regulation.
 
-![Traceability through governance definitions](traceability-from-business-drivers-to-action.svg)
+![Traceability through governance definitions](/guides/planning/governance-program/traceability-from-business-drivers-to-action.svg)
 > Using governance definitions to provide traceability from business drivers and regulations to actions.
 
 ## Subject areas
@@ -172,12 +172,12 @@ The role of a [subject area definition](/types/4/0425-Subject-Areas) is to act a
 
 The common definitions that are part of the subject area are classified as such using the [SubjectArea](/types/4/0425-Subject-Areas) classification.
 
-![Subject Area Definition](subject-area-definition.svg)
+![Subject Area Definition](/guides/planning/governance-program/subject-area-definition.svg)
 > Defining a subject area
 
 Each subject area has an owner (see [SubjectAreaOwner](/types/4/0445-Governance-Roles)) who is responsible for the common definitions relating to the subject area.  Often the subject area owner is a senior person in the organization with expertise in the subject area.  He/she coordinates other subject-matter experts to author and maintain the common definitions and standards.  It is helpful to set up a [community](/concepts/community) of people working on the subject area's common definitions, to coordinates email distribution lists, news and events.
 
-![Subject Area Community](subject-area-community.svg)
+![Subject Area Community](/guides/planning/governance-program/subject-area-community.svg)
 > People working on a subject area come together in a community
 
 The subject area definition can be linked to [governance definitions](#governance-definitions) via the [*GovernanceBy*](/types/4/0401-Governance-Definitions) relationship.
@@ -205,7 +205,7 @@ The organization of the subject areas is orthogonal to the governance domains. S
 
 One of the ways to reduce the cost of governance is to define groups of similar assets/resources along with the governance definitions that apply to members of the group.  This avoids having to make decisions on how to manage each asset/resource.  The cataloguing process just needs to work out which group(s) to place the asset in.  Labels such as classifications, and tags of different types are used to identify these group assignments.  When a governance process is operating on the asset/resource, it looks up the labels and follows the governance definitions for the group.
 
-![Figure 4](divide-and-conquer-landscape.svg)
+![Figure 4](/guides/planning/governance-program/divide-and-conquer-landscape.svg)
 > **Figure 4:** Different types of tags used to group assets for governance
 
 The different types of labels used to group assets/resources are used for different purposes and may indicate how official they are:
@@ -232,7 +232,7 @@ The labels may be assigned directly to the asset, or to elements, such as schema
 
 The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined, and they can be set up in [`GovernanceClassificationLevel`](/types/4/0421-Governance-Classification-Levels/) definitions.
 
-![Figure 5](governance-program-level-definition.svg)
+![Figure 5](/guides/planning/governance-program/governance-program-level-definition.svg)
 > **Figure 5:** Governance classifications that use governance level definitions
 
 Egeria has a set of default values that can be set up using the [`createStandardGovernanceClassificationLevels`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceClassificationLevelInterface.html) method.
@@ -246,17 +246,17 @@ A value that should be captured to demonstrate the effectiveness of the governan
 
 The calculation of governance metrics is often a summary of many other measurements associated with specific resources (such as data sources and processes) operating under the scope of the governance program. These resources are catalogued as [`Assets`](/concepts/asset). 
 
-![Figure 6](governance-metrics-with-measurements-dataset.svg)
+![Figure 6](/guides/planning/governance-program/governance-metrics-with-measurements-dataset.svg)
 > **Figure 6:** Measuring governance through an external data set
 
 The definition of their expected behavior or content can be captured using the `GovernanceExpectations` classification attached to the `Asset`. The measurements that support the assessment of a particular resource can be gathered and stored in a `GovernanceMeasurements` classification attached to its `Asset`.
 
-![Figure 7](expectations-vs-measurements.svg)
+![Figure 7](/guides/planning/governance-program/expectations-vs-measurements.svg)
 > **Figure 7:** Setting expectations and gathering results in classifications
 
 The measurement classification may be attached to a related element that describes an aspect for its operation.  For example, in figure 8 the measurement is attached to a process instance that captures a specific run of a process.  The expected values are attached to its parent process.
 
-![Figure 8](expectations-vs-measurements-example.svg)
+![Figure 8](/guides/planning/governance-program/expectations-vs-measurements-example.svg)
 > **Figure 8:** Attaching the measurements to related elements
 
 
@@ -287,21 +287,21 @@ The classifications ControlPoint, VerificationPoint and EnforcementPoint are use
 These classifications help in the review of the implementation of the governance program and can be used to drive additional audit logging. 
 
 
-![Figure 9](governance-action-process-example.svg)
+![Figure 9](/guides/planning/governance-program/governance-action-process-example.svg)
 > Implementing the actions defined in your governance definitions.
 
 
 ## Governance Rollout
 
-![Governance Campaigns](governance-campaign.svg)
+![Governance Campaigns](/guides/planning/governance-program/governance-campaign.svg)
 
 
-![Governance Projects](governance-projects.svg)
+![Governance Projects](/guides/planning/governance-program/governance-projects.svg)
 
 
 ## Open metadata implementation
 
-!!! education "How the Open Metadata Access Services (OMASs) support the governance program"
+??? education "How the Open Metadata Access Services (OMASs) support the governance program"
 
     * The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of governance domain and its associated definition elements.
 

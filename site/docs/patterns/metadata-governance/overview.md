@@ -10,6 +10,7 @@
 Although some decision will need to be taken by authorized people, the more that can be automated, the more cost-effective the governance will be.
 
 --8<-- "docs/patterns/metadata-governance/governance-engines.md"
+--8<-- "docs/patterns/metadata-governance/setting-up-the-engine-host.md"
 
 
 ## Next steps?
@@ -20,6 +21,6 @@ Although some decision will need to be taken by authorized people, the more that
     The [Planning Guide](/guides/planning) describes how to plan the work to introduce Egeria into your organization.
 
 ??? education "Learn more about metadata governance?"
-    The [Metadata Governance Dojo](/education/egeria-dojo/metadata-concernance/overview) is a self-guided course building on the concepts introduced here.
+    The [Metadata Governance Dojo](/education/egeria-dojo/metadata-governance/overview) is a self-guided course building on the concepts introduced here.
 
 --8<-- "snippets/abbr.md"

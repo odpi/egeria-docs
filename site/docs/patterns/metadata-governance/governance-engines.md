@@ -3,7 +3,7 @@
 
 The building industry has the principle of *shearing layers* in the design of a building.  This principle is as follows: 
 
-    *Things that need to change frequently should be easy to change.  Those aspects that change infrequently can take more effort and time.*
+*... Things that need to change frequently should be easy to change.  Those aspects that change infrequently can take more effort and time.*
 
 In Egeria, the shearing layer principle is evident in the design of automated governance.  An organization that is maturing their governance capability, needs to be able to quickly design and deploy new governance automations to cover new situations.  These automations need to be quick to create and quick to change.  There is no time to wait for a software developer to code each one.  
 
@@ -46,15 +46,15 @@ The diagram below summarizes this process.
 ??? info "Governance action processes"
     Governance action processes are defined in metadata using a set of linked [governance action types](/concepts/governance-action-type).  They are choreographed in a [Metadata Access Server](/concepts/metadata-access-server) running the [Governance Engine OMAS](/services/omas/governance-engine/overview). When the process is called to run, the Governance Engine OMAS navigates to the first governance action type in the governance process definition.  It creates a matching governance action entity.  This is picked up by the engine host and executed in the governance engine just as if it was called independently.  The guards are returned to the governance action entity as normal.  This change is detected by Governance Engine OMAS which uses the guards to navigate to the next governance action type(s) found in the governance action process definition.  A governance action is created for each of the next governance action types and the cycle is repeats until there are no more governance action types to navigate to in the governance action process definition.
 
-    A governance process can be run many times with different parameters.  It can be changed, simply by updating the governance action type metadata entities in the governance action process definition.  New processes can be created by creating the appropiate governane process definition.
-
-    If a desired request type can not be supported by the existing governance services, a developer is asked to extend a governance service implementation or create a new one that can be configured into a governance engine to support the desired governance request type.
-
-    ??? example "Governance services supplied with Egeria"
-        * [Governance Action Services](/connectors/#governance-action-services)
-        * [Open Discovery Services](/connectors/#open-discovery-services)
-        * [Repository Governance Services](/connectors/#repository-governance-services)
-
 ![Layers of governance automation](governance-engines-layering.svg)
+
+A governance process can be run many times with different parameters.  It can be changed, simply by updating the governance action type metadata entities in the governance action process definition.  New processes can be created by creating the appropiate governane process definition.
+
+If a desired request type can not be supported by the existing governance services, a developer is asked to extend a governance service implementation or create a new one that can be configured into a governance engine to support the desired governance request type.
+
+??? example "Governance services supplied with Egeria"
+    * [Governance Action Services](/connectors/#governance-action-services)
+    * [Open Discovery Services](/connectors/#open-discovery-services)
+    * [Repository Governance Services](/connectors/#repository-governance-services)
 
 --8<-- "snippets/abbr.md"

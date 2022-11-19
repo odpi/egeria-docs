@@ -16,4 +16,10 @@ Although some decision will need to be taken by authorized people, the more that
 
 --8<-- "snippets/getting-started.md"
 
+??? education "Review the planning guide?"
+    The [Planning Guide](/guides/planning) describes how to plan the work to introduce Egeria into your organization.
+
+??? education "Learn more about metadata governance?"
+    The [Metadata Governance Dojo](/education/egeria-dojo/metadata-concernance/overview) is a self-guided course building on the concepts introduced here.
+
 --8<-- "snippets/abbr.md"

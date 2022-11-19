@@ -91,7 +91,7 @@ The methods in red are additional services offered to governance action services
 
 A governance action service has a choice of base classes to extend that controls the methods provided in the governance action context:
 
-* *GovernanceActionService* - for the complete context
+* *GeneralGovernanceActionService* - for the complete context
 * *WatchdogGovernanceActionService* - for the white and blue methods
 * *ProvisioningGovernanceActionService* - for the white and purple methods
 * *VerificationGovernanceActionService* - for the white and green methods
@@ -208,10 +208,6 @@ In addition, it needs to implement the standard [Open Connector Framework (OCF)]
 * *initialize* - an optional method where the connection object can be processed to, say, extract the configuration properties.
 * *start* - this is where the processing logic of your governance action service belongs.
 * *disconnect* - an optional method to free up any runtime resources that the governance action service is using.  It is called after the governance action process records a completion status, or if it throws an exception from the *start* method.
-
-### Shared context methods
-
-
 
 
 ### Watchdog context methods

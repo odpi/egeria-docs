@@ -15,7 +15,7 @@ Egeria's guides provide practical guidance on different aspects of using Egeria 
 * [Migration Guide](/guides/migration/migrating-configuration-documents) - Egeria strives to maintain compatibility of APIs and file formats from release to release.  The migration guide covers techniques to migrate aspects of Egeria where compatibility between releases was not possible..
 * [Operations Guide](/guides/operations/overview) - Describes commands to control and monitor an Egeria deployment.
 * [Diagnostic Guide](/guides/diagnostic/overview) - Problem determination methods and guidance.
-* [User Interfaces](/user-interfaces) - Details of Egeria's user interfaces
-* [Features](/features) - Provides a detailed guide to the features of Egeria
+* [User Interfaces](/user-interfaces) - Details of Egeria's user interfaces.
+* [Features](/features) - Provides a detailed guide to the features of Egeria.
 
 --8<-- "snippets/abbr.md"

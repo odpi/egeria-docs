@@ -32,16 +32,30 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     ??? intermediate "Automating metadata capture (1.5 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/automating-metadata-capture.md"
 
-    ??? beginner "Common definitions (2 hours)"
+    ??? beginner "Common definitions (3 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/common-definitions.md"
 
-    ??? beginner "Working with templates (30 mins)"
-        --8<-- "docs/education/egeria-dojo/metadata-governance/working-with-templates.md"
+    ??? intermediate "Working with governance metadata (1.5 hours)"
 
-    ??? advanced "Using automated governance actions (2 hours)"
+        ??? intemediate "Governance Zoning (30 mins)"
+            --8<-- "docs/features/governance-zoning/overview.md"
+
+        ??? intemediate "Anchor management (30 mins)"
+            --8<-- "docs/features/anchor-management/overview.md"
+
+        ??? intemediate "Working with templates (30 mins)"
+            --8<-- "docs/education/egeria-dojo/metadata-governance/working-with-templates.md"
+
+    ??? advanced "Using automated governance actions (3 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/using-automated-governance-actions.md"
 
-    ??? intermediate "Securing your metadata (1.5 hours)"
+    ??? advanced "Managing data quality (1 hour)"
+        --8<-- "docs/features/data-quality/overview.md"
+
+    ??? advanced "Duplicate management (1 hour)"
+        --8<-- "docs/features/duplicate-management/overview.md"
+
+    ??? intermediate "Securing your metadata (1 hour)"
         --8<-- "docs/features/metadata-security/overview.md"
 
     ??? intermediate "Linking metadata governance to your governance program (1 hour)"

@@ -14,11 +14,11 @@ The open metadata ecosystem collects, links and disseminates metadata from many 
 ??? beginner "Setting up an engine host, governance engines and services (30 mins)"
     --8<-- "docs/patterns/metadata-governance/setting-up-the-engine-host.md"
 
-??? advanced "Using metadata discovery (60 mins)"
+??? advanced "Using metadata discovery (1 hour)"
     --8<-- "docs/features/discovery-and-stewardship/overview.md"
 
-??? advanced "Monitoring your governance processes (30 mins)"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/monitoring-your-governance-processes.md"
+??? advanced "Incident reporting and management (30 mins)"
+--8<-- "docs/features/incident-reporting/overview.md"
 
 !!! education "Further information"
     - [Writing Governance Action Services](/guides/developer/governance-action-services/overview)

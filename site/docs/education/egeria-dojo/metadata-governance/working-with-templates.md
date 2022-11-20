@@ -7,7 +7,6 @@
 
 --8<-- "docs/features/templated-cataloguing/templated-cataloguing-example.md"
 
-### Using templates in APIs and connectors
 
 
 

@@ -19,11 +19,11 @@ Data quality can be assessed along different dimensions such as:
 Data quality needs to blend various techniques to deliver quality to each consumer.  Aspects of data quality need to be applied throughout the information supply chain.
 
 Consider an information supply chain that has these types of data sets in it
-![Information Supply Chain](example-info-supply-chain.png)
+![Information Supply Chain](/features/data-quality/example-info-supply-chain.png)
 
 At each stage in the information supply chain, different sets of quality rules can be applied.
 
-![Data Quality Pipeline](data-quality-pipeline.png)
+![Data Quality Pipeline](/features/data-quality/data-quality-pipeline.png)
 
 Detected errors are [captured as exceptions](#correction-of-data) and routed to the appropriate stewards.
 
@@ -49,19 +49,19 @@ One of the potentially most expensive parts of data quality is to capture a full
 
 Consider this data:
 
-![00 3809890 6 7  Lemmie Stage  818928  3082  05231995 4 New York 4 27 DataStage Expert 1 45324 300 27 Code St Harlem NY 1 3](raw-data.svg)
+![00 3809890 6 7  Lemmie Stage  818928  3082  05231995 4 New York 4 27 DataStage Expert 1 45324 300 27 Code St Harlem NY 1 3](/features/data-quality/raw-data.svg)
 
 It is possible to guess what some values mean, but there are often many fields that incomprehensible.
 
 The first stage to understanding data is to determine if it has a [schema](/concepts/schema) that will show its structure, revealing individual data items.
 
-![Adding the data schema](data-schema-added.svg)
+![Adding the data schema](/features/data-quality/data-schema-added.svg)
 
 The schema helps in the understanding of where the data fields, and in some cases, it is possible to understand the meaning of the data values. 
 
 When the data source is catalogued in open metadata, an abstract representation of the schema is captured as [Schema Elements](/concepts/schema/#schema-elements).  These schema elements include *Schema Attributes* that represent the data fields and their associated *Schema Types* that record the actual data types used in the data.
 
-![Cataloguing the schema](data-asset.svg)
+![Cataloguing the schema](/features/data-quality/data-asset.svg)
 
 
 ## Adding context to the data
@@ -74,7 +74,7 @@ Open metadata provides mechanisms to augment the asset and its schema with conte
 
 In the diagram below, the *Employee Data Of Birth* glossary term is linked to a data class called *Adult Data Of Birth*.  This detects that a date of birth is not only a valid date but also describes someone older than 18 years old.  The sample data shown below includes a date of birth of a young infant.  Either the date of birth is incorrect, or this individual should not be an employee!
 
-![Mapping data classes to glossary terms](date-data-class-example.svg)
+![Mapping data classes to glossary terms](/features/data-quality/date-data-class-example.svg)
 
 ## Correction of data
 

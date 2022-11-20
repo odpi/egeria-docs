@@ -184,7 +184,6 @@ nav:
           - Metadata Archiving: features/metadata-archiving/overview.md
           - Metadata Provenance: features/metadata-provenance/overview.md
           - Metadata Security: features/metadata-security/overview.md
-          - Open Type System: features/open-type-system/overview.md
           - People, Roles and Organizations: features/people-roles-organizations/overview.md
           - Reference Data Management: features/reference-data-management/overview.md
           - Synchronized Access Control: features/synchronized-access-control/overview.md

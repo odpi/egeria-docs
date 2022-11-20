@@ -102,6 +102,6 @@ You can think of the metadata described above as the facts about your organizati
 
 !!! summary "Summary"
 
-Hopefully the discussion above has helped to illustrate that metadata is varied and can be built into a rich knowledge base that drives organizational objectives  through increased visibility, utilization and management of an organization's digital assets.
+    Hopefully the discussion above has helped to illustrate that metadata is varied and can be built into a rich knowledge base that drives organizational objectives  through increased visibility, utilization and management of an organization's digital assets.
 
 --8<-- "snippets/abbr.md"

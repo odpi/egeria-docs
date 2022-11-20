@@ -22,7 +22,4 @@ You can make your own choices on how to build trust in your data/metadata.  Eger
 
 * Egeria's documentation provides guidance on how to use this technology to deliver business value.
 
-In this dojo we will cover these mechanisms and practices, showing how they fit in the metadata update specification pattern described above.  You can then select which are appropriate to your organization and when/where to consider using them.
-
-
 --8<-- "snippets/abbr.md"

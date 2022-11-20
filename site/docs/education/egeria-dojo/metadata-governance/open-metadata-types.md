@@ -1,13 +1,13 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "types/open-metadata-types-intro.md"
+--8<-- "docs/types/open-metadata-types-intro.md"
 
 !!! question "Test yourself ..."
 
     Fill in the following table to map the areas of the open metadata type system to the different categories of metadata.
     
-    | Open Metadata Area                         | Categories of metadata |
+    | Open Metadata Area                         | Categories of metadata covered by this Area |
     |--------------------------------------------|------------------------|
     | 0 - Base Types, Systems and Infrastructure |                        |
     | 1 - Collaboration                          |                        |
@@ -20,7 +20,7 @@
     
     ??? info "Answer"
         
-        | Open Metadata Area                         | Categories of metadata                                                            |
+        | Open Metadata Area                         | Categories of metadata covered by this Area                                              |
         |--------------------------------------------|-----------------------------------------------------------------------------------|
         | 0 - Base Types, Systems and Infrastructure | Technical Metadata                                                                |
         | 1 - Collaboration                          | Consumer Metadata, Organizational Metadata                                        |

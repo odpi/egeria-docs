@@ -17,11 +17,14 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     ??? beginner "The importance of metadata governance (25 mins)"
         --8<-- "docs/patterns/metadata-governance/metadata-governance-intro.md"
 
-    ??? beginner "The open metadata ecosystem (10 mins)"
+    ??? beginner "The open metadata ecosystem (15 mins)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/open-metadata-ecosystem.md"
         
-    ??? beginner "Different categories of metadata (10 mins)"
+    ??? beginner "Different categories of metadata (25 mins)"
         --8<-- "docs/patterns/metadata-manager/categories-of-metadata.md"
+
+    ??? beginner "Open metadata types (25 mins)"
+        --8<-- "education/egeria-dojo/metadata-governance/open-metadata-types.md"
 
     ??? intermediate "Designing your metadata supply chains (45 mins)"
         --8<-- "docs/guides/integration/metadata-supply-chains.md"
@@ -35,17 +38,17 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     ??? beginner "Working with templates (30 mins)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/working-with-templates.md"
 
-    ??? intermediate "Lineage preservation and use (1 hour)"
-        --8<-- "docs/features/lineage-management/overview.md"
- 
-    ??? advanced "Using automated governance actions (3.5 hours)"
+    ??? advanced "Using automated governance actions (2 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/using-automated-governance-actions.md"
 
     ??? intermediate "Securing your metadata (1.5 hours)"
         --8<-- "docs/features/metadata-security/overview.md"
 
-    ??? intermediate "Linking metadata governance to your governance program (3 hours)"
+    ??? intermediate "Linking metadata governance to your governance program (1 hour)"
         --8<-- "docs/guides/planning/governance-program/overview.md"
 
-          
+    ??? intermediate "Lineage preservation and use (2 hours)"
+        --8<-- "docs/features/lineage-management/overview.md"
+
+
 --8<-- "snippets/abbr.md"

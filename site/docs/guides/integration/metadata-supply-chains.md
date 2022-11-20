@@ -10,8 +10,8 @@ Each stage of development considers a particular source of metadata and where it
 !!! example "Database schema capture and distribution"
     There is a database server (*Database Server 1*) that is used to store application data that is of interest to other teams.  An initiative is started to automatically capture the schemas of the databases on this database server.  This schema information will be replicated to two destinations:
 
-    * Another database server (*Database Server 2*) is used by a data science team as a source of data for their work.  An ETL job runs every day to refresh the data in this database with data from the first database.  The data is anonymized by the ETL job, but the schema and data profile remains consistent.  If the schema in the first database changes, the ETL job is updated at the same time.  However, the schema in the second database is not updated because the team making the change do not have access to it.  Nevertheless it must be updated consistently before the ETL job runs; otherwise it will fail.
-    * The analytics tool that is also used by the data science team has a catalog of data sources to show the data science team what data is available.  This needs to be kept consistent with the structure of the databases.  The tool does provide a feature to refresh the data source schema in its catalog, but the team are often unaware of changes, or simply forget to do it, and only discover the inconsistency when their models fail to run properly.
+    * Another database server (*Database Server 2*) is used by a data science team as a source of data for their work.  An ETL job runs every day to refresh the data in this second database with data from the first database.  The data is anonymized by the ETL job, but the schema and data profile remains consistent.  If the schema in the first database changes, the ETL job is updated at the same time.  However, the schema in the second database is not updated because the team making the change do not have access to it.  Nevertheless it must be updated consistently before the ETL job runs; otherwise it will fail.
+    * The analytics tool that is also used by the data science team has a catalog of data sources to show the data science team what data is available.  This needs to be kept consistent with the structure of the databases.  The tool does provide a feature to refresh any data source schema in its catalog, but the team are often unaware of changes to their data sources, or simply forget to do it, and only discover the inconsistency when their models fail to run properly.
 
     ![metadata supply chain scenario](/guides/integration/metadata-supply-chains-scenario.svg)
 
@@ -73,11 +73,11 @@ ETL engines have a long history of capturing lineage, since it is a common requi
 
 ![Choices when integrating lineage](/guides/integration/integrating-lineage.svg)
 
-### Summary
+!!! summary "Summary"
 
-In this guide your have seen that integration with the open metadata ecosystem is built up iteratively using *integration connectors* running in an *integration daemon*.  Open metadata is stored in *metadata access stores* and shared across the open metadata ecosystem using a *cohort*.  It is also possible to plug in a third party metadata repository using a *repository proxy*.
+    In this guide your have seen that integration with the open metadata ecosystem is built up iteratively using *integration connectors* running in an *integration daemon*.  Open metadata is stored in *metadata access stores* and shared across the open metadata ecosystem using a *cohort*.  It is also possible to plug in a third party metadata repository using a *repository proxy*.
 
-![Complete integration solution](/guides/integration/integrated-solution.svg)
+    ![Complete integration solution](/guides/integration/integrated-solution.svg)
 
 !!! education "Related information"
     - [Choosing the integration style for metadata repositories/catalogs](/guides/integration/types-of-metadata-repository)

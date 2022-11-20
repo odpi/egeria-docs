@@ -17,7 +17,7 @@ The most commonly collected metadata is *technical metadata* that describes the 
 * The events and their schemas used to send notifications between applications, services and servers to help synchronize their activity.
 * The files stored on the file system.
 
-Technical metadata is the easiest type of metadata to maintain since many technologies provide APIs/events to query the technical metadata for the digital resources being managed.
+Technical metadata is the easiest type of metadata to maintain since many technologies provide APIs/events to query the technical metadata for the digital resources it manages.
 
 To keep your technical metadata up-to-date you need to consider the following types of metadata update triggers:
 
@@ -39,7 +39,7 @@ Data content analysis is often triggered periodically, based on the update frequ
 
 *Consumer metadata* includes the comments, reviews, tags added by the users that are consuming the metadata and the digital resources it describes.  This metadata is gathered from the tools through which the users consume the metadata and the digital resources.  It is then used to assess the value and popularity of the metadata and digital resources to the broader community.
 
-Metadata update triggers should focus around the tools where the consumer metadata is captured.  Typically, each piece of consumer feedback is treated as a separate trigger.
+Metadata update triggers should focus around the tools where the consumer feedback is captured.  Typically, each piece of consumer feedback is treated as a separate trigger.  The feedback should then be distributed to the tools that are used by the owning team.  This could trigger changes to the resource.  Ideally, the owning team should be able to respond and demonstrate they are listening and taking action.
 
 ### Common definitions
 
@@ -58,9 +58,6 @@ Common definitions are organized into [subject areas](/concepts/subject-area), a
 
 Updates to the related common definitions are typically edited offline, collected, and then disseminated together as a new release. Therefore, the metadata update trigger is often related to the release of a collection of common definitions.
 
-??? info "Further reading ..."
-    There is a whole section on common definitions later in the dojo.
-
 ### Governance metadata
 
 *Governance metadata* describe the requirements of a particular [Governance Domain](/concepts/governance-domain) and their associated controls, metrics and implementations.  They are managed in releases in a similar way to common definitions.  Therefore, their releases act a triggers to further actions. 
@@ -72,6 +69,14 @@ Updates to the related common definitions are typically edited offline, collecte
 Organization metadata is often managed in existing applications run by Human Resources and Corporate Security.  Therefore, updates in these applications are used to trigger updates to the organizational metadata in the open metadata ecosystem.
 
 Governance actions can trigger the creation of new roles and appointments to these roles.  These elements can be then be disseminated to the appropriate applications for information, verification and/or approval.
+
+### Business context metadata
+
+An organization has capabilities, facilities and services.  The digital resources it uses serve these purposes.  When decisions need to be made as to which digital resources to invest in, it is helpful to understand which part of the business will be impacted.
+
+Information about the organization's capabilities, facilities and services is called *business context*.  Often individuals core role is focuses on these aspects.  Thinking them to the digital resources that they depend on (often invisible to these individuals) helps to raise awareness of the mutual dependency and understanding of the impact/value of change at either level.
+
+Triggers that detect change in digital resources (for example an outage) can result in information flowing to the appropriate business teams.  If the change (or outage) is extensive, the linked business context can be used to prioritize the associated work.
 
 ### Process metadata
 
@@ -85,7 +90,7 @@ The capture and maintenance of process metadata is typically triggered as proces
 
 Operational metadata is often captured in log files. As they are created, they trigger the cataloging and linking of their information into other types of metadata.
 
-### Metadata relationships and classifications
+## Metadata relationships and classifications
 
 The other types of trigger to consider is when/where the metadata elements described above can be connected together and augmented.
 
@@ -95,7 +100,7 @@ You can think of the metadata described above as the facts about your organizati
 
 *Metadata classifications* are used to label metadata as having particular characteristics.  This helps group together similar elements, or elements that represent resources that need similar processing
 
-### Summary
+!!! summary "Summary"
 
 Hopefully the discussion above has helped to illustrate that metadata is varied and can be built into a rich knowledge base that drives organizational objectives  through increased visibility, utilization and management of an organization's digital assets.
 

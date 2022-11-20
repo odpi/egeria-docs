@@ -7,8 +7,5 @@
 
 --8<-- "docs/practices/coco-pharmaceuticals/scenarios/defining-a-glossary/scenario-content.md"
 
-!!! education "Further information"
-    - [Anatomy of a glossary](/practices/common-data-definitions/anatomy-of-a-glossary)
-
 
 --8<-- "snippets/abbr.md"

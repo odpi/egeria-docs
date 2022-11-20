@@ -8,7 +8,7 @@ Data, and the metadata that describes it, enables individuals and automated proc
 
 ## Building trust
 
-Trust is hard to build and easy to destroy.  Maintaining trust begins with authoritative sources of data/metadata that are actively managed and distributed along well known information supply chains.  This flow needs to be transparent and reliable - that is explicitly defined and verifiable through monitoring, inspection, testing and remediation.  It needs to be tailored to meet the specific needs of its consumers.
+Trust is hard to build and easy to destroy.  Maintaining trust begins with authoritative sources of data/metadata that are actively managed and distributed along well known information supply chains.  This flow needs to be transparent and reliable - that is, explicitly defined and verifiable through monitoring, inspection, testing and remediation.  It needs to be tailored to meet the specific needs of its consumers.
 
 Consider this story ...
 

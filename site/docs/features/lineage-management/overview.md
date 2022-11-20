@@ -65,7 +65,7 @@ Capturing lineage has both a static and a dynamic aspect to it.
 
 Each of these aspects have their challenges.
 
-- the cataloguing of your digital landscape typically involves different techniques since there are many choices of technologies typically deployed.  These techniques expose inconsistencies in naming, formats and detail.  It is also possible that the same resource is catalogued multiple times.  Ths is why the lineage architecture includes [stewardship](#lineage-stewardship) to reconcile these differences.
+- The cataloguing of your digital landscape typically involves different techniques since there are many choices of technologies typically deployed.  These techniques expose inconsistencies in naming, formats and detail.  It is also possible that the same resource is catalogued multiple times.  Ths is why the lineage architecture includes [stewardship](#lineage-stewardship) to reconcile these differences.
 
 - Processing engines either produce no dynamic lineage information (this is the most common) or produce lineage information formatted in a unique proprietary format that needs to be transformed before it can be linked with the equivalent information from another processing engine.
 

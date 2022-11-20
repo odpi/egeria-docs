@@ -50,8 +50,10 @@ After a few hours work, Erin and Faith reviewed their process. Initially it was 
 
 As new terms are defined, Erin begins to organize them into categories in a similar way that files are organized into directories (folders) on a disk.  Terms can appear in multiple categories - in fact they can appear in categories from other glossaries.
 
-!!! info "Anatomy of a glossary"
-    [Anatomy of a glossary](/practices/common-definitions/anatomy-of-a-glossary) describes the different organization options for a glossary.
+
+!!! education "Further information"
+- [Anatomy of a glossary](/practices/common-data-definitions/anatomy-of-a-glossary)
+
 
 
 --8<-- "snippets/abbr.md"

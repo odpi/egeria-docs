@@ -18,9 +18,6 @@ The open metadata ecosystem collects, links and disseminates metadata from many 
     --8<-- "docs/features/discovery-and-stewardship/overview.md"
 
 ??? advanced "Incident reporting and management (30 mins)"
---8<-- "docs/features/incident-reporting/overview.md"
-
-!!! education "Further information"
-    - [Writing Governance Action Services](/guides/developer/governance-action-services/overview)
+    --8<-- "docs/features/incident-reporting/overview.md"
 
 --8<-- "snippets/abbr.md"

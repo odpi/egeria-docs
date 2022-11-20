@@ -25,6 +25,8 @@ Our guiding beliefs:
 - Metadata access must become open and remotely accessible so that tools from different vendors can work with metadata located on different platforms. This implies unique identifiers for metadata elements, some level of standardization in the types and formats for metadata and standard interfaces for manipulating metadata.
 - Wherever possible, discovery and maintenance of metadata has to be an integral part of all tools that access, change and move information.
 
+--8<-- "docs/introduction/open-metadata-ecosystem.md"
+
 !!! tip "Code talks"
     Egeria provides an Apache 2.0 licensed platform to support vendors that sign up to the open metadata and governance manifesto.
 

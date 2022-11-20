@@ -18,13 +18,15 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
         --8<-- "docs/patterns/metadata-governance/metadata-governance-intro.md"
 
     ??? beginner "The open metadata ecosystem (15 mins)"
-        --8<-- "docs/education/egeria-dojo/metadata-governance/open-metadata-ecosystem.md"
+        --8<-- "docs/introduction/open-metadata-ecosystem.md"
+
+        In this dojo we will cover these mechanisms and practices, showing how they fit in the metadata update specification pattern described above.  You can then select which are appropriate to your organization and when/where to consider using them.
         
     ??? beginner "Different categories of metadata (25 mins)"
         --8<-- "docs/patterns/metadata-manager/categories-of-metadata.md"
 
     ??? beginner "Open metadata types (25 mins)"
-        --8<-- "education/egeria-dojo/metadata-governance/open-metadata-types.md"
+        --8<-- "docs/education/egeria-dojo/metadata-governance/open-metadata-types.md"
 
     ??? intermediate "Designing your metadata supply chains (45 mins)"
         --8<-- "docs/guides/integration/metadata-supply-chains.md"
@@ -32,8 +34,14 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     ??? intermediate "Automating metadata capture (1.5 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/automating-metadata-capture.md"
 
-    ??? beginner "Common definitions (3 hours)"
+    ??? intermediate "Common definitions (1.5 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/common-definitions.md"
+
+    ??? advanced "Using automated governance actions (3.5 hours)"
+        --8<-- "docs/education/egeria-dojo/metadata-governance/using-automated-governance-actions.md"
+
+    ??? advanced "Managing data quality (1 hour)"
+        --8<-- "docs/features/data-quality/overview.md"
 
     ??? intermediate "Working with governance metadata (1.5 hours)"
 
@@ -46,13 +54,7 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
         ??? intemediate "Working with templates (30 mins)"
             --8<-- "docs/education/egeria-dojo/metadata-governance/working-with-templates.md"
 
-    ??? advanced "Using automated governance actions (3 hours)"
-        --8<-- "docs/education/egeria-dojo/metadata-governance/using-automated-governance-actions.md"
-
-    ??? advanced "Managing data quality (1 hour)"
-        --8<-- "docs/features/data-quality/overview.md"
-
-    ??? advanced "Duplicate management (1 hour)"
+    ??? expert "Duplicate management (1 hour)"
         --8<-- "docs/features/duplicate-management/overview.md"
 
     ??? intermediate "Securing your metadata (1 hour)"

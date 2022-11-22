@@ -13,7 +13,7 @@ People are not good at repetitive admin tasks, particularly if these tasks are n
 ![Metadata Update Specification Pattern](/patterns/metadata-governance/metadata-update-specification-pattern.svg)
 > A three-step specification pattern of *Trigger*, *Maintain Metadata* and *Make Visible*.
 
-??? beginner "Introducing the integration daemon (30 mins)"
+??? beginner "Introducing the integration daemon"
     --8<-- "docs/guides/integration/introducing-integration-daemon.md"
 
     ??? education "Further information"

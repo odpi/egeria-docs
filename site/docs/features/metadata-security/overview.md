@@ -44,7 +44,7 @@ Below is a description of the API of the two Open Metadata Security Connectors.
 
 ### Open metadata platform security connector interface
 
-The connector that plugs in to the platform implements the following interface.
+The connector that plugs into the platform implements the following interface.
 
 *  **OpenMetadataPlatformSecurity** - provides the interface for a plugin connector that validates whether a calling user can access any service on an OMAG Server Platform.  It is called within the context of a specific OMAG Server Platform request.  Each OMAG Server Platform can define its own plugin connector implementation and will have its own instance of the connector. 
    

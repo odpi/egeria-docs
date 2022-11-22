@@ -48,12 +48,12 @@ When a change to the timetable occurred, the bus drivers' manager triggered the 
 
 ## Metadata governance three-step process
 
-We can generalise this process as follows, creating a reusable specification pattern for metadata governance:
+We can generalise this process as follows, creating a reusable specification pattern for all forms of governance:
 
-![Metadata Update Specification Pattern](/patterns/metadata-governance/metadata-update-specification-pattern.svg)
-> A three-step specification pattern of *Trigger*, *Maintain Metadata* and *Make Visible*.
+![Governance Specification Pattern](/patterns/metadata-governance/governance-specification-pattern.svg)
+> A three-step specification pattern of *Trigger*, *Take Action* and *Make Visible*.
 
-For example, if a new deployment of a database occurs in the digital world, it could trigger a metadata update to capture any schema changes and then information about these changes is disseminated to the tools and consumers that need the information.
+For metadata governance, the *Take Action* is typically an update to metadata.   For example, if a new deployment of a database occurs in the digital world, it could trigger a metadata update to capture any schema changes and then information about these changes is disseminated to the tools and consumers that need the information.
 
 The dissemination of specific changes to metadata can also act as a trigger for other metadata updates.  For example, the publishing of changes to a database schema could trigger a data profiling process against the database contents.  The data profiling process adds new metadata elements to the existing metadata, and hence the knowledge graph of metadata grows.
 

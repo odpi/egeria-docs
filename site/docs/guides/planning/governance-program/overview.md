@@ -170,12 +170,12 @@ The role of a [subject area definition](/types/4/0425-Subject-Areas) is to act a
 * [Quality rules](/types/4/0430-Technical-Controls) for specific data values in the subject area.
 * Preferred [data structures and schemas](/types/5/0501-Schema-Elements).
 
-The common definitions that are part of the subject area are classified as such using the [SubjectArea](/types/4/0425-Subject-Areas) classification.
+The materials that are part of the subject area are classified as such using the [SubjectArea](/types/4/0425-Subject-Areas) classification.
 
 ![Subject Area Definition](/guides/planning/governance-program/subject-area-definition.svg)
 > Defining a subject area
 
-Each subject area has an owner (see [SubjectAreaOwner](/types/4/0445-Governance-Roles)) who is responsible for the common definitions relating to the subject area.  Often the subject area owner is a senior person in the organization with expertise in the subject area.  He/she coordinates other subject-matter experts to author and maintain the common definitions and standards.  It is helpful to set up a [community](/concepts/community) of people working on the subject area's common definitions, to coordinates email distribution lists, news and events.
+Each subject area has an owner (see [SubjectAreaOwner](/types/4/0445-Governance-Roles)) who is responsible for the materials relating to the subject area.  Often the subject area owner is a senior person in the organization with expertise in the subject area.  He/she coordinates other subject-matter experts to author and maintain the materials and their use.  It is helpful to set up a [community](/concepts/community) of people working on the subject area's materials, to coordinates email distribution lists, news and events.
 
 ![Subject Area Community](/guides/planning/governance-program/subject-area-community.svg)
 > People working on a subject area come together in a community

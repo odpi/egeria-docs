@@ -4,7 +4,7 @@
 
 ??? info "The glossary"
 
-    The glossary is at the heart of the common definitions for a [subject area](/concepts/subject-area). Figure 1 shows that the glossary contains glossary terms.  Each glossary term describes a concept used by the business. It is also possible to link two glossary terms together with a relationship. The relationship may describe a semantic relationship or a structural one.
+    The glossary is at the heart of the materials for a [subject area](/concepts/subject-area). Figure 1 shows that the glossary contains glossary terms.  Each glossary term describes a concept used by the business. It is also possible to link two glossary terms together with a relationship. The relationship may describe a semantic relationship or a structural one.
 
     ![Figure 1](/practices/common-data-definitions/semantic-to-implementation-glossaries.svg)
     > Figure 1: Glossaries for describing concepts and the relationships between them
@@ -35,7 +35,7 @@
 
     The data class specification defines how to identify data fields of its type by inspecting the data values stored in them.  The specification is independent of a particular technology, which is why they are often described as *logical data types*.  The specification may include preferred implementation types for different technologies using *Implementation Snippets*.
 
-    Data classes are used during *metadata discovery* (see below) to identify the types of data in the discovered data fields.  This is an important step in understanding the meaning and business value of the data fields.
+    Data classes are used during *metadata discovery* (see below) to identify the types of data in the discovered data fields.  This is an important step in understanding the meaning and business value of the data fields.  They can also be used in quality rules to validate that data values mat the perscribed data class.
 
     Data classes can be linked together in part-of and is-a hierarchies to create a logical type system for a subject area. A glossary term can be linked to a data class via an *ImplementedBy* relationship to identify the preferred data class to use when implementing a data field with meaning described in the glossary term.  A data class can be linked to glossary term that describes the meaning of the data class via a *SemanticAssignment* relationship.
 
@@ -78,7 +78,7 @@
 
 ??? info "Schemas and assets"
 
-    An [asset](/concepts/asset) describes a valuable [resource](/concepts/resource) (typically digital).  Such resources include databases, data files, documents, APIs, data feeds, and applications. A digital resource can be dependent on other digital resource to fulfill their implementation.  This relationship is also captured in open metadata with relationships such as [DataContentForDataSet](/types/2/0210-Data-Stores).  These relationships help to highlight inconsistencies in the assets' linkage to the common definitions which may be errors in either the metadata or the implementation/deployment/use of the digital resources.
+    An [asset](/concepts/asset) describes a valuable [resource](/concepts/resource) (typically digital).  Such resources include databases, data files, documents, APIs, data feeds, and applications. A digital resource can be dependent on other digital resource to fulfill their implementation.  This relationship is also captured in open metadata with relationships such as [DataContentForDataSet](/types/2/0210-Data-Stores).  These relationships help to highlight inconsistencies in the assets' linkage to the subject area's materials, which may be due to errors in either the metadata or the implementation/deployment/use of the associated digital resources.
 
     ![Figure 5](/practices/common-data-definitions/semantic-to-implementation-assets-and-schemas-dependencies.svg)
     > Figure 5: Dependencies between digital resources are reflected in open metadata by relationships between assets
@@ -88,7 +88,7 @@
     ![Figure 6](/practices/common-data-definitions/semantic-to-implementation-assets-and-schemas.svg)
     > Figure 6: Schemas describe the structure of the data store in a digital resource (described by the asset in the catalog)
 
-    A schema is typically attached to only one asset since it is classified and linked to other elements assuming that the asset/schema combinations describes the particular collection of data stored in the associated digital resource.  However, there is still a role for the common definitions to provide preferred schema structures for software developers, data engineers and data scientists to use when they create implementations of new digital resources.
+    A schema is typically attached to only one asset since it is classified and linked to other elements assuming that the asset/schema combinations describes the particular collection of data stored in the associated digital resource.  However, there is still a role for the subject area materials to provide preferred schema structures for software developers, data engineers and data scientists to use when they create implementations of new digital resources.
 
     When a new asset is created, the schema definition in the subject area can be used as a template to define the schema for the asset (see figure 7). Then:
 
@@ -109,9 +109,9 @@
         * See [Model 0505](/types/5/0505-Schema-Attributes) in the *Open Metadata Types* to understand how schema attributes are represented on open metadata.
 
 
-??? info "Reference Value Assignments"
+??? info "Reference value assignments"
 
-    The common deinfitions for a subject area may include sets of values used to label assets to show that they are in a particular state or have a specific characteristic that is important in the subject area.  For example, a subject area about people may include the notion of an *Adult* and a *Child* (or *Minor*).  The age of majority is different in each country and so a simple label assigned to a [Person](/types/1/0112-People) profile that indicates that a person is an adult would allow the knowledge of how to determine if someone is an adult to be contained around the maintenance of the person profiles, while the reference data value is used in multiple places.
+    The common deinfitions for a subject area may include sets of values used to label metadata elements to show that they are in a particular state or have a specific characteristic that is important in the subject area.  For example, a subject area about people may include the notion of an *Adult* and a *Child* (or *Minor*).  The age of majority is different in each country and so a simple label assigned to a [Person](/types/1/0112-People) profile that indicates that a person is an adult would allow the knowledge of how to determine if someone is an adult to be contained around the maintenance of the person profiles, while the reference data value is used in multiple places.
 
     These labels are called *reference data values* and are managed in [Valid Value Sets](/types/5/0545-Reference-Data).  The association between a reference data value and a metadata element is [ReferenceValueAssignment](/types/5/0545-Reference-Data).
 
@@ -121,9 +121,9 @@
     !!! education "Further information"
         * [Reference Data Management](/features/reference-data-management/overview) describes different uses of valid value sets.
 
-??? info "Schema Assignments"
+??? info "Schema assignments"
 
-    Figure 10 show three types of assignments between the metadata associated with a digital resource ([technical metadata](/patterns/metadata-manager/overview/#technical-metadata)) and the common definitions:
+    Figure 10 show three types of assignments between the metadata associated with a digital resource ([technical metadata](/patterns/metadata-manager/overview/#technical-metadata)) and the subject area materials:
 
     * [SemanticAssignment](/types/3/0370-Semantic-Assignment) - Semantic assignments indicate that the data stored in the associated data field has the meaning described in the glossary term.
     * [ValidValuesAssignment](/types/5/0545-Reference-Data) - Valid value sets define a list of valid values.  They can be used to the values that are allowed to be stored in a particular data field if it can be described as a discrete set.  
@@ -147,7 +147,7 @@
 
 ??? info "Connectors and connections"
 
-    The digital resources associated the assets in the catalog are accessed through connectors.  A Connector is a client library that applications use to access the data/function held by the digital resource.  Typically, there is a specialized connector for each type of Asset/technology.  
+    The digital resources associated with the assets in the catalog are accessed through connectors.  A Connector is a client library that applications use to access the data/function held by the digital resource.  Typically, there is a specialized connector for each type of Asset/technology.  
 
     Sometimes there are multiple connectors to access a specific type of asset, each offering a different interface for  the application to use.
 
@@ -181,7 +181,7 @@
 
 ??? summary "Bringing it all together"
 
-    Figure 13 summarizes how the common definitions create a rich picture around the resources used by your organization.  As they link to the technical metadata, they complement and reinforce the understanding of your data. In a real-world deployment, the aim is to automate as much of this linkage as possible. This is made considerably easier if the implementation landscape is reasonable consistent.  However, where the stored data values do not match the expected types defined in the schema, the metadata model reveals the inconsistencies and often requires human intervention to ensure the links are correct.
+    Figure 13 summarizes how the subject area materials create a rich picture around the resources used by your organization.  As they link to the technical metadata, they complement and reinforce the understanding of your data. In a real-world deployment, the aim is to automate as much of this linkage as possible. This is made considerably easier if the implementation landscape is reasonable consistent.  However, where the stored data values do not match the expected types defined in the schema, the metadata model reveals the inconsistencies and often requires human intervention to ensure the links are correct.
 
     ![Figure 14](/practices/common-data-definitions/semantic-to-implementation-big-picture.svg)
     > Figure 14: Linking the metadata together

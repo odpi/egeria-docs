@@ -27,7 +27,7 @@ A subject area may be subdivided into more specific subject areas.  The subject 
 
 ## SubjectArea classification
 
-Elements that are part of the common definitions for a subject area ar classified with the *SubjectArea* classification.  The *name* attribute in the classification matches the 
+Elements that are part of the materials for a subject area are classified with the *SubjectArea* classification.  The *name* attribute in the classification matches the *subjectAreaName* attribute in the *SubjectAreaDefinition*.
 
 This classification makes it easy to locate all the subject area's content.
 

@@ -15,7 +15,7 @@ Not all metadata catalogs are the same.
 
 Many metadata repositories are *data catalogs*.  They focus on gathering and organizing information about data sources for a team of data professionals.  Each data source is catalogued under the guidance of its users.  There is some automation for maintaining the catalogued data sources.  The aim is to provide the metadata needed by the local team.
 
-There are also metadata repositories that focus on providing metadata to the whole enterprise, or support a diverse set of tools that are part of a suite. These repositories often have a focus on common definitions and automation of metadata maintenance and stewardship.  They are deployed and controlled as a centralized service.  Some of these repositories are specialized for different types of use cases and often includes support for governance - for example, it may have a focus on Data Governance, IT Infrastructure Governance or Security Governance.
+There are also metadata repositories that focus on providing metadata to the whole enterprise, or support a diverse set of tools that are part of a suite. These repositories often have a focus on [subject area materials](/concepts/subject-area) and automation of metadata maintenance and stewardship.  They are deployed and controlled as a centralized service.  Some of these repositories are specialized for different types of use cases and often includes support for governance - for example, it may have a focus on Data Governance, IT Infrastructure Governance or Security Governance.
 
 
 ## How do you integrate catalogs?

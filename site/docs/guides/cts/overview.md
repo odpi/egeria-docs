@@ -109,7 +109,7 @@ This workbench runs the following profiles, in the following order:
 
 In each profile, the methods being tested will be executed a number of times and the elapsed time of each execution captured. These elapsed times are available through the detailed profile results of the Conformance Test Suite reports, and can be extracted to calculate more detailed statistics (min, max, median, mean, etc).
 
-Configuration of the performance test can be done through the properties passed in to the admin services prior to executing it:
+Configuration of the performance test can be done through the properties passed into the admin services prior to executing it:
 
 | Property | Use |
 |---|---|

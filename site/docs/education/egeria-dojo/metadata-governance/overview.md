@@ -31,7 +31,7 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     ??? intermediate "Designing your metadata supply chains (45 mins)"
         --8<-- "docs/guides/integration/metadata-supply-chains.md"
 
-    ??? intermediate "Automating metadata capture (1.5 hours)"
+    ??? intermediate "Automating metadata capture (30 mins)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/automating-metadata-capture.md"
 
     ??? intermediate "Subject Areas (1.5 hours)"

@@ -16,11 +16,9 @@ People are not good at repetitive admin tasks, particularly if these tasks are n
 ??? beginner "Introducing the integration daemon (30 mins)"
     --8<-- "docs/guides/integration/introducing-integration-daemon.md"
 
-??? intermediate "Configuring an integration connector (30 mins)"
-    --8<-- "docs/guides/integration/configuring-integration-daemon.md"
-
-??? intermediate "Validating your integration (30 mins)"
-    --8<-- "docs/guides/integration/validating-your-integration.md"
+    ??? education "Further information"
+        * [Configuring the integration daemon](/guides/integration/configuring-integration-daemon)
+        * [Validating your integration](/guides/integration/validating-your-integration)
 
 
 --8<-- "snippets/abbr.md"

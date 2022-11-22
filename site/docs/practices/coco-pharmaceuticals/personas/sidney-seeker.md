@@ -14,7 +14,7 @@ Scope: Fraud Investigation – particularly forensic audit
 Job:
 
 * Sidney is an expert in anti-fraud procedures and investigation. He used to work for the police force, but now is a private contractor working with different clients on their fraud detection and prevention procedures.
-* He has been working with this company for about six months advising them on anti-fraud monitoring approaches when a set of unexplained payments are detected and he is pulled in to help with the investigation.
+* He has been working with this company for about six months advising them on anti-fraud monitoring approaches when a set of unexplained payments are detected and, he is pulled into help with the investigation.
 
 Thinks/Feels:
 

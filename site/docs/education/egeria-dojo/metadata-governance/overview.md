@@ -34,14 +34,11 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
     ??? intermediate "Automating metadata capture (1.5 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/automating-metadata-capture.md"
 
-    ??? intermediate "Common definitions (1.5 hours)"
+    ??? intermediate "Subject Areas (1.5 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/common-definitions.md"
 
     ??? advanced "Using automated governance actions (3.5 hours)"
         --8<-- "docs/education/egeria-dojo/metadata-governance/using-automated-governance-actions.md"
-
-    ??? advanced "Managing data quality (1 hour)"
-        --8<-- "docs/features/data-quality/overview.md"
 
     ??? intermediate "Working with governance metadata (1.5 hours)"
 
@@ -54,17 +51,11 @@ As metadata is shared and linked, the gaps and inconsistencies in it are exposed
         ??? intemediate "Working with templates (30 mins)"
             --8<-- "docs/education/egeria-dojo/metadata-governance/working-with-templates.md"
 
-    ??? expert "Duplicate management (1 hour)"
-        --8<-- "docs/features/duplicate-management/overview.md"
-
     ??? intermediate "Securing your metadata (1 hour)"
         --8<-- "docs/features/metadata-security/overview.md"
 
     ??? intermediate "Linking metadata governance to your governance program (1 hour)"
         --8<-- "docs/guides/planning/governance-program/overview.md"
-
-    ??? intermediate "Lineage preservation and use (2 hours)"
-        --8<-- "docs/features/lineage-management/overview.md"
 
 
 --8<-- "snippets/abbr.md"

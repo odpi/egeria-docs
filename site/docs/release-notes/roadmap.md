@@ -18,7 +18,7 @@ Egeria aims to deliver against 6 capability layers:
 
 ### Governance solutions
 
-Support the leadership team for a governance program providing the ability to create common definitions and monitor the success of the governance efforts across the enterprise.
+Support the leadership team for a governance program providing the ability to create governance definitions, subject areas and governance roles and to monitor the success of the governance efforts across the enterprise.
 
 ![Governance Solutions](governance-solution-functional-detail.svg)
 
@@ -72,7 +72,7 @@ Its use is described in the [developer's guide](/guides/developer).
     - [Engine services](/services/omes) provide the services that host a specific type of governance engine. The governance engines collectively provide active governance to the assets and their associated metadata.
     - [Integration services](/services/omis) each provide a specialized API to integration connectors. These are hosted in an [integration daemon](/concepts/integration-daemon). The purpose of the integration services is to simplify the implementation and management of connectors that integrate metadata exchange with third party technologies.
     - [View services](/services/omvs) provide the services used by UIs. They are typically fine-grained services and they run in the [view server](/concepts/view-server). The use of the separate server (and server platform) enables an extra firewall to be erected between the view servers and the metadata servers and governance servers, hiding the internal systems from end users.
-- The [open metadata types](/types) provide common definitions for the different types of metadata needed by an organization. The open metadata type system is extendable; however, by providing a comprehensive starter set, and encouraging tools to use them, Egeria ensures metadata can be seamlessly shared amongst them.
+- The [open metadata types](/types) provide definitions for the different types of metadata needed by an organization. The open metadata type system is extendable; however, by providing a comprehensive starter set, and encouraging tools to use them, Egeria ensures metadata can be seamlessly shared amongst them.
 - The [OMAG Server Platform](/concepts/omag-server-platform) provides a multi-tenant runtime platform for [OMAG Servers](/concepts/omag-server). Each OMAG Server hosts the connectors along with the Egeria services to integrate third party technology.
     - The [server chassis](/services/server-chassis) uses Spring Boot to provide the web server and REST API support for the platform.
     - The [administration services](/services/admin-services/overview) supports configuring and operating the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/guides/admin/guide)

@@ -24,6 +24,6 @@ You may want to see the [OMRS metamodel](/guides/developer/metamodel/overview) f
     * Since the metadata from the catalog passes through an OMAS, Egeria will be able to have a better control of the metadata from the catalog.
     * Since the catalog is not part of a federated query, any inconsistent updates to metadata that occurs in its repository, only impacts the users of that catalog and not the whole cohort.
 
-    If your catalog is not able to support reference copies, you may want to considerthis option
+    If your catalog is not able to support reference copies, you may want to consider this option
 
 --8<-- "snippets/abbr.md"

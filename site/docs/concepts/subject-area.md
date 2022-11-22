@@ -17,11 +17,11 @@ The role of a [subject area definition](/types/4/0425-Subject-Areas) is to act a
 * [Quality rules](/types/4/0430-Technical-Controls) for specific data values in the subject area.
 * Preferred [data structures and schemas](/types/5/0501-Schema-Elements).
 
-The common definitions that are part of the subject area are classified as such using the [SubjectArea](/types/4/0425-Subject-Areas) classification.
+The materials that are part of the subject area are classified as such using the [SubjectArea](/types/4/0425-Subject-Areas) classification.
 
-Each subject area has an owner (see [SubjectAreaOwner](/types/4/0445-Governance-Roles)) who is responsible for the common definitions relating to the subject area.  Often the subject area owner is a senior person in the organization with expertise in the subject area.  He/she coordinates other subject-matter experts to author and maintain the common definitions and standards.
+Each subject area has an owner (see [SubjectAreaOwner](/types/4/0445-Governance-Roles)) who is responsible for the materials relating to the subject area.  Often the subject area owner is a senior person in the organization with expertise in the subject area.  He/she coordinates other subject-matter experts to author and maintain the materials.
 
-The *SubjectAreaDefinition* and appointment of a *SubjectAreaOwner* helps to coordinate the efforts to build the [common definitions and standards](/practices/common-data-definitions/overview) for each subject area.
+The *SubjectAreaDefinition* and appointment of a *SubjectAreaOwner* helps to coordinate the efforts to build the [materials](/practices/common-data-definitions/overview) for each subject area.
 
 ![Subject Area Content](/guides/planning/governance-program/subject-area-definition.svg)
 
@@ -29,12 +29,12 @@ The effort required to author and maintain these definitions, plus the governanc
 
 ## Subject Area Domain
 
-[Assets](/concepts/asset) that are managed using the subject area's common definitions are said to be part of the subject area's domain.  This is called the *Subject Area Domain* and is synonymous with *Data Domain* - although a subject area domain may manage assets that are not data assets (such as systems and infrastructure) which is why open metadata uses a more generic name.
+[Assets](/concepts/asset) that are managed using the subject area's materials are said to be part of the subject area's domain.  This is called the *Subject Area Domain* and is synonymous with *Data Domain* - although a subject area domain may manage assets that are not data assets (such as systems and infrastructure) which is why open metadata uses a more generic name.
 
 
 !!! education "Further information"
     
-    - [Governance Program OMAS](/services/omas/governance-program/overview/#subject-areas) provide support for the definition of subject areas and the ability to retrieve details of the common definitions that are part of the subject area.
+    - [Governance Program OMAS](/services/omas/governance-program/overview/#subject-areas) provides support for the subject area definition and the ability to retrieve details of a subject area's materials.
     - [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.
     - [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.
     - [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of subject area information with other catalogs and quality tools.

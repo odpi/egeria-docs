@@ -30,14 +30,14 @@ What happens to the asset that catalogued the file in the landing area?
 ![Figure 3](animation-of-file-lineage-3.png)
 > **Figure 3:** Ready for the next file from the hospital
 
-What follows are two possible solutions for managing lineage for files being ingested in to a data lake.
+What follows are two possible solutions for managing lineage for files being ingested into a data lake.
 
 ## Metadata capture for an onboarding process that publishes lineage
 
 Figure 1 shows an example of using the 
 [integration daemon](/concepts/integration-daemon)
 to automatically capture lineage from a
-spark job onboarding the files in to a data lake. The spark job operates independently of Egeria
+spark job onboarding the files into a data lake. The spark job operates independently of Egeria
 but is publishing lineage through the Open Lineage API.
 
 There is a [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)

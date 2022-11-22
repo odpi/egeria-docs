@@ -20,4 +20,12 @@ The open metadata ecosystem collects, links and disseminates metadata from many 
 ??? advanced "Incident reporting and management (30 mins)"
     --8<-- "docs/features/incident-reporting/overview.md"
 
+??? "Examples of using automated governance"
+    * [Data Quality Management](/features/data-quality/overview)
+    * [Duplicate Management](/features/duplicate-management/overview)
+    * [Lineage Management](/features/lineage-management/overview)
+    * [Synchronizing Organizational Information](/features/people-roles-organizations/overview)
+    * [Synchronizing Security Information](/features/synchronized-access-control/overview)
+    * [Reference Data Management](/features/reference-data-management/overview)
+
 --8<-- "snippets/abbr.md"

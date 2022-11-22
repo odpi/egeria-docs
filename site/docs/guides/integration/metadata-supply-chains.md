@@ -75,7 +75,7 @@ ETL engines have a long history of capturing lineage, since it is a common requi
 
 !!! summary "Summary"
 
-    In this guide your have seen that integration with the open metadata ecosystem is built up iteratively using *integration connectors* running in an *integration daemon*.  Open metadata is stored in *metadata access stores* and shared across the open metadata ecosystem using a *cohort*.  It is also possible to plug in a third party metadata repository using a *repository proxy*.
+    In this guide you have seen that integration with the open metadata ecosystem is built up iteratively using *integration connectors* running in an *integration daemon*.  Open metadata is stored in *metadata access stores* and shared across the open metadata ecosystem using a *cohort*.  It is also possible to plug in a third party metadata repository using a *repository proxy*.
 
     ![Complete integration solution](/guides/integration/integrated-solution.svg)
 

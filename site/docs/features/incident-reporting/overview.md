@@ -23,7 +23,7 @@ The people working on the incident can add notes to the incident report's note l
 
 ![Incident Report](/features/incident-reporting/incident-report.svg)
 
-!!! info Overview of the Incident Management process
+!!! info "Overview of the Incident Management process"
 
     1. When an incident occurs, an incident report is created.  There is support to create an incident on most [Open Metadata Access Services (OMASs)](/services/omas), [Open Metadata Integration Services (OMISs)](/services/omis) supporting [integration connectors](/concepts/integration-connector) and the [Open Metadata Engine Services (OMESs)](/services/omes) supporting [governance services](/concept/governance-service). 
     2. the request is routed to [Metadata Access Store](metadata-access-store) and an [IncidentReport](/types/4/0470-Incident-Reporting) entity linked to metadata describing the originator and any impacted resources is saved to its open metadata repository.

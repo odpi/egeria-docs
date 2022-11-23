@@ -342,6 +342,7 @@ nav:
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:
+      - Categories of Metadata: patterns/metadata-manager/categories-of-metadata.md
       - Open Metadata Types:
           - Open Metadata Type System: types/index.md
           - 0. Base:

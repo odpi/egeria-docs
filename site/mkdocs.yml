@@ -703,6 +703,7 @@ nav:
       - Governance Request Type: concepts/governance-request-type.md
       - Governance Server: concepts/governance-server.md
       - Governance Service: concepts/governance-service.md
+      - Governance Service Definition: concepts/governance-service-definition.md
       - Governance Zone: concepts/governance-zone.md
       - Headcount Limit: concepts/person-role.md
       - Guard: concepts/guard.md

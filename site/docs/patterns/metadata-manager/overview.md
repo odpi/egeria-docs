@@ -48,7 +48,7 @@ Egeria offers the services to build a catalog with the following types of inform
 - [Asset lineage](#asset-lineage)
 - [Related assets](#related-assets)
 
-This is built on an [extensible type system](/features/open-type-system/overview) that allows further information to be catalogued.  [Automation](#scaling-the-asset-catalog-through-automation) is used to expand the contents of your asset catalog without creating a huge workload for your people.
+This is built on an [extensible type system](/types) that allows further information to be catalogued.  [Automation](#scaling-the-asset-catalog-through-automation) is used to expand the contents of your asset catalog without creating a huge workload for your people.
 
 
  
@@ -108,7 +108,7 @@ A schema describes the individual data fields and operations of the resource. It
 
 Asset ownership defines who is responsible for the resource, and is corresponding metadata description. This covers ensuring the catalog entry is correct, the contents of the resource are complete and correct and controlling access to the resource.
 
-The owner can be defined as a user identity, an actor profile or a person's role. These definitions are managed by the [Community Profile OMAS](/services/omas/community-profile) and [Governance Program OMAS](/services/omas/governance-program).
+The owner can be defined as a user identity, an actor profile or a person's role. These definitions are managed by the [Community Profile OMAS](/services/omas/community-profile/overview) and [Governance Program OMAS](/services/omas/governance-program/overview).
 
 !!! summary "Usage"
     With an owner established, it records who is responsible for the protection and quality of the resource. It is possible to route requests from the consumers of the resource to the owner. For example, the consumer of the resource may have queries about the content of the resource or may wish to request access to the resource.
@@ -117,7 +117,7 @@ The owner can be defined as a user identity, an actor profile or a person's role
 
 ![Asset zone membership](asset-zone-membership.svg)
 
-[Governance zones](/concepts/governance-zone) group resource according to their usage. Governance Zones are defined by the [Governance Program OMAS](/services/omas/governance-program). It is possible to assign `SupportedZones` to [OMASs](/services/omas) to limit the scope of the assets that are returned from searches. More information on the use of governance zones is described in the [governance zoning](/features/governance-zoning) feature.
+[Governance zones](/concepts/governance-zone) group resource according to their usage. Governance Zones are defined by the [Governance Program OMAS](/services/omas/governance-program/overview). It is possible to assign `SupportedZones` to [OMASs](/services/omas) to limit the scope of the assets that are returned from searches. More information on the use of governance zones is described in the [governance zoning](/features/governance-zoning/overview) feature.
 
 !!! summary "Usage"
     Using governance zones allows the organization to scope the assets, and hence resources, that are returned to a community of users who are using the asset catalog.
@@ -187,7 +187,7 @@ Feedback, such as comments, likes, star ratings and reviews can be added to an a
 
 The author of the feedback can choose whether it is public or private feedback.  Public feedback is visible by everyone.  Private feedback is visible to the author of the feedback and the owner of the asset.
 
-Feedback can only be changed by the author of the feedback. It can be added to an asset through [Asset Consumer OMAS](/services/omas/asset-consumer), [Asset Owner OMAS](/services/omas/asset-owner) and [Digital Architecture OMAS](/services/omas/digital-architecture).
+Feedback can only be changed by the author of the feedback. It can be added to an asset through [Asset Consumer OMAS](/services/omas/asset-consumer/overview), [Asset Owner OMAS](/services/omas/asset-owner/overview) and [Digital Architecture OMAS](/services/omas/digital-architecture/overview).
 
 !!! summary "Usage"
     Feedback helps to share expertise and use the experience of the resources' consumers to improve the quality of both the resource's contents and its description.
@@ -196,7 +196,7 @@ Feedback can only be changed by the author of the feedback. It can be added to a
 
 ![Asset note logs](asset-note-logs.svg)
 
-Note logs consist of a series of posts (called notes) that are added over time (like a blog). An asset's note log can be maintained through the [Asset Owner OMAS](/services/omas/asset-owner), [Digital Architecture OMAS](/services/omas/digital-architecture) and [IT Infrastructure OMAS](/services/omas/it-infrastructure).
+Note logs consist of a series of posts (called notes) that are added over time (like a blog). An asset's note log can be maintained through the [Asset Owner OMAS](/services/omas/asset-owner/overview), [Digital Architecture OMAS](/services/omas/digital-architecture/overview) and [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview).
 
 !!! summary "Usage"
     Note logs can be used by the asset owner or operations team to post status or usage information about the resource to inform individuals who are using the resource of important information and events (such as a planned upgrade or schema change, or an outage).
@@ -205,7 +205,7 @@ Note logs consist of a series of posts (called notes) that are added over time (
 
 ![Asset external descriptions](asset-external-descriptions.svg)
 
-Not everything that is known about a resource is stored in Egeria. There may be documents, web resources, images, videos and audio files that provide more detail. Through [Asset Owner OMAS](/services/omas/asset-owner) it is possible to add links to external resources and media.
+Not everything that is known about a resource is stored in Egeria. There may be documents, web resources, images, videos and audio files that provide more detail. Through [Asset Owner OMAS](/services/omas/asset-owner/overview) it is possible to add links to external resources and media.
 
 !!! summary "Usage"
     Using the links to external resources, an individual is able to learn more about the resource they are considering to use to complete their task.
@@ -218,11 +218,11 @@ Lineage describes the origin of the data that is held by the resource.  There ar
 
 In general, a resource is being accessed by processes.  They are typically adding/updating/deleting data or reading it. So one perspective of lineage is to see the processes that are providing and using the resource.
 
-Data often flows from resource to resource via the processes, as they read data from one resource, do some processing and store the results in a different resource.  The end-to-end flow of data is called an information supply chain.  Information supply chains can be modeled and linked to the processes through the [Digital Architecture OMAS](/services/omas/digital-architecture). This offers more of an enterprise view of where the data originated from.
+Data often flows from resource to resource via the processes, as they read data from one resource, do some processing and store the results in a different resource.  The end-to-end flow of data is called an information supply chain.  Information supply chains can be modeled and linked to the processes through the [Digital Architecture OMAS](/services/omas/digital-architecture/overview). This offers more of an enterprise view of where the data originated from.
 
 The resource itself is hosted by a software capability that is part of a server. Another perspective on the resource's data origin is the software capability that is hosting it.
 
-Software capabilities can be linked to a solution component by the  [Digital Architecture OMAS](/services/omas/digital-architecture). Solution components are descriptions produced by architects to document the purpose and behavior of a component.  These descriptions add business context to the software capability definitions.  They are linked to the software capability when it is deployed into the IT landscape.
+Software capabilities can be linked to a solution component by the  [Digital Architecture OMAS](/services/omas/digital-architecture/overview). Solution components are descriptions produced by architects to document the purpose and behavior of a component.  These descriptions add business context to the software capability definitions.  They are linked to the software capability when it is deployed into the IT landscape.
 
 Similarly, the software capability hosting a resource can be linked to the digital service it is a part of.  Digital Services are anchors for business context information about the digital offerings or products that the organization is operating. This is a business view of the service that the resource is a part of.
 
@@ -246,11 +246,11 @@ Both organization and business capability information is maintained through the 
 
 Collections allow individuals and automated processes to maintain groups of related assets/resources. For example, an individual may maintain a collection of their favorite assets.  A project team may maintain a collection of the assets in use by the project. An automated process may use the retention classification to build a collection of assets that need to be archived. These types of collections are maintained through the following Open Metadata Access Services (OMASs):
 
-- [Asset Consumer OMAS](/services/omas/asset-consumer)
-- [Community Profile OMAS](/services/omas/community-profile)
-- [Project Management OMAS](/services/omas/project-management)
+- [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
+- [Community Profile OMAS](/services/omas/community-profile/overview)
+- [Project Management OMAS](/services/omas/project-management/overview)
 
-In addition, there are natural relationships between assets that are created as the asset is cataloged.  For example, a file is related to the folder (also known as a directory) it is located in.  Both the file and the folder could be assets in the asset catalog, and they would be automatically linked together by the [Asset Owner OMAS](/services/omas/asset-owner) when these assets were created.
+In addition, there are natural relationships between assets that are created as the asset is cataloged.  For example, a file is related to the folder (also known as a directory) it is located in.  Both the file and the folder could be assets in the asset catalog, and they would be automatically linked together by the [Asset Owner OMAS](/services/omas/asset-owner/overview) when these assets were created.
 
 !!! summary "Usage"
     The related assets enables individuals or automated services to locate assets that are related. For example, a process may use the related assets to step through and process the cataloged files in a folder, or the assets in a specific collection.

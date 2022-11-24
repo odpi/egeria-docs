@@ -14,7 +14,7 @@ This will include a check list of items to verify before you start contributing 
 
 Watch the video: [https://youtu.be/-1YM8Nj51qg](https://youtu.be/-1YM8Nj51qg)
 
-The presentation is here: [https://github.com/odpi/data-governance/tree/master/workshops/may-2020](https://github.com/odpi/data-governance/tree/master/workshops/may-2020)
+The presentation is here: [https://github.com/odpi/data-governance/tree/main/workshops/may-2020](https://github.com/odpi/data-governance/tree/main/workshops/may-2020)
 
 ----
 * Progress to [Tools for Contributors](egeria-dojo-day-2-2-tools-for-contributors.md)

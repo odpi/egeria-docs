@@ -10,26 +10,27 @@ hide:
 
 The Egeria services provide the support for the OMAG Server Platform and its Open Metadata and Governance services.
 
-![Server Chassis Structure](server-chassis-structure.svg)
+<img src="server-chassis-structure.svg" style="float:left">
+
 
 ## Base Platform Support Services
 
 * [Administration Services](/services/admin-services/overview) - for configuring and operating [OMAG Servers](/concepts/omag-server)
 * [Platform Operation Services](/services/platform-services/overview) - for managing the OMAG Servers when they are running.
 * [Server Chassis](/services/server-chassis) - provides the "main" function for the OMAG Server Platform.
-* [Repository Services](/services/omrs) - for managing the repositories used to support the OMAG Server Platform.
+* [open Metadata Repository Services (OMRS)](/services/omrs) - for managing the repositories used to support the OMAG Server Platform.
 
 ## Registered Services
 
 The registered services are pluggable in the OMAG Server Platform and provide specialized services for different types of technologies.
 
 * [Open Metadata Access Services (OMASs)](/services/omas) - Specialized metadata management interfaces.
-* [Open Metadata Engine Services (OMESs)](/services/omes) - Specialized services for [governance services](/concepts/governance-service).
+* [Open Metadata Engine Services (OMESs)](/services/omes) - Specialized support for [governance services](/concepts/governance-service).
 * [Open Metadata Integration Services (OMISs)](/services/omis) - Specialized services for [integration connectors](/concepts/integration-connector).
 * [Open Metadata View Services (OMVSs)](/services/omvs) - Specialized services for user interfaces.
 
 
-## OMAG Common Services
+## Common Services
 
 The common services support clients and the registered services that run in the [OMAG Server Platform](/concepts/omag-server-platform).
 
@@ -44,12 +45,8 @@ The common services support clients and the registered services that run in the 
 * [Repository Handler](/services/repository-handler) - supports access to multiple related metadata instances from the
 [Open Metadata Repository Services (OMRS)](/services/omrs/overview). It manages the provenance checking, deduplication and translates OMRS exceptions into [Open Connector Framework (OCF)](/frameworks/ocf/overview) exceptions that are
 used extensively across the [Open Metadata Access Services (OMASs)](/services/omas).
-
-In addition, there is a shared metadata management module for
-server-side services that make use of the beans defined in the OCF that underpins Egeria.
-
-* [OCF Metadata Management](/services/ocf-metadata-management) - managing metadata about assets, connections and all of the different types of metadata defined in the asset properties in the [Open Connector Framework (OCF)](/frameworks/ocf/overview).
-
+* [OCF Metadata Management](/services/ocf-metadata-management) - provides the *Connected Asset Services* that retrieve metadata about assets, connections and all the different types of metadata defined as [connected asset properties](/concepts/connected-asset-properties) in the [Open Connector Framework (OCF)](/frameworks/ocf/overview).  are available through most [Open Metadata Access Services (OMASs)](/services/omas) clients.
+* [GAF Metadata Management](/services/gaf-metadata-management) - provides the *Metadata Store Services* that are defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview) and are available through most [Open Metadata Access Services (OMASs)](/services/omas) clients.
 
 ## Governance Server Services
 

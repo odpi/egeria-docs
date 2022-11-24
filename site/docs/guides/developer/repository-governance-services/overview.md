@@ -8,7 +8,7 @@
 
 ## Interface
 
-The interface that all repository governance services must implement is defined by [`RepositoryGovernanceService` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/engine-services/repository-governance/repository-governance-api/src/main/java/org/odpi/openmetadata/engineservices/repositorygovernance/connector/RepositoryGovernanceService.java){ target=gh }:
+The interface that all repository governance services must implement is defined by [`RepositoryGovernanceService` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/engine-services/repository-governance/repository-governance-api/src/main/java/org/odpi/openmetadata/engineservices/repositorygovernance/connector/RepositoryGovernanceService.java){ target=gh }:
 
 ![Figure 1](repository-governance-service-methods.svg)
 > **Figure 1:** Methods implemented by an archive service

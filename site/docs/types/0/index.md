@@ -6,7 +6,7 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Area 0 Models - Common Definitions and Infrastructure
+# Area 0 Models - Base Definitions and Infrastructure
 
 Area 0 describes base types and infrastructure. This includes types for `Asset`, `DataSet`, `Infrastructure`, `Process`, `Referenceable`, `Server` and `Host`.
 

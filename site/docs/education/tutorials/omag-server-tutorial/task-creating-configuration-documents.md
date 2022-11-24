@@ -40,7 +40,7 @@ against the OMAG server platform.
 
 There is also a postman collection located at:
 
-[https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-resources/open-metadata-tutorials/omag-server-tutorial/resources/omag-server-platform-tutorial.postman_collection.json](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-resources/open-metadata-tutorials/omag-server-tutorial/resources/omag-server-platform-tutorial.postman_collection.json)
+[https://raw.githubusercontent.com/odpi/egeria/main/open-metadata-resources/open-metadata-tutorials/omag-server-tutorial/resources/omag-server-platform-tutorial.postman_collection.json](https://raw.githubusercontent.com/odpi/egeria/main/open-metadata-resources/open-metadata-tutorials/omag-server-tutorial/resources/omag-server-platform-tutorial.postman_collection.json)
 
 It can be downloaded and imported into postman to support this tutorial.
 (see **Import** button top left of the Postman user interface).
@@ -1701,7 +1701,7 @@ For guidance on configuring more complex OMAG servers see:
 For instructions on how to set up two OMAG Servers using in memory repositories that are exchanging metadata
 over [Apache Kafka](http://kafka.apache.org/), see:
 
-* [In Memory Repository Demo](https://github.com/odpi/egeria-samples/tree/master/demos/in-memory-repository)
+* [In Memory Repository Demo](https://github.com/odpi/egeria-samples/tree/main/demos/in-memory-repository)
 
 ## Next steps
 

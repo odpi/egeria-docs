@@ -6,7 +6,7 @@
 The Egeria Community is constantly innovating in the field of metadata integration and governance.
 The code is developed using an agile process. As such, new code is continuously introduced.
 The benefit is that there is plenty of opportunity to feedback and influence the development process.
-The downside is that the **master** branch contains code at different stages of development.
+The downside is that the **main** branch contains code at different stages of development.
 
 The aim of this page is to document how we label the different modules, so you can choose what to
 consume. These labels are found in the **README.md** files at the top level of each module.

@@ -17,6 +17,6 @@ The *DigitalProduct* classification identifies an element that represents a digi
 
 The *DigitalServiceDependency* allows an organization to show the dependencies between digital services.  The nature of the dependency is supplied in the *description* property.
 
-The architecture of a digital service is described in a [solution blueprint](/types/7/0740-Solution-Blueprints) made up of [solution components](/types/7/0730-Solution-Components).  The *SolutionComponents* can represent the digital products that are linked to the solution components that provide the implementation of the production/maintenance processes and delivery processes.
+The architecture of a digital service is described in a [solution blueprint](/types/7/0740-Solution-Blueprints) made up of [solution components](/types/7/0730-Solution-Components).  The *SolutionComponents* have [SolutionPorts](/types/7/0735-Solution-Ports-and-Wires) that describe the inputs and outputs of the solution components and how they are linked together.  A *SolutionPort* can represent the digital products that are linked to the solution components that provide the implementation of the production/maintenance processes and delivery processes.
 
 --8<-- "snippets/abbr.md"

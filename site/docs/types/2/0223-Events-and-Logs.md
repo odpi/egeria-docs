@@ -25,10 +25,11 @@ Some services manage a specific subscriber list.  This is represented by the *Su
 
 ## LogFile
 
-A *LogFile* is a subtype of [*DataFile*]() that contains events.
+A *LogFile* entity is a subtype of [*DataFile*](/types/2/0220-Files-and-Folders) that contains events that have been captured and stored.
 
 ## AssociatedLog
 
+The *AssociatedLog* relationship shows the [Asset](/types/0/0010-Base-Model) (typically a *LogFile*) where logging information for the linked [Referenceable](/types/0/0010-Base-Model) is located.
 
 
 --8<-- "snippets/abbr.md"

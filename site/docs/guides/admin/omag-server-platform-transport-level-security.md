@@ -102,7 +102,7 @@ is very welcome !
 
 ## Example script to launch Egeria
 
-Example certificates are provided [on GitHub](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-deployment/certificates) 
+Example certificates are provided [on GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/certificates) 
 
 As an example of running the Egeria server chassis with the certificates generated above, add
 the following options when launching the OMAG Server Platform jar file:
@@ -128,9 +128,9 @@ could be distinct if needed.
 ## Creating your own certificates
 
 The example certificates are fine for development.
-However it is important to have your own certificates for a production environment.
+However, it is important to have your own certificates for a production environment.
 
-Example configurations and scripts can be found in [open-metadata-resources/open-metadata-deployment/certificates](../../../../open-metadata-resources/open-metadata-deployment/certificates)
+Example configurations and scripts can be found in [open-metadata-resources/open-metadata-deployment/certificates](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/certificates)
 
 An example script (MacOS/Linux)to create certificates is provided in `gensamplecerts.sh`. It is intended only as an example.
 It requires the `openssl` tool and `keytool`. Deployment frameworks in cloud services may also offer support to

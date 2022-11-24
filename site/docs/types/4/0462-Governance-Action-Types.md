@@ -5,6 +5,8 @@
 
 The types on this page are used to define the process flow for a [governance action process](/concepts/governance-action-process).  The process flow is defined in open metadata so that it can be shared with processing engines throughout the open metadata ecosystem.  In Egeria, the [Governance Engine OMAS](/services/omas/governance-engine/overview) provides services for defining these process flows and is responsible for converting each step in the flow into a [governance action](/concepts/governance-action) when the process executes.
 
+![UML](0462-Governance-Action-Types.svg)
+
 ## GovernanceActionProcess
 
 The *GovernanceActionProcess* entity is the root of the governance action process.  It gives the process its unique name and defines the first action through the *GovernanceActionFlow* relationship.
@@ -44,6 +46,5 @@ The *NextGovernanceActionType* relationship identifies the next step in the proc
 The follow-on action runs when all of its mandatory guards are produced by previous steps.  It runs as many times as a matching guard is produced unless ignoreMultipleTriggers is set in which case it will run once for that guard.
 
 
-![UML](0462-Governance-Action-Types.svg)
 
 --8<-- "snippets/abbr.md"

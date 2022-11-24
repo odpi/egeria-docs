@@ -7,7 +7,7 @@
 
 
 The default file-based version of this connector is located in the
-[adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors)
+[adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors)
 module.
 
 ---8<-- "snippets/abbr.md"

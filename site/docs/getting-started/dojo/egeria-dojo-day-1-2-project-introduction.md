@@ -23,10 +23,10 @@ with a software project.  Many open source projects use GitHub and egeria is no 
 All of the content for the Egeria project is stored in git repositories.
 For example, these web pages you are reading as part of the dojo are
 managed in Egeria's main git repository
-[here](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-tutorials/egeria-dojo).
+[here](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-tutorials/egeria-dojo).
 
 Each directory in the repository has a README.md file written in [the Markdown standard](/guides/contributor/markdown).
-You can either click through on GitHub or link to the [Content Organization](https://github.com/odpi/egeria/blob/master/Content-Organization.md)
+You can either click through on GitHub or link to the [Content Organization](https://github.com/odpi/egeria/blob/main/Content-Organization.md)
 that lists the directories with descriptions.
 
 ## Other resources

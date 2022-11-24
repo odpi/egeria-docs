@@ -14,7 +14,7 @@
 
 ## Overview
 
-The JDBC integration connector catalogs a database, extracting schemas, tables, columns, primary and foreign keys. If the information is available, it will also attach the information to access the digital resource.
+The JDBC integration connector catalogs a database, extracting schemas, tables, views, columns, primary and foreign keys. If the information is available, it will also attach the information to access the digital resource.
 
 ![Figure 1](jdbc-integration-connector-connection-structure.svg)
 > **Figure 1:** Connection information attached to target database
@@ -29,39 +29,44 @@ This is its connection definition to use on the [administration commands that co
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"
     {
-        "connection" : {
-            "class": "VirtualConnection",
-            "connectorType" : {
-                "class": "ConnectorType",
-                "connectorProviderClassName": "org.odpi.openmetadata.adapters.connectors.integration.jdbc.JdbcIntegrationConnectorProvider"
-            },
-            "embeddedConnections":[
-                {
-                    "class" : "EmbeddedConnection",
-                    "embeddedConnection" :{
-                        "class" : "Connection",
-                        "userId" : "{{userId}}",
-                        "clearPassword" : "{{clearPassword}}",
-                        "connectorType" : {
-                            "class": "ConnectorType",
-                            "connectorProviderClassName": "org.odpi.openmetadata.adapters.connectors.resource.jdbc.JdbcConnectorProvider"
-                        },
-                        "endpoint":{
-                            "class": "Endpoint",
-                            "address" : "{{address}}"
-                        },
-                        "configurationProperties" :{
-                            "connectorTypeQualifiedName" : "{{connectorTypeQualifiedName}}"
-                        }
+        "class": "VirtualConnection",
+        "connectorType" : {
+            "class": "ConnectorType",
+            "connectorProviderClassName": "org.odpi.openmetadata.adapters.connectors.integration.jdbc.JdbcIntegrationConnectorProvider"
+        },
+        "embeddedConnections":[
+            {
+                "class" : "EmbeddedConnection",
+                "embeddedConnection" : {
+                    "class" : "Connection",
+                    "userId" : "{{userId}},
+                    "clearPassword" : "{{clearPassword}}",
+                    "connectorType" : {
+                        "class": "ConnectorType",
+                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.connectors.resource.jdbc.JdbcConnectorProvider"
+                    },
+                    "endpoint":{
+                        "class": "Endpoint",
+                        "address" : "{{address}}"
                     }
                 }
-            ]
+            }
+        ],
+        "configurationProperties": {
+            "includeSchemaNames": [],
+            "excludeSchemaNames": [],
+            "includeTableNames": [],
+            "excludeTableNames": [],
+            "includeViewNames": [],
+            "excludeViewNames": [],
+            "includeColumnNames": [],
+            "excludeColumnNames": []
         }
     }
     ```
 
     - Replace '{{userId}}' and '{{clearPassword}}' with the database username and password.
     - Replace '{{address}}' with the database jdbc url.
-    - Replace '{{connectorTypeQualifiedName}}' with a connector type already saved. Required to construct the connection information   
+    - Add values in include/exclude lists to filter the imported entities. Wildcards are not supported. Optional, they can miss all together   
 
 

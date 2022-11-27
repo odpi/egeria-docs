@@ -8,8 +8,7 @@ hide:
   
 # Open Metadata Access Services (OMAS)
 
-The Open Metadata Access Services (OMAS) provide domain-specific services
-for data tools, engines and platforms to integrate with open metadata.
+The Open Metadata Access Services (OMAS) provide domain-specific services for data tools, engines and platforms to integrate with open metadata.
 
 The access services are as follows:
 

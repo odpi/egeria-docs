@@ -14,7 +14,7 @@ The Egeria project is highly appreciative of the organizations that support and 
 | [Atlan](https://atlan.com/)                                                                 | ![Atlan](https://atlan.com/assets/img/atlan-blue.6ed81a56.svg){ width=60 }                                                       |
 | [Manta](https://getmanta.com/?utm_source=conference&utm_medium=partner&utm_campaign=Egeria) | ![Manta](manta_logo.png){ width=60 }                                                                                             |
 | [Intenda](https://intenda.tech)                                                             |                                                                                                                                  |
-
+| [Atruvia](https://atruvia.de)                                                             |  ![Atruvia](https://atruvia.de/assets/images/logo.f03d21dd9d.svg){ width=60 }                          |
 
 ## Companies offering services using Egeria
 

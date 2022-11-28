@@ -51,7 +51,8 @@ a next action can not run until a previous action has produced this guard. If *i
 
 
 ???+ deprecated "Deprecated types"
-    The following relationship types were deprecated in favor of attributes in the *GovernanceAction* to reduce the processing load in maintaining these relationships.
+    The following relationship types were deprecated in favour of attributes in the *GovernanceAction* to reduce the processing load in maintaining these relationships.
+
     - *GovernanceActionExecutor* - Use *executorEngineGUID*, *executorEngineName*, *requestType* and *requestParameters* properties in *GovernanceAction* entity to identify the governance engine that will run the service that will execute the action.  The specific service is identified by the requestType property.  The governance engine is typically either a [DiscoveryEngine](/types/6/0601-Open-Discovery-Engine) or a [GovernanceActionEngine](/types/4/0461-Governance-Engines).
     - *GovernanceActionTypeUse* - Use *governanceActionTypeGUID*, *governanceActionTypeName* and *processName* properties in *GovernanceAction* entity to identify the governance action type (and any associated governance action process) that acted as a template when this governance action was initiated.
     

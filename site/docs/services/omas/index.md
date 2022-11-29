@@ -8,8 +8,7 @@ hide:
   
 # Open Metadata Access Services (OMAS)
 
-The Open Metadata Access Services (OMAS) provide domain-specific services
-for data tools, engines and platforms to integrate with open metadata.
+The Open Metadata Access Services (OMAS) provide domain-specific services for data tools, engines and platforms to integrate with open metadata.
 
 The access services are as follows:
 
@@ -63,14 +62,14 @@ Today, direct calls to the REST APIs and topics are not guaranteed  to be backwa
 The interfaces are illustrated in Figure 1:
 
 ![Figure 1](access-services-overview.svg)
-> **Figure 1: Structure of an Open Metadata Access Service (OMAS)
+> **Figure 1:** Structure of an Open Metadata Access Service (OMAS)
 
 The OMAS receives metadata from the [Open Metadata Repository Cohort](/concepts/cohort-member)through the [Open Metadata Repository Services (OMRS)](/services/omrs).
 
 Figure 2 shows the repository services.
 
 ![Figure 2](access-services-repository-services.svg)
-> Figure 2: Calling the repository services
+> **Figure 2:** Calling the repository services
 
 The OMRS subsystem called the enterprise repository services offers both an Enterprise OMRS Repository Connector and Enterprise OMRS Topic.  The Enterprise OMRS Repository Connector queries all repositories in the cohorts that the local server is connected to.  The Enterprise OMRS Topic aggregates events from all connected cohorts.
 

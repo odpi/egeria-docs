@@ -35,7 +35,7 @@
 
     The data class specification defines how to identify data fields of its type by inspecting the data values stored in them.  The specification is independent of a particular technology, which is why they are often described as *logical data types*.  The specification may include preferred implementation types for different technologies using *Implementation Snippets*.
 
-    Data classes are used during *metadata discovery* (see below) to identify the types of data in the discovered data fields.  This is an important step in understanding the meaning and business value of the data fields.  They can also be used in quality rules to validate that data values mat the perscribed data class.
+    Data classes are used during *metadata discovery* (see below) to identify the types of data in the discovered data fields.  This is an important step in understanding the meaning and business value of the data fields.  They can also be used in quality rules to validate that data values match the perscribed data class.
 
     Data classes can be linked together in part-of and is-a hierarchies to create a logical type system for a subject area. A glossary term can be linked to a data class via an *ImplementedBy* relationship to identify the preferred data class to use when implementing a data field with meaning described in the glossary term.  A data class can be linked to glossary term that describes the meaning of the data class via a *SemanticAssignment* relationship.
 
@@ -45,8 +45,8 @@
     !!! education "Further information"
         * See [Model 0540](/types/5/0540-Data-Classes) in the *Open Metadata Types* to understand how data classes are represented on open metadata.
         * See [Model 0737](/types/7/0737-Solution-Implementation) in the *Open Metadata Types* to understand the *ImplementedBy* relationship.
-        * See [Model 0370](/types/3/0340-Semantic-Assignment) in the *Open Metadata Types* to understand the *SemanticAssignment* relationship.
-        * See [Model 0504](/type/5/0504-Implementation-Snippets) in the *Open Metadata Types* to understand *ImplementationSnippets*.
+        * See [Model 0370](/types/3/0370-Semantic-Assignment) in the *Open Metadata Types* to understand the *SemanticAssignment* relationship.
+        * See [Model 0504](/types/5/0504-Implementation-Snippets) in the *Open Metadata Types* to understand *ImplementationSnippets*.
 
 
 ??? info "Consuming the glossary in design models"
@@ -64,16 +64,16 @@
 
 ??? info "Schemas"
 
-    Schemas document the structure of data, whether it is stored or moving through APIs, events and data feeds. A schema begins with a *schema type*. This may be a single primitive field, a set of values, an array of values, a map between two sets of values or a nested structure. The nested structure is the most common. In this case the schema type has a list of schema attributes that describe the fields in the structure.  Each of these attributes has its own schema type located in its *TypeEmbeddedAttribute* classification.
+    Schemas document the structure of data, whether it is stored or moving through APIs, events and data feeds. A schema is made up of a linked subgraph of *schema elements*.  A schema begins with a schema element called a *schema type*. This may be a single primitive field, a set of values, an array of values, a map between two sets of values or a nested structure. The nested structure is the most common. In this case the schema type has a list of schema attributes (another type of schema element) that describe the fields in the structure.  Each of these schema attributes has its own schema type located in its *TypeEmbeddedAttribute* classification.
 
-    Figure 4 shows a simple structure schema.
+    Figure 4 shows a simple schema structure.
 
     ![Figure 4](/practices/common-data-definitions/semantic-to-implementation-schemas.svg)
     > Figure 4: Schemas for documenting the structure of data
 
     !!! education "Further information"
         * See [Schemas](/concepts/schema) to understand how different types of schema are represented.
-        * See [Model 0501](/types/5/0501-Schema-Elements) in the *Open Metadata Types* to see the formal definition of these types.
+        * See [Model 0501](/types/5/0501-Schema-Elements) in the *Open Metadata Types* to see the formal definition of the different types of schema elements.
         * See [Model 0505](/types/5/0505-Schema-Attributes) in the *Open Metadata Types* to understand schema attributes and the *TypeEmbeddedAttribute* classification.
 
 ??? info "Schemas and assets"

@@ -4,13 +4,15 @@
 
 [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) asks [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) for a list of the key subject areas managed by the IT systems today.
 
-To be sure she understands, Erin asks Jules what he means by “subject area” - Jules says - the different topics of data.
+To be sure she understands, Erin asks Jules what he means by “subject area” - Jules replies - *subject areas* are topics or domains of knowledge that are important to the organization.  Typically, they cover data that is widely shared across the organization and there is business value in maintaining consistency in the data values in each copy.
 
-To Erin “subject area” sounds like a “data domain” and Jules agreed.  Data Domain is probably a more formal name - but the term “domain” is used in different contexts and that can be confusing to people who are new to the concepts around a data-driven enterprise.  For example, it is used in the term “Governance Domain” which is a focus area for governance such as data, security or privacy.  He tends to use the term subject area since it seems to be easier for people to remember.
+!!! question "Subject area verses Data Domain?"
+    To Erin “subject area” sounds like a “data domain” and Jules agreed they are similar.  Data Domain typically refers to the data that the subject area's definitions apply to. (See the [Subject Area](/concepts/subject-area) definition for further information on the subject area and its domains.)
 
-Erin then asks how granular should they go in defining the subject areas - for example, “Address” is a subject area but very fine-grained.  Alternatively, they could start with some broader subject areas (say about 10) that would make it easier to engage the other teams and help find business owners.
+!!! question "How granular are subject areas?"
+    Erin then asks how granular should they go in defining the subject areas - for example, “Address” is a subject area but very fine-grained.  Alternatively, they could start with some broader subject areas (say about 10) that would make it easier to engage the other teams and help find business owners.
 
-Jules agrees they are going to need the very granular subject areas eventually but to get them started, the broader, business oriented subject areas are more useful.  He also suggests that rather than focusing on the whole business, she should emphasises the areas of the business that are most impacted by the move to personalised medicine - such as patient, treatments and sales.
+    Jules agrees they are going to need the very granular subject areas eventually but to get them started, the broader, business oriented subject areas are more useful.  He also suggests that rather than focusing on the whole business, she should emphasise the areas of the business that are most impacted by the move to personalised medicine - such as patient, treatments and sales.
 
 Erin enlists [Peter Profile](/practices/coco-pharmaceuticals/personas/peter-profile) to help.
 

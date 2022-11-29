@@ -1,14 +1,11 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 # 0501 Schema Elements
 
 [Schema](/concepts/schema) are used to represent the structure of data.  They show the fields (also known as attributes or properties) of the data along with its type.
+
+![UML](0501-Schema-Elements.svg)
 
 ## SchemaElement
 
@@ -42,9 +39,6 @@ Some schemas include choices in how data can be structured.  Each choice is desc
 
 
 
-## UML summary of the types
-
-![UML](0501-Schema-Elements.svg)
 
 
 

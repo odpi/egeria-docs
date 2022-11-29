@@ -20,7 +20,7 @@ The developer guide is organized as follows:
 
 - [Using connectors](#using-connectors) - initializing and calling a digital resource connector from external services and other connectors.
 
-- [Building connectors](#building-connectors) - How to write new [connectors](#what-is-a-connector) to integrate different technologies together.
+- [Building connectors](#extending-egeria-using-connectors) - How to write new [connectors](/concepts/connector) to integrate different technologies together.
 
 - [Building open metadata archives](#building-open-metadata-archives) - Working with [Open Metadata Archives](/concepts/open-metadata-archive) to add new open metadata types or standard metadata definitions that can be shared and loaded into multiple metadata repositories.
 
@@ -82,14 +82,14 @@ Below is an example of using the [Asset Consumer OMAS](/services/omas/asset-cons
 ```
           AssetConsumer client = new AssetConsumer(serverName, platformURLRoot);
 ```
-Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetconsumer/client/AssetConsumer.html){ target=javadoc }.  For example, the code below adds a [like](/concepts/like) to an added and then queries its properties and all of the metadata elements attached to it.
+Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetconsumer/client/AssetConsumer.html){ target=javadoc }.  For example, the code below adds a [like](/concepts/like) to an added and then queries its properties and all the metadata elements attached to it.
 ```
           client.addLikeToAsset(clientUserId, assetGUID, true);
           
           AssetUniverse assetUniverse = client.getAssetProperties(clientUserId, assetGUID);
 
 ```
-Each OMAS has its own specialized API and its own style, but typically there are methods for creating, updating and deleting elements along with methods for linking them together and unlinking them - also maintaining classifications.  If the OMAS is maintaining assets, you may see methods for publishing and withdrawing assets.  The publish method updates the asset's zones to the OMAS's `PublishedZones` and the withdraw method updates the asset's zones to the OMAS's `DefaultZones`.  Typically the asset is only visible to most users when the published zones are in use.  The default zones are used while the asset is being set up.
+Each OMAS has its own specialized API and its own style, but typically there are methods for creating, updating and deleting elements along with methods for linking them together and unlinking them - also maintaining classifications.  If the OMAS is maintaining assets, you may see methods for publishing and withdrawing assets.  The publish method updates the asset's zones to the OMAS's `PublishedZones` and the `withdraw()` method updates the asset's zones to the OMAS's `DefaultZones`.  Typically, the asset is only visible to most users when the published zones are in use.  The default zones are used while the asset is being set up.
 
 The `findXXX` methods typically take a regular expression and look for the value in all properties.  The `getXXXByName` style method does not use wild cards and retrieves the element if there is an exact match in the `qualifiedName` or `displayName`.  Finally, it is typical to have methods to retrieve a single element via its unique identifier (guid).
 
@@ -125,7 +125,7 @@ public class AssetLookUp extends AssetConsumerEventListener
 }
 ```
 
-If your client is running outside of the OMAG Server Platform, you will need to add a dependency to your client for the [Open Metadata Topic Connector](/concepts/open-metadata-topic-connector) that is in use in the OMAG Server.  For example, if you see this error:
+If your client is running outside the OMAG Server Platform, you will need to add a dependency to your client for the [Open Metadata Topic Connector](/concepts/open-metadata-topic-connector) that is in use in the OMAG Server.  For example, if you see this error:
 
 ```bash
 
@@ -149,51 +149,34 @@ Process finished with exit code 0
     - [Specific documentation for each OMAS](/services/omas).
     - [Egeria's Javadoc](https://odpi.github.io/egeria/index.html).
 
-## Using connectors
 
---8<-- "docs/guides/developer/using-connectors.md"
-
-## Building connectors
+## What is a connector?
 
 --8<-- "docs/guides/developer/inside-a-connector.md"
 
+## Using connectors
 
-### Implementation steps 
-
-To write an open connector you need to complete four steps:
-
-1. Identify the properties for the connection.
-2. Write the connector provider.
-3. Understand the interface that the connector needs to implement and the support provided by its base class.
-4. Write the connector itself.
-
-All the code you write to implement these should exist in its own module, and as illustrated by the examples could even be in its own independent code repository. Their implementation will have dependencies on Egeria's:
-
-- [Open Connector Framework (OCF)](/frameworks/ocf/overview)
-- [Audit Log Framework (ALF)](/frameworks/alf/overview)
-- Specific interfaces used by the type of connector
-
-!!! tip "No dependency on Egeria's OMAG Server Platform"
-    Note that there is no dependency on Egeria's [OMAG Server Platform](/concepts/omag-server-platform) for these specific connector implementations: they could run in another runtime that supported the connector APIs.  In fact, even the Egeria interface modules should not be embedded in your jar file to allow your connector to run on any version of the OMAG Server Platform that supports your connector.
+--8<-- "docs/guides/developer/using-connectors.md"
 
 ## Extending Egeria using connectors
 
 Egeria has extended the basic concept of the OCF connector and created specialized connectors for different purposes. The following types of connectors are supported by the Egeria subsystems with links to the documentation and implementation examples.
 
-| Type of Connector             | Description | Documentation                                                                                 | Implementation Examples |
-| :-----------------------------| :---------- |:----------------------------------------------------------------------------------------------| :---------------------- |
-| Integration Connector         | Implements metadata exchange with third party tools. | [Building Integration Connectors](/guides/developer/integration-connectors/overview)          | [integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors){ target=gh } |
-| Open Discovery Service        | Implements automated metadata discovery.| [Building Open Discovery Services](/guides/developer/open-discovery-services/overview)        | [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh } |
-| Governance Action Service     | Implements automated governance. | [Building Governance Action Services](/guides/developer/governance-action-services/overview)  | [governance-action-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh } |
-| Configuration Document Store  | Persists the configuration document for an OMAG Server. | [Configuration Document Store Connectors](/concepts/configuration-document/#storage)          | [configuration-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh } |
-| Platform Security Connector   | Manages service authorization for the OMAG Server Platform. | [Metadata Security Connectors](/features/metadata-security)                                   | [open-metadata-security-samples :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } |
-| Server Security Connector     | Manages service and metadata instance authorization for an OMAG Server. | [Metadata Security Connectors](/features/metadata-security)                                   | [open-metadata-security-samples :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } |
-| Metadata Collection (repository) Store | Interfaces with a metadata repository API for retrieving and storing metadata. | [OMRS Repository Connectors](/concepts/repository-connector)                                  | [open-metadata-collection-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh } |
-| Metadata Collection (repository) Event Mapper | Maps events from a third party metadata repository to open metadata events. | [OMRS Event Mappers](/concepts/event-mapper-connector)                                        | none |
-| Open Metadata Archive Store   | Reads an open metadata archive from a particular type of store. | [OMRS Open Metadata Archive Store Connector](/concepts/open-metadata-archive-store-connector) | [open-metadata-archive-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors){ target=gh } |
-| Audit Log Store               | Audit logging destination | [OMRS Audit Log Store Connector](/concepts/audit-log-store-connector)                         | [audit-log-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors){ target=gh } |
-| Cohort Registry Store         | Local store of membership of an open metadata repository cohort. | [OMRS Cohort Registry Store](/concepts/cohort-registry-store-connector)                       | [cohort-registry-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors){ target=gh } |
-| Open Metadata Topic Connector | Connects to a topic on an external event bus such as Apache Kafka. | [Open Metadata Topic Connectors](/concepts/open-metadata-topic-connector)                     | [open-metadata- topic-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors){ target=gh } |
+| Type of Connector                             | Description                                                                    | Documentation                                                                                 | Implementation Examples                                                                                                                                                                                                                             |
+|:----------------------------------------------|:-------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Connector                         | Implements metadata exchange with third party tools.                           | [Building Integration Connectors](/guides/developer/integration-connectors/overview)          | [integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors){ target=gh }                                                                      |
+| Open Discovery Service                        | Implements automated metadata discovery.                                       | [Building Open Discovery Services](/guides/developer/open-discovery-services/overview)        | [discovery-service-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh }                                                          |
+| Governance Action Service                     | Implements automated governance.                                               | [Building Governance Action Services](/guides/developer/governance-action-services/overview)  | [governance-action-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh }                                                          |
+| Configuration Document Store                  | Persists the configuration document for an OMAG Server.                        | [Configuration Document Store Connectors](/concepts/configuration-document/#storage)          | [configuration-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh }                                                      |
+| Platform Security Connector                   | Manages service authorization for the OMAG Server Platform.                    | [Metadata Security Connectors](/features/metadata-security)                                   | [open-metadata-security-samples :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh }                                                              |
+| Server Security Connector                     | Manages service and metadata instance authorization for an OMAG Server.        | [Metadata Security Connectors](/features/metadata-security)                                   | [open-metadata-security-samples :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh }                                                              |
+| Metadata Collection (repository) Store        | Interfaces with a metadata repository API for retrieving and storing metadata. | [OMRS Repository Connectors](/concepts/repository-connector)                                  | [open-metadata-collection-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh } |
+| Metadata Collection (repository) Event Mapper | Maps events from a third party metadata repository to open metadata events.    | [OMRS Event Mappers](/concepts/event-mapper-connector)                                        | none                                                                                                                                                                                                                                                |
+| Open Metadata Archive Store                   | Reads an open metadata archive from a particular type of store.                | [OMRS Open Metadata Archive Store Connector](/concepts/open-metadata-archive-store-connector) | [open-metadata-archive-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors){ target=gh }                   |
+| Audit Log Store                               | Audit logging destination                                                      | [OMRS Audit Log Store Connector](/concepts/audit-log-store-connector)                         | [audit-log-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors){ target=gh }                                           |
+| Cohort Registry Store                         | Local store of membership of an open metadata repository cohort.               | [OMRS Cohort Registry Store](/concepts/cohort-registry-store-connector)                       | [cohort-registry-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors){ target=gh }                   |
+| Open Metadata Topic Connector                 | Connects to a topic on an external event bus such as Apache Kafka.             | [Open Metadata Topic Connectors](/concepts/open-metadata-topic-connector)                     | [open-metadata-topic-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors){ target=gh }                                 |
+| Digital Resource Connector                    | Provides access to a third party technology.                                   | [Building digital resource connectors](/guides/developer/resource-connectors/overview)        | [file-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors){ target=gh }                                                              |
 
 You can write your own connectors to integrate additional types of technology or extend the capabilities of Egeria - and if you think your connector is more generally useful, you could consider [contributing it to the Egeria project](/guides/community).
 
@@ -204,7 +187,7 @@ You can write your own connectors to integrate additional types of technology or
 
 ??? example "Open metadata archive examples"
     * [Defining new types](/guides/developer/open-metadata-archive/defining-new-types)
-    * [Code samples of archive builders containing Coco Pharmaceuticals metadata](https://github.com/odpi/egeria-samples/tree/main/sample-metadata-archives/coco-metadata-archives)
+    * [Code samples of archive builders containing Coco Pharmaceuticals metadata :material-github:](https://github.com/odpi/egeria-samples/tree/main/sample-metadata-archives/coco-metadata-archives){ target=gh }
 
 
 ## Adding registered services
@@ -237,7 +220,7 @@ There are many choices of registered services within the Egeria project.  Howeve
 * OCP - Optional and when provided runs in external clients plus in the OMAG Server Platform.
 * N - Not implemented/needed.
 
-The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds and they are [initialized as part of the platform's capabilities](/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES, OMIS or OMVS registered service that is dependent on the OMAS to get access to open metadata.
+The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds, and they are [initialized as part of the platform's capabilities](/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES, OMIS or OMVS registered service that is dependent on the OMAS to get access to open metadata.
 
 The best guide for building registered services are the existing implementations found in [egeria.git](https://github.com/odpi/egeria/tree/main/open-metadata-implementation){ target=gh }.  You can see the way the code is organized and the services that they depend on.
 

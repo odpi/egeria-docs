@@ -9,6 +9,8 @@ The 053x models cover specialized types that represent the popular technologies.
 * [SchemaAttribute](/types/5/0505-Schema-Attributes) - this is the place where the data is stored.
 * [SchemaType](/types/5/0501-Schema-Elements) - ths is the type of the data - typically defining what values can be stored and how they are structured/formatted.  For example, the schema type may be a primitive value ([PrimitiveSchemaType](/types/5/0501-Schema-Elements)) or a structure ([ComplexSchemaType](/types/5/0505-Schema-Attributes)).
 
+![UML](0530-Tabular-Schemas.svg)
+
 ## RootSchemaType
 
 *RootSchemaType* is an informational type in that it does not add new attributes to the type system.  Instead, it provides a marker to indicate that types that inherit from it are typically the root of a schema definition.  It is this element that connects to [assets](/types/0503-Asset-Schema) and [ports](/types/5/0520-Process-Schemas).
@@ -33,9 +35,7 @@ A *TabularFileColumn* is a specialization of *TabularColumn* to enable a column 
 
 ![Schema for the CostCodes.csv file](csv-schema-example.svg)
 
-## UML Summary
 
-![UML](0530-Tabular-Schemas.svg)
 
 
 !!! info "Further Information"

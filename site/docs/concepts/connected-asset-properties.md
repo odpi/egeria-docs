@@ -54,27 +54,27 @@ AssetSummary holds asset properties that are used for displaying details of an a
 
 *AssetDetail* extends *AssetSummary* to provide all of the properties directly related to this asset.  It includes:
 
- * *ExternalIdentifiers* - list of identifiers for this asset that are used in other systems.
+* *schema* - details of the schema type associated with the asset.
+
+* *external identifiers* - list of identifiers for this asset that are used in other systems.
  
- * *RelatedMediaReferences* - list of links to external media (images, audio, video) about this asset.
+* *related media references* - list of links to external media (images, audio, video) about this asset.
  
- * *NoteLogs* - list of NoteLogs for this asset, often providing more detail on how to use the asset and its current status.
+* *note logs* - list of NoteLogs for this asset, often providing more detail on how to use the asset and its current status.
  
- * *ExternalReferences* - list of links to additional information about this asset.
+* *external references* - list of links to additional information about this asset.
  
- * *Connections* - list of connections defined to access this asset.
+* *connections* - list of connections defined to access this asset.
  
- * *Licenses* - list of licenses associated with the asset.
+* *licenses* - list of licenses associated with the asset.
  
- * *Certifications* - list of certifications that have been awarded to this asset.
+* *certifications* - list of certifications that have been awarded to this asset.
 
 ## Asset Universe
 
 AssetUniverse extends AssetDetail which extend AssetSummary.  AssetUniverse adds information about the common open metadata entities related to this asset.
 
  * *meanings* - glossary term(s) assigned to this asset.
- 
- * *schema* - details of the schema type associated with the asset.
  
  * *feedback* - details of the likes, reviews and comments, that are connected to the asset.
  

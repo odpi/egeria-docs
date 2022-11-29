@@ -5,7 +5,7 @@
 
 Egeria has a growing collection of *connectors* to third party technologies. These connectors help to accelerate the rollout of your open metadata ecosystem since they can be used to automate the extraction and distribution of metadata to the third party technologies.
 
-A connector is a client to a third party technology. It supports a standard API that Egeria calls and it then translates these calls into requests to the third party technology. Some connectors are also able to listen for notifications from the third party technology. When a notification is received, the connector converts its content into a call to Egeria to distribute the information to the open metadata ecosystem.
+A connector is a client to a third party technology. It supports a standard API that Egeria calls, and it then translates these calls into requests to the third party technology. Some connectors are also able to listen for notifications from the third party technology. When a notification is received, the connector converts its content into a call to Egeria to distribute the information to the open metadata ecosystem.
 
 Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the [OMAG servers](/concepts/omag-server). The Connector Catalog list the connector implementations supplied by the Egeria community. There are three broad categories of connectors and the connector catalog is organized accordingly:
 
@@ -96,12 +96,12 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/service
 
 The table below lists the repository connectors supporting the native open metadata repositories.
 
-| Native Repository Connector | Description |
-|---|---|
-| [JanusGraph OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/graph-repository-connector){ target=gh } | provides a native repository for a metadata server using [JanusGraph :material-dock-window:](https://janusgraph.org){ target=janus } as the backend. |
-| [XTDB OMRS Repository Connector](/connectors/repository/xtdb) | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the persistent store. |
-| [In-memory OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector){ target=gh } | provides a simple native repository implementation that "stores" metadata in HashMaps within the JVM; it is used for testing, or for environments where metadata maintained in other repositories needs to be cached locally for performance/scalability reasons.  |
-| [Read-only OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector){ target=gh } | provides a native repository implementation that does not support the interfaces for create, update, delete; however, it does support the search interfaces and is able to cache metadata -- this means it can be loaded with open metadata archives to provide standard metadata definitions. |
+| Native Repository Connector                                                         | Description |
+|-------------------------------------------------------------------------------------|---|
+| [JanusGraph OMRS Repository Connector](/connectors/repository/janus-graph/overview) | provides a native repository for a metadata server using [JanusGraph :material-dock-window:](https://janusgraph.org){ target=janus } as the backend. |
+| [XTDB OMRS Repository Connector](/connectors/repository/xtdb)                       | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the persistent store. |
+| [In-memory OMRS Repository Connector](/connectors/repository/in-memory/overview)    | provides a simple native repository implementation that "stores" metadata in HashMaps within the JVM; it is used for testing, or for environments where metadata maintained in other repositories needs to be cached locally for performance/scalability reasons.  |
+| [Read-only OMRS Repository Connector](/connectors/repository/read-only/overview)    | provides a native repository implementation that does not support the interfaces for create, update, delete; however, it does support the search interfaces and is able to cache metadata -- this means it can be loaded with open metadata archives to provide standard metadata definitions. |
 
 The table below lists the repository connectors that act as an adapter for third party metadata repositories.
 
@@ -158,7 +158,7 @@ The table below lists the repository connectors that act as an adapter for third
 
 | Connector | Description |
 |---|---|
-| [Open Lineage Janus Connector](/connectors/governance-daemon/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/services/open-lineage-services) that allow the Open Lineage Services to connect with databases.
+| [Open Lineage Janus Connector](/connectors/governance-daemon/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/services/open-lineage-services) that allow the Open Lineage Services to connect with databases. |
 
 
 ### Repository Governance Services

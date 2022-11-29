@@ -1,7 +1,3 @@
----
-hide:
-- toc
----
 
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
@@ -28,7 +24,7 @@ The [Anchors](/types/0/0010-Basic-Model/#Anchors) classification contains the un
 !!! example "Example: SchemaElements and Comments"
     Figure 1 is an illustration of this example, with the addition of an Asset. The entities that have the *Anchors* classification are those that are anchored to the Asset.  This includes entities such as Ratings, Likes and Attachments (from the [Open Discovery Framework (ODF)](/frameworks/odf/overview).
 
-    ![Figure 1](anchors-classifications-on-dependant-objects.svg)
+    ![Figure 1](/features/anchor-management/anchors-classifications-on-dependant-objects.svg)
     > **Figure 1:** Examples of dependent entities that are anchored to an Asset
 
 If a [GlossaryTerm](/practices/common-data-definitions/anatomy-of-a-glossary), or [InformalTag](/concepts/informal-tag) is attached to an Asset through a relationship, they are not anchored to it. GlossaryTerms and InformalTags are independent entities. They are not anchored to the Asset and hence do not have an Anchors classification. 
@@ -51,7 +47,7 @@ If a [GlossaryTerm](/practices/common-data-definitions/anatomy-of-a-glossary), o
     The one with the Anchors classification is anchored to the the Asset. The one without the Anchors classification is
     independent of the Asset.
     
-    ![Figure 2](anchors-classifications-on-attached-objects.svg)
+    ![Figure 2](/features/anchor-management/anchors-classifications-on-attached-objects.svg)
     > **Figure 2:** Examples of other types of entities that are linked to an Asset but not necessarily anchored there
     
 It is worthwhile maintaining the `Anchors` classification because reads of, and updates to the anchored entities will happen many times, and it is rare that an anchored entity will change its anchor during its lifetime.

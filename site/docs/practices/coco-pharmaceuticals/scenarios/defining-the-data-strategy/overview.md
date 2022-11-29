@@ -61,7 +61,7 @@ Jules is not discouraged by the feedback - in fact, he is pleased that his colle
 
 He begins to work on the next level of detail:
 
-* [Planning for common definitions](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
+* [Planning for Subject Area Materials](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
 * [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
 * [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview)
 * [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview)

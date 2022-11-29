@@ -7,7 +7,7 @@ Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is confi
 
 ![Configuration for an engine host](engine-host-config.svg)
 
-!!! example "Example configuration of a minimal engine host server"
+??? example "Example configuration of a minimal engine host server"
     Below is an example of the configuration for a minimal engine host server. It has
     a single engine service (`Asset Analysis OMES`) and the default audit log.
     Both the Governance Engine OMAS used by the engine host services and the Discovery Engine OMAS
@@ -103,6 +103,9 @@ Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is confi
         }
     }
     ```
+
+The configuration document is built up using a series of administration calls:
+
 
 --8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
 

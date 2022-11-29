@@ -72,7 +72,7 @@ Connectors are only available through the Java client.
 
 ## Configuration
 
-Details of how to configure the Asset Consumer OMAS can be found [in the admin guide](/guides/admin/services/concfiguring-the-access-services)
+Details of how to configure the Asset Consumer OMAS can be found [in the admin guide](/guides/admin/services/configuring-the-access-services)
 
 ## Scenarios
 

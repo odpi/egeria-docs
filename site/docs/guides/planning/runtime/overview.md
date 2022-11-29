@@ -72,7 +72,7 @@ This is a checklist of planning tasks for the deployment of your OMAG Server Pla
 
 - [ ] [Set up unique certificates](/guides/admin/configuring-the-omag-server-platform/#transport-layer-security-tls) for your OMAG Server Platforms.
 - [ ] [Use an encrypted configuration document store](/guides/admin/configuring-the-omag-server-platform/#configuration-store) for your platforms since configuration documents can have certificates and passwords in them.
-- [ ] [Implement the metadata security connectors for your organization](/services/common/metdata-security) to ensure only authorized users access metadata.
+- [ ] [Implement the metadata security connectors for your organization](/features/metdata-security/overview) to ensure only authorized users access metadata.
 - [ ] Choose and [configure the audit log destinations](/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-audit-log) for your OMAG Servers.
 - [ ] Ensure you have at least one [Egeria metadata access store](/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-local-repository) in each of your [open metadata repository cohorts](/services/omrs/cohort).
 - [ ] [Assign a separate user id for each of your servers](/guides/admin/servers/configuring-a-metadata-access-store/#set-the-servers-user-id-and-optional-password) and ensure they are defined in your user directory and are authorized users according to the metadata security connectors.

@@ -19,7 +19,9 @@ nav:
           - Metadata Manager: patterns/metadata-manager/overview.md
           - Metadata Exchange: patterns/metadata-exchange/overview.md
           - Metadata Governance: patterns/metadata-governance/overview.md
+      - Try Egeria: try-egeria/overview.md
   - Using:
+      - Using Overview: guides/index.md
       - Planning Guide:
           - Planning Guide: guides/planning/index.md
           - Planning Deployment:
@@ -32,7 +34,9 @@ nav:
               - Onboarding Organization: guides/planning/organization/overview.md
               - Governance Program: guides/planning/governance-program/overview.md
       - Integration:
-          - Integration Guide: guides/integration/overview.md
+          - Integration Guide:
+              - Integration Guide: guides/integration/index.md
+              - Catalog Integration: guides/integration/types-of-metadata-repository.md
           - Connector Catalog:
               - Connector Overview: connectors/index.md
               - Governance Actions:
@@ -108,10 +112,9 @@ nav:
                       - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
                       - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
                       - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
-                      - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
                   - Resource Connectors:
                       - New types of connectors: guides/developer/resource-connectors/overview.md
-                      - Open Metadata Topic: guides/developer/resource-connectors/open-metadata-topic-connector.md
+                      - Open Metadata Topic Connector: guides/developer/resource-connectors/open-metadata-topic-connector.md
               - Javadoc: https://odpi.github.io/egeria/index.html
               - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Administration:
@@ -151,8 +154,12 @@ nav:
           - Diagnostic Process: guides/diagnostic/overview.md
           - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
           - First failure data capture (FFDC): guides/diagnostic/ffdc.md
+          - Server Diagnostic Guides:
+              - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
+              - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
+          - Egeria General User UI: user-interfaces/general/overview.md
           - Egeria Ecosystem UI:
               - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
               - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
@@ -177,7 +184,6 @@ nav:
           - Metadata Archiving: features/metadata-archiving/overview.md
           - Metadata Provenance: features/metadata-provenance/overview.md
           - Metadata Security: features/metadata-security/overview.md
-          - Open Type System: features/open-type-system/overview.md
           - People, Roles and Organizations: features/people-roles-organizations/overview.md
           - Reference Data Management: features/reference-data-management/overview.md
           - Synchronized Access Control: features/synchronized-access-control/overview.md
@@ -185,7 +191,6 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - Learning:
       - Learning Overview: education/index.md
-      - Webinars: education/webinar-program/overview.md
       - Dojo (Jan 2022):
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
@@ -205,6 +210,7 @@ nav:
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
       - Open Metadata Labs: education/open-metadata-labs/overview.md
+      - Webinars: education/webinar-program/overview.md
       - Tutorials:
           - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
           - Using Kubernetes: guides/operations/kubernetes/index.md
@@ -259,7 +265,6 @@ nav:
   - Community:
       - Community Recognition: community/index.md
       - Community Guide: guides/community.md
-      - Integration Guide: guides/integration/overview.md
       - Contributing:
           - Project Operations: guides/project-operations.md
           - Code:
@@ -291,9 +296,12 @@ nav:
               - Markdown: guides/contributor/markdown.md
   - Releases:
       - Overview: release-notes/overview.md
-      - Release Notes:
+      - Monthly News:
+        - October 2022: release-notes/october-2022.md
+      - Core Egeria:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.13: release-notes/3-13.md
         - v3.12: release-notes/3-12.md
         - v3.11: release-notes/3-11.md
         - v3.10: release-notes/3-10.md
@@ -334,6 +342,7 @@ nav:
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:
+      - Categories of Metadata: patterns/metadata-manager/categories-of-metadata.md
       - Open Metadata Types:
           - Open Metadata Type System: types/index.md
           - 0. Base:
@@ -529,7 +538,6 @@ nav:
           - Registered Services:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md
-                  - Analytics Modeling OMAS: services/omas/analytics-modeling/overview.md
                   - Asset Catalog OMAS: services/omas/asset-catalog/overview.md
                   - Asset Consumer OMAS: services/omas/asset-consumer/overview.md
                   - Asset Lineage OMAS: services/omas/asset-lineage/overview.md
@@ -562,7 +570,6 @@ nav:
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
-                  - Analytics Integrator: services/omis/analytics-integrator/overview.md
                   - API Integrator: services/omis/api-integrator/overview.md
                   - Catalog Integrator: services/omis/catalog-integrator/overview.md
                   - Database Integrator: services/omis/database-integrator/overview.md
@@ -682,7 +689,7 @@ nav:
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
-      - Glossary Term: /practices/common-data-definitions/anatomy-of-a-glossary.md
+      - Glossary Term: practices/common-data-definitions/anatomy-of-a-glossary.md
       - GUID: concepts/guid.md
       - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md
@@ -696,6 +703,7 @@ nav:
       - Governance Request Type: concepts/governance-request-type.md
       - Governance Server: concepts/governance-server.md
       - Governance Service: concepts/governance-service.md
+      - Governance Service Definition: concepts/governance-service-definition.md
       - Governance Zone: concepts/governance-zone.md
       - Headcount Limit: concepts/person-role.md
       - Guard: concepts/guard.md
@@ -707,6 +715,7 @@ nav:
       - Integration Connector: concepts/integration-connector.md
       - Integration Daemon: concepts/integration-daemon.md
       - IsPublic: concepts/is-public.md
+      - Javadoc: concepts/javadoc.md
       - Karma Point: concepts/karma-point.md
       - Karma Point Threshold: concepts/karma-point.md
       - Karma Point Plateau: concepts/karma-point-plateau.md
@@ -715,6 +724,7 @@ nav:
       - Metadata Access Point: concepts/metadata-access-point.md
       - Metadata Access Server: concepts/metadata-access-server.md
       - Metadata Access Store: concepts/metadata-access-store.md
+      - Metadata Collection: concepts/metadata-collection.md
       - Metadata Collection Id: concepts/metadata-collection-id.md
       - Metadata Discovery: features/discovery-and-stewardship/overview.md
       - Metadata Repository: concepts/metadata-repository.md
@@ -875,7 +885,7 @@ extra:
       link: https://medium.com/tag/egeria
       name: Egeria on Medium
     - icon: fontawesome/brands/slack
-      link: https://lfaifoundation.slack.com/archives/C01F40J2XA8
+      link: https://slack.lfaidata.foundation
       name: Egeria on Slack
 
 markdown_extensions:

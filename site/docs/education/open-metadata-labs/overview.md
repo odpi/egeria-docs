@@ -7,7 +7,7 @@ The open metadata labs contain an interactive environment that allow you to expe
 
 The open metadata labs are implemented using [Jupyter Notebooks](/education/tutorials/jupyter-tutorial/overview).  Each lab notebook describes a scenario from the [Coco Pharmaceuticals](https://github.com/odpi/data-governance/tree/main/docs/coco-pharmaceuticals) case study, focusing on a challenge that one or more of the characters face and how they approached the solution.
 
-The calls to the Egeria APIs necessary to complete the challenge are encoded in the [notebook](/education/tutorials/jupyter-tutorial/overview) so you can experiment with the APIs.
+The calls to the Egeria APIs necessary to complete the challenge are encoded in the [notebook](/education/tutorials/jupyter-tutorial/overview), so you can experiment with the APIs.
 
 These labs can be used for individual study, as part of a class and / or as the basis of a workbook for using Egeria within a specific organization.
 

@@ -20,7 +20,6 @@ The Egeria features describe the value-add features that Egeria adds to its abil
 - [Metadata Archiving](/features/metadata-archiving/overview) - capturing and storing metadata into archives for backups, to share standard definitions between organizations or independently deployed metadata ecosystems.
 - [Metadata Provenance](/features/metadata-provenance/overview) - maintaining the origin of each metadata element.
 - [Metadata Security](/features/metadata-security/overview) - ensuring metadata elements are only visible to/editable by the appropriate consumers.
-- [Open Type System](/features/open-type-system/overview) - managing your own open metadata types.
 - [People, Roles and Organizations](/features/people-roles-organizations/overview) - how to synchronize information about people, what they do and how they are organized with Egeria to support security, collaboration, escalations and delegations.
 - [Reference Data Management](/features/reference-data-management/overview) - how to synchronize code values and other types of reference data across your systems.
 - [Synchronized Access Control](/features/synchronized-access-control/overview) - how to use metadata to maintain security information used to secure access to [digital resources](/concepts/resource).

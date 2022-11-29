@@ -2,12 +2,8 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
   
 # Open Metadata Archives
-  
-Open metadata archives provide pre-canned content (open metadata types and instances) to load into an open metadata repository.  There are two main types of open metadata archive:
 
-- *Content packs* - metadata types and instances that are reusable in many organizations.  The type definitions for the [Open Metadata Types](/types) are managed in a content pack.  Similarly, [bespoke types](/guides/developer/open-metadata-archives/defining-new-types) are managed in content packs.  Content packs are also used for distributing standard glossaries or other types of definitions from expert groups and organizations.  The elements in the content pack belong to the archive's [metadata collection](/features/metadata-provenance/#metadata-collections) irrespective of their originating metadata repository.
-  
-- *Metadata exports* - metadata exported from a specific open metadata repository that can act as a snapshot or backup of specific types and instances.  The elements in the metadata export remain part of the metadata collection of the originating metadata repository. 
+--8<-- "docs/concepts/open-metadata-archive-intro.md"
 
 By the rules of [metadata provenance](/features/metadata-provenance/overview), the elements in an open metadata archive are read-only when loaded into an open metadata repository unless the repository has the same metadata collection id as the element. 
 

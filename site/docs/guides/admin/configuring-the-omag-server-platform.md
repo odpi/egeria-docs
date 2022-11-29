@@ -327,7 +327,7 @@ Note that in the case of Java clients, these are system properties, and do not u
 
 ### Other clients
 
-Similar principles to those documented for Java should apply. If you need further assistance, please contact the team on [Slack :material-slack:](https://lfaifoundation.slack.com/archives/C01F40J2XA8){ target=slack }. A pull request (or issue) with contributed documentation is also very welcome!
+Similar principles to those documented for Java should apply. If you need further assistance, please contact the team on [Slack :material-slack:](https://slack.lfaidata.foundation){ target=slack }. A pull request (or issue) with contributed documentation is also very welcome!
 
 ### Example to launch Egeria
 

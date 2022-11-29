@@ -3,16 +3,10 @@
 
 # Audit Log
 
-The audit log provides detailed information relating to the activities
-within an
-[OMAG Server](/concepts/omag-server).
+The audit log provides detailed information relating to the activities within an [OMAG Server](/concepts/omag-server).
 
-It builds on the [Audit Log Framework](/frameworks/alf/overview)
-to support multiple destinations for the audit log records written to the
-audit log by the server's subsystems.
+It builds on the [Audit Log Framework](/frameworks/alf/overview) to support multiple destinations for the audit log records written to the audit log by the server's subsystems.
 
-Details of the supported audit log store connectors and
-how to set them up are described in
-[Configuring the Audit Log](../../../admin-services/docs/user/configuring-the-audit-log.md).
+Details of the supported audit log store connectors and how to set them up are described in [Configuring the Audit Log](/guides/admin-services/servers/configuring-the-audit-log).
 
 ---8<-- "snippets/abbr.md"

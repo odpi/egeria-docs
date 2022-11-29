@@ -54,7 +54,7 @@ called 'Egeria dojo':
 We now will
 * Select 'Import' and select 'GitHub' as the source
 * Authenticate as required
-* Select the odpi/egeria repository on GitHub
+* Select the "main" branch from the odpi/egeria repository on GitHub
 * Import all the Postman data found
 
 ![Import Begin](postman-import-begin.png)

@@ -74,7 +74,7 @@ The exception is that directories representing Java packages do not need README 
 
 ### Javadoc
 
-[Javadoc :material-dock-window:](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javadoc.html){ target=java } is used to build a code reference for our public site. It is generated as part of the build.  There are three places where Javadoc should be provided by the developer of Java code:
+[Javadoc :material-dock-window:](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javadoc.html){ target=java } is used to build a code reference for [our public site](https://odpi.github.io/egeria/index.html). It is generated as part of the build.  There are three places where Javadoc should be provided by the developer of Java code:
 
 - Every Java source file should begin with a header Javadoc tag just before the start of the class/interface/enum, which explains the purpose and responsibilities of the code.
 - All public methods should have a clear Javadoc header describing the purpose, parameters and results (including exceptions). This includes test cases.

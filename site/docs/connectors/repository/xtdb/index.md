@@ -48,7 +48,7 @@ XTDB supports temporal graph queries to provide native support for storing histo
 
 ## How it works
 
-The XTDB OMRS Repository Connector is a [repository connector](/concepts/repository-connector), hosted by the [plugin repository proxy](/concepts/plugin-repository-proxy), running on a [metadata access store](/concepts/metadata-access-store).
+The XTDB OMRS Repository Connector is a [native repository connector](/concepts/repository-connector) running on a [metadata access store](/concepts/metadata-access-store).
 
 ![Operation of the XTDB OMRS repository connector](xtdb-connector-overview.svg)
 

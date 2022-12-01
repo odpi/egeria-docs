@@ -6,9 +6,6 @@
 This is November's monthly report from the Egeria community.  
 
 
-## User interfaces
-
-
 ## Security
 
 
@@ -16,7 +13,7 @@ This is November's monthly report from the Egeria community.
 
 ### Database support
 
-The JDBC connectors have been tested with IBM's DB2 database.
+The JDBC connectors have been tested with the **Trino** database.
 
 ### Integration connectors
 

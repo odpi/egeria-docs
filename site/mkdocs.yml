@@ -26,6 +26,7 @@ nav:
           - Planning Guide: guides/planning/index.md
           - Planning Deployment:
               - Planning Runtime: guides/planning/runtime/overview.md
+              - Security: guides/planning/security/overview.md
               - User Interfaces:
                   - Ecosystem UI: user-interfaces/ecosystem/ecosystem-ui-planning.md
           - Preparing Metadata Ecosystem:
@@ -678,6 +679,7 @@ nav:
       - Connector Type: concepts/connector-type.md
       - Contact Method: concepts/contact-method.md
       - Data Class: concepts/data-class.md
+      - Data Domain: concepts/subject-area.md
       - Data Engine Proxy: concepts/data-engine-proxy.md
       - Digital Resource Connector: concepts/digital-resource-connector.md
       - Discovery Analysis Report: concepts/discovery-analysis-report.md
@@ -752,7 +754,6 @@ nav:
       - Personal Roles: concepts/personal-roles.md
       - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
       - Platform URL Root: concepts/platform-url-root.md
-      - Plugin Repository Proxy: concepts/plugin-repository-proxy.md
       - Presentation Server: concepts/presentation-server.md
       - Project: concepts/project.md
       - Referenceable: concepts/referenceable.md

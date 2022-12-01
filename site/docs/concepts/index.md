@@ -6,6 +6,7 @@
 
 ## A
 
+- [Action Target](/concepts/action-target)
 - [Analytics Modeling OMAS](/services/omas/analytics-modeling/overview)
 - [Analytics Integrator OMIS](/services/omis/analytics-integrator/overview)
 - [Anchor](/concepts/anchor)
@@ -36,6 +37,8 @@
 
 
 ## B
+
+- [Basic IT Concepts](/concepts/basic-concepts)
 
 ## C
 
@@ -69,6 +72,7 @@
 
 - [Data Class](/concepts/data-class)
 - [Data Connector](/concepts/digital-resource-connector)
+- [Data Domain](/concepts/subject-area)
 - [Data Engine OMAS](/services/omas/data-engine/overview)
 - [Data Engine Proxy](/concepts/data-engine-proxy)
 - [Data Manager](/services/omas/data-manager/overview)
@@ -161,7 +165,7 @@
 - [Guard](/concepts/guard)
 - [GUIDs](/concepts/guid)
 
-  - [Metadata Collection Id](/concepts/metadata-collection-id)
+  - [Metadata Collection Identifier](/concepts/metadata-collection-id)
 
 
 ## H
@@ -319,12 +323,14 @@
 
 ## S
 
+- [Schema](/concepts/schema)
 - [Security](/features/metadata-security/overview)
 - [Security Connector for OMAG Server](/concepts/server-metadata-security-connector)
 - [Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)
 - [Security Integrator OMIS](/services/omis/security-integrator/overview)
 - [Security Manager OMAS](/services/omas/security-manager/overview)
 - [Security Officer OMAS](/services/omas/security-officer/overview)
+- [Security Tags](/concepts/security-tags)
 - [Server Capabilities](/concepts/software-capability)
 - [Server Chassis](/services/server-chassis)
 - [Servers for Governance](/concepts/governance-server)
@@ -333,6 +339,7 @@
 - [Server Types](/concepts/omag-server)
 - [Server URL Root](/concepts/platform-url-root)
 - [Software Developer OMAS](/services/omas/software-developer/overview)
+- [Software Capability](/concepts/software-capability)
 - [Software Server Capability](/concepts/software-capability)
 - [Star Ratings](/concepts/review)
 - [Stewardship](/features/discovery-and-stewardship/overview)
@@ -340,6 +347,8 @@
 - [Stewardship Engine](/concepts/governance-engine)
 - [Stewardship Integrator OMIS](/services/omis/stewardship-integrator/overview)
 - [Stewardship Server](/concepts/engine-host)
+- [Subject Area](/concepts/subject-area)
+- [Subject Area Domain](/concepts/subject-area)
 - [Subject Area OMAS](/services/omas/subject-area/overview)
 - [Subsystem](/concepts/omag-subsystem)
 - [Supported Zones](/concepts/governance-zone)

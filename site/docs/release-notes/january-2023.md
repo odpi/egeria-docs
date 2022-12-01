@@ -14,8 +14,11 @@ On the last community call of 2022, we had the traditional *Review of the Year* 
 
 ## Security
 
+## Connectors
 
-## Database support
+### Database support
+
+The JDBC connectors have been tested with IBM's DB2 database.
 
 
 ## Data products

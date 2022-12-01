@@ -1,10 +1,13 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# December 2022
+# January 2023
 
-This is December's monthly report from the Egeria community.  
+This is January's monthly report from the Egeria community.  This is a quiet month due to the winter break, but there is still some news to be shared.
 
+## Looking back on another string year of achievement
+
+On the last community call of 2022, we had the traditional *Review of the Year* celebration that highlighted the achievements of 2022.
 
 ## User interfaces
 
@@ -24,6 +27,7 @@ This is December's monthly report from the Egeria community.
 ## Core Egeria
 
 
+
 !!! info "Core Egeria Releases"
     [Release 3.14](/release-notes/3-14) was shipped in early December 2022.  The work this month is contributing to [Release 3.15](/release-notes/3-15).
 
@@ -32,7 +36,7 @@ This is December's monthly report from the Egeria community.
 
 ### Egeria Dojos
 
-The next run of an Egeria Dojo will be the new [Metadata Governance Dojo](/education/egeria-dojo/metadata-governance/overview) on Monday 21st November 2022. 
+The next Egeria dojo to be developed covers how to work with the Egeria community.  It covers the different roles (contributor, maintainer, advocate, ...) and includes reflections from members of the community.
 
 ### Community Meetings
 

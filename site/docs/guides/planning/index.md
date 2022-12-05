@@ -8,6 +8,7 @@ The *Planning Guide* provides information to help you plan the deployment of Ege
 * *Planning Deployment* focuses on the setting up of the Egeria software and its supporting technology
               
      * [Planning Runtime](/guides/planning/runtime/overview) describes how to plan your Open Metadata and Governance (OMAG) platforms and servers.
+     * [Designing your security model](/guides/planning/security/overview)
      * Planning User Interfaces describes how to plan for the two user interfaces that Egeria supplies.
 
          * General UI: TBA

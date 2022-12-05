@@ -8,7 +8,7 @@ Egeria is a large and active project with teams advancing its function on multip
 The [roadmap for Egeria](/release-notes/roadmap) describes the end vision for Egeria and our current status.
 
 !!! tip "Feedback"
-One way you can help us is to feedback on your experiences, both good and bad. We would love to hear from you!
+    One way you can help us is to feedback on your experiences, both good and bad. We would love to hear from you!
 
     If you discover an issue in the release you are using, we recommend first upgrading to the latest available release. If this does not resolve the problem, please raise a new [GitHub issue :material-dock-window:](https://github.com/odpi/egeria/issues){ target=gh }.
 

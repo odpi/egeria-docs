@@ -63,5 +63,9 @@ When `forLineage=false` elements with the Memento classification are not returne
 
 ### externalId
 
+### additionalProperties
+
+### vendorProperties
+
 
 --8<-- "snippets/abbr.md"

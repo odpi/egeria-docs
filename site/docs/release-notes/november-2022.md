@@ -6,17 +6,22 @@
 This is November's monthly report from the Egeria community.  
 
 
-## User interfaces
-
-
 ## Security
 
 
-## Database support
+## Connectors
 
+### Database support
+
+The JDBC connectors have been tested with the **Trino** database.
+
+### Integration connectors
+
+There is a new sample integration connector that listens on an event topic that is supplying proprietary lineage data and transforms and publishes it into the open metadata ecosystem.
 
 ## Data products
 
+This month we clarified the relationship between a subject area and a data domain. See [Subject Area Domain](/concepts/subject-area/#subject-area-domain).
 
 ## Community news
 
@@ -30,9 +35,10 @@ This is November's monthly report from the Egeria community.
 
 ## Events
 
-### Egeria Dojos
+### Metadata Governance Dojo
 
-The next run of an Egeria Dojo will be the new [Metadata Governance Dojo](/education/egeria-dojo/metadata-governance/overview) on Monday 21st November 2022. 
+The big event this month was the new [Metadata Governance Dojo](/education/egeria-dojo/metadata-governance/overview).  We held two live sessions (3 hours each) and extended the discussion of the governance engines to one of the community calls.  The topics covered the philosophy and purpose of metadata governance, details of the operation of the [Integration Daemon](/concepts/integration-daemon) as well as [governance processes](/concepts/governance-action-process) and [services](/concepts/governance-service) running in the [Engine Host](/concepts/engine-host).  There are also sections on building the materials for a [subject area](/concepts/subject-area), [incident reporting](/concepts/incident-report), [lineage](/concepts/lineage) and [templated cataloguing](/features/templated-catalouing/overview).
+
 
 ### Community Meetings
 
@@ -49,24 +55,23 @@ Last month, the Egeria community gave two presentations at the European Open Sou
 
 Each month we will select a some new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org) so you can keep up-to-date with how it is evolving.
 
-* ...
+* [Metadata governance introduction](/patterns/metadata-governance/overview)
+* [Building subject area materials](/practices/common-data-definitions/open-metadata-for-common-definitions)
 
 ## Postman collections
+
+No new postman collections this month.
 
 ## Future items
 
 ### Annual Project Review
 
-The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is scheduled for 15th December 2022.  Please encourage people who work with Egeria to *Star* each of our repositories on GitHub as we are trying to get [our total count to 1000](https://landscape.lfai.foundation/?selected=egeria).
+The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation has moved to 9th March 2023.
+Here are [the metrics for our community](https://landscape.lfai.foundation/?selected=egeria).
 
 ### Moving to Gradle
 
-Our build technology for the Java based projects has used both Maven and Gradle.  We plan to move entirely to gradle in the next few months, so you will see:
-
-* Repositories such as egeria-dev-projects.git and egeria-samples.git move from maven to gradle.
-* The Egeria Development Dojo will use gradle in the exercises.
-
-The [Core Egeria](https://github.com/odpi/egeria) repository has offered both a maven and a gradle option.  The maven option will be removed once we are sure the gradle build is able to support the release process.
+The version 4.0 release will be gradle only. This build is successfully running on the V4.0 branch and testing of the resulting artifacts is underway.
 
 ## Connecting with the project
 

@@ -26,7 +26,9 @@ GovernanceActionType is a [Referenceable](/types/0/0010-Base-Model) and so has a
 * *domainIdentifier* links the action to a specific [governance domain](/concepts/governance-domain).
 * *displayName* - human-readable name for messages and user interfaces.
 * *description* - description of the step.
-* *producedGuards* attribute is used to help the individual/tool that is constructing the flow for the governance action process to verify that all the necessary guards have been accounted for.
+* *producedGuards* - used to help the individual/tool that is constructing the flow for the governance action process to verify that all the necessary guards have been accounted for.
+* *ignoreMultipleTriggers* - indicates that a governance action should only be triggered once from this governance action type, no matter how many times the appropriate guards are produced.  This is important for long-running governance actions that may be triggered by multiple instances of previous steps but is held waiting for the mandatory guard.
+* *waitTime* - the minimum number of minutes that the governance action should wait before starting.
 
 ## GovernanceActionTypeExecutor
 
@@ -41,10 +43,10 @@ The *NextGovernanceActionType* relationship identifies the next step in the proc
 
 * *guard* - identifies the guard produced by the previous step that will cause this step to execute.
 * *mandatoryGuard* - indicates that this guard must be produced before the follow-on step is processed.
-* *ignoreMultipleTriggers* indicates that the follow-on step should only be triggered once by this guard no matter how many times this guard is produced.  This is important for long-running governance actions that may be triggered by multiple instances of previous steps but is held waiting for the mandatory guard.
 
 The follow-on action runs when all of its mandatory guards are produced by previous steps.  It runs as many times as a matching guard is produced unless ignoreMultipleTriggers is set in which case it will run once for that guard.
 
-
+???+ deprecated "Deprecated types"
+    The *ignoreMultipleTriggers* attribute in the *NextGovernanceActionType* has been deprecated.
 
 --8<-- "snippets/abbr.md"

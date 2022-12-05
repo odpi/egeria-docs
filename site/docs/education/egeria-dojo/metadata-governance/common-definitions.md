@@ -4,7 +4,7 @@
 ## Subject Areas
 
 !!! example "Back at the bus company ..."
-    The new focus on ensuring bus timetable information is accurate and available has created an increase in passengers for the bus company.  The assistant who is responsible for managing and disseminating the bus timetable information is not happy, however.  What should be a simple task is tedious and complicated because each form of the timetable (at the bus stop, internet download, printed timetables) are each using a different format.  For example, the master timetable and the timetables for the bus stop are in 24-hour clock, whereas the internet downloadable timetable and the printed timetable use am/pm.  This means the assistant has to translate the bus times from one format to another in order to publish a new set of timetables.  Similarly, the names of the bus stops are not consistent across the different formats.  The assistant realizes that some form of standardization is needed so that the different formats can be created automatically from the mater timetables.  Otherwise, they are going to look for a new job! 
+    The new focus on ensuring bus timetable information is accurate and available has created an increase in passengers for the bus company.  The assistant who is responsible for managing and disseminating the bus timetable information is not happy, however.  What should be a simple task is tedious and complicated because each form of the timetable (at the bus stop, internet download, printed timetables) are each using a different format.  For example, the master timetable and the timetables for the bus stop are in 24-hour clock, whereas the internet downloadable timetable and the printed timetable use am/pm.  This means the assistant has to translate the bus times from one format to another in order to publish a new set of timetables.  Similarly, the names of the bus stops are not consistent across the different formats.  The assistant realizes that some form of standardization is needed so that the different formats can be created automatically from the master timetables.  Otherwise, they are going to look for a new job! 
 
 Using standard formats, names and meanings for resources, such as data, is critical to ensure they can be shared and reused for multiple purposes.  Open metadata provides the means to describe these standards and used them to create consistency across all copies, formats and uses.
 The effort required to author and maintain a these standards, plus the governance processes required to ensure they are used wherever appropriate, is offset by the savings in managing and using the resources associated with the subject area.
@@ -30,8 +30,8 @@ The effort required to author and maintain a these standards, plus the governanc
         * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
 
 
-??? intermediate "Creating glossaries (30 mins)"
-    --8<-- "docs/education/egeria-dojo/metadata-governance/creating-glossaries.md"
+??? education "Coco Pharmaceuticals Scenarios"
+    There are descriptions of creating glossaries and other materials for subject areas in the [Coco Pharmaceuticals Scenarios](/practices/coco-pharmaceuticals/scenarios/overview).
 
 
 --8<-- "snippets/abbr.md"

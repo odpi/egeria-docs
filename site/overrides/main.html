@@ -6,3 +6,19 @@
 {% block announce %}
 <a href="https://www.linuxfoundation.org/projects" target="_blank"><img src="https://live-lfprojects3.linuxfoundation.org/wp-content/uploads/2022/01/lfprojects_banner.png" style="height: 15px; width: auto"></a>
 {% endblock %}
+
+{% block htmltitle %}
+  <title>Egeria Project</title>
+{% endblock %}
+
+{% block site_meta %}
+  <meta 
+  http-equiv="Content-Security-Policy" 
+  content="default-src 'self' https://api.github.com;
+  font-src 'self' https://fonts.gstatic.com; 
+  img-src 'self' data: https://live-lfprojects3.linuxfoundation.org; 
+  child-src 'self'; 
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+  script-src 'self' 'unsafe-inline';"
+  />
+{% endblock %}

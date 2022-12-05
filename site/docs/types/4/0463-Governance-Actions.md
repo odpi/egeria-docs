@@ -46,13 +46,15 @@ The *GovernanceActionStatus* indicates the execution status of the governance ac
 
 The GovernanceAction is also linked to any follow-on activities through the *NextGovernanceAction* relationship, so it is possible to trace through a chain of actions. The *guard* describes the [output guard](/concepts/guard) produced by the previous action(s) that will trigger (or triggered) the next action(s).  
 
-If the guard is mandatory (ie *mandatoryGuard* = true),
-a next action can not run until a previous action has produced this guard. If *ignoreMultipleTriggers* = true, the next action is only triggered once. If it is false then the next action is triggered each time the guard is produced by the previous action(s).
+If the guard is mandatory (ie *mandatoryGuard* = true), a next governance action can not run until a previous governance action has produced this guard.
 
 
 ???+ deprecated "Deprecated types"
-    The following relationship types were deprecated in favor of attributes in the *GovernanceAction* to reduce the processing load in maintaining these relationships.
+    The following relationship types were deprecated in favour of attributes in the *GovernanceAction* to reduce the processing load in maintaining these relationships.
+
     - *GovernanceActionExecutor* - Use *executorEngineGUID*, *executorEngineName*, *requestType* and *requestParameters* properties in *GovernanceAction* entity to identify the governance engine that will run the service that will execute the action.  The specific service is identified by the requestType property.  The governance engine is typically either a [DiscoveryEngine](/types/6/0601-Open-Discovery-Engine) or a [GovernanceActionEngine](/types/4/0461-Governance-Engines).
     - *GovernanceActionTypeUse* - Use *governanceActionTypeGUID*, *governanceActionTypeName* and *processName* properties in *GovernanceAction* entity to identify the governance action type (and any associated governance action process) that acted as a template when this governance action was initiated.
+
+    The *ignoreMultipleTriggers* attribute in the *NextGovernanceAction* has been deprecated.
     
 --8<-- "snippets/abbr.md"

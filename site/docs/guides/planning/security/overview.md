@@ -18,11 +18,11 @@ Egeria ecosystem applications provide efficient way to implement integrated meta
 
 To decompose Egeria applications, it is very important to undestand the [OMAG Server Platform](/concepts/omag-server-platform){target=_blank}. This is a java based server application that is designed to run one or more logical application instances called OMAG Servers. Different application components can be configured and combined to provide runtime services that define the function of a single OMAG Server instance. 
 
-| Logical level | Description | Provides |
-| ---------- | ---------- | ---------- |
-| Platform      | The physical application | Runtime and inbound entry points (opening ports, transport encryption etc.) |
-| Server | Virtual Server or application instance | Specific function by managing lifecycle for a logical group of services, maintains connections to access local or external subsystems |
-| Service | Service unit | Operations to validate and process server requests, process and distribute events or provide storage |
+| Application level | Description |
+| ---------- | ---------- |    
+| Platform      | Runtime process. Provide inbound entry points, controls transoprt and enables admin services |
+| Server | Application instances. Provides function by managing lifecycle for a logical group of services, maintains connections to access local or external subsystems |
+| Service | Service units. Provide operations to validate and process server requests, process and distribute events or access storage |
 
 Different server capabilites can be enabled by combining services and creating new server instances.
 In practice organization will deploy different server types to implement solution for a specific use-case. 

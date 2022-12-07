@@ -9,31 +9,74 @@ The Egeria runtimes have been designed so that they can be deployed securely.  H
 
 The first phase in securing your solution is to understand the threats that need to be guarded against.  This understanding is developed through [Threat Modelling](https://owasp.org/www-community/Threat_Modeling){target=_blank}.  **OWASP** has an excellent guidance pave called the [Threat Modelling Process](https://owasp.org/www-community/Threat_Modeling_Process){target=_blank} that explains how to identify the threats that could compromise your system.
 
-*Description of how this applies to the Egeria ecosystem goes here.*
-
 ## Threat model baseline for egeria ecosystem
 
 
 ### Step 1: Decompose the Application
 
-To decompose Egeria applications, it is very important to undestand the [OMAG Server Platform](/concepts/omag-server-platform){target=_blank}. This is a java based server application that is designed to run one or more logical application instances called OMAG Servers. Different application components can be configured and combined to provide runtime services and  define the function of a single OMAG Server. This is defined in a configuration document called OMAG Server [Configuration Document](/concepts/configuration-document/){target=_blank}.
+Egeria ecosystem applications provide efficient way to implement integrated metadata management solutions. These solutions are implemented by deploying multiple Egeira based server applications called OMAG Servers. 
 
-Based on this anathomy, we can observe the applicaton behaviour on different levels:
+To decompose Egeria applications, it is very important to undestand the [OMAG Server Platform](/concepts/omag-server-platform){target=_blank}. This is a java based server application that is designed to run one or more logical application instances called OMAG Servers. Different application components can be configured and combined to provide runtime services that define the function of a single OMAG Server instance. 
 
-- **Platform** - The physical application, provides the runtime and inbound entry points (opening - ports, enabling encrypted transport)
-- **Server** - logical application, exposing rest endpoints, initiating outbound connections to external systems
-- **Service** - validating and processing server requests or providing event processing
+| Logical level | Description | Provides |
+| ---------- | ---------- | ---------- |
+| Platform      | The physical application | Runtime and inbound entry points (opening ports, transport encryption etc.) |
+| Server | Virtual Server or application instance | Specific function by managing lifecycle for a logical group of services, maintains connections to access local or external subsystems |
+| Service | Service unit | Operations to validate and process server requests, process and distribute events or provide storage |
 
-*(Logical Architecute Diagram)*
+Different server capabilites can be enabled by combining services and creating new server instances.
+In practice organization will deploy different server types to implement solution for a specific use-case. 
 
-#### DFD Diagram explaining server types and general data flows
-Some interaction patterns can be already identified based on the high level purpose of the [Types of OMAG Server](/concepts/omag-server/#types-of-omag-server){target=_blank}
+#### Application users
+
+Application users can be defined per use-case. Based on the nature or purpose of accessing Egeria applications we can group users into following:
+
+1. UI access users - Users that logon and access the application using one of the User Interfaces available. In most cases these users have asociated corporate role or profile that determines the ability to access specific views that allow contorlled access to data provided by Egeria application.
+
+2. External application users - Group of users that are in most cases identified by non peronal accounts representing other external applications or systems accessing data. Usually those users interact with Open Matadata Access Services.
+
+3. Internal system users - Group of users that are used to identify internal applications or components such as other OMAG servers interacting.
+
+
 
 #### External dependencies 
-#### Entry points, exit points and assets 
-#### Trust levels
 
-Steps that are more specific to given use-case
+In an organization, Egeria applications such as OMAG Servers will always interact with external systems that are out of control of the development team therefore it is very important that the operators are aware of such extenral depdendencies in production.
+
+Common external dependencies for Egeria ecosystem:
+
+| ID | Description | Recommendation |
+| ------ | ------ | ------ |
+| 1 | Operating system security patch level | OMAG servers should always run in a secure linux environment. This includes the installation of the latest operating system and application security patches. |
+| 2 | Java Virtual Machine software | Use latest stable Java runtime. Recomendation is to run OMAG server using well supported OpenJDK distribution. |
+| 3 | Network access segmentation and Firewalls | Network design is important. Egeria applications should be properly deployed in private network segments behind firewalls. Depending on the use-case only specific services and endpoints should be exposed to user access networks (i.e. Web Server or API Gateway) |   
+| 4 | Backend storage technology | OMAG servers can be configured with technology connectors that access database systems. Example is JanusGraph database on Apache Cassandra. Such database system should also run with up-to date version |
+| 5 | Event processing technology | OMAG servers can rely on technology connectors to Apache Kafka for event streaming. Where possible, supported up-to data Kafka distributions with highly-available configuration should be used |
+| 6 | Web Server and API Gateway middleware | There are varieties of technology options such as NGINX. It is critical that organization is running up to date secure distributions enabling TLS communication |
+
+
+#### Entry (and exit) points
+
+Commonly identified entry points:
+
+| ID | Name | Description | Trust Levels |
+| ------ | ------ | ------ | ------ |
+| 1 | HTTPS Web Access Port | UIs will be only acessible via TLS. All pages should be accessed via this entry point. Based on determined trust level (i.e. role associated) page details are visible or not | (1) Anonymous (2) Authenticated User (3) Authenticated Admin |
+| 1.1 | Login Page | Login page is visible for all users | (1) Anonymous |
+| 1.2 | Login Function | Login function is implemented with REST API call that identifies the user and generates user access token | (2) Authenticated User (3) Authenticated Admin |
+| 2 | HTTPS REST API Access Services Port | | (1) Anonymous (2) Authenticated Application User (3) Authenticated Admin |
+| 3 | SSL Kafka Broker Port | | |
+
+#### Assets 
+#### Trust levels
+#### DFD Diagram explaining server types and general data flows
+
+Servers with similar function are grouped together in [Types of OMAG Server](/concepts/omag-server/#types-of-omag-server){target=_blank}. There are common data flow patterns that can be recognized per server type. The complexity of data flowing between Egeria applications depends on the use case and the landscape configured.
+
+
+
+
+*Steps that are more specific to given use-case*
 
 ### Step 2: Determine and rank threads
 ### Step 3: Determine Countermeasures and mitigations

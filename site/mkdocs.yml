@@ -723,6 +723,7 @@ nav:
       - Karma Point Plateau: concepts/karma-point-plateau.md
       - Like: concepts/like.md
       - Lineage: concepts/lineage.md
+      - Memento Classification: concepts/memento.md
       - Metadata Access Point: concepts/metadata-access-point.md
       - Metadata Access Server: concepts/metadata-access-server.md
       - Metadata Access Store: concepts/metadata-access-store.md

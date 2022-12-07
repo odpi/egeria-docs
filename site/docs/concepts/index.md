@@ -220,7 +220,7 @@
 ## M
 
 - [Master Data Manager](/concepts/software-capability/#master-data-manager)
-- [Memento Classification](open-metadata-types/0010-Base-Model)
+- [Memento Classification](/concepts/memento)
 - [Metadata Access Point](/concepts/metadata-access-point)
 - [Metadata Access Server](/concepts/metadata-access-server)
 - [Metadata Access Store](/concepts/metadata-access-store)

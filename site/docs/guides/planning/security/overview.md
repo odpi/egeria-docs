@@ -61,7 +61,7 @@ Commonly identified entry points:
 
 | ID | Name | Description | Trust Levels |
 | ------ | ------ | ------ | ------ |
-| 1 | HTTPS Web Access Port | UIs will be only acessible via TLS. All pages should be accessed via this entry point. Based on determined trust level (i.e. role associated) page details are visible or not | (1) Anonymous (2) Authenticated User (3) Authenticated Admin |
+| 1 | HTTPS Web Access Port | UIs should be only acessible via TLS. All pages should be accessed via this entry point. Based on determined trust level (i.e. role associated) page details are visible or not | (1) Anonymous (2) Authenticated User (3) Authenticated Admin |
 | 1.1 | Login Page | Login page is visible for all users | (1) Anonymous |
 | 1.2 | Login Function | Login function is implemented with REST API call that identifies the user and generates user access token | (2) Authenticated User (3) Authenticated Admin |
 | 2 | HTTPS REST API Access Services Port | | (1) Anonymous (2) Authenticated Application User (3) Authenticated Admin |

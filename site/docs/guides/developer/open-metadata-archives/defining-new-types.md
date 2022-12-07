@@ -3,7 +3,7 @@
 
 # Defining new types
 
-Egeria supports a [wide variety of open metadata types](/types) that cover a broad range of metadata.  These types can be extended through the normal contribution process of the Egeria project.   It is also possible to create your own type definitions that can be exchanged across the [open metadata repository cohort](/concepts/cohort-member) and may also be maintained through Egeria's APIs using [extended properties](/concepts/extended-properties).
+Egeria supports a [wide variety of open metadata types](/types) that cover a broad range of metadata.  These types can be extended through the normal contribution process of the Egeria project.   It is also possible to create your own type definitions that can be exchanged across the [open metadata repository cohort](/concepts/cohort-member) and may also be maintained through Egeria's APIs using [extended properties](/parameters/overview/#extended-properties).
 
 Type definitions need to be governed because they must be consistent across a cohort - during the whole time that one or more instances of the type are stored in the repositories.
 

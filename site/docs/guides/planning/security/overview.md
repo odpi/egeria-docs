@@ -52,7 +52,7 @@ Common external dependencies for Egeria ecosystem:
 | 3 | Network access segmentation and Firewalls | Network design is important. Egeria applications should be properly deployed in private network segments behind firewalls. Depending on the use-case only specific services and endpoints should be exposed to user access networks (i.e. Web Server or API Gateway) |   
 | 4 | Backend storage technology | OMAG servers can be configured with technology connectors that access database systems. Example is JanusGraph database on Apache Cassandra. Such database system should also run with up-to date version |
 | 5 | Event processing technology | OMAG servers can rely on technology connectors to Apache Kafka for event streaming. Where possible, supported up-to data Kafka distributions with highly-available configuration should be used |
-| 6 | Web Server and API Gateway middleware | There are varieties of technology options such as NGINX. It is critical that organization is running up to date secure distributions enabling TLS communication |
+| 6 | Web Server and API Gateway | There are various technology options here (i.e. NGINX). Organization should rely on secure distributions runnign up to date sofware packages supporting TLS communication |
 
 
 #### Entry (and exit) points

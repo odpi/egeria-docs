@@ -68,7 +68,7 @@ nav:
                       - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
               - Runtime:
                   - Repository:
-                      - Pluggable Repositories:
+                      - Native Repositories:
                           - XTDB:
                               - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
                               - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
@@ -578,6 +578,7 @@ nav:
                   - Display Integrator: services/omis/display-integrator/overview.md
                   - Files Integrator: services/omis/files-integrator/overview.md
                   - Infrastructure Integrator: services/omis/infrastructure-integrator/overview.md
+                  - Lineage Integrator: services/omis/lineage-integrator/overview.md
                   - Organization Integrator: services/omis/organization-integrator/overview.md
                   - Security Integrator: services/omis/security-integrator/overview.md
                   - Stewardship Integrator: services/omis/stewardship-integrator/overview.md
@@ -688,7 +689,6 @@ nav:
       - Engine Host: concepts/engine-host.md
       - Event Bus: concepts/event-bus.md
       - Event Mapper Connector: concepts/event-mapper-connector.md
-      - Extended Properties: concepts/extended-properties.md
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
@@ -749,6 +749,7 @@ nav:
       - Open Metadata Topic Connector: concepts/open-metadata-topic-connector.md
       - Organization: concepts/organization.md
       - Out Topic: concepts/out-topic.md
+      - Parameters: parameters/overview.md
       - Peer Network: concepts/peer-network.md
       - Personal Message: concepts/personal-message.md
       - Personal Notes: concepts/personal-notes.md

@@ -1,9 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# 0155 Crowd Sourcing
-
-## CrowdSourcing
+# 0155 Crowd-sourcing
 
 Crowd-sourcing captures suggestions from consumers of assets and definitions.
 

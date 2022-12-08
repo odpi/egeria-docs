@@ -4,7 +4,9 @@
 # 0110 Actors
 
 *Actors* are the people, teams or machines that drive activity in the organization's landscape.  
- 
+
+![UML](0110-Actors.svg "Collecting information about user identities and the people and systems behind them")
+
 ## ActorProfile
  
 An `ActorProfile` describes an entity to store and link information about an actor in open metadata.  It inherits from [`Referenceable`](/types/0/0010-Base-Model) so it has a unique name.
@@ -56,7 +58,6 @@ Most metadata repositories are run in a secure mode requiring incoming requests 
 - `roleGUID`: the unique identifier of the specific role that the `UserIdentity` is used for.
 - `description`: a human-readable description of the use of the `UserIdentity` by the actor.
 
-![UML](0110-Actors.svg "Collecting information about user identities and the people and systems behind them")
 
 
 !!! info "Further information"

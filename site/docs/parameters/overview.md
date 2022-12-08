@@ -57,7 +57,7 @@ Egeria's APIs and event payloads use consistent names for many of its parameters
 
 --8<-- "docs/parameters/extended-properties-example.md"
 
-### vendorProperties
+## vendorProperties
 
 --8<-- "docs/parameters/vendor-properties.md"
 

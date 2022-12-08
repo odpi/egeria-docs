@@ -3,6 +3,9 @@
 
 --8<-- "snippets/content-status/in-development.md"
 
+???+ warn "Development work in progress"
+    See issue [3562](https://github.com/odpi/egeria/issues/3562) for the latest development status.
+
 # Asset Manager Open Metadata Access Service (OMAS)
 
 *Data Catalogs* and *Configuration Management Databases (CMDBs)* are examples of asset managers.  They maintain a catalog of [resources](/concepts/resource) for their users as [assets](/concepts/asset) along with catalog search and governance functions to support the maintenance and use of these resources.  Such technologies might integrate with the open metadata ecosystem to receive additional information about their resources, or to distribute the information they have to other tools.
@@ -15,7 +18,7 @@ The Asset Manager OMAS provides APIs and outbound events to support the exchange
 
 Asset Manager OMAS provides search and query APIs for these types of metadata elements along with the APIs to maintain their values.
 
-* Data Assets and schema
+* Data assets and schema
 * Connections, connector types and endpoints
 * IT Infrastructure (hosts, platforms, servers, storage, capabilities)
 * Processes and Lineage
@@ -35,8 +38,13 @@ Asset managers often have their own integration mechanisms for both the collecti
 
 ![Integration Choices](integration-choices.svg)
 
+## API Features
 
-## External Identifiers
+### Unique name (qualifiedName)
+
+--8<-- "docs/parameters/qualified-name.md"
+
+### External Identifiers
 
 A major challenge when exchanging metadata with third party asset managers is that there is often a mismatch between the structure of the metadata in a third party asset manager and the structure of the [open metadata types](/types) used by the Asset Manager OMAS.
 
@@ -100,21 +108,21 @@ Within `externalIdentifierProperties`:
 
 * *mappingProperties* are used to provide additional values used to guide the mapping process between the open metadata elements and the elements in the third party asset manager.
 
-## Supplementary Properties
+### Supplementary Properties
 
-It is common for external asset managers to include extensive descriptive properties for assets, endpoints and schemas that include both a technical name and description as well as a business name and description.
-The Asset Manager OMAS supports this distinction and stores the technical name and
-description in an [*Asset*](/types/0/0010-Base-Model) metadata instance and the business name and description in a [*GlossaryTerm*](/types/3/0330-Terms) metadata instance that is linked to the asset using a [*SupplementaryProperties*](/types/3/0395-Supplementary-Properties) relationship.
-The properties that are stored in the glossary term are referred to as *supplementary properties*.
+It is common for external asset managers to include extensive descriptive properties for assets, endpoints, and software capabilities that include both a technical name and description, as well as a common or business name and description.  The technical name is often extracted from the technology when it is initially catalogued and the common or business name is the name that its users know and the value they are likely to search for.
+
+The Asset Manager OMAS supports this distinction and stores the technical name and description in the base metadata instance ([*Asset*](/types/0/0010-Base-Model), [*SchemaElement*](/types/5/0501-Schema-Elements), [*Endpoint*](/types/0/0026-Endpoints) and [*SoftwareCapability*](0042-Software-Capabilities)  and the common/business name and description in a [*GlossaryTerm*](/types/3/0330-Terms) metadata instance that is linked to the asset using a [*SupplementaryProperties*](/types/3/0395-Supplementary-Properties) relationship. The properties that are stored in the glossary term are referred to as *supplementary properties*.
+
+This approach means that Asset Manager OMAS works seamlessly with other APIs that are cataloguing directly with the technology (such as [Data Manager OMAS](/services/omas/data-manager/overview) and [Data Engine OMAS](/services/omas/data-engine/overview)) and consequently only maintain the base metadata elements.
 
 You can see this distinction in the structure of the property beans.  For example, look at the [AssetProperties](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetmanager/properties/AssetProperties.html) definition.  It inherits from [SupplementaryProperties](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetmanager/properties/SupplementaryProperties.html).  The properties defined in *AssetProperties* are stored in the Asset entity and  *SupplementaryProperties* are stored in the GlossaryTerm entity.
 
 ![Inheritance of AssetProperties](asset-properties-inheritance.png)
 
+### Enumerations
 
-## Enumerations
-
-## DataItemSortOrder
+#### DataItemSortOrder
 
 *DataItemSortOrder* provides the valid values for the *sortOrder* property of SchemaAttribute.  It indicates whether the rows/instances of the data stored in this schema appear in any particular order or not.
 
@@ -125,7 +133,7 @@ You can see this distinction in the structure of the property beans.  For exampl
 | DESCENDING  | 2     | "Descending"   | The attribute instances are organized so that the largest/highest value is first and the rest of the instances follow in descending order. |
 | UNSORTED    | 3     | "Unsorted"     | "The instances of the schema attribute may appear in any order. |                                                                            
 
-## PermittedSynchronization
+#### PermittedSynchronization
 
 *PermittedSynchronization* defines the direction of flow of metadata.
 

@@ -14,29 +14,39 @@ The first phase in securing your solution is to understand the threats that need
 
 ### Step 1: Decompose the Application
 
-Egeria ecosystem applications provide efficient way to implement integrated metadata management solutions. These solutions are implemented by deploying multiple Egeira based server applications called OMAG Servers. 
+Egeria ecosystem applications are the building blocks for creating automated and integrated open metadata management solution.
 
 To decompose Egeria applications, it is very important to undestand the [OMAG Server Platform](/concepts/omag-server-platform){target=_blank}. This is a java based server application that is designed to run one or more logical application instances called OMAG Servers. Different application components can be configured and combined to provide runtime services that define the function of a single OMAG Server instance. 
 
-| Functional level | Description |
-| ---------- | ---------- |    
-| Platform      | Runtime process. Provide inbound entry points, controls transoprt and enables admin services |
-| Server | Application instances. Provides function by managing lifecycle for a logical group of services, maintains connections to access local or external subsystems |
-| Service | Service units. Provide operations to validate and process server requests, process and distribute events or access storage |
+??? education "Functional levels"
+    | Level | Description |
+    | ---------- | ---------- |    
+    | Platform      | Runtime process. Provide inbound entry points, controls transoprt and enables admin services |
+    | Server | Application instances. Provides function by managing lifecycle for a logical group of services, hosts connectors and maintains connections to access various technologies |
+    | Service | Service units. Provide operations to validate and process server requests, process and distribute events or access storage |
 
-Different server capabilites can be enabled by combining services and creating new server instances.
-In practice organization will deploy different server types to implement solution for a specific use-case. 
+Different server capabilites can be enabled by combining services in new server instances.
+In practice, an organization will deploy different server types to implement solution for a specific use-case. 
+
+Users, tools or other technology platforms access the Egeria ecosystem by interacting with OMAG Server applications.
 
 #### Application users
 
-Application users can be defined per use-case. Based on the nature or purpose of accessing Egeria applications we can group users into following:
+Users can access Egeria applications for different purposes and by different means. Some common user types:
 
-1. UI access users - Users that logon and access the application using one of the User Interfaces available. In most cases these users have asociated corporate role or profile that determines the ability to access specific views that allow contorlled access to data provided by Egeria application.
+| ID | Type | Description|
+| --- | --- | --- |
+| 1 | UI | Users that logon and access the application using one of the User Interfaces available. In most cases these users have asociated corporate role or profile that determines the ability to access specific views that allow contorlled access to data provided by Egeria application. |
+| 2 | External application | Users that are in most cases identified by non peronal accounts representing other external applications or systems accessing data. Usually those users interact with Open Matadata Access Services. |
+| 3 | Internal application | Users that are used to identify internal applications or components such as other OMAG servers interacting. |
 
-2. External application users - Group of users that are in most cases identified by non peronal accounts representing other external applications or systems accessing data. Usually those users interact with Open Matadata Access Services.
+The user access is always specific to the usage scenario of an organization. Egeria ecosystem is designed to keep track of user access and enable access control with high level of granularity.
 
-3. Internal system users - Group of users that are used to identify internal applications or components such as other OMAG servers interacting.
-
+??? education "Metadata security levels"
+    ![Metadata Security Layers](/features/metadata-security/layers-of-security-checks.svg)
+    
+    More details on [Metadata security](/features/metadata-security/overview){target=_blank}
+    
 
 
 #### External dependencies 
@@ -68,7 +78,11 @@ Commonly identified entry points:
 | 3 | SSL Kafka Broker Port | | |
 
 #### Assets 
+
+
 #### Trust levels
+
+
 #### DFD Diagram explaining server types and general data flows
 
 Servers with similar function are grouped together in [Types of OMAG Server](/concepts/omag-server/#types-of-omag-server){target=_blank}. There are common data flow patterns that can be recognized per server type. The complexity of data flowing between Egeria applications depends on the use case and the landscape configured.

@@ -117,7 +117,7 @@
 - [Event Bus](/concepts/event-bus)
 - [Event Broker](/concepts/basic-concepts/#event-broker)
 - [Event Management Services Subsystem (OMRS)](/services/omrs)
-- [Extended Properties](/concepts/extended-properties)
+- [Extended Properties](/parameters/overview/#extended-properties)
 - [External Identifiers](/features/external-identifiers/overview)
 - [External References](/features/external-references/overview)
 
@@ -220,7 +220,7 @@
 ## M
 
 - [Master Data Manager](/concepts/software-capability/#master-data-manager)
-- [Memento Classification](open-metadata-types/0010-Base-Model)
+- [Memento Classification](/concepts/memento)
 - [Metadata Access Point](/concepts/metadata-access-point)
 - [Metadata Access Server](/concepts/metadata-access-server)
 - [Metadata Access Store](/concepts/metadata-access-store)
@@ -280,6 +280,7 @@
 
 ## P
 
+- [Parameters](/parameters/overview)
 - [Peer Network](/concepts/peer-network)
 - [Person Role](/concepts/person-role)
 - [Personal Message](/concepts/personal-message)

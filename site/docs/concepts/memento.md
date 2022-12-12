@@ -10,7 +10,8 @@ This element has only been retained to support lineage graph queries.   It will 
 * The interface is dedicated to lineage - such as the [Asset Lineage OMAS](/services/omas/asset-lineage/overview).
 * The interface supports the *forLineage* parameter.  If it is set to `true`, the *Memento* classification is ignored and the element is returned.
 
-
+!!! info "Open Metadata Types"
+    The definition for the *Memento* classification is found in the [0010 Base Model](/types/0/0010-Base-Model)
 
 
 --8<-- "snippets/abbr.md"

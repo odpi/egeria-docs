@@ -61,6 +61,22 @@ For open lineage server following can be configured:
             "user": "admin",
             "password": "secret"
         },
+        "assetLineageTopicConnectionOverride": {
+            "class": "Connection",
+            "configurationProperties": {
+            "consumer": {
+                "bootstrap.servers": "server:port",
+                "key.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
+                "value.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
+                "group.id": "custom-consumer-group-id"
+            },
+            "producer": {
+                "bootstrap.servers": "server:port",
+                "key.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
+                "value.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
+                "group.id": "custom-producer-group-id"
+            }
+        },
         "backgroundJobs": [
             {
                 "jobName": "LineageGraphJob",
@@ -82,13 +98,14 @@ For open lineage server following can be configured:
 | Property | Description | Is mandatory |
 |---|---|---|
 `lineageGraphConnection` | OCF configuration object that defines the Graph store connector type used. See [open-lineage-janus-connector](/connectors/governance-daemon/open-lineage-janus-connector) for more details. | Yes |
-`accessServiceConfig.serverName` | the name of the metadata server where paired Asset Lineage OMAS is running. | Yes
+`accessServiceConfig.serverName` | the name of the metadata server where paired Asset Lineage OMAS is running. | Yes |
 `accessServiceConfig.serverPlatformUrlRoot` | The URL of the OMAG server platform running the metadata server where paired Asset Lineage OMAS is running. Also see [start-up information](#start-up-information) section. | Yes |
 `accessServiceConfig.user` | The username to access the server running Asset Lineage OMAS. | Yes |
 `accessServiceConfig.password` | The user password to access the server running Asset Lineage OMAS. Can be left out for non-secured access. | No |
+`assetLineageTopicConnectionOverride` | Configuraton oject that provides the Asset Lineage OMAS kafka topic properties. If provided, it will override the default configuraiton  | No |
 `backgroundJobs[n].jobName` | Key used to match the job name pre-defined in the open lineage server. Supported values `LineageGraphJob` and `AssetLineageUpdateJob` | No |
 `backgroundJobs[n].jobInterval` | Interval (**seconds**) to execute the repetitive task defined by the named job above | No |
-`backgroundJobs[n].jobEnabled` | Controls if the job will be running (enabled) or not (disabled). Omitting the item in the `backgroundJobs` list had the same effect as setting the job to disable. | No
+`backgroundJobs[n].jobEnabled` | Controls if the job will be running (enabled) or not (disabled). Omitting the item in the `backgroundJobs` list had the same effect as setting the job to disable. | No |
 `backgroundJobs[n].jobDefaultValue` | Setting initial value for the task, only used in case of `AssetLineageUpdateJob`. When configured and not present in the store this value becomes the starting point in time to poll for updates. After successful update initial value is no longer used and last known value form the store. The value should be always specified in standard internet data-time format `YYYY-MM-DDThh:mm:ss`. See [ISO-8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.8) for more info and examples. | No |
  
 

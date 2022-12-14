@@ -2,12 +2,8 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
   
 # Open Metadata Archives
-  
-Open metadata archives provide pre-canned content (open metadata types and instances) to load into an open metadata repository.  There are two main types of open metadata archive:
 
-- *Content packs* - metadata types and instances that are reusable in many organizations.  The type definitions for the [Open Metadata Types](/types) are managed in a content pack.  Similarly, [bespoke types](/guides/developer/open-metadata-archives/defining-new-types) are managed in content packs.  Content packs are also used for distributing standard glossaries or other types of definitions from expert groups and organizations.  The elements in the content pack belong to the archive's [metadata collection](/features/metadata-provenance/#metadata-collections) irrespective of their originating metadata repository.
-  
-- *Metadata exports* - metadata exported from a specific open metadata repository that can act as a snapshot or backup of specific types and instances.  The elements in the metadata export remain part of the metadata collection of the originating metadata repository. 
+--8<-- "docs/concepts/open-metadata-archive-intro.md"
 
 By the rules of [metadata provenance](/features/metadata-provenance/overview), the elements in an open metadata archive are read-only when loaded into an open metadata repository unless the repository has the same metadata collection id as the element. 
 
@@ -117,11 +113,11 @@ added to the repository.
 Egeria supports the following open metadata archives.  Associated with each archive
 are utilities that help you build additional archives of your own content.
 
-- [Open Metadata Types :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-metadata-types){ target=gh } - contains Egeria's [Open Metadata Type Definitions](/types).  This archive is always loaded by each type of [cohort Member](/concepts/cohort-member) capable OMAG Server at start-up.  This is to reduce the chance that new types developed by a third party have names that conflict with the open metadata types. There is also a [utility :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-metadata-types-utility){ target=gh } to create the [archive file :material-github:](https://github.com/odpi/egeria/blob/master/content-packs/OpenMetadataTypes.json){ target=gh } for these open metadata types.
+- [Open Metadata Types :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types){ target=gh } - contains Egeria's [Open Metadata Type Definitions](/types).  This archive is always loaded by each type of [cohort Member](/concepts/cohort-member) capable OMAG Server at start-up.  This is to reduce the chance that new types developed by a third party have names that conflict with the open metadata types. There is also a [utility :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types-utility){ target=gh } to create the [archive file :material-github:](https://github.com/odpi/egeria/blob/main/content-packs/OpenMetadataTypes.json){ target=gh } for these open metadata types.
 
-- [Open Connector Archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } - provides utilities for building open metadata archives containing information about one or more connectors that follow the [Open Connector Framework (OCF)](/frameworks/ocf/overview).  In addition, there are utilities for building an open metadata archive containing the connector type definitions for Egeria's data store connectors.
+- [Open Connector Archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } - provides utilities for building open metadata archives containing information about one or more connectors that follow the [Open Connector Framework (OCF)](/frameworks/ocf/overview).  In addition, there are utilities for building an open metadata archive containing the connector type definitions for Egeria's data store connectors.
 
-- [Design Model Archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/design-model-archives){ target=gh } - provides utilities to manage common/standard model content from third parties.  It includes
+- [Design Model Archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/design-model-archives){ target=gh } - provides utilities to manage common/standard model content from third parties.  It includes
 an example archive for the [Cloud Information Model (CIM)](https://cloudinformationmodel.org).
 
 

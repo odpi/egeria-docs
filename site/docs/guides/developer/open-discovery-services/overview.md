@@ -214,7 +214,7 @@ The discovery analysis report store is accessed from the [discovery annotation s
 
 ## Example implementations
 
-The definition of the connector interfaces for discovery services is defined in the [open-discovery-services :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/frameworks/open-discovery-framework/src/main/java/org/odpi/openmetadata/frameworks/discovery){ target=gh } module.
+The definition of the connector interfaces for discovery services is defined in the [open-discovery-services :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/frameworks/open-discovery-framework/src/main/java/org/odpi/openmetadata/frameworks/discovery){ target=gh } module.
 
 There are implementations of discovery services in the [discovery-service-connectors](/connectors/#open-discovery-services).
 

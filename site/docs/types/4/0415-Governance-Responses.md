@@ -22,10 +22,10 @@ There are three main types of policy:
 
 ## Related Information
 
-* Governance policies are types of **GovernanceDefinitions** which are located in model [0401](0401-Governance-Definitions.md).
+* Governance policies are types of *GovernanceDefinitions* which are located in model [0401](0401-Governance-Definitions.md).
   The governance drivers are defined in model [0405](0405-Governance-Drivers.md).
 
-* The [Governance Program OMAS](../../../open-metadata-implementation/access-services/governance-program)
+* The [Governance Program OMAS](/services/omas/governance-program/overview)
   provides support for defining governance policies through its **GovernancePolicyMakingInterface**. 
 
 --8<-- "snippets/abbr.md"

@@ -4,12 +4,9 @@
 
 # First failure data capture (FFDC)
 
-Egeria will typically be embedded in complex deployment environments.
-Because of this, the Egeria community tries to practice First Failure Data Capture (FFDC).
+Egeria will typically be embedded in complex deployment environments. Because of this, the Egeria community tries to practice First Failure Data Capture (FFDC).
 
-First Failure Data Capture (FFDC) is an approach to error handling that aims to guide
-the support team to the cause of an error based on the output of a single, or small number of,
-messages, rather than relying on tracing through the logic flow.
+First Failure Data Capture (FFDC) is an approach to error handling that aims to guide the support team to the cause of an error based on the output of a single, or small number of, messages, rather than relying on tracing through the logic flow.
 
 This is not always possible, particularly for bugs and unexpected
 runtime conditions, but it is a worthy goal because it is rarely practical
@@ -18,15 +15,12 @@ to turn on debug tracing in a production system.
 FFDC typically requires as much information as possible to be gathered
 at the point where the error is first detected.  This information is added to as the
 call unwinds.  This way it captures:
+
  - What went wrong precisely
  - What was the server doing when it went wrong
  - What is the consequence of this failure to the caller, or others
 
-FFDC requires careful design by the developer because they need to anticipate
-the likely errors and design the error handling accordingly.
-Many modules have more error handling code than "happy path code".
-In addition, there is wide spread use of two important components
-throughout Egeria.
+FFDC requires careful design by the developer because they need to anticipate the likely errors and design the error handling accordingly. Many modules have more error handling code than "happy path code". In addition, there is wide-spread use of two important components throughout Egeria.
 
 - The [FFDC Services](/services/ffdc-services) -
   provides base services for implementing FFDC in an Egeria module.
@@ -44,46 +38,30 @@ throughout Egeria.
 
 The result is the consistent availability of detailed diagnostics when things go wrong.
 
-In addition, the [Open Metadata Repository Services (OMRS)](/services/omrs)
-provides an extension to the ALF's audit log destination that supports multiple
-[audit log store connectors](/concepts/audit-log-connectors).
-This means that an OMAG Server can be configured to route 
-audit log messages to multiple destinations.
+In addition, the [Open Metadata Repository Services (OMRS)](/services/omrs) provides an extension to the ALF's audit log destination that supports multiple [audit log store connectors](/concepts/audit-log-connectors). This means that an OMAG Server can be configured to route audit log messages to multiple destinations.
 
 ![Using different log destination](/frameworks/alf/audit-log-framework-overview.svg)
 
-Details of the supported audit log store connectors and
-how to set them up are described in
-[Configuring the Audit Log](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
+Details of the supported audit log store connectors and how to set them up are described in [Configuring the Audit Log](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
 
 ## FFDC principles practised by the Egeria community
 
-- Each type of message has a unique identifier and
-  the parameters embedded in it are sufficient to determine the
-  call parameters and the code path to the exact point where the error
-  is detected.
+- Each type of message has a unique identifier and the parameters embedded in it are sufficient to determine the call parameters and the code path to the exact point where the error is detected.
 
 - All parameters are validated both client side and server side.
 
 - APIs use different types of exceptions to separate:
+
   - Invalid parameters from the caller
   - User security errors that need administrator action
   - Temporary problems in the server
   - Bugs and logic errors (ie reaching a point in the path that should be impossible).
   
-  Typically, the modules use checked exceptions for the first three types of errors and
-  runtime exceptions for the last.
+  Typically, the modules use checked exceptions for the first three types of errors and runtime exceptions for the last.
   
-- Where there is no direct external caller, errors are logging the Audit Log
-  rather than throwing an exception in a background thread.
+- Where there is no direct external caller, errors are logging the Audit Log rather than throwing an exception in a background thread.
   
-- Exception objects containing stack traces never leave the OMAG Server Platform.
-  The full exception is added to the Audit Log so the stack trace can be analysed by the platform team.
-  Important diagnostic information - such as the exception type, message, system action and user action
-  is captured in the REST response.
-  If the calling program is an Egeria client, it recreates the exception (minus the stack trace of course)
-  and throws it to its caller.
-  That way, all information about the exception is preserved without compromising the security of the server platform.
+- Exception objects containing stack traces never leave the OMAG Server Platform. The full exception is added to the Audit Log so the stack trace can be analysed by the platform team. Important diagnostic information - such as the exception type, message, system action and user action is captured in the REST response. If the calling program is an Egeria client, it recreates the exception (minus the stack trace of course) and throws it to its caller. That way, all information about the exception is preserved without compromising the security of the server platform.
 
 
 ## Exceptions

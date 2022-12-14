@@ -5,6 +5,8 @@
 
 [Events](/concepts/basic-concepts/#event) capture the details of a specific situation or activity.  They are sent between services, often using an intermediary, such as an [Event Broker](/concepts/basic-concepts/#event-broker).  Event schemas provide the means to share the structure of the information flowing in the events.  They are typically attached to [*Topics*](/types/2/0223-Events-and-Logs).
 
+![UML](0535-Event-Schemas.svg)
+
 ## EventType
 
 An event schema begins with an *EventType* entity at its root.  It is linked to the asset using the [*AssetSchemaType*](/types/5/0503-Asset-Schema) relationship.
@@ -230,10 +232,7 @@ In the example below, *EventTypeList* is linked to the asset (*KafkaTopic* in th
 ![Event Sets](event-set.svg)
 > An example of an event set showing the event types used in the Open Metadata Access Services (OMAS) Out Topics.
 
-## UML Summary
 
-
-![UML](0535-Event-Schemas.svg)
 
 
 --8<-- "snippets/abbr.md"

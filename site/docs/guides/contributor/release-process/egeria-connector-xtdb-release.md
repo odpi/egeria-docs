@@ -17,7 +17,7 @@
     Connector release are done shortly after a corresponding Egeria core release. Any other changes to the connector are simply consolidated for the tandem release alongside Egeria core -- we do not do interim releases of the connector.
 
 ??? success "2. Track remaining issues and PRs"
-    - Aim to branch when most issues / PRs are complete to minimize back-porting from master, but not at the expense of impacting ongoing master development
+    - Aim to branch when most issues / PRs are complete to minimize back-porting from main, but not at the expense of impacting ongoing main development
 
 ??? success "3. Create branch"
     - Checkout main `git checkout main`

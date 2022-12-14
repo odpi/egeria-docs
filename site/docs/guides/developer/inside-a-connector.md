@@ -29,13 +29,13 @@ Each connector implementation has a factory object called a [*connector provider
 
 ### Lifecycle of the connector
 
-Each connector has its own unique implementation that is structured around a simple lifecycle that is defined by the OCF. The OCF provides the interface for a connector called [`Connector` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/Connector.java){ target=gh } that has three methods: `initialize`, `start` and `disconnect`.
+Each connector has its own unique implementation that is structured around a simple lifecycle that is defined by the OCF. The OCF provides the interface for a connector called [`Connector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/Connector.java){ target=gh } that has three methods: `initialize`, `start` and `disconnect`.
 
 This connector interface supports the basic lifecycle of a connector. There are three phases:
 
 1. *Initialization* - During this phase, the connector is passed the context in which it is to operate. It should store this information.
 
-    This phase is initiated by a call to the connector's `initialize()` method, which is called after the connector's constructor and provides the connector with a unique instance identifier (for logging) and its configuration stored in a [connection](/concepts/connection). After `initialize()` returns, there may be other calls to pass context to the connector. For example, if the connector implements the [`AuditLoggingComponent` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/audit-log-framework/src/main/java/org/odpi/openmetadata/frameworks/auditlog/AuditLoggingComponent.java){ target=gh }, an [audit log](/frameworks/alf/overview) is passed to the connector.
+    This phase is initiated by a call to the connector's `initialize()` method, which is called after the connector's constructor and provides the connector with a unique instance identifier (for logging) and its configuration stored in a [connection](/concepts/connection). After `initialize()` returns, there may be other calls to pass context to the connector. For example, if the connector implements the [`AuditLoggingComponent` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/audit-log-framework/src/main/java/org/odpi/openmetadata/frameworks/auditlog/AuditLoggingComponent.java){ target=gh }, an [audit log](/frameworks/alf/overview) is passed to the connector.
 
 2. *Running* - The connector is completely initialized with its context, and it can start processing.
 
@@ -47,7 +47,7 @@ This connector interface supports the basic lifecycle of a connector. There are 
 
 Depending on the type of connector you are writing, there may be additional initialization calls occurring between the `initialize()` and the `start()` method. The connector may also support additional methods for its normal operation that can be called between the `start()` and `disconnect()` calls.
 
-The OCF also provides the base class for a connector called [`ConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorBase.java){ target=gh }. The `ConnectorBase` base class manages the lifecycle state of the connector. For example, the default implementation of `initialize()` in the `ConnectorBase` class stores the supplied unique instance identifier and connection values in protected variables called `connectorInstanceId` and `connectionProperties` respectively.
+The OCF also provides the base class for a connector called [`ConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorBase.java){ target=gh }. The `ConnectorBase` base class manages the lifecycle state of the connector. For example, the default implementation of `initialize()` in the `ConnectorBase` class stores the supplied unique instance identifier and connection values in protected variables called `connectorInstanceId` and `connectionProperties` respectively.
 
 !!! tip "Call the base class's methods in any overrides"
     If you override any of the  `initialize()`, `start()` or `disconnect()` methods, be sure to call `super.xxx()` at the start of your implementation to call the appropriate super class method so that the state is properly maintained.

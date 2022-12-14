@@ -14,22 +14,22 @@ Egeria's duplicate management ensures duplicate instances are linked and classif
 
 Figure 1 shows a simple case where each duplicate instance originates from a different tool.  Although each instance has a different unique identifier (GUID), the rest of the metadata is consistent.  This makes it easy to spot when both are returned in a search query.  However, a query to count, say, the number of glossary terms would give misleading results.
 
-![Figure 1](simple-duplicate.svg)
+![Figure 1](/features/duplicate-management/simple-duplicate.svg)
 > **Figure 1:** Two copies of the same glossary term originating from different repositories
 
 When related information is required (for example, which assets are linked to the glossary term `customer`) the request needs to be issued for each duplicate instance to retrieve the complete picture.  Figure 2 shows that the users of one tool have linked their copy of the glossary term to assets 1 and 2 whereas the users of the other tool have linked their copy of the glossary term to asset 3.
 
-![Figure 2](simple-duplicate-relationships.svg)
+![Figure 2](/features/duplicate-management/simple-duplicate-relationships.svg)
 > **Figure 2:** Different sets of relationships associated with each duplicate
 
 Some duplicates are not so easy to identify.  Figure 3 shows an example of duplicate assets where the values in the assets are different, but the fact that they describe the same resource can be deduced by the fact that the related endpoints point to the same location.
 
-![Figure 3](subtle-duplicate.svg)
+![Figure 3](/features/duplicate-management/subtle-duplicate.svg)
 >**Figure 3:** Duplicate assets identified through their endpoints
 
 In some circumstances the tools are correctly cataloguing the existence of two resources however the resources themselves are duplicates of one another.  Figure 4 shows two copies of the same image.  The tools record the name of each copy but have no knowledge that their contents are the same.
 
-![Figure 4](duplicate-resource.png)
+![Figure 4](/features/duplicate-management/duplicate-resource.png)
 > **Figure 4:** Two copies of the same resource are catalogued as two assets.  There is no shared values in the metadata.
 
 

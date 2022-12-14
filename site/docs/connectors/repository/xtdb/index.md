@@ -3,7 +3,7 @@
 
 --8<-- "snippets/content-status/stable.md"
 
-# XTDB OMRS Repository Connector
+# XTDB Native OMRS Repository Connector
 
 ??? success "Fully conformant with all Egeria profiles"
     Last tested on [release 3.9 of Egeria, release 3.9 of connector using release 1.21.0 of XTDB](performance.md).
@@ -48,7 +48,7 @@ XTDB supports temporal graph queries to provide native support for storing histo
 
 ## How it works
 
-The XTDB OMRS Repository Connector is a [repository connector](/concepts/repository-connector), hosted by the [plugin repository proxy](/concepts/plugin-repository-proxy), running on a [metadata access store](/concepts/metadata-access-store).
+The XTDB OMRS Repository Connector is a [native repository connector](/concepts/repository-connector) running on a [metadata access store](/concepts/metadata-access-store).
 
 ![Operation of the XTDB OMRS repository connector](xtdb-connector-overview.svg)
 
@@ -250,7 +250,7 @@ When the `/instance` is called against each pod to start the connector, each wil
 
 ![Run PTS](xtdb-ha-5.svg)
 
-Now when we start the Performance Test Suite, all traffic to the technology under test is routed via this `xtdb` load-balancing service: which will round-robin each request it receives to the underlying pods running the XTDB plugin repository connector.
+Now when we start the Performance Test Suite, all traffic to the technology under test is routed via this `xtdb` load-balancing service: which will round-robin each request it receives to the underlying pods running the XTDB native repository connector.
 
 Kafka has a similar service, which handles load-balancing across its own pods for all write operations.
 

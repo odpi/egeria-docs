@@ -17,7 +17,7 @@ Read through the following presentation to understand more about Egeria:
 ???+ education "Presentation ..."
      [Download](https://egeria-project.org/education/egeria-dojo/running-egeria/presentations/Dojo-Egeria-Intro-16th-January-2022.pptx)
      <div class="video-wrapper">
-         <iframe src="https://egeria-project.org/education/egeria-dojo/running-egeria/presentations/Dojo-Egeria-Intro-16th-January-2022.pptx"></iframe>
+         <iframe src="https://egeria-project.org/education/egeria-dojo/running-egeria/presentations/Dojo-Egeria-Intro-16th-January-2022.pdf"></iframe>
      </div>
 
 
@@ -64,11 +64,11 @@ As you work through this Dojo you may find problems with our documentation - per
 
 ### Slack 
 
-Another useful resource to help you as you work through these Dojo sessions - whether it is problems, questions, or about topics unrelated to the Dojo, you can [join :material-dock-window:](https://slack.lfai.foundation){ target=slack } our LF AI & Data Slack workspace. Once you've done so, look at the channels beginning **#egeria**-. 
+Another useful resource to help you as you work through these Dojo sessions - whether it is problems, questions, or about topics unrelated to the Dojo, you can [join :material-dock-window:](https://slack.lfaidata.foundation){ target=slack } our LF AI & Data Slack workspace. Once you've done so, look at the channels beginning **#egeria**-. 
 
-**#egeria-dojo** has been set-up to support this learning activity. 
+**#egeria-dojo** has been set up to support this learning activity. 
 
-If you're happy to use Slack, go there now and get connected to your tutors and fellow attendees to say hello & discuss any problems. 
+If you're happy to use Slack, go there now and get connected to your tutors and fellow attendees to say hello and discuss any problems. 
 
 ### Meetings & calendars
 

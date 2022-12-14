@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
 
-??? example "Example of the header from the [Cloud Information Model archive :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/design-model-archives){ target=gh }"
+??? example "Example of the header from the [Cloud Information Model archive :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/design-model-archives){ target=gh }"
     ```json
     {
       "class":"OpenMetadataArchive",

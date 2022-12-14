@@ -3,14 +3,13 @@
 
 # Metadata repositories
 
-A metadata repository is a store of metadata. A metadata repository that supports the open metadata repository standards
-defined by the [Open Metadata Repository Services (OMRS)](/services/omrs) is
-called an "open metadata repository".
+A metadata repository is a store of metadata. A metadata repository that stores the open metadata instances
+defined by the [Open Metadata Repository Services (OMRS)](/services/omrs) natively is
+called an *open metadata repository*.
 
 ## Home metadata repositories
 
-The metadata repository where a metadata entity or relationship is created
-is called its **home repository**.
+The metadata repository where a metadata entity, relationship or classification is created is called its *home repository*.
 
 !!! attention "Metadata can only be updated and deleted in its home repository"
 
@@ -20,11 +19,10 @@ members of the same [cohort](cohort.md).
 
 ## Reference copies
 
-These shared copies are called **reference copies**.
+These shared copies are called *reference copies*.
 
 !!! attention "Reference copies are read-only"
-    Update requests to a reference copy are automatically
-    redirected to the home repository by the OMRS, without the caller being aware.
+    Update requests to a reference copy are automatically redirected to the home repository by the OMRS, without the caller being aware.
 
 Every metadata repository in a cohort has a unique identifier called the
 [local metadata collection id](#metadata-collection-id).
@@ -40,7 +38,7 @@ between members of the cohort when they connect.
 
 ## Metadata collections
 
-A metadata collection refers to a set of metadata instances that are being maintained and accessed as a
+A metadata collection refers to a set of open metadata instances that are being maintained and accessed as a
 coherent set of information.  These instances are explicitly typed using
 [open metadata type definitions (TypeDefs)](/types).
 
@@ -57,10 +55,10 @@ the same [open metadata repository cohorts](cohort.md)
 as the server where the
 [enterprise repository services](../#enterprise-repository-services) are enabled.
 
-### Metadata collection ID
+### Metadata collection id
 
 Every metadata repository has a unique identifier called
-the **local-metadata-collection-id**.
+the *local-metadata-collection-id*.
 This identifier is assigned automatically during the configuration
 of the local repository
 but can be overridden through administrative commands.

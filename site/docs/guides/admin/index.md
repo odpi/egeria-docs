@@ -62,8 +62,8 @@ Once the configuration document is in place, the OMAG Server can be activated an
 
 The admin-services modules has three [Postman :material-github:](/education/tutorials/postman-tutorial/overview) collections to illustrate many of the configuration and operation calls:
 
-- [Egeria-admin-services-platform-configuration.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-platform-configuration.postman_collection.json){ target=gh } - setting up and configuring the OMAG Server Platform.
-- [Egeria-admin-services-server-configuration.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-server-configuration.postman_collection.json){ target=gh } - setting up and configuring the variety of OMAG Servers.
-- [Egeria-admin-services-operational.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/master/open-metadata-implementation/admin-services/Egeria-admin-services-operational.postman_collection.json){ target=gh } - operating the OMAG Servers.
+- [Egeria-admin-services-platform-configuration.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/main/open-metadata-implementation/admin-services/Egeria-admin-services-platform-configuration.postman_collection.json){ target=gh } - setting up and configuring the OMAG Server Platform.
+- [Egeria-admin-services-server-configuration.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/main/open-metadata-implementation/admin-services/Egeria-admin-services-server-configuration.postman_collection.json){ target=gh } - setting up and configuring the variety of OMAG Servers.
+- [Egeria-admin-services-operational.postman_environment.json :material-github:](https://raw.githubusercontent.com/odpi/egeria/main/open-metadata-implementation/admin-services/Egeria-admin-services-operational.postman_collection.json){ target=gh } - operating the OMAG Servers.
 
 --8<-- "snippets/abbr.md"

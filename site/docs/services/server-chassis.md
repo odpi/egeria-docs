@@ -12,7 +12,7 @@ hide:
 
 The *Server Chassis* provides the base server framework, such as the web server and the REST API endpoint support for the [Open Metadata and Governance (OMAG) Server Platform](/concepts/omag-server-platform).   Calls to the server chassis are then routed to the appropriate [OMAG subsystem](/concepts/omag-subsystem).
 
-Today, Egeria has one server chassis implementation called [*server-chassis-spring*](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/server-chassis/server-chassis-spring) that uses [Spring Boot](https://spring.io/projects/spring-boot).  Its `main()` method is located in a Java class called `OMAGServerPlatform`.
+Today, Egeria has one server chassis implementation called [*server-chassis-spring*](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/server-chassis/server-chassis-spring) that uses [Spring Boot](https://spring.io/projects/spring-boot).  Its `main()` method is located in a Java class called `OMAGServerPlatform`.
 
 ## Maven build profiles
 
@@ -69,7 +69,7 @@ For example, this is the snippet of XML in the pom.xml file that adds the [Asset
 
 ## Swagger
 
-Swagger API documentation is generated with the chassis and is documented in [Swagger Generation](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/server-chassis/server-chassis-spring/SwaggerGeneration.md).
+Swagger API documentation is generated with the chassis and is documented in [Swagger Generation](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/server-chassis/server-chassis-spring/SwaggerGeneration.md).
 
 ## Spring Boot Actuator
 

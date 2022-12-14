@@ -17,7 +17,7 @@ Releases are published to
 - Will only release an update between releases in exceptional circumstances
 - Preserves backwards compatibility as much as possible
 - Try and maintain a regular heartbeat: even if completion of some features continues in a subsequent release
-- `master` / `main` kept open for new code features
+- `main` / `main` kept open for new code features
 - When the core Egeria is released, we have found it useful to create releases of other Egeria repositories (connector and user interface repositories) using the same version numbers as core Egeria. 
 - Egeria charts are produced for each release of core Egeria; these charts include compatible user interface and connector content.    
 

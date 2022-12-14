@@ -30,7 +30,12 @@ It may be enhanced in the future to also emit granular events to track the HMS m
 {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/event-mapper-details?connectorProvider={{fullyQualifiedJavaClassName}}&eventSource={{resourceName}}
 ```
 
-    The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).
+The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).
+
+ [HMS connection configuration](HMS%20Connector%20config.drawio.svg) parameters:
+
+
+
 
 ## Design
 
@@ -39,6 +44,7 @@ The high level architecture of the connector is:
 ![Caching Repository proxy components](HMS%20Connector.drawio.png)
 
 It shows how the event mapper polling loop:
+
 - Gets the Hive metastore information from the Hive metastore.
 - Adds the appropriate reference entities and relationships to the repository connector
 - Finds the entities and relationships per asset (Database)
@@ -107,10 +113,12 @@ these are specified by name in the Egeria configuration.
 
 
 You may also find these links in the Egeria documentation useful:
+
 * [Repository Connectors](https://egeria-project.org/concepts/repository-connector/)
 * [Integration Connector](http://egeria-project.org/concepts/integration-connector/)
 
 During 2022 we have also had a number of Webinars relating to connector choices and design:
+
 * [Webinar Program](https://egeria-project.org/education/webinar-program/overview/)
 
 

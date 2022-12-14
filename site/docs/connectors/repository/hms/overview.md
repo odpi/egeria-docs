@@ -7,13 +7,14 @@
 # Hive Metastore Repository Connector
 
 This repository has been created to manage artifacts and issues relating to integration with Hive Metastore (HMS).
-This connector is based on the same polling pattern that the [File sample OMRS connector uses](https://github.com/odpi/egeria-connector-repository-file-sample)
+This connector is based on the same polling pattern that the [File sample OMRS connector uses](https://github.com/odpi/egeria-connector-repository-file-sample).
+
 
 ##  Configuration
 
-### Hive Metastore Repository Proxy Connector configuration
+### Repository Proxy Connector embedded configuration
 
---8<-- "/connectors/repository/configuring-a-repository-proxy-embedded-repository.md"
+Configure a [Repository proxy with an embedded native repository](/connectors/repository/repository-proxy-embedded-repository.md)
 
 ### Configure the event mapper connector
 
@@ -33,8 +34,6 @@ It may be enhanced in the future to also emit granular events to track the HMS m
 The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).
 
  [HMS connection configuration](HMS%20Connector%20config.drawio.svg) parameters:
-
-
 
 
 ## Design

@@ -61,21 +61,100 @@ For open lineage server following can be configured:
             "user": "admin",
             "password": "secret"
         },
-        "assetLineageTopicConnectionOverride": {
-            "class": "Connection",
-            "configurationProperties": {
-            "consumer": {
-                "bootstrap.servers": "server:port",
-                "key.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
-                "value.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
-                "group.id": "custom-consumer-group-id"
+        "inTopicConnection": {
+            "class": "VirtualConnection",
+            "type": {
+                "typeId": "82f9c664-e59d-484c-a8f3-17088c23a2f3",
+                "typeName": "VirtualConnection",
+                "typeVersion": 1,
+                "typeDescription": "A connector for a virtual resource that needs to retrieve data from multiple places."
             },
-            "producer": {
-                "bootstrap.servers": "server:port",
-                "key.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
-                "value.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
-                "group.id": "custom-producer-group-id"
-            }
+            "qualifiedName": "OutTopicConnector.Asset Lineage OMAS",
+            "displayName": "OutTopicConnector.Asset Lineage OMAS",
+            "description": "Client-side topic connection.",
+            "connectorType": {
+                "class": "ConnectorType",
+                "headerVersion": 0,
+                "type": {
+                    "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+                    "typeName": "ConnectorType",
+                    "typeVersion": 1,
+                    "typeDescription": "A set of properties describing a type of connector."
+                },
+                "qualifiedName": "Asset Lineage Out Topic Client Connector",
+                "displayName": "Asset Lineage Out Topic Client Connector",
+                "description": "Connector supports the receipt of events on the Asset Lineage OMAS Out Topic.",
+                "connectorProviderClassName": "org.odpi.openmetadata.accessservices.assetlineage.outtopic.connector.AssetLineageOutTopicClientProvider",
+                "connectorFrameworkName": "Open Connector Framework (OCF)",
+                "connectorInterfaceLanguage": "Java",
+                "connectorInterfaces": [
+                    "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
+                    "org.odpi.openmetadata.frameworks.connectors.VirtualConnectorExtension",
+                    "org.odpi.openmetadata.frameworks.connectors.VirtualConnectorExtension",
+                    "org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic.OpenMetadataTopicListener",
+                    "org.odpi.openmetadata.accessservices.assetlineage.event.AssetLineageEventInterface"
+                ]
+            },
+            "embeddedConnections": [
+                {
+                    "class": "EmbeddedConnection",
+                    "headerVersion": 0,
+                    "position": 0,
+                    "displayName": "Topic Event Bus",
+                    "embeddedConnection": {
+                        "class": "Connection",
+                        "headerVersion": 0,
+                        "connectorType": {
+                            "class": "ConnectorType",
+                            "headerVersion": 0,
+                            "type": {
+                                "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+                                "typeName": "ConnectorType",
+                                "typeVersion": 1,
+                                "typeDescription": "A set of properties describing a type of connector."
+                            },
+                            "qualifiedName": "Egeria:OpenMetadataTopicConnector:Kafka",
+                            "displayName": "Apache Kafka Open Metadata Topic Connector",
+                            "description": "Apache Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
+                            "supportedAssetTypeName": "KafkaTopic",
+                            "expectedDataFormat": "PLAINTEXT",
+                            "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
+                            "connectorInterfaces": [
+                                "org.odpi.openmetadata.frameworks.connectors.Connector",
+                                "org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic.OpenMetadataTopic",
+                                "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent"
+                            ],
+                            "recognizedConfigurationProperties": [
+                                "producer",
+                                "consumer",
+                                "local.server.id",
+                                "sleepTime"
+                            ]
+                        },
+                        "endpoint": {
+                            "class": "Endpoint",
+                            "headerVersion": 0,
+                            "address": "OMRSTopic.server.omas.omas.assetlineage.outTopic"
+                        },
+                        "configurationProperties": {
+                            "producer": {
+                                "bootstrap.servers": "server:port",
+                                "key.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
+                                "value.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
+                                "group.id": "custom-producer-id",
+                                "kafka.omrs.topic.id": "OMRSTopic"
+                            },
+                            "consumer": {
+                                "bootstrap.servers": "server:port",
+                                "key.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
+                                "value.deserializer": "org.apache.kafka.common.serialization.StringDeserializer",
+                                "group.id": "custom-consumer-id",
+                                "kafka.omrs.topic.id": "OMRSTopic"
+                            }
+                        }
+                    }
+                }
+            ]
         },
         "backgroundJobs": [
             {
@@ -95,17 +174,17 @@ For open lineage server following can be configured:
 
 #### Configuration reference
 
-| Property | Description | Is mandatory |
-|---|---|---|
-`lineageGraphConnection` | OCF configuration object that defines the Graph store connector type used. See [open-lineage-janus-connector](/connectors/governance-daemon/open-lineage-janus-connector) for more details. | Yes |
-`accessServiceConfig.serverName` | the name of the metadata server where paired Asset Lineage OMAS is running. | Yes |
-`accessServiceConfig.serverPlatformUrlRoot` | The URL of the OMAG server platform running the metadata server where paired Asset Lineage OMAS is running. Also see [start-up information](#start-up-information) section. | Yes |
-`accessServiceConfig.user` | The username to access the server running Asset Lineage OMAS. | Yes |
-`accessServiceConfig.password` | The user password to access the server running Asset Lineage OMAS. Can be left out for non-secured access. | No |
-`assetLineageTopicConnectionOverride` | Configuraton oject that provides the Asset Lineage OMAS kafka topic properties. If provided, it will override the default configuraiton  | No |
-`backgroundJobs[n].jobName` | Key used to match the job name pre-defined in the open lineage server. Supported values `LineageGraphJob` and `AssetLineageUpdateJob` | No |
-`backgroundJobs[n].jobInterval` | Interval (**seconds**) to execute the repetitive task defined by the named job above | No |
-`backgroundJobs[n].jobEnabled` | Controls if the job will be running (enabled) or not (disabled). Omitting the item in the `backgroundJobs` list had the same effect as setting the job to disable. | No |
+| Property | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Is mandatory |
+|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
+`lineageGraphConnection` | OCF configuration object that defines the Graph store connector type used. See [open-lineage-janus-connector](/connectors/governance-daemon/open-lineage-janus-connector) for more details.                                                                                                                                                                                                                                                                                                            | Yes |
+`accessServiceConfig.serverName` | the name of the metadata server where paired Asset Lineage OMAS is running.                                                                                                                                                                                                                                                                                                                                                                                                                            | Yes |
+`accessServiceConfig.serverPlatformUrlRoot` | The URL of the OMAG server platform running the metadata server where paired Asset Lineage OMAS is running. Also see [start-up information](#start-up-information) section.                                                                                                                                                                                                                                                                                                                            | Yes |
+`accessServiceConfig.user` | The username to access the server running Asset Lineage OMAS.                                                                                                                                                                                                                                                                                                                                                                                                                                          | Yes |
+`accessServiceConfig.password` | The user password to access the server running Asset Lineage OMAS. Can be left out for non-secured access.                                                                                                                                                                                                                                                                                                                                                                                             | No |
+`inTopicConnection` | [Connection object](/concepts/connection) that provides the Asset Lineage OMAS topic connection definition . If provided, it will override the default configuration.                                                                                                                                                                                                                                                                                                                                  | No |
+`backgroundJobs[n].jobName` | Key used to match the job name pre-defined in the open lineage server. Supported values `LineageGraphJob` and `AssetLineageUpdateJob`                                                                                                                                                                                                                                                                                                                                                                  | No |
+`backgroundJobs[n].jobInterval` | Interval (**seconds**) to execute the repetitive task defined by the named job above                                                                                                                                                                                                                                                                                                                                                                                                                   | No |
+`backgroundJobs[n].jobEnabled` | Controls if the job will be running (enabled) or not (disabled). Omitting the item in the `backgroundJobs` list had the same effect as setting the job to disable.                                                                                                                                                                                                                                                                                                                                     | No |
 `backgroundJobs[n].jobDefaultValue` | Setting initial value for the task, only used in case of `AssetLineageUpdateJob`. When configured and not present in the store this value becomes the starting point in time to poll for updates. After successful update initial value is no longer used and last known value form the store. The value should be always specified in standard internet data-time format `YYYY-MM-DDThh:mm:ss`. See [ISO-8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.8) for more info and examples. | No |
  
 

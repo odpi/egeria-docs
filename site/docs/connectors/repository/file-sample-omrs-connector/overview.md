@@ -123,19 +123,18 @@ you should decide which embedded connector you want to run, choose either:
 Amend the `serverName` to match your server (the 'server' in the postman collection).
 
 ### Restrictions and considerations
-1) The normal way that a cohort member would get information about the repository metadata
-   behind a repository proxy would be to:
-* issue gueries to the cohort.
-* get add, update and delete information via OMRS events
-  If these federated queries are being issued, then there is no need to event mapper to poll.
-2) polling as per this pattern, means that all content is cached into the embedded repository. This
+
+1. The normal way that a cohort member would get information about the repository metadata
+   behind a repository proxy would be to issue gueries to the cohort and get add, update and delete information via OMRS events.
+   If federated queries are being issued, then there is often no need to event mapper to poll.
+2. polling as per this pattern, means that all content is cached into the embedded repository. This
    may not be desirable if there is a large amount of metadata in the 3rd party technology.
-3) The batched events contain all the information associated with an asset. If there was a listener listening to the
+3. The batched events contain all the information associated with an asset. If there was a listener listening to the
    3rd party technology (the file system here) then the listener could pick up incremental changes and
    the cache would be kept up to date.
-4) The batched events could flood the cohort(s) if the interval is too short and there is a lot of metadata.
-5) An integration connector or standard repository proxy pattern could be preferable for many setups.
-6) If there is a requirement to write to the 3rd party technology, then the OMRS repository connector
+4. The batched events could flood the cohort(s) if the interval is too short and there is a lot of metadata. 
+5. An integration connector or standard repository proxy pattern could be preferable for many setups. 
+6. If there is a requirement to write to the 3rd party technology, then the OMRS repository connector
    would need to be re-implemented as it would need to include code to write to the 3rd party technology.
 
 

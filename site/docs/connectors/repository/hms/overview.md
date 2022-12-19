@@ -14,7 +14,7 @@ This connector is based on the same polling pattern that the [File sample OMRS c
 
 ### Repository Proxy Connector embedded configuration
 
-Configure a [Repository proxy with an embedded native repository](/connectors/repository/repository-proxy-embedded-repository.md)
+Configure a [Repository proxy with an embedded native repository](/connectors/repository/repository-proxy-embedded-repository)
 
 ### Configure the event mapper connector
 
@@ -33,8 +33,42 @@ It may be enhanced in the future to also emit granular events to track the HMS m
 
 The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).
 
- [HMS connection configuration](HMS%20Connector%20config.drawio.svg) parameters:
+ [HMS connection configuration](hms%20config.drawio.svg)
+ 
+Event mapper Endpoint address should be defined with the url of the thrift endpoint. 
 
+like this 
+```
+"endpoint": {
+"class": "Endpoint",
+"address": "thrift://catalog.eu-de.dataengine.cloud.ibm.com:9083"
+},
+```
+
+`configurationProperties` parameters
+
+| Event mapper configuration parameter name | default      | Description                                                                                                       |
+|------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|
+| qualifiedNamePrefix                      | empty string | This is a prefix for the qualifiedName. This prefix is used on every entity that is created using this connector. |
+| refreshTimeInterval                      | null         | Poll interval in minutes. If null only poll once at connector start time.                                         |
+| CatalogName                              | hive         | This is the HMS catalog name.                                                                                     |
+| DatabaseName                             | default      | This is the HMS database name.                                                                                    |
+| sendPollEvents                           |              | Set this to true to send events to the cohort every poll.                                                         |
+| endpointAddress                          |              | url to access the data that this metadata describes                                                               |
+| sendSchemaTypesAsEntities                | false        | set this to true to use the old deprecated style of creating schematypes as entities.                             |
+| cacheIntoCachingRepository               | true         | Set this to false to not cache the metadata content                                                               |
+
+## Using with the IBM cloud Data Engine service.
+
+To use this connector with IBM cloud, the code needs to be recompiled to bring in the IBM HMS Client library and the following additional parameters need to be 
+specified in the `configurationProperties`.
+
+
+| Event mapper configuration parameter name | default | Description                                                                                           |
+|-------------------------------------------|---------|-------------------------------------------------------------------------------------------------------|
+| MetadataStoreUserId                       | null    | The Data Engine service [crn](https://cloud.ibm.com/docs/account?topic=account-crn).                  |
+| MetadataStorePassword                     | null    | The [API key](https://www.ibm.com/docs/en/app-connect/container?topic=servers-creating-cloud-api-key) |
+| useSSL                                    | false   | Set to true                                                                                     |
 
 ## Design
 

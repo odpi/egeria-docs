@@ -63,67 +63,30 @@ For open lineage server following can be configured:
         },
         "inTopicConnection": {
             "class": "VirtualConnection",
-            "type": {
-                "typeId": "82f9c664-e59d-484c-a8f3-17088c23a2f3",
-                "typeName": "VirtualConnection",
-                "typeVersion": 1,
-                "typeDescription": "A connector for a virtual resource that needs to retrieve data from multiple places."
-            },
             "qualifiedName": "OutTopicConnector.Asset Lineage OMAS",
             "displayName": "OutTopicConnector.Asset Lineage OMAS",
             "description": "Client-side topic connection.",
             "connectorType": {
                 "class": "ConnectorType",
-                "headerVersion": 0,
-                "type": {
-                    "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                    "typeName": "ConnectorType",
-                    "typeVersion": 1,
-                    "typeDescription": "A set of properties describing a type of connector."
-                },
                 "qualifiedName": "Asset Lineage Out Topic Client Connector",
                 "displayName": "Asset Lineage Out Topic Client Connector",
                 "description": "Connector supports the receipt of events on the Asset Lineage OMAS Out Topic.",
-                "connectorProviderClassName": "org.odpi.openmetadata.accessservices.assetlineage.outtopic.connector.AssetLineageOutTopicClientProvider",
-                "connectorFrameworkName": "Open Connector Framework (OCF)",
-                "connectorInterfaceLanguage": "Java",
-                "connectorInterfaces": [
-                    "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
-                    "org.odpi.openmetadata.frameworks.connectors.VirtualConnectorExtension",
-                    "org.odpi.openmetadata.frameworks.connectors.VirtualConnectorExtension",
-                    "org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic.OpenMetadataTopicListener",
-                    "org.odpi.openmetadata.accessservices.assetlineage.event.AssetLineageEventInterface"
-                ]
+                "connectorProviderClassName": "org.odpi.openmetadata.accessservices.assetlineage.outtopic.connector.AssetLineageOutTopicClientProvider"
             },
             "embeddedConnections": [
                 {
                     "class": "EmbeddedConnection",
-                    "headerVersion": 0,
-                    "position": 0,
                     "displayName": "Topic Event Bus",
                     "embeddedConnection": {
                         "class": "Connection",
-                        "headerVersion": 0,
                         "connectorType": {
                             "class": "ConnectorType",
-                            "headerVersion": 0,
-                            "type": {
-                                "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                                "typeName": "ConnectorType",
-                                "typeVersion": 1,
-                                "typeDescription": "A set of properties describing a type of connector."
-                            },
                             "qualifiedName": "Egeria:OpenMetadataTopicConnector:Kafka",
                             "displayName": "Apache Kafka Open Metadata Topic Connector",
                             "description": "Apache Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
                             "supportedAssetTypeName": "KafkaTopic",
                             "expectedDataFormat": "PLAINTEXT",
-                            "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                            "connectorInterfaces": [
-                                "org.odpi.openmetadata.frameworks.connectors.Connector",
-                                "org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic.OpenMetadataTopic",
-                                "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent"
-                            ],
+                            "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider"
                             "recognizedConfigurationProperties": [
                                 "producer",
                                 "consumer",

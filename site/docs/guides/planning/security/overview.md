@@ -73,9 +73,9 @@ Example entry and exit points for a common deployment configuration with User In
 
 | ID | Name | Description | Trust Levels |
 | ------ | ------ | ------ | ------ |
-| 1 | HTTPS Web Access Port | UIs should be only acessible via TLS. All pages should be accessed via this entry point. Based on determined trust level and configured permissions page details are visible or not | (1) (2) (3) |
-| 2 | HTTPS REST Service API Port | API endpoints should be only accessible via trusted TLS ebabled channel. Based on credetianls provided trust level is determined and access control logic applied | (4)(5)(6)(7)(8) |
-| 3 | Kafka Topic | Service access via topic addresses on trusted secure kafka broker via SSL. Application access control logic can be further applied based on the credetials | (9) |
+| 1 | HTTPS Web Access Port | UIs should be only acessible via TLS. All pages should be accessed via this entry point. Based on determined trust level and configured permissions page details are visible or not | (1) (2) |
+| 2 | HTTPS REST Service API Port | API endpoints should be only accessible via trusted TLS ebabled channel. Based on credetianls provided trust level is determined and access control logic applied | (3) (4) (5) |
+| 3 | Kafka Topic | Service access via topic addresses on trusted secure kafka broker via SSL. Application access control logic can be further applied based on the credetials | (4) (5) |
 
 
 #### Assets 

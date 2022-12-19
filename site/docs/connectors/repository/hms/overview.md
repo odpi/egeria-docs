@@ -14,7 +14,7 @@ This connector is based on the same polling pattern that the [File sample OMRS c
 
 ### Repository Proxy Connector embedded configuration
 
-Configure a [Repository proxy with an embedded native repository](/connectors/repository/repository-proxy-embedded-repository)
+Configure a [Repository proxy with an embedded native repository](/connectors/repository/repository-proxy-embedded-repository/)
 
 ### Configure the event mapper connector
 

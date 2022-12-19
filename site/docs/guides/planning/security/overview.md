@@ -37,10 +37,11 @@ Users can access Egeria applications for different purposes and by different mea
 | ID | Name | Description|
 | --- | --- | --- |
 | 1 | Egeria User | Personal user accounts. In many scenarios logon and access the application using one of the User Interfaces available. In most cases these users have asociated corporate role or profile that determines the ability to access specific views or APIs that allow contorlled access to data provided by Egeria application. |
-| 2 | External application | Users that are in most cases identified by non peronal accounts representing other external applications or systems accessing data. Usually those users interact with Open Matadata Access Services. |
-| 3 | Internal application | Users that are used to identify internal applications or components such as other OMAG servers interacting. |
+| 2 | Egeria Administrator | Personal user accounts. Can logon and access egeria ecosystem and applications via Administrative APIs or User Interfaces to configure or operate instances of Egeria OMAG Server applications. |
+| 3 | External Application | Users that are in most cases identified by non peronal accounts representing other external applications or systems accessing data. Usually those users interact with Open Matadata Access Services. |
+| 4 | Internal System | Users that are used to identify internal applications or components such as other OMAG servers interacting. |
 
-The user access is always specific to the usage scenario of an organization. In reallity funcional roles or profiles are assigned to different users responsible for specific activities in the organization.
+The user access is always specific to the usage scenario of an organization. In reallity funcional roles or profiles are assigned to users with different responsibilites in the organization implementing governance program.
 Egeria ecosystem is designed to keep track of user access and enable access control with high level of granularity.
 
 ??? education "Metadata security levels"
@@ -73,15 +74,7 @@ Example entry and exit points for a common deployment configuration with User In
 | ID | Name | Description | Trust Levels |
 | ------ | ------ | ------ | ------ |
 | 1 | HTTPS Web Access Port | UIs should be only acessible via TLS. All pages should be accessed via this entry point. Based on determined trust level and configured permissions page details are visible or not | (1) (2) (3) |
-| 1.1 | Login Page | Login page is visible for all users | (1) |
-| 1.2 | Login API function | Login function is implemented with REST API call that identifies the user and generates user access token | (2) (3) |
-| 1.3 | Asset Catalog Page | Asset details can be only visible for authenticated users | (2) |
-| 1.4 | Asset Catalog Web API function | Asset details retruned only to authenticated web users and users with access to Asset Catalog Access Service API | (2) |
-| 1.5 | Asset Lineage Page | Asset lineage information is only visible for authenticated users | (2) |
-| 1.6 | Asset Lineage Web API function | Asset lineage information is returned only to autheticated web users and users with access to Lineage Services API | (2) |
 | 2 | HTTPS REST Service API Port | API endpoints should be only accessible via trusted TLS ebabled channel. Based on credetianls provided trust level is determined and access control logic applied | (4)(5)(6)(7)(8) |
-| 2.1 | Admin Services API Port | This API endpoint provides ability for user/application to administer OMAG Platform and operate OMAG Servers | (6) |
-| 2.2 | Access Services API Port | This API endpoint provides ability for user/application to access metadata | (7) |
 | 3 | Kafka Topic | Service access via topic addresses on trusted secure kafka broker via SSL. Application access control logic can be further applied based on the credetials | (9) |
 
 
@@ -90,48 +83,47 @@ Example entry and exit points for a common deployment configuration with User In
 
 | ID | Name | Description | Trust Level |
 | --- | --- | --- | --- |
-| 1 | OMAG Platform | Assets related to Egeria Ecosystem | |
-| 1.1 | OMAG Server Configuration Document | OMAG Server configuration contains service definition, endpoints and credentials for connecting to external systems | (6) |
-| 1.1 | OMAG Server availability | OMAG Servers should be available and accessible over agreed period of time | (6) |
-| 1.1 | Database availability | | |
-| 1.1 | Eventbus availability | | |
-| 2 | Open Metadata Access Services | | |
-| 2.1 | Ability to execute federated search | | |
-| 2.2 | Ability retrieve asset information  | | |
-| 2.2 | Ability retrieve preserve and store lineage for assets | | |
-| 3 | Web Application | | |
-| 3.1 | Asset Catalog | | |
-| 3.2 | Asset Lineage | | |
-| 3.3 | Glossary Author | | |
-
+| 1 | **OMAG System** | Assets related to Egeria Ecosystem | |
+| 1.1 | OMAG Server Configuration  | OMAG Server configuration store contains service definition, connector configurations including endpoints and credentials for connecting to external systems. The default connector implmenetation manages the configuration document store as local json files. | (5) |
+| 1.2 | OMAG Server Registry |  OMAG Server registry contains information about servers registered in a cohort. The default connector implementtion manages the registy information as local json files. | (5) |
+| 1.3 | Ability to change OMAG Server configuration | Manage OMAG Server configuration | (3) |
+| 1.4 | Ability to control OMAG Server instances | OMAG Server instance enables OMRS, OMAS undelying services that facilitate access or enable active sharing of metadata instances | (3) |
+| 1.5 | Ability to access metatada database | Ability for to access configured database system and execute queries that manage metadata instances in the store. | (5) |
+| 1.6 | Ability to access eventbus system | Ability to access eventbus broker servers and send/receive OMRS and OMAS event messages | (5) |
+| 2 | **Web UI** | Assets important for the web application providing user inteface | |
+| 2.1 | Web Access Token | Access token that is generated as a result of logon process. The token can be used to access Egeria Web APIs, supporting UI functions and accessing UI components. | (2) |
+| 2.1 | Search Metadata Catalog | Ability to access asset catalog search and details pages | (2) |
+| 2.2 | Acccess Linaeage Information | Ability to access lineage graph page | (2) |
+| 3 | **Services** | Assets related to accessing functional OMAG services | |
+| 3.1 | Ability to access OMAS  | Ability to access specific OMAS API endpoints or event interfaces | (2) (4) (5) |
+| 3.2 | Ability to access OLS  | Ability for the web application to access OMAG server and its OMAS APIs. | (2) (4) (5) |
+| 3.3 | Ability to access OMRS  | Ability for the web application to access Lineage server and its APIs. | (5) |
 
 
 #### Trust levels
 
 | ID | Name | Description |
 | ------ | ------ | ------ |
-| 1 | Anonymous | User connected to the secure web port without providing credentials |
-| 2 | Egeria user with valid login credentials | User connected to the secure web port with correct credentials |
-| 3 | Egeria user with invalid login credentials | User connected to the secure web port providing invalid credentials |
-| 4 | Anonymous Service API caller | User or application connecting to API Service with no credentials |
-| 5 | Service API caller with invalid credentials | Application/system connecting to any API service endpoint with invalid credentials |
-| 6 | Admin Services API caller | Administration user or admin application connecting to administration API endpoint |
-| 7 | Access Services API caller | Application/system connecting to Access Service endpoint with valid credentials |
-| 8 | Repository Services API caller | Application/system connecting to Repository Service endpoint with valid credentials |
-| 9 | Trusted Kafka client with secure access to topic | User with valid access to topic address. Trust established by the Secure Kafka Broker |
+| 1 | Anonymous | User/application connected to the secure web or api port without providing credentials |
+| 2 | Egeria User | User connected to the secure web/api port sending valid credentials |
+| 3 | Egeria Administrator | User connected to the secure web/api port with valid administratove credentials |
+| 4 | External application process | External system/application connected using valid credentials |
+| 5 | Internal application process | Internal Egeria application component, process or remote invocation using valid credentials |
+
+#### Data Flow Diagram
+
+Servers with similar function are grouped together in [Types of OMAG Server](/concepts/omag-server/#types-of-omag-server){target=_blank}. Egeria solutions are created by combining different server types. 
+
+The diagram shows data flow patterns indentified in one common deployment scenario:
+
+![Egeria Ecosystem Data Flows](sample-dataflow.png)
 
 
-#### DFD Diagram explaining server types and general data flows
-
-Servers with similar function are grouped together in [Types of OMAG Server](/concepts/omag-server/#types-of-omag-server){target=_blank}. There are common data flow patterns that can be recognized per server type. The complexity of data flowing between Egeria applications depends on the use case and the landscape configured.
-
-
-*Below sections are work in progress*
+*Work in progress...*
 
 ### Step 2: Determine and rank threads
 ### Step 3: Determine Countermeasures and mitigations
 ### Complementing Code Review
-
 
 !!! education "Further information on Egeria's security features"
     * [Configuring TLS and certificates](/guides/admin/omag-server-platform-transport-level-security)

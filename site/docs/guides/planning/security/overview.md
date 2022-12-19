@@ -83,7 +83,7 @@ Example entry and exit points for a common deployment configuration with User In
 
 | ID | Name | Description | Trust Level |
 | --- | --- | --- | --- |
-| 1 | **OMAG System** | Assets related to Egeria Ecosystem | |
+| 1 | **System** | Assets related to Egeria Ecosystem | |
 | 1.1 | OMAG Server Configuration  | OMAG Server configuration store contains service definition, connector configurations including endpoints and credentials for connecting to external systems. The default connector implmenetation manages the configuration document store as local json files. | (5) |
 | 1.2 | OMAG Server Registry |  OMAG Server registry contains information about servers registered in a cohort. The default connector implementtion manages the registy information as local json files. | (5) |
 | 1.3 | Ability to change OMAG Server configuration | Manage OMAG Server configuration | (3) |

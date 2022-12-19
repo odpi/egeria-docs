@@ -80,7 +80,8 @@ nav:
                           - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
                           - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
                           - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
-                          - Hive Metastore OMRS Proxy Repository Connector: connectors/repository/hms/overview.md
+                          - Hive Metastore (HMS) OMRS Proxy Repository Connector: connectors/repository/hms/overview.md
+                          - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
                           - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
                   - Audit Log Destination:
                       - Console: connectors/runtime/console-audit-log-destination-connector.md

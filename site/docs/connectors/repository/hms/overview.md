@@ -7,7 +7,7 @@
 # Hive Metastore Repository Connector
 
 This repository has been created to manage artifacts and issues relating to integration with Hive Metastore (HMS).
-This connector is based on the same polling pattern that the [File sample OMRS connector uses](https://github.com/odpi/egeria-connector-repository-file-sample).
+This connector is based on the same polling pattern that the [File sample OMRS connector uses](/connectors/repository/file-sample-omrs-connector/overview/).
 
 
 ##  Configuration
@@ -33,7 +33,9 @@ It may be enhanced in the future to also emit granular events to track the HMS m
 
 The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).
 
- [HMS connection configuration](hms%20config.drawio.svg)
+#### HMS connector configuration overview
+![HMS connector configuration overview](./hms config.drawio.svg)
+HMS connector configuration overview 
  
 Event mapper Endpoint address should be defined with the url of the thrift endpoint. 
 

@@ -3,6 +3,13 @@
 
 #  A Repository proxy with an embedded native repository 
 
+!!! info "Connector details"
+- Connector Category:  [Repository and Event Mapper Connectors](/connectors/#repository-and-event-mapper-connectors)
+- Hosting Service: [Local OMRS Repository Connector](/services/omrs/component-descrtiptions/local-repository-connector.md))
+- Hosting Server: [repository proxy](/concepts/repository-proxy)
+- Source Module: [Repository proxy with an embedded native repository :material-github:](https://github.com/odpi/egeria-connector-omrs-caching){ target=gh }
+- Jar File Name: `egeria-connector-omrs-caching-1.0-SNAPSHOT.jar`
+
 This is a [repository proxy](/concepts/repository-proxy) that caches content into a native repository.
 It simplifies the development of a repository proxy repository because:
 
@@ -16,6 +23,12 @@ This connector maybe useful in the following cases:
 - for small deployments, it provides a cache so queries can be honoured. 
 
 In most cases an integration or standard repository proxy pattern is likely to be more appropriate. 
+
+__Important notice__
+
+The gradle JAR step will include some of the dependencies into the connector JAR, making is a semi-Fat Jar. This makes sure that additional dependencies are automatically deployed together with the connector.
+
+
 
 ## Configuration 
 Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating

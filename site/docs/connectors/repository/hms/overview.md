@@ -9,6 +9,16 @@
 This repository has been created to manage artifacts and issues relating to integration with Hive Metastore (HMS).
 This connector is based on the same polling pattern that the [File sample OMRS connector uses](/connectors/repository/file-sample-omrs-connector/overview/).
 
+!!! info "Connector details"
+- Connector Category:  [Repository and Event Mapper Connectors](/connectors/#repository-and-event-mapper-connectors)
+- Hosting Service: [Local OMRS Repository Connector](/services/omrs/component-descriptions/local-repository-connector)
+- Hosting Server: [repository proxy](/concepts/repository-proxy)
+- Source Module: [Hive Metastore Repository Connector :material-github:](https://github.com/odpi/egeria-connector-hivemetastore){ target=gh }
+- Jar File Name: `egeria-connector-hivemetastore-1.0-SNAPSHOT.jar`
+
+__Important notice__
+
+The gradle JAR step will include some of the dependencies into the connector JAR, making is a semi-Fat Jar. This makes sure that additional dependencies are automatically deployed together with the connector.
 
 ##  Configuration
 

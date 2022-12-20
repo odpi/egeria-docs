@@ -54,6 +54,7 @@ nav:
                   - Topic Connectors:
                       - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
                       - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
+                      - Strimzi Topics Monitor Connector: connectors/integration/strimzi-monitor-integration-connector.md
                   - API Connectors:
                       - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
                   - Infrastructure Connectors:
@@ -64,6 +65,7 @@ nav:
                       - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
                       - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
+                      - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
                   - Database:
                       - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
               - Runtime:

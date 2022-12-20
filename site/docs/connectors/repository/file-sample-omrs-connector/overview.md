@@ -3,8 +3,16 @@
 
 # Repository proxy (adapter) polling example using files
 
+!!! info "Connector details"
+- Connector Category:  [Repository and Event Mapper Connectors](/connectors/#repository-and-event-mapper-connectors)
+- Hosting Service: [Local OMRS Repository Connector](/services/omrs/component-descrtiptions/local-repository-connector.md))
+- Hosting Server: [repository proxy](/concepts/repository-proxy)
+- Source Module: [sample lineage integration connector :material-github:](https://https://github.com/odpi/egeria-connector-repository-file-sample){ target=gh }
+- Jar File Name: `egeria-connector-repository-file-sample-1.0-SNAPSHOT.jar`
+
+
 This is a [repository proxy](https://egeria-project.org/concepts/repository-proxy/?h=repository) implementation
-that provides an example of bringing in the metadata associated with files in a folder, into Egeria.
+that provides an example of bringing in the metadata associated with files in a folder into Egeria.
 
 It showcases a pattern, whereby the [OMRS Repository connector](https://egeria-project.org/concepts/repository-connector/?h=repository+connector)  
 has an embedded Repository connector that caches content. In the past, repository proxies implemented each of the find requests.
@@ -52,6 +60,10 @@ Relationship types
 - You should be familiar with how to [setup Egeria](https://egeria-project.org/education/egeria-dojo/running-egeria/setup-environment/).
 - You need to decide which embedded repository you will use and ensure that the appropriate jar files are picked up by the OMAG server platform.
 - follow the below instruction to configure and run.
+
+__Important notice__
+
+The gradle JAR step will include some of the dependencies into the connector JAR, making is a semi-Fat Jar. This makes sure that additional dependencies are automatically deployed together with the connector.
 
 ### Configuration
 

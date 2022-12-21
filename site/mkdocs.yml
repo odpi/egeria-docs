@@ -308,6 +308,7 @@ nav:
       - Core Egeria:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.14: release-notes/3-14.md
         - v3.13: release-notes/3-13.md
         - v3.12: release-notes/3-12.md
         - v3.11: release-notes/3-11.md

@@ -5,15 +5,17 @@
 
 The Egeria project's git repositories are located on [GitHub :material-dock-window:](https://github.com/odpi){ target=gh }.
 GitHub is a free, public git service for sharing code and related files.
-It has a web interface to make it easier for the Egeria community to monitor
+It has a web interface to make it easier for theBB Egeria community to monitor
 the activity in the project and process new content.
 
 Egeria has the following repositories:
 
 | Repository | Purpose |
 | --- | --- |
+| Repository | Purpose |
+| [`OpenDS4All` :material-github:](https://github.com/odpi/OpenDS4All){ target=gh } | OpenDS4All project, hosted by LF AI & Data |
 | [`data-governance` :material-github:](https://github.com/odpi/data-governance){ target=gh } | Egeria's Guidance on Governance as well as large media files such as presentations and movies |
-| [`egeria-api-mocks` :material-github:](https://github.com/odpi/egeria-api-mocks){ target=gh } |  |
+| [`egeria-api-mocks` :material-github:](https://github.com/odpi/egeria-api-mocks){ target=gh } | Support for mocking Egeria API for UI dev test |
 | [`egeria-charts` :material-github:](https://github.com/odpi/egeria-charts){ target=gh } | Helm chart repository |
 | [`egeria-connector-hadoop-ecosystem` :material-github:](https://github.com/odpi/egeria-connector-hadoop-ecosystem){ target=gh } | Hadoop ecosystem connectors for Egeria: repository proxy connector for Apache Atlas. |
 | [`egeria-connector-hivemetastore` :material-github:](https://github.com/odpi/egeria-connector-hivemetastore){ target=gh } | Egeria repository connector for Hive metastore. Initially targeted at spark metadata |
@@ -24,7 +26,7 @@ Egeria has the following repositories:
 | [`egeria-connector-jdbc` :material-github:](https://github.com/odpi/egeria-connector-jdbc){ target=gh } | JDBC connectors for Egeria (Integration and Resource) |
 | [`egeria-connector-omrs-caching` :material-github:](https://github.com/odpi/egeria-connector-omrs-caching){ target=gh } | Provides an OMRS repository proxy connector that has an embedded repository that can be used to cache entities and relationships. |
 | [`egeria-connector-repository-file-sample` :material-github:](https://github.com/odpi/egeria-connector-repository-file-sample){ target=gh } | Provides a repository proxy sample that uses polling. The target is a file folder |
-| [`egeria-connector-sas-viya` :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh } |  |
+| [`egeria-connector-sas-viya` :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh } | Egeria connector for SAS Information Catalog |
 | [`egeria-connector-xtdb` :material-github:](https://github.com/odpi/egeria-connector-xtdb){ target=gh } | Pluggable repository for Egeria, using XTDB (formerly "Crux") as the back-end to natively support historical metadata. |
 | [`egeria-database-connectors` :material-github:](https://github.com/odpi/egeria-database-connectors){ target=gh } | Connectors for exchanging metadata |
 | [`egeria-dev-projects` :material-github:](https://github.com/odpi/egeria-dev-projects){ target=gh } | Fun projects for developers to help them learn about the Egeria technology |
@@ -36,7 +38,7 @@ Egeria has the following repositories:
 | [`egeria-python` :material-github:](https://github.com/odpi/egeria-python){ target=gh } | Python library for Egeria |
 | [`egeria-react-ui` :material-github:](https://github.com/odpi/egeria-react-ui){ target=gh } | A multi-tenant, role based Egeria React UI for Open Metadata, that has eco-system and solutions capabilities. |
 | [`egeria-samples-api` :material-github:](https://github.com/odpi/egeria-samples-api){ target=gh } | A collection of samples illustrating the different APIs of Egeria. |
-| [`egeria-samples` :material-github:](https://github.com/odpi/egeria-samples){ target=gh } |  |
+| [`egeria-samples` :material-github:](https://github.com/odpi/egeria-samples){ target=gh } |  various samples that can be useful either for learning or as initial starting points for working with Egeria |
 | [`egeria-template-newrepo` :material-github:](https://github.com/odpi/egeria-template-newrepo){ target=gh } | Template for new Egeria repository |
 | [`egeria-ui-components` :material-github:](https://github.com/odpi/egeria-ui-components){ target=gh } | Encapsulated reactjs components with business logic inside. |
 | [`egeria-ui-core` :material-github:](https://github.com/odpi/egeria-ui-core){ target=gh } | Core library that includes generic reactjs components used across the user interface. |

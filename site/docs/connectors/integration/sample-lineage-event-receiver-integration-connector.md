@@ -122,9 +122,9 @@ Then there is an Input array of assets and an output array of assets. In the inp
 The Output also describes an event schema.
 
 ### Assumptions
-- No deletion of assets or processes. Lineage is always adding these
-- Where effectivity dates are specified - none is specified
-- Only doing asset design lineage, no column lineage or operational lineage.
+- No deletion of assets or processes. Lineage is always adding these.
+- Where effectivity dates are specified on APIs- none are supplied.
+- This is only doing asset design lineage, no column lineage or operational lineage.
 - All finds are done by qualifiedName - if more than one element is returned - we use the first.
 - Catalog the assets, schema and process if required. This can result in
     - deletion, creation and / or updates of schemaAttributes
@@ -141,7 +141,7 @@ The Output also describes an event schema.
   what the process is doing as to which lineage relationships should be created.
 - The Dataflow relationship qualified name is set to null. This is not appropriate if multiple
   supply chains create a lineage relationship between an asset and process. Dataflow relationships between the assets and process are [multi-link](https://egeria-project.org/concepts/uni-multi-link/?h=multi+link#multi-link-relationships).
-- Though it i possible to supply an array of schemas, currently only the first EventType is processed. See [https://github.com/odpi/egeria/issues/7134](https://github.com/odpi/egeria/issues/7134) has been raised to allow
+- Though it is possible to supply an array of schemas, currently only the first EventType is processed. See [https://github.com/odpi/egeria/issues/7134](https://github.com/odpi/egeria/issues/7134) has been raised to allow
   support of EventTypeLists. This sample will need to be enhanced to make use of these new APIs.
 
 

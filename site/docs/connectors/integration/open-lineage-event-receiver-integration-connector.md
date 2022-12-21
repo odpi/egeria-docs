@@ -59,7 +59,7 @@ The connection definition to use on the [administration commands that configure 
                             "embeddedConnections" : [
                             {
                                 "class": "EmbeddedConnection",
-                                "embeddedConnection : 
+                                "embeddedConnection" : 
                                 {
                                     "class": "Connection",
                                     "qualifiedName": "Kafka Open Metadata Topic Connector",

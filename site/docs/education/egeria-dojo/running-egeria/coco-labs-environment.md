@@ -45,7 +45,7 @@ If you experience problems, check memory consumption on your nodes. A minimum of
 a 3 node cluster, 2GB per node; or a desktop environment with 6GB dedicated is recommended.
 
 Please provide any feeback via a github issue at https://github.com/odpi/egeria or
-join us on slack via https://http://slack.lfai.foundation
+join us on slack via https://http://slack.lfaidata.foundation
 
 - The ODPi Egeria team
 ```

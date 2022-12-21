@@ -5,7 +5,7 @@
 
 The Egeria project's git repositories are located on [GitHub :material-dock-window:](https://github.com/odpi){ target=gh }.
 GitHub is a free, public git service for sharing code and related files.
-It has a web interface to make it easier for theBB Egeria community to monitor
+It has a web interface to make it easier for the Egeria community to monitor
 the activity in the project and process new content.
 
 Egeria has the following repositories:

@@ -28,7 +28,7 @@ All participants in the Egeria community are bound by the project's [Code of Con
 
 As a member you are able to attend our meetings, just to listen, or to play an active part in the discussion. The online meetings are recorded to allow community members to catch up if they are not able to attend the live meeting. When you attend the community meetings specifically, your name will be recorded in the meeting minutes along with any remarks or suggestions you make. The agenda and minutes of our community meetings are publicly available on the [Egeria wiki :material-dock-window:](https://github.com/odpi/egeria/wiki){ target=gh }.
 
-A member may make contributions to the Egeria content by submitting a GitHub pull request on the appropriate Git repository. This will be reviewed and processed by the [Egeria maintainers](#maintainers). The process for making a contribution is described in the [Egeria Dojo](/getting-started/dojo/introduction) education. Each contribution is signed by the contributor to confirm they agree to our [Developer Certificate of Origin (DCO)](/guides/developer/guidelines/#sign-commits-to-accept-dco).
+A member may make contributions to the Egeria content by submitting a GitHub pull request on the appropriate Git repository. This will be reviewed and processed by the [Egeria maintainers](#maintainers). The process for making a contribution is described in the [Egeria Dojo](/getting-started/dojo/introduction) education. Each contribution is signed-off by the contributor to confirm they agree to our [Developer Certificate of Origin (DCO)](/guides/contributor/guidelines/#sign-commits-to-accept-dco).
 
 Community members can progress to be Egeria [contributors](#contributors) and then Egeria [maintainers](#maintainers).
 

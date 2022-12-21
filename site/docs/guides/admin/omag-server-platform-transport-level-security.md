@@ -69,7 +69,7 @@ to be set:
 
 In addition an additional parameter is provided which causes ssl verification to be skipped:
 
-* `strict.ssl`                          true / false : If set to true skips checks on certificate
+* `strict.ssl`                          true / false : If set to false skips checks on certificate (default = true)
 
 For further details on these and other less common configuration options, refer to the Spring Docs
 
@@ -89,7 +89,7 @@ In addition, for any executable jars provided by Egeria - such as samples, an ad
 parameter will cause ssl verification to be skipped. This is only recommended for test
 and development
 
-* `strict.ssl`                            true / false : If set to true skips checks on certificate
+* `strict.ssl`                            true / false : If set to false skips checks on certificate (default = true)
 
 Note that in the case of Java Clients, these are system properties, and do
 not use spring conventions. 

@@ -28,6 +28,7 @@ The developer guide is organized as follows:
 
 - [Adding your own registered services](#adding-registered-services) - Extending Egeria by adding new [registered services](/concepts/omag-subsystem/#registered-services).
 
+- [Build considerations](#build-considerations) - Best practises for building extensions to Egeria.
 
 ## Working with the platform APIs
 
@@ -223,6 +224,42 @@ There are many choices of registered services within the Egeria project.  Howeve
 The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds, and they are [initialized as part of the platform's capabilities](/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES, OMIS or OMVS registered service that is dependent on the OMAS to get access to open metadata.
 
 The best guide for building registered services are the existing implementations found in [egeria.git](https://github.com/odpi/egeria/tree/main/open-metadata-implementation){ target=gh }.  You can see the way the code is organized and the services that they depend on.
+
+## Build considerations
+
+Egeria's best practise is to use [Gradle](https://gradle.org/) to build the Egeria extensions.
+
+Principles around constructing the Gradle build file:
+
+- build against mavenCentral and snapshots if required. 
+
+```
+ repositories {
+    mavenCentral()
+    maven { url("https://oss.sonatype.org/content/repositories/snapshots") }
+    // uncomment to pick up from local ~/.m2 - but can be unpredictable. recommend to use maven central and snapshots
+    //    mavenLocal()
+  }
+```
+
+It is possible to pick up content from local Maven by uncommenting in the above snippet. This may be required during development if the dependant change is not in a snapshot or release.
+For example your new Egeria connector requires changes to an OMAS that you are also developing, but have not yet been merged.
+
+- versions should be defined as variables
+- the Egeria version should up to date when the extension is originally contributed. This version and other associated technology versions can be
+updated over time if required.
+- We are looking to create 'thin' jar, with the minimal content, to avoid bringing in duplicate classes; remember many connectors could be running in the same platform bring in classes to the environment.
+   - dependencies on artifacts that will already be in the environment for example Egeria jar files that are brought in with the OMAG platform,
+  should not be brought in again as part of the extension build. Often the approach to take is to use 'compileOnly' on these dependencies.
+  For dependencies that are not already going to be in the runtime environment then using 'implementation' often makes sense. If you are using junits
+  in your projects you should follow these principles, but use the appropriate test orientated keywords.
+- If you need to have a dependency, but it has vulnerabilities, then may need to exclude libraries with vulnerabilities; for example if they being brought in, but your code is not using them.
+For an example on how this has been done see [the HMS connector](https://github.com/odpi/egeria-connector-hivemetastore/blob/main/build.gradle).
+- If you need to pick up a dependency, but there are multiple versions around at runtime, then  this build file uses `forceResolution` strategy to force
+a particular dependency version; for an example of this see [the HMS connector](https://github.com/odpi/egeria-connector-hivemetastore/blob/main/build.gradle).
+- you need to ensure that appropriate versions of jars are available at runtime so that classes can be found. 
+
+  
 
 ## Summary
 

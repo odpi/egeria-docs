@@ -27,6 +27,6 @@ This relationship is useful when the local organization is using digital service
 
 ## DigitalServiceManager
 
-*DigitalServiceManager* is a [PersonRole](/types/1/0112-People) that can be used as the digital service manager for a digital service.
+*DigitalServiceManager* is a [PersonRole](/types/1/0112-People) that can be used as the digital service manager for a digital service.  Since it is a role, one or more individuals can be appointed to the position.
 
 --8<-- "snippets/abbr.md"

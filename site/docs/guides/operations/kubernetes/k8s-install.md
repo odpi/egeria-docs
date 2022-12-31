@@ -57,7 +57,7 @@ If you still see issues, contact the [Rancher desktop community](https://github.
 
 ![Rancher Error Starting Kubernetes](rancher-starterror.png)
 
-![Kubernetes Setttings](rancherprefs.png)
+![Kubernetes Settings](rancherprefs.png)
 
 Also ensure the following symbolic links are set up for helm & kubectl. If you are only using Rancher it's recommended to enable all the links.
 
@@ -143,7 +143,7 @@ Ensure when installing you specify at least 6GB RAM.
 
 ## [Docker Desktop](https://www.docker.com/products/docker-desktop){ target=docker } (Windows, MacOS)
 
-!!!attention Licensing Changes for Docker Desktop
+!!! attention "Licensing Changes for Docker Desktop"
     Docker has recently updated their licensing conditions for Docker Desktop.
 
     As such, it is therefore no longer our preferred/tested environment for Dojos.

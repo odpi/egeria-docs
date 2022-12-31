@@ -4,7 +4,9 @@
 
 # 0735 Solution Ports and Wires
 
-Solution components provide well-defined interfaces.  These may be APIs or other types of request and information exchange mechanisms such as eventing.
+Solution components need well-defined interfaces.  These may be APIs or other types of request and information exchange mechanisms such as eventing.
+
+![UML](0735-Solution-Ports-and-Wires.svg)
 
 ## SolutionPort
 
@@ -16,9 +18,7 @@ The structure of the requests/data provided by the port can be expressed as a [s
 
 ## SolutionLinkingWire
 
-The *SolutionLinkingWire* shows the linkage between solution components via their ports.  The *informationSupplyChainSegmentGUIDs* property allows linkage to the [information supply chains](/types/7/0720-Information-Supply-Chains) that identify critical data flows for the organization.  Each identified information supply chain segment typically comes from a different information supply chain.
-
-![UML](0735-Solution-Ports-and-Wires.svg)
+The *SolutionLinkingWire* shows the linkage between solution components via their ports to other elements in the architecture.  The *informationSupplyChainSegmentGUIDs* property allows linkage to the [information supply chains](/types/7/0720-Information-Supply-Chains) that identify critical data flows for the organization.  Each identified information supply chain segment typically comes from a different information supply chain.
 
 ## SolutionPortDelegation
 

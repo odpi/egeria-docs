@@ -6,6 +6,8 @@
 The world of governance is divided into different governance domains that focus on a specific set of assets or activities.
 Egeria aims to unify the metadata and governance activity across these governance domains.
 
+![UML](0401-Governance-Definitions.svg)
+
 ## GovernanceDomainDescription
 
 The *GovernanceDomainDescription* entity provides the definition of a governance domain. You can choose to define your own or use the standard set that are defined by *GovernanceDomain*.  Related governance domains can be grouped into *GovernanceDomainSets*.
@@ -53,9 +55,6 @@ The *GovernedBy* relationship links the governance definitions to the elements t
 
 *GovernanceDefinitionScope* links the governance definitions to the elements ([Organizations](/types/5/), [Projects](/types/1/0115-Teams), [Teams](/types/1/0115-Teams), ...) that are scoping the impact or applicability of the governance definition.
 
-## UML Overview
-
-![UML](0401-Governance-Definitions.svg)
 
 !!! info "Related types"
     The role of leader of a governance domain is represented as a [*GovernanceOfficer*](/types/4/0445-Governance-Roles) entity.

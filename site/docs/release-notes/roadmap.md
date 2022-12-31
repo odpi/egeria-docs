@@ -99,13 +99,15 @@ Aim to simplify the process of deploying the OMAG Server Platform and its connec
 - The [Kubernetes Helm charts :material-dock-window:](https://github.com/odpi/egeria-charts){ target=gh } make use of the docker image to create a rich Egeria deployment used in the [open metadata labs](/education/open-metadata-labs/overview).
 - The [Kubernetes operators :material-dock-window:](https://github.com/odpi/egeria-k8s-operator){ target=gh } are in development. They will provide an easy way to control an Egeria deployment running on Kubernetes.
 
+Support for docker compose was removed in [release 3.5](3-5.md).
+
 ## Understanding the roadmap
 
 ### Current status
 
 Following is an overview of the current status of the functions in Egeria today:
 
-![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-3.8.svg)
+![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-3.13.svg)
 
 - Green means that there is function that is either [stable or in technical preview](/release-notes/content-status).
 - Orange means there is work in progress.
@@ -140,6 +142,11 @@ In 2020 support for a new type of OMAG Server called the [integration daemon](/c
 2021 had a focus on governing metadata. There is a new OMAG Server called the [engine host](/concepts/engine-host) that runs [governance engines](/concepts/governance-engine). These are supported by new [access services](/services/omas/governance-engine/overview) for governance.
 
 This new website was added to the project in 2021, and it has resulted in more interest in consuming Egeria.
+
+2022 continued the focus on metadata governance.  The following OMASs were refactored to call the generic handlers rather than direct calls to the repository handler.
+
+* [Data Engine OMAS]
+There was investment in both the function and performance of the 
 
 ### Future Plans
 

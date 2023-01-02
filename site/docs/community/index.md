@@ -31,6 +31,10 @@ Egeria is pleased to announce integration with the following technologies:
 * OpenLineage
 * OpenAPISpecification
 * Apache Avro
+* Apache Parquet
+* MariaDB
+* Trino
+* Apache Directory
 
 
 !!! info "Further Information"

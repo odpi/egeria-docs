@@ -54,6 +54,7 @@ nav:
                   - Topic Connectors:
                       - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
                       - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
+                      - Strimzi Topics Monitor Connector: connectors/integration/strimzi-monitor-integration-connector.md
                   - API Connectors:
                       - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
                   - Infrastructure Connectors:
@@ -64,11 +65,12 @@ nav:
                       - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
                       - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
+                      - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
                   - Database:
                       - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
               - Runtime:
                   - Repository:
-                      - Pluggable Repositories:
+                      - Native Repositories:
                           - XTDB:
                               - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
                               - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
@@ -80,6 +82,9 @@ nav:
                           - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
                           - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
                           - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+                          - Hive Metastore (HMS) OMRS Proxy Repository Connector: connectors/repository/hms/overview.md
+                          - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
+                          - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
                   - Audit Log Destination:
                       - Console: connectors/runtime/console-audit-log-destination-connector.md
                       - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
@@ -298,10 +303,12 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Monthly News:
+        - November 2022: release-notes/november-2022.md
         - October 2022: release-notes/october-2022.md
       - Core Egeria:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
+        - v3.14: release-notes/3-14.md
         - v3.13: release-notes/3-13.md
         - v3.12: release-notes/3-12.md
         - v3.11: release-notes/3-11.md
@@ -577,6 +584,7 @@ nav:
                   - Display Integrator: services/omis/display-integrator/overview.md
                   - Files Integrator: services/omis/files-integrator/overview.md
                   - Infrastructure Integrator: services/omis/infrastructure-integrator/overview.md
+                  - Lineage Integrator: services/omis/lineage-integrator/overview.md
                   - Organization Integrator: services/omis/organization-integrator/overview.md
                   - Security Integrator: services/omis/security-integrator/overview.md
                   - Stewardship Integrator: services/omis/stewardship-integrator/overview.md
@@ -687,7 +695,6 @@ nav:
       - Engine Host: concepts/engine-host.md
       - Event Bus: concepts/event-bus.md
       - Event Mapper Connector: concepts/event-mapper-connector.md
-      - Extended Properties: concepts/extended-properties.md
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
@@ -723,6 +730,7 @@ nav:
       - Karma Point Plateau: concepts/karma-point-plateau.md
       - Like: concepts/like.md
       - Lineage: concepts/lineage.md
+      - Memento Classification: concepts/memento.md
       - Metadata Access Point: concepts/metadata-access-point.md
       - Metadata Access Server: concepts/metadata-access-server.md
       - Metadata Access Store: concepts/metadata-access-store.md
@@ -747,6 +755,7 @@ nav:
       - Open Metadata Topic Connector: concepts/open-metadata-topic-connector.md
       - Organization: concepts/organization.md
       - Out Topic: concepts/out-topic.md
+      - Parameters: parameters/overview.md
       - Peer Network: concepts/peer-network.md
       - Personal Message: concepts/personal-message.md
       - Personal Notes: concepts/personal-notes.md

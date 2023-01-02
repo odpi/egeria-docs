@@ -8,7 +8,7 @@ hide:
 
 # Open Metadata Type Definitions (TypeDefs)
 
-TypeDefs define the characteristics of a particular type of an [open metadata instance/element](/concepts/open-metadata-instances)
+TypeDefs define the characteristics of a particular type of an [open metadata instance/element](/concepts/open-metadata-instances).
 There are three categories of TypeDefs (`TypeDefCategory`):
 
 - *EntityDef*: the definition of a type of [entity](/concepts/open-metadata-instances)

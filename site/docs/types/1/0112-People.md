@@ -3,8 +3,9 @@
 
 # 0112 People, their personal network and their roles
 
-This model describes the metadata elements that describe a person
-and their roles and contribution in the organization.
+This model describes the metadata elements that describe a person and their roles and contribution in the organization.
+
+![UML](0112-People.svg "Describing the profile for a person")
 
 ## Person
 
@@ -49,7 +50,6 @@ The PersonRole entity is extended in multiple places to show different types of 
 The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppointment* relationship to show that the person has been appointed.  It is common for [effectivity dates](/features/effectivity-dates) to be set on this relationship.
 
 
-![UML](0112-People.svg "Describing the profile for a person")
 
 
 ## Further information

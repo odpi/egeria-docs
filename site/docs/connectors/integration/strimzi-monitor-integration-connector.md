@@ -14,7 +14,7 @@
 
 This Egeria integration connector for [Strimzi](https://strimzi.io/) topics. It obtains the Kafka
 topic information by querying the custom resource definitions (CRDs) in Strimzi, then creates the appropriate Egeria metadata,
-adding, deleting and updating the Egeria metadata so that is always mirrors the trimzi content.
+adding, deleting and updating the Egeria metadata so that is always mirrors the Strimzi content.
 
 The Egeria metadata that is created is a [KafkaTopic](https://egeria-project.org/types/2/0223-Events-and-Logs/?h=kafkatopic).
 
@@ -76,7 +76,7 @@ This is its connection definition to use on the [administration commands that co
 You will need to have an omag platform with the connector jar, a metadata server called cocoMDS1 defined.
 The below process is how you configure the Strimzi integration connector manually.
 
-Import the [postman collection]([Postman collection](https://github.com/odpi/egeria-connector-integration-topic-strimzi/blob/main/postman/Strimzi%20integration%20connector%20configuration.postman_collection.json)) into [Postman](https://www.postman.com/)
+Import the [postman collection](https://github.com/odpi/egeria-connector-integration-topic-strimzi/blob/main/postman/Strimzi%20integration%20connector%20configuration.postman_collection.json) into [Postman](https://www.postman.com/)
 The required values should be supplied as postman environment variables for this script.
 
 Then run the scripts in order. Steps 1 through 3 to configure the connector.

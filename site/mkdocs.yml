@@ -605,25 +605,25 @@ nav:
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md
           - Platform Profiles:
-              - Platform Origin: guides/cts/profiles/platform-origin.md
+              - Platform Origin: guides/cts/platform-workbench/profiles/platform-origin.md
           - Repository Profiles:
-              - Metadata Sharing: guides/cts/repository-profiles/metadata-sharing.md
-              - Reference Copies: guides/cts/repository-profiles/reference-copies.md
+              - Metadata Sharing: guides/cts/repository-workbench/profiles/metadata-sharing.md
+              - Reference Copies: guides/cts/repository-workbench/reference-copies.md
               - Metadata Maintenance: guides/cts/repository-profiles/metadata-maintenance.md
-              - Effectivity Dating: guides/cts/repository-profiles/effectivity-dating.md
-              - Dynamic Types: guides/cts/repository-profiles/dynamic-types.md
-              - Graph Queries: guides/cts/repository-profiles/graph-queries.md
-              - Historical Search: guides/cts/repository-profiles/historical-search.md
-              - Entity Proxies: guides/cts/repository-profiles/entity-proxies.md
-              - Soft-delete and Restore: guides/cts/repository-profiles/soft-delete-restore.md
-              - Undo an Update: guides/cts/repository-profiles/undo-update.md
-              - Reidentify Instance: guides/cts/repository-profiles/reidentify-instance.md
-              - Retype Instance: guides/cts/repository-profiles/retype-instance.md
-              - Rehome Instance: guides/cts/repository-profiles/rehome-instance.md
-              - Entity Search: guides/cts/repository-profiles/entity-search.md
-              - Relationship Search: guides/cts/repository-profiles/relationship-search.md
-              - Entity Advanced Search: guides/cts/repository-profiles/entity-advanced-search.md
-              - Relationship Advanced Search: guides/cts/repository-profiles/relationship-advanced-search.md
+              - Effectivity Dating: guides/cts/repository-workbench/profiles/effectivity-dating.md
+              - Dynamic Types: guides/cts/repository-workbench/profiles/dynamic-types.md
+              - Graph Queries: guides/cts/repository-workbench/profiles/graph-queries.md
+              - Historical Search: guides/cts/repository-workbench/profiles/historical-search.md
+              - Entity Proxies: guides/cts/repository-workbench/profiles/entity-proxies.md
+              - Soft-delete and Restore: guides/cts/repository-workbench/profiles/soft-delete-restore.md
+              - Undo an Update: guides/cts/repository-workbench/profiles/undo-update.md
+              - Reidentify Instance: guides/cts/repository-workbench/profiles/reidentify-instance.md
+              - Retype Instance: guides/cts/repository-workbench/profiles/retype-instance.md
+              - Rehome Instance: guides/cts/repository-workbench/profiles/rehome-instance.md
+              - Entity Search: guides/cts/repository-workbench/profiles/entity-search.md
+              - Relationship Search: guides/cts/repository-workbench/profiles/relationship-search.md
+              - Entity Advanced Search: guides/cts/repository-workbench/profiles/entity-advanced-search.md
+              - Relationship Advanced Search: guides/cts/repository-workbench/profiles/relationship-advanced-search.md
           - Performance Profiles:
               - Entity Creation: guides/cts/performance-profiles/entity-creation.md
               - Entity Search: guides/cts/performance-profiles/entity-search.md

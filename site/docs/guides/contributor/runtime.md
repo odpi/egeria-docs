@@ -83,7 +83,7 @@ Once it is installed, it can be launched like any other application, such as thr
 !!! education "Further information"
     If you are working through the Egeria Dojo, you can return to the guide for [Day 1 of the Egeria Dojo](/getting-started/dojo/1/egeria-dojo-day-1-3-1-1-platform-set-up-prerequisites)
 
-    Otherwise, use the [Docker tutorial](../../open-metadata-resources/open-metadata-tutorials/docker-tutorial) to get the image up and running in Docker. It describes how to install, set up Docker and make use of Egeria's Docker image.
+    Otherwise, use the [Docker tutorial](/education/tutorials/docker-tutorial/overview) to get the image up and running in Docker. It describes how to install, set up Docker and make use of Egeria's Docker image.
 
 ## Kubernetes
 

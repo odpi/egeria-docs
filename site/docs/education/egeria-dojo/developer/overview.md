@@ -1,3 +1,8 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
@@ -14,7 +19,7 @@ Finally, Egeria's open metadata archives have a wide set of uses in distributing
 
 After completing developer day of the egeria dojo you should feel comfortable calling Egeria's APIs, writing connectors and working with open metadata archives.
 
-This dojo was last tested using Egeria release 3.12-SNAPSHOT.
+This dojo was last tested using Egeria release 3.12.
 
 --8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 
@@ -291,9 +296,9 @@ This dojo was last tested using Egeria release 3.12-SNAPSHOT.
             
             ??? intermediate "Install the connector into Egeria's platform ..."
             
-                The maven build has created a jar file in the `target` directory of your IntelliJ project called  `event-logging-connector-3.12-SNAPSHOT.jar`
+                The maven build has created a jar file in the `target` directory of your IntelliJ project called  `event-logging-connector-3.12.jar`
                 
-                The release number used in the name is controlled by the `<version>3.12-SNAPSHOT</version>` entry in your `pom.xml` file.  
+                The release number used in the name is controlled by the `<version>3.12</version>` entry in your `pom.xml` file.  
                 
                 From your `egeria-dojo3` IntelliJ project's terminal window enter the following to copy the connector's jar file into your egeria-install server lib directory, making adjustments for your connector's release as appropriate.
                 ```bash

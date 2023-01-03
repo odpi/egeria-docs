@@ -7,7 +7,7 @@
 
 The Digital Architecture OMAS provides APIs for tools and applications managing the design of data structures, software and the IT infrastructure that supports the operations of the organization.
 
-It is primarily supporting architects and their tools as they are setting up common definitions and standards that help to increase the consistency of the IT landscape.
+It is primarily supporting architects and their tools as they are setting up [subject area materials](/concepts/subject-area) and standards that help to increase the consistency of the IT landscape.
 
 
 --8<-- "snippets/abbr.md"

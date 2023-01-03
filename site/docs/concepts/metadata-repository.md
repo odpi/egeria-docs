@@ -3,7 +3,7 @@
 
 # Metadata Repository
 
-A metadata repository is a store for metadata. The metadata within it is called a *[metadata collection](metadata-collection-id.md)*.  It is accessed either directly through a [metadata access store](metadata-access-store.md) or indirectly through a [repository proxy](repository-proxy.md).
+A metadata repository is a store for metadata.  A metadata repository that supports the open metadata standards is called an [*open metadata repository*](/concepts/open-metadata-repository).
 
 
 

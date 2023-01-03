@@ -157,7 +157,7 @@ Security is configured for a specific platform once it is running by using the f
     the [platform URL root](/egeria/concepts/omag-server/#platform-url-root) of the platform.
 
 ??? example "Example: sample platform security connector"
-    For example, this is the request body that would set up the [sample platform security connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } provided for the Coco Pharmaceuticals case study:
+    For example, this is the request body that would set up the [sample platform security connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } provided for the Coco Pharmaceuticals case study:
 
     ```json
     {
@@ -338,11 +338,11 @@ Note that in the case of Java clients, these are system properties, and do not u
 
 ### Other clients
 
-Similar principles to those documented for Java should apply. If you need further assistance, please contact the team on [Slack :material-slack:](https://lfaifoundation.slack.com/archives/C01F40J2XA8){ target=slack }. A pull request (or issue) with contributed documentation is also very welcome!
+Similar principles to those documented for Java should apply. If you need further assistance, please contact the team on [Slack :material-slack:](https://slack.lfaidata.foundation){ target=slack }. A pull request (or issue) with contributed documentation is also very welcome!
 
 ### Example to launch Egeria
 
-Examples certificates are provided in the codebase under [open-metadata-resources/open-metadata-deployment/certificates :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-deployment/certificates){ target=gh }
+Examples certificates are provided in the codebase under [open-metadata-resources/open-metadata-deployment/certificates :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/certificates){ target=gh }
 
 As an example of running the Egeria server chassis with the certificates generated above, add the following options when launching the OMAG Server Platform jar file:
 
@@ -367,11 +367,11 @@ As an example of running the Egeria server chassis with the certificates generat
 
 The example certificates are fine for development; however, it is important to have your own certificates for a production environment.
 
-An example script (MacOS/Linux) to create certificates is provided in [`gensamplecerts.sh` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-deployment/certificates/gensamplecerts.sh){ target=gh }. It is intended only as an example. It requires the `openssl` tool and `keytool`. Deployment frameworks in cloud services may also offer support to generate certificates, and it is likely an enterprise process will be in place in larger organizations.
+An example script (MacOS/Linux) to create certificates is provided in [`gensamplecerts.sh` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-deployment/certificates/gensamplecerts.sh){ target=gh }. It is intended only as an example. It requires the `openssl` tool and `keytool`. Deployment frameworks in cloud services may also offer support to generate certificates, and it is likely an enterprise process will be in place in larger organizations.
 
 The script creates a Certificate Authority and then specific certificates for different Egeria components. It could be extended to create certificates for other clients especially if using 2 way SSL.
 
-When the script is run it also makes use of the configuration template [`openssl.cnf` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-deployment/certificates/openssl.cnf){ target=gh }.
+When the script is run it also makes use of the configuration template [`openssl.cnf` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-deployment/certificates/openssl.cnf){ target=gh }.
 
 Together, both set some important characteristics that are needed to allow the certificate to work properly, especially with current browsers:
 
@@ -388,6 +388,6 @@ Together, both set some important characteristics that are needed to allow the c
 
     It's also recommended to install the IntelliJ 'PlantUML' plugin to get a real-time preview whilst updating the diagrams.
 
-[^1]: For more details on the encrypted format, see the [encrypted file store connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector){ target=gh }.
+[^1]: For more details on the encrypted format, see the [encrypted file store connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector){ target=gh }.
 
 --8<-- "snippets/abbr.md"

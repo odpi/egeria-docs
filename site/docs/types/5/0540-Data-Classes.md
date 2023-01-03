@@ -3,11 +3,14 @@
 
 # 0540 Data Classes
 
+Data classes describe logical data types that can be used to classify data values in a consistent and standardized way.  They are particularly important in [metadata discovery](/features/discovery-and-stewardship/overview).
+
+![UML](0540-Data-Classes.svg)
+
 ## DataClass
 
 The *DataClass* entity provides the specification of a [logical data type](/concepts/data-class). This goes beyond the [*SchemaType*](/types/5/0501-Schema-Elements) used to store the data value and includes a specification of the values that are found in this logical type.  For example, a credit card number is typically stored as a string.  However, it has a well-defined pattern of four groups of four digits.  The data class allows the capture of the specification of a credit card number type that can be used by discovery engines to narrow down the expected data values within a [digital resource](/concepts/resource).
 
-![UML](0540-Data-Classes.svg)
 
 ## DataClassHierarchy
 

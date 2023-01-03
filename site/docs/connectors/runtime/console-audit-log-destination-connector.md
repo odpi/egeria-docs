@@ -15,7 +15,7 @@ This [audit log destination connector](/concepts/audit-log-destination-connector
 It is the default audit log destination for [OMAG Servers](/concepts/omag-server) and is useful for testing and validating the behavior of the server.
 
 
-[Connector location in GitHub](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-console-connector).
+[Connector location in GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-console-connector).
 
 
 --8<-- "snippets/abbr.md"

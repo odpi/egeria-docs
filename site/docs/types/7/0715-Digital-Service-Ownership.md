@@ -13,7 +13,9 @@ The relationships on this page show how the digital service fits in with the org
 
 ## DigitalServiceOperator
 
-*DigitalServiceOperator* shows which [organization(s)](/types/4/0440-Organizational-Controls) are responsible to the digital service.  The *scope* property identifies the scope of the responsibility for a particular organization where multiple organizations have responsibility.
+*DigitalServiceOperator* shows which [organization(s)](/types/4/0440-Organizational-Controls) are responsible for the digital service.  The *scope* property identifies the scope of the responsibility for a particular organization where multiple organizations have responsibility.
+
+This relationship is useful when the local organization is using digital services from other organizations.
 
 ## DigitalSupport
 
@@ -25,6 +27,6 @@ The relationships on this page show how the digital service fits in with the org
 
 ## DigitalServiceManager
 
-*DigitalServiceManager* is a [PersonRole](/types/1/0112-People) that can be used as the digital service manager for a digital service.
+*DigitalServiceManager* is a [PersonRole](/types/1/0112-People) that can be used as the digital service manager for a digital service.  Since it is a role, one or more individuals can be appointed to the position.
 
 --8<-- "snippets/abbr.md"

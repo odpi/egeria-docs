@@ -9,7 +9,7 @@
     - Connector Category: [Open Metadata Archive Store Connector](/connectors/#open-metadata-archive-store-connectors)
     - Hosting Service: [Open Metadata Repository Services (OMRS)](/services/omrs)
     - Hosting Server: [Metadata Access Store](/concepts/metadata-access-store)
-    - Source Module: [open-metadata-archive-file-connector :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors/open-metadata-archive-file-connector){ target=gh }
+    - Source Module: [open-metadata-archive-file-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors/open-metadata-archive-file-connector){ target=gh }
     - Jar File Name: `open-metadata-archive-file-connector.jar`
 
 ## Overview

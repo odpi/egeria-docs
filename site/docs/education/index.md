@@ -3,6 +3,8 @@
 
 # Learning about Egeria
 
+--8<-- "snippets/getting-started.md"
+
 Egeria is a big project tackling a complex problem.  There is a lot to learn.  
 The choices below give you the opportunity to target your learning to both your immediate and long term needs. 
 

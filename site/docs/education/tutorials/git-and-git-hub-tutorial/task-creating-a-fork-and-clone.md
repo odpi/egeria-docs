@@ -4,7 +4,7 @@
 ### Creating a fork and a clone
 
 The git repositories for Egeria are read only to everyone except the
-[Egeria Maintainers](https://github.com/odpi/egeria/blob/master/MAINTAINERS.md).  This is to protect the content from
+[Egeria Maintainers](https://github.com/odpi/egeria/blob/main/MAINTAINERS.md).  This is to protect the content from
 accidental or malicious damage.
 
 However, anyone wanting to make a contribution needs

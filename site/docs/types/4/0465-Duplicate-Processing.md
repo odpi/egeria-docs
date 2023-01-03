@@ -1,14 +1,11 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 # 0465 Duplicate Processing
 
 Since metadata is being created by many tools, it is possible that the same resource is catalogued multiple times. These duplicate instances are then exposed when the tools are connected together with Egeria.  The duplicate processing types in this model are used by the governance engines and stewards to link entities that are duplicates so that the open metadata ecosystem can ensure consumers of open metadata do not see the duplicates when they query the open metadata repositories.
+
+![UML](0465-Duplicate-Processing.svg)
 
 ## PeerDuplicateLink
 
@@ -28,7 +25,6 @@ There is no special duplicate processing when a relationship is retrieved indepe
 
 It may be that this simple set of survivorship rules and consolidation process is insufficient (or too expensive from a performance perspective).  It is possible for a steward/governance engine to construct and store a consolidated entity with its consolidated classification and relationships.  Such an entity is decorated with the *ConsolidatedDuplicate* classification and is linked to each of the source entities using the *ConsolidatedDuplicateLink* relationship.  Once the *ConsolidatedDuplicateLink* relationship is in place, the simple survivorship rules and peer consolidation process are ignored and the properties, classifications and relationships from the consolidated entity are used for a query to one of the linked entities with the *KnownDuplicate* classification. The steward/governance engine is responsible for the ongoing maintenance of this consolidated entity.
 
-![UML](0465-Duplicate-Processing.svg)
 
 ## Support for duplicate processing
 

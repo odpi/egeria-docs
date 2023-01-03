@@ -5,6 +5,8 @@
 
 [Schemas](/concepts/schema) typically have a hierarchical structure. Model 0505 provides for a structure of complex schema types that have their own internal structure. This structure is defined through one or more nested *schema attributes* each with their own type.
 
+![UML](0505-Schema-Attributes.svg)
+
 ## TypeEmbeddedAttribute classification
 
 The *TypeEmbeddedAttribute* classification is applied directly to the *SchemaAttribute* to provide its type information. For example, if a ComplexSchemaType has a simple string attribute this can be captured as a SchemaAttribute (giving the name of the attribute) with a TypeEmbeddedAttribute classification (whose `dataType` property indicates `string`).
@@ -28,18 +30,17 @@ The combined properties of *SchemaAttribute* can be used to represent simple bou
 - Set: `minCardinality = 0`, `maxCardinality = -1`, `allowsDuplicateValues = false`, `orderedValues = false`
 - Bag: `minCardinality = 0`, `maxCardinality = -1`, `allowsDuplicateValues = true`, `orderedValues = false`
 
-![UML](0505-Schema-Attributes.svg)
 
 ## DataItemSortOrder enum
 
 *DataItemSortOrder* provides the valid values for the *sortOrder* property of SchemaAttribute.  It indicates whether the rows/instances of the data stored in this schema appear in any particular order or not.
 
-| Enumeration | Value | Name           | Description                                                                       |
-|-------------|-------|----------------|--------------------------------------------------------------------------------------------------|
-| UNKNOWN     | 0     | "<Unknown>"    | "The sort order is not specified. |
-| ASCENDING   | 1     | "Ascending"    | "The attribute instances are organized so that the smallest/lowest value is first and the rest of the instances follow in ascending order. |
+| Enumeration | Value | Name           | Description                                                                     |
+|-------------|-------|----------------|------------------------------------------------------------------------------------------------|
+| UNKNOWN     | 0     | "<Unknown>"    | The sort order is not specified. |
+| ASCENDING   | 1     | "Ascending"    | The attribute instances are organized so that the smallest/lowest value is first and the rest of the instances follow in ascending order. |
 | DESCENDING  | 2     | "Descending"   | The attribute instances are organized so that the largest/highest value is first and the rest of the instances follow in descending order. |
-| UNSORTED    | 3     | "Unsorted"     | "The instances of the schema attribute may appear in any order. |                                                                            
+| UNSORTED    | 3     | "Unsorted"     | The instances of the schema attribute may appear in any order. |                                                                            
 
 
 --8<-- "snippets/abbr.md"

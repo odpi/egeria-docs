@@ -40,7 +40,7 @@ A solution view service is configured using a `SolutionViewServiceConfig` object
 A solution view service configuration must include `omagServerPlatformRootURL` and  `omagServerName` properties(defined in `OMAGServerClientConfig`). These properties specify the OMAG Server to which to send downstream REST calls to an OMAG Server that is running the OMAS needed by the view service.
 
 !!! example "Example solution view service configuration"
-    Below is an example of a configuration object for a solution view service. In this example, the view service is [Glossary Author View Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/view-services/glossary-author-view){ target=gh }. It would be similar for the other solution view services.
+    Below is an example of a configuration object for a solution view service. In this example, the view service is [Glossary Author View Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/view-services/glossary-author-view){ target=gh }. It would be similar for the other solution view services.
  
     The configuration contains the name and status of the view service and contains the name and rootURL of the OMAG Server to which 'downstream' requests will be sent. In this example the 'downstream' server is the server running the Subject Area OMAS, required by the Glossary Author view service.
 
@@ -58,7 +58,7 @@ A solution view service configuration must include `omagServerPlatformRootURL` a
 ### Integration view services
 
 An *integration view service* supports operations needed by an integration-oriented user interface. Examples 
-include the [Repository Explorer View Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/view-services/rex-view){ target=gh }, [Type Explorer View Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/view-services/tex-view){ target=gh } or [Dino View Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/view-services/dino-view){ target=gh } for operational management.
+include the [Repository Explorer View Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/view-services/rex-view){ target=gh }, [Type Explorer View Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/view-services/tex-view){ target=gh } or [Dino View Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/view-services/dino-view){ target=gh } for operational management.
 
 It additionally has the following configuration properties:
 
@@ -90,7 +90,7 @@ The `resourceEndpoints` property is a list of `ResourceEndpointConfig` objects, 
 In an Egeria deployment, a server may be deployed to multiple platforms; this is typically used for clustering. A "Server" `ResourceEndpointConfig` must possess a `serverInstanceName` property which contains a unique name that refers to the specific instance of the server identified by the `serverName` property hosted by the platform identified by the `platformName` property. For example, you could configure a pair of server resource endpoints called `Server1@PlatformA` and `Server1@PlatformB`: both are `Server1`, but hosted on different platforms (`PlatformA` and `PlatformB`). The `serverInstanceName` is used to display the resource in the user interface selector lists.
 
 !!! example "Example integration view service configuration"
-    Below is an example of a configuration object for an Integration View Service. In this example, the view service is [Dino View Service :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/view-services/dino-view){ target=gh }. It would be similar for the other integration view services.
+    Below is an example of a configuration object for an Integration View Service. In this example, the view service is [Dino View Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/view-services/dino-view){ target=gh }. It would be similar for the other integration view services.
  
     The configuration contains the name and status of the view service and contains a list of the resources that will appear in the platform and server selectors in the user interface. All requests to the view service REST API are based on these configured named resources. When a user selects a platform name or server name from the selector lists, the interface sends the resource name to the view service, which resolves the platform or server name to a resource endpoint to identify the URL needed to send a request to the platform or server.
 

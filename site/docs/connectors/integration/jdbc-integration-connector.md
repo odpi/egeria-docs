@@ -22,7 +22,7 @@ It uses an embedded [JDBC Digital Resource Connector](/connectors/resource/jdbc-
 
 ## Catalogued elements
 
-The JDBC integration connector catalogs a database asset, database schema assets, tables, columns, primary and foreign keys. 
+The JDBC integration connector catalogs a database asset, database schema assets, tables, views, columns, primary and foreign keys. 
 
 ![Figure 2](/types/5/database-example.svg)
 > **Figure 2:** Open metadata types used to catalog a database
@@ -67,20 +67,27 @@ This is its connection definition to use on the [administration commands that co
                         {
                             "class": "Endpoint",
                             "address" : "{{address}}"
-                        },
-                        "configurationProperties" :
-                        {
-                            "connectorTypeQualifiedName" : "{{connectorTypeQualifiedName}}"
                         }
                     }
                 }
-            ]
+            ],
+            "configurationProperties": 
+            {
+                "includeSchemaNames": [],
+                "excludeSchemaNames": [],
+                "includeTableNames": [],
+                "excludeTableNames": [],
+                "includeViewNames": [],
+                "excludeViewNames": [],
+                "includeColumnNames": [],
+                "excludeColumnNames": []
+            }
         }
     }
     ```
 
     - Replace '{{userId}}' and '{{clearPassword}}' with the database username and password.
     - Replace '{{address}}' with the database jdbc url.
-    - Replace '{{connectorTypeQualifiedName}}' with a connector type already saved. Required to construct the connection information   
+    - Populate the include/exclude lists with database object names to filter out the import. Optional, no wildcards supported 
 
 

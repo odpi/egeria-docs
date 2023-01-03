@@ -308,45 +308,45 @@ nav:
       - Core Egeria:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
-        - v3.14: release-notes/3-14.md
-        - v3.13: release-notes/3-13.md
-        - v3.12: release-notes/3-12.md
-        - v3.11: release-notes/3-11.md
-        - v3.10: release-notes/3-10.md
-        - v3.9: release-notes/3-9.md
-        - v3.8: release-notes/3-8.md
-        - v3.7: release-notes/3-7.md
-        - v3.6: release-notes/3-6.md
-        - v3.5: release-notes/3-5.md
-        - v3.4: release-notes/3-4.md
-        - v3.3: release-notes/3-3.md
-        - v3.2: release-notes/3-2.md
-        - v3.1: release-notes/3-1.md
-        - v3.0: release-notes/3-0.md
+        - "v3.14": release-notes/3-14.md
+        - "v3.13": release-notes/3-13.md
+        - "v3.12": release-notes/3-12.md
+        - "v3.11": release-notes/3-11.md
+        - "v3.10": release-notes/3-10.md
+        - "v3.9": release-notes/3-9.md
+        - "v3.8": release-notes/3-8.md
+        - "v3.7": release-notes/3-7.md
+        - "v3.6": release-notes/3-6.md
+        - "v3.5": release-notes/3-5.md
+        - "v3.4": release-notes/3-4.md
+        - "v3.3": release-notes/3-3.md
+        - "v3.2": release-notes/3-2.md
+        - "v3.1": release-notes/3-1.md
+        - "v3.0": release-notes/3-0.md
         - Older Releases:
           - v2.x:
-              - 2.11: release-notes/2-11.md
-              - 2.10 : release-notes/2-10.md
-              - 2.9: release-notes/2-9.md
-              - 2.8: release-notes/2-8.md
-              - 2.7: release-notes/2-7.md
-              - 2.6: release-notes/2-6.md
-              - 2.5: release-notes/2-5.md
-              - 2.4: release-notes/2-4.md
-              - 2.3: release-notes/2-3.md
-              - 2.2: release-notes/2-2.md
-              - 2.1: release-notes/2-1.md
-              - 2.0: release-notes/2-0.md
+              - "v2.11": release-notes/2-11.md
+              - "v2.10": release-notes/2-10.md
+              - "v2.9": release-notes/2-9.md
+              - "v2.8": release-notes/2-8.md
+              - "v2.7": release-notes/2-7.md
+              - "v2.6": release-notes/2-6.md
+              - "v2.5": release-notes/2-5.md
+              - "v2.4": release-notes/2-4.md
+              - "v2.3": release-notes/2-3.md
+              - "v2.2": release-notes/2-2.md
+              - "v2.1": release-notes/2-1.md
+              - "v2.0": release-notes/2-0.md
           - v1.x:
-              - 1.8: release-notes/1-8.md
-              - 1.7: release-notes/1-7.md
-              - 1.6: release-notes/1-6.md
-              - 1.5: release-notes/1-5.md
-              - 1.4: release-notes/1-4.md
-              - 1.3: release-notes/1-3.md
-              - 1.2: release-notes/1-2.md
-              - 1.1: release-notes/1-1.md
-              - 1.0: release-notes/1-0.md
+              - "v1.8": release-notes/1-8.md
+              - "v1.7": release-notes/1-7.md
+              - "v1.6": release-notes/1-6.md
+              - "v1.5": release-notes/1-5.md
+              - "v1.4": release-notes/1-4.md
+              - "v1.3": release-notes/1-3.md
+              - "v1.2": release-notes/1-2.md
+              - "v1.1": release-notes/1-1.md
+              - "v1.0": release-notes/1-0.md
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:

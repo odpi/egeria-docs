@@ -6,7 +6,7 @@
 
 *Governance domains* are the areas of an organization's operation that receive specific focus from a governance point of view.
 
-![Governance Domain Examples](/services/omas/governance-program/governance-domain-examples.svg)
+![Governance Domain Examples](/guides/planning/governance-program/governance-domain-examples.svg)
 > Examples of different governance domains within an organization.  Each domain is typically the responsibility of a different executive in the organization.  They may use slightly different terminology and often different tools but in fact they are very similar in the way that they operate.  Egeria allows the teams from the different governance domains to collaborate and benefit from each others efforts.
 
 Governance domains are represented by *[Governance Domain Descriptions](/types/4/0401-Governance-Definitions)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".

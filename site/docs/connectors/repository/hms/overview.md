@@ -67,13 +67,18 @@ like this
 | DatabaseName                             | default      | This is the HMS database name.                                                                                    |
 | sendPollEvents                           |              | Set this to true to send events to the cohort every poll.                                                         |
 | endpointAddress                          |              | url to access the data that this metadata describes                                                               |
-| sendSchemaTypesAsEntities                | false        | set this to true to use the old deprecated style of creating schematypes as entities.                             |
+| sendSchemaTypesAsEntities                | false        | Set this to true to use the old deprecated style of creating schematypes as entities.                             |
 | cacheIntoCachingRepository               | true         | Set this to false to not cache the metadata content                                                               |
 
-## Using with the IBM cloud Data Engine service.
+## Using with the IBM Cloud® Data Engine service.
 
-To use this connector with IBM cloud, the code needs to be recompiled to bring in the IBM HMS Client library and the following additional parameters need to be 
-specified in the `configurationProperties`.
+To use this connector with [IBM Cloud® Data Engine service](https://cloud.ibm.com/catalog/services/data-engine-previously-sql-query), the code needs to be recompiled to bring in the IBM HMS Client library.
+For more details see the [IBM documentation](https://cloud.ibm.com/docs/sql-query?topic=sql-query-hive_metastore#hive_compatible_client) on this.
+There is a [bash script](https://github.com/odpi/egeria-connector-hivemetastore/blob/main/utilities/createIBMHMS.sh) that is supplied as-is and 
+can be used in development on a Mac to build and run an Egeria platform that contains the [IBM Hive-compatible client](https://us.sql-query.cloud.ibm.com/download/catalog/hive-metastore-standalone-client-3.1.2-sqlquery.jar).
+
+The following additional security parameters need to be specified in the `configurationProperties` as the IBM Hive-compatible client
+uses a secure API to talk to the IBM Cloud®.
 
 
 | Event mapper configuration parameter name | default | Description                                                                                           |

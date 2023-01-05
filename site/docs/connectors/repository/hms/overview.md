@@ -67,7 +67,6 @@ like this
 | DatabaseName                             | default      | This is the HMS database name.                                                                                    |
 | sendPollEvents                           |              | Set this to true to send events to the cohort every poll.                                                         |
 | endpointAddress                          |              | url to access the data that this metadata describes                                                               |
-| sendSchemaTypesAsEntities                | false        | Set this to true to use the old deprecated style of creating schematypes as entities.                             |
 | cacheIntoCachingRepository               | true         | Set this to false to not cache the metadata content                                                               |
 
 ## Using with the IBM Cloud® Data Engine service.

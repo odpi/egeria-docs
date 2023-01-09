@@ -63,6 +63,7 @@ This dojo was last tested using Egeria release 3.14.
     These next steps build the Egeria platform and then install it ready for the dojo.
     
     ??? tip "Build Egeria's OMAGServerPlatform"
+
         From a command window, use the `pwd` command to make sure you are in the `../egeria-main-libraries/egeria` directory created when you cloned the `egeria.git` repository.
         
         ```bash
@@ -70,6 +71,23 @@ This dojo was last tested using Egeria release 3.14.
         /Users/mandy-chessell/egeria-main-libraries/egeria
         $
         ```
+
+        ???+ tip "Release 3.14 and before - patch Egeria's build"
+            Open the build file that creates the distribution:
+            ```bash
+            vi open-metadata-distribution/open-metadata-assemblies/build.gradle
+            ```
+            Scroll down the file until you find the following two lines (lines 184-185):
+            ```bash
+                    include 'content-packs'
+                    include 'sample-data'
+            ```
+            Press the `i` key to enter INSERT mode.  Using the arrow keys to move to the end of the lines, update the path names to the following values and then press the `ESC` key.
+            ```bash
+                    include 'content-packs/*'
+                    include 'sample-data/*/*'
+            ```
+            Enter `:wq` to save and quit the file.
 
         Enter the following command to build the egeria libraries:
 

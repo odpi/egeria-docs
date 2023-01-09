@@ -70,9 +70,9 @@ The build scripts that use these technologies ensure the software is built in th
 
     Our direction is for a Gradle build to replace Maven; however, [that work is still underway :material-dock-window:](https://github.com/odpi/egeria/issues/3370){ target=gh }. As such, you may still find git repositories that use [Maven](#building-with-maven).
 
-As of release 3.0, most egeria.git components are building with gradle, but artifacts are not being created, and verification has not been done.   Release 4.0 is when we expect to complete the transition.
+    As of release 3.0, most egeria.git components are building with gradle, but artifacts are not being created, and verification has not been done.   Release 4.0 is when we expect to complete the transition.
 
-Contributions to this work are welcome, as are issue reports!   If you'd like to help complete this transition, see [odpi/egeria#3370](https://github.com/odpi/egeria/issues/3370){ target=gh }
+    Contributions to this work are welcome, as are issue reports!   If you'd like to help complete this transition, see [odpi/egeria#3370](https://github.com/odpi/egeria/issues/3370){ target=gh }
 
 ##### Building with Maven
 

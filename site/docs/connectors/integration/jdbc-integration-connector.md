@@ -22,7 +22,7 @@ It uses an embedded [JDBC Digital Resource Connector](/connectors/resource/jdbc-
 
 ## Catalogued elements
 
-The JDBC integration connector catalogs a database asset, database schema assets, tables, columns, primary and foreign keys. 
+The JDBC integration connector catalogs a database asset, database schema assets, tables, views, columns, primary and foreign keys. 
 
 ![Figure 2](/types/5/database-example.svg)
 > **Figure 2:** Open metadata types used to catalog a database
@@ -34,7 +34,7 @@ If the endpoint information is available, it will also attach the connection inf
 
 ## Configuration
 
-This connector uses the [Database Integrator OMIS](/services/omis/database-integrator/overview)running in the [Integration Daemon](/concepts/integration-daemon).
+This connector uses the [Database Integrator OMIS](/services/omis/database-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
 
 This is its connection definition to use on the [administration commands that configure the Database Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
 
@@ -56,8 +56,8 @@ This is its connection definition to use on the [administration commands that co
                     "embeddedConnection" :
                     {
                         "class" : "Connection",
-                        "userId" : "{{userId}}",
-                        "clearPassword" : "{{clearPassword}}",
+                        "userId" : " ... ",
+                        "clearPassword" : " ... ",
                         "connectorType" : 
                         {
                             "class": "ConnectorType",
@@ -66,21 +66,31 @@ This is its connection definition to use on the [administration commands that co
                         "endpoint":
                         {
                             "class": "Endpoint",
-                            "address" : "{{address}}"
-                        },
-                        "configurationProperties" :
-                        {
-                            "connectorTypeQualifiedName" : "{{connectorTypeQualifiedName}}"
+                            "address" : " ... "
                         }
                     }
                 }
-            ]
+            ],
+            "configurationProperties": 
+            {
+                "catalog" : " ... ",
+                "includeSchemaNames": [],
+                "excludeSchemaNames": [],
+                "includeTableNames": [],
+                "excludeTableNames": [],
+                "includeViewNames": [],
+                "excludeViewNames": [],
+                "includeColumnNames": [],
+                "excludeColumnNames": []
+            }
         }
     }
     ```
 
-    - Replace '{{userId}}' and '{{clearPassword}}' with the database username and password.
-    - Replace '{{address}}' with the database jdbc url.
-    - Replace '{{connectorTypeQualifiedName}}' with a connector type already saved. Required to construct the connection information   
+- `userId`: user
+- `clearPassword`: password
+- `address`: jdbc format address
+- `catalog` (optional): null or missing means catalog will not be used during querying, empty string means objects that belong to no catalog will be queried, actual value means objects belonging to specified catalog will be queried
+- `include/exclude` (optional): lists with database object names to filter out the import, no wildcards supported 
 
 

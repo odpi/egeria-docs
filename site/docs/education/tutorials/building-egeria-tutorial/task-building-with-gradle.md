@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-Gradle is used to build the following repositories:
+[Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is used to build the following repositories:
 
 * egeria.git - main Egeria libraries.
 * egeria-dev-projects.git - utilities and connectors for developers to use and develop further.

@@ -52,34 +52,30 @@ The project uses three main build technologies:
 
 * [Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is the primary build tool for the Egeria repositories.
 * [Apache Maven :material-dock-window:](https://maven.apache.org/){ target=maven } is an alternative build tool to Gradle and is being phased out.
-* [npm](https://www.npmjs.com){ target=npm } is used for Javascript repositories associated with the User Interfaces.
+* [npm :material-dock-window:](https://www.npmjs.com){ target=npm } is used for Javascript repositories associated with the User Interfaces.
 
-The build scripts that use these technologies ensure the software is built in the correct order.  
+The build scripts that use these technologies ensure the software is built in the correct order.
+
+##### Building with Gradle
+
+--8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-with-gradle.md"
+
+??? tip "Gradle development"
+    For egeria [Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is a replacement build tool to Maven and offers:
+
+    - better support for parallel builds
+    - more flexibility for build tasks
+    - breaking the link between directory structure and maven artifacts
+    - extremely fast incremental builds
+
+    Our direction is for a Gradle build to replace Maven; however, [that work is still underway :material-dock-window:](https://github.com/odpi/egeria/issues/3370){ target=gh }. As such, you may still find git repositories that use [Maven](#building-with-maven).
+
+As of release 3.0, most egeria.git components are building with gradle, but artifacts are not being created, and verification has not been done.   Release 4.0 is when we expect to complete the transition.
+
+Contributions to this work are welcome, as are issue reports!   If you'd like to help complete this transition, see [odpi/egeria#3370](https://github.com/odpi/egeria/issues/3370){ target=gh }
 
 ##### Building with Maven
 
 --8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-with-maven.md"
-
-
-##### Building with Gradle
-
-[Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is an alternative build tool to Maven and offers:
-
-- better support for parallel builds
-- more flexibility for build tasks
-- breaking the link between directory structure and maven artifacts
-- extremely fast incremental builds
-
-Our direction is for a Gradle build to replace Maven; however, [that work is still underway :material-dock-window:](https://github.com/odpi/egeria/issues/3370){ target=gh }. As such, our supported build environment remains [Maven](#building-with-maven)
-
-As of release 3.0, most components are building with gradle, but artifacts are not being created, and verification has not been done. 
-
-Gradle is, however, the chosen build tool for some of our new, smaller repositories.
-
-Contributions to this work are welcome, as are issue reports! 
-If you'd like to help complete this transition, see [odpi/egeria#3370](https://github.com/odpi/egeria/issues/3370){ target=gh }
-
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-with-gradle.md"
-
 
 --8<-- "snippets/abbr.md"

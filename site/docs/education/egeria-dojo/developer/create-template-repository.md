@@ -21,7 +21,7 @@ Create a new directory for your work:
 
 ```bash
 mkdir egeria-dojo
-````
+```
 Change to your new directory.
 
 ```bash
@@ -38,7 +38,7 @@ A new directory has been created with the template code.
 
 ```bash
 cd egeria-dojo
-````
+```
 
 The ls command allows you to list the files from the repository:
 

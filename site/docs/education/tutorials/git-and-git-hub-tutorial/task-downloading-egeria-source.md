@@ -21,10 +21,21 @@ The code for Egeria is downloaded from each git repository one at a time.  The c
     
     Egeria's source is extracted from GitHub using the following `git` command:
     
-    ```bash
-    git clone https://github.com/odpi/egeria.git
-    ```
-    
+    === "Get the latest version of the code"
+        To retrieve the latest "SNAPSHOT" code from the `main` branch of Egeria enter:
+        ```bash
+        git clone https://github.com/odpi/egeria.git
+        ```
+    === "Get a released version of the code"
+        To retrieve the code for a specific release of Egeria enter
+        ```bash
+        git clone -b egeria-release-{release-number} --single-branch https://github.com/odpi/egeria.git
+        ```
+        For example, for release 3.14 use:
+        ```bash
+        git clone -b egeria-release-3.14 --single-branch https://github.com/odpi/egeria.git
+        ```
+        
     A new directory has been created with the core Egeria source code.  Change to the `egeria` directory and you are ready to build the source.
     
     ```bash

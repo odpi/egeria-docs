@@ -11,9 +11,12 @@ Alternatively you can also use [Kubernetes](/guides/operations/kubernetes) to ru
 
 ## Prerequisite technology for building Egeria
 
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
---8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-installing-git.md"
+??? tip "Installing Java"
+    --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
+??? tip "Installing Maven"
+    --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
+??? tip "Installing Git"
+    --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-installing-git.md"
 
 ## Tutorial tasks
 
@@ -27,9 +30,7 @@ You are now ready to [build the egeria source](#building-the-egeria-source).
 
 --8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-egeria-source.md"
 
-
 --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-egeria.md"
-
 
 ## What next?
 

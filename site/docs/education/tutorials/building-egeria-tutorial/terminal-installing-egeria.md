@@ -2,7 +2,6 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-
 The [egeria build process](/education/tutorials/building-egeria-tutorial/overview) creates the distribution files for Egeria in the `open-metadata-distribution` module.   To see its contents, after a full gradle build completes, use the following `cd` command to change to its `build/distributions` directory:
 
 ```bash
@@ -36,7 +35,7 @@ cd ~/egeria-install
 It is now possible to unpack the tar file with the following steps.
 
 ```bash
-gunzip -xf egeria*-distribution.tar.gz
+gunzip egeria*-distribution.tar.gz
 ```
 ```bash
 tar -xf egeria*-distribution.tar
@@ -44,7 +43,7 @@ tar -xf egeria*-distribution.tar
 A new directory is created called `{{release}}-distribution.tar.gz` or `egeria-3.14-distribution.tar.gz` in this example.  Change to this new directory and list its contents as shown below.
 
 ```bash
-cd egeria-omag*
+cd egeria*gz
 ```
 ```bash
 ls
@@ -104,4 +103,32 @@ spring-rest-client-connector-3.14.jar
 
 Copy the jar files for any additional connectors you want to use into the `lib` directory.  The connectors available for Egeria are listed in the [Connector Catalog](/connectors).
 
+The `content-packs` directory contains [Open Metadata Archives](/concepts/open-metadata-archive) that provide sample open metadata content.  The `README.md` describes their content.
+```bash
+ls content-packs
+```
+```bash
+CloudInformationModel.json			DataStoreConnectorTypes.json
+CocoBusinessSystemsArchive.json			OpenConnectorsArchive.json
+CocoClinicalTrialsTemplatesArchive.json		OpenMetadataTypes.json
+CocoComboArchive.json				README.md
+CocoGovernanceEngineDefinitionsArchive.json	SimpleAPICatalog.json
+CocoGovernanceProgramArchive.json		SimpleDataCatalog.json
+CocoOrganizationArchive.json			SimpleEventCatalog.json
+CocoSustainabilityArchive.json			SimpleGovernanceCatalog.json
+CocoTypesArchive.json
+```
+The `sample-data` directory contains sample data that is used in various labs and samples.
+```bash
+ls sample-data/*
+```
+```bash
+sample-data/oak-dene-drop-foot-weekly-measurements:
+week1.csv	week3.csv	week5.csv	week7.csv	week9.csv
+week2.csv	week4.csv	week6.csv	week8.csv
+
+sample-data/old-market-drop-foot-weekly-measurements:
+week1.csv	week3.csv	week5.csv	week7.csv	week9.csv
+week2.csv	week4.csv	week6.csv	week8.csv
+```
 --8<-- "snippets/abbr.md"

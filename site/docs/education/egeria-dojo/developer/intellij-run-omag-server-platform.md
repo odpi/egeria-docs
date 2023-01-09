@@ -54,5 +54,5 @@ The *Run* tab where the OMAG Server Platform is running includes a control panel
 
 ![Run tab control panel](/education/egeria-dojo/developer/intellij-run-tab-control-panel.png)
 
-Feel free to experiment with the control - but be sure that the OMAG Server Platform is running when you finish as it is needed for the next step.
+Feel free to experiment with the controls - but be sure that the OMAG Server Platform is running when you finish as it is needed for the next step.
 

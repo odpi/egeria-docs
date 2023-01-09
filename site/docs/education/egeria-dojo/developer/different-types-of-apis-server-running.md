@@ -7,11 +7,11 @@ Now it is time to start `mds1` and observe the changes to `EgeriaPlatformReport`
 ![egeria-ops-utility module](/education/egeria-dojo/developer/egeria-ops-utility-module.png)
 
 ??? beginner "Setting up `ServerOps`"
-    As before, navigate to the `ServerOps` class, run it using the right-mouse menu and then, when it fails with the certificate error, add `-Dstrict.ssl=false` to the `VM Options` and re-run `ServerOps` once you have savethe configuration.
+    As before, navigate to the `ServerOps` class, run it using the right-mouse menu and then, when it fails with the certificate error, add `-Dstrict.ssl=false` to the `VM Options` and re-run `ServerOps` once you have saved the configuration.
     
     ![egeria-ops-utility configuration](/education/egeria-dojo/developer/egeria-ops-utility-configuration.png)
     
-    `ServerOps` displays a menu of operations that is can perform.
+    `ServerOps` displays a menu of operations that it can perform.
     
     ```bash
     /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -Dstrict.ssl=false ... org.odpi.openmetadata.devprojects.utilities.serverops.ServerOps
@@ -121,7 +121,7 @@ Now it is time to start `mds1` and observe the changes to `EgeriaPlatformReport`
             {
                 if (serverName != null)
                 {
-                    org.odpi.openmetadata.platformservices.properties.ServerStatus platformServerStatus = platformServicesClient.getServerStatus(clientUserId, serverName);
+                    ServerStatus platformServerStatus = platformServicesClient.getServerStatus(clientUserId, serverName);
                     
                     /*
                      * Add code here
@@ -146,16 +146,30 @@ Now it is time to start `mds1` and observe the changes to `EgeriaPlatformReport`
                                                                                        serverName,
                                                                                        platformURLRoot);
     
-    org.odpi.openmetadata.adminservices.properties.ServerStatus adminServerStatus = serverOperationsClient.getServerStatus();
+    ServerServicesStatus adminServerStatus = serverOperationsClient.getServerStatus();
     
     ```
-    The status of the server (and its nested services) is one of 5 values:
+    The `adminServerStatus` returned from `getServerStatus` includes:
+
+    - `serverName` - Name of the server.
+    - `serverType` - Derived by the administration services when it starts the server.  It is based on an assessment of the services requested in the configuration document.
+    - `serverStartTime` - The most recent date/time that the server started.
+    - `serverActiveStatus` - The running status of the server, which is one of 5 values:
+        - `Unknown` - The state of the server is unknown.  This is equivalent to a null value.
+        - `Starting` - The server is starting.
+        - `Running` - The server has completed start up and is running.
+        - `Stopping` - The server has received a request to shutdown.
+        - `Inactive` - The server is not running.
+    - `services` - The list of the services of the server.  For each entry:
+        - `serviceName` - the name of the service.
+        - `serviceStatus` - the running status of the service, which is one of 5 values:
+            - `Unknown` - The state of the service is unknown.  This is equivalent to a null value.
+            - `Starting` - The service is starting.
+            - `Running` - The service has completed start up and is running.
+            - `Stopping` - The service has received a request to shutdown.
+            - `Inactive` - The service is not running.
     
-    - Unknown - The state of the server is unknown.  This is equivalent to a null value.
-    - Starting - The server is starting.
-    - Running - The server has completed start up and is running.
-    - Stopping - The server has received a request to shutdown.
-    - Inactive - The server is not running.
+ 
     
-    The server type is derived by the administration services when it starts the server.  It is based on an assessment of the services requested in the configuration document.
+    
     

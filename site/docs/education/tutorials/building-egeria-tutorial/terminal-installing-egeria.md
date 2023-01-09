@@ -16,10 +16,10 @@ The name of the files is determined by the release level of the code that you [d
 ```bash
 antrun                                                  egeria-3.12-SNAPSHOT-distribution
 archive-tmp                                             egeria-3.12-SNAPSHOT-distribution.tar.gz
-egeria-3.12-SNAPSHOT-deploy                              open-metadata-assemblies-3.12-SNAPSHOT-javadoc.jar
-egeria-3.12-SNAPSHOT-deploy.tar.gz                       open-metadata-assemblies-3.12-SNAPSHOT-sources.jar
+egeria-3.12-SNAPSHOT-deploy                             open-metadata-assemblies-3.12-SNAPSHOT-javadoc.jar
+egeria-3.12-SNAPSHOT-deploy.tar.gz                      open-metadata-assemblies-3.12-SNAPSHOT-sources.jar
 ```
-The install image tar file is `{{release}}-distribution.tar.gz` or `egeria-3.12-SNAPSHOT-distribution.tar.gz` in this example.
+The distribution tar file is `{{release}}-distribution.tar.gz` or `egeria-3.12-SNAPSHOT-distribution.tar.gz` in this example.
 
 Create a directory for the install and copy the tar file into it.
 The two commands shown below create an install directory at the same level in the

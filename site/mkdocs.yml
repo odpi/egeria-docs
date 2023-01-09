@@ -197,7 +197,7 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - Learning:
       - Learning Overview: education/index.md
-      - Dojo (Jan 2022):
+      - Dojos:
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
               - Introduction to 'Running Egeria' day: education/egeria-dojo/running-egeria/running-egeria-intro.md

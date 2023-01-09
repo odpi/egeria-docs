@@ -51,7 +51,6 @@ Egeria offers the services to build a catalog with the following types of inform
 This is built on an [extensible type system](/types) that allows further information to be catalogued.  [Automation](#scaling-the-asset-catalog-through-automation) is used to expand the contents of your asset catalog without creating a huge workload for your people.
 
 
- 
 ### Basic asset properties
 
 ![Basic asset properties](basic-asset-properties.svg)
@@ -290,7 +289,7 @@ Therefore, as we look at the different types of automation, each comes with its 
 
 Egeria offers the following approaches to cataloging assets:
 
-- [Templated cataloging](/features/features/templated-cataloging/overview) - copying predefined assets.
+- [Templated cataloging](/features/templated-cataloguing/overview) - copying predefined assets.
 - [Integrated cataloging](/features/integrated-cataloging/overview) - automated extraction of metadata from third party technologies.
 - [Discovery and stewardship](/features/discovery-and-stewardship/overview) - analysis of asset contents to create metadata
 

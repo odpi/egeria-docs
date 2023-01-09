@@ -60,6 +60,28 @@ This dojo was last tested using Egeria release 3.14.
     ??? tip "Downloading (cloning) Egeria's git repositories ..."
         --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
 
+    These next steps build the Egeria platform and then install it ready for the dojo.
+    
+    ??? tip "Build Egeria's OMAGServerPlatform"
+        From a command window, use the `pwd` command to make sure you are in the `../egeria-main-libraries/egeria` directory created when you cloned the `egeria.git` repository.
+        
+        ```bash
+        $ pwd
+        /Users/mandy-chessell/egeria-main-libraries/egeria
+        $
+        ```
+
+        Enter the following command to build the egeria libraries:
+
+        ```bash
+        ./gradlew build
+        ```
+
+        After about 15 minutes you will see the **BUILD SUCCESSFUL** message.
+
+    ??? tip "Installing Egeria's core libraries (15 mins)"
+        --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
+    
     There is a template git repository that contains a set of projects to support you as you work through the developer dojo exercises.
 
     ??? tip "Create a git repository for your code ..."
@@ -81,30 +103,6 @@ This dojo was last tested using Egeria release 3.14.
         --8<-- "docs/guides/developer/developer-choices.md"
         
         In this dojo, you will have an opportunity to build and run Java utilities and connectors.  However before you get to the coding, you will spend some time setting up your development and test environment.
-        
-    ??? beginner "Setting up your IDE to use Egeria (30 mins)"
-        
-        You need to bring the main `egeria.git` code into IntelliJ to build its platform and clients.
-        
-        ??? beginner "Open egeria.git in IntelliJ"
-            --8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
-            
-        ??? beginner "Get the latest code - for SNAPSHOT releases only"
-            If you are using a SNAPSHOT release of Egeria, it is worthwhile pulling down the latest code from the git repository.
-            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
-            Use the `git pull` command to get the latest code onto your machine.
-            
-        Now build the egeria.git repository.  For the Dojo, it is OK to use the *Quick Build* option when offered.
-
-        ??? beginner "Building Egeria's core libraries (15 mins)"
-            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-git.md"
-        
-        Once Egeria's core libraries are built, it is helpful to install Egeria in a directory that is easy to find.
-        
-        ??? beginner "Installing Egeria's core libraries (15 mins)"
-            ### Installing Egeria
-            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
-            --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
 
     ??? beginner "Setting up your Test environment (30 mins)"
     

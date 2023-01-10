@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Creating a connector for application use
+### Creating a connector for application use
 
 The Asset Consumer OMAS supports a REST API to extract metadata from the open metadata repositories
 linked to the same open metadata cohort as the Asset Consumer OMAS.  It also has a Java client that
@@ -10,7 +10,7 @@ embedded Connector Broker.
 
 The Connector Broker is an [Open Connector Framework (OCF)](/frameworks/ocf/overview) component
 that is able to create and configure instances of compliant connectors.  It is passed a [Connection](/concepts/connection)
-object which has all of the properties needed to create the connector.  
+object which has all the properties needed to create the connector.  
 
 The Asset Consumer OMAS java client
 extracts the Connection object from the open metadata repositories and then calls the Connector Broker.

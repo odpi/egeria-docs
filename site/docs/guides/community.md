@@ -3,7 +3,7 @@
 
 # Community Guide
 
-This project welcomes contributors from any organization or background, provided they are willing to follow the simple processes outlined below, as well as adhere to the [Code of Conduct :material-github:](https://github.com/odpi/egeria/blob/master/CODE_OF_CONDUCT.md){ target=gh }.
+This project welcomes contributors from any organization or background, provided they are willing to follow the simple processes outlined below, as well as adhere to the [Code of Conduct :material-github:](https://github.com/odpi/egeria/blob/main/CODE_OF_CONDUCT.md){ target=gh }.
 
 ## Joining the community
 
@@ -22,7 +22,7 @@ We have a variety of weekly and bi-weekly meetings to which all are welcome:
 
 ### Asynchronous dialog
 
-Egeria uses the [LF AI & Data Slack community :material-slack:](https://lfaifoundation.slack.com/archives/C01F40J2XA8){ target=slack } to provide an ongoing dialogue between members. This creates a recorded discussion of design decisions and discussions that complement the project meetings.
+Egeria uses the [LF AI & Data Slack community :material-slack:](https://slack.lfaidata.foundation){ target=slack } to provide an ongoing dialogue between members. This creates a recorded discussion of design decisions and discussions that complement the project meetings.
 
 Follow the link above and register with the LF AI & Data Slack service using your email address. Once signed in you can see all the active Slack channels.
 
@@ -38,10 +38,9 @@ The community tends to use the [mailing list :material-dock-window:](https://lis
 
 ### Other websites and resources
 
-- [Previous Webinars :material-github:](../education/previous-webinars){ target=gh } - previous virtual events covering topics of interest.
-- [Planned Webinars :material-github:](../education/planned-webinars){ target=gh } - planned virtual events covering topics of interest.
-- [Workshops :material-github:](https://github.com/odpi/data-governance/tree/master/workshops){ target=gh } - face-to-face workshops promoting discussion and education on Egeria
-- [Presentations :material-github:](https://github.com/odpi/data-governance/tree/master/presentations){ target=gh } - presentations given at conferences and private gatherings
+- [Webinars :material-github:](../../education/webinar-program/overview){ target=gh } - virtual events covering topics of interest.
+- [Workshops :material-github:](https://github.com/odpi/data-governance/tree/main/workshops){ target=gh } - face-to-face workshops promoting discussion and education on Egeria
+- [Presentations :material-github:](https://github.com/odpi/data-governance/tree/main/presentations){ target=gh } - presentations given at conferences and private gatherings
 
 ## Git repositories
 
@@ -58,7 +57,7 @@ Egeria uses [GitHub's fork and pull model :material-dock-window:](https://help.g
 
 Each change should have a [GitHub issue](https://github.com/odpi/egeria/issues) explaining why the change is being made. The new or updated content should follow the Egeria [developer guidelines](/guides/contributor/guidelines).
 
-Every contribution is signed to say that the contributor has the rights to make the contribution and agrees with the [Developer Certificate of Origin (DCO) :material-github:](https://github.com/odpi/egeria/blob/master/developer-resources/why-the-dco.md){ target=gh }
+Every contribution is signed to say that the contributor has the rights to make the contribution and agrees with the [Developer Certificate of Origin (DCO) :material-github:](https://github.com/odpi/egeria/blob/main/developer-resources/why-the-dco.md){ target=gh }
 
 ## Creating a Linux Foundation account
 

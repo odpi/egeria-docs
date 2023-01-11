@@ -10,11 +10,11 @@ hide:
 
 # Data Files Monitor Integration Connector
 
-??? info "Connector details"
-    - Connector Category: [Integration Connector](/connectors/integration-connector)
-    - Hosting Service: [Files Integrator OMIS](/services/omis/files-integrator)
+!!! info "Connector details"
+    - Connector Category: [Integration Connector](/concepts/integration-connector)
+    - Hosting Service: [Files Integrator OMIS](/services/omis/files-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
-    - Source Module: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
+    - Source Module: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
     - Jar File Name: `files-integration-connectors.jar`
 
 The data files monitor integration connector monitors changes in a file directory (folder) and updates the open metadata repository/repositories to reflect the changes to both the files and folders underneath it.

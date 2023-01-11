@@ -3,7 +3,7 @@
 
 ### Loading Egeria into IntelliJ IDEA
 
-Once you have a branch of a git repository you can load the contents into IntelliJ.
+Once you have a copy of a git repository on your local disk you can load the contents into IntelliJ.
 
 Go to the **File** menu and select **Open**
 

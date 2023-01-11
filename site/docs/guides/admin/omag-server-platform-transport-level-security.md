@@ -69,7 +69,7 @@ to be set:
 
 In addition an additional parameter is provided which causes ssl verification to be skipped:
 
-* `strict.ssl`                          true / false : If set to true skips checks on certificate
+* `strict.ssl`                          true / false : If set to false skips checks on certificate (default = true)
 
 For further details on these and other less common configuration options, refer to the Spring Docs
 
@@ -89,7 +89,7 @@ In addition, for any executable jars provided by Egeria - such as samples, an ad
 parameter will cause ssl verification to be skipped. This is only recommended for test
 and development
 
-* `strict.ssl`                            true / false : If set to true skips checks on certificate
+* `strict.ssl`                            true / false : If set to false skips checks on certificate (default = true)
 
 Note that in the case of Java Clients, these are system properties, and do
 not use spring conventions. 
@@ -97,12 +97,12 @@ not use spring conventions.
 ## Other clients
 
 Similar principles to those documented for java should apply. If you need further assistance please
-contact the team on our slack channel at http://slack.lfai.foundation . A Pull Request (or issue) with contributed documentation
+contact the team on our slack channel at http://slack.lfaidata.foundation . A Pull Request (or issue) with contributed documentation
 is very welcome !
 
 ## Example script to launch Egeria
 
-Example certificates are provided [on GitHub](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-deployment/certificates) 
+Example certificates are provided [on GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/certificates) 
 
 As an example of running the Egeria server chassis with the certificates generated above, add
 the following options when launching the OMAG Server Platform jar file:
@@ -128,9 +128,9 @@ could be distinct if needed.
 ## Creating your own certificates
 
 The example certificates are fine for development.
-However it is important to have your own certificates for a production environment.
+However, it is important to have your own certificates for a production environment.
 
-Example configurations and scripts can be found in [open-metadata-resources/open-metadata-deployment/certificates](../../../../open-metadata-resources/open-metadata-deployment/certificates)
+Example configurations and scripts can be found in [open-metadata-resources/open-metadata-deployment/certificates](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/certificates)
 
 An example script (MacOS/Linux)to create certificates is provided in `gensamplecerts.sh`. It is intended only as an example.
 It requires the `openssl` tool and `keytool`. Deployment frameworks in cloud services may also offer support to

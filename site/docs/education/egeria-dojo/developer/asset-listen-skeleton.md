@@ -9,9 +9,9 @@ The `AssetConsumerEventListener` is highlighted in red in your code.  This is be
 Paste this code between the curly braces of the `AssetListen` class.
 
 ```java linenums="1"
-    private String serverName;
-    private String platformURLRoot;
-    private String clientUserId;
+    private final String serverName;
+    private final String platformURLRoot;
+    private final String clientUserId;
 
     private AssetConsumer client;
 
@@ -42,7 +42,7 @@ Paste this code between the curly braces of the `AssetListen` class.
 
 
     /**
-     * This method displays some of the data from the CSV File.
+     * This method displays some the data from the CSV File.
      *
      * @param connector connector to the CSV file
      */
@@ -112,28 +112,36 @@ Paste this code between the curly braces of the `AssetListen` class.
 
 
     /**
-     * Print out details of an asset.
+     * Process an event that was published by the Asset Consumer OMAS.
      *
-     * @param asset retrieved asset
+     * @param event event object - call getEventType to find out what type of event.
      */
-    private void printAsset(Asset asset)
+    public void processEvent(AssetConsumerOutTopicEvent event)
     {
+        System.out.println("------------------------------------------------------------------------");
+        System.out.println("EVENT: " + event.getEventType().getEventTypeName() + " - for asset " + event.getElementHeader().getGUID());
+
         System.out.println("------------------------------------------------------------------------");
 
         System.out.println("  Asset Details:");
-        System.out.println("    type: " + asset.getType().getElementTypeName());
-        System.out.println("    guid: " + asset.getGUID());
-        System.out.println("    qualifiedName: " + asset.getQualifiedName());
-        System.out.println("    displayName: " + asset.getDisplayName());
-        System.out.println("    description: " + asset.getDescription());
-        System.out.println("    member of zones: " + asset.getZoneMembership());
+        System.out.println("    type: " + event.getElementHeader().getType().getTypeName());
+        System.out.println("    guid: " + event.getElementHeader().getGUID());
+        if (event.getElementProperties() != null)
+        {
+            for (String key : event.getElementProperties().keySet())
+            {
+                System.out.println("    " + key + ": " + event.getElementProperties().get(key));
+            }
+        }
 
         List<String>          classifications = new ArrayList<>();
-        ElementClassification latestChange = null;
+        ElementClassification latestChange    = null;
 
-        if (asset.getClassifications() != null)
+        if (event.getElementHeader().getClassifications() != null)
         {
-            for (ElementClassification classification : asset.getClassifications())
+            System.out.println("    asset classifications " + event.getElementHeader().getClassifications());
+
+            for (ElementClassification classification : event.getElementHeader().getClassifications())
             {
                 if (classification != null)
                 {
@@ -163,14 +171,14 @@ Paste this code between the curly braces of the `AssetListen` class.
 
         }
 
-        System.out.println("    other classifications: " + classifications.toString());
+        System.out.println("    other classifications: " + classifications);
 
         try
         {
             /*
              * Is there a connector associated with the asset?
              */
-            Connector connector = client.getConnectorForAsset(clientUserId, asset.getGUID());
+            Connector connector = client.getConnectorForAsset(clientUserId, event.getElementHeader().getGUID());
 
             if (connector instanceof CSVFileStoreConnector)
             {
@@ -179,35 +187,7 @@ Paste this code between the curly braces of the `AssetListen` class.
         }
         catch (Exception error)
         {
-            System.out.println("Unable to use connector for asset: " + asset.getGUID());
-        }
-    }
-
-
-    /**
-     * Process an event that was published by the Asset Consumer OMAS.
-     *
-     * @param event event object - call getEventType to find out what type of event.
-     */
-    public void processEvent(AssetConsumerEvent event)
-    {
-        if (event.getEventType() == AssetConsumerEventType.NEW_ASSET_EVENT)
-        {
-            NewAssetEvent assetEvent = (NewAssetEvent)event;
-
-            System.out.println("------------------------------------------------------------------------");
-            System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID());
-
-            this.printAsset(assetEvent.getAsset());
-        }
-        else if (event.getEventType() == AssetConsumerEventType.UPDATED_ASSET_EVENT)
-        {
-            UpdatedAssetEvent assetEvent = (UpdatedAssetEvent)event;
-
-            System.out.println("------------------------------------------------------------------------");
-            System.out.println("EVENT: " + assetEvent.getEventType().getEventTypeName() + " - for asset " + assetEvent.getAsset().getGUID() + " - at " + assetEvent.getUpdateTime());
-
-            this.printAsset(assetEvent.getAsset());
+            System.out.println("Unable to use connector for asset: " + event.getElementHeader().getGUID());
         }
     }
 

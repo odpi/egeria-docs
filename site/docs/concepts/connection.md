@@ -9,11 +9,11 @@ of a [connector](/concepts/connector).
 ## Inside a Connection
 
 A Connection contains properties about the specific use of the connector, such as
-user Id and password, or parameters that control the scope or resources that should be
+user id and password, or parameters that control the scope or resources that should be
 made available to the connector.
 It links to an optional **Endpoint** and/or **ConnectorType** object.  
 
-* **ConnectorType** - this is a object that describes the type of the connector that needs to be created in order to
+* **ConnectorType** - this is an object that describes the type of the connector that needs to be created in order to
 access the Asset.
 * **Endpoint** - this is the object that describes the server endpoint where the asset is accessed from.
 
@@ -22,7 +22,7 @@ Figure 1 shows the structure of a connection. Connector types and endpoints can 
 ![Figure 1](/concepts/connection.svg)
 > **Figure 1:** Connection structure
 
-Connections are typically managed in a metadata repository but they can also be manually populated.
+Connections are typically managed in a metadata repository, but they can also be manually populated.
 
 ## Virtual connections
 
@@ -96,7 +96,7 @@ Connections can be created in the open metadata repositories through the followi
 
 The [Administration Guide](/guides/admin) describes how to configure Egeria's OMAG Server Platforms and Servers.  Both the platform and the servers used connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies.  This means that the configuration includes Connection definitions for these connectors.
 
-All of these interfaces have Java clients that enable you to set up the connection using the OCF Connection bean. However if you want to use the REST API directly, then you need to specify the connection in JSON.
+All of these interfaces have Java clients that enable you to set up the connection using the OCF Connection bean. However, if you want to use the REST API directly, then you need to specify the connection in JSON.
 
 Egeria's JSON structures map one-to-ene with the properties in the equivalent Java beans and also include a `class` property that includes the name of the class that it maps to.  So a simple Connection object would look something like this in JSON:
 

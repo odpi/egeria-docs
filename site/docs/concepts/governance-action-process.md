@@ -21,13 +21,13 @@ The first governance action to run is *Validate Asset*.  It retrieves the asset 
 
 Governance actions from the same governance action processes can run in parallel if the predecessor governance actions produces multiple guards. 
 
-![Example 1](governance-action-process-example-1.svg)
+![Example 1](/concepts/governance-action-process-example-1.svg)
 > **Example 1:** Governance Action Process to validate and augment a newly created asset
 
 Governance action processes can include any [type of governance service](/concepts/governance-service).
 Example 2 shows an [open discovery service](/concepts/open-discovery-service) amongst the [governance action services](/concepts/governance-action-service).
 
-![Example 2](governance-action-process-example-2.svg)
+![Example 2](/concepts/governance-action-process-example-2.svg)
 > **Example 2:** Governance Action Process to validate and augment a newly created asset
 
 ## Capturing lineage for a governance action process
@@ -40,7 +40,7 @@ The diagram below shows a governance action process assembly tool taking in info
 
 Once the definition of the governance action process is available, an instance of the process can be started, either by a [watchdog governance action service](/concepts/governance-action-service) or through a direct call to the Governance Engine OMAS.  Whichever mechanism is used, it results in the Governance Engine OMAS using the definition to choreograph the creation of [governance action](/concepts/governance-action) entities that drive the execution of the governance services in the [Engine Host](/concepts/engine-host).
 
-![Lifecycle](governance-action-process-lifecycle.svg)
+![Lifecycle](/concepts/governance-action-process-lifecycle.svg)
 
 
 !!! education "Further information"

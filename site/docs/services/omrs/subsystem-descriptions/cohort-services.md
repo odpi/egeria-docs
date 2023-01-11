@@ -4,7 +4,7 @@
 # Cohort Services
 
 The cohort services manage the exchange of metadata between a repository and
-other members of an **[open metadata repository cohort](../open-metadata-repository-cohort.md)**.
+other members of an **[open metadata repository cohort](../cohort.md)**.
 It includes the following components:
 
 * **[OMRS Metadata Highway Manager](../component-descriptions/metadata-highway-manager.md)** - Manages the OMRS Cohort Manager for each

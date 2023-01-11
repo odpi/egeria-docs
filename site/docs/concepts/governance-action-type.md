@@ -10,7 +10,7 @@ Governance action types are defined through the [Governance Engine OMAS](/servic
 
 ## Open metadata type definition
 
-The governance action type is defined in the [0462 Governance Action Type](/types/0462-Governance-Action-Types) model of the Open Metadata Types.
+The governance action type is defined in the [0462 Governance Action Type](/types/4/0462-Governance-Action-Types) model of the Open Metadata Types.
 
 
 --8<-- "snippets/abbr.md"

@@ -21,7 +21,7 @@ URL and port number (if needed) for the server where the asset is located
 (or at least accessible by the connector).  For file-based resources, this is typically the name of the file.
 * **protocol** - The communication protocol that the connection should use to connect to the server.
 * **encryptionMethod** - Describes the encryption method to use (if any).  This is an open value allowing
-information needed by the connector user to retrieve all of the information they need to work with
+information needed by the connector user to retrieve all the information they need to work with
 the endpoint.
 * **additionalProperties** - Any additional properties that the connector need to know in order to
 access the Asset.

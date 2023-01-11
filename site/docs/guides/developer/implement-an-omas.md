@@ -31,19 +31,19 @@ There may be client interfaces and implementations for different programming lan
 Typically Java is supported and this is assumed in the descriptions that follow.
 * ***omas-name*-server** - a module containing the server-side implementation of the OMAS.
 This module registers with the server administration, supports the implementation or the API and the eventing interface
-and interfaces with the [Open Metadata Repository Services (OMRS)](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/repository-services).
+and interfaces with the [Open Metadata Repository Services (OMRS)](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services).
 * ***omas-name*-spring** - a module containing the server-side API decorated with [Spring](/guides/contributor/runtime/#spring) 
 annotations.  This module is designed to be replaceable with a module using other REST annotation libraries so its
 API should be 1-1 with the *omas-name*-server API.
 
 Each OMAS should also have an FVT test suite called ***omas-name*-fvt** implemented
-under the [access-services-fvt](https://github.com/odpi/egeria/tree/master/open-metadata-test/open-metadata-fvt/access-services-fvt) module.
+under the [access-services-fvt](https://github.com/odpi/egeria/tree/main/open-metadata-test/open-metadata-fvt/access-services-fvt) module.
 This is in addition to the unit tests for the module's components that are implemented within each module.
 The FVT test suite should test all of the API calls through to the repository to show that the OMAS
 can find, create, update and delete all of the necessary metadata on behalf of its consumer.
 
 It is also expected that each OMAS will feature in multiple demos, samples and scenarios found under
-[open-metadata-resources](https://github.com/odpi/egeria/tree/master/open-metadata-resources).  However, these are not the responsibility of
+[open-metadata-resources](https://github.com/odpi/egeria/tree/main/open-metadata-resources).  However, these are not the responsibility of
 the OMAS component owner.
 
 ### Java package names

@@ -3,19 +3,22 @@
 
 # Learning about Egeria
 
-Egeria is a big project tackling a complex problem.  There is a lot to learn.  
-The choices below give you the opportunity to target your learning to both your immediate and long term needs. 
+--8<-- "snippets/getting-started.md"
 
-## The Egeria dojos
+Egeria is a big project tackling a complex problem.  There is a lot to learn. The choices below give you the opportunity to target your learning to both your immediate and long term needs. 
+
+## The Egeria Dojos
 
 Our dojos are designed to provide guided learning to help you get up to speed quickly with different topics.
 
-We are currently in the process of rewriting our Dojos. If you are starting in 2022 it is recommended
-you start with our new [Egeria Dojo](/education/egeria-dojo) which now has a complete
-[Day 1](/education/egeria-dojo/running-egeria/running-egeria-intro) and [Day 2](/education/egeria-dojo/developer/overview)
+We are currently in the process of rewriting our Dojos. There are three dojos available:
 
-You can still also see the [Original Egeria Dojo](/getting-started/egeria-dojo) but it is no longer recommended you
-work through these, and instead look for future days of the updated dojo.
+* [Day 1](/education/egeria-dojo/running-egeria/running-egeria-intro) - How to run Egeria.
+* [Day 2](/education/egeria-dojo/developer/overview) - How to build connectors and utilities that use Egeria.
+* [Day 3](/education/egeria-dojo/metadata-governance/overview) - How to manage and maintain yor metadata.
+
+You can still also see the [Original Egeria Dojo](/getting-started/egeria-dojo), but it is not recommended that you rely on it since it is no longer tested.  Instead, look for future days of the updated dojo.
+
 ## Hands on Labs
 
 The [Hands on Open Metadata Labs](/education/open-metadata-labs/overview) provide an interactive environment that allow you to experiment with different capabilities of Egeria.  They are organized by role so you can select the roles of interest to you.

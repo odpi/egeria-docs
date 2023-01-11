@@ -81,7 +81,7 @@ $ docker pull odpi/egeria
 -bash: docker: command not found
 ```
 
-If all is well, the image downloads.  Notice it is pulling the latest master build by default.
+If all is well, the image downloads.  Notice it is pulling the latest main build by default.
 
 ```bash
 $ docker pull odpi/egeria

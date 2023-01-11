@@ -9,7 +9,10 @@ An **open connector** is a Java client to a [digital resource](/concepts/resourc
   [Java Database Connectivity (JDBC)](https://en.wikipedia.org/wiki/Java_Database_Connectivity) specification.  The documentation for this interface is found with the specific connector. 
 
 - A generalized interface to extract all the open metadata known about the resource.  This is referred to as the [**connected asset properties**](/concepts/connected-asset-properties).
-  
+
+![Connector Use](using-jdbc-connector.svg)
+> This is an example of the [JDBC Resource connector](/connectors/resource/jdbc-resource-connector)
+
 An application creates a connector using the [Asset Consumer OMAS client](creating-a-connector.md). When a [resource is catalogued](/concepts/assets) in  open metadata,
 there is a [Connection](/concepts/connection) object linked to it.  This defines all the properties required to create the connector.
 

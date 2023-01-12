@@ -26,8 +26,6 @@ with [digital resources](/concepts/resource) such as:
 
 These resources are represented in open metadata as [assets](/concepts/asset).
 
-![Overview](asset-consumer-overview.svg)
-
 Asset Consumer OMAS supports:
 
 * the retrieval of [connection](/concepts/connection) objects from the open metadata repositories.  A connection object is used to create a connector to an asset.
@@ -69,6 +67,8 @@ The Asset Consumer OMAS offers the following types of interface:
 * [REST API](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetconsumer/server/spring/package-summary.html).
 
 Connectors are only available through the Java client.
+
+![Overview](asset-consumer-overview.svg)
 
 ## Configuration
 

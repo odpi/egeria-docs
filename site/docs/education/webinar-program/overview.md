@@ -32,7 +32,7 @@ The material for our past webinars is listed below along with links to the recor
          
     ???+ education "Session Replay ..."
          <div class="video-wrapper">
-             <iframe width="560" height="315" src="https://youtu.be/1BPHUgzsUos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1BPHUgzsUos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
          </div> 
          
     ??? education "Related Documentation"
@@ -51,7 +51,7 @@ The material for our past webinars is listed below along with links to the recor
          
     ???+ education "Session Replay ..."
          <div class="video-wrapper">
-             <iframe width="560" height="315" src="https://www.youtube.com/watch?v=xYBpon_ct-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/xYBpon_ct-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>         
          </div> 
          
     ??? education "Related Documentation"
@@ -64,12 +64,23 @@ The material for our past webinars is listed below along with links to the recor
  
     ???+ education "Session Replay ..."
          <div class="video-wrapper">
-             <iframe width="560" height="315" src="https://www.youtube.com/watch?v=wz2OV3rpReg&t=9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/wz2OV3rpReg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>           
          </div> 
 
     ??? education "Related Documentation"
         - [Repository Connectors](https://egeria-project.org/concepts/repository-connector/?h=repository)
 
+???+ education "Using a native Egeria Connector.  May 2022 - Chris Grote"
+
+    This session goes through how to use a native connector.
+ 
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/vNtvwZcBnyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+         </div>
+
+    ??? education "Related Documentation"
+        - [Repository Connectors](https://egeria-project.org/concepts/repository-connector/?h=repository)
 
 
 ???+ education "Connector comparison - choices on how to bring your data catalog to Egeria.  April 2022 - Mandy Chessell"

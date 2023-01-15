@@ -23,8 +23,8 @@ The other basic properties have values that can be changed through the admin ser
 | `maxPageSize` | The maximum page size that can be set on requests to the server. The default value is `1000`. A value of zero means unlimited page size. Although supported, the zero value is not recommended because it provides no protection from a large request denial of service attack.                                                                  |
 
 The sections that follow cover how to set up these values.
-      
-??? info "Set server type name"
+
+???+ beginner "Fine-grained helper command"
     ### Set server type name
     
     The server type name should be set to something that describes the OMAG Server's role. It may be the name of a specific product that it is enabling, or a role in the metadata and governance landscape.
@@ -33,8 +33,8 @@ The sections that follow cover how to set up these values.
         ```
         {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-type?typeName="{{serverTypeName}}"
         ```
-    
-??? info "Set organization name"
+
+???+ beginner "Fine-grained helper command"
     ### Set organization name
     
     The organization name may be the owning organization or department or team supported by the server.
@@ -43,8 +43,8 @@ The sections that follow cover how to set up these values.
         ```
         {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/organization-name?name="{{organizationName}}"
         ```
-    
-??? info "Set the server's userId and optional password"
+
+???+ beginner "Fine-grained helper command"
     ### Set the server's userId and optional password
     
     The server's userId is used when processing requests that do not have an end user, such as receiving an event from a topic. The default value is `OMAGServer`. Ideally each server should have its own user ID so it is possible to restrict the resources that each server has access to.
@@ -61,7 +61,7 @@ The sections that follow cover how to set up these values.
         {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-user-password?password="{{serverUserPassword}}"
         ```
 
-??? info "Set the maximum page size for REST API requests"    
+???+ beginner "Fine-grained helper command"
     ### Set the maximum page size for REST API requests
     
     The maximum page size value sets an upper limit on the number of results that a caller can request on any paging REST API to this server. Setting maximum page size helps to prevent a denial of service attack that uses very large requests to overwhelm the server. A value of `0` means no limit, and leaves the server open to such attacks.

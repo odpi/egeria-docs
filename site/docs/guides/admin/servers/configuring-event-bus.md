@@ -20,39 +20,40 @@ The following command creates information about the event bus. This information 
 
 It is possible to add arbitrary name/value pairs as JSON in the request body. The correct properties to use are defined in the connector type for the event bus.
 
-!!! post "POST - configure event bus"
-    ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/event-bus
-    ```
-
-???+ example "Example: Apache Kafka"
-    For example, when using Apache Kafka as your event bus you may want to configure properties that control the behavior of the consumer that receives events and the producer that sends events. This is a typical set of producer and consumer properties:
-
-    ```json linenums="1"
-    {
-    	"producer": {
-    		"bootstrap.servers":"localhost:9092",
-    		"acks":"all",
-    		"retries":"0",
-    		"batch.size":"16384",
-    		"linger.ms":"1",
-    		"buffer.memory":"33554432",
-    		"max.request.size":"10485760",
-    		"key.serializer":"org.apache.kafka.common.serialization.StringSerializer",
-    		"value.serializer":"org.apache.kafka.common.serialization.StringSerializer",
-    		"kafka.omrs.topic.id":"cocoCohort"
-    	},
-    	"consumer": {
-       		"bootstrap.servers":"localhost:9092",
-       		"zookeeper.session.timeout.ms":"400",
-       		"zookeeper.sync.time.ms":"200",
-       		"fetch.message.max.bytes":"10485760",
-       		"max.partition.fetch.bytes":"10485760",
-       		"key.deserializer":"org.apache.kafka.common.serialization.StringDeserializer",
-       		"value.deserializer":"org.apache.kafka.common.serialization.StringDeserializer",
-       		"kafka.omrs.topic.id":"cocoCohort"
-    	}
-    }
-    ```
-
-    A different type of event bus would use different properties.
+???+ beginner "Fine-grained helper command"
+    !!! post "POST - configure event bus"
+        ```
+        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/event-bus
+        ```
+    
+    ???+ example "Example: Apache Kafka"
+        For example, when using Apache Kafka as your event bus you may want to configure properties that control the behavior of the consumer that receives events and the producer that sends events. This is a typical set of producer and consumer properties:
+    
+        ```json linenums="1"
+        {
+        	"producer": {
+        		"bootstrap.servers":"localhost:9092",
+        		"acks":"all",
+        		"retries":"0",
+        		"batch.size":"16384",
+        		"linger.ms":"1",
+        		"buffer.memory":"33554432",
+        		"max.request.size":"10485760",
+        		"key.serializer":"org.apache.kafka.common.serialization.StringSerializer",
+        		"value.serializer":"org.apache.kafka.common.serialization.StringSerializer",
+        		"kafka.omrs.topic.id":"cocoCohort"
+        	},
+        	"consumer": {
+           		"bootstrap.servers":"localhost:9092",
+           		"zookeeper.session.timeout.ms":"400",
+           		"zookeeper.sync.time.ms":"200",
+           		"fetch.message.max.bytes":"10485760",
+           		"max.partition.fetch.bytes":"10485760",
+           		"key.deserializer":"org.apache.kafka.common.serialization.StringDeserializer",
+           		"value.deserializer":"org.apache.kafka.common.serialization.StringDeserializer",
+           		"kafka.omrs.topic.id":"cocoCohort"
+        	}
+        }
+        ```
+    
+        A different type of event bus would use different properties.

@@ -13,17 +13,12 @@ An **open connector** is a Java client to a [digital resource](/concepts/resourc
 ![Connector Use](using-jdbc-connector.svg)
 > This is an example of the [JDBC Resource connector](/connectors/resource/jdbc-resource-connector)
 
-An application creates a connector using the [Asset Consumer OMAS client](creating-a-connector.md). When a [resource is catalogued](/concepts/assets) in  open metadata,
-there is a [Connection](/concepts/connection) object linked to it.  This defines all the properties required to create the connector.
+An application creates a connector using the [Asset Consumer OMAS client](/services/omas/asset-consumer/overview/#creating-a-connector-for-application-use). When a [resource is catalogued](/concepts/assets) in  open metadata, there is a [Connection](/concepts/connection) object linked to it.  This defines all the properties required to create the connector.
 
-See [Creating a connector](creating-a-connector.md) for step-by-step instructions on creating connectors.
-Asset Consumer OMAS looks up the Connection object and calls the [Connector Broker](/concepts/connector-broker)
-to create the connector.
+See [Creating a connector](creating-a-connector.md) for step-by-step instructions on creating connectors. Asset Consumer OMAS looks up the Connection object and calls the [Connector Broker](/concepts/connector-broker) to create the connector.
 
-Once the connector is created, an application may use it to retrieve the content of the asset and the connected
-asset properties.
+Once the connector is created, an application may use it to retrieve the content of the asset and the connected asset properties.
 
-When the application has finished with the connector, it should call `disconnect()` to release any resources
-that the connector may be holding.
+When the application has finished with the connector, it should call `disconnect()` to release any resources that the connector may be holding.
 
 ---8<-- "snippets/abbr.md"

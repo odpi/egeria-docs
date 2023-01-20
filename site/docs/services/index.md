@@ -45,7 +45,12 @@ The common services support clients and the registered services that run in the 
 * [Repository Handler](/services/repository-handler) - supports access to multiple related metadata instances from the
 [Open Metadata Repository Services (OMRS)](/services/omrs/overview). It manages the provenance checking, deduplication and translates OMRS exceptions into [Open Connector Framework (OCF)](/frameworks/ocf/overview) exceptions that are
 used extensively across the [Open Metadata Access Services (OMASs)](/services/omas).
-* [OCF Metadata Management](/services/ocf-metadata-management) - provides the *Connected Asset Services* that retrieve metadata about assets, connections and all the different types of metadata defined as [connected asset properties](/concepts/connected-asset-properties) in the [Open Connector Framework (OCF)](/frameworks/ocf/overview).  are available through most [Open Metadata Access Services (OMASs)](/services/omas) clients.
+
+## Framework Services
+
+The framework services provide shared metadata management modules for the server-side services that are used by the [open metadata frameworks](/frameworks).  The REST API services are available through all OMASs.  Many [Open Metadata Access Services (OMASs)](/services/omas) clients also have support.
+
+* [OCF Metadata Management](/services/ocf-metadata-management) - provides the *Connected Asset Services* that retrieve metadata about assets, connections and all the different types of metadata defined as [connected asset properties](/concepts/connected-asset-properties) in the [Open Connector Framework (OCF)](/frameworks/ocf/overview). 
 * [GAF Metadata Management](/services/gaf-metadata-management) - provides the *Metadata Store Services* that are defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview) and are available through most [Open Metadata Access Services (OMASs)](/services/omas) clients.
 
 ## Governance Server Services

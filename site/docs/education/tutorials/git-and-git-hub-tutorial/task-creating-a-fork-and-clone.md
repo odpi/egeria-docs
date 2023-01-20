@@ -22,7 +22,7 @@ Figure 2 illustrates the forking process.
 > **Figure 2:** Forking an Egeria git repository
 
 To create your fork, from your browser, navigate to the [Egeria GitHub URL](https://github.com/odpi/egeria),
-and logging into the github UI with a 
+and log into the github UI with 
 [your GitHub id](/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id).
 You will then see a 'Fork' button at the top right, and should click this to 
 create your own fork to work with Egeria. 

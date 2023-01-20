@@ -19,7 +19,7 @@ Finally, Egeria's open metadata archives have a wide set of uses in distributing
 
 After completing developer day of the egeria dojo you should feel comfortable calling Egeria's APIs, writing connectors and working with open metadata archives.
 
-This dojo was last tested using Egeria release 3.12.
+This dojo was last tested using Egeria release 3.14.
 
 --8<-- "docs/education/egeria-dojo/ski-run-colours.md"
 
@@ -29,7 +29,7 @@ This dojo was last tested using Egeria release 3.12.
 
     !!! attention "Think about your machine type ..."
 
-        The instructions below cover fairly standard machine architectures and set ups.  If you are using, say the new M1 chip in your Mac, or are running a work machine that has been locked down by your company, then you may need to take additional actions, install additional software and enable additional permissions. In all cases, check that the software being installed is correct for your machine type and its approved uses.
+        The instructions below cover fairly standard machine architectures and set ups.  If you are using, say the new M1 chip in your Mac, or Windows, or are running a work machine that has been locked down by your company, then you may need to take additional actions, install additional software and enable additional permissions. In all cases, check that the software being installed is correct for your machine type and its approved uses.
     
     Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.
     
@@ -46,17 +46,65 @@ This dojo was last tested using Egeria release 3.12.
     ??? tip "Installing Apache Kafka ..."
         --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
 
+    Egeria's source is on Github ...
+
+    ??? tip "Create a GitHub account ..."
+        --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id.md"
+    
     The dojo makes use of egeria libraries and code samples in the following git repositories and you will need a clone of them on your machine.
     
     - https://github.com/odpi/egeria
     - https://github.com/odpi/egeria-samples
     - https://github.com/odpi/egeria-dev-projects
-    
-    ??? tip "Create a GitHub account ..."
-        --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id.md"
-            
+
     ??? tip "Downloading (cloning) Egeria's git repositories ..."
         --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+
+    These next steps build the Egeria platform and then install it ready for the dojo.
+    
+    ??? tip "Build Egeria's OMAGServerPlatform"
+
+        From a command window, use the `pwd` command to make sure you are in the `../egeria-main-libraries/egeria` directory created when you cloned the `egeria.git` repository.
+        
+        ```bash
+        $ pwd
+        /Users/mandy-chessell/egeria-main-libraries/egeria
+        $
+        ```
+
+        ???+ tip "Release 3.14 and before - patch Egeria's build"
+            Open the build file that creates the distribution:
+            ```bash
+            vi open-metadata-distribution/open-metadata-assemblies/build.gradle
+            ```
+            Scroll down the file until you find the following two lines (lines 184-185):
+            ```bash
+                    include 'content-packs'
+                    include 'sample-data'
+            ```
+            Press the `i` key to enter INSERT mode.  Using the arrow keys to move to the end of the lines, update the path names to the following values and then press the `ESC` key.
+            ```bash
+                    include 'content-packs/*'
+                    include 'sample-data/*/*'
+            ```
+            Enter `:wq` to save and quit the file.
+
+        Enter the following command to build the egeria libraries:
+
+        ```bash
+        ./gradlew build
+        ```
+
+        After about 15 minutes you will see the **BUILD SUCCESSFUL** message.
+
+    ??? tip "Installing Egeria's core libraries (15 mins)"
+        --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
+    
+    There is a template git repository that contains a set of projects to support you as you work through the developer dojo exercises.
+
+    ??? tip "Create a git repository for your code ..."
+
+        ---8<-- "docs/education/egeria-dojo/developer/create-template-repository.md"
 
     Many of the contributors to the Egeria project use the *[IntelliJ IDEA](https://www.jetbrains.com/idea/){ target=dojo-support }* IDE.  Jetbrains offers a [free community edition of IntelliJ](https://www.jetbrains.com/idea/download/) which is sufficient to work with Egeria.  You are free to use any IDE during the dojo, however the instructions will focus on IntelliJ IDEA.
 
@@ -73,36 +121,12 @@ This dojo was last tested using Egeria release 3.12.
         --8<-- "docs/guides/developer/developer-choices.md"
         
         In this dojo, you will have an opportunity to build and run Java utilities and connectors.  However before you get to the coding, you will spend some time setting up your development and test environment.
-        
-    ??? beginner "Setting up your IDE to use Egeria (30 mins)"
-        
-        You need to bring the main `egeria.git` code into IntelliJ to build its platform and clients.
-        
-        ??? beginner "Open egeria.git in IntelliJ"
-            --8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
-            
-        ??? beginner "Get the latest code - for SNAPSHOT releases"
-            If you are using a SNAPSHOT release of Egeria, it is worthwhile pulling down the latest code from the git repository.
-            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
-            Use the `git pull` command to get the latest code onto your machine.
-            
-        Now build the egeria.git repository.  For the Dojo, it is OK to use the *Quick Build* option when offered.
-
-        ??? beginner "Building Egeria's core libraries (15 mins)"
-            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-git.md"
-        
-        Once Egeria's core libraries are built, it is helpful to install Egeria in a directory that is easy to find.
-        
-        ??? beginner "Installing Egeria's core libraries (15 mins)"
-            ### Installing Egeria
-            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
-            --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
 
     ??? beginner "Setting up your Test environment (30 mins)"
     
         The `egeria-dev-projects.git` repository contains the utilities to support your Egeria test environment. This was one of the git repositories that you cloned in the prerequisite tasks.  
         
-        Open the `egeria-dev-projects.git` repository in a **new window** in IntelliJ.  (You will want to look at the `egeria.git` code later.)  
+        Open the `egeria-dev-projects.git` repository in a **new window** in IntelliJ.
         
         ??? beginner "Get the latest code for `egeria-dev-projects.git` ..."
             --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
@@ -165,31 +189,7 @@ This dojo was last tested using Egeria release 3.12.
             
             ??? beginner "Develop AssetListen"
 
-                ??? beginner "Create a new IntelliJ project for AssetListen called `egeria-dojo1`"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-new-project.md"
-                
-                ??? beginner "Create a new *Sources Root* in `egeria-dojo1` under `src` called `main/java`"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-sources-root.md"
-                    
-                ??? beginner "Create a new java package called `egeria.dojo.assetlisten` under the `java` directory"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-java-package.md"
-                
-                ??? beginner "Create a new java class called `AssetListen` in the `egeria.dojo.assetlisten` package"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-java-class.md"
-                
-                ??? beginner "Paste in the skeleton code"
-                    ---8<-- "docs/education/egeria-dojo/developer/asset-listen-skeleton.md"
-                    
-                    ??? beginner "What is HTTPHelper?"
-                        ---8<-- "docs/guides/developer/http-helper/overview.md"
-
-                ??? beginner "Create a Maven POM file"
-                    ---8<-- "docs/guides/developer/building-utilities/creating-pom-file-in-intellij.md"
-                    ---8<-- "docs/education/egeria-dojo/developer/asset-listen-pom-skeleton.md"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-add-as-maven-project.md"
-
-                ??? beginner "Resolve Egeria dependencies in AssetListen"
-                    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies.md"
+                ---8<-- "docs/education/egeria-dojo/developer/develop-asset-listen-cut-paste.md"
 
                 Navigate to the `AssetListen` class and run it using the right-mouse menu as in earlier exercises.
                                 
@@ -375,7 +375,7 @@ This dojo was last tested using Egeria release 3.12.
         Run maven with the `clean install` options to create the jar file and you are ready to test your new connector.
         
         ??? advanced "Testing your connector"
-            Install the connector jar file into your egeria install server lib directory.
+            Copy the connector jar file into your egeria install server lib directory.
             
             Restart `EgeriaPlatform` so it picks up the new classes. Use the `ServerConfig` utility and issue the following commands to create an integration daemon server called `daemon1` and add your connector to its configuration document.  The third command is option but installs your audit log destination connector from the previous exercise into `daemon1`.
                         
@@ -393,7 +393,7 @@ This dojo was last tested using Egeria release 3.12.
         
         !!! education "Your development landscape ..."
             ![Topic cataloging connector in mds1](/education/egeria-dojo/developer/developer-dojo-architecture-7.svg)
-             > Your development landscape showing your new integration connector running in the daemon1 server cataloguing new KafkaTopic assets.
+            > Your development landscape showing your new integration connector running in the daemon1 server cataloguing new KafkaTopic assets.
 
     ??? expert "Working with open metadata archives (1.5 hours)"
     

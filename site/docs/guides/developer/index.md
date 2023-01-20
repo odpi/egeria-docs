@@ -28,6 +28,7 @@ The developer guide is organized as follows:
 
 - [Adding your own registered services](#adding-registered-services) - Extending Egeria by adding new [registered services](/concepts/omag-subsystem/#registered-services).
 
+- [Build considerations](#build-considerations) - Best practises for building extensions to Egeria.
 
 ## Working with the platform APIs
 
@@ -223,6 +224,140 @@ There are many choices of registered services within the Egeria project.  Howeve
 The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds, and they are [initialized as part of the platform's capabilities](/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES, OMIS or OMVS registered service that is dependent on the OMAS to get access to open metadata.
 
 The best guide for building registered services are the existing implementations found in [egeria.git](https://github.com/odpi/egeria/tree/main/open-metadata-implementation){ target=gh }.  You can see the way the code is organized and the services that they depend on.
+
+## Build principles
+
+### Which build tool?
+Egeria's approach is to use [Gradle](https://gradle.org/){ target = gradle } to build Egeria extensions, and Egeria itself. 
+
+We are migrating our own repositories over to Gradle as we see the following [benefits](https://gradle.org/maven-vs-gradle/){ target = gradle }:
+
+ - Much quicker builds due to caching, incremental compile,change detection, parallelism
+ - better flexibility in defining build tasks
+ - A more vibrant community with current [discussions](https://discuss.gradle.org){ target = gradle }
+- 
+Our examples will focus on Gradle, but you may also use [Maven](https://maven.apache.org){ target = maven}. 
+
+
+### Use stable versions from official repositories
+
+Egeria core libraries, and other java-oriented artifacts created by the Egeria team are published to [Maven Central](https://search.maven.org){ target = maven } (technically this is in fact just an index)
+
+ - Code releases (for example '3.14') go to the *Releases* repository, and will typically be picked up by default by Java build tools
+ - Snaphots, which are typically produced by Egeria projects as part of code merge, go to the *Snapshots* repository. This typically needs configuration in a build file
+
+Additionally, when compilation is done locally, a local repository may be populated with artifacts. It is not recommended to use a local build for dependencies in code you develop unless working on core Egeria libraries.
+
+It is recommended to:
+
+ - Depend on releases if possible (ie unless requiring a new feature/fix in code being developed). This is *essential* if your extension is to be stable and read to use
+ - Use snapshots if requiring unreleased artifacts, but be aware that the contents can change, or go away
+ - Only use a local repository if actively making simultaneous changes to multiple repos, for example if developing a new OMAS alongside an integration connector. It's inadvisable to check in code with any dependency on local repositories or jars as behaviour will differ depending on the local environment.
+
+### Example build.gradle fragments
+
+```
+repositories {
+    // If only using mavenCentral you likely will not need a repository section at all
+    mavenCentral()
+    // Uncomment to use snapshots ie egeria 3.15-SNAPSHOT
+    //maven { url("https://oss.sonatype.org/content/repositories/snapshots") }
+    // Uncomment to pick up from local ~/.m2 - but can be unpredictable. recommend to use maven central and snapshots
+    // mavenLocal()
+}
+```
+
+If using repositories that may change contents without version - such as snapshots or local repo, ensure gradle always picks up current contents. Not needed when using stable versions.
+```
+configurations.all {
+     // check for updates every build - critical when using Snapshots
+     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+```
+## Keep up to date
+
+Aim to keep new connectors, applications etc up to date with Egeria releases, and ensure the version is current when initially creating and contributing
+
+If your code is hosted on GitHub, [Dependabot](https://github.com/dependabot){ target = gh } is a useful tool for keeping all your dependencies up to date, including on Egeria artifacts.
+
+## Use dependency constraints, especially for multi module projects
+
+[Dependency constraints](https://docs.gradle.org/current/userguide/dependency_constraints.html){ target = gradle } help ensure that anytime you use a dependency in your project, it's the same version, especially in the case of transitive dependencies.
+
+In a [multi-module project](https://docs.gradle.org/current/userguide/multi_project_builds.html){ target = gradle } they should go in the top level `build.gradle` within `AllProjects()` or `SubProjects()`
+
+A [dependency](https://docs.gradle.org/current/userguide/declaring_dependencies.html){ target = gradle} can then be referenced without a version
+
+### Example build.gradle fragment
+```
+# Use variables to keep things clear
+ext {
+    egeriaversion = '3.12'
+    thriftversion = '0.13.0
+}
+# Setup constraints
+dependencies {
+     constraints {
+          // this will ensure a consistent version used whenever we refer to this dependency
+          implementation "org.odpi.egeria:audit-log-framework:${egeriaversion}"
+          implementation 'org.apache.thrift:libthrift${thriftversion}'
+          }
+     // This will inherit from our egeria dependency constraints
+     implementation platform("org.odpi.egeria:egeria:${egeriaversion}")
+     }
+```
+
+Later when using a dependency
+```
+dependencies
+    {
+         compileOnly "org.odpi.egeria:open-connector-framework"
+    }
+```
+## Minimise chance for duplicate contents
+
+This is primarily a concern for building connectors, or other components that run within the Egeria server chassis. In this environment we already have a lot of Egeria code on the classpath so ideally we want to only add what's needed, not duplicate what is already there.
+
+This is to get a balance of:
+
+ - ease of use in deploying the connector
+ - avoid clashing library versions
+ - minimize size of artifact
+
+Some terms that you may hear of
+
+ - 'thin' jar - often taken to mean just your code, ie no dependencies
+ - 'fat' or 'uber' jar - often taken to mean your code and all it's dependencies.
+
+To achieve a sensible balance what we actually want is to:
+
+ - include your code
+ - omit anything already in the server chassis
+ - add in other dependencies
+
+To do this, you will often want to build a jar with dependencies, but with care taken over use of 'scope'. Often this will mean Egeria dependencies will be `compileOnly` or `testCompileOnly` (The equivalent in maven is 'provided').
+
+If this is not done, there's a risk of having two different versions of core libraries present in the classpath. This could cause either your code, or other Egeria code to malfunction. 
+
+Careful scoping combined with maintaining currency, minimizes this risk.
+
+Other techniques to avoid this issue include:
+
+- Using sharding to rename classes
+- Using a dedicated class loader (this requires framework place, and not supported by Egeria at this time)
+### Example build.gradle fragment
+```
+     compileOnly "org.odpi.egeria:open-connector-framework"
+     implementation 'org.apache.thrift:libthrift"
+```
+## Complex dependency manipulation
+
+- If you need to have a dependency, but it has vulnerabilities, then may need to exclude libraries with vulnerabilities; for example if they being brought in, but your code is not using them.
+For an example on how this has been done see [the HMS connector](https://github.com/odpi/egeria-connector-hivemetastore/blob/main/build.gradle){ target = gh }.
+- If you need to pick up a dependency, but there are multiple versions around at runtime, then  this build file uses `forceResolution` strategy to force
+a particular dependency version; for an example of this see [the HMS connector](https://github.com/odpi/egeria-connector-hivemetastore/blob/main/build.gradle){ target = gh }.
+- you need to ensure that appropriate versions of jars are available at runtime so that classes can be found.
+
 
 ## Summary
 

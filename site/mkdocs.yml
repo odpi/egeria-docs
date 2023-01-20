@@ -54,6 +54,7 @@ nav:
                   - Topic Connectors:
                       - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
                       - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
+                      - Strimzi Topics Monitor Connector: connectors/integration/strimzi-monitor-integration-connector.md
                   - API Connectors:
                       - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
                   - Infrastructure Connectors:
@@ -64,6 +65,7 @@ nav:
                       - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
                       - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
+                      - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
                   - Database:
                       - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
               - Runtime:
@@ -80,6 +82,9 @@ nav:
                           - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
                           - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
                           - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
+                          - Hive Metastore (HMS) OMRS Proxy Repository Connector: connectors/repository/hms/overview.md
+                          - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
+                          - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
                   - Audit Log Destination:
                       - Console: connectors/runtime/console-audit-log-destination-connector.md
                       - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
@@ -192,7 +197,7 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - Learning:
       - Learning Overview: education/index.md
-      - Dojo (Jan 2022):
+      - Dojos:
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
               - Introduction to 'Running Egeria' day: education/egeria-dojo/running-egeria/running-egeria-intro.md
@@ -303,44 +308,7 @@ nav:
       - Core Egeria:
         - Latest Release: release-notes/latest.md
         - Next Release: release-notes/next.md
-        - v3.13: release-notes/3-13.md
-        - v3.12: release-notes/3-12.md
-        - v3.11: release-notes/3-11.md
-        - v3.10: release-notes/3-10.md
-        - v3.9: release-notes/3-9.md
-        - v3.8: release-notes/3-8.md
-        - v3.7: release-notes/3-7.md
-        - v3.6: release-notes/3-6.md
-        - v3.5: release-notes/3-5.md
-        - v3.4: release-notes/3-4.md
-        - v3.3: release-notes/3-3.md
-        - v3.2: release-notes/3-2.md
-        - v3.1: release-notes/3-1.md
-        - v3.0: release-notes/3-0.md
-        - Older Releases:
-          - v2.x:
-              - 2.11: release-notes/2-11.md
-              - 2.10 : release-notes/2-10.md
-              - 2.9: release-notes/2-9.md
-              - 2.8: release-notes/2-8.md
-              - 2.7: release-notes/2-7.md
-              - 2.6: release-notes/2-6.md
-              - 2.5: release-notes/2-5.md
-              - 2.4: release-notes/2-4.md
-              - 2.3: release-notes/2-3.md
-              - 2.2: release-notes/2-2.md
-              - 2.1: release-notes/2-1.md
-              - 2.0: release-notes/2-0.md
-          - v1.x:
-              - 1.8: release-notes/1-8.md
-              - 1.7: release-notes/1-7.md
-              - 1.6: release-notes/1-6.md
-              - 1.5: release-notes/1-5.md
-              - 1.4: release-notes/1-4.md
-              - 1.3: release-notes/1-3.md
-              - 1.2: release-notes/1-2.md
-              - 1.1: release-notes/1-1.md
-              - 1.0: release-notes/1-0.md
+        - Previous releases: release-notes/previous.md
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:
@@ -599,25 +567,25 @@ nav:
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md
           - Platform Profiles:
-              - Platform Origin: guides/cts/profiles/platform-origin.md
+              - Platform Origin: guides/cts/platform-workbench/profiles/platform-origin.md
           - Repository Profiles:
-              - Metadata Sharing: guides/cts/repository-profiles/metadata-sharing.md
-              - Reference Copies: guides/cts/repository-profiles/reference-copies.md
+              - Metadata Sharing: guides/cts/repository-workbench/profiles/metadata-sharing.md
+              - Reference Copies: guides/cts/repository-workbench/reference-copies.md
               - Metadata Maintenance: guides/cts/repository-profiles/metadata-maintenance.md
-              - Effectivity Dating: guides/cts/repository-profiles/effectivity-dating.md
-              - Dynamic Types: guides/cts/repository-profiles/dynamic-types.md
-              - Graph Queries: guides/cts/repository-profiles/graph-queries.md
-              - Historical Search: guides/cts/repository-profiles/historical-search.md
-              - Entity Proxies: guides/cts/repository-profiles/entity-proxies.md
-              - Soft-delete and Restore: guides/cts/repository-profiles/soft-delete-restore.md
-              - Undo an Update: guides/cts/repository-profiles/undo-update.md
-              - Reidentify Instance: guides/cts/repository-profiles/reidentify-instance.md
-              - Retype Instance: guides/cts/repository-profiles/retype-instance.md
-              - Rehome Instance: guides/cts/repository-profiles/rehome-instance.md
-              - Entity Search: guides/cts/repository-profiles/entity-search.md
-              - Relationship Search: guides/cts/repository-profiles/relationship-search.md
-              - Entity Advanced Search: guides/cts/repository-profiles/entity-advanced-search.md
-              - Relationship Advanced Search: guides/cts/repository-profiles/relationship-advanced-search.md
+              - Effectivity Dating: guides/cts/repository-workbench/profiles/effectivity-dating.md
+              - Dynamic Types: guides/cts/repository-workbench/profiles/dynamic-types.md
+              - Graph Queries: guides/cts/repository-workbench/profiles/graph-queries.md
+              - Historical Search: guides/cts/repository-workbench/profiles/historical-search.md
+              - Entity Proxies: guides/cts/repository-workbench/profiles/entity-proxies.md
+              - Soft-delete and Restore: guides/cts/repository-workbench/profiles/soft-delete-restore.md
+              - Undo an Update: guides/cts/repository-workbench/profiles/undo-update.md
+              - Reidentify Instance: guides/cts/repository-workbench/profiles/reidentify-instance.md
+              - Retype Instance: guides/cts/repository-workbench/profiles/retype-instance.md
+              - Rehome Instance: guides/cts/repository-workbench/profiles/rehome-instance.md
+              - Entity Search: guides/cts/repository-workbench/profiles/entity-search.md
+              - Relationship Search: guides/cts/repository-workbench/profiles/relationship-search.md
+              - Entity Advanced Search: guides/cts/repository-workbench/profiles/entity-advanced-search.md
+              - Relationship Advanced Search: guides/cts/repository-workbench/profiles/relationship-advanced-search.md
           - Performance Profiles:
               - Entity Creation: guides/cts/performance-profiles/entity-creation.md
               - Entity Search: guides/cts/performance-profiles/entity-search.md

@@ -36,7 +36,7 @@ Each domain is typically the responsibility of a different executive in the orga
     * *Procurement* focussed on the policies and rules assicuated with the products and services bought by people across the organization.  There may be a seprate procurement team that interacts with suppliers to ensure bulk discounts and quality.  They would work with other leaders in the organization to ensure the approach matches the needs of the business.
     * *Sustainability* is a relatively new governance domain that focuses on the effective use of resources to improve long-term sustainability of the organization's operations.
 
-    ![Governance Domain Examples](governance-domain-examples.svg)
+    ![Governance Domain Examples](/guides/planning/governance-program/governance-domain-examples.svg)
     > Examples of different governance domains within an organization.
 
 Governance domains are represented by [*Governance Domain Descriptions*](/types/4/0401-Governance-Definitions/#governancedomaindescription) entities in open metadata.  They are organized into a *GovernanceDomainSet* collection.
@@ -94,7 +94,7 @@ These different approaches allow you to have enough detail in your open metadata
 ??? education "Representing governance roles in open metadata"
     Governance roles are types of [PersonRole](/types/1/0112-People).  They link to a governance responsibility (a type of [governance definition](#governance-definitions) using the [GovernanceResponsibilityAssignment](/types/4/0445-Governance-Roles) relationship).  The [profile of a person](/types/1/0112-People) is linked to the governance role using the [PersonRoleAppointment](/types/1/0112-People).
 
-    ![Governance Roles](governance-roles.svg)
+    ![Governance Roles](/guides/planning/governance-program/governance-roles.svg)
 
     The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of governance roles. The [Community Profile OMAS](/services/omas/community-profile/overview) supports the appointment of people to roles.
 

@@ -103,7 +103,7 @@ In `egeria-dev-projects`, there is a module called `egeria-platform-report`.  Th
               Asset Owner OMAS: Manage an asset
               Stewardship Action OMAS: Manage exceptions and actions from open governance
               Governance Program OMAS: Manage the governance program
-              Digital Service OMAS: Manage a digital service's lifecycle
+              Digital Service OMAS: Manage a digital service through its lifecycle
               Asset Lineage OMAS: Store asset lineage
               Analytics Modeling OMAS: Provides metadata information for Analytics Modeling.
               Asset Consumer OMAS: Access assets through connectors
@@ -151,4 +151,6 @@ In `egeria-dev-projects`, there is a module called `egeria-platform-report`.  Th
     
     Process finished with exit code 255
     ```
-    The next step will create a server configuration document that will also create the configuration directory and resolve this issue.  `EgeriaPlatformReport` also creates a [markdown](/guides/contributor/markdown) document called `egeria-platform-report.md` that contains its output.  This [version of egeria-platform-report.md](/education/egeria-dojo/developer/egeria-platform-report-no-servers) is included for your reference.        
+    The next step will create a server configuration document that will also create the configuration directory and resolve this issue.  
+
+    `EgeriaPlatformReport` also creates a [markdown](/guides/contributor/markdown) document called `egeria-platform-report.md` that contains its output.  This [version of egeria-platform-report.md](/education/egeria-dojo/developer/egeria-platform-report-no-servers) is included for your reference.        

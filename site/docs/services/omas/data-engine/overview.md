@@ -31,7 +31,7 @@ An external tool can [lookup](lookup-registration.md) for the registered externa
 
 #### [Create Process, with corresponding Port Aliases, Port Implementations and Schema Types](create-process.md)
 
-#### [Add lineage mappings to processes](add-lineage-mappings.md)
+#### [Add data flows to processes](add-data-flows.md)
 
 #### [Create Database](create-database.md) 
 

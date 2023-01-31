@@ -49,7 +49,7 @@ We agreed to create a new type of connector for a secrets store (SecuritySecrets
 
 ### Database support
 
-The JDBC connectors have been tested with both IBM's DB2 database and the Oracle database.  We agreed that this function is mature enough to create a 1.0 release on Maven central.
+The JDBC connectors have additionally been tested with both IBM's DB2 database and the Oracle database.  With the previous testing of PostgreSQL, MariaDB and Trino we how have five verified databases.   We agreed that this function is mature enough to create a 1.0 release on Maven central.
 
 There is still some discussion on how databases should be uniquely named, particularly in cloud-based scenarios, or where a database is deployed in different environments - such as dev, test and prod.
 
@@ -59,7 +59,7 @@ We agreed to support a qualified name template that would be set up the in Conne
 
 The new general user interface using this technology is ready to be included in the helm charts for next release of Egeria.
 
-Cezar demonstrated how to incorporate Egeria's common web components into a new React UI.  This proved that the components are reusable outside the Egeria UIs, which may be useful to vendors or organizations wishing to consume Egeria from an existing UI.
+Cezar Sirbu demonstrated how to incorporate Egeria's common web components into a new React UI.  This proved that the components are reusable outside the Egeria UIs, which may be useful to vendors or organizations wishing to consume Egeria from an existing UI.
 
 Focus now moves to the services that support the web components.  Today we have the view services that run in the OMAG Server Platform and the services that run in the Egeria UI Platform.  The view services also run in the Egeria UI platform, so this platform has the potential to offer the common back-end services for all UIs (effectively replacing the [Presentation Server](/concepts/presentation-server).  The next step is to validate that it is possible to support pluggable user directories.  There needs to one user directory per tenant to support authentication of incoming users.
 

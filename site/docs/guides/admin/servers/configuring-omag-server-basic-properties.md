@@ -24,49 +24,45 @@ The other basic properties have values that can be changed through the admin ser
 
 The sections that follow cover how to set up these values.
 
-???+ beginner "Fine-grained helper command"
-    ### Set server type name
-    
-    The server type name should be set to something that describes the OMAG Server's role. It may be the name of a specific product that it is enabling, or a role in the metadata and governance landscape.
-    
-    !!! post "POST - set server type"
-        ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-type?typeName="{{serverTypeName}}"
-        ```
+### Set server type name
 
-???+ beginner "Fine-grained helper command"
-    ### Set organization name
-    
-    The organization name may be the owning organization or department or team supported by the server.
-    
-    !!! post "POST - set organization name"
-        ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/organization-name?name="{{organizationName}}"
-        ```
+The server type name should be set to something that describes the OMAG Server's role. It may be the name of a specific product that it is enabling, or a role in the metadata and governance landscape.
 
-???+ beginner "Fine-grained helper command"
-    ### Set the server's userId and optional password
-    
-    The server's userId is used when processing requests that do not have an end user, such as receiving an event from a topic. The default value is `OMAGServer`. Ideally each server should have its own user ID so it is possible to restrict the resources that each server has access to.
-    
-    If the password is specified as well, the userId and password combination are used to provide authentication information on each REST call made by the server.
-    
-    !!! post "POST - set server's userId"
-        ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-user-id?id="{{serverUserId}}"
-        ```
-    
-    !!! post "POST - set server's password"
-        ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-user-password?password="{{serverUserPassword}}"
-        ```
+!!! post "POST - set server type"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-type?typeName="{{serverTypeName}}"
+    ```
 
-???+ beginner "Fine-grained helper command"
-    ### Set the maximum page size for REST API requests
-    
-    The maximum page size value sets an upper limit on the number of results that a caller can request on any paging REST API to this server. Setting maximum page size helps to prevent a denial of service attack that uses very large requests to overwhelm the server. A value of `0` means no limit, and leaves the server open to such attacks.
-    
-    !!! post "POST - set maximum page size"
-        ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/max-page-size?limit={{maxPageSize}}
-        ```
+### Set organization name
+
+The organization name may be the owning organization or department or team supported by the server.
+
+!!! post "POST - set organization name"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/organization-name?name="{{organizationName}}"
+    ```
+
+### Set the server's userId and optional password
+
+The server's userId is used when processing requests that do not have an end user, such as receiving an event from a topic. The default value is `OMAGServer`. Ideally each server should have its own user ID so it is possible to restrict the resources that each server has access to.
+
+If the password is specified as well, the userId and password combination are used to provide authentication information on each REST call made by the server.
+
+!!! post "POST - set server's userId"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-user-id?id="{{serverUserId}}"
+    ```
+
+!!! post "POST - set server's password"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-user-password?password="{{serverUserPassword}}"
+    ```
+
+### Set the maximum page size for REST API requests
+
+The maximum page size value sets an upper limit on the number of results that a caller can request on any paging REST API to this server. Setting maximum page size helps to prevent a denial of service attack that uses very large requests to overwhelm the server. A value of `0` means no limit, and leaves the server open to such attacks.
+
+!!! post "POST - set maximum page size"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/max-page-size?limit={{maxPageSize}}
+    ```

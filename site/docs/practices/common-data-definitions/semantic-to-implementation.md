@@ -111,7 +111,7 @@
 
 ??? info "Reference value assignments"
 
-    The common deinfitions for a subject area may include sets of values used to label metadata elements to show that they are in a particular state or have a specific characteristic that is important in the subject area.  For example, a subject area about people may include the notion of an *Adult* and a *Child* (or *Minor*).  The age of majority is different in each country and so a simple label assigned to a [Person](/types/1/0112-People) profile that indicates that a person is an adult would allow the knowledge of how to determine if someone is an adult to be contained around the maintenance of the person profiles, while the reference data value is used in multiple places.
+    The materials for a subject area may include sets of values used to label metadata elements to show that they are in a particular state or have a specific characteristic that is important in the subject area.  For example, a subject area about people may include the notion of an *Adult* and a *Child* (or *Minor*).  The age of majority is different in each country and so a simple label assigned to a [Person](/types/1/0112-People) profile that indicates that a person is an adult would allow the knowledge of how to determine if someone is an adult to be contained around the maintenance of the person profiles, while the reference data value is used in multiple places.
 
     These labels are called *reference data values* and are managed in [Valid Value Sets](/types/5/0545-Reference-Data).  The association between a reference data value and a metadata element is [ReferenceValueAssignment](/types/5/0545-Reference-Data).
 

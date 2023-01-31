@@ -13,6 +13,12 @@ The technology under test supports the addition of new type definitions.
 
 ## TypeDef maintenance
 
-The technology under test supports the commands to change a type definition.
+The technology under test supports the commands to patch a type definition.
+
+!!! attention "Not yet implemented"
+
+## TypeDef use
+
+The technology under test supports the commands to create an instance of a dynamically created type definition.
 
 !!! attention "Not yet implemented"

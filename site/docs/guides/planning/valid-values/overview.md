@@ -7,7 +7,7 @@ The [open metadata types](/types) include properties that are string values.  Th
 
 Consider the [*ProjectCharter*](/types/4/0442-Project-Charter) entity type shown below.  
 
-img src="project-charter-type.svg" style="float:left">
+<img src="project-charter-type.svg" style="float:left">
 
 In addition to the *qualifiedName* and *additionalProperties* properties inherited from [*Referenceable*](/types/0/0010-Base-Model), this type adds in three new properties:
 
@@ -34,7 +34,17 @@ These specialist valid value lists provide context and a place to attach governa
 
 For other metadata properties it is possible to set up *valid metadata sets*.  These list the values that are expected in a particular property and provide validation checks.
 
-These values can either be set up in an [open metadata archive](/concepts/open-metadata-archive), or through the [OpenMetadataClient](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/OpenMetadataStoreClient.html) available on most [Open Metadata Access Services (OMASs)](/services/omas).
+For example, consider these valid values for the *ProjectCharter* type:
+
+![valid values](project-charter-valid-values.svg)
+
+This is how they would appear in an instance of a project charter
+
+![valid values](project-charter-instance.svg)
+
+
+Valid metadata values can either be set up in an [open metadata archive](/concepts/open-metadata-archive), or through the [OpenMetadataClient](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/OpenMetadataStoreClient.html) available on most [Open Metadata Access Services (OMASs)](/services/omas).
+
 
 The code snippet below shows how to set up the strings "incident-investigation" and "clinical-trial" as a specific valid values for the *projectType* property of *ProjectCharter*.
 

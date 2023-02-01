@@ -57,7 +57,6 @@ We agreed to support a qualified name template that would be set up the in Conne
 
 ### User interfaces
 
-
 Cezar Sirbu demonstrated how to incorporate Egeria's common web components into a new React UI.  This proved that the components are reusable outside the Egeria UIs, which may be useful to vendors or organizations wishing to consume Egeria from an existing UI.
 
 The new general user interface using this technology is pencilled in to be included in the helm charts for the V4.0 release of Egeria.
@@ -74,8 +73,12 @@ In order to mitigate the fact that the release includes a lot of testing, and it
 
 * To invest in the CTS - both in its test coverage and in an automated scheduled execution of the tests. (See [CTS Enhancements](#conformance-test-suite-cts-enhancements)).
 * To enable the existing FVT suite to run against the XTDB repository connector.
-* To add more tests to the FVt suite
+* To add more tests to the FVT suite
 * To continue to update our dependencies as recommended by *dependabot* every month.
+
+## Connectors
+
+There is a new connector to support the cataloguing of schemas documented in the [Confluent schema registry](https://www.confluent.io/product/confluent-platform/data-compatibility/).  It can be found in the [egeria-connector-integration-event-schema.git](https://github.com/odpi/egeria-connector-integration-event-schema) git repository.
 
 ## Conformance Test Suite (CTS) enhancements
 

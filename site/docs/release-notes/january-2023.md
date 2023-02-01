@@ -33,7 +33,7 @@ The workgroup is up and running.  If you wish to follow along, or join in, pleas
 
 ### Data product/data-mesh discussion
 
-There are multiple data product/data-mesh projects in progress within the various organizations contributing to Egeria.  Each has a slightly different focus.   However, we agreed that in a few months we would be ready to have a workgroup to go through the Egeria support for data products and data-mesh.
+There are multiple data product/data-mesh projects in progress within the various organizations contributing to Egeria.  Many are still gathering requirements.   Once we have our individual organization requirements in place, we agreed that we would have a workgroup to go through the Egeria support for data products and data-mesh.
 
 ### Integration simplification
 
@@ -57,9 +57,9 @@ We agreed to support a qualified name template that would be set up the in Conne
 
 ### User interfaces
 
-The new general user interface using this technology is ready to be included in the helm charts for next release of Egeria.
-
 Cezar Sirbu demonstrated how to incorporate Egeria's common web components into a new React UI.  This proved that the components are reusable outside the Egeria UIs, which may be useful to vendors or organizations wishing to consume Egeria from an existing UI.
+
+The new general user interface using this technology is pencilled in to be included in the helm charts for the V4.0 release of Egeria.
 
 Focus now moves to the services that support the web components.  Today we have the view services that run in the OMAG Server Platform and the services that run in the Egeria UI Platform.  The view services also run in the Egeria UI platform, so this platform has the potential to offer the common back-end services for all UIs (effectively replacing the [Presentation Server](/concepts/presentation-server).  The next step is to validate that it is possible to support pluggable user directories.  There needs to one user directory per tenant to support authentication of incoming users.
 
@@ -73,8 +73,12 @@ In order to mitigate the fact that the release includes a lot of testing, and it
 
 * To invest in the CTS - both in its test coverage and in an automated scheduled execution of the tests. (See [CTS Enhancements](#conformance-test-suite-cts-enhancements)).
 * To enable the existing FVT suite to run against the XTDB repository connector.
-* To add more tests to the FVt suite
+* To add more tests to the FVT suite
 * To continue to update our dependencies as recommended by *dependabot* every month.
+
+## Connectors
+
+There is a new connector to support the cataloguing of schemas documented in the [Confluent schema registry](https://www.confluent.io/product/confluent-platform/data-compatibility/).  It can be found in the [egeria-connector-integration-event-schema.git](https://github.com/odpi/egeria-connector-integration-event-schema) git repository.
 
 ## Conformance Test Suite (CTS) enhancements
 
@@ -102,6 +106,10 @@ Over the last few community meetings ...
 * The following week, Dan Wolfson took us through the design and implementation of a new Python client for Asset Consumer OMAS.
 * Last week was a review of the items various members of the community plan to contribute this year.
 
+### Annual Project Review
+
+The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is scheduled for 9th March 2023.
+
 ## New documentation pages
 
 Each month we will select one or more new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org) so you can keep up-to-date with how it is evolving.
@@ -109,11 +117,7 @@ Each month we will select one or more new pages that where added/updated in the 
 * [Categories of Metadata](/patterns/metadata-manager/categories-of-metadata)
 * [Description of a Digital Service](/types/7/0710-Digital-Service)
 
-### Annual Project Review
-
-The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is scheduled for 9th March 2023.
-
-### Moving to Gradle
+## Moving to Gradle
 
 Our build technology for the Java based projects has used both Maven and Gradle.  We plan to move entirely to gradle in the next few months, so you will see:
 

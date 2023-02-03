@@ -60,31 +60,47 @@ like this
 `configurationProperties` parameters
 
 | Event mapper configuration parameter name | default      | Description                                                                                                       |
-|------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|
-| qualifiedNamePrefix                      | empty string | This is a prefix for the qualifiedName. This prefix is used on every entity that is created using this connector. |
-| refreshTimeInterval                      | null         | Poll interval in minutes. If null only poll once at connector start time.                                         |
-| CatalogName                              | hive         | This is the HMS catalog name.                                                                                     |
-| DatabaseName                             | default      | This is the HMS database name.                                                                                    |
-| sendPollEvents                           |              | Set this to true to send events to the cohort every poll.                                                         |
-| endpointAddress                          |              | url to access the data that this metadata describes                                                               |
-| cacheIntoCachingRepository               | true         | Set this to false to not cache the metadata content                                                               |
+|-------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|
+| qualifiedNamePrefix                       | empty string | This is a prefix for the qualifiedName. This prefix is used on every entity that is created using this connector. |
+| refreshTimeInterval                       | null         | Poll interval in minutes. If null only poll once at connector start time.                                         |
+| CatalogName                               | null         | This is the HMS catalog name.                                                                                     |
+| DatabaseName                              | null         | This is the HMS database name.                                                                                    |
+| sendPollEvents                            | true         | Set this to true to send events to the cohort every poll.                                                         |
+| endpointAddress                           | null         | url to access the data that this metadata describes                                                               |
+| cacheIntoCachingRepository                | true         | Set this to false to not cache the metadata content                                                               |
+| securedProperties                         | null         | If securedProperties need to be sent on the Connection entity, specify as a json object, with string properties.  |
 
-## Using with the IBM Cloud® Data Engine service.
 
-To use this connector with [IBM Cloud® Data Engine service](https://cloud.ibm.com/catalog/services/data-engine-previously-sql-query), the code needs to be recompiled to bring in the IBM HMS Client library.
+### Setting CatalogName and DatabaseName
+
+The setting of these 2 parameters dictates the scope of metadata that is ingested from HMS. For Apache Hive the default catalog name is *hive* and default database name is *default*.
+
+| CatalogName       | DatabaseName       | scope of HMS content to be ingested                                                                                                                               | 
+|-------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Name of a catalog | Name of a database | The HMS tables under the named database in the named catalog                                                                                                      |
+| null              | null               | All tables in all databases under all catalogs. If the HMS implementation does not support getCatalogs API then an error will be issued and the connector stopped |
+ | null              | Name of a database | All tables in default catalog under the named database.                                                                                                           | 
+| Name of a catalog | null               | The HMS tables under all the databases in the named catalog.                                                                                                      | 
+
+
+## Using with the IBM Cloud&#174 Data Engine service.
+
+To use this connector with [IBM Cloud&#174 Data Engine service](https://cloud.ibm.com/catalog/services/data-engine-previously-sql-query), the code needs to be recompiled to bring in the IBM HMS Client library.
 For more details see the [IBM documentation](https://cloud.ibm.com/docs/sql-query?topic=sql-query-hive_metastore#hive_compatible_client) on this.
 There is a [bash script](https://github.com/odpi/egeria-connector-hivemetastore/blob/main/utilities/createIBMHMS.sh) that is supplied as-is and 
 can be used in development on a Mac to build and run an Egeria platform that contains the [IBM Hive-compatible client](https://us.sql-query.cloud.ibm.com/download/catalog/hive-metastore-standalone-client-3.1.2-sqlquery.jar).
 
 The following additional security parameters need to be specified in the `configurationProperties` as the IBM Hive-compatible client
-uses a secure API to talk to the IBM Cloud®.
+uses a secure API to talk to the IBM Cloud&#174.
 
 
 | Event mapper configuration parameter name | default | Description                                                                                           |
 |-------------------------------------------|---------|-------------------------------------------------------------------------------------------------------|
 | MetadataStoreUserId                       | null    | The Data Engine service [crn](https://cloud.ibm.com/docs/account?topic=account-crn).                  |
 | MetadataStorePassword                     | null    | The [API key](https://www.ibm.com/docs/en/app-connect/container?topic=servers-creating-cloud-api-key) |
-| useSSL                                    | false   | Set to true                                                                                     |
+| useSSL                                    | false   | Set to true                                                                                           |
+| CatalogName                               | null    | set to "spark"                                                                                          |
+| DatabaseName                              | null    | Set to "default"                                                                                   |
 
 ## Design
 
@@ -108,23 +124,25 @@ API. The HMSClient API used is
 [https://github.com/apache/hive/blob/master/standalone-metastore/metastore-common/src/main/java/org/apache/hadoop/hive/metastore/HiveMetaStoreClient.java](https://github.com/apache/hive/blob/master/standalone-metastore/metastore-common/src/main/java/org/apache/hadoop/hive/metastore/HiveMetaStoreClient.java)
 It uses the Thrift API to communicate with the Hive Metastore.
 At this time (July 2022) the version 3.1.3 of this Hive Metastore has [vulnerabilities](https://mvnrepository.com/artifact/org.apache.hive/hive-standalone-metastore/3.1.3)
-A number of excludes were required in the gradle build file to ensure the appropriate vulnerable libraries are not present - as reported by Sonarscan and lift.
+A number of excludes were required in the gradle build file to ensure the inappropriate vulnerable libraries are not present - as reported by Sonarscan and Lift.
 
 HMS Client calls used:
 
 
-| HMS Client call                                        | Description                                                                                                                         |
-|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| client.getTables(&lt;catName&gt;,  "*")          | Get all the tables from the Catalog with name &lt;catName&gt; and database with name &lt;dbName&gt;                                 |
-| client.getTable(&lt;catName&gt;, &lt;dbName&gt;, &lt;tableName&gt;) | Get the table details for table named &lt;tableName&gt; in Catalog &lt;catName&gt;, the table returned contains the column details |
+| HMS Client call                                                     | Description                                                                                                                        |
+|---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| client.getCatalogs()                                                | Get all the catalog names                                                                                                          |
+| client.getAllDatabases()                                            | Get all the database names under the default Catalog.                                                                              |
+| client.getAllDatabases(&lt;catName&gt;);                            | Get all the database names under the named Catalog.                                                                                |
+| client.getTables(&lt;catName&gt;,  "*")                             | Get all the tables from the Catalog with name &lt;catName&gt; and database with name &lt;dbName&gt;                                |
+| client.getTable(&lt;catName&gt;, &lt;dbName&gt;, &lt;tableName&gt;) | Get the table details for table named &lt;tableName&gt; in Catalog &lt;catName&gt;, the returned table contains the column details |
 
 
 ### Hive Metastore mapping to Egeria OMRS open types
 
 
 Egeria has an open type called Database we are mapping this to the Hive Database. Note that at Hive 3 there are
-higher level concepts called catalogs that hold databases. This connector supports 2 catalog and one database,
-these are specified by name in the Egeria configuration.
+higher level concepts called catalogs that hold databases. 
 
 #### Entity Types
 
@@ -153,11 +171,11 @@ these are specified by name in the Egeria configuration.
 
 #### Classification Types
 
-| HMS concept                  | Description                                                      | Egeria open Classifation type | Comments                                                            |
-|------------------------------|------------------------------------------------------------------|-------------------------------|---------------------------------------------------------------------|
-| Hive table Type              | if this is VIRTUAL_VIEW then this is a view ratheer than a table | CalculatedValue               | The RelationalTable is classified with CalculatedValue if is a view |
-| for columns fieldSchema Type | This is the type of the Hive column (e.g. String)                | TypeEmbeddedAttribute         | This contains the type of the column                                |
-| for tables n/a               | n/a                                                              | TypeEmbeddedAttribute         | The type of the Table                                               |
+| HMS concept                  | Description                                                     | Egeria open Classifation type | Comments                                                           |
+|------------------------------|-----------------------------------------------------------------|-------------------------------|--------------------------------------------------------------------|
+| Hive table Type              | if this is VIRTUAL_VIEW then this is a view rather than a table | CalculatedValue               | The RelationalTable is classified with CalculatedValue for a view |
+| for columns fieldSchema Type | This is the type of the Hive column (e.g. String)               | TypeEmbeddedAttribute         | This contains the type of the column                               |
+| for tables n/a               | n/a                                                             | TypeEmbeddedAttribute         | The type of the Table                                              |
 
 
 

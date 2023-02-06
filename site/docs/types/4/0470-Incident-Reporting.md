@@ -8,7 +8,7 @@ hide:
 
 # 0470 Incident Reporting
 
-The **IncidentReport** is used to record that an incident (such as data breach)
+The *IncidentReport* entity is used to record that an incident (such as data breach)
 has occurred.  It can be linked to the assets that are affected
 and its resolution can be governed through normal processes.
 

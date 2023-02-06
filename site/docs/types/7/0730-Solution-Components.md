@@ -4,7 +4,7 @@
 
 # 0730 Solution Components
 
-Solution components proves an architectural summary of how the IT landscape is designed.
+Solution components proves an architectural summary of the logical components that make up the IT landscape.  These components are linked together via [Solution Ports and Wires](/types/7/0735-Solution-Ports-and-Wires)
 
 ![UML](0730-Solution-Components.svg)
 
@@ -15,6 +15,7 @@ A *SolutionComponent* is an architecture description of a digital implementation
 ## SolutionComposition
 
 The *SolutionComposition* relationship allows solution components to be decomposed into smaller solution components.
+
 
 
 

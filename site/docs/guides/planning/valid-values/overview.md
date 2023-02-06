@@ -7,18 +7,18 @@ The [open metadata types](/types) include properties that are string values.  Th
 
 Consider the [*ProjectCharter*](/types/4/0442-Project-Charter) entity type shown below.  
 
-<img src="project-charter-type.svg" style="float:left">
+<img src="./project-charter-type.svg" style="float:left">
 
-In addition to the *qualifiedName* and *additionalProperties* properties inherited from [*Referenceable*](/types/0/0010-Base-Model), this type adds in three new properties:
+
+In addition to the *qualifiedName* and *additionalProperties* attributes inherited from [*Referenceable*](/types/0/0010-Base-Model), this type adds in three new attribute to the properties of a ProjectCharter instance:
 
 * *mission*
 * *projectType*
 * *purposes*
 
-The *mission* property is likely to be free-form text laying out the reasons and aspirations behind the project.  However, the *projectType* and the *purposes* may be used by automated processes - or may trigger people to perform certain tasks.  Having free-form text may lead to errors and misunderstandings.  Therefore, Egeria supports the ability to set up lists of valid values for particular properties in open metadata.
+The *mission* property is likely to be free-form text laying out the reasons and aspirations behind the project.  However, the *projectType* and the *purposes* may be used by automated processes - or may trigger people to perform certain tasks.  Having free-form text may lead to errors and misunderstandings if the values are filled out incorrectly.  Therefore, Egeria supports the ability to set up lists of valid values for particular properties in open metadata.
 
-Part of the planning process is to consider which metadata properties should have restricted values and which can be free-form text since setting these up early avoids reworking the metadata values later.
-
+Part of the planning process is to consider which metadata properties should have restricted values and which can be free-form text. Setting these values up early avoids reworking the metadata values later.
 
 ## Specialized valid metadata values
 
@@ -32,7 +32,15 @@ These specialist valid value lists provide context and a place to attach governa
 
 ## Creating your own valid value sets for open metadata
 
-For other metadata properties it is possible to set up *valid metadata sets*.  These list the values that are expected in a particular property and provide validation checks.
+For other metadata properties it is possible to set up *valid metadata value sets*.  These list the values that are expected in a particular property and provide validation checks.
+
+There are three types of valid metadata values:
+
+* Values for string attributes.
+* Values for arrays of string attributes.
+* Values for maps of string attributes.
+
+In the *ProjectCharter* type shown above:
 
 For example, consider these valid values for the *ProjectCharter* type:
 

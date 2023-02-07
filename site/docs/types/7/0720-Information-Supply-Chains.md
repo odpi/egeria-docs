@@ -36,7 +36,7 @@ An *InformationSupplyChainSegment* entity identifies an information supply chain
 
 ## InformationSupplyChainLink
 
-The *InformationSupplyChainComposition* relationship links the information supply chain segments, and descriptions of the data sources and destinations together into a graph.  This graph represents the highest level abstraction of the operation of the information supply chain.
+The *InformationSupplyChainLink* relationship links the information supply chain segments, and descriptions of the data sources and destinations together into a graph.  This graph represents the highest level abstraction of the operation of the information supply chain.
 
 ## Example
 

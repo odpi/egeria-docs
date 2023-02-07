@@ -32,7 +32,7 @@ The diagram below shows a set of linked solution components and their linkage to
 ![Mapping to Detailed Lineage](area-7-lineage-example-detail.svg)
 
 ??? info "Further information"
-* The implementation of this information supply chain is build out in the *Automated Curation* [Open Metadata Lab](/education/open-metadata-labs/overview).
-* More detail on the modelling of the information supply chain implemented by these solution components can be found in [0720 Information Supply Chains](/types/7/0720-Information-Supply-Chains).
+    * The implementation of this information supply chain is build out in the *Automated Curation* [Open Metadata Lab](/education/open-metadata-labs/overview).
+    * More detail on the modelling of the information supply chain implemented by these solution components can be found in [0720 Information Supply Chains](/types/7/0720-Information-Supply-Chains).
 
 --8<-- "snippets/abbr.md"

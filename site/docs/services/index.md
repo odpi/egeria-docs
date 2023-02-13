@@ -18,7 +18,7 @@ The Egeria services provide the support for the OMAG Server Platform and its Ope
 * [Administration Services](/services/admin-services/overview) - for configuring and operating [OMAG Servers](/concepts/omag-server)
 * [Platform Operation Services](/services/platform-services/overview) - for managing the OMAG Servers when they are running.
 * [Server Chassis](/services/server-chassis) - provides the "main" function for the OMAG Server Platform.
-* [open Metadata Repository Services (OMRS)](/services/omrs) - for managing the repositories used to support the OMAG Server Platform.
+* [Open Metadata Repository Services (OMRS)](/services/omrs) - for managing the repositories used to support the OMAG Server Platform.
 
 ## Registered Services
 

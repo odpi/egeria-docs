@@ -23,7 +23,7 @@ the performance of the asset processing since the classification flows with the 
 
 ![UML](0424-Governance-Zones.svg)
 
-There is more information on governance zones in [governance zones](/features/governance-zones).
+There is more information on governance zones in [governance zoning](/features/governance-zoning/overview/).
 
 ??? deprecated "Deprecated types"
     - **ZoneGovernance** - use [GovernedBy](0401-Governance-Definitions.md).

@@ -59,17 +59,17 @@ like this
 
 `configurationProperties` parameters
 
-| Event mapper configuration parameter name | default      | Description                                                                                                       |
-|-------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------|
-| qualifiedNamePrefix                       | empty string | This is a prefix for the qualifiedName. This prefix is used on every entity that is created using this connector. |
-| refreshTimeInterval                       | null         | Poll interval in minutes. If null only poll once at connector start time.                                         |
-| CatalogName                               | null         | This is the HMS catalog name.                                                                                     |
-| DatabaseName                              | null         | This is the HMS database name.                                                                                    |
-| sendPollEvents                            | true         | Set this to true to send events to the cohort every poll.                                                         |
-| endpointAddress                           | null         | url to access the data that this metadata describes                                                               |
-| cacheIntoCachingRepository                | true         | Set this to false to not cache the metadata content                                                               |
-| securedProperties                         | null         | If securedProperties need to be sent on the Connection entity, specify as a json object, with string properties.  |
-
+| Event mapper configuration parameter name | default      | Description                                                                                                                                                                                             |
+|-------------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| qualifiedNamePrefix                       | empty string | This is a prefix for the qualifiedName. This prefix is used on every entity that is created using this connector.                                                                                       |
+| refreshTimeInterval                       | null         | Poll interval in minutes. If null only poll once at connector start time.                                                                                                                               |
+| CatalogName                               | null         | This is the HMS catalog name.                                                                                                                                                                           |
+| DatabaseName                              | null         | This is the HMS database name.                                                                                                                                                                          |
+| sendPollEvents                            | true         | Set this to true to send events to the cohort every poll.                                                                                                                                               |
+| endpointAddress                           | null         | url to access the data that this metadata describes                                                                                                                                                     |
+| cacheIntoCachingRepository                | true         | Set this to false to not cache the metadata content                                                                                                                                                     |
+| securedProperties                         | null         | If securedProperties need to be sent on the Connection entity, specify as a json object, with string properties.                                                                                        |
+| includeDeployedSchema                     | false        | When set to true a DeployedDatabaseSchema entity is created between the Database and the database schema. Set this option if you know that members of the cohort expect to see a DeployedDatabaseSchema |
 
 ### Setting CatalogName and DatabaseName
 
@@ -154,9 +154,9 @@ higher level concepts called catalogs that hold databases.
 | n/a         | n/a                                   | ConnectionType          | This is the type of the connection                                       |
 | n/a         | n/a                                   | Endpoint                | This is where the endpoint information is stored                         |
 | n/a         | n/a                                   | DeployedDatabaseSchema  | Deployed Schema                                                          |
-| Database    | Lives within a Catalog                | RelationalDBSchemaType  | Database schema type                                                     |
-| Database    | Lives within a Catalog                | RelationalTable         | Relational Table                                                         |
-| Database    | Lives within a Catalog                | RelationalColumn        | Relational Column                                                        |
+| n/a         | n/a                                   | RelationalDBSchemaType  | Database schema type                                                     |
+| Table       | Lives within a Catalog                | RelationalTable         | Relational Table                                                         |
+| Column      | Lives within a Catalog                | RelationalColumn        | Relational Column                                                        |
 
 #### Relationship Types
 

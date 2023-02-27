@@ -27,7 +27,7 @@ Install Postman from [the Postman downloads site :material-dock-window:](https:/
 
 Once Postman is installed, start up the application.  You should see an initial page something like this:
 
-![Postman main window](postman-mainmenu.png)
+![Postman main window](postman-main-menu.png)
 
 ## Setting up Postman with Egeria data
 
@@ -45,24 +45,77 @@ postman files later, you can just create a new environment again to work with
 Select the workspace menu at the top of the Postman interface, and create a new one
 called 'Egeria dojo':
 
-![Creating a new Environment 1](postman-workspace1.png)
-![Creating a new Environment 2](postman-workspace2.png)
-![Creating a new Environment 3](postman-workspace3.png)
+![Creating a new Environment 1](postman-create-workspace1.png)
+![Creating a new Environment 2](postman-create-workspace2.png)
+![Creating a new Environment 3](postman-workspace-created.png)
 
 ## Importing Egeria Postman data
 
 We now will
-* Select 'Import' and select 'GitHub' as the source
-* Authenticate as required
-* Select the "main" branch from the odpi/egeria repository on GitHub
-* Import all the Postman data found
 
-![Import Begin](postman-import-begin.png)
-![Select import source](postman-import-coderepo.png)
-![Auth with GitHub](postman-import-gotogh.png)
-![Select egeria repo](postman-import-ghrepo.png)
-![Select what to import](postman-import-select.png)
-![After Import](postman-import-after.png)
+* Individually import the Egeria Postman collections required for this dojo
+* Select 'Import' and select 'Link' as the source
+* Paste the URL found below for the `Egeria-admin-services-operational` collection
+
+    ```
+    https://raw.githubusercontent.com/odpi/egeria/40ec581a8dbf82eeb7e96e2412099358193e8fc1/open-metadata-implementation/admin-services/Egeria-admin-services-operational.postman_collection.json
+    ```
+
+* Confirm the correct collection will be imported
+* Confirm the collection was imported successfully
+
+![Import Begin](postman-collection-import-begin.png)
+![Select import source](postman-collection-url.png)
+![Confirm Collection to import](postman-collection-importconf.png)
+![Confirm imported successfully](postman-collection-importcomplete.png)
+
+* Repeat the same procedure for the following Egeria collections:
+
+    `Egeria-admin-services-platform-configuration`
+    ```
+    https://raw.githubusercontent.com/odpi/egeria/40ec581a8dbf82eeb7e96e2412099358193e8fc1/open-metadata-implementation/admin-services/Egeria-admin-services-platform-configuration.postman_collection.json
+    ```
+    `Egeria-admin-services-server-configuration`
+    ```
+    https://raw.githubusercontent.com/odpi/egeria/40ec581a8dbf82eeb7e96e2412099358193e8fc1/open-metadata-implementation/admin-services/Egeria-admin-services-server-configuration.postman_collection.json
+    ```
+    `Egeria-asset-owner-omas`
+    ```
+    https://raw.githubusercontent.com/odpi/egeria/c31a2b19c3b42da1c2622dbe4ebed958f6a62cb5/open-metadata-implementation/access-services/asset-owner/Egeria-asset-owner-omas.postman_collection.json
+    ```
+    `Egeria-platform-services`
+    ```
+    https://raw.githubusercontent.com/odpi/egeria/40ec581a8dbf82eeb7e96e2412099358193e8fc1/open-metadata-implementation/platform-services/Egeria-platform-services.postman_collection.json
+    ```
+    `Egeria-repository-services-local-repository`
+    ```
+    https://raw.githubusercontent.com/odpi/egeria/40ec581a8dbf82eeb7e96e2412099358193e8fc1/open-metadata-implementation/repository-services/Egeria-repository-services-local-repository.postman_collection.json
+    ```
+    `Egeria-repository-services-metadata-highway`
+    ```
+    https://raw.githubusercontent.com/odpi/egeria/e256aa1ca99240ac276b584f652cf02382220bf7/open-metadata-implementation/repository-services/Egeria-repository-services-metadata-highway.postman_collection.json
+    ```
+
+* Once all collections are imported, your workspace should appear as:
+
+![Show all imported collections](postman-show-imported-collections.png)
+
+We must now import the environment required for this dojo
+
+* Again, select 'Import' and select 'Link' as the source
+* Paste the sample environment URL found below
+
+    ```
+    https://raw.githubusercontent.com/odpi/egeria/40ec581a8dbf82eeb7e96e2412099358193e8fc1/open-metadata-resources/open-metadata-samples/postman-rest-samples/Egeria.postman_environment.json
+    ```
+
+* Confirm the environment to be imported
+* Confirm the environment was imported successfully
+
+![No existing environments](postman-environments-empty.png)
+![Select environment import source](postman-environment-import-link.png)
+![Confirm environment import](postman-environment-confirmation.png)
+![Environment imported successfully](postman-environment-import-complete.png)
 
 ## Updating Postman settings
 
@@ -73,8 +126,8 @@ turn off certificate validation in postman:
 * Go to settings
 * Ensure 'SSL certificate verification' is switched off
 
-![Select Settings](postman-settings-select.png)
-![Disable certificate validation](postman-settings-change.png)
+![Select Settings](postman-locate-settings.png)
+![Disable certificate validation](postman-settings-options.png)
 
 ## Egeria Environment settings
 
@@ -85,9 +138,9 @@ Egeria platform. Tutorial content will walk you through this explicitly.
 
 * Make the egeria environment the default in this workspace
 
-![Select Egeria environment](postman-env-select.png)
-![Edit Egeria environment](postman-env-editselect.png)
-![View and edit environment values](postman-env-edit.png)
+![Select Egeria environment](postman-env-switch.png)
+![Edit Egeria environment](postman-env-find-quicklook.png)
+![View and edit environment values](postman-env-quicklook-view.png)
 
 ## Finished!
 

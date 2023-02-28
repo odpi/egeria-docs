@@ -3,8 +3,7 @@
 
 # Configuring a [metadata access point](/concepts/metadata-access-point)
 
-Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/concepts/configuration-document). 
+A *Metadata Access Point* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the server's configuration document.
 
 For a metadata access point, the following can be configured:
 

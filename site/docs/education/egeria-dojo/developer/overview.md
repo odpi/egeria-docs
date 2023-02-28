@@ -25,13 +25,17 @@ This dojo was last tested using Egeria release 3.14.
 
 ## Preparing your machine for the Dojo
 
-!!! tip "In preparation ..."
+!!! tip "In preparatio
+
+
+
+n ..."
 
     !!! attention "Think about your machine type ..."
 
         The instructions below cover fairly standard machine architectures and set ups.  If you are using, say the new M1 chip in your Mac, or Windows, or are running a work machine that has been locked down by your company, then you may need to take additional actions, install additional software and enable additional permissions. In all cases, check that the software being installed is correct for your machine type and its approved uses.
     
-    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.
+    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 17 SDK installed on your machine.
     
     ??? tip "Installing Java ..."
         --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"

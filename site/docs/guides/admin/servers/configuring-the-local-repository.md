@@ -60,7 +60,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
     It does not support the interfaces for create, update, delete.
     However, it does support the search interfaces and is able to cache metadata.
 
-    This means it can be loaded with metadata from an [open metadata archive](/egeria/concepts/open-metadata-archive)
+    This means it can be loaded with metadata from an [open metadata archive](/concepts/open-metadata-archive)
     and connected to a cohort.
     The content from the archive will be shared with other members of the cohort.
 

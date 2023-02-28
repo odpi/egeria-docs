@@ -7,7 +7,7 @@ To add a new project to intellij, select `New` then `Project` from the `File` to
 
 ![Step 1](/education/tutorials/intellij-tutorial/intellij-new-project-1.png)
 
-Select `Java` then set up the project SDK by selecting your Java 11 installed JDK and then click the `Next` button.
+Select `Java` then set up the project SDK by selecting your Java 17 installed JDK and then click the `Next` button.
 If this is the first time you are using IntelliJ you may need to click on the `New...` button and navigate to your install directory.
 
 ![Step 2](/education/tutorials/intellij-tutorial/intellij-new-project-2.png)

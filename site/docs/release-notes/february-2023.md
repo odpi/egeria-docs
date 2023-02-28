@@ -1,0 +1,79 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- Copyright Contributors to the Egeria project. -->
+
+# February 2023
+
+This is February's monthly report from the Egeria community.  This month's focus has been in preparing for the 4.0 release.
+
+## Core Egeria
+
+If you are working in the *main* branch of Egeria, you will notice that the release version is set to `4.0-SNAPSHOT` indicating that the next release will be `4.0`.  We are updating the major version number for three reasons:
+
+* the level of Java has moved from Java 11 to 17 in all builds
+* the maven build is being removed.
+* there are performance enhancements that are not strictly backward compatible for [repository connector](/concepts/repository-connector) implementation.
+
+!!! info "Core Egeria Releases"
+    * [Release 4.0](/release-notes/4-0) is expected to release by April 2023.  It will use Java 17 and be built with Gradle.
+
+### Moving to Gradle
+
+The [Core Egeria](https://github.com/odpi/egeria) repository is now building exclusively using gradle in all GitHub pipelines.  The maven option is still present in the repository, but will be removed will be removed once all known consumers of Egeria are ready.
+
+* The egeria-dev-projects.git repository has also moved to gradle and Java 17.
+* The egeria-samples.git will move from maven to gradle in the next week or so.
+* The Egeria Development Dojo will use gradle in the exercises.  However, this is still work in progress, but is expected to be completed before the V4.0 release.
+
+### Performance improvements in Core Egeria
+
+In recent months, there have been a number of significant performance enhancements made to the core libraries in the [OMAG Server Platform](/concepts/omag-server-platform).  These have resulted in halving the time to execute for some requests.  Part of this work has focused on the marshalling and unmarshalling of elements both in REST APIs and Events.
+
+One change has reduces the number of fields in the type description in an open metadata instance (entity, relationship and classification).  This will impact repository connector implementations that build their own instance type elements.
+
+This diagram illustrates the changes:
+
+![OpenMetadata Instance Structure](/concepts/open-metadata-instances-structure.svg)
+
+## Events
+
+### Webinar series
+
+On 13th March 2023 we will record another webinar called *"Building a sustainability initiative"*.
+
+Tom Tally is a recent graduate with ambitions to become a director at Coco Pharmaceuticals.  Even though she has only been in the company three years, she is already the manager of the accounts department.  In order to give her a stretch assignment, she is asked to lead the new sustainability initiative at Coco Pharmaceuticals.  She is given two experienced leaders, Erin Overview and Stew Faster, to help her.  The challenge is to create an ongoing attention to sustainability across Coco Pharmaceuticals' complex business.
+
+This webinar takes you through Tom's journey to set up and operate Coco Pharmaceuticals sustainability initiative and the role that Egeria plays.
+
+* Presenters: Mandy Chessell and Dan Wolfson
+* Time: 15:00 UTC
+* [Zoom Conference Link](https://zoom.us/j/523629111)
+
+### Community meetings
+
+Over the last few community meetings ...
+
+* We reviewed release 3.15
+* We reviewed Egeria's services to manage [metadata valid values](/guides/planning/valid-values/overview). This included a demo.
+* We had a lively discussion on a proposal to create lineage abstractions for business users using [Information Supply Chains](/types/7/0720-Information-Supply-Chains) and [Solution Components](/types/7/0735-Solution-Ports-and-Wires).
+
+The call on 22nd February 2023 was cancelled.
+
+### Annual Project Review
+
+The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is still on for 9th March 2023.
+
+## New documentation pages
+
+Each month we will select one or more new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org) so you can keep up-to-date with how it is evolving.
+
+* [Integration groups](/concepts/integration-groups)
+* [Types for integration groups](/types/4/0646-Dynamic-Integration-Groups)
+* [Description of the Governance Engine OMAS](/services/omas/governance-engine/overview)
+
+
+## Connecting with the project
+
+!!! info "Connecting with the project"
+    Go to our [community guide](/guides/community) to find out how to find out more about the activities of the Egeria project. 
+
+--8<-- "snippets/abbr.md"

@@ -23,7 +23,7 @@ If asked which build approach to use, select Maven:
 
 IntelliJ will then start reading the git repository and creating a project. This may take a few minutes so be patient.
 
-Validate that the project is set up with the right level of Java - you need Java 11.  Select `File` and then `Project Structure...`.  When the wizard opens select `Project` and ensure the SDK is Java 11.
+Validate that the project is set up with the right level of Java - you need Java 17.  Select `File` and then `Project Structure...`.  When the wizard opens select `Project` and ensure the SDK is Java 17.
 
 ![Set Java level](/education/tutorials/intellij-tutorial/intellij-set-java-level.png)
 

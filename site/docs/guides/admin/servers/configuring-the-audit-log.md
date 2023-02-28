@@ -82,7 +82,7 @@ There are various destinations that can be configured for the audit log:
 === "connection"
 
     !!! post "POST - add connection-based audit log destination"
-        This sets up an audit log destination that is described though a [connection](/egeria/concepts/connection). In this case, the connection is passed in the request body and the supported severities can be supplied in the connection's configuration properties.
+        This sets up an audit log destination that is described though a [connection](/concepts/connection). In this case, the connection is passed in the request body and the supported severities can be supplied in the connection's configuration properties.
 
         ```
         {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/connection

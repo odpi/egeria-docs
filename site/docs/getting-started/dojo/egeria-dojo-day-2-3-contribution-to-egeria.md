@@ -56,10 +56,7 @@ To create your own contribution, click on each step and complete the tasks descr
 
 * Initiate the [request to include your changes](/education/tutorials/git-and-git-hub-tutorial/task-git-pull-push-pr) into the main branch of Egeria.
   
-Once the PR is in place, GitHub will check the DCOs for you commits, and then run a full build on Java 8 and Java 11.
-The Egeria maintainers will review your contribution and may ask
-ask you to make changes to it.  When it is acceptable, they will merge it into main
-and your contribution is complete.
+Once the PR is in place, GitHub will check the DCOs for you commits, and then run a full build on Java 17.  The Egeria maintainers will review your contribution and may ask you to make changes to it.  When it is acceptable, they will merge it into main and your contribution is complete.
 
 
 ----

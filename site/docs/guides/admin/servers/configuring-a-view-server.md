@@ -3,8 +3,7 @@
 
 # Configuring a [view server](/concepts/view-server)
 
-Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/concepts/configuration-document).
+A *View Server* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the server's configuration document.
 
 ![Configuration for a view server](view-server-config.svg)
 

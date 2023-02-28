@@ -3,8 +3,7 @@
 
 # Configuring a [repository proxy](/concepts/repository-proxy)
 
-Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/concepts/configuration-document).
+A *Repository Proxy* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the server's configuration document.
 
 ![Configuration for a repository proxy](repository-proxy-configuration.svg)
 

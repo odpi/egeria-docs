@@ -6,9 +6,7 @@
 ## Overview
 
 Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/concepts/configuration-document).
-
-For open lineage server following can be configured:
+a [configuration document](/concepts/configuration-document). For an open lineage server, the following can be configured:
 
 ![Configuration for an open lineage server](open-lineage-server-configuration.svg)
 

@@ -166,7 +166,7 @@ The access services can either all be enabled (with default configuration values
 
 === "all, with defaults"
 
-    To enable all the access services (and the [enterprise repository services](/egeria/services/omrs/#enterprise-repository-services)
+    To enable all the access services (and the [enterprise repository services](/services/omrs/#enterprise-repository-services)
     that support them) with default configuration values use the following command.
 
     !!! post "POST - enable all access services"

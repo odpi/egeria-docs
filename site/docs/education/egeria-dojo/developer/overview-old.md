@@ -19,7 +19,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
 ## Preparing your machine for the Dojo
 
 !!! tip "In preparation ..."
-    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 11 SDK installed on your machine.
+    Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 17 SDK installed on your machine.
     
     ??? tip "Installing Java ..."
         --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"

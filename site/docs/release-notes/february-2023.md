@@ -46,8 +46,11 @@ The work of the cloud native workgroup continues to make progress.  The team are
 
 In development for version 4.0 is a new framework called the [Open Integration Framework (OIF)](/frameworks/oif/overview).  It provides the interfaces for an [integration connector](/concepts/integration-connector).  These interfaces were originally implemented partly in the [integration daemon services](/services/integration-daemon-services) and the [administration services](/services/admin-services/overview).  The introduction of the OIF creates a cleaner interface for integration connectors.  However, it does have an impact on existing integration connectors:
 
-* The build script for the connector needs to include the OIF as a dependency (replacing the integration-daemon-services-api module).
-   * For example, for Gradle use: `compileOnly ':open-metadata-implementation:frameworks:open-integration-framework'`
+* The build script for the connector needs to include the OIF as a dependency (replacing the integration-daemon-services-api module). For example, for Gradle use:
+```
+       compileOnly ':open-metadata-implementation:frameworks:open-integration-framework'
+```
+
 * The package names for the integration connector interfaces change from `org.odpi.openmetadata.governanceservers.integrationdaemonservices.connectors` to `org.odpi.openmetadata.frameworks.integration.connectors`.
 
 ## Events

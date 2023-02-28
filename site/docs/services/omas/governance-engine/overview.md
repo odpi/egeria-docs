@@ -46,11 +46,11 @@ Behind the scenes, Governance Engine OMAS handles the choreography of governance
 
 An [integration group](/concepts/integration-group) is a collection of [integration connector](/concepts/integration-connector) definitions intended to run in one or more [integration daemons](/concepts/integration-daemon).  The Governance Engine OMAS provides the API to maintain the integration group and integration connector definitions.  The integration daemon then loads the definitions from the integration group and runs the requested integration connectors.  This is an alternative method to configure the integration daemon from adding the integration connectors directly into the integration daemon's configuration document.  The advantage of this approach is that new integration connectors can be added without restarting the integration daemon.
 
-![integration pack operation](integration-group-use.svg)
+![integration group operation](integration-group-use.svg)
 
 The Governance Engine OMAS supports the creation and maintenance of the metadata that makes up an integration pack.  At the root is the [IntegrationGroup](/types/4/0464-Dynamic-Integration-Group).  Linked to it are the *IntegrationConnector* entities - one for each integration connector that is to run.  Each have a [connection](/concepts/connection) attached that is used to initialize the integration connector.  Optionally, the integration connector can be linked to existing metadata elements via the *CatalogTarget* relationship.  This guides the integration connector on which elements to update - rather than creating new elements.  For example, if the integration connector is cataloguing a specific database and its *Database* entity has already been created, it would be linked to the *IntegrationConnector* entity via the *CatalogTarget* relationship.  The integration connector is able to retrieve the catalog target via its context.
 
-![integration pack example](integration-group-example.svg)
+![integration group example](integration-group-example.svg)
 
 
 ## General metadata governance 

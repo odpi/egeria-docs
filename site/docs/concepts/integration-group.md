@@ -8,9 +8,15 @@ hide:
 
 # Integration Group
 
-An *integration group* describes a collection of [integration connectors](/concepts/integration-connector) that are to run together in one or more [integration daemons](/concepts/integration-daemon).  The integration daemon is configured with a list of qualified names for various integration groups.  It retrieves the list of integration connectors in each of these groups from the open metadata ecosystem and starts to run them.  It continues to monitor for changes to the integration groups and their linked integration connectors, changing the connectors it is running as needed.  
+An *integration group* describes a collection of [integration connectors](/concepts/integration-connector) that are to run together in one or more [integration daemons](/concepts/integration-daemon).  
 
-??? education "Further information"
+![integration group example](/services/omas/governance-engine/integration-group-example.svg)
+
+The integration daemon is configured with a list of qualified names for various integration groups.  It retrieves the list of integration connectors in each of these groups from the open metadata ecosystem and starts to run them.  It continues to monitor for changes to the integration groups and their linked integration connectors, changing the connectors it is running as needed.  
+
+![integration group operation](/services/omas/governance-engine/integration-group-use.svg)
+
+???+ education "Further information"
 
     Each integration group has a unique name.  An *IntegrationGroup* entity with a qualifiedName set to this unique name is created through the [Governance Engine OMAS](/services/omas/governance-engine/overview) API.  This API is also used to create and link the integration connector definitions into the integration group.
 

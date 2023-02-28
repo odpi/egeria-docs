@@ -6,7 +6,7 @@
 
 # Hive Metastore Repository Connector
 
-This repository has been created to manage artifacts and issues relating to integration with Hive Metastore (HMS).
+This repository has been created to manage artifacts and issues relating to integration with Apache Hive Metastore (HMS).
 This connector is based on the same polling pattern that the [File sample OMRS connector uses](/connectors/repository/file-sample-omrs-connector/overview/).
 
 !!! info "Connector details"
@@ -85,10 +85,10 @@ The setting of these 2 parameters dictates the scope of metadata that is ingeste
 
 ## Using with the IBM Cloud&#174 Data Engine service.
 
-To use this connector with [IBM Cloud&#174 Data Engine service](https://cloud.ibm.com/catalog/services/data-engine-previously-sql-query), the code needs to be recompiled to bring in the IBM HMS Client library.
-For more details see the [IBM documentation](https://cloud.ibm.com/docs/sql-query?topic=sql-query-hive_metastore#hive_compatible_client) on this.
-There is a [bash script](https://github.com/odpi/egeria-connector-hivemetastore/blob/main/utilities/createIBMHMS.sh) that is supplied as-is and 
-can be used in development on a Mac to build and run an Egeria platform that contains the [IBM Hive-compatible client](https://us.sql-query.cloud.ibm.com/download/catalog/hive-metastore-standalone-client-3.1.2-sqlquery.jar).
+To use this connector with [IBM Cloud&#174 Data Engine service](https://cloud.ibm.com/catalog/services/data-engine-previously-sql-query), the code needs to be
+recompiled to bring in the [IBM HMS Client library](https://cloud.ibm.com/docs/sql-query?topic=sql-query-hive_metastore#hive_compatible_client). To do this the 
+property *ibmhive* in the gradle build; on the command line specify: 
+`./gradlew build -Pibmhive`
 
 The following additional security parameters need to be specified in the `configurationProperties` as the IBM Hive-compatible client
 uses a secure API to talk to the IBM Cloud&#174.
@@ -101,6 +101,23 @@ uses a secure API to talk to the IBM Cloud&#174.
 | useSSL                                    | false   | Set to true                                                                                           |
 | CatalogName                               | null    | set to "spark"                                                                                          |
 | DatabaseName                              | null    | Set to "default"                                                                                   |
+
+## The logic to extract the columns for the HMS Table. 
+
+The IBM Cloud&#174 Data Engine has HMS tables that describe [IBM Cloud&#174 object storage](https://www.ibm.com/uk-en/cloud/object-storage) data. In this case the HMS table is
+an external table. In this case, the columns are described in HMS table parameters in an [Apache Spark&trade;](https://spark.apache.org/) format.
+
+For external tables (currently only verified using IBM Cloud&#174 Data Engine service) the HMS connector.
+1) Checks table parameter `spark.sql.sources.schema.numParts`. If specified then this is the number of spark sql sources schema parts that are present. Thre
+   schema parts are `spark.sql.sources.schema.part.0`  ...`spark.sql.sources.schema.part.n` - where `n` is one less than the number of parts. The
+   HMS connector stitches these parts together to form valid json and then extracts the column information from that json. This is a Spark v2 format.
+2) If `spark.sql.sources.schema.numParts` is not specified, then the HMS connector extracts the columns from `spark.sql.sources.schema`. This is a Spark v3 format.
+
+For all other cases and for external tables with `spark.sql.sources.schema.numParts` and `spark.sql.sources.schema`, the code looks in the
+HMS table storage descriptor `cols` property to get the columns.
+
+We can imagine that other scenarios might require the above logic to be amended. For example, for data stored in HDFS an exposed as a managed table 
+then and using Spark data sources. If new scenarios occur, that can be tested by the community, then the above code can be extended.
 
 ## Design
 

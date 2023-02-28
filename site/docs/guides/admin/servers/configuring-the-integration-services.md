@@ -1,16 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-## Configuring the integration connectors
 
-The integration connectors that are to run in the integration daemon can be configured one of two ways:
-
-* Statically in the integration daemon's configuration document using [integration service definitions](#configure-the-integration-services)
-* Dynamically using [integration groups](#configure-dynamic-integration-groups)
-
-Both approaches can be used in the same integration daemon instance.  However, each integration connector to run should only be configured by 
-
-## Configure the integration services
+### Configure the integration services
 
 The [integration services](/services/omis) (or Open Metadata Integration Services (OMIS) to give them their full name) run in an [integration daemon](/concepts/integration-daemon).
 
@@ -20,7 +12,7 @@ Each integration service hosts one or more [integration connectors](/concepts/in
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `integrationServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 
-### List integration services
+#### List integration services
 
 It is possible to get a description of each of the registered integration services using the following command:
 
@@ -31,7 +23,7 @@ It is possible to get a description of each of the registered integration servic
 
     Note the `integrationServiceURLMarker` for the integration service that you want to configure.
 
-### Configure an integration service
+#### Configure an integration service
 
 Each integration service is configured with the network location of the [metadata access point](/concepts/metadata-access-point) / [metadata access store](/concepts/metadata-access-store) running the appropriate [OMAS](/services/omas). There are a set of options that the integration service supports along with the list of configuration properties for the integration connectors that will be run in the integration service. The integration connector's configuration properties defines which connector implementation to use and how it should be operated.
 
@@ -89,7 +81,7 @@ Detailed description of the properties:
     - `FROM_THIRD_PARTY` - The third party technology is logically upstream (the originator and owner of the metadata). Any updates made in open metadata are not passed to the third party technology and the third party technology is requested to refresh the open metadata version.
     - `BOTH_DIRECTIONS` - Metadata exchange is permitted in both directions. Synchronization is halted on a specific element if potentially clashing updates have occurred both in the third party technology and open metadata. Such conflicts are logged on the audit log and resolved through manual stewardship.
 
-## Configure dynamic integration groups
+
 
 
 --8<-- "snippets/abbr.md"

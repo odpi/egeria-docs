@@ -45,6 +45,7 @@ The work of the cloud native workgroup continues to make progress.  The team are
 ## New framework - The Open Integration Framework (OIF)
 
 In development for version 4.0 is a new framework called the [Open Integration Framework (OIF)](/frameworks/oif/overview).  It provides the interfaces for an [integration connector](/concepts/integration-connector).  These interfaces were originally implemented partly in the [integration daemon services](/services/integration-daemon-services) and the [administration services](/services/admin-services/overview).  The introduction of the OIF creates a cleaner interface for integration connectors.  However, it does have an impact on existing integration connectors:
+
 * The build script for the connector needs to include the OIF as a dependency (replacing the integration-daemon-services-api module).
    * For example, for Gradle use: `compileOnly ':open-metadata-implementation:frameworks:open-integration-framework'`
 * The package names for the integration connector interfaces change from `org.odpi.openmetadata.governanceservers.integrationdaemonservices.connectors` to `org.odpi.openmetadata.frameworks.integration.connectors`.
@@ -81,6 +82,7 @@ The Egeria project annual review by the [Technical Advisory Board (TAC)](https:/
 * The status of our bid to achieve the gold CII badge.  This is currently blocked by an issue with the badge application.
 * Demonstrations of our project's increasing maturity.
     * The growth in the number of git repositories.
+    * Monthly newsletters.
     * Our new Dojos.
     * The security/quality scanning along with the work of the security workgroup.
     * The number of releases we have delivered.

@@ -4,7 +4,7 @@
 
 # Examples of errors starting the OMAG Server Platform
 
-Note that these examples were taken using Java 8. Egeria requires Java 11 as of release 3.0 .
+Note that these examples were taken using Java 8. Egeria requires Java 17 as of release 4.0 .
 
 ## Port already in use
 

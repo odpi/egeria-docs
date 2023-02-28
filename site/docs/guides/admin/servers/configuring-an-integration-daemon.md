@@ -1,10 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Configuring an [integration daemon](/egeria/concepts/integration-daemon)
+# Configuring an [integration daemon](/concepts/integration-daemon)
 
-Each [type of OMAG Server](/egeria/concepts/omag-server/#types-of-omag-server) is configured by creating
-a [configuration document](/egeria/concepts/configuration-document).
+An *Integration Daemon* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the integration daemon's configuration document.
 
 ![Configuration for an integration daemon](integration-daemon-config.svg)
 

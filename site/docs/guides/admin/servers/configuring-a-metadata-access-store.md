@@ -3,7 +3,7 @@
 
 # Configuring a [metadata access store](/concepts/metadata-access-store)
 
-Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating a [configuration document](/concepts/configuration-document).
+A *Metadata Access Store* is configured by creating a [configuration document](/concepts/configuration-document). Below are the outline structures of the server's configuration document.
 
 A metadata access store can be run standalone, without connecting to a cohort:
 

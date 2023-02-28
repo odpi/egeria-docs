@@ -565,6 +565,7 @@ nav:
           - Frameworks Overview : frameworks/index.md
           - Audit Logs (ALF): frameworks/alf/overview.md
           - Open Connectors (OCF): frameworks/ocf/overview.md
+          - Open Integration (OIF): frameworks/oif/overview.md
           - Open Discovery (ODF): frameworks/odf/overview.md
           - Governance Actions (GAF): frameworks/gaf/overview.md
       - Conformance Test Suite:
@@ -688,6 +689,7 @@ nav:
       - Informal Tag: concepts/informal-tag.md
       - Integration Connector: concepts/integration-connector.md
       - Integration Daemon: concepts/integration-daemon.md
+      - Integration Group: concepts/integration-group.md
       - IsPublic: concepts/is-public.md
       - Javadoc: concepts/javadoc.md
       - Karma Point: concepts/karma-point.md

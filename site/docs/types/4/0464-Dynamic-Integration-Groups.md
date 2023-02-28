@@ -9,43 +9,20 @@ The types in this model are used to create [integration group](/concepts/integra
 
 ## IntegrationGroup entity
 
-An [integration engine](/concepts/governance-engine) is a [software capability](/types/0/0042-Software-Capabilities) that is able to run specific [integration connectors](/concepts/integration-connector) on demand.  These services, called [governance services](/concepts/governance-service), typically implement specific logic that is needed to govern an organization's resources or the metadata associated with them.
+An [integration group](/concepts/integration-group) is a [software capability](/types/0/0042-Software-Capabilities) that is able to run specific [integration connectors](/concepts/integration-connector) on demand.
 
-Open metadata recognizes three types of governance engine:
+## RegisteredIntegrationConnector relationship
 
-* *GovernanceActionEngine* - [Governance action engines and services](/concepts/governance-action-engine) support the active governance of metadata and the resources they represent.  There are different types of governance action engines/services that are defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
+The integration connectors to run in an *integration group* are specified via the *RegisteredIntegrationConnector* relationships.
 
-* *[OpenDiscoveryEngine](/types/6/0601-Open-Discovery-Engine)* - [Discovery engines and services](/concepts/open-discovery-engine) support the analysis of [digital resources](/concepts/resource).  The results of this analysis are stored in a [discovery analysis report](/types/6/0605-Open-Discovery-Analysis-Reports) chained off of the corresponding [Asset](/types/0/0010-Base-Model#asset) metadata element. The interfaces for discovery are found in the  [Open Discovery Framework (ODF)](/frameworks/odf/overview).  The types for the open discovery engines are shown on model .
+## IntegrationConnector entity
 
-* *RepositoryGovernanceEngine* - [Repository governance engines and services](/concepts/repository-governance-engine) support the maintenance of repository level concerns, such as monitoring audit logs and maintaining [open metadata archives](/concepts/open-metadata-archive) that are defined in the [Open Metadata Repository Services (OMRS)](/services/omrs).
+*[Integration connectors](/concepts/integration-connector)* are specialist [connectors](/concepts/connector).  They are represented in open metadata using the *IntegrationConnector* entity which is a specialization of *[DeployedConnector](/types/2/0215-Software-Components)*.  This entity is linked to a *[Connection](/types/2/0201-Connectors-and-Connections)* entity via a *[ConnectionToAsset](/types/2/0205-Connection-Linkage)* relationship.
 
-## SupportedGovernanceService relationship
+An integration connector can be linked to multiple integration groups via the *RegisteredIntegrationConnector* relationship.  It can only be linked to a specific integration group once.  If multiple instances of the same integration connector implementation is to be specified in a group. each one is represented by an *IntegrationConnector* entity linked to its own *Connection* entity that describes its required behaviour.
 
-The capability of a *governance engine* is specified via the *SupportedGovernanceService* relationships.  
+## CatalogTarget
 
-The `requestType` attribute in this relationship is the caller's request type (known as the [governance request type](/concepts/governance-request-type)).  The `serviceRequestType` attribute maps the *governance request type* to a request type supported by the associated [governance service](#governanceservice-entity).  If `serviceRequestType` is null, the governance request type is used when calling the governance service.
-
-Each governance request type linked to a specific governance engine must be unique.
-
-The `requestParameters` provide initial values of the request parameters passed to the governance services when it is called.  These are overridden by any request parameters supplied by the caller.
-
-## GovernanceService entity
-
-*[Governance services](/concepts/governance-service)* are specialist [connectors](/concepts/connector).  They are represented in open metadata using the *GovernanceService* entity which is a specialization of *[DeployedConnector`](/types/2/0215-Software-Components)*.  This entity is linked to a *[Connection](/types/2/0201-Connectors-and-Connections)* entity via a *[ConnectionToAsset](/types/2/0205-Connection-Linkage)* relationship.
-
-A governance service can be linked to multiple governance engines via the *SupportedGovernanceService* relationship.  It can be linked to the same governance engine multiple times as long as each *SupportedGovernanceService* relationship has a different governance request type.
-
-The subtype of the governance service linked via the *SupportedGovernanceService* relationship should be consistent with the subtype of the associated governance engine.  For example:
-
-* A *GovernanceActionService* is linked to a *GovernanceActionEngine*.
-* An *OpenDiscoveryService* is linked to an *OpenDiscoveryService*.
-* A *RepositoryGovernanceService* is linked to a *RepositoryGovernanceEngine*.
-
-
-??? education "Further information"
-
-    The [Open Metadata Engine Services (OMES)](/services/omes) support the implementation of each type of governance engine. They run in an [Engine Host](/concepts/engine-host) OMAG Server and draw their configuration from the  *GovernanceEngine* and the linked *GovernanceService* elements in the associated metadata server.
-    
-    The type definitions for discovery engines and services are shown in [model 0601](/types/6/0601-Open-Discovery-Engine).
+The *CatalogTarget* relationship links an *IntegrationConnector* entity to another entity that the integration connector is to update.  For example, if an integration connector is configured to catalog a database and its [*Database*](/types/2/0224-Databases) entity is already created, the *CatalogTarget* would link the *IntegrationConnector* entity with the *Database* entity.  This prevents the integration connector from recreating the Database entity when it runs.
 
 --8<-- "snippets/abbr.md"

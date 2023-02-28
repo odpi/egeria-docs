@@ -67,6 +67,7 @@
 - [Connector Provider](/concepts/connector-provider)
 - [Connector Type](/concepts/connector-type)
 - [Contact Method](/concepts/contact-method)
+- [Context Manager](/frameworks/oif/overview)
 
 ## D
 
@@ -135,6 +136,7 @@
 
     - [Audit Log Framework (ALF)](/frameworks/alf/overview)
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview)
+    - [Open Integration Framework (OIF)](/frameworks/oif/overview)
     - [Open Discovery Framework (ODF)](/frameworks/odf/overview)
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
 
@@ -190,7 +192,11 @@
 - [In Memory Repository Connector](/concepts/repository-connector)
 - [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview)
 - [Integration Connector](/concepts/integration-connector)
+- [Integration Context](/frameworks/oif/overview)
+- [Integration Context Manager](/frameworks/oif/overview)
 - [Integration Daemon](/concepts/integration-daemon)
+- [Integration Framework](/frameworks/oif/overview)
+- [Integration Group](/concepts/integration-group)
 - [Integration Services](/services/omis)
 - [IsPublic](/concepts/is-public)
 - [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview)
@@ -257,6 +263,7 @@
 - [Open Discovery Engine](/concepts/open-discovery-engine)
 - [Open Discovery Framework (ODF)](/frameworks/odf/overview)
 - [Open Discovery Service](/concepts/open-discovery-service)
+- [Open Integration Framework](/frmeworks/oif/overview)
 - [Open Lineage Server](/concepts/open-lineage-server)
 - [Open Lineage Services](/services/open-lineage-services)
 - [Open Metadata and Governance (OMAG)](/introduction/overview)

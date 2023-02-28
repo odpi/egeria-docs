@@ -28,11 +28,26 @@ The [Core Egeria](https://github.com/odpi/egeria) repository is now building exc
 
 In recent months, there have been a number of significant performance enhancements made to the core libraries in the [OMAG Server Platform](/concepts/omag-server-platform).  These have resulted in halving the time to execute for some requests.  Part of this work has focused on the marshalling and unmarshalling of elements both in REST APIs and Events.
 
-One change has reduces the number of fields in the type description in an open metadata instance (entity, relationship and classification).  This will impact repository connector implementations that build their own instance type elements.
+One change has reduced the number of fields in the type description in an open metadata instance (entity, relationship and classification).  This will impact repository connector implementations that build their own instance type elements.
 
 This diagram illustrates the changes:
 
 ![OpenMetadata Instance Structure](/concepts/open-metadata-instances-structure.svg)
+
+## Connectors
+
+The [JDBC Connectors](https://github.com/odpi/egeria-connector-jdbc) are now officially released onto Maven Central.  The next step is to add them to the [open connectors archive](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives) so that they are picked up by the OMAG services.
+
+## Cloud-native workgroup
+
+The work of the cloud native workgroup continues to make progress.  The team are focused on building a simple proof of concepts around an [integration daemon](/concepts/integration-connector) running a single [integration connector](/concepts/integration-connector).  If you wish to follow along, or join in, please follow the [cloud native discussions](https://github.com/odpi/egeria/discussions/categories/cloud-native).
+
+## New framework - The Open Integration Framework (OIF)
+
+In development for version 4.0 is a new framework called the [Open Integration Framework (OIF)](/frameworks/oif/overview).  It provides the interfaces for an [integration connector](/concepts/integration-connector).  These interfaces were originally implemented partly in the [integration daemon services](/services/integration-daemon-services) and the [administration services](/services/admin-services/overview).  The introduction of the OIF creates a cleaner interface for integration connectors.  However, it does have an impact on existing integration connectors:
+* The build script for the connector needs to include the OIF as a dependency (replacing the integration-daemon-services-api module).
+   * For example, for Gradle use: `compileOnly ':open-metadata-implementation:frameworks:open-integration-framework'`
+* The package names for the integration connector interfaces change from `org.odpi.openmetadata.governanceservers.integrationdaemonservices.connectors` to `org.odpi.openmetadata.frameworks.integration.connectors`.
 
 ## Events
 
@@ -58,16 +73,32 @@ Over the last few community meetings ...
 
 The call on 22nd February 2023 was cancelled.
 
-### Annual Project Review
+### Annual project review
 
-The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is still on for 9th March 2023.
+The Egeria project annual review by the [Technical Advisory Board (TAC)](https://wiki.lfaidata.foundation/pages/viewpage.action?pageId=7733341) of the LF AI and Data foundation is still on for 9th March 2023.  The topics we intend to cover are:
+
+* Statistics about the project.
+* The status of our bid to achieve the gold CII badge.  This is currently blocked by an issue with the badge application.
+* Demonstrations of our project's increasing maturity.
+    * The growth in the number of git repositories.
+    * Our new Dojos.
+    * The security/quality scanning along with the work of the security workgroup.
+    * The number of releases we have delivered.
+    * The growth of the website's content.
+    * The number of technologies integrated with Egeria.
+    * The presence of Pragmatic Data Research Ltd to guide vendors and consuming organizations on Egeria Adoption.
+* Future development items, such as
+    * Cloud native operations
+    * Metadata observability
+    * Common UI
+    * Python clients
 
 ## New documentation pages
 
 Each month we will select one or more new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org) so you can keep up-to-date with how it is evolving.
 
-* [Integration groups](/concepts/integration-groups)
-* [Types for integration groups](/types/4/0646-Dynamic-Integration-Groups)
+* [Integration groups](/concepts/integration-group)
+* [Types for integration groups](/types/4/0464-Dynamic-Integration-Groups)
 * [Description of the Governance Engine OMAS](/services/omas/governance-engine/overview)
 
 

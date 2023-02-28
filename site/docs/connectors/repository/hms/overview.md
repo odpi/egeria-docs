@@ -6,7 +6,7 @@
 
 # Hive Metastore Repository Connector
 
-This repository has been created to manage artifacts and issues relating to integration with Apache Hive Metastore (HMS).
+This repository has been created to manage artifacts and issues relating to integration with Hive Metastore (HMS).
 This connector is based on the same polling pattern that the [File sample OMRS connector uses](/connectors/repository/file-sample-omrs-connector/overview/).
 
 !!! info "Connector details"
@@ -73,7 +73,7 @@ like this
 
 ### Setting CatalogName and DatabaseName
 
-The setting of these 2 parameters dictates the scope of metadata that is ingested from HMS. For Apache Hive the default catalog name is *hive* and default database name is *default*.
+The setting of these 2 parameters dictates the scope of metadata that is ingested from HMS. For Hive the default catalog name is *hive* and default database name is *default*.
 
 | CatalogName       | DatabaseName       | scope of HMS content to be ingested                                                                                                                               | 
 |-------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -5,13 +5,11 @@
 
 # Governance Engine Open Metadata Access Service (OMAS)
 
-The **Governance Engine OMAS** supports the implementation of a [governance program](../governance-program)
-by providing the metadata services for running
-**[governance engines](/concepts/governance-engine)**.
+The *Governance Engine OMAS* supports the implementation of a [governance program](/services/omas/governance-program/overview) by providing the metadata services for defining and running [governance engines](#governance-engines) as well as setting up [integration groups](#integration-groups).
 
-A governance engine is a collection of related 
-**[governance services](/concepts/governance-service)** that provide pluggable
-governance functions.  The governance services are implemented as 
+## Governance Engines
+
+A governance engine is a collection of related *[governance services](/concepts/governance-service)* that provide pluggable governance functions.  The governance services are implemented as 
 specialist [connectors](/frameworks/ocf/overview) that are defined by:
 
  * [Open Discovery Framework (ODF)](/frameworks/odf/overview) for Open Discovery Services
@@ -19,29 +17,46 @@ specialist [connectors](/frameworks/ocf/overview) that are defined by:
  * [Governance Action Framework (GAF)](/frameworks/gaf/overview) of Governance Action Services
    that monitor, assess and maintain metadata.
 
-The governance services run in the [Engine Host OMAG Server](/concepts/engine-host)
-supported by the [Open Metadata Engine Services (OMES)](/services/omes).
-   
-The Governance Engine OMAS has the following capabilities:
+The governance services run in the [Engine Host OMAG Server](/concepts/engine-host) supported by the [Open Metadata Engine Services (OMES)](/services/omes).  They are triggered via [governance actions](/concepts/governane-action).
 
-- Creating the definitions for [governance engines](/concepts/governance-engine) and their [governance services](/concepts/governance-service).
-- Providing the APIs and events that enable the Engine Host OMAG Server to retrieve the definitions of the governance engines and services and be notified of any changes to them.
-- Creating the definitions for [governance action processes](/concepts/governance-action-process) that control the sequencing of [governance actions](/concepts/governance-action).
-- Providing APIs to create [governance actions](/concepts/governance-action) explicitly and [incident reports](/concepts/incident-report).
-- Initiation and choreography of governance actions based on the template provided by  a [governance actions process](/concepts/governance-action-process).
-- Notification of new [governance actions](/concepts/governance-action) to the  Engine Host OMAG Servers that then invoke the appropriate governance services to action them.
-- Supporting the metadata requirements for many of the [engine services](/services/omes).
-- Linking the governance actions, governance action processes and governance services to the governance definitions supported by the [Governance Program OMAS](/services/omas/governance-program/overview).
-- Providing APIs to query the status of the governance capabilities implemented through the governance engines.
+The Governance Engine OMAS has the following capabilities to support governance engines:
 
-## Documentation
+| Java Interface                                                                                                                                                    | Description                                                                                                                                                                                                      |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [GovernanceEngineConfiguration](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceEngineConfiguration.html)       | Creating the definitions for [governance engines](/concepts/governance-engine) and their [governance services](/concepts/governance-service).                                                                    |
+| [GovernanceEngineEventInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceEngineEventInterface.html)     | Providing the events that enable the Engine Host OMAG Server to be notified of any changes to governance actions, governance engines and governance services.  It also provides support for the watchdog events. |
+| [GovernanceProcessingInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceProcessingInterface.html)       | Providing the APIs that enable the Engine Host OMAG Server to retrieve the definitions of the governance engines and services.                                                                                   |
+| [GovernanceActionProcessInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceActionProcessInterface.html) | Creating the definitions for [governance action processes](/concepts/governance-action-process) that control the sequencing of [governance actions](/concepts/governance-action).                                |
+| [GovernanceProcessingInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceProcessingInterface.html)       | Providing APIs to initiate [governance actions](/concepts/governance-action) and [governance action processes](/concepts/governance-action-process) explicitly.                                                  |
+| [GovernanceEngineEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceEngineEventListener.html)       | Notification of new [governance actions](/concepts/governance-action) to the Engine Host OMAG Servers that then invoke the appropriate governance services to action them.                                       |
+| [MetadataElementInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/commonservices/gaf/api/MetadataElementInterface.html)                              | Supporting the metadata requirements for many of the [engine services](/services/omes).                                                                                                                          |
+| [GovernanceEngineConfiguration](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceEngineConfiguration.html)       | Providing APIs to query the status of the governance capabilities implemented through the governance engines.                                                                                                    |
+| [SpecialGovernanceActionInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/SpecialGovernanceActionInterface.html) | Providing specialized governance remediation APIs such as linking duplicates.                                                                                                                                    |
 
-Governance Engine OMAS has a [User Guide](/guides/developer/java-clients/governance-engine) that covers the Governance Engine OMAS's APIs and events.  
+Behind the scenes, Governance Engine OMAS handles the choreography of governance actions based on the process definition provided by a [governance action process](/concepts/governance-action-process).
 
-The documentation for writing governance services is located in the developer guide:
+!!! info "Further documentation"
+    The documentation for writing governance services is located in the developer guide:
 
-- [Open Discovery Services](/guides/developer/open-discovery-services) for metadata discovery.
-- [Governance Action Services](/guides/developer/governance-action-services) for the Governance Action Services: Watchdog Governance Services, Triage Governance Services, Verification Governance Services, Remediation Governance Services and Provisioning Governance Services. 
+    - [Open Discovery Services](/guides/developer/open-discovery-services) for metadata discovery.
+    - [Governance Action Services](/guides/developer/governance-action-services) for the Governance Action Services: Watchdog Governance Services, Triage Governance Services, Verification Governance Services, Remediation Governance Services and Provisioning Governance Services.
 
+
+## Integration Groups
+
+An [integration group](/concepts/integration-group) is a collection of [integration connector](/concepts/integration-connector) definitions intended to run in one or more [integration daemons](/concepts/integration-daemon).  The Governance Engine OMAS provides the API to maintain the integration group and integration connector definitions.  The integration daemon then loads the definitions from the integration group and runs the requested integration connectors.  This is an alternative method to configure the integration daemon from adding the integration connectors directly into the integration daemon's configuration document.  The advantage of this approach is that new integration connectors can be added without restarting the integration daemon.
+
+![integration pack operation](integration-group-use.svg)
+
+The Governance Engine OMAS supports the creation and maintenance of the metadata that makes up an integration pack.  At the root is the [IntegrationGroup](/types/4/0464-Dynamic-Integration-Group).  Linked to it are the *IntegrationConnector* entities - one for each integration connector that is to run.  Each have a [connection](/concepts/connection) attached that is used to initialize the integration connector.  Optionally, the integration connector can be linked to existing metadata elements via the *CatalogTarget* relationship.  This guides the integration connector on which elements to update - rather than creating new elements.  For example, if the integration connector is cataloguing a specific database and its *Database* entity has already been created, it would be linked to the *IntegrationConnector* entity via the *CatalogTarget* relationship.  The integration connector is able to retrieve the catalog target via its context.
+
+![integration pack example](integration-group-example.svg)
+
+
+## General metadata governance 
+
+The Governance Engine OMAS supports the standard Open Metadata Store interfaces.
+
+--8<-- "docs/frameworks/gaf/open-metadata-store.md"
 
 --8<-- "snippets/abbr.md"

@@ -7,8 +7,22 @@ An *Engine Host* is configured by creating a [configuration document](/concepts/
 
 ![Configuration for an engine host](engine-host-config.svg)
 
-??? example "Example configuration of a minimal engine host server"
-    Below is an example of the configuration for a minimal engine host server. It has a single engine service (`Asset Analysis OMES`) and the default audit log. Both the Governance Engine OMAS used by the engine host services and the Discovery Engine OMAS used by the Asset Analysis OMES are running on the metadata server called `myMetadataServer`.
+The configuration document is built up using a series of administration calls:
+
+??? info "Configuring the basic properties"
+    --8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
+
+??? info "Configuring the audit log"
+    --8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
+
+??? info "Configuring the server security connector"
+    --8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md"
+
+??? info "Configuring the engine host services"
+    --8<-- "docs/guides/admin/servers/configuring-the-engine-host-services.md"
+
+??? example "Example configuration of an engine host"
+    This is an example of the configuration for an engine host. It has a single engine service ([Asset Analysis OMES](/services/omes/asset-analysis/overview)) and the default audit log. Both the [Governance Engine OMAS](/services/omas/governance-engine/overview) used by the engine host services and the [Discovery Engine OMAS](/services/omas/discovery-engine/overview) used by the Asset Analysis OMES are running on the metadata access server called `myserver`.
 
     ```json
     {
@@ -101,15 +115,5 @@ An *Engine Host* is configured by creating a [configuration document](/concepts/
     }
     ```
 
-The configuration document is built up using a series of administration calls:
-
-
---8<-- "docs/guides/admin/servers/configuring-omag-server-basic-properties.md"
-
---8<-- "docs/guides/admin/servers/configuring-the-audit-log.md"
-
---8<-- "docs/guides/admin/servers/configuring-the-server-security-connector.md"
-
---8<-- "docs/guides/admin/servers/configuring-the-engine-host-services.md"
 
 --8<-- "snippets/abbr.md"

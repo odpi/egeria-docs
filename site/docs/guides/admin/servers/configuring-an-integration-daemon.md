@@ -26,10 +26,10 @@ An *Integration Daemon* is configured by creating a [configuration document](/co
 
     Both approaches can be used in the same integration daemon instance.  However, each integration connector to run should only be configured by
 
-    ??? info "Configuring integration services
+    ??? info "Configuring integration services"
         --8<-- "docs/guides/admin/servers/configuring-the-integration-services.md"
     
-    ??? info "Configuring integration groups
+    ??? info "Configuring integration groups"
         --8<-- "docs/guides/admin/servers/configuring-the-integration-groups.md"
 
 ??? education "Further information"

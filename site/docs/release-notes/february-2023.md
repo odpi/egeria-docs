@@ -36,7 +36,19 @@ This diagram illustrates the changes:
 
 ## Connectors
 
+### JDBC connector
+
 The [JDBC Connectors](https://github.com/odpi/egeria-connector-jdbc) are now officially released onto Maven Central.  The next step is to add them to the [open connectors archive](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives) so that they are picked up by the OMAG services.
+
+### HMS connector
+
+The [Egeria HMS connector](https://github.com/odpi/egeria-connector-hivemetastore) has been enhanced in 3 ways this month:
+
+* The gradle build has been improved to bring in the latest dependencies. There is now a new optional property that can be set on the gradle build to create
+a HMS connector that will work with the [IBM Cloud&#174 Data Engine service](https://cloud.ibm.com/catalog/services/data-engine-previously-sql-query); to do this the
+  property *ibmhive* in the gradle build; on the command line specify: `./gradlew build -Pibmhive`
+* Junits have been added so the coverage is now over 70%.
+* The HMS connector now correctly extracts columns from HMS external tables that have been created from [Apache Spark&trade;](https://spark.apache.org/) dataframes.  
 
 ## Cloud-native workgroup
 

@@ -2,8 +2,6 @@
 
 With the simple environment we have set up, we can now start exploring the Egeria Ecosystem UI.
 
-In later labs you can refer back to this documentation and try out the new with the new environment.
-
 ## Setting up connectivity to the UI
 
 To use the Ecosystem UI you will need to forward a port so that the browser can communicate with the Egeria Ecosystem UI application. 

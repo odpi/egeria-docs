@@ -307,7 +307,7 @@ _It's important to note that we are only defining the configuration of a server 
 ### Examining the configuration
 
 Use the **Egeria-admin-services-platform-configuration** Postman collection to experiment with the
-different registered services and and known and active server requests.
+different registered services and known and active server requests.
 These are useful to know as we move to configure servers on the platform.
 ### Test yourself
 

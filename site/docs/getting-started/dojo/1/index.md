@@ -158,7 +158,7 @@ You can choose to type the request into postman, or use the requests already def
   commands.
 
 Finally, use the `Egeria-admin-services-platform-configuration` Postman collection to experiment with the
-different registered services and and known and active server requests.
+different registered services and known and active server requests.
 These are useful to know as we move to configure servers on the platform.
 
 This is the end of the session on the OMAG Server Platform.

@@ -3,7 +3,7 @@
 
 # 0464 Integration Groups
 
-The types in this model are used to create [integration group](/concepts/integration-group) definitions.
+The types in this model are used to create [integration group](/concepts/integration-group) definitions and provide support for [integration connectors](/concepts/integration-connector) to record their activity with the principle ([anchor](/concepts/anchor)) entity.
 
 ![UML](0464-Dynamic-Integration-Groups.svg)
 
@@ -35,8 +35,29 @@ An integration connector can be linked to multiple integration groups via the *R
 
 The `usesBlockingCalls` attribute sets up whether the connector should be started in its own thread to allow it to block on a listening call.
 
-## CatalogTarget
+## CatalogTarget relationship
 
 The *CatalogTarget* relationship links an *IntegrationConnector* entity to another entity that the integration connector is to update.  For example, if an integration connector is configured to catalog a database and its [*Database*](/types/2/0224-Databases) entity is already created, the *CatalogTarget* would link the *IntegrationConnector* entity with the *Database* entity.  This prevents the integration connector from recreating the Database entity when it runs.
+
+## IntegrationReport entity
+
+The *IntegrationReport* entity describes the updates made by an [integration connector](/concepts/integration-connector) during a single call to its `refresh()` method.  A report is only created if the connector made changes (create, update, delete) to the metadata.
+
+The attributes are as follows:
+
+* `serverName` - name of the [integration daemon](/concepts/integration-daemon) where the integration connector is running/ran.
+* `connectorId` : unique identifier of the connector.  This is either set in the integration daemon's configuration document or it is the unique identifier (guid) of the *RegisteredIntegrationConnector* relationship that links the integration connector into a running integration group.
+* `connectorName` : name of the connector.  This is either set in the integration daemon's configuration document or it is the unique identifier (guid) of the *RegisteredIntegrationConnector* relationship that links the integration connector into a running integration group.
+* `refreshStartDate` : The date/time that the `refresh()` call was made to the integration connector.
+* `refreshCompletionDate` : The data/time that the integration connector returned from the `refresh()` call.
+* `createCounts` : A map of element type names to the number of instances of that type that were created and anchored to the anchor subject.
+* `updateCounts` : A map of element type names to the number of instances of that type that were updated while anchored to the anchor subject.
+* `deleteCounts` : A map of element type names to the number of instances of that type that were deleted while anchored to the anchor subject.
+* `additionalProperties` - additional properties of importance to the integration connector.
+
+## RelatedIntegrationReport relationship
+
+The *RelatedIntegrationReport* relationship links the anchor entity to an integration report.
+
 
 --8<-- "snippets/abbr.md"

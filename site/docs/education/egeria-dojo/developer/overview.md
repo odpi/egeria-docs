@@ -25,11 +25,7 @@ This dojo was last tested using Egeria release 3.14.
 
 ## Preparing your machine for the Dojo
 
-!!! tip "In preparatio
-
-
-
-n ..."
+!!! tip "In preparation ..."
 
     !!! attention "Think about your machine type ..."
 

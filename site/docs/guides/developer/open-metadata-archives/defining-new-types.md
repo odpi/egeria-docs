@@ -137,7 +137,7 @@ There are three main components.  A builder that constructs the archive in memor
          */
         private static final String                  archiveGUID        = "50874908-01f1-47e2-83ea-e571109a946e";
         private static final String                  archiveName        = "CocoTypes";
-        private static final String                  archiveLicense     = "Apache 2.0";
+        private static final String                  archiveLicense     = "Apache-2.0";
         private static final String                  archiveDescription = "Specialized types for Coco Pharmaceuticals.";
         private static final OpenMetadataArchiveType archiveType        = OpenMetadataArchiveType.CONTENT_PACK;
         private static final String                  originatorName     = "Egeria Project";

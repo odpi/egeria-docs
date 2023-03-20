@@ -425,7 +425,7 @@ This dojo was last tested using Egeria release 3.14.
         
         * archiveGUID        = "eede2744-5afa-4d61-89c9-e7a7447075bb";        
         * archiveName        = "DojoArchive";                                   
-        * archiveLicense     = "Apache 2.0";                                  
+        * archiveLicense     = "Apache-2.0";                                  
         * archiveDescription = "An experimental open metadata archive."; 
         * archiveType        = OpenMetadataArchiveType.CONTENT_PACK;          
         * originatorName     = "Egeria Dojo Exercise";                              

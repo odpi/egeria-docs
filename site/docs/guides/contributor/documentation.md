@@ -74,7 +74,7 @@ The content for this header is located in the [OMAGServerPlatform.java :material
                             "or host a variety of different OMAG Servers needed at a particular location.\n" +
                             "\n" +
                             "Click on the documentation link to find out more ...",
-                    license = @License(name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"),
+                    license = @License(name = "Apache-2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"),
                     contact = @Contact(url = "https://egeria.odpi.org", name = "Egeria Project", email = "egeria-technical-discuss@lists.lfaidata.foundation")
             ),
     

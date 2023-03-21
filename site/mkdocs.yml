@@ -687,6 +687,7 @@ nav:
       - In Topic: concepts/in-topic.md
       - Incident Report: concepts/incident-report.md
       - Informal Tag: concepts/informal-tag.md
+      - Integration Connector: concepts/instance-status.md
       - Integration Connector: concepts/integration-connector.md
       - Integration Daemon: concepts/integration-daemon.md
       - Integration Group: concepts/integration-group.md

@@ -58,6 +58,14 @@ More information on assets can be found in the [Metadata Manager](/patterns/meta
 
 *Process* describes a well-defined set of processing steps and decisions that drive a particular aspect of the organization's business. Most processes are automated with software (see [*DeployedSoftwareComponent*](/types/2/0215-Software-Components/#deployedsoftwarecomponent)) but they may also be a manual procedure. An automated process can be invoked from a remote server through a [*DeployedAPI*](/types/2/0212-deployed-apis/#deployedapi).
 
+Processes have an advanced lifecycle.  They can have the following [instance statuses](/concepts/instance-status).
+
+* Draft
+* Proposed
+* Approved
+* Active
+* Deleted
+
 ### DataSet
 
 *DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet.  See [*DataStore*](/types/2/0210-Data-Stores) for the `Asset` that represents a physical store and the [*DataContentForDataSet*](/types/2/0210-Data-Stores/#datacontentfordataset) relationship links the DataSet to the asset(s) that describe the data sources.

@@ -12,12 +12,13 @@ Some elements have an advanced lifecycle which means they can pass through multi
 
 Egeria does not define the order or conditions that must be met to change status.  This is left to the deploying organization to decide their own governance processes.
 
-The list of valid values for instance status is defined by the [Open Metadata Repository Services (OMRS)](/services/omrs).  This is the complete list.  
+## Valid instance status values
 
+The list of valid values for instance status is defined by the [Open Metadata Repository Services (OMRS)](/services/omrs).  This is the complete list.
 
 | Java/JSON name          | Ordinal | Name                    | Description                                               |
 |-------------------------|---------|-------------------------|-----------------------------------------------------------|
-| UNKNOWN                 | 0       | \<Unknown\>             | Unknown instance status.                                  |
+| UNKNOWN                 | 0       | Unknown                 | Unknown instance status.                                  |
 | DRAFT                   | 1       | Draft                   | The content is incomplete.                                |
 | PREPARED                | 2       | Prepared                | The content is ready for review.                          |
 | PROPOSED                | 3       | Proposed                | The content is in review.                                 |
@@ -35,6 +36,8 @@ The list of valid values for instance status is defined by the [Open Metadata Re
 | DEPRECATED              | 30      | Deprecated              | The instance is out of date and should not be used.       |
 | OTHER                   | 50      | Other                   | The instance is in a locally defined state.               |
 | DELETED                 | 99      | Deleted                 | The instance has been deleted and is no longer available. |
+
+## Open Metadata Types with advanced lifecycles
 
 The table below summarizes the types with advanced lifecycles and the instances that are permitted.  In all cases the default initial status is DRAFT.
 

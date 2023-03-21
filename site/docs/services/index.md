@@ -50,8 +50,9 @@ used extensively across the [Open Metadata Access Services (OMASs)](/services/om
 
 The framework services provide shared metadata management modules for the server-side services that are used by the [open metadata frameworks](/frameworks).  The REST API services are available through all OMASs.  Many [Open Metadata Access Services (OMASs)](/services/omas) clients also have support.
 
-* [OCF Metadata Management](/services/ocf-metadata-management) - provides the *Connected Asset Services* that retrieve metadata about assets, connections and all the different types of metadata defined as [connected asset properties](/concepts/connected-asset-properties) in the [Open Connector Framework (OCF)](/frameworks/ocf/overview). 
-* [GAF Metadata Management](/services/gaf-metadata-management) - provides the *Metadata Store Services* that are defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview) and are available through most [Open Metadata Access Services (OMASs)](/services/omas) clients.
+* **[OCF Metadata Management](/services/ocf-metadata-management)** - Supports the Connected Asset Services for the [Open Connector Framework (OCF)](/frameworks/ocf/overview).
+* **[OIF Metadata Management](/services/oif-metadata-management)** - Supports the Open Integration Service for the [Open Integration Framework (OIF)](/frameworks/oif/overview).
+* **[GAF Metadata Management](/services/gaf-metadata-management)** - Supports the Open Metadata Store Service for the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
 
 ## Governance Server Services
 

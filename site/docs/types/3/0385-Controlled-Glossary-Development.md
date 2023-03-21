@@ -7,7 +7,7 @@ Many organization that use glossary terms to drive the operation of the data lan
 
 ![UML](0385-Controlled-Glossary-Development.svg)
 
-# ControlledGlossaryTerm entity
+## ControlledGlossaryTerm entity
 
 The *ControlledGlossaryTerm* extends the standard [GlossaryTerm](/types/3/0330-Terms) with additional valid [instance statuses](/concepts/instance-status) for supporting a complex development lifecycle.  The statuses are:
 

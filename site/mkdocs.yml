@@ -503,7 +503,8 @@ nav:
               - Metadata Security Services: services/metadata-security-services.md
               - Platform Operation Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
-              - Metadata Store Services: services/gaf-metadata-management.md
+              - Open Metadata Store Services: services/gaf-metadata-management.md
+              - Open Integration Service: services/oif-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
               - Data Engine Proxy Services: services/data-engine-proxy-services.md
@@ -687,7 +688,7 @@ nav:
       - In Topic: concepts/in-topic.md
       - Incident Report: concepts/incident-report.md
       - Informal Tag: concepts/informal-tag.md
-      - Integration Connector: concepts/instance-status.md
+      - Instance Status: concepts/instance-status.md
       - Integration Connector: concepts/integration-connector.md
       - Integration Daemon: concepts/integration-daemon.md
       - Integration Group: concepts/integration-group.md

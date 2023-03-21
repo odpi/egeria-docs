@@ -132,6 +132,7 @@
     - [servername.cohortname.registrystore](/connectors/runtime/file-cohort-registry-store-connector)
   
 - [Files Integrator OMIS](/services/omis/files-integrator/overview)
+- [Framework Services](/services/#framework-services)
 - [Frameworks](/frameworks)
 
     - [Audit Log Framework (ALF)](/frameworks/alf/overview)
@@ -182,6 +183,7 @@
 - [Incident Report](/concepts/incident-report)
 - [Informal Tag](/concepts/informal-tag)
 - [Instance Security](/features/metadata-security/overview)
+- [Instance Statuses](/concepts/instance-status)
 - Instances
 
     - [Metadata Instances](/concepts/open-metadata-instances)

@@ -544,6 +544,7 @@ nav:
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
+                  - Analytics Integrator: services/omis/analytics-integrator/overview.md
                   - API Integrator: services/omis/api-integrator/overview.md
                   - Catalog Integrator: services/omis/catalog-integrator/overview.md
                   - Database Integrator: services/omis/database-integrator/overview.md

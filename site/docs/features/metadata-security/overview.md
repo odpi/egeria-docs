@@ -109,6 +109,17 @@ The connector that can be defined for an OMAG Server offers a series of layers o
      * **validateUserForConnection** - Tests for whether a specific user should have access to a connection.
      * **validateUserForAssetConnectionList** - Selects an appropriate connection for a user from the list of connections attached to an Asset.
 
+* **OpenMetadataGlossarySecurity** - validates that a specific user is authorized to perform various operations on a glossary and its contents.
+
+     * **validateUserForGlossaryCreate** - Can the user create a glossary?
+     * **validateUserForGlossaryRead** - Can the user have read access to a specific glossary and its contents?
+     * **validateUserForGlossaryDetailUpdate** - Can the user have the right to update the properties/classifications of a glossary?
+     * **validateUserForGlossaryMemberUpdate** - Can the user have the right to update elements attached directly to a glossary such as glossary terms and categories? These updates could be to their properties, classifications and relationships. It also includes attaching valid values but not semantic assignments since they are considered updates to the associated asset.
+     * **validateUserForGlossaryMemberStatusUpdate** - Can the user have the right to update the instance status of a term anchored in a glossary?
+     * **validateUserForGlossaryFeedback** - Can the user have the right to attach feedback - such as comments, ratings, tags and likes, to the glossary.
+     * **validateUserForGlossaryDelete** - Tests for whether a specific user should have the right to delete a glossary and all its anchored contents.
+
+
 ## Sample connectors
 
 There are sample implementations of the security connectors for [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) in the "samples" module under [open-metadata-security-samples](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples)

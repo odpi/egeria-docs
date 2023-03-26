@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
@@ -11,6 +6,26 @@ hide:
 Governance is enabled through People, Process and Technology. These are controlled through a combination of technical controls (implemented IT function) and organizational controls (training, responsibility, buddy-checking etc).
 
 ![UML](0420-Governance-Controls.svg)
+
+## GovernanceControl entity
+
+A *GovernanceControl* entity describes how a particular [GovernancePolicy](/types/0415-Governance-Responses) is implemented.  It is a type of [GovernanceDefinition](/types/4/0401-Governance-Definitions) that is linked to the element it is controlling using the [GovernedBy](/types/4/0401-Governance-definitions) relationship.
+
+## GovernanceImplementation relationship
+
+A *GovernanceImplementation* relationship links a *GovernancePolicy* entity to a *GovernanceControl* entity that is implement all or part of the policy.  The `rationale` attribute describes why this implementation approach was chosen.
+
+## GovernanceControlLink relationship
+
+A *GovernanceControlLink* relationship links two related *GovernanceControl* entities together.  The `description` attribute describes the reason for the relationship.
+
+## TechnicalControl entity
+
+A *TechnicalControl* entity is a type of *GovernanceControl* that is automated using technology.
+
+## OrganizationalControl entity
+
+An *OrganizationalControl* entity is a type of *GovernanceControl* that is implemented as a manual process or a set of responsibilities linked to an individual, role or team.
 
 !!! info "Further Information"
 
@@ -21,6 +36,7 @@ Governance is enabled through People, Process and Technology. These are controll
     * There is further detail on the content of the governance controls in the following models:
 
        * [0430 Technical Controls](/types/4/0430-Technical-Controls) - describe automated behaviour that implements a governance control.
+         * [0423 Security Definitions](/types/4/0423-Security-Definitions) - defines access control rules.
          * [0438 Naming Standards](/types/4/0438-Naming-Standards) - defines naming standard rules.
          * [0461 Governance Action Engines](/types/4/0461-Governance-Engines) - support the execution of technical controls.
          * [0462 Governance Action Types](/types/4/0462-Governance-Action-Types) - provide the choreography of the execution of technical controls.

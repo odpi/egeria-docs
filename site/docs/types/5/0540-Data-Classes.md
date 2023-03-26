@@ -24,6 +24,8 @@ Data classes can be organized into a structural hierarchy using the *DataClassCo
 
 Data classes can be assigned to elements (typically [*SchemaAttributes*](/types/5/0505-Schema-Attributes)) to show that the data stored in the data field represented by the element conforms to the type.  An [open discovery service](/concepts/open-discovery-service) can propose a list of data class assignments and these are stored in the [*DataClassAnnotation*](/type/6/0625-Data-Class-Discovery).  Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the *DataClassAssignment* relationship.
 
+
+
 ## DataClassSnippet
 
 The *DataClassSnippet* links a data class to an [ImplementationSnippet](/types/5/0504-Implementation-Snippets) that describes how to implement the type in a specific language.

@@ -13,7 +13,6 @@ Egeria has the following repositories:
 | Repository | Purpose |
 | --- | --- |
 | Repository | Purpose |
-| [`OpenDS4All` :material-github:](https://github.com/odpi/OpenDS4All){ target=gh } | OpenDS4All project, hosted by LF AI & Data |
 | [`data-governance` :material-github:](https://github.com/odpi/data-governance){ target=gh } | Egeria's Guidance on Governance as well as large media files such as presentations and movies |
 | [`egeria-api-mocks` :material-github:](https://github.com/odpi/egeria-api-mocks){ target=gh } | Support for mocking Egeria API for UI dev test |
 | [`egeria-charts` :material-github:](https://github.com/odpi/egeria-charts){ target=gh } | Helm chart repository |
@@ -28,10 +27,9 @@ Egeria has the following repositories:
 | [`egeria-connector-repository-file-sample` :material-github:](https://github.com/odpi/egeria-connector-repository-file-sample){ target=gh } | Provides a repository proxy sample that uses polling. The target is a file folder |
 | [`egeria-connector-sas-viya` :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh } | Egeria connector for SAS Information Catalog |
 | [`egeria-connector-xtdb` :material-github:](https://github.com/odpi/egeria-connector-xtdb){ target=gh } | Pluggable repository for Egeria, using XTDB (formerly "Crux") as the back-end to natively support historical metadata. |
-| [`egeria-database-connectors` :material-github:](https://github.com/odpi/egeria-database-connectors){ target=gh } | Connectors for exchanging metadata |
 | [`egeria-dev-projects` :material-github:](https://github.com/odpi/egeria-dev-projects){ target=gh } | Fun projects for developers to help them learn about the Egeria technology |
 | [`egeria-docs` :material-github:](https://github.com/odpi/egeria-docs){ target=gh } | Documentation repository for the Egeria project. |
-| [`egeria-dojo-developer` :material-github:](https://github.com/odpi/egeria-dojo-developer){ target=gh } | Provides the starting project structure for the developer dojo. The particupant creates a clone of it and works from there - they do not merge their code back into the repository. There is also a branch which includes the sample answers that they cna refer to if they get stuck. |
+| [`egeria-dojo-developer` :material-github:](https://github.com/odpi/egeria-dojo-developer){ target=gh } | Provides the starting project structure for the developer dojo. The participant creates a clone of it and works from there - they do not merge their code back into the repository. There is also a branch which includes the sample answers that they can refer to if they get stuck. |
 | [`egeria-js-commons` :material-github:](https://github.com/odpi/egeria-js-commons){ target=gh } | Common module for storing static data such as key value objects, SVGs, icon mappings, API urls. |
 | [`egeria-jupyter-notebooks` :material-github:](https://github.com/odpi/egeria-jupyter-notebooks){ target=gh } | Egeria Jupiter notebooks used in the Open Metadata Labs |
 | [`egeria-k8s-operator` :material-github:](https://github.com/odpi/egeria-k8s-operator){ target=gh } | Egeria Kubernetes operator |
@@ -40,6 +38,7 @@ Egeria has the following repositories:
 | [`egeria-samples-api` :material-github:](https://github.com/odpi/egeria-samples-api){ target=gh } | A collection of samples illustrating the different APIs of Egeria. |
 | [`egeria-samples` :material-github:](https://github.com/odpi/egeria-samples){ target=gh } |  various samples that can be useful either for learning or as initial starting points for working with Egeria |
 | [`egeria-template-newrepo` :material-github:](https://github.com/odpi/egeria-template-newrepo){ target=gh } | Template for new Egeria repository |
+| [`egeria-test-cts` :material-github:](https://github.com/odpi/egeria-test-cts){ target=gh } | Automated CTS (conformance test) execution for Egeria |
 | [`egeria-ui-components` :material-github:](https://github.com/odpi/egeria-ui-components){ target=gh } | Encapsulated reactjs components with business logic inside. |
 | [`egeria-ui-core` :material-github:](https://github.com/odpi/egeria-ui-core){ target=gh } | Core library that includes generic reactjs components used across the user interface. |
 | [`egeria-ui` :material-github:](https://github.com/odpi/egeria-ui){ target=gh } | User interface instance using main Egeria functionalities. |

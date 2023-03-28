@@ -29,9 +29,8 @@ No gradle installation is required, as we use the 'gradle wrapper' which will au
 === "Flexible platform option (egeria.git only)"
     This build option creates an [OMAG Server Platform](/concepts/omag-server-platform) where the [registered services](/concepts/omag-subsystem/#registered-services) are optional.  The OMAG Server Platform loads the registered services it finds on the loader path specified with the `-Dloader.path={directoryName}` option of its startup command.  Use this option if you want to remove the registered services that you are not using, or you would like introduce your own registered services.
 
-    Note: this feature is still in development - see issue [#7309](https://github.com/odpi/egeria/issues/7309) - use Maven command `mvn clean install -DadminChassisOnly` instead.
     ```shell
-    ./gradlew build ???
+    ./gradlew -PadminChassisOnly build 
     ```
 
 The build can take 15 minutes to over an hour depending on the repository and on the speed/load on your machine.  However eventually you will see the message:

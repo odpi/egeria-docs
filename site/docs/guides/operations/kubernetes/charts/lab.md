@@ -187,6 +187,28 @@ Refer to the existing values file for additional ports in this section that may 
 You can then deploy using
 `helm install lab odpi-egeria-lab -f lab.yaml` which will override standard defaults with your choices
 
+## Adding additional connectors
+
+Additional connectors can be loaded into the egeria platform containers during initalization.
+
+These need to be specified as url/name pairs, for example create a file '~/etc/connectors.yaml' with the following contents:
+```
+extralibs:
+  - url: https://search.maven.org/remotecontent?filepath=org/odpi/egeria/egeria-connector-integration-jdbc/1.0/egeria-connector-integration-jdbc-1.0.jar
+    filename: egeria-connector-integration-jdbc.jar
+  - url: https://search.maven.org/remotecontent?filepath=org/odpi/egeria/egeria-connector-resource-jdbc/1.0/egeria-connector-resource-jdbc-1.0.jar
+    filename: egeria-connector-resource-jdbc.jar
+  - url: https://jdbc.postgresql.org/download/postgresql-42.5.2.jar
+    filename: postgresql.jar
+```
+The url can be any that is valid for use with `curl` such as http, https, ftp etc.
+
+Then add `-f ~/etc/connectors.yaml` to the helm install command line
+
+All files will be copied into /deployments/server/extralibs in the running container, and will on the CLASSPATH, so loadable as a connector
+
+Examples can be found under https://github.com/odpi/egeria-charts/tree/main/config/values
+
 ## Enabling persistence
 
 Support has been added to use persistence in these charts. See 'values.yaml' for more information on this option.

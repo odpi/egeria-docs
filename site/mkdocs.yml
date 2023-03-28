@@ -553,6 +553,7 @@ nav:
                   - Infrastructure Integrator: services/omis/infrastructure-integrator/overview.md
                   - Lineage Integrator: services/omis/lineage-integrator/overview.md
                   - Organization Integrator: services/omis/organization-integrator/overview.md
+                  - Search Integrator: services/omis/search-integrator/overview.md
                   - Security Integrator: services/omis/security-integrator/overview.md
                   - Stewardship Integrator: services/omis/stewardship-integrator/overview.md
                   - Topic Integrator: services/omis/topic-integrator/overview.md

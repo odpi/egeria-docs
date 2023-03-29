@@ -4,6 +4,9 @@
 
 # Earlier releases
 
+???+ info "Release 3.15 (January 2022)"
+--8<-- "docs/release-notes/3-15.md"
+
 ???+ info "Release 3.14 (December 2022)"
 --8<-- "docs/release-notes/3-14.md"
 

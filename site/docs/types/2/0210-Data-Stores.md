@@ -7,13 +7,20 @@ Both [*DataSets*](/types/0/0010-Base-Model#dataset) and [*DataStores*](#datastor
 
 ![UML](0210-Data-Stores.svg)
 
-## DataStore 
+## DataStore entity
 
 The *DataStore* entity describes a physical [digital resource](/concepts/resource) that supplies data.
 
-## DataContentForDataSet
+## DataContentForDataSet relationship
 
 The *DataContentForDataSet* relationship defines how data is supplied to a [DataSet](/types/0/0010-Base-Model) from a particular [digital resources](/concepts/resource).  The DataSet entity includes a property called *formula*.  This describes the logic that is used to populate the data set.  The formula can include placeholders.  These placeholders are defined by the *queryId* properties in the linked DataContentForDataSet relationships.  The associated *query* property describes how the data from the linked dataContent resource is selected.
 
+## DataStoreEncoding classification
+
+The *DataStoreEncoding* classification provides the ability to store details of the data stores physical characteristics.
+
+## DataFieldValues classification
+
+The *DataFieldValues* describe the characteristics of a collection fo data values.  It is typically attached to an [*Asset*](/types/0/0010-Base-Model), a [*GlossaryTerm*](/types/3/03303-Terms) entity or a [*SchemaAttribute*](/types/5/0505-Schema-Attributes) entity.
 
 --8<-- "snippets/abbr.md"

@@ -123,6 +123,28 @@ Once logged in, you should be able to login using our demo userid/password of `g
 You can also issue REST API calls against egeria using a base URL for the platform of `https://3bc644c3-eu-gb.lb.appdomain.cloud` - Other material
 covers these REST API calls in more detail, but a simple api doc is available at `https://3bc644c3-eu-gb.lb.appdomain.cloud/swagger-ui.html`
 
+## Adding additional connectors
+
+Additional connectors can be loaded into the egeria platform containers during initalization.
+
+These need to be specified as url/name pairs, for example create a file '~/etc/connectors.yaml' with the following contents:
+```
+extralibs:
+  - url: https://search.maven.org/remotecontent?filepath=org/odpi/egeria/egeria-connector-integration-jdbc/1.0/egeria-connector-integration-jdbc-1.0.jar
+    filename: egeria-connector-integration-jdbc.jar
+  - url: https://search.maven.org/remotecontent?filepath=org/odpi/egeria/egeria-connector-resource-jdbc/1.0/egeria-connector-resource-jdbc-1.0.jar
+    filename: egeria-connector-resource-jdbc.jar
+  - url: https://jdbc.postgresql.org/download/postgresql-42.5.2.jar
+    filename: postgresql.jar
+```
+The url can be any that is valid for use with `curl` such as http, https, ftp etc.
+
+Then add `-f ~/etc/connectors.yaml` to the helm install command line
+
+All files will be copied into /deployments/server/extralibs in the running container, and will on the CLASSPATH, so loadable as a connector
+
+Examples can be found under https://github.com/odpi/egeria-charts/tree/main/config/values
+
 ## Cleaning up / removing Egeria
 
 To delete the deployment, simply run this for Helm3:

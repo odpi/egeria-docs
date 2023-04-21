@@ -68,6 +68,8 @@ nav:
                       - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
                   - Database:
                       - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
+                  - Catalog:
+                      - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
               - Runtime:
                   - Repository:
                       - Native Repositories:
@@ -98,6 +100,8 @@ nav:
                       - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
                   - Database:
                         - JDBC Connector: connectors/resource/jdbc-resource-connector.md
+              - Secrets Store:
+                    - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
           - Developer Guide:
               - Developer Overview: guides/developer/index.md
               - Building Archives:
@@ -750,6 +754,7 @@ nav:
       - REST client connector: concepts/rest-client-connector.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md
+      - Secrets Store Connector: concepts/secrets-store-connector.md
       - Security Tags: concepts/security-tags.md
       - Server Metadata Security Connector: concepts/server-metadata-security-connector.md
       - Server Name: concepts/server-name.md

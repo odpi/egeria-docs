@@ -5,6 +5,4 @@
 
 ---8<-- "docs/connectors/secrets/secrets-store-connector-intro.md"
 
-
-
---8<-- "snippets/abbr.md
+---8<-- "snippets/abbr.md"

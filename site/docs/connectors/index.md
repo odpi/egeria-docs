@@ -21,11 +21,22 @@ The connectors that support the exchange and maintenance of metadata help to acc
 
 | Type of Connector                                                                 | Description                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Secrets Store connectors](#secrets-store-connectors)                             | Manage the retrieval of secrets (passwords, certificates, ...) from secured locations at runtime.                                                                                                                                                                                                          |
 | [Integration connectors](#integration-connectors)                                 | Manage the metadata exchange to a third party technology through an [integration service](/services/omis).                                                                                                                                                                                                 |
 | [Repository and Event Mapper connectors](#repository-and-event-mapper-connectors) | Integrate metadata repositories into the open metadata ecosystem so that they can interact with one or more [open metadata repository cohorts](/services/omrs/cohort).                                                                                                                                     |
 | [Open Discovery Services](#open-discovery-services)                               | Analyze the content of [resources](/concepts/resource) in the digital landscape and create annotations that are attached to the resource's [asset](/concepts/asset) metadata element in the open metadata repositories in the form of an [discovery analysis report](/concepts/discovery-analysis-report). |
 | [Governance Action Services](#governance-action-services)                         | Perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities as required.                                                                                                                                                                    |
 | [Governance Daemon Connectors](#governance-daemon-connectors)                     | Contain specialist connectors for the governance servers that make active use of open metadata.                                                                                                                                                                                                            |
+
+### Secrets Store Connectors
+
+---8<-- "docs/connectors/secrets/secrets-store-connector-intro.md"
+
+
+| Secrets Store Connectors                                                                  | Description                                         |
+|-------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| [Environment Variables](/connectors/secrets/environment-variable-secrets-store-connector) | Retrieves secret values from environment variables. |
+
 
 ### Integration Connectors
 
@@ -66,6 +77,16 @@ The *API* integration connectors run in the [API Integrator Open Metadata Integr
 | API Integration Connectors | Description |
 |---|---|
 | [Open API Monitor integration connector](/connectors/integration/open-api-monitor-integration-connector) | Automatically maintains the open metadata instances for the APIs extracted from the Open API Specification extracted from an application.|
+
+#### Synchronizing with third party catalogs
+
+The catalog integration connectors run in the [Catalog Integrator Open Metadata Integration Service (OMIS)](/services/omis/catalog-integrator) hosted in the [integration daemon](/concepts/integration-daemon).
+
+
+| Catalog Integration Connectors                                                                           | Description                                                         |
+|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| [Apache Atlas integration connector](/connectors/integration/apache-atlas-catalog-integration-connector) | Automatically publishes glossary terms from Egeria to Apache Atlas. |
+
 
 #### Populating security enforcement engines
 

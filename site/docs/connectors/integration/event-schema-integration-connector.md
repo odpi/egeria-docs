@@ -12,19 +12,17 @@
     - Source Module: [event-schema-integration-connector :material-github:](https://github.com/odpi/egeria-connector-integration-event-schema){ target=gh }
     - Jar File Name: `event-schema-integration-connector.jar`
 
-This ist the Egeria integration connector for event schemas. It obtains the 
-information of event schemas by querying the subjects and schemas of a Confluent:tm: api-compatible schema registry, then creates the appropriate Egeria metadata,
-adding, deleting and updating the Egeria metadata so that is always mirrors the schema registry content.
+This ist the Egeria integration connector for event schemas. It retrieves the information of event schemas by querying the subjects and schemas of a Confluent&trade; api-compatible schema registry, then creates or updates the appropriate Egeria metadata so that it always mirrors the schema registry content.
 
-The Egeria metadata that is created are [Event Type Lists](https://egeria-project.org/types/5/0535-Event-Schemas/#eventtypelist), [Event Types](https://egeria-project.org/types/5/0535-Event-Schemas/#eventtype), [Event Schema Attributes](https://egeria-project.org/types/5/0535-Event-Schemas/#eventschemaattribute).
+The Egeria metadata that is created are [Event Type Lists](https://egeria-project.org/types/5/0535-Event-Schemas/#eventtypelist), [Event Types](https://egeria-project.org/types/5/0535-Event-Schemas/#eventtype), [Event Schema Attributes](https://egeria-project.org/types/5/0535-Event-Schemas/#eventschemaattribute). Schema attributes are created recursively to represent deeper structured Avro Schemas. That means, schema attributes can have [Nested Schema Attributes Relationships](https://egeria-project.org/types/5/0505-Schema-Attributes/?h=nestedsche#nestedschemaattribute-relationship).
 
-This integration connector needs to be configured. The following steps can be performed using the postman collection to set this connector up.
-The connector takes Kafka topic information including the description, partitions and replicas and pushes that information into
-Egeria.
+Each created Event Type is linked to a [Kafka Topic](https://egeria-project.org/types/2/0223-Events-and-Logs/?h=kafkatopic#kafkatopic) which must already be in place - possibly created by a [Strimzi Monitor Integration Connector](https://egeria-project.org/connectors/integration/strimzi-monitor-integration-connector/?h=strimzi). The connector tries to match the EventTypes to an existing topic in Egeria using the part of the subject name of the schema up to the last hyphen (`-`). If the subject name does not contain any hypens the complete name is considered as the topic. If no topic is found the schema is ignored and a warning is logged in the audit log.
+
+This connector needs to be configured. The following steps can be performed using the postman collection to set this connector up.
 
 
-![Figure 1](strimzi-monitor-integration-connector.svg)
-> **Figure 1:** Operation of the Strimzi monitor integration connector
+![Figure 1](event-schema-integration-connector.svg)
+> **Figure 1:** Operation of the Event Schema integration connector
 
 __Important notice__
 
@@ -38,58 +36,69 @@ This connector uses the [Topic Integrator OMIS](/services/omis/topic-integrator/
 This is its connection definition to use on the [administration commands that configure the Topic Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
 
 !!! example "Connection configuration"
-    ```json linenums="1" hl_lines="14"
+```json linenums="1" hl_lines="14"
     {
-       "connection" : 
-                    { 
-                        "class" : "Connection",
-                        "qualifiedName" : "TopicMonitorConnection",
-                        "connectorType" : 
-                        {
-                            "class" : "ConnectorType",
-                            "connectorProviderClassName" : "org.odpi.openmetadata.adapters.connectors.integration.strimzi.StrimziMonitorIntegrationProvider"
-                        },
-                        "endpoint" :
-                        {
-                            "class" : "Endpoint",
-                            "address" : "{{serverURL}}"
-                        }
-                    }
-    }
-    ```
+    "class": "IntegrationServiceRequestBody",
+    "omagserverPlatformRootURL": "{{EGERIA_MDS_URL}}",
+    "omagserverName": "{{EGERIA_MDS_SERVER}}",
+    "connectorUserId": "{{EGERIA_USER}}",
+    "integrationConnectorConfigs": [
+        {
+            "class": "IntegrationConnectorConfig",
+            "connectorName": "EventSchemaIntegrator",
+            "typeName": "Event Schema Integration Connector",
+            "connection": {
+                "class": "Connection",
+                "connectorType": {
+                    "class": "ConnectorType",
+                    "connectorProviderClassName": "org.odpi.openmetadata.adapters.connectors.integration.eventschema.EventSchemaIntegrationProvider"
+                },
+                "configurationProperties": {
+                    "topicNamespace": "{{TOPIC_NAMESPACE}}"
+                },
+                "endpoint": {
+                    "class": "Endpoint",
+                    "address": "{{SCHEMA_REGISTRY_ENDPOINT}}"
+                }
+            },
+            "metadataSourceQualifiedName": "{{EVENT_SCHEMA_SOURCE_NAME}}",
+            "refreshTimeInterval": "{{EVENT_SCHEMA_CONNECTOR_REFRESH_INTERVAL}}",
+            "permittedSynchronization": "FROM_THIRD_PARTY"
+        }
+    ]
+}
+```
+Set the following variables with valid value:
 
-    - Replace `{{serverURL]}` with the network address of the Strimzi server.
+| Variable | Description | Sample |
+|----------|-------------|--------|
+| EVENT_SCHEMA_CONNECTOR_REFRESH_INTERVAL| Time in seconds between the refresh of the metadata by the connector| `5` |
+| EVENT_SCHEMA_SOURCE_NAME| Metadata source qualified name used for the created metadata. This must match the metadata source qualified name of the KafkaTopics to be matched against.| `my-event-metadata-source` |
+| EGERIA_MDS_URL| URL of the metadata server to use for the integration of the event schema metadata | `https://localhost:8443` |
+| EGERIA_MDS_SERVER| Name of the metadata server | `mds1` |
+| EGERIA_USER| Name of the user | `garygeeke` |
+| EGERIA_SERVER| Name of the integration server | `evtschema1` |
+| EGERIA_URL| URL of the integration server | `https://localhost:9443` |
+| TOPIC_NAMESPACE| Namespace in which the topics are found which are used to map the EventTypes to. This is used as a prefix to find the correct topic. | `customer_topics` |
+| SCHEMA_REGISTRY_ENDPOINT| The URL of the Schema Registry. | `https://my-schemaregistry:8081`|
 
-
-`configurationProperties` parameters
-
-| Event mapper configuration parameter name | default      | Description                                                   |
-|-------------------------------------------|--------------|---------------------------------------------------------------|
-| topicNamePrefix                           | empty string | This is a prefix for the topic names that will be monitored.  |
-| token                                     | null         | security token required to make calls to Strimzi.             |
-| descriptionAnnotationField                | null         | the name of the field in the CRD to get the topic description |
 
 
 
 ## Running locally for testing
 
-You will need to have an omag platform with the connector jar, a metadata server called cocoMDS1 defined.
-The below process is how you configure the Strimzi integration connector manually.
+You will need to have an OMAG platform with a configured metadata server and activated DataManager OMAS. You will also have a Docker client installed locally and a running Docker daemon.
 
-Import the [postman collection](https://github.com/odpi/egeria-connector-integration-topic-strimzi/blob/main/postman/Strimzi%20integration%20connector%20configuration.postman_collection.json) into [Postman](https://www.postman.com/)
-The required values should be supplied as postman environment variables for this script.
+### Run gradle build
+On a terminal,
+* navigate to the folder that this README.md is in.
+* run ```./gradlew clean build```
 
-Then run the scripts in order. Steps 1 through 3 to configure the connector.
+### Build Docker image
+* run `docker build -t event-schema-integration-connector .` 
 
-* Step 3 is where the integration connector configuration parameters are passed into the connector.
-* Step 4 Starts the connector.
-* Step 5 shows how to retrieve the configuration
+### Run Docker container
+* run `docker run event-schema-integration-connector`.
 
-The configuration only needs to occur once (unless you want to change it), so subsequently you only need to issue step 4 to start it.
-
-## Testing mutations
-Import the [postman collection](https://github.com/odpi/egeria-connector-integration-topic-strimzi/blob/main/postman/Strimzi%20REST%20calls.postman_collection.json) into [Postman](https://www.postman.com/)
-
-Set the postman variables you want and run the create, delete and update scripts.
 
 ---8<-- "snippets/abbr.md"

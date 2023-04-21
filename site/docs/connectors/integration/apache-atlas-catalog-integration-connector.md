@@ -51,7 +51,7 @@ This is its connection definition to use on the [administration commands that co
 
 
 !!! example "Connection configuration for a selected glossary"
-    ```json linenums="1" hl_lines="14, 17"
+    ```json linenums="1" hl_lines="14 17"
     {
         "connection" :
         {

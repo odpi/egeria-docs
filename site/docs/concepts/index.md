@@ -333,6 +333,7 @@
 ## S
 
 - [Schema](/concepts/schema)
+- [Secrets Store Connector](/concepts/secrets-store-connector)
 - [Security](/features/metadata-security/overview)
 - [Security Connector for OMAG Server](/concepts/server-metadata-security-connector)
 - [Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)

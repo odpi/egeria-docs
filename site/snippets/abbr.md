@@ -24,3 +24,6 @@
 *[OMVSs]: Open Metadata View Services
 *[PR]: Pull Request
 *[UI]: User Interface
+
+----
+[Raise an issue on this page](https://github.com/odpi/egeria-docs/issues)

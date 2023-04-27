@@ -25,4 +25,4 @@ However, IntelliJ does not understand the egeria structure - only Maven
 does, so the Maven build is important to to verify your changes are
 OK at the project level.
 
----8<-- "snippets/abbr.md"
+

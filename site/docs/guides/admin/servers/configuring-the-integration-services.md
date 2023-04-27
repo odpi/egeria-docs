@@ -84,5 +84,5 @@ Detailed description of the properties:
 
 
 
---8<-- "snippets/abbr.md"
+
 

@@ -13,4 +13,3 @@
     - [People, roles and organizations](/features/people-roles-organizations/overview)
 
 
---8<-- "snippets/abbr.md"

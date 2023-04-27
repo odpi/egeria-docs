@@ -23,4 +23,4 @@ Any changes, additions and deletions that you make to the files under the git re
 ![Git->Add option](intellij-git-add-option.png) 
 
 
----8<-- "snippets/abbr.md"
+

@@ -58,4 +58,4 @@ upstream https://github.com/odpi/egeria.git (push)
 
 Now you can make your changes to the content.  
 
----8<-- "snippets/abbr.md"
+

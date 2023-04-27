@@ -35,4 +35,3 @@ Finally, when a template is used, it is linked to the resulting element with the
 ![Figure 4](/features/templated-cataloguing/sourced-from-relationship.svg)
 > **Figure 4:** The `SourcedFrom` relationship links a template to the elements that are created from it
 
---8<-- "snippets/abbr.md"

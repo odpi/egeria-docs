@@ -21,4 +21,3 @@ People are not good at repetitive admin tasks, particularly if these tasks are n
         * [Validating your integration](/guides/integration/validating-your-integration)
 
 
---8<-- "snippets/abbr.md"

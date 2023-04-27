@@ -11,4 +11,3 @@ Each open discovery service in the pipeline is able to access the results of the
 
 The aim of the open discovery pipeline is to enable reusable open discovery service implementations to be choreographed together for different types of digital resource.
 
----8<-- "snippets/abbr.md"

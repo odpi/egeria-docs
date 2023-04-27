@@ -20,5 +20,5 @@ Java can be installed by:
 
 Alternatively you may wish to install from your package manager such as `homebrew` on MacOS.
 
---8<-- "snippets/abbr.md"
+
 

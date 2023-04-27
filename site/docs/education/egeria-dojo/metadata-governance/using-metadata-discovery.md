@@ -13,4 +13,3 @@
     - [Metadata discovery and stewardship](/features/discovery-and-stewardship/overview)
 
 
---8<-- "snippets/abbr.md"

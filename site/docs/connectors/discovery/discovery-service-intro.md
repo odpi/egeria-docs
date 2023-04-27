@@ -24,5 +24,3 @@ An open discovery service is designed to run at regular intervals to gather a de
 
     ![Open Discovery Service](/connectors/discovery/discovery-service.svg)
 
-
---8<-- "snippets/abbr.md"

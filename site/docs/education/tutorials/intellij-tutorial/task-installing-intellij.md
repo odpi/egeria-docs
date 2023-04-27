@@ -25,4 +25,4 @@ Start up IntelliJ.
 ??? tip "Check your lombok setup"
     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-lombok-plugin.md"
 
----8<-- "snippets/abbr.md"
+

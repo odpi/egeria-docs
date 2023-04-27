@@ -48,7 +48,6 @@ ls
 
 It should be the same as the contents of the git repository on GitHub.
 
---8<-- "snippets/abbr.md"
 
 
 

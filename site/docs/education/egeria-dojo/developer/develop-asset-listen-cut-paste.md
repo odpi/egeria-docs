@@ -27,7 +27,6 @@
 ??? beginner "Resolve Egeria dependencies in AssetListen"
     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies.md"
 
---8<-- "snippets/abbr.md"
 
 
 

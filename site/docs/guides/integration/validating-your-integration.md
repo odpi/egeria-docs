@@ -118,4 +118,3 @@ POST {{serverURLRoot}}/servers/{{serverName}}/open-metadata/integration-daemon/u
     - [Diagnostic Guide](/guides/diagnostic/integration-daemon-diagnostic-guide)
 
 
---8<-- "snippets/abbr.md"

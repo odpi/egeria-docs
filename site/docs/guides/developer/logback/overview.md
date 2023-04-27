@@ -70,4 +70,3 @@ The content of the `logback.xml` defines the level of logging.  This is a sugges
 
 If your utility includes unit tests, you will need to create a `logback-test.xml` file in the same `resources` directory with similar content.
 
---8<-- "snippets/abbr.md"

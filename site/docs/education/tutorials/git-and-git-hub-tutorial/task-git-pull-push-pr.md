@@ -53,4 +53,4 @@ $ git push -d origin example-branch
 You may need to use `-D` if not all changes are merged, but check carefully!
 
 
----8<-- "snippets/abbr.md"
+

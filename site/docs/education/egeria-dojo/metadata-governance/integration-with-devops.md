@@ -12,4 +12,3 @@
     - [DevOps OMAS](/services/omas/dev-ops/overview)
 
 
---8<-- "snippets/abbr.md"

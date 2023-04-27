@@ -3,4 +3,3 @@
 
 The governance daemon connectors contain specialist connectors for the governance servers that make active use of open metadata.
   
---8<-- "snippets/abbr.md"

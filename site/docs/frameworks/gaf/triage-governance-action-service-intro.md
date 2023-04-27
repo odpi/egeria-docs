@@ -6,4 +6,4 @@
 ![Function of the triage governance action service](/frameworks/gaf/triage-governance-action-service.svg)
 
 
---8<-- "snippets/abbr.md"
+

@@ -24,27 +24,28 @@ Although the general idea is simple, there are a number of choices to make on ho
 The different styles of glossary workflow provide choices on who is providing content, making decisions and how the updates are grouped.  Where multiple glossaries are in play, each can operate a different style.
 
 === "Summary"
+    | Maintenance Style           | Contributors             | Controls                                                                                                                        | Limitations                                                                                                                                   | Uses                                                                                                                      |
+    |-----------------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+    | Harvested glossary          | Source glossaries.       | Choice on which terms are included in the aggregated glossary.                                                                  | Glossary terms change without knowledge or agreement from the curators of the aggregated glossary.                                            | Organizing terms from standards, regulations and other external sources.                                                  |
+    | Multi-level glossaries      | Upstream glossaries.     | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Difficult for upstream glossaries to reconcile differences in their definitions.                                                              | Consolidating definitions from across areas of domain expertise in the organization.                                      |
+    | Open contribution glossary  | Subject matter experts.  | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Content is developed in narrow independent scopes, making it difficult to coordinate changes from different groups of subject matter experts. | Development of new glossary content when the subject matter experts are distributed across the organization (and beyond). |
+    | Release-controlled glossary | Glossary authoring team. | Coordination of all changes to the glossary, which terms are included, their exact content and when updates are to be included. | Changes are delayed waiting for the next release.                                                                                             | For glossaries that must present a coherent scope.                                                                        |
 
-| Maintenance Style           | Contributors            | Controls                                                                                                                        | Limitations                                                                                                                                   | Uses                                                                                                                      |
-|-----------------------------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| Harvested glossary          | Source glossaries.      | Choice on which terms are included in the aggregated glossary.                                                                  | Glossary terms change without knowledge or agreement from the curators of the aggregated glossary.                                            | Organizing terms from standards, regulations and other external sources.                                                  |
-| Multi-level glossaries      | Upstream glossaries.    | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Difficult for upstream glossaries to reconcile differences in their definitions.                                                              | Consolidating definitions from across areas of domain expertise in the organization.                                      |
-| Open contribution           | Subject matter experts. | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Content is developed in narrow independent scopes, making it difficult to coordinate changes from different groups of subject matter experts. | Development of new glossary content when the subject matter experts are distributed across the organization (and beyond). |
-| Release-controlled glossary | Glossary authoring team | Coordination of all changes to the glossary, which terms are included, their exact content and when updates are to be included. | Changes are delayed waiting for the next release.                                                                                             | For glossaries that must present a coherent scope.                                                                        |
-|
 === "Harvested Glossary"
----8<-- "docs/services/omvs/glossary-workflow/harvested-glossary.md"
+    ---8<-- "docs/services/omvs/glossary-workflow/harvested-glossary.md"
 
 === "Multi-level Glossaries"
----8<-- "docs/services/omvs/glossary-workflow/multi-level-glossary.md"
+    ---8<-- "docs/services/omvs/glossary-workflow/multi-level-glossary.md"
 
 === "Open Contribution Glossary"
----8<-- "docs/services/omvs/glossary-workflow/open-contribution-glossary.md"
+    ---8<-- "docs/services/omvs/glossary-workflow/open-contribution-glossary.md"
 
 === "Release Controlled Glossary"
----8<-- "docs/services/omvs/glossary-workflow/release-controlled-glossary.md"
+    ---8<-- "docs/services/omvs/glossary-workflow/release-controlled-glossary.md"
 
 ## Implementation
+
+The different styles of glossary operation are complementary and may be used in combination, or may change as the glossary matures.  The important point is to think about the 
 
 ### Linked copies of glossary terms
 
@@ -55,6 +56,7 @@ Except the harvested glossary style, controlled glossary development requires mu
 The copy of the term is typically managed in another glossary called the [editing glossary](/types/3/0385-Controlled-Glossary-Development/#editingglossary-classification)
 
 The way the copy is managed and merged back into the original (or the place where the updates are to be published) depends on the style of glossary and whether you wish each published version to be retained.
+Care is made to copy the contents, rather than replace the term itself, because terms have many relationships to other elements (such as data assets) and these relationships need to be preserved.
 
 #### Temporary editing glossary
 
@@ -112,6 +114,7 @@ The rolling staging glossary pattern of operation is where an editing glossary i
 
 ### Controlled glossary terms
 
+The patterns above show how copies of terms are linked and managed throughout the update process.
 
 
 ---8<-- "snippets/abbr.md"

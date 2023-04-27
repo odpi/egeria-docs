@@ -12,6 +12,5 @@ In the second pattern, called the *adapter repository connector*, the repository
 >  Repository connector and optional event mapper connector supporting an adapter to a third party metadata repository
 
 
---8<-- "snippets/abbr.md"
 
 

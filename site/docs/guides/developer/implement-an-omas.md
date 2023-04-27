@@ -227,4 +227,3 @@ implementing the OMAS one scenario at a time.
 * Implement the FVT and run it.
 
 
---8<-- "snippets/abbr.md"

@@ -14,4 +14,3 @@ The Open Metadata Topic Connector implements the [OpenMetadataTopicConnector](ht
     ![Open Metadata Topic Connector](/connectors/resource/open-metadata-topic-connector-in-egeria.svg)
 
 
---8<-- "snippets/abbr.md"

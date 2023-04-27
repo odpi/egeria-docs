@@ -5,7 +5,6 @@ Members of an [Open Metadata Repository Cohort](/concepts/cohort-member) provide
 
 ![Cohort Member Client Connector](/connectors/runtime/cohort-member-client-connector.svg)
 
----8<-- "snippets/abbr.md"
 
 
 

@@ -6,4 +6,3 @@ There is one platform metadata security connector defined for each OMAG Server P
 
 ![Platform Metadata Security Connector](/connectors/runtime/platform-metadata-security-connector.svg)
 
---8<-- "snippets/abbr.md"

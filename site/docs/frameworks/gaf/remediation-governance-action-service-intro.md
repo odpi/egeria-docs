@@ -7,4 +7,4 @@ The *remediation governance action service* performs updates to metadata. Exampl
 ![Function of the remediation governance action service](/frameworks/gaf/remediation-governance-action-service.svg)
 
 
---8<-- "snippets/abbr.md"
+

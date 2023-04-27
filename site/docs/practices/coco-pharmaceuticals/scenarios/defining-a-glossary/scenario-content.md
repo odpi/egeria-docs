@@ -54,6 +54,3 @@ As new terms are defined, Erin begins to organize them into categories in a simi
 !!! education "Further information"
     - [Anatomy of a glossary](/practices/common-data-definitions/anatomy-of-a-glossary)
 
-
-
---8<-- "snippets/abbr.md"

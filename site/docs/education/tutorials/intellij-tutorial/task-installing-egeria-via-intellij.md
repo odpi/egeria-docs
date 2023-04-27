@@ -8,4 +8,4 @@ If your development work is using the main Egeria libraries rather than developi
 --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
 --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
 
---8<-- "snippets/abbr.md"
+

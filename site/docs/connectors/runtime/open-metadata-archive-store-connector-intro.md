@@ -6,4 +6,3 @@ The *open archive store connector* manages the storage of an [Open Metadata Arch
 
 ![Open Metadata Archive Store Connector](/connectors/runtime/open-metadata-archive-store-connector.svg)
 
---8<-- "snippets/abbr.md"

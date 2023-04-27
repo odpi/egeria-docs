@@ -6,4 +6,4 @@ A *provisioning governance action service* invokes a provisioning service whenev
 ![Function of the provisioning governance action service](/frameworks/gaf/provisioning-governance-action-service.svg)
 
 
---8<-- "snippets/abbr.md"
+

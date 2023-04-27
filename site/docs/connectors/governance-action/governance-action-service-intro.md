@@ -74,4 +74,3 @@ The interfaces for governance action services is defined in the [governance-acti
 
     Since the watchdog governance action service calls the provisioning governance action process explicitly via the governance action, their implementations are somewhat tied together.  The alternative is that the watchdog governance action service can invoke a [governance action process](/concepts/governance-action-process) that will choreograph the execution of one or more governance services based on a flow definition managed in open metadata.  The governance action process separates the implementation of the watchdog governance action service from the follow-on governance actions since changes to the follow-on processing is maintained through open metadata rather than requiring code changes to the watchdog governance action service code.
   
---8<-- "snippets/abbr.md"

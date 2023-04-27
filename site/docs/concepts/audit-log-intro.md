@@ -30,6 +30,3 @@ The structure is defined by the Audit Log Framework (ALF).  The Open Metadata Re
 | 14            | `PerfMon`     | This log record contains performance monitoring timing information for specific types of processing. It is not normally logged to any destination, but can be added when needed.                                                    |
 | 0             | `<Unknown>`   | Uninitialized Severity                                                                                                                                                                                                              |
 
-
-
---8<-- "snippets/abbr.md"

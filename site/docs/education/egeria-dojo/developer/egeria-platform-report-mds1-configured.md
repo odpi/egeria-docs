@@ -169,4 +169,3 @@
 * **Location**: egeria.omag.server.mds1.omas.assetowner.inTopic
 * **Configuration Properties**: {producer={bootstrap.servers=localhost:9092}, local.server.id=fab57cdc-e7fb-4f23-8237-376c9fda492b, consumer={bootstrap.servers=localhost:9092, auto.commit.interval.ms=1}}
 
---8<-- "snippets/abbr.md"

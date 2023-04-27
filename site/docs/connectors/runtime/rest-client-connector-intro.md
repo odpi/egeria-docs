@@ -8,5 +8,4 @@ the REST API calls.
 
 ![REST Client Connector](/connectors/runtime/rest-client-connector.svg)
 
----8<-- "snippets/abbr.md"
 

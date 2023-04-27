@@ -46,4 +46,4 @@ The build can take 15 minutes to over an hour depending on the repository and on
 Process finished with exit code 0
 ```
 
---8<-- "snippets/abbr.md"
+

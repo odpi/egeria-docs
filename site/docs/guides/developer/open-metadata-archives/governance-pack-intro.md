@@ -8,4 +8,3 @@ A governance engine pack is a collection of pre-defined governance engines and s
 
 A team can use the governance engine pack to distribute the governance engine function to different metadata ecosystems.
 
---8<-- "snippets/abbr.md"

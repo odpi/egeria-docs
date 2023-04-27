@@ -40,4 +40,4 @@ BUILD SUCCESSFUL in 10s
 3 actionable tasks: 1 executed, 2 up-to-date
 ```
 
---8<-- "snippets/abbr.md"
+

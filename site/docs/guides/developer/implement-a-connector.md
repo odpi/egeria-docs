@@ -92,4 +92,4 @@ Retrieve additional properties by:
 
 Implementation of the remaining points (2-3) will vary widely depending on the specific technology being used. See the examples previously linked to delve deeper.
 
---8<-- "snippets/abbr.md"
+

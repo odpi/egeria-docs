@@ -12,4 +12,3 @@
     - [Open Lineage log store](/features/lineage-management/overview/#openlineage-log-store)
 
 
---8<-- "snippets/abbr.md"

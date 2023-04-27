@@ -21,5 +21,3 @@ An integration connector is specialized for a particular technology.  The integr
 
 ![Inside Integration Daemon](/services/integration-daemon-internals.svg)
 
-
---8<-- "snippets/abbr.md"

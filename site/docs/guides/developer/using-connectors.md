@@ -122,4 +122,4 @@ Software servers and endpoints are set up through the [IT Infrastructure OMAS](/
 !!! education "Further information"
     The [connector catalog](/connectors) lists the connectors provided by the Egeria community.
 
---8<-- "snippets/abbr.md"
+

@@ -94,4 +94,4 @@ public class XXXStoreProvider extends IntegrationConnectorProviderBase
 }
 ```
 
---8<-- "snippets/abbr.md"
+

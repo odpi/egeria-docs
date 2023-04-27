@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-Maven is used to build the following repositories:
+Prior to V4.0 Maven is used to build the following repositories:
 
 * egeria.git - main Egeria libraries.
 * egeria-samples.git - coded samples of using Egeria.

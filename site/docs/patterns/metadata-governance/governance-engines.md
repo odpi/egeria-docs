@@ -57,4 +57,3 @@ If a desired request type can not be supported by the existing governance servic
     * [Open Discovery Services](/connectors/#open-discovery-services)
     * [Repository Governance Services](/connectors/#repository-governance-services)
 
---8<-- "snippets/abbr.md"

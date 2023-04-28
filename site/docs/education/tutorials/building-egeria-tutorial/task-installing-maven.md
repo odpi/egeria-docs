@@ -40,5 +40,5 @@ Maven can be installed by downloading the software from the Apache maven website
     On Windows, you should use [Windows Subsystem for Linux :material-dock-window:](https://docs.microsoft.com/en-us/windows/wsl/){ target=ms } Version 2 or above, install an appropriate Linux distribution, and follow the instructions for that Linux distribution.
 
 
---8<-- "snippets/abbr.md"
+
 

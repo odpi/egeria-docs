@@ -13,4 +13,4 @@ Select the `Sign up` option.
 
 Once you have created your account then sign in.
 
----8<-- "snippets/abbr.md"
+

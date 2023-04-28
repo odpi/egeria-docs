@@ -28,4 +28,4 @@ The connector provider is also able to return the [`ComponentDescription`](https
 
 Egeria provides a base class for the connector provider called [`ConnectorProviderBase`](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/connectors/ConnectorProviderBase.html) that implements the factory classes for a connector.  It also stores all the properties needed by the information methods such as `getConnectorType()`.  Most connector provider implementations use this base class and only need to pass appropriate values to initialize the properties for the information methods.
 
---8<-- "snippets/abbr.md"
+

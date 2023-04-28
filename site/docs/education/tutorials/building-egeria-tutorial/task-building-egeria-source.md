@@ -78,4 +78,4 @@ The build scripts that use these technologies ensure the software is built in th
 
 --8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-with-maven.md"
 
---8<-- "snippets/abbr.md"
+

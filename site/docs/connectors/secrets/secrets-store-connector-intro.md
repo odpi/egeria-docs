@@ -26,4 +26,3 @@ The picture below shows a practical example of using the secrets store connector
 
 This pattern can also be used in the [Engine Host](/concepts/engine-host) with [Open Discovery Services](/concepts/open-discovery-service) and [governance action services](/concepts/governance-action-service).
 
----8<-- "snippets/abbr.md"

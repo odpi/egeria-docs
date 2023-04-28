@@ -107,4 +107,4 @@ public class XXXStoreProvider extends ConnectorProviderBase
 }
 ```
 
---8<-- "snippets/abbr.md"
+

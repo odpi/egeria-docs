@@ -11,5 +11,3 @@ The [connector catalog](/connectors/#integration-connectors) lists the integrati
     - [Configuring the integration daemon](/guides/admin/servers/configuring-an-integration-daemon)
     - [Writing integration connectors](/guides/developer/integration-connectors/overview)
 
-
---8<-- "snippets/abbr.md"

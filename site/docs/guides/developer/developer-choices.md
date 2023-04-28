@@ -26,6 +26,6 @@ The numbers on the diagram refer to these notes:
 
 9. Finally, Egeria uses *connectors* in the OMAG Server Platform to access the services it needs to operate.  Many of these [runtime connectors](/connectors/#runtime-connectors) are based around files.  They can be replaced to enable Egeria to run in new types of containers or operating platforms.
 
----8<-- "snippets/abbr.md"
+
 
 

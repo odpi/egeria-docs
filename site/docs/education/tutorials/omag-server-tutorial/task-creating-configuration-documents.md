@@ -1707,4 +1707,4 @@ over [Apache Kafka](http://kafka.apache.org/), see:
 
 With the configuration document in place, you are ready to [start the OMAG Server](/education/tutorials/omag-server-tutorial/task-starting-omag-server).
 
---8<-- "snippets/abbr.md"
+

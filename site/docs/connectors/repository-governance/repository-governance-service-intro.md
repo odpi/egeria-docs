@@ -12,4 +12,3 @@ A repository governance service can:
 - Issue requests to find and retrieve metadata instances from any of the repositories connected via Open Metadata Repository Cohorts.
 - Incrementally build and store an open metadata archive.
 
---8<-- "snippets/abbr.md"

@@ -21,4 +21,3 @@ This connector is called each time a request is made to the server.  It is calle
     * [Writing a server metadata security connector](/guides/developer/runtime-connectors/server-metadata-security-connector)
     * [Configuring the server metadata security connector](/guides/admin/servers/configuring-the-server-security-connector) in a server.
 
----8<-- "snippets/abbr.md"

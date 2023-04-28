@@ -84,4 +84,3 @@ ETL engines have a long history of capturing lineage, since it is a common requi
     - [Building an integration connector](/guides/developer/integration-connectors/overview)
     - [Building a repository connector](/guides/developer/repository-connectors/overview)
 
---8<-- "snippets/abbr.md"

@@ -21,4 +21,4 @@ Once the connector is created, an application may use it to retrieve the content
 
 When the application has finished with the connector, it should call `disconnect()` to release any resources that the connector may be holding.
 
----8<-- "snippets/abbr.md"
+

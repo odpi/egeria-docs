@@ -22,4 +22,3 @@ You can make your own choices on how to build trust in your data/metadata.  Eger
 
 * Egeria's documentation provides guidance on how to use this technology to deliver business value.
 
---8<-- "snippets/abbr.md"

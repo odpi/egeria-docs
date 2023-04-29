@@ -28,14 +28,14 @@ The different styles of glossary workflow provide choices on who is providing co
     |-----------------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
     | Harvested glossary          | Source glossaries.       | Choice on which terms are included in the aggregated glossary.                                                                  | Glossary terms change without knowledge or agreement from the curators of the aggregated glossary.                                            | Organizing terms from standards, regulations and other external sources.                                                  |
     | Multi-level glossaries      | Upstream glossaries.     | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Difficult for upstream glossaries to reconcile differences in their definitions.                                                              | Consolidating definitions from across areas of domain expertise in the organization.                                      |
-    | Open contribution glossary  | Subject matter experts.  | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Content is developed in narrow independent scopes, making it difficult to coordinate changes from different groups of subject matter experts. | Development of new glossary content when the subject matter experts are distributed across the organization (and beyond). |
+    | Open contribution glossary  | Subject-matter experts.  | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Content is developed in narrow independent scopes, making it difficult to coordinate changes from different groups of subject-matter experts. | Development of new glossary content when the subject-matter experts are distributed across the organization (and beyond). |
     | Release-controlled glossary | Glossary authoring team. | Coordination of all changes to the glossary, which terms are included, their exact content and when updates are to be included. | Changes are delayed waiting for the next release.                                                                                             | For glossaries that must present a coherent scope.                                                                        |
 
 === "Harvested Glossary"
     ---8<-- "docs/services/omvs/glossary-workflow/harvested-glossary.md"
 
 === "Multi-level Glossaries"
-    ---8<-- "docs/services/omvs/glossary-workflow/multi-level-glossary.md"
+    ---8<-- "docs/services/omvs/glossary-workflow/multi-level-glossaries.md"
 
 === "Open Contribution Glossary"
     ---8<-- "docs/services/omvs/glossary-workflow/open-contribution-glossary.md"
@@ -45,7 +45,9 @@ The different styles of glossary workflow provide choices on who is providing co
 
 ## Implementation
 
-The different styles of glossary operation are complementary and may be used in combination, or may change as the glossary matures.  The important point is to think about the 
+The different styles of glossary operation are complementary and may be used in combination allowing your approach to change as the glossary matures.  For example, you may begin your glossary with the harvesting style and use the open contribution style to fill in the gaps with new terms.
+
+This flexibility is possible because there is a simple mechanism that underpins Egeria's glossary workflow and this can be used in different combinations to create the affects described above.
 
 ### Linked copies of glossary terms
 
@@ -53,7 +55,7 @@ Except the harvested glossary style, controlled glossary development requires mu
 
 ![SourcedFrom template](sourced-from-template.svg)
 
-The copy of the term is typically managed in another glossary called the [editing glossary](/types/3/0385-Controlled-Glossary-Development/#editingglossary-classification)
+The copy of the term is typically managed in another glossary called the [editing glossary](/types/3/0385-Controlled-Glossary-Development/#editingglossary-classification).  This is a glossary that holds changes while they are in progress - and for future reference.
 
 The way the copy is managed and merged back into the original (or the place where the updates are to be published) depends on the style of glossary and whether you wish each published version to be retained.
 Care is made to copy the contents, rather than replace the term itself, because terms have many relationships to other elements (such as data assets) and these relationships need to be preserved.
@@ -111,10 +113,35 @@ The rolling staging glossary pattern of operation is where an editing glossary i
 | ![Step 5](rolling-staging-glossary-6.svg) | If the team that owns the destination glossary want to make some minor changes to the term, they can do so in the staging glossary.  They label their updates as V2.1 to show there was a change.             |
 | ![Step 6](rolling-staging-glossary-7.svg) | V2.1 of the term is copied into the V1 term in the destination glossary and linked back to the V2.1 in the staging glossary.                                                                                  |
 
-
 ### Controlled glossary terms
 
-The patterns above show how copies of terms are linked and managed throughout the update process.
+The patterns above show how copies of terms are linked and managed throughout the update process.  While a specific term is under review it may be helpful to identify where it is in the review process.
+
+## ControlledGlossaryTerm entity
+
+The [*ControlledGlossaryTerm*](/types/3/0385-Controlled-Glossary-Development) extends the standard [GlossaryTerm](/types/3/0330-Terms) with additional valid [instance statuses](/concepts/instance-status) for supporting a complex development lifecycle.  The statuses are:
+
+* DRAFT      - The term is incomplete.
+* PREPARED   - The term is ready for review.
+* PROPOSED   - The term is in review.
+* APPROVED   - The term is approved and awaiting activation.
+* REJECTED   - The term is rejected and should not be used.
+* ACTIVE     - The term is approved and in use.
+* DEPRECATED - The term is out of date and should not be used.
+* OTHER      - The term is in a locally defined state.
+
+These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-metadata-values/overview).
+
+## Relationship statuses
+
+Similarly, the relationship between glossary terms have a status that can also be used to show where the relationship is in the review process.
+
+* DRAFT - The relationship is under development.
+* ACTIVE - The relationship is validated and in use.
+* DEPRECATED - The relationship is being phased out.
+* OBSOLETE - The relationship should not be used anymore.
+* OTHER - The status is not one of the statuses listed above.  The description field can be used to add more details.
+
 
 
 ---8<-- "snippets/abbr.md"

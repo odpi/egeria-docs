@@ -11,7 +11,7 @@ In addition, the following associations are made:
 
 * If the copied element is a glossary term it is also linked to the editing glossary via the [TermAnchor](/types/3/0330-Terms) relationship.
 * If the copied element is a glossary category it is also linked to the editing glossary via the [CategoryAnchor](/types/3/0320-Category-Hierarchy) relationship.
-* All copies of elements made to support an editing glossary will have their [*Anchors* classification](/types/0/0010-Base-Model) set to the editing glossaries unique identifier so if the editing glossary is deleted, all the copies are deleted too.
+* All copies of elements made to support an editing glossary will have their [*Anchors* classification](/types/0/0010-Base-Model) set to the editing glossary's unique identifier so if the editing glossary is deleted, all the copies are deleted too.
 
 
 ![editing glossary](editing-glossary.svg)
@@ -25,15 +25,13 @@ Once approved, the changes identified in the editing glossary are made to the te
 
 ## EditingGlossary classification
 
-The *EditingGlossary* classification identifies that a glossary is temporary and contains copies of live glossary terms that are being updated as part of a controlled glossary development process.
+The *EditingGlossary* classification identifies that a glossary contains copies of live glossary terms that are being updated as part of a controlled glossary development process.
 
 The contents of the editing glossary may represent a single change, changes associated with a particular project/community or may represent a new release of the whole glossary.
 
-## EditingGlossaryCopy classification
+## StagingGlossary classification
 
-The *EditingGlossaryCopy* classification identifies that an element is a copy of an original element which is included in the changes described by an editing glossary.
-
-This classification can be attached to any [Referenceable](/types/0/0010-Base-Model) entity. Most elements included in editing glossary are glossary terms.  However, if the edits include adding new relationships to other types of elements, these linked elements need to be copied into the editing glossary and the relationship made to the copy, so it is invisible until the editing glossary is merged.
+The *StagingGlossary* classification identifies that a glossary contains copies of live glossary terms that are being published from a source glossary into a new glossary as part of a controlled glossary development process.
 
 ## ControlledGlossaryTerm entity
 
@@ -49,7 +47,7 @@ The *ControlledGlossaryTerm* extends the standard [GlossaryTerm](/types/3/0330-T
 * Other      - The term is in a locally defined state.
 * Deleted    - The term has been soft-deleted and can no longer be used.
 
-These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guises/planning/valid-metadata-values/overview).
+These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-metadata-values/overview).
 
 
 ???+ deprecated "Deprecated types"

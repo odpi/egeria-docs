@@ -11,4 +11,3 @@ In the example below, the team working on a new sustainability initiative have a
 
 The harvested style of glossary helps teams that do not have the time/resources to create their own glossary terms.
 
---8<-- "snippets/abbr.md"

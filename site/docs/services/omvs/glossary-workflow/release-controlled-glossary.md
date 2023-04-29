@@ -8,5 +8,3 @@ A released-controlled glossary is one where changes to the glossary terms are ma
 ![Release-controlled glossary](release-controlled-glossary.svg)
 
 
-
---8<-- "snippets/abbr.md"

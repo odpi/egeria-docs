@@ -117,8 +117,6 @@ The rolling staging glossary pattern of operation is where an editing glossary i
 
 The patterns above show how copies of terms are linked and managed throughout the update process.  While a specific term is under review it may be helpful to identify where it is in the review process.
 
-## ControlledGlossaryTerm entity
-
 The [*ControlledGlossaryTerm*](/types/3/0385-Controlled-Glossary-Development) extends the standard [GlossaryTerm](/types/3/0330-Terms) with additional valid [instance statuses](/concepts/instance-status) for supporting a complex development lifecycle.  The statuses are:
 
 * DRAFT      - The term is incomplete.
@@ -132,7 +130,7 @@ The [*ControlledGlossaryTerm*](/types/3/0385-Controlled-Glossary-Development) ex
 
 These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-metadata-values/overview).
 
-## Relationship statuses
+### Relationship statuses
 
 Similarly, the relationship between glossary terms have a status that can also be used to show where the relationship is in the review process.
 

@@ -21,7 +21,16 @@ Model 0330 shows the glossary term.
 
 *TermCategorization* is a relationship used to organize terms into categories (like organizing files into folders on your disk).  A term may be linked with many categories and a category may have many terms linked to it.  This relationship may connect terms and categories both in the same glossary and in different glossaries.
 
-## 
+## TermRelationshipStatus enumeration
+
+The *TermRelationshipStatus* defines how reliable the relationship is between two glossary terms:
+
+* DRAFT means the relationship is under development.
+* ACTIVE means the relationship is validated and in use.
+* DEPRECATED means the the relationship is being phased out.
+* OBSOLETE means that the relationship should not be used anymore.
+* OTHER means that the status is not one of the statuses listed above.  The description field can be used to add more details.
+
 ## LibraryTermReference relationship
 
 *LibraryTermReference* provides reference information for how this term corresponds to a term in an external glossary.

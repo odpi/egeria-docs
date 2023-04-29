@@ -14,7 +14,3 @@ Whether the term is accepted or not, the originating team is free to continue to
 
 In this example, the company glossary’s content is controlled.   All editing of terms happens in the division glossaries.   There is little support to reconcile differences in the definition of a term across the divisions.
 
-
-
-
---8<-- "snippets/abbr.md"

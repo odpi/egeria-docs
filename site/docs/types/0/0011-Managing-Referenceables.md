@@ -9,7 +9,7 @@
 
 ## LatestChange classification
 
-The *LatestChange* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring [Referenceable](/types/0/0010-Base-Model/#referenceable) entities can use the open metadata events related to classifications to maintain a complete picture of the entity.
+The *LatestChange* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring [Referenceable](/types/0/0010-Base-Model/#referenceable) entities can use the open metadata events related to classifications to monitor changes to the entity.
 
 ## Template classification
 
@@ -21,11 +21,11 @@ The *Template* classification indicates that a [*Referenceable*](/types/0/0010-B
 
 ![Example of the use of a Template classification](template-use-case-2.svg)
 
-Templates can include relationships.  If the relationship links to an entity that has the same anchor as the starting entity, the entity and the relationship is replicated.  If the linked entity is part of a different anchor, only the relationship is created.  In the example above, the glossary term has a different anchor to the asset.  Therefore any assets created with *tAsset* as a template will all be linked to the same glossary term.
+Templates can include relationships.  If the relationship links to an entity that has the same anchor as the starting entity, the entity and the relationship is replicated.  If the linked entity is part of a different anchor, only the relationship is created.  In the example above, the glossary term has a different anchor to the asset.  Therefore any assets created with *tAsset* as a template will be linked to the same glossary term.
 
 ## TemplateSubstitute classification
 
-If a query requests all assets linked to the glossary term, *tAsset* will be returned with the other assets.  This could be confusing.  Therefore it is possible to create a copy of the glossary term that is linked to *tAsset*.  This copy has the *TemplateSubstitute* classification to show that the real glossary term to link a new asset to is identified by the *SourcedFrom* relationship.
+If a query requests all assets linked to the glossary term, *GlossaryTerm*, the *tAsset* entity will be returned with the other assets.  This could be confusing.  Therefore it is possible to create a copy of the glossary term that is linked to *tAsset*.  This copy has the *TemplateSubstitute* classification to show that the real glossary term to link a new asset to is identified by the *SourcedFrom* relationship.
 
 ![Example of the use of a TemplateSubstitute classification](template-use-case-3.svg)
 

@@ -3,9 +3,9 @@
 
 --8<-- "snippets/content-status/in-development.md"
 
-# Glossary Workflow Open Metadata View Services (OMVS)
+# Glossary Workflow OMVS
 
-The Glossary Workflow OMVS is a REST API designed to support UIs that enable the maintenance of glossary content using a controlled workflow process.
+The Glossary Workflow Open Metadata View Service (OMVS) is a REST API designed to support UIs that enable the maintenance of glossary content using a controlled workflow process.  It runs in a [View Server](/concepts/view-server) and calls the [Asset Manager OMAS](/services/omas/asset-manager/overview) to retrieve and make changes to the glossary.
 
 ## Why use a controlled glossary workflow
 
@@ -57,8 +57,10 @@ Except the harvested glossary style, controlled glossary development requires mu
 
 The copy of the term is typically managed in another glossary called the [editing glossary](/types/3/0385-Controlled-Glossary-Development/#editingglossary-classification).  This is a glossary that holds changes while they are in progress - and for future reference.
 
-The way the copy is managed and merged back into the original (or the place where the updates are to be published) depends on the style of glossary and whether you wish each published version to be retained.
-Care is made to copy the contents, rather than replace the term itself, because terms have many relationships to other elements (such as data assets) and these relationships need to be preserved.
+There is also a type of glossary called the [staging glossary](/types/3/0385-Controlled-Glossary-Development/#stagingglossary-classification).  This is a glossary that holds changes that have been made in a source glossary and are waiting to be added to a destination glossary.
+
+The use of either the editing or staging glossaries, and the way the copy is managed and merged into the appropriate destination depends on the style of glossary and whether you wish each published version to be retained.
+Care is made to copy the contents, rather than replace the term itself during these maneuvers, because terms have many relationships to other elements (such as data assets) and these relationships need to be preserved.
 
 #### Temporary editing glossary
 
@@ -89,16 +91,16 @@ In this next pattern, the editing glossary maintains an audit trail of each vers
 
 The temporary staging glossary pattern of operation is where an editing glossary is used to hold the copies of terms that are proposed for including into another (destination) glossary.
 
-| Action                                      | Description                                                                                                                                                                                                   |
-|---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![Step 1](temporary-staging-glossary-1.svg) | A copy of the term to include in the destination glossary is created in the staging glossary.                                                                                                                 |
-| ![Step 2](temporary-staging-glossary-2.svg) | The team that owns the destination glossary review the term and if they approve of it, they create a copy of it for the destination glossary.  It is linked back to the original term in the source glossary. |
-| ![Step 3](temporary-staging-glossary-3.svg) | The staging glossary is removed.                                                                                                                                                                              |
-| ![Step 4](temporary-staging-glossary-4.svg) | The term in the source glossary can be updated without affecting the destination glossary's term.                                                                                                             |
-| ![Step 5](temporary-staging-glossary-5.svg) | If V2 of the term is to be included in the destination glossary, a copy of it is added to a staging glossary.                                                                                                 |
-| ![Step 6](temporary-staging-glossary-6.svg) | In this case, the team that owns the destination glossary want to make some minor changes to the term.  They label their updates as V2.1 to show there was a change.                                          |
-| ![Step 7](temporary-staging-glossary-7.svg) | V2.1 of the term is copied into the V1 term in the destination glossary and linked back to the V2 in the source glossary.                                                                                     |
-| ![Step 8](temporary-staging-glossary-8.svg) | The staging glossary is deleted, which deletes its V2.1 copy of the term.                                                                                                                                     |
+| Action                                      | Description                                                                                                                                                                                       |
+|---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![Step 1](temporary-staging-glossary-1.svg) | A copy of the term to include in the destination glossary is created in the staging glossary.                                                                                                     |
+| ![Step 2](temporary-staging-glossary-2.svg) | The team that owns the destination glossary review the term and if they approve of it, they it to the destination glossary.  It is still linked back to the original term in the source glossary. |
+| ![Step 3](temporary-staging-glossary-3.svg) | The staging glossary is removed.                                                                                                                                                                  |
+| ![Step 4](temporary-staging-glossary-4.svg) | The term in the source glossary can be updated without affecting the destination glossary's term.                                                                                                 |
+| ![Step 5](temporary-staging-glossary-5.svg) | If V2 of the term is to be included in the destination glossary, a copy of it is added to a staging glossary.                                                                                     |
+| ![Step 6](temporary-staging-glossary-6.svg) | In this case, the team that owns the destination glossary want to make some minor changes to the term.  They label their updates as V2.1 to show there was a change.                              |
+| ![Step 7](temporary-staging-glossary-7.svg) | V2.1 of the term is copied into the V1 term in the destination glossary and linked back to the V2 in the source glossary.                                                                         |
+| ![Step 8](temporary-staging-glossary-8.svg) | The staging glossary is deleted, which deletes its V2.1 copy of the term.                                                                                                                         |
 
 #### Rolling staging glossary
 
@@ -108,10 +110,10 @@ The rolling staging glossary pattern of operation is where an editing glossary i
 |-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![Step 1](rolling-staging-glossary-1.svg) | A copy of the term to include in the destination glossary is created in the staging glossary.                                                                                                                 |
 | ![Step 2](rolling-staging-glossary-2.svg) | The team that owns the destination glossary review the term and if they approve of it, they create a copy of it for the destination glossary.  It is linked back to the version term in the staging glossary. |
-| ![Step 3](rolling-staging-glossary-4.svg) | The term in the source glossary can be updated without affecting the destination glossary's term.                                                                                                             |
-| ![Step 4](rolling-staging-glossary-5.svg) | If V2 of the term is to be included in the destination glossary, a copy of it is added to the staging glossary.                                                                                               |
-| ![Step 5](rolling-staging-glossary-6.svg) | If the team that owns the destination glossary want to make some minor changes to the term, they can do so in the staging glossary.  They label their updates as V2.1 to show there was a change.             |
-| ![Step 6](rolling-staging-glossary-7.svg) | V2.1 of the term is copied into the V1 term in the destination glossary and linked back to the V2.1 in the staging glossary.                                                                                  |
+| ![Step 3](rolling-staging-glossary-3.svg) | The term in the source glossary can be updated without affecting the destination glossary's term.                                                                                                             |
+| ![Step 4](rolling-staging-glossary-4.svg) | If V2 of the term is to be included in the destination glossary, a copy of it is added to the staging glossary.                                                                                               |
+| ![Step 5](rolling-staging-glossary-5.svg) | If the team that owns the destination glossary want to make some minor changes to the term, they can do so in the staging glossary.  They label their updates as V2.1 to show there was a change.             |
+| ![Step 6](rolling-staging-glossary-6.svg) | V2.1 of the term is copied into the V1 term in the destination glossary and linked back to the V2.1 in the staging glossary.                                                                                  |
 
 ### Controlled glossary terms
 
@@ -140,7 +142,23 @@ Similarly, the relationship between glossary terms have a status that can also b
 * OBSOLETE - The relationship should not be used anymore.
 * OTHER - The status is not one of the statuses listed above.  The description field can be used to add more details.
 
+## Revision history
 
+Updates to glossary terms are automatically recorded in a revision history.  It is possible to add a description about a particular change through the *updateDescription* parameter on the update or create requests.
+
+## External workflow
+
+If the approval process is complex, you may wish to control it through a workflow engine that is running outside of Egeria.  There are two basic approaches.
+
+In the first example shown below, the request for approval of a change results in a [governance action service](/concepts/governance-action-service) running in an engine host.  This governance action service gathers information about the change to be approved and passes it to the external workflow engine.  Then depending on the capabilities of the external workflow engine, it then polls for a result, or registers a listener so it is notified of the result.  When the decision is made, the governance action service is informed of the result.  It makes the necessary changes to the glossary.
+
+![Getting a decision from the WF engine](external-workflow-engine.svg)
+
+This approach provides a simple integration path that acts when the external process is complete.  However, you may choose to have the updates to the glossary made by the workflow process itself during its execution.  This may be useful if the process is approving a large batch of terms, for example, and the decisions for each term need to be recorded as they are made (rather than at the end).  This second approach shown below has the external workflow process calling the [Asset Manager OMAS](/services/omas/asset-manager/overview) during the process execution.
+
+![Handing over responsibility](external-workflow-engine-2.svg)
+
+The Asset Manager OMAS is the same service called by the Glossary Workflow OMAS.
 
 ---8<-- "snippets/abbr.md"
 

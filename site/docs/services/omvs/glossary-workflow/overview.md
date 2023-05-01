@@ -150,7 +150,7 @@ Updates to glossary terms are automatically recorded in a revision history.  It 
 
 If the approval process is complex, you may wish to control it through a workflow engine that is running outside of Egeria.  There are two basic approaches.
 
-In the first example shown below, the request for approval of a change results in a [governance action service](/concepts/governance-action-service) running in an engine host.  This governance action service gathers information about the change to be approved and passes it to the external workflow engine.  Then depending on the capabilities of the external workflow engine, it then polls for a result, or registers a listener so it is notified of the result.  When the decision is made, the governance action service is informed of the result.  It makes the necessary changes to the glossary.
+In the first example shown below, the request for approval of a change results in a [governance action service](/concepts/governance-action-service) running in an engine host.  This governance action service gathers information about the change to be approved and passes it to the external workflow engine.  Then depending on the capabilities of the external workflow engine, it then polls for a result, or registers a listener, so it is notified of the result.  When the decision is made, the governance action service is informed of the result.  It makes the necessary changes to the glossary.
 
 ![Getting a decision from the WF engine](external-workflow-engine.svg)
 

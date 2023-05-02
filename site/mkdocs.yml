@@ -307,14 +307,15 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Monthly News:
-        - February 2023: release-notes/february-2023.md
-        - January 2023: release-notes/january-2023.md
-        - November 2022: release-notes/november-2022.md
-        - October 2022: release-notes/october-2022.md
+            - April 2023: release-notes/april-2023.md
+            - February 2023: release-notes/february-2023.md
+            - January 2023: release-notes/january-2023.md
+            - November 2022: release-notes/november-2022.md
+            - October 2022: release-notes/october-2022.md
       - Core Egeria:
-        - Latest Release: release-notes/latest.md
-        - Next Release: release-notes/next.md
-        - Previous releases: release-notes/previous.md
+            - Latest Release: release-notes/latest.md
+            - Next Release: release-notes/next.md
+            - Previous releases: release-notes/previous.md
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:

@@ -16,7 +16,7 @@
 
 The Apache Atlas integration connector publishes ACTIVE glossary terms to Apache Atlas.  It can be configured to publish just from a single glossary or all glossaries.  The connector makes no attempt to detect changes to these glossary terms in Apache Atlas.  However, such changes will be overridden the next time the integration connector refreshes the glossary metadata in Apache Atlas.
 
-![Figure 1](apache-atlas-catalog-integration-connectors.svg)
+![Figure 1](apache-atlas-catalog-integration-connector.svg)
 > **Figure 1:** Operation of the Apache Atlas integration connector
 
 

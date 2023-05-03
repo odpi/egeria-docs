@@ -9,7 +9,7 @@ This is April's monthly report from the Egeria community.  This month we saw the
 
 The 4.0 release of Egeria Core is now available and the connectors for this level are in the process of being released.
 
-This release was an important achievement for the Egeria community. It involved upgrades to our Java level, a moved to a gradle-only build, a later level of String, plus removal of deprecated function.  There were also changes to the repository connectors and integration connector interfaces that requires rework to these types of connectors.  The [release notes](/release-notes/4.0) provide detailed descriptions of these changes.
+This release was an important achievement for the Egeria community. It involved upgrades to our Java level, a moved to a gradle-only build, a later level of Spring, plus removal of deprecated function.  There were also changes to the repository connectors and integration connector interfaces that requires rework to these types of connectors.  The [release notes](/release-notes/4-0) provide detailed descriptions of these changes.
 
 Release 4.0 also included a new feature for the integration daemon called [Integration Groups](#integration-groups).
 
@@ -17,7 +17,7 @@ Release 4.0 also included a new feature for the integration daemon called [Integ
 
 The [Integration Daemon](/concepts/integration-daemon) can now be dynamically configured while it is running through a new feature called [integration groups](/concepts/integration-group).  An integration group is a metadata entity that acts as an anchor for a list of integration connector definitions.  The integration daemon is configured with a list of integration groups to monitor.  At startup, it retrieves the integration group entities from its [metadata access server](/concepts/metadata-access-server), and any connected integration connector definitions and uses them to configure itself.  It continues to monitor the changes to the integration groups in the metadata access server, making adjustments to the connectors it is running as necessary.
 
-## Integration reports
+## Integration Reports
 
 When an [integration connector](/concepts/integration-connector) is running, is [integration service](/services/omis) is monitoring the changes that the connector is making to open metadata and publishing them in an [integration report](/concept/integration-report).
 
@@ -31,7 +31,7 @@ The [Secrets Store Connector](/concepts/secrets-store-connector) is a new type o
 
 ### Apache Atlas Integration Connector
 
-There is a new [Apache Atlas](/connectors/integration/apache-atlas-catalog-integration-connector) that is able to publish active glossary terms to one or more glossaries in Apache Atlas.
+There is a new [Apache Atlas](/connectors/integration/apache-atlas-catalog-integration-connector) integration connector that is able to publish active glossary terms to one or more glossaries in Apache Atlas.
 
 ### Server Metadata Security Connector
 
@@ -88,6 +88,7 @@ Morning session:
 
  * Cloud native: an update on cloud native workgroup including discussions on the next steps.
  * Addressing feedback from ING product team:
+
    * possibility for configuration improvement: add a new way to configure Egeria besides API calls; for example, have a config file for simple basic settings and use API calls for more complex settings.
    * develop and improve Egeria deployment using containers; right now, there are external dependencies which make container deployment in production not feasible.
    * add new connectors for graph db backends in the future besides JanusGraph and XTDB; right now, JanusGraph development is not very active and XTDB may not be production ready; a discussion about possible better alternatives may help.
@@ -95,12 +96,15 @@ Morning session:
 Afternoon session:
 
 * Pipelines and Code quality checks
+
    * UI JavaScript/TypeScript (eslint)
    * Use of Sonatype Lift scans
    * Javadoc build warnings - what should we do, what are our standards?
+  
 * Release process activities
 
 * Release 4 - follow-ups
+
    * deprecated function
    * XTDB connector
    * JDBC connector
@@ -108,6 +112,7 @@ Afternoon session:
    * event schema, strimzi, lineage @juergenhemelt
   
 * How do we better minimize ongoing maintenance:
+
   * repo owner assignment/responsibilities
   * consolidation/refactoring/common build processes/automation
 
@@ -121,6 +126,7 @@ Morning session:
 Afternoon session:
 
 * UI topics
+
   * an update on the consolidated type script UI, including documentation, views and status for v4.
   * Independent module documentation using GitHub pages for each UI component (presented last time something in this direction, currently work in backlog for happi-graph)
   * video documentation on how to start things (UI)

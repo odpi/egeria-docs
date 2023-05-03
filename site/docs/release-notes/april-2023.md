@@ -61,6 +61,13 @@ Glossary Browser OMVS supports the searching and navigation through a published 
 
 The cloud-native workgroup continues to make progress.  The focus is to create runtimes for Kubernetes that support a single server.  There is likely to be a specialized runtime for [each of the server types](/concepts/omag-server#types-of-omag-server).  When these server's run, their configuration is provided through the kubernetes infrastructure rather than a configuration store.
 
+## Changes to the open metadata labs
+
+Two of our open metadata labs have had improvements made:
+
+* *Automated Curation* includes integration connectors that are configured through [integration groups](#integration-groups).
+* *Working with standard models* adds examples of creating new glossaries and terms within them, glossary security, various forms of versioning and version history, and the ability to query terms from a single glossary.
+
 ## Face-to-face workshop - Bucharest - 24th -26th April
 
 The face-to-face workshop in Bucharest saw important progress on cloud-native deployments and our User Interface consolidation.
@@ -86,12 +93,12 @@ Afternoon session:
 
 Morning session:
 
- * Cloud native: an update on cloud native workgroup including discussions on the next steps.
- * Addressing feedback from ING product team:
+* Cloud native: an update on cloud native workgroup including discussions on the next steps.
+* Addressing feedback from ING product team:
 
-   * possibility for configuration improvement: add a new way to configure Egeria besides API calls; for example, have a config file for simple basic settings and use API calls for more complex settings.
-   * develop and improve Egeria deployment using containers; right now, there are external dependencies which make container deployment in production not feasible.
-   * add new connectors for graph db backends in the future besides JanusGraph and XTDB; right now, JanusGraph development is not very active and XTDB may not be production ready; a discussion about possible better alternatives may help.
+    * possibility for configuration improvement: add a new way to configure Egeria besides API calls; for example, have a config file for simple basic settings and use API calls for more complex settings.
+    * develop and improve Egeria deployment using containers; right now, there are external dependencies which make container deployment in production not feasible.
+    * add new connectors for graph db backends in the future besides JanusGraph and XTDB; right now, JanusGraph development is not very active and XTDB may not be production ready; a discussion about possible better alternatives may help.
 
 Afternoon session:
 

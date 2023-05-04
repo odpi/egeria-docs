@@ -5,11 +5,11 @@
 
 # Glossary Workflow OMVS
 
-The Glossary Workflow Open Metadata View Service (OMVS) is a REST API designed to support UIs that enable the maintenance of glossary content using a controlled workflow process.  It runs in a [View Server](/concepts/view-server) and calls the [Asset Manager OMAS](/services/omas/asset-manager/overview) to retrieve and make changes to the glossary.
+The Glossary Workflow Open Metadata View Service (OMVS) is a REST API designed to support UIs that enable the maintenance of [glossary content](/practices/common-data-definitions/anatomy-of-a-glossary) using a controlled workflow process.  It runs in a [View Server](/concepts/view-server) and calls the [Asset Manager OMAS](/services/omas/asset-manager/overview) to retrieve and make changes to the glossary.
 
 ## Why use a controlled glossary workflow
 
-The purpose of a controlled glossary workflow is to manage the visibility of glossary terms and any updates to them that are “in progress”.  Typically, this visibility’s is restricted to the authors of the glossary terms and the approvers.  Once approved, the updates are visible to all.
+The purpose of a controlled glossary workflow is to manage the visibility of glossary terms and any updates to them that are “in progress”.  Typically, this visibility’s is restricted to the authors of the glossary terms and the approvers.  Once approved, and incorporated back into the "live" glossary, the updates are visible to all.
 
 Although the general idea is simple, there are a number of choices to make on how the workflow operates.  This includes:
 
@@ -21,12 +21,12 @@ Although the general idea is simple, there are a number of choices to make on ho
 
 ## Styles of glossary workflow operation
 
-The different styles of glossary workflow provide choices on who is providing content, making decisions and how the updates are grouped.  Where multiple glossaries are in play, each can operate a different style.
+The different styles of glossary workflow provide choices on who is providing content, how decisions are made on whats it accepted and how the updates are grouped, both for the review process and when they are published.  Where multiple glossaries are in play, each can operate a different style.
 
 === "Summary"
     | Maintenance Style           | Contributors             | Controls                                                                                                                        | Limitations                                                                                                                                   | Uses                                                                                                                      |
     |-----------------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-    | Harvested glossary          | Source glossaries.       | Choice on which terms are included in the aggregated glossary.                                                                  | Glossary terms change without knowledge or agreement from the curators of the aggregated glossary.                                            | Organizing terms from standards, regulations and other external sources.                                                  |
+    | Harvested glossary          | Source glossaries.       | Choice on which terms are included in the harvested glossary.                                                                   | Glossary terms change without knowledge or agreement from the curators of the harvested glossary.                                             | Organizing terms from standards, regulations and other external sources.                                                  |
     | Multi-level glossaries      | Upstream glossaries.     | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Difficult for upstream glossaries to reconcile differences in their definitions.                                                              | Consolidating definitions from across areas of domain expertise in the organization.                                      |
     | Open contribution glossary  | Subject-matter experts.  | Choice on which terms are included, their exact content and whether updates are to be included.                                 | Content is developed in narrow independent scopes, making it difficult to coordinate changes from different groups of subject-matter experts. | Development of new glossary content when the subject-matter experts are distributed across the organization (and beyond). |
     | Release-controlled glossary | Glossary authoring team. | Coordination of all changes to the glossary, which terms are included, their exact content and when updates are to be included. | Changes are delayed waiting for the next release.                                                                                             | For glossaries that must present a coherent scope.                                                                        |
@@ -42,6 +42,8 @@ The different styles of glossary workflow provide choices on who is providing co
 
 === "Release Controlled Glossary"
     ---8<-- "docs/services/omvs/glossary-workflow/release-controlled-glossary.md"
+
+----
 
 ## Implementation
 

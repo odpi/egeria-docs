@@ -66,9 +66,11 @@ Processes have an advanced lifecycle.  They can have the following [instance sta
 * Active
 * Deleted
 
+The *formula* attribute can describe its behaviour, *formulaType* describes the notation language used to describe the formula.
+
 ### DataSet
 
-*DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet.  See [*DataStore*](/types/2/0210-Data-Stores) for the `Asset` that represents a physical store and the [*DataContentForDataSet*](/types/2/0210-Data-Stores/#datacontentfordataset) relationship links the DataSet to the asset(s) that describe the data sources.
+*DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet, *formulaType* describes the notation language used to describe the formula.  See [*DataStore*](/types/2/0210-Data-Stores) for the `Asset` that represents a physical store and the [*DataContentForDataSet*](/types/2/0210-Data-Stores/#datacontentfordataset) relationship links the DataSet to the asset(s) that describe the data sources.
 
 ## SampleData
 

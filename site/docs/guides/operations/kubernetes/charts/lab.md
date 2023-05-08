@@ -140,12 +140,12 @@ Now go to https://localhost:8091/coco to access the React UI. Login as 'garygeek
 
 ## Accessing the Egeria UI
 
-The same applies to the service exposing Egeria UI via nginx
+The same applies to the service exposing Egeria UI
 
 ```console
-$ kubectl port-forward service/lab-nginx 8443:443
-Forwarding from 127.0.0.1:8443 -> 443
-Forwarding from [::1]:8443 -> 443
+$ kubectl port-forward service/lab-uistatic 8443
+Forwarding from 127.0.0.1:8443 -> 8443
+Forwarding from [::1]:8443 -> 8443
 ```
 Now you can go to https://localhost:8443 to access Egeria UI.
 

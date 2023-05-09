@@ -26,4 +26,7 @@
 *[UI]: User Interface
 
 ----
-[Raise an issue on this page](https://github.com/odpi/egeria-docs/issues)
+
+[Raise an issue on this page](https://github.com/odpi/egeria-docs/issues) or comment below
+<!-- Comment system -->
+--8<-- "overrides/partials/comments.html"

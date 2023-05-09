@@ -6,7 +6,7 @@
 Add DataFlows between any Referenceable, based on the qualified names of existing entities.
 
 More examples can be found in the
-[sample collection](../../../docs/samples/collections/DataEngine-process_endpoints.postman_collection.json)
+[sample collection](samples/collections/DataEngine-process_endpoints.postman_collection.json)
 
 ```
 POST {serverURLRoot}/servers/{serverName}/open-metadata/access-services/data-engine/users/{userId}/data-flows

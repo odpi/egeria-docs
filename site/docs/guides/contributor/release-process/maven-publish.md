@@ -36,11 +36,11 @@ The central repository that Egeria publishes *releases* to requires that artifac
 Publishing is the process of uploading artifacts to a repository. 
 #### Snapshots
 
-These represent 'best so far' builds. In the egeria project we typically publish these automatically on each merge from the 'main' branch. These get published to https://oss.sonatype.org/content/repositories/snapshots
+These represent 'best so far' builds. In the egeria project we typically publish these automatically on each merge from the 'main' branch. These get published to [https://oss.sonatype.org/content/repositories/snapshots](https://oss.sonatype.org/content/repositories/snapshots)
 
 #### Releases
 
-These represent 'final' builds. In the egeria project we typically publish these manually, and only when we are happy with the state of the code. These get published to https://oss.sonatype.org/service/local/staging/deploy/maven2 and will appear in the default maven central index at https://search.maven.org
+These represent 'final' builds. In the egeria project we typically publish these manually, and only when we are happy with the state of the code. These get published to [https://oss.sonatype.org/service/local/staging/deploy/maven2](https://oss.sonatype.org/service/local/staging/deploy/maven2) and will appear in the default maven central index at [https://search.maven.org](https://search.maven.org)
 
 See release tasks below.
 
@@ -72,7 +72,7 @@ See [secrets](secrets.md) for more information on how to set these up and what t
 ### Reviewing & releasing artifacts
 
 * Execute release process as documented for the relevant repository
-* Login to https://oss.sonatype.org & click on 'Staging Repositories' as below:
+* Login to [https://oss.sonatype.org](https://central.sonatype.com) & click on 'Staging Repositories' as below:
 
 ![Logged in viewing staging repositories](maven-publish-oss1.png)
 
@@ -87,7 +87,7 @@ See [secrets](secrets.md) for more information on how to set these up and what t
 ## End-user tasks
 ### UI searching
 
-Navigate to https://central.sonatype.com to search for maven artifacts.
+Navigate to [https://central.sonatype.com](https://central.sonatype.com) to search for maven artifacts.
 
 Useful search strings:
   * `g:org.odpi.egeria` - search for all artifacts in the org.odpi.egeria group

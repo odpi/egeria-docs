@@ -288,6 +288,8 @@ nav:
                       - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                       - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
                       - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
+                      - Maven Publishing reference: guides/contributor/release-process/maven-publish.md
+                      - GitHub Secrets reference: guides/contributor/release-process/secrets.md
               - Specific Guidance:
                   - Programming Languages: guides/contributor/languages.md
                   - Tools:
@@ -307,14 +309,15 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Monthly News:
-        - February 2023: release-notes/february-2023.md
-        - January 2023: release-notes/january-2023.md
-        - November 2022: release-notes/november-2022.md
-        - October 2022: release-notes/october-2022.md
+            - April 2023: release-notes/april-2023.md
+            - February 2023: release-notes/february-2023.md
+            - January 2023: release-notes/january-2023.md
+            - November 2022: release-notes/november-2022.md
+            - October 2022: release-notes/october-2022.md
       - Core Egeria:
-        - Latest Release: release-notes/latest.md
-        - Next Release: release-notes/next.md
-        - Previous releases: release-notes/previous.md
+            - Latest Release: release-notes/latest.md
+            - Next Release: release-notes/next.md
+            - Previous releases: release-notes/previous.md
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:

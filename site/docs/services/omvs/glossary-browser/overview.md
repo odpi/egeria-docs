@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/in-development.md"
 
-# Glossary Browser Open Metadata View Services (OMVS)
+# Glossary Browser OMVS
 
-The Glossary Browser OMVS is a REST API designed to support user interfaces (UIs) that support the searching and display of glossary content.
+The Glossary Browser Open Metadata View Services (OMVS) is a REST API designed to support user interfaces (UIs) that support the searching and display of glossary content.
 
 ---8<-- "snippets/abbr.md"
 

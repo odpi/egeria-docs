@@ -11,4 +11,3 @@ The contributions are batched into small updates - for example, providing change
 
 This style of glossary allows an organization to draw on the expertise from across its teams and build the glossary in an evolutionary manner.
 
---8<-- "snippets/abbr.md"

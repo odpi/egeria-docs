@@ -65,12 +65,12 @@ The categories of metadata listed below help you organize your metadata needs ar
 ??? info "Governance metadata"
     ### Governance metadata
     
-    *Governance metadata* describe the requirements of a particular [Governance Domain](/concepts/governance-domain) and their associated controls, metrics and implementations.  They are managed in releases in a similar way to subject area materials.  Therefore, their releases act a triggers to further actions. 
+    *Governance metadata* describes the requirements of a particular [Governance Domain](/concepts/governance-domain) and their associated controls, metrics and implementations.  They are managed in releases in a similar way to subject area materials.  Therefore, their releases act a triggers to further actions. 
     
 ??? info "Organizational metadata"
     ### Organizational metadata
 
-    *Organizational metadata* describe the teams, people, roles, projects and communities in the organization.  This metadata is used to coordinate the responsibilities and activities of the people in the organization.  For example, roles can be defined for the owners of specific resources, and they can be linked to the profiles of the individuals appointed as owner.  This information can be used to route requests and feedback to the right person.
+    *Organizational metadata* describes the teams, people, roles, projects and communities in the organization.  This metadata is used to coordinate the responsibilities and activities of the people in the organization.  For example, roles can be defined for the owners of specific resources, and they can be linked to the profiles of the individuals appointed as owner.  This information can be used to route requests and feedback to the right person.
     
     Organization metadata is often managed in existing applications run by Human Resources and Corporate Security.  Therefore, updates in these applications are used to trigger updates to the organizational metadata in the open metadata ecosystem.
     
@@ -79,9 +79,9 @@ The categories of metadata listed below help you organize your metadata needs ar
 ??? info "Business context metadata"
     ### Business context metadata
     
-    An organization has capabilities, facilities and services.  The digital resources it uses serve these purposes.  When decisions need to be made as to which digital resources to invest in, it is helpful to understand which part of the business will be impacted.
+    An organization has capabilities, facilities and services.  The digital resources it uses, serve these purposes.  When decisions need to be made as to which digital resources to invest in, it is helpful to understand which part of the business will be impacted.
     
-    Information about the organization's capabilities, facilities and services is called *business context*.  Often individuals core role is focuses on these aspects.  Thinking them to the digital resources that they depend on (often invisible to these individuals) helps to raise awareness of the mutual dependency and understanding of the impact/value of change at either level.
+    Information about the organization's capabilities, facilities and services is called *business context*.  Often individuals core role is focuses on these aspects.  Linking them to the digital resources that they depend on (often invisible to these individuals) helps to raise awareness of the mutual dependency and understanding of the impact/value of change at either level.
     
     Triggers that detect change in digital resources (for example an outage) can result in information flowing to the appropriate business teams.  If the change (or outage) is extensive, the linked business context can be used to prioritize the associated work.
     

@@ -68,6 +68,18 @@ In the above snippet we can also see the use of secrets, which are used for the 
 
 See [secrets](secrets.md) for more information on how to set these up and what they are for.
 
+### Gradle
+
+Within the actual build.gradle (ie [egeria](https://github.com/odpi/egeria/blob/main/build.gradle)) some of the important parts are:
+- ensure that both 'maven-publish' and 'signing' plugins are active in any projects that may publish maven artifacts
+- only execute signing activities when run within an action (we check for the "CI" environment variable)
+- ensure the 'group' and 'version' properties are set 
+- always include sources & docs jars (withSourcesJar/withJavadocJar)
+- adds a publishing section to define the POM for the new artifact
+- injects the correct description and name for the pom artifact
+- adds a signing section to sign the artifacts
+- defines the appropriate repository to publish to
+
 ## Release tasks
 ### Reviewing & releasing artifacts
 

@@ -47,5 +47,8 @@ Example:
 logging.level.org.odpi.openmetadata.frameworks.auditlog.omag-server-1=INFO
 logging.level.org.odpi.openmetadata.frameworks.auditlog.omag-server-2.RepositoryContentManager=ERROR
 ```
+## Example logging configuration
+
+See [example of configuring Egeria's Audit Log, and debug logging, to output JSON via the console](omag-server-platform-logging-jsonexample.md)
 
 --8<-- "snippets/abbr.md"

@@ -102,7 +102,6 @@ Here we configure a simple metadata server as an example. The default audit log 
 EGERIA_ENDPOINT=https://localhost:9443
 EGERIA_USER=garygeeke
 EGERIA_SERVER=mds1
-KAFKA_ENDPOINT=localhost:9092
 
 echo '-- Environment variables --'
 env
@@ -114,31 +113,12 @@ echo -e '\n\n > Setting server URL root:\n'
 curl -f -k --verbose --basic admin:admin -X POST \
   "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/server-url-root?url=${EGERIA_ENDPOINT}"
 
-# Setup the event bus
-echo -e '\n\n > Setting up event bus:\n'
-
-curl -f -k --verbose --basic admin:admin \
-  --header "Content-Type: application/json" \
-  "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/event-bus" \
-  --data '{"producer": {"bootstrap.servers": "'"${KAFKA_ENDPOINT}"'"}, "consumer": {"bootstrap.servers": "'"${KAFKA_ENDPOINT}"'"} }'
-
-# Enable all the access services (we will adjust this later)
-echo -e '\n\n > Enabling all access servces:\n'
-
-curl -f -k --verbose --basic admin:admin -X POST \
-  "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/access-services?serviceMode=ENABLED"
 
 # Use a local graph repo
 echo -e '\n\n > Use local graph repo:\n'
 
 curl -f -k --verbose --basic admin:admin -X POST \
   "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/local-repository/mode/local-graph-repository"
-
-# Configure the cohort membership
-echo -e '\n\n > configuring cohort membership:\n'
-
-curl -f -k --verbose --basic admin:admin -X POST \
-  "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/cohorts/${EGERIA_COHORT}"
 
 # -- Audit log settings
 
@@ -147,12 +127,23 @@ curl -f -k --verbose --basic admin:admin -X DELETE \
   "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/audit-log-destinations"
 
 # Add slf audit log
-curl -f -k --verbose --basic admin:admin -X POST \
-  "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/audit-log-destinations/SLF4J"
+
+#curl -f -k --verbose --basic admin:admin -X POST \
+#  --header "Content-Type: application/json" \
+#  "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/audit-log-destinations/slf4j" \
+#  --data '{}'
+#  See https://httpie.io - Curl above not correct for required format.
+http --verify=no POST "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/audit-log-destinations/slf4j" <<END
+[]
+END
 
 # Start up the server
 echo -e '\n\n > Starting the server:\n'
 
 curl -f -k --verbose --basic admin:admin -X POST --max-time 900 \
                 "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/instance"
+
+
+
+echo '-- End of configuration'
 ```

@@ -23,6 +23,7 @@ By default,
 Therefore the simplest approach we will take is to
  - configure the Egeria audit log to use slf4j-api
  - create a logback configuration file which outputs in json.
+ - We will use a formatter from logstash, as this is very configurable and well supported by logging tools.
 
 An alternative would be to use a different slf4j-api implementation, such as log4j2 (making sure to exclude logback), and configure that to output in json.
 
@@ -33,20 +34,26 @@ Create the following file and place it in a well known directory:
 ``` xml
 <!-- Example logging configuration for logback. Requires additional libraries -->
 <configuration>
-<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-    <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
-        <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
-            <prettyPrint>false</prettyPrint>
-        </jsonFormatter>
-        <timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS</timestampFormat>
-        <appendLineSeparator>true</appendLineSeparator>
-        <includeContextName>false</includeContextName>
-    </layout>
-</appender>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp/>
+                <mdc/>
+                <context/>
+                <logLevel/>
+                <loggerName/>
+                <threadName/>
+                <message/>
+                <logstashMarkers/>
+                <arguments/>
+                <stackTrace/>
+            </providers>
+        </encoder>
+    </appender>
 
-<logger name="jsonLogger" level="TRACE">
-    <appender-ref ref="json" />
-</logger>
+    <root level="debug">
+        <appender-ref ref="stdout"/>
+    </root>
 
 </configuration>
 ```
@@ -54,15 +61,13 @@ Create the following file and place it in a well known directory:
 
 The above logback configuration requires some additional libraries for the json output. 
 
-- ch.qos.logback.contrib:logback-jackson
-- ch.qos.logback.contrib:logback-json-classic
+- net.logstash.logback:logstash-logback-encoder
 
-These can be downloaded from maven central, or built from the [logback contrib project](https://github.com/qos-ch/logback-contrib). Here we'll download directly from maven central.
+This can be downloaded from maven central.
 
-Download these into a new directory, such as ~/libs/logging
+Download into a new directory, such as ~/libs/logging
 ``` bash
-wget https://repo1.maven.org/maven2/ch/qos/logback/contrib/logback-jackson/0.1.5/logback-jackson-0.1.5.jar
-wget https://repo1.maven.org/maven2/ch/qos/logback/contrib/logback-json-classic/0.1.5/logback-json-classic-0.1.5.jar
+wget https://repo1.maven.org/maven2/net/logstash/logback/logstash-logback-encoder/7.3/logstash-logback-encoder-7.3.jar
 ```
 
 
@@ -142,10 +147,6 @@ curl -f -k --verbose --basic admin:admin -X DELETE \
   "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/audit-log-destinations"
 
 # Add slf audit log
-# requires library to be downloaded and added to path Identifier
-#
-# mvn dependency:get -Dartifact=ch.qos.logback.contrib:logback-json-classic:LATEST -Ddest=logback-json-classic.jar
-
 curl -f -k --verbose --basic admin:admin -X POST \
   "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/audit-log-destinations/SLF4J"
 

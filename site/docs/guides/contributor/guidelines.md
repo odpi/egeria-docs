@@ -358,6 +358,28 @@ An example is spring where we also include tomcat:
         - "*spring*"
         - "*tomcat*"
 ```
+### Language environments - ie Java, Python etc
+
+#### Java
+
+The compiler/language version should be reviewed periodically. For Java we have moved from 8, to 11, to 17. Usually we aim to use the current LTS after it has been out for a while. For java 11-17 this was around a year.
+
+### Build tools
+
+Build tool versions should also be kept up to date.
+
+#### Gradle
+
+We update the [Gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) at the same time as handling dependabot updates. Minor versions are usually compatible. Major versions may require changes, but any incompatibilities are usually reported as gradle warnings with the previous version, so these should be acted on promptly.
+
+To update the gradle wrapper use:
+```xml
+./gradlew wrapper --gradle-version=latest
+```
+
+The build should then be tested.
+
+Any warnings related to changing in the future release should be actioned to avoid future issues.
 
 
 --8<-- "snippets/abbr.md"

@@ -232,17 +232,17 @@ Running `./gradlew printAllDependencies` is a useful way to understand what depe
 
 - Check if the dependency is already listed in the BOM at `bom/build.gradle`. If not:
   - add an extra property under ext-> for clarity ie:
-  ```groovy linenums="1"
+  ```groovy
      kafkaVersion = '3.4.0'
   ```
   - add a section such as the following within the `dependencies->constraints` section. This will include a version`:
-    ```groovy linenums="1"
+    ```groovy
        api("org.apache.kafka:kafka-clients:${kafkaVersion}")
     ```
     This declaration only means that *if* a dependency is used, this version is used.
 
 - Add the dependency to the `dependencies` section of your project's `build.gradle`:
-  ```groovy linenums="1"
+  ```groovy
   api("org.apache.kafka:kafka-clients:${kafkaVersion}")
   ```
 
@@ -288,5 +288,76 @@ Egeria code itself is also scanned for vulnerabilities by various scanners which
 
 
 For more information on how potential security issues are handled, see [security hardening](/guides/developer/process/#security-hardening).
+
+## Keeping dependencies up to date
+
+[Dependabot](https://github.com/dependabot) is enabled on all egeria repositories to keep our dependencies up to date. This includes not just java code, but other languages too. Docker container images, and github actions are also covered.
+
+Dependabot will notice when a new dependency update is available, and create a PR in the repository. For egeria this is typically monthly, on the 1st of the month. (but repositories vary)
+
+These PRs should be reviewed promptly, and merged if possible. Where there is a reason to delay and close the PR, and issue should be opened to track any blockers to performing the merge
+
+This is a responsibility of the github repository owner.
+
+For an example refer to the core egeria [dependabot.yml](https://github.com/odpi/egeria/blob/main/.github/dependabot.yml)
+
+### Handling large numbers of updates
+
+Some repositories, such as core Egeria, may have many dependencies to update, resulting in many PRs at the beginning of each month. rather than merging PRs one by one, a 
+
+To merge each individually could take a long time, especially as the other PRs then need rebasing, and will again have FVTs re-run.
+
+An alternative is to:
+
+* Ensure your origin/main is updated with upstream/main (`git checkout main && git pull upstream main`)
+* Create a development branch (ie 'dependabot_20230512') (`git checkout -b dependabot_20230512`)
+* Open up each PR in turn, and for each commit listed, cherry-pick into the dev branch (`git cherry-pick -s <commit-id>`)
+* Build/test locally, and fix as required (`./gradlew build`)
+* create a PR
+* merge PR
+* At this point, over the next day or so, the dependabot PRs will automatically close
+* After 1 day manually review any still left open - sometimes they fail to rebase.
+
+For the actual cherry-picking, if the  is installed a script can be used.
+
+For example, the following will:
+
+ * cherry pick a commit
+ * Display if any conflicts occur
+ * If needed, user should then fix up the conflict manually, and to a `git add . && git cherry-pick --continue`, or skip with `git cherry-pick --abort`
+ * wait for user to hit enter. 
+ * this will continue until all open PRs from dependabot are handled (max 49)
+
+The following tools must be installed:
+
+ * [jq](https://github.com/stedolan/jq)
+ * [GitHub CLI 'gh'](https://cli.github.com)
+```
+#!/bin/sh
+git fetch --all
+for c in `gh pr list -L49 --app 'dependabot' --json id,commits | jq '.[] | .commits[].oid' `
+do
+  c2=`echo $c | tr -d '"'`
+  git cherry-pick -s  $c2
+read y
+done
+```
+### Grouped Updates
+
+In May 2023 Github started a private beta to enable [grouping of updates](https://gist.github.com/brrygrdn/0dac4e16c68898fda33d8fa81d575e1a) in response to feedback. The core 'egeria' repository is enabled for this capability.
+
+The objective is to select sets of dependencies that are best managed as one unit. This should improve consistency, and mean that we run the updates together in the verification pipeline - including
+running our FVT tests. Independently the updates might fail since there could be dependencies between spring and springboot.
+
+An example is spring where we also include tomcat:
+```yaml
+  # Grouping of dependencies - useful to retain consistency & prevent build breaks
+  groups:
+    spring:
+      patterns:
+        - "*spring*"
+        - "*tomcat*"
+```
+
 
 --8<-- "snippets/abbr.md"

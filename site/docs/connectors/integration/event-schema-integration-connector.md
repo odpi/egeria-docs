@@ -87,7 +87,7 @@ Set the following variables with valid value:
 
 ## Running locally for testing
 
-You will need to have an OMAG platform with a configured metadata server and activated DataManager OMAS. You will also have a Docker client installed locally and a running Docker daemon.
+You will need to have an OMAG platform with a configured [Metadata Access Point](https://egeria-project.org/concepts/metadata-access-point/) and activated DataManager OMAS. You will also have a Docker client installed locally and a running Docker daemon.
 
 ### Run gradle build
 On a terminal,

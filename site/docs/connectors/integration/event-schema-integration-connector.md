@@ -74,11 +74,11 @@ Set the following variables with valid value:
 |----------|-------------|--------|
 | EVENT_SCHEMA_CONNECTOR_REFRESH_INTERVAL| Time in seconds between the refresh of the metadata by the connector| `5` |
 | EVENT_SCHEMA_SOURCE_NAME| Metadata source qualified name used for the created metadata. This must match the metadata source qualified name of the KafkaTopics to be matched against.| `my-event-metadata-source` |
-| EGERIA_MDS_URL| URL of the metadata server to use for the integration of the event schema metadata | `https://localhost:8443` |
+| EGERIA_MDS_URL| URL of the platform hosting the [Metadata Access Point](https://egeria-project.org/concepts/metadata-access-point/) to use for the integration of the event schema metadata | `https://localhost:8443` |
 | EGERIA_MDS_SERVER| Name of the metadata server | `mds1` |
 | EGERIA_USER| Name of the user | `garygeeke` |
 | EGERIA_SERVER| Name of the integration server | `evtschema1` |
-| EGERIA_URL| URL of the integration server | `https://localhost:9443` |
+| EGERIA_URL| URL of the platform hosting the integration server | `https://localhost:9443` |
 | TOPIC_NAMESPACE| Namespace in which the topics are found which are used to map the EventTypes to. This is used as a prefix to find the correct topic. | `customer_topics` |
 | SCHEMA_REGISTRY_ENDPOINT| The URL of the Schema Registry. | `https://my-schemaregistry:8081`|
 

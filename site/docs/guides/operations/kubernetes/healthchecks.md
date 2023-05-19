@@ -1,11 +1,30 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
+# Healthchecks when running Egeria in Kubernetes
+
 There are various API calls that will check the status of Egeria.
 
-These may be typically used in a Kubernetes environment to check if Egeria is ready to service requests. Here we summarize what is available
+These may be typically used in a Kubernetes environment to check if Egeria is ready to service requests. Here we summarize what is available.
 
-## Example API calls
+## Defining a Kubernetes health check
+
+See also [Kubernetes docs](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+
+Kubernetes has 3 types of health checks
+- startup -- to confirm a pod has started
+- readiness -- to confirm a pod is ready. Typically this will then allow requests to be routed here
+- liveness -- to check the pod is still responding to requests in a timely fashion.
+
+Typically pods will be restarted if these health checks do not pass in a specified time period.
+
+Each of these checks can be of several types
+- tcpSocket -- this just checks for an open port.
+- grpc -- issues grpc call (we do no use grpc in egeria)
+- httpGet -- a simple GET. If return is >=200 and <400 it is successful
+- exec -- issues a specified command within the container
+- 
+## Example Egeria API calls
 
 In these examples the [httpie](https://httpie.io) tool will be used as it will print both the response code, and pretty-formatted body by default. Other tools like curl may also be used, but more parsing may be required of the responses.
 
@@ -179,10 +198,12 @@ Transfer-Encoding: chunked
 ```
 
 
-## Interpreting the API calls
+## Interpreting the Egeria API calls
 
 A timeout will occur if the platform is not running. 
 In all other cases a HTTP 200 will be returned.
+
+Finer grain detail is provided by the 'relatedHTTPCode' field within the response body - this is more similar to what might be expected from a typical status check. For example, Looking at the checks above, all return 200 as the http status code, but vary in terms of the relatedHTTPCode.
 
 Additionally the server status call returns fine-grained information about all the services configured in a server. 
 
@@ -192,24 +213,22 @@ In the simplest case it would be reasonable to define that the server is not ava
 
 Each service running on the platform may have a dependence on connectors, such as for topics/kafka, or in the case of integration, technology connectors such as to a database. Each connector may behave differently, and in many cases not report any issue for a transient error.
 
-## Defining a Kubernetes health check
+## Formulating a k8s health check
 
-See also [Kubernetes docs](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+We cannot use a k8s http status check since this returns 200 in most cases. Instead we need to use the 'exec' method. This will run a curl command within the container, and parse out the relatedHTTPCode, returning 0 if we think all is ok
 
-Kubernetes has 3 types of health checks
- - startup -- to confirm a pod has started
- - readiness -- to confirm a pod is ready. Typically this will then allow requests to be routed here
- - liveness -- to check the pod is still responding to requests in a timely fashion. 
+For example
+```
+curl -k -o - -X GET --connect-timeout 5 --max-time 5 "https://44623abc-eu-gb.lb.appdomain.cloud:9443/open-metadata/admin-services/users/admin/servers/cocoMDS5/instance/status" | grep '.*\"relatedHTTPCode\": 200'
+```
 
-Typically pods will be restarted if these health checks do not pass in a specified time period.
+This will return 0 (healthcheck passes) if we see an embedded 200 response, and 1 otherwise, therefore satisfying the requirement for a server specific Healthcheck
 
-Each of these checks can be of several types 
- - tcpSocket -- this just checks for an open port.
- - grpc -- issues grpc call (we do no use grpc in egeria)
- - httpGet -- a simple GET. If return is >=200 and <400 it is successful
- - exec -- issues a specified command within the container
+## Status aggregation
 
-Looking at the checks above, since all return 200 - if anything - they will always succeed. 
-Therefore a simple httpGet check cannot be used.
+The above example requires that the healthcheck is coded against a specific server. Future work will investigate the answers to:
 
-Instead an 'exec' 
+#### Are all servers on the platform available?
+
+
+#### Is everything a server provides available?

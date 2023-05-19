@@ -159,6 +159,7 @@ nav:
                   - PTS Chart: guides/operations/kubernetes/charts/pts.md
               - Container Images: guides/operations/kubernetes/container-images.md
               - Custom Deployment: guides/operations/kubernetes/custom-deployment.md
+              - Healthchecks: guides/operations/kubernetes/healthchecks.md
               - Egeria Operator: guides/operations/kubernetes/operator.md
       - Diagnostic Guide:
           - Diagnostic Process: guides/diagnostic/overview.md

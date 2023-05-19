@@ -51,6 +51,7 @@ Egeria OMAG Server Platform (version 4.0)
 
 
 ### Server
+This API call was introduced in [release 3.4](/release-notes/3-4.md)
 
 #### Server is not known
 ```
@@ -196,7 +197,28 @@ Transfer-Encoding: chunked
     }
 }
 ```
+### Server is starting
 
+This is similar to the previous example, but the response body is:
+```xml
+   {
+    "class": "OMAGServerStatusResponse",
+    "relatedHTTPCode": 200,
+    "serverStatus": {
+        "serverName": "cocoMDS2",
+        "serverType": "Metadata Server",
+        "serverActiveStatus": "STARTING",
+        "services": [
+            {
+                "serviceName": "Open Metadata Repository Services (OMRS)",
+                "serviceStatus": "STARTING"
+            }
+        ]
+    }
+```
+Other status are referenced in the linked release note.
+
+This demonstrates a further challenge -- serviceStatus also needs to be checked
 
 ## Interpreting the Egeria API calls
 
@@ -224,11 +246,12 @@ curl -k -o - -X GET --connect-timeout 5 --max-time 5 "https://44623abc-eu-gb.lb.
 
 This will return 0 (healthcheck passes) if we see an embedded 200 response, and 1 otherwise, therefore satisfying the requirement for a server specific Healthcheck
 
-## Status aggregation
+However this is insufficient as we see from the 'starting' example above -- a server would show as ready even if in the process of starting up or shutting down, yet we would not want to direct requests in those cases.
 
-The above example requires that the healthcheck is coded against a specific server. Future work will investigate the answers to:
+## Status aggregation & finer grained state
 
-#### Are all servers on the platform available?
+We've seen above that we need to go further, look at finer grained state of the server, and potentially individual services.
 
+We will now make use of the [jq](https://stedolan.github.io/jq/) tool to perform improved queries to check status
 
-#### Is everything a server provides available?
+.... content to be added

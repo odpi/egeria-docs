@@ -47,9 +47,9 @@ The diagram below shows an equivalent deployment of Egeria to cover the Apache A
 
 The first difference you notice is that Egeria has many more "servers" running.  These are logical [OMAG Servers](/concepts/omag-server) that can be deployed together on a single [OMAG Server Platform](/concepts/omag-server-platform) or replicated/distributed across multiple platforms to support horizontal scaling, isolation and high availability.
 
-Egeria's [Metadata Access Store](/concepts/metadata-access-store) is similar to Apache Atlas's server.  It provides REST APIs to maintain and search for metadata.  It also uses an external persistence store that is controlled by the libraries "plugged into" the metadata access store via a [repository connector](/concepts/repository-connector).  Egeria does have a [repository connector for JanusGraph](/connectors/repository/janus-grpah/overview), so it is possible to deploy Egeria with the same type of persistent capability as Apache Atlas, however, neither server can read the other's repository despite using the same type of technology.  Egeria also has other repository connector implementations to provide additional features.  For example, the [XTDB repository connector](/connectors/repository/xtdb) provides historical queries over the metadata.
+Egeria's [Metadata Access Store](/concepts/metadata-access-store) is similar to Apache Atlas's server.  It provides REST APIs to maintain and search for metadata.  It also uses an external persistence store that is controlled by the libraries "plugged into" the metadata access store via a [repository connector](/concepts/repository-connector).  Egeria does have a [repository connector for JanusGraph](/connectors/repository/janus-graph/overview), so it is possible to deploy Egeria with the same type of persistent capability as Apache Atlas, however, neither server can read the other's repository despite using the same type of technology.  Egeria also has other repository connector implementations to provide additional features.  For example, the [XTDB repository connector](/connectors/repository/xtdb) provides historical queries over the metadata.
 
-The [Open Metadata Repository Services (OMRS)](/servoces/omrs) REST APIs are similar to Apache Atlas's Types, Entity, Relationship and Discovery Rest APIs.  Egeria also has more domain-specific REST APIs called [Open Metadata Access Services (OMAS)](/services/omas) to provide technical, governance and business metadata services for different user roles and use cases.
+The [Open Metadata Repository Services (OMRS)](/services/omrs) REST APIs are similar to Apache Atlas's Types, Entity, Relationship and Discovery Rest APIs.  Egeria also has more domain-specific REST APIs called [Open Metadata Access Services (OMAS)](/services/omas) to provide technical, governance and business metadata services for different user roles and use cases.
 
 The OMRS also creates instance notifications similar to Apache Atlas's Entity and Relationship notifications through its [Cohort Topics](/concepts/cohort-events).  These topics also provide notifications about type changes and aid different deployments of Egeria to connect and share metadata.
 
@@ -64,7 +64,8 @@ Egeria also has [Governance Servers](/concepts/governance-server) that enable di
 Egeria's type system is modelled on Apache Atlas's type system.  However, there are changes to allow the types to operate in a distributed heterogeneous deployment.
 
 The biggest differences are:
-* Egeria introduces type definitions for attributes (properties). These are called AttributeTypeDefs.
+
+* Egeria introduces type definitions for attributes (properties). These are called [AttributeTypeDefs](/concepts/open-metadata-type-definitions).
 * Egeria's [pre-defined type system](/types) is more comprehensive and normalized to facilitate governance over a wide range of activities and technologies.
 
 When you are either migrating between Apache Atlas and Egeria, the differences in the pre-defined types is the biggest challenge you are going to face.

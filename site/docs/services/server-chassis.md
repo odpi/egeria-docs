@@ -14,15 +14,15 @@ The *Server Chassis* provides the base server framework, such as the web server 
 
 Today, Egeria has one server chassis implementation called [*server-chassis-spring*](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/server-chassis/server-chassis-spring) that uses [Spring Boot](https://spring.io/projects/spring-boot).  Its `main()` method is located in a Java class called `OMAGServerPlatform`.
 
-## Maven build profiles
+## Alternate build option
 
-Egeria's default maven build will include the *full-platform* profile, that includes [all available services](/services) in the running OMAG Server Platform. 
+Egeria's default build will include the *full-platform* profile, that includes [all available services](/services) in the running OMAG Server Platform. 
 
-There is a build option called `-DadminChassisOnly` that will not include any [registered services](/services/#registered-services).
+There is a build option called `-PadminChassisOnly` that will not include any [registered services](/services/#registered-services).
 
 Selective registered services can then be activated using the [ **loader.path** spring-boot functionality ](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-executable-jar-format.html#executable-jar-property-launcher-features).
 
-The `-DadminChassisOnly` is used for creating a cut down OMAG Server Platform
+The `-PadminChassisOnly` is used for creating a cut down OMAG Server Platform
 for a specific deployment.
  
 ## Application properties

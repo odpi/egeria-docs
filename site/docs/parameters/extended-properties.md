@@ -7,4 +7,4 @@ In order to create or update the properties of a subtype, set the `typeName` pro
 
 
 
---8<-- "snippets/abbr.md"
+

@@ -14,4 +14,3 @@
 !!! education "Further information"
     - [Lineage Management](/features/lineage-management/overview)
 
---8<-- "snippets/abbr.md"

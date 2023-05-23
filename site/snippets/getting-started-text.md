@@ -16,4 +16,3 @@ The [Running Egeria Dojo](/education/egeria-dojo/running-egeria/running-egeria-i
 
 The [Developer Dojo](/education/egeria-dojo/developer/overview) provides a step-by-step guide to building, installing, configuring and running Egeria on your machine.  It is aimed at software developers who are building connectors and utilities that integrate with Egeria.
     
---8<-- "snippets/abbr.md"

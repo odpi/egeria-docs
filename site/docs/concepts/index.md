@@ -7,7 +7,6 @@
 ## A
 
 - [Action Target](/concepts/action-target)
-- [Analytics Modeling OMAS](/services/omas/analytics-modeling/overview)
 - [Analytics Integrator OMIS](/services/omis/analytics-integrator/overview)
 - [Anchor](/concepts/anchor)
 - [API Integrator OMIS](/services/omis/api-integrator/overview)
@@ -132,6 +131,7 @@
     - [servername.cohortname.registrystore](/connectors/runtime/file-cohort-registry-store-connector)
   
 - [Files Integrator OMIS](/services/omis/files-integrator/overview)
+- [Framework Services](/services/#framework-services)
 - [Frameworks](/frameworks)
 
     - [Audit Log Framework (ALF)](/frameworks/alf/overview)
@@ -182,6 +182,7 @@
 - [Incident Report](/concepts/incident-report)
 - [Informal Tag](/concepts/informal-tag)
 - [Instance Security](/features/metadata-security/overview)
+- [Instance Statuses](/concepts/instance-status)
 - Instances
 
     - [Metadata Instances](/concepts/open-metadata-instances)
@@ -332,6 +333,7 @@
 ## S
 
 - [Schema](/concepts/schema)
+- [Secrets Store Connector](/concepts/secrets-store-connector)
 - [Security](/features/metadata-security/overview)
 - [Security Connector for OMAG Server](/concepts/server-metadata-security-connector)
 - [Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)

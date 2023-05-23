@@ -27,5 +27,3 @@ Validate that the project is set up with the right level of Java - you need Java
 
 ![Set Java level](/education/tutorials/intellij-tutorial/intellij-set-java-level.png)
 
-
----8<-- "snippets/abbr.md"

@@ -14,7 +14,7 @@ This connector is based on the same polling pattern that the [File sample OMRS c
 - Hosting Service: [Local OMRS Repository Connector](/services/omrs/component-descriptions/local-repository-connector)
 - Hosting Server: [repository proxy](/concepts/repository-proxy)
 - Source Module: [Hive Metastore Repository Connector :material-github:](https://github.com/odpi/egeria-connector-hivemetastore){ target=gh }
-- Jar File Name: `egeria-connector-hivemetastore-1.0-SNAPSHOT.jar`
+- Jar File Name: `egeria-connector-hivemetastore-1.1-SNAPSHOT.jar`
 
 __Important notice__
 
@@ -79,7 +79,7 @@ The setting of these 2 parameters dictates the scope of metadata that is ingeste
 |-------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Name of a catalog | Name of a database | The HMS tables under the named database in the named catalog                                                                                                      |
 | null              | null               | All tables in all databases under all catalogs. If the HMS implementation does not support getCatalogs API then an error will be issued and the connector stopped |
- | null              | Name of a database | All tables in default catalog under the named database.                                                                                                           | 
+| null              | Name of a database | All tables in default catalog under the named database.                                                                                                           | 
 | Name of a catalog | null               | The HMS tables under all the databases in the named catalog.                                                                                                      | 
 
 
@@ -87,8 +87,9 @@ The setting of these 2 parameters dictates the scope of metadata that is ingeste
 
 To use this connector with [IBM Cloud&#174 Data Engine service](https://cloud.ibm.com/catalog/services/data-engine-previously-sql-query), the code needs to be
 recompiled to bring in the [IBM HMS Client library](https://cloud.ibm.com/docs/sql-query?topic=sql-query-hive_metastore#hive_compatible_client). To do this the 
-property *ibmhive* in the gradle build; on the command line specify: 
-`./gradlew build -Pibmhive`
+property *ibmhms* in the gradle build; on the command line specify: 
+
+`./gradlew build -Pibmhms`
 
 The following additional security parameters need to be specified in the `configurationProperties` as the IBM Hive-compatible client
 uses a secure API to talk to the IBM Cloud&#174.
@@ -101,6 +102,14 @@ uses a secure API to talk to the IBM Cloud&#174.
 | useSSL                                    | false   | Set to true                                                                                           |
 | CatalogName                               | null    | set to "spark"                                                                                          |
 | DatabaseName                              | null    | Set to "default"                                                                                   |
+
+## Using with Hive Metastore version 4.
+
+At the time of writing the latest HMS version 4 client is *4.0.0-alpha-2*. This client is required to communicate with 
+the HMS server *4.0.0-alpha-2*. To build with this HMS *4.0.0-alpha-2* client specify property *hmsv4* in the gradle build; on the command line specify:
+
+`./gradlew build -Phmsv4`
+
 
 ## The logic to extract the columns for the HMS Table. 
 

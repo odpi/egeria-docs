@@ -83,4 +83,3 @@ and activated in the OMAG server platform using the administration services.
 Understanding how to create a configuration document using the administration services
 [is the next task in this tutorial](task-creating-configuration-documents.md).
 
---8<-- "snippets/abbr.md"

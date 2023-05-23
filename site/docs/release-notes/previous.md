@@ -4,8 +4,14 @@
 
 # Earlier releases
 
+???+ info "Release 4.0 (March 2023)"
+    --8<-- "docs/release-notes/4-0.md"
+
+???+ info "Release 3.15 (January 2023)"
+    --8<-- "docs/release-notes/3-15.md"
+
 ???+ info "Release 3.14 (December 2022)"
---8<-- "docs/release-notes/3-14.md"
+    --8<-- "docs/release-notes/3-14.md"
 
 ???+ info "Release 3.13 (November 2022)"
     --8<-- "docs/release-notes/3-13.md"

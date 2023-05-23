@@ -19,4 +19,4 @@
         brew services stop zookeeper
         ```
 
---8<-- "snippets/abbr.md"
+

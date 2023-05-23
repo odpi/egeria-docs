@@ -9,7 +9,7 @@ The open metadata ecosystem collects, links and disseminates metadata from many 
     --8<-- "docs/patterns/metadata-governance/governance-engines.md"
 
 ??? intermediate "Designing your governance processes (30 mins)"
-    --8<-- "docs/concepts/governance-action-process.md"
+    --8<-- "docs/concepts/governance-action-process-intro.md"
 
 ??? beginner "Setting up an engine host, governance engines and services (30 mins)"
     --8<-- "docs/patterns/metadata-governance/setting-up-the-engine-host.md"
@@ -28,4 +28,3 @@ The open metadata ecosystem collects, links and disseminates metadata from many 
     * [Synchronizing Security Information](/features/synchronized-access-control/overview)
     * [Reference Data Management](/features/reference-data-management/overview)
 
---8<-- "snippets/abbr.md"

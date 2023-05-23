@@ -38,5 +38,5 @@ to help you go from novice to expert.
 Familiarity with Postman will help you get the most value from
 the Egeria tutorials.
 
---8<-- "snippets/abbr.md"
+
 

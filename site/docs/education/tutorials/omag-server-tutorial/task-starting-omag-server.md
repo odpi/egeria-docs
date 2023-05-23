@@ -539,4 +539,4 @@ over [Apache Kafka](http://kafka.apache.org/), see:
 Now the OMAG Server is running you are ready to start
 [calling the open metadata and governance services](task-calling-omag-apis.md).
 
---8<-- "snippets/abbr.md"
+

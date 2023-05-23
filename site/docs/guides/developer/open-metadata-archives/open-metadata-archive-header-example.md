@@ -14,7 +14,7 @@
               "archiveDescription":"Data types for commerce focused cloud applications.",
               "archiveType":"CONTENT_PACK",
               "originatorName":"The Cloud Information Model",
-              "originatorLicense":"Apache 2.0",
+              "originatorLicense":"Apache-2.0",
               "creationDate":1570383385107,
               "dependsOnArchives":["bce3b0a0-662a-4f87-b8dc-844078a11a6e"]
           }, 

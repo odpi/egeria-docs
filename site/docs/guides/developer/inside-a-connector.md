@@ -53,4 +53,3 @@ The OCF also provides the base class for a connector called [`ConnectorBase` :ma
     If you override any of the  `initialize()`, `start()` or `disconnect()` methods, be sure to call `super.xxx()` at the start of your implementation to call the appropriate super class method so that the state is properly maintained.
 
 
---8<-- "snippets/abbr.md"

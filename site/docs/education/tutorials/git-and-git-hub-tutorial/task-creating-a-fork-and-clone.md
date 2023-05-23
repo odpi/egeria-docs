@@ -65,4 +65,4 @@ Now you are ready to [create a branch for your changes](/education/tutorials/git
     * Further details on the [fork](https://guides.github.com/activities/forking/) command.
 
 
----8<-- "snippets/abbr.md"
+

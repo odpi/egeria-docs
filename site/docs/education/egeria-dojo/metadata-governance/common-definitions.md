@@ -33,5 +33,3 @@ The effort required to author and maintain a these standards, plus the governanc
 ??? education "Coco Pharmaceuticals Scenarios"
     There are descriptions of creating glossaries and other materials for subject areas in the [Coco Pharmaceuticals Scenarios](/practices/coco-pharmaceuticals/scenarios/overview).
 
-
---8<-- "snippets/abbr.md"

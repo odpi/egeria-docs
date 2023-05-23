@@ -7,4 +7,3 @@ The configuration store connectors contain the connector implementations that ma
 
 There is one configuration document store connector defined for each [OMAG Server Platform](/concepts/omag-server-platform).
 
---8<-- "snippets/abbr.md"

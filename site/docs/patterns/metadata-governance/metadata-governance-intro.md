@@ -73,4 +73,4 @@ When metadata governance is done well, a rich conversation develops between serv
 New uses for the services will then emerge ... growing the vitality and value to the organization.
 
 
---8<-- "snippets/abbr.md"
+

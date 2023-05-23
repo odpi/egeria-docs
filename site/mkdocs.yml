@@ -3,7 +3,7 @@
 
 site_name: Egeria
 site_description: Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms, no matter the vendor
-copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2022 contributors to the Egeria project."
+copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2023 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
 site_url: https://egeria-project.org
@@ -68,6 +68,8 @@ nav:
                       - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
                   - Database:
                       - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
+                  - Catalog:
+                      - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
               - Runtime:
                   - Repository:
                       - Native Repositories:
@@ -98,6 +100,8 @@ nav:
                       - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
                   - Database:
                         - JDBC Connector: connectors/resource/jdbc-resource-connector.md
+              - Secrets Store:
+                    - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
           - Developer Guide:
               - Developer Overview: guides/developer/index.md
               - Building Archives:
@@ -284,6 +288,8 @@ nav:
                       - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                       - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
                       - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
+                      - Maven Publishing reference: guides/contributor/release-process/maven-publish.md
+                      - GitHub Secrets reference: guides/contributor/release-process/secrets.md
               - Specific Guidance:
                   - Programming Languages: guides/contributor/languages.md
                   - Tools:
@@ -303,14 +309,15 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Monthly News:
-        - February 2023: release-notes/february-2023.md
-        - January 2023: release-notes/january-2023.md
-        - November 2022: release-notes/november-2022.md
-        - October 2022: release-notes/october-2022.md
+            - April 2023: release-notes/april-2023.md
+            - February 2023: release-notes/february-2023.md
+            - January 2023: release-notes/january-2023.md
+            - November 2022: release-notes/november-2022.md
+            - October 2022: release-notes/october-2022.md
       - Core Egeria:
-        - Latest Release: release-notes/latest.md
-        - Next Release: release-notes/next.md
-        - Previous releases: release-notes/previous.md
+            - Latest Release: release-notes/latest.md
+            - Next Release: release-notes/next.md
+            - Previous releases: release-notes/previous.md
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:
@@ -503,8 +510,8 @@ nav:
               - Metadata Security Services: services/metadata-security-services.md
               - Platform Operation Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
-              - Metadata Store Services: services/gaf-metadata-management.md
-              - Open Integration Services: services/oif-metadata-management.md
+              - Open Metadata Store Services: services/gaf-metadata-management.md
+              - Open Integration Service: services/oif-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
               - Data Engine Proxy Services: services/data-engine-proxy-services.md
@@ -544,6 +551,7 @@ nav:
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
+                  - Analytics Integrator: services/omis/analytics-integrator/overview.md
                   - API Integrator: services/omis/api-integrator/overview.md
                   - Catalog Integrator: services/omis/catalog-integrator/overview.md
                   - Database Integrator: services/omis/database-integrator/overview.md
@@ -552,16 +560,19 @@ nav:
                   - Infrastructure Integrator: services/omis/infrastructure-integrator/overview.md
                   - Lineage Integrator: services/omis/lineage-integrator/overview.md
                   - Organization Integrator: services/omis/organization-integrator/overview.md
+                  - Search Integrator: services/omis/search-integrator/overview.md
                   - Security Integrator: services/omis/security-integrator/overview.md
                   - Stewardship Integrator: services/omis/stewardship-integrator/overview.md
                   - Topic Integrator: services/omis/topic-integrator/overview.md
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
+                  - Glossary Author: services/omvs/glossary-author/overview.md
+                  - Glossary Browser: services/omvs/glossary-browser/overview.md
+                  - Glossary Workflow: services/omvs/glossary-workflow/overview.md
                   - Dino View: services/omvs/dino/overview.md
                   - Rex View: services/omvs/rex/overview.md
                   - Tex View: services/omvs/tex/overview.md
-                  - Server Author View: services/omvs/server-author/overview.md
-                  - Glossary Author View: services/omvs/glossary-author/overview.md
+                  - Server Author: services/omvs/server-author/overview.md
       - Frameworks:
           - Frameworks Overview : frameworks/index.md
           - Audit Logs (ALF): frameworks/alf/overview.md
@@ -688,9 +699,11 @@ nav:
       - In Topic: concepts/in-topic.md
       - Incident Report: concepts/incident-report.md
       - Informal Tag: concepts/informal-tag.md
+      - Instance Status: concepts/instance-status.md
       - Integration Connector: concepts/integration-connector.md
       - Integration Daemon: concepts/integration-daemon.md
       - Integration Group: concepts/integration-group.md
+      - Integration Report: concepts/integration-report.md
       - IsPublic: concepts/is-public.md
       - Javadoc: concepts/javadoc.md
       - Karma Point: concepts/karma-point.md
@@ -744,6 +757,7 @@ nav:
       - REST client connector: concepts/rest-client-connector.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md
+      - Secrets Store Connector: concepts/secrets-store-connector.md
       - Security Tags: concepts/security-tags.md
       - Server Metadata Security Connector: concepts/server-metadata-security-connector.md
       - Server Name: concepts/server-name.md
@@ -803,7 +817,7 @@ nav:
               - Introduction: practices/coco-pharmaceuticals/scenarios/overview.md
               - Authoritative Sources: practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview.md
               - Cataloguing Infrastructure: practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview.md
-              - Coommon Data Definitions: practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview.md
+              - Common Data Definitions: practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview.md
               - Continuous Analytics: practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview.md
               - Data Enabled Employees: practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview.md
               - Data Strategy: practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview.md

@@ -21,6 +21,12 @@ Releases are published to
 - When the core Egeria is released, we have found it useful to create releases of other Egeria repositories (connector and user interface repositories) using the same version numbers as core Egeria. 
 - Egeria charts are produced for each release of core Egeria; these charts include compatible user interface and connector content.    
 
+## Information about publishing
+
+Some additional information is available covering:
+
+- [maven publishing](maven-publish.md) including access to oss.sonatype.org, which is the final gate to making a release available on Maven Central & affects all Java repositories.
+- [secrets](secrets.md) (users, passwords) defined to support the publishing process
 
 ### Releases for different repositories 
 

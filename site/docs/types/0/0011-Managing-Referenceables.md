@@ -41,10 +41,9 @@ The *SourcedFrom* relationship is used to show the provenance of the information
 
 The *sourceVersionNumber* identifies the version number of the template used when the new entity was created.
 
-
 ??? deprecated "Deprecated types"
-    - `LastAttachment` - use `LatestChange` instead
-    - `LastAttachmentLink` - use `LatestChange` instead
+    - *LastAttachment* - use *LatestChange* instead
+    - *LastAttachmentLink* - use *LatestChange* instead
 
 ??? education "Further information"
     - [Anchor Management](/features/anchor-management/overview)

@@ -6,11 +6,11 @@
 Delete a Process, with the associated port implementations, port aliases and lineage mappings.
 For each port, it will delete the associated schema type and columns.
 
-Check [delete-port-implementation](delete-port-implementation.md), [delete-port-alias](create-port-alias.md) 
-and [delete-schema-types](create-schema-type.md) for examples of the more granular payloads.
+Check [delete-port-implementation](delete-port-implementation.md) and [delete-schema-types](delete-schema-type.md) 
+for examples of the more granular payloads.
 
 More examples can be found in the
-[sample collection](../../../docs/samples/collections/DataEngine-process_endpoints.postman_collection.json)
+[sample collection](samples/collections/DataEngine-process_endpoints.postman_collection.json)
 ```
 DELETE {serverURLRoot}/servers/{serverName}/open-metadata/access-services/data-engine/users/{userId}/processes
 

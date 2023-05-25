@@ -39,6 +39,12 @@ The individual tutorials focus on a specific tool, or group of related tasks.  T
 - [Running Egeria's Samples](/education/tutorials/running-samples-tutorial)
 - [Testing Egeria](/education/tutorials/testing-egeria-tutorial)
 
+## Technology comparisons
+
+Sometimes it is useful to learn about a new technology by understanding how it compares to one you are familiar with.  The technology comparisons can be used to map Egeria's functions to the functions of another technology that you might be familiar with.
+
+- [Apache Atlas comparison](/education/comparisons/apache-atlas)
+
 ## Webinars
 
 [Egeria's webinars](/education/webinar-program/overview) run each month and provide a deep dive into a particular topic.  All webinars are recorded and are available on YouTube.

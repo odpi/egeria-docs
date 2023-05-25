@@ -15,10 +15,11 @@ These labs can be used for individual study, as part of a class and / or as the 
 
 There are two main ways to set up the software to run these labs.  These are listed below. They each create exactly the same environment that supports the labs. 
 
-* [Using Kubernetes](/guides/operations/kubernetes) to run them in a flexible, self-contained environment - locally or in the cloud.
+* [Using Kubernetes](/guides/operations/kubernetes) to run them in a flexible, self-contained environment - locally or in the cloud. 
+Once you have the environment ready, you can start by installing [odpi-egeria-lab](/guides/operations/kubernetes/charts/lab/) helm chart.
 * [Using your own local environment directly](/education/open-metadata-labs/running-natively).
 
-Once the software is in place, and the four platforms are running, you then go to the `JupyterLab` browser window (typically at `http://localhost:8888/lab`) and begin with the [read-me-first.ipynb](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-labs/read-me-first.ipynb) lab notebook to familiarize yourself with the tutorial tools.  This notebook will guide you to the rest of the labs.
+Once the software is in place, and the four platforms are running, you then go to the `JupyterLab` browser window (typically at `http://localhost:8888/lab`) and begin with the [read-me-first.ipynb](https://github.com/odpi/egeria-jupyter-notebooks/blob/main/read-me-first.ipynb) lab notebook to familiarize yourself with the tutorial tools.  This notebook will guide you to the rest of the labs.
 
 
 ![Read me first Jupyter Notebook](/education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)

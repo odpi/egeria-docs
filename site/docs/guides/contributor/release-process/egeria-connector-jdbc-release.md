@@ -1,20 +1,20 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-### Artifacts
+### Artefact
 
 | Location | Usage |
 |---|---|
 | Maven Central | [egeria-connector-resource-jdbc :material-dock-window:](https://central.sonatype.com/artifact/org.odpi.egeria/egeria-connector-resource-jdbc){target=new} |
 | Maven Central | [egeria-connector-integration-jdbc :material-dock-window:](https://central.sonatype.com/artifact/org.odpi.egeria/egeria-connector-integration-jdbc){target=new} |
 | [Quay.io](https://quay.io/repository/odpi/egeria-connector-jdbc?tab=tags){ target=new } | `docker pull quay.io/odpi/egeria-connector-jdbc:TAGNAME` |
-| [DockerHub](https://hub.docker.com/repository/docker/odpi/egeria-connector-jdbc/tags?page=1&ordering=last_updated){ target=blank } | `docker pull odpi/egeria-connector-jdbc:TAGNAME` |
-| [Github connector release :material-github:](https://github.com/odpi/egeria-connector-jdbc/releases){ target=gh } | source code in `zip` and `tar.gz` formats or via `git checkout vx.y` to get version as-shipped (each release is tagged at the point it is shipped) |
+| [Docker Hub](https://hub.docker.com/repository/docker/odpi/egeria-connector-jdbc/tags?page=1&ordering=last_updated){ target=blank } | `docker pull odpi/egeria-connector-jdbc:TAGNAME` |
+| [Github :material-github:](https://github.com/odpi/egeria-connector-jdbc/releases){ target=gh } | source code in `zip` and `tar.gz` formats or via `git checkout vx.y` to get version as-shipped (each release is tagged at the point it is shipped) |
 
 ### Release process
 
-??? success "1. Await core Egeria release"
-    Connector release are done shortly after a corresponding Egeria core release. Any other changes to the connector are simply consolidated for the tandem release alongside Egeria core -- we do not do interim releases of the connector.
+??? success "1. Release cycle"
+    JDBC connector release cycle is not necessarily synced with Egeria core release. The community will create new release when there is major Egeria core change or new important enhancement is contributed to the connector.
 
 ??? success "2. Track remaining issues and PRs"
     Aim to branch when most issues / PRs are complete to minimize back-porting from main, but not at the expense of impacting ongoing main development
@@ -44,7 +44,7 @@
         - If there are any issues, delete the `release-x.y` branch, fix in `main` branch, and repeat steps (3-4) until no remaining issues.
 
 ??? success "6. Release artifacts publishing"
-    - Build and publish release version by selecting the release branch and executing [github action](https://github.com/odpi/egeria-connector-jdbc/actions/workflows/release.yml){ target=gh }.
+    - Build and publish release version by selecting the release branch and executing [Release :material-github:](https://github.com/odpi/egeria-connector-jdbc/actions/workflows/release.yml){ target=gh } action.
     - Review and release artifacts as explained in the [Maven Publishing Guide](/guides/contributor/release-process/maven-publish/#reviewing-releasing-artifacts){ target=new }.
     - Check if all maven artifacts are avaiable in maven central repository (it will take some time to sync)
     - Check if new docker containers are created under the different docker repositories respectively.

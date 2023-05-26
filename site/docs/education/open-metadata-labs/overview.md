@@ -21,9 +21,7 @@ In this case, all software components required to run are deployed using sigle h
 
 Once the software is in place, and the four platforms are running, you then go to the `JupyterLab` browser window (typically at `http://localhost:8888/lab`) and begin with the [read-me-first.ipynb](https://github.com/odpi/egeria-jupyter-notebooks/blob/main/read-me-first.ipynb){target=new} lab notebook to familiarize yourself with the tutorial tools.  This notebook will guide you to the rest of the labs.
 
-
 ![Read me first Jupyter Notebook](/education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
-
 
 You can start running a notebook by simply double-clicking the filename in the left pane of the Jupyter interface.
 

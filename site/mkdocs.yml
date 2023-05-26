@@ -290,6 +290,7 @@ nav:
                       - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                       - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
                       - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
+                      - JDBC Connector Release Process: guides/contributor/release-process/egeria-connector-jdbc-release.md
                       - Maven Publishing reference: guides/contributor/release-process/maven-publish.md
                       - GitHub Secrets reference: guides/contributor/release-process/secrets.md
               - Specific Guidance:

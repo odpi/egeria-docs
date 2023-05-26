@@ -27,6 +27,6 @@
 
 ----
 
-[Raise an issue on this page](https://github.com/odpi/egeria-docs/issues) or comment below
+[Raise an issue :material-github:](https://github.com/odpi/egeria-docs/issues){ target=gh } or comment below
 <!-- Comment system -->
 --8<-- "overrides/partials/comments.html"

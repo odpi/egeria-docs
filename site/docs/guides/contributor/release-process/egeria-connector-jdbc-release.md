@@ -46,7 +46,7 @@
 ??? success "6. Release artifacts publishing"
     - Build and publish release version by selecting the release branch and executing [Release :material-github:](https://github.com/odpi/egeria-connector-jdbc/actions/workflows/release.yml){ target=gh } action.
     - Review and release artifacts as explained in the [Maven Publishing Guide](/guides/contributor/release-process/maven-publish/#reviewing-releasing-artifacts){ target=new }.
-    - Check if all maven artifacts are avaiable in maven central repository (it will take some time to sync)
+    - Check if all maven artifacts are available in maven central repository (it will take some time to sync)
     - Check if new docker containers are created under the different docker repositories respectively.
 
 ??? success "7. Update `main`s release version from `x.y-SNAPSHOT` to `x.z-SNAPSHOT`"

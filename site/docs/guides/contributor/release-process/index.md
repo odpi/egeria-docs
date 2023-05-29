@@ -5,15 +5,15 @@ New releases can be created by Egeria maintainers that have the appropriate acce
 
 Releases are published to
 
-[Maven Central :material-dock-window:](https://oss.sonatype.org){ target=maven }
-[Quay.io :material-dock-window:](https://quay.io/odpi){ target=maven }
-[Docker.io :material-dock-window:](https://docker.io/odpi){ target=maven }
+-[Maven Central :material-dock-window:](https://oss.sonatype.org){ target=maven }
+-[Quay.io :material-dock-window:](https://quay.io/odpi){ target=maven }
+-[Docker.io :material-dock-window:](https://docker.io/odpi){ target=maven }
 
 
 ### Overall release policy
 
-- Aim to release approximately every month
-- Typically, target end of month for external availability
+- Aim to release the core Egeria approximately every month
+- Typically, we target end of month for external availability
 - Will only release an update between releases in exceptional circumstances
 - Preserves backwards compatibility as much as possible
 - Try and maintain a regular heartbeat: even if completion of some features continues in a subsequent release
@@ -25,8 +25,8 @@ Releases are published to
 
 Some additional information is available covering:
 
-- [maven publishing](maven-publish.md) including access to oss.sonatype.org, which is the final gate to making a release available on Maven Central & affects all Java repositories.
-- [secrets](secrets.md) (users, passwords) defined to support the publishing process
+- [maven publishing](/guides/contributor/release-process/maven-publish) including access to oss.sonatype.org, which is the final gate to making a release available on Maven Central & affects all Java repositories.
+- [secrets](/guides/contributor/release-process/secrets) (users, passwords) defined to support the publishing process
 
 ### Releases for different repositories 
 

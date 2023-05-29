@@ -27,7 +27,9 @@ Although the general idea is simple, there are a number of choices to make on ho
 
 ## Styles of glossary workflow operation
 
-The different styles of glossary workflow provide choices on who is providing content, how decisions are made on whats it accepted and how the updates are grouped, both for the review process and when they are published.  Where multiple glossaries are in play, each can operate a different style.  The tabbed table below characterises some different styles of workflow processing - click on each tab to read about each style.  They are only suggestions. The API is flexible enough to allow you to create you own style if you need to.
+The different styles of glossary workflow provide choices on who is providing content, how decisions are made on what is accepted, how the updates are grouped, both for the review process and when they are published.  
+
+Where multiple glossaries are in play, each can operate a different style.  The tabbed table below characterises some different styles of workflow processing - click on each tab to read about each style.  They are only suggestions. The API is flexible enough to allow you to create you own style if you need to.
 
 === "Summary"
     | Maintenance Style           | Contributors             | Controls                                                                                                                        | Limitations                                                                                                                                   | Uses                                                                                                                      |

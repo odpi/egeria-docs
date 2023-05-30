@@ -123,7 +123,7 @@ The Egeria team aim to create an official release of the open metadata and gover
 
 In between official releases, the latest build is also available to developers in GitHub.
 
-The process for creating a release is described in the [contributors' guide](guides/contributor/release-process)
+The process for creating a release is described in the [contributors' guide](/guides/contributor/release-process)
 
 ## Conflict resolution and voting
 

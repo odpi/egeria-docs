@@ -3,7 +3,7 @@
 
 # Finding and retrieving metadata
 
-This section describes how to retrieve metadata from Egeria.
+This section describes how to retrieve metadata from the open metadata ecosystem.  The metadata is stored in all of the open metadata repositories connected to the server you are calling via one or more [Open Metadata Repository Cohorts](/features/cohort-operation/overview).
 
 ## Mechanisms to retrieve metadata
 
@@ -66,6 +66,8 @@ Every server limits the maximum number of elements that can be returned, so if t
 The caller then codes a loop that retrieves the results, incrementing the starting point by the page size each time until a null result is returned.  
 
 It is possible that the caller may be returned an empty list on some iterations.  This means all the values returned by the repository have been filtered out and the caller should increment the starting point and continue to retrieve new results.
+
+![Paging with filtering](retrieving-metadata-paging.svg)
 
 In order for this loop to work, the caller needs to know the real paging size used.  Therefore, the page size value used by caller's should be established as a value lower than that set by the servers.   The purpose of the server's maximum page size is to prevent rogue request from impacting the server.
 
@@ -164,5 +166,29 @@ These related instances could be returned as an element stub as used in the [con
 If the relationship properties are needed then a *related element* is used.
 
 ![RelatedElement](retrieving-metadata-related-element.svg)
+
+## Retrieval requests
+
+The open metadata repositories support for following retrieval requests:
+
+* Value-based queries:
+
+    * Get an instance (entity or relationship) by its unique identifier (guid).
+    * Get all of the entities of a particular type that have a specific classification with specific properties set to specific values.
+    * Get all of the entities of a particular type that have specific properties set to specific values.
+    * Get all of the relationships of a particular type that have specific properties set to specific values.
+    * Get all of the entities of a particular type that have any property set to a specific value
+    * Get all of the relationship of a particular type that have any property set to a specific value
+    * Get all of the entities of a particular type that have a combination of properties set to a specific values
+    * Get all of the relationship of a particular type that have a combination of properties set to a specific values
+
+* Navigational queries:
+    * Get all of the relationships connected to an entity.
+    * Get the graph of instances that are connected to an entity
+    * Get the entities that link two entities together
+    * Get all entities of a specific type that are connected to a starting entity either directly or indirectly.
+
+The OMAS APIs are then built up from these basic building block queries.
+
 
 --8<-- "snippets/abbr.md"

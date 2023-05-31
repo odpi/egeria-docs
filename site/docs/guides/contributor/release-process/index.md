@@ -3,11 +3,11 @@
 
 New releases can be created by Egeria maintainers that have the appropriate access on each GitHub repository.
 
-Releases are published to
+Releases are published to:
 
--[Maven Central :material-dock-window:](https://oss.sonatype.org){ target=maven }
--[Quay.io :material-dock-window:](https://quay.io/odpi){ target=maven }
--[Docker.io :material-dock-window:](https://docker.io/odpi){ target=maven }
+- [Maven Central :material-dock-window:](https://oss.sonatype.org){ target=maven }
+- [Quay.io :material-dock-window:](https://quay.io/odpi){ target=maven }
+- [Docker.io :material-dock-window:](https://docker.io/odpi){ target=maven }
 
 
 ### Overall release policy

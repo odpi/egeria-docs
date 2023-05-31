@@ -103,7 +103,8 @@ nav:
               - Secrets Store:
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
           - Developer Guide:
-              - Developer Overview: guides/developer/index.md
+              - Developer Guide: guides/developer/index.md
+              - Retrieving Metadata: guides/developer/finding-metadata/overview.md
               - Building Archives:
                   - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
                   - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md

@@ -16,11 +16,31 @@ The *Collection* entity is provides the node that represents the collection as a
 
 The classifications associated with *Collection* allow it to be specialized for particular uses.
 
-* *Folder* means the collection can be treated as if it where a folder of metadata elements.
-* *Set* means the collection is a set of related items.
+* [*Folder*](#folder-classification) means the collection can be treated as if it where a folder of metadata elements.
+* [*Set*](#set-classification) means the collection is a set of related items.
 * [*GovernanceStatusSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance statuses.
 * [*GovernanceClassificationSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance classification for a particular governance classification.
 * [*EventSet*](/types/5/0421-Governance-Classification-Levels) for a collection of related event schemas.
+
+### Folder classification
+
+The *Folder* classification indicates that the collection is used to organize metadata elements.  The attributes are used to indicate to the caller how they should be displayed.
+
+* *orderBy* indicates the preferred ordering sequence
+* *orderPropertyName* indicates which property to use if the *orderBy* attribute is set to `OTHER`.
+
+### OrderBy enumeration
+
+* *Name* - Order by name property.
+* *Owner* - Order by owner property.
+* *DateAdded* - Order by date added to the metadata collection.
+* *DateUpdated* - Order by date that the asset was updated.
+* *DateCreated* - Order by date that the asset was created.
+* *Other* - Order by another property.
+
+### Set classification
+
+The *Set* classification indicates that the collection is a set of related items.
 
 ## CollectionMembership relationship
 

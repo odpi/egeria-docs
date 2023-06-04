@@ -90,13 +90,18 @@ Once the client is created, use it to call the API it offers which is documented
           AssetUniverse assetUniverse = client.getAssetProperties(clientUserId, assetGUID);
 
 ```
+### Maintaining metadata
+
 Each OMAS has its own specialized API and its own style, but typically there are methods for creating, updating and deleting elements along with methods for linking them together and unlinking them - also maintaining classifications.  If the OMAS is maintaining assets, you may see methods for publishing and withdrawing assets.  The publish method updates the asset's zones to the OMAS's `PublishedZones` and the `withdraw()` method updates the asset's zones to the OMAS's `DefaultZones`.  Typically, the asset is only visible to most users when the published zones are in use.  The default zones are used while the asset is being set up.
+
+### Retrieving metadata
 
 The `findXXX` methods typically take a regular expression and look for the value in all properties.  The `getXXXByName` style method does not use wild cards and retrieves the element if there is an exact match in the `qualifiedName` or `displayName`.  Finally, it is typical to have methods to retrieve a single element via its unique identifier (guid).
 
+!!! info "Finding and retrieving metadata"
+    See [Finding and retrieving metadata](/guides/developer/finding-metadata/overview) for more information on retrieving metadata.
 
-    
-#### Registering a listener
+### Registering a listener
 
 Some OMASs offer an event interface for receiving events from the [out topic](/concepts/out-topic).  To use it, your java class needs to extend the event listener interface and implement the abstract `processEvent` method.  Below is a simple example from Asset Consumer OMAS.  The event type is used to determine which java class to use to cast the event so its payload can be accessed.
 

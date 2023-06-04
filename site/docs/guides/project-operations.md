@@ -114,8 +114,8 @@ Some meetings are face-to-face, but most are conference calls. Attendance at mee
 
 For example, the face-to-face meeting may be at a conference that requires you to register for the conference to attend, or a meeting may be at an organization's offices that are required to maintain a list of everyone on site.
 
-!!! tip "See details in the [community guide](community.md)"
-    Refer to the [community guide](community.md) for further details on the specific meetings that are planned, conference call links and dial-in numbers, as well as other communications channels like Slack and email.
+!!! tip "See details in the [community guide](/guides/community)"
+    Refer to the [community guide](/guides/community) for further details on the specific meetings that are planned, conference call links and dial-in numbers, as well as other communications channels like Slack and email.
 
 ## Releases
 
@@ -123,7 +123,7 @@ The Egeria team aim to create an official release of the open metadata and gover
 
 In between official releases, the latest build is also available to developers in GitHub.
 
-The process for creating a release is described in the [developer guide](/guides/developer/process/#release-process)
+The process for creating a release is described in the [contributors' guide](/guides/contributor/release-process)
 
 ## Conflict resolution and voting
 

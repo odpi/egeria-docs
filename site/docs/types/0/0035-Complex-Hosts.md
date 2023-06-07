@@ -10,35 +10,35 @@ In today's systems, hardware is managed to get the maximum use out of it. Theref
 
 ## Host
 
-The concept of a *`Host`* is abstracted to describe a deployment environment that has access to hardware and has a basic software stack, typically including the operating systems.
+The concept of a *Host* is abstracted to describe a deployment environment that has access to hardware and has a basic software stack, typically including the operating systems.
 
-The host can be linked to its location through the [`AssetLocation`](/types/0/0025-Locations/#assetlocation) relationship.
+The host can be linked to its location through the [AssetLocation](/types/0/0025-Locations/#assetlocation) relationship.
 
 ## DeployedOn
 
-The `DeployedOn` relationship shows where IT Infrastructure is deployed to.
+The *DeployedOn* relationship shows where IT Infrastructure is deployed to.
 
 ## BareMetalComputer
 
-A *`BareMetalComputer`* describes a connected set of physical hardware. The open metadata types today do not attempt to model hardware in detail but this could be easily added if a contributor with the appropriate expertise was willing to work on it.
+A *BareMetalComputer* describes a connected set of physical hardware. The open metadata types today do not attempt to model hardware in detail but this could be easily added if a contributor with the appropriate expertise was willing to work on it.
 
 ## VirtualMachine
 
-A *`VirtualMachine`* provides virtualized hardware through a hypervisor that allows a single physical bare metal computer to run multiple virtual machines.
+A *VirtualMachine* provides virtualized hardware through a hypervisor that allows a single physical bare metal computer to run multiple virtual machines.
 
 ## VirtualContainer
 
-A *`VirtualContainer`* provides the services of a host to the [software servers](/types/0/0040-Software-Servers) deployed on it. When the server makes requests for storage, network access, etc, the `VirtualContainer` delegates the requests to the equivalent services of the actual host it is deployed on.
+A *VirtualContainer* provides the services of a host to the [software servers](/types/0/0040-Software-Servers) deployed on it. When the server makes requests for storage, network access, and other resources, the *VirtualContainer* delegates the requests to the equivalent services of the actual host it is deployed on.
 
-`VirtualContainer`s can be hosted on other `VirtualContainer`s, but to actually run they need to ultimately be deployed onto a real physical [`Host`](/types/0/0030-Hosts-and-Platforms/#host).
+*VirtualContainer*s can be hosted on other *VirtualContainer*'s, but to actually run they need to ultimately be deployed onto a real physical [Host](/types/0/0030-Hosts-and-Platforms/#host).
 
 ### DockerContainer
 
-*`DockerContainer`* provides a specific type for the popular container type called [docker :material-dock-window:](https://www.docker.com/){ target=docker }.
+*DockerContainer* provides a specific type for the popular container type called [docker :material-dock-window:](https://www.docker.com/){ target=docker }.
 
 ## HostCluster
 
-A *`HostCluster`* describes a collection of hosts that together are providing a service. Clusters are often used to provide horizontal scaling of services.
+A *HostCluster* describes a collection of hosts that together are providing a service. Clusters are often used to provide horizontal scaling of services.
 
 There are two specific types of host clusters defined: in both, the hosts that they manage are often referred to as *nodes*.
 
@@ -46,20 +46,20 @@ Within the host cluster is typically a special host (node) that is controlling t
 
 ### HadoopCluster
 
-*`HadoopCluster`* describes a [Hadoop cluster :material-dock-window:](https://hadoop.apache.org/){ target=apache } that uses multiple bare metal computers/virtual machines to manage big data workloads.
+*HadoopCluster* describes a [Hadoop cluster :material-dock-window:](https://hadoop.apache.org/){ target=apache } that uses multiple bare metal computers/virtual machines to manage big data workloads.
 
 ### KubernetesCluster
 
-*`KubernetesCluster`* describes a [Kubernetes cluster :material-dock-window:](https://kubernetes.io/){ target=k8s } that manages containerized applications across multiple bare metal computers/virtual machines.
+*KubernetesCluster* describes a [Kubernetes cluster :material-dock-window:](https://kubernetes.io/){ target=k8s } that manages containerized applications across multiple bare metal computers/virtual machines.
 
-The containerized applications managed by Kubernetes are represented as `VirtualContainer`s.
+The containerized applications managed by Kubernetes are represented as *VirtualContainer*'s.
 
 
 ## HostClusterMember
 
-The host cluster is linked to the hosts it is managing using the *`HostClusterMember`* relationship.
+The host cluster is linked to the hosts it is managing using the *HostClusterMember* relationship.
 
 ??? deprecated "Deprecated types"
-    - `DeployedVirtualContainer` - use `DeployedOn`, which is more general.
+    - *DeployedVirtualContainer* - use *DeployedOn*, which is more general.
 
 --8<-- "snippets/abbr.md"

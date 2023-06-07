@@ -15,4 +15,3 @@ Git can be installed:
 - On Linux operating systems, by using your distribution's package manager (`yum install git`, `apt-get install git`, etc).
 - On Windows, you should use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/) Version 2 or above, install an appropriate Linux distribution, and follow the instructions for Linux.
   
----8<-- "snippets/abbr.md"

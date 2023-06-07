@@ -3,7 +3,7 @@
 
 ### Downloading the Egeria Source from GitHub
 
-The code for Egeria is downloaded from each git repository one at a time.  The commands shown below create a clone (copy) of the egeria git repositories for your own use.  If you want to make a contribution to Egeria, you need to [clone your own fork](/education/tutorials/git-and-git-hub-tutorial/#creating-a-fork-and-a-clone) of a repository rather than the main repository itself. 
+The code for Egeria is downloaded from each git repository one at a time.  The commands shown in each tab below create a clone (copy) of the egeria git repositories for your own use.  If you want to make a contribution to Egeria, you need to [clone your own fork](/education/tutorials/git-and-git-hub-tutorial/#creating-a-fork-and-a-clone) of a repository rather than the main repository itself. 
 
 === "egeria.git"
 
@@ -21,10 +21,21 @@ The code for Egeria is downloaded from each git repository one at a time.  The c
     
     Egeria's source is extracted from GitHub using the following `git` command:
     
-    ```bash
-    git clone https://github.com/odpi/egeria.git
-    ```
-    
+    === "Get a released version of the code"
+        To retrieve the code for a specific release of Egeria enter
+        ```bash
+        git clone -b egeria-release-{release-number} --single-branch https://github.com/odpi/egeria.git
+        ```
+        For example, for release 3.14 use:
+        ```bash
+        git clone -b egeria-release-3.14 --single-branch https://github.com/odpi/egeria.git
+        ```
+    === "Get the latest version of the code"
+        To retrieve the latest "SNAPSHOT" code from the `main` branch of Egeria enter:
+        ```bash
+        git clone https://github.com/odpi/egeria.git
+        ```
+        
     A new directory has been created with the core Egeria source code.  Change to the `egeria` directory and you are ready to build the source.
     
     ```bash
@@ -92,4 +103,4 @@ ls
 
 It should be the same as the contents of the git repository on GitHub.
 
----8<-- "snippets/abbr.md"
+

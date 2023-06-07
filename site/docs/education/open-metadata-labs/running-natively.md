@@ -15,7 +15,6 @@ order to use it natively.
 ## Installing and configuring prerequisite software
 
 --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-installing-git.md"
 --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
 --8<-- "docs/education/tutorials/kafka-tutorial/task-starting-kafka.md"
@@ -38,6 +37,6 @@ You need to start four OMAG Server Platforms at the following URLs - remembering
 
 ## Help
 
-For additional help refer to our slack channels at http://slack.lfai.foundation
+For additional help refer to our slack channels at http://slack.lfaidata.foundation
 
 --8<-- "snippets/abbr.md"

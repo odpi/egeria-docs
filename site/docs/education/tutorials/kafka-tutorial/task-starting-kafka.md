@@ -20,4 +20,4 @@
         brew services start kafka
         ```
 
---8<-- "snippets/abbr.md"
+

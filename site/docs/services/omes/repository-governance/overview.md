@@ -12,7 +12,7 @@ hide:
 
 The Repository Governance Open Metadata Engine Service (OMES) runs in an [Engine Host OMAG Server](/concepts/engine-host). It hosts [repository governance engines](/concepts/repository-governance-engine) that consist of one or more related [repository governance services](/guides/developer/repository-governance-services/overview).  Governance repository services are pluggable connectors that perform repository governance services such as maintain [open metadata archives](/concepts/open-metadata-archive) based on the live metadata in the connected open metadata repositories.
 
-![Repository Governance OMES](repository-governance-engine-services-internals.svg)
+![Repository Governance OMES](/services/omes/engine-services-repository-governance-server-side.svg)
 
 The Repository Governance OMES provides access to the open metadata ecosystem for the repository governance services through a context. It also provides an API to allow a third party tool to validate that a specific repository governance service implementation will load in the engine host server, and it returns the usage information encoded in the service's implementation.
 

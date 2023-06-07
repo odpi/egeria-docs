@@ -10,7 +10,7 @@
 
 In Kubernetes, resources such as pods (to run code) or services (for network accessibility) are defined in YAML. One or more documents can be submitted at a time.
 
-So we might have one YAML file that defines our pod - with information about which container images to run, and another to setup a network service. Finally, we may have another that describes our storage requirements (a persistent volume claim).
+So we might have one YAML file that defines our pod - with information about which container images to run, and another to set up a network service. Finally, we may have another that describes our storage requirements (a persistent volume claim).
 
 ## What does Helm do?
 
@@ -120,14 +120,15 @@ And you can then install (deploy) a chart:
   In a helm chart the configuration that has been externalised by the chart writer is specified in the `values.yaml` file which you can find in this directory. However rather than edit this file directly, it's recommended you create an additional file with the required overrides.
 
 As an example, in `values.yaml` we see a value 'serverName' which is set to mds1. If I want to override this I could do
+
 !!! cli "Install a chart with additional properties set"
-```console
-helm install --set-string egeria.serverName=myserver <release> egeria/<chart>
-```
+    ```console
+    helm install --set-string egeria.serverName=myserver <release> egeria/<chart>
+    ```
 
-However this can get tedious with multiple values to override, and you need to know the correct types to use.
+However, this can get tedious with multiple values to override, and you need to know the correct types to use.
 
-Instead it may be easier to create an additional file. For example let's create a file in my home directory `~/egeria.yaml` containing:
+Instead, it may be easier to create an additional file. For example let's create a file in my home directory `~/egeria.yaml` containing:
 ```yaml
 egeria:
   serverName: metadataserver
@@ -135,9 +136,9 @@ egeria:
 ```
 
 !!! cli "Install a chart with additional properties in a modified yaml"
-```console
-helm install -f ~/egeria.yaml metadataserver egeria/egeria-base
-```
+    ```console
+    helm install -f ~/egeria.yaml metadataserver egeria/egeria-base
+    ```
 
 You can find out all the configurable values for a chart by running:
 

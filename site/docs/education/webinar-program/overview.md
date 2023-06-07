@@ -18,6 +18,71 @@ Please check the calendar has the latest confirmed Webinar information
 
 The material for our past webinars is listed below along with links to the recordings.
 
+
+???+ education "What next after you have built a catalog. Part 2: making it real - January 2023 - Mandy Chessell"
+
+    This session is about making it real in your organisation. What are the infrastructure and culture changes that drive
+    successful management of data?   How can you use Egeria to design your governance organisation and drive the desired cultural changes and behaviour.
+    ???+ education "Presentation ..."
+         [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-making-it-real-part-2-8th-january-2023.pdf)
+
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-making-it-real-part-2-8th-january-2023.pdf"></iframe>
+         </div>
+         
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1BPHUgzsUos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         </div> 
+         
+    ??? education "Related Documentation"
+        - [Governance basics](https://egeria-project.org/practices/governance-basics/overview/)
+
+???+ education "How to use a repository proxy connector - November 2022 - Ljupcho Palashevski and David Radley"
+
+    A repository proxy connector is a wrapper around an existing 3rd party metadata store, that allows
+    that 3rd party metadata store to participate in Egeria cohorts. This session takes you through how to use a repository proxy connector, so existing 3rd party metadata stores can benefit from being in the Egeria eco system.
+    ???+ education "Presentation ..."
+         [Download](https://egeria-project.org/education/webinar-program/egeria-webinar-how-to-use-a-repository-proxy-connector-november-2022.pdf)
+
+         <div class="video-wrapper">
+             <iframe src="https://egeria-project.org/education/webinar-program/egeria-webinar-how-to-use-a-repository-proxy-connector-november-2022.pdf"></iframe>
+         </div>
+         
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/xYBpon_ct-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>         
+         </div> 
+         
+    ??? education "Related Documentation"
+        - [Repository Connectors](https://egeria-project.org/concepts/repository-connector/?h=repository)
+
+
+???+ education "Building a native Egeria Connector.  September 2022 - Chris Grote"
+
+    This session goes through how to build a native connector.
+ 
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/wz2OV3rpReg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>           
+         </div> 
+
+    ??? education "Related Documentation"
+        - [Repository Connectors](https://egeria-project.org/concepts/repository-connector/?h=repository)
+
+???+ education "Using a native Egeria Connector.  May 2022 - Chris Grote"
+
+    This session goes through how to use a native connector.
+ 
+    ???+ education "Session Replay ..."
+         <div class="video-wrapper">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/vNtvwZcBnyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+         </div>
+
+    ??? education "Related Documentation"
+        - [Repository Connectors](https://egeria-project.org/concepts/repository-connector/?h=repository)
+
+
 ???+ education "Connector comparison - choices on how to bring your data catalog to Egeria.  April 2022 - Mandy Chessell"
 
     This session compares integration and repository connectors 
@@ -146,13 +211,13 @@ The material for our past webinars is listed below along with links to the recor
 
 ## Older webinars
 
-- [Building a governed data lake with Egeria](/education/previous-webinars/june-2020) - June 2020
-- [Building a Data Catalog with Egeria](/education/previous-webinars/april-2020) - April 2020
-- [Egeria virtual metadata show](/education/previous-webinars/march-2020) - March 2020 (Three days of topics relating to Egeria from ING, IBM and SAS).
-- [New Approaches to Managing Access to Sensitive Data](/education/previous-webinars/december-2019) - December 2019
-- [Managing data privacy](/education/previous-webinars/july-2018) - July 2018
-- [Metadata standards](/education/previous-webinars/april-2018) - April 2018
-- [Free your metadata](/education/previous-webinars/october-2017) - October 2017
+- [Building a governed data lake with Egeria](/education/previous-webinars/june-2020/overview) - June 2020
+- [Building a Data Catalog with Egeria](/education/previous-webinars/april-2020/overview) - April 2020
+- [Egeria virtual metadata show](/education/previous-webinars/march-2020/overview) - March 2020 (Three days of topics relating to Egeria from ING, IBM and SAS).
+- [New Approaches to Managing Access to Sensitive Data](/education/previous-webinars/december-2019/overview) - December 2019
+- [Managing data privacy](/education/previous-webinars/july-2018/overview) - July 2018
+- [Metadata standards](/education/previous-webinars/april-2018/overview) - April 2018
+- [Free your metadata](/education/previous-webinars/october-2017/overview) - October 2017
 
 --8<-- "snippets/abbr.md"
 

@@ -18,7 +18,7 @@ Egeria is an open source project.  This means its most important asset is the co
 
 This community is stronger if it consists of individuals from different organizations and backgrounds.  This means we need a respectful and inclusive culture to allow a diverse range of people to participate.
 
-This culture is reflected in the [Code of Conduct](https://github.com/odpi/egeria/blob/master/CODE_OF_CONDUCT.md) that every participant must adhere to.
+This culture is reflected in the [Code of Conduct](https://github.com/odpi/egeria/blob/main/CODE_OF_CONDUCT.md) that every participant must adhere to.
 
 Within the community, contributors are focused on making the contributions that are meaningful to them, or their employer.  Beyond conforming to the rules of the community, they are not required to make changes requested by people and organizations outside of the community.
 
@@ -44,7 +44,7 @@ These roles are described in the [Operations Guide](/guides/project-operations).
 ## Egeria badges
 
 To recognise individuals who are either contributors or maintainers on the Egeria project,
-we are able to award [Acclaim badges](https://github.com/odpi/egeria/blob/master/developer-resources/badges).
+we are able to award [Acclaim badges](https://github.com/odpi/egeria/blob/main/developer-resources/badges).
 
 ## Test yourself
 

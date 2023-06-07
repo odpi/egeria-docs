@@ -16,22 +16,20 @@ Below is the list of tasks supported by Data Engine OMAS.
 
 #### External Tool registration
 
-Typically the first action to take for an external tool is to [register](register-data-engine-tool.md) as a 
-[software-capability](/concepts/software-capability).
+Typically, the first action to take for an external tool is to [register](register-data-engine-tool.md) as a 
+[software-capability](../../../concepts/software-capability).
 
 #### External Tool lookup
 
-An external tool can [lookup](lookup-registration.md) for the registered external tool.
+An external tool can [look up](lookup-registration.md) for the registered external tool.
 
 #### [Create Schema Type](create-schema-type.md)
 
 #### [Create Port Implementation with schema type](create-port-implementation.md)
 
-#### [Create Port Alias with delegation to a Port Implementation](create-port-alias.md)
+#### [Create Process, with corresponding Port Implementations and Schema Types](create-process.md)
 
-#### [Create Process, with corresponding Port Aliases, Port Implementations and Schema Types](create-process.md)
-
-#### [Add lineage mappings to processes](add-lineage-mappings.md)
+#### [Add data flows to processes](add-data-flows.md)
 
 #### [Create Database](create-database.md) 
 

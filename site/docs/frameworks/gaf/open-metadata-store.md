@@ -1,0 +1,16 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- Copyright Contributors to the ODPi Egeria project 2020. -->
+
+The open metadata store interfaces are part of the Governance Action Framework (GAF) and provide a comprehensive interface for working with all types of metadata, subject to the user's (and this OMAS's) security permissions. The interface supports search, maintenance of metadata elements, classifications and relationships plus the ability to raise incident reports and todos along with the ability to work with metadata valid values and translations.
+
+
+| Java Interface                                                                                                                          | Description                                                                                                                                                                                                                                                                                           |
+|-----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [MetadataElementInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworkservices/gaf/api/MetadataElementInterface.html) | Supporting the metadata requirements for many of the [engine services](/services/omes).                                                                                                                                                                                                               |
+| [MultiLanguageInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworkservices/gaf/api/MultiLanguageInterface.html)     | Enables translations of the string properties of a metadata element to be created, maintained and retrieved.                                                                                                                                                                                          |
+| [StewardshipActionInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworkservices/gaf/api/StewardshipActionInterface.html) | Creates incident reports and to dos that are used to request help for a situation that the caller can not handle.                                                                                                                                                                                     |
+| [ValidMetadataValuesInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworkservices/gaf/api/ValidMetadataValuesInterface.html) | Maintains valid value sets for the properties found in open metadata elements. Valid values can be set up for a property name within a specific type - or for all types that use that property name. The named property may be a string type, and array of string or a map of names to string values. |
+
+--8<-- "snippets/abbr.md"
+
+

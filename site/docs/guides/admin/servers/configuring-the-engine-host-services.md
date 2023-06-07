@@ -31,9 +31,8 @@ The location of the [metadata access server](/concepts/metadata-access-server) r
 
 ### Configure the engines services
 
-The [engine services](/services/omes) (or Open Metadata Engine Services (OMES) to give them their full name) also run in the engine host.  Each engine service provides support for a particular type of governance engine which is in turn, a collection of governance services of a specific type.
-
---8<-- "docs/concepts/governance-service-types.md"
+The [engine services](/services/omes) (or Open Metadata Engine Services (OMES) to give them their full name) also run in the engine host.  Each engine service provides support for a particular type of governance engine which is in turn, a collection of governance services.
+The governance engine is described in a [Governance Engine Definition](/concepts/governance-engine-definition)
 
 #### List engine services
 
@@ -52,7 +51,7 @@ Note the `engineServiceURLMarker` for the engine service that you want to config
 
 The descriptive information and operational status are filled out automatically by the administration services based on the `engineServiceURLMarker` value that you supply. The other values are supplied on the configuration call.
 
-Each engine service is configured with the network location of the [metadata access server](/concepts/metadata-access-server) running the appropriate partner service. There are a set of options that the engine service supports along with the list of configuration properties for the governance engines that will be run in the engine service. The governance engine's configuration properties identify which governance engine to run. The governance engine's definition, including the services it supports are retrieved from the metadata access server when the engine service starts up.
+Each engine service is configured with the network location of the [Metadata Access Server](/concepts/metadata-access-server) running the appropriate partner service. There are a set of options that the engine service supports along with the list of configuration properties for the governance engines that will be run in the engine service. The governance engine's configuration properties identify which governance engine to run. The governance engine's definition, including the services it supports are retrieved from the metadata access server when the engine service starts up.
 
 !!! post "POST - configure engine service"
     ```
@@ -76,8 +75,8 @@ Each engine service is configured with the network location of the [metadata acc
 
     Where:
 
-    - `engineQualifiedName` - set up the qualified name of the governance engine stored in the metadata servers.
-    - `connectorUserId` - set up the user id for the engine: if this is null, the engine host's userId is used on requests to the Open Metadata Access Service (OMAS).
+    - `engineQualifiedName` - set up the qualified name of the GovernanceEngine entity stored in the metadata servers.
+    - `engineUserId` - set up the user id for the engine: if this is null, the engine host's userId is used on requests to the Open Metadata Access Service (OMAS).
 
 ### Remove engine host services
 
@@ -88,4 +87,4 @@ The following command removes the configuration for the engine host services fro
     {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{engineHostServerName}}/engine-host-services
     ```
 
---8<-- "snippets/abbr.md"
+

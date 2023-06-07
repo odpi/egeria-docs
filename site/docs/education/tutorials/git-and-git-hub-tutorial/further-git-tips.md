@@ -3,7 +3,7 @@
 
 ## Additional git tips
 
-If you are working locally, and realise you have accidentally been making changes on master instead of another branch:
+If you are working locally, and realise you have accidentally been making changes on main instead of another branch:
 
 ```bash
 $ git stash
@@ -11,10 +11,10 @@ $ git checkout -b correct-branch
 $ git stash pop
 ```
 
-Messed up your master branch?
+Messed up your main branch?
 
 ```bash
-$ git checkout master
+$ git checkout main
 $ git fetch upstream
 $ git reset --hard HEAD
 $ git push

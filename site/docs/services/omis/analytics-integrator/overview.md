@@ -10,9 +10,9 @@ hide:
 
 # Analytics Integrator Open Metadata Integration Service (OMIS)
 
-The Analytics Integrator OMIS supports the exchange of glossary, data assets, schemas and analytics models between analytics tools
-and the open metadata ecosystem.
+The Analytics Integrator OMIS supports the exchange of models and data assets with a data science tool.
 
-This integration service is paired with the [Analytics Modeling OMAS](/services/analytics-modeling/overview).
+This integration service is paired with the [Data Science](/services/omas/security-manager/overview)
+Open Metadata Access Service (OMAS). 
 
 --8<-- "snippets/abbr.md"

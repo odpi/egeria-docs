@@ -3,8 +3,6 @@
 
 # 0160 Notes
 
-## Notes
-
 *Notes* provide additional information about a [Referenceable](/types/0/0010-Base-Model/#referenceable) object. They are used by resource owners and stewards to document the current status of their resources. Engines that are performing processing on the resources may also write notes to the note log. The note log can be attached to any referenceable metadata object.
 
 ![UML](0160-Notes.svg)

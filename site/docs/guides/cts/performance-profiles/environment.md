@@ -32,7 +32,7 @@ This profile currently collects the following information about the technology u
 
     **Runtime environment information**
     !!! attention "Caveat"
-        Currently these are captured only for the [OMAG Server Platform](/egeria/concepts/omag-server-platform) that is actually running the CTS suite
+        Currently these are captured only for the [OMAG Server Platform](/concepts/omag-server-platform) that is actually running the CTS suite
         itself. If the technology under test is running under this same OMAG Server Platform, then these will still be useful;
         however, if the technology under test is running on a separate OMAG Server Platform or via a remote system, these will
         likely be of very limited value.

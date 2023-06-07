@@ -8,7 +8,7 @@ Link to the [download](https://www.jetbrains.com/idea/download/) page and follow
 Start up IntelliJ.
 
 ??? tip "Set up Java ..."
-    Validate that the project is set up with the right level of Java - you need Java 11.  Select `File` and then `Project Structure...`.  When the wizard opens select `Project` and ensure the SDK is Java 11.
+    Validate that the project is set up with the right level of Java - you need Java 17.  Select `File` and then `Project Structure...`.  When the wizard opens select `Project` and ensure the SDK is Java 17.
 
     ![Set Java level](/education/tutorials/intellij-tutorial/intellij-set-java-level.png)
 
@@ -25,4 +25,4 @@ Start up IntelliJ.
 ??? tip "Check your lombok setup"
     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-lombok-plugin.md"
 
----8<-- "snippets/abbr.md"
+

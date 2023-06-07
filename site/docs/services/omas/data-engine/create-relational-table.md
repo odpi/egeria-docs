@@ -6,7 +6,7 @@
 Create a relational table, with the associated schema type and relational columns, and attach it to a database. 
 
 More examples with all available properties for a table can be found in the 
-[sample collection](../../../docs/samples/collections/DataEngine-asset_endpoints.postman_collection.json) 
+[sample collection](samples/collections/DataEngine-asset_endpoints.postman_collection.json) 
  
 
 ```

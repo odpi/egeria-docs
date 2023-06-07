@@ -20,7 +20,7 @@ A Connector is a Java class that supports the standard [Open Connector Framework
 * **[Repository Connector](/concepts/repository-connector)** defines the open metadata common interface to a metadata repository.  This may be a repository with native support for the open metadata types and instances or one that is mapping to a third party metadata repository API. In the case of it supporting an third party metadata repository, it is often paired with an event mapper connector described above.
 
 The OMRS defines the interfaces for these connectors and selected implementations
-are located in the **[adapters](https://github.com/odpi/egeria/tree/master/open-metadata-implementation/adapters/open-connectors/repository-services-connectors)** module.
+are located in the **[adapters](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors)** module.
 
 All of these connectors support the [Open Connector Framework (OCF)](/frameworks/ocf/overview) which means the OMRS uses the OCF [Connector Broker](/concepts/connector-broker) to create the instances of the connectors it needs. The type of connector needed is defined in a connection object.
 

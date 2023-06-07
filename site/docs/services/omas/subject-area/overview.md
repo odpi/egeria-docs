@@ -5,14 +5,14 @@
 
 # Subject Area Open Metadata Access Service (OMAS)
 
-The Subject Area OMAS supports subject matter experts who are documenting
+The Subject Area OMAS supports subject-matter experts who are documenting
 their knowledge about a particular subject.  This includes:
 
 - glossary terms
 - reference data
 - validation rules
 
-The Subject Area API enables subject matter experts to author glossary content. The operations include Find, Create, Read, Update and 
+The Subject Area API enables subject-matter experts to author glossary content. The operations include Find, Create, Read, Update and 
 Delete (CRUD) operations on Glossary, Term and Category objects.
 
 These structures are defined as POJO property objects (aka beans).  The implementation is not complete. The following has been implemented : 
@@ -65,6 +65,7 @@ The Subject Area main objects are the Glossary, Category and Terms. There map on
 not one to one, because the OMAS API is looking to emphasise certain content and hide some of the OMRS details that the subject area expert is not concerned with.
  
 Subject Area OMAS mapping to OMRS entities considerations:
+
 * Glossary, Category and Term objects have associated icons, these are embedded objects rather than relationships. In this way icon content is shown as important to 
 the subject area expert as they are like to be working with the glossary content visually
 * The icon embedded object is an IconSummary object. This is an example of other object in the OMAS API whose names end with "Summary". These objects represent
@@ -77,6 +78,7 @@ area API Term and Category create and update APIs expect a glossary to be suppli
 ## The Subject Area OMAS API overview
 
 There are a number of types of APIs associated with the Subject Area OMAS.  
+
 * Create, update, replace, get, delete (hard and soft) and restore for Glossary, Category, Term and relationships.
 * get relationships associated with a Term - implemented
 * Find APIs allow content to be found - findTerm, findCategory and findGlossary implemented
@@ -89,6 +91,7 @@ There are a number of types of APIs associated with the Subject Area OMAS.
  
  The OMRS entities, relationships and classifications have optional effective From and To dates. These dates are exposed in the Term, Category and Glossary 
 objects as attributes.
+
 * create, update and replace calls to the subject Area for Term, Category, glossary and relationships omas can specify an effective date range in the request, allowing the subject area 
 OMAS to manage effective dates. The null value or when it is not specified To date means there is no limit in the future for the objects effectivity.
  A null or unspecified from date means that this no starting restriction for effectivity. The date must not be in the past. The From date should be prior to the To Date.

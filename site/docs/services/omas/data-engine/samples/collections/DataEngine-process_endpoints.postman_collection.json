@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "35d2fd44-da51-4fa2-aeeb-f455ba5d8dad",
+		"_postman_id": "32b3ebd2-9e9b-4fd7-b5f1-aeafa574972b",
 		"name": "DataEngine - process endpoints",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -85,7 +85,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\",\n    \"file\": {\n        \"fileType\": \"CSVFile\",\n        \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv\",\n        \"displayName\": \"names.csv\",\n        \"pathName\": \"/data/files/minimal/names.csv\",\n        \"additionalProperties\": {\n            \"include_for_business_lineage\": true,\n            \"path\": \"/data/files/minimal\",\n            \"store_type\": \"Local\"\n        },\n        \"columns\": [\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Id\",\n                \"displayName\": \"Id\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"BIGINT\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": false,\n                \"position\": 1,\n                \"minCardinality\": 1,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=First\",\n                \"displayName\": \"First\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": true,\n                \"position\": 2,\n                \"minCardinality\": 0,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Last\",\n                \"displayName\": \"Last\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": true,\n                \"position\": 3,\n                \"minCardinality\": 0,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Location\",\n                \"displayName\": \"Location\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": false,\n                \"position\": 4,\n                \"minCardinality\": 1,\n                \"maxCardinality\": 1\n            }\n        ]\n    }\n}",
+					"raw": "{\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\",\n    \"file\": {\n        \"fileType\": \"CSVFile\",\n        \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv\",\n        \"displayName\": \"names.csv\",\n        \"networkAddress\": \"localhost\",\n        \"pathName\": \"/data/files/minimal/names.csv\",\n        \"additionalProperties\": {\n            \"include_for_business_lineage\": true,\n            \"path\": \"/data/files/minimal\",\n            \"store_type\": \"Local\"\n        },\n        \"columns\": [\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Id\",\n                \"displayName\": \"Id\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"BIGINT\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": false,\n                \"position\": 1,\n                \"minCardinality\": 1,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=First\",\n                \"displayName\": \"First\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": true,\n                \"position\": 2,\n                \"minCardinality\": 0,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Last\",\n                \"displayName\": \"Last\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": true,\n                \"position\": 3,\n                \"minCardinality\": 0,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Location\",\n                \"displayName\": \"Location\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": false,\n                \"position\": 4,\n                \"minCardinality\": 1,\n                \"maxCardinality\": 1\n            }\n        ]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -121,7 +121,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\",\n    \"file\": {\n        \"fileType\": \"CSVFile\",\n        \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv\",\n        \"displayName\": \"emplname.csv\",\n        \"pathName\": \"/data/files/minimal/emplname.csv\",\n        \"additionalProperties\": {\n            \"include_for_business_lineage\": true,\n            \"path\": \"/data/files/minimal\",\n            \"store_type\": \"Local\"\n        },\n        \"columns\": [\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=EMPID\",\n                \"displayName\": \"EMPID\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"BIGINT\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": false,\n                \"position\": 1,\n                \"minCardinality\": 1,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=FNAME\",\n                \"displayName\": \"FNAME\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": true,\n                \"position\": 2,\n                \"minCardinality\": 0,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LNAME\",\n                \"displayName\": \"LNAME\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": true,\n                \"position\": 3,\n                \"minCardinality\": 0,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LOCID\",\n                \"displayName\": \"LOCID\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": false,\n                \"position\": 4,\n                \"minCardinality\": 1,\n                \"maxCardinality\": 1\n            }\n        ]\n    }\n}",
+					"raw": "{\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\",\n    \"file\": {\n        \"fileType\": \"CSVFile\",\n        \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv\",\n        \"displayName\": \"emplname.csv\",\n        \"networkAddress\": \"localhost\",\n        \"pathName\": \"/data/files/minimal/emplname.csv\",\n        \"additionalProperties\": {\n            \"include_for_business_lineage\": true,\n            \"path\": \"/data/files/minimal\",\n            \"store_type\": \"Local\"\n        },\n        \"columns\": [\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=EMPID\",\n                \"displayName\": \"EMPID\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"BIGINT\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": false,\n                \"position\": 1,\n                \"minCardinality\": 1,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=FNAME\",\n                \"displayName\": \"FNAME\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": true,\n                \"position\": 2,\n                \"minCardinality\": 0,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LNAME\",\n                \"displayName\": \"LNAME\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": true,\n                \"position\": 3,\n                \"minCardinality\": 0,\n                \"maxCardinality\": 1\n            },\n            {\n                \"qualifiedName\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LOCID\",\n                \"displayName\": \"LOCID\",\n                \"additionalProperties\": {\n                    \"odbc_type\": \"VARCHAR\"\n                },\n                \"allowDuplicates\": true,\n                \"deprecated\": false,\n                \"nullable\": false,\n                \"position\": 4,\n                \"minCardinality\": 1,\n                \"maxCardinality\": 1\n            }\n        ]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,7 +148,7 @@
 			"response": []
 		},
 		{
-			"name": "2.1. Crerate schema type - virtual asset",
+			"name": "2.1. Create schema type - virtual asset",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -398,7 +398,7 @@
 			"response": []
 		},
 		{
-			"name": "3.4. Add lineage mappings for CopyColumns process",
+			"name": "3.4. Add Data Flows for CopyColumns process",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -426,10 +426,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"lineageMappings\": [\n        {\n            \"sourceAttribute\":  \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Id\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Id\"\n        },\n        {\n            \"sourceAttribute\":  \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=First\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=First\"\n        },\n        {\n            \"sourceAttribute\":  \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Last\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Last\"\n        },\n        {\n            \"sourceAttribute\":  \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Location\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Location\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Id\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=EMPID\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=First\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=FNAME\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Last\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LNAME\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Location\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LOCID\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=EMPID\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=EMPID\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=FNAME\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=FNAME\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LNAME\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LNAME\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LOCID\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LOCID\"\n        }\n    ],\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
+					"raw": "{\n    \"dataFlows\": [\n        {\n            \"dataSupplier\":  \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Id\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Id\"\n        },\n        {\n            \"dataSupplier\":  \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=First\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=First\"\n        },\n        {\n            \"dataSupplier\":  \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Last\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Last\"\n        },\n        {\n            \"dataSupplier\":  \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Location\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Location\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Id\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=EMPID\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=First\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=FNAME\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Last\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LNAME\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Location\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LOCID\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=EMPID\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=EMPID\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=FNAME\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=FNAME\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LNAME\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LNAME\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LOCID\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LOCID\"\n        }\n    ],\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
 				},
 				"url": {
-					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/lineage-mappings",
+					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/data-flows",
 					"host": [
 						"{{base-url}}"
 					],
@@ -441,7 +441,7 @@
 						"data-engine",
 						"users",
 						"{{user-id}}",
-						"lineage-mappings"
+						"data-flows"
 					]
 				}
 			},
@@ -498,107 +498,7 @@
 			"response": []
 		},
 		{
-			"name": "3.6. Create PortAlias ReadInputFilePortAlias",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "demo",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "demo",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"processQualifiedName\": \"(process)=CopyColumnsFlow\",\n    \"portAlias\": {\n        \"displayName\": \"ReadInputFilePortAlias\",\n        \"qualifiedName\": \"(process)=CopyColumnsFlow::(port)=ReadInputFilePortAlias\",\n        \"updateSemantic\": \"REPLACE\",\n        \"delegatesTo\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputPort\",\n        \"type\": \"INPUT_PORT\"\n    },\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
-				},
-				"url": {
-					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/port-aliases",
-					"host": [
-						"{{base-url}}"
-					],
-					"path": [
-						"servers",
-						"{{server-id}}",
-						"open-metadata",
-						"access-services",
-						"data-engine",
-						"users",
-						"{{user-id}}",
-						"port-aliases"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "3.7. Create PortAlias WriteOutputFilePortAlias",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "demo",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "demo",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"processQualifiedName\": \"(process)=CopyColumnsFlow\",\n    \"portAlias\": {\n        \"displayName\": \"WriteOutputFilePortAlias\",\n        \"qualifiedName\": \"(process)=CopyColumnsFlow::(port)=WriteOutputFilePortAlias\",\n        \"updateSemantic\": \"REPLACE\",\n        \"delegatesTo\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputPort\",\n        \"type\": \"OUTPUT_PORT\"\n    },\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
-				},
-				"url": {
-					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/port-aliases",
-					"host": [
-						"{{base-url}}"
-					],
-					"path": [
-						"servers",
-						"{{server-id}}",
-						"open-metadata",
-						"access-services",
-						"data-engine",
-						"users",
-						"{{user-id}}",
-						"port-aliases"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "3.8. Add process hierarchy relationship",
+			"name": "3.6. Add process hierarchy relationship",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -648,57 +548,7 @@
 			"response": []
 		},
 		{
-			"name": "3.9. Delete PortAlias ReadInputFilePortAlias",
-			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "demo",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "demo",
-							"type": "string"
-						}
-					]
-				},
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"qualifiedName\": \"(process)=CopyColumnsFlow::(port)=ReadInputFilePortAlias\",\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
-				},
-				"url": {
-					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/port-aliases",
-					"host": [
-						"{{base-url}}"
-					],
-					"path": [
-						"servers",
-						"{{server-id}}",
-						"open-metadata",
-						"access-services",
-						"data-engine",
-						"users",
-						"{{user-id}}",
-						"port-aliases"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "3.10. Delete Process CopyColumnsFlow",
+			"name": "3.7. Delete Process CopyColumnsFlow",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -748,7 +598,7 @@
 			"response": []
 		},
 		{
-			"name": "3.11. Delete PortImplementation NamesFileInputPort",
+			"name": "3.8. Delete PortImplementation NamesFileInputPort",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -798,7 +648,7 @@
 			"response": []
 		},
 		{
-			"name": "3.12. Delete Process CopyColumns",
+			"name": "3.9. Delete Process CopyColumns",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -898,7 +748,7 @@
 			"response": []
 		},
 		{
-			"name": "4.2 Add lineage mappings for CopyColumns",
+			"name": "4.2 Add Data Flows for CopyColumns",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -926,10 +776,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"lineageMappings\": [\n        {\n            \"sourceAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Id\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Id\"\n        },\n        {\n            \"sourceAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=First\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=First\"\n        },\n        {\n            \"sourceAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Last\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Last\"\n        },\n        {\n            \"sourceAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Location\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Location\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Id\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=EMPID\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=First\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=FNAME\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Last\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LNAME\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Location\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LOCID\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=EMPID\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=EMPID\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=FNAME\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=FNAME\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LNAME\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LNAME\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LOCID\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LOCID\"\n        }\n    ],\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
+					"raw": "{\n    \"dataFlows\": [\n        {\n            \"dataSupplier\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Id\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Id\"\n        },\n        {\n            \"dataSupplier\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=First\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=First\"\n        },\n        {\n            \"dataSupplier\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Last\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Last\"\n        },\n        {\n            \"dataSupplier\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::(data_file_record)=names::(data_file_field)=Location\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Location\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Id\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=EMPID\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=First\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=FNAME\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Last\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LNAME\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputSchema::(column)=Location\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LOCID\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=EMPID\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=EMPID\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=FNAME\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=FNAME\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LNAME\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LNAME\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputSchema::(column)=LOCID\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::(data_file_record)=emplname::(data_file_field)=LOCID\"\n        }\n    ],\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
 				},
 				"url": {
-					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/lineage-mappings",
+					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/data-flows",
 					"host": [
 						"{{base-url}}"
 					],
@@ -941,7 +791,7 @@
 						"data-engine",
 						"users",
 						"{{user-id}}",
-						"lineage-mappings"
+						"data-flows"
 					]
 				}
 			},
@@ -976,7 +826,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"process\": {\n        \"qualifiedName\": \"(process)=CopyColumnsFlow\",\n        \"displayName\": \"CopyColumnsFlow\",\n        \"name\": \"CopyColumnsFlow\",\n        \"description\": \"CopyColumnsFlow describes high level process input and output and mappings between (sub)processes (if any).\",\n        \"owner\": \"Platform User\",\n        \"portAliases\": [\n            {\n                \"displayName\": \"ReadInputFilePortAlias\",\n                \"qualifiedName\": \"(process)=CopyColumnsFlow::(port)=ReadInputFilePortAlias\",\n                \"updateSemantic\": \"REPLACE\",\n                \"delegatesTo\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputPort\",\n                \"type\": \"INPUT_PORT\"\n            },\n            {\n                \"displayName\": \"WriteOutputFilePortAlias\",\n                \"qualifiedName\": \"(process)=CopyColumnsFlow::(port)=WriteOutputFilePortAlias\",\n                \"updateSemantic\": \"REPLACE\",\n                \"delegatesTo\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputPort\",\n                \"type\": \"OUTPUT_PORT\"\n            }\n        ],\n        \"lineageMappings\": [],\n        \"updateSemantic\": \"REPLACE\"\n    },\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
+					"raw": "{\n    \"process\": {\n        \"qualifiedName\": \"(process)=CopyColumnsFlow\",\n        \"displayName\": \"CopyColumnsFlow\",\n        \"name\": \"CopyColumnsFlow\",\n        \"description\": \"CopyColumnsFlow describes high level process input and output and mappings between (sub)processes (if any).\",\n        \"owner\": \"Platform User\",\n        \"portAliases\": [\n            {\n                \"displayName\": \"ReadInputFilePortAlias\",\n                \"qualifiedName\": \"(process)=CopyColumnsFlow::(port)=ReadInputFilePortAlias\",\n                \"updateSemantic\": \"REPLACE\",\n                \"delegatesTo\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=NamesFileInputPort\",\n                \"type\": \"INPUT_PORT\"\n            },\n            {\n                \"displayName\": \"WriteOutputFilePortAlias\",\n                \"qualifiedName\": \"(process)=CopyColumnsFlow::(port)=WriteOutputFilePortAlias\",\n                \"updateSemantic\": \"REPLACE\",\n                \"delegatesTo\": \"(process)=CopyColumnsFlow::(process)=CopyColumns::(port)=EmplnameFileOutputPort\",\n                \"type\": \"OUTPUT_PORT\"\n            }\n        ],\n        \"dataFlows\": [],\n        \"updateSemantic\": \"REPLACE\"\n    },\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
 				},
 				"url": {
 					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/processes",
@@ -998,7 +848,57 @@
 			"response": []
 		},
 		{
-			"name": "4.4. Delete Process CopyColumns",
+			"name": "4.4. Add prcess hierarchy relationship",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "demo",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "demo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"processHierarchy\": {\n        \"parentProcess\": \"(process)=CopyColumnsFlow\",\n        \"childProcess\": \"(process)=CopyColumnsFlow::(process)=CopyColumns\",\n        \"containmentType\": \"OWNED\"\n    },\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
+				},
+				"url": {
+					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/process-hierarchies",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"servers",
+						"{{server-id}}",
+						"open-metadata",
+						"access-services",
+						"data-engine",
+						"users",
+						"{{user-id}}",
+						"process-hierarchies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.5. Delete Process CopyColumns",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -1048,7 +948,7 @@
 			"response": []
 		},
 		{
-			"name": "4.5. Delete Process CopyColumnsFlow",
+			"name": "4.6. Delete Process CopyColumnsFlow",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -1148,7 +1048,7 @@
 			"response": []
 		},
 		{
-			"name": "5.2 Add lineage mappings for CopyColumnsFlow-high-level process",
+			"name": "5.2 Add Data Flows for CopyColumnsFlow-high-level process",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -1176,10 +1076,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"lineageMappings\": [\n        {\n            \"sourceAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::schema\",\n            \"targetAttribute\": \"(process)=CopyColumnsFlow-high-level\"\n        },\n        {\n            \"sourceAttribute\": \"(process)=CopyColumnsFlow-high-level\",\n            \"targetAttribute\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::schema\"\n        }\n    ],\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
+					"raw": "{\n    \"dataFlows\": [\n        {\n            \"dataSupplier\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=names.csv::schema\",\n            \"dataConsumer\": \"(process)=CopyColumnsFlow-high-level\"\n        },\n        {\n            \"dataSupplier\": \"(process)=CopyColumnsFlow-high-level\",\n            \"dataConsumer\": \"(host)=HOST::(data_file_folder)=/::(data_file_folder)=data::(data_file_folder)=files::(data_file_folder)=minimal::(data_file)=emplname.csv::schema\"\n        }\n    ],\n    \"externalSourceName\": \"(organization)=Company::(project)=ExternalDataPlatform\"\n}"
 				},
 				"url": {
-					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/lineage-mappings",
+					"raw": "{{base-url}}/servers/{{server-id}}/open-metadata/access-services/data-engine/users/{{user-id}}/data-flows",
 					"host": [
 						"{{base-url}}"
 					],
@@ -1191,7 +1091,7 @@
 						"data-engine",
 						"users",
 						"{{user-id}}",
-						"lineage-mappings"
+						"data-flows"
 					]
 				}
 			},

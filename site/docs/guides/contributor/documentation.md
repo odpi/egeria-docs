@@ -48,9 +48,9 @@ The top of the page gives a general description of the OMAG Server Platform plus
 
 ![Swagger heading](../../education/tutorials/swagger-tutorial/swagger-ui-top.png)
 
-The content for this header is located in the [OMAGServerPlatform.java :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/server-chassis/server-chassis-spring/src/main/java/org/odpi/openmetadata/serverchassis/springboot/OMAGServerPlatform.java){ target=gh } file that provides the `main()` method for the OMAG Server Platform.
+The content for this header is located in the [OMAGServerPlatform.java :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/server-chassis/server-chassis-spring/src/main/java/org/odpi/openmetadata/serverchassis/springboot/OMAGServerPlatform.java){ target=gh } file that provides the `main()` method for the OMAG Server Platform.
 
-!!! example "Swagger annotations in [`OMAGServerPlatform.java` :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/server-chassis/server-chassis-spring/src/main/java/org/odpi/openmetadata/serverchassis/springboot/OMAGServerPlatform.java){ target=gh }"
+!!! example "Swagger annotations in [`OMAGServerPlatform.java` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/server-chassis/server-chassis-spring/src/main/java/org/odpi/openmetadata/serverchassis/springboot/OMAGServerPlatform.java){ target=gh }"
     ```java linenums="1"
     @OpenAPIDefinition(
             info = @Info(
@@ -74,7 +74,7 @@ The content for this header is located in the [OMAGServerPlatform.java :material
                             "or host a variety of different OMAG Servers needed at a particular location.\n" +
                             "\n" +
                             "Click on the documentation link to find out more ...",
-                    license = @License(name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"),
+                    license = @License(name = "Apache-2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"),
                     contact = @Contact(url = "https://egeria.odpi.org", name = "Egeria Project", email = "egeria-technical-discuss@lists.lfaidata.foundation")
             ),
     
@@ -90,7 +90,7 @@ Beneath the header is a list of the platform's REST APIs.  This is the definitio
 
 The REST API operations are grouped into services by the following `@Tag` annotation that appears in each [Spring](/guides/contributor/runtime/#spring) resource bean that is part of the service. If the name of the `@Tag` matches then the operations in the resource beans are all part of the same service.
 
-!!! example "Swagger annotations in [OperationalServicesResource.java :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-implementation/admin-services/admin-services-spring/src/main/java/org/odpi/openmetadata/adminservices/spring/OperationalServicesResource.java){ target=gh }"
+!!! example "Swagger annotations in [OperationalServicesResource.java :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/admin-services/admin-services-spring/src/main/java/org/odpi/openmetadata/adminservices/spring/OperationalServicesResource.java){ target=gh }"
     ```java linenums="1"
     @Tag(name="Administration Services - Operational",
          description="The operational administration services support the management " +

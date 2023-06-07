@@ -4,7 +4,7 @@
 # Platform report for: https://localhost:9443
 
 ## Platform deployment
-* **Egeria version**: Egeria OMAG Server Platform (version 3.8-SNAPSHOT)
+* **Egeria version**: Egeria OMAG Server Platform (version 3.12)
 * **Configuration document store connector**: *null*
 * **Platform security connector**: *null*
 ## Registered services
@@ -169,4 +169,3 @@
 * **Location**: egeria.omag.server.mds1.omas.assetowner.inTopic
 * **Configuration Properties**: {producer={bootstrap.servers=localhost:9092}, local.server.id=fab57cdc-e7fb-4f23-8237-376c9fda492b, consumer={bootstrap.servers=localhost:9092, auto.commit.interval.ms=1}}
 
---8<-- "snippets/abbr.md"

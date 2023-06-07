@@ -50,7 +50,7 @@ metadata server 'mds1' and a view server 'view1'. The UI organization name is 'o
 A job is started to perform this configuration and may take up to 10 minutes to complete.
 
 Please provide any feeback via a github issue at https://github.com/odpi/egeria or
-join us on slack via https://http://slack.lfai.foundation
+join us on slack via https://http://slack.lfaidata.foundation
 
 - The ODPi Egeria team
 ```
@@ -307,7 +307,7 @@ _It's important to note that we are only defining the configuration of a server 
 ### Examining the configuration
 
 Use the **Egeria-admin-services-platform-configuration** Postman collection to experiment with the
-different registered services and and known and active server requests.
+different registered services and known and active server requests.
 These are useful to know as we move to configure servers on the platform.
 ### Test yourself
 

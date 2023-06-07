@@ -3,11 +3,13 @@
 
 # 0130 Projects
 
-## Projects
-
-Projects are used to organize a specific activity. The project is used to control the use of resources and associated costs, so they are used appropriately in order to successfully achieve the project's goals.
+Projects are used to organize a specific activity. They control the use of resources and associated costs, so they are used appropriately in order to successfully achieve the project's goals.
 
 ![UML](0130-Projects.svg)
+
+## Projects
+
+
 
 Projects organize resources to build new capability or improve existing capability. Related projects can be organized into campaigns. Small items of work, typically performed by a single person, can be defined as tasks for a project.
 

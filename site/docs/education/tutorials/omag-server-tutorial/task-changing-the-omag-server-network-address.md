@@ -71,4 +71,4 @@ $ curl --insecure -X GET https://localhost:9444/open-metadata/platform-services/
 Egeria OMAG Server Platform
 ```
 
---8<-- "snippets/abbr.md"
+

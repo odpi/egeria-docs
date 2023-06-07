@@ -11,20 +11,18 @@ As such, these guidelines exist to remind us of these broader responsibilities.
 
 ## Build environment
 
-The core of Egeria is written primarily in [Java](/guides/developer/languages/#java), and the minimum level required to build and run it is 11.
+The core of Egeria is written primarily in [Java](/guides/developer/languages/#java), and the minimum level required to build and run it is 17.
 
 Most developers use MacOS, while our official builds use Linux (Ubuntu/Centos/RHEL should all be fine).
 
 !!! attention "Windows is unsupported"
     The traditional Windows environment is not directly supported. It is recommended to use [WSL2 :material-dock-window:](https://docs.microsoft.com/en-us/windows/wsl/){ target=ms } which offers a full Linux environment.
 
-[Apache Maven](https://maven.apache.org/index.html) is used to control the builds, and 3.5 or higher is required to build Egeria (3.6.x or above is recommended).
+[Gradle](https://gradle.org/) is used to control the builds, and is automatically downloaded when needed. (see [gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html))
 
-[Gradle](https://gradle.org/) is not currently supported but is being developed.
+IDEs can make navigating the Egeria code easier. Each IDE can vary a lot. Many of the Egeria community use [JetBrains IntelliJ](/education/tutorials/intellij-tutorial/overview) for the core Egeria project, which is very large. Smaller projects, and non-java projects also will work well with [Microsoft Visual Code](https://code.visualstudio.com/).
 
-IDEs can make navigating the Egeria code easier. Each IDE can vary a lot. Many of the Egeria community use [JetBrains IntelliJ](/education/tutorials/intellij-tutorial/overview).
-
-In the case of problems the first problem determination step is to check you can build Egeria normally at the command line i.e. `mvn clean install` from the source root. That will prove at least Java and Maven are correct.
+In the case of problems the first problem determination step is to check you can build Egeria normally at the command line i.e. `./gradlew build` from the source root. That will prove at least Java and Gradle are correct.
 
 !!! tip "Set `JAVA_HOME`"
     We have also noticed that you need to ensure `JAVA_HOME` is set or the build will fail running Javadoc.
@@ -74,7 +72,7 @@ The exception is that directories representing Java packages do not need README 
 
 ### Javadoc
 
-[Javadoc :material-dock-window:](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/javadoc.html){ target=java } is used to build a code reference for our public site. It is generated as part of the build.  There are three places where Javadoc should be provided by the developer of Java code:
+[Javadoc :material-dock-window:](https://docs.oracle.com/en/java/javase/17/javadoc/javadoc.html){ target=java } is used to build a code reference for [our public site](https://odpi.github.io/egeria/index.html). It is generated as part of the build.  There are three places where Javadoc should be provided by the developer of Java code:
 
 - Every Java source file should begin with a header Javadoc tag just before the start of the class/interface/enum, which explains the purpose and responsibilities of the code.
 - All public methods should have a clear Javadoc header describing the purpose, parameters and results (including exceptions). This includes test cases.
@@ -83,6 +81,8 @@ The exception is that directories representing Java packages do not need README 
 Java code files may have additional comments, particularly where the processing is complex. The most useful comments are those that describe the purpose, or intent of the code, rather than a description of what each line of code is doing.
 
 The output from a build should be checked to ensure there are no Javadoc warnings: for example about undocumented parameters or exceptions.
+
+Javadoc is published as part of each published artifact, which allows IDEs to show the documentation automatically. It is also published to an [Egeria javadoc website](https://odpi.github.io/egeria/index.html) as part of the build process.
 
 ## Log through ALF
 
@@ -110,18 +110,18 @@ In Egeria, date / time instants are always represented as Unix Epoch time with m
 Egeria is an integration technology which means that it uses a comprehensive multi-level approach to testing.
 
 Modules include unit tests. These unit tests should focus on simple validation of Java beans, utilities and code that can easily be tested in isolation. The unit tests run as part of the build and a pull request
-cannot be incorporated into master if any unit tests are failing. They should not significantly extend the time of the build since this impacts all the contributors' productivity. Our preferred Java frameworks for unit testing are [TestNG :material-dock-window:](http://testng.org){ target=test } and [Mockito :material-dock-window:](http://mockito.org){ target=test }.
+cannot be incorporated into main if any unit tests are failing. They should not significantly extend the time of the build since this impacts all the contributors' productivity. Our preferred Java frameworks for unit testing are [JUnit5 :material-dock-window:](http://junit.org){ target=test }, [TestNG :material-dock-window:](http://testng.org){ target=test } and [Mockito :material-dock-window:](http://mockito.org){ target=test }.
 
-External APIs (typically they include both a client and a server component) are tested using functional verification tests (FVTs). These are located in the [open-metadata-test/open-metadata-fvt :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-test/open-metadata-fvt) module. The aim of these tests is to check that the APIs validate all of their parameters and function correctly in a single server environment. These tests also operate as part of the build but are not run as part of the PR process. Modules should ensure they include some FVTs as they move [from development to technical preview](/release-notes/content-status). By the time the module is moving to released function, the FVTs should be able to validate that this function is stable and correct.
+External APIs (typically they include both a client and a server component) are tested using functional verification tests (FVTs). These are located in the [open-metadata-test/open-metadata-fvt :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-test/open-metadata-fvt) module. The aim of these tests is to check that the APIs validate all of their parameters and function correctly in a single server environment. These tests also operate as part of the build but are not run as part of the PR process. Modules should ensure they include some FVTs as they move [from development to technical preview](/release-notes/content-status). By the time the module is moving to released function, the FVTs should be able to validate that this function is stable and correct.
 
-Some connectors are tested via the [Conformance Test Suite](/guides/cts/overview). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into master. The conformance test suite is also run as part of the release process.
+Some connectors are tested via the [Conformance Test Suite](/guides/cts/overview). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into main. The conformance test suite is also run as part of the release process.
 
 Egeria's [hands on labs](/education/open-metadata-labs) provide a complex multi-server environment and are typically used by contributors to verify that their changes have not regressed any of the
 basic function.
 
 We are also interested in building out a comprehensive integration test to allow automated complex multi-server scenarios that can be running continuously.
 
-## Sign commits to accept DCO
+## Sign-off commits to accept DCO
 
 We have tried to make it as easy as possible to make contributions. This applies to how we handle the legal aspects of contribution.
 
@@ -172,7 +172,7 @@ We tend to use [Postman :material-dock-window:](https://www.getpostman.com){ tar
 
 When developing a new API in Egeria, you may want to make similar samples available to both provide examples of using the API and for basic testing purposes. These should be developed as follows:
 
-1. Wherever possible, re-use the environment variables that are already defined in [Egeria.postman_environment.json :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/postman-rest-samples/Egeria.postman_environment.json){ target=gh }. If you need another variable that is not already defined, add it to this environment definition.
+1. Wherever possible, re-use the environment variables that are already defined in [Egeria.postman_environment.json :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-samples/postman-rest-samples/Egeria.postman_environment.json){ target=gh }. If you need another variable that is not already defined, add it to this environment definition.
 
     This way we have a single environment definition that covers all possible sample configurations.
 
@@ -180,7 +180,7 @@ When developing a new API in Egeria, you may want to make similar samples availa
 
     Once ready for sharing, export the collection into a file and commit your collection into GitHub wherever is most appropriate for the anticipated users of the samples.
 
-1. Create a descriptive entry in [postman-rest-samples/README.md :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/postman-rest-samples/README.md){ target=gh } under a sub-section of the **Sample Collections** heading, linking to your new collection within GitHub. Use the existing samples defined there for guidance: provide a limited introductory description to any pre-requisites for your collection, if it needs to be run after some other collection define these in a sequence, etc.
+1. Create a descriptive entry in [postman-rest-samples/README.md :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-samples/postman-rest-samples/README.md){ target=gh } under a sub-section of the **Sample Collections** heading, linking to your new collection within GitHub. Use the existing samples defined there for guidance: provide a limited introductory description to any pre-requisites for your collection, if it needs to be run after some other collection define these in a sequence, etc.
 
     If your description for use requires more than 1-2 simple sentences, consider linking to more detailed instructions rather than putting these all into the general `README`. (See samples where we link out to more information on loading Coco Pharmaceuticals samples rather than embedding all of this detail directly in the one `README`.)
 
@@ -206,9 +206,11 @@ Once in place, the dependency should be maintained across the smallest appropria
 
 ### General rules
 
-- Calls to third party technology that Egeria is integrating must be isolated into connectors so that they are optional.
+- Calls to third party technology that Egeria is integrating must be isolated into connectors so that they are optional. 
+- Code should be in a seperate repo if lifecycle, community or technology significantly differ from Egeria core.
 - Try to use standard Java and Egeria's existing dependencies where possible - consider carefully if a new dependency is needed.
-- Always define the dependency at the lowest-level `pom.xml` where it's needed.
+- Use dependency constraints defined in the egeria bom (bom/build.gradle) to ensure consistent use of versions
+- Always use the dependency at the lowest-level `build.gradle` where it's needed.
 - Use a current non-beta version of a dependency.
 - Check build output carefully for any dependency warnings and errors.
 - Do not add any exceptions to the existing rules without discussion with other maintainers.
@@ -220,102 +222,164 @@ Once in place, the dependency should be maintained across the smallest appropria
     - Do **not** provide a configuration file: default formatting will be used and can be overriden by logback configuration at deployment time.
 - Test code automatically includes `slf4j-simple` - a simple logging implementation
 - Other code that forms libraries (most of our code) **must not** include a `slf4j` logging implementation. Otherwise, the application loses control of the logging implementation, hidden config files can change behavior, and a `multiple_bindings` issue will be raised by `slf4j`.
+- If non-egeria dependencies use other logging frameworks, add in appropriate adapters to map them to slf4j-api as this will avoid conflicts and confusion.
 
 ### Understanding dependencies
 
-Running `mvn dependency:tree` is a useful way to understand what dependencies (direct and transitive) a module has.
+Running `./gradlew printAllDependencies` is a useful way to understand what dependencies (direct and transitive) a module has.
 
 ### Adding a new dependency
 
-- Check if the dependency is already listed in the top-level `pom.xml`.
-- If not, add a section such as the following within the `<dependencyManagement>` section of the top-level `pom.xml`:
+- Check if the dependency is already listed in the BOM at `bom/build.gradle`. If not:
+  - add an extra property under ext-> for clarity ie:
+  ```groovy
+     kafkaVersion = '3.4.0'
+  ```
+  - add a section such as the following within the `dependencies->constraints` section. This will include a version`:
+    ```groovy
+       api("org.apache.kafka:kafka-clients:${kafkaVersion}")
+    ```
+    This declaration only means that *if* a dependency is used, this version is used.
 
-    !!! example "Example dependency entry in top-level `pom.xml`"
-        ```xml linenums="1"
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
-            <scope>compile</scope>
-            <version>${kafka.version}</version>
-        </dependency>
-        ```
+- Add the dependency to the `dependencies` section of your project's `build.gradle`:
+  ```groovy
+  api("org.apache.kafka:kafka-clients:${kafkaVersion}")
+  ```
 
-        This declaration only means that *if* a dependency is used, these are the defaults to use -- most critically including version, though scope is a useful default to add, too: for example if the dependency is only for tests.
-
-- Add the dependency to the `<dependency>` section of your module's `pom.xml`:
-
-    !!! example "Example dependency entry in module's `pom.xml`"
-        ```xml linenums="1"
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
-        </dependency>
-        ```
-
-        Note that the version is not included - it will be picked up from `<dependencyManagement>`.
+  Note that the version is not included - it will be picked up from the constraints`.
 
 Now build to include some checks for correct usage of dependencies (see below):
 
 !!! cli "Build Egeria"
     ```shell
-    mvn clean install
+    ./gradlew build
     ```
 
 !!! info "More on scopes"
-    Most dependencies will be of scope `compile` (used for build and runtime), or `test` (for test tools). There are [other scopes available that you may want to use in specific circumstances :material-dock-window:](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope){ target=maven }.
+    Most dependencies will be of scope `Implementation` (used for build and runtime & test), or `testImplementation` (for test tools). There are [other scopes available :material-dock-window:](https://docs.gradle.org/current/userguide/declaring_dependencies.html){ target=gradle }.
 
 ### Build time checks
 
-The top-level `pom.xml` defines checks that are run in reference to dependencies:
+The top-level `build.gradle` defines checks that are run in reference to dependencies:
 
-- the [maven dependency plugin `analyze-only` :material-dock-window:](https://maven.apache.org/plugins/maven-dependency-plugin/analyze-only-mojo.html){ target=maven } goal is used to check that any dependencies referred to in the object code are declared as dependencies, and that any not used are not. Any discrepancies will be reported as part of the build. Occasionally exceptions may be required, generally for dependencies that are only needed at runtime.
-- the [maven dependency plugin `analyze-dep-mgt` :material-dock-window:](https://maven.apache.org/plugins/maven-dependency-plugin/analyze-dep-mgt-mojo.html){ target=maven } goal is used to check all dependencies declared are of the same version as that in `dependencyManagement` in the top-level `pom.xml`
-- the [maven enforcer plugin `enforce` :material-dock-window:](https://maven.apache.org/enforcer/maven-enforcer-plugin/enforce-mojo.html){ target=maven } goal is used with the following rules:
-    - [`reactorModuleConvergence` :material-dock-window:](https://maven.apache.org/enforcer/enforcer-rules/reactorModuleConvergence.html){ target=maven } checks for correct parent/child relationships and inconsistency
-    - [`requireUpperBoundDeps` :material-dock-window:](https://maven.apache.org/enforcer/enforcer-rules/requireUpperBoundDeps.html){ target=maven } checks that minimum versions are satisfied for all transitive dependencies.
+- correct scope applied to dependencies (ie are they used at runtime only, or for build, or perhaps just for test)
+- any dependencies that are not used
+- missing dependencies
+- conflicts in logging implementations
+- conflicts on other standard libraries (such as javax.* vs jakarta.*)
+
+See the top level build.gradle for more details
 
 If any of these checks fail an appropriate message will be displayed and the build will fail.
 
 !!! attention "Incompatible versions"
-    In some cases where incompatible versions are reported, it may be due to transitive dependencies: for example a component the Egeria code does not depend on directly, but only indirectly. The path to resolve the version could result in different versions being used, or at least attempted, then failing. To resolve this a reference can be added in `<dependencyManagement>` to specify the version to use.
+    In some cases where incompatible versions are reported, it may be due to transitive dependencies: for example a component the Egeria code does not depend on directly, but only indirectly. The path to resolve the version could result in different versions being used, or at least attempted, then failing. To resolve this a reference can be added in our constraints to specify the version to use.
 
 ## Maintain security
 
 Egeria's dependencies are scanned for potential CVEs automatically in two main ways:
 
 - GitHub [scans dependencies :material-dock-window:](https://help.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies){ target=gh } for known CVEs.
-- A weekly [Nexus CLM scan :material-dock-window:](https://nexus-iq.wl.linuxfoundation.org/assets/index.html#/reports/odpi-egeria/){ target=nexus } is run.
+- Regular [Sonatype scans :material-dock-window:](https://lift.sonatype.com/results/github.com/odpi){ target=sonatype } is run.
 
 The maintainers will review these regularly and action any required changes through issues and pull requests.
 
-Egeria code itself is also scanned for vulnerabilities using [Sonar :material-dock-window:](https://sonarcloud.io/dashboard?id=odpi_egeria){ target=sonar }.
+Egeria code itself is also scanned for vulnerabilities by various scanners which vary by repository. Sonatype Lift and Github CodeQL are commonly used, and will add notes into PRs for developers to review.
 
-Any developer can perform similar checks by running:
-
-!!! cli "Perform security scans"
-    ```shell
-    mvn clean install -DfindBugs
-    ```
-
-This will run (and create a file for each module):
-
-| Goal(s) | Output file(s) |
-|---|---|
-| [`spotBugs` :material-dock-window:](https://spotbugs.github.io/spotbugs-maven-plugin/index.html){ target=bugs } including [`findsecbugs` :material-dock-window:](https://find-sec-bugs.github.io/){ target=bugs } | `spotBugsXml.xml` |
-| [`pmd` :material-dock-window:](https://maven.apache.org/plugins/maven-pmd-plugin/){ target=maven } | `pmd.xml` |
-| [OWASP dependency checker :material-dock-window:](https://jeremylong.github.io/DependencyCheck/dependency-check-maven/){ target=maven } | `dependency-check-report.html` |
-
-!!! attention "May take more than an hour"
-    Note that the scan may take a long time - an hour or more for all checks.
-
-!!! tip "Handling memory requirements"
-    If running against *all* components (i.e. from the root) an invocation like the following may be needed due to the memory requirements of a security scan:
-
-    !!! cli "Run with additional memory"
-        ```
-        MAVEN_OPTS="-Xmx5000M -Xss512M -XX:MaxPermSize=2048M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC" mvn clean install -DfindBugs
-        ```
 
 For more information on how potential security issues are handled, see [security hardening](/guides/developer/process/#security-hardening).
+
+## Keeping dependencies up to date
+
+[Dependabot](https://github.com/dependabot) is enabled on all egeria repositories to keep our dependencies up to date. This includes not just java code, but other languages too. Docker container images, and github actions are also covered.
+
+Dependabot will notice when a new dependency update is available, and create a PR in the repository. For egeria this is typically monthly, on the 1st of the month. (but repositories vary)
+
+These PRs should be reviewed promptly, and merged if possible. Where there is a reason to delay and close the PR, and issue should be opened to track any blockers to performing the merge
+
+This is a responsibility of the github repository owner.
+
+For an example refer to the core egeria [dependabot.yml](https://github.com/odpi/egeria/blob/main/.github/dependabot.yml)
+
+### Handling large numbers of updates
+
+Some repositories, such as core Egeria, may have many dependencies to update, resulting in many PRs at the beginning of each month. rather than merging PRs one by one, a 
+
+To merge each individually could take a long time, especially as the other PRs then need rebasing, and will again have FVTs re-run.
+
+An alternative is to:
+
+* Ensure your origin/main is updated with upstream/main (`git checkout main && git pull upstream main`)
+* Create a development branch (ie 'dependabot_20230512') (`git checkout -b dependabot_20230512`)
+* Open up each PR in turn, and for each commit listed, cherry-pick into the dev branch (`git cherry-pick -s <commit-id>`)
+* Build/test locally, and fix as required (`./gradlew build`)
+* create a PR
+* merge PR
+* At this point, over the next day or so, the dependabot PRs will automatically close
+* After 1 day manually review any still left open - sometimes they fail to rebase.
+
+For the actual cherry-picking, if the  is installed a script can be used.
+
+For example, the following will:
+
+ * cherry pick a commit
+ * Display if any conflicts occur
+ * If needed, user should then fix up the conflict manually, and to a `git add . && git cherry-pick --continue`, or skip with `git cherry-pick --abort`
+ * wait for user to hit enter. 
+ * this will continue until all open PRs from dependabot are handled (max 49)
+
+The following tools must be installed:
+
+ * [jq](https://github.com/stedolan/jq)
+ * [GitHub CLI 'gh'](https://cli.github.com)
+```
+#!/bin/sh
+git fetch --all
+for c in `gh pr list -L49 --app 'dependabot' --json id,commits | jq '.[] | .commits[].oid' `
+do
+  c2=`echo $c | tr -d '"'`
+  git cherry-pick -s  $c2
+read y
+done
+```
+### Grouped Updates
+
+In May 2023 Github started a private beta to enable [grouping of updates](https://gist.github.com/brrygrdn/0dac4e16c68898fda33d8fa81d575e1a) in response to feedback. The core 'egeria' repository is enabled for this capability.
+
+The objective is to select sets of dependencies that are best managed as one unit. This should improve consistency, and mean that we run the updates together in the verification pipeline - including
+running our FVT tests. Independently the updates might fail since there could be dependencies between spring and springboot.
+
+An example is spring where we also include tomcat:
+```yaml
+  # Grouping of dependencies - useful to retain consistency & prevent build breaks
+  groups:
+    spring:
+      patterns:
+        - "*spring*"
+        - "*tomcat*"
+```
+### Language environments - ie Java, Python etc
+
+#### Java
+
+The compiler/language version should be reviewed periodically. For Java we have moved from 8, to 11, to 17. Usually we aim to use the current LTS after it has been out for a while. For java 11-17 this was around a year.
+
+### Build tools
+
+Build tool versions should also be kept up to date.
+
+#### Gradle
+
+We update the [Gradle wrapper](https://docs.gradle.org/current/userguide/gradle_wrapper.html) at the same time as handling dependabot updates. Minor versions are usually compatible. Major versions may require changes, but any incompatibilities are usually reported as gradle warnings with the previous version, so these should be acted on promptly.
+
+To update the gradle wrapper use:
+```xml
+./gradlew wrapper --gradle-version=latest
+```
+
+The build should then be tested.
+
+Any warnings related to changing in the future release should be actioned to avoid future issues.
+
 
 --8<-- "snippets/abbr.md"

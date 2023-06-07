@@ -11,7 +11,7 @@ hide:
 The *SupplementaryProperties* link a [Referenceable](/types/0/0010-Base-Model) element
 to a glossary term that contains additional descriptive properties about the linked element.
 This enables a steward or owner to maintain additional information about the element
-event if the element is read-only because it is technical metadata extracted from an engine or platform.
+even if the element is read-only because it is technical metadata extracted from an engine or platform.
 
 
 ![UML](0395-Supplementary-Properties.svg)

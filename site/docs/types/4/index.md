@@ -8,14 +8,9 @@ hide:
 
 # Area 4 Models - Governance
 
-Area 4 defines how the data assets should be governed.
-This is where the classifications, policies and rules are
-defined for governance.
+Area 4 defines how the data assets should be governed. This is where the classifications, policies and rules are defined for governance.
 
-In a similar way to the glossary ([area 3](/types/3))
-this information is authored in the metadata repositories and then distributed to the enforcement points and data
-platforms to action and return measurements that can be used to confirm
-that the governance program has a positive effect.
+In a similar way to the glossary ([area 3](/types/3)), this information is authored in the metadata repositories and then distributed to the enforcement points and data platforms to action and return measurements that can be used to confirm that the governance program has a positive effect.
 
 * **[0401 Governance Definitions](0401-Governance-Definitions.md)**
 * **[0405 Governance Drivers](0405-Governance-Drivers.md)**
@@ -39,10 +34,13 @@ that the governance program has a positive effect.
 * **[0461 Governance Engines](0461-Governance-Engines.md)**
 * **[0462 Governance Action Types](0462-Governance-Action-Types.md)**
 * **[0463 Governance Actions](0463-Governance-Actions.md)**
+* **[0464 Dynamic Integration Groups](0464-Dynamic-Integration-Groups.md)**
 * **[0465 Duplicate Processing](0465-Duplicate-Processing.md)**
 * **[0470 Incident Reporting](0470-Incident-Reporting.md)**
 * **[0481 Licenses](0481-Licenses.md)**
 * **[0482 Certifications](0482-Certifications.md)**
+* **[0483 Terms and Conditions](0483-Terms-And-Conditions.md)**
+* **[0484 Agreements](0484-Agreements.md)**
 * **[0485 Data Processing Purposes](0485-Data-Processing-Purposes.md)**
 
 ![UML Packages](area-4-governance-overview.svg)

@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -10,7 +5,7 @@ hide:
 
 A *subsystem* is a collection of components within a software server platform that supports one or more related services. Subsystems can be organized in a hierarchy where course-grained subsystems can be decomposed into more fine-grained subsystems.
 
-The [OMAG Server Platform](/concepts/omag-server-platform) is a collection of subsystems that support open metadata and governance services as well as its own operational needs.
+The [OMAG Server Platform](/concepts/omag-server-platform) is a collection of subsystems that support open metadata and governance services as well as its own operational needs.  It is designed to provide a runtime where nothing is running when it starts.  Services are activated dynamically through the [Administration services](/services/admin/services/overview).
 
 ## Fixed services
 
@@ -40,17 +35,15 @@ Fixed services that are always present in the platform:
     - [Engine host services](/services/engine-host-services) implements the services for the [Engine Host](/concepts/engine-host).
     - [Integration daemon services](/services/integration-daemon-services) implements the services for the [Integration Daemon](/concepts/integration-daemon).
     - [Open lineage services](/services/open-lineage-services) implements services for the [Open Lineage Server](/concepts/open-lineage-server).
-    
-- [Connected Asset Services](/services/ocf-metadata-management) for supporting the server-side REST API behind the `ConnectedAsset` interface of an OCF connector.
 
+- [Connected Asset Services](/services/ocf-metadata-management) for supporting the server-side REST API behind the `ConnectedAssetProperties` interface of an [Open Connector Framework (OCF)](/frameworks/ocf/overview) connector.
 
-
-
+- [Open Metadata Store Services](/services/gaf-metadata-management) for supporting the server-side REST API behind the `OpenMetadataStore` interface of the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
 
 
 ## Registered services
 
-Dynamically registered services provide specialist APIs for particular technologies and user roles. Each of these services runs in their own subsystem independent of the other registered services. The implementation may come from Egeria or a third party. The links are to Egeria provided dynamic services.
+The registered services provide specialist APIs for particular technologies and user roles. Each of these services runs in their own subsystem independent of the other registered services. The implementation may come from Egeria or a third party. The links below are to the registered services provided by Egeria.
 
 - [Open Metadata Access Services (OMASs)](/services/omas) for supporting domain-specific services for metadata access and governance. Access services run in the [metadata access server](/concepts/metadata-access-server).
 - [Open Metadata Engine Services (OMESs)](/services/omes) for supporting specialized governance engines that drive governance activity in the open metadata ecosystem. The engine services run in the [engine host](/concepts/engine-host) server.

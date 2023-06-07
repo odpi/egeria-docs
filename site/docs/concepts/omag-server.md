@@ -5,7 +5,7 @@
 
 An *OMAG Server* is a software server that runs inside the [OMAG Server Platform](/concepts/omag-server-platform). It is therefore sometimes referred to as a "logical" server rather than a physical server that runs in its own process. It supports the integration of one or more technologies by hosting connectors that interact with that technology, or providing specialist [APIs](/basic-concepts/#application-programming-interface-apis) or [event topics](/basic-concepts/#topic) (both in and out).
 
-Because of the wide variety of technologies deployed in organizations today, each with very different capabilities and needs, the integration and exchange of metadata needs to be organized. This organization is managed through the Egeria frameworks and services supported by the OMAG Servers. There are different types of OMAG Server, each supporting specific technologies. The OMAG Server ensures this type of technology is integrated appropriately for its needs.
+Because of the wide variety of technologies deployed in organizations today, each with very different capabilities and needs, the integration and exchange of metadata needs to be organized. This organization is managed through the Egeria frameworks and services supported by the OMAG Servers. There are different [types of OMAG Server](#types-of-omag-server), each supporting specific technologies. The OMAG Server ensures this type of technology is integrated appropriately for its needs.
 
 The capabilities that are activated in an OMAG Server are defined in its [configuration document](/concepts/configuration-document). When the server is started, the operational services of the OMAG Server Platform reads the configuration document and activates the OMAG Server with the requested services.
 

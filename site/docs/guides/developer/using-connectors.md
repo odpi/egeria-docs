@@ -19,7 +19,7 @@ In the sample, the connector returned by the Asset Consumer OMAS client is then 
 
 Assets that do not have a `CSVFileConnector` are ignored. The result is that the sample method returns a connector for the first CSV file asset retrieved from the metadata repository.
 
-??? example "Example: [connecting to CSV files using Asset Consumer OMAS :material-github:](https://github.com/odpi/egeria/blob/master/open-metadata-resources/open-metadata-samples/access-services-samples/asset-management-samples/asset-reader-csv-sample/src/main/java/org/odpi/openmetadata/accessservices/assetconsumer/samples/readcsvfile/CSVFileReaderSample.java){ target=gh }"
+??? example "Example: [connecting to CSV files using Asset Consumer OMAS :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-samples/access-services-samples/asset-management-samples/asset-reader-csv-sample/src/main/java/org/odpi/openmetadata/accessservices/assetconsumer/samples/readcsvfile/CSVFileReaderSample.java){ target=gh }"
 
     ```java linenums="1"
     /**
@@ -103,7 +103,7 @@ For example, there is typically one connector type for each connector implementa
 
 ![Uses of a connector implementation](uses-of-a-connector-implementation.svg)
 
-The connector types for Egeria's data store connectors are available in an open metadata archive called `DataStoreConnectorTypes.json` that can be loaded into the server. This approach can be used for all of your connector implementations to create the connector type objects in our metadata repository. See the [open-connector-archives :material-github:](https://github.com/odpi/egeria/tree/master/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } for more detail.
+The connector types for Egeria's data store connectors are available in an open metadata archive called `DataStoreConnectorTypes.json` that can be loaded into the server. This approach can be used for all of your connector implementations to create the connector type objects in our metadata repository. See the [open-connector-archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } for more detail.
 
 #### Connector categories
 
@@ -122,4 +122,4 @@ Software servers and endpoints are set up through the [IT Infrastructure OMAS](/
 !!! education "Further information"
     The [connector catalog](/connectors) lists the connectors provided by the Egeria community.
 
---8<-- "snippets/abbr.md"
+

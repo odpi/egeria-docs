@@ -10,4 +10,3 @@ The *event mapper connector* provides a mechanism to translate events that signi
 Event mappers are needed in a [repository proxy](/concepts/repository-proxy) server if the third party technology that it is integrating into the [open metadata repository cohort](/concepts/cohort-member) also has its own mechanisms for maintaining metadata.  If the third party metadata repository's contents are static, or only updated through Egeria's mechanisms then no event mapper is needed.  If no event mapper is present, then the repository proxy ignores [refresh event requests](/features/cohort-operation/overview) from other members of the connected cohorts.  This means its metadata is only available through federated queries.
 
 
---8<-- "snippets/abbr.md"

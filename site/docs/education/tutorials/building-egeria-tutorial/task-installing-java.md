@@ -15,10 +15,10 @@ if java is already installed by running the command `java -version` from the com
 
 Java can be installed by:
 
-1. Downloading the **OpenJDK 11 (LTS) HotSpot** JVM from [Adoptium](https://adoptium.net/).
+1. Downloading the *OpenJDK 17 (LTS) HotSpot* JVM from [Adoptium](https://adoptium.net/).
 1. Running the installer that is downloaded.
 
 Alternatively you may wish to install from your package manager such as `homebrew` on MacOS.
 
---8<-- "snippets/abbr.md"
+
 

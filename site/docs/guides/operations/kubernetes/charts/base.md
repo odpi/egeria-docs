@@ -13,8 +13,7 @@ which is ready for you to experiment with. Specifically it sets up:
 
 It does not provide access to our lab notebooks, the Polymer based UI, nor is it preloaded with any data.
 
-This chart may also be useful to understand how to deploy Egeria within kubernetes. In future we anticipate providing
-an [operator](https://github.com/odpi/egeria-k8s-operator) which will be more flexible.
+This chart may also be useful to understand how to deploy Egeria within kubernetes. In future, we anticipate providing an [operator](https://github.com/odpi/egeria-k8s-operator) which will be more flexible.
 
 ## Prerequisites
 
@@ -97,12 +96,12 @@ base-strimzi-zookeeper-nodes    ClusterIP      None             <none>          
 ```
 
 The **base-presentation** service is very useful to expose as this provides a useful UI where you can explore
-types and instances. Also **egeria-platform** is the service for Egeria itself. 
-In production you might want this only exposed very carefully to other systems - and not other users or the internet, but for experimenting with Egeria let's assume you do.
+types and instances. Also, **egeria-platform** is the service for Egeria itself. 
+In production. you might want this only exposed very carefully to other systems - and not other users or the internet, but for experimenting with Egeria let's assume you do.
 
 How these are exposed can be somewhat dependent on the specific kubernetes environment you are using.
 
-In the [lab chart](chart_lab.md) we provided an example of using `kubectl port-forward`. Here we use RedHat OpenShift in IBM Cloud, where you can expose these services via a LoadBalancer using
+In the [lab chart](lab.md) we provided an example of using `kubectl port-forward`. Here we use RedHat OpenShift in IBM Cloud, where you can expose these services via a LoadBalancer using
 
 ```console
 kubectl expose service/egeria-presentation --type=LoadBalancer --port=8091 --target-port=8091 --name pres  
@@ -123,6 +122,28 @@ Once logged in, you should be able to login using our demo userid/password of `g
 
 You can also issue REST API calls against egeria using a base URL for the platform of `https://3bc644c3-eu-gb.lb.appdomain.cloud` - Other material
 covers these REST API calls in more detail, but a simple api doc is available at `https://3bc644c3-eu-gb.lb.appdomain.cloud/swagger-ui.html`
+
+## Adding additional connectors
+
+Additional connectors can be loaded into the egeria platform containers during initalization.
+
+These need to be specified as url/name pairs, for example create a file '~/etc/connectors.yaml' with the following contents:
+```
+extralibs:
+  - url: https://search.maven.org/remotecontent?filepath=org/odpi/egeria/egeria-connector-integration-jdbc/1.0/egeria-connector-integration-jdbc-1.0.jar
+    filename: egeria-connector-integration-jdbc.jar
+  - url: https://search.maven.org/remotecontent?filepath=org/odpi/egeria/egeria-connector-resource-jdbc/1.0/egeria-connector-resource-jdbc-1.0.jar
+    filename: egeria-connector-resource-jdbc.jar
+  - url: https://jdbc.postgresql.org/download/postgresql-42.5.2.jar
+    filename: postgresql.jar
+```
+The url can be any that is valid for use with `curl` such as http, https, ftp etc.
+
+Then add `-f ~/etc/connectors.yaml` to the helm install command line
+
+All files will be copied into /deployments/server/extralibs in the running container, and will on the CLASSPATH, so loadable as a connector
+
+Examples can be found under https://github.com/odpi/egeria-charts/tree/main/config/values
 
 ## Cleaning up / removing Egeria
 

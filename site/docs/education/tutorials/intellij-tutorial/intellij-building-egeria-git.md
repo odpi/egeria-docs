@@ -13,7 +13,7 @@ When you click on the **Maven** label, a panel opens with the list of modules in
 Chose the build option for your work ...
 
 === "Full Project Build"
-    The `egeria.git` repository has a top-level pom file so all of the modules can be built using one command.
+    The `egeria.git` repository has a top-level pom file so all the modules can be built using one command.
  
     Select the **M** button at the top of the maven panel for `Execute Maven Goal`.
 

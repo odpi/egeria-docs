@@ -14,6 +14,8 @@ Today's IT is both at the heart of the problem and can enable the solution. Many
 
 **Egeria is an open source project dedicated to enabling teams to collaborate by making metadata open and automatically exchanged between tools and platforms, no matter which vendor they come from.**
 
+--8<-- "snippets/getting-started.md"
+
 ## Open metadata and governance manifesto
 
 Our guiding beliefs:
@@ -22,6 +24,8 @@ Our guiding beliefs:
 - The availability of metadata management must become ubiquitous across all data platforms, regardless of deployment environment, so that the processing engines on these platforms can rely on its availability and build capability around it.
 - Metadata access must become open and remotely accessible so that tools from different vendors can work with metadata located on different platforms. This implies unique identifiers for metadata elements, some level of standardization in the types and formats for metadata and standard interfaces for manipulating metadata.
 - Wherever possible, discovery and maintenance of metadata has to be an integral part of all tools that access, change and move information.
+
+--8<-- "docs/introduction/open-metadata-ecosystem.md"
 
 !!! tip "Code talks"
     Egeria provides an Apache 2.0 licensed platform to support vendors that sign up to the open metadata and governance manifesto.

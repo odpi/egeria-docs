@@ -8,14 +8,12 @@ hide:
   
 # Open Metadata Access Services (OMAS)
 
-The Open Metadata Access Services (OMAS) provide domain-specific services
-for data tools, engines and platforms to integrate with open metadata.
+The Open Metadata Access Services (OMAS) provide domain-specific services for data tools, engines and platforms to integrate with open metadata.
 
 The access services are as follows:
 
 | OMAS | Description |
 |---|---|
-| [Analytics Modeling](/services/omas/analytics-modeling/overview) | The Analytics Modeling OMAS configures and manages metadata for modeling analytics and reporting services. |
 | [Asset Catalog](/services/omas/asset-catalog/overview) | The Asset Catalog OMAS provides search and query capabilities for tools and applications to support an asset catalog function. It supports search requests for assets with specific characteristics and returns summaries of the matching assets, plus methods to allow drill-down into the details of a specific asset to related metadata. |
 | [Asset Consumer](/services/omas/asset-consumer/overview) | The Asset Consumer OMAS is designed for applications that are using [OCF](/frameworks/ocf/overview) connectors to access data stores, APIs and functions such as analytics. The Asset Consumer OMAS provides a factory function for the connectors, the ability to retrieve all of the metadata about the asset and the ability to add feedback on the asset. |
 | [Asset Lineage](/services/omas/asset-lineage/overview) | The Asset Lineage OMAS listens to relevant lineage related events on the enterprise topic level and publishes these on the Asset Lineage OutTopic, combined with relevant context information on the described entities. These events are listened to by the open lineage services governance server. |
@@ -55,23 +53,23 @@ Internally, the Java client calls the REST API of the server module to allow it 
 
 Although each OMAS provides a unique API, the internal structure of each OMAS is pretty similar.  
 
-Typically an OMAS supports a Java client interface that runs locally in the metadata tool, service, or application.  These client interfaces support both synchronous and asynchronous calls to the OMAS server-side.
+Typically, an OMAS supports a Java client interface that runs locally in the metadata tool, service, or application.  These client interfaces support both synchronous and asynchronous calls to the OMAS server-side.
 
 For callers that do not use Java, behind the client there is an OMAS REST API and an event notification interface (typically supported by [Apache Kafka](https://kafka.apache.org/)) that can be called directly.  The event notification interface for each OMAS has a topic to allow an external caller to post metadata updates to the open metadata repositories (OMAS In Topic) and another topic (OMAS Out Topic) to receive relevant updates that have come from other parts of the open metadata and governance ecosystem.
 
-Today, direct calls to the REST APIs and topics are not guaranteed  to be backward compatible.  They are also not documented.  However we are moving to a position where these interfaces are both documented and supported.  The change in their disposition will occur when the documentation is contributed.
+Today, direct calls to the REST APIs and topics are not guaranteed  to be backward compatible.  They are also not documented.  However, we are moving to a position where these interfaces are both documented and supported.  The change in their disposition will occur when the documentation is contributed.
 
 The interfaces are illustrated in Figure 1:
 
 ![Figure 1](access-services-overview.svg)
-> **Figure 1: Structure of an Open Metadata Access Service (OMAS)
+> **Figure 1:** Structure of an Open Metadata Access Service (OMAS)
 
 The OMAS receives metadata from the [Open Metadata Repository Cohort](/concepts/cohort-member)through the [Open Metadata Repository Services (OMRS)](/services/omrs).
 
 Figure 2 shows the repository services.
 
 ![Figure 2](access-services-repository-services.svg)
-> Figure 2: Calling the repository services
+> **Figure 2:** Calling the repository services
 
 The OMRS subsystem called the enterprise repository services offers both an Enterprise OMRS Repository Connector and Enterprise OMRS Topic.  The Enterprise OMRS Repository Connector queries all repositories in the cohorts that the local server is connected to.  The Enterprise OMRS Topic aggregates events from all connected cohorts.
 
@@ -87,8 +85,7 @@ Figure 3 shows the common services.
 The common services provide most of the metadata management implementation logic for the OMASs.  This means that the code in each OMAS's modules is able to
 focus on supporting its specific interfaces and mapping them to the common services.
 
- * The [Repository Handler](/services/repository-handler) provides an object oriented interface over
-the Enterprise OMRS Repository Connector.
+ * The [Repository Handler](/services/repository-handler) provides an object-oriented interface over the Enterprise OMRS Repository Connector.
 
  * The [Generic Handlers](/services/generic-handlers) provide support for maintaining and accessing specific [Open Metadata Types](/types) (such as Asset, Connection, ...).  They also support calls to metadata security, visibility of metadata based on governance zones and the maintenance of [anchorGUIDs](/concepts/anchor) in dependent instances.
 

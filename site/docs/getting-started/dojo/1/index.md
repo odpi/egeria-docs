@@ -7,7 +7,7 @@
 
 In this session, you will learn about the function and value of Egeria along with the key concepts and use cases it supports.
 
-!!! beginner "Egeria introduction [:material-microsoft-powerpoint:](https://github.com/odpi/data-governance/raw/master/workshops/may-2020/egeria-dojo-day-1-1-introduction.pptx){ target=slides }"
+!!! beginner "Egeria introduction [:material-microsoft-powerpoint:](https://github.com/odpi/data-governance/raw/main/workshops/may-2020/egeria-dojo-day-1-1-introduction.pptx){ target=slides }"
     <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/s249ofNoETY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
@@ -158,7 +158,7 @@ You can choose to type the request into postman, or use the requests already def
   commands.
 
 Finally, use the `Egeria-admin-services-platform-configuration` Postman collection to experiment with the
-different registered services and and known and active server requests.
+different registered services and known and active server requests.
 These are useful to know as we move to configure servers on the platform.
 
 This is the end of the session on the OMAG Server Platform.

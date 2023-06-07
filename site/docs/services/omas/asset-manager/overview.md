@@ -3,6 +3,9 @@
 
 --8<-- "snippets/content-status/in-development.md"
 
+???+ warn "Development work in progress"
+    See issue [3562](https://github.com/odpi/egeria/issues/3562) for the latest development status.
+
 # Asset Manager Open Metadata Access Service (OMAS)
 
 *Data Catalogs* and *Configuration Management Databases (CMDBs)* are examples of asset managers.  They maintain a catalog of [resources](/concepts/resource) for their users as [assets](/concepts/asset) along with catalog search and governance functions to support the maintenance and use of these resources.  Such technologies might integrate with the open metadata ecosystem to receive additional information about their resources, or to distribute the information they have to other tools.
@@ -15,7 +18,7 @@ The Asset Manager OMAS provides APIs and outbound events to support the exchange
 
 Asset Manager OMAS provides search and query APIs for these types of metadata elements along with the APIs to maintain their values.
 
-* Data Assets and schema
+* Data assets and schema
 * Connections, connector types and endpoints
 * IT Infrastructure (hosts, platforms, servers, storage, capabilities)
 * Processes and Lineage
@@ -31,13 +34,17 @@ The Asset Manager OMAS OutTopic provides a notification service for any changes 
 
 ## Integration
 
-Asset managers often have their own integration mechanisms for both the collection of metadata and its distribution.  Therefore, it may be possible to integrate calls to the Asset Manager OMAS directly into the asset manager's runtime, either via the Java client or by calls to the REST API/OutTopic.  This is shown on the left of the diagram below.  The alternative is to create an [integration connector](/concepts/integration-connector) that uses the [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) running in an [Integration Daemon](/concepts/integration-daemon) .
+Asset managers often have their own integration mechanisms for both the collection of metadata and its distribution.  Therefore, it may be possible to integrate calls to the Asset Manager OMAS directly into the asset manager's runtime, either via the Java client or by calls to the REST API/OutTopic.  This is shown on the left of the diagram below.  The alternative is to create an [integration connector](/concepts/integration-connector) that uses the [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) or [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) running in an [Integration Daemon](/concepts/integration-daemon).
 
 ![Integration Choices](integration-choices.svg)
 
+## API Features
 
+### Unique name (qualifiedName)
 
-## External Identifiers
+--8<-- "docs/parameters/qualified-name.md"
+
+### External Identifiers
 
 A major challenge when exchanging metadata with third party asset managers is that there is often a mismatch between the structure of the metadata in a third party asset manager and the structure of the [open metadata types](/types) used by the Asset Manager OMAS.
 
@@ -51,7 +58,7 @@ The Asset Manager OMAS provides an API for managing an element that represents y
 
 ### Defining an external identifier
 
-The code snippet below shows the Asset Manager OMAS method to create a glossary term in open metadata.  It includes five properties (all include `glossaryTermExternalIdentifier` in their name) that are used to define the external identifier for the new element.  In addition, the `assetManagerGUID` and `assetManagerName` properties are used to tie the external identifier to software capability for the external identifier and `mappingProperties` are used to provide additional values used to guide the mapping process between the open metadata elements and the elements in the third party asset manager.
+The code snippet below shows the Asset Manager OMAS method to create a glossary term in open metadata.  It includes a parameter called `externalIdentifierProperties` that are used to define the external identifier for the new element.  In addition, the `assetManagerGUID` and `assetManagerName` properties are used to tie the external identifier to software capability.
 
 ```java
     /**
@@ -61,12 +68,7 @@ The code snippet below shows the Asset Manager OMAS method to create a glossary 
      * @param assetManagerGUID unique identifier of software capability representing the caller
      * @param assetManagerName unique name of software capability representing the caller
      * @param glossaryGUID unique identifier of the glossary where the term is located
-     * @param glossaryTermExternalIdentifier unique identifier of the glossary term in the external asset manager
-     * @param glossaryTermExternalIdentifierName name of property for the external identifier in the external asset manager
-     * @param glossaryTermExternalIdentifierUsage optional usage description for the external identifier when calling the external asset manager
-     * @param glossaryTermExternalIdentifierSource component that issuing this request.
-     * @param glossaryTermExternalIdentifierKeyPattern pattern for the external identifier within the external asset manager (default is LOCAL_KEY)
-     * @param mappingProperties additional properties to help with the mapping of the elements in the external asset manager and open metadata
+     * @param externalIdentifierProperties optional properties used to define an external identifier
      * @param glossaryTermProperties properties for the glossary term
      *
      * @return unique identifier of the new metadata element for the glossary term
@@ -75,26 +77,23 @@ The code snippet below shows the Asset Manager OMAS method to create a glossary 
      * @throws UserNotAuthorizedException the user is not authorized to issue this request
      * @throws PropertyServerException    there is a problem reported in the open metadata server(s)
      */
-    String createGlossaryTerm(String                 userId,
-                              String                 assetManagerGUID,
-                              String                 assetManagerName,
-                              String                 glossaryGUID,
-                              String                 glossaryTermExternalIdentifier,
-                              String                 glossaryTermExternalIdentifierName,
-                              String                 glossaryTermExternalIdentifierUsage,
-                              String                 glossaryTermExternalIdentifierSource,
-                              KeyPattern             glossaryTermExternalIdentifierKeyPattern,
-                              Map<String, String>    mappingProperties,
-                              GlossaryTermProperties glossaryTermProperties) throws InvalidParameterException,
-                                                                                    UserNotAuthorizedException,
-                                                                                    PropertyServerException;
+    String createGlossaryTerm(String                       userId,
+                              String                       assetManagerGUID,
+                              String                       assetManagerName,
+                              String                       glossaryGUID,
+                              ExternalIdentifierProperties externalIdentifierProperties,
+                              GlossaryTermProperties       glossaryTermProperties) throws InvalidParameterException,
+                                                                                          UserNotAuthorizedException,
+                                                                                          PropertyServerException;
 ```
-*glossaryTermExternalIdentifier* contains the value of the identifier. The other properties provide additional context information:
 
-* *glossaryTermExternalIdentifierName* is the name of the property where the identifier is stored in the third party asset manager.
-* *glossaryTermExternalIdentifierUsage* describes how the external identifier is used
-* *glossaryTermExternalIdentifierSource* describes the process that created the extern identifier
-* *glossaryTermExternalIdentifierKeyPattern* describes the pattern used for the identifier (how it is generated and managed). These are the values it can take, with the default (and most used) being `LOCAL_KEY`:
+Within `externalIdentifierProperties`:
+
+* *externalIdentifier* contains the value of the identifier. The other properties provide additional context information:
+* *externalIdentifierName* is the name of the property where the identifier is stored in the third party asset manager.
+* *externalIdentifierUsage* describes how the external identifier is used
+* *externalIdentifierSource* describes the process that created the extern identifier
+* *externalIdentifierKeyPattern* describes the pattern used for the identifier (how it is generated and managed). These are the values it can take, with the default (and most used) being `LOCAL_KEY`:
 
 | Enumeration   | Value | Name             | Description                                                                                                   |
 |---------------|-------|------------------|---------------------------------------------------------------------------------------------------------------|
@@ -107,20 +106,23 @@ The code snippet below shows the Asset Manager OMAS method to create a glossary 
 | STABLE_KEY    | 6     | "Stable Key"     | Key value will remain active even if records are merged.                                                      |
 | OTHER         | 99    | "Other"          | Another key pattern.                                                                                          |
 
+* *mappingProperties* are used to provide additional values used to guide the mapping process between the open metadata elements and the elements in the third party asset manager.
 
-## PermittedSynchronization
+### Supplementary Properties
 
-*PermittedSynchronization* defines the direction of flow of metadata.
+It is common for external asset managers to include extensive descriptive properties for assets, endpoints, and software capabilities that include both a technical name and description, as well as a common or business name and description.  The technical name is often extracted from the technology when it is initially catalogued and the common or business name is the name that its users know and the value they are likely to search for.
 
-| Enumeration      | Value | Name             | Description                                                                                                                                                                                                                                                                                 |
-|------------------|-------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BOTH_DIRECTIONS  | 0     | "Both Directions" | Metadata exchange is permitted in both directions.  Synchronization is halted on a specific element if potentially clashing updates have occurred both in the third party technology and open metadata.  Such conflicts are logged on the audit log and resolved through manual stewardship. |
-| TO_THIRD_PARTY   | 1     | "To Third Party" | The third party technology is logically downstream of open metadata.  This means the open metadata ecosystem is the originator and owner of the metadata being synchronized. Any updates detected in the third technology are overridden by the latest open metadata values.                |
-| FROM_THIRD_PARTY | 2     | "From Third Party" | The third party technology is logically upstream (the originator and owner of the metadata).  Any updates made in open metadata are not passed to the third party technology and the third party technology is requested to refresh the open metadata version.                              |
-| OTHER            | 99    | "Other"          | Another type of synchronization rule - see description property.                                                                                                                                                                                                                            |
+The Asset Manager OMAS supports this distinction and stores the technical name and description in the base metadata instance ([*Asset*](/types/0/0010-Base-Model), [*Endpoint*](/types/0/0026-Endpoints) and [*SoftwareCapability*](0042-Software-Capabilities)  and the common/business name and description in a [*GlossaryTerm*](/types/3/0330-Terms) metadata instance that is linked to the asset using a [*SupplementaryProperties*](/types/3/0395-Supplementary-Properties) relationship. The properties that are stored in the glossary term are referred to as *supplementary properties*.
 
+This approach means that Asset Manager OMAS works seamlessly with other APIs that are cataloguing directly with the technology (such as [Data Manager OMAS](/services/omas/data-manager/overview) and [Data Engine OMAS](/services/omas/data-engine/overview)) and consequently only maintain the base metadata elements.
 
-## DataItemSortOrder
+You can see this distinction in the structure of the property beans.  For example, look at the [AssetProperties](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetmanager/properties/AssetProperties.html) definition.  It inherits from [SupplementaryProperties](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetmanager/properties/SupplementaryProperties.html).  The properties defined in *AssetProperties* are stored in the Asset entity and  *SupplementaryProperties* are stored in the GlossaryTerm entity.
+
+![Inheritance of AssetProperties](asset-properties-inheritance.png)
+
+### Enumerations
+
+#### DataItemSortOrder
 
 *DataItemSortOrder* provides the valid values for the *sortOrder* property of SchemaAttribute.  It indicates whether the rows/instances of the data stored in this schema appear in any particular order or not.
 
@@ -131,15 +133,16 @@ The code snippet below shows the Asset Manager OMAS method to create a glossary 
 | DESCENDING  | 2     | "Descending"   | The attribute instances are organized so that the largest/highest value is first and the rest of the instances follow in descending order. |
 | UNSORTED    | 3     | "Unsorted"     | "The instances of the schema attribute may appear in any order. |                                                                            
 
+#### PermittedSynchronization
 
-## Supplementary Properties
+*PermittedSynchronization* defines the direction of flow of metadata.
 
-It is common for external asset managers to include extensive descriptive properties for assets
-that include both a technical name and description as well as a business name and description.
-The Asset Manager OMAS supports this distinction and stores the technical name and
-description in an Asset metadata instance and the business name and description in a glossary term
-metadata instance that is linked to the asset using a
-[**SupplementaryProperties** relationship](/types/3/0395-Supplementary-Properties).
-The properties that are stored in the glossary term are referred to as supplementary properties.
+| Enumeration      | Value | Name             | Description                                                                                                                                                                                                                                                                                 |
+|------------------|-------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| BOTH_DIRECTIONS  | 0     | "Both Directions" | Metadata exchange is permitted in both directions.  Synchronization is halted on a specific element if potentially clashing updates have occurred both in the third party technology and open metadata.  Such conflicts are logged on the audit log and resolved through manual stewardship. |
+| TO_THIRD_PARTY   | 1     | "To Third Party" | The third party technology is logically downstream of open metadata.  This means the open metadata ecosystem is the originator and owner of the metadata being synchronized. Any updates detected in the third technology are overridden by the latest open metadata values.                |
+| FROM_THIRD_PARTY | 2     | "From Third Party" | The third party technology is logically upstream (the originator and owner of the metadata).  Any updates made in open metadata are not passed to the third party technology and the third party technology is requested to refresh the open metadata version.                              |
+| OTHER            | 99    | "Other"          | Another type of synchronization rule - see description property.                                                                                                                                                                                                                            |
+
 
 --8<-- "snippets/abbr.md"

@@ -5,13 +5,13 @@
 
 Egeria's General User Interface provides a search function, and offers the ability to view *assets*, *glossaries* and *lineage*.
 
-![login](login.png)
+![login](egeria-ui-login.png)
 
-After logging on, you end up on the landing page. This shows a search bar where you can enter search terms and select the type of metadata to search for. There are two checkboxes which can be ticked to search for an `exact match` and to turn on `case sensitivity`.
+After logging on, you end up on the landing page. This shows a search bar where you can enter search terms and select the type of metadata to search for. There are two checkboxes `exact match` and  `case sensitivity` which can be ticked to narrow down the results.
 
-At the top of the page are shortcuts to the **Asset catalog**, the **Glossary viewer** and the **About** page, as well as the **Logout** button.
+At the top of the page are navigators to the **Asset catalog** and the **About** page, as well as the **Logout** button. These will move to a left sided action bar when using the functionalities of the website.
 
-![search](asset-search.png)
+![search](egeria-ui-asset-search.png)
 
 ## Asset Catalog
 
@@ -25,17 +25,17 @@ The following attributes are present and possible to filter/order on:
 - **Context info**: Information used to uniquely identify an asset, this is usually representation of its fully qualified name.
 - **Description**: Text description of the asset. In our example this field is empty for both results.
 
-![search results](asset-list.png)
+![search results](egeria-ui-asset-list.png)
 
 By clicking on an asset's name, the details of this asset can be viewed. It is possible to print and/or save these details by clicking the **Print** button.
 
-![asset list](asset-details.png)
+![asset list](egeria-ui-asset-details.png)
 
 ## Lineage Graph Viewer
 
 Clicking on one of the lineage buttons (**end-to-end**, **ultimate-source** or **ultimate-destination**) on the details page shows that type of lineage of the asset, in a customizable graph.
 
-![asset list](lineage.png)
+![asset list](egeria-ui-lineage-graph.png)
 
 The lineage graph that is shown has multiple action buttons that can influence what data is shown and how:
 
@@ -53,20 +53,20 @@ The lineage graph that is shown has multiple action buttons that can influence w
 
 The glossary viewer shows the glossaries that are available in the metadata repository and the information they contain. It is accessed through the action bar on the left of the screen.
 
-![glossary](glossaryicon.png)
+![glossary](egeria-ui-glossary-icon.png)
 
 On first load, the glossary is only able to show a list of available glossaries with their name and status. The glossary itself is organized into a hierarchy of *glossary categories* and *glossary terms*.
 
-![glossary](glossary.png)
+![glossary](egeria-ui-glossary.png)
 
 When clicking the `Details` button in third column of the glossary table, the categories connected to this respective glossary will be loaded.
 The properties of these categories are displayed in the same way as the glossaries; their name and status are visible and another `Details` button is available.
 
-![category](category.png)
+![category](egeria-ui-category.png)
 
 Clicking this `Details` button will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the a data model, and its `Details` button will redirect to the same `asset details` page as from the asset catalog.
 
-![terms](terms.png)
+![terms](egeria-ui-terms.png)
 
 ## Extended features
 

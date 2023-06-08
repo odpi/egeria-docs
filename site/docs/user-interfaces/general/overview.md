@@ -9,7 +9,7 @@ Egeria's General User Interface provides a search function, and offers the abili
 
 After logging on, you end up on the landing page. This shows a search bar where you can enter search terms and select the type of metadata to search for. There are two checkboxes which can be ticked to search for an `exact match` and to turn on `case sensitivity`.
 
-At the top of the page are shortcuts to the **asset catalog** and the **about** page, as well as the **Logout** button.
+At the top of the page are shortcuts to the **Asset catalog**, the **Glossary viewer** and the **About** page, as well as the **Logout** button.
 
 ![search](asset-search.png)
 
@@ -45,6 +45,25 @@ The lineage graph that is shown has multiple action buttons that can influence w
 - **Processes**: This toggle will show assets of type process when turned on, but will condense the results to not show these when turned off.
 - **Legend:** This toggle either shows or hides the legend that explains the entity types' icons.
 
+## Glossary Viewer
+
+The glossary viewer shows the glossaries that are available in the metadata repository and the information it contains. It is accessed through the action bar on the left of the screen or the navigation bar at the top.
+
+![glossary](glossaryicon.png)
+
+On first load, the glossary is only able to show a list of available glossaries with their name and status. The glossary itself is organized into a hierarchy of *glossary categories* and *glossary terms*.
+
+![glossary](glossary.png)
+
+When clicking the `Details` button in third column of the respective glossary, the underlying categories will be loaded.
+These categories have the same type of data shown as the glossaries.
+
+![category](category.png)
+
+Clicking the `Details` button here will show the terms associated with its respective category.
+Each term describes a concept or phrase used in the model, and its `Details` button will redirect to the same `asset details` page as from the asset catalog.
+
+![terms](terms.png)
 
 ## Extended features
 
@@ -52,18 +71,6 @@ It is possible to configure some experimental features into the user interface t
 
 - Repository Explorer (REX)
 - Type Explorer (TEX)
-- Glossary Viewer
-
-![glossary](glossary.png)
-
-On first load, the glossary is only able to show a list of available glossaries with their name and status. The glossary itself is organized into a hierarchy of *glossary categories* and *glossary terms*. When clicking the `Details` button in third column of the respective glossary, the underlying categories will be loaded.
-
-![category](category.png)
-
-These categories have the same type of data shown as the glossaries. Clicking the `Details` button here will show the terms associated with its respective category. Each term describes a concept or phrase used in the model, and its `Details` button will redirect to the same asset details page as from the asset catalog.
-
-![terms](terms.png)
-
 
 ## Setting up the General User Interface
 

@@ -33,7 +33,7 @@ By clicking on an asset's name, the details of this asset can be viewed. It is p
 
 ## Lineage Graph Viewer
 
-Clicking on one of the lineage buttons (**end-to-end**, **ultimate-source** or **ultimate-destination**) shows that type of lineage of the asset, in a customizable graph.
+Clicking on one of the lineage buttons (**end-to-end**, **ultimate-source** or **ultimate-destination**) on the details page shows that type of lineage of the asset, in a customizable graph.
 
 ![asset list](lineage.png)
 
@@ -51,7 +51,7 @@ The lineage graph that is shown has multiple action buttons that can influence w
 
 ## Glossary Viewer
 
-The glossary viewer shows the glossaries that are available in the metadata repository and the information they contain. It is accessed through the action bar on the left of the screen or the navigation bar at the top.
+The glossary viewer shows the glossaries that are available in the metadata repository and the information they contain. It is accessed through the action bar on the left of the screen.
 
 ![glossary](glossaryicon.png)
 

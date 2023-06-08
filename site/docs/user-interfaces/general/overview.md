@@ -46,7 +46,7 @@ The lineage graph that is shown has multiple action buttons that can influence w
 - **Statistics**: A small pop-up will show statistics on the asset types in the graph, and the times they occur.
 - **List of relationships**: A small pop-up will show the beginning and ending assets and the mapping between them.
 - **Print**: This button will open the print dialogue to print and/or save the graph as a whole.
-- **Processes**: This toggle will show assets of type process when turned on, but will condense the results to not show these when turned off.
+- **Processes**: This toggle will show assets of type process when turned on, but will condense the graph to not show these when turned off.
 - **Legend:** This toggle either shows or hides the legend that explains the entity types' icons.
 
 ## Glossary Viewer
@@ -64,7 +64,7 @@ The properties of these categories are displayed in the same way as the glossari
 
 ![category](egeria-ui-category.png)
 
-Clicking this `Details` button will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the a data model, and its `Details` button will redirect to the same `asset details` page as from the asset catalog.
+Clicking this `Details` button will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the data model, and its `Details` button will redirect to the same `asset details` page as from the asset catalog.
 
 ![terms](egeria-ui-terms.png)
 

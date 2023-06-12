@@ -1,0 +1,16 @@
+<mxfile host="app.diagrams.net" modified="2023-04-24T08:04:25.473Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="4ni-JPbXJcqrDra7mo1_" version="21.2.1" type="device">
+  <diagram name="Page-1" id="mvEpiAXpTXNR7T1k2fxt">
+    <mxGraphModel dx="1242" dy="703" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pXHQ8MnfL4jKPIDD2TGY-1" value="broad casting glossary terms" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10" y="108" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pXHQ8MnfL4jKPIDD2TGY-2" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="15" y="168" width="50" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -197,12 +197,31 @@ higher level concepts called catalogs that hold databases.
 
 #### Classification Types
 
-| HMS concept                  | Description                                                     | Egeria open Classifation type | Comments                                                           |
-|------------------------------|-----------------------------------------------------------------|-------------------------------|--------------------------------------------------------------------|
-| Hive table Type              | if this is VIRTUAL_VIEW then this is a view rather than a table | CalculatedValue               | The RelationalTable is classified with CalculatedValue for a view |
-| for columns fieldSchema Type | This is the type of the Hive column (e.g. String)               | TypeEmbeddedAttribute         | This contains the type of the column                               |
-| for tables n/a               | n/a                                                             | TypeEmbeddedAttribute         | The type of the Table                                              |
+| HMS concept                  | Description                                                     | Egeria open Classification type | Comments                                                           |
+|------------------------------|-----------------------------------------------------------------|---------------------------------|--------------------------------------------------------------------|
+| Hive table Type              | if this is VIRTUAL_VIEW then this is a view rather than a table | CalculatedValue                 | The RelationalTable is classified with CalculatedValue for a view |
+| for columns fieldSchema Type | This is the type of the Hive column (e.g. String)               | TypeEmbeddedAttribute           | This contains the type of the column                               |
+| for tables n/a               | n/a                                                             | TypeEmbeddedAttribute           | The type of the Table                                              |
 
+
+## Using with the Hive Metastore listener
+
+The Hive metastore listener runs in the HMS process as a HMS listener. When HMS tables are added, dropped or 
+altered then appropriate Egeria events are issued. It sends the 'granular events. In this way the Egeria cohort members are kept up to 
+date as the HMS metadata changes.
+
+The HMS connector needs to have run prior to the listener, so that the Egeria cohort already has existing entities that 
+the HMS tables can be associated with. The listener needs to be configured as the same cohort member as the connector.
+
+| HMS configuration parameter         | Description                                                           |
+|-------------------------------------|-----------------------------------------------------------------------|
+| EgeriaListener.metadataCollectionId | This is the metadata collection id of the HMS connector               |
+| EgeriaListener.serverName           | This is the server name of the HMS connector                          |
+| EgeriaListener.organisationName     | Organisation name to match  the HMS connector                         |
+| EgeriaListener.qualifiedNamePrefix  | Qualified name prefix the HMS connector                               |
+| EgeriaListener.events.kafka.topicname  | The cohort topic name that the HMS connector writes to                |
+| EgeriaListener.events.kafka.clientId  | The client ID of the HMS connector                                    |
+| EgeriaListener.events.kafka.bootstrapServerurl  | The bootstrap server name for the Kafka defined for the HMS connector |
 
 
 You may also find these links in the Egeria documentation useful:

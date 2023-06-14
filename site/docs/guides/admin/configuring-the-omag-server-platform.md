@@ -19,7 +19,7 @@ The behaviour of these components is influenced by:
 
 ## Command line options
 
-The command to [start the OMAG Server Platform](/education/tutorials/omag-server-tutorial/overview) follows this form:
+The command to start the OMAG Server Platform follows this form:
 
 ```bash
 $ java <command line options> -jar omag-server-platform-{release}.jar
@@ -60,8 +60,6 @@ $ java -Dloader.path=platform/lib -Dserver.port=9444 -Dspring.config.location=pl
 
 The `application.properties` file may include properties that configure Tomcat, Spring or Egeria.  The sections that follow are not an exhaustive list but cover the commonly used values.
 
-!!! tip "Additional properties"
-    Spring provides [extensive documentation on its standard properties :material-dock-window:](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html){ target=spring }.
 
 ### Egeria's platform connectors
 
@@ -70,10 +68,7 @@ The implementation of the two platform connectors can be specified in the `appli
 * The [configuration document store connector](/concepts/configuration-document-store-connector) manages the storage and retrieval of [configuration documents](/concepts/configuration-document) - one for each OMAG server.
 * The [platform metadata security connector](/concepts/platform-metadata-security-connector) authorizes calls to the [Administration Services](/services/admin/services/overview) that maintain the configuration documents as well as the [Platform Services](/services/platform-services/overview) that control the platform when it is running.
 
-If these connectors are specified in the `application.properties` file, they are activated as part of the platform start up - assuming the JAR file(s) containing the implementation of the specified connectors is in the classpath.  If these connectors are not specified in the `application.properties` file then each configuration document is stored in its own encrypted file and there is no platform security authorization.
-
-!!! attention "Useful for development, be wary for production"
-    For production the platform should be configured with platform security because this ensures the management of OMAG Server is performed by authorized users.
+If these connectors are specified in the `application.properties` file, they are activated as part of the platform start up - assuming the JAR file(s) containing the implementation of the specified connectors is in the classpath.  If these connectors are not specified in the `application.properties` file then each configuration document is stored in its own encrypted file and there is no platform security authorization.  This default may be sufficient for a development environment.  For production the platform should be configured with a platform metadata security connector because this ensures the management of OMAG Server is performed by authorized users.
 
 ![Ways to configure the OMAG Server Platform - Platform connectors](configurability-of-platform-2.svg)
 > The platform connectors running in the OMAG Server Platform
@@ -81,9 +76,7 @@ If these connectors are specified in the `application.properties` file, they are
 
 #### Configuration document store
 
-The [configuration document](/concepts/configuration-document) is the place where the configuration for a single [OMAG Server](/concepts/omag-server) is stored. This may include security certificates and passwords.
-
-By default, the configuration document is stored in its own encrypted file under the working directory of the [OMAG Server Platform](/concepts/omag-server-platform), named:
+The [configuration document](/concepts/configuration-document) is the place where the configuration for a single [OMAG Server](/concepts/omag-server) is stored. This may include security certificates and passwords.  By default, the configuration document is stored in its own encrypted file under the working directory of the [OMAG Server Platform](/concepts/omag-server-platform), named:
 
 ```text
 ./data/servers/{serverName}/config/{serverName}.config
@@ -120,7 +113,7 @@ The connector will substitute the name of the server for `{0}`.
 
 #### Configuring the platform metadata security connector
 
-The [OMAG Server Platform](/concepts/omag-server-platform) provides both configuration and diagnostic services for [OMAG Servers](/concepts/omag-server) which in themselves provide access to a wide variety of information and control points.  Therefore, it is necessary to provide authorization services relating to the dynamic management of the platform.
+The [OMAG Server Platform](/concepts/omag-server-platform) provides configuration, operational and diagnostic services for [OMAG Servers](/concepts/omag-server) which in themselves provide access to a wide variety of information and control points.  Therefore, it is necessary to provide authorization services relating to the dynamic management of the platform.
 
 Egeria provides [a platform security authorization capability](/services/metadata-security-services). It is implemented in a [platform metadata security connector](/concepts/platform-metadata-security-connector) that is called whenever requests are made to the server platform services.
 
@@ -143,14 +136,15 @@ The [Platform Services](/services/platform-services/overview) are used to dynami
 When the OMAG Servers start up, their associated configuration document defines the open metadata and governance services to run and the connectors that these services are to use.  The classpath needs to include all the Java libraries for both the Egeria services and the connectors that are configured for each OMAG Server.
 
 ![Ways to configure the OMAG Server Platform - running OMAG Servers](configurability-of-platform-3.svg)
+> OMAG Servers running open metadata and governance services along with configured connectors
 
-OMAG Servers can be automatically activated at startup by setting spring-boot property `startup.server.list`, typically in the `application.properties` file. The server names are listed without quotes. For example:
+OMAG Servers can be automatically activated when an OMAG Server Platform starts up by setting the `startup.server.list` property in the `application.properties` file. The server names are listed without quotes. For example:
 
 ```properties
 startup.server.list=cocoMDS1, cocoMDS2
 ```
 
-Each server is started with the administration user id set in the spring-boot property `startup.user`.
+Each server is started with the administration user id set in the property `startup.user`.
 
 For example:
 
@@ -158,18 +152,9 @@ For example:
 startup.user=garygeeke
 ```
 
-By default, this user id is set to the user id `system`.
+By default, this user id is set to `system`.
 
-When the platform shuts down, if any of the servers that were in the startup list are still running, they will be shut down before the server completes.
-
-!!! summary "Default setting"
-    If `startup.server.list` is null then no servers are automatically started or stopped.
-
-    ```properties
-    startup.server.list=
-    ```
-
-    This is the default setting.
+When the platform shuts down, if any of the servers that were in the startup list are still running, they will be shutdown before the platform exits.
 
 ### Transport Layer Security (TLS)
 
@@ -291,7 +276,7 @@ Together, both set some important characteristics that are needed to allow the c
 
 ### Logging
 
-The `application.properties` file controls which types of developer/debug logging should be produced by the OMAG Server Platform.  The Egeria code (and most third party technology integrated into it) uses SLF4J (or its predecessor Log4J which can be routed to SLF4J) to write out log entries that explain the code pathways that are running and any errors encountered.  This can be extremely useful when debugging a set up or code issue.  However, it is very expensive in terms of performance and should be used when needed.
+The `application.properties` file controls which types of developer/debug logging should be produced by the OMAG Server Platform.  The Egeria code (and most third party technology integrated into it) uses SLF4J (or its predecessor Log4J which can be routed to SLF4J) to write log entries that explain the code pathways that are running and any errors encountered.  This can be extremely useful when debugging a set up or code issue.  However, it is very expensive in terms of performance and should be used when needed.
 
 The `logging.level.xxx` properties in the `application.properties` file define which Java classes should produce log entries and the level of severity that should be included (TRACE, DEBUG, INFO, WARN and ERROR).
 
@@ -352,6 +337,9 @@ springdoc.swagger-ui.operationsSorter=alpha
 springdoc.swagger-ui.docExpansion=none
 ```
 
+!!! tip "Additional properties"
+Spring provides [extensive documentation on its standard properties :material-dock-window:](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html){ target=spring }.
+
 ## The classpath
 
 As mentioned above, the classpath is the list of folders where the Java Virtual Machine (JVM) is to look for JAR files.  The JAR files contain the java classes (implementation) of Egeria's modules and the connectors it is running.
@@ -388,12 +376,13 @@ When you look in the logback.xml file, you will see three types of entries:
 * Loggers - define which log entries are to be routed to each appender
 * Root - defines the default routing to the appenders
 
+There are separate appenders for standard out (console), the audit log entries from cocoMDS1 and the debug log fro many component running in the OMAG Server Platform.
 
 ## What next?
 
 ???+ info "Next steps"
-* [How to configure OMAG Servers](/guides/admin/servers)
-* [Practical tutorial working with the OMAG Server Platform](/education/tutorials/omag-server-tutorial/overview)
+    * [How to configure OMAG Servers](/guides/admin/servers)
+    * [Practical tutorial working with the OMAG Server Platform](/education/tutorials/omag-server-tutorial/overview)
 
 --8<-- "snippets/abbr.md"
 

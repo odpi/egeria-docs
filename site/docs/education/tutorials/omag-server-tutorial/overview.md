@@ -24,7 +24,7 @@ At the end of this tutorial you will be able to perform the following tasks.
 
 ## Tutorial Tasks
 
-???+ education "Starting the OMAG Server Platform"
+??? education "Starting the OMAG Server Platform"
 
     ### Starting the OMAG Server Platform
     
@@ -40,7 +40,7 @@ At the end of this tutorial you will be able to perform the following tasks.
     The OMAG Server Platform is started with the `java` command.
     
     ??? tip "Checking your Java installation"
-    Ensure you have a Java runtime at Version 17 or above installed on your machine. Check the version of Java you have with the command **java -version** and [install the appropriate version](/education/tutorials/building-egeria-tutorial/task-installing-java) if needed. You only need the JRE but select the JDK if you expect to also write some Java code.)
+        Ensure you have a Java runtime at Version 17 or above installed on your machine. Check the version of Java you have with the command **java -version** and [install the appropriate version](/education/tutorials/building-egeria-tutorial/task-installing-java) if needed. You only need the JRE but select the JDK if you expect to also write some Java code.)
     
     Start the OMAG server platform with the following command:
     
@@ -86,6 +86,7 @@ At the end of this tutorial you will be able to perform the following tasks.
     ```bash
     curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/users/test/server-platform/origin
     ```
+    Returns
     ```text
     Egeria OMAG Server Platform (version 4.2)
     ```
@@ -105,7 +106,7 @@ At the end of this tutorial you will be able to perform the following tasks.
     
     Understanding how to create a configuration document using the administration services is the next task in this tutorial.
 
-???+ education "Creating Configuration Documents"
+??? education "Creating Configuration Documents"
     ### Creating configuration documents for the OMAG Server Platform
     
     The [OMAG Server Platform](/concepts/omag-server-platform) provides a software platform for running [OMAG Servers](/concepts/omag-server).
@@ -132,6 +133,7 @@ At the end of this tutorial you will be able to perform the following tasks.
     ```
     
     where:
+
     * `{platformURLRoot}` is the host name and port number of the OMAG Server Platform (eg https://localhost:9443).
     * `{adminUserId}` is the user id of the administrator making the calls.
     * `{serverName}` is the name of the OMAG server that is being configured.
@@ -161,11 +163,9 @@ At the end of this tutorial you will be able to perform the following tasks.
     }
     ```
     
-    The **localServerId** property is a unique identifier given to the server and is used internally to improve the performance of its interaction with external components such as Apache Kafka.
-    
-    The **localServerName** is the name of the OMAG server supplied on the command.
-    
-    The **localServerType**, **localServerURL**, **localServerUserId** and **maxPageSize** are set to their default values and can be changed.
+    * The **localServerId** property is a unique identifier given to the server and is used internally to improve the performance of its interaction with external components such as Apache Kafka.
+    * The **localServerName** is the name of the OMAG server supplied on the command.
+    * The **localServerType**, **localServerURL**, **localServerUserId** and **maxPageSize** are set to their default values and can be changed.
     
     For example, try the following command (this is request **3.** in Postman):
     
@@ -924,7 +924,7 @@ At the end of this tutorial you will be able to perform the following tasks.
     !!! education "Further reading"
         The contents of this tutorial cover a very simple OMAG server configuration. For guidance on configuring more complex OMAG servers see the [Administration Services User Guide](/guides/admin)
     
-???+ education "Activating an OMAG Server in the OMAG Server Platform"
+??? education "Activating an OMAG Server in the OMAG Server Platform"
     ### Activating OMAG servers in the OMAG server platform
     
     Once you have [created a configuration document for an OMAG server](task-creating-configuration-documents.md)
@@ -1116,7 +1116,7 @@ At the end of this tutorial you will be able to perform the following tasks.
     
     The start-up messages show the [open metadata types](/types) being loaded, followed by the open metadata archive `content-packs/SimpleDataCatalog.json`.  Then the local repository is initialized and finally the OMASs are started.
 
-???+ education "Calling the Open Metadata and Governance APIs"
+??? education "Calling the Open Metadata and Governance APIs"
     ### Calling Open Metadata and Governance Services
     
     Now that the metadata server is started, it is possible to query the metadata.
@@ -1228,13 +1228,10 @@ At the end of this tutorial you will be able to perform the following tasks.
         * The [Open Metadata Access Services (OMASs)](/services/omas) show the range of APIs offered by Egeria.
         * [Finding Metadata](/guides/developer/finding-metadata/overview) explains how metadata retrieval requests work.
 
-???+ education "Shutting down a server"
-    ### Activating OMAG servers in the OMAG server platform
+??? education "Shutting down a server"
+    ### Shutting down OMAG servers in the OMAG server platform
     
-    Once you have finished [calling the open metadata and governance APIs](/education/tutorials/omag-server-tutorial/task-calling-omag-apis)
-    you can stop your server in the
-    [OMAG Server Platform](/concepts/omag-server-platform)
-    using the following command (this is command **8.** in Postman).
+    Once you have finished calling the open metadata and governance APIs you can stop your server in the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is command **8.** in Postman).
     
     ```
     POST https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance
@@ -1309,7 +1306,7 @@ At the end of this tutorial you will be able to perform the following tasks.
     !!! education "The platform operation services"
         Explore the [Platform Services](/services/platform-services/overview) to discover more commands to monitor and control the OMAG Server Platform.
     
-???+ education "Deleting a server's configuration"
+??? education "Deleting a server's configuration"
     ### Deleting an OMAG server's configuration
     
     An [OMAG Server](/concepts/omag-server)'s configuration document can be deleted from the configuration store using the following command.
@@ -1318,10 +1315,10 @@ At the end of this tutorial you will be able to perform the following tasks.
     DELETE https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/instance
     ```
 
-???+ education "Shutting down the platform"
+??? education "Shutting down the platform"
     ### Stopping the OMAG server platform
     
-    Once you have [Stopped your OMAG server](/education/tutorials/omag-server-tutorial/task-stopping-omag-server) you can stop the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is request **10.** in Postman).
+    Once you have Stopped your OMAG server you can stop the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is request **10.** in Postman).
     
     ```
     POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/server-platform/instance

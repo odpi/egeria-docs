@@ -11,7 +11,7 @@ The [OMAG Server Platform](/concepts/omag-server-platform) is a collection of su
 
 Fixed services that are always present in the platform:
 
-- [Server Chassis](/services/server-chassis) provides the main class of the OMAG Server Platform that manages the start up and shutdown of a platform instance.
+- [Platform Chassis](/services/platform-chassis) provides the main class of the OMAG Server Platform that manages the start up, and shutdown of an OMAG Server instance.
 
 - [Administration Services](/services/admin-services/overview) support the configuration and operation (such as starting and stopping) of [OMAG Servers](/concepts/omag-servers).
 
@@ -19,7 +19,7 @@ Fixed services that are always present in the platform:
 
 - [Multi-tenant Services](/services/multi-tenant) manages information about the running servers so REST API requests made to the platform can be routed to the correct server. 
 
-- [Platform Operation Services](/services/platform-services/overview) retrieves information about a running platform instance and its associated servers.
+- [Platform Services](/services/platform-services/overview) retrieves information about a running platform instance and its associated servers. Also able to start and stop servers as well as shutdown the platform itself.
 
 - [Open Metadata Repository Services (OMRS)](/services/omrs) for supporting access to metadata stored in metadata repositories and the exchange of metadata between repositories via an [open metadata repository cohort](/concepts/cohort-member). The repository services are further divided into [OMRS subsystems](/services/omrs/#omrs-subsystems) that can be activated independently.
 

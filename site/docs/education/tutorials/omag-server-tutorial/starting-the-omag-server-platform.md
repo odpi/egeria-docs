@@ -1,7 +1,6 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Starting the OMAG Server Platform
 
 The [OMAG Server Platform's installation directory](/education/tutorials/building-egeria-tutorial/task-installing-egeria) contains a Java Archive (Jar) file for the [OMAG Server Platform](/concepts/omag-server-platform) itself along with a directory of libraries.
 
@@ -52,7 +51,7 @@ Sun Jun 11 13:14:04 BST 2023 No OMAG servers listed in startup configuration
 Sun Jun 11 13:14:04 BST 2023 OMAG server platform ready for more configuration
 ```
 
-When you see the `OMAG server platform ready for more configuration` message, it means the OMAG Server Platform has completed its start up and it ready to use.
+When you see the `OMAG server platform ready for more configuration` message, it means the OMAG Server has completed its start up and it ready to use.
 
 If you get an error that the port is in use, check for any applications using the same port and make sure they are each using unique ports.
 
@@ -67,7 +66,7 @@ Egeria OMAG Server Platform (version 4.2)
 
 This calls the OMAG server platform using a REST API call.  The response `Egeria OMAG Server Platform (release X.x)` means the curl command communicated with a running OMAG Server Platform instance.
 
-The OMAG Server Platform has many REST APIs.  Enter **https://localhost:9443/swagger-ui/index.html** into your browser to see the list of available REST APIs.
+The OMAG server platform has many REST APIs.  Enter **https://localhost:9443/swagger-ui/index.html** into your browser to see the list of available REST APIs.
 
 Broadly speaking, the OMAG Server Platform supports:
 
@@ -80,4 +79,3 @@ OMAG Servers are started on the OMAG Server Platform through the Platform Servic
 
 Understanding how to create a configuration document using the administration services [is the next task in this tutorial](/education/tutorials/omag-server-tutorial/task-creating-configuration-documents).
 
---8<-- "snippets/abbr.md"

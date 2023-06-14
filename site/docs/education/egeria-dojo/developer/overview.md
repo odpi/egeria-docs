@@ -137,7 +137,7 @@ This dojo was last tested using Egeria release 3.14.
         ??? beginner "Building egeria-dev-projects.git in IntelliJ IDEA ..."
             --8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-dev-projects-git.md"
 
-        Egeria's services run in the [OMAG Server Platform](/concepts/omag-server-platform){ target=dojo-support }.  The jar file for the OMAG Server Platform was built by the `egeria.git` build.  It is located in the `server` directory of your Egeria install and is called `server-chassis-spring-{{release}}.jar`.  You will need an easy way to start and stop the OMAG Server Platform.   This is done with an IntelliJ *Configuration*.
+        Egeria's services run in the [OMAG Server Platform](/concepts/omag-server-platform){ target=dojo-support }.  The jar file for the OMAG Server Platform was built by the `egeria.git` build.  It is located in the `server` directory of your Egeria install and is called `omag-server-platform-{{release}}.jar`.  You will need an easy way to start and stop the OMAG Server Platform.   This is done with an IntelliJ *Configuration*.
         
         ??? beginner "Set up IntelliJ to run the OMAG Server Platform ..."
 
@@ -173,11 +173,11 @@ This dojo was last tested using Egeria release 3.14.
                     > Your development landscape adding the ServerOps utility calling EgeriaPlatform to start and stop servers.
 
             !!! education "Summary and further study"
-                From this exercise of the developer dojo, you should have an understanding of the behaviour of the Platform Operations Services and Administration Services.
+                From this exercise of the developer dojo, you should have an understanding of the behaviour of the Platform Services and Administration Services.
                 
                 * `ServerConfig` is using the Administration Services to configure different types of OMAG Servers.
                 * `ServerOps` is using the Administration Services to start and stop named OMAG Servers.
-                * `EgeriaPlatformReport` is blending information from the platform's deployment with information about configured servers, known servers and active servers.  This information comes both from the Administration Services and Platform Operations Services.
+                * `EgeriaPlatformReport` is blending information from the platform's deployment with information about configured servers, known servers and active servers.  This information comes both from the Administration Services and Platform Services.
                 
                 The [`egeria-dev-projects`](https://github.com/odpi/egeria-dev-projects){ target=gh } utilities are designed to illustrate how to use these services and you may want to take time to review the code and make changes to explore new functions or customize them to your working environment.
                 

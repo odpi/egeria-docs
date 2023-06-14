@@ -65,7 +65,7 @@ In `egeria-dev-projects`, there is a module called `egeria-platform-report`.  Th
           Platform security connector: <null>
     ```
     
-    The `Egeria version` is retrieved using the `getPlatformOrigin` method of the [Platform Operations Services](/services/platform-services/overview/).
+    The `Egeria version` is retrieved using the `getPlatformOrigin` method of the [Platform Services](/services/platform-services/overview/).
     
     ```java linenums="1"
     PlatformServicesClient platformServicesClient = new PlatformServicesClient("MyPlatform", platformURLRoot);
@@ -134,7 +134,7 @@ In `egeria-dev-projects`, there is a module called `egeria-platform-report`.  Th
               Type Explorer OMVS: Explore the open metadata types in a repository or cohort.
               Server Author OMVS: Author servers.
         ```
-    The registered are also retrieved through the [Platform Operations Services](/services/platform-services/overview){ target=dojo-support } using the `getXXXServices` method as follows:
+    The registered are also retrieved through the [Platform Services](/services/platform-services/overview){ target=dojo-support } using the `getXXXServices` method as follows:
     
     ```java linenums="1"
     List<RegisteredOMAGService> registeredOMASs = platformServicesClient.getAccessServices(clientUserId);

@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
@@ -10,14 +5,14 @@ hide:
 
 The Egeria services provide the support for the OMAG Server Platform and its Open Metadata and Governance services.
 
-<img src="server-chassis-structure.svg" style="float:left">
+<img src="platform-chassis-structure.svg" style="float:left">
 
 
 ## Base Platform Support Services
 
-* [Administration Services](/services/admin-services/overview) - for configuring and operating [OMAG Servers](/concepts/omag-server)
-* [Platform Operation Services](/services/platform-services/overview) - for managing the OMAG Servers when they are running.
-* [Server Chassis](/services/server-chassis) - provides the "main" function for the OMAG Server Platform.
+* [Administration Services](/services/admin-services/overview) - for configuring [OMAG Servers](/concepts/omag-server)
+* [Platform Services](/services/platform-services/overview) - for starting/stopping and managing the OMAG Servers when they are running.
+* [Platform Chassis](/services/platform-chassis) - provides the "main" function for the OMAG Server Platform.
 * [Open Metadata Repository Services (OMRS)](/services/omrs) - for managing the repositories used to support the OMAG Server Platform.
 
 ## Registered Services

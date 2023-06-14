@@ -217,9 +217,9 @@ Once in place, the dependency should be maintained across the smallest appropria
 
 ### `slf4j` and bindings
 
-- Any utility, sample, tool or other *applications* (like the server chassis) that have an entry point (typically `main()`) should [include a binding for `slf4j` :material-dock-window:](http://www.slf4j.org/faq.html){ target=slf4j }.
+- Any utility, sample, tool or other *applications* (like the OMAG Server Platform) that have an entry point (typically `main()`) should [include a binding for `slf4j` :material-dock-window:](http://www.slf4j.org/faq.html){ target=slf4j }.
     - Use `logback` when possible (for example, `ch.qos.logback:logback-classic`).
-    - Do **not** provide a configuration file: default formatting will be used and can be overriden by logback configuration at deployment time.
+    - Do **not** provide a configuration file: default formatting will be used and can be overridden by logback configuration at deployment time.
 - Test code automatically includes `slf4j-simple` - a simple logging implementation
 - Other code that forms libraries (most of our code) **must not** include a `slf4j` logging implementation. Otherwise, the application loses control of the logging implementation, hidden config files can change behavior, and a `multiple_bindings` issue will be raised by `slf4j`.
 - If non-egeria dependencies use other logging frameworks, add in appropriate adapters to map them to slf4j-api as this will avoid conflicts and confusion.

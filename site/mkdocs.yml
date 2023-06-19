@@ -32,7 +32,7 @@ nav:
           - Preparing Metadata Ecosystem:
               - Metadata Valid Values: guides/planning/valid-values/overview.md
               - Language Translations: guides/planning/translations/overview.md
-              - Onboarding Organization: guides/planning/organization/overview.md
+              - On-boarding Organization: guides/planning/organization/overview.md
               - Governance Program: guides/planning/governance-program/overview.md
       - Integration:
           - Integration Guide:
@@ -103,7 +103,8 @@ nav:
               - Secrets Store:
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
           - Developer Guide:
-              - Developer Overview: guides/developer/index.md
+              - Developer Guide: guides/developer/index.md
+              - Retrieving Metadata: guides/developer/finding-metadata/overview.md
               - Building Archives:
                   - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
                   - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
@@ -220,7 +221,6 @@ nav:
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
       - Open Metadata Labs: education/open-metadata-labs/overview.md
-      - Webinars: education/webinar-program/overview.md
       - Tutorials:
           - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
           - Using Kubernetes: guides/operations/kubernetes/index.md
@@ -234,9 +234,12 @@ nav:
           - Running OMAG Servers: education/tutorials/omag-server-tutorial/overview.md
           - Running Samples: education/tutorials/running-samples-tutorial.md
           - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
+      - Comparisons:
+          - Apache Atlas: education/comparisons/apache-atlas.md
       - Scenarios:
           - Data Manager Integration: scenarios/data-manager-integration/overview.md
           - File Lineage: scenarios/file-lineage/overview.md
+      - Webinars: education/webinar-program/overview.md
       - Old Dojo (deprecated):
             - Dojo Introduction: getting-started/dojo/index.md
             - Day 1:
@@ -288,6 +291,7 @@ nav:
                       - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                       - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
                       - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
+                      - JDBC Connector Release Process: guides/contributor/release-process/egeria-connector-jdbc-release.md
                       - Maven Publishing reference: guides/contributor/release-process/maven-publish.md
                       - GitHub Secrets reference: guides/contributor/release-process/secrets.md
               - Specific Guidance:
@@ -508,7 +512,7 @@ nav:
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
               - Metadata Security Services: services/metadata-security-services.md
-              - Platform Operation Services: services/platform-services/overview.md
+              - Platform Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Open Metadata Store Services: services/gaf-metadata-management.md
               - Open Integration Service: services/oif-metadata-management.md
@@ -807,7 +811,7 @@ nav:
               - Reggie Mint: practices/coco-pharmaceuticals/personas/reggie-mint.md
               - Robbie Records: practices/coco-pharmaceuticals/personas/robbie-records.md
               - Sally Counter: practices/coco-pharmaceuticals/personas/sally-counter.md
-              - Signey Seeker: practices/coco-pharmaceuticals/personas/sidney-seeker.md
+              - Sidney Seeker: practices/coco-pharmaceuticals/personas/sidney-seeker.md
               - Stew Faster: practices/coco-pharmaceuticals/personas/stew-faster.md
               - Tanya Tidie: practices/coco-pharmaceuticals/personas/tanya-tidie.md
               - Tessa Tube: practices/coco-pharmaceuticals/personas/tessa-tube.md

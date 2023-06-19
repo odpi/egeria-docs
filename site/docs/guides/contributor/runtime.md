@@ -101,7 +101,7 @@ The Egeria team maintains an [`odpi-egeria-lab` Helm chart :material-github:](ht
 
 ## Spring
 
-[Spring :material-dock-window:](https://spring.io/){ target=spring } is a framework and set of annotations for building REST APIs. *Spring Boot* provides the server chassis (or `main()` method) for hosting RESTful services in a server. It is used in the [OMAG Server Platform](/concepts/omag-server-platform) to provide the server chassis that searches for all REST API definitions to start them in a server.
+[Spring :material-dock-window:](https://spring.io/){ target=spring } is a framework and set of annotations for building REST APIs. *Spring Boot* provides the  `main()` method for hosting RESTful services in a Spring application. It is used in the [OMAG Server Platform](/concepts/omag-server-platform) to provide the platform chassis that searches for all REST API definitions to start them in a server.
 
 Spring is used in our client libraries to call REST APIs. Specifically it provides the `org.springframework.web.client.RestTemplate` class for formatting REST calls and parsing the responses.
 

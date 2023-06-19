@@ -5,12 +5,14 @@
 
 # Asset Owner OMAS
 
-| Description              | Value                                                                                                                                                                                          |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Description              | Value                                                                                                                                                                                        |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link to Implementation   | [open-metadata-implementation/access-services/asset-owner :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/access-services/asset-owner){ target=gh } |
-| Audit Log Component Id   | 205                                                                                                                                                                                            |
-| Audit Log Message Prefix | OMAS-ASSET-OWNER                                                                                                                                                                               |
-| URL Marker               | asset-owner                                                                                                                                                                                    |
+| Audit Log Component Id   | 205                                                                                                                                                                                          |
+| Audit Log Message Prefix | OMAS-ASSET-OWNER                                                                                                                                                                             |
+| Service URL Marker       | asset-owner                                                                                                                                                                                  |
+| Javadoc                  | [Asset Owner Clients](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetowner/client/package-summary.html)                                                             |
+| Debug logger             | logging.level.org.odpi.openmetadata.assetowner                                                                                                                                               |
 
 
 The Asset Owner OMAS provides APIs and notifications for tools and applications supporting the work of *Asset Owners* in protecting and enhancing their assets.

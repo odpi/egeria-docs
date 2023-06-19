@@ -12,7 +12,7 @@ We are going to setup:
   * A Kubernetes runtime where Egeria & other components will execute within containers.
   * An application to help making REST API calls to Egeria.
 
-Egeria does not need to run in a container. The main application we run is a Java application we refer to as the 'server chassis'. In later days we will show you examples of running this directly, but for this first day we use Kubernetes to create a more reproducible environment that is easy to configure, especially with several moving parts.
+Egeria does not need to run in a container. The main application we run is a Java application we refer to as the 'OMAG Server Platform'. In later days we will show you examples of running this directly, but for this first day we use Kubernetes to create a more reproducible environment that is easy to configure, especially with several moving parts.
 
 ## Prerequisite Hardware and Operating System
 

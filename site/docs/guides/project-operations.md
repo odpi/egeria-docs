@@ -48,7 +48,7 @@ Egeria *contributors* are members who have actively taken additional steps to pr
 
     A person wishing to become a contributor may send a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a contributor.
 
-    A maintainer can then propose this and the other maintainers will review. They will look for participation in the community..
+    A maintainer can then propose this and the other maintainers will review. They will look for participation in the community.
 
     If agreed, you will receive [an Egeria Contributor badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-contributor){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria contributor.
 
@@ -58,7 +58,9 @@ Egeria *contributors* are members who have actively taken additional steps to pr
     - maintainers should vote and reply promptly to the email thread with a clear YES/NO along with further comments.
     - votes should be done within 7 days.
     - Voting is by simple majority.
-    - If approved, a github admin will add the new contributor to /CONTRIBUTORS.md in the egeria repository, and also add to the 'Egeria Contributors' team, which grants 'read' access to our repositories.
+    - If approved, a github admin will add the new contributor to :
+        - /CONTRIBUTORS.md in the egeria repository
+        - The odpi github organization 'Egeria Contributors' team, which grants 'read' access to our repositories. ([admin](https://github.com/orgs/odpi/teams/egeria-contributors))
 
 
 Egeria's contributors are recognized in the [contributors list :material-github:](https://github.com/odpi/egeria/blob/main/CONTRIBUTORS.md){ target=gh }
@@ -66,6 +68,10 @@ Egeria's contributors are recognized in the [contributors list :material-github:
 ### Maintainers
 
 *Maintainers* are members of the Egeria community that have permission to change the Egeria content. This may be content that they have created themselves, or has been provided by another member. Maintainers also have responsibility for helping other project members with their contributions. This includes:
+
+There are two kinds of maintainers
+ - 'local maintainers' - these have extra permissions & shared ownership of specific repositories. They are not eligible to take part in a maintainer vote.
+ - 'full maintainers' - these have permissions across all repos, and are regarded as maintainers for voting purposes
 
 - Monitoring email aliases.
 - Monitoring Slack (delayed response is perfectly acceptable).
@@ -77,18 +83,23 @@ Egeria's contributors are recognized in the [contributors list :material-github:
 !!! tip "How to become a maintainer"
     New maintainers are voted onto the maintainers list by [the existing maintainers :material-github:](https://github.com/odpi/egeria/blob/main/MAINTAINERS.md){ target=gh }.
 
-    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer.
+    A person wishing to become a maintainer sends a note to the existing mailing list at egeria-technical-discuss@lists.lfaidata.foundation, listing their Egeria contributions to date and requesting to be made a maintainer. They should also confirm if the proposal is for a local maintainer (in which case list relevant repositories), or full maintainer.
 
-    If agreed, you will receive an [an Egeria Maintainer badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-maintainer){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria maintainer.
+    If agreed, and for full maintainers only, you will receive an [an Egeria Maintainer badge :material-dock-window:](https://www.youracclaim.com/org/the-linux-foundation/badge/odpi-egeria-maintainer){ target=credly } to add to your social profiles and/or website, and can publicly refer to yourself as an Egeria maintainer.
 
 !!! note "Maintainer approval process"
 
     - Whilst some initial comments may be made on the technical list, the main voting should take place on our maintainer email list.
     - An existing maintainer sends an email to other maintainers on the [egeria maintainers](https://lists.lfaidata.foundation/g/egeria-maintainers/messages) mailing list with subject beginning 'New Maintainer Proposal' proposing the new maintainer(s) and reasons why. (this list is private to Egeria maintainers).
     - maintainers should vote and reply promptly to the email thread with a clear YES/NO along with further comments.
-    - votes should be done within 14 days.
+    - votes should be done within 7 days.
     - Voting is by simple majority.
-    - If approved, a github admin will add the new contributor to /MAINTAINERS.md in the egeria repository, and also add to the 'Egeria Maintainers' team, which grants 'maintain' access to our repositories.
+    - If approved, an admin will add a full maintainer to:
+        - /MAINTAINERS.md in the egeria repository
+        - The 'Egeria Maintainers' team in the odpi github organization, which grants 'maintain' access to our repositories. ([admin](https://github.com/orgs/odpi/teams/egeria-maintainers))
+        - the 'maintainers' mailing list ([admin](https://lists.lfaidata.foundation/g/egeria-technical-discuss/sendinvites))
+    - For local maintainers they will be added to an appropriate group on odpi github to provide admin permissions on selected repositories only.
+
 
 !!! attention "Losing maintainer status"
     If a maintainer is no longer interested or cannot perform the maintainer duties listed above, they should volunteer to be moved to emeritus status. In extreme cases this can also occur by a vote of the maintainers per the voting process below. Emeritus maintainers can rejoin the maintainer list through a vote of the existing maintainers.
@@ -103,8 +114,8 @@ Some meetings are face-to-face, but most are conference calls. Attendance at mee
 
 For example, the face-to-face meeting may be at a conference that requires you to register for the conference to attend, or a meeting may be at an organization's offices that are required to maintain a list of everyone on site.
 
-!!! tip "See details in the [community guide](community.md)"
-    Refer to the [community guide](community.md) for further details on the specific meetings that are planned, conference call links and dial-in numbers, as well as other communications channels like Slack and email.
+!!! tip "See details in the [community guide](/guides/community)"
+    Refer to the [community guide](/guides/community) for further details on the specific meetings that are planned, conference call links and dial-in numbers, as well as other communications channels like Slack and email.
 
 ## Releases
 
@@ -112,7 +123,7 @@ The Egeria team aim to create an official release of the open metadata and gover
 
 In between official releases, the latest build is also available to developers in GitHub.
 
-The process for creating a release is described in the [developer guide](/guides/developer/process/#release-process)
+The process for creating a release is described in the [contributors' guide](/guides/contributor/release-process)
 
 ## Conflict resolution and voting
 

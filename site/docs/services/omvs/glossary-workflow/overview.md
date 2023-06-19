@@ -11,6 +11,12 @@ The Glossary Workflow Open Metadata View Service (OMVS) is a REST API designed t
 
 The purpose of a controlled glossary workflow is to manage the visibility of glossary terms and any updates to them that are “in progress”.  Typically, this visibility’s is restricted to the authors of the glossary terms and the approvers.  Once approved, and incorporated back into the "live" glossary, the updates are visible to all.
 
+For example, consider a glossary term called "customer identifier".  The first version of the glossary term may just provide the *display name* and *summary*.  The author of the glossary term plans to fill out the description and examples in version 2. Version 1 is published so that, for example, data stewards can begin linking it to the data assets describing the data landscape.
+
+While the data stewards are creating [semantic assignment](/patterns/metadata-manager/overview/#asset-classifiers) links to this glossary term, the glossary term author needs to edit the glossary term properties.  These changes need to be reviewed and possibly corrected before they are visible to the data stewards.  As such they are made in a private copy of the glossary term.  When the changes are complete, the properties from the copy are added to the glossary term that the data stewards are using.  Thus version 2 is "published".  The next time the data stewards query the glossary term, they see the updated properties.
+
+## Designing your glossary workflow process
+
 Although the general idea is simple, there are a number of choices to make on how the workflow operates.  This includes:
 
 * How are updates grouped? For example, are glossary terms updated individually or grouped together in a batch.
@@ -21,7 +27,9 @@ Although the general idea is simple, there are a number of choices to make on ho
 
 ## Styles of glossary workflow operation
 
-The different styles of glossary workflow provide choices on who is providing content, how decisions are made on whats it accepted and how the updates are grouped, both for the review process and when they are published.  Where multiple glossaries are in play, each can operate a different style.
+The different styles of glossary workflow provide choices on who is providing content, how decisions are made on what is accepted, how the updates are grouped, both for the review process and when they are published.  
+
+Where multiple glossaries are in play, each can operate a different style.  The tabbed table below characterises some different styles of workflow processing - click on each tab to read about each style.  They are only suggestions. The API is flexible enough to allow you to create you own style if you need to.
 
 === "Summary"
     | Maintenance Style           | Contributors             | Controls                                                                                                                        | Limitations                                                                                                                                   | Uses                                                                                                                      |

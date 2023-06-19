@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block htmltitle %}
-  <title>Egeria Project</title>
+  <title>Egeria Project - Open metadata and governance for enterprises</title>
 {% endblock %}
 
 {% block site_meta %}
@@ -18,7 +18,9 @@
   font-src 'self' https://fonts.gstatic.com; 
   img-src 'self' data: https://live-lfprojects3.linuxfoundation.org; 
   child-src 'self' https://calendar.google.com/ https://www.youtube.com/;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
-  script-src 'self' 'unsafe-inline';"
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://giscus.app/;
+  script-src 'self' 'unsafe-inline'  https://giscus.app/;
+  frame-src 'self' https://calendar.google.com/ https://www.youtube.com/ https://giscus.app/;"
   />
+  <meta name="description" content="Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms" />
 {% endblock %}

@@ -3,1708 +3,829 @@
 
 # Creating configuration documents for the OMAG Server Platform
 
-The [OMAG server platform](/concepts/omag-server-platform)
-provides a software platform for running
-[OMAG Servers](/concepts/omag-server).
+The [OMAG Server Platform](/concepts/omag-server-platform) provides a software platform for running [OMAG Servers](/concepts/omag-server).
 
-Each OMAG Server supports selected open metadata and governance services based on its
-configuration. 
-
-When [the OMAG server platform is first started](task-starting-the-omag-server-platform.md),
-there are no OMAG Servers running inside it.
-However there are three sets of Administration Service APIs active.
-
-* **Server Origin** - for discovering the source of the OMAG server platform.  
-(This was used in the previous [task](task-starting-the-omag-server-platform.md).)
-* **Configuration Services** - for creating configuration documents.
-* **Operational Services** - for starting and stopping [OMAG Servers](/concepts/omag-server)
-in the OMAG server platform using the configuration documents.
+Each OMAG Server supports selected open metadata and governance services based on its configuration.
 
 ## What is a configuration document?
 
-A [configuration document](/concepts/configuration-document)
-provides the configuration properties for an OMAG server.
+A [configuration document](/concepts/configuration-document) defines the configuration properties for an OMAG server.  It includes the properties for an OMAG server including the services that it supports.
 
-It includes:
-* Basic properties of the OMAG server.
-* Defaults to use when configuring the [OMAG subsystems](/concepts/omag-subsystem)
-of the OMAG server.
-* Configuration for selected subsystems within the OMAG server.  The subsystems selected and configured
-determine which open metadata and governance services are supported by the OMAG server.
+Configuration documents are typically created using the OMAG Server Platform [Administration Services](/services/admin-services/overview).  In order to experiment with these services, this tutorial uses the [Postman](/education/tutorials/omag-server-tutorial/task-working-with-postman) test tool. This is a tool that enables you to type in REST API calls and execute them against the OMAG server platform.
 
-Configuration documents are created using the OMAG server platform
-configuration services.  In order to experiment with these services,
-this tutorial uses the [Postman](task-working-with-postman.md) test tool.
-This is a tool that enables you to type in REST API calls and execute them
-against the OMAG server platform.
+There is also a postman collection [omag-server-platform-tutorial.postman_collection.json](https://github.com/odpi/egeria-docs/blob/main/site/docs/education/tutorials/omag-server-tutorial/resources/omag-server-platform-tutorial.postman_collection.json) that you can download and import into postman to support this tutorial.  (see **Import** button top left of the Postman user interface).
 
-There is also a postman collection located at:
-
-[https://raw.githubusercontent.com/odpi/egeria/main/open-metadata-resources/open-metadata-tutorials/omag-server-tutorial/resources/omag-server-platform-tutorial.postman_collection.json](https://raw.githubusercontent.com/odpi/egeria/main/open-metadata-resources/open-metadata-tutorials/omag-server-tutorial/resources/omag-server-platform-tutorial.postman_collection.json)
-
-It can be downloaded and imported into postman to support this tutorial.
-(see **Import** button top left of the Postman user interface).
-
-This tutorial will also use **curl** commands to illustrate calls to the administration services
-as well as refer to the pre-canned calls in the postman collection.
+This tutorial will also use `curl` commands to illustrate calls to the administration services as well as refer to the pre-canned calls in the postman collection.
 
 
 ## Creating the configuration document
 
-Before there is a configuration document, requesting the server configuration
-creates and returns a default document.  The command is:
+Before there is a configuration document, requesting the server configuration creates and returns a default document.  The command is:
 
 ```
-GET {serverURLRoot}/open-metadata/admin-services/users/{adminUserId}/servers/{serverName}/configuration
+GET {platformURLRoot}/open-metadata/admin-services/users/{adminUserId}/servers/{serverName}/configuration
 ```
 
 where:
-* `{serverURLRoot}` is the host name and port number of the OMAG server platform (eg https://localhost:9443).
+* `{platformURLRoot}` is the host name and port number of the OMAG Server Platform (eg https://localhost:9443).
 * `{adminUserId}` is the user id of the administrator making the calls.
 * `{serverName}` is the name of the OMAG server that is being configured.
 
 Try the following command (this is request **2.** in Postman): 
 
 ```
-GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/configuration
+GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/configuration
 ```
 
 The response is in JSON format and contains the following information:
 
 ```json
 {
-    "class":"OMAGServerConfigResponse",
-    "relatedHTTPCode":200,
-    "omagserverConfig":
-    {
-       "class":"OMAGServerConfig",
-       "localServerId":"28aeb916-5029-4d6a-aa96-392196859916",
-       "localServerName":"cocoMDS1",
-       "localServerType":"Open Metadata and Governance Server",
-       "localServerURL":"https://localhost:9443",
-       "localServerUserId":"OMAGServer",
-       "maxPageSize":1000
-    }
+  "class": "OMAGServerConfigResponse",
+  "relatedHTTPCode": 200,
+  "omagserverConfig": {
+    "class": "OMAGServerConfig",
+    "versionId": "V2.0",
+    "localServerId": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff",
+    "localServerName": "myMetadataServer",
+    "localServerType": "Open Metadata and Governance Server",
+    "localServerURL": "https://localhost:9443",
+    "localServerUserId": "OMAGServer",
+    "maxPageSize": 1000
+  }
 }
 ```
 
-The **localServerId** property is a unique identifier given to the server and is used
-internally to improve the performance of its interaction with external components such as Apache Kafka.
+The **localServerId** property is a unique identifier given to the server and is used internally to improve the performance of its interaction with external components such as Apache Kafka.
 
 The **localServerName** is the name of the OMAG server supplied on the command.
 
-The **localServerType**, **localServerURL**, **localServerUserId** and **maxPageSize**
-are set to their default values and can be changed.
+The **localServerType**, **localServerURL**, **localServerUserId** and **maxPageSize** are set to their default values and can be changed.
 
 For example, try the following command (this is request **3.** in Postman):
 
 ```
-POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/server-type?typeName="Standalone Metadata Repository"
+POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/server-type?typeName="Metadata Access Store"
 ```
 
-Then query the configuration again (this is request **4.** in Postman):
+Then query the configuration again (this is request **2.** in Postman):
 
 ```json
 {
-    "class": "OMAGServerConfigResponse",
-    "relatedHTTPCode": 200,
-    "omagserverConfig": {
-        "class": "OMAGServerConfig",
-        "localServerId": "2a73902e-e691-43cc-b422-23b6b42992e2",
-        "localServerName": "cocoMDS1",
-        "localServerType": "Standalone Metadata Repository",
-        "localServerURL": "https://localhost:9443",
-        "localServerUserId": "OMAGServer",
-        "maxPageSize": 1000,
-        "auditTrail": [
-            "Tue Feb 05 13:12:50 GMT 2019 garygeeke updated configuration for local server type name to Standalone Metadata Repository."
-        ]
-    }
+  "class": "OMAGServerConfigResponse",
+  "relatedHTTPCode": 200,
+  "omagserverConfig": {
+    "class": "OMAGServerConfig",
+    "versionId": "V2.0",
+    "localServerId": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff",
+    "localServerName": "myMetadataServer",
+    "localServerType": "Metadata Access Store",
+    "localServerURL": "https://localhost:9443",
+    "localServerUserId": "OMAGServer",
+    "maxPageSize": 1000,
+    "auditTrail": [
+      "Sun Jun 11 20:49:09 BST 2023 garygeeke updated configuration for local server type name to Metadata Access Store."
+    ]
+  }
 }
 ```
 
-Notice that the localServerType has changed and an audit trail has also appeared.  This allows you to keep track of
-the changes being made to the configuration document.
+Notice that the localServerType has changed and an audit trail has also appeared.  This allows you to keep track of the changes being made to the configuration document.
 
-The next command configures in type of metadata repository (this is request **5.** in Postman).  In this example, we are using a simple in-memory repository
-which is useful for testing.
+The next command configures in type of metadata repository (this is request **4.** in Postman).  In this example, we are using a simple in-memory repository which is useful for testing.
 
 ```
-POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/local-repository/mode/in-memory-repository
+POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/local-repository/mode/in-memory-repository
 ```
 
-This has added the configuration for the local repository using default values.
-If you query the configuration again (this is request **6.** in Postman) you see:
+This has added the configuration for the local repository using default values. If you query the configuration again (this is request **2.** in Postman) you see a lot has been added.  This includes the definition for the repository as well as a default audit logging destination which ensures that the server writes it audit log messages to the console when it starts up.
 
 ```json
 {
-    "class": "OMAGServerConfigResponse",
-    "relatedHTTPCode": 200,
-    "omagserverConfig": {
-        "class": "OMAGServerConfig",
-        "localServerId": "2a73902e-e691-43cc-b422-23b6b42992e2",
-        "localServerName": "cocoMDS1",
-        "localServerType": "Standalone Metadata Repository",
-        "localServerURL": "https://localhost:9443",
-        "localServerUserId": "OMAGServer",
-        "maxPageSize": 1000,
-        "repositoryServicesConfig": {
-            "class": "RepositoryServicesConfig",
-            "auditLogConnections": [
-                {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "5390bf3e-6b38-4eda-b34a-de55ac4252a7",
-                    "qualifiedName": "DefaultAuditLog.Connection.cocoMDS1",
-                    "displayName": "DefaultAuditLog.Connection.cocoMDS1",
-                    "description": "OMRS default audit log connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "4afac741-3dcc-4c60-a4ca-a6dede994e3f",
-                        "qualifiedName": "Console Audit Log Store Connector",
-                        "displayName": "Console Audit Log Store Connector",
-                        "description": "Connector supports logging of audit log messages to stdout.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.auditlogstore.console.ConsoleAuditLogStoreProvider"
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "836efeae-ab34-4425-89f0-6adf2faa1f2e",
-                        "qualifiedName": "DefaultAuditLog.Endpoint.cocoMDS1.auditlog",
-                        "displayName": "DefaultAuditLog.Endpoint.cocoMDS1.auditlog",
-                        "description": "OMRS default audit log endpoint.",
-                        "address": "cocoMDS1.auditlog"
-                    }
-                }
+  "class": "OMAGServerConfigResponse",
+  "relatedHTTPCode": 200,
+  "omagserverConfig": {
+    "class": "OMAGServerConfig",
+    "versionId": "V2.0",
+    "localServerId": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff",
+    "localServerName": "myMetadataServer",
+    "localServerType": "Metadata Access Store",
+    "localServerURL": "https://localhost:9443",
+    "localServerUserId": "OMAGServer",
+    "maxPageSize": 1000,
+    "repositoryServicesConfig": {
+      "class": "RepositoryServicesConfig",
+      "auditLogConnections": [
+        {
+          "class": "Connection",
+          "headerVersion": 0,
+          "qualifiedName": "Console- default",
+          "displayName": "Console",
+          "connectorType": {
+            "class": "ConnectorType",
+            "headerVersion": 0,
+            "type": {
+              "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+              "typeName": "ConnectorType",
+              "typeVersion": 1,
+              "typeDescription": "A set of properties describing a type of connector."
+            },
+            "guid": "4afac741-3dcc-4c60-a4ca-a6dede994e3f",
+            "qualifiedName": "Egeria:AuditLogDestinationConnector:Console",
+            "displayName": "Console Audit Log Destination Connector",
+            "description": "Connector supports logging of audit log messages to stdout.",
+            "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.auditlogstore.console.ConsoleAuditLogStoreProvider",
+            "connectorFrameworkName": "Open Connector Framework (OCF)",
+            "connectorInterfaceLanguage": "Java",
+            "connectorInterfaces": [
+              "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+              "org.odpi.openmetadata.repositoryservices.connectors.stores.auditlogstore.OMRSAuditLogStore"
             ],
-            "localRepositoryConfig": {
-                "class": "LocalRepositoryConfig",
-                "metadataCollectionId": "ad405dc2-1361-48f8-9ea2-538bd43db1b0",
-                "localRepositoryLocalConnection": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "6a3c07b0-0e04-42dc-bcc6-392609bf1d02",
-                    "qualifiedName": "DefaultInMemoryRepository.Connection.cocoMDS1",
-                    "displayName": "DefaultInMemoryRepository.Connection.cocoMDS1",
-                    "description": "OMRS default in memory local repository connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "65cc9091-757f-4bcd-b937-426160be8bc2",
-                        "qualifiedName": "OMRS In Memory Repository Connector",
-                        "displayName": "OMRS In Memory Repository Connector",
-                        "description": "OMRS Repository Connector that uses an in-memory store.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.inmemory.repositoryconnector.InMemoryOMRSRepositoryConnectorProvider"
-                    }
-                },
-                "localRepositoryRemoteConnection": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "858be98b-49d2-4ccf-9b23-01085a5f473f",
-                    "qualifiedName": "DefaultRepositoryRESTAPI.Connection.cocoMDS1",
-                    "displayName": "DefaultRepositoryRESTAPI.Connection.cocoMDS1",
-                    "description": "OMRS default repository REST API connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "75ea56d1-656c-43fb-bc0c-9d35c5553b9e",
-                        "qualifiedName": "OMRS REST API Repository Connector",
-                        "displayName": "OMRS REST API Repository Connector",
-                        "description": "OMRS Repository Connector that calls the repository services REST API of a remote server.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.rest.repositoryconnector.OMRSRESTRepositoryConnectorProvider"
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "cee85898-43aa-4af5-9bbd-2bed809d1acb",
-                        "qualifiedName": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
-                        "displayName": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
-                        "description": "OMRS default repository REST API endpoint.",
-                        "address": "https://localhost:9443/servers/cocoMDS1"
-                    }
-                },
-                "eventsToSaveRule": "ALL",
-                "eventsToSendRule": "ALL"
-            }
+            "recognizedConfigurationProperties": [
+              "supportedSeverities"
+            ]
+          },
+          "configurationProperties": {
+            "supportedSeverities": [
+              "<Unknown>",
+              "Information",
+              "Event",
+              "Decision",
+              "Action",
+              "Error",
+              "Exception",
+              "Security",
+              "Startup",
+              "Shutdown",
+              "Asset",
+              "Types",
+              "Cohort"
+            ]
+          }
+        }
+      ],
+      "localRepositoryConfig": {
+        "class": "LocalRepositoryConfig",
+        "metadataCollectionId": "02694e83-a284-4f03-ac0c-34bfa2ce5c65",
+        "localRepositoryMode": "OPEN_METADATA_NATIVE",
+        "localRepositoryLocalConnection": {
+          "class": "Connection",
+          "headerVersion": 0,
+          "displayName": "In Memory Local Repository Connection",
+          "connectorType": {
+            "class": "ConnectorType",
+            "headerVersion": 0,
+            "type": {
+              "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+              "typeName": "ConnectorType",
+              "typeVersion": 1,
+              "typeDescription": "A set of properties describing a type of connector."
+            },
+            "guid": "65cc9091-757f-4bcd-b937-426160be8bc2",
+            "qualifiedName": "Egeria:OMRSRepositoryConnector:InMemory",
+            "displayName": "In Memory OMRS Repository Connector",
+            "description": "Native open metadata repository connector that maps open metadata calls to a set of in memory hash maps - demo use only.",
+            "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.inmemory.repositoryconnector.InMemoryOMRSRepositoryConnectorProvider",
+            "connectorFrameworkName": "Open Connector Framework (OCF)",
+            "connectorInterfaceLanguage": "Java",
+            "connectorInterfaces": [
+              "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+              "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
+              "org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore.repositoryconnector.OMRSMetadataCollectionManager"
+            ]
+          }
         },
-        "auditTrail": [
-            "Tue Feb 05 13:12:50 GMT 2019 garygeeke updated configuration for local server type name to Standalone Metadata Repository.",
-            "Tue Feb 05 14:58:28 GMT 2019 garygeeke updated configuration for the local repository."
-        ]
-    }
+        "localRepositoryRemoteConnection": {
+          "class": "Connection",
+          "headerVersion": 0,
+          "displayName": "Local Repository Remote Connection",
+          "connectorType": {
+            "class": "ConnectorType",
+            "headerVersion": 0,
+            "type": {
+              "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+              "typeName": "ConnectorType",
+              "typeVersion": 1,
+              "typeDescription": "A set of properties describing a type of connector."
+            },
+            "guid": "75ea56d1-656c-43fb-bc0c-9d35c5553b9e",
+            "qualifiedName": "Egeria:OMRSRepositoryConnector:CohortMemberClient:REST",
+            "displayName": "REST Cohort Member Client Connector",
+            "description": "Cohort member client connector that provides access to open metadata located in a remote repository via REST calls.",
+            "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.rest.repositoryconnector.OMRSRESTRepositoryConnectorProvider",
+            "connectorFrameworkName": "Open Connector Framework (OCF)",
+            "connectorInterfaceLanguage": "Java",
+            "connectorInterfaces": [
+              "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+              "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
+              "org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore.repositoryconnector.OMRSMetadataCollectionManager"
+            ]
+          },
+          "endpoint": {
+            "class": "Endpoint",
+            "headerVersion": 0,
+            "address": "https://localhost:9443/servers/myMetadataServer"
+          }
+        },
+        "eventsToSaveRule": "ALL",
+        "eventsToSendRule": "ALL"
+      }
+    },
+    "auditTrail": [
+      "Sun Jun 11 20:49:09 BST 2023 garygeeke updated configuration for local server type name to Metadata Access Store.",
+      "Sun Jun 11 20:52:09 BST 2023 garygeeke updated configuration for the local repository."
+    ]
+  }
 }
 ```
 
-Finally in this exercise, use the following command to enable the
-[Open Metadata Access Services (OMASs)](/services/omas) that provide
-the domain specific open metadata and governance APIs.
+The next command to configure the server is to enable the [Open Metadata Access Services (OMASs)](/services/omas).  These are specialized open metadata and governance services.  
 
-The access services provide both REST APIs and event-based interaction.
-As such they need information about an event bus.
-The command below (this is request **7.** in Postman) sets up configuration properties about the event bus.  These properties are
-embedded in the configuration for each access service.
+It is possible to activate each OMAS individually, but the the sake of this exercise we are going to activate them all using this command (request **5.** in Postman).
 
 ```
-POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/event-bus?topicURLRoot=egeriaTopics
+GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/access-services/no-topics
 ```
 
-When the configuration is next queried (this is request **8.** in Postman), the event bus details are stored in the configuration document.
+The OMASs provide both REST APIs and notifications.  The `no-topics` part of the command turns off the notifications so we don't need to set up Apache Kafka for this exercise.
+
+The final command requests that an [Open Metadata Archive](/concepts/open-metadata-archive) is loaded to provide some sample metadata.  The name of the open metadata archive file (`content-packs/SimpleDataCatalog.json`) is sent in the request body.
+
+```
+GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/open-metadata-archives/file
+```
+
+When the configuration is next queried (this is request **2.** in Postman), the complete configuration document is shown.
 
 ```json
 {
-    "class": "OMAGServerConfigResponse",
-    "relatedHTTPCode": 200,
-    "omagserverConfig": {
-        "class": "OMAGServerConfig",
-        "localServerId": "2a73902e-e691-43cc-b422-23b6b42992e2",
-        "localServerName": "cocoMDS1",
-        "localServerType": "Standalone Metadata Repository",
-        "localServerURL": "https://localhost:9443",
-        "localServerUserId": "OMAGServer",
-        "maxPageSize": 1000,
-        "eventBusConfig": {
-            "class": "EventBusConfig",
-            "topicURLRoot": "egeriaTopics"
-        },
-        "repositoryServicesConfig": {
-            "class": "RepositoryServicesConfig",
-            "auditLogConnections": [
-                {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "5390bf3e-6b38-4eda-b34a-de55ac4252a7",
-                    "qualifiedName": "DefaultAuditLog.Connection.cocoMDS1",
-                    "displayName": "DefaultAuditLog.Connection.cocoMDS1",
-                    "description": "OMRS default audit log connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "4afac741-3dcc-4c60-a4ca-a6dede994e3f",
-                        "qualifiedName": "Console Audit Log Store Connector",
-                        "displayName": "Console Audit Log Store Connector",
-                        "description": "Connector supports logging of audit log messages to stdout.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.auditlogstore.console.ConsoleAuditLogStoreProvider"
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "836efeae-ab34-4425-89f0-6adf2faa1f2e",
-                        "qualifiedName": "DefaultAuditLog.Endpoint.cocoMDS1.auditlog",
-                        "displayName": "DefaultAuditLog.Endpoint.cocoMDS1.auditlog",
-                        "description": "OMRS default audit log endpoint.",
-                        "address": "cocoMDS1.auditlog"
-                    }
-                }
+  "class": "OMAGServerConfigResponse",
+  "relatedHTTPCode": 200,
+  "omagserverConfig": {
+    "class": "OMAGServerConfig",
+    "versionId": "V2.0",
+    "localServerId": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff",
+    "localServerName": "myMetadataServer",
+    "localServerType": "Metadata Access Store",
+    "localServerURL": "https://localhost:9443",
+    "localServerUserId": "OMAGServer",
+    "maxPageSize": 1000,
+    "accessServicesConfig": [
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 210,
+        "accessServiceDevelopmentStatus": "TECHNICAL_PREVIEW",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.datamanager.admin.DataManagerAdmin",
+        "accessServiceName": "Data Manager",
+        "accessServiceFullName": "Data Manager OMAS",
+        "accessServiceURLMarker": "data-manager",
+        "accessServiceDescription": "Capture changes to the data stores and data set managed by a data manager such as a database server, content manager or file system.",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/data-manager/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 226,
+        "accessServiceDevelopmentStatus": "TECHNICAL_PREVIEW",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.subjectarea.admin.SubjectAreaAdmin",
+        "accessServiceName": "Subject Area",
+        "accessServiceFullName": "Subject Area OMAS",
+        "accessServiceURLMarker": "subject-area",
+        "accessServiceDescription": "Document knowledge about a subject area",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/subject-area/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 218,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.glossaryview.server.admin.GlossaryViewAdmin",
+        "accessServiceName": "Glossary View",
+        "accessServiceFullName": "Glossary View OMAS",
+        "accessServiceURLMarker": "glossary-view",
+        "accessServiceDescription": "Support glossary terms visualization",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/glossary-view/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 213,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.designmodel.admin.DesignModelAdmin",
+        "accessServiceName": "Design Model",
+        "accessServiceFullName": "Design Model OMAS",
+        "accessServiceURLMarker": "design-model",
+        "accessServiceDescription": "Exchange design model content with tools and standard packages",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/design-model/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 223,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.securityofficer.server.admin.SecurityOfficerAdmin",
+        "accessServiceName": "Security Officer",
+        "accessServiceFullName": "Security Officer OMAS",
+        "accessServiceURLMarker": "security-officer",
+        "accessServiceDescription": "Set up rules and security tags to protect data",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/security-officer/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 204,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.assetmanager.admin.AssetManagerAdmin",
+        "accessServiceName": "Asset Manager",
+        "accessServiceFullName": "Asset Manager OMAS",
+        "accessServiceURLMarker": "asset-manager",
+        "accessServiceDescription": "Manage metadata from a third party asset manager",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/asset-manager/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 208,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.itinfrastructure.admin.ITInfrastructureAdmin",
+        "accessServiceName": "IT Infrastructure",
+        "accessServiceFullName": "IT Infrastructure OMAS",
+        "accessServiceURLMarker": "it-infrastructure",
+        "accessServiceDescription": "Manage information about the deployed IT infrastructure",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/it-infrastructure/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 212,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.datascience.admin.DataScienceAdmin",
+        "accessServiceName": "Data Science",
+        "accessServiceFullName": "Data Science OMAS",
+        "accessServiceURLMarker": "data-science",
+        "accessServiceDescription": "Create and manage data science definitions and models",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/data-science/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 207,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.communityprofile.admin.CommunityProfileAdmin",
+        "accessServiceName": "Community Profile",
+        "accessServiceFullName": "Community Profile OMAS",
+        "accessServiceURLMarker": "community-profile",
+        "accessServiceDescription": "Define personal profile and collaborate",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/community-profile/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 209,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.dataengine.server.admin.DataEngineAdmin",
+        "accessServiceName": "Data Engine",
+        "accessServiceFullName": "Data Engine OMAS",
+        "accessServiceURLMarker": "data-engine",
+        "accessServiceDescription": "Exchange process models and lineage with a data engine",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/data-engine/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 217,
+        "accessServiceDevelopmentStatus": "TECHNICAL_PREVIEW",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.discoveryengine.admin.DiscoveryEngineAdmin",
+        "accessServiceName": "Discovery Engine",
+        "accessServiceFullName": "Discovery Engine OMAS",
+        "accessServiceURLMarker": "discovery-engine",
+        "accessServiceDescription": "Support for automated metadata discovery engines",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/discovery-engine/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 215,
+        "accessServiceDevelopmentStatus": "TECHNICAL_PREVIEW",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.digitalarchitecture.admin.DigitalArchitectureAdmin",
+        "accessServiceName": "Digital Architecture",
+        "accessServiceFullName": "Digital Architecture OMAS",
+        "accessServiceURLMarker": "digital-architecture",
+        "accessServiceDescription": "Design of the digital services for an organization",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/digital-architecture/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 205,
+        "accessServiceDevelopmentStatus": "STABLE",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.assetowner.admin.AssetOwnerAdmin",
+        "accessServiceName": "Asset Owner",
+        "accessServiceFullName": "Asset Owner OMAS",
+        "accessServiceURLMarker": "asset-owner",
+        "accessServiceDescription": "Manage an asset",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/asset-owner/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 225,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.stewardshipaction.admin.StewardshipActionAdmin",
+        "accessServiceName": "Stewardship Action",
+        "accessServiceFullName": "Stewardship Action OMAS",
+        "accessServiceURLMarker": "stewardship-action",
+        "accessServiceDescription": "Manage exceptions and actions from open governance",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/stewardship-action/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 220,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.governanceprogram.admin.GovernanceProgramAdmin",
+        "accessServiceName": "Governance Program",
+        "accessServiceFullName": "Governance Program OMAS",
+        "accessServiceURLMarker": "governance-program",
+        "accessServiceDescription": "Manage the governance program",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/governance-program/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 216,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.digitalservice.admin.DigitalServiceAdmin",
+        "accessServiceName": "Digital Service",
+        "accessServiceFullName": "Digital Service OMAS",
+        "accessServiceURLMarker": "digital-service",
+        "accessServiceDescription": "Manage a digital service through its lifecycle",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/digital-service/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 203,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.assetlineage.admin.AssetLineageAdmin",
+        "accessServiceName": "Asset Lineage",
+        "accessServiceFullName": "Asset Lineage OMAS",
+        "accessServiceURLMarker": "asset-lineage",
+        "accessServiceDescription": "Store asset lineage",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/asset-lineage/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 201,
+        "accessServiceDevelopmentStatus": "STABLE",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.assetconsumer.admin.AssetConsumerAdmin",
+        "accessServiceName": "Asset Consumer",
+        "accessServiceFullName": "Asset Consumer OMAS",
+        "accessServiceURLMarker": "asset-consumer",
+        "accessServiceDescription": "Access assets through connectors",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/asset-consumer/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 200,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.assetcatalog.admin.AssetCatalogAdmin",
+        "accessServiceName": "Asset Catalog",
+        "accessServiceFullName": "Asset Catalog OMAS",
+        "accessServiceURLMarker": "asset-catalog",
+        "accessServiceDescription": "Search and understand your assets",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/asset-catalog/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 214,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.devops.admin.DevOpsAdmin",
+        "accessServiceName": "DevOps",
+        "accessServiceFullName": "DevOps OMAS",
+        "accessServiceURLMarker": "devops",
+        "accessServiceDescription": "Manage a DevOps pipeline",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/dev-ops/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 224,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.softwaredeveloper.admin.SoftwareDeveloperAdmin",
+        "accessServiceName": "Software Developer",
+        "accessServiceFullName": "Software Developer OMAS",
+        "accessServiceURLMarker": "software-developer",
+        "accessServiceDescription": "Interact with software development tools",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/software-developer/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 221,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.projectmanagement.admin.ProjectManagementAdmin",
+        "accessServiceName": "Project Management",
+        "accessServiceFullName": "Project Management OMAS",
+        "accessServiceURLMarker": "project-management",
+        "accessServiceDescription": "Manage governance related projects",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/project-management/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 219,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.governanceengine.admin.GovernanceEngineAdmin",
+        "accessServiceName": "Governance Engine",
+        "accessServiceFullName": "Governance Engine OMAS",
+        "accessServiceURLMarker": "governance-engine",
+        "accessServiceDescription": "Set up an operational governance engine",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/governance-engine/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 211,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.dataprivacy.admin.DataPrivacyAdmin",
+        "accessServiceName": "Data Privacy",
+        "accessServiceFullName": "Data Privacy OMAS",
+        "accessServiceURLMarker": "data-privacy",
+        "accessServiceDescription": "Manage governance of privacy",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/data-privacy/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      },
+      {
+        "class": "AccessServiceConfig",
+        "accessServiceId": 222,
+        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
+        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.securitymanager.admin.SecurityManagerAdmin",
+        "accessServiceName": "Security Manager",
+        "accessServiceFullName": "Security Manager OMAS",
+        "accessServiceURLMarker": "security-manager",
+        "accessServiceDescription": "Manages exchange of metadata with a security service",
+        "accessServiceWiki": "https://egeria-project.org/services/omas/security-manager/overview/",
+        "accessServiceOperationalStatus": "ENABLED"
+      }
+    ],
+    "repositoryServicesConfig": {
+      "class": "RepositoryServicesConfig",
+      "auditLogConnections": [
+        {
+          "class": "Connection",
+          "headerVersion": 0,
+          "qualifiedName": "Console- default",
+          "displayName": "Console",
+          "connectorType": {
+            "class": "ConnectorType",
+            "headerVersion": 0,
+            "type": {
+              "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+              "typeName": "ConnectorType",
+              "typeVersion": 1,
+              "typeDescription": "A set of properties describing a type of connector."
+            },
+            "guid": "4afac741-3dcc-4c60-a4ca-a6dede994e3f",
+            "qualifiedName": "Egeria:AuditLogDestinationConnector:Console",
+            "displayName": "Console Audit Log Destination Connector",
+            "description": "Connector supports logging of audit log messages to stdout.",
+            "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.auditlogstore.console.ConsoleAuditLogStoreProvider",
+            "connectorFrameworkName": "Open Connector Framework (OCF)",
+            "connectorInterfaceLanguage": "Java",
+            "connectorInterfaces": [
+              "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+              "org.odpi.openmetadata.repositoryservices.connectors.stores.auditlogstore.OMRSAuditLogStore"
             ],
-            "localRepositoryConfig": {
-                "class": "LocalRepositoryConfig",
-                "metadataCollectionId": "ad405dc2-1361-48f8-9ea2-538bd43db1b0",
-                "localRepositoryLocalConnection": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "6a3c07b0-0e04-42dc-bcc6-392609bf1d02",
-                    "qualifiedName": "DefaultInMemoryRepository.Connection.cocoMDS1",
-                    "displayName": "DefaultInMemoryRepository.Connection.cocoMDS1",
-                    "description": "OMRS default in memory local repository connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "65cc9091-757f-4bcd-b937-426160be8bc2",
-                        "qualifiedName": "OMRS In Memory Repository Connector",
-                        "displayName": "OMRS In Memory Repository Connector",
-                        "description": "OMRS Repository Connector that uses an in-memory store.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.inmemory.repositoryconnector.InMemoryOMRSRepositoryConnectorProvider"
-                    }
-                },
-                "localRepositoryRemoteConnection": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "858be98b-49d2-4ccf-9b23-01085a5f473f",
-                    "qualifiedName": "DefaultRepositoryRESTAPI.Connection.cocoMDS1",
-                    "displayName": "DefaultRepositoryRESTAPI.Connection.cocoMDS1",
-                    "description": "OMRS default repository REST API connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "75ea56d1-656c-43fb-bc0c-9d35c5553b9e",
-                        "qualifiedName": "OMRS REST API Repository Connector",
-                        "displayName": "OMRS REST API Repository Connector",
-                        "description": "OMRS Repository Connector that calls the repository services REST API of a remote server.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.rest.repositoryconnector.OMRSRESTRepositoryConnectorProvider"
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "cee85898-43aa-4af5-9bbd-2bed809d1acb",
-                        "qualifiedName": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
-                        "displayName": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
-                        "description": "OMRS default repository REST API endpoint.",
-                        "address": "https://localhost:9443/servers/cocoMDS1"
-                    }
-                },
-                "eventsToSaveRule": "ALL",
-                "eventsToSendRule": "ALL"
-            }
+            "recognizedConfigurationProperties": [
+              "supportedSeverities"
+            ]
+          },
+          "configurationProperties": {
+            "supportedSeverities": [
+              "<Unknown>",
+              "Information",
+              "Event",
+              "Decision",
+              "Action",
+              "Error",
+              "Exception",
+              "Security",
+              "Startup",
+              "Shutdown",
+              "Asset",
+              "Types",
+              "Cohort"
+            ]
+          }
+        }
+      ],
+      "openMetadataArchiveConnections": [
+        {
+          "class": "Connection",
+          "headerVersion": 0,
+          "displayName": "Open Metadata Archive File content-packs/SimpleDataCatalog.json Connection",
+          "connectorType": {
+            "class": "ConnectorType",
+            "headerVersion": 0,
+            "type": {
+              "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+              "typeName": "ConnectorType",
+              "typeVersion": 1,
+              "typeDescription": "A set of properties describing a type of connector."
+            },
+            "guid": "f4b49aa8-4f8f-4e0d-a725-fef8fa6ae722",
+            "qualifiedName": "Egeria:OpenMetadataArchiveStoreConnector:File",
+            "displayName": "File-based Open Metadata Archive Store Connector",
+            "description": "Connector supports storing of an open metadata archive as a single file stored using JSON format.",
+            "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.archiveconnector.file.FileBasedOpenMetadataArchiveStoreProvider",
+            "connectorFrameworkName": "Open Connector Framework (OCF)",
+            "connectorInterfaceLanguage": "Java",
+            "connectorInterfaces": [
+              "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+              "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
+              "org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore.OpenMetadataArchiveStore"
+            ]
+          },
+          "endpoint": {
+            "class": "Endpoint",
+            "headerVersion": 0,
+            "address": "content-packs/SimpleDataCatalog.json"
+          }
+        }
+      ],
+      "localRepositoryConfig": {
+        "class": "LocalRepositoryConfig",
+        "metadataCollectionId": "02694e83-a284-4f03-ac0c-34bfa2ce5c65",
+        "localRepositoryMode": "OPEN_METADATA_NATIVE",
+        "localRepositoryLocalConnection": {
+          "class": "Connection",
+          "headerVersion": 0,
+          "displayName": "In Memory Local Repository Connection",
+          "connectorType": {
+            "class": "ConnectorType",
+            "headerVersion": 0,
+            "type": {
+              "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+              "typeName": "ConnectorType",
+              "typeVersion": 1,
+              "typeDescription": "A set of properties describing a type of connector."
+            },
+            "guid": "65cc9091-757f-4bcd-b937-426160be8bc2",
+            "qualifiedName": "Egeria:OMRSRepositoryConnector:InMemory",
+            "displayName": "In Memory OMRS Repository Connector",
+            "description": "Native open metadata repository connector that maps open metadata calls to a set of in memory hash maps - demo use only.",
+            "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.inmemory.repositoryconnector.InMemoryOMRSRepositoryConnectorProvider",
+            "connectorFrameworkName": "Open Connector Framework (OCF)",
+            "connectorInterfaceLanguage": "Java",
+            "connectorInterfaces": [
+              "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+              "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
+              "org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore.repositoryconnector.OMRSMetadataCollectionManager"
+            ]
+          }
         },
-        "auditTrail": [
-            "Tue Feb 05 13:12:50 GMT 2019 garygeeke updated configuration for local server type name to Standalone Metadata Repository.",
-            "Tue Feb 05 14:58:28 GMT 2019 garygeeke updated configuration for the local repository.",
-            "Tue Feb 05 15:13:45 GMT 2019 garygeeke updated configuration for default event bus."
-        ]
-    }
+        "localRepositoryRemoteConnection": {
+          "class": "Connection",
+          "headerVersion": 0,
+          "displayName": "Local Repository Remote Connection",
+          "connectorType": {
+            "class": "ConnectorType",
+            "headerVersion": 0,
+            "type": {
+              "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+              "typeName": "ConnectorType",
+              "typeVersion": 1,
+              "typeDescription": "A set of properties describing a type of connector."
+            },
+            "guid": "75ea56d1-656c-43fb-bc0c-9d35c5553b9e",
+            "qualifiedName": "Egeria:OMRSRepositoryConnector:CohortMemberClient:REST",
+            "displayName": "REST Cohort Member Client Connector",
+            "description": "Cohort member client connector that provides access to open metadata located in a remote repository via REST calls.",
+            "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.rest.repositoryconnector.OMRSRESTRepositoryConnectorProvider",
+            "connectorFrameworkName": "Open Connector Framework (OCF)",
+            "connectorInterfaceLanguage": "Java",
+            "connectorInterfaces": [
+              "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+              "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
+              "org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore.repositoryconnector.OMRSMetadataCollectionManager"
+            ]
+          },
+          "endpoint": {
+            "class": "Endpoint",
+            "headerVersion": 0,
+            "address": "https://localhost:9443/servers/myMetadataServer"
+          }
+        },
+        "eventsToSaveRule": "ALL",
+        "eventsToSendRule": "ALL"
+      },
+      "enterpriseAccessConfig": {
+        "class": "EnterpriseAccessConfig",
+        "enterpriseMetadataCollectionName": "myMetadataServer Enterprise Metadata Collection",
+        "enterpriseMetadataCollectionId": "78fbc21f-ffff-45ad-9466-310fc70337d0",
+        "enterpriseOMRSTopicConnection": {
+          "class": "VirtualConnection",
+          "headerVersion": 0,
+          "displayName": "Enterprise OMRS Topic Connection",
+          "connectorType": {
+            "class": "ConnectorType",
+            "headerVersion": 0,
+            "type": {
+              "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+              "typeName": "ConnectorType",
+              "typeVersion": 1,
+              "typeDescription": "A set of properties describing a type of connector."
+            },
+            "qualifiedName": "org.odpi.openmetadata.repositoryservices.connectors.omrstopic.OMRSTopicProvider",
+            "displayName": "OMRS Topic Connector",
+            "description": "Provides access to the OMRS Topic that is used to exchange events between members of a cohort, or to notify Open Metadata Access Services (OMASs) of changes to metadata in the enterprise.",
+            "connectorProviderClassName": "org.odpi.openmetadata.repositoryservices.connectors.omrstopic.OMRSTopicProvider",
+            "connectorFrameworkName": "Open Connector Framework (OCF)",
+            "connectorInterfaceLanguage": "Java",
+            "connectorInterfaces": [
+              "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+              "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
+              "org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic.OpenMetadataTopicListener",
+              "org.odpi.openmetadata.frameworks.connectors.VirtualConnectorExtension",
+              "org.odpi.openmetadata.repositoryservices.connectors.omrstopic.OMRSTopic"
+            ]
+          },
+          "embeddedConnections": [
+            {
+              "class": "EmbeddedConnection",
+              "headerVersion": 0,
+              "position": 0,
+              "displayName": "Enterprise OMRS Events",
+              "embeddedConnection": {
+                "class": "Connection",
+                "headerVersion": 0,
+                "displayName": "Kafka Event Bus Connection",
+                "connectorType": {
+                  "class": "ConnectorType",
+                  "headerVersion": 0,
+                  "type": {
+                    "typeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
+                    "typeName": "ConnectorType",
+                    "typeVersion": 1,
+                    "typeDescription": "A set of properties describing a type of connector."
+                  },
+                  "guid": "ed8e682b-2fec-4403-b551-02f8c46322ef",
+                  "qualifiedName": "Egeria:OpenMetadataTopicConnector:InMemory",
+                  "displayName": "In Memory Open Metadata Topic Connector",
+                  "description": "In Memory Open Metadata Topic Connector supports string based events over an in memory event bus.",
+                  "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.inmemory.InMemoryOpenMetadataTopicProvider",
+                  "connectorFrameworkName": "Open Connector Framework (OCF)",
+                  "connectorInterfaceLanguage": "Java",
+                  "connectorInterfaces": [
+                    "org.odpi.openmetadata.frameworks.connectors.SecureConnectorExtension",
+                    "org.odpi.openmetadata.frameworks.auditlog.AuditLoggingComponent",
+                    "java.lang.Runnable",
+                    "org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic.OpenMetadataTopic"
+                  ]
+                },
+                "endpoint": {
+                  "class": "Endpoint",
+                  "headerVersion": 0,
+                  "address": "myMetadataServer.openmetadata.repositoryservices.enterprise.myMetadataServer.OMRSTopic"
+                },
+                "configurationProperties": {
+                  "local.server.id": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff"
+                }
+              }
+            }
+          ]
+        },
+        "enterpriseOMRSTopicProtocolVersion": "V1"
+      }
+    },
+    "auditTrail": [
+      "Sun Jun 11 20:49:09 BST 2023 garygeeke updated configuration for local server type name to Metadata Access Store.",
+      "Sun Jun 11 20:52:09 BST 2023 garygeeke updated configuration for the local repository.",
+      "Sun Jun 11 20:58:16 BST 2023 garygeeke updated configuration for access services.",
+      "Sun Jun 11 20:58:16 BST 2023 garygeeke updated configuration for enterprise repository services (used by access services).",
+      "Sun Jun 11 21:07:23 BST 2023 garygeeke updated list of open metadata archives loaded at server start up."
+    ]
+  }
 }
 ```
 
-The last command creates the configuration for the access services (this is request **9.** in Postman):
-
-```
-POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/access-services
-```
-
-which results in the final configuration (this is request **10.** in Postman).
-
-```json
-{
-    "class": "OMAGServerConfigResponse",
-    "relatedHTTPCode": 200,
-    "omagserverConfig": {
-        "class": "OMAGServerConfig",
-        "localServerId": "2a73902e-e691-43cc-b422-23b6b42992e2",
-        "localServerName": "cocoMDS1",
-        "localServerType": "Standalone Metadata Repository",
-        "localServerURL": "https://localhost:9443",
-        "localServerUserId": "OMAGServer",
-        "maxPageSize": 1000,
-        "eventBusConfig": {
-            "class": "EventBusConfig",
-            "topicURLRoot": "egeriaTopics"
-        },
-        "accessServicesConfig": [
-            {
-                "class": "AccessServiceConfig",
-                "accessServiceId": 1021,
-                "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.dataengine.server.admin.DataEngineAdmin",
-                "accessServiceName": "Data Engine",
-                "accessServiceDescription": "Create processes for lineage",
-                "accessServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/data-engine/",
-                "accessServiceOperationalStatus": "ENABLED",
-                "accessServiceInTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "14475820-7356-4b14-a560-128b4f6bdf87",
-                    "qualifiedName": "InTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "InTopic",
-                    "description": "InTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "25629bf5-e8f0-4f47-ac43-2dee3ba2439c",
-                        "qualifiedName": "open-metadata.access-services.Data Engine.inTopic",
-                        "displayName": "open-metadata.access-services.Data Engine.inTopic",
-                        "description": "InTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Data Engine.inTopic"
-                    }
-                },
-                "accessServiceOutTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "84689e40-b83a-4a8e-b172-e628ded4c77b",
-                    "qualifiedName": "OutTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "OutTopic",
-                    "description": "OutTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "0b2e8a73-0c58-44fe-8b8e-e07b3f78592d",
-                        "qualifiedName": "open-metadata.access-services.Data Engine.outTopic",
-                        "displayName": "open-metadata.access-services.Data Engine.outTopic",
-                        "description": "OutTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Data Engine.outTopic"
-                    }
-                }
-            },
-            {
-                "class": "AccessServiceConfig",
-                "accessServiceId": 1020,
-                "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.subjectarea.admin.SubjectAreaAdmin",
-                "accessServiceName": "Subject Area",
-                "accessServiceDescription": "Document knowledge about a subject area",
-                "accessServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/subject-area/",
-                "accessServiceOperationalStatus": "ENABLED",
-                "accessServiceInTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "96780526-2d8e-4334-9bfa-1dd86896913c",
-                    "qualifiedName": "InTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "InTopic",
-                    "description": "InTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "c2643840-8225-4c9b-84b6-4ab0b2a9a80a",
-                        "qualifiedName": "open-metadata.access-services.Subject Area.inTopic",
-                        "displayName": "open-metadata.access-services.Subject Area.inTopic",
-                        "description": "InTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Subject Area.inTopic"
-                    }
-                },
-                "accessServiceOutTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "82279a05-9310-4600-a03a-9dc70a41600f",
-                    "qualifiedName": "OutTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "OutTopic",
-                    "description": "OutTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "2235fdb0-84d6-4efe-b914-9035dbe74083",
-                        "qualifiedName": "open-metadata.access-services.Subject Area.outTopic",
-                        "displayName": "open-metadata.access-services.Subject Area.outTopic",
-                        "description": "OutTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Subject Area.outTopic"
-                    }
-                }
-            },
-            {
-                "class": "AccessServiceConfig",
-                "accessServiceId": 1008,
-                "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.governanceengine.admin.GovernanceEngineAdmin",
-                "accessServiceName": "Governance Engine",
-                "accessServiceDescription": "Set up an operational governance engine",
-                "accessServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/governance-engine/",
-                "accessServiceOperationalStatus": "ENABLED",
-                "accessServiceInTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "4f83087c-bd1c-455f-b809-1938cab03ecd",
-                    "qualifiedName": "InTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "InTopic",
-                    "description": "InTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "a0ba0eea-738f-4b0c-adc2-3d832e43ca72",
-                        "qualifiedName": "open-metadata.access-services.Governance Engine.inTopic",
-                        "displayName": "open-metadata.access-services.Governance Engine.inTopic",
-                        "description": "InTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Governance Engine.inTopic"
-                    }
-                },
-                "accessServiceOutTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "84036aea-5055-427a-aa3d-ad3fa0aef255",
-                    "qualifiedName": "OutTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "OutTopic",
-                    "description": "OutTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "98f58323-b97c-4e7b-82f6-d804449a4d81",
-                        "qualifiedName": "open-metadata.access-services.Governance Engine.outTopic",
-                        "displayName": "open-metadata.access-services.Governance Engine.outTopic",
-                        "description": "OutTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Governance Engine.outTopic"
-                    }
-                }
-            },
-            {
-                "class": "AccessServiceConfig",
-                "accessServiceId": 1009,
-                "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.governanceprogram.admin.GovernanceProgramAdmin",
-                "accessServiceName": "Governance Program",
-                "accessServiceDescription": "Manage the governance program",
-                "accessServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/governance-program/",
-                "accessServiceOperationalStatus": "ENABLED",
-                "accessServiceInTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "6bba6aa3-308e-41a3-bf01-51ef65028e60",
-                    "qualifiedName": "InTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "InTopic",
-                    "description": "InTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "aad59e1e-20e4-4a9b-982a-f8b939dc580a",
-                        "qualifiedName": "open-metadata.access-services.Governance Program.inTopic",
-                        "displayName": "open-metadata.access-services.Governance Program.inTopic",
-                        "description": "InTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Governance Program.inTopic"
-                    }
-                },
-                "accessServiceOutTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "6d5a04c3-e216-42b0-9479-71ce4461e86d",
-                    "qualifiedName": "OutTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "OutTopic",
-                    "description": "OutTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "dccb1ef2-ae92-4ed9-9619-537c9cf4e05d",
-                        "qualifiedName": "open-metadata.access-services.Governance Program.outTopic",
-                        "displayName": "open-metadata.access-services.Governance Program.outTopic",
-                        "description": "OutTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Governance Program.outTopic"
-                    }
-                }
-            },
-            {
-                "class": "AccessServiceConfig",
-                "accessServiceId": 1014,
-                "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.informationview.admin.InformationViewAdmin",
-                "accessServiceName": "Information View",
-                "accessServiceDescription": "Support information virtualization and data set definitions",
-                "accessServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/information-view/",
-                "accessServiceOperationalStatus": "ENABLED",
-                "accessServiceInTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "b7718cc6-da6a-4a9f-8f76-c5d4579f1c34",
-                    "qualifiedName": "InTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "InTopic",
-                    "description": "InTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "87628694-8c85-46eb-aae2-0c834e915e00",
-                        "qualifiedName": "open-metadata.access-services.Information View.inTopic",
-                        "displayName": "open-metadata.access-services.Information View.inTopic",
-                        "description": "InTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Information View.inTopic"
-                    }
-                },
-                "accessServiceOutTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "826c314e-856d-4b2b-bcf1-0d11285a7610",
-                    "qualifiedName": "OutTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "OutTopic",
-                    "description": "OutTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "fccd511a-86f1-4748-b580-78afd9a0b166",
-                        "qualifiedName": "open-metadata.access-services.Information View.outTopic",
-                        "displayName": "open-metadata.access-services.Information View.outTopic",
-                        "description": "OutTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Information View.outTopic"
-                    }
-                }
-            },
-            {
-                "class": "AccessServiceConfig",
-                "accessServiceId": 1001,
-                "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.assetconsumer.admin.AssetConsumerAdmin",
-                "accessServiceName": "Asset Consumer",
-                "accessServiceDescription": "Access assets through connectors",
-                "accessServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/asset-consumer/",
-                "accessServiceOperationalStatus": "ENABLED",
-                "accessServiceInTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "5d034bb8-133b-4dc8-b0db-712ae8a032d6",
-                    "qualifiedName": "InTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "InTopic",
-                    "description": "InTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "148e6940-9dff-47c6-9762-662559b3bec7",
-                        "qualifiedName": "open-metadata.access-services.Asset Consumer.inTopic",
-                        "displayName": "open-metadata.access-services.Asset Consumer.inTopic",
-                        "description": "InTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Asset Consumer.inTopic"
-                    }
-                },
-                "accessServiceOutTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "c46fd6be-4377-4ef8-8ce4-82aa30a9f3bd",
-                    "qualifiedName": "OutTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "OutTopic",
-                    "description": "OutTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "6ca034c7-523e-4b30-a7dc-f1359c287ea0",
-                        "qualifiedName": "open-metadata.access-services.Asset Consumer.outTopic",
-                        "displayName": "open-metadata.access-services.Asset Consumer.outTopic",
-                        "description": "OutTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Asset Consumer.outTopic"
-                    }
-                }
-            },
-            {
-                "class": "AccessServiceConfig",
-                "accessServiceId": 1004,
-                "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.connectedasset.admin.ConnectedAssetAdmin",
-                "accessServiceName": "Connected Asset",
-                "accessServiceDescription": "Understand an asset",
-                "accessServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/connected-asset/",
-                "accessServiceOperationalStatus": "ENABLED",
-                "accessServiceInTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "2214b4ad-d1b8-4fd4-942c-4a5552688e91",
-                    "qualifiedName": "InTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "InTopic",
-                    "description": "InTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "fabfa203-ca60-4036-90e5-de5d695ef8f1",
-                        "qualifiedName": "open-metadata.access-services.Connected Asset.inTopic",
-                        "displayName": "open-metadata.access-services.Connected Asset.inTopic",
-                        "description": "InTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Connected Asset.inTopic"
-                    }
-                },
-                "accessServiceOutTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "9c3332ce-b065-49dc-b22e-432277627cde",
-                    "qualifiedName": "OutTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "OutTopic",
-                    "description": "OutTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "e7bf76b4-4214-460f-ad8f-12a0ecb63e44",
-                        "qualifiedName": "open-metadata.access-services.Connected Asset.outTopic",
-                        "displayName": "open-metadata.access-services.Connected Asset.outTopic",
-                        "description": "OutTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Connected Asset.outTopic"
-                    }
-                }
-            },
-            {
-                "class": "AccessServiceConfig",
-                "accessServiceId": 1000,
-                "accessServiceAdminClass": "org.odpi.openmetadata.accessservice.assetcatalog.admin.AssetCatalogAdmin",
-                "accessServiceName": "Asset Catalog",
-                "accessServiceDescription": "Search and understand your assets",
-                "accessServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/asset-catalog/",
-                "accessServiceOperationalStatus": "ENABLED",
-                "accessServiceInTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "5f6dc495-2b31-4ca0-8196-bb34a14e020b",
-                    "qualifiedName": "InTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "InTopic",
-                    "description": "InTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "338b6ea6-cd1e-4896-ab1a-568da8477903",
-                        "qualifiedName": "open-metadata.access-services.Asset Catalog.inTopic",
-                        "displayName": "open-metadata.access-services.Asset Catalog.inTopic",
-                        "description": "InTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Asset Catalog.inTopic"
-                    }
-                },
-                "accessServiceOutTopic": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "55a9dbb0-f756-4180-82d5-9b8c35af5fb0",
-                    "qualifiedName": "OutTopic",
-                    "configurationProperties": {
-                        "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                    },
-                    "displayName": "OutTopic",
-                    "description": "OutTopic",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "3851e8d0-e343-400c-82cb-3918fed81da6",
-                        "qualifiedName": "Kafka Open Metadata Topic Connector",
-                        "displayName": "Kafka Open Metadata Topic Connector",
-                        "description": "Kafka Open Metadata Topic Connector supports string based events over an Apache Kafka event bus.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.kafka.KafkaOpenMetadataTopicProvider",
-                        "recognizedAdditionalProperties": [
-                            "producer",
-                            "consumer",
-                            "local.server.id"
-                        ]
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "dab48064-6204-49bf-bf30-a66b0e353d36",
-                        "qualifiedName": "open-metadata.access-services.Asset Catalog.outTopic",
-                        "displayName": "open-metadata.access-services.Asset Catalog.outTopic",
-                        "description": "OutTopic",
-                        "address": "egeriaTopics.server.cocoMDS1.open-metadata.access-services.Asset Catalog.outTopic"
-                    }
-                }
-            }
-        ],
-        "repositoryServicesConfig": {
-            "class": "RepositoryServicesConfig",
-            "auditLogConnections": [
-                {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "5390bf3e-6b38-4eda-b34a-de55ac4252a7",
-                    "qualifiedName": "DefaultAuditLog.Connection.cocoMDS1",
-                    "displayName": "DefaultAuditLog.Connection.cocoMDS1",
-                    "description": "OMRS default audit log connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "4afac741-3dcc-4c60-a4ca-a6dede994e3f",
-                        "qualifiedName": "Console Audit Log Store Connector",
-                        "displayName": "Console Audit Log Store Connector",
-                        "description": "Connector supports logging of audit log messages to stdout.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.auditlogstore.console.ConsoleAuditLogStoreProvider"
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "836efeae-ab34-4425-89f0-6adf2faa1f2e",
-                        "qualifiedName": "DefaultAuditLog.Endpoint.cocoMDS1.auditlog",
-                        "displayName": "DefaultAuditLog.Endpoint.cocoMDS1.auditlog",
-                        "description": "OMRS default audit log endpoint.",
-                        "address": "cocoMDS1.auditlog"
-                    }
-                }
-            ],
-            "localRepositoryConfig": {
-                "class": "LocalRepositoryConfig",
-                "metadataCollectionId": "ad405dc2-1361-48f8-9ea2-538bd43db1b0",
-                "localRepositoryLocalConnection": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "6a3c07b0-0e04-42dc-bcc6-392609bf1d02",
-                    "qualifiedName": "DefaultInMemoryRepository.Connection.cocoMDS1",
-                    "displayName": "DefaultInMemoryRepository.Connection.cocoMDS1",
-                    "description": "OMRS default in memory local repository connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "65cc9091-757f-4bcd-b937-426160be8bc2",
-                        "qualifiedName": "OMRS In Memory Repository Connector",
-                        "displayName": "OMRS In Memory Repository Connector",
-                        "description": "OMRS Repository Connector that uses an in-memory store.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.inmemory.repositoryconnector.InMemoryOMRSRepositoryConnectorProvider"
-                    }
-                },
-                "localRepositoryRemoteConnection": {
-                    "class": "Connection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                        "elementTypeName": "Connection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "858be98b-49d2-4ccf-9b23-01085a5f473f",
-                    "qualifiedName": "DefaultRepositoryRESTAPI.Connection.cocoMDS1",
-                    "displayName": "DefaultRepositoryRESTAPI.Connection.cocoMDS1",
-                    "description": "OMRS default repository REST API connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "LOCAL_COHORT"
-                        },
-                        "guid": "75ea56d1-656c-43fb-bc0c-9d35c5553b9e",
-                        "qualifiedName": "OMRS REST API Repository Connector",
-                        "displayName": "OMRS REST API Repository Connector",
-                        "description": "OMRS Repository Connector that calls the repository services REST API of a remote server.",
-                        "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.rest.repositoryconnector.OMRSRESTRepositoryConnectorProvider"
-                    },
-                    "endpoint": {
-                        "class": "Endpoint",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                            "elementTypeName": "Endpoint",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "cee85898-43aa-4af5-9bbd-2bed809d1acb",
-                        "qualifiedName": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
-                        "displayName": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
-                        "description": "OMRS default repository REST API endpoint.",
-                        "address": "https://localhost:9443/servers/cocoMDS1"
-                    }
-                },
-                "eventsToSaveRule": "ALL",
-                "eventsToSendRule": "ALL"
-            },
-            "enterpriseAccessConfig": {
-                "class": "EnterpriseAccessConfig",
-                "enterpriseMetadataCollectionName": "cocoMDS1 Enterprise Metadata Collection",
-                "enterpriseMetadataCollectionId": "95af03a9-ac18-4dbb-8b3a-4782429e5f77",
-                "enterpriseOMRSTopicConnection": {
-                    "class": "VirtualConnection",
-                    "type": {
-                        "class": "ElementType",
-                        "elementTypeId": "82f9c664-e59d-484c-a8f3-17088c23a2f3",
-                        "elementTypeName": "VirtualConnection",
-                        "elementTypeVersion": 1,
-                        "elementTypeDescription": "A connector for a virtual resource that needs to retrieve data from multiple places.",
-                        "elementOrigin": "CONFIGURATION"
-                    },
-                    "guid": "2084ee90-717b-49a1-938e-8f9d49567b8e",
-                    "qualifiedName": "EnterpriseTopicConnector.Server.cocoMDS1",
-                    "displayName": "EnterpriseTopicConnector.Server.cocoMDS1",
-                    "description": "OMRS default enterprise topic connection.",
-                    "connectorType": {
-                        "class": "ConnectorType",
-                        "type": {
-                            "class": "ElementType",
-                            "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                            "elementTypeName": "ConnectorType",
-                            "elementTypeVersion": 1,
-                            "elementTypeDescription": "A set of properties describing a type of connector.",
-                            "elementOrigin": "CONFIGURATION"
-                        },
-                        "guid": "c3cc7a9c-4fe2-4383-85c3-1e94df45e2da",
-                        "qualifiedName": "org.odpi.openmetadata.repositoryservices.connectors.omrstopic.OMRSTopicProvider",
-                        "displayName": "OMRSTopicProvider",
-                        "description": "ConnectorType for OMRSTopicProvider",
-                        "connectorProviderClassName": "org.odpi.openmetadata.repositoryservices.connectors.omrstopic.OMRSTopicProvider"
-                    },
-                    "embeddedConnections": [
-                        {
-                            "class": "EmbeddedConnection",
-                            "displayName": "Enterprise OMRS Events",
-                            "embeddedConnection": {
-                                "class": "Connection",
-                                "type": {
-                                    "class": "ElementType",
-                                    "elementTypeId": "114e9f8f-5ff3-4c32-bd37-a7eb42712253",
-                                    "elementTypeName": "Connection",
-                                    "elementTypeVersion": 1,
-                                    "elementTypeDescription": "A set of properties to identify and configure a connector instance.",
-                                    "elementOrigin": "CONFIGURATION"
-                                },
-                                "guid": "d2224d17-d55d-4029-b841-7b37f2fa3df3",
-                                "qualifiedName": "Enterprise OMRS Events",
-                                "configurationProperties": {
-                                    "local.server.id": "2a73902e-e691-43cc-b422-23b6b42992e2"
-                                },
-                                "displayName": "Enterprise OMRS Events",
-                                "description": "Enterprise OMRS Events",
-                                "connectorType": {
-                                    "class": "ConnectorType",
-                                    "type": {
-                                        "class": "ElementType",
-                                        "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                                        "elementTypeName": "ConnectorType",
-                                        "elementTypeVersion": 1,
-                                        "elementTypeDescription": "A set of properties describing a type of connector.",
-                                        "elementOrigin": "LOCAL_COHORT"
-                                    },
-                                    "guid": "ed8e682b-2fec-4403-b551-02f8c46322ef",
-                                    "qualifiedName": "In Memory Open Metadata Topic Connector",
-                                    "displayName": "In Memory Open Metadata Topic Connector",
-                                    "description": "In Memory Open Metadata Topic Connector supports string based events over an in memory event bus.",
-                                    "connectorProviderClassName": "org.odpi.openmetadata.adapters.eventbus.topic.inmemory.InMemoryOpenMetadataTopicProvider"
-                                },
-                                "endpoint": {
-                                    "class": "Endpoint",
-                                    "type": {
-                                        "class": "ElementType",
-                                        "elementTypeId": "dbc20663-d705-4ff0-8424-80c262c6b8e7",
-                                        "elementTypeName": "Endpoint",
-                                        "elementTypeVersion": 1,
-                                        "elementTypeDescription": "Description of the network address and related information needed to call a software service.",
-                                        "elementOrigin": "CONFIGURATION"
-                                    },
-                                    "guid": "2f858351-eb06-4824-805c-6f0bb56a4923",
-                                    "qualifiedName": "open-metadata.repository-services.enterprise.cocoMDS1.OMRSTopic",
-                                    "displayName": "open-metadata.repository-services.enterprise.cocoMDS1.OMRSTopic",
-                                    "description": "Enterprise OMRS Events",
-                                    "address": "cocoMDS1.open-metadata.repository-services.enterprise.cocoMDS1.OMRSTopic"
-                                }
-                            }
-                        }
-                    ]
-                },
-                "enterpriseOMRSTopicProtocolVersion": "V1"
-            }
-        },
-        "auditTrail": [
-            "Tue Feb 05 13:12:50 GMT 2019 garygeeke updated configuration for local server type name to Standalone Metadata Repository.",
-            "Tue Feb 05 14:58:28 GMT 2019 garygeeke updated configuration for the local repository.",
-            "Tue Feb 05 15:13:45 GMT 2019 garygeeke updated configuration for default event bus.",
-            "Tue Feb 05 15:49:07 GMT 2019 garygeeke updated configuration for access services.",
-            "Tue Feb 05 15:49:07 GMT 2019 garygeeke updated configuration for enterprise repository services (used by access services)."
-        ]
-    }
-}
-```
-
-You have probably noticed how quickly the configuration document grew into a complex structure.
-The commands you used made use of all of the configuration default values.
-There are other configuration services that enable you to customize the configuration document to
+You have probably noticed how quickly the configuration document grew into a complex structure. The commands you used made use of all of the configuration default values. There are other commands that enable you to customize the configuration document to
 adapt it to specific environment.  However, the defaults provide a good starting point.
 
-## Further reading
+!!! education "Further reading"
+    The contents of this tutorial cover a very simple OMAG server configuration. For guidance on configuring more complex OMAG servers see the [Administration Services User Guide](/guides/admin)
 
-The contents of this tutorial cover a very simple OMAG server configuration.
-For guidance on configuring more complex OMAG servers see:
 
-* [Administration Services User Guide](/guides/admin)
-
-For instructions on how to set up two OMAG Servers using in memory repositories that are exchanging metadata
-over [Apache Kafka](http://kafka.apache.org/), see:
-
-* [In Memory Repository Demo](https://github.com/odpi/egeria-samples/tree/main/demos/in-memory-repository)
 
 ## Next steps
 
-With the configuration document in place, you are ready to [start the OMAG Server](/education/tutorials/omag-server-tutorial/task-starting-omag-server).
+Next, this tutorial covers how to [stop the OMAG Server](/education/tutorials/omag-server-tutorial/task-stopping-omag-server).
+
 
 --8<-- "snippets/abbr.md"
+
+

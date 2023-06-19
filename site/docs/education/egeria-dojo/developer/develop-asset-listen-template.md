@@ -10,7 +10,6 @@ Open up the **asset-listen** folder. You will see under the `resources` director
 ![Template repository projects](asset-listen-files.png)
 
 
---8<-- "snippets/abbr.md"
 
 
 

@@ -10,4 +10,3 @@ An integration connector runs in an [Open Metadata Integration Service (OMIS)](/
 > An integration connector is shown deployed in an integration service running in an integration daemon.  The connector is linking to a third party technology and also calling the open metadata APIs of Egeria to manage the exchange of metadata.
 
 
----8<-- "snippets/abbr.md"

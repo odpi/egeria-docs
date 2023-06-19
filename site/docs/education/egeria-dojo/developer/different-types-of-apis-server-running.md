@@ -110,7 +110,7 @@ Now it is time to start `mds1` and observe the changes to `EgeriaPlatformReport`
     ```
     The [markdown version of the report](/education/egeria-dojo/developer/egeria-platform-report-mds1-running){ target=dojo-support } makes it easier to study the new information.
     
-    The additional information about the servers is coming from the *Platform Operation Services* 
+    The additional information about the servers is coming from the *Platform Services* 
     
     ```java linenums="1"
         List<String> serverList = platformServicesClient.getKnownServers(clientUserId);

@@ -7,4 +7,3 @@ Eager to build on this change, the managing director encourages her employees to
 
 As a result, the bus timetables began to include a calendar of local events.  Event organizers were able to register their events with the bus company and negotiate for additional buses where necessary.  New bus routes are identified and begin to operate.  The effect is that the bus company became an active member of the community, with increasing bus use and associated profits.
 
---8<-- "snippets/abbr.md"

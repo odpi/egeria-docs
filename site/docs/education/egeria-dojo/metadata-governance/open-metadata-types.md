@@ -31,7 +31,7 @@
         | 6 - Metadata Discovery                     | Data Content Analysis Results                                                     |
         | 7 - Lineage                                | Business Context, Process Metadata                                                |
         
---8<-- "snippets/abbr.md"
+
 
 
 

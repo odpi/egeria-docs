@@ -13,7 +13,7 @@ The Related Terms model contains relationships used to show how the assets of di
 ![UML](0350-Related-Terms.svg)
 
 
-The **TermRelationshipStatus** defines how reliable the relationship is between two glossary terms:
+The *TermRelationshipStatus* defines how reliable the relationship is between two glossary terms:
 
 * DRAFT means the relationship is under development.
 * ACTIVE means the relationship is validated and in use.

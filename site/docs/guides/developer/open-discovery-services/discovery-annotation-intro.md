@@ -26,4 +26,3 @@ The annotation types defined in the [Open Discovery Framework (ODF)](/frameworks
 
     The main entity type is called [Annotation](/types/6/0610-Annotations).  It is extended by [DataFieldAnnotation](/types/6/0617-Data-Field-Analysis) to distinguish annotations that refer, primarily to a data field. Other more specialist annotations extend these two basic annotation types.
 
----8<-- "snippets/abbr.md"

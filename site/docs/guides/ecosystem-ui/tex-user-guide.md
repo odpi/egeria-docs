@@ -11,7 +11,7 @@ The listed servers are the only ones the user will be able to retrieve type info
 
 <p>
 
-Typically a user may start by selecting a server from the `Select Server` selector. The type information for the server will be loaded. If a particular type is selected (clicked) it becomes the focus type; it will be displayed in the details area on the left side and highlighted in a diagram on the right side. The user can view the type's attributes and can click on types in the attiributes or in the diagrams to get more details about the selected type and to make that type the new focus.
+Typically a user may start by selecting a server from the `Select Server` selector. The type information for the server will be loaded. If a particular type is selected (clicked) it becomes the focus type; it will be displayed in the details area on the left side and highlighted in a diagram on the right side. The user can view the type's attributes and can click on types in the attributes or in the diagrams to get more details about the selected type and to make that type the new focus.
 
 <p>
 

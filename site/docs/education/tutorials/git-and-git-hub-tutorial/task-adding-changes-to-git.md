@@ -38,4 +38,4 @@ Changes to be committed:
 
 Now you are ready to commit your contribution to your clone.
 
----8<-- "snippets/abbr.md"
+

@@ -11,4 +11,3 @@ Once at work he called the bus company.  The clerk who answered the phone laughe
 
 Annoyed, Sam asked where he could get an up-to-date timetable for the bus.  The clerk did not know but suggested he call head office and was nice enough to give him with the telephone number.  It took a number of calls to find the right person, who then willingly dictated the times to him.  Sam asked how often the bus times changed and how he could keep up-to-date.  He was told that changes occurred infrequently and when they did, the bus driver would announce it.   Sam could also ring back to check for changes from time to time.
 
---8<-- "snippets/abbr.md"

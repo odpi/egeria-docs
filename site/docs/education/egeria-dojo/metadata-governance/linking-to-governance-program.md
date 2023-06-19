@@ -36,4 +36,3 @@ Your organization will have other governance initiatives covering different aspe
 !!! education "Further information"
     - [Setting up your Governance Program](/guides/planning/governance-program/overview)
 
---8<-- "snippets/abbr.md"

@@ -87,4 +87,4 @@ The following command removes the configuration for the engine host services fro
     {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{engineHostServerName}}/engine-host-services
     ```
 
---8<-- "snippets/abbr.md"
+

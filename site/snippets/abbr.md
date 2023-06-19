@@ -24,3 +24,9 @@
 *[OMVSs]: Open Metadata View Services
 *[PR]: Pull Request
 *[UI]: User Interface
+
+----
+
+[Raise an issue :material-github:](https://github.com/odpi/egeria-docs/issues){ target=gh } or comment below
+<!-- Comment system -->
+--8<-- "overrides/partials/comments.html"

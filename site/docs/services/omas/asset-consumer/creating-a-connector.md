@@ -179,4 +179,3 @@ Each connector has a method called `getConnectedAssetProperties`.  This returns 
 ```
 
 
----8<-- "snippets/abbr.md"

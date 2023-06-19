@@ -294,6 +294,7 @@
 - [Personal Message](/concepts/personal-message)
 - [Personal Note](/concepts/personal-note)
 - [Personal Roles](/concepts/personal-roles)
+- [Platform Chassis](/services/platform-chassis)
 - [Platform Metadata Security Connector](/concepts/platform-metadata-security-connector)
 - [Platform Security](/features/metadata-security/overview)
 - [Platform URL Root](/concepts/platform-url-root)
@@ -333,6 +334,7 @@
 ## S
 
 - [Schema](/concepts/schema)
+- [Secrets Store Connector](/concepts/secrets-store-connector)
 - [Security](/features/metadata-security/overview)
 - [Security Connector for OMAG Server](/concepts/server-metadata-security-connector)
 - [Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)
@@ -341,7 +343,7 @@
 - [Security Officer OMAS](/services/omas/security-officer/overview)
 - [Security Tags](/concepts/security-tags)
 - [Server Capabilities](/concepts/software-capability)
-- [Server Chassis](/services/server-chassis)
+- [Server Chassis](/services/platform-chassis)
 - [Servers for Governance](/concepts/governance-server)
 - [Server Name](/concepts/server-name)
 - [Server Security](/features/metadata-security/overview)

@@ -8,6 +8,3 @@ An *[audit log destination connector](/concepts/audit-log-destination-connector)
 
 An audit log destination's purpose may be either to store, process or distribute audit log records to diagnostic systems.  Its associated configuration controls which severities of audit log record it receives.  The implementation for the audit log destination connector can make further choices about how each log record is processed.
 
-
-
----8<-- "snippets/abbr.md"

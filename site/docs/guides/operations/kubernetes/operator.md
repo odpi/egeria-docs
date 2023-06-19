@@ -108,34 +108,31 @@ Kubernetes is a useful container solution that scales from a raspberry pi to hug
 
 #### Egeria Platform
 
-The [OMAG server platform](/concepts/omag-server-platform) (aka 'server chassis') is effectively a java process that is launched and acts as a container for
-running Egeria servers (below). In itself it has relatively little configuration but does include
+The [OMAG Server Platform](/concepts/omag-server-platform) is a java process that is launched and acts as a platform for
+running OMAG Servers (below). In itself it has relatively little configuration but does include:
+
 - TLS configuration ie passwords, keys, certs
-- Spring configuration (security, plugins)
+- Spring configuration (security, plugins, debug logging)
 
-It offers an admin interface for defining servers (below) and starting/stopping them. It also provides the base URL which is extended for server access.
+It offers an administration interface for defining OMAG Servers (below) and starting/stopping them.
 
-The platform's connectors are mostly limited to configuration & security.
+The platform's connectors define the store for OMAG Server configuration and authorization checks when using the platform's services.
 
 #### Egeria Servers
 
-The [OMAG Server](/concepts/omag-server) comes in a number of
-different forms including a repository proxy, a metadata repository, a view server etc
-
-A 'server' is a logical concept that actually executes code within an Egeria Platform but is basically what is defined, started, stopped,
-and also hosts the myriad of REST APIs that egeria supports such as for creating the definition of a data asset.
+The [OMAG Server](/concepts/omag-server) is a logical concept that executes code within an OMAG Server Platform.  Each platform can run many servers.  Each server's operation is isolated by the platform.
 
 #### So how do we scale?
 
 Three main options are:
 
- * Model both servers & platforms as different Kubernetes resources. This provides the most accurate mapping, but would require the operator to manage 'scheduling' servers on platforms, and allowing for this to change dynamically as workload & requiremenets change. This would also require having logical URLs unique to each server.
+ * Model both servers and platforms as different Kubernetes resources. This provides the most accurate mapping, but would require the operator to manage 'scheduling' servers on platforms, and allowing for this to change dynamically as workload & requirements change. This would also require having logical URLs unique to each server.
  * Define servers, and automatically create platforms as needed, resulting in a 1:1 relationship between server and platform. This is simple, though server configuration would need to be overloaded with platform configuration (like ssl keys). This would also lead to creating many more platforms which comes at a resource cost (ram, cpu), as this is a process. Servers however are just logical constructs and have minimal overhead.
  * Handle replication at the level of platform only. This is close to how Kubernetes works with most apps. 
 
-Whilst initially persuing the first option, due to complexity, the last of these has now been chosen for simplicity.
+Whilst initially pursuing the first option, due to complexity, the last of these has now been chosen for simplicity.
 
-This has also resulted in the Egeria Platform being the first-class resource we focus on defining for the operator, at least initially. 
+This has also resulted in the OMAG Server Platform being the first-class resource we focus on defining for the operator, at least initially. 
 
 ### Stateful set vs Deployment 
 
@@ -150,7 +147,7 @@ via the connections to metadata storage etc, and that a unique service address i
 ### Configuration updates
 
 
-* If a server config document is changed the initially the platform will be restarted. 
+* If a server's [configuration document](/concepts/configuration-document) is changed, the platform will be restarted. 
 * Later we will try to just restart/stop the modified server and/or perform a rolling change. Care will need to be taken if the config change leads to a conflict.
 
 ### Admin requests

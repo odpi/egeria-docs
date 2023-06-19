@@ -25,4 +25,3 @@ Metadata provides a window into your organization's resources and operations.  I
     - [Planning for security](/guides/planning/security/overview)
 
 
---8<-- "snippets/abbr.md"

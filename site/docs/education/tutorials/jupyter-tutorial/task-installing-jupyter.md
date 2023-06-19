@@ -22,4 +22,4 @@ Alternatively, if you are running MacOS you can use HomeBrew.
     brew install jupyterlab
     ```
 
---8<-- "snippets/abbr.md"
+

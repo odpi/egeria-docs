@@ -7,4 +7,3 @@ When a new resource is catalogued, the catalog entry of a similar resource can b
 
 Templated cataloguing is useful for situations where new resources are regularly catalogued that are of the same kind.
 
---8<-- "snippets/abbr.md"

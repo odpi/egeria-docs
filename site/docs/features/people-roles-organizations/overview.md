@@ -94,14 +94,15 @@ Tanya Tidie needs to ensure that only the clinical trials team have access to th
 
 ## Actor Profiles
 
-Figures 2, 3 and 7 show that individuals are represented using a `Person` instance.  Figures 2 and 3 also show `Team` instances for each team.  Both `Person` and `Team` are types of [`ActorProfile`](/types/1/0110-Actor-Profile).  [`ITProfile`](/types/1/0117-IT-Profiles) is another type of ActorProfile that are linked to [Assets](/concepts/asset) to show the user information typically of a process such as a connector or a software server.
+Figures 2, 3 and 7 show that individuals are represented using a `Person` instance.  Figures 2 and 3 also show `Team` instances for each team.  Both `Person` and `Team` are types of [`ActorProfile`](/types/1/0110-Actor-Profile).  [`ITProfile`](/types/1/0117-IT-Profiles) is another type of ActorProfile that are linked to [Assets](/concepts/asset) to show the user information, typically of a process (such as a connector) or some IT Infrastructure (such as a software server).
 
 Figure 11 shows the different types of actor profile as well as a link to a `UserIdentity` entity. This describes a user account or userId associated with the profile. 
 
 ![Figure 11](actor-profile.svg)
 > **Figure 11:** There are three subtypes for ActorProfile: ITProfile for assets, Person for individuals and Team for organized groups of roles.  Any one of these subtypes can have a UserIdentity associated with them.
 
-Unless security is disabled, every action performed in an IT system is associated with a user account.  The linkage of the UserIdentity which represents the user account with the profile makes it possible to look up the originator of the action.
+Unless security is disabled, every action performed in an IT system is associated with a user account.  
+The linkage of the UserIdentity which represents the user account with the profile makes it possible to look up the originator of the action.
 
 User accounts are typically associated with specific running processes and individuals.  However it is also possible to have a shared user account for a team, although this makes it difficult to identify which person performed a specific action.
 
@@ -115,27 +116,37 @@ Figure 12 also shows that a profile can be linked to multiple user identities bu
 In summary, figure 13 show that the other elements linked to the profile creates a broader view of the context of an action in the IT systems.
 
 ![Figure 13](profile-context-summary.svg)
-> **Figure 13:** The full context of a user action. At the top is the ITProfile showing which Asset is using a particular user account.  Below that is the Person linked to the associated PersonRoles, which are in turn linked to the scope in which they are defined (community, team or project)
+> **Figure 13:** Examples showing the full context of a user action. At the top is the ITProfile showing which Asset is using a particular user account.  Below that is the Person linked to the associated PersonRoles, which are in turn linked to the scope in which they are defined (community, team or project)
 
 ## Linking governance and security to roles
 
-Access to [resources](/egeria-doces/concepts/resource) is controlled by identifying which user accounts can access which resources.  Typically similar resources are identified and a *user group* is defined for them.  The group contains the list of user accounts that are allowed to access the associated resources.  Figure 
+Access to [resources](/concepts/resource) is controlled by identifying which user accounts can access which resources.  Typically, a *user group* is defined for collections of similar resources.  The group contains the list of user accounts that are allowed to access the associated resources.  
+
+This information is stored in a User Directory, such as LDAP and used by an *Access Control Manager*.  The access control information is organized for efficient lookup of whether a particular user has access to a resource because they are named in the appropriate group.
+
+The names of user accounts and user groups needs to be unique to ensure the right individuals get access to the right resources.  LDAP uses [*Distinguished Names (DN)*](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol#Directory_structure) for this purpose.  An example is shown in Figure 14.  The `UserIdentity` instance for a user account can include the distinguished name for the account.
 
 ![Figure 14](ldap-group.svg)
 > **Figure 14:** Members of an LDAP user group are listed in the group definition.  These users are given access to the resources that are protected by that group.
 
-The roles and their membership of teams, projects and communities in an organization help to determine who should have access to specific resources.  However the access control managers do not work directly with the roles, teams, projects and communities - they only understand the user account. [`UserIdentities`](/types/1/0110-Actors/#UserIdentity) therefore document the user accounts of the individuals, teams and processes.  Egeria also provides the means to defined the security information that  links between the organization and the asset descriptions of the resources.
+The calling application is responsible for identifying which group to use for the look-up.
 
-[`SecurityGroups`](/types/4/0423-Security-Definitions) are entities that describe a user group in a security control system.  They are subtypes of the `GovernanceDefinition` that supports two relationships:
+The roles and their membership of teams, projects and communities in an organization help to determine who should have access to specific resources.  Egeria provides the means to show the link between the resources, the security groups to use for the look-up and which actors (user identities, person roles and/or actor profiles should belong in each group.
 
-- [`GovernedBy`](/types/4/0401-Governance-Definitions) - to indicate the resources that are governed by the governance definition.  When the governance definition is a security group it means these are the resources that are protected by the security group.
+Specifically, the [`SecurityGroup`](/types/4/0423-Security-Definitions) entities describe a user group in a security control system.  
 
-- [`ScopedBy`](/types/4/0401-Governance-Definitions) - to indicate where the governance definition applies.  For a security group this means the people, roles, teams etc that should be given permission to the security group.
+The [`SecurityAccessControl`](/types/4/0423-Security-Definitions) entities link the resource to the appropriate security groups via the `AssociatedGroups` relationship. 
+
+`SecurityGroup` and `SecurityAccessControl` are subtypes of the `GovernanceDefinition` that supports two relationships:
+the `` and
+- [`GovernedBy`](/types/4/0401-Governance-Definitions) - to indicate the resources that are governed by the governance definition.  When the governance definition is a security group it means these are the resources that are protected by the security group.  When it is a security access control, it means there are different security groups for different operations.
+
+- [`GovernanceDefinitionScope`](/types/4/0401-Governance-Definitions) - to indicate where the governance definition applies.  For a security group this means the people, roles, teams etc that should be given permission to the security group.
 
 Figure 15 shows these two relationships.
 
 ![Figure 15](governed-by.svg)
-> **Figure 15:** Security groups are subtypes of governance definitions.  They can be linked to resources with the *GovernanceBy* relationship to show that the security group is used to govern access to these resources.  The security group can also be linked to an organization, service or business capability using the *ScopedBy* relationship to show that it is only used within the identified scope.
+> **Figure 15:** Security groups are subtypes of governance definitions.  They can be linked to resources with the *GovernedBy* relationship to show that the security group is used to govern access to these resources.  The security group can also be linked to an organization, service or business capability using the *GovernanceDefinitionScope* relationship to show that it is only used within the identified scope.
 
 Figures 16 and 17 show some examples of the security group linking different types of resources to the different parts of the organization.
 

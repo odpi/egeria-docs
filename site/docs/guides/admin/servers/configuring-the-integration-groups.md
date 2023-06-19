@@ -75,5 +75,4 @@ Each integration group is configured with the network location of the [metadata 
 
 
 
---8<-- "snippets/abbr.md"
 

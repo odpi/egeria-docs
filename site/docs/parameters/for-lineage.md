@@ -5,4 +5,4 @@ The `forLineage` flag is set by callers that are working with lineage.  Most cal
 
 When `forLineage=false` elements with the Memento classification are not returned; when `forLineage=true` they are returned.
 
---8<-- "snippets/abbr.md"
+

@@ -12,4 +12,4 @@ One example of a watchdog governance action service is to monitor for new [asset
 ![Function of the watchdog governance action service](/frameworks/gaf/watchdog-governance-action-service.svg)
 
 
---8<-- "snippets/abbr.md"
+

@@ -121,10 +121,11 @@ The configured list of audit log destinations can be retrieved using this comman
 
 Audit log destinations can be updated individually, by qualified name using the following command:
 
-    !!! post "POST - update connection-based audit log destination"
-        ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/connection/{{qualifiedName}}
-        ```
+!!! post "POST - update connection-based audit log destination"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/connection/{{qualifiedName}}
+    ```
+
 If you are not sure what the audit log connection is called, [retrieve the list of configured audit log connections](#retrieving-audit-log-destinations) and the resulting list of audit log connections will include the qualified names.
 
 ### Remove audit log destinations

@@ -16,14 +16,14 @@ See [OMAG Server Platform Logging](omag-server-platform-logging.md) for more inf
 ## Approach
 
 By default, 
- - The Egeria Audit Logs for each server will be written to the console in plain text
- - Any other logging within the server chassis will use slf4j-api, or will have an adapter within the executable that maps from other logging frameworks to slf4j-api
- - In the server chassis we use Logback classic as the standard slf4j-api implementation
+ - The Egeria Audit Logs for each server will be written to the console in plain text.
+ - Any other debug logging within Egeria's code will use the slf4j-api, or will have an adapter within the executable that maps from other logging frameworks to slf4j-api.
+ - In the Egeria code we use Logback classic as the standard slf4j-api implementation.
 
 Therefore the simplest approach we will take is to
- - configure the Egeria audit log to use slf4j-api
+ - configure the Egeria audit log to use slf4j-api.
  - create a logback configuration file which outputs in json.
- - We will use a formatter from logstash, as this is very configurable and well supported by logging tools.
+ - We will use a formatter from logstash, as this is very configurable and well-supported by logging tools.
 
 An alternative would be to use a different slf4j-api implementation, such as log4j2 (making sure to exclude logback), and configure that to output in json.
 
@@ -71,7 +71,7 @@ wget https://repo1.maven.org/maven2/net/logstash/logback/logstash-logback-encode
 ```
 
 
-### Launch the egeria platform
+### Launch the OMAG Server Platform
 
 In this example we pass properties as invocation parameters, though these can also be configured in a properties file, or set via environment variables. 
 
@@ -80,11 +80,11 @@ In this case we are running egeria from an unpacked distribution, and so additio
 Replace the location of the configuration file as appropriate.
 
 ``` bash
-java -Dlogging.config=/Users/jonesn/work/json-audit-log/logback-json.xml -Dloader.path=./server/lib,/Users/jonesn/libs/logging -jar server/server-chassis-spring-4.1-SNAPSHOT.jar
+java -Dlogging.config=/Users/jonesn/work/json-audit-log/logback-json.xml -Dloader.path=./platform/lib,/Users/jonesn/libs/logging -jar platform/omag-server-platform-4.2-SNAPSHOT.jar
 ```
 ### Configure a server
 
-Here we configure a simple metadata server as an example. The default audit log is deleted, and a new one created which uses slf4j-api. 
+Here we configure a simple [Metadata Access Store](/concepts/metadata-access-store) as an example. The default audit log is deleted, and a new one created which uses slf4j-api. 
 
 ``` bash
 #!/bin/sh
@@ -141,7 +141,7 @@ END
 echo -e '\n\n > Starting the server:\n'
 
 curl -f -k --verbose --basic admin:admin -X POST --max-time 900 \
-                "${EGERIA_ENDPOINT}/open-metadata/admin-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/instance"
+                "${EGERIA_ENDPOINT}/open-metadata/platform-services/users/${EGERIA_USER}/servers/${EGERIA_SERVER}/instance"
 
 
 

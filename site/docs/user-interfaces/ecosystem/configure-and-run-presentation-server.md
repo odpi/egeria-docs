@@ -61,11 +61,10 @@ file from: [https://github.com/odpi/egeria/raw/main/truststore.p12](https://gith
 
 ??? question "Transport-level security"
     The [truststore.p12](https://github.com/odpi/egeria/raw/main/truststore.p12)
-    file provides a local truststore for Java. This allows the self-signed certificate embedded
-    within the server chassis (by default) to be trusted.
+    file provides a local truststore for Java. This allows the self-signed certificate configured for the OMAG Server Platform to be trusted.
 
-    Without this trust, interactions with the server chassis (such as the REST calls that are made
-    through Java to handle interaction between the chassis and the connector) will result in an
+    Without this trust, interactions with the platform (such as the REST calls that are made
+    through Java to handle interaction between the platform and the connector) will result in an
     `SSLHandshakeException`.
 
     While this `truststore.p12` file allows SSL-encrypted communication, the fact that

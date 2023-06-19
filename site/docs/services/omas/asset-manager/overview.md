@@ -3,9 +3,6 @@
 
 --8<-- "snippets/content-status/in-development.md"
 
-???+ warn "Development work in progress"
-    See issue [3562](https://github.com/odpi/egeria/issues/3562) for the latest development status.
-
 # Asset Manager Open Metadata Access Service (OMAS)
 
 *Data Catalogs* and *Configuration Management Databases (CMDBs)* are examples of asset managers.  They maintain a catalog of [resources](/concepts/resource) for their users as [assets](/concepts/asset) along with catalog search and governance functions to support the maintenance and use of these resources.  Such technologies might integrate with the open metadata ecosystem to receive additional information about their resources, or to distribute the information they have to other tools.

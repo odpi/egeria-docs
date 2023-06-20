@@ -5,7 +5,7 @@
 
 The operations guide describes the commands and actions that can be performed on a running [OMAG Server Platform](/concepts/omag-server-platform) to discover its status, and the status of the servers and connectors that it is hosting.
 
-## 
+
 ## Platform Origin Service
 
 The platform origin service is a simple REST API that returns basic information about an OMAG Server Platform. It is often used by operational scripts controlling the start up and shutdown of OMAG Server Platforms to determine if the server platform is running.
@@ -16,20 +16,18 @@ The format of the operation is:
 
 !!! get "GET - retrieve platform origin"
     ```
-    {{platformURLRoot}}/open-metadata/platform-services/users/{{userId}}/server-platform-origin
+    {{platformURLRoot}}/open-metadata/platform-services/users/{{userId}}/server-platform/origin
     ```
 
-where `{{platformURLRoot}}` is typically the host name and port number for the server platform's
-network endpoint and `{{userId}}` is the userId of an authorized administrator.
+where `{{platformURLRoot}}` is typically the host name and port number for the server platform's network endpoint and `{{userId}}` is the userId of an authorized administrator.
 
 The response is a single string describing the implementation and version of the server platform.
 
-For example, this is the response from the ODPi Egeria implementation of the OMAG Server Platform
-which has an endpoint of `https://localhost:9443`.  Gary Geeke (`garygeeke`) is the administrator.
+For example, this is the response from the Egeria implementation of the OMAG Server Platform which has an endpoint of `https://localhost:9443`.  Gary Geeke (`garygeeke`) is the administrator.
 
 ```bash
-$ curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform-origin
-Egeria OMAG Server Platform (version 3.7-SNAPSHOT)
+$ curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/origin
+Egeria OMAG Server Platform (version 4.2)
 ```
 
 ## Listing Registered Services
@@ -65,8 +63,7 @@ It is possible to load an [Open Metadata Archive](/concepts/open-metadata-archiv
 
 * [Adding an Open Metadata Archive to a running Metadata Access Store](#adding-an-archive-to-a-running-metadata-access-store)
 
-In addition there are different platform services that
-can be used to find out more about the operation of the servers.
+In addition there are different platform services that can be used to find out more about the operation of the servers.
 
 * [Querying the servers and services running in an OMAG Server Platform](#querying-an-omag-server-and-services)
 
@@ -76,24 +73,22 @@ Egeria also has an interactive graph-based user interface (UI) that enables you 
 
 ### Starting and Stopping an OMAG server
 
-Once a [configuration document](/concepts/configuration-document) has been completed
-for an [OMAG Server](/concepts/omag-server), it can be started using the following
-REST call:
+Once a [configuration document](/concepts/configuration-document) has been completed for an [OMAG Server](/concepts/omag-server), it can be started using the following REST call:
 
 ```
-POST {platformURLRoot}/open-metadata/admin-services/users/{adminUserId}/servers/{serverName}/instance
+POST {platformURLRoot}/open-metadata/platform-services/users/{adminUserId}/server-platform/servers/{serverName}/instance
 ```
 
 and stopped, as follows:
 
 ```
-DELETE {platformURLRoot}/open-metadata/admin-services/users/{adminUserId}/servers/{serverName}/instance
+DELETE {platformURLRoot}/open-metadata/platform-services/users/{adminUserId}/server-platform/servers/{serverName}/instance
 ```
 
 The configuration document is not changed by these calls. It is possible to query the running server's configuration using the following REST API:
 
 ```
-GET {platformURLRoot}/open-metadata/admin-services/users/{adminUserId}/servers/{serverName}/instance/configuration
+GET {platformURLRoot}/open-metadata/platform-services/users/{adminUserId}/server-platform/servers/{serverName}/instance/configuration
 ```
 
 If you want to delete the server's configuration document then issue:
@@ -102,8 +97,6 @@ If you want to delete the server's configuration document then issue:
 DELETE {platformURLRoot}/open-metadata/admin-services/users/{adminUserId}/servers/{serverName}
 ```
 
-If the OMAG server is running, this command also unregisters the named server from the cohorts it
-is connected to.  Only use this command if the server is being permanently removed.
 
 ### Adding an archive to a running Metadata Access Store
 
@@ -113,16 +106,14 @@ Archives can be [added to the configuration document](/guides/operations/configu
 
 - Archives containing type definitions.
 - Archives containing instances for repositories that do not store the archive content but keep it in memory.
-Although, if an archive is loaded multiple times, its content is only added to the local repository
-if the repository does not have the content already.
 
-Archives can also be loaded to a running server using the following commands.
+If an archive is loaded multiple times, its content is only added to the local repository if the repository does not have the content already.
 
-Typically, an open metadata archive is stored as JSON format in a file. To load such a file use the following command:
+Archives can also be loaded to a running server. Typically, an open metadata archive is stored as JSON format in a file. To load such a file use the following command:
 
 !!! post "POST - load file"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/instance/open-metadata-archives/file
+    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/servers/{{serverName}}/instance/open-metadata-archives/file
     ```
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
@@ -131,7 +122,7 @@ Alternatively it is possible to set up the list of open metadata archives as a l
 
 !!! post "POST - load from connection(s)"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/instance/open-metadata-archives/connection
+    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/servers/{{serverName}}/instance/open-metadata-archives/connection
     ```
 
     The body of the request should be the list of connections from which to load archives.

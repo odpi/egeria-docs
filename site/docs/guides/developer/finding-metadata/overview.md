@@ -3,11 +3,11 @@
 
 # Finding and retrieving metadata
 
-This section describes how to retrieve metadata from the open metadata ecosystem.  The metadata is stored in all of the open metadata repositories connected to the server you are calling via one or more [Open Metadata Repository Cohorts](/features/cohort-operation/overview).
+This section describes how to retrieve metadata from the open metadata ecosystem.  The metadata is stored in all the open metadata repositories connected to the server you are calling via one or more [Open Metadata Repository Cohorts](/features/cohort-operation/overview).
 
 ## Mechanisms to retrieve metadata
 
-Search methods can be through of as having 2 phases:
+Search methods can be thought of as having 2 phases:
 
 * Retrieve a set of candidate elements from the repositories.
 * Apply additional filtering to further limit the values returned to the caller.
@@ -25,6 +25,7 @@ The **graph store** supports requests to retrieve metadata that involves navigat
 
 The **index store** contains lists of values with links to the instance they came from.  It is used to locate instances that have particular values.  For example, a request to retrieve all glossary terms with a particular name would use the index store.  The terms returned could come from any glossary.
 
+Within the index store, there will be many indexes created by Egeria to speed up metadata searches.  For example, the [JanusGraph Repository Connector](/connectors/repository/janus-graph/overview) builds an index for each primitive property in the type system as well as the standard header properties - such as guid, createTime , ...  JanusGraph then maps this call down onto whatever search technology is configured.
 
 ### Filtering
 
@@ -103,9 +104,9 @@ As an example, these are the properties for an [Endpoint](/types/0/0026-Endpoint
 
 The structure of the element header is defined by the Open Connector Framework (OCF).  It includes:
 
-* Element status - the status of the element is its lifecycle state.  Most elements are in either ACTIVE or DELETED status.  Some types of entities have an extended lifecycle.
+* Element status - the status of the element is its lifecycle state.  Most elements are in either ACTIVE or DELETED status.  Some types of entities have an [extended lifecycle](/concepts/instance-status).
 * Element type - the type defines what the entity represents, and (from its type definition) which properties can be stored in the entity.
-* Element origin - the origin defines the elements provenance.
+* Element origin - the origin defines the element's [provenance](/features/metadata-provenance/overview).
 * Element versions - the versions identify which version and who is responsible for making the changes to bring it to its current version.
 * If the OMRS instance is an entity, a list of its classifications.
 
@@ -174,21 +175,22 @@ The open metadata repositories support for following retrieval requests:
 * Value-based queries:
 
     * Get an instance (entity or relationship) by its unique identifier (guid).
-    * Get all of the entities of a particular type that have a specific classification with specific properties set to specific values.
-    * Get all of the entities of a particular type that have specific properties set to specific values.
-    * Get all of the relationships of a particular type that have specific properties set to specific values.
-    * Get all of the entities of a particular type that have any property set to a specific value
-    * Get all of the relationship of a particular type that have any property set to a specific value
-    * Get all of the entities of a particular type that have a combination of properties set to a specific values
-    * Get all of the relationship of a particular type that have a combination of properties set to a specific values
+    * Get all the entities of a particular type that have a specific classification with specific properties set to specific values.
+    * Get all the entities of a particular type that have specific properties set to specific values.
+    * Get all the relationships of a particular type that have specific properties set to specific values.
+    * Get all the entities of a particular type that have any property set to a specific value.
+    * Get all the relationship of a particular type that have any property set to a specific value.
+    * Get all the entities of a particular type that have a combination of properties set to a specific values.
+    * Get all the relationship of a particular type that have a combination of properties set to a specific values.
 
 * Navigational queries:
-    * Get all of the relationships connected to an entity.
-    * Get the graph of instances that are connected to an entity
-    * Get the entities that link two entities together
+    * Get all the relationships connected to an entity.
+    * Get the graph of instances that are connected to an entity.
+    * Get the entities that link two entities together.
     * Get all entities of a specific type that are connected to a starting entity either directly or indirectly.
 
 The OMAS APIs are then built up from these basic building block queries.
+
 
 
 --8<-- "snippets/abbr.md"

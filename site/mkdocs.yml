@@ -512,7 +512,7 @@ nav:
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
               - Metadata Security Services: services/metadata-security-services.md
-              - Platform Operation Services: services/platform-services/overview.md
+              - Platform Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Open Metadata Store Services: services/gaf-metadata-management.md
               - Open Integration Service: services/oif-metadata-management.md

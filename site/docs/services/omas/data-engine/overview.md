@@ -9,13 +9,17 @@ The Data Engine OMAS provides APIs and events for data movement/processing engin
 
 It provides the ability to register the data engine itself along with the lineage details of the ETL transformations. 
 Data Engine OMAS APIs offer support for creating the corresponding open metadata types for assets and jobs.
-  
-## Using the Data Engine OMAS
-Below is the list of tasks supported by Data Engine OMAS.
 
-#### [External Tool registration](register-data-engine-tool.md)
+## Using te Data Engine Java Client
+The Data Engine OMAS client interface supports the creation, update and delete of metadata entities and relationships.
+More details about using the client and the implementations available can be found [here](de-client.md)
+
+## Using the Data Engine OMAS REST API
+Below is the list of endpoints supported by Data Engine OMAS.
 Typically, the first action to take for an external tool is to register as an
 [engine](https://egeria-project.org/concepts/software-capability/#engine).
+
+#### [External Tool registration](register-data-engine-tool.md)
 
 #### [External Tool lookup](lookup-registration.md)
 

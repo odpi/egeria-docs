@@ -3,10 +3,13 @@
 
 # Search
 
-Returns the list with supported types for search, including the sub-types supported
+Returns the list with supported types for search, including the sub-types supported.
 
-More examples can be found in the
-[sample collection](samples/collections/Asset-Catalog-endpoints.postman_collection.json)
+## Java client
+
+AssetCatalog.java, method (more details in javadoc): [AssetListResponse searchByType(String userId, String searchCriteria, SearchParameters searchParameters) throws InvalidParameterException, PropertyServerException;](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetcatalog/AssetCatalog.html#searchByType(java.lang.String,java.lang.String,org.odpi.openmetadata.accessservices.assetcatalog.model.rest.body.SearchParameters))
+
+## REST endpoint
 
 ```
 GET {{base-url}}/servers/{{server-id}}/open-metadata/access-services/asset-catalog/users/{{user-id}}/supportedTypes
@@ -19,6 +22,9 @@ Path and request parameters:
 
 Response:
 * `AssetListResponse` - list of found assets
+
+More examples can be found in the
+[sample collection](samples/collections/Asset-Catalog-endpoints.postman_collection.json).
 
 ---8<-- "snippets/abbr.md"
 

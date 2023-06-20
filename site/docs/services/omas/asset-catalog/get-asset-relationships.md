@@ -3,10 +3,13 @@
 
 # Get Asset Relationships
 
-Fetches the relationships for a specific asset
+Fetches the relationships for a specific asset.
 
-More examples can be found in the
-[sample collection](samples/collections/Asset-Catalog-endpoints.postman_collection.json)
+## Java client
+
+AssetCatalog.java, method (more details in javadoc): [RelationshipResponse getRelationshipBetweenEntities(String userId, String entity1GUID, String entity2GUID, String relationshipType) throws InvalidParameterException, PropertyServerException;](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetcatalog/AssetCatalog.html#getRelationshipBetweenEntities(java.lang.String,java.lang.String,java.lang.String,java.lang.String))
+
+## REST endpoint
 
 ```
 GET {{base-url}}/servers/{{server-id}}/open-metadata/access-services/asset-catalog/users/{{user-id}}/asset-relationships/{{asset-guid}}?assetType={{asset-type}}&relationshipType={{relationship-type}}
@@ -22,6 +25,9 @@ Path and request parameters:
 
 Response:
 * `RelationshipListResponse` - list of relationships for the given asset
+
+More examples can be found in the
+[sample collection](samples/collections/Asset-Catalog-endpoints.postman_collection.json).
 
 ---8<-- "snippets/abbr.md"
 

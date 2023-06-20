@@ -60,6 +60,6 @@ site/docs/services/omvs/ @davidradl
 
 site/docs/types/ @mandy-chessell
 
-site/docs/tutorials/docker-tutorial /  @mandy-chessell
+site/docs/tutorials/docker-tutorial/  @mandy-chessell
 site/docs/tutorials/open-metadata-labs/ @mandy-chessell
-site/docs/tutorials/postman-tutorial / @mandy-chessell 
+site/docs/tutorials/postman-tutorial/ @mandy-chessell 

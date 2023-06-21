@@ -11,10 +11,6 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
 					"raw": "https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/origin",
 					"protocol": "https",
@@ -27,7 +23,8 @@
 						"platform-services",
 						"users",
 						"garygeeke",
-						"server-platform/origin"
+						"server-platform",
+						"origin"
 					]
 				},
 				"description": "Requests information about the author of the server platform."
@@ -35,16 +32,12 @@
 			"response": []
 		},
 		{
-			"name": "2. Retrieve the default configuration for the cocoMDS1 OMAG Server",
+			"name": "2. Retrieve the current configuration for the myMetadataServer OMAG Server",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/configuration",
+					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/configuration",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -56,7 +49,7 @@
 						"users",
 						"garygeeke",
 						"servers",
-						"cocoMDS1",
+						"myMetadataServer",
 						"configuration"
 					]
 				},
@@ -69,12 +62,8 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/server-type?typeName=Standalone Metadata Repository",
+					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/server-type?typeName=Metadata Access Store",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -86,13 +75,13 @@
 						"users",
 						"garygeeke",
 						"servers",
-						"cocoMDS1",
+						"myMetadataServer",
 						"server-type"
 					],
 					"query": [
 						{
 							"key": "typeName",
-							"value": "Standalone Metadata Repository"
+							"value": "Metadata Access Store"
 						}
 					]
 				},
@@ -101,46 +90,12 @@
 			"response": []
 		},
 		{
-			"name": "4. Retrieve the updated configuration for the cocoMDS1 OMAG Server",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/configuration",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "9443",
-					"path": [
-						"open-metadata",
-						"admin-services",
-						"users",
-						"garygeeke",
-						"servers",
-						"cocoMDS1",
-						"configuration"
-					]
-				},
-				"description": "Requests information about the author of the server platform."
-			},
-			"response": []
-		},
-		{
-			"name": "5. Configure a local repository",
+			"name": "4. Configure a local repository",
 			"request": {
 				"method": "POST",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/local-repository/mode/in-memory-repository",
+					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/local-repository/mode/in-memory-repository",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -152,7 +107,7 @@
 						"users",
 						"garygeeke",
 						"servers",
-						"cocoMDS1",
+						"myMetadataServer",
 						"local-repository",
 						"mode",
 						"in-memory-repository"
@@ -163,16 +118,12 @@
 			"response": []
 		},
 		{
-			"name": "6. Retrieve the updated configuration for the cocoMDS1 OMAG Server",
+			"name": "5. Configure the access services",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/configuration",
+					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/access-services/no-topics",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -184,8 +135,9 @@
 						"users",
 						"garygeeke",
 						"servers",
-						"cocoMDS1",
-						"configuration"
+						"myMetadataServer",
+						"access-services",
+						"no-topics"
 					]
 				},
 				"description": "Requests information about the author of the server platform."
@@ -193,16 +145,21 @@
 			"response": []
 		},
 		{
-			"name": "7. Configure the event bus",
+			"name": "6. Load a metadata archive in server startup",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "content-packs/SimpleDataCatalog.json",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
 				},
 				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/event-bus?topicURLRoot=egeriaTopics",
+					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/open-metadata-archives/file",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -214,31 +171,123 @@
 						"users",
 						"garygeeke",
 						"servers",
-						"cocoMDS1",
-						"event-bus"
+						"myMetadataServer",
+						"open-metadata-archives",
+						"file"
+					]
+				},
+				"description": "Requests information about the author of the server platform."
+			},
+			"response": []
+		},
+		{
+			"name": "7. Start the myMetadataServer OMAG Server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9443",
+					"path": [
+						"open-metadata",
+						"platform-services",
+						"users",
+						"garygeeke",
+						"server-platform",
+						"servers",
+						"myMetadataServer",
+						"instance"
+					]
+				},
+				"description": "Requests information about the author of the server platform."
+			},
+			"response": []
+		},
+		{
+			"name": "8. Find Assets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"class\" : \"SearchStringRequestBody\",\n    \"searchString\" : \".*.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:9443/servers/myMetadataServer/open-metadata/access-services/asset-owner/users/peterprofile/assets/by-search-string?startFrom=0&pageSize=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9443",
+					"path": [
+						"servers",
+						"myMetadataServer",
+						"open-metadata",
+						"access-services",
+						"asset-owner",
+						"users",
+						"peterprofile",
+						"assets",
+						"by-search-string"
 					],
 					"query": [
 						{
-							"key": "topicURLRoot",
-							"value": "egeriaTopics"
+							"key": "startFrom",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
 						}
 					]
 				},
+				"description": "Return a list of assets with the requested search string in their name, qualified name or description."
+			},
+			"response": []
+		},
+		{
+			"name": "8. Shutdown the metadata server",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9443",
+					"path": [
+						"open-metadata",
+						"platform-services",
+						"users",
+						"garygeeke",
+						"server-platform",
+						"servers",
+						"myMetadataServer",
+						"instance"
+					]
+				},
 				"description": "Requests information about the author of the server platform."
 			},
 			"response": []
 		},
 		{
-			"name": "8. Retrieve the updated configuration for the cocoMDS1 OMAG Server",
+			"name": "9. Retrieve the status of the metadata server",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/configuration",
+					"raw": "https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/status",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -246,12 +295,13 @@
 					"port": "9443",
 					"path": [
 						"open-metadata",
-						"admin-services",
+						"platform-services",
 						"users",
 						"garygeeke",
+						"server-platform",
 						"servers",
-						"cocoMDS1",
-						"configuration"
+						"myMetadataServer",
+						"status"
 					]
 				},
 				"description": "Requests information about the author of the server platform."
@@ -259,16 +309,12 @@
 			"response": []
 		},
 		{
-			"name": "9. Configure the access services",
+			"name": "10. Shutdown the OMAG Server Platform",
 			"request": {
-				"method": "POST",
+				"method": "DELETE",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/access-services",
+					"raw": "https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/instance",
 					"protocol": "https",
 					"host": [
 						"localhost"
@@ -276,71 +322,10 @@
 					"port": "9443",
 					"path": [
 						"open-metadata",
-						"admin-services",
+						"platform-services",
 						"users",
 						"garygeeke",
-						"servers",
-						"cocoMDS1",
-						"access-services"
-					]
-				},
-				"description": "Requests information about the author of the server platform."
-			},
-			"response": []
-		},
-		{
-			"name": "10. Retrieve the updated configuration for the cocoMDS1 OMAG Server",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/configuration",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "9443",
-					"path": [
-						"open-metadata",
-						"admin-services",
-						"users",
-						"garygeeke",
-						"servers",
-						"cocoMDS1",
-						"configuration"
-					]
-				},
-				"description": "Requests information about the author of the server platform."
-			},
-			"response": []
-		},
-		{
-			"name": "10. Start the cocoMDS1 OMAG Server",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/instance",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "9443",
-					"path": [
-						"open-metadata",
-						"admin-services",
-						"users",
-						"garygeeke",
-						"servers",
-						"cocoMDS1",
+						"server-platform",
 						"instance"
 					]
 				},

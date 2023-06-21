@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
@@ -10,41 +5,137 @@ hide:
 
 # Administration services
 
+The configuration for an [OMAG Server](/concepts/omag-server) is maintained in a [Configuration Document](/concepts/configuration-document) and these configuration documents are stored in a *configuration document store*.  The implementation for the configuration document store is plugged into the [OMAG Server Platform](/concepts/omag-server-platform) as a [configuration document store connector](/concepts/configuration-document-store-connector).
+
+
 The administration services support the commands to:
 
-* Configure an [OMAG Server Platform](/concepts/omag-server-platform).
+* Configure an [OMAG Server Platform](/concepts/omag-server-platform)'s configuration document store connector.
 * Configure different types of [OMAG Servers](/concepts/omag-server)
 * List the configured OMAG Servers
 * Deploy the [configuration document](/concepts/configuration-document) for an OMAG Server to a different OMAG Server Platform.
-* Start and stop OMAG Servers
-* Retrieve the status of an OMAG Server along with the status of each of its active subsystems and services.
 
 The Java clients for the administration services are located in its `admin-services-client` module.
 
 --8<-- "docs/guides/developer/java-clients/platform-constructor-parameters.md"
 
 
-## Configuring the OMAG Server Platform
+## Dynamically configuring the Configuration Document Store Connector
 
-The OMAG Server Platform has two connectors that are configured though the [`OMAGServerPlatformConfigurationClient`](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/OMAGServerPlatformConfigurationClient.html){ target=javadoc }.
-
-* The [Platform Metadata Security Connector](/concepts/platform-metadata-security-connector) that authorizes management and administration request to the platform.
-* The [Configuration Document Store Connector](/concepts/configuration-document-store-connector) that managed the storage and retrieval of configuration documents.
+The [Configuration Document Store Connector](/concepts/configuration-document-store-connector)  manage the storage and retrieval of configuration documents.  This connector can be configured though the [`OMAGServerPlatformConfigurationClient`](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/OMAGServerPlatformConfigurationClient.html){ target=javadoc }.
 
 ![OMAGServerPlatformConfigurationClient](omag-server-platform-configuration-client.svg)
-> The OMAGServerPlatformConfigurationClient is responsible for setting up the connectors for the OMAG Server Platform.  This configuration needs to be re-applied each time the platform start up,
+> The OMAGServerPlatformConfigurationClient is responsible for setting up the configuration document store connector for the OMAG Server Platform.  This configuration needs to be re-applied each time the platform starts up
 
 The client supports retrieving the connection for either of these connectors, updating it and deleting it.  The example below shows how to retrieve the connections for the platform's two connectors.
+The platform's configuration is not stored - it needs to be added/updated each time the platform starts.
 
 ??? example "Example: retrieving all available configuration documents"
-    ```java linenums="1"
-    OMAGServerPlatformConfigurationClient platformConfigurationClient = new OMAGServerPlatformConfigurationClient(clientUserId, platformURLRoot);
 
-    Connection configurationStoreConnection = platformConfigurationClient.getConfigurationStoreConnection();
-    Connection platformSecurityConnection   = platformConfigurationClient.getPlatformSecurityConnection();
+    ==== "Java"
+
+        ```java linenums="1"
+        OMAGServerPlatformConfigurationClient platformConfigurationClient = new OMAGServerPlatformConfigurationClient(clientUserId, platformURLRoot);
+    
+        Connection configurationStoreConnection = platformConfigurationClient.getConfigurationStoreConnection();
+        Connection platformSecurityConnection   = platformConfigurationClient.getPlatformSecurityConnection();
+        ```
+
+    ==== "REST API"
+
+        !!! post "POST - configure the configuration document store connector"
+            ```
+            {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/stores/connection
+            ```
+        
+            The request body should be a connection object used to create the connector to the configuration
+            document store.
+        
+        !!! attention "Ensure the connector is available in the classpath"
+            In order to use any connector other than the default, you need to also ensure that the Connector and its ConnectorProvider class are available to the server platform (i.e. the jar file containing them is available in the `LOADER_PATH` location of the server platform).
+        
+        ??? example "Example: (unencrypted) file store connector"
+            For example, this connection would set up the (unencrypted) file store connector:
+        
+            ```json linenums="1"
+            {
+                "class": "Connection",
+                "connectorType": {
+                    "class": "ConnectorType",
+                    "connectorProviderClassName": "org.odpi.openmetadata.adapters.adminservices.configurationstore.file.FileBasedServerConfigStoreProvider"
+                },
+                "endpoint": {
+                    "class": "Endpoint",
+                    "address": "omag.server.{0}.config"
+                }
+            }
+            ```
+        
+        ??? example "Example: encrypted JSON file store, non-default location"
+            As another example, this connection uses the default encrypted JSON file store, but the files are stored in a different location (`/my-config/omag.server.{0}.config`).
+        
+            ```json linenums="1"
+            {
+                "class": "Connection",
+                "connectorType": {
+                    "class": "ConnectorType",
+                    "connectorProviderClassName": "org.odpi.openmetadata.adapters.adminservices.configurationstore.encryptedfile.EncryptedFileBasedServerConfigStoreProvider"
+                },
+                "endpoint": {
+                    "class": "Endpoint",
+                    "address": "/my-config/omag.server.{0}.config"
+                }
+            }
+            ```
+
+#### Determine configured store
+
+It is possible to query the setting of the configuration document store connector using the following command:
+
+!!! get "GET - retrieve configured configuration document store"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/stores/connection
     ```
 
-The platform's configuration is not stored.  Instead it needs to be added/updated each time the platform starts.
+??? success "Response indicating default configuration store (encrypted JSON file store)"
+    ```json
+    {
+        "class": "ConnectionResponse",
+        "relatedHTTPCode": 200
+    }
+    ```
+
+??? success "Response indicating a specific connector"
+    If the response looks more like the JSON below, a connector is configured. The `connectorProviderClassName` tells you which connector is being used and the `address` shows where the configuration documents are stored.
+
+    ```json hl_lines="8 12"
+    {
+        "class": "ConnectionResponse",
+        "relatedHTTPCode": 200,
+        "connection": {
+            "class": "Connection",
+            "connectorType": {
+                "class": "ConnectorType",
+                "connectorProviderClassName": "org.odpi.openmetadata.adapters.adminservices.configurationstore.file.FileBasedServerConfigStoreProvider"
+            },
+            "endpoint": {
+                "class": "Endpoint",
+                "address": "omag.server.{0}.config"
+            }
+        }
+    }
+    ```
+
+#### Remove configured store
+
+It is also possible to remove the configuration for the connector using the following command:
+
+!!! delete "DELETE - remove configured configuration store"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/stores/connection
+    ```
+
+This reverts the store to the default encrypted JSON file store.
 
 ## Configuring an OMAG Server
 
@@ -259,93 +350,4 @@ The [`ConfigurationManagementClient`](https://odpi.github.io/egeria/org/odpi/ope
     Set<OMAGServerConfig> configuredServers = configurationManagementClient.getAllServerConfigurations();
     ```
 
-## Starting and stopping OMAG Servers
-
-The [`OMAGServerOperationsClient`](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/ConfigurationManagementClient.html){ target=javadoc } supports the starting and stopping of OMAG Servers on an OMAG Server Platform. 
-
-The code sample shows the method calls to start and stop named OMAG Servers.
-
-??? example "Example: starting and stopping servers"
-    ```java linenums="1"
-    /**
-     * Start the named server on the platform.  This will fail if the platform is not running,
-     * or if the user is not authorized to issue operations requests to the platform or if the
-     * server is not configured.
-     *
-     * @param serverName string name
-     */
-    private void startServer(String serverName)
-    {
-        try
-        {
-            OMAGServerOperationsClient client = new OMAGServerOperationsClient(clientUserId, serverName, platformURLRoot);
-    
-            System.out.println("Starting " + serverName + " ...");
-            System.out.println(client.activateWithStoredConfig());
-        }
-        catch (Exception error)
-        {
-            System.out.println("There was an " + error.getClass().getName() + " exception when calling the platform.  Error message is: " + error.getMessage());
-        }
-    }
-    
-    
-    /**
-     * Stop the requested server.    This will fail if the server or the platform is not running,
-     * or if the user is not authorized to issue operations requests to the platform.
-     *
-     * @param serverName string name
-     */
-    private void stopServer(String serverName)
-    {
-        try
-        {
-            OMAGServerOperationsClient client = new OMAGServerOperationsClient(clientUserId, serverName, platformURLRoot);
- 
-            System.out.println("Stopping " + serverName + " ...");
- 
-            client.deactivateTemporarily();
- 
-            System.out.println(serverName + " stopped.");
-        }
-        catch (Exception error)
-        {
-            System.out.println("There was an " + error.getClass().getName() + " exception when calling the platform.  Error message is: " + error.getMessage());
-        }
-    }
-    ```
-
-## Querying the active server status
-
-It is also able to retrieve the status of the services running within an active server.
-
-??? example "Example: retrieving the status of the services in an active server"
-    ```java linenums="1"
-    OMAGServerOperationsClient serverOperationsClient = new OMAGServerOperationsClient(clientUserId, serverName, platformURLRoot);
-    
-    ServerServicesStatus adminServerStatus = serverOperationsClient.getServerStatus();
-    
-    if (adminServerStatus != null)
-    {
-        System.out.println(adminServerStatus.getServerActiveStatus());
-        System.out.println(adminServerStatus.getServerType());
-        System.out.println(adminServerStatus.getServices());
-    }
-    ````
-
-The status of the server (and its nested services) is one of 5 values:
-
-- Unknown - The state of the server is unknown.  This is equivalent to a null value.
-- Starting - The server is starting.
-- Running - The server has completed start up and is running.
-- Stopping - The server has received a request to shutdown.
-- Inactive - The server is not running.
-
-The server type is derived by the administration services when it starts the server.  It is based on an assessment of the services requested in the configuration document.
-
-!!! education "Further information"
-
-    * The [administration guide](/guides/admin) describes how to use the administration services to configure OMAG Server Platforms and OMAG Servers.
-    * The [operations guide](/guides/operations/overview) describes how to use the administration services to start/stop OMAG Servers on OMAG Server Platforms and retrieve diagnostics.
-    
 --8<-- "snippets/abbr.md"

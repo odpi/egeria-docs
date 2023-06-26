@@ -40,6 +40,16 @@ nav:
               - Catalog Integration: guides/integration/types-of-metadata-repository.md
           - Connector Catalog:
               - Connector Overview: connectors/index.md
+              - Audit Log Destination:
+                  - Console: connectors/runtime/console-audit-log-destination-connector.md
+                  - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
+              - Cohort Registry Store:
+                  - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
+              - Digital Resource:
+                  - Open Metadata Topic:
+                         - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
+                         - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
+                  - JDBC Connector: connectors/resource/jdbc-resource-connector.md
               - Governance Actions:
                   - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
                   - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
@@ -70,36 +80,24 @@ nav:
                       - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
                   - Catalog:
                       - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
-              - Runtime:
-                  - Repository:
-                      - Native Repositories:
-                          - XTDB:
-                              - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                              - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                              - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                          - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
-                          - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
-                          - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
-                      - Repository Adapters:
-                          - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
-                          - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
-                          - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
-                          - Hive Metastore (HMS) OMRS Proxy Repository Connector: connectors/repository/hms/overview.md
-                          - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
-                          - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
-                  - Audit Log Destination:
-                      - Console: connectors/runtime/console-audit-log-destination-connector.md
-                      - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
-                  - Open Metadata Archive Store:
-                      - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
-                  - Cohort Registry Store:
-                      - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
-              - Digital Resource:
-                  - Open Metadata Topic:
-                      - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
-                      - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
-                  - Database:
-                        - JDBC Connector: connectors/resource/jdbc-resource-connector.md
+              - Open Metadata Archive Store:
+                  - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
+              - Repository:
+                  - Native Repositories:
+                      - XTDB:
+                          - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                          - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                          - XTDB Connector Performance: connectors/repository/xtdb/performance.md
+                      - JanusGraph: connectors/repository/janus-graph/overview.md
+                      - In-memory: connectors/repository/in-memory/overview.md
+                      - Read-only: connectors/repository/read-only/overview.md
+                  - Repository Adapters:
+                      - Apache Atlas: connectors/repository/apache-atlas/overview.md
+                      - IBM Information Governance Catalog (IGC): connectors/repository/igc/overview.md
+                      - SAS Viya: connectors/repository/sas-viya/overview.md
+                      - Hive Metastore (HMS): connectors/repository/hms/overview.md
+                      - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
+                      - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
               - Secrets Store:
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
           - Developer Guide:

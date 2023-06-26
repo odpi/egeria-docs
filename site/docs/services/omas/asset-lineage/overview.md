@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/in-development.md"
+--8<-- "snippets/content-status/tech-preview.md"
 
 # Asset Lineage Open Metadata Access Service (OMAS)
 
@@ -122,25 +122,31 @@ Entity events to feed the changes assets that are crated or updated:
         }
     }
     ```
-### REST API
+## REST API
 
+### Publish Entity
+Find the entity by guid and publish the context for it
 !!! get "GET - Request lineage publish out for single entity (asset or term)"
 
     ```
     {{platformURLRoot}}/servers/{{serverName}}/open-metadata/access-services/asset-lineage/users/{{userId}}/publish-entity/{{entityTypeName}}/{{guid}}
     ```
-
+### Publish Entities
+Scan the cohort based on the given entity type and publish the contexts for the found entities to the out topic.
 !!! get "GET - Request lineage publish out for entity type (asset or term)"
 
     ```
     {{platformURLRoot}}/servers/{{serverName}}/open-metadata/access-services/asset-lineage/users/{{userId}}/publish-entities/{{entityTypeName}}
     ```
-
+### Publish Context
+Find the entity by guid and publish the asset context for it. It applies for data tables and files.
 !!! get "GET - Request asset context"
 
     ```
     {{platformURLRoot}}/servers/{{serverName}}/open-metadata/access-services/asset-lineage/users/{{userId}}/publish-context/{{entityTypeName}}/{{guid}}
     ```
+### Out Topic Connection
+Return the connection object for the Asset Lineage's OMAS's out topic.
 !!! get "GET - Output topic OCF connection"
     ```
     {{platformURLRoot}}/servers/{{serverName}}/open-metadata/access-services/asset-lineage/users/{{userId}}/topics/out-topic-connection/{callerId}

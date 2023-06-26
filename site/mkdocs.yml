@@ -568,12 +568,13 @@ nav:
                   - Topic Integrator: services/omis/topic-integrator/overview.md
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
+                  - My Profile: services/omvs/my-profile/overview.md
                   - Glossary Author: services/omvs/glossary-author/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Workflow: services/omvs/glossary-workflow/overview.md
-                  - Dino View: services/omvs/dino/overview.md
-                  - Rex View: services/omvs/rex/overview.md
-                  - Tex View: services/omvs/tex/overview.md
+                  - Dynamic Infrastructure and Ops: services/omvs/dino/overview.md
+                  - Repository Explorer: services/omvs/rex/overview.md
+                  - Type Explorer: services/omvs/tex/overview.md
                   - Server Author: services/omvs/server-author/overview.md
       - Frameworks:
           - Frameworks Overview : frameworks/index.md

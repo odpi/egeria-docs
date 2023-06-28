@@ -21,6 +21,5 @@ The value of a repository proxy is that it provides access to the metadata that 
 
 ![Connecting to Apache Atlas](repository-proxy-atlas.svg)
 
-![JDBC](../connectors/jdbc-connectors.svg)
 
 --8<-- "snippets/abbr.md"

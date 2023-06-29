@@ -32,7 +32,7 @@ nav:
           - Preparing Metadata Ecosystem:
               - Metadata Valid Values: guides/planning/valid-values/overview.md
               - Language Translations: guides/planning/translations/overview.md
-              - Onboarding Organization: guides/planning/organization/overview.md
+              - On-boarding Organization: guides/planning/organization/overview.md
               - Governance Program: guides/planning/governance-program/overview.md
       - Integration:
           - Integration Guide:
@@ -40,6 +40,16 @@ nav:
               - Catalog Integration: guides/integration/types-of-metadata-repository.md
           - Connector Catalog:
               - Connector Overview: connectors/index.md
+              - Audit Log Destination:
+                  - Console: connectors/runtime/console-audit-log-destination-connector.md
+                  - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
+              - Cohort Registry Store:
+                  - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
+              - Digital Resource:
+                  - Open Metadata Topic:
+                         - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
+                         - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
+                  - JDBC Connector: connectors/resource/jdbc-resource-connector.md
               - Governance Actions:
                   - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
                   - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
@@ -70,40 +80,29 @@ nav:
                       - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
                   - Catalog:
                       - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
-              - Runtime:
-                  - Repository:
-                      - Native Repositories:
-                          - XTDB:
-                              - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                              - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                              - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                          - JanusGraph OMRS Repository Connector: connectors/repository/janus-graph/overview.md
-                          - In-memory OMRS Repository Connector: connectors/repository/in-memory/overview.md
-                          - Read-only OMRS Repository Connector: connectors/repository/read-only/overview.md
-                      - Repository Adapters:
-                          - Apache Atlas OMRS Repository Connector: connectors/repository/apache-atlas/overview.md
-                          - IBM Information Governance Catalog (IGC) OMRS Repository Connector: connectors/repository/igc/overview.md
-                          - SAS Viya OMRS Repository Connector: connectors/repository/sas-viya/overview.md
-                          - Hive Metastore (HMS) OMRS Proxy Repository Connector: connectors/repository/hms/overview.md
-                          - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
-                          - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
-                  - Audit Log Destination:
-                      - Console: connectors/runtime/console-audit-log-destination-connector.md
-                      - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
-                  - Open Metadata Archive Store:
-                      - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
-                  - Cohort Registry Store:
-                      - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
-              - Digital Resource:
-                  - Open Metadata Topic:
-                      - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
-                      - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
-                  - Database:
-                        - JDBC Connector: connectors/resource/jdbc-resource-connector.md
+              - Open Metadata Archive Store:
+                  - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
+              - Repository:
+                  - Native Repositories:
+                      - XTDB:
+                          - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                          - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                          - XTDB Connector Performance: connectors/repository/xtdb/performance.md
+                      - JanusGraph: connectors/repository/janus-graph/overview.md
+                      - In-memory: connectors/repository/in-memory/overview.md
+                      - Read-only: connectors/repository/read-only/overview.md
+                  - Repository Adapters:
+                      - Apache Atlas: connectors/repository/apache-atlas/overview.md
+                      - IBM Information Governance Catalog (IGC): connectors/repository/igc/overview.md
+                      - SAS Viya: connectors/repository/sas-viya/overview.md
+                      - Hive Metastore (HMS): connectors/repository/hms/overview.md
+                      - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
+                      - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
               - Secrets Store:
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
           - Developer Guide:
-              - Developer Overview: guides/developer/index.md
+              - Developer Guide: guides/developer/index.md
+              - Retrieving Metadata: guides/developer/finding-metadata/overview.md
               - Building Archives:
                   - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
                   - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
@@ -221,7 +220,6 @@ nav:
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
       - Open Metadata Labs: education/open-metadata-labs/overview.md
-      - Webinars: education/webinar-program/overview.md
       - Tutorials:
           - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
           - Using Kubernetes: guides/operations/kubernetes/index.md
@@ -235,9 +233,12 @@ nav:
           - Running OMAG Servers: education/tutorials/omag-server-tutorial/overview.md
           - Running Samples: education/tutorials/running-samples-tutorial.md
           - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
+      - Comparisons:
+          - Apache Atlas: education/comparisons/apache-atlas.md
       - Scenarios:
           - Data Manager Integration: scenarios/data-manager-integration/overview.md
           - File Lineage: scenarios/file-lineage/overview.md
+      - Webinars: education/webinar-program/overview.md
       - Old Dojo (deprecated):
             - Dojo Introduction: getting-started/dojo/index.md
             - Day 1:
@@ -289,6 +290,7 @@ nav:
                       - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                       - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
                       - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
+                      - JDBC Connector Release Process: guides/contributor/release-process/egeria-connector-jdbc-release.md
                       - Maven Publishing reference: guides/contributor/release-process/maven-publish.md
                       - GitHub Secrets reference: guides/contributor/release-process/secrets.md
               - Specific Guidance:
@@ -509,7 +511,7 @@ nav:
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
               - Metadata Security Services: services/metadata-security-services.md
-              - Platform Operation Services: services/platform-services/overview.md
+              - Platform Services: services/platform-services/overview.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Open Metadata Store Services: services/gaf-metadata-management.md
               - Open Integration Service: services/oif-metadata-management.md
@@ -567,12 +569,13 @@ nav:
                   - Topic Integrator: services/omis/topic-integrator/overview.md
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
+                  - My Profile: services/omvs/my-profile/overview.md
                   - Glossary Author: services/omvs/glossary-author/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Workflow: services/omvs/glossary-workflow/overview.md
-                  - Dino View: services/omvs/dino/overview.md
-                  - Rex View: services/omvs/rex/overview.md
-                  - Tex View: services/omvs/tex/overview.md
+                  - Dynamic Infrastructure and Ops: services/omvs/dino/overview.md
+                  - Repository Explorer: services/omvs/rex/overview.md
+                  - Type Explorer: services/omvs/tex/overview.md
                   - Server Author: services/omvs/server-author/overview.md
       - Frameworks:
           - Frameworks Overview : frameworks/index.md
@@ -808,7 +811,7 @@ nav:
               - Reggie Mint: practices/coco-pharmaceuticals/personas/reggie-mint.md
               - Robbie Records: practices/coco-pharmaceuticals/personas/robbie-records.md
               - Sally Counter: practices/coco-pharmaceuticals/personas/sally-counter.md
-              - Signey Seeker: practices/coco-pharmaceuticals/personas/sidney-seeker.md
+              - Sidney Seeker: practices/coco-pharmaceuticals/personas/sidney-seeker.md
               - Stew Faster: practices/coco-pharmaceuticals/personas/stew-faster.md
               - Tanya Tidie: practices/coco-pharmaceuticals/personas/tanya-tidie.md
               - Tessa Tube: practices/coco-pharmaceuticals/personas/tessa-tube.md

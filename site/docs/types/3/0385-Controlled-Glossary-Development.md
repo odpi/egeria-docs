@@ -19,7 +19,7 @@ In addition, the following associations are made:
 
 Once the updates are complete, they go through a review and approval process.
 
-Once approved, the changes identified in the editing glossary are made to the terms in the live glossary.  This *merging* process is typically handled by a [Governance Action Process](/concepts/governance-action-process) which handles conflicts and organizes the subsequent correction and resubmission of the changes.
+Once approved, the changes identified in the editing glossary are made to the terms in the live glossary.  The [Glossary Workflow OMVS](/services/omvs/glossary-workflow/overview) supports a simple model that updates a glossary term based on the values from another glossary term and this can be used to perform a simple *merging* process. Alternatively, a [Governance Action Process](/concepts/governance-action-process) can perform the merging process.  This would run asynchronously to the end user request, which is useful if the editing glossary is large, and it can manage conflicts and organize the subsequent correction and resubmission of the changes through its stewardship support.  
 
 ![UML](0385-Controlled-Glossary-Development.svg)
 
@@ -47,7 +47,7 @@ The *ControlledGlossaryTerm* extends the standard [GlossaryTerm](/types/3/0330-T
 * Other      - The term is in a locally defined state.
 * Deleted    - The term has been soft-deleted and can no longer be used.
 
-These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-metadata-values/overview).
+These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-values/overview).
 
 
 ???+ deprecated "Deprecated types"

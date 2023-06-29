@@ -104,8 +104,7 @@ is very welcome !
 
 Example certificates are provided [on GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/certificates) 
 
-As an example of running the Egeria server chassis with the certificates generated above, add
-the following options when launching the OMAG Server Platform jar file:
+As an example of running the OMAG Server Platform with the certificates generated above, add the following options when launching the `omag-server-platform.jar` jar file:
 
  * -Dserver.ssl.key-store=${KS} 
  * -Dserver.ssl.key-alias=EgeriaServerChassis

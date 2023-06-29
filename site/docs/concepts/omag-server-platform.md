@@ -19,7 +19,7 @@ Each server is configured to support specific set of Egeria services and connect
 
 ## Deployment of the OMAG Server Platform
 
-Once a configuration document is defined, the OMAG Server can be started and stopped multiple times by the admin services server instance operations.
+Once a configuration document is defined, the OMAG Server can be started and stopped multiple times via the [Platform Services](/services/platform-services/overview).
 
 The OMAG Server Platform can host multiple OMAG Servers at any one time and a single server may be active on multiple platforms. The choices are as follows:
 
@@ -30,8 +30,7 @@ The OMAG Server Platform can host multiple OMAG Servers at any one time and a si
 - **B** - Multiple OMAG Servers are hosted on the same OMAG Server Platform. The OMAG Server Platform routes inbound requests to the right server based on the server name specified in the request URL. The servers may all be of the same type offering the same services but to different groups of people or be a set of collaborating servers of different types consolidated onto the same platform.
 - **C** - Multiple copies of same server instance each running on different platforms to provide high availability and distribution of workload (horizontal scalability).
 
-The OMAG Server platform is included in the [Egeria Distribution TAR file](https://github.com/odpi/egeria/tree/main/open-metadata-distribution/open-metadata-assemblies)
-which can be installed on your machine by following the [Installing Egeria Tutorial](/education/tutorials/building-egeria-tutorial/task-installing-egeria).
+The OMAG Server platform is included in the [Egeria Distribution TAR file](https://github.com/odpi/egeria/tree/main/open-metadata-distribution/open-metadata-assemblies) which can be installed on your machine by following the [Installing Egeria Tutorial](/education/tutorials/building-egeria-tutorial/task-installing-egeria).
 
 ??? education "Further reading"
 

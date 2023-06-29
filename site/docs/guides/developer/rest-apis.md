@@ -11,7 +11,7 @@ Developers and architects experimenting with Egeria also find it useful to call 
 
 ```
 
-{{platformURLRoot}}/swagger-ui.html
+{{platformURLRoot}}/swagger-ui/index.html
 
 ```
 The default rendering is poor and the Egeria community is looking for help to improve it.

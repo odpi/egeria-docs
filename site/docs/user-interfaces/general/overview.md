@@ -68,6 +68,31 @@ Clicking a cateogry row in this table will show the terms associated with its re
 
 ![terms](egeria-ui-glossary-terms.png)
 
+## Profile
+
+The profile page is accessible by clicking its icon on the bottom of the left navigation bar.
+
+![profile](egeria-ui-profile-icon.png)
+
+On the profile page it's possible to see information about the *scopes* your user account has and the *components* of the ui that are visible to your account. Above all that is the name of your account.
+
+![profile](egeria-ui-profile.png)
+
+## About
+
+Right below the profile page icon, in the left navigation bar, is the button that redirects to the about page.
+
+![about](egeria-ui-about-icon.png)
+
+The about page shows some useful information about the Egeria UI:
+
+- **Name**: The name of the Egeria UI package.
+- **Version**: The version of the Egeria UI.
+- **CommitId**: The commit id.
+- **BuildTime**: The date and time that this version of the Egeria UI has been built.
+
+![about](egeria-ui-about.png)
+
 ## Extended features
 
 It is possible to configure some experimental features into the user interface through the role definitions.

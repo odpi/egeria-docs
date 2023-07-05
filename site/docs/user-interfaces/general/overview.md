@@ -59,14 +59,14 @@ On first load, the glossary is only able to show a list of available glossaries 
 
 ![glossary](egeria-ui-glossary.png)
 
-When clicking the `Details` button in third column of the glossary table, the categories connected to this respective glossary will be loaded.
-The properties of these categories are displayed in the same way as the glossaries; their name and status are visible and another `Details` button is available.
+When clicking anywhere on the row of the glossary, the categories connected to this respective glossary will be loaded in the next table.
+The properties of these categories are displayed in the same way as the glossaries; their name and status are visible.
 
-![category](egeria-ui-category.png)
+![category](egeria-ui-glossary-categories.png)
 
-Clicking this `Details` button will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the data model, and its `Details` button will redirect to the same `asset details` page as from the asset catalog.
+Clicking a cateogry row in this table will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the data model, and clicking on one of these terms rows will redirect to the same `asset details` page as from the asset catalog.
 
-![terms](egeria-ui-terms.png)
+![terms](egeria-ui-glossary-terms.png)
 
 ## Extended features
 

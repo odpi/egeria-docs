@@ -4,6 +4,9 @@
 
 # Earlier releases
 
+???+ info "Release 4.1 (May 2023)"
+    --8<-- "docs/release-notes/4-1.md"
+
 ???+ info "Release 4.0 (March 2023)"
     --8<-- "docs/release-notes/4-0.md"
 

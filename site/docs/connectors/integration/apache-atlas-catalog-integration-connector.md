@@ -29,15 +29,14 @@ Reasons for integrating Apache Atlas into a wider open metadata ecosystem includ
 
 The Apache Atlas integration connector provides an ongoing exchange of metadata between Apache Atlas and the open metadata ecosystem.  In its initial state, it focuses on the two-way exchange of glossaries.  Future versions will add entities (such as data sets and process), lineage and classifications.
 
+![Figure 1](apache-atlas-catalog-integration-connector.svg)
+> **Figure 1:** Operation of the Apache Atlas integration connector
+
 Specifically this connector:
 
 * Publishes glossaries, glossary categories and ACTIVE glossary terms that originate from the open metadata ecosystem into Apache Atlas.  The connector makes no attempt to detect changes to these glossary elements in Apache Atlas.  However, such changes will be overridden the next time the integration connector refreshes the glossary metadata in Apache Atlas.
 * Publishes glossaries, glossary categories and glossary terms that originate in Apache Atlas into the open metadata ecosystem.  These elements will read-only in the open metadata ecosystem.
 
-To synchronize multiple specific glossaries, simply configure a different instance of this connector for each glossary.
-
-![Figure 1](apache-atlas-catalog-integration-connector.svg)
-> **Figure 1:** Operation of the Apache Atlas integration connector
 
 ### Metadata ownership 
 
@@ -79,18 +78,110 @@ In order to correlate the instances in Apache Atlas with the open metadata ecosy
         }
         ```
 
-* Uses an [external identifier](/features/external-identifiers/overview) attached to the open metadata instance to hold the unique identifier (GUID) of the equivalent Apache Atlas metadata instance as well as using [metadata provenance](/features/metadata-provenance/overview) to identify the origin of instances being synchronized.  The external identifier is returned in the *correlationProperties* and the *origin* of the *elementHeader* shows the metadata provenance.
+* Uses an [external identifier](/features/external-identifiers/overview) attached to the open metadata instance to hold the unique identifier (GUID) of the equivalent Apache Atlas metadata instance as well as using [metadata provenance](/features/metadata-provenance/overview) to identify the origin of instances being synchronized.  The external identifier is returned in the 
 
+    * *correlationProperties* returns the external identifier.
+    * *origin* of the *elementHeader* shows the metadata provenance.
+
+    ??? example "Example of an open metadata glossary"
+        This is an example of an open metadata glossary that has been copied from Apache Atlas's glossary with unique identifier `d36c7844-1dbc-4f15-bfd2-63a6125e9c4b`.
+        ```json
+        {
+            "elementHeader": {
+                "class": "ElementHeader",
+                "headerVersion": 0,
+                "status": "ACTIVE",
+                "type": {
+                "typeId": "36f66863-9726-4b41-97ee-714fd0dc6fe4",
+                "typeName": "Glossary",
+                "superTypeNames": [ "Referenceable", "OpenMetadataRoot"],
+                "typeVersion": 1,
+                "typeDescription": "A collection of related glossary terms."
+                },
+                "origin": {
+                    "sourceServer": "cocoMDS1",
+                    "originCategory": "EXTERNAL_SOURCE",
+                    "homeMetadataCollectionId": "1cb8fa85-a1ba-480b-9d5e-5e7d3c562603",
+                    "homeMetadataCollectionName": "ApacheAtlasDL01"
+                },
+                "versions": {
+                    "createdBy": "generalnpa",
+                    "createTime": "2023-07-19T17:09:36.767+00:00",
+                    "version": 1
+                },
+                "guid": "e69cabed-5807-4467-a7e0-6a55acc15938",
+                "classifications": [
+                    {
+                        "class": "ElementClassification",
+                        "headerVersion": 0,
+                        "status": "ACTIVE",
+                        "type": {
+                            "typeId": "adce83ac-10f1-4279-8a35-346976e94466",
+                            "typeName": "LatestChange",
+                            "typeVersion": 1,
+                            "typeDescription": "Defines the latest change to an anchor entity and its associated attachments."
+                        },
+                        "origin": {
+                            "sourceServer": "cocoMDS1",
+                            "originCategory": "LOCAL_COHORT",
+                            "homeMetadataCollectionId": "1cefccc2-082b-4c13-aafd-d1f0a67df3fc",
+                            "homeMetadataCollectionName": "Data Lake Catalog"
+                        },
+                        "versions": {
+                            "createdBy": "cocoMDS1npa",
+                            "createTime": "2023-07-19T17:09:37.305+00:00",
+                            "version": 1
+                        },
+                        "classificationOrigin": "ASSIGNED",
+                        "classificationName": "LatestChange",
+                        "classificationProperties": {
+                            "relationshipType": "ExternalIdLink",
+                            "attachmentType": "ExternalId",
+                            "changeTarget": "EntityRelationship",
+                            "description": "Linking Glossary e69cabed-5807-4467-a7e0-6a55acc15938 to ExternalId 565396f8-4300-4f30-b55b-a6c1f2a6070f",
+                            "attachmentGUID": "565396f8-4300-4f30-b55b-a6c1f2a6070f",
+                            "user": "generalnpa",
+                            "changeAction": "Created"
+                        }
+                    }
+                ]
+            },
+            "correlationHeaders": [
+                {
+                    "synchronizationDirection": "BOTH_DIRECTIONS",
+                    "externalIdentifier": "d36c7844-1dbc-4f15-bfd2-63a6125e9c4b",
+                    "externalIdentifierName": "atlasGUID",
+                    "keyPattern": "LOCAL_KEY",
+                    "assetManagerGUID": "1cb8fa85-a1ba-480b-9d5e-5e7d3c562603",
+                    "assetManagerName": "ApacheAtlasDL01",
+                    "lastSynchronized": "2023-07-19T17:09:37.045+00:00"
+                }
+            ],
+            "glossaryProperties": {
+                "class": "GlossaryProperties",
+                "qualifiedName": "AtlasGlossary.Atlas Metadata Glossary",
+                "displayName": "Atlas Metadata Glossary",
+                "description": "This glossary has come from Apache Atlas.\n\nThis glossary is to replicated into the open metadata ecosystem by Egeria.",
+                "language": "English",
+                "usage": "Just for test"
+            }
+        }
+        ```
 
 ## Configuration
 
+The Apache Atlas integration connector runs in an [Integration Daemon](/concepts/integration-daemon).  There are two parts to the configuration:
+
+* The specification of the connection object the controls the behaviour of the connector itself.
+* The inclusion of the connection object in the configuration of the Integration Daemon.
+
 ### The connection object
 
-This connector is configured in Egeria using a [connection](/concepts/connection) object.  This connector object provides configurations properties and the endpoint where Apache Atlas is running.  A connection object has the following structure:
+The [connection](/concepts/connection) object provides information about configurations properties and the endpoint where Apache Atlas is running.  A connection object has the following structure:
 
 ![Connection structure](/concepts/connection.svg)
 
-The *Connector Type* identifies the type of connector to run (ie this connector) and the *Endpoint* identifies the host and port where the Apache Atlas server is running.
+The *Connection* defines the specific use of the connector.  The *Connector Type* identifies the implementation of connector to run and the *Endpoint* identifies the host and port where the Apache Atlas server is running.
 
 Apache Atlas typically runs with *Basic Authorization* - that is a userId and password is passed in the header of REST API calls to Apache Atlas.  This userId and password are specified as *userId* and *clearPassword* properties in the connection object.
 
@@ -103,7 +194,7 @@ Finally, there is an optional set of configuration properties that controls the 
 * *atlasGlossaryName* specifies the name of a single Apache Atlas glossary that is to be synchronized with the open metadata ecosystem.  If this property is omitted, all glossaries found in Apache Atlas will be copied into the open metadata ecosystem.
 
 !!! example "Example connection for the Apache Atlas integration connector"
-    ```json linenums="1" hl_lines="13 15-16 19-20"
+    ```json linenums="1" hl_lines="14 16-17 20-21"
     {
         "connection" : 
         { 
@@ -156,8 +247,8 @@ Whichever method is used, there are four properties that will affect the behavio
     * *TO_THIRD_PARTY* meaning that metadata only flows from the open metadata ecosystem to Apache Atlas.
     * *BOTH_DIRECTIONS* meaning the metadata flows between the open metadata ecosystem and Apache Atlas in both directions.
 
-??? education "Static configuration of an integration connector"
-    See [Configuring the integration services](/guides/admin/configuring-an-integration-daemon/#configure-the-integration-services) and add the Apache Atlas connection information to the Catalog Integrator OMIS.  For example, issuing the following command
+??? education "Configuring the Integration Daemon"
+    See [Configuring the integration connectors](/guides/admin/servers/configuring-an-integration-daemon/#configuring-the-integration-connectors) to find out how to add you connection object to the integration daemon.  For example, issuing the following command adds the Apache Atlas connection information to the Catalog Integrator OMIS in an Integration Daemon identified by `{integrationDaemonName}}`.  
 
     ```
     POST {{baseURL}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{integrationDaemonName}}/integration-services/catalog-integrator
@@ -194,6 +285,7 @@ Whichever method is used, there are four properties that will affect the behavio
         ]
     }
     ```
+
 
 ## Implementation
 

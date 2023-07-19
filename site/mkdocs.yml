@@ -55,31 +55,24 @@ nav:
                   - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
                   - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
                   - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-              - Governance Daemon:
-                  - Open Lineage Janus Connector: connectors/governance-daemon/open-lineage-janus-connector.md
-              - Integration:
-                  - File Connectors:
-                      - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
-                      - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
-                  - Topic Connectors:
-                      - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
-                      - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
-                      - Strimzi Topics Monitor Connector: connectors/integration/strimzi-monitor-integration-connector.md
-                  - API Connectors:
-                      - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
-                  - Infrastructure Connectors:
-                      - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
-                  - Lineage Connectors:
+              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/open-lineage-janus-connector.md
+              - Integration (metadata exchange):
+                  - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
+                  - Data Files: connectors/integration/data-files-monitor-integration-connector.md
+                  - Data Folders: connectors/integration/data-folder-monitor-integration-connector.md
+                  - Databases (JDBC): connectors/integration/jdbc-integration-connector.md
+                  - Kafka Topics (Cataloguing): connectors/integration/kafka-monitor-integration-connector.md
+                  - Kafka Topics (Auditing): connectors/integration/kafka-topics-audit-integration-connector.md
+                  - Strimzi Topics: connectors/integration/strimzi-monitor-integration-connector.md
+                  - Open APIs via Swagger: connectors/integration/open-api-monitor-integration-connector.md
+                  - Egeria Infrastructure: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
+                  - OpenLineage standard:
                       - OpenLineage Event Receiver: connectors/integration/open-lineage-event-receiver-integration-connector.md
                       - OpenLineage API Log Store: connectors/integration/api-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
-                      - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
-                      - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
-                  - Database:
-                      - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
-                  - Catalog:
-                      - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
+                      - Governance Action OpenLineage: connectors/integration/governance-action-open-lineage-integration-connector.md
+                  - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
               - Open Metadata Archive Store:
                   - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
               - Repository:

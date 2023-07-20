@@ -93,15 +93,12 @@ Using HBase offers massive scalability and an opportunity to provide storage res
 
 We also show the use of ElasticSearch which provides a resilient search cluster. ElasticSearch has an extensive set of options that can be configured - especially around security and authentication. Shown below are some basic settings, more robust and sophisticated approaches are available. Here are a couple additional considerations:
 
--  Many ElasticSearch deployments automatically set up  self-signed certificates for SSL. You may need to include this certificate to successfully connect to ElasticSearch. Each node in the ElasticSearch cluster may have its own certificate. There are a couple of different ways the certificates can be injected - one approach is to add it to the Trust Store defined by the Egeria Platform  [Application Properties File](https://egeria-project.org/guides/admin/configuring-the-omag-server-platform/#certificates-for-the-omag-server-platform) using utilities like *openssl* and *keytool*.
+- Many ElasticSearch deployments automatically set up  self-signed certificates for SSL. You may need to include this certificate to successfully connect to ElasticSearch. Each node in the ElasticSearch cluster may have its own certificate. There are a couple of different ways the certificates can be injected - one approach is to add it to the Trust Store defined by the Egeria Platform  [Application Properties File](https://egeria-project.org/guides/admin/configuring-the-omag-server-platform/#certificates-for-the-omag-server-platform) using utilities like *openssl* and *keytool*.
 - Most modern ElasticSearch deployments use the REST interface.
 - Additional configuration options can be found at: [JanusGraph - ElasticSearch](https://docs.janusgraph.org/index-backend/elasticsearch/)
 
 
 HBase and ElasticSearch are both commonly deployed as shared services that may be used by many applications - so we must be careful to specify unique table/index names.
-
-
-
 
 
 In the snippet below we also show the use of a local cache to improve performance as we are using remote persistence:
@@ -150,16 +147,22 @@ Injecting needed Jar files onto the class path depends on how you are deploying 
 
 To download the files (once they have been identified), you can create a script of curl commands. For example, a command to download the hadoop-hdfs-client-3.3.0 jar file from the *maven* repository would look like:
 
-`curl -o ./hadoop-hdfs-client-3.3.0.jar https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.0/hadoop-hdfs-client-3.3.0.jar`
+```bash
+curl -o ./hadoop-hdfs-client-3.3.0.jar https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.0/hadoop-hdfs-client-3.3.0.jar
+```
 
 The curl command also specifies where you want to download the file to - so be careful where you run the command and how you formulate the download location. The curl command can also be issued within the docker build file. For kubernetes deployments with Helm charts, a yaml file can contain a similar set of commands of the form:
 
-`   - url: https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.0/hadoop-hdfs-client-3.3.0.jar
-filename: hadoop-hdfs-client-3.3.0.jar`
+```text
+   - url: https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-hdfs-client/3.3.0/hadoop-hdfs-client-3.3.0.jar
+     filename: hadoop-hdfs-client-3.3.0.jar`
+```
 
 If you create a yaml file called myAddedJars.yaml containing these directives, then it can be executed as part of install command. Here is a simplified example that adds this directive to the command that installs the Egeria Lab helm chart:
 
-`helm install -f ./myAddedJars.yaml lab egeria/odpi-egeria-lab`
+```bash
+helm install -f ./myAddedJars.yaml lab egeria/odpi-egeria-lab`
+```
 
 A more complete discussion can be found at [Egeria Helm Lab Chart](https://egeria-project.org/guides/operations/kubernetes/charts/lab/?h=helm+lab#adding-additional-connectors)
 

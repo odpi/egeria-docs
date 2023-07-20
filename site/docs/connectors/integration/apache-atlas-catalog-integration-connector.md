@@ -49,7 +49,7 @@ It is possible to create a new glossary term or glossary category in Apache Atla
 
 Similarly, it is possible to create new glossary terms and categories in the open metadata ecosystem that are linked to a glossary that originated from Apache Atlas.  These new entities will be owned by the open metadata ecosystem.
 
-**Can relationships between the term and other objects be done in both cases? **
+
 
 ### Correlation
 

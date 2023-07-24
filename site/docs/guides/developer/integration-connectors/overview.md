@@ -206,7 +206,7 @@ An integration connector that is listening for events from the open metadata eco
 | [Security Integrator OMIS](/services/omis/security-integrator/overview)             | [Security Manager OMAS](/services/omas/security-manager/overview)   | [SecurityManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/securitymanager/api/SecurityManagerEventListener.html)    |
 | [Topic Integrator OMIS](/services/omis/topic-integrator/overview)                   | [Data Manager OMAS](/services/omas/data-manager/overview)           | [DataManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/datamanager/api/DataManagerEventListener.html)                |
 
-Your integration connector registers itself as a listener in the `start()` method, and the `processEvent()` method is called each time an event occurs.
+Your integration connector registers itself as a listener in the `start()` method, and the `processEvent()` method is called each time an event occurs.   The event type passed on `processEvent()` depends on the OMIS that the connector is using.  In the example, the event type comes from [Asset Manager OMAS](/services/omas/asset-manager/overview) so the connector is either using the [Catalog Integrator OMAS](/servifes/omis/catalog-integrator/overview) or [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview).
 
 ```java
     /**
@@ -230,7 +230,28 @@ Your integration connector registers itself as a listener in the `start()` metho
         }
     }
 
+     /**
+      * Process an event that was published by the Asset Manager OMAS.  This connector is only interested in
+      * glossaries, glossary categories and glossary terms.   The listener is only registered if metadata is flowing
+      * from the open metadata ecosystem to Apache Atlas.
+      *
+      * @param event event object
+      */
+     @Override
+     public void processEvent(AssetManagerOutTopicEvent event)
+     {
+        /*
+         * Only process events if refresh() is not running because the refresh() process creates lots of events and
+         * proceeding with event processing at this time causes elements to be processed multiple times.
+         */
+        if (! myContext.isRefreshInProgress())
+        {
+        ...
+        }
+     }
+
 ```
+The `isRefreshInProgress()` call is used to ensure this connector ignores events while its `refresh()` is being called.  For many connectors, many of the events created during this time are caused by the connector's own activity.  Therefore, ignoring events at this time can avoid processing elements multiple times.
 
 ### Working with the third party technology
 

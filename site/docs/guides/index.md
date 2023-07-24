@@ -3,7 +3,7 @@
 
 # Using Egeria
 
-Egeria's guides provide practical guidance on different aspects of using Egeria in your organization.  As a technology, Egeria has a lot of features and these are explained along with information about each feature's business value and how to incorporate it in your organization.  Usiing Egeria should enable your organization to change the way it works, by improving the collaboration and shared understanding of your data and digital resources.
+Egeria's guides provide practical guidance on different aspects of using Egeria in your organization.  As a technology, Egeria has a lot of features and these are explained along with information about each feature's business value and how to incorporate it in your organization.  Using Egeria should enable your organization to change the way it works, by improving the collaboration and shared understanding of your data and digital resources.
 
 --8<-- "snippets/getting-started.md"
 

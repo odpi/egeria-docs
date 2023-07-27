@@ -39,21 +39,21 @@ The types of OMAG Server are shown in Figure 1. The hierarchy groups similar typ
 
     Object-oriented software engineers would know of this type of relationship as behavior inheritance.
 
-- [Cohort member](cohort-member) - All of these types of servers are optionally able to exchange metadata through an open metadata repository cohort.  This is a peer-to-peer metadata exchange for metadata repositories.
-    - [Metadata access store](/concepts/metadata-access-store) - supports a metadata repository that can natively store open metadata along with specialized metadata APIs for different types of tools (these APIs are called [Open Metadata Access Services (OMASs)](/services/omas)).
-    - [Metadata access point](/concepts/metadata-access-point) - supports the OMASs like the metadata access store, but but does not have its own repository. All the metadata it serves up and stores belongs to the metadata repositories in other members of the cohort.  This type of server needs to be connected to at least one cohort to be useful.
-    - [Repository proxy](/concepts/repository-proxy) - acts as an open metadata translator for a third party metadata repository. It supports open metadata API calls and translates them to the proprietary APIs of the repository. It also translates events from the proprietary repository into open metadata events that flow over the cohort.
-    - [Conformance test server](/concepts/conformance-test-server) - validates that a member of the cohort is conforming with the open metadata protocols. This server is typically only seen in development and test cohorts rather than production.
-- [View server](/concepts/view-server) - manages specialist services for user interfaces.
+- [Cohort Member](cohort-member) - All of these types of servers are optionally able to exchange metadata through an open metadata repository cohort.  This is a peer-to-peer metadata exchange for metadata repositories.
+    - [Metadata Access Store](/concepts/metadata-access-store) - supports a metadata repository that can natively store open metadata along with specialized metadata APIs for different types of tools (these APIs are called [Open Metadata Access Services (OMASs)](/services/omas)).
+    - [Metadata Access Point](/concepts/metadata-access-point) - supports the OMASs like the metadata access store, but but does not have its own repository. All the metadata it serves up and stores belongs to the metadata repositories in other members of the cohort.  This type of server needs to be connected to at least one cohort to be useful.
+    - [Repository Proxy](/concepts/repository-proxy) - acts as an open metadata translator for a third party metadata repository. It supports open metadata API calls and translates them to the proprietary APIs of the repository. It also translates events from the proprietary repository into open metadata events that flow over the cohort.
+    - [Conformance Test Server](/concepts/conformance-test-server) - validates that a member of the cohort is conforming with the open metadata protocols. This server is typically only seen in development and test cohorts rather than production.
+- [View Server](/concepts/view-server) - manages specialist services for user interfaces.
 - [Governance server](/concepts/governance-server) - supports the use of metadata in the broader IT landscape.
-    - [Engine host](/concepts/engine-host) - provides a runtime for a specific type of [governance engine](/concepts/governance-engine) that runs [governance services](/concepts/governance-service) to monitor, enhance and govern the open metadata ecosystem.
-    - [Integration daemon](/concepts/integration-daemon) - manages the synchronization of metadata with third party technology that can not call the access services directly.   through the [integration services](/services/omis).
-    - [Data engine proxy](/concepts/data-engine-proxy) - supports the capture of metadata from a data engine. This includes details of the processing of data that it is doing which is valuable when piecing together lineage.
-    - [Open lineage server](/concepts/open-lineage-server) - Manages the collation of lineage information and maintains it in a format for reporting. This includes the state of the lineage at different points in time.
+    - [Engine Host](/concepts/engine-host) - provides a runtime for a specific type of [governance engine](/concepts/governance-engine) that runs [governance services](/concepts/governance-service) to monitor, enhance and govern the open metadata ecosystem.
+    - [Integration Daemon](/concepts/integration-daemon) - manages the synchronization of metadata with third party technology that can not call the access services directly.   through the [integration services](/services/omis).
+    - [Data Engine Proxy](/concepts/data-engine-proxy) - supports the capture of metadata from a data engine. This includes details of the processing of data that it is doing which is valuable when piecing together lineage.
+    - [Open Lineage Server](/concepts/open-lineage-server) - Manages the collation of lineage information and maintains it in a format for reporting. This includes the state of the lineage at different points in time.
 
 ## Server connectivity
 
-The different types of OMAG Servers connect together as illustrated in Figure 2.  Metadata Access Stores and Metadata Access Points (collectively called [Metadata Access Servers](/concepts/metadata-access-server)) provide access to open metadata to the governance servers and view servers via their [Open Metadata Access Services (OMASs)](/services/omas).
+The different types of OMAG Servers connect together as illustrated in Figure 2.  Metadata Access Stores and Metadata Access Points (collectively called [Metadata Access Servers](/concepts/metadata-access-server)) provide access to open metadata to the Governance Servers and View Servers via their [Open Metadata Access Services (OMASs)](/services/omas).
 The Governance Servers connect to external tools, engines and platforms.  The View Servers are called by user interfaces (including Egeria's user interfaces).
 Multiple Metadata Access Servers can share metadata with Repository Proxies via one or more cohorts.   
 

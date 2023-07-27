@@ -27,7 +27,7 @@ Our guiding beliefs:
 
 --8<-- "docs/introduction/open-metadata-ecosystem.md"
 
-!!! tip "Code talks"
-    Egeria provides an Apache 2.0 licensed platform to support vendors that sign up to the open metadata and governance manifesto.
+!!! tip "What is included in Egeria?"
+    Egeria provides [Apache 2.0 licensed standards and technology](/introduction/overview) to support the deployment of the open metadata ecosystem.
 
 --8<-- "snippets/abbr.md"

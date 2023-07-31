@@ -3,9 +3,11 @@
 
 # 0042 Software Capabilities
 
+Software capabilities are the capabilities implemented in software and supported by [ITInfrastructure](/types/0/0030-Hosts-and-Platforms) such as hosts, software server platforms and software servers.  They are composed of, support and/or consume various [digital resources](/concepts/resources) represented as [Asset entities](/types/0/0010-Base-Model).  They are linked together using the [ServerAssetUse relationship](/types/0045-Servers-and-Assets). 
+
 ![UML](0042-Software-Capabilities.svg)
 
-## SoftwareCapability
+## SoftwareCapability entity
 
 [*IT Infrastructure*](/types/0/0030-Hosts-and-Platforms) contains many capabilities.  Each capability can be catalogued using the *SoftwareCapability* entity and linked to the hosting *ITInfrastructure* entity using the *SupportedSoftwareCapability* relationship. 
 
@@ -49,20 +51,15 @@ In addition, it is possible to augment software capabilities with the following 
 - [*FileManager*](/types/0/0056-Resource-Managers/#filemanager) - A manager of a collection of files and folders.
 - [*NotificationManager*](/types/0/0056-Resource-Managers/#notificationmanager) - A software capability that is distributing events from a topic to its subscriber list.
 
-## SupportedSoftwareCapability
+## SupportedSoftwareCapability relationship
 
-Defines the relationship between a *SoftwareCapability* and the *ITInfrastructure* asset that hosts it.
+Defines the relationship between a *SoftwareCapability* and the *ITInfrastructure* entity that hosts it.  This relationship, plus the attached *SoftwareCapability* entity, help to build out a picture of the capabilities of a particular deployed host, software server platform or software server.  Together they help to describe where and how various IT capabilities are delivered to the owning organization.  This model can form the basis of traceability from business function to IT Infrastructure, particularly when combined with [location information](/types/0/0025-Locations) and [links to the data assets and APIs](/types/0/0045-Servers-and-Assets). 
 
-## ProcessingState
+## ProcessingState classification
 
-Defines a classification for a *SoftwareCapability*. The *ProcessingState* can be used to describe additional runtime processing information used by various SoftwareCapabilities.
-
-
-## ProcessingState
-
-Defines a classification for a `SoftwareCapability`. It stores the last sync timestamp for critical elements. 
+Defines a classification for a *SoftwareCapability*. The *ProcessingState* can be used to describe additional runtime processing information used by the component represented by the *SoftwareCapability* entity.
 
 ??? deprecated "Deprecated types"
-    - *SoftwareServerSupportedCapability* is deprecated in favor of *SupportedSoftwareCapability*.
+    - *SoftwareServerSupportedCapability* is deprecated in favour of the *SupportedSoftwareCapability* relationship.
     
 --8<-- "snippets/abbr.md"

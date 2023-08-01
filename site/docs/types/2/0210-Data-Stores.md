@@ -9,7 +9,7 @@ Both [*DataSets*](/types/0/0010-Base-Model#dataset) and [*DataStores*](#datastor
 
 ## DataStore entity
 
-The *DataStore* entity describes a physical [digital resource](/concepts/resource) that supplies data.
+The *DataStore* entity describes a physical [digital resource](/concepts/resource) that supplies data.  The *deployedImplementationType* attribute describes the technology that is used in its implementation.
 
 ## DataContentForDataSet relationship
 

@@ -9,7 +9,7 @@ This project welcomes contributors from any organization or background, provided
 
 ### Live discussions
 
-We have a variety of weekly and bi-weekly meetings to which all are welcome:
+We have a variety of weekly and bi-weekly meetings to which all are welcome.  These calls run January to June, September to November.  July, August and December are popular vacation times, and so we stop the calls while the attendance is low.
 
 <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=YjVxaGRyNXFkYmZscDhkbHA3MGxtb2RtMHNmdmlocWxAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%234285F4&amp;showCalendars=0&amp;showPrint=0&amp;title=Egeria%20Calendar" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 

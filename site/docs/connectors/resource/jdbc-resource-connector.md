@@ -5,6 +5,12 @@
 
 # JDBC Resource Connector
 
+???+ info "Connector summary"
+    - Connector Category: [Digital Resource Connector](/concepts/digital-resource-connector)
+    - Source Module: [jdbc resource connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-resource-connector){ target=gh }.
+    - Jar File Name: `jdbc-resource-connector.jar`
+
+
 The JDBC Resource Connector provides a DataSource, which in turn is used to get a connection to underlying database.  It provides access to both the schema metadata and the business data content.
 
 ![Figure 1](jdbc-resource-connector.svg)

@@ -50,6 +50,10 @@ nav:
                          - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
                          - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
                   - JDBC Connector: connectors/resource/jdbc-resource-connector.md
+                  - Avro File Connector: connectors/resource/avro-file-resource-connector.md
+                  - Basic File Connector: connectors/resource/basic-file-resource-connector.md
+                  - CSV File Connector: connectors/resource/csv-file-resource-connector.md
+                  - Data Folder Connector: connectors/resource/data-folder-resource-connector.md
               - Governance Actions:
                   - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
                   - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
@@ -823,7 +827,7 @@ nav:
               - Governance Team: practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview.md
               - Information Supply Chains: practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview.md
               - Multi-Faceted Governance: practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview.md
-              - New Systems Archiecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview.md
+              - New Systems Architecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview.md
               - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
               - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
               - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md

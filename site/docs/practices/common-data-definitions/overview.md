@@ -1,3 +1,9 @@
+---
+hide:
+- toc
+---
+
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
@@ -13,7 +19,7 @@ Typically, the common data definitions consist of:
 * Definitions of the valid data values for specific concepts and associated governance rules.
 * Preferred logical and physical data formats for storing data about these concepts.
 
-The common data definitions in open metadata are part of the *Subject Area Materials* and are grouped into [subject areas](/concepts/subject-area).  The core materials that cover the meaning of data are described in one or more [glossaries](/practices/common-data-definitions/anatomy-of-a-glossary).These are augmented by valid values, reference data and quality rules.
+The common data definitions in open metadata are part of the *Subject Area Materials* and are grouped into [subject areas](/concepts/subject-area).  The core materials that cover the meaning of data are described in one or more [glossaries](/practices/common-data-definitions/anatomy-of-a-glossary). These are augmented by [valid values](/practices/common-data-definitions/open-metadata-for-common-definitions), [reference data](/practices/common-data-definitions/open-metadata-for-common-definitions) and [quality rules](/practices/common-data-definitions/open-metadata-for-common-definitions).
 
 [Governance action classifications](/types/4/0422-Governance-Action-Classifications) may be added to these definitions which in turn link to governance requirements.   This determines how data that is linked to the subject area material should be governed.
 

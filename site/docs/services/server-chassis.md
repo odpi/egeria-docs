@@ -1,4 +1,15 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
---8<-- "docs/services/platform-chassis.md"
+--8<-- "snippets/content-status/in-development.md"
+
+## Server Chassis
+
+The server chassis provides the base for a Spring application that runs a single [OMAG Server](/concepts/omag-server) in a cloud native style.
+
+--8<-- "snippets/abbr.md"

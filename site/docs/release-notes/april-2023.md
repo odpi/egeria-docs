@@ -61,7 +61,7 @@ The NEW Egeria UI has been shipped as part of the v4 release package.
 
 ![EgeriaUIv4](new-ui-look.png)
 
->We are working on updating the documnetation and lab notebooks where UI is used. These updates and some additional usability improvements will go into the next Egeria release.
+>We are working on updating the documentation and lab notebooks where UI is used. These updates and some additional usability improvements will go into the next Egeria release.
 
 ## Cloud-native workgroup
 

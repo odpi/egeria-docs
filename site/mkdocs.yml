@@ -308,6 +308,7 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Monthly News:
+            - August 2023: release-notes/august-2023.md
             - April 2023: release-notes/april-2023.md
             - February 2023: release-notes/february-2023.md
             - January 2023: release-notes/january-2023.md

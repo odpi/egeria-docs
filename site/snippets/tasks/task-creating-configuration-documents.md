@@ -1,13 +1,13 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Creating configuration documents for the OMAG Server Platform
+### Creating configuration documents for the OMAG Server Platform
 
 The [OMAG Server Platform](/concepts/omag-server-platform) provides a software platform for running [OMAG Servers](/concepts/omag-server).
 
 Each OMAG Server supports selected open metadata and governance services based on its configuration.
 
-## What is a configuration document?
+#### What is a configuration document?
 
 A [configuration document](/concepts/configuration-document) defines the configuration properties for an OMAG server.  It includes the properties for an OMAG server including the services that it supports.
 
@@ -18,7 +18,7 @@ There is also a postman collection [omag-server-platform-tutorial.postman_collec
 This tutorial will also use `curl` commands to illustrate calls to the administration services as well as refer to the pre-canned calls in the postman collection.
 
 
-## Creating the configuration document
+#### Creating the configuration document
 
 Before there is a configuration document, requesting the server configuration creates and returns a default document.  The command is:
 
@@ -241,15 +241,15 @@ This has added the configuration for the local repository using default values. 
 
 The next command to configure the server is to enable the [Open Metadata Access Services (OMASs)](/services/omas).  These are specialized open metadata and governance services.  
 
-It is possible to activate each OMAS individually, but the the sake of this exercise we are going to activate them all using this command (request **5.** in Postman).
+It is possible to activate each OMAS individually, but for the sake of this exercise we are going to activate them all using this command (request **5.** in Postman).
 
 ```
 GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/access-services/no-topics
 ```
 
-The OMASs provide both REST APIs and notifications.  The `no-topics` part of the command turns off the notifications so we don't need to set up Apache Kafka for this exercise.
+The OMASs provide both REST APIs and notifications.  The `no-topics` part of the command turns off the notifications, so we don't need to set up Apache Kafka for this exercise.
 
-The final command requests that an [Open Metadata Archive](/concepts/open-metadata-archive) is loaded to provide some sample metadata.  The name of the open metadata archive file (`content-packs/SimpleDataCatalog.json`) is sent in the request body.
+The final command requests that an [Open Metadata Archive](/concepts/open-metadata-archive) is loaded to provide some sample metadata.  The name of the open metadata archive file (`content-packs/SimpleCatalog.json`) is sent in the request body.
 
 ```
 GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/open-metadata-archives/file
@@ -627,7 +627,7 @@ When the configuration is next queried (this is request **2.** in Postman), the 
         {
           "class": "Connection",
           "headerVersion": 0,
-          "displayName": "Open Metadata Archive File content-packs/SimpleDataCatalog.json Connection",
+          "displayName": "Open Metadata Archive File content-packs/SimpleCatalog.json Connection",
           "connectorType": {
             "class": "ConnectorType",
             "headerVersion": 0,
@@ -653,7 +653,7 @@ When the configuration is next queried (this is request **2.** in Postman), the 
           "endpoint": {
             "class": "Endpoint",
             "headerVersion": 0,
-            "address": "content-packs/SimpleDataCatalog.json"
+            "address": "content-packs/SimpleCatalog.json"
           }
         }
       ],
@@ -813,17 +813,11 @@ When the configuration is next queried (this is request **2.** in Postman), the 
 }
 ```
 
-You have probably noticed how quickly the configuration document grew into a complex structure. The commands you used made use of all of the configuration default values. There are other commands that enable you to customize the configuration document to
+You have probably noticed how quickly the configuration document grew into a complex structure. The commands you used made use of all the configuration default values. There are other commands that enable you to customize the configuration document to
 adapt it to specific environment.  However, the defaults provide a good starting point.
 
 !!! education "Further reading"
-    The contents of this tutorial cover a very simple OMAG server configuration. For guidance on configuring more complex OMAG servers see the [Administration Services User Guide](/guides/admin)
-
-
-
-## Next steps
-
-Next, this tutorial covers how to [stop the OMAG Server](/education/tutorials/omag-server-tutorial/task-stopping-omag-server).
+    The contents of this tutorial cover a very simple OMAG server configuration. For guidance on configuring more complex OMAG servers see the [Administration Services User Guide](/guides/admin).
 
 
 --8<-- "snippets/abbr.md"

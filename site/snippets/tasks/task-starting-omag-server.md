@@ -1,10 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Activating OMAG servers in the OMAG server platform
+### Activating OMAG servers in the OMAG Server Platform
 
-Once you have [created a configuration document for an OMAG server](task-creating-configuration-documents.md)
-it is started in the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is request **7.** in Postman).
+Once you have created a configuration document for an OMAG server, it is started in the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is request **7.** in Postman).
 
 ```
 POST https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platformservers/myMetadataServer/instance
@@ -20,8 +19,7 @@ The response from the command lists the subsystems that have been activated in t
 }
 ```
 
-The window where your OMAG Server Platform is running will show the start-up
-audit log messages, something like this:
+The window where your OMAG Server Platform is running will show the start-up audit log messages, something like this:
 
 ```text
  Project Egeria - Open Metadata and Governance
@@ -190,10 +188,7 @@ Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0015 The listen
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAG-ADMIN-0004 The myMetadataServer server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services, Open Metadata Store Services, Open Integration Service, Data Manager OMAS, Subject Area OMAS, Glossary View OMAS, Design Model OMAS, Security Officer OMAS, Asset Manager OMAS, IT Infrastructure OMAS, Data Science OMAS, Community Profile OMAS, Data Engine OMAS, Discovery Engine OMAS, Digital Architecture OMAS, Asset Owner OMAS, Stewardship Action OMAS, Governance Program OMAS, Digital Service OMAS, Asset Lineage OMAS, Asset Consumer OMAS, Asset Catalog OMAS, DevOps OMAS, Software Developer OMAS, Project Management OMAS, Governance Engine OMAS, Data Privacy OMAS, Security Manager OMAS]
 ```
 
-THe start-up messages show the [open metadata types](/types) being loaded, followed by the open metadata archive `content-packs/SimpleDataCatalog.json`.  Then the local repository is initialized and finally the OMASs are started.
+The start-up messages show the [open metadata types](/types) being loaded, followed by the open metadata archive `content-packs/SimpleCatalog.json`.  Then the local repository is initialized and finally the OMASs are started.
 
-## Next steps
-
-Now the OMAG Server is running you are ready to start  [calling the open metadata and governance services](task-calling-omag-apis.md).
 
 

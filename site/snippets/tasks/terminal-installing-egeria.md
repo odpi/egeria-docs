@@ -17,7 +17,7 @@ The distribution tar file is `{release}-distribution.tar.gz` or `egeria-platform
 egeria-platform-4.3-distribution.tar.gz
 ```
 
-Create a directory for the install and copy the tar file into it. The two commands shown below create an install directory in your home directory and then copies the egeria distribution file into it.
+Create a directory for Egeria and copy the tar file into it. The two commands shown below creates a directory in your home directory and then copies the egeria distribution file into it.
 
 ```bash
 mkdir ~/egeria-install

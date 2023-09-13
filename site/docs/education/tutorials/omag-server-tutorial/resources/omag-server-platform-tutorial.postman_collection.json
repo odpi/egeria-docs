@@ -3,7 +3,8 @@
 		"_postman_id": "e45edfe1-cfa1-4423-807f-11d34701da47",
 		"name": "omag-server-platform-tutorial",
 		"description": "This postman collection covers the exercises described in the ODPi Egeria tutorial about the [OMAG Server Platform](https://egeria.odpi.org/open-metadata-resources/open-metadata-tutorials/omag-server-tutorial/)",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28623075"
 	},
 	"item": [
 		{
@@ -151,7 +152,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "content-packs/SimpleDataCatalog.json",
+					"raw": "content-packs/SimpleCatalog.json",
 					"options": {
 						"raw": {
 							"language": "text"

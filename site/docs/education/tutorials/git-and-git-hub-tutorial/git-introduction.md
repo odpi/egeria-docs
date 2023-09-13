@@ -11,4 +11,3 @@ Git is an open source version control system.  The Egeria project uses git to:
 
 As a result, it gives us a definitive source for the latest and greatest source code for Egeria itself, its history, and the rationale behind various decisions that are made over time.
 
----8<-- "snippets/abbr.md"

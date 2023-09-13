@@ -4,7 +4,69 @@
 # Docker tutorial
 
 **Docker** is a [simple container runtime and standard](https://www.docker.com/why-docker).
-Every day, the egeria build processing creates a docker image of egeria and pushes it to the docker catalog on the **Docker website**.
+
+Every time the egeria Pull Request (PR) build runs, it creates a **latest** docker image of egeria based on the latest content of the `main` branch of [egeria.git](https://github.com/odpi/egeria) and pushes it to the docker catalog on the [Docker website](https://hub.docker.com/r/odpi/egeria).  The site also contains docker images for each official release of egeria.  
+
+Alternatively, you can build a customized docker image of egeria, that includes or excludes the connectors and services that you need.
+
+This page takes you through the different options for building and running egeria using docker containers.
+
+## Building your own docker image
+
+When you [build the main egeria repository](/docs/education/tutorials/building-egeria-tutorial/overview) a new `build` directory is created under `open-metadata-distribution/omag-server-platform`.
+
+Open up this directory and you will see two directories of interest:
+
+* *distributions* contains the packaged "assembly" of the [OMAG Server Platform](/concepts/omag-server-platform).
+* *unpacked* contains the same content as the "assembly" but it is not packaged into a tar file.
+
+Take a copy of the "assembly" from either directory:
+
+* Copy and unpack the tar file or
+* Copy all the files under `unpacked`
+
+Change into the assembly's top-level directory.  When you list the contents
+
+```bash
+$ ls
+Dockerfile      LICENSE         NOTICE          README.md       assembly      dist
+```
+
+Run the docker command:
+
+```bash
+docker build -t egeria-platform:{myversion} -f Dockerfile .
+```
+replacing `{myversion}` with a tag name for this docker image.  The example below used `latest` as the tag name.
+
+```bash
+? docker build -t egeria-platform:latest -f Dockerfile .
+[+] Building 44.9s (5/5) FINISHED                                                                                                                                                                                                                                                              docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                                                                                                                                                                                                           0.0s
+ => => transferring dockerfile: 3.28kB                                                                                                                                                                                                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                                                                                                              0.0s
+ => => transferring context: 2B                                                                                                                                                                                                                                                                                0.0s
+ => [internal] load metadata for registry.access.redhat.com/ubi9/openjdk-17:latest                                                                                                                                                                                                                             1.5s
+ => [1/1] FROM registry.access.redhat.com/ubi9/openjdk-17@sha256:3eded7b50a5ff8a55895c7b70c9dfc6e320363e5812a68747f281f8f4bb323ac                                                                                                                                                                             43.3s
+ => => resolve registry.access.redhat.com/ubi9/openjdk-17@sha256:3eded7b50a5ff8a55895c7b70c9dfc6e320363e5812a68747f281f8f4bb323ac                                                                                                                                                                              0.0s
+ => => sha256:5cbda490fcb7ab72e85cfba7098858cd3ed6bb15f95687e86979f6d4ac7b2f15 596B / 596B                                                                                                                                                                                                                     0.0s
+ => => sha256:5b5deb1288720666a590472d9a506500df9ebe3c817e9710327162ccd24c4e22 24.19kB / 24.19kB                                                                                                                                                                                                               0.0s
+ => => sha256:62742f27dce5ebff467a57ad6bfa680820f3bc534cc313627f8113246276bf0f 37.83MB / 37.83MB                                                                                                                                                                                                              17.9s
+ => => sha256:f008a4f4b21c818e8bbd4e2521eb30ab0f8a43dc259e9e51c0d134641e343acd 110.80MB / 110.80MB                                                                                                                                                                                                            37.5s
+ => => sha256:3eded7b50a5ff8a55895c7b70c9dfc6e320363e5812a68747f281f8f4bb323ac 1.47kB / 1.47kB                                                                                                                                                                                                                 0.0s
+ => => extracting sha256:62742f27dce5ebff467a57ad6bfa680820f3bc534cc313627f8113246276bf0f                                                                                                                                                                                                                      2.0s
+ => => extracting sha256:f008a4f4b21c818e8bbd4e2521eb30ab0f8a43dc259e9e51c0d134641e343acd                                                                                                                                                                                                                      5.5s
+ => exporting to image                                                                                                                                                                                                                                                                                         0.0s
+ => => exporting layers                                                                                                                                                                                                                                                                                        0.0s
+ => => writing image sha256:5a2c784ed7558dc625d109c04c8b5e78534b270a29d3011eb771fd01724c097f                                                                                                                                                                                                                   0.0s
+ => => naming to docker.io/library/egeria-platform:latest                                                                                                                                                                                                                                                      0.0s
+
+What's Next?
+  View summary of image vulnerabilities and recommendations → docker scout quickview
+
+```
+
+## Using the standard docker container on docker hub
 
 This docker image provides a simple way to bring a runnable version of Egeria onto your machine.  It also provides the basis for a [Kubernetes](/guides/operations/kubernetes) deployment of Egeria.
 

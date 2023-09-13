@@ -23,7 +23,7 @@ Although Egeria is shown above as a centralized solution, it is implemented as a
  
 Today's organizations have their tools and technologies distributed across multiple data centres and cloud providers (green clouds). Each of these locations may be managed by different groups and use different technologies.  This makes a centralized metadata solution impractical from both a funding and operational perspective.
 
-Using Egeria, each location runs a platform (blue boxes) that hosts the integration services tailored to specific types of tools (orange circles).
+Using Egeria, each location runs a [platform (blue boxes)](/concepts/omag_server_platform) that hosts [servers](/concepts/omag_server) (orange circles) that provide the synchronization services tailored to specific types of tools (grey boxes).
 
 ![Distributed operation](egeria-distributed-operation.svg)
 

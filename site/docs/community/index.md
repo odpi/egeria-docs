@@ -25,8 +25,12 @@ The Egeria project is highly appreciative of the organizations that support and 
 
 Egeria is pleased to announce integration with the following technologies:
 
+* Apache Atlas
 * Apache Kafka
+* Apache Hive (MetaStore)
 * PostgreSQL
+* Oracle Database
+* DB2
 * Files
 * OpenLineage
 * OpenAPISpecification

@@ -140,7 +140,7 @@ Paste this code between the curly braces of the `AssetCreate` class.
         System.out.println("Using userId: " + clientUserId);
         System.out.println();
 
-        HttpHelper.noStrictSSLIfConfigured();
+        HttpHelper.noStrictSSL();
 
         try
         {

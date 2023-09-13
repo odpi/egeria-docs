@@ -18,15 +18,22 @@ To run a metadata repository through the Repository Workbench, first configure a
 
     Send the repository workbench configuration as the request body, similar to the following:
 
-    ```json hl_lines="3"
+    ```json hl_lines="3-5"
     {
       "class": "RepositoryConformanceWorkbenchConfig",
       "tutRepositoryServerName": "myserver",
+      "testEntityTypes" : "Asset",
       "maxSearchResults": 5
     }    
     ```
 
-    The required `tutRepositoryServerName` parameter defines the name of the repository server you wish to test, while the optional `maxSearchResults` parameter controls the sizing of the tests: both the number of instances the tests will attempt to create to carry out its tests and how extensive the search-based tests are.
+    The required `tutRepositoryServerName` parameter defines the name of the repository server you wish to test, while the optional `maxSearchResults` parameter controls the sizing of the tests: both the number of instances the tests will attempt to create to carry out its tests and how extensive the search-based tests are.  The `testEntityTypes` is also optional and is used to restrict the types of the instances tested to:
+
+    * These listed entities and their super types.
+    * Any relationships that have the selected entity types at both ends.
+    * Any classifications that can be attached to the selected entity types.
+
+    If `testEntityTypes` is either an empty list or not set, then all known types from the technology under test is tested.
 
 !!! attention "Start the technology under test **after** the CTS server"
     This repository server to test (`myserver` in the example above) should be [configured and started](/guides/admin/configuring-a-metadata-access-store) **after** starting the CTS repository workbench instance. Once the CTS server instance is started it will wait for the technology under test (the server named by the `tutRepositoryServerName` parameter) to be up and running before then starting its suite of tests.

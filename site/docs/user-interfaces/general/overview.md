@@ -59,14 +59,39 @@ On first load, the glossary is only able to show a list of available glossaries 
 
 ![glossary](egeria-ui-glossary.png)
 
-When clicking the `Details` button in third column of the glossary table, the categories connected to this respective glossary will be loaded.
-The properties of these categories are displayed in the same way as the glossaries; their name and status are visible and another `Details` button is available.
+When clicking anywhere on the row of the glossary, the categories connected to this respective glossary will be loaded in the next table.
+The properties of these categories are displayed in the same way as the glossaries; their name and status are visible.
 
-![category](egeria-ui-category.png)
+![category](egeria-ui-glossary-categories.png)
 
-Clicking this `Details` button will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the data model, and its `Details` button will redirect to the same `asset details` page as from the asset catalog.
+Clicking a cateogry row in this table will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the data model, and clicking on one of these terms rows will redirect to the same `asset details` page as from the asset catalog.
 
-![terms](egeria-ui-terms.png)
+![terms](egeria-ui-glossary-terms.png)
+
+## Profile
+
+The profile page is accessible by clicking its icon on the bottom of the left navigation bar.
+
+![profile](egeria-ui-profile-icon.png)
+
+On the profile page it's possible to see information about the *scopes* your user account has and the *components* of the ui that are visible to your account. Above all that is the name of your account.
+
+![profile](egeria-ui-profile.png)
+
+## About
+
+Right below the profile page icon, in the left navigation bar, is the button that redirects to the about page.
+
+![about](egeria-ui-about-icon.png)
+
+The about page shows some useful information about the Egeria UI:
+
+- **Name**: The name of the Egeria UI package.
+- **Version**: The version of the Egeria UI.
+- **CommitId**: The commit id.
+- **BuildTime**: The date and time that this version of the Egeria UI has been built.
+
+![about](egeria-ui-about.png)
 
 ## Extended features
 

@@ -46,7 +46,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     Many of the contributors to the Egeria project use the *[IntelliJ IDEA](https://www.jetbrains.com/idea/)* IDE.  Jetbrains offers a [free community edition of IntelliJ](https://www.jetbrains.com/idea/download/) which is sufficient to work with Egeria.  You are free to use any IDE during the dojo, however the instructions will focus on IntelliJ IDEA.
 
     ??? tip "Installing IntelliJ IDEA ..."
-        --8<-- "docs/education/tutorials/intellij-tutorial/task-installing-intellij.md"
+        --8<-- "snippets/tasks/task-installing-intellij.md"
       
     Congratulations, you are ready to begin.
 

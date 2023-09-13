@@ -199,16 +199,14 @@ nav:
       - Learning Overview: education/index.md
       - Tutorials:
             - Tutorials: education/tutorials/index.md
-            - Running Egeria:
-                - Downloading Egeria: education/tutorials/downloading-egeria-tutorial/overview.md
-                - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
-                - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
+            - Setting up Egeria: education/tutorials/building-egeria-tutorial/overview.md
             - Using Egeria:
                 - Open Metadata Labs: education/open-metadata-labs/overview.md
                 - Platform and Servers: education/tutorials/omag-server-tutorial/overview.md
-                - Reports and utilities: education/tutorials/omag-client-tutorial.md
+                - Reports and Utilities: education/tutorials/omag-client-tutorial.md
                 - Sample Clients: education/tutorials/running-samples-tutorial.md
             - Developing with Egeria:
+                - Setting up IntelliJ: education/tutorials/developer-intellij-tutorial/overview.md
                 - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
             - Tools:
                 - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md

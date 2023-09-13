@@ -10,8 +10,8 @@ Archives can be [added to the configuration document](/concepts/open-metadata-ar
 
 - Archives containing type definitions.
 - Archives containing instances for repositories that do not store the archive content but keep it in memory.
-Although, if an archive is loaded multiple times, its content is only added to the local repository
-if the repository does not have the content already.
+
+An archive may be loaded multiple times, however, its content is only added to the local repository if the repository does not have the content (or a later version) already.
 
 Archives can also be loaded to a running server using the following commands.
 
@@ -19,7 +19,7 @@ Typically, an open metadata archive is stored as JSON format in a file. To load 
 
 !!! post "POST - load file"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/instance/open-metadata-archives/file
+    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/servers/{{serverName}}/instance/open-metadata-archives/file
     ```
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
@@ -28,7 +28,7 @@ Alternatively it is possible to set up the list of open metadata archives as a l
 
 !!! post "POST - load from connection(s)"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/instance/open-metadata-archives/connection
+    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/servers/{{serverName}}/instance/open-metadata-archives/connection
     ```
 
     The body of the request should be the list of connections from which to load archives.

@@ -8,7 +8,7 @@ The [Jupyter project :material-dock-window:](https://jupyter.org){ target=jupyte
 
 ![Example Jupyter notebook from the hands-on labs](jupyter-notebook-browser-window.png)
 
---8<-- "docs/education/tutorials/jupyter-tutorial/task-installing-jupyter.md"
+--8<-- "snippets/tasks/task-installing-jupyter.md"
 
 
 --8<-- "snippets/abbr.md"

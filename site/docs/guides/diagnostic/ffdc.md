@@ -63,6 +63,80 @@ Details of the supported audit log store connectors and how to set them up are d
   
 - Exception objects containing stack traces never leave the OMAG Server Platform. The full exception is added to the Audit Log so the stack trace can be analysed by the platform team. Important diagnostic information - such as the exception type, message, system action and user action is captured in the REST response. If the calling program is an Egeria client, it recreates the exception (minus the stack trace of course) and throws it to its caller. That way, all information about the exception is preserved without compromising the security of the server platform.
 
+## Audit log record examples
+
+Below is an example of an audit log record formatted in JSON.  This is the style of output from Egeria's file-based and topic-based audit log destinations.  Notice it includes details of the originating server, component and thread.  The message description includes information about how to resolve an issue (if there is one to resolve).  The message parameters are the values from the runtime that are inserted into the message.  They are provided to allow translated messages to be produced for non-English speakers.
+
+```json
+{
+    "guid": "f150879d-f807-47ae-a7e6-5d48118044a5",
+    "timeStamp": 1689528452722,
+    "originatorProperties": {
+        "organizationName": null,
+        "serverType": "Open Metadata and Governance Server",
+        "serverName": "atlasexchange"
+    },
+    "originatorComponent": {
+        "componentId": 659,
+        "componentDevelopmentStatus": "IN_DEVELOPMENT",
+        "componentName": "Egeria:IntegrationConnector:Catalog:ApacheAtlas:3ab99700-7750-4eca-8670-55b6f21bda14",
+        "componentDescription": "Connector publishes active glossary terms to Apache Atlas.",
+        "componentWikiURL": "https://egeria-project.org/connectors/integration/apache-atlas-integration-connector/"
+    },
+    "actionDescription": "processAtlasGlossaryTerm",
+    "threadId": 185,
+    "threadName": "atlasexchange::IntegrationDaemonThread",
+    "severityCode": 5,
+    "severity": "Error",
+    "messageId": "APACHE-ATLAS-INTEGRATION-CONNECTOR-0015",
+    "messageText": "The open metadata glossary term 52ca009f-0fa6-495e-b760-2a5b33f7281f for equivalent Apache Atlas glossary term custName has been unilaterally deleted; connector AtlasIntegrator is putting it back",
+    "messageParameters": [
+        "52ca009f-0fa6-495e-b760-2a5b33f7281f",
+        "custName",
+        "AtlasIntegrator"
+    ],
+    "systemAction": "The open metadata glossary term can not be retrieved.  This glossary term is owned by Apache Atlas.  The connector is creating a new copy of the Apache Atlas glossary term in the open metadata ecosystem.",
+    "userAction": "Open metadata glossary terms that are copies from Apache Atlas should not be unilaterally removed.  Investigate why this element is missing from the open metadata ecosystem and make changes so it can not happen again."
+}
+```
+
+This next example shows an *Exception* message.  Typically, these are produced (rather than an "Error" audit log record) when the cause and resolution is unknown, and so some expert diagnotics work may be needed to resolve the issue.  It includes information of the exception and the stack trace.
+```json
+{
+    "guid": "fa564cc3-699d-4c52-afdf-db4f578baf9e",
+    "timeStamp": 1689539792943,
+    "originatorProperties": {
+        "organizationName": null,
+        "serverType": "Open Metadata and Governance Server",
+        "serverName": "atlasexchange"
+    },
+    "originatorComponent": {
+        "componentId": 659,
+        "componentDevelopmentStatus": "IN_DEVELOPMENT",
+        "componentName": "Egeria:IntegrationConnector:Catalog:ApacheAtlas:3ab99700-7750-4eca-8670-55b6f21bda14",
+        "componentDescription": "Connector publishes active glossary terms to Apache Atlas.",
+        "componentWikiURL": "https://egeria-project.org/connectors/integration/apache-atlas-integration-connector/"
+    },
+    "actionDescription": "saveAtlasGlossaryCategory(glossaryGUID)",
+    "threadId": 297,
+    "threadName": "OpenMetadataTopicListener: egeria.omag.server.cocoMDS1.omas.assetmanager.outTopic",
+    "severityCode": 6,
+    "severity": "Exception",
+    "messageId": "APACHE-ATLAS-INTEGRATION-CONNECTOR-0031",
+    "messageText": "A client-side exception was received from API call saveAtlasGlossaryCategory(glossaryGUID) to server Apache Atlas at https://cocopharmaceuticals.com:21000.  The error message was CLIENT-SIDE-REST-API-CONNECTOR-503-002 A client-side exception org.springframework.web.client.HttpClientErrorException$Conflict was received by method saveAtlasGlossaryCategory(glossaryGUID) from API call https://cocopharmaceuticals.com:21000/api/atlas/v2/glossary/category/{0} to server Apache Atlas on platform https://cocopharmaceuticals.com:21000.  The error message was 409 Conflict: \"{\"errorCode\":\"ATLAS-409-00-00A\",\"errorMessage\":\"Glossary category with qualifiedName Payment Method.Payment Method@Cloud Information Model (CIM) already exists\"}\"",
+    "messageParameters": [
+        "saveAtlasGlossaryCategory(glossaryGUID)",
+        "Apache Atlas",
+        "https://cocopharmaceuticals.com:21000",
+        "CLIENT-SIDE-REST-API-CONNECTOR-503-002 A client-side exception org.springframework.web.client.HttpClientErrorException$Conflict was received by method saveAtlasGlossaryCategory(glossaryGUID) from API call https://cocopharmaceuticals.com:21000/api/atlas/v2/glossary/category/{0} to server Apache Atlas on platform https://cocopharmaceuticals.com:21000.  The error message was 409 Conflict: \"{\"errorCode\":\"ATLAS-409-00-00A\",\"errorMessage\":\"Glossary category with qualifiedName Payment Method.Payment Method@Cloud Information Model (CIM) already exists\"}\""
+    ],
+    "systemAction": "The server has issued a call to the open metadata access service REST API in a remote server and has received an exception from the local client libraries.",
+    "userAction": "Look for errors in the local server's console to understand and correct the source of the error.",
+    "exceptionClassName": "org.odpi.openmetadata.adapters.connectors.restclients.ffdc.exceptions.RESTServerException",
+    "exceptionMessage": "CLIENT-SIDE-REST-API-CONNECTOR-503-002 A client-side exception org.springframework.web.client.HttpClientErrorException$Conflict was received by method saveAtlasGlossaryCategory(glossaryGUID) from API call https://cocopharmaceuticals.com:21000/api/atlas/v2/glossary/category/{0} to server Apache Atlas on platform https://cocopharmaceuticals.com:21000.  The error message was 409 Conflict: \"{\"errorCode\":\"ATLAS-409-00-00A\",\"errorMessage\":\"Glossary category with qualifiedName Payment Method.Payment Method@Cloud Information Model (CIM) already exists\"}\"",
+    "exceptionStackTrace": "RESTServerException{reportedHTTPCode=503, reportingClassName='org.odpi.openmetadata.adapters.connectors.restclients.spring.SpringRESTClientConnector', reportingActionDescription='saveAtlasGlossaryCategory(glossaryGUID)', errorMessage='CLIENT-SIDE-REST-API-CONNECTOR-503-002 A client-side exception org.springframework.web.client.HttpClientErrorException$Conflict was received by method saveAtlasGlossaryCategory(glossaryGUID) from API call https://cocopharmaceuticals.com:21000/api/atlas/v2/glossary/category/{0} to server Apache Atlas on platform https://cocopharmaceuticals.com:21000.  The error message was 409 Conflict: \"{\"errorCode\":\"ATLAS-409-00-00A\",\"errorMessage\":\"Glossary category with qualifiedName Payment Method.Payment Method@Cloud Information Model (CIM) already exists\"}\"', reportedSystemAction='The client has issued a call to the open metadata access service REST API in a remote server and has received an exception from the local client libraries.', reportedUserAction='Review the error message to determine the cause of the error.  Check that the server is running an the URL is correct. Look for errors in the local server's console to understand and correct the cause of the error. Then rerun the request', reportedCaughtException=org.springframework.web.client.HttpClientErrorException$Conflict: 409 Conflict: \"{\"errorCode\":\"ATLAS-409-00-00A\",\"errorMessage\":\"Glossary category with qualifiedName Payment Method.Payment Method@Cloud Information Model (CIM) already exists\"}\"}\n\tat org.odpi.openmetadata.adapters.connectors.restclients.spring.SpringRESTClientConnector.callPutRESTCall(SpringRESTClientConnector.java:568)\n\tat org.odpi.openmetadata.adapters.connectors.integration.apacheatlas.ApacheAtlasRESTClient.callPutRESTCall(ApacheAtlasRESTClient.java:610)\n\tat org.odpi.openmetadata.adapters.connectors.integration.apacheatlas.ApacheAtlasRESTClient.saveAtlasGlossaryCategory(ApacheAtlasRESTClient.java:343)\n\tat org.odpi.openmetadata.adapters.connectors.integration.apacheatlas.ApacheAtlasIntegrationConnector.refreshEgeriaGlossaryCategoryInAtlas(ApacheAtlasIntegrationConnector.java:1585)\n\tat org.odpi.openmetadata.adapters.connectors.integration.apacheatlas.ApacheAtlasIntegrationConnector.processEgeriaGlossaryCategory(ApacheAtlasIntegrationConnector.java:946)\n\tat org.odpi.openmetadata.adapters.connectors.integration.apacheatlas.ApacheAtlasIntegrationConnector.processEvent(ApacheAtlasIntegrationConnector.java:407)\n\tat org.odpi.openmetadata.accessservices.assetmanager.connectors.outtopic.AssetManagerOutTopicClientConnector.processEvent(AssetManagerOutTopicClientConnector.java:75)\n\tat org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic.OpenMetadataTopicConnector.distributeEvent(OpenMetadataTopicConnector.java:163)\n\tat org.odpi.openmetadata.repositoryservices.connectors.openmetadatatopic.OpenMetadataTopicConnector.run(OpenMetadataTopicConnector.java:121)\n\tat java.base/java.lang.Thread.run(Thread.java:833)\nCaused by: org.springframework.web.client.HttpClientErrorException$Conflict: 409 Conflict: \"{\"errorCode\":\"ATLAS-409-00-00A\",\"errorMessage\":\"Glossary category with qualifiedName Payment Method.Payment Method@Cloud Information Model (CIM) already exists\"}\"\n\tat org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:121)\n\tat org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:183)\n\tat org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:137)\n\tat org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)\n\tat org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:915)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:864)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)\n\tat org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)\n\tat org.odpi.openmetadata.adapters.connectors.restclients.spring.SpringRESTClientConnector.callPutRESTCall(SpringRESTClientConnector.java:533)\n\t... 9 more\n"
+}
+```
 
 ## Exceptions
 

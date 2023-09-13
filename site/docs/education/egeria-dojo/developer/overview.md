@@ -34,17 +34,17 @@ This dojo was last tested using Egeria release 3.14.
     Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 17 SDK installed on your machine.
     
     ??? tip "Installing Java ..."
-        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
+        --8<-- "snippets/tasks/task-installing-java.md"
 
-    You will need to build Egeria's source which needs Apache Maven installed.
+    You will need to build your code which needs Apache Maven installed.
     
     ??? tip "Installing Apache Maven ..."
-        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
+        --8<-- "snippets/tasks/task-installing-maven.md"
 
     During the dojo you will running Apache Kafka to experiment with event notifications.
     
     ??? tip "Installing Apache Kafka ..."
-        --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
+        --8<-- "snippets/tasks/task-installing-kafka.md"
 
     Egeria's source is on Github ...
 
@@ -58,7 +58,7 @@ This dojo was last tested using Egeria release 3.14.
     - https://github.com/odpi/egeria-dev-projects
 
     ??? tip "Downloading (cloning) Egeria's git repositories ..."
-        --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+        --8<-- "snippets/tasks/task-cloning-egeria-source.md"
 
     These next steps build the Egeria platform and then install it ready for the dojo.
     
@@ -94,11 +94,10 @@ This dojo was last tested using Egeria release 3.14.
         ```bash
         ./gradlew build
         ```
-
         After about 15 minutes you will see the **BUILD SUCCESSFUL** message.
 
     ??? tip "Installing Egeria's core libraries (15 mins)"
-        --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
+        --8<-- "snippets/tasks/terminal-installing-egeria.md"
     
     There is a template git repository that contains a set of projects to support you as you work through the developer dojo exercises.
 
@@ -123,22 +122,11 @@ This dojo was last tested using Egeria release 3.14.
         In this dojo, you will have an opportunity to build and run Java utilities and connectors.  However before you get to the coding, you will spend some time setting up your development and test environment.
 
     ??? beginner "Setting up your Test environment (30 mins)"
-    
-        The `egeria-dev-projects.git` repository contains the utilities to support your Egeria test environment. This was one of the git repositories that you cloned in the prerequisite tasks.  
-        
-        Open the `egeria-dev-projects.git` repository in a **new window** in IntelliJ.
-        
-        ??? beginner "Get the latest code for `egeria-dev-projects.git` ..."
-            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
-            Use the `git pull` command to get the latest code onto your machine.
 
-        Now build the `egeria-dev-projects` code ...
-        
-        ??? beginner "Building egeria-dev-projects.git in IntelliJ IDEA ..."
-            --8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-dev-projects-git.md"
+        Egeria's services run in the [OMAG Server Platform](/concepts/omag-server-platform){ target=dojo-support }.  The jar file for the OMAG Server Platform was built by the `egeria.git` build.  It is located in the `platform` directory of your Egeria install and is called `omag-server-platform-{{release}}.jar`.  You will need an easy way to start and stop the OMAG Server Platform.   This is done with an IntelliJ *Configuration*.
+ 
+        Open your copy of the `egeria-dojo-developer.git` repository in a **new window** in IntelliJ.
 
-        Egeria's services run in the [OMAG Server Platform](/concepts/omag-server-platform){ target=dojo-support }.  The jar file for the OMAG Server Platform was built by the `egeria.git` build.  It is located in the `server` directory of your Egeria install and is called `server-chassis-spring-{{release}}.jar`.  You will need an easy way to start and stop the OMAG Server Platform.   This is done with an IntelliJ *Configuration*.
-        
         ??? beginner "Set up IntelliJ to run the OMAG Server Platform ..."
 
             ---8<-- "docs/education/egeria-dojo/developer/intellij-run-omag-server-platform.md"
@@ -173,11 +161,11 @@ This dojo was last tested using Egeria release 3.14.
                     > Your development landscape adding the ServerOps utility calling EgeriaPlatform to start and stop servers.
 
             !!! education "Summary and further study"
-                From this exercise of the developer dojo, you should have an understanding of the behaviour of the Platform Operations Services and Administration Services.
+                From this exercise of the developer dojo, you should have an understanding of the behaviour of the Platform Services and Administration Services.
                 
                 * `ServerConfig` is using the Administration Services to configure different types of OMAG Servers.
                 * `ServerOps` is using the Administration Services to start and stop named OMAG Servers.
-                * `EgeriaPlatformReport` is blending information from the platform's deployment with information about configured servers, known servers and active servers.  This information comes both from the Administration Services and Platform Operations Services.
+                * `EgeriaPlatformReport` is blending information from the platform's deployment with information about configured servers, known servers and active servers.  This information comes both from the Administration Services and Platform Services.
                 
                 The [`egeria-dev-projects`](https://github.com/odpi/egeria-dev-projects){ target=gh } utilities are designed to illustrate how to use these services and you may want to take time to review the code and make changes to explore new functions or customize them to your working environment.
                 
@@ -298,7 +286,7 @@ This dojo was last tested using Egeria release 3.14.
             
                 The maven build has created a jar file in the `target` directory of your IntelliJ project called  `event-logging-connector-3.12.jar`
                 
-                The release number used in the name is controlled by the `<version>3.12</version>` entry in your `pom.xml` file.  
+                The release number used in the name is controlled by the `<version>4.2</version>` entry in your `pom.xml` file.  
                 
                 From your `egeria-dojo3` IntelliJ project's terminal window enter the following to copy the connector's jar file into your egeria-install server lib directory, making adjustments for your connector's release as appropriate.
                 ```bash

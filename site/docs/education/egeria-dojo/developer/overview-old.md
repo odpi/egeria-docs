@@ -22,17 +22,17 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 17 SDK installed on your machine.
     
     ??? tip "Installing Java ..."
-        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
+        --8<-- "snippets/tasks/task-installing-java.md"
 
     You will need to build Egeria's source which needs Apache Maven installed.
     
     ??? tip "Installing Apache Maven ..."
-        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
+        --8<-- "snippets/tasks/task-installing-maven.md"
 
     During the dojo you will running Apache Kafka to experiment with event notifications.
     
     ??? tip "Installing Apache Kafka ..."
-        --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
+        --8<-- "snippets/tasks/task-installing-kafka.md"
 
     The dojo makes use of egeria libraries and code samples in the following git repositories and you will need a clone of them on your machine.
     
@@ -41,7 +41,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     - https://github.com/odpi/egeria-dev-projects
     
     ??? tip "Downloading (cloning) Egeria's git repositories ..."
-        --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+        --8<-- "snippets/tasks/task-cloning-egeria-source.md"
 
     Many of the contributors to the Egeria project use the *[IntelliJ IDEA](https://www.jetbrains.com/idea/)* IDE.  Jetbrains offers a [free community edition of IntelliJ](https://www.jetbrains.com/idea/download/) which is sufficient to work with Egeria.  You are free to use any IDE during the dojo, however the instructions will focus on IntelliJ IDEA.
 
@@ -75,7 +75,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         ??? beginner "Installing Egeria's core libraries (15 mins)"
             ### Installing Egeria
             --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
-            --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
+            --8<-- "snippets/tasks/terminal-installing-egeria.md"
 
     ??? beginner "Setting up your Test environment (30 mins)"
     
@@ -89,7 +89,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         ??? beginner "Building egeria-dev-projects.git in IntelliJ IDEA ..."
             --8<-- "docs/education/tutorials/intellij-tutorial/intellij-building-egeria-dev-projects-git.md"
 
-        Egeria's services run in the [OMAG Server Platform](/concepts/omag-server-platform).  The jar file for the OMAG Server Platform was built by the `egeria.git` build.  It is located in the `server` directory of your Egeria install and is called `server-chassis-spring-{{release}}.jar`.  You will need an easy way to start and stop the OMAG Server Platform.   This is done with an IntelliJ *Configuration*.
+        Egeria's services run in the [OMAG Server Platform](/concepts/omag-server-platform).  The jar file for the OMAG Server Platform was built by the `egeria.git` build.  It is located in the `platform` directory of your Egeria install and is called `omag-server-platform-{{release}}.jar`.  You will need an easy way to start and stop the OMAG Server Platform.   This is done with an IntelliJ *Configuration*.
         
         ??? beginner "Set up IntelliJ to run the OMAG Server Platform ..."
 
@@ -111,11 +111,11 @@ After completing developer day of the egeria dojo you should feel comfortable wi
                 ---8<-- "docs/education/egeria-dojo/developer/different-types-of-apis-server-running.md"
 
             !!! education "Summary and further study"
-                From this section of the developer dojo, you should have an understanding of the behaviour of the Platform Operations Services and Administration Services.
+                From this section of the developer dojo, you should have an understanding of the behaviour of the Platform Services and Administration Services.
                 
                 * `ServerConfig` is using the Administration Services to configure different types of OMAG Servers.
                 * `ServerOps` is using the Administration Services to start and stop named OMAG Servers.
-                * `EgeriaPlatformReport` is blending information from the platform's deployment with information about configured servers, known servers and active servers.  This information comes both from the Administration Services and Platform Operations Services.
+                * `EgeriaPlatformReport` is blending information from the platform's deployment with information about configured servers, known servers and active servers.  This information comes both from the Administration Services and Platform Services.
                 
                 The `egeria-dev-projects` utilities are designed to illustrate how to use these services and you may want to take time to review the code and make changes to explore new functions or customize them to your working environment.
                 

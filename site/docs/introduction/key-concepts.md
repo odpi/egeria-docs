@@ -1,9 +1,11 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Key concepts
+# Key concepts of the Egeria technology
 
-To further explain some key concepts of Egeria, let us delve deeper into the technology.
+The functions needed to support the [open metadata ecosystem](/introduction/challenge/#the-open-metadata-ecosystem) are complex and need to be organized so they can be understood and adapted over time as the needs of your organization changes and grows.  There is also an belief that it should be possible to dynamically activate and deactivate capability in the open metadata ecosystem through APIs allowing a self-service and local ownership approach to be adopted.  This way, an organization does not need a large IT team to manage the deployment.
+
+The organization of the components requires some new terminology to be introduced to lable the different types of components, their purpose and how they connect together.  The [overview](/introduction/overview) introduced the concept of the [OMAG Server Platform](/concepts/omag-server-platform) deployed multiple types in different processing centres and running [OMAG Servers](/concepts/omag-server).  These OMAG Servers are specialized to perform specific functions. Figure 1 shows the different types of OMAG Servers and how they work together.
 
 ![Figure 1](egeria-solution-components.svg)
 > **Figure 1:** This picture shows the different types of Egeria's OMAG servers and how they are connected together in a solution.  They are not all required. You choose which ones you need, and how many of them to run, to match the needs of your organization.  The servers are organized into three rings.  In the inner-ring (labeled *Integrated Metadata*), a Metadata Access Server, Repository Proxy and Conformance Test Server are members of an *Open Metadata Repository Cohort*, or "cohort" for short, communicating via Egeria's peer-to-peer protocols. In the next ring out, called *Integrated Governance*, are the Governance Servers connected to the Metadata Access Server in order to access metadata in the open metadata ecosystem. In the outer ring, called *Governance Solution*, are the View Server and Presentation Server also connected to the Metadata Access Server.

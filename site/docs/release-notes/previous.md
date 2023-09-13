@@ -4,56 +4,61 @@
 
 # Earlier releases
 
+???+ info "Release 4.1 (May 2023)"
+    --8<-- "docs/release-notes/4-1.md"
+
 ???+ info "Release 4.0 (March 2023)"
     --8<-- "docs/release-notes/4-0.md"
 
-???+ info "Release 3.15 (January 2023)"
-    --8<-- "docs/release-notes/3-15.md"
+??? info "v3.x Releases"
 
-???+ info "Release 3.14 (December 2022)"
-    --8<-- "docs/release-notes/3-14.md"
-
-???+ info "Release 3.13 (November 2022)"
-    --8<-- "docs/release-notes/3-13.md"
-
-??? info "Release 3.12 (October 2022)"
-    --8<-- "docs/release-notes/3-12.md"
-
-??? info "Release 3.11 (September 2022)"
-    --8<-- "docs/release-notes/3-11.md"
-
-??? info "Release 3.10 (July 2022)"
-    --8<-- "docs/release-notes/3-10.md"
-
-??? info "Release 3.9 (June 2022)"
-    --8<-- "docs/release-notes/3-9.md"
-
-??? info "Release 3.8 (May 2022)"
-    --8<-- "docs/release-notes/3-8.md"
-
-??? info "Release 3.7 (April 2022)"
-    --8<-- "docs/release-notes/3-7.md"
-
-??? info "Release 3.6 (March 2022)"
-    --8<-- "docs/release-notes/3-6.md"
-
-??? info "Release Release 3.5 (February 2022)"
-    --8<-- "docs/release-notes/3-5.md"
-
-??? info "Release 3.4 (December 2021)"
-    --8<-- "docs/release-notes/3-4.md"
-
-??? info "Release 3.3 (November 2021)"
-    --8<-- "docs/release-notes/3-3.md"
-
-??? info "Release 3.2 (October 2021)"
-    --8<-- "docs/release-notes/3-2.md"
-
-??? info "Release 3.1 (September 2021)"
-    --8<-- "docs/release-notes/3-1.md"
-
-??? info "Release 3.0 (August 2021)"
-    --8<-- "docs/release-notes/3-0.md"
+    ???+ info "Release 3.15 (January 2023)"
+        --8<-- "docs/release-notes/3-15.md"
+    
+    ???+ info "Release 3.14 (December 2022)"
+        --8<-- "docs/release-notes/3-14.md"
+    
+    ???+ info "Release 3.13 (November 2022)"
+        --8<-- "docs/release-notes/3-13.md"
+    
+    ??? info "Release 3.12 (October 2022)"
+        --8<-- "docs/release-notes/3-12.md"
+    
+    ??? info "Release 3.11 (September 2022)"
+        --8<-- "docs/release-notes/3-11.md"
+    
+    ??? info "Release 3.10 (July 2022)"
+        --8<-- "docs/release-notes/3-10.md"
+    
+    ??? info "Release 3.9 (June 2022)"
+        --8<-- "docs/release-notes/3-9.md"
+    
+    ??? info "Release 3.8 (May 2022)"
+        --8<-- "docs/release-notes/3-8.md"
+    
+    ??? info "Release 3.7 (April 2022)"
+        --8<-- "docs/release-notes/3-7.md"
+    
+    ??? info "Release 3.6 (March 2022)"
+        --8<-- "docs/release-notes/3-6.md"
+    
+    ??? info "Release Release 3.5 (February 2022)"
+        --8<-- "docs/release-notes/3-5.md"
+    
+    ??? info "Release 3.4 (December 2021)"
+        --8<-- "docs/release-notes/3-4.md"
+    
+    ??? info "Release 3.3 (November 2021)"
+        --8<-- "docs/release-notes/3-3.md"
+    
+    ??? info "Release 3.2 (October 2021)"
+        --8<-- "docs/release-notes/3-2.md"
+    
+    ??? info "Release 3.1 (September 2021)"
+        --8<-- "docs/release-notes/3-1.md"
+    
+    ??? info "Release 3.0 (August 2021)"
+        --8<-- "docs/release-notes/3-0.md"
 
 ??? info "v2.x Releases"
 

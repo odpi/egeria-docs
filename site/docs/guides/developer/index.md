@@ -64,7 +64,7 @@ For example, the code below sets up the descriptive properties of the server.
 !!! education "Further information"
     
     - [Administration Services](/services/admin-services/overview) for both configuring the OMAG Server Platform and OMAG Servers as well as starting and stopping them.
-    - [Platform Operation Services](/services/platform-services/overview) for querying the status of the platform.
+    - [Platform Services](/services/platform-services/overview) for querying the status of the platform.
     - [Egeria's Javadoc](https://odpi.github.io/egeria/index.html).
   
 
@@ -321,7 +321,7 @@ dependencies
 ```
 ## Minimise chance for duplicate contents
 
-This is primarily a concern for building connectors, or other components that run within the Egeria server chassis. In this environment we already have a lot of Egeria code on the classpath so ideally we want to only add what's needed, not duplicate what is already there.
+This is primarily a concern for building connectors, or other components that run within the OMAG Server Platform. In this environment we already have a lot of Egeria code on the classpath so ideally we want to only add what's needed, not duplicate what is already there.
 
 This is to get a balance of:
 
@@ -337,8 +337,8 @@ Some terms that you may hear of
 To achieve a sensible balance what we actually want is to:
 
  - include your code
- - omit anything already in the server chassis
- - add in other dependencies
+ - omit anything already in the platform
+ - add in other dependencies that your code calls
 
 To do this, you will often want to build a jar with dependencies, but with care taken over use of 'scope'. Often this will mean Egeria dependencies will be `compileOnly` or `testCompileOnly` (The equivalent in maven is 'provided').
 
@@ -349,7 +349,8 @@ Careful scoping combined with maintaining currency, minimizes this risk.
 Other techniques to avoid this issue include:
 
 - Using sharding to rename classes
-- Using a dedicated class loader (this requires framework place, and not supported by Egeria at this time)
+- Using a dedicated class loader (this requires framework place, and not supported by Egeria at this time).
+
 ### Example build.gradle fragment
 ```
      compileOnly "org.odpi.egeria:open-connector-framework"

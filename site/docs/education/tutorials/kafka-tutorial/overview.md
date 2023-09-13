@@ -5,9 +5,9 @@
 
 [Apache Kafka :material-dock-window:](https://kafka.apache.org){ target=kafka } is an event bus that may be used to pass events between different Egeria servers.
 
---8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
---8<-- "docs/education/tutorials/kafka-tutorial/task-starting-kafka.md"
---8<-- "docs/education/tutorials/kafka-tutorial/task-stopping-kafka.md"
+--8<-- "snippets/tasks/task-installing-kafka.md"
+--8<-- "snippets/tasks/task-starting-kafka.md"
+--8<-- "snippets/tasks/task-stopping-kafka.md"
 
 
 --8<-- "snippets/abbr.md"

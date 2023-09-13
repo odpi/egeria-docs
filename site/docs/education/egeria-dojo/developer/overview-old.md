@@ -22,17 +22,17 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     Egeria's interfaces are written in Java.  It is expected that you have basic Java skills and have the Java 17 SDK installed on your machine.
     
     ??? tip "Installing Java ..."
-        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
+        --8<-- "snippets/tasks/task-installing-java.md"
 
     You will need to build Egeria's source which needs Apache Maven installed.
     
     ??? tip "Installing Apache Maven ..."
-        --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
+        --8<-- "snippets/tasks/task-installing-maven.md"
 
     During the dojo you will running Apache Kafka to experiment with event notifications.
     
     ??? tip "Installing Apache Kafka ..."
-        --8<-- "docs/education/tutorials/kafka-tutorial/task-installing-kafka.md"
+        --8<-- "snippets/tasks/task-installing-kafka.md"
 
     The dojo makes use of egeria libraries and code samples in the following git repositories and you will need a clone of them on your machine.
     
@@ -41,7 +41,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
     - https://github.com/odpi/egeria-dev-projects
     
     ??? tip "Downloading (cloning) Egeria's git repositories ..."
-        --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+        --8<-- "snippets/tasks/task-cloning-egeria-source.md"
 
     Many of the contributors to the Egeria project use the *[IntelliJ IDEA](https://www.jetbrains.com/idea/)* IDE.  Jetbrains offers a [free community edition of IntelliJ](https://www.jetbrains.com/idea/download/) which is sufficient to work with Egeria.  You are free to use any IDE during the dojo, however the instructions will focus on IntelliJ IDEA.
 
@@ -75,7 +75,7 @@ After completing developer day of the egeria dojo you should feel comfortable wi
         ??? beginner "Installing Egeria's core libraries (15 mins)"
             ### Installing Egeria
             --8<-- "docs/education/tutorials/intellij-tutorial/intellij-open-terminal.md"
-            --8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
+            --8<-- "snippets/tasks/terminal-installing-egeria.md"
 
     ??? beginner "Setting up your Test environment (30 mins)"
     

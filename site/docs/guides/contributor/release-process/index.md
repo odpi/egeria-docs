@@ -12,8 +12,7 @@ Releases are published to:
 
 ### Overall release policy
 
-- Aim to release the core Egeria approximately every month
-- Typically, we target end of month for external availability
+- Aim to release the core Egeria approximately every six weeks [see schedule](/release-notes/overview#core-egeria-function).
 - Will only release an update between releases in exceptional circumstances
 - Preserves backwards compatibility as much as possible
 - Try and maintain a regular heartbeat: even if completion of some features continues in a subsequent release

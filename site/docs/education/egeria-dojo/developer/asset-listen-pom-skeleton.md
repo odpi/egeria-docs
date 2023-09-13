@@ -36,7 +36,7 @@ Paste this structure into your `pom.xml` class.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Versions of Egeria libraries -->
-        <open-metadata.version>3.12</open-metadata.version>
+        <open-metadata.version>4.2</open-metadata.version>
 
         <!-- Versions of dependent libraries -->
         <logback.version>1.2.10</logback.version>
@@ -47,7 +47,25 @@ Paste this structure into your `pom.xml` class.
 
         <dependency>
             <groupId>org.odpi.egeria</groupId>
+            <artifactId>audit-log-framework</artifactId>
+            <version>${open-metadata.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.odpi.egeria</groupId>
             <artifactId>open-connector-framework</artifactId>
+            <version>${open-metadata.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.odpi.egeria</groupId>
+            <artifactId>ocf-metadata-client</artifactId>
+            <version>${open-metadata.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.odpi.egeria</groupId>
+            <artifactId>ocf-metadata-api</artifactId>
             <version>${open-metadata.version}</version>
         </dependency>
 
@@ -78,6 +96,12 @@ Paste this structure into your `pom.xml` class.
         <dependency>
             <groupId>org.odpi.egeria</groupId>
             <artifactId>csv-file-connector</artifactId>
+            <version>${open-metadata.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.odpi.egeria</groupId>
+            <artifactId>basic-file-connector</artifactId>
             <version>${open-metadata.version}</version>
         </dependency>
 

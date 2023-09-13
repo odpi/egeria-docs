@@ -197,6 +197,33 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - Learning:
       - Learning Overview: education/index.md
+      - Tutorials:
+            - Tutorials: education/tutorials/index.md
+            - Running Egeria:
+                - Downloading Egeria: education/tutorials/downloading-egeria-tutorial/overview.md
+                - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
+                - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
+            - Using Egeria:
+                - Open Metadata Labs: education/open-metadata-labs/overview.md
+                - Platform and Servers: education/tutorials/omag-server-tutorial/overview.md
+                - Reports and utilities: education/tutorials/omag-client-tutorial.md
+                - Sample Clients: education/tutorials/running-samples-tutorial.md
+            - Developing with Egeria:
+                - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
+            - Contributing to Egeria:
+            - Tools:
+                - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
+                - Using Kubernetes: guides/operations/kubernetes/index.md
+                - Using Docker: education/tutorials/docker-tutorial/overview.md
+                - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
+                - Using Postman: education/tutorials/postman-tutorial/overview.md
+                - Using Kafka: education/tutorials/kafka-tutorial/overview.md
+      - Webinars: education/webinar-program/overview.md
+      - Comparisons:
+            - Apache Atlas: education/comparisons/apache-atlas.md
+      - Scenarios:
+            - Data Manager Integration: scenarios/data-manager-integration/overview.md
+            - File Lineage: scenarios/file-lineage/overview.md
       - Dojos:
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
@@ -215,26 +242,6 @@ nav:
           - Metadata Governance Day : education/egeria-dojo/metadata-governance/overview.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
-      - Open Metadata Labs: education/open-metadata-labs/overview.md
-      - Tutorials:
-          - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
-          - Using Kubernetes: guides/operations/kubernetes/index.md
-          - Using Docker: education/tutorials/docker-tutorial/overview.md
-          - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
-          - Using Postman: education/tutorials/postman-tutorial/overview.md
-          - Using Kafka: education/tutorials/kafka-tutorial/overview.md
-          - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
-          - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
-          - Running OMAG Clients: education/tutorials/omag-client-tutorial.md
-          - Running OMAG Servers: education/tutorials/omag-server-tutorial/overview.md
-          - Running Samples: education/tutorials/running-samples-tutorial.md
-          - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
-      - Comparisons:
-          - Apache Atlas: education/comparisons/apache-atlas.md
-      - Scenarios:
-          - Data Manager Integration: scenarios/data-manager-integration/overview.md
-          - File Lineage: scenarios/file-lineage/overview.md
-      - Webinars: education/webinar-program/overview.md
       - Old Dojo (deprecated):
             - Dojo Introduction: getting-started/dojo/index.md
             - Day 1:

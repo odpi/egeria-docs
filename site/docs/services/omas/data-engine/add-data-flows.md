@@ -66,8 +66,8 @@ POST {serverURLRoot}/servers/{serverName}/open-metadata/access-services/data-eng
 }
 ```
 `externalSourceName` - qualifiedName of the external data engine tool.
-Note that you need to register the data engine tool with [register-data-engine-tool](register-data-engine-tool.md)
-before adding data flows
+ Note that you need to register the data engine tool with [register-data-engine-tool](register-data-engine-tool.md) 
+ before adding data flows
 `VoidReponse` with status and error message if failing.
 
 

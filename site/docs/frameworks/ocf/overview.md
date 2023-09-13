@@ -225,9 +225,9 @@ The [`ConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/b
          */
         public BasicFileStoreProvider()
         {
-            Class<?> connectorClass = XXXStoreConnector.class;
+            String connectorClassName = "packagename.XXXStoreConnector";
 
-            super.setConnectorClassName(connectorClass.getName());
+            super.setConnectorClassName(connectorClassName);
 
             ConnectorType connectorType = new ConnectorType();
             connectorType.setType(ConnectorType.getConnectorTypeType());
@@ -267,9 +267,9 @@ The [`ConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/b
          */
         public BasicFileStoreProvider()
         {
-            Class<?>    connectorClass = BasicFileStoreConnector.class;
+            String connectorClassName = "org.odpi.openmetadata.adapters.connectors.datastore.basicfile.BasicFileStoreConnector";
 
-            super.setConnectorClassName(connectorClass.getName());
+            super.setConnectorClassName(connectorClassName);
 
             ConnectorType connectorType = new ConnectorType();
             connectorType.setType(ConnectorType.getConnectorTypeType());

@@ -20,21 +20,37 @@
 
 We provide [our own tutorial for IntelliJ](/education/tutorials/intellij-tutorial/overview).
 
-## Apache Maven and Gradle
+## Build tools
 
-[Apache Maven :material-dock-window:](https://maven.apache.org/){ target=maven } is the tool that supports our project build. This includes the code compilation, running unit tests, validating dependencies and Javadoc as well as build our distribution archive.
+The build process takes the source files from the git repository and creates executable libraries needed to run Egeria. When you download (clone) the contents of a git repository from GitHub, a new directory is created that is named after the repository that you cloned. For example, the directory created when the main `egeria.git` repository is cloned is called `egeria`.  This directory contains all the source and the build scripts.
 
-Maven 3.5 or higher is required to build Egeria. 3.6.x or above is recommended.
+The project uses three main build technologies:
 
-[Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is an alternative build tool to Maven and offers:
+* [Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is the primary build tool for the Egeria repositories.
+* [Apache Maven :material-dock-window:](https://maven.apache.org/){ target=maven } is an alternative build tool to Gradle and is being phased out.
+* [npm :material-dock-window:](https://www.npmjs.com){ target=npm } is used for Javascript repositories associated with the User Interfaces.
 
-- better support for parallel builds
-- more flexibility for build tasks
-- breaking the link between directory structure and maven artifacts
-- extremely fast incremental builds
+The build scripts that use these technologies ensure the software is built in the correct order.
 
-Our direction is for a Gradle build to replace Maven; however, [that work is still underway :material-dock-window:](https://github.com/odpi/egeria/issues/3370){ target=gh }. As such, our supported build environment remains [Maven](#apache-maven)
+##### Building with Gradle
 
-The [building Egeria tutorial](/education/tutorials/building-egeria-tutorial/overview) covers more details on the build process.
+--8<-- "snippets/tasks/task-building-with-gradle.md"
+
+??? tip "Gradle development"
+    For egeria [Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is a replacement build tool to Maven and offers:
+
+    - better support for parallel builds
+    - more flexibility for build tasks
+    - breaking the link between directory structure and maven artifacts
+    - extremely fast incremental builds
+
+    As of version 4, Egeria can only be built using gradle.
+
+##### Building with Maven
+
+If building a version of Egeria prior to version 4, the maven instructions can be found below:
+
+--8<-- "snippets/tasks/task-building-with-maven.md"
+
 
 --8<-- "snippets/abbr.md"

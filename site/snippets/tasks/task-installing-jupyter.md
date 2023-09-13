@@ -13,9 +13,9 @@ Full instructions for downloading and installing either of these options can be 
 
 `https://jupyter.org/`
 
-Alternatively, if you are running MacOS you can use HomeBrew.
+Alternatively, if you are running macOS you can use HomeBrew.
 
-???+ cli "Installing JupyterLab on MacOS using HomeBrew"
+???+ cli "Installing JupyterLab on macOS using HomeBrew"
     Using [HomeBrew :material-dock-window:](https://brew.sh){ target=homebrew } you can simply run:
 
     ```shell

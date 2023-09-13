@@ -3,11 +3,9 @@
 
 ### Installing Maven
 
-[Apache Maven :material-dock-window:](https://maven.apache.org/){ target=maven } is a build tool at is being phased out in the Egeria project, but is still required by some repositories. It is capable of code compilation, running unit tests, validating dependencies and Javadoc as well as build our distribution archive.
+[Apache Maven :material-dock-window:](https://maven.apache.org/){ target=maven } is a build tool at is being phased out in the Egeria project, but is still required by some repositories and the Egeria developer dojo. It is capable of code compilation, running unit tests, validating dependencies and Javadoc as well as build our distribution archive.
 
-Egeria 4.0 and above cannot be built using maven.
-
-where it is used, Egeria requires Maven 3.5 or higher. 3.6.x or above is recommended.
+Where it is used, Egeria requires Maven 3.5 or higher. 3.6.x or above is recommended.
 
 !!! cli "Check if Maven is installed"
     ```shell

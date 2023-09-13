@@ -1,9 +1,12 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-### Downloading the Egeria Source from GitHub
+### Cloning the Egeria Source using git commands
 
-The code for Egeria is downloaded from each git repository one at a time.  The commands shown in each tab below create a clone (copy) of the egeria git repositories for your own use.  If you want to make a contribution to Egeria, you need to [clone your own fork](/education/tutorials/git-and-git-hub-tutorial/#creating-a-fork-and-a-clone) of a repository rather than the main repository itself. 
+The code for Egeria is downloaded from each git repository one at a time.  The commands shown in each tab below create a clone (copy) of the egeria git repositories for your own use.  
+
+??? tip "Want to make a contribution to Egeria?"
+    If you want to make a contribution to Egeria, you need to [clone your own fork](/education/tutorials/git-and-git-hub-tutorial/#creating-a-fork-and-a-clone) of a repository rather than the main repository itself. 
 
 === "egeria.git"
 

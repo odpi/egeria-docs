@@ -22,9 +22,9 @@ Finally, there have been improvements in runtime efficiency.
 
 Since the last newsletter, there have been two releases of core Egeria (4.1 and 4.2) and the function for release 4.3 is present in the `main` branch.  The release notes detail the specific changes to the code.  The sections that follow put those changes in context.
 
-* [Release notes for 4.1 (May 2023)](/release-notes/4_1)
-* [Release notes for 4.2 (July 2023)](/release-notes/4_2)
-* [Candidate release notes for 4.3 (expected September 2023)](/release-notes/4_3)
+* [Release notes for 4.1 (May 2023)](/release-notes/4-1)
+* [Release notes for 4.2 (July 2023)](/release-notes/4-2)
+* [Candidate release notes for 4.3 (expected September 2023)](/release-notes/4-3)
 
 ## Updates to the assemblies
 

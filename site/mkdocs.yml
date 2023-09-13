@@ -210,7 +210,6 @@ nav:
                 - Sample Clients: education/tutorials/running-samples-tutorial.md
             - Developing with Egeria:
                 - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
-            - Contributing to Egeria:
             - Tools:
                 - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
                 - Using Kubernetes: guides/operations/kubernetes/index.md

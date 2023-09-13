@@ -3,9 +3,11 @@
 
 # Create a process
 
-Create a Process with port implementations. For each port, it creates the associated schema type and columns.
+Create a Process, with port implementations.
+For each port, it creates the associated schema type and columns.
 
-Check [create-port-implementation](create-port-implementation.md) and [create-schema-types](create-schema-type.md) for examples of the more granular payloads.
+Check [create-port-implementation](create-port-implementation.md) 
+and [create-schema-types](create-schema-type.md) for examples of the more granular payloads.
 
 More examples can be found in the
 [sample collection](samples/collections/DataEngine-process_endpoints.postman_collection.json)

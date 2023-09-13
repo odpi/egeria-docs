@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/in-development.md"
+--8<-- "snippets/content-status/tech-preview.md"
 
 # Data Engine Open Metadata Access Service (OMAS)
 
@@ -9,19 +9,19 @@ The Data Engine OMAS provides APIs and events for data movement/processing engin
 
 It provides the ability to register the data engine itself along with the lineage details of the ETL transformations. 
 Data Engine OMAS APIs offer support for creating the corresponding open metadata types for assets and jobs.
-  
-## Using the Data Engine OMAS
 
-Below is the list of tasks supported by Data Engine OMAS.
+## Using te Data Engine Java Client
+The Data Engine OMAS client interface supports the creation, update and delete of metadata entities and relationships.
+More details about using the client and the implementations available can be found [here](de-client.md)
 
-#### External Tool registration
+## Using the Data Engine OMAS REST API
+Below is the list of endpoints supported by Data Engine OMAS.
+Typically, the first action to take for an external tool is to register as an
+[engine](https://egeria-project.org/concepts/software-capability/#engine).
 
-Typically, the first action to take for an external tool is to [register](register-data-engine-tool.md) as a 
-[software-capability](../../../concepts/software-capability).
+#### [External Tool registration](register-data-engine-tool.md)
 
-#### External Tool lookup
-
-An external tool can [look up](lookup-registration.md) for the registered external tool.
+#### [External Tool lookup](lookup-registration.md)
 
 #### [Create Schema Type](create-schema-type.md)
 
@@ -31,13 +31,23 @@ An external tool can [look up](lookup-registration.md) for the registered extern
 
 #### [Add data flows to processes](add-data-flows.md)
 
-#### [Create Database](create-database.md) 
+#### [Delete Schema Type](delete-schema-type.md)
 
-#### [Create Relational Tables](create-relational-table.md) 
+#### [Delete Port Implementation](delete-port-implementation.md)
+
+#### [Delete Process](delete-process.md)
+
+#### [Create Database](create-database.md)
+
+#### [Create Database Schema](create-database-schema.md)
+
+#### [Create Relational Tables](create-relational-table.md)
 
 #### [Create Data Files](create-data-file.md)
 
 #### [Delete Database](delete-database.md)
+
+#### [Delete Database Schema](delete-database-schema.md)
 
 #### [Delete Relational Tables](delete-relational-table.md)
 
@@ -47,10 +57,19 @@ An external tool can [look up](lookup-registration.md) for the registered extern
 
 #### [Delete Endpoint](delete-endpoint.md)
 
+#### [Create Topic](create-topic.md)
+
+#### [Create EventType](create-event-type.md)
+
+#### [Delete Topic](delete-topic.md)
+
+#### [Delete EventType](delete-event-type.md)
+
+#### [Find an entity](find-entity.md)
 
 # Sample use case
 
-[Initial load](initial-load-igc-data-stage.md) use case illustrates the integration between 
+[Initial load](initial-load-igc-data-stage.md) use case illustrates the integration between
 Data Engine OMAS and IBM's DataStage ETL tool.
 
 --8<-- "snippets/abbr.md"

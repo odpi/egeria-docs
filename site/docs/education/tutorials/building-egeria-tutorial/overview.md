@@ -12,11 +12,9 @@ Alternatively you can also use [Kubernetes](/guides/operations/kubernetes) to ru
 ## Prerequisite technology for building Egeria
 
 ??? tip "Installing Java"
-    --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-java.md"
-??? tip "Installing Maven"
-    --8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-maven.md"
-??? tip "Installing Git"
-    --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-installing-git.md"
+    --8<-- "snippets/tasks/task-installing-java.md"
+??? tip "Installing Maven (rarely needed)"
+    --8<-- "snippets/tasks/task-installing-maven.md"
 
 ## Tutorial tasks
 
@@ -24,13 +22,13 @@ Alternatively you can also use [Kubernetes](/guides/operations/kubernetes) to ru
 2. [Building the Egeria source with Apache Maven](#building-the-egeria-source)
 3. [Installing Egeria](#installing-egeria)
 
---8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+--8<-- "snippets/tasks/task-cloning-egeria-source.md"
 
 You are now ready to [build the egeria source](#building-the-egeria-source).
 
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-egeria-source.md"
+--8<-- "snippets/tasks/task-building-egeria-source.md"
 
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-egeria.md"
+--8<-- "snippets/tasks/task-installing-egeria.md"
 
 ## What next?
 

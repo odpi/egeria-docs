@@ -4,6 +4,7 @@
 # Git and GitHub Tutorial
 
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/git-introduction.md"
+
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/egeria-git-repositories.md"
 
 ## General tasks for all community members
@@ -17,8 +18,8 @@ This tutorial covers common tasks associated with using Git and GitHub to work w
 
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id.md"
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-creating-an-issue-on-git-hub.md"
---8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-installing-git.md"
---8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-downloading-egeria-source.md"
+--8<-- "snippets/tasks/task-installing-git.md"
+--8<-- "snippets/tasks/task-cloning-egeria-source.md"
 
 ## Using Git and GitHub when making a contribution
 

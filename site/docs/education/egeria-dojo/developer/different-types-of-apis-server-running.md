@@ -52,7 +52,7 @@ Now it is time to start `mds1` and observe the changes to `EgeriaPlatformReport`
     The server is waiting for Apache Kafka to start.  If this occurs start Apache Kafka (and Apache Zookeeper) ...
     
     ??? tip "Starting Apache Kafka"
-        ---8<-- "docs/education/tutorials/kafka-tutorial/task-starting-kafka.md"
+        ---8<-- "snippets/tasks/task-starting-kafka.md"
     
     Once Apache Kafka is running, `mds1` completes start-up and `ServerOps` outputs the success message in its *Run* tab as shown in outcome 1.  It is possible, however, that you do not manage to get Kafka running in time and `mds1` fails to start.  If that happens just re-run the `start mds1` command of `ServerOps` once you have Kafka running.  
     

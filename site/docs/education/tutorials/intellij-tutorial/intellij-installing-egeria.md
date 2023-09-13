@@ -19,5 +19,5 @@ Process finished with exit code 0
 Click on the `Terminal` tab - typically at the bottom of the IntelliJ window to open the terminal window.
 
 
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-installing-egeria.md"
+--8<-- "snippets/tasks/task-installing-egeria.md"
 

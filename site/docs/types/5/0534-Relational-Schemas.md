@@ -60,6 +60,12 @@ It indicates that the values stored in the first relational column are values fr
 
 Foreign keys are used to represent relationships between relational tables.
 
+## Example
+
+The diagram below shows the typical structure of a relational database.  There are two types of asset: the [Database](/types/2/0224-Databases) and optional nested [DeployedDatabaseSchema](/types/2/0224-Databases) entities.  Linked to the asset via the [AssetSchema](/types/5/0503-Asset-Schema) relationship is a *RelationalDBSchemaType* entity that is in turn linked to the *RelationalTable* entities and the *RelationalColumn* entities beneath them.  This example shows the use of the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes) classification used to hold the schema type.
+
+![Database example](database-example.svg)
+
 ??? deprecated "Deprecated types"
      - The supertype of *RelationalTableType* has be changed to *ComplexSchemaType* rather than *TabularColumnType* since [TabularColumnType](/types/5/0530-Tabular-Schemas) is now deprecated.
      - *DerivedRelationalColumn* has been replaced by [CalculatedValue](/types/5/0512-Derived-Schema-Elements)and [DerivedSchemaTypeQueryTarget](/types/5/0512-Derived-Schema-Elements).

@@ -5,7 +5,7 @@
 
 Egeria is a large and active project with teams advancing its function on multiple fronts.  Our work is split across [multiple git repositories](https://egeria-project.org/education/tutorials/git-and-git-hub-tutorial/egeria-git-repositories/) that supply components on different release schedules. Therefore, we aim to provide an update on our activities and releases in our monthly newsletter.
 
-The [roadmap for Egeria](/release-notes/roadmap) describes the end vision for Egeria and our current status.
+The [roadmap for Egeria](/release-notes/roadmap) describes the end vision for Egeria and our current status.  
 
 !!! tip "Feedback"
     One way you can help us is to feedback on your experiences, both good and bad. We would love to hear from you!
@@ -18,7 +18,21 @@ The [roadmap for Egeria](/release-notes/roadmap) describes the end vision for Eg
 
 The *Core Egeria* technology is located in the [egeria.git](https://github.com/odpi/egeria) repository.  It provides the [OMAG Server Platform](/concepts/omag-server-platform), java clients for the [OMAG Servers](/concepts/omag-server) that run on the OMAG Server Platform along with the [Conformance Test Suite (CTS)](/guides/cts/overview).
 
-The project aims to produce a new release of Core Egeria about once a month. Each release includes new features and fixes to existing function.
+The project aims to produce a new release of Core Egeria about once every 6 weeks. Each release includes new features and fixes to existing function.  This is also an opportunity to update the levels of our dependencies to reduce vulnerabilities.
+
+The table below shows the planned dates for future releases.  The branch date is the date that a copy of the main branch is taken.  This copy is the candidate code for the release.  We then run tests on this copy and release to maven central once any issues have been resolved.  Any fixes that are necessary are made to the main branch and then back-ported to the release branch.  It typically takes a week to go from making the release branch to the new release going to maven central.
+
+| Release | Branch date        | Release Date   | Core theme                |
+|---------|--------------------|----------------|---------------------------|
+| 4.2     | 17th July 2023     | 20th July 2023 | Runtime optimization      |
+ | 4.3     | 4th September 2023 |                | New assemblies            |
+| 4.4     | 23rd October 2023  |                | Apache Atlas connector(s) |
+| 4.5     | 4th December 2023  |                | OpenLineage update        |
+| 4.6     | 22nd January 2024  |                |                           |
+| 4.7     | 11th March 2024    |                |                           |
+| 4.8     | 20th May 2024      |                |                           |
+| 4.9     | 1st July 2024      |                |                           |
+| 4.10    | 2nd September 2024 |                |                           |
 
 !!! attention "Backwards compatibility"
     The team aims to provide complete backward compatibility for all components that are officially released[^1].

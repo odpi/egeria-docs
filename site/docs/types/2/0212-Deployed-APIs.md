@@ -11,7 +11,7 @@ APIs exchange data structures and commands. Each API is an access point for data
 
 ## DeployedAPI
 
-The *DeployedAPI* is the entity that represents the API as an [Asset](/types/0/0010-Base-Model).  The definition of the API's operations, their parameters and responses are described via the [APISchemaType](/types/5/0536-API-Schemas) entity, which is connected to the *DeployedAPI* entity with the [AssetSchemaType](/types/5/0503-Asset-Schema) relationship.
+The *DeployedAPI* is the entity that represents the API as an [Asset](/types/0/0010-Base-Model).  The *deployedImplementationType* attribute describes the technology that is used in its implementation.  The definition of the API's operations, their parameters and responses are described via the [APISchemaType](/types/5/0536-API-Schemas) entity, which is connected to the *DeployedAPI* entity with the [AssetSchemaType](/types/5/0503-Asset-Schema) relationship.
 
 The classifications [RequestResponseInterface](#requestresponseinterface), [ListenerInterface](#listenerinterface) and [PublisherInterface](#publisherinterface) can be used to describe the style of the API. They can appear in combination on a single *DeployedAPI*.
 

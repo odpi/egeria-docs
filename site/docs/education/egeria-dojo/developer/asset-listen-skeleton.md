@@ -251,7 +251,7 @@ Paste this code between the curly braces of the `AssetListen` class.
         System.out.println("Using userId: " + clientUserId);
         System.out.println();
 
-        HttpHelper.noStrictSSLIfConfigured();
+        HttpHelper.noStrictSSL();
 
         try
         {

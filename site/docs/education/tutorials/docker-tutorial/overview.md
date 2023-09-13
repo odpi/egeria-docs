@@ -231,10 +231,10 @@ $
 Only the files from the install image are present because we have not asked the OMAG Server Platform to do
 anything yet.  However, as we configure servers and run them, you will see new files appearing.
 You can check back here from time to time to see the files accumulating.
-If you delete this container then all of the files that the OMAG Server Platform created are lost.
+If you delete this container then all the files that the OMAG Server Platform created are lost.
 
 (If you want to know more about the egeria install image, see the
-[Installing Egeria Tutorial](/education/tutorials/installing-egeria-tutorial).)
+[Installing Egeria Tutorial](/education/tutorials/building-egeria-tutorial/overview).)
 
 The third button on the docker desktop is the "STOP" button and the fourth button is "RESTART".
 If you just need to test these buttons, remember to ensure that the docker container is running

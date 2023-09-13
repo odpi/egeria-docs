@@ -21,7 +21,7 @@ Paste this code between the curly braces of the `EventLoggingProvider` class.
     /*
      * Class of the connector.
      */
-    private static final Class<?> connectorClass       = EventLoggingConnector.class;
+    private static final String connectorClass         = "egeria.dojo.connector.eventlogging.EventLoggingConnector";
 
     /**
      * Constructor used to initialize the ConnectorProviderBase with the Java class name of the specific

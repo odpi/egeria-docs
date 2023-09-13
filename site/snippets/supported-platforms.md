@@ -1,9 +1,5 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
-<!-- Copyright Contributors to the ODPi Egeria project. -->
-
-### Building the Egeria Source
-
-The build process takes the source files from the git repository and creates executable libraries needed to run Egeria.  
+<!-- Copyright Contributors to the Egeria project. -->
 
 === "Supported Platforms - linux, macOS"
 
@@ -42,38 +38,3 @@ The build process takes the source files from the git repository and creates exe
     Yet another option to use IntelliJ is to make use of [Remote Development](https://www.jetbrains.com/remote-development/){ target=jb }. With this configuration you would use a seperate linux system, and connect remotely. This is beyond the scope of these docs.
 
     Feedback on Windows, offers to help, clarification on the steps can be directed to [odpi/egeria-docs#335](https://github.com/odpi/egeria-docs/issues/335){ target=gh }
-
-
-#### Running the build
-
-When you download (clone) the contents of a git repository from GitHub, a new directory is created that is named after the repository that you cloned. For example, the directory created when the main `egeria.git` repository is cloned is called `egeria`.  This directory contains all the source and the build scripts.
-
-The project uses three main build technologies:
-
-* [Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is the primary build tool for the Egeria repositories.
-* [Apache Maven :material-dock-window:](https://maven.apache.org/){ target=maven } is an alternative build tool to Gradle and is being phased out.
-* [npm :material-dock-window:](https://www.npmjs.com){ target=npm } is used for Javascript repositories associated with the User Interfaces.
-
-The build scripts that use these technologies ensure the software is built in the correct order.
-
-##### Building with Gradle
-
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-with-gradle.md"
-
-??? tip "Gradle development"
-    For egeria [Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is a replacement build tool to Maven and offers:
-
-    - better support for parallel builds
-    - more flexibility for build tasks
-    - breaking the link between directory structure and maven artifacts
-    - extremely fast incremental builds
-
-    As of version 4, Egeria can only be built using gradle.
-
-##### Building with Maven
-
-If building a version of Egeria prior to version 4, the maven instructions can be found below:
-
---8<-- "docs/education/tutorials/building-egeria-tutorial/task-building-with-maven.md"
-
-

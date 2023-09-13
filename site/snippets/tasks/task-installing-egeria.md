@@ -5,6 +5,6 @@
 
 Change to the top level `egeria` directory where your local copy of `egeria.git` is downloaded to.
 
---8<-- "docs/education/tutorials/building-egeria-tutorial/terminal-installing-egeria.md"
+--8<-- "snippets/tasks/terminal-installing-egeria.md"
 
 

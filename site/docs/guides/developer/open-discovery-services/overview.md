@@ -113,7 +113,7 @@ public class XXXDiscoveryProvider extends IntegrationConnectorProviderBase
     /*
      * Define the name of the connector implementation.
      */
-    private static final Class<?> connectorClass = XXXDiscoveryService.class;
+    private static final String connectorClassName = "packagename.XXXDiscoveryService";
     
     /*
      * Define the name of configuration properties (optional).
@@ -130,7 +130,7 @@ public class XXXDiscoveryProvider extends IntegrationConnectorProviderBase
         /*
          * Set up the class name of the open discovery service that this provider creates.
          */
-        super.setConnectorClassName(connectorClass.getName());
+        super.setConnectorClassName(connectorClassName);
 
         /*
          * Set up the connector type that should be included in a connection used to configure this open discovery service.

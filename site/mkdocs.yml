@@ -50,36 +50,33 @@ nav:
                          - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
                          - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
                   - JDBC Connector: connectors/resource/jdbc-resource-connector.md
+                  - Avro File Connector: connectors/resource/avro-file-resource-connector.md
+                  - Basic File Connector: connectors/resource/basic-file-resource-connector.md
+                  - CSV File Connector: connectors/resource/csv-file-resource-connector.md
+                  - Data Folder Connector: connectors/resource/data-folder-resource-connector.md
               - Governance Actions:
                   - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
                   - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
                   - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
                   - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-              - Governance Daemon:
-                  - Open Lineage Janus Connector: connectors/governance-daemon/open-lineage-janus-connector.md
-              - Integration:
-                  - File Connectors:
-                      - Data Files Monitor: connectors/integration/data-files-monitor-integration-connector.md
-                      - Data Folder Monitor: connectors/integration/data-folder-monitor-integration-connector.md
-                  - Topic Connectors:
-                      - Kafka Topics Monitor Connector: connectors/integration/kafka-monitor-integration-connector.md
-                      - Kafka Topics Audit Connector: connectors/integration/kafka-topics-audit-integration-connector.md
-                      - Strimzi Topics Monitor Connector: connectors/integration/strimzi-monitor-integration-connector.md
-                  - API Connectors:
-                      - Open API Monitor Connector: connectors/integration/open-api-monitor-integration-connector.md
-                  - Infrastructure Connectors:
-                      - Egeria Infrastructure Cataloguer Connector: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
-                  - Lineage Connectors:
+              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/open-lineage-janus-connector.md
+              - Integration (metadata exchange):
+                  - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
+                  - Data Files: connectors/integration/data-files-monitor-integration-connector.md
+                  - Data Folders: connectors/integration/data-folder-monitor-integration-connector.md
+                  - Databases (JDBC): connectors/integration/jdbc-integration-connector.md
+                  - Kafka Topics (Cataloguing): connectors/integration/kafka-monitor-integration-connector.md
+                  - Kafka Topics (Auditing): connectors/integration/kafka-topics-audit-integration-connector.md
+                  - Strimzi Topics: connectors/integration/strimzi-monitor-integration-connector.md
+                  - Open APIs via Swagger: connectors/integration/open-api-monitor-integration-connector.md
+                  - Egeria Infrastructure: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
+                  - OpenLineage standard:
                       - OpenLineage Event Receiver: connectors/integration/open-lineage-event-receiver-integration-connector.md
                       - OpenLineage API Log Store: connectors/integration/api-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
                       - OpenLineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
-                      - Governance Action OpenLineage Integrator: connectors/integration/governance-action-open-lineage-integration-connector.md
-                      - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
-                  - Database:
-                      - JDBC Integration Connector: connectors/integration/jdbc-integration-connector.md
-                  - Catalog:
-                      - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
+                      - Governance Action OpenLineage: connectors/integration/governance-action-open-lineage-integration-connector.md
+                  - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
               - Open Metadata Archive Store:
                   - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
               - Repository:
@@ -201,6 +198,32 @@ nav:
           - User Feedback: features/user-feedback/overview.md
   - Learning:
       - Learning Overview: education/index.md
+      - Tutorials:
+            - Tutorials: education/tutorials/index.md
+            - Running Egeria:
+                - Downloading Egeria: education/tutorials/downloading-egeria-tutorial/overview.md
+                - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
+                - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
+            - Using Egeria:
+                - Open Metadata Labs: education/open-metadata-labs/overview.md
+                - Platform and Servers: education/tutorials/omag-server-tutorial/overview.md
+                - Reports and utilities: education/tutorials/omag-client-tutorial.md
+                - Sample Clients: education/tutorials/running-samples-tutorial.md
+            - Developing with Egeria:
+                - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
+            - Tools:
+                - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
+                - Using Kubernetes: guides/operations/kubernetes/index.md
+                - Using Docker: education/tutorials/docker-tutorial/overview.md
+                - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
+                - Using Postman: education/tutorials/postman-tutorial/overview.md
+                - Using Kafka: education/tutorials/kafka-tutorial/overview.md
+      - Webinars: education/webinar-program/overview.md
+      - Comparisons:
+            - Apache Atlas: education/comparisons/apache-atlas.md
+      - Scenarios:
+            - Data Manager Integration: scenarios/data-manager-integration/overview.md
+            - File Lineage: scenarios/file-lineage/overview.md
       - Dojos:
           - Dojo Overview: education/egeria-dojo/index.md
           - Running Egeria Day :
@@ -219,26 +242,6 @@ nav:
           - Metadata Governance Day : education/egeria-dojo/metadata-governance/overview.md
           - Egeria Contributor Day : education/egeria-dojo/egeria-contributor.md
           - Egeria in Production Day : education/egeria-dojo/egeria-in-production.md
-      - Open Metadata Labs: education/open-metadata-labs/overview.md
-      - Tutorials:
-          - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
-          - Using Kubernetes: guides/operations/kubernetes/index.md
-          - Using Docker: education/tutorials/docker-tutorial/overview.md
-          - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
-          - Using Postman: education/tutorials/postman-tutorial/overview.md
-          - Using Kafka: education/tutorials/kafka-tutorial/overview.md
-          - Building Egeria: education/tutorials/building-egeria-tutorial/overview.md
-          - Installing Egeria: education/tutorials/installing-egeria-tutorial.md
-          - Running OMAG Clients: education/tutorials/omag-client-tutorial.md
-          - Running OMAG Servers: education/tutorials/omag-server-tutorial/overview.md
-          - Running Samples: education/tutorials/running-samples-tutorial.md
-          - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
-      - Comparisons:
-          - Apache Atlas: education/comparisons/apache-atlas.md
-      - Scenarios:
-          - Data Manager Integration: scenarios/data-manager-integration/overview.md
-          - File Lineage: scenarios/file-lineage/overview.md
-      - Webinars: education/webinar-program/overview.md
       - Old Dojo (deprecated):
             - Dojo Introduction: getting-started/dojo/index.md
             - Day 1:
@@ -312,6 +315,7 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Monthly News:
+            - August 2023: release-notes/august-2023.md
             - April 2023: release-notes/april-2023.md
             - February 2023: release-notes/february-2023.md
             - January 2023: release-notes/january-2023.md
@@ -734,6 +738,7 @@ nav:
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
       - Open Metadata Archive Store Connector: concepts/open-metadata-archive-store-connector.md
+      - Open Metadata Ecosystem: concepts/open-metadata-ecosystem.md
       - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md
       - Open Metadata Instance: concepts/open-metadata-instances.md
       - Open Metadata Type Definitions: concepts/open-metadata-type-definitions.md
@@ -800,7 +805,7 @@ nav:
               - Gary Geeke: practices/coco-pharmaceuticals/personas/gary-geeke.md
               - George Pie: practices/coco-pharmaceuticals/personas/george-pie.md
               - Grant Able: practices/coco-pharmaceuticals/personas/grant-able.md
-              - harry Hopeful: practices/coco-pharmaceuticals/personas/harry-hopeful.md
+              - Harry Hopeful: practices/coco-pharmaceuticals/personas/harry-hopeful.md
               - Ivor Padlock: practices/coco-pharmaceuticals/personas/ivor-padlock.md
               - Jules Keeper: practices/coco-pharmaceuticals/personas/jules-keeper.md
               - Julie Stitched: practices/coco-pharmaceuticals/personas/julie-stitched.md
@@ -830,7 +835,7 @@ nav:
               - Governance Team: practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview.md
               - Information Supply Chains: practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview.md
               - Multi-Faceted Governance: practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview.md
-              - New Systems Archiecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview.md
+              - New Systems Architecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview.md
               - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
               - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
               - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md

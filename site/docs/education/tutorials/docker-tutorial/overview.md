@@ -4,7 +4,19 @@
 # Docker tutorial
 
 **Docker** is a [simple container runtime and standard](https://www.docker.com/why-docker).
-Every day, the egeria build processing creates a docker image of egeria and pushes it to the docker catalog on the **Docker website**.
+
+Every time the egeria Pull Request (PR) build runs, it creates a **latest** docker image of egeria based on the latest content of the `main` branch of [egeria.git](https://github.com/odpi/egeria) and pushes it to the docker catalog on the [Docker website](https://hub.docker.com/r/odpi/egeria).  The site also contains docker images for each official release of egeria.  
+
+Alternatively, you can build a customized docker image of egeria, that includes or excludes the connectors and services that you need.
+
+This page takes you through the different options for building and running egeria using docker containers.
+
+## Building your own docker image
+
+--8<-- "snippets/tasks/task-building-customized-docker-image.md"
+
+
+## Using the standard docker container on docker hub
 
 This docker image provides a simple way to bring a runnable version of Egeria onto your machine.  It also provides the basis for a [Kubernetes](/guides/operations/kubernetes) deployment of Egeria.
 
@@ -62,7 +74,7 @@ It may take a little while to complete its start up so check it is running befor
 For example, on macOS, the docker desktop can be found on the **Launchpad**. Once it is running,
 the docker whale icon appears on the top menu bar.  Clicking on the docker whale icon reveals a menu
 and the status of the desk top is visible. 
-This menu is used to shutdown docker at the end of the dojo.
+This menu is used to shut down docker at the end of the dojo.
 
 ![macOS running Docker desktop](docker-desktop-running.png)
 

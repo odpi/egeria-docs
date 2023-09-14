@@ -19,11 +19,11 @@ Press the `Create` button and the new project is opened.
 ??? tip "Set up Java Level ..."
     Validate that the project is set up with the right level of Java - you need Java 17.  Select `File` and then `Project Structure...`.  When the wizard opens select `Project` and ensure the SDK is Java 17.
 
-![Check Java level](default-java-level.png)
+    ![Check Java level](default-java-level.png)
 
-If the SDK is not 17, click on the dropdown and change it to 17, and click OK to save it.  If Java 17 is not listed, make sure you have Java 17 installed on your machine and retry.
+    If the SDK is not 17, click on the dropdown and change it to 17, and click OK to save it.  If Java 17 is not listed, make sure you have Java 17 installed on your machine and retry.
 
-![Correct Java Level](correct-java-level.png)
+    ![Correct Java Level](correct-java-level.png)
 
 ??? tip "Ensure you have enough memory ..."
     ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-memory-settings.md"

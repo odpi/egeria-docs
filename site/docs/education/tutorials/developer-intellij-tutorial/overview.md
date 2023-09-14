@@ -6,7 +6,7 @@
 This tutorial explains how to set up IntelliJ so that you can develop new connectors and clients for your organization.
 
 !!! tip "For developers wishing to contribute to Egeria"
-    Contributions to Egeria need to be made via a Pull Request (PR) from you own fork of the project.  There are detailed instructions on how to do this in the [Git and GitHub Tutorial](/education/tutorials/git-and-git-hub-tutorial)
+    Contributions to Egeria need to be made via a Pull Request (PR) from you own fork of the project.  There are detailed instructions on how to do this in the [Git and GitHub Tutorial](/education/tutorials/git-and-git-hub-tutorial/overview)
 
 ## Prerequisite tasks
 

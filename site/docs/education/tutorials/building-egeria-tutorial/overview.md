@@ -35,7 +35,7 @@ ready to [learn about the OMAG Server Platform](/education/tutorials/omag-server
 
 Alternatively ...
 
-* [Set up IntelliJ ready to develop connectors or clients that use Egeria](/education/tutorials/developer-intellij-tutorial)
+* [Set up IntelliJ ready to develop connectors or clients that use Egeria](/education/tutorials/developer-intellij-tutorial/overview)
 or
 * [Run the open metadata labs to get experience with using Egeria](/education/open-metadata-labs/overview)
 or

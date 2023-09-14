@@ -33,7 +33,7 @@ Press the green triangle to run the platform.
 
 ![run egeria platform](run-egeria-platform.png)
 
-A new section appears in the IntelliJ window showing the platform is starting up.
+A new panel appears in the IntelliJ window showing the platform is starting up.
 
 ![platform starting](platform-starting.png)
 
@@ -47,13 +47,13 @@ Select `Edit Configurations` to create another `JAR Application`.  This time cal
 
 Leave the `Working Directory` to default to your project directory.  If you are using Version 4.3 of Egeria, set the VM Options to `-Dstrict.ssl=false`; for release V4.4 and beyond, you can leave them blank.
 
-==== "V4.3 and before"
+=== "V4.3 and before"
     ![platform report settings](platform-report-settings-4-3.png)
 
-==== "V4.4" and beyond
+=== "V4.4" and beyond
     ![platform report settings](platform-report-settings-4-4.png)
 
-When you click `OK`, then `PlatformReport` appears in the dropdown run menu.  Press the green triangle to run the report and a new tab appears in the section of the IntelliJ window where the platform is running.
+When you click `OK`, then `PlatformReport` appears in the dropdown run menu.  Press the green triangle to run the report and a new tab appears in the panel of the IntelliJ window where the platform is running.
 
 ![Run platform report](run-platform-report.png)
 

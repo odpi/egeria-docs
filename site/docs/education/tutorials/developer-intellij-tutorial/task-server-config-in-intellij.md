@@ -5,13 +5,13 @@
 
 Egeria's assembly includes a utility for configuring servers.  It is called `ServerConfig`.  Select `Edit Configurations` and create another `JAR Application` run configuration entry for `ServerConfig`.
 
-==== "V4.3 and before"
+=== "V4.3 and before"
     ![server config settings](server-config-settings-4-3.png)
 
-==== "V4.4" and beyond
+=== "V4.4" and beyond
     ![server config settings](server-config-settings-4-4.png)
 
-When you click `OK`, then `ServerConfig` appears in the dropdown run menu.  Press the green triangle to run the utility and a new tab appears in the section of the IntelliJ window where the platform is running.
+When you click `OK`, then `ServerConfig` appears in the dropdown run menu.  Press the green triangle to run the utility and a new tab appears in the panel of the IntelliJ window where the platform is running.
 
 `ServerConfig` prints out a menu of the different configuration options it supports.
 

@@ -3,16 +3,8 @@
 
 ### Installing Intellij 
 
-Link to the [download](https://www.jetbrains.com/idea/download/) page and follow the instructions.
+Link to the [download](https://www.jetbrains.com/idea/download/) page and follow the instructions.  Then start up IntelliJ and a wizard appears.
 
-Start up IntelliJ.
 
-??? tip "Set up Java Level ..."
-    Validate that the project is set up with the right level of Java - you need Java 17.  Select `File` and then `Project Structure...`.  When the wizard opens select `Project` and ensure the SDK is Java 17.
-
-    ![Set Java level](/education/tutorials/intellij-tutorial/intellij-set-java-level.png)
-
-??? tip "Ensure you have enough memory ..."
-    ---8<-- "docs/education/tutorials/intellij-tutorial/intellij-memory-settings.md"
 
 

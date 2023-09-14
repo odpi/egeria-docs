@@ -13,58 +13,8 @@ This page takes you through the different options for building and running egeri
 
 ## Building your own docker image
 
-When you [build the main egeria repository](/docs/education/tutorials/building-egeria-tutorial/overview) a new `build` directory is created under `open-metadata-distribution/omag-server-platform`.
+--8<-- "snippets/tasks/task-building-customized-docker-image.md"
 
-Open up this directory and you will see two directories of interest:
-
-* *distributions* contains the packaged "assembly" of the [OMAG Server Platform](/concepts/omag-server-platform).
-* *unpacked* contains the same content as the "assembly" but it is not packaged into a tar file.
-
-Take a copy of the "assembly" from either directory:
-
-* Copy and unpack the tar file or
-* Copy all the files under `unpacked`
-
-Change into the assembly's top-level directory.  When you list the contents
-
-```bash
-$ ls
-Dockerfile      LICENSE         NOTICE          README.md       assembly      dist
-```
-
-Run the docker command:
-
-```bash
-docker build -t egeria-platform:{myversion} -f Dockerfile .
-```
-replacing `{myversion}` with a tag name for this docker image.  The example below used `latest` as the tag name.
-
-```bash
-? docker build -t egeria-platform:latest -f Dockerfile .
-[+] Building 44.9s (5/5) FINISHED                                                                                                                                                                                                                                                              docker:desktop-linux
- => [internal] load build definition from Dockerfile                                                                                                                                                                                                                                                           0.0s
- => => transferring dockerfile: 3.28kB                                                                                                                                                                                                                                                                         0.0s
- => [internal] load .dockerignore                                                                                                                                                                                                                                                                              0.0s
- => => transferring context: 2B                                                                                                                                                                                                                                                                                0.0s
- => [internal] load metadata for registry.access.redhat.com/ubi9/openjdk-17:latest                                                                                                                                                                                                                             1.5s
- => [1/1] FROM registry.access.redhat.com/ubi9/openjdk-17@sha256:3eded7b50a5ff8a55895c7b70c9dfc6e320363e5812a68747f281f8f4bb323ac                                                                                                                                                                             43.3s
- => => resolve registry.access.redhat.com/ubi9/openjdk-17@sha256:3eded7b50a5ff8a55895c7b70c9dfc6e320363e5812a68747f281f8f4bb323ac                                                                                                                                                                              0.0s
- => => sha256:5cbda490fcb7ab72e85cfba7098858cd3ed6bb15f95687e86979f6d4ac7b2f15 596B / 596B                                                                                                                                                                                                                     0.0s
- => => sha256:5b5deb1288720666a590472d9a506500df9ebe3c817e9710327162ccd24c4e22 24.19kB / 24.19kB                                                                                                                                                                                                               0.0s
- => => sha256:62742f27dce5ebff467a57ad6bfa680820f3bc534cc313627f8113246276bf0f 37.83MB / 37.83MB                                                                                                                                                                                                              17.9s
- => => sha256:f008a4f4b21c818e8bbd4e2521eb30ab0f8a43dc259e9e51c0d134641e343acd 110.80MB / 110.80MB                                                                                                                                                                                                            37.5s
- => => sha256:3eded7b50a5ff8a55895c7b70c9dfc6e320363e5812a68747f281f8f4bb323ac 1.47kB / 1.47kB                                                                                                                                                                                                                 0.0s
- => => extracting sha256:62742f27dce5ebff467a57ad6bfa680820f3bc534cc313627f8113246276bf0f                                                                                                                                                                                                                      2.0s
- => => extracting sha256:f008a4f4b21c818e8bbd4e2521eb30ab0f8a43dc259e9e51c0d134641e343acd                                                                                                                                                                                                                      5.5s
- => exporting to image                                                                                                                                                                                                                                                                                         0.0s
- => => exporting layers                                                                                                                                                                                                                                                                                        0.0s
- => => writing image sha256:5a2c784ed7558dc625d109c04c8b5e78534b270a29d3011eb771fd01724c097f                                                                                                                                                                                                                   0.0s
- => => naming to docker.io/library/egeria-platform:latest                                                                                                                                                                                                                                                      0.0s
-
-What's Next?
-  View summary of image vulnerabilities and recommendations → docker scout quickview
-
-```
 
 ## Using the standard docker container on docker hub
 
@@ -124,7 +74,7 @@ It may take a little while to complete its start up so check it is running befor
 For example, on macOS, the docker desktop can be found on the **Launchpad**. Once it is running,
 the docker whale icon appears on the top menu bar.  Clicking on the docker whale icon reveals a menu
 and the status of the desk top is visible. 
-This menu is used to shutdown docker at the end of the dojo.
+This menu is used to shut down docker at the end of the dojo.
 
 ![macOS running Docker desktop](docker-desktop-running.png)
 
@@ -281,10 +231,10 @@ $
 Only the files from the install image are present because we have not asked the OMAG Server Platform to do
 anything yet.  However, as we configure servers and run them, you will see new files appearing.
 You can check back here from time to time to see the files accumulating.
-If you delete this container then all of the files that the OMAG Server Platform created are lost.
+If you delete this container then all the files that the OMAG Server Platform created are lost.
 
 (If you want to know more about the egeria install image, see the
-[Installing Egeria Tutorial](/education/tutorials/installing-egeria-tutorial).)
+[Installing Egeria Tutorial](/education/tutorials/building-egeria-tutorial/overview).)
 
 The third button on the docker desktop is the "STOP" button and the fourth button is "RESTART".
 If you just need to test these buttons, remember to ensure that the docker container is running

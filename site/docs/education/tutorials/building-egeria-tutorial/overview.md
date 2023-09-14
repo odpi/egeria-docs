@@ -5,7 +5,7 @@
 
 Egeria is an open source project that is delivered both as source code as well as [Maven Central Repository](https://search.maven.org/) libraries.
 
-This tutorial will guide you through the process of downloading the core Egeria source code from [GitHub](https://github.com/) and building it so that you can run it on your local machine.  
+This tutorial will guide you through the process of downloading the core Egeria source code from [GitHub](https://github.com/) and building it so that you can install and run it on your local machine.  
 
 Alternatively you can also use [Kubernetes](/guides/operations/kubernetes) to run Egeria.  This uses the published builds of Egeria and does not require you to build Egeria on your machine.
 
@@ -13,16 +13,15 @@ Alternatively you can also use [Kubernetes](/guides/operations/kubernetes) to ru
 
 ??? tip "Installing Java"
     --8<-- "snippets/tasks/task-installing-java.md"
-??? tip "Installing Maven (rarely needed)"
-    --8<-- "snippets/tasks/task-installing-maven.md"
 
 ## Tutorial tasks
 
-1. [Downloading the Egeria source from GitHub](#downloading-the-egeria-source-from-github)
-2. [Building the Egeria source with Apache Maven](#building-the-egeria-source)
+1. [Downloading the Egeria source from GitHub](#downloading-egeria-from-github-website)
+2. [Building the Egeria source](#building-the-egeria-source)
 3. [Installing Egeria](#installing-egeria)
 
---8<-- "snippets/tasks/task-cloning-egeria-source.md"
+???
+--8<-- "snippets/tasks/task-downloading-egeria-source.md"
 
 You are now ready to [build the egeria source](#building-the-egeria-source).
 
@@ -32,11 +31,13 @@ You are now ready to [build the egeria source](#building-the-egeria-source).
 
 ## What next?
 
-This is the end of the *Downloading and Building Egeria Tutorial*.    You are now
+This is the end of the *Downloading and Building Egeria Tutorial*.  You are now
 ready to [learn about the OMAG Server Platform](/education/tutorials/omag-server-tutorial/overview).
 
 Alternatively ...
 
+* [Set up IntelliJ ready to develop connectors or clients that use Egeria](/education/tutorials/developer-intellij-tutorial/overview)
+or
 * [Run the open metadata labs to get experience with using Egeria](/education/open-metadata-labs/overview)
 or
 * [Learn about developing extensions to Egeria](/guides/developer)

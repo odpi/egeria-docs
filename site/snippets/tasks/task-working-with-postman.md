@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Working with Postman
+### Working with Postman
 
 Postman is a test tool that allows you to type in calls to [REST APIs](https://en.wikipedia.org/wiki/Representational_state_transfer).
 

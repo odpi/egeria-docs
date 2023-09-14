@@ -382,7 +382,7 @@ Audit log messages help the people operating Egeria to be sure your integration 
 
 Your integration connector implementation should be built and packaged in a *jar* file.  This jar file contains your connector provider and connector implementation.  It may optionally contain any dependent client libraries to the third party connector that are called directly by your integration connector.  This is necessary if these client libraries are not available in their own jar file.
 
-The connector jar file (and any jar files for the dependent third party client libraries not included in your connector's jar file) need to be added to the [OMAG Server Platform](/concepts/omag-server-platform) class path.  The easiest way to do this is to copy the JAR files into the `lib` directory of your OMAG Server Platform's [install directory](/education/tutorials/installing-egeria-tutorial).
+The connector jar file (and any jar files for the dependent third party client libraries not included in your connector's jar file) need to be added to the [OMAG Server Platform](/concepts/omag-server-platform) class path.  The easiest way to do this is to copy the JAR files into the `extra` directory of your OMAG Server Platform's [assembly](/education/tutorials/building-egeria-tutorial/overview).
 
 Once you have installed the connector, configure it in the integration daemon, connected to a metadata access store.
 

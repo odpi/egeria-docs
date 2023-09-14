@@ -1,14 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-[Gradle :material-dock-window:](https://gradle.org/){ target=gradle } is used to build the following repositories:
-
-* egeria.git - main Egeria libraries.
-* egeria-dev-projects.git - utilities and connectors for developers to use and develop further.
-
-The Gradle processing works through the project modules. Each module has a `build.gradle` file that defines the artifact, its dependencies and any special processing that the module builds. The top-level `build.gradle` file at the root of the repository's source code directory structure controls the overall process.
-
-Gradle runs the build in parallel threads so be sure any test cases are independent of one another.
+The [Gradle :material-dock-window:](https://gradle.org/){ target=gradle } processing works through the project modules. Each module has a `build.gradle` file that defines the artifact, its dependencies and any special processing that the module builds. The top-level `build.gradle` file at the root of the repository's source code directory structure controls the overall process. It runs the build in parallel threads to speed up the process of the build, but may take many cycles of your machine's capacity.  When it is running, it may be a good time for a break!
 
 !!! tip "Maven repositories"
     This processing includes locating and downloading external libraries and dependencies, typically from an online open source repository called Maven Central and our snapshot repository on https://oss.sonatype.org, so make sure you are online when you run the build.

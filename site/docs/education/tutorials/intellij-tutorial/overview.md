@@ -9,7 +9,7 @@ See the overview video of IntelliJ on its homepage.
 
 ## Managing your IntelliJ environment
 
---8<-- "docs/education/tutorials/intellij-tutorial/task-installing-intellij.md"
+--8<-- "snippets/tasks/task-installing-intellij.md"
 --8<-- "docs/education/tutorials/intellij-tutorial/task-loading-egeria-into-intellij.md"
 --8<-- "docs/education/tutorials/intellij-tutorial/task-building-egeria-in-intellij.md"
 --8<-- "docs/education/tutorials/intellij-tutorial/task-installing-egeria-via-intellij.md"

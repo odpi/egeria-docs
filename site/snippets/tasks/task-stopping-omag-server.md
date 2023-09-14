@@ -1,12 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Activating OMAG servers in the OMAG server platform
+### Stopping OMAG servers in the OMAG Server Platform
 
-Once you have finished [calling the open metadata and governance APIs](/education/tutorials/omag-server-tutorial/task-calling-omag-apis)
-you can stop your server in the
-[OMAG Server Platform](/concepts/omag-server-platform)
-using the following command (this is command **8.** in Postman).
+Once you have finished calling the open metadata and governance APIs you can stop your server in the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is command **8.** in Postman).
 
 ```
 POST https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance
@@ -51,7 +48,7 @@ Sun Jun 11 21:52:43 BST 2023 myMetadataServer Shutdown OMAG-ADMIN-0006 The myMet
 Sun Jun 11 21:52:43 BST 2023 myMetadataServer Shutdown OMRS-AUDIT-0016 The listener thread for the OMRS Topic Connector for topic myMetadataServer.openmetadata.repositoryservices.enterprise.myMetadataServer.OMRSTopic has shutdown
 ```
 
-Even though the server has stopped, the platform is still running and it is possible to query the platform about the server.  The next command queries the status of the server (this is command **9.** in Postman).
+Even though the server has stopped, the platform is still running, and it is possible to query the platform about the server.  The next command queries the status of the server (this is command **9.** in Postman).
 
 ```
 GET https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/status
@@ -76,14 +73,11 @@ You can see that it is not currently active and the times when it was active.
 }
 ```
 
-You can experiment by starting and stopping your server and trying this status command both while it is running and after it is stopped to see the different statuses.
+You can experiment by starting and stopping your server and trying this status command both while it is running, and after it is stopped to see the different statuses.
 
-!!! education "The platform operation services"
+!!! tip "The platform operation services"
     Explore the [Platform Services](/services/platform-services/overview) to discover more commands to monitor and control the OMAG Server Platform.
 
-## Next steps
-
-Now the OMAG Server has stopped, you can [shut down your OMAG Server Platform](/education/tutorials/omag-server-tutorial/task-stopping-omag-server-platform).
 
 --8<-- "snippets/abbr.md"
 

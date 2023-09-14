@@ -14,6 +14,9 @@ When the Maven command is run, it passes through the hierarchy of modules multip
 !!! tip "Maven repositories"
     This processing includes locating and downloading external libraries and dependencies, typically from an online open source repository called Maven Central. The directory where these external dependencies is stored locally is called `.m2`.
 
+??? tip "Installing Maven"
+    --8<-- "snippets/tasks/task-installing-maven.md"
+
 !! cli "Rebuild a module with Maven"
     From the module's directory issue command:
     ```shell

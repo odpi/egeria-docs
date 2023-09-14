@@ -5,7 +5,7 @@
 
 Now that the metadata server is started, it is possible to query the metadata.  
 
-Egeria offers many different REST APIs to retrieve and maintain metadata.  In this exercise it is not possible to try them all out.  The aim is to show an example of how metadata is retrieved.  The command below finds [assets](/concepts/asset).  Assets represent resources such as data sets and servers used by the organization.
+Egeria offers a choice REST APIs to retrieve and maintain metadata.  In this exercise it is not possible to try them all out.  The aim is to show an example of how metadata is retrieved.  The command below finds [assets](/concepts/asset).  Assets represent resources such as data sets and servers used by the organization.
 
 ```text
 POST https://localhost:9443/servers/myMetadataServer/open-metadata/access-services/asset-owner/users/peterprofile/assets/by-search-string?startFrom=0&pageSize=10
@@ -108,7 +108,7 @@ The results show there are two assets in the metadata repository - a database an
 }
 ```
 
-!!! education "Further APIs"
+!!! tip "Further APIs"
     * The [Open Metadata Access Services (OMASs)](/services/omas) show the range of APIs offered by Egeria.
     * [Finding Metadata](/guides/developer/finding-metadata/overview) explains how metadata retrieval requests work.
 

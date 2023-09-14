@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-The [egeria build process](/education/tutorials/building-egeria-tutorial/overview) creates the distribution files for Egeria in the `open-metadata-distribution/open-metadata-assemblies` module.   To see its contents, after a full gradle build completes, use the following `cd` command to change to its `build/distributions` directory:
+The [egeria build process](/education/tutorials/building-egeria-tutorial/overview) creates the distribution files for Egeria in the `open-metadata-distribution/omag-server-platform` module.   To see its contents, after a full gradle build completes, use the following `cd` command to change to its `build/distributions` directory:
 
 ```bash
 cd open-metadata-distribution/omag-server-platform/build/distributions
@@ -17,7 +17,7 @@ The distribution tar file is `{release}-distribution.tar.gz` or `egeria-platform
 egeria-platform-4.3-distribution.tar.gz
 ```
 
-Create a directory for the install and copy the tar file into it. The two commands shown below create an install directory in your home directory and then copies the egeria distribution file into it.
+Create a directory for Egeria and copy the tar file into it. The two commands shown below creates a directory in your home directory and then copies the egeria distribution file into it.
 
 ```bash
 mkdir ~/egeria-install
@@ -26,7 +26,7 @@ mkdir ~/egeria-install
 cp egeria*-distribution.tar.gz ~/egeria-install
 ```
 
-These next commands change to the new directory and lists its contents.
+This next command changes to the new directory.
 
 ```bash
 cd ~/egeria-install
@@ -49,7 +49,8 @@ cd egeria*gz
 ls
 ```
 ```bash
-Dockerfile      LICENSE         NOTICE          README.md       assembly        dist
+Dockerfile      LICENSE         NOTICE          
+README.md       assembly        dist
 ```
 As before, you may notice different files as Egeria evolves.
 
@@ -70,8 +71,8 @@ Under `platform` is a directory for the [OMAG Server Platform](/concepts/omag-se
 ls platform
 ```
 ```bash
-README.md                       data                            keystore.p12                    logs                            truststore.p12
-application.properties          extra                           lib                             omag-server-platform-4.3.jar
+README.md                  data       keystore.p12     logs                            truststore.p12
+application.properties     extra      lib              omag-server-platform-4.3.jar
 ```
 The `platform/lib` directory is where the jar files for connectors, samples and new registered services are installed.  It includes the connectors that are located in the `egeria.git` repository.
 ```bash
@@ -99,7 +100,7 @@ The `opt` and `etc` directories contain additional content that can used with th
 ls etc/reports
 ```
 ```bash
-README.md                       component-id-report.jar         database-report.jar             egeria-platform-report.jar
+README.md       component-id-report.jar         database-report.jar             egeria-platform-report.jar
 ```
 The `opt/content-packs` directory contains [Open Metadata Archives](/concepts/open-metadata-archive) that provide sample open metadata content.  The `README.md` describes their content.
 ```bash
@@ -117,9 +118,6 @@ The `/opt/sample-data` directory contains sample data that is used in various la
 ls /opt/sample-data/*
 ```
 ```bash
-README.md                                       database                                        old-market-drop-foot-weekly-measurements
-data-files                                      oak-dene-drop-foot-weekly-measurements
-mandy-chessell@Amandas-MacBook-Pro assembly % ls opt/sample-data/*
 opt/sample-data/README.md
 
 opt/sample-data/data-files:
@@ -135,4 +133,3 @@ week1.csv       week2.csv       week3.csv       week4.csv       week5.csv       
 
 Notice that each directory contains a `README.md` file that explains the content of the directory.
 
---8<-- "snippets/abbr.md"

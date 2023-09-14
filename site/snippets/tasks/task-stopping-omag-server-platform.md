@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Stopping the OMAG server platform
+### Stopping the OMAG Server Platform
 
 Once you have [Stopped your OMAG server](/education/tutorials/omag-server-tutorial/task-stopping-omag-server) you can stop the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is request **10.** in Postman).
 

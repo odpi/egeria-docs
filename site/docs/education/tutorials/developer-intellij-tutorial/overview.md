@@ -6,7 +6,7 @@
 This tutorial explains how to set up IntelliJ so that you can develop new connectors and clients for your organization.
 
 !!! tip "For developers wishing to contribute to Egeria"
-    Contributions to Egeria need to be made via a Pull Request (PR) from you own fork of the project.  There are detailed instructions on how to do this in the [Git and GitHub Tutorial](/education/tutorials/git-and-git-hub-tutorial/overview)
+    Contributions to Egeria need to be made via a Pull Request (PR) from you own fork of the project.  There are detailed instructions on how to do this in the [Git and GitHub Tutorial](/education/tutorials/git-and-git-hub-tutorial/overview/#using-git-and-github-when-making-a-contribution)
 
 ## Prerequisite tasks
 
@@ -15,11 +15,11 @@ This tutorial explains how to set up IntelliJ so that you can develop new connec
 
 ## Tutorial tasks
 
-1. Install IntelliJ
-2. Create a project for your code
-3. Set up an OMAG Server Platform
-4. Create test servers
-5. Start and stop servers
+1. [Install IntelliJ](#installing-intellij)
+2. [Create a project for your code](#create-intellij-project)
+3. [Set up an OMAG Server Platform](#set-up-omag-server-platform-in-intellij)
+4. [Create test servers](#create-test-servers)
+5. [Start and stop servers](#start-and-stop-servers)
 
 --8<-- "snippets/tasks/task-installing-intellij.md"
 
@@ -30,7 +30,6 @@ This tutorial explains how to set up IntelliJ so that you can develop new connec
 --8<-- "docs/education/tutorials/developer-intellij-tutorial/task-server-config-in-intellij.md"
 
 --8<-- "docs/education/tutorials/developer-intellij-tutorial/task-server-ops-in-intellij.md"
-
 
 
 ## What next?

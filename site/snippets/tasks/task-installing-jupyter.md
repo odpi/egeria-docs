@@ -22,4 +22,4 @@ Alternatively, if you are running macOS you can use HomeBrew.
     brew install jupyterlab
     ```
 
-
+Once JupyterLab is installed it can be run with the `jupyter lab` command.

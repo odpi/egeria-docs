@@ -12,7 +12,6 @@ Egeria has the following repositories:
 
 | Repository | Purpose |
 | --- | --- |
-| Repository | Purpose |
 | [`egeria` :material-github:](https://github.com/odpi/egeria){ target=gh } | Egeria core |
 | [`egeria-docs` :material-github:](https://github.com/odpi/egeria-docs){ target=gh } | Documentation repository for the Egeria project. |
 | [`egeria-charts` :material-github:](https://github.com/odpi/egeria-charts){ target=gh } | Helm chart repository |

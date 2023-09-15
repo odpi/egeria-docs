@@ -22,6 +22,9 @@ It is a simple command to move an OMAG Server from one platform instance to anot
 
 ![OMAG Server deployment choices](/concepts/egeria-operations-server-choices-no-description.svg)
 
+!!! info "Container platform deployment"
+    Alternatively, for cloud or hybrid deployment scenarios you may want to move some of the platform responsibilities to orchestrated container hosting environment like Kubernetes. In such a scenario, OMAG servers run as individual containers. To visualize this looking at the topology picture at the beginning, the blue rounded boxes are Kubernetes clusters and orange circles are OMAG servers running as containers. Read more about this approach in [Container platform deployment](#container-platform-deployment) section below.
+
 Different types of technology need different types of integration and Egeria has OMAG Servers to match. Each type of OMAG Server is focused on the integration of a specific type of tool, engine or platform:
 
 ![Types of OMAG Servers](/concepts/types-of-omag-servers.svg)
@@ -79,6 +82,16 @@ This is a checklist of planning tasks for the deployment of your OMAG Server Pla
 - [ ] Consider where you need to have [multiple instances of the same server running to give continuous availability](/guides/admin/guide).
 - [ ] Plan your use of the [event bus](/concepts/event-bus): which technology to use (Apache Kafka is the default) and the names of the topics that your OMAG Servers will use.
 - [ ] Design the [governance zones](/concepts/governance-zone) that you want to use to control the visibility of assets to different communities of users - or processes.
+
+## Container platform deployment
+
+Egeria software architecture adopts well the microservice architecture principles. OMAG server can be configured to provide specific capabilities and context bound metadata services. Container platform deployment style complements this with the runtime aspects allowing you to run OMAG servers independently as isolated, stateless and immutable containers.
+
+![Container platform](/guides/planning/runtime/container-deployment.svg)
+
+Kubernetes (or k8s) is de-facto standard platform for deploying, scaling and managing containerized applications. To support this deployment model better, Egeria offers implementation that is designed to start server in a container more efficiently complying with the principles mentioned above. We call this OMAG server starter.
+
+> It is very important to note that wether you choose to run server on a native OMAG platform or in a stand alone container runtime, the same functional principles apply - all servers are interoperable and comply to the open metadata exchange protocols.
 
 ## More detail to follow...
 

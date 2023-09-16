@@ -15,6 +15,6 @@ Metadata access servers provide access to open metadata for [governance servers]
 These are the different types:
 
 - [Metadata Access Point](/concepts/metadata-access-point) - a [Cohort Member](/concepts/cohort-member) with support for the [Open Metadata Access Services (OMASs)](/services/omas).
-- [Metadata Access Store](/concepts/metadata-access-store) - a *Metadata Access Point* with a native metadata repository.
+- [Metadata Access Store](/concepts/metadata-access-store) - a *Metadata Access Server* with a native metadata repository.
 
 --8<-- "snippets/abbr.md"

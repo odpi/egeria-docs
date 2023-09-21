@@ -19,7 +19,7 @@ At the end of this tutorial you will be able to perform the following tasks.
   
 ## Prerequisite Tasks
 
-* [Download and build Egeria](../building-egeria-tutorial)
+* [Download and build Egeria](/education/tutorials/building-egeria-tutorial/overview)
 * [Familiarize yourself with the Postman test tool](/education/tutorials/postman-tutorial/overview)
 
 ## Tutorial Tasks

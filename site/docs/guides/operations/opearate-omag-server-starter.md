@@ -4,7 +4,7 @@ This guide focuses on providing instructions how to operate server as stand-alon
 
 With OMAG Server Starter each server runs in its own dedicated JVM process. All the required parameters to start a server are always determined up-front and supplied as configuration properties to the application. This approach is key to achieve immutable configuration state in case of running containerized deployment.
 
-> Quick jump to installation steps
+> Quick jump to installation steps (coming soon)
 
 ## Running OMAG Server Starter
 

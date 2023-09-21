@@ -89,7 +89,7 @@ Egeria software architecture adopts well the microservice architecture principle
 
 ![Container platform](/guides/planning/runtime/container-deployment.svg)
 
-Kubernetes (or k8s) is de-facto standard platform for deploying, scaling and managing containerized applications. To support this deployment model better, Egeria offers implementation that is designed to start server in a container more efficiently complying with the principles mentioned above. We call this OMAG server starter.
+Kubernetes (or k8s) is de-facto standard platform for deploying, scaling and managing containerized applications. To support this deployment model better, Egeria offers implementation that is designed to start server in a container more efficiently complying with the principles mentioned above.
 
 > It is very important to note that wether you choose to run server on a native OMAG platform or in a stand alone container runtime, the same functional principles apply - all servers are interoperable and comply to the open metadata exchange protocols.
 

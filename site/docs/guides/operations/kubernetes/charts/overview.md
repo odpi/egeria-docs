@@ -9,10 +9,11 @@ See [Helm](../helm.md) for information on configuring Helm to be able to access 
 
 ## Available Charts
 
-* [base](base.md) - creates a simple Egeria environment with a single metadata server. Includes the Ecosystem UI so that metadata can be searched, browsed.
+* [base](base.md) - Creates a simple Egeria environment with a single metadata server. Includes the Ecosystem UI so that metadata can be searched, browsed.
 * [odpi-egeria-lab](lab.md) - Demo scenario for 'Coco Pharmaceuticals'. Multiple platorms, metadata repositories, cohorts. Demonstration script via Juypter notebooks. Includes both the Ecosystem UI & business UI .
 * [cts](cts.md) - Supports testing repository connectors using our Conformance Test Suite. Can be configured to support other repositories via simple values.
 * [pts](pts.md) - Performance test suite to aid in measuring the performance of repository connectors.
+* [server](server.md) - Demonstrates simple OMAG Server Starter configuration and deployment.
 
 ## Issues & Advanced usage: 
 

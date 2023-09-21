@@ -154,6 +154,7 @@ nav:
                   - Coco Pharmaceuticals Lab: guides/operations/kubernetes/charts/lab.md
                   - CTS Chart: guides/operations/kubernetes/charts/cts.md
                   - PTS Chart: guides/operations/kubernetes/charts/pts.md
+                  - Server Starter Chart: guides/operations/kubernetes/charts/server.md
               - Container Images: guides/operations/kubernetes/container-images.md
               - Custom Deployment: guides/operations/kubernetes/custom-deployment.md
               - Egeria Operator: guides/operations/kubernetes/operator.md

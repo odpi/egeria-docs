@@ -141,7 +141,7 @@ nav:
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
           - Operate OMAG Server Platform: guides/operations/overview.md
-          - Operate OMAG Server Starter: guides/operations/opearate-omag-server-starter.md
+          - Operate OMAG Server Starter: guides/operations/operate-omag-server-starter.md
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md

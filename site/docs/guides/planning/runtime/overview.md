@@ -23,7 +23,7 @@ It is a simple command to move an OMAG Server from one platform instance to anot
 ![OMAG Server deployment choices](/concepts/egeria-operations-server-choices-no-description.svg)
 
 !!! info "Container platform deployment"
-    Alternatively, for cloud or hybrid deployment scenarios you may want to move some of the platform responsibilities to orchestrated container hosting environment like Kubernetes. In such a scenario, OMAG servers run as individual containers. To visualize this looking at the topology picture at the beginning, the blue rounded boxes are Kubernetes clusters and orange circles are OMAG servers running as containers. Read more about this approach in [Container platform deployment](#container-platform-deployment) section below.
+    Alternatively, for cloud or hybrid deployment scenarios, you may want to offload some of the platform responsibilities to an orchestrated container hosting environment such as Kubernetes. In such a scenario, OMAG servers run as individual containers. To visualise this, look at the topology image at the beginning: The blue rounded boxes are Kubernetes clusters and the orange circles are OMAG servers running as containers. Read more about this approach in the [Container Platform Deployment](#container-platform-deployment) section below.
 
 Different types of technology need different types of integration and Egeria has OMAG Servers to match. Each type of OMAG Server is focused on the integration of a specific type of tool, engine or platform:
 
@@ -93,7 +93,7 @@ Kubernetes (or k8s) is de-facto standard platform for deploying, scaling and man
 
 > It is very important to note that wether you choose to run server on a native OMAG platform or in a stand alone container runtime, the same functional principles apply - all servers are interoperable and comply to the open metadata exchange protocols.
 
-## More detail to follow...
+## More detail to follow
 
 The text above is a very high level overview of the planning process. More detail will be added to this guide as time permits.
 

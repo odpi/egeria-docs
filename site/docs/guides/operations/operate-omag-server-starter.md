@@ -147,9 +147,9 @@ All other settings can be configured by setting the environment variables that c
 To run OMAG Server as a metadata repository using the sample configuration, run the following command:
 
 ```bash
-docker run --name omag-server -p 9443:9443 --env JAVA_APP_JAR="server/omag-server-4.3.jar" --env LOADER_PATH="/deployments/server/lib" --env OMAG_SERVERCONFIGFILE="classpath:samples/metadata-repository-server.json" quay.io/odpi/egeria:4.3
+docker run --name omag-server -p 9443:9443 --env JAVA_APP_JAR="/deployments/server/omag-server-4.3.jar" --env LOADER_PATH="/deployments/server/lib" --env OMAG_SERVERCONFIGFILE="classpath:samples/metadata-repository-server.json" quay.io/odpi/egeria:4.3
 ```
 
 ### Run in Kubernetes
 
-To run in a Kubernetes environment, you need to make certain choices and properly plan the deployment resources. To show how easy a single server deployment can be, we have created a [`omag-server`](https://github.com/odpi/egeria-charts/tree/main/charts/egeria-server){ target=gh } Helm chart. It can be used as a quick reference for defining Kubernetes deployment and configuration resources, and for planning more complex deployments.
+To run in a Kubernetes environment, you need to make certain choices and properly plan the deployment resources. To show how easy a single server deployment can be, we have created a [`egeria-server`](/guides/operations/kubernetes/charts/server/) Helm chart. It can be used as a quick reference for defining Kubernetes deployment and configuration resources, and for planning more complex deployments.

@@ -1,6 +1,6 @@
 # Operate OMAG Server Starter
 
-This guide focuses on providing instructions for running the server as standalone application process. This deployment option gives you low level over the application runtime and requires direct interaction with your IT infrastructure.
+This guide focuses on providing instructions for running the server as standalone application process. This deployment option gives you a low level control over the application runtime and requires direct interaction with your IT infrastructure.
 
 With OMAG Server Starter, each server runs in its own dedicated JVM process. All the required parameters required to start a server are always pre-defined and delivered to the application as configuration properties. This approach is key to achieving an immutable configuration state when running containerised deployments.
 

@@ -15,13 +15,13 @@ We are currently in the process of rewriting our Dojos. There are three dojos av
 
 * [Day 1](/education/egeria-dojo/running-egeria/running-egeria-intro) - How to run Egeria.
 * [Day 2](/education/egeria-dojo/developer/overview) - How to build connectors and utilities that use Egeria.
-* [Day 3](/education/egeria-dojo/metadata-governance/overview) - How to manage and maintain yor metadata.
+* [Day 3](/education/egeria-dojo/metadata-governance/overview) - How to manage and maintain your metadata.
 
 You can still also see the [Original Egeria Dojo](/getting-started/egeria-dojo), but it is not recommended that you rely on it since it is no longer tested.  Instead, look for future days of the updated dojo.
 
 ## Hands on Labs
 
-The [Hands on Open Metadata Labs](/education/open-metadata-labs/overview) provide an interactive environment that allow you to experiment with different capabilities of Egeria.  They are organized by role so you can select the roles of interest to you.
+The [Hands on Open Metadata Labs](/education/open-metadata-labs/overview) provide an interactive environment that allows you to experiment with different capabilities of Egeria.  They are organized by role so you can select the roles of interest to you.
 
 ## Individual tutorials
 

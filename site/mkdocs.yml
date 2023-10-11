@@ -571,6 +571,10 @@ nav:
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
                   - My Profile: services/omvs/my-profile/overview.md
+                  - Collection Manager: services/omvs/collection-manager/overview.md
+                  - Notification Manager: services/omvs/notification-manager/overview.md
+                  - Notification Inbox: services/omvs/notification-inbox/overview.md
+                  - Project Manager: services/omvs/project-manager/overview.md
                   - Glossary Author: services/omvs/glossary-author/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Workflow: services/omvs/glossary-workflow/overview.md

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Digital Service Lifecycle
+## Digital Service Lifecycle
 
 Every **[digital service](/practices/digital-services/)** has a lifecycle that takes it from
 a good idea, to a running service that is repeatedly enhanced until the service is decommissioned and shutdown.

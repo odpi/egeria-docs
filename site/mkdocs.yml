@@ -790,6 +790,7 @@ nav:
       - Governance Maturity Model: practices/maturity-model/overview.md
       - Governance Roles: practices/roles/overview.md
       - Digital Services: practices/digital-services/overview.md
+      - Data Privacy Pack: practices/data-privacy-pack/overview.md
       - Common Data Definitions:
           - Overview: practices/common-data-definitions/overview.md
           - Anatomy of a Glossary: practices/common-data-definitions/anatomy-of-a-glossary.md

@@ -435,6 +435,7 @@ nav:
               - Dynamic Integration Groups: types/4/0464-Dynamic-Integration-Groups.md
               - Duplicate Processing: types/4/0465-Duplicate-Processing.md
               - Incident Reporting: types/4/0470-Incident-Reporting.md
+              - Context Events: types/4/0475-Context-Events.md
               - Licenses: types/4/0481-Licenses.md
               - Certifications: types/4/0482-Certifications.md
               - Terms and Conditions: types/4/0483-Terms-And-Conditions.md
@@ -496,6 +497,7 @@ nav:
               - Solution Implementation: types/7/0737-Solution-Implementation.md
               - Solution Blueprints: types/7/0740-Solution-Blueprints.md
               - Data Passing: types/7/0750-Data-Passing.md
+              - Ultimate Sources and Destinations: types/7/0755-Ultimate-Source-Destination.md
               - Business Lineage: types/7/0760-Business-Lineage.md
               - Lineage Mapping: types/7/0770-Lineage-Mapping.md
               - Code Analysis: types/7/0780-Code-Analysis.md
@@ -790,7 +792,7 @@ nav:
       - Governance Maturity Model: practices/maturity-model/overview.md
       - Governance Roles: practices/roles/overview.md
       - Digital Services: practices/digital-services/overview.md
-      - Data Privacy Pack: practices/data-privacy-pack/overview.md
+      - Data Privacy: practices/data-privacy-pack/overview.md
       - Common Data Definitions:
           - Overview: practices/common-data-definitions/overview.md
           - Anatomy of a Glossary: practices/common-data-definitions/anatomy-of-a-glossary.md

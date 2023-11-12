@@ -7,25 +7,25 @@ A [Governance action](/concepts/governance-action) describes some processing tha
 
 ![UML](0463-Governance-Actions.svg)
 
-## GovernanceAction
+## GovernanceAction entity
 
-A *GovernanceAction* entity is used to control the execution of a single governance action instance. 
+A *GovernanceAction* entity is an [*Action*](/types/1/0137-Actions) used to control the execution of a single call to a [governance service](/concepts/governance-service). 
 
-The creation of a GovernanceAction entity typically triggers the execution of a [governance service](/concepts/governance-service) in a [governance engine](/concepts/governance-engine).
+The creation of a *GovernanceAction* entity typically triggers the execution of a [governance service](/concepts/governance-service) in a [governance engine](/concepts/governance-engine).
 As the governance service runs, the governance engine adds information to the GovernanceAction describing the
 status of the governance service and the actions taken against specific [resources](/concepts/resources) (see [TargetForAction](#targetforaction)).
 Once the action is complete,
 the GovernanceAction acts as an audit record for the actions taken.
 
-## TargetForAction
+## TargetForAction relationship
 
 The *TargetForAction* relationship links the governance action to the [action targets](/concepts/action-target) for the governance service that will run.  The governance service can update the status of its processing of the action targets in the properties of each TargetForAction relationship.
 
-## GovernanceActionRequestSource
+## GovernanceActionRequestSource relationship
 
 The *GovernanceActionRequestSource* relationship links the first GovernanceAction in a process to the cause/originator of the action.  This could be, for example, a [governance action process](/concepts/governance-action-process), another governance action or a [RequestForActionAnnotation](/types/6/0690-Request-for-Action).
 
-## GovernanceActionStatus
+## GovernanceActionStatus enumeration
 
 The *GovernanceActionStatus* indicates the execution status of the governance action.
 
@@ -42,7 +42,7 @@ The *GovernanceActionStatus* indicates the execution status of the governance ac
 | FAILED       |  13 | Failed | The governance action service for the governance action failed to execute.                             |
 | OTHER        |  99 | Other | Undefined or unknown governance action status.                                                         |
 
-## NextGovernanceAction
+## NextGovernanceAction relationship
 
 The GovernanceAction is also linked to any follow-on activities through the *NextGovernanceAction* relationship, so it is possible to trace through a chain of actions. The *guard* describes the [output guard](/concepts/guard) produced by the previous action(s) that will trigger (or triggered) the next action(s).  
 

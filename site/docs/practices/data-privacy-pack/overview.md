@@ -1,13 +1,13 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# The Egeria Data Privacy Pack - proposal
+# Data Privacy
 
-Egeria's **Data Privacy Pack** provides best practices and related content to assist an organization in creating a data privacy program and implementing it across its operations.  The contents are written for the organization's **[privacy officer](/practices/roles/#privacy-officer-role)**.  This is the person responsible for defining the privacy policies and ensuring they are implemented and followed.
+This page describes best practices and related content to assist an organization in creating a data privacy program and implementing it across its operations.  The contents are written for the organization's **[privacy officer](/practices/roles/#privacy-officer-role)**.  This is the person responsible for defining the privacy policies and ensuring they are implemented and followed.
 
 ## Why is a data privacy program important?
 
-Data privacy is being written into law in many regions today and this legislation/regulation is both broadening the scope of data covered and increasing the penalties for non-compliance. Being able to manage your organization so people's rights relating to their data is a basic capability for doing business in many places.
+Data privacy is written into law in many regions today and this legislation/regulation is both broadening the scope of data covered and increasing the penalties for non-compliance. Being able to manage your organization so people's rights relating to their data is a basic capability for doing business in many places.
 
 More importantly, but often forgotten, is that an organization's attitude to the wishes of its customers, employees and business partners over the processing of their data shows clearly in the way the organization operates. The actions taken to ensure data privacy lead to higher levels of customer service, better internal efficiency and a more respectful working environment for employees by creating transparency in the way the organization operates and eliminating unnecessary processing and storing of data.
 
@@ -53,7 +53,7 @@ The data privacy officer needs to appoint owners of digital services for each bu
 
 Each digital service will follow a [lifecycle](/practices/digital-services/digital-service-lifecycle) for how it is developed from an initial idea, to a working service and then operated and improved until it is decommissioned.  Every organization will have its own definition of the lifecycle, but for purposes of illustration, the Egeria community has developed a simple lifecycle that can be used to show how data privacy controls can be introduced.
 
-Figure 1 shows this simple lifecycle with the data privacy controls overlaid.  Details of these controls are described below the figure.  the aim is to gather information about the data use in a digital service to demonstrate compliance as the digital service is developed in the most cost effective manner and use the associated processes to design, develop, deploy and operate the digital service in a way that ensures data privacy is respected.
+Figure 1 shows this simple lifecycle with the data privacy controls overlaid.  Details of these controls are described below the figure.  The aim is to gather information about the data use in a digital service to demonstrate compliance as the digital service is developed in the most cost effective manner and use the associated processes to design, develop, deploy and operate the digital service in a way that ensures data privacy is respected.
 
 ![Figure 1](digital-service-lifecycle-with-data-privacy-controls.png)
 > Figure 1: The additional steps needed to manage data privacy throughout the digital service's lifecycle
@@ -80,7 +80,7 @@ is a data processor.)
 Figure 2 shows the people involved at different stages of the digital lifecycle.  Notice that some roles are involved in multiple stages.  However, when work is going on, these people come together as a team to complete the work.  Some of these teams meet regularly.  Others meet as necessary.
 
 ![Figure 2](digital-service-lifecycle-with-data-privacy-roles.png)
-> Figure 2: The additional steps needed to manage data privacy throughout the digital service's lifecycle
+> Figure 2: The additional steps needed to manage data privacy throughout the digital service's lifecycle with the people involved
 
 
 --8<-- "snippets/abbr.md"

@@ -14,10 +14,9 @@ A [governance engine](/concepts/governance-engine) is a [software capability](/t
 Open metadata recognizes three types of governance engine:
 
 * *GovernanceActionEngine* - [Governance action engines and services](/concepts/governance-action-engine) support the active governance of metadata and the resources they represent.  There are different types of governance action engines/services that are defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
-
 * *[OpenDiscoveryEngine](/types/6/0601-Open-Discovery-Engine)* - [Discovery engines and services](/concepts/open-discovery-engine) support the analysis of [digital resources](/concepts/resource).  The results of this analysis are stored in a [discovery analysis report](/types/6/0605-Open-Discovery-Analysis-Reports) chained off of the corresponding [Asset](/types/0/0010-Base-Model#asset) metadata element. The interfaces for discovery are found in the  [Open Discovery Framework (ODF)](/frameworks/odf/overview).  The types for the open discovery engines are shown on model .
-
 * *RepositoryGovernanceEngine* - [Repository governance engines and services](/concepts/repository-governance-engine) support the maintenance of repository level concerns, such as monitoring audit logs and maintaining [open metadata archives](/concepts/open-metadata-archive) that are defined in the [Open Metadata Repository Services (OMRS)](/services/omrs).
+* *EventActionEngine* - event action engines and services support the automated management of [context events](/types/4/0475-Context-Events) and their associated [actions](/types/1/0137-Actions).  Note - this type of engine is still in development.
 
 ## SupportedGovernanceService relationship
 
@@ -40,6 +39,7 @@ The subtype of the governance service linked via the *SupportedGovernanceService
 * A *GovernanceActionService* is linked to a *GovernanceActionEngine*.
 * An *OpenDiscoveryService* is linked to an *OpenDiscoveryService*.
 * A *RepositoryGovernanceService* is linked to a *RepositoryGovernanceEngine*.
+* An *EventActionService* is linked to a *EventActionEngine*.
 
 
 ??? education "Further information"

@@ -37,6 +37,7 @@ In a similar way to the glossary ([area 3](/types/3)), this information is autho
 * **[0464 Dynamic Integration Groups](0464-Dynamic-Integration-Groups.md)**
 * **[0465 Duplicate Processing](0465-Duplicate-Processing.md)**
 * **[0470 Incident Reporting](0470-Incident-Reporting.md)**
+* **[0475 Context Events](0475-Context-Events.md)**
 * **[0481 Licenses](0481-Licenses.md)**
 * **[0482 Certifications](0482-Certifications.md)**
 * **[0483 Terms and Conditions](0483-Terms-And-Conditions.md)**

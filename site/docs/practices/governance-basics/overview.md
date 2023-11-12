@@ -43,7 +43,7 @@ The organization can spend the stakeholder's investment on:
 * Resources to support their work (see **Note**),
 * Paying a business partner to perform some of the work that is needed.
 
->**Note**: The use of the term "resource" in this model is intended to cover a very broad definition. Examples of resources include buildings, computers, software packages, IT systems, processes, data stores,analytical models, digital locations, intellectual property.
+>**Note**: The use of the term "resource" in this model is intended to cover a very broad definition. Examples of resources include buildings, computers, software packages, IT systems, processes, data stores, analytical models, digital locations, intellectual property.
 
 An organization can generate income from providing goods and/or services in exchange for some sort of feedback and reward (payment). These goods and/or services typically involve the organization creating more resources using its employees, existing resources and business partners.
 
@@ -83,7 +83,7 @@ The fluidity of data creates 2 challenges:
 * What are the dividing lines between different data resources?
 * Who is responsible for the quality and protection of data when there are so many copies?
 
-In addition, the original meaning of data is often lost. Data is created in a specific context(such as an application or from a specific sensor).  This context means there are certain assumptions made about the precision, quality, timeliness and completeness of the data.
+In addition, the original meaning of data is often lost. Data is created in a specific context (such as an application or from a specific sensor).  This context means there are certain assumptions made about the precision, quality, timeliness and completeness of the data.
 
 As the data is copied and sent to different destinations, this context needs to be captured so it can be used to validate whether the data can be used in a new context.
 

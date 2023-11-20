@@ -14,11 +14,9 @@
 
 ## Overview
 
-[Apache Atlas](https://atlas.apache.org) is a metadata catalog originally designed for the Hadoop ecosystem.  It offers integration services called Hooks and Bridges to capture the schemas and data sets of data platforms such as [Apache Hive](https://hive.apache.org/), [Apache HBase](https://hbase.apache.org/) and [Apache Hadoop Distributed File System (HDFS)](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html) along with the processes for creating and maintaining data sets on these platforms.  The metadata descriptions of these data sets and processes are linked together using lineage relationships, allowing an understanding of how data is flowing through a Hadoop deployment.  Apache Atlas also supports glossaries and a tagging system that can be used both in searches and to control access to data through Apache Ranger (using the TagSync integration).
+---8<-- "snippets/systems/apache-atlas-intro.md"
 
-In recent years, Apache Atlas has been embedded in popular data catalogs such as [Microsoft Purview](https://azure.microsoft.com/en-gb/products/purview/) and [Atlan](https://atlan.com/) increasing the interest in being able to integrate with this metadata catalog.
-
-Reasons for integrating Apache Atlas into a wider open metadata ecosystem include:
+Reasons for integrating Apache Atlas metadata into a wider open metadata ecosystem include:
 
 * To push glossaries and classification definitions to Apache Atlas so its users get to use the same definitions for the governance of their data as other parts of the organization.  This may simply to help start up a new Apache Atlas deployment, or as part of a broader consistency initiative.
 * To share glossaries and classification definitions that have been developed by an Apache Atlas user community in order to seed other projects and tools.

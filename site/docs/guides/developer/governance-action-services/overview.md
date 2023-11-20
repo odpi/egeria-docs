@@ -45,7 +45,7 @@ The methods of the context are colour-coded.  The methods shown in white are ava
 The methods in blue are addition services offered to governance action services implementing a *watchdog* capability:
 
 * registerListener - requests that it is called whenever certain open metadata events occur.  It is able to specify a range of conditions from receiving all event, events for particular actions (such as creation of a new metadata element), events for particular metadata types or events on particular instances.
-* initiateGovernanceAction - requests that a new [governance action](/concepts/governance-action) is run.
+* initiateGovernanceAction - requests that a new [engine action](/concepts/engine-action is run.
 * initiateGovernanceActionProcess - requests that a new [governance action process](/concepts/governance-action-process) is run.
 
 The methods in purple are additional services offered to governance action services implementing a *provisioning* capability to record lineage:
@@ -106,7 +106,7 @@ The connector provider for your governance action service provides the factory m
 
 Below is the implementation of the connector provider for the [Move Copy File Provisioning Governance Action Service](/connectors/governance-action/move-copy-file-provisioning-governance-action-service).  This is a highly configurable governance action service that can be instructed to move, copy or delete a file, and has different styles of lineage it can create.  The action it performs is supplied in the governance request type.  The source file and destination folder can be supplied either through the request parameters or as action targets.  There are two guards: "provisioning-complete" for success and "provisioning-failed" if something went wrong.
 
-The methods of the connector provider enables a tool that is configuring [governance actions](/concepts/governance-action) or [governance action processes](/concepts/governance-action-process) to query the capabilities of the corresponding governance action service.
+The methods of the connector provider enables a tool that is configuring [engine actions](/concepts/engine-action or [governance action processes](/concepts/governance-action-process) to query the capabilities of the corresponding governance action service.
 
 ```java
 public class MoveCopyFileGovernanceActionProvider extends GovernanceActionServiceProviderBase

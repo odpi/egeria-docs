@@ -25,8 +25,8 @@ The *ExecutionPointDefinition* entities are created during the design of the gov
 
 The classifications *ControlPoint*, *VerificationPoint* and *EnforcementPoint* are used to label entities describing implementation components such as [Processes](/types/0/0010-Base-model) with the type of execution point and its qualified name that they implement. They are often found on elements such as:
 
-* [Governance Action Types](/types/4/0462-Governance-Action-Types)
-* [Governance Actions](/types/4/0463-Governance-Actions)
+* [Governance Action Process Steps](/types/4/0462-Governance-Action-Processes)
+* [Engine Actions](/types/4/0463-Engine-Actions)
 
 These classifications can be used to drive additional audit logging when the implementation component is running. Logging information about the activities of these components with the qualifiedName of the execution point definition makes it easier to correlate the activity with the governance definitions. 
 

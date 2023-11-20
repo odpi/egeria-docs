@@ -16,7 +16,7 @@ There are many factors that influence who should have access to a digital servic
 
 Egeria enables all of this information to be assembled and linked together at multiple levels - for example a database column may be linked to a glossary term called employee-salary that is in turn classified as sensitive personal information (SPI).
 
-Security managers, such as Apache Ranger, however just needs to know that the column is SPI. So [governance actions](/concepts/governance-action) convert this complex model into something much more operationally-focused in the form of *security tags*.  The security tags attached to the schemas are all that needs to be distributed to the security managers.
+Security managers, such as Apache Ranger, however just needs to know that the column is SPI. So [engine actions](/concepts/engine-action convert this complex model into something much more operationally-focused in the form of *security tags*.  The security tags attached to the schemas are all that needs to be distributed to the security managers.
 
 ## Representing security tags
 

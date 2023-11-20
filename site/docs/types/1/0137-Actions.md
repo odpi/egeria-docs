@@ -10,7 +10,7 @@ In an ideal world, most governance activity is automated by the [Governance Engi
 
 ## Action entity
 
-The *Action* entity provides a common base class for the *ToDo* entity and the [*GovernanceAction*](/types/4/0463-Governance-Actions) entity.
+The *Action* entity provides a common base class for the *ToDo* entity and the [*EngineAction*](/types/4/0463-Egnine-Actions) entity.
 
 ## ToDo entity
 

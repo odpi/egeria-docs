@@ -97,7 +97,7 @@ The values for the *MembershipStatus* enumeration are:
 * *Obsolete* - The membership must no longer be used.
 * *Other* - Another membership status that is set up in the *userDefinedStatus* attribute.
 
-They can be used to support a simple stewardship workflow.  For example, consider a [governance action](/concepts/governance-action) that scans through the [assets](/concepts/asset) examining each one's [Retention](/types/4/0422-Governance-Action-Classifications) classification.  If the values in the classification indicate that the [resource](/concepts/resource) that it represents should be archived, it may link the asset into a collection.
+They can be used to support a simple stewardship workflow.  For example, consider an [engine action](/concepts/engine-action that scans through the [assets](/concepts/asset) examining each one's [Retention](/types/4/0422-Governance-Action-Classifications) classification.  If the values in the classification indicate that the [resource](/concepts/resource) that it represents should be archived, it may link the asset into a collection.
 
 ![Candidate assets for archive](archive-candidate-collection.svg)
 

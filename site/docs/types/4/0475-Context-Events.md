@@ -18,7 +18,7 @@ Similarly, where blips are observed, context events can be used to provide place
 
 Events may be managed by a [*Project*](/types/1/0130-Project), [*Actor*](/types/1/0110-Actors) or [*Community*](/types/1/0140-Communities).  These are linked to the *ContextEvent* entity using the [*AssignmentScope*](/types/1/0120-Assignment-Scopes) relationship.
 
-When events are being managed, often actions are initiated.  These actions can be linked to the context events using the [*Actions*](/types/1/0137-Actions) relationship.  For example, a person may be sent a [*ToDo*](/types/1/0137-Actions) that requests that they read some documentation, acknowledge receipt of a warning, or approve additional resources.  These actions may also include an automated response that is executed via a [*GovernanceAction*](/types/4/0463-Governance-Actions).
+When events are being managed, often actions are initiated.  These actions can be linked to the context events using the [*Actions*](/types/1/0137-Actions) relationship.  For example, a person may be sent a [*ToDo*](/types/1/0137-Actions) that requests that they read some documentation, acknowledge receipt of a warning, or approve additional resources.  These actions may also include an automated response that is executed via a [engine action](/types/4/0463-Engine-Actions).
 
 ![UML](0475-Context-Events.svg)
 

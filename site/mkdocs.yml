@@ -54,14 +54,17 @@ nav:
                   - Basic File Connector: connectors/resource/basic-file-resource-connector.md
                   - CSV File Connector: connectors/resource/csv-file-resource-connector.md
                   - Data Folder Connector: connectors/resource/data-folder-resource-connector.md
+              - System:
+                  - Apache Atlas REST Connector: connectors/system/apache-atlas-rest-connector.md
+              - Discovery Services:
+                  - Apache Atlas Discovery Service: connectors/discovery/apache-atlas-discovery-service.md
               - Governance Actions:
                   - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
                   - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
                   - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
                   - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/open-lineage-janus-connector.md
               - Integration (metadata exchange):
-                  - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
+                  - Apache Atlas: connectors/integration/apache-atlas-catalog-integration-connector.md
                   - Data Files: connectors/integration/data-files-monitor-integration-connector.md
                   - Data Folders: connectors/integration/data-folder-monitor-integration-connector.md
                   - Databases (JDBC): connectors/integration/jdbc-integration-connector.md
@@ -97,6 +100,7 @@ nav:
                       - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
               - Secrets Store:
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
+              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/open-lineage-janus-connector.md
           - Developer Guide:
               - Developer Guide: guides/developer/index.md
               - Retrieving Metadata: guides/developer/finding-metadata/overview.md
@@ -430,8 +434,8 @@ nav:
               - Exception Management: types/4/0455-Exception-Management.md
               - Governance Execution Points: types/4/0460-Governance-Execution-Points.md
               - Governance Engines: types/4/0461-Governance-Engines.md
-              - Governance Action Types: types/4/0462-Governance-Action-Types.md
-              - Governance Actions: types/4/0463-Governance-Actions.md
+              - Governance Action Processes: types/4/0462-Governance-Action-Processes.md
+              - Engine Actions: types/4/0463-Engine-Actions.md
               - Dynamic Integration Groups: types/4/0464-Dynamic-Integration-Groups.md
               - Duplicate Processing: types/4/0465-Duplicate-Processing.md
               - Incident Reporting: types/4/0470-Incident-Reporting.md
@@ -517,6 +521,7 @@ nav:
               - Generic Handlers: services/generic-handlers.md
               - Metadata Security Services: services/metadata-security-services.md
               - Platform Services: services/platform-services/overview.md
+              - Server Operations: services/server-operations.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Open Metadata Store Services: services/gaf-metadata-management.md
               - Open Integration Service: services/oif-metadata-management.md
@@ -683,6 +688,7 @@ nav:
       - Digital Resource Connector: concepts/digital-resource-connector.md
       - Discovery Analysis Report: concepts/discovery-analysis-report.md
       - Endpoint: concepts/endpoint.md
+      - Engine Action: concepts/engine-action.md
       - Engine Host: concepts/engine-host.md
       - Event Bus: concepts/event-bus.md
       - Event Mapper Connector: concepts/event-mapper-connector.md
@@ -691,11 +697,10 @@ nav:
       - Feedback: concepts/feedback.md
       - Glossary Term: practices/common-data-definitions/anatomy-of-a-glossary.md
       - GUID: concepts/guid.md
-      - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md
       - Governance Action Process: concepts/governance-action-process.md
+      - Governance Action Process Step: concepts/governance-action-process-step.md
       - Governance Action Service: concepts/governance-action-service.md
-      - Governance Action Type: concepts/governance-action-type.md
       - Governance Domain: concepts/governance-domain.md
       - Governance Engine: concepts/governance-engine.md
       - Governance Engine Definition: concepts/governance-engine-definition.md

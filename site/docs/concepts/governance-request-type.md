@@ -15,7 +15,7 @@ When the governance engine is called with the request type, the governance engin
 
 !!! education "Further information"
     * The Open Metadata Types model *[0461 Governance Action Engines](/types/4/0461-Governance-Engines)* shows how the governance request type links the governance engine to the governance service via the *SupportedGovernanceService* relationship.
-    * [Building governance action services](/guides/developer/governance-action-services/overview) describes how the governance request type, request parameters and action types are passed to a governance action service.
+    * [Building governance action services](/guides/developer/governance-action-services/overview) describes how the governance request type, request parameters and target actions are passed to a governance action service.
     
 
 

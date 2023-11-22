@@ -69,20 +69,29 @@ Figure 4 shows the structure of the discovery analysis report.  The annotations 
 
 ### Data Source Measurements Annotation
 
-
+The data source measurements annotation is created in the STATS analysis step.  It has the following
 
 ### Schema Analysis Annotation
 
-The schema analysis annotation is the parent entity for the data fields.  It has the following properties:
+The schema analysis annotation is created in the SCHEMA analysis step.  It is the parent entity for the data fields.  It sets up the following properties un the *dataSourceProperties* map:
 
+* entityCount
+* classificationCount
+* typeUnusedCount
+* typeCount
+* activeEntityInstanceCount:*typeName*
+* activeEntityWithSubtypesInstanceCount:*typeName*
 
 
 ### Data Field
 
+In the SCHEMA analysis step, a *DataField* is created for each Apache Atlas entity type, relationship type and classification type.  If the version of Apache Atlas is 2.3 or later, data fields are created for the Business Metadata Types.  
+
+In the PROFILE analysis step, additional *DataFields* may be created for any labels discovered on the entity instances in Apache Atlas.
 
 ### Data Profile Annotation
 
-
+The date profile annotations count the instances of each type.
 
 
 ---8<-- "snippets/abbr.md"

@@ -17,7 +17,7 @@
 
 ---8<-- "snippets/systems/apache-atlas-intro.md"
 
-The Apache Atlas Discovery Service builds a [discovery analysis report](/concepts/discovery-analysis-report) that describes the types defined in the Apache Atlas server and the numbers of instances that are found of these types.
+The Apache Atlas Open Discovery Service builds a [discovery analysis report](/concepts/discovery-analysis-report) that describes the types defined in the Apache Atlas server and the numbers of instances that are found of these types.
 
 
 ---8<-- "snippets/discovery-services/discovery-service-config-summary.md"
@@ -39,8 +39,10 @@ It has three analysis steps:
 3. PROFILE - Retrieves each entity in the Apache Atlas server and adds the following counts to [*DataProfileAnnotation*](/types/6/0620-Data-Profiling) entities linked from the appropriate data field entities:
 
     * The number of instances of each entity type.
-    * The number of classifications of a particular type is attached to each type of entity.
-    * The number of relationships of a particular type is attached to each type of entity.
+    * The number of classifications of a particular type attached to each type of entity.
+    * The number of relationships of a particular type attached to each type of entity.
+    * The number of each type of label attached to each type of entity.
+    * The number of business metadata properties of a particular type attached to each type of entity.
 
 Each analysis step builds on the work of its predecessor. The processing requirements increase with each step, so you can choose to stop the processing after any step using the `finalAnalysisStep` property.  This can be set as a configuration property in the connection object for this discovery service, or as an analysis parameter passed when the Apache Atlas Discovery Service is run.
 
@@ -69,29 +71,52 @@ Figure 4 shows the structure of the discovery analysis report.  The annotations 
 
 ### Data Source Measurements Annotation
 
-The data source measurements annotation is created in the STATS analysis step.  It has the following
+The data source measurements annotation is created in the STATS analysis step.  It sets up the following properties un the *dataSourceProperties* map:
+
+* entityInstanceCount - number of active entity instances
+* entityInstanceCount:*typeName* - number of active entity instance of this type
+* entityWithSubtypesInstanceCount:*typeName* - number of active entity instances of this type and all subtypes.
+* classificationCount - number of classifications added to entity instances.
+* typeCount - number of defined types (and their versions).
+* typeUnusedCount - number of types with no instances.
+
+This analysis is achieved using two REST API calls and so has minimum impact on the Apache Atlas Server.
 
 ### Schema Analysis Annotation
 
-The schema analysis annotation is created in the SCHEMA analysis step.  It is the parent entity for the data fields.  It sets up the following properties un the *dataSourceProperties* map:
+The schema analysis annotation is created in the SCHEMA analysis step.  It is the parent entity for a set of [data fields](#data-fields).  These data fields represent the types defined in the Apache Atlas server.  The 
 
-* entityCount
-* classificationCount
-* typeUnusedCount
-* typeCount
-* activeEntityInstanceCount:*typeName*
-* activeEntityWithSubtypesInstanceCount:*typeName*
+### Data Fields
 
+In the SCHEMA analysis step, a *DataField* is created for each Apache Atlas entity type, relationship type, business metadata type and classification type.  
 
-### Data Field
+The classification type data fields are linked to the entity type data field to indicate which type of entity it can be attached to.
+The relationship type data fields are each attached to two entity type data fields: one for the type of entity that can be attached at end 1 of the relationship; the other for the type of entity that can be attached at end 2.
 
-In the SCHEMA analysis step, a *DataField* is created for each Apache Atlas entity type, relationship type and classification type.  If the version of Apache Atlas is 2.3 or later, data fields are created for the Business Metadata Types.  
+![Figure 5](apache-atlas-discovery-service-data-field-links.svg)
+> **Figure 5:** Linkage of data fields based on Apache Atlas type
 
-In the PROFILE analysis step, additional *DataFields* may be created for any labels discovered on the entity instances in Apache Atlas.
+The data fields are linked together using the [*DiscoveredLinkedDataField*](/types/6/0615-Schema-Extraction) relationship.
 
 ### Data Profile Annotation
 
-The date profile annotations count the instances of each type.
+The data profile annotations count the instances of each type and the counts of the elements attached to them.  This is illustrated in figure 6.
 
+![Figure 6](apache-atlas-discovery-service-profile.svg)
+> **Figure 6:** Details of the data profile annotations attached to each type of data field
+
+The table summarizes the values in the data profile annotation attached to the data fields.
+
+| Data Field Type   | Annotation Type                                | Explanation                                                                                               | Value Count                          | Instance count in AdditionalProperties    |
+|-------------------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------|-------------------------------------------|
+| Entity            | Apache Atlas Attached Classification Types     | Count of classification types attached to this type of entity.                                            | Classification Name to Count         | Entity instances for this type            |
+| Entity            | Apache Atlas End 1 Attached Relationship Types | Count of different types of relationships attached to this type of entity at End 1.                       | Relationship Name to Count           | Entity instances for this type            |
+| Entity            | Apache Atlas End 2 Attached Relationship Types | Count of different types of relationships attached to this type of entity at End 2.                       | Relationship Name to Count           | Entity instances for this type            |
+| Entity            | Apache Atlas Attached Labels                   | Count of the different labels attached to this type of entity.                                            | Label Name to Count                  | Entity Instances for this type            |            
+| Entity            | Apache Atlas Attached Business Metadata Types  | Count of the different types of business metadata properties attached to this type of entity.             | Business Metadata Type Name to Count | Entity instances for this type            |
+| Classification    | Apache Atlas Attached Entity Types             | Count of entities where this classification is attached, organized by entity type.                        | Entity Type Name to Count            | Classification Instances for this type    |
+| Business Metadata | Apache Atlas Attached Entity Types             | Count of entities where this type of business metadata properties are attached, organized by entity type. | Entity Type Name to Count            | Business metadata instances for this type |
+| Relationship      | Apache Atlas Attached End 1 Entity Types       | Count of entity types attached at end 1 of this type of relationship.                                     | Entity Type Name to Count            | Relationship instances for this type      |
+| Relationship      | Apache Atlas Attached End 2 Entity Types       | Count of entity types attached at end 2 of this type of relationship.                                     | Entity Type Name to Count            | Relationship instances for this type      |
 
 ---8<-- "snippets/abbr.md"

@@ -379,6 +379,7 @@ nav:
               - Area 2 Data Assets: types/2/index.md
               - Connectors and Connections: types/2/0201-Connectors-and-Connections.md
               - Connection Linkage: types/2/0205-Connection-Linkage.md
+              - Deployed Implementation Types: types/2/0207-Deployed-Implementation-Types.md
               - Data Stores: types/2/0210-Data-Stores.md
               - Deployed APIs: types/2/0212-Deployed-APIs.md
               - Software Components: types/2/0215-Software-Components.md
@@ -532,7 +533,6 @@ nav:
           - Registered Services:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md
-                  - Asset Catalog OMAS: services/omas/asset-catalog/overview.md
                   - Asset Consumer OMAS: services/omas/asset-consumer/overview.md
                   - Asset Lineage OMAS: services/omas/asset-lineage/overview.md
                   - Asset Manager OMAS: services/omas/asset-manager/overview.md
@@ -547,7 +547,6 @@ nav:
                   - Digital Architecture OMAS: services/omas/digital-architecture/overview.md
                   - Digital Service OMAS: services/omas/digital-service/overview.md
                   - Discovery Engine OMAS: services/omas/discovery-engine/overview.md
-                  - Glossary View OMAS: services/omas/glossary-view/overview.md
                   - Governance Engine OMAS: services/omas/governance-engine/overview.md
                   - Governance Program OMAS: services/omas/governance-program/overview.md
                   - IT Infrastructure OMAS: services/omas/it-infrastructure/overview.md
@@ -580,9 +579,10 @@ nav:
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
                   - My Profile: services/omvs/my-profile/overview.md
+                  - Asset Catalog: services/omvs/asset-catalog/overview.md
                   - Collection Manager: services/omvs/collection-manager/overview.md
+                  - Automated Curation: services/omvs/automated-curation/overview.md
                   - Notification Manager: services/omvs/notification-manager/overview.md
-                  - Notification Inbox: services/omvs/notification-inbox/overview.md
                   - Project Manager: services/omvs/project-manager/overview.md
                   - Glossary Author: services/omvs/glossary-author/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md

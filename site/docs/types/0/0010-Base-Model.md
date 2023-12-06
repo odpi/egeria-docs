@@ -80,7 +80,7 @@ The *SampleData* relationship links an *Asset* entity describing a collection of
 
 ## Anchors classification
 
-The *Anchors* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an entity to store the GUID of that entity.
+The *Anchors* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an entity to store the GUID of that entity along with its type.
 
 !!! info "Further information on the use of Anchors"
     * [Anchor Management](/concepts/anchor).

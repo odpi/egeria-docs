@@ -1,6 +1,6 @@
-<mxfile modified="2023-11-20T18:32:37.011Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="UOHuXahX63RangMk2DqX" version="21.6.8" type="device" pages="34">
+<mxfile modified="2023-12-06T12:42:30.909Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="dlvUSoR4VkvbqorIObYV" version="21.6.8" type="device" pages="34">
   <diagram id="cenQKAz8UWtqx_h9wgFg" name="overview">
-    <mxGraphModel dx="1434" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1426,7 +1426,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="7cIFF4NGN1GvBynfG5V6" name="0440-Organizational-Controls">
-    <mxGraphModel dx="1186" dy="773" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="775" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="CVYQgcXGczkINni31yZ5-0" />
         <mxCell id="CVYQgcXGczkINni31yZ5-1" parent="CVYQgcXGczkINni31yZ5-0" />
@@ -1469,7 +1469,7 @@
         <mxCell id="cqUCYKEK6rJe23QXjrBA-12" value="*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="CVYQgcXGczkINni31yZ5-1" vertex="1">
           <mxGeometry x="706.5" y="553" width="26" height="18" as="geometry" />
         </mxCell>
-        <mxCell id="cqUCYKEK6rJe23QXjrBA-13" value="identifier : string&lt;br&gt;displayName : string&lt;br&gt;description : string&lt;br&gt;businessCapabilityType : BusinessCapabilityType" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="CVYQgcXGczkINni31yZ5-1" vertex="1">
+        <mxCell id="cqUCYKEK6rJe23QXjrBA-13" value="identifier : string&lt;br&gt;displayName : string&lt;br&gt;description : string&lt;br&gt;businessCapabilityType : BusinessCapabilityType&lt;br&gt;businessImplementationType : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="CVYQgcXGczkINni31yZ5-1" vertex="1">
           <mxGeometry x="594" y="296" width="294" height="87" as="geometry" />
         </mxCell>
         <mxCell id="cqUCYKEK6rJe23QXjrBA-14" value="«entity»&lt;br&gt;&lt;b&gt;GovernanceControl&lt;/b&gt;" style="html=1;strokeColor=#82b366;align=center;fillColor=#d5e8d4;gradientColor=#97d077;" parent="CVYQgcXGczkINni31yZ5-1" vertex="1">

@@ -31,7 +31,7 @@ helm repo add egeria https://odpi.github.io/egeria-charts
 helm repo update
 helm install [-f overrides.yaml] <name> egeria/egeria-base
 ```
-where <name> is whatever you want to call your installed chart, and the -f is optional, if you have overriding values to supply.
+where `<name>` is whatever you want to call your installed chart, and the -f is optional, if you have overriding values to supply.
 
 **THE INSTALL WILL TAKE SEVERAL MINUTES** to complete in the background, after the chart has deployed.
 

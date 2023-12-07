@@ -17,7 +17,7 @@
 
 ---8<-- "snippets/systems/apache-atlas-intro.md"
 
-The Apache Atlas Open Discovery Service builds a [discovery analysis report](/concepts/discovery-analysis-report) that describes the types defined in the Apache Atlas server and the numbers of instances that are found of these types.
+The Apache Atlas Open Discovery Service builds a [discovery analysis report](/concepts/discovery-analysis-report) that describes the types defined in the Apache Atlas server and the numbers of instances that are found for these types.
 
 
 ---8<-- "snippets/discovery-services/discovery-service-config-summary.md"
@@ -71,7 +71,7 @@ Figure 4 shows the structure of the discovery analysis report.  The annotations 
 
 ### Data Source Measurements Annotation
 
-The data source measurements annotation is created in the STATS analysis step.  It sets up the following properties un the *dataSourceProperties* map:
+The data source measurements annotation is created in the STATS analysis step.  It sets up the following properties in the *dataSourceProperties* map:
 
 * entityInstanceCount - number of active entity instances
 * entityInstanceCount:*typeName* - number of active entity instance of this type
@@ -84,7 +84,7 @@ This analysis is achieved using two REST API calls and so has minimum impact on 
 
 ### Schema Analysis Annotation
 
-The schema analysis annotation is created in the SCHEMA analysis step.  It is the parent entity for a set of [data fields](#data-fields).  These data fields represent the types defined in the Apache Atlas server.  The 
+The schema analysis annotation is created in the SCHEMA analysis step.  It is the parent entity for a set of [data fields](#data-fields).  These data fields represent the types defined in the Apache Atlas server.
 
 ### Data Fields
 
@@ -100,23 +100,32 @@ The data fields are linked together using the [*DiscoveredLinkedDataField*](/typ
 
 ### Data Profile Annotation
 
-The data profile annotations count the instances of each type and the counts of the elements attached to them.  This is illustrated in figure 6.
+This discovery service attaches multiple data profile annotations to each data field depending on their category (entity, relationship, classification or business metadata).
 
 ![Figure 6](apache-atlas-discovery-service-profile.svg)
 > **Figure 6:** Details of the data profile annotations attached to each type of data field
 
-The table summarizes the values in the data profile annotation attached to the data fields.
+It sets up the following fields in each data profile annotation:
 
-| Data Field Type   | Annotation Type                                | Explanation                                                                                               | Value Count                          | Instance count in AdditionalProperties    |
-|-------------------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------|-------------------------------------------|
-| Entity            | Apache Atlas Attached Classification Types     | Count of classification types attached to this type of entity.                                            | Classification Name to Count         | Entity instances for this type            |
-| Entity            | Apache Atlas End 1 Attached Relationship Types | Count of different types of relationships attached to this type of entity at End 1.                       | Relationship Name to Count           | Entity instances for this type            |
-| Entity            | Apache Atlas End 2 Attached Relationship Types | Count of different types of relationships attached to this type of entity at End 2.                       | Relationship Name to Count           | Entity instances for this type            |
-| Entity            | Apache Atlas Attached Labels                   | Count of the different labels attached to this type of entity.                                            | Label Name to Count                  | Entity Instances for this type            |            
-| Entity            | Apache Atlas Attached Business Metadata Types  | Count of the different types of business metadata properties attached to this type of entity.             | Business Metadata Type Name to Count | Entity instances for this type            |
-| Classification    | Apache Atlas Attached Entity Types             | Count of entities where this classification is attached, organized by entity type.                        | Entity Type Name to Count            | Classification Instances for this type    |
-| Business Metadata | Apache Atlas Attached Entity Types             | Count of entities where this type of business metadata properties are attached, organized by entity type. | Entity Type Name to Count            | Business metadata instances for this type |
-| Relationship      | Apache Atlas Attached End 1 Entity Types       | Count of entity types attached at end 1 of this type of relationship.                                     | Entity Type Name to Count            | Relationship instances for this type      |
-| Relationship      | Apache Atlas Attached End 2 Entity Types       | Count of entity types attached at end 2 of this type of relationship.                                     | Entity Type Name to Count            | Relationship instances for this type      |
+* *analysisStep* - this is always set to "PROFILE".
+* *annotationType* - this identifies the type of values that the annotation contains.
+* *explanation* - this provides more information about the annotation type.
+* *valueCount* - this is a map of typeName to count.  For example, if this annotation was counting the classifications attached to the *DataSet* entity type, then the map would include an entry for each type of classification attached to this type of entity and a count of how many times it is used.
+* *additionalProperties* - contains the count of instances for the particular type that the data field represents.
+
+The table summarizes the values in each of the data profile annotations depending on the category of the data field it is attached to.
+
+| Data Field Category | Annotation Type                                | Explanation                                                                                               | Value Count                          | Instance count in AdditionalProperties    |
+|---------------------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------|-------------------------------------------|
+| Entity              | Apache Atlas Attached Classification Types     | Count of classification types attached to this type of entity.                                            | Classification Name to Count         | Entity instances for this type            |
+| Entity              | Apache Atlas End 1 Attached Relationship Types | Count of different types of relationships attached to this type of entity at End 1.                       | Relationship Name to Count           | Entity instances for this type            |
+| Entity              | Apache Atlas End 2 Attached Relationship Types | Count of different types of relationships attached to this type of entity at End 2.                       | Relationship Name to Count           | Entity instances for this type            |
+| Entity              | Apache Atlas Attached Labels                   | Count of the different labels attached to this type of entity.                                            | Label Name to Count                  | Entity Instances for this type            |            
+| Entity              | Apache Atlas Attached Business Metadata Types  | Count of the different types of business metadata properties attached to this type of entity.             | Business Metadata Type Name to Count | Entity instances for this type            |
+| Classification      | Apache Atlas Attached Entity Types             | Count of entities where this classification is attached, organized by entity type.                        | Entity Type Name to Count            | Classification Instances for this type    |
+| Business Metadata   | Apache Atlas Attached Entity Types             | Count of entities where this type of business metadata properties are attached, organized by entity type. | Entity Type Name to Count            | Business metadata instances for this type |
+| Relationship        | Apache Atlas Attached End 1 Entity Types       | Count of entity types attached at end 1 of this type of relationship.                                     | Entity Type Name to Count            | Relationship instances for this type      |
+| Relationship        | Apache Atlas Attached End 2 Entity Types       | Count of entity types attached at end 2 of this type of relationship.                                     | Entity Type Name to Count            | Relationship instances for this type      |
+| Relationship        | Apache Atlas Attached Entity Type Pairs        | Count of entity type pairs for this type of relationship.                                                 | Entity Type Name to Count            | Relationship instances for this type      |
 
 ---8<-- "snippets/abbr.md"

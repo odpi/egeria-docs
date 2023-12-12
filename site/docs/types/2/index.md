@@ -37,6 +37,7 @@ get access to the data assets.
 * **[0223 Event Stores and Logs](0223-Events-and-Logs.md)**
 * **[0224 Databases](0224-Databases.md)**
 * **[0225 Metadata Repositories](0225-Metadata-Repositories.md)**
+* **[0226 Archive FIles](0226-Archive-Files.md)**
 * **[0227 Keystores](0227-Keystores.md)**
 * **[0230 Code Tables](0230-Code-Tables.md)**
 * **[0235 Information View](0235-Information-View.md)**

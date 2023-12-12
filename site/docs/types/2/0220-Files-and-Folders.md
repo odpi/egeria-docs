@@ -14,6 +14,7 @@ A metadata catalog typically contains information about the data files that can 
 - *pathName* - this is the fully qualified path name for the file.
 - *fileName* - this is the file name for the file including file extension.
 * *fileType* - this is the typical file extension for this type of file.  The values for this attribute can be managed in a valid value set.
+* *fileExtension* - this is the actual file extension for this file.  The values for this attribute can be managed in a valid value set.
 
 There are subtypes for *DataFile* that identify the format of the file:
 
@@ -21,6 +22,7 @@ There are subtypes for *DataFile* that identify the format of the file:
 - *AvroFile* is organized according to the [Apache Avro](https://avro.apache.org) specification.
 - *JSONFile* is encoded using [JavaScript Object Notation (JSON)](https://www.json.org/json-en.html).
 - *ParquetFile* is encoded using [the Apache Parquet format](https://parquet.apache.org/).
+- *SpreadsheetFile* is a file containing tabular data and formula.
 
 
 ## FileFolder

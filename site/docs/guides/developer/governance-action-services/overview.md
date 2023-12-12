@@ -45,7 +45,7 @@ The methods of the context are colour-coded.  The methods shown in white are ava
 The methods in blue are addition services offered to governance action services implementing a *watchdog* capability:
 
 * registerListener - requests that it is called whenever certain open metadata events occur.  It is able to specify a range of conditions from receiving all event, events for particular actions (such as creation of a new metadata element), events for particular metadata types or events on particular instances.
-* initiateGovernanceAction - requests that a new [engine action](/concepts/engine-action is run.
+* initiateGovernanceAction - requests that a new [engine action](/concepts/engine-action) is run.
 * initiateGovernanceActionProcess - requests that a new [governance action process](/concepts/governance-action-process) is run.
 
 The methods in purple are additional services offered to governance action services implementing a *provisioning* capability to record lineage:

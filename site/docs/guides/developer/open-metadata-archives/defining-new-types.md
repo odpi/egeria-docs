@@ -495,8 +495,7 @@ There are three main components.  A builder that constructs the archive in memor
     }
     
     ```
-
-This example is located in the `egeria-samples.git` repository in the [coco-metadata-archives](https://github.com/odpi/egeria-samples/tree/main/sample-metadata-archives/coco-metadata-archives) module.
+This example is located in the `egeria.git` repository in the [coco-metadata-archives](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/sample-metadata/coco-metadata-archives) module.
 
 
 --8<-- "snippets/abbr.md"

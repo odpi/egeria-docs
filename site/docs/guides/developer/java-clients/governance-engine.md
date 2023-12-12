@@ -8,7 +8,7 @@
 
 The concepts introduced by the Governance Engine OMAS are (in alphabetical order):
 
-* [Governance Action](/concepts/governance-action)
+* [Engine Action](/concepts/engine-action)
 * [Governance Action Process](/concepts/governance-action-process)
 * [Governance Action Process Step](/concepts/governance-action-process-step)
 * [Governance Engine](/concepts/governance-engine)

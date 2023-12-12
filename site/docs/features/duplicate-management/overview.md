@@ -57,7 +57,7 @@ The numbers on the diagram refer to the following points:
 
 2. [Metadata Discovery](/features/discovery-and-stewardship) analyses the content of resources and so can be used to detect duplicate resources (as opposed to duplicate catalog entries for the same resource).  There are algorithms for producing a fingerprint (like a hash) that represents the content of each resource. These fingerprints can be [stored as annotations](/types/6/0620-Data-Profiling) attached to the resource's asset via a [discovery analysis report](/concepts/discovery-analysis-report).  These fingerprint annotations are metadata that can be automatically analysed during duplicate detection.
 
-3. The examples in figures 1-4 show that the mechanisms to detect duplicates are varied and often require knowledge of the data management practices in the organization.  As such this function must be pluggable into Egeria's runtime. [Governance Actions](/concepts/governance-action) monitor for changes in metadata and search for duplicate instances.  They link detected duplicates together.
+3. The examples in figures 1-4 show that the mechanisms to detect duplicates are varied and often require knowledge of the data management practices in the organization.  As such this function must be pluggable into Egeria's runtime. [Engine Actions](/concepts/engine-action) monitor for changes in metadata and search for duplicate instances.  They link detected duplicates together.
 
 4. A governance action, possibly the same one that detected the duplicates, can validate and action the duplicates so that survivorship processing occurs when they are retrieved from the metadata repositories (see step 6).
 

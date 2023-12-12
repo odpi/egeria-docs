@@ -52,7 +52,7 @@ classification [method for defining the schema type](/concepts/schema).
 
 ## Avro Files
 
-Figure 1 shows the types of metadata for CSV files that integrators connectors can create with this integration service.
+Figure 1 shows the types of metadata for Avro files that integrators connectors can create with this integration service.
 
 ![Figure 1](/services/omas/data-manager/avro-file-model.svg)
 > **Figure 1:** Avro File metadata supported by the Files Integrator OMIS 

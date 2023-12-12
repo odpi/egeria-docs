@@ -32,4 +32,5 @@ The *DataScope* classification identifies the scope of the data stored in the [r
 * *startTime* - if the data is bound by time, this is the start time.
 * *endTime* - if the data is bound by time, this is the end time.
 
+
 --8<-- "snippets/abbr.md"

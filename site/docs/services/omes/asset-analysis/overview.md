@@ -10,7 +10,7 @@ hide:
 
 # Asset Analysis Open Metadata Engine Service (OMES)
 
-The Asset Analysis OMES provides support for [open discovery engines](/concepts/open-discovery-engine) that are part of the [Open Discovery Service (ODF)](/frameworks/odf/overview).
+The Asset Analysis OMES provides support for [open discovery engines](/concepts/open-discovery-engine) that are part of the [Open Discovery Framework (ODF)](/frameworks/odf/overview).
 
 ![Governance Action OMES](/services/omes/engine-services-asset-analysis-server-side.svg)
 

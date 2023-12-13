@@ -135,7 +135,7 @@ Support for docker compose was removed in [release 3.5](3-5.md).
 
 Following is an overview of the [content status](/release-notes/content-status) of the functions in Egeria's latest release. 
 
-![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-4.0.svg)
+![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-4.4.svg)
 
 
 As you can see, some progress has been made on all layers. However, since they do build on one another, most of the early work has been focused on establishing the frameworks, connector APIs and other services to provide the developer platform. The developer platform provides the libraries and interfaces to build connectors to integrate third party tools along with the runtime to host these connectors and manage the metadata exchange.

@@ -26,7 +26,6 @@ get access to the data assets.
 
 * **[0201 Connectors and Connections](0201-Connectors-and-Connections.md)**
 * **[0205 Connection Linkage](0205-Connection-Linkage.md)**
-* **[0207 Deployed Implementation Types](0207-Deployed-Implementation-Types.md)**
 * **[0210 Data Stores](0210-Data-Stores.md)**
 * **[0212 Deployed APIs](0212-Deployed-APIs.md)**
 * **[0215 Software Components](0215-Software-Components.md)**
@@ -37,7 +36,7 @@ get access to the data assets.
 * **[0223 Event Stores and Logs](0223-Events-and-Logs.md)**
 * **[0224 Databases](0224-Databases.md)**
 * **[0225 Metadata Repositories](0225-Metadata-Repositories.md)**
-* **[0226 Archive FIles](0226-Archive-Files.md)**
+* **[0226 Archive Files](0226-Archive-Files.md)**
 * **[0227 Keystores](0227-Keystores.md)**
 * **[0230 Code Tables](0230-Code-Tables.md)**
 * **[0235 Information View](0235-Information-View.md)**

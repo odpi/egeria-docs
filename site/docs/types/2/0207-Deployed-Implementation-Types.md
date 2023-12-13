@@ -26,10 +26,6 @@ In addition, *deployedImplementationType* is found in [*SoftwareServerCapability
 
 The *FileType* entity is a specialization of *DeployedImplementationType* that captures specifics about different types of files.
 
-## CatalogTemplate relationship
-
-The *CatalogTemplate* relationship links a *DeployedImplementationType* entity with a [template](/features/templated-cataloguing/overview) for creating a catalog entry for a [digital resource](/concepts/resource) of this class.
-
 ??? education "Further information"
 
     [Automated Curation OMVS](/services/omvs/automated-curation/overview)

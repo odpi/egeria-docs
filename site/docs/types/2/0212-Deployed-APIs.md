@@ -5,13 +5,11 @@
 
 APIs exchange data structures and commands. Each API is an access point for data and so it is important to understand and control what data is passing over an API.
 
- 
-
 ![UML](0212-Deployed-APIs.svg)
 
 ## DeployedAPI
 
-The *DeployedAPI* is the entity that represents the API as an [Asset](/types/0/0010-Base-Model).  The *deployedImplementationType* attribute describes the technology that is used in its implementation.  The definition of the API's operations, their parameters and responses are described via the [APISchemaType](/types/5/0536-API-Schemas) entity, which is connected to the *DeployedAPI* entity with the [AssetSchemaType](/types/5/0503-Asset-Schema) relationship.
+The *DeployedAPI* is the entity that represents the API as an [Asset](/types/0/0010-Base-Model).  The *deployedImplementationType* attribute describes the class of technology that is used in its implementation.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set. The definition of the API's operations, their parameters and responses are described via the [APISchemaType](/types/5/0536-API-Schemas) entity, which is connected to the *DeployedAPI* entity with the [AssetSchemaType](/types/5/0503-Asset-Schema) relationship.
 
 The classifications [RequestResponseInterface](#requestresponseinterface), [ListenerInterface](#listenerinterface) and [PublisherInterface](#publisherinterface) can be used to describe the style of the API. They can appear in combination on a single *DeployedAPI*.
 

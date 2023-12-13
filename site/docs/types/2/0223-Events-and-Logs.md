@@ -9,7 +9,7 @@ Processing is often triggered when a specific event or situation occurs.  There 
 
 ## DataFeed entity
 
-*DataFeed* identifies an asset that provides a continuous feed of data. The *deployedImplementationType* attribute describes the technology that is used in its implementation.
+*DataFeed* identifies an asset that provides a continuous feed of data. The *deployedImplementationType* attribute describes the class of technology that is used in its implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 ## Topic entity
 

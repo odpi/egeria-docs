@@ -41,6 +41,10 @@ The *SourcedFrom* relationship is used to show the provenance of the information
 
 The *sourceVersionNumber* identifies the version number of the template used when the new entity was created.
 
+## CatalogTemplate relationship
+
+The *CatalogTemplate* relationship links an *OpenMetadataRoot* entity that describes a class of technology with a [template](/features/templated-cataloguing/overview) for creating a catalog entry for a resource of this class.
+
 ??? deprecated "Deprecated types"
     - *LastAttachment* - use *LatestChange* instead
     - *LastAttachmentLink* - use *LatestChange* instead
@@ -48,5 +52,6 @@ The *sourceVersionNumber* identifies the version number of the template used whe
 ??? education "Further information"
     - [Anchor Management](/features/anchor-management/overview)
     - [Using templates](/features/templated-cataloguing/overview)
+    - [Automated Curation OMVS](/services/omvs/automated-curation/overview)
 
 --8<-- "snippets/abbr.md"

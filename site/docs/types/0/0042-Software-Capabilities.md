@@ -9,13 +9,26 @@ Software capabilities are the capabilities implemented in software and supported
 
 ## SoftwareCapability entity
 
-[*IT Infrastructure*](/types/0/0030-Hosts-and-Platforms) contains many capabilities.  Each capability can be catalogued using the *SoftwareCapability* entity and linked to the hosting *ITInfrastructure* entity using the *SupportedSoftwareCapability* relationship. 
+[*IT Infrastructure*](/types/0/0030-Hosts-and-Platforms) contains many capabilities.  Each capability can be catalogued using the *SoftwareCapability* entity and linked to the hosting *ITInfrastructure* entity using the *SupportedSoftwareCapability* relationship.
+
+*SoftwareCapability* is a [*Referenceable*](/types/0/0010-Base-Model) that adds the following attributes:
+
+* *name* - display name of the capability.
+* *description* - description of the capability.
+* *capabilityType* - type of the capability - for example the product name.
+* *capabilityVersion* - version of the capability.
+* *patchLevel* - any patches applied to the version.
+* *source* - supplier of the capability.
+* *deployedImplementationType* - the class of technology that is used in its implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 Different organizations and tools can choose the granularity in which the capabilities are catalogued in order to provide [appropriate context](/0/0045-Servers-and-Assets) to [assets](/types/0/0010-Base-Model) that are managed by the capabilities and the decisions made around them.
 
-These are the subtypes of software capabilities defined in the open metadata types:
+## SoftwareServerCapability entity
 
-- *SoftwareServerCapability* - A capability that typically resides in a [*SoftwareServer*](/types/0/0040-Software-Servers).
+The *SoftwareServerCapability* describes a capability that is implemented in a [software server](/types/0/0040-Software-Server).  
+
+These are the subtypes of software server capabilities defined in the open metadata types:
+
 - [*AccessControlManager*](/types/0/0050-Applications-and-Processes/#accesscontrolmanager) - A capability that manages access to specific resources.
 - [*APIManager*](/types/0/0050-Applications-and-Processes/#apimanager) - A capability that manages callable APIs that typically delegate onto Software Services.
 - [*Application*](/types/0/0050-Applications-and-Processes/#application) - A capability supporting a specific business function.
@@ -39,11 +52,12 @@ These are the subtypes of software capabilities defined in the open metadata typ
 - [*EnterpriseAccessLayer*](/types/0/0057-Software-Services/#enterpriseaccesslayer) - Repository services for the Open Metadata Access Services (OMAS) supporting federated queries and aggregated events from the connected cohorts.
 - [*CohortMember*](/types/0/0057-Software-Services/#cohortmember) - A capability enabling a server to access an open metadata repository cohort.
 - [*GovernanceEngine*](/types/4/0461-Governance-Engines/#governanceengine) - A collection of related governance services of the same type.
-    - [*GovernanceActionEngine*](/types/4/0461-Governance-Engines/#governanceactionengine) - A collection of related governance services supporting the Governance Action Framework (GAF).
-    - [*OpenDiscoveryEngine*](/types/6/0601-Open-Discovery-Engine/#opendiscoveryengine) - A collection of related governance services supporting the Open Discovery Framework (ODF).
-   - [*ArchiveEngine*](/types/4/0461-Governance-Engines/#archiveengine) - A collection of related governance services supporting maintenance of [Open Metadata Archives](/concepts/open-metadata-archive).
+    - [*GovernanceActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
+    - [*OpenDiscoveryEngine*](/types/6/0601-Open-Discovery-Engine) - A collection of related governance services supporting the [Open Discovery Framework (ODF)](/frameworks/odf/overview).
+    - [*RepositoryGovernanceEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting maintenance of [Open Metadata Archives](/concepts/open-metadata-archive).
+    - [*EventActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Event Action Framework (EAF)](/frameworks/eaf/overview).
 
-In addition, it is possible to augment software capabilities with the following classifications:
+In addition, it is possible to augment software server capabilities with the following classifications:
 
 - [*CloudService*](/types/0/0090-Cloud-Platforms-and-Services/#cloudservice) - A capability enabled for a tenant on a cloud platform.
 - [*ContentCollectionManager*](/types/0/0056-Resource-Managers/#contentcollectionmanager) - A manager of controlled documents and related media.

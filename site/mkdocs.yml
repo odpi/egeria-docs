@@ -378,7 +378,6 @@ nav:
               - Area 2 Data Assets: types/2/index.md
               - Connectors and Connections: types/2/0201-Connectors-and-Connections.md
               - Connection Linkage: types/2/0205-Connection-Linkage.md
-              - Deployed Implementation Types: types/2/0207-Deployed-Implementation-Types.md
               - Data Stores: types/2/0210-Data-Stores.md
               - Deployed APIs: types/2/0212-Deployed-APIs.md
               - Software Components: types/2/0215-Software-Components.md

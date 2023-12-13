@@ -13,7 +13,7 @@ A metadata catalog typically contains information about the data files that can 
 
 - *pathName* - this is the fully qualified path name for the file.
 - *fileName* - this is the file name for the file including file extension.
-* *fileType* - this is the typical file extension for this type of file.  The values for this attribute can be managed in a valid value set.
+* *fileType* - this is the name of the file type.  The values for this attribute can be managed in a [file type](/concepts/deployed-implementation-type/#file-type) valid value set.
 * *fileExtension* - this is the actual file extension for this file.  The values for this attribute can be managed in a valid value set.
 
 There are subtypes for *DataFile* that identify the format of the file:

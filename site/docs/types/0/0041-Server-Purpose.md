@@ -9,7 +9,7 @@ The server purpose classifications allow more detail about the type of middlewar
 
 ## ServerPurpose classification
 
-The *ServerPurpose* classification provides a common base type for the server purposes - so it is possible to, for example, query a list of database servers, even through they are implemented using various technologies and hence represented by entities with different open metadata types. The *deployedImplementationType* attribute allows a specific software package supporting the specific purpose.
+The *ServerPurpose* classification provides a common base type for the server purposes - so it is possible to, for example, query a list of database servers, even through they are implemented using various technologies and hence represented by entities with different open metadata types. The *deployedImplementationType* attribute allows a specific software package supporting the specific purpose. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 The subtypes of the *ServerPurpose* classification are:
 

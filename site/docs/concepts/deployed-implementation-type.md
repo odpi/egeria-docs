@@ -8,16 +8,28 @@ hide:
 
 # Deployed Implementation Type
 
-A *deployed implementation type* is an entity that describes a type of technology that is deployed in an organization's IT landscape.  Its purpose is to describe how technology of this type should be governed and the resources available to do so.  For example:
+A *deployed implementation type* is a type of reference data that describes a class of technology that is deployed in an organization's IT landscape.  Its purpose is to describe how technology of this class should be governed and the resources available to do so.  For example:
 
 * An instance of this technology is likely to be catalogued in the open metadata ecosystem using an [asset](/concepts/asset).  The deployed implementation type can define the subtype of the asset to use.  It is also possible to define a template for creating the asset and associate it with the deployed implementation type.
 * The governance action processes, governance services and connectors that support this type of technology can be identified.
+* The *deployedImplementationType* attribute found in many open metadata types can be set from the matching deployed implementation type reference value.  Having consistent values for the deployedImplementationType attribute makes it possible to retrieve lists of all catalogued technology of a particular class.  The following type definitions include the *deployedImplementationType*:
+
+    * [*Infrastructure*](/types/0/0010-Base-Model)
+    * [*DataSet*](/types/0/0010-Base-Model)
+    * [*DataStore*](/types/2/0210-Data-Stores)
+    * [*DeployedAPI*](/types/2/0212-Deployed-APIs)
+    * [*DeployedSoftwareComponent*](/types/2/0215-Software-Components)
+    * [*DataFeed*](/types/2/0223-Events-and-Logs)
+    * [*SoftwareCapability*](/types/0/0042-Software-Capabilities)
+    * [*CloudPlatform*](/types/0/0090-Cloud-Platforms-and-Services)
+    * [*ServerPurpose*](/types/0/0041-Server-Purpose)
+
 
 
 ## File Type
 
-A *file type* is a type of *deployed implementation type* that describes a type of file.  It includes the file extension for the type of file to allow matching of a file's full name to a specific file type.  Again the file type links to templates and resources for processing files of this type.
+A *file type* is similar to *deployed implementation type*.  It is a reference data value that that describes a type of file.  It includes the file extension for the type of file to allow matching of a file's extension to a specific asset type.  Again the file type links to templates and resources for processing files of this type.
 
-
+The file type's *preferredValue* can be used to consistently populate the *fileType* attribute of [*DataFile*](/types/2/0220-Files-and-Folders) assets.  This 
 
 --8<-- "snippets/abbr.md"

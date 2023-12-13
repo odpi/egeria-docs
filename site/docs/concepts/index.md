@@ -81,6 +81,7 @@
 - [Data Science OMAS](/services/omas/data-science/overview)
 - [Database Integrator OMIS](/services/omis/database-integrator/overview)
 - [Default Zones](/concepts/governance-zone)
+- [Deployed Implementation Type](/concepts/deployed-implementation-type)
 - [Design Lineage](/features/lineage-management/overview)
 - [Design Model OMAS](/services/omas/design-model/overview)
 - [DevOps OMAS](/services/omas/dev-ops/overview)
@@ -126,11 +127,12 @@
 
 - [Favorite Things Collections](/concepts/favorite-things-collection)
 - [Feedback](/concepts/feedback)
+- [File Type](/concepts/deployed-implementation-type/#file-type)
 - Files
 
     - [omag.server.servername.config](/concepts/configuration-document)
     - [servername.cohortname.registrystore](/connectors/runtime/file-cohort-registry-store-connector)
-  
+
 - [Files Integrator OMIS](/services/omis/files-integrator/overview)
 - [Framework Services](/services/#framework-services)
 - [Frameworks](/frameworks)
@@ -316,6 +318,12 @@
 
 - [Ratings](/concepts/review)
 - [Referenceable](/concepts/referenceable)
+- [Reference Data](/features/reference-data-management/overview)
+
+  - [Valid Metadata Values](/guides/planning/valid-values)
+  - [Deployed Implementation Type](/concepts/deployed-implementation-type)
+  - [File Type](/concepts/deployed-implementation-type/#file-type)
+  
 - [Registry Events](/concepts/cohort-events)
 - [Registered Services](/concepts/omag-subsystem)
 - [Repository Connector](/concepts/repository-connector)

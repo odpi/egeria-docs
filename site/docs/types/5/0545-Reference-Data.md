@@ -16,7 +16,7 @@ Valid values can also be used as tags to indicate that an element has a particul
 
 ![UML](0545-Reference-Data.svg)
 
-## ValidValueDefinition
+## ValidValueDefinition entity
 
 Software often uses code values to store properties about a person, place, object or activity.  Each code value is mapped to one or more strings when its value is to be displayed.  This mapping is stored in a *code table*.
 
@@ -27,7 +27,7 @@ The *ValidValueDefinition* can be used to represent a single code value along wi
 ![Valid Value Definition](/features/reference-data-management/valid-value-definition.svg)
 
 
-## ValidValuesSet and ValidValueMember
+## ValidValuesSet entity and ValidValueMember relationship
 
 Code tables group related code values together to act as a look-up table.  The *ValidValuesSet* and the *ValidValueMember* relationship can be used to organize *ValidValueDefinition*s.
 
@@ -37,13 +37,13 @@ Some code values need to be organized into a hierarchy.  The *ValidValueMember* 
 
 ![Hierarchical information codes](/features/reference-data-management/hierarchical-information-codes.svg)
 
-## ValidValuesAssignment
+## ValidValuesAssignment relationship
 
 Often the values in a data field need to be restricted to a set of valid values (or possibly a single valid value).  The *ValidValuesAssignment* creates a link between the metadata element for the data field (typically a [GlossaryTerm](/types/3/0330-Terms) or a [SchemaElement](/types/5/0501-Schema-Elements)) and the appropriate valid values.
 
 ![Valid Values Assignment](/features/reference-data-management/valid-values-assignment.svg)
 
-## ReferenceValueAssignment
+## ReferenceValueAssignment relationship
 
 Valid values can be used to tag other metadata elements to make them easy to find.
 
@@ -54,7 +54,7 @@ This tagging is done using the *ReferenceValueAssignment* relationship.
 ![Reference Value Assignment](/features/reference-data-management/reference-value-assignment.svg)
 
 
-## ValidValuesMapping
+## ValidValuesMapping relationship
 
 Valid values can come from many sources (such as standards, regulations, industry definitions etc.) and often there are equivalences between them. It is useful to be able to identify the corresponding values.
 
@@ -64,9 +64,17 @@ The *ValidValuesMapping* relationship allows this mapping to be captured.
 
 ![Valid Values Mapping](/features/reference-data-management/valid-values-mapping.svg)
 
+## ConsistentValidValues relationship
 
+The *ConsistentValidValues* relationship is used for cross-field validation.  It shows how the values in one valid value set should/could be used so that they are consistent with the values used in another valid values set.
 
-## ValidValuesImplementation and ReferenceData
+![Valid Values Mapping Example](/features/reference-data-management/cross-field-validation-example.svg)
+
+The *ConsistentValidValues* relationship allows this mapping to be captured.
+
+![Consistent Valid Values](/features/reference-data-management/consistent-valid-values.svg)
+
+## ValidValuesImplementation relationship and ReferenceData classification
 
 The implementation of a code table is represented in open metadata using an [Asset](/types/0/0010-Base-Model).  This asset can be tagged as containing valid values using the *ReferenceData* classification.
 

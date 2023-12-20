@@ -24,12 +24,8 @@ A *deployed implementation type* is a type of reference data that describes a cl
     * [*CloudPlatform*](/types/0/0090-Cloud-Platforms-and-Services)
     * [*ServerPurpose*](/types/0/0041-Server-Purpose)
 
+## Examples of Deployed Implementation Types
 
-
-## File Type
-
-A *file type* is similar to *deployed implementation type*.  It is a reference data value that that describes a type of file.  It includes the file extension for the type of file to allow matching of a file's extension to a specific asset type.  Again the file type links to templates and resources for processing files of this type.
-
-The file type's *preferredValue* can be used to consistently populate the *fileType* attribute of [*DataFile*](/types/2/0220-Files-and-Folders) assets.  This 
+--8<-- "snippets/content-packs/deployed-implementation-types.md"
 
 --8<-- "snippets/abbr.md"

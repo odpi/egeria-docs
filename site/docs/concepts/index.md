@@ -115,7 +115,8 @@
 - [Event](/concepts/basic-concepts/#event)
 
     - [Cohort Events](/concepts/cohort-events)
-   
+
+- [Event Action Framework](/frameworks/eaf/overview)
 - [Event Bus](/concepts/event-bus)
 - [Event Broker](/concepts/basic-concepts/#event-broker)
 - [Event Management Services Subsystem (OMRS)](/services/omrs)
@@ -132,6 +133,7 @@
 
     - [omag.server.servername.config](/concepts/configuration-document)
     - [servername.cohortname.registrystore](/connectors/runtime/file-cohort-registry-store-connector)
+    - [*.omarchive](/connectors/runtime/file-based-open-metadata-archive-store-runtime-connector)
 
 - [Files Integrator OMIS](/services/omis/files-integrator/overview)
 - [Framework Services](/services/#framework-services)
@@ -142,6 +144,7 @@
     - [Open Integration Framework (OIF)](/frameworks/oif/overview)
     - [Open Discovery Framework (ODF)](/frameworks/odf/overview)
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
+    - [Event Action Framework (EAF)](/frameworks/eaf/overview)
 
 
 ## G

@@ -74,6 +74,10 @@ The *ConsistentValidValues* relationship allows this mapping to be captured.
 
 ![Consistent Valid Values](/features/reference-data-management/consistent-valid-values.svg)
 
+## ValidValueAssociation relationship
+
+The *ValidValueAssociation* relationship allows arbitrary relationships between valid value definitions to be recorded.
+
 ## ValidValuesImplementation relationship and ReferenceData classification
 
 The implementation of a code table is represented in open metadata using an [Asset](/types/0/0010-Base-Model).  This asset can be tagged as containing valid values using the *ReferenceData* classification.

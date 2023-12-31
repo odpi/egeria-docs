@@ -42,6 +42,8 @@
 ## C
 
 - [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
+- [Catalog Target](/concepts/catalog-target)
+- [Catalog Target Type](/concepts/catalog-target)
 - [Cohort](/concepts/cohort-member)
 - [Cohort Event](/concepts/cohort-events)
 - [Cohort Member](/concepts/cohort-member)
@@ -103,6 +105,7 @@
 - [Discovery Server](/concepts/engine-host)
 - [Discovery Service](/concepts/open-discovery-service)
 - [Display Integrator OMIS](/services/omis/display-integrator/overview)
+- [Dynamic Integration Group](/concepts/integration-group)
 
 ## E
 
@@ -128,7 +131,7 @@
 
 - [Favorite Things Collections](/concepts/favorite-things-collection)
 - [Feedback](/concepts/feedback)
-- [File Type](/concepts/deployed-implementation-type/#file-type)
+- [File Type](/concepts/file-type)
 - Files
 
     - [omag.server.servername.config](/concepts/configuration-document)

@@ -664,6 +664,7 @@ nav:
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
+      - Catalog Target: concepts/catalog-target.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
       - Cohort Registry: concepts/cohort-registry.md

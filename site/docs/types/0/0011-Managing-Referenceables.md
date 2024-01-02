@@ -43,7 +43,12 @@ The *sourceVersionNumber* identifies the version number of the template used whe
 
 ## CatalogTemplate relationship
 
-The *CatalogTemplate* relationship links an *OpenMetadataRoot* entity that describes a class of technology with a [template](/features/templated-cataloguing/overview) for creating a catalog entry for a resource of this class.
+The *CatalogTemplate* relationship links an *OpenMetadataRoot* entity that describes a class of technology with a [template](/features/templated-cataloguing/overview) for creating a catalog entry for a resource of this class.  The attributes are used to help a user select the template, and then provide new property values to override the values in the template.
+
+* *templateName* - provides a name for the template.
+* *templateDescription* - describes what the template contains.
+* *replacementProperties* - lists properties whose values from the template should be overridden when creating a new element from the template. The map is from attribute name to the value to replace it with.  This can be used for numeric and boolean values as well as string values.
+* *placeholderProperties* - lists properties that contains strings to override placeholder strings, formatted with two sets of curly-braces, such as `{{placeholder}}`.  The map is from placeholder name to value to replace it with.
 
 ??? deprecated "Deprecated types"
     - *LastAttachment* - use *LatestChange* instead

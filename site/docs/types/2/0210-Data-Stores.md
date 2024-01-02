@@ -31,6 +31,7 @@ The *DataScope* classification identifies the scope of the data stored in the [r
 * *maxHeight* - if the height above ground is relevant, this is the highest height that the data covers.
 * *startTime* - if the data is bound by time, this is the start time.
 * *endTime* - if the data is bound by time, this is the end time.
+* *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
 
 
 --8<-- "snippets/abbr.md"

@@ -1,6 +1,6 @@
-<mxfile modified="2023-12-28T08:45:01.700Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="uOpya9BxurKeKRXbnaN-" version="21.6.8" type="device" pages="34">
+<mxfile modified="2024-01-07T19:37:49.421Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="5--wAn_pl9FD_P5DnMaZ" version="22.1.16" type="device" pages="34">
   <diagram id="mHdgXSSDg3P1Vtlx_zm2" name="overview">
-    <mxGraphModel dx="1114" dy="775" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="812" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -501,7 +501,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0505-Schema-Attributes" id="4GrBEy_7Aw3WSbm6_cvN">
-    <mxGraphModel dx="1106" dy="773" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="812" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="dp80E5BfLT-rZpdb8q4U-0" />
         <mxCell id="dp80E5BfLT-rZpdb8q4U-1" parent="dp80E5BfLT-rZpdb8q4U-0" />
@@ -1141,7 +1141,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0530-Tabular-Schemas" id="FuWlSs4KgZAke9jQwvdu">
-    <mxGraphModel dx="1106" dy="729" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="812" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="Z_djJkt9Ydp5Tgf9ccn--0" />
         <mxCell id="Z_djJkt9Ydp5Tgf9ccn--1" parent="Z_djJkt9Ydp5Tgf9ccn--0" />
@@ -1200,18 +1200,18 @@
         <mxCell id="9PDKvMZaeeFUgXn8WuKP-3" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="9PDKvMZaeeFUgXn8WuKP-1" vertex="1">
           <mxGeometry y="50" width="238" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="j7Ljz6wCuEV62q5xvGAe-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startSize=6;endArrow=block;endFill=0;endSize=16;" edge="1" parent="Z_djJkt9Ydp5Tgf9ccn--1" source="j7Ljz6wCuEV62q5xvGAe-2">
+        <mxCell id="j7Ljz6wCuEV62q5xvGAe-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startSize=6;endArrow=block;endFill=0;endSize=16;" parent="Z_djJkt9Ydp5Tgf9ccn--1" source="j7Ljz6wCuEV62q5xvGAe-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="316" y="314" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="j7Ljz6wCuEV62q5xvGAe-1" value="" style="group" vertex="1" connectable="0" parent="Z_djJkt9Ydp5Tgf9ccn--1">
+        <mxCell id="j7Ljz6wCuEV62q5xvGAe-1" value="" style="group" parent="Z_djJkt9Ydp5Tgf9ccn--1" vertex="1" connectable="0">
           <mxGeometry x="197" y="385" width="238" height="78" as="geometry" />
         </mxCell>
-        <mxCell id="j7Ljz6wCuEV62q5xvGAe-2" value="«entity»&lt;br&gt;&lt;b&gt;TabularSchemaType&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" vertex="1" parent="j7Ljz6wCuEV62q5xvGAe-1">
+        <mxCell id="j7Ljz6wCuEV62q5xvGAe-2" value="«entity»&lt;br&gt;&lt;b&gt;TabularSchemaType&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="j7Ljz6wCuEV62q5xvGAe-1" vertex="1">
           <mxGeometry width="238" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="j7Ljz6wCuEV62q5xvGAe-3" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" vertex="1" parent="j7Ljz6wCuEV62q5xvGAe-1">
+        <mxCell id="j7Ljz6wCuEV62q5xvGAe-3" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="j7Ljz6wCuEV62q5xvGAe-1" vertex="1">
           <mxGeometry y="50" width="238" height="28" as="geometry" />
         </mxCell>
       </root>
@@ -1401,7 +1401,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0533-Graph-Schemas" id="Jf3jBcH1HH-Q-Zf-xJbK">
-    <mxGraphModel dx="1106" dy="729" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="812" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="UqNjM-0Ijinb2xrUuT-c-0" />
         <mxCell id="UqNjM-0Ijinb2xrUuT-c-1" parent="UqNjM-0Ijinb2xrUuT-c-0" />
@@ -1465,15 +1465,6 @@
         <mxCell id="mk9fZxQRFpjFWeiI4ZH4-6" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="F1_v_NfLz1x3dSeLILbJ-3" vertex="1">
           <mxGeometry x="0.5" y="50.5" width="240" height="23" as="geometry" />
         </mxCell>
-        <mxCell id="F1_v_NfLz1x3dSeLILbJ-4" value="" style="group" parent="UqNjM-0Ijinb2xrUuT-c-1" vertex="1" connectable="0">
-          <mxGeometry x="568" y="525.5" width="214" height="81" as="geometry" />
-        </mxCell>
-        <mxCell id="UqNjM-0Ijinb2xrUuT-c-12" value="«relationship»&lt;br&gt;&lt;b&gt;GraphEdgeLink&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="F1_v_NfLz1x3dSeLILbJ-4" vertex="1">
-          <mxGeometry width="214" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="UqNjM-0Ijinb2xrUuT-c-14" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="F1_v_NfLz1x3dSeLILbJ-4" vertex="1">
-          <mxGeometry y="50" width="213" height="31" as="geometry" />
-        </mxCell>
         <mxCell id="F1_v_NfLz1x3dSeLILbJ-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startSize=6;endArrow=block;endFill=0;endSize=16;" parent="UqNjM-0Ijinb2xrUuT-c-1" source="UqNjM-0Ijinb2xrUuT-c-4" target="UqNjM-0Ijinb2xrUuT-c-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -1487,6 +1478,12 @@
               <mxPoint x="536" y="469.5" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="UqNjM-0Ijinb2xrUuT-c-12" value="«relationship»&lt;br&gt;&lt;b&gt;GraphEdgeLink&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="UqNjM-0Ijinb2xrUuT-c-1" vertex="1">
+          <mxGeometry x="541" y="525.5" width="266" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="UqNjM-0Ijinb2xrUuT-c-14" value="&lt;div style=&quot;text-align: left&quot;&gt;linkTypeName : string&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationshipEnd : int&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationshipEndName : string&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;description : string&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;minCardinality : int&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxCardinality : int&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;additionalProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="UqNjM-0Ijinb2xrUuT-c-1" vertex="1">
+          <mxGeometry x="541" y="575.5" width="266" height="132.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

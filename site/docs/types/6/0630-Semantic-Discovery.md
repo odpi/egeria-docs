@@ -9,7 +9,7 @@ hide:
 # 0630 Semantic Discovery
 
 Semantic discovery is attempting to define the
-meaning of the data values in the asset.
+meaning of the data values in the resource.
 The result is a recommended glossary term
 stored as an annotation.
 

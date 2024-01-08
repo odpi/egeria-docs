@@ -1,0 +1,180 @@
+<mxfile modified="2024-01-06T13:30:22.564Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Nth9r8_ntY2ykwZWDSiZ" version="22.1.16" type="device" pages="2">
+  <diagram id="oseyHd7c6BClqKj5rViH" name="survey-action-engine">
+    <mxGraphModel dx="2283" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-16" value="" style="rounded=0;whiteSpace=wrap;html=1;align=right;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="170" y="580" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-9" value="Survey Action Engine" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="100" y="100" width="300" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-1" value="Survey Action&lt;br&gt;Service" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="269" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-2" value="Survey Action&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Service" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="269" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-3" value="Survey Action&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Service" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="269" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-4" value="Survey Action&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Service" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="430" width="189" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mFFzqXxF2KvexEjWW1hX-5" target="mFFzqXxF2KvexEjWW1hX-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mFFzqXxF2KvexEjWW1hX-5" target="mFFzqXxF2KvexEjWW1hX-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mFFzqXxF2KvexEjWW1hX-5" target="mFFzqXxF2KvexEjWW1hX-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-5" value="Survey Action Pipeline" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="150" width="189" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-10" value="A collection of related survey action&lt;br&gt;pipelines and services." style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=0;spacingLeft=9;" parent="1" vertex="1">
+          <mxGeometry x="482" y="118" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-11" value="A survey action service that orchestrates&lt;br&gt;other survey action services." style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=0;spacingLeft=9;" parent="1" vertex="1">
+          <mxGeometry x="482" y="188" width="250" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-12" value="Implements analysis of a real-world&lt;br&gt;resource to extract characteristics of &lt;br&gt;that are documented in an annotation.&amp;nbsp;" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=0;spacingLeft=9;" parent="1" vertex="1">
+          <mxGeometry x="482" y="254" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-14" value="Governance Engine in Open Metadata&lt;br&gt;Archive File" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="600" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-15" value="Survey Action Service&lt;br&gt;Implementation&lt;br&gt;Java Archive&lt;br&gt;(JAR) file" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="671" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-17" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mFFzqXxF2KvexEjWW1hX-9" target="mFFzqXxF2KvexEjWW1hX-16" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="820" as="sourcePoint" />
+            <mxPoint x="200" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mFFzqXxF2KvexEjWW1hX-18" value="Reusable pack" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;" parent="1" vertex="1">
+          <mxGeometry x="265" y="532" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zGPHbwCEMO5-oGNVuJWz-1" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#dae8fc;fontSize=13;strokeColor=#6c8ebf;entryX=1.007;entryY=0.019;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="mFFzqXxF2KvexEjWW1hX-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="482" y="108" as="sourcePoint" />
+            <mxPoint x="422" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zGPHbwCEMO5-oGNVuJWz-2" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#dae8fc;fontSize=13;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.008;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#6c8ebf;" parent="1" source="zGPHbwCEMO5-oGNVuJWz-7" target="mFFzqXxF2KvexEjWW1hX-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="529" y="174.5" as="sourcePoint" />
+            <mxPoint x="422" y="174.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zGPHbwCEMO5-oGNVuJWz-5" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#dae8fc;fontSize=13;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.033;exitY=0.6;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#6c8ebf;" parent="1" source="zGPHbwCEMO5-oGNVuJWz-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="529" y="249.5" as="sourcePoint" />
+            <mxPoint x="390" y="249.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zGPHbwCEMO5-oGNVuJWz-6" value="Survey Action Engine" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=13;fontStyle=5;spacingLeft=9;" parent="1" vertex="1">
+          <mxGeometry x="483" y="100" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zGPHbwCEMO5-oGNVuJWz-7" value="Survey Action Pipeline" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=13;fontStyle=5;spacingLeft=9;" parent="1" vertex="1">
+          <mxGeometry x="483" y="170" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="zGPHbwCEMO5-oGNVuJWz-8" value="Survey Action Service" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=13;fontStyle=5;spacingLeft=9;" parent="1" vertex="1">
+          <mxGeometry x="483" y="238" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dNmHiRkew6J8d6VQKgBy-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontColor=#000000;" parent="1" source="dNmHiRkew6J8d6VQKgBy-1" target="mFFzqXxF2KvexEjWW1hX-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dNmHiRkew6J8d6VQKgBy-1" value="Request&lt;br&gt;Type" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="110" y="150" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dNmHiRkew6J8d6VQKgBy-3" value="Request&lt;br&gt;Type" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="110" y="430" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dNmHiRkew6J8d6VQKgBy-4" value="" style="endArrow=classic;html=1;fontColor=#000000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="mFFzqXxF2KvexEjWW1hX-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="460" as="sourcePoint" />
+            <mxPoint x="150" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dNmHiRkew6J8d6VQKgBy-6" value="A descriptive name for the&lt;br&gt;type of survey that the&lt;br&gt;caller wants to run." style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=0;spacingLeft=9;" parent="1" vertex="1">
+          <mxGeometry x="-123.10000000000002" y="187" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dNmHiRkew6J8d6VQKgBy-7" value="" style="shape=flexArrow;endArrow=classic;html=1;fillColor=#dae8fc;fontSize=13;strokeColor=#6c8ebf;exitX=1.026;exitY=0.55;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="dNmHiRkew6J8d6VQKgBy-8" target="dNmHiRkew6J8d6VQKgBy-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-133.10000000000002" y="147" as="sourcePoint" />
+            <mxPoint x="-260.0000000000001" y="149.98000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dNmHiRkew6J8d6VQKgBy-8" value="Request Type" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=13;fontStyle=5;spacingLeft=9;" parent="1" vertex="1">
+          <mxGeometry x="-122.10000000000002" y="169" width="110" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="7ChLMB1BL2B0K8IGhIvW" name="survey-context">
+    <mxGraphModel dx="1114" dy="2466" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-0" />
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-1" parent="uvuqDHZQVnx3t9x9dp1w-0" />
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-2" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;align=left;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="413" y="-1380" width="144" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-4" value="Survey Action Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="434" y="-1178" width="205" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="uvuqDHZQVnx3t9x9dp1w-1" source="uvuqDHZQVnx3t9x9dp1w-2" target="uvuqDHZQVnx3t9x9dp1w-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-6" value="requestType&lt;br&gt;requestParameters&lt;br&gt;assetGUID&lt;br&gt;assetStore&lt;br&gt;annotationStore&lt;br&gt;openMetadataStore&lt;br&gt;surveyReport" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=1;perimeterSpacing=3;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="425" y="-1344" width="130" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-7" value="SurveyContext" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="410" y="-1380" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-8" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;ol&gt;&lt;li&gt;Choreographer of external survey services&lt;/li&gt;&lt;li&gt;Full implementation of a survey&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="639" y="-1167" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-9" value="setContext()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="410" y="-1209" width="75" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endSize=4;endArrow=none;endFill=0;" parent="uvuqDHZQVnx3t9x9dp1w-1" source="uvuqDHZQVnx3t9x9dp1w-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="412" y="-1262.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-11" value="OpenMetadataStore" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="30" y="-1320" width="285" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-12" value="&lt;i&gt;(Comprehensive open metadata&lt;br&gt;services from the &lt;br&gt;Governance Action Framework (GAF))&lt;/i&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="49" y="-1292" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endSize=4;endArrow=none;endFill=0;" parent="uvuqDHZQVnx3t9x9dp1w-1" source="uvuqDHZQVnx3t9x9dp1w-15" target="uvuqDHZQVnx3t9x9dp1w-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="-1397.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-15" value="SurveyAssetStore" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="28" y="-1455" width="285" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-16" value="getConnectionForAsset&lt;br&gt;getConnectorByConnection&lt;br&gt;getAssetProperties&lt;br&gt;logAssetAuditMessage" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="49" y="-1418" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-17" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;endSize=4;endArrow=none;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="uvuqDHZQVnx3t9x9dp1w-1" source="uvuqDHZQVnx3t9x9dp1w-18" target="uvuqDHZQVnx3t9x9dp1w-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1012" y="-1367.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-18" value="AnnotationStore" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="630" y="-1460" width="285" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="uvuqDHZQVnx3t9x9dp1w-19" value="getTypesOfAnnotation&lt;br&gt;getTypesOfAnnotationWithDescriptions&lt;br&gt;getPreviousAnnotationsForElement&lt;br&gt;getNewAnnotationsForElement&lt;br&gt;getExtendedAnnotations&lt;br&gt;getAnnotation&lt;br&gt;addAnnotation&lt;br&gt;addAnnotationExtension&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;updateAnnotation&lt;br&gt;deleteAnnotation" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="uvuqDHZQVnx3t9x9dp1w-1" vertex="1">
+          <mxGeometry x="651" y="-1438" width="230" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -12,7 +12,7 @@ Quality scores describe how well the data values, typically in a data field, con
 
 ![UML](0640-Quality-Scores.svg)
 
-A data field can have multiple quality scores associated to it,
+A schema attribute can have multiple quality scores associated to it,
 for different types of problems. Examples of quality problem types include:
 
  * Data class violations
@@ -30,7 +30,7 @@ Each quality score for each type of problem could have additional properties ass
 confidence, date it was calculated, for example.
 The set of such properties may differ across discovery services and should be open.
 
-A combined quality score for an entire Asset can be typically calculated as
+A combined quality score for an entire resource can be typically calculated as
 the average of the scores for all its columns, but other factors may be taken into
 account by a given system and we should be able to associate a score to an Asset,
 independently of the way it is calculated.

@@ -14,7 +14,7 @@ The open metadata and governance frameworks supported by Egeria are as follows:
 
 * *[Open Integration Framework (OIF)](/frameworks/oif/overview)* provides the interfaces and base implementations for connectors (called [integration connectors](/concepts/integration-connector)) that synchronize metadata between Egeria's open metadata ecosystem and third party technologies.  The integration connectors run in an [integration daemon](/concepts/integration-daemon).
 
-* *[Open Discovery Framework (ODF)](/frameworks/odf/overview)* provides the interfaces and base implementations for connectors (called [open discovery services](/concepts/open-discovery-service)) that access data-related assets and extract characteristics about the data that can be stored in an open metadata repository. The open discovery services run in an [open discovery engine](/concepts/open-discovery-engine) hosted on the [Engine Host](/concepts/engine-host) OMAG Server.
+* *[Survey Action Framework (SAF)](/frameworks/saf/overview)* provides the interfaces and base implementations for connectors (called [survey action services](/concepts/survey-action-service)) that survey and extract characteristics about the real-world resources and stores them in an open metadata repository.
 
 * *[Governance Action Framework (GAF)](/frameworks/gaf/overview)* provides the interfaces and base implementations for connectors (called [governance action services](/concepts/governance-action-service)) that take action to assess and correct a situation that is harmful to the data, or the organization in some way.  The governance action services run in a [governance action engine](/concepts/governance-action-engine) hosted on the [Engine Host](/concepts/engine-host) OMAG Server.
 

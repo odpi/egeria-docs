@@ -148,6 +148,7 @@
     - [Open Discovery Framework (ODF)](/frameworks/odf/overview)
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
     - [Event Action Framework (EAF)](/frameworks/eaf/overview)
+    - [Survey Action Framework (EAF)](/frameworks/saf/overview)
 
 
 ## G
@@ -379,6 +380,10 @@
 - [Subject Area Domain](/concepts/subject-area)
 - [Subject Area OMAS](/services/omas/subject-area/overview)
 - [Subsystem](/concepts/omag-subsystem)
+- [Survey Report](/concepts/survey-report)
+- [Survey Action Engine](/concepts/survey-action-engine)
+- [Survey Action Framework (SAF)](/frameworks/saf/overview)
+- [Survey Action Service](/concepts/survey-action-service)
 - [Supported Zones](/concepts/governance-zone)
 
 

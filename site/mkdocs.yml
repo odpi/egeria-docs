@@ -477,10 +477,12 @@ nav:
           - 6. Metadata Discovery:
               - Area 6 Metadata Discovery: types/6/index.md
               - Open Discovery Engines and Services: types/6/0601-Open-Discovery-Engine.md
+              - Survey Reports: types/6/0603-Survey-Reports.md
               - Discovery Analysis Report: types/6/0605-Open-Discovery-Analysis-Reports.md
               - Annotations: types/6/0610-Annotations.md
               - Annotation Reviews: types/6/0612-Annotation-Reviews.md
               - Schema Extraction: types/6/0615-Schema-Extraction.md
+              - Data Field Discovery: types/6/0616-Data-Field-Discovery.md
               - Data Field Analysis: types/6/0617-Data-Field-Analysis.md
               - Data Profiling: types/6/0620-Data-Profiling.md
               - Data Class Discovery: types/6/0625-Data-Class-Discovery.md
@@ -559,6 +561,8 @@ nav:
                   - Open Metadata Engine Services: services/omes/index.md
                   - Asset Analysis: services/omes/asset-analysis/overview.md
                   - Governance Action: services/omes/governance-action/overview.md
+                  - Event Action: services/omes/event-action/overview.md
+                  - Survey Action: services/omes/survey-action/overview.md
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
@@ -595,9 +599,9 @@ nav:
           - Audit Logs (ALF): frameworks/alf/overview.md
           - Open Connectors (OCF): frameworks/ocf/overview.md
           - Open Integration (OIF): frameworks/oif/overview.md
-          - Open Discovery (ODF): frameworks/odf/overview.md
           - Governance Actions (GAF): frameworks/gaf/overview.md
           - Event Actions (EAF): frameworks/eaf/overview.md
+          - Survey Actions (EAF): frameworks/saf/overview.md
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md
           - Platform Profiles:
@@ -792,6 +796,9 @@ nav:
       - Software Server Capability: concepts/software-server-capability.md
       - Star Rating: concepts/review.md
       - Subject Area: concepts/subject-area.md
+      - Survey Report: concepts/survey-report.md
+      - Survey Action Engine: concepts/survey-action-engine.md
+      - Survey Action Service: concepts/survey-action-service.md
       - Tag: concepts/informal-tag.md
       - To Do: concepts/to-do.md
       - Uni-link Relationships: concepts/uni-multi-link.md

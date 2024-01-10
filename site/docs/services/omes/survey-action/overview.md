@@ -16,7 +16,7 @@ The Survey Action OMES provides support for [event action engines](/concepts/eve
 
 ## Survey action engines
 
-A survey action engine hosts specialized governance services called [survey action services](/concepts/survey-action-services).
+A survey action engine hosts specialized governance services called [survey action services](/concepts/survey-action-service).
 
 The Survey Action OMES is capable of hosting one or more [survey action engines](/concepts/survey-action-engine).
 

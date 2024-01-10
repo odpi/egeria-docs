@@ -4,7 +4,8 @@
 # Writing a Survey Action Service
 
 ---8<-- "docs/connectors/survey-action/survey-action-service-intro.md"
----8<-- "docs/connectors/survey-action/survey-action-pipeline-intro.md"
+---8<-- "docs/frameworks/saf/survey-action-pipeline-intro.md"
+
 
 ## Implementing survey action services
 

@@ -28,12 +28,15 @@ A *survey action pipeline* is a specialized implementation of a [survey action s
 
 The aim of the survey action pipeline is to enable a detailed picture of the properties of an asset to be built up by the nested survey action services it calls. Each survey action service is able to access the results of the survey action services that have run before it.
 
-
 ## Survey report
+
+The survey report is created automatically in the open metadata repository when the survey action service is started.  It is linked to the asset.
+
+![]()
 
 The *survey report* lists the [annotations](#annotations) that were created during the execution of a [survey action service](#survey-action-service).
 
-The survey report is created automatically in the open metadata repository when the survey action service is started.  Annotations are published to report as soon as they are created by the survey action service so it is possible to process the annotations from a long-running survey before it has completed.
+  Annotations are published to report as soon as they are created by the survey action service so it is possible to process the annotations from a long-running survey before it has completed.
 
 ### Annotations
 
@@ -53,6 +56,83 @@ Different types of annotations provide different types of information.
 | Quality annotation | Document calculated quality scores on different dimensions. |
 | Semantic annotation | Documents suggested meanings for this data based on the values and name of the field. |
 | Suspect duplicate annotation | Identifies other asset definitions that seem to point to the same physical asset. |
+
+#### Schema extraction
+
+For digital resources that include structured data, *schema extraction* documents the data fields present in the digital resource as a schema.
+
+Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Extraction).  It is linked directly off of the survey report.
+
+[Data field](/types/6/0615-Schema-Extraction) entities, one for each data field in the digital resource, are then linked together to show the structure of the data in the digital resource and this structure is linked off of the schema analysis annotation.
+
+![schema extraction](survey-action-schema-extraction.svg)
+
+The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *AssetSchemaType* relationship.  This may be established before the survey action service runs, or may be derived by the survey action service.
+
+#### Data profiling
+
+Profiling analysis looks at the data values in the resource and summarizes their characteristics.  There are three types of annotations used in data profiling.
+
+* [Data Profile Annotation](/types/6/0620-Data-Profiling) - Capture the characteristics of the data values stored in a specific data field in a data source.
+* [Data Profile Log Annotation](/types/6/0620-Data-Profiling) - Capture the named of the log files where profile characteristics of the data values stored in a specific data field.  This is used when the profile results are too large to store in open metadata.
+* [Fingerprint Annotation](/types/6/0620-Data-Profiling) - Capture the characteristics of the data values stored in a specific data field or the whole digital resource and express it as a single value.
+
+![data profiling](survey-action-data-profiling.svg)
+
+For structured data, data profiling needs to run after schema extraction to allow the data profiling annotations that refer to a specific data field to be linked from the appropriate data field entity.
+
+#### Data class discovery
+
+Data class discovery captures the analysis on how close a data field matches the specification defined in a [data class](/concepts/data-class).
+
+![Data class discovery](survey-action-data-class-discovery.svg)
+
+The recommendation for a specific data class are stored in a [data class annotation](/types/6/0625-Data-Class-Discovery) linked off of the appropriate data field.  Data class discovery needs to run after schema extraction.  It often builds on the information provided by data profiling.
+
+Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the [*DataClassAssignment*](/types/5/0540-Data-Classes) relationship.
+
+#### Semantic discovery
+
+Semantic discovery is attempting to define the meaning of the data values in the asset. The result is a recommended glossary term stored as a [semantic annotation](/types/6/0630-Semantic-Discovery).
+
+![Semantic discovery](survey-action-semantic-discovery.svg)
+
+These annotations are the metadata discovery equivalent of the *Informal Tag* shown in [0150 - Feedback](/types/1/0150-feedback) in Area 1.  It typically takes confirmation by a subject-matter expert to convert this into a [Semantic Assignment](/types/3/0370-Semantic-Assignment).  Semantic discovery needs to run after schema extraction.  It often builds on the information provided by data profiling and data class discovery.
+
+#### Classification discovery
+
+Classification discovery adds recommendations for new classifications that should either be added to the asset, or to a schema attribute in the asset.  It uses the [classification annotation](/types/6/0635-Classification-Discovery) to describe the classification and its properties.
+If the classification is for the asset, the classification annotation is linked off of the survey report.  If it is for a specific schema attribute, it is linked off of the corresponding data field.
+
+![Classification discovery](survey-action-classification-discovery.svg)
+
+#### Calculating quality scores
+
+Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.   This type of annotation is often used within a [data quality program](/features/data-quality/overview) to provide assessments of the data for different purposes.
+
+![Quality Scores](survey-action-quality-scores.svg)
+
+#### Relationship discovery
+
+Relationship discovery identifies relationships between different resources (or data fields), such as two columns that have a foreign key relationship.
+
+It is possible to create the relationship as a relationship annotation or attach a relationship advice to the survey report.
+
+![Relationship discovery](survey-action-relationship-discovery.svg)
+
+#### Capturing measurements
+
+The measurement annotations capture a snapshot of the physical dimensions and activity levels at a particular moment in time.  For example, it may calculate the size of the data source or the number of users accessing it.
+
+![Data source measurements](survey-action-data-source-measurement.svg)
+
+#### Requesting stewardship action
+
+A RequestForAction entity (RfA) is used when an survey action service performs a test on the data (such as a [quality rule](/features/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.
+
+![Request for action](survey-action-request-for-action.svg)
+
+The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) is designed to respond to the requests for actions (RfAs).
 
 ## Survey context
 

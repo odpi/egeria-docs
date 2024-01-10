@@ -109,10 +109,11 @@ nav:
                   - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
               - Building Utilities: guides/developer/building-utilities/overview.md
               - Building Connectors:
+                  - Survey Action Services: guides/developer/survey-action-services/overview.md
                   - Integration Connectors: guides/developer/integration-connectors/overview.md
-                  - Open Discovery Services: guides/developer/open-discovery-services/overview.md
                   - Governance Action Services: guides/developer/governance-action-services/overview.md
                   - Repository Governance Services: guides/developer/repository-governance-services/overview.md
+                  - Open Discovery Services: guides/developer/open-discovery-services/overview.md
                   - Repository Connectors: guides/developer/repository-connectors/overview.md
                   - Runtime Connectors:
                       - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md

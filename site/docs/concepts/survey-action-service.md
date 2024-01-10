@@ -12,7 +12,7 @@ hide:
 
 ## Survey Action Pipeline
 
----8<-- "docs/guides/developer/open-discovery-services/discovery-pipeline-intro.md"
+---8<-- "docs/frameworks/saf/survey-action-pipeline-intro.md"
 
 !!! education "Further information"
 

@@ -602,7 +602,7 @@ nav:
           - Open Integration (OIF): frameworks/oif/overview.md
           - Governance Actions (GAF): frameworks/gaf/overview.md
           - Event Actions (EAF): frameworks/eaf/overview.md
-          - Survey Actions (EAF): frameworks/saf/overview.md
+          - Survey Actions (SAF): frameworks/saf/overview.md
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md
           - Platform Profiles:

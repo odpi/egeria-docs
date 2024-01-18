@@ -342,6 +342,7 @@
 - [Repository Services](/services/omrs)
 - [Repository Validator](/concepts/repository-validator)
 - [Resource](/concepts/resource)
+- [ResourceUse](/concepts/resource-use)
 - [Resource Connector](/concepts/digital-resource-connector)
 - [REST Client Connector](/concepts/rest-client-connector)
 - [REST Repository Connector](/connectors/runtime/omrs-rest-repository-connector)

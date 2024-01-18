@@ -786,6 +786,7 @@ nav:
       - Repository Proxy: concepts/repository-proxy.md
       - Repository Validator: concepts/repository-validator.md
       - Resource: concepts/resource.md
+      - Resource Use: concepts/resource-use.md
       - REST client connector: concepts/rest-client-connector.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md

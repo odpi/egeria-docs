@@ -1,6 +1,6 @@
-<mxfile modified="2024-01-10T13:28:42.327Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="8rn7VCugJmf5JSsX02XN" version="22.1.16" type="device" pages="15">
+<mxfile modified="2024-01-17T13:31:19.367Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="n_KDv5dGL97Mq0It1NWn" version="22.1.16" type="device" pages="16">
   <diagram id="nSDM-Rxb-zmBo6Db-v7M" name="survey-action-service-operation">
-    <mxGraphModel dx="1941" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2208" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="gjnWcZLFT91bWECpOiNR-0" />
         <mxCell id="gjnWcZLFT91bWECpOiNR-1" parent="gjnWcZLFT91bWECpOiNR-0" />
@@ -206,7 +206,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="IV71vn2xw5NiIvNLVCt7" name="survey-report">
-    <mxGraphModel dx="1941" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2208" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="KlcPFTXAP9yj0ybZOr23-0" />
         <mxCell id="KlcPFTXAP9yj0ybZOr23-1" parent="KlcPFTXAP9yj0ybZOr23-0" />
@@ -872,7 +872,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="80IOCSKDe2TH0Fwrc41k" name="file-system-discovery-process">
-    <mxGraphModel dx="2142" dy="1048" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2969" dy="1048" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1671,13 +1671,13 @@
           <mxGeometry x="-132" y="3185" width="170" height="40" as="geometry" />
         </mxCell>
         <mxCell id="qS_1YLQiRLYEo0A8dIZq-191" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-690" y="1740" width="940" height="505" as="geometry" />
+          <mxGeometry x="-867.75" y="1587.5" width="940" height="505" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="eMJgURYlbCEuD_x_Gv_b" name="survey-action-engine-definitions">
-    <mxGraphModel dx="1941" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2208" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1787,7 +1787,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mAyvmfSaDt5VqsN_PsxZ" name="survey-context">
-    <mxGraphModel dx="1114" dy="1981" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="1974" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1800,8 +1800,8 @@
         <mxCell id="RU4SfPNbypoqjlcTaihg-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RU4SfPNbypoqjlcTaihg-1" target="RU4SfPNbypoqjlcTaihg-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RU4SfPNbypoqjlcTaihg-4" value="requestType&lt;br&gt;requestParameters&lt;br&gt;assetGUID&lt;br&gt;assetStore&lt;br&gt;annotationStore&lt;br&gt;openMetadataStore&lt;br&gt;surveyReport" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=1;perimeterSpacing=3;" vertex="1" parent="1">
-          <mxGeometry x="437" y="-964" width="130" height="110" as="geometry" />
+        <mxCell id="RU4SfPNbypoqjlcTaihg-4" value="requestType&lt;br&gt;requestParameters&lt;br&gt;assetGUID&lt;br&gt;assetStore&lt;br&gt;annotationStore&lt;br&gt;openMetadataStore" style="text;html=1;align=left;verticalAlign=middle;resizable=1;points=[];autosize=1;perimeterSpacing=3;" vertex="1" parent="1">
+          <mxGeometry x="439" y="-964" width="130" height="100" as="geometry" />
         </mxCell>
         <mxCell id="RU4SfPNbypoqjlcTaihg-5" value="SurveyContext" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
           <mxGeometry x="422" y="-1000" width="100" height="30" as="geometry" />
@@ -1840,10 +1840,48 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="RU4SfPNbypoqjlcTaihg-15" value="AnnotationStore" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;align=left;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="642" y="-1080" width="285" height="190" as="geometry" />
+          <mxGeometry x="642" y="-1150" width="248" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="RU4SfPNbypoqjlcTaihg-16" value="getTypesOfAnnotation&lt;br&gt;getTypesOfAnnotationWithDescriptions&lt;br&gt;getPreviousAnnotationsForElement&lt;br&gt;getNewAnnotationsForElement&lt;br&gt;getExtendedAnnotations&lt;br&gt;getAnnotation&lt;br&gt;addAnnotation&lt;br&gt;addAnnotationExtension&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;updateAnnotation&lt;br&gt;deleteAnnotation" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="663" y="-1058" width="230" height="160" as="geometry" />
+        <mxCell id="RU4SfPNbypoqjlcTaihg-16" value="getAnnotationsForElement&lt;br&gt;getNewAnnotations&lt;br&gt;getExtendedAnnotations&lt;br&gt;getAnnotation&lt;br&gt;addAnnotation&lt;br&gt;addAnnotationExtension&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;updateAnnotation&lt;br&gt;deleteAnnotation" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="663" y="-970" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="DIh0fPRe4v9lDJisw5Qa-1" value="getSurveyReportGUID&lt;br&gt;getAnalysisStep&lt;br&gt;setAnalysisStep&lt;br&gt;getReportPurpose&lt;br&gt;setReportPurpose&lt;br&gt;getReportDisplayName&lt;br&gt;setReportDisplayName&lt;br&gt;getReportDescription&lt;br&gt;setReportDescription&lt;br&gt;setCompletionMessage" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="663" y="-1124" width="150" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="J0wjJaXC5ql1yZsc73VE" name="Page-16">
+    <mxGraphModel dx="1381" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-1" value="active-metadata-store" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="320" y="118" width="140" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="n2IOeX6zb0sDYYAtPlNL-2" target="n2IOeX6zb0sDYYAtPlNL-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-2" value="integration-daemon" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="103" width="140" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="n2IOeX6zb0sDYYAtPlNL-3" target="n2IOeX6zb0sDYYAtPlNL-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-3" value="engine-host" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="230" width="140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-7" value="Survey Action&lt;br&gt;Services" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-8" value="Integration&lt;br&gt;Connectors" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="133" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-9" value="Metadata&lt;br&gt;Repository" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=4;" vertex="1" parent="1">
+          <mxGeometry x="360" y="310" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="n2IOeX6zb0sDYYAtPlNL-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="n2IOeX6zb0sDYYAtPlNL-1" target="n2IOeX6zb0sDYYAtPlNL-9">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

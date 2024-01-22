@@ -3,12 +3,12 @@
 
 # Configuring the OMAG Server Platform
 
-The [OMAG Server Platform](/concepts/omag-server-platform) is a JVM process that includes a Tomcat web server and uses [Spring Boot :material-dock-window:](https://spring.io/){ target=spring } to support its REST APIs.  The Egeria code is in the centre of this and, through configuration, starts up plug-in components called [connectors](/concepts/connector).
+The [OMAG Server Platform](/concepts/omag-server-platform) is a JVM process that includes a Tomcat web server and uses [Spring Boot :material-dock-window:](https://spring.io/){ target=spring } to support its REST APIs.  The Egeria code is in the centre of this.  Through configuration, Egeria starts up plug-in components called [connectors](/concepts/connector) and coordinates calls to them to manage and exchange metadata.
 
 ![OMAG Server Platform Onion](omag-server-platform-onion.svg)
 > High-level structure of the OMAG Server Platform
 
-The behaviour of these components is influenced by:
+The behaviour of the OMAG Server Platform components is influenced by:
 
 * The command line properties passed when the platform is started.
 * The contents of the `application.properties` file (or their environment variable equivalents).

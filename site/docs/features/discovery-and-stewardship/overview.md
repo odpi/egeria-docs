@@ -55,7 +55,7 @@ Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Ext
 
 ![Open discovery schema extraction](/guides/developer/open-discovery-services/open-discovery-schema-extraction.svg)
 
-The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *AssetSchemaType* relationship.  This may be established before the open discovery service runs, or may be derived by an [engine action](/concepts/engine-action once the open discovery service has run.
+The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *AssetSchemaType* relationship.  This may be established before the open discovery service runs, or may be derived by an [engine action](/concepts/engine-action) once the open discovery service has run.
 
 If the schema is defined, the open discovery service that creates the data fields may maintain relationships between the schema and the data fields:
 

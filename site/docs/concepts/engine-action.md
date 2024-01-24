@@ -30,7 +30,7 @@ Governance services produce output strings called [*guards*](/concepts/guard) th
 
 If the start date of the engine action is in the future, the [Engine Host Services](/services/engine-host-services) running in the same [Engine Host](/concepts/engine-host) OMAG Server as the nominated governance engine will schedule the governance service to run soon after the requested start date.  If the start date is left blank, the requested governance service is run as soon as possible.
 
-!!! tip "*Governance Action* was renamed to *Engine Action* in release 4.4"
-    If you have been using Egeria for a while, you may be familiar with the term *Governance Action* as the mechanism used to control the execution of automated actions in the Engine Hosts.  In [release 4.4](/release-notes/4-4), *Governance Action* was renamed to *Engine Action* to create a greater name differentiation between the concepts that are used to define the governance behaviour and those used to control the execution of this behaviour.
+!!! tip "*Governance Action* was renamed to *Engine Action* in release 5.0"
+    If you have been using Egeria for a while, you may be familiar with the term *Governance Action* as the mechanism used to control the execution of automated actions in the Engine Hosts.  In [release 5.0](/release-notes/5-0), *Governance Action* was renamed to *Engine Action* to create a greater name differentiation between the concepts that are used to define the governance behaviour and those used to control the execution of this behaviour.  The term *Governance Action* is now used as a general term for a [Governance Action Process](/concepts/governance-action-process) or a [governance action type](/concepts/governance-action-type).
 
 --8<-- "snippets/abbr.md"

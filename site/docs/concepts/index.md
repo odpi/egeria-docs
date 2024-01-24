@@ -156,7 +156,7 @@
 - [Glossary](/practices/common-data-definitions/anatomy-of-a-glossary)
 - [Glossary Category](/practices/common-data-definitions/anatomy-of-a-glossary/#glossary-categories)
 - [Glossary Term](/practices/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term)
-- [Governance Action](/concepts/engine-action)
+- [Governance Action](/concepts/governance-action)
 - [Governance Action Engine](/concepts/governance-action-engine)
 - [Governance Action OMES](/service/omes/governance-action/overview)
 - [Governance Action Framework (GAF)](/frameworks/gaf/overview)

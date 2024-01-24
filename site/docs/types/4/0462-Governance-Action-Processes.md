@@ -8,7 +8,7 @@ The types on this page describe how to create reusable "templates" that are used
 * A [governance action type](/concepts/governance-action-type) describes a single step action.
 * A [governance action process](/concepts/governance-action-process) describes a sequence of steps in a process flow.  The process flow is defined in open metadata so that it can be shared with processing engines throughout the open metadata ecosystem.  
 
-In Egeria, the [Governance Engine OMAS](/services/omas/governance-engine/overview) provides services for defining governance action types and process flows and is responsible for converting each step in the flow into an [engine action](/concepts/engine-action) when the process executes.
+In Egeria, the [Open Governance Service](/services/gaf-metadata-management) provides services for defining governance action types and process flows and is responsible for converting each step in the flow into an [engine action](/concepts/engine-action) when the process executes.
 
 ![UML](0462-Governance-Action-Processes.svg)
 

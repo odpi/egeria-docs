@@ -31,33 +31,35 @@ The server type name should be set to something that describes the OMAG Server's
 
 If you have no specific value to set the server type name to, we recommend that you set the server type name to null.  This will cause the server start up process will derive a standard server type name based on the rest of the configuration for the server.
 
-!!! post "POST - setBasicServerProperties"
-```
-{{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-properties"
-```
-The request body contains the properties to set.
-
-| Property                 | Description                                                                                                                                                                                                                                                                     |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *localServerDescription* | Description for the server. This is useful information for the administrator to understand the role of the server. The default value is `null`.                                                                                                                                 |
-| *organizationName*       | Descriptive name for the organization that owns the local server/repository. This is useful when the open metadata repository cluster consists of metadata servers from different organizations, or different departments of an enterprise. The default value is `null`.        |
-| *localServerURL*         | The *platformURLRoot* for the platform where this server is to run. For example `https://localhost:9443`.  It is used if the server connects to a [cohort](/concepts/cohort-member).                                                                                            |
-| *localServerUserId*      | UserId to use for server-initiated REST calls. The default is `OMAGServer`.                                                                                                                                                                                                     |
-| *localServerPassword*    | Password to use for server-initiated REST calls. The default is `null`. This means that only the userId is sent in the HTTP header.                                                                                                                                             |
-| *maxPageSize*            | The maximum page size that can be set on requests to the server. The default value is `1000`. A value of zero means unlimited page size. Although supported, the zero value is not recommended because it provides no protection from a large request denial of service attack. |
-
-For example:
-
-```json
-{
-  "localServerDescription" : "This server supports the governance teams",
-  "organizationName" : "Coco Pharmaceuticals",
-  "localServerURL" : "https://localhost:9443",
-  "localServerUserId" : "cocomds2npa",
-  "localServerPassword" : "secret",
-  "maxPageSize" : 600
-}
-```
+???+ post "POST - setBasicServerProperties"
+    ```
+    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-properties"
+    ```
+    The request body contains the properties to set.
+    
+    | Property                 | Description                                                                                                                                                                                                                                                                     |
+    |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | *localServerDescription* | Description for the server. This is useful information for the administrator to understand the role of the server. The default value is `null`.                                                                                                                                 |
+    | *organizationName*       | Descriptive name for the organization that owns the local server/repository. This is useful when the open metadata repository cluster consists of metadata servers from different organizations, or different departments of an enterprise. The default value is `null`.        |
+    | *localServerURL*         | The *platformURLRoot* for the platform where this server is to run. For example `https://localhost:9443`.  It is used if the server connects to a [cohort](/concepts/cohort-member).                                                                                            |
+    | *localServerUserId*      | UserId to use for server-initiated REST calls. The default is `OMAGServer`.                                                                                                                                                                                                     |
+    | *localServerPassword*    | Password to use for server-initiated REST calls. The default is `null`. This means that only the userId is sent in the HTTP header.                                                                                                                                             |
+    | *maxPageSize*            | The maximum page size that can be set on requests to the server. The default value is `1000`. A value of zero means unlimited page size. Although supported, the zero value is not recommended because it provides no protection from a large request denial of service attack. |
+    
+    For example:
+    
+    ```json
+    {
+      "localServerDescription" : "This server supports the governance teams",
+      "organizationName" : "Coco Pharmaceuticals",
+      "localServerURL" : "https://localhost:9443",
+      "localServerUserId" : "cocomds2npa",
+      "localServerPassword" : "secret",
+      "maxPageSize" : 600
+    }
+    ```
+     
+Alternatively, you can set these properties one at a time.
 
 ### Set server description
 

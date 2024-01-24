@@ -106,7 +106,7 @@ The connector provider for your governance action service provides the factory m
 
 Below is the implementation of the connector provider for the [Move Copy File Provisioning Governance Action Service](/connectors/governance-action/move-copy-file-provisioning-governance-action-service).  This is a highly configurable governance action service that can be instructed to move, copy or delete a file, and has different styles of lineage it can create.  The action it performs is supplied in the governance request type.  The source file and destination folder can be supplied either through the request parameters or as action targets.  There are two guards: "provisioning-complete" for success and "provisioning-failed" if something went wrong.
 
-The methods of the connector provider enables a tool that is configuring [engine actions](/concepts/engine-action or [governance action processes](/concepts/governance-action-process) to query the capabilities of the corresponding governance action service.
+The methods of the connector provider enables a tool that is configuring [engine actions](/concepts/engine-action) or [governance action processes](/concepts/governance-action-process) to query the capabilities of the corresponding governance action service.
 
 ```java
 public class MoveCopyFileGovernanceActionProvider extends GovernanceActionServiceProviderBase

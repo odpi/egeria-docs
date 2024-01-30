@@ -130,7 +130,7 @@ View services can be configured into a view server either altogether or individu
 
     !!! post "POST - configure multiple view services"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services/configuration
+        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services
         ```
 
         Again the request body must contain a `ViewServiceRequestBody` object.  This object is used to configure each of the registered view services.

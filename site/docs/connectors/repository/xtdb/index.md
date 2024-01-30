@@ -5,6 +5,8 @@
 
 # XTDB Native OMRS Repository Connector
 
+[XTDB](https://xtdb.com/) is XTDB is a bi-temporal and dynamic relational database.
+
 ??? success "Fully conformant with all Egeria profiles"
     Last tested on [release 3.9 of Egeria, release 3.9 of connector using release 1.21.0 of XTDB](performance.md).
 
@@ -73,8 +75,8 @@ A list of overall persistence modules and deeper configuration options for each 
 
 To enable persistence, there are two options:
 
-- send in the JSON document configuration outlined in [XTDB's own documentation :material-dock-window:](https://xtdb.com/reference/configuration.html){ target=xtdb } directly to the `xtdbConfig` key of the `configurationProperties` property of Egeria's connector configuration
-- send in a string to the `xtdbConfigEDN` key of the `configurationProperties` of Egeria's connector configuration, which gives the EDN form of configuration outlined in [XTDB's own documentation :material-dock-window:](https://xtdb.com/reference/configuration.html){ target=xtdb }
+- send in the JSON document configuration outlined in [XTDB's own documentation :material-dock-window:](https://v1-docs.xtdb.com/administration/configuring/){ target=xtdb } directly to the `xtdbConfig` key of the `configurationProperties` property of Egeria's connector configuration
+- send in a string to the `xtdbConfigEDN` key of the `configurationProperties` of Egeria's connector configuration, which gives the EDN form of configuration outlined in [XTDB's own documentation :material-dock-window:](https://v1-docs.xtdb.com/administration/configuring/){ target=xtdb }
 
 Both approaches are valid and should be equally functional, but occasionally a bug may crop up that makes one or the other more or less feasible for a particular configuration.
 

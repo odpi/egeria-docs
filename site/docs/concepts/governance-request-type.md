@@ -4,7 +4,7 @@
 
 # Governance Request Type
 
-The *governance request type* defines the descriptive name of a specific governance action that the organization wishes to run.  It is passed to the activated [governance service](/concepts/governance-service) along with some request parameters (name-value pairs of properties) and its [action targets](/concepts/acton-target) when it starts.  The governance request type, request parameters and action targets collectively instruct the governance service on the action to perform.
+The *governance request type* defines the descriptive name of a specific governance action that the organization wishes to run.  It is passed to the activated [governance service](/concepts/governance-service) along with some request parameters (name-value pairs of properties) and its [action targets](/concepts/action-target) when it starts.  The governance request type, request parameters and action targets collectively instruct the governance service on the action to perform.
 
 The governance request type is also used to identify which governance service to run. It is mapped to a [governance service](/concepts/governance-service) implementation along with an initial set of request parameters in a [governance engine definition](/concepts/governance-engine) as shown in Figure 1.
 

@@ -52,6 +52,7 @@ nav:
                   - JDBC Connector: connectors/resource/jdbc-resource-connector.md
                   - Basic File Connector: connectors/resource/basic-file-resource-connector.md
                   - CSV File Connector: connectors/resource/csv-file-resource-connector.md
+                  - Basic Folder Connector: connectors/resource/basic-folder-resource-connector.md
                   - Data Folder Connector: connectors/resource/data-folder-resource-connector.md
               - System:
                   - Apache Atlas REST Connector: connectors/system/apache-atlas-rest-connector.md

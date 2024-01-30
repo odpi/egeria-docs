@@ -372,15 +372,17 @@ cohort member's [Local Repository Configuration](/user/guides/admin/servers/conf
 
 ### Files
 
-* The [basic file connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector){ target=gh }  provides support to read and write to a file using the Java File object.  
+* The [basic file connector](/connectors/resource/basic-file-resource-connector)  provides support to read and write to a file using the Java File object.  
 
-* The [CSV file connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/csv-file-connector){ target=gh }  is able to retrieve data from a Comma Separated Values (CSV) file where the contents are stored in logical columns with a special character delimiter between the columns.
-  
-* The [data folder connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/data-folder-connector){ target=gh } is for accessing data that is stored as a number of files within a folder (directory).
+* The [basic folder connector](/connectors/resource/basic-folder-resource-connector) is for accessing the files within a folder (directory).
+
+* The [CSV file connector](/connectors/resource/csv-file-resource-connector)  is able to retrieve data from a Comma Separated Values (CSV) file where the contents are stored in logical columns with a special character delimiter between the columns.
+
+* The [data folder connector](/connectors/resource/data-folder-resource-connector) is for accessing data that is stored as a number of files within a folder (directory).
   
 ### Databases
 
-* The [jdbc resource connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-resource-connector){ target=gh } is for accessing a database server.
+* The [jdbc resource connector](/connectors/resource/jdbc-resource-connector) is for accessing a database.
 
 ### Open Metadata Topic Connectors
 

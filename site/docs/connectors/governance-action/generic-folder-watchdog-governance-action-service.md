@@ -74,7 +74,7 @@ The rest of the properties are the governance action processes to call for speci
 
 ## Governance action settings
 
-When this governance action service is called through a [`GovernanceAction`](/types/4/0463-governance-actions/#governanceaction) it supports the following options:
+When this governance action service is called through an [engine action](/concepts/engine-action) it supports the following options:
 
 ### Request types and parameters
 

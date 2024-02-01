@@ -146,12 +146,13 @@ The table below lists the repository connectors that act as an adapter for third
 
 ---8<-- "docs/connectors/discovery/discovery-service-intro.md"
 
-| Connector                                                                                                                                                                                                     | Description |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
-| [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh }                 | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)). |
-| [CSV Discovery Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh }                         | extracts the column names from the first line of the file, counts up the number of records in the file and extracts its last modified time. |
-| [Validate Drop Foot Weekly Measurements Discovery Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/governance-services-sample){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)). |
-| [Validate Patient Records :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/governance-services-sample){ target=gh }                                | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)). |
+| Connector                                                                                                                                                                                                    | Description                                                                                                                                 |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh }                  | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)).              |
+| [CSV Discovery Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh }                          | extracts the column names from the first line of the file, counts up the number of records in the file and extracts its last modified time. |
+| [Apache Atlas Discovery Service](/connectors/discovery/apache-atlas-discovery-service)                                                                                                                       | profiles the content of an Apache Atlas server.                                                                                             |
+| [Validate Drop Foot Weekly Measurements Discovery Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/governance-services-sample){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)).              |
+| [Validate Patient Records :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/governance-services-sample){ target=gh }                                 | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)).              |
 
 ??? education "Further information relating to Open Discovery Services"
     
@@ -175,6 +176,19 @@ The table below lists the repository connectors that act as an adapter for third
     - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the governance action services run.
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing a governance action service](/guides/developer/governance-action-services/overview) for information on writing new governance action services.
+
+### Event Action Services
+
+---8<-- "docs/connectors/event-action/event-action-service-service-intro.md"
+
+There are currently no event action services supplied by Egeria.
+
+??? education "Further information relating to Event Action Services"
+
+    - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the event action services run.
+    - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [event action engine](/concepts/event-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
+    - [Writing an event action service](/guides/developer/event-action-services/overview) to understand how to write an event-action service.
+
 
 ### Governance Daemon Connectors
 
@@ -358,17 +372,17 @@ cohort member's [Local Repository Configuration](/user/guides/admin/servers/conf
 
 ### Files
 
-* The [Avro file connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/avro-file-connector){ target=gh } provides access to an Avro file that has been catalogued using open metadata.
-  
-* The [basic file connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector){ target=gh }  provides support to read and write to a file using the Java File object.  
+* The [basic file connector](/connectors/resource/basic-file-resource-connector)  provides support to read and write to a file using the Java File object.  
 
-* The [CSV file connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/csv-file-connector){ target=gh }  is able to retrieve data from a Comma Separated Values (CSV) file where the contents are stored in logical columns with a special character delimiter between the columns.
-  
-* The [data folder connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/data-folder-connector){ target=gh } is for accessing data that is stored as a number of files within a folder (directory).
+* The [basic folder connector](/connectors/resource/basic-folder-resource-connector) is for accessing the files within a folder (directory).
+
+* The [CSV file connector](/connectors/resource/csv-file-resource-connector)  is able to retrieve data from a Comma Separated Values (CSV) file where the contents are stored in logical columns with a special character delimiter between the columns.
+
+* The [data folder connector](/connectors/resource/data-folder-resource-connector) is for accessing data that is stored as a number of files within a folder (directory).
   
 ### Databases
 
-* The [jdbc resource connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-resource-connector){ target=gh } is for accessing a database server.
+* The [jdbc resource connector](/connectors/resource/jdbc-resource-connector) is for accessing a database.
 
 ### Open Metadata Topic Connectors
 

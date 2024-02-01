@@ -19,7 +19,7 @@ The *Governance Engine Definition* does not need to be loaded directly into the 
 
 ![Engine Host Remote Configuring](/patterns/metadata-governance/engine-host-remote-configuring.svg)
 
-**Recap:** calls to a governance engine are made by initiating a [Governance Action](/concepts/governance-action).  This can be directly through an API call to the [Governance Engine OMAS](/services/omas/governance-engine/overview) running in a [Metadata Access Store](/concepts/metadata-access-store), or via a [Governance Action Process](/concepts/governance-action-process).
+**Recap:** calls to a governance engine are made by initiating an [Engine Action](/concepts/engine-action).  This can be directly through an API call to the [Governance Engine OMAS](/services/omas/governance-engine/overview) running in a [Metadata Access Store](/concepts/metadata-access-store), or via a [Governance Action Process](/concepts/governance-action-process).
 
 A Governance Action is an entity in open metadata.  When it is created in the Metadata Access Store, it sends an event to all connected Engine Hosts.  If it is for a [governance request type](/concepts/governance-request-type) that one of its governance engine's supports, it claims the Governance Action and passes the request to its governance engine to run.
 

@@ -35,8 +35,8 @@ The governance definitions are organized into specific subtypes and linked toget
 
         - [0423 Security Groups](/types/4/0423-Security-Definitions) - define security groups and the assets and roles associated with them.
         - [0438 Naming Standards](/types/4/0438-Naming-Standards) - defines naming standard rules.
-        - [0461 Governance Action Engines](/types/4/0461-Governance-Engines) - support the execution of technical controls.
-        - [0462 Governance Action Types](/types/4/0462-Governance-Action-Types) - provide the choreography of the execution of technical controls.
+        - [0461 Governance Engines](/types/4/0461-Governance-Engines) - support the execution of technical controls.
+        - [0462 Governance Action Processes](/types/4/0462-Governance-Action-Processes) - provide the choreography of the execution of technical controls.
 
     * [0440 Organizational Controls](/types/4/0440-Organizational-Controls) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
 

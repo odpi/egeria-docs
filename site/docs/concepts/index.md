@@ -42,6 +42,8 @@
 ## C
 
 - [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
+- [Catalog Target](/concepts/catalog-target)
+- [Catalog Target Type](/concepts/catalog-target)
 - [Cohort](/concepts/cohort-member)
 - [Cohort Event](/concepts/cohort-events)
 - [Cohort Member](/concepts/cohort-member)
@@ -81,6 +83,7 @@
 - [Data Science OMAS](/services/omas/data-science/overview)
 - [Database Integrator OMIS](/services/omis/database-integrator/overview)
 - [Default Zones](/concepts/governance-zone)
+- [Deployed Implementation Type](/concepts/deployed-implementation-type)
 - [Design Lineage](/features/lineage-management/overview)
 - [Design Model OMAS](/services/omas/design-model/overview)
 - [DevOps OMAS](/services/omas/dev-ops/overview)
@@ -102,18 +105,21 @@
 - [Discovery Server](/concepts/engine-host)
 - [Discovery Service](/concepts/open-discovery-service)
 - [Display Integrator OMIS](/services/omis/display-integrator/overview)
+- [Dynamic Integration Group](/concepts/integration-group)
 
 ## E
 
 - [Endpoint](/concepts/endpoint)
 - [Engine](/concepts/software-capability/#engine)
+- [Engine Action](/concepts/engine-action)
 - [Engine Host](/concepts/engine-host)
 - [Enterprise Metadata Collection](/concepts/metadata-collection)
 - [Enterprise Repository Services Subsystem (OMRS)](/services/omrs)
 - [Event](/concepts/basic-concepts/#event)
 
     - [Cohort Events](/concepts/cohort-events)
-   
+
+- [Event Action Framework](/frameworks/eaf/overview)
 - [Event Bus](/concepts/event-bus)
 - [Event Broker](/concepts/basic-concepts/#event-broker)
 - [Event Management Services Subsystem (OMRS)](/services/omrs)
@@ -125,11 +131,13 @@
 
 - [Favorite Things Collections](/concepts/favorite-things-collection)
 - [Feedback](/concepts/feedback)
+- [File Type](/concepts/file-type)
 - Files
 
     - [omag.server.servername.config](/concepts/configuration-document)
     - [servername.cohortname.registrystore](/connectors/runtime/file-cohort-registry-store-connector)
-  
+    - [*.omarchive](/connectors/runtime/file-based-open-metadata-archive-store-runtime-connector)
+
 - [Files Integrator OMIS](/services/omis/files-integrator/overview)
 - [Framework Services](/services/#framework-services)
 - [Frameworks](/frameworks)
@@ -139,6 +147,8 @@
     - [Open Integration Framework (OIF)](/frameworks/oif/overview)
     - [Open Discovery Framework (ODF)](/frameworks/odf/overview)
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
+    - [Event Action Framework (EAF)](/frameworks/eaf/overview)
+    - [Survey Action Framework (EAF)](/frameworks/saf/overview)
 
 
 ## G
@@ -150,8 +160,9 @@
 - [Governance Action Engine](/concepts/governance-action-engine)
 - [Governance Action OMES](/service/omes/governance-action/overview)
 - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
-- [Governance Action Process](/concepts/governance-action-type)
-- [Governance Action Type](/concepts/governance-action-process)
+- [Governance Action Process](/concepts/governance-action-process)
+- [Governance Action Process Step](/concepts/governance-action-process-step)
+- [Governance Action Type](/concepts/governance-action-process-step)
 - [Governance Domain](/concepts/governance-domain)
 - [Governance Domain Identifier](/concepts/governance-domain)
 - [Governance Engine](/concepts/governance-engine)
@@ -292,7 +303,8 @@
 - [Peer Network](/concepts/peer-network)
 - [Person Role](/concepts/person-role)
 - [Personal Message](/concepts/personal-message)
-- [Personal Note](/concepts/personal-note)
+- [Personal Note](/concepts/personal-notes)
+- [Personal Profile](/concepts/personal-profile)
 - [Personal Roles](/concepts/personal-roles)
 - [Platform Chassis](/services/platform-chassis)
 - [Platform Metadata Security Connector](/concepts/platform-metadata-security-connector)
@@ -313,6 +325,12 @@
 
 - [Ratings](/concepts/review)
 - [Referenceable](/concepts/referenceable)
+- [Reference Data](/features/reference-data-management/overview)
+
+  - [Valid Metadata Values](/guides/planning/valid-values)
+  - [Deployed Implementation Type](/concepts/deployed-implementation-type)
+  - [File Type](/concepts/deployed-implementation-type/#file-type)
+  
 - [Registry Events](/concepts/cohort-events)
 - [Registered Services](/concepts/omag-subsystem)
 - [Repository Connector](/concepts/repository-connector)
@@ -324,6 +342,7 @@
 - [Repository Services](/services/omrs)
 - [Repository Validator](/concepts/repository-validator)
 - [Resource](/concepts/resource)
+- [ResourceUse](/concepts/resource-use)
 - [Resource Connector](/concepts/digital-resource-connector)
 - [REST Client Connector](/concepts/rest-client-connector)
 - [REST Repository Connector](/connectors/runtime/omrs-rest-repository-connector)
@@ -362,6 +381,10 @@
 - [Subject Area Domain](/concepts/subject-area)
 - [Subject Area OMAS](/services/omas/subject-area/overview)
 - [Subsystem](/concepts/omag-subsystem)
+- [Survey Report](/concepts/survey-report)
+- [Survey Action Engine](/concepts/survey-action-engine)
+- [Survey Action Framework (SAF)](/frameworks/saf/overview)
+- [Survey Action Service](/concepts/survey-action-service)
 - [Supported Zones](/concepts/governance-zone)
 
 

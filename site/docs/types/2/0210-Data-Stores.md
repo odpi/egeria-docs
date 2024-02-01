@@ -9,7 +9,7 @@ Both [*DataSets*](/types/0/0010-Base-Model#dataset) and [*DataStores*](#datastor
 
 ## DataStore entity
 
-The *DataStore* entity describes a physical [digital resource](/concepts/resource) that supplies data.  The *deployedImplementationType* attribute describes the technology that is used in its implementation.
+The *DataStore* entity describes a physical [digital resource](/concepts/resource) that supplies data.  The *deployedImplementationType* attribute describes the class of technology that is used in its implementation.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 ## DataContentForDataSet relationship
 
@@ -18,6 +18,20 @@ The *DataContentForDataSet* relationship defines how data is supplied to a [Data
 ## DataStoreEncoding classification
 
 The *DataStoreEncoding* classification provides the ability to store details of the data stores physical characteristics.
+
+## DataScope classification
+
+The *DataScope* classification identifies the scope of the data stored in the [resource(s)](/concepts/resource) represented by the entity it is attached to.  This classification can be attached to any [*Referenceable*](/types/0/0010-Base-Model), but it is typically associated with assets such as *DataStores* and *DataSets*.  The attributes of this classification identify the scope of the data in space and time.
+
+* *minLongitude* - if the data is bound by an area, this is the longitude for bottom-left corner of the bounding box (BBOX) for the area covered by the data.
+* *minLatitude* - if the data is bound by an area, this is the latitude for the bottom-left corner of the bounding box (BBOX) for the area covered by the data.
+* *maxLongitude* - if the data is bound by an area, this is the longitude for top-right corner of the bounding box (BBOX) for the area covered by the data.
+* *maxLatitude* - if the data is bound by an area, this is the latitude for top-right corner of the bounding box (BBOX) for the area covered by the data.
+* *minHeight* - if the height above ground is relevant, this is the lowest height that the data covers.
+* *maxHeight* - if the height above ground is relevant, this is the highest height that the data covers.
+* *startTime* - if the data is bound by time, this is the start time.
+* *endTime* - if the data is bound by time, this is the end time.
+* *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
 
 
 --8<-- "snippets/abbr.md"

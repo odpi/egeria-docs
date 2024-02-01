@@ -9,12 +9,20 @@ Entities that inherit from [Referenceable](/types/0/0010-Base-Model) such as [As
 
 ## ResourceList relationship
 
-The *ResourceList* relationship links one *Referenceable* entity to another *Referenceable* entity that is describing resources that are used by the first entity (or what the first entity represents in the real world).
+The *ResourceList* relationship links one *Referenceable* entity (parent resource) to another *Referenceable* entity (supporting resource) that is describing resources that are used by the first entity (or what the first entity represents in the real world).
 
 For example, the *ResourceList* relationship may link:
 
 * A governance domain to its associated community.
 * An actor to its collection of favourite assets.
+* A metadata valid value to the connectors or other resources that are used with it.
+
+The description of what the linked element is used for, and hints on how to use it are provided in the relationship properties.
+
+* *resourceUse* describes the use that the resource is designed to support.  See [Resource Use](/concepts/resource-use) for examples.
+* *resourceUseDescription* provides more description on the use of the resource.
+* *resourceUseProperties* provides the property values needed to use the resource.
+* *watchResource* indicates whether the parent entity should receive notification about changes to the supporting resource.
 
 ## MoreInformation relationship
 

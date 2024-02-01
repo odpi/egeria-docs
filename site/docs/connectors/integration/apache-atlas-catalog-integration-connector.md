@@ -14,33 +14,36 @@
 
 ## Overview
 
-[Apache Atlas](https://atlas.apache.org) is a metadata catalog originally designed for the Hadoop ecosystem.  It offers integration services called Hooks and Bridges to capture the schemas and data sets of data platforms such as [Apache Hive](https://hive.apache.org/), [Apache HBase](https://hbase.apache.org/) and [Apache Hadoop Distributed File System (HDFS)](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html) along with the processes for creating and maintaining data sets on these platforms.  The metadata descriptions of these data sets and processes are linked together using lineage relationships, allowing an understanding of how data is flowing through a Hadoop deployment.  Apache Atlas also supports glossaries and a tagging system that can be used both in searches and to control access to data through Apache Ranger (using the TagSync integration).
+---8<-- "snippets/systems/apache-atlas-intro.md"
 
-In recent years, Apache Atlas has been embedded in popular data catalogs such as [Microsoft Purview](https://azure.microsoft.com/en-gb/products/purview/) and [Atlan](https://atlan.com/) increasing the interest in being able to integrate with this metadata catalog.
-
-Reasons for integrating Apache Atlas into a wider open metadata ecosystem include:
+Reasons for integrating Apache Atlas metadata into a wider open metadata ecosystem include:
 
 * To push glossaries and classification definitions to Apache Atlas so its users get to use the same definitions for the governance of their data as other parts of the organization.  This may simply to help start up a new Apache Atlas deployment, or as part of a broader consistency initiative.
 * To share glossaries and classification definitions that have been developed by an Apache Atlas user community in order to seed other projects and tools.
 * To share details of the data sets that Apache Atlas has catalogued with other catalogs and tools.  For example, the Apache Atlas catalog of data sets may be shared with data science or stewardship tools.  Tags, classifications and semantic assignments made to these assets by users of these tools could then be pushed back to Apache Atlas to enhance the use and governance of their associated data through Apache Atlas.
 * To extract lineage information for data flowing through the data platforms and processes that Apache Atlas is capturing.
+* To improve the usefulness of Apache Atlas metadata by augmenting it with additional insight from the open metadata ecosystem.
+* To improve the governance of Apache Atlas metadata by analysing and reporting on the content and usage of Apache Atlas metadata.
 
 ## Integration Connector function
 
-The Apache Atlas integration connector provides an ongoing exchange of metadata between Apache Atlas and the open metadata ecosystem.  In its initial state, it focuses on the two-way exchange of glossaries.  Future versions will add entities (such as data sets and process), lineage and classifications.
+The Apache Atlas integration connector provides an ongoing exchange of metadata between Apache Atlas and the open metadata ecosystem.
 
 ![Figure 1](apache-atlas-catalog-integration-connector.svg)
 > **Figure 1:** Operation of the Apache Atlas integration connector
 
-Specifically this connector:
+The type of metadata exchanged, and the direction of the exchange, is controlled by the configuration properties added to this connector's connection.  Specifically this connector can optionally:
 
-* Publishes glossaries, glossary categories and ACTIVE glossary terms that originate from the open metadata ecosystem into Apache Atlas.  The connector makes no attempt to detect changes to these glossary elements in Apache Atlas.  Additionally, such changes will be overridden the next time the integration connector refreshes the glossary metadata in Apache Atlas.
+* Publishes glossaries, glossary categories and ACTIVE glossary terms that originate from the open metadata ecosystem into Apache Atlas.  The connector makes no attempt to detect changes to these glossary elements in Apache Atlas.  Such changes will be overridden the next time the integration connector refreshes the glossary metadata in Apache Atlas.
 * Publishes glossaries, glossary categories and glossary terms that originate in Apache Atlas into the open metadata ecosystem.  These elements will be read-only in the open metadata ecosystem.
-
+* Catalog all Apache Atlas entities of type *DataSet* in the open metadata ecosystem.  
+* Catalog all Apache Atlas lineage relationships (*dataset_process_inputs* and *dataset_process_outputs*) in the open metadata ecosystem.  These relationships link the DataSet entities from Apache Atlas and contribute to the enterprise's view of lineage.
+* Maintain a reference data set of classifications used in Apache Atlas.  This reference data set can be used to create new classification definitions in Apache Atlas, catalog the Apache Atlas classificationDefs in the reference data set and record the classifications in use in Apache Atlas.
+* Add definitions of open metadata entities and classifications linked to an open metadata entity that originated in Apache Atlas to its counterpart in Apache Atlas.  This way, the Apache Atlas users can see the same information about their data sets and the native users of the open metadata ecosystem.  There is specialized behaviour in how informal tags from the open metadata ecosystem are handled in Apache Atlas.
 
 ### Metadata ownership 
 
-The concept of ownership of each metadata instance (such as glossary, glossary catalog and glossary term) is strictly maintained.  Simply:
+The concept of ownership of each metadata instance (such as glossary, glossary category, glossary term and data set) is strictly maintained.  Simply:
 
 * If the instance was originally created in the open metadata ecosystem, it is owned by the open metadata ecosystem and any changes or deletions made to the copy in Apache Atlas will be reversed the next time the connector refreshes the Apache Atlas metadata.
 * If the instance was originally created in Apache Atlas, it is owned by Apache Atlas.  When the instance is copied into the open metadata ecosystem, its [provenance](/features/metadata-provenance/overview) is set to indicate that this Apache Atlas server is its origin, which effectively makes it read-only in the open metadata ecosystem.
@@ -48,8 +51,6 @@ The concept of ownership of each metadata instance (such as glossary, glossary c
 It is possible to create a new glossary term or glossary category in Apache Atlas within a glossary that originated from the open metadata ecosystem.  This new entity will be owned by Apache Atlas, even though it belongs to a glossary that is owned by the open metadata ecosystem.
 
 Similarly, it is possible to create new glossary terms and categories in the open metadata ecosystem that are linked to a glossary that originated from Apache Atlas.  These new entities will be owned by the open metadata ecosystem.
-
-
 
 ### Correlation
 

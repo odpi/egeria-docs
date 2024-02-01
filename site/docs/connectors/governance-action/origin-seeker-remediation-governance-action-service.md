@@ -63,7 +63,7 @@ This is its connection definition to use when creating the definition of the gov
 
 ## Governance Action Settings
 
-When this governance action service is called through a [GovernanceAction](/types/4/0463-Governance-Actions) it supports the following options.
+When this governance action service is called through an [engine action](/concepts/engine-action) it supports the following options.
 
 #### Request Types and Parameters
 

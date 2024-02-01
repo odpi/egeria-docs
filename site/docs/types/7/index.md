@@ -21,6 +21,7 @@ Area 7 provides the structures for adding context to the asset definition of a r
 - [0737 Solution Implementation](/types/7/0737-Solution-Implementation)
 - [0740 Solution Blueprints](/types/7/0740-Solution-Blueprints)
 - [0750 Data Passing](/types/7/0750-Data-Passing)
+- [0755 Ultimate Sources and Destinations](/types/7/0755-Ultimate-Source-Destination)
 - [0760 Business Lineage](/types/7/0760-Business-Lineage)
 - [0770 Lineage Mapping](/types/7/0770-Lineage-Mapping)
 - [0780 Code Analysis](/types/7/0780-Code-Analysis)

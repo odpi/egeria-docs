@@ -281,8 +281,8 @@ Often execution points need to be integrated with the normal activity of the bus
 
 The classifications ControlPoint, VerificationPoint and EnforcementPoint are used to label governance implementation elements with the type of execution point and the qualified name of the corresponding definition if any. They are often found on element such as:
 
-* Governance Action Types
-* Governance Actions
+* Governance Action Process Steps
+* Engine Actions
 
 These classifications help in the review of the implementation of the governance program and can be used to drive additional audit logging. 
 

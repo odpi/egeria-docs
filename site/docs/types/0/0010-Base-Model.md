@@ -48,11 +48,13 @@ More information on assets can be found in the [Metadata Manager](/patterns/meta
 
 *Infrastructure* represents both the physical and digital assets that the organization runs its business on. [*ITInfrastructure*](/types/0/0030-Hosts-and-Platforms) is a subtype of *Infrastructure* describing Information Technology (IT) infrastructure that runs IT services.  There is more information on the different types of *ITInfrastructure* in:
 
-- [0030 Hosts and platforms](/types/0/0030-Hosts-and-Platforms)
-- [0035 Complex hosts](/types/0/0035-Complex-Hosts)
-- [0037 Software server platforms](/types/0/0037-Software-Server-Platforms)
-- [0040 Software servers](/types/0/0040-Software-Servers)
-- [0042 Software capabilities](/types/0/0042-Software-Capabilities)
+- [0030 Hosts and Platforms](/types/0/0030-Hosts-and-Platforms)
+- [0035 Complex Hosts](/types/0/0035-Complex-Hosts)
+- [0037 Software Server Platforms](/types/0/0037-Software-Server-Platforms)
+- [0040 Software Servers](/types/0/0040-Software-Servers)
+- [0042 Software Capabilities](/types/0/0042-Software-Capabilities)
+
+The *deployedImplementationType* attribute describes the class of technology that the infrastructure asset belongs to.  Values for this attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 ### Process entity
 
@@ -70,7 +72,7 @@ The *formula* attribute can describe its behaviour, *formulaType* describes the 
 
 ### DataSet entity
 
-*DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet, *formulaType* describes the notation language used to describe the formula, and *deployedImplementationType* describes the technology supporting the implementation of the technology. 
+*DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet, *formulaType* describes the notation language used to describe the formula, and *deployedImplementationType* describes the class of technology that this data set belongs to. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 See [*DataStore*](/types/2/0210-Data-Stores) for the `Asset` that represents a physical store and the [*DataContentForDataSet*](/types/2/0210-Data-Stores/#datacontentfordataset) relationship links the DataSet to the asset(s) that describe the data sources.
 
@@ -80,7 +82,7 @@ The *SampleData* relationship links an *Asset* entity describing a collection of
 
 ## Anchors classification
 
-The *Anchors* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an entity to store the GUID of that entity.
+The *Anchors* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an entity to store the GUID of that entity along with its type.
 
 !!! info "Further information on the use of Anchors"
     * [Anchor Management](/concepts/anchor).

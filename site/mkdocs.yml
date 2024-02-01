@@ -50,18 +50,21 @@ nav:
                          - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
                          - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
                   - JDBC Connector: connectors/resource/jdbc-resource-connector.md
-                  - Avro File Connector: connectors/resource/avro-file-resource-connector.md
                   - Basic File Connector: connectors/resource/basic-file-resource-connector.md
                   - CSV File Connector: connectors/resource/csv-file-resource-connector.md
+                  - Basic Folder Connector: connectors/resource/basic-folder-resource-connector.md
                   - Data Folder Connector: connectors/resource/data-folder-resource-connector.md
+              - System:
+                  - Apache Atlas REST Connector: connectors/system/apache-atlas-rest-connector.md
+              - Discovery Services:
+                  - Apache Atlas Discovery Service: connectors/discovery/apache-atlas-discovery-service.md
               - Governance Actions:
                   - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
                   - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
                   - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
                   - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/open-lineage-janus-connector.md
               - Integration (metadata exchange):
-                  - Apache Atlas Connector : connectors/integration/apache-atlas-catalog-integration-connector.md
+                  - Apache Atlas: connectors/integration/apache-atlas-catalog-integration-connector.md
                   - Data Files: connectors/integration/data-files-monitor-integration-connector.md
                   - Data Folders: connectors/integration/data-folder-monitor-integration-connector.md
                   - Databases (JDBC): connectors/integration/jdbc-integration-connector.md
@@ -97,6 +100,7 @@ nav:
                       - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
               - Secrets Store:
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
+              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/open-lineage-janus-connector.md
           - Developer Guide:
               - Developer Guide: guides/developer/index.md
               - Retrieving Metadata: guides/developer/finding-metadata/overview.md
@@ -106,10 +110,11 @@ nav:
                   - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
               - Building Utilities: guides/developer/building-utilities/overview.md
               - Building Connectors:
+                  - Survey Action Services: guides/developer/survey-action-services/overview.md
                   - Integration Connectors: guides/developer/integration-connectors/overview.md
-                  - Open Discovery Services: guides/developer/open-discovery-services/overview.md
                   - Governance Action Services: guides/developer/governance-action-services/overview.md
                   - Repository Governance Services: guides/developer/repository-governance-services/overview.md
+                  - Open Discovery Services: guides/developer/open-discovery-services/overview.md
                   - Repository Connectors: guides/developer/repository-connectors/overview.md
                   - Runtime Connectors:
                       - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
@@ -141,7 +146,7 @@ nav:
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
           - Operate OMAG Server Platform: guides/operations/overview.md
-          - Operate OMAG Server Starter: guides/operations/opearate-omag-server-starter.md
+          - Operate OMAG Server Starter: guides/operations/operate-omag-server-starter.md
           - Egeria in Kubernetes:
               - Egeria in Kubernetes: guides/operations/kubernetes/index.md
               - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
@@ -385,6 +390,7 @@ nav:
               - Events and Logs: types/2/0223-Events-and-Logs.md
               - Databases: types/2/0224-Databases.md
               - Metadata Repositories: types/2/0225-Metadata-Repositories.md
+              - Archive Files: types/2/0226-Archive-Files.md
               - Keystores: types/2/0227-Keystores.md
               - Code Tables: types/2/0230-Code-Tables.md
               - Information View: types/2/0235-Information-View.md
@@ -430,11 +436,12 @@ nav:
               - Exception Management: types/4/0455-Exception-Management.md
               - Governance Execution Points: types/4/0460-Governance-Execution-Points.md
               - Governance Engines: types/4/0461-Governance-Engines.md
-              - Governance Action Types: types/4/0462-Governance-Action-Types.md
-              - Governance Actions: types/4/0463-Governance-Actions.md
+              - Governance Action Processes: types/4/0462-Governance-Action-Processes.md
+              - Engine Actions: types/4/0463-Engine-Actions.md
               - Dynamic Integration Groups: types/4/0464-Dynamic-Integration-Groups.md
               - Duplicate Processing: types/4/0465-Duplicate-Processing.md
               - Incident Reporting: types/4/0470-Incident-Reporting.md
+              - Context Events: types/4/0475-Context-Events.md
               - Licenses: types/4/0481-Licenses.md
               - Certifications: types/4/0482-Certifications.md
               - Terms and Conditions: types/4/0483-Terms-And-Conditions.md
@@ -472,10 +479,12 @@ nav:
           - 6. Metadata Discovery:
               - Area 6 Metadata Discovery: types/6/index.md
               - Open Discovery Engines and Services: types/6/0601-Open-Discovery-Engine.md
+              - Survey Reports: types/6/0603-Survey-Reports.md
               - Discovery Analysis Report: types/6/0605-Open-Discovery-Analysis-Reports.md
               - Annotations: types/6/0610-Annotations.md
               - Annotation Reviews: types/6/0612-Annotation-Reviews.md
               - Schema Extraction: types/6/0615-Schema-Extraction.md
+              - Data Field Discovery: types/6/0616-Data-Field-Discovery.md
               - Data Field Analysis: types/6/0617-Data-Field-Analysis.md
               - Data Profiling: types/6/0620-Data-Profiling.md
               - Data Class Discovery: types/6/0625-Data-Class-Discovery.md
@@ -496,6 +505,7 @@ nav:
               - Solution Implementation: types/7/0737-Solution-Implementation.md
               - Solution Blueprints: types/7/0740-Solution-Blueprints.md
               - Data Passing: types/7/0750-Data-Passing.md
+              - Ultimate Sources and Destinations: types/7/0755-Ultimate-Source-Destination.md
               - Business Lineage: types/7/0760-Business-Lineage.md
               - Lineage Mapping: types/7/0770-Lineage-Mapping.md
               - Code Analysis: types/7/0780-Code-Analysis.md
@@ -515,6 +525,7 @@ nav:
               - Generic Handlers: services/generic-handlers.md
               - Metadata Security Services: services/metadata-security-services.md
               - Platform Services: services/platform-services/overview.md
+              - Server Operations: services/server-operations.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Open Metadata Store Services: services/gaf-metadata-management.md
               - Open Integration Service: services/oif-metadata-management.md
@@ -525,7 +536,6 @@ nav:
           - Registered Services:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md
-                  - Asset Catalog OMAS: services/omas/asset-catalog/overview.md
                   - Asset Consumer OMAS: services/omas/asset-consumer/overview.md
                   - Asset Lineage OMAS: services/omas/asset-lineage/overview.md
                   - Asset Manager OMAS: services/omas/asset-manager/overview.md
@@ -540,7 +550,6 @@ nav:
                   - Digital Architecture OMAS: services/omas/digital-architecture/overview.md
                   - Digital Service OMAS: services/omas/digital-service/overview.md
                   - Discovery Engine OMAS: services/omas/discovery-engine/overview.md
-                  - Glossary View OMAS: services/omas/glossary-view/overview.md
                   - Governance Engine OMAS: services/omas/governance-engine/overview.md
                   - Governance Program OMAS: services/omas/governance-program/overview.md
                   - IT Infrastructure OMAS: services/omas/it-infrastructure/overview.md
@@ -554,6 +563,8 @@ nav:
                   - Open Metadata Engine Services: services/omes/index.md
                   - Asset Analysis: services/omes/asset-analysis/overview.md
                   - Governance Action: services/omes/governance-action/overview.md
+                  - Event Action: services/omes/event-action/overview.md
+                  - Survey Action: services/omes/survey-action/overview.md
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
@@ -573,6 +584,11 @@ nav:
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
                   - My Profile: services/omvs/my-profile/overview.md
+                  - Asset Catalog: services/omvs/asset-catalog/overview.md
+                  - Collection Manager: services/omvs/collection-manager/overview.md
+                  - Automated Curation: services/omvs/automated-curation/overview.md
+                  - Notification Manager: services/omvs/notification-manager/overview.md
+                  - Project Manager: services/omvs/project-manager/overview.md
                   - Glossary Author: services/omvs/glossary-author/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Workflow: services/omvs/glossary-workflow/overview.md
@@ -585,8 +601,9 @@ nav:
           - Audit Logs (ALF): frameworks/alf/overview.md
           - Open Connectors (OCF): frameworks/ocf/overview.md
           - Open Integration (OIF): frameworks/oif/overview.md
-          - Open Discovery (ODF): frameworks/odf/overview.md
           - Governance Actions (GAF): frameworks/gaf/overview.md
+          - Event Actions (EAF): frameworks/eaf/overview.md
+          - Survey Actions (SAF): frameworks/saf/overview.md
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md
           - Platform Profiles:
@@ -646,12 +663,14 @@ nav:
   - Concepts:
       - Egeria Glossary: concepts/index.md
       - Basic Concepts: concepts/basic-concepts.md
+      - Action: concepts/action.md
       - Action Target: concepts/action-target.md
       - Anchor: concepts/anchor.md
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
+      - Catalog Target: concepts/catalog-target.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
       - Cohort Registry: concepts/cohort-registry.md
@@ -671,23 +690,30 @@ nav:
       - Connector Provider: concepts/connector-provider.md
       - Connector Type: concepts/connector-type.md
       - Contact Method: concepts/contact-method.md
+      - Context Event: concepts/context-event.md
       - Data Class: concepts/data-class.md
       - Data Domain: concepts/subject-area.md
       - Data Engine Proxy: concepts/data-engine-proxy.md
+      - Deployed Implementation Type: concepts/deployed-implementation-type.md
       - Digital Resource Connector: concepts/digital-resource-connector.md
       - Discovery Analysis Report: concepts/discovery-analysis-report.md
       - Endpoint: concepts/endpoint.md
+      - Engine Action: concepts/engine-action.md
       - Engine Host: concepts/engine-host.md
+      - Event Action Engine: concepts/event-action-engine.md
+      - Event Action Service: concepts/event-action-service.md
       - Event Bus: concepts/event-bus.md
       - Event Mapper Connector: concepts/event-mapper-connector.md
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
+      - File Type: concepts/file-type.md
       - Glossary Term: practices/common-data-definitions/anatomy-of-a-glossary.md
       - GUID: concepts/guid.md
       - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md
       - Governance Action Process: concepts/governance-action-process.md
+      - Governance Action Process Step: concepts/governance-action-process-step.md
       - Governance Action Service: concepts/governance-action-service.md
       - Governance Action Type: concepts/governance-action-type.md
       - Governance Domain: concepts/governance-domain.md
@@ -730,6 +756,7 @@ nav:
       - Note Log: concepts/note-log.md
       - OMAG Server: concepts/omag-server.md
       - OMAG Server Platform: concepts/omag-server-platform.md
+      - OMAG Server Runtime: concepts/omag-server-runtime.md
       - OMAG Subsystem: concepts/omag-subsystem.md
       - Open Discovery Engine: concepts/open-discovery-engine.md
       - Open Discovery Service: concepts/open-discovery-service.md
@@ -762,6 +789,7 @@ nav:
       - Repository Proxy: concepts/repository-proxy.md
       - Repository Validator: concepts/repository-validator.md
       - Resource: concepts/resource.md
+      - Resource Use: concepts/resource-use.md
       - REST client connector: concepts/rest-client-connector.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md
@@ -773,6 +801,9 @@ nav:
       - Software Server Capability: concepts/software-server-capability.md
       - Star Rating: concepts/review.md
       - Subject Area: concepts/subject-area.md
+      - Survey Report: concepts/survey-report.md
+      - Survey Action Engine: concepts/survey-action-engine.md
+      - Survey Action Service: concepts/survey-action-service.md
       - Tag: concepts/informal-tag.md
       - To Do: concepts/to-do.md
       - Uni-link Relationships: concepts/uni-multi-link.md
@@ -786,6 +817,7 @@ nav:
       - Governance Maturity Model: practices/maturity-model/overview.md
       - Governance Roles: practices/roles/overview.md
       - Digital Services: practices/digital-services/overview.md
+      - Data Privacy: practices/data-privacy-pack/overview.md
       - Common Data Definitions:
           - Overview: practices/common-data-definitions/overview.md
           - Anatomy of a Glossary: practices/common-data-definitions/anatomy-of-a-glossary.md

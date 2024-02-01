@@ -3,9 +3,13 @@
 
 # Configuring an [engine host](/concepts/engine-host)
 
-An *Engine Host* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the server's configuration document.
+An *[Engine Host](/concepts/engine-host)* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the server's configuration document.
 
 ![Configuration for an engine host](engine-host-config.svg)
+
+??? deprecated "Configuration for an engine host prior to release 5.0"
+    Prior to release 5.0, the list of engines to run in an engine host was configured under each engine service.  It was necessary to align the type of governance engine with the correct engine service.
+    ![Configuration for an engine host prior to release 5.0](engine-host-config.svg)
 
 The configuration document is built up using a series of administration calls:
 
@@ -22,98 +26,10 @@ The configuration document is built up using a series of administration calls:
     --8<-- "docs/guides/admin/servers/configuring-the-engine-host-services.md"
 
 ??? example "Example configuration of an engine host"
-    This is an example of the configuration for an engine host. It has a single engine service ([Asset Analysis OMES](/services/omes/asset-analysis/overview)) and the default audit log. Both the [Governance Engine OMAS](/services/omas/governance-engine/overview) used by the engine host services and the [Discovery Engine OMAS](/services/omas/discovery-engine/overview) used by the Asset Analysis OMES are running on the metadata access server called `myserver`.
+    This is an example of the configuration for an engine host called `engine-host`.  It is configured to run 3 engines called `FileProvisioning`, `AssetSurvey` and `AssetGovernance`.  It makes calls to the `active-metadata-store` [Metadata Access Store](/concepts/metadata-access-store).
+    
+    --8<-- "docs/guides/admin/servers/engine-host-config-doc-example.md"
 
-    ```json
-    {
-        "class": "OMAGServerConfigResponse",
-        "relatedHTTPCode": 200,
-        "omagserverConfig": {
-            "class": "OMAGServerConfig",
-            "versionId": "V2.0",
-            "localServerId": "8b745d03-5ffc-4978-81ab-bd3d5156eebe",
-            "localServerName": "myserver",
-            "localServerType": "Open Metadata and Governance Server",
-            "localServerURL": "https://localhost:9443",
-            "localServerUserId": "OMAGServer",
-            "maxPageSize": 1000,
-            "engineHostServicesConfig": {
-                "omagserverPlatformRootURL": "https://localhost:9443",
-                "omagserverName": "myMetadataServer",
-                "engineServices": [
-                    {
-                        "class": "EngineServiceConfig",
-                        "engineId": 6000,
-                        "engineQualifiedName": "Asset Analysis",
-                        "engineServiceFullName": "Asset Analysis OMES",
-                        "engineServiceURLMarker": "asset-analysis",
-                        "engineServiceDescription": "Analyses the content of an asset's real world counterpart, generates annotations in an open discovery report that is attached to the asset in the open metadata repositories .",
-                        "engineServiceWiki": "https://egeria.odpi.org/open-metadata-implementation/engine-services/asset-analysis/",
-                        "engines" : [ {"engineId" : "daff1dca-984b-4b8a-8a8f-febaf72b82a8",
-                                       "engineName" : "engine1", 
-                                       "engineUserId" : "engine1UserId"},
-                                      {"engineId" : "a80aa0f8-2ea0-4f84-b613-d68becba2693",
-                                       "engineName" : "engine2", 
-                                       "engineUserId" : "engine2UserId"} ],
-                        "engineServiceOperationalStatus": "ENABLED",
-                        "engineServiceAdminClass": "org.odpi.openmetadata.engineservices.assetanalysis.admin.AssetAnalysisAdmin",
-                        "omagserverPlatformRootURL": "https://localhost:9443",
-                        "omagserverName": "myMetadataServer"
-                    }
-                ]},
-            "repositoryServicesConfig": {
-                "class": "RepositoryServicesConfig",
-                "auditLogConnections": [
-                    {
-                        "class": "Connection",
-                        "headerVersion": 0,
-                        "displayName": "Console",
-                        "connectorType": {
-                            "class": "ConnectorType",
-                            "headerVersion": 0,
-                            "type": {
-                                "class": "ElementType",
-                                "headerVersion": 0,
-                                "elementOrigin": "LOCAL_COHORT",
-                                "elementVersion": 0,
-                                "elementTypeId": "954421eb-33a6-462d-a8ca-b5709a1bd0d4",
-                                "elementTypeName": "ConnectorType",
-                                "elementTypeVersion": 1,
-                                "elementTypeDescription": "A set of properties describing a type of connector."
-                            },
-                            "guid": "4afac741-3dcc-4c60-a4ca-a6dede994e3f",
-                            "qualifiedName": "Console Audit Log Store Connector",
-                            "displayName": "Console Audit Log Store Connector",
-                            "description": "Connector supports logging of audit log messages to stdout.",
-                            "connectorProviderClassName": "org.odpi.openmetadata.adapters.repositoryservices.auditlogstore.console.ConsoleAuditLogStoreProvider"
-                        },
-                        "configurationProperties": {
-                            "supportedSeverities": [
-                                "<Unknown>",
-                                "Information",
-                                "Event",
-                                "Decision",
-                                "Action",
-                                "Error",
-                                "Exception",
-                                "Security",
-                                "Startup",
-                                "Shutdown",
-                                "Asset",
-                                "Types",
-                                "Cohort"
-                            ]
-                        }
-                    }
-                ]
-            },
-            "auditTrail": [
-                "Tue Dec 08 18:38:32 GMT 2020 me updated configuration for engine service asset-analysis.",
-                "Tue Dec 08 18:43:47 GMT 2020 me set up default audit log destinations."
-            ]
-        }
-    }
-    ```
-
+    This configuration document is shipped as one of the sample configurations in the `omag-server-platform` assembly.
 
 --8<-- "snippets/abbr.md"

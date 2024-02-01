@@ -18,7 +18,7 @@ The [*open discovery services*](/concepts/open-discovery-service) build on this 
 
 The results of this analysis is added to a [discovery analysis report](/concepts/discovery-analysis-report) linked off of the asset for the digital resource.
 
-The analysis results documented in the discovery analysis report can either be [automatically applied](/concepts/governance-action) to the asset's catalog entry or it can go through a *stewardship process* where a subject-matter expert confirms the findings (or not).  
+The analysis results documented in the discovery analysis report can either be [automatically applied](/concepts/engine-action) to the asset's catalog entry or it can go through a *stewardship process* where a subject-matter expert confirms the findings (or not).  
 
 Discovery and stewardship are the most advanced form of automation for asset cataloging. Egeria provides the server runtime environment and component framework to allow third parties to create discovery services and governance action implementations. It has only simple implementations of these components, mostly for demonstration purposes. This is an area where vendors and other open source projects are expected to provide additional value.
 
@@ -55,7 +55,7 @@ Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Ext
 
 ![Open discovery schema extraction](/guides/developer/open-discovery-services/open-discovery-schema-extraction.svg)
 
-The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *AssetSchemaType* relationship.  This may be established before the open discovery service runs, or may be derived by a [governance action](/concepts/governance-action) once the open discovery service has run.
+The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *AssetSchemaType* relationship.  This may be established before the open discovery service runs, or may be derived by an [engine action](/concepts/engine-action) once the open discovery service has run.
 
 If the schema is defined, the open discovery service that creates the data fields may maintain relationships between the schema and the data fields:
 

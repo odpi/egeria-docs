@@ -4,7 +4,7 @@
 ## Designing yor governance processes
 
 !!! info "Covering ..."
-    - What is a governance action process and governance action type
+    - What is a governance action process and governance action process step
     - Configuring governance services in governance engines
 
 *Dojo content will go here*

@@ -3,24 +3,44 @@
 
 # 0021 Collections
 
-*Collection*s provide a general mechanism for grouping entities together.  A collection may be maintained manually, or via an automated process (ie a "smart collection").  The membership of a collection is established via a *CollectionMembership* relationship, which has attributes that allow the rationale and the confidence of the membership to be established.
+*Collection*s provide a general mechanism for grouping entities together.  A collection may be maintained manually, or via an automated process (ie a "smart collection").  The membership of a collection is established via a [*CollectionMembership* relationship](#collectionmembership-relationship), which has attributes that allow the rationale and the confidence of the membership to be established. A [*Referenceable*](/types/0/0010-Base-Model) entity can be a member of none, one or many collections.  
+
+Since a collection is a *Referenceable* entity, collections can be organized into hierarchies - like a directory structure on the filesystem.
 
 
 ![UML](0021-Collections.svg)
 
 ## Collection
 
-The *Collection* entity is provides the node that represents the collection as a whole.  The members of the collection are linked to it using the *CollectionMembership* relationship.
+The *Collection* entity provides the node that represents the collection as a whole.  It inherits from [*Referenceable*](/types/0/0010-Base-Model).
+
+The attributes for a collection, beyond the standard attributes for *Referenceable* include:
+
+* *name* - this is the display name for the collection
+* *description* - this is the text that describes the characteristics of the members that are to be found in the collection.
+* *collectionType* - describes the type of collection that is used to select its icon or display layout.  For example, it may be a "theme", or "domain", or something else.
 
 ## Collection classifications
 
-The classifications associated with *Collection* allow it to be specialized for particular uses.
+The classifications associated with *Collection* allow it to be specialized for particular uses.  They help when searching for collections for specific uses.
 
-* [*Folder*](#folder-classification) means the collection can be treated as if it where a folder of metadata elements.
-* [*Set*](#set-classification) means the collection is a set of related items.
+* [*RootCollection*](#root-collection-classification) means the collection is the top-level node in a collection hierarchy.  The members of this collection are typically all collections.
+* [*Folder*](#folder-classification) means the collection can be treated as if it where a folder of metadata elements.  This classification includes properties to control how the members are displayed.
+* [*Set*](#set-classification) means the collection is a set of related entities and no entity is a member more than once.
+* [*DigitalProduct*](/types/7/0710-Digital-Service) describes a collection of [assets](/concepts/asset) that represent a digital product.
 * [*GovernanceStatusSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance statuses.
 * [*GovernanceClassificationSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance classification for a particular governance classification.
 * [*EventSet*](/types/5/0421-Governance-Classification-Levels) for a collection of related event schemas.
+
+The example below shows part of a collection hierarchy representing a digital product catalog.  The collections are shown in green and the assets that provide the content for the digital product are shown in yellow.
+
+The collection at the root of the collection hierarchy is called "Product Catalog Collection" and has the *RootCollection* classification attached.  Its membership consists of collections with the *Folder* classification.  The leaf node collections have the *DigitalProduct* classification attach and have the data assets as their members.
+
+![Collection Hierarchy](collection-hierarchy-example.svg)
+
+### RootCollection classification
+
+The *RootCollection* classification indicates that the collection is used to provide the starting node for a hierarchy of collections.
 
 ### Folder classification
 
@@ -40,7 +60,7 @@ The *Folder* classification indicates that the collection is used to organize me
 
 ### Set classification
 
-The *Set* classification indicates that the collection is a set of related items.
+The *Set* classification indicates that the collection is a set of elements where each element is only included in the collection once.
 
 ## CollectionMembership relationship
 
@@ -77,7 +97,7 @@ The values for the *MembershipStatus* enumeration are:
 * *Obsolete* - The membership must no longer be used.
 * *Other* - Another membership status that is set up in the *userDefinedStatus* attribute.
 
-They can be used to support a simple stewardship workflow.  For example, consider a [governance action](/concepts/governance-action) that scans through the [assets](/concepts/asset) examining each one's [Retention](/types/4/0422-Governance-Action-Classifications) classification.  If the values in the classification indicate that the [resource](/concepts/resource) that it represents should be archived, it may link the asset into a collection.
+They can be used to support a simple stewardship workflow.  For example, consider an [engine action](/concepts/engine-action) that scans through the [assets](/concepts/asset) examining each one's [Retention](/types/4/0422-Governance-Action-Classifications) classification.  If the values in the classification indicate that the [resource](/concepts/resource) that it represents should be archived, it may link the asset into a collection.
 
 ![Candidate assets for archive](archive-candidate-collection.svg)
 

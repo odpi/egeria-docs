@@ -38,8 +38,8 @@ An *OrganizationalControl* entity is a type of *GovernanceControl* that is imple
        * [0430 Technical Controls](/types/4/0430-Technical-Controls) - describe automated behaviour that implements a governance control.
          * [0423 Security Definitions](/types/4/0423-Security-Definitions) - defines access control rules.
          * [0438 Naming Standards](/types/4/0438-Naming-Standards) - defines naming standard rules.
-         * [0461 Governance Action Engines](/types/4/0461-Governance-Engines) - support the execution of technical controls.
-         * [0462 Governance Action Types](/types/4/0462-Governance-Action-Types) - provide the choreography of the execution of technical controls.
+         * [0461 Governance Engines](/types/4/0461-Governance-Engines) - support the execution of technical controls.
+         * [0462 Governance Action Processes](/types/4/0462-Governance-Action-Processes) - provide the choreography of the execution of technical controls.
        * [0440 Organizational Controls](/types/4/0440-Organizational-Controls) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
          * [0445 Governance Roles](/types/4/0445-Governance-Roles) - define governance roles and the people associated with them.
     

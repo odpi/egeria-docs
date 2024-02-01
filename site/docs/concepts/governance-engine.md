@@ -19,10 +19,10 @@ When a governance engine is called, it is passed a [governance request type](/co
 
 The unique name of the governance engine defined in the governance engine definition is added to the [OMES configuration](/guides/admin/servers/configuring-an-engine-host/#configure-engine-service).  When the [engine host](/concepts/engine-host) starts up the OMES, it reads the *governance engine definition* from its partner [metadata access server](/concepts/metadata-access-server) to complete its initialization.  The engine host monitors changes in the governance engine definition so the services within the governance engine can be dynamically maintained.
 
-Calls to the governance engine are made by creating [governance actions](/concepts/governance-action) in the open metadata ecosystem.  The engine host is monitoring for new governance actions for the governance engine.  When one occurs, it claims the governance action and passes on the request to the governance engine to run.  The claim process is used since there may be multiple engine hosts running that governance engine and only one of them should process the request.
+Calls to the governance engine are made by creating [engine actions](/concepts/engine-action) in the open metadata ecosystem.  The engine host is monitoring for new engine actions for the governance engine.  When one occurs, it claims the engine action and passes on the request to the governance engine to run.  The claim process is used since there may be multiple engine hosts running that governance engine and only one of them should process the request.
 
 ![Calling a governance engine](governance-engine-call.svg)
-> A governance action can be created anywhere in the open metadata ecosystem.  The result is an event that is passed via its connected metadata access server to the engine host.  If the request is for a governance engine that it is hosting, the engine host claims the governance action and passes the request to the governance engine.
+> An engine action can be created anywhere in the open metadata ecosystem.  The result is an event that is passed via its connected metadata access server to the engine host.  If the request is for a governance engine that it is hosting, the engine host claims the governance action and passes the request to the governance engine.
 
 ??? education "Further information"
 

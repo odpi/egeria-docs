@@ -12,7 +12,7 @@ Many processes running in an organization's IT landscape are implemented as plug
 
 The *DeployedSoftwareComponent* entity describes a code [asset](/0/0010-Base-Model) that is deployed to implement a [software capability](/types/0/0042-Software-Capabilities). Each software component has a well defined interface describe by an [APISchema](/types/5/0536-API-Schemas) entity that is linked to the *DeployedSoftwareComponent* by the [AssetSchemaType](/types/5/0503-Asset-Schema) relationship. Its optional properties are:
 
-* *deployedImplementationType* describes the technology used to implement the component (for example "Apache Spark").
+* *deployedImplementationType* describes the technology used to implement the component (for example "Apache Spark").  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 * *implementationLanguage* describes the language used to implement the component.
 
 ## DeployedConnector entity

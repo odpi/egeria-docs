@@ -16,11 +16,11 @@ An open discovery service is designed to run at regular intervals to gather a de
     --8<-- "docs/guides/developer/open-discovery-services/operation-of-a-discovery-service.md"
 
 ??? info "Runtime for an open discovery service"
-    Open discovery services are packaged into [Open Discovery Engines](/concepts/open-discovery-engine) that run in the [Asset Analysis OMES](/services/omes/asset-analysis) hosted in an [Engine Host](/concepts/engine-host).  
+    Open discovery services are packaged into [Open Discovery Engines](/concepts/open-discovery-engine) that run in the [Asset Analysis OMES](/services/omes/asset-analysis/overview) hosted in an [Engine Host](/concepts/engine-host).  
 
     The metadata repository interface for metadata discovery tools is implemented by the [Discovery Engine OMAS](/services/omas/discovery-engine/overview) that runs in a [Metadata Access Server](/concepts/metadata-sccess-server).
 
-    An open discovery service may be triggered by a REST call to the Asset Analysis OMES, via a [Governance Action](/concepts/governance-action) or as part of a [governance action process](/concepts/governance-action-process).
+    An open discovery service may be triggered by a REST call to the Asset Analysis OMES, via an [Engine Action](/concepts/engine-action) or as part of a [governance action process](/concepts/governance-action-process).
 
     ![Open Discovery Service](/connectors/discovery/discovery-service.svg)
 

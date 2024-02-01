@@ -32,11 +32,12 @@ In a similar way to the glossary ([area 3](/types/3)), this information is autho
 * **[0455 Exception Management](0455-Exception-Management.md)**
 * **[0460 Governance Execution Points](0460-Governance-Execution-Points.md)**
 * **[0461 Governance Engines](0461-Governance-Engines.md)**
-* **[0462 Governance Action Types](0462-Governance-Action-Types.md)**
-* **[0463 Governance Actions](0463-Governance-Actions.md)**
+* **[0462 Governance Action Processes](0462-Governance-Action-Processes.md)**
+* **[0463 Engine Actions](0463-Engine-Actions.md)**
 * **[0464 Dynamic Integration Groups](0464-Dynamic-Integration-Groups.md)**
 * **[0465 Duplicate Processing](0465-Duplicate-Processing.md)**
 * **[0470 Incident Reporting](0470-Incident-Reporting.md)**
+* **[0475 Context Events](0475-Context-Events.md)**
 * **[0481 Licenses](0481-Licenses.md)**
 * **[0482 Certifications](0482-Certifications.md)**
 * **[0483 Terms and Conditions](0483-Terms-And-Conditions.md)**

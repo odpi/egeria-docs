@@ -4,13 +4,9 @@
 
 # Governance Action Type
 
-A *governance action type* is a template for a [governance action](/concepts/governance-action). A set of linked governance action types form the definition of a [governance action process](/concepts/governance-action-process).
+A *Governance Action Type* is a template that describes a call to a [governance engine](/concepts/governance-engine).  Through the [open governance service](/services/gaf-metadata-management), it is possible to use the governance action type to initiate the specified call to the governance engine.  The result is the creation of an [engine action](/concepts/engine-action) that controls the execution of the call.  
 
-Governance action types are defined through the [Governance Engine OMAS](/services/omas/governance-engine/overview) and this OMAS also coordinates the creation of a governance action from the governance action type as part of its execution of the governance action process.
-
-## Open metadata type definition
-
-The governance action type is defined in the [0462 Governance Action Type](/types/4/0462-Governance-Action-Types) model of the Open Metadata Types.
-
+!!! education "Properties of a governance action type"
+    The open metadata type definition for the governance action type is in model [0462 Governance Action Processes](/types/4/0462-Governance-Action-Processes).
 
 --8<-- "snippets/abbr.md"

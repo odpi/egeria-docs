@@ -1,6 +1,6 @@
-<mxfile modified="2023-07-20T08:48:09.979Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.5.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="xsxeMNtzFjKwdA15uG9a" version="21.5.0" type="device" pages="14">
+<mxfile modified="2023-12-06T12:43:15.370Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="QeOP8tuc2XvF4DiT-CAb" version="21.6.8" type="device" pages="14">
   <diagram id="-Ej96Nh0ZEP9uloQp987" name="overview">
-    <mxGraphModel dx="1194" dy="775" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="775" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -544,7 +544,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="9yY8wVPPPJh38VkH0JxX" name="0350-Related-Terms">
-    <mxGraphModel dx="1106" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="MWJdQyRvGwUgby_lFWz4-0" />
         <mxCell id="MWJdQyRvGwUgby_lFWz4-1" parent="MWJdQyRvGwUgby_lFWz4-0" />
@@ -929,7 +929,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TGjbc5xVzbupea2va-nw" name="0380-Spine-Objects">
-    <mxGraphModel dx="1106" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="RKPw53d2RQ-C6yJxL9cX-0" />
         <mxCell id="RKPw53d2RQ-C6yJxL9cX-1" parent="RKPw53d2RQ-C6yJxL9cX-0" />
@@ -1012,7 +1012,7 @@
             <mxPoint x="531.75" y="675" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gH77GtbaPqpgIamimFJB-13" value="«relationship»&lt;br&gt;&lt;b&gt;IsATypeOfRelationship&lt;/b&gt;" style="html=1;strokeColor=#0e8088;align=center;fillColor=#b0e3e6;gradientColor=#00CCCC;" parent="RKPw53d2RQ-C6yJxL9cX-1" vertex="1">
+        <mxCell id="gH77GtbaPqpgIamimFJB-13" value="«relationship»&lt;br&gt;&lt;b&gt;TermISATYPEOFRelationship&lt;/b&gt;" style="html=1;strokeColor=#0e8088;align=center;fillColor=#b0e3e6;gradientColor=#00CCCC;" parent="RKPw53d2RQ-C6yJxL9cX-1" vertex="1">
           <mxGeometry x="413.25" y="747" width="237" height="50" as="geometry" />
         </mxCell>
         <mxCell id="gH77GtbaPqpgIamimFJB-15" value="«entity»&lt;br&gt;&lt;b&gt;GlossaryTerm&lt;/b&gt;" style="html=1;strokeColor=#0e8088;align=center;fillColor=#b0e3e6;gradientColor=#00CCCC;" parent="RKPw53d2RQ-C6yJxL9cX-1" vertex="1">

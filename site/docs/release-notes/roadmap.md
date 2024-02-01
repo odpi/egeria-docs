@@ -14,6 +14,7 @@ Egeria aims to deliver against 6 capability layers:
 [![UIs](ui-functional-detail.svg)](#user-interfaces)
 [![Integration Platform](integration-platform-functional-detail.svg)](#integration-platform)
 [![Developer Platform](developer-platform-functional-detail.svg)](#developer-platform)
+[![Deployment Runtimes](deployment-runtimes-functional-detail.svg)](#deployment-runtimes)
 [![Deployment Resources](deployment-resources-functional-detail.svg)](#deployment-resources)
 
 ### Governance solutions
@@ -76,17 +77,25 @@ Its use is described in the [developer's guide](/guides/developer).
   
 - The [open metadata types](/types) provide definitions for the different types of metadata needed by an organization. The open metadata type system is extendable; however, by providing a comprehensive starter set, and encouraging tools to use them, Egeria ensures metadata can be seamlessly shared amongst them.
 - The [framework services](/services/framework-services) provide Egeria clients to support metadata retrieval for connectors defined by the [frameworks](/frameworks).
+
+    - [Connected Asset](/services/ocf-metadata-management) supports the creation of connectors and the retrieval of metadata about the attached asset.
+    - [Open Metadata Store](/services/gaf-metadata-management) supports the retrieval and maintenance of any type of open metadata.
+    - [Open Integration Service](/services/oif-metadata-management) supports integration connectors
+    - [Open Governance Service](/service/gaf-metadata-management) supports the execution of [engine actions](/concepts/engine-action) and [governance action processes](/concepts/governance-action-process).
+  
 - The [OMAG Server Platform](/concepts/omag-server-platform) provides a multi-tenant runtime platform for [OMAG Servers](/concepts/omag-server). Each OMAG Server hosts the connectors along with the Egeria services to integrate third party technology.
 
     - The [platform chassis](/services/platform-chassis) uses Spring Boot to provide the web server and REST API support for the platform.
+    - The [server chassis](/services/server-chassis) uses Spring Boot to provide the web server and REST API support for a single OMAG Server.
     - The [administration services](/services/admin-services/overview) supports configuring the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/guides/admin/guide)
-    - The [platform services](/services/platform-services/overview) provide the means to start, stop and query the OMAG Servers and services running on an OMAG Server Platform.
+    - The [server operations](/services/server-operations) and [platform services](/services/platform-services/overview) provide the means to start, stop and query the OMAG Servers and services running on an OMAG Server Platform.
     - The [multi-tenancy management](/services/multi-tenant) module supports multiple OMAG Servers running on an OMAG Server Platform.
     - The [repository services](/services/omrs) provide the basic ability to share metadata between metadata repositories. The metadata repositories are organized
       into [open metadata repository cohorts](/concepts/cohort-member). These cohorts define the scope of the metadata sharing and ensure metadata is available to all consumers within the cohort.
     - The [metadata security](/services/metadata-security) module provides customizable authorization checks for calls to the OMAG Server Platform, OMAG Server and the open metadata instances themselves.
     - A governance server makes use of open metadata to actively manage an aspect of the digital landscape. The [governance server services :material-dock-window:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/governance-servers){ terget=gh } each provide the principle subsystem of a [type of governance server](/concepts/governance-server).
     - The [generic handlers](/services/generic-handlers) provide support for the type specific maintenance and retrieval of metadata that follows the [open metadata types](/types). This includes managing visibility of metadata through the [Governance Zones](/concepts/governance-zone/), calls to [Open Metadata Security](/features/metadata-security/overview/) and [metadata management using templates](/features/templated-cataloguing/overview/).
+
 - The [open metadata frameworks](/frameworks) define the interfaces implemented by components that "plug-in" to Egeria, either to integrate calls to third party technology or extend the function of Egeria. The frameworks are as follows:
 
     - [Audit Log Framework (ALF)](/frameworks/alf/overview) - extensions for all types of connectors to enable natural language diagnostics such as exceptions and audit log messages.
@@ -94,6 +103,19 @@ Its use is described in the [developer's guide](/guides/developer).
     - [Open Integration Framework (OIF)](/frameworks/oif/overview) - specialized connectors for metadata exchange and synchronization with third party technologies.
     - [Open Discovery Framework (ODF)](/frameworks/odf/overview) - specialized connectors called discovery services that support automated metadata discovery,
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview) - specialized connectors for the triage and remediation of issues found in the digital landscape.
+    - [Event Action Framework (EAF)](/frameworks/eaf/overview) - specialized connectors for event management.
+
+### Deployment runtimes
+
+The runtimes package up the services to simplify the process of deploying Egeria's capability.
+
+![Deployment Runtimes](deployment-runtimes-functional-detail.svg)
+
+There are three runtimes:
+
+* [OMAG Server Platform](/concepts/omag-server-platform) provides support for running multiple [OMAG Servers](/concepts/omag-server).
+* OMAG Server runtime provides support for running a single [OMAG Servers](/concepts/omag-server).
+* Egeria UI Application is a deprecated runtime for the backend services for the Egeria General User UI.
 
 ### Deployment resources
 
@@ -113,7 +135,7 @@ Support for docker compose was removed in [release 3.5](3-5.md).
 
 Following is an overview of the [content status](/release-notes/content-status) of the functions in Egeria's latest release. 
 
-![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-4.0.svg)
+![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-4.4.svg)
 
 
 As you can see, some progress has been made on all layers. However, since they do build on one another, most of the early work has been focused on establishing the frameworks, connector APIs and other services to provide the developer platform. The developer platform provides the libraries and interfaces to build connectors to integrate third party tools along with the runtime to host these connectors and manage the metadata exchange.

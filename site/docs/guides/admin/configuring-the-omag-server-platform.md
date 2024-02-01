@@ -3,12 +3,12 @@
 
 # Configuring the OMAG Server Platform
 
-The [OMAG Server Platform](/concepts/omag-server-platform) is a JVM process that includes a Tomcat web server and uses [Spring Boot :material-dock-window:](https://spring.io/){ target=spring } to support its REST APIs.  The Egeria code is in the centre of this and, through configuration, starts up plug-in components called [connectors](/concepts/connector).
+The [OMAG Server Platform](/concepts/omag-server-platform) is a JVM process that includes a Tomcat web server and uses [Spring Boot :material-dock-window:](https://spring.io/){ target=spring } to support its REST APIs.  The Egeria code is in the centre of this.  Through configuration, Egeria starts up plug-in components called [connectors](/concepts/connector) and coordinates calls to them to manage and exchange metadata.
 
 ![OMAG Server Platform Onion](omag-server-platform-onion.svg)
 > High-level structure of the OMAG Server Platform
 
-The behaviour of these components is influenced by:
+The behaviour of the OMAG Server Platform components is influenced by:
 
 * The command line properties passed when the platform is started.
 * The contents of the `application.properties` file (or their environment variable equivalents).
@@ -24,7 +24,7 @@ The command to start the OMAG Server Platform follows this form:
 ```bash
 $ java <command line options> -jar omag-server-platform-{release}.jar
 ```
-The directory where this command is issued from is called the platform's *working directory* and it assumes its `application.properties` file is located in this directory and the java libraries for its classpath are in the **lib** subdirectory.
+The directory where this command is issued from is called the platform's *working directory*.  The platform code assumes its `application.properties` file is located in this directory and the java libraries for its classpath are in the `lib` subdirectory.
 
 The working directory is displayed in one of the messages emitted by the OMAG Server Platform when it starts up.  You can also see that it is listening on port `9443`.
 
@@ -103,13 +103,46 @@ These two pieces of information can be provided through these two properties:
 
 The default configuration document store connector is the [encrypted file store connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector).  If you wanted your configuration documents to be stored in clear text, set the following properties in the `application.properties` file:
 
-```
+```properties
 platform.configstore.provider=org.odpi.openmetadata.adapters.adminservices.configurationstore.file.FileBasedServerConfigStoreProvider
 platform.configstore.endpoint=./data/servers/{0}/config/{0}.config
 ```
 
 The connector will substitute the name of the server for `{0}`.
 
+#### Configuring the default configuration document
+
+[Configuration Documents](/concepts/configuration-document) describe the properties of an [OMAG Server](/concepts/omag-server).  They can be built up through a series of REST API calls to the platform's [Administration Services](/services/admin-services/overview).  It is possible to set up a default set of properties that will be added to any new configuration documents that are created on the platform using the `platform.default.config.document` property in the `application.properties` file.  The default properties are specified as a JSON document.  Here is an example that set the default values for the `organizationName`, `maxPageSize` and `eventBusConfig`:
+
+```properties
+###############################################
+### Set up the default configuration document for any new OMAG Server configurations
+###############################################
+platform.default.config.document=\
+  {\
+    "class": "OMAGServerConfig",\
+    "organizationName": "myOrg",\
+    "maxPageSize": 600,\
+    "eventBusConfig": \
+        {\
+            "class": "EventBusConfig",\
+            "topicURLRoot": "egeria.omag",\
+            "configurationProperties":\
+             {\
+                "producer": {"bootstrap.servers": "localhost:9092"},\
+                "consumer": {"bootstrap.servers": "localhost:9092"}\
+             }\
+        }\
+  }
+```
+A simple way to create this structure is to [configure a server](/guides/admin/servers) and then [retrieve the configuration document](/guides/admin/servers/#retrieving-the-configuration) for the server, removing any server specific details.  The resulting JSON structure can be added directly into `application.properties`, as show above, or set in an environment variable.  The environment variable can then be used to set `platform.default.config.document`.  The example below shows this property being set using an environment variable called `DEFAULT_SERVER_CONFIG`.  This second approach is useful if the same default configuration is being used by multiple platforms, each with different `application.properties` files.
+
+```properties
+###############################################
+### Set up the default configuration document for any new OMAG Server configurations
+###############################################
+platform.default.config.document=${DEFAULT_SERVER_CONFIG}
+```
 
 #### Configuring the platform metadata security connector
 
@@ -124,7 +157,7 @@ A platform metadata security connector typically needs the following pieces of i
 
 For example, to configure tha [Coco Pharmaceuticals platform metadata security connector](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples) set up the following properties:
 
-```
+```properties
 platform.security.provider=org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider
 platform.security.name=Coco Pharmaceuticals Platform
 ```

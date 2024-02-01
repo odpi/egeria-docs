@@ -1,9 +1,14 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/tech-preview.md"
+--8<-- "snippets/content-status/deprecated.md"
 
 # Asset Catalog Open Metadata Access Service (OMAS)
+
+The Asset Catalog OMAS is replaced by the [Asset Catalog OMVS](/services/omvs/asset-catalog/overview).
+
+
+## Original Description
 
 The Asset Catalog OMAS provides services to search for data assets including:
 

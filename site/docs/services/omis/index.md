@@ -36,7 +36,7 @@ The integration services available today are:
 
 ??? education "Further information"
 
-    * The operation of the integration daemon and the integration services within, along with details of how to set up these integration services are located in the [Administration Guide](/guides/admin/servers/configuring-an-integration-daemon).
+    * The operation of the integration daemon and the integration services within, along with details of how to set up these integration services are located in the [Administration Guide](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).
     * [Writing integration connectors](/guides/developer/integration-connectors/overview) that use the integration services running in the integration daemon.
 
 --8<-- "snippets/abbr.md"

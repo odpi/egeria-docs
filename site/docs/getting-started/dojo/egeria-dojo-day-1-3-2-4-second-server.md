@@ -53,8 +53,8 @@ Once you have 2 servers configured, add configuration to each of them to connect
 First read about [Open Metadata Repository Cohorts](/concepts/cohort-member).
 
 Then
-* [Set up the event bus defaults](/guides/admin/servers/configuring-event-bus)
-* Connect then together by [adding cohort configuration](/guides/admim/servers/configuring-registration-to-a-cohort) to each server.
+* [Set up the event bus defaults](/guides/admin/servers/by-section/event-bus-config-section)
+* Connect then together by [adding cohort configuration](/guides/admim/servers/by-section/repository-services-section/#configuring-registration-to-a-cohort) to each server.
 
 Start both servers and view their logs via the Docker Desktop - you should see that they are communicating.
 

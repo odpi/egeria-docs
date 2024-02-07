@@ -13,7 +13,7 @@ hide:
 !!! education "Further information"
     
     - [Repository Connector Catalog](/connectors/#repository-and-event-mapper-connectors).
-    - [Configuring a Repository Connector](/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-local-repository).
+    - [Configuring a Repository Connector](/guides/admin/servers/by-section/repository-services-section/#configuring-the-local-repository-store).
     - [Writing an repository connector](/guides/developer/repository-connectors/overview).
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview).
 

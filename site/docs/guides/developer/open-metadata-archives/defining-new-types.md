@@ -9,7 +9,7 @@ Type definitions need to be governed because they must be consistent across a co
 
 ## Dynamic definitions of types not recommended
 
-Egeria does have an API for dynamically defining types, but it is recommended that you only use it went experimenting with types and instances.  Instead, you should manage your types in an [open metadata archive](/concepts/open-metadata-archive) that is loaded in the [metadata access servers](/concepts/metadata-access-servers) during [each server start up](/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup).
+Egeria does have an API for dynamically defining types, but it is recommended that you only use it went experimenting with types and instances.  Instead, you should manage your types in an [open metadata archive](/concepts/open-metadata-archive) that is loaded in the [metadata access servers](/concepts/metadata-access-servers) during [each server start up](/guides/admin/servers/by-section/repository-services-section#configuring-the-open-metadata-archives-to-load-on-server-startup).
 
 ## Creating your own type archive
 

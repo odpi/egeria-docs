@@ -120,17 +120,19 @@ you should decide which embedded connector you want to run, choose either:
 
 * The audit log content shows progress.
 * You can see the content of the connector using the [Repository Explorer from the Eco-system UI](https://egeria-project.org/guides/ecosystem-ui/rex-user-guide/?h=repository+explorer). Be aware that you
-  will need to [configure the Rex view service](https://egeria-project.org/guides/admin/servers/configuring-a-view-server/?h=view+server+configuration#integration-view-services)
+  will need to [configure the Rex view service](https://egeria-project.org/guides/admin/servers/by-section/view-services-section)
   to include the repository proxy server, with an entry in the configuration similar to this (where cocofile is the Server name):
 
-`{
-"class"              : "ResourceEndpointConfig",
-"resourceCategory"   : "Server",
-"serverInstanceName" : "Caching Repository proxy file sample",
-"serverName"         : "cocofile",
-"platformName"       : "Platform1",
-"description"        : "Caching Repository proxy file sample"
-}`
+```json
+    {
+        "class"              : "ResourceEndpointConfig",
+        "resourceCategory"   : "Server",
+        "serverInstanceName" : "Caching Repository proxy file sample",
+        "serverName"         : "cocofile",
+        "platformName"       : "Platform1",
+        "description"        : "Caching Repository proxy file sample"
+    }
+```
 
 Amend the `serverName` to match your server (the 'server' in the postman collection).
 
@@ -150,7 +152,7 @@ Amend the `serverName` to match your server (the 'server' in the postman collect
    would need to be re-implemented as it would need to include code to write to the 3rd party technology.
 
 
-### Reference materials for developers.
+### Reference materials for developers
 
 * [https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/README.md](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/README.md)
   and it's sub-pages are great resources for developers.

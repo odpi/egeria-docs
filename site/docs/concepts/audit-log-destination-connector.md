@@ -7,7 +7,7 @@ The audit log destination connector implements a common interface to an audit lo
 
 ![Audit Log Destination Connector](/connectors/runtime/audit-log-destination-connector.svg)
 
-An [OMAG Server](/concepts/omag-server) can have [multiple audit log destinations](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-audit-log) configured.  This configuration can control which severities of audit log record are sent to each destination.
+An [OMAG Server](/concepts/omag-server) can have [multiple audit log destinations](/guides/admin/servers/by-section/respository-services-section/#configuring-the-audit-log) configured.  This configuration can control which severities of audit log record are sent to each destination.
 
 The implementation for the audit log destination connector can make further choices about how each log record is processed.
 

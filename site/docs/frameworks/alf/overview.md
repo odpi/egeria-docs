@@ -30,6 +30,6 @@ The [audit log destination](/concepts/audit-log) can be extended to allow routin
 The [Open Metadata Repository Services (OMRS)](/services/omrs) provide an extension to the audit log destination that supports audit log store connectors. This means that an [OMAG Server](/concepts/omag-server) can be configured to route audit log messages to different destinations.
 
 Details of the supported audit log store connectors and how to set them up are described in
-[configuring the audit log](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
+[configuring the audit log](/guides/admin/servers/by-section/repository-services-section/#configuring-the-audit-log).
 
 --8<-- "snippets/abbr.md"

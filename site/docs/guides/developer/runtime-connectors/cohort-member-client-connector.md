@@ -11,7 +11,7 @@ Egeria's [Open Metadata Repository Services (OMRS)](/services/omrs) provides a d
   supports remote calls to the OMRS REST API.
   
 The connection for this connector is configured in the `LocalRepositoryRemoteConnection` property of the
-cohort member's [Local Repository Configuration](/user/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-local-repository).
+cohort member's [Local Repository Configuration](/guides/admin/servers/by-section/repository-services-section/#registering-the-server-with-a-cohort).
 
 The definition of the connector interface for these connectors is
 defined in the [repository-services-api :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis){ target=gh } module

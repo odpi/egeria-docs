@@ -42,7 +42,7 @@ In addition, the [Open Metadata Repository Services (OMRS)](/services/omrs) prov
 
 ![Using different log destination](/frameworks/alf/audit-log-framework-overview.svg)
 
-Details of the supported audit log store connectors and how to set them up are described in [Configuring the Audit Log](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
+Details of the supported audit log store connectors and how to set them up are described in [Configuring the Audit Log](/guides/admin/servers/by-section-repository-services-section/#configuring-the-audit-log).
 
 ## FFDC principles practised by the Egeria community
 
@@ -275,7 +275,7 @@ Below is an example of the types of information captured in an audit log record.
 
 ## Further information
 
-* [Configuring the audit log destinations](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-audit-log).
+* [Configuring the audit log destinations](/guides/admin/servers/by-section/repository-services-section/#configuring-the-audit-log).
 
 
 --8<-- "snippets/abbr.md"

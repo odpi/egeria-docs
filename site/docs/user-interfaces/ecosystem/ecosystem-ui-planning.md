@@ -53,8 +53,8 @@ More detailed information is configured in the view servers, using the standard 
         * an empty simple image
         * your own custom Kubernetes image
 - [ ] [Configure the OMAG Server Platform](/guides/admin/configuring-the-omag-server-platform) if required (the Kubernetes image may have already configured an OMAG Server Platform)
-- [ ] [Configure and start a Metadata Access Server](/guides/admin/servers/configuring-a-metadata-access-store) if required (the Kubernetes image may have configured a Metadata Access Server)
-- [ ] [Configure and start a View Server](/guides/admin/servers/configuring-a-view-server)  for each of the UI capabilities you require. The name of the UI capability is the same as the name of the view service.
+- [ ] [Configure a Metadata Access Server](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store) if required (the Kubernetes image may have configured a Metadata Access Server)
+- [ ] [Configure a View Server](/guides/admin/servers/by-server-type/configuring-a-view-server)  for each of the UI capabilities you require. The name of the UI capability is the same as the name of the view service.
 - [ ] [Configure and run the Presentation Server](/user-interfaces/ecosystem/configure-and-run-presentation-server)
 - [ ] Validate that the presentation server is running as expected. Using the following guides:
     * [Repository explorer guide](/guides/ecosystem-ui/rex-user-guide)

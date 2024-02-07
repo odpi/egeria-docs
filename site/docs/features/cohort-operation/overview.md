@@ -13,7 +13,7 @@ The following types of servers can become a member of one or more cohorts.
 
 Their configuration lists the cohorts that they are to join.
 
---8<-- "docs/guides/admin/servers/configuring-registration-to-a-cohort.md"
+--8<-- "snippets/admin/configuring-registration-to-a-cohort.md"
 
 
 ## Formation of a cohort

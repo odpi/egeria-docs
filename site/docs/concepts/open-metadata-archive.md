@@ -16,7 +16,7 @@
 ??? education "Further information"
 
     - [Pre-built Open Metadata Archives](https://github.com/odpi/egeria/tree/main/content-packs) providing sample metadata.
-    - [Configuring a server to load an archive on start up](/guides/admin/servers/configuring-the-startup-archives)
+    - [Configuring a server to load an archive on start up](/guides/admin/servers/by-section/repository-services/#configuring-the-open-metadata-archives-to-load-on-server-startup)
     - [Adding an archive to a running server](/guides/operations/adding-archive-to-running-server)
     - [Metadata Archiving](/features/metadata-archiving/overview) describes all of the features of Egeria that use the Open Metadata Archives.
     - [The open metadata archive connector](/concepts/open-metadata-archive-connector) is the connector used to read and write open metadata archives.

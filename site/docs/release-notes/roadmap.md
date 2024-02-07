@@ -172,7 +172,7 @@ This new website was added to the project in 2021, and it has resulted in more i
 * [Asset Catalog OMAS](/services/omas/data-engine/overview)
 * [Asset Lineage OMAS](/services/omas/data-engine/overview)
 
-There was investment in both the function and performance of the generic handlers, which provide many of the metadata governance functions supported by all OMASs, such as metadata security, provenance validation, anchor management, LatestChange classifications, effectivity dating, memento management and deduplicating query results.
+There was investment in both the function and performance of the generic handlers, which provide many of the metadata governance functions supported by all OMASs, such as metadata security, provenance validation, anchor management, LatestChange classifications, effectivity dating, memento management and de-duplicating query results.
 
 Integration with third party technologies made good progress with the addition of OpenLineage support, the new JDBC, Hive Metastore, schema registry, OpenAPI Specification and Apache Kafka connectors.
 
@@ -180,7 +180,7 @@ Integration with third party technologies made good progress with the addition o
 
 Support for the governance solutions naturally follows along, building on the two lower levels. The governance solutions themselves complement specific metadata and governance solutions available in the market today. Egeria is focused on filling in the gaps to support individuals that are setting up and running an open metadata ecosystem and wish to take advantage of the enterprise perspective it brings.
 
-The first solution is *Historical Lineage Exploration*. This was made available as a tech preview in late 2020. This provides a user interface for finding assets and viewing their lineage along with a dedicated governance server called the [open lineage server](/concepts/open-lineage-server).
+The first solution is *Historical Lineage Exploration*. This was made available as a tech preview in late 2020. This provides a user interface for finding assets and viewing their lineage along with a dedicated governance server called the [Lineage Warehouse](/concepts/lineage-warehouse).
 
 Next will be the *Subject Area Management* solution and *Duplicate Metadata Management*, closely followed by the others in 2023 and beyond.
 

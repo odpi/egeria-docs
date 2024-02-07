@@ -33,5 +33,5 @@ The nature of Egeria's open metadata ecosystem means that a Governance Action ca
 
 
 !!! education "Further information"
-    [Configuring an Engine Host](/guides/admin/servers/configuring-an-engine-host)
+    [Configuring an Engine Host](/guides/admin/servers/by-server-type/configuring-an-engine-host)
 

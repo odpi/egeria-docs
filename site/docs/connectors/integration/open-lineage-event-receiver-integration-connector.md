@@ -23,7 +23,7 @@ It uses an embedded [Open Metadata Topic Connector](/concepts/open-metadata-topi
 
 This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
 
-The connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
+The connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="11"

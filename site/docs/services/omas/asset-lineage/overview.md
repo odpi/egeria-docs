@@ -16,9 +16,9 @@ Following asset types are considered:
 - DataSet
 
 
-Asset Lineage OMAS then builds complex graph structures (sometimes we call this asset context) that are sent to an [out topic](/concepts/out-topic){ target=_blank } address for further preservation and use with [Open Lineage Server :material-dock-window:](/services/open-lineage-services){ target=_blank }. 
+Asset Lineage OMAS then builds complex graph structures (sometimes we call this asset context) that are sent to an [out topic](/concepts/out-topic){ target=_blank } address for further preservation and use with the [Lineage Warehouse](/concepts/lineage-warehouse). 
 
-The above works well for scenario where metadata is actively shared on the cohort while it gets created. In different scenario, additional repository already prepopulated with existing metadata can join the cohort. Asset Lineage OMAS offers endpoint to handle this as well by allowing external system to request (or actively poll) and extract the metadata relevant for building lineage graph.
+The above works well for scenario where metadata is actively shared on the cohort while it gets created. In different scenario, additional repository already pre-populated with existing metadata can join the cohort. Asset Lineage OMAS offers endpoint to handle this as well by allowing external system to request (or actively poll) and extract the metadata relevant for building lineage graph.
 
 In all cases, Asset Lineage OMAS always relies on underlying [Enterprise Repository Services :material-dock-window:](/services/omrs/subsystem-descriptions/enterprise-repository-services){ target=_blank } OMRS subsystem to find and consolidate metadata by combining different elements available across the cohort.
 

@@ -57,7 +57,7 @@ The connection example shows how to configure the connection for this connector.
     Add the name of the topic in {{topicName}}; a unique consumer identifier in {{consumerId}} and the endpoint for Apache Kafka (for example localhost:9092) in {{kafkaEndpoint}}.
 
 ???+ info "Configuring Egeria"
-    Egeria makes extensive use of events, and this connector is its default connector for sending and receiving events.  In order to simplify the configuration of Egeria's [OMAG Servers](/concepts/omag-server), it is possible to set up the default configuration properties for this connector in the [Event Bus Configuration](/guides/admin/servers/configuring-event-bus). This configuration is used when configuring the topics for the server's [cohorts](/concepts/cohoer-member) and [Open Metadata Access Services (OMAS)](/services/omas)
+    Egeria makes extensive use of events, and this connector is its default connector for sending and receiving events.  In order to simplify the configuration of Egeria's [OMAG Servers](/concepts/omag-server), it is possible to set up the default configuration properties for this connector in the [Event Bus Configuration](/guides/admin/servers/by-section/event-bus-config-section). This configuration is used when configuring the topics for the server's [cohorts](/concepts/cohoer-member) and [Open Metadata Access Services (OMAS)](/services/omas)
 
 
 ### Default properties for the producer and consumer
@@ -126,7 +126,7 @@ Using JSON, the property would be set as follows:
 ```
 
 !!! danger "Do not use eventDirection for Egeria OMAG Server configuration"
-    If you are configuring the [event bus configuration](/guides/admin/servers/configuring-event-bus/) in a configuration document using the REST API, do not set the `eventDirection` property because the configuration helper functions use the event bus configuration to set up all types of topics and will assign the appropriate values for `eventDirection`.
+    If you are configuring the [event bus configuration](/guides/admin/servers/by-section/event-bus-config-section/) in a configuration document using the REST API, do not set the `eventDirection` property because the configuration helper functions use the event bus configuration to set up all types of topics and will assign the appropriate values for `eventDirection`.
 
 ### Security
 

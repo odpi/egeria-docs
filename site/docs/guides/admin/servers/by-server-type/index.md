@@ -10,28 +10,17 @@ The configuration document is divided into sections.  Some sections contain prop
 ![Different types of Server](/concepts/types-of-omag-servers.svg)
 
 
-
-* The [*LocalServerId*](#local-server-id), [*LocalServerName*](#local-server-name), [*Local Server Type*](#local-server-type) and [*Audit Trail*](#audit-trail) properties are managed by Egeria and you do not need to configure them.
-* The [*Event Bus Config*](event-bus-config-section.md) is used to provide standard information about the event bus (typically Apache Kafka) that is used in each section that configures a service that is sending notifications over the event bus.
-* The [*Basic Server Properties*](basic-server-properties-section.md) provides the standard properties of a server such as its user identifier and password.
-* The [*Server Security Connection*](server-security-connection-section.md) provides the information needed to enable fine-grained metadata authorization checks.
-* The [*Repository Services*](repository-services-section.md) defines the type of audit logging and metadata repository supported by the server.  It also defines which [open metadata repository cohorts](/concepts/cohort-member) that the server belongs to.
-* The [*Access Services*](access-services-section.md) define which metadata APIs are activated in a [metadata access server](/concepts/metadata-access-service).
-* The [*Engine Host Services*](engine-host-services-section.md) define which governance engines are activated in an [engine host](/concepts/engine-host) server.
-* The [*Integration Daemon Services*](integration-daemon-services-section.md) define which integration connectors run in an [integration daemon](/concepts/integration-daemon) server.
-* The [*View Services*](view-services-section.md) define which REST APIs are enabled in a [view server](/concepts/view-server).
-* The [*Lineage Warehouse Services*](lineage-warehouse-services-section.md) define the properties of the repository for a [lineage warehouse](/concepts/lineage-warehouse) server.
-* The [*Data Engine Proxy Services*](data-engine-proxy-services-section.md) define the properties of a [data engine proxy server](/concepts/data-engine-proxy) server.
+* [Metadata Access Store](configuring-a-metadata-access-store.md) - this is a metadata server.  It has a metadata repository and REST APIs to access and maintain the metadata.  It may also send metadata change notifications over an event bus such as Apache Kafka and be a member of an [open metadata repository cohort](/concepts/cohort-member).
+* [Metadata Access Point](configuring-a-metadata-access-store.md) - this is like a metadata access store in that it has REST APIs to access and maintain open metadata.  It can also send metadata change notifications over an event bus.  However, it must be a member of an open metadata repository cohort because it has no metadata repository of its own and relies on the other members o the cohort to supply it with metadata. 
+* [Repository Proxy](configuring-a-repository-proxy.md) - this type of server hosts a connector that translates open metadata repository requests into calls to a third party metadata server.  It is also able to convert metadata change events from the third party metadata server into open metadata change events.
+* [Conformance Test Server](configuring-a-conformance-test-server.md) - this type of server is used by developers of the connectors that run in the repository proxy server. It tests that they are able to safely connect to an open metadata repository cohort.
+* [View Server](configuring-a-view-server.md) - this server has specialist REST APIs for UIs and other non-Java environments, such as Python.
+* [Integration Daemon](configuring-an-integration-daemon.md) - this server hosts integration connectors that synchronize metadata between third party technologies and the open metadata ecosystem.
+* [Engine Host](configuring-an-engine-host.md) - this server hosts governance engines that monitor the open metadata ecosystem and take actions as requested/required.
+* [Lineage Warehouse](configuring-a-lineage-warehouse.md) - this server provides optimized access to lineage data.  It has its own repository that it maintains by monitoring the open metadata ecosystem.
+* [Data Engine Proxy](configuring-a-data-engine-proxy-server.md) - this server supports a specialist connector for extracting metadata from IBM DataStage.
 
 
-## Local Server Id
+This is how these types of servers work together.
 
-
-## Local Server Name
-
-
-## Local Server Type
-
-
-## Audit Trail
-
+![Connected OMAG Servers](/introduction/egeria-solution-components)

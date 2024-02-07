@@ -29,7 +29,7 @@ The data folder monitor integration connector monitor changes in a file director
 
 This connector uses the [Files Integrator OMIS](/services/omis/files-integrator/overview) running in the [integration daemon](/concepts/integration-daemon).
 
-Following is its connection definition to use on the [administration commands that configure the Files Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services):
+Following is its connection definition to use on the [administration commands that configure the Files Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon):
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="13"

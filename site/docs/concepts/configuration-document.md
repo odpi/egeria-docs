@@ -3,13 +3,13 @@
 
 # Configuration Documents
 
-A configuration document provides the configuration details for a single [OMAG Server](omag-server.md). It defines which subsystems are activated in the server and which connector implementations it should use.
+A configuration document provides the configuration properties for a single [OMAG Server](omag-server.md). It defines which subsystems are activated in the server and which connector implementations it should use.
 
 ## Configuration document structure
 
 An OMAG Server's configuration document is structured into elements that each describe the configuration properties for each of its desired capabilities.
 
-![Structure of the configuration document](configuration-document-structure.svg)
+![Structure of the configuration document](/guides/admin/servers/by-section/configuration-document-structure.svg)
 
 The sections are as follows:
 
@@ -37,7 +37,7 @@ When the server is running, the following command returns the configuration docu
 At the top of the configuration document are:
 
 - [Local server URL root](omag-server.md#platform-url-root), which defines the root of the network address for the [OMAG Server Platform](omag-server-platform.md) where the OMAG Server will run.
-- [Event bus config](/guides/admin/servers/configuring-a-metadata-access-point/#set-up-the-default-event-bus), which provides the configuration of the event bus (Apache Kafka or similar) where all the event topics that the server will use are located.
+- [Event bus config](/guides/admin/servers/by-section/event-bus-config-section), which provides the configuration of the event bus (Apache Kafka or similar) where all the event topics that the server will use are located.
 
 Both of these elements provide default values for other configuration elements.
 

@@ -39,63 +39,63 @@ to see how the effect of your requests are changing the server's configuration.
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Confguration for Cohort Members/Set local server URL root`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-point/#configuring-local-server-url).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/basic-server-properties-section).
 
 * **localServerType** to `Egeria Dojo Metadata Server` (update the value in the request)
 
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Set local server type`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/basic-server-properties-section).
 
 * **organizationName** to your organization name (update the variable `organization_name`).
  
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Set organization name`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/basic-server-properties-section).
  
 * **localServerUserId** to `myMetadataServerUserId`.
 
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Set local server user Id`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/basic-server-properties-section).
 
 * **localServerPassword** to `myMetadataServerPassword`
 
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Set local server user password`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/basic-server-properties-section).
 
 * **maxPageSize** - the maximum page size that can be set on requests to the server. The default value is 1000.
 
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Set max page size`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/basic-server-properties-section).
 
 * Add a graph-based local repository.  This will store metadata in JanusGraph.
 
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Configuration for Metadata Servers/Enable the graph repository`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-local-repository).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/repository-services-section/#configuring-the-local-repository-store).
 
 * Configure the **Asset Owner** Open Metadata Access Service (OMAS). URL name for this service is `asset-owner`.
 
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Enable a specific access service`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-access-services).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/access-services-section).
 
 * Set up the Coco Pharmaceutical **Server** Security connector to provide authorization checks for inbound REST API calls.
 
   This call is located in the Postman collection `Egeria-admin-services-server-configuration` in folder
   `Configuring OMAG Servers/Set Server Security Connection`.
   
-  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-server-security-connector).
+  The specific documentation for this call is in the Admin Guide [here](/guides/admin/servers/by-section/server-security-connection-section).
 
 Once the configuration is complete you are ready to move on to the next section.
 

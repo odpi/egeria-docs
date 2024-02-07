@@ -100,7 +100,7 @@ nav:
                       - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
               - Secrets Store:
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
-              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/open-lineage-janus-connector.md
+              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/lineage-warehouse-janus-connector.md
           - Developer Guide:
               - Developer Guide: guides/developer/index.md
               - Retrieving Metadata: guides/developer/finding-metadata/overview.md
@@ -133,16 +133,30 @@ nav:
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
           - Configure OMAG Servers:
               - Configuring an OMAG Server: guides/admin/servers/index.md
-              - Metadata Access Point: guides/admin/servers/configuring-a-metadata-access-point.md
-              - Metadata Access Store: guides/admin/servers/configuring-a-metadata-access-store.md
-              - Repository Proxy: guides/admin/servers/configuring-a-repository-proxy.md
-              - Conformance Test Server: guides/admin/servers/configuring-a-conformance-test-server.md
-              - View Server: guides/admin/servers/configuring-a-view-server.md
-              - Integration Daemon: guides/admin/servers/configuring-an-integration-daemon.md
-              - Engine Host: guides/admin/servers/configuring-an-engine-host.md
-              - Data Engine Proxy: guides/admin/servers/configuring-a-data-engine-proxy-server.md
-              - Open Lineage Server: guides/admin/servers/configuring-an-open-lineage-server.md
-              - Presentation Server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
+              - By Server Type:
+                    - Configuring an OMAG Server by server type: guides/admin/servers/by-server-type/index.md
+                    - Metadata Access Point: guides/admin/servers/by-server-type/configuring-a-metadata-access-point.md
+                    - Metadata Access Store: guides/admin/servers/by-server-type/configuring-a-metadata-access-store.md
+                    - Repository Proxy: guides/admin/servers/by-server-type/configuring-a-repository-proxy.md
+                    - View Server: guides/admin/servers/by-server-type/configuring-a-view-server.md
+                    - Integration Daemon: guides/admin/servers/by-server-type/configuring-an-integration-daemon.md
+                    - Engine Host: guides/admin/servers/by-server-type/configuring-an-engine-host.md
+                    - Data Engine Proxy: guides/admin/servers/by-server-type/configuring-a-data-engine-proxy-server.md
+                    - Lineage Warehouse: guides/admin/servers/by-server-type/configuring-a-lineage-warehouse.md
+                    - Conformance Test Server: guides/admin/servers/by-server-type/configuring-a-conformance-test-server.md
+                    - Presentation Server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
+              - By Section:
+                    - Configuring an OMAG Server by configuration document section: guides/admin/servers/by-section/index.md
+                    - Basic Server Properties: guides/admin/servers/by-section/basic-server-properties-section.md
+                    - Event Bus Default Properties: guides/admin/servers/by-section/event-bus-config-section.md
+                    - Repository Services: guides/admin/servers/by-section/repository-services-section.md
+                    - Server Security Connection: guides/admin/servers/by-section/server-security-connection-section.md
+                    - Access Services : guides/admin/servers/by-section/access-services-section.md
+                    - View Services : guides/admin/servers/by-section/view-services-section.md
+                    - Integration Daemon Services : guides/admin/servers/by-section/integration-daemon-services-section.md
+                    - Engine Host Services : guides/admin/servers/by-section/engine-host-services-section.md
+                    - Lineage Warehouse Services : guides/admin/servers/by-section/lineage-warehouse-services-section.md
+                    - Data Engine Proxy Services: guides/admin/servers/by-section/data-engine-proxy-services-section.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations:
           - Operate OMAG Server Platform: guides/operations/overview.md
@@ -532,7 +546,7 @@ nav:
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
               - Data Engine Proxy Services: services/data-engine-proxy-services.md
-              - Open Lineage Services (OLS): services/open-lineage-services.md
+              - Lineage Warehouse Services: services/lineage-warehouse-services.md
           - Registered Services:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md
@@ -744,6 +758,7 @@ nav:
       - Karma Point Plateau: concepts/karma-point-plateau.md
       - Like: concepts/like.md
       - Lineage: concepts/lineage.md
+      - Lineage Warehouse: concepts/lineage-warehouse.md
       - Memento Classification: concepts/memento.md
       - Metadata Access Point: concepts/metadata-access-point.md
       - Metadata Access Server: concepts/metadata-access-server.md
@@ -760,7 +775,6 @@ nav:
       - OMAG Subsystem: concepts/omag-subsystem.md
       - Open Discovery Engine: concepts/open-discovery-engine.md
       - Open Discovery Service: concepts/open-discovery-service.md
-      - Open Lineage Server: concepts/open-lineage-server.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
       - Open Metadata Archive Store Connector: concepts/open-metadata-archive-store-connector.md

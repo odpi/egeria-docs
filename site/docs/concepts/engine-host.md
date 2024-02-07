@@ -29,6 +29,6 @@ The engine host services have a REST API to query the status of the governance e
 !!! education "Further information"
 
     - The capabilities of each of the engine services are described in the [engine services](/services/omes).
-    - Configuring an engine host is described in the [Administration Guide](/guides/admin/servers/configuring-an-engine-host).
+    - Configuring an engine host is described in the [Administration Guide](/guides/admin/servers/by-server-type/configuring-an-engine-host).
 
 --8<-- "snippets/abbr.md"

@@ -9,5 +9,5 @@
 *Dojo content will go here*
 
 !!! education "Further information"
-    - [Configuring the Engine Host](/guides/admin/servers/configuring-an-engine-host)
+    - [Configuring the Engine Host](/guides/admin/servers/by-server-type/configuring-an-engine-host)
 

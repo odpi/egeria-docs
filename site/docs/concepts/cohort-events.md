@@ -39,7 +39,7 @@ This is shown in figure 1.
     paid to upgrading the back-level server so it can use the three topics.
 
 Details of configuring the different topic options can be found in the
-[administration guide](/guides/admin/servers/configuring-a-metadata-access-store/#add-access-to-a-cohort).
+[administration guide](/guides/admin/servers/by-section/repository-services-section/#registering-the-server-with-a-cohort).
 
 ## Enterprise event topic
 

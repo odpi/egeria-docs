@@ -13,5 +13,3 @@ Connection objects are associated with assets in the metadata catalog using the 
 
 ![Digital Resource Connector](/connectors/resource/digital-resource-connector.svg)
 
-
---8<-- "snippets/abbr.md"

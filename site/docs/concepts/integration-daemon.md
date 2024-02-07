@@ -23,6 +23,6 @@ The integration connectors that run inside the integration daemon can be configu
 !!! education "Further information"
 
     - The capabilities of each of the integration services are described in the [integration services](/services/omis).
-    - Configuring an integration daemon is described in the [Administration Guide](/guides/admin/servers/configuring-an-integration-daemon).
+    - Configuring an integration daemon is described in the [Administration Guide](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).
 
 --8<-- "snippets/abbr.md"

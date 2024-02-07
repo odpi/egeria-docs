@@ -251,7 +251,7 @@ Whichever method is used, there are four properties that will affect the behavio
     * *BOTH_DIRECTIONS* meaning the metadata flows between the open metadata ecosystem and Apache Atlas in both directions.
 
 ??? education "Configuring the Integration Daemon"
-    See [Configuring the integration connectors](/guides/admin/servers/configuring-an-integration-daemon/#configuring-the-integration-connectors) to find out how to add you connection object to the integration daemon.  For example, issuing the following command adds the Apache Atlas connection information to the Catalog Integrator OMIS in an Integration Daemon identified by `{integrationDaemonName}}`.  
+    See [Configuring the integration connectors](/guides/admin/servers/by-section/integration-daemon-services-section) to find out how to add you connection object to the integration daemon.  For example, issuing the following command adds the Apache Atlas connection information to the Catalog Integrator OMIS in an Integration Daemon identified by `{integrationDaemonName}}`.  
 
     ```
     POST {{baseURL}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{integrationDaemonName}}/integration-services/catalog-integrator

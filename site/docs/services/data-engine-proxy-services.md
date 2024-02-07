@@ -41,7 +41,7 @@ responsible for hosting the data engine proxy connector.
 
 # Further information
 
-- Configuring the Data Engine Proxy Server following the [admin guide](/guides/admin/servers/configuring-a-data-engine-proxy-server/).
+- Configuring the Data Engine Proxy Server following the [admin guide](/guides/admin/servers/by-server-type/configuring-a-data-engine-proxy-server/).
 
 - Configuring Data Engine Proxy with [IBM Data Stage connector](https://github.com/odpi/egeria-connector-ibm-information-server/tree/main/datastage-adapter).
 

@@ -36,7 +36,7 @@ If the endpoint information is available, it will also attach the connection inf
 
 This connector uses the [Database Integrator OMIS](/services/omis/database-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the Database Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the Database Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"

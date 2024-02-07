@@ -15,9 +15,9 @@ not integrate directly with open metadata.
 
 These are the different types:
 
-- [Engine hosts](engine-host.md) - host governance engines for active management of the open metadata ecosystem.
-- [Integration daemons](integration-daemon.md) - manage the exchange of metadata with third party technologies.
-- [Data engine proxy](data-engine-proxy.md) - captures information about processes and the data sources that they work with and catalogs them in open metadata.
-- [Open lineage server](open-lineage-server.md) - accumulates lineage information to provide a comprehensive historical reporting service for lineage.
+- [Engine hosts](/concepts/engine-host) - host governance engines for active management of the open metadata ecosystem.
+- [Integration daemons](/concepts/integration-daemon) - manage the exchange of metadata with third party technologies.
+- [Data engine proxy](/concepts/data-engine-proxy) - captures information about processes and the data sources that they work with and catalogs them in open metadata.
+- [Lineage warehouse](/concepts/lineage-warehouse) - accumulates lineage information to provide a comprehensive historical reporting service for lineage.
 
 --8<-- "snippets/abbr.md"

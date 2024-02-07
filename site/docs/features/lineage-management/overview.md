@@ -48,12 +48,12 @@ Figure 4 shows Egeria's architecture for lineage.  There are three parts to it:
 
 * *Stewardship* - the lineage information from each of the technologies is linked together.  Where the naming of data sources and processes is consistent, this assembling of the lineage graph is automatic.  However, experience shows that if it can be different, it will be different. Many technologies make their own choices in naming and so governance action services along with human stewardship is required to match and link the graphs together.  The governance action services run in the [Engine Host](/concepts/engine-host) server.  They automatically add the relationships between the lineage contributions from each technology that may need to be verified by a human steward.  The human steward may also manually add relationships where there is no well known pattern that can be encoded in a governance action services.  Stewardship also involves analysis of the lineage to ensure the digital landscape is operating as it should.
 
-* *Preservation and Use* - Once the lineage graphs are assembled, the lineage can be viewed and analysed from a business perspective.  Could, for example, the operation of the digital landscape be optimized?  Lineage is accessible through standard open metadata queries. However, since the lineage data is large, lineage is automatically captured and stored in the [Open Lineage Server](/concepts/open-lineage-server).  This optimizes the lineage graphs for quick retrieval and analysis.  Its presence allows lineage data to be regularly archived from the operational open metadata ecosystem.  This is particularly important in regulated industries where lineage for critical reports may need to be kept for many years.
+* *Preservation and Use* - Once the lineage graphs are assembled, the lineage can be viewed and analysed from a business perspective.  Could, for example, the operation of the digital landscape be optimized?  Lineage is accessible through standard open metadata queries. However, since the lineage data is large, lineage is automatically captured and stored in the [Lineage Warehouse](/concepts/lineage-warehouse).  This optimizes the lineage graphs for quick retrieval and analysis.  Its presence allows lineage data to be regularly archived from the operational open metadata ecosystem.  This is particularly important in regulated industries where lineage for critical reports may need to be kept for many years.
 
 The three parts of the lineage architecture are summarized in figure 4.
 
 ![Figure 4](/features/lineage-management/lineage-architecture.svg)
-> **Figure 4:** The lineage architecture showing the three phases of (1) lineage capture typically through Egeria's automated cataloguing capabilities, (2) automated and human stewardship coordinated by the engine host server to stitch the lineage contributions together into full data flows, and finally (3) lineage preservation and use in the open lineage server.
+> **Figure 4:** The lineage architecture showing the three phases of (1) lineage capture typically through Egeria's automated cataloguing capabilities, (2) automated and human stewardship coordinated by the engine host server to stitch the lineage contributions together into full data flows, and finally (3) lineage preservation and use in the Lineage Warehouse.
 
 ## Lineage capture
 
@@ -347,26 +347,26 @@ Governing expectations is where the lineage information is used to validate that
 
 ## Lineage preservation and use
 
-Design lineage can be consolidated and exported for preservation by the [Asset Lineage OMAS](/services/omas/asset-lineage/overview) and then stored in the [open lineage server](/concepts/open-lineage-server).
+Design lineage can be consolidated and exported for preservation by the [Asset Lineage OMAS](/services/omas/asset-lineage/overview) and then stored in the [Lineage Warehouse](/concepts/lineage-warehouse).
 
 Figure 35 shows metadata capture using:
 
 - The [data engine proxy server](/services/data-engine-proxy-services/) to poll metadata in automated way.
 - A caller using [Data Engine OMAS's](/services/omas/data-engine/overview) API.
 
-Bot mechanisms push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the open lineage server.
+Bot mechanisms push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the Lineage Warehouse.
 
 ![Figure 35](/features/lineage-management/open-lineage-server-data-engine-lineage-capture.svg)
 > **Figure 35:** Capturing lineage using Data Engine Proxy, Data Engine OMAS and Asset Lineage OMAS
 
-Once the lineage graphs are assembled in the open lineage server, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
+Once the lineage graphs are assembled in the Lineage Warehouse, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
 
 ### Building a lineage warehouse
 
-The [open lineage server](/concepts/open-lineage-server) is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
+The [Lineage Warehouse](/concepts/lineage-warehouse) is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
 
 ![Figure 36](/features/lineage-management/open-lineage-server-lineage-warehouse.svg)
-> **Figure 36:** Open Lineage Server preservation and use details
+> **Figure 36:** Lineage Warehouse preservation and use details
 
 1. Metadata instance events from the cohort are distributed to Metadata Access Server running Asset Lineage OMAS. 
 

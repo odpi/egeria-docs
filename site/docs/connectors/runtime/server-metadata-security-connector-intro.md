@@ -19,5 +19,5 @@ This connector is called each time a request is made to the server.  It is calle
 
     * [Metadata security service](/features/metadata-security/overview) provides the interface for the server metadata security connector and manages the calls to it.
     * [Writing a server metadata security connector](/guides/developer/runtime-connectors/server-metadata-security-connector)
-    * [Configuring the server metadata security connector](/guides/admin/servers/configuring-the-server-security-connector) in a server.
+    * [Configuring the server metadata security connector](/guides/admin/servers/by-section/server-security-connection-section) in a server.
 

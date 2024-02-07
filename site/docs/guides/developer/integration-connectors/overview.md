@@ -83,7 +83,7 @@ Your integration connector needs to be able to map between the elements in the t
     
 ## Controlling external source metadata provenance
 
-The [configuration for an integration connector](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) in the Integration Daemon includes a *metadataSourceQualifiedName*.  The default value is null which means store the metadata in any [metadata collection](/concepts/metadata-collection) that is owned by the locally connected cohorts.  Alternatively, it specifies the [qualifiedName](/concepts/referenceable) of a [software capability](/concept/software-capability) entity that represents the third party technology.   This is automatically catalogued by the integration daemon if it is not found in the open metadata ecosystem.  The guid and qualifiedName of this entity is used to identify the [external metadata collection](/concepts/metadata-collection) that any open metadata elements created by the integration connector will be stored in.  This prevents processes other than the integration connector from modifying the metadata elements.
+The [configuration for an integration connector](/guides/admin/servers/by-server-type/configuring-an-integration-daemon) in the Integration Daemon includes a *metadataSourceQualifiedName*.  The default value is null which means store the metadata in any [metadata collection](/concepts/metadata-collection) that is owned by the locally connected cohorts.  Alternatively, it specifies the [qualifiedName](/concepts/referenceable) of a [software capability](/concept/software-capability) entity that represents the third party technology.   This is automatically catalogued by the integration daemon if it is not found in the open metadata ecosystem.  The guid and qualifiedName of this entity is used to identify the [external metadata collection](/concepts/metadata-collection) that any open metadata elements created by the integration connector will be stored in.  This prevents processes other than the integration connector from modifying the metadata elements.
 
 Some integration services allow the integration connector code to control which metadata collection to use if the *metadataSourceQualifiedName* is configured.  If it is set to true, the external metadata collection is used, otherwise it is one of the local cohort's collection.
 
@@ -398,7 +398,7 @@ All connectors should be documented in some form of connector catalog to ensure 
 
 ??? education "Further information"
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview) that defines the behavior of all connectors.
-    - [Configuring an integration daemon](/guides/admin/servers/configuring-an-integration-daemon) to understand how to set up an integration connector.
+    - [Configuring an integration daemon](/guides/admin/servers/by-server-type/configuring-an-integration-daemon) to understand how to set up an integration connector.
     - [Developer guide](/guides/developer) for more information on writing connectors.
 
 --8<-- "snippets/abbr.md"

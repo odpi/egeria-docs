@@ -61,7 +61,7 @@ This processing occurs each time the refresh method is called, and the connector
 This connector uses the [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview)
 running in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the Infrastructure Integrator OMIS](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the Infrastructure Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemons).
 
 !!! example "Connection configuration"
     ```json linenums="1"

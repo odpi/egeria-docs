@@ -242,63 +242,63 @@ to see how the effect of your requests are changing the server's configuration.
   This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuring defaults for the Cohort Members/Set local server URL root**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-point/#configuring-local-server-url){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/basic-server-properties-section){ target=docs }.
 
 * Set **localServerType** to `Egeria Dojo Metadata Server` (update the value in the request)
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server type name**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/basic-server-properties-section){ target=docs }.
 
 * Set **organizationName** to your organization name (update the variable `organization_name`).
  
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set Organization name**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs}.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/basic-server-properties-section){ target=docs}.
  
 * Set **localServerUserId** to `myMetadataServerUserId`.
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server user Id**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/basic-server-properties-section){ target=docs }.
 
 * Set **localServerPassword** to `myMetadataServerPassword`
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set local server user password**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/basic-server-properties-section){ target=docs }.
 
 * Set **maxPageSize** - the maximum page size that can be set on requests to the server. The default value is 1000.
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers//Set max page size**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-omag-server-basic-properties){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/basic-server-properties-section){ target=docs }.
 
 * Add a graph-based local repository.  This will store metadata in [JanusGraph :material-dock-window:](https://janusgraph.org){ target=jg }.
 
   This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Configuration for Metadata Servers/Enable the graph repository**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-local-repository){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/repository-services-section/#configuring-the-local-repository-store){ target=docs }.
 
 * Configure the **Asset Owner** Open Metadata Access Service (OMAS). URL name for this service is `asset-owner`.
 
   This call is located in folder
   **Configuring OMAG Servers/Configuration for Cohort Members/Configuration for Metadata Access Points/Enable a specific access service**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-access-services){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/access-services-section){ target=docs }.
 
 * Set up the Coco Pharmaceutical **Server** Security connector to provide authorization checks for inbound REST API calls.
 
   This call is located in folder
   **Configuring OMAG Servers/Basic configuration for all types of OMAG Servers/Set Server Security Connection**.
   
-  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/#configuring-the-server-security-connector){ target=docs }.
+  The specific documentation for this call is in the Admin Guide [here :material-dock-window:](/guides/admin/servers/by-section/server-security-connection-section){ target=docs }.
 
 This completes the example configuration. 
 
@@ -363,8 +363,8 @@ First read about [Open Metadata Repository Cohorts :material-dock-window:](/serv
 
 Then
 
-* [Set up the event bus defaults :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-point/?h=event+bus#set-up-the-default-event-bus){ target=docs }
-* Connect then together by [adding cohort configuration :material-dock-window:](/guides/admin/servers/configuring-a-metadata-access-store/?h=adding+a+access+cohort#remove-the-local-repository){ target=docs } to each server.
+* [Set up the event bus defaults :material-dock-window:](/guides/admin/servers/by-section/event-bus-config-section){ target=docs }
+* Connect then together by [adding cohort configuration :material-dock-window:](/guides/admin/servers/by-section/repository-services-section/#configuring-the-local-repository-store){ target=docs } to each server.
 
 Start both servers and view their logs via Kubernetes - you should see that they are communicating.
 

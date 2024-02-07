@@ -31,4 +31,4 @@ The OMVS APIs are deployed together in a [View Server](/concepts/view-server). U
 
 ## Configuring an OMVS
 
-The [administration services](/services/admin-services/overview) provide the ability to [configure, start and stop a View Server](/guides/admin/servers/configuring-a-view-server).
+The [administration services](/services/admin-services/overview) provide the ability to [configure a View Server](/guides/admin/servers/by-server-type/configuring-a-view-server).

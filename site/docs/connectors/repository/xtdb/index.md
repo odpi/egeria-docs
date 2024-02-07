@@ -65,7 +65,7 @@ XTDB itself handles write transactions and persistence guarantees via its APIs, 
 
 ## Configuration
 
-The following options are used to configure this connector, as part of the [*configure the local repository* step when configuring a metadata server](/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-local-repository).
+The following options are used to configure this connector, as part of the [*configure the local repository* step when configuring a metadata server](/guides/admin/servers/by-section/repository-services-section/#configuring-the-local-repository-store).
 
 ### Pluggable persistence
 

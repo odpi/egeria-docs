@@ -109,7 +109,7 @@ The lineage integration connectors run in the [Lineage Integrator OMIS](/service
 
 ??? education "Further information relating to integration connectors"
     
-    - [Configuring an integration connector](/guides/admin/servers/configuring-an-integration-daemon/#configure-the-integration-services) to understand how to set up an integration connector.
+    - [Configuring an integration connector](/guides/admin/servers/by-section/integration-daemon-services-section/) to understand how to set up an integration connector.
     - [Writing an integration connector](/guides/developer/integration-connectors/overview) for more information on writing new integration connectors.
 
 
@@ -138,8 +138,8 @@ The table below lists the repository connectors that act as an adapter for third
 
 ??? education "Further information relating to Repository and Event Mapper connectors"
     
-    - [Configuring a native repository connector](/guides/admin/servers/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/concepts/metadata-access-store).
-    - [Configuring an adapter repository connector](/guides/admin/servers/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/concepts/repository-proxy).
+    - [Configuring a native repository connector](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/concepts/metadata-access-store).
+    - [Configuring an adapter repository connector](/guides/admin/servers/by-server-type/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/concepts/repository-proxy).
     - [Writing repository and event mapper connectors](/guides/developer/repository-connectors/overview) for more information on writing new repository and event mapper connectors.
 
 ### Open Discovery Services
@@ -156,7 +156,7 @@ The table below lists the repository connectors that act as an adapter for third
 
 ??? education "Further information relating to Open Discovery Services"
     
-    - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the open discovery services run.
+    - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the open discovery services run.
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [open discovery engine](/concepts/open-discovery-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing an open discovery service](/guides/developer/open-discovery-services/overview) for information on writing new open discovery services.
 
@@ -173,7 +173,7 @@ The table below lists the repository connectors that act as an adapter for third
 
 ??? education "Further information relating to Governance Action Services"
     
-    - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the governance action services run.
+    - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the governance action services run.
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing a governance action service](/guides/developer/governance-action-services/overview) for information on writing new governance action services.
 
@@ -185,7 +185,7 @@ There are currently no event action services supplied by Egeria.
 
 ??? education "Further information relating to Event Action Services"
 
-    - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the event action services run.
+    - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the event action services run.
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [event action engine](/concepts/event-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing an event action service](/guides/developer/event-action-services/overview) to understand how to write an event-action service.
 
@@ -194,9 +194,9 @@ There are currently no event action services supplied by Egeria.
 
 ---8<-- "docs/connectors/governance-daemon/governance-daemon-intro.md"
 
-| Connector | Description |
-|---|---|
-| [Open Lineage Janus Connector](/connectors/governance-daemon/open-lineage-janus-connector) | The Open Lineage connectors provide plugins to the [Open Lineage Server](/services/open-lineage-services) that allow the Open Lineage Services to connect with databases. |
+| Connector                                                                                            | Description                                                                                                                                                                   |
+|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Lineage Warehouse Janus Connector](/connectors/governance-daemon/lineage-warehouse-janus-connector) | The Lineage Warehouse connectors provide plugins to the [Lineage Warehouse](/concepts/lineage-warehouse) that allow the Lineage Warehouse Services to connect with databases. |
 
 
 ### Repository Governance Services
@@ -207,7 +207,7 @@ There are currently no repository governance services supplied by Egeria.
 
 ??? education "Further information relating to Repository Governance Services"
 
-    - [Configuring an engine host](/guides/admin/servers/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the repository governance services run.
+    - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the repository governance services run.
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [repository governance engine](/concepts/repository-governance-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing a repository governance service](/guides/developer/archive-services/overview) to understand how to write a repository governance service.
 
@@ -287,8 +287,8 @@ Egeria provides a single implementation of a cohort registry store connector:
 
 ??? education "Further information relating to Cohort Registry Store Connectors"
 
-    - [Configuring a Cohort Registry Store Connector](/guides/admin/servers/configuring-the-cohort-registry-store-connector) in the [Cohort Member](/concepts/cohort-member) server
-    - [Cohort Operations](/features/metadata-security/overview) to understand the way the cohort is formed.
+    - [Configuring a Cohort Registry Store Connector](/guides/admin/servers/by-section/repository-services-section/#registering-the-server-with-a-cohort) in the [Cohort Member](/concepts/cohort-member) server.
+    - [Cohort Operations](/features/cohort-operations/overview) to understand the way the cohort is formed.
     - [Writing a Cohort Registry Store Connector](/guides/developer/runtime-connectors/cohort-registry-store-connector).
 
   
@@ -309,7 +309,7 @@ Egeria provides two implementations of the open metadata archive store connector
     - [Metadata Archiving](/features/metadata-archiving/overview) to understand the different mechanisms that use open metadata archives.
     - [Open Metadata Archives](/concepts/open-metadata-archive) to understand structure of an open metadata archive.
     - [Writing a Open Metadata Archive Store Connector](/guides/developer/runtime-connectors/open-metadata-archive-store-connector).
-    - [Loading an Open Metadata Archive at server statup](/guides/admin/servers/configuring-a-metadata-access-store/#configure-metadata-to-load-on-startup)
+    - [Loading an Open Metadata Archive at server statup](/guides/admin/servers/by-section/repository-services-section/#configuring-the-open-metadata-archives-to-load-on-server-startup)
     - [Loading an Open Metadata Archive in a running server](/guides/operations/adding-archive-to-running-server)
 
 
@@ -364,7 +364,7 @@ Egeria's [Open Metadata Repository Services (OMRS)](/services/omrs) provides a d
   supports remote calls to the OMRS REST API.
   
 The connection for this connector is configured in the `LocalRepositoryRemoteConnection` property of the
-cohort member's [Local Repository Configuration](/user/guides/admin/servers/configuring-a-metadata-access-point/#configure-the-local-repository).
+cohort member's [Local Repository Configuration](/user/guides/admin/servers/by-section/#configuring-the-local-repository-store).
 
 ## Digital resource connectors
 

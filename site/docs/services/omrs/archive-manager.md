@@ -15,12 +15,12 @@ for types and metadata instances.
  
 During server start up, it first calls the [repository content manager](repository-content-manager.md) to load the types into the local repository (if any) and to maintain the cache of know and active types in the server.
 
-It then calls the [local repository instance event processor](component-descriptions/local-repository-instance-event-processor.md) to load the instances.
+It then calls the [local repository instance event processor](/services/omrs/component-descriptions/local-repository-instance-event-processor) to load the instances.
 
 ## Related information
 
 A description of the utilities for building archives can be found in the [open-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives){ target=gh } modules.
 
-Details for configuring a metadata server to load archives can be found in the [administration guide](/guides/admin/servers/configuring-a-metadata-access-store/#load-metadata).
+Details for configuring a metadata server to load archives can be found in the [administration guide](/guides/admin/servers/by-section/repository-services-section/#configuring-the-open-metadata-archives-to-load-on-server-startup).
 
 --8<-- "snippets/abbr.md"

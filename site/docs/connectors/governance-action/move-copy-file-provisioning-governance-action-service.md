@@ -75,7 +75,7 @@ Irrespective of the pattern used, the resulting changes to the metadata can lead
 in the open metadata ecosystem.  For example:
 
 * The [Asset Lineage OMAS](/services/omas/asset-lineage/overview)
-may publish the lineage to the [Open Lineage Server](/concepts/open-lineage-server).
+may publish the lineage to the [Lineage Warehouse](/concepts/lineage-warehouse).
 
 * Additional [Governance Action Services](/concepts/governance-action-service)
 may be triggered.

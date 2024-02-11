@@ -6,10 +6,10 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Lineage Warehouse Janus Connector
+# Lineage Warehouse Janus Connectors
 
 
-The Lineage Warehouse Janus connector allows the Lineage Warehouse Services to connect with a JanusGraph database.
+The Lineage Warehouse Connector allows the Lineage Warehouse Services to connect with a repository that stores lineage information.
 
 The Connector can be configured to connect to either an embedded JanusGraph database or a standalone JanusGraph server.
 For more details on possible configurations please use the documentation [offered by JanusGraph](https://docs.janusgraph.org/basics/deployment/).

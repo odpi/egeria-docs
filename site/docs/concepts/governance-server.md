@@ -8,16 +8,20 @@ hide:
 
 # Governance server
 
-Governance servers host specific integration or governance connectors for technology that does
-not integrate directly with open metadata.
+A *Governance Server* is a specialized [OMAG Server](/concepts/omag-server). It is designed to host specific governance daemon connectors that manage metadata in different technologies or perform specific active governance actions.
 
 ![Governance server](governance-server.svg)
 
-These are the different types:
+The governance servers each have a specific subsystem that contains its services. They are also paired with different [Open Metadata Access Services (OMASs)](/services/omas) that supports appropriate open metadata services needed by the governance server.
 
-- [Engine hosts](/concepts/engine-host) - host governance engines for active management of the open metadata ecosystem.
-- [Integration daemons](/concepts/integration-daemon) - manage the exchange of metadata with third party technologies.
-- [Data engine proxy](/concepts/data-engine-proxy) - captures information about processes and the data sources that they work with and catalogs them in open metadata.
-- [Lineage warehouse](/concepts/lineage-warehouse) - accumulates lineage information to provide a comprehensive historical reporting service for lineage.
+The table below shows the different types of governance servers and the OMASs they are paired with.
+
+| Governance Server                                   | Description                                                              | Supported by subsystem                                               | Paired with OMAS                                                                                                                                                                                                                                             | 
+|:----------------------------------------------------|:-------------------------------------------------------------------------|:---------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| [Integration Daemon](/concepts/integraition-daemon) | Manages the capture of metadata through configured integration services. | [Integration Daemon Services](/services/integration-daemon-services) | [Governance Server OMAS](/services/omas/governance-server/overview) provides support for retrieving governance engine definitions.  The [integration services](../../integration-services) define the OMASs that support each type of integration connector. |
+| [Engine Host](/concepts/engine-host)                | Manages governance engines.                                              | [Engine Host Services](/services/engine-host-services)               | [Governance Server OMAS](/services/omas/governance-server/overview) provides support for retrieving governance engine definitions. The [engine services](../../engine-services) define the OMASs that support each type of governance engine.                |
+| [Data Engine Proxy](/concepts/data-engine-proxy)    | Manages capture of metadata from a data engine.                          | [Data Engine Proxy Services](/services/data-engine-proxy-services)   | [Data Engine OMAS](/services/omas/data-engine/overview)                                                                                                                                                                                                      | 
+| [Lineage Warehouse](/concepts/lineage-warehouse)    | Provides a historic reporting warehouse for lineage.                     | [Lineage Warehouse Services](/services/lineage-warehouse-services)   | [Asset Lineage OMAS](/services/omas/asset-lineage/overview)                                                                                                                                                                                                  | 
+
 
 --8<-- "snippets/abbr.md"

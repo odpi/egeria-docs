@@ -74,9 +74,9 @@ The *topic* integration connectors run in the [Topic Integrator Open Metadata In
 
 The *API* integration connectors run in the [API Integrator Open Metadata Integration Service (OMIS)](/services/omis/api-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
 
-| API Integration Connectors | Description |
-|---|---|
-| [Open API Monitor integration connector](/connectors/integration/open-api-monitor-integration-connector) | Automatically maintains the open metadata instances for the APIs extracted from the Open API Specification extracted from an application.|
+| API Integration Connectors                                                                               | Description                                                                                                                               |
+|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| [Open API Monitor integration connector](/connectors/integration/open-api-monitor-integration-connector) | Automatically maintains the open metadata instances for the APIs extracted from the Open API Specification extracted from an application. |
 
 #### Synchronizing with third party catalogs
 
@@ -216,17 +216,17 @@ There are currently no repository governance services supplied by Egeria.
 
 *Runtime* connectors enable Egeria's [OMAG Server Platform](/egeria docs/concepts/omag-server-platform) and its hosted [OMAG Servers](/concepts/omag-server) to operate in many environments by providing plug-in points for the runtime services it needs to operate. Most of the runtime connectors relate to persistent storage, or connections to distributed services.
 
-| Type | Description |
-|---|---|
-| [Platform Metadata Security Connectors](#platform-metadata-security-connectors) | manage authorization requests for the OMAG Server Platform's services. |
-| [Server Metadata Security Connectors](#server-metadata-security-connectors) | manage authorization requests for the OMAG Server's services. |
-| [Configuration Document Store Connectors](#configuration-document-store-connectors) | manage the persistence and retrieval of [configuration documents](/concepts/configuration-document). |
-| [Cohort Registry Store Connectors](#cohort-registry-store-connectors) | store the [open metadata repository cohort](/concepts/cohort-member) membership details in the [cohort registry store](/concepts/cohort-registry-store). |
-| [Open Metadata Archive Store Connectors](#open-metadata-archive-store-connectors) | read and write [open metadata archives](/concepts/open-metadata-archive). |
-| [Audit Log Destination Connectors](#audit-log-destination-connectors) | support different destinations for audit log records. |
-| [REST Client Connectors](#rest-client-connectors) | issue REST API calls to Egeria's deployed platforms and third party technologies. |
-| [Cohort Member Client Connector](#cohort-member-client-connectors) | supports repository service called to remote cohort members. |
-| [Open Metadata Topic Connectors](#open-metadata-topic-connectors) | send and receive events. |
+| Type                                                                                | Description                                                                                                                                              |
+|-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Platform Metadata Security Connectors](#platform-metadata-security-connectors)     | manage authorization requests for the OMAG Server Platform's services.                                                                                   |
+| [Server Metadata Security Connectors](#server-metadata-security-connectors)         | manage authorization requests for the OMAG Server's services.                                                                                            |
+| [Configuration Document Store Connectors](#configuration-document-store-connectors) | manage the persistence and retrieval of [configuration documents](/concepts/configuration-document).                                                     |
+| [Cohort Registry Store Connectors](#cohort-registry-store-connectors)               | store the [open metadata repository cohort](/concepts/cohort-member) membership details in the [cohort registry store](/concepts/cohort-registry-store). |
+| [Open Metadata Archive Store Connectors](#open-metadata-archive-store-connectors)   | read and write [open metadata archives](/concepts/open-metadata-archive).                                                                                |
+| [Audit Log Destination Connectors](#audit-log-destination-connectors)               | support different destinations for audit log records.                                                                                                    |
+| [REST Client Connectors](#rest-client-connectors)                                   | issue REST API calls to Egeria's deployed platforms and third party technologies.                                                                        |
+| [Cohort Member Client Connector](#cohort-member-client-connectors)                  | supports repository service called to remote cohort members.                                                                                             |
+| [Open Metadata Topic Connectors](#open-metadata-topic-connectors)                   | send and receive events.                                                                                                                                 |
 
 
 ### Platform Metadata Security Connectors
@@ -349,8 +349,8 @@ Egeria provides a single implementation for Spring.
   
 This is embedded in Egeria's Java clients. See
 
-    - Egeria's [Platform API clients](/guides/developer/#working-with-the-platform-apis).
-    - Egeria's [OMAS clients](/guides/developer/#working-with-the-open-metadata-and-governance-apis).
+- Egeria's [Platform API clients](/guides/developer/#working-with-the-platform-apis).
+- Egeria's [OMAS clients](/guides/developer/#working-with-the-open-metadata-and-governance-apis).
 
 
 

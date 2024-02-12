@@ -21,6 +21,14 @@ The *Template* classification indicates that a [*Referenceable*](/types/0/0010-B
 
 ![Example of the use of a Template classification](template-use-case-2.svg)
 
+The properties for the *Template* classification are:
+
+* *name* - name of the template, designed to help the selection of the correct template.
+* *description* - further information on the purpose of the template.
+* *placeholderProperties* - provides the names of the [placeholder properties](/concepts/placeholder) mapped to a description/guidance of the value to supply when the template is used.
+* *replacementProperties* - provides the names of the attributes in the top-level entity created from the template that should be replaced.   Again each attribute name is mapped to a description of the value to supply and its use.  replacement properties can be used for attributes of type string, boolean, int and long.
+* *additionalProperties* - allows additional information about the template to be supplied
+
 Templates can include relationships.  If the relationship links to an entity that has the same anchor as the starting entity, the entity and the relationship is replicated.  If the linked entity is part of a different anchor, only the relationship is created.  In the example above, the glossary term has a different anchor to the asset.  Therefore any assets created with *tAsset* as a template will be linked to the same glossary term.
 
 ## TemplateSubstitute classification
@@ -43,12 +51,7 @@ The *sourceVersionNumber* identifies the version number of the template used whe
 
 ## CatalogTemplate relationship
 
-The *CatalogTemplate* relationship links an *OpenMetadataRoot* entity that describes a class of technology with a [template](/features/templated-cataloguing/overview) for creating a catalog entry for a resource of this class.  The attributes are used to help a user select the template, and then provide new property values to override the values in the template.
-
-* *templateName* - provides a name for the template.
-* *templateDescription* - describes what the template contains.
-* *replacementProperties* - lists properties whose values from the template should be overridden when creating a new element from the template. The map is from attribute name to the value to replace it with.  This can be used for numeric and boolean values as well as string values.
-* *placeholderProperties* - lists properties that contains strings to override placeholder strings, formatted with two sets of curly-braces, such as `{{placeholder}}`.  The map is from placeholder name to value to replace it with.
+The *CatalogTemplate* relationship links an *OpenMetadataRoot* entity that describes a class of technology with a [template](/features/templated-cataloguing/overview) for creating a catalog entry for a resource of this class.
 
 ??? deprecated "Deprecated types"
     - *LastAttachment* - use *LatestChange* instead

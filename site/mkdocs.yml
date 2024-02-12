@@ -791,6 +791,7 @@ nav:
       - Personal Notes: concepts/personal-notes.md
       - Personal Profile: concepts/personal-profile.md
       - Personal Roles: concepts/personal-roles.md
+      - Placeholders: concepts/placeholder.md
       - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
       - Platform URL Root: concepts/platform-url-root.md
       - Presentation Server: concepts/presentation-server.md

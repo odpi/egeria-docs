@@ -8,7 +8,7 @@ hide:
 
 # Open Metadata Engine Services (OMES)
 
-The engine services run in the [engine host](/concepts/engine-host).  They provide the special services that are available to the [governance services](/concepts/governance-services) through their context.  There is an engine service for each type of governance service.  Each engine service also maps the calls from the governance service to calls to the services of a [metadata access server](/concepts/metadata-access-server).  The table below summarizes the engine services, the type of governance service they support and the service on the metadata access server that they call.
+The engine services run in the [engine host](/concepts/engine-host).  They provide the special services that are available to the [governance services](/concepts/governance-service) through their context.  There is an engine service for each type of governance service.  Each engine service also maps the calls from the governance service to calls to the services of a [metadata access server](/concepts/metadata-access-server).  The table below summarizes the engine services, the type of governance service they support and the service on the metadata access server that they call.
 
 | Name of the Engine Service                                                  | Type of Governance Service supported                                     | Partner service in the metadata                                     |
 |-----------------------------------------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------|

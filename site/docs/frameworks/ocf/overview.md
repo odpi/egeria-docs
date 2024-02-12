@@ -62,7 +62,7 @@ It links to an optional:
 
 Connector types and endpoints can be reused in multiple connections.
 
-![Connection structure](connection.png)
+![Connection structure](connection.svg)
 
 Connections are typically managed in a metadata repository, but they can also be manually populated.
 
@@ -184,7 +184,7 @@ The *connector type* is a set of properties that defines the supported capabilit
 
 The connector type is linked to the [connection](#connection) objects that request this type of connector.
 
-![Connection Structure](connection.png)
+![Connection Structure](connection.svg)
 
 !!! education "Further information"
     - The open metadata type for a connector type is defined in [model 0201](/types/2/0201-Connectors-and-Connections).

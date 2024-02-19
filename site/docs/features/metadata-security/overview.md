@@ -4,37 +4,42 @@
 
 # Open Metadata Security
 
-Open Metadata Security provides fine-grained authorization services for open metadata services, types and instances. Since each organization will have different security requirements, the support is implemented through connectors. Egeria defines the interfaces and when it will call the connector.  You define the behavior the connector implements, and Egeria acts on the returned decision.
+Open Metadata Security is optional.  When it is activated, it provides fine-grained authorization services for open metadata services, types and instances. Since each organization will have different security requirements, the security support is implemented through connectors. Egeria defines the interfaces and when it will call the connector.  You define the behavior the connector implements, and Egeria acts on the returned decision.
 
 The [`metadata-security`](/services/metadata-security-services) module defines the base classes and interfaces for the open metadata security connectors as well as the server implementation to host and call them.
 
 There are two types of connector:
 
-* **[Platform metadata security connector](/concepts/platform-metadata-security-connector)** - secures access to the platform services that are not specific to an OMAG Server.  This includes the admin services to create new servers, the ability to start and stop new servers as well as the ability to query whether a server is running, and if it is, what services are active.
+* **[Platform metadata security connector](/concepts/platform-metadata-security-connector)** - secures access to the administration and platform services.  This includes the services to create new servers, the ability to start and stop servers as well as the ability to query whether a server is running, and if it is, what services are active.
 
-* **[Server metadata security connector](/concepts/server-metadata-security-connector)** - secures access to the specific services of an OMAG server.  This includes the server itself, specific services within the server, specific Assets and Connections managed by the server and the types and instances stored in the local repository.
+* **[Server metadata security connector](/concepts/server-metadata-security-connector)** - secures access to the specific services of an OMAG server.  This includes access to the server's configuration document, starting and stopping the specific server, calling specific services, then within the server, access to specific Assets, Glossaries and Connections managed by the server, and finally the types and instances stored in the local repository.
 
 The 2 types of connectors are shown in Figure 1:
 
-![Figure 1](/features/metadata-security/security-connectors.svg)
+![Figure 1](security-connectors.svg)
 > **Figure 1:** positioning of the security connectors
 
-Within an OMAG Server Platform there is one instance of the open metadata platform security connector.  This connector is configured once the platform is running using the admin service call:
-```
-POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/platform/security/connection
-```
-where the `{{adminUserId}}` is the administrator's userId. The connection for the connector and the platform URL root are passed in the request body.  There are `GET` and `DELETE` services with the same URL to retrieve and remove this connector respectively.
+Within an OMAG Server Platform there is one instance of the platform metadata security connector.  This connector is configured either through the `application.properties` file before the platform is started, or using a REST API call once the platform is running.
 
-The open metadata server security connector is configured for each OMAG server to allow for each server to have a different implementation.  The admin services command to configure a security connector for a server is:
-```
-POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/security/connection
-```
-where the `{{adminUserId}}` is the administrator's userId and `{{serverName}}` is the name of the server where the connector is to run. The connection for the server security connector is passed in the request body.  Again, there are `GET` and `DELETE` services with the same URL to retrieve and remove this connector respectively.
+Once it is in place, any call to the [administration services](/services/admin-services/overview) or [platform services](/services/platform-services/overview) results in a check to the platform metadata security connector.
 
-The security implementation in a server potentially invokes the server security connector multiple times as the request (shown as dotted white arrow) is handled by the server code. Figure 2 shows the different layers of checks.  Each layer is optional and so the server security connector can be implemented to support the most appropriate granularity of security for the situation. Details of the implementation choices are given in the [security connector API](#metadata-security-apis).
+The open metadata server security connector is optionally configured for each OMAG server, to allow for each server to have a different implementation.  
 
-![Figure 2](/features/metadata-security/layers-of-security-checks.svg)
-> **Figure 2:** layers of security checks within the server
+The admin services command to configure a security connector for a server adds a connection for the server metadata security connector to the server's [configuration document](/concepts/configuration-document).  
+
+The platform and server metadata security connectors operate independently, depending on which service is called. However there is a hand-off whenever the server's configuration document is read, either as part of a configuration request, or a request to start the server.
+
+As the request is received, the platform connector checks that the user has access to the platform.  Assuming that is ok, the configuration document is read. If the configuration document contains the server metadata security connection, the connector is initiated using the connection.  The server connector is then called to check that the calling user has permission to access the server.
+
+This means that whenever the configuration document is called, the calling user has to have permission to access both the platform and the server.  If the request is an administration service request, the user has to have administration access to the platform and server.  If the request is to start the server, the user has to have operator access.
+
+![Figure 2](accessing-config-docs.svg)
+> **Figure 2:** Calls to access a server's configuration document.
+
+During a metadata and governance (OMAG) service call to a server, the security implementation in the server potentially invokes the server security connector multiple times as the request (shown as dotted white arrow) is handled by the server code. Figure 3 shows the different layers of checks.  Each layer is optional and so the server security connector can be implemented to support the most appropriate granularity of security for the situation. Details of the implementation choices are given in the [security connector API](#metadata-security-apis).
+
+![Figure 3](layers-of-security-checks.svg)
+> **Figure 3:** layers of security checks within the server
 
 The security connectors are optional.  If they are not defined then there are no additional authorization checks performed inside the OMAG Server Platform nor the OMAG Servers hosted on the platform. As such, it is important that the open metadata platform security connector is configured as soon as the platform is started, and the server security connector is configured before the server is started for the first time.
 
@@ -50,8 +55,8 @@ The connector that plugs into the platform implements the following interface.
    
      * **validateUserForPlatform** - Check that the calling user is authorized to issue a (any) request to the OMAG Server Platform.
      * **validateUserAsAdminForPlatform** - Check that the calling user is authorized to issue administration requests to the OMAG Server Platform.
-     * **validateUserAsOperatorForPlatform** - Check that the calling user is authorized to issue operator requests to the OMAG Server Platform.
-     * **validateUserAsInvestigatorForPlatform** - Check that the calling user is authorized to issue operator requests to the OMAG Server Platform.
+     * **validateUserAsOperatorForPlatform** - Check that the calling user is authorized to issue operator requests to the OMAG Server Platform such as starting and stopping servers.
+     * **validateUserAsInvestigatorForPlatform** - Check that the calling user is authorized to issue requests for information to the OMAG Server Platform.  For example, to validate a connector or request lists of registered services.
   
 ### Open metadata server security connector interface
 

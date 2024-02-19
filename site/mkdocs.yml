@@ -53,7 +53,7 @@ nav:
                     - Data Folders:
                        - Read files: connectors/resource/data-folder-resource-connector.md
                        - Monitor files: connectors/integration/data-folder-monitor-integration-connector.md
-                    - Open Metadata Archive Files: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
+                    - Open Metadata Archive Files:
                        - Read OMArchive Files: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
               - Relational Databases:
                     - JDBC DataSource: connectors/resource/jdbc-resource-connector.md

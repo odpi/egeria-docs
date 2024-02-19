@@ -25,6 +25,7 @@ The properties for the *Template* classification are:
 
 * *name* - name of the template, designed to help the selection of the correct template.
 * *description* - further information on the purpose of the template.
+* *versionIdentifier* - allows different versions of a template to be kept in the metadata repository. 
 * *placeholderProperties* - provides the names of the [placeholder properties](/concepts/placeholder) mapped to a description/guidance of the value to supply when the template is used.
 * *replacementProperties* - provides the names of the attributes in the top-level entity created from the template that should be replaced.   Again each attribute name is mapped to a description of the value to supply and its use.  replacement properties can be used for attributes of type string, boolean, int and long.
 * *additionalProperties* - allows additional information about the template to be supplied

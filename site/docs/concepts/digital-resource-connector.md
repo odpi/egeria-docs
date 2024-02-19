@@ -8,7 +8,6 @@
 ## 
 !!! education "Further information"
     
-    - [Digital resource connector catalog](/connectors/#digital-resource-connectors).
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview).
 
 ---8<-- "snippets/abbr.md"

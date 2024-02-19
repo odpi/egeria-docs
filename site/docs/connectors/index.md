@@ -9,138 +9,95 @@ A connector is a client to a third party technology. It supports a standard API 
 
 Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the [OMAG servers](/concepts/omag-server). The Connector Catalog list the connector implementations supplied by the Egeria community. There are three broad categories of connectors and the connector catalog is organized accordingly:
 
-* Connectors that support the [exchange and maintenance of metadata](#metadata-exchange-and-maintenance-connectors). This includes the integration connectors, repository connectors, discovery services and governance action services.
+* Connectors that support the [exchange and maintenance of metadata](#metadata-exchange-and-maintenance-connectors) with third party technology. This includes the resource connectors, survey action connectors, integration connectors and adapter repository connectors.  These connectors are organized by the type of third part technology type work with.
 
-* Connectors that support [Egeria’s runtime](#runtime-connectors). This includes the event bus connectors, cohort registry stores, configuration stores, audit log destination connectors, open metadata archive stores, REST client connectors and the cohort member remote repository connectors
+* Connectors that support the [governance of open metadata](#open-metadata-governance-connectors). This includes the event action services and governance action services.  These connectors are organized by function.
 
-* Connectors that provide access to [digital resources and their metadata](#digital-resource-connectors) that is stored in the open metadata ecosystem.
+* Connectors that support the integration of [Egeria’s runtimes](#runtime-connectors) into the IT infrastructure where it is running. This includes the native repository connectors, event bus connectors, cohort registry stores, configuration stores, audit log destination connectors, open metadata archive stores, REST client connectors and the cohort member remote repository connectors.  These connectors are organized by connector type.
 
 ## Metadata exchange and maintenance connectors
 
 The connectors that support the exchange and maintenance of metadata help to accelerate the rollout of your open metadata ecosystem since they can be used to automate the extraction and distribution of metadata to the third party technologies.
 
-| Type of Connector                                                                 | Description                                                                                                                                                                                                                                                                                                |
-|-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Secrets Store connectors](#secrets-store-connectors)                             | Manage the retrieval of secrets (passwords, certificates, ...) from secured locations at runtime.                                                                                                                                                                                                          |
-| [Integration connectors](#integration-connectors)                                 | Manage the metadata exchange to a third party technology through an [integration service](/services/omis).                                                                                                                                                                                                 |
-| [Repository and Event Mapper connectors](#repository-and-event-mapper-connectors) | Integrate metadata repositories into the open metadata ecosystem so that they can interact with one or more [open metadata repository cohorts](/services/omrs/cohort).                                                                                                                                     |
-| [Open Discovery Services](#open-discovery-services)                               | Analyze the content of [resources](/concepts/resource) in the digital landscape and create annotations that are attached to the resource's [asset](/concepts/asset) metadata element in the open metadata repositories in the form of an [discovery analysis report](/concepts/discovery-analysis-report). |
-| [Governance Action Services](#governance-action-services)                         | Perform monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities as required.                                                                                                                                                                    |
-| [Governance Daemon Connectors](#governance-daemon-connectors)                     | Contain specialist connectors for the governance servers that make active use of open metadata.                                                                                                                                                                                                            |
+* [Secrets Store connectors](#secrets-store-connectors)  manage the retrieval of secrets (passwords, certificates, ...) from secured locations at runtime.                                                                                                                                                                                                          |
+* [File connectors](#files) work with different types of files
+* [JDBC Database connectors](#jdbc-databases) make use of the JDBC standards to work with different types of relational databases.
+* [Apache Kafka](#apache-kafka) work with the topics and/or events passing through the Apache Kafka event broker.
+* [Apache Atlas](#apache-atlas) work with an Apache Atlas server.
+* [Strimzi](#strimzi) work with the cloud-based Apache Kafka deployment called Strimzi.
+* [Open API Specification](#open-api-specification) extract metadata about APIs through the Open API interfaces provided through the Swagger API.
+* [Open Lineage Events](#open-lineage-events) works with the open lineage event standard.
 
 ### Secrets Store Connectors
 
----8<-- "docs/connectors/secrets/secrets-store-connector-intro.md"
+* The [Environment Variables Secret Store connector](/connectors/secrets/environment-variable-secrets-store-connector) retrieves secret values from environment variables. 
+
+### Files
+
+Files provide storage for many types of data.  They are organizes into folders (also known as directories on some operating systems).  Some connectors work with any type of file.  Other connectors are able to understand the content of specific types of file formats and so these connectors are organized by file type.
+
+#### Any type of file 
+
+* The [Basic File Resource Connector](/connectors/resource/basic-file-resource-connector)  provides support to read and write to a file using the Java File object.
+
+#### File Folders (Directories)
+
+* The [Basic Folder Resource Connector](/connectors/resource/basic-folder-resource-connector) is for accessing the files within a folder (directory).
+* The [Data Files Monitor Integration Connector](/connectors/integration/data-files-monitor-integration-connector) maintains a `DataFile` asset for each file in the directory (or any subdirectory). When a new file is created, a new DataFile asset is created.  If a file is modified, the lastModified property of the corresponding DataFile asset is updated.  When a file is deleted, its corresponding DataFile asset is also deleted (or archived if it is still needed for lineage). 
+
+#### Data Folders
+
+* The [Data Folder Resource Connector](/connectors/resource/data-folder-resource-connector) is for accessing data that is stored as a number of files within a folder (directory).
+* The [Data folder Monitor Integration Connector](/connectors/integration/data-folder-monitor-integration-connector) maintains a `DataFolder` asset for the directory.  The files and directories underneath it are assumed to be elements/records in the DataFolder asset and so each time there is a change to the files and directories under the monitored directory, it results in an update to the lastModified property of the corresponding DataFolder asset.
+
+#### CSV Files
+
+* The [CSV File Resource Connector](/connectors/resource/csv-file-resource-connector)  is able to retrieve data from a Comma Separated Values (CSV) file where the contents are stored in logical columns with a special character delimiter between the columns.
+
+#### Open Metadata Archive Files
+
+* The [File-based Open Metadata Archive Store Connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors/open-metadata-archive-file-connector){ target=gh } stores an open metadata archive as a plain text JSON file.
 
 
-| Secrets Store Connectors                                                                  | Description                                         |
-|-------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| [Environment Variables](/connectors/secrets/environment-variable-secrets-store-connector) | Retrieves secret values from environment variables. |
+### Relational Databases
 
+* The [JDBC Resource Connector](/connectors/resource/jdbc-resource-connector) is for accessing a database via the JDBC DataSource interface.
+* The [JDBC Integration Connector](/connectors/integration/jdbc-integration-connector) automatically maintains the open metadata instances on a database server via JDBC. This includes the database schemas, tables, columns, primary keys and foreign keys.                                                                                      
 
-### Integration Connectors
+### Apache Kafka
 
----8<-- "docs/connectors/integration/integration-connector-intro.md"
+* The [Kafka Open Metadata Topic Connector](/connectors/resource-connectors/kafka-open-metadata-topic-connector) implements a [resource connector](/concepts/digital-resource-connector) for a topic that exchanges Java Objects as JSON payloads across an [Apache Kafka](https://kafka.apache.org/) event bus.   It is configured in the Egeria [OMAG Servers](/concepts/omag-server) through the [Event Bus Configuration](/concepts/event-bus).  This the connector that is used by default in the Egeria runtimes to exchange events (notifications between the [OMAG Servers](/concepts/omag-server).
+* The [Kafka Monitor Topic integration connector](/connectors/integration/kafka-monitor-integration-connector) automatically maintains the open metadata instances for the topics hosted on an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka }.
+* The [Kafka Audit Topic integration connector](/connectors/integration/kafka-topics-audit-integration-connector) validates that topics that are active in an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka } are also catalogued in open metadata.  Creates an audit log record for each topic that is not catalogued.
+* The [Sample Lineage Integration Connector](/connectors/integration/sample-lineage-event-receiver-integration-connector)  is a sample connector to listen for lineage events (not in a [open lineage format](#open-lineage-events)) and catalog the associated assets, processes, schema and lineage.                                                                                                                                                              |
 
-#### Cataloguing Files
+### Apache Atlas
 
-The *files* integration connectors run in the [Files Integrator Open Metadata Integration Service (OMIS)](/services/omis/files-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
+---8<-- "snippets/systems/apache-atlas-intro.md"
 
-| Files Integration Connectors | Description |
-|---|---|
-| [Data files monitor](/connectors/integration/data-files-monitor-integration-connector) | Maintains a `DataFile` asset for each file in the directory (or any subdirectory). When a new file is created, a new DataFile asset is created.  If a file is modified, the lastModified property of the corresponding DataFile asset is updated.  When a file is deleted, its corresponding DataFile asset is also deleted (or archived if it is still needed for lineage). |
-| [Data folder monitor](/connectors/integration/data-folder-monitor-integration-connector) | Maintains a `DataFolder` asset for the directory.  The files and directories underneath it are assumed to be elements/records in the DataFolder asset and so each time there is a change to the files and directories under the monitored directory, it results in an update to the lastModified property of the corresponding DataFolder asset. |
+The Apache Atlas connectors provide a suite of function that integrates an Apache Atlas server into the open metadata ecosystem.
 
-#### Cataloguing Databases and their Schemas
+* [Apache Atlas REST Connector](/connectors/apache-atlas/apache-atlas-rest-connector) is a [digital resource connector](/concepts/digital-resource-connector) that acts as a Java client to the Apache Atlas Server REST API.  It is used by the other Apache Atlas connectors.
+* [Apache Atlas Survey Action Service](/connectors/apache-atlas/apache-atlas-survey-action-service) reviews the types and instances stored in an Apache Atlas Server and creates a [survey report](/concepts/survey-report).   This connector helps to provide insight into the content of the Apache Atlas server to determine if it contains valuable metadata that should be integrated into the open metadata ecosystem.  This connector can also be configured to create a graph schema for the server that describes is supported types and how they link together.
+* [Apache Atlas Integration Connector](/connectors/apache-atlas/apache-atlas-catalog-integration-connector) automatically catalogues the content of an Apache Atlas Server into the open metadata ecosystem. It may also be configured to push selected open metadata into the Apache Atlas Server, such as glossary terms, tags and classifications.
 
-The *database* integration connectors run in the [Database Integrator Open Metadata Integration Service (OMIS)](/services/omis/database-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
+### Strimzi
 
-| Database Integration Connectors                                                                                                                        | Description                                                                                                                                                                                                                                                 |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [PostgreSQL database connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/egeria-connector-postgres){ target=gh } | Automatically maintains the open metadata instances for the databases hosted on a [PostgreSQL server :material-dock-window:](https://www.postgresql.org){ target=psql } This includes the database schemas, tables, columns, primary keys and foreign keys. |
-| [JDBC integration connector :material-github:](https://github.com/odpi/egeria-database-connectors/tree/main/jdbc-integration-connector){ target=gh }   | Automatically maintains the open metadata instances on a database server via JDBC. This includes the database schemas, tables, columns, primary keys and foreign keys.                                                                                      |
+* [Strimzi Monitor topic integration connector](/connectors/integration/strimzi-monitor-integration-connector) automatically maintains the open metadata instances for the topics hosted in [Strimzi :material-dock-window:](https://strimzi.io){ target=strimzi }.                                                                                         
 
-#### Cataloguing event topics and the structure of their events
+### Open API Specification
 
-The *topic* integration connectors run in the [Topic Integrator Open Metadata Integration Service (OMIS)](/services/omis/topic-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
+The [Open API Monitor integration connector](/connectors/integration/open-api-monitor-integration-connector) automatically maintains the open metadata instances for the APIs extracted from the Open API Specification extracted from an application. 
 
-| Topic Integration Connector                                                                                    | Description                                                                                                                                                                                                                                   |
-|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Kafka Monitor topic integration connector](/connectors/integration/kafka-monitor-integration-connector)       | Automatically maintains the open metadata instances for the topics hosted on an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka }.                                                                      |
-| [Kafka Audit topic integration connector](/connectors/integration/kafka-topics-audit-integration-connector)    | Validates that topics that are active in an [Apache Kafka server :material-dock-window:](https://kafka.apache.org/){ target=kafka } are also catalogued in open metadata.  Creates an audit log record for each topic that is not catalogued. |
-| [Strimzi Monitor topic integration connector](/connectors/integration/strimzi-monitor-integration-connector)   | Automatically maintains the open metadata instances for the topics hosted in [Strimzi :material-dock-window:](https://strimzi.io){ target=strimzi }.                                                                                          |
+### Open Lineage Events
 
-#### Cataloguing APIs
+The open lineage connectors work with the [Open Lineage standard](/features/lineage-management/overview/#the-openlineage-standard)
 
-The *API* integration connectors run in the [API Integrator Open Metadata Integration Service (OMIS)](/services/omis/api-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).
-
-| API Integration Connectors                                                                               | Description                                                                                                                               |
-|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| [Open API Monitor integration connector](/connectors/integration/open-api-monitor-integration-connector) | Automatically maintains the open metadata instances for the APIs extracted from the Open API Specification extracted from an application. |
-
-#### Synchronizing with third party catalogs
-
-The catalog integration connectors run in the [Catalog Integrator Open Metadata Integration Service (OMIS)](/services/omis/catalog-integrator) hosted in the [integration daemon](/concepts/integration-daemon).
-
-
-| Catalog Integration Connectors                                                                           | Description                                                         |
-|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| [Apache Atlas integration connector](/connectors/integration/apache-atlas-catalog-integration-connector) | Automatically publishes glossary terms from Egeria to Apache Atlas. |
-
-
-#### Populating security enforcement engines
-
-The security integration connectors run in the [Security Integrator Open Metadata Integration Service (OMIS)](/services/omis/security-integrator) hosted in the [integration daemon](/concepts/integration-daemon).
-
-#### Capturing and publishing Lineage
-
-The lineage integration connectors run in the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) hosted in the [integration daemon](/concepts/integration-daemon).  They support [Lineage Management](/features/lineage-management/overview).
-
-
-| Lineage Integration Connectors                                                                                                             | Description                                                                                                                                                                                                                                                                                                 |
-|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Open Lineage Event Receiver integration connector](/connectors/integration/open-lineage-event-receiver-integration-connector)             | Connector to receive open lineage events from an event topic and publish them to lineage integration connectors with listeners registered in the same instance of the Lineage Integrator OMIS.                                                                                                              |
-| [Governance Action to Open Lineage integration connector](/connectors/integration/governance-action-open-lineage-integration-connector)    | Connector to listen for governance actions executing in the open metadata ecosystem, generate open lineage events for them and publish them to the integration connectors running in the same instance of Lineage Integrator OMIS that are listening for OpenLineage events.                                |
-| [API-based Open Lineage Log Store integration connector](/connectors/integration/api-based-open-lineage-log-store-integration-connector)   | Connector that calls an OpenLineage compliant API to store the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS.                                                                                                              |
-| [File-based Open Lineage Log Store integration connector](/connectors/integration/file-based-open-lineage-log-store-integration-connector) | Connector that stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. |
-| [Open Lineage Cataloguer integration connector](/connectors/integration/open-lineage-cataloguer-integration-connector)                     | Connector to register an OpenLineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem.                                                                                                                                      |
-| [Sample Lineage integration connector](/connectors/integration/sample-lineage-event-receiver-integration-connector)                        | Sample Connector to listen for lineage events (not in a open lineage format) and catalog the associated assets, processes, schema and lineage.                                                                                                                                                              |
-
-
-??? education "Further information relating to integration connectors"
-    
-    - [Configuring an integration connector](/guides/admin/servers/by-section/integration-daemon-services-section/) to understand how to set up an integration connector.
-    - [Writing an integration connector](/guides/developer/integration-connectors/overview) for more information on writing new integration connectors.
-
-
-### Repository and Event Mapper Connectors
-
----8<-- "docs/connectors/repository/repository-connector-intro.md"
-
-The table below lists the repository connectors supporting the native open metadata repositories.
-
-| Native Repository Connector                                                         | Description |
-|-------------------------------------------------------------------------------------|---|
-| [JanusGraph OMRS Repository Connector](/connectors/repository/janus-graph/overview) | provides a native repository for a metadata server using [JanusGraph :material-dock-window:](https://janusgraph.org){ target=janus } as the backend. |
-| [XTDB OMRS Repository Connector](/connectors/repository/xtdb)                       | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the persistent store. |
-| [In-memory OMRS Repository Connector](/connectors/repository/in-memory/overview)    | provides a simple native repository implementation that "stores" metadata in HashMaps within the JVM; it is used for testing, or for environments where metadata maintained in other repositories needs to be cached locally for performance/scalability reasons.  |
-| [Read-only OMRS Repository Connector](/connectors/repository/read-only/overview)    | provides a native repository implementation that does not support the interfaces for create, update, delete; however, it does support the search interfaces and is able to cache metadata -- this means it can be loaded with open metadata archives to provide standard metadata definitions. |
-
-The table below lists the repository connectors that act as an adapter for third party metadata repositories.
-
-| Adapter Repository Connectors                                                                                                                                        | Description                                                                                                                                                                                              |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Apache Atlas OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-hadoop-ecosystem){ target=gh }                                   | implements read-only connectivity to the [Apache Atlas :material-dock-window:](https://atlas.apache.org){ target=atlas } metadata repository                                                             |
-| [IBM Information Governance Catalog (IGC) OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh } | implements read-only connectivity to the metadata repository within the [IBM InfoSphere Information Server :material-dock-window:](https://www.ibm.com/analytics/information-server){ target=ibm } suite |
-| [SAS Viya OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh }                                               | implements metadata exchange to the metadata repository within the [SAS Viya Platform :material-dock-window:](https://support.sas.com/en/software/sas-viya.html){ target=sas }                           |
-| [Sample Repository proxy (adapter) using polling to access files :material-github:](https://github.com/odpi/egeria-connector-repository-file-sample){ target=gh }    | implements metadata exchange to a file system using a polling pattern and an embedded OMRS repository.                                                                                                   |
-| [HMS Repository proxy (adapter) using polling to access HMS Tables :material-github:](https://github.com/odpi/egeria-connector-hivemetastore){ target=gh }           | implements metadata exchange to a Hive metastore using a polling pattern and an embedded OMRS repository.                                                                                              |
-
-??? education "Further information relating to Repository and Event Mapper connectors"
-    
-    - [Configuring a native repository connector](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/concepts/metadata-access-store).
-    - [Configuring an adapter repository connector](/guides/admin/servers/by-server-type/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/concepts/repository-proxy).
-    - [Writing repository and event mapper connectors](/guides/developer/repository-connectors/overview) for more information on writing new repository and event mapper connectors.
+* [Open Lineage Event Receiver integration connector](/connectors/integration/open-lineage-event-receiver-integration-connector) receives open lineage events from an event topic and publish them to lineage integration connectors with listeners registered in the same instance of the Lineage Integrator OMIS.                                                                                                              
+* [Governance Action to Open Lineage integration connector](/connectors/integration/governance-action-open-lineage-integration-connector) listens for governance actions executing in the open metadata ecosystem, generate open lineage events for them and publish them to the integration connectors running in the same instance of Lineage Integrator OMIS that are listening for OpenLineage events.                                
+* [API-based Open Lineage Log Store integration connector](/connectors/integration/api-based-open-lineage-log-store-integration-connector) calls an OpenLineage compliant API to store the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS.                                                                                                              
+* [File-based Open Lineage Log Store integration connector](/connectors/integration/file-based-open-lineage-log-store-integration-connector) stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. 
+* [Open Lineage Cataloguer integration connector](/connectors/integration/open-lineage-cataloguer-integration-connector)  registers an Open Lineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem.
 
 ### Open Discovery Services
 
@@ -159,6 +116,8 @@ The table below lists the repository connectors that act as an adapter for third
     - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the open discovery services run.
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [open discovery engine](/concepts/open-discovery-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing an open discovery service](/guides/developer/open-discovery-services/overview) for information on writing new open discovery services.
+
+## Open Metadata Governance Connectors
 
 ### Governance Action Services
 
@@ -189,16 +148,6 @@ There are currently no event action services supplied by Egeria.
     - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [event action engine](/concepts/event-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
     - [Writing an event action service](/guides/developer/event-action-services/overview) to understand how to write an event-action service.
 
-
-### Governance Daemon Connectors
-
----8<-- "docs/connectors/governance-daemon/governance-daemon-intro.md"
-
-| Connector                                                                                            | Description                                                                                                                                                                   |
-|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Lineage Warehouse Janus Connector](/connectors/governance-daemon/lineage-warehouse-janus-connector) | The Lineage Warehouse connectors provide plugins to the [Lineage Warehouse](/concepts/lineage-warehouse) that allow the Lineage Warehouse Services to connect with databases. |
-
-
 ### Repository Governance Services
 
 ---8<-- "docs/connectors/repository-governance/repository-governance-service-intro.md"
@@ -218,6 +167,7 @@ There are currently no repository governance services supplied by Egeria.
 
 | Type                                                                                | Description                                                                                                                                              |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Repository and Event Mapper connectors](#repository-and-event-mapper-connectors) | Integrate metadata repositories into the open metadata ecosystem so that they can interact with one or more [open metadata repository cohorts](/services/omrs/cohort).                                                      |
 | [Platform Metadata Security Connectors](#platform-metadata-security-connectors)     | manage authorization requests for the OMAG Server Platform's services.                                                                                   |
 | [Server Metadata Security Connectors](#server-metadata-security-connectors)         | manage authorization requests for the OMAG Server's services.                                                                                            |
 | [Configuration Document Store Connectors](#configuration-document-store-connectors) | manage the persistence and retrieval of [configuration documents](/concepts/configuration-document).                                                     |
@@ -227,6 +177,35 @@ There are currently no repository governance services supplied by Egeria.
 | [REST Client Connectors](#rest-client-connectors)                                   | issue REST API calls to Egeria's deployed platforms and third party technologies.                                                                        |
 | [Cohort Member Client Connector](#cohort-member-client-connectors)                  | supports repository service called to remote cohort members.                                                                                             |
 | [Open Metadata Topic Connectors](#open-metadata-topic-connectors)                   | send and receive events.                                                                                                                                 |
+
+
+### Repository and Event Mapper Connectors
+
+---8<-- "docs/connectors/repository/repository-connector-intro.md"
+
+The table below lists the repository connectors supporting the native open metadata repositories.
+
+| Native Repository Connector                                                         | Description |
+|-------------------------------------------------------------------------------------|---|
+| [JanusGraph OMRS Repository Connector](/connectors/repository/janus-graph/overview) | provides a native repository for a metadata server using [JanusGraph :material-dock-window:](https://janusgraph.org){ target=janus } as the backend. |
+| [XTDB OMRS Repository Connector](/connectors/repository/xtdb)                       | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the persistent store. |
+| [In-memory OMRS Repository Connector](/connectors/repository/in-memory/overview)    | provides a simple native repository implementation that "stores" metadata in HashMaps within the JVM; it is used for testing, or for environments where metadata maintained in other repositories needs to be cached locally for performance/scalability reasons.  |
+| [Read-only OMRS Repository Connector](/connectors/repository/read-only/overview)    | provides a native repository implementation that does not support the interfaces for create, update, delete; however, it does support the search interfaces and is able to cache metadata -- this means it can be loaded with open metadata archives to provide standard metadata definitions. |
+
+The table below lists the repository connectors that act as an adapter for third party metadata repositories.
+
+| Adapter Repository Connectors                                                                                                                                        | Description                                                                                                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [IBM Information Governance Catalog (IGC) OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh } | implements read-only connectivity to the metadata repository within the [IBM InfoSphere Information Server :material-dock-window:](https://www.ibm.com/analytics/information-server){ target=ibm } suite |
+| [SAS Viya OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh }                                               | implements metadata exchange to the metadata repository within the [SAS Viya Platform :material-dock-window:](https://support.sas.com/en/software/sas-viya.html){ target=sas }                           |
+| [Sample Repository proxy (adapter) using polling to access files :material-github:](https://github.com/odpi/egeria-connector-repository-file-sample){ target=gh }    | implements metadata exchange to a file system using a polling pattern and an embedded OMRS repository.                                                                                                   |
+| [HMS Repository proxy (adapter) using polling to access HMS Tables :material-github:](https://github.com/odpi/egeria-connector-hivemetastore){ target=gh }           | implements metadata exchange to a Hive metastore using a polling pattern and an embedded OMRS repository.                                                                                              |
+
+??? education "Further information relating to Repository and Event Mapper connectors"
+
+    - [Configuring a native repository connector](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store/#configure-the-native-repository-connector) to understand how to set up a repository connector in a [Metadata Access Store](/concepts/metadata-access-store).
+    - [Configuring an adapter repository connector](/guides/admin/servers/by-server-type/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/concepts/repository-proxy).
+    - [Writing repository and event mapper connectors](/guides/developer/repository-connectors/overview) for more information on writing new repository and event mapper connectors.
 
 
 ### Platform Metadata Security Connectors
@@ -243,7 +222,6 @@ There is one implementation of the platform metadata security connector provided
     - [Metadata Security](/features/metadata-security/overview) to understand the platform metadata security connector in the context of all of the security features.
     - [Writing a Platform Metadata Security Connector](/guides/developer/runtime-connectors/platform-metadata-security-connector).
 
-
 ### Server Metadata Security Connectors
 
 ---8<-- "docs/connectors/runtime/server-metadata-security-connector-intro.md"
@@ -257,7 +235,6 @@ There is one implementation of the server metadata security connector provided b
     - [Configuring a Server Metadata Security Connector](/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/concepts/omag-server-platform)
     - [Metadata Security](/features/metadata-security/overview) to understand the server metadata security connector in the context of all of the security features.
     - [Writing a Server Metadata Security Connector](/guides/developer/runtime-connectors/server-metadata-security-connector).
-
 
 ### Configuration Document Store Connectors
 
@@ -352,8 +329,6 @@ This is embedded in Egeria's Java clients. See
 - Egeria's [Platform API clients](/guides/developer/#working-with-the-platform-apis).
 - Egeria's [OMAS clients](/guides/developer/#working-with-the-open-metadata-and-governance-apis).
 
-
-
 ### Cohort Member Client Connectors
 
 ---8<-- "docs/connectors/runtime/cohort-member-client-connector-intro.md"
@@ -366,34 +341,15 @@ Egeria's [Open Metadata Repository Services (OMRS)](/services/omrs) provides a d
 The connection for this connector is configured in the `LocalRepositoryRemoteConnection` property of the
 cohort member's [Local Repository Configuration](/user/guides/admin/servers/by-section/#configuring-the-local-repository-store).
 
-## Digital resource connectors
+### Governance Daemon Connectors
 
----8<-- "docs/connectors/resource/digital-resource-connector-intro.md"
+---8<-- "docs/connectors/governance-daemon/governance-daemon-intro.md"
 
-### Files
-
-* The [basic file connector](/connectors/resource/basic-file-resource-connector)  provides support to read and write to a file using the Java File object.  
-
-* The [basic folder connector](/connectors/resource/basic-folder-resource-connector) is for accessing the files within a folder (directory).
-
-* The [CSV file connector](/connectors/resource/csv-file-resource-connector)  is able to retrieve data from a Comma Separated Values (CSV) file where the contents are stored in logical columns with a special character delimiter between the columns.
-
-* The [data folder connector](/connectors/resource/data-folder-resource-connector) is for accessing data that is stored as a number of files within a folder (directory).
-  
-### Databases
-
-* The [jdbc resource connector](/connectors/resource/jdbc-resource-connector) is for accessing a database.
-
-### Open Metadata Topic Connectors
-
----8<-- "docs/connectors/resource/open-metadata-topic-connector-intro.md"
-
-Egeria provides a single implementation of an open metadata connector for Apache Kafka that it uses by default.
-
-* The [Kafka Open Metadata Topic Connector](/connectors/resource-connectors/kafka-open-metadata-topic-connector) implements  an [Apache Kafka](https://kafka.apache.org/) connector for a topic that exchanges Java Objects as JSON payloads.
+| Connector                                                                                            | Description                                                                                                                                                                   |
+|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Lineage Warehouse Janus Connector](/connectors/governance-daemon/lineage-warehouse-janus-connector) | The Lineage Warehouse connectors provide plugins to the [Lineage Warehouse](/concepts/lineage-warehouse) that allow the Lineage Warehouse Services to connect with databases. |
 
 
-It is configured in the Egeria [OMAG Servers](/concepts/omag-server) through the [Event Bus Configuration](/concepts/event-bus).
 
 
 

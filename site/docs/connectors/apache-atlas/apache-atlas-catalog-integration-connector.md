@@ -9,8 +9,8 @@
     - Connector Category: [Integration Connector](/concepts/integration-connector)
     - Hosting Service: [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
-    - Source Module: [atlas-integration-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/atlas-integration-connector){ target=gh }
-    - Jar File Name: `atlas-integration-connector.jar`
+    - Source Module: [apache-atlas-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/system-connectors/atlas-integration-connector){ target=gh }
+    - Jar File Name: `apache-atlas-connectors.jar`
 
 ## Overview
 

@@ -6,12 +6,8 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-# Lineage Warehouse
+# Open lineage Server
 
-The Lineage Warehouse is a [governance server](/concepts/governance-server)that manages a historical warehouse of lineage information.
-
-![Lineage Warehouse](lineage-warehouse.svg)
-
-Its behavior and configuration is described [in the administration guide](/guides/admin/servers/by-server-type/configuring-a-lineage-warehouse).
+The Open Lineage Server was renamed to the [Lineage Warehouse](/concepts/lineage-warehouse) in V5.0 of Egeria.
 
 --8<-- "snippets/abbr.md"

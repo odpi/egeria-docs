@@ -1,6 +1,6 @@
-<mxfile modified="2024-02-12T13:52:11.702Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="_b1riK59ozreNPQYXXqM" version="23.0.2" type="device" pages="32">
+<mxfile modified="2024-02-13T16:25:33.093Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="lqqbV0nxm9gGHeWVUqPK" version="23.0.2" type="device" pages="32">
   <diagram id="jIWasjkcupAm6ooTX9ot" name="overview">
-    <mxGraphModel dx="1242" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -443,7 +443,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0011-Managing-Referenceables" id="vxQgPqhZbHNzsHuqMvmY">
-    <mxGraphModel dx="1242" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="Hnb-yI7sagTfC-MPkJIY-0" />
         <mxCell id="Hnb-yI7sagTfC-MPkJIY-1" parent="Hnb-yI7sagTfC-MPkJIY-0" />
@@ -510,8 +510,8 @@
         <mxCell id="PyXGlAkPm1Gpj0sk6puf-1" value="«classification»&lt;br&gt;&lt;b&gt;Template&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="Hnb-yI7sagTfC-MPkJIY-1" vertex="1">
           <mxGeometry x="370" y="100" width="240" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="PyXGlAkPm1Gpj0sk6puf-2" value="name : string&lt;br&gt;description : string&lt;br&gt;placeholderProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;replacementProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;additionalProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="Hnb-yI7sagTfC-MPkJIY-1" vertex="1">
-          <mxGeometry x="370" y="150" width="240" height="99.5" as="geometry" />
+        <mxCell id="PyXGlAkPm1Gpj0sk6puf-2" value="name : string&lt;br&gt;description : string&lt;br&gt;versionIdentifier : string&lt;br&gt;placeholderProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;replacementProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;additionalProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="Hnb-yI7sagTfC-MPkJIY-1" vertex="1">
+          <mxGeometry x="370" y="150" width="240" height="110" as="geometry" />
         </mxCell>
         <mxCell id="egiAuwEQBNUAwjkjGjuP-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;endArrow=oval;endFill=1;strokeWidth=1;" parent="Hnb-yI7sagTfC-MPkJIY-1" source="Hnb-yI7sagTfC-MPkJIY-4" target="Hnb-yI7sagTfC-MPkJIY-4" edge="1">
           <mxGeometry relative="1" as="geometry">

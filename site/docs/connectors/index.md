@@ -17,18 +17,18 @@ Connectors enable Egeria to operate in many environments and with many types of 
 
 ## Metadata exchange and maintenance connectors
 
-The connectors that support the exchange and maintenance of metadata help to accelerate the rollout of your open metadata ecosystem since they can be used to automate the extraction and distribution of metadata to the third party technologies.
+The connectors that support the exchange and maintenance of metadata help to accelerate the rollout of your open metadata ecosystem, since they can be used to automate the extraction and distribution of metadata to the third party technologies.
 
-* [Secrets Store connectors](#secrets-store-connectors)  manage the retrieval of secrets (passwords, certificates, ...) from secured locations at runtime.                                                                                                                                                                                                          |
-* [File connectors](#files) work with different types of files
+* [Secrets Store connectors](#secrets-store-connectors)  manage the retrieval of secrets (passwords, certificates, ...) from secured locations at runtime.                          
+* [File connectors](#files) work with different types of files.
 * [JDBC Database connectors](#jdbc-databases) make use of the JDBC standards to work with different types of relational databases.
-* [Apache Kafka](#apache-kafka) work with the topics and/or events passing through the Apache Kafka event broker.
-* [Apache Atlas](#apache-atlas) work with an Apache Atlas server.
-* [Strimzi](#strimzi) work with the cloud-based Apache Kafka deployment called Strimzi.
-* [Open API Specification](#open-api-specification) extract metadata about APIs through the Open API interfaces provided through the Swagger API.
-* [Open Lineage Events](#open-lineage-events) works with the open lineage event standard.
+* [Apache Kafka connectors](#apache-kafka) work with the topics and/or events passing through the Apache Kafka event broker.
+* [Apache Atlas connectors](#apache-atlas) work with an Apache Atlas server.
+* [Strimzi connector](#strimzi) works with the cloud-based Apache Kafka deployment called Strimzi.
+* [Open API Specification connectors](#open-api-specification) extract metadata about APIs through the Open API interfaces provided through the Swagger API.
+* [Open Lineage Event connectors](#open-lineage-events) works with the open lineage event standard.
 
-### Secrets Store Connectors
+### Secrets Stores
 
 * The [Environment Variables Secret Store connector](/connectors/secrets/environment-variable-secrets-store-connector) retrieves secret values from environment variables. 
 
@@ -36,14 +36,16 @@ The connectors that support the exchange and maintenance of metadata help to acc
 
 Files provide storage for many types of data.  They are organizes into folders (also known as directories on some operating systems).  Some connectors work with any type of file.  Other connectors are able to understand the content of specific types of file formats and so these connectors are organized by file type.
 
-#### Any type of file 
+#### Any type of File 
 
 * The [Basic File Resource Connector](/connectors/resource/basic-file-resource-connector)  provides support to read and write to a file using the Java File object.
+* The [Move/Copy File Provisioning Governance Action Service](/connectors/governance-action/move-copy-file-provisioning-governance-action-service)  moves or copies files from one location to another and maintains the lineage of the action. 
 
 #### File Folders (Directories)
 
 * The [Basic Folder Resource Connector](/connectors/resource/basic-folder-resource-connector) is for accessing the files within a folder (directory).
-* The [Data Files Monitor Integration Connector](/connectors/integration/data-files-monitor-integration-connector) maintains a `DataFile` asset for each file in the directory (or any subdirectory). When a new file is created, a new DataFile asset is created.  If a file is modified, the lastModified property of the corresponding DataFile asset is updated.  When a file is deleted, its corresponding DataFile asset is also deleted (or archived if it is still needed for lineage). 
+* The [Data Files Monitor Integration Connector](/connectors/integration/data-files-monitor-integration-connector) maintains a `DataFile` asset for each file in the directory (or any subdirectory). When a new file is created, a new DataFile asset is created.  If a file is modified, the lastModified property of the corresponding DataFile asset is updated.  When a file is deleted, its corresponding DataFile asset is also deleted (or archived if it is still needed for lineage).
+* The [Generic Folder Watchdog Governance Action Service](/connectors/governance-action/generic-folder-watchdog-governance-action-service) listens for changing `DataFile` assets linked to a specified `FileFolder` element and initiates governance actions when specific events occur. This may be for files directly linked to the folder or located in sub-folders.
 
 #### Data Folders
 
@@ -99,71 +101,14 @@ The open lineage connectors work with the [Open Lineage standard](/features/line
 * [File-based Open Lineage Log Store integration connector](/connectors/integration/file-based-open-lineage-log-store-integration-connector) stores the open lineage events that are passed to it through the OpenLineage listener that is registered with the Lineage Integrator OMIS. Each OpenLineage event is stored in its own file in JSON format.  These files are organized according to the namespace and job name in the event. 
 * [Open Lineage Cataloguer integration connector](/connectors/integration/open-lineage-cataloguer-integration-connector)  registers an Open Lineage listener with the Lineage Integrator OMIS and to catalog any processes that are not already known to the open metadata ecosystem.
 
-### Open Discovery Services
-
----8<-- "docs/connectors/discovery/discovery-service-intro.md"
-
-| Connector                                                                                                                                                                                                    | Description                                                                                                                                 |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| [Sequential Discovery Pipeline :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh }                  | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)).              |
-| [CSV Discovery Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/discovery-service-connectors){ target=gh }                          | extracts the column names from the first line of the file, counts up the number of records in the file and extracts its last modified time. |
-| [Apache Atlas Discovery Service](/connectors/discovery/apache-atlas-discovery-service)                                                                                                                       | profiles the content of an Apache Atlas server.                                                                                             |
-| [Validate Drop Foot Weekly Measurements Discovery Service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/governance-services-sample){ target=gh } | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)).              |
-| [Validate Patient Records :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/governance-services-sample){ target=gh }                                 | runs nested discovery services in a sequence ([more information on discovery pipelines](/frameworks/odf/#discovery-pipeline)).              |
-
-??? education "Further information relating to Open Discovery Services"
-    
-    - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the open discovery services run.
-    - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [open discovery engine](/concepts/open-discovery-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
-    - [Writing an open discovery service](/guides/developer/open-discovery-services/overview) for information on writing new open discovery services.
-
 ## Open Metadata Governance Connectors
 
-### Governance Action Services
-
----8<-- "docs/connectors/governance-action/governance-action-service-intro.md"
-
-| Connector | Description |
-|---|---|
-| [Generic Element Watchdog Governance Action Service](/connectors/governance-action/generic-element-watchdog-governance-action-service) | listens for changing metadata elements and initiates governance action processes when certain events occur. |
-| [Generic Folder Watchdog Governance Action Service](/connectors/governance-action/generic-folder-watchdog-governance-action-service) | listens for changing assets linked to a `DataFolder` element and initiates governance actions when specific events occur. This may be for files directly linked to the folder or located in sub-folders.|
-| [Move/Copy File Provisioning Governance Action Service](/connectors/governance-action/move-copy-file-provisioning-governance-action-service) | moves or copies files from one location to another and maintains the lineage of the action. |
-| [Origin Seeker Remediation Governance Action Service](/connectors/governance-action/origin-seeker-remediation-governance-action-service) | walks backwards through the lineage mappings to discover the origin of the data |
-
-??? education "Further information relating to Governance Action Services"
-    
-    - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the governance action services run.
-    - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [governance action engine](/concepts/governance-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
-    - [Writing a governance action service](/guides/developer/governance-action-services/overview) for information on writing new governance action services.
-
-### Event Action Services
-
----8<-- "docs/connectors/event-action/event-action-service-service-intro.md"
-
-There are currently no event action services supplied by Egeria.
-
-??? education "Further information relating to Event Action Services"
-
-    - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the event action services run.
-    - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create an [event action engine](/concepts/event-action-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
-    - [Writing an event action service](/guides/developer/event-action-services/overview) to understand how to write an event-action service.
-
-### Repository Governance Services
-
----8<-- "docs/connectors/repository-governance/repository-governance-service-intro.md"
-
-There are currently no repository governance services supplied by Egeria.
-
-??? education "Further information relating to Repository Governance Services"
-
-    - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up the [Engine Host](/concepts/engine-host) server where the repository governance services run.
-    - [Setting up a governance engine content pack](/guides/developer/open-metadata-archive/creating-governance-engine-content-packs) to create a [repository governance engine](/concepts/repository-governance-engine) definition to load into a [Metadata Access Store](/concepts/metadata-access-store).
-    - [Writing a repository governance service](/guides/developer/archive-services/overview) to understand how to write a repository governance service.
-
+* The [Generic Element Watchdog Governance Action Service](/connectors/governance-action/generic-element-watchdog-governance-action-service) listens for changing metadata elements and initiates governance action processes when certain events occur.
+* The [Origin Seeker Remediation Governance Action Service](/connectors/governance-action/origin-seeker-remediation-governance-action-service)  walks backwards through the lineage mappings to discover the origin of the data 
 
 ## Runtime connectors
 
-*Runtime* connectors enable Egeria's [OMAG Server Platform](/egeria docs/concepts/omag-server-platform) and its hosted [OMAG Servers](/concepts/omag-server) to operate in many environments by providing plug-in points for the runtime services it needs to operate. Most of the runtime connectors relate to persistent storage, or connections to distributed services.
+*Runtime* connectors enable Egeria's [OMAG Server Platform](/concepts/omag-server-platform) and its hosted [OMAG Servers](/concepts/omag-server) to operate in many environments by providing plug-in points for the runtime services it needs to operate. Most of the runtime connectors relate to persistent storage, or connections to distributed services.  The connectors are organized by type to allow you to choose the options available from the Egeria community.
 
 | Type                                                                                | Description                                                                                                                                              |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -3,6 +3,7 @@
 
 # Event Bus Config Section
 
-
+--8<-- "snippets/admin/configuring-event-bus.md"
 
 --8<-- "snippets/abbr.md"
+

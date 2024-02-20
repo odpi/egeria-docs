@@ -120,7 +120,4 @@ If, however, you want to use your own values, then this is the command to set it
 
 If you are curious to see the automated server type that has been assigned to a server, it can be retrieved with the following command.
 
-!!! get "GET - getServerClassification"
-    ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-type-classification"
-    ```
+--8<-- "snippets/admin/calls/get-server-type-classification.md"

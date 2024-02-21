@@ -2,23 +2,16 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-# Configuring a Data Engine Proxy Server
+# Configuring a Data Engine Proxy
 
-## Overview 
+A [Data Engine Proxy](/concepts/data-engine-proxy) provides the ability to load lineage data from a data engine.  
 
-Each [type of OMAG Server](/concepts/omag-server/#types-of-omag-server) is configured by creating a [configuration document](/concepts/configuration-document). The following can be configured for data engine proxy:
+The configuration for a Data Engine Proxy requires knowledge of the [Metadata Access Server](/concepts/metadata-access-server) that is to store the lineage via the [Data Engine OMAS](/services/omas/data-engine/overview).
 
-![Configuration for an data engine proxy server](data-engine-proxy-config.svg)
+![Configuration for an data engine proxy server](/concepts/data-engine-proxy.svg)
 
 
-??? info "Configuring the basic properties"
-    --8<-- "snippets/admin/configuring-omag-server-basic-properties.md"
-
-??? info "Configuring the audit log"
-    --8<-- "snippets/admin/configuring-the-audit-log.md"
-
-??? info "Configuring the server security connector"
-    --8<-- "snippets/admin/configuring-the-server-security-connector.md"
+--8<-- "snippets/admin/configuring-standard-sections.md"
 
 ??? info "Configuring the Data Engine Proxy Services"
     --8<-- "snippets/admin/configuring-the-data-engine-services.md"

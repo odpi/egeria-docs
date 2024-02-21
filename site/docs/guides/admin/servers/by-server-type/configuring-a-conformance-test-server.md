@@ -5,7 +5,7 @@
 
 A *Conformance Test Server* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of this type of server's configuration document.
 
-![Configuration for a conformance test server](conformance-test-server-config.svg)
+![Configuration for a conformance test server](/concepts/conformance-test-server.svg)
 
 ??? info "Configuring the default values used in subsequent configuration commands"
     --8<-- "snippets/admin/configuring-event-bus.md"

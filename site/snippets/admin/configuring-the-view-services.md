@@ -3,11 +3,9 @@
 
 ## Configure the view services
 
-The [Open Metadata View Services (OMVSs)](/services/view) only run in a [view server](/concepts/view-server).
+[Open Metadata View Services (OMVSs)](/services/omvs) provide task-oriented, domain-specific REST API services for user interfaces, and other non-Java programming environments, such as python, that integrate with the open metadata ecosystem.  The view services call a [metadata access server](/concepts/metadata-access-server) to send and retrieve metadata.
 
-View services provide task-oriented, domain-specific REST API services for user interfaces, and other non-Java programming environments, such as python, that integrate with the open metadata ecosystem.  The view services call a [metadata access server](/concepts/metadata-access-server) to send and retrieve metadata.
-
-To get a description of each of the view services that are supported by an [OMAG Server platform](/concepts/omag-server-platform), list the registered view services.
+To get a description of each of the view services that are supported by an [OMAG Server Platform](/concepts/omag-server-platform), list the registered view services.
 
 ???+ info "List registered view services"
     The registered view services for an [OMAG Server Platform](/concepts/omag-server-platform) are the view services whose implementation is included in the platform's classpath:
@@ -162,7 +160,7 @@ A resource endpoint describing an OMAG Server has the following properties:
 | `description`        | optional property describing the server.                                                                                  |
 
 
-!!! example "Example ViewServiceRequestBody"
+??? example "Example ViewServiceRequestBody"
 
     ```json
     {

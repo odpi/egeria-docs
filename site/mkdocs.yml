@@ -155,6 +155,7 @@ nav:
                     - Presentation Server : user-interfaces/ecosystem/configure-and-run-presentation-server.md
               - By Section:
                     - Configuring an OMAG Server by configuration document section: guides/admin/servers/by-section/index.md
+                    - Egeria Managed Properties: guides/admin/servers/by-section/egeria-managed-properties.md
                     - Basic Server Properties: guides/admin/servers/by-section/basic-server-properties-section.md
                     - Event Bus Default Properties: guides/admin/servers/by-section/event-bus-config-section.md
                     - Repository Services: guides/admin/servers/by-section/repository-services-section.md

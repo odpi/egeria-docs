@@ -3,7 +3,7 @@
 
 # Memento
 
-A *Memento* is a classification that is typically applied to an asset or related elements such as schema elements. It indicates that the element is logically deleted because it is no longer describing all or part of a [real-world resource](/concepts/resource) (typically because the resource has been deleted or changed).
+A *Memento* is a classification that is typically applied to an asset or related elements such as schema elements. It indicates that the element is logically deleted because it is no longer describing all or part of a [real-world digital resource](/concepts/digital-resource) (typically because the resource has been deleted or changed).
 
 This element has only been retained to support lineage graph queries.   It will not be returned to callers unless:
 

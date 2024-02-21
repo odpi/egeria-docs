@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-A *digital resource connector* is used to call the API of a particular type of [digital resource](/concepts/resource) in order to access its content or metadata.  They may also listen for events from the digital resource if it emits them.  For example, you may have a digital resource connector to access a file, another to access a database, another to listen to an Apache Kafka topic, and another to access a system such as Apache Atlas.
+A *digital resource connector* is used to call the API of a particular type of [digital resource](/concepts/digital-resource) in order to access its content or metadata.  They may also listen for events from the digital resource if it emits them.  For example, you may have a digital resource connector to access a file, another to access a database, another to listen to an Apache Kafka topic, and another to access a system such as Apache Atlas.
 
 ## What is the interface of a digital resource connector?
 

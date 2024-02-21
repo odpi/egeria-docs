@@ -176,7 +176,7 @@ Roles involved in the day-to-day use of an organization's resources:
     
     ![Icon](asset-owner-role.png)
     
-    A person who is accountable for the proper use and protection of a [Resource](/concepts/resource).  This includes the maintenance of the resource's [Asset](/concepts/asset).
+    A person who is accountable for the proper use and protection of a [Digital Resource](/concepts/digital-resource).  This includes the maintenance of the resource's [Asset](/concepts/asset).
  
     Most employees in an organization will be an owner of at least one resource. The size and importance of the resource in question will determine the level of seniority of the individual that is the asset owner.
     

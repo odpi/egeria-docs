@@ -120,7 +120,7 @@ In summary, figure 13 show that the other elements linked to the profile creates
 
 ## Linking governance and security to roles
 
-Access to [resources](/concepts/resource) is controlled by identifying which user accounts can access which resources.  Typically, a *user group* is defined for collections of similar resources.  The group contains the list of user accounts that are allowed to access the associated resources.  
+Access to [digital resources](/concepts/digital-resource) is controlled by identifying which user accounts can access which resources.  Typically, a *user group* is defined for collections of similar resources.  The group contains the list of user accounts that are allowed to access the associated resources.  
 
 This information is stored in a User Directory, such as LDAP and used by an *Access Control Manager*.  The access control information is organized for efficient lookup of whether a particular user has access to a resource because they are named in the appropriate group.
 

@@ -59,7 +59,7 @@ The three parts of the lineage architecture are summarized in figure 4.
 
 Capturing lineage has both a static and a dynamic aspect to it.  
 
-- The *static* aspect involves cataloguing all the [resources](/concepts/resource) that are deployed into your digital landscape.  This defines the data sources and processing engines and how they link together.  Ideally this cataloguing is done as these resources are deployed, which may then be augmented with [automated cataloguing](/features/inteegrated-cataloguing) of resources and [metadata discovery](/features/discovery-and-stewardship).  It is also possible that tools may catalogue resources under the guidance of their users and this metadata is [shared with the open metadata ecosystem](/patterns/metadata-exchange).
+- The *static* aspect involves cataloguing all the [digital resources](/concepts/digital-resource) that are deployed into your digital landscape.  This defines the data sources and processing engines and how they link together.  Ideally this cataloguing is done as these resources are deployed, which may then be augmented with [automated cataloguing](/features/inteegrated-cataloguing) of resources and [metadata discovery](/features/discovery-and-stewardship).  It is also possible that tools may catalogue resources under the guidance of their users and this metadata is [shared with the open metadata ecosystem](/patterns/metadata-exchange).
 
 - The *dynamic* aspect captures information about the activity that happens day-to-day, such as the running of processes, and its effects.  This could include details of the volumes of data discovered and/or processed along with any analysis of its contents.
 

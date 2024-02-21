@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-An *open discovery service* is a component that performs specific analysis of the contents of a [digital resource](/concepts/resource) on request.  The aim of the open discovery service is to enable a detailed picture of the properties of a resource to be built up.
+An *open discovery service* is a component that performs specific analysis of the contents of a [digital resource](/concepts/digital-resource) on request.  The aim of the open discovery service is to enable a detailed picture of the properties of a resource to be built up.
 
 Each time an open discovery service runs, it creates a new [discovery analysis report](/concepts/discovery-analysis-report) linked off of the digital resource's [Asset](/concepts/asset) metadata element that records the results of the analysis.  
 

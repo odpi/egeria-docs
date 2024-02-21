@@ -17,11 +17,11 @@ A *governance engine definition* describes the [governance services](/concepts/g
 
 There are three types of governance engine and they each support a specialist type of governance service.  Therefore, the governance engine definitions include definitions of governance services that are consistent with the type of governance engine.
 
-| Type of Governance Engine | Type of Governance Service | Description |
-|---|---|---|
-| [Governance action engine](/concepts/governance-action-engine) |  [Governance action service](/guides/developer/governance-action-services/overview)| Monitor and manage the content of open metadata across the open metadata landscape. |
-| [Open discovery engine](/concepts/open-discovery-engine)| [Open discovery service](/guides/developer/open-discovery-services/overview) | Analyze the content of [resources](/concepts/resource) in the digital landscape and create annotations that are attached to the resource's [asset](/concepts/asset) metadata element in the open metadata repositories in the form of a [discovery analysis report](/concepts/discovery-analysis-report). |
-| [Repository governance engine](/concepts/repository-governance-engine) | [Repository governance service](/guides/developer/repository-governance-services/overview) | Provide additional management of the open metadata repositories that are members of the connected [cohorts](/concepts/cohort-members). |
+| Type of Governance Engine                                              | Type of Governance Service                                                                 | Description                                                                                                                                                                                                                                                                                       |
+|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Governance action engine](/concepts/governance-action-engine)         | [Governance action service](/guides/developer/governance-action-services/overview)         | Monitor and manage the content of open metadata across the open metadata landscape.                                                                                                                                                                                                               |
+| [Survey action engine](/concepts/survey-action-engine)                 | [Survey action service](/guides/developer/survey-action-services/overview)                 | Analyze the content of [digital resources](/concepts/digital-resource) in the digital landscape and create annotations that are attached to the resource's [asset](/concepts/asset) metadata element in the open metadata repositories in the form of a [survey report](/concepts/survey-report). |
+| [Repository governance engine](/concepts/repository-governance-engine) | [Repository governance service](/guides/developer/repository-governance-services/overview) | Provide additional management of the open metadata repositories that are members of the connected [cohorts](/concepts/cohort-members).                                                                                                                                                            |
 
 Each governance engine definition describes a single engine and its specialized services as illustrated below.
 
@@ -31,8 +31,8 @@ Each governance engine definition describes a single engine and its specialized 
 ![Governance Action Engine Definition Structure](/guides/developer/open-metadata-archives/governance-action-engine-definition.svg)
 > Logical structure of a governance action engine definition showing how the governance request types map to the governance action service definitions
 
-![Open Discovery Engine Definition Structure](/guides/developer/open-metadata-archives/open-discovery-engine-definition.svg)
-> Logical structure of an open discovery engine definition showing how the governance request types map to the open discovery service definitions.  Some of these services are *Open Discovery Pipelines* that control the choreography of a number of nested open discovery services
+![Survey Action Engine Definition Structure](/guides/developer/open-metadata-archives/survey-action-engine-definition.svg)
+> Logical structure of a survey action engine definition showing how the governance request types map to the survey action service definitions.  Some of these services are *Survey Action Pipelines* that control the choreography of a number of nested survey action services.
 
 
 !!! education "Further information"

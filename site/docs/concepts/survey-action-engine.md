@@ -8,7 +8,7 @@ hide:
 
 # Survey Action Engines
 
-A *survey action engine* is a type of [governance engine](/concepts/governance-engine) that describes a set of related [survey action services](/concepts/survey-action-service). Each survey action service implements a specific type of analysis.  This analysis is looking into the content of a [digital resource](/concepts/resource) and storing its findings in annotations within a [survey report](/concepts/survey-report) that is linked of the resource's [Asset](/concepts/asset) in the metadata repository.
+A *survey action engine* is a type of [governance engine](/concepts/governance-engine) that describes a set of related [survey action services](/concepts/survey-action-service). Each survey action service implements a specific type of analysis.  This analysis is looking into the content of a [digital resource](/concepts/digital-resource) and storing its findings in annotations within a [survey report](/concepts/survey-report) that is linked of the resource's [Asset](/concepts/asset) in the metadata repository.
 
 A survey action is hosted in the [Survey Action Open Metadata Engine Service (OMES)](/services/omes/survey-action/overview) running on one or more [Engine Host OMAG Servers](/concepts/engine-host).
 

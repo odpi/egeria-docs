@@ -11,7 +11,7 @@ The categories of metadata listed below help you organize your metadata needs ar
 ??? info "Technical metadata"
     ### Technical metadata
 
-    The most commonly collected metadata is *technical metadata* that describes the way something is implemented.  For example, technical metadata for common [digital resources](/concepts/resource) includes:
+    The most commonly collected metadata is *technical metadata* that describes the way something is implemented.  For example, technical metadata for common [digital resources](/concepts/digital-resource) includes:
     
     * The databases and their database schema (table and column definitions) configured in a database server.
     * APIs and their interface specification implemented by applications and other software services to request actions and query data.

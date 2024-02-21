@@ -717,6 +717,7 @@ nav:
       - Data Domain: concepts/subject-area.md
       - Data Engine Proxy: concepts/data-engine-proxy.md
       - Deployed Implementation Type: concepts/deployed-implementation-type.md
+      - Digital Resource: concepts/digital-resource.md
       - Digital Resource Connector: concepts/digital-resource-connector.md
       - Discovery Analysis Report: concepts/discovery-analysis-report.md
       - Endpoint: concepts/endpoint.md

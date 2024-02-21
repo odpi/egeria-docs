@@ -3,7 +3,7 @@
 
 There is a lot of common functions that are used repeatedly during the discovery process.
 
-An *open discovery pipeline* is a specialized implementation of an [open discovery service](/concepts/open-discovery-service) that runs a set of open discovery services against a single [digital resource](/concepts/resource).  The implementation of the open discovery pipeline determines the order that these open discovery services are run. 
+An *open discovery pipeline* is a specialized implementation of an [open discovery service](/concepts/open-discovery-service) that runs a set of open discovery services against a single [digital resource](/concepts/digital-resource).  The implementation of the open discovery pipeline determines the order that these open discovery services are run. 
 
 ![Open discovery pipeline example](/guides/developer/open-discovery-services/open-discovery-pipeline-example.svg)
 

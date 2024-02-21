@@ -10,7 +10,7 @@ hide:
 
 A *survey report* contains one or more sets of related properties that a [survey action service](/concepts/survey-action-service) has discovered about a resource, its metadata, structure and/or content. These are stored in a set of [annotations](#annotations) linked off of the survey report.
 
-The survey report is attached to the [asset](/concepts/asset) for the [digital resource](/concepts/resource) that was analysed.  Over time, the survey reports show how the digital resource's contents are changing.
+The survey report is attached to the [asset](/concepts/asset) for the [digital resource](/concepts/digital-resource) that was analysed.  Over time, the survey reports show how the digital resource's contents are changing.
 
 ![Asset with discovery analysis reports](/frameworks/saf/asset-to-survey-reports.svg)
 

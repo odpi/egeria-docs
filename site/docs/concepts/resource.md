@@ -18,10 +18,13 @@ Examples of resources include:
 - Analytical models and processes.
 - Addresses and other locations.
 - Physical objects such as buildings that can have a digitized representation with a unique identity (for example, serial number).
+- People allocated to a project.
 
-
-Resources are described in open metadata as [Assets](/concepts/asset).
+[Digital Resources](/concepts/digital-resource) and physical resources (such as computers, buildings etc) are described in open metadata as [Assets](/concepts/asset).  People and teams are captured using [Actors and Person Roles](/features/people-roles-organizations/overview)
 
 In addition, the organization may capture many types of descriptions and definitions that describe their operations in open metadata, such as, for example, a [glossary term](/practices/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term) or a [governance definition](/services/omas/governance-program/overview/#governance-definitions). These elements can be [linked to the asset](/patterns/metadata-manager/overview) to provide more information on the resource's content, significance and proper use to the people working with the resource as well as guiding automated processes that are managing and governing it.
+
+!!! education "ResourceList relationship"
+    The [ResourceList](/types/0/0019-More-Information) relationship allows the list of resources allocated to a particular activity to be linked to the open metadata element that represents the activity.
 
 --8<-- "snippets/abbr.md"

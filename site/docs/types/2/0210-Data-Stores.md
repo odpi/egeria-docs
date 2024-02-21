@@ -9,11 +9,11 @@ Both [*DataSets*](/types/0/0010-Base-Model#dataset) and [*DataStores*](#datastor
 
 ## DataStore entity
 
-The *DataStore* entity describes a physical [digital resource](/concepts/resource) that supplies data.  The *deployedImplementationType* attribute describes the class of technology that is used in its implementation.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
+The *DataStore* entity describes a physical [digital resource](/concepts/digital-resource) that supplies data.  The *deployedImplementationType* attribute describes the class of technology that is used in its implementation.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 ## DataContentForDataSet relationship
 
-The *DataContentForDataSet* relationship defines how data is supplied to a [DataSet](/types/0/0010-Base-Model) from a particular [digital resources](/concepts/resource).  The DataSet entity includes a property called *formula*.  This describes the logic that is used to populate the data set.  The formula can include placeholders.  These placeholders are defined by the *queryId* properties in the linked DataContentForDataSet relationships.  The associated *query* property describes how the data from the linked dataContent resource is selected.
+The *DataContentForDataSet* relationship defines how data is supplied to a [DataSet](/types/0/0010-Base-Model) from a particular [digital resources](/concepts/digital-resource).  The DataSet entity includes a property called *formula*.  This describes the logic that is used to populate the data set.  The formula can include placeholders.  These placeholders are defined by the *queryId* properties in the linked DataContentForDataSet relationships.  The associated *query* property describes how the data from the linked dataContent resource is selected.
 
 ## DataStoreEncoding classification
 
@@ -21,7 +21,7 @@ The *DataStoreEncoding* classification provides the ability to store details of 
 
 ## DataScope classification
 
-The *DataScope* classification identifies the scope of the data stored in the [resource(s)](/concepts/resource) represented by the entity it is attached to.  This classification can be attached to any [*Referenceable*](/types/0/0010-Base-Model), but it is typically associated with assets such as *DataStores* and *DataSets*.  The attributes of this classification identify the scope of the data in space and time.
+The *DataScope* classification identifies the scope of the data stored in the [digital-resource(s)](/concepts/digital-resource) represented by the entity it is attached to.  This classification can be attached to any [*Referenceable*](/types/0/0010-Base-Model), but it is typically associated with assets such as *DataStores* and *DataSets*.  The attributes of this classification identify the scope of the data in space and time.
 
 * *minLongitude* - if the data is bound by an area, this is the longitude for bottom-left corner of the bounding box (BBOX) for the area covered by the data.
 * *minLatitude* - if the data is bound by an area, this is the latitude for the bottom-left corner of the bounding box (BBOX) for the area covered by the data.

@@ -3,7 +3,7 @@
 
 # 0045 Servers and Assets
 
-Many data catalogs capture information about data stores, data sets, APIs and topics.  These [digital resources](/concepts/resource) provide access to data and reusable function which is why they are of interest.  These resources run on IT infrastructure.
+Many data catalogs capture information about data stores, data sets, APIs and topics.  These [digital resources](/concepts/digital-resource) provide access to data and reusable function which is why they are of interest.  These resources run on IT infrastructure.
 
 ![UML](0045-Servers-and-Assets.svg)
 

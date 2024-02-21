@@ -12,7 +12,7 @@ The numbers on the diagram refer to these notes:
 
 2. Many of Egeria's *Java clients* provide the mechanism to register a listener with a [topic](/concepts/basic-concepts/#topic) that an Egeria service is publishing notifications to.  This removes all requirements for the consuming Java application to interact with the [event bus](/concepts/event-bus) technology.
 
-3. Some of Egeria's *Java clients* also support the creation of [digital resource connectors](/concepts/digital-resource-connector) that can access the content of [digital resources](/concepts/resource) along with the [metadata about the digital resource](/concepts/asset).
+3. Some of Egeria's *Java clients* also support the creation of [digital resource connectors](/concepts/digital-resource-connector) that can access the content of [digital resources](/concepts/digital-resource) along with the [metadata about the digital resource](/concepts/asset).
 
 4. For applications that are not written in Java, it is possible to call Egeria directly through its *REST APIs*, and access Egeria's notifications by connecting directly to the topics on the *event bus*.
     

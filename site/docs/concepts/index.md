@@ -88,6 +88,7 @@
 - [Design Model OMAS](/services/omas/design-model/overview)
 - [DevOps OMAS](/services/omas/dev-ops/overview)
 - [Digital Architecture OMAS](/services/omas/digital-architecture/overview)
+- [Digital Resource](/concepts/digital-resource)
 - [Digital Resource Connector](/concepts/digital-resource-connector)
 - [Digital Service](/practices/digital-services/overview)
 - [Digital Service OMAS](/services/omas/digital-service/overview)

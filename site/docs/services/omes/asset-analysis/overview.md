@@ -18,7 +18,7 @@ The Asset Analysis OMES provides support for [open discovery engines](/concepts/
 
 An open discovery engine hosts [automated metadata discovery](/features/discovery-and-stewardship/overview).
 
-The Asset Analysis OMES is capable of hosting one or more [open discovery engines](/concepts/open-discovery-engine) and supports a REST API to request that an open discovery engine runs an [open discovery service](/guides/developer/open-discovery-services/overview) to analyse a [digital resource](/concepts/resource). The results of this analysis is a [discovery analysis report](/concepts/discovery-analysis-report) that is attached to the resource's [asset](/concepts/asset).
+The Asset Analysis OMES is capable of hosting one or more [open discovery engines](/concepts/open-discovery-engine) and supports a REST API to request that an open discovery engine runs an [open discovery service](/guides/developer/open-discovery-services/overview) to analyse a [digital resource](/concepts/digital-resource). The results of this analysis is a [discovery analysis report](/concepts/discovery-analysis-report) that is attached to the resource's [asset](/concepts/asset).
 
 The REST API also supports a request to a discovery engine to run a specific open discovery service against each asset it has access to.
 

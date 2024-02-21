@@ -3,7 +3,7 @@
 
 # Metadata discovery and stewardship
 
-Metadata discovery is an automated process that extracts metadata about a [digital resource](/concepts/resource). This metadata may be:
+Metadata discovery is an automated process that extracts metadata about a [digital resource](/concepts/digital-resource). This metadata may be:
 
 * embedded within the asset (for example a digital photograph has embedded metadata), or
 * managed by the platform that is hosting the asset (for example, a relational database platform maintains schema information about the data store in its databases), or

@@ -17,7 +17,7 @@
 ## Overview
 
 The Asset Consumer OMAS provides services to an individual who wants to work
-with [digital resources](/concepts/resource) such as:
+with [digital resources](/concepts/digital-resource) such as:
 
 * data stores, data sets and data feeds
 * reports
@@ -43,7 +43,7 @@ The connectors returned by the Asset Consumer OMAS are [Open Connector Framework
 
 ## User Guide
 
-The Asset Consumer OMAS is designed for use by an application that is accessing data sources and services through [connectors](/concepts/connector). These data sources and services are called [digital resources](/concepts/resource).  Digital resources are represented in open metadata as [Assets](/concepts/asset), hence the name of this OMAS is **Asset Consumer**.
+The Asset Consumer OMAS is designed for use by an application that is accessing data sources and services through [connectors](/concepts/connector). These data sources and services are called [digital resources](/concepts/digital-resource).  Digital resources are represented in open metadata as [Assets](/concepts/asset), hence the name of this OMAS is **Asset Consumer**.
 
 Typically, the first action to take is to [create the connector](#creating-a-connector-for-application-use) to get [access to the asset content and its properties](#working-with-connectors). Connectors are created from
 [Connection](/concepts/connection) objects. Connection objects can be created by the calling application, or stored in one of the open metadata repositories that are accessible to the Asset Consumer OMAS.

@@ -13,7 +13,7 @@ The effort required to author and maintain a these standards, plus the governanc
 
 * [Subject Areas](/concepts/subject-area) define the standards for your resources and their use. They cover resources that are widely shared across the organization and there is business value in maintaining consistency.
 * Each subject area has an owner who is responsible for coordinating the development and maintenance of the subject area's materials.
-* [Resources](/concepts/resource) that are managed using the subject area's materials are said to be part of the subject area's "domain".  This is called the *Subject Area Domain* and is synonymous with *Data Domain* - although since a subject area domain may manage resources that are not just data assets (such as systems and infrastructure), open metadata uses a more generic name.
+* [Digital Resources](/concepts/digital-resource) that are managed using the subject area's materials are said to be part of the subject area's "domain".  This is called the *Subject Area Domain* and is synonymous with *Data Domain* - although since a subject area domain may manage resources that are not just data assets (such as systems and infrastructure), open metadata uses a more generic name.
 
 --8<-- "docs/practices/common-data-definitions/semantic-to-implementation.md"
 

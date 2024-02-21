@@ -78,7 +78,7 @@
 
 ??? info "Schemas and assets"
 
-    An [asset](/concepts/asset) describes a valuable [resource](/concepts/resource) (typically digital).  Such resources include databases, data files, documents, APIs, data feeds, and applications. A digital resource can be dependent on other digital resource to fulfill their implementation.  This relationship is also captured in open metadata with relationships such as [DataContentForDataSet](/types/2/0210-Data-Stores).  These relationships help to highlight inconsistencies in the assets' linkage to the subject area's materials, which may be due to errors in either the metadata or the implementation/deployment/use of the associated digital resources.
+    An [asset](/concepts/asset) describes a valuable [digital resource](/concepts/digital-resource).  Such resources include databases, data files, documents, APIs, data feeds, and applications. A digital resource can be dependent on other digital resource to fulfill their implementation.  This relationship is also captured in open metadata with relationships such as [DataContentForDataSet](/types/2/0210-Data-Stores).  These relationships help to highlight inconsistencies in the assets' linkage to the subject area's materials, which may be due to errors in either the metadata or the implementation/deployment/use of the associated digital resources.
 
     ![Figure 5](/practices/common-data-definitions/semantic-to-implementation-assets-and-schemas-dependencies.svg)
     > Figure 5: Dependencies between digital resources are reflected in open metadata by relationships between assets

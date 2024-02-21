@@ -57,7 +57,7 @@ This is built on an [extensible type system](/types) that allows further informa
     
     ![Basic asset properties](basic-asset-properties.svg)
      
-    Each instance of a [resource](/concepts/resource), no matter what its physical type, is represented by a [type of asset](/concepts/asset) in the catalog.
+    Each instance of a [digital resource](/concepts/digital-resource), no matter what its physical type, is represented by a [type of asset](/concepts/asset) in the catalog.
      
     Every asset contains the following properties:
     

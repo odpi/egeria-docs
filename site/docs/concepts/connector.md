@@ -8,7 +8,7 @@ hide:
 
 # Connector
 
-A connector is a client library for accessing a [resource](/concepts/resource) and, optionally, its associated [asset](/concepts/asset) metadata.
+A connector is a client library for accessing a [digital resource](/concepts/digital-resource) and, optionally, its associated [asset](/concepts/asset) metadata.
 
 The concept of a connector comes from the [Open Connector Framework (OCF)](/frameworks/ocf/overview). The OCF provides a common framework for components (ie connectors) that enable one technology to call another, arbitrary technology through a common interface. The implementation of the connector is dynamically loaded based on the connector's configuration.
 

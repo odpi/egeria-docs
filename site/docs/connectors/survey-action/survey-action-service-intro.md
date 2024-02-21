@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-An *survey-action service* is a component that performs analysis of the contents of a [digital resource](/concepts/resource) on request.  The aim of the survey action service is to enable a detailed picture of the properties of a resource to be built up.
+An *survey-action service* is a component that performs analysis of the contents of a [digital resource](/concepts/digital-resource) on request.  The aim of the survey action service is to enable a detailed picture of the properties of a resource to be built up.
 
 Each time a survey action service runs, it creates a new [survey report](/concepts/survey-report) linked off of the digital resource's [Asset](/concepts/asset) metadata element that records the results of the analysis.  
 

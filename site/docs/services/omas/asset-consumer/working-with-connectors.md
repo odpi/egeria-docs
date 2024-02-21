@@ -3,7 +3,7 @@
 
 ### Working with connectors
 
-An **open connector** is a Java client to a [digital resource](/concepts/resource) that implements the **Connector** interface defined in the [Open Connector Framework (OCF)](/frameworks/ocf/overview). It has 2 parts to its interface:
+An **open connector** is a Java client to a [digital resource](/concepts/digital-resource) that implements the **Connector** interface defined in the [Open Connector Framework (OCF)](/frameworks/ocf/overview). It has 2 parts to its interface:
 
 - The specialized interface to work with the specific contents of the resource.  For example, if the connector was for data stored in a relational database, this interface would probably follow the 
   [Java Database Connectivity (JDBC)](https://en.wikipedia.org/wiki/Java_Database_Connectivity) specification.  The documentation for this interface is found with the specific connector. 

@@ -10,7 +10,7 @@ hide:
 
 A *discovery analysis report* contains one or more sets of related properties that an [open discovery service](/concepts/open-discovery-service) has discovered about the resource, its metadata, structure and/or content. These are stored in a set of [discovery annotations](#discovery-annotations) linked off of the discovery analysis report.
 
-It is attached to the [asset](/concepts/asset) for the [digital resource](/concepts/resource) that was analysed.  Overtime, the discovery analysis reports show how the digital resource's contents are changing.
+It is attached to the [asset](/concepts/asset) for the [digital resource](/concepts/digital-resource) that was analysed.  Overtime, the discovery analysis reports show how the digital resource's contents are changing.
 
 ![Asset with discovery analysis reports](/guides/developer/open-discovery-services/asset-to-discovery-analysis-reports.svg)
 

@@ -31,7 +31,7 @@ Detected errors are [captured as exceptions](#correction-of-data) and routed to 
 
 The management of data quality involves:
 
-* [Understanding the source data values](#understanding-data-values) - Analysing the content of a [data resource](/concepts/resource), typically running [open discovery services](/features/discovery-and-stewardship/overview), to get an assessment of the data values it contains. This may be simple fact gathering using *data profiling* or executing *quality rules* to determine how well it fits to the data specifications needed for its different purposes.
+* [Understanding the source data values](#understanding-data-values) - Analysing the data content of a [digital resource](/concepts/digital-resource), typically running [survey action services](/features/discovery-and-stewardship/overview), to get an assessment of the data values it contains. This may be simple fact gathering using *data profiling* or executing *quality rules* to determine how well it fits to the data specifications needed for its different purposes.
 
 * [Adding context to the data](#adding-context-to-the-data) - Using the findings from the open discovery service to assign additional classifications and links that help to identify the data as fit for the different purposes.  This assignment may be by an automated process or human curation and ensures the data resource will appear in the search results of related data catalog queries.
   

@@ -8,7 +8,7 @@ hide:
 
 # Open Discovery Engines
 
-An *open discovery engine* describes a set of related [open discovery services](/guides/developer/open-discovery-services/overview). Each open discovery service implements a specific type of analysis.  This analysis is looking into the content of a [digital resource](/concepts/resource) and storing its findings in annotations within a [discovery analysis report](/concepts/discovery-analysis-report) that is linked of the resource's [Asset](/concepts/asset) in the metadata repository.
+An *open discovery engine* describes a set of related [open discovery services](/guides/developer/open-discovery-services/overview). Each open discovery service implements a specific type of analysis.  This analysis is looking into the content of a [digital resource](/concepts/digital-resource) and storing its findings in annotations within a [discovery analysis report](/concepts/discovery-analysis-report) that is linked of the resource's [Asset](/concepts/asset) in the metadata repository.
 
 An open discovery engine is hosted in the [Asset Analysis Open Metadata Engine Service (OMES)](/services/omes/asset-analysis/overview) running on one or more [Engine Host OMAG Servers](/concepts/engine-host).
 

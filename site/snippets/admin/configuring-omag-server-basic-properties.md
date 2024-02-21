@@ -44,7 +44,7 @@ Alternatively, you can set these properties one at a time.
     POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-user-password?password="{{serverUserPassword}}"
     ```
 
-!!! post "setMaxPageSize"
+??? post "setMaxPageSize"
     The maximum page size value sets an upper limit on the number of results that a caller can request on any paging REST API to this server. Setting maximum page size helps to prevent a denial of service attack that uses very large requests to overwhelm the server. A value of `0` means no limit, and leaves the server open to such attacks.
     ```
     POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/max-page-size?limit={{maxPageSize}}
@@ -52,5 +52,8 @@ Alternatively, you can set these properties one at a time.
 
 ### Retrieving a server's basic properties
 
+It is possible to retrieve the basic server properties to verify the values they are set to.
+
+--8<-- "snippets/admin/calls/get-basic-server-properties.md"
 
 

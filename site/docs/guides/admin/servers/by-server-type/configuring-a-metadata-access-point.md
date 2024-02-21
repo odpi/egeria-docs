@@ -1,26 +1,13 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-# Configuring a [metadata access point](/concepts/metadata-access-point)
+# Configuring a Metadata Access Point
 
-A *Metadata Access Point* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the server's configuration document.
+A [Metadata Access Point](/concepts/metadata-access-point) provides [Open Metadata Access Services (OMASs)](/services/omas) to [Governance Servers](/concepts/governance-server) and [View Servers](/concepts/view-server).  It does not have its own local metadata repository and so needs to connect to an [open metadata repository cohort](/concepts/cohort-member) to get access to the open metadata repositories.
 
-For a metadata access point, the following can be configured:
+![Configuration document for a metadata access point](/concepts/metadata-access-point.svg)
 
-![Configuration document for a metadata access point](metadata-access-point-config.svg)
-
-??? info "Configuring the default values used in subsequent configuration commands"
-    --8<-- "snippets/admin/configuring-event-bus.md"
-    --8<-- "snippets/admin/configuring-local-server-url.md"
-
-??? info "Configuring the basic properties"
-    --8<-- "snippets/admin/configuring-omag-server-basic-properties.md"
-
-??? info "Configuring the audit log"
-    --8<-- "snippets/admin/configuring-the-audit-log.md"
-
-??? info "Configuring the server security connector"
-    --8<-- "snippets/admin/configuring-the-server-security-connector.md"
+--8<-- "snippets/admin/configuring-standard-sections.md"
 
 ??? info "Registering the server with a cohort"
     --8<-- "snippets/admin/configuring-registration-to-a-cohort.md"

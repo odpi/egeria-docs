@@ -5,20 +5,9 @@
 
 A *Repository Proxy* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the server's configuration document.
 
-![Configuration for a repository proxy](repository-proxy-config.svg)
+![Configuration for a repository proxy](/concepts/repository-proxy.svg)
 
-??? info "Configuring the default values used in subsequent configuration commands"
-    --8<-- "snippets/admin/configuring-event-bus.md"
-    --8<-- "snippets/admin/configuring-local-server-url.md"
-
-??? info "Configuring the basic properties"
-    --8<-- "snippets/admin/configuring-omag-server-basic-properties.md"
-
-??? info "Configuring the audit log"
-    --8<-- "snippets/admin/configuring-the-audit-log.md"
-
-??? info "Configuring the server security connector"
-    --8<-- "snippets/admin/configuring-the-server-security-connector.md"
+--8<-- "snippets/admin/configuring-standard-sections.md"
 
 ??? info "Registering the server with a cohort"
     --8<-- "snippets/admin/configuring-registration-to-a-cohort.md"

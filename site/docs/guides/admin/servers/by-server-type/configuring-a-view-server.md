@@ -3,20 +3,13 @@
 
 # Configuring a View Server
 
-A *[View Server](/concepts/view-server)* is configured by creating a [configuration document](/concepts/configuration-document).  Below is the outline structure of the server's configuration document.
+A *[View Server](/concepts/view-server)* provides REST APIs to user Interfaces and non-Java environments.  Its configuration need knowledge of the [Metadata Access Server](/concepts/metadata-access-server)
 
-![Configuration for a view server](view-server-config.svg)
+![Configuration for a view server](/concepts/view-server.svg)
 
-??? info "Configuring the basic properties"
-    --8<-- "snippets/admin/configuring-omag-server-basic-properties.md"
+--8<-- "snippets/admin/configuring-standard-sections.md"
 
-??? info "Configuring the audit log"
-    --8<-- "snippets/admin/configuring-the-audit-log.md"
-
-??? info "Configuring the server security connector"
-    --8<-- "snippets/admin/configuring-the-server-security-connector.md"
-
-??? info "Configuring the view services"
+??? info "Configuring the Open Metadata View Services (OMVS)"
     --8<-- "snippets/admin/configuring-the-view-services.md"
 
 --8<-- "snippets/abbr.md"

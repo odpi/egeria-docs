@@ -5,9 +5,7 @@
 
 This section is only relevant when configuring an [integration daemon](/concepts/integration-daemon).
 
---8<-- "snippets/admin/configuring-the-integration-groups.md"
-
---8<-- "snippets/admin/configuring-the-integration-services.md"
+--8<-- "snippets/admin/configuring-the-integration-daemon-services.md"
 
 
 --8<-- "snippets/abbr.md"

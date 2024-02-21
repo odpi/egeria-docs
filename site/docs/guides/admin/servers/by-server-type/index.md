@@ -7,7 +7,7 @@ The configuration document controls that startup of services as an [OMAG Server]
 
 The configuration document is divided into sections.  Some sections contain properties that are needed by all [types of servers](/concepts/omag-server/#types-of-omag-server) and others are specialized for a particular type of server.  The guides that follow show which services are relevant for each type of server and how to configure them.
 
-![Different types of Server](/concepts/types-of-omag-servers.svg)
+![Different types of Server](configuration-document-structure-by-server-type.svg)
 
 
 * [Metadata Access Store](configuring-a-metadata-access-store.md) - this is a metadata server.  It has a metadata repository and REST APIs to access and maintain the metadata.  It may also send metadata change notifications over an event bus such as Apache Kafka and be a member of an [open metadata repository cohort](/concepts/cohort-member).
@@ -23,4 +23,4 @@ The configuration document is divided into sections.  Some sections contain prop
 
 This is how these types of servers work together.
 
-![Connected OMAG Servers](/introduction/egeria-solution-components)
+![Connected OMAG Servers](/introduction/egeria-solution-components.svg)

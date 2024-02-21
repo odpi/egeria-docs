@@ -8,20 +8,9 @@ A *[Metadata Access Store](/concepts/metadata-access-store)* provides a metadata
 is configured by creating a [configuration document](/concepts/configuration-document). Below are the outline structures of the server's configuration document.
 
 
-![Configuration document for a metadata access store](metadata-access-store-config.svg)
+![Configuration document for a metadata access store](/concepts/metadata-access-store.svg)
 
-??? info "Configuring the default values used in subsequent configuration commands"
-    --8<-- "snippets/admin/configuring-event-bus.md"
-    --8<-- "snippets/admin/configuring-local-server-url.md"
-
-??? info "Configuring the basic properties"
-    --8<-- "snippets/admin/configuring-omag-server-basic-properties.md"
-
-??? info "Configuring the audit log"
-    --8<-- "snippets/admin/configuring-the-audit-log.md"
-
-??? info "Configuring the server security connector"
-    --8<-- "snippets/admin/configuring-the-server-security-connector.md"
+--8<-- "snippets/admin/configuring-standard-sections.md"
 
 ??? info "Configuring the local repository store"
     --8<-- "snippets/admin/configuring-the-local-repository.md"

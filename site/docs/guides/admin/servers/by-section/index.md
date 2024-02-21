@@ -9,7 +9,7 @@ The configuration document is divided into sections.  Some sections contain prop
 
 ![Configuration Document Structure](configuration-document-structure.svg)
 
-* The [*LocalServerId*](#local-server-id), [*LocalServerName*](#local-server-name), [*Local Server Type*](#local-server-type) and [*Audit Trail*](#audit-trail) properties are managed by Egeria and you do not need to configure them.
+* The *LocalServerId*, *LocalServerName*, *Local Server Type* and *Audit Trail* properties are [managed by Egeria](egeria-managed-properties.md) and you do not need to configure them.
 * The [*Event Bus Config*](event-bus-config-section.md) is used to provide standard information about the event bus (typically Apache Kafka) that is used in each section that configures a service that is sending notifications over the event bus.
 * The [*Basic Server Properties*](basic-server-properties-section.md) provides the standard properties of a server such as its user identifier and password.
 * The [*Server Security Connection*](server-security-connection-section.md) provides the information needed to enable fine-grained metadata authorization checks.
@@ -22,20 +22,5 @@ The configuration document is divided into sections.  Some sections contain prop
 * The [*Data Engine Proxy Services*](data-engine-proxy-services-section.md) define the properties of a [data engine proxy server](/concepts/data-engine-proxy) server.
 
 
-## Local Server Id
-
-The localServerId is a unique identifier for the server, it is used when accessing resource that require their callers to supply a unique identifier.  For example, when an OMAG server is accessing an Apache Kafka topic, it needs to reliably identify itself with a callerId so that the Kafka server knows which events it has received and which it has not.  The localServerId is used for this purpose when accessing the [open metadata repository cohort topics](/concepts/cohort-events) for example.
-
-## Local Server Name
-
-The localServerName is a unique name for the server.  This is a name you choose, and the administration services maintains the name in the configuration document.
-
-## Local Server Type
-
-The local server type is a classification of the type of the server based on the sections of the configuration document that have been configured.  Leave it blank and Egeria will fill it in on server start up.  There is also an administration call to query the type of server using the following call:
-
-
-
-## Audit Trail
 
 --8<-- "snippets/abbr.md"

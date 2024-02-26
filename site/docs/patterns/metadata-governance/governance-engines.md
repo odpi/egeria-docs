@@ -55,7 +55,7 @@ A governance action process can be run many times with different parameters.  It
 If a desired request type can not be supported by the existing governance services, a developer is asked to extend a governance service implementation or create a new one that can be configured into a governance engine to support the desired governance request type.
 
 ??? example "Governance services supplied with Egeria"
-    * [Governance Action Services](/connectors/#governance-action-services)
-    * [Open Discovery Services](/connectors/#open-discovery-services)
-    * [Repository Governance Services](/connectors/#repository-governance-services)
+    * [Governance Action Services](/concepts/governance-action-service)
+    * [Survey Action Services](/concept/survey-action-service)
+    * [Repository Governance Services](/concepts/repository-governance-service)
 

@@ -8,7 +8,7 @@ hide:
 
 # 0424 Governance Zones
 
-A **GovernanceZone** describes a collection of Assets that are used, or processed in a specific way.
+A **GovernanceZone** entity describes a collection of Assets that are used, or processed in a specific way.
 The governance zone definitions define the governance zones in use in the organization and
 how they are used.  It is possible to then attach governance policies and controls to the zone
 definitions using the [GovernedBy](0401-Governance-Definitions.md) relationship to show how assets assigned

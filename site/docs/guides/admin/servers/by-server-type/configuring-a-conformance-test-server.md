@@ -9,7 +9,6 @@ A *Conformance Test Server* is configured by creating a [configuration document]
 
 ??? info "Configuring the default values used in subsequent configuration commands"
     --8<-- "snippets/admin/configuring-event-bus.md"
-    --8<-- "snippets/admin/configuring-local-server-url.md"
 
 ??? info "Configuring the basic properties"
     --8<-- "snippets/admin/configuring-omag-server-basic-properties.md"

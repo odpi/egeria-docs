@@ -14,7 +14,7 @@ It is used to distribute the governance engine function to different metadata ec
 
     * [Building Governance Engine Packs](/guides/developer/open-metadata-archives/creating-governance-engine-packs)
     * [Building Governance Action Services](/guides/developer/governance-action-services/overview)
-    * [Building Open Discovery Services](/guides/developer/open-discovery-services/overview)
+    * [Building Survey Action Services](/guides/developer/survey-action-services/overview)
     * [Building Repository Governance Services](/guides/developer/repository-governance-services/overview)
 
 --8<-- "snippets/abbr.md"

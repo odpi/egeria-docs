@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-02-20T09:47:06.431Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="5rrBPv3bTDApPCq9GKpw" version="23.0.2" type="device" pages="25">
+<mxfile host="Electron" modified="2024-02-26T10:27:55.118Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="O-n8OwH25EDXgnCBQjwp" version="23.0.2" type="device" pages="26">
   <diagram id="zwH0E6yuSuxNEa-D1nxI" name="compare-use-of-connectors">
-    <mxGraphModel dx="1242" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="YbopbjHzWyyc6AShLxuW-0" />
         <mxCell id="YbopbjHzWyyc6AShLxuW-1" parent="YbopbjHzWyyc6AShLxuW-0" />
@@ -2325,7 +2325,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="governance-action-open-lineage-integration-connector" id="zrJ-85LRO9nVczTC2bUZ">
-    <mxGraphModel dx="932" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="FvNNMmRPRf4BgWETpdXZ-0" />
         <mxCell id="FvNNMmRPRf4BgWETpdXZ-1" parent="FvNNMmRPRf4BgWETpdXZ-0" />
@@ -2854,7 +2854,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="origin-seeker-remediation-governance-action-service" id="4t7_JryA3s-n8Jf-6Bta">
-    <mxGraphModel dx="932" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="eZo1w2hgIM4zIaZ_KdS4-0" />
         <mxCell id="eZo1w2hgIM4zIaZ_KdS4-1" parent="eZo1w2hgIM4zIaZ_KdS4-0" />
@@ -2879,7 +2879,7 @@
         <mxCell id="eZo1w2hgIM4zIaZ_KdS4-3" value="Governance Action OMES" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="124" y="190" width="206" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="eZo1w2hgIM4zIaZ_KdS4-4" value="Origin Seeker&lt;br&gt;Remediation&lt;br&gt;Governance Action&lt;br&gt;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+        <mxCell id="eZo1w2hgIM4zIaZ_KdS4-4" value="Origin Seeker&lt;br&gt;Governance Action&lt;br&gt;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="150" y="225" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="eZo1w2hgIM4zIaZ_KdS4-5" value="Metadata Access Server" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
@@ -2938,17 +2938,17 @@
         <mxCell id="mAE13Ri7Y4i1FjvjkdJD-25" value="Source Asset" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="120.5" y="820" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-32" value="Lineage Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
-          <mxGeometry x="240" y="560" width="110" height="20" as="geometry" />
+        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-32" value="Lineage&lt;br&gt;relationship" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+          <mxGeometry x="255" y="550" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-33" value="Lineage Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
-          <mxGeometry x="471.5" y="560" width="110" height="20" as="geometry" />
+        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-33" value="Lineage&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationship" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+          <mxGeometry x="486.5" y="550" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-34" value="Lineage Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
-          <mxGeometry x="240.5" y="730" width="110" height="20" as="geometry" />
+        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-34" value="Lineage&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationship" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+          <mxGeometry x="255.5" y="720" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-35" value="Lineage Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
-          <mxGeometry x="471.5" y="730" width="110" height="20" as="geometry" />
+        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-35" value="Lineage&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationship" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+          <mxGeometry x="486.5" y="720" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mAE13Ri7Y4i1FjvjkdJD-36" value="Origin 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="90" y="545" width="70" height="30" as="geometry" />
@@ -2994,11 +2994,11 @@
         <mxCell id="mAE13Ri7Y4i1FjvjkdJD-49" value="Source Asset" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="120" y="1030" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-50" value="Lineage Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
-          <mxGeometry x="240" y="940" width="110" height="20" as="geometry" />
+        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-50" value="Lineage&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationship" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+          <mxGeometry x="255" y="930" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-51" value="Lineage Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
-          <mxGeometry x="471" y="940" width="110" height="20" as="geometry" />
+        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-51" value="Lineage&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationship" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+          <mxGeometry x="486" y="930" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mAE13Ri7Y4i1FjvjkdJD-52" value="Origin 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="89.5" y="920" width="70" height="30" as="geometry" />
@@ -3038,11 +3038,11 @@
         <mxCell id="mAE13Ri7Y4i1FjvjkdJD-67" value="Source Asset" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="116.75" y="1240" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-68" value="Lineage Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
-          <mxGeometry x="236.75" y="1150" width="110" height="20" as="geometry" />
+        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-68" value="Lineage&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationship" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+          <mxGeometry x="251.75" y="1140" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-69" value="Lineage Mapping" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
-          <mxGeometry x="467.75" y="1150" width="110" height="20" as="geometry" />
+        <mxCell id="mAE13Ri7Y4i1FjvjkdJD-69" value="Lineage&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;relationship" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
+          <mxGeometry x="482.75" y="1140" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mAE13Ri7Y4i1FjvjkdJD-72" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;guard=no-origins-detected&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="730" y="1160" width="150" height="30" as="geometry" />
@@ -3052,6 +3052,35 @@
         </mxCell>
         <mxCell id="mAE13Ri7Y4i1FjvjkdJD-41" value="Origin 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="eZo1w2hgIM4zIaZ_KdS4-1" vertex="1">
           <mxGeometry x="612.5" y="648" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="zone-publisher-governance-action-service" id="9SQTnUom9DGQNNtnzSLL">
+    <mxGraphModel dx="1242" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="7eAxQNGextr1V_H_AGkV-0" />
+        <mxCell id="7eAxQNGextr1V_H_AGkV-1" parent="7eAxQNGextr1V_H_AGkV-0" />
+        <mxCell id="7eAxQNGextr1V_H_AGkV-7" value="Engine Host" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="7eAxQNGextr1V_H_AGkV-1">
+          <mxGeometry x="100" y="100" width="250" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="7eAxQNGextr1V_H_AGkV-8" value="Governance Action OMES" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="7eAxQNGextr1V_H_AGkV-1">
+          <mxGeometry x="124" y="190" width="206" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="7eAxQNGextr1V_H_AGkV-9" value="Zone Publisher&lt;br&gt;Governance Action&lt;br&gt;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="7eAxQNGextr1V_H_AGkV-1">
+          <mxGeometry x="150" y="225" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7eAxQNGextr1V_H_AGkV-10" value="Metadata Access Server" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="7eAxQNGextr1V_H_AGkV-1">
+          <mxGeometry x="441" y="100" width="250" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="7eAxQNGextr1V_H_AGkV-12" value="Governance Engine OMAS" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="7eAxQNGextr1V_H_AGkV-1">
+          <mxGeometry x="463" y="220" width="206" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="7eAxQNGextr1V_H_AGkV-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="7eAxQNGextr1V_H_AGkV-1" source="7eAxQNGextr1V_H_AGkV-8" target="7eAxQNGextr1V_H_AGkV-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7eAxQNGextr1V_H_AGkV-14" value="add zone&lt;br&gt;membership" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="7eAxQNGextr1V_H_AGkV-1">
+          <mxGeometry x="351" y="270" width="90" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

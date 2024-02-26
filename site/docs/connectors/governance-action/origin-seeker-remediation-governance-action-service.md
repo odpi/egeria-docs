@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-# Origin Seeker Remediation Governance Action Service
+# Origin Seeker Governance Action Service
 
 !!! info "Connector summary"
 
@@ -13,12 +13,12 @@
     - Jar File Name: `governance-action-connectors.jar`
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.connectors.governanceactions.remediation.OriginSeekerGovernanceActionProvider`
     
-An asset may have an origin classification attached that documents various properties about its origin.  The *Origin Seeker* Remediation Governance Action Service sets up the origin classification on an asset by navigating backwards through the lineage relationships to locate origin classifications attached to the assets in the lineage graph.  
+An asset may have an origin classification attached that documents various properties about its origin.  The *Origin Seeker* Governance Action Service sets up the origin classification on an asset by navigating backwards through the lineage relationships to locate origin classifications attached to the assets in the lineage graph.  
 
 ![Figure 1](origin-seeker-remediation-governance-action-service.svg)
-> **Figure 1:** Operation of the origin seeker remediation governance action service
+> **Figure 1:** Operation of the Origin Seeker governance action service
 
-Origin seeker is only able to assign an origin to the asset if at least on of the assets in its lineage has an origin classification, and where there are multiple assets.  If one (and only one) is found, it is assigned to the action target asset.
+*Origin Seeker* is only able to assign an origin to the asset if at least on of the assets in its lineage has an origin classification, and where there are multiple assets.  If one (and only one) is found, it is assigned to the action target asset.
 
 Figure 2 shows a simple example of origin seeker finding an origin in a no-branching lineage graph.
 
@@ -42,9 +42,7 @@ Finally the origin is not assigned because there are no origin classifications i
 
 ## Configuration
 
-This connector uses the [Governance Action OMES](/services/omes/governance-action/overview) running in the [Engine Host](/concepts/engine-host).
-
-This is its connection definition to use when creating the definition of the governance action service using the [Governance Engine OMAS](/services/omas/governance-engine/overview). Note that is does not use configuration properties. 
+This is *Origin Seeker*'s connection definition to use when creating the definition of the governance action service using the [Open Governance Services](/services/gaf-metadata-management). Note that is does not use configuration properties. 
 
 
 ```json
@@ -81,7 +79,7 @@ These are the responses that origin seeker produces:
 - `CompletionStatus.ACTIONED` with guard `origin-already-assigned` if the asset already has an origin set up.
 - `CompletionStatus.INVALID` with guard `multiple-origins-detected` if multiple, different origins are detected in the lineage graph.
 - `CompletionStatus.INVALID` with guard `no-origins-detected` if no origin classifications are found in the lineage graph. 
-- `CompletionStatus.FAILED` with guard `no-targets-detected` if there is no asset set up as an action target.
+- `CompletionStatus.INVALID` with guard `no-targets-detected` if there is no asset set up as an action target.
 - `CompletionStatus.FAILED` with guard `multiple-targets-detected` if there are multiple assets set up as action targets.
 - `CompletionStatus.FAILED` with guard `origin-seeking-failed` for an unrecoverable error such as a not authorized response from the metadata repository.
 

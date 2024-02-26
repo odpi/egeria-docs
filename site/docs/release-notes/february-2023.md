@@ -77,7 +77,7 @@ This webinar takes you through Tom's journey to set up and operate Coco Pharmace
 
 * Presenters: Mandy Chessell and Dan Wolfson
 * Time: 15:00 UTC
-* [Zoom Conference Link](https://zoom.us/j/523629111)
+* [Zoom Conference Link](https://zoom-lfx.platform.linuxfoundation.org/meeting/92563720721?password=6812f50c-c1a6-4d07-ad6d-7aa63e793285)
 
 ### Community meetings
 

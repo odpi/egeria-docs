@@ -7,20 +7,12 @@ A governance service is a specialized [connector](/concepts/connector) that impl
 
 --8<-- "docs/concepts/governance-service-types.md"
 
-## Catalog of governance services
-
-* [Open Discovery Service Catalog](/connectors/#open-discovery-services)
-* [Governance Action Service Catalog](/connectors/#governance-action-services)
-* [Event Action Catalog](/connectors/#event-action-services)
-* [Repository Governance Catalog](/connectors/#repository-governance-services)
-
 ## Implementing your own governance services
 
 Instructions for implementing your own governance services are in the developer guide under the following sections: 
 
-* [Writing Open Discovery Services](/guides/developer/open-dicovery-services/overview)
 * [Writing Governance Action Services](/guides/developer/governance-action-services/overview)
-* [Writing Engine Action Services](/guides/developer/engine-action-services/overview)
+* [Writing Survey Action Services](/guides/developer/survey-action-services/overview)
 * [Writing Repository Governance Services](/guides/developer/repository-governance-services/overview)
 
 ## Support for running governance services

@@ -32,7 +32,7 @@ the lineage may be turned on or off.
 > **Figure 1:** Operation of the move/copy file provisioning governance action service
 
 If lineage is requested, it includes adding a new [DataFile](/types/2/0220-Files-and-Folders)
-asset for the new file in the destination folder and creating [LineageMapping](/types/7/0770-Lineage-Mapping)
+asset for the new file in the destination folder and creating [DataFlow](/types/7/0750-Data-Passing)
 relationships between the process that represents this governance action service and both the
 asset for the original source file and as well as the destination.
 There are four choices for lineage:
@@ -82,11 +82,7 @@ may be triggered.
 
 ## Configuration
 
-This connector uses the [Governance Action OMES](/services/omes/governance-action/overview)
-running in the [Engine Host](/concepts/engine-host).
-
-The following configuration properties can be set to control
-the behavior of the service on every instance.
+The following configuration properties can be set to control the behavior of the service on every instance.
 
 - **provisionUncataloguedFiles** - if this property is set to any value, the service may work with files that are not catalogued
   in open metadata.  This is used when processing files that are entering the open metadata ecosystem.
@@ -99,21 +95,17 @@ the behavior of the service on every instance.
   governance action service) with the value that this property is set to.
   
 - **lineageWithTopLevelProcessOnly** - if this property is set, lineage mappings are connected to the top level process representing
-  this 
+  this governance action service.
 
 - **lineageToDestinationFolderOnly** - if this property is set, the lineage relationship from the
   governance action service to the destination is linked to the destination folder rather than the new file in the destination folder.
-  Without this value, the default behavior is to show lineage from governance action process to file.
+  Without this value, the default behavior is to show lineage from governance action process to the destination file.
   
 - **lineageFromSourceFolderOnly** - if this property is set, the lineage relationship from the source to the
   governance action service is linked from the source folder rather than the source file.
   Without this value, the default behavior is to show lineage from source file to governance action process.  
 
-This is its connection definition to use when
-creating the definition of the governance action service
-using the [Governance Engine OMAS](/services/omas/governance-engine).
-Remove the configuration properties that are not required.
-Replace `{processName}` and `{pattern}` as required. 
+This is its connection definition to use when creating the definition of the governance action service using the [Open Governance Service](/services/gaf-metadata-management). Remove the configuration properties that are not required. Replace `{{processName}}` and `{{pattern}}` as required. 
 
 
 ```json
@@ -128,9 +120,9 @@ Replace `{processName}` and `{pattern}` as required.
                       "configurationProperties": 
                       {
                               "provisionUncataloguedFiles": "",
-                              "targetFileNamePattern": "{pattern}",
+                              "targetFileNamePattern": "{{pattern}}",
                               "noLineage": "",
-                              "processName": "{processName}",
+                              "processName": "{{processName}}",
                               "lineageWithTopLevelProcessOnly": "",
                               "lineageToDestinationFolderOnly": "",
                               "lineageFromSourceFolderOnly": ""

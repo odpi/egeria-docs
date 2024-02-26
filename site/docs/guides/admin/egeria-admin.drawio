@@ -1,4 +1,4 @@
-<mxfile modified="2024-02-21T10:27:52.875Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="73Uvxej7EESQ_QWqTBPh" version="23.0.2" type="device" pages="31">
+<mxfile modified="2024-02-21T14:45:37.756Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="yvqGwLA3B9GlrzpIAw0i" version="23.0.2" type="device" pages="31">
   <diagram name="Copy of Copy of Copy of egeria-overview" id="2Hlk_9TTMVKivneDpeGb">
     <mxGraphModel dx="2069" dy="1992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -3088,7 +3088,7 @@
         <mxCell id="74L_0oyxRFO4OucVp1ci-6" value=":&lt;br style=&quot;font-size: 17px;&quot;&gt;:&lt;br style=&quot;font-size: 17px;&quot;&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontStyle=1;fontSize=17;" parent="1" vertex="1">
           <mxGeometry x="265" y="340" width="20" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="74L_0oyxRFO4OucVp1ci-7" value="OMAG Server Platform" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;shadow=1;" parent="1" vertex="1">
+        <mxCell id="74L_0oyxRFO4OucVp1ci-7" value="OMAG Server Runtime" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="-20" y="170" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="74L_0oyxRFO4OucVp1ci-8" value="OMAG Server" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#ffa500;fillColor=#ffcd28;strokeColor=#d79b00;" parent="1" vertex="1">
@@ -3109,8 +3109,8 @@
         <mxCell id="74L_0oyxRFO4OucVp1ci-19" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Multiple copies of same type&lt;br&gt;of server (multi-tenant operation)&lt;br&gt;or&lt;br&gt;Consolidation of different server&lt;br&gt;types into a single platform&lt;br&gt;&lt;/font&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontSize=17;" parent="1" vertex="1">
           <mxGeometry x="170" y="560" width="190" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="74L_0oyxRFO4OucVp1ci-20" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Each server operating&lt;br&gt;in its own platform.&lt;/font&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="-15" y="560" width="130" height="30" as="geometry" />
+        <mxCell id="74L_0oyxRFO4OucVp1ci-20" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Each server operating&lt;br&gt;in its own runtime.&lt;/font&gt;" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="560" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="74L_0oyxRFO4OucVp1ci-22" value="Each server hosted as a microservice." style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="1000" y="318" width="220" height="20" as="geometry" />
@@ -3151,13 +3151,13 @@
         <mxCell id="oucD4GwQE4aRKkvPWWwd-14" value="" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=none;strokeColor=#006EAF;fontColor=#ffffff;dashed=1;shadow=0;" parent="1" vertex="1">
           <mxGeometry x="730" y="170" width="150" height="360" as="geometry" />
         </mxCell>
-        <mxCell id="oucD4GwQE4aRKkvPWWwd-17" value="OMAG Server Platform" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;shadow=1;" parent="1" vertex="1">
+        <mxCell id="oucD4GwQE4aRKkvPWWwd-17" value="OMAG Server Runtime" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="-20" y="300" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="oucD4GwQE4aRKkvPWWwd-18" value="OMAG Server" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#ffa500;fillColor=#ffcd28;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="-5" y="330" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="oucD4GwQE4aRKkvPWWwd-19" value="OMAG Server Platform" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;shadow=1;" parent="1" vertex="1">
+        <mxCell id="oucD4GwQE4aRKkvPWWwd-19" value="OMAG Server Runtime" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="-20" y="430" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="oucD4GwQE4aRKkvPWWwd-20" value="OMAG Server" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#ffa500;fillColor=#ffcd28;strokeColor=#d79b00;" parent="1" vertex="1">

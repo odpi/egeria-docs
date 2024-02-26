@@ -104,7 +104,8 @@ The open lineage connectors work with the [Open Lineage standard](/features/line
 ## Open Metadata Governance Connectors
 
 * The [Generic Element Watchdog Governance Action Service](/connectors/governance-action/generic-element-watchdog-governance-action-service) listens for changing metadata elements and initiates governance action processes when certain events occur.
-* The [Origin Seeker Remediation Governance Action Service](/connectors/governance-action/origin-seeker-remediation-governance-action-service)  walks backwards through the lineage mappings to discover the origin of the data 
+* The [Origin Seeker Governance Action Service](/connectors/governance-action/origin-seeker-remediation-governance-action-service)  walks backwards through the lineage relationships to discover the origin of the data asset.
+* The [Zone Publisher Governance Action Service](/connectors/governance-action/zone-publisher-governance-action-service) updates the zone membership on the target action assets.
 
 ## Runtime connectors
 

@@ -45,18 +45,20 @@ nav:
               - Files:
                     - Any File:
                        - Read File Contents: connectors/resource/basic-file-resource-connector.md
+                       - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
                     - File Folders (directories):
                        - Read Files: connectors/resource/basic-folder-resource-connector.md
                        - Catalog Files: connectors/integration/data-files-monitor-integration-connector.md
+                       - Watch Folders: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
                     - CSV Files:
                        - Read File Contents: connectors/resource/csv-file-resource-connector.md
                     - Data Folders:
-                       - Read files: connectors/resource/data-folder-resource-connector.md
-                       - Monitor files: connectors/integration/data-folder-monitor-integration-connector.md
+                       - Read File Contents: connectors/resource/data-folder-resource-connector.md
+                       - Maintain Last Update: connectors/integration/data-folder-monitor-integration-connector.md
                     - Open Metadata Archive Files:
                        - Read OMArchive Files: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
               - Relational Databases:
-                    - JDBC DataSource: connectors/resource/jdbc-resource-connector.md
+                    - JDBC DataSource API: connectors/resource/jdbc-resource-connector.md
                     - Catalog JDBC Database: connectors/integration/jdbc-integration-connector.md
               - Apache Kafka:
                     - JSON Plain Text Events: connectors/resource/kafka-open-metadata-topic-connector.md
@@ -71,9 +73,8 @@ nav:
                     - Catalog: connectors/integration/apache-atlas-catalog-integration-connector.md
               - Governance Actions:
                     - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
-                    - Generic Folder Watchdog: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
-                    - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
-                    - Origin Seeker Remediation: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+                    - Origin Seeker: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+                    - Zone Publisher: connectors/governance-action/zone-publisher-governance-action-service.md
               - Open APIs:
                     - Catalog APIs via Swagger: connectors/integration/open-api-monitor-integration-connector.md
               - Egeria Infrastructure:

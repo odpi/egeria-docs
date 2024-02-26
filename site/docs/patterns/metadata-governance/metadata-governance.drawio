@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-11-20T18:36:11.294Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="WxbhEcoVt673q7oe2vGH" version="21.6.8" type="device" pages="10">
+<mxfile host="Electron" modified="2024-02-23T08:15:46.833Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="MLlF_iQI5JYNHmgnkRQC" version="23.0.2" type="device" pages="10">
   <diagram id="qparz6OlDg5hC6Skcisu" name="metadata-update-specification-pattern">
-    <mxGraphModel dx="1194" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3325,7 +3325,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rR2iOo21rWJb01HH_20x" name="engine-action-status">
-    <mxGraphModel dx="1281" dy="939" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3362,59 +3362,70 @@
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-4" value="ACTIVATING" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="690" y="160" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="spSP7Cf3BCU-lS1GtRoz-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="1" source="spSP7Cf3BCU-lS1GtRoz-5" target="spSP7Cf3BCU-lS1GtRoz-6" edge="1">
+        <mxCell id="spSP7Cf3BCU-lS1GtRoz-16" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="spSP7Cf3BCU-lS1GtRoz-5" target="spSP7Cf3BCU-lS1GtRoz-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-20" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="spSP7Cf3BCU-lS1GtRoz-5" target="spSP7Cf3BCU-lS1GtRoz-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="spSP7Cf3BCU-lS1GtRoz-21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="spSP7Cf3BCU-lS1GtRoz-5" target="spSP7Cf3BCU-lS1GtRoz-10" edge="1">
+        <mxCell id="spSP7Cf3BCU-lS1GtRoz-21" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="spSP7Cf3BCU-lS1GtRoz-5" target="spSP7Cf3BCU-lS1GtRoz-10" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-5" value="IN_PROGRESS" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="690" y="290" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-6" value="ACTIONED" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="540" y="440" width="120" height="80" as="geometry" />
+          <mxGeometry x="495" y="440" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-7" value="INVALID" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="690" y="440" width="120" height="80" as="geometry" />
+          <mxGeometry x="645" y="440" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-8" value="IGNORED" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="274" y="440" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-10" value="FAILED" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="850" y="440" width="120" height="80" as="geometry" />
+          <mxGeometry x="780" y="440" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-13" value="Requested by caller&lt;br&gt;(directly or via &lt;br&gt;governance action process)&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="65" y="80" width="170" height="60" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-23" value="All conditions (such as mandatory&lt;br&gt;guards defined by a&lt;br&gt;governance action process)&lt;br&gt;have been satisfied" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="234" y="75" width="200" height="70" as="geometry" />
+          <mxGeometry x="240" y="75" width="200" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="spSP7Cf3BCU-lS1GtRoz-24" value="Waiting for start time,&lt;br&gt;or an Engine Host to pick it up" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="450" y="90" width="180" height="40" as="geometry" />
+        <mxCell id="spSP7Cf3BCU-lS1GtRoz-24" value="Waiting for&amp;nbsp;an &lt;br&gt;Engine Host to pick it up" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="465" y="90" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-25" value="Claimed by an Engine&lt;br&gt;Host, which is starting&lt;br&gt;up the governance service." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="665" y="80" width="170" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="spSP7Cf3BCU-lS1GtRoz-26" value="Governance service&lt;br&gt;running in the&lt;br&gt;Engine Host" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="827" y="290" width="130" height="60" as="geometry" />
+        <mxCell id="spSP7Cf3BCU-lS1GtRoz-26" value="Governance service&lt;br&gt;is running or waiting to&lt;br&gt;&amp;nbsp;start in the Engine Host" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="820" y="300" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-27" value="Successfully completed." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="525" y="540" width="150" height="30" as="geometry" />
+          <mxGeometry x="480" y="540" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="spSP7Cf3BCU-lS1GtRoz-28" value="No action taken by&lt;br&gt;the governance service&lt;br&gt;since it&amp;nbsp;was&lt;br&gt;started unnecessarily&lt;br&gt;(false positive)." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="677" y="525" width="150" height="90" as="geometry" />
+        <mxCell id="spSP7Cf3BCU-lS1GtRoz-28" value="No action taken by&lt;br&gt;the governance&lt;br&gt;service since it&amp;nbsp;was&lt;br&gt;started unnecessarily&lt;br&gt;(false positive)." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="637" y="525" width="140" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="spSP7Cf3BCU-lS1GtRoz-29" value="The governance service&lt;br&gt;was unable to complete&lt;br&gt;its requested action." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="835" y="527" width="150" height="60" as="geometry" />
+        <mxCell id="spSP7Cf3BCU-lS1GtRoz-29" value="The governance&lt;br&gt;service was&lt;br&gt;unable to complete&lt;br&gt;its requested action." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="775" y="530" width="130" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="spSP7Cf3BCU-lS1GtRoz-30" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;(Guards stored&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;in governance action)&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="590" y="650" width="330" height="30" as="geometry" />
+        <mxCell id="spSP7Cf3BCU-lS1GtRoz-30" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;(Guards stored&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;in engine action)&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="592.5" y="650" width="330" height="30" as="geometry" />
         </mxCell>
         <mxCell id="spSP7Cf3BCU-lS1GtRoz-31" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;rotation=90;" parent="1" vertex="1">
-          <mxGeometry x="745" y="415" width="20" height="430" as="geometry" />
+          <mxGeometry x="747.5" y="367.5" width="20" height="525" as="geometry" />
+        </mxCell>
+        <mxCell id="XcoTmzyaRnRmRFjsMkeK-1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="spSP7Cf3BCU-lS1GtRoz-5" target="XcoTmzyaRnRmRFjsMkeK-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="358" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XcoTmzyaRnRmRFjsMkeK-2" value="CANCELLED" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="910" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XcoTmzyaRnRmRFjsMkeK-3" value="The governance&lt;br&gt;service was &lt;br&gt;cancelled by &lt;br&gt;an external user." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="915" y="530" width="110" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

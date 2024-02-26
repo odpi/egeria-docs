@@ -38,8 +38,6 @@ a [configuration document](/concepts/configuration-document).
 
 --8<-- "snippets/admin/configuring-event-bus.md"
 
---8<-- "snippets/admin/configuring-local-server-url.md"
-
 --8<-- "snippets/admin/configuring-omag-server-basic-properties.md"
 
 --8<-- "snippets/admin/configuring-the-audit-log.md"

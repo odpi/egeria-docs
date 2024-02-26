@@ -22,7 +22,7 @@ A *governance action service* is a specialized [connector](/concepts/connector) 
 
 There are five types of governance action services, each of which supports a specialist governance activity (see subsections).
 
-These are often used in conjunction with the [open discovery services](/concepts/open-discovery-service) from the [Open Discovery Framework (ODF)](/frameworks/odf/overview). Collectively they are called the *governance services* and they can be linked together into [governance action processes](/concepts/governance-action-process).
+These are often used in conjunction with the [survey action services](/concepts/survey-action-service) from the [Survey Action Framework (SAF)](/frameworks/saf/overview). Collectively they are called the *governance services* and they can be linked together into [governance action processes](/concepts/governance-action-process).
 
 Some governance action services invoke functions in external engines that are working with data and related assets. The GAF offers embeddable functions and APIs to simplify the implementation of governance action services, and their integration into the broader digital landscape, whilst being resilient and with good performance.
 

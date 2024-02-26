@@ -3,7 +3,7 @@
 
 # 0463 Engine Actions
 
-An [Engine action](/concepts/engine-action) describes some processing that is part of the governance of an organization's asset or the metadata that describes them.
+An [Engine action](/concepts/engine-action) describes some processing that is part of the governance of an organization's assets or the metadata that describes them.
 
 ![UML](0463-Engine-Actions.svg)
 
@@ -25,18 +25,19 @@ The *EngineActionRequestSource* relationship links the first *EngineAction* enti
 
 The *EngineActionStatus* indicates the execution status of the governance action.
 
-| Enumeration | Value | Name | Description                                                                                         |
-| --- | --- | --- |-----------------------------------------------------------------------------------------------------|
-| REQUESTED    |  0  | Requested | The governance action has been created and is pending.                                              |
-| APPROVED     |  1  | Approved | The governance action is approved to run.                                                           |
-| WAITING      |  2  | Waiting | The governance action is waiting for its start time or the right conditions to run.                 |
-| ACTIVATING   |  3  | Activating | The governance service for the governance action is being initialized in the governance engine. |
-| IN_PROGRESS  |  4  | In Progress| The governance engine is running the associated governance service for the governance action.  |
-| ACTIONED     |  10 | Actioned | The governance service for the governance action has successfully completed processing.        |
-| INVALID      |  11 | Invalid | The governance action has not been run because it is not appropriate (for example, a false positive). |
-| IGNORED      |  12 | Ignored | The governance action has not been run because a different governance action was chosen.            |
-| FAILED       |  13 | Failed | The governance action service for the governance action failed to execute.                          |
-| OTHER        |  99 | Other | Undefined or unknown governance action status.                                                      |
+| Enumeration | Value | Name        | Description                                                                                           |
+|-------------|-------|-------------|-------------------------------------------------------------------------------------------------------|
+| REQUESTED   | 0     | Requested   | The engine action has been created and is pending.                                                    |
+| APPROVED    | 1     | Approved    | The engine action is approved to run.     This means all of the manatory guards have been satisfied.  |
+| WAITING     | 2     | Waiting     | The engine action is waiting for its start time or the right conditions to run.                       |
+| ACTIVATING  | 3     | Activating  | The governance service for the engine action is being initialized in the governance engine.           |
+| IN_PROGRESS | 4     | In Progress | The governance engine is running the associated governance service for the engine action.             |
+| ACTIONED    | 10    | Actioned    | The governance service for the engine action has successfully completed processing.                   |
+| INVALID     | 11    | Invalid     | The governance engine has not been run because it is not appropriate (for example, a false positive). |
+| IGNORED     | 12    | Ignored     | The governance action has not been run because a different governance action was chosen.              |
+| FAILED      | 13    | Failed      | The governance service for the engine action failed to execute.                                       |
+| CANCELLED   | 14    | Cancelled   | The engine action was cancelled by an external caller.                                                |
+| OTHER       | 99    | Other       | Undefined or unknown governance action status.                                                        |
 
 ## NextEngineAction relationship
 

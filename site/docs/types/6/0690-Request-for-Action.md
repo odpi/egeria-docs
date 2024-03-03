@@ -1,18 +1,18 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 # 0690 Request for Action
 
-A RequestForAction entity (RfA) is used to trigger the [Stewardship Action OMAS](/services/omas/stewardship-action/overview).
-
-It is used when a [survey action service](/concepts/survey-action-service) performs a test on the data (such as a quality rule) or has discovered an anomaly in  the data landscape compared to its metadata that potentially needs a steward or a curator's action.
-
+A [Request For Action (RfA)](/concepts/request-for-action) identifies an issue detected by a [Survey Action Service](/concepts/survey-action-service) while it is running.
 
 ![UML](0690-Request-for-Action.svg)
+
+## RequestForAction entity
+
+The *RequestForAction* entity is a type of [DataFieldAnnotation](/types/6/0610-Annotations) that requests some form of follow on action.  This action may be an automated [governance action](/concepts/governance-action) or, more typically, requires a steward to resolve.  It is not the responsibility of the Survey Action Service to find the means to resolve the issue - it is only responsible for reporting it. 
+
+## RequestForActionTarget relationship
+
+The *RequestForActionTarget* relationship identifies the [Referenceable](/types/0/0010-Base-Model) entity that needs work.  It may be the asset being surveyed, or a different element.
 
 --8<-- "snippets/abbr.md"

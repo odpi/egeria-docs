@@ -33,6 +33,10 @@ The *PersonalProject* classification is attached to a *Project* entity to indica
 
 Personal projects do not typically have a [Project Manager](#projectmanagement-relationship) assigned.
 
+## StudyProject classification
+
+The *StudyProject* classifies a project that is a focused analysis of a topic, person, object or situation.
+
 ## ProjectHierarchy relationship
 
 Projects can be broken down into smaller projects that can be executed by different teams on different timelines with different project manager(s) and a specific slice of the budget.  The projects that are broken down in this way are linked together using the *ProjectHierarchy* relationship.

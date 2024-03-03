@@ -17,8 +17,8 @@ An asset's [governance zones](/concepts/governance-zone) determines its visibili
 
 The *Zone Publisher* Governance Action Service sets the supplied governance zone names into the assets supplied as action targets.
 
-* If there is at least one asset, their zones are updated, and the output guard is set to zone-assigned.
-* If no Assets are passed as action targets the output guard is no-targets-detected.
+* If there is at least one asset, their zones are updated, and the output guard is set to `zones-assigned`.
+* If no Assets are passed as action targets the output guard is `no-targets-detected`.
 
 ![Figure 1](zone-publisher-governance-action-service.svg)
 > **Figure 1:** Operation of the Zone Publisher governance action service
@@ -56,18 +56,18 @@ When this governance action service is called through an [engine action](/concep
 
 #### Request Types and Parameters
 
-Origin seeker does not specifically recognize any request types or request parameters.
+The `publishZones` request parameter/configuration property provides Zone Publisher with list of zones to add to the action target assets.
 
 #### Action Targets
 
-The asset that needs an origin classification is linked to the governance action as an action target.  The unique identifier (guid) can be passed as a parameter when the governance action or governance action process is initiated.
+The assets that needs their zones updated are linked to the governance action as an action target.
 
 #### Completion Status and Guards
 
 These are the responses that Zone Publisher produces:
 
-- `CompletionStatus.ACTIONED` with guard `zone-assigned` if the zones are successfully assigned to the assets.
-- `CompletionStatus.INVALID` with guard `no-zones-detected` if the `publishZones` property is not set up in either the configuration properties or the request parameters.
+- `CompletionStatus.ACTIONED` with guard `zones-assigned` if the zones are successfully assigned to the assets.
+- `CompletionStatus.ACTIONED` with guard `no-zones-detected` if the `publishZones` property is not set up in either the configuration properties or the request parameters.  Any AssetZoneMembership classification is removed from the action target asset(s).
 - `CompletionStatus.INVALID` with guard `no-targets-detected` if no assets are passed as action targets. 
 
 ## Examples of use

@@ -83,18 +83,15 @@ may be triggered.
 ## Configuration
 
 The following configuration properties can be set to control the behavior of the service on every instance.
-
-- **provisionUncataloguedFiles** - if this property is set to any value, the service may work with files that are not catalogued
-  in open metadata.  This is used when processing files that are entering the open metadata ecosystem.
  
 - **targetFileNamePattern** - pattern to construct the name of the destination file. If this is not set, the source file name is used.
   
 - **noLineage** - if this property is set to any value, do not produce lineage as part of the provisioning process.
 
-- **processName** - if this property is set, it overrides the default process name (ie the name of this
+- **topLeveProcessQualifiedName** - if this property is set, it overrides the default process name (ie the name of this
   governance action service) with the value that this property is set to.
   
-- **lineageWithTopLevelProcessOnly** - if this property is set, lineage mappings are connected to the top level process representing
+- **topLevelProcessLineageOnly** - if this property is set, lineage mappings are connected to the top level process representing
   this governance action service.
 
 - **lineageToDestinationFolderOnly** - if this property is set, the lineage relationship from the
@@ -119,7 +116,6 @@ This is its connection definition to use when creating the definition of the gov
                       },
                       "configurationProperties": 
                       {
-                              "provisionUncataloguedFiles": "",
                               "targetFileNamePattern": "{{pattern}}",
                               "noLineage": "",
                               "processName": "{{processName}}",

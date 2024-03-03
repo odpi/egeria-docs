@@ -1,14 +1,14 @@
-# Operate OMAG Server Starter
+# Operate OMAG Server Runtime
 
 This guide focuses on providing instructions for running the server as standalone application process. This deployment option gives you a low level control over the application runtime and requires direct interaction with your IT infrastructure.
 
-With OMAG Server Starter, each server runs in its own dedicated JVM process. All the required parameters required to start a server are always pre-defined and delivered to the application as configuration properties. This approach is key to achieving an immutable configuration state when running containerised deployments.
+With OMAG Server Runtime, each server runs in its own dedicated JVM process. All the required parameters required to start a server are always pre-defined and delivered to the application as configuration properties. This approach is key to achieving an immutable configuration state when running containerised deployments.
 
 > Quick jump to installation steps (coming soon)
 
-## Running OMAG Server Starter
+## Running OMAG Server Runtime
 
-To run the OMAG Server Starter application, execute the command in this format:
+To run the OMAG Server Runtime application, execute the command in this format:
 
 `java <java options> -jar omag-server-{release}.jar <properties>`
 
@@ -54,7 +54,7 @@ Considering that the starter application is implemented using Spring Boot, we ca
 !!! info "Spring application external config"
     If you want to know more about how external configuration works, you can read more about it in the Spring Boot [Core Features](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config){ target=_blank } .
 
-OMAG Server Starter already has default [`application.properties`](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/server-chassis/server-chassis-spring/src/main/resources/application.properties){ target=gh } packaged within the jar distribution. These properties can always be overridden if provided externally to the application.
+OMAG Server Runtime already has default [`application.properties`](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/server-chassis/server-chassis-spring/src/main/resources/application.properties){ target=gh } packaged within the jar distribution. These properties can always be overridden if provided externally to the application.
 
 Below are reference properties that define the behaviour of the application.
 
@@ -65,7 +65,7 @@ Below are reference properties that define the behaviour of the application.
 |`omag.server-config-file`|`OMAG_SERVERCONFIGFILE`| The OMAG server configuration file that defines all subsystems and their connectors. It should be valid [Configuration Document Structure](/concepts/configuration-document/#configuration-document-structure). Can be written in .json or .yaml file format. | See [samples](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/server-chassis/server-chassis-spring/src/main/resources/samples){ target=gh } |
 
 !!! tip "Creating configuration document"
-    The configuration document can be created by hand if you have a good understanding of [Configuration Document Structure](/concepts/configuration-document/#configuration-document-structure). A safe option is to use the OMAG server platform deployment and create the configuration document using the admin services. See the [Admin Guide](/guides/admin/servers) to configure different types of servers. Finally, you can [retrieve](/guides/admin/servers/#retrieving-the-configuration) the valid document created for use with the Server Starter.
+    The configuration document can be created by hand if you have a good understanding of [Configuration Document Structure](/concepts/configuration-document/#configuration-document-structure). A safe option is to use the OMAG server platform deployment and create the configuration document using the admin services. See the [Admin Guide](/guides/admin/servers) to configure different types of servers. Finally, you can [retrieve](/guides/admin/servers/#retrieving-the-configuration) the valid document created for use with the OMAG Server Runtime.
 
 ### Additional Libraries
 

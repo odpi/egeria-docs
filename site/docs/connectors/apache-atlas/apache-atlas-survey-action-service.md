@@ -11,7 +11,7 @@
     - Hosting Server: [Engine Host](/concepts/engine-host)
     - Source Module: [apache-atlas-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors){ target=gh }
     - Jar File Name: `apache-atlas-connectors.jar`
-    - Connector Provider Class Name: `org.odpi.openmetadata.adapters.connectors.appacheatlas.survey.SurveyApacheAtlasProvider`
+    - Connector Provider Class Name: `org.odpi.openmetadata.adapters.connectors.apacheatlas.survey.SurveyApacheAtlasProvider`
 
 ## Overview
 

@@ -75,7 +75,7 @@ The methods in red are additional services offered to governance action services
     * classifyMetadataElement
     * reclassifyMetadataElement
     * updateClassificationStatus
-    * unclassifyMetadataElement
+    * declassifyMetadataElement
 
 * Working with relationships (links) between metadata elements
 

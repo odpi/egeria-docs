@@ -34,18 +34,18 @@ An *annotation* describes one or more related properties about an [asset](/conce
 
 Different types of annotations provide different types of information.
 
-| Annotation type                        | Description                                                                                                                                                                                         |
-|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Classification annotation              | Captures a recommendation of which classifications to attach to this asset. It can be made at the asset or data field level.                                                                        |
-| Data class annotation                  | Captures a recommendation of which data class this data field closely represents.                                                                                                                   |
-| Data profile annotation                | Capture the characteristics of the data values stored in a specific data field in a data source.                                                                                                    |
-| Data profile log annotation            | Capture the names of the log files where profile characteristics of the data values stored in a specific data field. This is used when the profile results are too large to store in open metadata. |
-| Data source measurement annotation     | Collect arbitrary properties about a data source.                                                                                                                                                   |
-| Data source physical status annotation | Documents the physical characteristics of a data source asset.                                                                                                                                      |
-| Relationship advice annotation         | Document a recommended relationship that should be established with the asset.                                                                                                                      |
-| Quality annotation                     | Document calculated quality scores on different dimensions.                                                                                                                                         |
-| Semantic annotation                    | Documents suggested meanings for this data based on the values and name of the field.                                                                                                               |
-| Suspect duplicate annotation           | Identifies other asset definitions that seem to point to the same physical asset.                                                                                                                   |
+| Annotation type                        | Description                                                                                                                                                                                          |
+|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Classification annotation              | Captures a recommendation of which classifications to attach to this asset. It can be made at the asset or data field level.                                                                         |
+| Data class annotation                  | Captures a recommendation of which data class this data field closely represents.                                                                                                                    |
+| Data profile annotation                | Captures the characteristics of the data values stored in a specific data field in a data source.                                                                                                    |
+| Data profile log annotation            | Captures the names of the log files where profile characteristics of the data values stored in a specific data field. This is used when the profile results are too large to store in open metadata. |
+| Data source measurement annotation     | Collects arbitrary properties about a data source.                                                                                                                                                   |
+| Data source physical status annotation | Documents the physical characteristics of a data source asset.                                                                                                                                       |
+| Relationship advice annotation         | Documents a recommended relationship that should be established with the asset.                                                                                                                      |
+| Quality annotation                     | Documents the calculated quality scores on different dimensions.                                                                                                                                     |
+| Semantic annotation                    | Documents suggested meanings for this data based on the values and name of the field.                                                                                                                |
+| Semantic annotation                    | Documents details of an issue or situation that needs a steward's attention.                                                                                                                         |
 
 #### Schema extraction
 
@@ -118,7 +118,7 @@ The measurement annotations capture a snapshot of the physical dimensions and ac
 
 #### Requesting stewardship action
 
-A RequestForAction entity (RfA) is used when a survey action service performs a test on the data (such as a [quality rule](/features/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.
+A RequestForAction (RfA) annotation is used when a survey action service performs a test on the data (such as a [quality rule](/features/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.  The anomaly typically refers to the elements within the asset being surveyed.  However, it may be in other data used in the survey process.  In either case, it is possible to use a *RequestForActionTarget* relationship to identify where action is required. 
 
 ![Request for action](survey-action-request-for-action.svg)
 

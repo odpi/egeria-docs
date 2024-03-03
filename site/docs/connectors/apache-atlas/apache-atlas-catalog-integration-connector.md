@@ -11,6 +11,7 @@
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [apache-atlas-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/system-connectors/atlas-integration-connector){ target=gh }
     - Jar File Name: `apache-atlas-connectors.jar`
+    - Connector Provider Class Name: `org.odpi.openmetadata.adapters.connectors.apacheatlas.integration.ApacheAtlasIntegrationProvider`
 
 ## Overview
 

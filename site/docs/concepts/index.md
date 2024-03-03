@@ -337,6 +337,7 @@
 - [Repository Proxy](/concepts/repository-proxy)
 - [Repository Services](/services/omrs)
 - [Repository Validator](/concepts/repository-validator)
+- [Request For Action (RfA)](/concepts/request-for-action.md)
 - [Resource](/concepts/resource)
 - [ResourceUse](/concepts/resource-use)
 - [Resource Connector](/concepts/digital-resource-connector)

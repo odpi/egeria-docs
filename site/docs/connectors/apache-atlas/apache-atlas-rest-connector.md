@@ -9,6 +9,7 @@
     - Jar File Name: `apache-atlas-connectors.jar`
     - Supported Asset Type: [SoftwareServer](/types/0/0040-Software-Servers)
     - Deployed Implementation Type: *Apache Atlas Server*
+    - Connector Provider Class Name: `org.odpi.openmetadata.adapters.connectors.apacheatlas.resource.ApacheAtlasRESTProvider`
 
 Apache Atlas has a REST API that allows external callers to query and create both
 types and instances.  This connector provides a simple Java API to this REST API.

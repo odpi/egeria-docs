@@ -75,7 +75,6 @@ Some discovery annotations refer to an entire asset and others refer to a data f
 | Quality annotation | Document calculated quality scores on different dimensions. |
 | Schema analysis annotation | Document the structure of the data (schema) inside the asset. |
 | Semantic annotation | Documents suggested meanings for this data based on the values and name of the field. |
-| Suspect duplicate annotation | Identifies other asset definitions that seem to point to the same physical asset. |
 
 The open metadata types for a discovery annotations are described in [area 6](/types/6) of the model.
 

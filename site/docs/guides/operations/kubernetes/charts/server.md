@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Egeria Server Starter chart (egeria-server)
+# OMAG Server Runtime chart (egeria-server)
 
-Egeria Server Starter helm chart defines minimal deployment resources to demonstrate simple single OMAG Server Kubernetes deployment scenario.
+OMAG Server Runtime helm chart defines minimal deployment resources to demonstrate simple single OMAG Server Kubernetes deployment scenario.
 
 It produces following resources:
 

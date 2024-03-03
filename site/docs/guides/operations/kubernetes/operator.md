@@ -3,10 +3,11 @@
 
 # What is an Operator?
 
-- An operator is a way of extending [Kubernetes](k8s.md) with application specific capababilities. 
-- The notion of 'operator' comes from managing an application through it's lifecycle, just as a human operator would, but here we do it automatically.
+- An operator is a way of extending [Kubernetes](k8s.md) with application specific capabilities. 
+- The notion of 'operator' comes from managing an application through its lifecycle, just as a human operator would, but here we do it automatically.
 
 Operator functionality could include:
+
  - deploying an application
  - upgrading an applications, perhaps migrating data
  - taking backups
@@ -21,6 +22,7 @@ Kubernetes has many standard resource definitions, such as for pods, services, d
 [Custom Resource](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#custom-resources) Definitions (**CRD**s) extend Kubernetes to allow anything to be represented, such as the intended state of an application stack.  They are defined in yaml. 
 
 Resource definitions include:
+
  - apiVersion - consider this the namespace
  - metadata - useful for searching, selecting
  - spec - the intended state we are describing
@@ -32,7 +34,7 @@ An instance of a CRD is known as a Custom Resource (**CR**)
 
 There is no intrinsic behaviour associated with a custom resource - it is purely a document with a defined schema. The behaviour is defined by the [Controller](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#custom-controllers), which is code running within the Kubernetes cluster.
 
-The controller's objective is to make reality match the configured Custom Resource. It will watch particular resource types - the primary being the CRD above - and as changes are observed will do whatever is needed to configure application to match the desired intent. It is primarily a reconcilation loop.
+The controller's objective is to make reality match the configured Custom Resource. It will watch particular resource types - the primary being the CRD above - and as changes are observed will do whatever is needed to configure application to match the desired intent. It is primarily a reconciliation loop.
 
 The controller will likely use a combination of Kubernetes APIs, perhaps defining and updating other resources, as well as interacting directly with application code within, or external to the cluster.
 
@@ -44,13 +46,13 @@ The controller will likely use a combination of Kubernetes APIs, perhaps definin
 
 # How does it differ from Helm?
 
-[Helm](helm.md) is a popular way of installing an application stack through charts, and sometimes upgrading. However at it's core, Helm is a templating engine. It takes templates, runs them through a processor to expand variables (across multiple documents). It then submits the documents to the Kubernetes API server just the same as if they'd be created standalone.
+[Helm](helm.md) is a popular way of installing an application stack through charts, and sometimes upgrading. However, at it's core, Helm is a templating engine. It takes templates, runs them through a processor to expand variables (across multiple documents). It then submits the documents to the Kubernetes API server just the same as if they'd be created standalone.
 
 Helm charts can be stored in a repository, and make putting together a complex stack relatively easy. (we already use them successfully for Egeria). More complex behaviour can be done by deploying additional containers, jobs etc.
 
 This is **very** different to an operator. Rather than create standard Kubernetes resources, with an operator we are trying to model our application, define it's intended state, and then have active code **always** running to monitor and achieve this. Operators are thus much more sophisticated, but also complex.
 
-Operators and custom resources can themselves be deployed using Helm - so we don't think of the Operators are replacing Helm, rather they are very complementary techniques which can be used together. For example, whist an operator might focus on a single application, a helm chart may deploy a demonstation environment.
+Operators and custom resources can themselves be deployed using Helm - so we don't think of the Operators are replacing Helm, rather they are very complementary techniques which can be used together. For example, whist an operator might focus on a single application, a helm chart may deploy a demonstration environment.
 
 # Operator Lifecycle Manager
 
@@ -58,17 +60,18 @@ The [Operator Lifecycle Manager](https://github.com/operator-framework/operator-
 
 OLM is [standard in Red Hat OpenShift](https://docs.openshift.com/container-platform/4.8/operators/understanding/olm/olm-understanding-olm.html)
 
-**OLM is not necessary to use operators** - and unlike operators themselves, the framework **is not present in all Kubernetes distibutions**.
+**OLM is not necessary to use operators** - and unlike operators themselves, the framework **is not present in all Kubernetes distributions**.
 
 # Catalogs
 
-A catalog of operators can be found on [OperatorHub](https://operatorhub.io) and authors can [submit their own operator](https://operatorhub.io/contribute) to help with findability.
+A catalog of operators can be found on [OperatorHub](https://operatorhub.io) and authors can [submit their own operator](https://operatorhub.io/contribute) to help others locate their work.
 
 # Building an operator
 
-Operators can be built in any language than can support making API calls to Kubernetes. For example it would be possible to write a Java based operator. This is complex, and uses low level APIs, with few examples published. 
+Operators can be built in any language than can support making API calls to Kubernetes. For example, it would be possible to write a Java based operator. This is complex, and uses low level APIs, with few examples published. 
 
 The [Operator Framework](https://operatorframework.io) is a toolkit to make it easier to develop an operator by including higher level APIs, and tools for code generation. It supports:
+
 * [Helm](https://helm.sh) - this wraps up a Helm chart as an operator, but as such it only delivers install/upgrade capability. They can be managed and catalogued as an operator.
 * [Ansible](https://www.ansible.com) - an ansible operator can respond to events & run ansible scripts accordingly. This makes them significantly more flexible
 * [Go](https://www.golangprograms.com) - These are full 'native' operators with full access to the Kubernetes API. Kubernetes itself is written in Go. They are therefore very flexible, though more complex to develop. They do however represent the majority of development in this area, providing also the best scope for help from peers.
@@ -82,29 +85,30 @@ Egeria is implementing a Go operator, using the Operator Framework. This is the 
 # Egeria Operator Development
 
 The Egeria operator is being developed at https://github.com/odpi/egeria-k8s-operator - see here for
+
 * [Issues](https://github.com/odpi/egeria-k8s-operator)
-* prereqs/dependencies
-* feedback, getting involved
-* build, install, and usage instructions
+* Prerequisites/dependencies
+* Feedback, getting involved
+* Build, install, and usage instructions
 
 ## Design considerations
 
 ### Egeria configurations
 
-Custom Resource definitions allow for a very detailed specification of what we want our Egeria deployment to be. However Egeria itself already has a sophisticated approach to configuration - some elements of which are still evolving.
+Custom Resource definitions allow for a very detailed specification of what we want our Egeria deployment to be. However, Egeria itself already has a sophisticated approach to configuration - some elements of which are still evolving.
 
-It could be possible to try and fully expose this configuration as a CRD. However due to the complexity, fluidity, and duplication the Operator instead will add k8s deployment specific information around existing Egeria configurations.
+It could be possible to try and fully expose this configuration as a CRD. However, due to the complexity, fluidity, and duplication the Operator instead will add k8s deployment specific information around existing Egeria configurations.
 
-It's therefore imperative we keep the **Authoring** of server configuration distinct from **Deployment**. The deployment environment will be different in a Kubernetes environment (hostnames, service names etc)
+It's therefore imperative we keep the **Authoring** of server configuration distinct from **Deployment**. The deployment environment will be different in a Kubernetes environment (hostnames, service names, etc.)
 
-Initially the egeria config document will be used verbatim, however if processing is needed, a [Admission Webhook](https://sdk.operatorframework.io/docs/building-operators/golang/webhook/) could be used to validate ([validating](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#validatingadmissionwebhook)) & convert ([mutating](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#mutatingadmissionwebhook)) the config before storing in k8s. This approach could also be used for CR validation.
+Initially the egeria config document will be used verbatim, however if processing is needed, an [Admission Webhook](https://sdk.operatorframework.io/docs/building-operators/golang/webhook/) could be used to validate ([validating](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#validatingadmissionwebhook)) & convert ([mutating](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#mutatingadmissionwebhook)) the config before storing in k8s. This approach could also be used for CR validation.
 
 [Example server configuration documents](https://github.com/odpi/egeria-k8s-operator/tree/main/samples/server)
 
 
 ### Scaling & failover
 
-Kubernetes is a useful container solution that scales from a raspberry pi to huge cloud deployments. As such it may be used for anything from development to full enterprise production - and this is a strong part of it's appeal. So the operator must support everything from a small development environment, through to a scalable, reliable cloud environment. 
+Kubernetes is a useful container solution that scales from a raspberry pi to huge cloud deployments. As such it may be used for anything from development to full enterprise production - and this is a strong part of its appeal. So the operator must support everything from a small development environment, through to a scalable, reliable cloud environment. 
 
 #### Egeria Platform
 
@@ -136,13 +140,13 @@ This has also resulted in the OMAG Server Platform being the first-class resourc
 
 ### Stateful set vs Deployment 
 
-A Deployment manages scaling of a set of containers (such as egeria platform) across multiple pods. A Statefulset extends this to provide a unique identity which can be used for unique service definitions, or for maintaining an association with dedicated storage.
+A Deployment manages scaling of a set of containers (such as egeria platform) across multiple pods. A *Statefulset* extends this to provide a unique identity which can be used for unique service definitions, or for maintaining an association with dedicated storage.
 
 In the current Egeria helm chart we use a stateful set that that persistent storage can be allocated uniquely to each
 pod & retained across restarts.
 
-However the assumption in the operator environment is that Egeria is stateless (beyond the config & CR), and that any persistent state is managed
-via the connections to metadata storage etc, and that a unique service address is not needed. This latter point may need to be revisited if the Egeria operator needs to actively interact with the individual replicas for control/config, but this is not yet the case, hence the choice of a simpler deployment initially.
+However, the assumption in the operator environment is that Egeria is stateless (beyond the config & CR), and that any persistent state is managed
+via the connections to metadata storage etc., and that a unique service address is not needed. This latter point may need to be revisited if the Egeria operator needs to actively interact with the individual replicas for control/config, but this is not yet the case, hence the choice of a simpler deployment initially.
 
 ### Configuration updates
 
@@ -164,9 +168,9 @@ Note: At this point, the deployment of XTDB itself is outside the scope of the o
 
 ### Connectors
 
-Much of the capability in Egeria is pluggable. For example we have a connector to the message bus, which could be kafka, but equally
+Much of the capability in Egeria is pluggable. For example, we have a connector to the message bus, which could be kafka, but equally
 may be RabbitMQ (if a connector were written). We have connectors that understand data sources such as for Postgres. These are
-implemented as java jars, and are added into the classpath of the egeria platform. Thus the platform can provide a certain capability
+implemented as java jars, and are added into the classpath of the egeria platform. Thus, the platform can provide a certain capability
 with these additional connectors, but it is the server which defines which ones to use (and refers to the class name to locate)
 
 An Egeria server configuration document therefore contains many references to connectors. The references libraries must be available in the runtime environment ie platform. This is done by ensuring they are pointed to within the spring loader's 'LOADER_PATH' environment variable.
@@ -175,19 +179,21 @@ Several approaches are possible:
 * Build a custom container image based on the [Egeria docker image](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment/docker/egeria) including the desired connectors, and either placing the required additional files into /deployments/server/lib, or placing them elsewhere in the image and ensuring LOADER_PATH is set
 * Dynamically download or mount the required libraries - and dependencies - when the server platform is set up by the operator, for example through an init job.
 
-Currently the operator takes the former, simpler approach. Therefore specifying a custom container image as part of the platform configuration will often be required.
+Currently, the operator takes the former, simpler approach. Therefore, specifying a custom container image as part of the platform configuration will often be required.
 
-Connectors also often tend to refer to endpoints - for example the location of a Kafka message bus, a server's own address. Currently the server configuration document
-passed to the operator must have correct addresses. As yet there is no manipulation or templating of these addresses, though this may change in future.
+Connectors also often tend to refer to endpoints - for example the location of a Kafka message bus, a server's own address. Currently, the server configuration document
+passed to the operator must have correct addresses. As yet there is no manipulation or templating of these addresses, though this may change in the future.
 
 ## Operator Development
 
 ### Prerelease 
+
  - deploy Egeria platforms with a list of servers
  - uses Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/) to store individual server configuration
  - requires the user to use repositories capable of supporting replication (like XTDB)
 
 ### Still to do for an initial release
+
  - Helm chart to deploy a complete demo environment (coco pharma) with Egeria operator & XTDB backend.
  - working through the full server authoring lifecycle (alongside Server Author UI & View Services) - including templating of connections which contain host:ip from the authoring environment
  - Evaluating alternative stores of server configuration (at a minimum may need to be a [secret](https://kubernetes.io/docs/concepts/configuration/secret/) as we include auth info - but decided to use ConfigMaps initially for clarity during initial design)
@@ -197,6 +203,7 @@ passed to the operator must have correct addresses. As yet there is no manipulat
 
 
 ### Future enhancements
+
  - [Operator Lifecycle Manager](https://github.com/operator-framework/operator-lifecycle-manager) integration
  - publish on [Operator Hub](https://operatorhub.io)
  - refinement of configurations (consolidation, admission webhooks)

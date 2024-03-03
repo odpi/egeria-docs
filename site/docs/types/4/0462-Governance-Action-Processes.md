@@ -21,7 +21,11 @@ The properties of a *GovernanceActionType* entity are:
 * *domainIdentifier* links the action to a specific [governance domain](/concepts/governance-domain).
 * *displayName* - human-readable name for messages and user interfaces.
 * *description* - description of the governance action that is taken.
-* *producedGuards* - lists the possible guards produced by the called governance service when it completes.  This is used to help the individual/tool to understand the possible outcomes.  
+* *requiredRequestParameters* - lists the required request parameters that should be supplied by the caller when the governance action type is used to initiate an engine action, along with its description.
+* *producedActionTargets* - lists the required action targets that should be supplied by the caller when the governance action type is used to initiate an engine action, along with its description.
+* *producedRequestParameters* - lists the required request parameters that should be supplied by the caller when the governance action type is used to initiate an engine action, along with its description.
+* *producedActionTargets* - lists the required action targets that should be supplied by the caller when the governance action type is used to initiate an engine action, along with its description.
+* *producedGuards* - lists the possible guards produced by the called governance service when it completes along with a description of the guard.  This is used to help the individual/tool to understand the possible outcomes.
 * *waitTime* - the minimum number of minutes that the engine action should wait before starting.
 
 ## GovernanceActionExecutor relationships
@@ -65,5 +69,6 @@ The follow-on action runs when all of its mandatory guards are produced by previ
 
 ???+ deprecated "Deprecated types"
     The *ignoreMultipleTriggers* attribute in the *NextGovernanceProcessStep* has been deprecated.  It is now located in the *GovernanceActionType* entity.
+    The *supportedGuards* attribute in the *GovernanceActionType* has been deprecated in favour of the *producedGuards* entity.
 
 --8<-- "snippets/abbr.md"

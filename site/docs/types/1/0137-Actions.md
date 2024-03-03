@@ -3,14 +3,14 @@
 
 # 0137 Actions for People
 
-In an ideal world, most governance activity is automated by the [Governance Engines](/types/4/0461-Governance-Engines/#governanceengines). However, there are inevitably actions that require a person, or an external agent, to perform. These actions may be simply be to read some information, or to approve a change or something more substantial.
+In an ideal world, most governance activity is automated by the [Governance Actions](/concepts/governance-action). However, there are inevitably actions that require a person, or an external agent, to perform. These actions may be simply be to read some information, or to approve a change or something more substantial.
 
 
 ![UML](0137-Actions.svg "Describing an action for a person")
 
 ## Action entity
 
-The *Action* entity provides a common base class for the *ToDo* entity and the [*EngineAction*](/types/4/0463-Egnine-Actions) entity.
+The *Action* entity provides a common base class for the *ToDo* entity and the [*EngineAction*](/types/4/0463-Egnine-Actions) entity.  It indicates an action that either needs to be taken, is in progress, or has been taken.
 
 ## ToDo entity
 
@@ -24,6 +24,7 @@ The additional attributes are:
 * creationTime - When the requested action was identified.
 * priority - How urgent is this action?
 * dueTime - When the requested action needs to be completed.
+* lastReviewTime - When the requested action was last reviewed.
 * status - How complete is the action? (See ToDoStatus)
 * completionTime - When the requested action was completed.
 

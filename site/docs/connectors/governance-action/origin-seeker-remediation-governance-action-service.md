@@ -80,7 +80,7 @@ These are the responses that origin seeker produces:
 - `CompletionStatus.INVALID` with guard `multiple-origins-detected` if multiple, different origins are detected in the lineage graph.
 - `CompletionStatus.INVALID` with guard `no-origins-detected` if no origin classifications are found in the lineage graph. 
 - `CompletionStatus.INVALID` with guard `no-targets-detected` if there is no asset set up as an action target.
-- `CompletionStatus.FAILED` with guard `multiple-targets-detected` if there are multiple assets set up as action targets.
+- `CompletionStatus.INVALID` with guard `multiple-targets-detected` if there are multiple assets set up as action targets.
 - `CompletionStatus.FAILED` with guard `origin-seeking-failed` for an unrecoverable error such as a not authorized response from the metadata repository.
 
 ## Examples of use

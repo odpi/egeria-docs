@@ -34,9 +34,9 @@ The Apache Atlas Survey Action Service provides a summary of the contents of the
 
 It has three analysis steps:
 
-1. STATS - Retrieves the overall metrics from the Apache Atlas server.  These are stored in a [*DataSourceMeasurementAnnotation*](/types/0660-Data-Source-Measurement) entity linked to the [*SurveyReport*](/types/6/0603-Survey-Reports) entity generated for each run of the Apache Atlas Survey Action Service.
-2. SCHEMA - Retrieves the types from Apache Atlas and organizes them in a linked graph of [*Schema Attributes*](/types/5/0533-Graph-Schemas) entities.  All the graph schema attributes are linked to a [*GraphSchemaType*](/types/5/0533-Graph-Schemas) entity which is in turn linked to the [*SurveyReport*](/types/6/0603-Survey-Reports) entity.
-3. PROFILE - Retrieves each entity in the Apache Atlas server and adds the following counts to [*DataProfileAnnotation*](/types/6/0620-Data-Profiling) entities linked from the appropriate data field entities:
+1. Measure Resource - Retrieves the overall metrics from the Apache Atlas server.  These are stored in a [*DataSourceMeasurementAnnotation*](/types/0660-Data-Source-Measurement) entity linked to the [*SurveyReport*](/types/6/0603-Survey-Reports) entity generated for each run of the Apache Atlas Survey Action Service.
+2. Schema Extraction - Retrieves the types from Apache Atlas and organizes them in a linked graph of [*Schema Attributes*](/types/5/0533-Graph-Schemas) entities.  All the graph schema attributes are linked to a [*GraphSchemaType*](/types/5/0533-Graph-Schemas) entity which is in turn linked to the [*SurveyReport*](/types/6/0603-Survey-Reports) entity.
+3. Profile Data - Retrieves each entity in the Apache Atlas server and adds the following counts to [*DataProfileAnnotation*](/types/6/0620-Data-Profiling) entities linked from the appropriate data field entities:
 
     * The number of instances of each entity type.
     * The number of classifications of a particular type attached to each type of entity.
@@ -46,7 +46,7 @@ It has three analysis steps:
 
 Each analysis step builds on the work of its predecessor. The processing requirements increase with each step, so you can choose to stop the processing after any step using the `finalAnalysisStep` property.  This can be set as a configuration property in the connection object for this survey action service, or as a request parameter passed when the Apache Atlas Survey Action Service is run.
 
-The default value for `finalAnalysisStep` is `PROFILE`.
+The default value for `finalAnalysisStep` is `Profile Data`.
 
 ## Metadata Setup
 
@@ -71,7 +71,7 @@ Figure 4 shows the structure of the survey report.  The annotations are labelled
 
 ### Data Source Measurements Annotation
 
-The data source measurements annotation is created in the STATS analysis step.  It sets up the following properties in the *dataSourceProperties* map:
+The data source measurements annotation is created in the *Measure Resource* analysis step.  It sets up the following properties in the *dataSourceProperties* map:
 
 * entityInstanceCount - number of active entity instances
 * entityInstanceCount:*typeName* - number of active entity instance of this type
@@ -84,11 +84,11 @@ This analysis is achieved using two REST API calls and so has minimum impact on 
 
 ### Schema Analysis Annotation
 
-The schema analysis annotation is created in the SCHEMA analysis step.  It identifies the name/type of the schema created.
+The schema analysis annotation is created in the *Schema Extraction* analysis step.  It identifies the name/type of the schema created.
 
 ### Apache Atlas Types as a schema
 
-In the SCHEMA analysis step, the apache atlas types extracted from the Apache Atlas server are used to create a schema that describes the graph structure of the metadata found in the Apache Atlas server:
+In the *Schema Extraction* analysis step, the apache atlas types extracted from the Apache Atlas server are used to create a schema that describes the graph structure of the metadata found in the Apache Atlas server:
 
 * A [*GraphVertex*](/types/5/0533-Graph-Schemas) entity is created for each Apache Atlas entity type, business metadata type and classification type.  
 * A [*GraphEdge*](/types/5/0533-Graph-Schemas) entity is created for each Apache Atlas relationship type, and each permitted use of a classification type by an entity type.
@@ -113,7 +113,7 @@ This survey action service attaches multiple data profile annotations to each gr
 
 It sets up the following fields in each data profile annotation:
 
-* *analysisStep* - this is always set to "PROFILE".
+* *analysisStep* - this is always set to *Profile Data*.
 * *annotationType* - this identifies the type of values that the annotation contains.
 * *explanation* - this provides more information about the annotation type.
 * *valueCount* - this is a map of typeName to count.  For example, if this annotation was counting the classifications attached to the *DataSet* entity type, then the map would include an entry for each type of classification attached to this type of entity and a count of how many times it is used.

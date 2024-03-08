@@ -37,20 +37,15 @@ The annotations for the data fields are linked off of the schema attributes crea
 
 ![Survey report structure](/frameworks/saf/survey-report-structure.svg)
 
-## Discovery actions
+## Survey actions
 
-Open discovery can be used for the following types of analysis.
+Survey actions can be used for the following types of analysis.
 
 ### Schema extraction
 
 For digital resources that include structured data, *schema extraction* documents the data fields present in the digital resource and if the schema is attached to the asset, it will attempt to match the data fields it finds to its schema attributes.
 
-Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Extraction).  It is linked directly off of the survey report.
-
-The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *AssetSchemaType* relationship.  This may be established before the open discovery service runs, or may be derived by an [engine action](/concepts/engine-action) once the open discovery service has run.
-
-* The *SchemaTypeDefinition* links the schema analysis annotation to the top level schema type.
-* The *SchemaAttributeDefinition* links a data field to is corresponding schema attribute.
+Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Extraction).  It is linked directly off of the survey report.  The schema of the data in the digital resource is defined in a [*SchemaType*](/types/5/0501-Schema-Elements) linked from the digital resource's asset using the [*AssetSchemaType*](/types/5/0503-Asset-Schema) relationship.  This may be established before the survey action service runs, or may be derived by the survey action service itself.
 
 ### Resource profiling
 

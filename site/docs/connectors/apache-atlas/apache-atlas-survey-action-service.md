@@ -69,9 +69,9 @@ Figure 4 shows the structure of the survey report.  The annotations are labelled
 ![Figure 4](apache-atlas-survey-action-service-analysis.svg)
 > **Figure 4:** Analysis stages performed by the survey action service
 
-### Data Source Measurements Annotation
+### Resource Measurements Annotation
 
-The data source measurements annotation is created in the *Measure Resource* analysis step.  It sets up the following properties in the *dataSourceProperties* map:
+The resource measurements annotation is created in the *Measure Resource* analysis step.  It sets up the following properties in the *dataSourceProperties* map:
 
 * entityInstanceCount - number of active entity instances
 * entityInstanceCount:*typeName* - number of active entity instance of this type
@@ -104,22 +104,22 @@ All the graph vertices are linked to a [*GraphSchemaType*](/types/5/0533-Graph-S
 > **Figure 5:** Linkage of graph schema elements based on Apache Atlas type.
 
 
-### Data Profile Annotation
+### Resource Profile Annotation
 
-This survey action service attaches multiple data profile annotations to each graph schema attribute depending on their category (entity, relationship, classification or business metadata).
+This survey action service attaches multiple resource profile annotations to each graph schema attribute depending on their category (entity, relationship, classification or business metadata).
 
 ![Figure 6](apache-atlas-survey-action-service-profile.svg)
-> **Figure 6:** Details of the data profile annotations attached to each type of data field
+> **Figure 6:** Details of the resource profile annotations attached to each type of data field
 
-It sets up the following fields in each data profile annotation:
+It sets up the following fields in each resource profile annotation:
 
-* *analysisStep* - this is always set to *Profile Data*.
+* *analysisStep* - this is always set to *Profile Resource*.
 * *annotationType* - this identifies the type of values that the annotation contains.
 * *explanation* - this provides more information about the annotation type.
 * *valueCount* - this is a map of typeName to count.  For example, if this annotation was counting the classifications attached to the *DataSet* entity type, then the map would include an entry for each type of classification attached to this type of entity and a count of how many times it is used.
 * *additionalProperties* - contains the count of instances for the particular type that the data field represents.
 
-The table summarizes the values in each of the data profile annotations depending on the category of the data field it is attached to.
+The table summarizes the values in each of the resource profile annotations depending on the category of the data field it is attached to.
 
 | Atlas Type Category | Annotation Type                                | Explanation                                                                                               | Value Count                          | Instance count in AdditionalProperties    |
 |---------------------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------|--------------------------------------|-------------------------------------------|

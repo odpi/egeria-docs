@@ -393,18 +393,6 @@ When the configuration is next queried (this is request **2.** in Postman), the 
       },
       {
         "class": "AccessServiceConfig",
-        "accessServiceId": 217,
-        "accessServiceDevelopmentStatus": "TECHNICAL_PREVIEW",
-        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.discoveryengine.admin.DiscoveryEngineAdmin",
-        "accessServiceName": "Discovery Engine",
-        "accessServiceFullName": "Discovery Engine OMAS",
-        "accessServiceURLMarker": "discovery-engine",
-        "accessServiceDescription": "Support for automated metadata discovery engines",
-        "accessServiceWiki": "https://egeria-project.org/services/omas/discovery-engine/overview/",
-        "accessServiceOperationalStatus": "ENABLED"
-      },
-      {
-        "class": "AccessServiceConfig",
         "accessServiceId": 215,
         "accessServiceDevelopmentStatus": "TECHNICAL_PREVIEW",
         "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.digitalarchitecture.admin.DigitalArchitectureAdmin",

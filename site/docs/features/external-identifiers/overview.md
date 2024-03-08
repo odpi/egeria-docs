@@ -61,6 +61,5 @@ The [Open Connector Framework (OCF)](/frameworks/ocf/overview) provides the abil
 
 - [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
 - [Asset Owner OMAS](/services/omas/asset-owner/overview)
-- [Discovery Engine OMAS](/services/omas/discovery-engine/overview)
 
 --8<-- "snippets/abbr.md"

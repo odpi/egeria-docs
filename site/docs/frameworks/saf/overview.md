@@ -34,18 +34,18 @@ An *annotation* describes one or more related properties about an [asset](/conce
 
 Different types of annotations provide different types of information.
 
-| Annotation type                        | Description                                                                                                                                                                                          |
-|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Classification annotation              | Captures a recommendation of which classifications to attach to this asset. It can be made at the asset or data field level.                                                                         |
-| Data class annotation                  | Captures a recommendation of which data class this data field closely represents.                                                                                                                    |
-| Data profile annotation                | Captures the characteristics of the data values stored in a specific data field in a data source.                                                                                                    |
-| Data profile log annotation            | Captures the names of the log files where profile characteristics of the data values stored in a specific data field. This is used when the profile results are too large to store in open metadata. |
-| Data source measurement annotation     | Collects arbitrary properties about a data source.                                                                                                                                                   |
-| Data source physical status annotation | Documents the physical characteristics of a data source asset.                                                                                                                                       |
-| Relationship advice annotation         | Documents a recommended relationship that should be established with the asset.                                                                                                                      |
-| Quality annotation                     | Documents the calculated quality scores on different dimensions.                                                                                                                                     |
-| Semantic annotation                    | Documents suggested meanings for this data based on the values and name of the field.                                                                                                                |
-| Semantic annotation                    | Documents details of an issue or situation that needs a steward's attention.                                                                                                                         |
+| Annotation type                     | Description                                                                                                                                                                  |
+|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Classification annotation           | Captures a recommendation of which classifications to attach to this asset. It can be made at the asset or data field level.                                                 |
+| Data class annotation               | Captures a recommendation of which data class this data field closely represents.                                                                                            |
+| Resource profile annotation         | Captures the characteristics of a resource.                                                                                                                                  |
+| Resource profile log annotation     | Captures the names of the log files where profile characteristics of the resource are stored. This is used when the profile results are too large to store in open metadata. |
+| Resource measurement annotation     | Collects arbitrary properties about a data source.                                                                                                                           |
+| Resource physical status annotation | Documents the physical characteristics of a data source asset.                                                                                                               |
+| Relationship advice annotation      | Documents a recommended relationship that should be established with the asset.                                                                                              |
+| Quality annotation                  | Documents the calculated quality scores on different dimensions.                                                                                                             |
+| Semantic annotation                 | Documents suggested meanings for this data based on the values and name of the field.                                                                                        |
+| Request for Action annotation       | Documents details of an issue or situation that needs a steward's attention.                                                                                                 |
 
 #### Schema extraction
 
@@ -63,11 +63,11 @@ The schema of the data in the digital resource is defined in a *SchemaType* link
 
 Profiling analysis looks at the data values in the resource and summarizes their characteristics.  There are three types of annotations used in data profiling.
 
-* [Data Profile Annotation](/types/6/0620-Data-Profiling) - Capture the characteristics of the data values stored in a specific data field in a data source.
-* [Data Profile Log Annotation](/types/6/0620-Data-Profiling) - Capture the named of the log files where profile characteristics of the data values stored in a specific data field.  This is used when the profile results are too large to store in open metadata.
-* [Fingerprint Annotation](/types/6/0620-Data-Profiling) - Capture the characteristics of the data values stored in a specific data field or the whole digital resource and express it as a single value.
+* [Resource Profile Annotation](/types/6/0620-Resource-Profiling) - Capture the characteristics of the resource.
+* [Resource Profile Log Annotation](/types/6/0620-Resource-Profiling) - Capture the named of the log files where profile characteristics of a resource.  This is used when the profile results are too large to store in open metadata.
+* [Fingerprint Annotation](/types/6/0620-Resource-Profiling) - Capture the characteristics of the resource and express it as a single value.
 
-![data profiling](survey-action-data-profiling.svg)
+![resource profiling](survey-action-resource-profiling.svg)
 
 For structured data, data profiling needs to run after schema extraction to allow the data profiling annotations that refer to a specific data field to be linked from the appropriate data field entity.
 
@@ -112,9 +112,9 @@ It is possible to create the relationship as a relationship annotation or attach
 
 #### Capturing measurements
 
-The measurement annotations capture a snapshot of the physical dimensions and activity levels at a particular moment in time.  For example, it may calculate the size of the data source or the number of users accessing it.
+The measure annotations capture a snapshot of the physical dimensions and activity levels of the resource at a particular moment in time.  For example, it may calculate the size of the resource or the number of users accessing it.
 
-![Data source measurements](survey-action-data-source-measurement.svg)
+![Resource measurements](survey-action-resource-measure.svg)
 
 #### Requesting stewardship action
 

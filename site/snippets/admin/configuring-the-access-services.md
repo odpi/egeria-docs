@@ -113,12 +113,6 @@ The OMASs are optional services of the OMAG Server Platform.  The command below 
                     "serviceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/software-developer/"
                 },
                 {
-                    "serviceName": "Discovery Engine",
-                    "serviceURLMarker": "discovery-engine",
-                    "serviceDescription": "Support for automated metadata discovery engines",
-                    "serviceWiki": "https://egeria.odpi.org/open-metadata-implementation/access-services/discovery-engine/"
-                },
-                {
                     "serviceName": "Data Engine",
                     "serviceURLMarker": "data-engine",
                     "serviceDescription": "Exchange process models and lineage with a data engine",

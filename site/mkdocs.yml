@@ -458,13 +458,13 @@ nav:
               - Schema Extraction: types/6/0615-Schema-Extraction.md
               - Data Field Discovery: types/6/0616-Data-Field-Discovery.md
               - Data Field Analysis: types/6/0617-Data-Field-Analysis.md
-              - Data Profiling: types/6/0620-Data-Profiling.md
+              - Resource Profiling: types/6/0620-Resource-Profiling.md
               - Data Class Discovery: types/6/0625-Data-Class-Discovery.md
               - Semantic Discovery: types/6/0630-Semantic-Discovery.md
               - Classification Discovery: types/6/0635-Classification-Discovery.md
               - Quality Scores: types/6/0640-Quality-Scores.md
               - Relationship Discovery: types/6/0650-Relationship-Discovery.md
-              - Measurements: types/6/0660-Data-Source-Measurements.md
+              - Measurements: types/6/0660-Resource-Measures.md
               - Request for Action: types/6/0690-Request-for-Action.md
           - 7. Lineage:
               - Area 7 Lineage: types/7/index.md
@@ -521,7 +521,6 @@ nav:
                   - DevOps OMAS: services/omas/dev-ops/overview.md
                   - Digital Architecture OMAS: services/omas/digital-architecture/overview.md
                   - Digital Service OMAS: services/omas/digital-service/overview.md
-                  - Discovery Engine OMAS: services/omas/discovery-engine/overview.md
                   - Governance Engine OMAS: services/omas/governance-engine/overview.md
                   - Governance Program OMAS: services/omas/governance-program/overview.md
                   - IT Infrastructure OMAS: services/omas/it-infrastructure/overview.md
@@ -533,7 +532,6 @@ nav:
                   - Subject Area OMAS: services/omas/subject-area/overview.md
               - Engine Services (OMES):
                   - Open Metadata Engine Services: services/omes/index.md
-                  - Asset Analysis: services/omes/asset-analysis/overview.md
                   - Governance Action: services/omes/governance-action/overview.md
                   - Event Action: services/omes/event-action/overview.md
                   - Survey Action: services/omes/survey-action/overview.md
@@ -669,7 +667,6 @@ nav:
       - Deployed Implementation Type: concepts/deployed-implementation-type.md
       - Digital Resource: concepts/digital-resource.md
       - Digital Resource Connector: concepts/digital-resource-connector.md
-      - Discovery Analysis Report: concepts/discovery-analysis-report.md
       - Endpoint: concepts/endpoint.md
       - Engine Action: concepts/engine-action.md
       - Engine Host: concepts/engine-host.md
@@ -732,8 +729,6 @@ nav:
       - OMAG Server Platform: concepts/omag-server-platform.md
       - OMAG Server Runtime: concepts/omag-server-runtime.md
       - OMAG Subsystem: concepts/omag-subsystem.md
-      - Open Discovery Engine: concepts/open-discovery-engine.md
-      - Open Discovery Service: concepts/open-discovery-service.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
       - Open Metadata Archive Store Connector: concepts/open-metadata-archive-store-connector.md

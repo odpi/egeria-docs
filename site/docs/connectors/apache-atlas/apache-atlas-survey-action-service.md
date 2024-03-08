@@ -34,9 +34,9 @@ The Apache Atlas Survey Action Service provides a summary of the contents of the
 
 It has three analysis steps:
 
-1. Measure Resource - Retrieves the overall metrics from the Apache Atlas server.  These are stored in a [*DataSourceMeasurementAnnotation*](/types/0660-Data-Source-Measurement) entity linked to the [*SurveyReport*](/types/6/0603-Survey-Reports) entity generated for each run of the Apache Atlas Survey Action Service.
+1. Measure Resource - Retrieves the overall metrics from the Apache Atlas server.  These are stored in a [*ResourceMeasureAnnotation*](/types/0660-Resource-Measures) entity linked to the [*SurveyReport*](/types/6/0603-Survey-Reports) entity generated for each run of the Apache Atlas Survey Action Service.
 2. Schema Extraction - Retrieves the types from Apache Atlas and organizes them in a linked graph of [*Schema Attributes*](/types/5/0533-Graph-Schemas) entities.  All the graph schema attributes are linked to a [*GraphSchemaType*](/types/5/0533-Graph-Schemas) entity which is in turn linked to the [*SurveyReport*](/types/6/0603-Survey-Reports) entity.
-3. Profile Data - Retrieves each entity in the Apache Atlas server and adds the following counts to [*DataProfileAnnotation*](/types/6/0620-Data-Profiling) entities linked from the appropriate data field entities:
+3. Profile Data - Retrieves each entity in the Apache Atlas server and adds the following counts to [*ResourceProfileAnnotation*](/types/6/0620-Resource-Profiling) entities linked from the appropriate data field entities:
 
     * The number of instances of each entity type.
     * The number of classifications of a particular type attached to each type of entity.

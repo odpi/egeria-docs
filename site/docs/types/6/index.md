@@ -8,9 +8,9 @@ hide:
 
 # Area 6 Models - Discovery Surveys and Analysis
 
-Area 6 provides structures for recording the results of automated metadata surveys as annotations to associated assets in the metadata repository.
+Area 6 provides structures for recording the results of automated discovery surveys of resources as annotations to associated assets in the metadata repository.
 
-Metadata surveys require different types of analysis. This analysis may run just once, say when the asset is created, on demand or based on an event or schedule.
+Discovery surveys require different types of analysis. This analysis may run just once, say when the asset is created, on demand or based on an event or schedule.
 
 A particular type of analysis is implemented in a [survey action service](/concepts/survey-action-service). Within the survey action service are one to many analysis steps. Each step performs some sort of analysis that may result in an [annotation](/concepts/survey-report/#annotations) for one or more assets.
 
@@ -21,13 +21,13 @@ The annotations from a particular run of a survey action service are grouped tog
 * **[0611 Annotation Reviews](0612-Annotation-Reviews.md)**
 * **[0615 Schema Extraction](0615-Schema-Extraction.md)**
 
-* **[0620 Data Profiling](0620-Data-Profiling.md)**
+* **[0620 Resource Profiling](0620-Resource-Profiling.md)**
 * **[0625 Data Class Discovery](0625-Data-Class-Discovery.md)**
 * **[0630 Semantic Discovery](0630-Semantic-Discovery.md)**
 * **[0635 Classification Discovery](0635-Classification-Discovery.md)**
 * **[0640 Quality Scores](0640-Quality-Scores.md)**
 * **[0650 Relationship Discovery](0650-Relationship-Discovery.md)**
-* **[0660 Measurements](0660-Data-Source-Measurements.md)**
+* **[0660 Measurements](0660-Resource-Measures.md)**
 * **[0690 Request for Action](0690-Request-for-Action.md)**
 
 ![UML Packages](area-6-discovery-overview.svg)

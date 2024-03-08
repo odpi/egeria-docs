@@ -16,7 +16,6 @@ The engine services run in the [engine host](/concepts/engine-host).  They provi
 | [Governance Action OMES](/services/omes/governance-action/overview)         | [Governance Action Service](/concepts/governance-action-service)         | [Governance Engine OMAS](/services/omas/governance-engine/overview) |
 | [Event Action OMES](/services/omes/event-action/overview)                   | [Event Action Service](/concepts/event-action-service)                   | [Data Science OMAS](/services/omas/data-science/overview)           |
 | [Repository Governance OMES](/services/omes/repository-governance/overview) | [Repository Governance Service](/concepts/repository-governance-service) | [Repository Governance OMAS](/services/omrs)                        |
-| [Asset Analysis OMES](/services/omes/asset-analysis/overview) (Deprecated)  | [Open Discovery Service](/concepts/open-discovery-service)               | [Discovery Engine OMAS](/services/omas/discovery-engine/overview)   |
 
 
 The diagram below shows the generic picture of an engine service plugged into the Engine Host.  The [engine host services](/services/engine-host-services) provide most of the capability of the Engine Host.  This includes managing the retrieval of the [governance engine definitions](/concepts/governance-engine-definition) from the metadata access server that map the engine action requests to calls to the governance services.  

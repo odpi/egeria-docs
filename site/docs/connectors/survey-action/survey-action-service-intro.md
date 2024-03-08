@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-An *survey-action service* is a component that performs analysis of the contents of a [digital resource](/concepts/digital-resource) on request.  The aim of the survey action service is to enable a detailed picture of the properties of a resource to be built up.
+An *survey action service* is a component that performs analysis of the contents of a [digital resource](/concepts/digital-resource) on request.  The aim of the survey action service is to enable a detailed picture of the properties of a resource to be built up.
 
 Each time a survey action service runs, it creates a new [survey report](/concepts/survey-report) linked off of the digital resource's [Asset](/concepts/asset) metadata element that records the results of the analysis.  
 
@@ -18,9 +18,9 @@ An survey action service is designed to run at regular intervals to gather a det
 ??? info "Runtime for an survey action service"
     Survey action services are packaged into [Survey Action Engines](/concepts/survey-action-engine) that run in the [Survey Action OMES](/services/omes/survey-action/overview) hosted in an [Engine Host](/concepts/engine-host).  
 
-    The metadata repository interface for metadata discovery tools is implemented by the [Stewardship Actions OMAS](/services/omas/stewardship-action/overview) that runs in a [Metadata Access Server](/concepts/metadata-access-server).
+    The metadata repository interface for metadata discovery tools is implemented by the [Asset Owner OMAS](/services/omas/asset-owner/overview) that runs in a [Metadata Access Server](/concepts/metadata-access-server).
 
-    An survey action service may be triggered via an [Engine Action](/concepts/engine-action) or as part of a [governance action process](/concepts/governance-action-process).
+    A survey action service may be triggered via an [Engine Action](/concepts/engine-action), a [governance action type](/concepts/overnance-action-type) or as part of a [governance action process](/concepts/governance-action-process).
 
     ![Survey Action Service](/connectors/survey-action/survey-action-service.svg)
 

@@ -6,12 +6,12 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# 0660 Data Source Measurements
+# 0660 Resource Measurements
 
-The Data Source Measurements capture a snapshot of the physical
+The Resource Measures capture a snapshot of the physical
 dimensions and activity levels at a particular moment in time.
 
-![UML](0660-Data-Source-Measurements.svg)
+![UML](0660-Resource-Measures.svg)
 
 
 --8<-- "snippets/abbr.md"

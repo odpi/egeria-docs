@@ -32,13 +32,13 @@ The *Annotation* entity inherits from [*OpenMetadataRoot*](/types/0/0010-Base_Mo
 The types that follow provide more specialized annotations.
 
 * **[0615 Schema Extraction](0615-Schema-Extraction.md)**
-* **[0620 Data Profiling](0620-Data-Profiling.md)**
+* **[0620 Resource Profiling](0620-Resource-Profiling.md)**
 * **[0625 Data Class Discovery](0625-Data-Class-Discovery.md)**
 * **[0630 Semantic Discovery](0630-Semantic-Discovery.md)**
 * **[0635 Classification Discovery](0635-Classification-Discovery.md)**
 * **[0640 Quality Scores](0640-Quality-Scores.md)**
 * **[0650 Relationship Discovery](0650-Relationship-Discovery.md)**
-* **[0660 Measurements](0660-Data-Source-Measurements.md)**
+* **[0660 Measurements](0660-Resource-Measures.md)**
 * **[0690 Request for Action](0690-Request-for-Action.md)**
 
 ## DataFieldAnnotation entity

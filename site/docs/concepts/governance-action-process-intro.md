@@ -24,7 +24,7 @@ Governance actions from the same governance action processes can run in parallel
 > **Example 1:** Governance Action Process to validate and augment a newly created asset
 
 Governance action processes can include any [type of governance service](/concepts/governance-service).
-Example 2 shows an [open discovery service](/concepts/open-discovery-service) amongst the [governance action services](/concepts/governance-action-service).
+Example 2 shows an [survey action service](/concepts/survey-action-service) amongst the [governance action services](/concepts/governance-action-service).
 
 ![Example 2](/concepts/governance-action-process-example-2.svg)
 > **Example 2:** Governance Action Process to validate and augment a newly created asset

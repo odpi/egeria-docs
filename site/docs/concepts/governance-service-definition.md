@@ -59,11 +59,11 @@ Many of the values for the governance service definition can be gleaned from the
 
 The possible subtypes of *GovernanceService* are determined from the `connectorInterfaces` shown in the connector type from the connector provider.
 
-| Connector Interface                                                         | SubType of *GovernanceService*                                                                                               |
-|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| `org.odpi.openmetadata.frameworks.governanceaction.GovernanceActionService` | [GovernanceActionService](/types/4/0461-Governance-Engines)                                                                  |
-| `org.odpi.openmetadata.frameworks.discovery.OpenDiscoveryService`           | [OpenDiscoveryService](/types/6/0601-Open-Discovery-Engine) or  [OpenDiscoveryPipeline](/types/6/0601-Open-Discovery-Engine) |
-| `org.odpi.openmetadata.engineservices.repositorygovernance.connector.RepositoryGovernanceService` | [RepositoryGovernanceService](/types/4/0461-Governance-Engines)                                                              |
+| Connector Interface                                                                               | SubType of *GovernanceService*                                  |
+|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| `org.odpi.openmetadata.frameworks.governanceaction.GovernanceActionService`                       | [GovernanceActionService](/types/4/0461-Governance-Engines)     |
+| `org.odpi.openmetadata.frameworks.surveyaction.SurveyActionService`                               | [SurveyActionService](/types/4/0461-Governance-Engines)         |
+| `org.odpi.openmetadata.engineservices.repositorygovernance.connector.RepositoryGovernanceService` | [RepositoryGovernanceService](/types/4/0461-Governance-Engines) |
 
 
 *GovernanceService* is a type of [Asset](/concepts/asset) and so is linked to the connection entity using the [ConnectionToAsset](/types/2/0205-Connection-Linkage) relationship.

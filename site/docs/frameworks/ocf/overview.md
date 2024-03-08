@@ -337,8 +337,7 @@ common open metadata entities related to this asset:
 
 The [connector broker](#connector-broker) does not have access to a metadata repository because the OCF is metadata repository neutral. When it creates a connector, the connected asset properties are null.
 
-[Egeria Open Metadata Access Services (OMAS)](/services/omas) such as [Asset Consumer OMAS](/services/omas/asset-consumer/overview), [Asset Owner OMAS](/services/omas/asset-owner/overview) and
-[Discovery Engine OMAS](/services/omas/discovery-engine/overview), include the connector broker in their clients and support APIs for managing connections and creating connectors.
+[Egeria Open Metadata Access Services (OMAS)](/services/omas) such as [Asset Consumer OMAS](/services/omas/asset-consumer/overview) and [Asset Owner OMAS](/services/omas/asset-owner/overview), include the connector broker in their clients and support APIs for managing connections and creating connectors.
 
 Connectors created by the Egeria access services will include the connected asset properties object configured to retrieve metadata from the same open metadata repository where the OMAS is running.
 

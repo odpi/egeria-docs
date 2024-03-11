@@ -33,11 +33,11 @@ Provides educational resources for different personas and starting points.
 
 Egeria's education aims to broaden the knowledge of people who need to work with digital resources about metadata, governance practices and the use of Egeria. They are It is based around the [Coco Pharmaceuticals](/practices/coco-pharmaceuticals/) scenario and are organized by persona, so you can target your learning to your interests.
 
-- The [Egeria dojo](/education/egeria-dojo) is a deep dive into the Egeria code and community.  It is a good starting point if you wish to learn more about Egeria.
+- The content packs are included in the *omag-server-platform* distribution created by the build for *egeria.git*. They are formatted as [Open Metadata Archives](/concepts/open-metadata-arachive) and can be configured to load at server startup using the [Administration Services](/guides/admin/servers) or while the server is running using the [Server Operations](/guides/operations/overview).
+- There are also many sample clients, server configurations and sample data included in the *omag-server-platform* distribution created by the build for *egeria.git*.  They are accompanied by `README.md` files to explain how to use them.
+- Reference data in the form of [metadata valid values](/guides/planning/valid-values/overivew) is supplied in *omag-server-platform* distribution created by the build for *egeria.git*.
 - The [Hands-on labs](/education/open-metadata-labs/overview) provide practical experiences in running the Egeria code and using the different services. 
 - The [Governance practices](/practices) provides governance best practices. They aim to guide a team that is setting up or revising their governance program through common governance tasks.
-- The *Samples* are distributed between the [egeria.git :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples){ target=gh }, [egeria-samples.git :material-github:](https://github.com/odpi/egeria-samples){ target=gh } and [egeria-dev-projects.git :material-github:](https://github.com/odpi/egeria-dev-projects){ target=gh } repositories.
-- The *edX courses* are a new idea to provide a full curriculum and certification for governance professionals and architects. It is in the early phases of design.
 
 ### User Interfaces
 
@@ -45,6 +45,7 @@ Egeria's user interfaces (UIs) provide individuals with access to search, review
 
 ![UIs](ui-functional-detail.svg)
 
+- *Rich Widgets and Textual UIs* provide visualization of key element.  They are designed for technical people operating the platform.
 - [Egeria Ecosystem UI](/user-interfaces/ecosystem): server and platform configuration, ecosystem monitoring, type explorer and repository explorer.
 - [Egeria General User UI](/user-interfaces): data catalog search, glossary browser, lineage explorer.
 
@@ -55,6 +56,7 @@ Supports integration of popular technologies by installing and configuring Egeri
 ![Integration Platform](integration-platform-functional-detail.svg)
 
 - *Utilities and converters*: support for different standard formats to load industry standard definitions, models, glossaries, and other content packs built on industry standard definitions, models, glossaries and other content packs. Examples include JSON-LD, OWL/RDF, XML, ...
+- There are clients written in both Java and Python to aid programmers calling the Egeria services.
 - [Pre-canned connectors to third party technologies](/connectors): popular metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
 - [Conformance test suite](/guides/cts/overview): Supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
 
@@ -101,9 +103,9 @@ Its use is described in the [developer's guide](/guides/developer).
     - [Audit Log Framework (ALF)](/frameworks/alf/overview) - extensions for all types of connectors to enable natural language diagnostics such as exceptions and audit log messages.
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview) - base framework for all types of plug-in components called connectors.
     - [Open Integration Framework (OIF)](/frameworks/oif/overview) - specialized connectors for metadata exchange and synchronization with third party technologies.
-    - [Open Discovery Framework (ODF)](/frameworks/odf/overview) - specialized connectors called discovery services that support automated metadata discovery,
+    - [Survey Action Framework (SAF)](/frameworks/saf/overview) - specialized connectors called survey action services that support automated metadata discovery.
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview) - specialized connectors for the triage and remediation of issues found in the digital landscape.
-    - [Event Action Framework (EAF)](/frameworks/eaf/overview) - specialized connectors for event management.
+    - [Context Event Framework (CEF)](/frameworks/cef/overview) - specialized connectors for context event management.
 
 ### Deployment runtimes
 

@@ -464,7 +464,7 @@ nav:
               - Classification Discovery: types/6/0635-Classification-Discovery.md
               - Quality Scores: types/6/0640-Quality-Scores.md
               - Relationship Discovery: types/6/0650-Relationship-Discovery.md
-              - Measurements: types/6/0660-Resource-Measures.md
+              - Resource Measures: types/6/0660-Resource-Measures.md
               - Request for Action: types/6/0690-Request-for-Action.md
           - 7. Lineage:
               - Area 7 Lineage: types/7/index.md
@@ -533,7 +533,7 @@ nav:
               - Engine Services (OMES):
                   - Open Metadata Engine Services: services/omes/index.md
                   - Governance Action: services/omes/governance-action/overview.md
-                  - Event Action: services/omes/event-action/overview.md
+                  - Context Event: services/omes/event-action/overview.md
                   - Survey Action: services/omes/survey-action/overview.md
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
@@ -572,7 +572,7 @@ nav:
           - Open Connectors (OCF): frameworks/ocf/overview.md
           - Open Integration (OIF): frameworks/oif/overview.md
           - Governance Actions (GAF): frameworks/gaf/overview.md
-          - Event Actions (EAF): frameworks/eaf/overview.md
+          - Context Events (EAF): frameworks/eaf/overview.md
           - Survey Actions (SAF): frameworks/saf/overview.md
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md
@@ -661,6 +661,8 @@ nav:
       - Connector Type: concepts/connector-type.md
       - Contact Method: concepts/contact-method.md
       - Context Event: concepts/context-event.md
+      - Context Event Engine: concepts/context-event-engine.md
+      - Context Event Service: concepts/context-event-service.md
       - Data Class: concepts/data-class.md
       - Data Domain: concepts/subject-area.md
       - Data Engine Proxy: concepts/data-engine-proxy.md
@@ -670,8 +672,6 @@ nav:
       - Endpoint: concepts/endpoint.md
       - Engine Action: concepts/engine-action.md
       - Engine Host: concepts/engine-host.md
-      - Event Action Engine: concepts/event-action-engine.md
-      - Event Action Service: concepts/event-action-service.md
       - Event Bus: concepts/event-bus.md
       - Event Mapper Connector: concepts/event-mapper-connector.md
       - External Reference: concepts/external-reference.md

@@ -53,9 +53,9 @@ These are the subtypes of software server capabilities defined in the open metad
 - [*CohortMember*](/types/0/0057-Software-Services/#cohortmember) - A capability enabling a server to access an open metadata repository cohort.
 - [*GovernanceEngine*](/types/4/0461-Governance-Engines/#governanceengine) - A collection of related governance services of the same type.
     - [*GovernanceActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
-    - [*OpenDiscoveryEngine*](/types/6/0601-Open-Discovery-Engine) - A collection of related governance services supporting the [Open Discovery Framework (ODF)](/frameworks/odf/overview).
+    - [*SurveyActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Discovery Framework (ODF)](/frameworks/odf/overview).
     - [*RepositoryGovernanceEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting maintenance of [Open Metadata Archives](/concepts/open-metadata-archive).
-    - [*EventActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Event Action Framework (EAF)](/frameworks/eaf/overview).
+    - [*ContextEventEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Context Event Framework (CEF)](/frameworks/cef/overview).
 
 In addition, it is possible to augment software server capabilities with the following classifications:
 

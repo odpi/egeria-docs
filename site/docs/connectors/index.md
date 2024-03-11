@@ -11,7 +11,7 @@ Connectors enable Egeria to operate in many environments and with many types of 
 
 * Connectors that support the [exchange and maintenance of metadata](#metadata-exchange-and-maintenance-connectors) with third party technology. This includes the resource connectors, survey action connectors, integration connectors and adapter repository connectors.  These connectors are organized by the type of third part technology type work with.
 
-* Connectors that support the [governance of open metadata](#open-metadata-governance-connectors). This includes the event action services and governance action services.  These connectors are organized by function.
+* Connectors that support the [governance of open metadata](#open-metadata-governance-connectors). This includes the context event services and governance action services.  These connectors are organized by function.
 
 * Connectors that support the integration of [Egeria’s runtimes](#runtime-connectors) into the IT infrastructure where it is running. This includes the native repository connectors, event bus connectors, cohort registry stores, configuration stores, audit log destination connectors, open metadata archive stores, REST client connectors and the cohort member remote repository connectors.  These connectors are organized by connector type.
 

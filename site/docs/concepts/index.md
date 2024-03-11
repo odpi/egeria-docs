@@ -67,6 +67,8 @@
 - [Connector Provider](/concepts/connector-provider)
 - [Connector Type](/concepts/connector-type)
 - [Contact Method](/concepts/contact-method)
+- [Context Event](/concepts/context-event)
+- [Context Event Framework (CEF)](/frameworks/cef/overview)
 - [Context Manager](/frameworks/oif/overview)
 
 ## D
@@ -107,7 +109,6 @@
 
     - [Cohort Events](/concepts/cohort-events)
 
-- [Event Action Framework](/frameworks/eaf/overview)
 - [Event Bus](/concepts/event-bus)
 - [Event Broker](/concepts/basic-concepts/#event-broker)
 - [Event Management Services Subsystem (OMRS)](/services/omrs)
@@ -134,8 +135,8 @@
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview)
     - [Open Integration Framework (OIF)](/frameworks/oif/overview)
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
-    - [Event Action Framework (EAF)](/frameworks/eaf/overview)
-    - [Survey Action Framework (EAF)](/frameworks/saf/overview)
+    - [Context Event Framework (CEF)](/frameworks/cef/overview)
+    - [Survey Action Framework (SAF)](/frameworks/saf/overview)
 
 
 ## G

@@ -16,17 +16,12 @@ In Egeria, the [Open Governance Service](/services/gaf-metadata-management) prov
 
 The *GovernanceActionType* entity describes a type of call to a [governance service](/concepts/governance-service) running in a [governance engine](/concepts/governance-engine).  The engine to call is defined using the *GovernanceActionExecutor* relationship.  When the governance action type is used to initiate some activity, it results in the creation of an [Engine Action](/concepts/engine-action) to control the call to the governance service running in the linked governance engine.
 
-The properties of a *GovernanceActionType* entity are:
+It inherits from [Referenceable](/types/0/0010-Base-Model) and adds the following attributes:
 
 * *domainIdentifier* links the action to a specific [governance domain](/concepts/governance-domain).
 * *displayName* - human-readable name for messages and user interfaces.
 * *description* - description of the governance action that is taken.
-* *requiredRequestParameters* - lists the required request parameters that should be supplied by the caller when the governance action type is used to initiate an engine action, along with its description.
-* *producedActionTargets* - lists the required action targets that should be supplied by the caller when the governance action type is used to initiate an engine action, along with its description.
-* *producedRequestParameters* - lists the required request parameters that should be supplied by the caller when the governance action type is used to initiate an engine action, along with its description.
-* *producedActionTargets* - lists the required action targets that should be supplied by the caller when the governance action type is used to initiate an engine action, along with its description.
-* *producedGuards* - lists the possible guards produced by the called governance service when it completes along with a description of the guard.  This is used to help the individual/tool to understand the possible outcomes.
-* *waitTime* - the minimum number of minutes that the engine action should wait before starting.
+* *waitTime* - the minimum number of minutes that the engine action should wait before starting.  This is in addition to any requested start time from the initiating user.
 
 ## GovernanceActionExecutor relationships
 
@@ -38,7 +33,6 @@ The *GovernanceActionExecutor* relationship identifies the [governance service](
 * *requestParameterMap* - provides a translation map between the supplied names in the requestParameters and the names supported by the implementation of the governance service.
 * *actionTargetFilter* - lists the names of the action targets to remove from the supplied action targets.
 * *actionTargetMap* - provides a translation map between the supplied name of an action target and the name supported by the implementation of the governance service.
-
 
 ## GovernanceActionProcess entity
 

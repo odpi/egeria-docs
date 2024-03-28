@@ -42,7 +42,8 @@ The *CatalogTarget* relationship links an *IntegrationConnector* entity to anoth
 An integration connector may have multiple catalog targets.  The attributes of this relationship are used to control the processing of each one.
 
 * *catalogTargetName* provides a symbolic name for the catalog target.  This is used in messages ans it is helpful to have a unique name ofr each catalog target.
-* *configurationProperties* provide properties that control the behaviour of the integration connector whilst it is processing the catalog target. Its value override the configuration properties supplied in the integration connector's connection. 
+* *configurationProperties* provide properties that control the behaviour of the integration connector whilst it is processing the catalog target. Its value override the configuration properties supplied in the integration connector's connection.
+* *metadataSourceQualifiedName* provides a new metadata collection name for elements catalogued by the integration connector whilst it is processing the catalog target. Its value override the configuration properties supplied in the integration connector's connection.
 
 ## IntegrationReport entity
 

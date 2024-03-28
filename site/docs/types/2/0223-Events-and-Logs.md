@@ -13,7 +13,12 @@ Processing is often triggered when a specific event or situation occurs.  There 
 
 ## Topic entity
 
-A *Topic* is a type of [*DataSet*](/types/0/0010-Base-Model/#dataset) that is accessed using a publish-subscribe event interface.  There are processes that add events to the topic, and other processes that subscribe to the topic and receive a copy of each event that is added.  It is shown as a data set because some topics are in memory and some make use of an underlying [*DataStore*](/types/2/0210-Data-Stores) to provide a persistent/reliable delivery service. 
+A *Topic* is a type of [*DataSet*](/types/0/0010-Base-Model/#dataset) that is accessed using a publish-subscribe event interface.  There are processes that add events to the topic, and other processes that subscribe to the topic and receive a copy of each event that is added.  It is shown as a data set because some topics are in memory and some make use of an underlying [*DataStore*](/types/2/0210-Data-Stores) to provide a persistent/reliable delivery service.
+
+The additional attributes for *Topic* are:
+
+* *topicName* holds the fully qualified name of the topic.  This frees up the *name* property to hold a shorter, more human-readable name.
+* *topicType* identifies the type of topic.  This may refer to its reliability or other features supported by the event broker.
 
 ## KafkaTopic entity
 

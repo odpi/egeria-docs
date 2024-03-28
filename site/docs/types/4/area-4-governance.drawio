@@ -1,6 +1,6 @@
-<mxfile modified="2024-03-13T09:18:22.110Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="r5Pbbif-AWg0cO7zktRn" version="23.0.2" type="device" pages="32">
+<mxfile modified="2024-03-20T10:00:08.334Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="P-ZCFRjjZYQDDnoqB12d" version="23.0.2" type="device" pages="32">
   <diagram id="cenQKAz8UWtqx_h9wgFg" name="overview">
-    <mxGraphModel dx="1242" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2600,7 +2600,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0464-Dynamic-Integration-Groups" id="K3cz20lscM0EOLJqlwf-">
-    <mxGraphModel dx="1242" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1114" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0rjn_ZQEVloVxkxdr37G-0" />
         <mxCell id="0rjn_ZQEVloVxkxdr37G-1" parent="0rjn_ZQEVloVxkxdr37G-0" />
@@ -2679,8 +2679,8 @@
             <mxPoint x="608.45" y="827.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VGYDAl4SBOfUlF8ZcITr-4" value="catalogTargetName : string&lt;br&gt;configurationProperties : map&amp;lt;string, object&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;align=left;fillColor=#ffffff;" parent="0rjn_ZQEVloVxkxdr37G-1" vertex="1">
-          <mxGeometry x="450" y="413" width="262.57" height="57" as="geometry" />
+        <mxCell id="VGYDAl4SBOfUlF8ZcITr-4" value="catalogTargetName : string&lt;br&gt;configurationProperties : map&amp;lt;string, object&amp;gt;&lt;br&gt;metadataSourceQualifiedName : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;align=left;fillColor=#ffffff;" parent="0rjn_ZQEVloVxkxdr37G-1" vertex="1">
+          <mxGeometry x="450" y="413" width="262.57" height="67" as="geometry" />
         </mxCell>
         <mxCell id="VGYDAl4SBOfUlF8ZcITr-5" value="*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="0rjn_ZQEVloVxkxdr37G-1" vertex="1">
           <mxGeometry x="885.07" y="335.5" width="30" height="30" as="geometry" />

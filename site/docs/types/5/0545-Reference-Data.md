@@ -78,6 +78,10 @@ The *ConsistentValidValues* relationship allows this mapping to be captured.
 
 The *ValidValueAssociation* relationship allows arbitrary relationships between valid value definitions to be recorded.
 
+## SpecificationPropertyAssignment relationship
+
+The *SpecificationPropertyAssignment* relationship is used to attach a valid value that describes a type of configurable property to the element that represents the implementation.  Examples include connectors and templates.
+
 ## ValidValuesImplementation relationship and ReferenceData classification
 
 The implementation of a code table is represented in open metadata using an [Asset](/types/0/0010-Base-Model).  This asset can be tagged as containing valid values using the *ReferenceData* classification.

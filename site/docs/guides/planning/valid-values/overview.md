@@ -57,7 +57,7 @@ This is how these values could appear in an instance of a project charter:
 
 Valid metadata values can either be set up in an [open metadata archive](/concepts/open-metadata-archive), or through the [OpenMetadataClient](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/OpenMetadataStoreClient.html) available on most [Open Metadata Access Services (OMASs)](/services/omas).
 
-## Code samples
+### Code samples
 
 The code snippet below shows how to set up the strings "incident-investigation" and "clinical-trial" as a specific valid values for the *projectType* property of *ProjectCharter*.
 
@@ -110,5 +110,48 @@ if (! client.validateMetadataValue(userId, "ProjectCharter", "projectType", actu
      */
 }
 ```
+
+### Predefined valid metadata values
+
+The `OpenConnectorArchive.omarchive` includes valid value definitions for the [*deployedImplementationType*](/concepts/deployed-implementation-type), [*fileType*](/concepts/file-type), [*fileName*](/types/2/0220-Files-and-Folders) and [*fileExtension*](/types/2/0220-Files-and-Folders) properties.  These values can be used to control the values stored in these properties.  They are also linked with each other and other metadata elements:
+
+* The *deployedImplementationType* valid values are used to provide an index of connectors, templates and other resources that support specific types of technology.  The [Automated Curation OMVS](/services/omvs/automated-curation/overview) provides an API to query these valid values and the linked resources.
+
+* The *fileType*, *fileName* and *fileExtension* valid values are used by the [file connectors](connectors/#files) that survey and catalog files in the file system.  They allow the known files to classified in various way to increase the insight into the files available to the organization.
+
+These values can be updated and augmented to match the needs of your organization.
+
+## Connector specifications
+
+Valid metadata values can also be used to define the properties that control the behaviour of [connectors](/concepts/connector).  They are defined in the connector's [connector provider](/concepts/connector-provider).
+
+The first two values can be specified by any type of connector:
+
+* *supportedTemplate* - Description of a template that should be used by the connector when creating new elements of a certain type.
+* *supportedConfigurationProperty* - Description of a configuration property that is used to affect the behaviour of a connector.
+
+The next set of values may be specified by any type of [governance service](/concepts/governance-service):
+
+* *supportedRequestType* - Description of a request type used to describe a request to a governance engine/service.
+* *supportedRequestParameter* - Description of a request parameter that is used to affect the behaviour of a governance service.
+* *supportedActionTarget* - Description of an element that is linked to a governance action request.  The resulting call to the governance engine/service will work with this element.
+* *producedRequestParameter* - Description of a request parameter that is produced by a governance service and is used to affect the behaviour of the next governance service(s) called in the same governance action process.
+* *producedActionTarget* - Description of an element that is produced by a governance service and is passed to the next governance service(s) called in the same governance action process as an action target.
+* *producedGuard* - Description of a guard that is returned by a governance service when it completes.
+
+A [survey action service](/concepts/survey-action-service) may also specify:
+
+* *supportedAnalysisStep* - Description of an analysis step supported by a survey action service.
+* *producedAnnotationType* - Description of a type of annotation produced by a survey action service.
+
+## Template requirements
+
+[Templates](/features/templated-cataloguing/overview) also use value values to guide users of the template.  They define which values need to be supplied in order to use the template successfully.
+
+There are two types of values:
+
+* *replacementAttribute* - Name of attribute that should be provided when using the attached template.  Replacement attributes map to the root entity of the template, or, the first occurrence of the attribute in attached relationships, classifications or entities.
+* *placeholderProperty* - Placeholder names are located through the attribute values found in a template.  They are identified with double braces, for example {{variableName}}.  The value supplied is substituted for the placeholder variable.
+
 
 --8<-- "snippets/abbr.md"

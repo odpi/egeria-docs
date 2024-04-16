@@ -24,14 +24,16 @@ The attributes for a collection, beyond the standard attributes for *Referenceab
 
 The classifications associated with *Collection* allow it to be specialized for particular uses.  They help when searching for collections for specific uses.
 
-* [*RootCollection*](#root-collection-classification) means the collection is an independent, top-level node in a collection hierarchy.  The members of this collection are typically all collections.
-* [*HomeCollection*](#home-collection-classification) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
+* [*RootCollection*](#rootcollection-classification) means the collection is an independent, top-level node in a collection hierarchy.  The members of this collection are typically all collections.
+* [*HomeCollection*](#homecollection-classification) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
 * [*Folder*](#folder-classification) means the collection can be treated as if it where a folder of metadata elements.  This classification includes properties to control how the members are displayed.
 * [*ResultsSet*](#resultsset-classification) means the collection is a set of related results.
-* [*DigitalProduct*](/types/7/0710-Digital-Service) describes a collection of [assets](/concepts/asset) that represent a digital product.
+* [*RecentAccess*](#recentaccess-classification) means the collection is a set of elements that have been recently accesses by a user.
+* [*WorkItemList*](#workitemlist-classification) means the collection is a set of elements that have been recently accesses by a user.
+* [*DigitalProduct*](/types/7/0710-Digital-Service) describes a collection of [assets](/concepts/asset) that represent a [digital product](/concepts/digital-product).
 * [*GovernanceStatusSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance statuses.
 * [*GovernanceClassificationSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance classification for a particular governance classification.
-* [*EventSet*](/types/5/0421-Governance-Classification-Levels) for a collection of related event schemas.
+* [*EventSet*](/types/5/0535-Event-Schemas) for a collection of related event schemas.
 
 The example below shows part of a collection hierarchy representing a digital product catalog.  The collections are shown in green and the assets that provide the content for the digital product are shown in yellow.
 
@@ -51,21 +53,21 @@ The *HomeCollection* classification indicates that the collection is used to pro
 
 The *Folder* classification indicates that the collection is used to organize metadata elements.  The attributes are used to indicate to the caller how they should be displayed.
 
-* *orderBy* indicates the preferred ordering sequence
+* *orderBy* indicates the preferred ordering sequence. It uses the [OrderBy](#orderby-enumeration) enumeration.
 * *orderPropertyName* indicates which property to use if the *orderBy* attribute is set to `OTHER`.
-
-### OrderBy enumeration
-
-* *Name* - Order by name property.
-* *Owner* - Order by owner property.
-* *DateAdded* - Order by date added to the metadata collection.
-* *DateUpdated* - Order by date that the asset was updated.
-* *DateCreated* - Order by date that the asset was created.
-* *Other* - Order by another property.
 
 ### ResultsSet classification
 
-The *ResultsSet* classification indicates that the collection is a set of elements where each element is only included in the collection once.
+The *ResultsSet* classification indicates that the collection is a set of elements that are the results from a specific request or query.
+
+### RecentAccess classification
+
+The *RecentAccess* classification indicates that the collection is a set of elements that have been accessed recently.
+
+### WorkItemList classification
+
+The *WorkItemList* classification indicates that the collection is organizing a set of elements (typically [ToDos](/types/1/0137-Actions), or [Tasks](/types/1/0130-Projects)).
+
 
 ## CollectionMembership relationship
 
@@ -89,6 +91,15 @@ The attributes for the *CollectionMembership* relationship establish the level o
 * The *status* attribute indicates the status of the member in the collection.  It is a [MembershipStatus](#membershipstatus-enumeration) value.
 * The *userDefinedStatus* provides a status value when *status=OTHER*.
 
+## OrderBy enumeration
+
+* *Name* - Order by name property.
+* *Owner* - Order by owner property.
+* *DateAdded* - Order by date added to the metadata collection.
+* *DateUpdated* - Order by date that the asset was updated.
+* *DateCreated* - Order by date that the asset was created.
+* *Other* - Order by another property.
+* 
 ## MembershipStatus enumeration
 
 The values for the *MembershipStatus* enumeration are:

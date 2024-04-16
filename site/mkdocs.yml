@@ -553,18 +553,21 @@ nav:
                   - Topic Integrator: services/omis/topic-integrator/overview.md
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
-                  - My Profile: services/omvs/my-profile/overview.md
                   - Asset Catalog: services/omvs/asset-catalog/overview.md
-                  - Feedback Manager: services/omvs/feedback-manager/overview.md
-                  - Collection Manager: services/omvs/collection-manager/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
-                  - Governance Author: services/omvs/governance-author/overview.md
-                  - Notification Manager: services/omvs/notification-manager/overview.md
-                  - Project Manager: services/omvs/project-manager/overview.md
-                  - Glossary Author: services/omvs/glossary-author/overview.md
+                  - Collection Manager: services/omvs/collection-manager/overview.md
+                  - Data Discovery: services/omvs/data-discovery/overview.md
+                  - Feedback Manager: services/omvs/feedback-manager/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Workflow: services/omvs/glossary-workflow/overview.md
+                  - Governance Author: services/omvs/governance-author/overview.md
+                  - My Profile: services/omvs/my-profile/overview.md
+                  - Notification Manager: services/omvs/notification-manager/overview.md
+                  - Project Manager: services/omvs/project-manager/overview.md
+                  - Reference Data: services/omvs/reference-data/overview.md
+                  - Template Manager: services/omvs/template-manager/overview.md
                   - Dynamic Infrastructure and Ops: services/omvs/dino/overview.md
+                  - Glossary Author: services/omvs/glossary-author/overview.md
                   - Repository Explorer: services/omvs/rex/overview.md
                   - Type Explorer: services/omvs/tex/overview.md
                   - Server Author: services/omvs/server-author/overview.md
@@ -669,6 +672,7 @@ nav:
       - Data Domain: concepts/subject-area.md
       - Data Engine Proxy: concepts/data-engine-proxy.md
       - Deployed Implementation Type: concepts/deployed-implementation-type.md
+      - Digital Product: concepts/digital-product.md
       - Digital Resource: concepts/digital-resource.md
       - Digital Resource Connector: concepts/digital-resource-connector.md
       - Endpoint: concepts/endpoint.md

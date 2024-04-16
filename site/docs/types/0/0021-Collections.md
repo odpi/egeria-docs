@@ -24,9 +24,10 @@ The attributes for a collection, beyond the standard attributes for *Referenceab
 
 The classifications associated with *Collection* allow it to be specialized for particular uses.  They help when searching for collections for specific uses.
 
-* [*RootCollection*](#root-collection-classification) means the collection is the top-level node in a collection hierarchy.  The members of this collection are typically all collections.
+* [*RootCollection*](#root-collection-classification) means the collection is an independent, top-level node in a collection hierarchy.  The members of this collection are typically all collections.
+* [*HomeCollection*](#home-collection-classification) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
 * [*Folder*](#folder-classification) means the collection can be treated as if it where a folder of metadata elements.  This classification includes properties to control how the members are displayed.
-* [*Set*](#set-classification) means the collection is a set of related entities and no entity is a member more than once.
+* [*ResultsSet*](#resultsset-classification) means the collection is a set of related results.
 * [*DigitalProduct*](/types/7/0710-Digital-Service) describes a collection of [assets](/concepts/asset) that represent a digital product.
 * [*GovernanceStatusSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance statuses.
 * [*GovernanceClassificationSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance classification for a particular governance classification.
@@ -40,7 +41,11 @@ The collection at the root of the collection hierarchy is called "Product Catalo
 
 ### RootCollection classification
 
-The *RootCollection* classification indicates that the collection is used to provide the starting node for a hierarchy of collections.
+The *RootCollection* classification indicates that the collection is used to provide the starting node for an independent hierarchy of collections.  For example, this could be a collection hierarch that organizes [digital products]
+
+### HomeCollection classification
+
+The *HomeCollection* classification indicates that the collection is used to provide the starting node for a hierarchy of collections.
 
 ### Folder classification
 
@@ -58,9 +63,9 @@ The *Folder* classification indicates that the collection is used to organize me
 * *DateCreated* - Order by date that the asset was created.
 * *Other* - Order by another property.
 
-### Set classification
+### ResultsSet classification
 
-The *Set* classification indicates that the collection is a set of elements where each element is only included in the collection once.
+The *ResultsSet* classification indicates that the collection is a set of elements where each element is only included in the collection once.
 
 ## CollectionMembership relationship
 

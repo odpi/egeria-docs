@@ -17,9 +17,9 @@ Collections can be used to provide the folder structure.  The top of the hierarc
 
 ## Product catalog organization
 
-[Digital products](/concepts/digital-product) offer data sets and services that have been developed for a particular purpose.  They are typically versioned and may offer the data/function in multiple formats.  
+[Digital products](/concepts/digital-product) offer data sets and services that have been developed for a particular purpose.  They are typically versioned, and may offer the data/function in multiple formats.  
 
-Collections are used in two ways around digital products.  Each digital product is represented using a collection with the [*DigitalProduct*](/types/7/0710-Digital-Service) classification attached.  The digital products are often organized in a folder hierarchy, like the asset catalog.
+Collections are used in two ways for digital products.  Each digital product is represented using a collection with the [*DigitalProduct*](/types/7/0710-Digital-Service) classification attached.  The digital products are often organized in a folder hierarchy, like the asset catalog.
 
 ![Product catalog](collections-product-catalog.svg)
 
@@ -49,7 +49,7 @@ This next example is from a governance service that is periodically processing a
 
 ## Recent Access
 
-User interfaces can keep track of the metadata elements that a particular user is working with so they can quickly access them.  Such a collection would be chained off of the individual's *Person* element using the *ResourceList* relationship.  The collection would have the *RecentAccess* classification attached.
+User interfaces can keep track of the metadata elements that a particular user is working with, so they can quickly access them.  Such a collection would be chained off of the individual's *Person* element using the *ResourceList* relationship.  The collection would have the *RecentAccess* classification attached.
 
 ![Recent Access](collections-recent-access.svg)
 

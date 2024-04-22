@@ -456,7 +456,7 @@ nav:
               - Annotations: types/6/0610-Annotations.md
               - Annotation Reviews: types/6/0612-Annotation-Reviews.md
               - Schema Extraction: types/6/0615-Schema-Extraction.md
-              - Data Field Discovery: types/6/0616-Data-Field-Discovery.md
+              - Data Field Modelling: types/6/0616-Data-Field-Discovery.md
               - Data Field Analysis: types/6/0617-Data-Field-Analysis.md
               - Resource Profiling: types/6/0620-Resource-Profiling.md
               - Data Class Discovery: types/6/0625-Data-Class-Discovery.md

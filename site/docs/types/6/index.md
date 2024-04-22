@@ -21,6 +21,8 @@ The annotations from a particular run of a survey action service are grouped tog
 * **[0611 Annotation Reviews](0612-Annotation-Reviews.md)**
 * **[0615 Schema Extraction](0615-Schema-Extraction.md)**
 
+* **[0616 Data Field Modelling](0616-Data-Field-Discovery.md)**
+
 * **[0620 Resource Profiling](0620-Resource-Profiling.md)**
 * **[0625 Data Class Discovery](0625-Data-Class-Discovery.md)**
 * **[0630 Semantic Discovery](0630-Semantic-Discovery.md)**

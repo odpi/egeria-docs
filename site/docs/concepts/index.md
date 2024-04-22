@@ -133,6 +133,7 @@
 - [Frameworks](/frameworks)
 
     - [Audit Log Framework (ALF)](/frameworks/alf/overview)
+    - [Open Metadata Framework (OMF)](/frameworks/omf/overview)
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview)
     - [Open Integration Framework (OIF)](/frameworks/oif/overview)
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview)

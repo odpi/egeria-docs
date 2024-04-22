@@ -574,10 +574,11 @@ nav:
       - Frameworks:
           - Frameworks Overview : frameworks/index.md
           - Audit Logs (ALF): frameworks/alf/overview.md
+          - Open Metadata (OMF): frameworks/omf/overview.md
           - Open Connectors (OCF): frameworks/ocf/overview.md
           - Open Integration (OIF): frameworks/oif/overview.md
           - Governance Actions (GAF): frameworks/gaf/overview.md
-          - Context Events (EAF): frameworks/eaf/overview.md
+          - Context Events (CEF): frameworks/cef/overview.md
           - Survey Actions (SAF): frameworks/saf/overview.md
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md

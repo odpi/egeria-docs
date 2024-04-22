@@ -53,8 +53,8 @@ The *HomeCollection* classification indicates that the collection is used to pro
 
 The *Folder* classification indicates that the collection is used to organize metadata elements.  The attributes are used to indicate to the caller how they should be displayed.
 
-* *orderBy* indicates the preferred ordering sequence. It uses the [OrderBy](#orderby-enumeration) enumeration.
-* *orderPropertyName* indicates which property to use if the *orderBy* attribute is set to `OTHER`.
+* *collectionOrder* indicates the preferred ordering sequence. It uses the [OrderBy](#orderby-enumeration) enumeration.
+* *orderByPropertyName* indicates which property to use if the *collectionOrder* attribute is set to `OTHER`.
 
 ### ResultsSet classification
 
@@ -88,7 +88,7 @@ The attributes for the *CollectionMembership* relationship establish the level o
 * The *stewardTypeName* attribute identifies the type of element (such as UserIdentity, Person, PersonRole) that is responsible for the correctness of this relationship.
 * The *stewardPropertyName* attribute identifies the property (such as guid or qualifiedName) used to identify the steward.
 * The *notes* attribute enables the steward to add additional information about this relationship.
-* The *status* attribute indicates the status of the member in the collection.  It is a [MembershipStatus](#membershipstatus-enumeration) value.
+* The *membershipStatus* attribute indicates the status of the member in the collection.  It is a [MembershipStatus](#membershipstatus-enumeration) value.
 * The *userDefinedStatus* provides a status value when *status=OTHER*.
 
 ## OrderBy enumeration
@@ -99,14 +99,14 @@ The attributes for the *CollectionMembership* relationship establish the level o
 * *DateUpdated* - Order by date that the asset was updated.
 * *DateCreated* - Order by date that the asset was created.
 * *Other* - Order by another property.
-* 
+
 ## MembershipStatus enumeration
 
 The values for the *MembershipStatus* enumeration are:
 
 * *Unknown* - The membership origin is unknown. This is the default value.
 * *Discovered* - The membership was discovered by an automated process.
-* *Assigned* - The membership was proposed by an expert curator.  The curator uses their expertise to create the membership. They may or may not be the steward who is ultimately accountable for the correctness of the membership.
+* *Proposed* - The membership was proposed by an expert curator.  The curator uses their expertise to create the membership. They may or may not be the steward who is ultimately accountable for the correctness of the membership.
 * *Imported* - The membership was imported from another metadata system.
 * *Validated* - The membership created by an automated process has been validated and approved by an expert curator.  Again, the curator may or may not be the steward.
 * *Deprecated* - The membership should no longer be used.

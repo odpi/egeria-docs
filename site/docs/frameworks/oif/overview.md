@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
+--8<-- "snippets/content-status/stable.md"
+
 # Open Integration Framework (OIF)
 
 The *Open Integration Framework (OIF)* provides the interfaces for running [integration connectors](/concepts/integration-connector).

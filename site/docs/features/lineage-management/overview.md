@@ -132,14 +132,14 @@ It is also possible that even the cataloguing of the files themselves is not use
 
 Each of the patterns shown in figures 7-11 reduce the amount of metadata that is captured compared to the full lineage shown in figure 6. The missing metadata can be filled out with knowledge of how the process works. This knowledge may be needed when making use of the lineage at a later date.
 
-### The OpenLineage Standard
+### The Open Lineage Standard
 
-[OpenLineage](https://github.com/OpenLineage/OpenLineage) is a sister open source project to Egeria in the [LF AI and Data Foundation](https://lfaidata.foundation/).  It is very welcome since it defines a standard for [*dynamic lineage capture*](#lineage-capture).
+[Open Lineage](https://github.com/OpenLineage/OpenLineage) is a sister open source project to Egeria in the [LF AI and Data Foundation](https://lfaidata.foundation/).  It is very welcome since it defines a standard for [*dynamic lineage capture*](#lineage-capture).
  
  Figure 12 shows the scope of the standard.  When a processing engine such as *Apache Spark* runs a process, it produces a series of events called *RunEvents* that describe the activity of the process.  The standard covers the format of the events and a simple REST API that receives the events.  The REST API only has one operation called `{{urlroot}}/api/v1/lineage` that takes a single event as the request body.
 
 ![Figure 12](/features/lineage-management/open-lineage-standard-defines.svg)
-> **Figure 12:** The OpenLineage standard defines the payload for *RunEvents* as well as a standard URL for a service that acts as a collection point for RunEvents.
+> **Figure 12:** The Open Lineage standard defines the payload for *RunEvents* as well as a standard URL for a service that acts as a collection point for RunEvents.
 
 Processes can log information about their internal structure.  Figure 13 shows a process with three steps.
 
@@ -153,7 +153,7 @@ Figure 14 shows the events from an instance of this process.  Notice each event 
 
 ### RunEvent format
 
-Figure 15 shows the structure of a run event that is defined in the [OpenLineage Specification](https://github.com/OpenLineage/OpenLineage/tree/main/spec).  It has 8 parts to it:
+Figure 15 shows the structure of a run event that is defined in the [Open Lineage Specification](https://github.com/OpenLineage/OpenLineage/tree/main/spec).  It has 8 parts to it:
 
 - *eventType* - the type of activity being described.
 - *eventTime* - the time of the event as a `ZonedDateTime`.
@@ -167,13 +167,13 @@ Figure 15 shows the structure of a run event that is defined in the [OpenLineage
 ![Figure 15](/features/lineage-management/open-lineage-payload-run-event.svg)
 > **Figure 15:** The structure of a RunEvent
 
-The *namespace* groups related processes together, for example the processes from the same subsystem or business process.  The OpenLineage standard provides suggested [naming conventions for the *name* of jobs and data sources](https://github.com/OpenLineage/OpenLineage/blob/main/spec/Naming.md).
+The *namespace* groups related processes together, for example the processes from the same subsystem or business process.  The Open Lineage standard provides suggested [naming conventions for the *name* of jobs and data sources](https://github.com/OpenLineage/OpenLineage/blob/main/spec/Naming.md).
 
 Throughout the RunEvent are `additionalProperties`.  These allow extensions to be added to the event.  These extensions are called *facets*.  The structure of each facet is defined in a JSON spec that is identified in the `_schemaURL` property.
 
-The OpenLineage standard defines a number of [standard facets](https://github.com/OpenLineage/OpenLineage/tree/main/spec/facets).  Any organization or processing engine can define their own custom facets.  The spec must be published, so it is accessible to consumers, and it must follow the [OpenLineage naming convention for facets](https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.md#custom-facet-naming)
+The Open Lineage standard defines a number of [standard facets](https://github.com/OpenLineage/OpenLineage/tree/main/spec/facets).  Any organization or processing engine can define their own custom facets.  The spec must be published, so it is accessible to consumers, and it must follow the [Open Lineage naming convention for facets](https://github.com/OpenLineage/OpenLineage/blob/main/spec/OpenLineage.md#custom-facet-naming)
 
-Figures 16-20 show the current set of standard facets defined by OpenLineage.
+Figures 16-20 show the current set of standard facets defined by Open Lineage.
 
 The standard *Run Facets* in figure 16 can be carried in the *run* section of the event and provide more detail of the process instance.  The *nominalTime* specifies the time when something should have happened.  This can be compared with the actual time in the event header.  The *parent* links a child process instance to a parent process instance.
 
@@ -202,47 +202,47 @@ Similarly, the *OutputDataSet Facets* describe the dynamic details of processing
 
 With this extensible payload, it is possible to create, distributed and interpret operational lineage in a heterogeneous digital landscape.
 
-### Integrating with the OpenLineage standard
+### Integrating with the Open Lineage standard
 
-Any server can implement the OpenLineage REST API.  Figure 21 shows [Marquez](https://marquezproject.github.io/marquez/), the reference implementation of the standard, acting as the back end to receive OpenLineage events from a spark processing engine.
+Any server can implement the Open Lineage REST API.  Figure 21 shows [Marquez](https://marquezproject.github.io/marquez/), the reference implementation of the standard, acting as the back end to receive Open Lineage events from a spark processing engine.
 
 ![Figure 21](/features/lineage-management/open-lineage-reference-implementation-marquez.svg)
-> **Figure 21:** Marquez capturing the OpenLineage events.
+> **Figure 21:** Marquez capturing the Open Lineage events.
 
 The disadvantage of the API is that the server supporting it must be available whenever the processing engine is running.
 
-The OpenLineage project provides a simple implementation of the OpenLineage API called the *proxy backend* (figure 22).  This is designed to act as a side-car to the processing engine that can distribute the OpenLineage events to multiple external consumers through a kafka topic.
+The Open Lineage project provides a simple implementation of the Open Lineage API called the *proxy backend* (figure 22).  This is designed to act as a side-car to the processing engine that can distribute the Open Lineage events to multiple external consumers through a kafka topic.
 
 ![Figure 22](/features/lineage-management/open-lineage-proxy-backend.svg)
 > **Figure 22:** The proxy backend transfers RunEvents received on its API to a Kafka topic 
 
 Since the proxy backend is only supporting one processing engine it can be managed by the same team as the processing engine and hence its availability can be matched to the needs of the processing engine.
 
-### Egeria's OpenLineage support
+### Egeria's Open Lineage support
 
-Egeria offers two approaches to capture OpenLineage events from the processing engines.  The first (figure 23) uses an [integration connector](/connectors/integration/open-lineage-event-receiver-integration-connector) listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
+Egeria offers two approaches to capture Open Lineage events from the processing engines.  The first (figure 23) uses an [integration connector](/connectors/integration/open-lineage-event-receiver-integration-connector) listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
 
 ![Figure 23](/features/lineage-management/open-lineage-async-egeria-integration.svg)
 > **Figure 23:** Receiving events via the Kafka topic populated by the proxy backend
 
-Egeria's [integration daemon](/concepts/integration-daemon) also supports the OpenLineage API for local processing engines.  It is one of the operations supported by the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview).
+Egeria's [integration daemon](/concepts/integration-daemon) also supports the Open Lineage API for local processing engines.  It is one of the operations supported by the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview).
 
 ![Figure 24](/features/lineage-management/open-lineage-direct-egeria-integration.svg)
-> **Figure 24:** Receiving events via the OpenLineage API directly into the integration daemon
+> **Figure 24:** Receiving events via the Open Lineage API directly into the integration daemon
 
-The Lineage Integrator OMIS inside the integration daemon hosts the integration connectors that [process the OpenLineage events](https://egeria-project.org/connectors/#capturing-and-publishing-lineage).  They are divided into two groups:
+The Lineage Integrator OMIS inside the integration daemon hosts the integration connectors that [process the Open Lineage events](https://egeria-project.org/connectors/#capturing-and-publishing-lineage).  They are divided into two groups:
 
-- the integration connectors that are acquiring or creating the OpenLineage events.
+- the integration connectors that are acquiring or creating the Open Lineage events.
 
-- the integration connectors that are processing or distributing the OpenLineage events.
+- the integration connectors that are processing or distributing the Open Lineage events.
 
 They are connected to each other by the Lineage Integrator OMIS:
 
-- An integration connector may register a listener to receive OpenLineage events that are received through the API or are published by another integration connector.
+- An integration connector may register a listener to receive Open Lineage events that are received through the API or are published by another integration connector.
 
-- An integration connector may request that an OpenLineage event is published to other integration connectors that have registered an OpenLineage event listener in the same Lineage Integrator OMIS instance.
+- An integration connector may request that an Open Lineage event is published to other integration connectors that have registered an Open Lineage event listener in the same Lineage Integrator OMIS instance.
 
-- An integration connector may register a listener to the Asset Manager OMAS's OutTopic and issue requests to the Asset Manager's REST API in order to correlate the metadata in the open metadata ecosystem with the content of the OpenLineage events.  
+- An integration connector may register a listener to the Asset Manager OMAS's OutTopic and issue requests to the Asset Manager's REST API in order to correlate the metadata in the open metadata ecosystem with the content of the Open Lineage events.  
 
 Figure 25 illustrates these mechanisms with the [five pre-build integration connectors](/connectors/#capturing-and-publishing-lineage) supplied by Egeria.
 
@@ -251,37 +251,37 @@ Figure 25 illustrates these mechanisms with the [five pre-build integration conn
 
 The numbers on the diagram refer to the notes below.
 
-1. A third party technology (processing engine) sends OpenLineage events to Egeria's OpenLineage API endpoint.  This is passed to the Lineage Integrator OMIS's context manager.
+1. A third party technology (processing engine) sends Open Lineage events to Egeria's Open Lineage API endpoint.  This is passed to the Lineage Integrator OMIS's context manager.
 
-2. A third party technology is using the proxy backend to publish OpenLineage event to a Kafka topic.
+2. A third party technology is using the proxy backend to publish Open Lineage event to a Kafka topic.
 
-3. The [OpenLineage Event Receiver](/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving OpenLineage events from the Kafka topic.  It passes them to the Lineage Integrator OMIS's context manager via its own context.
+3. The [Open Lineage Event Receiver](/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving Open Lineage events from the Kafka topic.  It passes them to the Lineage Integrator OMIS's context manager via its own context.
 
-4. The [Governance Action OpenLineage](/connectors/integration/governance-action-open-lineage-integration-connector) integration connector has registered a listener to receive events about the [engine actions](/concepts/engine-action) that are being processed in the open metadata ecosystem.  
+4. The [Governance Action Open Lineage](/connectors/integration/governance-action-open-lineage-integration-connector) integration connector has registered a listener to receive events about the [engine actions](/concepts/engine-action) that are being processed in the open metadata ecosystem.  
 
-5. The Governance Action OpenLineage integration connector creates OpenLineage events to represent the processing by the governance actions and passes them to the Lineage Integrator OMIS's context manager via its own context.
+5. The Governance Action Open Lineage integration connector creates Open Lineage events to represent the processing by the governance actions and passes them to the Lineage Integrator OMIS's context manager via its own context.
 
-6. An integration connector that wishes to receive OpenLineage events must register a listener with the Lineage Integrator OMIS's context manager via its own context.  Once it is registered, it receives all OpenLineage events that are subsequently passed to the context manager.
+6. An integration connector that wishes to receive Open Lineage events must register a listener with the Lineage Integrator OMIS's context manager via its own context.  Once it is registered, it receives all Open Lineage events that are subsequently passed to the context manager.
 
-7. The [API-based OpenLineage Log Store](/connectors/integration/api-based-open-lineage-log-store-integration-connector) registers a listener for OpenLineage events and passes each one received to a remote server supporting the OpenLineage API (such as [Marquez](https://marquezproject.github.io/marquez/)).
+7. The [API-based Open Lineage Log Store](/connectors/integration/api-based-open-lineage-log-store-integration-connector) registers a listener for Open Lineage events and passes each one received to a remote server supporting the Open Lineage API (such as [Marquez](https://marquezproject.github.io/marquez/)).
 
-8. The [File-based OpenLineage Log Store](/connectors/integration/file-based-open-lineage-log-store-integration-connector) registers a listener for OpenLineage events and stores each event received as a file in a nominated folder on the file system.
+8. The [File-based Open Lineage Log Store](/connectors/integration/file-based-open-lineage-log-store-integration-connector) registers a listener for Open Lineage events and stores each event received as a file in a nominated folder on the file system.
 
-9. The [OpenLineage Cataloguer](/connectors/integration/open-lineage-cataloguer-integration-connector) registers a listener for OpenLineage events and ensures the jobs describe in them are catalogued as [Processes](/types/2/0215-Software-Components) in open metadata.  Depending on its configuration, it may also catalog each run as a *TransientEmbeddedProcess* entity linked to the job's process entity.
+9. The [Open Lineage Cataloguer](/connectors/integration/open-lineage-cataloguer-integration-connector) registers a listener for Open Lineage events and ensures the jobs describe in them are catalogued as [Processes](/types/2/0215-Software-Components) in open metadata.  Depending on its configuration, it may also catalog each run as a *TransientEmbeddedProcess* entity linked to the job's process entity.
 
-### OpenLineage Log Store
+### Open Lineage Log Store
 
-The OpenLineage log store is a destination where OpenLineage events can be written.  This enables them to be queried by governance processes that are validating the behavior of the operational environment.
+The Open Lineage log store is a destination where Open Lineage events can be written.  This enables them to be queried by governance processes that are validating the behavior of the operational environment.
 
-Figure 26 shows the capture of OpenLineage events into the OpenLineage log store which is a directory (folder) in the filesystem.  The content of the log store is later queried by the *ProcessValidatorConnector* (a [governance verification service](/concepts/governance-service) running in an [engine host](/concepts/engine-host)) to determine if the [processes are operating as expected](#governing-expectations).
+Figure 26 shows the capture of Open Lineage events into the Open Lineage log store which is a directory (folder) in the filesystem.  The content of the log store is later queried by the *ProcessValidatorConnector* (a [governance verification service](/concepts/governance-service) running in an [engine host](/concepts/engine-host)) to determine if the [processes are operating as expected](#governing-expectations).
 
 ![Figure 26](/features/lineage-management/open-lineage-example-deployment.svg)
-> **Figure 26:** An example deployment of Egeria that is capturing and processing OpenLineage events. On the left-hand side the integration connectors running in the integration daemon are capturing the events, storing them in the OpenLineage log store and creating additional metadata as appropriate.  On the right-hand side of the diagram, are the stewardship processes that are stitching together the lineage and validating that the digital landscape is operating as expected.
+> **Figure 26:** An example deployment of Egeria that is capturing and processing Open Lineage events. On the left-hand side the integration connectors running in the integration daemon are capturing the events, storing them in the Open Lineage log store and creating additional metadata as appropriate.  On the right-hand side of the diagram, are the stewardship processes that are stitching together the lineage and validating that the digital landscape is operating as expected.
 
-The implementation of the OpenLineage log store is pluggable so an OpenLineage log store could be implemented as a server such as [Marquez](https://marquezproject.github.io/marquez/).  This is shown in figure 27.
+The implementation of the Open Lineage log store is pluggable so an Open Lineage log store could be implemented as a server such as [Marquez](https://marquezproject.github.io/marquez/).  This is shown in figure 27.
 
 ![Figure 27](/features/lineage-management/open-lineage-example-deployment-marquez.svg)
-> **Figure 27:** Using Marquez as the OpenLineage log store.  This is the same diagram as figure 26 except tha Marquez has replaced the file system as the log store.  Marquez provides an API to simplify the processing of the OpenLineage events.
+> **Figure 27:** Using Marquez as the Open Lineage log store.  This is the same diagram as figure 26 except tha Marquez has replaced the file system as the log store.  Marquez provides an API to simplify the processing of the Open Lineage events.
 
 ## Lineage stewardship
 
@@ -340,7 +340,7 @@ As the lineage mappings are added, the lineage graph grows. Figure 33 shows the 
 
 ### Governing expectations
 
-Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](egeria-docs/concepts/engine-host) can be used to read from the [OpenLineage Log Store](#openlineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
+Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](egeria-docs/concepts/engine-host) can be used to read from the [Open Lineage Log Store](#openlineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
 
 ![Figure 34](/features/lineage-management/governance-by-expectation.svg)
 > **Figure 34:** A governance action service called *Process Validation Connector* running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/in-development.md"
+--8<-- "snippets/content-status/tech-preview.md"
 
 # Collection Manager OMVS
 
@@ -25,9 +25,16 @@ The Collection Manager OMVS supports:
 
 ## Managing collection entities
 
+When working with collections, there are 4 concepts that you need to keep in mind:
+
+* Which elements, if any, is the collection linking to.  These elements are called the parent elements.
+* Is the collection its own [anchor](/featires/anchor-management/overview) or is it anchored to another element.
+* What values should be assigned to it attributes.
+* Which classifications should be added to the collection to indicate its purpose and usage.
 
 ### createCollection (no parent relationship)
-Create a new generic collection.
+
+This first example of a create request is for a collection that is its own anchor and is to be created without a parent.  The placeholder property `{{classificationName}}` is set to a [valid classification name](/types/0/0021-Collections/#collection-classifications) for the collection.
 ```
 POST {{baseURL}}/servers/{{viewServer}}/api/open-metadata/collection-manager/collections?classificationName={{classificationName}}
 Authorization: Bearer {{token}}
@@ -40,14 +47,13 @@ Content-Type: application/json
     "qualifiedName": "Must provide a unique name here",
     "name" : "Add display name here",
     "description" : "Add description of the collection here",
-    "collectionType": "Add appropriate valid value for type",
-    "collectionOrdering" : "OTHER",
-    "orderPropertyName" : "Add property name if 'collectionOrdering' is OTHER"
+    "collectionType": "Add appropriate valid value for type"
   }
 }
 ```
 ### createCollection (with parent)
-Create a new generic collection.
+
+
 
 ```
 POST {{baseURL}}/servers/{{viewServer}}/api/open-metadata/collection-manager/collections

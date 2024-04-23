@@ -411,7 +411,7 @@ Organizations use vertical lineage view to visualize how business concepts such 
 
     APIs for retrieving lineage
 
-    - [Open Lineage Services](/services/open-lineage-services)
+    - [Lineage Warehouse Services](/services/lineage-warehouse-services)
 
     - [Asset Owner](/services/omas/asset-owner/overview) and [Asset Consumer](/services/omas/asset-consumer/overview) through the [Open Connector Framework (OCF)](/frameworks/ocf/overview).
 

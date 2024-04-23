@@ -14,9 +14,9 @@ The configuration for a lineage warehouse requires knowledge of the [metadata ac
 ??? info "Configuring the Lineage Warehouse Services"
     --8<-- "snippets/admin/configuring-the-lineage-warehouse-services.md"
   
- ### Start up information
+### Start up information
  
- !!! info "Runtime consideration"
-     It is important to consider that, to operate, Lineage Warehouse depends on the availability of its Metadata Access Server (with Asset Lineage OMAS) being up and running. This is the case because Lineage Warehouse discovers the event bus connectivity and the topic address from asset lineage during start-up. Consequently, it will always wait and retry until this condition is met, and it starts up successfully.
+!!! info "Runtime consideration"
+    It is important to consider that, to operate, Lineage Warehouse depends on the availability of its Metadata Access Server (with Asset Lineage OMAS) being up and running. This is the case because Lineage Warehouse discovers the event bus connectivity and the topic address from asset lineage during start-up. Consequently, it will always wait and retry until this condition is met, and it starts up successfully.
     
 --8<-- "snippets/abbr.md"

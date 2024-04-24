@@ -566,6 +566,7 @@ nav:
                   - Project Manager: services/omvs/project-manager/overview.md
                   - Reference Data: services/omvs/reference-data/overview.md
                   - Template Manager: services/omvs/template-manager/overview.md
+                  - Valid Metadata: services/omvs/valid-metadata/overview.md
                   - Dynamic Infrastructure and Ops: services/omvs/dino/overview.md
                   - Glossary Author: services/omvs/glossary-author/overview.md
                   - Repository Explorer: services/omvs/rex/overview.md

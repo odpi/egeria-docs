@@ -3,7 +3,7 @@
   
 # Open Metadata Archives
 
---8<-- "docs/concepts/open-metadata-archive-intro.md"
+--8<-- "snippets/concepts/open-metadata-archive-intro.md"
 
 By the rules of [metadata provenance](/features/metadata-provenance/overview), the elements in an open metadata archive are read-only when loaded into an open metadata repository unless the repository has the same metadata collection id as the element. 
 

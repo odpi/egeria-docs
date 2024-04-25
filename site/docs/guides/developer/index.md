@@ -189,7 +189,7 @@ You can write your own connectors to integrate additional types of technology or
 
 ## Building open metadata archives
 
---8<-- "docs/concepts/open-metadata-archive-intro.md"
+--8<-- "snippets/concepts/open-metadata-archive-intro.md"
 --8<-- "docs/guides/developer/open-metadata-archives/in-memory-archive-construction.md"
 
 ??? example "Open metadata archive examples"

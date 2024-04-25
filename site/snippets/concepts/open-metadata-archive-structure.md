@@ -16,5 +16,3 @@ Instances are linked together as follows:
 ![Instance structures in an open metadata archive](/guides/developer/open-metadata-archives/open-metadata-archive-instances.svg)
 
 Typically, open metadata archives are encoded in JSON format and stored in a file; however, both the format and storage method can be changed by changing the [open metadata archive connector](/concepts/open-metadata-archive-store-connector).
-
---8<-- "snippets/abbr.md"

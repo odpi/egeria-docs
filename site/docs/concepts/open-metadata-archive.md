@@ -3,15 +3,15 @@
 
 # Open Metadata Archive
 
---8<-- "docs/concepts/open-metadata-archive-intro.md"
+--8<-- "snippets/concepts/open-metadata-archive-intro.md"
 
 ## Structure of an Open Metadata Archive
 
---8<-- "docs/concepts/open-metadata-archive-structure.md"
+--8<-- "snippets/concepts/open-metadata-archive-structure.md"
 
 ## What happens when the archive is loaded into the server
 
---8<-- "docs/concepts/open-metadata-archive-processing.md"
+--8<-- "snippets/concepts/open-metadata-archive-processing.md"
 
 ??? education "Further information"
 

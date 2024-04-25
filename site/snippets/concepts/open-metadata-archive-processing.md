@@ -32,5 +32,3 @@ The archive loads in the following order:
 !!! tip "Cohort propagation"
     If the server is connected to the cohort, the new content is sent as notifications to the rest of the cohort.
 
-
---8<-- "snippets/abbr.md"

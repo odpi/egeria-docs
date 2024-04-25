@@ -389,13 +389,13 @@ This dojo was last tested using Egeria release 3.14.
         
         ??? expert "What is an open metadata archive? (15 mins read)"
         
-            --8<-- "docs/concepts/open-metadata-archive-intro.md"
+            --8<-- "snippets/concepts/open-metadata-archive-intro.md"
             
             ??? expert "The structure of an open metadata archive"
-                --8<-- "docs/concepts/open-metadata-archive-structure.md"
+                --8<-- "snippets/concepts/open-metadata-archive-structure.md"
             
             ??? expert "How an open metadata archive is processed"
-                --8<-- "docs/concepts/open-metadata-archive-processing.md"
+                --8<-- "snippets/concepts/open-metadata-archive-processing.md"
         
         This session is marked as an expert session since it presents a challenge - to use the skills from the earlier exercises, the `egeria-samples.git` as a guide and the helper classes in `egeria.git` to build your own archive writer.
         

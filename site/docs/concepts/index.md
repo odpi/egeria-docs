@@ -11,10 +11,6 @@
 - [Anchor](/concepts/anchor)
 - [API Integrator OMIS](/services/omis/api-integrator/overview)
 - [Application Programming Interface (API)](/concepts/basic-concepts)
-- [Archive Context](/guides/developer/archive-services/overview)
-- [Archive Engine](/concepts/archive-engine)
-- [Archive Manager](/services/omrs/component-descriptions/archive-manager)
-- [Archive Service](/guides/developer/archive-services/overview)
 - [Archives for Open Metadata](/concepts/open-metadata-archive)
 - [Asset](/concepts/asset)
 
@@ -23,7 +19,7 @@
     - [Log Message](/concepts/asset-log-message)
     - [Open Metadata Type](/types/0/0010-Base-Model)
   
-- [Asset Catalog OMAS](/services/omas/asset-catalog/overview)
+- [Asset Catalog OMVS](/services/omvs/asset-catalog/overview)
 - [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
 - [Asset Catalog OMAS](/services/omas/asset-catalog/overview)
 - [Asset log Message](/concepts/asset-log-message)
@@ -32,6 +28,7 @@
 - [Asset Owner OMAS](/services/omas/asset-owner/overview)
 - [Audit Log](/concepts/audit-log)
 - [Audit Log Destination Connector](/concepts/audit-log-destination-connector)
+- [Automated Curation OMVS](/services/omvs/automated-curation/overview)
 
 
 ## B
@@ -51,6 +48,7 @@
 - [Cohort Services (OMRS)](/services/omrs)
 - [Cohort Topic](/concepts/cohort-events)
 - [Collection](/concepts/collection)
+- [Collection Manager OMVS](/services/omvs/collection-manager/overview)
 - [Comments](/concepts/comments)
 - [Community](/concepts/community)
 - [Community Profile OMAS](/services/omas/community-profile/overview)
@@ -75,6 +73,7 @@
 
 - [Data Class](/concepts/data-class)
 - [Data Connector](/concepts/digital-resource-connector)
+- [Data Discovery OMVS](/services/omvs/data-discovery/overview)
 - [Data Domain](/concepts/subject-area)
 - [Data Engine OMAS](/services/omas/data-engine/overview)
 - [Data Engine Proxy](/concepts/data-engine-proxy)
@@ -121,6 +120,7 @@
 
 - [Favorite Things Collections](/concepts/favorite-things-collection)
 - [Feedback](/concepts/feedback)
+- [Feedback Manager OMVS](/services/omvs/feedback-manager/overview)
 - [File Type](/concepts/file-type)
 - Files
 
@@ -144,8 +144,10 @@
 ## G
 
 - [Glossary](/practices/common-data-definitions/anatomy-of-a-glossary)
+- [Glossary Browser OMVS](/services/omvs/glossary-browser/overview)
 - [Glossary Category](/practices/common-data-definitions/anatomy-of-a-glossary/#glossary-categories)
 - [Glossary Term](/practices/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term)
+- [Glossary Workflow OMVS](/services/omvs/glossary-workflow/overview)
 - [Governance Action](/concepts/governance-action)
 - [Governance Action Engine](/concepts/governance-action-engine)
 - [Governance Action OMES](/service/omes/governance-action/overview)
@@ -246,6 +248,7 @@
 - [Metadata Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)
 - [Metadata Server](/concepts/metadata-access-store)
 - [Metadata Types](/types)
+- [My Profile OMVS](/services/omvs/my-profile/overview)
 
 
 ## N
@@ -298,6 +301,7 @@
 - [Platform URL Root](/concepts/platform-url-root)
 - [Presentation Server](/concepts/presentation-server)
 - [Project](/concepts/project)
+- [Project Manager OMVS](/services/omvs/project-manager/overview)
 - [Project Management OMAS](/services/omas/project-management/overview)
 - [Provenance of metadata](/features/metadata-provenance/overview)
 
@@ -316,7 +320,8 @@
   - [Valid Metadata Values](/guides/planning/valid-values)
   - [Deployed Implementation Type](/concepts/deployed-implementation-type)
   - [File Type](/concepts/deployed-implementation-type/#file-type)
-  
+
+- [Reference Data OMVS](/services/omvs/reference-data/overview)
 - [Registry Events](/concepts/cohort-events)
 - [Registered Services](/concepts/omag-subsystem)
 - [Repository Connector](/concepts/repository-connector)
@@ -378,6 +383,9 @@
 ## T
 
 - [Tagging](/concepts/informal-tag)
+- [Team](/concepts/team)
+- [Templates](/features/templated-cataloguing/overview)
+- [Template Manager OMVS](/services/omvs/template-manager/overview)
 - [Tool](/concepts/software-capability/#tool)
 - Tombstone - see [Memento](#m)
 - [To Do](/concepts/to-do)
@@ -408,6 +416,7 @@
 
 ## V
 
+- [Valid Metadata OMVS](/services/omvs/valid-metadata/overview)
 - [View Server](/concepts/view-server)
 - [View Services](/services/omvs)
 - [Virtual Connection](/concepts/connection)

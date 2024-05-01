@@ -5,11 +5,11 @@
 
 The OMAG Server Platform's `assembly/platform` directory contains a Java Archive (Jar) file for the [OMAG Server Platform](/concepts/omag-server-platform) itself along with a directory of libraries.
 
-The name of the Java Archive (Jar) file will depend on the release of Egeria that you have installed.  In this example, the release is **4.2**.
+The name of the Java Archive (Jar) file will depend on the release of Egeria that you have installed.  In this example, the release is **4.3**.
 
 ```bash
 $ ls platform
-lib              omag-server-platform-4.2.jar
+lib              omag-server-platform-4.3.jar
 ```
 
 The OMAG Server Platform is started with the `java` command.
@@ -41,10 +41,10 @@ When the OMAG Server Platform starts up, it displays the `OMAG Server Platform` 
 
  :: Powered by Spring Boot (v3.0.6) ::
 
-2023-06-11T13:13:57.959+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Starting OMAGServerPlatform using Java 17.0.6 with PID 85411 (/Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.2-SNAPSHOT-distribution.tar.gz/platform/omag-server-platform-4.2-SNAPSHOT.jar started by mandy-chessell in /Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.2-SNAPSHOT-distribution.tar.gz)
+2023-06-11T13:13:57.959+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Starting OMAGServerPlatform using Java 17.0.6 with PID 85411 (/Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz/platform/omag-server-platform-4.3-SNAPSHOT.jar started by mandy-chessell in /Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz)
 2023-06-11T13:13:57.962+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : No active profile set, falling back to 1 default profile: "default"
 2023-06-11T13:14:01.186+01:00  INFO 85411 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (https)
-2023-06-11T13:14:02.400+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Working directory is: /Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.2-SNAPSHOT-distribution.tar.gz
+2023-06-11T13:14:02.400+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Working directory is: /Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz
 2023-06-11T13:14:02.400+01:00  WARN 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Java trust store 'javax.net.ssl.trustStore' is null - this is needed by Tomcat - using 'server.ssl.trust-store'
 2023-06-11T13:14:04.687+01:00  INFO 85411 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (https) with context path ''
 2023-06-11T13:14:04.704+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Started OMAGServerPlatform in 7.591 seconds (process running for 8.325)
@@ -63,7 +63,7 @@ curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/us
 ```
 Returns
 ```text
-Egeria OMAG Server Platform (version 4.2)
+Egeria OMAG Server Platform (version 4.3)
 ```
 
 This calls the OMAG server platform using a REST API call.  The response `Egeria OMAG Server Platform (release X.x)` means the curl command communicated with a running OMAG Server Platform instance.

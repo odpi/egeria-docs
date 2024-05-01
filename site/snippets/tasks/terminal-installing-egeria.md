@@ -11,7 +11,7 @@ List the files:
 ```bash
 ls
 ```
-The distribution tar file is `{release}-distribution.tar.gz` or `egeria-platform-4.3-distribution.tar.gz` in this example.
+The distribution tar file is `egeria-platform-{release}-distribution.tar.gz` or `egeria-platform-4.3-distribution.tar.gz` in this example.
 
 ```bash
 egeria-platform-4.3-distribution.tar.gz
@@ -40,7 +40,7 @@ gunzip egeria*-distribution.tar.gz
 ```bash
 tar -xf egeria*-distribution.tar
 ```
-A new directory is created called `{release}-distribution.tar.gz` or `egeria-4.2-distribution.tar.gz` in this example.  Change to this new directory and list its contents as shown below.
+A new directory is created called `egeria-platform-{release}-distribution.tar.gz` or `egeria-platform-4.3-distribution.tar.gz` in this example.  Change to this new directory and list its contents as shown below.
 
 ```bash
 cd egeria*gz

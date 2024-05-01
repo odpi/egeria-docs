@@ -50,7 +50,7 @@ Leave the `Working Directory` to default to your project directory.  If you are 
 === "V4.3 and before"
     ![platform report settings](platform-report-settings-4-3.png)
 
-=== "V4.4" and beyond
+=== "V4.4 and beyond"
     ![platform report settings](platform-report-settings-4-4.png)
 
 When you click `OK`, then `PlatformReport` appears in the dropdown run menu.  Press the green triangle to run the report and a new tab appears in the panel of the IntelliJ window where the platform is running.

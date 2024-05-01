@@ -20,7 +20,7 @@ Alternatively you can also use [Kubernetes](/guides/operations/kubernetes) to ru
 2. [Building the Egeria source](#building-the-egeria-source)
 3. [Installing Egeria](#installing-egeria)
 
-???
+
 --8<-- "snippets/tasks/task-downloading-egeria-source.md"
 
 You are now ready to [build the egeria source](#building-the-egeria-source).

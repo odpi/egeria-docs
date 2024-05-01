@@ -369,9 +369,12 @@ springdoc.swagger-ui.tagsSorter=alpha
 springdoc.swagger-ui.operationsSorter=alpha
 springdoc.swagger-ui.docExpansion=none
 ```
+With this configuration, and assuming the platform is running on your local machine on port `9443`, the swagger UI can be launched from this URL: [https://localhost:9443/swagger-ui/index.html](https://localhost:9443/swagger-ui/index.html).
 
-!!! tip "Additional properties"
-Spring provides [extensive documentation on its standard properties :material-dock-window:](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html){ target=spring }.
+![Swagger Web Page](swagger-web-page.png)
+
+!!! tip "Other application properties"
+    Spring provides [extensive documentation on its standard properties :material-dock-window:](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html){ target=spring }.
 
 ## The classpath
 

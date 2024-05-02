@@ -360,8 +360,8 @@ It then retrieves the embedded Open Metadata Topic Connector from the `embeddedC
 Once `topicConnector.start()` is called, the integration connector will receive events from Apache Kafka.
 
 !!! attention "Do not create threads in your integration connector"
-    Integration connectors should not create their own threads because this makes it difficult for Egeria to properly shut down the integration daemon independently of the OMAG Server Platform.
-    If the connector needs to make blocking calls to the third party technology, it should implement the `engage()` method and set the `usesBlockingCalls` property in the integration daemon configuration to `true`.  This will cause the integration daemon to create a dedicated thread for your connector.  When the `engage()` method is called on the thread, it should issue one blocking call and return.  The integration daemon will check that it is not in shutdown and if it is still running, it calls `engage()` again.
+    Each integration connector runs in its own thread. Integration connectors should not create additional threads because this makes it difficult for Egeria to properly shut down the integration daemon independently of the OMAG Server Platform.
+    If the connector needs to make blocking calls to the third party technology, it should implement the `engage()` method and set the `usesBlockingCalls` property in the integration daemon configuration to `true`. When the `engage()` method is called on the thread, it should issue one blocking call and return.  The integration daemon will check that it is not in shutdown and if it is still running, it calls `engage()` again.
 
 ### Exceptions and error handling
 

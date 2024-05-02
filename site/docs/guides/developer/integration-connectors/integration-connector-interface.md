@@ -131,9 +131,9 @@ All the integration connector base classes inherit from (extend) the [`Integrati
     
 - `start` indicates that the connector is completely configured (that is all the methods listed above have been called) and it can begin processing. This call is where the configuration properties are extracted from the connection object. It can also be used to register with non-blocking services. For example, it can register a listener for events from the OMAS [Out Topic](/concepts/out-topic) through the context.
 
-- `engage` is used when the connector is configured to need to issue blocking calls to wait for new metadata. It is called from its own thread. It is recommended that the `engage()` method returns when each blocking call completes. The integration daemon will pause a second and then call `engage()` again. This pattern enables the calling thread to detect the shutdown of its hosting integration daemon server.  This method is implemented by the integration connector's base class to do nothing.  You only need to override it if your integration connector is issuing blocking calls. 
+- `engage` is used as an alternative to `refresh` when the connector is configured to need to issue blocking calls to wait for new metadata. It is called from its own thread. It is recommended that the `engage()` method returns when each blocking call completes. The integration daemon will pause a second and then call `engage()` again. This pattern enables the calling thread to detect the shutdown of its hosting integration daemon server.  This method is implemented by the integration connector's base class to do nothing.  You only need to override it if your integration connector is issuing blocking calls. 
 
-- `refresh` requests that the connector does a comparison of the metadata in the third party technology and open metadata repositories. Refresh is called:
+- `refresh` requests that the connector does a comparison of the metadata in the third party technology and open metadata repositories. Refresh is called from the connector's own thread under the following conditions:
 
     1. when the integration connector first starts and then
     1. at intervals defined in the connector's configuration as well as
@@ -141,4 +141,4 @@ All the integration connector base classes inherit from (extend) the [`Integrati
     
 - `disconnect` is called when the server is shutting down. The connector should free up any resources that it holds since it is not needed any more.  Once disconnect has been called the context is no longer valid.
 
-Therefore, you are looking to implement the `start`, `refresh` and `disconnect` methods in your integration connector, and optionally overriding the `engage` method if your connector issues blocking calls.
+Therefore, you are typically looking to implement the `start`, `refresh` and `disconnect` methods in your integration connector, and optionally overriding the `engage` method if your connector issues blocking calls.

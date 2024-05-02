@@ -31,22 +31,18 @@ The results of the log analysis across many record may be rolled up into a
 The types of operational logs and associated processing are:
 
 * Metering captures the usage of resources.  This may be to enforce usage quotas, or for billing.
-  A collection of related metering record is represented as a **MeteringLog**.  If it is implemented using files
-  then each file can be classified with **MeteringLogFile**.
+  A collection of related metering record is represented as a **MeteringLog**.
   
 * Operational lineage logging captures the execution path and results of processes.  It is used
   to prove that processes ran, and ran at the right time, processing the
   right quantity of data at appropriate quality.
   A collection of related lineage log records is represented as a **LineageLog**.
-  If the lineage log is implemented using files, each file can be classified with **LineageLogFile**.
 
 * Audit logging records significant events.  This may be successful processing events or detected errors that need action.
   A collection of related audit log records is represented as a **AuditLog**.
-  If the audit log is implemented using files, each file can be classified with **AuditLogFile**.
   
 * Exception management handles errors detected by [verification points](0460-Governance-Execution-Points.md).
   Exception records are managed in one or more **ExceptionBacklog** collections.
-  The exception backlog may be implemented as a series of files classified as **ExceptionLogFile**.
 
 
 ![UML](0455-Exception-Management.svg)

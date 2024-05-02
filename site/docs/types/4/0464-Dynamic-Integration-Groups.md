@@ -33,7 +33,7 @@ The integration connectors to run in an *integration group* are specified via th
 
 An integration connector can be linked to multiple integration groups via the *RegisteredIntegrationConnector* relationship.  It can only be linked to a specific integration group once.  If multiple instances of the same integration connector implementation is to be specified in a group. each one is represented by an *IntegrationConnector* entity linked to its own *Connection* entity that describes its required behaviour.
 
-The *usesBlockingCalls* attribute sets up whether the connector should be started in its own thread to allow it to block on a listening call.
+The *usesBlockingCalls* attribute determines whether the integration daemon calls the integration connector using the `engage()` methods (to allow it to make blocking calls), or the `refresh()` method.
 
 ## CatalogTarget relationship
 

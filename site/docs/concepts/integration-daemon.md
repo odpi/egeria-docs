@@ -14,7 +14,7 @@ Inside the integration daemon are one or more [Open Metadata Integration Service
 
 ## Integration connectors
 
-The code that manages the specific APIs and formats of the third party technology is encapsulated in a special type of connector called an [integration connector](/connectors/integration-connector).
+The code that manages the specific APIs and formats of the third party technology is encapsulated in a special type of connector called an [integration connector](/concepts/integration-connector).
 
 The specific interface that the integration connector needs to implement is defined by the [integration service](/services/omis). This interface enables the integration service to pass a context object to the connector before it is started. The context enables the connector to register a listener with the associated access service's [Out Topic](/concepts/out-topic), or call its REST API, or to push events to the access service's [In Topic](/concepts/in-topic). By default, the context uses the integration daemon's userId for requests to the access service which means that the metadata created by the integration connector will be credited to this user. If you want to use a different userId for metadata from each connector, the server's userId can be overridden in the connector's configuration.
 

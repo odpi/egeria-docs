@@ -34,10 +34,17 @@ nav:
               - Language Translations: guides/planning/translations/overview.md
               - On-boarding Organization: guides/planning/organization/overview.md
               - Governance Program: guides/planning/governance-program/overview.md
-      - Integration:
-          - Integration Guide:
-              - Integration Guide: guides/integration/index.md
-              - Catalog Integration: guides/integration/types-of-metadata-repository.md
+      - Integration Guide:
+          - Integration Guide: guides/integration/index.md
+          - Catalog Integration: guides/integration/types-of-metadata-repository.md
+      - Catalogs:
+          - Content Pack Catalog:
+              - Content Pack Overview: content-packs/index.md
+              - Core Content Pack: content-packs/core-content-pack/overview.md
+              - Cloud Information Model: content-packs/cim-content-pack/overview.md
+              - Coco Pharmaceuticals: content-packs/coco-content-pack/overview.md
+              - Simple Catalog: content-packs/simple-content-pack/overview.md
+              - Open Metadata Types: content-packs/types-content-pack/overview.md
           - Connector Catalog:
               - Connector Overview: connectors/index.md
               - Secrets Store:
@@ -110,33 +117,33 @@ nav:
               - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
               - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
               - Lineage Warehouse (JanusGraph): connectors/governance-daemon/lineage-warehouse-janus-connector.md
-          - Developer Guide:
-              - Developer Guide: guides/developer/index.md
-              - Retrieving Metadata: guides/developer/finding-metadata/overview.md
-              - Building Archives:
-                  - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
-                  - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
-                  - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
-              - Building Utilities: guides/developer/building-utilities/overview.md
-              - Building Connectors:
-                  - Survey Action Services: guides/developer/survey-action-services/overview.md
-                  - Integration Connectors: guides/developer/integration-connectors/overview.md
-                  - Governance Action Services: guides/developer/governance-action-services/overview.md
-                  - Repository Governance Services: guides/developer/repository-governance-services/overview.md
-                  - Open Discovery Services: guides/developer/open-discovery-services/overview.md
-                  - Repository Connectors: guides/developer/repository-connectors/overview.md
-                  - Runtime Connectors:
-                      - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
-                      - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
-                      - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
-                      - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
-                      - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
-                      - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
-                  - Resource Connectors:
-                      - New types of connectors: guides/developer/resource-connectors/overview.md
-                      - Open Metadata Topic Connector: guides/developer/resource-connectors/open-metadata-topic-connector.md
-              - Javadoc: https://odpi.github.io/egeria/index.html
-              - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
+      - Developer Guide:
+          - Developer Guide: guides/developer/index.md
+          - Retrieving Metadata: guides/developer/finding-metadata/overview.md
+          - Building Archives:
+              - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
+              - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
+              - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
+          - Building Utilities: guides/developer/building-utilities/overview.md
+          - Building Connectors:
+              - Survey Action Services: guides/developer/survey-action-services/overview.md
+              - Integration Connectors: guides/developer/integration-connectors/overview.md
+              - Governance Action Services: guides/developer/governance-action-services/overview.md
+              - Repository Governance Services: guides/developer/repository-governance-services/overview.md
+              - Open Discovery Services: guides/developer/open-discovery-services/overview.md
+              - Repository Connectors: guides/developer/repository-connectors/overview.md
+              - Runtime Connectors:
+                  - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
+                  - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
+                  - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
+                  - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
+                  - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
+                  - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
+              - Resource Connectors:
+                  - New types of connectors: guides/developer/resource-connectors/overview.md
+                  - Open Metadata Topic Connector: guides/developer/resource-connectors/open-metadata-topic-connector.md
+          - Javadoc: https://odpi.github.io/egeria/index.html
+          - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Administration:
           - Administration Guide: guides/admin/index.md
           - Configure OMAG Server Platform: guides/admin/configuring-the-omag-server-platform.md
@@ -168,7 +175,7 @@ nav:
                     - Lineage Warehouse Services : guides/admin/servers/by-section/lineage-warehouse-services-section.md
                     - Data Engine Proxy Services: guides/admin/servers/by-section/data-engine-proxy-services-section.md
           - Migration: guides/migration/migrating-configuration-documents.md
-      - Operations:
+      - Operations Guide:
           - Operate OMAG Server Platform: guides/operations/overview.md
           - Operate OMAG Server Runtime: guides/operations/operate-omag-server-starter.md
           - Egeria in Kubernetes:
@@ -196,14 +203,9 @@ nav:
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
-          - Egeria General User UI: user-interfaces/general/overview.md
-          - Egeria Ecosystem UI:
-              - Egeria Ecosystem UI Overview: user-interfaces/ecosystem/index.md
-              - Type Explorer (TEX): guides/ecosystem-ui/tex-user-guide.md
-              - Repository Explorer (REX): guides/ecosystem-ui/rex-user-guide.md
-              - Dynamic Operations (Dino): guides/ecosystem-ui/dino-user-guide.md
-              - Glossary author: guides/ecosystem-ui/glossary-author-user-guide.md
-              - Server author: guides/ecosystem-ui/server-author-user-guide.md
+          - General User UI: user-interfaces/general/overview.md
+          - Python Widgets: user-interfaces/python-widgets/overview.md
+          - Explorers: user-interfaces/brain-explorers/overview.md
       - Features:
           - Features Overview: features/index.md
           - Anchor Management: features/anchor-management/overview.md

@@ -27,8 +27,7 @@ nav:
           - Planning Deployment:
               - Planning Runtime: guides/planning/runtime/overview.md
               - Security: guides/planning/security/overview.md
-              - User Interfaces:
-                  - Ecosystem UI: user-interfaces/ecosystem/ecosystem-ui-planning.md
+              - User Interfaces: guides/planning/user-interfaces/index.md
           - Preparing Metadata Ecosystem:
               - Metadata Valid Values: guides/planning/valid-values/overview.md
               - Language Translations: guides/planning/translations/overview.md
@@ -38,6 +37,7 @@ nav:
           - Integration Guide: guides/integration/index.md
           - Catalog Integration: guides/integration/types-of-metadata-repository.md
       - Catalogs:
+          - Catalogs Overview: guides/catalogs/index.md
           - Content Pack Catalog:
               - Content Pack Overview: content-packs/index.md
               - Core Content Pack: content-packs/core-content-pack/overview.md

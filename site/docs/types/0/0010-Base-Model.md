@@ -82,7 +82,11 @@ The *SampleData* relationship links an *Asset* entity describing a collection of
 
 ## Anchors classification
 
-The *Anchors* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an entity to store the GUID of that entity along with its type.
+The *Anchors* classification is used internally by the open metadata ecosystem to optimize the lookup of the entity at the root of a cluster of elements that represents a larger object. Currently, there is support for objects uniquely "owned" by an entity to store the GUID of that entity along with its type and domain.
+
+* *anchorGUID* - unique identifier of the anchor.
+* *anchorTypeName* - type name of the anchor.
+* *anchorDomainName* - type name of the anchor's domain.  This is the super type of the anchor that is one level below *Referenceable*.  For example, if the anchor is of type *DataSet*, then the domain is *Asset*.  If the anchor does not inherit from Referenceable, then the type of the anchor is used.
 
 !!! info "Further information on the use of Anchors"
     * [Anchor Management](/concepts/anchor).

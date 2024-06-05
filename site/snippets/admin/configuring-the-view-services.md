@@ -47,11 +47,11 @@ To get a description of each of the view services that are supported by an [OMAG
                     },
                     {
                         "serviceId": 806,
-                        "serviceName": "Glossary Workflow OMVS",
+                        "serviceName": "Glossary Manager OMVS",
                         "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                        "serviceURLMarker": "glossary-workflow",
+                        "serviceURLMarker": "glossary-manager",
                         "serviceDescription": "Create glossary terms and organize them into categories as part of a controlled workflow process. It supports the editing glossary and multiple states.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/glossary-workflow/overview/"
+                        "serviceWiki": "https://egeria-project.org/services/omvs/glossary-manager/overview/"
                     },
                     {
                         "serviceId": 807,
@@ -260,11 +260,11 @@ It is possible to list the configured view services for a view Server using the 
             },
             {
                 "serviceId": 806,
-                "serviceName": "Glossary Workflow OMVS",
+                "serviceName": "Glossary Manager OMVS",
                 "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                "serviceURLMarker": "glossary-workflow",
+                "serviceURLMarker": "glossary-manager",
                 "serviceDescription": "Create glossary terms and organize them into categories as part of a controlled workflow process. It supports the editing glossary and multiple states.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/glossary-workflow/overview/"
+                "serviceWiki": "https://egeria-project.org/services/omvs/glossary-manager/overview/"
             },
             {
                 "serviceId": 807,

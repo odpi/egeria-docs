@@ -3,9 +3,9 @@
 
 --8<-- "snippets/content-status/tech-preview.md"
 
-# Glossary Workflow OMVS
+# Glossary Manager OMVS
 
-The Glossary Workflow Open Metadata View Service (OMVS) is a REST API designed to support UIs that enable the maintenance of [glossary content](/practices/common-data-definitions/anatomy-of-a-glossary) using a controlled workflow process.  It runs in a [View Server](/concepts/view-server) and calls the [Asset Manager OMAS](/services/omas/asset-manager/overview) to retrieve and make changes to the glossary.
+The Glossary Manager Open Metadata View Service (OMVS) is a REST API designed to support UIs that enable the maintenance of [glossary content](/practices/common-data-definitions/anatomy-of-a-glossary) using a controlled workflow process.  It runs in a [View Server](/concepts/view-server) and calls the [Asset Manager OMAS](/services/omas/asset-manager/overview) to retrieve and make changes to the glossary.
 
 ## Why use a controlled glossary workflow
 
@@ -40,16 +40,16 @@ Where multiple glossaries are in play, each can operate a different style.  The 
     | Release-controlled glossary | Glossary authoring team. | Coordination of all changes to the glossary, which terms are included, their exact content and when updates are to be included. | Changes are delayed waiting for the next release.                                                                                             | For glossaries that must present a coherent scope.                                                                        |
 
 === "Harvested Glossary"
-    ---8<-- "docs/services/omvs/glossary-workflow/harvested-glossary.md"
+    ---8<-- "docs/services/omvs/glossary-manager/harvested-glossary.md"
 
 === "Multi-level Glossaries"
-    ---8<-- "docs/services/omvs/glossary-workflow/multi-level-glossaries.md"
+    ---8<-- "docs/services/omvs/glossary-manager/multi-level-glossaries.md"
 
 === "Open Contribution Glossary"
-    ---8<-- "docs/services/omvs/glossary-workflow/open-contribution-glossary.md"
+    ---8<-- "docs/services/omvs/glossary-manager/open-contribution-glossary.md"
 
 === "Release Controlled Glossary"
-    ---8<-- "docs/services/omvs/glossary-workflow/release-controlled-glossary.md"
+    ---8<-- "docs/services/omvs/glossary-manager/release-controlled-glossary.md"
 
 ----
 
@@ -168,7 +168,7 @@ This approach provides a simple integration path that acts when the external pro
 
 ![Handing over responsibility](external-workflow-engine-2.svg)
 
-The Asset Manager OMAS is the same service called by the Glossary Workflow OMAS.
+The Asset Manager OMAS is the same service called by the Glossary Manager OMAS.
 
 ---8<-- "snippets/abbr.md"
 

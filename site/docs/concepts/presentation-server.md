@@ -8,24 +8,11 @@ hide:
 
 # Presentation server
 
-The **presentation server** hosts the JavaScript applications that provide an interactive browser-based
-user interface for Egeria.
-
-The JavaScript applications call REST API services running in a [view server](/concepts/view-server)
-to retrieve information and perform operations relating to open metadata.
+The **presentation server** is the reverse proxy that protects the open metadata ecosystem from the vagaries of external user traffic and hosts the static JavaScript that provides the [interactive browser-based user interface for Egeria](/user-interfaces/general/overview). It also routes calls to the REST API services running in a [view server](/concepts/view-server) to retrieve information and perform operations relating to open metadata.
 
 ![A presentation server in the open metadata ecosystem](view-server.svg)
 
-The presentation server supports multi-tenant operation.
-Each presentation server tenant is designed to support an organization.
-These may be independent organizations or divisions/departments within an organization.  
-
-The tenant is configured with the appropriate view server to use, which in turn routes requests
-to its [governance servers](/concepts/governance-server) and [metadata access servers](/concepts/metadata-access-server).
-Therefore, each tenant sees a different collection of metadata and operates in isolation to the other tenants.
-
 !!! education "Further information"
-    The [setup and user guide for the presentation server :material-github:](https://github.com/odpi/egeria-react-ui){ target=gh }
-    is held in a separate repository.
+    [Setting up the presentation server](/guides/admin/user-interfaces/configuring-the-presentation-server)
 
 --8<-- "snippets/abbr.md"

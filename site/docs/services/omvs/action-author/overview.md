@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/tech-preview.md"
 
-# Governance Author Open Metadata View Service (OMVS)
+# Action Author Open Metadata View Service (OMVS)
 
-The Governance Author OMVS provides services to create an maintain governance actions:
+The Action Author OMVS provides services to create an maintain governance actions:
 
 * Setting up [governance action type](/concepts/governance-action-type) definitions.
 * Setting up [governance action process](/concepts/governance-action-process) definitions.

@@ -42,14 +42,14 @@ The [Server Metadata Security Connector](/concepts/server-metadata-security-conn
 In this release we have added the following view services to aid organizations writing user interfaces (UIs):
 
 * [Glossary Browser OMVS](#glossary-browser-omvs)
-* [Glossary Workflow OMVS](#glossary-workflow-omvs)
+* [Glossary Manager OMVS](#glossary-manager-omvs)
 
 These view services are supported by enhancements to the [Asset Manager OMAS](/services/omas/asset-manager/overivew){target=blank}
 
-### Glossary Workflow OMVS
+### Glossary Manager OMVS
 
-Glossary Workflow OMVS supports the development of glossaries using a controlled workflow process
-[... more information](/services/omvs/glossary-workflow/overview){target=blank}.
+Glossary Manager OMVS supports the development of glossaries using a controlled workflow process
+[... more information](/services/omvs/glossary-manager/overview){target=blank}.
 
 ### Glossary Browser OMVS
 

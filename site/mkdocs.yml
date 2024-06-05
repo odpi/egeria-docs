@@ -555,14 +555,14 @@ nav:
                   - Topic Integrator: services/omis/topic-integrator/overview.md
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
+                  - Action Author: services/omvs/action-author/overview.md
                   - Asset Catalog: services/omvs/asset-catalog/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
                   - Collection Manager: services/omvs/collection-manager/overview.md
                   - Data Discovery: services/omvs/data-discovery/overview.md
                   - Feedback Manager: services/omvs/feedback-manager/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
-                  - Glossary Workflow: services/omvs/glossary-workflow/overview.md
-                  - Governance Author: services/omvs/governance-author/overview.md
+                  - Glossary Manager: services/omvs/glossary-manager/overview.md
                   - My Profile: services/omvs/my-profile/overview.md
                   - Notification Manager: services/omvs/notification-manager/overview.md
                   - Project Manager: services/omvs/project-manager/overview.md
@@ -650,6 +650,7 @@ nav:
       - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Catalog Target: concepts/catalog-target.md
+      - Catalog Template: concepts/catalog-template.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
       - Cohort Registry: concepts/cohort-registry.md
@@ -779,12 +780,14 @@ nav:
       - Server Name: concepts/server-name.md
       - Software Capability: concepts/software-capability.md
       - Software Server Capability: concepts/software-server-capability.md
+      - Specification: concepts/specification.md
       - Star Rating: concepts/review.md
       - Subject Area: concepts/subject-area.md
       - Survey Report: concepts/survey-report.md
       - Survey Action Engine: concepts/survey-action-engine.md
       - Survey Action Service: concepts/survey-action-service.md
       - Tag: concepts/informal-tag.md
+      - Template: concepts/template.md
       - To Do: concepts/to-do.md
       - Uni-link Relationships: concepts/uni-multi-link.md
       - Useful Resource: concepts/useful-resource.md

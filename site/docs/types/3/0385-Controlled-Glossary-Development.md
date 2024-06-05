@@ -19,7 +19,7 @@ In addition, the following associations are made:
 
 Once the updates are complete, they go through a review and approval process.
 
-Once approved, the changes identified in the editing glossary are made to the terms in the live glossary.  The [Glossary Workflow OMVS](/services/omvs/glossary-workflow/overview) supports a simple model that updates a glossary term based on the values from another glossary term and this can be used to perform a simple *merging* process. Alternatively, a [Governance Action Process](/concepts/governance-action-process) can perform the merging process.  This would run asynchronously to the end user request, which is useful if the editing glossary is large, and it can manage conflicts and organize the subsequent correction and resubmission of the changes through its stewardship support.  
+Once approved, the changes identified in the editing glossary are made to the terms in the live glossary.  The [Glossary Manager OMVS](/services/omvs/glossary-manager/overview) supports a simple model that updates a glossary term based on the values from another glossary term and this can be used to perform a simple *merging* process. Alternatively, a [Governance Action Process](/concepts/governance-action-process) can perform the merging process.  This would run asynchronously to the end user request, which is useful if the editing glossary is large, and it can manage conflicts and organize the subsequent correction and resubmission of the changes through its stewardship support.  
 
 ![UML](0385-Controlled-Glossary-Development.svg)
 

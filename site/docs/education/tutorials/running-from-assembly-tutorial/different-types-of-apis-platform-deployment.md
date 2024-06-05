@@ -128,7 +128,7 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
               Glossary Author OMVS: View Service for glossary authoring.
               Dynamic Infrastructure and Operations OMVS: Explore and operate an open metadata ecosystem.
               Repository Explorer OMVS: Explore open metadata instances.
-              Glossary Workflow OMVS: Create glossary terms and organize them into categories as part of a controlled workflow process. It supports the editing glossary and multiple states.
+              Glossary Manager OMVS: Create glossary terms and organize them into categories as part of a controlled workflow process. It supports the editing glossary and multiple states.
               My Profile OMVS: Manage information about the logged on user as well as their preferences.
               Type Explorer OMVS: Explore the open metadata types in a repository or cohort.
               Server Author OMVS: Author servers.

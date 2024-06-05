@@ -62,7 +62,7 @@ Each directory in the assembly includes a README.md file to explain its contents
 
 ## Controlled glossary development (glossary workflows)
 
-[Glossary terms](/practices/common-data-definitions/anatomy-of-a-glossary) provide important definitions within an organization's governance programs.  They help to clarify the terminology being used and identify where data with a certain meaning is located.  As a result, organizations often want to operate a collaborative process for updating their glossary terms.  Anticipating this, Egeria's original type system included the [ControlledGlossaryTerm](/types/3/0385-Controlled-Glossary-Development#controlledglossaryterm-entity) that had additional statuses beyond ACTIVE to support a complex development lifecycle.  In release 4.1 this was extended with [new types](/types/3/0385-Controlled-Glossary-Development) and [services](/services/omvs/glossary-workflow/overview) to control the visibility of glossary terms as they are developed.
+[Glossary terms](/practices/common-data-definitions/anatomy-of-a-glossary) provide important definitions within an organization's governance programs.  They help to clarify the terminology being used and identify where data with a certain meaning is located.  As a result, organizations often want to operate a collaborative process for updating their glossary terms.  Anticipating this, Egeria's original type system included the [ControlledGlossaryTerm](/types/3/0385-Controlled-Glossary-Development#controlledglossaryterm-entity) that had additional statuses beyond ACTIVE to support a complex development lifecycle.  In release 4.1 this was extended with [new types](/types/3/0385-Controlled-Glossary-Development) and [services](/services/omvs/glossary-manager/overview) to control the visibility of glossary terms as they are developed.
 
 ## Extended integration connector function (4.3)
 
@@ -112,16 +112,16 @@ The [Server Metadata Security Connector](/concepts/server-metadata-security-conn
 View services are designed to provide REST APIs to UIs.  In release 4.1 we added the following view services to aid organizations writing user interfaces (UIs):
 
 * [Glossary Browser OMVS](#glossary-browser-omvs)
-* [Glossary Workflow OMVS](#glossary-workflow-omvs)
+* [Glossary Manager OMVS](#glossary-manager-omvs)
 
 These view services are supported by enhancements to the [Asset Manager OMAS](/services/omas/asset-manager/overview){target=blank}.
 
 In release 4.2 we added another view service called [My Profile OMVS](#my-profile-omvs).
 
-### Glossary Workflow OMVS
+### Glossary Manager OMVS
 
-Glossary Workflow OMVS supports the development of glossaries using a controlled workflow process
-[... more information](/services/omvs/glossary-workflow/overview){target=blank}.
+Glossary Manager OMVS supports the development of glossaries using a controlled workflow process
+[... more information](/services/omvs/glossary-manager/overview){target=blank}.
 
 ### Glossary Browser OMVS
 

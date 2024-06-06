@@ -49,13 +49,13 @@ At the end of the server start up, the server lists the services it has running.
 Below are the messages from the five servers show above:
 
 ```
-Wed May 12 15:26:13 BST 2021 cocoMDS1 Startup OMAG-ADMIN-0004 The cocoMDS1 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services, Asset Catalog OMAS, Asset Consumer OMAS, Asset Manager OMAS, Asset Owner OMAS, Community Profile OMAS, Glossary View OMAS, Discovery Engine OMAS, Data Engine OMAS, Data Manager OMAS, Governance Engine OMAS]
+Wed May 12 15:26:13 BST 2021 cocoMDS1 Startup OMAG-ADMIN-0004 The cocoMDS1 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services, Asset Consumer OMAS, Asset Manager OMAS, Asset Owner OMAS, Community Profile OMAS, Data Manager OMAS, Governance Engine OMAS]
 
-Wed May 12 15:26:14 BST 2021 cocoMDS4 Startup OMAG-ADMIN-0004 The cocoMDS4 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services, Asset Catalog OMAS, Asset Consumer OMAS, Community Profile OMAS, Glossary View OMAS, Data Science OMAS]
+Wed May 12 15:26:14 BST 2021 cocoMDS4 Startup OMAG-ADMIN-0004 The cocoMDS4 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services,Asset Consumer OMAS, Community Profile OMAS, Data Science OMAS]
 
-Wed May 12 15:26:15 BST 2021 cocoView1 Startup OMAG-ADMIN-0004 The cocoView1 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Glossary Author OMVS, Repository Explorer OMVS, Type Explorer OMVS, Dynamic Infrastructure and Operations OMVS]
+Wed May 12 15:26:15 BST 2021 cocoView1 Startup OMAG-ADMIN-0004 The cocoView1 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Glossary Manager OMVS]
 
-Wed May 12 15:26:25 BST 2021 governDL01 Startup OMAG-ADMIN-0004 The governDL01 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Asset Analysis OMES, Governance Action OMES, Engine Host Services]
+Wed May 12 15:26:25 BST 2021 governDL01 Startup OMAG-ADMIN-0004 The governDL01 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Survey Action OMES, Governance Action OMES, Engine Host Services]
 
 Wed May 12 15:26:26 BST 2021 exchangeDL01 Startup OMAG-ADMIN-0004 The exchangeDL01 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Files Integrator OMIS, Integration Daemon Services]
 

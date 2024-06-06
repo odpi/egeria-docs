@@ -300,7 +300,6 @@ In addition, there are specific cataloging interfaces for particular types of su
 
 Once the asset catalog is established, it can offer search interfaces through the following mechanisms.
 
-- [Asset Catalog OMAS](/services/omas/asset-catalog/overview) provides support a comprehensive search interface for all types of asset. It is designed to support a catalog tool.
 - [Asset Consumer OMAS](/services/omas/asset-consumer/overview) provides simple string-based searches for assets and their related information along with support to create connectors to access the content of the actual physical asset and browse through all the information known about the asset.
 - [Digital Architecture OMAS](/services/omas/digital-architecture/overview) provides specialist interfaces for querying reference data and processes.
 - [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview) provides specialist catalog search capabilities for infrastructure such as servers, host systems and applications.

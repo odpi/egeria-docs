@@ -5,7 +5,7 @@
 
 ![Digital Resource Connector](digital-resource-connector.svg)
 
-To write an open connector you need to complete four steps:
+To write a resource connector you need to complete four steps:
 
 1. Identify the properties for the [connection](/concepts/connection).
 2. Write the [connector provider](/concepts/connector-provider).
@@ -30,20 +30,12 @@ Begin by identifying and designing the properties needed to connect to your tool
 --8<-- "docs/guides/developer/connector-provider-into.md"
 --8<-- "docs/guides/developer/implemented-a-connector-provider.md"
 
-!!! example "Example: connector provider for IBM DataStage"
-    For example, the [`DataStageConnectorProvider` :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/main/datastage-adapter/src/main/java/org/odpi/egeria/connectors/ibm/datastage/dataengineconnector/DataStageConnectorProvider.java){ target=gh } is used to instantiate connectors to IBM DataStage data processing engines. Therefore, its name and description refer to DataStage, and the connectors it instantiates are [`DataStageConnector`s :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/main/datastage-adapter/src/main/java/org/odpi/egeria/connectors/ibm/datastage/dataengineconnector/DataStageConnector.java){ target=gh }.
-
-!!! example "Example: connector provider for IBM Information Governance Catalog"
-    Similarly, the [`IGCOMRSRepositoryConnectorProvider` :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/main/igc-adapter/src/main/java/org/odpi/egeria/connectors/ibm/igc/repositoryconnector/IGCOMRSRepositoryConnectorProvider.java){ target=gh } is used to instantiate connectors to IBM Information Governance Catalog (IGC) metadata repositories. In contrast to the `DataStageConnectorProvider`, the `IGCOMRSRepositoryConnectorProvider`'s name and description refer to IGC, and the connectors it instantiates are [`IGCOMRSRepositoryConnector`s :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/main/igc-adapter/src/main/java/org/odpi/egeria/connectors/ibm/igc/repositoryconnector/IGCOMRSRepositoryConnector.java){ target=gh }.
-
 !!! tip "Connectors implement Egeria interfaces, not vice versa"
     Note that the code of all of these connector implementations exists outside Egeria itself (in separate code repositories), and there are no direct dependencies within Egeria on these external repositories or connectors.
 
 All connectors can be configured with the network address and credential information needed to access the underlying tool or system. Therefore, you do not need to explicitly list properties for such basic details. However, the names of any additional configuration properties that may be useful to a specific type of connector can be described through the `recognizedConfigurationProperties` of the connector type.
 
 ### Implementation pattern
-
-From the two examples ([`DataStageConnectorProvider` :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/main/datastage-adapter/src/main/java/org/odpi/egeria/connectors/ibm/datastage/dataengineconnector/DataStageConnectorProvider.java){ target=gh } and [`IGCOMRSRepositoryConnectorProvider` :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/main/igc-adapter/src/main/java/org/odpi/egeria/connectors/ibm/igc/repositoryconnector/IGCOMRSRepositoryConnectorProvider.java){ target = gh }), you will see that writing a connector provider follows a simple pattern:
 
 - Extend a *connector provider* base class specific to your connector's interface.
 - Define `static final` class members for the GUID, name, description and the names of any additional configuration properties.
@@ -55,17 +47,10 @@ From the two examples ([`DataStageConnectorProvider` :material-github:](https://
 
 ## Understand the connector interface
 
-Now that you have the *connector provider* to instantiate your *connector*, you need to understand what your connector actually needs to do. For a service to use your connector, the connector must provide a set of methods that are relevant to that service.
-
-!!! example "Example: data engine proxy connector interface"
-    For example, the [data engine proxy services](/services/data-engine-proxy-services) integrate metadata from data engines with Egeria. To integrate DataStage with Egeria, we want our [`DataStageConnector` :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/main/datastage-adapter/src/main/java/org/odpi/egeria/connectors/ibm/datastage/dataengineconnector/DataStageConnector.java){ target=gh } to be used by the data engine proxy services. Therefore, the connector needs to extend [`DataEngineConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/governance-servers/data-engine-proxy-services/data-engine-proxy-connector/src/main/java/org/odpi/openmetadata/governanceservers/dataengineproxy/connectors/DataEngineConnectorBase.java){ target=gh }, because this defines the methods needed by the data engine proxy services.
-
-!!! example "Example: OMRS repository connector interface"
-    Likewise, we want our [`IGCOMRSRepositoryConnector` :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server/blob/main/igc-adapter/src/main/java/org/odpi/egeria/connectors/ibm/igc/repositoryconnector/IGCOMRSRepositoryConnector.java){ target=gh } to integrate IGC with Egeria as a metadata repository. Therefore, the connector needs to extend [`OMRSRepositoryConnector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/repositoryconnector/OMRSRepositoryConnector.java){ target=gh }, because this defines the methods needed to integrate with [Open Metadata Repository Services (OMRS)](/services/omrs).
+Now that you have the *connector provider* to instantiate your *connector*, you need to understand what your connector actually needs to do. For a service to use your connector, the connector must omplement the Open Connector Framework methods plus the specific API used to access the resource.
 
 How would you know to extend these base classes? The *connector provider* implementations in the previous step each extended a base class specific to the type of connector they provide ([`DataEngineConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/governance-servers/data-engine-proxy-services/data-engine-proxy-connector/src/main/java/org/odpi/openmetadata/governanceservers/dataengineproxy/connectors/DataEngineConnectorProviderBase.java){ target=gh } and [`OMRSRepositoryConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/repositoryconnector/OMRSRepositoryConnectorProviderBase.java){ target=gh }). These *connector* base classes ([`DataEngineConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/governance-servers/data-engine-proxy-services/data-engine-proxy-connector/src/main/java/org/odpi/openmetadata/governanceservers/dataengineproxy/connectors/DataEngineConnectorBase.java){ target=gh } and [`OMRSRepositoryConnector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/repositoryconnector/OMRSRepositoryConnector.java){ target=gh }) are in the same package structure as those *connector provider* base classes.
 
-In both cases, by extending the abstract classes ([`DataEngineConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/governance-servers/data-engine-proxy-services/data-engine-proxy-connector/src/main/java/org/odpi/openmetadata/governanceservers/dataengineproxy/connectors/DataEngineConnectorBase.java){ target=gh } and [`OMRSRepositoryConnector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/repositoryconnector/OMRSRepositoryConnector.java){ target=gh }) your connector must implement the methods these abstract classes define. These general methods implement your services (data engine proxy services and OMRS), without needing to know anything about the underlying technology. Therefore, you can simply "plug-in" the underlying technology: any technology with a connector that implements these methods can run your service. Furthermore, each technology-specific connector can decide how best to implement those methods for itself.
 
 ## Code the connector itself
 

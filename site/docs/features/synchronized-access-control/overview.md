@@ -108,7 +108,7 @@ The links below take you to each service's description that includes how to conf
 ### Augmentation Services
 
 - [Asset Owner OMAS](/services/omas/asset-owner/overview)
-- [Asset Analysis OMES](/services/omes/asset-analysis/overview)
+- [Survey Action OMES](/services/omes/asset-analysis/overview)
 - [Governance Action OMES](/services/omes/governance-action/overview)
 - [Stewardship Action OMAS](/services/omas/stewardship-action/overview)
 
@@ -123,7 +123,7 @@ The links below take you to each service's description that includes how to conf
 
 ### Audit Services
 
-- [Security Officer OMAS](/services/omas/security-officer/overview)
+- [Governance Program OMAS](/services/omas/governance-program/overview)
 
 
 

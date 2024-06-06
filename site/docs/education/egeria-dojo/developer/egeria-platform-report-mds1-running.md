@@ -9,16 +9,11 @@
 * **Platform security connector**: *null*
 ## Registered services
 * **Data Manager OMAS**: Capture changes to the data stores and data set managed by a data manager such as a database server, content manager or file system.
-* **Subject Area OMAS**: Document knowledge about a subject area
 * **Design Model OMAS**: Exchange design model content with tools and standard packages
-* **Glossary View OMAS**: Support glossary terms visualization
 * **Asset Manager OMAS**: Manage metadata from a third party asset manager
-* **Security Officer OMAS**: Set up rules and security tags to protect data
 * **IT Infrastructure OMAS**: Manage information about the deployed IT infrastructure
 * **Data Science OMAS**: Create and manage data science definitions and models
 * **Community Profile OMAS**: Define personal profile and collaborate
-* **Discovery Engine OMAS**: Support for automated metadata discovery engines
-* **Data Engine OMAS**: Exchange process models and lineage with a data engine
 * **Digital Architecture OMAS**: Design of the digital services for an organization
 * **Asset Owner OMAS**: Manage an asset
 * **Stewardship Action OMAS**: Manage exceptions and actions from open governance
@@ -27,7 +22,6 @@
 * **Asset Lineage OMAS**: Store asset lineage
 * **Analytics Modeling OMAS**: Provides metadata information for Analytics Modeling.
 * **Asset Consumer OMAS**: Access assets through connectors
-* **Asset Catalog OMAS**: Search and understand your assets
 * **DevOps OMAS**: Manage a DevOps pipeline
 * **Software Developer OMAS**: Interact with software development tools
 * **Project Management OMAS**: Manage governance related projects
@@ -41,18 +35,13 @@
 * **Topic Integrator OMIS**: Exchange metadata with third party event-based brokers.
 * **API Integrator OMIS**: Exchange metadata with third party API Gateways.
 * **Security Integrator OMIS**: Distribute security properties to security enforcement points.
-* **Search Integrator OMIS**: Store metadata with a third party technology that is focused on search efficiency.
 * **Database Integrator OMIS**: Extract metadata such as schema, tables and columns from database managers.
 * **Lineage Integrator OMIS**: Manage capture of lineage from a third party tool.
 * **Catalog Integrator OMIS**: Exchange metadata with third party data catalogs.
 * **Analytics Integrator OMIS**: Exchange metadata with third party analytics tools.
 * **Display Integrator OMIS**: Exchange metadata with applications that display data to users.
 * **Organization Integrator OMIS**: Load information about the teams and people in an organization and return collaboration activity.
-* **Glossary Author OMVS**: View Service for glossary authoring.
-* **Dynamic Infrastructure and Operations OMVS**: Explore and operate an open metadata ecosystem.
-* **Repository Explorer OMVS**: Explore open metadata instances.
-* **Type Explorer OMVS**: Explore the open metadata types in a repository or cohort.
-* **Server Author OMVS**: Author servers.
+* **Glossary Manager OMVS**: View Service for glossary authoring.
 ## Platform servers
 ### Server: mds1
 * **Type**: Metadata Access Store

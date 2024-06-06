@@ -28,9 +28,9 @@ In all cases, Asset Lineage OMAS always relies on underlying [Enterprise Reposit
 
 ## User Guide
 
-Most of the interaction with the Asset Lineage OMAS will be driven by the external tools used to build lineage using [Data Engine OMAS :material-dock-window:](/services/omas/data-engine/overview) and [Data Engine Proxy :material-dock-window:](/services/data-engine-proxy-services) or integrated lineage via [Integration Services OMIS :material-dock-window:](/services/omis/) like Database integrator or Files integrator. 
+Most of the interaction with the Asset Lineage OMAS will be driven by the external tools called via the [Integration Services (OMISs)](/services/omis/) like Database integrator or Files integrator. 
 
-When enabled in a OMAG Metadata Access Server, it subscribes to the enterprise cohort topic and uses following events triggers:
+When enabled in a Metadata Access Server, it subscribes to the enterprise cohort topic and uses following events triggers:
 
 Relationship events that build lineage graph:
 

@@ -25,7 +25,6 @@ The configuration document is divided into sections.  Some sections contain prop
 * The [*Integration Daemon Services*](integration-daemon-services-section.md) define which integration connectors run in an [integration daemon](/concepts/integration-daemon) server.
 * The [*View Services*](view-services-section.md) define which REST APIs are enabled in a [view server](/concepts/view-server).
 * The [*Lineage Warehouse Services*](lineage-warehouse-services-section.md) define the properties of the repository for a [lineage warehouse](/concepts/lineage-warehouse) server.
-* The [*Data Engine Proxy Services*](data-engine-proxy-services-section.md) define the properties of a [data engine proxy server](/concepts/data-engine-proxy) server.
 
 
 

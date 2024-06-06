@@ -41,13 +41,13 @@ Egeria's education aims to broaden the knowledge of people who need to work with
 
 ### User Interfaces
 
-Egeria's user interfaces (UIs) provide individuals with access to search, review and update open metadata through a browser-based experience.
+Most users will experience the open metadata ecosystem via their own tools.  However Egeria does have some simple user interfaces to cover its unique capabilities"
 
 ![UIs](ui-functional-detail.svg)
 
 - *Rich Widgets and Textual UIs* provide visualization of key element.  They are designed for technical people operating the platform.
-- [Egeria Ecosystem UI](/user-interfaces/ecosystem): server and platform configuration, ecosystem monitoring, type explorer and repository explorer.
-- [Egeria General User UI](/user-interfaces): data catalog search, glossary browser, lineage explorer.
+- *Brain Explorers* are cloud based websites allowing you to interact with a graph interface to visualized open metadata content.
+- *Documentation site* contains comprehensive documentation on Egeria's features.
 
 ### Integration platform
 
@@ -101,6 +101,7 @@ Its use is described in the [developer's guide](/guides/developer).
 - The [open metadata frameworks](/frameworks) define the interfaces implemented by components that "plug-in" to Egeria, either to integrate calls to third party technology or extend the function of Egeria. The frameworks are as follows:
 
     - [Audit Log Framework (ALF)](/frameworks/alf/overview) - extensions for all types of connectors to enable natural language diagnostics such as exceptions and audit log messages.
+    - [Open Metadata Framework (OMF)](/frameworks/ocf/overview) - base framework for open metadata definitions.
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview) - base framework for all types of plug-in components called connectors.
     - [Open Integration Framework (OIF)](/frameworks/oif/overview) - specialized connectors for metadata exchange and synchronization with third party technologies.
     - [Survey Action Framework (SAF)](/frameworks/saf/overview) - specialized connectors called survey action services that support automated metadata discovery.
@@ -137,7 +138,7 @@ Support for docker compose was removed in [release 3.5](3-5.md).
 
 Following is an overview of the [content status](/release-notes/content-status) of the functions in Egeria's latest release. 
 
-![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-4.4.svg)
+![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-5.0.svg)
 
 
 As you can see, some progress has been made on all layers. However, since they do build on one another, most of the early work has been focused on establishing the frameworks, connector APIs and other services to provide the developer platform. The developer platform provides the libraries and interfaces to build connectors to integrate third party tools along with the runtime to host these connectors and manage the metadata exchange.
@@ -178,14 +179,10 @@ There was investment in both the function and performance of the generic handler
 
 Integration with third party technologies made good progress with the addition of OpenLineage support, the new JDBC, Hive Metastore, schema registry, OpenAPI Specification and Apache Kafka connectors.
 
+2023 and 2024 saw a dramatic change in the project's direction as it shifted its primary focus from providing libraries for tools vendors to supporting organizations that are looking to create an open metadata ecosystem.  This resulted in more samples, view services content packs and a new range of UIs.  The OMAG Server Platform has had some internal restructure and clean up of deprecated code.  The result is a simpler coding experience for new community members.
+
 ### Future Plans
 
-Support for the governance solutions naturally follows along, building on the two lower levels. The governance solutions themselves complement specific metadata and governance solutions available in the market today. Egeria is focused on filling in the gaps to support individuals that are setting up and running an open metadata ecosystem and wish to take advantage of the enterprise perspective it brings.
-
-The first solution is *Historical Lineage Exploration*. This was made available as a tech preview in late 2020. This provides a user interface for finding assets and viewing their lineage along with a dedicated governance server called the [Lineage Warehouse](/concepts/lineage-warehouse).
-
-Next will be the *Subject Area Management* solution and *Duplicate Metadata Management*, closely followed by the others in 2023 and beyond.
-
-The prerequisites to Egeria solutions are validated and tested through the [Coco Pharmaceuticals scenarios](/practices/coco-pharmaceuticals).  The [feature](/features) that they use are built out as samples.  
+After the release of version 5.0, the team plans to focus on publicity around the new platform and its advanced capability.  There will also be more connectors, increasing Egeria's reach across the IT landscape.
 
 --8<-- "snippets/abbr.md"

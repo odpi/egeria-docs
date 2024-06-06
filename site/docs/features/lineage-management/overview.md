@@ -44,7 +44,7 @@ There may also be systems that act as a hub, with many processes extracting data
 
 Figure 4 shows Egeria's architecture for lineage.  There are three parts to it:
 
-* *Lineage capture* - through the [integration daemon](/concepts/integration-daemon) and [Data Engine Proxy](/concepts/data-engine-proxy) servers, metadata about data sources and the surrounding processing is captured and shared through open metadata.  It is possible that one service is capturing particular types of data sources and another is capturing processes.
+* *Lineage capture* - through the [integration daemon](/concepts/integration-daemon) servers, metadata about data sources and the surrounding processing is captured and shared through open metadata.  It is possible that one service is capturing particular types of data sources and another is capturing processes.
 
 * *Stewardship* - the lineage information from each of the technologies is linked together.  Where the naming of data sources and processes is consistent, this assembling of the lineage graph is automatic.  However, experience shows that if it can be different, it will be different. Many technologies make their own choices in naming and so governance action services along with human stewardship is required to match and link the graphs together.  The governance action services run in the [Engine Host](/concepts/engine-host) server.  They automatically add the relationships between the lineage contributions from each technology that may need to be verified by a human steward.  The human steward may also manually add relationships where there is no well known pattern that can be encoded in a governance action services.  Stewardship also involves analysis of the lineage to ensure the digital landscape is operating as it should.
 
@@ -349,15 +349,10 @@ Governing expectations is where the lineage information is used to validate that
 
 Design lineage can be consolidated and exported for preservation by the [Asset Lineage OMAS](/services/omas/asset-lineage/overview) and then stored in the [Lineage Warehouse](/concepts/lineage-warehouse).
 
-Figure 35 shows metadata capture using:
+Figure 35 shows metadata capture using the [Integration Daemon](/concepts/integration-daemon/) to retrieve lineage metadata in automated way and push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the Lineage Warehouse.
 
-- The [data engine proxy server](/services/data-engine-proxy-services/) to poll metadata in automated way.
-- A caller using [Data Engine OMAS's](/services/omas/data-engine/overview) API.
-
-Bot mechanisms push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the Lineage Warehouse.
-
-![Figure 35](/features/lineage-management/open-lineage-server-data-engine-lineage-capture.svg)
-> **Figure 35:** Capturing lineage using Data Engine Proxy, Data Engine OMAS and Asset Lineage OMAS
+![Figure 35](/features/lineage-management/lineage-capture-for-lineage-warehouse.svg)
+> **Figure 35:** Capturing lineage using the Integration Daemon, Partner OMAS(s) and Asset Lineage OMAS
 
 Once the lineage graphs are assembled in the Lineage Warehouse, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
 
@@ -365,7 +360,7 @@ Once the lineage graphs are assembled in the Lineage Warehouse, the lineage can 
 
 The [Lineage Warehouse](/concepts/lineage-warehouse) is the warehouse for lineage. It is the destination store for all relevant lineage data graphs. 
 
-![Figure 36](/features/lineage-management/open-lineage-server-lineage-warehouse.svg)
+![Figure 36](/features/lineage-management/lineage-warehouse.svg)
 > **Figure 36:** Lineage Warehouse preservation and use details
 
 1. Metadata instance events from the cohort are distributed to Metadata Access Server running Asset Lineage OMAS. 
@@ -384,14 +379,14 @@ The [Lineage Warehouse](/concepts/lineage-warehouse) is the warehouse for lineag
 
 Organizations use horizontal lineage view to understand and visualize how their data flows from origin to various destinations enabling comprehensive data traceability. This view can represent both design or operational lineage aspect with different styles and level of details.
 
-![Figure 37](/features/lineage-management/open-lineage-server-horizontal-view.svg)
+![Figure 37](/features/lineage-management/lineage-warehouse-horizontal-view.svg)
 > **Figure 37:** Lineage between data stores and processes on different levels
 
 #### Vertical lineage
 
 Organizations use vertical lineage view to visualize how business concepts such as glossaries, terms are mapped to data assets and related elements. This allows business users to understand how digital landscape is implemented and perform impact analysis when needed.
 
-![Figure 38](/features/lineage-management/open-lineage-server-vertical-view.svg)
+![Figure 38](/features/lineage-management/lineage-warehouse-vertical-view.svg)
 > **Figure 38:** Lineage between business glossaries and data stores
 
 !!! summary "Summary"
@@ -407,7 +402,6 @@ Organizations use vertical lineage view to visualize how business concepts such 
 
     - [Asset Manager Open Metadata Access Service (OMAS)](/services/omas/asset-manager/overview)
     - [Open Metadata Integration Services (OMISs)](/services/omis)
-    - [Data Engine Open Metadata Access Service (OMAS)](/services/omas/data-engine/overview/)
 
     APIs for retrieving lineage
 

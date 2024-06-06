@@ -35,7 +35,6 @@ The effort required to author and maintain these definitions, plus the governanc
 !!! education "Further information"
     
     - [Governance Program OMAS](/services/omas/governance-program/overview/#subject-areas) provides support for the subject area definition and the ability to retrieve details of a subject area's materials.
-    - [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.
     - [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.
     - [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of subject area information with other catalogs and quality tools.
     - [Common Data Definitions](/practices/common-data-definitions/overview) describes the management and use of subject areas.

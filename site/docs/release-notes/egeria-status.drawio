@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-04-30T21:14:04.832Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.1.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="e8RokK8kTtxiug_USyC2" version="24.1.0" type="device" pages="29">
+<mxfile host="Electron" modified="2024-06-06T10:43:43.663Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="m2tD36BFkNTA2ENK3HL-" version="24.4.8" type="device" pages="29">
   <diagram id="Gro3B2_n27xaSj8Dfh9V" name="overview">
     <mxGraphModel dx="1941" dy="941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -913,7 +913,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="icIzIHRbvMJy5QZI8pVm" name="functional-organization">
-    <mxGraphModel dx="1114" dy="2110" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1500" dy="2199" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="N-dQoVwpvzfziEzftqcd-0" />
         <mxCell id="N-dQoVwpvzfziEzftqcd-1" parent="N-dQoVwpvzfziEzftqcd-0" />
@@ -2378,10 +2378,10 @@
         <mxCell id="sVa5YgL7_CxaHgM3rm0c-29" value="UIs" style="rounded=0;whiteSpace=wrap;html=1;horizontal=0;verticalAlign=top;fillColor=#ffcc99;strokeColor=#36393d;" parent="N-dQoVwpvzfziEzftqcd-1" vertex="1">
           <mxGeometry x="5870" y="69" width="760" height="68" as="geometry" />
         </mxCell>
-        <mxCell id="sVa5YgL7_CxaHgM3rm0c-30" value="Egeria Ecosystem UI" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;shadow=1;" parent="N-dQoVwpvzfziEzftqcd-1" vertex="1">
+        <mxCell id="sVa5YgL7_CxaHgM3rm0c-30" value="Brain Explorers" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;shadow=1;" parent="N-dQoVwpvzfziEzftqcd-1" vertex="1">
           <mxGeometry x="6163" y="81.25" width="220" height="43.5" as="geometry" />
         </mxCell>
-        <mxCell id="sVa5YgL7_CxaHgM3rm0c-31" value="Egeria General User UI" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;shadow=1;" parent="N-dQoVwpvzfziEzftqcd-1" vertex="1">
+        <mxCell id="sVa5YgL7_CxaHgM3rm0c-31" value="Egeria&#39;s Documentation Site" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;shadow=1;" parent="N-dQoVwpvzfziEzftqcd-1" vertex="1">
           <mxGeometry x="6393" y="81.25" width="228" height="43.5" as="geometry" />
         </mxCell>
         <mxCell id="sVa5YgL7_CxaHgM3rm0c-32" value="Reference Data Management" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;" parent="N-dQoVwpvzfziEzftqcd-1" vertex="1">
@@ -2567,7 +2567,7 @@
         <mxCell id="sVa5YgL7_CxaHgM3rm0c-99" value="Reference Data" style="rounded=0;whiteSpace=wrap;html=1;align=center;flipH=0;shadow=1;" parent="N-dQoVwpvzfziEzftqcd-1" vertex="1">
           <mxGeometry x="6181.82" y="-14.75" width="123.37" height="65.25" as="geometry" />
         </mxCell>
-        <mxCell id="Uy9Im0GTeJ_CijcbwWrF-0" value="Open Metadata Framework (OMF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="N-dQoVwpvzfziEzftqcd-1">
+        <mxCell id="Uy9Im0GTeJ_CijcbwWrF-0" value="Open Metadata Framework (OMF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="N-dQoVwpvzfziEzftqcd-1" vertex="1">
           <mxGeometry x="6397" y="607" width="218" height="40" as="geometry" />
         </mxCell>
       </root>
@@ -7590,7 +7590,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="release-5.0" id="Qk3ky87NWkepus_BiTSs">
-    <mxGraphModel dx="287" dy="2110" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="673" dy="2199" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="D-D2cV44GRgCc7UrThwL-0" />
         <mxCell id="D-D2cV44GRgCc7UrThwL-1" parent="D-D2cV44GRgCc7UrThwL-0" />
@@ -7681,10 +7681,10 @@
         <mxCell id="D-D2cV44GRgCc7UrThwL-34" value="UIs" style="rounded=0;whiteSpace=wrap;html=1;horizontal=0;verticalAlign=top;fillColor=#eeeeee;strokeColor=#36393d;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="867" y="70" width="760" height="68" as="geometry" />
         </mxCell>
-        <mxCell id="D-D2cV44GRgCc7UrThwL-35" value="Egeria Ecosystem UI" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;shadow=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
+        <mxCell id="D-D2cV44GRgCc7UrThwL-35" value="Brain Explorers" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;shadow=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="1160" y="82.25" width="220" height="43.5" as="geometry" />
         </mxCell>
-        <mxCell id="D-D2cV44GRgCc7UrThwL-36" value="Egeria General User UI" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;shadow=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
+        <mxCell id="D-D2cV44GRgCc7UrThwL-36" value="Egeria&#39;s Documentation Site" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;shadow=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="1390" y="82.25" width="228" height="43.5" as="geometry" />
         </mxCell>
         <mxCell id="D-D2cV44GRgCc7UrThwL-37" value="Reference Data Management" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
@@ -7885,31 +7885,31 @@
         <mxCell id="2o6SaIHRxNQidzuww8MU-6" value="Reference Data" style="rounded=0;whiteSpace=wrap;html=1;align=center;flipH=0;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="1178.82" y="-13.75" width="123.37" height="65.25" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-0" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Open Metadata and Governance&amp;nbsp;&lt;div&gt;(OMAG) Frameworks&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;shadow=1;" vertex="1" parent="D-D2cV44GRgCc7UrThwL-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-0" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;Open Metadata and Governance&amp;nbsp;&lt;div&gt;(OMAG) Frameworks&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;shadow=1;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="919" y="600" width="700" height="154" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-1" value="Open Connector Framework (OCF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="D-D2cV44GRgCc7UrThwL-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-1" value="Open Connector Framework (OCF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="925" y="608" width="218" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-2" value="Audit Log Framework (ALF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="D-D2cV44GRgCc7UrThwL-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-2" value="Audit Log Framework (ALF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="1160.4499999999998" y="675" width="217.11" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;" edge="1" parent="D-D2cV44GRgCc7UrThwL-1" source="c2Amk_7JhfBVuAJ_HCtp-1" target="c2Amk_7JhfBVuAJ_HCtp-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;" parent="D-D2cV44GRgCc7UrThwL-1" source="c2Amk_7JhfBVuAJ_HCtp-1" target="c2Amk_7JhfBVuAJ_HCtp-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-4" value="Open Integration Framework (OIF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="D-D2cV44GRgCc7UrThwL-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-4" value="Open Integration Framework (OIF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="1394" y="655" width="218" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-5" value="Survey Action Framework (SAF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="D-D2cV44GRgCc7UrThwL-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-5" value="Survey Action Framework (SAF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="924.3800000000001" y="701" width="220.62" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-6" value="Governance Action Framework (GAF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="D-D2cV44GRgCc7UrThwL-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-6" value="Governance Action Framework (GAF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="925" y="655" width="219" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-7" value="Context Event Framework (CEF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="D-D2cV44GRgCc7UrThwL-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-7" value="Context Event Framework (CEF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="1394" y="703" width="217" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-8" value="Open Metadata Framework (OMF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" vertex="1" parent="D-D2cV44GRgCc7UrThwL-1">
+        <mxCell id="c2Amk_7JhfBVuAJ_HCtp-8" value="Open Metadata Framework (OMF)" style="rounded=0;whiteSpace=wrap;html=1;align=center;shadow=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;" parent="D-D2cV44GRgCc7UrThwL-1" vertex="1">
           <mxGeometry x="1394" y="608" width="218" height="40" as="geometry" />
         </mxCell>
       </root>

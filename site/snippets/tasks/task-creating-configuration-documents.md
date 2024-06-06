@@ -285,30 +285,6 @@ When the configuration is next queried (this is request **2.** in Postman), the 
       },
       {
         "class": "AccessServiceConfig",
-        "accessServiceId": 226,
-        "accessServiceDevelopmentStatus": "TECHNICAL_PREVIEW",
-        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.subjectarea.admin.SubjectAreaAdmin",
-        "accessServiceName": "Subject Area",
-        "accessServiceFullName": "Subject Area OMAS",
-        "accessServiceURLMarker": "subject-area",
-        "accessServiceDescription": "Document knowledge about a subject area",
-        "accessServiceWiki": "https://egeria-project.org/services/omas/subject-area/overview/",
-        "accessServiceOperationalStatus": "ENABLED"
-      },
-      {
-        "class": "AccessServiceConfig",
-        "accessServiceId": 218,
-        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
-        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.glossaryview.server.admin.GlossaryViewAdmin",
-        "accessServiceName": "Glossary View",
-        "accessServiceFullName": "Glossary View OMAS",
-        "accessServiceURLMarker": "glossary-view",
-        "accessServiceDescription": "Support glossary terms visualization",
-        "accessServiceWiki": "https://egeria-project.org/services/omas/glossary-view/overview/",
-        "accessServiceOperationalStatus": "ENABLED"
-      },
-      {
-        "class": "AccessServiceConfig",
         "accessServiceId": 213,
         "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
         "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.designmodel.admin.DesignModelAdmin",
@@ -317,18 +293,6 @@ When the configuration is next queried (this is request **2.** in Postman), the 
         "accessServiceURLMarker": "design-model",
         "accessServiceDescription": "Exchange design model content with tools and standard packages",
         "accessServiceWiki": "https://egeria-project.org/services/omas/design-model/overview/",
-        "accessServiceOperationalStatus": "ENABLED"
-      },
-      {
-        "class": "AccessServiceConfig",
-        "accessServiceId": 223,
-        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
-        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.securityofficer.server.admin.SecurityOfficerAdmin",
-        "accessServiceName": "Security Officer",
-        "accessServiceFullName": "Security Officer OMAS",
-        "accessServiceURLMarker": "security-officer",
-        "accessServiceDescription": "Set up rules and security tags to protect data",
-        "accessServiceWiki": "https://egeria-project.org/services/omas/security-officer/overview/",
         "accessServiceOperationalStatus": "ENABLED"
       },
       {
@@ -377,18 +341,6 @@ When the configuration is next queried (this is request **2.** in Postman), the 
         "accessServiceURLMarker": "community-profile",
         "accessServiceDescription": "Define personal profile and collaborate",
         "accessServiceWiki": "https://egeria-project.org/services/omas/community-profile/overview/",
-        "accessServiceOperationalStatus": "ENABLED"
-      },
-      {
-        "class": "AccessServiceConfig",
-        "accessServiceId": 209,
-        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
-        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.dataengine.server.admin.DataEngineAdmin",
-        "accessServiceName": "Data Engine",
-        "accessServiceFullName": "Data Engine OMAS",
-        "accessServiceURLMarker": "data-engine",
-        "accessServiceDescription": "Exchange process models and lineage with a data engine",
-        "accessServiceWiki": "https://egeria-project.org/services/omas/data-engine/overview/",
         "accessServiceOperationalStatus": "ENABLED"
       },
       {
@@ -473,18 +425,6 @@ When the configuration is next queried (this is request **2.** in Postman), the 
         "accessServiceURLMarker": "asset-consumer",
         "accessServiceDescription": "Access assets through connectors",
         "accessServiceWiki": "https://egeria-project.org/services/omas/asset-consumer/overview/",
-        "accessServiceOperationalStatus": "ENABLED"
-      },
-      {
-        "class": "AccessServiceConfig",
-        "accessServiceId": 200,
-        "accessServiceDevelopmentStatus": "IN_DEVELOPMENT",
-        "accessServiceAdminClass": "org.odpi.openmetadata.accessservices.assetcatalog.admin.AssetCatalogAdmin",
-        "accessServiceName": "Asset Catalog",
-        "accessServiceFullName": "Asset Catalog OMAS",
-        "accessServiceURLMarker": "asset-catalog",
-        "accessServiceDescription": "Search and understand your assets",
-        "accessServiceWiki": "https://egeria-project.org/services/omas/asset-catalog/overview/",
         "accessServiceOperationalStatus": "ENABLED"
       },
       {

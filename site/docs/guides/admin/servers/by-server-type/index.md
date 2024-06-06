@@ -24,7 +24,6 @@ The configuration document is divided into sections.  Some sections contain prop
 * [Integration Daemon](configuring-an-integration-daemon.md) - this server hosts integration connectors that synchronize metadata between third party technologies and the open metadata ecosystem.
 * [Engine Host](configuring-an-engine-host.md) - this server hosts governance engines that monitor the open metadata ecosystem and take actions as requested/required.
 * [Lineage Warehouse](configuring-a-lineage-warehouse.md) - this server provides optimized access to lineage data.  It has its own repository that it maintains by monitoring the open metadata ecosystem.
-* [Data Engine Proxy](configuring-a-data-engine-proxy-server.md) - this server supports a specialist connector for extracting metadata from IBM DataStage.
 
 
 This is how these types of servers work together.

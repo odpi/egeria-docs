@@ -8,7 +8,7 @@ The functions of the [open metadata ecosystem](/introduction/challenge/#the-open
 This type of metadata management requires some new terminology for the different types of components, their purpose and how they connect together.  The [overview](/introduction/overview) introduced the concept of the [OMAG Server Platform](/concepts/omag-server-platform) deployed multiple types in different processing centres and running [OMAG Servers](/concepts/omag-server).  These OMAG Servers are specialized to perform specific functions. Figure 1 shows the different types of OMAG Servers and how they work together.
 
 ![Figure 1](egeria-solution-components.svg)
-> **Figure 1:** This picture shows the different types of Egeria's OMAG servers and how they are connected together in a solution.  They are not all required. You choose which ones you need, and how many of them to run, to match the needs of your organization.  The servers are organized into three rings.  In the inner-ring (labeled *Integrated Metadata*), a Metadata Access Server, Repository Proxy and Conformance Test Server are members of an *Open Metadata Repository Cohort*, or "cohort" for short, communicating via Egeria's peer-to-peer protocols. In the next ring out, called *Integrated Governance*, are the Governance Servers connected to the Metadata Access Server in order to access metadata in the open metadata ecosystem. In the outer ring, called *Governance Solution*, are the View Server and Presentation Server also connected to the Metadata Access Server.
+> **Figure 1:** This picture shows the different types of Egeria's OMAG servers and how they are connected together in a solution.  They are not all required. You choose which ones you need, and how many of them to run, to match the needs of your organization.  The servers are organized into three rings.  In the inner-ring (labeled *Integrated Metadata*), a Metadata Access Server, Repository Proxy and Conformance Test Server are members of an *Open Metadata Repository Cohort*, or "cohort" for short, communicating via Egeria's peer-to-peer protocols. In the next ring out, called *Integrated Governance*, are the Governance Servers connected to the Metadata Access Server in order to access metadata in the open metadata ecosystem. In the outer ring, called *Governance Solution*, are the View Servers, also connected to the Metadata Access Server.
 
 
 --8<-- "snippets/getting-started.md"
@@ -58,10 +58,7 @@ Other types of OMAG Servers that can be members of the cohort:
 
 The Metadata Access Server is the bridge to the Governance Servers (the middle ring in Figure 1).   The Governance Servers provide active metadata exchange and governance of any type of third party technology, not just metadata servers. We call this *integrated governance*.
 
-For the most part, Egeria is a background technology. However, once metadata is being exchanged and linked, new *governance solutions* may emerge that bring value directly to individuals working in an organization. Therefore, we have added servers to support browser-based user interfaces:
-
-- The [View Server](/concepts/view-server) provides REST APIs specifically for user interfaces. They are consumed by the Egeria UIs but can also be used by other UIs and tools.
-- The [Presentation Server](/concepts/presentation-server) hosts the JavaScript applications that provide an interactive browser-based user interface for Egeria.
+For the most part, Egeria is a background technology. However, once metadata is being exchanged and linked, new *governance solutions* may emerge that bring value directly to individuals working in an organization. Therefore, we have an additional server to support browser-based user interfaces: the [View Server](/concepts/view-server) provides REST APIs specifically for user interfaces. They are consumed by the Egeria UIs but can also be used by other UIs and tools.
 
 ## Metadata objects
 

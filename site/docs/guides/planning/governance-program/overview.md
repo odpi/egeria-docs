@@ -197,9 +197,8 @@ The organization of the subject areas is orthogonal to the governance domains. S
         * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
     
     * The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of subject area definitions.
-    * [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.
     * [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.
-    * [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of subject area information with other catalogs and quality tools.
+    * [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the management of glossaries and the exchange of subject area information with other catalogs and quality tools.
 
 ## Governance classification, tagging and linking
 
@@ -319,13 +318,9 @@ These classifications help in the review of the implementation of the governance
   
     * The [Data Privacy OMAS](/services/omas/data-privacy/overview) supports the operational aspects of managing privacy as part of the organization's activities.
 
-    * The [Subject Area OMAS](/services/omas/subject-area/overview) supports the definitions of the vocabularies associated with a subject area.
-
     * The [Data Manager OMAS](/services/omas/data-manager/overview) support the automated cataloging of assets and configuration of technology that is managing them.
 
     * The [Security Manager OMAS](/services/omas/security-manager/overview) support the configuration of technology that is managing the security of assets.
-
-    * The [Security Officer OMAS](/services/omas/security-officer/overview) support the definitions of users and groups and related definitions that make up the user directory.
 
     * The [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the automated exchange of governance definitions between catalogs and asset managers to create a consistent rollout of governance requirements.
   

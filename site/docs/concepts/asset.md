@@ -52,7 +52,6 @@ Some examples:
 
 | OMAS | Description |
 |---|---|
-| [Asset Catalog OMAS](/services/omas/asset-catalog/overview) | provides a search service for locating assets. |
 | [Asset Consumer OMAS](/services/omas/asset-consumer/overview) | provides a service for accessing the content of an asset, extracting additional information that is known about the asset and providing feedback about the asset. It is designed for tools that consume assets to support the work of their users. These users can provide feedback on the asset description and the resource that it describes. |
 | [Asset Manager OMAS](/services/omas/asset-manager/overview) | provides a service for exchanging metadata about assets and related information with a third party [asset manager](/concepts/server-capability). This API supports the many-to-many correlation of identifiers used in the third party asset manager and the open metadata ecosystem. |
 | [Asset Owner OMAS](/services/omas/asset-owner/overview) | provides a service for the owner of an asset to classify and manage the asset, and understand how it is being used by the organization. |

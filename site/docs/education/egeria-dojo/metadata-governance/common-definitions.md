@@ -21,9 +21,8 @@ The effort required to author and maintain a these standards, plus the governanc
 ??? education "Defining subject areas in Egeria"
 
     - [Governance Program OMAS](/services/omas/governance-program/overview/#subject-areas) provided support for the definition of subject areas and the ability to retrieve details of the materials that are part of the subject area.
-    - [Subject Area OMAS](/services/omas/subject-area/overview) supports the definition of glossary terms for subject areas.
     - [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of valid value sets and quality rules for the subject area.
-    - [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of subject area materials with other catalogs and quality tools.
+    - [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the management of glossaries and the exchange of subject area materials with other catalogs and quality tools.
     - The [Defining Subject Areas scenario](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview/) for Coco Pharmaceuticals walks through the process of setting up.  There are two code samples associated with this set of subject areas:
     
         * [Setting up the subject area definitions :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-subject-area-sample){ target=gh }

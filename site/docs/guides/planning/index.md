@@ -43,6 +43,6 @@ The rest of this *Planning Guide* assumes you are familiar with the basic concep
     * [Onboarding Organization](/guides/planning/organization/overview) to define the people, their roles and userIds and how they are organized into teams.  This is used to control access to metadata and associated resources, route stewardship actions to the appropriate individuals/teams and synchronize organizational information between systems. 
     * [Governance Program](/guides/planning/governance-program/overview) to coordinate the various governance activities in the organization.
 
-The connectors supplied by Egeria 
+The connectors supplied by Egeria are found in the [Connector Catalog](/connectors).
 
 --8<-- "snippets/abbr.md"

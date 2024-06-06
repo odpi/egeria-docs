@@ -1,4 +1,4 @@
-<mxfile modified="2024-06-06T08:45:38.245Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="_nZ0v6a_kW7Yhe4tqkOA" version="24.4.8" type="device" pages="30">
+<mxfile modified="2024-06-06T12:38:36.948Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="JTsbgzw0c4Nq8TvB_Nm8" version="24.4.8" type="device" pages="30">
   <diagram name="Copy of Copy of Copy of egeria-overview" id="2Hlk_9TTMVKivneDpeGb">
     <mxGraphModel dx="2069" dy="1992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -215,7 +215,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="bjTxhtsOuMXdcATvAXh6" name="types-of-omag-servers">
-    <mxGraphModel dx="415" dy="1992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="673" dy="2199" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="4H7qlk7V3E9ICv7X_ewr-0" />
         <mxCell id="4H7qlk7V3E9ICv7X_ewr-1" parent="4H7qlk7V3E9ICv7X_ewr-0" />
@@ -245,7 +245,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_rW6aRSOVRi5JFX2hWUg-15" value="Governance Server" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=2;shadow=1;" parent="4H7qlk7V3E9ICv7X_ewr-1" vertex="1">
-          <mxGeometry x="1487" y="-1004.71" width="120" height="60" as="geometry" />
+          <mxGeometry x="1450" y="-1004.71" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_rW6aRSOVRi5JFX2hWUg-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="4H7qlk7V3E9ICv7X_ewr-1" source="_rW6aRSOVRi5JFX2hWUg-17" target="a4h2ZUFjzpvWdwgWV8p4-0" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -259,17 +259,11 @@
         <mxCell id="_rW6aRSOVRi5JFX2hWUg-17" value="Metadata&lt;br&gt;Access Store" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;shadow=1;" parent="4H7qlk7V3E9ICv7X_ewr-1" vertex="1">
           <mxGeometry x="970" y="-760" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_rW6aRSOVRi5JFX2hWUg-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;" parent="4H7qlk7V3E9ICv7X_ewr-1" source="_rW6aRSOVRi5JFX2hWUg-19" target="_rW6aRSOVRi5JFX2hWUg-15" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="_rW6aRSOVRi5JFX2hWUg-19" value="Data Engine&lt;br&gt;Proxy" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;shadow=1;" parent="4H7qlk7V3E9ICv7X_ewr-1" vertex="1">
-          <mxGeometry x="1553" y="-874.71" width="120" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="_rW6aRSOVRi5JFX2hWUg-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;" parent="4H7qlk7V3E9ICv7X_ewr-1" source="_rW6aRSOVRi5JFX2hWUg-25" target="_rW6aRSOVRi5JFX2hWUg-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="_rW6aRSOVRi5JFX2hWUg-25" value="Lineage&lt;br&gt;Warehouse" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;shadow=1;" parent="4H7qlk7V3E9ICv7X_ewr-1" vertex="1">
-          <mxGeometry x="1682" y="-874.71" width="120" height="60" as="geometry" />
+          <mxGeometry x="1560" y="-874.71" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_rW6aRSOVRi5JFX2hWUg-26" value="Cohort Member" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=2;shadow=1;" parent="4H7qlk7V3E9ICv7X_ewr-1" vertex="1">
           <mxGeometry x="1001" y="-1004.71" width="120" height="60" as="geometry" />
@@ -324,7 +318,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="omag-server-ecosystem" id="QYcpX3i4GW4YMHX-9kkB">
-    <mxGraphModel dx="1242" dy="-346" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1500" dy="-139" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="Izfhy94N5UY88itbl390-0" />
         <mxCell id="Izfhy94N5UY88itbl390-1" parent="Izfhy94N5UY88itbl390-0" />
@@ -339,7 +333,7 @@
         <mxCell id="Q0eYrso0yGD7CUmxt3uE-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="Izfhy94N5UY88itbl390-1" source="Izfhy94N5UY88itbl390-4" target="Izfhy94N5UY88itbl390-62" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Izfhy94N5UY88itbl390-4" value="Presentation&lt;br&gt;Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="Izfhy94N5UY88itbl390-1" vertex="1">
+        <mxCell id="Izfhy94N5UY88itbl390-4" value="UI Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="Izfhy94N5UY88itbl390-1" vertex="1">
           <mxGeometry x="487" y="1335" width="116" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Izfhy94N5UY88itbl390-5" value="Metadata&lt;br&gt;Repository&lt;br&gt;" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="Izfhy94N5UY88itbl390-1" vertex="1">
@@ -553,7 +547,7 @@
         <mxCell id="RBjzMTGbGdqm70LviwiP-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="Izfhy94N5UY88itbl390-1" source="RBjzMTGbGdqm70LviwiP-3" target="RBjzMTGbGdqm70LviwiP-58" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="RBjzMTGbGdqm70LviwiP-3" value="Presentation&lt;br&gt;Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="Izfhy94N5UY88itbl390-1" vertex="1">
+        <mxCell id="RBjzMTGbGdqm70LviwiP-3" value="UI Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="Izfhy94N5UY88itbl390-1" vertex="1">
           <mxGeometry x="477" y="2035" width="116" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RBjzMTGbGdqm70LviwiP-4" value="Metadata&lt;br&gt;Repository&lt;br&gt;" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="Izfhy94N5UY88itbl390-1" vertex="1">
@@ -781,7 +775,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="rings-of-omag-server-ecosystem" id="PgsnN5U7dpqTYPERLPDg">
-    <mxGraphModel dx="1242" dy="-346" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1500" dy="-139" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="neH2IYxWcwNUoae1Mh9U-0" />
         <mxCell id="neH2IYxWcwNUoae1Mh9U-1" parent="neH2IYxWcwNUoae1Mh9U-0" />
@@ -805,7 +799,7 @@
         <mxCell id="neH2IYxWcwNUoae1Mh9U-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="neH2IYxWcwNUoae1Mh9U-1" source="neH2IYxWcwNUoae1Mh9U-5" target="neH2IYxWcwNUoae1Mh9U-60" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="neH2IYxWcwNUoae1Mh9U-5" value="Presentation&lt;br&gt;Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="neH2IYxWcwNUoae1Mh9U-1" vertex="1">
+        <mxCell id="neH2IYxWcwNUoae1Mh9U-5" value="UI Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="neH2IYxWcwNUoae1Mh9U-1" vertex="1">
           <mxGeometry x="487" y="1335" width="116" height="70" as="geometry" />
         </mxCell>
         <mxCell id="neH2IYxWcwNUoae1Mh9U-6" value="Native Metadata&lt;br&gt;Repository" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" parent="neH2IYxWcwNUoae1Mh9U-1" vertex="1">

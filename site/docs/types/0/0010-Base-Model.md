@@ -70,11 +70,9 @@ Processes have an advanced lifecycle.  They can have the following [instance sta
 
 The *formula* attribute can describe its behaviour, *formulaType* describes the notation language used to describe the formula.
 
-### DataSet entity
+### DataAsset entity
 
-*DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet, *formulaType* describes the notation language used to describe the formula, and *deployedImplementationType* describes the class of technology that this data set belongs to. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
-
-See [*DataStore*](/types/2/0210-Data-Stores) for the `Asset` that represents a physical store and the [*DataContentForDataSet*](/types/2/0210-Data-Stores/#datacontentfordataset) relationship links the DataSet to the asset(s) that describe the data sources.
+The *DataAsset* entity described a collection of data.  The *deployedImplementationType* defines the technology that holds this data.  [Area 2](/types/2/0210-Data-Stores) provides more detail on the different types of data assets.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 ## SampleData relationship
 

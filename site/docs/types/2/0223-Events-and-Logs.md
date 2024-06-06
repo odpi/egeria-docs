@@ -7,10 +7,6 @@ Processing is often triggered when a specific event or situation occurs.  There 
 
 ![UML](0223-Events-and-Logs.svg)
 
-## DataFeed entity
-
-*DataFeed* identifies an asset that provides a continuous feed of data. The *deployedImplementationType* attribute describes the class of technology that is used in its implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
-
 ## Topic entity
 
 A *Topic* is a type of [*DataSet*](/types/0/0010-Base-Model/#dataset) that is accessed using a publish-subscribe event interface.  There are processes that add events to the topic, and other processes that subscribe to the topic and receive a copy of each event that is added.  It is shown as a data set because some topics are in memory and some make use of an underlying [*DataStore*](/types/2/0210-Data-Stores) to provide a persistent/reliable delivery service.

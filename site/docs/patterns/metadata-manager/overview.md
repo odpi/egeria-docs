@@ -13,9 +13,9 @@ The diagram below shows the Egeria components that make up the catalog.
 
 It includes:
 
-* [Metadata Access Store](/concepts/metadata-access-store) that provides the metadata management APIs and repository.
-* [Egeria General User Interface](/user-interfaces/general/overview) that provides asset search and lineage.
-* [Egeria Ecosystem User Interface](/user-interfaces/ecosystem) that supports editing metadata and managing the open metadata ecosystem.
+* [Egeria' User Interfaces](/user-interfaces) that provides asset search and lineage.
+* [View Server](/concepts/metadata-access-store) that provides the open metadata APIs to the user interfaces.
+* [Metadata Access Store](/concepts/metadata-access-store) that provides the metadata management and repository.
 
 Egeria's Metadata Access Store supports metadata defined by the [Open Metadata Types](/types).  These types cover a wide range of metadata, and are dynamically extensible.
 

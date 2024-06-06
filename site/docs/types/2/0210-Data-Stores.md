@@ -3,13 +3,21 @@
 
 # 0210 Data Stores
 
-Both [*DataSets*](/types/0/0010-Base-Model#dataset) and [*DataStores*](#datastore) are types of [*Asset*](/types/0/0010-Base-Model#dataset) that represent a collection of data.  The *DataStore* is a physical store, whereas the *DataSet* is dynamically constructed on request.  This model introduces the *DataStore* and the relationship that shows how *DataSets* are constructed from them.
+[*DataSets*](#dataset-entity), [DataFeeds](#datafeed-entity) and [*DataStores*](#datastore-entity) are types of [*DataAsset*](/types/0/0010-Base-Model#dataset) that represent a collection of data.  The *DataStore* is a physical store, whereas the *DataFeed* is a continual supply of data and *DataSet* is dynamically constructed on request.  This model introduces the *DataContentForDataSet* relationship that shows how *DataSets* are constructed from other [Assets](/types/0/0010-Base-Model).
 
 ![UML](0210-Data-Stores.svg)
+
+### DataSet entity
+
+*DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet, *formulaType* describes the notation language used to describe the formula, and *deployedImplementationType* describes the class of technology that this data set belongs to.
 
 ## DataStore entity
 
 The *DataStore* entity describes a physical [digital resource](/concepts/digital-resource) that supplies data.  The *deployedImplementationType* attribute describes the class of technology that is used in its implementation.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
+
+## DataFeed entity
+
+*DataFeed* identifies an asset that provides a continuous feed of data. The *deployedImplementationType* attribute describes the class of technology that is used in its implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 ## DataContentForDataSet relationship
 

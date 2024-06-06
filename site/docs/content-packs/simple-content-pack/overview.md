@@ -23,4 +23,8 @@ These archives are used in the *Development labs* which are part of the [Open Me
 
 * *SimpleGovernanceCatalog* - A glossary term linked to metadata elements in the API, Event, Data catalogs.
 
+This picture shows how the simple catalog's metadata is distributed between the 4 different archives.
+
+![Simple Catalog Data Map](simple-catalog-data-map.svg)
+
 --8<-- "snippets/abbr.md"

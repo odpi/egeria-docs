@@ -20,4 +20,44 @@ The *CocoComboArchive* supplies metadata to support the [Coco Pharmaceuticals sc
 * *CocoTypesArchive* - provides additional types for Coco Pharmaceuticals.  These are `BiopsyScope` Enum, `BiopsyReport` Entity, `BiopsySupportingEvidence` Relationship and `ReviewedByClinicalTrials` Classification.
 
 
+## CocoOrganizationArchive contents
+
+The Coco Pharmaceuticals' department hierarchy:
+
+![The Coco Pharmaceuticals' Department Hierarchy](organization-hierarchy.svg)
+
+The Coco Pharmaceuticals' valid values for defining an employee.
+
+![The Coco Pharmaceuticals' Valid values for defining an employee](organization-valid-values.svg)
+
+## CocoSustainabilityArchive contents
+
+Extensions to the organization structure to support sustainability:
+
+![New organization](sustainability-organization.svg)
+
+New sustainability roles:
+
+![Sustainability Roles](sustainability-roles.svg)
+
+New glossary for sustainability terminology.
+
+![Sustainability Glossary](sustainability-glossary.svg)
+
+## CocoClinicalTrialsTemplatesArchive contents
+
+Clinical trial templates:
+
+![Clinical Trial Templates](clinical-trials-templates.svg)
+
+## CocoGovernanceProgramArchive contents
+
+Governance program definition:
+
+![Governance Program Definition](governance-program.svg)
+
+## CocoGovernanceEngineDefinitionsArchive contents
+
+![Governance Engine Definitions](governance-engines.svg)
+
 --8<-- "snippets/abbr.md"

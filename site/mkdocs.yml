@@ -290,6 +290,7 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Newsletters:
+            - June 2024: release-notes/june-2024.md
             - August 2023: release-notes/august-2023.md
             - April 2023: release-notes/april-2023.md
             - February 2023: release-notes/february-2023.md

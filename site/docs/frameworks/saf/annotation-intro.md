@@ -3,7 +3,7 @@
 
 An *annotation* describes one or more related properties about a [digital resource](/concepts/digital-resource). Some annotations refer to the entire digital resource and others refer to a data field within the digital resource.   The annotations that describe a single data field are called *data field annotations*.
 
-![Structure of survey reports](/guides/developer/open-discovery-services/survey-report-structure.svg)
+![Structure of survey reports](/frameworks/saf/survey-report-structure.svg)
 
 The annotation types defined in the [Survey Action Framework (SAF)](/frameworks/saf/overview) are as follows:
 

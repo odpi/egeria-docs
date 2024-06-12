@@ -39,7 +39,7 @@ If an urgent release is required with, for example, a critical security fix, the
 ??? success "4. Update main from `x.y-SNAPSHOT` to `x.z-SNAPSHOT`"
     - `git checkout main`
     - `git pull upstream main`
-    - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with the next version, e.g. change `1.3-SNAPSHOT` to `1.4-SNAPSHOT`. Most of the changes are in `pom.xml` or gradle files, however some code and documentation also has references to our versions and all need modifying.
+    - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with the next version, e.g. change `1.3-SNAPSHOT` to `1.4-SNAPSHOT`. Most of the changes are in gradle files, however some code and documentation also has references to our versions and all need modifying.
     - If using an IDE like IntelliJ, make sure you have all hits by searching again as [by default only a limited number of hits are shown :material-dock-window:](https://youtrack.jetbrains.com/issue/IDEA-157855){ target=intellij }.
     - Commit
     - Create a PR, have reviewed / approved and merged as usual - aim to do this as quickly as reasonable so that there is no potential for version clash
@@ -64,7 +64,7 @@ If an urgent release is required with, for example, a critical security fix, the
 ??? success "7. Create a release in GitHub"
     - [Create the GitHub release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }. Use `Vx.y` as the tag, and ensure the correct branch is set for the target, i.e. `egeria-release-x.y`
     - Fill in the release notes using a title of `Release x.y`. Select the option to include automated release notes. The content will need to be trimmed by deleting from the top to the point where the release being worked on appears ie for release 3.8, look for the update to 3.8-SNAPSHOT and cut up until that point.
-    - Contact the release lead (Nigel Jones) to release the updated maven artifacts (this copies them from the staging repository on oss.sonatype.org to the release repository, which is what is picked up via maven central search)
+    - Contact the release lead (Mandy Chessell) to release the updated maven artifacts (this copies them from the staging repository on oss.sonatype.org to the release repository, which is what is picked up via maven central search)
     - Artifacts will be available on Maven Central within minutes, but may take a few hours to appear in searches.
     - Source archives will be added to the release on GitHub.
     - this step will also create and publish container images to quay.io and docker.io .

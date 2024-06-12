@@ -6,7 +6,7 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/tech-preview.md"
+--8<-- "snippets/content-status/stable.md"
 
 # API Integrator Open Metadata Integration Service (OMIS)
 

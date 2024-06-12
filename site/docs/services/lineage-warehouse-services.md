@@ -6,7 +6,7 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
---8<-- "snippets/content-status/stable.md"
+--8<-- "snippets/content-status/tech-preview.md"
 
 # Lineage warehouse services
 

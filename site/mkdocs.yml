@@ -513,14 +513,13 @@ nav:
                   - Asset Owner OMAS: services/omas/asset-owner/overview.md
                   - Community Profile OMAS: services/omas/community-profile/overview.md
                   - Data Manager OMAS: services/omas/data-manager/overview.md
-                  - Data Privacy OMAS: services/omas/data-privacy/overview.md
                   - Data Science OMAS: services/omas/data-science/overview.md
                   - Design Model OMAS: services/omas/design-model/overview.md
-                  - DevOps OMAS: services/omas/dev-ops/overview.md
                   - Digital Architecture OMAS: services/omas/digital-architecture/overview.md
                   - Digital Service OMAS: services/omas/digital-service/overview.md
                   - Governance Engine OMAS: services/omas/governance-engine/overview.md
                   - Governance Program OMAS: services/omas/governance-program/overview.md
+                  - Governance Service OMAS: services/omas/governance-service/overview.md
                   - IT Infrastructure OMAS: services/omas/it-infrastructure/overview.md
                   - Project Management OMAS: services/omas/project-management/overview.md
                   - Security Manager OMAS: services/omas/security-manager/overview.md

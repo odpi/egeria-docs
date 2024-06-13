@@ -18,7 +18,7 @@ Typically, an engine host is deployed close to where the artifacts/resources/dat
 
 The metadata interfaces needed by the governance engines are provided by the [Open Metadata Engine Services (OMES)](/services/omes) (or engine services for short). The engine services also run in the engine host.
 
---8<-- "docs/concepts/governance-service-types.md"
+--8<-- "snippets/concepts/governance-service-types.md"
 
 The name and URL root of the server where the partner metadata service is running is needed to configure an engine service.  This is the metadata service used to access open metadata when a governance service runs.  The open metadata server configured for the engine host is used to retrieve the [governance engine definitions](/concepts/governance-engine-definition) for the governance engines configured for each engine service.    The metadata access servers used by the engine services does not need to be the same metadata server as the one used by the engine host server. This enables the management of metadata about the assets to be maintained close to the assets, and the definitions of the governance engines, services and processes to be maintained close to the governance team:
 

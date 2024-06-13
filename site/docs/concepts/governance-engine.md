@@ -10,7 +10,7 @@ hide:
 
 A *governance engine* provides services that automate governance activities - from validating that the digital landscape is operating correctly, ensuring metadata is complete and correct to performing scheduled maintenance.  Its capability is implemented by a collection of related [governance services](/concepts/governance-service).
 
---8<-- "docs/concepts/governance-service-types.md"
+--8<-- "snippets/concepts/governance-service-types.md"
 
 When a governance engine is called, it is passed a [governance request type](/concepts/governance-request-type) and request parameters.  This is mapped to a call to a governance service through the [governance engine definition](/concepts/governance-engine-definition).
 

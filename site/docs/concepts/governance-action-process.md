@@ -3,6 +3,6 @@
 
 # Governance Action Process
 
---8<-- "docs/concepts/governance-action-process-intro.md"
+--8<-- "snippets/concepts/governance-action-process-intro.md"
 
 --8<-- "snippets/abbr.md"

@@ -3,7 +3,7 @@
 
 # Governance Action Service
 
---8<-- "snippets/governance-action/governance-action-service-intro.md"
+--8<-- "snippets/connectors/governance-action-service-intro.md"
 
 
 

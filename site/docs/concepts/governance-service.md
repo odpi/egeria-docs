@@ -5,7 +5,7 @@
 
 A governance service is a specialized [connector](/concepts/connector) that implements a specific [type of engine action](/concepts/engine-action).
 
---8<-- "docs/concepts/governance-service-types.md"
+--8<-- "snippets/concepts/governance-service-types.md"
 
 ## Implementing your own governance services
 

@@ -130,7 +130,7 @@ Aim to simplify the process of deploying the OMAG Server Platform and its connec
 - The [Kubernetes Helm charts :material-dock-window:](https://github.com/odpi/egeria-charts){ target=gh } make use of the docker image to create a rich Egeria deployment used in the [open metadata labs](/education/open-metadata-labs/overview).
 - The [Kubernetes operators :material-dock-window:](https://github.com/odpi/egeria-k8s-operator){ target=gh } are in development. They will provide an easy way to control an Egeria deployment running on Kubernetes.
 
-Support for docker compose was removed in [release 3.5](3-5.md).
+Support for docker compose was removed in [release 3.5](../../snippets/release-notes/3-5.md).
 
 ## Understanding the roadmap
 

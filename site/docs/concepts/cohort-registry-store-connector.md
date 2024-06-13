@@ -3,7 +3,7 @@
 
 # Cohort Registry Store Connector
 
----8<-- "docs/connectors/runtime/cohort-registry-store-connector-intro.md"
+---8<-- "snippets/connectors/cohort-registry-store-connector-intro.md"
 
 
 The default file-based version of this connector is located in the

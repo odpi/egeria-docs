@@ -3,7 +3,7 @@
 
 # Building Integration Connectors
 
----8<-- "docs/connectors/integration/integration-connector-intro.md"
+---8<-- "snippets/connectors/integration-connector-intro.md"
 
 The purpose of the integration daemon and its integration services is to minimise the effort required to integrate a third party technology into the open metadata ecosystem.  They handle:
 

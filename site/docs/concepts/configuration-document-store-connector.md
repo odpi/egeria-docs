@@ -3,7 +3,7 @@
 
 # Configuration Document Store Connector
 
----8<-- "docs/connectors/runtime/configuration-document-store-connector-intro.md"
+---8<-- "snippets/connectors/configuration-document-store-connector-intro.md"
 
 
 The configuration document's persistence is managed by the [configuration document store connector](/concepts/configuration-document-store-connector).

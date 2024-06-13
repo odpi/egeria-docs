@@ -3,7 +3,7 @@
 
 # Writing Open Metadata Archive Store Connectors
 
----8<-- "docs/connectors/runtime/open-metadata-archive-store-connector-intro.md"
+---8<-- "snippets/connectors/open-metadata-archive-store-connector-intro.md"
 
 ## Interface and Base Classes
 

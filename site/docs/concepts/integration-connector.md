@@ -3,7 +3,7 @@
 
 # Integration Connector
 
----8<-- "docs/connectors/integration/integration-connector-intro.md"
+---8<-- "snippets/connectors/integration-connector-intro.md"
 
 !!! education "Further information"
     

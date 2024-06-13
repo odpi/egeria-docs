@@ -316,7 +316,7 @@ This dojo was last tested using Egeria release 3.14.
         ??? advanced "Design of an integration connector (20 mins read)"
             ### Integration connectors
             
-            ---8<-- "docs/connectors/integration/integration-connector-intro.md"
+            ---8<-- "snippets/connectors/integration/integration-connector-intro.md"
             
             #### Writing the connector provider for an integration connector
         

@@ -24,7 +24,7 @@ Discovery and stewardship are the most advanced form of automation for asset cat
 
 ## Survey action services
 
----8<-- "docs/connectors/survey-action/survey-action-service-intro.md"
+---8<-- "snippets/connectors/survey-action-service-intro.md"
 
 ## Inside the survey report
 

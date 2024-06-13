@@ -8,7 +8,7 @@ hide:
 
 # REST client connector
 
---8<-- "docs/connectors/repository/rest-client-connector-intro.md"
+--8<-- "snippets/connectors/rest-client-connector-intro.md"
 
 !!! education "Further information"
     

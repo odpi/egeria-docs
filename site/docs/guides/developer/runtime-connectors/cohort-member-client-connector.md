@@ -3,7 +3,7 @@
 
 # Writing Cohort Member Client Connectors
 
----8<-- "docs/connectors/runtime/cohort-member-client-connector-intro.md"
+---8<-- "snippets/connectors/cohort-member-client-connector-intro.md"
 
 Egeria's [Open Metadata Repository Services (OMRS)](/services/omrs) provides a default REST API implementation and a corresponding client:
 

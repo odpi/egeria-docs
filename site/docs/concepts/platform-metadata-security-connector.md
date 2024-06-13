@@ -3,6 +3,6 @@
 
 # Platform Metadata Security Connector
 
----8<-- "docs/connectors/runtime/platform-metadata-security-connector-intro.md"
+---8<-- "snippets/connectors/platform-metadata-security-connector-intro.md"
 
 --8<-- "snippets/abbr.md"

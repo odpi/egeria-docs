@@ -45,7 +45,7 @@ Specifically they are:
   [More Information ...](/guides/diagnostic/diagnostic-apis)
 
 * **Egeria UIs** - The Egeria UIs help to visualize the state of the repositories and the Egeria Ecosystem.
-  [More Information ...](https://github.com/odpi/egeria-react-ui)
+  [More Information ...](/user-interfaces)
 
 * **Source Code** - The Egeria source code can help you determine exactly how a capability is implemented (or not).
   It is available on GitHub.  The primary repository is

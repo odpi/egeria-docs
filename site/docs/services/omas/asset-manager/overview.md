@@ -39,7 +39,7 @@ Asset managers often have their own integration mechanisms for both the collecti
 
 ### Unique name (qualifiedName)
 
---8<-- "docs/parameters/qualified-name.md"
+--8<-- "snippets/parameters/qualified-name.md"
 
 ### External Identifiers
 

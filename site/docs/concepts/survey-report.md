@@ -18,7 +18,7 @@ The survey report is created in the open metadata repository by the [Survey Acti
 
 ##  Annotations
 
----8<-- "docs/frameworks/saf/annotation-intro.md"
+---8<-- "snippets/concepts/annotation-intro.md"
 
 
 !!! education "Further information"

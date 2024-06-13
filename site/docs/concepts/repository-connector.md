@@ -8,7 +8,7 @@ hide:
 
 # Repository Connector
 
---8<-- "docs/connectors/repository/repository-connector-intro.md"
+--8<-- "snippets/connectors/repository-connector-intro.md"
 
 !!! education "Further information"
     

@@ -3,6 +3,6 @@
 
 # Server Metadata Security Connector
 
----8<-- "docs/connectors/runtime/server-metadata-security-connector-intro.md"
+---8<-- "snippets/connectors/server-metadata-security-connector-intro.md"
 
 --8<-- "snippets/abbr.md"

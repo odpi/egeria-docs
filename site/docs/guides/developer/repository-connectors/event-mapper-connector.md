@@ -3,7 +3,7 @@
 
 # Writing Event mapper connectors
 
---8<-- "docs/connectors/repository/event-mapper-connector-intro.md"
+--8<-- "snippets/connectors/event-mapper-connector-intro.md"
 
 Since each event mapper is tied to a third party
 technology, core Egeria does not supply any implementations of

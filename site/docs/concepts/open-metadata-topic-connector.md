@@ -8,7 +8,7 @@ hide:
   
 # Open Metadata Topic Connectors
 
----8<-- "docs/connectors/resource/open-metadata-topic-connector-intro.md"
+---8<-- "snippets/connectors/open-metadata-topic-connector-intro.md"
 
 ## Use of Open Metadata Topic Connectors in Egeria
 

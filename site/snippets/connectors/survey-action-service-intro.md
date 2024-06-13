@@ -13,7 +13,7 @@ The *survey report* contains one or more sets of related properties that the sur
 An survey action service is designed to run at regular intervals to gather a detailed perspective on the contents of the digital resource and how they are changing over time.  Each time it runs, it is given access to the results of previously run survey-action services, along with a review of these findings made by individuals responsible for the digital resource (such as stewards, owners, custodians).
 
 ??? info "Operation of an survey action service"
-    --8<-- "docs/frameworks/saf/operation-of-a-survey-action-service.md"
+    --8<-- "snippets/concepts/operation-of-a-survey-action-service.md"
 
 ??? info "Runtime for an survey action service"
     Survey action services are packaged into [Survey Action Engines](/concepts/survey-action-engine) that run in the [Survey Action OMES](/services/omes/survey-action/overview) hosted in an [Engine Host](/concepts/engine-host).  

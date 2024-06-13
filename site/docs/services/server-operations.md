@@ -10,6 +10,6 @@ hide:
 
 # Server Operations
 
-Server operations provides support to start up and shutdown [OMAG Servers](/concepts/omag-server) within either the [Platform Chassis](/services/platform-chassis) or [Server Chassis](/services/server-chassis).
+Server operations provides support to start up and shutdown [OMAG Servers](/concepts/omag-server) within either the [OMAG Server Platform](/concepts/omag-server-platform) or [OMAG Server Runtime](/concepts/omag-server-runtime).
 
 --8<-- "snippets/abbr.md"

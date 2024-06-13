@@ -57,6 +57,6 @@ The Governance Engine OMAS supports the creation and maintenance of the metadata
 
 The Governance Engine OMAS supports the standard Open Metadata Store interfaces.
 
---8<-- "docs/frameworks/gaf/open-metadata-store.md"
+--8<-- "snippets/services/open-metadata-store.md"
 
 --8<-- "snippets/abbr.md"

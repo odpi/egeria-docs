@@ -8,11 +8,11 @@ hide:
 
 # Survey Action Service
 
----8<-- "docs/connectors/survey-action/survey-action-service-intro.md"
+---8<-- "snippets/connectors/survey-action-service-intro.md"
 
 ## Survey Action Pipeline
 
----8<-- "docs/frameworks/saf/survey-action-pipeline-intro.md"
+---8<-- "snippets/connectors/survey-action-pipeline-intro.md"
 
 !!! education "Further information"
 

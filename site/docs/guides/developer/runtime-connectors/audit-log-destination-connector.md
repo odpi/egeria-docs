@@ -3,7 +3,7 @@
 
 # Writing Audit Log Destination Connectors
 
----8<-- "docs/connectors/runtime/audit-log-destination-connector-intro.md"
+---8<-- "snippets/connectors/audit-log-destination-connector-intro.md"
 
 ## Interface and Base Classes
 

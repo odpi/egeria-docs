@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "docs/types/open-metadata-types-intro.md"
+--8<-- "snippets/types/open-metadata-types-intro.md"
 
 !!! question "Test yourself ..."
 

@@ -3,6 +3,6 @@
 
 # Secrets store connector
 
----8<-- "docs/connectors/secrets/secrets-store-connector-intro.md"
+---8<-- "snippets/connectors/secrets-store-connector-intro.md"
 
 ---8<-- "snippets/abbr.md"

@@ -3,7 +3,7 @@
 
 # Writing a Governance Action Service
 
---8<-- "docs/connectors/governance-action/governance-action-service-intro.md"
+--8<-- "snippets/connectors/governance-action-service-intro.md"
 
 ## Governance action context
 
@@ -212,23 +212,23 @@ In addition, it needs to implement the standard [Open Connector Framework (OCF)]
 
 ### Watchdog context methods
 
---8<-- "docs/frameworks/gaf/watchdog-governance-action-service-intro.md"
+--8<-- "snippets/connectors/watchdog-governance-action-service-intro.md"
 
 ### Verification context methods
 
---8<-- "docs/frameworks/gaf/verification-governance-action-service-intro.md"
+--8<-- "snippets/connectors/verification-governance-action-service-intro.md"
 
 ### Triage context methods
 
---8<-- "docs/frameworks/gaf/triage-governance-action-service-intro.md"
+--8<-- "snippets/connectors/triage-governance-action-service-intro.md"
 
 ### Remediation context methods
 
---8<-- "docs/frameworks/gaf/remediation-governance-action-service-intro.md"
+--8<-- "snippets/connectors/remediation-governance-action-service-intro.md"
 
 ### Provisioning context methods
 
---8<-- "docs/frameworks/gaf/provisioning-governance-action-service-intro.md"
+--8<-- "snippets/connectors/provisioning-governance-action-service-intro.md"
 
 
 !!! education "Next steps"

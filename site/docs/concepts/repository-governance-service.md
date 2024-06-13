@@ -3,7 +3,7 @@
 
 # Repository Governance Service
 
---8<-- "docs/connectors/repository-governance/repository-governance-service-intro.md"
+--8<-- "snippets/connectors/repository-governance-service-intro.md"
 
 
 

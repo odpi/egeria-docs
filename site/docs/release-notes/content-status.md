@@ -18,6 +18,6 @@ Basically, a module will go through the phases in this order:
 --8<-- "snippets/content-status/deprecated.md"
 
 The current phase is shown at the top of the page.
-The history of the phases that the module has gone through is shown towards the end of the page.
+The history of the phases that the module has gone through may be shown towards the end of the page.
 
 --8<-- "snippets/abbr.md"

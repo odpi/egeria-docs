@@ -34,23 +34,23 @@ The governance request parameters are a collection of name-value properties that
 
 ### Watchdog governance action service
 
---8<-- "docs/frameworks/gaf/watchdog-governance-action-service-intro.md"
+--8<-- "snippets/connectors/watchdog-governance-action-service-intro.md"
 
 ### Verification governance action service
 
---8<-- "docs/frameworks/gaf/verification-governance-action-service-intro.md"
+--8<-- "snippets/connectors/verification-governance-action-service-intro.md"
 
 ### Triage governance action service
 
---8<-- "docs/frameworks/gaf/triage-governance-action-service-intro.md"
+--8<-- "snippets/connectors/triage-governance-action-service-intro.md"
 
 ### Remediation governance action service
 
---8<-- "docs/frameworks/gaf/remediation-governance-action-service-intro.md"
+--8<-- "snippets/connectors/remediation-governance-action-service-intro.md"
 
 ### Provisioning governance action service
 
---8<-- "docs/frameworks/gaf/provisioning-governance-action-service-intro.md"
+--8<-- "snippets/connectors/provisioning-governance-action-service-intro.md"
 
 
 --8<-- "snippets/abbr.md"

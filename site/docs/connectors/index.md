@@ -127,7 +127,7 @@ The open lineage connectors work with the [Open Lineage standard](/features/line
 
 ### Repository and Event Mapper Connectors
 
----8<-- "docs/connectors/repository/repository-connector-intro.md"
+---8<-- "snippets/connectors/repository-connector-intro.md"
 
 The table below lists the repository connectors supporting the native open metadata repositories.
 
@@ -156,7 +156,7 @@ The table below lists the repository connectors that act as an adapter for third
 
 ### Platform Metadata Security Connectors
 
----8<-- "docs/connectors/runtime/platform-metadata-security-connector-intro.md"
+---8<-- "snippets/connectors/platform-metadata-security-connector-intro.md"
 
 There is one implementation of the platform metadata security connector provided by Egeria.  It is a sample that encodes information from the Coco Pharmaceutical scenarios.
 
@@ -170,7 +170,7 @@ There is one implementation of the platform metadata security connector provided
 
 ### Server Metadata Security Connectors
 
----8<-- "docs/connectors/runtime/server-metadata-security-connector-intro.md"
+---8<-- "snippets/connectors/server-metadata-security-connector-intro.md"
 
 There is one implementation of the server metadata security connector provided by Egeria.  It is a sample that encodes information from the Coco Pharmaceuticals scenarios.
 
@@ -184,7 +184,7 @@ There is one implementation of the server metadata security connector provided b
 
 ### Configuration Document Store Connectors
 
----8<-- "docs/connectors/runtime/configuration-document-store-connector-intro.md"
+---8<-- "snippets/connectors/configuration-document-store-connector-intro.md"
 
 There are two implementations of the configuration document store connector provided by Egeria: one for an encrypted store (default) and the other for a plain text store.
 
@@ -201,7 +201,7 @@ There are two implementations of the configuration document store connector prov
 
 ### Cohort Registry Store Connectors
 
----8<-- "docs/connectors/runtime/cohort-registry-store-connector-intro.md"
+---8<-- "snippets/connectors/cohort-registry-store-connector-intro.md"
 
 Egeria provides a single implementation of a cohort registry store connector:
 
@@ -217,7 +217,7 @@ Egeria provides a single implementation of a cohort registry store connector:
   
 ### Open Metadata Archive Store Connectors
 
----8<-- "docs/connectors/runtime/open-metadata-archive-store-connector-intro.md"
+---8<-- "snippets/connectors/open-metadata-archive-store-connector-intro.md"
 
 Egeria provides two implementations of the open metadata archive store connector:
 
@@ -238,7 +238,7 @@ Egeria provides two implementations of the open metadata archive store connector
 
 ### Audit Log Destination Connectors
 
----8<-- "docs/connectors/runtime/audit-log-destination-connector-intro.md"
+---8<-- "snippets/connectors/audit-log-destination-connector-intro.md"
 
 
 Below are the connector implementations provided by Egeria
@@ -263,7 +263,7 @@ Below are the connector implementations provided by Egeria
 
 ### REST Client Connectors
 
----8<-- "docs/connectors/runtime/rest-client-connector-intro.md"
+---8<-- "snippets/connectors/rest-client-connector-intro.md"
 
 Egeria provides a single implementation for Spring.
 
@@ -277,7 +277,7 @@ This is embedded in Egeria's Java clients. See
 
 ### Cohort Member Client Connectors
 
----8<-- "docs/connectors/runtime/cohort-member-client-connector-intro.md"
+---8<-- "snippets/connectors/cohort-member-client-connector-intro.md"
 
 Egeria's [Open Metadata Repository Services (OMRS)](/services/omrs) provides a default REST API implementation and a corresponding client:
 
@@ -289,7 +289,7 @@ cohort member's [Local Repository Configuration](/user/guides/admin/servers/by-s
 
 ### Governance Daemon Connectors
 
----8<-- "docs/connectors/governance-daemon/governance-daemon-intro.md"
+---8<-- "snippets/connectors/governance-daemon-intro.md"
 
 | Connector                                                                                            | Description                                                                                                                                                                   |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

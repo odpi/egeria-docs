@@ -22,20 +22,16 @@ The project aims to produce a new release of Core Egeria about once every 6 week
 
 The table below shows the planned dates for future releases.  The branch date is the date that a copy of the main branch is taken.  This copy is the candidate code for the release.  We then run tests on this copy and release to maven central once any issues have been resolved.  Any fixes that are necessary are made to the main branch and then back-ported to the release branch.  It typically takes a week to go from making the release branch to the new release going to maven central.
 
-| Release | Branch date        | Release Date   | Core theme                |
-|---------|--------------------|----------------|---------------------------|
-| 4.2     | 17th July 2023     | 20th July 2023 | Runtime optimization      |
- | 4.3     | 4th September 2023 |                | New assemblies            |
-| 4.4     | 23rd October 2023  |                | Apache Atlas connector(s) |
-| 4.5     | 4th December 2023  |                | OpenLineage update        |
-| 4.6     | 22nd January 2024  |                |                           |
-| 4.7     | 11th March 2024    |                |                           |
-| 4.8     | 20th May 2024      |                |                           |
-| 4.9     | 1st July 2024      |                |                           |
-| 4.10    | 2nd September 2024 |                |                           |
+| Release | Branch date        | Release Date        | Core theme           |
+|---------|--------------------|---------------------|----------------------|
+| 4.2     | 17th July 2023     | 20th July 2023      | Runtime optimization |
+| 4.3     | 4th September 2023 | 13th September 2023 | New assemblies       |
+| 5.0     | 10th June 2024     |                     | Survey Framework     |
+| 5.1     | 2nd September 2024 |                     |                      |
+
 
 !!! attention "Backwards compatibility"
-    The team aims to provide complete backward compatibility for all components that are officially released[^1].
+    The team aims to provide complete backward compatibility for all components that are marked *stable*[^1].
 
     If backwards compatible changes are not possible, it will be called out explicitly in the release notes with an explanation on how to upgrade.
 
@@ -43,6 +39,6 @@ Each release will also upgrade the level of its dependencies to ensure Egeria is
 
 Our *main* branch is currently taking code for all future releases. Many of the features are large and the teams integrate code for partial function as soon as it is stable and has no impact on released function. So you will see support for much more function than is officially released. This way you can monitor and feedback on future items as they are developed.
 
-[^1]: To understand more about what it means to have "released function" see [Egeria content status](content-status).
+[^1]: To understand more about what it means to have "stable function" see [Egeria content status](content-status).
 
 --8<-- "snippets/abbr.md"

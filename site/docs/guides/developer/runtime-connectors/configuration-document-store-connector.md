@@ -3,7 +3,7 @@
 
 # Writing Configuration Document Store Connectors
 
----8<-- "docs/connectors/runtime/configuration-document-store-connector-intro.md"
+---8<-- "snippets/connectors/configuration-document-store-connector-intro.md"
 
 ## Configuration document store connector interface
     

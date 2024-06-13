@@ -3,7 +3,7 @@
 
 # Writing Context Event Services
 
----8<-- "docs/connectors/context-event/context-event-service-intro.md"
+---8<-- "snippets/connectors/context-event-service-intro.md"
 
 
 --8<-- "snippets/abbr.md"

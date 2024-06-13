@@ -3,7 +3,7 @@
 
 # Digital Resource Connector
 
----8<-- "docs/connectors/resource/digital-resource-connector-intro.md"
+---8<-- "snippets/connectors/digital-resource-connector-intro.md"
 
 ## 
 !!! education "Further information"

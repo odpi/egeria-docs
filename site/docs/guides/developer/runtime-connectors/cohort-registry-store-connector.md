@@ -3,7 +3,7 @@
 
 # Writing Cohort Registry Store Connectors
 
----8<-- "docs/connectors/runtime/cohort-registry-store-connector-intro.md"
+---8<-- "snippets/connectors/cohort-registry-store-connector-intro.md"
 
 The definition of the connector interface for these connectors is
 defined in the [repository-services-api :material-github:](.https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis){ target=gh } module

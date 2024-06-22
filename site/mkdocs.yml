@@ -27,7 +27,7 @@ nav:
           - Planning Deployment:
               - Planning Runtime: guides/planning/runtime/overview.md
               - Security: guides/planning/security/overview.md
-              - User Interfaces: guides/planning/user-interfaces/index.md
+          - User Interfaces: guides/planning/user-interfaces/overview.md
           - Preparing Metadata Ecosystem:
               - Metadata Valid Values: guides/planning/valid-values/overview.md
               - Language Translations: guides/planning/translations/overview.md

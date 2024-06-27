@@ -1,4 +1,4 @@
-<mxfile modified="2024-06-06T14:38:28.497Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="Ts5q3vJOxGfNw8ZdYGWw" version="24.4.8" type="device" pages="24">
+<mxfile modified="2024-06-25T00:28:56.469Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="HD0Z9iQxVEXGkxSMu_MI" version="24.4.8" type="device" pages="24">
   <diagram id="ErCcJrGKzW-L592V1ftQ" name="overview">
     <mxGraphModel dx="1114" dy="941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -158,7 +158,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0201-Connectors-and-Connections" id="fffvxS-96WGsuoZrHxFf">
-    <mxGraphModel dx="2283" dy="775" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2669" dy="1030" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-0" />
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-1" parent="ZkdmF8SgiHobN41Bp5xa-0" />
@@ -168,7 +168,7 @@
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-3" value="0201 - Connectors and Connections" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
           <mxGeometry x="13" y="36" width="1060" height="770" as="geometry" />
         </mxCell>
-        <mxCell id="n8cNxNqMuMEOfXIr-8nz-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endSize=18;endArrow=block;endFill=0;" edge="1" parent="ZkdmF8SgiHobN41Bp5xa-1" source="ZkdmF8SgiHobN41Bp5xa-4" target="ZkdmF8SgiHobN41Bp5xa-27">
+        <mxCell id="n8cNxNqMuMEOfXIr-8nz-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endSize=18;endArrow=block;endFill=0;" parent="ZkdmF8SgiHobN41Bp5xa-1" source="ZkdmF8SgiHobN41Bp5xa-4" target="ZkdmF8SgiHobN41Bp5xa-27" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-4" value="«entity»&lt;br&gt;&lt;b&gt;ConnectorType&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
@@ -195,7 +195,7 @@
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-11" value="*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
           <mxGeometry x="370" y="176" width="19" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="n8cNxNqMuMEOfXIr-8nz-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=18;" edge="1" parent="ZkdmF8SgiHobN41Bp5xa-1" source="ZkdmF8SgiHobN41Bp5xa-12" target="ZkdmF8SgiHobN41Bp5xa-27">
+        <mxCell id="n8cNxNqMuMEOfXIr-8nz-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=18;" parent="ZkdmF8SgiHobN41Bp5xa-1" source="ZkdmF8SgiHobN41Bp5xa-12" target="ZkdmF8SgiHobN41Bp5xa-27" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-12" value="«entity»&lt;br&gt;&lt;b&gt;Connection&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
@@ -234,7 +234,7 @@
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-25" value="displayName : string&lt;br&gt;description : string&lt;br&gt;securedProperties : map &amp;lt;string, string&amp;gt;&lt;br&gt;configurationProperties : map &amp;lt;string, object&amp;gt;&lt;br&gt;userId : string&lt;br&gt;clearPassword : string&lt;br&gt;encryptedPassword : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
           <mxGeometry x="93" y="220" width="262" height="126" as="geometry" />
         </mxCell>
-        <mxCell id="ZkdmF8SgiHobN41Bp5xa-26" value="displayName : string&lt;br&gt;description : string&lt;br&gt;supportedAssetTypeName : string&lt;br&gt;deployedImplementationType : string&lt;br&gt;expectedDataFormat : string&lt;br&gt;connectorProviderClassName : string&lt;br&gt;connectorFrameworkName : string&lt;br&gt;connectorInterfaceLanguage : string&lt;br&gt;connectorInterfaces : array&amp;lt;string&amp;gt;&lt;br&gt;targetTechnologySource : string&lt;br&gt;targetTechnologyName : string&lt;br&gt;targetTechnologyInterfaces : array&amp;lt;string&amp;gt;&lt;br&gt;targetTechnologyVersions : array&amp;lt;string&amp;gt;&lt;br&gt;recognizedAdditionalProperties : array &amp;lt;string&amp;gt;&lt;br&gt;recognizedSecuredProperties : array &amp;lt;string&amp;gt;&lt;br&gt;recognizedConfigurationProperties : array &amp;lt;string&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
+        <mxCell id="ZkdmF8SgiHobN41Bp5xa-26" value="displayName : string&lt;br&gt;description : string&lt;br&gt;supportedAssetTypeName : string&lt;br&gt;supportedDeployedImplementationType : string&lt;br&gt;expectedDataFormat : string&lt;br&gt;connectorProviderClassName : string&lt;br&gt;connectorFrameworkName : string&lt;br&gt;connectorInterfaceLanguage : string&lt;br&gt;connectorInterfaces : array&amp;lt;string&amp;gt;&lt;br&gt;targetTechnologySource : string&lt;br&gt;targetTechnologyName : string&lt;br&gt;targetTechnologyInterfaces : array&amp;lt;string&amp;gt;&lt;br&gt;targetTechnologyVersions : array&amp;lt;string&amp;gt;&lt;br&gt;recognizedAdditionalProperties : array &amp;lt;string&amp;gt;&lt;br&gt;recognizedSecuredProperties : array &amp;lt;string&amp;gt;&lt;br&gt;recognizedConfigurationProperties : array &amp;lt;string&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
           <mxGeometry x="664" y="221" width="286" height="257" as="geometry" />
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-27" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">

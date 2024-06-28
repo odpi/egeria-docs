@@ -1,6 +1,8 @@
 # IntelliJ files
 .idea
 *.iml
+get-pip.py
+venv/**
 
 # DrawIO temporary files
 *.dtmp

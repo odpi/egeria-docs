@@ -35,6 +35,17 @@ An integration connector can be linked to multiple integration groups via the *R
 
 The *usesBlockingCalls* attribute determines whether the integration daemon calls the integration connector using the `engage()` methods (to allow it to make blocking calls), or the `refresh()` method.
 
+## DeleteMethod enumeration
+
+*DeleteMethod* defines the the type of delete method to use when the connector deletes an element.
+
+| Enumeration | Value | Name                  | Description                                                                                                                                                                                                                                                                                                                 |
+|-------------|-------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ARCHIVE     | 0     | "Archive Element"     | This is the default value.  The element is marked with the [Memento](/types/0/0010-Base-Model) classification which means it is no longer returned on normal queries.  However if the `forLineage=true` option is used on a query, the element is returned.  This mechanism is ued to preserve metadata for lineage graphs. |
+| SOFT_DELETE | 1     | "Soft-delete Element" | The element is moved to DELETED status so that is no longer returned on queries.  However, it is still in the repository and can be restored into the active repository if it was  deleted by accident.                                                                                                                     |
+| OTHER       | 99    | "Other"               | Another type of delete process not supported by Egeria.                                                                                                                                                                                                                                                                     |
+
+
 ## CatalogTarget relationship
 
 The *CatalogTarget* relationship links an *IntegrationConnector* entity to another entity that the integration connector is to update.  For example, if an integration connector is configured to catalog a database and its [*Database*](/types/2/0224-Databases) entity is already created, the *CatalogTarget* would link the *IntegrationConnector* entity with the *Database* entity.  This prevents the integration connector from recreating the Database entity when it runs.
@@ -46,6 +57,16 @@ An integration connector may have multiple catalog targets.  The attributes of t
 * *configurationProperties* provide properties that control the behaviour of the integration connector whilst it is processing the catalog target. Its value override the configuration properties supplied in the integration connector's connection.
 * *templates* provides an optional map of template names to template element qualified names.  These override the template names/values supplied in the integration connector's connection.  The list of template names supported by the integration connector is defined in its provider's `supportedTemplates` property.
 * *metadataSourceQualifiedName* provides a new metadata collection name for elements catalogued by the integration connector whilst it is processing the catalog target. Its value override the configuration properties supplied in the integration connector's connection.
+* *permittedSynchronization* is an optional property that defines the permitted directions of metadata flow between the third party technology and open metadata. It overrides the value in the *RegisteredIntegrationConnector*. These are the different values for this property and their effect:
+
+  - `TO_THIRD_PARTY` - The third party technology is logically downstream of open metadata. This means the open metadata ecosystem is the originator and owner of the metadata being synchronized. Any updates detected in the third technology are overridden by the latest open metadata values.
+  - `FROM_THIRD_PARTY` - The third party technology is logically upstream (the originator and owner of the metadata). Any updates made in open metadata are not passed to the third party technology and the third party technology is requested to refresh the open metadata version.
+  - `BOTH_DIRECTIONS` - Metadata exchange is permitted in both directions. Synchronization is halted on a specific element if potentially clashing updates have occurred both in the third party technology and open metadata. Such conflicts are logged on the audit log and resolved through manual stewardship.
+
+* *deleteMethod* defines the method used to delete an element:
+
+  - `ARCHIVE` is the default value and means that the element is archived so that it is still available for lineage queries, even though it is no longer returned on normal queries.
+  - `SOFT_DELETE` means that the element is deleted.  It is no longer visible to metadata queries.  However it can be restored back into the active repository if it has been deleted in error.
 
 ## IntegrationReport entity
 

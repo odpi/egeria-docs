@@ -42,6 +42,6 @@ The *DataScope* classification identifies the scope of the data stored in the [d
 * *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
 
 ??? deprecated "Deprecated types"
-* The *DataStoreEncoding* classification is deprecated in favour of *DataAssetEncoding* to allow encoding information to be attached to data sets and data feeds.
+    * The *DataStoreEncoding* classification is deprecated in favour of *DataAssetEncoding* to allow encoding information to be attached to data sets and data feeds.
 
 --8<-- "snippets/abbr.md"

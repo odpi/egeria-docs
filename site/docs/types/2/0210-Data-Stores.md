@@ -23,9 +23,9 @@ The *DataStore* entity describes a physical [digital resource](/concepts/digital
 
 The *DataContentForDataSet* relationship defines how data is supplied to a [DataSet](/types/0/0010-Base-Model) from a particular [digital resources](/concepts/digital-resource).  The DataSet entity includes a property called *formula*.  This describes the logic that is used to populate the data set.  The formula can include placeholders.  These placeholders are defined by the *queryId* properties in the linked DataContentForDataSet relationships.  The associated *query* property describes how the data from the linked dataContent resource is selected.
 
-## DataStoreEncoding classification
+## DataAssetEncoding classification
 
-The *DataStoreEncoding* classification provides the ability to store details of the data stores physical characteristics.
+The *DataAssetEncoding* classification provides the ability to store details of the data asset's format.
 
 ## DataScope classification
 
@@ -41,5 +41,7 @@ The *DataScope* classification identifies the scope of the data stored in the [d
 * *endTime* - if the data is bound by time, this is the end time.
 * *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
 
+??? deprecated "Deprecated types"
+* The *DataStoreEncoding* classification is deprecated in favour of *DataAssetEncoding* to allow encoding information to be attached to data sets and data feeds.
 
 --8<-- "snippets/abbr.md"

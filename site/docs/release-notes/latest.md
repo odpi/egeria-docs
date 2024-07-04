@@ -1,1 +1,1 @@
---8<-- "snippets/release-notes/4-3.md"
+--8<-- "snippets/release-notes/5.0.md"

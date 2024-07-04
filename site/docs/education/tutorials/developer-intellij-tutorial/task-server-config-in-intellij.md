@@ -8,7 +8,7 @@ Egeria's assembly includes a utility for configuring servers.  It is called `Ser
 === "V4.3 and before"
     ![server config settings](server-config-settings-4-3.png)
 
-=== "V4.4" and beyond
+=== "V5.0" and beyond
     ![server config settings](server-config-settings-4-4.png)
 
 When you click `OK`, then `ServerConfig` appears in the dropdown run menu.  Press the green triangle to run the utility and a new tab appears in the panel of the IntelliJ window where the platform is running.

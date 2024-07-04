@@ -748,6 +748,6 @@ adapt it to specific environment.  However, the defaults provide a good starting
     The contents of this tutorial cover a very simple OMAG server configuration. For guidance on configuring more complex OMAG servers see the [Administration Services User Guide](/guides/admin).
 
 
---8<-- "snippets/abbr.md"
+
 
 

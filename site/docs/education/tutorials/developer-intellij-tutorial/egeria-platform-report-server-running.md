@@ -4,7 +4,7 @@
 # Platform report for: https://localhost:9443
 
 ## Platform deployment
-* **Egeria version**: Egeria OMAG Server Platform (version 4.3)
+* **Egeria version**: Egeria OMAG Server Platform (version 5.0)
 * **Configuration document store connector**: *null*
 * **Platform security connector**: *null*
 ## Registered services

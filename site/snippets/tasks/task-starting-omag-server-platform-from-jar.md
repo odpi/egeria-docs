@@ -5,11 +5,11 @@
 
 The OMAG Server Platform's `assembly/platform` directory contains a Java Archive (Jar) file for the [OMAG Server Platform](/concepts/omag-server-platform) itself along with a directory of libraries.
 
-The name of the Java Archive (Jar) file will depend on the release of Egeria that you have installed.  In this example, the release is **4.3**.
+The name of the Java Archive (Jar) file will depend on the release of Egeria that you have installed.  In this example, the release is **5.0**.
 
 ```bash
 $ ls platform
-lib              omag-server-platform-4.3.jar
+lib              omag-server-platform-5.0.jar
 ```
 
 The OMAG Server Platform is started with the `java` command.

@@ -28,7 +28,7 @@ java -jar omag-server-*.jar --omag.server-config-file=classpath:samples/metadata
 
  :: Powered by Spring Boot (v3.1.1) ::
 
-2023-09-19T15:10:45.763+02:00  INFO 94379 --- [           main] o.o.o.s.springboot.OMAGServer            : Starting OMAGServer using Java 17.0.8.1 with PID 94379 (/server/omag-server-4.3.jar started by ***** in /server)
+2023-09-19T15:10:45.763+02:00  INFO 94379 --- [           main] o.o.o.s.springboot.OMAGServer            : Starting OMAGServer using Java 17.0.8.1 with PID 94379 (omag-server-platform-5.0.jar started by ***** in /server)
 2023-09-19T15:10:45.765+02:00  INFO 94379 --- [           main] o.o.o.s.springboot.OMAGServer            : No active profile set, falling back to 1 default profile: "default"
 2023-09-19T15:10:47.488+02:00  INFO 94379 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9080 (http)
 2023-09-19T15:10:47.497+02:00  INFO 94379 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
@@ -147,7 +147,7 @@ All other settings can be configured by setting the environment variables that c
 To run OMAG Server as a metadata repository using the sample configuration, run the following command:
 
 ```bash
-docker run --name omag-server -p 9443:9443 --env JAVA_APP_JAR="/deployments/server/omag-server-4.3.jar" --env LOADER_PATH="/deployments/server/lib" --env OMAG_SERVERCONFIGFILE="classpath:samples/metadata-repository-server.json" quay.io/odpi/egeria:4.3
+docker run --name omag-server -p 9443:9443 --env JAVA_APP_JAR="/deployments/server/omag-server-5.0.jar" --env LOADER_PATH="/deployments/server/lib" --env OMAG_SERVERCONFIGFILE="classpath:samples/metadata-repository-server.json" quay.io/odpi/egeria:5.0
 ```
 
 ### Run in Kubernetes

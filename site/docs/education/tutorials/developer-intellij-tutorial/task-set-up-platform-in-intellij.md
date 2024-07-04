@@ -17,9 +17,9 @@ Select `JAR Application`:
 
 ![select jar application](select-jar-application.png)
 
-Fill in the properties based on the directory where you installed egeria.  In this example, egeria was installed in directory `/Users/mandy-chessell/egeria-install/egeria-platform-4.3-distribution.tar.gz/` and so the settings are:
+Fill in the properties based on the directory where you installed egeria.  In this example, egeria was installed in directory `/egeria-install/egeria-platform-5.0-distribution.tar.gz/` and so the settings are:
 
-* Path to JAR: `{install directory}/assembly/platform/omag-server-platform-4.3.jar`
+* Path to JAR: `{install directory}/assembly/platform/omag-server-platform-5.0.jar`
 * VM Options: `-Dloader.path=lib,extra`
 * Working Directory: `{install directory}/assembly/platform`
 
@@ -45,12 +45,12 @@ Select `Edit Configurations` to create another `JAR Application`.  This time cal
 
 ![location of platform report jar](location-of-platform-report.png)
 
-Leave the `Working Directory` to default to your project directory.  If you are using Version 4.3 of Egeria, set the VM Options to `-Dstrict.ssl=false`; for release V4.4 and beyond, you can leave them blank.
+Leave the `Working Directory` to default to your project directory.  If you are using Version 4.3 of Egeria, set the VM Options to `-Dstrict.ssl=false`; for release V5.0 and beyond, you can leave them blank.
 
 === "V4.3 and before"
     ![platform report settings](platform-report-settings-4-3.png)
 
-=== "V4.4 and beyond"
+=== "V5.0 and beyond"
     ![platform report settings](platform-report-settings-4-4.png)
 
 When you click `OK`, then `PlatformReport` appears in the dropdown run menu.  Press the green triangle to run the report and a new tab appears in the panel of the IntelliJ window where the platform is running.

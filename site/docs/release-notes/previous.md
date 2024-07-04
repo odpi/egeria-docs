@@ -7,13 +7,13 @@
 ???+ info "Release 4.3 (September 2023)"
     --8<-- "snippets/release-notes/4-3.md"
 
-???+ info "Release 4.2 (July 2023)"
+??? info "Release 4.2 (July 2023)"
     --8<-- "snippets/release-notes/4-2.md"
 
-???+ info "Release 4.1 (May 2023)"
+??? info "Release 4.1 (May 2023)"
     --8<-- "snippets/release-notes/4-1.md"
 
-???+ info "Release 4.0 (March 2023)"
+??? info "Release 4.0 (March 2023)"
     --8<-- "snippets/release-notes/4-0.md"
 
 ??? info "v3.x Releases"

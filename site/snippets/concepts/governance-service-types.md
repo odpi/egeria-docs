@@ -17,4 +17,3 @@ There are ten types of governance services.  Related governance services are [pa
 | [Repository Governance Service](/guides/developer/repository-governance-services/overview) | Performs governance for open metadata repositories such as dynamically maintaining [open metadata archives](/concepts/open-metadata-archive).                                                                                                                                                                                                                                                 | [Repository Governance Engine](/concepts/repository-governance-engine) | [Repository Governance OMES](/services/omes/repository-governance/overview) |
 
 
---8<-- "snippets/abbr.md"

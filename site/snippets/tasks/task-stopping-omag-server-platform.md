@@ -11,4 +11,4 @@ POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/server-
 
 There is no response from the request because the platform exits before it sends the response.
 
---8<-- "snippets/abbr.md"
+

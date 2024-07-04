@@ -79,6 +79,6 @@ You can experiment by starting and stopping your server and trying this status c
     Explore the [Platform Services](/services/platform-services/overview) to discover more commands to monitor and control the OMAG Server Platform.
 
 
---8<-- "snippets/abbr.md"
+
 
 

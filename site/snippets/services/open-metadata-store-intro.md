@@ -11,6 +11,6 @@ The open metadata store interfaces are part of the Governance Action Framework (
 | [StewardshipActionInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworkservices/gaf/api/StewardshipActionInterface.html) | Creates incident reports and to dos that are used to request help for a situation that the caller can not handle.                                                                                                                                                                                     |
 | [ValidMetadataValuesInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworkservices/gaf/api/ValidMetadataValuesInterface.html) | Maintains valid value sets for the properties found in open metadata elements. Valid values can be set up for a property name within a specific type - or for all types that use that property name. The named property may be a string type, and array of string or a map of names to string values. |
 
---8<-- "snippets/abbr.md"
+
 
 

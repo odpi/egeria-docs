@@ -10,7 +10,7 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
     A new *Run* tab appears next to `EgeriaPlatform`.  `EgeriaPlatformReport` runs but fails:
 
     ```bash
-    /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -jar /Users/mandy-chessell/egeria-install/egeria-platform-4.3-distribution.tar.gz/assembly/etc/reports/egeria-platform-report.jar
+    /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -jar /Users/mandy-chessell/egeria-install/egeria-platform-5.0-distribution.tar.gz/assembly/etc/reports/egeria-platform-report.jar
     ===============================
     OMAG Server Platform Report:    Mon Sep 04 18:00:51 BST 2023
     ===============================
@@ -44,7 +44,7 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
     Re-run `EgeriaPlatformReport` by clicking on the green arrow on the *Run* tab.  There is more output this time even though it still seems to fail in the end. It begins with the report header that records the platform it is running against.
     
     ```bash
-    /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -Dstrict.ssl=false -Dfile.encoding=UTF-8 -jar /Users/mandy-chessell/egeria-install/egeria-platform-4.3-distribution.tar.gz/assembly/etc/reports/egeria-platform-report.jar
+    /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -Dstrict.ssl=false -Dfile.encoding=UTF-8 -jar /Users/mandy-chessell/egeria-install/egeria-platform-5.0-distribution.tar.gz/assembly/etc/reports/egeria-platform-report.jar
     ===============================
     OMAG Server Platform Report:    Mon Sep 04 19:38:03 BST 2023
     ===============================
@@ -58,7 +58,7 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
     
     ```bash
     Platform deployment
-      Egeria version: Egeria OMAG Server Platform (version 4.3)
+      Egeria version: Egeria OMAG Server Platform (version 5.0)
       Configuration document store connector: <null>
       Platform security connector: <null>
     ```

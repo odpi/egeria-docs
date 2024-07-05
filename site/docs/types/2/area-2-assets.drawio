@@ -1,4 +1,4 @@
-<mxfile modified="2024-07-04T09:09:41.730Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="SVuAJqwm06BsPQ6qSECG" version="24.6.4" type="device" pages="24">
+<mxfile modified="2024-07-05T08:32:12.614Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="Y0W-sxXgiRUsgPH4R1rC" version="24.6.4" type="device" pages="24">
   <diagram id="ErCcJrGKzW-L592V1ftQ" name="overview">
     <mxGraphModel dx="1114" dy="941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1858,7 +1858,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0235-Information-View" id="gGz4uhgOsusawGpdYBgL">
-    <mxGraphModel dx="1186" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="AkdsiYmXDxG6hlGHLRi4-0" />
         <mxCell id="AkdsiYmXDxG6hlGHLRi4-1" parent="AkdsiYmXDxG6hlGHLRi4-0" />
@@ -1869,23 +1869,25 @@
           <mxGeometry x="13" y="57" width="997" height="823" as="geometry" />
         </mxCell>
         <mxCell id="AkdsiYmXDxG6hlGHLRi4-4" value="«entity»&lt;br&gt;&lt;b&gt;DataSet&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="AkdsiYmXDxG6hlGHLRi4-1" vertex="1">
-          <mxGeometry x="380" y="190" width="211" height="50" as="geometry" />
+          <mxGeometry x="379" y="190" width="211" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="AkdsiYmXDxG6hlGHLRi4-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=20;" parent="AkdsiYmXDxG6hlGHLRi4-1" source="AkdsiYmXDxG6hlGHLRi4-9" target="AkdsiYmXDxG6hlGHLRi4-4" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="760" y="506.5" as="sourcePoint" />
-            <mxPoint x="365.5" y="382.5" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="486" y="310" />
-              <mxPoint x="486" y="310" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="32pjHDBtiQPwvx7Gi2Fe-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=17;" edge="1" parent="AkdsiYmXDxG6hlGHLRi4-1" source="AkdsiYmXDxG6hlGHLRi4-9" target="AkdsiYmXDxG6hlGHLRi4-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AkdsiYmXDxG6hlGHLRi4-9" value="«entity»&lt;br&gt;&lt;b&gt;InformationView&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" parent="AkdsiYmXDxG6hlGHLRi4-1" vertex="1">
-          <mxGeometry x="380" y="322.5" width="211" height="50" as="geometry" />
+          <mxGeometry x="379" y="322.5" width="211" height="50" as="geometry" />
         </mxCell>
         <mxCell id="AkdsiYmXDxG6hlGHLRi4-10" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="AkdsiYmXDxG6hlGHLRi4-1" vertex="1">
-          <mxGeometry x="381" y="372.5" width="210" height="30" as="geometry" />
+          <mxGeometry x="380" y="372.5" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="32pjHDBtiQPwvx7Gi2Fe-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=17;" edge="1" parent="AkdsiYmXDxG6hlGHLRi4-1" source="32pjHDBtiQPwvx7Gi2Fe-1" target="AkdsiYmXDxG6hlGHLRi4-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="32pjHDBtiQPwvx7Gi2Fe-1" value="«entity»&lt;br&gt;&lt;b&gt;VirtualRelationalTable&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" vertex="1" parent="AkdsiYmXDxG6hlGHLRi4-1">
+          <mxGeometry x="379" y="480" width="211" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="32pjHDBtiQPwvx7Gi2Fe-2" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" vertex="1" parent="AkdsiYmXDxG6hlGHLRi4-1">
+          <mxGeometry x="379" y="530" width="210" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

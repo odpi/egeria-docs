@@ -138,7 +138,7 @@ Specifically, the [`SecurityGroup`](/types/4/0423-Security-Definitions) entities
 The [`SecurityAccessControl`](/types/4/0423-Security-Definitions) entities link the resource to the appropriate security groups via the `AssociatedGroups` relationship. 
 
 `SecurityGroup` and `SecurityAccessControl` are subtypes of the `GovernanceDefinition` that supports two relationships:
-the `` and
+
 - [`GovernedBy`](/types/4/0401-Governance-Definitions) - to indicate the resources that are governed by the governance definition.  When the governance definition is a security group it means these are the resources that are protected by the security group.  When it is a security access control, it means there are different security groups for different operations.
 
 - [`GovernanceDefinitionScope`](/types/4/0401-Governance-Definitions) - to indicate where the governance definition applies.  For a security group this means the people, roles, teams etc that should be given permission to the security group.

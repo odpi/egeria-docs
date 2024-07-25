@@ -72,12 +72,12 @@ Files provide storage for many types of data.  They are organizes into folders (
 
 The Unity Catalog connectors provide a suite of function that integrates a Unity Catalog server into the open metadata ecosystem.
 
-The [Unity Catalog Resource Connector](/connectors/unity-catalog/resource-connector) is a [digital resource connector](/concepts/digital-resource-connector) that acts as a Java client to the Unity Catalog Server REST API.  It is used by the other Unity Catalog connectors.
-The [Unity Catalog Server Synchronizer](/connectors/unity-catalog/sync-server-connector) is an [integration connector](/concepts/integration-connector) that exchanges details about the catalogs defined for a Unity Catalog Server.
-The [Unity Catalog Inside Catalog Synchronizer](/connectors/unity-catalog/sync-catalog-connector) is an [integration connector](/concepts/integration-connector) that exchanges details about the resources (schemas, tables, volumes and functions) defined within a Catalog found in a Unity Catalog Server.
-The [Unity Catalog Server Survey Service](/connectors/unity-catalog/server-survey-sevice) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Unity Catalog Server.
-The [Unity Catalog Inside Catalog Survey Service](/connectors/unity-catalog/catalog-survey-sevice) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Catalog inside a Unity Catalog Server.
-The [Unity Catalog Inside Schema Survey Service](/connectors/unity-catalog/schema-survey-sevice) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Schema inside a Unity Catalog Server.
+* The [Unity Catalog Resource Connector](/connectors/unity-catalog/resource-connector) is a [digital resource connector](/concepts/digital-resource-connector) that acts as a Java client to the Unity Catalog Server REST API.  It is used by the other Unity Catalog connectors.
+* The [Unity Catalog Server Synchronizer](/connectors/unity-catalog/sync-server-connector) is an [integration connector](/concepts/integration-connector) that exchanges details about the catalogs defined for a Unity Catalog Server.
+* The [Unity Catalog Inside Catalog Synchronizer](/connectors/unity-catalog/sync-catalog-connector) is an [integration connector](/concepts/integration-connector) that exchanges details about the resources (schemas, tables, volumes and functions) defined within a Catalog found in a Unity Catalog Server.
+* The [Unity Catalog Server Survey Service](/connectors/unity-catalog/server-survey-service) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Unity Catalog Server.
+* The [Unity Catalog Inside Catalog Survey Service](/connectors/unity-catalog/catalog-survey-service) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Catalog inside a Unity Catalog Server.
+* The [Unity Catalog Inside Schema Survey Service](/connectors/unity-catalog/schema-survey-service) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Schema inside a Unity Catalog Server.
 
 ### Apache Kafka
 

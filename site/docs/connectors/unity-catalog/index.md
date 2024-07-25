@@ -100,7 +100,7 @@ The diagram below illustrates the mapping of the Unity Catalog metadata resource
 
 ![Type Mapping](unity-catalog-type-mapping.svg)
 
-The templates that implement this mapping are described in [Unity Catalog Templates](/templates/unity-catalog-templates).
+The templates that implement this mapping are described in [Unity Catalog Templates](/catalog-templates/unity-catalog-templates).
 
 ### Anchor design for Unity Catalog
 
@@ -124,12 +124,12 @@ The connectors shipped with Egeria are as follows:
 
 | Connector Name                                                                               | Connector Type                                                     | Purpose                                                                                                                                                               |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Unity Catalog Resource Connector](/connector/unity-catalog/resource-connector)              | [Digital Resource Connector](/concepts/digital-resource-connector) | Provides wrapper around Unity Catalog's REST API.                                                                                                                     |
-| [Unity Catalog Server Survey](/connector/unity-catalog/server-survey-service)                | [Survey Action Service](/concepts/survey-action-service)           | Surveys the contents of a Unity Catalog Server.                                                                                                                       |
-| [Unity Catalog Catalog Survey](/connector/unity-catalog/catalog-survey-service)              | [Survey Action Service](/concepts/survey-action-service)           | Surveys the contents of a Unity Catalog Catalog.                                                                                                                      |
-| [Unity Catalog Schema Survey](/connector/unity-catalog/schema-survey-service)                | [Survey Action Service](/concepts/survey-action-service)           | Surveys the contents of a Unity Catalog Schema.                                                                                                                       |
-| [Unity Catalog Server Synchronizer](/connector/unity-catalog/sync-server-connector)          | [Integration Connector](/concepts/integration-connector)           | Bootstraps the cataloguing of a Unity Catalog Server by retrieving the catalogs and configuring the Inside Catalog Connector (below).                                 |
-| [Unity Catalog Inside Catalog Synchronizer](/connector/unity-catalog/sync-catalog-connector) | [Integration Connector](/concepts/integration-connector)           | Synchronizes the metadata describing a Unity Catalog Server's catalogs, schemas, tables, functions and volumes between Unity Catalog and the Open Metadata Ecosystem. |
+| [Unity Catalog Resource Connector](/connectors/unity-catalog/resource-connector)              | [Digital Resource Connector](/concepts/digital-resource-connector) | Provides wrapper around Unity Catalog's REST API.                                                                                                                     |
+| [Unity Catalog Server Survey](/connectors/unity-catalog/server-survey-service)                | [Survey Action Service](/concepts/survey-action-service)           | Surveys the contents of a Unity Catalog Server.                                                                                                                       |
+| [Unity Catalog Catalog Survey](/connectors/unity-catalog/catalog-survey-service)              | [Survey Action Service](/concepts/survey-action-service)           | Surveys the contents of a Unity Catalog Catalog.                                                                                                                      |
+| [Unity Catalog Schema Survey](/connectors/unity-catalog/schema-survey-service)                | [Survey Action Service](/concepts/survey-action-service)           | Surveys the contents of a Unity Catalog Schema.                                                                                                                       |
+| [Unity Catalog Server Synchronizer](/connectors/unity-catalog/sync-server-connector)          | [Integration Connector](/concepts/integration-connector)           | Bootstraps the cataloguing of a Unity Catalog Server by retrieving the catalogs and configuring the Inside Catalog Connector (below).                                 |
+| [Unity Catalog Inside Catalog Synchronizer](/connectors/unity-catalog/sync-catalog-connector) | [Integration Connector](/concepts/integration-connector)           | Synchronizes the metadata describing a Unity Catalog Server's catalogs, schemas, tables, functions and volumes between Unity Catalog and the Open Metadata Ecosystem. |
 
 
 --8<-- "snippets/abbr.md"

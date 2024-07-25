@@ -3,4 +3,8 @@
 
 # OSS Unity Catalog Schema Survey Service
 
-Survey of a schema within an OSS Unity Catalog Server.
+The Schema Survey Service extracts information about the tables, functions and volumes managed in a specific schema within an OSS Unity Catalog Server.
+
+![Connector Operation](schema-survey-service.svg)
+
+--8<-- "snippets/abbr.md"

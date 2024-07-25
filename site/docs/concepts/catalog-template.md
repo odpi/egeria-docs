@@ -8,7 +8,7 @@ hide:
 
 # Catalog Template
 
-A *catalog template* identifies a template designed to catalog a particular type of open metadata element.  For example in the [Automated Curation OMVS](/services/omvs/automated-curation/overview) API, it links a particular *technology type* to relevant [templates](/concepts/template) for that ype of technology.
+A *catalog template* relationship identifies a [template](/concepts/template) designed to catalog a particular type of open metadata element.  For example in the [Automated Curation OMVS](/services/omvs/automated-curation/overview) API, it links a particular *technology type* to relevant [templates](/concepts/template) for that ype of technology.
 
 The catalog template is implemented using the [CatalogTemplate](/types/0/0011-Managing-Referenceables) relationship.
 

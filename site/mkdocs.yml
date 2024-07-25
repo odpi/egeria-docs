@@ -71,7 +71,7 @@ nav:
                     - Unity Catalog Overview: connectors/unity-catalog/index.md
                     - Call API: connectors/unity-catalog/resource-connector.md
                     - Synchronize Server: connectors/unity-catalog/sync-server-connector.md
-                    - Synchronize Catalog: connectors/unity-catalog/sync-server-connector.md
+                    - Synchronize Catalog: connectors/unity-catalog/sync-catalog-connector.md
                     - Survey Server: connectors/unity-catalog/server-survey-service.md
                     - Survey Catalog: connectors/unity-catalog/catalog-survey-service.md
                     - Survey Schema: connectors/unity-catalog/schema-survey-service.md
@@ -123,12 +123,12 @@ nav:
               - SAS Viya: connectors/repository/sas-viya/overview.md
               - Hive Metastore (HMS): connectors/repository/hms/overview.md
               - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
-              - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
+              - Repository proxy embedded repository: connectors/repository/repository-proxy-embedded-repository
               - Lineage Warehouse (JanusGraph): connectors/governance-daemon/lineage-warehouse-janus-connector.md
           - Template Catalog:
-              - Template Catalog Overview: templates/index.md
-              - Unity Catalog Templates: templates/unity-catalog-templates.md
-              - PostgreSQL Templates: templates/postgres-server-templates.md
+              - Template Catalog Overview: catalog-templates/index.md
+              - Unity Catalog Templates: catalog-templates/unity-catalog-templates.md
+              - PostgreSQL Templates: catalog-templates/postgres-server-templates.md
       - Developer Guide:
           - Developer Guide: guides/developer/index.md
           - Retrieving Metadata: guides/developer/finding-metadata/overview.md
@@ -511,9 +511,9 @@ nav:
               - Platform Services: services/platform-services/overview.md
               - Server Operations: services/server-operations.md
               - Connected Asset Services: services/ocf-metadata-management.md
-              - Open Metadata Store Services: services/gaf-metadata-management.md
-              - Governance Configuration Services: services/gaf-metadata-management.md
-              - Open Governance Services: services/gaf-metadata-management.md
+              - Open Metadata Store Services: services/open-metadata-store.md
+              - Governance Configuration Services: services/governance-configuration-services.md
+              - Open Governance Services: services/open-governance-services.md
               - Open Integration Service: services/oif-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md

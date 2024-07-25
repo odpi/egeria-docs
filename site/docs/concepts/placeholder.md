@@ -72,7 +72,7 @@ Content-Type: application/json
 ```
 Below is an outline of the default template for cataloguing a PostgreSQL Database Server.  This is represented as a [SoftwareServer](/types/0/0040-Software-Servers) asset, in includes a linked [SoftwareCapability](/types/0/0042-Software-Capabilities) for the [database manager (DBMS)](/types/0/0050-Applications-and-Processes).  There is also a [connection](/concepts/connection) linked from the asset to define how to create a connector to the PostgreSQL Database Server.  Notice that throughout the template, there are placeholder properties:
 
-![PostgreSQL Database Server Template](/templates/postgres-server-catalog-template.svg)
+![PostgreSQL Database Server Template](/catalog-templates/postgres-server-catalog-template.svg)
 
 Below is an example of a call to create an asset using the template:
 
@@ -99,7 +99,7 @@ Content-Type: application/json
 The picture below shows the resulting asset elements, linked back to the elements from the template using the [SourcedFrom](/types/0/0011-Managing-Referenceables).
 Notice how the `{{serverName}}` placeholder property is used in each element to create a unique qualifiedName.
 
-![PostgreSQL Database Server Template in use](/templates/postgres-server-template-in-use.svg)
+![PostgreSQL Database Server Template in use](/catalog-templates/postgres-server-template-in-use.svg)
 
 The placeholder properties can be used to make the templates easy to use, removing much of the repetitive creation of property values.  The result is a consistent set of elements for the asset.
 

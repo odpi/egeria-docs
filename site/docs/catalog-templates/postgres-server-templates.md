@@ -13,3 +13,6 @@ The postgreSQL Server templates are provided through the [Core Content Pack](/co
 ## The templates in use
 
 ![PostgreSQL template in use](postgres-server-template-in-use.svg)
+
+
+--8<-- "snippets/abbr.md"

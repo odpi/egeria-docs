@@ -66,6 +66,19 @@ Files provide storage for many types of data.  They are organizes into folders (
 * The [JDBC Resource Connector](/connectors/resource/jdbc-resource-connector) is for accessing a database via the JDBC DataSource interface.
 * The [JDBC Integration Connector](/connectors/integration/jdbc-integration-connector) automatically maintains the open metadata instances on a database server via JDBC. This includes the database schemas, tables, columns, primary keys and foreign keys.                                                                                      
 
+### Unity Catalog
+
+---8<-- "snippets/systems/unity-catalog-intro.md"
+
+The Unity Catalog connectors provide a suite of function that integrates a Unity Catalog server into the open metadata ecosystem.
+
+The [Unity Catalog Resource Connector](/connectors/unity-catalog/resource-connector) is a [digital resource connector](/concepts/digital-resource-connector) that acts as a Java client to the Unity Catalog Server REST API.  It is used by the other Unity Catalog connectors.
+The [Unity Catalog Server Synchronizer](/connectors/unity-catalog/sync-server-connector) is an [integration connector](/concepts/integration-connector) that exchanges details about the catalogs defined for a Unity Catalog Server.
+The [Unity Catalog Inside Catalog Synchronizer](/connectors/unity-catalog/sync-catalog-connector) is an [integration connector](/concepts/integration-connector) that exchanges details about the resources (schemas, tables, volumes and functions) defined within a Catalog found in a Unity Catalog Server.
+The [Unity Catalog Server Survey Service](/connectors/unity-catalog/server-survey-sevice) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Unity Catalog Server.
+The [Unity Catalog Inside Catalog Survey Service](/connectors/unity-catalog/catalog-survey-sevice) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Catalog inside a Unity Catalog Server.
+The [Unity Catalog Inside Schema Survey Service](/connectors/unity-catalog/schema-survey-sevice) is a [Survey Action Service](/concepts/survey-action-service) that surveys the resources defined in a Schema inside a Unity Catalog Server.
+
 ### Apache Kafka
 
 * The [Kafka Open Metadata Topic Connector](/connectors/resource/kafka-open-metadata-topic-connector) implements a [resource connector](/concepts/digital-resource-connector) for a topic that exchanges Java Objects as JSON payloads across an [Apache Kafka](https://kafka.apache.org/) event bus.   It is configured in the Egeria [OMAG Servers](/concepts/omag-server) through the [Event Bus Configuration](/concepts/event-bus).  This the connector that is used by default in the Egeria runtimes to exchange events (notifications between the [OMAG Servers](/concepts/omag-server)).

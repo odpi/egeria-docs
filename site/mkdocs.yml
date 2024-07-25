@@ -67,6 +67,14 @@ nav:
               - Relational Databases:
                     - JDBC DataSource API: connectors/resource/jdbc-resource-connector.md
                     - Catalog JDBC Database: connectors/integration/jdbc-integration-connector.md
+              - Unity Catalog:
+                    - Unity Catalog Overview: connectors/unity-catalog/index.md
+                    - Call API: connectors/unity-catalog/resource-connector.md
+                    - Synchronize Server: connectors/unity-catalog/sync-server-connector.md
+                    - Synchronize Catalog: connectors/unity-catalog/sync-server-connector.md
+                    - Survey Server: connectors/unity-catalog/server-survey-service.md
+                    - Survey Catalog: connectors/unity-catalog/catalog-survey-service.md
+                    - Survey Schema: connectors/unity-catalog/schema-survey-service.md
               - Apache Kafka:
                     - JSON Plain Text Events: connectors/resource/kafka-open-metadata-topic-connector.md
                     - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
@@ -117,6 +125,10 @@ nav:
               - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
               - Repository proxy embedded repository: /connectors/repository/repository-proxy-embedded-repository
               - Lineage Warehouse (JanusGraph): connectors/governance-daemon/lineage-warehouse-janus-connector.md
+          - Template Catalog:
+              - Template Catalog Overview: templates/index.md
+              - Unity Catalog Templates: templates/unity-catalog-templates.md
+              - PostgreSQL Templates: templates/postgres-server-templates.md
       - Developer Guide:
           - Developer Guide: guides/developer/index.md
           - Retrieving Metadata: guides/developer/finding-metadata/overview.md
@@ -500,6 +512,8 @@ nav:
               - Server Operations: services/server-operations.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Open Metadata Store Services: services/gaf-metadata-management.md
+              - Governance Configuration Services: services/gaf-metadata-management.md
+              - Open Governance Services: services/gaf-metadata-management.md
               - Open Integration Service: services/oif-metadata-management.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md

@@ -15,11 +15,16 @@ The creation of an *EngineAction* entity typically triggers the execution of a [
 
 ## TargetForAction relationship
 
-The *TargetForAction* relationship links the engine action to the [action targets](/concepts/action-target) for the governance service that will run.  The governance service can update the status of its processing of the action targets in the properties of each TargetForAction relationship.
+The *TargetForAction* relationship links the engine action to the [action targets](/concepts/action-target) for the governance service that will run.  
 
-## EngineActionRequestSource relationship
+* *actionTargetName* is an identifier used by the resulting governance service to determine how to use the associated element.
 
-The *EngineActionRequestSource* relationship links the first *EngineAction* entity in a process to the cause/originator of the action.  This could be, for example, a [governance action process](/concepts/governance-action-process), another engine action or a [RequestForActionAnnotation](/types/6/0690-Request-for-Action) linked to a [discovery analysis report](/concepts/discovery-analysis-report).
+The governance service can optionally update the status of its processing of the action targets in the properties of each *TargetForAction* relationship.  This is useful if there are many targets that will take a while to process and the organization wants to be able to monitor its progress.  The attributes used to record progress are as follows:
+
+* *status* is of type *EngineActionStatus* and records whether this action target has been processed or not (or what happened when processing was attempted).
+* *startDate* identifies when processing started on the target entity.
+* *completionDate* identifies when processing stopped for this target entity.
+* *completionMessage* records a description of what happened during the processing.
 
 ## EngineActionStatus enumeration
 
@@ -38,6 +43,10 @@ The *EngineActionStatus* indicates the execution status of the governance action
 | FAILED      | 13    | Failed      | The governance service for the engine action failed to execute.                                       |
 | CANCELLED   | 14    | Cancelled   | The engine action was cancelled by an external caller.                                                |
 | OTHER       | 99    | Other       | Undefined or unknown governance action status.                                                        |
+
+## EngineActionRequestSource relationship
+
+The *EngineActionRequestSource* relationship links the first *EngineAction* entity in a process to the cause/originator of the action.  This could be, for example, a [governance action process](/concepts/governance-action-process), another engine action or a [RequestForActionAnnotation](/types/6/0690-Request-for-Action) linked to a [discovery analysis report](/concepts/discovery-analysis-report).
 
 ## NextEngineAction relationship
 

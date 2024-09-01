@@ -17,6 +17,13 @@ The OMAG Server Platform is started with the `java` command.
 ??? tip "Checking your Java installation"
     Ensure you have a Java runtime at Version 17 or above installed on your machine. Check the version of Java you have with the command **java -version** and [install the appropriate version](/education/tutorials/building-egeria-tutorial/task-installing-java) if needed. You only need the JRE but select the JDK if you expect to also write some Java code.
 
+??? danger "MacOS users - XTDB hang, or platform exit due to mismatch crypto library"
+    On the latest level of the MacOs operating system we have experienced hangs during server startup, or the OMAG Server Platform exiting with a message complaining about the unsafe load of a cryptographic library.  A question has been raised with the XTDB community to find out more about this library. In the meantime, there is a workaround if you see this issue: set the following environment variables before starting your OMAG Server Platform.  This switches XTDB to using its own cryptography libraries.
+
+   ```properties
+   XTDB_DISABLE_LIBCRYPTO=True;XTDB_ENABLE_BYTEUTILS_SHA1=True
+   ```
+
 Start the OMAG server platform with the following command:
 
 ```bash

@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 # Tag Propagation 
 ## Introduction
-This document aims to explain how tag propagation will be handled within Governance Engine OMAS. 
+This document aims to explain how tag propagation will be handled within Security Manager OMAS. 
 
 The terms tag and 
 classification should be treated interchangeably....

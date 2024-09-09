@@ -137,7 +137,6 @@ APIs that support the definition of schemas:
 * [Asset Owner OMAS](/services/omas/asset-owner/overview)
 * [Asset Manager OMAS](/services/omas/asset-manager/overview)
 * [Data Manager OMAS](/services/omas/data-manager/overview)
-* [Governance Engine OMAS](/services/omas/governance-engine/overview)
 * [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
 * [Database Integrator OMIS](/services/omis/database-integrator/overview)
 * [Files Integrator OMIS](/services/omis/files-integrator/overview)

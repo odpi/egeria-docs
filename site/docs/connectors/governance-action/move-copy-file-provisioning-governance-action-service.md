@@ -74,11 +74,9 @@ processing path and the folders represent the data sets.
 Irrespective of the pattern used, the resulting changes to the metadata can lead to the triggering of additional activity
 in the open metadata ecosystem.  For example:
 
-* The [Asset Lineage OMAS](/services/omas/asset-lineage/overview)
-may publish the lineage to the [Lineage Warehouse](/concepts/lineage-warehouse).
+* An [integration connector](/services/omas/asset-manager/overview) may publish the lineage to the [Lineage Warehouse](/concepts/lineage-warehouse).
 
-* Additional [Governance Action Services](/concepts/governance-action-service)
-may be triggered.
+* Additional [Governance Action Services](/concepts/governance-action-service) may be triggered to provide additional enrichment of the lineage graph.
 
 ## Configuration
 

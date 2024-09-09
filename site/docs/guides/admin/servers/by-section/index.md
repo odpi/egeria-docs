@@ -24,7 +24,6 @@ The configuration document is divided into sections.  Some sections contain prop
 * The [*Engine Host Services*](engine-host-services-section.md) define which governance engines are activated in an [engine host](/concepts/engine-host) server.
 * The [*Integration Daemon Services*](integration-daemon-services-section.md) define which integration connectors run in an [integration daemon](/concepts/integration-daemon) server.
 * The [*View Services*](view-services-section.md) define which REST APIs are enabled in a [view server](/concepts/view-server).
-* The [*Lineage Warehouse Services*](lineage-warehouse-services-section.md) define the properties of the repository for a [lineage warehouse](/concepts/lineage-warehouse) server.
 
 
 

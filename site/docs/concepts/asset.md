@@ -56,7 +56,6 @@ Some examples:
 | [Asset Manager OMAS](/services/omas/asset-manager/overview) | provides a service for exchanging metadata about assets and related information with a third party [asset manager](/concepts/server-capability). This API supports the many-to-many correlation of identifiers used in the third party asset manager and the open metadata ecosystem. |
 | [Asset Owner OMAS](/services/omas/asset-owner/overview) | provides a service for the owner of an asset to classify and manage the asset, and understand how it is being used by the organization. |
 | [Data Manager OMAS](/services/omas/data-manager/overview) | enables a data manager (such as a database or file system) to maintain information about the assets it stores. |
-| [Governance Engine OMAS](/services/omas/governance-engine/overview) | provides the metadata services for [governance action services](/concepts/governance-action-service) that verify, enhance and correct the properties of assets and their associated elements. |
 | [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview) | provides a service for maintaining information about the IT assets and supporting infrastructure owned or used by an organization. |
 | [Data Science OMAS](/services/omas/data-science/overview) | provides a service for maintaining information about analytical models and related assets such as python notebooks. |
 

@@ -300,16 +300,6 @@ Egeria's [Open Metadata Repository Services (OMRS)](/services/omrs) provides a d
 The connection for this connector is configured in the `LocalRepositoryRemoteConnection` property of the
 cohort member's [Local Repository Configuration](/user/guides/admin/servers/by-section/#configuring-the-local-repository-store).
 
-### Governance Daemon Connectors
-
----8<-- "snippets/connectors/governance-daemon-intro.md"
-
-| Connector                                                                                            | Description                                                                                                                                                                   |
-|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Lineage Warehouse Janus Connector](/connectors/governance-daemon/lineage-warehouse-janus-connector) | The Lineage Warehouse connectors provide plugins to the [Lineage Warehouse](/concepts/lineage-warehouse) that allow the Lineage Warehouse Services to connect with databases. |
-
-
-
 
 
 --8<-- "snippets/abbr.md"

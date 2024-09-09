@@ -8,6 +8,6 @@ hide:
 
 # Open lineage Server
 
-The Open Lineage Server was renamed to the [Lineage Warehouse](/concepts/lineage-warehouse) in V5.0 of Egeria.
+Open Lineage is processed by the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).  Details of how it is used can be found in the [Lineage Management](/features/lineage-management/overview) feature.
 
 --8<-- "snippets/abbr.md"

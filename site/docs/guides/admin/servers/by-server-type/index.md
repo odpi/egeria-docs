@@ -23,7 +23,6 @@ The configuration document is divided into sections.  Some sections contain prop
 * [View Server](configuring-a-view-server.md) - this server has specialist REST APIs for UIs and other non-Java environments, such as Python.
 * [Integration Daemon](configuring-an-integration-daemon.md) - this server hosts integration connectors that synchronize metadata between third party technologies and the open metadata ecosystem.
 * [Engine Host](configuring-an-engine-host.md) - this server hosts governance engines that monitor the open metadata ecosystem and take actions as requested/required.
-* [Lineage Warehouse](configuring-a-lineage-warehouse.md) - this server provides optimized access to lineage data.  It has its own repository that it maintains by monitoring the open metadata ecosystem.
 
 
 This is how these types of servers work together.

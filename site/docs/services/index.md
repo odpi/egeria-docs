@@ -55,7 +55,6 @@ The governance server services provide the implementation of each type of [gover
 
 * [Engine Host Services](/services/engine-host-services) for the [Engine Host](/concepts/engine-host).
 * [Integration Daemon Services](/services/integration-daemon-services) for the [Integration Daemon](/concepts/integration-daemon).
-* [Lineage Warehouse Services](/services/lineage-warehouse-services) for the [Lineage Warehouse](/concepts/lineage-warehouse).
 
 --8<-- "snippets/abbr.md"
 

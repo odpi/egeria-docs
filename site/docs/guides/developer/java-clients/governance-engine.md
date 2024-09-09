@@ -2,11 +2,11 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-# Governance Engine OMAS Java client
+# Governance Server OMAS Java client
 
 ## Concepts
 
-The concepts introduced by the Governance Engine OMAS are (in alphabetical order):
+The concepts introduced by the Governance Server OMAS are (in alphabetical order):
 
 * [Engine Action](/concepts/engine-action)
 * [Governance Action Process](/concepts/governance-action-process)

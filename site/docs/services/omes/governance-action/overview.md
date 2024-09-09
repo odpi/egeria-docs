@@ -20,7 +20,7 @@ The governance Action OMES also provides an API to allow a third party tool to v
 
 ## Using the Governance Action OMES
 
-Governance action services are defined and linked to one or more [governance action engines](/concepts/governance-action-engine) using the [Governance Engine OMAS](/services/omas/governance-engine/overview). The definitions for both the governance action engines and their linked services are stored in a [governance engine definition](/concepts/governance-engine-definition).
+Governance action services are defined and linked to one or more [governance action engines](/concepts/governance-action-engine) using the [Governance Server OMAS](/services/omas/governance-server/overview). The definitions for both the governance action engines and their linked services are stored in a [governance engine definition](/concepts/governance-engine-definition).
 
 When the Governance Action OMES is configured in the engine host, a list of governance action engines is supplied. This determines which governance action engines and hence governance action services that it supports.
 

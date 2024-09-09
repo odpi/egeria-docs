@@ -54,7 +54,7 @@ metadata, we have also the concepts in the design of Egeria itself.
 In Egeria, the Policy Administration Point is
 [Governance Program OMAS](/services/omas/governance-program/overview).
 Services such as 
-[Governance Engine OMAS](/services/omas/governance-engine/overview)
+[Security Manager OMAS](/services/omas/security-manager/overview)
 act as a Policy Retrieval Points to push policy information to external Policy Enforcement Points such as
 [Apache Ranger](http://ranger.apache.org/).
 

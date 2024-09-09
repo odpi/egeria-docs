@@ -22,6 +22,6 @@ The definitions for both the repository governance engines and their linked serv
 
 When the Repository Governance OMES is configured in the engine host, a list of repository governance engine names is supplied.  These names are used to retrieve the governance engine definitions for the archive engines in order to configure the Repository Governance OMES.
 
-The Repository Governance OMES is responsible for initializing the repository governance engines and providing the context and runtime environment for the repository services when they are requested through the [engine action](/concepts/engine-action) processing of the [Governance Engine OMAS](/services/omas/governance-engine/overview).
+The Repository Governance OMES is responsible for initializing the repository governance engines and providing the context and runtime environment for the repository services when they are requested through the [engine action](/concepts/engine-action) processing of the [Governance Server OMAS](/services/omas/governance-server/overview).
 
 --8<-- "snippets/abbr.md"

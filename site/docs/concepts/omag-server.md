@@ -48,7 +48,6 @@ The types of OMAG Server are shown in Figure 1. The hierarchy groups similar typ
 - [Governance Server](/concepts/governance-server) - supports the use of metadata in the broader IT landscape.
     - [Engine Host](/concepts/engine-host) - provides a runtime for a specific type of [governance engine](/concepts/governance-engine) that runs [governance services](/concepts/governance-service) to monitor, enhance and govern the open metadata ecosystem.
     - [Integration Daemon](/concepts/integration-daemon) - manages the synchronization of metadata with third party technology that can not call the access services directly.   through the [integration services](/services/omis).
-    - [Lineage Warehouse](/concepts/lineage-warehouse) - Manages the collation of lineage information and maintains it in a format for reporting. This includes the state of the lineage at different points in time.
 
 ## Server connectivity
 

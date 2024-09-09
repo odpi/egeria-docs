@@ -37,11 +37,11 @@ Each governance engine definition describes a single engine and its specialized 
 
 !!! education "Further information"
 
-    * Governance engine definitions are typically defined in a [governance engine pack](/guides/developer/open-metadata-archives/creating-governance-engine-packs) or through the [Governance Engine OMAS](/services/omas/governance-engine/overview) API.
+    * Governance engine definitions are typically defined in a [governance engine pack](/guides/developer/open-metadata-archives/creating-governance-engine-packs) or through the [Governance Server OMAS](/services/omas/governance-server/overview) API.
     
-    * The Open Metadata Types model [0461 Governance Action Engines](/types/4/0461-Governance-Engines) shows the types for a governance engine definition.
+    * The Open Metadata Types model [0461 Governance Engines](/types/4/0461-Governance-Engines) shows the types for a governance engine definition.
     
-    * Governance engines are run by the [Open Metadata Engine Services (OMES)](/services/omes) in an [Engine Host](/concepts/engine-host) OMAG Server.  The [Engine Host Services](/services/engine-host-services) called the [Governance Engine OMAS](/services/omas/governance-engine/overview)
+    * Governance engines are run by the [Open Metadata Engine Services (OMES)](/services/omes) in an [Engine Host](/concepts/engine-host) OMAG Server.  The [Engine Host Services](/services/engine-host-services) called the [Governance Server OMAS](/services/omas/governance-server/overview)
   
 
 --8<-- "snippets/abbr.md"

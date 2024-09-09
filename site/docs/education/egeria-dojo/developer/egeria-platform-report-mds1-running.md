@@ -25,7 +25,7 @@
 * **DevOps OMAS**: Manage a DevOps pipeline
 * **Software Developer OMAS**: Interact with software development tools
 * **Project Management OMAS**: Manage governance related projects
-* **Governance Engine OMAS**: Set up an operational governance engine
+* **Governance Server OMAS**: Set up an operational governance engine
 * **Data Privacy OMAS**: Manage governance of privacy
 * **Security Manager OMAS**: Manages exchange of metadata with a security service
 * **Repository Governance OMES**: Maintains open metadata archives based on the activity in the connected cohorts.

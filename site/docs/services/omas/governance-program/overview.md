@@ -114,7 +114,7 @@ As important aspect of the governance program is the ability to [measure its eff
 
 * The [Digital Service OMAS](/services/omas/digital-service/overview) documents the business capabilities along with their digital services that are supported by the governance program.
 
-* The [Governance Engine OMAS](/services/omas/governance-engine/overview) supports the implementation of technical controls and the choreography of their execution.
+* The [Governance Server OMAS](/services/omas/governance-server/overview) supports the implementation of technical controls and the choreography of their execution.
 
 * The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) supports the stewards as they manage the exceptions detected to the governance program.
   

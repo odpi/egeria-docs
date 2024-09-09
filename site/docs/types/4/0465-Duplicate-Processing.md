@@ -30,7 +30,7 @@ It may be that this simple set of survivorship rules and consolidation process i
 
 The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) provides APIs for setting up peer duplicates and consolidated entities.
 
-The Governance Action Services running in the [Governance Engines](/concepts/governance-engine) can automate the detection of duplicates and the maintenance of consolidated entities.  The governance engines are supported by the [Governance Engine OMAS](/services/omas/governance-engine/overview).
+The Governance Action Services running in the [Governance Engines](/concepts/governance-engine) can automate the detection of duplicates and the maintenance of consolidated entities.  The governance engines are supported by the [Governance Server OMAS](/services/omas/governance-server/overview).
 
 ??? deprecated "Deprecated types"
     - *KnownDuplicateLink* is deprecated in favor of the two specialized relationships: PeerDuplicateLink and ConsolidatedDuplicateLink.

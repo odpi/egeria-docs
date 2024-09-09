@@ -44,7 +44,7 @@ An [integration daemon is configured](/guides/admin/servers/by-server-type/confi
 
 ???+ education "Further information"
 
-    Each integration group has a unique name.  An *IntegrationGroup* entity with a qualifiedName set to this unique name is created through the [Governance Engine OMAS](/services/omas/governance-engine/overview) API.  This API is also used to create and link the integration connector definitions into the integration group.
+    Each integration group has a unique name.  An *IntegrationGroup* entity with a qualifiedName set to this unique name is created through the [Governance Server OMAS](/services/omas/governance-server/overview) API.  This API is also used to create and link the integration connector definitions into the integration group.
 
     The [integration group's qualifiedName is configured](/guides/admin/servers/by-section/integration-daemon-services-section) in the [integration daemon](/concepts/integration-daemon).
 

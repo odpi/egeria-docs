@@ -8,8 +8,7 @@ hide:
 
 # Lineage Warehouse
 
-The lineage warehouse is a data store
-that manages a historical warehouse of lineage information.  See [Lineage Management](/features/lineage-managent/overview) for details of how it is populated and used.
+The lineage warehouse is a data store that manages a historical warehouse of lineage information.  See [Lineage Management](/features/lineage-management/overview) for details of how it is populated and used.
 
 
 --8<-- "snippets/abbr.md"

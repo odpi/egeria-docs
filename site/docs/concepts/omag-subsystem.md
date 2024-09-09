@@ -31,10 +31,8 @@ Fixed services that are always present in the platform:
 
 - Governance server services:
 
-    - [Data engine services](/services/data-engine-proxy-services) implements the services for the [Data Engine Proxy](/concepts/date-engine-proxy).
     - [Engine host services](/services/engine-host-services) implements the services for the [Engine Host](/concepts/engine-host).
     - [Integration daemon services](/services/integration-daemon-services) implements the services for the [Integration Daemon](/concepts/integration-daemon).
-    - [Lineage warehouse services](/services/lineage-warehouse-services) implements services for the [Lineage Warehouse](/concepts/lineage-warehouse).
 
 - [Connected Asset Services](/services/ocf-metadata-management) for supporting the server-side REST API behind the `ConnectedAssetProperties` interface of an [Open Connector Framework (OCF)](/frameworks/ocf/overview) connector.
 

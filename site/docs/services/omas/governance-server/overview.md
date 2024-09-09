@@ -17,7 +17,7 @@ specialist [connectors](/frameworks/ocf/overview) that are defined by:
 
 The governance services run in the [Engine Host OMAG Server](/concepts/engine-host) supported by the [Open Metadata Engine Services (OMES)](/services/omes).  They are triggered via [governance actions](/concepts/governane-action).
 
-The Governance Engine OMAS has the following capabilities to support governance engines:
+The Governance Server OMAS has the following capabilities to support governance engines:
 
 | Java Interface                                                                                                                                                    | Description                                                                                                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -31,7 +31,7 @@ The Governance Engine OMAS has the following capabilities to support governance 
 | [GovernanceEngineConfiguration](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceEngineConfiguration.html)       | Providing APIs to query the status of the governance capabilities implemented through the governance engines.                                                                                                    |
 | [SpecialGovernanceActionInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/SpecialGovernanceActionInterface.html) | Providing specialized governance remediation APIs such as linking duplicates.                                                                                                                                    |
 
-Behind the scenes, Governance Engine OMAS handles the choreography of governance actions based on the process definition provided by a [governance action process](/concepts/governance-action-process).
+Behind the scenes, Governance Server OMAS handles the choreography of governance actions based on the process definition provided by a [governance action process](/concepts/governance-action-process).
 
 !!! info "Further documentation"
     The documentation for writing governance services is located in the developer guide:
@@ -44,7 +44,7 @@ Behind the scenes, Governance Engine OMAS handles the choreography of governance
 
 ## Integration Groups
 
-An [integration group](/concepts/integration-group) is a collection of [integration connector](/concepts/integration-connector) definitions intended to run in one or more [integration daemons](/concepts/integration-daemon).  The Governance Engine OMAS provides the API to maintain the integration group and integration connector definitions.  The integration daemon then loads the definitions from the integration group and runs the requested integration connectors.  This is an alternative method to configure the integration daemon from adding the integration connectors directly into the integration daemon's configuration document.  The advantage of this approach is that new integration connectors can be added without restarting the integration daemon.
+An [integration group](/concepts/integration-group) is a collection of [integration connector](/concepts/integration-connector) definitions intended to run in one or more [integration daemons](/concepts/integration-daemon).  The Governance Server OMAS provides the API to maintain the integration group and integration connector definitions.  The integration daemon then loads the definitions from the integration group and runs the requested integration connectors.  This is an alternative method to configure the integration daemon from adding the integration connectors directly into the integration daemon's configuration document.  The advantage of this approach is that new integration connectors can be added without restarting the integration daemon.
 
 ![integration group operation](integration-group-use.svg)
 

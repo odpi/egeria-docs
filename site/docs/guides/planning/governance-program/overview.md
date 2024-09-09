@@ -312,11 +312,9 @@ These classifications help in the review of the implementation of the governance
 
     * The [Digital Service OMAS](/services/omas/digital-service/overview) documents the business capabilities along with their digital services that are supported by the governance program.
 
-    * The [Governance Engine OMAS](/services/omas/governance-engine/overview) supports the implementation of technical controls and the choreography of their execution.
+    * The [Governance Server OMAS](/services/omas/governance-server/overview) supports the implementation of technical controls and the choreography of their execution.
 
     * The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) supports the stewards as they manage the exceptions detected to the governance program.
-  
-    * The [Data Privacy OMAS](/services/omas/data-privacy/overview) supports the operational aspects of managing privacy as part of the organization's activities.
 
     * The [Data Manager OMAS](/services/omas/data-manager/overview) support the automated cataloging of assets and configuration of technology that is managing them.
 

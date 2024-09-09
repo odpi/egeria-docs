@@ -184,7 +184,7 @@ By default, Egeria generates its topic names using the following naming conventi
 
     These need to be done FOR EACH SERVER configured to run one or more OMASs. (For example for Coco Pharmaceuticals this might include `cocoMDS1`, `cocoMDS2`, `cocoMDS3` etc).
 
-    Then, FOR EACH OMAS configured (eg Asset Consumer OMAS, Data Platform OMAS, Governance Engine OMAS etc.) that supports topics, you will need to create the topic it is using.
+    Then, FOR EACH OMAS configured (eg Asset Consumer OMAS, Data Platform OMAS, Governance Server OMAS etc.) that supports topics, you will need to create the topic it is using.
 
     This is the default naming convention:
 

@@ -17,7 +17,7 @@ Instructions for implementing your own governance services are in the developer 
 
 ## Support for running governance services
 
-The [Governance Engine OMAS](/services/omas/governance-engine/overview) provides:
+The [Governance Server OMAS](/services/omas/governance-server/overview) provides:
 
 * The API to create [governance engine definitions](/concepts/governance-engine) for the governance services.
 * The API to link governance services together into [governance action processes](/concepts/governance-action-process).

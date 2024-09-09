@@ -49,7 +49,7 @@ At the end of the server start up, the server lists the services it has running.
 Below are the messages from the five servers show above:
 
 ```
-Wed May 12 15:26:13 BST 2021 cocoMDS1 Startup OMAG-ADMIN-0004 The cocoMDS1 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services, Asset Consumer OMAS, Asset Manager OMAS, Asset Owner OMAS, Community Profile OMAS, Data Manager OMAS, Governance Engine OMAS]
+Wed May 12 15:26:13 BST 2021 cocoMDS1 Startup OMAG-ADMIN-0004 The cocoMDS1 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services, Asset Consumer OMAS, Asset Manager OMAS, Asset Owner OMAS, Community Profile OMAS, Data Manager OMAS, Governance Server OMAS]
 
 Wed May 12 15:26:14 BST 2021 cocoMDS4 Startup OMAG-ADMIN-0004 The cocoMDS4 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services,Asset Consumer OMAS, Community Profile OMAS, Data Science OMAS]
 

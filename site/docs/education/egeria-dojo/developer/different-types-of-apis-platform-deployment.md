@@ -101,7 +101,7 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
               DevOps OMAS: Manage a DevOps pipeline
               Software Developer OMAS: Interact with software development tools
               Project Management OMAS: Manage governance related projects
-              Governance Engine OMAS: Set up an operational governance engine
+              Governance Server OMAS: Set up an operational governance engine
               Data Privacy OMAS: Manage governance of privacy
               Security Manager OMAS: Manages exchange of metadata with a security service
               Governance Action OMES: Executes requested governance action services to monitor, assess and maintain metadata and its real-world counterparts.

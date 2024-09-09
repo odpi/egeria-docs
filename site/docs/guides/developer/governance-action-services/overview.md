@@ -7,7 +7,7 @@
 
 ## Governance action context
 
-A governance action service is passed a context as it is started. This provides access to the [request type and associated request parameters (name-value pairs)](/concepts/governance-request-type) used to invoke the governance action service, along with its [action targets](/concepts/action-target).  There is also a client to access open metadata through the Governance Engine OMAS.
+A governance action service is passed a context as it is started. This provides access to the [request type and associated request parameters (name-value pairs)](/concepts/governance-request-type) used to invoke the governance action service, along with its [action targets](/concepts/action-target).  There is also a client to access open metadata through the Governance Server OMAS.
 
 ![Structure of the governance context](/frameworks/gaf/governance-action-service-with-context.svg)
 
@@ -22,7 +22,7 @@ The methods of the context are colour-coded.  The methods shown in white are ava
   
 * Performing the action
 
-    * getOpenMetadataStore - returns a client to the Governance Engine OMAS that supports the retrieval of metadata elements, their classifications and relationships.
+    * getOpenMetadataStore - returns a client to the Governance Server OMAS that supports the retrieval of metadata elements, their classifications and relationships.
     * createIncidentReport - creates an [incident report](/concepts/incident-report) that can provide a focal point for collaboration to resolve a particular issue.  Incident reports are often managed by an [incident management tool](/features/incident-reporting/overview).
   
 * Recording the outcome of the processing
@@ -237,7 +237,7 @@ In addition, it needs to implement the standard [Open Connector Framework (OCF)]
 
       ![Structure of a governance engine definition](governance-action-engine-definitions.svg)
 
-      These definitions are created as part of a [governance engine pack](/guides/developer/open-metdata-archives/creating-governance-engine-packs) or through the [Governance Engine OMAS](/services/omas/governance-engine/overview) and are stored in the open metadata repositories.
+      These definitions are created as part of a [governance engine pack](/guides/developer/open-metdata-archives/creating-governance-engine-packs) or through the [Governance Server OMAS](/services/omas/governance-server/overview) and are stored in the open metadata repositories.
 
     * Running your governance action service - Governance action engines are hosted by the [Governance Action OMES](/services/omes/governance-action/overview) running on one or more [engine hosts](/concepts/engine-host).  The engine services run in dedicated OMAG Server called the [*engine host*](/concepts/engine-host). You can find [instructions for configuring the engine services in the engine host](/guides/admin/servers/by-section/engine-host-services-section) in the administration guide.
 

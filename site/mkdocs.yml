@@ -124,7 +124,6 @@ nav:
               - Hive Metastore (HMS): connectors/repository/hms/overview.md
               - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
               - Repository proxy embedded repository: connectors/repository/repository-proxy-embedded-repository
-              - Lineage Warehouse (JanusGraph): connectors/governance-daemon/lineage-warehouse-janus-connector.md
           - Template Catalog:
               - Template Catalog Overview: catalog-templates/index.md
               - Unity Catalog Templates: catalog-templates/unity-catalog-templates.md
@@ -169,7 +168,6 @@ nav:
                     - View Server: guides/admin/servers/by-server-type/configuring-a-view-server.md
                     - Integration Daemon: guides/admin/servers/by-server-type/configuring-an-integration-daemon.md
                     - Engine Host: guides/admin/servers/by-server-type/configuring-an-engine-host.md
-                    - Lineage Warehouse: guides/admin/servers/by-server-type/configuring-a-lineage-warehouse.md
                     - Conformance Test Server: guides/admin/servers/by-server-type/configuring-a-conformance-test-server.md
               - By Section:
                     - Configuring an OMAG Server by configuration document section: guides/admin/servers/by-section/index.md
@@ -182,7 +180,6 @@ nav:
                     - View Services : guides/admin/servers/by-section/view-services-section.md
                     - Integration Daemon Services : guides/admin/servers/by-section/integration-daemon-services-section.md
                     - Engine Host Services : guides/admin/servers/by-section/engine-host-services-section.md
-                    - Lineage Warehouse Services : guides/admin/servers/by-section/lineage-warehouse-services-section.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations Guide:
           - Operate OMAG Server Platform: guides/operations/overview.md
@@ -212,7 +209,6 @@ nav:
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
-          - General User UI: user-interfaces/general/overview.md
           - Python Widgets: user-interfaces/python-widgets/overview.md
           - Explorers: user-interfaces/brain-explorers/overview.md
       - Features:

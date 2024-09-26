@@ -15,7 +15,7 @@ The response from the command lists the subsystems that have been activated in t
 {
   "class": "SuccessMessageResponse",
   "relatedHTTPCode": 200,
-  "successMessage": "Sun Jun 11 21:19:16 BST 2023 myMetadataServer is running the following services: [Open Metadata Repository Services (OMRS), Connected Asset Services, Open Metadata Store Services, Open Integration Service, Data Manager OMAS, Design Model OMAS, Security Officer OMAS, Asset Manager OMAS, IT Infrastructure OMAS, Data Science OMAS, Community Profile OMAS, Digital Architecture OMAS, Asset Owner OMAS, Stewardship Action OMAS, Governance Program OMAS, Digital Service OMAS, Asset Lineage OMAS, Asset Consumer OMAS, DevOps OMAS, Software Developer OMAS, Project Management OMAS, Governance Engine OMAS, Data Privacy OMAS, Security Manager OMAS]"
+  "successMessage": "Sun Jun 11 21:19:16 BST 2023 myMetadataServer is running the following services: [Open Metadata Repository Services (OMRS), Connected Asset Services, Open Metadata Store Services, Open Integration Service, Data Manager OMAS, Design Model OMAS, Security Officer OMAS, Asset Manager OMAS, IT Infrastructure OMAS, Data Science OMAS, Community Profile OMAS, Digital Architecture OMAS, Asset Owner OMAS, Stewardship Action OMAS, Governance Program OMAS, Digital Service OMAS, Asset Lineage OMAS, Asset Consumer OMAS, DevOps OMAS, Software Developer OMAS, Project Management OMAS, Governance Server OMAS, Data Privacy OMAS, Security Manager OMAS]"
 }
 ```
 
@@ -145,10 +145,10 @@ Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0040 An enterpr
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0041 The enterprise OMRS connector for the Project Management OMAS has started
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAS-PROJECT-MANAGEMENT-0001 The Project Management Open Metadata Access Service (OMAS) is initializing a new server instance
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAS-PROJECT-MANAGEMENT-0003 The Project Management Open Metadata Access Service (OMAS) has initialized a new instance for server myMetadataServer
-Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0040 An enterprise OMRS connector has been created for the Governance Engine OMAS
-Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0041 The enterprise OMRS connector for the Governance Engine OMAS has started
-Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAS-GOVERNANCE-ENGINE-0001 The Governance Engine Open Metadata Access Service (OMAS) is initializing a new server instance
-Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAS-GOVERNANCE-ENGINE-0005 The Governance Engine Open Metadata Access Service (OMAS) has initialized a new instance for server myMetadataServer
+Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0040 An enterprise OMRS connector has been created for the Governance Server OMAS
+Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0041 The enterprise OMRS connector for the Governance Server OMAS has started
+Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAS-GOVERNANCE-ENGINE-0001 The Governance Server Open Metadata Access Service (OMAS) is initializing a new server instance
+Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAS-GOVERNANCE-ENGINE-0005 The Governance Server Open Metadata Access Service (OMAS) has initialized a new instance for server myMetadataServer
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0040 An enterprise OMRS connector has been created for the Data Privacy OMAS
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0041 The enterprise OMRS connector for the Data Privacy OMAS has started
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAS-DATA-PRIVACY-0001 The Data Privacy Open Metadata Access Service (OMAS) is initializing a new server instance
@@ -161,7 +161,7 @@ Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAG-ADMIN-0012 25 out of 
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0019 An OMRS Topic Connector has registered with an event bus connector for topic myMetadataServer.openmetadata.repositoryservices.enterprise.myMetadataServer.OMRSTopic
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0020 An OMRS Topic Connector is ready to send and receive events on topic myMetadataServer.openmetadata.repositoryservices.enterprise.myMetadataServer.OMRSTopic
 Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMRS-AUDIT-0015 The listener thread for an OMRS Topic Connector for topic myMetadataServer.openmetadata.repositoryservices.enterprise.myMetadataServer.OMRSTopic has started
-Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAG-ADMIN-0004 The myMetadataServer server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services, Open Metadata Store Services, Open Integration Service, Data Manager OMAS, Design Model OMAS, Asset Manager OMAS, IT Infrastructure OMAS, Data Science OMAS, Community Profile OMAS, Digital Architecture OMAS, Asset Owner OMAS, Stewardship Action OMAS, Governance Program OMAS, Digital Service OMAS, Asset Lineage OMAS, Asset Consumer OMAS, Asset Catalog OMAS, DevOps OMAS, Software Developer OMAS, Project Management OMAS, Governance Engine OMAS, Data Privacy OMAS, Security Manager OMAS]
+Sun Jun 11 21:19:16 BST 2023 myMetadataServer Startup OMAG-ADMIN-0004 The myMetadataServer server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Connected Asset Services, Open Metadata Store Services, Open Integration Service, Data Manager OMAS, Design Model OMAS, Asset Manager OMAS, IT Infrastructure OMAS, Data Science OMAS, Community Profile OMAS, Digital Architecture OMAS, Asset Owner OMAS, Stewardship Action OMAS, Governance Program OMAS, Digital Service OMAS, Asset Lineage OMAS, Asset Consumer OMAS, Asset Catalog OMAS, DevOps OMAS, Software Developer OMAS, Project Management OMAS, Governance Server OMAS, Data Privacy OMAS, Security Manager OMAS]
 ```
 
 The start-up messages show the [open metadata types](/types) being loaded, followed by the open metadata archive `content-packs/SimpleCatalog.json`.  Then the local repository is initialized and finally the OMASs are started.

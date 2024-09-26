@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-02-29T16:01:07.795Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="jSBiyM7fKfCQsmrP3Cdo" version="23.0.2" type="device" pages="26">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8" pages="27">
   <diagram id="zwH0E6yuSuxNEa-D1nxI" name="compare-use-of-connectors">
     <mxGraphModel dx="1242" dy="822" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1207,6 +1207,41 @@
           <mxGeometry x="-300" y="2530" width="90" height="50" as="geometry" />
         </mxCell>
         <mxCell id="OlTJeZBRQJqCneXp9DiA-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="UNZGWyN_z7ItplMNdB2b-1" source="OlTJeZBRQJqCneXp9DiA-3" target="tGKAaBUSObN778VrdFot-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="egeria-system-connectors" id="pWkxX-t_15Ol9sat2jne">
+    <mxGraphModel dx="1242" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-0" />
+        <mxCell id="pu5be3ToNUIvo1rdht3u-1" parent="pu5be3ToNUIvo1rdht3u-0" />
+        <mxCell id="pu5be3ToNUIvo1rdht3u-2" value="Integration Daemon" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="pu5be3ToNUIvo1rdht3u-1">
+          <mxGeometry x="220" y="100" width="250" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-3" value="File Integrator OMIS" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="pu5be3ToNUIvo1rdht3u-1">
+          <mxGeometry x="244" y="190" width="206" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="pu5be3ToNUIvo1rdht3u-1" source="pu5be3ToNUIvo1rdht3u-5" target="pu5be3ToNUIvo1rdht3u-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-5" value="Data Files Monitor&lt;br&gt;Integration Connector" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="pu5be3ToNUIvo1rdht3u-1">
+          <mxGeometry x="270" y="240" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="pu5be3ToNUIvo1rdht3u-1">
+          <mxGeometry x="40" y="225" width="50" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-7" value="Monitored&lt;br&gt;Folder" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="pu5be3ToNUIvo1rdht3u-1">
+          <mxGeometry x="40" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-8" value="Metadata Access Server" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="pu5be3ToNUIvo1rdht3u-1">
+          <mxGeometry x="510" y="100" width="250" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-9" value="Data Manager OMAS" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="pu5be3ToNUIvo1rdht3u-1">
+          <mxGeometry x="532" y="220" width="206" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pu5be3ToNUIvo1rdht3u-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="pu5be3ToNUIvo1rdht3u-1" source="pu5be3ToNUIvo1rdht3u-3" target="pu5be3ToNUIvo1rdht3u-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
@@ -3720,27 +3755,39 @@
     </mxGraphModel>
   </diagram>
   <diagram id="V6d9sc4AnHZE5M8D5nPL" name="secrets-store-connectors">
-    <mxGraphModel dx="1142" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="jxgSa6bsgg5_kzLXStgE-2" value="Environment variable" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="jxgSa6bsgg5_kzLXStgE-2" value="Environment variable" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="125" y="260" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jxgSa6bsgg5_kzLXStgE-3" value="Consuming Connector" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="jxgSa6bsgg5_kzLXStgE-3" value="Consuming Connector" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="110" y="100" width="170" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="jxgSa6bsgg5_kzLXStgE-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="D11YjOCPVy-e2vAOVpYC-17" target="jxgSa6bsgg5_kzLXStgE-5">
+        <mxCell id="jxgSa6bsgg5_kzLXStgE-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="D11YjOCPVy-e2vAOVpYC-17" target="jxgSa6bsgg5_kzLXStgE-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="D11YjOCPVy-e2vAOVpYC-17" value="Environment Variable&lt;br&gt;Secrets Store Connector" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="D11YjOCPVy-e2vAOVpYC-17" value="Environment Variable&lt;br&gt;Secrets Store Connector" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="124.88" y="140" width="140.25" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="jxgSa6bsgg5_kzLXStgE-5" value="Environment variable" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="jxgSa6bsgg5_kzLXStgE-5" value="Environment variable" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="135" y="270" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jxgSa6bsgg5_kzLXStgE-6" value="Environment variable" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="jxgSa6bsgg5_kzLXStgE-6" value="Environment variable" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="145" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="smZqJnJgsjUjO1HoDnpI-2" value="Consuming Connector" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="414" y="100" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="smZqJnJgsjUjO1HoDnpI-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="smZqJnJgsjUjO1HoDnpI-4" target="smZqJnJgsjUjO1HoDnpI-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="smZqJnJgsjUjO1HoDnpI-4" value="YAML File&lt;div&gt;Secrets Store Connector&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="428.88" y="140" width="140.25" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="smZqJnJgsjUjO1HoDnpI-8" value="mySecrets.&lt;div&gt;omsecrets&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="459.01" y="260" width="80" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

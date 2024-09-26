@@ -9,7 +9,7 @@ There are two parts to configuring the engine host services:
 
 ### Specify location of governance engine definitions
 
-The location of the [metadata access server](/concepts/metadata-access-server) running the [Governance Engine OMAS](/services/omas/governance-engine) that will supply the definitions of the governance engines, is configured using two properties:
+The location of the [metadata access server](/concepts/metadata-access-server) running the [Governance Server OMAS](/services/omas/governance-server/overview) that will supply the definitions of the governance engines, is configured using two properties:
 
 - the [server url root](/concepts/platform-url-root) of the metadata access server's OMAG Server Platform, and
 - the [name of the metadata access server](/concepts/server-name).

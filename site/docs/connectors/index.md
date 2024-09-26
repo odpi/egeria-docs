@@ -30,7 +30,10 @@ The connectors that support the exchange and maintenance of metadata help to acc
 
 ### Secrets Stores
 
-* The [Environment Variables Secret Store connector](/connectors/secrets/environment-variable-secrets-store-connector) retrieves secret values from environment variables. 
+[Secrets stores](/concepts/secrets-store-connector) externalize secrets such as passwords, tokens and certificates so they do not need to be stored in either the [configuration document](/concepts/configuration-document) or [open metadata repositories](/concepts/open-metadata-repository).
+
+* The [Environment Variables Secret Store connector](/connectors/secrets/environment-variable-secrets-store-connector) retrieves secret values from environment variables.
+* The [YAML File Secret Store connector](/connectors/secrets/yaml-secrets-store-connector) retrieves secret values from environment variables.
 
 ### Files
 

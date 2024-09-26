@@ -4,7 +4,7 @@
 
 ### Configure integration groups
 
-An [integration group](/concepts/integration-group) identifies a list of [integration connectors](/concepts/integration-connector) that an integration daemon should run.  These integration connectors are defined and maintained as open metadata elements stored in the open metadata repositories.  Changes can be made to these integration connectors at any time using the [Governance Engine OMAS](/services/omas/governance-engine/overview).  The integration daemon is monitoring for changes and updates the integration connectors it is running in line with the changes it discovers.  This approach allows changes to be made to the integration daemon's configuration without needing access to the administration commands, nor a restart of the integration daemon. 
+An [integration group](/concepts/integration-group) identifies a list of [integration connectors](/concepts/integration-connector) that an integration daemon should run.  These integration connectors are defined and maintained as open metadata elements stored in the open metadata repositories.  Changes can be made to these integration connectors at any time using the [Governance Server OMAS](/services/omas/governance-server/overview).  The integration daemon is monitoring for changes and updates the integration connectors it is running in line with the changes it discovers.  This approach allows changes to be made to the integration daemon's configuration without needing access to the administration commands, nor a restart of the integration daemon. 
 
 #### Configure an integration group
 

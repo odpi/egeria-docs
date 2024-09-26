@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-A *governance action process* is a predefined sequence of [engine actions](/concepts/engine-action) that are coordinated by the [Governance Engine OMAS](/services/omas/governance-engine/overview).
+A *governance action process* is a predefined sequence of [engine actions](/concepts/engine-action) that are coordinated by the [Governance Server OMAS](/services/omas/governance-server/overview).
 
 The steps in a governance action process are defined by linked [governance action process steps](/concepts/governance-action-process-step) stored in the open metadata ecosystem.  Each governance action process step provides the specification of the governance action to run.  The links between them show which [guards](/concepts/guard) cause the next step to be chosen and hence, the governance action to run.
 
@@ -35,16 +35,16 @@ The [engine actions](/concepts/engine-action) generated when a governance action
 
 ## Governance Action Process Lifecycle
 
-The diagram below shows a governance action process assembly tool taking in information from a [governance engine pack](/concepts/governance-engine-pack) to build a governance action process flow.  This is shared with the open metadata ecosystem either through direct called to the [Governance Engine OMAS](/services/omas/governance-engone/overview) or via a [open metadata archive](/concepts/open-metadata-archive) (possibly the archive that holds the governance engine definition.
+The diagram below shows a governance action process assembly tool taking in information from a [governance engine pack](/concepts/governance-engine-pack) to build a governance action process flow.  This is shared with the open metadata ecosystem either through direct called to the [Governance Server OMAS](/services/omas/governance-server/overview) or via a [open metadata archive](/concepts/open-metadata-archive) (possibly the archive that holds the governance engine definition.
 
-Once the definition of the governance action process is available, an instance of the process can be started, either by a [watchdog governance action service](/concepts/governance-action-service) or through a direct call to the Governance Engine OMAS.  Whichever mechanism is used, it results in the Governance Engine OMAS using the definition to choreograph the creation of [engine action](/concepts/engine-action) entities that drive the execution of the governance services in the [Engine Host](/concepts/engine-host).
+Once the definition of the governance action process is available, an instance of the process can be started, either by a [watchdog governance action service](/concepts/governance-action-service) or through a direct call to the Governance Server OMAS.  Whichever mechanism is used, it results in the Governance Server OMAS using the definition to choreograph the creation of [engine action](/concepts/engine-action) entities that drive the execution of the governance services in the [Engine Host](/concepts/engine-host).
 
 ![Lifecycle](/concepts/governance-action-process-lifecycle.svg)
 
 
 !!! education "Further information"
     - The [0462 Governance Action Processes](/types/4/0462-Governance-Action-Processes) model shows how the governance action process flow is built out of [governance action process steps](/concepts/governance-action-process-step).
-    - Governance action processes may be created using the [Governance Engine OMAS](/services/omas/governance-engine/overview) API.
+    - Governance action processes may be created using the [Governance Server OMAS](/services/omas/governance-server/overview) API.
     - The [Open Metadata Engine Services (OMES)](/services/omes) provide the mechanisms that support the different types of [governance engines](/concepts/governance-engine). These engines run the [governance services](/concepts/governance-service) that execute the [engine actions](/concepts/engine-action) defined by the governance action process.
 
 

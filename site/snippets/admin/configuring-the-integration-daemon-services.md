@@ -9,13 +9,8 @@ There are two approaches to configuring the Integration Daemon Services.
 
 Both approaches can be used in the same integration daemon instance.
 
-    The integration connectors that are to run in the integration daemon can be configured one of two ways:
-
-    * Statically in the integration daemon's configuration document using [integration service definitions](#configure-the-integration-services)
-    * Dynamically using [integration groups](#configure-dynamic-integration-groups)
-
-    ??? info "Configuring integration services"
-        --8<-- "snippets/admin/configuring-the-integration-services.md"
+??? info "Configuring integration services"
+    --8<-- "snippets/admin/configuring-the-integration-services.md"
     
-    ??? info "Configuring integration groups"
-        --8<-- "snippets/admin/configuring-the-integration-groups.md"
+??? info "Configuring integration groups"
+    --8<-- "snippets/admin/configuring-the-integration-groups.md"

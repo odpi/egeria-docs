@@ -3,25 +3,25 @@
 
 
 | Unity Catalog Property | Egeria Type and Attribute                                                                  | Supported in OSS Version |
-|------------------------|--------------------------------------------------------------------------------------------|--------------------------|
-| volume_id              | ExternalIdentifier.identifier                                                              | Yes                      |
-| name                   | FileFolder.name                                                                            | Yes                      |
-| full_name              | FileFolder.resourceName                                                                    | Yes                      |
-| comment                | FileFolder.description                                                                     | Yes                      |
-| storage_location       | FileFolder.pathName + Endpoint.networkAddress + PropertyFacet.properties.ucStorageLocation | Yes                      |
-| owner                  | Ownership.owner                                                                            | No                       |
-| created_at             | ExternalIdentifier.externalInstanceCreationTime                                            | Yes                      |
-| created_by             | ExternalIdentifier.externalInstanceCreatedBy                                               | No                       |
-| updated_at             | ExternalIdentifier.externalInstanceLastUpdateTime                                          | Yes                      |
-| updated_by             | ExternalIdentifier.externalInstanceLastUpdatedBy                                           | No                       |
-| catalog_name           | ExternalIdentifier.mappingProperties.ucCatalogName                                         | Yes                      |
-| schema_name            | ExternalIdentifier.mappingProperties.ucSchemaName                                          | Yes                      |
-| volume_type            | PropertyFacet.properties.ucVolumeType                                                      | Yes                      |
-| metastore_id           | PropertyFacet.properties.ucMetastoreId                                                     | No                       |
-| browse_only            | PropertyFacet.properties.ucBrowseOnly                                                      | No                       |
-| securable_type         | PropertyFacet.properties.ucSecurableType                                                   | No                       |
-| securable_kind         | PropertyFacet.properties.ucSecurableKind                                                   | No                       |
-| resource_name          | PropertyFacet.properties.ucResourceName                                                    | No                       |
+|-----------------|--------------------------------------------------------------------------------------------|--------------------------|
+| volume_id       | ExternalIdentifier.identifier                                                              | Yes                      |
+| name            | FileFolder.name + ExternalIdentifier.mappingProperties.ucVolumeName                                                                       | Yes                      |
+| full_name       | FileFolder.resourceName                                                                    | Yes                      |
+| comment         | FileFolder.description                                                                     | Yes                      |
+| storage_location | FileFolder.pathName + Endpoint.networkAddress + PropertyFacet.properties.ucStorageLocation | Yes                      |
+| owner           | Ownership.owner                                                                            | No                       |
+| created_at      | ExternalIdentifier.externalInstanceCreationTime                                            | Yes                      |
+| created_by      | ExternalIdentifier.externalInstanceCreatedBy                                               | No                       |
+| updated_at      | ExternalIdentifier.externalInstanceLastUpdateTime                                          | Yes                      |
+| updated_by      | ExternalIdentifier.externalInstanceLastUpdatedBy                                           | No                       |
+| catalog_name    | ExternalIdentifier.mappingProperties.ucCatalogName                                         | Yes                      |
+| schema_name     | ExternalIdentifier.mappingProperties.ucSchemaName                                          | Yes                      |
+| volume_type     | PropertyFacet.properties.ucVolumeType                                                      | Yes                      |
+| metastore_id    | PropertyFacet.properties.ucMetastoreId                                                     | No                       |
+| browse_only     | PropertyFacet.properties.ucBrowseOnly                                                      | No                       |
+| securable_type  | PropertyFacet.properties.ucSecurableType                                                   | No                       |
+| securable_kind  | PropertyFacet.properties.ucSecurableKind                                                   | No                       |
+| resource_name   | PropertyFacet.properties.ucResourceName                                                    | No                       |
 
 
 

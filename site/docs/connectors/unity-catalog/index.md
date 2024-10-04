@@ -100,6 +100,29 @@ The diagram below illustrates the mapping of the Unity Catalog metadata resource
 
 ![Type Mapping](unity-catalog-type-mapping.svg)
 
+Below is the field mapping from Unity Catalog to these Open Metadata Types:
+
+=== "Catalogs"
+
+    --8<-- "snippets/unity-catalog/catalog-mapping.md"
+
+=== "Schemas"
+
+    --8<-- "snippets/unity-catalog/schema-mapping.md"
+
+=== "Volumes"
+
+    --8<-- "snippets/unity-catalog/volume-mapping.md"
+
+=== "Tables"
+
+    --8<-- "snippets/unity-catalog/table-mapping.md"
+
+=== "Functions"
+
+    --8<-- "snippets/unity-catalog/function-mapping.md"
+
+
 The templates that implement this mapping are described in [Unity Catalog Templates](/catalog-templates/unity-catalog-templates).
 
 ### Anchor design for Unity Catalog

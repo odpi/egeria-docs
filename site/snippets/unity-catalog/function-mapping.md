@@ -17,7 +17,7 @@
 | input_parameters.parameters.type_scale          | APIParameter.significantDigits                                                                          | Yes                      |
 | input_parameters.parameters.type_text           | TypeEmbeddedAttribute.displayName                                                                       | Yes                      |
 | input_parameters.parameters.type_name           | TypeEmbeddedAttribute.dataType                                                                          | Yes                      |
-| input_parameters.parameters.parameter_default   | TypeEmbeddedAttribute.defultValue                                                                       | Yes                      |
+| input_parameters.parameters.parameter_default   | TypeEmbeddedAttribute.defaultValue                                                                      | Yes                      |
 | input_parameters.parameters.type_interval_type  | TypeEmbeddedAttribute.additionalProperties.ucTypeIntervalType                                           | Yes                      |
 | input_parameters.parameters.type_json           | TypeEmbeddedAttribute.additionalProperties.ucTypeJSON                                                   | Yes                      |
 | input_parameters.parameters.parameter_mode      | APIParameter.additionalProperties.ucParameterMode                                                       | Yes                      |
@@ -31,7 +31,7 @@
 | return_parameters.parameters.type_scale         | APIParameter.significantDigits                                                                          | Yes                      |
 | return_parameters.parameters.type_text          | TypeEmbeddedAttribute.displayName                                                                       | Yes                      |
 | return_parameters.parameters.type_name          | TypeEmbeddedAttribute.dataType                                                                          | Yes                      |
-| return_parameters.parameters.parameter_default  | TypeEmbeddedAttribute.defultValue                                                                       | Yes                      |
+| return_parameters.parameters.parameter_default  | TypeEmbeddedAttribute.defaultValue                                                                      | Yes                      |
 | return_parameters.parameters.type_interval_type | TypeEmbeddedAttribute.additionalProperties.ucTypeIntervalType                                           | Yes                      |
 | return_parameters.parameters.type_json          | TypeEmbeddedAttribute.additionalProperties.ucTypeJSON                                                   | Yes                      |
 | return_parameters.parameters.parameter_mode     | APIParameter.additionalProperties.ucParameterMode                                                       | Yes                      |

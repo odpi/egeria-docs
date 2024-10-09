@@ -9,11 +9,11 @@ APIs exchange data structures and commands. Each API is an access point for data
 
 ## DeployedAPI
 
-The *DeployedAPI* is the entity that represents the API as an [Asset](/types/0/0010-Base-Model).  The *deployedImplementationType* attribute describes the class of technology that is used in its implementation.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set. The definition of the API's operations, their parameters and responses are described via the [APISchemaType](/types/5/0536-API-Schemas) entity, which is connected to the *DeployedAPI* entity with the [AssetSchemaType](/types/5/0503-Asset-Schema) relationship.
+The *DeployedAPI* is the entity that represents the API as a [DeployedSoftwareComponent](/types/2/0215-Software-Components).  The definition of the API's operations, their parameters and responses are described via the [APISchemaType](/types/5/0536-API-Schemas) entity, which is connected to the *DeployedAPI* entity with the [AssetSchemaType](/types/5/0503-Asset-Schema) relationship.
 
 The classifications [RequestResponseInterface](#requestresponseinterface), [ListenerInterface](#listenerinterface) and [PublisherInterface](#publisherinterface) can be used to describe the style of the API. They can appear in combination on a single *DeployedAPI*.
 
-APIs often provide remote access to [DeployedSoftwareComponents](/types/2/0215-Software-Components).  A *DeployedAPI* entity is linked to a *DeployedSoftwareComponent* entity via the [ProcessCall](/types/7/0750-Data-Passing) relationship.
+APIs often provide remote access to other [DeployedSoftwareComponents](/types/2/0215-Software-Components).  A *DeployedAPI* entity is linked to another *DeployedSoftwareComponent* entity via the [ProcessCall](/types/7/0750-Data-Passing) relationship.
 
 ## APIEndpoint
 

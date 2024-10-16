@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-06-06T12:38:19.302Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="qYAbzvg3A-f7NuEXOnZH" version="24.4.8" type="device" pages="29">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17" pages="29">
   <diagram id="Gro3B2_n27xaSj8Dfh9V" name="overview">
     <mxGraphModel dx="1941" dy="941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -913,7 +913,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="icIzIHRbvMJy5QZI8pVm" name="functional-organization">
-    <mxGraphModel dx="1500" dy="2199" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="1975" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="N-dQoVwpvzfziEzftqcd-0" />
         <mxCell id="N-dQoVwpvzfziEzftqcd-1" parent="N-dQoVwpvzfziEzftqcd-0" />

@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/in-development.md"
 
-# Data Discovery OMVS
+# Data Designer OMVS
 
-The Data Discovery Open Metadata View Services (OMVS) is a REST API that enables the caller to define and search for new data resources.
+The Data Designer Open Metadata View Services (OMVS) is a REST API that enables the caller to create schema definitions to describe the structure of data.
 
 ---8<-- "snippets/abbr.md"
 

@@ -562,15 +562,21 @@ nav:
                   - Asset Catalog: services/omvs/asset-catalog/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
                   - Collection Manager: services/omvs/collection-manager/overview.md
+                  - Data Designer: services/omvs/data-designer/overview.md
                   - Data Discovery: services/omvs/data-discovery/overview.md
+                  - Data Officer: services/omvs/data-officer/overview.md
                   - Feedback Manager: services/omvs/feedback-manager/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Manager: services/omvs/glossary-manager/overview.md
+                  - Metadata Explorer: services/omvs/metadata-explorer/overview.md
                   - My Profile: services/omvs/my-profile/overview.md
                   - Notification Manager: services/omvs/notification-manager/overview.md
+                  - People Organizer: services/omvs/people-organizer/overview.md
+                  - Privacy Officer: services/omvs/privacy-officer/overview.md
                   - Project Manager: services/omvs/project-manager/overview.md
                   - Reference Data: services/omvs/reference-data/overview.md
                   - Runtime Manager: services/omvs/runtime-manager/overview.md
+                  - Security Officer: services/omvs/security-officer/overview.md
                   - Template Manager: services/omvs/template-manager/overview.md
                   - Valid Metadata: services/omvs/valid-metadata/overview.md
       - Frameworks:

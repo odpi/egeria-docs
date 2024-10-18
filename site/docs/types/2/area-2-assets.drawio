@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8" pages="24">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17" pages="24">
   <diagram id="ErCcJrGKzW-L592V1ftQ" name="overview">
     <mxGraphModel dx="1114" dy="941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1938,7 +1938,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="oXEBLSN5tyfXXpN9d7S_" name="0265-Analytics-Assets">
-    <mxGraphModel dx="1194" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1361" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="Ct_TJYMNwhbYxG7r2nUA-0" />
         <mxCell id="Ct_TJYMNwhbYxG7r2nUA-1" parent="Ct_TJYMNwhbYxG7r2nUA-0" />
@@ -1948,23 +1948,52 @@
         <mxCell id="Ct_TJYMNwhbYxG7r2nUA-3" value="0265 - Analytics Assets" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="Ct_TJYMNwhbYxG7r2nUA-1" vertex="1">
           <mxGeometry x="20" y="30" width="1060" height="770" as="geometry" />
         </mxCell>
-        <mxCell id="Ct_TJYMNwhbYxG7r2nUA-4" value="«classification»&lt;br&gt;&lt;b&gt;DeployedAnalyticalComponent&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" parent="Ct_TJYMNwhbYxG7r2nUA-1" vertex="1">
-          <mxGeometry x="453" y="200" width="247" height="50" as="geometry" />
+        <mxCell id="auAiSj6PSg6exefba3wY-3" value="*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="Ct_TJYMNwhbYxG7r2nUA-1">
+          <mxGeometry x="740" y="480" width="20" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Ct_TJYMNwhbYxG7r2nUA-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;jettySize=auto;orthogonalLoop=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="Ct_TJYMNwhbYxG7r2nUA-1" source="Ct_TJYMNwhbYxG7r2nUA-7" target="Ct_TJYMNwhbYxG7r2nUA-4" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="528.5" y="269" as="targetPoint" />
-            <mxPoint x="398" y="195" as="sourcePoint" />
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-0" value="" style="group" vertex="1" connectable="0" parent="Ct_TJYMNwhbYxG7r2nUA-1">
+          <mxGeometry x="231" y="320" width="248" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-1" value="«entity»&lt;br&gt;&lt;b&gt;DeployedSoftwareComponent&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" vertex="1" parent="U9vbHTZOEXaD1vuySlE4-0">
+          <mxGeometry width="247" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=16;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="Ct_TJYMNwhbYxG7r2nUA-1" source="U9vbHTZOEXaD1vuySlE4-5" target="U9vbHTZOEXaD1vuySlE4-1">
+          <mxGeometry x="-57" y="-1" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="470" />
+            </Array>
+            <mxPoint x="353.5" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Ct_TJYMNwhbYxG7r2nUA-6" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="Ct_TJYMNwhbYxG7r2nUA-1" vertex="1">
-          <mxGeometry x="453" y="250" width="247" height="30" as="geometry" />
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-4" value="" style="group" vertex="1" connectable="0" parent="Ct_TJYMNwhbYxG7r2nUA-1">
+          <mxGeometry x="230" y="470" width="247" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Ct_TJYMNwhbYxG7r2nUA-7" value="«entity»&lt;br&gt;&lt;b&gt;Process&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="Ct_TJYMNwhbYxG7r2nUA-1" vertex="1">
-          <mxGeometry x="190" y="200" width="206" height="50" as="geometry" />
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-5" value="«entity»&lt;br&gt;&lt;b&gt;DeployedAnalyticsModel&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" vertex="1" parent="U9vbHTZOEXaD1vuySlE4-4">
+          <mxGeometry width="247" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Ct_TJYMNwhbYxG7r2nUA-8" value="This classification enables analytical&lt;br&gt;components to be identified in lineage" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="Ct_TJYMNwhbYxG7r2nUA-1" vertex="1">
-          <mxGeometry x="430" y="-50" width="220" height="30" as="geometry" />
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-6" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" vertex="1" parent="U9vbHTZOEXaD1vuySlE4-4">
+          <mxGeometry y="50" width="247" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-7" value="" style="group" vertex="1" connectable="0" parent="Ct_TJYMNwhbYxG7r2nUA-1">
+          <mxGeometry x="630" y="320" width="247" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-8" value="«entity»&lt;br&gt;&lt;b&gt;TransientEmbeddedProcess&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" vertex="1" parent="U9vbHTZOEXaD1vuySlE4-7">
+          <mxGeometry width="247" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-10" value="" style="group" vertex="1" connectable="0" parent="Ct_TJYMNwhbYxG7r2nUA-1">
+          <mxGeometry x="630" y="468" width="247" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-11" value="«entity»&lt;br&gt;&lt;b&gt;AnalyticsModelRun&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" vertex="1" parent="U9vbHTZOEXaD1vuySlE4-10">
+          <mxGeometry width="247" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-12" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" vertex="1" parent="U9vbHTZOEXaD1vuySlE4-10">
+          <mxGeometry y="50" width="247" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="U9vbHTZOEXaD1vuySlE4-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=16;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="Ct_TJYMNwhbYxG7r2nUA-1" source="U9vbHTZOEXaD1vuySlE4-11" target="U9vbHTZOEXaD1vuySlE4-8">
+          <mxGeometry x="83" y="9" as="geometry">
+            <mxPoint x="753.5" y="400" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
@@ -2309,7 +2338,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="0H4EcOqSQpXNeeCSJLmp" name="0285-Analytics-Development-Assets">
-    <mxGraphModel dx="1106" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1361" dy="1075" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="eZecqlOYsfFwNEH9Lnjz-0" />
         <mxCell id="eZecqlOYsfFwNEH9Lnjz-1" parent="eZecqlOYsfFwNEH9Lnjz-0" />

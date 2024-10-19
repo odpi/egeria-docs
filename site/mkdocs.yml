@@ -210,6 +210,7 @@ nav:
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
           - Python Widgets: user-interfaces/python-widgets/overview.md
+          - Mermaid Diagrams: user-interfaces/mermaid/overview.md
           - Explorers: user-interfaces/brain-explorers/overview.md
       - Features:
           - Features Overview: features/index.md

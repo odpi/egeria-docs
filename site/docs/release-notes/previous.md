@@ -7,7 +7,7 @@
 ???+ info "Release 5.0 (July 2024)"
     --8<-- "snippets/release-notes/5-0.md"
 
-???+ info "Release 4.3 (September 2023)"
+??? info "Release 4.3 (September 2023)"
     --8<-- "snippets/release-notes/4-3.md"
 
 ??? info "Release 4.2 (July 2023)"

@@ -12,7 +12,7 @@ Egeria visualizes collections of related metadata elements as graphs using Merma
 
 ![View Server Mermaid Graph](view-server-mermaid-graph.png)
 
-The asset is on the far left-hand side. Each box on the graph is a metadata element in the open metadata repository.  The test in *italics* is the element's type, and the text below is the elements display name. If the box has rounded corners, it is anchored to the starting asset.  If it has square corners, it is an element that is just linked to the one of the anchored elements.  The lines between the boxes represent relationships in the open metadata repository.  The label on the lines is the relationship type.  The arrow-head is at end 2 of the relationship.  Details of the types shown on the diagram can be found on the [Open Metadata Types](/types) pages.
+The asset is on the far left-hand side. Each box on the graph is a metadata element in the open metadata repository.  The text in *italics* is the element's type, and the text below is the element's display name. If the box has rounded corners, it is anchored to the starting asset.  If it has square corners, it is an element that is just linked to one of the anchored elements.  The lines between the boxes represent relationships in the open metadata repository.  The label on the lines is the relationship type.  The arrow-head is at end 2 of the relationship.  Details of the types shown on the diagram can be found on the [Open Metadata Types](/types) pages.
 
 ??? education "Implementation details"
     The Mermaid graph above is rendered from this string:

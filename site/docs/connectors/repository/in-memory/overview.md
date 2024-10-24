@@ -10,7 +10,7 @@
 
     - Connector Category: [Native Repository Connector](/concepts/repository-connector)
     - Hosting Service: [Open Metadata Repository Services (OMRS)](/services/omrs)
-    - Hosting Server: [Metadata Access Store](/concepts/metdata-access-store)
+    - Hosting Server: [Metadata Access Store](/concepts/metadata-access-store)
     - Source Module: [inmemory-repository-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector){ target=gh }
     - Jar File Name: `inmemory-repository-connector.jar`
     - ConnectorProviderClassName: `org.odpi.openmetadata.adapters.repositoryservices.inmemory.repositoryconnector/InMemoryOMRSRepositoryConnectorProvider.java`

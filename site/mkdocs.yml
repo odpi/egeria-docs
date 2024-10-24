@@ -918,7 +918,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+         - name: mermaid
+           class: mermaid
+           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.keys
   - toc:
       permalink: true
@@ -928,8 +932,5 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
-  - pymdownx.superfences:
-      custom_fences:
-          - name: mermaid
-            class: mermaid
-            format: !!python/name:pymdownx.superfences.fence_code_format
+
+

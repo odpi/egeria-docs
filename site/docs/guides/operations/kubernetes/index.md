@@ -10,6 +10,7 @@ Kubernetes offers one standard way of deploying the Egeria platform into a varie
 - [Egeria charts](charts/overview)
 - [Container images](container-images.md)
 - [Developing a custom deployment](custom-deployment.md)
+- [Health Checks](healthchecks.md)
 - [Egeria Operator](operator.md)
 
 ---8<-- "snippets/abbr.md"

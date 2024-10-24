@@ -102,6 +102,7 @@ nav:
                     - Open Lineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
                     - Open Lineage Events from Governance Action: connectors/integration/governance-action-open-lineage-integration-connector.md
               - Open Metadata Repositories:
+                    - PostgreSQL: connectors/repository/postgres/overview.md
                     - XTDB:
                           - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
                           - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md

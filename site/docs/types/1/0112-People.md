@@ -35,22 +35,6 @@ The *ContributionRecord* accumulates achievements of an individual. Specifically
 - `isPublic` indicates whether the values in the contribution record can be shared with colleagues or is only visible to user(s) that connect with one of the linked user identities or systems that are part of the open metadata ecosystem.
 - `karmaPoints` captures the total number of points that the individual has earned from their activity.
 
-## PersonRole
-
-Open metadata separates the person from the roles they perform. This is because people often perform many roles and these change over time. Also roles may be put in place before the person is appointed to it and the person appointed can change from time to time.
-
-The PersonRole entity is extended in multiple places to show different types of roles. For example:
-
-- ['TeamLeader'](/types/1/0115-Teams/#teamleader) and ['TeamMember'](/types/1/0115-Teams/#teammember)
-- ['GovernanceRole'](/types/4/0445-Governance-Roles/#governancerole)
-- ['ProjectManager'](/types/1/0130-Projects)
-
-## PersonRoleAppointment
-
-The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppointment* relationship to show that the person has been appointed.  It is common for [effectivity dates](/features/effectivity-dates) to be set on this relationship.
-
-
-
 
 ## Further information
 

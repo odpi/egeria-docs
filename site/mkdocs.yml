@@ -351,6 +351,8 @@ nav:
               - People: types/1/0112-People.md
               - Teams: types/1/0115-Teams.md
               - IT Profiles: types/1/0117-IT-Profiles.md
+              - Actor Roles: types/1/0118-Actor-Roles.md
+              - Team Roles: types/1/0119-Team-Roles.md
               - Assignment Scopes: types/1/0120-Assignment-Scopes.md
               - Projects: types/1/0130-Projects.md
               - Meetings: types/1/0135-Meetings.md

@@ -4,7 +4,9 @@
 
 # Placeholders
 
-A placeholder is a replaceable value.  It is distinguished by a double set of curly braces - `{{placeholder}}`.  Placeholders allow concrete values to be substituted when an element is either created of used.  They are found in many technologies.  For example, both Postman and IntelliJ's HTTP client use placeholders in their REST API definitions to denote network addresses or identifiers.  These values are supplied when the REST request is made through an environment file.
+A placeholder is a replaceable value.  
+It is typically distinguished by a double set of curly braces - `{{placeholder}}`.  
+Placeholders allow concrete values to be substituted when an element is either created of used.  They are found in many technologies.  For example, both Postman and IntelliJ's HTTP client use placeholders in their REST API definitions to denote network addresses or identifiers.  These values are supplied when the REST request is made through an environment file.
 
 Egeria has support for placeholders both in its [configuration documents](/concepts/configuration-document) and its [template](/features/templated-cataloguing/overview) support that is used when creating metadata.
 
@@ -14,7 +16,7 @@ The placeholders in the configuration document are called *placeholder variables
 
 ```
 ###
-# Set up the common properties needed to call your event bus.  The value of {{kafkaEndpoint}} is resolved in the
+# Set up the common properties needed to call your event bus.  The value of ~{kafkaEndpoint}~ is resolved in the
 # application.properties file using the `platform.placeholder.variables` property.
 
 POST {{baseURL}}/open-metadata/admin-services/users/{{adminUserId}}/servers/active-metadata-store/event-bus
@@ -23,16 +25,16 @@ Content-Type: application/json
 {
 "producer":
 {
-"bootstrap.servers":"{{kafkaEndpoint}}"
+"bootstrap.servers":"~{kafkaEndpoint}~"
 },
 "consumer":
 {
-"bootstrap.servers":"{{kafkaEndpoint}}"
+"bootstrap.servers":"~{kafkaEndpoint}~"
 }
 }
 
 ```
-The value to substitute for `{{kafkaEndpoint}}` is provided in the OMAG Server Platform's `application.properties` file, like this:
+The value to substitute for `~{kafkaEndpoint}~` is provided in the OMAG Server Platform's `application.properties` file, like this:
 ```
 platform.placeholder.variables=\
   {\
@@ -40,6 +42,8 @@ platform.placeholder.variables=\
   }
 ```
 It is read and used on each server start up.
+
+Notice that placeholder variables use `~{` and `}~` as delimiters to avoid confusion with Intellij HTTP variables.
 
 ??? education "Further information on placeholder variables"
 

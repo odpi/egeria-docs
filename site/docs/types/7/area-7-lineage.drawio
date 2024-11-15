@@ -1492,7 +1492,7 @@
         <mxCell id="G8yyt1Mi78ezNpBDfPQS-5" value="«relationship»&lt;br&gt;&lt;b&gt;UltimateSource&lt;/b&gt;" style="html=1;strokeColor=#666666;align=center;fillColor=#f5f5f5;gradientColor=#b3b3b3;" parent="G8yyt1Mi78ezNpBDfPQS-1" vertex="1">
           <mxGeometry x="224.5" y="450" width="206" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="G8yyt1Mi78ezNpBDfPQS-6" value="qualifiedName : string&lt;div&gt;label : string&lt;br&gt;distance : map&amp;lt;string, int&amp;gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="G8yyt1Mi78ezNpBDfPQS-1" vertex="1">
+        <mxCell id="G8yyt1Mi78ezNpBDfPQS-6" value="qualifiedName : string&lt;div&gt;label : string&lt;br&gt;hops : map&amp;lt;string, int&amp;gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="G8yyt1Mi78ezNpBDfPQS-1" vertex="1">
           <mxGeometry x="224.5" y="500" width="206" height="70" as="geometry" />
         </mxCell>
         <mxCell id="G8yyt1Mi78ezNpBDfPQS-8" value="downstreamFromLineageSource" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;" parent="G8yyt1Mi78ezNpBDfPQS-1" vertex="1">
@@ -1521,7 +1521,7 @@
         <mxCell id="G8yyt1Mi78ezNpBDfPQS-24" value="«relationship»&lt;br&gt;&lt;b&gt;UltimateDestination&lt;/b&gt;" style="html=1;strokeColor=#666666;align=center;fillColor=#f5f5f5;gradientColor=#b3b3b3;" parent="G8yyt1Mi78ezNpBDfPQS-1" vertex="1">
           <mxGeometry x="670.5" y="450" width="206" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="G8yyt1Mi78ezNpBDfPQS-25" value="qualifiedName : string&lt;br&gt;label : string&lt;br&gt;distance : map&amp;lt;string, int&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="G8yyt1Mi78ezNpBDfPQS-1" vertex="1">
+        <mxCell id="G8yyt1Mi78ezNpBDfPQS-25" value="qualifiedName : string&lt;br&gt;label : string&lt;br&gt;hops : map&amp;lt;string, int&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="G8yyt1Mi78ezNpBDfPQS-1" vertex="1">
           <mxGeometry x="670.5" y="498" width="206" height="72" as="geometry" />
         </mxCell>
         <mxCell id="G8yyt1Mi78ezNpBDfPQS-26" value="upstreamFromLineageDestination" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;" parent="G8yyt1Mi78ezNpBDfPQS-1" vertex="1">

@@ -909,6 +909,10 @@ extra:
       link: https://slack.lfaidata.foundation
       name: Egeria on Slack
 
+plugins:
+  - search
+  - mermaid2
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -924,7 +928,8 @@ markdown_extensions:
       custom_fences:
          - name: mermaid
            class: mermaid
-           format: !!python/name:pymdownx.superfences.fence_code_format
+           #format: !!python/name:pymdownx.superfences.fence_code_format
+           format: !!python/name:mermaid2: fence_mermaid_custom
   - pymdownx.keys
   - toc:
       permalink: true

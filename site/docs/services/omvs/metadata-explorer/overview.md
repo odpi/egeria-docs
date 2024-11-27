@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -45,7 +40,7 @@ Requests that return multiple results have optional request parameters to specif
 
 So if you were receiving a lot of results over a number of requests, the first request has *startFrom=0* and *pageSize* set to a positive number.  The next request would have *startFrom=startFrom+pageSize* and the same value for *pageSize*.
 
-If no results are found in any connected repository, a null result is returned.  If results are found, but they are all filtered out, then an empty array is returned, indicating to retrieve the next page.
+If no results are found in any connected repository, a null result is returned.  If results are found, but they are all filtered out, then an empty array is returned, indicating to retrieve the next page.  There is more information on paging in the [Developer's Guide](/guides/developer/finding-metadata/overview/#paging).
 
 ### Controlling time
 
@@ -76,7 +71,7 @@ The *ElementStatus* enum defines the status of an element in the metadata collec
 * OTHER: The instance is in a locally defined state.
 * DELETED: The instance has been deleted and is waiting to be purged.  It is kept in the metadata collection to support a restore request.  It is not returned on normal queries.
 
-There is more information on these statuses [here](/concepts/instanc-status).
+There is more information on these statuses [here](/concepts/instance-status).
 
 ### Ordering results
 

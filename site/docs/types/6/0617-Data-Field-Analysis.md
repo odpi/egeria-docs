@@ -6,7 +6,7 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# 0617 Data Field Analysis
+# 0617 Data Field Modelling
 
 Annotations can be attached to a DataField entity through the DataFieldAnalysis relationship.
 This relationship works with a specialization of Annotation called DataFieldAnnotation.

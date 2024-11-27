@@ -20,9 +20,6 @@ The annotations from a particular run of a survey action service are grouped tog
 * **[0610 Annotation](0610-Annotations.md)**
 * **[0611 Annotation Reviews](0612-Annotation-Reviews.md)**
 * **[0615 Schema Extraction](0615-Schema-Extraction.md)**
-
-* **[0616 Data Field Modelling](0616-Data-Field-Discovery.md)**
-
 * **[0620 Resource Profiling](0620-Resource-Profiling.md)**
 * **[0625 Data Class Discovery](0625-Data-Class-Discovery.md)**
 * **[0630 Semantic Discovery](0630-Semantic-Discovery.md)**
@@ -32,19 +29,13 @@ The annotations from a particular run of a survey action service are grouped tog
 * **[0660 Measurements](0660-Resource-Measures.md)**
 * **[0690 Request for Action](0690-Request-for-Action.md)**
 
+In addition, there are types for the manual design of data schemas as part of a data specification.
+
+* **[0616 Data Field Modelling](0616-Data-Field-Discovery.md)**
+
 ![UML Packages](area-6-discovery-overview.svg)
 
 Egeria's [Survey Action Framework (SAF)](/frameworks/saf/overview) supports the development and execution of [survey action services](/concepts/survey-action-services).  These services run in the [Survey Action OMES](/services/omes/survey-action/overview) hosted in an [Engine Host](/concepts/engine-host).  Survey action services use connectors from the [Open Connector Framework (OCF)](/frameworks/ocf/overview) to connect to the data assets and access the known metadata about them.
 
-## A moment of transition
-
-You may notice that some of the types in the UML models are coloured grey.  These types are exclusively for the [open discovery services](/concepts/open-discovery-service) which are now deprecated and replaced by the [survey action services](/concepts/survey-action-framework).  The type descriptions remain in the models to help people migrate their open discovery services to the survey action framework.
-
-The main differences are that the [*OpenDiscoveryAnalysisReport*](0605-Open-Discovery-Analysis-Reports.md) becomes the [*SurveyReport*](0603-Survey-Reports.svg) and the schema extraction process now uses [*SchemaElement*](/type/5/0501-Schema-Elements) entities rather than [*DataField*](0616-Data-Field-Discovery.md) entities.
-
-* **[0601 Open Discovery Engines and Services](0601-Open-Discovery-Engine.md)**
-* **[0605 Discovery Analysis Report](0605-Open-Discovery-Analysis-Reports.md)**
-* **[0616 Data Field Discovery](0616-Data-Field-Discovery.md)**
-* **[0617 Data Field Analysis](0617-Data-Field-Analysis.md)**
 
 --8<-- "snippets/abbr.md"

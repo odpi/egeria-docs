@@ -463,9 +463,7 @@ nav:
               - Design Patterns: types/5/0595-Design-Patterns.md
           - 6. Metadata Discovery:
               - Area 6 Metadata Discovery: types/6/index.md
-              - Open Discovery Engines and Services: types/6/0601-Open-Discovery-Engine.md
               - Survey Reports: types/6/0603-Survey-Reports.md
-              - Discovery Analysis Report: types/6/0605-Open-Discovery-Analysis-Reports.md
               - Annotations: types/6/0610-Annotations.md
               - Annotation Reviews: types/6/0612-Annotation-Reviews.md
               - Schema Extraction: types/6/0615-Schema-Extraction.md

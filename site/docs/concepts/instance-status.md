@@ -1,20 +1,20 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Instance status
+# Element/Instance status
 
 Most types of metadata element (instances) may be in one of two status:
 
 - ACTIVE - this means it is visible in the repositories.
 - DELETED - this means it has been soft-deleted and can only be retrieved via a special query.  For repositories that support history, it is possible to move the element back to the status it was before it was deleted using the `restore()` method.
 
-Some elements have an advanced lifecycle which means they can pass through multiple instance statuses during their lifetime.  
+Some elements have an advanced lifecycle which means they can pass through multiple statuses during their lifetime.  
 
 Egeria does not define the order or conditions that must be met to change status.  This is left to the deploying organization to decide their own governance processes.
 
-## Valid instance status values
+## Valid status values
 
-The list of valid values for instance status is defined by the [Open Metadata Repository Services (OMRS)](/services/omrs).  This is the complete list.
+The list of valid values for status is defined by the [Open Metadata Framework (OMF)](/frameworks/omf/overview)'s *ElementStatus* enum.  These are matched by the [Open Metadata Repository Services (OMRS)](/services/omrs) in its *InstanceStatus* enum.  This is the complete list.
 
 | Java/JSON name          | Ordinal | Name                    | Description                                               |
 |-------------------------|---------|-------------------------|-----------------------------------------------------------|

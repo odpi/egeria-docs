@@ -179,7 +179,16 @@ The access services can either all be enabled (with default configuration values
 
 The service URL marker for each service is shown in the example response given above.
 
-In both cases, it is possible to pass a list of properties to the access service that controls the behavior of each access service. These are sent in the request body. More details of which properties are supported are documented with each access service.
+In both cases, it is possible to pass a map of option names to values for the access service that controls the behavior of each access service. The map is sent as the request body.   The names of the options available on all access services are:
+
+* *SupportedZones* - a list of [governance zones](/concepts/governance-zone) that assets must belong to be retrieved through this access service. 
+* *DefaultZones* - a list of [governance zones](/concepts/governance-zone) that are assigned to any newly created asset.
+* *PublishZones* - a list of [governance zones](/concepts/governance-zone) that are assigned to an asset when it is published.
+
+The following options can be specified on any access service configuration, but they are only processed by [Community Profile OMAS](/services/omas/community-profile/overview).
+
+* *KarmaPointIncrement* - how many [karma points](/concepts/karma-point) should be awarded to an actor for each contribution (create/update/delete) to the open metadata ecosystem.  The default value is 1.
+* *KarmaPointPlateau* - how many karma points does an actor need to be awarded a [karma point plateau](/concepts/karma-point-plateau).  The default value is 500.
 
 ### Disable the access services
 

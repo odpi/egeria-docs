@@ -3,12 +3,12 @@
 
 # October 2024
 
-Welcome to the Egeria community's October 2024 newsletter.  Since our [last newsletter](/release-notes/june-2023), the community has been focused on adding support for Unity Catalog and improving the user experience in the *egeria workspaces*.
+Welcome to the Egeria community's October 2024 newsletter.  Since our [last newsletter](/release-notes/june-2024), the community has been focused on adding support for Unity Catalog and improving the user experience in the *egeria workspaces*.
 
 
 ## Full release notes for V5.1
 
-The full release notes for version 5.0 can be found on [Egeria's website](https://egeria-project.org/release-notes/5-1/).
+The full release notes for version 5.1 can be found on [Egeria's website](https://egeria-project.org/release-notes/previous/#release-50-july-2024).
 
 ## Future plans
 

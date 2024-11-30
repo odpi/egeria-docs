@@ -14,7 +14,7 @@ The Metadata Explorer OMVS has 11 different types of search operation.  The firs
 * getMetadataElementGUIDByUniqueName - Retrieve the metadata element's unique identifier (guid) using its unique name (again, typically the *qualifiedName* attribute but other attributes can be used if they are unique - such as *pathName* for a file).
 * getMetadataElementHistory - Retrieve all the versions of an element.
 
-The next two operations retrieve the relationships linked to an element, and the element attached at the far end of each relationship.
+The next four operations retrieve the relationships linked to an element, and the element attached at the far end of each relationship.
 
 * getAllRelatedMetadataElements - Retrieve the metadata elements connected to the supplied element.
 * getRelatedMetadataElements - Retrieve the metadata elements connected to the supplied element via a specific relationship type.
@@ -85,8 +85,8 @@ SequencingOrder is used for search requests against a metadata collection.  It d
 * CREATION_DATE_OLDEST: return in the order that the elements were created with the oldest ones first.
 * LAST_UPDATE_RECENT: return in the order of the latest update with the most recent first.
 * LAST_UPDATE_OLDEST: return in the order of the latest update with the oldest first.
-* PROPERTY_ASCENDING: return in ascending order of the values in a sequencing property.  The sequencing property will be supplied in the * sequencingparameter.
-* PROPERTY_DESCENDING: return in descending order of the values in a sequencing property.  The sequencing property will be supplied as a parameter.
+* PROPERTY_ASCENDING: return in ascending order of the values in a sequencing property.  The sequencing property will be supplied in the *sequencing* parameter.
+* PROPERTY_DESCENDING: return in descending order of the values in a sequencing property.  The sequencing property will be supplied in the *sequencing* parameter.
 
 Note: not all repositories support ordering.  The results may vary between repository types.
 
@@ -97,7 +97,7 @@ Each access service can be set up to support a restrictive set of governance zon
 By default, all requests are routed via Feedback Manager OMVS to Asset Manager OMAS.  If you wish the request to be routed via a different view service (OMVS) or access service (OMAS) it is possible to use one or other of these request parameters:
 
 * viewServiceURLMarker optional view service URL marker (overrides accessServiceURLMarker) to route the request via a different view service and onto its default access service.
-* accessServiceURLMarker optional access service URL marker used to identify which back end service
+* accessServiceURLMarker optional access service URL marker used to identify which back end service.
 
 The URL marker is derived from the name of the requested service - take the short two-word service name, convert to lower case and add a hyphen between the two words - so Feedback Manager OMVS's URL Marker is feedback-manager.
 

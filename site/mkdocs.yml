@@ -311,7 +311,7 @@ nav:
       - Core Egeria:
             - Latest Release: release-notes/latest.md
             - Next Release: release-notes/next.md
-            - Previous releases: release-notes/previous.md
+            - All releases: release-notes/previous.md
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:
@@ -354,6 +354,7 @@ nav:
               - Actor Roles: types/1/0118-Actor-Roles.md
               - Team Roles: types/1/0119-Team-Roles.md
               - Assignment Scopes: types/1/0120-Assignment-Scopes.md
+              - Contribution: types/1/0125-Contribution.md
               - Projects: types/1/0130-Projects.md
               - Meetings: types/1/0135-Meetings.md
               - Actions for People: types/1/0137-Actions.md

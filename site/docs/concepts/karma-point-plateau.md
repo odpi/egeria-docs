@@ -6,8 +6,8 @@
 
 A karma point plateau identifies a significant contribution to open metadata.
 By default, a karma point plateau is achieved for every 500 [karma points](karma-point.md) awarded.
-However the threshold for the karma point plateau can be 
-[changed at server start up](/concepts/karma-point-plateau).
+However, the threshold for the karma point plateau can be 
+[changed at server configuration](/concepts/karma-point-plateau).
 
 The Community Profile OMAS generates a
 [Karma Point Plateau Event](/concepts/karma-point-plateau)

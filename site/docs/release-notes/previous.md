@@ -2,9 +2,15 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
-# Earlier releases
+# All releases
 
-???+ info "Release 5.0 (July 2024)"
+??? info "Release 5.2 (In progress - expected December 2024)"
+--8<-- "snippets/release-notes/5-2.md"
+
+??? info "Release 5.1 (October 2024)"
+    --8<-- "snippets/release-notes/5-1.md"
+
+??? info "Release 5.0 (July 2024)"
     --8<-- "snippets/release-notes/5-0.md"
 
 ??? info "Release 4.3 (September 2023)"

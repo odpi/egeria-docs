@@ -16,6 +16,8 @@ This guide supports developers wishing to customize Egeria to run in additional 
 
 The developer guide is organized as follows:
 
+- [Working with the open metadata and governance APIs](#working-with-the-open-metadata-and-governance-apis) - Using Egeria's open metadata and governance APIs to create new services or to augment existing services.
+
 - [Working with the platform APIs](#working-with-the-platform-apis) - Using Egeria APIs to configure and operate Egeria's [OMAG Server Platform](/concepts/omag-server-platform).
 
 - [Using connectors](#using-connectors) - initializing and calling a digital resource connector from external services and other connectors.
@@ -24,11 +26,17 @@ The developer guide is organized as follows:
 
 - [Building open metadata archives](#building-open-metadata-archives) - Working with [Open Metadata Archives](/concepts/open-metadata-archive) to add new open metadata types or standard metadata definitions that can be shared and loaded into multiple metadata repositories.
 
-- [Working with the open metadata and governance APIs](#working-with-the-open-metadata-and-governance-apis) - Using Egeria's open metadata and governance APIs to create new services or to augment existing services.
-
 - [Adding your own registered services](#adding-registered-services) - Extending Egeria by adding new [registered services](/concepts/omag-subsystem/#registered-services).
 
 - [Build considerations](#build-considerations) - Best practises for building extensions to Egeria.
+
+
+## Working with the open metadata and governance APIs
+
+The open metadata and governance APIs are provided by the [Open Metadata View Services (OMVSs)](/services/omvs).  
+The OMVSs run in the [view server](/concepts/view-server) and are designed to be consumed by user interface code typically written in JavaScript.  These interfaces are called directly as REST API calls.  In addition, there is the [Python Client](/guides/developer/python-client/overview) that enables you to call Egeria's services using the python programming language.
+
+
 
 ## Working with the platform APIs
 
@@ -45,32 +53,28 @@ The Java clients for a specific platform API are located in its `-client` module
 Below is an example of using the [Administration Services](/services/admin-services/overview) to construct its `MetadataAccessStoreConfigurationClient` client.  As the name suggests, this client is used to configure a new [metadata access store](/concepts/metadata-access-store) server.
 
 ??? example "Example: Creating the configuration client for a Metadata Access Store"
-    ```java linenums="1"
-    MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
-    ```
+```java linenums="1"
+MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
+```
 
 Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/MetadataAccessStoreConfigurationClient.html){ target=javadoc }.  
 For example, the code below sets up the descriptive properties of the server.
 
 ??? example "Example: Calling the configuration client for a Metadata Access Store"
-    ```java linenums="1"
-    client.setServerDescription("Metadata Access Store called " + serverName + " running on platform " + platformURLRoot);
-    client.setServerUserId(serverName + "npa");
-    client.setServerType(null); // Let the admin service set up the server types
-    client.setOrganizationName(organizationName);
-    client.setMaxPageSize(maxPageSize);
-    ```
-    
+```java linenums="1"
+client.setServerDescription("Metadata Access Store called " + serverName + " running on platform " + platformURLRoot);
+client.setServerUserId(serverName + "npa");
+client.setServerType(null); // Let the admin service set up the server types
+client.setOrganizationName(organizationName);
+client.setMaxPageSize(maxPageSize);
+```
+
 !!! education "Further information"
-    
+
     - [Administration Services](/services/admin-services/overview) for both configuring the OMAG Server Platform and OMAG Servers as well as starting and stopping them.
     - [Platform Services](/services/platform-services/overview) for querying the status of the platform.
     - [Egeria's Javadoc](https://odpi.github.io/egeria/index.html).
-  
 
-## Working with the open metadata and governance APIs
-
-The open metadata and governance APIs are provided by the [Open Metadata Access Services (OMASs)](/services/omas) and the [Open Metadata View Services (OMVSs)](/services/omvs).  The OMASs run in the [metadata access server](/concepts/metadata-access-server) and provide specialized services for querying and maintaining metadata in the local metadata repository (if any) and any metadata repository connected via [cohorts](/concepts/cohort-member).  The clients of the OMASs are written in Java and are designed to be used by applications running behind the fire-wall with the metadata repositories.  The OMVSs run in the [view server](/concepts/view-server) and are designed to be consumed by user interface code typically written in JavaScript.  These interfaces are called directly as REST API calls.
 
 ### Using the OMAS clients
 
@@ -92,7 +96,7 @@ Once the client is created, use it to call the API it offers which is documented
 ```
 ### Maintaining metadata
 
-Each OMAS has its own specialized API and its own style, but typically there are methods for creating, updating and deleting elements along with methods for linking them together and unlinking them - also maintaining classifications.  If the OMAS is maintaining assets, you may see methods for publishing and withdrawing assets.  The publish method updates the asset's zones to the OMAS's `PublishedZones` and the `withdraw()` method updates the asset's zones to the OMAS's `DefaultZones`.  Typically, the asset is only visible to most users when the published zones are in use.  The default zones are used while the asset is being set up.
+Each OMVS has its own specialized API and its own style, but typically there are methods for creating, updating and deleting elements along with methods for linking them together and unlinking them - also maintaining classifications.  If the OMVS is maintaining assets, you may see methods for publishing and withdrawing assets.  The publish method updates the asset's zones to the OMAS's `PublishedZones` and the `withdraw()` method updates the asset's zones to the OMAS's `DefaultZones`.  Typically, the asset is only visible to most users when the published zones are in use.  The default zones are used while the asset is being set up.
 
 ### Retrieving metadata
 

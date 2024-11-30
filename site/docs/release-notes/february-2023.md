@@ -14,7 +14,7 @@ If you are working in the *main* branch of Egeria, you will notice that the rele
 * there are performance enhancements that are not strictly backward compatible for [repository connector](/concepts/repository-connector) implementation.
 
 !!! info "Core Egeria Releases"
-    * [Release 4.0](/release-notes/4-0) is expected to release by April 2023.  It will use Java 17 and be built with Gradle.
+    * [Release 4.0](/release-notes/previous/#release-40-march-2023) is expected to release by April 2023.  It will use Java 17 and be built with Gradle.
 
 ### Moving to Gradle
 

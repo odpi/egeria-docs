@@ -11,7 +11,7 @@ This may be for:
 * Linking information together
 * Removing obsolete information
 
-Karma points are awarded automatically.  They are stored in an actors's [actor profile](/concepts/personal-profile).
+Karma points are awarded automatically.  They are stored in an actor's [actor profile](/concepts/personal-profile).
 When an actor's karma point total reaches a multiple of the karma point notification threshold,
 the Community Profile OMAS sends a notification on its [OutTopic](/concepts/out-topic).
 

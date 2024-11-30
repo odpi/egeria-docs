@@ -10,7 +10,7 @@ This is November's monthly report from the Egeria community.
 ### Core Egeria
 
 !!! info "Core Egeria Releases"
-    [Release 3.13](/release-notes/3-13) was shipped in early November 2022.  The work this month is contributing to [Release 3.14](/release-notes/3-14).
+    [Release 3.13](/release-notes/previous/#release-313-november-2022) was shipped in early November 2022.  The work this month is contributing to [Release 3.14](/release-notes/previous/#release-314-december-2022).
 
 #### Support for DEREGISTERED_REPOSITORY provenance type
 

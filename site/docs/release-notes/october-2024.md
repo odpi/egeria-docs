@@ -8,7 +8,7 @@ Welcome to the Egeria community's October 2024 newsletter.  Since our [last news
 
 ## Full release notes for V5.1
 
-The full release notes for version 5.1 can be found on [Egeria's website](https://egeria-project.org/release-notes/previous/#release-50-july-2024).
+The full release notes for version 5.1 can be found on [Egeria's website](https://egeria-project.org/release-notes/previous/#release-51-october-2024).
 
 ## Future plans
 

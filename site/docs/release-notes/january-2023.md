@@ -87,8 +87,8 @@ The CTS provides an intense test of an OMRS repository connector implementation.
 ## Core Egeria
 
 !!! info "Core Egeria Releases"
-    * [Release 3.15](/release-notes/3-15) branched on 31st January 2023.  This will be the last release on Java 11 with support for a Maven build.
-    * [Release 4.0](/release-notes/4-0) is expected to release by April 2023.  It will use Java 17 and be built with Gradle.
+    * [Release 3.15](/release-notes/previous/#release-315-february-2023) branched on 31st January 2023.  This will be the last release on Java 11 with support for a Maven build.
+    * [Release 4.0](/release-notes/previous/#release-40-march-2023) is expected to release by April 2023.  It will use Java 17 and be built with Gradle.
 
 ## Events
 

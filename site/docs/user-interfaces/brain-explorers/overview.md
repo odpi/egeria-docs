@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Egeria Explorers
+# Egeria's Brain Explorers
 
 
 ## Open Metadata Type Explorer

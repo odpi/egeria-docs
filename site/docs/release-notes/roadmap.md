@@ -23,7 +23,7 @@ Support the leadership team for a governance program providing the ability to cr
 
 ![Governance Solutions](governance-solution-functional-detail.svg)
 
-The implementation of a governance solution is focused mainly on the extension of the [Egeria UI](/user-interfaces) to support additional roles and functions. They make use of the services provided by the [developer platform](#developer-platform) and may exploit additional content, utilities and connector implementations from the integration platform.
+The implementation of a governance solution is focused mainly on the extension of the [Egeria User Interfaces](/user-interfaces) and associated reference data to support additional roles and functions. They make use of the services provided by the [developer platform](#developer-platform) and may exploit additional content, utilities and connector implementations from the integration platform.
 
 ### Education
 
@@ -33,10 +33,10 @@ Provides educational resources for different personas and starting points.
 
 Egeria's education aims to broaden the knowledge of people who need to work with digital resources about metadata, governance practices and the use of Egeria. They are It is based around the [Coco Pharmaceuticals](/practices/coco-pharmaceuticals/) scenario and are organized by persona, so you can target your learning to your interests.
 
-- The content packs are included in the *omag-server-platform* distribution created by the build for *egeria.git*. They are formatted as [Open Metadata Archives](/concepts/open-metadata-arachive) and can be configured to load at server startup using the [Administration Services](/guides/admin/servers) or while the server is running using the [Server Operations](/guides/operations/overview).
-- There are also many sample clients, server configurations and sample data included in the *omag-server-platform* distribution created by the build for *egeria.git*.  They are accompanied by `README.md` files to explain how to use them.
-- Reference data in the form of [metadata valid values](/guides/planning/valid-values/overivew) is supplied in *omag-server-platform* distribution created by the build for *egeria.git*.
+- The [Egeria workbooks](https://github.com/odpi/egeria-workspaces/blob/main/workspaces/egeria-workbooks.ipynb) are part of the [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main) deployment environments.  They provide guidance and examples on how to use Egeria and how to adapt it to support your use cases.  This is an excellent starting point to get hands-one experience with Egeria.
+- The [open-metadata-samples](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples) module in the main git repository for the Egeria code - *egeria.git* - includes many coding samples showing how to use the Egeria interfaces. There are also many sample clients, server configurations and sample data included in the *[open-metadata-deployment](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment)* module.  They are accompanied by `README.md` files to explain how to use them.
 - The [Hands-on labs](/education/open-metadata-labs/overview) provide practical experiences in running the Egeria code and using the different services. 
+- This website ([https://egeria-project.org/](https://egeria-project.org/)) contains comprehensive documentation on Egeria's features.
 - The [Governance practices](/practices) provides governance best practices. They aim to guide a team that is setting up or revising their governance program through common governance tasks.
 
 ### User Interfaces
@@ -45,9 +45,10 @@ Most users will experience the open metadata ecosystem via their own tools.  How
 
 ![UIs](ui-functional-detail.svg)
 
-- *Rich Widgets and Textual UIs* provide visualization of key element.  They are designed for technical people operating the platform.
-- *Brain Explorers* are cloud based websites allowing you to interact with a graph interface to visualized open metadata content.
-- *Documentation site* contains comprehensive documentation on Egeria's features.
+- *[Hey Egeria](/user-interfaces/hey-egeria/overview)* provide command line controlled commands and visualizations for a running Egeria system.  They are designed for technical and data professional working in the open metadata ecosystem and operating Egeria infrastructure.
+- *[Scripting commands](/guides/developer/scripting-commands/overview)* allow calls to Egeria's services from scripting languages to aid automation of governance.
+- *[Brain Explorers](/user-interfaces/brain-explorers/overview/)* are cloud based websites allowing you to interact with a graph interface to visualized open metadata content.
+- *[Mermaid graph visualization](user-interfaces/mermaid/overview)* for visualizing collections of related open metadata elements.
 
 ### Integration platform
 
@@ -55,10 +56,11 @@ Supports integration of popular technologies by installing and configuring Egeri
 
 ![Integration Platform](integration-platform-functional-detail.svg)
 
-- *Utilities and converters*: support for different standard formats to load industry standard definitions, models, glossaries, and other content packs built on industry standard definitions, models, glossaries and other content packs. Examples include JSON-LD, OWL/RDF, XML, ...
-- There are clients written in both Java and Python to aid programmers calling the Egeria services.
-- [Pre-canned connectors to third party technologies](/connectors): popular metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
-- [Conformance test suite](/guides/cts/overview): Supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
+- The *[Connector Catalog](/connectors)* provides connectors to popular third party technologies such as metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
+- There are clients written in both *[Java](/guides/developer/java-clients/overview)* and *[Python](/guides/developer/python-clients/overview)* to aid programmers calling the Egeria services.
+- The [content packs](/content-packs) provide metadata, reference data and connector configurations to help get you up-and running with the supplied capability of Egeria.  They are formatted as [Open Metadata Archives](/concepts/open-metadata-arachive) and can be configured to load at server startup using the [Administration Services](/guides/admin/servers) or while the server is running using the [Runtime Manager OMVS](/services/omvs/runtime-manager/overview).
+- The *[Utilities](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-dev-utilities)* and *[reports](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-reports)* support common tasks that retrieve and update metadata.
+- The *[Conformance test suite (CTS)](/guides/cts/overview)* supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
 
 ### Developer platform
 
@@ -114,11 +116,10 @@ The runtimes package up the services to simplify the process of deploying Egeria
 
 ![Deployment Runtimes](deployment-runtimes-functional-detail.svg)
 
-There are three runtimes:
+There are two runtimes:
 
-* [OMAG Server Platform](/concepts/omag-server-platform) provides support for running multiple [OMAG Servers](/concepts/omag-server).
-* OMAG Server runtime provides support for running a single [OMAG Servers](/concepts/omag-server).
-* Egeria UI Application is a deprecated runtime for the backend services for the Egeria General User UI.
+* [OMAG Server Platform](/concepts/omag-server-platform) provides support for dynamically configuring and running multiple [OMAG Servers](/concepts/omag-server).
+* OMAG Server runtime provides support for running a single [OMAG Server](/concepts/omag-server).  It is designed for static production deployment into a cloud-native Kubernetes environment.
 
 ### Deployment resources
 

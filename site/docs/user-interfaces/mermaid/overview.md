@@ -87,7 +87,7 @@ Mermaid is a mature standard that has widespread support.  Below are some exampl
 
 ### Jupyter Notebooks
 
-If you are using *Jupyter Notebooks* with [pyegeria](user-interfaces/python-widgets/overview/#installation) installed, such as with the [egeria-workspaces](https://github.com/odpi/egeria-workspaces), it is possible to render Mermaid strings using the `render_mermaid(mermaid_string)` function call.
+If you are using *Jupyter Notebooks* with [pyegeria](user-interfaces/hey-egeria/overview/#installation) installed, such as with the [egeria-workspaces](https://github.com/odpi/egeria-workspaces), it is possible to render Mermaid strings using the `render_mermaid(mermaid_string)` function call.
 
 ### Draw.io
 

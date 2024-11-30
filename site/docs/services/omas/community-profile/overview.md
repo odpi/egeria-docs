@@ -21,21 +21,33 @@ With or without MDM, it is important that the Community Profile OMAS can operate
 
 ## Using the Community Profile OMAS
 
-The Community Profile OMAS may be called directly through its [Java client](/guides/developer/java-clients/community-profile).  This will call the Community Profile OMAS REST API running in the requested [metadata access server](/concepts/metadata-access-server).
+The Community Profile OMAS may be called directly through its [Java client](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/communityprofile/client/package-summary.html).  This will call the Community Profile OMAS REST API running in the requested [metadata access server](/concepts/metadata-access-server).
 
-The Community Profile OMAS running in the metadata access server is also monitoring changes to open metadata. It will emit an [event](/concepts/out-topic) whenever profile, organizational or community related metadata is created or changed in some way.  The java client provides a mechanism for third party technology to register a listener to receive these events.
+The Community Profile OMAS is designed to cover many of the administrative tasks relating to managing information about people, teams and communities.
+
+Most of the interaction with the Community Profile OMAS will be driven by individuals.
+
+- All users will be able to manage their [personal profile](/concepts/personal-profile) and [lists of favourite assets, projects and communities](/concepts/favorite-things-collection).
+
+- All users will be able to manage any [to dos](/concepts/to-do) that have been assigned to them.
+
+- All users will be able to create a [community](/concepts/community) and administer it. This includes managing members, the communities resources and the notifications sent to the members.
+
+- All users can also query the [communities](/concepts/community) and [teams](/concepts/organization/#team.md) they are a member of.
+
+- All users will be able to search for people, teams and communities.
+
+There is also support for an administrator to create and delete personal profiles as individuals join and leave the organization and also manage the organization's departmental structure.  The assumption is that the organization already has at least one system that manages this information, and so Community Profile OMAS is designed to be integrated with existing systems in order to keep the profiles and departmental structure up-to-date.
+
+
+The Community Profile OMAS running in the [metadata access server](/concepts/metadata-access-server) is also monitoring changes to open metadata. It will emit an [event](/concepts/out-topic) whenever profile, organizational or community related metadata is created or changed in some way.  The java client provides a mechanism for third party technology to register a listener to receive these events.
 
 
 ## Karma points 
 
-If an individual has a
-[Personal profile](/concepts/personal-profile)
-the Community Profile OMAS will reward him/her whenever
-they contribute to open metadata.
-These rewards are in the form of
-[karma points](/concepts/karma-point).
+If an actor has an [Actor Profile](/types/1/0110-Actors), the Community Profile OMAS will reward him/her/it whenever they contribute to open metadata. These rewards are in the form of [karma points](/concepts/karma-point).
 
-The Community Profile OMAS is responsible for maintaining the count of the karma points for an individual based on their contributions to open metadata.  It does this by listening to the metadata changes occurring in the metadata repositories and updates the personal profile of each user making a contribution.
+The Community Profile OMAS is responsible for maintaining the count of the karma points for an actor based on their contributions to open metadata.  It does this by listening to the metadata changes occurring in the metadata repositories and updates the personal profile of each user making a contribution.
 
 The Community Profile OMAS java client provides a method to retrieve the current karma point total for an individual.
 
@@ -44,7 +56,6 @@ The access service option property *KarmaPointPlateau* indicates the multiple of
 ## Automated exchange of metadata about people, organizations and communities
 
 The [Organization Integrator OMIS](/services/omis/organization-integrator/overview) supports [integration connectors](/concepts/integration-connector) that manage the exchange of metadata about people, organizations and communities with third party systems.
-
 
 
 

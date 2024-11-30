@@ -132,6 +132,7 @@ nav:
       - Developer Guide:
           - Developer Guide: guides/developer/index.md
           - Retrieving Metadata: guides/developer/finding-metadata/overview.md
+          - Scripting Commands: guides/developer/scripting-commands/overview.md
           - Building Archives:
               - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
               - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
@@ -210,7 +211,7 @@ nav:
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
-          - Python Widgets: user-interfaces/python-widgets/overview.md
+          - Hey Egeria: user-interfaces/hey-egeria/overview.md
           - Graph Visualization: user-interfaces/mermaid/overview.md
           - Explorers: user-interfaces/brain-explorers/overview.md
       - Features:

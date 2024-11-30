@@ -5,28 +5,21 @@
 
 ## Using the Community Profile OMAS
 
-The Community Profile OMAS is designed to cover many of the administrative tasks relating to managing
-information about people, teams and communities.
+The Community Profile OMAS is designed to cover many of the administrative tasks relating to managing information about people, teams and communities.
 
 Most of the interaction with the Community Profile OMAS will be driven by individuals.
  
-- All users will be able to manage their [personal profile](/concepts/personal-profile)
-  and [lists of favourite assets, projects and communities](/concepts/favorite-things-collection).
+- All users will be able to manage their [personal profile](/concepts/personal-profile) and [lists of favourite assets, projects and communities](/concepts/favorite-things-collection).
   
 - All users will be able to manage any [to dos](/concepts/to-do) that have been assigned to them.
   
-- All users will be able to create a [community](/concepts/community) and administer it.
-  This includes managing members, the communities resources and the notifications sent to the members.
+- All users will be able to create a [community](/concepts/community) and administer it. This includes managing members, the communities resources and the notifications sent to the members.
   
-- All users can also query the [communities](/concepts/community) and
-  [teams](/concepts/organization/#team.md) they are a member of. 
+- All users can also query the [communities](/concepts/community) and [teams](/concepts/organization/#team.md) they are a member of. 
 
 - All users will be able to search for people, teams and communities.
 
-There is also support for an administrator to create and delete personal profiles as individuals join and leave the
-organization and also manage the organization's departmental structure.  The assumption is that the organization
-already has at least one system that manages this information, and so Community Profile OMAS is designed to be integrated
-with existing systems in order to keep the profiles and departmental structure up-to-date.
+There is also support for an administrator to create and delete personal profiles as individuals join and leave the organization and also manage the organization's departmental structure.  The assumption is that the organization already has at least one system that manages this information, and so Community Profile OMAS is designed to be integrated with existing systems in order to keep the profiles and departmental structure up-to-date.
 
 Below are the list of tasks supported by the Community Profile OMAS.
 

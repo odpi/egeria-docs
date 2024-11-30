@@ -7,7 +7,8 @@ Most users will work with Egeria's open metadata through their existing tools.  
 
 There are, however, some specialist user interfaces provided to support functions that are unique to Egeria.
 
-* Egeria's [Python widgets](/user-interfaces/python-widgets/overview) provide text-based displays of Egeria's runtime status, and displays of related metadata elements.  They are aimed at a technical user who is working directly with Egeria and wishes to verify that something is either set up correctly or operating as expected.
+* [Hey Egeria](/user-interfaces/hey-egeria/overview) provide text-based displays of Egeria's runtime status, and displays of related metadata elements.  They are aimed at a technical user who is working directly with Egeria and wishes to verify that something is either set up correctly or operating as expected.
+* [Graph visualization using Mermaid](/user-interfaces/mermaid/overview) allows visualization of collections of open metadata elements in environments such as Jupyter Notebooks and JavaScript that supports Mermaid Markdown.
 * Egeria's [Explorers](/user-interfaces/brain-explorers/overview) provide a cloud-based graphical interface for exploring Egeria's [Open Metadata Type System](/types) and its [Content Packs](/content-packs).
 
 --8<-- "snippets/abbr.md"

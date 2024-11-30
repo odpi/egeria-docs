@@ -9,7 +9,7 @@ This is April's monthly report from the Egeria community.  This month we saw the
 
 The 4.0 release of Egeria Core is now available and the connectors for this level are in the process of being released.
 
-This release was an important achievement for the Egeria community. It involved upgrades to our Java level, a moved to a gradle-only build, a later level of Spring, plus removal of deprecated function.  There were also changes to the repository connectors and integration connector interfaces that requires rework to these types of connectors.  The [release notes](/release-notes/4-0){target=blank} provide detailed descriptions of these changes.
+This release was an important achievement for the Egeria community. It involved upgrades to our Java level, a moved to a gradle-only build, a later level of Spring, plus removal of deprecated function.  There were also changes to the repository connectors and integration connector interfaces that requires rework to these types of connectors.  The [release notes](/release-notes/previous/#release-40-march-2023){target=blank} provide detailed descriptions of these changes.
 
 Release 4.0 also included a new feature for the integration daemon called [Integration Groups](#integration-groups){target=blank}.
 

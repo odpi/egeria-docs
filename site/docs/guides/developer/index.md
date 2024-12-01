@@ -7,11 +7,6 @@ This guide supports developers wishing to customize Egeria to run in additional 
 
 --8<-- "docs/guides/developer/developer-choices.md"
 
-??? attention "REST APIs are intended for internal use"
-    The REST APIs are usable directly for calling from non-Java platforms; however, they are designed for the internal use of Egeria and are not guaranteed to be backwards compatible.
-    
-    The structure of the URL for an Egeria REST API varies lightly depending on whether it is a call to an [OMAG Server Platform](/concepts/omag-server-platform) service or an [OMAG Server](/concepts/omag-server) service.
-
 ## Getting Started
 
 The developer guide is organized as follows:
@@ -53,21 +48,21 @@ The Java clients for a specific platform API are located in its `-client` module
 Below is an example of using the [Administration Services](/services/admin-services/overview) to construct its `MetadataAccessStoreConfigurationClient` client.  As the name suggests, this client is used to configure a new [metadata access store](/concepts/metadata-access-store) server.
 
 ??? example "Example: Creating the configuration client for a Metadata Access Store"
-```java linenums="1"
-MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
-```
+    ```java linenums="1"
+    MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
+    ```
 
 Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/MetadataAccessStoreConfigurationClient.html){ target=javadoc }.  
 For example, the code below sets up the descriptive properties of the server.
 
 ??? example "Example: Calling the configuration client for a Metadata Access Store"
-```java linenums="1"
-client.setServerDescription("Metadata Access Store called " + serverName + " running on platform " + platformURLRoot);
-client.setServerUserId(serverName + "npa");
-client.setServerType(null); // Let the admin service set up the server types
-client.setOrganizationName(organizationName);
-client.setMaxPageSize(maxPageSize);
-```
+    ```java linenums="1"
+    client.setServerDescription("Metadata Access Store called " + serverName + " running on platform " + platformURLRoot);
+    client.setServerUserId(serverName + "npa");
+    client.setServerType(null); // Let the admin service set up the server types
+    client.setOrganizationName(organizationName);
+    client.setMaxPageSize(maxPageSize);
+    ```
 
 !!! education "Further information"
 

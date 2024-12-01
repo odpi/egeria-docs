@@ -22,6 +22,7 @@ To make use of one of these clients, first import the client you need. The comma
 from pyegeria import EgeriaTech
 
 ```
+
 ----
 
 The `pyegeria` functions require information about the calling user and the network location of Egeria's runtime.  These are passed to the client when it is created.  The CLI also needs this information and to save the caller having to supply it on every request, it supports environment variables.  These same environment variables can be used with the `pyegeria` functions.

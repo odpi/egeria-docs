@@ -23,4 +23,9 @@ To check that the widgets and CLI are up-to-date, enter the following command on
 pipx upgrade pyegeria
 ```
 
+!!! info "Further Information"
+    * [Python Clients](/guides/developer/python-clients/overview)
+    * [Scripting commands](/guides/developer/scripting-commands/overview)
+    * [Hey Egeria](/user-interfaces/hey-egeria/overview)
+
 --8<-- "snippets/abbr.md"

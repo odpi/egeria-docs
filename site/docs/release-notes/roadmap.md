@@ -19,7 +19,7 @@ Egeria aims to deliver against 6 capability layers:
 
 ### Governance solutions
 
-Support the leadership team for a governance program providing the ability to create governance definitions, subject areas and governance roles and to monitor the success of the governance efforts across the enterprise.
+The governance solutions aim to support an organization's governance efforts by providing pre-built capability not typically found in commercial tools.
 
 ![Governance Solutions](governance-solution-functional-detail.svg)
 
@@ -31,36 +31,33 @@ Provides educational resources for different personas and starting points.
 
 ![Education](education-functional-detail.svg)
 
-Egeria's education aims to broaden the knowledge of people who need to work with digital resources about metadata, governance practices and the use of Egeria. They are It is based around the [Coco Pharmaceuticals](/practices/coco-pharmaceuticals/) scenario and are organized by persona, so you can target your learning to your interests.
+Egeria's education aims to broaden the knowledge of people who need to work with digital resources about metadata, governance practices and the use of Egeria.  It is based around the [Coco Pharmaceuticals](/practices/coco-pharmaceuticals/) scenario and are organized by persona, so you can target your learning to your interests.
 
-- The [Egeria workbooks](https://github.com/odpi/egeria-workspaces/blob/main/workspaces/egeria-workbooks.ipynb) are part of the [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main) deployment environments.  They provide guidance and examples on how to use Egeria and how to adapt it to support your use cases.  This is an excellent starting point to get hands-one experience with Egeria.
+- The [Egeria workbooks](https://github.com/odpi/egeria-workspaces/blob/main/workspaces/egeria-workbooks.ipynb) are part of the [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main) deployment environments.  They provide guidance and examples on how to use Egeria and how to adapt it to support your use cases.  This is an excellent starting point to get hands-on experience with Egeria.
 - The [open-metadata-samples](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples) module in the main git repository for the Egeria code - *egeria.git* - includes many coding samples showing how to use the Egeria interfaces. There are also many sample clients, server configurations and sample data included in the *[open-metadata-deployment](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment)* module.  They are accompanied by `README.md` files to explain how to use them.
-- The [Hands-on labs](/education/open-metadata-labs/overview) provide practical experiences in running the Egeria code and using the different services. 
+- The [Open Metadata Labs](/education/open-metadata-labs/overview) build out an operational open metadata ecosystem and show how different governance use cases can be implemented. 
 - This website ([https://egeria-project.org/](https://egeria-project.org/)) contains comprehensive documentation on Egeria's features.
 - The [Governance practices](/practices) provides governance best practices. They aim to guide a team that is setting up or revising their governance program through common governance tasks.
 
 ### User Interfaces
 
-Most users will experience the open metadata ecosystem via their own tools.  However Egeria does have some simple user interfaces to cover its unique capabilities"
+Most users will experience the open metadata ecosystem via their own tools.  However Egeria does have some simple user interfaces to cover its unique capabilities.
 
 ![UIs](ui-functional-detail.svg)
 
 - *[Hey Egeria](/user-interfaces/hey-egeria/overview)* provide command line controlled commands and visualizations for a running Egeria system.  They are designed for technical and data professional working in the open metadata ecosystem and operating Egeria infrastructure.
 - *[Scripting commands](/guides/developer/scripting-commands/overview)* allow calls to Egeria's services from scripting languages to aid automation of governance.
 - *[Brain Explorers](/user-interfaces/brain-explorers/overview/)* are cloud based websites allowing you to interact with a graph interface to visualized open metadata content.
-- *[Mermaid graph visualization](user-interfaces/mermaid/overview)* for visualizing collections of related open metadata elements.
+- *[Mermaid graph visualization](/user-interfaces/mermaid/overview)* for visualizing collections of related open metadata elements.
 
 ### Integration platform
 
-Supports integration of popular technologies by installing and configuring Egeria. Minimal coding is still required around unusual and home-grown tools and technologies.
+Supports the integration of popular technologies into the open metadata ecosystem with pre-built connectors that are installed in the standard runtime and automatically configured and started when the appropriate content pack is loaded. Minimal coding (using the developer platform) is still required around unusual and home-grown tools and technologies.
 
 ![Integration Platform](integration-platform-functional-detail.svg)
 
 - The *[Connector Catalog](/connectors)* provides connectors to popular third party technologies such as metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
-- There are clients written in both *[Java](/guides/developer/java-clients/overview)* and *[Python](/guides/developer/python-clients/overview)* to aid programmers calling the Egeria services.
-- The [content packs](/content-packs) provide metadata, reference data and connector configurations to help get you up-and running with the supplied capability of Egeria.  They are formatted as [Open Metadata Archives](/concepts/open-metadata-arachive) and can be configured to load at server startup using the [Administration Services](/guides/admin/servers) or while the server is running using the [Runtime Manager OMVS](/services/omvs/runtime-manager/overview).
-- The *[Utilities](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-dev-utilities)* and *[reports](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-reports)* support common tasks that retrieve and update metadata.
-- The *[Conformance test suite (CTS)](/guides/cts/overview)* supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
+- The *[Content Packs](/content-packs)* provide metadata, reference data and connector configurations to help get you up-and running with the supplied capability of Egeria.  They are formatted as [Open Metadata Archives](/concepts/open-metadata-arachive) and can be configured to load at server startup using the [Administration Services](/guides/admin/servers) or while the server is running using the [Runtime Manager OMVS](/services/omvs/runtime-manager/overview).
 
 ### Developer platform
 
@@ -72,6 +69,12 @@ The developer platform contains the core Egeria implementation and provides supp
 
 Its use is described in the [developer's guide](/guides/developer).
 
+- There are clients written in both *[Java](/guides/developer/java-clients/overview)* and *[Python](/guides/developer/python-clients/overview)* to aid programmers calling the Egeria services.
+- The *[utilities](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-dev-utilities)* and *[reports](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-reports)* support common tasks that retrieve and update metadata.
+- The *[Unit Test Utilities](https://github.com/odpi/egeria/tree/main/open-metadata-test/open-metadata-ut)* help to unit test Egeria specific components. They work with standard test harnesses.
+- The *[Function Verification Tests](https://github.com/odpi/egeria/tree/main/open-metadata-test/open-metadata-fvt)* are used to test Egeria's runtime.  However they illustrate how to automate tests for your components that work with the Egeria runtime. 
+- The *[Conformance Test Suite (CTS)](/guides/cts/overview)* supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
+
 - Open Metadata and Governance (OMAG) registered services are dynamically loaded in the OMAG Server Platform. This means they can be added and removed as needed to create a customized platform. This may include registered services written by the Egeria community and supplied by third parties.
 
     - [Access services](/services/omas) provide specialist APIs / events for different types of tools. They work with the pre-defined [open metadata types](/types) and use the [repository services](/services/omrs) to access metadata.
@@ -79,12 +82,12 @@ Its use is described in the [developer's guide](/guides/developer).
     - [Integration services](/services/omis) each provide a specialized API to integration connectors. These are hosted in an [integration daemon](/concepts/integration-daemon). The purpose of the integration services is to simplify the implementation and management of connectors that integrate metadata exchange with third party technologies.
     - [View services](/services/omvs) provide the services used by UIs. They are typically fine-grained services and they run in the [view server](/concepts/view-server). The use of the separate server (and server platform) enables an extra firewall to be erected between the view servers and the metadata servers and governance servers, hiding the internal systems from end users.
   
-- The [open metadata types](/types) provide definitions for the different types of metadata needed by an organization. The open metadata type system is extendable; however, by providing a comprehensive starter set, and encouraging tools to use them, Egeria ensures metadata can be seamlessly shared amongst them.
-- The [framework services](/services/framework-services) provide Egeria clients to support metadata retrieval for connectors defined by the [frameworks](/frameworks).
+- The [Open Metadata Types](/types) provide definitions for the different types of metadata needed by an organization. The open metadata type system is extendable; however, by providing a comprehensive starter set, and encouraging tools to use them, Egeria ensures metadata can be seamlessly shared amongst them.
+- The [Framework Services](/services/framework-services) provide Egeria clients to support metadata retrieval for connectors defined by the [frameworks](/frameworks).
 
     - [Connected Asset](/services/ocf-metadata-management) supports the creation of connectors and the retrieval of metadata about the attached asset.
     - [Open Metadata Store](/services/gaf-metadata-management) supports the retrieval and maintenance of any type of open metadata.
-    - [Open Integration Service](/services/oif-metadata-management) supports integration connectors
+    - [Open Integration Service](/services/oif-metadata-management) provides the runtime services for integration connectors.
     - [Open Governance Service](/service/gaf-metadata-management) supports the execution of [engine actions](/concepts/engine-action) and [governance action processes](/concepts/governance-action-process).
   
 - The [OMAG Server Platform](/concepts/omag-server-platform) provides a multi-tenant runtime platform for [OMAG Servers](/concepts/omag-server). Each OMAG Server hosts the connectors along with the Egeria services to integrate third party technology.
@@ -139,7 +142,7 @@ Support for docker compose was removed in [release 3.5](../../snippets/release-n
 
 Following is an overview of the [content status](/release-notes/content-status) of the functions in Egeria's latest release. 
 
-![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-5.0.svg)
+![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-5.2.svg)
 
 
 As you can see, some progress has been made on all layers. However, since they do build on one another, most of the early work has been focused on establishing the frameworks, connector APIs and other services to provide the developer platform. The developer platform provides the libraries and interfaces to build connectors to integrate third party tools along with the runtime to host these connectors and manage the metadata exchange.
@@ -180,10 +183,13 @@ There was investment in both the function and performance of the generic handler
 
 Integration with third party technologies made good progress with the addition of OpenLineage support, the new JDBC, Hive Metastore, schema registry, OpenAPI Specification and Apache Kafka connectors.
 
-2023 and 2024 saw a dramatic change in the project's direction as it shifted its primary focus from providing libraries for tools vendors to supporting organizations that are looking to create an open metadata ecosystem.  This resulted in more samples, view services content packs and a new range of UIs.  The OMAG Server Platform has had some internal restructure and clean up of deprecated code.  The result is a simpler coding experience for new community members.
+2023 and 2024 saw a dramatic change in the project's direction as it shifted its primary focus from providing libraries for tools vendors to supporting organizations that are looking to create an open metadata ecosystem.  This resulted in more samples, view services, content packs and a new range of UIs.  The OMAG Server Platform has had some internal restructure and clean up of deprecated code.  The result is a simpler coding experience for new community members.
 
 ### Future Plans
 
-After the release of version 5.0, the team plans to focus on publicity around the new platform and its advanced capability.  There will also be more connectors, increasing Egeria's reach across the IT landscape.
+After the release of version 5.0, the team continues to focus on publicity around the new platform and its advanced capability.  There will also be more connectors, increasing Egeria's reach across the IT landscape.  Functionally, you will see the completion of the Context Event Framework (CEF) and its supporting services, plus more view services will emerge as the governance solutions mature.  The speed of this rollout depends on our ability to rebuild the community.
+
+![Egeria's evolution](egeria-evolution.svg)
+> How Egeria has evolved over the years.  This reflects that the scope has grown from a desire to provide embeddable integration libraries for use in data tools and platforms, to today's desire to directly support teams in their governance, data and AI projects.  The libraries and frameworks are still there.  However, most users will experience as a running services, preloaded with metadata to accelerate their adoption.
 
 --8<-- "snippets/abbr.md"

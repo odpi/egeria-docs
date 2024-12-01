@@ -175,6 +175,7 @@
 
 - [Hands on labs](/education/open-metadata-labs/overview)
 - [Head count](/concepts/person-role/#head-count-limit)
+- [Hey Egeria](/user-interfaces/hey-egeria/overview)
 - [Home Metadata Collection](/concepts/metadata-collection-id)
 - [Home Metadata Repository](/concepts/home-metadata-repository)
 
@@ -230,6 +231,7 @@
 
 - [Master Data Manager](/concepts/software-capability/#master-data-manager)
 - [Memento Classification](/concepts/memento)
+- [Mermaid Visualization](/user-interfaces/mermaid/overview)
 - [Metadata Access Point](/concepts/metadata-access-point)
 - [Metadata Access Server](/concepts/metadata-access-server)
 - [Metadata Access Store](/concepts/metadata-access-store)
@@ -301,6 +303,7 @@
 - [Project Manager OMVS](/services/omvs/project-manager/overview)
 - [Project Management OMAS](/services/omas/project-management/overview)
 - [Provenance of metadata](/features/metadata-provenance/overview)
+- [pyegeria](/concepts/pyegeria)
 
 
 ## Q
@@ -342,6 +345,7 @@
 ## S
 
 - [Schema](/concepts/schema)
+- [Scripting](/guides/developer/scripting-commands/overview)
 - [Secrets Store Connector](/concepts/secrets-store-connector)
 - [Security](/features/metadata-security/overview)
 - [Security Connector for OMAG Server](/concepts/server-metadata-security-connector)

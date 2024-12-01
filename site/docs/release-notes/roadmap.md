@@ -140,14 +140,14 @@ Support for docker compose was removed in [release 3.5](../../snippets/release-n
 
 ### Current status
 
-Following is an overview of the [content status](/release-notes/content-status) of the functions in Egeria's latest release. 
+Following is an overview of the [content status](/release-notes/content-status) of the functions in Egeria's latest release (5.2). 
 
 ![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-5.2.svg)
 
 
 As you can see, some progress has been made on all layers. However, since they do build on one another, most of the early work has been focused on establishing the frameworks, connector APIs and other services to provide the developer platform. The developer platform provides the libraries and interfaces to build connectors to integrate third party tools along with the runtime to host these connectors and manage the metadata exchange.
 
-Today we have a robust [OMAG Server Platform](/concepts/omag-server-platform) and the ability to configure [OMAG Servers](/concepts/omag-server) that host specific types of connectors to third party tools.   The continual development of the registered services is broadening the types of metadata, and tools, that can integrate with Egeria through the federated query mechanism that 
+Today we have a robust [OMAG Server Platform](/concepts/omag-server-platform) and the ability to configure [OMAG Servers](/concepts/omag-server) that host specific types of connectors to third party tools.   The continual development of the registered services is broadening the types of metadata, and tools, that can integrate with Egeria through the federated query mechanism, supported by the repository services.  With this expansion, more solutions are envisaged, along with a runtime environment that can be downloaded and used immediately.  Many features are available through Egeria's command line interface, or through simple python scripting.  Thus, a team can be up and running quickly.  The dynamic configuration and Java frameworks that support new connectors and services development are still there and can be used to further expand Egeria's capabilities.   
 
 ### History
 
@@ -175,9 +175,9 @@ This new website was added to the project in 2021, and it has resulted in more i
 
 2022 continued the focus on metadata governance.  The following OMASs were refactored to call the generic handlers rather than direct calls to the repository handler.
 
-* [Data Engine OMAS](/services/omas/data-engine/overview)
-* [Asset Catalog OMAS](/services/omas/data-engine/overview)
-* [Asset Lineage OMAS](/services/omas/data-engine/overview)
+* Data Engine OMAS
+* Asset Catalog OMAS
+* Asset Lineage OMAS
 
 There was investment in both the function and performance of the generic handlers, which provide many of the metadata governance functions supported by all OMASs, such as metadata security, provenance validation, anchor management, LatestChange classifications, effectivity dating, memento management and de-duplicating query results.
 

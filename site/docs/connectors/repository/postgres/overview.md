@@ -22,25 +22,7 @@ Access to the PostgreSQL Database Schema is provided by the [JDBC Resource Conne
 
 The diagram below shows the tables used in the PostgreSQL Database Schema.
 
-```mermaid
----
-title: PostgreSQL Repository Database Schema
----
-
-erDiagram
-
-    classification ||--o{ classification_property_value : "has properties"
-    classification }o--|| entity : "attached to entity"
-    
-    entity ||--o{ entity_property_value : "has properties"
-
-    relationship ||--o{ relationship_property_value : "has properties"
-    relationship }o--|| entity : end1
-    relationship }o--|| entity : end2
-
-    
-
-```
+![Postgres Schema](postgres-schema.png)
 
 ## Debugging
 

@@ -139,11 +139,10 @@ nav:
               - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
           - Building Utilities: guides/developer/building-utilities/overview.md
           - Building Connectors:
-              - Survey Action Services: guides/developer/survey-action-services/overview.md
               - Integration Connectors: guides/developer/integration-connectors/overview.md
+              - Survey Action Services: guides/developer/survey-action-services/overview.md
               - Governance Action Services: guides/developer/governance-action-services/overview.md
               - Repository Governance Services: guides/developer/repository-governance-services/overview.md
-              - Open Discovery Services: guides/developer/open-discovery-services/overview.md
               - Repository Connectors: guides/developer/repository-connectors/overview.md
               - Runtime Connectors:
                   - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
@@ -155,6 +154,9 @@ nav:
               - Resource Connectors:
                   - New types of connectors: guides/developer/resource-connectors/overview.md
                   - Open Metadata Topic Connector: guides/developer/resource-connectors/open-metadata-topic-connector.md
+          - Clients:
+              - Python clients: guides/developer/python-clients/overview.md
+              - Java clients: guides/developer/java-clients/overview.md
           - Javadoc: https://odpi.github.io/egeria/index.html
           - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Administration:
@@ -767,6 +769,7 @@ nav:
       - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
       - Platform URL Root: concepts/platform-url-root.md
       - Project: concepts/project.md
+      - pyegeria: concepts/pyegeria.md
       - Referenceable: concepts/referenceable.md
       - Repository Connector: concepts/repository-connector.md
       - Repository Governance Engine: concepts/repository-governance-engine.md

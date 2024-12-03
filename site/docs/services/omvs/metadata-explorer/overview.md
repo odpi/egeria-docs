@@ -7,7 +7,7 @@
 
 The Metadata Explorer Open Metadata View Services (OMVS) is a REST API that supports the search, query and retrieval of open metadata.  It is an advanced API for users that understand the [Open Metadata Types](/types) because the searches are expressed using these types and the attributes they define, and the results directly reflect the elements and relationships they define.  There are simpler, more specialized search operations in the other view services.
 
-The Metadata Explorer OMVS has 11 different types of search operation.  The first four retrieve details about a single metadata element.
+The Metadata Explorer OMVS has 12 different types of search operation.  The first four retrieve details about a single metadata element.
 
 * getMetadataElementByGUID - Retrieve the metadata element using its unique identifier (guid).
 * getMetadataElementByUniqueName - Retrieve the metadata element using its unique name (typically the *qualifiedName* attribute but other attributes can be used if they are unique - such as *pathName* for a file).
@@ -21,15 +21,26 @@ The next four operations retrieve the relationships linked to an element, and th
 * getAllMetadataElementRelationships - Retrieve the relationships linking the supplied elements.
 * getMetadataElementRelationships - Retrieve the relationships linking the supplied elements via a specific type of relationship.
 
+The next command retrieves a graph of elements that are all anchored to the supplied starting element.
+
+* getAnchoredElementsGraph - Return all the elements that are anchored to an element plus relationships between these elements and to other elements.
+
 The next few operations retrieve lists of elements that contain properties (attributes and/or header values) that match the request.
 
 * findMetadataElementsWithString - Retrieve the metadata elements that contain the requested string in any attribute.  The string is interpreted as a simple regular expression.
 * findMetadataElements - Return a list of metadata elements that match the supplied criteria.  The results can be returned over many pages.
 * findRelationshipsBetweenMetadataElements - Return a list of relationships that match the requested conditions.  The results can be received as a series of pages.
 
-The next two operations allow you to retrieve details of a specific relationship, along with summary information about the elements at each end.
+The final two operations allow you to retrieve details of a specific relationship, along with summary information about the elements at each end.
+
+* getRelationshipByGUID - Retrieve the relationship using its unique identifier.
+* getRelationshipHistory - Retrieve all the versions of a relationship.
+
+
 
 ## Common request options
+
+
 
 ### Paging
 
@@ -90,18 +101,33 @@ SequencingOrder is used for search requests against a metadata collection.  It d
 
 Note: not all repositories support ordering.  The results may vary between repository types.
 
+### Using the urLMarker
+
+Metadata Explorer OMVS contains operations that are useful in many scenarios. For that reason it is implemented as a *View Server Generic Service*.  This means that firstly, it is always running in a view server.  Secondly, each of its operations' URL has a segment that is specified as `{urlMarker}`.  
+
+![Metadata Explorer URLs](metadata-explorer-urls.png)
+> The `urlMarker` in Metadata Explorer OMAS's REST API operations.
+
+This segment of the URL normally takes the URL marker for the particular view service it belongs to.  (For example `metadata-explorer` for the Metadata Explorer OMVS, or `asset-catalog` for Asset Catalog OMVS).  The `{urlMarker}` allows the use of the URL marker for any view service that is configured in the view server. 
+
+???+ tip "How do I find out the URL marker for a service?"
+    The URL marker is derived from the name of the requested service - take the short two-word service name, convert to lower case and add a hyphen between the two words - so Feedback Manager OMVS's URL Marker is feedback-manager.
+
+When the request is received by Metadata Explorer OMVS, it uses the supplied URL marker to look up the configuration of the requested view service.  It then issues the desired request(s) to the partner [metadata access server](/concepts/metadata-access-server) configured for the requested view server.
+
+The reason this feature is useful is that each view service is configured to call an [Open Metadata Access Service (OMAS)](/services/omas) running in a specific [Metadata Access Server](/concepts/metadata-access-server).  They do not all have to be set to call the same server.  
+
+![View server configuration example](view-server-configuration.svg)
+> This example show a view server where its view services are configured to point to different metadata access stores.
+
+Each access service in each server can be set up to support a restrictive set of [governance zones](/features/governance-zoning/overview).  This controls the visibility of assets returned to the callers.  If, for example, a user interface was calling Asset Catalog OMAS to provide information about assets for its user, this service would call Asset Consumer OMAS in the metadata store.  It could be set up to only return assets of a particular quality.  If the UI needed to also perform a complex query using Metadata Explorer OMVS, it could set the URL Marker to be "asset-catalog" and the request would be passed to the same Asset Consumer OMAS as the other Asset Catalog OMAS calls - and so returning assets with the same visibility.
+
+???+ education "If Metadata Explorer OMVS is always active, do I need to configure it in my view server?"
+    You only need to configure Metadata Explorer OMVS if you want to use the `metadata-explorer` URL Marker to call the Asset Consumer OMAS in a specific Metadata Access Store.
+
 ### Additional request parameters
 
-Each access service can be set up to support a restrictive set of governance zones.  This controls the visibility of assets to the callers.
-
-By default, all requests are routed via Feedback Manager OMVS to Asset Manager OMAS.  If you wish the request to be routed via a different view service (OMVS) or access service (OMAS) it is possible to use one or other of these request parameters:
-
-* viewServiceURLMarker optional view service URL marker (overrides accessServiceURLMarker) to route the request via a different view service and onto its default access service.
-* accessServiceURLMarker optional access service URL marker used to identify which back end service.
-
-The URL marker is derived from the name of the requested service - take the short two-word service name, convert to lower case and add a hyphen between the two words - so Feedback Manager OMVS's URL Marker is feedback-manager.
-
-In additional there are optional request parameters for lineage and duplicate processing requests.
+There are optional request parameters for lineage and duplicate processing requests.
 
 * forLineage (default=false) - set this request parameter to true if this request is to support a lineage query - it will include the mementos representing elements in the graph that are deleted.
 * forDuplicateProcessing (default=false) - set this request parameter to true if the query is supporting deduplication processing and so it turns off the automatic deduplicate processing

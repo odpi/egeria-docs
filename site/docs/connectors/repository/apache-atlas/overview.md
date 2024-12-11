@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
---8<-- "snippets/content-status/in-development.md"
+--8<-- "snippets/content-status/deprecated.md"
 
 # Apache Atlas OMRS Repository Connector
 

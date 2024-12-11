@@ -7,7 +7,7 @@ Egeria is a large project with many activities adding content to the project. Th
 
 ## Capability layers
 
-Egeria aims to deliver against 6 capability layers:
+Egeria aims to deliver against 7 capability layers:
 
 [![Governance Solutions](governance-solution-functional-detail.svg)](#governance-solutions)
 [![Education](education-functional-detail.svg)](#education)

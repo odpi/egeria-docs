@@ -299,6 +299,7 @@
 - [Platform Metadata Security Connector](/concepts/platform-metadata-security-connector)
 - [Platform Security](/features/metadata-security/overview)
 - [Platform URL Root](/concepts/platform-url-root)
+- [Process](/concepts/process)
 - [Project](/concepts/project)
 - [Project Manager OMVS](/services/omvs/project-manager/overview)
 - [Project Management OMAS](/services/omas/project-management/overview)

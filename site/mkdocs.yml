@@ -48,6 +48,7 @@ nav:
           - Connector Catalog:
               - Connector Overview: connectors/index.md
               - Secrets Store:
+                    - YAML File: connectors/secrets/yaml-file-secrets-store-connector.md
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
               - Files:
                     - Any File:
@@ -545,7 +546,7 @@ nav:
               - Engine Services (OMES):
                   - Open Metadata Engine Services: services/omes/index.md
                   - Governance Action: services/omes/governance-action/overview.md
-                  - Context Event: services/omes/event-action/overview.md
+                  - Context Event: services/omes/context-event/overview.md
                   - Survey Action: services/omes/survey-action/overview.md
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
@@ -768,6 +769,7 @@ nav:
       - Placeholders: concepts/placeholder.md
       - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
       - Platform URL Root: concepts/platform-url-root.md
+      - Process: concepts/process.md
       - Project: concepts/project.md
       - pyegeria: concepts/pyegeria.md
       - Referenceable: concepts/referenceable.md

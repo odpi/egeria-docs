@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8" pages="27">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17" pages="27">
   <diagram id="zwH0E6yuSuxNEa-D1nxI" name="compare-use-of-connectors">
     <mxGraphModel dx="1242" dy="822" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -3777,17 +3777,31 @@
         <mxCell id="jxgSa6bsgg5_kzLXStgE-6" value="Environment variable" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="145" y="280" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="smZqJnJgsjUjO1HoDnpI-2" value="Consuming Connector" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;verticalAlign=top;" vertex="1" parent="1">
+        <mxCell id="smZqJnJgsjUjO1HoDnpI-2" value="Consuming Connector" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="414" y="100" width="170" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="smZqJnJgsjUjO1HoDnpI-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="smZqJnJgsjUjO1HoDnpI-4" target="smZqJnJgsjUjO1HoDnpI-8">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="smZqJnJgsjUjO1HoDnpI-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=88.5;entryDy=0;entryPerimeter=0;" parent="1" source="smZqJnJgsjUjO1HoDnpI-4" target="bS2VUSNe2yy4efDYJTGr-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="499.01" y="260" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="smZqJnJgsjUjO1HoDnpI-4" value="YAML File&lt;div&gt;Secrets Store Connector&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="smZqJnJgsjUjO1HoDnpI-4" value="YAML File&lt;div&gt;Secrets Store Connector&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="428.88" y="140" width="140.25" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="smZqJnJgsjUjO1HoDnpI-8" value="mySecrets.&lt;div&gt;omsecrets&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
-          <mxGeometry x="459.01" y="260" width="80" height="100" as="geometry" />
+        <mxCell id="bS2VUSNe2yy4efDYJTGr-1" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=23;" vertex="1" parent="1">
+          <mxGeometry x="410" y="260" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bS2VUSNe2yy4efDYJTGr-2" value="&lt;span style=&quot;text-wrap: wrap;&quot;&gt;mySecrets.&lt;/span&gt;&lt;span style=&quot;text-wrap: wrap; background-color: initial;&quot;&gt;omsecrets&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="439" y="380" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bS2VUSNe2yy4efDYJTGr-3" value="SecretsCollection" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="439" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bS2VUSNe2yy4efDYJTGr-4" value="SecretsCollection" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="449" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bS2VUSNe2yy4efDYJTGr-5" value="SecretsCollection" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="459" y="300" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

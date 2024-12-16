@@ -52,7 +52,7 @@ site/docs/services/omas/enterprise-architecture/ @mandy-chessell
 site/docs/services/omas/glossary-view/ @lcpopa
 site/docs/services/omas/stewardship-action/ @mandy-chessell
 site/docs/services/omas/governance-program/ @mandy-chessell
-site/docs/services/omas/governance-engine/ @mandy-chessell
+site/docs/services/omas/governance-server/ @mandy-chessell
 site/docs/services/omas/subject-area/ @davidradl
 site/docs/services/omas/asset-lineage/ @lcpopa @popa-raluca
 

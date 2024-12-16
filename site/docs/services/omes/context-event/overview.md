@@ -20,6 +20,6 @@ An context event engine hosts specialized governance services called [context ev
 
 The Context Event OMES is capable of hosting one or more [context event engines](/concepts/context-event-engine).
 
-The context event engine services call the [Governance Engine Open Metadata Access Service (OMAS)](/services/omas/governance-engine/overview) running in an open metadata server to retrieve information about events and to store the results of the context event services' work.
+The context event engine services call the [Stewardship Action Open Metadata Access Service (OMAS)](/services/omas/stewardship-action/overview) running in an open metadata server to retrieve information about events and to store the results of the context event services' work.
 
 --8<-- "snippets/abbr.md"

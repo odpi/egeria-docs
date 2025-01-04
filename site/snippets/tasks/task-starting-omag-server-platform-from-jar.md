@@ -5,11 +5,16 @@
 
 The OMAG Server Platform's `assembly/platform` directory contains a Java Archive (Jar) file for the [OMAG Server Platform](/concepts/omag-server-platform) itself along with a directory of libraries.
 
-The name of the Java Archive (Jar) file will depend on the release of Egeria that you have installed.  In this example, the release is **5.0**.
+The name of the Java Archive (Jar) file will depend on the release of Egeria that you have installed.  In this example, the release is **5.2**.
 
 ```bash
-$ ls platform
-lib              omag-server-platform-5.0.jar
+$ cd platform
+$ ls
+ls
+LICENSE                         application.properties          extra                           lib                             omag-server-platform-5.2.jar
+NOTICE                          content-packs                   keystore.p12                    loading-bay                     truststore.p12
+README.md                       data                            landing-area                    logs
+
 ```
 
 The OMAG Server Platform is started with the `java` command.
@@ -20,20 +25,21 @@ The OMAG Server Platform is started with the `java` command.
 ??? danger "MacOS users - XTDB hang, or platform exit due to mismatch crypto library"
     On the latest level of the MacOs operating system we have experienced hangs during server startup, or the OMAG Server Platform exiting with a message complaining about the unsafe load of a cryptographic library.  A question has been raised with the XTDB community to find out more about this library. In the meantime, there is a workaround if you see this issue: set the following environment variables before starting your OMAG Server Platform.  This switches XTDB to using its own cryptography libraries.
 
-   ```properties
-   XTDB_DISABLE_LIBCRYPTO=True;XTDB_ENABLE_BYTEUTILS_SHA1=True
-   ```
+    ```properties
+    export XTDB_DISABLE_LIBCRYPTO=True
+    export XTDB_ENABLE_BYTEUTILS_SHA1=True
+    ```
 
 Start the OMAG server platform with the following command:
 
 ```bash
-java -Dloader.path=platform/lib,platform/extras -jar platform/omag-server-platform*.jar
+java -Dloader.path=lib,extra -jar omag-server-platform*.jar
 ```
 
 This starts the platform listening on port `9443`.  Add the `-Dserver.port` parameter before the `-jar` parameter if you wish the platform to listen on a different port. For example, the following command starts the platform listening on port `9444`.  Multiple instances of the same OMAG Server Platform may run in a single machine (or in the same container).  However, they each need to listen on a different port.
 
 ```bash
-java -Dloader.path=platform/lib -Dserver.port=9444 -jar platform/omag-server-platform*.jar
+java -Dloader.path=lib,extra -Dserver.port=9444 -jar omag-server-platform*.jar
 ```
 
 When the OMAG Server Platform starts up, it displays the `OMAG Server Platform` banner and then details of its configuration.
@@ -46,20 +52,19 @@ When the OMAG Server Platform starts up, it displays the `OMAG Server Platform` 
  / /_/ // /  / // ___ |/ /_/ /   ___/ //  __// /   | |/ //  __// /    /  __ // // /  \ / /_ /  _// / // /  / / / /
  \____//_/  /_//_/  |_|\____/   /____/ \___//_/    |___/ \___//_/    /_/    /_/ \__/\//___//_/   \__//_/  /_/ /_/
 
- :: Powered by Spring Boot (v3.0.6) ::
+ :: Powered by Spring Boot (v3.1.4) ::
 
-2023-06-11T13:13:57.959+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Starting OMAGServerPlatform using Java 17.0.6 with PID 85411 (/Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz/platform/omag-server-platform-4.3-SNAPSHOT.jar started by mandy-chessell in /Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz)
-2023-06-11T13:13:57.962+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : No active profile set, falling back to 1 default profile: "default"
-2023-06-11T13:14:01.186+01:00  INFO 85411 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (https)
-2023-06-11T13:14:02.400+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Working directory is: /Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz
-2023-06-11T13:14:02.400+01:00  WARN 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Java trust store 'javax.net.ssl.trustStore' is null - this is needed by Tomcat - using 'server.ssl.trust-store'
-2023-06-11T13:14:04.687+01:00  INFO 85411 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (https) with context path ''
-2023-06-11T13:14:04.704+01:00  INFO 85411 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Started OMAGServerPlatform in 7.591 seconds (process running for 8.325)
-Sun Jun 11 13:14:04 BST 2023 No OMAG servers listed in startup configuration
-Sun Jun 11 13:14:04 BST 2023 OMAG server platform ready for more configuration
+18:22:43.638 [main] INFO  o.o.o.p.s.OMAGServerPlatform - Starting OMAGServerPlatform using Java 17.0.9 with PID 68372 (/egeria-release-5.2/egeria/open-metadata-distribution/omag-server-platform/build/unpacked/egeria-platform-5.2-distribution.tar.gz/assembly/platform/omag-server-platform-5.2.jar started by egeriauser in /egeria-release-5.2/egeria/open-metadata-distribution/omag-server-platform/build/unpacked/egeria-platform-5.2-distribution.tar.gz/assembly/platform)
+18:22:43.639 [main] INFO  o.o.o.p.s.OMAGServerPlatform - No active profile set, falling back to 1 default profile: "default"
+18:22:45.987 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9443 (https)
+18:22:47.639 [main] INFO  o.o.o.p.s.OMAGServerPlatform - Working directory is: /egeria-release-5.2/egeria/open-metadata-distribution/omag-server-platform/build/unpacked/egeria-platform-5.2-distribution.tar.gz/assembly/platform
+18:22:47.639 [main] WARN  o.o.o.p.s.OMAGServerPlatform - Option strict.ssl is set to false! Invalid certificates will be accepted for connection!
+18:22:47.641 [main] WARN  o.o.o.p.s.OMAGServerPlatform - Java trust store 'javax.net.ssl.trustStore' is null - this is needed by Tomcat - using 'server.ssl.trust-store'
+18:22:49.135 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9443 (https) with context path ''
+18:22:49.144 [main] INFO  o.o.o.p.s.OMAGServerPlatform - Started OMAGServerPlatform in 5.901 seconds (process running for 6.311)
 ```
 
-When you see the `OMAG server platform ready for more configuration` message, it means the OMAG Server Platform has completed its start-up, and it is ready to use.
+When you see the `Started OMAGServerPlatform in xxxx seconds (process running for yyyy)` message, it means the OMAG Server Platform has completed its start-up, and it is ready to use.  Typically the `application.properties` file lists a set of default servers to start up automatically.  These servers will start up at this point.
 
 If you get an error that the port is in use, check for any applications using the same port and make sure they are each using unique ports.
 
@@ -70,7 +75,8 @@ curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/us
 ```
 Returns
 ```text
-Egeria OMAG Server Platform (version 4.3)
+Egeria OMAG Server Platform (version 5.2)
 ```
 
 This calls the OMAG server platform using a REST API call.  The response `Egeria OMAG Server Platform (release X.x)` means the curl command communicated with a running OMAG Server Platform instance.
+

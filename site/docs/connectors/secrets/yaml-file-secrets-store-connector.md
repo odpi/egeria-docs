@@ -6,20 +6,18 @@
 # YAML File Secrets Store Connector
 
 !!! info "Connector details"
-    - Connector Category: [Secret Store Connector](/concepts/secrets-store-connector)
+    - Connector Category: [Secrets Store Connector](/concepts/secrets-store-connector)
     - Source Module: [yaml-secrets-store-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/secrets-store-connectors/yaml-secrets-store-connector){ target=gh }
     - Jar File Name: `yaml-secrets-store-connector.jar`
 
 ## Overview
 
-The *YAML File Secrets Store Connector* is a [Secrets Store Connector](/concepts/secret-store-connector) that retrieves secrets from a named YAML file.  By convention, these YAML files have a file extension of `omsecrets`. 
+The *YAML File Secrets Store Connector* is a [Secrets Store Connector](/concepts/secrets-store-connector) that retrieves secrets from a named YAML file.  By convention, these YAML files have a file extension of `omsecrets`. 
 
 ![Figure 1](yaml-file-secrets-store-connector.svg)
 > **Figure 1:** Operation of the YAML File Secrets Store Connector
 
 Secrets within the YAML file are organized into collections. Each collection represents a set of secrets needed by a particular type of caller. When the YAML File Secrets Store Connector starts up, it opens the YAML file using the address passed in the endpoint of its connection.  It located the appropriate collection using the name specified in the `secretsCollectionName` property found in the connection's `configurationProperties`.  The connector will fail if either of these two values are missing.
-
-
 
 Inside a collection are:
 

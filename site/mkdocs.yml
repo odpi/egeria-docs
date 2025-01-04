@@ -41,6 +41,12 @@ nav:
           - Content Pack Catalog:
               - Content Pack Overview: content-packs/index.md
               - Core Content Pack: content-packs/core-content-pack/overview.md
+              - ApacheAtlasContentPack: content-packs/apache-atlas-content-pack/overview.md
+              - ApacheKafkaContentPack: content-packs/apache-kafka-content-pack/overview.md
+              - APIsContentPack: content-packs/apis-content-pack/overview.md
+              - ObservabilityContentPack: content-packs/observability-content-pack/overview.md
+              - PostgreSQLContentPack: content-packs/postgres-content-pack/overview.md
+              - UnityCatalogContentPack: content-packs/unity-catalog-content-pack/overview.md
               - Cloud Information Model: content-packs/cim-content-pack/overview.md
               - Coco Pharmaceuticals: content-packs/coco-content-pack/overview.md
               - Simple Catalog: content-packs/simple-content-pack/overview.md
@@ -50,6 +56,8 @@ nav:
               - Secrets Store:
                     - YAML File: connectors/secrets/yaml-file-secrets-store-connector.md
                     - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
+              - Metadata Security:
+                    - Open Metadata Access: connectors/metadata-security/open-metadata-access-security-connector.md
               - Files:
                     - Any File:
                        - Read File Contents: connectors/resource/basic-file-resource-connector.md
@@ -304,6 +312,7 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Newsletters:
+            - January 2025: release-notes/october-2025.md
             - October 2024: release-notes/october-2024.md
             - June 2024: release-notes/june-2024.md
             - August 2023: release-notes/august-2023.md

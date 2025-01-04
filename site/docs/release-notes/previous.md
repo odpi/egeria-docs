@@ -4,7 +4,10 @@
 
 # All releases
 
-??? info "Release 5.2 (In progress - expected December 2024)"
+??? info "Release 5.3 (expected March 2025)"
+    --8<-- "snippets/release-notes/5-3.md"
+
+??? info "Release 5.2 (January 2025)"
     --8<-- "snippets/release-notes/5-2.md"
 
 ??? info "Release 5.1 (October 2024)"

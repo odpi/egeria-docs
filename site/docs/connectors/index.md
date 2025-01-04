@@ -7,7 +7,9 @@ Egeria has a growing collection of *connectors* to third party technologies. The
 
 A connector is a client to a third party technology. It supports a standard API that Egeria calls, and it then translates these calls into requests to the third party technology. Some connectors are also able to listen for notifications from the third party technology. When a notification is received, the connector converts its content into a call to Egeria to distribute the information to the open metadata ecosystem.
 
-Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the [OMAG servers](/concepts/omag-server). The Connector Catalog list the connector implementations supplied by the Egeria community. There are three broad categories of connectors and the connector catalog is organized accordingly:
+Connectors enable Egeria to operate in many environments and with many types of third party technologies, just by managing the configuration of the [OMAG servers](/concepts/omag-server). The Connector Catalog list the connector implementations supplied by the Egeria community. There are four broad categories of connectors and the connector catalog is organized accordingly:
+
+* Connectors that support the [security of the open metadata ecosystem](#open-metadata-security-connectors).
 
 * Connectors that support the [exchange and maintenance of metadata](#metadata-exchange-and-maintenance-connectors) with third party technology. This includes the resource connectors, survey action connectors, integration connectors and adapter repository connectors.  These connectors are organized by the type of third part technology type work with.
 
@@ -15,11 +17,51 @@ Connectors enable Egeria to operate in many environments and with many types of 
 
 * Connectors that support the integration of [Egeria’s runtimes](#runtime-connectors) into the IT infrastructure where it is running. This includes the native repository connectors, event bus connectors, cohort registry stores, configuration stores, audit log destination connectors, open metadata archive stores, REST client connectors and the cohort member remote repository connectors.  These connectors are organized by connector type.
 
+## Open Metadata Security Connectors
+
+The connectors that support the security of the open metadata ecosystem are:
+
+* [Secrets Store connectors](#secrets-stores)  manage the retrieval of secrets (passwords, certificates, ...) from secured locations at runtime.
+* [Metadata Security connectors](#metadata-security-connectors) provides authorization support for the OMAG Server Platform and the OMAG Servers that run on it.
+
+### Secrets Stores
+
+[Secrets stores](/concepts/secrets-store-connector) externalize secrets such as passwords, tokens and certificates so they do not need to be stored in either the [configuration document](/concepts/configuration-document) or [open metadata repositories](/concepts/open-metadata-repository).
+
+* The [YAML File Secret Store connector](/connectors/secrets/yaml-file-secrets-store-connector) retrieves secret values from environment variables.
+* The [Environment Variables Secret Store connector](/connectors/secrets/environment-variable-secrets-store-connector) retrieves secret values from environment variables.
+
+### Metadata Security Connectors
+
+The Metadata Security Connectors manage authorization requests for the open metadata and governance servers.
+Strictly speaking there are two types of metadata security connectors:
+
+* *Platform Metadata Security Connectors* manage authorization of OMAG Server Platform's services.    
+* *Server Metadata Security Connectors* manage authorization requests for the OMAG Server's services. 
+
+==== Platform Metadata Security Connectors
+
+    --8<-- "snippets/connectors/platform-metadata-security-connector-intro.md"
+ 
+==== Server Metadata Security Connectors
+
+    --8<-- "snippets/connectors/server-metadata-security-connector-intro.md"
+
+Egeria has a single metadata security connector that implements both interfaces:
+
+* The [Open Metadata Access Security Connector](/connectors/metadata-security/open-metadata-access-security-connector) uses information from an embedded [secrets store connector](/concepts/secrests-store-connector) so all authorization decisions can be controlled through the contents of the externalized secrets store.
+
+??? education "Further information relating to Metadata Security Connectors"
+    - [Metadata Security Overview](/features/metadata-security/overview) to understand the metadata security connectors in the context of all of the security features.
+    - [Configuring a Platform Metadata Security Connector](/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/concepts/omag-server-platform)
+    - [Configuring a Server Metadata Security Connector](/guides/admin/servers/by-section/server-security-connection-section) in the [OMAG Server](/concepts/omag-server)
+    - [Writing a Platform Metadata Security Connector](/guides/developer/runtime-connectors/platform-metadata-security-connector).
+    - [Writing a Server Metadata Security Connector](/guides/developer/runtime-connectors/server-metadata-security-connector).
+
 ## Metadata exchange and maintenance connectors
 
 The connectors that support the exchange and maintenance of metadata help to accelerate the rollout of your open metadata ecosystem, since they can be used to automate the extraction and distribution of metadata to the third party technologies.
 
-* [Secrets Store connectors](#secrets-stores)  manage the retrieval of secrets (passwords, certificates, ...) from secured locations at runtime.                          
 * [File connectors](#files) work with different types of files.
 * [JDBC Database connectors](#relational-databases) make use of the JDBC standards to work with different types of relational databases.
 * [Apache Kafka connectors](#apache-kafka) work with the topics and/or events passing through the Apache Kafka event broker.
@@ -28,12 +70,6 @@ The connectors that support the exchange and maintenance of metadata help to acc
 * [Open API Specification connectors](#open-api-specification) extract metadata about APIs through the Open API interfaces provided through the Swagger API.
 * [Open Lineage Event connectors](#open-lineage-events) works with the open lineage event standard.
 
-### Secrets Stores
-
-[Secrets stores](/concepts/secrets-store-connector) externalize secrets such as passwords, tokens and certificates so they do not need to be stored in either the [configuration document](/concepts/configuration-document) or [open metadata repositories](/concepts/open-metadata-repository).
-
-* The [Environment Variables Secret Store connector](/connectors/secrets/environment-variable-secrets-store-connector) retrieves secret values from environment variables.
-* The [YAML File Secret Store connector](/connectors/secrets/yaml-secrets-store-connector) retrieves secret values from environment variables.
 
 ### Files
 
@@ -130,8 +166,6 @@ The open lineage connectors work with the [Open Lineage standard](/features/line
 | Type                                                                                | Description                                                                                                                                                            |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Repository and Event Mapper connectors](#repository-and-event-mapper-connectors)   | Integrate metadata repositories into the open metadata ecosystem so that they can interact with one or more [open metadata repository cohorts](/services/omrs/cohort). |
-| [Platform Metadata Security Connectors](#platform-metadata-security-connectors)     | manage authorization requests for the OMAG Server Platform's services.                                                                                                 |
-| [Server Metadata Security Connectors](#server-metadata-security-connectors)         | manage authorization requests for the OMAG Server's services.                                                                                                          |
 | [Configuration Document Store Connectors](#configuration-document-store-connectors) | manage the persistence and retrieval of [configuration documents](/concepts/configuration-document).                                                                   |
 | [Cohort Registry Store Connectors](#cohort-registry-store-connectors)               | store the [open metadata repository cohort](/concepts/cohort-member) membership details in the [cohort registry store](/concepts/cohort-registry-store).               |
 | [Open Metadata Archive Store Connectors](#open-metadata-archive-store-connectors)   | read and write [open metadata archives](/concepts/open-metadata-archive).                                                                                              |
@@ -170,34 +204,6 @@ The table below lists the repository connectors that act as an adapter for third
     - [Configuring an adapter repository connector](/guides/admin/servers/by-server-type/configuring-a-repository-proxy/#configure-the-connectors-to-the-third-party-metadata-repository) to understand how to set up a repository connector in a [Repository Proxy](/concepts/repository-proxy).
     - [Writing repository and event mapper connectors](/guides/developer/repository-connectors/overview) for more information on writing new repository and event mapper connectors.
 
-
-### Platform Metadata Security Connectors
-
----8<-- "snippets/connectors/platform-metadata-security-connector-intro.md"
-
-There is one implementation of the platform metadata security connector provided by Egeria.  It is a sample that encodes information from the Coco Pharmaceutical scenarios.
-
-* **[Coco Pharmaceuticals Platform Metadata Security Connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh }** 
-
-??? education "Further information relating to Platform Metadata Security Connectors"
-
-    - [Configuring a Platform Metadata Security Connector](/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/concepts/omag-server-platform)
-    - [Metadata Security](/features/metadata-security/overview) to understand the platform metadata security connector in the context of all of the security features.
-    - [Writing a Platform Metadata Security Connector](/guides/developer/runtime-connectors/platform-metadata-security-connector).
-
-### Server Metadata Security Connectors
-
----8<-- "snippets/connectors/server-metadata-security-connector-intro.md"
-
-There is one implementation of the server metadata security connector provided by Egeria.  It is a sample that encodes information from the Coco Pharmaceuticals scenarios.
-
-* **[Coco Pharmaceuticals Server Metadata Security Connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh }** 
-
-??? education "Further information relating to Server Metadata Security Connectors"
-
-    - [Configuring a Server Metadata Security Connector](/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/concepts/omag-server-platform)
-    - [Metadata Security](/features/metadata-security/overview) to understand the server metadata security connector in the context of all of the security features.
-    - [Writing a Server Metadata Security Connector](/guides/developer/runtime-connectors/server-metadata-security-connector).
 
 ### Configuration Document Store Connectors
 

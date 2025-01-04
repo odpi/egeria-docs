@@ -140,9 +140,9 @@ Support for docker compose was removed in [release 3.5](../../snippets/release-n
 
 ### Current status
 
-Following is an overview of the [content status](/release-notes/content-status) of the functions in Egeria's latest release (5.2). 
+Following is an overview of the [content status](/release-notes/content-status) of the functions in Egeria's latest release (5.3). 
 
-![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-5.2.svg)
+![Status of functions found in each capability layer](functional-organization-showing-implementation-status-for-5.3.svg)
 
 
 As you can see, some progress has been made on all layers. However, since they do build on one another, most of the early work has been focused on establishing the frameworks, connector APIs and other services to provide the developer platform. The developer platform provides the libraries and interfaces to build connectors to integrate third party tools along with the runtime to host these connectors and manage the metadata exchange.
@@ -187,7 +187,7 @@ Integration with third party technologies made good progress with the addition o
 
 ### Future Plans
 
-After the release of version 5.0, the team continues to focus on publicity around the new platform and its advanced capability.  There will also be more connectors, increasing Egeria's reach across the IT landscape.  Functionally, you will see the completion of the Context Event Framework (CEF) and its supporting services, plus more view services will emerge as the governance solutions mature.  The speed of this rollout depends on our ability to rebuild the community.
+After the release of version 5.0, the team continues to focus on usability, simplification and publicity around the new platform and its advanced capability.  There will also be more connectors, increasing Egeria's reach across the IT landscape.  Functionally, you will see the completion of the Context Event Framework (CEF) and its supporting services, plus more view services will emerge as the governance solutions mature.  The speed of this rollout depends on our ability to rebuild the community.
 
 ![Egeria's evolution](egeria-evolution.svg)
 > How Egeria has evolved over the years.  This reflects that the scope has grown from a desire to provide embeddable integration libraries for use in data tools and platforms, to today's desire to directly support teams in their governance, data and AI projects.  The libraries and frameworks are still there.  However, most users will experience as a running services, preloaded with metadata to accelerate their adoption.

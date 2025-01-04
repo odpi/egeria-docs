@@ -12,4 +12,6 @@ The *CloudInformationModel* content pack is an extraction for a glossary for the
 
 This archive is available on GitHub as `CloudInformationModel.omarchive` at [https://github.com/odpi/egeria/blob/main/content-packs/CloudInformationModel.json](https://github.com/odpi/egeria/blob/main/content-packs/CloudInformationModel.json).  It is also included in Egeria's standard `omag-server-platform` distribution built from the `egeria.git` repository.
 
+This content pack is built by the [cloud-information-model](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/cloud-information-model) module.
+
 --8<-- "snippets/abbr.md"

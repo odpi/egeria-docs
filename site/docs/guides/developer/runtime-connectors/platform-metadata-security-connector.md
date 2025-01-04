@@ -5,7 +5,7 @@
 
 The *platform metadata security connector* provides authorization support for requests to the [OMAG Server Platform](/concepts/omag-server-platform).
 
-![Figure 1](/connectors/runtime/platform-metadata-security-connector.svg)
+![Figure 1](/connectors/metadata-security/platform-metadata-security-connector.svg)
 > **Figure 1:** Platform Metadata Security Connector
 
 ## Interface and Base Classes

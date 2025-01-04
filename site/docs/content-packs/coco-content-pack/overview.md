@@ -19,6 +19,7 @@ The *CocoComboArchive* supplies metadata to support the [Coco Pharmaceuticals sc
 
 * *CocoTypesArchive* - provides additional types for Coco Pharmaceuticals.  These are `BiopsyScope` Enum, `BiopsyReport` Entity, `BiopsySupportingEvidence` Relationship and `ReviewedByClinicalTrials` Classification.
 
+These content packs are built by the [coco-metadata-archives](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/sample-metadata/coco-metadata-archives) module.
 
 ## CocoOrganizationArchive contents
 

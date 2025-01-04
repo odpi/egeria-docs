@@ -6,7 +6,7 @@
 Once you have created a configuration document for an OMAG server, it is started in the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is request **7.** in Postman).
 
 ```
-POST https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platformservers/myMetadataServer/instance
+POST https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance
 ```
 
 The response from the command lists the subsystems that have been activated in the OMAG server:

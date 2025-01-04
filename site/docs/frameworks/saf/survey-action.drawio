@@ -1,4 +1,4 @@
-<mxfile modified="2024-03-08T15:56:52.785Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="JLA3-fOFDsZyS_MjUcju" version="23.0.2" type="device" pages="15">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17" pages="15">
   <diagram id="nSDM-Rxb-zmBo6Db-v7M" name="survey-action-service-operation">
     <mxGraphModel dx="2069" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -889,7 +889,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="80IOCSKDe2TH0Fwrc41k" name="file-system-discovery-process">
-    <mxGraphModel dx="2896" dy="822" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4138" dy="1612" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1688,7 +1688,7 @@
           <mxGeometry x="-132" y="3185" width="170" height="40" as="geometry" />
         </mxCell>
         <mxCell id="qS_1YLQiRLYEo0A8dIZq-191" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-867.75" y="1587.5" width="940" height="505" as="geometry" />
+          <mxGeometry x="-1510" y="1230" width="940" height="505" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

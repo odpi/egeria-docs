@@ -50,6 +50,6 @@ Most of the commands allow you to specify an Egeria OMAG Platform, Server (usual
 * user id = a user, such as **erinoverview** from the fictitious [Coco Pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/) environment.
 
 !!! info "Full Guide to Egeria's Python Commands"
-    The full guide to Egeria's Python Commands is available at [Command Line Interfaces](https://github.com/odpi/egeria-python/blob/main/pyegeria/commands/doc/command-overview.md)
+    The full guide to Egeria's Python Commands is available at [Command Line Interfaces](https://github.com/odpi/egeria-python/blob/main/pyegeria/commands/doc/README.md)
 
 --8<-- "snippets/abbr.md"

@@ -21,6 +21,12 @@ Good visualizations help to improve understanding and validation.  [Mermaid](htt
 
 The [*pyegeria* python libraries](https://egeria-project.org/concepts/pyegeria/) continues to evolve at a rapid pace offering [python interfaces](https://egeria-project.org/guides/developer/python-clients/overview/) to Egeria's services along with [scripting commands](https://egeria-project.org/guides/developer/scripting-commands/overview/) and the [*hey_egeria* command level interface](https://egeria-project.org/user-interfaces/hey-egeria/overview/).
 
+In addition, there are new documentation pages that walk you through the different commands and associated displays:
+
+* [Introduction to Hey_Egeria](https://github.com/odpi/egeria-python/blob/main/pyegeria/commands/doc/hey_egeria%3A%20a%20pyegeria%20command%20line%20interface/README.md)
+* [Visual Command Reference](https://github.com/odpi/egeria-python/blob/main/pyegeria/commands/doc/Visual%20Command%20Reference/README.md)
+* [Command Line Interface](https://github.com/odpi/egeria-python/blob/main/pyegeria/commands/doc/README.md)
+
 ## New Governance Action Processes
 
 The [Technology Content Packs](https://egeria-project.org/content-packs/) contain the metadata necessary for activating the connectors and services that support particular types of technologies.  In the 5.2 release they also include governance action processes that simplify working with the connectors.  

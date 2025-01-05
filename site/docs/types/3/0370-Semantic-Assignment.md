@@ -25,7 +25,6 @@ The setting up of the *SemanticAssignment* relationship needs to be controlled w
     * OBSOLETE - this relationship is no longer in use.
     * OTHER - the status of the relationship does not match any of the other term status values.  The description field can be used to add details about the relationship.
 
-* The *createdBy* attribute found in all elements identifies the user that created the relationship.
 * The *confidence* attribute in the relationship stores the level of confidence (0-100%) in the correctness of the relationship - it is typically set up by [survey action engines](/concepts/survey-action-engine).
 * The steward is the person responsible for assessing the relationship and deciding if it should be approved or not.
 

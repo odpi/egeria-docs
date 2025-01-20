@@ -581,9 +581,11 @@ nav:
                   - Data Designer: services/omvs/data-designer/overview.md
                   - Data Discovery: services/omvs/data-discovery/overview.md
                   - Data Officer: services/omvs/data-officer/overview.md
+                  - DevOps Pipeline: services/omvs/devops-pipeline/overview.md
                   - Feedback Manager: services/omvs/feedback-manager/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Manager: services/omvs/glossary-manager/overview.md
+                  - Governance Officer: services/omvs/governance-officer/overview.md
                   - Metadata Explorer: services/omvs/metadata-explorer/overview.md
                   - My Profile: services/omvs/my-profile/overview.md
                   - Notification Manager: services/omvs/notification-manager/overview.md
@@ -593,6 +595,7 @@ nav:
                   - Reference Data: services/omvs/reference-data/overview.md
                   - Runtime Manager: services/omvs/runtime-manager/overview.md
                   - Security Officer: services/omvs/security-officer/overview.md
+                  - Solution Architect: services/omvs/solution-architect/overview.md
                   - Template Manager: services/omvs/template-manager/overview.md
                   - Valid Metadata: services/omvs/valid-metadata/overview.md
       - Frameworks:
@@ -733,6 +736,7 @@ nav:
       - Incident Report: concepts/incident-report.md
       - Informal Tag: concepts/informal-tag.md
       - Instance Status: concepts/instance-status.md
+      - Information Supply Chain: concepts/information-supply-chain.md
       - Integration Connector: concepts/integration-connector.md
       - Integration Daemon: concepts/integration-daemon.md
       - Integration Group: concepts/integration-group.md
@@ -800,6 +804,8 @@ nav:
       - Server Name: concepts/server-name.md
       - Software Capability: concepts/software-capability.md
       - Software Server Capability: concepts/software-server-capability.md
+      - Solution Blueprint: concepts/solution-blueprint.md
+      - Solution Component: concepts/solution-component.md
       - Specification: concepts/specification.md
       - Star Rating: concepts/review.md
       - Subject Area: concepts/subject-area.md

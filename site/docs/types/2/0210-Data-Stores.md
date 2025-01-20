@@ -37,8 +37,8 @@ The *DataScope* classification identifies the scope of the data stored in the [d
 * *maxLatitude* - if the data is bound by an area, this is the latitude for top-right corner of the bounding box (BBOX) for the area covered by the data.
 * *minHeight* - if the height above ground is relevant, this is the lowest height that the data covers.
 * *maxHeight* - if the height above ground is relevant, this is the highest height that the data covers.
-* *startTime* - if the data is bound by time, this is the start time.
-* *endTime* - if the data is bound by time, this is the end time.
+* *dataCollectionStartTime* - if the data is bound by time, this is the start time.
+* *dataCollectionEndTime* - if the data is bound by time, this is the end time.
 * *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
 
 ??? deprecated "Deprecated types"

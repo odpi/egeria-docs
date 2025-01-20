@@ -539,7 +539,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0210-Data-Stores" id="qBN1h2M4th8ybXpdtGMd">
-    <mxGraphModel dx="1242" dy="809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-0" />
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-1" parent="ZkdmF8SgiHobN41Bp5xa-0" />
@@ -612,7 +612,7 @@
             <mxPoint x="638.2500000000001" y="405" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GEWuKwrQHwWerRitYt6y-5" value="minLongitude : float&lt;br&gt;minLatitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLongitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLatitude : float&lt;br&gt;minHeight : float&lt;br&gt;maxHeight : float&lt;br&gt;startTime : date&lt;br&gt;endTime : date&lt;br&gt;additionalProperties : map&amp;lt;string, string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
+        <mxCell id="GEWuKwrQHwWerRitYt6y-5" value="minLongitude : float&lt;br&gt;minLatitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLongitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLatitude : float&lt;br&gt;minHeight : float&lt;br&gt;maxHeight : float&lt;br&gt;dataCollectionStartTime : date&lt;br&gt;dataCollectionEndTime : date&lt;br&gt;additionalProperties : map&amp;lt;string, string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">
           <mxGeometry x="754.5" y="210" width="255.5" height="149" as="geometry" />
         </mxCell>
         <mxCell id="GEWuKwrQHwWerRitYt6y-6" value="«classification»&lt;br&gt;&lt;b&gt;DataScope&lt;/b&gt;" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" parent="ZkdmF8SgiHobN41Bp5xa-1" vertex="1">

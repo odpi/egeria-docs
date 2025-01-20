@@ -20,6 +20,8 @@ Events may be managed by a [*Project*](/types/1/0130-Project), [*Actor*](/types/
 
 When events are being managed, often actions are initiated.  These actions can be linked to the context events using the [*Actions*](/types/1/0137-Actions) relationship.  For example, a person may be sent a [*ToDo*](/types/1/0137-Actions) that requests that they read some documentation, acknowledge receipt of a warning, or approve additional resources.  These actions may also include an automated response that is executed via a [engine action](/types/4/0463-Engine-Actions).
 
+A [NoteLog](/types/1/0160-Notes) can be attached to a context event or context event collection to record significant stages/steps/events that occurred during the context event(s).
+
 ![UML](0475-Context-Events.svg)
 
 ## ContextEvent entity
@@ -41,14 +43,6 @@ The *ContextEvent* entity is used to record a context event.  It is a [*Referenc
 * *referenceEffectiveTo* - provides a value to use in the ending effective dates for entities, relationships and classifications whose effectivity is ended by this context event.  For example, the context event may record the date/time that a new regulation comes into force.  This value can be used to set up the effectiveToTime in the metadata elements that are no longer valid once the regulation comes into effect.
 
 The attributes provide a variety of options for expressing the time window of the context event since some events name be instantaneous, others may have a longer duration, or repeat at regular intervals.  Other events may be in the future, and the exact date unknown.  Nevertheless, the organization wishes to manage the event in order to make appropriate preparations.
-
-## ContextEventTimelineEntry entity
-
-The *ContextEventTimelineEntry* entity describes a notification, significant activity or other occurrence during the context event.  It includes a date (*timelineEntryDate*) and a description (*timelineEntryDescription*).
-
-## ContextEventTimeline relationship
-
-The *ContextEventTimeline* relationship links a *ContextEventTimelineEntry* entity to either a *ContextEvent* entity or a collection of *ContextEvent* entities.
 
 ## ContextEventEvidence relationship
 
@@ -94,9 +88,9 @@ The *ContextEventImpact* relationship allows a *ContextEvent* entity to be linke
 
 The *severityLevelIdentifier* attribute describes the severity of the impact on the *Referenceable* entity.  Its value is taken from the list of severities defined in the [GovernanceClassificationLevel](/types/4/0421-Governance-Classification-Levels) collection for severity levels.  The *description* allow further information on the impact to be documented.
 
-## ContextEventForTimeline relationship
+## ContextEventForTimelineEffects relationship
 
-The *ContextEventForTimeline* relationship is used to associate a referenceable entity (typically an [*Asset*](/types/0/0010-Base-Model) or [*SchemaAttribute*](/types/5/0505-Schema-Attributes)) with a context event to show that the context event was significant to the referenceable entity.  For example, consider a data store that records a server's availability.  A power outage resulted in the server being down.  The *ContextEventForTimeline* relationship can be used to associate the server availability data store with the context event describing the power outage.  When the context event's date/time/duration is viewed in conjunction with the server availability data, it is possible to understand why there was a server outage at a particular moment in time.  The context event explained why there was an outage at a particular point in time.
+The *ContextEventForTimelineEffects* relationship is used to associate a referenceable entity (typically an [*Asset*](/types/0/0010-Base-Model) or [*SchemaAttribute*](/types/5/0505-Schema-Attributes)) with a context event to show that the context event affected the data associated with the entity.  For example, consider a data store that records a server's availability.  A power outage resulted in the server being down.  The *ContextEventForTimeline* relationship can be used to associate the server availability data store with the context event describing the power outage.  When the context event's date/time/duration is viewed in conjunction with the server availability data, it is possible to understand why there was a server outage at a particular moment in time.  The context event explained why there was an outage at a particular point in time.
 
 
 

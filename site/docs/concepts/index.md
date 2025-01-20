@@ -193,6 +193,7 @@
        
 - [InTopic](/concepts/in-topic)
 - [In Memory Repository Connector](/concepts/repository-connector)
+- [Information Supply Chain](/concepts/information-supply-chain)
 - [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview)
 - [Integration Connector](/concepts/integration-connector)
 - [Integration Context](/frameworks/oif/overview)
@@ -364,6 +365,8 @@
 - [Software Developer OMAS](/services/omas/software-developer/overview)
 - [Software Capability](/concepts/software-capability)
 - [Software Server Capability](/concepts/software-capability)
+- [Solution Blueprint](/concepts/solution-blueprint)
+- [Solution Component](/concepts/solution-component)
 - [Star Ratings](/concepts/review)
 - [Specification](/concepts/specification)
 - [Stewardship](/features/discovery-and-stewardship/overview)

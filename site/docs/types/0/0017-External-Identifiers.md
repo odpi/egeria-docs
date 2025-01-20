@@ -13,6 +13,7 @@ The *ExternalId* entity describes an external identifier from a specific third p
 
 * *identifier* - the unique identifier of the element in the third party metadata repository.
 * *keyPattern* - The pattern used for the identifier (how it is generated and managed) is stored in the *KeyPattern* enumeration. 
+* *externalInstanceTypeName* - the type name the instance in the external system.
 * *externalInstanceCreatedBy* - the username of the person or process that created the instance in the external system.
 * *externalInstanceCreationTime* - the date/time when the instance in the external system was created.
 * *externalInstanceLastUpdatedBy* - the username of the person or process that last updated the instance in the external system.

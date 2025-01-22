@@ -668,6 +668,7 @@ nav:
       - Basic Concepts: concepts/basic-concepts.md
       - Action: concepts/action.md
       - Action Target: concepts/action-target.md
+      - Actor: concepts/actor.md
       - Anchor: concepts/anchor.md
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md

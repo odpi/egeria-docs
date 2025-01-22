@@ -6,7 +6,9 @@
 
 ## A
 
+- [Action](/concepts/action)
 - [Action Target](/concepts/action-target)
+- [Actor](/concepts/actor)
 - [Analytics Integrator OMIS](/services/omis/analytics-integrator/overview)
 - [Anchor](/concepts/anchor)
 - [Anchor Grouping](/concepts/anchor)

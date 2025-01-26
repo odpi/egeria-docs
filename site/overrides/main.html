@@ -12,15 +12,27 @@
 {% endblock %}
 
 {% block site_meta %}
-  <meta 
-  http-equiv="Content-Security-Policy" 
+<!--  <meta-->
+<!--  http-equiv="Content-Security-Policy"-->
+<!--  content="default-src 'self' https://api.github.com;-->
+<!--  font-src 'self' https://fonts.gstatic.com;-->
+<!--  img-src 'self' data: https://live-lfprojects3.linuxfoundation.org;-->
+<!--  child-src 'self' https://calendar.google.com/ https://www.youtube.com/;-->
+<!--  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://giscus.app/;-->
+<!--  script-src 'self' 'unsafe-inline'  https://giscus.app/;-->
+<!--  frame-src 'self' https://calendar.google.com/ https://www.youtube.com/ https://giscus.app/;"-->
+<!--  />-->
+
+<meta
+  http-equiv="Content-Security-Policy"
   content="default-src 'self' https://api.github.com;
-  font-src 'self' https://fonts.gstatic.com; 
-  img-src 'self' data: https://live-lfprojects3.linuxfoundation.org; 
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: https://live-lfprojects3.linuxfoundation.org https://egeria-project.org ;
   child-src 'self' https://calendar.google.com/ https://www.youtube.com/;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://giscus.app/;
-  script-src 'self' 'unsafe-inline'  https://giscus.app/;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://giscus.app/ 'unsafe-inline';
+  script-src 'self' 'unsafe-inline' https://giscus.app/ https://cdn.jsdelivr.net/npm https://unpkg.com/mermaid@11/dist/mermaid.min.js ;
   frame-src 'self' https://calendar.google.com/ https://www.youtube.com/ https://giscus.app/;"
-  />
-  <meta name="description" content="Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms" />
+/>
+
+<meta name="description" content="Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms" />
 {% endblock %}

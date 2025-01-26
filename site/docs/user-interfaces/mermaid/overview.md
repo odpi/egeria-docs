@@ -6,21 +6,59 @@
 Egeria visualizes collections of related metadata elements as graphs using Mermaid.
 [Mermaid](https://mermaid.js.org/) is a markdown extension for representing diagram using structured text that can then be rendered in a JavaScript environment.  Selected [Open Metadata View Services (OMVSs)](/services/omvs) REST API calls return a Mermaid markdown string that can be used to render a visual representation of the elements returned on the same request.  
 
+
 ## Asset graphs
 
 [Asset Catalog OMVS](/services/omvs/asset-catalog/overview) supports a REST API called *getAssetGraph(assetGUID)* which returns a graph of metadata elements that begins with the requested asset, and includes all the elements anchored to it, along with all the relationships that are attached to the requested asset and all its anchored elements.  In addition it returns a Mermaid string that can be used to visualise this structure.  Below is a screen capture of a rendered asset.
 
-![View Server Mermaid Graph](view-server-mermaid-graph.png)
+```mermaid
+flowchart LR
+    %%{init: {"flowchart\": {"htmlLabels\": false}} }%%
+    ViewServer:view-server("`*SoftwareServer*\n**view-server**`")
+    ViewServer:view-server:SecretStoreEndpoint("`*Endpoint*\n**view-server secret store endpoint**`")
+    ViewServer:view-server:SecretsStoreConnection("`*Connection*\n**view-server secrets store connection**`")
+    ViewServer:view-server:Endpoint("`*Endpoint*\n**view-server endpoint**`")
+    ViewServer:view-server:OpenMetadataandGovernanceEndUserAPIs("`*APIManager*\n**Open Metadata and Governance End User APIs**`")
+    ViewServer:view-server:Connection("`*VirtualConnection*\n**view-server connection**`")
+    ViewServer:view-server-->|SupportedSoftwareCapability|ViewServer:view-server:OpenMetadataandGovernanceEndUserAPIs
+    ViewServer:view-server:SecretsStoreConnection-->|ConnectionConnectorType|Egeria:SecretsStoreConnector:YAMLFile
+    ViewServer:view-server:Connection-->|ConnectionToAsset|ViewServer:view-server
+    ViewServer:view-server-->|ServerEndpoint|ViewServer:view-server:Endpoint
+    ViewServer:view-server:Connection-->|EmbeddedConnection|ViewServer:view-server:SecretsStoreConnection
+    ViewServer:view-server-->|SourcedFrom|ViewServer:serverName
+    ViewServer:view-server-->|DeployedOn|OMAGServerPlatform:DefaultLocalOMAGServerPlatform
+    ViewServer:view-server:Endpoint-->|ConnectionEndpoint|ViewServer:view-server:Connection
+    ViewServer:view-server:Connection-->|ConnectionConnectorType|Egeria:ResourceConnector:System:ViewServer
+    ViewServer:view-server:SecretStoreEndpoint-->|ConnectionEndpoint|ViewServer:view-server:SecretsStoreConnection
+```
 
 The asset is on the far left-hand side. Each box on the graph is a metadata element in the open metadata repository.  The text in *italics* is the element's type, and the text below is the element's display name. If the box has rounded corners, it is anchored to the starting asset.  If it has square corners, it is an element that is just linked to one of the anchored elements.  The lines between the boxes represent relationships in the open metadata repository.  The label on the lines is the relationship type.  The arrow-head is at end 2 of the relationship.  Details of the types shown on the diagram can be found on the [Open Metadata Types](/types) pages.
 
 ??? education "Implementation details"
     The Mermaid graph above is rendered from this string:
+    ```
+    flowchart LR
+        %%{init: {"flowchart\": {"htmlLabels\": false}} }%%
+        ViewServer:view-server("`*SoftwareServer*\n**view-server**`")
+        ViewServer:view-server:SecretStoreEndpoint("`*Endpoint*\n**view-server secret store endpoint**`")
+        ViewServer:view-server:SecretsStoreConnection("`*Connection*\n**view-server secrets store connection**`")
+        ViewServer:view-server:Endpoint("`*Endpoint*\n**view-server endpoint**`")
+        ViewServer:view-server:OpenMetadataandGovernanceEndUserAPIs("`*APIManager*\n**Open Metadata and Governance End User APIs**`")
+        ViewServer:view-server:Connection("`*VirtualConnection*\n**view-server connection**`")
+        ViewServer:view-server-->|SupportedSoftwareCapability|ViewServer:view-server:OpenMetadataandGovernanceEndUserAPIs
+        ViewServer:view-server:SecretsStoreConnection-->|ConnectionConnectorType|Egeria:SecretsStoreConnector:YAMLFile
+        ViewServer:view-server:Connection-->|ConnectionToAsset|ViewServer:view-server
+        ViewServer:view-server-->|ServerEndpoint|ViewServer:view-server:Endpoint
+        ViewServer:view-server:Connection-->|EmbeddedConnection|ViewServer:view-server:SecretsStoreConnection
+        ViewServer:view-server-->|SourcedFrom|ViewServer:serverName
+        ViewServer:view-server-->|DeployedOn|OMAGServerPlatform:DefaultLocalOMAGServerPlatform
+        ViewServer:view-server:Endpoint-->|ConnectionEndpoint|ViewServer:view-server:Connection
+        ViewServer:view-server:Connection-->|ConnectionConnectorType|Egeria:ResourceConnector:System:ViewServer
+        ViewServer:view-server:SecretStoreEndpoint-->|ConnectionEndpoint|ViewServer:view-server:SecretsStoreConnection
+    ```
 
-    ```
-    "---\ntitle: Asset - view-server [5ae81670-0710-45b7-94bf-6337871b7dc1]\n---\nflowchart LR\n%%{init: {\"flowchart\": {\"htmlLabels\": false}} }%%\n\nViewServer:view-server(\"`*SoftwareServer*\n**view-server**`\")\nViewServer:view-server:SecretStoreEndpoint(\"`*Endpoint*\n**view-server secret store endpoint**`\")\nViewServer:view-server:SecretsStoreConnection(\"`*Connection*\n**view-server secrets store connection**`\")\nViewServer:view-server:Endpoint(\"`*Endpoint*\n**view-server endpoint**`\")\nViewServer:view-server:OpenMetadataandGovernanceEndUserAPIs(\"`*APIManager*\n**Open Metadata and Governance End User APIs**`\")\nViewServer:view-server:Connection(\"`*VirtualConnection*\n**view-server connection**`\")\nViewServer:view-server-->|SupportedSoftwareCapability|ViewServer:view-server:OpenMetadataandGovernanceEndUserAPIs\nViewServer:view-server:SecretsStoreConnection-->|ConnectionConnectorType|Egeria:SecretsStoreConnector:YAMLFile\nViewServer:view-server:Connection-->|ConnectionToAsset|ViewServer:view-server\nViewServer:view-server-->|ServerEndpoint|ViewServer:view-server:Endpoint\nViewServer:view-server:Connection-->|EmbeddedConnection|ViewServer:view-server:SecretsStoreConnection\nViewServer:view-server-->|SourcedFrom|ViewServer:serverName\nViewServer:view-server-->|DeployedOn|OMAGServerPlatform:DefaultLocalOMAGServerPlatform\nViewServer:view-server:Endpoint-->|ConnectionEndpoint|ViewServer:view-server:Connection\nViewServer:view-server:Connection-->|ConnectionConnectorType|Egeria:ResourceConnector:System:ViewServer\nViewServer:view-server:SecretStoreEndpoint-->|ConnectionEndpoint|ViewServer:view-server:SecretsStoreConnection\n"
-    ```
     which is returned in the getAssetGraph() response like this(go to end):
+
     ```json
     {
       "class": "AssetGraphResponse",

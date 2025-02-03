@@ -81,81 +81,81 @@ nav:
           - Connector Catalog:
               - Connector Overview: connectors/index.md
               - Secrets Store:
-                    - YAML File: connectors/secrets/yaml-file-secrets-store-connector.md
-                    - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
+                  - YAML File: connectors/secrets/yaml-file-secrets-store-connector.md
+                  - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
               - Metadata Security:
-                    - Open Metadata Access: connectors/metadata-security/open-metadata-access-security-connector.md
+                  - Open Metadata Access: connectors/metadata-security/open-metadata-access-security-connector.md
               - Files:
-                    - Any File:
-                       - Read File Contents: connectors/resource/basic-file-resource-connector.md
-                       - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
-                    - File Folders (directories):
-                       - Read Files: connectors/resource/basic-folder-resource-connector.md
-                       - Catalog Files: connectors/integration/data-files-monitor-integration-connector.md
-                       - Watch Folders: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
-                    - CSV Files:
-                       - Read File Contents: connectors/resource/csv-file-resource-connector.md
-                    - Data Folders:
-                       - Read File Contents: connectors/resource/data-folder-resource-connector.md
-                       - Maintain Last Update: connectors/integration/data-folder-monitor-integration-connector.md
-                    - Open Metadata Archive Files:
-                       - Read OMArchive Files: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
+                  - Any File:
+                      - Read File Contents: connectors/resource/basic-file-resource-connector.md
+                      - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
+                  - File Folders (directories):
+                      - Read Files: connectors/resource/basic-folder-resource-connector.md
+                      - Catalog Files: connectors/integration/data-files-monitor-integration-connector.md
+                      - Watch Folders: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
+                  - CSV Files:
+                      - Read File Contents: connectors/resource/csv-file-resource-connector.md
+                  - Data Folders:
+                      - Read File Contents: connectors/resource/data-folder-resource-connector.md
+                      - Maintain Last Update: connectors/integration/data-folder-monitor-integration-connector.md
+                  - Open Metadata Archive Files:
+                      - Read OMArchive Files: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
               - Relational Databases:
-                    - JDBC DataSource API: connectors/resource/jdbc-resource-connector.md
-                    - Catalog JDBC Database: connectors/integration/jdbc-integration-connector.md
+                  - JDBC DataSource API: connectors/resource/jdbc-resource-connector.md
+                  - Catalog JDBC Database: connectors/integration/jdbc-integration-connector.md
               - Unity Catalog:
-                    - Unity Catalog Overview: connectors/unity-catalog/index.md
-                    - Call API: connectors/unity-catalog/resource-connector.md
-                    - Synchronize Server: connectors/unity-catalog/sync-server-connector.md
-                    - Synchronize Catalog: connectors/unity-catalog/sync-catalog-connector.md
-                    - Survey Server: connectors/unity-catalog/server-survey-service.md
-                    - Survey Catalog: connectors/unity-catalog/catalog-survey-service.md
-                    - Survey Schema: connectors/unity-catalog/schema-survey-service.md
+                  - Unity Catalog Overview: connectors/unity-catalog/index.md
+                  - Call API: connectors/unity-catalog/resource-connector.md
+                  - Synchronize Server: connectors/unity-catalog/sync-server-connector.md
+                  - Synchronize Catalog: connectors/unity-catalog/sync-catalog-connector.md
+                  - Survey Server: connectors/unity-catalog/server-survey-service.md
+                  - Survey Catalog: connectors/unity-catalog/catalog-survey-service.md
+                  - Survey Schema: connectors/unity-catalog/schema-survey-service.md
               - Apache Kafka:
-                    - JSON Plain Text Events: connectors/resource/kafka-open-metadata-topic-connector.md
-                    - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
-                    - Catalog Kafka Topics: connectors/integration/kafka-monitor-integration-connector.md
-                    - Audit Kafka Topics: connectors/integration/kafka-topics-audit-integration-connector.md
+                  - JSON Plain Text Events: connectors/resource/kafka-open-metadata-topic-connector.md
+                  - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
+                  - Catalog Kafka Topics: connectors/integration/kafka-monitor-integration-connector.md
+                  - Audit Kafka Topics: connectors/integration/kafka-topics-audit-integration-connector.md
               - Strimzi Topics:
-                    - Catalog Topics: connectors/integration/strimzi-monitor-integration-connector.md
+                  - Catalog Topics: connectors/integration/strimzi-monitor-integration-connector.md
               - Apache Atlas Server:
-                    - Call API: connectors/apache-atlas/apache-atlas-rest-connector.md
-                    - Survey: connectors/apache-atlas/apache-atlas-survey-action-service.md
-                    - Catalog: connectors/apache-atlas/apache-atlas-catalog-integration-connector.md
+                  - Call API: connectors/apache-atlas/apache-atlas-rest-connector.md
+                  - Survey: connectors/apache-atlas/apache-atlas-survey-action-service.md
+                  - Catalog: connectors/apache-atlas/apache-atlas-catalog-integration-connector.md
               - Governance Actions:
-                    - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
-                    - Origin Seeker: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-                    - Zone Publisher: connectors/governance-action/zone-publisher-governance-action-service.md
+                  - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
+                  - Origin Seeker: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
+                  - Zone Publisher: connectors/governance-action/zone-publisher-governance-action-service.md
               - Open APIs:
-                    - Catalog APIs via Swagger: connectors/integration/open-api-monitor-integration-connector.md
+                  - Catalog APIs via Swagger: connectors/integration/open-api-monitor-integration-connector.md
               - Egeria Infrastructure:
-                    - OMAG Server Platform:
-                        - Catalog Servers: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
+                  - OMAG Server Platform:
+                      - Catalog Servers: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
               - Open Lineage standard:
-                    - Open Lineage Event Receiver: connectors/integration/open-lineage-event-receiver-integration-connector.md
-                    - Open Lineage API Log Store: connectors/integration/api-based-open-lineage-log-store-integration-connector.md
-                    - Open Lineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
-                    - Open Lineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
-                    - Open Lineage Events from Governance Action: connectors/integration/governance-action-open-lineage-integration-connector.md
+                  - Open Lineage Event Receiver: connectors/integration/open-lineage-event-receiver-integration-connector.md
+                  - Open Lineage API Log Store: connectors/integration/api-based-open-lineage-log-store-integration-connector.md
+                  - Open Lineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
+                  - Open Lineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
+                  - Open Lineage Events from Governance Action: connectors/integration/governance-action-open-lineage-integration-connector.md
               - Open Metadata Repositories:
-                    - PostgreSQL: connectors/repository/postgres/overview.md
-                    - XTDB:
-                          - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                          - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                          - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                    - JanusGraph: connectors/repository/janus-graph/overview.md
-                    - In-memory: connectors/repository/in-memory/overview.md
-                    - Read-only: connectors/repository/read-only/overview.md
+                  - PostgreSQL: connectors/repository/postgres/overview.md
+                  - XTDB:
+                      - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
+                      - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
+                      - XTDB Connector Performance: connectors/repository/xtdb/performance.md
+                  - JanusGraph: connectors/repository/janus-graph/overview.md
+                  - In-memory: connectors/repository/in-memory/overview.md
+                  - Read-only: connectors/repository/read-only/overview.md
               - Open Metadata Archive Store:
-                    - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
+                  - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
               - Audit Log Destination:
-                    - Console: connectors/runtime/console-audit-log-destination-connector.md
-                    - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
+                  - Console: connectors/runtime/console-audit-log-destination-connector.md
+                  - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
               - Cohort Registry Store:
-                    - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
+                  - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
               - Open Metadata Topic:
-                    - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
-                    - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
+                  - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
+                  - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
               - IBM Information Governance Catalog (IGC): connectors/repository/igc/overview.md
               - SAS Viya: connectors/repository/sas-viya/overview.md
               - Hive Metastore (HMS): connectors/repository/hms/overview.md
@@ -201,25 +201,25 @@ nav:
           - Configure OMAG Servers:
               - Configuring an OMAG Server: guides/admin/servers/index.md
               - By Server Type:
-                    - Configuring an OMAG Server by server type: guides/admin/servers/by-server-type/index.md
-                    - Metadata Access Point: guides/admin/servers/by-server-type/configuring-a-metadata-access-point.md
-                    - Metadata Access Store: guides/admin/servers/by-server-type/configuring-a-metadata-access-store.md
-                    - Repository Proxy: guides/admin/servers/by-server-type/configuring-a-repository-proxy.md
-                    - View Server: guides/admin/servers/by-server-type/configuring-a-view-server.md
-                    - Integration Daemon: guides/admin/servers/by-server-type/configuring-an-integration-daemon.md
-                    - Engine Host: guides/admin/servers/by-server-type/configuring-an-engine-host.md
-                    - Conformance Test Server: guides/admin/servers/by-server-type/configuring-a-conformance-test-server.md
+                  - Configuring an OMAG Server by server type: guides/admin/servers/by-server-type/index.md
+                  - Metadata Access Point: guides/admin/servers/by-server-type/configuring-a-metadata-access-point.md
+                  - Metadata Access Store: guides/admin/servers/by-server-type/configuring-a-metadata-access-store.md
+                  - Repository Proxy: guides/admin/servers/by-server-type/configuring-a-repository-proxy.md
+                  - View Server: guides/admin/servers/by-server-type/configuring-a-view-server.md
+                  - Integration Daemon: guides/admin/servers/by-server-type/configuring-an-integration-daemon.md
+                  - Engine Host: guides/admin/servers/by-server-type/configuring-an-engine-host.md
+                  - Conformance Test Server: guides/admin/servers/by-server-type/configuring-a-conformance-test-server.md
               - By Section:
-                    - Configuring an OMAG Server by configuration document section: guides/admin/servers/by-section/index.md
-                    - Egeria Managed Properties: guides/admin/servers/by-section/egeria-managed-properties.md
-                    - Basic Server Properties: guides/admin/servers/by-section/basic-server-properties-section.md
-                    - Event Bus Default Properties: guides/admin/servers/by-section/event-bus-config-section.md
-                    - Repository Services: guides/admin/servers/by-section/repository-services-section.md
-                    - Server Security Connection: guides/admin/servers/by-section/server-security-connection-section.md
-                    - Access Services : guides/admin/servers/by-section/access-services-section.md
-                    - View Services : guides/admin/servers/by-section/view-services-section.md
-                    - Integration Daemon Services : guides/admin/servers/by-section/integration-daemon-services-section.md
-                    - Engine Host Services : guides/admin/servers/by-section/engine-host-services-section.md
+                  - Configuring an OMAG Server by configuration document section: guides/admin/servers/by-section/index.md
+                  - Egeria Managed Properties: guides/admin/servers/by-section/egeria-managed-properties.md
+                  - Basic Server Properties: guides/admin/servers/by-section/basic-server-properties-section.md
+                  - Event Bus Default Properties: guides/admin/servers/by-section/event-bus-config-section.md
+                  - Repository Services: guides/admin/servers/by-section/repository-services-section.md
+                  - Server Security Connection: guides/admin/servers/by-section/server-security-connection-section.md
+                  - Access Services: guides/admin/servers/by-section/access-services-section.md
+                  - View Services: guides/admin/servers/by-section/view-services-section.md
+                  - Integration Daemon Services: guides/admin/servers/by-section/integration-daemon-services-section.md
+                  - Engine Host Services: guides/admin/servers/by-section/engine-host-services-section.md
           - Migration: guides/migration/migrating-configuration-documents.md
       - Operations Guide:
           - Operate OMAG Server Platform: guides/operations/overview.md
@@ -250,30 +250,30 @@ nav:
   - Learning:
       - Learning Overview: education/index.md
       - Tutorials:
-            - Tutorials: education/tutorials/index.md
-            - Setting up Egeria: education/tutorials/building-egeria-tutorial/overview.md
-            - Using Egeria:
-                - Open Metadata Labs: education/open-metadata-labs/overview.md
-                - Platform and Servers: education/tutorials/omag-server-tutorial/overview.md
-                - Reports and Utilities: education/tutorials/omag-client-tutorial.md
-                - Sample Clients: education/tutorials/running-samples-tutorial.md
-            - Developing with Egeria:
-                - Setting up IntelliJ: education/tutorials/developer-intellij-tutorial/overview.md
-                - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
-            - Tools:
-                - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
-                - Using Kubernetes: guides/operations/kubernetes/index.md
-                - Using Docker: education/tutorials/docker-tutorial/overview.md
-                - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
-                - Using Postman: education/tutorials/postman-tutorial/overview.md
-                - Using Kafka: education/tutorials/kafka-tutorial/overview.md
+          - Tutorials: education/tutorials/index.md
+          - Setting up Egeria: education/tutorials/building-egeria-tutorial/overview.md
+          - Using Egeria:
+              - Open Metadata Labs: education/open-metadata-labs/overview.md
+              - Platform and Servers: education/tutorials/omag-server-tutorial/overview.md
+              - Reports and Utilities: education/tutorials/omag-client-tutorial.md
+              - Sample Clients: education/tutorials/running-samples-tutorial.md
+          - Developing with Egeria:
+              - Setting up IntelliJ: education/tutorials/developer-intellij-tutorial/overview.md
+              - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
+          - Tools:
+              - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
+              - Using Kubernetes: guides/operations/kubernetes/index.md
+              - Using Docker: education/tutorials/docker-tutorial/overview.md
+              - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
+              - Using Postman: education/tutorials/postman-tutorial/overview.md
+              - Using Kafka: education/tutorials/kafka-tutorial/overview.md
       - Informal Guide to Getting Started: https://getting-started-with-egeria.pdr-associates.com/introduction.html
       - Webinars: education/webinar-program/overview.md
       - Comparisons:
-            - Apache Atlas: education/comparisons/apache-atlas.md
+          - Apache Atlas: education/comparisons/apache-atlas.md
       - Scenarios:
-            - Data Manager Integration: scenarios/data-manager-integration/overview.md
-            - File Lineage: scenarios/file-lineage/overview.md
+          - Data Manager Integration: scenarios/data-manager-integration/overview.md
+          - File Lineage: scenarios/file-lineage/overview.md
   - Community:
       - Community Recognition: community/index.md
       - Community Guide: guides/community.md
@@ -312,19 +312,19 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Newsletters:
-            - January 2025: release-notes/january-2025.md
-            - October 2024: release-notes/october-2024.md
-            - June 2024: release-notes/june-2024.md
-            - August 2023: release-notes/august-2023.md
-            - April 2023: release-notes/april-2023.md
-            - February 2023: release-notes/february-2023.md
-            - January 2023: release-notes/january-2023.md
-            - November 2022: release-notes/november-2022.md
-            - October 2022: release-notes/october-2022.md
+          - January 2025: release-notes/january-2025.md
+          - October 2024: release-notes/october-2024.md
+          - June 2024: release-notes/june-2024.md
+          - August 2023: release-notes/august-2023.md
+          - April 2023: release-notes/april-2023.md
+          - February 2023: release-notes/february-2023.md
+          - January 2023: release-notes/january-2023.md
+          - November 2022: release-notes/november-2022.md
+          - October 2022: release-notes/october-2022.md
       - Core Egeria:
-            - Latest Release: release-notes/latest.md
-            - Next Release: release-notes/next.md
-            - All releases: release-notes/previous.md
+          - Latest Release: release-notes/latest.md
+          - Next Release: release-notes/next.md
+          - All releases: release-notes/previous.md
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
   - Reference:
@@ -513,10 +513,10 @@ nav:
           - Fixed Services:
               - Administration Services: services/admin-services/overview.md
               - Repository Services (OMRS):
-                    - Open Metadata Repository Services: services/omrs/index.md
-                    - Cohorts: services/omrs/cohort.md
-                    - Metadata Repositories: services/omrs/metadata-repositories.md
-                    - Cohort Events: concepts/cohort-events.md
+                  - Open Metadata Repository Services: services/omrs/index.md
+                  - Cohorts: services/omrs/cohort.md
+                  - Metadata Repositories: services/omrs/metadata-repositories.md
+                  - Cohort Events: concepts/cohort-events.md
               - First Failure Data Capture (FFDC): services/ffdc-services.md
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
@@ -599,7 +599,7 @@ nav:
                   - Template Manager: services/omvs/template-manager/overview.md
                   - Valid Metadata: services/omvs/valid-metadata/overview.md
       - Frameworks:
-          - Frameworks Overview : frameworks/index.md
+          - Frameworks Overview: frameworks/index.md
           - Audit Logs (ALF): frameworks/alf/overview.md
           - Open Metadata (OMF): frameworks/omf/overview.md
           - Open Connectors (OCF): frameworks/ocf/overview.md
@@ -914,7 +914,7 @@ theme:
 extra_css:
   - assets/stylesheets/egeria.css
 extra_javascript:
-    - js/egeria.js
+  - js/egeria.js
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -943,9 +943,10 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.superfences:
       custom_fences:
-         - name: mermaid
-           class: mermaid
-           format: !!python/name:pymdownx.superfences.fence_div_format
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
   - pymdownx.keys
   - toc:
       permalink: true

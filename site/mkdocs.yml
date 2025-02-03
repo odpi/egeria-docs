@@ -22,6 +22,33 @@ nav:
       - Try Egeria: try-egeria/overview.md
   - Using:
       - Using Overview: guides/index.md
+      - User Interfaces:
+          - User Interface overview: user-interfaces/index.md
+          - Hey Egeria: user-interfaces/hey-egeria/overview.md
+          - Graph Visualization: user-interfaces/mermaid/overview.md
+          - Explorers: user-interfaces/brain-explorers/overview.md
+      - Features:
+          - Features Overview: features/index.md
+          - Anchor Management: features/anchor-management/overview.md
+          - Cohort Operation: features/cohort-operation/overview.md
+          - Data Quality: features/data-quality/overview.md
+          - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
+          - Duplicate Management: features/duplicate-management/overview.md
+          - Effectivity Dates: features/effectivity-dates/overview.md
+          - External Identifiers: features/external-identifiers/overview.md
+          - External References: features/external-references/overview.md
+          - Governance Zoning: features/governance-zoning/overview.md
+          - Incident Reporting: features/incident-reporting/overview.md
+          - Integrated Cataloguing: features/integrated-cataloguing/overview.md
+          - Lineage Management: features/lineage-management/overview.md
+          - Metadata Archiving: features/metadata-archiving/overview.md
+          - Metadata Provenance: features/metadata-provenance/overview.md
+          - Metadata Security: features/metadata-security/overview.md
+          - People, Roles and Organizations: features/people-roles-organizations/overview.md
+          - Reference Data Management: features/reference-data-management/overview.md
+          - Synchronized Access Control: features/synchronized-access-control/overview.md
+          - Templated Cataloguing: features/templated-cataloguing/overview.md
+          - User Feedback: features/user-feedback/overview.md
       - Planning Guide:
           - Planning Guide: guides/planning/index.md
           - Planning Deployment:
@@ -220,33 +247,6 @@ nav:
           - Server Diagnostic Guides:
               - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
-      - User Interfaces:
-          - User Interface overview: user-interfaces/index.md
-          - Hey Egeria: user-interfaces/hey-egeria/overview.md
-          - Graph Visualization: user-interfaces/mermaid/overview.md
-          - Explorers: user-interfaces/brain-explorers/overview.md
-      - Features:
-          - Features Overview: features/index.md
-          - Anchor Management: features/anchor-management/overview.md
-          - Cohort Operation: features/cohort-operation/overview.md
-          - Data Quality: features/data-quality/overview.md
-          - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
-          - Duplicate Management: features/duplicate-management/overview.md
-          - Effectivity Dates: features/effectivity-dates/overview.md
-          - External Identifiers: features/external-identifiers/overview.md
-          - External References: features/external-references/overview.md
-          - Governance Zoning: features/governance-zoning/overview.md
-          - Incident Reporting: features/incident-reporting/overview.md
-          - Integrated Cataloguing: features/integrated-cataloguing/overview.md
-          - Lineage Management: features/lineage-management/overview.md
-          - Metadata Archiving: features/metadata-archiving/overview.md
-          - Metadata Provenance: features/metadata-provenance/overview.md
-          - Metadata Security: features/metadata-security/overview.md
-          - People, Roles and Organizations: features/people-roles-organizations/overview.md
-          - Reference Data Management: features/reference-data-management/overview.md
-          - Synchronized Access Control: features/synchronized-access-control/overview.md
-          - Templated Cataloguing: features/templated-cataloguing/overview.md
-          - User Feedback: features/user-feedback/overview.md
   - Learning:
       - Learning Overview: education/index.md
       - Tutorials:

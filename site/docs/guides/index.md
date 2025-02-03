@@ -7,10 +7,13 @@ Egeria's guides provide practical guidance on different aspects of using Egeria 
 
 --8<-- "snippets/getting-started.md"
 
+* [User Interfaces](/user-interfaces) - Illustrates different types of user interaction styles available in Egeria.
+* [Features](/features) - Provides a detailed guide to the governance features of Egeria.
 * [Planning Guide](/guides/planning) - The planning guide describes how to plan your Egeria installation and the development of the metadata definitions that will drive its use.  Part of this planning process makes use of the following catalogs:
 
     * [Content Pack Catalog](/content-packs) - the content pack catalog provides detailed information about the content packs available for Egeria.  These content pack provide metadata to bootstrap your deployment.
     * [Connector Catalog](/connectors) - the connector catalog provides a list of connectors available for Egeria.
+    * [Template Catalog](/catalog-templates) - details of the cataloguing templates prebuild in Egeria.
 
 * [Integration Guide](/guides/integration) - the integration guides describes how to set up integrations between Egeria and third party technologies.  It also makes use of the content packs and connector catalogs.
 * [Administration Guide](/guides/admin) - the administration guide describes how to mange Egeria's configuration.
@@ -18,6 +21,5 @@ Egeria's guides provide practical guidance on different aspects of using Egeria 
 * [Operations Guide](/guides/operations/overview) - Describes commands to control and monitor an Egeria deployment.
 * [Diagnostic Guide](/guides/diagnostic/overview) - Problem determination methods and guidance.
 * [Developer Guide](/guides/developer) - the developer covers how to build connectors, utilities that call Egeria, and open metadata archives.
-* [Features](/features) - Provides a detailed guide to the governance features of Egeria.
 
 --8<-- "snippets/abbr.md"

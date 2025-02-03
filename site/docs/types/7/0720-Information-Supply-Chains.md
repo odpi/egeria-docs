@@ -22,21 +22,21 @@ If additional processing is required to move the data between solution component
 
 ![UML](0720-Information-Supply-Chains.svg)
 
-## InformationSupplyChain
+## InformationSupplyChain entity
 
-An *InformationSupplyChain* entity identifies an information supply chain.  It contains the description of the purposes and scope of the information supply chain and the description of its importance to the business.
+An *InformationSupplyChain* entity is a [Referenceables](/types/0/0010-Base-Model) that identifies an information supply chain.  It contains the description of the purposes and scope of the information supply chain and the description of its importance to the business.
 
-## InformationSupplyChainComposition
+## InformationSupplyChainComposition relationship
 
 The *InformationSupplyChainComposition* relationship links an *InformationSupplyChain* entity to its segments.
 
-## InformationSupplyChainSegment
+## InformationSupplyChainSegment entity
 
-An *InformationSupplyChainSegment* entity identifies an information supply chain segment.  It contains the description of the segment and its scope.  It includes expected volumetrics to use in the governance processes that are monitoring the information supply chain segment.
+An *InformationSupplyChainSegment* entity is a [Referenceables](/types/0/0010-Base-Model) that identifies a significant prt of an information supply chain.  It contains the description of the segment and its scope.  It includes expected volumetrics to use in the governance processes that are monitoring the information supply chain segment.
 
 ## InformationSupplyChainLink
 
-The *InformationSupplyChainLink* relationship links the information supply chain segments, and descriptions of the data sources and destinations together into a graph.  This graph represents the highest level abstraction of the operation of the information supply chain.
+The *InformationSupplyChainLink* relationship links the information supply chain segments, and descriptions of the data sources and destinations together into a graph.  This graph represents the highest level abstraction of the operation of the information supply chain. The *label* and *description* attributes help to explain how/why the information supply chain progresses.
 
 ## Example
 

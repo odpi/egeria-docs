@@ -15,5 +15,12 @@ This is contrast with the [Data Passing](/types/7/0750-Data-Passing) relationshi
 
 ![UML](0770-Lineage-Mapping.svg)
 
+## LineageMapping relationship
+
+The *LineageMapping* relationship identifies two elements that represent the same real-world object.  This occurs when different tools are integrated into the open metadata ecosystem and they either use different names or catalog at different levels of granularity.
+
+## SchemaAttributeLineageMapping relationship
+
+The *SchemaAttributeLineageMapping* relationship maps a schema attribute from one asset to the equivalent schema attribute of another asset to indicate that the data is copied from one to another.  The attributes within this relationship describe any transformation/mapping used.
 
 --8<-- "snippets/abbr.md"

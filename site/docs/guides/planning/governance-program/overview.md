@@ -39,12 +39,12 @@ Each domain is typically the responsibility of a different executive in the orga
     ![Governance Domain Examples](/guides/planning/governance-program/governance-domain-examples.svg)
     > Examples of different governance domains within an organization.
 
-Governance domains are represented by [*Governance Domain Descriptions*](/types/4/0401-Governance-Definitions/#governancedomaindescription) entities in open metadata.  They are organized into a *GovernanceDomainSet* collection.
+Governance domains are represented by [*Valid Value Definition*](/types/5/0545-Reference-data) entities in open metadata.  They are organized into a *ValidValueSet* collection using the [Valid Metadata Values](/guides/planning/valid-values/overview) services.
 
 ![Governance Domain Descriptions](/guides/planning/governance-program/governance-domain-definitions.svg)
-> The governance domain descriptions organized in a governance domain set
+> The governance domain descriptions organized in a valid value set under the `domainIdentifier` attribute
 
-The governance domain descriptions include the *domainIdentifier* property, a *displayName* and a *description*.  The *domainIdentifier* property is an integer and by convention "0" means "applies to all domains".  For example:
+The governance domain descriptions include the *preferredValue* for the  *domainIdentifier* property, a *displayName* and a *description*.  The *domainIdentifier* property is an integer and by convention "0" means "applies to all domains".  For example:
 
 | Domain Identifier | Display Name                   | Description                                                                                               |
 |:------------------|:-------------------------------|:----------------------------------------------------------------------------------------------------------|
@@ -59,9 +59,7 @@ The governance domain descriptions include the *domainIdentifier* property, a *d
 
 
 ??? education "Defining governance domains"
-    Governance domain descriptions can be defined in an [Open Metadata Archive](/concepts/open-metadata-archive) or through the [Governance Program OMAS](/services/omas/governance-program/overview).
-    
-    The [egeria-samples.git repository](https://github.com/odpi/egeria-samples) includes a sample called [Sample metadata archives for Coco Pharmaceuticals](https://github.com/odpi/egeria-samples/tree/main/sample-metadata-archives/coco-metadata-archives) that creates open metadata archives with basic definitions for Coco Pharmaceuticals.  This includes the definition of this organization's governance domains with their communities and governance officers.
+    Governance domain descriptions can be defined in an [Open Metadata Archive](/concepts/open-metadata-archive) or through the [Valid Metadata OMVS](/services/omvs/valid-metadata/overview).
 
 ## Governance Leadership
 
@@ -96,7 +94,7 @@ These different approaches allow you to have enough detail in your open metadata
 
     ![Governance Roles](/guides/planning/governance-program/governance-roles.svg)
 
-    The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of governance roles. The [Community Profile OMAS](/services/omas/community-profile/overview) supports the appointment of people to roles.
+    The [Governance Officer OMVS](/services/omvs/governance-officer/overview) supports the setting up of governance roles. The [People Organizer OMVS](/services/omvs/people-organizer/overview) supports the appointment of people to roles.
 
 
 ## Governance Leadership Communities
@@ -196,9 +194,10 @@ The organization of the subject areas is orthogonal to the governance domains. S
         * [Setting up the subject area definitions :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-subject-area-sample){ target=gh }
         * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
     
-    * The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of subject area definitions.
-    * [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.
-    * [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the management of glossaries and the exchange of subject area information with other catalogs and quality tools.
+    * [Governance Officer OMVS](/services/omvs/governance-officer/overview) supports the setting up of subject area definitions.
+    * [Reference Data OMVS](/services/omvs/reference-data/overview) supports the definition of reference data for the subject area.
+    * [Data Designer OMVS](/services/omvs/data-designer/overview) supports the definition of quality rules for the subject area.
+    * [Asset Manager OMAS](/services/omvs/asset-manager/overview) supports the management of glossaries and the exchange of subject area information with other catalogs and quality tools.
 
 ## Governance classification, tagging and linking
 
@@ -229,7 +228,7 @@ The labels may be assigned directly to the asset, or to elements, such as schema
 
 ## Setting up the levels for your governance classifications
 
-The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined, and they can be set up in [`GovernanceClassificationLevel`](/types/4/0421-Governance-Classification-Levels/) definitions.
+The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined, and they can be set up using the [valid metadata values](/guides/planning/valid-values/overview) definitions.
 
 ![Figure 5](/guides/planning/governance-program/governance-program-level-definition.svg)
 > **Figure 5:** Governance classifications that use governance level definitions

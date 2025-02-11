@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-11-17T13:22:37.333Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="gVbaf2clTMyOt-k-hYU1" version="21.6.8" type="device" pages="7">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9" pages="7">
   <diagram id="gaeeWlbyKK2-ta_VzILe" name="governance-domain">
-    <mxGraphModel dx="1194" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -79,7 +79,7 @@
         <mxCell id="0RXOnSef8UXWCk25OGyF-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="0RXOnSef8UXWCk25OGyF-2" target="0RXOnSef8UXWCk25OGyF-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0RXOnSef8UXWCk25OGyF-2" value="Governance &lt;br&gt;Domain&lt;br&gt;Set" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="0RXOnSef8UXWCk25OGyF-2" value="domainIdentifier" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="255" y="585" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="0RXOnSef8UXWCk25OGyF-3" value="Governance&lt;br&gt;Domain&lt;br&gt;Definition" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
@@ -106,17 +106,14 @@
             <mxPoint x="315" y="675" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0RXOnSef8UXWCk25OGyF-9" value="Governance&lt;br&gt;Domain&lt;br&gt;Definition" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="0RXOnSef8UXWCk25OGyF-9" value="Governance&lt;br&gt;Domain&lt;br&gt;Description" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="385" y="705" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="DDb2UtIfti2ZPekRbWEM-1" value="CollectionMembership" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="215" y="735" width="140" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="mArv101Qo0KCMiXSAoCN" name="bridging-to-organization">
-    <mxGraphModel dx="2848" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2896" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="S5lS58ZmbvXcH93iUld8-0" />
         <mxCell id="S5lS58ZmbvXcH93iUld8-1" parent="S5lS58ZmbvXcH93iUld8-0" />

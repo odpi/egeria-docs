@@ -134,9 +134,9 @@
     ![Figure 10](/practices/common-data-definitions/semantic-to-implementation-schema-assignment.svg)
     > Figure 10: Using assignment relationships to create a rich description of the data stored in a schema attribute (data field)
 
-??? info "Governance action classifications"
+??? info "Governed data classifications"
 
-    [Governance action classifications](/types/4/0422-Governance-Action-Classifications) can be attached to most types of metadata elements.  They can also be assigned to glossary terms to indicate that the classification applies to all data values associated with the glossary term.  The governance action classifications have attributes that identify a particular *level* that applies to the attached element. The definition for each [level](/types/4/0421-Governance-Classification-Levels) can be linked to appropriate Governance Definitions that define how digital resources classified at that level should be governed.  Governance Classification Levels are linked to Governance Definitions using the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.
+    [Governed data classifications](/types/4/0422-Governed-Data-Classifications) can be attached to most types of metadata elements.  They can also be assigned to glossary terms to indicate that the classification applies to all data values associated with the glossary term.  The governed data classifications have attributes that identify a particular *level* that applies to the attached element. The definition for each [level](/guides/planning/valid-values/overview) can be linked to appropriate Governance Definitions that define how digital resources classified at that level should be governed.  Governance Classification Levels are linked to Governance Definitions using the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.
 
     ![Figure 11](/practices/common-data-definitions/semantic-to-implementation-governance-classification.svg)
     > Figure 11: Classifying glossary terms to identify the governance definitions that apply to all data values associated with the glossary term 

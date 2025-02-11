@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17" pages="14">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9" pages="14">
   <diagram id="-Ej96Nh0ZEP9uloQp987" name="overview">
     <mxGraphModel dx="1639" dy="941" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -477,7 +477,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="LyPHQJKorKenE_D57Doj" name="0340-Dictionary">
-    <mxGraphModel dx="1194" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="sTJkILK9U4xlBEgw5VWO-0" />
         <mxCell id="sTJkILK9U4xlBEgw5VWO-1" parent="sTJkILK9U4xlBEgw5VWO-0" />
@@ -523,24 +523,24 @@
         <mxCell id="KPG3D5WNco8ZiOu6Oi5j-5" value="«classification»&lt;br&gt;&lt;b&gt;AbstractConcept&lt;/b&gt;" style="html=1;strokeColor=#0e8088;align=center;fillColor=#b0e3e6;gradientColor=#00CCCC;" parent="sTJkILK9U4xlBEgw5VWO-1" vertex="1">
           <mxGeometry x="113.5" y="500" width="190" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="sytkUMxYCsK5vgXW3Irn-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" edge="1" parent="sTJkILK9U4xlBEgw5VWO-1" target="sytkUMxYCsK5vgXW3Irn-1" source="irMCJdKCJaOCkWBdXiS6-5">
+        <mxCell id="sytkUMxYCsK5vgXW3Irn-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" parent="sTJkILK9U4xlBEgw5VWO-1" source="irMCJdKCJaOCkWBdXiS6-5" target="sytkUMxYCsK5vgXW3Irn-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="215" y="303" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sytkUMxYCsK5vgXW3Irn-1" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" vertex="1" parent="sTJkILK9U4xlBEgw5VWO-1">
+        <mxCell id="sytkUMxYCsK5vgXW3Irn-1" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="sTJkILK9U4xlBEgw5VWO-1" vertex="1">
           <mxGeometry x="104" y="190" width="210" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="sytkUMxYCsK5vgXW3Irn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="sTJkILK9U4xlBEgw5VWO-1" target="sytkUMxYCsK5vgXW3Irn-5">
+        <mxCell id="sytkUMxYCsK5vgXW3Irn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="sTJkILK9U4xlBEgw5VWO-1" target="sytkUMxYCsK5vgXW3Irn-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="315" y="215" as="sourcePoint" />
             <mxPoint x="374" y="215" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sytkUMxYCsK5vgXW3Irn-3" value="defaultValue : string&lt;br&gt;sampleValues : array&amp;lt;string&amp;gt;&lt;br&gt;dataPattern : array&amp;lt;string&amp;gt;&lt;br&gt;namePattern : array&amp;lt;string&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" vertex="1" parent="sTJkILK9U4xlBEgw5VWO-1">
+        <mxCell id="sytkUMxYCsK5vgXW3Irn-3" value="defaultValue : string&lt;br&gt;sampleValues : array&amp;lt;string&amp;gt;&lt;br&gt;dataPatterns : array&amp;lt;string&amp;gt;&lt;br&gt;namePatterns : array&amp;lt;string&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="sTJkILK9U4xlBEgw5VWO-1" vertex="1">
           <mxGeometry x="430.75" y="240" width="209.5" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="sytkUMxYCsK5vgXW3Irn-5" value="«classification»&lt;br&gt;&lt;b&gt;DataFieldValues&lt;/b&gt;" style="html=1;strokeColor=#0e8088;align=center;fillColor=#b0e3e6;gradientColor=#00CCCC;" vertex="1" parent="sTJkILK9U4xlBEgw5VWO-1">
+        <mxCell id="sytkUMxYCsK5vgXW3Irn-5" value="«classification»&lt;br&gt;&lt;b&gt;DataFieldValues&lt;/b&gt;" style="html=1;strokeColor=#0e8088;align=center;fillColor=#b0e3e6;gradientColor=#00CCCC;" parent="sTJkILK9U4xlBEgw5VWO-1" vertex="1">
           <mxGeometry x="430.75" y="190" width="209.5" height="50" as="geometry" />
         </mxCell>
       </root>

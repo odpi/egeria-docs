@@ -39,7 +39,7 @@ Home collections are used to organize elements for a particular person, team, pr
 
 Collections can be used by automated services, typically [governance services](/concepts/governance-service), to gather the results of their processing together.  Such a collection would have the *ResultsSet* classification attached to it.
 
-For example, the results set collection shown below is from a governance service that is identifying assets that should be archived (for example, by reviewing their [Retention](/types/4/0422-Governance-Action-Classifications) classification).
+For example, the results set collection shown below is from a governance service that is identifying assets that should be archived (for example, by reviewing their [Retention](/types/4/0422-Governed-Data-Classifications) classification).
 
 ![Service Results Sets](collections-results-set-1.svg)
 

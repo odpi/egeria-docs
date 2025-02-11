@@ -85,9 +85,9 @@ The labels may be assigned directly to the asset, or to elements, such as schema
 
 ## Setting up the levels for your governance classifications
 
-The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined ,and they can be set up in [`GovernanceClassificationLevel`](/types/4/0421-Governance-Classification-Levels/) definitions.
+The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined ,and they can be set up using the [Valid Metadata Values](/guides/planning/valid-values/overview) services.
 
-Egeria has a set of default values that can be set up using the [`createStandardGovernanceClassificationLevels`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceClassificationLevelInterface.html) method.  Alternatively you can set up your own values through the [GovernanceClassificationManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceClassificationLevelManager.html) client.
+Egeria has a set of default values that are set up when the [Core Content Pack](/content-packs/).  Alternatively you can set up your own values through the [GovernanceClassificationManager](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/GovernanceClassificationLevelManager.html) client.
 
 ## Governance Status Identifiers
 

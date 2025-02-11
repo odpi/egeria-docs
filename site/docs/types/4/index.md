@@ -17,8 +17,7 @@ In a similar way to the glossary ([area 3](/types/3)), this information is autho
 * **[0415 Governance Responses](0415-Governance-Responses.md)**
 * **[0417 Governance Projects](0417-Governance-Projects.md)**
 * **[0420 Governance Controls](0420-Governance-Controls.md)**
-* **[0421 Governance Classification Levels](0421-Governance-Classification-Levels.md)**
-* **[0422 Governance Action Classifications](0422-Governance-Action-Classifications.md)**
+* **[0422 Governed Data Classifications](0422-Governed-Data-Classifications)**
 * **[0423 Security Definitions](0423-Security-Definitions.md)**
 * **[0424 Governance Zones](0424-Governance-Zones.md)**
 * **[0425 Subject Areas](0425-Subject-Areas.md)**

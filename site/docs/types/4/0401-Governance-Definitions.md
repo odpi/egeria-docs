@@ -8,9 +8,7 @@ Egeria aims to unify the metadata and governance activity across these governanc
 
 ![UML](0401-Governance-Definitions.svg)
 
-## GovernanceDomainDescription
-
-The *GovernanceDomainDescription* entity provides the definition of a governance domain. You can choose to define your own or use the standard set that are defined by *GovernanceDomain*.  Related governance domains can be grouped into *GovernanceDomainSets*.
+## GovernanceDomain Enumeration
 
 The *GovernanceDomain* enumeration provides a default list of the different types of governance domains that can be unified by Egeria. Notice that there are obvious overlaps and linkages between the domains:
 
@@ -21,6 +19,8 @@ The *GovernanceDomain* enumeration provides a default list of the different type
 * SOFTWARE_DEVELOPMENT - the governance of the software development lifecycle.
 * CORPORATE - the governance of the organization as a legal entity.
 * ASSET_MANAGEMENT - the governance of physical assets.
+
+These values are set up as the valid values for the *domainIdentifier* attribute by the [Core Content Pack](/content-packs/core-content-pack/overview).
 
 ## GovernanceDefinition
 
@@ -61,8 +61,6 @@ The *GovernedBy* relationship links the governance definitions to the elements t
 
 !!! info "Implementing Services"
 
-    * The [Governance Program OMAS](/services/omas/governance-program/overview) provides the APIs for maintaining the definitions of the governance domains, governance definitions and governance officers. It uses the *GovernedBy* relationship to link governance definitions with [subject area definitions](/types/4/0425-Subject-Areas) and [governance zone definitions](/types/4/0424-Governance-Zones).
-  
-    * The [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of governance definitions with third party asset managers and governance tools as well as the use of the *GovernedBy* relationship through its *Governance Exchange Interface*.
+    * The [Governance Officer OMVS](/services/omvs/governance-officer/overview) provides the APIs for maintaining the definitions of the governance zones, governance definitions, subject area definitions and governance officers. It uses the *GovernedBy* relationship to link governance definitions with [subject area definitions](/types/4/0425-Subject-Areas) and [governance zone definitions](/types/4/0424-Governance-Zones).
 
 --8<-- "snippets/abbr.md"

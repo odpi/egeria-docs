@@ -21,7 +21,7 @@ Typically, the common data definitions consist of:
 
 The common data definitions in open metadata are part of the *Subject Area Materials* and are grouped into [subject areas](/concepts/subject-area).  The core materials that cover the meaning of data are described in one or more [glossaries](/practices/common-data-definitions/anatomy-of-a-glossary). These are augmented by [valid values](/practices/common-data-definitions/open-metadata-for-common-definitions), [reference data](/practices/common-data-definitions/open-metadata-for-common-definitions) and [quality rules](/practices/common-data-definitions/open-metadata-for-common-definitions).
 
-[Governance action classifications](/types/4/0422-Governance-Action-Classifications) may be added to these definitions which in turn link to governance requirements.   This determines how data that is linked to the subject area material should be governed.
+[Governed data classifications](/types/4/0422-Governed-Data-Classifications) may be added to these definitions which in turn link to governance requirements.   This determines how data that is linked to the subject area material should be governed.
 
 Tools used by the organization to, for example, create new data stores, data visualizations, or APIs, or analytics models are pre-populated with concrete data definitions by automated tool bridges. Each tool bridge extracts the relevant definitions from the metadata catalog, generates the concrete definitions and loads them into the tool.  Where possible, these definitions include tags that link the definitions back to the common data definitions.
 

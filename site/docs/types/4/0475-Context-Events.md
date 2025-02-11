@@ -68,7 +68,7 @@ Some events have knock on effects that result in new events.  The *RelatedContex
 
 Sometime these relationships are clear, obvious and certain.  Others are less obvious and may need verification.  Hence, the attributes of this relationship allow the uncertainty, along with details of who is responsible to verify the relationship, and their current opinion.
 
-* statusIdentifier - Status of this association.  The values are defined in the [*GovernanceStatusSet*](/types/4/0421-Governance-Classification-Levels).
+* statusIdentifier - Status of this association.  The values are defined using the [valid metadata values](/guides/planning/valid-values/overview) services.
 * confidence - Level of confidence in the association (0=none -> 100=excellent).
 * steward - Person responsible for maintaining this association.
 * stewardTypeName - Type of element used to identify the steward.
@@ -86,7 +86,7 @@ The optional *timeline* attribute allows a description of the timeline that summ
 
 The *ContextEventImpact* relationship allows a *ContextEvent* entity to be linked to [*Referenceable*](/types/0/0010-Base-Model) entities that describe resources that are impacted by the event.  For example, it may link a context event to a [*SoftwareServer*](/types/0/0040-Software-Servers) that is needed extra capacity to support the organization during the event.  
 
-The *severityLevelIdentifier* attribute describes the severity of the impact on the *Referenceable* entity.  Its value is taken from the list of severities defined in the [GovernanceClassificationLevel](/types/4/0421-Governance-Classification-Levels) collection for severity levels.  The *description* allow further information on the impact to be documented.
+The *severityLevelIdentifier* attribute describes the severity of the impact on the *Referenceable* entity.  Its value is taken from the list of severities defined using the [Valid Metadata Values](/guides/planning/valid-values/overview) services.  The *description* attribute allows further information on the impact to be documented.
 
 ## ContextEventForTimelineEffects relationship
 

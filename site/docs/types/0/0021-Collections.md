@@ -31,8 +31,6 @@ The classifications associated with *Collection* allow it to be specialized for 
 * [*RecentAccess*](#recentaccess-classification) means the collection is a set of elements that have been recently accesses by a user.
 * [*WorkItemList*](#workitemlist-classification) means the collection is a set of elements that have been recently accesses by a user.
 * [*DigitalProduct*](/types/7/0710-Digital-Service) describes a collection of [assets](/concepts/asset) that represent a [digital product](/concepts/digital-product).
-* [*GovernanceStatusSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance statuses.
-* [*GovernanceClassificationSet*](/types/4/0421-Governance-Classification-Levels) for a collection of governance classification for a particular governance classification.
 * [*EventSet*](/types/5/0535-Event-Schemas) for a collection of related event schemas.
 
 The example below shows part of a collection hierarchy representing a digital product catalog.  The collections are shown in green and the assets that provide the content for the digital product are shown in yellow.
@@ -113,7 +111,7 @@ The values for the *MembershipStatus* enumeration are:
 * *Obsolete* - The membership must no longer be used.
 * *Other* - Another membership status that is set up in the *userDefinedStatus* attribute.
 
-They can be used to support a simple stewardship workflow.  For example, consider an [engine action](/concepts/engine-action) that scans through the [assets](/concepts/asset) examining each one's [Retention](/types/4/0422-Governance-Action-Classifications) classification.  If the values in the classification indicate that the [resource](/concepts/resource) that it represents should be archived, it may link the asset into a collection.
+They can be used to support a simple stewardship workflow.  For example, consider an [engine action](/concepts/engine-action) that scans through the [assets](/concepts/asset) examining each one's [Retention](/types/4/0422-Governed-Data-Classifications) classification.  If the values in the classification indicate that the [resource](/concepts/resource) that it represents should be archived, it may link the asset into a collection.
 
 ![Candidate assets for archive](archive-candidate-collection.svg)
 

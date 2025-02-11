@@ -6,10 +6,10 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# 0422 Governance Action Classifications
+# 0422 Governed Data Classifications
 
-Governance Action Classifications describe the common (ie typical) types of classifications
-that are used in the governance controls.
+Governed Data Classifications describe the common (ie typical) types of classifications
+that are used in the governance controls for the data governance domain.
 
 * *Impact* describes the impact of a situation on a particular resource.
 * *Criticality* describes how critical a resource is to the operations of the organization.
@@ -17,12 +17,11 @@ that are used in the governance controls.
 * *Confidence* indicates how confident the organization in the use of this resource in terms of its quality.
 * *Retention* defines how long a resource (typically a data resource) needs to be kept.
 
-![UML](0422-Governance-Action-Classifications.svg)
+![UML](0422-Governed-Data-Classifications.svg)
 
-The values used in *levelIdentifier*, *severityIdentifier* and *basisIdentifier* are define using
-[GovernanceClassificationLevels](/types/4/0421-Governance-Classification-Levels).
+The values used in *statusIdentifier*, *levelIdentifier*, *severityIdentifier* and *basisIdentifier* are define using
+[Valid Metadata Values](/guides/planning/valid-values/overview).
 
-The values used in **statusIdentifier** are defined using
-[GovernanceStatusLevels](/types/4/0421-Governance-Classification-Levels).
+
 
 --8<-- "snippets/abbr.md"

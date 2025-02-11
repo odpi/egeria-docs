@@ -7,7 +7,7 @@ Describes relationships that show the ends of the lineage graph for an individua
 
 ![UML](0755-Ultimate-Source-Destination-Example.svg)
 
-These relationships can link [Assets](/types/0/0010-Base-Model/#asset), or [Ports](/types/2/0217-Ports) or [SchemaAttributes](/types/5/0505-Schema-Attributes) depending on the level of detail that is known.  There are no rules on which elements in the information supply chain are given ultimate source and/or ultimate destination relationships.  In the example above, they only appear on the data sources and not the processes.  This could be further reduced by only including those assets that are [critical data sources](/types/4/0422-Governance-Action-Classifications).    
+These relationships can link [Assets](/types/0/0010-Base-Model/#asset), or [Ports](/types/2/0217-Ports) or [SchemaAttributes](/types/5/0505-Schema-Attributes) depending on the level of detail that is known.  There are no rules on which elements in the information supply chain are given ultimate source and/or ultimate destination relationships.  In the example above, they only appear on the data sources and not the processes.  This could be further reduced by only including those assets that are [critical data sources](/types/4/0422-Governed-Data-Classifications).    
 
 ![UML](0755-Ultimate-Source-Destination.svg)
 

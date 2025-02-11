@@ -54,7 +54,7 @@ The categories of metadata listed below help you organize your metadata needs ar
     * [Reference data](/types/5/0545-Reference-Data) describing valid values and mappings for data values,
     * [Technical controls](/types/4/0430-Technical-Controls) defining quality rules and processing rules - such as anonymization/encryption requirements, 
     * [Terms and conditions](/types/4/0483-Terms-And-Conditions) of use,
-    * [Governance action classifications](/types/4/0422-Governance-Action-Classifications) such as level of confidentiality, expected retention period, how critical this type of data is ...,
+    * [Governed data classifications](/types/4/0422-Governed-Data-Classifications) such as level of confidentiality, expected retention period, how critical this type of data is ...,
     * [Data classes](/concepts/data-class) are logical types for data used to characterize data during analysis.
     * [Standard/preferred schemas](/concepts/schema) and [associated implementation snippets](/types/5/0504-Implementation-Snippets) to guide developers to improve the consistency of data representation across the digital landscape.
     

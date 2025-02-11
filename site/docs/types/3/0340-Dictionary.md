@@ -43,8 +43,8 @@ Its attributes are:
 
 * *defaultValue* - Value that is used when an instance of the data field is created.
 * *sampleValues* - List of sample values for the data field.
-* *dataPattern* - A regular expression that characterizes the values in the data field.
-* *namePattern* - A regular expression that characterizes the name of the data field.
+* *dataPatterns* - Regular expressions that characterize the values in the data field.
+* *namePatterns* - Regular expressions that characterize the name of the data field.
 
 
 --8<-- "snippets/abbr.md"

@@ -27,7 +27,7 @@ The *IncidentReportStatus* enumeration provides the valid values for the status 
 
 ## ImpactedResource relationship
 
-The *ImpactedResource* relationship allows an *IncidentReport* entity to be linked to [*Referenceable*](/types/0/0010-Base-Model) entities that describe resources that are impacted by the incident.  For example, it may link an incident report to a [*SoftwareServer*](/types/0/0040-Software-Servers) that is unavailable.  The *severityLevelIdentifier* describes the severity of the impact on the *Referenceable* entity.  Its value is taken from the list of severities defined in the [GovernanceClassificationLevel](/types/4/0421-Governance-Classification-Levels) collection for severity levels.
+The *ImpactedResource* relationship allows an *IncidentReport* entity to be linked to [*Referenceable*](/types/0/0010-Base-Model) entities that describe resources that are impacted by the incident.  For example, it may link an incident report to a [*SoftwareServer*](/types/0/0040-Software-Servers) that is unavailable.  The *severityLevelIdentifier* describes the severity of the impact on the *Referenceable* entity.  Its value is taken from the list of severities defined using the [Valid Metadata Values](/guides/planning/valid-metadata/overview) services.
 
 ## IncidentOriginator relationship
 

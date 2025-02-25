@@ -14,7 +14,7 @@ The *GovernanceDriver* entity is the common super type for the governance driver
 ## GovernanceStrategy
 
 The *GovernanceStrategy* entity defines the strategy used in the development of the governance domain's activities.
-It defines how the governance domain supports the business strategy.
+It defines how the governance domain supports the business strategy.  It is possible to define the business imperatives that drive the strategy directly in this entity, or model them as independent *BusinessImperative* entities. 
 
 ## BusinessImperative
 
@@ -30,17 +30,17 @@ A *RegulationArticle* entity is an article in a regulation.  Dividing the regula
 
 ## Threat
 
-The *Threat* entity describes a particular threat to the organization's operations that must either be guarded against or some for of mitigation must be in place to reduce its impact.
+The *Threat* entity describes a particular threat to the organization's operations that must either be guarded against or some form of mitigation must be in place to reduce its impact.
 
 ## GovernanceDriverLink
 
-The *GovernanceDriverLink* relationship is used to link related governance drivers together.  THe *description* described the relationship.
+The *GovernanceDriverLink* relationship is used to link related governance drivers together.  THe *description* describes the relationship.
 
 ## Related Information
 
 * Governance Drivers are types of *GovernanceDefinitions* which are located in model [0401](/types/4/0401-Governance-Definitions).
 
-* The [Governance Program OMAS](/services/omas/governance-program/overview)
-  provides support for defining governance drivers through its **GovernanceDriversInterface**. 
+* The [Governance Officer OMVS](/services/omvs/governance-officer/overview)
+  provides support for defining governance drivers. 
 
 --8<-- "snippets/abbr.md"

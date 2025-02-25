@@ -14,7 +14,6 @@ The engine services run in the [engine host](/concepts/engine-host).  They provi
 |-----------------------------------------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | [Survey Action OMES](/services/omes/survey-action/overview)                 | [Survey Action Service](/concepts/survey-action-service)                 | [Asset Owner OMAS](/services/omas/asset-owner/overview)               |
 | [Governance Action OMES](/services/omes/governance-action/overview)         | [Governance Action Service](/concepts/governance-action-service)         | [Governance Server OMAS](/services/omas/governance-server/overview)   |
-| [Context Event OMES](/services/omes/context-event/overview)                 | [Context Event Service](/concepts/context-event-service)                 | [Stewardship Action OMAS](/services/omas/stewardship-action/overview) |
 | [Repository Governance OMES](/services/omes/repository-governance/overview) | [Repository Governance Service](/concepts/repository-governance-service) | [Repository Governance OMAS](/services/omrs)                          |
 
 

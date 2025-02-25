@@ -55,7 +55,6 @@ These are the subtypes of software server capabilities defined in the open metad
     - [*GovernanceActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
     - [*SurveyActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Discovery Framework (ODF)](/frameworks/odf/overview).
     - [*RepositoryGovernanceEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting maintenance of [Open Metadata Archives](/concepts/open-metadata-archive).
-    - [*ContextEventEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Context Event Framework (CEF)](/frameworks/cef/overview).
 
 In addition, it is possible to augment software server capabilities with the following classifications:
 

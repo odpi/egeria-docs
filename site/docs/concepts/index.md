@@ -70,7 +70,6 @@
 - [Connector Type](/concepts/connector-type)
 - [Contact Method](/concepts/contact-method)
 - [Context Event](/concepts/context-event)
-- [Context Event Framework (CEF)](/frameworks/cef/overview)
 - [Context Manager](/frameworks/oif/overview)
 
 ## D
@@ -137,7 +136,6 @@
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview)
     - [Open Integration Framework (OIF)](/frameworks/oif/overview)
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
-    - [Context Event Framework (CEF)](/frameworks/cef/overview)
     - [Survey Action Framework (SAF)](/frameworks/saf/overview)
 
 

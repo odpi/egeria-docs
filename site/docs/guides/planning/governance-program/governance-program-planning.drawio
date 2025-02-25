@@ -1157,7 +1157,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KHeeSzPQTvLBDc_ZOybL" name="level-definition">
-    <mxGraphModel dx="1194" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1242" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="kKrZ_ASnoSxq6MV3zsuw-0" />
         <mxCell id="kKrZ_ASnoSxq6MV3zsuw-1" parent="kKrZ_ASnoSxq6MV3zsuw-0" />
@@ -1167,7 +1167,7 @@
         <mxCell id="kKrZ_ASnoSxq6MV3zsuw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#bac8d3;strokeColor=#23445d;" parent="kKrZ_ASnoSxq6MV3zsuw-1" source="kKrZ_ASnoSxq6MV3zsuw-3" target="kKrZ_ASnoSxq6MV3zsuw-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="kKrZ_ASnoSxq6MV3zsuw-3" value="Governance Classification Level&lt;br&gt;Set" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#bac8d3;strokeColor=#23445d;" parent="kKrZ_ASnoSxq6MV3zsuw-1" vertex="1">
+        <mxCell id="kKrZ_ASnoSxq6MV3zsuw-3" value="levelIdentifier" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#bac8d3;strokeColor=#23445d;" parent="kKrZ_ASnoSxq6MV3zsuw-1" vertex="1">
           <mxGeometry x="70" y="120" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="kKrZ_ASnoSxq6MV3zsuw-5" value="Confidence" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#f9f7ed;strokeColor=#36393d;" parent="kKrZ_ASnoSxq6MV3zsuw-1" vertex="1">
@@ -1188,8 +1188,8 @@
         <mxCell id="kKrZ_ASnoSxq6MV3zsuw-10" value="Organization customization" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="kKrZ_ASnoSxq6MV3zsuw-1" vertex="1">
           <mxGeometry x="70" y="70" width="160" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="kKrZ_ASnoSxq6MV3zsuw-11" value="Governance Classifications" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="kKrZ_ASnoSxq6MV3zsuw-1" vertex="1">
-          <mxGeometry x="450" y="500" width="160" height="20" as="geometry" />
+        <mxCell id="kKrZ_ASnoSxq6MV3zsuw-11" value="Governance Action Classifications" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="kKrZ_ASnoSxq6MV3zsuw-1" vertex="1">
+          <mxGeometry x="430" y="495" width="200" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

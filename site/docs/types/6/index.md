@@ -31,7 +31,7 @@ The annotations from a particular run of a survey action service are grouped tog
 
 In addition, there are types for the manual design of data schemas as part of a data specification.
 
-* **[0616 Data Field Modelling](0616-Data-Field-Discovery.md)**
+* **[0617 Data Field Modelling](0617-Data-Field-Modelling.md)**
 
 ![UML Packages](area-6-discovery-overview.svg)
 

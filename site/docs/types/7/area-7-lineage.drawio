@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9" pages="17">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16" pages="17">
   <diagram id="D-fT32pPSd6CnJNmmywp" name="Overview">
     <mxGraphModel dx="1114" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1697,7 +1697,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="zxtc_kXrqRpk9AghNf_3" name="0760-Business-Lineage">
-    <mxGraphModel dx="1346" dy="861" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1661" dy="1149" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="MfY8N49mbYdjZyhGcPgx-0" />
         <mxCell id="MfY8N49mbYdjZyhGcPgx-1" parent="MfY8N49mbYdjZyhGcPgx-0" />
@@ -1718,7 +1718,7 @@
         <mxCell id="Bs9W1tKTJKyw3gTSrdgJ-26" value="«classification»&lt;br&gt;&lt;b&gt;BusinessSignificant&lt;/b&gt;" style="html=1;strokeColor=#666666;align=center;fillColor=#f5f5f5;gradientColor=#b3b3b3;" parent="MfY8N49mbYdjZyhGcPgx-1" vertex="1">
           <mxGeometry x="420.5" y="160" width="206" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Bs9W1tKTJKyw3gTSrdgJ-27" value="description : string&lt;br&gt;scope : string&lt;br&gt;businessCapabilityGUID : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="MfY8N49mbYdjZyhGcPgx-1" vertex="1">
+        <mxCell id="Bs9W1tKTJKyw3gTSrdgJ-27" value="description : string&lt;br&gt;scope : string&lt;br&gt;businessCapability : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="MfY8N49mbYdjZyhGcPgx-1" vertex="1">
           <mxGeometry x="420.5" y="210" width="206" height="70" as="geometry" />
         </mxCell>
       </root>

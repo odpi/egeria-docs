@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.9 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.9" pages="34">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16" pages="34">
   <diagram id="mHdgXSSDg3P1Vtlx_zm2" name="overview">
     <mxGraphModel dx="1639" dy="941" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -2568,7 +2568,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0540-Data-Classes" id="3m2XWHFqty79aLUmBDst">
-    <mxGraphModel dx="1639" dy="941" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1661" dy="1149" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-0" />
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-1" parent="SsjJ3W2RBnLLx-BRKALo-0" />
@@ -2578,10 +2578,13 @@
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-3" value="0540 - Data Classes" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
           <mxGeometry x="20" y="40" width="1060" height="770" as="geometry" />
         </mxCell>
+        <mxCell id="Zaj0cSoRva3Frum9Z1z7-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=17;" edge="1" parent="SsjJ3W2RBnLLx-BRKALo-1" source="SsjJ3W2RBnLLx-BRKALo-4" target="SsjJ3W2RBnLLx-BRKALo-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-4" value="«entity»&lt;br&gt;&lt;b&gt;DataClass&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
           <mxGeometry x="373" y="354.5" width="240" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="SsjJ3W2RBnLLx-BRKALo-5" value="&lt;span&gt;name : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;description : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;classCode : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;userDefined : boolean&lt;/span&gt;&lt;br&gt;&lt;span&gt;namespace : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;specification : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;specificationDetails : map&lt;/span&gt;&lt;br&gt;&lt;span&gt;dataType : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;defaultThreshold : float&lt;/span&gt;&lt;br&gt;&lt;span&gt;example : string&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
+        <mxCell id="SsjJ3W2RBnLLx-BRKALo-5" value="&lt;span&gt;name : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;description : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;classCode : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;userDefined : boolean&lt;/span&gt;&lt;br&gt;&lt;span&gt;namespace : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;specification : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;specificationDetails : map&amp;lt;string, string&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span&gt;dataType : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;defaultThreshold : float&lt;/span&gt;&lt;br&gt;&lt;span&gt;example : string&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
           <mxGeometry x="373.5" y="405" width="239" height="161" as="geometry" />
         </mxCell>
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-7" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
@@ -2667,12 +2670,6 @@
         </mxCell>
         <mxCell id="2WV4KoFYtOT4UdBNAvGS-17" value="partOfDataClasses" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
           <mxGeometry x="263.5" y="533.5" width="111" height="14" as="geometry" />
-        </mxCell>
-        <mxCell id="RfOrx-EMg4qYDX-SGjk3-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="SsjJ3W2RBnLLx-BRKALo-1" source="RfOrx-EMg4qYDX-SGjk3-0" target="SsjJ3W2RBnLLx-BRKALo-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="RfOrx-EMg4qYDX-SGjk3-0" value="" style="triangle;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=center;rotation=-90;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
-          <mxGeometry x="484.5" y="200" width="17" height="21" as="geometry" />
         </mxCell>
         <mxCell id="2WV4KoFYtOT4UdBNAvGS-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;endArrow=oval;endFill=1;" parent="SsjJ3W2RBnLLx-BRKALo-1" source="SsjJ3W2RBnLLx-BRKALo-4" target="SsjJ3W2RBnLLx-BRKALo-5" edge="1">
           <mxGeometry relative="1" as="geometry" />

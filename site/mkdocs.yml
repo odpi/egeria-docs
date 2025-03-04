@@ -481,7 +481,6 @@ nav:
               - Annotation Reviews: types/6/0612-Annotation-Reviews.md
               - Schema Extraction: types/6/0615-Schema-Extraction.md
               - Data Field Modelling: types/6/0616-Data-Field-Discovery.md
-              - Data Field Analysis: types/6/0617-Data-Field-Analysis.md
               - Resource Profiling: types/6/0620-Resource-Profiling.md
               - Data Class Discovery: types/6/0625-Data-Class-Discovery.md
               - Semantic Discovery: types/6/0630-Semantic-Discovery.md
@@ -522,14 +521,17 @@ nav:
               - Metadata Security Services: services/metadata-security-services.md
               - Platform Services: services/platform-services/overview.md
               - Server Operations: services/server-operations.md
+              - Integration Daemon Services: services/integration-daemon-services.md
+              - Engine Host Services: services/engine-host-services.md
               - Connected Asset Services: services/ocf-metadata-management.md
               - Open Metadata Store Services: services/open-metadata-store.md
               - Governance Configuration Services: services/governance-configuration-services.md
               - Open Governance Services: services/open-governance-services.md
               - Open Integration Service: services/oif-metadata-management.md
-              - Integration Daemon Services: services/integration-daemon-services.md
-              - Engine Host Services: services/engine-host-services.md
-              - Lineage Warehouse Services: services/lineage-warehouse-services.md
+              - Framework Services: services/framework-services.md
+              - GAF Metadata Management: services/gaf-metadata-management.md
+              - OCF Metadata Management: services/ocf-metadata-management.md
+              - OIF Metadata Management: services/oif-metadata-management.md
           - Registered Services:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md
@@ -575,6 +577,8 @@ nav:
                   - Action Author: services/omvs/action-author/overview.md
                   - Asset Catalog: services/omvs/asset-catalog/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
+                  - Classification Explorer: services/omvs/classification-explorer/overview.md
+                  - Classification Manager: services/omvs/classification-manager/overview.md
                   - Collection Manager: services/omvs/collection-manager/overview.md
                   - Data Designer: services/omvs/data-designer/overview.md
                   - Data Discovery: services/omvs/data-discovery/overview.md

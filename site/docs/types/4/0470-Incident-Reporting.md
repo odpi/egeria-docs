@@ -37,19 +37,4 @@ The *IncidentOriginator* links the *IncidentReport* entity to the [*Actor*](/typ
 
 The *IncidentDependency* relationship allows related *IncidentReport* entities to be linked together.  The *description* property describes the relationship.
 
-## IncidentClassifier entity
-
-The *IncidentClassifier* entity describes a valid value for an entry in the *incidentClassifier* map of the *IncidentReport* entity.  
-
-* *classifierLabel* is used as a unique name for the classifier for incident management systems that us a string as a classifier.
-* *classifierIdentifier* is the unique identifier for the classifier, associated with the classifier label in the incident report.  It is used with incident management systems that use a number in its classifier definition.
-* *classifierName* is used as a display name for the classifier.
-* *classifierDescription* is used to provide more information on how the classifier should be used and its significance.
-
-## IncidentClassifierSet classification
-
-The *IncidentClassifier* entities allow an organization to define their own classifiers.  They are grouped together into one or more collections to make them easy to locate.  For example, there may be a collection of classifiers used in security incidents; another for system outages.
-
-The *IncidentClassifierSet* classification identifies a collection that contains a list of *IncidentClassifier* entities.
-
 --8<-- "snippets/abbr.md"

@@ -11,7 +11,7 @@ Egeria aims to deliver against 7 capability layers:
 
 [![Governance Solutions](governance-solution-functional-detail.svg)](#governance-solutions)
 [![Education](education-functional-detail.svg)](#education)
-[![UIs](ui-functional-detail.svg)](#user-interfaces)
+[![User Interaction](ui-functional-detail.svg)](#user-interfaces)
 [![Integration Platform](integration-platform-functional-detail.svg)](#integration-platform)
 [![Developer Platform](developer-platform-functional-detail.svg)](#developer-platform)
 [![Deployment Runtimes](deployment-runtimes-functional-detail.svg)](#deployment-runtimes)
@@ -35,20 +35,24 @@ Egeria's education aims to broaden the knowledge of people who need to work with
 
 - The [Egeria workbooks](https://github.com/odpi/egeria-workspaces/blob/main/workspaces/egeria-workbooks.ipynb) are part of the [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main) deployment environments.  They provide guidance and examples on how to use Egeria and how to adapt it to support your use cases.  This is an excellent starting point to get hands-on experience with Egeria.
 - The [open-metadata-samples](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples) module in the main git repository for the Egeria code - *egeria.git* - includes many coding samples showing how to use the Egeria interfaces. There are also many sample clients, server configurations and sample data included in the *[open-metadata-deployment](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment)* module.  They are accompanied by `README.md` files to explain how to use them.
-- The [Open Metadata Labs](/education/open-metadata-labs/overview) build out an operational open metadata ecosystem and show how different governance use cases can be implemented. 
+- The [Open Metadata Labs](/education/open-metadata-labs/overview) are also part of the [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main) and build out an operational open metadata ecosystem to show how different governance use cases can be implemented. 
 - This website ([https://egeria-project.org/](https://egeria-project.org/)) contains comprehensive documentation on Egeria's features.
 - The [Governance practices](/practices) provides governance best practices. They aim to guide a team that is setting up or revising their governance program through common governance tasks.
 
-### User Interfaces
+### User Interaction
 
 Most users will experience the open metadata ecosystem via their own tools.  However Egeria does have some simple user interfaces to cover its unique capabilities.
 
 ![UIs](ui-functional-detail.svg)
 
 - *[Hey Egeria](/user-interfaces/hey-egeria/overview)* provide command line controlled commands and visualizations for a running Egeria system.  They are designed for technical and data professional working in the open metadata ecosystem and operating Egeria infrastructure.
+- *Dr.Egeria* provides markdown based editing of open metadata either through markdown documents or Jupyter Notebooks.
+- *Inform Egeria* provides form-based based editing of open metadata.
+- *[Monitoring Widgets](/user-interfaces/hey-egeria/overview/)* provide an ongoing display of the status of the Egeria infrastructure and its connectors.
 - *[Scripting commands](/guides/developer/scripting-commands/overview)* allow calls to Egeria's services from scripting languages to aid automation of governance.
 - *[Brain Explorers](/user-interfaces/brain-explorers/overview/)* are cloud based websites allowing you to interact with a graph interface to visualized open metadata content.
 - *[Mermaid graph visualization](/user-interfaces/mermaid/overview)* for visualizing collections of related open metadata elements.
+- *SuperSet Dashboards* provide an overview on the operation of the open metadata ecosystem.
 
 ### Integration platform
 
@@ -111,7 +115,6 @@ Its use is described in the [developer's guide](/guides/developer).
     - [Open Integration Framework (OIF)](/frameworks/oif/overview) - specialized connectors for metadata exchange and synchronization with third party technologies.
     - [Survey Action Framework (SAF)](/frameworks/saf/overview) - specialized connectors called survey action services that support automated metadata discovery.
     - [Governance Action Framework (GAF)](/frameworks/gaf/overview) - specialized connectors for the triage and remediation of issues found in the digital landscape.
-    - [Context Event Framework (CEF)](/frameworks/cef/overview) - specialized connectors for context event management.
 
 ### Deployment runtimes
 
@@ -119,10 +122,7 @@ The runtimes package up the services to simplify the process of deploying Egeria
 
 ![Deployment Runtimes](deployment-runtimes-functional-detail.svg)
 
-There are two runtimes:
-
-* [OMAG Server Platform](/concepts/omag-server-platform) provides support for dynamically configuring and running multiple [OMAG Servers](/concepts/omag-server).
-* OMAG Server runtime provides support for running a single [OMAG Server](/concepts/omag-server).  It is designed for static production deployment into a cloud-native Kubernetes environment.
+The [OMAG Server Platform](/concepts/omag-server-platform) provides support for dynamically configuring and running multiple [OMAG Servers](/concepts/omag-server).
 
 ### Deployment resources
 
@@ -130,11 +130,8 @@ Aim to simplify the process of deploying the OMAG Server Platform and its connec
 
 ![Deployment Resources](deployment-resources-functional-detail.svg)
 
-- The [Egeria docker image :material-dock-window:](https://quay.io/search?q=egeria){ target=docker } is built daily and pushed to Quay.io. It contains an OMAG Server Platform. You can download it and use it in your own container environments.  It is used by the helm charts.
-- The [Kubernetes Helm charts :material-dock-window:](https://github.com/odpi/egeria-charts){ target=gh } make use of the docker image to create a rich Egeria deployment used in the [open metadata labs](/education/open-metadata-labs/overview).
-- The [Kubernetes operators :material-dock-window:](https://github.com/odpi/egeria-k8s-operator){ target=gh } are in development. They will provide an easy way to control an Egeria deployment running on Kubernetes.
-
-Support for docker compose was removed in [release 3.5](../../snippets/release-notes/3-5.md).
+* The [Egeria docker image :material-dock-window:](https://quay.io/search?q=egeria){ target=docker } is built daily and pushed to Quay.io and DockerHub. It contains an OMAG Server Platform. You can download it and use it in your own container environments.  It is used by the helm charts.
+* The [Egeria Workspaces](https://github.com/odpi/egeria-workspaces) provide docker compose scripts for standard Egeria deployments plus associated runtimes (including Apache Kafka, Unity Catalog, Apache Airflow, Marquez, Apache SuperSet, OpenLineage Proxy and PostgreSQL.)
 
 ## Understanding the roadmap
 

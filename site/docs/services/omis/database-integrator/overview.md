@@ -60,7 +60,7 @@ If a DatabaseManager is defined, any Database created is automatically linked to
 relationship.
 When a DeployedDatabaseSchema is created for the Database,
 the service automatically inserts the
-[DataContentForDataSet](/types/5/0503-Asset-Schema) relationship.
+[DataSetContent](/types/5/0503-Asset-Schema) relationship.
 (The database schema is a DataSet over the database which is a type of DataStore).
 
 When a RelationalTable is created for the DeployedDatabaseSchema,

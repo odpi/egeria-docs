@@ -3,7 +3,7 @@
 
 # 0210 Data Stores
 
-[*DataSets*](#dataset-entity), [DataFeeds](#datafeed-entity) and [*DataStores*](#datastore-entity) are types of [*DataAsset*](/types/0/0010-Base-Model#dataset) that represent a collection of data.  The *DataStore* is a physical store, whereas the *DataFeed* is a continual supply of data and *DataSet* is dynamically constructed on request.  This model introduces the *DataContentForDataSet* relationship that shows how *DataSets* are constructed from other [Assets](/types/0/0010-Base-Model).
+[*DataSets*](#dataset-entity), [DataFeeds](#datafeed-entity) and [*DataStores*](#datastore-entity) are types of [*DataAsset*](/types/0/0010-Base-Model#dataset) that represent a collection of data.  The *DataStore* is a physical store, whereas the *DataFeed* is a continual supply of data and *DataSet* is dynamically constructed on request.  This model introduces the *DataSetContent* relationship that shows how *DataSets* are constructed from other [Assets](/types/0/0010-Base-Model).
 
 ![UML](0210-Data-Stores.svg)
 
@@ -19,9 +19,9 @@ The *DataStore* entity describes a physical [digital resource](/concepts/digital
 
 *DataFeed* identifies an asset that provides a continuous feed of data. The *deployedImplementationType* attribute describes the class of technology that is used in its implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
-## DataContentForDataSet relationship
+## DataSetContent relationship
 
-The *DataContentForDataSet* relationship defines how data is supplied to a [DataSet](/types/0/0010-Base-Model) from a particular [digital resources](/concepts/digital-resource).  The DataSet entity includes a property called *formula*.  This describes the logic that is used to populate the data set.  The formula can include placeholders.  These placeholders are defined by the *queryId* properties in the linked DataContentForDataSet relationships.  The associated *query* property describes how the data from the linked dataContent resource is selected and *queryType* identifies the language that the query is written in.
+The *DataSetContent* relationship defines how data is supplied to a [DataSet](/types/0/0010-Base-Model) from a particular [digital resources](/concepts/digital-resource).  The DataSet entity includes a property called *formula*.  This describes the logic that is used to populate the data set.  The formula can include placeholders.  These placeholders are defined by the *queryId* properties in the linked DataSetContent relationships.  The associated *query* property describes how the data from the linked dataContent resource is selected and *queryType* identifies the language that the query is written in.
 
 ## DataAssetEncoding classification
 
@@ -43,5 +43,6 @@ The *DataScope* classification identifies the scope of the data stored in the [d
 
 ??? deprecated "Deprecated types"
     * The *DataStoreEncoding* classification is deprecated in favour of *DataAssetEncoding* to allow encoding information to be attached to data sets and data feeds.
+    * The *DataContentForDataSet* relationship is deprecated in favour of the *DataSetContent* relationship which has the direction of the relationship reversed, making it more logical in a lineage graph.
 
 --8<-- "snippets/abbr.md"

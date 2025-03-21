@@ -20,7 +20,7 @@ The *RelationalDatabase* entity defines a database that supports the relational 
 
 Often the data within the database is organized into distinct collections of data for use by the different applications or processes.  The structure of the data in each collection is called a database schema.  Such database schemas are used to limit the scope of data that a consuming application/process is exposed to.  Where this is the case, each database schema is represented by the *DeployedDatabaseSchema* entity.  *DeployedDatabaseSchema* inherits from [*DataSet*](/types/0/0010-Base-Model) to indicate that it is a logical collection of data.  The physical data is stored in the database.
 
-*DeployedDatabaseSchema* is linked to its *Database* using the [*DataContentForDataSet*](/types/2/0210-Data-Stores) relationship.
+*DeployedDatabaseSchema* is linked to its *Database* using the [*DataSetContent*](/types/2/0210-Data-Stores) relationship.
 
 ## TableDatabase entity
 

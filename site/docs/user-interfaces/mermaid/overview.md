@@ -92,7 +92,7 @@ The asset is on the far left-hand side. Each box on the graph is a metadata elem
 
 ![Lineage graph showing data flows](lineage-graph-coco-sus.png)
 
-The graph above shows [DataFlow](/types/7/0750-Data-Passing) relationships between systems.  The next image shows a lineage graph of the data sources that make up the resources in a Unity Catalog schema.  It is showing [DataContentForDataSet](/types/2/0210-Data-Stores) relationships.
+The graph above shows [DataFlow](/types/7/0750-Data-Passing) relationships between systems.  The next image shows a lineage graph of the data sources that make up the resources in a Unity Catalog schema.  It is showing [DataSetContent](/types/2/0210-Data-Stores) relationships.
 
 ![lineage graph showing data dependencies](lineage-graph-unity-default.png)
 
@@ -102,7 +102,7 @@ The full list of relationships supported are:
 * [ProcessCall](/types/7/0750-Data-Passing) - which system is calling another
 * [ControlFlow](/types/7/0750-Data-Passing) - how is control passed between processes that are under the control of a workflow manager
 * [LineageMapping](/types/7/0770-Lineage_Mapping) - how do elements catalogued from different lineage systems relate to one another
-* [DataContentForDataSet](/types/2/0210-Data-Stores) - how are data sources combined to create a data set
+* [DataSetContent](/types/2/0210-Data-Stores) - how are data sources combined to create a data set
 * [DerivedSchemaTypeQueryTarget](/types/5/0512-Derived-Schema-Elements) - what are the queries used to create derived data fields and views
 
 You can specify any number of these relationship type on the query.  If you specify no relationships, it searches for any of these relationships.

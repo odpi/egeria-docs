@@ -17,7 +17,7 @@ This is contrast with the [Data Passing](/types/7/0750-Data-Passing) relationshi
 
 ## LineageMapping relationship
 
-The *LineageMapping* relationship identifies two elements that represent the same real-world object.  This occurs when different tools are integrated into the open metadata ecosystem and they either use different names or catalog at different levels of granularity.
+The *LineageMapping* relationship identifies two elements that represent the same real-world object.  This occurs when different tools are integrated into the open metadata ecosystem and they either use different names or catalog at different levels of granularity.  The aim of this relationship is to link up disconnected parts of a lineage graph.
 
 ## DataMapping relationship
 

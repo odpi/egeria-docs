@@ -13,10 +13,10 @@ The `FileSystem` is a collection of stored files organized in a folder hierarchy
 
 * *encryption* - type of encryption used on the files.
 * *format* - format used to store the files.
-* *actualMountPoint* - root of the file path name that is due to the resource manager's view of the file system.
+* *localMountPoint* - root of the file path name that is due to the resource manager's view of the file system.
 * *canonicalMountPoint* - value to replace the actual mount point with when storing/retrieving metadata about a file within the file system.
 
-The use of the actualMountPoint and canonicalMountPoint is critical to allow different tools in the open metadata ecosystem to share metadata about the same files.
+The use of the localMountPoint and canonicalMountPoint is critical to allow different tools in the open metadata ecosystem to share metadata about the same files.
 
 ## FileManager
 

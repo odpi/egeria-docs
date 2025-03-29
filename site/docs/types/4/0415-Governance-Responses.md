@@ -29,7 +29,7 @@ The *GovernanceObligation* entity defines a policy that describes a requirement,
 
 ## GovernanceApproach
 
-The *GovernanceObligation* entity defines a policy that describes a method that should be used for a particular activity.
+The *GovernanceApproach* entity defines a policy that describes a method that should be used for a particular activity.
 
 ## GovernanceResponse
 

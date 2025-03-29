@@ -473,6 +473,8 @@ nav:
               - Design Model Implementation: types/5/0569-Design-Model-Implementation.md
               - Metamodels: types/5/0570-Metamodels.md
               - Concept Models: types/5/0571-Concept-Models.md
+              - Data Dictionaries: types/5/0580-Data-Dictionaries.md
+              - Data Field Implementation: types/5/0581-Data-Field-Implementation.md
               - Design Patterns: types/5/0595-Design-Patterns.md
           - 6. Metadata Discovery:
               - Area 6 Metadata Discovery: types/6/index.md
@@ -480,7 +482,6 @@ nav:
               - Annotations: types/6/0610-Annotations.md
               - Annotation Reviews: types/6/0612-Annotation-Reviews.md
               - Schema Extraction: types/6/0615-Schema-Extraction.md
-              - Data Field Modelling: types/6/0616-Data-Field-Discovery.md
               - Resource Profiling: types/6/0620-Resource-Profiling.md
               - Data Class Discovery: types/6/0625-Data-Class-Discovery.md
               - Semantic Discovery: types/6/0630-Semantic-Discovery.md

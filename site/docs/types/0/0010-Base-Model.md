@@ -26,7 +26,8 @@ An [Asset](/concepts/asset) is a metadata entity that describes a [resource](/co
 
 *Asset* is a subtype of [*Referenceable*](#referenceable). It adds three attributes to the *Referenceable* type:
 
-* *name* is the identifier of the asset.  It relates to the name of the [resource](/concepts/resource).
+* *name* relates to the short name of the [resource](/concepts/resource).
+* *resourceName* is the unique name of the [resource](/concepts/resource).
 * *versionIdentifier* extends the name with a version identifier.  For example, a process may create a new file every month containing the sales figures for that month.  In this case, the *name* could be `"MonthlySalesFigures.csv"` and the *versionIdentifier* could be `"july2022"`.  The *name* and *versionIdentifier* are useful values for constructing the [*qualifiedName*](#referenceable).
 * *description* provides a description of the resource.
 

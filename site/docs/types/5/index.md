@@ -70,6 +70,11 @@ The next set of models describe the content of different types of data models
 * **[0570 Metamodels](0570-Metamodels.md)**
 * **[0571 Concept Models](0571-Concept-Models.md)**
 
+The next set of modes are for the specification of data structures.
+
+* **[0580 Data Dictionaries](0580-Data-Dictionaries.md)**
+* **[0581 Data Field Implementation](0581-Data-Field-Implementation.md)**
+
 The final set of models capture architectures and patterns.
 
 * **[0595 Design Patterns](0595-Design-Patterns.md)**

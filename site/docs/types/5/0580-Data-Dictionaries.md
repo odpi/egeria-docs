@@ -13,7 +13,7 @@ At the start of a data project, it is often necessary to describe the types of d
 
 The data dictionary maintains lists of pre-defined, reusable data fields.
 
-![UML](0580-Data-Dictionaries.md)
+![UML](0580-Data-Dictionaries.svg)
 
 
 --8<-- "snippets/abbr.md"

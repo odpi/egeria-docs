@@ -11,6 +11,7 @@ The access to resources for a [project](/types/1/0130-Projects) may be partially
 
 The *ProjectCharter* entity describes the reasons why a particular project exists.  It is often established before the project itself is set up.
 
+* *displayName* provides a name to the charter.
 * *mission* describes in free-form text, the hoped for outcome of the project(s) commissioned under this charter.
 * *projectType* is a type for the project.  These types, such as "clinical-trial", "manufacturing-improvement", "security-assessment", ..., "incident-investigation" are chosen by the organization and can be encoded in a [valid metadata set](/guides/planning/valid-values/overview).
 * *purposes* define a list of formal purposes for the project.  These are inspired by the need to identify processing purposes in the EU's General Data Protection Legislation (GDPR).  These purposes can also be set up in a valid metadata set.

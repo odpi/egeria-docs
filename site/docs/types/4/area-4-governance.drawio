@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16" pages="31">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.1.1 Chrome/132.0.6834.210 Electron/34.3.3 Safari/537.36" version="26.1.1" pages="31">
   <diagram id="cenQKAz8UWtqx_h9wgFg" name="overview">
     <mxGraphModel dx="1242" dy="831" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1424,7 +1424,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="-wxVGnqttuVg4DLhdYtf" name="0442-Project-Charter">
-    <mxGraphModel dx="1186" dy="773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2061" dy="1134" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="pAKiLZf8lk0_4QAYMM59-0" />
         <mxCell id="pAKiLZf8lk0_4QAYMM59-1" parent="pAKiLZf8lk0_4QAYMM59-0" />
@@ -1434,7 +1434,7 @@
         <mxCell id="TfJaJl2qLhEhmPFIROTr-1" value="0442 - Project Charter" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
           <mxGeometry x="20" y="40" width="1060" height="770" as="geometry" />
         </mxCell>
-        <mxCell id="pc1KK_p3sEUD8x85QYaU-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=18;" edge="1" parent="pAKiLZf8lk0_4QAYMM59-1" source="TfJaJl2qLhEhmPFIROTr-2" target="TfJaJl2qLhEhmPFIROTr-3">
+        <mxCell id="pc1KK_p3sEUD8x85QYaU-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=18;" parent="pAKiLZf8lk0_4QAYMM59-1" source="TfJaJl2qLhEhmPFIROTr-2" target="TfJaJl2qLhEhmPFIROTr-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="TfJaJl2qLhEhmPFIROTr-2" value="«entity»&lt;br&gt;&lt;b&gt;ProjectCharter&lt;/b&gt;" style="html=1;strokeColor=#82b366;align=center;fillColor=#d5e8d4;gradientColor=#97d077;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
@@ -1443,8 +1443,8 @@
         <mxCell id="TfJaJl2qLhEhmPFIROTr-3" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
           <mxGeometry x="128" y="230" width="180" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="TfJaJl2qLhEhmPFIROTr-6" value="mission : string&lt;br&gt;projectType : string&lt;br&gt;purposes : array&amp;lt;string&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
-          <mxGeometry x="100" y="392" width="235" height="66" as="geometry" />
+        <mxCell id="TfJaJl2qLhEhmPFIROTr-6" value="displayName : string&lt;br&gt;mission : string&lt;br&gt;projectType : string&lt;br&gt;purposes : array&amp;lt;string&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
+          <mxGeometry x="100" y="392" width="235" height="88" as="geometry" />
         </mxCell>
         <mxCell id="S_QLmwl_nSf0B9uiAjRW-0" value="«entity»&lt;br&gt;&lt;b&gt;Project&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
           <mxGeometry x="787.5" y="342" width="160" height="50" as="geometry" />

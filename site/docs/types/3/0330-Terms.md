@@ -31,8 +31,5 @@ The *TermRelationshipStatus* defines how reliable the relationship is between tw
 * OBSOLETE means that the relationship should not be used anymore.
 * OTHER means that the status is not one of the statuses listed above.  The description field can be used to add more details.
 
-## LibraryTermReference relationship
-
-*LibraryTermReference* provides reference information for how this term corresponds to a term in an external glossary.
 
 --8<-- "snippets/abbr.md"

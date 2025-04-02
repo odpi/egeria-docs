@@ -15,5 +15,8 @@ The data dictionary maintains lists of pre-defined, reusable data fields.
 
 ![UML](0580-Data-Dictionaries.svg)
 
+## ObjectIdentifier classification
+
+Th *ObjectIdentifier* classification indicated that a data item is typically used as a unique identifier.
 
 --8<-- "snippets/abbr.md"

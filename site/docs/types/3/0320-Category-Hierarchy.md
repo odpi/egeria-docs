@@ -23,10 +23,6 @@ The *CategoryAnchor* relationship identifies the glossary that owns the category
 
 *RootCategory* identifies a category as one of the top-level categories in a glossary.
 
-## LibraryCategoryReference relationship
-
-*LibraryCategoryReference* provides reference information for how this category corresponds to a category in an external glossary.
-
 !!! info "Further information"
     * [*SubjectArea*](/type/4/0425-Subject-Areas) is a classification for a category that indicates that the category represents a subject area.
     * The members of a category are [*GlossaryTerms*](/type/3/0330-Terms).

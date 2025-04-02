@@ -27,14 +27,6 @@ a content management system an be used to categorize and organize documents and 
 
 The *CanonicalVocabulary* classification means that all the terms in the glossary have a unique name. Typically such a glossary is used to link entities representing data fields with glossary terms via the [SemanticAssignment](/types/3/0370-Semantic-Assignment) relationship to indicate that the glossary term describes the meaning of the data stored in the data field.
 
-## ExternallySourcedGlossary relationship
-
-The *ExternallySourcedGlossary* relationship and *ExternalGlossaryLink* indicates that the content of this glossary comes from an external source. It may be, for example an industry-specific glossary, or from a standards body, or from an open data site, or from a commercial organization.
-
-## ExternalGlossaryLink entity
-
-The *ExternalGlossaryLink* entity is a type of [*ExternalReference*](0015-Linked-Media-Types) element that provides a detailed description of the location and provenance of the external glossary.
-
 !!! info "Further information"
     * [Anatomy of a glossary](/practices/common-data-definitions/anatomy-of-a-glossary) describes how to structure your glossary.
 

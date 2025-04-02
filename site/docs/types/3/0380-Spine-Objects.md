@@ -20,7 +20,6 @@ describe spine object.
 
 * **SpineObject** - is a classification to say the term represents a type of object
 * **SpineAttribute** - is a classification to say the term represents a type of attribute that is common for a spine object.
-* **ObjectIdentifier** - is a classification saying that a term is typically an identifier attributed for a spine object.
 
 Note that a term may be a spine object and/or a spine attribute and/or an object identifier at the same time.
 

@@ -11,6 +11,13 @@ Data classes describe logical data types that can be used to classify data value
 
 The *DataClass* entity provides the specification of a [logical data type](/concepts/data-class). This goes beyond the [*SchemaType*](/types/5/0501-Schema-Elements) used to store the data value and includes a specification of the values that are found in this logical type.  For example, a credit card number is typically stored as a string.  However, it has a well-defined pattern of four groups of four digits.  The data class allows the capture of the specification of a credit card number type that can be used by discovery engines to narrow down the expected data values within a [digital resource](/concepts/digital-resource).
 
+Its attributes are:
+
+* *defaultValue* - Value that is used when an instance of the data field is created.
+* *sampleValues* - List of sample values for the data field.
+* *dataPatterns* - Regular expressions that characterize the values in the data field.
+* *namePatterns* - Regular expressions that characterize the name of the data field.
+
 
 ## DataClassHierarchy
 

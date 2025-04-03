@@ -34,7 +34,7 @@
         <mxCell id="taulqxEgYe-I9Oj6d4i8-6" value="Relational Table" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="310" y="490" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="taulqxEgYe-I9Oj6d4i8-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="taulqxEgYe-I9Oj6d4i8-27">
+        <mxCell id="taulqxEgYe-I9Oj6d4i8-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="taulqxEgYe-I9Oj6d4i8-11" target="taulqxEgYe-I9Oj6d4i8-27">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1140" y="360" as="sourcePoint" />
           </mxGeometry>
@@ -93,13 +93,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="taulqxEgYe-I9Oj6d4i8-27" value="DataClass&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="1320" y="330" width="120" height="60" as="geometry" />
+          <mxGeometry x="1320" y="335" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="taulqxEgYe-I9Oj6d4i8-29" value="Structural" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="1041" y="350" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="taulqxEgYe-I9Oj6d4i8-30" value="Valid Values" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="1335" y="360" width="90" height="30" as="geometry" />
+          <mxGeometry x="1335" y="365" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="taulqxEgYe-I9Oj6d4i8-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="taulqxEgYe-I9Oj6d4i8-39" target="taulqxEgYe-I9Oj6d4i8-43">
           <mxGeometry relative="1" as="geometry" />
@@ -144,7 +144,7 @@
           <mxGeometry x="1178" y="860" width="80" height="40" as="geometry" />
         </mxCell>
         <mxCell id="taulqxEgYe-I9Oj6d4i8-50" value="DataClassAssignment" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="1180" y="360" width="140" height="30" as="geometry" />
+          <mxGeometry x="1180" y="365" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="taulqxEgYe-I9Oj6d4i8-51" value="SemanticAssignment" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="1178" y="220" width="140" height="30" as="geometry" />

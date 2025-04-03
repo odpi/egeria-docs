@@ -9,7 +9,7 @@ Knowledge about data is spread amongst many people and systems. One of the roles
 
 The different subject areas of metadata that we need to support for a wide range of metadata management and governance tasks include:
 
-![Open metadata areas](/types/open-metadata-areas.png)
+![Open metadata areas](/types/open-metadata-areas.svg)
 
 This metadata may be spread across different metadata repositories that each specialize in particular use cases or communities of users.
 
@@ -27,7 +27,7 @@ This metadata may be spread across different metadata repositories that each spe
 The following diagram provides more detail of the metadata structures in each area and how they link together:
 
 ???+ summary "Metadata is highly interconnected"
-    ![Metadata detail within the metadata areas](/types/open-metadata-areas-detail.png)
+    ![Metadata detail within the metadata areas](/types/open-metadata-areas-detail.svg)
 
     Bottom left is Area 0 - the foundation of the open metadata types along with the IT infrastructure that digital systems run on such as platforms, servers and network connections. Sitting on the foundation are the assets. The base definition for `Asset` is in Area 0 but Area 2 (middle bottom) builds out common types of assets that an organization uses. These assets are hosted and linked to the infrastructure described in Area 0. For example, a data set could be linked to the file system description to show where it is stored.
 

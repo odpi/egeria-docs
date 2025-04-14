@@ -64,7 +64,7 @@ The properties of these categories are displayed in the same way as the glossari
 
 ![category](egeria-ui-glossary-categories.png)
 
-Clicking a cateogry row in this table will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the data model, and clicking on one of these terms rows will redirect to the same `asset details` page as from the asset catalog.
+Clicking a category row in this table will show the terms associated with its respective category. Each term in this case describes a concept or phrase used in the data model, and clicking on one of these terms rows will redirect to the same `asset details` page as from the asset catalog.
 
 ![terms](egeria-ui-glossary-terms.png)
 

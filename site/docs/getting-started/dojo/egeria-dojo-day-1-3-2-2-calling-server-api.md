@@ -18,7 +18,7 @@ courser-grained, but more specialized access services APIs.
 
 ![Design philosophy](/guides/developer/design-philosophy-omas-omrs.png)
 
-Start with the the Asset Owner OMAS interface and add a CSV file.  This returns a list of assets it has created,
+Start with the Asset Owner OMAS interface and add a CSV file.  This returns a list of assets it has created,
 one for the directory and one for the filename.  Retrieve these assets using the 
 
 Now use the repository service API to see how these assets are stored.

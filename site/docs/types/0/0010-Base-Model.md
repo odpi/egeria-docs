@@ -85,7 +85,8 @@ The *Anchors* classification is used internally by the open metadata ecosystem t
 
 * *anchorGUID* - unique identifier of the anchor.
 * *anchorTypeName* - type name of the anchor.
-* *anchorDomainName* - type name of the anchor's domain.  This is the super type of the anchor that is one level below *Referenceable*.  For example, if the anchor is of type *DataSet*, then the domain is *Asset*.  If the anchor does not inherit from Referenceable, then the type of the anchor is used.
+* *anchorDomainName* - type name of the anchor's domain.  This is the super type of the anchor that is one level below *Referenceable* or if the element does not inherit from *Referenceable*, take the type that is one level below *OpenMetadataRoot*.  For example, if the anchor is of type [DataSet](/types/2/0210-Data-Stores/), then the domain is *Asset*.  If the anchor is [DataClassAnnotation](/types/6/0625-Data-Class-Discovery/) then the domain is [Annotation](/types/6/0610-Annotations/).
+* *anchorScopeGUID* - Unique identifier of the scope of the anchor.  This is an Open Metadata GUID of an element that represents a scope/ownership of an anchor element.  It is used to restrict searches.
 
 !!! info "Further information on the use of Anchors"
     * [Anchor Management](/concepts/anchor).

@@ -10,7 +10,7 @@
 
 ## TeamLeadership and TeamMembership relationships
 
-The responsibilities of a team are divided into roles described by ['PersonRole'](/types/1/0112-People/#personrole).  This in turn links to the people or person appointed to fulfil the role.  The `TeamLeadership` and `TeamMembership` relationships link the team to its roles and allow a distinction to be made between the leaders and members of the team. A team can have multiple leadership and membership roles.
+The responsibilities of a team are divided into roles described by ['PersonRole'](/types/1/0112-People/#personrole).  This in turn links to the people or person appointed to fulfil the role.  The *TeamLeadership* and *TeamMembership* relationships link the team to its roles and allow a distinction to be made between the leaders and members of the team. A team can have multiple leadership and membership roles.
 
 ## TeamLeader and TeamMember entities
 

@@ -16,6 +16,8 @@ Anchored entities are also bound by the visibility and security restrictions of 
     
 The anchor is also important in [templated cataloguing](/features/templated-cataloguing/overview) where an existing entity is used as a template to create another.  When the template entity is an anchor, it and all the other entities that are anchored to it are duplicated to create the new entry and relationships are created to all other entities that are linked to the template and its anchored entities.
 
+Finally, the organization of metadata elements using anchors is helpful in scoping searches.
+
 ## Anchors classification
 
 The [Anchors](/types/0/0010-Basic-Model/#Anchors) classification contains the unique identifier (GUID) of an anchor entity.  A GUID is attached to an anchored entity which makes it easier to navigate from an anchored entity to other entities anchored to it.

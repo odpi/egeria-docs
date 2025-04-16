@@ -982,7 +982,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="avgZr48NVJ9JX8AIl6m6" name="deleting">
-    <mxGraphModel dx="2069" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2428" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="PyFMDq2EVa1ImLG9dJUn-0" />
         <mxCell id="PyFMDq2EVa1ImLG9dJUn-1" parent="PyFMDq2EVa1ImLG9dJUn-0" />
@@ -1288,7 +1288,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="hjvEnOZaTinB5pG9ojO4" name="anchor-patterns">
-    <mxGraphModel dx="2069" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2428" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1331,8 +1331,14 @@
         <mxCell id="9H8prnMRx_US3WzWssxW-3" value="Glossary GL1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
           <mxGeometry x="170" y="80" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="7mewxn4FEgK13bQ2shVa-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="9H8prnMRx_US3WzWssxW-5" target="7mewxn4FEgK13bQ2shVa-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="9H8prnMRx_US3WzWssxW-5" value="Glossary Term GT1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
           <mxGeometry x="470" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7mewxn4FEgK13bQ2shVa-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="9H8prnMRx_US3WzWssxW-7" target="9H8prnMRx_US3WzWssxW-5">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9H8prnMRx_US3WzWssxW-7" value="Glossary Category GC1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
           <mxGeometry x="170" y="220" width="120" height="60" as="geometry" />
@@ -1369,11 +1375,11 @@
         <mxCell id="9H8prnMRx_US3WzWssxW-20" value="anchorGUID=A1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="85" y="620" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="9H8prnMRx_US3WzWssxW-26" value="anchorGUID=null&lt;br class=&quot;Apple-interchange-newline&quot;&gt;anchorTypeName=GlossaryTerm&lt;br&gt;&lt;div&gt;anchorDomain=GlossaryTerm&lt;br&gt;&lt;/div&gt;&lt;div&gt;anchorScopeGUID=Gl1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9H8prnMRx_US3WzWssxW-26" value="anchorGUID=null&lt;br class=&quot;Apple-interchange-newline&quot;&gt;anchorTypeName=GlossaryTerm&lt;br&gt;&lt;div&gt;anchorDomain=GlossaryTerm&lt;br&gt;&lt;/div&gt;&lt;div&gt;anchorScopeGUID=GL1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="330" y="10" width="210" height="80" as="geometry" />
         </mxCell>
         <mxCell id="9H8prnMRx_US3WzWssxW-27" value="Glossary Terms and Categories are their own anchor and have their scope set to the glossary guid." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="400" y="250" width="550" height="30" as="geometry" />
+          <mxGeometry x="370" y="300" width="550" height="30" as="geometry" />
         </mxCell>
         <mxCell id="9H8prnMRx_US3WzWssxW-29" value="anchorGUID=null&lt;br class=&quot;Apple-interchange-newline&quot;&gt;anchorTypeName=GlossaryCategory&lt;br&gt;&lt;div&gt;anchorDomain=GlossaryCategory&lt;br&gt;&lt;/div&gt;&lt;div&gt;anchorScopeGUID=Gl1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-20" y="153" width="210" height="80" as="geometry" />
@@ -1548,8 +1554,20 @@
         <mxCell id="9H8prnMRx_US3WzWssxW-108" value="anchorGUID=UCT1&lt;br class=&quot;Apple-interchange-newline&quot;&gt;anchorTypeName=TableDataSet&lt;br&gt;&lt;div&gt;anchorDomain=Asset&lt;br&gt;&lt;/div&gt;&lt;div&gt;anchorScopeGUID=UCS1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-190" y="1470" width="250" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9H8prnMRx_US3WzWssxW-109" value="anchorGUID=UC1&lt;br class=&quot;Apple-interchange-newline&quot;&gt;anchorTypeName=Catalog&lt;br&gt;&lt;div&gt;anchorDomain=SoftwareCapability&lt;br&gt;&lt;/div&gt;&lt;div&gt;anchorScopeGUID=UCS1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9H8prnMRx_US3WzWssxW-109" value="anchorGUID=UC1&lt;br class=&quot;Apple-interchange-newline&quot;&gt;anchorTypeName=Catalog&lt;br&gt;&lt;div&gt;anchorDomain=SoftwareCapability&lt;br&gt;&lt;/div&gt;&lt;div&gt;anchorScopeGUID=&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-10" y="1630" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7mewxn4FEgK13bQ2shVa-1" value="Comment GT1C1" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="780" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="7mewxn4FEgK13bQ2shVa-3" value="anchorGUID=GT1&lt;br class=&quot;Apple-interchange-newline&quot;&gt;anchorTypeName=GlossaryTerm&lt;br&gt;&lt;div&gt;anchorDomain=GlossaryTerm&lt;br&gt;&lt;/div&gt;&lt;div&gt;anchorScopeGUID=GL1&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="10" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="7mewxn4FEgK13bQ2shVa-4" value="AttachedComment" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="630" y="110" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7mewxn4FEgK13bQ2shVa-6" value="TermCategorization" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="335" y="218" width="130" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

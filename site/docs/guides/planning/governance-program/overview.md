@@ -196,7 +196,7 @@ The organization of the subject areas is orthogonal to the governance domains. S
     
     * [Governance Officer OMVS](/services/omvs/governance-officer/overview) supports the setting up of subject area definitions.
     * [Reference Data OMVS](/services/omvs/reference-data/overview) supports the definition of reference data for the subject area.
-    * [Data Designer OMVS](/services/omvs/data-designer/overview) supports the definition of quality rules for the subject area.
+    * [Data Designer OMVS](/services/omvs/data-designer/overview) supports the definition of data requirements for the subject area.
     * [Asset Manager OMAS](/services/omvs/asset-manager/overview) supports the management of glossaries and the exchange of subject area information with other catalogs and quality tools.
 
 ## Governance classification, tagging and linking

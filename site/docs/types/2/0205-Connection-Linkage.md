@@ -1,7 +1,3 @@
----
-hide:
-- toc
----
 
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
@@ -17,6 +13,18 @@ Notice that the connection can only be associated with one asset, although an As
 In addition, some connectors are virtual connectors - by that we mean they implement an abstraction to a business level asset and internally use one of more technical connectors as part of their implementation. The metadata repository can reflect these connection relationships using a **VirtualConnection**.
 
 ![UML](0205-Connection-Linkage.svg)
+
+## AssetConnection relationship
+
+The *AssetConnection* relationship links an asset to a connection that describes how to connect to the associated digital resource.
+
+## VirtualConnection entity
+
+The *VirtualConnection* entity is used to describe a connection that has one or more other connections embedded inside it. 
+
+## EmbeddedConnection relationship
+
+The *EmbeddedConnection* relationship links a virtual connection to an embedded connection.
 
 ??? education "Further information"
 

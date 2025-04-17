@@ -143,11 +143,11 @@
         <mxCell id="taulqxEgYe-I9Oj6d4i8-49" value="Object&lt;div&gt;Identifier&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1178" y="860" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="taulqxEgYe-I9Oj6d4i8-50" value="DataClassAssignment" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1180" y="365" width="140" height="30" as="geometry" />
+        <mxCell id="taulqxEgYe-I9Oj6d4i8-50" value="MoreInformation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1195" y="365" width="110" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="taulqxEgYe-I9Oj6d4i8-51" value="SemanticAssignment" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1178" y="220" width="140" height="30" as="geometry" />
+        <mxCell id="taulqxEgYe-I9Oj6d4i8-51" value="MoreInformation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1193" y="220" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="taulqxEgYe-I9Oj6d4i8-52" value="CollectionMembership" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="840" y="280" width="140" height="30" as="geometry" />

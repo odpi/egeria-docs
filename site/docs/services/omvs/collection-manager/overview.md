@@ -13,7 +13,9 @@ There are different types of collections that are identified by their classifica
 
 * **Root Collection** - A root collection is the root node of a hierarchy of collections.  Its members are typically other collections.
 * **Folder** - a folder is a collection that is part of a collection hierarchy structure.  It may have members that are collections and/or other types of elements.
-* **Digital Product** - A [digital product](/concepts/digital-product) is a collection of [assets](/concepts/asset) that have been especially crafted to support a specific use case (or related use cases).  The assets may represent different versions of the product or customized versions of the same data for different purposed, or supporting different non-functional requirements.
+* **Digital Product** - A [digital product](/concepts/digital-product) is a collection of [digital resources](/concepts/digital-resource) that have been especially crafted to support a specific use case (or related use cases).  The digital resources are represented in the digital product collection as [assets](/concepts/asset) and may represent different versions of the digital resource or customized versions of the same data for different purposes, or supporting different non-functional requirements.
+* **Data Dictionary** - A [data dictionary](/concepts/data-dictionary) is an organized collection of [data fields](/concepts/data-field) either focused on specific data sources, or providing a library of common data items used by an organization.  Data fields are managed through the [Data Designer OMVS](/services/omvs/data-designer/overview).
+* **Data Specification** - A description of the data requirements for a specific project or initiative.  Each required data source is described using a [data structure](/concepts/data-structure) and data structures are also managed through the [Data Designer OMVS](/services/omvs/data-designer/overview).
 
 The Collection Manager OMVS supports:
 

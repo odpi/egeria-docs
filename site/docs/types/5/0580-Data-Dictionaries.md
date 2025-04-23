@@ -17,7 +17,7 @@ The data dictionary maintains lists of pre-defined, reusable data fields.
 
 ## ObjectIdentifier classification
 
-Th *ObjectIdentifier* classification indicated that a data item is typically used as a unique identifier.
+The *ObjectIdentifier* classification indicated that a data item is typically used as a unique identifier.
 
 ## DataDictionary classification
 
@@ -29,11 +29,35 @@ Identifies that this is a [collection](/type/0/0021-Collections) that describes 
 
 ## DataStructure entity
 
-A list of data fields that describe the structure of a data source.
+A [referenceable](/type/0/0010-Base-Model) that provides list of data fields that describe the structure of a data source.
+
+* *displayName* - Name of the data structure.
+* *namespace* - Optional namespace to help build a qualified name for the data structure.
+* *description* - Description of the data field.
+* *versionIdentifier* - Managed version identifier.
+
 
 ## DataField entity
 
-A description of a data field.
+A [referenceable](/type/0/0010-Base-Model) that describes a data field.  It is used to specify/validate the values in an asset's [schema](/concepts/schema), which in turn describes the structure of data in the [digital resource](/concepts/digital-resource).
+
+* *displayName* - Name of the data field.
+* *namespace* - Optional namespace to help build a qualified name for the data field.
+* *aliases* - Alternative name to use for the data field - useful when matching against a schema.
+* *namePatterns* - List of patterns to use to match a name against a schema attribute - useful when matching against a schema.
+* *description* - Description of the data field.
+* *isDeprecated* - Is this data field deprecated?
+* *versionIdentifier* - Managed version identifier.
+* *defaultValue* - Default value to use if the actual data value is null.
+* *isNullable* - Can the data field store null?
+* *dataType* - What is the data type of this field
+* *minimumLength* - What is the minimum length of this field - typically used with string fields.
+* *length* -  What is the length (in bytes) table up by this field.
+* *precision* - How many digits after the decimal point.
+* *orderedValues* - Are the values sorted
+* *sortOrder* - DataItemSortOrder value identifying the sort direction used on the data field values.
+* *namePatterns* - Regular expressions that characterize the name of the data field.
+
 
 ## MemberDataField relationship
 

@@ -10,7 +10,7 @@
     - Source Module: [egeria-system-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/system-connectors/egeria-system-connectors){ target=gh }
     - Jar File Name: `egeria-system-connectors.jar`
 
-Th OMAG Server Platform Connector is a [digital resource connector](/concepts/digital-resource-connector) that provides a Java interface to an [OMAG Server Platform](/concepts/omag-server-platform).
+The OMAG Server Platform Connector is a [digital resource connector](/concepts/digital-resource-connector) that provides a Java interface to an [OMAG Server Platform](/concepts/omag-server-platform).
 
 ![Figure 1](apache-atlas-rest-connector.svg)
 > **Figure 1:** Operation of the OMAG Server Platform Connector

@@ -32,7 +32,6 @@ In addition to inheriting from [Referenceable](/types/0/0010-Base-Model), the at
 * *valueRangeFrom*  and *valueRangeTo* - Allow the definition of a range of valid values for the data field.
 * *sampleValues* - List of sample values for the data field.  This helps people select an appropriate data class.
 * *dataPatterns* - Regular expressions that characterize the values in the data field.
-* *namePatterns* - Regular expressions that characterize the name of the data field.
 
 
 ## DataClassHierarchy relationship

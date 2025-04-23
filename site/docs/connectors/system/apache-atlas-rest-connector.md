@@ -12,7 +12,7 @@
 
 ---8<-- "snippets/systems/apache-atlas-intro.md"
 
-Th Apache Atlas REST connector is a [digital resource connector](/concepts/digital-resource-connector) that provides a Java interface to Apache Atlas's REST API plus offering useful additional services to help an application to integrate with Apache Atlas.
+The Apache Atlas REST connector is a [digital resource connector](/concepts/digital-resource-connector) that provides a Java interface to Apache Atlas's REST API plus offering useful additional services to help an application to integrate with Apache Atlas.
 
 ![Figure 1](apache-atlas-rest-connector.svg)
 > **Figure 1:** Operation of the Apache Atlas REST Connector

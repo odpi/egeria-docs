@@ -629,7 +629,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0119-Team-Roles" id="BdHTjcADbBwkoI9Nq0Bj">
-    <mxGraphModel dx="1242" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1812" dy="1053" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="P98va-cos-gIhYuWPvGy-0" />
         <mxCell id="P98va-cos-gIhYuWPvGy-1" parent="P98va-cos-gIhYuWPvGy-0" />
@@ -650,7 +650,7 @@
         <mxCell id="P98va-cos-gIhYuWPvGy-9" value="«relationship»&lt;br&gt;&lt;b&gt;TeamLeadership&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
           <mxGeometry x="705" y="307" width="210" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="P98va-cos-gIhYuWPvGy-10" value="position : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
+        <mxCell id="P98va-cos-gIhYuWPvGy-10" value="positionName : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
           <mxGeometry x="705" y="357" width="210" height="31" as="geometry" />
         </mxCell>
         <mxCell id="P98va-cos-gIhYuWPvGy-11" value="*" style="text;html=1;resizable=0;points=[];autosize=1;align=center;verticalAlign=top;spacingTop=-4;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
@@ -676,7 +676,7 @@
         <mxCell id="P98va-cos-gIhYuWPvGy-25" value="«relationship»&lt;br&gt;&lt;b&gt;TeamMembership&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
           <mxGeometry x="254" y="296.5" width="195" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="P98va-cos-gIhYuWPvGy-26" value="position : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
+        <mxCell id="P98va-cos-gIhYuWPvGy-26" value="positionName : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
           <mxGeometry x="254" y="346.5" width="195" height="31" as="geometry" />
         </mxCell>
         <mxCell id="P98va-cos-gIhYuWPvGy-27" value="teamMembers" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
@@ -697,7 +697,7 @@
         <mxCell id="P98va-cos-gIhYuWPvGy-32" value="«entity»&lt;br&gt;&lt;b&gt;TeamMember&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
           <mxGeometry x="302.75" y="584" width="230" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="P98va-cos-gIhYuWPvGy-33" value="position : string" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
+        <mxCell id="P98va-cos-gIhYuWPvGy-33" value="positionName : string" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
           <mxGeometry x="302.75" y="634" width="230" height="30" as="geometry" />
         </mxCell>
         <mxCell id="P98va-cos-gIhYuWPvGy-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=18;strokeWidth=1;" parent="P98va-cos-gIhYuWPvGy-1" source="P98va-cos-gIhYuWPvGy-35" target="P98va-cos-gIhYuWPvGy-23" edge="1">
@@ -706,7 +706,7 @@
         <mxCell id="P98va-cos-gIhYuWPvGy-35" value="«entity»&lt;br&gt;&lt;b&gt;TeamLeader&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
           <mxGeometry x="599.25" y="584" width="230" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="P98va-cos-gIhYuWPvGy-36" value="position : string" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
+        <mxCell id="P98va-cos-gIhYuWPvGy-36" value="positionName : string" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="P98va-cos-gIhYuWPvGy-1" vertex="1">
           <mxGeometry x="599.25" y="634" width="230" height="30" as="geometry" />
         </mxCell>
         <mxCell id="P98va-cos-gIhYuWPvGy-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.25;exitY=0;entryX=0.25;entryY=1;endArrow=none;endFill=0;jettySize=auto;orthogonalLoop=1;entryDx=0;entryDy=0;exitDx=0;exitDy=0;startArrow=oval;startFill=1;" parent="P98va-cos-gIhYuWPvGy-1" source="P98va-cos-gIhYuWPvGy-23" target="P98va-cos-gIhYuWPvGy-3" edge="1">

@@ -15,8 +15,11 @@ TypeEmbeddedAttribute can represent any of the standard schema types. Where a sc
 
 ## NestedSchemaAttribute relationship
 
-A *SchemaAttribute* can be nested within another *SchemaAttribute* using the *NestedSchemaAttribute* relationship. See [0534 Relational Schemas](/types/5/0534-Relational-Schemas) for an
-example of this between RelationalTables and RelationalColumns.
+A *SchemaAttribute* can be nested within another *SchemaAttribute* using the *NestedSchemaAttribute* relationship. See [0534 Relational Schemas](/types/5/0534-Relational-Schemas) for an example of this between RelationalTables and RelationalColumns.  The properties are:
+
+* *position* - The position of the attribute in the parent schema attribute.  Zero (0) means no position and a positive number identifies the position of the nested schema attribute.
+* *minCardinality* - The minimum number of occurrences of the nested schema attribute in the parent schema.
+* *maxCardinality* - The maximum number of occurrences of the nested schema attribute in the parent schema.  A negative number means "many".
 
 ## SchemaAttributeType relationship
 

@@ -80,8 +80,5 @@ Using the integration daemon connects the third party metadata server on the edg
 ??? education "Review the administration guide?"
     The [Administration Guide](/guides/admin) describes how to configure OMAG Server Platforms and their servers.
 
-??? education "Learn more about metadata governance?"
-    The [Metadata Governance Dojo](/education/egeria-dojo/metadata-concernance/overview) is a self-guided course building on the concepts introduced here.
-
 
 --8<-- "snippets/abbr.md"

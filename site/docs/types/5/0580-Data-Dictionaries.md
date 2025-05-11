@@ -15,31 +15,9 @@ The data dictionary maintains lists of pre-defined, reusable data fields.
 
 ![UML](0580-Data-Dictionaries.svg)
 
-## ObjectIdentifier classification
-
-The *ObjectIdentifier* classification indicated that a data item is typically used as a unique identifier.
-
-## DataDictionary classification
-
-Identifies that a [collection](/type/0/0021-Collections) is an organized collection of defined data fields that can be used in a data specification to describe some desired data.
-
-## DataSpec classification
-
-Identifies that this is a [collection](/type/0/0021-Collections) that describes the data requirements for a project or initiative.
-
-## DataStructure entity
-
-A [referenceable](/type/0/0010-Base-Model) that provides list of data fields that describe the structure of a data source.
-
-* *displayName* - Name of the data structure.
-* *namespace* - Optional namespace to help build a qualified name for the data structure.
-* *description* - Description of the data field.
-* *versionIdentifier* - Managed version identifier.
-
-
 ## DataField entity
 
-A [referenceable](/type/0/0010-Base-Model) that describes a data field.  It is used to specify/validate the values in an asset's [schema](/concepts/schema), which in turn describes the structure of data in the [digital resource](/concepts/digital-resource).
+A [referenceable](/type/0/0010-Base-Model) that describes a data field.
 
 * *displayName* - Name of the data field.
 * *namespace* - Optional namespace to help build a qualified name for the data field.
@@ -57,6 +35,29 @@ A [referenceable](/type/0/0010-Base-Model) that describes a data field.  It is u
 * *orderedValues* - Are the values sorted
 * *sortOrder* - DataItemSortOrder value identifying the sort direction used on the data field values.
 * *namePatterns* - Regular expressions that characterize the name of the data field.
+
+## ObjectIdentifier classification
+
+The *ObjectIdentifier* classification indicates that a data item is typically used as a unique identifier.  It is typically attached to a data field.
+
+## DataDictionary classification
+
+Identifies that a [collection](/type/0/0021-Collections) is a [data dictionary](/concepts/data-dictionary).  This is an organized collection of defined data fields that can be used as a knowledge base of preferred data definitions for data professionals.
+
+## DataSpec classification
+
+Identifies that this is a [collection](/type/0/0021-Collections) is a [data specification](/concepts/data-specification) that describes the data requirements for a project or initiative.  Its members are typically [data structures](/concepts/data-structure).
+
+## DataStructure entity
+
+A [referenceable](/type/0/0010-Base-Model) that provides list of data fields that describe the structure of a data source within a data specification.
+
+* *displayName* - Name of the data structure.
+* *namespace* - Optional namespace to help build a qualified name for the data structure.
+* *description* - Description of the data field.
+* *versionIdentifier* - Managed version identifier.
+
+It is used to specify/validate the values in an asset's [schema](/concepts/schema), which in turn describes the structure of data in the [digital resource](/concepts/digital-resource).
 
 
 ## MemberDataField relationship

@@ -3503,7 +3503,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PHZYwF1l-ydiya3xt_Vp" name="0580-Data-Dictionaries">
-    <mxGraphModel dx="1812" dy="1056" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2074" dy="1160" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3543,7 +3543,7 @@
         <mxCell id="S8Bzkfsr_XzNweGLmSSe-2" value="«entity»&lt;br&gt;&lt;b&gt;DataField&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="1" vertex="1">
           <mxGeometry x="758" y="442" width="245" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="S8Bzkfsr_XzNweGLmSSe-3" value="displayName : string&lt;div&gt;namespace : string&lt;/div&gt;&lt;div&gt;aliases : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;namePatterns : array&amp;lt;string&amp;gt;&lt;br&gt;description : string&lt;/div&gt;&lt;div&gt;isDeprecated : boolean&lt;br&gt;versionIdentifier : string&lt;/div&gt;&lt;div&gt;defaultValue : string&lt;div&gt;isNullable : boolean&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;dataType : string&lt;br&gt;minimumLength : int&lt;br&gt;length : int&lt;br&gt;precision : int&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;orderedValues: boolean&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sortOrder : DataItemSortOrder&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+        <mxCell id="S8Bzkfsr_XzNweGLmSSe-3" value="displayName : string&lt;div&gt;namespace : string&lt;/div&gt;&lt;div&gt;aliases : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;namePatterns : array&amp;lt;string&amp;gt;&lt;br&gt;description : string&lt;/div&gt;&lt;div&gt;isDeprecated : boolean&lt;br&gt;versionIdentifier : string&lt;/div&gt;&lt;div&gt;defaultValue : string&lt;div&gt;isNullable : boolean&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;dataType : string&lt;/div&gt;&lt;div&gt;units : string&lt;br&gt;minimumLength : int&lt;br&gt;length : int&lt;br&gt;precision : int&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;orderedValues: boolean&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sortOrder : DataItemSortOrder&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="758" y="491.5" width="245" height="248.5" as="geometry" />
         </mxCell>
         <mxCell id="S8Bzkfsr_XzNweGLmSSe-4" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="1" vertex="1">

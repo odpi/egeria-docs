@@ -22,10 +22,10 @@ The project aims to produce a new release of Core Egeria about once every 6 week
 
 The table below shows the planned dates for future releases.  The branch date is the date that a copy of the main branch is taken.  This copy is the candidate code for the release.  We then run tests on this copy and release to maven central once any issues have been resolved.  Any fixes that are necessary are made to the main branch and then back-ported to the release branch.  It typically takes a week to go from making the release branch to the new release going to maven central.
 
-| Release | Branch date     | Release Date    | Core theme                        |
-|---------|-----------------|-----------------|-----------------------------------|
-| 5.3     | 24th March 2025 | 30th March 2025 | Solution Architecture and Lineage |
-| 5.4     | September 2025  | September 2025  | View Services                     |
+| Release | Branch date    | Release Date   | Core theme                        |
+|---------|----------------|----------------|-----------------------------------|
+| 5.3     | 18th May 2025  | ??th May 2025  | Solution Architecture and Lineage |
+| 5.4     | September 2025 | September 2025 | View Services                     |
 
 
 !!! attention "Backwards compatibility"

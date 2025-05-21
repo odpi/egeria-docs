@@ -47,7 +47,7 @@ Most users will experience the open metadata ecosystem via their own tools.  How
 
 - *[Hey Egeria](/user-interfaces/hey-egeria/overview)* provide command line controlled commands and visualizations for a running Egeria system.  They are designed for technical and data professional working in the open metadata ecosystem and operating Egeria infrastructure.
 - *Dr.Egeria* provides markdown based editing of open metadata either through markdown documents or Jupyter Notebooks.
-- *Inform Egeria* provides form-based based editing of open metadata.
+- *My Egeria* provides form-based based editing of open metadata.
 - *[Monitoring Widgets](/user-interfaces/hey-egeria/overview/)* provide an ongoing display of the status of the Egeria infrastructure and its connectors.
 - *[Scripting commands](/guides/developer/scripting-commands/overview)* allow calls to Egeria's services from scripting languages to aid automation of governance.
 - *[Brain Explorers](/user-interfaces/brain-explorers/overview/)* are cloud based websites allowing you to interact with a graph interface to visualized open metadata content.

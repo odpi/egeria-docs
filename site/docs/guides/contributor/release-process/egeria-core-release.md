@@ -30,6 +30,14 @@ If an urgent release is required with, for example, a critical security fix, the
         - Aim to branch when most issues / PRs are complete to minimize back-porting from main, but not at the expense of impacting ongoing main development
         - Agree final branch date / criteria
 ??? success "3. Create branch"
+
+    - Clone egeria into a new directory:
+
+        - `mkdir egeria-release-x.y`
+        - `git clone https://github.com/USER/egeria.git`
+        - `cd egeria`
+        - `git remote add upstream https://github.com/odpi/egeria.git`
+       
     - Checkout main `git checkout main`
     - Ensure local update `git pull upstream main`
     - Create branch `git branch egeria-release-x.y`
@@ -41,6 +49,7 @@ If an urgent release is required with, for example, a critical security fix, the
     - `git pull upstream main`
     - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with the next version, e.g. change `1.3-SNAPSHOT` to `1.4-SNAPSHOT`. Most of the changes are in gradle files, however some code and documentation also has references to our versions and all need modifying.
     - If using an IDE like IntelliJ, make sure you have all hits by searching again as [by default only a limited number of hits are shown :material-dock-window:](https://youtrack.jetbrains.com/issue/IDEA-157855){ target=intellij }.
+    - Create new java class for new release and ensure all type changes in [OpenMetadataArchive](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types) are moved to this new file.
     - Commit
     - Create a PR, have reviewed / approved and merged as usual - aim to do this as quickly as reasonable so that there is no potential for version clash
 

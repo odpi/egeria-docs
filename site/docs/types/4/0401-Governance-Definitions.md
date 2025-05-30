@@ -8,7 +8,7 @@ Egeria aims to unify the metadata and governance activity across these governanc
 
 ![UML](0401-Governance-Definitions.svg)
 
-## GovernanceDomain Enumeration
+## GovernanceDomain enumeration
 
 The *GovernanceDomain* enumeration provides a default list of the different types of governance domains that can be unified by Egeria. Notice that there are obvious overlaps and linkages between the domains:
 
@@ -22,7 +22,7 @@ The *GovernanceDomain* enumeration provides a default list of the different type
 
 These values are set up as the valid values for the *domainIdentifier* attribute by the [Core Content Pack](/content-packs/core-content-pack/overview).
 
-## GovernanceDefinition
+## GovernanceDefinition entity
 
 *GovernanceDefinition* describes an aspect of a governance program. They are authored in the metadata repository. They inherit from [Referenceable](/types/0/0010-Base-Model), which means they have a unique identifier and link to external references for more information.
 
@@ -46,18 +46,14 @@ The governance definitions are organized into specific subtypes and linked toget
 - [0482 Certification Types](/types/4/0482-Certifications) - types of certifications used to shw compliance to a specific governance requirement.
 - [0485 Data Processing Purposes](/types/4/0485-Data-Processing-Purposes) - definitions of purposes used in data privacy regulations.
 
-## GovernedBy
+## GovernedBy relationship
 
 The *GovernedBy* relationship links the governance definitions to the elements they are governing.  These elements are [Referenceable](/types/0/0010-Base-Model), so they could be [Assets](/types/0/0010-Base-Model), [Processes](/types/0/0010-Base-Model), [Infrastructure](/types/0/0010-Base-Model), [People](/types/1/0112-People) and [Teams](/types/1/0115-Teams), [Glossary Terms](/types/3/0330-Terms), [Digital Services](/types/7/0710-Digital-Service) for example.
 
 
-## GovernanceDefinitionScope
-
-*GovernanceDefinitionScope* links the governance definitions to the elements ([Organizations](/types/5/), [Projects](/types/1/0115-Teams), [Teams](/types/1/0115-Teams), ...) that are scoping the impact or applicability of the governance definition.
-
-
 !!! info "Related types"
-    The role of leader of a governance domain is represented as a [*GovernanceOfficer*](/types/4/0445-Governance-Roles) entity.
+    * The role of leader of a governance domain is represented as a [*GovernanceOfficer*](/types/4/0445-Governance-Roles) entity.
+    * The scope of a governance definition is represented through the [ScopedBy](/types/1/0120-Assignment-Scopes).
 
 !!! info "Implementing Services"
 

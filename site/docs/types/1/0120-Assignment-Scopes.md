@@ -14,6 +14,10 @@ In addition, there is the [*GovernanceResponsibilityAssignment*](/types/4/0445-G
 
 The *AssignmentScope* relationship identifies the people, teams, projects or other types of actors that have been assigned to manage the resources represented by the linked element.
 
+## ScopedBy relationship
+
+*ScopedBy* links an element to the elements ([Organizations](/types/5/), [Projects](/types/1/0115-Teams), [Teams](/types/1/0115-Teams), ...) that are scoping the impact or applicability of its affect.
+
 ## Stakeholder relationship
 
 The *Stakeholder* relationship identifies the actors, such as [ActorProfiles](/types/1/0110-Actors) or [PersonRoles](/types/1/0112-people) that commissioned work (such as a project or a community) or a capability, service or assets.

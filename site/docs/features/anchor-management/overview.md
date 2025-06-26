@@ -46,7 +46,7 @@ If a [GlossaryTerm](/practices/common-data-definitions/anatomy-of-a-glossary), o
     because they are not anchored to the Asset.
     Also notice there are two NoteLogs attached to the asset,
     one with the Anchors classification and one without.
-    The one with the Anchors classification is anchored to the the Asset. The one without the Anchors classification is
+    The one with the Anchors classification is anchored to the Asset. The one without the Anchors classification is
     independent of the Asset.
     
     ![Figure 2](/features/anchor-management/anchors-classifications-on-attached-objects.svg)

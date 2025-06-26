@@ -338,7 +338,7 @@ For this exercise, you will be using the following Postman collections:
 The aim is to show the differences between the fine-grained repository services APIs and the 
 course-grained, but more specialized, access services APIs.
 
-Start with the the Asset Owner OMAS interface and add a CSV file.  This returns a list of assets it has created,
+Start with the Asset Owner OMAS interface and add a CSV file.  This returns a list of assets it has created,
 one for the directory and one for the filename.  Retrieve these assets using the repository service API to see how these assets are stored.
 
 What are the differences?

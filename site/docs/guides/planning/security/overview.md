@@ -16,7 +16,7 @@ The first phase in securing your solution is to understand the threats that need
 
 Egeria ecosystem applications are the building blocks for creating automated and integrated open metadata management solution.
 
-To decompose Egeria applications, it is very important to undestand the [OMAG Server Platform](/concepts/omag-server-platform){target=_blank}. This is a java based server application that is designed to run one or more logical application instances called OMAG Servers. Different application components can be configured and combined to provide runtime services that define the function of a single OMAG Server instance. 
+To decompose Egeria applications, it is very important to understand the [OMAG Server Platform](/concepts/omag-server-platform){target=_blank}. This is a java based server application that is designed to run one or more logical application instances called OMAG Servers. Different application components can be configured and combined to provide runtime services that define the function of a single OMAG Server instance. 
 
 ??? education "Functional levels"
     | Level | Description |

@@ -584,7 +584,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="w0Fh7AfC7b7IGwfEajtP" name="0205-Connection-Linkage">
-    <mxGraphModel dx="1242" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1812" dy="1056" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="qo-7W3nfodTND_Vf2af7-0" />
         <mxCell id="qo-7W3nfodTND_Vf2af7-1" parent="qo-7W3nfodTND_Vf2af7-0" />
@@ -612,7 +612,7 @@
         <mxCell id="qo-7W3nfodTND_Vf2af7-10" value="supportingVirtualConnections" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="qo-7W3nfodTND_Vf2af7-1" vertex="1">
           <mxGeometry x="671" y="530" width="191" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="qo-7W3nfodTND_Vf2af7-11" value="position : int&lt;br&gt;displayName : string&lt;br&gt;arguments : map &amp;lt;string, string&amp;gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="qo-7W3nfodTND_Vf2af7-1" vertex="1">
+        <mxCell id="qo-7W3nfodTND_Vf2af7-11" value="position : int&lt;br&gt;displayName : string&lt;br&gt;arguments : map &amp;lt;string, object&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="qo-7W3nfodTND_Vf2af7-1" vertex="1">
           <mxGeometry x="769.5" y="429" width="206" height="59" as="geometry" />
         </mxCell>
         <mxCell id="qo-7W3nfodTND_Vf2af7-12" value="*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="qo-7W3nfodTND_Vf2af7-1" vertex="1">

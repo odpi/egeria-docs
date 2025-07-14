@@ -194,7 +194,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PF7sQZpvbbHVOkO-_uGT" name="0501-Schema-Elements">
-    <mxGraphModel dx="1106" dy="773" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1812" dy="1056" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="3fQte9pRHBFsXC9MxjXT-0" />
         <mxCell id="3fQte9pRHBFsXC9MxjXT-1" parent="3fQte9pRHBFsXC9MxjXT-0" />
@@ -329,7 +329,7 @@
         <mxCell id="nslI5cDXgXjfTckiKcJe-1" value="«entity»&lt;br&gt;&lt;b&gt;SchemaType&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="409" y="332" width="206" height="55.43478260869565" as="geometry" />
         </mxCell>
-        <mxCell id="nslI5cDXgXjfTckiKcJe-2" value="versionNumber : string&lt;br&gt;author : string&lt;br&gt;usage : string&lt;br&gt;encodingStandard : string&lt;br&gt;namespace : string&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
+        <mxCell id="nslI5cDXgXjfTckiKcJe-2" value="versionIdentifier : string&lt;br&gt;author : string&lt;br&gt;usage : string&lt;br&gt;encodingStandard : string&lt;br&gt;namespace : string&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="409" y="387" width="206" height="86" as="geometry" />
         </mxCell>
         <mxCell id="3fQte9pRHBFsXC9MxjXT-12" value="«entity»&lt;br&gt;&lt;b&gt;SchemaElement&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
@@ -3069,7 +3069,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0565-Model-Element" id="L-sYm81PJRJS48px2y5i">
-    <mxGraphModel dx="1106" dy="729" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1812" dy="1056" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="fPcSe02JvnXXKSxHWUBY-0" />
         <mxCell id="fPcSe02JvnXXKSxHWUBY-1" parent="fPcSe02JvnXXKSxHWUBY-0" />
@@ -3088,14 +3088,14 @@
         <mxCell id="ScZQJyJ8FQlezPd4bwyg-0" value="«entity»&lt;br&gt;&lt;b&gt;DesignModelElement&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="fPcSe02JvnXXKSxHWUBY-1" vertex="1">
           <mxGeometry x="435" y="232" width="230" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ScZQJyJ8FQlezPd4bwyg-1" value="&lt;span&gt;displayName : string&lt;br&gt;technicalName : string&lt;br&gt;&lt;/span&gt;description : string&lt;br&gt;&lt;span&gt;versionNumber : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;author : string&lt;/span&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="fPcSe02JvnXXKSxHWUBY-1" vertex="1">
+        <mxCell id="ScZQJyJ8FQlezPd4bwyg-1" value="&lt;span&gt;displayName : string&lt;br&gt;technicalName : string&lt;br&gt;&lt;/span&gt;description : string&lt;br&gt;&lt;span&gt;versionIdentifier : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;author : string&lt;/span&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="fPcSe02JvnXXKSxHWUBY-1" vertex="1">
           <mxGeometry x="435" y="282.5" width="230" height="81" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="0566-Model-Structure" id="TvDM-EJ75P9I8Id-QUZ8">
-    <mxGraphModel dx="1106" dy="729" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1812" dy="1056" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="8FlGDR1SGgPGHkJDCXgc-0" />
         <mxCell id="8FlGDR1SGgPGHkJDCXgc-1" parent="8FlGDR1SGgPGHkJDCXgc-0" />
@@ -3130,8 +3130,8 @@
         <mxCell id="8FlGDR1SGgPGHkJDCXgc-20" value="«entity»&lt;br&gt;&lt;b&gt;DesignModel&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="8FlGDR1SGgPGHkJDCXgc-1" vertex="1">
           <mxGeometry x="71.5" y="241" width="170" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="8FlGDR1SGgPGHkJDCXgc-21" value="technicalName : string&lt;br&gt;versionNumber : string&lt;br&gt;author : string&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="8FlGDR1SGgPGHkJDCXgc-1" vertex="1">
-          <mxGeometry x="72" y="292" width="169" height="54" as="geometry" />
+        <mxCell id="8FlGDR1SGgPGHkJDCXgc-21" value="author : string&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="8FlGDR1SGgPGHkJDCXgc-1" vertex="1">
+          <mxGeometry x="72" y="292" width="169" height="36" as="geometry" />
         </mxCell>
         <mxCell id="8FlGDR1SGgPGHkJDCXgc-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=16;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="8FlGDR1SGgPGHkJDCXgc-1" source="8FlGDR1SGgPGHkJDCXgc-20" target="gexpyo2yO5aD83-i0Ci_-0" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -3205,7 +3205,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0568-Model-Scoping" id="rmCpnc2tjK_QG7xMQyIf">
-    <mxGraphModel dx="1242" dy="832" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1812" dy="1056" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="b42jEfWNTVXYgysE3xiE-0" />
         <mxCell id="b42jEfWNTVXYgysE3xiE-1" parent="b42jEfWNTVXYgysE3xiE-0" />
@@ -3248,7 +3248,7 @@
         <mxCell id="b42jEfWNTVXYgysE3xiE-24" value="«entity»&lt;br&gt;&lt;b&gt;DesignModelScope&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="b42jEfWNTVXYgysE3xiE-1" vertex="1">
           <mxGeometry x="687.5" y="285" width="170" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="b42jEfWNTVXYgysE3xiE-25" value="displayName : string&lt;br&gt;technicalName: string&lt;br&gt;description : string&lt;br&gt;versionNumber : string&lt;br&gt;author : string&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="b42jEfWNTVXYgysE3xiE-1" vertex="1">
+        <mxCell id="b42jEfWNTVXYgysE3xiE-25" value="displayName : string&lt;br&gt;technicalName: string&lt;br&gt;description : string&lt;br&gt;versionIdentifier : string&lt;br&gt;author : string&lt;span&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="b42jEfWNTVXYgysE3xiE-1" vertex="1">
           <mxGeometry x="687.5" y="335" width="169" height="86" as="geometry" />
         </mxCell>
         <mxCell id="b42jEfWNTVXYgysE3xiE-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;endSize=16;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="b42jEfWNTVXYgysE3xiE-1" source="b42jEfWNTVXYgysE3xiE-24" edge="1">

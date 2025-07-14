@@ -189,7 +189,7 @@ In addition, the IT Infrastructure assets can be linked to governance metadata a
 
 * Locations - the IT Infrastructure assets can be linked to the locations defined in the [Digital Architecture OMAS](/services/omas/digital-architecture/overview).
 * Zones - the IT Infrastructure assets can be published and withdrawn to control their visibility while they are being maintained
-* Ownership and origin - the *AssetOwnership* and *AssetOrigin* classifications can be applied.
+* Ownership and origin - the *Ownership* and *DigitalResourceOrigin* classifications can be applied.
 * External References - links to external online documentation can be added.
 * Non-personal accounts (NPAs) - *ITProfiles* and *UserIdentities* can be set up to describe system users and assigned to the IT Infrastructure assets that are using them.
 

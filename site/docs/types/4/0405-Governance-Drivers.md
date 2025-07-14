@@ -26,7 +26,7 @@ The *Regulation* entity defines a relevant legal regulation that the business op
 
 ## RegulationArticle
 
-A *RegulationArticle* entity is an article in a regulation.  Dividing the regulation into articles can help in planning to comply and reporting on the effectiveness of the associated activities.
+A *RegulationArticle* entity is an article in a regulation.  Dividing the regulation into articles can help in planning compliance approaches and reporting on the effectiveness of the associated activities.
 
 ## Threat
 

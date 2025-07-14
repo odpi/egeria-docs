@@ -3,7 +3,7 @@
 
 # Governance Zoning
 
-A *Governance Zone* defines a list of assets that are grouped together for a specific purpose. It may represent assets that are consumed or managed in a particular way; or should only be visible to particular groups of users, or processed by particular types of engine. There may also be zones used to indicate that the asset is in a particular state.  
+A *Governance Zone* defines a list of elements, such as [assets](/concepts/asset)  or [digital products](/concept/digital-product) that are grouped together for a specific purpose. It may represent elements that are consumed or managed in a particular way; or should only be visible to particular groups of users, or processed by particular types of engine. There may also be zones used to indicate that the element is in a particular state.  
 
 ![Figure 1](/features/governance-zoning/types-of-zones.svg)
 > **Figure 1:** Examples of types of zones
@@ -23,13 +23,7 @@ Governance zones are defined as part of the governance program.  They are stored
 ![Figure 3](/features/governance-zoning/defining-visibility-rules.svg)
 > **Figure 3:** Visibility rules associated with governance zones
 
-The visibility rules associated with the zones are typically executed:
-
-* [Via options on the Open Metadata Access Services (OMASs)](#controlling-access-to-assets-through-the-omass) that control both the settings of an asset's zones and the visibility of assets through its event notifications and APIs.
-
-* [Via the server security connector](/concepts/server-metadata-security-connector) that can both dynamically assign/augment the zones for an asset before its security check and use the setting of the asset's zones to determine if the requested action by the requested user is allowed.
-
-* [Within an external security manager](/features/synchronizing-access-security/overview) where the zone information is typically transforming into security tags or settings in access control lists (ACLs).
+The visibility rules associated with the zones are typically executed [via the server security connector](/concepts/server-metadata-security-connector) that can both dynamically assign/augment the zones for an element before its security is checked and then use the setting of the element's zones to determine if the requested action by the requested user is allowed.  The security connector may also delegate this decision to [an external security manager](/features/synchronizing-access-security/overview) where the zone information is typically transforming into security tags or settings in access control lists (ACLs).
 
 ## Use cases
 
@@ -37,9 +31,9 @@ Governance zones help to support the following types of use cases:
 
 * Data sovereignty - by defining zones that represent the origin of data and using visibility rules that match consumer to origin.
 * Adjustments for legal jurisdiction - by defining zones for each jurisdiction and attaching appropriate rules to each.
-* Asset visibility and access control - by defining zones that group assets into 
-* Data access control - using the zones assigned to the asset [when setting up security tags](/features/synchronized-access-control/overview/#consolidate).
-* Maintenance and backup processing - by defining zones that represent different archiving or maintenance requirements.  The engines that perform the automated maintenance work through the list of assets in the relevant zones.
+* Asset visibility and access control - by defining zones that group elements into 
+* Data access control - using the zones assigned to the element [when setting up security tags](/features/synchronized-access-control/overview/#consolidate).
+* Maintenance and backup processing - by defining zones that represent different archiving or maintenance requirements.  The engines that perform the automated maintenance work through the list of elements in the relevant zones.
 * Understanding dependencies between different parts of the organizations to support the information supply chains - by defining zones for different parts of the organization and visualizing 
 * Metering and billing - by defining zones that represent the cost structure of assets and using the zone membership of assets being used to determine the charge.
 
@@ -47,33 +41,39 @@ Governance zones help to support the following types of use cases:
 
 ## Membership of a zone
 
-An asset can belong to all, one or many zones.  The list of zones that an asset belongs to is configured in the `zoneMembership` property of its [`AssetZoneMembership` classification](/types/4/0424-Governance-Zones/).  If it is blank, it means the asset logically belongs to all zones.  Otherwise, it belongs only to the zones that are listed.  It is added to or removed from a zone by updating the AssetZoneMembership classification.
+An element can belong to all, one or many zones.  By default, it belongs to all zones. The [ZoneMembership classification](/types/4/0424-Governance-Zones/) is used to restrict its visibility by specifying the list of zones that it belongs to in the `zoneMembership` property.  If zoneMembership is null or empty, the element belongs to all zones, as if the element has no ZoneMembership classification.  Otherwise, it belongs only to the zones that are listed.  It is added to or removed from a zone by updating the ZoneMembership classification.
 
-As new assets are onboarded, use template or governance action services to ensure the asset is assigned to the right set of zones as it is added to the catalog.  The zones can then be maintained as needed throughout the lifetime of the asset.
+For example, as new data sets are onboarded, the setting of the templates or governance action services can ensure that the assets that represent these data sets are assigned to the right set of zones as they are added to the catalog.  The zones can then be maintained as needed throughout the lifetime of the assets.  If the assets become part of a digital product, their zone membership may be updated to match the zones for the overall digital product.  
 
 ![Figure 4](/features/governance-zoning/asset-in-many-zones.svg)
 > **Figure :** Examples of types of zones
 
-When designing the governance zones for your organization, it is necessary to take care that the visibility rules associated with an asset's zones are complementary rather than conflicting.
+When designing the governance zones for your organization, it is necessary to take care that the visibility rules associated with an element's zones are complementary rather than conflicting.
+
+Here is an example:
 
 ![Figure 5](/features/governance-zoning/multi-zone-membership.svg)
 > **Figure 5:** Thinking through the meaning of belonging to multiple zones
 
+## Default zone settings
 
-## Controlling access to assets through the OMASs
+A [Metadata Access Store](/concepts/metadata-access-store) can be configured with a list of zones to be assigned to new elements of a particular type.  If the type for a new element is not featured in the default zones configuration then no zones are assigned to the element.
 
-All Open Metadata Access Services (OMASs) that retrieve assets, such as [Asset Catalog](/services/omas/asset-catalog/overview), [Asset Consumer](/services/omas/asset-consumer/overview) and [Asset Owner](/services/omas/asset-owner/overview), use the **supportedZones** option that is configured for the service in the in their server's configuration document.  This property defines the zones of assets that can be returned by this instance of the access service.
+The default zones can be used to limit the number of users that can retrieve an element when it is first created.  Once it is completely set up and approved, the ones can be updated to widen its visibility. One way to do this is using the publish zones.
 
-In addition, access services that create assets, use the **defaultZones** option to define the list of zones set up in any new asset they create.
+## Publish zone settings
 
-Finally, access services that are synchronizing assets between different third party technologies, such as the [Data Manager OMAS](/services/omas/data-manager/overview), will also use the **publishZones** option to publish an asset to consumer zones once they are completely defined in the catalog.
+A [Metadata Access Store](/concepts/metadata-access-store) can also be configured with a list of zones to be assigned to elements of particular types when they are published.  Publishing means calling the `publish` method on the open metadata interface.
 
-![Figure 6](/features/governance-zoning/governance-zone-access-setting-examples.svg)
-> **Figure 6:** Visibility setting in the Open Metadata Access Services (OMASs)
+There is also a `withdraw` method.  This sets the governance zones of an element back to the default zones setting for its type.  For example, if a number of changes need to be made to an element and while this is happening, the element should not be visible to general users, calling withdraw will set ip back to its initial zone settings.  Once the updates are complete, the element can be published again to broaden its visibility.
 
-The meaning, purpose and governance requirements for assets within a specific zone are maintained through the [Governance Program OMAS](/services/omas/governance-program/overview).
+Changing an element's visibility can be achieved by updating the elements zone membership through [Classification Manager](/services/omvs/classification-manager).  The `publish` and `withdraw` methods externalize the list of zones that need to be set into ZoneMembership rather than having these values hard coded in various connectors and external programs.
 
-It is also possible to associate [security access control with a governance zone](/festures/metadata-security/overview).
+## Filtering query results using governanceZoneFilter
+
+The [Open Metadata View Services (OMVSs)](/services/omvs) have a **governanceZoneFilter** option on query requests that allow the caller to further restrict the elements returned based on their governance zone membership.  
+
+> Note: This filtering is done after the security connector has filtered out elements that are not visible to the calling user.
 
 
 

@@ -8,7 +8,10 @@ hide:
 
 # Integration Report
 
-An *integration report* describes the changes to open metadata made by an [integration connector](/concepts/integration-connector) during a `refresh()` method call.
+An *integration report* describes the changes to open metadata made by:
+
+* an [integration connector](/concepts/integration-connector) during a `refresh()` method call.
+* a [governance service](/concepts/governance-service) when it runs a [governance action](/concepts/governance-action).
 
 
 !!! education "Further information"

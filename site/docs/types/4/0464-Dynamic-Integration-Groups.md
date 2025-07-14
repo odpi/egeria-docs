@@ -36,17 +36,6 @@ An integration connector can be linked to multiple integration groups via the *R
 
 The *usesBlockingCalls* attribute determines whether the integration daemon calls the integration connector using the `engage()` methods (to allow it to make blocking calls), or the `refresh()` method.
 
-## DeleteMethod enumeration
-
-*DeleteMethod* defines the the type of delete method to use when the connector deletes an element.
-
-| Enumeration | Value | Name                  | Description                                                                                                                                                                                                                                                                                                                 |
-|-------------|-------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ARCHIVE     | 0     | "Archive Element"     | This is the default value.  The element is marked with the [Memento](/types/0/0010-Base-Model) classification which means it is no longer returned on normal queries.  However if the `forLineage=true` option is used on a query, the element is returned.  This mechanism is ued to preserve metadata for lineage graphs. |
-| SOFT_DELETE | 1     | "Soft-delete Element" | The element is moved to DELETED status so that is no longer returned on queries.  However, it is still in the repository and can be restored into the active repository if it was  deleted by accident.                                                                                                                     |
-| OTHER       | 99    | "Other"               | Another type of delete process not supported by Egeria.                                                                                                                                                                                                                                                                     |
-
-
 ## CatalogTarget relationship
 
 The *CatalogTarget* relationship links an *IntegrationConnector* entity to another entity that the integration connector is to update.  For example, if an integration connector is configured to catalog a database and its [*Database*](/types/2/0224-Databases) entity is already created, the *CatalogTarget* would link the *IntegrationConnector* entity with the *Database* entity.  This prevents the integration connector from recreating the Database entity when it runs.

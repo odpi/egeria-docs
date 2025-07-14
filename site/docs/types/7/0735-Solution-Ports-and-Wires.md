@@ -18,7 +18,7 @@ The structure of the requests/data provided by the port can be expressed as a [s
 
 ## SolutionLinkingWire
 
-The *SolutionLinkingWire* shows the linkage between solution components via their ports to other elements in the architecture.  The *informationSupplyChainSegmentGUIDs* property allows linkage to the [information supply chains](/types/7/0720-Information-Supply-Chains) that identify critical data flows for the organization.  Each identified information supply chain segment typically comes from a different information supply chain.  The *label* and *description* attributes help to explain how/why the lineage flow progresses.
+The *SolutionLinkingWire* shows the linkage between solution components via their ports to other elements in the architecture.  The *iscQualifiedNames* property allows linkage to the [information supply chains](/types/7/0720-Information-Supply-Chains) that identify critical data flows for the organization.  The *label* and *description* attributes help to explain how/why the lineage flow progresses.
 
 ## SolutionPortDelegation
 

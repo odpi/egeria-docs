@@ -15,9 +15,11 @@ A team is a group of people who are working to a common goal. This is recorded i
 
 *TeamStructure* is used to link teams into an organization's hierarchical department structure.  Typically the 
 
-## Further information
+## Organization
 
-[Organization](/types/4/0440-Organizational-Controls/#organization) is the top-level team of an organization.
+*Organization* is a special type of team that is the root of a hierarchy of teams and represents a collection of people and resources with a particular purpose such as a business, non-profit organization or governance department.
+
+## Further information
 
 Long-standing teams are often responsible for particular [*business capabilities*](/types/4/0440-Organizational-Controls/#businesscapability).  Teams can also be linked to [projects](/types/1/0130-Projects).
 

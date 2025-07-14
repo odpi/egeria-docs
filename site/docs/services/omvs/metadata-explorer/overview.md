@@ -57,8 +57,8 @@ If no results are found in any connected repository, a null result is returned. 
 
 The request body of the requests includes the following two options to use time to specify what should be returned.
 
-* effectiveTime - the effective time assigned to the element.  Null means any effective time.
-* asOfTime - repository time that should be used when retrieving metadata.  Null means use the current contents.  An ISO time (GMT) indicates use the contents that were present at the specified from.
+* effectiveTime - the time that all returned elements should be effective for (see [Effectivity Dating](/features/effectivity-dates/overview)).  Null means any effective time.
+* asOfTime - repository time that should be used when retrieving metadata.  Null means use the latest contents.  Specified using [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) time format.  If no time zone is specified, it defaults to Coordinated Universal Time, UTC (aka GMT or Zulu Time).
 
 ### Limiting the status of the results
 

@@ -27,6 +27,8 @@ Each governance request type linked to a specific governance engine must be uniq
 
 The `requestParameters` provide initial values of the request parameters passed to the governance services when it is called.  These are overridden by any request parameters supplied by the caller.
 
+The `generateIntegrationReport` configures whether an [integration report](/concepts/integration-report) of the metadata creates, updates and deletes performed by a call to this service is created.
+
 ## GovernanceService entity
 
 *[Governance services](/concepts/governance-service)* are specialist [connectors](/concepts/connector).  They are represented in open metadata using the *GovernanceService* entity which is a specialization of *[DeployedConnector`](/types/2/0215-Software-Components)*.  This entity is linked to a *[Connection](/types/2/0201-Connectors-and-Connections)* entity via a *[ConnectionToAsset](/types/2/0205-Connection-Linkage)* relationship.
@@ -38,6 +40,20 @@ The subtype of the governance service linked via the *SupportedGovernanceService
 * A *GovernanceActionService* is linked to a *GovernanceActionEngine*.
 * A *SurveyActionService* is linked to an *SurveyActionService*.
 * A *RepositoryGovernanceService* is linked to a *RepositoryGovernanceEngine*.
+
+
+## DeleteMethod enumeration
+
+*DeleteMethod* defines the the type of delete method to use when the connector/governance service deletes an element.
+
+| Enumeration      | Value | Name                  | Description                                                                                                                                                                                                                                                                                                                 |
+|------------------|-------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ARCHIVE          | 0     | "Archive Element"     | This is the default value.  The element is marked with the [Memento](/types/0/0010-Base-Model) classification which means it is no longer returned on normal queries.  However if the `forLineage=true` option is used on a query, the element is returned.  This mechanism is ued to preserve metadata for lineage graphs. |
+| SOFT_DELETE      | 1     | "Soft-delete Element" | The element is moved to DELETED status so that is no longer returned on queries.  However, it is still in the repository and can be restored into the active repository if it was deleted by accident.                                                                                                                      |
+| LOOK_FOR_LINEAGE | 2     | "Look for Lineage"    | If the element is linked into lineage, it is archived, otherwise it is soft-deleted.  However, it is still in the repository and can be restored into the active repository if it was deleted by accident.                                                                                                                  |
+| PURGE            | 3     | "Purge"               | The element is removed from the active repository. It cannot be restored automatically.                                                                                                                                                                                                                                     |
+| OTHER            | 99    | "Other"               | Another type of delete process not supported by Egeria.                                                                                                                                                                                                                                                                     |
+
 
 
 ??? education "Further information"

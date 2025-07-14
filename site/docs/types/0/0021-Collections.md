@@ -27,6 +27,7 @@ The classifications associated with *Collection* allow it to be specialized for 
 * [*RootCollection*](#rootcollection-classification) means the collection is an independent, top-level node in a collection hierarchy.  The members of this collection are typically all collections.
 * [*HomeCollection*](#homecollection-classification) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
 * [*Folder*](#folder-classification) means the collection can be treated as if it where a folder of metadata elements.  This classification includes properties to control how the members are displayed.
+* [*Namespace*](#folder-classification) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
 * [*ResultsSet*](#resultsset-classification) means the collection is a set of related results.
 * [*RecentAccess*](#recentaccess-classification) means the collection is a set of elements that have been recently accesses by a user.
 * [*WorkItemList*](#workitemlist-classification) means the collection is a set of elements that have been recently accesses by a user.
@@ -53,6 +54,10 @@ The *Folder* classification indicates that the collection is used to organize me
 
 * *collectionOrder* indicates the preferred ordering sequence. It uses the [OrderBy](#orderby-enumeration) enumeration.
 * *orderByPropertyName* indicates which property to use if the *collectionOrder* attribute is set to `OTHER`.
+
+### Namespace classification
+
+The *Namespace* classification indicates that the collection is a set of elements that are organized by namespace.
 
 ### ResultsSet classification
 

@@ -231,7 +231,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="sXEg75LI27i-cbsxa9kx" name="0330-Terms">
-    <mxGraphModel dx="1242" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1812" dy="1056" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="P4nENKNoM_SQFgzkE0_r-0" />
         <mxCell id="P4nENKNoM_SQFgzkE0_r-1" parent="P4nENKNoM_SQFgzkE0_r-0" />
@@ -241,7 +241,7 @@
         <mxCell id="b7F8nAqaPbs4Zw6vnfbB-4" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">
           <mxGeometry x="444.25" y="109" width="180" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="b7F8nAqaPbs4Zw6vnfbB-7" value="displayName : string&lt;div&gt;aliases : array&amp;lt;string&amp;gt;&lt;br&gt;summary : string&lt;br&gt;description : string&lt;br&gt;examples : string&lt;br&gt;abbreviation : string&lt;br&gt;usage : string&lt;br&gt;publishVersionIdentifier : string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">
+        <mxCell id="b7F8nAqaPbs4Zw6vnfbB-7" value="displayName : string&lt;div&gt;aliases : array&amp;lt;string&amp;gt;&lt;br&gt;summary : string&lt;br&gt;description : string&lt;br&gt;examples : string&lt;br&gt;abbreviation : string&lt;br&gt;usage : string&lt;br&gt;versionIdentifier : string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">
           <mxGeometry x="415.75" y="271" width="237" height="139" as="geometry" />
         </mxCell>
         <mxCell id="b7F8nAqaPbs4Zw6vnfbB-17" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#b0e3e6;strokeColor=#0e8088;gradientColor=#00CCCC;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">

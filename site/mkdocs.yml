@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC-BY-4.0
 # Copyright Contributors to the Egeria project.
 
-site_name: Egeria
+site_name: The Egeria Project
 site_description: Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms, no matter the vendor
 copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2025 contributors to the Egeria project."
 repo_name: odpi/egeria
@@ -491,9 +491,9 @@ nav:
               - Request for Action: types/6/0690-Request-for-Action.md
           - 7. Lineage:
               - Area 7 Lineage: types/7/index.md
-              - Digital Service: types/7/0710-Digital-Service.md
+              - Digital Products: types/7/0710-Digital-Products.md
               - Digital Subscription: types/7/0711-Digital-Subscription.md
-              - Digital Service Ownership: types/7/0715-Digital-Service-Ownership.md
+              - Digital Project Management: types/7/0715-Digital-Product-Management.md
               - Information Supply Chains: types/7/0720-Information-Supply-Chains.md
               - Solution Components: types/7/0730-Solution-Components.md
               - Solution Ports and Wires: types/7/0735-Solution-Ports-and-Wires.md
@@ -574,29 +574,44 @@ nav:
                   - Open Metadata View Services: services/omvs/index.md
                   - Action Author: services/omvs/action-author/overview.md
                   - Asset Catalog: services/omvs/asset-catalog/overview.md
+                  - Asset Curator: services/omvs/asset-curator/overview.md
+                  - Asset Maker: services/omvs/asset-maker/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
+                  - Business Domain: services/omvs/business-domain/overview.md
                   - Classification Explorer: services/omvs/classification-explorer/overview.md
                   - Classification Manager: services/omvs/classification-manager/overview.md
                   - Collection Manager: services/omvs/collection-manager/overview.md
+                  - Community Matters: services/omvs/community-matters/overview.md
+                  - Connection Maker: services/omvs/connection-maker/overview.md
                   - Data Designer: services/omvs/data-designer/overview.md
                   - Data Discovery: services/omvs/data-discovery/overview.md
+                  - Data Engineer: services/omvs/data-engineer/overview.md
                   - Data Officer: services/omvs/data-officer/overview.md
                   - DevOps Pipeline: services/omvs/devops-pipeline/overview.md
+                  - External Linking: services/omvs/external-linking/overview.md
                   - Feedback Manager: services/omvs/feedback-manager/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Manager: services/omvs/glossary-manager/overview.md
                   - Governance Officer: services/omvs/governance-officer/overview.md
+                  - Location Arena: services/omvs/location-arena/overview.md
+                  - Meeting Maker: services/omvs/meeting-maker/overview.md
                   - Metadata Explorer: services/omvs/metadata-explorer/overview.md
                   - My Profile: services/omvs/my-profile/overview.md
                   - Notification Manager: services/omvs/notification-manager/overview.md
                   - People Organizer: services/omvs/people-organizer/overview.md
+                  - Policy Finder: services/omvs/policy-finder/overview.md
                   - Privacy Officer: services/omvs/privacy-officer/overview.md
+                  - Product Catalog: services/omvs/product-catalog/overview.md
+                  - Product Manager: services/omvs/product-manager/overview.md
                   - Project Manager: services/omvs/project-manager/overview.md
                   - Reference Data: services/omvs/reference-data/overview.md
                   - Runtime Manager: services/omvs/runtime-manager/overview.md
+                  - Schema Maker: services/omvs/schema-maker/overview.md
                   - Security Officer: services/omvs/security-officer/overview.md
                   - Solution Architect: services/omvs/solution-architect/overview.md
+                  - Subject Area: services/omvs/subject-area/overview.md
                   - Template Manager: services/omvs/template-manager/overview.md
+                  - Time Keeper: services/omvs/time-keeper/overview.md
                   - Valid Metadata: services/omvs/valid-metadata/overview.md
       - Frameworks:
           - Frameworks Overview: frameworks/index.md
@@ -668,6 +683,8 @@ nav:
       - Action: concepts/action.md
       - Action Target: concepts/action-target.md
       - Actor: concepts/actor.md
+      - Actor Profile: concepts/actor-profile.md
+      - Actor Role: concepts/actor-role.md
       - Anchor: concepts/anchor.md
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md
@@ -730,7 +747,7 @@ nav:
       - Governance Service: concepts/governance-service.md
       - Governance Service Definition: concepts/governance-service-definition.md
       - Governance Zone: concepts/governance-zone.md
-      - Headcount Limit: concepts/person-role.md
+      - Headcount Limit: concepts/headcount.md
       - Guard: concepts/guard.md
       - GUID: concepts/guid.md
       - Home Metadata Repository: concepts/home-metadata-repository.md
@@ -744,6 +761,8 @@ nav:
       - Integration Group: concepts/integration-group.md
       - Integration Report: concepts/integration-report.md
       - IsPublic: concepts/is-public.md
+      - IT Profile Role: concepts/it-profile-role.md
+      - IT Profile: concepts/it-profile-role.md
       - Javadoc: concepts/javadoc.md
       - Karma Point: concepts/karma-point.md
       - Karma Point Threshold: concepts/karma-point.md
@@ -781,6 +800,7 @@ nav:
       - Personal Notes: concepts/personal-notes.md
       - Personal Profile: concepts/personal-profile.md
       - Personal Roles: concepts/personal-roles.md
+      - Person Role: concepts/person-role.md
       - Placeholders: concepts/placeholder.md
       - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
       - Platform URL Root: concepts/platform-url-root.md
@@ -808,6 +828,7 @@ nav:
       - Software Server Capability: concepts/software-server-capability.md
       - Solution Blueprint: concepts/solution-blueprint.md
       - Solution Component: concepts/solution-component.md
+      - Solution Role: concepts/solution-role.md
       - Specification: concepts/specification.md
       - Star Rating: concepts/review.md
       - Subject Area: concepts/subject-area.md
@@ -815,6 +836,7 @@ nav:
       - Survey Action Engine: concepts/survey-action-engine.md
       - Survey Action Service: concepts/survey-action-service.md
       - Tag: concepts/informal-tag.md
+      - Team: concepts/team.md
       - Template: concepts/template.md
       - To Do: concepts/to-do.md
       - Uni-link Relationships: concepts/uni-multi-link.md

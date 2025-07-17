@@ -3,13 +3,9 @@
 
 # 0015 Linked Media Types
 
-Linked media types describe the simple structures that are used repeatedly in open metadata to connect it to documents and entities in other types of repositories.
+Linked media types describe the simple structures that are used repeatedly in open metadata to connect it to media files in other types of repositories.
 
 ![UML](0015-Linked-Media-Types.svg)
-
-## ExternalReference
-
-*`ExternalReference`*s link metadata to elements in external repositories.
 
 ## RelatedMedia
 

@@ -8,7 +8,7 @@ hide:
 
 # Area 0 Models - Base Definitions and Infrastructure
 
-Area 0 describes base types and infrastructure. This includes types for `Asset`, `DataSet`, `Infrastructure`, `Process`, `Referenceable`, `Server` and `Host`.
+Area 0 describes base types and infrastructure. This includes types for `Asset`, `DataAsset`, `Infrastructure`, `Process`, `Referenceable`, `SoftwareServer` and `Host`.
 
 - [0010 Base Model](0010-Base-Model.md)
 - [0011 Managing Referenceables](0011-Managing-Referenceables.md)

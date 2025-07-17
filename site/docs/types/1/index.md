@@ -11,6 +11,7 @@ hide:
 Area 1 collects information from people using their organization's assets. It includes their use of the assets and their feedback. It also manages crowd-sourced recommended enhancements to the metadata from other areas before it is approved and incorporated into the governance program.
 
 - [0110 Actors](/types/1/0110-Actors) - generic description of a profile describing a person, team or engine.
+- [0111 Contact Details](/types/1/0111-Contact-Details) - mechanisms to contact an actor.
 - [0112 People](/types/1/0112-People) - profiles and roles for people
 - [0115 Teams](/types/1/0115-Teams) - team profiles and structures
 - [0117 IT Profiles](/types/1/0117-IT-Profiles) - profiles for engines

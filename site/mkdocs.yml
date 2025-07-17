@@ -336,7 +336,9 @@ nav:
               - Base Model: types/0/0010-Base-Model.md
               - Managing Referenceables: types/0/0011-Managing-Referenceables.md
               - Search Keywords: types/0/0012-Search-Keywords.md
+              - External References: types/0/0014-External-References.md
               - Linked Media: types/0/0015-Linked-Media-Types.md
+              - Cited Documents: types/0/0016-Cited-Documents.md
               - External Identifiers: types/0/0017-External-Identifiers.md
               - More Information: types/0/0019-More-Information.md
               - Property Facets: types/0/0020-Property-Facets.md
@@ -361,6 +363,7 @@ nav:
           - 1. Collaboration:
               - Area 1 Collaboration: types/1/index.md
               - Actors: types/1/0110-Actors.md
+              - Contact Details: types/1/0111-Contact-Details.md
               - People: types/1/0112-People.md
               - Teams: types/1/0115-Teams.md
               - IT Profiles: types/1/0117-IT-Profiles.md

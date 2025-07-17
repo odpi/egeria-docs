@@ -15,10 +15,16 @@ The base model is the starting point for the open metadata type model.
 
 *Referenceable* is the super type for many of the open metadata entity types. A *Referenceable* entity is something that is important enough to be assigned a unique (qualified) name within its type. This unique name is called the *qualifiedName* and may be set to the unique identifier value used outside the open metadata ecosystem. Alternatively, it is often set to a concatenation of an element's type name along with a number of its properties to create a unique string.
 
-Referenceable also has provision for storing additional properties. This is a set of name-value pairs (i.e. a map) where the values are all strings.
+Referenceable also has provision for storing a display name, description, version identifier and additional properties. 
 
-* [Further information on the use of Referenceable.](/concepts/referenceable)
-* [Further information on external identifiers](/features/external-identifiers/overview)
+* displayName - short name for use in tables and titles.
+* description - detailed description of the element.
+* versionIdentifier - user-managed version identifier.  This is in addition to the automatically managed version in the [element's header](/concepts/open-metadata-instances/#instanceauditheader).
+* additionalProperties - a set of name-value pairs (i.e. a map) where the values are all strings.  It can be used for other properties that are not directly supported by the open metadata types.
+
+??? tip "Further Information on Referenceable"
+    * [Further information on the use of Referenceable.](/concepts/referenceable)
+    * [Further information on external identifiers](/features/external-identifiers/overview)
 
 ## Asset entity
 
@@ -26,20 +32,9 @@ An [Asset](/concepts/asset) is a metadata entity that describes a [resource](/co
 
 *Asset* is a subtype of [*Referenceable*](#referenceable). It adds three attributes to the *Referenceable* type:
 
-* *name* relates to the short name of the [resource](/concepts/resource).
-* *resourceName* is the unique name of the [resource](/concepts/resource).
-* *versionIdentifier* extends the name with a version identifier.  For example, a process may create a new file every month containing the sales figures for that month.  In this case, the *name* could be `"MonthlySalesFigures.csv"` and the *versionIdentifier* could be `"july2022"`.  The *name* and *versionIdentifier* are useful values for constructing the [*qualifiedName*](#referenceable).
-* *description* provides a description of the resource.
-
-??? deprecated "Deprecated attributes"
-    The *Asset* entity has the following deprecated attributes. Their values have been moved to classifications as shown in the table below. Many Assets are created by their hosting technology and locked read-only to the broader metadata ecosystem (see [external metadata provenance](/features/metadata-provenance/overview) for more detail). By moving the governance related information to a classification, it can be maintained by a different service to the Asset's creator.
-
-    | Deprecated attribute | Moved to classification |
-    |---|---|
-    | `owner` (type `string`) | [Ownership](/types/4/0445-Governance-Roles/#ownership) |
-    | `ownerType` (type `AssetOwnerType` enum) | [Ownership](/types/4/0445-Governance-roles/#ownership) |
-    | `zoneMembership` (type `array<string>`) | [AssetZoneMembership](/types/4/0424-Governance-Zones/#assetzonemembership) |
-    | `latestChange` (type `string`) | [LatestChange](/types/0/0011-Managing-Referenceables/#latestchange) |
+* *resourceName* is the name of the [resource](/concepts/resource).
+* *namespace* provides a qualifying name that defines how the digital resources of a particular type are organized.  Often, concatenating the namespace with the resource name creates the unique name of the resource for a particular context.
+* *deployedImplementationType* attribute describes the class of technology that the asset belongs to.  Values for this attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
 The values set in an *Asset* entity tend to be focused around the implementation of the resource.  The [*SupplementaryProperties*](/types/3/0395-Supplementary-Properties) relationship allows a more business-oriented description to be attached.
 
@@ -55,7 +50,7 @@ More information on assets can be found in the [Metadata Manager](/patterns/meta
 - [0040 Software Servers](/types/0/0040-Software-Servers)
 - [0042 Software Capabilities](/types/0/0042-Software-Capabilities)
 
-The *deployedImplementationType* attribute describes the class of technology that the infrastructure asset belongs to.  Values for this attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
+The *source* attribute identifies the organization that supplies the technology.  For example, if the asset described a DB2 database, then the source would be IBM.
 
 ### Process entity
 
@@ -69,11 +64,14 @@ Processes have an advanced lifecycle.  They can have the following [instance sta
 * Active
 * Deleted
 
-The *formula* attribute can describe its behaviour, *formulaType* describes the notation language used to describe the formula.
+The *formula* attribute can describe its behaviour.  *formulaType* describes the notation language used to describe the formula.
+It is also possible to record the start and end time of a particular process instance.
+
+Further subtypes of process can be found in model [0215 Software Components](/types/2/0215-Software-Components/)
 
 ### DataAsset entity
 
-The *DataAsset* entity described a collection of data.  The *deployedImplementationType* defines the technology that holds this data.  [Area 2](/types/2/0210-Data-Stores) provides more detail on the different types of data assets.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
+The *DataAsset* entity described a collection of data.  [Area 2](/types/2/0210-Data-Stores) provides more detail on the different types of data assets.  A good place to start is model [0210 Data Stores](/types/2/0210-Data-Stores/).
 
 ## SampleData relationship
 

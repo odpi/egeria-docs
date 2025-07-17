@@ -1426,7 +1426,7 @@
         <mxCell id="EwORSAdkXITpuq62Y8Pl-4" value="" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
           <mxGeometry x="13" y="22" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="EwORSAdkXITpuq62Y8Pl-6" value="text : string&lt;br&gt;commentType : CommentType" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
+        <mxCell id="EwORSAdkXITpuq62Y8Pl-6" value="commentType : CommentType" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
           <mxGeometry x="527" y="566.5" width="230" height="50" as="geometry" />
         </mxCell>
         <mxCell id="EwORSAdkXITpuq62Y8Pl-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;jettySize=auto;orthogonalLoop=1;endArrow=none;endFill=0;" parent="EwORSAdkXITpuq62Y8Pl-1" source="EwORSAdkXITpuq62Y8Pl-8" target="EwORSAdkXITpuq62Y8Pl-3" edge="1">
@@ -1741,8 +1741,8 @@
         <mxCell id="EwORSAdkXITpuq62Y8Pl-24" value="«entity»&lt;br&gt;&lt;b&gt;NoteEntry&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
           <mxGeometry x="130" y="274.5" width="160" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="EwORSAdkXITpuq62Y8Pl-25" value="text : string" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
-          <mxGeometry x="130" y="325" width="160" height="44" as="geometry" />
+        <mxCell id="EwORSAdkXITpuq62Y8Pl-25" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
+          <mxGeometry x="130" y="325" width="160" height="35" as="geometry" />
         </mxCell>
         <mxCell id="EwORSAdkXITpuq62Y8Pl-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;jettySize=auto;orthogonalLoop=1;endArrow=none;endFill=0;" parent="EwORSAdkXITpuq62Y8Pl-1" source="EwORSAdkXITpuq62Y8Pl-8" target="EwORSAdkXITpuq62Y8Pl-24" edge="1">
           <mxGeometry relative="1" as="geometry">

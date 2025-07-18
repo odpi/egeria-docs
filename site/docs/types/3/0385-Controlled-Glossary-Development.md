@@ -33,25 +33,5 @@ The contents of the editing glossary may represent a single change, changes asso
 
 The *StagingGlossary* classification identifies that a glossary contains copies of live glossary terms that are being published from a source glossary into a new glossary as part of a controlled glossary development process.
 
-## ControlledGlossaryTerm entity
-
-The *ControlledGlossaryTerm* extends the standard [GlossaryTerm](/types/3/0330-Terms) with additional valid [instance statuses](/concepts/instance-status) for supporting a complex development lifecycle.  The statuses are:
-
-* Draft      - The term is incomplete. 
-* Prepared   - The term is ready for review.
-* Proposed   - The term is in review.
-* Approved   - The term is approved and awaiting activation.
-* Rejected   - The term is rejected and should not be used.
-* Active     - The term is approved and in use.
-* Deprecated - The term is out of date and should not be used.
-* Other      - The term is in a locally defined state.
-* Deleted    - The term has been soft-deleted and can no longer be used.
-
-These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-values/overview).
-
-
-???+ deprecated "Deprecated types"
-    The *GlossaryTermEvolution* relationship was introduced in release 4.0 to support editing glossaries. It has been replaced with the use of the [SourcedFrom](/types/0/0011-Managing-Referenceables) relationship.
-
 
 --8<-- "snippets/abbr.md"

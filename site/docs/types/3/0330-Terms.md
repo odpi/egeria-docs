@@ -11,7 +11,20 @@ Model 0330 shows the glossary term.
 
 ## GlossaryTerm entity
 
-*GlossaryTerm* represents a term in a glossary. 
+*GlossaryTerm* represents a term in a glossary. It includes additional valid [instance statuses](/concepts/instance-status) for supporting a complex development lifecycle.  The statuses are:
+
+* Draft      - The term is incomplete.
+* Prepared   - The term is ready for review.
+* Proposed   - The term is in review.
+* Approved   - The term is approved and awaiting activation.
+* Rejected   - The term is rejected and should not be used.
+* Active     - The term is approved and in use.
+* Deprecated - The term is out of date and should not be used.
+* Other      - The term is in a locally defined state.
+* Deleted    - The term has been soft-deleted and can no longer be used.
+
+These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-values/overview).
+
 
 ## TermAnchor relationship
 

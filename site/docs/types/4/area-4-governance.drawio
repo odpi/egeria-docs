@@ -1075,7 +1075,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0435-Policy-Management-Capabilities" id="n0tyf9BZNgJMRazTLRlt">
-    <mxGraphModel dx="1186" dy="773" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1234" dy="838" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="8m2kK80AHUS4u1lFYgXo-0" />
         <mxCell id="8m2kK80AHUS4u1lFYgXo-1" parent="8m2kK80AHUS4u1lFYgXo-0" />
@@ -1383,14 +1383,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="-wxVGnqttuVg4DLhdYtf" name="0442-Project-Charter">
-    <mxGraphModel dx="1242" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1234" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="pAKiLZf8lk0_4QAYMM59-0" />
         <mxCell id="pAKiLZf8lk0_4QAYMM59-1" parent="pAKiLZf8lk0_4QAYMM59-0" />
         <mxCell id="TfJaJl2qLhEhmPFIROTr-0" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
           <mxGeometry x="20" y="20" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="TfJaJl2qLhEhmPFIROTr-1" value="0442 - Project Charter" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
+        <mxCell id="TfJaJl2qLhEhmPFIROTr-1" value="0442 - Project Charter" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
           <mxGeometry x="20" y="40" width="1060" height="770" as="geometry" />
         </mxCell>
         <mxCell id="pc1KK_p3sEUD8x85QYaU-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=18;" parent="pAKiLZf8lk0_4QAYMM59-1" source="TfJaJl2qLhEhmPFIROTr-2" target="TfJaJl2qLhEhmPFIROTr-3" edge="1">
@@ -1402,8 +1402,8 @@
         <mxCell id="TfJaJl2qLhEhmPFIROTr-3" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
           <mxGeometry x="128" y="230" width="180" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="TfJaJl2qLhEhmPFIROTr-6" value="mission : string&lt;br&gt;projectType : string&lt;br&gt;purposes : array&amp;lt;string&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
-          <mxGeometry x="100" y="392" width="235" height="68" as="geometry" />
+        <mxCell id="TfJaJl2qLhEhmPFIROTr-6" value="mission : string&lt;br&gt;purposes : array&amp;lt;string&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
+          <mxGeometry x="100" y="392" width="235" height="58" as="geometry" />
         </mxCell>
         <mxCell id="S_QLmwl_nSf0B9uiAjRW-0" value="«entity»&lt;br&gt;&lt;b&gt;Project&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
           <mxGeometry x="787.5" y="342" width="160" height="50" as="geometry" />
@@ -1426,7 +1426,7 @@
             <mxPoint x="557.5" y="860" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sn0WOZ2-0aLIwYPXgmx6-4" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
+        <mxCell id="sn0WOZ2-0aLIwYPXgmx6-4" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">
           <mxGeometry x="467.5" y="501" width="206" height="31" as="geometry" />
         </mxCell>
         <mxCell id="sn0WOZ2-0aLIwYPXgmx6-5" value="projects" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="pAKiLZf8lk0_4QAYMM59-1" vertex="1">

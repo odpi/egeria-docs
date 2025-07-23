@@ -29,25 +29,7 @@ For some glossaries, this may be all that you need.  However, if this is an impo
 ![Figure 2](anatomy-of-a-glossary-term.svg)
 > Figure 2: Contents of a glossary term
 
-The glossary term may then be organized into one or more categories, classified and linked to related terms.
-
-## Glossary categories
-
-Glossary categories provide a folder structure for organizing glossary terms.  A category can be nested in only one other category or it is nested in no other category and is effectively a top-level category in the glossary.
-
-![Figure 3](catagorised-terms-in-single-glossary.svg)
-> Figure 3: Glossary categories
-
-Terms can be included in multiple categories (or none).
-
-![Figure 4](glossary-categories.svg)
-> Figure 4: Glossary categories
-
-A category belongs to a single glossary but it may contain categories and glossary terms both from its local glossary and other glossaries.  
-
-![Figure 5](multiple-linked-glossaries.svg)
-> Figure 5: Multiple linked glossaries
-
+The glossary term may then be organized into one or more [collections](/concepts/collection), classified and linked to related terms.
 
 ## Glossary term relationships
 
@@ -70,12 +52,9 @@ The relationships between glossary terms are divided into two groups:
     * *ValidValue* is a relationship that defines that the one term represents a value that than the other term can be set to. For example, this relationship would be used to say that "France" is a valid value for "Country".
 
 * Relationships that show how terms are typically used together:
-    
+  
     * *UsedInContext* links a term to another term that describes a context.  This helps to distinguish between terms that have the same name but different meanings depending on the context.
-    * *HasA* is a term relationship between a term representing a *SpineObject* (see glossary term classifications below) and a term representing a *SpineAttribute*.
-    * *IsATypeOf* is a term relationship between two SpineObjects saying that one is the subtype (specialisation) of the other.
-    * *TypedBy* is a term relationship between a SpineAttribute and a SpineObject to say that the SpineAttribute is implemented using a type represented by the SpineObject.
-
+   
 ## Glossary classifications
 
 The contents of a glossary can be further described using classifications. These are descriptions that tell the consumer more about how the glossary is defines and used.
@@ -94,6 +73,8 @@ A glossary may be classified to describe the way its content should be used.
 * *CanonicalVocabulary* means the glossary only includes terms that have a unique name.  Thus there is only one definition for any concept.
 
 * *EditingGlossary* means that the glossary contains a collection of glossary terms and categories that are in the process of being edited.
+* 
+* *StagingGlossary* means that the glossary contains a collection of glossary terms and categories that are in the process of being reviewed ready for publishing.
 
 ### Classifications for a term
 
@@ -109,10 +90,6 @@ A glossary may be classified to describe the way its content should be used.
 * *AbstractConcept* means that the term describes an abstract concept.
 * *DataValue* means that the glossary term describes a valid value for a data item.
 * *ContextDefinition* indicates that the term describes a context.  Contexts define where a specific definition is used.
-* *PrimaryCategory* identifies the glossary category that is the primary "home" of the glossary term.
-* *SpineObject* indicates that the term represents a type of object (such as a person, place, thing).
-* *SpineAttribute* indicates that the term represents a type of attribute or data field.
-* *ObjectIdentifier* indicates that a term is typically is a type of attribute or data field that is an identifier for an object.
 
 
 !!! education "Further information"

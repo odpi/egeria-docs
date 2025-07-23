@@ -28,7 +28,7 @@ The description of what the linked element is used for, and hints on how to use 
 
 The *MoreInformation* relationship links [*Referenceable*](/types/0/0010-Base-Model/#referenceable) entities of different types together to indicate that one provides more detail about another.
 
-It is typically used to link descriptive elements such as a [Glossary](/types/3/0310-Glossary),  [GlossaryCategory](/types/3/0320-Category-Hierarchy), [GlossaryTerm](/types/3/0330-Terms) or a [ValidValue](/types/5/0545-Reference-Data) to another element that it describes.  For example:
+It is typically used to link descriptive elements such as a [Glossary](/types/3/0310-Glossary),  [GlossaryTerm](/types/3/0330-Terms) or a [ValidValue](/types/5/0545-Reference-Data) to another element that it describes.  For example:
 
 * A glossary (or glossary category) may describe data items that are linked together in a [DesignModel](/types/5/0566-Design-Model-Organization) or a [SchemaType](/types/5/0501-Schema-Elements) and the *MoreInformation* relationship can show this association.
 * A glossary term may describe a particular type of team, project or community and a *MoreInformation* relationship can link it to the [Team](/types/1/0115-Teams) or [Project](/types/1/0130-Projects)  or [Community](/types/1/0140-Communities) element as appropriate,

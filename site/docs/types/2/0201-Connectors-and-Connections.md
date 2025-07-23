@@ -27,16 +27,4 @@ The *ConnectionConnectorType* relationship links a connection to the connector t
 
 The *ConnectToEndpoint* relationship identifies the endpoint that the connector is to connect to.
 
-## ConnectorCategory entity
-
-The picture below shows how the connector category can be used to navigate to a different connector type implementation.
-
-![ConnectorCategory](0201-Connectors-and-Connections-Illustration-1.svg)
-
-## ConnectorTypeDirectory entity
-
-The next picture shows the *ConnectorTypeDirectory* classification can be used to organize the *ConnectorCategory* entities in a [Collection](/types/0/0021-Collections).
-
-![ConnectorTypeDirectory](0201-Connectors-and-Connections-Illustration-2.svg)
-
 --8<-- "snippets/abbr.md"

@@ -23,9 +23,8 @@ This investment is typically made using a specialist tool and then replicated au
 repositories.
 
 There can be multiple glossaries in the metadata repositories.  
-Each glossary owns a set of glossary terms and (optionally) a category hierarchy.  Glossary terms can be linked into none, one or many categories, from any glossary.  Similarly, terms from different glossaries may have relationships linking them together.
-This is the definitions of terms and concepts and how
-they relate to one another.
+Each glossary owns a set of glossary terms.  Glossary terms can be organized using [Collections](/types/0/0021-Collections).  Each term may be linked into none, one or many collections, from any glossary.  Similarly, terms from different glossaries may have relationships linking them together.
+This is the definitions of terms and concepts and how they relate to one another.
 
 Linking the concepts/terms defined in the glossary
 to the data assets in [Area 2](/types/2), defines the meaning of the
@@ -37,13 +36,11 @@ understand the data assets they are working with.
 ![UML Packages](area-3-glossary-overview.svg)
 
 * **[0310 Glossary](0310-Glossary.md)**
-* **[0320 Category Hierarchy](0320-Category-Hierarchy.md)**
 * **[0330 Glossary Terms](0330-Terms.md)**
 * **[0340 Dictionary](0340-Dictionary.md)**
 * **[0350 Related Terms](0350-Related-Terms.md)**
 * **[0360 Contexts](0360-Contexts.md)**
 * **[0370 Semantic Assignment](0370-Semantic-Assignment.md)**
-* **[0380 Spine Objects](0380-Spine-Objects.md)**
 * **[0385 Controlled Glossary Development](0385-Controlled-Glossary-Development.md)**
 * **[0390 Glossary Projects](0390-Glossary-Projects.md)**
 * **[0395 Supplementary Properties](0395-Supplementary-Properties.md)**

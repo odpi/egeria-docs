@@ -13,6 +13,7 @@ Area 0 describes base types and infrastructure. This includes types for `Asset`,
 - [0010 Base Model](0010-Base-Model.md)
 - [0011 Managing Referenceables](0011-Managing-Referenceables.md)
 - [0012 Search Keywords](0012-Search-Keywords.md)
+- [0013 Actions](0013-Actions.md)
 - [0014 External References](0014-External-References.md)
 - [0015 Linked Media Types](0015-Linked-Media-Types.md)
 - [0016 Cited Documents](0016-Cited-Documents.md)

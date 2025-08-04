@@ -21,7 +21,7 @@ directly to their [personal profile](egeria-docs/concepts/personal-profile).
 
 Each to do has a priority and a status:
 
-* **Open** - no work has started.
+* **Requested** - no work has started.
 * **In Progress** - work is ongoing.
 * **Waiting** - work is on hold, typically blocked.
 * **Complete** -  Work is completed.
@@ -29,7 +29,7 @@ Each to do has a priority and a status:
 
 ## Design information
 
-* [Open Metadata Type](/types/1/0137-Actions)
+* [Open Metadata Type](/types/1/0135-Actions-For-People)
 
 
 --8<-- "snippets/abbr.md"

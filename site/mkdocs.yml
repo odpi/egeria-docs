@@ -336,6 +336,7 @@ nav:
               - Base Model: types/0/0010-Base-Model.md
               - Managing Referenceables: types/0/0011-Managing-Referenceables.md
               - Search Keywords: types/0/0012-Search-Keywords.md
+              - Actions: types/0/0013-Actions.md
               - External References: types/0/0014-External-References.md
               - Linked Media: types/0/0015-Linked-Media-Types.md
               - Cited Documents: types/0/0016-Cited-Documents.md
@@ -372,8 +373,7 @@ nav:
               - Assignment Scopes: types/1/0120-Assignment-Scopes.md
               - Contribution: types/1/0125-Contribution.md
               - Projects: types/1/0130-Projects.md
-              - Meetings: types/1/0135-Meetings.md
-              - Actions for People: types/1/0137-Actions.md
+              - Actions for People: types/1/0135-Actions-For-People.md
               - Communities: types/1/0140-Communities.md
               - Feedback: types/1/0150-Feedback.md
               - Crowd Sourcing: types/1/0155-Crowd-Sourcing.md
@@ -405,6 +405,7 @@ nav:
           - 3. Glossary:
               - Area 3 Glossary: types/3/index.md
               - Glossary: types/3/0310-Glossary.md
+              - Glossary Categories: types/3/0320-Category-Hierarchy.md
               - Glossary Terms: types/3/0330-Terms.md
               - Dictionary: types/3/0340-Dictionary.md
               - Related Terms: types/3/0350-Related-Terms.md

@@ -6,7 +6,7 @@
 
 Key digital services, such as digital products and systems often provide the focus for governance activity such as data privacy, data quality or cyber-security.  They typically have executive ownership and provide a key digital capability that enables the organization to function properly.
 
-The digital product manager provides the human link from these digital products to the organization.  Also see [Mode 0440 Organizational Controls](/types/4/0440-Organizational-Controls/) for links to the organizations that rely on the digital products.
+The digital product manager provides the human link from these digital products to the organization.  Also see [Model 0440 Organizational Controls](/types/4/0440-Organizational-Controls/) for links to the organizations that rely on the digital products.
 
 ![UML](0715-Digital-Product-Management.svg)
 

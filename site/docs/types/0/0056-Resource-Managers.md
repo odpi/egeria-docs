@@ -3,7 +3,7 @@
 
 # 0056 Resource Managers
 
-A resource manager is a software capability that manages one or more resources.  The following classifications augment the description of a software capability ot its hosting infrastructure to describe the resources that it manages.  These classifications link to `Referencable` to allow resource managers to be identified at different levels of groanularity.
+A resource manager is a software capability that manages one or more resources.  The following classifications augment the description of a software capability ot its hosting infrastructure to describe the resources that it manages.  These classifications link to `Referencable` to allow resource managers to be identified at different levels of granularity.
 
 ![UML](0056-Resource-Managers.svg)
 

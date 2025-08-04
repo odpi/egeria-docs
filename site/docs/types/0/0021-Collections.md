@@ -69,7 +69,7 @@ The *RecentAccess* classification indicates that the collection is a set of elem
 
 ### WorkItemList classification
 
-The *WorkItemList* classification indicates that the collection is organizing a set of elements (typically [ToDos](/types/1/0137-Actions), or [Tasks](/types/1/0130-Projects)).
+The *WorkItemList* classification indicates that the collection is organizing a set of elements (typically [ToDos](/types/1/0135-Actions-For-People), or [Tasks](/types/1/0130-Projects)).
 
 
 ## CollectionMembership relationship
@@ -120,7 +120,7 @@ They can be used to support a simple stewardship workflow.  For example, conside
 
 ![Candidate assets for archive](archive-candidate-collection.svg)
 
-The status value could be *Discovered* in each *CollectionMembership* relationship.  Once the collection is complete, the governance action could trigger a [request to a steward](/types/1/0137-Actions) to verify the list.  The steward could update the *CollectionMembership* status to either:
+The status value could be *Discovered* in each *CollectionMembership* relationship.  Once the collection is complete, the governance action could trigger a [request to a steward](/types/1/0135-Actions-For-People) to verify the list.  The steward could update the *CollectionMembership* status to either:
 
 * *Validated* - The resource should be archived.
 * *Obsolete* - The resource should be retained.

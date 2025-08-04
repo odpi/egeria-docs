@@ -20,8 +20,7 @@ Area 1 collects information from people using their organization's assets. It in
 - [0120 Assignment Scopes](/types/1/0120-Assignment-Scopes) - assignment of actors to the resources they are responsible for
 - [0125 Contribution](/types/1/0125-Contribution) - a contribution record to reward the people, teams and automated services that are supporting the open metadata ecosystem.
 - [0130 Projects](/types/1/0130-Projects) - projects for organizing change to the IT landscape
-- [0135 Meetings](/types/1/0135-Meetings) - meetings where ideas, situations and plans are discussed and reviewed
-- [0137 Actions for People](/types/1/0137-Actions) - descriptions of actions for people
+- [0135 Actions for People](/types/1/0135-Actions-For-People) - descriptions of actions for people such as ToDos and Meetings
 - [0140 Communities](/types/1/0140-Communities) - communities of like-minded people
 - [0150 Feedback](/types/1/0150-Feedback) - comments, likes, reviews and ratings
 - [0155 Crowd Sourcing](/types/1/0155-Crowd-Sourcing) - collecting ideas from subject-matter experts

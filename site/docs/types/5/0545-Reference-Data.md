@@ -27,9 +27,9 @@ The *ValidValueDefinition* can be used to represent a single code value along wi
 ![Valid Value Definition](/features/reference-data-management/valid-value-definition.svg)
 
 
-## ValidValuesSet entity and ValidValueMember relationship
+## ValidValueMember relationship
 
-Code tables group related code values together to act as a look-up table.  The *ValidValuesSet* and the *ValidValueMember* relationship can be used to organize *ValidValueDefinition*s.
+Code tables group related code values together to act as a look-up table.  The *ValidValueMember* relationship can be used to organize *ValidValueDefinition*s.
 
 ![Valid Value Set](/features/reference-data-management/valid-value-set.svg)
 

@@ -9,7 +9,7 @@ An [Engine action](/concepts/engine-action) describes some processing that is pa
 
 ## EngineAction entity
 
-A *EngineAction* entity is an [*Action*](/types/1/0137-Actions) used to control the execution of a single call to a [governance service](/concepts/governance-service). 
+A *EngineAction* entity is an [*Action*](/types/1/0013-Actions) used to control the execution of a single call to a [governance service](/concepts/governance-service). 
 
 The creation of an *EngineAction* entity typically triggers the execution of a [governance service](/concepts/governance-service) in a [governance engine](/concepts/governance-engine). As the governance service runs, the governance engine adds information to the EngineAction describing the status of the governance service and the actions taken against specific [resources](/concepts/resources) (see [TargetForAction](#targetforaction)). Once the action is complete, the *EngineAction* entity acts as an audit record for the actions taken.
 
@@ -26,23 +26,6 @@ The governance service can optionally update the status of its processing of the
 * *completionDate* identifies when processing stopped for this target entity.
 * *completionMessage* records a description of what happened during the processing.
 
-## EngineActionStatus enumeration
-
-The *EngineActionStatus* indicates the execution status of the governance action.
-
-| Enumeration | Value | Name        | Description                                                                                           |
-|-------------|-------|-------------|-------------------------------------------------------------------------------------------------------|
-| REQUESTED   | 0     | Requested   | The engine action has been created and is pending.                                                    |
-| APPROVED    | 1     | Approved    | The engine action is approved to run.     This means all of the manatory guards have been satisfied.  |
-| WAITING     | 2     | Waiting     | The engine action is waiting for its start time or the right conditions to run.                       |
-| ACTIVATING  | 3     | Activating  | The governance service for the engine action is being initialized in the governance engine.           |
-| IN_PROGRESS | 4     | In Progress | The governance engine is running the associated governance service for the engine action.             |
-| ACTIONED    | 10    | Actioned    | The governance service for the engine action has successfully completed processing.                   |
-| INVALID     | 11    | Invalid     | The governance engine has not been run because it is not appropriate (for example, a false positive). |
-| IGNORED     | 12    | Ignored     | The governance action has not been run because a different governance action was chosen.              |
-| FAILED      | 13    | Failed      | The governance service for the engine action failed to execute.                                       |
-| CANCELLED   | 14    | Cancelled   | The engine action was cancelled by an external caller.                                                |
-| OTHER       | 99    | Other       | Undefined or unknown governance action status.                                                        |
 
 ## EngineActionRequestSource relationship
 

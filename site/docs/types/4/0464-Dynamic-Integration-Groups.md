@@ -42,7 +42,7 @@ The *CatalogTarget* relationship links an *IntegrationConnector* entity to anoth
 
 An integration connector may have multiple catalog targets.  The attributes of this relationship are used to control the processing of each one.
 
-* *catalogTargetName* provides a symbolic name for the catalog target.  This is used in messages ans it is helpful to have a unique name ofr each catalog target.
+* *catalogTargetName* provides a symbolic name for the catalog target.  This is used in messages and it is helpful to have a unique name for each catalog target.
 * *connectionName* optional name of the action target's connection (only needed if the asset has multiple connections).
 * *configurationProperties* provide properties that control the behaviour of the integration connector whilst it is processing the catalog target. Its value override the configuration properties supplied in the integration connector's connection.
 * *templates* provides an optional map of template names to template element qualified names.  These override the template names/values supplied in the integration connector's connection.  The list of template names supported by the integration connector is defined in its provider's `supportedTemplates` property.

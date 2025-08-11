@@ -25,7 +25,6 @@ In a similar way to the glossary ([area 3](/types/3)), this information is autho
 * **[0435 Policy Management Capabilities](0435-Policy-Management-Capabilities.md)**
 * **[0438 Naming Standards](0438-Naming-Standards.md)**
 * **[0440 Organizational Controls](0440-Organizational-Controls.md)**
-* **[0442 Project Charter](0442-Project-Charter.md)**
 * **[0445 Governance Roles](0445-Governance-Roles.md)**
 * **[0450 Governance Rollout](0450-Governance-Rollout.md)**
 * **[0455 Exception Management](0455-Exception-Management.md)**

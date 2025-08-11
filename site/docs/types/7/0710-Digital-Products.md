@@ -30,4 +30,9 @@ The design of the processes can be represented by a [Solution component](/types/
 The *DigitalProductDependency* relationship allows an organization to capture the dependencies between digital products.  The nature of the dependency is supplied in the *description* property.
 
 
+## DigitalProductManager
+
+*DigitalProductManager* is an [ActorRole](/types/1/0118-Actor-Role) that can be used as the product manager for a digital product.  Since it is a role, one or more individuals can be appointed to the position.
+
+
 --8<-- "snippets/abbr.md"

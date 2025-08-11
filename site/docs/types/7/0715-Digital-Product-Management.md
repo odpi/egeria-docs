@@ -15,8 +15,4 @@ The digital product manager provides the human link from these digital products 
 
 *DigitalProductManagement* defines who is responsible for the digital product.  This includes its operation and evolution.  It links to a [ActorRole](/types/1/0118-Actor-Roles) which may have one or more individuals appointed to it.
 
-## DigitalProductManager
-
-*DigitalProductManager* is an [ActorRole](/types/1/0118-Actor-Role) that can be used as the product manager for a digital product.  Since it is a role, one or more individuals can be appointed to the position.
-
 --8<-- "snippets/abbr.md"

@@ -14,6 +14,10 @@ Notice that the project acts as an anchor for collections of resources that the 
 
 The project entity represents a single project.  It inherits from [*Referenceable*](/types/0/0010-Base-Model) and includes attributes for defining the timeframe for the project and its status.
 
+* *mission* describes in free-form text, the hoped for outcome of the project(s) commissioned under this charter.
+* *purposes* define a list of formal purposes for the project.  These are inspired by the need to identify processing purposes in the EU's General Data Protection Legislation (GDPR).  These purposes can also be set up in a valid metadata set.
+
+
 ## Campaign classification
 
 The *Campaign* classification describes a collection of related projects that are working towards a common goal.  Often this goal is a complex transformation that needs actions from independent teams.  The definition of the campaign helps to identify the role of the different projects in achieving the common goal, and providing the umbrella for coordinating specific activities as needed.

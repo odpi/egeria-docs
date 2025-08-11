@@ -36,13 +36,4 @@ Specific subtypes for GovernanceRole are also defined to group governance roles 
 *Ownership* is assigned to a resource by adding the *Ownership* classification to it. This classification can assign ownership as an [ActorProfile](/1/0110-Actors), [UserIdentity](/types/1/0110-Actors) or [PersonRole](/types/1/0112-People).
 It does not need to be a *GovernanceRole*.
 
-??? deprecated "Deprecated types"
-    - *ResponsibilityStaffContact* relationship is deprecated in favour of the more generic [*PersonRoleAssignment*](/types/1/0112-People).
-    - *GovernanceRoleAssignment* relationship is deprecated in favour of the more generic [*AssignmentScope*](/types/1/0120-Assignment-Scopes).
-    - The original ownership types did not allow resources to be owned by a person role. They are all replaced by the more generic *Ownership* classification.
-
-        - *AssetOwnership* - use *Ownership*
-        - *AssetOwnerType* - use *Ownership* properties
-        - *OwnerType* - use *Ownership* properties
-
 --8<-- "snippets/abbr.md"

@@ -27,4 +27,10 @@ The *UltimateDestination* relationship links a node in the lineage graph to its 
 * distance - The number of hops along the lineage graph to the ultimate destination organized by type of element.
 * hops - enables a record of steps between the two ends of this relationship.
 
+
+## DigitalResourceOrigin classification
+
+*[Assets](/types/0/0010-Basic-Model)* entities describe [digital resources](/concepts/digital-resource) used by an organization.  The *DigitalResourceOrigin* classification describes the part of the organization that the resource originated in.  For example, it may show that a data set with personal information originated from the Swiss part of the organization and is therefore subject to specific controls.
+
+
 --8<-- "snippets/abbr.md"

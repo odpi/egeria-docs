@@ -429,10 +429,10 @@ nav:
               - Policy Management Capabilities: types/4/0435-Policy-Management-Capabilities.md
               - Naming Standards: types/4/0438-Naming-Standards.md
               - Organizational Controls: types/4/0440-Organizational-Controls.md
-              - Project Charter: types/4/0442-Project-Charter.md
               - Governance Roles: types/4/0445-Governance-Roles.md
               - Governance Rollout: types/4/0450-Governance-Rollout.md
               - Exception Management: types/4/0455-Exception-Management.md
+              - Connector Activity Reports: types/4/0457-Connector-Activity-Reports.md
               - Governance Execution Points: types/4/0460-Governance-Execution-Points.md
               - Governance Engines: types/4/0461-Governance-Engines.md
               - Governance Action Processes: types/4/0462-Governance-Action-Processes.md
@@ -495,7 +495,7 @@ nav:
               - Area 7 Lineage: types/7/index.md
               - Digital Products: types/7/0710-Digital-Products.md
               - Digital Subscription: types/7/0711-Digital-Subscription.md
-              - Digital Project Management: types/7/0715-Digital-Product-Management.md
+              - Digital Business: types/7/0715-Digital-Business.md
               - Information Supply Chains: types/7/0720-Information-Supply-Chains.md
               - Solution Components: types/7/0730-Solution-Components.md
               - Solution Ports and Wires: types/7/0735-Solution-Ports-and-Wires.md

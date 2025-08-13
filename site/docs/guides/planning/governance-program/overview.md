@@ -65,7 +65,9 @@ The governance domain descriptions include the *preferredValue* for the  *domain
 
 A governance domain needs a leader to drive the change and focus that it demands.  When an organization decides to create a new governance domain, the appointment of the leader of the domain is the first decision.  This person then organizes the people and resources that will drive the definition and rollout of changes needed to make the governance domain successful.
 
-The leadership of the governance domain is a type of governance role.
+The leadership role of the governance domain is described using a *GovernanceOfficer* which is a type of governance role.
+
+![Governance Officer](governance-leadership.svg)
 
 ## Governance Roles
 
@@ -90,11 +92,11 @@ For example, you may have 100 data assets and each needs at least one person to 
 These different approaches allow you to have enough detail in your open metadata definitions to configure tools and report on governance activity, whilst minimising effort to keep the definitions up to date.
 
 ??? education "Representing governance roles in open metadata"
-    Governance roles are types of [PersonRole](/types/1/0112-People).  They link to a governance responsibility (a type of [governance definition](#governance-definitions) using the [GovernanceResponsibilityAssignment](/types/4/0445-Governance-Roles) relationship).  The [profile of a person](/types/1/0112-People) is linked to the governance role using the [PersonRoleAppointment](/types/1/0112-People).
+    Governance roles are types of [PersonRole](/types/1/0112-People).  They link to a governance responsibility (a type of [governance definition](#governance-definitions) using the [GovernedBy](/types/4/0401-Governance-Definitions) relationship).  The [profile of a person](/types/1/0112-People) is linked to the governance role using the [PersonRoleAppointment](/types/1/0112-People).
 
     ![Governance Roles](/guides/planning/governance-program/governance-roles.svg)
 
-    The [Governance Officer OMVS](/services/omvs/governance-officer/overview) supports the setting up of governance roles. The [People Organizer OMVS](/services/omvs/people-organizer/overview) supports the appointment of people to roles.
+    The [Actor Manager OMVS](/services/omvs/actor-manager/overview) supports the setting up of governance roles and the appointment of people to roles.
 
 
 ## Governance Leadership Communities
@@ -116,6 +118,9 @@ Often the leaders of the governance domains need a forum to share ideas and coll
 ![Governance Leadership Community](/guides/planning/governance-program/governance-leadership-community.svg)
 
 Defining the governance communities' membership in Egeria means that as people are appointed or removed from roles, Egeria can automatically maintain access control lists and email list for the membership.
+
+??? education "Defining communities"
+    Communities can be set up through the [Community Matters OMVS](/services/omvs/community-matters/overview).
 
 ## Governance domain management process
 
@@ -157,6 +162,9 @@ A *Governance Definition* is a metadata element that describes the context or pu
 ![Traceability through governance definitions](/guides/planning/governance-program/traceability-from-business-drivers-to-action.svg)
 > Using governance definitions to provide traceability from business drivers and regulations to actions.
 
+??? education "Defining governance definitions"
+    Governance definitions can be set up through the [Governance Officer OMVS](/services/omvs/governance-officer/overview).
+
 ## Subject areas
 
 [Subject areas](/concepts/subject-area) are topics or domains of knowledge that are important to the organization.  Typically, they cover types of assets (such as data) that are widely shared across the organization and there is business value in maintaining consistency in the data values in each copy.
@@ -183,21 +191,14 @@ The subject area definition can be linked to [governance definitions](#governanc
 The organization of the subject areas is orthogonal to the governance domains. Some subject areas are common to multiple governance domains; others are specialized within a governance domain. Similarly, an organization can create governance definitions that are applicable to all subject areas, or are specific to the subject area they are linked to.  Typically, they will have a mixture of these.
 
 
-!!! education "Further information"
+!!! education "Further information about Subject Areas"
 
     * [Common Data Definitions](/practices/common-data-definitions/overview) describes the management and use of subject areas.
-    
     * The [Defining Subject Areas](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview/) scenario for Coco Pharmaceuticals walks through the process of setting up the subject areas for Coco Pharmaceuticals.
-    
-    * There are two code samples associated with this set of subject areas:
-    
-        * [Setting up the subject area definitions :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-subject-area-sample){ target=gh }
-        * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
-    
-    * [Governance Officer OMVS](/services/omvs/governance-officer/overview) supports the setting up of subject area definitions.
+    * [Subject Area OMVS](/services/omvs/subject-area/overview) supports the setting up of subject area definitions.
     * [Reference Data OMVS](/services/omvs/reference-data/overview) supports the definition of reference data for the subject area.
     * [Data Designer OMVS](/services/omvs/data-designer/overview) supports the definition of data requirements for the subject area.
-    * [Asset Manager OMAS](/services/omvs/asset-manager/overview) supports the management of glossaries and the exchange of subject area information with other catalogs and quality tools.
+    * [Glossary Manager OMVS](/services/omvs/glossary-manager/overview) supports the management of glossaries.
 
 ## Governance classification, tagging and linking
 
@@ -226,14 +227,14 @@ The different types of labels used to group assets/resources are used for differ
 
 The labels may be assigned directly to the asset, or to elements, such as schemas and glossary terms that are linked to the asset.
 
-## Setting up the levels for your governance classifications
+## Setting up the levels for your governance data classifications
 
 The values used in governance classifications show the specific group that the classified asset belongs to.  Often an organization has their own levels defined, and they can be set up using the [valid metadata values](/guides/planning/valid-values/overview) definitions.
 
 ![Figure 5](/guides/planning/governance-program/governance-program-level-definition.svg)
 > **Figure 5:** Governance classifications that use governance level definitions
 
-Egeria has a set of default values that can be set up using the [`createStandardGovernanceClassificationLevels`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceClassificationLevelInterface.html) method.
+Egeria has a set of default values that are loaded through the [*Core Content Pack*](/content-packs/core-content-pack/overview).
 
 
 ## Measures and metrics
@@ -270,17 +271,15 @@ There are three types:
 
 * An Enforcement Point describes processing that enforces a specific condition. For example, data may need to be encrypted at a certain point in the processing. The encryption processing is an enforcement point.
 
-The ExecutionPointDefinition elements are created during the design of the governance program. They characterize the types of execution points that are needed to support the governance requirements. They are linked to the Governance Definition that they support using the ExecutionPointUse relationship. Typically, the governance definitions linked to the governance execution point definitions are:
-
-* Governance Processes
-* Governance Procedures
+The governance control elements are created during the design of the governance program. They characterize the types of execution points that are needed to support the governance requirements. 
 
 Often execution points need to be integrated with the normal activity of the business, but they may also represent additional standalone activity.
 
-The classifications ControlPoint, VerificationPoint and EnforcementPoint are used to label governance implementation elements with the type of execution point and the qualified name of the corresponding definition if any. They are often found on element such as:
+The classifications ControlPoint, VerificationPoint and EnforcementPoint are used to label implementation elements with the type of execution point and the qualified name of the corresponding governance control definition if any. They are often found on [actions](/types/0/0013-Actions) such as:
 
-* Governance Action Process Steps
 * Engine Actions
+* ToDos
+* Meetings
 
 These classifications help in the review of the implementation of the governance program and can be used to drive additional audit logging. 
 
@@ -297,34 +296,5 @@ These classifications help in the review of the implementation of the governance
 ![Governance Projects](/guides/planning/governance-program/governance-projects.svg)
 
 
-## Open metadata implementation
-
-??? education "How the Open Metadata Access Services (OMASs) support the governance program"
-
-    * The [Governance Program OMAS](/services/omas/governance-program/overview) supports the setting up of governance domain and its associated definition elements.
-
-    * The [Community Profile OMAS](/services/omas/community-profile/overview) supports the definition of the profiles for people and teams that will support the governance program.  These are linked to the governance roles defined by the governance program.
-
-    * The [Project Management OMAS](/services/omas/project-management/overview) supports the rollout of the governance program by commissioning campaigns and projects to implement the governance controls and the collection of measurements to assess the success of the program.
-
-    * The [Digital Architecture OMAS](/services/omas/digital-architecture/overview) provides the setup of the digital landscape that supports the governance program.  This includes the definitions of the information supply chains and solution components that support the organization's activities.
-
-    * The [Digital Service OMAS](/services/omas/digital-service/overview) documents the business capabilities along with their digital services that are supported by the governance program.
-
-    * The [Governance Server OMAS](/services/omas/governance-server/overview) supports the implementation of technical controls and the choreography of their execution.
-
-    * The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) supports the stewards as they manage the exceptions detected to the governance program.
-
-    * The [Data Manager OMAS](/services/omas/data-manager/overview) support the automated cataloging of assets and configuration of technology that is managing them.
-
-    * The [Security Manager OMAS](/services/omas/security-manager/overview) support the configuration of technology that is managing the security of assets.
-
-    * The [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the automated exchange of governance definitions between catalogs and asset managers to create a consistent rollout of governance requirements.
-  
-    * The [Asset Owner OMAS](/services/omas/asset-owner/overview) supports the linking of governance definitions and classifications to assets to define how they should be governed.
-
-    * The [Asset Consumer OMAS](/services/omas/asset-consumer/overview) supports the visibility of the governance definitions and classification by consumers of the assets.
-
-The [egeria-samples.git repository](https://github.com/odpi/egeria-samples) includes a sample called [Sample metadata archives for Coco Pharmaceuticals](https://github.com/odpi/egeria-samples/tree/main/sample-metadata-archives/coco-metadata-archives) that creates open metadata archives with basic definitions for Coco Pharmaceuticals.  This includes the definition of this organization's governance domains with their communities and governance officers.
 
 --8<-- "snippets/abbr.md"

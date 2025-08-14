@@ -13,11 +13,7 @@ require data subjects to agree the processing that is permitted on their data.
 Often the processing is summarized in terms of the outcome (or the "purpose" of the processing)
 with the option to drill down into the details of how this processing is achieved.
 
-Other regulations 
-
-The types below are used to capture the purposes and detailed data processing descriptions and
-record who or what has permission to perform the specified
-processing. 
+The types below are used to capture the detailed data processing descriptions associated with a [DataProcessingPurpose](/types/4/0440-Organizational-Controls) and record who or what has permission to perform the specified processing. 
 
 ![UML](0485-Data-Processing-Purposes.svg)
 

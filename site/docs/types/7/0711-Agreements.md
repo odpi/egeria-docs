@@ -1,15 +1,17 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# 0484 Agreements
+# 0711 Agreements
 
 Agreements are used to record agreements between parties
 
-![UML](0484-Agreements.svg)
+![UML](0711-Agreements.svg)
 
 ## Agreement entity
 
-An *Agreement* entity represents an agreement between parties.  This could be anything from an informal agreement to a legal binding contract.  The type of agreement is indicated by the *agreementType* property.  The terms and conditions of the agreement can be attached with the [AttachedTermsAndConditions](/types/4/0483-Terms-And-Conditions) relationship.  Agreement is a type of [Collection](/types/0/0021-Collections) to enable it to act as a folder for all the supporting information for the agreement.  For example, if the agreement is a data sharing agreement, then the associated [data specifications](/types/5/0580-Data-Dictionaries) can be attached as members of the agreement.
+An *Agreement* entity represents an agreement between parties.  This could be anything from an informal agreement to a legal binding contract.  The type of agreement is indicated by the *agreementType* property.  The [terms and conditions](/types/4/0440-Organizational-Controls) of the agreement can be attached with the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.  
+
+Agreement is a type of [Collection](/types/0/0021-Collections) to enable it to act as a folder for all the supporting information for the agreement.  For example, if the agreement is a data sharing agreement, then the associated [data specifications](/types/5/0580-Data-Dictionaries) can be attached as members of the agreement.
 
 ## DataSharingAgreement classification
 

@@ -20,8 +20,8 @@ The *GovernanceRule* entity defines an executable rule that can be deployed at p
 
 The *ServiceLevelObjective* entity defines the performance, availability and quality levels expected from an element attached by the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.
 
-## GovernanceProcess entity
+## GovernanceAction entity
 
-The *GovernanceProcess* entity defines an executable process that choreographs different actions.
+The *GovernanceAction* entity defines an executable action, or sequence of actions, to support a governance requirement.
 
 --8<-- "snippets/abbr.md"

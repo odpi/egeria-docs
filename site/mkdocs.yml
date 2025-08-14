@@ -443,8 +443,6 @@ nav:
               - Context Events: types/4/0475-Context-Events.md
               - Licenses: types/4/0481-Licenses.md
               - Certifications: types/4/0482-Certifications.md
-              - Terms and Conditions: types/4/0483-Terms-And-Conditions.md
-              - Agreements: types/4/0484-Agreements.md
               - Data Processing Purposes: types/4/0485-Data-Processing-Purposes.md
           - 5. Structures:
               - Area 5 Structures: types/5/index.md
@@ -494,7 +492,8 @@ nav:
           - 7. Lineage:
               - Area 7 Lineage: types/7/index.md
               - Digital Products: types/7/0710-Digital-Products.md
-              - Digital Subscription: types/7/0711-Digital-Subscription.md
+              - Agreements: types/7/0711-Agreements.md
+              - Digital Subscription: types/7/0712-Digital-Subscription.md
               - Digital Business: types/7/0715-Digital-Business.md
               - Information Supply Chains: types/7/0720-Information-Supply-Chains.md
               - Solution Components: types/7/0730-Solution-Components.md

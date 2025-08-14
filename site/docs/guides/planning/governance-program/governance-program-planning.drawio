@@ -113,7 +113,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="mArv101Qo0KCMiXSAoCN" name="bridging-to-organization">
-    <mxGraphModel dx="2888" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2888" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="S5lS58ZmbvXcH93iUld8-0" />
         <mxCell id="S5lS58ZmbvXcH93iUld8-1" parent="S5lS58ZmbvXcH93iUld8-0" />
@@ -490,11 +490,23 @@
         <mxCell id="HSuAFZtVlVhFSwjklLyr-44" value="AssignmentScope" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="S5lS58ZmbvXcH93iUld8-1" vertex="1">
           <mxGeometry x="-695" y="295" width="120" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="a0_m8BBb8GwUeh9-XFA6-0" value="Governance&lt;br&gt;Domain&lt;br&gt;Valid Value" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="S5lS58ZmbvXcH93iUld8-1">
+          <mxGeometry x="-1030" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a0_m8BBb8GwUeh9-XFA6-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="S5lS58ZmbvXcH93iUld8-1" source="a0_m8BBb8GwUeh9-XFA6-1" target="a0_m8BBb8GwUeh9-XFA6-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a0_m8BBb8GwUeh9-XFA6-1" value="Governance Officer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="S5lS58ZmbvXcH93iUld8-1">
+          <mxGeometry x="-1280" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a0_m8BBb8GwUeh9-XFA6-3" value="Assignment Scope" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="S5lS58ZmbvXcH93iUld8-1">
+          <mxGeometry x="-1160" y="450" width="120" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="jvJXFqL6fXRPoGgnXWhq" name="governance-definitions">
-    <mxGraphModel dx="2061" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2061" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="N59K1eUxawvdz6MUQs9t-0" />
         <mxCell id="N59K1eUxawvdz6MUQs9t-1" parent="N59K1eUxawvdz6MUQs9t-0" />
@@ -567,23 +579,11 @@
         <mxCell id="N59K1eUxawvdz6MUQs9t-19" value="Governance&lt;br&gt;Action" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
           <mxGeometry x="645.13" y="470" width="89.5" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="N59K1eUxawvdz6MUQs9t-21" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;rotation=-90;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="439.25" y="364.25" width="20" height="369.5" as="geometry" />
-        </mxCell>
-        <mxCell id="N59K1eUxawvdz6MUQs9t-22" value="Organizational Controls" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="378.5" y="561" width="140" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="N59K1eUxawvdz6MUQs9t-23" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;rotation=-90;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="824.76" y="359.38" width="20" height="379.25" as="geometry" />
-        </mxCell>
-        <mxCell id="N59K1eUxawvdz6MUQs9t-24" value="Technical Controls" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="777.88" y="559" width="110" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="N59K1eUxawvdz6MUQs9t-25" value="Governance&lt;br&gt;Mechanism" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=2" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
           <mxGeometry x="16" y="354.38" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="RkxXnukF6LEUoNw1Ijc0-3" value="Execution Points are classifications that&lt;div&gt;identity where governance is executing in&lt;div&gt;the broader IT landscape.&amp;nbsp; They identify&lt;/div&gt;&lt;/div&gt;&lt;div&gt;the associated governance definition&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="-1" y="646" width="240" height="70" as="geometry" />
+          <mxGeometry x="3" y="613" width="240" height="70" as="geometry" />
         </mxCell>
         <mxCell id="RkxXnukF6LEUoNw1Ijc0-6" value="Why" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=1" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
           <mxGeometry x="-84.5" y="140" width="40" height="20" as="geometry" />
@@ -595,7 +595,7 @@
           <mxGeometry x="-84.5" y="439" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="RkxXnukF6LEUoNw1Ijc0-9" value="Where" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontStyle=1" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="-89.5" y="671" width="50" height="20" as="geometry" />
+          <mxGeometry x="-85.5" y="638" width="50" height="20" as="geometry" />
         </mxCell>
         <mxCell id="90TrG04SzaA0XR5i4ibA-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
           <mxGeometry x="36.5" y="1057" width="40" height="20" as="geometry" />
@@ -841,22 +841,22 @@
           <mxGeometry x="1005.5" y="1440" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="qydi5Gh4zdF5h_7LN5yn-6" value="ToDo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="743.88" y="656" width="120" height="60" as="geometry" />
+          <mxGeometry x="747.88" y="623" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="qydi5Gh4zdF5h_7LN5yn-7" value="Control&lt;br&gt;Point" style="rounded=1;whiteSpace=wrap;html=1;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="783.88" y="630" width="80" height="30" as="geometry" />
+          <mxGeometry x="787.88" y="597" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="qydi5Gh4zdF5h_7LN5yn-8" value="Airflow&lt;div&gt;Process&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="443.88" y="656" width="120" height="60" as="geometry" />
+          <mxGeometry x="447.88" y="623" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="qydi5Gh4zdF5h_7LN5yn-9" value="Verification&lt;br&gt;Point" style="rounded=1;whiteSpace=wrap;html=1;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="483.88" y="630" width="80" height="30" as="geometry" />
+          <mxGeometry x="487.88" y="597" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="qydi5Gh4zdF5h_7LN5yn-10" value="Engine&lt;div&gt;Action&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="593.88" y="656" width="120" height="60" as="geometry" />
+          <mxGeometry x="597.88" y="623" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="qydi5Gh4zdF5h_7LN5yn-11" value="Enforcement&lt;br&gt;Point" style="rounded=1;whiteSpace=wrap;html=1;" parent="N59K1eUxawvdz6MUQs9t-1" vertex="1">
-          <mxGeometry x="633.88" y="630" width="80" height="30" as="geometry" />
+          <mxGeometry x="637.88" y="597" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="dd0iA4J-TGq2k0IaQKYA-0" value="Regulation&lt;div&gt;Article&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="N59K1eUxawvdz6MUQs9t-1">
           <mxGeometry x="579.5" y="160" width="100" height="50" as="geometry" />
@@ -903,9 +903,6 @@
         <mxCell id="dd0iA4J-TGq2k0IaQKYA-17" value="Service Level&lt;div&gt;Objective&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="N59K1eUxawvdz6MUQs9t-1">
           <mxGeometry x="933.38" y="470" width="89.5" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="dd0iA4J-TGq2k0IaQKYA-18" value="Organizational controls are&lt;div&gt;&amp;nbsp;implemented by people,&lt;div&gt;&amp;nbsp;organization and the ways of work;&lt;/div&gt;&lt;div&gt;&amp;nbsp;technical controls represent automation&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="N59K1eUxawvdz6MUQs9t-1">
-          <mxGeometry x="-1" y="491" width="240" height="70" as="geometry" />
-        </mxCell>
         <mxCell id="kndTJP-C7PRKUNRgqG92-0" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#6d8764;strokeColor=#3A5431;" edge="1" parent="N59K1eUxawvdz6MUQs9t-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="642" y="350.5" as="sourcePoint" />
@@ -920,8 +917,8 @@
         </mxCell>
         <mxCell id="kndTJP-C7PRKUNRgqG92-2" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#6d8764;strokeColor=#3A5431;" edge="1" parent="N59K1eUxawvdz6MUQs9t-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="637" y="571" as="sourcePoint" />
-            <mxPoint x="637" y="611" as="targetPoint" />
+            <mxPoint x="641" y="538" as="sourcePoint" />
+            <mxPoint x="641" y="578" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

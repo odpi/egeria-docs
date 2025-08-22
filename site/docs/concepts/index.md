@@ -135,8 +135,9 @@
     - [Open Metadata Framework (OMF)](/frameworks/omf/overview)
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview)
     - [Open Integration Framework (OIF)](/frameworks/oif/overview)
-    - [Governance Action Framework (GAF)](/frameworks/gaf/overview)
-    - [Survey Action Framework (SAF)](/frameworks/saf/overview)
+    - [Open Governance Framework (OGF)](/frameworks/ogf/overview)
+    - [Open Survey Framework (OSF)](/frameworks/osf/overview)
+    - [Open Watchdog Framework (OWF)](/frameworks/owf/overview)
 
 
 ## G
@@ -149,7 +150,7 @@
 - [Governance Action](/concepts/governance-action)
 - [Governance Action Engine](/concepts/governance-action-engine)
 - [Governance Action OMES](/service/omes/governance-action/overview)
-- [Governance Action Framework (GAF)](/frameworks/gaf/overview)
+- [Open Governance Framework (OGF)](/frameworks/ogf/overview)
 - [Governance Action Process](/concepts/governance-action-process)
 - [Governance Action Process Step](/concepts/governance-action-process-step)
 - [Governance Action Type](/concepts/governance-action-process-step)
@@ -379,7 +380,7 @@
 - [Subsystem](/concepts/omag-subsystem)
 - [Survey Report](/concepts/survey-report)
 - [Survey Action Engine](/concepts/survey-action-engine)
-- [Survey Action Framework (SAF)](/frameworks/saf/overview)
+- [Survey Action Framework (SAF)](/frameworks/osf/overview)
 - [Survey Action Service](/concepts/survey-action-service)
 - [Supported Zones](/concepts/governance-zone)
 

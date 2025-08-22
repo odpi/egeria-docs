@@ -27,6 +27,7 @@ In a similar way to the glossary ([area 3](/types/3)), this information is autho
 * **[0440 Organizational Controls](0440-Organizational-Controls.md)**
 * **[0445 Governance Roles](0445-Governance-Roles.md)**
 * **[0450 Governance Rollout](0450-Governance-Rollout.md)**
+* **[0451 Notifications](0451-Notifications.md)**
 * **[0455 Exception Management](0455-Exception-Management.md)**
 * **[0460 Governance Execution Points](0460-Governance-Execution-Points.md)**
 * **[0461 Governance Engines](0461-Governance-Engines.md)**

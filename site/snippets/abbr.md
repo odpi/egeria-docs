@@ -4,7 +4,7 @@
 *[ALF]: Audit Log Framework
 *[IGC]: IBM Information Governance Catalog
 *[CTS]: Conformance Test Suite
-*[GAF]: Governance Action Framework
+*[GAF]: Open Governance Framework
 *[GUID]: Globally Unique Identifier
 *[JDK]: Java Development Kit
 *[JRE]: Java Runtime Environment

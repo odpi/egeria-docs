@@ -16,11 +16,8 @@ This model supports the description of the business domain where the digital pro
 
 *BusinessCapabilityType* lists the broad categories of business capability.
 
-## Organization entity
 
-*Organization* represents the root of an organization. It inherits from [Team](/types/1/0115-Teams) so that the organization structure can be built underneath it using the [TeamStructure](/types/1/0115-Teams) relationship.
-
-## BusinessCapabilityTeam relationship
+## BusinessCapabilityDependency relationship
 
 
 ## DigitalSupport relationship

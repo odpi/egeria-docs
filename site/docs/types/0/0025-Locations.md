@@ -19,9 +19,9 @@ The *NestedLocation* relationship allows hierarchical groupings of locations to 
 
 The *AdjacentLocation* relationship links locations that touch one another.
 
-## AssetLocation relationship
+## KnownLocation relationship
 
-The *AssetLocation* relationship shows where an asset is located.  This may be a physical location or a cyber location.
+The *KnownLocation* relationship shows where the person or object described by the linked element is located.  This may be a physical location or a cyber location.
 
 ## Classifications
 

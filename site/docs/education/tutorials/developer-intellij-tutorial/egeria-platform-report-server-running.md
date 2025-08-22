@@ -70,7 +70,7 @@
 * **SupportedZones**: [quarantine, trash-can, data-lake]
 * **PublishZones**: [data-lake, personal-files]
 * **DefaultZones**: [quarantine]
-##### Service: Governance Action Framework Services
+##### Service: Open Governance Framework Services
 * **Service Status**: Starting
 ##### Service: Open Metadata Repository Services (OMRS)
 * **Service Status**: Running

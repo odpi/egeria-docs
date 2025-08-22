@@ -8,7 +8,7 @@ For example, it may check that a new asset has an owner assigned, is set up with
 The verification governance action services publishes [guards](/concepts/guard) to report on any errors it finds.  It may also create [incident reports](/concepts/incident-report) to coordinate actions to correct any errors.
 The guards returned from the verification governance action service can be used to trigger other governance services as part of a [governance action process](/concepts/governance-action-process).
 
-![Function of the verification governance action service](/frameworks/gaf/verification-governance-action-service.svg)
+![Function of the verification governance action service](/frameworks/ogf/verification-governance-action-service.svg)
 
 
 

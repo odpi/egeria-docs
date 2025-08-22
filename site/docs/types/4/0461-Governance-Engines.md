@@ -13,9 +13,9 @@ A [governance engine](/concepts/governance-engine) is a [software capability](/t
 
 Open metadata recognizes three types of governance engine:
 
-* *GovernanceActionEngine* - [Governance action engines and services](/concepts/governance-action-engine) support the active governance of metadata and the resources they represent.  There are different types of governance action engines/services that are defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
+* *GovernanceActionEngine* - [Governance action engines and services](/concepts/governance-action-engine) support the active governance of metadata and the resources they represent.  There are different types of governance action engines/services that are defined by the [Open Governance Framework (OGF)](/frameworks/ogf/overview).
 * *RepositoryGovernanceEngine* - [Repository governance engines and services](/concepts/repository-governance-engine) support the maintenance of repository level concerns, such as monitoring audit logs and maintaining [open metadata archives](/concepts/open-metadata-archive) that are defined in the [Open Metadata Repository Services (OMRS)](/services/omrs).
-* *SurveyActionEngine* - [Survey action engines and services](/concepts/survey-action-engine) support the analysis of [digital resources](/concepts/digital-resource).  The results of this analysis are stored in a [survey report](/types/6/0603-Survey-Reports) chained off of the corresponding [Asset](/types/0/0010-Base-Model) metadata element. The interfaces for surveys are found in the  [Survey Action Framework (SAFF)](/frameworks/saf/overview).  
+* *SurveyActionEngine* - [Survey action engines and services](/concepts/survey-action-engine) support the analysis of [digital resources](/concepts/digital-resource).  The results of this analysis are stored in a [survey report](/types/6/0603-Survey-Reports) chained off of the corresponding [Asset](/types/0/0010-Base-Model) metadata element. The interfaces for surveys are found in the  [Open Survey Framework (OSF)](/frameworks/osf/overview).  
 
 ## SupportedGovernanceService relationship
 

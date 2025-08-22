@@ -12,7 +12,7 @@ A *survey report* contains one or more sets of related properties that a [survey
 
 The survey report is attached to the [asset](/concepts/asset) for the [digital resource](/concepts/digital-resource) that was analysed.  Over time, the survey reports show how the digital resource's contents are changing.
 
-![Asset with survey reports](/frameworks/saf/asset-to-survey-reports.svg)
+![Asset with survey reports](/frameworks/osf/asset-to-survey-reports.svg)
 
 The survey report is created in the open metadata repository by the [Survey Action OMES](/services/omes/survey-action/overview) when it creates an new survey action service instance. The survey action service can retrieve information about the survey report through the [survey context](/guides/developer/survey-action-services/overview).
 

@@ -9,7 +9,7 @@
 
 A governance action service is passed a context as it is started. This provides access to the [request type and associated request parameters (name-value pairs)](/concepts/governance-request-type) used to invoke the governance action service, along with its [action targets](/concepts/action-target).  There is also a client to access open metadata through the Governance Server OMAS.
 
-![Structure of the governance context](/frameworks/gaf/governance-action-service-with-context.svg)
+![Structure of the governance context](/frameworks/ogf/governance-action-service-with-context.svg)
 
 The methods of the context are colour-coded.  The methods shown in white are available for all types of governance action services.  These are divided into three groups:
 

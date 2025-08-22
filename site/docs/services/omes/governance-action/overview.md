@@ -14,7 +14,7 @@ The Governance Action Open Metadata Engine Service (OMES) runs in an [Engine Hos
 
 ![Governance Action OMES](/services/omes/engine-services-governance-action-server-side.svg)
 
-It provides access to the open metadata ecosystem for [governance action services](/guides/developer/governance-action-services/overview). These are pluggable connectors that manage governance of open metadata. Their interfaces are defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview) and supported by the Governance Action OMES.
+It provides access to the open metadata ecosystem for [governance action services](/guides/developer/governance-action-services/overview). These are pluggable connectors that manage governance of open metadata. Their interfaces are defined by the [Open Governance Framework (OGF)](/frameworks/ogf/overview) and supported by the Governance Action OMES.
 
 The governance Action OMES also provides an API to allow a third party tool to validate that a specific governance action service implementation will load in the engine host server, and it returns the usage information encoded in the service's implementation.
 

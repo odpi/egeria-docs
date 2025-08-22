@@ -9,7 +9,7 @@ The *watchdog governance action service* monitors changes in the metadata and in
 
 One example of a watchdog governance action service is to monitor for new [assets](/concepts/asset). Another example is to monitor the addition of open discovery reports and take action on their content.
 
-![Function of the watchdog governance action service](/frameworks/gaf/watchdog-governance-action-service.svg)
+![Function of the watchdog governance action service](/frameworks/ogf/watchdog-governance-action-service.svg)
 
 
 

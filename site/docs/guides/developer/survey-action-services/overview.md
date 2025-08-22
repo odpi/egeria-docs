@@ -17,7 +17,7 @@ The interfaces and base classes of the connector provider and survey action serv
 
 * Open Connector Framework
 * Survey Action Framework
-* Governance Action Framework for access to open metadata definitions.
+* Open Metadata Framework for access to open metadata definitions.
 * Audit Log Framework for audit logging and exceptions.
 * The digital resource connector(s) used to gain access to the digital resource being analysed.
 
@@ -38,12 +38,17 @@ The interfaces and base classes of the connector provider and survey action serv
     
             <dependency>
                 <groupId>org.odpi.egeria</groupId>
-                <artifactId>survey-action-framework</artifactId>
+                <artifactId>open-survey-framework</artifactId>
             </dependency>
 
             <dependency>
                 <groupId>org.odpi.egeria</groupId>
-                <artifactId>governance-action-framework</artifactId>
+                <artifactId>open-metadata-framework</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>org.odpi.egeria</groupId>
+                <artifactId>open-governance-framework</artifactId>
             </dependency>
     
             <dependency>
@@ -60,8 +65,9 @@ The interfaces and base classes of the connector provider and survey action serv
     dependencies {
         implementation project(':open-metadata-implementation:frameworks:audit-log-framework')
         implementation project(':open-metadata-implementation:frameworks:open-connector-framework')
-        implementation project(':open-metadata-implementation:frameworks:survey-action-framework')
-        implementation project(':open-metadata-implementation:frameworks:governance-action-framework')
+        implementation project(':open-metadata-implementation:frameworks:open-survey-framework')
+        implementation project(':open-metadata-implementation:frameworks:open-metadata-framework')
+        implementation project(':open-metadata-implementation:frameworks:open-governance-framework')
         implementation project('...data store connector...')  
     }
     ```
@@ -194,7 +200,7 @@ There are two methods that you need to implement:
 
 The survey context provides the *survey action service* with access to information about the survey request along with the open metadata repository interfaces.
 
-![Structure of the survey context](/frameworks/saf/survey-context.svg)
+![Structure of the survey context](/frameworks/osf/survey-context.svg)
 
 #### Survey Asset Catalog Store
 
@@ -206,7 +212,7 @@ The survey annotation store provides a survey action service with access to the 
 
 #### Open Metadata Store
 
-Provides access to all types of open metadata through the Governance Action Framework (GAF).
+Provides access to all types of open metadata through the Open Metadata Framework (OMF).
 
 ## Example implementations
 

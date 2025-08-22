@@ -18,17 +18,10 @@ Security access control decisions need to be made with very little latency becau
 
 ![UML](0423-Security-Definitions.svg)
 
-## SecurityAccessControl entity
-
-The *SecurityAccessControl* entity is a [TechnicalControl](/types/4/0420-Governance-Controls) that defines the access control lists that a user must belong to if he/she/it is to be given permission to execute a specific command.
 
 ## AssociatedGroup relationship
 
-The *AssociatedGroup* relationship defines which *SecurityGroup* to use for each type of operation defined by the *SecurityAccessControl* entity.  The `operationName` attribute defines the name of the operation being mapped.
-
-## SecurityGroup entity
-
-The *SecurityGroup* represents a group of [actors](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.  This is the distinguished name of the group where authorized users are listed.
+The *AssociatedGroup* relationship defines which [*SecurityGroup*](/types/4/0430-Technical-Controls) to use for each type of operation defined by the *SecurityAccessControl* entity.  The `operationName` attribute defines the name of the operation being mapped.
 
 ## SecurityGroupMembership classification
 

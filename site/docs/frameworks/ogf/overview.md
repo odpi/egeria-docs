@@ -3,9 +3,9 @@
 
 --8<-- "snippets/content-status/stable.md"
 
-# Governance Action Framework (GAF)
+# Open Governance Framework (OGF)
   
-The *governance action framework (GAF)* provides the interfaces and base implementations for [governance action services](#governance-action-services) that take action to:
+The *governance action framework (OGF)* provides the interfaces and base implementations for [governance action services](#governance-action-services) that take action to:
 
 - detect, report and eventually correct a situation that is harmful to the data or the organization in some way or 
 - to enhance the metadata to improve its use.
@@ -22,7 +22,7 @@ A *governance action service* is a specialized [connector](/concepts/connector) 
 
 There are five types of governance action services, each of which supports a specialist governance activity (see subsections).
 
-These are often used in conjunction with the [survey action services](/concepts/survey-action-service) from the [Survey Action Framework (SAF)](/frameworks/saf/overview). Collectively they are called the *governance services* and they can be linked together into [governance action processes](/concepts/governance-action-process).
+These are often used in conjunction with the [survey action services](/concepts/survey-action-service) from the [Survey Action Framework (SAF)](/frameworks/osf/overview). Collectively they are called the *governance services* and they can be linked together into [governance action processes](/concepts/governance-action-process).
 
 Some governance action services invoke functions in external engines that are working with data and related assets. The GAF offers embeddable functions and APIs to simplify the implementation of governance action services, and their integration into the broader digital landscape, whilst being resilient and with good performance.
 

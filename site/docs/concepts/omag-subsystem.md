@@ -36,7 +36,7 @@ Fixed services that are always present in the platform:
 
 - [Connected Asset Services](/services/ocf-metadata-management) for supporting the server-side REST API behind the `ConnectedAssetProperties` interface of an [Open Connector Framework (OCF)](/frameworks/ocf/overview) connector.
 
-- [Open Metadata Store Services](/services/gaf-metadata-management) for supporting the server-side REST API behind the `OpenMetadataStore` interface of the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
+- [Open Metadata Store Services](/services/gaf-metadata-management) for supporting the server-side REST API behind the `OpenMetadataStore` interface of the [Open Metadata Framework (OMF)](/frameworks/omf/overview).
 
 
 ## Registered services

@@ -40,7 +40,7 @@ Each discovery request type is associated with a discovery service. When a disco
 
 ## Implementation in Egeria
 
-Egeria's discovery sevices are implemented using the [Survey Action Framework (SAF)](/frameworks/saf/overview)
+Egeria's discovery sevices are implemented using the [Survey Action Framework (SAF)](/frameworks/osf/overview)
 
 It also supports event notifications through
 the [Discovery Engine OMAS's out topic](/concepts/out-topic).

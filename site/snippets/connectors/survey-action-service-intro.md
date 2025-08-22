@@ -5,7 +5,7 @@ An *survey action service* is a component that performs analysis of the contents
 
 Each time a survey action service runs, it creates a new [survey report](/concepts/survey-report) linked off of the digital resource's [Asset](/concepts/asset) metadata element that records the results of the analysis.  
 
-![Asset with survey reports](/frameworks/saf/asset-to-survey-reports.svg)
+![Asset with survey reports](/frameworks/osf/asset-to-survey-reports.svg)
 > Each time an survey action service runs to analyse a digital resource, a new survey report is created and attached to the resource's asset.  If the survey action service is run regularly, it is possible to track how the contents are changing over time.
 
 The *survey report* contains one or more sets of related properties that the survey action service has discovered about the resource, its metadata, structure and/or content.  These are stored in a set of [*annotations*](/concepts/survey-report/#annotations) linked off of the survey report.

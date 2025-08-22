@@ -20,11 +20,11 @@ The *ContactMethodType* enum defines some common communication mechanisms.
 
 ## ContactDetails entity
  
-* The *ContactDetails* entity is a [Referenceable](/types/0/0010-Base-Model) that describes the mechanisms to contact an [actor](/types/1/0110-Actors) - this is typically linked to actor profiles for people and teams.
+The *ContactDetails* entity is a [Referenceable](/types/0/0010-Base-Model) that describes the mechanisms to contact an [actor](/types/1/0110-Actors) - this is typically linked to actor profiles for people and teams.
 
 - *contactMethodType* - the type of communication method.  If OTHER is used, the *contactType* can be used to describe another mechanism.
 
-- contactType* - an alternative way to describe the communication mechanism.
+- *contactType* - an alternative way to describe the communication mechanism.
   
 - *contactMethodService* - the type of service to call to invoke this contact method.
 

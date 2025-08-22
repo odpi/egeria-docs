@@ -7,7 +7,7 @@ A governance action service runs in the [Governance Action Open Metadata Engine 
 
 ![Governance Action Service](/connectors/governance-action/governance-action-service.svg)
 
-Governance action services implement interfaces defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview). The GAF offers embeddable functions and APIs to simplify the implementation of governance action services, and their integration into the broader digital landscape, whilst being resilient and with good performance.
+Governance action services implement interfaces defined by the [Open Governance Framework (OGF)](/frameworks/ogf/overview). The GAF offers embeddable functions and APIs to simplify the implementation of governance action services, and their integration into the broader digital landscape, whilst being resilient and with good performance.
 
 It is possible to implement complex governance actions in a single governance action service.  Alternatively there are five specialized types of governance action services that help you to break down your governance function into reusable components that can be choreographed by [governance action processes](/concepts/governance-action-process) to maximise the flexibility of your governance automation.  When a governance action service completes, it produces [guards](/concepts/guard) that define what needs to be done next along with a list of [action targets](/concepts/action-target).
   

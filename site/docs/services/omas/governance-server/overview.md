@@ -12,8 +12,8 @@ The *Governance Server OMAS* supports the implementation of a [governance server
 A governance engine is a collection of related *[governance services](/concepts/governance-service)* that provide pluggable governance functions.  The governance services are implemented as 
 specialist [connectors](/frameworks/ocf/overview) that are defined by:
 
-* [Survey Action Framework (SAF)](/frameworks/saf/overview) for Survey Action Services that analyse the content of resources in the digital landscape.
-* [Governance Action Framework (GAF)](/frameworks/gaf/overview) of Governance Action Services that monitor, assess and maintain metadata.
+* [Survey Action Framework (SAF)](/frameworks/osf/overview) for Survey Action Services that analyse the content of resources in the digital landscape.
+* [Open Governance Framework (OGF)](/frameworks/ogf/overview) of Governance Action Services that monitor, assess and maintain metadata.
 
 The governance services run in the [Engine Host OMAG Server](/concepts/engine-host) supported by the [Open Metadata Engine Services (OMES)](/services/omes).  They are triggered via [governance actions](/concepts/governane-action).
 

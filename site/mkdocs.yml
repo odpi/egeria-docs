@@ -405,7 +405,6 @@ nav:
           - 3. Glossary:
               - Area 3 Glossary: types/3/index.md
               - Glossary: types/3/0310-Glossary.md
-              - Glossary Categories: types/3/0320-Category-Hierarchy.md
               - Glossary Terms: types/3/0330-Terms.md
               - Dictionary: types/3/0340-Dictionary.md
               - Related Terms: types/3/0350-Related-Terms.md
@@ -431,6 +430,7 @@ nav:
               - Organizational Controls: types/4/0440-Organizational-Controls.md
               - Governance Roles: types/4/0445-Governance-Roles.md
               - Governance Rollout: types/4/0450-Governance-Rollout.md
+              - Notifications: types/4/0451-Notifications.md
               - Exception Management: types/4/0455-Exception-Management.md
               - Connector Activity Reports: types/4/0457-Connector-Activity-Reports.md
               - Governance Execution Points: types/4/0460-Governance-Execution-Points.md
@@ -620,7 +620,7 @@ nav:
           - Open Metadata (OMF): frameworks/omf/overview.md
           - Open Connectors (OCF): frameworks/ocf/overview.md
           - Open Integration (OIF): frameworks/oif/overview.md
-          - Governance Actions (GAF): frameworks/gaf/overview.md
+          - Governance Actions (OGF): frameworks/ogf/overview.md
           - Survey Actions (SAF): frameworks/saf/overview.md
       - Conformance Test Suite:
           - CTS Overview: guides/cts/overview.md

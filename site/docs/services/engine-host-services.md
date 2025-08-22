@@ -30,7 +30,7 @@ The engine host services shown at the top of the diagram are responsible for:
 
 ??? education "Further information"
 
-    There is more of an overview of open governance in the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
+    There is more of an overview of open governance in the [Open Governance Framework (OGF)](/frameworks/ogf/overview).
 
     Instructions for [configuring an Engine Host OMAG Server](/guides/admin/server/configuring-an-engine-host) are found in the [Administration Guide](/guides/admin).
 

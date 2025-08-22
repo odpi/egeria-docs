@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-The open metadata store interfaces are part of the Governance Action Framework (GAF) and provide a comprehensive interface for working with all types of metadata, subject to the user's (and this OMAS's) security permissions. The interface supports search, maintenance of metadata elements, classifications and relationships plus the ability to raise incident reports and todos along with the ability to work with metadata valid values and translations.
+The open metadata store interfaces are part of the Open Governance Framework (OGF) and provide a comprehensive interface for working with all types of metadata, subject to the user's (and this OMAS's) security permissions. The interface supports search, maintenance of metadata elements, classifications and relationships plus the ability to raise incident reports and todos along with the ability to work with metadata valid values and translations.
 
 
 | Java Interface                                                                                                                          | Description                                                                                                                                                                                                                                                                                           |

@@ -14,7 +14,7 @@ specialist [connectors](/frameworks/ocf/overview) that are defined by:
 
  * [Open Discovery Framework (ODF)](/frameworks/odf/overview) for Open Discovery Services
    that analyse the content of resources in the digital landscape.
- * [Governance Action Framework (GAF)](/frameworks/gaf/overview) of Governance Action Services
+ * [Open Governance Framework (OGF)](/frameworks/ogf/overview) of Governance Action Services
    that monitor, assess and maintain metadata.
 
 The governance services run in the [Engine Host OMAG Server](/concepts/engine-host) supported by the [Open Metadata Engine Services (OMES)](/services/omes).  They are triggered via [governance actions](/concepts/governane-action).
@@ -29,7 +29,7 @@ The Governance Engine OMAS has the following capabilities to support governance 
 | [GovernanceActionProcessInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceActionProcessInterface.html) | Creating the definitions for [governance action processes](/concepts/governance-action-process) that control the sequencing of [engine actions](/concepts/engine-action.                                         |
 | [GovernanceProcessingInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceProcessingInterface.html)       | Providing APIs to initiate [engine actions](/concepts/engine-action) and [governance action processes](/concepts/governance-action-process) explicitly.                                                          |
 | [GovernanceEngineEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceEngineEventListener.html)       | Notification of new [engine actions](/concepts/engine-action) to the Engine Host OMAG Servers that then invoke the appropriate governance services to action them.                                               |
-| [MetadataElementInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/commonservices/gaf/api/MetadataElementInterface.html)                              | Supporting the metadata requirements for many of the [engine services](/services/omes).                                                                                                                          |
+| [MetadataElementInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/commonservices/ogf/api/MetadataElementInterface.html)                              | Supporting the metadata requirements for many of the [engine services](/services/omes).                                                                                                                          |
 | [GovernanceEngineConfiguration](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/GovernanceEngineConfiguration.html)       | Providing APIs to query the status of the governance capabilities implemented through the governance engines.                                                                                                    |
 | [SpecialGovernanceActionInterface](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceengine/api/SpecialGovernanceActionInterface.html) | Providing specialized governance remediation APIs such as linking duplicates.                                                                                                                                    |
 

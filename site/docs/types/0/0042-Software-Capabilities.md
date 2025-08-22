@@ -52,8 +52,9 @@ These are the subtypes of software server capabilities defined in the open metad
 - [*EnterpriseAccessLayer*](/types/0/0057-Software-Services/#enterpriseaccesslayer) - Repository services for the Open Metadata Access Services (OMAS) supporting federated queries and aggregated events from the connected cohorts.
 - [*CohortMember*](/types/0/0057-Software-Services/#cohortmember) - A capability enabling a server to access an open metadata repository cohort.
 - [*GovernanceEngine*](/types/4/0461-Governance-Engines/#governanceengine) - A collection of related governance services of the same type.
-    - [*GovernanceActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
-    - [*SurveyActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Discovery Framework (ODF)](/frameworks/odf/overview).
+    - [*GovernanceActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Governance Framework (OGF)](/frameworks/ogf/overview).
+    - [*SurveyActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Survey Framework (OSF)](/frameworks/osf/overview).
+    - [*WatchdogActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Watchdog Framework (OWF)](/frameworks/owf/overview).
     - [*RepositoryGovernanceEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting maintenance of [Open Metadata Archives](/concepts/open-metadata-archive).
 
 In addition, it is possible to augment software server capabilities with the following classifications:

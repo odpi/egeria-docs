@@ -24,4 +24,26 @@ The *ServiceLevelObjective* entity defines the performance, availability and qua
 
 The *GovernanceAction* entity defines an executable action, or sequence of actions, to support a governance requirement.
 
+## GovernanceMetric entity
+
+An important aspect of the governance program is the ability to measure its effectiveness and identify the activities that are delivering the highest value, or operating with the greatest efficiency etc.
+
+A value (or collection of values) that should be captured to demonstrate the effectiveness of an aspect of the governance program is documented using the *GovernanceMetric* entity.
+
+The associated measurements for the metric an either be stored in a data source such as a database or file, particularly if it is a lot of data or captured in a classification attached to the element that the data values describe.
+
+## NotificationType entity
+
+The notification type describes a situation or event.  It is [linked](/types/4/0451-Notifications) to resources that need to be monitored in order to detect the situation and subscribers that need to know with the event/situation arises.
+
+## SecurityAccessControl entity
+
+The *SecurityAccessControl* entity is a TechnicalControl that defines the access control lists that a user must belong to if he/she/it is to be given permission to execute a specific command.
+
+## SecurityGroup entity
+
+The *SecurityGroup* represents a group of [actors](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.  This is the distinguished name of the group where authorized users are listed.
+
+
+
 --8<-- "snippets/abbr.md"

@@ -10,7 +10,7 @@ hide:
 
 # Open Governance Service
 
-The Open Governance Service is defined by the [Governance Action Framework (GAF)](/frameworks/gaf/overview) along with services that support the [Open Metadata Access Services (OMASs)](/services/omas).  It supports the setting up of governance actions such as [governance action processes](/concepts/governance-action-process) and [governance action types](/concepts/governance-action-type), and the initiation of [engine actions](/concepts/engine-action) either directly or via a governance action process or governance action type.
+The Open Governance Service is defined by the [Open Governance Framework (OGF)](/frameworks/ogf/overview) along with services that support the [Open Metadata Access Services (OMASs)](/services/omas).  It supports the setting up of governance actions such as [governance action processes](/concepts/governance-action-process) and [governance action types](/concepts/governance-action-type), and the initiation of [engine actions](/concepts/engine-action) either directly or via a governance action process or governance action type.
 
 
 --8<-- "snippets/abbr.md"

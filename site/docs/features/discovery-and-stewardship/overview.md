@@ -35,7 +35,7 @@ The survey report structures the annotations in two ways:
 
 The annotations for the data fields are linked off of the schema attributes created by [schema extraction](#schema-extraction).
 
-![Survey report structure](/frameworks/saf/survey-report-structure.svg)
+![Survey report structure](/frameworks/osf/survey-report-structure.svg)
 
 ## Survey actions
 
@@ -55,7 +55,7 @@ Profiling analysis looks at the data values in the resource and summarizes their
 * [Resource Profile Log Annotation](/types/6/0620-Resource-Profiling) - Capture the named of the log files where profile characteristics are captured.  This is used when the profile results are too large to store in open metadata.
 * [Fingerprint Annotation](/types/6/0620-Resource-Profiling) - Capture the characteristics of the resource and express it as a single value.
 
-![Resource profiling](/frameworks/saf/survey-action-resource-profiling.svg)
+![Resource profiling](/frameworks/osf/survey-action-resource-profiling.svg)
 
 For structured data, resource profiling needs to run after schema extraction to allow the resource profiling annotations that refer to a specific data field to be linked from the appropriate data field entity.
 
@@ -63,7 +63,7 @@ For structured data, resource profiling needs to run after schema extraction to 
 
 Data class discovery captures the analysis on how close a data field matches the specification defined in a [data class](/concepts/data-class).
 
-![Data class discovery](/frameworks/saf/survey-action-data-class-discovery.svg)
+![Data class discovery](/frameworks/osf/survey-action-data-class-discovery.svg)
 
 The recommendation for a specific data class are stored in a [data class annotation](/types/6/0625-Data-Class-Discovery) linked off of the appropriate data field.  Data class discovery needs to run after schema extraction.  It often builds on the information provided by resource profiling.
 
@@ -73,7 +73,7 @@ Subsequent stewardship - either automated or with human assistance - can confirm
 
 Semantic discovery is attempting to define the meaning of the data values in the asset. The result is a recommended glossary term stored as a [semantic annotation](/types/6/0630-Semantic-Discovery).
 
-![Semantic discovery](/frameworks/saf/survey-action-semantic-discovery.svg)
+![Semantic discovery](/frameworks/osf/survey-action-semantic-discovery.svg)
 
 These annotations are the metadata discovery equivalent of the *Informal Tag* shown in [0150 - Feedback](/types/1/0150-feedback) in Area 1.  It typically takes confirmation by a subject-matter expert to convert this into a [Semantic Assignment](/types/3/0370-Semantic-Assignment).  Semantic discovery needs to run after schema extraction.  It often builds on the information provided by data profiling and data class discovery.
 
@@ -82,13 +82,13 @@ These annotations are the metadata discovery equivalent of the *Informal Tag* sh
 Classification discovery adds recommendations for new classifications that should either be added to the asset, or to a schema attribute in the asset.  It uses the [classification annotation](/types/6/0635-Classification-Discovery) to describe the classification and its properties.
 If the classification is for the asset, the classification annotation is linked off of the discovery analysis report.  If it is for a specific schema attribute, it is linked off of the corresponding data field.
 
-![Classification discovery](/frameworks/saf/survey-action-classification-discovery.svg)
+![Classification discovery](/frameworks/osf/survey-action-classification-discovery.svg)
 
 ### Calculating quality scores
 
 Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.   This type of annotation is often used within a [data quality program](/features/data-quality/overview) to provide assessments of the data for different purposes.
 
-![Quality Scores](/frameworks/saf/survey-action-quality-scores.svg)
+![Quality Scores](/frameworks/osf/survey-action-quality-scores.svg)
 
 ### Relationship discovery
 
@@ -96,19 +96,19 @@ Relationship discovery identifies relationships between different resources (or 
 
 It is possible to create the relationship as a relationship annotation or attach a relationship advice to the discovery analysis report.
 
-![Relationship discovery](/frameworks/saf/survey-action-relationship-discovery.svg)
+![Relationship discovery](/frameworks/osf/survey-action-relationship-discovery.svg)
 
 ### Capturing measurements
 
 The measure annotations capture a snapshot of the physical dimensions and activity levels at a particular moment in time.  For example, it may calculate the size of the resource or the number of users accessing it.
 
-![Data source measurements](/frameworks/saf/survey-action-data-source-measurement.svg)
+![Data source measurements](/frameworks/osf/survey-action-data-source-measurement.svg)
 
 ### Requesting stewardship action
 
 A RequestForAction entity (RfA) is used when a survey action service performs a test on the data (such as a [quality rule](/features/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.
 
-![Request for action](/frameworks/saf/survey-action-request-for-action.svg)
+![Request for action](/frameworks/osf/survey-action-request-for-action.svg)
 
 The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) is designed to respond to the requests for actions (RfAs).
 

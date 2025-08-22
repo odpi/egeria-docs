@@ -10,7 +10,7 @@ hide:
 
 # Survey Action Open Metadata Engine Service (OMES)
 
-The Survey Action OMES provides support for [survey action engines](/concepts/survey-action-engine) that are part of the [Survey Action Framework (SAF)](/frameworks/saf/overview).
+The Survey Action OMES provides support for [survey action engines](/concepts/survey-action-engine) that are part of the [Survey Action Framework (SAF)](/frameworks/osf/overview).
 
 ![Survey Action OMES](/services/omes/engine-services-survey-action-server-side.svg)
 

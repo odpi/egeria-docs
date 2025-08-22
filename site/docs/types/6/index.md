@@ -35,7 +35,7 @@ In addition, there are types for the manual design of data schemas as part of a 
 
 ![UML Packages](area-6-discovery-overview.svg)
 
-Egeria's [Survey Action Framework (SAF)](/frameworks/saf/overview) supports the development and execution of [survey action services](/concepts/survey-action-services).  These services run in the [Survey Action OMES](/services/omes/survey-action/overview) hosted in an [Engine Host](/concepts/engine-host).  Survey action services use connectors from the [Open Connector Framework (OCF)](/frameworks/ocf/overview) to connect to the data assets and access the known metadata about them.
+Egeria's [Survey Action Framework (SAF)](/frameworks/osf/overview) supports the development and execution of [survey action services](/concepts/survey-action-services).  These services run in the [Survey Action OMES](/services/omes/survey-action/overview) hosted in an [Engine Host](/concepts/engine-host).  Survey action services use connectors from the [Open Connector Framework (OCF)](/frameworks/ocf/overview) to connect to the data assets and access the known metadata about them.
 
 
 --8<-- "snippets/abbr.md"

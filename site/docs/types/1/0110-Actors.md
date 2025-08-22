@@ -11,37 +11,13 @@
  
 An `ActorProfile` describes an entity to store and link information about an actor in open metadata.  It inherits from [`Referenceable`](/types/0/0010-Base-Model) so it has a unique name.
 
-- `name` - the display name of the profile - such as the preferred name of a person, the commonly used name for a team or a process.  This name is not necessarily unique.
-
-- `description` - the description of the actor that this profile represents.
-
 The subtypes of *ActorProfile* add further information about actors:
 
 - [Person](/types/1/0112-People) for profiles describing individuals.
 - [Team](/types/1/0115-Teams) for profiles describing teams.
 - [ITProfile](/types/1/0117-IT-Profiles) for profiles describing specific IT processes and systems.
 
-## ProfileLocation relationship
 
-The `ProfileLocation` relationship identifies an association between an ActorProfile and a [Location](/types/0/0025-Locations), such as a person's primary work location.  The `associationType` property records the purpose of the association.  Its value can be defined in a [ValidValueSet](/types/5/0545-Reference-Data).
-
-## ContactDetails entity
- 
-`ContactDetails` describe the mechanisms to contact an actor - this is typically linked to actor profiles for people and teams.
-
-- `contactMethodType` - the type of communication method:
-
-    * EMAIL - email
-    * PHONE - landline or mobile
-    * CHAT - instant messaging
-    * PROFILE - add message to actor profile
-    * ACCOUNT - via an application account
-    * OTHER - another type of contact method
-  
-- `contactMethodService` - the type of service to call to invoke this contact method.
-
-- `contactMethodValue` - the address or account name or number to use for this contact method.
- 
 ## UserIdentity entity
 
 Most metadata repositories are run in a secure mode requiring incoming requests to include the requester’s security credentials. Therefore, we have an identifier for each unique logged on security identity (aka userId). This identity is recorded in the header of the metadata elements when they are created or updated. 

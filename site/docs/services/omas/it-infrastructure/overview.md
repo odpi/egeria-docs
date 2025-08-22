@@ -132,7 +132,7 @@ contains the Software Capabilities defined in the open metadata types.
 * *Enterprise Access Layer* - Repository services for the Open Metadata Access Services (OMAS) supporting federated queries and aggregated events from the connected cohorts.
 * *Cohort Member* - A capability enabling a server to access an open metadata repository cohort.
 * *Governance Engine* - A collection of related governance services of the same type.
-    * *Governance Action Engine* - A collection of related governance services supporting the Governance Action Framework (GAF).
+    * *Governance Action Engine* - A collection of related governance services supporting the Open Governance Framework (OGF).
     * *Open Discovery Engine* - A collection of related governance services supporting the Open Discovery Framework (ODF).
 
 In addition it is possible to augment software capabilities with classifications.

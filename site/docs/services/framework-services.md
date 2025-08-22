@@ -8,6 +8,6 @@ The framework services provide shared metadata management modules for the server
 
 * **[OCF Metadata Management](/services/ocf-metadata-management)** - Supports the Connected Asset Services for the [Open Connector Framework (OCF)](/frameworks/ocf/overview).
 * **[OIF Metadata Management](/services/oif-metadata-management)** - Supports the Open Integration Service for the [Open Integration Framework (OIF)](/frameworks/oif/overview).
-* **[GAF Metadata Management](/services/gaf-metadata-management)** - Supports the Open Metadata Store Service, Open Governance Service and Governance Configuration Service for the [Governance Action Framework (GAF)](/frameworks/gaf/overview).
+* **[GAF Metadata Management](/services/gaf-metadata-management)** - Supports the Open Metadata Store Service, Open Governance Service and Governance Configuration Service for the [Open Governance Framework (OGF)](/frameworks/ogf/overview).
 
 --8<-- "snippets/abbr.md"

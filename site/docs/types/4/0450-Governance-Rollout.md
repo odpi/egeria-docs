@@ -20,8 +20,7 @@ The definition of their expected behaviour or content can be captured using the 
 
 ## GovernanceMeasurements classification
 
-The measurements that support the assessment of a particular resource
-can be gathered and stored in a *GovernanceMeasurements* classification attached to its Asset.
+The measurements that support the assessment of a particular resource can be gathered and stored in a *GovernanceMeasurements* classification attached to its Asset.
 
 ## GovernanceResults relationship
 

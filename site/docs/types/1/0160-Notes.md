@@ -1,12 +1,22 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# 0160 Notes
+# 0160 Note Logs
 
-*Notes* provide additional information about a [Referenceable](/types/0/0010-Base-Model/#referenceable) object. They are used by resource owners and stewards to document the current status of their resources. Engines that are performing processing on the resources may also write notes to the note log. The note log can be attached to any referenceable metadata object.
+[*Notifications*](/types/1/0135-Actions-For-People) provide additional information about a [Referenceable](/types/0/0010-Base-Model/#referenceable) object. They are used by resource owners and stewards to document the current status of their resources. Engines that are performing processing on the resources may also write notifications to the note log. The note log can be attached to any referenceable metadata object.
 
 ![UML](0160-Notes.svg)
 
-A referenceable object can have many notes linked off of it. *Notes* are used by the people with edit access to the referenceable object to provide information about its content, proposed changes and other useful information. *Notes* are also used by engines that are working on the related assets to add an informal audit trail of activity around the object.
+## NoteLog entity
+
+A *NoteLog* entity provides a collection point for notifications about a particular subject or element.
+
+## AttachedNoteLog relationship
+
+The *AttachedNoteLog* connects a note log to one or more elements that are described in the note log's entries. A referenceable object can have many note logs linked off of it.  If the note log is linked to only one referenceable, it may also be anchored to the referenceable so it is deleted with the referenceable.
+
+## AttachedNoteLogEntry relationship
+
+The *AttachedNoteLogEntry* connects a note log to a notification. A note log can have many notifications linked off of it. These notifications may, or may not be anchored to the note log.
 
 --8<-- "snippets/abbr.md"

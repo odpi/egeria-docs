@@ -1300,14 +1300,8 @@
         <mxCell id="EwORSAdkXITpuq62Y8Pl-21" value="noteLogs" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
           <mxGeometry x="715" y="350" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="XGLva8hj_AKQP4U0xSDX-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=16;" parent="EwORSAdkXITpuq62Y8Pl-1" source="EwORSAdkXITpuq62Y8Pl-24" target="EwORSAdkXITpuq62Y8Pl-15" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="EwORSAdkXITpuq62Y8Pl-24" value="«entity»&lt;br&gt;&lt;b&gt;NoteEntry&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
+        <mxCell id="EwORSAdkXITpuq62Y8Pl-24" value="«entity»&lt;br&gt;&lt;b&gt;Notification&lt;/b&gt;" style="html=1;strokeColor=#b85450;align=center;fillColor=#f8cecc;gradientColor=#FF0080;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
           <mxGeometry x="75" y="274.5" width="190" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="EwORSAdkXITpuq62Y8Pl-25" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
-          <mxGeometry x="75" y="325" width="190" height="35" as="geometry" />
         </mxCell>
         <mxCell id="EwORSAdkXITpuq62Y8Pl-28" value="noteLogSubjects" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;" parent="EwORSAdkXITpuq62Y8Pl-1" vertex="1">
           <mxGeometry x="712" y="166.5" width="110" height="20" as="geometry" />

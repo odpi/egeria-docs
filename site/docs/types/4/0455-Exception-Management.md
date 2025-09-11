@@ -24,7 +24,7 @@ or in an external data store.  The **LogAnalysis** classification enables the ca
 in metadata.  For example,
 log records that represent significant events may be catalogued as assets and
 the **LogAnalysis** classification attached to the asset.
-The results of the log analysis across many record may be rolled up into a
+The results of the log analysis across many records may be rolled up into a
 [GovernanceMeasurement](0450-Governance-Rollout.md) attached to the appropriate
 [GovernanceDefinition](0401-Governance-Definitions.md).
 

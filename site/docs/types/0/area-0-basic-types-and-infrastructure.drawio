@@ -332,7 +332,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0010-Base-Model" id="DTKpO6vc9OAdTg62scCC">
-    <mxGraphModel dx="1234" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1585" dy="959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="pT0M-4eVYAnerPmcR1z3-0" />
         <mxCell id="pT0M-4eVYAnerPmcR1z3-1" parent="pT0M-4eVYAnerPmcR1z3-0" />
@@ -452,10 +452,10 @@
           <mxGeometry x="210" y="683" width="206" height="27.25" as="geometry" />
         </mxCell>
         <mxCell id="sKiTwxs9nIoNmadSxlqZ-0" value="«enumeration»&lt;br&gt;&lt;b&gt;ActivityStatus&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="pT0M-4eVYAnerPmcR1z3-1" vertex="1">
-          <mxGeometry x="692" y="800" width="182" height="53" as="geometry" />
+          <mxGeometry x="730" y="760" width="182" height="53" as="geometry" />
         </mxCell>
-        <mxCell id="sKiTwxs9nIoNmadSxlqZ-1" value="REQUESTED = 0&lt;br&gt;APPROVED = 1&lt;br&gt;WAITING = 2&lt;br&gt;ACTIVATING = 3&lt;br&gt;IN_PROGRESS = 4&lt;div&gt;PAUSED = 5&lt;br&gt;COMPLETED = 10&lt;br&gt;INVALID = 11&lt;br&gt;IGNORED = 12&lt;br&gt;FAILED = 13&lt;br&gt;CANCELLED = 14&lt;div&gt;ABANDONED = 15&lt;br&gt;OTHER = 99&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="pT0M-4eVYAnerPmcR1z3-1" vertex="1">
-          <mxGeometry x="692" y="853" width="181" height="207" as="geometry" />
+        <mxCell id="sKiTwxs9nIoNmadSxlqZ-1" value="REQUESTED = 0&lt;br&gt;APPROVED = 1&lt;br&gt;WAITING = 2&lt;br&gt;ACTIVATING = 3&lt;br&gt;IN_PROGRESS = 4&lt;div&gt;PAUSED = 5&lt;/div&gt;&lt;div&gt;FOR_INFO = 6&lt;br&gt;COMPLETED = 10&lt;br&gt;INVALID = 11&lt;br&gt;IGNORED = 12&lt;br&gt;FAILED = 13&lt;br&gt;CANCELLED = 14&lt;div&gt;ABANDONED = 15&lt;br&gt;OTHER = 99&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="pT0M-4eVYAnerPmcR1z3-1" vertex="1">
+          <mxGeometry x="730" y="813" width="181" height="227" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

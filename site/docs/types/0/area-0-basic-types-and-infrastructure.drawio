@@ -1480,7 +1480,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0019-More-Information" id="L_ZK9CwTQRs7Ys8NB7tM">
-    <mxGraphModel dx="1234" dy="827" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1106" dy="837" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="C3myF5QpWyiuHsT5GhCU-0" />
         <mxCell id="C3myF5QpWyiuHsT5GhCU-1" parent="C3myF5QpWyiuHsT5GhCU-0" />
@@ -1550,8 +1550,8 @@
         <mxCell id="9qstLIZU3DJaDiaI66wM-9" value="«relationship»&lt;br&gt;&lt;b&gt;ResourceList&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="C3myF5QpWyiuHsT5GhCU-1" vertex="1">
           <mxGeometry x="517" y="247" width="278" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="9qstLIZU3DJaDiaI66wM-10" value="resourceUse : string&lt;br&gt;resourceUseDescription : string&lt;br&gt;resourceUseProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;watchResource : boolean" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="C3myF5QpWyiuHsT5GhCU-1" vertex="1">
-          <mxGeometry x="517" y="298" width="278" height="84" as="geometry" />
+        <mxCell id="9qstLIZU3DJaDiaI66wM-10" value="resourceUse : string&lt;div&gt;displayName : string&lt;br&gt;description : string&lt;br&gt;additionalProperties : map&amp;lt;string, string&amp;gt;&lt;br&gt;watchResource : boolean&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="C3myF5QpWyiuHsT5GhCU-1" vertex="1">
+          <mxGeometry x="517" y="298" width="278" height="89" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

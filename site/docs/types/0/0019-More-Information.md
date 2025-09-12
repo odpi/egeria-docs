@@ -20,8 +20,9 @@ For example, the *ResourceList* relationship may link:
 The description of what the linked element is used for, and hints on how to use it are provided in the relationship properties.
 
 * *resourceUse* describes the use that the resource is designed to support.  See [Resource Use](/concepts/resource-use) for examples.
-* *resourceUseDescription* provides more description on the use of the resource.
-* *resourceUseProperties* provides the property values needed to use the resource.
+* *displayName* provides the short name of the use of the resource for use on menus and buttons.
+* *description* provides more description on the use of the resource.
+* *additionalProperties* provides the property values needed to use the resource.
 * *watchResource* indicates whether the parent entity should receive notification about changes to the supporting resource.
 
 ## MoreInformation relationship

@@ -40,11 +40,11 @@ A [referenceable](/type/0/0010-Base-Model) that describes a data field.
 
 The *ObjectIdentifier* classification indicates that a data item is typically used as a unique identifier.  It is typically attached to a data field.
 
-## DataDictionary classification
+## DataDictionary Entity
 
 Identifies that a [collection](/type/0/0021-Collections) is a [data dictionary](/concepts/data-dictionary).  This is an organized collection of defined data fields that can be used as a knowledge base of preferred data definitions for data professionals.
 
-## DataSpec classification
+## DataSpec Entity
 
 Identifies that this is a [collection](/type/0/0021-Collections) is a [data specification](/concepts/data-specification) that describes the data requirements for a project or initiative.  Its members are typically [data structures](/concepts/data-structure).
 
@@ -63,6 +63,10 @@ It is used to specify/validate the values in an asset's [schema](/concepts/schem
 ## MemberDataField relationship
 
 Represents an association between a data structure and one of its data fields.
+
+## DataDescription relationship
+
+Represents an association between a referenceable, such as a digital product, and a collection of data fields that describes some data.
 
 ## DataStructureDefinition relationship
 

@@ -26,6 +26,14 @@ The *ValidValueDefinition* can be used to represent a single code value along wi
 
 ![Valid Value Definition](/features/reference-data-management/valid-value-definition.svg)
 
+### ReferenceDataValue
+
+The *ReferenceDataValue* entity is a type of valid value definition that represents an external code value (or set of external code values).  It is the entity type used by [Reference Data OMVS](/services/omvs/reference-data/overview).
+
+### ValidMetadataValue
+
+The *ValidMetadataValue* entity is a type of valid value definition that represents a valid value (or set of valid values) for an open metadata property.  It is the entity type used by [Valid Metadata OMVS](/services/omvs/valid-metadata/overview).
+
 
 ## ValidValueMember relationship
 

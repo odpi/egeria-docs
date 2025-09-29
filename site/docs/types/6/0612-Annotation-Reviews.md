@@ -17,13 +17,8 @@ or related metadata.
 
 ## AnnotationReview entity
 
-The *AnnotationReview* entity records how the discovered annotations
-have been actioned in the metadata server and the steward that
-approved it.
+The *AnnotationReview* entity is a [Review](/types/1/0135-Actions-For-People) entity that records a review of the suitability/quality of the annotations linked as [ActionTargets](/types/0/0013-Actions).
 
-## AnnotationReviewLink relationship
-
-The *AnnotationReviewLink* relationship links an annotation to its review.
 
 ## AnnotationStatus enumeration
 

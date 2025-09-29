@@ -468,8 +468,6 @@ nav:
               - Instance Metadata: types/5/0550-Instance-Metadata.md
               - Design Model Elements: types/5/0565-Design-Model-Elements.md
               - Design Model Organization: types/5/0566-Design-Model-Organization.md
-              - Design Model Scoping: types/5/0568-Design-Model-Scoping.md
-              - Design Model Implementation: types/5/0569-Design-Model-Implementation.md
               - Metamodels: types/5/0570-Metamodels.md
               - Concept Models: types/5/0571-Concept-Models.md
               - Data Dictionaries: types/5/0580-Data-Dictionaries.md

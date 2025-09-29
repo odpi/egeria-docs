@@ -65,8 +65,6 @@ The next set of models describe the content of different types of data models
 
 * **[0565 Design Model Elements](0565-Design-Model-Elements.md)**
 * **[0566 Design Model Organization](0566-Design-Model-Organization.md)**
-* **[0568 Design Model Scoping](0568-Design-Model-Scoping.md)**
-* **[0569 Design Model Implementation](0569-Design-Model-Implementation.md)**
 * **[0570 Metamodels](0570-Metamodels.md)**
 * **[0571 Concept Models](0571-Concept-Models.md)**
 

@@ -12,7 +12,6 @@ Reports described assembled information about a particular topic. It can be link
 
 The *ReportType* entity describes a report design.  It specifies the schema (structure) of the data that will be assembled in a populated report.  It has the following attributes:
 
-* identifier - Identifier used in an external system.
 * purpose - purpose of the report.
 * author - userId of the report author.
 * creationTime - the time the report type was created.
@@ -23,7 +22,6 @@ The *ReportType* entity describes a report design.  It specifies the schema (str
 
 The *Report* entity describes an instance of a populated report.  It has the following attributes:
 
-* identifier - Identifier used in an external system.
 * purpose - purpose of the report.
 * author - userId of the report author.
 * startTime - the start of the time period that the report's content represents.

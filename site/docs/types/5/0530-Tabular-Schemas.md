@@ -11,9 +11,6 @@ The 053x models cover specialized types that represent the popular technologies.
 
 ![UML](0530-Tabular-Schemas.svg)
 
-## RootSchemaType
-
-*RootSchemaType* is an informational type in that it does not add new attributes to the type system.  Instead, it provides a marker to indicate that types that inherit from it are typically the root of a schema definition.  It is this element that connects to [assets](/types/0503-Asset-Schema) and [ports](/types/5/0520-Process-Schemas).
 
 ## TabularSchemaType
 

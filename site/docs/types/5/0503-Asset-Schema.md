@@ -15,6 +15,10 @@ When an [asset](/concepts/asset) is linked to a [schema type](/concepts/schema) 
 
 ![UML](0503-Asset-Schema.svg)
 
+## RootSchemaType
+
+*RootSchemaType* is an informational type in that it does not add new attributes to the type system.  Instead, it provides a marker to indicate that types that inherit from it are typically the root of a schema definition.  It is this element that connects to [assets](/types/0503-Asset-Schema) and [ports](/types/5/0520-Process-Schemas).
+
 The attached schema type is not shared between different assets because information about a data field in a specific asset's resource is attached to the appropriate [schema attribute](/types/5/0505-Schema-Attributes) element.
 
 If you are cataloging multiple assets with the same data structure, you can:

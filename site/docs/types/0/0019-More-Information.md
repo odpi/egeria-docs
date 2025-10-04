@@ -23,7 +23,6 @@ The description of what the linked element is used for, and hints on how to use 
 * *displayName* provides the short name of the use of the resource for use on menus and buttons.
 * *description* provides more description on the use of the resource.
 * *additionalProperties* provides the property values needed to use the resource.
-* *watchResource* indicates whether the parent entity should receive notification about changes to the supporting resource.
 
 ## MoreInformation relationship
 

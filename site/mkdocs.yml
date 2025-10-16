@@ -447,13 +447,12 @@ nav:
           - 5. Structures:
               - Area 5 Structures: types/5/index.md
               - Schema Elements: types/5/0501-Schema-Elements.md
-              - Asset Schema: types/5/0503-Asset-Schema.md
+              - Asset/Port Schema: types/5/0503-Asset-Schema.md
               - Implementation Snippets: types/5/0504-Implementation-Snippets.md
               - Schema Attributes: types/5/0505-Schema-Attributes.md
               - External Schema Types: types/5/0507-External-Schema-Type.md
               - Map Schema Elements: types/5/0511-Map-Schema-Elements.md
               - Derived Schema Elements: types/5/0512-Derived-Schema-Elements.md
-              - Process Schemas: types/5/0520-Process-Schemas.md
               - Process Variables: types/5/0525-Process-Variables.md
               - Tabular Schemas: types/5/0530-Tabular-Schemas.md
               - Document Schemas: types/5/0531-Document-Schemas.md
@@ -466,8 +465,7 @@ nav:
               - Data Classes: types/5/0540-Data-Classes.md
               - Reference Data: types/5/0545-Reference-Data.md
               - Instance Metadata: types/5/0550-Instance-Metadata.md
-              - Design Model Elements: types/5/0565-Design-Model-Elements.md
-              - Design Model Organization: types/5/0566-Design-Model-Organization.md
+              - Design Models: types/5/0565-Design-Models.md
               - Metamodels: types/5/0570-Metamodels.md
               - Concept Models: types/5/0571-Concept-Models.md
               - Data Dictionaries: types/5/0580-Data-Dictionaries.md

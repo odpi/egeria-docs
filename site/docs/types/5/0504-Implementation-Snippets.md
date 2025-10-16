@@ -16,18 +16,8 @@ The additional attributes of an implementation snippet are:
 
 * *snippet* - the implementation code.
 * *implementationLanguage* - the programming/encoding language used for the snippet.  For example, JSON, XML, Java, ...
-* *versionIdentifier* - identifier for this version of the data field that this snippet represents.
 * *usage* - how should this snippet be used.
 
-## AssociatedSnippet relationship
-
-The *AssociatedSnippet* relationship links a [Referenceable](/types/0/0010-Base-Model) entity such as a [*SchemaType*](/types/5/0501-Schema-Elements) or [data class](/types/5/0540-Data-Classes) to an implementation snippet to guide developers or code generators on how to implement the schema type.
-
-## SchemaTypeImplementation relationship
-
-This relationship links a concrete implementation to a schema type.  This is for identifying the code for managing data values that are derived (calculated).
-
-??? deprecated "Deprecated types"
-    The *SchemaTypeSnippet* and *DataClassSnippet* have been replaced by *AssociatedSnippet*.
+The snippet is linked to the element it represents using the [ImplementedBy](/types/7/0737-Solution-Implementation) relationship.
 
 --8<-- "snippets/abbr.md"

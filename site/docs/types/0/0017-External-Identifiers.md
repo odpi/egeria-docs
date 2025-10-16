@@ -20,7 +20,7 @@ The *ExternalId* entity describes an external identifier from a specific third p
 * *externalInstanceLastUpdateTime* - the date/time that the instance in the external system was last updated.
 * *externalInstanceVersion* - the latest version of the element in the external system.
 
-## KeyPattern enumeration
+### KeyPattern enumeration
 
 *KeyPattern* describes the pattern used for the identifier (how it is generated and managed). These are the values it can take, with the default (and most used) being `LOCAL_KEY`:  
 
@@ -42,11 +42,13 @@ The mapping of identifiers can be many-to-many, which is why you see that the *E
 
 This relationship includes properties to help to map the *OpenMetadataRoot* entity to the external identifier.
 
-## ExternalIdScope relationship
+* *usage* defines how the identifier is used in the third party system - for example, its variable name.
+* *source* defines the component (typically a connector name) that retrieved the information
+* *lastSynchronized* when was the last time that the metadata was synchronized (ie checked that the values were still the same and if not, they are updated appropriately).
+* *mappingProperties* contains any additional properties that the connector needs to keep the elements in the third party and in open metadata in sync.
+* *permittedSynchronization* defines the direction of flow of metadata.  This identified which side "owns" the element and is allowed to delete it.
 
-There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the *ExternalIdScope* relationship links the external identifier to the [Referenceable](/types/0/0010-Base-Model/#referenceable) that represents the third party system. Typically, this is a type of [SoftwareCapability](/types/0/0042-Software-Capabilities/#softwarecapability), for example, [AssetManager](/types/0/0056-Resource-Managers/#assetmanager).
-
-## PermittedSynchronization enumeration
+### PermittedSynchronization enumeration
 
 *PermittedSynchronization* defines the direction of flow of metadata.
 
@@ -57,13 +59,16 @@ There is no guarantee that external identifiers from a third party metadata cata
 | FROM_THIRD_PARTY | 2     | "From Third Party" | The third party technology is logically upstream (the originator and owner of the metadata).  Any updates made in open metadata are not passed to the third party technology and the third party technology is requested to refresh the open metadata version.                              |
 | OTHER            | 99    | "Other"          | Another type of synchronization rule - see description property.                                                                                                                                                                                                                            |
 
+
 ## Example
+
+There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the [*ScopedBy*](/types/1/0120-Assognment-Scopes) relationship links the external identifier to the [Referenceable](/types/0/0010-Base-Model/#referenceable) that represents the third party system. Typically, this is a type of [MetadataCollection](/types/2/0225-Metadata-Repositories) asset.
 
 The picture below shows the value of the external identifiers in providing traceability between metadata elements in different systems.  
 
-Starting on the left-hand side of the diagram is a [SoftwareCapability](/types/0/0042-Software-Capabilies) entity representing an Apache Atlas server.  
+Starting on the left-hand side of the diagram is a *MetadataCollection* entity representing an Apache Atlas server's metadata collection.  
 
-Following the *ExternalIdScope* relationships takes you to the identifiers of all the Apache Atlas entities that have been synchronized into the open metadata ecosystem.  
+Following the *ScopedBy* relationships takes you to the identifiers of all the Apache Atlas entities that have been synchronized into the open metadata ecosystem.  
 
 From one of the *ExternalId* entities it is possible to navigate to the open metadata entity/entities that store the equivalent metadata by following the *ExternalIdLink* relationships.  
 

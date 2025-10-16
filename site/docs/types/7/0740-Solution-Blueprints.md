@@ -4,13 +4,13 @@
 
 # 0740 Solution Blueprints
 
-A solution blueprint describes the architecture of a digital service in terms of [solution components](/types/7/0730-Solution-Components).
+A [solution blueprint](/concepts/solution-blueprint) describes the architecture of a digital service, or a new capability, in terms of [solution components](/types/7/0730-Solution-Components).
 
 ![UML](0740-Solution-Blueprints.svg)
 
 ## SolutionBlueprint
 
-The *SolutionBlueprint* entity describes a single version of the digital service's design.
+The *SolutionBlueprint* entity describes a single version of the digital service's design.  It inherits from [DesignModel]()
 
 ## DigitalServiceDesign
 

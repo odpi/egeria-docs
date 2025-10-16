@@ -28,7 +28,6 @@ These models describe the abstract definition of structured data.
 These next models show how the schema is attached to assets and ports on a process.
 
 * **[0503 Asset Schema](0503-Asset-Schema.md)**
-* **[0520 Process Schemas](0520-Process-Schemas.md)**
 * **[0525 Process Variables](0525-Process-Variables.md)**
 
 This next model provides the ability to capture a template for generating schema artifacts for

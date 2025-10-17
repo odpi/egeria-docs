@@ -3,57 +3,71 @@
 
 # 0021 Collections
 
-*Collection*s provide a general mechanism for grouping entities together.  A collection may be maintained manually, or via an automated process (ie a "smart collection").  The membership of a collection is established via a [*CollectionMembership* relationship](#collectionmembership-relationship), which has attributes that allow the rationale and the confidence of the membership to be established. A [*Referenceable*](/types/0/0010-Base-Model) entity can be a member of none, one or many collections.  
+*Collection*s provide a general mechanism for grouping entities together.  A collection may be maintained manually, or via an automated process (ie a "smart collection").  
 
-Since a collection is a *Referenceable* entity, collections can be organized into hierarchies - like a directory structure on the filesystem.
+The membership of a collection is established via a [*CollectionMembership* relationship](#collectionmembership-relationship), which has attributes that allow the rationale and the confidence of the membership to be established. A [*Referenceable*](/types/0/0010-Base-Model) entity can be a member of none, one or many collections.  
+
+Since a collection is itself a *Referenceable* entity, collections can be organized into hierarchies - like a directory structure on the filesystem.
 
 
 ![UML](0021-Collections.svg)
 
-## Collection
+## Collection entity
 
-The *Collection* entity provides the node that represents the collection as a whole.  It inherits from [*Referenceable*](/types/0/0010-Base-Model).
+The *Collection* entity describes a parent node for collecting related elements together.  It inherits from [*Referenceable*](/types/0/0010-Base-Model). There are no additional attributes for a collection, beyond the standard attributes for *Referenceable*.
 
-The attributes for a collection, beyond the standard attributes for *Referenceable* include:
+### Collection Subtypes
 
-* *name* - this is the display name for the collection
-* *description* - this is the text that describes the characteristics of the members that are to be found in the collection.
-* *collectionType* - describes the type of collection that is used to select its icon or display layout.  For example, it may be a "theme", or "domain", or something else.
+The collection type is generically useful and there are many subtypes that describe specialist collections in addition to *RootCollection* and *CollectionFolder* show in this model.
+
+* [Agreement](/types/7/0711-Agreements) described a collection of elements that are part of an agreement.
+* [BusinessCapability](/types/7/0715-Digital-Business) described a collection of capabilities needed to operate the business of an organization.
+* [ConceptModel](/types/5/0571-Concept-Models) described a collection of modelled concepts.
+* [DataDictionary](/types/5/0580-Data-Dictionaries) described a collection of commonly used data field definitions.
+* [DataSpec](/types/5/0580-Data-Dictionaries) described a collection of data fields and related definitions that describe the data required.
+* [DesignModel](/types/5/0565-Design-Models) described a collection of modelled elements.
+* [DigitalProductCatalog](/types/7/0710-Digital-Products) described a collection of digital products that make up a product catalog.
+* [DigitalProduct](/types/7/0710-Digital-Products) described a collection of related assets that make up a digital product.
+* [DigitalProductGroup](/types/7/0710-Digital-Products) described a collection of digital products that can be subscribed to as if they were a single product.
+* [DigitalSubscription](/types/7/0712-Digital-Subscription) is a special type of agreement relating to subscriptions to digital resources.
+* [EventSet](/types/5/0535-Event-Schemas) described a collection of event schema definitions.
+* [Glossary](/types/3/0310-Glossary) described a collection of [GlossaryTerms](/types/3/0330-Terms).
+* [InformationSupplyChain](/types/7/0720-Information-Supply-Chain) described a collection of components performing an important data flow.
+* [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components performing a solution.
+
+
+
+## RootCollection entity
+
+The *RootCollection* entity indicates that the collection is used to provide the starting node for an independent hierarchy of collections.  For example, this could be a collection hierarchy that organizes [digital products](/types/7/0710-Digital-Products).
+
+## CollectionFolder entity
+
+The *CollectionFolder* entity is a collection that is used to organize subsets of metadata elements within a larger collection. 
+It means the collection can be treated as if it where a folder.
+
+The example below shows part of a collection hierarchy representing a digital product catalog.  The collections are shown in green and the assets that provide the content for the digital product are shown in yellow.
+
+The *RootCollection* collection at the root of the collection hierarchy is called "Product Catalog Collection".  Its membership consists of *CollectionFolder* collections.  The leaf node *DigitalProduct* collections have the data assets as their members.
+
+![Collection Hierarchy](collection-hierarchy-example.svg)
+
 
 ## Collection classifications
 
 The classifications associated with *Collection* allow it to be specialized for particular uses.  They help when searching for collections for specific uses.
 
-* [*RootCollection*](#rootcollection-classification) means the collection is an independent, top-level node in a collection hierarchy.  The members of this collection are typically all collections.
 * [*HomeCollection*](#homecollection-classification) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
-* [*Folder*](#folder-classification) means the collection can be treated as if it where a folder of metadata elements.  This classification includes properties to control how the members are displayed.
 * [*Namespace*](#folder-classification) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
 * [*ResultsSet*](#resultsset-classification) means the collection is a set of related results.
 * [*RecentAccess*](#recentaccess-classification) means the collection is a set of elements that have been recently accesses by a user.
 * [*WorkItemList*](#workitemlist-classification) means the collection is a set of elements that have been recently accesses by a user.
-* [*DigitalProduct*](/types/7/0710-Digital-Service) describes a collection of [assets](/concepts/asset) that represent a [digital product](/concepts/digital-product).
 * [*EventSet*](/types/5/0535-Event-Schemas) for a collection of related event schemas.
 
-The example below shows part of a collection hierarchy representing a digital product catalog.  The collections are shown in green and the assets that provide the content for the digital product are shown in yellow.
-
-The collection at the root of the collection hierarchy is called "Product Catalog Collection" and has the *RootCollection* classification attached.  Its membership consists of collections with the *Folder* classification.  The leaf node collections have the *DigitalProduct* classification attach and have the data assets as their members.
-
-![Collection Hierarchy](collection-hierarchy-example.svg)
-
-### RootCollection classification
-
-The *RootCollection* classification indicates that the collection is used to provide the starting node for an independent hierarchy of collections.  For example, this could be a collection hierarch that organizes [digital products]
 
 ### HomeCollection classification
 
 The *HomeCollection* classification indicates that the collection is used to provide the starting node for a hierarchy of collections.
-
-### Folder classification
-
-The *Folder* classification indicates that the collection is used to organize metadata elements.  The attributes are used to indicate to the caller how they should be displayed.
-
-* *collectionOrder* indicates the preferred ordering sequence. It uses the [OrderBy](#orderby-enumeration) enumeration.
-* *orderByPropertyName* indicates which property to use if the *collectionOrder* attribute is set to `OTHER`.
 
 ### Namespace classification
 
@@ -94,14 +108,6 @@ The attributes for the *CollectionMembership* relationship establish the level o
 * The *membershipStatus* attribute indicates the status of the member in the collection.  It is a [MembershipStatus](#membershipstatus-enumeration) value.
 * The *userDefinedStatus* provides a status value when *status=OTHER*.
 
-## OrderBy enumeration
-
-* *Name* - Order by name property.
-* *Owner* - Order by owner property.
-* *DateAdded* - Order by date added to the metadata collection.
-* *DateUpdated* - Order by date that the asset was updated.
-* *DateCreated* - Order by date that the asset was created.
-* *Other* - Order by another property.
 
 ## MembershipStatus enumeration
 

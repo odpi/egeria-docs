@@ -352,7 +352,6 @@ nav:
               - Storage: types/0/0036-Storage.md
               - Software Server Platforms: types/0/0037-Software-Server-Platforms.md
               - Software Servers: types/0/0040-Software-Servers.md
-              - Server Purpose: types/0/0041-Server-Purpose.md
               - Software Capabilities: types/0/0042-Software-Capabilities.md
               - Servers and Assets: types/0/0045-Servers-and-Assets.md
               - Applications and Processes: types/0/0050-Applications-and-Processes.md
@@ -393,7 +392,7 @@ nav:
               - Databases: types/2/0224-Databases.md
               - Metadata Repositories: types/2/0225-Metadata-Repositories.md
               - Archive Files: types/2/0226-Archive-Files.md
-              - Keystores: types/2/0227-Keystores.md
+              - Key Stores: types/2/0227-Keystores.md
               - Code Tables: types/2/0230-Code-Tables.md
               - Information View: types/2/0235-Information-View.md
               - Reports: types/2/0239-Reports.md

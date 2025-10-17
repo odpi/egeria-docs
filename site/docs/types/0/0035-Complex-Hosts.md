@@ -10,7 +10,7 @@ In today's systems, hardware is managed to get the maximum use out of it. Theref
 
 ## Host entity
 
-The concept of a *Host* is abstracted to describe a deployment environment that has access to hardware and has a basic software stack, typically including the operating systems.
+The concept of a *Host* is abstracted to describe a deployment environment that has access to hardware and has a basic software stack, typically including the operating system.
 
 The host can be linked to its location through the [AssetLocation](/types/0/0025-Locations/#assetlocation) relationship.
 
@@ -32,9 +32,9 @@ A *VirtualContainer* provides the services of a host to the [software servers](/
 
 *VirtualContainer*s can be hosted on other *VirtualContainer*'s, but to actually run they need to ultimately be deployed onto a real physical [Host](/types/0/0030-Hosts-and-Platforms/#host).
 
-### DockerContainer entity
+### Examples
 
-*DockerContainer* provides a specific type for the popular container type called [docker :material-dock-window:](https://www.docker.com/){ target=docker }.
+*VirtualContainer* provides the type for the popular container type called [docker :material-dock-window:](https://www.docker.com/){ target=docker }.
 
 ## HostCluster entity
 
@@ -42,13 +42,11 @@ A *HostCluster* describes a collection of hosts that together are providing a se
 
 Within the host cluster there may be a special host (node) that is controlling the execution of the other members. This host is modelled with a [SoftwareServerPlatform](/types/0/0037-Software-Server-Platforms/#softwareserverplatform) that describes the cluster management platform, and optional [SoftwareServer](/types/0/0040-Software-Servers/#softwareserver) assets.  [SoftwareCapabilities](/types/0/0042-Software-Capabilities/#softwarecapability) needed to manage the cluster are linked to these [ITInfrastructure](/types/0/0030-Hosts-and-Platforms/#itinfrastructure) using the [ServerAssetUse](/types/0/0045-Servers-and-Assets/#serverassetuse) relationship.
 
-### HadoopCluster entity
+### Examples 
 
-*HadoopCluster* describes a [Hadoop cluster :material-dock-window:](https://hadoop.apache.org/){ target=apache } that uses multiple bare metal computers/virtual machines to manage big data workloads.
+For example, *HostCluster* can describe a [Hadoop cluster :material-dock-window:](https://hadoop.apache.org/){ target=apache } that uses multiple bare metal computers/virtual machines to manage big data workloads.
 
-### KubernetesCluster entity
-
-*KubernetesCluster* describes a [Kubernetes cluster :material-dock-window:](https://kubernetes.io/){ target=k8s } that manages containerized applications across multiple bare metal computers/virtual machines.
+Similarly, *HostCluster* can describe a [Kubernetes cluster :material-dock-window:](https://kubernetes.io/){ target=k8s } that manages containerized applications across multiple bare metal computers/virtual machines.
 
 The containerized applications managed by Kubernetes are represented as *VirtualContainer*'s.
 
@@ -58,8 +56,5 @@ The host cluster is linked to the hosts it is managing using the *HostClusterMem
 
 * *memberRole* describes the role of the member in a cluster.  For example, in a kubernetes cluster there are two membership roles: the *pods* and the *hosts*.  The *membershipRole* can be set up to show which hosts are the containers running as pods and which are providing the processing location as *hosts*.  The pods and the hosts are then linked together using the *deployedOn* relationship to show where the various pods have been deployed.
 * *additionalProperties* provides a place to add additional information about the membership of the cluster such as configuration properties.
-
-??? deprecated "Deprecated types"
-    - *DeployedVirtualContainer* - use *DeployedOn*, which is more general.
 
 --8<-- "snippets/abbr.md"

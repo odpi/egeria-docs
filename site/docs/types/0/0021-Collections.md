@@ -7,7 +7,8 @@
 
 The membership of a collection is established via a [*CollectionMembership* relationship](#collectionmembership-relationship), which has attributes that allow the rationale and the confidence of the membership to be established. A [*Referenceable*](/types/0/0010-Base-Model) entity can be a member of none, one or many collections.  
 
-Since a collection is itself a *Referenceable* entity, collections can be organized into hierarchies - like a directory structure on the filesystem.
+Since a collection is itself :wq
+a *Referenceable* entity, collections can be organized into hierarchies - like a directory structure on the filesystem.
 
 
 ![UML](0021-Collections.svg)
@@ -28,7 +29,7 @@ The collection type is generically useful and there are many subtypes that descr
 * [DesignModel](/types/5/0565-Design-Models) described a collection of modelled elements.
 * [DigitalProductCatalog](/types/7/0710-Digital-Products) described a collection of digital products that make up a product catalog.
 * [DigitalProduct](/types/7/0710-Digital-Products) described a collection of related assets that make up a digital product.
-* [DigitalProductGroup](/types/7/0710-Digital-Products) described a collection of digital products that can be subscribed to as if they were a single product.
+* [DigitalProductFamily](/types/7/0710-Digital-Products) described a collection of digital products that can be subscribed to as if they were a single product.
 * [DigitalSubscription](/types/7/0712-Digital-Subscription) is a special type of agreement relating to subscriptions to digital resources.
 * [EventSet](/types/5/0535-Event-Schemas) described a collection of event schema definitions.
 * [Glossary](/types/3/0310-Glossary) described a collection of [GlossaryTerms](/types/3/0330-Terms).

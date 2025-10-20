@@ -84,13 +84,13 @@ classification [method for defining the schema type](/concepts/schema).
 The different subtypes enable metadata searches to narrow the results to this type of display metadata.
 
 When a data container or a data field is attached to a form or report asset, the service automatically inserts the
-[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[Schema](/types/5/0503-Asset-Schema) relationship,
 [DisplaySchemaType](/types/5/0537-Display-Schemas) entity and
 [AttributeForSchema](/types/5/0505-Schema-Attributes) relationship
 in between the asset entity and the data container/field entity if not already in place.
 
 Similarly, the combination of
-[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[Schema](/types/5/0503-Asset-Schema) relationship,
 [QuerySchemaType](/types/5/0537-Display-Schemas) entity and
 [AttributeForSchema](/types/5/0505-Schema-Attributes.svg) relationship
 is inserted between a query and a data container/field.

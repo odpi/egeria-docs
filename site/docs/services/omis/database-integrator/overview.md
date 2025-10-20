@@ -65,7 +65,7 @@ the service automatically inserts the
 
 When a RelationalTable is created for the DeployedDatabaseSchema,
 the service automatically inserts the
-[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[Schema](/types/5/0503-Asset-Schema) relationship,
 [RelationalDBSchemaType](/types/5/0534-Relational-Schemas) entity and
 [AttributeForSchema](/types/5/0505-Schema-Attributes) relationship
 in between the DeployedAPI entity and the RelationalTable entity.

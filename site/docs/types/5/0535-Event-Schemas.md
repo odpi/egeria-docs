@@ -9,7 +9,7 @@
 
 ## EventType
 
-An event schema begins with an *EventType* entity at its root.  It is linked to the asset using the [*AssetSchemaType*](/types/5/0503-Asset-Schema) relationship.
+An event schema begins with an *EventType* entity at its root.  It is linked to the asset using the [*Schema*](/types/5/0503-Asset-Schema) relationship.
 
 The data fields in the event are represented using *EventSchemaAttribute* entities that are linked to the event type using the [*AttributeForSchema*](/types/5/0505-Schema-Attributes) relationship.
 
@@ -213,9 +213,9 @@ Below is an example of a JSON event from the [Asset Manager OMAS](/services/omas
     }
     ```
 
-Asset Manager OMAS only supports one event structure so its event type is linked directly to the topic asset using the *AssetSchemaType* relationship.  The list of data fields in the event are represented by *EventAttributeSchema* and linked to the event type using the *AttributeForSchema* relationship.  Data fields such as the *elementHeader* have a type of *StructSchemaType* and its subfields are *EventSchemaAttributes* linked to their parent by the *NestedSchemaAttribute* relationship.
+Asset Manager OMAS only supports one event structure so its event type is linked directly to the topic asset using the *Schema* relationship.  The list of data fields in the event are represented by *EventAttributeSchema* and linked to the event type using the *AttributeForSchema* relationship.  Data fields such as the *elementHeader* have a type of *StructSchemaType* and its subfields are *EventSchemaAttributes* linked to their parent by the *NestedSchemaAttribute* relationship.
 
-In the example below, *EventTypeList* is linked to the asset (*KafkaTopic* in this case) via the *AssetSchemaType* relationship and the event types represent each event option.  The *EventType* entities are linked to the *EventTypeList* using the *SchemaTypeOption* relationship.
+In the example below, *EventTypeList* is linked to the asset (*KafkaTopic* in this case) via the *Schema* relationship and the event types represent each event option.  The *EventType* entities are linked to the *EventTypeList* using the *SchemaTypeOption* relationship.
 
 ![Schema for the Asset Manager OMAS Event](json-event-example.svg)
 

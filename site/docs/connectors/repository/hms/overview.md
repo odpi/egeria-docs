@@ -187,13 +187,13 @@ higher level concepts called catalogs that hold databases.
 #### Relationship Types
 
 | Egeria open Relationship type | Comments                                                               |
-|-------------------------------|------------------------------------------------------------------------|
-| ConnectionEndpoint            | Relationship between Connection and Endpoint                           |
-| ConnectionConnectorType       | Relationship between Connection and Connector Type                     |
-| ConnectionToAsset             | Relationship between Connection and Asset                              |
-| AssetSchemaType               | Relationship between Database (the asset) and Schema Type              |
-| AttributeForSchema            | Relationship between the RelationalTable and RelationalColumn          |
-| DataSetContent         | Relationship between DeployedDatabaseSchema and RelationalDBSchemaType |
+|---------------------|------------------------------------------------------------------------|
+| ConnectionEndpoint  | Relationship between Connection and Endpoint                           |
+| ConnectionConnectorType | Relationship between Connection and Connector Type                     |
+| ConnectionToAsset   | Relationship between Connection and Asset                              |
+| Schema              | Relationship between Database (the asset) and Schema Type              |
+| AttributeForSchema  | Relationship between the RelationalTable and RelationalColumn          |
+| DataSetContent      | Relationship between DeployedDatabaseSchema and RelationalDBSchemaType |
 
 #### Classification Types
 

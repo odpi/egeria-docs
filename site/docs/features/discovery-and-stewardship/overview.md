@@ -45,7 +45,7 @@ Survey actions can be used for the following types of analysis.
 
 For digital resources that include structured data, *schema extraction* documents the data fields present in the digital resource and if the schema is attached to the asset, it will attempt to match the data fields it finds to its schema attributes.
 
-Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Extraction).  It is linked directly off of the survey report.  The schema of the data in the digital resource is defined in a [*SchemaType*](/types/5/0501-Schema-Elements) linked from the digital resource's asset using the [*AssetSchemaType*](/types/5/0503-Asset-Schema) relationship.  This may be established before the survey action service runs, or may be derived by the survey action service itself.
+Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Extraction).  It is linked directly off of the survey report.  The schema of the data in the digital resource is defined in a [*SchemaType*](/types/5/0501-Schema-Elements) linked from the digital resource's asset using the [*Schema*](/types/5/0503-Asset-Schema) relationship.  This may be established before the survey action service runs, or may be derived by the survey action service itself.
 
 ### Resource profiling
 

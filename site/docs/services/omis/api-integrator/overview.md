@@ -42,7 +42,7 @@ If an APIManager is defined, any API created is automatically linked to it using
 relationship.
 When an APIOperation is created for the API,
 the service automatically inserts the
-[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[Schema](/types/5/0503-Asset-Schema) relationship,
 [APISchemaType](/types/5/0536-API-Schemas) entity and
 [APIOperations](/types/5/0536-API-Schemas) relationship
 in between the DeployedAPI entity and the APIOperation entity.

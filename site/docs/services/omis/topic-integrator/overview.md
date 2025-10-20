@@ -37,7 +37,7 @@ If an EventBroker is defined, any topic created is automatically linked to it us
 relationship.
 When an event type is created for the topic,
 the service automatically inserts the
-[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[Schema](/types/5/0503-Asset-Schema) relationship,
 [EventTypeList](/types/5/0535-Event-Schemas) entity and
 [SchemaTypeOption](/types/5/0501-Schema-Elements) relationship
 in between the topic and the event type.

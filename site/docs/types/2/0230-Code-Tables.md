@@ -10,13 +10,13 @@ hide:
 
 ![UML](0230-Code-Tables.svg)
 
-# ReferenceCodeTable
+# ReferenceCodeTable entity
 
-A data set containing code values and their translations.
+A [tabular data set](/types/2/0211-Tabular-Data-Sets) containing code values and their translations.
 
-## ReferenceCodeMappingTable
+## ReferenceCodeMappingTable entity
 
-A data set containing mappings between code values from different data sets.
+A [tabular data set](/types/2/0211-Tabular-Data-Sets) containing mappings between code values from different data sets.
 
 
 --8<-- "snippets/abbr.md"

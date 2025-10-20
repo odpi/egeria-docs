@@ -83,7 +83,7 @@
     ![Figure 5](/practices/common-data-definitions/semantic-to-implementation-assets-and-schemas-dependencies.svg)
     > Figure 5: Dependencies between digital resources are reflected in open metadata by relationships between assets
 
-    Since schema types describe the structure of data, they can be attached to assets using the *AssetSchemaType* relationship to indicate that this asset's data is organized as described by the schema.  Schemas are important because they show how individual data values are organized.  Governance is often concerned with the meaning, correctness and use of individual data values since they are used to influence the decisions made within the organization.  Therefore, even though the content of a schema bulks up the size and complexity of the metadata, it is necessary to capture this detail.
+    Since schema types describe the structure of data, they can be attached to assets using the *Schema* relationship to indicate that this asset's data is organized as described by the schema.  Schemas are important because they show how individual data values are organized.  Governance is often concerned with the meaning, correctness and use of individual data values since they are used to influence the decisions made within the organization.  Therefore, even though the content of a schema bulks up the size and complexity of the metadata, it is necessary to capture this detail.
 
     ![Figure 6](/practices/common-data-definitions/semantic-to-implementation-assets-and-schemas.svg)
     > Figure 6: Schemas describe the structure of the data store in a digital resource (described by the asset in the catalog)
@@ -104,7 +104,7 @@
     > Figure 8: Using an external schema type to share a common schema 
 
     !!! education "Further information"
-        * See [Model 0503](/types/5/0503-Asset-Schema) in the *Open Metadata Types* to understand the *AssetSchemaType* relationship.
+        * See [Model 0503](/types/5/0503-Asset-Schema) in the *Open Metadata Types* to understand the *Schema* relationship.
         * See [Model 0501](/types/5/0501-Schema-Elements) in the *Open Metadata Types* to understand how schemas are represented on open metadata.
         * See [Model 0505](/types/5/0505-Schema-Attributes) in the *Open Metadata Types* to understand how schema attributes are represented on open metadata.
 

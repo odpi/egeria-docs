@@ -3,7 +3,7 @@
 
 # Create port implementation
 
-Create a PortImplementation, with associated SchemaType, PortSchema and ProcessPort relationships. 
+Create a PortImplementation, with associated SchemaType, Schema and ProcessPort relationships. 
 
 More examples can be found in the
 [sample collection](samples/collections/DataEngine-process_endpoints.postman_collection.json)

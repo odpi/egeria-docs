@@ -57,7 +57,7 @@ Schema extraction uses the [schema analysis annotation](/types/6/0615-Schema-Ext
 
 ![schema extraction](survey-action-schema-extraction.svg)
 
-The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *AssetSchemaType* relationship.  This may be established before the survey action service runs, or may be derived by the survey action service.
+The schema of the data in the digital resource is defined in a *SchemaType* linked from the digital resource's asset using the *Schema* relationship.  This may be established before the survey action service runs, or may be derived by the survey action service.
 
 #### Data profiling
 

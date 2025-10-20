@@ -382,6 +382,7 @@ nav:
               - Connectors and Connections: types/2/0201-Connectors-and-Connections.md
               - Connection Linkage: types/2/0205-Connection-Linkage.md
               - Data Stores: types/2/0210-Data-Stores.md
+              - Tabular Data Sets: types/2/0211-Tabular-Data-Sets.md
               - Deployed APIs: types/2/0212-Deployed-APIs.md
               - Software Components: types/2/0215-Software-Components.md
               - Ports: types/2/0217-Ports.md

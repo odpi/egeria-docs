@@ -19,7 +19,7 @@ For example, this could be a file that is organized into columns such as in a [C
 
 ![single table of data](cost-codes-contents.png)
 
-The image above shows the content of a CSV file called `CostCodes.csv`.  It is catalogued using a [*CSVFile*](/types/2/0220-Files-and-Folders) asset entity.  Linking from it using the [*AssetSchemaType*](/types/5/0503-Asset-Schema) relationship would be a *TabularSchemaType* entity describing the structure of the data in the file.
+The image above shows the content of a CSV file called `CostCodes.csv`.  It is catalogued using a [*CSVFile*](/types/2/0220-Files-and-Folders) asset entity.  Linking from it using the [*Schema*](/types/5/0503-Asset-Schema) relationship would be a *TabularSchemaType* entity describing the structure of the data in the file.
 
 ## TabularColumn
 

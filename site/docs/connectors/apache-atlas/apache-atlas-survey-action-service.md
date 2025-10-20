@@ -98,7 +98,7 @@ In the *Schema Extraction* analysis step, the apache atlas types extracted from 
 * The relationship type graph edges are each attached to two entity type graph vertices: one for the type of entity that can be attached at end 1 of the relationship; the other for the type of entity that can be attached at end 2.
 * The classification type permitted use graph edges are linked to each of the associated entity type graph vertices.
 
-All the graph vertices are linked to a [*GraphSchemaType*](/types/5/0533-Graph-Schemas) entity using the [*AttributeForSchema*](/types/5/0505-Schema-Attributes) relationship.  The *GraphSchemaType* entity is linked to the asset for the Apache Atlas server using the [AssetSchemaType](/types/5/0503-Asset-Schema/) relationship.
+All the graph vertices are linked to a [*GraphSchemaType*](/types/5/0533-Graph-Schemas) entity using the [*AttributeForSchema*](/types/5/0505-Schema-Attributes) relationship.  The *GraphSchemaType* entity is linked to the asset for the Apache Atlas server using the [Schema](/types/5/0503-Asset-Schema/) relationship.
 
 ![Figure 5](apache-atlas-schema-extraction.svg)
 > **Figure 5:** Linkage of graph schema elements based on Apache Atlas type.

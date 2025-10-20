@@ -40,7 +40,7 @@ If a FileSystem or FileManager is defined, any CSVFile asset created is automati
 relationship.
 When a TabularColumn is created for the file,
 the service automatically inserts the
-[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[Schema](/types/5/0503-Asset-Schema) relationship,
 [TabularSchemaType](/types/5/0530-Tabular-Schemas) entity and
 [AttributeForSchema](/types/5/0505-Schema-Attributes) relationship
 in between the file and the TabularColumn.
@@ -69,7 +69,7 @@ If a FileSystem or FileManager is defined, any AvroFile asset created is automat
 relationship.
 When an ObjectAttribute is created for the file,
 the service automatically inserts the
-[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[Schema](/types/5/0503-Asset-Schema) relationship,
 [ObjectSchemaType](/types/5/0532-Object-Schemas) entity and
 [AttributeForSchema](/types/5/0505-Schema-Attributes) relationship
 in between the file and the ObjectAttribute.
@@ -99,7 +99,7 @@ If a FileSystem or FileManager is defined, any JSONFile asset created is automat
 relationship.
 When a DocumentSchemaAttribute is created for the file,
 the service automatically inserts the
-[AssetSchemaType](/types/5/0503-Asset-Schema) relationship,
+[Schema](/types/5/0503-Asset-Schema) relationship,
 [DocumentSchemaType](/types/5/0531-Document-Schemas) entity and
 [AttributeForSchema](/types/5/0505-Schema-Attributes) relationship
 in between the file and the ObjectAttribute.

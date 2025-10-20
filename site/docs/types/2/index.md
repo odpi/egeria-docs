@@ -27,6 +27,7 @@ get access to the data assets.
 * **[0201 Connectors and Connections](0201-Connectors-and-Connections.md)**
 * **[0205 Connection Linkage](0205-Connection-Linkage.md)**
 * **[0210 Data Stores](0210-Data-Stores.md)**
+* **[0211 Tabular Data Sets](0211-Tabular-Data-Sets.md)**
 * **[0212 Deployed APIs](0212-Deployed-APIs.md)**
 * **[0215 Software Components](0215-Software-Components.md)**
 * **[0217 Ports](0217-Ports.md)**

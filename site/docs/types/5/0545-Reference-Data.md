@@ -3,13 +3,13 @@
 
 # 0545 Reference Data
 
-Reference data provides authoritative definitions of valid values for data.  An individual valid value can be either a *ValidValueSet* or a *ValidValueDefinition*.  *ValidValueSet*s can have other valid values nested inside them using the *ValidValueMember* relationship.  As such, valid values can be organized in a hierarchy.
+Reference data provides authoritative definitions of valid values for data.  An individual valid value is stored as a *ValidValueDefinition*.  *ValidValueDefinition*s can have other valid values nested inside them using the *ValidValueMember* relationship.  As such, valid values can be organized in a hierarchy.
 
 A set of valid values can be used to describe the values that may be stored in a data field.  The *ValidValuesAssignment* relationship is used to link the valid value set to an element that represents the data field such as a [GlossaryTerm](/types/3/0330-Terms) or a [SchemaElement](/types/5/0501-Schema-Elements). The *strictRequirement* properties indicates whether the data field can only contain the values listed (strictRequirement=true) or the valid value set is just a suggestion.
 
 Valid values from different sets can be linked together to show that they are equivalent values using the *ValidValuesMapping* relationship.
 
-A *ValidValueSet* can also be implemented in an asset that can be used as a look-up table while data is being processed.  The *ValidValuesImplementation* relationship ([multi-link](/concepts/uni-multi-link)) maps the symbolic names from the valid values to the value implemented in the look-up table.  The Asset can be flagged as a look-up table using the *ReferenceData* classification.
+A *ValidValueDefinition* can also be implemented in an asset that can be used as a look-up table while data is being processed.  The *ValidValuesImplementation* relationship ([multi-link](/concepts/uni-multi-link)) maps the symbolic names from the valid values to the value implemented in the look-up table.  The Asset can be flagged as a look-up table using the *ReferenceData* classification.
 
 Valid values can also be used as tags to indicate that an element has a particular property or belongs in a particular group.  The element to be tagged is linked to the appropriate valid value using the *ReferenceValueAssignment* relationship.
 
@@ -26,13 +26,22 @@ The *ValidValueDefinition* can be used to represent a single code value along wi
 
 ![Valid Value Definition](/features/reference-data-management/valid-value-definition.svg)
 
+
 ### ReferenceDataValue
 
 The *ReferenceDataValue* entity is a type of valid value definition that represents an external code value (or set of external code values).  It is the entity type used by [Reference Data OMVS](/services/omvs/reference-data/overview).
 
+### SpecificationPropertyValue
+
+The *SpecificationPropertyValue* entity is a type of valid value definition that represents the specification of a property.
+
 ### ValidMetadataValue
 
 The *ValidMetadataValue* entity is a type of valid value definition that represents a valid value (or set of valid values) for an open metadata property.  It is the entity type used by [Valid Metadata OMVS](/services/omvs/valid-metadata/overview).
+
+### TechnologyType
+
+The *TechnologyType* is a special type of *ValidMetadataValue* entity used for the valid values of the *deployedImplementationType*.  These values are used to define the technology types that are queryable through the [Automated Curation OMVS](/services/omvs/automated-curation/overview).
 
 
 ## ValidValueMember relationship

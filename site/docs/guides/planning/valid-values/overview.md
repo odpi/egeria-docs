@@ -5,17 +5,20 @@
 
 The [open metadata types](/types) include attributes that are string values.  These string values give you freedom and flexibility to add the values you want.  However, arbitrary strings can make automation hard, and you may want to set up some more formal definitions of the values that should be used.
 
-Consider the [*ProjectCharter*](/types/4/0442-Project-Charter) entity type shown below.  
+Consider the [*Project*](/types/1/0130-Projects) entity type shown below.  
 
-<img src="/guides/planning/valid-values/project-charter-type.svg" style="float:left">
+<img src="/guides/planning/valid-values/project-type.svg" style="float:left">
 
-In addition to the *qualifiedName* and *additionalProperties* attributes inherited from [*Referenceable*](/types/0/0010-Base-Model), this type adds in three new attribute to the properties of a ProjectCharter instance:
+In addition to attributes such as *qualifiedName*, *category* and *additionalProperties* inherited from [*Referenceable*](/types/0/0010-Base-Model), this type adds multiple attributes to the properties of a ProjectCharter instance such as:
 
 * *mission*
-* *projectType*
 * *purposes*
+* *projectPhase*
+* *projectStatus*
+* *projectHealth*
 
-The *mission* attribute is likely to be free-form text laying out the reasons and aspirations behind the project.  However, the *projectType* and the *purposes* may be used by automated processes - or may trigger people to perform certain tasks.  
+
+The *mission* attribute is likely to be free-form text laying out the reasons and aspirations behind the project.  However, the *category* and the *purposes* may be used by automated processes - or may trigger people to perform certain tasks.  
 
 Having free-form text in such attributes may lead to errors and misunderstandings if the values are filled out incorrectly.  Therefore, Egeria supports the ability to set up lists of valid values for particular properties in open metadata.
 
@@ -23,28 +26,27 @@ Part of the planning process is to consider which metadata attributes should hav
 
 ## Valid value sets for open metadata
 
-Some attributes associated with the [governance program](/guides/planning/governance-program/overview) have specialised open metadata types that maintain the lists of their valid values.
-
-For other metadata properties it is possible to set up *valid metadata value sets*.  These list the values that are expected in a particular string property and provide validation checks.
-
+Egeria uses [ValidValueDefinition](/types/5/0545-Reference-Data) entities to manage valid values for Open Metadata.  
 There are three types of valid metadata values:
 
 * Lists of values for string attributes and for array of strings (array<string>) attributes.
 * Values for the map names found in attributes that map from name to string value (map<string, string>).
 * Values for the map values found in attributes tha map from name to string value (map<string, string>).
 
-In the *ProjectCharter* type shown above:
+These valid values can be set up for all types that support this property; or it can be restricted to a specific type.
 
-* *projectType* is a string.
+For example, in the *Project* type shown above:
+
+* *category* is a string.  Valid values for this are typically used with any type.
 * *purposes* is an array of strings.
-* *additionalProperties* is a map from a string name to a string value.
+* *additionalProperties* is a map from a string name to a string value.  Although it is supported by the many types that inherit from *Referenceable*, it is possible to define map names and values just for *Project* instances.
 
 The diagram below shows possible valid values for these attributes:
 
-![valid values for ProjectCharter attributes](project-charter-valid-values.svg)
-> Valid values for ProjectCharter attributes
+![valid values for Project attributes](project-valid-values.svg)
+> Valid values for Project attributes
 
-The *projectType* attribute can only take a single string, so it could be set to either "clinical-trial" or "manufacturing-improvement" or "security-assessment" or "incident-investigation".
+The *category* attribute can only take a single string, so it could be set to either "clinical-trial" or "manufacturing-improvement" or "security-assessment" or "incident-investigation".
 
 The *purposes* attribute takes a list of strings which can include any or all of the following values: "governance", "market-analysis", "product-development", "product-verification", "patient-treatment".
 
@@ -52,17 +54,16 @@ The *additionalProperties* can have an entry in its map of "expectedDuration" th
 
 This is how these values could appear in an instance of a project charter:
 
-![valid values](project-charter-instance.svg)
+![valid values](project-instance.svg)
 
-
-Valid metadata values can either be set up in an [open metadata archive](/concepts/open-metadata-archive), or through the [OpenMetadataClient](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/client/OpenMetadataStoreClient.html) available on most [Open Metadata Access Services (OMASs)](/services/omas).
+Valid metadata values can either be set up in an [open metadata archive](/concepts/open-metadata-archive), or through the [Valid Metadata OMVS](/services/omvs/valid-metadata/overview) API, or through the [Valid Metadata Values Client](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/connectorcontext/ValidMetadataValuesClient.html) accessed through a connector's context.
 
 ### Code samples
 
-The code snippet below shows how to set up the strings "incident-investigation" and "clinical-trial" as a specific valid values for the *projectType* property of *ProjectCharter*.
+The code snippets below shows how to set up the strings "incident-investigation" and "clinical-trial" as a specific valid values for the *category* property.  The first parameter is set to null to indicate that these values are valid for category in any type.
 
 ```java
-OpenMetadataStoreClient client     = new OpenMetadataStoreClient(serverName, serverPlatformRootURL);
+ValidMetadataValueClient client     = context.getValidMetadataValueClient();
 
 ValidMetadataValue validMetadataValue = new ValidMetadataValue();
 
@@ -70,32 +71,32 @@ validMetadataValue.setDisplayName("Incident Investigation");
 validMetadataValue.setPreferredValue("incident-investigation");
 validMetadataValue.setDescription("An investigation into the causes, effects and remedies for a detected incident.");
 
-client.setUpValidMetadataValue(userId, "ProjectCharter", "projectType", validMetadataValue);
+client.setUpValidMetadataValue(null, "category", validMetadataValue);
 
 validMetadataValue.setDisplayName("Clinical Trial");
 validMetadataValue.setPreferredValue("clinical-trial");
 validMetadataValue.setDescription("A controlled validation of the efficacy of a particular treatment with selected patients.");
 
-client.setUpValidMetadataValue(userId, "ProjectCharter", "projectType", validMetadataValue);
+client.setUpValidMetadataValue(userId, null, "category", validMetadataValue);
 
 ```
 The next code snippet shows how to retrieve information about a single valid value.
 
 ```java
 validMetadataValue = client.getValidMetadataValue(userId, 
-                                                  "ProjectCharter", 
-                                                  "projectType", 
+                                                  "Project", 
+                                                  "category", 
                                                   "clinical-trial");
 ```
-This next code snippet shows how to retrieve all the valid values for `projectType`:
+This next code snippet shows how to retrieve all the valid values for `category`:
 ```java
 List<ValidMetadataValue> validMetadataValues = client.getValidMetadataValues(userId, 
                                                                              "ProjectCharter", 
-                                                                             "projectType", 
+                                                                             "category", 
                                                                              0, 
                                                                              0);
 
-System.out.println("Valid values for property projectType in entity ProjectCharter");
+System.out.println("Valid values for property category in entity Project");
 for (ValidMetadataValue retrievedValue : validMetadataValues)
 {
     System.out.println(" ==> " + retrievedValue.getPreferredValue() + " means " + retrievedValue.getDisplayName() + ": " + retrievedValue.getDescription());
@@ -103,7 +104,7 @@ for (ValidMetadataValue retrievedValue : validMetadataValues)
 ```
 This final snippet shows how to validate that an actual value from an instance (*actualValue*) is a valid value:
 ```java
-if (! client.validateMetadataValue(userId, "ProjectCharter", "projectType", actualValue))
+if (! client.validateMetadataValue(userId, "Project", "category", actualValue))
 {
     /*
      * Add error handling here ...
@@ -113,7 +114,7 @@ if (! client.validateMetadataValue(userId, "ProjectCharter", "projectType", actu
 
 ### Predefined valid metadata values
 
-The `OpenConnectorArchive.omarchive` includes valid value definitions for the [*deployedImplementationType*](/concepts/deployed-implementation-type), [*fileType*](/concepts/file-type), [*fileName*](/types/2/0220-Files-and-Folders) and [*fileExtension*](/types/2/0220-Files-and-Folders) properties.  These values can be used to control the values stored in these properties.  They are also linked with each other and other metadata elements:
+The `CoreontentPack.omarchive` includes valid value definitions for the [*deployedImplementationType*](/concepts/deployed-implementation-type), [*fileType*](/concepts/file-type), [*fileName*](/types/2/0220-Files-and-Folders) and [*fileExtension*](/types/2/0220-Files-and-Folders) properties.  These values can be used to control the values stored in these properties.  They are also linked with each other and other metadata elements:
 
 * The *deployedImplementationType* valid values are used to provide an index of connectors, templates and other resources that support specific types of technology.  The [Automated Curation OMVS](/services/omvs/automated-curation/overview) provides an API to query these valid values and the linked resources.
 

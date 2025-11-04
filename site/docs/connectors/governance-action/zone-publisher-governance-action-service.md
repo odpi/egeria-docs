@@ -67,7 +67,7 @@ The assets that needs their zones updated are linked to the governance action as
 These are the responses that Zone Publisher produces:
 
 - `CompletionStatus.ACTIONED` with guard `zones-assigned` if the zones are successfully assigned to the assets.
-- `CompletionStatus.ACTIONED` with guard `no-zones-detected` if the `publishZones` property is not set up in either the configuration properties or the request parameters.  Any AssetZoneMembership classification is removed from the action target asset(s).
+- `CompletionStatus.ACTIONED` with guard `no-zones-detected` if the `publishZones` property is not set up in either the configuration properties or the request parameters.  Any *ZoneMembership* classification is removed from the action target asset(s).
 - `CompletionStatus.INVALID` with guard `no-targets-detected` if no assets are passed as action targets. 
 
 ## Examples of use

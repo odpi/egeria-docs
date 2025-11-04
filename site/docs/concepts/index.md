@@ -368,6 +368,7 @@
 - [Software Server Capability](/concepts/software-capability)
 - [Solution Blueprint](/concepts/solution-blueprint)
 - [Solution Component](/concepts/solution-component)
+- [Specification Properties](/concepts/specification)
 - [Star Ratings](/concepts/review)
 - [Specification](/concepts/specification)
 - [Stewardship](/features/discovery-and-stewardship/overview)

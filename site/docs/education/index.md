@@ -7,9 +7,14 @@
 
 Egeria is a big project tackling a complex problem.  There is a lot to learn. The choices below give you the opportunity to target your learning to both your immediate and long term needs. 
 
-## Hands on Labs
+## Patterns of Use
 
-The [Hands on Open Metadata Labs](/education/open-metadata-labs/overview) provide an interactive environment that allows you to experiment with different capabilities of Egeria.  They are organized by role so you can select the roles of interest to you.
+These pages describe how the Egeria technology supports different patterns of use.
+
+* [Metadata Manager](/patterns/metadata-manager/overview) - describing your digital resources
+* [Metadata Exchange](/patterns/metadata-exchange/overview) - creating interoperable metadata that drives up the value of your tools and teams.
+* [Metadata Governance](/patterns/metadata-governance/overview) - validating, augmenting, analysing, linking and deduping your metadata.
+
 
 ## Individual tutorials
 

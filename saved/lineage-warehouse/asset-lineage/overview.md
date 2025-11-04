@@ -166,9 +166,9 @@ Return the connection object for the Asset Lineage's OMAS's out topic.
         "LineageClassificationTypes": [
             "PrimaryCategory",
             "Confidentiality",
-            "AssetZoneMembership",
+            "ZoneMembership",
             "SubjectArea",
-            "AssetOwnership"
+            "Ownership"
         ]
     }
     ```

@@ -5,7 +5,7 @@
 
 Reference data provides authoritative definitions of valid values for data.  An individual valid value is stored as a *ValidValueDefinition*.  *ValidValueDefinition*s can have other valid values nested inside them using the *ValidValueMember* relationship.  As such, valid values can be organized in a hierarchy.
 
-A set of valid values can be used to describe the values that may be stored in a data field.  The *ValidValuesAssignment* relationship is used to link the valid value set to an element that represents the data field such as a [GlossaryTerm](/types/3/0330-Terms) or a [SchemaElement](/types/5/0501-Schema-Elements). The *strictRequirement* properties indicates whether the data field can only contain the values listed (strictRequirement=true) or the valid value set is just a suggestion.
+A set of valid values can be used to describe the values that may be stored in a data field.  The *ValidValuesAssignment* relationship is used to link the valid value set to an element that represents the data field such as a [DataField](/types/5/0580-Data-Dictionaries) or a [SchemaElement](/types/5/0501-Schema-Elements). The *strictRequirement* properties indicates whether the data field can only contain the values listed (strictRequirement=true) or the valid value set is just a set of preferred values.
 
 Valid values from different sets can be linked together to show that they are equivalent values using the *ValidValuesMapping* relationship.
 
@@ -18,30 +18,27 @@ Valid values can also be used as tags to indicate that an element has a particul
 
 ## ValidValueDefinition entity
 
+The *ValidValueDefinition* is a [Referenceable](/types/0/0010-Base-Model) that stores a single valid value.  It has many purposes that are reflected in its subtypes.
+
+### ReferenceDataValue
+
 Software often uses code values to store properties about a person, place, object or activity.  Each code value is mapped to one or more strings when its value is to be displayed.  This mapping is stored in a *code table*.
 
 ![Information codes](/features/reference-data-management/information-codes-example.svg)
 
-The *ValidValueDefinition* can be used to represent a single code value along with its associated properties.
-
-![Valid Value Definition](/features/reference-data-management/valid-value-definition.svg)
-
-
-### ReferenceDataValue
-
-The *ReferenceDataValue* entity is a type of valid value definition that represents an external code value (or set of external code values).  It is the entity type used by [Reference Data OMVS](/services/omvs/reference-data/overview).
+The *ReferenceDataValue* entity can be used to represent a single code value along with its associated properties.  [Reference Data OMVS](/services/omvs/reference-data/overview) provides specialist APIs for managing reference code tables and mapping tables.
 
 ### SpecificationPropertyValue
 
-The *SpecificationPropertyValue* entity is a type of valid value definition that represents the specification of a property.
+The *SpecificationPropertyValue* entity is a type of valid value definition that represents the [specification of a property](/concepts/specification).  It is linked to the element it describes using the *SpecificationPropertyAssignment* relationship.  The [Valid Metadata API](/services/omvs/valid-metadata/overview) provides specialist operations for managing specification properties.
 
 ### ValidMetadataValue
 
-The *ValidMetadataValue* entity is a type of valid value definition that represents a valid value (or set of valid values) for an open metadata property.  It is the entity type used by [Valid Metadata OMVS](/services/omvs/valid-metadata/overview).
+The *ValidMetadataValue* entity is a type of valid value definition that represents a valid value (or set of valid values) for an open metadata property.  The [Valid Metadata API](/services/omvs/valid-metadata/overview) provides specialist operations for managing valid value sets for open metadata.
 
 ### TechnologyType
 
-The *TechnologyType* is a special type of *ValidMetadataValue* entity used for the valid values of the *deployedImplementationType*.  These values are used to define the technology types that are queryable through the [Automated Curation OMVS](/services/omvs/automated-curation/overview).
+The *TechnologyType* is a special type of *ValidMetadataValue* entity used for the valid values of the *deployedImplementationType*.  These values are used to define the technology types that are queryable through the [Automated Curation API](/services/omvs/automated-curation/overview).
 
 
 ## ValidValueMember relationship

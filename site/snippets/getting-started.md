@@ -2,5 +2,5 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-??? education "Ready to run Egeria?"
+??? info "Ready to run Egeria?"
     --8<-- "snippets/getting-started-text.md"

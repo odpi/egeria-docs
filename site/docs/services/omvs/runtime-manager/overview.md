@@ -24,7 +24,7 @@ It is also able to:
     * Load [open metadata archives](/concepts/open-metadata-archive).
     * Connect and disconnect from connected [cohorts](/concepts/cohort-member).
   
-* For [integration daemons](/concept/integration-daemon), it can:
+* For [integration daemons](/concepts/integration-daemon), it can:
 
    * Temporarily change integration connector configuration.
    * Restart and refresh integration connectors.

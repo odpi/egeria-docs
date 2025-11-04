@@ -80,7 +80,7 @@ Each connection stored in a metadata repository has a unique identifier. An appl
 
 The OMAS retrieves the connection object from the open metadata repositories and passes it to the [Connector Broker](/concepts/connector-broker) factory object.  The Connector Broker (and underlying [Connector Provider](/concepts/connector-provider)) uses the information from the Connection object to create an instance of the connector.
 
-The advantage of retrieving the connection information from a metadata repository is that the connection properties do not need to be hard-coded in the consuming applications and the metadata associated with the linked Asset can be retrieved via the connectors [Connected Asset Properties](connected-asset-properties.md) interface.
+The advantage of retrieving the connection information from a metadata repository is that the connection properties do not need to be hard-coded in the consuming applications and the metadata associated with the linked Asset can be retrieved via the connectors [Connected Asset Properties](../../../saved/frameworks/connected-asset-properties.md) interface.
 
 Connections can be created in the open metadata repositories through the following interfaces:
 

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-An *context event service* is a component that performs event management around a [context event](/concept/context-event).
+An *context event service* is a component that performs event management around a [context event](/concepts/context-event).
 
 ??? info "Runtime for an context event service"
     Context event services are packaged into [Context Event Engines](/concepts/context-event-engine) that run in the [Context Event OMES](/services/omes/contex-event/overview) hosted in an [Engine Host](/concepts/engine-host).  

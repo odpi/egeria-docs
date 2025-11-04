@@ -868,7 +868,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0012-Search-Keywords" id="rm3g7wsGNbU9-IhBznXc">
-    <mxGraphModel dx="1585" dy="857" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1234" dy="830" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="NJOMS3Z6H43_rIkWO7PQ-0" />
         <mxCell id="NJOMS3Z6H43_rIkWO7PQ-1" parent="NJOMS3Z6H43_rIkWO7PQ-0" />
@@ -887,7 +887,7 @@
         <mxCell id="NJOMS3Z6H43_rIkWO7PQ-27" value="«entity»&lt;br&gt;&lt;b&gt;SearchKeyword&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="NJOMS3Z6H43_rIkWO7PQ-1" vertex="1">
           <mxGeometry x="639" y="292.87" width="214" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="NJOMS3Z6H43_rIkWO7PQ-28" value="keyword : string&lt;br&gt;description : string&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="NJOMS3Z6H43_rIkWO7PQ-1" vertex="1">
+        <mxCell id="NJOMS3Z6H43_rIkWO7PQ-28" value="displayName : string&lt;br&gt;description : string&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="NJOMS3Z6H43_rIkWO7PQ-1" vertex="1">
           <mxGeometry x="639" y="341.87" width="214" height="51" as="geometry" />
         </mxCell>
         <mxCell id="NJOMS3Z6H43_rIkWO7PQ-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;dashed=1;endArrow=none;endFill=0;jettySize=auto;orthogonalLoop=1;exitDx=0;exitDy=0;" parent="NJOMS3Z6H43_rIkWO7PQ-1" source="NJOMS3Z6H43_rIkWO7PQ-30" edge="1">

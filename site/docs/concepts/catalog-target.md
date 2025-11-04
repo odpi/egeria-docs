@@ -3,7 +3,7 @@
 
 # Catalog Target
 
-A *catalog target* describes the third party technology ([digital resource](/concepts/digital-resource)) that a specific [integration connector](/concept/integration-connector) is exchanging metadata with.  
+A *catalog target* describes the third party technology ([digital resource](/concepts/digital-resource)) that a specific [integration connector](/concepts/integration-connector) is exchanging metadata with.  
 
 ## Catalog Target Types
 

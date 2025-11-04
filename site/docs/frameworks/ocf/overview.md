@@ -299,10 +299,9 @@ The [`ConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/b
 | `url` | external link for the asset |
 | `qualifiedName` | The official (unique) name for the asset. This is often defined by the IT systems management organization and should be used (when available) on audit logs and error messages. (Sourced from the `qualifiedName` attribute in `Referenceable` - [model 0010](/types/0/0010-Base-Model)) |
 | `displayName` | A consumable name for the asset. Often a shortened form of the asset's qualifiedName for use on user interfaces and messages. The asset's displayName should be only be used for audit logs and error messages if the qualifiedName is not set. (Sourced from `displayName` attribute within `Asset` - [model 0010](/types/0/0010-Base-Model)))
-| `shortDescription` | Short description about the asset. (Sourced from `assetSummary` within `ConnectionsToAsset` - [model 0205](/types/2/0205-Connection-Linkage)) |
 | `description` | Full description of the asset. (Sourced from `description` attribute within `Asset` - [model 0010](/types/0/0010-Base-Model)) |
-| `owner` | Name of the person or organization that owns the asset. (Sourced from the `AssetOwnership` classification - [model 0445](/types/4/0445-Governance-Roles)) |
-| `zoneMembership` | List of governance zones assigned to the asset. (Sourced from the `AssetZoneMembership` classification - [model 0445](/types/4/0424-Governance-Zones)) |
+| `owner` | Name of the person or organization that owns the asset. (Sourced from the `Ownership` classification - [model 0445](/types/4/0445-Governance-Roles)) |
+| `zoneMembership` | List of governance zones assigned to the asset. (Sourced from the `ZoneMembership` classification - [model 0445](/types/4/0424-Governance-Zones)) |
 | `classifications` | Full list of the classifications assigned to the asset along with their properties. |
 
 #### Asset detail

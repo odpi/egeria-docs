@@ -1,9 +1,14 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Our solution (overview)
+# Egeria In Action
 
-Although it is desirable to synchronize metadata between the tools and platforms used by an organization, there are so many technologies, each using a different format, naming conventions and interfaces, that it would be a complex and expensive project to build point-to-point metadata exchange integrations between them.
+Although it is desirable to synchronize metadata between the tools and platforms used by an organization, there are typically many technologies, each using a different format, naming conventions and interfaces, that it would be a complex and expensive project to build point-to-point metadata exchange integrations between them.
 
 ![Before Egeria](before-egeria.svg)
 
@@ -11,58 +16,29 @@ Using Egeria, you only need to link each tool to Egeria, and it is Egeria that m
 
 ![Egeria concepts](egeria-concept.svg)
 
-Each tool is linked via an Egeria service (orange circles), tailored for that specific type of tool.  The tool may call the service directly, or Egeria will host a connector that converts from the specific formats, naming conventions and interface of the specific tool and the open standards and interfaces of Egeria.
+Each tool is linked via an Egeria connector (orange circles), tailored for that specific type of tool. The connector is responsible for translating between Egeria's [Open Metadata Types](/types) and the proprietary formats, naming conventions and interfaces of the tool.
 
 ![Connecting to Egeria](connecting-to-egeria.svg)
 
-Behind the scenes, Egeria manages the exchange of metadata using a variety of techniques to ensure this occurs in the most efficient and timely manner possible.
+Behind the scenes, Egeria manages the exchange of metadata between the tools using a variety of techniques to ensure this occurs in the most efficient and timely manner possible.  Internally, Egeria uses the open metadata types for its storage and exchange. It also has services that tools can call directly to work with the open metadata.
 
 ![Connecting to Egeria](egeria-exchange.svg)
 
-Although Egeria is shown above as a centralized solution, it is implemented as a distributed solution.
- 
-Today's organizations have their tools and technologies distributed across multiple data centres and cloud providers (green clouds). Each of these locations may be managed by different groups and use different technologies.  This makes a centralized metadata solution impractical from both a funding and operational perspective.
+Although Egeria is shown above as a centralized solution, it is, in fact, implemented as a distributed solution to meet the needs of a larger enterprise that typically have their tools and technologies distributed across multiple data centres and cloud providers (green clouds). Each of these locations may be managed by different groups and use different technologies.  This makes a centralized metadata solution impractical from both a funding and operational perspective.
 
-Using Egeria, each location runs a [platform (blue boxes)](/concepts/omag_server_platform) that hosts [servers](/concepts/omag_server) (orange circles) that provide the synchronization services tailored to specific types of tools (grey boxes).
+Using Egeria, each location runs their own Egeria **platform** (blue boxes) that hosts the appropriate **connectors** (orange circles) tailored to specific types of tools (grey boxes).  
 
 ![Distributed operation](egeria-distributed-operation.svg)
 
---8<-- "snippets/getting-started.md"
+In addition, there is a Python-based toolkit for interacting with the platform.
 
-## What is included in Egeria
+## Single platform deployment 
 
-### Open Metadata Types
+The picture below represents an Egeria platform deployment.  The platform's official name is the [Open Metadata and Governance (OMAG) Server Platform](/concepts/omag-server-platform). Linked above it is [*pyegeria*](/concepts/pyegeria).  This is the Python-based toolkit for Egeria.  It has a python library that supports calls to the platform for use by Python programmers. It also has commands (for the command line and the ability to process CSV files and markdown documents containing metadata, and produce reports.  
 
-Egeria defines a set of open [metadata types](/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  However, the type system is extensible, so it is able to support any special needs of your organization.
+![Single Egeria platform deployment](egeria-solution-components.svg)
 
-### Frameworks
 
-Egeria's [frameworks](/frameworks) define the interfaces and protocols for pluggable components that enable Egeria to run in many environments and connect to many types of technologies. These pluggable components are called [connectors](/concepts/connector).  Egeria has a [catalog of pre-built connectors](/connectors) to help speed up your adoption of open metadata and governance.
 
-### Services
-
-Egeria's [services](/services) provide specialized APIs and event exchange protocols to support the major types of tools and platforms.
-
-### Metadata governance
-
-Finally, as metadata is exchanged, the duplication, gaps and inconsistencies of the metadata in an organization's tools and platforms is exposed.  Egeria provides [metadata governance features](/features) to dynamically improve the quality of your metadata in an ongoing and systematic manner.
-
-### OMAG Server Platform
-
-Egeria's platform (the blue boxes) is called the [*Open Metadata and Governance (OMAG) Server Platform*](/concepts/omag-server-platform).
-
-The OMAG Server Platform is a multi-tenant platform that supports horizontal scale-out in Kubernetes and yet is light enough to run as an edge server on a Raspberry Pi. This platform is used to host the actual metadata integration and automation capabilities.
-
-### OMAG Servers
-
-Within an instance of the *OMAG Server Platform*, one or more [*OMAG Servers*](/concepts/omag-server) can be configured (the orange circles). These servers are collections of activated integration services that host connectors to the different technologies with which Egeria exchanges metadata.
-
-!!! summary "Summary"
-    The OMAG Server Platforms and their variety of OMAG Servers provide an enterprise metadata service of data and IT resources that are transparently assessed, governed and consumed through many types of tools and technologies. The metadata is not physically-centralized, but instead it is composed of metadata repositories from many tools and technologies that are operating together via Egeria.
-
-!!! question "Why open source?"
-    Delivering this capability as open source is a critical part of the project, since multiple vendors must buy into this ecosystem. They are not going to do this if one organization dominates the technology base. Thus, the open metadata and governance technology must be freely available with an open source governance model that allows a community of organizations and practitioners to develop and evolve the base, and then use it in their offerings and deployments.
-
---8<-- "snippets/getting-started.md"
 
 --8<-- "snippets/abbr.md"

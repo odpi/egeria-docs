@@ -6,7 +6,7 @@
 
 The content of the data/metadata shared between teams needs to follow standards that ensure clarity, both in meaning and how it should be used and managed.  Its completeness and quality need to be appropriate for the organization's uses.  These uses will change over time.
 
-The ecosystem that supplies and uses this data/metadata must evolve and adapt to the changing and growing needs of the organization because trust is required not just for today's operation but also into the future.
+The ecosystem that supplies and uses this data/metadata must evolve and adapt to the changing and growing needs of the organization, because trust is required not just for today's operation but also into the future.
 
 You can make your own choices on how to build trust in your data/metadata.  Egeria provides *standards*, *mechanisms* and *practices* built from industry experiences and best practices that help in the maintenance of data/metadata:
 
@@ -21,4 +21,3 @@ You can make your own choices on how to build trust in your data/metadata.  Eger
     * Comprehensive security and privacy controls
 
 * Egeria's documentation provides guidance on how to use this technology to deliver business value.
-

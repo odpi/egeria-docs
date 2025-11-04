@@ -26,6 +26,6 @@ The [Template Manager OMVS](/services/omvs/template-manager/overview) provides t
 
 ## Adding automation
 
-It is also possible to use templates in the integration connectors running during [Integrated cataloguing](/features/integrated-cataloguing/overview).  The connector is typically passed the qualified names of the templates that it should use in the [CatalogTarget](/types/4/0464-Dynamic-Integration-Groups) relationship.
+Automated processes such as [Integration Connectors](/features/integrated-cataloguing/overview), [governance services](/concepts/governance-service) and [governance actions](/concepts/governance-action) make extensive use of templates.  Egeria's [Solutions](/egeria-solutions) pull these capabilities together with configuration and reference data, so you can get started without spending time on administration.
 
 --8<-- "snippets/abbr.md"

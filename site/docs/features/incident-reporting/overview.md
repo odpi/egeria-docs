@@ -25,7 +25,7 @@ The people working on the incident can add notes to the incident report's note l
 
 !!! info "Overview of the Incident Management process"
 
-    1. When an incident occurs, an incident report is created.  There is support to create an incident on most [Open Metadata Access Services (OMASs)](/services/omas), [Open Metadata Integration Services (OMISs)](/services/omis) supporting [integration connectors](/concepts/integration-connector) and the [Open Metadata Engine Services (OMESs)](/services/omes) supporting [governance services](/concept/governance-service). 
+    1. When an incident occurs, an incident report is created.  There is support to create an incident on most [Open Metadata Access Services (OMASs)](/services/omas), [Open Metadata Integration Services (OMISs)](/services/omis) supporting [integration connectors](/concepts/integration-connector) and the [Open Metadata Engine Services (OMESs)](/services/omes) supporting [governance services](/concepts/governance-service). 
     2. the request is routed to [Metadata Access Store](metadata-access-store) and an [IncidentReport](/types/4/0470-Incident-Reporting) entity linked to metadata describing the originator and any impacted resources is saved to its open metadata repository.
     3. The content of incident report is managed via the [Stewardship Action OMAS](/services/omas/stewardship-action/overview)'s interface.  This could be through direct calls to the API or via an [integration connector](/concepts/integration-connector) running in the [Stewardship Integrator OMIS](/services/omis/stewardship-integraotr/overview)
 

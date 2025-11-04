@@ -57,8 +57,4 @@ The *AssociatedAnnotation* relationship links an annotation to an element that i
 
 The *AnnotationExtension* relationship allows an annotation from a later run of the survey action service to add information to an annotation from a previous run.
 
-## DiscoveredAnnotation relationship
-
-The *DiscoveredAnnotation* relationship links an annotation to the [*OpenDiscoveryAnalysisReport*](0605-Open-Discovery-Analysis-Reports.md) entity.  It is only used with [open discovery services](/concepts/open-discovery-service).
-
 --8<-- "snippets/abbr.md"

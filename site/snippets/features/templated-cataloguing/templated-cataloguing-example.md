@@ -6,7 +6,7 @@
 
 Figure 1 shows Peter making calls to Egeria to catalog the first set of measurements received for the clinical trial.  This includes an asset to represent the data set that is linked to the license along with a connection to allow the data scientist to connect to the data set and access the data and the schema showing the structure of the data in the data set.  The data fields identified in the schema each link to the glossary term that describes the meaning of the data stored in the field. There are also two classifications on the asset:
 
-- *AssetZoneMembership* - The [governance zones](/concepts/governance-zone) that the asset is a member of.  This controls who can access the asset and its related metadata elements such as the connection and the schema.
+- *ZoneMembership* - The [governance zones](/concepts/governance-zone) that the asset is a member of.  This controls who can access the asset and its related metadata elements such as the connection and the schema.
 - *Ownership* - The owner of the data set.  This is the person who is accountable for ensuring that Coco Pharmaceuticals adheres to the license.
 
 ![Figure 1](/features/templated-cataloguing/cataloging-assets-week-1.svg)

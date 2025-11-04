@@ -57,11 +57,11 @@ AssetSummary holds asset properties that are used for displaying details of an a
 
  - *owner* - name of the person or organization that owns the asset/resource.
     
-    (Sourced from the AssetOwnership Classification - [model 0445](/types/4/0445-Governance-Roles)).
+    (Sourced from the Ownership Classification - [model 0445](/types/4/0445-Governance-Roles)).
  
  - *zoneMembership* - list of governance zones assigned to the asset.
  
-    (Sourced from the AssetZoneMembership classification - [model 0445](/types/4/0424-Governance-Zones)))
+    (Sourced from the ZoneMembership classification - [model 0445](/types/4/0424-Governance-Zones)))
  
  - *classifications* - full list of the classifications assigned to the asset along with their properties.
 

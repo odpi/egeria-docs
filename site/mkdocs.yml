@@ -2,7 +2,7 @@
 # Copyright Contributors to the Egeria project.
 
 site_name: The Egeria Project
-site_description: Open metadata and governance for enterprises - automatically capturing, managing and exchanging metadata between tools and platforms, no matter the vendor
+site_description: Open metadata and governance for enterprises - metadata and insight interoperability between tools and platforms, no matter the vendor
 copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2025 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
@@ -15,11 +15,33 @@ nav:
       - The Challenge: introduction/challenge.md
       - Our Solution: introduction/overview.md
       - Key Concepts: introduction/key-concepts.md
-      - Patterns:
-          - Metadata Manager: patterns/metadata-manager/overview.md
-          - Metadata Exchange: patterns/metadata-exchange/overview.md
-          - Metadata Governance: patterns/metadata-governance/overview.md
       - Try Egeria: try-egeria/overview.md
+      - Egeria's Solutions:
+            - Solutions Overview: egeria-solutions/index.md
+            - Leveraging existing estate:
+                - Leveraging existing estate: egeria-solutions/leveraging-your-estate/index.md
+                - Egeria: egeria-solutions/leveraging-egeria/overview.md
+                - Files: egeria-solutions/leveraging-files/overview.md
+                - PostgreSQL: egeria-solutions/leveraging-postgres/overview.md
+                - Unity Catalog: egeria-solutions/leveraging-unity-catalog/overview.md
+                - Apache Atlas: egeria-solutions/leveraging-apache-atlas/overview.md
+                - Apache Kafka: egeria-solutions/leveraging-apache-kafka/overview.md
+            - Evolving to the Future:
+                - Evolving to the Future: egeria-solutions/evolving-to-the-future/index.md
+                - Building data specifications: egeria-solutions/building-data-specifications/overview.md
+                - Capturing expertise: egeria-solutions/capturing-knowledge/overview.md
+                - Blueprints to delivery: egeria-solutions/solution-blueprints/overview.md
+                - Crossing data boundaries: egeria-solutions/crossing-data-boundaries/overview.md
+                - Human in the loop: egeria-solutions/human-in-loop/overview.md
+            - Accelerating Insight:
+                - Accelerating Insight: egeria-solutions/accelerating-insight/index.md
+                - Increasing Karma: egeria-solutions/increasing-karma/overview.md
+                - The Fourth Dimension: egeria-solutions/fourth-dimension/overview.md
+                - Enterprise Oracle: egeria-solutions/enterprise-oracle/overview.md
+            - Keeping Safe:
+                - Keeping Safe: egeria-solutions/keeping-safe/index.md
+                - Distributed Secrets: egeria-solutions/distributed-secrets/overview.md
+                - Proactive Cataloguing: egeria-solutions/proactive-cataloguing/overview.md
   - Using:
       - Using Overview: guides/index.md
       - User Interfaces:
@@ -57,6 +79,7 @@ nav:
               - User Interfaces: guides/planning/user-interfaces/overview.md
           - Preparing Metadata Ecosystem:
               - Metadata Valid Values: guides/planning/valid-values/overview.md
+              - Templates: guides/planning/templates/overview.md
               - Language Translations: guides/planning/translations/overview.md
               - On-boarding Organization: guides/planning/organization/overview.md
               - Governance Program: guides/planning/governance-program/overview.md
@@ -249,6 +272,13 @@ nav:
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
   - Learning:
       - Learning Overview: education/index.md
+      - Patterns of Use:
+            - Patterns of Use: patterns/index.md
+            - Metadata Manager: patterns/metadata-manager/overview.md
+            - Metadata Exchange: patterns/metadata-exchange/overview.md
+            - Metadata Governance: patterns/metadata-governance/overview.md
+            - Metadata Harvester: patterns/metadata-harvester/overview.md
+            - Metadata Insight: patterns/metadata-insight/overview.md
       - Tutorials:
           - Tutorials: education/tutorials/index.md
           - Setting up Egeria: education/tutorials/building-egeria-tutorial/overview.md
@@ -701,7 +731,6 @@ nav:
       - Configuration Document Store Connector: concepts/configuration-document-store-connector.md
       - Configuration Properties: concepts/configuration-properties.md
       - Conformance Test Server: concepts/conformance-test-server.md
-      - Connected Asset Properties: concepts/connected-asset-properties.md
       - Connection: concepts/connection.md
       - Connector: concepts/connector.md
       - Connector Broker: concepts/connector-broker.md
@@ -757,7 +786,6 @@ nav:
       - Integration Daemon: concepts/integration-daemon.md
       - Integration Group: concepts/integration-group.md
       - Integration Report: concepts/integration-report.md
-      - IsPublic: concepts/is-public.md
       - IT Profile Role: concepts/it-profile-role.md
       - IT Profile: concepts/it-profile-role.md
       - Javadoc: concepts/javadoc.md

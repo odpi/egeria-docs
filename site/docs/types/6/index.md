@@ -29,10 +29,6 @@ The annotations from a particular run of a survey action service are grouped tog
 * **[0660 Measurements](0660-Resource-Measures.md)**
 * **[0690 Request for Action](0690-Request-for-Action.md)**
 
-In addition, there are types for the manual design of data schemas as part of a data specification.
-
-* **[0617 Data Field Modelling](0617-Data-Field-Modelling.md)**
-
 ![UML Packages](area-6-discovery-overview.svg)
 
 Egeria's [Survey Action Framework (SAF)](/frameworks/osf/overview) supports the development and execution of [survey action services](/concepts/survey-action-services).  These services run in the [Survey Action OMES](/services/omes/survey-action/overview) hosted in an [Engine Host](/concepts/engine-host).  Survey action services use connectors from the [Open Connector Framework (OCF)](/frameworks/ocf/overview) to connect to the data assets and access the known metadata about them.

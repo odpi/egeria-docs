@@ -39,6 +39,7 @@ The rest of this *Planning Guide* assumes you are familiar with the basic concep
 * *Preparing Metadata Ecosystem* describes the types of metadata that should be populated in your open metadata ecosystem to allow it to operate effectively.  This metadata can be added directly into your metadata repository, or added to your own content packs to load across multiple Egeria deployments.
 
     * [Metadata Valid Values](/guides/planning/valid-values/overview) to control the values used in open metadata elements.
+    * [Templates](/guides/planning/templates/overview) to simplify the creation of open metadata elements.
     * [Multiple Language Translations](/guides/planning/translations/overview) to support multiple languages in the metadata elements.
     * [Onboarding Organization](/guides/planning/organization/overview) to define the people, their roles and userIds and how they are organized into teams.  This is used to control access to metadata and associated resources, route stewardship actions to the appropriate individuals/teams and synchronize organizational information between systems. 
     * [Governance Program](/guides/planning/governance-program/overview) to coordinate the various governance activities in the organization.

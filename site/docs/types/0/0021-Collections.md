@@ -59,7 +59,7 @@ The *RootCollection* collection at the root of the collection hierarchy is calle
 The classifications associated with *Collection* allow it to be specialized for particular uses.  They help when searching for collections for specific uses.
 
 * [*HomeCollection*](#homecollection-classification) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
-* [*Namespace*](#folder-classification) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
+* [*Namespace*](#namespace-classification) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
 * [*ResultsSet*](#resultsset-classification) means the collection is a set of related results.
 * [*RecentAccess*](#recentaccess-classification) means the collection is a set of elements that have been recently accesses by a user.
 * [*WorkItemList*](#workitemlist-classification) means the collection is a set of elements that have been recently accesses by a user.

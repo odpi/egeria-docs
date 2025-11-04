@@ -3,5 +3,5 @@
 
 # Saved files
 
-In V5.0 the code when through a simplification and a number of features were removed.  
+In V5.x the code when through a simplification and a number of features were removed.  
 This directory contains the documentation from these capabilities in case we need to reinstate any of the modules in the future.

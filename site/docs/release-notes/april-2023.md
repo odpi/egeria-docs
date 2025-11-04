@@ -19,7 +19,7 @@ The [Integration Daemon](/concepts/integration-daemon){target=blank} can now be 
 
 ## Integration Reports
 
-When an [integration connector](/concepts/integration-connector){target=blank} is running, is [integration service](/services/omis){target=blank} is monitoring the changes that the connector is making to open metadata and publishing them in an [integration report](/concept/integration-report){target=blank}.
+When an [integration connector](/concepts/integration-connector){target=blank} is running, is [integration service](/services/omis){target=blank} is monitoring the changes that the connector is making to open metadata and publishing them in an [integration report](/concepts/integration-report){target=blank}.
 
 ## Connectors
 

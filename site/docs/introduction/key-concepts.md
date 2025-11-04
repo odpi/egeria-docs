@@ -3,9 +3,41 @@
 
 # Key concepts of the Egeria technology
 
-The functions of the [open metadata ecosystem](/introduction/challenge/#the-open-metadata-ecosystem) are complex, covering many use case.  However, not all of these functions are needed initially. The software is therefore organized into components, making it easier to start simple and deploy more capability over time - as the needs of your organization changes and grows.  It possible to dynamically activate and deactivate capability in the open metadata ecosystem through APIs, allowing the adoption of a self-service and local ownership approach.  This way, an organization does not need a large IT team to manage the deployment.
+The capabilities of the [open metadata ecosystem](/introduction/challenge/#the-open-metadata-ecosystem) cover many use cases.  Fortunately, not all of Egeria's capabilities are needed initially. The software is therefore organized into components, making it easier to start simple and deploy more capability over time - as the needs of your organization changes and grows.  It possible to dynamically activate and deactivate capability in the open metadata ecosystem through APIs, allowing the adoption of a self-service and local ownership approach.  This way, an organization does not need a large IT team to manage the deployment.
 
-This type of metadata management requires some new terminology for the different types of components, their purpose and how they connect together.  The [overview](/introduction/overview) introduced the concept of the [OMAG Server Platform](/concepts/omag-server-platform) deployed multiple types in different processing centres and running [OMAG Servers](/concepts/omag-server).  These OMAG Servers are specialized to perform specific functions. Figure 1 shows the different types of OMAG Servers and how they work together.
+This type of metadata management does, however, require some new terminology to describe the different types of components, their purpose and how they connect together.  
+
+### Open Metadata Types
+
+Egeria defines a set of [open metadata types](/types) that provide the common language that is used to represent metadata in the Egeria ecosystem.  This type system is deliberately comprehensive to maximize the opportunity of seamless metadata exchange.  The type system is also extensible, so it is able to support any special needs of your organization.
+
+### Frameworks
+
+Egeria's [frameworks](/frameworks) define the interfaces and protocols for pluggable components that enable Egeria to run in many environments and connect to many types of technologies. These pluggable components are called [connectors](/concepts/connector).  Egeria has a [catalog of pre-built connectors](/connectors) to help speed up your adoption of open metadata and governance.
+
+### Services
+
+Egeria's [services](/services) provide specialized APIs and event exchange protocols to support the major types of tools and platforms.
+
+### Features
+
+Finally, as metadata is exchanged, the duplication, gaps and inconsistencies of the metadata in an organization's tools and platforms is exposed.  Egeria provides [metadata governance features](/features) to dynamically improve the quality of your metadata in an ongoing and systematic manner.
+
+### OMAG Server Platform
+
+Egeria's platform (the blue boxes) is called the [*Open Metadata and Governance (OMAG) Server Platform*](/concepts/omag-server-platform).
+
+The OMAG Server Platform is a multi-tenant platform that supports horizontal scale-out in Kubernetes and yet is light enough to run as an edge server on a Raspberry Pi. This platform is used to host the actual metadata integration and automation capabilities.
+
+### OMAG Servers
+
+Within an instance of the *OMAG Server Platform*, one or more [*OMAG Servers*](/concepts/omag-server) can be configured (the orange circles). These servers are collections of activated integration services that host connectors to the different technologies with which Egeria exchanges metadata.
+
+!!! summary "Summary"
+The OMAG Server Platforms and their variety of OMAG Servers provide an enterprise metadata service of data and IT resources that are transparently assessed, governed and consumed through many types of tools and technologies. The metadata is not physically-centralized, but instead it is composed of metadata repositories from many tools and technologies that are operating together via Egeria.
+
+
+
 
 ![Figure 1](egeria-solution-components.svg)
 > **Figure 1:** This picture shows the different types of Egeria's OMAG servers and how they are connected together in a solution.  They are not all required. You choose which ones you need, and how many of them to run, to match the needs of your organization.  The servers are organized into three rings.  In the inner-ring (labeled *Integrated Metadata*), a Metadata Access Server, Repository Proxy and Conformance Test Server are members of an *Open Metadata Repository Cohort*, or "cohort" for short, communicating via Egeria's peer-to-peer protocols. In the next ring out, called *Integrated Governance*, are the Governance Servers connected to the Metadata Access Server in order to access metadata in the open metadata ecosystem. In the outer ring, called *Governance Solution*, are the View Servers, also connected to the Metadata Access Server.

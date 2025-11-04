@@ -3,7 +3,7 @@
 
 # Governance Zoning
 
-A *Governance Zone* defines a list of elements, such as [assets](/concepts/asset)  or [digital products](/concept/digital-product) that are grouped together for a specific purpose. It may represent elements that are consumed or managed in a particular way; or should only be visible to particular groups of users, or processed by particular types of engine. There may also be zones used to indicate that the element is in a particular state.  
+A *Governance Zone* defines a list of elements, such as [assets](/concepts/asset)  or [digital products](/concepts/digital-product) that are grouped together for a specific purpose. It may represent elements that are consumed or managed in a particular way; or should only be visible to particular groups of users, or processed by particular types of engine. There may also be zones used to indicate that the element is in a particular state.  
 
 ![Figure 1](/features/governance-zoning/types-of-zones.svg)
 > **Figure 1:** Examples of types of zones

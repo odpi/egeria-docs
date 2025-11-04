@@ -56,6 +56,6 @@ If a desired request type can not be supported by the existing governance servic
 
 ??? example "Governance services supplied with Egeria"
     * [Governance Action Services](/concepts/governance-action-service)
-    * [Survey Action Services](/concept/survey-action-service)
+    * [Survey Action Services](/concepts/survey-action-service)
     * [Repository Governance Services](/concepts/repository-governance-service)
 

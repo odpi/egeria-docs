@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16" pages="3">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5" pages="4">
   <diagram name="user-profiles" id="S6YDufkIdyIpahQNR3DB">
     <mxGraphModel dx="2061" dy="2303" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1141,6 +1141,53 @@
         </mxCell>
         <mxCell id="-Qa6PFh0Tm7usdp8Be3i-1" value="Spreadsheets&lt;div&gt;Documents&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;GitHub&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" vertex="1" parent="1">
           <mxGeometry x="1930" y="800" width="250" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="S6ta5DexFinxgFngQ8VY" name="leveraging-your-estate">
+    <mxGraphModel dx="2893" dy="1147" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="heJpnBVqDBdmRoWURR3R-1" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=31.810041532901437;rotation=-45;flipH=1;flipV=1;fillColor=#a0522d;fontColor=#ffffff;strokeColor=#FFFF99;" vertex="1" parent="1">
+          <mxGeometry x="459" y="417.00000000000006" width="57.45" height="135.25" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-2" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=38;rotation=15;fillColor=#ffcc99;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="315.27" y="441.12" width="513" height="50.65" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-3" value="" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=38;rotation=15;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="-160.94" y="316.34" width="532.58" height="50.65" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-4" value="Data" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=11.248858645072517;rotation=15;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="726" y="437" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-5" value="Systems" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=15;verticalAlign=top;rotation=15;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="669" y="395" width="72" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-6" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rotation=20;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="717" y="347" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-7" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rotation=20;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="758.9959936115587" y="394.0010807734623" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-8" value="People" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=15;" vertex="1" parent="1">
+          <mxGeometry x="755" y="359" width="55" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-9" value="Egeria" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontFamily=Verdana;fontStyle=2;fontSize=26;rotation=15;" vertex="1" parent="1">
+          <mxGeometry x="55.349999999999994" y="313" width="100" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="492" y="489" width="43" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-11" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="496.5" y="493.5" width="34" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="501.5" y="498.5" width="24" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="heJpnBVqDBdmRoWURR3R-13" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="507" y="503" width="14" height="14" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

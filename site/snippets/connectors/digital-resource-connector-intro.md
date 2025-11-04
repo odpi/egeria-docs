@@ -23,7 +23,7 @@ Since different users may be granted different levels of access to the digital r
 
 ## How are digital resource connectors used?
 
-Each Open Metadata Access Service (OMAS) has a client called the *ConnectedAssetClient* that can be used to create an instance of a digital resource connector for an asset.   This connector can then be used in a Java application, or by other connectors, such as [Integration Connectors](/concepts/integration-connector) and [Governance Services](/concept/governance-service), to access the digital resource.
+Each Open Metadata Access Service (OMAS) has a client called the *ConnectedAssetClient* that can be used to create an instance of a digital resource connector for an asset.   This connector can then be used in a Java application, or by other connectors, such as [Integration Connectors](/concepts/integration-connector) and [Governance Services](/concepts/governance-service), to access the digital resource.
 
 ![Digital Resource Connector](/connectors/resource/digital-resource-connector.svg)
 

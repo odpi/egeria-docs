@@ -34,7 +34,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
         The request body is a map of property names to values that are passed directly to XTDB when the sever starts up.
 
         ??? info "For Egeria releases before version 5.0 ...
-            The XTDB connector is located in its own git repository [egeria-connector-xtdb.git](https://github.com/odpi/egeria-connector-xtdb).  The JAR file needs to be built from this repository and placed the OMAG Server Platform's class path.  It is configured in the Metadata Access Store using the follwoing command: 
+            The XTDB connector is located in its own git repository [egeria-connector-xtdb.git](https://github.com/odpi/egeria-connector-xtdb).  The JAR file needs to be built from this repository and placed the OMAG Server Platform's class path.  It is configured in the Metadata Access Store using the following command: 
             ```
             POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/plugin-repository/connection
             ```
@@ -62,7 +62,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
         POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/local-graph-repository
         ```
     
-    If no request body is used, metadata will be stored on the local disk.  It is possible to pass a set of storage properties to JanusGraph to enalbe it to use a different persistance service.  However, the repository uses local transactions and is does not support multiple instances of the same server/repository to be active at one time. 
+    If no request body is used, metadata will be stored on the local disk.  It is possible to pass a set of storage properties to JanusGraph to enable it to use a different persistence service.  However, the repository uses local transactions and is does not support multiple instances of the same server/repository to be active at one time. 
 
 === "in-memory"
 

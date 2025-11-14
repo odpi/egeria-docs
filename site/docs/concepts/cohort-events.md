@@ -13,6 +13,10 @@ The motivation for sending cohort events between the members of the cohort is to
 
 ## Cohort topics
 
+A *cohort topic* is used to pass events between the cohort members.
+
+![Cohort Topics](cohort-topic.svg)
+
 A cohort can be configured to use:
 
 - One cohort event topic for all types of cohort events

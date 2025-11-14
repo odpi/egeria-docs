@@ -5,16 +5,7 @@
 
 --8<-- "snippets/getting-started.md"
 
-Egeria is a big project tackling a complex problem.  There is a lot to learn. The choices below give you the opportunity to target your learning to both your immediate and long term needs. 
-
-## Patterns of Use
-
-These pages describe how the Egeria technology supports different patterns of use.
-
-* [Metadata Manager](/patterns/metadata-manager/overview) - describing your digital resources
-* [Metadata Exchange](/patterns/metadata-exchange/overview) - creating interoperable metadata that drives up the value of your tools and teams.
-* [Metadata Governance](/patterns/metadata-governance/overview) - validating, augmenting, analysing, linking and deduping your metadata.
-
+Egeria is a big project tackling a complex problem.  There is a lot to learn. The choices below give you the opportunity to target your learning to both your immediate and long term needs.
 
 ## Individual tutorials
 

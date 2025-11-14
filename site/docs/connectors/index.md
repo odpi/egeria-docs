@@ -34,18 +34,17 @@ The connectors that support the security of the open metadata ecosystem are:
 ### Metadata Security Connectors
 
 The Metadata Security Connectors manage authorization requests for the open metadata and governance servers.
-Strictly speaking there are two types of metadata security connectors:
+Strictly speaking there are two types of metadata security connectors: *Platform Metadata Security Connectors* and *Server Metadata Security Connectors*. 
 
-* *Platform Metadata Security Connectors* manage authorization of OMAG Server Platform's services.    
-* *Server Metadata Security Connectors* manage authorization requests for the OMAG Server's services. 
-
-==== Platform Metadata Security Connectors
+=== "Platform Metadata Security Connectors"
 
     --8<-- "snippets/connectors/platform-metadata-security-connector-intro.md"
  
-==== Server Metadata Security Connectors
+=== "Server Metadata Security Connectors"
 
     --8<-- "snippets/connectors/server-metadata-security-connector-intro.md"
+
+----
 
 Egeria has a single metadata security connector that implements both interfaces:
 
@@ -64,9 +63,9 @@ The connectors that support the exchange and maintenance of metadata help to acc
 
 * [File connectors](#files) work with different types of files.
 * [JDBC Database connectors](#relational-databases) make use of the JDBC standards to work with different types of relational databases.
+* [Unity Catalog connectors](#unity-catalog) work with the topics and/or events passing through the Apache Kafka event broker.
 * [Apache Kafka connectors](#apache-kafka) work with the topics and/or events passing through the Apache Kafka event broker.
 * [Apache Atlas connectors](#apache-atlas) work with an Apache Atlas server.
-* [Strimzi connector](#strimzi) works with the cloud-based Apache Kafka deployment called Strimzi.
 * [Open API Specification connectors](#open-api-specification) extract metadata about APIs through the Open API interfaces provided through the Swagger API.
 * [Open Lineage Event connectors](#open-lineage-events) works with the open lineage event standard.
 
@@ -105,6 +104,13 @@ Files provide storage for many types of data.  They are organizes into folders (
 * The [JDBC Resource Connector](/connectors/resource/jdbc-resource-connector) is for accessing a database via the JDBC DataSource interface.
 * The [JDBC Integration Connector](/connectors/integration/jdbc-integration-connector) automatically maintains the open metadata instances on a database server via JDBC. This includes the database schemas, tables, columns, primary keys and foreign keys.                                                                                      
 
+### PostgreSQL
+
+The PostgreSQL connectors extend the |JDBC connector capability by using PostgreSQL specific APIs and queries to its catalog:
+
+
+
+
 ### Unity Catalog
 
 ---8<-- "snippets/systems/unity-catalog-intro.md"
@@ -134,10 +140,6 @@ The Apache Atlas connectors provide a suite of function that integrates an Apach
 * [Apache Atlas REST Connector](/connectors/apache-atlas/apache-atlas-rest-connector) is a [digital resource connector](/concepts/digital-resource-connector) that acts as a Java client to the Apache Atlas Server REST API.  It is used by the other Apache Atlas connectors.
 * [Apache Atlas Survey Action Service](/connectors/apache-atlas/apache-atlas-survey-action-service) reviews the types and instances stored in an Apache Atlas Server and creates a [survey report](/concepts/survey-report).   This connector helps to provide insight into the content of the Apache Atlas server to determine if it contains valuable metadata that should be integrated into the open metadata ecosystem.  This connector can also be configured to create a graph schema for the server that describes is supported types and how they link together.
 * [Apache Atlas Integration Connector](/connectors/apache-atlas/apache-atlas-catalog-integration-connector) automatically catalogues the content of an Apache Atlas Server into the open metadata ecosystem. It may also be configured to push selected open metadata into the Apache Atlas Server, such as glossary terms, tags and classifications.
-
-### Strimzi
-
-* [Strimzi Monitor topic integration connector](/connectors/integration/strimzi-monitor-integration-connector) automatically maintains the open metadata instances for the topics hosted in [Strimzi :material-dock-window:](https://strimzi.io){ target=strimzi }.                                                                                         
 
 ### Open API Specification
 
@@ -184,19 +186,9 @@ The table below lists the repository connectors supporting the native open metad
 | Native Repository Connector                                                         | Description                                                                                                                                                                                                                                                                                    |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [PostgreSQL OMRS Repository Connector](/connectors/repository/postgres/overview)    | provides a native repository for a metadata server using [PostgreSQL :material-dock-window:](https://www.postgresql.org/){ target=postgres } as the backend.                                                                                                                                   |
-| [XTDB OMRS Repository Connector](/connectors/repository/xtdb)                       | provides a native repository for a metadata server that supports historical queries, using [XTDB :material-dock-window:](https://xtdb.com){ target=xtdb } as the persistent store.                                                                                                             |
 | [In-memory OMRS Repository Connector](/connectors/repository/in-memory/overview)    | provides a simple native repository implementation that "stores" metadata in HashMaps within the JVM; it is used for testing, or for environments where metadata maintained in other repositories needs to be cached locally for performance/scalability reasons.                              |
 | [Read-only OMRS Repository Connector](/connectors/repository/read-only/overview)    | provides a native repository implementation that does not support the interfaces for create, update, delete; however, it does support the search interfaces and is able to cache metadata -- this means it can be loaded with open metadata archives to provide standard metadata definitions. |
-| [JanusGraph OMRS Repository Connector](/connectors/repository/janus-graph/overview) | provides a native repository for a metadata server using [JanusGraph :material-dock-window:](https://janusgraph.org){ target=janus } as the backend.                                                                                                                                           |
 
-The table below lists the repository connectors that act as an adapter for third party metadata repositories.
-
-| Adapter Repository Connectors                                                                                                                                        | Description                                                                                                                                                                                              |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [IBM Information Governance Catalog (IGC) OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh } | implements read-only connectivity to the metadata repository within the [IBM InfoSphere Information Server :material-dock-window:](https://www.ibm.com/analytics/information-server){ target=ibm } suite |
-| [SAS Viya OMRS Repository Connector :material-github:](https://github.com/odpi/egeria-connector-sas-viya){ target=gh }                                               | implements metadata exchange to the metadata repository within the [SAS Viya Platform :material-dock-window:](https://support.sas.com/en/software/sas-viya.html){ target=sas }                           |
-| [Sample Repository proxy (adapter) using polling to access files :material-github:](https://github.com/odpi/egeria-connector-repository-file-sample){ target=gh }    | implements metadata exchange to a file system using a polling pattern and an embedded OMRS repository.                                                                                                   |
-| [HMS Repository proxy (adapter) using polling to access HMS Tables :material-github:](https://github.com/odpi/egeria-connector-hivemetastore){ target=gh }           | implements metadata exchange to a Hive metastore using a polling pattern and an embedded OMRS repository.                                                                                                |
 
 ??? education "Further information relating to Repository and Event Mapper connectors"
 
@@ -209,9 +201,8 @@ The table below lists the repository connectors that act as an adapter for third
 
 ---8<-- "snippets/connectors/configuration-document-store-connector-intro.md"
 
-There are two implementations of the configuration document store connector provided by Egeria: one for an encrypted store (default) and the other for a plain text store.
+This is the standard implementation of the configuration document store connector provided by Egeria.
 
-* **[Encrypted File Configuration Store Connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector){ target=gh }** stores each configuration document as an encrypted JSON file.
 
 * **[File Configuration Store :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector){ target=gh }** stores each configuration document as a clear text JSON file.
 

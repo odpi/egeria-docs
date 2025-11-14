@@ -13,10 +13,6 @@ Software capabilities are the capabilities implemented in software and supported
 
 *SoftwareCapability* is a [*Referenceable*](/types/0/0010-Base-Model) that adds the following attributes:
 
-* *name* - display name of the capability.
-* *description* - description of the capability.
-* *capabilityType* - type of the capability - for example the product name.
-* *capabilityVersion* - version of the capability.
 * *patchLevel* - any patches applied to the version.
 * *source* - supplier of the capability.
 * *deployedImplementationType* - the class of technology that is used in its implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
@@ -29,41 +25,45 @@ The *SoftwareServerCapability* describes a capability that is implemented in a [
 
 These are the subtypes of software server capabilities defined in the open metadata types:
 
-- [*AccessControlManager*](/types/0/0050-Applications-and-Processes/#accesscontrolmanager) - A capability that manages access to specific resources.
-- [*APIManager*](/types/0/0050-Applications-and-Processes/#apimanager) - A capability that manages callable APIs that typically delegate onto Software Services.
-- [*Application*](/types/0/0050-Applications-and-Processes/#application) - A capability supporting a specific business function.
-- [*Catalog*](/types/0/0050-Applications-and-Processes/#catalog) - A capability that manages collections of descriptions about people, places, digital assets, things, ...
-- [*DataManager*](/types/0/0050-Applications-and-Processes/#datamanager) - A capability that manages collections of data.
-    - [*DatabaseManager*](/types/0/0050-Applications-and-Processes/#databasemanager) - A capability that manages data organized as relational schemas.  Also known as a Database Management System (DBMS).
-- [*Engine*](/types/0/0055-Data-Processing-Engines/#engine) - A programmable engine for running automated processes.
-    - [*WorkflowEngine*](/types/0/0055-Data-Processing-Engines/#workflowengine) - An engine capable of running a mixture of human and automated tasks as part of a workflow process.
-    - [*ReportingEngine*](/types/0/0055-Data-Processing-Engines/#reportingengine) - An engine capable of creating reports by combining information from multiple data sets.
-    - [*AnalyticsEngine*](/types/0/0055-Data-Processing-Engines/#analyticsengine) - An engine capable of running analytics models using data from one or more data sets.
-    - [*DataMovementEngine*](/types/0/0055-Data-Processing-Engines/#datamovementengine) - An engine capable of copying data from one data store to another.
-    - [*DataVirtualizationEngine*](/types/0/0055-Data-Processing-Engines/#datavirtualizationengine) - An engine capable of creating new data sets by dynamically combining data from one or more data stores or data sets.
-- [*EventBroker*](/types/0/0050-Applications-and-Processes/#eventbroker) - A capability that supports event-based services, typically around topics.
-- [*SoftwareService*](/types/0/0057-Software-Services/#softwareservice) - A capability that provides externally callable functions to other services.
-    - [*ApplicationService*](/types/0/0057-Software-Services/#applicationservice) - A software service that supports a reusable business function.
-    - [*MetadataIntegrationService*](/types/0/0057-Software-Services/#metadataintegrationservice) - A software service that exchanges metadata between servers.
-    - [*MetadataAccessService*](/types/0/0057-Software-Services/#metadataaccessservice) - A software service that provides access to stored metadata.
-    - [*EngineHostingService*](/types/0/0057-Software-Services/#enginehostingservice) - A software service that provides services that delegate to a hosted engine.
-    - [*UserViewService*](/types/0/0057-Software-Services/#userviewservice) - A software service that provides user interfaces access to digital resources.
-- [*NetworkGateway*](/types/0/0070-Networks-and-Gateways/#networkgateway) - A connection point enabling network traffic to pass between two networks.
-- [*EnterpriseAccessLayer*](/types/0/0057-Software-Services/#enterpriseaccesslayer) - Repository services for the Open Metadata Access Services (OMAS) supporting federated queries and aggregated events from the connected cohorts.
-- [*CohortMember*](/types/0/0057-Software-Services/#cohortmember) - A capability enabling a server to access an open metadata repository cohort.
-- [*GovernanceEngine*](/types/4/0461-Governance-Engines/#governanceengine) - A collection of related governance services of the same type.
+- [*AuthorizationManager*](/types/0/0050-Applications-and-Processes) - A capability that manages access to specific resources.
+- [*APIManager*](/types/0/0050-Applications-and-Processes) - A capability that manages callable APIs that typically delegate onto Software Services.
+    - [*RESTAPIManager*](/types/0/0050-Applications-and-Processes) - A capability that manages callable REST APIs that typically delegate onto Software Services.
+- [*Application*](/types/0/0050-Applications-and-Processes) - A capability supporting a specific business function.
+- [*ChangeManagementLibrary*](/types/0/0056-Resource-Managers) - A software capability that is capturing reports that describe planned and unplanned changes to the IT systems, and managing them through their lifecycle.
+- [*CohortMember*](/types/0/0057-Software-Services) - A capability enabling a server to access an open metadata repository cohort.
+- [*ContentCollectionManager*](/types/0/0056-Resource-Managers) - A manager of controlled documents and related media.
+- [*DataManager*](/types/0/0050-Applications-and-Processes) - A capability that manages collections of data.
+    - [*DatabaseManager*](/types/0/0050-Applications-and-Processes) - A capability that manages data organized as relational schemas.  Also known as a Database Management System (DBMS).
+    - [*DatabaseAccessManager*](/types/0/0050-Applications-and-Processes) - A capability that manages data organized as relational schemas.  Also known as a Database Management System (DBMS).
+- [*Engine*](/types/0/0055-Data-Processing-Engines/) - A programmable engine for running automated processes.
+    - [*WorkflowEngine*](/types/0/0055-Data-Processing-Engines) - An engine capable of running a mixture of human and automated tasks as part of a workflow process.
+    - [*ReportingEngine*](/types/0/0055-Data-Processing-Engines) - An engine capable of creating reports by combining information from multiple data sets.
+    - [*AnalyticsEngine*](/types/0/0055-Data-Processing-Engines) - An engine capable of running analytics models using data from one or more data sets.
+    - [*DataMovementEngine*](/types/0/0055-Data-Processing-Engines) - An engine capable of copying data from one data store to another.
+    - [*DataVirtualizationEngine*](/types/0/0055-Data-Processing-Engines) - An engine capable of creating new data sets by dynamically combining data from one or more data stores or data sets.
+- [*EventBroker*](/types/0/0050-Applications-and-Processes) - A capability that supports routing of events to subscribers, typically around topics.
+- [*EventManager*](/types/0/0050-Applications-and-Processes) - A capability that supports event-based services, based on incoming events.
+- [*InventoryCatalog*](/types/0/0050-Applications-and-Processes) - A capability that manages collections of descriptions about people, places, digital assets, things, ...
+- [*FileSystem*](/types/0/0056-Resource-Managers) - A capability that supports a store of files organized into a hierarchy of file folders for general use.
+- [*FileManager*](/types/0/0056-Resource-Managers) - A manager of a collection of files and folders.
+- [*GovernanceEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services of the same type.
     - [*GovernanceActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Governance Framework (OGF)](/frameworks/ogf/overview).
     - [*SurveyActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Survey Framework (OSF)](/frameworks/osf/overview).
     - [*WatchdogActionEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting the [Open Watchdog Framework (OWF)](/frameworks/owf/overview).
     - [*RepositoryGovernanceEngine*](/types/4/0461-Governance-Engines) - A collection of related governance services supporting maintenance of [Open Metadata Archives](/concepts/open-metadata-archive).
+- [*NetworkGateway*](/types/0/0070-Networks-and-Gateways) - A connection point enabling network traffic to pass between two networks.
+- [*NotificationManager*](/types/0/0056-Resource-Managers) - A software capability that is distributing events from a topic to its subscriber list.
+- [*MasterDataManager*](/types/0/0056-Resource-Managers) - A software capability that is managing the capture and reconciliation of master data entities from many sources.
+- [*SoftwareLibrary*](/types/0/0056-Resource-Managers) - A software capability that is storing software modules for use in IT systems.
+- [*SoftwareService*](/types/0/0057-Software-Services) - A capability that provides externally callable functions to other services.
+- [*SourceControlLibrary*](/types/0/0056-Resource-Managers) - A software capability that is managing versions of source code files.
+- [*UserAccessManager*](/types/0/0056-Resource-Managers) - A software capability that is controlling which resources can be accessed by a specific user.
+- [*UserAuthenticationManager*](/types/0/0050-Applications-and-Processes) - A collection of related governance services supporting maintenance of [Open Metadata Archives](/concepts/open-metadata-archive).
+- [*UserProfileManager*](/types/0/0056-Resource-Managers) - A software capability that is managing user profiles.
 
-In addition, it is possible to augment software server capabilities with the following classifications:
+In addition, it is possible to augment software capabilities with the following classification:
 
-- [*CloudService*](/types/0/0090-Cloud-Platforms-and-Services/#cloudservice) - A capability enabled for a tenant on a cloud platform.
-- [*ContentCollectionManager*](/types/0/0056-Resource-Managers/#contentcollectionmanager) - A manager of controlled documents and related media.
-- [*FileSystem*](/types/0/0056-Resource-Managers/#filesystem) - A capability that supports a store of files organized into a hierarchy of file folders for general use.
-- [*FileManager*](/types/0/0056-Resource-Managers/#filemanager) - A manager of a collection of files and folders.
-- [*NotificationManager*](/types/0/0056-Resource-Managers/#notificationmanager) - A software capability that is distributing events from a topic to its subscriber list.
+- [*CloudService*](/types/0/0090-Cloud-Platforms-and-Services) - A capability enabled for a tenant on a cloud platform.
 
 ## SupportedSoftwareCapability relationship
 

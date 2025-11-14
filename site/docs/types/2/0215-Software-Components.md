@@ -23,9 +23,13 @@ The *DeployedConnector* entity represents specialist software component called a
 
 The *EmbeddedProcess* entity describes a processing element nested within a *DeployedSoftwareComponent* entity.  Because it is transient it is possible to add the *processStartTime* and *processEndTime* properties to this entity.
 
-## TransientEmbeddedProcess
+## TransientEmbeddedProcess entity
 
 The *TransientEmbeddedProcess* entity describes an *EmbeddedProcess* entity that runs only for a short period of time.
+
+## FunctionCall entity
+
+he *FunctionCall* entity describes a call to an external function.
 
 ## ProcessHierarchy relationship
 

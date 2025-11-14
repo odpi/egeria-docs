@@ -14,7 +14,8 @@ Egeria adds the following specialized user interfaces that view metadata across 
 
 | User Interface Name                                           | Description                                                                                                                                                         |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Hey Egeria](/user-interfaces/hey-egeria/overvew)             | Command line services and visualizations for technical and data professionals working with the open metadata ecosystem or managing Egeria's infrastructure.         |  
+| [Dr.Egeria](/user-interfaces/dr-egeria/overview)              | A markdown processor that can be used to create, update and delete open metadata and to create reports.                                                             |  
+| [Hey Egeria](/user-interfaces/hey-egeria/overview)            | Command line services and visualizations for technical and data professionals working with the open metadata ecosystem or managing Egeria's infrastructure.         |  
 | [Mermaid Diagrams](/user-interfaces/mermaid/overvew)          | Markdown based diagrams showing collections of linked metadata elements that can be rendered in a JavaScript display such as Jupyter Notebooks and drawio diagrams. |  
 | [Egeria Explorers](/user-interfaces/brain-explorers/overview) | A cloud-based graphical interface for exploring Egeria's [Open Metadata Type System](/types) and its [Content Packs](/content-packs).                               |  
 

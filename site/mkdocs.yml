@@ -2,7 +2,7 @@
 # Copyright Contributors to the Egeria project.
 
 site_name: The Egeria Project
-site_description: Open metadata and governance for enterprises - metadata and insight interoperability between tools and platforms, no matter the vendor
+site_description: Metadata and insight interoperability between people, tools and platforms
 copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2025 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
@@ -12,20 +12,26 @@ edit_uri: ""
 nav:
   - Home: index.md
   - Overview:
-      - The Challenge: introduction/challenge.md
-      - Our Solution: introduction/overview.md
-      - Key Concepts: introduction/key-concepts.md
-      - Try Egeria: try-egeria/overview.md
+      - Welcome: introduction/index.md
+      - Background:
+            - The Challenge: introduction/challenge.md
+            - Our Solution: introduction/overview.md
+      - Egeria Workspaces:
+            - Egeria Workspaces: egeria-workspaces/index.md
+            - Quick start: egeria-workspaces/quick-start/overview.md
+            - Optional runtimes: egeria-workspaces/optional-runtimes/overview.md
       - Egeria's Solutions:
             - Solutions Overview: egeria-solutions/index.md
             - Leveraging existing estate:
                 - Leveraging existing estate: egeria-solutions/leveraging-your-estate/index.md
                 - Egeria: egeria-solutions/leveraging-egeria/overview.md
                 - Files: egeria-solutions/leveraging-files/overview.md
+                - Open Lineage: egeria-solutions/leveraging-open-lineage/overview.md
                 - PostgreSQL: egeria-solutions/leveraging-postgres/overview.md
                 - Unity Catalog: egeria-solutions/leveraging-unity-catalog/overview.md
                 - Apache Atlas: egeria-solutions/leveraging-apache-atlas/overview.md
                 - Apache Kafka: egeria-solutions/leveraging-apache-kafka/overview.md
+                - Open APIs: egeria-solutions/leveraging-apis/overview.md
             - Evolving to the Future:
                 - Evolving to the Future: egeria-solutions/evolving-to-the-future/index.md
                 - Building data specifications: egeria-solutions/building-data-specifications/overview.md
@@ -42,6 +48,14 @@ nav:
                 - Keeping Safe: egeria-solutions/keeping-safe/index.md
                 - Distributed Secrets: egeria-solutions/distributed-secrets/overview.md
                 - Proactive Cataloguing: egeria-solutions/proactive-cataloguing/overview.md
+      - Patterns of Use:
+            - Patterns of Use: patterns/index.md
+            - Metadata Manager: patterns/metadata-manager/overview.md
+            - Organization Engagement: patterns/metadata-engagement/overview.md
+            - Information Exchange: patterns/metadata-exchange/overview.md
+            - Active Governance: patterns/metadata-governance/overview.md
+            - Harvest and Publish: patterns/metadata-harvester/overview.md
+            - Agents of Insight: patterns/metadata-insight/overview.md
   - Using:
       - Using Overview: guides/index.md
       - User Interfaces:
@@ -49,28 +63,6 @@ nav:
           - Hey Egeria: user-interfaces/hey-egeria/overview.md
           - Graph Visualization: user-interfaces/mermaid/overview.md
           - Explorers: user-interfaces/brain-explorers/overview.md
-      - Features:
-          - Features Overview: features/index.md
-          - Anchor Management: features/anchor-management/overview.md
-          - Cohort Operation: features/cohort-operation/overview.md
-          - Data Quality: features/data-quality/overview.md
-          - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
-          - Duplicate Management: features/duplicate-management/overview.md
-          - Effectivity Dates: features/effectivity-dates/overview.md
-          - External Identifiers: features/external-identifiers/overview.md
-          - External References: features/external-references/overview.md
-          - Governance Zoning: features/governance-zoning/overview.md
-          - Incident Reporting: features/incident-reporting/overview.md
-          - Integrated Cataloguing: features/integrated-cataloguing/overview.md
-          - Lineage Management: features/lineage-management/overview.md
-          - Metadata Archiving: features/metadata-archiving/overview.md
-          - Metadata Provenance: features/metadata-provenance/overview.md
-          - Metadata Security: features/metadata-security/overview.md
-          - People, Roles and Organizations: features/people-roles-organizations/overview.md
-          - Reference Data Management: features/reference-data-management/overview.md
-          - Synchronized Access Control: features/synchronized-access-control/overview.md
-          - Templated Cataloguing: features/templated-cataloguing/overview.md
-          - User Feedback: features/user-feedback/overview.md
       - Planning Guide:
           - Planning Guide: guides/planning/index.md
           - Planning Deployment:
@@ -126,6 +118,10 @@ nav:
               - Relational Databases:
                   - JDBC DataSource API: connectors/resource/jdbc-resource-connector.md
                   - Catalog JDBC Database: connectors/integration/jdbc-integration-connector.md
+                  - PostgreSQL:
+                        - Metadata Synchronization: connectors/databases/postgres-database-server-integration-connector.md
+                        - Survey PostgreSQL Server: connectors/databases/postgres-database-server-survey-action-service.md
+                        - Survey PostgreSQL Database: connectors/databases/postgres-database-survey-action-service.md
               - Unity Catalog:
                   - Unity Catalog Overview: connectors/unity-catalog/index.md
                   - Call API: connectors/unity-catalog/resource-connector.md
@@ -139,8 +135,6 @@ nav:
                   - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
                   - Catalog Kafka Topics: connectors/integration/kafka-monitor-integration-connector.md
                   - Audit Kafka Topics: connectors/integration/kafka-topics-audit-integration-connector.md
-              - Strimzi Topics:
-                  - Catalog Topics: connectors/integration/strimzi-monitor-integration-connector.md
               - Apache Atlas Server:
                   - Call API: connectors/apache-atlas/apache-atlas-rest-connector.md
                   - Survey: connectors/apache-atlas/apache-atlas-survey-action-service.md
@@ -162,11 +156,6 @@ nav:
                   - Open Lineage Events from Governance Action: connectors/integration/governance-action-open-lineage-integration-connector.md
               - Open Metadata Repositories:
                   - PostgreSQL: connectors/repository/postgres/overview.md
-                  - XTDB:
-                      - XTDB OMRS Repository Connector: connectors/repository/xtdb/index.md
-                      - Upgrading the XTDB Connector: connectors/repository/xtdb/upgrade.md
-                      - XTDB Connector Performance: connectors/repository/xtdb/performance.md
-                  - JanusGraph: connectors/repository/janus-graph/overview.md
                   - In-memory: connectors/repository/in-memory/overview.md
                   - Read-only: connectors/repository/read-only/overview.md
               - Open Metadata Archive Store:
@@ -179,11 +168,6 @@ nav:
               - Open Metadata Topic:
                   - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
                   - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
-              - IBM Information Governance Catalog (IGC): connectors/repository/igc/overview.md
-              - SAS Viya: connectors/repository/sas-viya/overview.md
-              - Hive Metastore (HMS): connectors/repository/hms/overview.md
-              - Sample File OMRS Proxy Repository Connector: connectors/repository/file-sample-omrs-connector/overview.md
-              - Repository proxy embedded repository: connectors/repository/repository-proxy-embedded-repository
           - Template Catalog:
               - Template Catalog Overview: catalog-templates/index.md
               - Unity Catalog Templates: catalog-templates/unity-catalog-templates.md
@@ -201,6 +185,7 @@ nav:
               - Integration Connectors: guides/developer/integration-connectors/overview.md
               - Survey Action Services: guides/developer/survey-action-services/overview.md
               - Governance Action Services: guides/developer/governance-action-services/overview.md
+              - Watchdog Action Services: guides/developer/watchdog-action-services/overview.md
               - Repository Governance Services: guides/developer/repository-governance-services/overview.md
               - Repository Connectors: guides/developer/repository-connectors/overview.md
               - Runtime Connectors:
@@ -272,13 +257,6 @@ nav:
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
   - Learning:
       - Learning Overview: education/index.md
-      - Patterns of Use:
-            - Patterns of Use: patterns/index.md
-            - Metadata Manager: patterns/metadata-manager/overview.md
-            - Metadata Exchange: patterns/metadata-exchange/overview.md
-            - Metadata Governance: patterns/metadata-governance/overview.md
-            - Metadata Harvester: patterns/metadata-harvester/overview.md
-            - Metadata Insight: patterns/metadata-insight/overview.md
       - Tutorials:
           - Tutorials: education/tutorials/index.md
           - Setting up Egeria: education/tutorials/building-egeria-tutorial/overview.md
@@ -357,8 +335,32 @@ nav:
           - All releases: release-notes/previous.md
       - Roadmap: release-notes/roadmap.md
       - Content Status: release-notes/content-status.md
+  - Features:
+        - Features Overview: features/index.md
+        - Anchor Management: features/anchor-management/overview.md
+        - Cohort Operation: features/cohort-operation/overview.md
+        - Data Quality: features/data-quality/overview.md
+        - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
+        - Duplicate Management: features/duplicate-management/overview.md
+        - Effectivity Dates: features/effectivity-dates/overview.md
+        - External Identifiers: features/external-identifiers/overview.md
+        - External References: features/external-references/overview.md
+        - Governance Zoning: features/governance-zoning/overview.md
+        - Incident Reporting: features/incident-reporting/overview.md
+        - Integrated Cataloguing: features/integrated-cataloguing/overview.md
+        - Lineage Management: features/lineage-management/overview.md
+        - Metadata Archiving: features/metadata-archiving/overview.md
+        - Metadata Provenance: features/metadata-provenance/overview.md
+        - Metadata Security: features/metadata-security/overview.md
+        - People, Roles and Organizations: features/people-roles-organizations/overview.md
+        - Reference Data Management: features/reference-data-management/overview.md
+        - Synchronized Access Control: features/synchronized-access-control/overview.md
+        - Templated Cataloguing: features/templated-cataloguing/overview.md
+        - User Feedback: features/user-feedback/overview.md
   - Reference:
+      - Reference: reference/index.md
       - Categories of Metadata: patterns/metadata-manager/categories-of-metadata.md
+      - Standards: standards/overview.md
       - Open Metadata Types:
           - Open Metadata Type System: types/index.md
           - 0. Base:
@@ -532,7 +534,6 @@ nav:
               - Lineage Mapping: types/7/0770-Lineage-Mapping.md
               - Code Analysis: types/7/0780-Code-Analysis.md
               - Incomplete: types/7/0790-Incomplete.md
-      - Standards: standards/overview.md
       - Services:
           - Services: services/index.md
           - Fixed Services:
@@ -582,6 +583,7 @@ nav:
                   - Open Metadata Engine Services: services/omes/index.md
                   - Governance Action: services/omes/governance-action/overview.md
                   - Survey Action: services/omes/survey-action/overview.md
+                  - Watchdog Action: services/omes/watchdog-action/overview.md
                   - Repository Governance: services/omes/repository-governance/overview.md
               - Integration Services (OMIS):
                   - Open Metadata Integration Services: services/omis/index.md
@@ -649,7 +651,7 @@ nav:
           - Governance Actions (OGF): frameworks/ogf/overview.md
           - Survey Actions (SAF): frameworks/saf/overview.md
       - Conformance Test Suite:
-          - CTS Overview: guides/cts/overview.md
+          - Conformance Test Suite Overview: guides/cts/index.md
           - Platform Profiles:
               - Platform Origin: guides/cts/platform-workbench/profiles/platform-origin.md
           - Repository Profiles:
@@ -805,10 +807,12 @@ nav:
       - Metadata Repository: concepts/metadata-repository.md
       - Multi-link Relationships: concepts/uni-multi-link.md
       - Note Log: concepts/note-log.md
+      - Notification: concepts/notification.md
+      - Notification Type: concepts/notification-type.md
       - OMAG Server: concepts/omag-server.md
       - OMAG Server Platform: concepts/omag-server-platform.md
-      - OMAG Server Runtime: concepts/omag-server-runtime.md
       - OMAG Subsystem: concepts/omag-subsystem.md
+      - Open Lineage Topic: concepts/open-lineage-topic.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
       - Open Metadata Archive Store Connector: concepts/open-metadata-archive-store-connector.md
@@ -869,6 +873,8 @@ nav:
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md
       - Virtual Connection: concepts/connection.md
+      - Watchdog Action Engine: concepts/watchdog-action-engine.md
+      - Watchdog Action Service: concepts/watchdog-action-service.md
   - Practices:
       - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md
@@ -948,12 +954,12 @@ theme:
       accent: cyan
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - scheme: slate
-      accent: cyan
+        name: Switch to pink mode
+    - scheme: default
+      accent: pink
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
+        name: Switch to classic mode
   icon:
     repo: fontawesome/brands/github
   favicon: assets/favicon.ico
@@ -971,12 +977,15 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/odpi
       name: Egeria on Docker
-    - icon: fontawesome/brands/medium
-      link: https://medium.com/tag/egeria
-      name: Egeria on Medium
     - icon: fontawesome/brands/slack
       link: https://slack.lfaidata.foundation
       name: Egeria on Slack
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@egeria-project/featured
+      name: Egeria on Slack
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/egeria-project/?viewAsMember=true
+      name: Egeria on LinkedIn
 
 markdown_extensions:
   - admonition

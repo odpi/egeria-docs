@@ -5,7 +5,7 @@
 
 The *hey_egeria* command line services allow interaction with the open metadata and governance services of Egeria from a command line. It offers the ability to **tell** egeria to change something - such as a configuration setting, or open metadata elements - or to ask Egeria to **show** you something.  The result of the **show** request is a display widget.  It may be a monitor that is dynamically updated, or a set of paged information.
 
-![](view_platform_status.png)
+![Widget](view_platform_status.png)
 
 *hey_egeria* has both direct commands and a **tui** option to allow you to build the command you want from a set of navigable menus.  It is accessed via the `hey_egeria tui` command.
 

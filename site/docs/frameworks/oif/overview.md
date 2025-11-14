@@ -35,7 +35,7 @@ The context manager is responsible for setting up the integration context for th
 
 ## Framework implementation
 
-Egeria provides a full implementation of the OIF. It provides an [integration daemon](/concepts/integration-daemon) server where the integration connectors run.  There are specialist [integration services](/services/omis) that provide specialist integration contexts along with their integration context manager.
+Egeria provides a full implementation of the OIF. It provides an [integration daemon](/concepts/integration-daemon) server where the integration connectors run.  
 There are also implementations of integration connectors in the [integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors){ target=gh } module.
 
 --8<-- "snippets/abbr.md"

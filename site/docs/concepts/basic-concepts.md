@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Basic concepts
+# Basic technology concepts
 
 ## Application Programming Interface (API)
 

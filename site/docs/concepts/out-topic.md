@@ -1,10 +1,10 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# OMAS OutTopic
+# Open Metadata OutTopic
 
-The OutTopic of an [Open Metadata Access Service](/services/omas) is the location where the OMAS will sent
-outgoing events to its consumers.
+The Open Metadata OutTopic is an [event topic](/concepts/basic-concepts) used to send metadata change notifications from the [metadata access server](metadata-access-server.md) to the [governance servers](governance-server.md).
+
 
 
 

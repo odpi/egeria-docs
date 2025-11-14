@@ -80,7 +80,7 @@ The [event mapper](/concepts/event-mapper-connector) is a connector that listens
 The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).
 
 #### Sample file connector configuration overview
-![File sample omrs connection configuration](./File sample config.drawio.svg)
+![File sample omrs connection configuration](File%20sample%20config.drawio.svg)
 
 
 Event mapper Endpoint address should be defined with the local folder name to monitor.

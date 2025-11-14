@@ -2939,7 +2939,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0570-Metamodels" id="UJmQ45mEI36wFd9VHuxv">
-    <mxGraphModel dx="2066" dy="1158" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2066" dy="1149" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="p1Q-smgFk96yuZVXHB5d-0" />
         <mxCell id="p1Q-smgFk96yuZVXHB5d-1" parent="p1Q-smgFk96yuZVXHB5d-0" />
@@ -2952,7 +2952,7 @@
         <mxCell id="p1Q-smgFk96yuZVXHB5d-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="p1Q-smgFk96yuZVXHB5d-1" source="p1Q-smgFk96yuZVXHB5d-5" target="p1Q-smgFk96yuZVXHB5d-23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="p1Q-smgFk96yuZVXHB5d-5" value="«entity»&lt;br&gt;&lt;b&gt;DesignModelElement&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="p1Q-smgFk96yuZVXHB5d-1" vertex="1">
+        <mxCell id="p1Q-smgFk96yuZVXHB5d-5" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="p1Q-smgFk96yuZVXHB5d-1" vertex="1">
           <mxGeometry x="263" y="143.5" width="230" height="50" as="geometry" />
         </mxCell>
         <mxCell id="p1Q-smgFk96yuZVXHB5d-23" value="«classification»&lt;br&gt;&lt;b&gt;MetamodelInstance&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="p1Q-smgFk96yuZVXHB5d-1" vertex="1">

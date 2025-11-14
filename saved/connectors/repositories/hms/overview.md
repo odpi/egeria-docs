@@ -44,7 +44,7 @@ It may be enhanced in the future to also emit granular events to track the HMS m
 The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider), and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).
 
 #### HMS connector configuration overview
-![HMS connector configuration overview](./hms config.drawio.svg)
+![HMS connector configuration overview](hms%20config.drawio.svg)
 HMS connector configuration overview 
  
 Event mapper Endpoint address should be defined with the url of the thrift endpoint. 

@@ -21,7 +21,7 @@ It provides a set of unified capabilities that can be flexibility deployed to su
 
 The term *metadata* can be misleading.  For those with a database background, it conjures up images of database schemas, tables and columns.  The photographer sees it as the properties captured by their camera to record their camera settings, location and date/time.  
 
-The Egeria community agree with these definitions, but take it much further.  We see it as the description of the structure and linkages of everything.  It has been suggested that we should use the term *meta-information*, but that is more likely to create greater confusion :).
+The Egeria community agrees with these definitions, but takes it much further.  We see it as the description of the structure and linkages of people, process, technology and time.  It has been suggested that we should use the term *meta-information*, but that is likely to create greater confusion :).
 
 To help, we captured the range of metadata we work with in [Categories of Metadata](/patterns/metadata-manager/categories-of-metadata/).  You will notice that it covers the *who, what, why, where, when* and *how* of an organization's operation, and most importantly, the linkage between.  This is to ensure an organization builds a knowledge base that provides the foundation of its ability to flex to meet the challenges of the future.
 

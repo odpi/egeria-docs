@@ -7,8 +7,7 @@
 
 The membership of a collection is established via a [*CollectionMembership* relationship](#collectionmembership-relationship), which has attributes that allow the rationale and the confidence of the membership to be established. A [*Referenceable*](/types/0/0010-Base-Model) entity can be a member of none, one or many collections.  
 
-Since a collection is itself :wq
-a *Referenceable* entity, collections can be organized into hierarchies - like a directory structure on the filesystem.
+Since a collection is a *Referenceable* entity, collections can be organized into hierarchies - like a directory structure on the filesystem.
 
 
 ![UML](0021-Collections.svg)

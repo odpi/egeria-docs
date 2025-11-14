@@ -62,8 +62,7 @@ Instance metadata identifies schema attributes that contain metadata, rather tha
 
 The next set of models describe the content of different types of data models
 
-* **[0565 Design Model Elements](0565-Design-Model-Elements.md)**
-* **[0566 Design Model Organization](0566-Design-Model-Organization.md)**
+* **[0565 Design Models](0565-Design-Models.md)**
 * **[0570 Metamodels](0570-Metamodels.md)**
 * **[0571 Concept Models](0571-Concept-Models.md)**
 

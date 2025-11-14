@@ -60,7 +60,7 @@
 
     !!! education "Further information"
         * See [Model 0571](/types/5/0571-Concept-Models) in the *Open Metadata Types* to understand how concept models are represented on open metadata.
-        * See [Model 0565](/types/5/0565-Design-Model-Elements) in the *Open Metadata Types* to understand how design models are represented on open metadata.
+        * See [Model 0565](/types/5/0565-Design-Models) in the *Open Metadata Types* to understand how design models are represented on open metadata.
 
 ??? info "Schemas"
 

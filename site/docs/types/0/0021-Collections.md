@@ -18,11 +18,13 @@ The *Collection* entity describes a parent node for collecting related elements 
 
 ### Collection Subtypes
 
-The collection type is generically useful and there are many subtypes that describe specialist collections in addition to *RootCollection* and *CollectionFolder* show in this model.
+The collection type is generically useful and there are many subtypes that describe specialist collections, some of which are shown in this model and others are located with the types of elements they contain.
 
 * [Agreement](/types/7/0711-Agreements) described a collection of elements that are part of an agreement.
 * [BusinessCapability](/types/7/0715-Digital-Business) described a collection of capabilities needed to operate the business of an organization.
+* [CollectionFolder](#collectionfolder-entity) described a collection of elements.
 * [ConceptModel](/types/5/0571-Concept-Models) described a collection of modelled concepts.
+* [ContextEventCollection](/types/4/0475-Concept-Models) described a collection of [context events](/concepts/context-event).
 * [DataDictionary](/types/5/0580-Data-Dictionaries) described a collection of commonly used data field definitions.
 * [DataSpec](/types/5/0580-Data-Dictionaries) described a collection of data fields and related definitions that describe the data required.
 * [DesignModel](/types/5/0565-Design-Models) described a collection of modelled elements.
@@ -32,9 +34,16 @@ The collection type is generically useful and there are many subtypes that descr
 * [DigitalSubscription](/types/7/0712-Digital-Subscription) is a special type of agreement relating to subscriptions to digital resources.
 * [EventSet](/types/5/0535-Event-Schemas) described a collection of event schema definitions.
 * [Glossary](/types/3/0310-Glossary) described a collection of [GlossaryTerms](/types/3/0330-Terms).
+* [HomeCollection](#homecollection-entity) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
 * [InformationSupplyChain](/types/7/0720-Information-Supply-Chain) described a collection of components performing an important data flow.
+* [Namespace](#namespace-entity) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
+* [NamingStandardsRuleSet](/types/4/0438-Naming-Standards) means the collection is a set of naming standard rules.
+* [RecentAccess](#recentaccess-entity) means the collection is a set of elements that have been recently accesses by a user.
+* [ResultsSet](#resultsset-entity) means the collection is a set of related results.
+* [RootCollection](#rootcollection-entity) described a master collection of collections.
+* [SoftwareArchive](/types/0/0030-Hosts-and-Platforms) described a collection of software components.
 * [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components performing a solution.
-
+* [WorkItemList](#workitemlist-entity) means the collection is a set of elements that have been recently accesses by a user.
 
 
 ## RootCollection entity
@@ -52,38 +61,25 @@ The *RootCollection* collection at the root of the collection hierarchy is calle
 
 ![Collection Hierarchy](collection-hierarchy-example.svg)
 
-
-## Collection classifications
-
-The classifications associated with *Collection* allow it to be specialized for particular uses.  They help when searching for collections for specific uses.
-
-* [*HomeCollection*](#homecollection-classification) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
-* [*Namespace*](#namespace-classification) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
-* [*ResultsSet*](#resultsset-classification) means the collection is a set of related results.
-* [*RecentAccess*](#recentaccess-classification) means the collection is a set of elements that have been recently accesses by a user.
-* [*WorkItemList*](#workitemlist-classification) means the collection is a set of elements that have been recently accesses by a user.
-* [*EventSet*](/types/5/0535-Event-Schemas) for a collection of related event schemas.
-
-
-### HomeCollection classification
+## HomeCollection entity
 
 The *HomeCollection* classification indicates that the collection is used to provide the starting node for a hierarchy of collections.
 
-### Namespace classification
+## Namespace entity
 
-The *Namespace* classification indicates that the collection is a set of elements that are organized by namespace.
+The *Namespace* entity indicates that the collection is a set of elements that are organized by namespace.
 
-### ResultsSet classification
+## ResultsSet entity
 
-The *ResultsSet* classification indicates that the collection is a set of elements that are the results from a specific request or query.
+The *ResultsSet* entity indicates that the collection is a set of elements that are the results from a specific request or query.
 
-### RecentAccess classification
+## RecentAccess entity
 
-The *RecentAccess* classification indicates that the collection is a set of elements that have been accessed recently.
+The *RecentAccess* entity indicates that the collection is a set of elements that have been accessed recently.
 
-### WorkItemList classification
+## WorkItemList entity
 
-The *WorkItemList* classification indicates that the collection is organizing a set of elements (typically [ToDos](/types/1/0135-Actions-For-People), or [Tasks](/types/1/0130-Projects)).
+The *WorkItemList* entity indicates that the collection is organizing a set of elements (typically [ToDos](/types/1/0135-Actions-For-People), or [Tasks](/types/1/0130-Projects)).
 
 
 ## CollectionMembership relationship

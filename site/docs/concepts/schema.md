@@ -40,7 +40,7 @@ Figure 3 shows the use of the schema type:
 
 ## Specific Schema Types
 
-The [RootSchemaType](/types/5/0530-Tabular-Schemas) and SchemaAttribute are specialized to support different structures. The diagrams show how the structure is represented for a SchemaAttribute on the left and how it is represented as a SchemaType on the right.
+The [RootSchemaType](/types/5/0503-Asset-Schema) and SchemaAttribute are specialized to support different structures. The diagrams show how the structure is represented for a SchemaAttribute on the left and how it is represented as a SchemaType on the right.
 
 ### Primitives
 
@@ -105,9 +105,7 @@ The relationship between the StructSchemaType and its nested schema attributes i
 
 Open Metadata types for connecting schemas to other types of elements:
 
-* *[0503 Asset Schema](/types/5/0503-Asset-Schema)* - for the relationship between an Asset and
-  its top level SchemaType.
-* *[0520 Process Schemas](/types/5/0520-Process-Schemas)* - showing how a schema type can be attached to a process port.
+* *[0503 Asset Schema](/types/5/0503-Asset-Schema)* - showing how a schema type can be attached to an asset or a process port.
 
 Open Metadata Types for different types of data structures:
 
@@ -132,17 +130,8 @@ For example, a query for relational columns with a particular characteristic.
 * *[0536 API Schemas](/types/5/0536-API-Schemas)* - for types associated with APIs.
 
 ### Open Metadata and Governance APIs
-APIs that support the definition of schemas:
 
-* [Asset Owner OMAS](/services/omas/asset-owner/overview)
-* [Asset Manager OMAS](/services/omas/asset-manager/overview)
-* [Data Manager OMAS](/services/omas/data-manager/overview)
-* [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
-* [Database Integrator OMIS](/services/omis/database-integrator/overview)
-* [Files Integrator OMIS](/services/omis/files-integrator/overview)
-* [API Integrator OMIS](/services/omis/api-integrator/overview)
-* [Topic Integrator OMIS](/services/omis/topic-integrator/overview)
-* [Governance Action OMES](/services/omes/governance-action/overview)
+The [Schema Maker API](/services/omvs/schema-maker/overview) supports the definition of schemas.
 
 Other types of information associated with an Asset:
 

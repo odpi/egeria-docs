@@ -27,7 +27,7 @@ The OMIS to use for different types of technology is shown in the table below.
 
 <br>
 
-In Figure 1, integration connector `Database Extractor` is monitoring for schema changes in the Database Server and cataloguing them in open metadata through the Database Integrator OMIS.  The Database Integrator OMIS calls the [Data Manager OMAS](/services/omas/data-manager/overview) which stores the open metadata in its local repository.
+In Figure 1, integration connector `Database Extractor` is monitoring for schema changes in the Database Server and cataloguing them in open metadata through the Database Integrator OMIS.  The Database Integrator OMIS calls the Data Manager OMAS which stores the open metadata in its local repository.
 
 Similarly,
  

@@ -237,7 +237,7 @@ In addition, it needs to implement the standard [Open Connector Framework (OCF)]
 
       ![Structure of a governance engine definition](governance-action-engine-definitions.svg)
 
-      These definitions are created as part of a [governance engine pack](/guides/developer/open-metdata-archives/creating-governance-engine-packs) or through the [Governance Server OMAS](/services/omas/governance-server/overview) and are stored in the open metadata repositories.
+      These definitions are created as part of a [governance engine pack](/guides/developer/open-metdata-archives/creating-governance-engine-packs) or through the [Asset Maker](/services/omvs/asset-maker/overview) API and are stored in the open metadata repositories.
 
     * Running your governance action service - Governance action engines are hosted by the [Governance Action OMES](/services/omes/governance-action/overview) running on one or more [engine hosts](/concepts/engine-host).  The engine services run in dedicated OMAG Server called the [*engine host*](/concepts/engine-host). You can find [instructions for configuring the engine services in the engine host](/guides/admin/servers/by-section/engine-host-services-section) in the administration guide.
 

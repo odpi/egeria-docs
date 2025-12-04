@@ -29,10 +29,10 @@ When the *OMAGServerPlatform* class is called, Spring Boot does a component scan
 
 To make a new Java package visible to **OMAGServerPlatform**, add its **spring** package to the **build.gradle** file for **platform-chassis-spring**. It will be picked up in the component scan.
 
-For example, this is the snippet of the build.gradle file that adds the [Asset Owner OMAS](/services/omas/asset-owner/overview) services to the OMAG Server Platform.
+For example, this is the snippet of the build.gradle file that adds the [Asset Catalog](/services/omvs/asset-catalog/overview) API to the OMAG Server Platform.
 
 ```
-        runtimeOnly project(':open-metadata-implementation:access-services:asset-owner:asset-owner-spring')
+        runtimeOnly project(':open-metadata-implementation:view-services:asset-catalog:asset-catalog-spring')
 ```
 
 

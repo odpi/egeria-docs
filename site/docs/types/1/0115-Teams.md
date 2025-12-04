@@ -27,9 +27,9 @@ The roles within a team are shown on [Model 0119 - Team Roles](/types/1/0119-Tea
 
 [People, Roles and Organizations](/features/people-roles-organizations/overview) describes how metadata about teams is populated and used.
 
-The [People Organizer OMVS](/services/omvs/people-organizer/overview) provides support for managing team structure.
+The [People Organizer](/services/omvs/people-organizer/overview) API provides support for managing team structure.
 
-The [Organization Integrator OMIS](/services/omis/organization-integrator/overview) supports the synchronization of team information between open metadata and external systems.
+The [Actor Manager](/services/omvs/actor-manager/overview) API supports the creation of user identities, actor profiles and actor roles.
 
 
 --8<-- "snippets/abbr.md"

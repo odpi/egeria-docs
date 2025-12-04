@@ -74,7 +74,7 @@ There is a watchdog governance action that is monitoring for new assets. It init
 
 * `no-duplicate` guard means it discovered no duplicates and so the process stops.
 * `link-duplicates` guard means it is very confident that it has detected a duplicate and so it can be actioned automatically by a remediation governance action before the process stops.
-* `validate-duplicates` guard means that a steward should verify that duplicates have really been detected.  This is achieved by a triage governance action creating a [`ToDo`](/concepts/to-do) and a watchdog governance action waiting for the steward to complete the ToDo before stopping.  The steward uses the [Stewardship Action OMAS](/services/omas/stewardship-action) to verify and set up the duplicates.
+* `validate-duplicates` guard means that a steward should verify that duplicates have really been detected.  This is achieved by a triage governance action creating a [`ToDo`](/concepts/to-do) and a watchdog governance action waiting for the steward to complete the ToDo before stopping.  The steward uses the [Classification Manager](/services/omvs/classification-manager) API to verify and set up the duplicates.
 
 ## Duplicate management styles
 

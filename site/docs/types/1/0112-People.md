@@ -33,8 +33,8 @@ The *Peer* relationship links two people together as peers in an organization.  
 
 [People, Roles and Organizations](/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
 
-The [Community Profile OMAS](/services/omas/community-profile/overview) provides support for managing a [person's profile](/concepts/personal-profile). It also supports the ability to query a person's [roles](/concepts/personal-roles) and their [peer network](/concepts/peer-network).
+The [My Profile](/services/omvs/my-profile/overview) API provides support for managing a [person's profile](/concepts/personal-profile). 
 
-The [Organization Integrator OMIS](/services/omis/organization-integrator/overview) supports the synchronization of information about people between open metadata and external systems.
+The [People Organizer](/services/omvs/people-organizer/overview) API supports the synchronization of information about the organization's structure.
 
 --8<-- "snippets/abbr.md"

@@ -29,7 +29,7 @@ Testing of the new [JDBC Resource Connector](/connectors/resource/jdbc-resource-
 
 Egeria's data product support is progressing well.  New types based around [Digital Services](/types/7/0710-Digital-Service) and [Solution Components](/types/7/0730-Solution-Components) have been added to the [Open Metadata Types](/types).  These types represent the business aspects of data products and link to the [Assets](/concepts/asset) that implement them.
 
-Next month look our for the new APIs in [Digital Service OMAS](/services/omas/digital-service/overview), [Digital Architecture OMAS](/services/omas/digital-architecture/overview), [Asset Owner OMAS](/services/omas/asset-owner/overview) and [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
+Next month look our for the new APIs in Digital Service OMAS, Digital Architecture OMAS, Asset Owner OMAS and Asset Consumer OMAS.
 
 ## Community news
 
@@ -50,7 +50,7 @@ The [Open Connector Framework (OCF)](/frameworks/ocf/overview) beans and its cor
 
 ### Egeria Dojos
 
-The next run of an Egeria Dojo will be the new [Metadata Governance Dojo](/education/egeria-dojo/metadata-governance/overview) on Monday 21st November 2022. 
+The next run of an Egeria Dojo will be the new *Metadata Governance Dojo* on Monday 21st November 2022. 
 
 ### Community Meetings
 
@@ -75,13 +75,9 @@ Also notice the new buttons on the homepage [https://egeria-project.org/](https:
 
 ## Postman collections
 
-There is new postman collect for the [Asset Consumer OMAS](/services/omas/asset-consumer/overview) REST API.
+There is new postman collect for the Asset Consumer OMAS REST API.
 
-* [Link on GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/access-services/asset-consumer)
-
-The postman collection for [Data Manager OMAS](/services/omas/data-manager/overview) needs updating since the updates to its REST API.
-
-* [Link on GitHub](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/access-services/data-manager)
+The postman collection for Data Manager OMAS needs updating since the updates to its REST API.
 
 
 ## Future items

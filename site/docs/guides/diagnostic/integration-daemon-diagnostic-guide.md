@@ -52,42 +52,21 @@ The start-up messages confirm that the integration daemon started successfully.
 Here is an example of the start-up of a server:
 
 ```
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMRS-AUDIT-0064 The Open Metadata Repository Services (OMRS) has initialized the audit log for the Integration Daemon called exchangeDL01
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMAG-ADMIN-0001 The exchangeDL01 server is configured with a max page size of 100
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMRS-AUDIT-0001 The Open Metadata Repository Services (OMRS) is initializing the subsystems to support a new server
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMRS-AUDIT-0007 The Open Metadata Repository Services (OMRS) has initialized
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OPEN-METADATA-SECURITY-0003 The Open Metadata Security Service org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaServerSecurityConnector for server exchangeDL01 is initializing
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMAG-ADMIN-0100 The governance services subsystem for the Integration Daemon called exchangeDL01 is about to start
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup INTEGRATION-DAEMON-SERVICES-0001 The integration daemon services are initializing in server exchangeDL01
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMIS-FILES-INTEGRATOR-0001 The files integrator context manager is being initialized for calls to server cocoMDS1 on platform https://localhost:9444
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup INTEGRATION-DAEMON-SERVICES-0008 A new integration connector named OakDeneLandingAreaFilesMonitor is initializing in integration service Files Integrator OMIS running in integration daemon exchangeDL01, permitted synchronization is: From Third Party
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMIS-FILES-INTEGRATOR-0002 Creating context for integration connector OakDeneLandingAreaFilesMonitor (41244d6b-2054-49a5-bd24-328a82dc8552) connecting to third party technology HospitalLandingArea with permitted synchronization of From Third Party and service options of null
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Exception INTEGRATION-DAEMON-SERVICES-0031 The integration connector OakDeneLandingAreaFilesMonitor method initialize has returned with a org.odpi.openmetadata.frameworks.connectors.ffdc.InvalidParameterException exception containing message OMAG-MULTI-TENANT-404-001 The OMAG Server cocoMDS1 is not available to service a request from user exchangeDL01npa
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup INTEGRATION-DAEMON-SERVICES-0008 A new integration connector named OldMarketLandingAreaFilesMonitor is initializing in integration service Files Integrator OMIS running in integration daemon exchangeDL01, permitted synchronization is: From Third Party
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMIS-FILES-INTEGRATOR-0002 Creating context for integration connector OldMarketLandingAreaFilesMonitor (723f449e-4229-4197-ba84-500bc467d39a) connecting to third party technology HospitalLandingArea with permitted synchronization of From Third Party and service options of null
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Exception INTEGRATION-DAEMON-SERVICES-0031 The integration connector OldMarketLandingAreaFilesMonitor method initialize has returned with a org.odpi.openmetadata.frameworks.connectors.ffdc.InvalidParameterException exception containing message OMAG-MULTI-TENANT-404-001 The OMAG Server cocoMDS1 is not available to service a request from user exchangeDL01npa
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup INTEGRATION-DAEMON-SERVICES-0008 A new integration connector named DropFootClinicalTrialResultsFilesMonitor is initializing in integration service Files Integrator OMIS running in integration daemon exchangeDL01, permitted synchronization is: From Third Party
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMIS-FILES-INTEGRATOR-0002 Creating context for integration connector DropFootClinicalTrialResultsFilesMonitor (57192bbd-6221-4770-8833-7da48e295be3) connecting to third party technology DropFootClinicalTrialResults with permitted synchronization of From Third Party and service options of null
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Exception INTEGRATION-DAEMON-SERVICES-0031 The integration connector DropFootClinicalTrialResultsFilesMonitor method initialize has returned with a org.odpi.openmetadata.frameworks.connectors.ffdc.InvalidParameterException exception containing message OMAG-MULTI-TENANT-404-001 The OMAG Server cocoMDS1 is not available to service a request from user exchangeDL01npa
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMIS-DATABASE-INTEGRATOR-0001 The database integrator context manager is being initialized for calls to server cocoMDS1 on platform https://localhost:9444
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup INTEGRATION-DAEMON-SERVICES-0008 A new integration connector named OakDeneLandingAreaDatabaseMonitor is initializing in integration service Database Integrator OMIS running in integration daemon exchangeDL01, permitted synchronization is: From Third Party
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Exception INTEGRATION-DAEMON-SERVICES-0031 The integration connector OakDeneLandingAreaDatabaseMonitor method initialize has returned with a org.odpi.openmetadata.frameworks.connectors.ffdc.InvalidParameterException exception containing message OMIS-DATABASE-INTEGRATOR-400-001 Integration connector OakDeneLandingAreaDatabaseMonitor is not of the correct type to run in the Database Integrator OMIS integration service.  It must inherit from org.odpi.openmetadata.integrationservices.database.connector.DatabaseIntegratorConnector
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup INTEGRATION-DAEMON-SERVICES-0040 The integration daemon thread for integration daemon exchangeDL01 has started
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Information INTEGRATION-DAEMON-SERVICES-0041 The integration daemon thread is refreshing integration connector OakDeneLandingAreaFilesMonitor for the first time in the exchangeDL01 integration daemon instance
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Information INTEGRATION-DAEMON-SERVICES-0041 The integration daemon thread is refreshing integration connector OldMarketLandingAreaFilesMonitor for the first time in the exchangeDL01 integration daemon instance
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Information INTEGRATION-DAEMON-SERVICES-0041 The integration daemon thread is refreshing integration connector DropFootClinicalTrialResultsFilesMonitor for the first time in the exchangeDL01 integration daemon instance
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Information INTEGRATION-DAEMON-SERVICES-0041 The integration daemon thread is refreshing integration connector OakDeneLandingAreaDatabaseMonitor for the first time in the exchangeDL01 integration daemon instance
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup INTEGRATION-DAEMON-SERVICES-0013 The integration daemon exchangeDL01 has initialized
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMAG-ADMIN-0101 The governance services subsystem for the Integration Daemon called exchangeDL01 has completed start up
-Tue Feb 02 20:57:50 GMT 2021 exchangeDL01 Startup OMAG-ADMIN-0004 The exchangeDL01 server has successfully completed start up.  The following services are running: [Open Metadata Repository Services (OMRS), Files Integrator OMIS, Database Integrator OMIS, Integration Daemon Services]
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OMRS-AUDIT-0064 The Open Metadata Repository Services (OMRS) has initialized the audit log for the Integration Daemon called integration-daemon
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup SERVER-OPS-0001 The integration-daemon server is configured with a max page size of 1000
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OMRS-AUDIT-0001 The Open Metadata Repository Services (OMRS) is initializing the subsystems to support a new server
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OMRS-AUDIT-0007 The Open Metadata Repository Services (OMRS) has initialized
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup SERVER-OPS-0100 The governance services subsystem for the Integration Daemon called integration-daemon is about to start
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup INTEGRATION-DAEMON-SERVICES-0001 The integration daemon services are initializing in server integration-daemon
+```
+It then begins its periodic refresh of the connectors.
+
+When a new connector initializes the context that provides the connector with access to open metadata.
+```
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OIF-CONNECTOR-0001 The integration connector context manager is being initialized for calls to server active-metadata-store on platform https://localhost:9443
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OPEN-GOVERNANCE-0002 The open integration context manager is being initialized for calls to server active-metadata-store on platform https://localhost:9443
 ```
 
-The integration daemon successfully completes start up running the
-[Files Integrator OMIS](/services/omis/files-integrator/overview)
-with three integration connectors and the
-[Database Integrator OMIS](/services/omis/database-integrator/overview)
-with one connector.
-It then begins its periodic refresh of the connectors (set to every 10 minutes in this configuration).
 
 However, there is a sign of trouble in that each connector is reporting an exception at start up.
 Message `INTEGRATION-DAEMON-SERVICES-0031` is reporting
@@ -98,22 +77,6 @@ containing message OMAG-MULTI-TENANT-404-001 The OMAG Server cocoMDS1 is not ava
 from user exchangeDL01npa
 ```
 So the metadata server `cocoMDS1` is down and the connectors can not begin processing until it is restarted.
-
-There is also an error with the `OakDeneLandingAreaDatabaseMonitor`
-in that it is configured to work with the
-[Database Integrator OMIS](/services/omis/database-integrator/overview)
-but the connector does not implement the right interface for this service.
-
-```
-INTEGRATION-DAEMON-SERVICES-0031 The integration connector OakDeneLandingAreaDatabaseMonitor method initialize
-has returned with a org.odpi.openmetadata.frameworks.connectors.ffdc.InvalidParameterException exception 
-containing message OMIS-DATABASE-INTEGRATOR-400-001 Integration connector OakDeneLandingAreaDatabaseMonitor is not 
-of the correct type to run in the Database Integrator OMIS integration service.  
-It must inherit from org.odpi.openmetadata.integrationservices.database.connector.DatabaseIntegratorConnector
-```
-
-This will not be resolved until either the code is corrected to implement the Database Integrator OMIS connector interface, 
-or the connector is reconfigured to run in the integration service that matches its implementation.
 
 ### Retrieving status of the connectors
 

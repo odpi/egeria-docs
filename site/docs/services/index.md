@@ -41,13 +41,6 @@ The common services support clients and the registered services that run in the 
 [Open Metadata Repository Services (OMRS)](/services/omrs/overview). It manages the provenance checking, deduplication and translates OMRS exceptions into [Open Connector Framework (OCF)](/frameworks/ocf/overview) exceptions that are
 used extensively across the [Open Metadata Access Services (OMASs)](/services/omas).
 
-## Framework Services
-
-The framework services provide shared metadata management modules for the server-side services that are used by the [open metadata frameworks](/frameworks).  The REST API services are available through all OMASs.  Many [Open Metadata Access Services (OMASs)](/services/omas) clients also have support.
-
-* **[OCF Metadata Management](/services/ocf-metadata-management)** - Supports the Connected Asset Services for the [Open Connector Framework (OCF)](/frameworks/ocf/overview).
-* **[OIF Metadata Management](/services/oif-metadata-management)** - Supports the Open Integration Service for the [Open Integration Framework (OIF)](/frameworks/oif/overview).
-* **[GAF Metadata Management](/services/gaf-metadata-management)** - Supports the Open Metadata Store Service for the [Open Governance Framework (OGF)](/frameworks/ogf/overview).
 
 ## Governance Server Services
 

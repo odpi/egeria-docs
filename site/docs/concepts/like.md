@@ -10,8 +10,7 @@ Often, data catalogs count up the number of likes attached to an element as a me
 
 !!! info "Related information"
     * A *like* is just one type of [feedback](/concepts/feedback).
-    * The [Asset Consumer OMAS](/services/omas/asset-consumer/overview) supports the attachment of *likes*.
-    * *Likes* are returned as part of the [connected asset properties](/concepts/connected-asset-properties)
+    * The [Feedback Manager](/services/omvs/feedback-manager/overview) API supports the attachment of *likes*.
     * The type definition for a *like* is found in [Area 1](/types/1/0150-Feedback)
 
 --8<-- "snippets/abbr.md"

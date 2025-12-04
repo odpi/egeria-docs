@@ -40,6 +40,6 @@ The *GovernanceResponse* relationship links a GovernanceDriver entity to a Gover
 The *GovernancePolicyLink* relationship connects two related *GovernancePolicy* entities.
 
 !!! info "Further Information"
-    The [Governance Program OMAS](/services/omas/governance-program/overview) provides support for defining governance policies through its **GovernancePolicyMakingInterface**. 
+    The [Governance Officer](/services/omvs/governance-officer/overview) API provides support for defining governance policies. 
 
 --8<-- "snippets/abbr.md"

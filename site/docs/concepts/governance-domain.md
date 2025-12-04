@@ -18,9 +18,9 @@ A governance domain typically has a [community](/concepts/community) that is use
 ![Governance Domain Examples](/guides/planning/governance-program/governance-domain-examples.svg)
 > Examples of different governance domains within an organization.  Each domain is typically the responsibility of a different executive in the organization.  They may use slightly different terminology and often different tools but in fact they are very similar in the way that they operate.  Egeria allows the teams from the different governance domains to collaborate and benefit from each others efforts.
 
-Governance domains are represented by *[Governance Domain Descriptions](/types/4/0401-Governance-Definitions)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".
+Governance domains are represented by *[valid metadata values](/guides/planning/valid-values/overview)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".
 
-It is possible to set up a default list of domains using the [`createStandardGovernanceDomains`](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/governanceprogram/api/GovernanceDomainInterface.html) method from the [Governance Program OMAS](/services/omas/governance-program/overview). This will give you the following governance domain definitions:
+The [Core Content Pack](/concept-packs/core-content-pack/overview) adds the following governance domain definitions:
 
 | Domain Identifier | Domain Name | Description                                                                                                           |
 | :-------- | :-------- |:----------------------------------------------------------------------------------------------------------------------|

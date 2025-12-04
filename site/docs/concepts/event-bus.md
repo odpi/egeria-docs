@@ -11,7 +11,7 @@ hide:
 Egeria's *event bus* is constructed from an [event broker](/basic-concepts/#event-broker) infrastructure service and a set of well-known [topics](/basic-concepts/#topic). Collectively they provide the ability to reliably pass events between different [OMAG Servers](/concepts/omag-server):
 
 - To register with an [open metadata repository cohort](/concepts/cohort-members), exchange type definitions and share changes to metadata with other members of the cohort via the [OMRS topic(s)](/services/omrs/cohort-events).
-- To exchange details of metadata changes through an [Open Metadata Access Service (OMAS)](/services/omas)'s [InTopic](/concepts/in-topic) and [OutTopic](/concepts/out-topic).
+- To exchange details of metadata changes through an [Open Metadata Access Service (OMAS)](/services/omas)'s [OutTopic](/concepts/out-topic).
 
 Each topic maintains a pointer to the last event that a server has read so that it receives each event that is added even if it restarts.
 

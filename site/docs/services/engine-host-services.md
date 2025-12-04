@@ -10,7 +10,7 @@ hide:
 
 # Engine host services
 
-The engine host services support the behavior of the [engine host](/concepts/engine-host) OMAG Server.  They manage the start up and shutdown of the configured [Open Metadata Engine Services (OMESs)](/services/omes) as well as retrieve the configuration of their governance engines and governance services through the [Governance Server OMAS](/services/omas/governance-server/overview) running in a [Metadata Access Server](/concepts/metadata-access-server).
+The engine host services support the behavior of the [engine host](/concepts/engine-host) OMAG Server.  They manage the start up and shutdown of the configured [Open Metadata Engine Services (OMESs)](/services/omes) as well as retrieve the configuration of their governance engines and governance services through the [Governance Configuration Services](/services/governance-configuration-services) running in a [Metadata Access Server](/concepts/metadata-access-server).
 
 The engine host services also provide a REST API to query the status of the governance engines running in the server.
 

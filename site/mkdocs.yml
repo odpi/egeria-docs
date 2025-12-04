@@ -41,9 +41,8 @@ nav:
                 - Human in the loop: egeria-solutions/human-in-loop/overview.md
             - Accelerating Insight:
                 - Accelerating Insight: egeria-solutions/accelerating-insight/index.md
-                - Increasing Karma: egeria-solutions/increasing-karma/overview.md
+                - Organization Insight: egeria-solutions/organization-insight/overview.md
                 - The Fourth Dimension: egeria-solutions/fourth-dimension/overview.md
-                - Enterprise Oracle: egeria-solutions/enterprise-oracle/overview.md
             - Keeping Safe:
                 - Keeping Safe: egeria-solutions/keeping-safe/index.md
                 - Distributed Secrets: egeria-solutions/distributed-secrets/overview.md
@@ -175,6 +174,16 @@ nav:
       - Developer Guide:
           - Developer Guide: guides/developer/index.md
           - Retrieving Metadata: guides/developer/finding-metadata/overview.md
+          - Mapping Technology:
+                - Mapping Technology: guides/developer/mapping-technology/index.md
+                - APIs: guides/developer/mapping-technology/apis/overview.md
+                - Databases: guides/developer/mapping-technology/databases/overview.md
+                - Displays: guides/developer/mapping-technology/displays/overview.md
+                - Files: guides/developer/mapping-technology/files/overview.md
+                - Infrastructure: guides/developer/mapping-technology/infrastructure/overview.md
+                - Lineage: guides/developer/mapping-technology/lineage/overview.md
+                - Processes: guides/developer/mapping-technology/processes/overview.md
+                - Topics: guides/developer/mapping-technology/topics/overview.md
           - Scripting Commands: guides/developer/scripting-commands/overview.md
           - Building Archives:
               - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
@@ -339,8 +348,6 @@ nav:
         - Features Overview: features/index.md
         - Anchor Management: features/anchor-management/overview.md
         - Cohort Operation: features/cohort-operation/overview.md
-        - Data Quality: features/data-quality/overview.md
-        - Discovery and Stewardship: features/discovery-and-stewardship/overview.md
         - Duplicate Management: features/duplicate-management/overview.md
         - Effectivity Dates: features/effectivity-dates/overview.md
         - External Identifiers: features/external-identifiers/overview.md
@@ -551,54 +558,21 @@ nav:
               - Server Operations: services/server-operations.md
               - Integration Daemon Services: services/integration-daemon-services.md
               - Engine Host Services: services/engine-host-services.md
-              - Connected Asset Services: services/ocf-metadata-management.md
-              - Open Metadata Store Services: services/open-metadata-store.md
-              - Governance Configuration Services: services/governance-configuration-services.md
-              - Open Governance Services: services/open-governance-services.md
-              - Open Integration Service: services/oif-metadata-management.md
-              - Framework Services: services/framework-services.md
-              - GAF Metadata Management: services/gaf-metadata-management.md
-              - OCF Metadata Management: services/ocf-metadata-management.md
-              - OIF Metadata Management: services/oif-metadata-management.md
           - Registered Services:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md
-                  - Asset Consumer OMAS: services/omas/asset-consumer/overview.md
-                  - Asset Manager OMAS: services/omas/asset-manager/overview.md
-                  - Asset Owner OMAS: services/omas/asset-owner/overview.md
-                  - Community Profile OMAS: services/omas/community-profile/overview.md
-                  - Data Manager OMAS: services/omas/data-manager/overview.md
-                  - Data Science OMAS: services/omas/data-science/overview.md
-                  - Design Model OMAS: services/omas/design-model/overview.md
-                  - Digital Architecture OMAS: services/omas/digital-architecture/overview.md
-                  - Digital Service OMAS: services/omas/digital-service/overview.md
-                  - Governance Program OMAS: services/omas/governance-program/overview.md
-                  - Governance Server OMAS: services/omas/governance-server/overview.md
-                  - IT Infrastructure OMAS: services/omas/it-infrastructure/overview.md
-                  - Project Management OMAS: services/omas/project-management/overview.md
-                  - Security Manager OMAS: services/omas/security-manager/overview.md
-                  - Software Developer OMAS: services/omas/software-developer/overview.md
-                  - Stewardship Action OMAS: services/omas/stewardship-action/overview.md
+                  - Open Metadata Store Services: services/open-metadata-store.md
+                  - Connected Asset Services: services/ocf-metadata-management.md
+                  - Governance Configuration Services: services/governance-configuration-services.md
+                  - Open Governance Services: services/open-governance-services.md
+                  - Open Integration Service: services/oif-metadata-management.md
+                  - GAF Metadata Management: services/gaf-metadata-management.md
               - Engine Services (OMES):
                   - Open Metadata Engine Services: services/omes/index.md
                   - Governance Action: services/omes/governance-action/overview.md
                   - Survey Action: services/omes/survey-action/overview.md
                   - Watchdog Action: services/omes/watchdog-action/overview.md
                   - Repository Governance: services/omes/repository-governance/overview.md
-              - Integration Services (OMIS):
-                  - Open Metadata Integration Services: services/omis/index.md
-                  - Analytics Integrator: services/omis/analytics-integrator/overview.md
-                  - API Integrator: services/omis/api-integrator/overview.md
-                  - Catalog Integrator: services/omis/catalog-integrator/overview.md
-                  - Database Integrator: services/omis/database-integrator/overview.md
-                  - Display Integrator: services/omis/display-integrator/overview.md
-                  - Files Integrator: services/omis/files-integrator/overview.md
-                  - Infrastructure Integrator: services/omis/infrastructure-integrator/overview.md
-                  - Lineage Integrator: services/omis/lineage-integrator/overview.md
-                  - Organization Integrator: services/omis/organization-integrator/overview.md
-                  - Security Integrator: services/omis/security-integrator/overview.md
-                  - Stewardship Integrator: services/omis/stewardship-integrator/overview.md
-                  - Topic Integrator: services/omis/topic-integrator/overview.md
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
                   - Action Author: services/omvs/action-author/overview.md
@@ -779,7 +753,6 @@ nav:
       - Guard: concepts/guard.md
       - GUID: concepts/guid.md
       - Home Metadata Repository: concepts/home-metadata-repository.md
-      - In Topic: concepts/in-topic.md
       - Incident Report: concepts/incident-report.md
       - Informal Tag: concepts/informal-tag.md
       - Instance Status: concepts/instance-status.md
@@ -792,7 +765,6 @@ nav:
       - IT Profile: concepts/it-profile-role.md
       - Javadoc: concepts/javadoc.md
       - Karma Point: concepts/karma-point.md
-      - Karma Point Threshold: concepts/karma-point.md
       - Karma Point Plateau: concepts/karma-point-plateau.md
       - Like: concepts/like.md
       - Lineage: concepts/lineage.md
@@ -881,6 +853,9 @@ nav:
       - Governance Maturity Model: practices/maturity-model/overview.md
       - Governance Roles: practices/roles/overview.md
       - Digital Services: practices/digital-services/overview.md
+      - Data Quality: practices/data-quality/overview.md
+      - Data Specification: practices/data-specification/overview.md
+      - Discovery and Stewardship: practices/discovery-and-stewardship/overview.md
       - Data Privacy: practices/data-privacy-pack/overview.md
       - Common Data Definitions:
           - Overview: practices/common-data-definitions/overview.md

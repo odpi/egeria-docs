@@ -71,7 +71,7 @@ Each directory in the assembly includes a README.md file to explain its contents
 
 ## Improved use of Apache Kafka (4.2)
 
-Except when the `no-topics` option is specified, the configuration document helper methods add a connection for both the [InTopic](/concepts/in-topic) and the [OutTopic](/concepts/out-topic) to each Open Metadata Access Service (OMAS) configuration irrespective of whether the particular OMAS supports these topics.  This has no impact at runtime because the OMASs simply do not start topics they do not use.  However, from a set-up point of view, it is misleading - and can result in an organization thinking they need to set up (and may be pay for) topics that are not used.
+Except when the `no-topics` option is specified, the configuration document helper methods add a connection for the [OutTopic](/concepts/out-topic) to each Open Metadata Access Service (OMAS) configuration irrespective of whether the particular OMAS supports these topics.  This has no impact at runtime because the OMASs simply do not start topics they do not use.  However, from a set-up point of view, it is misleading - and can result in an organization thinking they need to set up (and may be pay for) topics that are not used.
 
 This release adds knowledge of whether an OMAS supports the inTopic and/or OutTopic to the [AccessServiceDescroption](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/admin-services/admin-services-api/src/main/java/org/odpi/openmetadata/adminservices/configuration/registration/AccessServiceDescription.java) class.  This information is used by the configuration helper methods when setting up the access service configuration.  For example, this is the list of topics for `cocoMDS1` at release 4.2:
 
@@ -114,7 +114,7 @@ View services are designed to provide REST APIs to UIs.  In release 4.1 we added
 * [Glossary Browser OMVS](#glossary-browser-omvs)
 * [Glossary Manager OMVS](#glossary-manager-omvs)
 
-These view services are supported by enhancements to the [Asset Manager OMAS](/services/omas/asset-manager/overview){target=blank}.
+These view services are supported by enhancements to the Asset Manager OMAS.
 
 In release 4.2 we added another view service called [My Profile OMVS](#my-profile-omvs).
 
@@ -130,7 +130,7 @@ Glossary Browser OMVS supports the searching and navigation through a published 
 
 ### My Profile OMVS
 
-My Profile OMVS returns information about the supplied user's profile.  It is intended to supply information about the logged-on user. In future, it will be enhanced with support for the user's roles and resources.  This can be used to link to other UI functions that are relevant to the user's roles.  My Profile OMVS is built on the [Community Profile OMAS](/services/omas/community-profile/overview){target=blank}.
+My Profile OMVS returns information about the supplied user's profile.  It is intended to supply information about the logged-on user. In future, it will be enhanced with support for the user's roles and resources.  This can be used to link to other UI functions that are relevant to the user's roles.  My Profile OMVS is built on the Community Profile OMAS.
 [... more information](/services/omvs/my-profile/overview)
 
 ## Cloud-native workgroup

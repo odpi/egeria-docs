@@ -34,15 +34,9 @@ The effort required to author and maintain these definitions, plus the governanc
 
 !!! education "Further information"
     
-    - [Governance Program OMAS](/services/omas/governance-program/overview/#subject-areas) provides support for the subject area definition and the ability to retrieve details of a subject area's materials.
-    - [Digital Architecture OMAS](/services/omas/digital-architecture/overview) supports the definition of reference data and quality rules for the subject area.
-    - [Asset Manager OMAS](/services/omas/asset-manager/overview) supports the exchange of subject area information with other catalogs and quality tools.
+    - [Subject Area](/services/omvs/subject-area/overview) API provides support for the subject area definition and the ability to retrieve details of a subject area's materials.
     - [Common Data Definitions](/practices/common-data-definitions/overview) describes the management and use of subject areas.
     - The [Defining Subject Areas](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview/) scenario for Coco Pharmaceuticals walks through the process of setting up.
-    - There are two code samples associated with this set of subject areas:
-    
-        * [Setting up the subject area definitions :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/governance-program-client-samples/governance-subject-area-sample){ target=gh }
-        * [Setting up glossary categories for each subject area :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/access-services-samples/subject-area-client-samples/subject-area-definition-sample){ target=gh } ready for subject area owners to start defining glossary terms associated with their subject area.
 
 
 --8<-- "snippets/abbr.md"

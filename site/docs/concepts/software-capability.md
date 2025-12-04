@@ -54,10 +54,9 @@ through the
 [Open Metadata Repository Services (OMRS) connectors](/concepts/repository-connector)
 or 
 
-* using the [Catalog Integrator Open Metadata Integration Service (OMIS)](/services/omis/catalog-integrator/overview)
-through an [integration connector](/concepts/integration-connector) or
+* through an [integration connector](/concepts/integration-connector) or
 
-* Through direct calls to the [Asset Manager Open Metadata Access Service (OMAS)](/services/omas/asset-manager/overview).
+* Through direct calls to the [Asset Maker](/services/omvs/asset-maker/overview) API.
 
 The [Metadata Server Exchange](/patterns/metadata-server-exchange/overview)
 pattern provides more information on these options.
@@ -68,7 +67,7 @@ A master data manager is a capability in a software server to manage an authorit
 collection of master data, typically about people, organizations, products and accounts.
 
 Master data managers that hold information about the people and organizations using open metadata
-integrate their data through the [Community Profile OMAS](/services/omas/community-profile/overview).
+integrate their data through the [People Organizer](/services/omvs/people-organizer/overview) API.
 
 ## Engine
 

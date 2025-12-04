@@ -116,7 +116,7 @@ Each month we will select one or more new pages that where added/updated in the 
 
 * [Integration groups](/concepts/integration-group)
 * [Types for integration groups](/types/4/0464-Dynamic-Integration-Groups)
-* [Description of the Governance Server OMAS](/services/omas/governance-server/overview)
+* Description of the Governance Server OMAS
 
 
 ## Connecting with the project

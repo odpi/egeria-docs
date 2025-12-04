@@ -15,13 +15,15 @@ The base model is the starting point for the open metadata type model.
 
 *Referenceable* is the super type for many of the open metadata entity types. A *Referenceable* entity is something that is important enough to be assigned a unique (qualified) name within its type. This unique name is called the *qualifiedName* and may be set to the unique identifier value used outside the open metadata ecosystem. Alternatively, it is often set to a concatenation of an element's type name along with a number of its properties to create a unique string.
 
-Referenceable also has provision for storing a display name, description, version identifier and additional properties. 
+Referenceable also has provision for storing optional descriptive information:
 
-* displayName - short name for use in tables and titles.
-* description - detailed description of the element.
-* category - a grouping name.
-* versionIdentifier - user-managed version identifier.  This is in addition to the automatically managed version in the [element's header](/concepts/open-metadata-instances/#instanceauditheader).
-* additionalProperties - a set of name-value pairs (i.e. a map) where the values are all strings.  It can be used for other properties that are not directly supported by the open metadata types.
+* *identifier* - an identifier typically used in external systems or manual processes.  It is typically unique and meaningful beyond the open metadata ecosystem.
+* *displayName* - short name for use in tables and titles.
+* *description* - detailed description of the element.
+* *category* - a grouping name.
+* *url* - a link to more information.
+* *versionIdentifier* - user-managed version identifier.  This is in addition to the automatically managed version in the [element's header](/concepts/open-metadata-instances/#instanceauditheader).
+* *additionalProperties* - a set of name-value pairs (i.e. a map) where the values are all strings.  It can be used for other properties that are not directly supported by the open metadata types.
 
 ??? tip "Further Information on Referenceable"
     * [Further information on the use of Referenceable.](/concepts/referenceable)
@@ -75,6 +77,7 @@ The additional attributes it introduces are:
 
 * priority - How urgent is this activity?
 
+* *expectedBehaviour* - he action that the person or automated process should perform.
 * *requestedTime* - When the requested activity was documented.
 * *startTime* - When the requested activity started.
 * *dueTime* - When the requested activity needs to be completed.

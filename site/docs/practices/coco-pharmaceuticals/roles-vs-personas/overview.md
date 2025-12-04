@@ -20,7 +20,7 @@ This is implemented as follows:
 * Each person has a personal profile [(stored as Person entity)](/types/1/0112-People) that describes the individual (persona).
 * Linked off of the personal profile are person roles [(stored as PersonRole entity](/types/1/0112-Peoplel) that define each role (and their associated scope) that the person performs.
 
-The profile and role are managed primarily by the [Community Profile OMAS](/services/omas/community-profile/overview) and this drives the display on Egeria's user interfaces as well as some aspects of security.
+The profile and role are managed primarily by the [Actor Manager](/services/omvs/actor-manager/overview) API and this drives the display on Egeria's user interfaces as well as some aspects of security.
 
 
 

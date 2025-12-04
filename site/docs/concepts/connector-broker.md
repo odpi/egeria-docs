@@ -32,10 +32,10 @@ When the connector instance is requested, the Connector Broker uses the Connecto
 
 ## Use of the Connector Broker in Egeria
 
-The Connector Broker is used in the client code of the Open Metadata Access Services (OMASs) that provide connector instances to their consumers.  Examples include:
+The Connector Broker is used in the handlers that provide connector instances to their consumers.  Examples include:
 
-* [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
-* [Asset Owner OMAS](./services/omas/asset-owner/overview)
+* [Runtime Manager OMVS](/services/omvs/runtime-manager/overview)
+* [Survey Action OMES](/services/omes/survey-action/overview)
 
 
 ---8<-- "snippets/abbr.md"

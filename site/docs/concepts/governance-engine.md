@@ -26,7 +26,7 @@ Calls to the governance engine are made by creating [engine actions](/concepts/e
 
 ??? education "Further information"
 
-    Each governance engine has a unique name.  A *governance engine definition* for this unique name is either created through the [Governance Server OMAS](/services/omas/governance-server/overview) API or as part of a [governance engine pack](/concepts/governance-engine-pack).  The [governance engine is configured](/guides/admin/servers/by-section/engine-host-services-section) in the [engine host](/concepts/engine-host) using this unique name.
+    Each governance engine has a unique name.  A *governance engine definition* for this unique name is either created through the [Asset Maker](/services/omvs/asset-maker/overview) API or as part of a [governance engine pack](/concepts/governance-engine-pack).  The [governance engine is configured](/guides/admin/servers/by-section/engine-host-services-section) in the [engine host](/concepts/engine-host) using this unique name.
 
     The open metadata types for this definition are in model [0461 - Governance Engines](/types/4/0461-Governance-Engines) - specifically notice **Governance Engine** and **GovernanceService** linked by the **SupportedGovernanceService** relationship.
 

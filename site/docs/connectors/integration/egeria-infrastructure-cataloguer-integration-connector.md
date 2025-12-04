@@ -7,7 +7,6 @@
 
 !!! info "Connector details"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [egeria-infrastructure-catalog-connector :material-github:](https://github.com/odpi/egeria-dev-projects/tree/main/egeria-infrastructure-catalog-connector){ target=gh }
     - Jar File Name: `egeria-infrastructure-catalog-connector.jar`

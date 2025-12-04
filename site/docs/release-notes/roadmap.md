@@ -166,7 +166,7 @@ The ecosystem UI makes calls to specialized REST services supported by a type of
 
 In 2020 support for a new type of OMAG Server called the [integration daemon](/concepts/integration-daemon) was also added. This server supports integration services that can host integration connectors dedicated to exchanging metadata with specific third party technologies.
 
-2021 had a focus on governing metadata. There is a new OMAG Server called the [engine host](/concepts/engine-host) that runs [governance engines](/concepts/governance-engine). These are supported by new [access services](/services/omas/governance-engine/overview) for governance.
+2021 had a focus on governing metadata. There is a new OMAG Server called the [engine host](/concepts/engine-host) that runs [governance engines](/concepts/governance-engine). These are supported by new access services for governance.
 
 This new website was added to the project in 2021, and it has resulted in more interest in consuming Egeria.
 

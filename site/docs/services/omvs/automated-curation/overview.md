@@ -17,7 +17,6 @@ The Automated Curation OMVS provides services that can be used to set up and mon
 * Initiating governance action types, governance action processes and [engine actions](/concepts/engine-action).
 * Monitoring the outcomes of engine actions.
 
-It uses the [Asset Owner OMAS](/services/omas/asset-owner/overview) for its metadata services.
 
 ## Retrieving details about supported technologies
 

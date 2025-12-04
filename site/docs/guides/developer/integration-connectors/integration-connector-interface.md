@@ -12,45 +12,13 @@ An integration connector can:
 
 Access to open metadata is provided via a *context* object.  The [Open Metadata Integration Services (OMISs)](/services/omis) each provide a context object that is specialized for a particular category of third party technology in order to provide the most optimal interface to open metadata for your integration connector. This typically includes:
 
-- The ability to register a listener to receive events from the OMAS's [Out Topic](/concepts/out-topic), or send events to the OMAS's [In Topic](/concepts/in-topic).
+- The ability to register a listener to receive events from the OMAS's [Out Topic](/concepts/out-topic).
 - The ability to create and update metadata instances.
 - For assets, the ability to change an asset's visibility by changing its zone membership using the `publish` and `withdraw` methods.
 - The ability to delete metadata.
 - Various retrieval methods to help when comparing the metadata in the open metadata repositories with the metadata in the third party technology.
 
-Each integration service defines the base class that an integration connector must implement if they are to run under that service.  The base classes differ only in the type of context object that they support.  Select the integration service, and hence the base class, to use for your integration connector from the table below.
-
-| Integration Service | Type of technology supported | Link to integration connector base class                                                                                                                                                                                                                                                                      |
-|---|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [API Integrator OMIS](/services/omis/api-integrator/overview) | API Schemas | [APIIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/api/connector/APIIntegratorConnector.html) class.                                                                                                                                                                                                                                                                             |
-| [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) | Assets and related metadata found in an Asset Catalog | [CatalogIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/catalog/connector/CatalogIntegratorConnector.html) class.                             |
-| [Database Integrator OMIS](/services/omis/database-integrator/overview) | Databases and their schema | [DatabaseIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/database/connector/DatabaseIntegratorConnector.html) class.                        |
-| [Display Integrator OMIS](/services/omis/display-integrator/overview) | Forms, reports and the queries they depend on | [DisplayIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/display/connector/DisplayIntegratorConnector.html) class.                           |
-| [Files Integrator OMIS](/services/omis/files-integrator/overview) | Files and their internal structure | [FilesIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/files/connector/FilesIntegratorConnector.html) class.                                   |
-| [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview) | IT infrastructure landscape such as hosts, platforms and servers | [InfrastructureIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/infrastructure/connector/InfrastructureIntegratorConnector.html) class. |
-| [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) | Processes and their execution flow | [LineageIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/lineage/connector/LineageIntegratorConnector.html) class.       |
-| [Organization Integrator OMIS](/services/omis/organization-integrator/overview) | Onboard teams, profiles and users | [OrganizationIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/organization/connector/OrganizationIntegratorConnector.html) |
-| [Security Integrator OMIS](/services/omis/security-integrator/overview) | Publishing information about users and resources. | [SecurityIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/security/connector/SecurityIntegratorConnector.html) class.                       |
-| [Topic Integrator OMIS](/services/omis/topic-integrator/overview) | Event topics and the structure of the events they share. | [TopicIntegratorConnector](https://odpi.github.io/egeria/org/odpi/openmetadata/integrationservices/topic/connector/TopicIntegratorConnector.html) class.                                   |
-
 The context object is a wrapper around the client of an [Open Metadata Access Service (OMAS)](/services/omas).  It is accessed by the integration connector using the `getContext()` method.  The OMAS supplies the properties, open metadata listener interface and event structures for the API.
-
-![OMIS OMAS Pair](/services/integration-daemon-omis-omas-pair.svg)
-
-Therefore, you need to add dependencies for your selected OMIS's API module and the API module of is partner OMAS.  This is shown in the table below:
-
-| Integration Service | Partner OMAS | Dependencies |
-|---|---|---|
-| [API Integrator OMIS](/services/omis/api-integrator/overview) | [Data Manager OMAS](/services/omas/data-manager/overview) | api-integrator-api, data-manager-api |
-| [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) | [Asset Manager OMAS](/services/omas/asset-manager/overview) | catalog-integrator-api, asset-manager-api |
-| [Database Integrator OMIS](/services/omis/database-integrator/overview) | [Data Manager OMAS](/services/omas/data-manager/overview) | database-integrator-api, data-manager-api  |
-| [Display Integrator OMIS](/services/omis/display-integrator/overview) | [Data Manager OMAS](/services/omas/data-manager/overview) | display-integrator-api, data-manager-api  |
-| [Files Integrator OMIS](/services/omis/files-integrator/overview) | [Data Manager OMAS](/services/omas/data-manager/overview) | files-integrator-api, data-manager-api  |
-| [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview) | [IT infrastructure OMAS](/services/omas/it-infrastructure/overview) | infrastructure-integrator-api, it-infrastructure-api  |
-| [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) | [Asset Manager OMAS](/services/omas/asset-manager/overview) | lineage-integrator-api, asset-manager-api  |
-| [Organization Integrator OMIS](/services/omis/organization-integrator/overview) | [Community Profile OMAS](/services/omas/community-profile/overview) | organization-integrator-api, community-profile-api  |
-| [Security Integrator OMIS](/services/omis/security-integrator/overview) | [Security Manager OMAS](/services/omas/security-manager/overview) | security-integrator-api, security-manager-api  |
-| [Topic Integrator OMIS](/services/omis/topic-integrator/overview) | [Data Manager OMAS](/services/omas/data-manager/overview) | topic-integrator-api, data-manager-api  |
 
 These dependencies are in addition to the standard dependencies for an integration connector:
 

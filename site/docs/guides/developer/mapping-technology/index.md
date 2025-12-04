@@ -11,11 +11,11 @@ The [Schema open metadata types](/concepts/schema) describe the structure of dat
 ## Representing File Assets
 
 
-![Figure 1](file-representations-in-metadata.png#pagewidth)
+![Figure 1](files/file-representations-in-metadata.png#pagewidth)
 > **Figure 1:** Examples of modelling file-based data sources
 
 
-![Figure 2](mixing-files-and-folders.png#pagewidth)
+![Figure 2](files/mixing-files-and-folders.png#pagewidth)
 > **Figure 2:** Mixing files and folders
 
 ## Representing Information Views
@@ -35,7 +35,7 @@ The [Schema open metadata types](/concepts/schema) describe the structure of dat
 
 ## Representing Processes
 
-![Figure 6](complex-processes.png#pagewidth)
+![Figure 6](processes/complex-processes.png#pagewidth)
 > **Figure 6:** Representing Nested Processes
 
 --8<-- "snippets/abbr.md"

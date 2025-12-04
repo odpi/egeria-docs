@@ -73,7 +73,7 @@ Congratulations to [Juergen Hemelt](https://github.com/juergenhemelt) who become
 
 ### Metadata Governance Dojo
 
-The big event this month was the new [Metadata Governance Dojo](/education/egeria-dojo/metadata-governance/overview).  We held two live sessions (3 hours each) and extended the discussion of the governance engines to one of the community calls.  The topics covered the philosophy and purpose of metadata governance, details of the operation of the [Integration Daemon](/concepts/integration-daemon) as well as [governance processes](/concepts/governance-action-process) and [services](/concepts/governance-service) running in the [Engine Host](/concepts/engine-host).  There are also sections on building the materials for a [subject area](/concepts/subject-area), [incident reporting](/concepts/incident-report), [lineage](/concepts/lineage) and [templated cataloguing](/features/templated-catalouing/overview).
+The big event this month was the new *Metadata Governance Dojo*.  We held two live sessions (3 hours each) and extended the discussion of the governance engines to one of the community calls.  The topics covered the philosophy and purpose of metadata governance, details of the operation of the [Integration Daemon](/concepts/integration-daemon) as well as [governance processes](/concepts/governance-action-process) and [services](/concepts/governance-service) running in the [Engine Host](/concepts/engine-host).  There are also sections on building the materials for a [subject area](/concepts/subject-area), [incident reporting](/concepts/incident-report), [lineage](/concepts/lineage) and [templated cataloguing](/features/templated-catalouing/overview).
 
 ### Community Meetings
 

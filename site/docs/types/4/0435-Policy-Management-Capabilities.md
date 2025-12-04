@@ -42,32 +42,7 @@ The open metadata types are implemented as classifications.  The classifications
 
 ## Using the Policy Management Capabilities open metadata types
 
-The [Digital Architecture OMAS](/services/omas/digital-architecture/overview)
-and [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview)
-provide mechanisms to set up the Policy Management Capabilities classifications on metadata elements.
-
-## Implementation of Policy Management Capabilities in Egeria
-
-Not only does Egeria support the use of the Policy Management Capabilities in your architectures and
-metadata, we have also the concepts in the design of Egeria itself.
-
-In Egeria, the Policy Administration Point is
-[Governance Program OMAS](/services/omas/governance-program/overview).
-Services such as 
-[Security Manager OMAS](/services/omas/security-manager/overview)
-act as a Policy Retrieval Points to push policy information to external Policy Enforcement Points such as
-[Apache Ranger](http://ranger.apache.org/).
-
-Egeria's [metadata access points](/concepts/metadata-access-point)
-and [metadata access store](/concepts/metadata-access-store)
-can act as Policy Information Points.
-
-Egeria's
-[Metadata Security](/features/metadata-security/overview)
-module is a Policy Enforcement Point, calling the metadata security connectors as Policy Decision Points.
-
-The [Engine Services](/services/omes)
-running in the [Engine Host OMAG Server](/concepts/engine-host)
-can act as Policy Enforcement Points. 
+The [Security Officer](/services/omvs/security-officer/overview) API provides mechanisms to set up the Policy Management Capabilities classifications on metadata elements.
+ 
 
 --8<-- "snippets/abbr.md"

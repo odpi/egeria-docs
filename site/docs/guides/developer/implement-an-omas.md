@@ -144,8 +144,7 @@ implementing the OMAS one scenario at a time.
   The FVTs should run with little manual intervention and include instructions so that anyone can run them.
   Ultimately, they will run as part of the centralized build.
  
-* Design the event payloads that are sent and received through the OMAS's 
-  [OutTopic](/concepts/out-topic) and [InTopic](/concepts/in-topic) respectively.
+* Design the event payloads that are sent and received through the OMAS's [OutTopic](/concepts/out-topic) .
 
 * Design the FVT test for the Events.
 

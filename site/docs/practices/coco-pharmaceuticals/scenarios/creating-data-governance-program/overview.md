@@ -47,7 +47,7 @@ The principles are defined as follows:
 * Information is managed in a cost effective manner.   This is achieved through a well-defined information architecture that follows standards and best practices.
 * Information and analytics will be only be used for approved, ethical purposes.
 
-The governance principles are added to open metadata using the [Governance Program OMAS](/services/omas/governance-program/overview).
+The governance principles are added to open metadata using the [Governance Officer](/services/omvs/governance-officer/overview) API.
 
 Ivor and Faith have governance leadership roles in other governance domains.  The principles that Jules is defining need to tie into their work. 
 

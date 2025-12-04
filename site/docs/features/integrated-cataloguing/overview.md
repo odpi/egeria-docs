@@ -7,13 +7,12 @@
 
 It is possible to add metadata to a metadata repository using no automation beyond the catalog management of the metadata once it is created.  Individuals enter information about digital resources and associated intellectual property into Egeria through tools that call Egeria's [Open Metadata Access Services (OMASs)](/services/omas).
 
-The [Asset Owner OMAS](/services/omas/asset-owner) is the principle interface for manual cataloguing of digital resources.  It is possible to catalog any type of digital resource through this interface, although it is biased towards cataloging data sources such as data stores, data feeds, files, data sets, APIs and events.  The digital resources are represented in the catalog as [assets](/concepts/asset).
+The [Asset Maker](/services/omvs/asset-maker/overview) API is the principle interface for manual cataloguing of digital resources.  It is possible to catalog any type of digital resource through this interface, although it is biased towards cataloging data sources such as data stores, data feeds, files, data sets, APIs and events.  The digital resources are represented in the catalog as [assets](/concepts/asset).
 
-In addition, there are specific cataloguing interfaces to support particular types of subject-matter experts.
+In addition, there are specific cataloguing interfaces to support additional information.
 
-* [IT Infrastructure OMAS](/services/omas/it-infrastructure) provides specialist interfaces for cataloguing infrastructure such as servers, host systems and applications.
-
-* [Digital Architecture OMAS](/services/omas/digital-architecture) provides specialist interfaces for architects and integration engineers to manually catalog [reference data sets](/features/reference-data-management/overview) and processes. Reference data sets are assets in their own right, and their content can be used as classifiers to augment the description of other assets. Processes are also assets that, when linked together, show the [lineage](/features/lineage-management/overview) of the assets they are partly responsible for maintaining.
+* [Schema Maker](/services/omvs/schema-maker) API provides specialist interfaces for cataloguing [schema](/concepts/schema).
+* [Connection Maker](/services/omvs/connection-maker) API provides specialist interfaces for cataloguing [connections](/concepts/connection).
 
 Manual cataloguing works well for infrequent cataloguing.  However, it is expensive and error-prone when aiming to systematically catalog a digital landscape if it is complex and continually changing.
 

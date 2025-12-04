@@ -18,6 +18,6 @@ The *SearchKeyword* entity stores the definition of the search keyword.
 The *SearchKeywordLink* relationship links *SearchKeyword*s with the asset and their associated elements.
 
 ??? education "Further information"
-    Search keywords can be added manually through the [Asset Owner OMAS](/services/omas/asset-owner/overview). Some files such as documents and photos may have keywords embedded in them. These can be [automatically discovered through metadata discovery](/features/discovery-and-stewardship) and stored in their corresponding asset properties using these same search keyword elements.
+    Search keywords can be added manually through the [Classification Manager](/services/omvs/classification-manager/overview) API. Some files such as documents and photos may have keywords embedded in them. These can be [automatically discovered through metadata discovery](/features/discovery-and-stewardship) and stored in their corresponding asset properties using these same search keyword elements.
 
 --8<-- "snippets/abbr.md"

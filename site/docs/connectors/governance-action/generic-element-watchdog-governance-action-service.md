@@ -83,7 +83,7 @@ The rest of the properties are the governance action processes to call for speci
     }
     ```
 
-    This is its connection definition to use when creating the definition of the governance action service using the [Governance Server OMAS](/services/omas/governance-server/overview). Remove the configuration properties that are not required. Replace `{{typeName}}`, `{{guid}}` and `{{processQualifiedName}}` as required.
+    This is its connection definition to use when creating the definition of the governance action service using the [Governance Configuration Services](/services/governance-configuration-services). Remove the configuration properties that are not required. Replace `{{typeName}}`, `{{guid}}` and `{{processQualifiedName}}` as required.
 
 ## Governance action settings
 

@@ -2,90 +2,12 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
-[*Connectors*](/concepts/connector) can be created through the following clients:
+[*Connectors*](/concepts/connector) can be created through the [Connection Maker](/services/omvs/asset-maker/overview)
 
-- [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
-- [Asset Owner OMAS](/services/omas/asset-owner/overview)
-
-The code sample below uses the Asset Consumer OMAS client to retrieve a list of assets from a [metadata access server](/concepts/metadata-access-server) and then create a connector to each one using the `getConnectorToAsset()` method.
-
-This method assumes that there is a connection object with a [connector type](/concepts/connector-type) and [endpoint](/concepts/endpoint) linked to the requested asset in the metadata repository.
 
 ![An asset with a connection](asset-connection.png)
 
-An exception is thrown if an asset does not have a connection. 
 
-In the sample, the connector returned by the Asset Consumer OMAS client is then cast to the `CSVFileConnector`. Assets that are not CSV files will have a different connector implementation and so the casting to `CSVFileConnector` also results in an exception.
-
-Assets that do not have a `CSVFileConnector` are ignored. The result is that the sample method returns a connector for the first CSV file asset retrieved from the metadata repository.
-
-??? example "Example: [connecting to CSV files using Asset Consumer OMAS :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-resources/open-metadata-samples/access-services-samples/asset-management-samples/asset-reader-csv-sample/src/main/java/org/odpi/openmetadata/accessservices/assetconsumer/samples/readcsvfile/CSVFileReaderSample.java){ target=gh }"
-
-    ```java linenums="1"
-    /**
-     * This method uses Asset Consumer OMAS to locate and create an Open Connector Framework (OCF) connector
-     * instance.
-     *
-     * @return connector to first CSVFile located in the catalog
-     */
-    private CSVFileStoreConnector getConnectorUsingMetadata()
-    {
-        try
-        {
-            /*
-             * The Asset Consumer OMAS supports a REST API to extract metadata from the open metadata repositories
-             * linked to the same open metadata cohort as the Asset Consumer OMAS.  It also has a Java client that
-             * provides an equivalent interface to the REST API plus connector factory methods supported by an
-             * embedded Connector Broker.  The Connector Broker is an Open Connector Framework (OCF) component
-             * that is able to create and configure instances of compliant connectors.  It is passed a Connection
-             * object which has all of the properties needed to create the connector.  The Asset Consumer OMAS
-             * extracts the Connection object from the open metadata repositories and then calls the Connector Broker.
-             */
-            AssetConsumer client = new AssetConsumer(serverName, serverURLRoot);
-
-            /*
-             * This call extracts the list of assets stored in the open metadata repositories that have a name
-             * that matches the requested filename.
-             */
-            List<String>   knownAssets = client.findAssets(clientUserId, ".*", 0, 4);
-
-            if (knownAssets != null)
-            {
-                System.out.println("The open metadata repositories have returned " + knownAssets.size() + " asset definitions for the requested file name " + fileName);
-
-                for (String assetGUID : knownAssets)
-                {
-                    if (assetGUID != null)
-                    {
-                        try
-                        {
-                            /*
-                             * The aim is to return a connector for the first matching asset.  If an asset of a different
-                             * type is returned, on one where it is not possible to create a connector for, then an
-                             * exception is thrown and the code moves on to process the next asset.
-                             */
-                            return (CSVFileStoreConnector) client.getConnectorForAsset(clientUserId, assetGUID);
-                        }
-                        catch (Exception error)
-                        {
-                            System.out.println("Unable to create connector for asset: " + assetGUID);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                System.out.println("The open metadata repositories do not have an asset definition for the requested file name " + fileName);
-            }
-        }
-        catch (Exception error)
-        {
-            System.out.println("The connector can not be created from metadata.  Error message is: " + error.getMessage());
-        }
-
-        return null;
-    }
-    ```
 
 ### Connecting to assets with different levels of security
 
@@ -105,19 +27,6 @@ For example, there is typically one connector type for each connector implementa
 
 The connector types for Egeria's data store connectors are available in an open metadata archive called `DataStoreConnectorTypes.json` that can be loaded into the server. This approach can be used for all of your connector implementations to create the connector type objects in our metadata repository. See the [open-connector-archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } for more detail.
 
-#### Connector categories
-
-By default, connector implementations are assume to support the OCF. However, many vendor platforms have their own connector frameworks. The ConnectorCategory allows equivalent connector types from different connector frameworks to be gathered together so that the connector type from a connection can be swapped for an equivalent connector type for the locally supported connector framework.
-
-![Connector Categories](connector-categories.svg)
-
-#### Endpoints
-
-The endpoints are typically linked to the software server that is called by the connector. By navigating from the `Endpoint` to the linked connections it is possible to trace the callers to the software server.
-
-![Connections to a software server](connections-to-a-software-server.svg)
-
-Software servers and endpoints are set up through the [IT Infrastructure OMAS](/services/omas/it-infrastructure).
 
 !!! education "Further information"
     The [connector catalog](/connectors) lists the connectors provided by the Egeria community.

@@ -42,6 +42,6 @@ or
 or
 * [Learn about developing extensions to Egeria](/guides/developer)
 or
-* [Learn how to make a contribution to Egeria](/education/egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria)
+* [Learn how to make a contribution to Egeria](/guides/community)
 
 ---8<-- "snippets/abbr.md"

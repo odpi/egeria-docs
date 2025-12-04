@@ -9,11 +9,9 @@
 - [Action](/concepts/action)
 - [Action Target](/concepts/action-target)
 - [Actor](/concepts/actor)
-- [Analytics Integrator OMIS](/services/omis/analytics-integrator/overview)
 - [Anchor](/concepts/anchor)
 - [Anchor Grouping](/concepts/anchor)
 - [Anchor Domain](/concepts/anchor)
-- [API Integrator OMIS](/services/omis/api-integrator/overview)
 - [Application Programming Interface (API)](/concepts/basic-concepts)
 - [Archives for Open Metadata](/concepts/open-metadata-archive)
 - [Asset](/concepts/asset)
@@ -24,11 +22,8 @@
     - [Open Metadata Type](/types/0/0010-Base-Model)
   
 - [Asset Catalog OMVS](/services/omvs/asset-catalog/overview)
-- [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
 - [Asset log Message](/concepts/asset-log-message)
 - [Asset Manager](/concepts/software-capability/#asset-manager)
-- [Asset Manager OMAS](/services/omas/asset-manager/overview)
-- [Asset Owner OMAS](/services/omas/asset-owner/overview)
 - [Audit Log](/concepts/audit-log)
 - [Audit Log Destination Connector](/concepts/audit-log-destination-connector)
 - [Automated Curation OMVS](/services/omvs/automated-curation/overview)
@@ -40,7 +35,6 @@
 
 ## C
 
-- [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
 - [Catalog Target](/concepts/catalog-target)
 - [Catalog Target Type](/concepts/catalog-target)
 - [Catalog Template](/concepts/catalog-template)
@@ -55,14 +49,12 @@
 - [Collection Manager OMVS](/services/omvs/collection-manager/overview)
 - [Comments](/concepts/comments)
 - [Community](/concepts/community)
-- [Community Profile OMAS](/services/omas/community-profile/overview)
 - [Component Description](/concepts/component-description)
 - [Configuration Document](/concepts/configuration-document)
 - [Configuration Document Store Connector](/concepts/configuration-document-store-connector)
 - [Configuration Properties](/concepts/configuration-properties)
 - [Conformance Test Server](/concepts/conformance-test-server)
 - [Conformance Test Suite](/guides/cts/overview)
-- [Connected Asset Properties](/concepts/connected-asset-properties)
 - [Connection](/concepts/connection)
 - [Connector](/concepts/connector)
 - [Connector Broker](/concepts/connector-broker)
@@ -78,22 +70,14 @@
 - [Data Connector](/concepts/digital-resource-connector)
 - [Data Discovery OMVS](/services/omvs/data-discovery/overview)
 - [Data Domain](/concepts/subject-area)
-- [Data Manager](/services/omas/data-manager/overview)
-- [Data Manager OMAS](/services/omas/data-manager/overview)
-- [Data Science OMAS](/services/omas/data-science/overview)
-- [Database Integrator OMIS](/services/omis/database-integrator/overview)
 - [Default Zones](/concepts/governance-zone)
 - [Deployed Implementation Type](/concepts/deployed-implementation-type)
 - [Design Lineage](/features/lineage-management/overview)
-- [Design Model OMAS](/services/omas/design-model/overview)
-- [Digital Architecture OMAS](/services/omas/digital-architecture/overview)
 - [Digital Product](/concepts/digital-product)
 - [Digital Resource](/concepts/digital-resource)
 - [Digital Resource Connector](/concepts/digital-resource-connector)
 - [Digital Service](/practices/digital-services/overview)
-- [Digital Service OMAS](/services/omas/digital-service/overview)
 - [Discovery (metadata)](/features/discovery-and-stewardship/overview)
-- [Display Integrator OMIS](/services/omis/display-integrator/overview)
 - [Dynamic Integration Group](/concepts/integration-group)
 
 ## E
@@ -127,7 +111,6 @@
     - [servername.cohortname.registrystore](/connectors/runtime/file-cohort-registry-store-connector)
     - [*.omarchive](/connectors/runtime/file-based-open-metadata-archive-store-runtime-connector)
 
-- [Files Integrator OMIS](/services/omis/files-integrator/overview)
 - [Framework Services](/services/#framework-services)
 - [Frameworks](/frameworks)
 
@@ -158,11 +141,9 @@
 - [Governance Domain Identifier](/concepts/governance-domain)
 - [Governance Engine](/concepts/governance-engine)
 - [Governance Engine Definition](/concepts/governance-engine-definition)
-- [Governance Program](/services/omas/governance-program/overview)
-- [Governance Program OMAS](/services/omas/governance-program/overview)
+- [Governance Program](/guides/planning/governance-program/overview)
 - [Governance Request Type](/concepts/governance-request-type)
 - [Governance Servers](/concepts/governance-server)
-- [Governance Server OMAS](/services/omas/governance-server/overview)
 - [Governance Service](/concepts/governance-service)
 - [Governance Service Definition](/concepts/governance-service-definition)
 - [Governance Zones](/concepts/governance-zone)
@@ -192,10 +173,8 @@
     - [Instance Events](/concepts/cohort-events)
     - [Server Instances](/concepts/omag-server)
        
-- [InTopic](/concepts/in-topic)
 - [In Memory Repository Connector](/concepts/repository-connector)
 - [Information Supply Chain](/concepts/information-supply-chain)
-- [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview)
 - [Integration Connector](/concepts/integration-connector)
 - [Integration Context](/frameworks/oif/overview)
 - [Integration Context Manager](/frameworks/oif/overview)
@@ -204,7 +183,6 @@
 - [Integration Group](/concepts/integration-group)
 - [Integration Services](/services/omis)
 - [IsPublic](/concepts/is-public)
-- [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview)
 
 
 ## J
@@ -223,7 +201,6 @@
 
 - [Likes](/concepts/like)
 - [Lineage](/features/lineage-management/overview)
-- [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
 - [Lineage Warehouse](/concepts/lineage-warehouse)
 - [Local Metadata Collection Id](/concepts/metadata-collection-id)
 - [Local Repository Services (OMRS)](/services/omrs)
@@ -238,7 +215,7 @@
 - [Metadata Access Server](/concepts/metadata-access-server)
 - [Metadata Access Store](/concepts/metadata-access-store)
 - [Metadata Archives](/concepts/open-metadata-archive)
-- [Metadata Catalog](/services/omas/asset-catalog/overview)
+- [Metadata Catalog](/patterns/metadata-catalog/overview)
 - [Metadata Collection](/concepts/metadata-collection)
 - [Metadata Discovery](/features/discovery-and-stewardship/overview)
 - [Metadata Highway](/services/omrs)
@@ -285,7 +262,6 @@
 - [Open Lineage Topic](/concepts/open-lineage-topic)
 - [Operational Lineage](/features/lineage-management/overview/#openlineage-standard)
 - [Organization](/concepts/organization)
-- [Organization Integrator OMIS](/services/omis/organization-integrator/overview)
 - [OutTopic](/concepts/out-topic)
 
 
@@ -306,7 +282,6 @@
 - [Process](/concepts/process)
 - [Project](/concepts/project)
 - [Project Manager OMVS](/services/omvs/project-manager/overview)
-- [Project Management OMAS](/services/omas/project-management/overview)
 - [Provenance of metadata](/features/metadata-provenance/overview)
 - [pyegeria](/concepts/pyegeria)
 
@@ -355,8 +330,6 @@
 - [Security](/features/metadata-security/overview)
 - [Security Connector for OMAG Server](/concepts/server-metadata-security-connector)
 - [Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)
-- [Security Integrator OMIS](/services/omis/security-integrator/overview)
-- [Security Manager OMAS](/services/omas/security-manager/overview)
 - [Security Tags](/concepts/security-tags)
 - [Server Capabilities](/concepts/software-capability)
 - [Server Chassis](/services/platform-chassis)
@@ -365,7 +338,6 @@
 - [Server Security](/features/metadata-security/overview)
 - [Server Types](/concepts/omag-server)
 - [Server URL Root](/concepts/platform-url-root)
-- [Software Developer OMAS](/services/omas/software-developer/overview)
 - [Software Capability](/concepts/software-capability)
 - [Software Server Capability](/concepts/software-capability)
 - [Solution Blueprint](/concepts/solution-blueprint)
@@ -374,16 +346,13 @@
 - [Star Ratings](/concepts/review)
 - [Specification](/concepts/specification)
 - [Stewardship](/features/discovery-and-stewardship/overview)
-- [Stewardship Action OMAS](/services/omas/stewardship-action/overview)
 - [Stewardship Engine](/concepts/governance-engine)
-- [Stewardship Integrator OMIS](/services/omis/stewardship-integrator/overview)
 - [Stewardship Server](/concepts/engine-host)
 - [Subject Area](/concepts/subject-area)
 - [Subject Area Domain](/concepts/subject-area)
 - [Subsystem](/concepts/omag-subsystem)
 - [Survey Report](/concepts/survey-report)
 - [Survey Action Engine](/concepts/survey-action-engine)
-- [Survey Action Framework (SAF)](/frameworks/osf/overview)
 - [Survey Action Service](/concepts/survey-action-service)
 - [Supported Zones](/concepts/governance-zone)
 
@@ -399,11 +368,9 @@
 - [To Do](/concepts/to-do)
 - [Topic](/concepts/basic-concepts/#topic)
 
-  - [InTopic](/concepts/in-topic)
   - [Cohort Topic](/concepts/cohort-topic)
   - [OutTopic](/concepts/out-topic)
   
-- [Topic Integrator OMIS](/services/omis/topic-integrator/overview)
 - [Type Definitions (TypeDefs)](/concepts/open-metadata-type-definitions)
 
   - [TypeDef Events](/concepts/cohort-events)

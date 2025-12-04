@@ -3,9 +3,9 @@
 
 --8<-- "snippets/content-status/stable.md"
 
-# Glossary Manager OMVS
+# Glossary Manager
 
-The Glossary Manager Open Metadata View Service (OMVS) is a REST API designed to support UIs that enable the maintenance of [glossary content](/practices/common-data-definitions/anatomy-of-a-glossary) using a controlled workflow process.  It runs in a [View Server](/concepts/view-server) and calls the [Asset Manager OMAS](/services/omas/asset-manager/overview) to retrieve and make changes to the glossary.
+The Glossary Manager Open Metadata View Service (OMVS) is a REST API designed to support UIs that enable the maintenance of [glossary content](/practices/common-data-definitions/anatomy-of-a-glossary) using a controlled workflow process. 
 
 ## Why use a controlled glossary workflow
 
@@ -164,11 +164,10 @@ In the first example shown below, the request for approval of a change results i
 
 ![Getting a decision from the WF engine](external-workflow-engine.svg)
 
-This approach provides a simple integration path that acts when the external process is complete.  However, you may choose to have the updates to the glossary made by the workflow process itself during its execution.  This may be useful if the process is approving a large batch of terms, for example, and the decisions for each term need to be recorded as they are made (rather than at the end).  This second approach shown below has the external workflow process calling the [Asset Manager OMAS](/services/omas/asset-manager/overview) during the process execution.
+This approach provides a simple integration path that acts when the external process is complete.  However, you may choose to have the updates to the glossary made by the workflow process itself during its execution.  This may be useful if the process is approving a large batch of terms, for example, and the decisions for each term need to be recorded as they are made (rather than at the end).  This second approach shown below has the external workflow process calling the open metadata API during the process execution.
 
 ![Handing over responsibility](external-workflow-engine-2.svg)
 
-The Asset Manager OMAS is the same service called by the Glossary Manager OMAS.
 
 ---8<-- "snippets/abbr.md"
 

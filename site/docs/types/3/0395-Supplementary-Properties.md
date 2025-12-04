@@ -16,7 +16,7 @@ even if the element is read-only because it is technical metadata extracted from
 
 ![UML](0395-Supplementary-Properties.svg)
 
-The [Asset Manager OMAS](/services/omas/asset-manager/overview) makes use of this relationship to link an asset to a glossary term that is providing supplementary properties to the asset.
+Egeria makes use of this relationship to link an asset to a glossary term that is providing supplementary properties to the asset.
 
 
 --8<-- "snippets/abbr.md"

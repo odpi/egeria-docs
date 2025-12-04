@@ -20,13 +20,7 @@ issue is displayed.
 
 Enter a meaningful title and description.  This will help the maintainers understand your contribution
 and speed up the process to include it.
-If you are participating on the dojo you can use a title of `Create my postcard file for Egeria Dojo`
-and description of
-```md
-This is a change to Egeria that is part of the Egeria Dojo session
-[Making a contribution to Egeria - Step-by-Step](https://egeria.odpi.org/open-metadata-resources/open-metadata-tutorials/egeria-dojo/egeria-dojo-day-2-3-contribution-to-egeria.html).
-It will create a new markdown file in `open-metadata-resources/open-metadata-tutorials/egeria-dojo/egeria-dojo-postcards` and link it to the readme.
-```
+
 Notice that it is possible to use [Markdown](/guides/contributor/markdown)
 tags to create highlights and links to content to explain what you are doing.
 

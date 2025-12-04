@@ -38,7 +38,6 @@ A *TabularFileColumn* is a specialization of *TabularColumn* to enable a column 
 !!! info "Further Information"
 
     * [Relational database columns](/types/5/0534-Relational-Schemas) are specializations of the tabular schema.
-    * [Files Integrator OMIS](/services/omis/files-integrator/overview) calls [Data Manager OMAS](/services/omas/data-manager/overview) to catalog files and their schemas.
 
 
 

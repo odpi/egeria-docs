@@ -392,18 +392,6 @@ Organizations use vertical lineage view to visualize how business concepts such 
     By using open metadata, metadata is captured once and used for many purposes.
 
 ??? education "Further reading"
-
     - [File Lineage solution using Egeria](/scenarios/file-lineage/overview)
-
-    APIs for capturing lineage
-
-    - [Asset Manager Open Metadata Access Service (OMAS)](/services/omas/asset-manager/overview)
-    - [Open Metadata Integration Services (OMISs)](/services/omis)
-
-    APIs for retrieving lineage
-
-    - [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
-    - [Asset Owner](/services/omas/asset-owner/overview) and [Asset Consumer](/services/omas/asset-consumer/overview) through the [Open Connector Framework (OCF)](/frameworks/ocf/overview).
-
 
 --8<-- "snippets/abbr.md"

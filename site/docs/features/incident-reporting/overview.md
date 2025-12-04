@@ -27,7 +27,7 @@ The people working on the incident can add notes to the incident report's note l
 
     1. When an incident occurs, an incident report is created.  There is support to create an incident on most [Open Metadata Access Services (OMASs)](/services/omas), [Open Metadata Integration Services (OMISs)](/services/omis) supporting [integration connectors](/concepts/integration-connector) and the [Open Metadata Engine Services (OMESs)](/services/omes) supporting [governance services](/concepts/governance-service). 
     2. the request is routed to [Metadata Access Store](metadata-access-store) and an [IncidentReport](/types/4/0470-Incident-Reporting) entity linked to metadata describing the originator and any impacted resources is saved to its open metadata repository.
-    3. The content of incident report is managed via the [Stewardship Action OMAS](/services/omas/stewardship-action/overview)'s interface.  This could be through direct calls to the API or via an [integration connector](/concepts/integration-connector) running in the [Stewardship Integrator OMIS](/services/omis/stewardship-integraotr/overview)
+    3. The content of an incident report is managed via the [Asset Maker](/services/omvs/asset-maker/overview)'s interface.  This could be through direct calls to the API or via an [integration connector](/concepts/integration-connector).
 
     ![Incident Management](/features/incident-reporting/incident-management.svg)
 
@@ -37,7 +37,7 @@ The people working on the incident can add notes to the incident report's note l
 
     It detects an unexpected member in the `founders` security group for a userId called `matt-darker`.  Is this a valid entry and Egeria's list of user identities is out of date, or is this part of a cyber-attack?  The governance action service creates an incident report identifying the security group and the unexpected userId.
 
-    The creation of the incident report in the open metadata ecosystem causes an event to be published by the [Stewardship Action OMAS](/services/omas/stewardship-action/overview).  It is picked up by an [integration connector](/concepts/integration-connector) called `Incident Manager Integration Connector`.  This integration connector publishes the incident report to Coco Phamaceuticals' security incident management system as an `issue`, where it is picked up by the security team to work on.  Any relevant updates made to the `issue` in the security incident management system are detected by `Incident Manager Integration Connector` and reflected back in the incident report in the open metadata ecosystem.
+    The creation of the incident report in the open metadata ecosystem causes an event to be published by an [integration connector](/concepts/integration-connector) called `Incident Manager Integration Connector`.  This integration connector publishes the incident report to Coco Phamaceuticals' security incident management system as an `issue`, where it is picked up by the security team to work on.  Any relevant updates made to the `issue` in the security incident management system are detected by `Incident Manager Integration Connector` and reflected back in the incident report in the open metadata ecosystem.
 
     ![Incident Management Example](/features/incident-reporting/incident-management-example.svg)
 

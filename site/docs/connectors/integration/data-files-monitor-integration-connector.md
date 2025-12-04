@@ -12,7 +12,6 @@ hide:
 
 !!! info "Connector details"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [Files Integrator OMIS](/services/omis/files-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [files-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors){ target=gh }
     - Jar File Name: `files-integration-connectors.jar`
@@ -34,7 +33,7 @@ Specifically:
 ![Figure 1](data-files-monitor-integration-connector.svg)
 > **Figure 1:** Operation of the data files monitor integration connector
 
-This connector uses the [Files Integrator OMIS](/services/omis/files-integrator/overview) running in the [integration daemon](/concepts/integration-daemon).
+This connector runs in the [integration daemon](/concepts/integration-daemon).
 
 Following is its connection definition to use on the [administration commands that configure the Files Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon):
 

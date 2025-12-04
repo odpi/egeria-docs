@@ -39,18 +39,6 @@ Most metadata repositories are run in a secure mode requiring incoming requests 
 !!! info "Further information"
     [People, Roles and Organizations](/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
     
-    The following APIs support actor profiles:
-    
-    - The [Community Profile OMAS](/services/omas/community-profile/overview) provides support for managing metadata about people and teams.
-
-    - The [Organization Integrator OMIS](/services/omis/organization-integrator/overview) supports the synchronization of information about people and teams between open metadata and external systems.
-
-    - The [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview) provides support for managing profile and user identity metadata for assets such as processes and connectors.
-    
-    - The [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview) supports the synchronization of IT profiles between open metadata and external system definitions.
-    
-    - The [Security Manager OMAS](/services/omas/security-manager/overview) provides support for retrieving metadata for all types of actor profiles and user identities metadata.
-    
-    - The [Security Integrator OMIS](/services/omis/security-integrator/overview) supports the publishing of all types of actor profiles and user identities between open metadata and external security management systems.
+    The [Actor Manager](/services/omvs/actor-manager/overview) API supports the maintenance of actor profiles.
 
 --8<-- "snippets/abbr.md"

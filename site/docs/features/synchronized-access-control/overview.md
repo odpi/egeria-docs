@@ -77,7 +77,7 @@ A [governance action service](/guides/developer/governance-action-services/overv
 
 ### Distribute
 
-Through an [integration connector](/concepts/integration-connector) running in the [Security Integrator OMIS](/services/omis/security-integrator/overview) hosted by the [Integration Daemon](/concepts/integration-daemon), the security tags are synchronized with the external security manager that is manage access control.
+Through an [integration connector](/concepts/integration-connector) hosted by the [Integration Daemon](/concepts/integration-daemon), the security tags are synchronized with the external security manager that is manage access control.
 
 ### Audit
 
@@ -93,37 +93,6 @@ Figure 7 provides a summary of the registered services involved in supporting sy
 
 ![Figure 7](security-tags-technology-summary.svg)
 > **Figure 7:** Summary of the services that support synchronized access control
-
-The links below take you to each service's description that includes how to configure and use these services.
-
-### Catalog Services
-
-- [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
-- [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
-- [API Integrator OMIS](/services/omis/api-integrator/overview)
-- [Display Integrator OMIS](/services/omis/display-integrator/overview)
-- [Files Integrator OMIS](/services/omis/files-integrator/overview)
-- [Database Integrator OMIS](/services/omis/database-integrator/overview)
-
-### Augmentation Services
-
-- [Asset Owner OMAS](/services/omas/asset-owner/overview)
-- [Survey Action OMES](/services/omes/asset-analysis/overview)
-- [Governance Action OMES](/services/omes/governance-action/overview)
-- [Stewardship Action OMAS](/services/omas/stewardship-action/overview)
-
-### Consolidation Services
-
-- [Governance Action OMES](/services/omes/governance-action/overview)
-
-
-### Distribution Services
-
-- [Security Integrator OMIS](/services/omis/security-integrator/overview)
-
-### Audit Services
-
-- [Governance Program OMAS](/services/omas/governance-program/overview)
 
 
 

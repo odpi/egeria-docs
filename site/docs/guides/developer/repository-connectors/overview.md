@@ -15,9 +15,9 @@ You may want to see the [OMRS metamodel](/guides/developer/metamodel/overview) f
     For cases where the tool is unable to do so, we are actively investigating other mitigation measures like providing a [Smart Repository Proxy :material-github:](https://github.com/odpi/egeria/issues/5402){ target=gh } to ensure that any changes to metadata that violate the protocol remain isolated in that third party technology and are not inadvertently propagated elsewhere in the cohort.
 
 
-!!! info "Consider integrating Catalogs with Asset Manager OMAS"
+!!! info "Consider integrating Catalogs with Integration Connectors"
 
-    The [Asset Manager OMAS](/services/omas/asset-manager-overview) (in conjunction with the [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)) provides a new integration path for asset managers that goes via an integration service hosted in an [integration daemon](/concepts/integration-daemon).
+    The [integration connector](/concepts/integration-connector) provides a new integration path for asset managers that goes via an [integration daemon](/concepts/integration-daemon).
 
     Catalogs will be able to have a two-way integration through this path without needing to conform to the repository service rules for managing home and reference copies. This is possible for two reasons:
 

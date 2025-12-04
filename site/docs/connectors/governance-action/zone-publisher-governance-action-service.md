@@ -28,7 +28,7 @@ The *Zone Publisher* Governance Action Service sets the supplied governance zone
 
 This connector uses the [Governance Action OMES](/services/omes/governance-action/overview) running in the [Engine Host](/concepts/engine-host).
 
-This is its connection definition to use when creating the definition of the governance action service using the [Governance Engine OMAS](/services/omas/governance-engine/overview). 
+This is its connection definition to use when creating the definition of the governance action service. 
 Note that `publishZones` can be specified in either the configuration properties or the request parameters.  The value in the request parameters overrides the configuration properties value. 
 
 

@@ -79,11 +79,4 @@ The final set of models capture architectures and patterns.
 
 * [Modelling schemas](/concepts/schema)
 
-* Specific schema structures supported by the integration services
-   * For API Schemas - [API Integrator OMIS](/services/omis/api-integrator/overview)
-   * For File Schemas - [Files Integrator OMIS](/services/omis/files-integrator/overview)
-   * For Database Schemas - [Database Integrator OMIS](/services/omis/database-integrator/overview)
-   * For Event Schemas - [Topic Integrator OMIS](/services/omis/topic-integrator/overview)
-   * For Forms and Report Schemas - [Display Integrator OMIS](/services/omis/display-integrator/overview)
-
 --8<-- "snippets/abbr.md"

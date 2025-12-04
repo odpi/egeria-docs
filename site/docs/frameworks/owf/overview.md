@@ -8,4 +8,5 @@
 The *Open Watchdog Framework (OWF)* supports the monitoring of resources and the notification of changes to subscribers.
 
 
+
 --8<-- "snippets/abbr.md"

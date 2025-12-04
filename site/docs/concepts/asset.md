@@ -46,23 +46,12 @@ The type of connector to use is specified in the [connection](/concepts/connecti
 
 ## APIs and events for managing asset information (metadata)
 
-Egeria's [Open Metadata Access Services (OMAS)](/services/omas) provide the specialized services for managing assets. Each OMAS focuses on a particular part of the asset lifecycle or person/tool that is working with the assets.
-
-Some examples:
-
-| OMAS | Description |
-|---|---|
-| [Asset Consumer OMAS](/services/omas/asset-consumer/overview) | provides a service for accessing the content of an asset, extracting additional information that is known about the asset and providing feedback about the asset. It is designed for tools that consume assets to support the work of their users. These users can provide feedback on the asset description and the resource that it describes. |
-| [Asset Manager OMAS](/services/omas/asset-manager/overview) | provides a service for exchanging metadata about assets and related information with a third party [asset manager](/concepts/server-capability). This API supports the many-to-many correlation of identifiers used in the third party asset manager and the open metadata ecosystem. |
-| [Asset Owner OMAS](/services/omas/asset-owner/overview) | provides a service for the owner of an asset to classify and manage the asset, and understand how it is being used by the organization. |
-| [Data Manager OMAS](/services/omas/data-manager/overview) | enables a data manager (such as a database or file system) to maintain information about the assets it stores. |
-| [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview) | provides a service for maintaining information about the IT assets and supporting infrastructure owned or used by an organization. |
-| [Data Science OMAS](/services/omas/data-science/overview) | provides a service for maintaining information about analytical models and related assets such as python notebooks. |
+Egeria's [Asset Maker API](/services/omvs/asset-maker/overview) provide the specialized services for managing assets. 
 
 ## Sharing information about assets
 
 Egeria's [Open Metadata Repository Services (OMRS)](/services/omrs) provides the ability to store and extract information about assets in a distributed collection of servers called an [open metadata repository cohort](/concepts/cohort-member). The cohort provides both peer-to-peer exchange of metadata via an event bus topic and federated queries between different members of the cohort. Egeria provides a [metadata access store](/concepts/metadata-access-store), a [metadata access point](/concepts/metadata-access-point) and a [repository proxy](/concepts/repository-proxy) server that are all able to join a cohort. The repository proxy supports the integration of third party servers (typically [asset managers](/software-capability/#asset-manager)) into the cohort. The mapping between the third party server's APIs and the open metadata APIs in this case is implemented in a [repository connector](/concepts/repository-connector).
 
-It is also possible to manage the exchange of asset metadata with other types of third party technologies using the [Open Metadata Integration Services (OMISs)](/services/omis) running in an [integration daemon](/concepts/integration-daemon). Using this pattern is simpler to integrate but involves maintaining a copy of the third party technology's metadata in a [metadata access store](/concepts/metadata-access-store) that can then join one or more open metadata repository cohorts to share this metadata more broadly. The mapping between the third party technology's APIs and the open metadata APIs in this case is implemented in an [integration connector](/connectors/integration-connector).
+It is also possible to manage the exchange of asset metadata with other types of third party technologies using the [Integration Connectors (OMISs)](/concepts/integraiton-connector) running in an [integration daemon](/concepts/integration-daemon). Using this pattern is simpler to integrate but involves maintaining a copy of the third party technology's metadata in a [metadata access store](/concepts/metadata-access-store) that can then join one or more open metadata repository cohorts to share this metadata more broadly. The mapping between the third party technology's APIs and the open metadata APIs in this case is implemented in an [integration connector](/connectors/integration-connector).
 
 --8<-- "snippets/abbr.md"

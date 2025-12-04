@@ -27,7 +27,7 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
 
 ??? beginner "Set up VM Options"
     
-    ![egeria-platform-report configuration](/education/egeria-dojo/developer/egeria-platform-report-configuration.png)
+    ![egeria-platform-report configuration](/education/tutorials/egeria-platform-report-configuration.png)
 
     Click on the white down arrow of the configurations box and select `Edit Configurations...`.  Select the configuration for `EgeriaPlatformReport` to show its configuration form.
     
@@ -35,9 +35,9 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
     
     ??? tip "Don't see VM Options in the configuration form?"
         You may need to use the `Modify Options` dropdown to `Add VM Options` to your configuration form.
-        ![Add VM Options](/education/egeria-dojo/developer/intellij-vm-options.png)
+        ![Add VM Options](/education/tutorials/intellij-vm-options.png)
     
-    ![egeria-platform-report configuration fixed](/education/egeria-dojo/developer/egeria-platform-report-configuration-fixed.png)
+    ![egeria-platform-report configuration fixed](/education/tutorials/egeria-platform-report-configuration-fixed.png)
 
 ??? beginner "Rerun `EgeriaPlatformReport`"
 
@@ -141,4 +141,4 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
     ```
     The next step will create a server configuration document that will also create the configuration directory and the report will start to show servers.  
 
-    `EgeriaPlatformReport` also creates a [markdown](/guides/contributor/markdown) document called `egeria-platform-report.md` that contains its output.  This [version of egeria-platform-report.md](/education/egeria-dojo/developer/egeria-platform-report-no-servers) is included for your reference.        
+    `EgeriaPlatformReport` also creates a [markdown](/guides/contributor/markdown) document called `egeria-platform-report.md` that contains its output.  This [version of egeria-platform-report.md](/education/tutorials/egeria-platform-report-no-servers) is included for your reference.        

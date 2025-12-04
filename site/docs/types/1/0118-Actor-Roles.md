@@ -30,8 +30,8 @@ The roles within a team are shown on [Model 0119 - Team Roles](/types/1/0119-Tea
 
 [People, Roles and Organizations](/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
 
-The [Community Profile OMAS](/services/omas/community-profile/overview) provides support for managing a [person's profile](/concepts/personal-profile). It also supports the ability to query a person's [roles](/concepts/personal-roles) and their [peer network](/concepts/peer-network).
+The [Actor Manager](/services/omvs/actor-manager/overview) provides support for managing actor profiles and roles.
 
-The [Organization Integrator OMIS](/services/omis/organization-integrator/overview) supports the synchronization of information about people between open metadata and external systems.
+The [People Organizer](/services/omvs/people-organizer/overview) supports the definition of team structures.
 
 --8<-- "snippets/abbr.md"

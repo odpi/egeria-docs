@@ -21,7 +21,7 @@ However:
 * No automation possible based off of this information.
 * It was difficult to correlate with other processes - dev ops, auditing, ...
 
-He decides to add the spreadsheet contents to Egeria to make it easy to manage.  He writes a simple script to load the contents through the [IT Infrastructure OMAS](/services/omas/it-infrastructure/overview). After experimenting with a number of queries, he discovers that his data was not as consistent as he had thought and starts to clean up the data through the Egeria APIs.
+He decides to add the spreadsheet contents to Egeria to make it easy to manage.  He writes a simple script to load the contents through the [DevOps Pipeline](/services/omvs/devops-pipeline/overview) API. After experimenting with a number of queries, he discovers that his data was not as consistent as he had thought and starts to clean up the data through the Egeria APIs.
 
 He builds new scripts that populate different spreadsheet structures for his team's projects and are able to load any updates they make.
 

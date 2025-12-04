@@ -37,23 +37,23 @@ The [*CatalogTarget*](/types/4/0464-Dynamic-Integration-Groups) relationship lin
 
 The diagram below shows the open metadata elements describing an integration group.  This integration group has two integration connectors.  Each integration connector is linked to a [connection](/concepts/connection) that describes how to create a running instance of the integration connector.  This connection may optionally include the endpoint information of the third party technology that the integration connector is to exchange metadata with. The *CatalogTarget* relationship provides an alternative way to supply details of one, or more third party technologies that it should connect to.  These technologies are described, typically by an [asset](/concepts/asset) open metadata element (shown in yellow) and are linked to the integration connector's element using the *CatalogTarget* relationship.
 
-![Integration group](/services/omas/governance-engine/integration-group-example)
+![Integration group](/services/omvs/asset-maker/integration-group-example.svg)
 
 The [connection](/concepts/connection) information associated with the third party technology can be used by the integration connector to create a [resource connector](/concepts/digital-resource-connector) that acts as a client to call the third party technology.
 
 The diagram below shows an example of a metadata description for an integration connector that catalogs files found in a directory (folder).  The catalog target is the asset that describes the directory where the files are located.  Linked to the asset is a connection for the data folder connector that will provide access to the files in the directory.
 
-![Data file cataloguing integration connector](/services/omas/governance-engine/integration-connector-catalog-target-data-folder-example)
+![Data file cataloguing integration connector](/services/omvs/asset-maker/integration-connector-catalog-target-data-folder-example.svg)
 
 This style of configuration means that the connection to a specific third party technology only needs to be specified once and can be used for multiple purposes.  This is important for technologies that need a complex connection structure that may need to be updated from time to time.  For example, the next diagram shows an integration connector that is linked to a database asset.  This database's connection is complex and includes an embedded secret store connector.  If details of the secrets used to connect to the database need to be changed, it only needs to be changed in one connection.
 
-![Database cataloguing integration connector](/services/omas/governance-engine/integration-connector-catalog-target-database-example)
+![Database cataloguing integration connector](/services/omvs/asset-maker/integration-connector-catalog-target-database-example.svg)
 
-The *CatalogTarget* relationship is similar to the [*TargetForAction*](/types/4/0463-Engine-Actions) relationships that links [engine actions](/concepts/engine-action) to the elements describing the technology that the associated [governance service](/concepts/governance-service) is to work on.
+The *CatalogTarget* relationship is similar to the [*ActionTarget*](/types/0/0013-Actions) relationships that links [engine actions](/concepts/engine-action) to the elements describing the technology that the associated [governance service](/concepts/governance-service) is to work on.
 
 From the perspective of the database element, these relationships make it possible to see the automated processing (agents) working with the database, as well as the metadata they are gathering/validating/updating.  This is useful for either the owner or the consumer of the resource to know how the technology and its metadata are being maintained.
 
-![Database's agents and information](/services/omas/governance-engine/database-agents-and-information)
+![Database's agents and information](/services/omvs/asset-maker/database-agents-and-information.svg)
 
 
 

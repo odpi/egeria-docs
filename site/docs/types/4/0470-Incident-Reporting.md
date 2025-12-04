@@ -11,7 +11,7 @@ An incident report may be related to the [context event(s)](/types/4/0475-Contex
 
 ## IncidentReport entity
 
-The *IncidentReport* entity is a [*Referenceable*](/types/0/0010-Base-Model) that describes the incident, when it occurred and its current status.
+The *IncidentReport* entity is a [*Report*](/types/2/0239-Reports) that describes the incident, when it occurred and its current status.
 
 ## IncidentReportStatus enumeration
 
@@ -29,12 +29,5 @@ The *IncidentReportStatus* enumeration provides the valid values for the status 
 
 The *ImpactedResource* relationship allows an *IncidentReport* entity to be linked to [*Referenceable*](/types/0/0010-Base-Model) entities that describe resources that are impacted by the incident.  For example, it may link an incident report to a [*SoftwareServer*](/types/0/0040-Software-Servers) that is unavailable.  The *severityLevelIdentifier* describes the severity of the impact on the *Referenceable* entity.  Its value is taken from the list of severities defined using the [Valid Metadata Values](/guides/planning/valid-metadata/overview) services.
 
-## IncidentOriginator relationship
-
-The *IncidentOriginator* links the *IncidentReport* entity to the [*Actor*](/types/1/0110-Actors) or [*Process*](/types/0/0010-Base-Model) that created the incident report.
-
-## IncidentDependency relationship
-
-The *IncidentDependency* relationship allows related *IncidentReport* entities to be linked together.  The *description* property describes the relationship.
 
 --8<-- "snippets/abbr.md"

@@ -79,27 +79,11 @@ The `refresh` method of your connector is called periodically to ensure the meta
 Your integration connector needs to be able to map between the elements in the third party technology and in the open metadata ecosystem.  Each will use different unique identifiers that it is unlikely that you can control.  Design the `qualifiedName` of the open metadata elements to be constructable from the identifier of the equivalent metadata element in the third party technology.
 
 ??? tip "What if there is not a one-to-one correspondence between elements"
-    The [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) supports [external identifiers](/features/external-identifiers/overview) which can help to correlate complex relationships between the third party technology and open metadata.
+    The integration context supports [external identifiers](/features/external-identifiers/overview) which can help to correlate complex relationships between the third party technology and open metadata.
     
 ## Controlling external source metadata provenance
 
 The [configuration for an integration connector](/guides/admin/servers/by-server-type/configuring-an-integration-daemon) in the Integration Daemon includes a *metadataSourceQualifiedName*.  The default value is null which means store the metadata in any [metadata collection](/concepts/metadata-collection) that is owned by the locally connected cohorts.  Alternatively, it specifies the [qualifiedName](/concepts/referenceable) of a [software capability](/concepts/software-capability) entity that represents the third party technology.   This is automatically catalogued by the integration daemon if it is not found in the open metadata ecosystem.  The guid and qualifiedName of this entity is used to identify the [external metadata collection](/concepts/metadata-collection) that any open metadata elements created by the integration connector will be stored in.  This prevents processes other than the integration connector from modifying the metadata elements.
-
-Some integration services allow the integration connector code to control which metadata collection to use if the *metadataSourceQualifiedName* is configured.  If it is set to true, the external metadata collection is used, otherwise it is one of the local cohort's collection.
-
-| Integration Service | Method to control external source metadata provenance                                                                                         |
-|---|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [API Integrator OMIS](/services/omis/api-integrator/overview) | Call `setAPIManagerIsHome()` method to set toggle. Default is `true`, which means external provenance is used if it is configured.            |
-| [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) | Use `assetManagerIsHome` property on method calls.                                                                                            |
-| [Database Integrator OMIS](/services/omis/database-integrator/overview) | External source metadata provenance is controlled by the configuration only.                                                                  |
-| [Display Integrator OMIS](/services/omis/display-integrator/overview) | Call `setApplicationIsHome()` to set toggle.  Default is `true`, which means external provenance is used if it is configured.                 |
-| [Files Integrator OMIS](/services/omis/files-integrator/overview) | External source metadata provenance is controlled by the configuration.                                                                       |
-| [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview) | Call `setInfrastructureManagerIsHome()` method to set toggle. Default is `true`, which means external provenance is used if it is configured. |
-| [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) | Use `assetManagerIsHome` property on method calls.                                                                                            |
-| [Organization Integrator OMIS](/services/omis/organization-integrator/overview) | External source metadata provenance is controlled by the configuration only.                                                                  |
-| [Security Integrator OMIS](/services/omis/security-integrator/overview)  | External source metadata provenance is controlled by the configuration only.                                                                  |
-| [Topic Integrator OMIS](/services/omis/topic-integrator/overview) | Call `setEventBrokerIsHome()` method to set toggle. Default is `true`, which means external provenance is used if it is configured.                                                                        |
-
 
 ## Writing the connector provider
 
@@ -188,23 +172,9 @@ The context is retrieved using the `getContext()` method.   This is a synchroniz
 
 ### Registering a listener with open metadata
 
-An integration connector that is listening for events from the open metadata ecosystem should implement the listener interface for the associated access service.  This interface has a `processEvent()` method that your connector implements.  
+An integration connector that is listening for events from the open metadata ecosystem should implement the listener interface [OpenMetadataEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/events/OpenMetadataEventListener.html).  This interface has a `processEvent()` method that your connector implements.  
 
-
-| Integration Service                                                                 | Partner OMAS                                                        | Listener Interface                                                                                                                                          |
-|-------------------------------------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [API Integrator OMIS](/services/omis/api-integrator/overview)                       | [Data Manager OMAS](/services/omas/data-manager/overview)           | [DataManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/datamanager/api/DataManagerEventListener.html)                |
-| [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)               | [Asset Manager OMAS](/services/omas/asset-manager/overview)         | [AssetManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetmanager/api/AssetManagerEventListener.html)             |
-| [Database Integrator OMIS](/services/omis/database-integrator/overview)             | [Data Manager OMAS](/services/omas/data-manager/overview)           | [DataManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/datamanager/api/DataManagerEventListener.html)                |
-| [Display Integrator OMIS](/services/omis/display-integrator/overview)               | [Data Manager OMAS](/services/omas/data-manager/overview)           | [DataManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/datamanager/api/DataManagerEventListener.html)                |
-| [Files Integrator OMIS](/services/omis/files-integrator/overview)                   | [Data Manager OMAS](/services/omas/data-manager/overview)           | [DataManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/datamanager/api/DataManagerEventListener.html)                |
-| [Infrastructure Integrator OMIS](/services/omis/infrastructure-integrator/overview) | [IT infrastructure OMAS](/services/omas/it-infrastructure/overview) | [ITInfrastructureEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/itinfrastructure/api/ITInfrastructureEventListener.html) |
-| [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)               | [Asset Manager OMAS](/services/omas/asset-manager/overview)         | [AssetManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/assetmanager/api/AssetManagerEventListener.html)             |
-| [Organization Integrator OMIS](/services/omis/organization-integrator/overview)     | [Community Profile OMAS](/services/omas/community-profile/overview) | [CommunityProfileEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/communityprofile/api/CommunityProfileEventListener.html) |
-| [Security Integrator OMIS](/services/omis/security-integrator/overview)             | [Security Manager OMAS](/services/omas/security-manager/overview)   | [SecurityManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/securitymanager/api/SecurityManagerEventListener.html)    |
-| [Topic Integrator OMIS](/services/omis/topic-integrator/overview)                   | [Data Manager OMAS](/services/omas/data-manager/overview)           | [DataManagerEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/accessservices/datamanager/api/DataManagerEventListener.html)                |
-
-Your integration connector registers itself as a listener in the `start()` method, and the `processEvent()` method is called each time an event occurs.   The event type passed on `processEvent()` depends on the OMIS that the connector is using.  In the example, the event type comes from [Asset Manager OMAS](/services/omas/asset-manager/overview) so the connector is either using the [Catalog Integrator OMAS](/servifes/omis/catalog-integrator/overview) or [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview).
+Your integration connector registers itself as a listener in the `start()` method, and the `processEvent()` method is called each time an event occurs.   The event type passed on `processEvent()` is a [OpenMetadataOutTopicEvent](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/events/OpenMetadataOutTopicEvent.html).
 
 ```java
     /**
@@ -236,7 +206,7 @@ Your integration connector registers itself as a listener in the `start()` metho
       * @param event event object
       */
      @Override
-     public void processEvent(AssetManagerOutTopicEvent event)
+     public void processEvent(OpenMetadataOutTopicEvent event)
      {
         /*
          * Only process events if refresh() is not running because the refresh() process creates lots of events and

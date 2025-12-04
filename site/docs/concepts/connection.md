@@ -76,21 +76,12 @@ Other properties for the connection include:
 
 ## Using Connections from open metadata repositories
 
-Each connection stored in a metadata repository has a unique identifier. An application can request a connector instance through selected Egeria OMAS interfaces, such as the [Asset Consumer OMAS](/services/omas/asset-consumer/overview), with just the unique identifier or name of a connection.  
+Each connection stored in a metadata repository has a unique identifier. An application can request a connector instance through selected Egeria interfaces, such as the [Runtime Manager OMVS](/services/omvs/runtime-manager/overview), or [Survey Action OMES](/services/omes/survey-action/overview), with just the unique identifier or name of a connection.  
 
 The OMAS retrieves the connection object from the open metadata repositories and passes it to the [Connector Broker](/concepts/connector-broker) factory object.  The Connector Broker (and underlying [Connector Provider](/concepts/connector-provider)) uses the information from the Connection object to create an instance of the connector.
 
 The advantage of retrieving the connection information from a metadata repository is that the connection properties do not need to be hard-coded in the consuming applications and the metadata associated with the linked Asset can be retrieved via the connectors [Connected Asset Properties](../../../saved/frameworks/connected-asset-properties.md) interface.
 
-Connections can be created in the open metadata repositories through the following interfaces:
-
-* [Asset Owner OMAS](/services/omas/asset-owner/overview)
-* [Asset Manager OMAS](/services/omas/asset-manager/overview)
-* [Data Manager OMAS](/services/omas/data-manager/overview)
-* [Database Integrator OMIS](/services/omis/database-integrator/overview)
-* [Files Integrator OMIS](/services/omis/files-integrator/overview)
-* [Governance Action OMES](/services/omes/governance-action/overview)
- 
 
 ## Configuring Egeria Connections
 

@@ -14,7 +14,7 @@ style that piggybacks on top of the HTTP protocol that powers the Internet. Eger
     Details of the different types of APIs provided by Egeria can be found in the [developer guide](/guides/developer/guide).
     In addition, it is possible to automatically catalog details of the APIs that your organization uses:
     
-    - [Cataloguing API](/services/omis/api-integrator/overview)
+    - [Cataloguing APIs](/egeria-solutions/leveraging-apis/overview)
 
 ## Event
 
@@ -25,12 +25,11 @@ It is sent on a [topic](#topic) to share its information with other servers.
     Details of the different types of events used by Egeria
 
     - [OMRS topic events](/concepts/metadata-events) - for open metadata repository cohorts
-    - [InTopic Events](/concepts/in-topic) - for outgoing events to an Open Metadata Access Service (OMAS)
     - [OutTopic Events](/concepts/out-topic) - for incoming events from an Open Metadata Access Service (OMAS)
 
     In addition, it is possible to automatically catalog details of the types of events that your organization uses:
     
-    - [Cataloguing topics and event types for an event broker :material-github:](/services/omis/topic-integrator/overview){ target=gh }
+    - [Cataloguing topics and event types for an event broker](/egeria-solutions/leveraging-apache-topics/overview).
 
 ## Event Broker
 
@@ -50,7 +49,7 @@ As such, each topic is accessed through an
 
 ??? education "Further information"
     - [Configuring the event broker for Egeria](/concepts/event-bus)
-    - [Cataloguing topics and event types for an event broker](/services/omis/topic-integrator/overview)
+    - [Cataloguing topics and event types for an event broker](/egeria-solutions/leveraging-apache-kafka/overview)
 
 ## Topic
 
@@ -67,12 +66,11 @@ order, but that is not necessarily guaranteed since it depends on the type and c
     Details of the different types of topics used by Egeria
 
     - [OMRSTopic](/concepts/metadata-events) - for open metadata repository cohorts
-    - [InTopic](/concepts/in-topic) - for sending events to an Open Metadata Access Service (OMAS)
     - [OutTopic](/concepts/out-topic) - for receiving events from an Open Metadata Access Service (OMAS)
 
     In addition, it is possible to automatically catalog details of the event brokers that your organization uses:
     
-    - [Cataloguing topics and event types for an event broker](/services/omis/topic-integrator/overview)}
+    - [Cataloguing topics and event types for an event broker](/egeria-solutions/leveraging-apache-kafka/overview)
 
 ## Engine
 
@@ -111,9 +109,9 @@ An asset manager may integrate with the open metadata ecosystem using one of thr
 
 * as a [cohort member](/concepts/cohort-member) through the [Open Metadata Repository Services (OMRS) connectors](/connectors/#repository-and-event-mapper-connectors) or 
 
-* using the [Catalog Integrator Open Metadata Integration Service (OMIS)](/services/omis/catalog-integrator/overview) through an [integration connector](/concepts/integration-connector) or
+* using an [integration connector](/concepts/integration-connector) or
 
-* through direct calls to the [Asset Manager Open Metadata Access Service (OMAS)](/services/omas/asset-manager/overview).
+* through direct calls to the [Asset Maker](/services/omvs/asset-maker/overview) API.
 
 The [Metadata Server Exchange](/patterns/metadata-server-exchange/overview) solution provides more information on these options.
 

@@ -20,6 +20,6 @@ A survey action engine hosts specialized governance services called [survey acti
 
 The Survey Action OMES is capable of hosting one or more [survey action engines](/concepts/survey-action-engine).
 
-The survey action engine services call the [Asset Owner Open Metadata Access Service (OMAS)](/services/omas/asset-owner/overview) running in a [metadata access server](/concepts/metadata-access-server) to retrieve information about assets and to store the results of the survey action services' work.
+The survey action engine services call the [Open Metadata Store](/services/open-metadata-store) running in a [metadata access server](/concepts/metadata-access-server) to retrieve information about assets and to store the results of the survey action services' work.
 
 --8<-- "snippets/abbr.md"

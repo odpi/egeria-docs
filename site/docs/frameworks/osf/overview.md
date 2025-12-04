@@ -122,7 +122,7 @@ A RequestForAction (RfA) annotation is used when a survey action service perform
 
 ![Request for action](survey-action-request-for-action.svg)
 
-The [Stewardship Action OMAS](/services/omas/stewardship-action/overview) is designed to respond to the requests for actions (RfAs).
+The [governance action services](/concepts/governance-action-service) are implemented to respond to the requests for actions (RfAs).
 
 ## Survey context
 

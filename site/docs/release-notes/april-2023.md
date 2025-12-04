@@ -44,7 +44,7 @@ In this release we have added the following view services to aid organizations w
 * [Glossary Browser OMVS](#glossary-browser-omvs)
 * [Glossary Manager OMVS](#glossary-manager-omvs)
 
-These view services are supported by enhancements to the [Asset Manager OMAS](/services/omas/asset-manager/overivew){target=blank}
+These view services are supported by enhancements to the Asset Manager OMAS.
 
 ### Glossary Manager OMVS
 

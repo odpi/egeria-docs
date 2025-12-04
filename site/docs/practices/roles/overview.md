@@ -91,7 +91,7 @@ Roles that occur when governance programs are in place:
     ### Governance Officer Role
     
     A person who is responsible for leading a governance domain is called a governance officer.
-    The governance officer is supported by the [Governance Program OMAS](/concepts/omas/governance-program/overview).
+    The governance officer is supported by the [Governance Officer](/concepts/omvs/governance-officer/overview) API.
     Below are specific examples of governance officers.
 
     ??? tip "Data Officer Role."
@@ -117,7 +117,7 @@ Roles that occur when governance programs are in place:
         #### Further information
     
         * [Extensions to the security officer role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
-        * The security officer is supported by the [Security Officer OMAS](/concepts/omas/security-officer/overview).
+        * The security officer is supported by the [Security Officer](/concepts/omvs/security-officer/overview).
 
 
 ??? tip "Incident Owner Role."
@@ -193,7 +193,7 @@ Roles involved in the day-to-day use of an organization's resources:
     #### Further information
     
     * [Extensions to the asset owner role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
-    * The Asset Owner is supported by the [Asset Owner OMAS](/concepts/omas/asset-owner/overview).
+    * The Asset Owner is supported by the [Classification Manager](/concepts/omvs/classification-manager/overview).
 
 ??? tip "Asset Consumer Role."
     ### Asset Consumer Role
@@ -273,7 +273,7 @@ Roles for building and using digital services:
 
     #### Further information
 
-    * The project manager role is supported by the [Project Management OMAS](/concepts/omas/project-management/overview).
+    * The project manager role is supported by the [Project Manager](/concepts/omvs/project-manager/overview) API.
     
 
 ??? tip "Developer Role."

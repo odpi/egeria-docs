@@ -55,11 +55,7 @@ The open metadata types for external identifier are in [model 0017](/types/0/001
 
 ## Implementations
 
-The [Asset Manager OMAS](/services/omas/asset-manager/overview) provides support for external identifier mapping on its APIs. This capability is visible through the [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) and the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) that are based on the Asset Manager OMAS client.
+The [External Linking](/services/omvs/external-linking/overview) API provides support for external identifier mapping. 
 
-The [Open Connector Framework (OCF)](/frameworks/ocf/overview) provides the ability to query the external identifiers attached to an asset through the [connected asset properties](/concepts/connected-asset-properties). This is also visible through the *`AssetUniverse`* interfaces of the:
-
-- [Asset Consumer OMAS](/services/omas/asset-consumer/overview)
-- [Asset Owner OMAS](/services/omas/asset-owner/overview)
 
 --8<-- "snippets/abbr.md"

@@ -54,7 +54,7 @@ This architecture means that you can incrementally add function to your deployme
 2. Decide on a name for an [open metadata repository cohort](/services/omrs/cohort) and configure your graph metadata repository to join it.
 3. If you want to have other third party metadata repositories that you want to share metadata with, configure [repository proxies](/guides/admin/servers/by-server-type/configuring-a-repository-proxy) for each including registering them to the same cohort as the metadata server.
 4. If you then want to add in metadata synchronization with other types of technology beyond metadata repositories, work out which [integration daemons](/concepts/integration-daemon) you need and [configure them to connect to the metadata access server](/guides/admin/servers/by-server-type/configuring-an-integration-daemon). Make sure the appropriate [access services](/services/omas) for these integration daemons are enabled in the metadata server.
-5. If you want to use the governance services then these run in an [engine host server](/concepts/engine-host) and connect to the metadata server via the [Governance Server OMAS](/services/omas/governance-server/overview).
+5. If you want to use the governance services then these run in an [engine host server](/concepts/engine-host).
 
 Working through this exercise gives you an understanding of the Egeria technology that you need for your deployment and how it connects together. The [Solutions Guide](/introduction/patterns) describes different solutions that you can build with Egeria, how they work and the configuration that you will need.
 

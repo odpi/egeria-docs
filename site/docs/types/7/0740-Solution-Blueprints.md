@@ -4,21 +4,25 @@
 
 # 0740 Solution Blueprints
 
-A [solution blueprint](/concepts/solution-blueprint) describes the architecture of a digital service, or a new capability, in terms of [solution components](/types/7/0730-Solution-Components).
+A [solution blueprint](/concepts/solution-blueprint) is a collection of [solution components](/types/7/0730-Solution-Components) that describe the architecture of a digital service, or a new capability.
 
 ![UML](0740-Solution-Blueprints.svg)
 
-## SolutionBlueprint
+## SolutionBlueprint entity
 
-The *SolutionBlueprint* entity describes a single version of the digital service's design.  It inherits from [DesignModel]()
+The *SolutionBlueprint* entity describes a single version of the digital service's architecture.  It inherits from [DesignModel](/types/5/0565-Design-Models) which is a type of [Collection](/types/0/0021-Collections).
+The [*CollectionMembership*](/types/0/0021-Collections) relationship identifies the list of solution components that implement the digital service.  The definition of the solution components shows [how they are linked together](/types/7/0735-Solution-Ports-and-Wires) and so SolutionBlueprintComposition simply documents the role each solution component plays in supporting the digital service.
 
-## DigitalServiceDesign
+## SolutionDesign relationship
 
-There can be multiple solution blueprints for a digital service that each describe a version of its implementation.  The *DigitalServiceDesign* relationship identifies which [digital service](/types/7/0710-Digital-Service) the blueprint describes.
+There can be multiple solution blueprints for an architecture.  For example:
 
-## SolutionBlueprintComposition
+* to describe a version of the architecture.
+* to define an aspect of the architecture.
+* to describe different levels of detail.
 
-The *SolutionBlueprintComposition* relationship identifies the list of solution components that implement the digital service.  The definition of the solution components shows [how they are linked together](/types/7/0735-Solution-Ports-and-Wires) and so SolutionBlueprintComposition simply documents the role each solution component plays in supporting the digital service.
+The *SolutionDesign* relationship identifies which [element](/types/0/0010-Base-Model) the blueprint describes.  Its attributes identify what aspect of the architecture is covered by the blueprint.
+
 
 
 

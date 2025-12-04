@@ -7,7 +7,6 @@
 
 ???+ info "Connector summary"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [apache-atlas-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/system-connectors/atlas-integration-connector){ target=gh }
     - Jar File Name: `apache-atlas-connectors.jar`
@@ -233,7 +232,7 @@ Finally, there is an optional set of configuration properties that controls the 
 
 ### Adding the connection to Egeria's configuration
 
-This connector runs in the [Integration Daemon](/concepts/integration-daemon) and uses the [Catalog Integrator OMIS](/services/omis/catalog-integrator/overview) interface to access the open metadata ecosystem.
+This connector runs in the [Integration Daemon](/concepts/integration-daemon).
 
 Once you have the connection specified for the Apache Atlas integration connector, you have two choices on how to add it to Egeria's configuration:
 

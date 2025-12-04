@@ -96,7 +96,7 @@ Notice the element header includes the entity's classifications.
 
 ![Metadata Element Structure](retrieving-metadata-metadata-element.svg)
 
-As an example, these are the properties for an [Endpoint](/types/0/0026-Endpoints) metadata element from [Asset Owner OMAS](/services/omas/asset-owner/overview)'s java interface.
+As an example, these are the properties for an [Endpoint](/types/0/0026-Endpoints) metadata element from [Connection Maker](/services/omvs/connection-maker/overview)'s interface.
 
 ![EndpointElement](retrieving-metadata-endpoint-element.svg)
 

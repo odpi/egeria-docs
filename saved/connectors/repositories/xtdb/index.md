@@ -16,7 +16,6 @@
     [Reference copies](/guides/cts/profiles/reference-copies) | :material-check-all: CONFORMANT_FULL_SUPPORT
     [Metadata maintenance](/guides/cts/profiles/metadata-maintenance) | :material-check-all: CONFORMANT_FULL_SUPPORT
     [Dynamic types](/guides/cts/profiles/dynamic-types) | :material-help: UNKNOWN_STATUS
-    [Graph queries](/guides/cts/profiles/graph-queries) | :material-check-all: CONFORMANT_FULL_SUPPORT
     [Historical search](/guides/cts/profiles/historical-search) | :material-check-all: CONFORMANT_FULL_SUPPORT
     [Entity proxies](/guides/cts/profiles/entity-proxies) | :material-check-all: CONFORMANT_FULL_SUPPORT
     [Soft-delete and restore](/guides/cts/profiles/soft-delete-and-restore) | :material-check-all: CONFORMANT_FULL_SUPPORT

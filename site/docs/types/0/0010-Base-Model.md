@@ -7,6 +7,64 @@ The base model is the starting point for the open metadata type model.
 
 ![UML](0010-Base-Model.svg)
 
+## ActivityStatus enumeration
+
+The *ActivityStatus* enumeration indicates the execution status of a process.
+
+| Enumeration | Value | Name        | Description                                                                                                                                 |
+|-------------|-------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| REQUESTED   | 0     | Requested   | The description of the activity has been created and is pending.                                                                            |
+| APPROVED    | 1     | Approved    | The activity is approved to run. This means that the mandatory preconditions have been satisfied.                                           |
+| WAITING     | 2     | Waiting     | The activity is waiting for its start time or an actor to claim it.                                                                         |
+| ACTIVATING  | 3     | Activating  | The process that will perform the activity is being activated.                                                                              |
+| IN_PROGRESS | 4     | In Progress | The work for the activity is in progress.                                                                                                   |
+| PAUSED      | 5     | In Progress | The work for the activity has been paused.                                                                                                  |
+| COMPLETED   | 7     | Completed   | The work for the activity has successfully completed.                                                                                       |
+| INVALID     | 8     | Invalid     | The activity has not happened because it is not appropriate (for example, created by an automated process as a result of a false positive). |
+| IGNORED     | 9     | Ignored     | The activity has not been actioned because it is not important, or another activity has superseded it.                                      |
+| FAILED      | 10    | Failed      | The process that is performing the work (normally an automated process) failed during start up or execution.                                |
+| CANCELLED   | 11    | Cancelled   | The activity was cancelled by an external caller.                                                                                           |
+| ABANDONED   | 12    | Abandoned   | The activity was abandoned because it was not possible to complete the assigned work, or it is no longer relevant.                          |
+| OTHER       | 99    | Other       | Undefined or user-defined status.                                                                                                           |
+
+It is used with *Process* entities.
+
+## ContentStatus enumeration
+
+The *ContentStatus* shows the lifecycle states of an element that is being authored through open metadata.
+
+| Enumeration | Value | Name        | Description                                         |
+|-------------|-------|-------------|-----------------------------------------------------|
+| DRAFT       | 0     | Draft       | The content is incomplete.                          |
+| PREPARED    | 1     | Prepared    | The content is ready for review.                    |
+| PROPOSED    | 2     | Proposed    | The content is in review.                           |
+| APPROVED    | 3     | Approved    | The content is approved.                            |
+| REJECTED    | 4     | Rejected    | The request or proposal is rejected.                |
+| ACTIVE      | 5     | Active      | The instance is approved and in use.                |
+| DEPRECATED  | 6     | Deprecated  | The instance is out of date and should not be used. |
+| OTHER       | 99    | Other       | The instance is in a locally defined state.         |
+
+It is used in *AuthoredReferenceable* and *DataAsset* entities.
+
+## DeploymentStatus enumeration
+
+The *DeploymentStatus* shows the status of digital resources as they are developed, deployed, operated and eventually decommissioned.
+
+| Java/JSON name          | Ordinal | Name                    | Description                                               |
+|-------------------------|---------|-------------------------|-----------------------------------------------------------|
+| PROPOSED                | 0       | Proposed                | The content is in review.                                 |
+| UNDER_DEVELOPMENT       | 1       | Under development       | The instance is being developed.                          |
+| DEVELOPMENT_COMPLETE    | 2       | Development complete    | The development of the instance is complete.              |
+| APPROVED_FOR_DEPLOYMENT | 3       | Approved for deployment | The instance is approved for deployment.                  |
+| REJECTED_FOR_DEPLOYMENT | 4       | Rejected for deployment | The instance is not approved for deployment.              |
+| STANDBY                 | 5       | StandBy                 | The instance is deployed in standby mode.                 |
+| ACTIVE                  | 6       | Active                  | The instance is approved and in use.                      |
+| DISABLED                | 7       | Disabled                | The instance is shutdown or disabled.                     |
+| FAILED                  | 8       | Failed                  | The instance is not in use due to failure.                |
+| OTHER                   | 99      | Other                   | The instance is in a locally defined state.               |
+
+It is used in *Infrastructure* and [DigitalProduct](/types/7/0710-Digital-Products) entities.
+
 ## OpenMetadataRoot entity
 
 *OpenMetadataRoot* is the root entity for all open metadata entity types.
@@ -29,22 +87,14 @@ Referenceable also has provision for storing optional descriptive information:
     * [Further information on the use of Referenceable.](/concepts/referenceable)
     * [Further information on external identifiers](/features/external-identifiers/overview)
 
+
+## AuthoredReferenceable entity
+
+The *AuthoredReferenceable* is an element that has optional lifecycle states defined either by the *ContentStatus* enumeration, or if *contentStatus==OTHER*, the *userDefinedContentStatus* attribute. 
+
 ## Asset entity
 
 An [Asset](/concepts/asset) is a metadata entity that describes a [resource](/concepts/resource) (either physical or digital) that is of value and so needs to be managed and governed.  *Infrastructure*, *Process*, [*DataStore*](/types/2/0210-Data-Stores), [*DataFeed*](/types/2/0223-Events-and-Logs), [*DeployedAPI*](/types/2/0212-Deployed-APIs), *DataSet* and [*RunnableSoftwareComponent*](/types/2/0282-Released-Software-Components) are subtypes of *Assets*.
-
-Assets have an advanced lifecycle.  They can have the following [instance statuses](/concepts/instance-status).
-
-* Proposed
-* Under development
-* Development complete
-* Rejected
-* Standby
-* Active
-* Failed
-* Disabled
-* Other
-* Deleted
 
 *Asset* is a subtype of *Referenceable*. It adds five attributes to the *Referenceable* type:
 
@@ -60,7 +110,9 @@ More information on assets can be found in the [Metadata Manager](/patterns/meta
 
 ## Infrastructure entity
 
-*Infrastructure* represents both the physical and digital assets that the organization runs its business on. [*ITInfrastructure*](/types/0/0030-Hosts-and-Platforms) is a subtype of *Infrastructure* describing Information Technology (IT) infrastructure that runs IT services.  There is more information on the different types of *ITInfrastructure* in:
+*Infrastructure* represents both the physical and digital assets that the organization runs its business on.  It has optional lifecycle states defined either by the *DeploymentStatus* enumeration, or if *deploymentStatus==OTHER*, the *userDefinedDeploymentStatus* attribute.
+
+[*ITInfrastructure*](/types/0/0030-Hosts-and-Platforms) is a subtype of *Infrastructure* describing Information Technology (IT) infrastructure that runs IT services.  There is more information on the different types of *ITInfrastructure* in:
 
 - [0030 Hosts and Platforms](/types/0/0030-Hosts-and-Platforms)
 - [0035 Complex Hosts](/types/0/0035-Complex-Hosts)
@@ -71,49 +123,32 @@ More information on assets can be found in the [Metadata Manager](/patterns/meta
 
 ## Process entity
 
-*Process* describes a activity.  It may be performed by a human, team or automated process.
+*Process* describes an activity.  It may be performed by a human, team or automated process.  It has optional lifecycle states defined either by the *ActivityStatus* enumeration, or if *activityStatus==OTHER*, the *userDefinedActivityStatus* attribute.
 
 The additional attributes it introduces are:
 
-* priority - How urgent is this activity?
-
-* *expectedBehaviour* - he action that the person or automated process should perform.
+* *expectedBehaviour* - the action that the person or automated process should perform.
 * *requestedTime* - When the requested activity was documented.
+* *requestedStartTime* - When the requested activity was requested to start.
 * *startTime* - When the requested activity started.
 * *dueTime* - When the requested activity needs to be completed.
 * *lastReviewTime* - When the requested activity was last reviewed.
 * *lastPauseTime* - When the requested activity was last paused.
 * *lastResumeTime* - When the requested activity was last resumed.
 * *completionTime* - When the requested activity was completed.
-* *activityStatus* - How complete is the activity? (See ActivityStatus below)
-* *userDefinedActivityStatus* - additional values beyond those defined for
+* *priority* - How urgent is this activity?
 * *formula* attribute can describe its behaviour.  
 * *formulaType* describes the notation language used to describe the formula.
+* *activityStatus* - How complete is the activity? (See ActivityStatus enumeration).
+* *userDefinedActivityStatus* - additional values beyond those defined for activityStatus.
 
 Further subtypes of process can be found in models [0013 Actions](/types/0/0013-Actions) and [0215 Software Components](/types/2/0215-Software-Components/)
 
-## ActivityStatus enumeration
-
-The *ActivityStatus* indicates the execution status of the process.
-
-| Enumeration | Value | Name        | Description                                                                                                                                 |
-|-------------|-------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| REQUESTED   | 0     | Requested   | The description of the activity has been created and is pending.                                                                            |
-| APPROVED    | 1     | Approved    | The activity is approved to run. This means that the mandatory preconditions have been satisfied.                                           |
-| WAITING     | 2     | Waiting     | The activity is waiting for its start time or an actor to claim it.                                                                         |
-| ACTIVATING  | 3     | Activating  | The process that will perform the activity is being activated.                                                                              |
-| IN_PROGRESS | 4     | In Progress | The work for the activity is in progress.                                                                                                   |
-| PAUSED      | 5     | In Progress | The work for the activity has been paused.                                                                                                  |
-| COMPLETED   | 10    | Completed   | The work for the activity has successfully completed.                                                                                       |
-| INVALID     | 11    | Invalid     | The activity has not happened because it is not appropriate (for example, created by an automated process as a result of a false positive). |
-| IGNORED     | 12    | Ignored     | The activity has not been actioned because it is not important, or another activity has superseded it.                                      |
-| FAILED      | 13    | Failed      | The process that is performing the work (normally an automated process) failed during start up or execution.                                |
-| CANCELLED   | 14    | Cancelled   | The activity was cancelled by an external caller.                                                                                           |
-| OTHER       | 99    | Other       | Undefined or user-defined status.                                                                                                           |
-
 ## DataAsset entity
 
-The *DataAsset* entity described a collection of data.  [Area 2](/types/2/0210-Data-Stores) provides more detail on the different types of data assets.  A good place to start is model [0210 Data Stores](/types/2/0210-Data-Stores/).
+The *DataAsset* entity described a collection of data.  It has optional lifecycle states defined either by the *ContentStatus* enumeration, or if *contentStatus==OTHER*, the *userDefinedContentStatus* attribute.
+
+[Area 2](/types/2/0210-Data-Stores) provides more detail on the different types of data assets.  A good place to start is model [0210 Data Stores](/types/2/0210-Data-Stores/).
 
 ## SampleData relationship
 
@@ -126,10 +161,12 @@ The *Anchors* classification is used internally by the open metadata ecosystem t
 * *anchorGUID* - unique identifier of the anchor.
 * *anchorTypeName* - type name of the anchor.
 * *anchorDomainName* - type name of the anchor's domain.  This is the super type of the anchor that is one level below *Referenceable* or if the element does not inherit from *Referenceable*, take the type that is one level below *OpenMetadataRoot*.  For example, if the anchor is of type [DataSet](/types/2/0210-Data-Stores/), then the domain is *Asset*.  If the anchor is [DataClassAnnotation](/types/6/0625-Data-Class-Discovery/) then the domain is [Annotation](/types/6/0610-Annotations/).
-* *anchorScopeGUID* - Unique identifier of the scope of the anchor.  This is an Open Metadata GUID of an element that represents a scope/ownership of an anchor element.  It is used to restrict searches.
+* *anchorScopeGUID* - Unique identifier of the scope of the anchor.  This is a unique identifier (GUID) of an open metadata entity that represents a scope/ownership of an anchor element.  It is used to restrict searches.
+* *zoneMembership* - Unique identifier of the zone membership assigned to the anchor.  This is a list of zone names.  It is used to restrict access to the anchored elements.  Null means membership of all zones. If the element is the anchor, then the [ZoneMembership](/types/4/0424-Governance-Zones) classification is used as the definitive zone membership.
 
 !!! info "Further information on the use of Anchors"
     * [Anchor Management](/concepts/anchor).
+    * [Governance Zone](/concepts/governance-zone).
 
 ## Memento classification
 

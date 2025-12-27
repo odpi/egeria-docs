@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5" pages="32">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3" pages="32">
   <diagram id="mHdgXSSDg3P1Vtlx_zm2" name="overview">
     <mxGraphModel dx="2066" dy="1158" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -182,7 +182,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PF7sQZpvbbHVOkO-_uGT" name="0501-Schema-Elements">
-    <mxGraphModel dx="1585" dy="857" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="927" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="3fQte9pRHBFsXC9MxjXT-0" />
         <mxCell id="3fQte9pRHBFsXC9MxjXT-1" parent="3fQte9pRHBFsXC9MxjXT-0" />
@@ -192,7 +192,7 @@
         <mxCell id="3fQte9pRHBFsXC9MxjXT-3" value="0501 - Schema Elements" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="13" y="57" width="1060" height="770" as="geometry" />
         </mxCell>
-        <mxCell id="3fQte9pRHBFsXC9MxjXT-42" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
+        <mxCell id="3fQte9pRHBFsXC9MxjXT-42" value="«entity»&lt;br&gt;&lt;b&gt;AuthoredReferenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="409" y="86" width="207" height="50" as="geometry" />
         </mxCell>
         <mxCell id="9JTgdqW7krnwvtoZfy2b-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startSize=6;endArrow=block;endFill=0;endSize=16;" parent="3fQte9pRHBFsXC9MxjXT-1" edge="1">
@@ -278,13 +278,13 @@
         <mxCell id="nslI5cDXgXjfTckiKcJe-1" value="«entity»&lt;br&gt;&lt;b&gt;SchemaType&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="409" y="332" width="206" height="55.43478260869565" as="geometry" />
         </mxCell>
-        <mxCell id="nslI5cDXgXjfTckiKcJe-2" value="author : string&lt;br&gt;usage : string&lt;br&gt;encodingStandard : string&lt;br&gt;namespace : string&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
-          <mxGeometry x="409" y="387" width="206" height="75" as="geometry" />
+        <mxCell id="nslI5cDXgXjfTckiKcJe-2" value="usage : string&lt;br&gt;encodingStandard : string&lt;br&gt;namespace : string&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
+          <mxGeometry x="409" y="387" width="206" height="69" as="geometry" />
         </mxCell>
         <mxCell id="3fQte9pRHBFsXC9MxjXT-12" value="«entity»&lt;br&gt;&lt;b&gt;SchemaElement&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="409" y="194" width="206" height="54.32098765432099" as="geometry" />
         </mxCell>
-        <mxCell id="3fQte9pRHBFsXC9MxjXT-13" value="userDefinedStatus : string" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
+        <mxCell id="3fQte9pRHBFsXC9MxjXT-13" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="409" y="248" width="206" height="30" as="geometry" />
         </mxCell>
         <mxCell id="k19wvykLVm6mPzuGP8yw-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.995;entryY=0.397;entryDx=0;entryDy=0;endArrow=oval;endFill=1;entryPerimeter=0;" parent="3fQte9pRHBFsXC9MxjXT-1" source="3fQte9pRHBFsXC9MxjXT-12" target="nslI5cDXgXjfTckiKcJe-1" edge="1">
@@ -325,24 +325,24 @@
         <mxCell id="etCin7o8V9NfW6Z0Uo3h-6" value="dataType : string&lt;br&gt;defaultValue : string&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="533.5" y="599" width="177" height="49" as="geometry" />
         </mxCell>
-        <mxCell id="r2ZDniMzESfO9F7v2LSo-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" edge="1" parent="3fQte9pRHBFsXC9MxjXT-1" source="r2ZDniMzESfO9F7v2LSo-4" target="nslI5cDXgXjfTckiKcJe-2">
+        <mxCell id="r2ZDniMzESfO9F7v2LSo-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" parent="3fQte9pRHBFsXC9MxjXT-1" source="r2ZDniMzESfO9F7v2LSo-4" target="nslI5cDXgXjfTckiKcJe-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="121" y="491" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="r2ZDniMzESfO9F7v2LSo-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" edge="1" parent="3fQte9pRHBFsXC9MxjXT-1" source="r2ZDniMzESfO9F7v2LSo-2" target="r2ZDniMzESfO9F7v2LSo-5">
+        <mxCell id="r2ZDniMzESfO9F7v2LSo-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=16;" parent="3fQte9pRHBFsXC9MxjXT-1" source="r2ZDniMzESfO9F7v2LSo-2" target="r2ZDniMzESfO9F7v2LSo-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r2ZDniMzESfO9F7v2LSo-2" value="«entity»&lt;br&gt;&lt;b&gt;StructSchemaType&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;container=0;" vertex="1" parent="3fQte9pRHBFsXC9MxjXT-1">
+        <mxCell id="r2ZDniMzESfO9F7v2LSo-2" value="«entity»&lt;br&gt;&lt;b&gt;StructSchemaType&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;container=0;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="129.5" y="685" width="184" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="r2ZDniMzESfO9F7v2LSo-3" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=center;container=0;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="3fQte9pRHBFsXC9MxjXT-1">
+        <mxCell id="r2ZDniMzESfO9F7v2LSo-3" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=center;container=0;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="128.5" y="735" width="184" height="31" as="geometry" />
         </mxCell>
-        <mxCell id="r2ZDniMzESfO9F7v2LSo-4" value="«entity»&lt;br&gt;&lt;b&gt;ComplexSchemaType&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" vertex="1" parent="3fQte9pRHBFsXC9MxjXT-1">
+        <mxCell id="r2ZDniMzESfO9F7v2LSo-4" value="«entity»&lt;br&gt;&lt;b&gt;ComplexSchemaType&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="129.5" y="548" width="184" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="r2ZDniMzESfO9F7v2LSo-5" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=center;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="3fQte9pRHBFsXC9MxjXT-1">
+        <mxCell id="r2ZDniMzESfO9F7v2LSo-5" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=center;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="129.5" y="598" width="184" height="31" as="geometry" />
         </mxCell>
       </root>
@@ -434,7 +434,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0505-Schema-Attributes" id="4GrBEy_7Aw3WSbm6_cvN">
-    <mxGraphModel dx="1585" dy="857" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="927" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="dp80E5BfLT-rZpdb8q4U-0" />
         <mxCell id="dp80E5BfLT-rZpdb8q4U-1" parent="dp80E5BfLT-rZpdb8q4U-0" />
@@ -506,8 +506,8 @@
         <mxCell id="dp80E5BfLT-rZpdb8q4U-24" value="&lt;font style=&quot;white-space: normal&quot;&gt;allowsDuplicateValues : boolean&lt;br&gt;orderedValues : boolean&lt;br&gt;&lt;/font&gt;&lt;span&gt;defaultValueOverride : string&lt;br&gt;minimumLength : int&lt;br&gt;length : int&lt;br&gt;precision : int&lt;br&gt;isNullable : boolean&lt;br&gt;&lt;/span&gt;&lt;font style=&quot;white-space: normal&quot;&gt;nativeClass : string&lt;br&gt;aliases : array&amp;lt;string&amp;gt;&lt;br&gt;sortOrder : DataItemSortOrder&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fontColor=#333333;fillColor=#f5f5f5;" parent="dp80E5BfLT-rZpdb8q4U-1" vertex="1">
           <mxGeometry x="522" y="275.5" width="240" height="169.5" as="geometry" />
         </mxCell>
-        <mxCell id="dp80E5BfLT-rZpdb8q4U-27" value="schemaTypeName : string&lt;div&gt;userDefinedStatus : string&lt;br&gt;qualifiedName : string&lt;br&gt;displayName : string&lt;br&gt;description : string&lt;br&gt;versionIdentifier : string&lt;/div&gt;&lt;div&gt;category : string&lt;br&gt;author : string&lt;br&gt;usage : string&lt;br&gt;encodingStandard : string&lt;br&gt;namespace : string&lt;br&gt;dataType : string&lt;br&gt;defaultValue : string&lt;br&gt;fixedValue : string&lt;br&gt;additionalProperties : map&amp;lt;string, String&amp;gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="dp80E5BfLT-rZpdb8q4U-1" vertex="1">
-          <mxGeometry x="521" y="531" width="241" height="242" as="geometry" />
+        <mxCell id="dp80E5BfLT-rZpdb8q4U-27" value="schemaTypeName : string&lt;div&gt;qualifiedName : string&lt;br&gt;displayName : string&lt;br&gt;description : string&lt;br&gt;versionIdentifier : string&lt;/div&gt;&lt;div&gt;category : string&lt;br&gt;usage : string&lt;br&gt;encodingStandard : string&lt;br&gt;namespace : string&lt;br&gt;dataType : string&lt;br&gt;defaultValue : string&lt;br&gt;fixedValue : string&lt;br&gt;additionalProperties : map&amp;lt;string, String&amp;gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="dp80E5BfLT-rZpdb8q4U-1" vertex="1">
+          <mxGeometry x="521" y="531" width="241" height="219" as="geometry" />
         </mxCell>
         <mxCell id="dp80E5BfLT-rZpdb8q4U-26" value="«classification»&lt;br&gt;&lt;b&gt;TypeEmbeddedAttribute&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="dp80E5BfLT-rZpdb8q4U-1" vertex="1">
           <mxGeometry x="521" y="481" width="241" height="50" as="geometry" />
@@ -2347,7 +2347,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0540-Data-Classes" id="3m2XWHFqty79aLUmBDst">
-    <mxGraphModel dx="1234" dy="827" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="927" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-0" />
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-1" parent="SsjJ3W2RBnLLx-BRKALo-0" />
@@ -2363,10 +2363,10 @@
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-4" value="«entity»&lt;br&gt;&lt;b&gt;DataClass&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
           <mxGeometry x="373" y="354.5" width="240" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="SsjJ3W2RBnLLx-BRKALo-5" value="&lt;span&gt;userDefinedStatus : string&lt;/span&gt;&lt;div&gt;&lt;span&gt;namespace : string&lt;/span&gt;&lt;div&gt;matchPropertyNames : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;matchThreshold : int&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;span&gt;specification : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;specificationDetails : map&amp;lt;string, string&amp;gt;&lt;/span&gt;&lt;div&gt;&lt;span&gt;dataType : string&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;allowsDuplicateValues : boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;isNullable : boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;isCaseSensitive : boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;defaultValue : string&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;averageValue : string&lt;/span&gt;&lt;/div&gt;&lt;div&gt;valueList : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;valueRangeFrom : string&lt;/div&gt;&lt;div&gt;valueRangeTo: string&lt;/div&gt;&lt;div&gt;sampleValues : array&amp;lt;string&amp;gt;&lt;br&gt;dataPatterns : array&amp;lt;string&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;spacingLeft=2;fillColor=#f5f5f5;fontColor=#333333;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
+        <mxCell id="SsjJ3W2RBnLLx-BRKALo-5" value="&lt;div&gt;&lt;span&gt;namespace : string&lt;/span&gt;&lt;div&gt;matchPropertyNames : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;matchThreshold : int&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;span&gt;specification : string&lt;/span&gt;&lt;br&gt;&lt;span&gt;specificationDetails : map&amp;lt;string, string&amp;gt;&lt;/span&gt;&lt;div&gt;&lt;span&gt;dataType : string&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;allowsDuplicateValues : boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;isNullable : boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;isCaseSensitive : boolean&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;defaultValue : string&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;averageValue : string&lt;/span&gt;&lt;/div&gt;&lt;div&gt;valueList : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;valueRangeFrom : string&lt;/div&gt;&lt;div&gt;valueRangeTo: string&lt;/div&gt;&lt;div&gt;sampleValues : array&amp;lt;string&amp;gt;&lt;br&gt;dataPatterns : array&amp;lt;string&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;spacingLeft=2;fillColor=#f5f5f5;fontColor=#333333;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
           <mxGeometry x="373.5" y="405" width="239" height="271" as="geometry" />
         </mxCell>
-        <mxCell id="SsjJ3W2RBnLLx-BRKALo-7" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
+        <mxCell id="SsjJ3W2RBnLLx-BRKALo-7" value="«entity»&lt;br&gt;&lt;b&gt;AuthoredReferenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
           <mxGeometry x="413" y="150" width="160" height="50" as="geometry" />
         </mxCell>
         <mxCell id="SsjJ3W2RBnLLx-BRKALo-8" value="«relationship»&lt;br&gt;&lt;b&gt;DataClassHierarchy&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="SsjJ3W2RBnLLx-BRKALo-1" vertex="1">
@@ -2512,7 +2512,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0545-Reference-Data" id="Vk1t311AT1pcD-bhjvOd">
-    <mxGraphModel dx="1234" dy="830" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="927" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="3fQte9pRHBFsXC9MxjXT-0" />
         <mxCell id="3fQte9pRHBFsXC9MxjXT-1" parent="3fQte9pRHBFsXC9MxjXT-0" />
@@ -2528,10 +2528,10 @@
         <mxCell id="3fQte9pRHBFsXC9MxjXT-4" value="«entity»&lt;br&gt;&lt;b&gt;ValidValueDefinition&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="404.5" y="344.5" width="166" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="3fQte9pRHBFsXC9MxjXT-5" value="namespace : string&lt;div&gt;userDefinedStatus : string&lt;div&gt;&lt;span&gt;usage : string&lt;br&gt;&lt;/span&gt;dataType : string&lt;br&gt;&lt;span&gt;scope : string&lt;br&gt;preferredValue : string&lt;br&gt;isCaseSensitive : boolean&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;spacingLeft=3;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
+        <mxCell id="3fQte9pRHBFsXC9MxjXT-5" value="namespace : string&lt;div&gt;&lt;div&gt;&lt;span&gt;usage : string&lt;br&gt;&lt;/span&gt;dataType : string&lt;br&gt;&lt;span&gt;scope : string&lt;br&gt;preferredValue : string&lt;br&gt;isCaseSensitive : boolean&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;spacingLeft=3;fillColor=#f5f5f5;fontColor=#333333;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="404" y="395.5" width="166" height="132.5" as="geometry" />
         </mxCell>
-        <mxCell id="3fQte9pRHBFsXC9MxjXT-7" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
+        <mxCell id="3fQte9pRHBFsXC9MxjXT-7" value="«entity»&lt;br&gt;&lt;b&gt;AuthoredReferenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
           <mxGeometry x="407.5" y="224" width="160" height="50" as="geometry" />
         </mxCell>
         <mxCell id="3fQte9pRHBFsXC9MxjXT-9" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="3fQte9pRHBFsXC9MxjXT-1" vertex="1">
@@ -2901,7 +2901,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0565-Design-Models" id="L-sYm81PJRJS48px2y5i">
-    <mxGraphModel dx="1234" dy="822" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="927" dy="833" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="fPcSe02JvnXXKSxHWUBY-0" />
         <mxCell id="fPcSe02JvnXXKSxHWUBY-1" parent="fPcSe02JvnXXKSxHWUBY-0" />
@@ -2920,8 +2920,8 @@
         <mxCell id="ScZQJyJ8FQlezPd4bwyg-0" value="«entity»&lt;br&gt;&lt;b&gt;DesignModelElement&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="fPcSe02JvnXXKSxHWUBY-1" vertex="1">
           <mxGeometry x="700" y="269" width="230" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ScZQJyJ8FQlezPd4bwyg-1" value="&lt;span&gt;canonicalName : string&lt;br&gt;&lt;/span&gt;authors : array&amp;lt;string&amp;gt;&lt;br&gt;&lt;div&gt;userDefinedStatus : string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="fPcSe02JvnXXKSxHWUBY-1" vertex="1">
-          <mxGeometry x="700" y="319.5" width="230" height="72.5" as="geometry" />
+        <mxCell id="ScZQJyJ8FQlezPd4bwyg-1" value="&lt;span&gt;canonicalName : string&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="fPcSe02JvnXXKSxHWUBY-1" vertex="1">
+          <mxGeometry x="700" y="319.5" width="230" height="41.5" as="geometry" />
         </mxCell>
         <mxCell id="Vx6Ff4MByGyPcX3ikJvz-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=16;" parent="fPcSe02JvnXXKSxHWUBY-1" source="Vx6Ff4MByGyPcX3ikJvz-1" target="Vx6Ff4MByGyPcX3ikJvz-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -2932,8 +2932,8 @@
         <mxCell id="Vx6Ff4MByGyPcX3ikJvz-3" value="«entity»&lt;br&gt;&lt;b&gt;Collection&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="fPcSe02JvnXXKSxHWUBY-1" vertex="1">
           <mxGeometry x="239" y="164" width="193" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="QK_3v1X4VkNgoxYVLtvW-0" value="authors : array&amp;lt;string&amp;gt;&lt;br&gt;&lt;div&gt;userDefinedStatus : string&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="fPcSe02JvnXXKSxHWUBY-1">
-          <mxGeometry x="221" y="323" width="230" height="61" as="geometry" />
+        <mxCell id="QK_3v1X4VkNgoxYVLtvW-0" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="fPcSe02JvnXXKSxHWUBY-1" vertex="1">
+          <mxGeometry x="221" y="323" width="230" height="27" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -3242,7 +3242,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PHZYwF1l-ydiya3xt_Vp" name="0580-Data-Dictionaries">
-    <mxGraphModel dx="1585" dy="857" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="927" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3258,10 +3258,10 @@
         <mxCell id="DXxoTre0EiH6mcvE6oXf-4" value="«entity»&lt;br&gt;&lt;b&gt;DataStructure&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="1" vertex="1">
           <mxGeometry x="179" y="537" width="245" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="DXxoTre0EiH6mcvE6oXf-12" value="userDefinedStatus : string&lt;div&gt;namespace : string&lt;/div&gt;&lt;div&gt;&lt;div&gt;namePatterns : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
-          <mxGeometry x="179" y="586.5" width="245" height="58.5" as="geometry" />
+        <mxCell id="DXxoTre0EiH6mcvE6oXf-12" value="&lt;div&gt;namespace : string&lt;/div&gt;&lt;div&gt;&lt;div&gt;namePatterns : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="179" y="586.5" width="245" height="53.5" as="geometry" />
         </mxCell>
-        <mxCell id="DXxoTre0EiH6mcvE6oXf-21" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="1" vertex="1">
+        <mxCell id="DXxoTre0EiH6mcvE6oXf-21" value="«entity»&lt;br&gt;&lt;b&gt;AuthoredReferenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="1" vertex="1">
           <mxGeometry x="181.5" y="435" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="DXxoTre0EiH6mcvE6oXf-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=block;startFill=0;startSize=15;" parent="1" source="DXxoTre0EiH6mcvE6oXf-33" target="DXxoTre0EiH6mcvE6oXf-34" edge="1">
@@ -3282,10 +3282,10 @@
         <mxCell id="S8Bzkfsr_XzNweGLmSSe-2" value="«entity»&lt;br&gt;&lt;b&gt;DataField&lt;/b&gt;" style="html=1;strokeColor=#996185;align=center;fillColor=#e6d0de;gradientColor=#d5739d;" parent="1" vertex="1">
           <mxGeometry x="773" y="537" width="245" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="S8Bzkfsr_XzNweGLmSSe-3" value="userDefinedStatus : string&lt;div&gt;namespace : string&lt;div&gt;namePatterns : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;aliases : array&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;defaultValue : string&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;isNullable : boolean&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;dataType : string&lt;/div&gt;&lt;div&gt;units : string&lt;br&gt;minimumLength : int&lt;br&gt;length : int&lt;br&gt;precision : int&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;orderedValues: boolean&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sortOrder : DataItemSortOrder&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
-          <mxGeometry x="773" y="586.5" width="245" height="208.5" as="geometry" />
+        <mxCell id="S8Bzkfsr_XzNweGLmSSe-3" value="&lt;div&gt;namespace : string&lt;div&gt;namePatterns : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;aliases : array&amp;lt;string&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;defaultValue : string&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;isNullable : boolean&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;dataType : string&lt;/div&gt;&lt;div&gt;units : string&lt;br&gt;minimumLength : int&lt;br&gt;length : int&lt;br&gt;precision : int&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;orderedValues: boolean&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sortOrder : DataItemSortOrder&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="773" y="586.5" width="245" height="193.5" as="geometry" />
         </mxCell>
-        <mxCell id="S8Bzkfsr_XzNweGLmSSe-4" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="1" vertex="1">
+        <mxCell id="S8Bzkfsr_XzNweGLmSSe-4" value="«entity»&lt;br&gt;&lt;b&gt;AuthoredReferenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="1" vertex="1">
           <mxGeometry x="775.5" y="435" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="S8Bzkfsr_XzNweGLmSSe-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;startArrow=block;startFill=0;startSize=15;" parent="1" source="DXxoTre0EiH6mcvE6oXf-33" target="S8Bzkfsr_XzNweGLmSSe-6" edge="1">

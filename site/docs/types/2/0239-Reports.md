@@ -13,7 +13,6 @@ Reports described assembled information about a particular topic. It can be link
 The *ReportType* entity describes a report design.  It specifies the schema (structure) of the data that will be assembled in a populated report.  It has the following attributes:
 
 * purpose - purpose of the report.
-* author - userId of the report author.
 * creationTime - the time the report type was created.
 * lastModificationTime - the time the report type content was last modified.
 * lastModifier - the userId of the last person to modify the report type.

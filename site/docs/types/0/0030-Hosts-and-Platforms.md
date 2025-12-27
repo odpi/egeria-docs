@@ -7,25 +7,25 @@ The host and platform metadata entities provide a simple model for the IT infras
 
 ![UML](0030-Hosts-and-Platforms.svg)
 
-## ITInfrastructure
+## ITInfrastructure entity
 
-*`ITInfrastructure`* is a type of [`Asset`](/types/0/0010-Base-Model/#asset) that supports the running of software systems.
+*ITInfrastructure* entity is a type of [Asset](/types/0/0010-Base-Model) that supports the running of software systems.
 
-## OperatingPlatform
+## OperatingPlatform entity
 
-The *`OperatingPlatform`* is an informational structure to describe the hardware characteristics and software stack (operating system, etc) of the host.
+The *OperatingPlatform* entity is an informational structure to describe the hardware characteristics and software stack (operating system, etc) of the host.
 
-## OperatingPlatformUse
+## OperatingPlatformUse relationship
 
-The *`OperatingPlatformUse`* is a relationship showing where an operating platform is located.
+*OperatingPlatformUse* is a relationship showing where an operating platform is located.
 
-## OperatingPlatformManifest
+## OperatingPlatformManifest classification
 
-Details of the software stack can be captured in a [`Collection`](/types/0/0021-Collections/#collection) linked to the operating platform using the *`OperatingPlatformManifest`*. The collection may contain different types of details such as configuration files and software packages that can be organized into nested collections.
+Details of the software stack can be captured in a [Collection](/types/0/0021-Collections/#collection) linked to the operating platform using the *`OperatingPlatformManifest`*. The collection may contain different types of details such as configuration files and software packages that can be organized into nested collections.
 
-## SoftwarePackageManifest
+## SoftwarePackageManifest classification
 
-Collections that list software packages can be classified with the `SoftwarePackageManifest` classification.
+Collections that list software packages can be classified with the *SoftwarePackageManifest* classification.
 
 Many hosts could have the same operating platform. This means it can be used to represent standardized software stacks and which hosts they have been deployed to. Pipelines that manage the software stacks on these machines can use these elements to manage the rollout and update of the different software packages.
 
@@ -33,8 +33,5 @@ Many hosts could have the same operating platform. This means it can be used to 
     - [0035 Complex Hosts](/types/0/0035-Complex-Hosts) describes how hardware is virtualized.
     - [0037 Software Server Platform](/types/0/0037-Software-Server-Platforms) describes the software process that run on a host.
 
-
-??? deprecated "Deprecated types"
-    - `HostOperatingPlatform` is deprecated in favor of `OperatingPlatformUse`.
   
 --8<-- "snippets/abbr.md"

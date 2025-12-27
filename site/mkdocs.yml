@@ -580,7 +580,6 @@ nav:
                   - Asset Curator: services/omvs/asset-curator/overview.md
                   - Asset Maker: services/omvs/asset-maker/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
-                  - Business Domain: services/omvs/business-domain/overview.md
                   - Classification Explorer: services/omvs/classification-explorer/overview.md
                   - Classification Manager: services/omvs/classification-manager/overview.md
                   - Collection Manager: services/omvs/collection-manager/overview.md
@@ -591,6 +590,7 @@ nav:
                   - Data Engineer: services/omvs/data-engineer/overview.md
                   - Data Officer: services/omvs/data-officer/overview.md
                   - DevOps Pipeline: services/omvs/devops-pipeline/overview.md
+                  - Digital Business: services/omvs/digital-business/overview.md
                   - External Linking: services/omvs/external-linking/overview.md
                   - Feedback Manager: services/omvs/feedback-manager/overview.md
                   - Glossary Browser: services/omvs/glossary-browser/overview.md
@@ -634,7 +634,6 @@ nav:
               - Metadata Maintenance: guides/cts/repository-profiles/metadata-maintenance.md
               - Effectivity Dating: guides/cts/repository-workbench/profiles/effectivity-dating.md
               - Dynamic Types: guides/cts/repository-workbench/profiles/dynamic-types.md
-              - Graph Queries: guides/cts/repository-workbench/profiles/graph-queries.md
               - Historical Search: guides/cts/repository-workbench/profiles/historical-search.md
               - Entity Proxies: guides/cts/repository-workbench/profiles/entity-proxies.md
               - Soft-delete and Restore: guides/cts/repository-workbench/profiles/soft-delete-restore.md
@@ -664,8 +663,6 @@ nav:
               - Relationship History Retrieval: guides/cts/performance-profiles/relationship-history-retrieval.md
               - Entity History Search: guides/cts/performance-profiles/entity-history-search.md
               - Relationship History Search: guides/cts/performance-profiles/relationship-history-search.md
-              - Graph Queries (Performance): guides/cts/performance-profiles/graph-perf-queries.md
-              - Graph History Queries: guides/cts/performance-profiles/graph-history-queries.md
               - Entity Re-home: guides/cts/performance-profiles/entity-re-home.md
               - Relationship Re-home: guides/cts/performance-profiles/relationship-re-home.md
               - Entity Declassify: guides/cts/performance-profiles/entity-declassify.md
@@ -693,6 +690,7 @@ nav:
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
       - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
+      - Business Capability: concepts/business-capability.md
       - Catalog Target: concepts/catalog-target.md
       - Catalog Template: concepts/catalog-template.md
       - Cohort Events: concepts/cohort-events.md

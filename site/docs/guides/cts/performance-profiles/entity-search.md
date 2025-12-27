@@ -43,7 +43,6 @@ The [Open Metadata Repository Services (OMRS)](/services/omrs) interface for a m
     | `repository-entity-retype-performance-findEntitiesByProperty` | See the detailed logic of the [entity retype](entity-retype.md) profile. |
     | `repository-entity-undo-performance-findEntities` | See the detailed logic of the [entity undo](entity-undo.md) profile. |
     | `repository-entity-update-performance-findEntitiesByProperty` | See the detailed logic of the [entity update](entity-update.md) profile. |
-    | `repository-graph-query-performance-findEntities` | See the detailed logic of the [graph query](graph-query.md) profile. |
     | `repository-relationship-creation-performance-findEntities` | See the detailed logic of the [relationship creation](relationship-creation.md) profile. |
 
 In addition, these tests will record into the Environment profile the `totalEntitiesFound`.

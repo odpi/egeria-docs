@@ -25,6 +25,11 @@ Digital products are designed to be shared and may be advertised in a marketplac
 Digital products may be implemented by many [digital resources](/concepts/digital-resource) such as APIs, data sets, and data feeds. 
 The design of the processes can be represented by a [Solution component](/types/7/0730-Solution-Components) and linked directly by using the [ImplementedBy](/types/7/0737-Solution-Implementation) relationship to the appropriate digital resource's [Asset](/types/0/0010-Base-Model) entity.  Alternatively, the architecture of a digital process can be described in a [solution blueprint](/types/7/0740-Solution-Blueprints) made up of [solution components](/types/7/0730-Solution-Components).  The solution components have [SolutionPorts](/types/7/0735-Solution-Ports-and-Wires) that describe the inputs and outputs of the solution components.  *SolutionLinkingWire* relationships show how they are linked together.  The solution components can then be linked to the implementing digital resources' Asset entities via the *ImplementedBy* relationship.
 
+A digital product has two lifecycle statues:
+
+* It has optional lifecycle states for its descriptive content defined either by the [*ContentStatus*](/types/0/0010-Base-Model) enumeration, or if *contentStatus==OTHER*, the *userDefinedContentStatus* attribute.
+* It has optional lifecycle states for its implementation content defined either by the *DeploymentStatus* enumeration, or if *deploymentStatus==OTHER*, the *userDefinedDeploymentStatus* attribute.
+
 ## DigitalProductDependency relationship
 
 The *DigitalProductDependency* relationship allows an organization to capture the dependencies between digital products.  The nature of the dependency is supplied in the *description* property.

@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2" pages="11">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3" pages="11">
   <diagram id="-Ej96Nh0ZEP9uloQp987" name="overview">
     <mxGraphModel dx="1234" dy="825" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -114,17 +114,17 @@
     </mxGraphModel>
   </diagram>
   <diagram id="sXEg75LI27i-cbsxa9kx" name="0330-Terms">
-    <mxGraphModel dx="1585" dy="857" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="927" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="P4nENKNoM_SQFgzkE0_r-0" />
         <mxCell id="P4nENKNoM_SQFgzkE0_r-1" parent="P4nENKNoM_SQFgzkE0_r-0" />
         <mxCell id="b7F8nAqaPbs4Zw6vnfbB-0" value="0330 - Glossary Terms" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">
           <mxGeometry x="20" y="40" width="1060" height="470" as="geometry" />
         </mxCell>
-        <mxCell id="b7F8nAqaPbs4Zw6vnfbB-4" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">
+        <mxCell id="b7F8nAqaPbs4Zw6vnfbB-4" value="«entity»&lt;br&gt;&lt;b&gt;AuthoredReferenceable&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">
           <mxGeometry x="460" y="140" width="180" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="b7F8nAqaPbs4Zw6vnfbB-7" value="&lt;div&gt;userDefinedStatus : string&lt;div&gt;aliases : array&amp;lt;string&amp;gt;&lt;br&gt;summary : string&lt;br&gt;examples : string&lt;br&gt;abbreviation : string&lt;br&gt;usage : string&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">
+        <mxCell id="b7F8nAqaPbs4Zw6vnfbB-7" value="&lt;div&gt;&lt;div&gt;aliases : array&amp;lt;string&amp;gt;&lt;br&gt;summary : string&lt;br&gt;examples : string&lt;br&gt;abbreviation : string&lt;br&gt;usage : string&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">
           <mxGeometry x="431.5" y="302" width="237" height="108" as="geometry" />
         </mxCell>
         <mxCell id="b7F8nAqaPbs4Zw6vnfbB-17" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#b0e3e6;strokeColor=#0e8088;gradientColor=#00CCCC;" parent="P4nENKNoM_SQFgzkE0_r-1" vertex="1">

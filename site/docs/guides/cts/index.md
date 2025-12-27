@@ -47,7 +47,6 @@ The functions expected of an open metadata repository are numerous. These functi
 | [Metadata maintenance](/guides/cts/repository-workbench/profiles/metadata-maintenance)                 | The technology under test supports requests to create, update and purge metadata instances. |
 | [Effectivity dating](/guides/cts/repository-workbench/profiles/effectivity-dating)                     | The technology under test supports effectivity dating properties. |
 | [Dynamic types](/guides/cts/repository-workbench/profiles/dynamic-types)                               | The technology under test supports changes to the list of its supported types while it is running. |
-| [Graph queries](/guides/cts/repository-workbench/profiles/graph-queries)                               | The technology under test supports graph-like queries that return collections of metadata instances. |
 | [Historical search](/guides/cts/repository-workbench/profiles/historical-search)                       | The technology under test supports search for the state of the metadata instances at a specific time in the past. |
 | [Entity proxies](/guides/cts/repository-workbench/profiles/entity-proxies)                             | The technology under test is able to store stubs for entities to use on relationships when the full entity is not available. |
 | [Soft-delete and restore](/guides/cts/repository-workbench/profiles/soft-delete-restore)               | The technology under test allows an instance to be soft-deleted and restored. |
@@ -90,8 +89,6 @@ This workbench runs the following profiles, in the following order:
 | [Relationship history retrieval](../performance-profiles/relationship-history-retrieval) | tests the performance of `getRelationship` (with non-null `asOfTime`) and `getRelationshipHistory` methods |
 | [Entity history search](../performance-profiles/entity-history-search) | tests the performance of the same search operations as Entity Search, but in each case with a non-null `asOfTime` |
 | [Relationship history search](../performance-profiles/relationship-history-search) | tests the performance of the same search operations as Relationship Search, but in each case with a non-null `asOfTime` |
-| [Graph queries](../performance-profiles/graph-perf-queries) | tests the performance of `getRelationshipsForEntity`, `getEntityNeighborhood`, `getRelatedEntities` and `getLinkingEntities` methods |
-| [Graph history queries](../performance-profiles/graph-history-queries) | tests the performance of the same operations as Graph Queries, but in each case with a non-null `asOfTime` |
 | [Entity re-home](../performance-profiles/entity-re-home) | tests the performance of `reHomeEntity` method |
 | [Relationship re-home](../performance-profiles/relationship-re-home) | tests the performance of `reHomeRelationship` method |
 | [Entity declassify](../performance-profiles/entity-declassify) | tests the performance of `declassifyEntity` and `purgeClassificationReferenceCopy` methods |

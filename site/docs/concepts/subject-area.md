@@ -17,11 +17,11 @@ The role of a [subject area definition](/types/4/0425-Subject-Areas) is to act a
 * [Quality rules](/types/4/0430-Technical-Controls) for specific data values in the subject area.
 * Preferred [data structures and schemas](/types/5/0501-Schema-Elements).
 
-The materials that are part of the subject area are classified as such using the [SubjectArea](/types/4/0425-Subject-Areas) classification.
+The materials that are part of the subject area are linked to it using the [CollectionMembership](/types/0/0021-Collections) relationship.
 
-Each subject area has an owner (see [SubjectAreaOwner](/types/4/0445-Governance-Roles)) who is responsible for the materials relating to the subject area.  Often the subject area owner is a senior person in the organization with expertise in the subject area.  He/she coordinates other subject-matter experts to author and maintain the materials.
+Each subject area has an owner (see [Ownership](/types/4/0445-Governance-Roles)) who is responsible for the materials relating to the subject area.  Often the subject area owner is a senior person in the organization with expertise in the subject area.  He/she coordinates other subject-matter experts to author and maintain the materials.
 
-The *SubjectAreaDefinition* and appointment of a *SubjectAreaOwner* helps to coordinate the efforts to build the [materials](/practices/common-data-definitions/overview) for each subject area.
+The *SubjectArea* and appointment of a *Subject Area Owner* helps to coordinate the efforts to build the [materials](/practices/common-data-definitions/overview) for each subject area.
 
 ![Subject Area Content](/guides/planning/governance-program/subject-area-definition.svg)
 

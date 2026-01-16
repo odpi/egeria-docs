@@ -50,10 +50,10 @@ nav:
       - Patterns of Use:
             - Patterns of Use: patterns/index.md
             - Metadata Manager: patterns/metadata-manager/overview.md
-            - Organization Engagement: patterns/metadata-engagement/overview.md
-            - Information Exchange: patterns/metadata-exchange/overview.md
-            - Active Governance: patterns/metadata-governance/overview.md
-            - Harvest and Publish: patterns/metadata-harvester/overview.md
+            - Organization Engagement: patterns/organization-engagement/overview.md
+            - Information Exchange: patterns/information-exchange/overview.md
+            - Active Governance: patterns/active-governance/overview.md
+            - Harvest and Publish: patterns/harvest-and-publish/overview.md
             - Agents of Insight: patterns/metadata-insight/overview.md
   - Using:
       - Using Overview: guides/index.md

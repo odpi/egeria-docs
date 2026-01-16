@@ -9,7 +9,7 @@
 
 ## NoteLog entity
 
-A *NoteLog* entity provides a collection point for notifications about a particular subject or element.
+A *NoteLog* entity provides a collection point for actions about a particular subject or element.
 
 ## AttachedNoteLog relationship
 
@@ -17,6 +17,6 @@ The *AttachedNoteLog* connects a note log to one or more elements that are descr
 
 ## AttachedNoteLogEntry relationship
 
-The *AttachedNoteLogEntry* connects a note log to a notification. A note log can have many notifications linked off of it. These notifications may, or may not be anchored to the note log.
+The *AttachedNoteLogEntry* connects a note log to an [Action](/types/0/0013-Actions) (typically a [Notification](/types/1/0135-Actions-For-People)). A note log can have many actions linked off of it. These actions may, or may not be anchored to the note log.
 
 --8<-- "snippets/abbr.md"

@@ -20,7 +20,7 @@ Valid values can also be used as tags to indicate that an element has a particul
 
 The *ValidValueDefinition* is a [Referenceable](/types/0/0010-Base-Model) that stores a single valid value.  It has many purposes that are reflected in its subtypes.
 
-### ReferenceDataValue
+### ReferenceDataValue entity
 
 Software often uses code values to store properties about a person, place, object or activity.  Each code value is mapped to one or more strings when its value is to be displayed.  This mapping is stored in a *code table*.
 
@@ -28,15 +28,19 @@ Software often uses code values to store properties about a person, place, objec
 
 The *ReferenceDataValue* entity can be used to represent a single code value along with its associated properties.  [Reference Data OMVS](/services/omvs/reference-data/overview) provides specialist APIs for managing reference code tables and mapping tables.
 
-### SpecificationPropertyValue
+### ReferenceDataSet entity
+
+Reference code tables can be organized in a hierarchical structure.  The *ReferenceDataSet* entity represents the top level of the hierarchy.
+
+### SpecificationPropertyValue entity
 
 The *SpecificationPropertyValue* entity is a type of valid value definition that represents the [specification of a property](/concepts/specification).  It is linked to the element it describes using the *SpecificationPropertyAssignment* relationship.  The [Valid Metadata API](/services/omvs/valid-metadata/overview) provides specialist operations for managing specification properties.
 
-### ValidMetadataValue
+### ValidMetadataValue entity
 
 The *ValidMetadataValue* entity is a type of valid value definition that represents a valid value (or set of valid values) for an open metadata property.  The [Valid Metadata API](/services/omvs/valid-metadata/overview) provides specialist operations for managing valid value sets for open metadata.
 
-### TechnologyType
+### TechnologyType entity
 
 The *TechnologyType* is a special type of *ValidMetadataValue* entity used for the valid values of the *deployedImplementationType*.  These values are used to define the technology types that are queryable through the [Automated Curation API](/services/omvs/automated-curation/overview).
 

@@ -9,7 +9,7 @@
 
 ## LatestChange classification
 
-The *LatestChange* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring [Referenceable](/types/0/0010-Base-Model/#referenceable) entities can use the open metadata events related to classifications to monitor changes to the entity.  Currently, *LatestChange* classifications are added to the following types of elements: [Actor](/types/1/0110-Actors), [Asset](/types/0/0010-Base-Model), [Collection](/types/0/0021-Collections), [Community](/types/1/0140-Communities), [DesignModelElement](/types/5/0565-Design-Models), [GlossaryTerm](/types/3/0330-Terms), [GovernanceDefinition](/types/4/0401-Governance-Definitions), and [Project](/types/1/0130-Projects).
+The *LatestChange* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring changes to most [Referenceable](/types/0/0010-Base-Model/#referenceable) entities can use the open metadata events related to classifications to monitor changes to the entity.  Currently, *LatestChange* classifications are added to the following types of elements: [Actor](/types/1/0110-Actors), [Asset](/types/0/0010-Base-Model), [AuthoredReferenceable](/types/0/0010-Base-Model), [Community](/types/1/0140-Communities), and [Project](/types/1/0130-Projects).  They record changes to classifications (except changes to LatestChange and Anchors classifications) and relationships attached to the element and any element anchored to it.
 
 ## Template classification
 

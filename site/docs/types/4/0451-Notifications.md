@@ -3,9 +3,13 @@
 
 # 0451 Notifications
 
-The [NotificationType](/types/4/0430-Technical-Controls) describes a situation or event.  It is linked to resources that need to be monitored in order to detect the situation and subscribers that need to know whenever the event/situation arises.
+The *NotificationType* is a [GovernanceControl](/types/4/0420-Governance-Controls) that describes a situation or event.  It is linked to resources that need to be monitored in order to detect the situation and subscribers that need to know whenever the event/situation arises.
 
 ![UML](0451-Notifications.svg)
+
+## NotificationType entity
+
+The *NotificationType* entity describes a situation or event.  It is linked to resources that need to be monitored in order to detect the situation and subscribers that need to know with the event/situation arises.
 
 ## MonitoredResource relationship
 

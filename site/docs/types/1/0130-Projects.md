@@ -16,6 +16,15 @@ The project entity represents a single project.  It inherits from [*Referenceabl
 
 * *mission* describes in free-form text, the hoped for outcome of the project(s) commissioned under this charter.
 * *purposes* define a list of formal purposes for the project.  These are inspired by the need to identify processing purposes in the EU's General Data Protection Legislation (GDPR).  These purposes can also be set up in a valid metadata set.
+* *successCriteeria* lists the criteria that should be used to evaluate the success of the project.
+* *plannedStartDate* defines the expected start date of the project.
+* *actualStartDate* defines the actual start date of the project.
+* *plannedCompletionDate* defines the expected end date of the project.
+* *actualCompletionDate* defines the actual end date of the project.
+* *projectScope* defines the scope of the project.
+* *projectStatus* defines the status of the project.
+* *projectHealth* defines the health of the project.
+* *priority* defines the priority of the project.
 
 
 ## Campaign classification

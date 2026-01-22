@@ -32,10 +32,6 @@ A value (or collection of values) that should be captured to demonstrate the eff
 
 The associated measurements for the metric an either be stored in a data source such as a database or file, particularly if it is a lot of data or captured in a classification attached to the element that the data values describe.
 
-## NotificationType entity
-
-The notification type describes a situation or event.  It is [linked](/types/4/0451-Notifications) to resources that need to be monitored in order to detect the situation and subscribers that need to know with the event/situation arises.
-
 ## SecurityAccessControl entity
 
 The *SecurityAccessControl* entity is a TechnicalControl that defines the access control lists that a user must belong to if he/she/it is to be given permission to execute a specific command.

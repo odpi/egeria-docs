@@ -16,6 +16,10 @@ This model supports the description of the business domain where the digital pro
 
 *BusinessCapabilityType* lists the broad categories of business capability.
 
+* *BusinessService* - A functional business capability.
+* *BusinessArea* - A collection of related business services.
+* *BusinessDomain* - An overall area of activity in which a business operates.  A single organization may operate multiple business domains, such a retail, distribution, banking, ...
+
 
 ## BusinessCapabilityDependency relationship
 

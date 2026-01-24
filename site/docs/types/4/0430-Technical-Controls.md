@@ -38,8 +38,22 @@ The *SecurityAccessControl* entity is a TechnicalControl that defines the access
 
 ## SecurityGroup entity
 
-The *SecurityGroup* represents a group of [actors](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.  This is the distinguished name of the group where authorized users are listed.
+The *SecurityGroup* entity represents a group of [actors](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.  This is the distinguished name of the group where authorized users are listed.
 
+## DataLens entity
+
+The *DataLens* entity identifies the scope of data for a particular type of processing. The attributes of this governance definition identify the scope of the data in space and time.
+
+* *minLongitude* - if the data is bound by an area, this is the longitude for bottom-left corner of the bounding box (BBOX) for the area covered by the data.
+* *minLatitude* - if the data is bound by an area, this is the latitude for the bottom-left corner of the bounding box (BBOX) for the area covered by the data.
+* *maxLongitude* - if the data is bound by an area, this is the longitude for top-right corner of the bounding box (BBOX) for the area covered by the data.
+* *maxLatitude* - if the data is bound by an area, this is the latitude for top-right corner of the bounding box (BBOX) for the area covered by the data.
+* *minHeight* - if the height above ground is relevant, this is the lowest height that the data covers.
+* *maxHeight* - if the height above ground is relevant, this is the highest height that the data covers.
+* *dataCollectionStartTime* - if the data is bound by time, this is the start time.
+* *dataCollectionEndTime* - if the data is bound by time, this is the end time.
+* *scopeElements* - map from name (such as open metadata type name) to guid of the element that defines the scope of the data.
+* *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
 
 
 --8<-- "snippets/abbr.md"

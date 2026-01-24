@@ -39,10 +39,7 @@ The *DataScope* classification identifies the scope of the data stored in the [d
 * *maxHeight* - if the height above ground is relevant, this is the highest height that the data covers.
 * *dataCollectionStartTime* - if the data is bound by time, this is the start time.
 * *dataCollectionEndTime* - if the data is bound by time, this is the end time.
+* *scopeElements* - map from name (such as open metadata type name) to guid of the element that defines the scope of the data.
 * *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
-
-??? deprecated "Deprecated types"
-    * The *DataStoreEncoding* classification is deprecated in favour of *DataAssetEncoding* to allow encoding information to be attached to data sets and data feeds.
-    * The *DataContentForDataSet* relationship is deprecated in favour of the *DataSetContent* relationship which has the direction of the relationship reversed, making it more logical in a lineage graph.
 
 --8<-- "snippets/abbr.md"

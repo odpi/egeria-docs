@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/in-development.md"
 
-# Notification Manager OMVS
+# Notification Manager API
 
-The Notification Manager Open Metadata View Services (OMVS) is a REST API designed to support the management of resource monitoring, the maintenance of the list of subscribers to that monitoring, and the notification of significant events or situations to the registered subscribers.  
+The Notification Manager API is a REST API designed to support the management of resource monitoring, the maintenance of the list of subscribers to that monitoring, and the notification of significant events or situations to the registered subscribers.  
 
 Examples of events that could trigger a notification include:
 
@@ -37,7 +37,7 @@ The notification definitions are stored in Open Metadata using [Notification Typ
 
 Egeria supports a number of monitoring agents called [watchdog action services](/concepts/watchdog-action-service) that are able to support the monitoring of open metadata events and subscribers that are either [actors](/concepts/actor) or [governance actions](/concepts/governance-action).
 
-The Notification Manager OMVS supports search, create, update, and delete of the following types of open metadata that supports notifications.
+The Notification Manager API supports search, create, update, and delete of the following types of open metadata that supports notifications.
 
 * *Notification Types*
 * *Subscribers*

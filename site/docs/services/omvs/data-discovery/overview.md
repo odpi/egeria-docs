@@ -6,11 +6,11 @@ hide:
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/in-development.md"
+--8<-- "snippets/content-status/stable.md"
 
-# Data Discovery OMVS
+# Data Discovery API
 
-The Data Discovery Open Metadata View Services (OMVS) is a REST API that enables the caller to define and search for new data resources.
+The Data Discovery API is a REST API that enables the caller to maintain survey reports and annotations.
 
 ---8<-- "snippets/abbr.md"
 

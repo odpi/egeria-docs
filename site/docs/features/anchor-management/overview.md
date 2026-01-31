@@ -54,20 +54,10 @@ If a [GlossaryTerm](/practices/common-data-definitions/anatomy-of-a-glossary), o
     
 It is worthwhile maintaining the `Anchors` classification because reads of, and updates to the anchored entities will happen many times, and it is rare that an anchored entity will change its anchor during its lifetime.
     
-## LatestChange classification
 
-The [`LatestChange`](/types/0/0011-Managing-Referenceables/#LatestChange) classification is attached to Assets and GlossaryTerms. It is used to record the latest change to these types of entities and any of the entities anchored to them.
-
-!!! example "Example: LatestChange on Asset"
-    So for example, if a hierarchy of SchemaElements, or a hierarchy of Comments, were anchored to an Asset, then the LatestChange classification is attached to the Asset and records changes to any of these entities. This includes changing property values, attaching or detaching entities through relationships as well as any changes to their classifications.
-
-If a GlossaryTerm is attached to an Asset through a relationship, they are not anchored together since they each have an independent lifecycle. Any change to these entities does not reflect in the other's [*LatestChange* classification](#latestchange-classification). However, the act of attaching them to, or detaching them from, each other is recorded in both entity's *LatestChange* classification.
-
-Maintaining the *LatestChange* classification on an Asset means that it is easier to monitor for changes affecting the Asset and any of its anchored entities. However, it also means that it must be easy to locate the Asset from any of the anchored entities when they change, even though they may not be directly connected.
-    
 !!! education "Further information"
-    - [Generic Handlers](/services/generic-handlers) maintain the Anchors and LatestChange classifications.
-    - [Open Metadata Type definitions for LatestChange and Anchors classification](/types/0/0011-Managing-Referenceables)
+    - [Generic Handlers](/services/generic-handlers) maintain the Anchors classification.
+    - [Open Metadata Type definitions for Anchors classification](/types/0/0010-Base-Model)
     - [Open Metadata security checks for Assets and Connections](/features/metadata-security/overview)
     - [Governance Zones and Assets](/features/governance-zoning/overview)
     

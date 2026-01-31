@@ -2,12 +2,12 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 # Defining Subject Areas
 
-[Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) asks [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) for a list of the key subject areas managed by the IT systems today.
+[Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) asks [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) for a list of the key subject areas of data that they need to manage.
 
 To be sure she understands, Erin asks Jules what he means by “subject area” - Jules replies - *subject areas* are topics or domains of knowledge that are important to the organization.  Typically, they cover data that is widely shared across the organization and there is business value in maintaining consistency in the data values in each copy.
 
 !!! question "Subject area verses Data Domain?"
-    To Erin “subject area” sounds like a “data domain” and Jules agreed they are similar.  Data Domain typically refers to the data that the subject area's definitions apply to. (See the [Subject Area](/concepts/subject-area) definition for further information on the subject area and its domains.)
+    To Erin “subject area” sounds like a “data domain” and Jules agreed they are similar.  Data Domain typically refers to the data that the subject area's definitions apply to. (See the [Subject Area](/concepts/subject-area) definition for further information on the subject area and its contents.)
 
 !!! question "How granular are subject areas?"
     Erin then asks how granular should they go in defining the subject areas - for example, “Address” is a subject area but very fine-grained.  Alternatively, they could start with some broader subject areas (say about 10) that would make it easier to engage the other teams and help find business owners.
@@ -27,7 +27,7 @@ The EIM turned out to be a good reflection of today’s business since there is 
 
 They compared this model with the catalog of systems that [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) has created as part of his new role as the IT Infrastructure governance leader.
 
-Again, there was a surprisingly straight-forward mapping between the systems owned by each part of the business and the subject areas.  Erin concluded that there was little data sharing going on today beyond the common use of the product catalog and customer list by Sales and Distribution from Manufacturing.  The finance teams had the biggest overlap with the other parts of the business because income and expenses all flowed to them.
+Again, there was a surprisingly straight-forward mapping between the systems owned by each part of the business and the subject areas.  Erin concluded that there was little data sharing going on today beyond the common use of the product catalog and customer list used by Sales, Distribution, and Manufacturing.  The finance teams had the biggest overlap with the other parts of the business because income and expenses for all flowed to them.
 
 Erin guessed that personalised medicine may well increase the data sharing between the research and development teams and the clinicians in the hospitals.  She was not so sure if sales and manufacturing were affected.
 
@@ -54,9 +54,11 @@ Erin is surprised how much shifting her focus towards the needs of their busines
 ![Figure 2](coco-pharmaceuticals-core-subject-areas.png)
 > Figure 2: Coco Pharmaceutical’s new candidate subject area model
 
-!!! education "Further information"
-    
-    * [Subject Area](/services/omvs/subject-area/overview/#subject-areas) API provides the operations for creating subject areas in open metadata.
+!!! info "Further information"
+
+    * [Subject Areas](/concepts/subject-area) provides more information on subject areas.
+    * [Data Dictionaries](/concepts/data-dictionary) supplement a subject area with details of the data fields/values that are typically found in a subject area.  The data field defininitions from the data disctionary help to refine your future data needs, guide mappings of exisiting data to these needs and accelerate the development of new data sources.
+    * [Subject Area API](/services/omvs/subject-area/overview)  provides the operations for creating subject areas in open metadata.
 
 
 --8<-- "snippets/abbr.md"

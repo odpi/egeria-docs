@@ -14,7 +14,7 @@ The diagram above shows a few fragments from the models. Each of the UML classes
 
     For example, `Asset` has two attributes defined: `name` and `description`. It also supports `qualifiedName` and `additionalProperties` because they are inherited from `Referenceable`. `OpenMetadataRoot` does not have any attributes defined so `Asset` gets nothing from it.
 
-???+ example "The example on the right comes from model [0011](/types/0/0011-Managing-Referenceables)"
+???+ example "The example on the right comes from model [0011](/types/0/0011-Templates)"
     It shows the classification called `Template` that can be connected to a `Referenceable`. Since `Referenceable` is already defined in model 0010, it is shown without the white box where the attributes are show (called the "attribute container" in UML parlance).
 
     `SourcedFrom` is a relationship that connects two instances of `Referenceable` and any of its subtypes. This means `SourcedFrom` could connect two instances of type `Asset` together. The types of the instances connected do not need to be the same - `SourcedFrom` could connect a `Referenceable` instance with an `Asset` instance.

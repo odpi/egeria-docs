@@ -5,7 +5,7 @@
 
 # Asset Catalog Open Metadata View Service (OMVS)
 
-The Asset Catalog OMVS provides services to search for [data resources](/concepts/resource) including:
+The Asset Catalog API provides services to search for [data resources](/concepts/resource) including:
 
 * data stores
 * event feeds

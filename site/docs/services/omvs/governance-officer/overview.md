@@ -10,7 +10,7 @@ hide:
 
 # Governance Officer Open Metadata View Service (OMVS)
 
-The Governance Officer Open Metadata View Services (OMVS) is a REST API that support the creation and editing of a new governance domain.
+The Governance Officer API is a REST API that support the creation and editing of a new governance domain.
 
 
 

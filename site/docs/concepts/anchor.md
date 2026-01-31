@@ -21,7 +21,7 @@ The value of establishing this *anchor grouping* is to ensure that elements that
 
 !!! education "Further information"
 
-    - [Anchor Management](/features/anchor-management/overview) provide support for the Anchors and LatestChange classifications.
+    - [Anchor Management](/features/anchor-management/overview) provide support for the Anchors  classification.
     - [Anchor Classification](/types/0/0010-Base-Model) is used to implement the anchor grouping.
 
 --8<-- "snippets/abbr.md"

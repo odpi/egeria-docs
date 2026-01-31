@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/stable.md"
 
-# Glossary Browser OMVS
+# External Links API
 
-The Glossary Browser Open Metadata View Services (OMVS) is a REST API designed to support user interfaces (UIs) that support the searching and display of glossary content.
+The External Links API is a REST API that enables the caller to maintain and search for external identifiers and external references attached to open metadata elements.
 
 ---8<-- "snippets/abbr.md"
 

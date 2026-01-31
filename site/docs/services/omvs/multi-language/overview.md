@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/in-development.md"
 
-# Asset Curator OMVS
+# Multi Language API
 
-The Asset Curator Open Metadata View Services (OMVS) is a REST API that enables the caller to manage the metadata for a digital resource, monitor any feedback and understand its use.
+The Multi Language API is a REST API that enables the caller to set up translations for key metadata attributes in one or more languages..
 
 ---8<-- "snippets/abbr.md"
 

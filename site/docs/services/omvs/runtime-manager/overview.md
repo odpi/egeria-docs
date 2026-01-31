@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/stable.md"
 
-# Runtime Manager OMVS
+# Runtime Manager API
 
-The Runtime Manager Open Metadata View Services (OMVS) is a REST API designed to support user interfaces (UIs) and python environments that work with the Egeria infrastructure to:
+The Runtime Manager API is a REST API designed to support user interfaces (UIs) and python environments that work with the Egeria infrastructure to:
 
 * Display the status of an [OMAG Server Platform](/concepts/omag-server-platform), and which [OMAG Servers](/concepts/omag-server) are known/active to it.
 * The status of an OMAG Server, its active history and the health of the components running within it.
@@ -36,7 +36,7 @@ It is also able to:
    * Refresh the server's governance engine configuration stored in the connected metadata access server.
      
 
-The Runtime Manager OMVS is able to work with any platform (and its hosted servers) that are reachable via REST APIs.  The calling user (provided they have sufficient security privileges) is able to work with the [platform services](/services/platform-services/overview), [server operation services](/services/server-operations), [integration daemon services](/services/integration-daemon-services) and [engine-host-services](/services/engine-host-services) as if they were calling them directly.  This allows remote management without needing to expose the back-end platforms' endpoints to the administrative users.
+The Runtime Manager API is able to work with any platform (and its hosted servers) that are reachable via REST APIs.  The calling user (provided they have sufficient security privileges) is able to work with the [platform services](/services/platform-services/overview), [server operation services](/services/server-operations), [integration daemon services](/services/integration-daemon-services) and [engine-host-services](/services/engine-host-services) as if they were calling them directly.  This allows remote management without needing to expose the back-end platforms' endpoints to the administrative users.
 
 ![Production Deployment](production-deployment.svg)
 

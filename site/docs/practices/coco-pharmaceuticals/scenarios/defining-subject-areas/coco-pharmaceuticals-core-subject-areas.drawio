@@ -1,1 +1,88 @@
-<mxfile userAgent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/8.8.0 Chrome/61.0.3163.100 Electron/2.0.2 Safari/537.36" version="9.3.4" editor="www.draw.io" type="device"><diagram id="8d5d1b72-b903-3956-4adc-15b58b12a1d2" name="Page-1">5Zpfc6M2EMA/jR9vBiTz7zHnpHd9yCStb6bPAhZQIxAVwo7z6SthsA3Cc+mYA8/UDzasBFr9drVaSV7hTf7+TZAye+YxsBWy4vcVflwhZNu2pX605HCUeEFwFKSCxm2ls2BLP6AVts+lNY2h6lWUnDNJy74w4kUBkezJiBB836+WcNZvtSQpGIJtRJgp/YvGMjtKfeSd5d+BplnXsu22/QtJ9JYKXhdteyuEk+ZzLM5J9662o1VGYr6/EOGnFd4IzuXxKn/fANNsO2zH5367UnrSW0AhP/MAbvXYEVZDp3KjmDx0MJrugH7AWuGv+4xK2JYk0qV7ZX4ly2TO1J2tLk8d0jemNq2COxAS3i9ErXbfgOcgxUFV6Uo7hQ59hfdnswROK8suTOJ0rkRaV0hPrz7jUBctkSs4PYPODwFE5ro/1zHZP8ekAVDlbw+MpoWSSa4rJJSxDWdcNG/EYMcOeBqqFPwNLkoC18PEnYawG1g9wvbaRGx7I4gxngKxYyDeMFpoNjMQTvwIomiMcOg7a8eahvDJFxch7BuAX0FUvJgBr3JfP16P4fVRiN2JHPhEaRkHNiPoi0hJQT+IpPNQJuAno07sRj6EyUSB2FmUsm1Q/s6rkspbw8QUZDynT8YfIYNGyLgTgEHm6BZQRYKWt3vfFKEP99lgNCMbfGVqoWR5MNjpg0HOjGDWptOoYHVzUvMLsMw6lsxUZHvIS8nzxbEMh9GsWFwDyzOQqhZwexr8C9DMOpDM9cFLLSP1nrvDggN7Piy2OStt67JkFMTiYIaz9az+Yo9MSZwxEnJBJF8ezjD8zus15rT0lJeMH2D54WSAmTOPsc0I/Cp4XEfLR1/PXnBiss2l7Z8Q0XJ5dxlimdddAnNWEvEdhN4hlVlDLzJXkFsQO6q6i6w/asKoPNxG6HM7Tgm44ztOsReE1kQ7Tn63EF9ksd6ZsDfLFVKQOwhYfrDkYn0kL5I8ers7KvOOTDMpeqRqeNCwvos9jCGcWYP5yFr992LHm7B1b1zmTBZHFutPgipnsV52OqzDXjdQxOr7FaSe/CyVM6lgbHJT3ZWDQ6xebC54AYNA3opIG+kjBVE1YU4BOY1j3cyoNfrnaomKkNtWKTSBdYb7tevANa3jj1gHTWEdM2NdIZdpzDHd9fC7/9T6sPOrtsKXFuiDqiEajU7F6iptf5vXVKXexDvK7Epqu0eSh42hkaUzw2M9pell1Qtxo0gn/V+4RIA+4RJjA3YSlzD3SjpjZHZniA2PuB6pGRG5AlM35Col2XCh87RtHf6tz/uR9SCA6IKEN0O7OdFS7D9Aj/hniGlElT3O1j63MaGxlWepZlIlcM53P3Ta9/gFXTss58pgCWvOyDPlC1AYdp/A1Mjqm9rFhqV9PGJp579bWt2e/6/QlF38KQQ//Qs=</diagram></mxfile>
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+  <diagram id="8d5d1b72-b903-3956-4adc-15b58b12a1d2" name="Page-1">
+    <mxGraphModel dx="1234" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;" value="" vertex="1">
+          <mxGeometry height="510" width="950" x="122" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Treatment" vertex="1">
+          <mxGeometry height="330" width="170" x="690" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;" value="Clinical" vertex="1">
+          <mxGeometry height="330" width="170" x="510" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;" value="Person" vertex="1">
+          <mxGeometry height="330" width="170" x="330" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Organization" vertex="1">
+          <mxGeometry height="330" width="170" x="150" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Hospital" vertex="1">
+          <mxGeometry height="60" width="120" x="175" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Prescription" vertex="1">
+          <mxGeometry height="60" width="120" x="535" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Clinician" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Patient" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Symptom" vertex="1">
+          <mxGeometry height="60" width="120" x="535" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Measurement" vertex="1">
+          <mxGeometry height="60" width="120" x="535" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Outcome" vertex="1">
+          <mxGeometry height="60" width="120" x="535" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Supplier" vertex="1">
+          <mxGeometry height="60" width="120" x="175" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Collaborator" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Employee" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Product" vertex="1">
+          <mxGeometry height="60" width="120" x="715" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Recipe" vertex="1">
+          <mxGeometry height="60" width="120" x="715" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Order" vertex="1">
+          <mxGeometry height="60" width="120" x="715" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Service Quality" vertex="1">
+          <mxGeometry height="330" width="170" x="870" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Contract" vertex="1">
+          <mxGeometry height="60" width="120" x="895" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Stock" vertex="1">
+          <mxGeometry height="60" width="120" x="895" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Distribution" vertex="1">
+          <mxGeometry height="60" width="120" x="895" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Invoice" vertex="1">
+          <mxGeometry height="60" width="120" x="895" y="391" as="geometry" />
+        </mxCell>
+        <mxCell id="25" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" value="Erin Overview and Peter Profile" vertex="1">
+          <mxGeometry height="20" width="180" x="150" y="496" as="geometry" />
+        </mxCell>
+        <mxCell id="26" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" value="&lt;div style=&quot;text-align: right&quot;&gt;&lt;span&gt;1st October 2025&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="20" width="120" x="920" y="496" as="geometry" />
+        </mxCell>
+        <mxCell id="27" parent="1" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1&gt;Coco Pharmaceuticals Core Subject Areas for Personalized Medicine&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="50" width="830" x="200" y="63" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

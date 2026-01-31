@@ -1,7 +1,3 @@
----
-hide:
-- toc
----
 
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
@@ -12,14 +8,17 @@ The Related Terms model contains relationships used to show how the assets of di
 
 ![UML](0350-Related-Terms.svg)
 
+## TermRelationshipStatus enumeration
 
-The *TermRelationshipStatus* defines how reliable the relationship is between two glossary terms:
+The *TermRelationshipStatus* enum defines how reliable the relationship is between two glossary terms:
 
 * DRAFT means the relationship is under development.
 * ACTIVE means the relationship is validated and in use.
 * DEPRECATED means the the relationship is being phased out.
 * OBSOLETE means that the relationship should not be used anymore.
 * OTHER means that the status is not one of the statuses listed above.  The description field can be used to add more details.
+
+## Relationships
 
 The related term relationships are as follows:
 

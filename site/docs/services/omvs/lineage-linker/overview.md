@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/stable.md"
 
-# Data Engineer API
+# Lineage Linker API
 
-The Data Engineer API is a REST API that enables the caller to define and search for information about data pipelines, data stores and lineage.
+The Lineage Linker is a REST API that enables the caller to maintain lineage relationships.
 
 ---8<-- "snippets/abbr.md"
 

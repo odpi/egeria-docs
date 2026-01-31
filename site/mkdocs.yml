@@ -2,7 +2,7 @@
 # Copyright Contributors to the Egeria project.
 
 site_name: The Egeria Project
-site_description: Metadata and insight interoperability between people, tools and platforms
+site_description: Metadata and context interoperability between people, tools and platforms for AI and Data Science
 copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2025 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
@@ -374,7 +374,7 @@ nav:
           - 0. Base:
               - Area 0 Base: types/0/index.md
               - Base Model: types/0/0010-Base-Model.md
-              - Managing Referenceables: types/0/0011-Managing-Referenceables.md
+              - Templates: types/0/0011-Templates.md
               - Search Keywords: types/0/0012-Search-Keywords.md
               - Actions: types/0/0013-Actions.md
               - External References: types/0/0014-External-References.md
@@ -578,7 +578,6 @@ nav:
                   - Open Metadata View Services: services/omvs/index.md
                   - Action Author: services/omvs/action-author/overview.md
                   - Asset Catalog: services/omvs/asset-catalog/overview.md
-                  - Asset Curator: services/omvs/asset-curator/overview.md
                   - Asset Maker: services/omvs/asset-maker/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
                   - Classification Explorer: services/omvs/classification-explorer/overview.md
@@ -592,18 +591,18 @@ nav:
                   - Data Officer: services/omvs/data-officer/overview.md
                   - DevOps Pipeline: services/omvs/devops-pipeline/overview.md
                   - Digital Business: services/omvs/digital-business/overview.md
-                  - External Linking: services/omvs/external-linking/overview.md
+                  - External Links: services/omvs/external-links/overview.md
                   - Feedback Manager: services/omvs/feedback-manager/overview.md
-                  - Glossary Browser: services/omvs/glossary-browser/overview.md
                   - Glossary Manager: services/omvs/glossary-manager/overview.md
                   - Governance Officer: services/omvs/governance-officer/overview.md
+                  - Lineage Linker: services/omvs/lineage-linker/overview.md
                   - Location Arena: services/omvs/location-arena/overview.md
-                  - Meeting Maker: services/omvs/meeting-maker/overview.md
+                  - Metadata Expert: services/omvs/metadata-expert/overview.md
                   - Metadata Explorer: services/omvs/metadata-explorer/overview.md
+                  - Multi Language: services/omvs/multi-language/overview.md
                   - My Profile: services/omvs/my-profile/overview.md
                   - Notification Manager: services/omvs/notification-manager/overview.md
                   - People Organizer: services/omvs/people-organizer/overview.md
-                  - Policy Finder: services/omvs/policy-finder/overview.md
                   - Privacy Officer: services/omvs/privacy-officer/overview.md
                   - Product Catalog: services/omvs/product-catalog/overview.md
                   - Product Manager: services/omvs/product-manager/overview.md
@@ -733,6 +732,7 @@ nav:
       - Feedback: concepts/feedback.md
       - File Type: concepts/file-type.md
       - GUID: concepts/guid.md
+      - Glossary Term: concepts/glossary-term.md
       - Governance Action: concepts/governance-action.md
       - Governance Action Engine: concepts/governance-action-engine.md
       - Governance Action Process: concepts/governance-action-process.md
@@ -835,11 +835,10 @@ nav:
       - Survey Report: concepts/survey-report.md
       - Survey Action Engine: concepts/survey-action-engine.md
       - Survey Action Service: concepts/survey-action-service.md
-      - Tag: concepts/informal-tag.md
+      - Tabular Data Set: concepts/tabular-data-set.md
       - Team: concepts/team.md
       - Template: concepts/template.md
       - To Do: concepts/to-do.md
-      - Uni-link Relationships: concepts/uni-multi-link.md
       - Useful Resource: concepts/useful-resource.md
       - User Identity: concepts/user-identity.md
       - View Server: concepts/view-server.md

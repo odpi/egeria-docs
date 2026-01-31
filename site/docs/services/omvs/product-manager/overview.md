@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/in-development.md"
 
-# Product Manager OMVS
+# Product Manager API
 
-The Product Manager Open Metadata View Services (OMVS) is a REST API that enables the caller to manage the definition of digital products and monitor their use and feedback.
+The Product Manager API is a REST API that enables the caller to manage the definition of digital products and monitor their use and feedback.
 
 ---8<-- "snippets/abbr.md"
 

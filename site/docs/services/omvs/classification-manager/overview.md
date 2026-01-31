@@ -3,9 +3,9 @@
 
 --8<-- "snippets/content-status/stable.md"
 
-# Classification Manager OMVS
+# Classification Manager API
 
-The Classification Manager Open Metadata View Services (OMVS) is a REST API designed to back user interfaces (UIs) that enables the caller to add classifications and governance relationships to open metadata elements.
+The Classification Manager API is a REST API designed to back user interfaces (UIs) that enables the caller to add classifications and governance relationships to open metadata elements.
 
 
 ---8<-- "snippets/abbr.md"

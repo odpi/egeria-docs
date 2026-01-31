@@ -1,15 +1,11 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project 2020. -->
 
-# 0011 Managing Referenceables
+# 0011 Templates
 
-[Referenceable](/types/0/0010-Basic-Model) entities can have chains of related feedback and additional knowledge attached to them. The following types help a metadata manager to process these collections of elements more efficiently.
+Open metadata elements can have chains of related feedback and additional information and classifications attached to them. The following types help a metadata manager to process standard patterns of elements more efficiently.
 
-![UML](0011-Managing-Referenceables.svg)
-
-## LatestChange classification
-
-The *LatestChange* classification is a convenience mechanism to indicate where the last change occurred. Components that are monitoring changes to most [Referenceable](/types/0/0010-Base-Model/#referenceable) entities can use the open metadata events related to classifications to monitor changes to the entity.  Currently, *LatestChange* classifications are added to the following types of elements: [Actor](/types/1/0110-Actors), [Asset](/types/0/0010-Base-Model), [AuthoredReferenceable](/types/0/0010-Base-Model), [Community](/types/1/0140-Communities), and [Project](/types/1/0130-Projects).  They record changes to classifications (except changes to LatestChange and Anchors classifications) and relationships attached to the element and any element anchored to it.
+![UML](../../../../saved/types/0011-Managing-Referenceables.svg)
 
 ## Template classification
 
@@ -17,7 +13,7 @@ Templates are used when creating new elements that are similar.  For example, co
 
 ![Example of the use of a template](template-use-case-1.svg)
 
-The *Template* classification indicates that a [*Referenceable*](/types/0/0010-Base-Model/#referenceable) entity is a good element be used as a template when creating a new element of the same type. There is no restriction on using *Referenceable* entities without this classification as templates. The *Template* classification is simply a useful marker to indicate that the referenceable does not represent a real resource, since it is only a template.  
+The *Template* classification indicates that a [*Referenceable*](/types/0/0010-Base-Model) entity is a good element be used as a template when creating a new element of the same type. There is no restriction on using entities without this classification as templates. The *Template* classification is simply a useful marker to indicate that the entity does not represent a real resource, since it is only a template.  
 
 ![Example of the use of a Template classification](template-use-case-2.svg)
 
@@ -42,7 +38,7 @@ With this set up, when *Asset2* is created with the template *tAsset*, it is lin
 
 ## SourcedFrom relationship
 
-When one *Referenceable* entity is created by using another *Referencable* entity as a template, the *qualifiedName* must be changed in the new entity to give it a unique name - often the *displayName* value changes, too. This makes it hard to identify the source of a *Referenceable* entity's values.
+When one *Referenceable* entity is created by using another *Referencable* entity as a template, the *qualifiedName* must be changed in the new entity to give it a unique name - often the *displayName* value changes, too. This makes it hard to identify the source of an entity's values.
 
 The *SourcedFrom* relationship is used to show the provenance of the information from the template. This is useful to help trace where information has come from and to help understand any potential impact cause by a change to the template if this change also needs to be made to the elements that were copied from it.
 
@@ -52,13 +48,11 @@ The *sourceVersionNumber* identifies the version number of the template used whe
 
 The *CatalogTemplate* relationship links an *OpenMetadataRoot* entity that describes a class of technology with a [template](/features/templated-cataloguing/overview) for creating a catalog entry for a resource of this class.
 
-??? deprecated "Deprecated types"
-    - *LastAttachment* - use *LatestChange* instead
-    - *LastAttachmentLink* - use *LatestChange* instead
+???+ info "Further information"
 
-??? education "Further information"
     - [Anchor Management](/features/anchor-management/overview)
     - [Using templates](/features/templated-cataloguing/overview)
-    - [Automated Curation OMVS](/services/omvs/automated-curation/overview)
+    - [Automated Curation API](/services/omvs/automated-curation/overview)
+    - [Template Manager API](/services/omvs/template-manager/overview)
 
 --8<-- "snippets/abbr.md"

@@ -61,7 +61,7 @@ This flexibility is possible because there is a simple mechanism that underpins 
 
 ### Linked copies of glossary terms
 
-Except the harvested glossary style, controlled glossary development requires multiple copies of the same term to be maintained so that a new version can be created and agreed on while the previous version is still in use.  The copy is made from an original term using the `createTermByTemplate()` call.  This creates a copy of the term, linked by the [*SourcedFrom*](/types/0/0011-Managing-Referenceables) relationship.
+Except the harvested glossary style, controlled glossary development requires multiple copies of the same term to be maintained so that a new version can be created and agreed on while the previous version is still in use.  The copy is made from an original term using the `createTermByTemplate()` call.  This creates a copy of the term, linked by the [*SourcedFrom*](/types/0/0011-Templates) relationship.
 
 ![SourcedFrom template](sourced-from-template.svg)
 

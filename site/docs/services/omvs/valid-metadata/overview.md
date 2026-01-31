@@ -680,7 +680,7 @@ The result is a richer catalog entry for the file, plus the ability to use attri
 
 ## Retrieving open metadata types
 
-The standard open metadata types are described [on this website](/types).  It is also possible to [define your own](/guides/developer/open-metadata-archives/defining-new-types) open metadata types. The Valid Metadata OMVS provides services to query all the defined types, irrespective of their origin and understand how they link together.
+The standard open metadata types are described [on this website](/types).  It is also possible to [define your own](/guides/developer/open-metadata-archives/defining-new-types) open metadata types. The Valid Metadata API provides services to query all the defined types, irrespective of their origin and understand how they link together.
 
 ??? info "Code reference"
 

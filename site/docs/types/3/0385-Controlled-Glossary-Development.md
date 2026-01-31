@@ -5,7 +5,7 @@
 
 Many organization that use glossary terms to drive the operation of the data landscape, need to use a controlled process to introduce and amend glossary terms, because the consequences of any change need to be carefully considered.  
 
-This model covers the extensions needed to support a controlled development process for human-authored elements such as glossary terms.  Typically, the organization has its (approved) live versions of these elements locked read-only to normal users.  When updates need to be made, copies of the affected elements (glossary terms in this example) and related elements are made and linked to their original element via the [SourcedFrom](/types/0/0011-Managing-Referenceables) relationship.
+This model covers the extensions needed to support a controlled development process for human-authored elements such as glossary terms.  Typically, the organization has its (approved) live versions of these elements locked read-only to normal users.  When updates need to be made, copies of the affected elements (glossary terms in this example) and related elements are made and linked to their original element via the [SourcedFrom](/types/0/0011-Templates) relationship.
 
 In addition, all copies of elements made are linked into an editing collection and their [*Anchors* classification](/types/0/0010-Base-Model) are set to the editing collection's unique identifier so if the editing collection is deleted, all the copies are deleted too.
 

@@ -12,7 +12,7 @@ Figure 1 shows the typical content of a glossary.
 ![Figure 1](glossary-structure.svg)
 > Figure 1: Elements within a glossary
 
-A *glossary term* describes a single concept.  The *glossary categories* are like folders to organize the glossary terms. Glossary terms that are related to one another can be linked together with *term relationships* .  There are different types of term relationships that help to pin down exactly how the glossary terms are related.  Finally there are *classifications* that can be linked to the glossary itself, the glossary categories or the glossary terms. The classification provide more information about the kind of element it is connected to, or its intended use.
+A [*glossary term*](/concepts/glossary-term) describes a single concept.  The *glossary categories* are folders in the glossary to organize the glossary terms. Glossary terms that are related to one another can be linked together with *term relationships* .  There are different types of term relationships that help to pin down exactly how the glossary terms are related.  Finally there are *classifications* that can be linked to the glossary itself, the glossary categories or the glossary terms. The classification provide more information about the kind of element it is connected to, or its intended use.
 
 
 ## Inside a glossary term
@@ -40,7 +40,7 @@ Glossary terms can be linked together in pairs to show that they are related in 
 
 The relationships between glossary terms are divided into two groups:
 
-* Relationships that show how the meanings of terms are related:
+* [Relationships](/types/3/0350-Related-Terms) that show how the meanings of terms are related:
   
     * *RelatedTerm* is a relationship used to say that the linked glossary term may also be of interest. It is like a "see also" link in a dictionary.
     * *Synonym* is a relationship between glossary terms that have the same, or a very similar meaning.
@@ -51,7 +51,7 @@ The relationships between glossary terms are divided into two groups:
     * *IsARelationship* is a relationship that defines that the one term is a more generic term than the other term. For example, this relationship would be used to say that "Cat" IsA "Animal".
     * *ValidValue* is a relationship that defines that the one term represents a value that than the other term can be set to. For example, this relationship would be used to say that "France" is a valid value for "Country".
 
-* Relationships that show how terms are typically used together:
+* [Relationships](/types/3/0360-Contexts) that show how terms are typically used together:
   
     * *UsedInContext* links a term to another term that describes a context.  This helps to distinguish between terms that have the same name but different meanings depending on the context.
    
@@ -68,17 +68,19 @@ There are different types of classifications for the glossary itself, each gloss
 
 A glossary may be classified to describe the way its content should be used.
 
-* *Taxonomy* means that the same term is not present in more than one of its categories.  This is used in glossaries that are designed to provide an organizing structure for other types of information, such as a document library.
+* [Taxonomy](/types/3/0310-Glossary) means that the same term is not present in more than one of its categories.  This is used in glossaries that are designed to provide an organizing structure for other types of information, such as a document library.
 
-* *CanonicalVocabulary* means the glossary only includes terms that have a unique name.  Thus there is only one definition for any concept.
+* [CanonicalVocabulary](/types/3/0310-Glossary) means the glossary only includes terms that have a unique name.  Thus there is only one definition for any concept.
 
-* *EditingGlossary* means that the glossary contains a collection of glossary terms and categories that are in the process of being edited.
+* [EditingCollection](/types/3/0385-Controlled-Glossary-Development) means that the glossary contains a collection of glossary terms and categories that are in the process of being edited.
+
+* [StagingCollection](/types/3/0385-Controlled-Glossary-Development) means that the glossary contains a collection of glossary terms and categories that are in the process of being reviewed ready for publishing.
 * 
-* *StagingGlossary* means that the glossary contains a collection of glossary terms and categories that are in the process of being reviewed ready for publishing.
+* [ScopingCollection](/types/3/0385-Controlled-Glossary-Development) means that the glossary contains a collection of glossary terms and categories that are being considered for inclusion in a project.
 
 ### Classifications for a term
 
-* *ActivityDescription* is a classification used to indicate that the term describes a verb, or an activity. Most term definitions are nouns, they describe concepts or things. However, it is useful to be able to define the meanings of particular activities in the glossary. The ActivityDescription classification highlights when a term describes such an activity.  This classification can be further refined with a specific activity type:
+* [ActivityDescription](/types/3/0340-Dictionary) is a classification used to indicate that the term describes a verb, or an activity. Most term definitions are nouns, they describe concepts or things. However, it is useful to be able to define the meanings of particular activities in the glossary. The ActivityDescription classification highlights when a term describes such an activity.  This classification can be further refined with a specific activity type:
 
     - OPERATION - describes a function or API call
     - ACTION - describes a governance action that results from evaluating governance rules.
@@ -87,13 +89,14 @@ A glossary may be classified to describe the way its content should be used.
     - PROJECT - describes a type of project.
     - OTHER - describes some other type of activity
   
-* *AbstractConcept* means that the term describes an abstract concept.
-* *DataValue* means that the glossary term describes a valid value for a data item.
-* *ContextDefinition* indicates that the term describes a context.  Contexts define where a specific definition is used.
+* [AbstractConcept](/types/3/0340-Dictionary) means that the term describes an abstract concept.
+* [DataValue](/types/3/0340-Dictionary) means that the glossary term describes a valid value for a data item.  For example, you may have a glossary term for PI or the current interest rate.
+* [ContextDefinition](/types/3/0360-Contexts) indicates that the term describes a context.  Contexts define where a specific definition is used.
 
 
-!!! education "Further information"
+!!! info "Further information"
     * [Defining a glossary example](/practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview)
+    * [Glossary Manager API](/services/omvs/glossary-manager/overview)
     * [Open metadata types for a glossary](/types/3/overview)
 
 --8<-- "snippets/abbr.md"

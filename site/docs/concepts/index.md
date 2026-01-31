@@ -74,6 +74,7 @@
 - [Deployed Implementation Type](/concepts/deployed-implementation-type)
 - [Design Lineage](/features/lineage-management/overview)
 - [Digital Product](/concepts/digital-product)
+- [Digital Product Catalog](/patterns/harvest-and-publish/overview)
 - [Digital Resource](/concepts/digital-resource)
 - [Digital Resource Connector](/concepts/digital-resource-connector)
 - [Digital Service](/practices/digital-services/overview)
@@ -128,7 +129,7 @@
 - [Glossary](/practices/common-data-definitions/anatomy-of-a-glossary)
 - [Glossary Browser OMVS](/services/omvs/glossary-browser/overview)
 - [Glossary Category](/practices/common-data-definitions/anatomy-of-a-glossary/#glossary-categories)
-- [Glossary Term](/practices/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term)
+- [Glossary Term](/concepts/glossary-term)
 - [Glossary Manager OMVS](/services/omvs/glossary-manager/overview)
 - [Governance Action](/concepts/governance-action)
 - [Governance Action Engine](/concepts/governance-action-engine)
@@ -226,6 +227,7 @@
 - [Metadata Security Connector for OMAG Server Platform](/concepts/platform-metadata-security-connector)
 - [Metadata Server](/concepts/metadata-access-store)
 - [Metadata Types](/types)
+- [Multi-Link Relationships](/concepts/uni-multi-link)
 - [My Profile OMVS](/services/omvs/my-profile/overview)
 
 
@@ -253,6 +255,7 @@
 - [Open Metadata Exchange Rule](/concepts/open-metadata-exchange-rule)
 - [Open Metadata Instances](/concepts/open-metadata-instances)
 - [Open Metadata Labs](/education/open-metadata-labs/overview)
+- [Open Metadata Digital Product Catalog](/patterns/harvest-and-publish/overview)
 - [Open Metadata Repository](/concepts/open-metadata-repository)
 - [Open Metadata Repository Cohort](/concepts/cohort-member)
 - [Open Metadata Repository Services](/services/omrs)
@@ -280,6 +283,7 @@
 - [Platform Security](/features/metadata-security/overview)
 - [Platform URL Root](/concepts/platform-url-root)
 - [Process](/concepts/process)
+- [Product Catalog](/patterns/harvest-and-publish/overview)
 - [Project](/concepts/project)
 - [Project Manager OMVS](/services/omvs/project-manager/overview)
 - [Provenance of metadata](/features/metadata-provenance/overview)
@@ -359,6 +363,8 @@
 
 ## T
 
+- [Tabular Data Set](/concepts/tabular-data-set)
+- [Tabular Data Set Collection](/concepts/tabular-data-set)
 - [Tagging](/concepts/informal-tag)
 - [Team](/concepts/team)
 - [Templates](/concepts/template)
@@ -381,6 +387,7 @@
 
 ## U
 
+- [Uni-Link Relationships](/concepts/uni-multi-link)
 - [URL Root](/concepts/platform-url-root)
 - [Useful Resource](/concepts/useful-resource)
 - [User Identity](/concepts/user-identity)

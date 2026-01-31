@@ -176,7 +176,7 @@ This new website was added to the project in 2021, and it has resulted in more i
 * Asset Catalog OMAS
 * Asset Lineage OMAS
 
-There was investment in both the function and performance of the generic handlers, which provide many of the metadata governance functions supported by all OMASs, such as metadata security, provenance validation, anchor management, LatestChange classifications, effectivity dating, memento management and de-duplicating query results.
+There was investment in both the function and performance of the generic handlers, which provide many of the metadata governance functions supported by all OMASs, such as metadata security, provenance validation, anchor management, effectivity dating, memento management and de-duplicating query results.
 
 Integration with third party technologies made good progress with the addition of OpenLineage support, the new JDBC, Hive Metastore, schema registry, OpenAPI Specification and Apache Kafka connectors.
 

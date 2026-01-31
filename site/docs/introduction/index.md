@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -12,7 +7,26 @@ hide:
 
 Egeria is an open source project from Linux Foundation (LF) AI and Data.  It is developed by a team of enthusiasts from different organizations, collectively called the *Egeria Community* that is [free to join](/guides/community).
 
-Six years of working with leading enterprises to build metadata synchronization services has taught us a thing or two(!!)  and so the Egeria community proudly announces Version 6.0 of Egeria (expected release date **January 2026**).
+## What does Egeria do?
+
+Egeria manages context (linked information) about your organization's digital operations, including your data, systems, projects, locations, processes and the people around them.  In the age of AI, there is increasing recognition that this type of context is key to improving the reliability of AI applications because it helps to identify the scope of what is relevant to the requester.  This is true, of course, however there are many other use cases that make Egeria valuable, including:
+
+* tradition data quality and finding data through a data catalog; 
+* inventory of IT systems for management and security; 
+* data lineage capture and management;
+* knowedge management, for example in the form of glossary authoring;
+* solution design and documentation;
+* digital product marketplaces with subscriptions
+
+... and many more.  
+
+The design of Egeria recognizes that the breadth and depth of the context needed by an organization varies widely.  Typically, an organization will want to build up their context knowledge base on a project-by-project basis, possibly focusing on a specific part of the organization and use cases.  As time progresses, the richness of the context knowledge base grows.
+
+Egeria benefits individuals and well as organizations.  A person can build their portfolio of expertise and contributions in Egeria.  Individuals and teams can link to one another, share news and information as well as form cross-organization communities.
+
+## Latest News
+
+Six years of working with leading enterprises to build metadata synchronization services has taught us a thing or two(!!)  and so the Egeria community proudly announces Version 6.0 of Egeria (expected release date **March 2026**).
 
 - Egeria now has a leaner runtime, reducing cost of deployment and operation.  Despite doubling its capability, Egeria's runtime is now half the size of previous releases due to simplification and consolidation of interfaces and features at each level of the implementation.
 - Simple up and running experience for small teams, demonstration and evaluation are available through [egeria-workspaces](/egeria-workspaces).
@@ -63,7 +77,7 @@ Six years of working with leading enterprises to build metadata synchronization 
     - Monitoring and reports on deployed Egeria estate and workloads covering activity and status.
 - Fast, scalable industry standard repository built on PostgreSQL - grow with your business needs; no mysteries in operation, ha, backups and disaster recovery.
 
-## Migrating to this release
+### Migrating to this release
 
 With the changes to the Egeria runtime, repository types and services, the migration from earlier releases to Version 6.0 and beyond will require a migration project, rather than the typical simple software upgrade.  Contact our migration partner, Pragmatic Data Research Ltd, for assistance.
 

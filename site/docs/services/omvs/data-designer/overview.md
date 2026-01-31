@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/stable.md"
 
-# Data Designer OMVS
+# Data Designer API
 
-The Data Designer Open Metadata View Services (OMVS) is a REST API that enables the caller to building specifications for data.  This includes common data fields in a data dictionary, data specifications for a project and data classes for data quality validation.
+The Data Designer API is a REST API that enables the caller to building specifications for data.  This includes common data fields in a data dictionary, data specifications for a project and data classes for data quality validation.
 
 Specifically:
 

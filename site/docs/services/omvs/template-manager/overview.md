@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/stable.md"
 
-# Template Manager OMVS
+# Template Manager API
 
-The Template Manager Open Metadata View Services (OMVS) is a REST API designed to support user interfaces (UIs) that support the management of [templates](/features/templated-cataloguing/overview) that are used when creating new metadata.
+The Template Manager API is a REST API designed to support user interfaces (UIs) that support the management of [templates](/features/templated-cataloguing/overview) that are used when creating new metadata.
 
 ## The Template classification
 

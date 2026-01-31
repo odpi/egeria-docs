@@ -3,9 +3,9 @@
 
 --8<-- "snippets/content-status/stable.md"
 
-# Collection Manager OMVS
+# Collection Manager API
 
-The Collection Manager Open Metadata View Services (OMVS) is a REST API designed to back user interfaces (UIs) that support the maintenance and browsing of hierarchies of [collections](/concepts/collection) and their members.
+The Collection Manager API is a REST API designed to back user interfaces (UIs) that support the maintenance and browsing of hierarchies of [collections](/concepts/collection) and their members.
 
 Collections are used to organize elements.  Elements (including other collections) are linked to a collection to show that they are a member of the collection.  An element can be a member of none, one or multiple collections.
 
@@ -14,10 +14,10 @@ There are different types of collections that are identified by their classifica
 * **Root Collection** - A root collection is the root node of a hierarchy of collections.  Its members are typically other collections.
 * **Folder** - a folder is a collection that is part of a collection hierarchy structure.  It may have members that are collections and/or other types of elements.
 * **Digital Product** - A [digital product](/concepts/digital-product) is a collection of [digital resources](/concepts/digital-resource) that have been especially crafted to support a specific use case (or related use cases).  The digital resources are represented in the digital product collection as [assets](/concepts/asset) and may represent different versions of the digital resource or customized versions of the same data for different purposes, or supporting different non-functional requirements.
-* **Data Dictionary** - A [data dictionary](/concepts/data-dictionary) is an organized collection of [data fields](/concepts/data-field) either focused on specific data sources, or providing a library of common data items used by an organization.  Data fields are managed through the [Data Designer OMVS](/services/omvs/data-designer/overview).
-* **Data Specification** - A description of the data requirements for a specific project or initiative.  Each required data source is described using a [data structure](/concepts/data-structure) and data structures are also managed through the [Data Designer OMVS](/services/omvs/data-designer/overview).
+* **Data Dictionary** - A [data dictionary](/concepts/data-dictionary) is an organized collection of [data fields](/concepts/data-field) either focused on specific data sources, or providing a library of common data items used by an organization.  Data fields are managed through the [Data Designer API](/services/omvs/data-designer/overview).
+* **Data Specification** - A description of the data requirements for a specific project or initiative.  Each required data source is described using a [data structure](/concepts/data-structure) and data structures are also managed through the [Data Designer API](/services/omvs/data-designer/overview).
 
-The Collection Manager OMVS supports:
+The Collection Manager API supports:
 
 * The creation and maintenance of the properties associated with a collection.  New collections can be created using another collection as a template.
 * The management of the members of a collection.
@@ -310,7 +310,7 @@ Content-Type: application/json
 * The *status* attribute indicates the status of the member in the collection. It is a [MembershipStatus](/types/0/0021-Collections) value.
 * The *userDefinedStatus* provides a status value when status=OTHER.
 
-The Collection Manager OMVS has operations to add and remove members from the collection and also update the membership properties.
+The Collection Manager API has operations to add and remove members from the collection and also update the membership properties.
 
 
 ### addToCollection
@@ -391,7 +391,7 @@ The [*ResourceList*](/types/0/0019-More-Information) relationship links a [refer
 * *resourceUseProperties* - additional properties needed when using the resource.
 * *watchResource* - a boolean flag indicating whether changes to the resource should be reported to the linked from element.  To have an effect, a [governance service](/concepts/governance-service) needs to be running to honour the request.
 
-Collection Manager OMVS has an operation to attach a collection as a resource, detach it, and search for collections linked to an element as a resource.
+Collection Manager API has an operation to attach a collection as a resource, detach it, and search for collections linked to an element as a resource.
 
 
 ### attachCollection

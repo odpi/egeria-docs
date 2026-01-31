@@ -8,9 +8,9 @@ hide:
 
 --8<-- "snippets/content-status/in-development.md"
 
-# Devops Pipeline OMVS
+# Devops Pipeline API
 
-The Devops Pipeline Open Metadata View Services (OMVS) is a REST API that enables a devops engineer to maintain the metadata about the changing digital resources being deployed through devops pipelines.
+The Devops Pipeline API is a REST API that enables a devops engineer to maintain the metadata about the changing digital resources being deployed through devops pipelines.
 
 ---8<-- "snippets/abbr.md"
 

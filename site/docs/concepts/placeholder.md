@@ -100,7 +100,7 @@ Content-Type: application/json
   }
 }
 ```
-The picture below shows the resulting asset elements, linked back to the elements from the template using the [SourcedFrom](/types/0/0011-Managing-Referenceables).
+The picture below shows the resulting asset elements, linked back to the elements from the template using the [SourcedFrom](/types/0/0011-Templates).
 Notice how the `{{serverName}}` placeholder property is used in each element to create a unique qualifiedName.
 
 ![PostgreSQL Database Server Template in use](/catalog-templates/postgres-server-template-in-use.svg)

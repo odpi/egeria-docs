@@ -10,7 +10,7 @@ hide:
 
 # Automated Curation Open Metadata View Service (OMVS)
 
-The Automated Curation OMVS provides services that can be used to set up and monitor the automation services from Egeria:
+The Automated Curation API provides services that can be used to set up and monitor the automation services from Egeria:
 
 * Retrieving information about different technologies with their linked templates and resources.
 * Adding catalog targets to [integration connectors](/concepts/integration-connector) running in an [Integration Daemon](/concepts/integration-daemon).

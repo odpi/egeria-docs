@@ -12,7 +12,7 @@ The TranslationDetails are linked to the original entity using the *TranslationL
 ![UML](0022-Translations.svg)
 
 
-??? education "Further information"
-    Translations can be maintained and retrieved through the [*Metadata Store Services*](/services/gaf-metadata-management) that are supported by all [Open Metadata Access Services (OMASs)](/services/omas).
+??? info "Further information"
+    Translations can be maintained through the [Multi Language API](/services/omvs/multi-language/overview) and are retrieved with the element they are linked to.
 
 --8<-- "snippets/abbr.md"

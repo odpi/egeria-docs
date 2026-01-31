@@ -3,11 +3,11 @@
 
 --8<-- "snippets/content-status/stable.md"
 
-# Metadata Explorer OMVS
+# Metadata Explorer API
 
-The Metadata Explorer Open Metadata View Services (OMVS) is a REST API that supports the search, query and retrieval of open metadata.  It is an advanced API for users that understand the [Open Metadata Types](/types) because the searches are expressed using these types and the attributes they define, and the results directly reflect the elements and relationships they define.  There are simpler, more specialized search operations in the other view services.
+The Metadata Explorer API is a REST API that supports the search, query and retrieval of open metadata.  It is an advanced API for users that understand the [Open Metadata Types](/types) because the searches are expressed using these types and the attributes they define, and the results directly reflect the elements and relationships they define.  There are simpler, more specialized search operations in the other view services.
 
-The Metadata Explorer OMVS has 12 different types of search operation.  The first four retrieve details about a single metadata element.
+The Metadata Explorer API has 12 different types of search operation.  The first four retrieve details about a single metadata element.
 
 * getMetadataElementByGUID - Retrieve the metadata element using its unique identifier (guid).
 * getMetadataElementByUniqueName - Retrieve the metadata element using its unique name (typically the *qualifiedName* attribute but other attributes can be used if they are unique - such as *pathName* for a file).
@@ -103,27 +103,27 @@ Note: not all repositories support ordering.  The results may vary between repos
 
 ### Using the urLMarker
 
-Metadata Explorer OMVS contains operations that are useful in many scenarios. For that reason it is implemented as a *View Server Generic Service*.  This means that firstly, it is always running in a view server.  Secondly, each of its operations' URL has a segment that is specified as `{urlMarker}`.  
+Metadata Explorer API contains operations that are useful in many scenarios. For that reason it is implemented as a *View Server Generic Service*.  This means that firstly, it is always running in a view server.  Secondly, each of its operations' URL has a segment that is specified as `{urlMarker}`.  
 
 ![Metadata Explorer URLs](metadata-explorer-urls.png)
 > The `urlMarker` in Metadata Explorer OMAS's REST API operations.
 
-This segment of the URL normally takes the URL marker for the particular view service it belongs to.  (For example `metadata-explorer` for the Metadata Explorer OMVS, or `asset-catalog` for Asset Catalog OMVS).  The `{urlMarker}` allows the use of the URL marker for any view service that is configured in the view server. 
+This segment of the URL normally takes the URL marker for the particular view service it belongs to.  (For example `metadata-explorer` for the Metadata Explorer API, or `asset-catalog` for Asset Catalog API).  The `{urlMarker}` allows the use of the URL marker for any view service that is configured in the view server. 
 
 ???+ tip "How do I find out the URL marker for a service?"
-    The URL marker is derived from the name of the requested service - take the short two-word service name, convert to lower case and add a hyphen between the two words - so Feedback Manager OMVS's URL Marker is feedback-manager.
+    The URL marker is derived from the name of the requested service - take the short two-word service name, convert to lower case and add a hyphen between the two words - so Feedback Manager API's URL Marker is feedback-manager.
 
-When the request is received by Metadata Explorer OMVS, it uses the supplied URL marker to look up the configuration of the requested view service.  It then issues the desired request(s) to the partner [metadata access server](/concepts/metadata-access-server) configured for the requested view server.
+When the request is received by Metadata Explorer API, it uses the supplied URL marker to look up the configuration of the requested view service.  It then issues the desired request(s) to the partner [metadata access server](/concepts/metadata-access-server) configured for the requested view server.
 
 The reason this feature is useful is that each view service is configured to call an [Open Metadata Access Service (OMAS)](/services/omas) running in a specific [Metadata Access Server](/concepts/metadata-access-server).  They do not all have to be set to call the same server.  
 
 ![View server configuration example](view-server-configuration.svg)
 > This example show a view server where its view services are configured to point to different metadata access stores.
 
-Each access service in each server can be set up to support a restrictive set of [governance zones](/features/governance-zoning/overview).  This controls the visibility of assets returned to the callers.  If, for example, a user interface was calling Asset Catalog OMAS to provide information about assets for its user, this service would call Asset Consumer OMAS in the metadata store.  It could be set up to only return assets of a particular quality.  If the UI needed to also perform a complex query using Metadata Explorer OMVS, it could set the URL Marker to be "asset-catalog" and the request would be passed to the same Asset Consumer OMAS as the other Asset Catalog OMAS calls - and so returning assets with the same visibility.
+Each access service in each server can be set up to support a restrictive set of [governance zones](/features/governance-zoning/overview).  This controls the visibility of assets returned to the callers.  If, for example, a user interface was calling Asset Catalog OMAS to provide information about assets for its user, this service would call Asset Consumer OMAS in the metadata store.  It could be set up to only return assets of a particular quality.  If the UI needed to also perform a complex query using Metadata Explorer API, it could set the URL Marker to be "asset-catalog" and the request would be passed to the same Asset Consumer OMAS as the other Asset Catalog OMAS calls - and so returning assets with the same visibility.
 
-???+ education "If Metadata Explorer OMVS is always active, do I need to configure it in my view server?"
-    You only need to configure Metadata Explorer OMVS if you want to use the `metadata-explorer` URL Marker to call the Asset Consumer OMAS in a specific Metadata Access Store.
+???+ education "If Metadata Explorer API is always active, do I need to configure it in my view server?"
+    You only need to configure Metadata Explorer API if you want to use the `metadata-explorer` URL Marker to call the Asset Consumer OMAS in a specific Metadata Access Store.
 
 ### Additional request parameters
 

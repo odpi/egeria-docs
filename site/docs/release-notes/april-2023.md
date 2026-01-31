@@ -148,7 +148,7 @@ The face-to-face workshop in Bucharest saw important progress on cloud-native de
 
 Each month we will select one or more new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org){target=blank} so you can keep up-to-date with how it is evolving.
 
-- [Managing Referenceables](/types/0/0011-Managing-Referenceables/){target=blank}
+- [Templates](/types/0/0011-Templates/){target=blank}
 - [Controlled glossary development](/types/3/0385-Controlled-Glossary-Development/){target=blank}
 
 

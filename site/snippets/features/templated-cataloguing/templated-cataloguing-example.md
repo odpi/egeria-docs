@@ -21,7 +21,7 @@ What if the catalog entry for the Week 1 measurements could be used as a templat
 
 This is the idea behind *templated cataloguing*.  A template that includes the common settings for a set of digital resources is defined and this template is used when cataloguing these resources.
 
-Figure 3 shows a set of templates used by Coco Pharmaceuticals when cataloguing their digital landscape.  There are different templates for different types of digital resources. Each would include the classifications and relationships that are relevant for the resources that they catalog.  They are decorated with the [`Template`](/types/0/0011-Managing-Referenceables) classification to identify that they do not represent real digital resource and should be used as templates.
+Figure 3 shows a set of templates used by Coco Pharmaceuticals when cataloguing their digital landscape.  There are different templates for different types of digital resources. Each would include the classifications and relationships that are relevant for the resources that they catalog.  They are decorated with the [`Template`](/types/0/0011-Templates) classification to identify that they do not represent real digital resource and should be used as templates.
 
 ![Figure 3](/features/templated-cataloguing/template-classification.svg)
 > **Figure 3:** A set of templates defined to use when cataloguing digital resources
@@ -30,7 +30,7 @@ When a template is used in cataloguing a digital asset, the caller needs to supp
 
 Egeria uses the [anchor](/features/anchor-management/overview) classification to determine which elements linked to the template are duplicated and which elements are just linked to by the new catalog entry.  In figure 2, for example, the connection and schema are anchored to the asset whilst the glossary terms and license are not.  This means that copies of the connection and schema elements are made for the new catalog entry whilst the glossary terms and and licence just receive new relationships to the new catalog entry.
 
-Finally, when a template is used, it is linked to the resulting element with the [`SourcedFrom`](/types/0/0011-Managing-Referenceables) relationship.  This makes it easier to identity the elements that need changing if the template needs to be corrected or enhanced at a later date.
+Finally, when a template is used, it is linked to the resulting element with the [`SourcedFrom`](/types/0/0011-Templates) relationship.  This makes it easier to identity the elements that need changing if the template needs to be corrected or enhanced at a later date.
 
 ![Figure 4](/features/templated-cataloguing/sourced-from-relationship.svg)
 > **Figure 4:** The `SourcedFrom` relationship links a template to the elements that are created from it

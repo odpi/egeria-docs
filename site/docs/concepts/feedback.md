@@ -14,7 +14,7 @@ This feedback includes:
 
 * [Comments](comment.md)
 * [Likes](like.md)
-* [Reviews and Star Ratings](review.md)
+* [Star Ratings](review.md)
 
 This feedback helps collaboration between asset consumers and also between asset owners and consumers.
 

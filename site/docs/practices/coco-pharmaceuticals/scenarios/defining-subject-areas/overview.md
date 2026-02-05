@@ -21,9 +21,9 @@ Erin enlists [Peter Profile](/practices/coco-pharmaceuticals/personas/peter-prof
 Peter reminds Erin that they worked on an enterprise information model (EIM) a few years ago which may be a useful input.
 
 ![Figure 1](coco-pharmaceuticals-eim-data-domains.png)
-> Figure 1: Data domains from Coco Pharmaceutical’s existing EIM
+> Figure 1: Data domains from Coco Pharmaceutical's existing EIM
 
-The EIM turned out to be a good reflection of today’s business since there is a clear separation between the data used in the product development and research work that [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) leads, the sales process, manufacturing and finance.
+The EIM turned out to be a good reflection of today's business since there is a clear separation between the data used in the product development and research work that [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) leads, the sales process, manufacturing and finance.
 
 They compared this model with the catalog of systems that [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) has created as part of his new role as the IT Infrastructure governance leader.
 
@@ -52,7 +52,7 @@ Erin is getting a picture from these conversations that the notion of Patient, C
 Erin is surprised how much shifting her focus towards the needs of their business transformations has affected the subject area model.  Her original EIM matched the organisational structure of the business. It challenged nothing in the status quo. The new subject area model has drawn out the most important subject areas for the business that need focus and attention now.
 
 ![Figure 2](coco-pharmaceuticals-core-subject-areas.png)
-> Figure 2: Coco Pharmaceutical’s new candidate subject area model
+> Figure 2: Coco Pharmaceutical's new candidate subject area model
 
 !!! info "Further information"
 

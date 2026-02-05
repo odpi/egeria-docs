@@ -10,11 +10,12 @@ hide:
 
 An actor role is a placeholder in an organization that defines a set of skills and responsibilities that one or more individuals/software components can perform.  [Teams](/concepts/team), [People](/concepts/personal-profile) or [Software Components](/concepts/it-profile) can then be appointed to the role.
 
-!!! education "Further information"
+!!! info "Further information"
 
     * [Examples of roles](/practices/roles/overview)
     * [Using roles in an organization](/features/people-roles-organizations/overview)
     * [Using roles in a governance program](/guides/planning/governance-program/overview)
+    * The [ActorRole](/types/1/0118-Actor-Roles) open metadata type defines the properties and relationships for an actor role.
 
 
 --8<-- "snippets/abbr.md"

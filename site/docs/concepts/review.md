@@ -1,13 +1,17 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 # Reviews
 
-A review is an attachment that can be made to
-a personal note or forum contribution.
-It includes a star rating and an optional review comment.
+A review is an [action](/concepts/action) that is an action where specific information is reviewed to determine whether it is correct or not.
 
-Reviews are used to provide feedback on ideas that are
-proposed in personal notes and forums.
+??? info "Further information"
+    The *Review* open metadata type is described in [Model 0135 Actions For People](/types/1/0135-Actions-For-People).
+
 
 --8<-- "snippets/abbr.md"

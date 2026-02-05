@@ -42,7 +42,7 @@ The *SecurityGroup* entity represents a group of [actors](/types/1/0110-Actors) 
 
 ## DataLens entity
 
-The *DataLens* entity identifies the scope of data for a particular type of processing. The attributes of this governance definition identify the scope of the data in space and time.
+The *DataLens* entity identifies the scope of data for a particular type of processing. The attributes of this governance definition identify the scope of the data in different dimensions such as subject area, location, time, organizational context, and regulatory framework.  It is typically attached to a collection gathering data assets for a specific purpose. 
 
 * *minLongitude* - if the data is bound by an area, this is the longitude for bottom-left corner of the bounding box (BBOX) for the area covered by the data.
 * *minLatitude* - if the data is bound by an area, this is the latitude for the bottom-left corner of the bounding box (BBOX) for the area covered by the data.
@@ -52,8 +52,24 @@ The *DataLens* entity identifies the scope of data for a particular type of proc
 * *maxHeight* - if the height above ground is relevant, this is the highest height that the data covers.
 * *dataCollectionStartTime* - if the data is bound by time, this is the start time.
 * *dataCollectionEndTime* - if the data is bound by time, this is the end time.
-* *scopeElements* - map from name (such as open metadata type name) to guid of the element that defines the scope of the data.
-* *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
+* *scopeElements* - map from name (such as open metadata type name) to guid of the element that defines the scope of the data.  Examples of the types of elements used to define the scope of the data are:
+
+    * [Business Capabilities](/concepts/business-capability)
+    * [Locations](/concepts/location)
+    * [Subject Areas](/concepts/subject-area)
+    * [Governance Definitions](/concepts/governance-definition)
+    * [Teams and Organizations](/concepts/team)
+    * [Person Roles](/concepts/person-role)
+    * [Information Supply Chain](/concepts/information-supply-chain)
+    * [Solution Blueprints](/concepts/solution-blueprint)
+  
+* *additionalProperties* - (inherited from Referenceable) support other properties that identify the scope of the data represented by this element.
+
+
+!!! info "Additional information"
+
+    * More information on the use of data lens in governance is in the [Data Lens](/concepts/data-lens) concept.
+    * The digital resources are matched to the data lens using their [DataScope](/types/2/0210-Data-Stores) classification.  In addition, the [ScopedBy](/types/1/0120-Assignment-Scopes/) relationship.
 
 
 --8<-- "snippets/abbr.md"

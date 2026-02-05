@@ -5,7 +5,7 @@
 
 Open metadata elements can have chains of related feedback and additional information and classifications attached to them. The following types help a metadata manager to process standard patterns of elements more efficiently.
 
-![UML](../../../../saved/types/0011-Managing-Referenceables.svg)
+![UML](0011-Templates.svg)
 
 ## Template classification
 

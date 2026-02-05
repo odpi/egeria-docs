@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0" pages="30">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6" pages="30">
   <diagram id="cenQKAz8UWtqx_h9wgFg" name="overview">
     <mxGraphModel dx="1585" dy="959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -1028,8 +1028,8 @@
             <mxPoint x="597" y="174" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ymlsB--aiOUKMowFG4_D-0" parent="AzrsBb-gnoifELoUJOZ8-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="minLongitude : float&lt;br&gt;minLatitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLongitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLatitude : float&lt;br&gt;minHeight : float&lt;br&gt;maxHeight : float&lt;br&gt;dataCollectionStartTime : date&lt;br&gt;dataCollectionEndTime : date&lt;div&gt;scopeElements : map&amp;lt;string, string&amp;gt;&lt;/div&gt;&lt;div&gt;additionalProperties : map&amp;lt;string, string&amp;gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="170" width="230" x="70" y="307" as="geometry" />
+        <mxCell id="ymlsB--aiOUKMowFG4_D-0" parent="AzrsBb-gnoifELoUJOZ8-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="minLongitude : float&lt;br&gt;minLatitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLongitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLatitude : float&lt;br&gt;minHeight : float&lt;br&gt;maxHeight : float&lt;br&gt;dataCollectionStartTime : date&lt;br&gt;dataCollectionEndTime : date&lt;div&gt;scopeElements : map&amp;lt;string, string&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="153" width="230" x="70" y="307" as="geometry" />
         </mxCell>
         <mxCell id="ymlsB--aiOUKMowFG4_D-1" parent="AzrsBb-gnoifELoUJOZ8-1" style="html=1;strokeColor=#82b366;align=center;fillColor=#d5e8d4;gradientColor=#97d077;" value="«entity»&lt;br&gt;&lt;b&gt;DataLens&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="230" x="70" y="257" as="geometry" />

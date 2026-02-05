@@ -32,6 +32,9 @@
 ## B
 
 - [Basic IT Concepts](/concepts/basic-concepts)
+- [Business Area](/concepts/business-area)
+- [Business Capability](/concepts/business-capability)
+- [Business Domain](/concepts/business-capability)
 
 ## C
 
@@ -70,9 +73,11 @@
 - [Data Connector](/concepts/digital-resource-connector)
 - [Data Discovery OMVS](/services/omvs/data-discovery/overview)
 - [Data Domain](/concepts/subject-area)
+- [Data Lens](/concepts/data-lens)
 - [Default Zones](/concepts/governance-zone)
 - [Deployed Implementation Type](/concepts/deployed-implementation-type)
 - [Design Lineage](/features/lineage-management/overview)
+- [Digital Business](/concepts/business-area)
 - [Digital Product](/concepts/digital-product)
 - [Digital Product Catalog](/patterns/harvest-and-publish/overview)
 - [Digital Resource](/concepts/digital-resource)
@@ -210,6 +215,7 @@
 ## M
 
 - [Master Data Manager](/concepts/software-capability/#master-data-manager)
+- [Meeting](/concepts/meeting)
 - [Memento Classification](/concepts/memento)
 - [Mermaid Visualization](/user-interfaces/mermaid/overview)
 - [Metadata Access Point](/concepts/metadata-access-point)
@@ -297,7 +303,7 @@
 
 ## R
 
-- [Ratings](/concepts/review)
+- [Ratings](/concepts/rating)
 - [Referenceable](/concepts/referenceable)
 - [Reference Data](/features/reference-data-management/overview)
 

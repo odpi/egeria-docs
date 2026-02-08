@@ -90,7 +90,7 @@ The process of [data profiling](/features/discovery-and-stewardship/overview/#da
 
 !!! education "Further information"
     * [Survey action services supplied by the Egeria project](/connectors/#survey-action-services)
-    * [Writing your own survey action services](/guides/developer/open-discovery-services/overview)
+    * [Writing your own survey action services](/guides/developer/survey-action-services/overview)
 
 --8<-- "snippets/abbr.md"
 

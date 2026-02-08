@@ -70,8 +70,16 @@ The *ProjectManagement* relationship links a project to the [PersonRole](/types/
 
 The *ProjectManager* is a specialized [*PersonRole*](/types/1/0112-People) to represent project management responsibilities.  It is linked to the project to be managed via the [*ProjectManagement*](#projectmanagement-relationship) relationship.
 
+## ProjectClassification classification
+
+The *ProjectClassification* classification is used to classify a project entity by approach (method) and how the intended results are to be used.  For example, the project may be experimental, using an agile development method.  The project classification can be used on any type of project entity.  It is for organizations that adjusts their governance processes and management of projects, iterations and tasks developing an idea as it moves from research, proof of concept, pilot and production/product.  It is expected that the values for the attributes in this classification are controlled using [valid metadata values](/guides/planning/valid-values/overview).
+
+* *approach* defines the methodology used to achieve the project's goals.
+* *managementStyle* defines the management style for the project - for example, there may be a management style for experimental prototyping projects, verses a more formal approach for projects that are used to develop a product.
+* *resultsUsage* defines how the results of the project are intended to be used.  For example, the results may be used to inform future projects, or to test a theory, or to develop a product.
+
 ??? deprecated "Deprecated types"
-    - *ProjectScope* relationship is deprecated in favour of the more generic [*AssignmentScope*](/types/1/0120-Assignment-Scopes). The *description* attribute of the *AssignmentScope* relationship should be used instead of the *scopeDescription* in the ProjectScope relationship; the scopeDescription attribute has been deprecated.  
-    - *status* attribute on *Project* is deprecated in favour of the more specific *projectStatus* attribute, which makes it easier to align with an appropriate valid value set.
+    - The *ProjectScope* relationship is deprecated in favour of the more generic [*AssignmentScope*](/types/1/0120-Assignment-Scopes). The *description* attribute of the *AssignmentScope* relationship should be used instead of the *scopeDescription* in the ProjectScope relationship; the scopeDescription attribute has been deprecated.  
+    - The *status* attribute on *Project* is deprecated in favour of the more specific *projectStatus* attribute, which makes it easier to align with an appropriate valid value set.
 
 --8<-- "snippets/abbr.md"

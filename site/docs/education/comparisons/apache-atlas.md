@@ -72,7 +72,7 @@ When you are either migrating between Apache Atlas and Egeria, the differences i
 
 !!! education "Connectors for Apache Atlas"
     * [Apache Atlas REST Connector](/connectors/system/apache-atlas-rest-connector) provides a Java interface to the Apache Atlas REST APIs.
-    * [Apache Atlas Discovery Service](/connectors/discovery/apache-atlas-discovery-service) builds a discovery analysis report on the contents of an Apache Atlas metadata repository.
+    * [Apache Atlas Survey Service](/connectors/discovery/apache-atlas-survey-service) builds a discovery analysis report on the contents of an Apache Atlas metadata repository.
     * [Apache Atlas Integration Connector](/connectors/integration/apache-atlas-catalog-integration-connector) synchronizes metadata between Apache Atlas and the open metadata ecosystem.
 
 

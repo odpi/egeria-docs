@@ -503,6 +503,7 @@ nav:
               - API Schemas: types/5/0536-API-Schemas.md
               - Display Schemas: types/5/0537-Display-Schemas.md
               - Data Classes: types/5/0540-Data-Classes.md
+              - Data Grains: types/5/0541-Data-Grains.md
               - Reference Data: types/5/0545-Reference-Data.md
               - Instance Metadata: types/5/0550-Instance-Metadata.md
               - Design Models: types/5/0565-Design-Models.md
@@ -519,6 +520,7 @@ nav:
               - Schema Extraction: types/6/0615-Schema-Extraction.md
               - Resource Profiling: types/6/0620-Resource-Profiling.md
               - Data Class Discovery: types/6/0625-Data-Class-Discovery.md
+              - Data Grain Discovery: types/6/0626-Data-Grain-Discovery.md
               - Semantic Discovery: types/6/0630-Semantic-Discovery.md
               - Classification Discovery: types/6/0635-Classification-Discovery.md
               - Quality Scores: types/6/0640-Quality-Scores.md
@@ -715,6 +717,7 @@ nav:
       - Data Class: concepts/data-class.md
       - Data Dictionary: concepts/data-dictionary.md
       - Data Field: concepts/data-field.md
+      - Data Grain: concepts/data-grain.md
       - Data Lens: concepts/data-lens.md
       - Data Specification: concepts/data-specification.md
       - Data Structure: concepts/data-structure.md

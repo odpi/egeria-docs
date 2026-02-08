@@ -42,4 +42,7 @@ The *DataScope* classification identifies the scope of the data stored in the [d
 * *scopeElements* - map from name (such as open metadata type name) to guid of the element that defines the scope of the data.
 * *additionalProperties* - to support other properties that identify the scope of the data represented by this element.
 
+The *DataScope* classification's attributes are often used to match a digital resource to a [data lens](/concepts/data-lens) that defines the scope of data for a [project](/concepts/project), [team](/concepts/team) or [business capability](/concepts/business-capability).
+
+
 --8<-- "snippets/abbr.md"

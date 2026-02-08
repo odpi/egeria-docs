@@ -50,6 +50,9 @@ Data classes can be used to augment the definition of a [DataStructure](/types/5
 
 Data classes can be assigned to elements (typically [*SchemaAttributes*](/types/5/0505-Schema-Attributes)) to show that the data stored in the data field represented by the element conforms to the type.  A [survey action service](/concepts/survey-action-service) can propose a list of data class assignments and these are stored in the [*DataClassAnnotation*](/type/6/0625-Data-Class-Discovery).  Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the *DataClassAssignment* relationship.
 
+## DataDefinitionAssignmentStatus enumeration
+
+The *DataDefinitionAssignmentStatus* enumeration is used to describe the status of the assignment of a data definition, such as a data class, or a [data grain](/types/5/0541-Data-Grains), to a data asset.
 
 --8<-- "snippets/abbr.md"
 

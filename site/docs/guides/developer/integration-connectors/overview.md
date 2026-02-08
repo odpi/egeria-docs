@@ -50,7 +50,7 @@ An alternative approach to calling the third party technology directly in your i
 Embedding a digital resource connector in an integration connector is an ideal approach for working with any third party technology that is being catalogued as assets:
 
 * Consumers of the digital resources in the third party technology need a digital resource connector to access the content of the digital resource.  It may be possible to use the same digital resource connector in the integration connector.
-* Often, the integration connector is not the only connector that is accessing a particular third party technology.  There may be [open discovery services](/concepts/open-discovery-service) and [governance action services](/concepts/governance-action-service) that also need to access the third party technology once the integration connector has run to create the basic technical metadata.
+* Often, the integration connector is not the only connector that is accessing a particular third party technology.  There may be [survey action services](/concepts/survey-action-service) and [governance action services](/concepts/governance-action-service) that also need to access the third party technology once the integration connector has run to create the basic technical metadata.
 
 For example, Egeria has a JDBC digital resource connector for accessing databases.   It can be used by consumers of databases as well as various governance connectors that are cataloguing and managing databases.
 

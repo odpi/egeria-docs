@@ -3,7 +3,7 @@
 
 # Engine Host
 
-An *engine host* is an [OMAG Server](/concepts/omag-server) that hosts one or more [governance engines](/concepts/governance-engine). Governance engines define collections of [governance services](/concepts/gpvernance-service) used to automate governance activity in the digital landscape. The governance services within the governance engines may access third party technology to perform their responsibilities or implement their behavior directly.
+An *engine host* is an [OMAG Server](/concepts/omag-server) that hosts one or more [governance engines](/concepts/governance-engine). Governance engines define collections of [governance services](/concepts/gpvernance-service) used to automate governance activity in the digital landscape. The governance services within the governance engines may access third party technology to perform their responsibilities or implement their behaviour directly.
 
 The engine host uses a [metadata access server](/concepts/metadata-access-server) to retrieve the [definitions of the governance engines](/concepts/governance-engine-definition) and the governance services within them. These definitions are retrieved through the [Governance Configuration Service](/services/governance-configuration-services). The [Action Author](/services/omvs/action-author/overview) API manages the definition of [governance action processes](/concepts/governance-action-process) that choreograph calls to the services in a governance engine in order to implement technical controls in the governance program.
 

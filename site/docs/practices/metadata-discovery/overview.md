@@ -121,7 +121,7 @@ Survey action services may directly implement the analysis function or may invok
 Stewardship is initiated either through the creation of a *Request for Action* annotation or when the *discovery analysis report's* status changes to COMPLETE.
 
 !!! education "Further information"
-    * [Survey action services supplied by the Egeria project](/connectors/#open-discovery-services)
+    * [Survey action services supplied by the Egeria project](/connectors/#survey-sction-services)
     * [Writing your own survey action services](/guides/developer/survey-action-services/overview)
 
 --8<-- "snippets/abbr.md"

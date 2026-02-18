@@ -7,5 +7,6 @@ The *ObservabilityContentPack* contains the connector definitions for the connec
 
 This content pack is built by the [core-content-pack](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/) module.
 
+--8<-- "snippets/blueprints/content-packs/egeria-observeability-content-pack-solution-blueprint-mermaid-graph.md"
 
 --8<-- "snippets/abbr.md"

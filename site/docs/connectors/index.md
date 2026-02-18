@@ -13,7 +13,7 @@ Connectors enable Egeria to operate in many environments and with many types of 
 
 * Connectors that support the [exchange and maintenance of metadata](#metadata-exchange-and-maintenance-connectors) with third party technology. This includes the resource connectors, survey action connectors, integration connectors and adapter repository connectors.  These connectors are organized by the type of third part technology type work with.
 
-* Connectors that support the [governance of open metadata](#open-metadata-governance-connectors). This includes the context event services and governance action services.  These connectors are organized by function.
+* Connectors that support the [governance of open metadata](#open-metadata-governance-connectors). This includes the watchdog action services and governance action services.  These connectors are organized by function.
 
 * Connectors that support the integration of [Egeria’s runtimes](#runtime-connectors) into the IT infrastructure where it is running. This includes the native repository connectors, event bus connectors, cohort registry stores, configuration stores, audit log destination connectors, open metadata archive stores, REST client connectors and the cohort member remote repository connectors.  These connectors are organized by connector type.
 
@@ -28,8 +28,7 @@ The connectors that support the security of the open metadata ecosystem are:
 
 [Secrets stores](/concepts/secrets-store-connector) externalize secrets such as passwords, tokens and certificates so they do not need to be stored in either the [configuration document](/concepts/configuration-document) or [open metadata repositories](/concepts/open-metadata-repository).
 
-* The [YAML File Secret Store connector](/connectors/secrets/yaml-file-secrets-store-connector) retrieves secret values from environment variables.
-* The [Environment Variables Secret Store connector](/connectors/secrets/environment-variable-secrets-store-connector) retrieves secret values from environment variables.
+* The [YAML File Secret Store connector](/connectors/secrets/yaml-file-secrets-store-connector) retrieves secret values from YAML files placed in the secure execution environment of the [OMAG Server Platform](/concepts/omag-server-platform).
 
 ### Metadata Security Connectors
 
@@ -51,7 +50,7 @@ Egeria has a single metadata security connector that implements both interfaces:
 * The [Open Metadata Access Security Connector](/connectors/metadata-security/open-metadata-access-security-connector) uses information from an embedded [secrets store connector](/concepts/secrests-store-connector) so all authorization decisions can be controlled through the contents of the externalized secrets store.
 
 ??? education "Further information relating to Metadata Security Connectors"
-    - [Metadata Security Overview](/features/metadata-security/overview) to understand the metadata security connectors in the context of all of the security features.
+    - [Metadata Security Overview](/features/metadata-security/overview) to understand the metadata security connectors in the context of all the security features.
     - [Configuring a Platform Metadata Security Connector](/guides/admin/configuring-the-omag-server-platform/#platform-security) in the [OMAG Server Platform](/concepts/omag-server-platform)
     - [Configuring a Server Metadata Security Connector](/guides/admin/servers/by-section/server-security-connection-section) in the [OMAG Server](/concepts/omag-server)
     - [Writing a Platform Metadata Security Connector](/guides/developer/runtime-connectors/platform-metadata-security-connector).
@@ -106,7 +105,7 @@ Files provide storage for many types of data.  They are organizes into folders (
 
 ### PostgreSQL
 
-The PostgreSQL connectors extend the |JDBC connector capability by using PostgreSQL specific APIs and queries to its catalog:
+The PostgreSQL connectors extend the JDBC connector capability by using PostgreSQL specific APIs and queries to its catalog:
 
 
 

@@ -7,4 +7,6 @@ The *ApacheAtlasContentPack* contains the connector definitions for the Apache A
 
 This content pack is built by the [core-content-pack](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/) module.
 
+--8<-- "snippets/blueprints/content-packs/apache-atlas-content-pack-solution-blueprint-mermaid-graph.md"
+
 --8<-- "snippets/abbr.md"

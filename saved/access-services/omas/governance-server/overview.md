@@ -38,7 +38,7 @@ Behind the scenes, Governance Server OMAS handles the choreography of governance
 
     - [Survey Action Services](/guides/developer/survey-action-services) for metadata discovery.
     - [Governance Action Services](/guides/developer/governance-action-services) for the Governance Action Services: Watchdog Governance Services, Triage Governance Services, Verification Governance Services, Remediation Governance Services and Provisioning Governance Services.
-    - [Context Event Services](/guides/developer/context-event-services) for the time-based services.
+    - [Watchdog Action Services](/guides/developer/watch-action-services) for the time-based services.
     - [Repository Governance Services](/guides/developer/repository-governance-services) for the management of open metadata repositories.
 
 

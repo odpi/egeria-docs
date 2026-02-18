@@ -10,7 +10,7 @@ This model supports the description of the business domain where the digital pro
 
 ## BusinessCapability entity
 
-*BusinessCapability* describes the business responsibility or services provided by a team in an organization.  It is linked to the owning team using the *BusinessCapabilityTeam* relationship.
+*BusinessCapability* describes the business responsibility or services provided by a team in an organization.  It is linked to the owning team using the *CollectionMembership* relationship.
 
 ## BusinessCapabilityType enum
 
@@ -23,8 +23,10 @@ This model supports the description of the business domain where the digital pro
 
 ## BusinessCapabilityDependency relationship
 
+Business domains can be modelled with nested business areas and business services. The *BusinessCapabilityDependency* relationship describes the dependency between two business capabilities. 
 
 ## DigitalSupport relationship
 
+*DigitalSupport* describes the support provided by a digital service to a business capability.  The *supportedBusinessCapability* is supported by the *usesDigitalService* element that is typically an [Asset](/concepts/asset) or [DigitalProduct](/concepts/digital-product).
 
 --8<-- "snippets/abbr.md"

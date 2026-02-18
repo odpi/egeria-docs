@@ -8,4 +8,6 @@ The *ApacheKafkaContentPack* contains the connector definitions for the Apache K
 
 This content pack is built by the [core-content-pack](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/) module.
 
+--8<-- "snippets/blueprints/content-packs/apache-kafka-content-pack-solution-blueprint-mermaid-graph.md"
+
 --8<-- "snippets/abbr.md"

@@ -69,7 +69,7 @@ Figure 4 shows the structure of the survey report.  The annotations are labelled
 ![Figure 4](apache-atlas-survey-action-service-analysis.svg)
 > **Figure 4:** Analysis stages performed by the survey action service
 
-### Resource Measurements Annotation
+### Resource Measurement Annotation
 
 The resource measurements annotation is created in the *Measure Resource* analysis step.  It sets up the following properties in the *dataSourceProperties* map:
 

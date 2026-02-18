@@ -11,4 +11,6 @@ As it loads, the integration connectors defined in its content start up in the *
 
 This content pack is built by the [core-content-pack](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/) module.
 
+--8<-- "snippets/blueprints/content-packs/core-content-pack-solution-blueprint-mermaid-graph.md"
+
 --8<-- "snippets/abbr.md"

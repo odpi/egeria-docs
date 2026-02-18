@@ -18,10 +18,19 @@ Data Grains are also useful when defining the data requirements for a project.  
 
 ## DataGrain entity
 
+The *DataGrain* entity describes a description of a specific granularity.
+
+## DataGrainHierarchy relationship
+
+The *DataGrainHierarchy* relationship is used to associate related data grains - for example data grains for a single dimension showing which are more granular than another.
+
+![Example of a hierarchy if data grains](/concepts/data-grain-hierarchy.svg)
+
 ## DataGrainDefinition relationship
+
 
 ## DataGrainAssignment relationship
 
-## DataGrainHierarchy relationship
+The *DataGrainAssignment* relationship links a data grain to a element that describes an aspect of a digital resource and the data grain describes the granularity of the associate data.
 
 --8<-- "snippets/abbr.md"

@@ -83,13 +83,17 @@ nav:
           - Content Pack Catalog:
               - Content Pack Overview: content-packs/index.md
               - Core Content Pack: content-packs/core-content-pack/overview.md
-              - ApacheAtlasContentPack: content-packs/apache-atlas-content-pack/overview.md
-              - ApacheKafkaContentPack: content-packs/apache-kafka-content-pack/overview.md
-              - APIsContentPack: content-packs/apis-content-pack/overview.md
-              - ObservabilityContentPack: content-packs/observability-content-pack/overview.md
-              - PostgreSQLContentPack: content-packs/postgres-content-pack/overview.md
-              - UnityCatalogContentPack: content-packs/unity-catalog-content-pack/overview.md
-              - Cloud Information Model: content-packs/cim-content-pack/overview.md
+              - Apache Atlas Content Pack: content-packs/apache-atlas-content-pack/overview.md
+              - Apache Kafka Content Pack: content-packs/apache-kafka-content-pack/overview.md
+              - APIs Content Pack: content-packs/apis-content-pack/overview.md
+              - Egeria Content Pack: content-packs/egeria-content-pack/overview.md
+              - Files Content Pack: content-packs/files-content-pack/overview.md
+              - Open Lineage Content Pack: content-packs/open-lineage-content-pack/overview.md
+              - Organization Insight Content Pack: content-packs/observability-content-pack/overview.md
+              - Products Content Pack: content-packs/products-content-pack/overview.md
+              - PostgreSQL Content Pack: content-packs/postgres-content-pack/overview.md
+              - Unity Catalog Content Pack: content-packs/unity-catalog-content-pack/overview.md
+ #             - Cloud Information Model: content-packs/cim-content-pack/overview.md
               - Coco Pharmaceuticals: content-packs/coco-content-pack/overview.md
               - Simple Catalog: content-packs/simple-content-pack/overview.md
               - Open Metadata Types: content-packs/types-content-pack/overview.md
@@ -97,7 +101,6 @@ nav:
               - Connector Overview: connectors/index.md
               - Secrets Store:
                   - YAML File: connectors/secrets/yaml-file-secrets-store-connector.md
-                  - Environment Variables: connectors/secrets/environment-variable-secrets-store-connector.md
               - Metadata Security:
                   - Open Metadata Access: connectors/metadata-security/open-metadata-access-security-connector.md
               - Files:
@@ -583,7 +586,6 @@ nav:
                   - Asset Maker: services/omvs/asset-maker/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
                   - Classification Explorer: services/omvs/classification-explorer/overview.md
-                  - Classification Manager: services/omvs/classification-manager/overview.md
                   - Collection Manager: services/omvs/collection-manager/overview.md
                   - Community Matters: services/omvs/community-matters/overview.md
                   - Connection Maker: services/omvs/connection-maker/overview.md
@@ -600,7 +602,6 @@ nav:
                   - Lineage Linker: services/omvs/lineage-linker/overview.md
                   - Location Arena: services/omvs/location-arena/overview.md
                   - Metadata Expert: services/omvs/metadata-expert/overview.md
-                  - Metadata Explorer: services/omvs/metadata-explorer/overview.md
                   - Multi Language: services/omvs/multi-language/overview.md
                   - My Profile: services/omvs/my-profile/overview.md
                   - Notification Manager: services/omvs/notification-manager/overview.md

@@ -16,6 +16,8 @@ types and instances.  This connector provides a simple Java API to this REST API
 It is written without any dependencies on Apache Atlas (or its associated Hadoop components)
 so it happily runs in the same version of Java as the rest of Egeria.
 
+![REST Connector](apache-atlas-resource-connector.svg)
+
 This connector is used by other connectors from Egeria, and may also be used by components from outside Egeria.
 
 The values from the connection used by this connector are:

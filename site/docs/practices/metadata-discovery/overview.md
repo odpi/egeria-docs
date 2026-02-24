@@ -67,7 +67,7 @@ Data class discovery captures the analysis on how close a data field matches the
 
 The recommendation for a specific data class are stored in a [data class annotation](/types/6/0625-Data-Class-Discovery) linked off of the appropriate data field.  Data class discovery needs to run after schema extraction.  It often builds on the information provided by resource profiling.
 
-Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the [*DataClassAssignment*](/types/5/0540-Data-Classes) relationship.
+Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the [*DataValueAssignment*](/types/5/0540-Data-Value-Assignment) relationship.
 
 ### Semantic discovery
 

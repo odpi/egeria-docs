@@ -48,7 +48,7 @@ the original complied lists.
         "Number of supported PrimitiveDefs" : 13,
         "Supported PrimitiveDefs" : [ "string", "char", "boolean", "biginteger", "byte", "long", "double", "date", "object", "bigdecimal", "short", "float", "int" ],
         "Supported CollectionDefs" : [ "array<int>", "map<string,string>", "array<string>", "map<string,object>" ],
-        "Supported EnumDefs" : [ "CrowdSourcingRole", "CriticalityLevel", "TermRelationshipStatus", "DataClassAssignmentStatus", "Endianness", "ContactMethodType", "GovernanceClassificationStatus", "BusinessCapabilityType", "StarRating", "OperationalStatus", "OrderBy", "TermAssignmentStatus", "RetentionBasis", "ServerAssetUse", "ConfidentialityLevel", "MediaUsage", "ActivityType", "CommunityMembershipType", "ConfidenceLevel", "KeyPattern", "CommentType", "MediaType", "GovernanceDomain", "ToDoStatus" ]
+        "Supported EnumDefs" : [ "CrowdSourcingRole", "CriticalityLevel", "TermRelationshipStatus", "DataValueAssignmentStatus", "Endianness", "ContactMethodType", "GovernanceClassificationStatus", "BusinessCapabilityType", "StarRating", "OperationalStatus", "OrderBy", "TermAssignmentStatus", "RetentionBasis", "ServerAssetUse", "ConfidentialityLevel", "MediaUsage", "ActivityType", "CommunityMembershipType", "ConfidenceLevel", "KeyPattern", "CommentType", "MediaType", "GovernanceDomain", "ToDoStatus" ]
       }
 }
 ```

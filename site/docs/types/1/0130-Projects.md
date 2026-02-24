@@ -31,10 +31,7 @@ The project entity represents a single project.  It inherits from [*Referenceabl
 
 The *Campaign* classification describes a collection of related projects that are working towards a common goal.  Often this goal is a complex transformation that needs actions from independent teams.  The definition of the campaign helps to identify the role of the different projects in achieving the common goal, and providing the umbrella for coordinating specific activities as needed.
 
-A campaign classification is typically attached to either:
-
-* a [*Collection*](/types/0/0021-Collections) entity whose members are the related projects.
-* a [*Project*](#project-entity) entity where the related projects are linked by the [*ProjectHierarchy*](#projecthierarchy-relationship) relationship.
+A campaign classification is typically attached to  a [*Project*](#project-entity) entity where the related projects are linked by the [*ProjectHierarchy*](#projecthierarchy-relationship) relationship.
 
 ## Task classification
 
@@ -54,9 +51,15 @@ The *StudyProject* classifies a project that is a focused analysis of a topic, p
 
 Projects can be broken down into smaller projects that can be executed by different teams on different timelines with different project manager(s) and a specific slice of the budget.  The projects that are broken down in this way are linked together using the *ProjectHierarchy* relationship.
 
+* label - the label to use when displaying this relationship.
+* description - the description of the relationship between the projects.
+
 ## ProjectDependency relationship
 
 A project that needs the results of another project to complete its work can be linked to that project via the *ProjectDependency* relationship.
+
+* label - the label to use when displaying this relationship.
+* description - the description of the relationship between the projects.
 
 ## ProjectTeam relationship
 
@@ -78,8 +81,5 @@ The *ProjectClassification* classification is used to classify a project entity 
 * *managementStyle* defines the management style for the project - for example, there may be a management style for experimental prototyping projects, verses a more formal approach for projects that are used to develop a product.
 * *resultsUsage* defines how the results of the project are intended to be used.  For example, the results may be used to inform future projects, or to test a theory, or to develop a product.
 
-??? deprecated "Deprecated types"
-    - The *ProjectScope* relationship is deprecated in favour of the more generic [*AssignmentScope*](/types/1/0120-Assignment-Scopes). The *description* attribute of the *AssignmentScope* relationship should be used instead of the *scopeDescription* in the ProjectScope relationship; the scopeDescription attribute has been deprecated.  
-    - The *status* attribute on *Project* is deprecated in favour of the more specific *projectStatus* attribute, which makes it easier to align with an appropriate valid value set.
 
 --8<-- "snippets/abbr.md"

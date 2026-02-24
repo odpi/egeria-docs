@@ -47,10 +47,11 @@ described aimed at different types of technology.
 * **[0536 API Schemas](0536-API-Schemas.md)**
 * **[0537 Display Schemas](0537-Display-Schemas.md)**
 
-Data classes describe specify types of data - such as data, address, credit card, social security number.
-A data class is identified for a specific schema attribute by looking at the data values stored in it.
+Data value specification describe the characteristics of data values. For example, the data class specifies logical types of data - such as data, address, credit card, social security number.
+A data grain identifies the granularity of a row/object.
 
-* **[0540 Data Classes](0540-Data-Classes.md)**
+* **[0540 Data Value Specification](0540-Data-Value-Specification.md)**
+* **[0541 Data Classes and Data Grains](0541-Data-Classes-and-Data-Grains.md)**
 
 Reference data describes standard sets of data values - such as a list of country codes.
 

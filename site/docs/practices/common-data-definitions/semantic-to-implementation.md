@@ -43,7 +43,7 @@
     > Figure 2: Data classes for describing the logical data types and implementation options
 
     !!! education "Further information"
-        * See [Model 0540](/types/5/0540-Data-Classes) in the *Open Metadata Types* to understand how data classes are represented on open metadata.
+        * See [Model 0541](/types/5/0541-Data-Classes-and-Data-Grains) in the *Open Metadata Types* to understand how data classes are represented on open metadata.
         * See [Model 0737](/types/7/0737-Solution-Implementation) in the *Open Metadata Types* to understand the *ImplementedBy* relationship.
         * See [Model 0370](/types/3/0370-Semantic-Assignment) in the *Open Metadata Types* to understand the *SemanticAssignment* relationship.
         * See [Model 0504](/types/5/0504-Implementation-Snippets) in the *Open Metadata Types* to understand *ImplementationSnippets*.
@@ -127,7 +127,7 @@
 
     * [SemanticAssignment](/types/3/0370-Semantic-Assignment) - Semantic assignments indicate that the data stored in the associated data field has the meaning described in the glossary term.
     * [ValidValuesAssignment](/types/5/0545-Reference-Data) - Valid value sets define a list of valid values.  They can be used to the values that are allowed to be stored in a particular data field if it can be described as a discrete set.  
-    * [DataClassAssignment](/types/5/0540-Data-Classes) - A data class assignment means that the data in the data field conforms to the type described in the data class.
+    * [DataValueAssignment](/types/5/0540-Data-Value-Specification) - A data value assignment means that the data in the data field conforms to the type described in the data value specification (data class or data grain).
 
     When these relationships are used in combination, there should be consistency between the assignments to the data field and those to the associated glossary term.
 

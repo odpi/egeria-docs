@@ -505,8 +505,8 @@ nav:
               - Event Schemas: types/5/0535-Event-Schemas.md
               - API Schemas: types/5/0536-API-Schemas.md
               - Display Schemas: types/5/0537-Display-Schemas.md
-              - Data Classes: types/5/0540-Data-Classes.md
-              - Data Grains: types/5/0541-Data-Grains.md
+              - Data Value Specification: types/5/0540-Data-Value-Specification.md
+              - Data Classes and Data Grains: types/5/0541-Data-Classes-and-Data-Grains.md
               - Reference Data: types/5/0545-Reference-Data.md
               - Instance Metadata: types/5/0550-Instance-Metadata.md
               - Design Models: types/5/0565-Design-Models.md
@@ -723,6 +723,7 @@ nav:
       - Data Specification: concepts/data-specification.md
       - Data Structure: concepts/data-structure.md
       - Data Domain: concepts/subject-area.md
+      - Data Value Specification: concepts/data-value-specification.md
       - Deployed Implementation Type: concepts/deployed-implementation-type.md
       - Digital Product: concepts/digital-product.md
       - Digital Resource: concepts/digital-resource.md
@@ -988,7 +989,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tasklist:
       custom_checkbox: true

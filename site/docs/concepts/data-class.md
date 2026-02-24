@@ -29,6 +29,6 @@ Finally, data classes can be linked to [Implementation Snippets](/types/5/0504-I
 
     - [Using Data classes in data quality management](/features/data-quality/overview)
     - [Data class discovery annotation](/features/discovery-and-stewardship/overview/#data-class-discovery)
-    - [DataClass open metadata type](/types/5/0540-Data-Classes)
+    - [DataClass open metadata type](/types/5/0541-Data-Classes-and-Data-Grains)
 
 --8<-- "snippets/abbr.md"

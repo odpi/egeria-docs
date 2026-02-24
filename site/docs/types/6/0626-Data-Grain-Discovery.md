@@ -15,6 +15,6 @@ This annotation records the analysis results into the granularity of the data, t
  
 This relationship identifies the matching data grain and the degree to which the data values conformed to the specification in the data grain.
 * *threshold* records the percentage of matching values.
-* *method* records the analysis method used.  For example, was every value matched or a sampling technique used?  This may affect the resulting confidence of the steward when they confirm the match using the [DataClassAssignment](/types/5/0540-Data-Classes) relationship.
+* *method* records the analysis method used.  For example, was every value matched or a sampling technique used?  This may affect the resulting confidence of the steward when they confirm the match using the [DataValueAssignment](/types/5/0540-Data-Value-Specification) relationship.
 
 --8<-- "snippets/abbr.md"

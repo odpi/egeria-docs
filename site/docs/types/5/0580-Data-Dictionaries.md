@@ -17,24 +17,23 @@ The data dictionary maintains lists of pre-defined, reusable data fields.
 
 ## DataField entity
 
-A [referenceable](/type/0/0010-Base-Model) that describes a data field.
+An [AuthoredReferenceable](/type/0/0010-Base-Model) that describes a data field.
 
-* *displayName* - Name of the data field.
-* *namespace* - Optional namespace to help build a qualified name for the data field.
+* *namespacePath* - Optional namespace to help build a qualified name for the data field.
 * *aliases* - Alternative name to use for the data field - useful when matching against a schema.
 * *namePatterns* - List of patterns to use to match a name against a schema attribute - useful when matching against a schema.
-* *description* - Description of the data field.
 * *isDeprecated* - Is this data field deprecated?
-* *versionIdentifier* - Managed version identifier.
 * *defaultValue* - Default value to use if the actual data value is null.
 * *isNullable* - Can the data field store null?
 * *dataType* - What is the data type of this field
+* *units* - What are the units used in the data values stored under this data field
+* *absoluteUncertainty* - What is the range of uncertainty associated with the measurement instrument used to create the data values stored under this data field.
+* *relativeUncertainty* - What is the percentage range of uncertainty associated with the measurement instrument used to create the data values stored under this data field.
 * *minimumLength* - What is the minimum length of this field - typically used with string fields.
 * *length* -  What is the length (in bytes) table up by this field.
 * *precision* - How many digits after the decimal point.
 * *orderedValues* - Are the values sorted
 * *sortOrder* - DataItemSortOrder value identifying the sort direction used on the data field values.
-* *namePatterns* - Regular expressions that characterize the name of the data field.
 
 ## ObjectIdentifier classification
 
@@ -48,14 +47,21 @@ Identifies that a [collection](/type/0/0021-Collections) is a [data dictionary](
 
 Identifies that this is a [collection](/type/0/0021-Collections) is a [data specification](/concepts/data-specification) that describes the data requirements for a project or initiative.  Its members are typically [data structures](/concepts/data-structure).
 
+
+## ReportType entity
+
+The *ReportType* entity describes a report design.  It specifies the schema (structure) of the data that will be assembled in a populated report.  It has the following attributes:
+
+* creationTime - the time the report type was created.
+* lastModificationTime - the time the report type content was last modified.
+* lastModifier - the userId of the last person to modify the report type.
+
 ## DataStructure entity
 
-A [referenceable](/type/0/0010-Base-Model) that provides list of data fields that describe the structure of a data source within a data specification.
+An [AuthoredReferenceable](/type/0/0010-Base-Model) that provides list of data fields that describe the structure of a data source within a data specification.
 
-* *displayName* - Name of the data structure.
-* *namespace* - Optional namespace to help build a qualified name for the data structure.
-* *description* - Description of the data field.
-* *versionIdentifier* - Managed version identifier.
+* *namespacePath* - Optional namespace to help build a qualified name for the data structure.
+* *namePatterns* - List of patterns to use to match a name against a schema attribute - useful when matching against a schema.
 
 It is used to specify/validate the values in an asset's [schema](/concepts/schema), which in turn describes the structure of data in the [digital resource](/concepts/digital-resource).
 

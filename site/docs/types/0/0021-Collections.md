@@ -14,7 +14,7 @@ Since a collection is a *Referenceable* entity, collections can be organized int
 
 ## Collection entity
 
-The *Collection* entity describes a parent node for collecting related elements together.  It inherits from [*Referenceable*](/types/0/0010-Base-Model). There are no additional attributes for a collection, beyond the standard attributes for *Referenceable*.
+The *Collection* entity describes a parent node for collecting related elements together.  It inherits from [*AuthoredReferenceable*](/types/0/0010-Base-Model).  It add the *purpose* attribute to describe the purpose of the collection.
 
 ### Collection Subtypes
 
@@ -33,16 +33,19 @@ The collection type is generically useful and there are many subtypes that descr
 * [DigitalProductFamily](/types/7/0710-Digital-Products) described a collection of digital products that can be subscribed to as if they were a single product.
 * [DigitalSubscription](/types/7/0712-Digital-Subscription) is a special type of agreement relating to subscriptions to digital resources.
 * [EventSet](/types/5/0535-Event-Schemas) described a collection of event schema definitions.
+* [Folio](#folio-entity) described a collection of event schema definitions.
 * [Glossary](/types/3/0310-Glossary) described a collection of [GlossaryTerms](/types/3/0330-Terms).
 * [HomeCollection](#homecollection-entity) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
 * [InformationSupplyChain](/types/7/0720-Information-Supply-Chain) described a collection of components performing an important data flow.
 * [Namespace](#namespace-entity) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
 * [NamingStandardsRuleSet](/types/4/0438-Naming-Standards) means the collection is a set of naming standard rules.
 * [RecentAccess](#recentaccess-entity) means the collection is a set of elements that have been recently accesses by a user.
+* [ReportType](/types/5/0580-Data-Dictionaries) described of a type of report where the membership element describe what to expect from the instance of a report.
 * [ResultsSet](#resultsset-entity) means the collection is a set of related results.
 * [RootCollection](#rootcollection-entity) described a master collection of collections.
 * [SoftwareArchive](/types/0/0030-Hosts-and-Platforms) described a collection of software components.
 * [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components performing a solution.
+* [SubjectArea](/types/4/0425-Subject-Areas) described a collection of elements that describe a subject area.
 * [WorkItemList](#workitemlist-entity) means the collection is a set of elements that have been recently accesses by a user.
 
 
@@ -60,6 +63,10 @@ The example below shows part of a collection hierarchy representing a digital pr
 The *RootCollection* collection at the root of the collection hierarchy is called "Product Catalog Collection".  Its membership consists of *CollectionFolder* collections.  The leaf node *DigitalProduct* collections have the data assets as their members.
 
 ![Collection Hierarchy](collection-hierarchy-example.svg)
+
+## Folio entity
+
+The *Folio* entity indicates that the collection is a set of elements that are part of a folio of work or responsibility.
 
 ## HomeCollection entity
 

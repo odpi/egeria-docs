@@ -8,15 +8,6 @@ Reports described assembled information about a particular topic. It can be link
 
 ![UML](0239-Reports.svg)
 
-## ReportType entity
-
-The *ReportType* entity describes a report design.  It specifies the schema (structure) of the data that will be assembled in a populated report.  It has the following attributes:
-
-* purpose - purpose of the report.
-* creationTime - the time the report type was created.
-* lastModificationTime - the time the report type content was last modified.
-* lastModifier - the userId of the last person to modify the report type.
-
 ## Report entity
 
 The *Report* entity describes an instance of a populated report.  It has the following attributes:
@@ -40,9 +31,15 @@ Egeria supports three specialized reports:
 
 The *ReportOriginator* relationship links a report to the element (typically a process) that created the report.
 
+* label - the label to use when displaying this relationship.
+* description - the description of the relationship between the reports.
+
 ## ReportSubject relationship
 
 The *ReportSubject* relationship links a report to an element that the report is about.
+
+* label - the label to use when displaying this relationship.
+* description - the description of the relationship between the reports.
 
 ## ReportDependency relationship
 

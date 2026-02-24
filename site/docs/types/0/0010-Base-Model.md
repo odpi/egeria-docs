@@ -99,7 +99,7 @@ An [Asset](/concepts/asset) is a metadata entity that describes a [resource](/co
 *Asset* is a subtype of *Referenceable*. It adds five attributes to the *Referenceable* type:
 
 * *resourceName* is the name of the [resource](/concepts/resource).
-* *namespace* provides a qualifying name that defines how the digital resources of a particular type are organized.  Often, concatenating the namespace with the resource name creates the unique name of the resource for a particular context.
+* *namespacePath* provides a qualifying name that defines how the digital resources of a particular type are organized.  Often, concatenating the namespace with the resource name creates the unique name of the resource for a particular context.
 * *deployedImplementationType* attribute describes the class of technology that the asset belongs to.  Values for this attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 * *source* attribute identifies the organization that supplies the technology.  For example, if the asset described a DB2 database, then the source would be IBM.
 * *userDefinedStatus* can be used to extend the lifecycle status values.  It is set up when the lifecycle status is OTHER. 

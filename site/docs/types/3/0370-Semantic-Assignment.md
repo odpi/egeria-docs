@@ -16,6 +16,9 @@ Glossary terms can be used to pinpoint the meaning of data.  The terms are typic
 
 The *SemanticDefinition* relationship links a glossary term to a formal definition of a data field used in [data dictionaries](/concepts/data-dictionary) and [data specifications](/concepts/data-specification).
 
+* label - the label to use when displaying this relationship.
+* description - the description of the relationship between the elements.
+
 # SemanticAssignment relationship
 
 *SemanticAssignment* is a relationship used to assign a term to a [referenceable](/types/0/0010-Base-Model) object. This means that the term describes the meaning of data that is described by the linked referenceable object.  For example, the referenceable object may describe a [Relational Column](/types/5/0534-Relational-Schemas) in a [Database](/types/2/0224-Databases).  A term linked to it via the *SemanticAssignment* relationship describes the meaning of the data stored in the column in the database.
@@ -27,7 +30,7 @@ The setting up of the *SemanticAssignment* relationship needs to be controlled w
 * The *steward* is the person responsible for assessing the relationship and deciding if it should be approved or not.
 
 
-##TermAssignmentStatus enum
+## TermAssignmentStatus enum
 
 *TermAssignmentStatus* defines the status values for how much the semantic assignment should be trusted.
 

@@ -1,12 +1,12 @@
 ```mermaid
 ---
-title: DigitalProduct - dataClassAssignmentStatus Valid Values [af88164f-5ea9-475b-ad03-7bbd2d697759]
+title: DigitalProduct - dataValueAssignmentStatus Valid Values [af88164f-5ea9-475b-ad03-7bbd2d697759]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
 
 1@{ shape: rounded, label: "*Digital Product*
-**dataClassAssignmentStatus Valid Values**"}
+**dataValueAssignmentStatus Valid Values**"}
 2@{ shape: processes, label: "*Governance Action Process*
 **Create Evaluation subscription for Valid Metadata Value Set: dataClassAssignmentStatus**"}
 1==>|"Create Subscription [Resource List]"|2

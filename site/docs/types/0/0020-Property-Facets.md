@@ -9,10 +9,10 @@ Property facets allow any entity to be extended with additional properties. This
 
 ## PropertyFacet
 
-The *`PropertyFacet`* entity describes the additional properties.
+The *PropertyFacet* entity describes the additional properties.
 
 ## ReferenceableFacet
 
-The *`ReferenceableFacet`* relationship indicates the source of the additional properties.
+The *ReferenceableFacet* relationship indicates the source of the additional properties.
 
 --8<-- "snippets/abbr.md"

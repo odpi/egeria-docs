@@ -7,7 +7,7 @@
 
 ![UML](0210-Data-Stores.svg)
 
-### DataSet entity
+## DataSet entity
 
 *DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet, *formulaType* describes the notation language used to describe the formula, and *deployedImplementationType* describes the class of technology that this data set belongs to.
 
@@ -44,5 +44,8 @@ The *DataScope* classification identifies the scope of the data stored in the [d
 
 The *DataScope* classification's attributes are often used to match a digital resource to a [data lens](/concepts/data-lens) that defines the scope of data for a [project](/concepts/project), [team](/concepts/team) or [business capability](/concepts/business-capability).
 
+## StoredOn relationship
+
+The *StoredOn* relationship identifies which storage location is used to store the data.
 
 --8<-- "snippets/abbr.md"

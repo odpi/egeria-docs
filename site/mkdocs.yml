@@ -825,6 +825,7 @@ nav:
       - Repository Proxy: concepts/repository-proxy.md
       - Repository Validator: concepts/repository-validator.md
       - Request For Action: concepts/request-for-action.md
+      - Request Id: concepts/request-id.md
       - Resource: concepts/resource.md
       - Resource Use: concepts/resource-use.md
       - REST client connector: concepts/rest-client-connector.md

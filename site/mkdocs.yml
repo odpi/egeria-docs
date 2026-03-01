@@ -816,6 +816,8 @@ nav:
       - pyegeria: concepts/pyegeria.md
       - Rating: concepts/rating.md
       - Referenceable: concepts/referenceable.md
+      - Report: concepts/report.md
+      - Report Type: concepts/report-type.md
       - Repository Connector: concepts/repository-connector.md
       - Repository Governance Engine: concepts/repository-governance-engine.md
       - Repository Governance Service: concepts/repository-governance-service.md
@@ -838,7 +840,6 @@ nav:
       - Solution Component: concepts/solution-component.md
       - Solution Role: concepts/solution-role.md
       - Specification: concepts/specification.md
-      - Star Rating: concepts/review.md
       - Subject Area: concepts/subject-area.md
       - Survey Report: concepts/survey-report.md
       - Survey Action Engine: concepts/survey-action-engine.md

@@ -9,7 +9,7 @@ Actions are [processes](/types/0/0010-Base-Model) triggered by events.  They may
 
 ## Action entity
 
-The *Action* entity provides a common base class for the [ToDo](/types/1/0135-Actions-For-People), [Meeting](/types/1/0135-Actions-For-People), and the [EngineAction](/types/4/0463-Engine-Actions) entities.  It indicates an action that either needs to be taken, is in progress, or has been taken.
+The *Action* entity provides a common base class for the [ToDo](/types/1/0135-Actions-For-People), [Meeting](/types/1/0135-Actions-For-People), [Review](/types/1/0135-Actions-For-People), [Notification](/types/1/0135-Actions-For-People), and the [EngineAction](/types/4/0463-Engine-Actions) entities.  It indicates an action that either needs to be taken, is in progress, or has been taken.
 
 ## ActionRequester relationship
 
@@ -29,5 +29,7 @@ The *ActionTarget* relationship associates a *ToDo* entity with one or more elem
 * completionDate - Date/time that work stopped on this element.
 * completionMessage - Message to provide additional information on the results of acting on the target by the actor or the reasons for any failures.
 
+???+ info "Further information"
+    Actions are managed using the [Asset Maker API](../../services/omvs/asset-maker/overview.md).
 
 --8<-- "snippets/abbr.md"

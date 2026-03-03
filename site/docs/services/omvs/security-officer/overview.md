@@ -79,7 +79,7 @@ The default set-up of Egeria includes a user directory populated with [Coco Phar
 ```
 > **Figure 2:** Gary Geeke's user account
 
-It was retrieved from the user directory using the *getUserAccount* Security Officer API call.  This call requires the unique identifier (GUID) of the OMAG Server Platform, which may be extracted using the [Runtime Manager API](/services/omvs/runtime-manager-overview).
+It was retrieved from the user directory using the *getUserAccount* Security Officer API call.  This call requires the unique identifier (GUID) of the OMAG Server Platform, which may be extracted using the [Runtime Manager API](/services/omvs/runtime-manager/overview).
 
 ??? info "Code sample - retrieving a user account"
 

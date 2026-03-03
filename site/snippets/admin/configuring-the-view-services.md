@@ -12,7 +12,7 @@ To get a description of each of the view services that are supported by an [OMAG
     
     !!! get "GET - list registered view services"
         ```
-        {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/registered-services/view-services
+        {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/view-services
         ```
         
         ??? success "Response from listing registered view services"
@@ -116,7 +116,7 @@ View services can be configured into a view server either altogether or individu
 
     !!! post "POST - configure a specific view service"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services/{{serviceURLMarker}}
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services/{{serviceURLMarker}}
         ```
 
         The request body must contain a `ViewServiceRequestBody` object, while the `serviceURLMarker` can
@@ -128,7 +128,7 @@ View services can be configured into a view server either altogether or individu
 
     !!! post "POST - configure multiple view services"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services
         ```
 
         Again the request body must contain a `ViewServiceRequestBody` object.  This object is used to configure each of the registered view services.
@@ -223,7 +223,7 @@ It is possible to list the configured view services for a view Server using the 
 
 !!! get "GET - list configured view services"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services
     ```
 
 ??? success "Response from listing configured view services"
@@ -315,7 +315,7 @@ It is also possible to retrieve the full configuration for the view services.  T
 
     !!! get "GET - retrieve a specific view service's configuration"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services/{{serviceURLMarker}}
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services/{{serviceURLMarker}}
         ```
     
         The response will be a `ViewServiceConfigResponse` containing a `ViewServiceConfig` object.
@@ -324,7 +324,7 @@ It is also possible to retrieve the full configuration for the view services.  T
 
     !!! get "GET - retrieve current configuration for all configured view services"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services
         ```
 
     This will return a `ViewServicesResponse` which will contain a list of `ViewServiceConfig` objects.
@@ -342,7 +342,7 @@ Finally, view service configuration can easily be removed from a server configur
 
     !!! delete "DELETE - remove configuration for a specific view service"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services/{{serviceURLMarker}}
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services/{{serviceURLMarker}}
         ```
 
         The `serviceURLMarker` can be found by [listing the registered view services](#list-configured-view-services).
@@ -353,5 +353,5 @@ Finally, view service configuration can easily be removed from a server configur
 
     !!! delete "DELETE - remove configured view services"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/view-services
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services
         ```

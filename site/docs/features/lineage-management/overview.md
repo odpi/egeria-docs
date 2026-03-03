@@ -232,24 +232,24 @@ Egeria offers two approaches to capture Open Lineage events from the processing 
 ![Figure 23](/features/lineage-management/open-lineage-async-egeria-integration.svg)
 > **Figure 23:** Receiving events via the Kafka topic populated by the proxy backend
 
-Egeria's [integration daemon](/concepts/integration-daemon) also supports the Open Lineage API for local processing engines.  It is one of the operations supported by the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview).
+Egeria's [integration daemon](/concepts/integration-daemon) also supports the Open Lineage API for local processing engines. 
 
 ![Figure 24](/features/lineage-management/open-lineage-direct-egeria-integration.svg)
 > **Figure 24:** Receiving events via the Open Lineage API directly into the integration daemon
 
-The Lineage Integrator OMIS inside the integration daemon hosts the integration connectors that [process the Open Lineage events](https://egeria-project.org/connectors/#capturing-and-publishing-lineage).  They are divided into two groups:
+The integration daemon hosts the integration connectors that [process the Open Lineage events](https://egeria-project.org/connectors/#capturing-and-publishing-lineage).  They are divided into two groups:
 
 - the integration connectors that are acquiring or creating the Open Lineage events.
 
 - the integration connectors that are processing or distributing the Open Lineage events.
 
-They are connected to each other by the Lineage Integrator OMIS:
+They are connected to each other by the integration daemon:
 
 - An integration connector may register a listener to receive Open Lineage events that are received through the API or are published by another integration connector.
 
-- An integration connector may request that an Open Lineage event is published to other integration connectors that have registered an Open Lineage event listener in the same Lineage Integrator OMIS instance.
+- An integration connector may request that an Open Lineage event is published to other integration connectors that have registered an Open Lineage event listener in the same integration daemon instance.
 
-- An integration connector may register a listener to the Asset Manager OMAS's OutTopic and issue requests to the Asset Manager's REST API in order to correlate the metadata in the open metadata ecosystem with the content of the Open Lineage events.  
+- An integration connector may register a listener to the Open Metadata Service's OutTopic and issue requests to the Open Metadata Service's REST API to correlate the metadata in the open metadata ecosystem with the content of the Open Lineage events.  
 
 Figure 25 illustrates these mechanisms with the [five pre-build integration connectors](/connectors/#capturing-and-publishing-lineage) supplied by Egeria.
 
@@ -258,17 +258,17 @@ Figure 25 illustrates these mechanisms with the [five pre-build integration conn
 
 The numbers on the diagram refer to the notes below.
 
-1. A third party technology (processing engine) sends Open Lineage events to Egeria's Open Lineage API endpoint.  This is passed to the Lineage Integrator OMIS's context manager.
+1. A third party technology (processing engine) sends Open Lineage events to Egeria's Open Lineage API endpoint.  This is passed to the integration daemon's context manager.
 
 2. A third party technology is using the proxy backend to publish Open Lineage event to a Kafka topic.
 
-3. The [Open Lineage Event Receiver](/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving Open Lineage events from the Kafka topic.  It passes them to the Lineage Integrator OMIS's context manager via its own context.
+3. The [Open Lineage Event Receiver](/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving Open Lineage events from the Kafka topic.  It passes them to the integraiton daemon's context manager via its own context.
 
 4. The [Governance Action Open Lineage](/connectors/integration/governance-action-open-lineage-integration-connector) integration connector has registered a listener to receive events about the [engine actions](/concepts/engine-action) that are being processed in the open metadata ecosystem.  
 
-5. The Governance Action Open Lineage integration connector creates Open Lineage events to represent the processing by the governance actions and passes them to the Lineage Integrator OMIS's context manager via its own context.
+5. The Governance Action Open Lineage integration connector creates Open Lineage events to represent the processing by the governance actions and passes them to the integration daemon's context manager via its own context.
 
-6. An integration connector that wishes to receive Open Lineage events must register a listener with the Lineage Integrator OMIS's context manager via its own context.  Once it is registered, it receives all Open Lineage events that are subsequently passed to the context manager.
+6. An integration connector that wishes to receive Open Lineage events must register a listener with the integration daemon's context manager via its own context.  Once it is registered, it receives all Open Lineage events that are subsequently passed to the context manager.
 
 7. The [API-based Open Lineage Log Store](/connectors/integration/api-based-open-lineage-log-store-integration-connector) registers a listener for Open Lineage events and passes each one received to a remote server supporting the Open Lineage API (such as [Marquez](https://marquezproject.github.io/marquez/)).
 
@@ -354,7 +354,7 @@ Governing expectations is where the lineage information is used to validate that
 
 ## Lineage preservation and use
 
-Design lineage can be consolidated and exported for preservation by the integration daemon's [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) and then stored in the [Lineage Warehouse](/concepts/lineage-warehouse).
+Design lineage can be consolidated and exported for preservation by the integration daemon's context and then stored in the [Lineage Warehouse](/concepts/lineage-warehouse).
 
 Figure 35 shows metadata capture using the [Integration Daemon](/concepts/integration-daemon/) to retrieve lineage metadata in automated way and push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the Lineage Warehouse.
 
@@ -365,7 +365,7 @@ Once the lineage graphs are assembled in the Lineage Warehouse, the lineage can 
 
 ### Building a lineage warehouse
 
-The [Lineage Warehouse](/concepts/lineage-warehouse) is the warehouse for lineage. It is fed by a specialized [integration connector](/concepts/integration-connector) running in the integration daemon.  The integration connector receives lineage information though the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview).
+The [Lineage Warehouse](/concepts/lineage-warehouse) is the warehouse for lineage. It is fed by a specialized [integration connector](/concepts/integration-connector) running in the integration daemon.  The integration connector receives lineage information though its context.
 
 ![Figure 36](/features/lineage-management/lineage-warehouse.svg)
 > **Figure 36:** Lineage Warehouse preservation and use details

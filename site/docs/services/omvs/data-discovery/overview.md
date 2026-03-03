@@ -12,6 +12,9 @@ hide:
 
 The Data Discovery API is a REST API that enables the caller to maintain survey reports and annotations.
 
+--8<-- "snippets/work-in-progress.md"
+
+
 ---8<-- "snippets/abbr.md"
 
 

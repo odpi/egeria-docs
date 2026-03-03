@@ -18,10 +18,10 @@ The governance servers are themselves controlled by open metadata.  Their config
 
 The table below shows the different types of governance servers and the OMASs they are paired with.
 
-| Governance Server                                  | Description                                                              | Supported by subsystem                                               |
-|:---------------------------------------------------|:-------------------------------------------------------------------------|:---------------------------------------------------------------------|
-| [Integration Daemon](/concepts/integration-daemon) | Manages the capture of metadata through configured integration services. | [Integration Daemon Services](/services/integration-daemon-services) | 
-| [Engine Host](/concepts/engine-host)               | Manages governance engines.                                              | [Engine Host Services](/services/engine-host-services)               |
+| Governance Server                                  | Description                                                                | Supported by subsystem                                               |
+|:---------------------------------------------------|:---------------------------------------------------------------------------|:---------------------------------------------------------------------|
+| [Integration Daemon](/concepts/integration-daemon) | Manages the capture of metadata through configured integration connectors. | [Integration Daemon Services](/services/integration-daemon-services) | 
+| [Engine Host](/concepts/engine-host)               | Manages governance engines.                                                | [Engine Host Services](/services/engine-host-services)               |
 
 
 --8<-- "snippets/abbr.md"

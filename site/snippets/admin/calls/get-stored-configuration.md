@@ -35,5 +35,5 @@
     === "REST"
 
         ```
-        GET {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/configuration
+        GET {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/configuration
         ```

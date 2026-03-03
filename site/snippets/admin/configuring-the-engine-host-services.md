@@ -16,7 +16,7 @@ The location of the [metadata access server](/concepts/metadata-access-server) r
 
 !!! post "POST - specify location of governance engine definitions"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{engineHostServerName}}/engine-definitions/client-config
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{engineHostServerName}}/engine-definitions/client-config
     ```
 
     With a request body like the following:
@@ -55,7 +55,7 @@ Each engine service is configured with the network location of the [Metadata Acc
 
 !!! post "POST - configure engine service"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/engine-services/{{engineServiceURLMarker}}
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/engine-services/{{engineServiceURLMarker}}
     ```
 
     With a request body like the following:
@@ -84,7 +84,7 @@ The following command removes the configuration for the engine host services fro
 
 !!! delete "DELETE - remove engine host services"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{engineHostServerName}}/engine-host-services
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{engineHostServerName}}/engine-host-services
     ```
 
 

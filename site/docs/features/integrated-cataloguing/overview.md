@@ -25,7 +25,7 @@ Manual cataloguing works well for infrequent cataloguing.  However, it is expens
 
 For example, an integration daemon may be monitoring a database server, updating the metadata catalog each time a new database is added, or a schema is changed.
 
-Inside the integration daemon are the [Open Metadata Integration Services (OMISs)](/services/omis) that provide specialist interfaces to [integration connectors](/concepts/integration-connector).  
+Inside the integration daemon is the [Open Integration Framework (OIF)](/frameworks/oif/overview) that provides the specialist interfaces to [integration connectors](/concepts/integration-connector).  
 
 Integration connectors support different [integration patterns](/patterns/metadata-exchange/overview) to meet the variety of capabilities of digital technologies.  For example, it may poll a system or listen for events from it that indicate changes in the digital resources.  They are limited to the metadata supported by the technology they are working with.  Typically, the integration connectors are limited to capture `technical metadata` that includes the name of the digital resource (stored in the [asset](/concepts/asset)) and the structure of the data fields within it (if any).  This structure is described in a [schema](/concepts/schema).  It may be possible to also extract, or derive the connection information required to connect to the digital resource.  This is stores in a [connection](/concepts/connection).  The technical metadata can also be augmented by using [templated cataloguing](/features/templated-cataloguing/overview).
 

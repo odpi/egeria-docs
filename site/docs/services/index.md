@@ -21,7 +21,6 @@ The registered services are pluggable in the OMAG Server Platform and provide sp
 
 * [Open Metadata Access Services (OMASs)](/services/omas) - Specialized metadata management interfaces.
 * [Open Metadata Engine Services (OMESs)](/services/omes) - Specialized support for [governance services](/concepts/governance-service).
-* [Open Metadata Integration Services (OMISs)](/services/omis) - Specialized services for [integration connectors](/concepts/integration-connector).
 * [Open Metadata View Services (OMVSs)](/services/omvs) - Specialized services for user interfaces.
 
 

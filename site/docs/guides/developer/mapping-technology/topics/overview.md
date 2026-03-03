@@ -10,19 +10,19 @@ hide:
 
 Typically, topics are managed by an event broker such as Apache Kafka.
 
-Figure 1 shows the types of metadata that integrators connectors can create with this integration service.
+Figure 1 shows the types of metadata that integration connectors can create.
 
 ![Figure 1](topic-model.svg)
-> **Figure 1:** Topic metadata supported by the Topic Integrator OMIS 
+> **Figure 1:** Topic metadata supported by open metadata
 
 The structure of an event is called an [EventType](/types/5/0535-Event-Schemas).
 The details of this structure such as the data fields in the event are described using
 [SchemaAttributes and SchemaTypes](/concepts/schema).
 
-Figure 2 shows the open metadata types used to represent the metadata created through this service.
+Figure 2 shows the open metadata types used to represent the metadata.
 
 ![Figure 2](topic-open-metadata-types.svg)
-> **Figure 2:** Topic open metadata types supported by the Topic Integrator OMIS 
+> **Figure 2:** Topic open metadata types supported by open metadata
 
 If an EventBroker is defined, any topic created is automatically linked to it using the
 [ServerAssetUse](/types/0/0045-Servers-and-Assets)

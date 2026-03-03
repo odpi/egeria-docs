@@ -112,25 +112,23 @@ You can write your own connectors to integrate additional types of technology or
 
 ## Adding registered services
   
-Registered services are optional services that plug into Egeria's [OMAG Server Platform](/concepts/omag-server-platform). There are 4 types:
+Registered services are optional services that plug into Egeria's [OMAG Server Platform](/concepts/omag-server-platform). There are 3 types:
   
   - [Open Metadata Access Services (OMAS)](/services/omas) provide specialized APIs and events for retrieving and maintaining open metadata.  These services run in a [Metadata Access Server](/concepts/metadata-access-server).
   
   - [Open Metadata Engine Services (OMES)](/services/omes) provide specialist APIs that support specific types of governance engines.  These services run in an [Engine Host](/concepts/engine-host) and call an OMAS to retrieve and maintain open metadata.
-  
-  - [Open Metadata Integration Services (OMIS)](/services/omis) provide specialist connector APIs for exchanging open metadata with third party technologies.  These services run in an [Integration Daemon](/concepts/integration-daemon) and call an OMAS to retrieve and maintain open metadata.
-  
+   
   - [Open Metadata View Services (OMVS)](/services/omvs) provide specialist REST APIs for browser-based user interfaces (UIs).  These services run in a [View Server](/concepts/view-server) and call an OMAS to retrieve and maintain open metadata.
 
 There are many choices of registered services within the Egeria project.  However, you may add your own. The recommended modules for registered services (required if it is to be contributed to the Egeria project) are shown in the table below:
 
-| Module naming | Description | OMAS | OMES | OMIS | OMVS |
-| --------------|-------------|------|------|------|------|
-| *moduleName*-api | Client java interface(s), property beans and rest beans. | CP | CP | CP | P |
-| *moduleName*-client | Java client implementation. | CP | C | C | N |
-| *moduleName*-topic-connectors | Java connectors for sending and receiving events.  | OCP | N | N | N |
-| *moduleName*-server | Server-side REST and event management implementation.  | P | P | P | P |
-| *moduleName*-spring | Server-side REST API.  | P | P | P | P |
+| Module naming                 | Description                                              | OMAS | OMES | OMVS |
+|-------------------------------|----------------------------------------------------------|------|------|------|
+| *moduleName*-api              | Client java interface(s), property beans and rest beans. | CP   | CP   | P    |
+| *moduleName*-client           | Java client implementation.                              | CP   | C    | N    |
+| *moduleName*-topic-connectors | Java connectors for sending and receiving events.        | OCP  | N    | N    |
+| *moduleName*-server           | Server-side REST and event management implementation.    | P    | P    | P    |
+| *moduleName*-spring           | Server-side REST API.                                    | P    | P    | P    |
 
 **Key:**
 
@@ -140,7 +138,7 @@ There are many choices of registered services within the Egeria project.  Howeve
 * OCP - Optional and when provided runs in external clients plus in the OMAG Server Platform.
 * N - Not implemented/needed.
 
-The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds, and they are [initialized as part of the platform's capabilities](/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES, OMIS or OMVS registered service that is dependent on the OMAS to get access to open metadata.
+The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds, and they are [initialized as part of the platform's capabilities](/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES or OMVS registered service that is dependent on the OMAS to get access to open metadata.
 
 The best guide for building registered services are the existing implementations found in [egeria.git](https://github.com/odpi/egeria/tree/main/open-metadata-implementation){ target=gh }.  You can see the way the code is organized and the services that they depend on.
 

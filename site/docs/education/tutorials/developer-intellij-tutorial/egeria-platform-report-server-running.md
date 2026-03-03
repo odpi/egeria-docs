@@ -30,17 +30,6 @@
 * **Governance Action OMES**: Executes requested governance action services to monitor, assess and maintain metadata and its real-world counterparts.
 * **Repository Governance OMES**: Dynamically governance open metadata repositories in the connected cohorts.
 * **Survey Action OMES**: Analyses the content of an asset's real world counterpart, generates annotations in an open discovery report that is attached to the asset in the open metadata repositories.
-* **Infrastructure Integrator OMIS**: Exchange information relating to IT infrastructure such as hosts, platforms, servers, server capabilities and services.
-* **Files Integrator OMIS**: Extract metadata about files stored in a file system or file manager.
-* **Topic Integrator OMIS**: Exchange metadata with third party event-based brokers.
-* **Security Integrator OMIS**: Distribute security properties to security enforcement points.
-* **API Integrator OMIS**: Exchange metadata with third party API Gateways.
-* **Lineage Integrator OMIS**: Manage capture of lineage from a third party tool.
-* **Database Integrator OMIS**: Extract metadata such as schema, tables and columns from database managers.
-* **Catalog Integrator OMIS**: Exchange metadata with third party data catalogs.
-* **Display Integrator OMIS**: Exchange metadata with applications that display data to users.
-* **Analytics Integrator OMIS**: Exchange metadata with third party analytics tools.
-* **Organization Integrator OMIS**: Load information about the teams and people in an organization and return collaboration activity.
 * **Glossary Manager OMVS**: Create glossary terms and organize them into categories as part of a controlled workflow process. It supports the editing glossary and multiple states.
 * **My Profile OMVS**: Manage information about the logged on user as well as their preferences.
 * **Glossary Browser OMVS**: View glossary terms and categories within a glossary.

@@ -7,19 +7,16 @@
 
 !!! info "Connector details"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [openlineage-integration-connectors :material-github:](https://github.com/odpi/egeria-connector-integration-lineage-event-driven-sample){ target=gh }
     - Jar File Name: `egeria-connector-integration-lineage-sample-1.0-SNAPSHOT.jar`
 
-The Sample Lineage Event Receiver integration connector receives json events from an event topic and publishes them to the lineage integration connectors which use the Lineage Integrator OMIS.
+The Sample Lineage Event Receiver integration connector receives json events from an event topic and publishes them to the lineage integration connectors listening in the same integration daemon.
 This connector communicates using an Open Metadata Access Services (OMAS), both the connector and the server it is talking to need to be running with Egeria jar at level 3.15-SNAPSHOT or above.
 This is important, as the OMAS capability required for this connector is fully functional at this level or above. 
 
 This is a sample [integration connector](https://egeria-project.org/concepts/integration-connector/?h=integration+conne) that shows how
-to listen to a topic for json payloads. This integration connector is an extension of the
-[Lineage Integrator Open Metadata Integration Service (OMIS)](https://egeria-project.org/services/omis/lineage-integrator/overview/), where it
-catalogues lineage information from a third party technology, including processes,
+to listen to a topic for json payloads.It catalogues lineage information from a third party technology, including processes,
 schemas and the data assets they are working with. See [here](https://github.com/odpi/egeria-connector-integration-lineage-event-driven-sample/tree/main/src/test/resources)
 for some sample json events in the format that this connector expects.
 
@@ -34,9 +31,9 @@ The gradle JAR step will include some of the dependencies into the connector JAR
 
 ## Configuration
 
-This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
+This connector runs in the [Integration Daemon](/concepts/integration-daemon).
 
-The connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
+The connection definition to use on the [administration commands that configure the integration daemon](/guides/admin/servers/by-server-type/configuring-an-integration-daemon) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="11"

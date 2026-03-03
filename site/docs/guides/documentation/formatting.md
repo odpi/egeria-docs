@@ -107,7 +107,7 @@ Use double curly braces for placeholders in REST API urls. Tell the reader what 
 
 1. Start the server:
     ```shell
-    POST {{baseURL}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{server}}/instance
+    POST {{baseURL}}/open-metadata/admin-services/servers/{{server}}/instance
     ```
 
     Where `{{baseURL}}` is the host name and port of the platform where the server is to run; `{{adminUserId}}` is the user id of the administrator and `{{server}}` is the name of the server to start.

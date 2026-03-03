@@ -7,7 +7,6 @@
 
 !!! info "Connector details"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [Database Integrator OMIS](/services/omis/database-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [jdbc-integration-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/jdbc-integration-connector){ target=gh }
     - Jar File Name: `jdbc-integration-connector.jar`
@@ -34,9 +33,9 @@ If the endpoint information is available, it will also attach the connection inf
 
 ## Configuration
 
-This connector uses the [Database Integrator OMIS](/services/omis/database-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
+This connector runs in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the Database Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).
+This is its connection definition to use on the [administration commands that configure the integration daemon](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"

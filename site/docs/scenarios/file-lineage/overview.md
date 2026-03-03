@@ -40,13 +40,10 @@ to automatically capture lineage from a
 spark job onboarding the files into a data lake. The spark job operates independently of Egeria
 but is publishing lineage through the Open Lineage API.
 
-There is a [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
-integration connector capturing this lineage from the spark job, correlating this information
+There is a integration connector capturing this lineage from the spark job, correlating this information
 with the Assets being created by the 
 [integration connectors](/concepts/integration-connector)
-running in the
-[Files Integrator OMIS](/services/omis/files-integrator/overview).
-
+running in the integration daemon.
 
 ![Figure 4](file-lineage-capture-solution-detail.png)
 > **Figure 4:** Automatic lineage capture from an external process

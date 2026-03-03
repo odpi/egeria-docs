@@ -14,7 +14,7 @@ The OMASs are optional services of the OMAG Server Platform.  The command below 
 
 !!! get "GET - list all available access services"
     ```
-    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/registered-services/access-services
+    {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/access-services
     ```
 
     ??? success "Example response listing available access services"
@@ -165,7 +165,7 @@ The access services can either all be enabled (with default configuration values
 
     !!! post "POST - enable all access services"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/access-services
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/access-services
         ```
 
 === "individually"
@@ -174,7 +174,7 @@ The access services can either all be enabled (with default configuration values
 
     !!! post "POST - configure an individual access service"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/access-services/{{serviceURLMarker}}
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/access-services/{{serviceURLMarker}}
         ```
 
 The service URL marker for each service is shown in the example response given above.
@@ -196,17 +196,17 @@ The access services can be disabled with the following command. This also disabl
 
 !!! delete "DELETE - disable the access services"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/access-services
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/access-services
     ```
 
 ### Review configuration
 
 !!! get "GET - retrieve current configuration for the access services"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/access-services/configuration
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/access-services/configuration
     ```
 
 !!! post "POST - save changes back to the configuration"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/access-services/configuration
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/access-services/configuration
     ```

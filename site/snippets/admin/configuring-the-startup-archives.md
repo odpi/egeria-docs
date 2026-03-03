@@ -20,7 +20,7 @@ Typically, an open metadata archive is stored as JSON format in a file. To confi
 
 !!! post "POST - specify file to load"
     ```
-    POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/open-metadata-archives/file
+    POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/open-metadata-archives/file
     ```
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
@@ -29,7 +29,7 @@ Alternatively it is possible to set up the list of open metadata archives as a l
 
 !!! post "POST - specify connection(s) to load"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/open-metadata-archives
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/open-metadata-archives
     ```
 
     The body of the request should be the list of connections from which to load archives.
@@ -42,7 +42,7 @@ Finally, this is how to remove the archives from the configuration document.
 
 !!! delete "DELETE - remove archives from configuration document"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/open-metadata-archives
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/open-metadata-archives
     ```
 
     The body of the request should be the path to the metadata archive file.

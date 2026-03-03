@@ -7,7 +7,6 @@
 
 !!! info "Connector details"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [Topic Integrator OMIS](/services/omis/topic-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [kafka-integration-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/kafka-integration-connector){ target=gh }
     - Jar File Name: `kafka-integration-connector.jar`
@@ -20,9 +19,9 @@ The kafka monitor integration connector monitors an [Apache Kafka](https://kafka
 
 ## Configuration
 
-This connector uses the [Topic Integrator OMIS](/services/omis/topic-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
+This connector runs in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the Topic Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).
+This is its connection definition to use on the [administration commands that configure the Integration Daemon](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"

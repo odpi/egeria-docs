@@ -27,7 +27,7 @@ How should you connect a third party data catalog into the open metadata ecosyst
 Egeria offers two choices on how to integrate such catalogs:
 
 * Integrate via a [repository connector](/concepts/repository-connector) running in a [Repository Proxy](/concepts/repository-proxy).
-* Integrate via an [integration connector](/concepts/integration-connector) using the [Catalog Integrator OMIS](/services/omis/catalog/overview) running in an [integration connector](/concepts/integration-connector).
+* Integrate via an [integration connector](/concepts/integration-connector) running in an [integration connector](/concepts/integration-connector).
 
 Broadly speaking, the repository connector integration is for the metadata repository, and the integration connector is for the data catalog.  However, to understand why, and to be sure that you are making the right decision, this page goes into more detail on the mechanisms that surround these connectors.
 
@@ -190,7 +190,7 @@ Connector API much simpler.
 
 ![Integration connector API](/guides/developer/integration-connectors/integration-connector-methods.svg)
 
-Effort still required to map between the Catalog Integrator OMIS context and the third party catalog interface.
+Effort still required to map between the integration connector context and the third party catalog interface.
 
 ![Integration connector API mapping](integration-connector-api-mapping.svg)
 

@@ -35,7 +35,7 @@ Specifically:
 
 This connector runs in the [integration daemon](/concepts/integration-daemon).
 
-Following is its connection definition to use on the [administration commands that configure the Files Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon):
+Following is its connection definition to use on the [administration commands that configure the integration daemon](/guides/admin/servers/by-server-type/configuring-an-integration-daemon):
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="13 16-18"

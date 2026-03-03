@@ -31,16 +31,6 @@
 * **Repository Governance OMES**: Maintains open metadata archives based on the activity in the connected cohorts.
 * **Governance Action OMES**: Executes requested governance action services to monitor, assess and maintain metadata and its real-world counterparts.
 * **Asset Analysis OMES**: Analyses the content of an asset's real world counterpart, generates annotations in an open discovery report that is attached to the asset in the open metadata repositories.
-* **Files Integrator OMIS**: Extract metadata about files stored in a file system or file manager.
-* **Topic Integrator OMIS**: Exchange metadata with third party event-based brokers.
-* **API Integrator OMIS**: Exchange metadata with third party API Gateways.
-* **Security Integrator OMIS**: Distribute security properties to security enforcement points.
-* **Database Integrator OMIS**: Extract metadata such as schema, tables and columns from database managers.
-* **Lineage Integrator OMIS**: Manage capture of lineage from a third party tool.
-* **Catalog Integrator OMIS**: Exchange metadata with third party data catalogs.
-* **Analytics Integrator OMIS**: Exchange metadata with third party analytics tools.
-* **Display Integrator OMIS**: Exchange metadata with applications that display data to users.
-* **Organization Integrator OMIS**: Load information about the teams and people in an organization and return collaboration activity.
 * **Glossary Manager OMVS**: View Service for glossary authoring.
 ## Platform servers
 ### Server: mds1

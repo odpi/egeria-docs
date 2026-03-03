@@ -3,9 +3,9 @@
 
 --8<-- "snippets/content-status/tech-preview.md"
 
-# Survey Action Framework (SAF)
+# Open Survey Framework (OSF)
   
-The *Survey Action Framework (SAF)* enables [metadata survey tools](/features/discovery-and-stewardship) to integrate with open metadata repositories by defining the interfaces for surveyor components (called [survey action services](/concepts/survey-action-service)) to:
+The *Open Survey Framework (OSF)* enables [metadata survey tools](/features/discovery-and-stewardship) to integrate with open metadata repositories by defining the interfaces for surveyor components (called [survey action services](/concepts/survey-action-service)) to:
 
 - Access survey request configuration.
 - Search for [assets](/concepts/asset) and related metadata in the metadata repository.

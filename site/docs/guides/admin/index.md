@@ -42,7 +42,7 @@ omag.server.{serverName}.config
 The administration services that set up this file all begin with a URL like this:
 
 ```
-.../open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/...
+.../open-metadata/admin-services/servers/{{serverName}}/...
 ```
 
 The `serverName` specified on these calls determines which configuration document is used, and hence which OMAG Server's configuration it is working with.

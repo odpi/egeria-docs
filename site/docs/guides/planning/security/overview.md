@@ -25,7 +25,7 @@ To decompose Egeria applications, it is very important to understand the [OMAG S
     | Server | Application instances. Provides function by managing lifecycle for a logical group of services, hosts connectors and maintains connections to access various technologies |
     | Service | Service units. Provide operations to validate and process server requests, process and distribute events or access storage |
 
-Different server capabilites can be enabled by combining services in new server instances.
+Different server capabilities can be enabled by combining services in new server instances.
 In practice, an organization will deploy different server types to implement solution for a specific use-case. 
 
 Users, tools or other technology platforms access the Egeria ecosystem by interacting with OMAG Server applications.
@@ -114,7 +114,7 @@ Example entry and exit points for a common deployment configuration with User In
 
 Servers with similar function are grouped together in [Types of OMAG Server](/concepts/omag-server/#types-of-omag-server){target=_blank}. Egeria solutions are created by combining different server types. 
 
-The diagram shows data flow patterns indentified in one common deployment scenario:
+The diagram shows data flow patterns identified in one common deployment scenario:
 
 ![Egeria Ecosystem Data Flows](sample-dataflow.png)
 

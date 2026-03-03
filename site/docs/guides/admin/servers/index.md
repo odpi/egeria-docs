@@ -39,7 +39,7 @@ This next command retrieves the basic server properties.
     For the Egeria OMAG Server Platform, the response is `Egeria OMAG Server Platform (version {{releaseName}})`.
 
     ```
-    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/servers/{{serverName}}/server-platform-origin
+    {{platformURLRoot}}/open-metadata/platform-services/servers/{{serverName}}/server-platform-origin
     ```
 
 

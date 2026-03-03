@@ -23,7 +23,7 @@ It is possible to add arbitrary name/value pairs as JSON in the request body. Th
 ???+ beginner "Fine-grained helper command"
     !!! post "POST - configure event bus"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/event-bus
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/event-bus
         ```
     
     ???+ example "Example: Apache Kafka"

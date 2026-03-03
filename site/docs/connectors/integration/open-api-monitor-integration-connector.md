@@ -7,7 +7,6 @@
 
 !!! info "Connector details"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [API Integrator OMIS](/services/omis/api-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [openapi-integration-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openapi-integration-connector){ target=gh }
     - Jar File Name: `openapi-integration-connector.jar`
@@ -22,9 +21,9 @@ The Open API monitor integration connector connects to an endpoint and extracts 
 
 ## Configuration
 
-This connector uses the [API Integrator OMIS](/services/omis/api-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
+This connector runs in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).  
+This is its connection definition to use on the [administration commands that configure the integration daemon](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).  
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="15"

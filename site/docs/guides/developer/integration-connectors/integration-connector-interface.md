@@ -10,7 +10,7 @@ An integration connector can:
 - Poll the third party technology each time that the integration daemon calls your integration connector's  `refresh()` method.
 - Issue queries and maintenance (create, update, delete) requests to the open metadata repositories.
 
-Access to open metadata is provided via a *context* object.  The [Open Metadata Integration Services (OMISs)](/services/omis) each provide a context object that is specialized for a particular category of third party technology in order to provide the most optimal interface to open metadata for your integration connector. This typically includes:
+Access to open metadata is provided via a *context* object defined by the [Open Integration Framework (OIF)](/frameworks/oif/overview).  This includes:
 
 - The ability to register a listener to receive events from the OMAS's [Out Topic](/concepts/out-topic).
 - The ability to create and update metadata instances.
@@ -93,7 +93,7 @@ All the integration connector base classes inherit from (extend) the [`Integrati
 
 - `initializeEmbeddedConnectors` saves the optional list of embedded connectors that were defined in the connection object for your integration connector when it was configured.  These connectors are [digital resource connectors](/concepts/digital-resource-connector) for use by your integration connector to [call the third party technology](/guides/developer/integration-connectors/overview/#three-patterns-for-connections). This method is provided by the integration connector's base class.  Your code can access the embedded connector's via the `embeddedConnectors` variable.
 
-- `setContext` sets up the integration service specific context object. This method is also provided by the integration connector's base class.  Your code can access the connector's name via the `context` variable.  However, it is recommended that because it is set to null after the `disconnect` method (described below), your connector should use the `super.getContext()` method to access the context, particularly if your connector operates in multiple threads, which occurs when the connector is using listeners.
+- `setContext` sets up the context object. Your code can access the connector's name via the `context` variable.  However, it is recommended that because it is set to null after the `disconnect` method (described below), your connector should use the `super.getContext()` method to access the context, particularly if your connector operates in multiple threads, which occurs when the connector is using listeners.
     
 - `start` indicates that the connector is completely configured (that is all the methods listed above have been called) and it can begin processing. This call is where the configuration properties are extracted from the connection object. It can also be used to register with non-blocking services. For example, it can register a listener for events from the OMAS [Out Topic](/concepts/out-topic) through the context.
 

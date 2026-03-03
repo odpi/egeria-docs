@@ -59,7 +59,7 @@
 
     === "REST"
         ```
-        POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-properties
+        POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/server-properties
         ```
         with a request body of:
         ```json

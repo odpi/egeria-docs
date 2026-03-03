@@ -17,7 +17,7 @@ They are configured as follows.
     
     !!! post "POST - configure the repository connector"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/repository-proxy/connection
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/repository-proxy/connection
         ```
     
         The request body should be the connection to use for configuring the connector, which can include any connector-specific options as well as general details like the endpoint and credentials for the third party repository. The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider) of the repository connector.
@@ -54,7 +54,7 @@ They are configured as follows.
 
     !!! post "POST - configure event mapper"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/event-mapper-details?connectorProvider={{fullyQualifiedJavaClassName}}&eventSource={{resourceName}}
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/event-mapper-details?connectorProvider={{fullyQualifiedJavaClassName}}&eventSource={{resourceName}}
         ```
 
         The `connectorProvider` should be set to the fully-qualified Java class name for the [connector provider](/concepts/connector-provider) of the event mapper, and the `eventSource` should give the details for how to access the events (for example, the hostname and port number of an Apache Kafka bootstrap server).

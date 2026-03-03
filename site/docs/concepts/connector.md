@@ -36,7 +36,7 @@ The connector provides two main APIs:
 
 ## Specialist connectors that plug into the OMAG Server Platform
 
-Various Egeria services provide specific interfaces for connectors to support their operation.  For example, the [Open Metadata Integration Services (OMIS)](/services/omis) define the interfaces for [integration-connectors](/concepts/integration-connector) used to [exchange metadata between Egeria and third party technologies](/patterns/metadata-exchange/overview). 
+Various Egeria services provide specific interfaces for connectors to support their operation.  For example, the [Open Integration Framework (OIF)](/frameworks/oif/overview) defines the interfaces for [integration-connectors](/concepts/integration-connector) used to [exchange metadata between Egeria and third party technologies](/patterns/metadata-exchange/overview). 
 
 The table below lists the different types of connectors supported by Egeria's services. Connectors that are implemented by the Egeria community or trusted third parties are listed in the [connector catalog](/connectors).  You may [write your own connectors](/guides/developer/#building-connectors) to integrate additional types of technology or extend the capabilities of Egeria - and if you think your connector is more generally useful, you could consider [contributing it to the Egeria project](/guides/community).
 

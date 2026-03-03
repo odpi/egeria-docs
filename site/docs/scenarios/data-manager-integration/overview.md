@@ -13,32 +13,18 @@ In this solution we are going to cover:
 * automatic distribution of information about data assets to interested parties
 * automatic configuration of data managers based on the data assets in other data managers
 
-Figure 1 shows the set up to extract metadata from one or more data managers and store it in a metadata server. It takes an [integration connector](/concepts/integration-connector) to interface with a specific data manager.  This is running in an appropriate [Open Metadata Integration Service (OMIS)](/services/omis) hosted in an [Integration Daemon](/concepts/integration-daemon).
-
-The OMIS to use for different types of technology is shown in the table below.
-
-| Technology | Examples | OMIS   |
-| :--------- | :------- | :--------- |
-| Database | PostgreSQL | [Database Integrator OMIS](/services/omis/database-integrator/overview) |
-| Filesystems | local disk storage | [Files Integrator OMIS](/services/omis/files-integrator/overview) |
-| Document/Content Managers | Photo Library | [Files Integrator OMIS](/services/omis/files-integrator/overview) |
-| Event Brokers | Apache Kafka | [Topic Integrator OMIS](/services/omis/topic-integrator/overview) |
-| API Managers | Swagger Site | [API Integrator OMIS](/services/omis/api-integrator/overview) |
-
-<br>
-
-In Figure 1, integration connector `Database Extractor` is monitoring for schema changes in the Database Server and cataloguing them in open metadata through the Database Integrator OMIS.  The Database Integrator OMIS calls the Data Manager OMAS which stores the open metadata in its local repository.
+Figure 1 shows the set up to extract metadata from one or more data managers and store it in a metadata server. It takes an [integration connector](/concepts/integration-connector) to interface with a specific data manager.  This is running in an [Integration Daemon](/concepts/integration-daemon). The integration connector `Database Extractor` is monitoring for schema changes in the Database Server and cataloguing them in open metadata. 
 
 Similarly,
  
 * Integration connector `File System Extractor` is monitoring for changes to files on the file system and
-cataloguing them in open metadata through the Files Integrator OMIS and the Data Manager OMAS.
+cataloguing them in open metadata.
 * Integration connector `Document Extractor` is monitoring for changes to documents in a content manager and
-cataloguing them in open metadata through the Files Integrator OMIS and the Data Manager OMAS.
+cataloguing them in open metadata.
 * Integration connector `Topic Extractor` is monitoring for changes to files on the file system and
-cataloguing them in open metadata through the Topic Integrator OMIS and the Data Manager OMAS.
+cataloguing them in open metadata.
 * Integration connector `API Extractor` is monitoring for changes to deployed APIs in a platform or API gateway and
-cataloguing them in open metadata through the API Integrator OMIS and the Data Manager OMAS.
+cataloguing them in open metadataS.
 
 
 ![Figure 1](data-manager-integration-metadata-extraction.svg)

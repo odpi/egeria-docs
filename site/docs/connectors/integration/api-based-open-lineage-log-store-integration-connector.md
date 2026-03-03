@@ -13,7 +13,7 @@
 
 ## Overview
 
-The API-based Open Lineage Log Store integration connector calls an OpenLineage compliant API to store open lineage events that have been published to the Lineage Integrator OMIS instance where this connector is running.
+The API-based Open Lineage Log Store integration connector calls an OpenLineage compliant API to store open lineage events that have been published to the integration daemon instance where this connector is running.
 
 ![Figure 1](api-based-open-lineage-log-store-integration-connector.svg)
 > **Figure 1:** Operation of the API-based OpenLineage log store integration connector
@@ -23,7 +23,7 @@ The API-based Open Lineage Log Store integration connector calls an OpenLineage 
 
 This connector runs in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the integration daemon](/guides/admin/configuring-an-integration-daemon/).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"

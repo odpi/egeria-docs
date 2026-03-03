@@ -113,7 +113,7 @@ Its use is described in the [developer's guide](/guides/developer).
     - [Open Metadata Framework (OMF)](/frameworks/ocf/overview) - base framework for open metadata definitions.
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview) - base framework for all types of plug-in components called connectors.
     - [Open Integration Framework (OIF)](/frameworks/oif/overview) - specialized connectors for metadata exchange and synchronization with third party technologies.
-    - [Survey Action Framework (SAF)](/frameworks/osf/overview) - specialized connectors called survey action services that support automated metadata discovery.
+    - [Open Survey Framework (OSF)](/frameworks/osf/overview) - specialized connectors called survey action services that support automated metadata discovery.
     - [Open Governance Framework (OGF)](/frameworks/ogf/overview) - specialized connectors for the triage and remediation of issues found in the digital landscape.
 
 ### Deployment runtimes

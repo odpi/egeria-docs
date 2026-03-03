@@ -35,7 +35,7 @@
 
     === "REST"
         ```
-        GET {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-type-classification
+        GET {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/server-type-classification
         ```
         If there is insufficient content in the server's configuration document, you may get a response like this.
         ```json

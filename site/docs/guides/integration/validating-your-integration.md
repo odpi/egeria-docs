@@ -10,7 +10,7 @@ Once it is running, the following command can be used to show the status of the 
 ```
 GET {{serverURLRoot}}/servers/{{serverName}}/open-metadata/integration-daemon/users/{{userId}}/status
 ```
-Here is an example of the result ... the integration connectors are organized by the integration services that are providing access to the open metadata APIs. In this case, there are three file-oriented integration connectors running with the [Files Integration OMIS](/services/omis/files-integrator/overview).
+Here is an example of the result ...
 
 ```json
 {
@@ -108,10 +108,10 @@ This table summarises the results shown above:
 | OldMarketLandingAreaFilesMonitor          | FAILED  | BASIC-FILES-INTEGRATION-CONNECTORS-404-001 The directory named data/landing-area/hospitals/old-market/clinical-trials/drop-foot does not exist | org.odpi.openmetadata.adapters.connectors.integration.basicfiles.DataFilesMonitorIntegrationProvider  |
 | DropFootClinicalTrialResultsFolderMonitor | RUNNING |                                                                                                                                                | org.odpi.openmetadata.adapters.connectors.integration.basicfiles.DataFolderMonitorIntegrationProvider |
 
-Once any problems have been corrected, the integration service can be restarted, which will restart the integration connectors:
+Once any problems have been corrected, the integration daemon can be restarted, which will restart the integration connectors:
 
 ```
-POST {{serverURLRoot}}/servers/{{serverName}}/open-metadata/integration-daemon/users/{{userId}}/integration-services/files-integrator/restart
+POST {{serverURLRoot}}/servers/{{serverName}}/open-metadata/integration-daemon/users/{{userId}}/restart
 ```
 
 !!! education "Further information"

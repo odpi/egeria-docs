@@ -19,24 +19,24 @@ Egeria provides a number of implementations of such a repository -- only one of 
         This in memory version of the XTDB repository is designed for testing.
 
         ```
-        POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/xtdb-in-memory-repository
+        POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/xtdb-in-memory-repository
         ```
 
         This command sets up XTDB with RocksDB KV store to provide a local high performance historical metadata repository.  It only supports one instance of the server ans so can not be used in a horizontal scale-out HA deployment
         ```
-        POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/xtdb-local-kv-repository
+        POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/xtdb-local-kv-repository
         ```
         
         This command allows you to specify different XTDB back ends so it can be run in a HA context with multiple versions of the same server deployed to the same repository.
         ```
-        POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/xtdb-local-repository
+        POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/xtdb-local-repository
         ```
         The request body is a map of property names to values that are passed directly to XTDB when the sever starts up.
 
         ??? info "For Egeria releases before version 5.0 ...
             The XTDB connector is located in its own git repository [egeria-connector-xtdb.git](https://github.com/odpi/egeria-connector-xtdb).  The JAR file needs to be built from this repository and placed the OMAG Server Platform's class path.  It is configured in the Metadata Access Store using the follwoing command: 
             ```
-            POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/plugin-repository/connection
+            POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/plugin-repository/connection
             ```
 
             ```json
@@ -59,7 +59,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
 
     !!! post "Enable the JanusGraph repository"
         ```
-        POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/local-graph-repository
+        POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/local-graph-repository
         ```
     
     If no request body is used, metadata will be stored on the local disk.  It is possible to pass a set of storage properties to JanusGraph to enalbe it to use a different persistance service.  However, the repository uses local transactions and is does not support multiple instances of the same server/repository to be active at one time. 
@@ -71,7 +71,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
 
     !!! post "Enable the in-memory repository"
         ```
-        POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/in-memory-repository
+        POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/in-memory-repository
         ```
 
 === "read-only"
@@ -82,7 +82,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
 
     !!! post "POST - enable the read-only repository"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository/mode/read-only-repository
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/read-only-repository
         ```
 
 ### Remove the native repository connector
@@ -91,5 +91,5 @@ This command removes all configuration for the local repository. This includes t
 
 !!! delete "Remove the local repository"
     ```
-    DELETE {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/local-repository
+    DELETE {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository
     ```

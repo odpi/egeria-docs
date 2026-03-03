@@ -63,7 +63,7 @@ The platform origin method is used to confirm that the platform is running, and 
     
         !!! post "getServerPlatformOrigin"
             ```
-            POST {{platformURLRoot}}/open-metadata/platfrom-services/users/{{adminUserId}}/server-platform/origin
+            POST {{platformURLRoot}}/open-metadata/platfrom-services/server-platform/origin
             ```
     
 
@@ -84,7 +84,6 @@ It is also possible to list the [registered services](/services/#registered-serv
         ```java linenums="1"
         List<RegisteredOMAGService> registeredOMASs = platformServicesClient.getAccessServices(clientUserId);
         List<RegisteredOMAGService> registeredOMESs = platformServicesClient.getEngineServices(clientUserId);
-        List<RegisteredOMAGService> registeredOMISs = platformServicesClient.getIntegrationServices(clientUserId);
         List<RegisteredOMAGService> registeredOMVSs = platformServicesClient.getViewServices(clientUserId);
         ```
 
@@ -92,10 +91,9 @@ It is also possible to list the [registered services](/services/#registered-serv
     
         !!! get "getRegisteredServices"
             ```
-            GET {{platformURLRoot}}/open-metadata/platfrom-services/users/{{adminUserId}}/registered-services/access-services
-            GET {{platformURLRoot}}/open-metadata/platfrom-services/users/{{adminUserId}}/registered-services/engine-services
-            GET {{platformURLRoot}}/open-metadata/platfrom-services/users/{{adminUserId}}/registered-services/integration-services
-            GET {{platformURLRoot}}/open-metadata/platfrom-services/users/{{adminUserId}}/registered-services/view-services
+            GET {{platformURLRoot}}/open-metadata/platfrom-services/registered-services/access-services
+            GET {{platformURLRoot}}/open-metadata/platfrom-services/registered-services/engine-services
+            GET {{platformURLRoot}}/open-metadata/platfrom-services/registered-services/view-services
             ```
 
 Each entry in `RegisteredOMAGService` details:
@@ -324,7 +322,7 @@ Security is configured for a specific platform once it is running by using the f
 
 !!! post "POST - configure platform metadata security connector"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/platform/security/connection
+    {{platformURLRoot}}/open-metadata/admin-services/platform/security/connection
     ```
 
     The request body should be a connection object used to create the platform security connector and
@@ -355,7 +353,7 @@ It is possible to query the setting of the platform security connector using the
 
 !!! get "GET - retrieve configured platform security"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/platform/security/connection
+    {{platformURLRoot}}/open-metadata/admin-services/platform/security/connection
     ```
 
     ??? success "Response indicating no security"
@@ -389,7 +387,7 @@ It is possible to remove the configuration for the connector using the following
 
 !!! delete "DELETE - remove configured platform security"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/platform/security/connection
+    {{platformURLRoot}}/open-metadata/admin-services/platform/security/connection
     ```
 
 This removes all authorization checking from the platform services.
@@ -416,7 +414,7 @@ In release 4.2 we introduced a new method to shut down an OMAG Server Platform. 
     
         !!! delete "shutdownPlatform"
             ```
-            DELETE {{platformURLRoot}}/open-metadata/platfrom-services/users/{{adminUserId}}/server-platform/instance
+            DELETE {{platformURLRoot}}/open-metadata/platfrom-services/server-platform/instance
             ```
 
 

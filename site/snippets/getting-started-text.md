@@ -14,6 +14,5 @@ In addition to Egeria Workspaces, deployment options include:
 
 * Running Egeria in Kubernetes: see sample helm charts in [https://github.com/odpi/egeria-charts](https://github.com/odpi/egeria-charts).
 
-To find out 
-If you want to build you own Egeria deployment, consider the [Planning Guide](/guides/planning).
+To find out how to build you own Egeria deployment, consider the [Planning Guide](/guides/planning).
 

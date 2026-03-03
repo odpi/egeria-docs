@@ -19,7 +19,7 @@ The placeholders in the configuration document are called *placeholder variables
 # Set up the common properties needed to call your event bus.  The value of ~{kafkaEndpoint}~ is resolved in the
 # application.properties file using the `platform.placeholder.variables` property.
 
-POST {{baseURL}}/open-metadata/admin-services/users/{{adminUserId}}/servers/active-metadata-store/event-bus
+POST {{baseURL}}/open-metadata/admin-services/servers/active-metadata-store/event-bus
 Content-Type: application/json
 
 {

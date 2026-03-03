@@ -7,12 +7,11 @@
 
 !!! info "Connector details"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [openlineage-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors){ target=gh }
     - Jar File Name: `openlineage-integration-connectors.jar`
 
-The OpenLineage Event Receiver integration connector receives open lineage events from an event topic and publishes them to the lineage integration connectors with OpenLineage listeners registered in the same instance of the Lineage Integrator OMIS.
+The OpenLineage Event Receiver integration connector receives open lineage events from an event topic and publishes them to the lineage integration connectors with OpenLineage listeners registered in the same integration daemon instance.
 
 ![Figure 1](open-lineage-event-receiver-integration-connector.svg)
 > **Figure 1:** Operation of the OpenLineage event receiver integration connector
@@ -21,9 +20,9 @@ It uses an embedded [Open Metadata Topic Connector](/concepts/open-metadata-topi
 
 ## Configuration
 
-This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview) running in the [Integration Daemon](/concepts/integration-daemon).
+This connector runs in the [Integration Daemon](/concepts/integration-daemon).
 
-The connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/servers/by-server-type/configuring-an-integration-daemon) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
+The connection definition to use on the [administration commands that configure the integration daemon](/guides/admin/servers/by-server-type/configuring-an-integration-daemon) is a *VirtualConnection* with an embedded [OpenMetadataTopicConnection](/concepts/open-metadata-topic-connector). 
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="11"

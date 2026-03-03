@@ -45,7 +45,6 @@ The registered services provide specialist APIs for particular technologies and 
 
 - [Open Metadata Access Services (OMASs)](/services/omas) for supporting domain-specific services for metadata access and governance. Access services run in the [metadata access server](/concepts/metadata-access-server).
 - [Open Metadata Engine Services (OMESs)](/services/omes) for supporting specialized governance engines that drive governance activity in the open metadata ecosystem. The engine services run in the [engine host](/concepts/engine-host) server.
-- [Open Metadata Integration Services (OMISs)](/services/omis) for supporting specific types of [integration connectors](/concepts/integration-connector). The integration services run in the [integration daemon](/concepts/integration-daemon) server.
 - [Open Metadata View Services (OMVSs)](/services/omvs) for supporting REST services for a User Interface (UI). The view services run in a [view server](/concepts/view-server).
 
 ## Activating the OMAG subsystems

@@ -7,7 +7,6 @@
 
 !!! info "Connector details"
     - Connector Category: [Integration Connector](/concepts/integration-connector)
-    - Hosting Service: [Lineage Integrator OMIS](/services/omis/lineage-integrator/oveview)
     - Hosting Server: [Integration Daemon](/concepts/integration-daemon)
     - Source Module: [openlineage-integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors){ target=gh }
     - Jar File Name: `openlineage-integration-connectors.jar`
@@ -22,10 +21,9 @@ The File-based OpenLineage Log Store integration connector stores open lineage e
 
 ## Configuration
 
-This connector uses the [Lineage Integrator OMIS](/services/omis/lineage-integrator/overview)
-running in the [Integration Daemon](/concepts/integration-daemon).
+This connector runs in the [Integration Daemon](/concepts/integration-daemon).
 
-This is its connection definition to use on the [administration commands that configure the Lineage Integrator OMIS](/guides/admin/server/configuring-an-integration-daemon/#configure-the-integration-services).
+This is its connection definition to use on the [administration commands that configure the integration daemon](/guides/admin/server/configuring-an-integration-daemon/#configure-the-integration-services).
 
 !!! example "Connection configuration"
     ```json linenums="1" hl_lines="14"

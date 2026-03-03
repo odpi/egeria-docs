@@ -43,11 +43,7 @@ An OMAG Server Platform has fixed services as well as optional registered servic
     ```
     {{platformURLRoot}}/open-metadata/platform-services/users/{{userId}}/server-platform/registered-services/engine-services
     ```    
-
-!!! get "GET - list Open Metadata Integration Services (OMISs)"
-    ```
-    {{platformURLRoot}}/open-metadata/platform-services/users/{{userId}}/server-platform/registered-services/integration-services
-    ```    
+ 
 !!! get "GET - list Open Metadata View Services (OMVSs)"
     ```
     {{platformURLRoot}}/open-metadata/platform-services/users/{{userId}}/server-platform/registered-services/view-services
@@ -113,7 +109,7 @@ Archives can also be loaded to a running server. Typically, an open metadata arc
 
 !!! post "POST - load file"
     ```
-    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/servers/{{serverName}}/instance/open-metadata-archives/file
+    {{platformURLRoot}}/open-metadata/platform-services/server-platform/servers/{{serverName}}/instance/open-metadata-archives/file
     ```
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
@@ -122,7 +118,7 @@ Alternatively it is possible to set up the list of open metadata archives as a l
 
 !!! post "POST - load from connection(s)"
     ```
-    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/servers/{{serverName}}/instance/open-metadata-archives/connection
+    {{platformURLRoot}}/open-metadata/platform-services/server-platform/servers/{{serverName}}/instance/open-metadata-archives/connection
     ```
 
     The body of the request should be the list of connections from which to load archives.

@@ -18,14 +18,14 @@ or a [FileSystem](/types/2/0220-Files-and-Folders).
 
 ## CSV Files
 
-Figure 1 shows the types of metadata for CSV files that integrators connectors can create with this integration service.
+Figure 1 shows the types of metadata for CSV files that integration connectors can create.
 
 ![Figure 1](csv-file-model.svg)
 > **Figure 1:** CSV File metadata
 
 The structure of a CSV file is made up of [TabularColumn](/types/5/0530-Tabular-Schemas)s.
 
-Figure 2 shows the open metadata types used to represent the CSV File metadata created through this service.
+Figure 2 shows the open metadata types used to represent the CSV File metadata.
 
 ![Figure 2](csv-file-open-metadata-types.svg)
 > **Figure 2:** CSV file open metadata types
@@ -47,7 +47,7 @@ classification [method for defining the schema type](/concepts/schema).
 
 ## Avro Files
 
-Figure 1 shows the types of metadata for Avro files that integrators connectors can create with this integration service.
+Figure 1 shows the types of metadata for Avro files that integrators connectors can create.
 
 ![Figure 1](avro-file-model.svg)
 > **Figure 1:** Avro File metadata
@@ -77,17 +77,17 @@ classification [method for defining the schema type](/concepts/schema).
 
 ## JSON Files
 
-Figure 1 shows the types of metadata for JSON files that integrators connectors can create with this integration service.
+Figure 1 shows the types of metadata for JSON files that integrators connectors can create.
 
 ![Figure 1](json-file-model.svg)
-> **Figure 1:** JSON File metadata supported by the Files Integrator OMIS 
+> **Figure 1:** JSON File metadata supported by the file classifier from the integration context
 
 The structure of an JSON file is made up of nested [DocumentSchemaAttribute](/types/5/0531-Document-Schemas)s.
 
-Figure 2 shows the open metadata types used to represent the JSON File metadata created through this service.
+Figure 2 shows the open metadata types used to represent the JSON File metadata.
 
 ![Figure 2](json-file-open-metadata-types.svg)
-> **Figure 2:** JSON file open metadata types supported by the Files Integrator OMIS 
+> **Figure 2:** JSON file open metadata types supported by the file classifier from the integration context
 
 If a FileSystem or FileManager is defined, any JSONFile asset created is automatically linked to it using the
 [ServerAssetUse](/types/0/0045-Servers-and-Assets)

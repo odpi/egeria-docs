@@ -11,7 +11,7 @@ Security is configured for a specific [OMAG Server](/concepts/omag-server) by ad
 
 !!! post "POST - configure security connector"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/security/connection
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/security/connection
     ```
 
     This passes in a connection used to create the server security connector in the request body.  
@@ -43,7 +43,7 @@ Security is configured for a specific [OMAG Server](/concepts/omag-server) by ad
 
 !!! get "GET - query the server security connector setting"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/security/connection
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/security/connection
     ```
 
 ??? success "Response indicating no security"
@@ -75,7 +75,7 @@ Security is configured for a specific [OMAG Server](/concepts/omag-server) by ad
 
 !!! delete "DELETE - remove configured security connector"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/security/connection
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/security/connection
     ```
 
     This removes all authorization checking from the server.

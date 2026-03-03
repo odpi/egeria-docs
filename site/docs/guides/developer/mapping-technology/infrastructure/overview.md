@@ -74,7 +74,6 @@ Egeria's [OMAG Server Platform](/concepts/omag-server-platform) is an example of
 
 * Open Metadata Access Services (OMASs) are software capabilities of type  *MetadataAccessService*
 * Open Metadata Engine Services (OMESs) are software capabilities of type *EngineHostingService*
-* Open Metadata Integration Services (OMISs) are software capabilities of type *MetadataIntegrationService*
 * Open Metadata View Services (OMVSs) are software capabilities of type
 *UserViewService*.  
 

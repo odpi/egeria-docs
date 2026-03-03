@@ -42,7 +42,7 @@ If the server is a development or test server, then the default audit log config
 
 !!! post "POST - set default audit log destination"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/default
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations/default
     ```
 
 *Note:* Using this command overrides all previous audit log destinations configured for the server.
@@ -58,7 +58,7 @@ There are various destinations that can be configured for the audit log:
     !!! post "POST - add console audit log destination"
 
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/console
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations/console
         ```
         !!! tip "The body of the request should be a list of severities"
             If an empty list is passed as the request body then all severities are supported by the destination.
@@ -68,7 +68,7 @@ There are various destinations that can be configured for the audit log:
 
     !!! post "POST - add JSON file-based audit log destination"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/files
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations/files
         ```
         !!! tip "The body of the request should be a list of severities"
             If an empty list is passed as the request body then all severities are supported by the destination.
@@ -78,7 +78,7 @@ There are various destinations that can be configured for the audit log:
 
     !!! post "POST - add event-based audit log destination"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/event-topic
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations/event-topic
         ```
         !!! tip "The body of the request should be a list of severities"
             If an empty list is passed as the request body then all severities are supported by the destination.
@@ -90,7 +90,7 @@ There are various destinations that can be configured for the audit log:
 
     !!! post "POST - add slf4j audit log destination"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/slf4j
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations/slf4j
         ```
         !!! tip "The body of the request should be a list of severities"
             If an empty list is passed as the request body then all severities are supported by the destination.
@@ -100,7 +100,7 @@ There are various destinations that can be configured for the audit log:
 
     !!! post "POST - add connection-based audit log destination"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/connection
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations/connection
         ```
 
 === "list"
@@ -108,7 +108,7 @@ There are various destinations that can be configured for the audit log:
 
     !!! post "POST - add a list of connection-based audit log destinations"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations
         ```
 
 ### Retrieving audit log destinations
@@ -117,7 +117,7 @@ The configured list of audit log destinations can be retrieved using this comman
 
 !!! get "GET - the list of configured audit log destinations"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations
     ```
 
 ### Updating audit log destinations
@@ -126,7 +126,7 @@ Audit log destinations can be updated individually, by qualified name using the 
 
 !!! post "POST - update connection-based audit log destination"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/connection/{{qualifiedName}}
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations/connection/{{qualifiedName}}
     ```
 
 If you are not sure what the audit log connection is called, [retrieve the list of configured audit log connections](#retrieving-audit-log-destinations) and the resulting list of audit log connections will include the qualified names.
@@ -137,12 +137,12 @@ The following will remove all audit log destinations, enabling you to add a new 
 
 !!! delete "DELETE - clear all audit log destinations"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations
     ```
 
 It is also possible to remove a single audit log destination using its connection's qualified name.
 
 !!! delete "DELETE - clear then named audit log destination"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/audit-log-destinations/{{qualifiedName}}
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/audit-log-destinations/{{qualifiedName}}
     ```

@@ -22,14 +22,14 @@ It is possible to retrieve the configuration document for a server using the fol
 
 !!! get "GET - retrieve configuration document for a server"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/configuration
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/configuration
     ```
 
 When the server is running, the following command returns the configuration document that was used to start it (since it may have changed in the configuration document store since the server was started):
 
 !!! get "GET - retrieve configuration document used to start a server"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/instance/configuration
+    {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/instance/configuration
     ```
 
 ### Default values

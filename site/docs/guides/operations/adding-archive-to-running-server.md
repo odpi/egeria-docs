@@ -19,7 +19,7 @@ Typically, an open metadata archive is stored as JSON format in a file. To load 
 
 !!! post "POST - load file"
     ```
-    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/servers/{{serverName}}/instance/open-metadata-archives/file
+    {{platformURLRoot}}/open-metadata/platform-services/server-platform/servers/{{serverName}}/instance/open-metadata-archives/file
     ```
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
@@ -28,7 +28,7 @@ Alternatively it is possible to set up the list of open metadata archives as a l
 
 !!! post "POST - load from connection(s)"
     ```
-    {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/server-platform/servers/{{serverName}}/instance/open-metadata-archives/connection
+    {{platformURLRoot}}/open-metadata/platform-services/server-platform/servers/{{serverName}}/instance/open-metadata-archives/connection
     ```
 
     The body of the request should be the list of connections from which to load archives.

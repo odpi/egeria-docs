@@ -5,7 +5,7 @@
 
 ---8<-- "snippets/connectors/integration-connector-intro.md"
 
-The purpose of the integration daemon and its integration services is to minimise the effort required to integrate a third party technology into the open metadata ecosystem.  They handle:
+The purpose of the integration daemon is to minimise the effort required to integrate a third party technology into the open metadata ecosystem.  They handle:
 
 * Management of configuration - including user security information.
 * Starting and stopping of your integration logic.
@@ -56,7 +56,7 @@ For example, Egeria has a JDBC digital resource connector for accessing database
 
 ![Multiple uses of the JDBC digital resource connector](/connectors/jdbc-connectors.svg)
 
-When the digital resource connectors are defined in a virtual connection (rather than being initialized in the integration connector logic), the integration daemon can manage the lifecycle of the embedded connectors with the lifecycle of the integration connectors, reducing the chances of memory leaks and held resources as the connectors/integration services/integration daemon are restarted over the lifetime of their hosting OMAG Server Platform.
+When the digital resource connectors are defined in a virtual connection (rather than being initialized in the integration connector logic), the integration daemon can manage the lifecycle of the embedded connectors with the lifecycle of the integration connectors, reducing the chances of memory leaks and held resources as the connectors/integration daemon are restarted over the lifetime of their hosting OMAG Server Platform.
 
 This pattern is not always possible if the integration connector needs to use a different interface to access the third party technology's metadata from its resources.  For example, the [Kafka Monitor Integration Connector](/connectors/integration/kafka-monitor-integration-connector), which detects the creation of new Kafka Topics and catalogues them in open metadata, does not use the [Kafka Open Metadata Topic Connector](/connectors/resource/kafka-open-metadata-topic-connector) because it uses a different Apache Kafka interface to do its work.
 

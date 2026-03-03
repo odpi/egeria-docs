@@ -23,32 +23,32 @@ Alternatively, you can set these properties one at a time.
 ??? post "setServerDescription"
     The server description should be set to something that describes the OMAG Server's role. It may be the name of a specific product that it is enabling, or a role in the metadata and governance landscape.  Its purpose is to help administrators identify which server configuration they need to work with.
     ```
-    POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-description
+    POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/server-description
     ```
     The description is passed in the request body as a text string.
 
 ??? post "setOrganizationName"
     The organization name may be the owning organization or you may use it to identify the department or team that is supported by this server.
     ```
-    POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/organization-name?name="{{organizationName}}"
+    POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/organization-name?name="{{organizationName}}"
     ```
 ??? post "setServerUserId"
     The server's userId is used when processing requests that do not have an end user, such as receiving an event from a topic. The default value is `OMAGServer`. Ideally each server should have its own userId, so it is possible to restrict the resources that each server has access to and identify the origin of updates to the metadata elements.
     ```
-    POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-user-id?id="{{serverUserId}}"
+    POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/server-user-id?id="{{serverUserId}}"
     ```
 
 ??? post "setServerPassword"
     If the password is specified, the userId and password combination are used to provide authentication information on each REST call made by the server.
     ```
-    POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-user-password?password="{{serverUserPassword}}"
+    POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/server-user-password?password="{{serverUserPassword}}"
     ```
 
 ??? post "setServerURLRoot"
     Configure the `targetPlatformURLRoot` with the [platform URL Root](/concepts/omag-server/#platform-url-root) value of where the OMAG Server Platform will run.
     This may not be the same as `platformURLRoot` if the configuration document will be deployed to a different OMAG Server Platform from the one used to maintain it.
     ```
-    POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/server-url-root?url={{targetPlatformURLRoot}}
+    POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/server-url-root?url={{targetPlatformURLRoot}}
     ```
 
     ??? question "What is the difference between {{platformURLRoot}} and {{targetPlatformURLRoot}}?"
@@ -59,7 +59,7 @@ Alternatively, you can set these properties one at a time.
 ??? post "setMaxPageSize"
     The maximum page size value sets an upper limit on the number of results that a caller can request on any paging REST API to this server. Setting maximum page size helps to prevent a denial of service attack that uses very large requests to overwhelm the server. A value of `0` means no limit, and leaves the server open to such attacks.
     ```
-    POST {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/{{serverName}}/max-page-size?limit={{maxPageSize}}
+    POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/max-page-size?limit={{maxPageSize}}
     ```
 
 ### Retrieving a server's basic properties

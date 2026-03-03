@@ -5,7 +5,7 @@ An *annotation* describes one or more related properties about a [digital resour
 
 ![Structure of survey reports](/frameworks/osf/survey-report-structure.svg)
 
-The annotation types defined in the [Survey Action Framework (SAF)](/frameworks/osf/overview) are as follows:
+The annotation types defined in the [Open Survey Framework (OSF)](/frameworks/osf/overview) are as follows:
 
 * [Classification Annotation](/features/discovery-and-stewardship/overview/#classification-discovery) - Captures a recommendation of which classifications to attach to this asset.  It can be made at the asset or data field level.
 * [Data Class Annotation](/features/discovery-and-stewardship/overview/#data-class-discovery) - Captures a recommendation of which data class this data field closely represents.

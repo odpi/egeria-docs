@@ -14,7 +14,7 @@ Egeria manages context (linked information) about your organization's digital op
 * tradition data quality and finding data through a data catalog; 
 * inventory of IT systems for management and security; 
 * data lineage capture and management;
-* knowedge management, for example in the form of glossary authoring;
+* knowledge management, for example in the form of glossary authoring;
 * solution design and documentation;
 * digital product marketplaces with subscriptions
 
@@ -75,7 +75,8 @@ Six years of working with leading enterprises to build metadata synchronization 
     - Allows decentralized control of secrets and when/where Egeria workloads operate
     - Self-service configuration of new workloads on deployed distributed platforms, empowering your teams to explore and build value from your existing estate.
     - Monitoring and reports on deployed Egeria estate and workloads covering activity and status.
-- Fast, scalable industry standard repository built on PostgreSQL - grow with your business needs; no mysteries in operation, ha, backups and disaster recovery.
+- Fast, scalable industry standard repository built on PostgreSQL 
+    - grow with your business needs; no mysteries in operation, including high availability, backups and disaster recovery.
 
 ### Migrating to this release
 

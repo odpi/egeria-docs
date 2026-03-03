@@ -13,7 +13,7 @@ Displayed data such as reports and forms along with their related schema and con
 
 ## Forms and Reports
 
-Figure 1 shows the types of metadata for forms and reports that integrators connectors can create with this integration service.
+Figure 1 shows the types of metadata for forms and reports that integration connectors can create.
 
 
 ![Figure 1 - Form](form-model.svg)
@@ -27,7 +27,7 @@ Either can be represented as a set of nested **DataContainers** with specific in
 
 ## Queries
 
-Integrators connectors can also create queries that support forms and reports with this integration service.
+Integration connectors can also create queries that support forms and reports.
 Figure 2 shows the types of metadata for the queries.
 
 ![Figure 2 - InformationView](information-view-model.svg)

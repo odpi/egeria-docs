@@ -43,7 +43,7 @@ Figure 2 shows the different values of Element Origin and how they tie into the 
      * Connect the *home* server back into the cohort.
      * If the *home server* has gone forever, re-home the metadata so that a current active member is its *home*.
        
-* *External Source* means the metadata originates in a third party technology and a copy is maintained through an [Open Metadata Access Service (OMAS)](/services/omas). Typically, the OMAS is called via an [Open Metadata Integration Service (OMIS)](/services/omis) running in an [Integration Daemon](/concepts/integration-daemon).  The metadata collection id and name is defined in Open Metadata as the [unique identifier, or GUID,](/concepts/guid) and [unique name, or qualified name,](/concepts/referenceable) of a [Software Capability](/concepts/software-capability) representing the source technology.
+* *External Source* means the metadata originates in a third party technology and a copy is maintained through an [Open Metadata Access Service (OMAS)](/services/omas). Typically, the OMAS is called via an [Integration Daemon](/concepts/integration-daemon).  The metadata collection id and name is defined in Open Metadata as the [unique identifier, or GUID,](/concepts/guid) and [unique name, or qualified name,](/concepts/referenceable) of a [Software Capability](/concepts/software-capability) representing the source technology.
   
 * *Configuration* means the metadata comes from a [Configuration Document](/concepts/configuration-document).  Configuration documents control the capabilities of an [OMAG Server](/concepts/omag-server).  This metadata is maintained through Egeria's [Administration Services](/guides/admin/overview).
   

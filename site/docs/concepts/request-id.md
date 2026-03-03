@@ -189,7 +189,7 @@ Request ids are also stored in the header of elements in the open metadata repos
 }
 ```
 
-In this example, there is one entity with two attached classifications and they all have a last request id of 'b905da3f-9562-443a-88c4-4a9d3104ce4e'.  Since they are also at version 1, then they were probably all created as part of the same request.
+In this example, there is one entity with two attached classifications and they all have a last request id of `b905da3f-9562-443a-88c4-4a9d3104ce4e`.  Since they are also at version 1, then they were probably all created as part of the same request.
 
 
 

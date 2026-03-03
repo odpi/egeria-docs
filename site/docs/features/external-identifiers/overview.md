@@ -47,7 +47,7 @@ Figure 3 shows the external identifier `123` for the database linked to three op
 > **Figure 3:** One external metadata element mapping to many open metadata instances
 
 
-The use of external identifiers is particularly important to the [integration connectors](/concepts/integration-connector) running in the [Open Metadata Integration Services (OMISs)](/services/omis), where the ability to maintain consistent metadata stores in both open metadata and third party systems and tools is important.
+The use of external identifiers is particularly important to the [integration connectors](/concepts/integration-connector) running in the [integration daemons](/concepts/integration-daemon), where the ability to maintain consistent metadata stores in both open metadata and third party systems and tools is important.
 
 ## Open metadata representation
 

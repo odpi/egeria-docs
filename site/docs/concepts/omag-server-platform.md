@@ -12,7 +12,6 @@ The other services are configured and activated in OMAG Servers using the [admin
 * The [Open Metadata Repository Services (OMRS)](/services/omrs) (any type of server), 
 * The [Open Metadata Access Services (OMASs)](/services/omas) (for [metadata access servers](/concepts/metadata-access-servers)), 
 * The [Open Metadata Engine Services (OMESs)](/services/omes) (for [engine host](/concepts/engine-host) servers), 
-* The [Open Metadata Integration Services (OMISs)](/services/omis) (for [integration daemon](/concepts/integration-daemon) servers) and 
 * The [Open Metadata View Services (OMVSs)](/services/omvs) (for [view servers](/concepts/view-servers)).
 
 Each server is configured to support specific set of Egeria services and connect to a specific set of metadata resources.   When it runs, each server is isolated within the platform and so the OMAG Server Platform can be used to support [multi-tenant :material-dock-window:](https://en.wikipedia.org/wiki/Multitenancy){ target=wikipedia } operation for a cloud service, or host a variety of different OMAG Servers needed at a particular location.

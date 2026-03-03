@@ -45,7 +45,7 @@ The platform's configuration is not stored - it needs to be added/updated each t
 
         !!! post "POST - configure the configuration document store connector"
             ```
-            {{platformURLRoot}}/open-metadata/platform-services/users/{{adminUserId}}/stores/connection
+            {{platformURLRoot}}/open-metadata/platform-services/stores/connection
             ```
         
             The request body should be a connection object used to create the connector to the configuration
@@ -94,7 +94,7 @@ It is possible to query the setting of the configuration document store connecto
 
 !!! get "GET - retrieve configured configuration document store"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/stores/connection
+    {{platformURLRoot}}/open-metadata/admin-services/stores/connection
     ```
 
 ??? success "Response indicating default configuration store (encrypted JSON file store)"
@@ -132,7 +132,7 @@ It is also possible to remove the configuration for the connector using the foll
 
 !!! delete "DELETE - remove configured configuration store"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/stores/connection
+    {{platformURLRoot}}/open-metadata/admin-services/stores/connection
     ```
 
 This reverts the store to the default encrypted JSON file store.

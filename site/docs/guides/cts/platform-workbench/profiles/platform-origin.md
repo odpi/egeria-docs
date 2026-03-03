@@ -9,7 +9,7 @@ Governance (OMAG) Server Platform](/concepts/omag-server-platform) is able to re
 ## Origin identifier
 
 The open metadata standards defines a `getServerOrigin`
-operation (`../open-metadata/admin-services/users/{{adminUserId}}/server-platform-origin`).
+operation (`../open-metadata/admin-services/server-platform-origin`).
 This operation returns an origin descriptor.
 Typically, this identifies the vendor, product name and version of the server.
 It is useful to administrators to be able to validate the platform that is running.
@@ -21,7 +21,7 @@ This is the test case that validates whether the operation is present.
 Validate the retrieval of the origin descriptor from the server platform that hosts one or more open metadata
 repositories and/or servers.
 
-This test uses the getServerPlatformOrigin operation (`../open-metadata/platform-services/users/{{adminUserId}}/server-platform-origin`)
+This test uses the getServerPlatformOrigin operation (`../open-metadata/platform-services/server-platform-origin`)
 operation to test that the platform knows its origin descriptor.
 
 ???+ assertion "Assertions"

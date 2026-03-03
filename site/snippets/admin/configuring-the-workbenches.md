@@ -13,7 +13,7 @@ To run a metadata repository through the Repository Workbench, first configure a
 
 !!! post "POST - configure repository workbench"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/users/{{adminUserId}}/servers/cts/conformance-suite-workbenches/repository-workbench/repositories
+    {{platformURLRoot}}/open-metadata/admin-services/servers/cts/conformance-suite-workbenches/repository-workbench/repositories
     ```
 
     Send the repository workbench configuration as the request body, similar to the following:

@@ -23,7 +23,7 @@ The developer guide is organized as follows:
 
 - [Adding your own registered services](#adding-registered-services) - Extending Egeria by adding new [registered services](/concepts/omag-subsystem/#registered-services).
 
-- [Build considerations](#build-considerations) - Best practises for building extensions to Egeria.
+- [Build considerations](#build-principles) - Best practises for building extensions to Egeria.
 
 
 ## Working with the open metadata and governance APIs
@@ -285,10 +285,10 @@ It focuses on providing five types of integration interfaces.
 
 - [Connectors](#what-is-a-connector) that translate between third party APIs and open metadata APIs. These connectors are hosted in the Egeria servers and support the active exchange of metadata with these technologies.
 - [Connectors](/guides/developer/using-connectors) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
-- [Java clients](#using-the-clients) for applications to call the [Open Metadata Access Service (OMAS)](/services/omas) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
-- [REST APIs](#using-the-rest-apis) for the Egeria Services. These include the [access services](/services/omas), admin services and [platform services](/services/platform-services/overview).
+- Python clients for applications to call the [REST](/services/omvs) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
+- [REST APIs](/services/omvs) for the Egeria Services. These include the [access services](/services/omas), admin services and [platform services](/services/platform-services/overview).
 - Kafka topics with JSON payloads for asynchronous communication (both in and out) with the open metadata ecosystem.
-  [Learn more ...](/services/omas)
+  [Learn more ...](/concepts/out-topic)
 
 
 --8<-- "snippets/abbr.md"

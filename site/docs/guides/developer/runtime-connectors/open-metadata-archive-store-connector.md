@@ -3,12 +3,8 @@
 
 # Writing Open Metadata Archive Store Connectors
 
----8<-- "snippets/connectors/open-metadata-archive-store-connector-intro.md"
 
-## Interface and Base Classes
-
-
-The definition of the open metadata archive connector interface is defined in the *repository-services-api* module in the [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore){ target=gh } Java package.
+The definition of the [open metadata archive connector](/concepts/open-metadata-archive-store-connector) interface is defined in the *repository-services-api* module in the [org.odpi.openmetadata.repositoryservices.connectors.stores.archivestore :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore){ target=gh } Java package.
 
 Its interface is called [`OpenMetadataArchiveStore` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/archivestore/OpenMetadataArchiveStore.java){ target=gh }
 

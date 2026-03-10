@@ -3,15 +3,12 @@
 
 # Writing Audit Log Destination Connectors
 
----8<-- "snippets/connectors/audit-log-destination-connector-intro.md"
-
-## Interface and Base Classes
 
 The [audit log](/concepts/audit-log) running in an [OMAG Server](/concepts/omag-server) is implemented by the [Open Metadata Repository Services (OMRS)](/services/omrs).  It is called `OMRSAuditLog` and is an extension to the `AuditLog` interface defined in the [Audit Log Framework (ALF)](/frameworks/alf/overview).  The ALF supports an audit log with a single destination.  The OMRS extends this capability by implementing the ALF destination as an audit log record distributor that passes audit log records to each of the audit log destination connectors configured in the OMAG Server, depending on the severity of the audit log record and the connector's supported severities.
 
 The OMRS also defines the list of severities used by Egeria and extends the audit log record to include details of the originating server.  It adds these values to each audit log record before it is passed to any of the audit log destination connectors.
 
-The audit log destination connector interface is defined in the *repository-services-api* module in the [org.odpi.openmetadata.repositoryservices.connectors.stores.auditlogstore :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/auditlogstore){ target=gh } Java package.
+The [audit log destination connector](/concepts/audit-log-destination-connector) interface is defined in the *repository-services-api* module in the [org.odpi.openmetadata.repositoryservices.connectors.stores.auditlogstore :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/auditlogstore){ target=gh } Java package.
 
 In that package you will see the following Java classes:
 

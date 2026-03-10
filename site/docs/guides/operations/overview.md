@@ -59,9 +59,9 @@ It is possible to load an [Open Metadata Archive](/concepts/open-metadata-archiv
 
 * [Adding an Open Metadata Archive to a running Metadata Access Store](#adding-an-archive-to-a-running-metadata-access-store)
 
-In addition there are different platform services that can be used to find out more about the operation of the servers.
+In addition, there are different platform services that can be used to find out more about the operation of the servers.
 
-* [Querying the servers and services running in an OMAG Server Platform](#querying-an-omag-server-and-services)
+* [Querying the servers and services running in an OMAG Server Platform](#querying-an-omag-server-and-its-services)
 
 Egeria also has an interactive graph-based user interface (UI) that enables you to explore the open metadata ecosystem.  This includes the OMAG Server Platforms and Servers, the types of metadata supported by each metadata repository and the contents of the metadata repositories. It is also possible to maintain the configuration of the OMAG Servers through this UI.
 

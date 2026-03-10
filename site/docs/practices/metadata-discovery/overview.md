@@ -22,9 +22,6 @@ The analysis results documented in the survey report report can either be [autom
 
 Discovery and stewardship are the most advanced form of automation for asset cataloging. Egeria provides the server runtime environment and component framework to allow third parties to create survey action services and governance action implementations. It has only simple implementations of these components, mostly for demonstration purposes. This is an area where vendors and other open source projects are expected to provide additional value.
 
-## Survey action services
-
----8<-- "snippets/connectors/survey-action-service-intro.md"
 
 ## Inside the survey report
 

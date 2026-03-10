@@ -3,13 +3,7 @@
 
 # Writing a Survey Action Service
 
----8<-- "snippets/connectors/survey-action-service-intro.md"
----8<-- "snippets/connectors/survey-action-pipeline-intro.md"
-
-
-## Implementing survey action services
-
-A survey action service is implemented as a specialized [Open Connector Framework (OCF)](/frameworks/ocf/overview) connector. This means it has two parts to it: a *connector provider* that is responsible for creating a new instance of the survey action service and the *survey action service implementation* (that is the *connector implementation* in the OCF terminology.)  
+A [survey action service](/concepts/survey-action-service) is implemented as a specialized [Open Connector Framework (OCF)](/frameworks/ocf/overview) connector. This means it has two parts to it: a *connector provider* that is responsible for creating a new instance of the survey action service and the *survey action service implementation* (that is the *connector implementation* in the OCF terminology.)  
 
 ### Dependencies
 
@@ -187,7 +181,7 @@ This base class handles the survey context, any nested connectors and the audit 
 
 * `auditLog` - audit logging destination.
 
-* `embeddedConnectors` - connectors created from connections nested in the survey action service connection.  These connectors are typically survey action services that are embedded because this survey action service is an [survey action pipeline](#survey-action-pipelines).
+* `embeddedConnectors` - connectors created from connections nested in the survey action service connection.  These connectors are typically survey action services that are embedded because this survey action service is a survey action pipeline.
 
 
 There are two methods that you need to implement:

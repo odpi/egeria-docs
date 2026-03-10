@@ -3,11 +3,7 @@
 
 # Writing a Governance Action Service
 
---8<-- "snippets/connectors/governance-action-service-intro.md"
-
-## Governance action context
-
-A governance action service is passed a context as it is started. This provides access to the [request type and associated request parameters (name-value pairs)](/concepts/governance-request-type) used to invoke the governance action service, along with its [action targets](/concepts/action-target).  There is also a client to access open metadata through the Governance Server OMAS.
+A [governance action service](/concepts/governance-action-service) is passed a context as it is started. This provides access to the [request type and associated request parameters (name-value pairs)](/concepts/governance-request-type) used to invoke the governance action service, along with its [action targets](/concepts/action-target).  There is also a client to access open metadata through the Governance Server OMAS.
 
 ![Structure of the governance context](/frameworks/ogf/governance-action-service-with-context.svg)
 

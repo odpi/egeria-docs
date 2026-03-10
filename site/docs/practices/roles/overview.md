@@ -91,7 +91,7 @@ Roles that occur when governance programs are in place:
     ### Governance Officer Role
     
     A person who is responsible for leading a governance domain is called a governance officer.
-    The governance officer is supported by the [Governance Officer](/concepts/omvs/governance-officer/overview) API.
+    The governance officer is supported by the [Governance Officer](/services/omvs/governance-officer/overview) API.
     Below are specific examples of governance officers.
 
     ??? tip "Data Officer Role."
@@ -150,7 +150,7 @@ Roles that lead in data privacy discussions:
     
     ![Icon](privacy-officer-role.png)
     
-    The privacy officer sets and enforces policies to establish and manage data rights of data subjects base on the expressed intent of the data subjects and in accordance to regulations and company policies.  They are a [Governance Officer](#governance-officer) that leads the privacy governance domain.
+    The privacy officer sets and enforces policies to establish and manage data rights of data subjects base on the expressed intent of the data subjects and in accordance to regulations and company policies.  They are a [Governance Officer](#governance-officer-role) that leads the privacy governance domain.
     #### Further information
     
     * [Data Privacy Pack](/practices/data-privacy-pack/overview)

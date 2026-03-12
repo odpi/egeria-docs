@@ -13,12 +13,10 @@ The individual tutorials focus on a specific tool, or group of related tasks.  T
 
 - [Git and GitHub](/education/tutorials/git-and-git-hub-tutorial/overview)
 - [Using IntelliJ](/education/tutorials/intellij-tutorial/overview)
-- [Using Kubernetes](/guides/operations/kubernetes)
 - [Using Docker](/education/tutorials/docker-tutorial/overview)
 - [Using Postman](/education/tutorials/postman-tutorial/overview)
 - [Using Kafka](/education/tutorials/kafka-tutorial/overview)
 - [Building Egeria](/education/tutorials/building-egeria-tutorial/overview)
-- [Working with Egeria's Clients](/education/tutorials/omag-client-tutorial)
 - [Working with OMAG Servers](/education/tutorials/omag-server-tutorial/overview)
 - [Running Egeria's Samples](/education/tutorials/running-samples-tutorial)
 - [Testing Egeria](/education/tutorials/testing-egeria-tutorial)

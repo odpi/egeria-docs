@@ -19,7 +19,7 @@ that are used in the governance controls for the data governance domain.
 
 ![UML](0422-Governed-Data-Classifications.svg)
 
-The values used in *statusIdentifier*, *levelIdentifier*, *severityIdentifier* and *basisIdentifier* are define using
+The values used in *statusIdentifier*, *levelIdentifier*, *severityLevelIdentifier* and *basisIdentifier* are define using
 [Valid Metadata Values](/guides/planning/valid-values/overview).
 
 

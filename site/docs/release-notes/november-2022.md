@@ -79,7 +79,7 @@ The big event this month was the new *Metadata Governance Dojo*.  We held two li
 
 Over the last few community meetings ...
 
-* We reviewed the use cases and requirements for our Kubernetes support. Nigel Jones has [two helm charts](/guides/operations/kubernetes/overview) plus an operator in development.  We concluded that the helm charts should focus on helping people get Egeria up and running for demos, education and evaluation purposes.  The operator should focus on supporting production use.
+* We reviewed the use cases and requirements for our Kubernetes support. Nigel Jones has two helm charts plus an operator in development.  We concluded that the helm charts should focus on helping people get Egeria up and running for demos, education and evaluation purposes.  The operator should focus on supporting production use.
 * Juergen Hemelt described the connectors the Atruvia and IBM have built to support their cataloguing of event schemas and topics. [Recording](https://wiki.lfaidata.foundation/display/EG/2022-11-23+CM+-+Atruvia+demo+of+Event+schema+and+Dataskop+Egeria+Connectors)
 * We reviewed the [content packs](https://github.com/odpi/egeria/tree/main/content-packs) that supply sample for the labs and default metadata for normal operations.
 

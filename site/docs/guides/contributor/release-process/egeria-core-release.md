@@ -4,12 +4,12 @@
 ### Egeria Core Release process
 
 #### Obtaining releases / artifacts for Core Egeria
-| Location                                                                                                                       | Usage                                                                                                                                                              |
-|--------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Maven Central core Egeria release :material-dock-window:](https://mvnrepository.com/artifact/org.odpi.egeria){ target=maven } | typically used by other developers integrating with our code                                                                                                       |
-| [Github core Egeria Release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }                           | source code in `zip` and `tar.gz` formats                                                                                                                          |
-| `git`                                                                                                                          | `git checkout Vx.y` to get version as-shipped (each release is tagged at the point it is shipped)                                                                  |
-| [Container images :material-dock-window:](https://quay.io/odpi){ target=quay }                                                 | Ready to run container images for egeria platform & supporting tasks. Can use directly, and also used from our [Helm charts](/guides/operations/kubernetes/charts) |
+| Location                                                                                                                       | Usage                                                                                             |
+|--------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| [Maven Central core Egeria release :material-dock-window:](https://mvnrepository.com/artifact/org.odpi.egeria){ target=maven } | typically used by other developers integrating with our code                                      |
+| [Github core Egeria Release :material-github:](https://github.com/odpi/egeria/releases){ target=gh }                           | source code in `zip` and `tar.gz` formats                                                         |
+| `git`                                                                                                                          | `git checkout Vx.y` to get version as-shipped (each release is tagged at the point it is shipped) |
+| [Container images :material-dock-window:](https://quay.io/odpi){ target=quay }                                                 | Ready to run container images for egeria platform & supporting tasks.                             |
 
 ### Core Egeria Release process
 

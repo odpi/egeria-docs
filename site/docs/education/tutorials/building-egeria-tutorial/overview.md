@@ -7,7 +7,7 @@ Egeria is an open source project that is delivered both as source code as well a
 
 This tutorial will guide you through the process of downloading the core Egeria source code from [GitHub](https://github.com/) and building it so that you can install and run it on your local machine.  
 
-Alternatively you can also use [Kubernetes](/guides/operations/kubernetes) to run Egeria.  This uses the published builds of Egeria and does not require you to build Egeria on your machine.
+Alternatively you can also use [Egeria Workspaces](/egeria-workspaces) to run Egeria.  This uses the published builds of Egeria and does not require you to build Egeria on your machine.
 
 ## Prerequisite technology for building Egeria
 

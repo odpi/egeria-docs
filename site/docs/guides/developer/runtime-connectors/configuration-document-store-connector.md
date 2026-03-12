@@ -3,11 +3,8 @@
 
 # Writing Configuration Document Store Connectors
 
----8<-- "snippets/connectors/configuration-document-store-connector-intro.md"
-
-## Configuration document store connector interface
     
-The [admin-services-api :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/admin-services/admin-services-api){ target=gh } module provides the interface definition for this connector. Its interface is simple -- consisting of save, retrieve and delete operations:
+The [admin-services-api :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/admin-services/admin-services-api){ target=gh } module provides the interface definition for a [configuration document store connector](/concepts/configuration-document-store-connector). Its interface is simple -- consisting of save, retrieve and delete operations:
 
 ```java
 /**

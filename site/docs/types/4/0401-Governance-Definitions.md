@@ -8,7 +8,11 @@ Egeria aims to unify the metadata and governance activity across these governanc
 
 ![UML](0401-Governance-Definitions.svg)
 
-## GovernanceDomain enumeration
+
+
+## GovernanceDefinition entity
+
+*GovernanceDefinition* describes an aspect of a governance program. They are authored in the metadata repository. They inherit from [AuthoredReferenceable](/types/0/0010-Base-Model), which means they have a unique identifier and link to external references for more information.
 
 The *GovernanceDomain* enumeration provides a default list of the different types of governance domains that can be unified by Egeria. Notice that there are obvious overlaps and linkages between the domains:
 
@@ -22,9 +26,8 @@ The *GovernanceDomain* enumeration provides a default list of the different type
 
 These values are set up as the valid values for the *domainIdentifier* attribute by the [Core Content Pack](/content-packs/core-content-pack/overview).
 
-## GovernanceDefinition entity
+### GovernanceDefinition subtypes
 
-*GovernanceDefinition* describes an aspect of a governance program. They are authored in the metadata repository. They inherit from [AuthoredReferenceable](/types/0/0010-Base-Model), which means they have a unique identifier and link to external references for more information.
 
 The governance definitions are organized into specific subtypes and linked together to provide a complete description of the governance program.  The types for these more specialized definitions can be found on the following pages:
 

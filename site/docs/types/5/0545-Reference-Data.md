@@ -18,7 +18,17 @@ Valid values can also be used as tags to indicate that an element has a particul
 
 ## ValidValueDefinition entity
 
-The *ValidValueDefinition* is a [Referenceable](/types/0/0010-Base-Model) that stores a single valid value.  It has many purposes that are reflected in its subtypes.
+The *ValidValueDefinition* is an [AuthoredReferenceable](/types/0/0010-Base-Model) that stores a single valid value.  It adds the following properties:
+
+* *namespacePath* - for storing the root of the properties path name if applicable.
+* *usage* - describes the intended use of the valid value.
+* *dataType* - the type of value that this valid value represents.
+* *scope* - the scope that this value is valid for.
+* *preferredValue* - the actual value to use.
+* *ordinal* - an integer used to sequence the valid values in a set.
+* *isCaseSensitive* - indicates whether the value is case sensitive. 
+
+This type of entity has many purposes that are reflected in its subtypes.
 
 ### ReferenceDataValue entity
 
@@ -54,6 +64,12 @@ Code tables group related code values together to act as a look-up table.  The *
 Some code values need to be organized into a hierarchy.  The *ValidValueMember* allows a *ValidValuesSet* to be nested inside another *ValidValuesSet* to form a hierarchy.
 
 ![Hierarchical information codes](/features/reference-data-management/hierarchical-information-codes.svg)
+
+The attributes of the *ValidValueMember* relationship are:
+
+* *ordinal* - an integer used to sequence the valid values in a set.  This overrides the ordinal in the valid value.
+* *isDefaultValue* - an integer used to sequence the valid valid values in a set.
+
 
 ## ValidValuesAssignment relationship
 

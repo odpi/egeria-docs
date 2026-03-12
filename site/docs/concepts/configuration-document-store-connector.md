@@ -3,7 +3,12 @@
 
 # Configuration Document Store Connector
 
----8<-- "snippets/connectors/configuration-document-store-connector-intro.md"
+The configuration store connectors contain the connector implementations that manage the storage of [Configuration Documents](/concepts/configuration-document) for [OMAG Servers](/concepts/configuration-document).
+
+![Configuration Document Store Connector](configuration-document-store-connector.svg)
+
+There is one configuration document store connector defined for each [OMAG Server Platform](/concepts/omag-server-platform).
+
 
 
 The configuration document's persistence is managed by the [configuration document store connector](/concepts/configuration-document-store-connector).
@@ -14,7 +19,7 @@ Configuration documents may contain security certificates and passwords and so s
 
 
 ??? question "Configuration document store connector interface"
-The [admin-services-api :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/admin-services/admin-services-api){ target=gh } module provides the interface definition for this connector. Its interface is simple -- consisting of save, retrieve and delete operations:
+    The [admin-services-api :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/admin-services/admin-services-api){ target=gh } module provides the interface definition for this connector. Its interface is simple -- consisting of save, retrieve and delete operations:
 
     ```java
     /**
@@ -46,19 +51,20 @@ The [admin-services-api :material-github:](https://github.com/odpi/egeria/tree/m
     }
     ```
 
-The configuration document is represented by the `OMAGServerConfig` structure. The name of the server is stored in the `localServerName` property in `OMAGServerConfig`.
+The configuration document is represented by the [`OMAGServerConfig`](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/configuration/properties/OMAGServerConfig.html) structure. The name of the server is stored in the `localServerName` property in `OMAGServerConfig`.
 
 ### Sample implementations
 
-The implementations of this connector provided by Egeria are found in the [configuration-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh } module. There are two connectors:
+This is the standard implementation of the configuration document store connector provided by Egeria.
 
-- [configuration-file-store-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector){ target=gh } supports managing the open metadata configuration as a clear text JSON file.
-- [configuration-encrypted-file-store-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector){ target=gh } supports managing the open metadata configuration as an encrypted JSON file.
 
-It is also possible to [write your own implementation](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh }.
+* **[File Configuration Store :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector){ target=gh }** stores each configuration document as a clear text JSON file.
 
-### Configuring the connector
 
-See [configuring the configuration document store](/guides/admin/configuring-the-omag-server-platform/#configuration-store) for the command to install a particular configuration document store connector into the OMAG Server Platform.
+??? education "Further information relating to Configuration Document Store Connectors"
+
+    - [Configuring a Configuration Document Store Connector](/guides/admin/configuring-the-omag-server-platform/#configuration-store) in the [OMAG Server Platform](/concepts/omag-server-platform)
+    - [Writing a Configuration Document Store Connector](/guides/developer/runtime-connectors/configuration-document-store-connector).
+
 
 --8<-- "snippets/abbr.md"

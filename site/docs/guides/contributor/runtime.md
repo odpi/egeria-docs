@@ -60,7 +60,7 @@ Shutting down Kafka:
 
 [Docker :material-dock-window:](https://www.docker.com){ target=docker } is a [simple container runtime and standard :material-dock-window:](https://www.docker.com/why-docker){ target=docker }. Every day, the Egeria build processing creates a Docker image of Egeria and pushes it to the public Docker catalog called [*Docker Hub* :material-dock-window:](https://hub.docker.com/r/odpi/egeria){ target=docker }.
 
-This docker image provides a simple way to bring a runnable version of Egeria onto your machine without any additional dependencies aside from Docker itself. It also provides the basis for a [Kubernetes](#kubernetes) deployment of Egeria.
+This docker image provides a simple way to bring a runnable version of Egeria onto your machine without any additional dependencies aside from Docker itself. It also provides the basis for a Kubernetes deployment of Egeria.
 
 The **Overview** tab describes the docker container.
 
@@ -89,13 +89,9 @@ Once it is installed, it can be launched like any other application, such as thr
 
 Kubernetes is an open source project managed by the [Cloud Native Computing Foundation :material-dock-window:](https://www.cncf.io/){ target=cncf }.
 
-Egeria uses Kubernetes to run all the components in the [Coco Pharmaceuticals hands-on labs](/education/open-metadata-labs/overview).
-
 ## Helm
 
 [Helm :material-dock-window:](https://helm.sh){ target=helm } is a package manager for [Kubernetes](#kubernetes). Through Helm, a *chart* can be used to deploy multiple containers and other related components as a single deployable unit. This makes it one simple step to deploy what may otherwise be a complex solution composed of multiple runtimes (like Egeria's [OMAG Server Platform](/concepts/omag-server-platform), [Apache Kafka](#apache-kafka), [JupyterHub](#jupyter-notebooks), and so on) -- without needing to obtain or download all the various runtimes, know how to operate them, and so on.
-
-The Egeria team maintains an [`odpi-egeria-lab` Helm chart :material-github:](https://github.com/odpi/egeria-charts){ target=gh } that can be used to automatically deploy all the components necessary to run through the [open metadata labs](/education/open-metadata-labs/overview).
 
 ## Spring
 

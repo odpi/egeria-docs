@@ -18,7 +18,7 @@ This page takes you through the different options for building and running egeri
 
 ## Using the standard docker container on docker hub
 
-This docker image provides a simple way to bring a runnable version of Egeria onto your machine.  It also provides the basis for a [Kubernetes](/guides/operations/kubernetes) deployment of Egeria.
+This docker image provides a simple way to bring a runnable version of Egeria onto your machine.  It also provides the basis for a Kubernetes deployment of Egeria.
 
 The docker catalog page for egeria is at [https://hub.docker.com/r/odpi/egeria](https://hub.docker.com/r/odpi/egeria). The **Overview** tab describes the docker container.
 

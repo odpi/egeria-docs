@@ -69,7 +69,7 @@ Governance covers both the employees and the organization's resources. Often the
 * Privacy is governed by the privacy team
 * Security is governed by the security compliance team
 
-However, their work is inter-related and [follows a common pattern](#governing-systems).
+However, their work is inter-related and [follows a common pattern](#delivering-governance-through-the-governing-systems).
 
 
 ## Governance of data

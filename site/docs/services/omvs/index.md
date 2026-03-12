@@ -60,6 +60,11 @@ The specialized APIs are as follows.  They focus on supporting specific types of
 | [Subject Area](/services/omvs/subject-area/overview)                 | **Maintain the metadata about subject areas.**                                           | The Subject Area API is a REST API relating to the definition and display of Subject Area definitions.                                                                                                                                                                                                                                      |
 | [Template Manager](/services/omvs/template-manager/overview)         | **Create and maintain templates used to create new metadata elements.**                  | The Template Manager API is a REST API that support the management of templates that are used when creating new metadata.                                                                                                                                                                                                                   |
 
+## API Options
+
+Each API request passes a request body that identifies the options and optional properties for the request. The diagram below show how the different types of options are related.
+
+![API Options](api-options.svg)
 
 
 ## Inside an API

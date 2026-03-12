@@ -3,7 +3,7 @@
 
 site_name: The Egeria Project
 site_description: Metadata and context interoperability between people, tools and platforms for AI and Data Science
-copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2025 contributors to the Egeria project."
+copyright: "License: <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>, &copy; 2018-2026 contributors to the Egeria project."
 repo_name: odpi/egeria
 repo_url: https://github.com/odpi/egeria
 linkedin_url: https://www.linkedin.com/company/92876603/admin/page-posts/published
@@ -99,78 +99,28 @@ nav:
               - Open Metadata Types: content-packs/types-content-pack/overview.md
           - Connector Catalog:
               - Connector Overview: connectors/index.md
-              - Secrets Store:
-                  - YAML File: connectors/secrets/yaml-file-secrets-store-connector.md
-              - Metadata Security:
-                  - Open Metadata Access: connectors/metadata-security/open-metadata-access-security-connector.md
-              - Files:
-                  - Any File:
-                      - Read File Contents: connectors/resource/basic-file-resource-connector.md
-                      - Move/Copy File Provisioning: connectors/governance-action/move-copy-file-provisioning-governance-action-service.md
-                  - File Folders (directories):
-                      - Read Files: connectors/resource/basic-folder-resource-connector.md
-                      - Catalog Files: connectors/integration/data-files-monitor-integration-connector.md
-                      - Watch Folders: connectors/governance-action/generic-folder-watchdog-governance-action-service.md
-                  - CSV Files:
-                      - Read File Contents: connectors/resource/csv-file-resource-connector.md
-                  - Data Folders:
-                      - Read File Contents: connectors/resource/data-folder-resource-connector.md
-                      - Maintain Last Update: connectors/integration/data-folder-monitor-integration-connector.md
-                  - Open Metadata Archive Files:
-                      - Read OMArchive Files: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
-              - Relational Databases:
-                  - JDBC DataSource API: connectors/resource/jdbc-resource-connector.md
-                  - Catalog JDBC Database: connectors/integration/jdbc-integration-connector.md
-                  - PostgreSQL:
-                        - Metadata Synchronization: connectors/databases/postgres-database-server-integration-connector.md
-                        - Survey PostgreSQL Server: connectors/databases/postgres-database-server-survey-action-service.md
-                        - Survey PostgreSQL Database: connectors/databases/postgres-database-survey-action-service.md
-              - Unity Catalog:
-                  - Unity Catalog Overview: connectors/unity-catalog/index.md
-                  - Call API: connectors/unity-catalog/resource-connector.md
-                  - Synchronize Server: connectors/unity-catalog/sync-server-connector.md
-                  - Synchronize Catalog: connectors/unity-catalog/sync-catalog-connector.md
-                  - Survey Server: connectors/unity-catalog/server-survey-service.md
-                  - Survey Catalog: connectors/unity-catalog/catalog-survey-service.md
-                  - Survey Schema: connectors/unity-catalog/schema-survey-service.md
-              - Apache Kafka:
-                  - JSON Plain Text Events: connectors/resource/kafka-open-metadata-topic-connector.md
-                  - Sample Lineage Event Receiver: connectors/integration/sample-lineage-event-receiver-integration-connector.md
-                  - Catalog Kafka Topics: connectors/integration/kafka-monitor-integration-connector.md
-                  - Audit Kafka Topics: connectors/integration/kafka-topics-audit-integration-connector.md
-              - Apache Atlas Server:
-                  - Call API: connectors/apache-atlas/apache-atlas-rest-connector.md
-                  - Survey: connectors/apache-atlas/apache-atlas-survey-action-service.md
-                  - Catalog: connectors/apache-atlas/apache-atlas-catalog-integration-connector.md
-              - Governance Actions:
-                  - Generic Element Watchdog: connectors/governance-action/generic-element-watchdog-governance-action-service.md
-                  - Origin Seeker: connectors/governance-action/origin-seeker-remediation-governance-action-service.md
-                  - Zone Publisher: connectors/governance-action/zone-publisher-governance-action-service.md
-              - Open APIs:
-                  - Catalog APIs via Swagger: connectors/integration/open-api-monitor-integration-connector.md
-              - Egeria Infrastructure:
-                  - OMAG Server Platform:
-                      - Catalog Servers: connectors/integration/egeria-infrastructure-cataloguer-integration-connector.md
-              - Open Lineage standard:
-                  - Open Lineage Event Receiver: connectors/integration/open-lineage-event-receiver-integration-connector.md
-                  - Open Lineage API Log Store: connectors/integration/api-based-open-lineage-log-store-integration-connector.md
-                  - Open Lineage File Log Store: connectors/integration/file-based-open-lineage-log-store-integration-connector.md
-                  - Open Lineage Cataloguer: connectors/integration/open-lineage-cataloguer-integration-connector.md
-                  - Open Lineage Events from Governance Action: connectors/integration/governance-action-open-lineage-integration-connector.md
-              - Open Metadata Repositories:
-                  - PostgreSQL: connectors/repository/postgres/overview.md
-                  - In-memory: connectors/repository/in-memory/overview.md
-                  - Read-only: connectors/repository/read-only/overview.md
-              - Open Metadata Archive Store:
-                  - JSON File: connectors/runtime/file-based-open-metadata-archive-store-runtime-connector.md
-              - Audit Log Destination:
-                  - Console: connectors/runtime/console-audit-log-destination-connector.md
-                  - Event Topic: connectors/runtime/event-topic-audit-log-destination-connector.md
-              - Cohort Registry Store:
-                  - JSON File: connectors/runtime/file-cohort-registry-store-connector.md
-              - Open Metadata Topic:
-                  - Kafka Open Metadata Topic Connector: connectors/resource/kafka-open-metadata-topic-connector.md
-                  - In Memory Open Metadata Topic Connector: connectors/resource/in-mem-open-metadata-topic-connector.md
+              - Digital Resource Connectors: concepts/digital-resource-connector.md
+              - Governance Services:
+                  - Governance Action Services: concepts/governance-action-service.md
+                  - Repository Governance Service: concepts/repository-governance-service.md
+                  - Survey Action Service: concepts/survey-action-service.md
+                  - Watchdog Action Service: concepts/watchdog-action-service.md
+              - Integration Connectors: concepts/integration-connector.md
+              - REST client connector: concepts/rest-client-connector.md
+              - Runtime Connectors:
+                  - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
+                  - Cohort Member Client Connector: concepts/cohort-member-client-connector.md
+                  - Cohort Registry Store Connector: concepts/cohort-registry-store-connector.md
+                  - Configuration Document Store Connector: concepts/configuration-document-store-connector.md
+                  - Event Mapper Connector: concepts/event-mapper-connector.md
+                  - Open Metadata Archive Store Connector: concepts/open-metadata-archive-store-connector.md
+                  - Open Metadata Topic Connector: concepts/open-metadata-topic-connector.md
+                  - Repository Connector: concepts/repository-connector.md
+              - Security Connectors:
+                  - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
+                  - Secrets Store Connector: concepts/secrets-store-connector.md
+                  - Server Metadata Security Connector: concepts/server-metadata-security-connector.md
+              - Tabular Data Set Connector: concepts/tabular-data-set-connector.md
           - Template Catalog:
               - Template Catalog Overview: catalog-templates/index.md
               - Unity Catalog Templates: catalog-templates/unity-catalog-templates.md
@@ -241,26 +191,8 @@ nav:
                   - View Services: guides/admin/servers/by-section/view-services-section.md
                   - Integration Daemon Services: guides/admin/servers/by-section/integration-daemon-services-section.md
                   - Engine Host Services: guides/admin/servers/by-section/engine-host-services-section.md
-          - Migration: guides/migration/migrating-configuration-documents.md
       - Operations Guide:
           - Operate OMAG Server Platform: guides/operations/overview.md
-          - Operate OMAG Server Runtime: guides/operations/operate-omag-server-starter.md
-          - Egeria in Kubernetes:
-              - Egeria in Kubernetes: guides/operations/kubernetes/index.md
-              - Introduction to Kubernetes: guides/operations/kubernetes/k8s.md
-              - Installing Kubernetes: guides/operations/kubernetes/k8s-install.md
-              - Useful Kubernetes commands: guides/operations/kubernetes/k8s-cmds.md
-              - Introduction to Helm: guides/operations/kubernetes/helm.md
-              - Charts:
-                  - Egeria Chart overview: guides/operations/kubernetes/charts/overview.md
-                  - Base Egeria Chart: guides/operations/kubernetes/charts/base.md
-                  - Coco Pharmaceuticals Lab: guides/operations/kubernetes/charts/lab.md
-                  - CTS Chart: guides/operations/kubernetes/charts/cts.md
-                  - PTS Chart: guides/operations/kubernetes/charts/pts.md
-                  - OMAG Server Runtime Chart: guides/operations/kubernetes/charts/server.md
-              - Container Images: guides/operations/kubernetes/container-images.md
-              - Custom Deployment: guides/operations/kubernetes/custom-deployment.md
-              - Egeria Operator: guides/operations/kubernetes/operator.md
       - Diagnostic Guide:
           - Diagnostic Process: guides/diagnostic/overview.md
           - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
@@ -274,7 +206,6 @@ nav:
           - Tutorials: education/tutorials/index.md
           - Setting up Egeria: education/tutorials/building-egeria-tutorial/overview.md
           - Using Egeria:
-              - Open Metadata Labs: education/open-metadata-labs/overview.md
               - Platform and Servers: education/tutorials/omag-server-tutorial/overview.md
               - Reports and Utilities: education/tutorials/omag-client-tutorial.md
               - Sample Clients: education/tutorials/running-samples-tutorial.md
@@ -288,13 +219,6 @@ nav:
               - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
               - Using Postman: education/tutorials/postman-tutorial/overview.md
               - Using Kafka: education/tutorials/kafka-tutorial/overview.md
-      - Informal Guide to Getting Started: https://getting-started-with-egeria.pdr-associates.com/introduction.html
-      - Webinars: education/webinar-program/overview.md
-      - Comparisons:
-          - Apache Atlas: education/comparisons/apache-atlas.md
-      - Scenarios:
-          - Data Manager Integration: scenarios/data-manager-integration/overview.md
-          - File Lineage: scenarios/file-lineage/overview.md
   - Community:
       - Community Recognition: community/index.md
       - Community Guide: guides/community.md
@@ -692,20 +616,17 @@ nav:
       - Asset: concepts/asset.md
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
-      - Audit Log Destination Connector: concepts/audit-log-destination-connector.md
       - Business Capability: concepts/business-capability.md
       - Catalog Target: concepts/catalog-target.md
       - Catalog Template: concepts/catalog-template.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
       - Cohort Registry: concepts/cohort-registry.md
-      - Cohort Registry Store Connector: concepts/cohort-registry-store-connector.md
       - Collection: concepts/collection.md
       - Comment: concepts/comment.md
       - Community: concepts/community.md
       - Component Description: concepts/component-description.md
       - Configuration Document: concepts/configuration-document.md
-      - Configuration Document Store Connector: concepts/configuration-document-store-connector.md
       - Configuration Properties: concepts/configuration-properties.md
       - Conformance Test Server: concepts/conformance-test-server.md
       - Connection: concepts/connection.md
@@ -727,12 +648,10 @@ nav:
       - Deployed Implementation Type: concepts/deployed-implementation-type.md
       - Digital Product: concepts/digital-product.md
       - Digital Resource: concepts/digital-resource.md
-      - Digital Resource Connector: concepts/digital-resource-connector.md
       - Endpoint: concepts/endpoint.md
       - Engine Action: concepts/engine-action.md
       - Engine Host: concepts/engine-host.md
       - Event Bus: concepts/event-bus.md
-      - Event Mapper Connector: concepts/event-mapper-connector.md
       - External Reference: concepts/external-reference.md
       - Favorite Collections: concepts/favorite-things-collection.md
       - Feedback: concepts/feedback.md
@@ -743,7 +662,6 @@ nav:
       - Governance Action Engine: concepts/governance-action-engine.md
       - Governance Action Process: concepts/governance-action-process.md
       - Governance Action Process Step: concepts/governance-action-process-step.md
-      - Governance Action Service: concepts/governance-action-service.md
       - Governance Action Type: concepts/governance-action-type.md
       - Governance Domain: concepts/governance-domain.md
       - Governance Engine: concepts/governance-engine.md
@@ -762,7 +680,6 @@ nav:
       - Informal Tag: concepts/informal-tag.md
       - Instance Status: concepts/instance-status.md
       - Information Supply Chain: concepts/information-supply-chain.md
-      - Integration Connector: concepts/integration-connector.md
       - Integration Daemon: concepts/integration-daemon.md
       - Integration Group: concepts/integration-group.md
       - Integration Report: concepts/integration-report.md
@@ -793,12 +710,10 @@ nav:
       - Open Lineage Topic: concepts/open-lineage-topic.md
       - Open Metadata and Governance: concepts/open-metadata-and-governance.md
       - Open Metadata Archive: concepts/open-metadata-archive.md
-      - Open Metadata Archive Store Connector: concepts/open-metadata-archive-store-connector.md
       - Open Metadata Ecosystem: concepts/open-metadata-ecosystem.md
       - Open Metadata Exchange Rule: concepts/open-metadata-exchange-rule.md
       - Open Metadata Instance: concepts/open-metadata-instances.md
       - Open Metadata Type Definitions: concepts/open-metadata-type-definitions.md
-      - Open Metadata Topic Connector: concepts/open-metadata-topic-connector.md
       - Organization: concepts/organization.md
       - Out Topic: concepts/out-topic.md
       - Parameters: parameters/overview.md
@@ -809,7 +724,6 @@ nav:
       - Personal Roles: concepts/personal-roles.md
       - Person Role: concepts/person-role.md
       - Placeholders: concepts/placeholder.md
-      - Platform Metadata Security Connector: concepts/platform-metadata-security-connector.md
       - Platform URL Root: concepts/platform-url-root.md
       - Process: concepts/process.md
       - Project: concepts/project.md
@@ -818,9 +732,7 @@ nav:
       - Referenceable: concepts/referenceable.md
       - Report: concepts/report.md
       - Report Type: concepts/report-type.md
-      - Repository Connector: concepts/repository-connector.md
       - Repository Governance Engine: concepts/repository-governance-engine.md
-      - Repository Governance Service: concepts/repository-governance-service.md
       - Repository Helper: concepts/repository-helper.md
       - Repository Proxy: concepts/repository-proxy.md
       - Repository Validator: concepts/repository-validator.md
@@ -828,12 +740,9 @@ nav:
       - Request Id: concepts/request-id.md
       - Resource: concepts/resource.md
       - Resource Use: concepts/resource-use.md
-      - REST client connector: concepts/rest-client-connector.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md
-      - Secrets Store Connector: concepts/secrets-store-connector.md
       - Security Tags: concepts/security-tags.md
-      - Server Metadata Security Connector: concepts/server-metadata-security-connector.md
       - Server Name: concepts/server-name.md
       - Software Capability: concepts/software-capability.md
       - Software Server Capability: concepts/software-server-capability.md
@@ -844,7 +753,6 @@ nav:
       - Subject Area: concepts/subject-area.md
       - Survey Report: concepts/survey-report.md
       - Survey Action Engine: concepts/survey-action-engine.md
-      - Survey Action Service: concepts/survey-action-service.md
       - Tabular Data Set: concepts/tabular-data-set.md
       - Team: concepts/team.md
       - Template: concepts/template.md
@@ -854,7 +762,6 @@ nav:
       - View Server: concepts/view-server.md
       - Virtual Connection: concepts/connection.md
       - Watchdog Action Engine: concepts/watchdog-action-engine.md
-      - Watchdog Action Service: concepts/watchdog-action-service.md
   - Practices:
       - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md

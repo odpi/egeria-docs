@@ -13,21 +13,14 @@ The individual tutorials focus on a specific tool, or group of related tasks.  T
 
 - [Git and GitHub](/education/tutorials/git-and-git-hub-tutorial/overview)
 - [Using IntelliJ](/education/tutorials/intellij-tutorial/overview)
-- [Using Kubernetes](/guides/operations/kubernetes)
 - [Using Docker](/education/tutorials/docker-tutorial/overview)
 - [Using Postman](/education/tutorials/postman-tutorial/overview)
 - [Using Kafka](/education/tutorials/kafka-tutorial/overview)
 - [Building Egeria](/education/tutorials/building-egeria-tutorial/overview)
-- [Working with Egeria's Clients](/education/tutorials/omag-client-tutorial)
 - [Working with OMAG Servers](/education/tutorials/omag-server-tutorial/overview)
 - [Running Egeria's Samples](/education/tutorials/running-samples-tutorial)
 - [Testing Egeria](/education/tutorials/testing-egeria-tutorial)
 
-## Technology comparisons
-
-Sometimes it is useful to learn about a new technology by understanding how it compares to one you are familiar with.  The technology comparisons can be used to map Egeria's functions to the functions of another technology that you might be familiar with.
-
-- [Apache Atlas comparison](/education/comparisons/apache-atlas)
 
 ## Webinars
 

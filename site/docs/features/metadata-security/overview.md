@@ -6,6 +6,22 @@
 
 Open Metadata Security is optional.  When it is activated, it provides fine-grained authorization services for open metadata services, types and instances. Since each organization will have different security requirements, the security support is implemented through connectors. Egeria defines the interfaces and when it will call the connector.  You define the behavior the connector implements, and Egeria acts on the returned decision.
 
+
+## Open Metadata Security Connectors
+
+The connectors that support the security of the open metadata ecosystem are:
+
+* [Secrets Store connectors](/concepts/secrets-store-connector)  manage the retrieval of secrets (passwords, certificates, ...) from secured locations at runtime.
+* [Metadata Security connectors](#metadata-security-connectors) provides authorization support for the OMAG Server Platform and the OMAG Servers that run on it.
+
+### Secrets Stores
+
+[Secrets stores](/concepts/secrets-store-connector) externalize secrets such as passwords, tokens and certificates so they do not need to be stored in either the [configuration document](/concepts/configuration-document) or [open metadata repositories](/concepts/open-metadata-repository).
+
+* The [YAML File Secret Store connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/secrets-store-connectors/yaml-secrets-store-connector) retrieves secret values from YAML files placed in the secure execution environment of the [OMAG Server Platform](/concepts/omag-server-platform).
+
+### Metadata security connectors
+
 The [`metadata-security`](/services/metadata-security-services) module defines the base classes and interfaces for the open metadata security connectors as well as the server implementation to host and call them.
 
 There are two types of connector:
@@ -42,6 +58,12 @@ During a metadata and governance (OMAG) service call to a server, the security i
 > **Figure 3:** layers of security checks within the server
 
 The security connectors are optional.  If they are not defined then there are no additional authorization checks performed inside the OMAG Server Platform nor the OMAG Servers hosted on the platform. As such, it is important that the open metadata platform security connector is configured as soon as the platform is started, and the server security connector is configured before the server is started for the first time.
+
+#### Open Metadata Security Connectors in Egeria
+
+Egeria has a single metadata security connector that implements both interfaces:
+
+* The [Open Metadata Access Security Connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors/open-metadata-access-security-connector) uses information from an embedded [secrets store connector](/concepts/secrests-store-connector) so all authorization decisions can be controlled through the contents of the externalized secrets store.
 
 ## Metadata security APIs
 

@@ -45,6 +45,7 @@ The collection type is generically useful and there are many subtypes that descr
 * [RootCollection](#rootcollection-entity) described a master collection of collections.
 * [SoftwareArchive](/types/0/0030-Hosts-and-Platforms) described a collection of software components.
 * [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components performing a solution.
+* [SecurityList](/types/4/0423-Security-Definitions) represents a group of [users](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.
 * [SubjectArea](/types/4/0425-Subject-Areas) described a collection of elements that describe a subject area.
 * [WorkItemList](#workitemlist-entity) means the collection is a set of elements that have been recently accesses by a user.
 

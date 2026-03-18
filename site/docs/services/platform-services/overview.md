@@ -314,7 +314,7 @@ The server type is derived by the platform services when it starts the server.  
 
 The [OMAG Server Platform](/concepts/omag-server-platform) provides both configuration and diagnostic services for [OMAG Servers](/concepts/omag-server) which in themselves provide access to a wide variety of information and control points.  Therefore, it is necessary to provide authorization services relating to the dynamic management of the platform.
 
-Egeria provides [a platform security authorization capability](/services/metadata-security-services). It is implemented in a [platform metadata security connector](/concepts/platform-metadata-security-connector) that is called whenever requests are made to the server platform services.
+Egeria provides [a platform security authorization capability](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/common-services/metadata-security). It is implemented in a [platform metadata security connector](/concepts/platform-metadata-security-connector) that is called whenever requests are made to the server platform services.
 
 Security is configured for a specific platform once it is running by using the following command.
 

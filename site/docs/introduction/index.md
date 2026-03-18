@@ -9,7 +9,7 @@ Egeria is an open source project from Linux Foundation (LF) AI and Data.  It is 
 
 ## What does Egeria do?
 
-Egeria manages context (linked information) about your organization's digital operations, including your data, systems, projects, locations, processes and the people around them.  In the age of AI, there is increasing recognition that this type of context is key to improving the reliability of AI applications because it helps to identify the scope of what is relevant to the requester.  This is true, of course, however there are many other use cases that make Egeria valuable, including:
+Egeria manages context (linked information) about your organization's digital operations, including your data, systems, projects, locations, processes and the people around them.  In the age of AI, there is increasing recognition that this type of context improves the reliability of AI applications by helping to identify the scope of what is relevant to the requester.  In addition, there are many other use cases that make Egeria valuable, including:
 
 * tradition data quality and finding data through a data catalog; 
 * inventory of IT systems for management and security; 
@@ -20,7 +20,7 @@ Egeria manages context (linked information) about your organization's digital op
 
 ... and many more.  
 
-The design of Egeria recognizes that the breadth and depth of the context needed by an organization varies widely.  Typically, an organization will want to build up their context knowledge base on a project-by-project basis, possibly focusing on a specific part of the organization and use cases.  As time progresses, the richness of the context knowledge base grows.
+The design of Egeria recognizes that the breadth and depth of context needed by an organization varies widely.  Typically, an organization will want to build up their context knowledge base on a project-by-project basis, possibly focusing on a specific part of the organization and use cases.  As time progresses, the richness of the context knowledge base grows.
 
 Egeria benefits individuals and well as organizations.  A person can build their portfolio of expertise and contributions in Egeria.  Individuals and teams can link to one another, share news and information as well as form cross-organization communities.
 

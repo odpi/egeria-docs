@@ -8,7 +8,7 @@ hide:
 
 # 0424 Governance Zones
 
-A **GovernanceZone** entity describes a collection of Assets that are used, or processed in a specific way.
+A **GovernanceZone** entity describes a collection of elements that are used, or processed in a specific way.
 The governance zone definitions define the governance zones in use in the organization and
 how they are used.  It is possible to then attach governance policies and controls to the zone
 definitions using the [GovernedBy](0401-Governance-Definitions.md) relationship to show how elements assigned
@@ -17,7 +17,7 @@ to a zone should be managed and governed.
 Linking the zones in a hierarchy implies that the governance definitions linked to a zone that is higher in
 the hierarchy also apply to all governance zones linked underneath it.
 
-An element may belong to many Governance Zones.  This is defined in the **ZoneMembership** classification.
+An element may belong to many Governance Zones.  This is defined in the *ZoneMembership* classification.
 A classification is used rather than a relationship between the element and GovernanceZoneDefinition to improve
 the performance of the processing since the classification flows with the element.
 
@@ -25,7 +25,20 @@ the performance of the processing since the classification flows with the elemen
 
 There is more information on governance zones in [governance zoning](/features/governance-zoning/overview/).
 
-??? deprecated "Deprecated types"
-    - **ZoneGovernance** - use [GovernedBy](0401-Governance-Definitions.md).
+## GovernanceZone entity
+
+The *GovernanceZone* entity describes a collection of elements that have the same visibility.
+
+## ZoneHierarchy relationship
+
+The *ZoneHierarchy* relationship links a parent zone to its children.
+
+## ZoneMembership classification
+
+The *ZoneMembership* classification is used to record the zones that an element is a member of.
+
+## ZoneMembershipProfile classification
+
+The *ZoneMembershipProfile* classification is used to record the number of elements in the attached governance zone for each open metadata type.
 
 --8<-- "snippets/abbr.md"

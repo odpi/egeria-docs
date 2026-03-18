@@ -148,18 +148,24 @@ platform.default.config.document=${DEFAULT_SERVER_CONFIG}
 
 The [OMAG Server Platform](/concepts/omag-server-platform) provides configuration, operational and diagnostic services for [OMAG Servers](/concepts/omag-server) which in themselves provide access to a wide variety of information and control points.  Therefore, it is necessary to provide authorization services relating to the dynamic management of the platform.
 
-Egeria provides [a platform security authorization capability](/services/metadata-security-services). It is implemented in a [platform metadata security connector](/concepts/platform-metadata-security-connector) that is called whenever requests are made to the server platform services.
+Egeria provides [a platform security authorization capability](/features/metadata-security/overview). It is implemented in a [platform metadata security connector](/concepts/platform-metadata-security-connector) that is called whenever requests are made to the server platform services.
 
 A platform metadata security connector typically needs the following pieces of information:
 
 * `platform.security.provider` - class name of the platform metadata security provider
 * `platform.security.name` - name (or platform URL root) for platform to use in security error messages.
+* `platform.security.secrets.provider` - the provider implementation class for the [secrets store connector](/concepts/secrets-store-connector) that this platform should use.
+* `platform.security.secrets.location` - the location of the secrets store that this platform should use.
+* `platform.security.secrets.collection` - the secrets collection where the user directory is located.
 
-For example, to configure tha [Coco Pharmaceuticals platform metadata security connector](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples) set up the following properties:
+For example, the [default platform metadata security connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors/open-metadata-access-security-connector) is set up as follows:
 
 ```properties
-platform.security.provider=org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider
+platform.security.provider=org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider
 platform.security.name=Coco Pharmaceuticals Platform
+platform.security.secrets.provider=org.odpi.openmetadata.adapters.connectors.secretsstore.yaml.YAMLSecretsStoreProvider
+platform.security.secrets.location=loading-bay/secrets/coco-user-directory.omsecrets
+platform.security.secrets.collection=userDirectory
 ```
 
 ### Auto-starting servers

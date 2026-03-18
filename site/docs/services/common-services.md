@@ -10,7 +10,7 @@ The common services support clients and the registered services that run in the 
 
 * **[Multi-Tenant Services](/services/multi-tenant)** - supports the management of [Open Metadata and Governance (OMAG) Server](/concepts/omag-server) instances running in an [OMAG Server Platform](/concepts/omag-server-platform).
 
-* **[Metadata Security](/services/metadata-security-services)** - supports authorization of access to OMAG Services and specific metadata instances.
+* **[Metadata Security](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/common-services/metadata-security)** - supports authorization of access to OMAG Services and specific metadata instances.
 
 * **[Generic Handlers](/services/generic-handlers)** - supports the management of specific types of open metadata elements.  The generic handlers provide services to translate OMAS requests built around that service's private beans into calls to the repository services (through the repository handler).
 

@@ -34,11 +34,7 @@ The associated measurements for the metric an either be stored in a data source 
 
 ## SecurityAccessControl entity
 
-The *SecurityAccessControl* entity is a TechnicalControl that defines the access control lists that a user must belong to if he/she/it is to be given permission to execute a specific command.
-
-## SecurityGroup entity
-
-The *SecurityGroup* entity represents a group of [actors](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.  This is the distinguished name of the group where authorized users are listed.
+The *SecurityAccessControl* entity is a governance control that defines the access control lists that a user must belong to if he/she/it is to be given permission to execute a specific command.
 
 ## DataLens entity
 

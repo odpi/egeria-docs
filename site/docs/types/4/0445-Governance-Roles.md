@@ -33,7 +33,9 @@ Specific subtypes for GovernanceRole are also defined to group governance roles 
 * *ComponentOwner* - person responsible for a component such as a [software module](/type/2/0281-Software-Modules).
 * *DataItemOwner* - person responsible for the correctness of a particular type of data value throughout its lifetime.  Often these data values flow between systems and the DataItemOwner must be sure it is correct in all places.
 
-*Ownership* is assigned to a resource by adding the *Ownership* classification to it. This classification can assign ownership as an [ActorProfile](/1/0110-Actors), [UserIdentity](/types/1/0110-Actors) or [PersonRole](/types/1/0112-People).
-It does not need to be a *GovernanceRole*.
+## Ownership classification
+
+Ownership is assigned to an element by adding the *Ownership* classification to it. This classification can assign ownership as an [ActorProfile](/1/0110-Actors), [UserIdentity](/types/1/0110-Actors) or [PersonRole](/types/1/0112-People).
+It does not need to be a *GovernanceRole*.  The *userIds* property is used by the security connector if you want to restrict access to the resource based on the ownership.
 
 --8<-- "snippets/abbr.md"

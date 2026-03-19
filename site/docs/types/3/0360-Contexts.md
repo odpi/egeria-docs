@@ -16,7 +16,7 @@ and a relationship called **UsedInContext** to link terms that are relevant in t
 
 The **ContextDefinition** classification indicates that the term describes a context.
     
-Glossary Terms that are relevant in that context are linked to the context definition term using the UsedInContext relationship.
+Glossary Terms that are relevant in that context are linked to the context definition term using the *UsedInContext* relationship.
 
 
 --8<-- "snippets/abbr.md"

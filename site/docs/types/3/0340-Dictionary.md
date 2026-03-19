@@ -7,7 +7,7 @@ The dictionary model adds some basic term classification used to show how partic
 
 ![UML](0340-Dictionary.svg)
 
-## ActivityDescription
+## ActivityDescription classification
 
 *ActivityDescription* is a classification used to indicate that the term describes a verb, or an activity.
 
@@ -31,7 +31,6 @@ ActivityDescription has a single property called `type` which is an enumeration 
 ## DataValue classification
 
 *DataValue*  is a classification that means that the glossary term describes a valid value for a data item.
-
 
 
 --8<-- "snippets/abbr.md"

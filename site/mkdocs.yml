@@ -197,6 +197,8 @@ nav:
           - Diagnostic Process: guides/diagnostic/overview.md
           - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
           - First failure data capture (FFDC): guides/diagnostic/ffdc.md
+          - Tracing REST Calls: guides/diagnostic/tracing-rest-calls.md
+          - Logon Problems: guides/diagnostic/logon-problems.md
           - Server Diagnostic Guides:
               - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md

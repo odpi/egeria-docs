@@ -3,25 +3,30 @@
 
 # Content Packs
 
-The Egeria content packs provide a means to distribute standard metadata to different organizations. They are formatted as [Open Metadata Archives](/concepts/open-metadata-archive) and can be loaded using at server start up (see [Configuring the Start-up Archives](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store)) or while the server is running (see [Runtime Manager OMVS](/services/omvs/runtime-manager/overview)).
+The Egeria content packs provide a means to distribute standard metadata to different organizations. They are formatted as [Open Metadata Archives](/concepts/open-metadata-archive) and can be loaded using at server start up (see [Configuring the Start-up Archives](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store)) or while the server is running (see [Runtime Manager API](/services/omvs/runtime-manager/overview)).
 
 The content packs are as follows:
 
 * Technology Content Packs
 
-    * [CoreContentPack](/content-packs/core-content-pack/overview) - contains the connector definitions for the Egeria and File System connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for a new Egeria deployment. It is loaded automatically in the active-metadata-store sample server.
+    * [CoreContentPack](/content-packs/core-content-pack/overview) - contains the connector definitions for the Egeria and File System connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for a new Egeria deployment.
+  
+    * [EgeriaContentPack](/content-packs/)
   
     * [ApacheAtlasContentPack](/content-packs/apache-atlas-content-pack/overview) - contains the connector definitions for the Apache Atlas connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for connecting Egeria to Apache Atlas. 
   
     * [ApacheKafkaContentPack](/content-packs/apache-kafka-content-pack/overview) - contains the connector definitions for the Apache Kafka connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for connecting Egeria to Apache Kafka.
 
     * [APIsContentPack](/content-packs/apis-content-pack/overview) - contains the connector definitions for the connector the catalogs an open API through its swagger REST API.  This connector is supplied in the *omag-server-platform* distribution. This content pack is designed to provide a good starting point for connecting Egeria to applications supporting the open API specification in order to build an API catalog.
-  
-    * [ObservabilityContentPack](/content-packs/observability-content-pack/overview) - contains the connector definitions for the connectors that capture observations about the open metadata ecosystem.  These connectors are supplied in the *omag-server-platform* distribution. This content pack is designed to load a PostgreSQL database with key observations that can be used for building a dashboard.
-  
+   
     * [PostgreSQLContentPack](/content-packs/postgres-content-pack/overview) - contains the connector definitions for the PostgreSQL connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for connecting Egeria to PostgreSQL databases.
   
     * [UnityCatalogContentPack](/content-packs/unity-catalog-content-pack/overview) - contains the connector definitions for the Unity Catalog connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for connecting Egeria to Unity Catalog.
+
+* Functional Content Packs
+
+    * [OpenLineageContentPack](/content-packs/open-lineage-content-pack/overview) - contains the connector definitions for the Open Lineage connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support.
+    * 
  
 * [CloudInformationModel](/content-packs/cim-content-pack/overview) - glossary from the Cloud Information Model's JSONLD formatted model. The content covers basic commerce concepts such as Party, Product, Invoice and Shipping. The cloud information project has been archived. However, this is a useful starter set glossary,
 

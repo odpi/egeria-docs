@@ -32,21 +32,15 @@ The governance definitions are organized into specific subtypes and linked toget
 
 - [0405 Governance Drivers](/types/4/0405-Governance-Drivers) - describe the motivations behind the governance program.
 - [0415 Governance Responses](/types/4/0415-Governance-Responses) - describe the policies that support each of the drivers.
-- [0420 Governance Controls](/types/4/0420-Governance-Controls) - describe how the policies will be implemented.
-    * [0430 Technical Controls](/types/4/0430-Technical-Controls) - describe automated behaviour that implements a governance control.
+- [0420 Governance Controls](/types/4/0420-Governance-Controls) - describe how the policies will be implemented.  This includes:
 
-        - [0423 Security Groups](/types/4/0423-Security-Definitions) - define security groups and the assets and roles associated with them.
-        - [0438 Naming Standards](/types/4/0438-Naming-Standards) - defines naming standard rules.
-        - [0461 Governance Engines](/types/4/0461-Governance-Engines) - support the execution of technical controls.
-        - [0462 Governance Action Processes](/types/4/0462-Governance-Action-Processes) - provide the choreography of the execution of technical controls.
-
-    * [0440 Organizational Controls](/types/4/0440-Organizational-Controls) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
-
-        - [0445 Governance Roles](/types/4/0445-Governance-Roles) - define governance responsibilities, roles and the people associated with them.
-
-- [0481 License Types](/types/4/0481-Licenses) - terms and conditions used in rights management.
-- [0482 Certification Types](/types/4/0482-Certifications) - types of certifications used to shw compliance to a specific governance requirement.
-- [0485 Data Processing Purposes](/types/4/0485-Data-Processing-Purposes) - definitions of purposes used in data privacy regulations.
+  * [0423 Security Definitions](/types/4/0423-Security-Definitions) - describes governance controls that focus on protecting the organization.
+  * [0424 Governance Zones](/types/4/0424-Governance-Zones) - describes security controls that control how access to a collection of metadata is controlled.
+  * [0430 Development Controls](/types/4/0430-Development-Controls) - describes governance controls that that focus on fulfilling unmet needs of the organization through the development of technology.
+  * [0440 Organizational Controls](/types/4/0440-Organizational-Controls) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
+  * [0450 Governance Rollout](/types/4/0450-Governance-Rollout) - describes governance controls that are used when rolling out a governance program to the organization.
+  * [0451 Notifications](/types/4/0451-Notifications) - describes governance controls that are used to notify people of changes, schedules and events.
+  * [0462 Governance Actions](/types/4/0462-Governance-Actions) - describes governance controls that are used to implement governance actions.
 
 ## GovernedBy relationship
 

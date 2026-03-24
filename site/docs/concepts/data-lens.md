@@ -10,7 +10,7 @@ Depending on the type of project, the scope of the data required may need to be 
 
 ## Capturing the data lens in open metadata
 
-The data lens is defined using a [DataLens](/types/4/0430-Technical-Controls) element.
+The data lens is defined using a [DataLens](/types/4/0430-Development-Controls) element.
 The data lens element can capture literal definitions of the required scope.  However, the use of the data lens is more effective if it lists the identities of the open metadata elements that represent the scope.  This is because these elements are organized and linked together making it possible to identify related scopes for data sets that could be used to manufacture the desired scope.
 
 This includes:
@@ -66,6 +66,6 @@ The example above shows a situation where none of the data sets exactly match th
 ??? info "Further information"
 
     * A data lens is a type of governance definition and is maintained and queried using the [Governance Officer API](/services/omvs/governance-office/overview).
-    * The *DataLens* open metadata type is described in [Model 0430 Technical Controls](/types/4/0430-Technical-Controls/).
+    * The *DataLens* open metadata type is described in [Model 0430 Development Controls](/types/4/0430-Development-Controls/).
 
 --8<-- "snippets/abbr.md"

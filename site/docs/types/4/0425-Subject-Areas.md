@@ -16,7 +16,7 @@ The role of the [SubjectArea](/types/4/0440-Organizational-Controls) definition 
 
 * A [glossary of terms](/types/3/0310-Glossary) that describe the key concepts in the subject area.
 * Lists and hierarchies of [reference data](/types/5/0545-Reference-Data) that relate to particular data values in the subject area.
-* [Quality rules](/types/4/0430-Technical-Controls) for specific data values in the subject area.
+* [Quality rules](/types/4/0450-Governance-Rollout) for specific data values in the subject area.
 * Preferred [data structures and schemas](/types/5/0501-Schema-Elements).
 
 Creating the subject area definition is a declaration that data about this subject area is of significance to the organization and will be receiving special attention.

@@ -173,7 +173,7 @@ The role of a [subject area definition](/types/4/0425-Subject-Areas) is to act a
 
 * A [glossary of terms](/types/3/0310-Glossary) that describe the key concepts in the subject area.
 * Lists and hierarchies of [reference data](/types/5/0545-Reference-Data) that relate to particular data values in the subject area.
-* [Quality rules](/types/4/0430-Technical-Controls) for specific data values in the subject area.
+* [Quality rules](/types/4/0430-Development-Controls) for specific data values in the subject area.
 * Preferred [data structures and schemas](/types/5/0501-Schema-Elements).
 
 The materials that are part of the subject area are classified as such using the [SubjectArea](/types/4/0425-Subject-Areas) classification.

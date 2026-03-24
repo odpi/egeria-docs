@@ -13,11 +13,15 @@ The *UserAccount* relationship links a *UserIdentity* entity that describes a us
 
 ## ResourcePermissions relationship
 
-The *ResourcePermissions* relationship links a [SecurityAccessControl](/types/4/0430-Technical-Controls) with the [SecretsCollection](/types/2/0227-Keystores) where the security access control is defined.
+The *ResourcePermissions* relationship links a *SecurityAccessControl* with the [SecretsCollection](/types/2/0227-Keystores) where the security access control is defined.
+
+## SecurityAccessControl entity
+
+The *SecurityAccessControl* entity is a type of [GovernanceControl](/types/4/0420-Governance-Controls) that defines the access control lists that a user must belong to if he/she/it is to be given permission to execute a specific command.
 
 ## ServiceAccessControl entity
 
-The *ServiceAccessControl* entity is a type of [SecurityAccessControl](/types/4/0430-Technical-Controls) that describes the permissions associated with a service.  This may cover a server or a service.  The *mappingProperties* are used to define the exact scope that the control refers to.
+The *ServiceAccessControl* entity is a type of *SecurityAccessControl* that describes the permissions associated with a service.  This may cover a server or a service.  The *mappingProperties* are used to define the exact scope that the control refers to.
 
 ## SecretsCollectionSecurityList relationship
 

@@ -21,7 +21,7 @@ In a similar way to the glossary ([area 3](/types/3)), this information is autho
 * **[0423 Security Definitions](0423-Security-Definitions.md)**
 * **[0424 Governance Zones](0424-Governance-Zones.md)**
 * **[0425 Subject Areas](0425-Subject-Areas.md)**
-* **[0430 Technical Controls](0430-Technical-Controls.md)**
+* **[0430 Development Controls](0430-Development-Controls.md)**
 * **[0435 Policy Management Capabilities](0435-Policy-Management-Capabilities.md)**
 * **[0438 Naming Standards](0438-Naming-Standards.md)**
 * **[0440 Organizational Controls](0440-Organizational-Controls.md)**

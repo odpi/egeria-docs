@@ -19,6 +19,6 @@ An element that meets the requests laid out in a certification type is said to b
 
 ## RegulationCertificationType relationship
 
-A [*CertificationType*](/types/4/0430-Technical-Controls) that comes from a regulation can be linked to the [element describing the Regulation](/types/4/0405-Governance-Drivers) using the *RegulationCertificationType* relationship type.
+A [*CertificationType*](/types/4/0440-Organizational-Controls) that comes from a regulation can be linked to the [element describing the Regulation](/types/4/0405-Governance-Drivers) using the *RegulationCertificationType* relationship type.
 
 --8<-- "snippets/abbr.md"

@@ -5,12 +5,25 @@
 
 An important aspect of the governance program is the ability to measure its effectiveness and identify the activities that are delivering the highest value, or operating with the greatest efficiency etc.
 
-A value (or collection of values) that should be captured to demonstrate the effectiveness of an aspect of the governance program is documented using the [GovernanceMetric](/types/4/0430-Technical-Control) entity.  
+A value (or collection of values) that should be captured to demonstrate the effectiveness of an aspect of the governance program is documented using the *GovernanceMetric* entity.  
 
 The associated measurements for the metric an either be stored in a data source such as a database or file, particularly if it is a lot of data or captured in a classification attached to the element that the data values describe.
 
 
 ![UML](0450-Governance-Rollout.svg)
+
+## GovernanceRule entity
+
+The *GovernanceRule* entity defines an executable rule that can be deployed at particular points in the processing.
+It is a type of [GovernanceControl](/types/4/0420-Governance-Controls).
+
+## GovernanceMetric entity
+
+An important aspect of the governance program is the ability to measure its effectiveness and identify the activities that are delivering the highest value, or operating with the greatest efficiency etc.
+
+A value (or collection of values) that should be captured to demonstrate the effectiveness of an aspect of the governance program is documented using the *GovernanceMetric* entity.  This is a type of [GovernanceControl](/types/4/0420-Governance-Controls).
+
+The associated measurements for the metric an either be stored in a data source such as a database or file, particularly if it is a lot of data or captured in a classification attached to the element that the data values describe.
 
 ## GovernanceExpectations classification
 

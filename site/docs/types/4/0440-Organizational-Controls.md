@@ -40,6 +40,7 @@ The description of the requirements for particular type of certification is desc
 
 ### ServiceLevelObjective entity
 
+The *ServiceLevelObjective* entity defines the performance, availability and quality levels expected from an element attached by the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.
 Organizations define service level objectives (SLOs) to measure the performance of their digital services.
 
 ## DataProcessingPurpose entity

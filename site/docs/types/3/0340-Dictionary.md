@@ -3,6 +3,7 @@
 
 # 0340 Dictionary
 
+In general, glossary terms describe nouns, however, there are instances where a term describes and activity, data value or abstract concept.
 The dictionary model adds some basic term classification used to show how particular terms are used.
 
 ![UML](0340-Dictionary.svg)
@@ -15,7 +16,7 @@ Most term definitions are nouns, they describe concepts or things.
 However, it is useful to be able to define the assets of particular activities in the glossary.
 The ActivityDescription classification highlights when a term describes such an activity.
 
-ActivityDescription has a single property called `type` which is an enumeration called *ActivityType* with the following value:
+ActivityDescription has a single property called *activityType* which is an enumeration called *ActivityType* with the following value:
     
 * OPERATION - describes a function or API call
 * ACTION - describes a governance action that results from evaluating governance rules.
@@ -30,7 +31,7 @@ ActivityDescription has a single property called `type` which is an enumeration 
 
 ## DataValue classification
 
-*DataValue*  is a classification that means that the glossary term describes a valid value for a data item.
+*DataValue* is a classification that means that the glossary term describes a valid value for a data item.
 
 
 --8<-- "snippets/abbr.md"

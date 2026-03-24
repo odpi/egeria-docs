@@ -45,7 +45,19 @@ Personal projects do not typically have a [Project Manager](#projectmanagement-r
 
 ## StudyProject classification
 
-The *StudyProject* classifies a project that is a focused analysis of a topic, person, object or situation.
+The *StudyProject* classification classifies a project that is a focused analysis of a topic, person, object or situation.
+
+## Experiment classification
+
+The *Experiment* classification means that the project is describing an experiment that is being conducted to test a hypothesis (documented in the *hypothesis* attribute).
+
+* *hypothesis* A hypothesis statement is a foundational element of scientific research, providing a clear direction for investigation. Here are some key characteristics of a good hypothesis:
+
+  - Testable: It must be possible to support or refute the hypothesis through experimentation or observation.
+  - Falsifiable: There should be a possibility to prove the hypothesis wrong.
+  - Specific: It should clearly define the variables involved and the expected relationship between them.
+
+This hypothesis is typically based on a [research question](/types/4/0430-Development-Controls).
 
 ## ProjectHierarchy relationship
 

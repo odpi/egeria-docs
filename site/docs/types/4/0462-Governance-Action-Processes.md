@@ -12,11 +12,16 @@ In Egeria, the [Open Governance Service](/services/gaf-metadata-management) prov
 
 ![UML](0462-Governance-Action-Processes.svg)
 
+## GovernanceAction entity
+
+The *GovernanceAction* entity defines an executable action, or sequence of actions, to support a governance requirement.  It is a type of [GovernanceControl](/types/4/0420-Governance-Controls).
+
+
 ## GovernanceActionType entity
 
 The *GovernanceActionType* entity describes a type of call to a [governance service](/concepts/governance-service) running in a [governance engine](/concepts/governance-engine).  The engine to call is defined using the *GovernanceActionExecutor* relationship.  When the governance action type is used to initiate some activity, it results in the creation of an [Engine Action](/concepts/engine-action) to control the call to the governance service running in the linked governance engine.
 
-It inherits from [Referenceable](/types/0/0010-Base-Model) and so has a unique name (*qualifiedName*) and *additionalProperties* attributes.  In addition, this type adds:
+It inherits from *GovernanceAction* and so has a unique name (*qualifiedName*) and *additionalProperties* attributes.  In addition, this type adds:
 
 * *domainIdentifier* links the action to a specific [governance domain](/concepts/governance-domain).
 * *displayName* - human-readable name for messages and user interfaces.
@@ -44,11 +49,11 @@ The *TargetForActionType* relationship identifies an element that should be pass
 
 The *GovernanceActionProcess* entity is the root of the governance action process.  It gives the process its unique name and defines the first step through the *GovernanceActionProcessFlow* relationship.
 
-GovernanceActionProcess inherits from [Process](/types/0/0010-Base-Model) so that it can be linked into the governance program as a technical control. See the [GovernanceProcessImplementation](/types/4/0430-Technical-Controls) relationship.  It adds the *domainIdentifier* attribute to link the process to a specific [governance domain](/concepts/governance-domain).
+GovernanceActionProcess also inherits from *GovernanceAction* so that it can be linked into the governance program as a technical control. See the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.
 
 ## GovernanceActionProcessFlow relationship
 
-The *GovernanceActionFlow* relationship defines the first *GovernanceActionProcessStep* to run in a governance action process.   It includes an optional *guard* attribute that can be used by the processing engine for logging and predefined *requestParameters* to pass to the governance service when called.
+The *GovernanceActionProcessFlow* relationship defines the first *GovernanceActionProcessStep* to run in a governance action process.   It includes an optional *guard* attribute that can be used by the processing engine for logging and predefined *requestParameters* to pass to the governance service when called.
 
 ## GovernanceProcessStep entity
 

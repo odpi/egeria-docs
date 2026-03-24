@@ -28,8 +28,15 @@ A *GovernanceControlLink* relationship links two related *GovernanceControl* ent
 
     * There is further detail on the content of the governance controls in the following models:
 
-       * [0430 Technical Controls](/types/4/0430-Technical-Controls) - describes governance controls that typically are implemented as automations.
+       * [0423 Security Definitions](/types/4/0423-Security-Definitions) - describes governance controls that focus on protecting the organization.
+       * [0424 Governance Zones](/types/4/0424-Governance-Zones) - describes security controls that control how access to a collection of metadata is controlled.
+       * [0430 Development Controls](/types/4/0430-Development-Controls) - describes governance controls that that focus on fulfilling unmet needs of the organization through the development of technology.
        * [0440 Organizational Controls](/types/4/0440-Organizational-Controls) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
+       * [0450 Governance Rollout](/types/4/0450-Governance-Rollout) - describes governance controls that are used when rolling out a governance program to the organization.
+       * [0451 Notifications](/types/4/0451-Notifications) - describes governance controls that are used to notify people of changes, schedules and events.
+       * [0462 Governance Actions](/types/4/0462-Governance-Actions) - describes governance controls that are used to implement governance actions.
+
+    Governance controls that are automatedare deployed into the IT landscape as software components and data assets.  The implementation of asuch a governance control (often called a technical control) can be identified by the [ImplementedBy](/types/7/0737-Solution-Implementation) relationship.  This may be directly to an [Asset](/types/0/0010-Base-Model) or to a [SolutionComponent](/types/7/0730-Solution-Components).  Alternatively, [Governance Execution Points](/types/4/0460-Governance-Execution-Points) can provide a more sophisticated mapping to the implementation, particularly where the implementation is distributed and requires the collaboration of multiple components to achieve the desired behaviour.
 
 
 --8<-- "snippets/abbr.md"

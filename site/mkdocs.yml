@@ -745,6 +745,7 @@ nav:
       - Resource Use: concepts/resource-use.md
       - Review: concepts/review.md
       - Schema: concepts/schema.md
+      - Security Access Control: concepts/security-access-control.md
       - Security Tags: concepts/security-tags.md
       - Server Name: concepts/server-name.md
       - Software Capability: concepts/software-capability.md

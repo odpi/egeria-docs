@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="2">
   <diagram id="b36-6J5XJFL3haWKSZKN" name="egeria-solution-components">
     <mxGraphModel dx="1234" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -2192,6 +2192,53 @@
         </mxCell>
         <mxCell id="KnHtxU_dZ_zOn3YID0TJ-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Apache Atlas UI" vertex="1">
           <mxGeometry height="60" width="104" x="4464.12" y="2140.4299999999994" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="iiZ9seX5euBeHBNZfU2c" name="environments">
+    <mxGraphModel dx="726" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4dk5382J6YY9Y01nupT4-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;verticalAlign=top;fillColor=#d0cee2;strokeColor=#56517e;" value="Quickstart" vertex="1">
+          <mxGeometry height="140" width="200" x="410" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;verticalAlign=top;fillColor=#b1ddf0;strokeColor=#10739e;" value="Freshstart" vertex="1">
+          <mxGeometry height="140" width="180" x="730" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Pre-built vanilla environment ready for you to customize&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="140" x="750" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Pre-build demo and education environment based around Coco Pharmaceuticals" vertex="1">
+          <mxGeometry height="70" width="140" x="440" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="User Directory" vertex="1">
+          <mxGeometry height="30" width="100" x="220" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="coco-user-directory.omsecrets" vertex="1">
+          <mxGeometry height="30" width="200" x="410" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="egeria-user-directory.omsecrets" vertex="1">
+          <mxGeometry height="30" width="200" x="710" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Content Packs" vertex="1">
+          <mxGeometry height="30" width="110" x="220" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Port" vertex="1">
+          <mxGeometry height="30" width="60" x="220" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="9443" vertex="1">
+          <mxGeometry height="30" width="60" x="470" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="8443" vertex="1">
+          <mxGeometry height="30" width="60" x="780" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="CoreContentPack.omarchive&lt;div&gt;EgeriaContentPack.omarchive&lt;/div&gt;&lt;div&gt;APIsContentPack.omarchive&lt;/div&gt;&lt;div&gt;FilesContentPack.omarchive&lt;/div&gt;&lt;div&gt;OpenLineageContentPack.omarchive&lt;/div&gt;&lt;div&gt;OpenMetadataDigitalProducts.omarchive&lt;/div&gt;&lt;div&gt;OrganizationInsightsContentPack.omarchive&lt;/div&gt;&lt;div&gt;PostgresContentPack.omarchive&lt;/div&gt;&lt;div&gt;UnityCatalogContentPack.omarchive&lt;/div&gt;&lt;div&gt;CocoComboArchive.omarchive&lt;/div&gt;&lt;div&gt;SimpleCatalog.omarchive&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="250" x="420" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="4dk5382J6YY9Y01nupT4-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;" value="CoreContentPack.omarchive&lt;div&gt;EgeriaContentPack.omarchive&lt;/div&gt;&lt;div&gt;APIsContentPack.omarchive&lt;/div&gt;&lt;div&gt;FilesContentPack.omarchive&lt;/div&gt;&lt;div&gt;OpenLineageContentPack.omarchive&lt;/div&gt;&lt;div&gt;OpenMetadataDigitalProducts.omarchive&lt;/div&gt;&lt;div&gt;OrganizationInsightsContentPack.omarchive&lt;/div&gt;&lt;div&gt;PostgresContentPack.omarchive&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="250" x="730" y="470" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

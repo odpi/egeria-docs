@@ -14,7 +14,7 @@ When a new element is created from a template, it is linked back to its template
 
 The metadata elements that make up a template have [placeholder properties](/concepts/placeholder) in their attributes, values for which are supplied when the template is used.  The [specification](/concepts/specification) for these placeholder properties are defined using [ValidValueDefinition](/types/5/0545-Reference-Data/) entities linked to the template's anchor element using the [SpecificationPropertyAssignment](/types/5/0545-Reference-Data/) relationship.
 
-Templates can be attached to other elements using the [CatalogTemplate](/types/0/0011-Templates) relationship.  This mechanism is used by [Automated Curation OMVS](/services/omvs/automated-curation/overview) when it is retrieving templates for particular technology types.
+Templates can be attached to other elements using the [CatalogTemplate](/types/0/0011-Templates) relationship.  This mechanism is used by [Automated Curation API](/services/omvs/automated-curation/overview) when it is retrieving templates for particular technology types.
 
 
 ??? education "Further Information"

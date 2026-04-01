@@ -27,7 +27,7 @@ The *AgreementItem* relationship identifies an element (any [Referenceable](/typ
 
 ## AgreementActor relationship
 
-The *Agreement* may detail specific responsibilities of the different parties.  These parties are given actor (role) names in the agreement. These actors are identified by the *AgreementActor* relationship.   The *actorName* attribute identifies the actor name described in the agreement.
+The *Agreement* may detail specific responsibilities of the different parties.  These parties are given party (role) names in the agreement. These parties are identified by the *AgreementActor* relationship.   The *agreementPartyName* attribute identifies the party name described in the agreement.
 
 
 

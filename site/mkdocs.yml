@@ -233,11 +233,6 @@ nav:
                   - Working with Releases:
                       - Release process: guides/contributor/release-process/index.md
                       - Egeria Core Release process: guides/contributor/release-process/egeria-core-release.md
-                      - Egeria EcoSystem (React UI) Release process: guides/contributor/release-process/egeria-react-ui-release.md
-                      - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
-                      - Egeria Release Notes Release process: guides/contributor/release-process/egeria-docs-release.md
-                      - XTDB Connector Release Process: guides/contributor/release-process/egeria-connector-xtdb-release.md
-                      - JDBC Connector Release Process: guides/contributor/release-process/egeria-connector-jdbc-release.md
                       - Maven Publishing reference: guides/contributor/release-process/maven-publish.md
                       - GitHub Secrets reference: guides/contributor/release-process/secrets.md
               - Specific Guidance:
@@ -259,6 +254,7 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Newsletters:
+          - April 2026: release-notes/april-2026.md
           - January 2025: release-notes/january-2025.md
           - October 2024: release-notes/october-2024.md
           - June 2024: release-notes/june-2024.md

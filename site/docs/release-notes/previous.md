@@ -4,10 +4,13 @@
 
 # All releases
 
-??? info "Release 6.0 (expected January 2026)"
-    --8<-- "snippets/release-notes/6.0.md"
+??? info "Release 6.1 (expected September 2026)"
+    --8<-- "snippets/release-notes/6-1.md"
 
-??? info "Release 5.3 (expected March 2025)"
+??? info "Release 6.0  (April 2026)"
+    --8<-- "snippets/release-notes/6-0.md"
+
+??? info "Release 5.3 (March 2025)"
     --8<-- "snippets/release-notes/5-3.md"
 
 ??? info "Release 5.2 (January 2025)"

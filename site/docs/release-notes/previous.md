@@ -151,7 +151,7 @@
     ??? info "Release 1.0 (February 2019)"
         --8<-- "snippets/release-notes/1-0.md"
 
-### Additional Help and Support
+## Additional Help and Support
 
 See the [Community Guide](/guides/community).
 

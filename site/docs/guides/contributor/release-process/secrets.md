@@ -5,7 +5,7 @@
 
 The following GitHub secrets are defined within the ODPi organization for use across the Egeria project.
 
-In some cases they may be overriden at the local repository, but this is generally just by legacy.
+In some cases they may be overridden at the local repository, but this is generally just by legacy.
 
 To update, go to [https://github.com/organizations/odpi/settings/secrets/actions](https://github.com/organizations/odpi/settings/secrets/actions) . This is only available to organization admins.
 

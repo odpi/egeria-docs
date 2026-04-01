@@ -2271,7 +2271,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="01J-_onQJX_OkaF-qXs6" name="security-connectors">
-    <mxGraphModel dx="2298" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="3011" dy="1247" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2428,7 +2428,7 @@
         <mxCell id="f9eA07AEV-j-__flqoLJ-54" parent="1" style="whiteSpace=wrap;html=1;rounded=1;" value="Platform Connection" vertex="1">
           <mxGeometry height="60" width="120" x="-170" y="294" as="geometry" />
         </mxCell>
-        <mxCell id="f9eA07AEV-j-__flqoLJ-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="MoreInformation" vertex="1">
+        <mxCell id="f9eA07AEV-j-__flqoLJ-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="ProcessCall" vertex="1">
           <mxGeometry height="30" width="100" x="130" y="388" as="geometry" />
         </mxCell>
         <mxCell id="f9eA07AEV-j-__flqoLJ-58" parent="1" style="shape=card;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" value="egeria-user-directory.omsecrets" vertex="1">

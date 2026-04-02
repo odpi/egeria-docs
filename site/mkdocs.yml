@@ -60,8 +60,10 @@ nav:
       - Using Overview: guides/index.md
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
+          - Dr.Egeria: user-interfaces/dr-egeria/overview.md
           - Hey Egeria: user-interfaces/hey-egeria/overview.md
-          - Graph Visualization: user-interfaces/mermaid/overview.md
+          - My Egeria: user-interfaces/my-egeria/overview.md
+          - Mermaid: user-interfaces/mermaid/overview.md
           - Explorers: user-interfaces/brain-explorers/overview.md
       - Planning Guide:
           - Planning Guide: guides/planning/index.md

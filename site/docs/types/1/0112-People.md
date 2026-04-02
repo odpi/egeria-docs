@@ -9,7 +9,7 @@ This model describes the metadata elements that describe a person.  This is an e
 
 ## Person entity
 
-`Person` extends [`ActorProfile`](/types/1/0110-Actors/#actorprofile) to capture more information about a person. Many of the properties are inspired by the LDAP `inetOrgPerson` attributes (see [RFC 2798](https://datatracker.ietf.org/doc/rfc2798/)).
+`Person` extends [ActorProfile](/types/1/0110-Actors) to capture more information about a person. Many of the properties are inspired by the LDAP `inetOrgPerson` attributes (see [RFC 2798](https://datatracker.ietf.org/doc/rfc2798/)).
 
 Typically, the `name` is set to a person's preferred name.  The `qualifiedName` may be the identifier from an external system or the `employeeNumber` and/or some combination of names to ensure it is unique.  Then the properties are as follows:
 

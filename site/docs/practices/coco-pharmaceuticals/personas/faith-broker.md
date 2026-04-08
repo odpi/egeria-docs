@@ -3,7 +3,11 @@
 
 # Faith Broker - HR Director and Privacy Officer
 
-<img src="https://raw.githubusercontent.com/odpi/data-governance/main/docs/coco-pharmaceuticals/personas/faith-broker.png" style="float:left">
+## Persona Description
+
+----
+
+![Icon](faith-broker.png)
 
 Age: 40
 
@@ -37,15 +41,15 @@ Thinks/Feels:
 to ensuring that people are complying with the business
 controls that are necessary to meet their obligations to the regulators.
 
-* Faith is very supportive of Jules’ appointment
+* Faith is very supportive of Jules' appointment
 as CDO since transparent information management will help her in
 her work to transform HR.
 
 Says/Does:
 
-* Faith’s approach is open, frank discussion of the issues,
+* Faith's approach is open, frank discussion of the issues,
 giving time for the issues to be addressed and then public
-measurement of the desired behavior.
+measurement of the desired behaviour.
 
 Sees:
 
@@ -76,6 +80,7 @@ and open collaboration.
 * Faith wants managers to have good information about the work of their
 teams.
 
+----
 
 --8<-- "snippets/abbr.md"
 

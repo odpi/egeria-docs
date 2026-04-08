@@ -11,7 +11,7 @@ The session is for people looking to
 understand the metadata across their ecosystem in terms of the
 Egeria open types and instances using visualisations in the Egeria React
 User Interface. Understanding the types is important knowledge when 
-developing connectors and new APIs like OMAS’s. 
+developing connectors and new APIs like OMAS's. 
 This session will also show how metadata instances can be explored at a low level. This will be contrasted with an exploration of semantic data that is based on the Subject Area Open Metadata Access Service (OMAS).
 
 

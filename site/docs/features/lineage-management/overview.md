@@ -391,7 +391,6 @@ Organizations use vertical lineage view to visualize how business concepts such 
 
     By using open metadata, metadata is captured once and used for many purposes.
 
-??? education "Further reading"
-    - [File Lineage solution using Egeria](/scenarios/file-lineage/overview)
+
 
 --8<-- "snippets/abbr.md"

@@ -3,6 +3,10 @@
 
 # Robbie Records - Hospital Patient Data Manager
 
+## Persona Description
+
+----
+
 ![Icon](robbie-records.png)
 
 Age: 45
@@ -26,7 +30,7 @@ wants to spend more time working on better processes to managing this data.
 
 Hears:
 
-* Concerns about data privacy – particularly around patient data.
+* Concerns about data privacy - particularly around patient data.
 * Demands for more types of data to be maintained.
 
 Says/Does:
@@ -34,7 +38,7 @@ Says/Does:
 * Robbie maintains a very hard-line attitude to new uses of patient data.
 His default answer is “no” unless he can see a clear description of
 where the data is going, how it is to be used, the safe-guards around
-it – and what happens at the end of the project.
+it - and what happens at the end of the project.
 
 Sees:
 
@@ -54,6 +58,7 @@ Desired Outcome:
 * Complete transparency on how all patent data is collected,
 stored, managed and disposed of through the hospital and partner organizations.
 
+----
 
 
 --8<-- "snippets/abbr.md"

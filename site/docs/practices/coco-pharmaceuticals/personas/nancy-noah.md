@@ -3,6 +3,10 @@
 
 # Nancy Noah - Cloud Architect
 
+## Persona Description
+
+----
+
 ![Icon](nancy-noah.png)
 
 Age: 36
@@ -22,7 +26,7 @@ Nancy has been a client architect for five years.  Her job involves:
 
 Thinks/Feels:
 
-* Nancy enjoys the technical challenge of matching new technology to a potential customer’s needs. She worries about the rate of technology and how she will keep up.
+* Nancy enjoys the technical challenge of matching new technology to a potential customer's needs. She worries about the rate of technology and how she will keep up.
 
 Hears:
 
@@ -48,5 +52,7 @@ Desired Outcome:
 
 * Multiple successful projects running on cloud infrastructure and linked to on premise systems.
 * Ongoing maintenance of her skills to stay relevant.
+
+----
 
 --8<-- "snippets/abbr.md"

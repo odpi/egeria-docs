@@ -3,13 +3,16 @@
 
 # Sydney Seeker - Fraud Investigator
 
+## Persona Description
+
+----
 ![Icon](sidney-seeker.png)
 
 Age: 49
 
 Skills: financial management, legal procedures.
 
-Scope: Fraud Investigation – particularly forensic audit
+Scope: Fraud Investigation - particularly forensic audit
 
 Job:
 
@@ -41,7 +44,7 @@ Desired Outcome:
 * The fraud investigation successfully removes this incident of fraudulent activity.
 * The company learns from this and puts in place proper anti-fraud procedures.
 
-
+----
 
 
 --8<-- "snippets/abbr.md"

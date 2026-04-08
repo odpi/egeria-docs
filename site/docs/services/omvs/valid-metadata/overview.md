@@ -13,7 +13,7 @@ The API supports three types of operations:
 * Query details of the [defined open metadata types](/types).
 * Maintain and query the *specification properties* used to create [usage specifications](/concepts/specification) for [templates](/concepts/template), [connectors](/concepts/connector) and [governance actions](/concepts/governance-action).
 
-The sections that follow describe each of these types of operations, showing examples in each of the API's forms.
+The sections that follow describe each of these operation types, with examples for each of the API's forms.
 
 ---8<-- "snippets/services/api-forms.md"
 
@@ -73,13 +73,13 @@ In addition, there is an operation for retrieving the entire list of valid value
 ??? info "Code reference"
 
     === "REST API"
-        * HTTP Client Collection [Egeria-valid-metadata-omvs.http](https://raw.githubusercontent.com/odpi/egeria/refs/heads/main/open-metadata-implementation/view-server-generic-services/valid-metadata/Egeria-valid-metadata-omvs.http) shows each of the REST API operations along with their request body structures.
+        * HTTP Client Collection [Egeria-api-valid-metadata.http](https://raw.githubusercontent.com/odpi/egeria/refs/heads/main/open-metadata-implementation/view-server-generic-services/valid-metadata/Egeria-api-valid-metadata.http) shows each of the REST API operations along with their request body structures.
     
     === "Java"
         * The [Valid Metadata Values Client](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/connectorcontext/ValidMetadataValuesClient.html) describes the methods available to connector writers via the connector's context object.
     
     === "Python"
-        * The [valid_metadata_omvs.py](https://github.com/odpi/egeria-python/blob/main/pyegeria/valid_metadata_omvs.py) python file defines the python methods for managing all types of valid metadata values. 
+        * The [valid_metadata.py](https://github.com/odpi/egeria-python/blob/main/pyegeria/omvs/valid_metadata.py) python file defines the python methods for managing all types of valid metadata values. 
 
 
 ### Creating valid metadata values

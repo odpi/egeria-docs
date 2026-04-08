@@ -3,6 +3,10 @@
 
 # Erin Overview - Information Architect
 
+## Persona Description
+
+----
+
 ![Icon](erin-overview.png)
 
 Age: 42
@@ -44,7 +48,7 @@ Top challenges:
 * Constant demand for data extracts from the business teams.
 * New software packages being deployed with no thought for
 how the data requirements within them will be supported.
-* No budget to increase the size of her team – nor
+* No budget to increase the size of her team - nor
 automate some of the common requests.
 
 Desired Outcome:
@@ -56,6 +60,6 @@ business about their responsibilities around data.
 * Some way of making common requests for data repeatable and self-service.
 * Appreciation for her teams efforts.
 
-
+----
 
 --8<-- "snippets/abbr.md"

@@ -12,8 +12,8 @@ The *hey_egeria* command line services allow interaction with the open metadata 
 ![hey_egeria tui](tui.png)
 
 !!! info "Full Guide to Hey Egeria"
-    * [Introduction to Hey_Egeria](https://github.com/odpi/egeria-python/blob/main/pyegeria/commands/doc/hey_egeria%3A%20a%20pyegeria%20command%20line%20interface/README.md)
-    * [Visual Command Reference](https://github.com/odpi/egeria-python/blob/main/pyegeria/commands/doc/Visual%20Command%20Reference/README.md)
-    * [Command Line Interface](https://github.com/odpi/egeria-python/blob/main/pyegeria/commands/doc/README.md)
+    * [Introduction to Hey_Egeria](https://github.com/odpi/egeria-python/blob/main/commands/doc/hey_egeria%3A%20a%20pyegeria%20command%20line%20interface/README.md)
+    * [Visual Command Reference](https://github.com/odpi/egeria-python/blob/main/commands/doc/Visual%20Command%20Reference/README.md)
+    * [Command Line Interface](https://github.com/odpi/egeria-python/blob/main/commands/doc/README.md)
 
 --8<-- "snippets/abbr.md"

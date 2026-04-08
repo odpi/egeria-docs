@@ -43,7 +43,7 @@ The principles are defined as follows:
 * Decision makers are responsible for ensuring they are using information of appropriate integrity for their work.
 * Information is kept as long as it is needed.  Information that is no longer needed will be disposed of appropriately.
 * Information is protected. Information is secured from unauthorized access and use.
-* Information quality is everyone’s responsibility.  Information is validated and where necessary it is corrected and made complete.
+* Information quality is everyone's responsibility.  Information is validated and where necessary it is corrected and made complete.
 * Information is managed in a cost effective manner.   This is achieved through a well-defined information architecture that follows standards and best practices.
 * Information and analytics will be only be used for approved, ethical purposes.
 

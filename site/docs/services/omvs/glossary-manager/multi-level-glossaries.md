@@ -12,5 +12,5 @@ Whether the term is accepted or not, the originating team is free to continue to
 ![Multi-level glossaries](multi-level-glossaries.svg)
 
 
-In this example, the company glossary’s content is controlled.   All editing of terms happens in the division glossaries.   There is little support to reconcile differences in the definition of a term across the divisions.
+In this example, the company glossary's content is controlled.   All editing of terms happens in the division glossaries.   There is little support to reconcile differences in the definition of a term across the divisions.
 

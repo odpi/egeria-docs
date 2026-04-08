@@ -3,6 +3,10 @@
 
 # Gary Geeke - IT Infrastructure Administrator
 
+## Persona Description
+
+----
+
 ![Icon](gary-geeke.png)
 
 Age: 29
@@ -23,11 +27,11 @@ Thinks/Feels:
 Hears:
 
 * Criticism of the IT team for being unresponsive to the needs of the business.
-* Encouragement from [Erin](/practices/coco-pharmaceuticals/personas/erin-overview).
+* Encouragement from [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview).
 
 Says/Does:
 
-* Focuses on day-to-day running of the IT systems.
+* Focuses on the day-to-day running of the IT systems.
 * Enjoys new projects as a way of extending his skills.
 * Uses automation wherever possible to reduce effort on running existing systems.
 
@@ -46,5 +50,17 @@ Desired Outcome:
 
 * Fully automated operations with appropriate alerting and diagnostics.
 * Time to work on new projects that expand his skills.
+
+----
+
+## Current Projects
+
+Gary Geeke is currently working on the following projects:
+
+* Ensure the [auditability of IT System users](/practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview) and their access to data.
+* Improving the [IT Systems Security](/practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview), working with [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) and [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage).
+* Building an [inventory of IT systems](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview) and their current status.
+
+
 
 --8<-- "snippets/abbr.md"

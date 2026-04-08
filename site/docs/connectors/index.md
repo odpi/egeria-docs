@@ -15,7 +15,7 @@ Connectors enable Egeria to operate in many environments and with many types of 
 
 * Connectors that support the [governance of open metadata](#open-metadata-governance-connectors). This includes the watchdog action services and governance action services.  These connectors are organized by function.
 
-* Connectors that support the integration of [Egeria’s runtimes](#runtime-connectors) into the IT infrastructure where it is running. This includes the native repository connectors, event bus connectors, cohort registry stores, configuration stores, audit log destination connectors, open metadata archive stores, REST client connectors and the cohort member remote repository connectors.  These connectors are organized by connector type.
+* Connectors that support the integration of [Egeria's runtimes](#runtime-connectors) into the IT infrastructure where it is running. This includes the native repository connectors, event bus connectors, cohort registry stores, configuration stores, audit log destination connectors, open metadata archive stores, REST client connectors and the cohort member remote repository connectors.  These connectors are organized by connector type.
 
 ## Open Metadata Security Connectors
 

@@ -3,6 +3,10 @@
 
 # Bob Nitter - Application Developer
 
+## Persona Description
+
+----
+
 ![Icon](bob-nitter.png)
 
 Age: 47
@@ -27,14 +31,14 @@ Hears:
 
 Says/Does:
 
-* Much of Bob’s time is spent installing tools, connecting to systems, testing different approaches to find out what works and hardening that. 
-* He is unsure he is integrating the systems the best way – he often just has time to get “something” working.
+* Much of Bob's time is spent installing tools, connecting to systems, testing different approaches to find out what works and hardening that. 
+* He is unsure he is integrating the systems the best way - he often just has time to get “something” working.
 
 Sees:
 
 * Complexity in the integration space with different tools, terminology, technology and philosophy. 
 * Security is different in each systems and data is silo-ed and inconsistent. 
-* People just want a simple interface to call – they don’t care what is behind it.
+* People just want a simple interface to call - they don't care what is behind it.
 
 Top challenges:
 
@@ -43,5 +47,8 @@ Top challenges:
 Desired Outcome:
 
 * He wants to go back to building new systems and function for the business rather than spending his time cobbling the existing systems together.
+
+----
+
 
 --8<-- "snippets/abbr.md"

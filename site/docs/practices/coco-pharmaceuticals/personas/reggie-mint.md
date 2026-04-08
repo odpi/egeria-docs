@@ -3,6 +3,10 @@
 
 # Reggie Mint - Chief Finance Officer
 
+## Persona Description
+
+----
+
 ![Icon](reggie-mint.png)
 
 Age: 61
@@ -42,5 +46,7 @@ Desired Outcome:
 
 * Reggie wants to feel confident that the information his team is using is correct.
 * He wants to resolve the fraud investigation and be sure it can not happen again.
+
+----
 
 --8<-- "snippets/abbr.md"

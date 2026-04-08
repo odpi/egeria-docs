@@ -3,6 +3,10 @@
 
 # Tom Tally - Accounts Manager
 
+## Persona Description
+
+----
+
 ![Icon](tom-tally.png)
 
 Age: 25
@@ -42,8 +46,8 @@ Top challenges:
 
 Desired Outcome:
 
-* Tom want to present the results of a comprehensive investigation to the board in a couple of weeks.
+* Tom wants to present the results of a comprehensive investigation to the board in a couple of weeks.
 
-
+----
 
 --8<-- "snippets/abbr.md"

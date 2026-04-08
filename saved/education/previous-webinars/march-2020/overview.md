@@ -3,13 +3,13 @@
 
 # Egeria Virtual Metadata Show
 
-**Date:** 24th – 26th March
+**Date:** 24th - 26th March
 
 Find out how metadata can enable enterprise-wide knowledge and understanding for all data assets in an organization. Get the latest information on the Egeria Open Metadata exchange standard and capabilities, that makes it possible for any tool or application repository to share metadata in real-time.
 
 Day 1
-Why Egeria is an open source project – John Mertic (Linux Foundation)
-The Egeria Journey so far – Maryna Strelchuk (ING Bank)
+Why Egeria is an open source project - John Mertic (Linux Foundation)
+The Egeria Journey so far - Maryna Strelchuk (ING Bank)
 Design Lineage - ING Bank Perspective
 Q&A
 
@@ -22,7 +22,7 @@ Q&A
 Day 3 Lightening Talks 3pm
 Supporting ethical AI
 Industry Models and Business Glossaries
-Egeria and Cloud Pak’s
+Egeria and Cloud Pak's
 Egeria driving Enterprise API's
 Q&A
 

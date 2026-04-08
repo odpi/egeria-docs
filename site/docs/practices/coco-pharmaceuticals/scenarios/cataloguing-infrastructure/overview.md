@@ -3,7 +3,7 @@
 
 # Cataloguing Infrastructure
 
-[Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) has maintained a list of all of the servers used at Coco Pharmaceuticals that are his responsibility.  Individual departments may have bought their own equipment (servers/laptops etc) but he is not responsible for them.
+[Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) has maintained a list of all the servers used at Coco Pharmaceuticals that are his responsibility.  Individual departments may have bought their own equipment (servers/laptops etc) but he is not responsible for them.
 
 ![System Inventory Spreadsheet](cataloguing-infrastructure-system-inventory-spreadsheet.svg)
 
@@ -31,6 +31,6 @@ He saw the following benefits:
 * Team freed up from maintaining the spreadsheets for infrastructure projects
 * Formalisation of software levels into standard operating platforms reduced variation in system stacks and enabled a systematic upgrade process 
 
-Gary is ready to collaborate with [Bob Nitter](/practices/coco-pharmaceuticals/personas/bob-nitter) and [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) on automating metadata capture during the DevOps pipeline.
+Gary is ready to collaborate with [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage) on automating metadata capture during the DevOps pipeline.
 
 --8<-- "snippets/abbr.md"

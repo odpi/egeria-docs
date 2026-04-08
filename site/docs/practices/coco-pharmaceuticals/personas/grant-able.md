@@ -3,6 +3,10 @@
 
 # Grant Able - Oncology Medical Consultant
 
+## Persona Description
+
+----
+
 ![Icon](grant-able.png)
 
 Age: 57
@@ -40,5 +44,6 @@ Desired Outcome:
 
 * He is contributing to a dynamic and evolving body of knowledge about cancer treatment that provides easy access to the information he needs.
 
+----
 
 --8<-- "snippets/abbr.md"

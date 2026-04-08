@@ -14,7 +14,7 @@ The privacy officer is the key role dedicated to ensuring privacy.
 They interact with the digital service team to aid them with privacy related questions
 and actions.  For example:
 
-* Providing guidance on privacy matters relating to the offering’s capabilities.
+* Providing guidance on privacy matters relating to the offering's capabilities.
 * Deciding on whether a privacy impact assessment is required.
 * Completing and publishing the privacy impact assessment.
 * Seeking resolution of the privacy concerns raised in the privacy impact assessment.

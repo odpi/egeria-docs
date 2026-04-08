@@ -1,0 +1,124 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram id="gaeeWlbyKK2-ta_VzILe" name="ivor-padlock-interactions">
+    <mxGraphModel dx="2061" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Lemmie&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Stage&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="330" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="330" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Gary Geeke" vertex="1">
+          <mxGeometry height="60" width="120" x="-40" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="-40" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-8" edge="1" parent="1" source="BMB7tULPT_S9FkjCe2NB-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" target="BMB7tULPT_S9FkjCe2NB-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Ivor Padlock" vertex="1">
+          <mxGeometry height="60" width="120" x="300" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-7" edge="1" parent="1" source="BMB7tULPT_S9FkjCe2NB-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="BMB7tULPT_S9FkjCe2NB-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="300" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Software Deployment Security" vertex="1">
+          <mxGeometry height="30" width="60" x="410" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Jules Keeper" vertex="1">
+          <mxGeometry height="60" width="120" x="530" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="530" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-12" edge="1" parent="1" source="BMB7tULPT_S9FkjCe2NB-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="BMB7tULPT_S9FkjCe2NB-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="590" y="500" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="IT Systems Security" vertex="1">
+          <mxGeometry height="30" width="60" x="30" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data Strategy and Security" vertex="1">
+          <mxGeometry height="40" width="80" x="600" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Peter Profile" vertex="1">
+          <mxGeometry height="60" width="120" x="590" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="590" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-18" edge="1" parent="1" source="BMB7tULPT_S9FkjCe2NB-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="BMB7tULPT_S9FkjCe2NB-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="650" y="820" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data Lake Secuirty" vertex="1">
+          <mxGeometry height="30" width="60" x="490" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Sidney Seeker" vertex="1">
+          <mxGeometry height="60" width="120" x="330" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="330" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-22" edge="1" parent="1" source="BMB7tULPT_S9FkjCe2NB-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="BMB7tULPT_S9FkjCe2NB-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="870" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Security Consultant" vertex="1">
+          <mxGeometry height="30" width="60" x="410" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Tanya Tidie" vertex="1">
+          <mxGeometry height="60" width="120" x="140" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="140" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-26" edge="1" parent="1" source="BMB7tULPT_S9FkjCe2NB-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="BMB7tULPT_S9FkjCe2NB-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="810" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BMB7tULPT_S9FkjCe2NB-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Clinical Trials Security Requirements" vertex="1">
+          <mxGeometry height="30" width="60" x="220" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="660QKUx203usYPeFZk2B-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Sally Counter" vertex="1">
+          <mxGeometry height="60" width="120" x="-40" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="660QKUx203usYPeFZk2B-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="-40" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="660QKUx203usYPeFZk2B-3" edge="1" parent="1" source="BMB7tULPT_S9FkjCe2NB-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="660QKUx203usYPeFZk2B-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="580" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="660QKUx203usYPeFZk2B-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Laptop Help" vertex="1">
+          <mxGeometry height="30" width="60" x="30" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="I9UpWqaqq05OJQpSz5N0-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Faith Broker" vertex="1">
+          <mxGeometry height="60" width="120" x="150" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="I9UpWqaqq05OJQpSz5N0-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=2;fillColor=#f8cecc;strokeColor=#b85450;" value="Person" vertex="1">
+          <mxGeometry height="20" width="120" x="150" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="I9UpWqaqq05OJQpSz5N0-3" edge="1" parent="1" source="BMB7tULPT_S9FkjCe2NB-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" target="I9UpWqaqq05OJQpSz5N0-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="535" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="I9UpWqaqq05OJQpSz5N0-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data Privacy Expert" vertex="1">
+          <mxGeometry height="30" width="80" x="210" y="460" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

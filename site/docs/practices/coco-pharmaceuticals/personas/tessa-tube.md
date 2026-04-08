@@ -3,6 +3,10 @@
 
 # Tessa Tube - Lead Researcher
 
+## Persona Description
+
+----
+
 ![Icon](tessa-tube.png)
 
 Age: 47
@@ -18,7 +22,7 @@ Job:
 * Tessa has been developing a new drug that is currently in clinical
 trials with a number of hospitals.
 * The medical staff at each hospital are following a well defined
-protocol and are supplying new data about the selected patients’ progress
+protocol and are supplying new data about the selected patients' progress
 as they are tested with the new drug.
 * Tessa divides her time between her lab and the hospitals
 involved in the trial.
@@ -26,9 +30,9 @@ involved in the trial.
 
 Thinks/Feels:
 
-* Tessa is optimistic about this new drug’s effectiveness.
+* Tessa is optimistic about this new drug's effectiveness.
 * However, she knows that this area of medicine is complex and
-a patient’s response is affected by many factors.
+a patient's response is affected by many factors.
 
 Hears:
 
@@ -43,7 +47,7 @@ trying to capture as much information as possible.
 Sees:
 
 * A willingness on the part of all concerned in the trial to collaborate
-to get the drug right – but a difficulty in expressing and collecting
+to get the drug right - but a difficulty in expressing and collecting
 the right information since new factors are being discovered all of the time.
 
 Top challenges:
@@ -57,6 +61,6 @@ Desired Outcome:
 by the FDA, but also the incidental detail and additional insight
 that the team discovered during the trial.
 
-
+----
 
 --8<-- "snippets/abbr.md"

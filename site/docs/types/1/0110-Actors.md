@@ -20,7 +20,7 @@ The subtypes of *ActorProfile* add further information about actors:
 
 ## UserIdentity entity
 
-Most metadata repositories are run in a secure mode requiring incoming requests to include the requester’s security credentials. Therefore, we have an identifier for each unique logged on security identity (aka userId). This identity is recorded in the header of the metadata elements when they are created or updated. 
+Most metadata repositories are run in a secure mode requiring incoming requests to include the requester's security credentials. Therefore, we have an identifier for each unique logged on security identity (aka userId). This identity is recorded in the header of the metadata elements when they are created or updated. 
 
 `UserIdentity` provides a structure for storing details about a particular userId. Initially we have a simple string for the userId - but this could be extended to include more sophisticated identification information.
 

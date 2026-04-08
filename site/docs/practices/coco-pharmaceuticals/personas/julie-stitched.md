@@ -3,6 +3,10 @@
 
 # Julie Stitched - Surgeon
 
+## Persona Description
+
+----
+
 ![Icon](julie-stitched.png)
 
 Age: 35
@@ -13,7 +17,9 @@ Scope: Specialist in repair of heart and lungs.
 
 Job:
 
-Julie’s focus is on surgery but she is working with [Grant Able](/practices/coco-pharmaceuticals/personas/grant-able) on some of his cancer research, providing him with feedback on the internal condition of his patients that she has operated on.
+Julie's focus is on surgery, but she is working with [Grant Able](/practices/coco-pharmaceuticals/personas/grant-able) on some of his cancer research, providing him with feedback on the internal condition of his patients that she has operated on.
+
+----
 
 --8<-- "snippets/abbr.md"
 

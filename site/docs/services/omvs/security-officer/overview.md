@@ -7,6 +7,24 @@
 
 The Security Officer API supports the configuration of security in the open metadata ecosystem. This includes configuring users that wish to connect to the open metadata ecosystem and controlling their visibility to open metadata.
 
+
+---8<-- "snippets/services/api-forms.md"
+
+??? info "Code reference"
+
+    === "REST API"
+        * HTTP Client Collection [Egeria-api-security-officer.http](https://raw.githubusercontent.com/odpi/egeria/refs/heads/main/open-metadata-implementation/view-services/security-officer/Egeria-api-security-officer.http) shows each of the REST API operations along with their request body structures.
+    
+    === "Java"
+        * The [Collection Client](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/connectorcontext/CollectionClient.html) describes the methods available to connector writers via the connector's context object.
+        * The [Governance Definition Client](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/connectorcontext/GovernanceDefinitionClient.html) describes the methods available to connector writers via the connector's context object.
+        * The [User Identity Client](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/connectorcontext/UserIdentityClient.html) describes the methods available to connector writers via the connector's context object.
+    
+    === "Python"
+        * The [security_officer.py](https://github.com/odpi/egeria-python/blob/main/pyegeria/omvs/security_officer.py) python file defines the python methods for this API. 
+
+The sections that follow describe working with each of the operations for security manager, with examples for each of the API's forms.
+
 ## Managing the User Directory
 
 Access to open metadata is secured using a bearer token passed on each API request.  The bearer token is an encrypted string that identifies the user.  
@@ -35,12 +53,17 @@ The user *logs on* to the open metadata ecosystem by providing their *account us
         ```
  
     === "Python"
-         ```
-         from pyegeria import SecurityOfficer
-         
-         security_officer = SecurityOfficer(view_server, url, user_id, user_pwd)
-         token = security_officer.create_egeria_bearer_token()
-         ```
+        ```
+        from pyegeria import SecurityOfficer
+        
+        security_officer = SecurityOfficer(view_server, url, user_id, user_pwd)
+        token = security_officer.create_egeria_bearer_token()
+        ```
+
+    === "Java"
+        ```
+        Egeria manages the bearer tokens for the connector.
+        ```
 
 Each bearer token lasts an hour before it expires.  Then the user is required to log on again to receive a new bearer token.
 
@@ -142,23 +165,7 @@ The next code sample creates a new account for Freddie Mercury (account user id 
                  "givenName": "Freddie",
                  "surname": "Mercury",
                  "email": "freddiemercury@queen.com",
-                 "securityRoles": ["openMetadataMember"],
-                 "zoneAccess": {
-                    "music" : [
-                        "READ",
-                        "CREATE",
-                        "UPDATE_PROPERTIES",
-                        "DELETE",
-                        "ATTACH",
-                        "DETACH",
-                        "ADD_MEMBER",
-                        "DELETE_MEMBER",
-                        "ADD_FEEDBACK",
-                        "DELETE_FEEDBACK",
-                        "CLASSIFY",
-                        "DECLASSIFY",
-                        "PUBLISH"]
-                 },
+                 "securityRoles": ["serverOperator", "serverInvestigator"],
                  "userAccountStatus": "CREDENTIALS_EXPIRED",
                  "secrets": {
                     "clearPassword" : "itsakindofmagic"

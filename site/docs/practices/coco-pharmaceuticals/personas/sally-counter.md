@@ -3,13 +3,17 @@
 
 # Sally Counter - Payment Clerk
 
+## Persona Description
+
+----
+
 ![Icon](sally-counter.png)
 
 Age: 53
 
 Skills: Finance administration.
 
-Scope: Company wide – finance department.
+Scope: Company wide - finance department.
 
 Job:
 
@@ -17,5 +21,6 @@ Job:
 * Her responsibility is to enter payments and fix issues with the payments already entered.
 * She has become involved in the fraud investigation because she noticed some unusual payments.
 
+----
 
 --8<-- "snippets/abbr.md"

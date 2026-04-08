@@ -3,8 +3,7 @@
 
 # Coco Pharmaceutical Scenarios
 
-The scenarios follow the [Coco Pharmaceutical personas](/practices/coco-pharmaceuticals/personas/overview) as they work to
-set up their new roles and meet the challenges their new responsibilities bring.
+The scenarios follow the [Coco Pharmaceutical personas](/practices/coco-pharmaceuticals/personas) as they work to set up their new roles and meet the challenges their new responsibilities bring.
 
 * [Defining the data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview)
    
@@ -25,11 +24,17 @@ set up their new roles and meet the challenges their new responsibilities bring.
 
 * [Setting up the data governance program](/practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview)
 
-* [Cataloguing Infrastructure](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview)
+* Security and Assurance
 
-* [Adding a sustainability governance domain](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview)
+    - [Assuring IT Systems Security](/practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview)
+    - [Cataloguing Infrastructure](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview)
+    - [Auditing IT System Users](/practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview)
+    - [Building a data security strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview)
+    - [Preparing for Martyn's Law](/practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview)
 
 * [Investigating suspicious activity](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview)
+
+* [Adding a sustainability governance domain](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview)
 
 * [Receiving patient data from a hospital](/practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview)
 

@@ -2,6 +2,10 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 # Stew Faster - Manufacturing Manager
 
+## Persona Description
+
+----
+
 ![Icon](stew-faster.png)
 
 Age: 54
@@ -47,5 +51,6 @@ Desired Outcome:
 * Stew wants to be more involved in the business decisions around their manufacturing operation.
 * He wants to innovate, use new techniques and work in a more challenging environment.
 
+----
 
 --8<-- "snippets/abbr.md"

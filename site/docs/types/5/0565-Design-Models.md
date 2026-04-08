@@ -25,11 +25,9 @@ There are specializations of *DesignModel* for describing different situations.
 
 ## DesignModelElement entity
 
-The *DesignModelElement* describes an element in one or more models.
+The *DesignModelElement* describes an [AuthoredReferenceable](/types/0/0010-Base-Model) element from one or more models.
 
 * *canonicalName* allows a name to be defined that can be used for code generation.  Each word in the name is capitalized and space separated.  For example "Customer Name".
-* *authors* allow one or more authors of the model element to be acknowledged.  This is useful if the work on the model is divided and different authors are responsible for different parts of the model.
-* *userDefinedStatus* is used to define your own statuses for your models.
 
 The subtype of the element defines the type of object it is describing.
 

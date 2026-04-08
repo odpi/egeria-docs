@@ -11,7 +11,7 @@ Coco Pharmaceuticals has research partnerships with universities in order to col
 
 ## History
 
-The company has grown from a small group of researchers working together in a spirit of open communication, collaboration and trust to a medium-sized successful pharmaceutical company that has a small range of very successful drugs in the market and many others in development – three of which look very promising.
+The company has grown from a small group of researchers working together in a spirit of open communication, collaboration and trust to a medium-sized successful pharmaceutical company that has a small range of very successful drugs in the market and many others in development - three of which look very promising.
 
 Their investment in IT had traditionally been focused on the automation of the manufacturing process due to the growth in demand for their most successful drugs.  However, a recent attempted fraud in their supplier network sparked a company-wide investigation into their operations.  The result was the appointment of Jules Keeper as their Chief Data Officer (CDO).  Jules' mission is to improve the organization'sprotection, management and use of data.
 
@@ -38,7 +38,7 @@ The [scenarios](/practices/coco-pharmaceuticals/scenarios/overview) follow the C
 
 ## More information
 
-* [Detailed descriptions of the personas](/practices/coco-pharmaceuticals/personas/overview)
+* [Detailed descriptions of the personas](/practices/coco-pharmaceuticals/personas)
 * [Roles verses Personas](/practices/coco-pharmaceuticals/roles-vs-personas/overview)
 
 

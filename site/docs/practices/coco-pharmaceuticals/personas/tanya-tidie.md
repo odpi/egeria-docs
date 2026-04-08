@@ -3,6 +3,10 @@
 
 # Tanya Tidie - Clinical Record Clerk
 
+## Persona Description
+
+----
+
 ![Icon](tanya-tidie.png)
 
 Age: 32
@@ -43,5 +47,7 @@ Top challenges:
 Desired Outcome:
 
 * Tanya wants to be sure that the data collected in the clinical trials is accurate and complete.
+
+----
 
 --8<-- "snippets/abbr.md"

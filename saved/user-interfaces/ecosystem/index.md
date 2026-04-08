@@ -12,7 +12,7 @@ Egeria Ecosystem User interface using the following technologies:
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces, that is declarative, has components and is 'learn once, write anywhere'. 
 * [Nodejs](https://nodejs.org/) - Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 * [Passport](https://www.passportjs.org/) - Simple, unobtrusive authentication for Node.js.
-* [Carbon Design system](https://www.carbondesignsystem.com/) - Carbon is IBM’s open source design system for products and digital experiences.
+* [Carbon Design system](https://www.carbondesignsystem.com/) - Carbon is IBM's open source design system for products and digital experiences.
 
 This repository is separate from the main [Egeria](https://github.com/odpi/egeria) repository, because the technology and build infrastructure is sufficiently different for the User interface.
 Egeria Ecosystem User Interface developers work with nodejs, develop in javascript, use the React framework and use npm; whereas the main Egeria repository attracts developers with Java skills.

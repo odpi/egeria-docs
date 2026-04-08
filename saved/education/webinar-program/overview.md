@@ -199,7 +199,7 @@ The material for our past webinars is listed below along with links to the recor
    
 ???+ education "Visualising a metadata ecosystem - September 2021 - David Radley"
  
-    This session is for people looking to understand the metadata across their ecosystem in terms of the Egeria open types and instances using visualisations in the Egeria React User Interface. Understanding the types is important knowledge when  developing connectors and new APIs like OMAS’s. This session will also show how metadata instances can be explored at a low level. This will be contrasted with an exploration of semantic data that is based on the Subject Area Open Metadata Access Service (OMAS).  [Event advertising](https://lfaidata.foundation/blog/2021/08/30/egeria-webinar-visualising-a-metadata-ecosystem/)
+    This session is for people looking to understand the metadata across their ecosystem in terms of the Egeria open types and instances using visualisations in the Egeria React User Interface. Understanding the types is important knowledge when  developing connectors and new APIs like OMAS's. This session will also show how metadata instances can be explored at a low level. This will be contrasted with an exploration of semantic data that is based on the Subject Area Open Metadata Access Service (OMAS).  [Event advertising](https://lfaidata.foundation/blog/2021/08/30/egeria-webinar-visualising-a-metadata-ecosystem/)
     
     ???+ education "Presentation ..."
          [:material-microsoft-powerpoint:](https://egeria-project.org/education/webinar-program/egeria-webinar-visualising-a-metadata-ecosystem-september-2021.pptx){ target=slides }

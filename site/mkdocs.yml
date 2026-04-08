@@ -46,8 +46,12 @@ nav:
                 - The Fourth Dimension: egeria-solutions/fourth-dimension/overview.md
             - Keeping Safe:
                 - Keeping Safe: egeria-solutions/keeping-safe/index.md
+                - Assessing New Regulation: egeria-solutions/assessing-new-regulation/overview.md
+                - Defining Security Strategy: egeria-solutions/defining-security-strategy/overview.md
+                - Auditing Users: egeria-solutions/auditing-users/overview.md
                 - Distributed Secrets: egeria-solutions/distributed-secrets/overview.md
                 - Proactive Cataloguing: egeria-solutions/proactive-cataloguing/overview.md
+                - Threat Modelling: egeria-solutions/threat-modelling/overview.md
       - Patterns of Use:
             - Patterns of Use: patterns/index.md
             - Metadata Manager: patterns/metadata-manager/overview.md
@@ -204,6 +208,42 @@ nav:
           - Server Diagnostic Guides:
               - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
+  - Personas and Roles:
+        - Overview: practices/coco-pharmaceuticals/personas/index.md
+        - Finance and Sales:
+              - Harry Hopeful: practices/coco-pharmaceuticals/personas/harry-hopeful.md
+              - Reggie Mint: practices/coco-pharmaceuticals/personas/reggie-mint.md
+              - Sally Counter: practices/coco-pharmaceuticals/personas/sally-counter.md
+              - Tom Tally: practices/coco-pharmaceuticals/personas/tom-tally.md
+              - Anita Job: practices/coco-pharmaceuticals/personas/anita-job.md
+        - Data:
+              - Callie Quartile: practices/coco-pharmaceuticals/personas/callie-quartile.md
+              - Erin Overview: practices/coco-pharmaceuticals/personas/erin-overview.md
+              - Jules Keeper: practices/coco-pharmaceuticals/personas/jules-keeper.md
+              - Peter Profile: practices/coco-pharmaceuticals/personas/peter-profile.md
+        - IT:
+              - Bob Nitter: practices/coco-pharmaceuticals/personas/bob-nitter.md
+              - Des Signa: practices/coco-pharmaceuticals/personas/des-signa.md
+              - Gary Geeke: practices/coco-pharmaceuticals/personas/gary-geeke.md
+              - Lemmie Stage: practices/coco-pharmaceuticals/personas/lemmie-stage.md
+              - Nancy Noah: practices/coco-pharmaceuticals/personas/nancy-noah.md
+              - Polly Tasker: practices/coco-pharmaceuticals/personas/polly-tasker.md
+        - Manufacturing:
+              - Stew Faster: practices/coco-pharmaceuticals/personas/stew-faster.md
+        - Security and Privacy:
+              - Faith Broker: practices/coco-pharmaceuticals/personas/faith-broker.md
+              - Ivor Padlock: practices/coco-pharmaceuticals/personas/ivor-padlock.md
+              - Sidney Seeker: practices/coco-pharmaceuticals/personas/sidney-seeker.md
+        - Clinical Trials:
+              - Angela Cummings: practices/coco-pharmaceuticals/personas/angela-cummings.md
+              - Florence Paynter: practices/coco-pharmaceuticals/personas/florence-paynter.md
+              - George Pie: practices/coco-pharmaceuticals/personas/george-pie.md
+              - Grant Able: practices/coco-pharmaceuticals/personas/grant-able.md
+              - Julie Stitched: practices/coco-pharmaceuticals/personas/julie-stitched.md
+              - Robbie Records: practices/coco-pharmaceuticals/personas/robbie-records.md
+              - Tanya Tidie: practices/coco-pharmaceuticals/personas/tanya-tidie.md
+              - Tessa Tube: practices/coco-pharmaceuticals/personas/tessa-tube.md
+        - Roles vs Personas: practices/coco-pharmaceuticals/roles-vs-personas/overview.md
   - Learning:
       - Learning Overview: education/index.md
       - Tutorials:
@@ -506,6 +546,7 @@ nav:
               - View Services (OMVS):
                   - Open Metadata View Services: services/omvs/index.md
                   - Action Author: services/omvs/action-author/overview.md
+                  - Actor Manager: services/omvs/actor-manager/overview.md
                   - Asset Catalog: services/omvs/asset-catalog/overview.md
                   - Asset Maker: services/omvs/asset-maker/overview.md
                   - Automated Curation: services/omvs/automated-curation/overview.md
@@ -572,38 +613,6 @@ nav:
               - Relationship Search: guides/cts/repository-workbench/profiles/relationship-search.md
               - Entity Advanced Search: guides/cts/repository-workbench/profiles/entity-advanced-search.md
               - Relationship Advanced Search: guides/cts/repository-workbench/profiles/relationship-advanced-search.md
-          - Performance Profiles:
-              - Entity Creation: guides/cts/performance-profiles/entity-creation.md
-              - Entity Search: guides/cts/performance-profiles/entity-search.md
-              - Relationship Creation: guides/cts/performance-profiles/relationship-creation.md
-              - Relationship Search: guides/cts/performance-profiles/relationship-search.md
-              - Entity Classification: guides/cts/performance-profiles/entity-classification.md
-              - Classification Search: guides/cts/performance-profiles/classification-search.md
-              - Entity Update: guides/cts/performance-profiles/entity-update.md
-              - Relationship Update: guides/cts/performance-profiles/relationship-update.md
-              - Classification Update: guides/cts/performance-profiles/classification-update.md
-              - Entity Undo: guides/cts/performance-profiles/entity-undo.md
-              - Relationship Undo: guides/cts/performance-profiles/relationship-undo.md
-              - Entity Retrieval: guides/cts/performance-profiles/entity-retrieval.md
-              - Entity History Retrieval: guides/cts/performance-profiles/entity-history-retrieval.md
-              - Relationship Retrieval: guides/cts/performance-profiles/relationship-retrieval.md
-              - Relationship History Retrieval: guides/cts/performance-profiles/relationship-history-retrieval.md
-              - Entity History Search: guides/cts/performance-profiles/entity-history-search.md
-              - Relationship History Search: guides/cts/performance-profiles/relationship-history-search.md
-              - Entity Re-home: guides/cts/performance-profiles/entity-re-home.md
-              - Relationship Re-home: guides/cts/performance-profiles/relationship-re-home.md
-              - Entity Declassify: guides/cts/performance-profiles/entity-declassify.md
-              - Entity Re-type: guides/cts/performance-profiles/entity-retype.md
-              - Relationship Re-type: guides/cts/performance-profiles/relationship-retype.md
-              - Entity Re-identify: guides/cts/performance-profiles/entity-re-identify.md
-              - Relationship Re-identify: guides/cts/performance-profiles/relationship-re-identify.md
-              - Relationship Delete: guides/cts/performance-profiles/relationship-delete.md
-              - Entity Delete: guides/cts/performance-profiles/entity-delete.md
-              - Entity Restore: guides/cts/performance-profiles/entity-restore.md
-              - Relationship Restore: guides/cts/performance-profiles/relationship-restore.md
-              - Relationship Purge: guides/cts/performance-profiles/relationship-purge.md
-              - Entity Purge: guides/cts/performance-profiles/entity-purge.md
-              - Environment: guides/cts/performance-profiles/environment.md
   - Concepts:
       - Egeria Glossary: concepts/index.md
       - Basic Concepts: concepts/basic-concepts.md
@@ -780,38 +789,12 @@ nav:
           - Open Metadata Implementation: practices/common-data-definitions/open-metadata-for-common-definitions.md
       - Coco Pharmaceuticals:
           - Coco Pharmaceuticals: practices/coco-pharmaceuticals/index.md
-          - Personas:
-              - Overview: practices/coco-pharmaceuticals/personas/overview.md
-              - Angela Cummings: practices/coco-pharmaceuticals/personas/angela-cummings.md
-              - Bob Nitter: practices/coco-pharmaceuticals/personas/bob-nitter.md
-              - Callie Quartile: practices/coco-pharmaceuticals/personas/callie-quartile.md
-              - Des Signa: practices/coco-pharmaceuticals/personas/des-signa.md
-              - Erin Overview: practices/coco-pharmaceuticals/personas/erin-overview.md
-              - Faith Broker: practices/coco-pharmaceuticals/personas/faith-broker.md
-              - Florence Paynter: practices/coco-pharmaceuticals/personas/florence-paynter.md
-              - Gary Geeke: practices/coco-pharmaceuticals/personas/gary-geeke.md
-              - George Pie: practices/coco-pharmaceuticals/personas/george-pie.md
-              - Grant Able: practices/coco-pharmaceuticals/personas/grant-able.md
-              - Harry Hopeful: practices/coco-pharmaceuticals/personas/harry-hopeful.md
-              - Ivor Padlock: practices/coco-pharmaceuticals/personas/ivor-padlock.md
-              - Jules Keeper: practices/coco-pharmaceuticals/personas/jules-keeper.md
-              - Julie Stitched: practices/coco-pharmaceuticals/personas/julie-stitched.md
-              - Lemmie Stage: practices/coco-pharmaceuticals/personas/lemmie-stage.md
-              - Nancy Noah: practices/coco-pharmaceuticals/personas/nancy-noah.md
-              - Peter Profile: practices/coco-pharmaceuticals/personas/peter-profile.md
-              - Polly Tasker: practices/coco-pharmaceuticals/personas/polly-tasker.md
-              - Reggie Mint: practices/coco-pharmaceuticals/personas/reggie-mint.md
-              - Robbie Records: practices/coco-pharmaceuticals/personas/robbie-records.md
-              - Sally Counter: practices/coco-pharmaceuticals/personas/sally-counter.md
-              - Sidney Seeker: practices/coco-pharmaceuticals/personas/sidney-seeker.md
-              - Stew Faster: practices/coco-pharmaceuticals/personas/stew-faster.md
-              - Tanya Tidie: practices/coco-pharmaceuticals/personas/tanya-tidie.md
-              - Tessa Tube: practices/coco-pharmaceuticals/personas/tessa-tube.md
-              - Tom Tally: practices/coco-pharmaceuticals/personas/tom-tally.md
-          - Roles vs Personas: practices/coco-pharmaceuticals/roles-vs-personas/overview.md
           - Scenarios:
               - Introduction: practices/coco-pharmaceuticals/scenarios/overview.md
+              - Assuring IT System Security: practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview.md
+              - Auditing IT System Users: practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview.md
               - Authoritative Sources: practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview.md
+              - Building Data Security Strategy: practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview.md
               - Cataloguing Infrastructure: practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview.md
               - Common Data Definitions: practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview.md
               - Continuous Analytics: practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview.md
@@ -824,6 +807,7 @@ nav:
               - Multi-Faceted Governance: practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview.md
               - New Systems Architecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview.md
               - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
+              - Preparing for Martyn's Law: practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview.md
               - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
               - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md
               - Sustainability: practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview.md

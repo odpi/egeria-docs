@@ -3,6 +3,10 @@
 
 # Peter Profile - Data Analyst
 
+## Persona Description
+
+----
+
 ![Icon](peter-profile.png)
 
 
@@ -15,7 +19,7 @@ Scope: Organization-wide
 Job:
 
 * Peter is responsible for reporting on the quality of key data repositories owned by the company.
-* Peter works for [Erin](/practices/coco-pharmaceuticals/personas/erin-overview) and supplies her with the detailed evidence on the actual state of the company’s information.
+* Peter works for [Erin](/practices/coco-pharmaceuticals/personas/erin-overview) and supplies her with the detailed evidence on the actual state of the company's information.
 
 Thinks/Feels:
 
@@ -42,6 +46,6 @@ Desired Outcome:
 
 * A steady improvement in the quality of information in each of the key repositories.
 
-
+----
 
 --8<-- "snippets/abbr.md"

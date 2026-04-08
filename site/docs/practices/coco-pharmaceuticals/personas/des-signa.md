@@ -3,6 +3,9 @@
 
 # Des Signa - Mobile Developer
 
+## Persona Description
+
+----
 ![Icon](des-signa.png)
 
 Age: 28
@@ -23,7 +26,7 @@ their mobile clinical trial apps.
 
 Thinks/Feels:
 
-* Des believes systems should be designed for people – not
+* Des believes systems should be designed for people - not
 just to perform a function.
 * They is a passionate believer in [Design Thinking](https://en.wikipedia.org/wiki/Design_thinking).
 
@@ -41,7 +44,7 @@ and frameworks for mobile devices.
 Sees:
 
 * A huge potential to switch the whole company to using mobile
-devices as a way of improving everyone’s productivity.
+devices as a way of improving everyone's productivity.
 
 Top challenges:
 
@@ -55,6 +58,6 @@ Desired Outcome:
 people in what they need to do.
 * Their mobile apps provide proper protection of the data they gather.
 
-
+----
 
 --8<-- "snippets/abbr.md"

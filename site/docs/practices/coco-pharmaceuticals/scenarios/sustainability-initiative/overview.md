@@ -11,7 +11,7 @@ These initiatives require careful consideration, planning and collaboration - of
 
 The foundation for much of sustainability reporting is accounting for the  carbon emissions (and their equivalence) by following protocols such as the GHG Protocols. This can help all stakeholders establish:
 
-* Coco’s direct and indirect carbon emissions baseline
+* Coco's direct and indirect carbon emissions baseline
 * goals and targets to reduce these emissions
 * campaigns and projects to achieve these goals
 * Progress monitoring and reporting

@@ -3,6 +3,10 @@
 
 # Jules Keeper - Chief Data Officer
 
+## Persona Description
+
+----
+
 ![Icon](jules-keeper.png)
 
 Age: 55
@@ -27,7 +31,7 @@ Hears:
 
 Says/Does:
 
-* Repeatedly stresses the importance of data to the business’s future.
+* Repeatedly stresses the importance of data to the business's future.
 * Is building a data strategy for the business along with glossary/data dictionary, backed by governance principles, policies and procedures.
 
 Sees:
@@ -48,6 +52,6 @@ Desired Outcome:
 * An increase in the number of decisions that are backed by sound information.
 * Transparency in the operations of the organization due to the provision of timely comprehensive information.
 
-
+----
 
 --8<-- "snippets/abbr.md"

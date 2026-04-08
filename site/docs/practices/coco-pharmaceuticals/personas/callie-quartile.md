@@ -3,11 +3,15 @@
 
 # Callie Quartile - Data Scientist
 
+## Persona Description
+
+----
+
 ![Icon](callie-quartile.png)
 
 Age: 39
 
-Skills: Operations research – specializing in medical research
+Skills: Operations research - specializing in medical research
 
 Scope: Cancer Research Team
 
@@ -36,11 +40,13 @@ Sees:
 Top challenges:
 
 * Getting access to data. 
-* Each of the research team’s systems is independent. 
+* Each of the research team's systems is independent. 
 * Reports from the clinical trials that mainly come in as notes from the medical staff. [Tanya](/practices/coco-pharmaceuticals/personas/tanya-tidie) does her best at collating this information for Callie but it needs to be faster and more automated.
 
 Desired Outcome:
 
 * Callie wants a data lake of all their information that she can explore to uncover new insight.  
+
+----
 
 --8<-- "snippets/abbr.md"

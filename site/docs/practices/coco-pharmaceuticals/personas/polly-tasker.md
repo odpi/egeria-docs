@@ -3,6 +3,10 @@
 
 # Polly Tasker - IT Project Leader
 
+## Persona Description
+
+----
+
 ![Icon](polly-tasker.png)
 
 Age: 36
@@ -15,7 +19,7 @@ Job:
 
 * Polly Tasker is a Project Manager.  
 * She leads a small team of developers working on enhancements
-to the company’s IT systems.
+to the company's IT systems.
 Much of this work involves adding a new system and then
 integrating it with the existing systems.
 
@@ -54,5 +58,6 @@ Desired Outcome:
 
 * Better ways to plan for new integration projects.
 
+----
 
 --8<-- "snippets/abbr.md"

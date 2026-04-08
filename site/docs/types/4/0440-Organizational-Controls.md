@@ -34,7 +34,7 @@ For example, if the resource was a [Digital Product](/types/7/0710-Digital-Produ
 
 ### CertificationType entity
 
-Many regulations and industry bodies define certifications that can confirm a level of support, capability or competence in an aspect of a digital organization’s operation. Having certifications may be necessary to operating legally or may be a business advantage.  Certifications can also be used to communicate that data is of a particular quality level, or a process has completed successfully.
+Many regulations and industry bodies define certifications that can confirm a level of support, capability or competence in an aspect of a digital organization's operation. Having certifications may be necessary to operating legally or may be a business advantage.  Certifications can also be used to communicate that data is of a particular quality level, or a process has completed successfully.
 
 The description of the requirements for particular type of certification is described using a *CertificationType* entity.  It is linked to the elements that require the certification using the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.  The [Certification](/types/4/0482-Certifications) relationship is used to identify the resources that meet the standards laid out in the certification type and so are considered "certified".
 

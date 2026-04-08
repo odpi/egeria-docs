@@ -18,6 +18,7 @@ Dr.Egeria MD is a markdown document processor that can be used to create and upd
 A single markdown document can include explanatory text and diagrams interspersed with commands to the Dr.Egeria command processor.  
 
 ![Form Structures](form-structure.svg)
+> **Figure 2:** Dr Egeria Form Structures
 
 When the document is processed, Dr.Egeria reads the document, extracts the commands and turns them into calls to Egeria's rest API.  The commands may be to maintain open metadata elements or create a report.  
 
@@ -27,19 +28,20 @@ With Dr.Egeria it is possible to create, maintain and report on:
 
 * Glossaries and glossary terms
 * Projects
+* Collections
 * Digital Products
 * Data dictionaries and data specifications
-* Solution blueprints
+* Solution components, roles and blueprints
 * Feedback (comments, tags, likes and ratings) to existing metadata elements
 * Governance Definitions such as License Types and Certification Types
-* External Data Source Descriptions
+* External References, such as Data Source Descriptions
 
 
 ## Using Obsidian
 
 [Obsidian](https://obsidian.md/) is a popular markdown editor that supports [Mermaid Diagrams](/user-interfaces/mermaid/overview) and plug-in markdown processors such as Dr.Egeria.  Obsidian is free to use and available on many platforms.  
 
-Dr.Egeria includes two types of plug-ins for Obsidian.  The first is a collection of command templates that can be browsed and pasted into a markdown document.  Once the command is filled out, the **Call Egeria** function can be selected to process the markdown document.
+Dr.Egeria includes two types of plug-ins for Obsidian.  The first is a collection of command templates that can be browsed and pasted into a markdown document.  Once the command is filled out, the **Call Dr.Egeria** function can be selected to process the markdown document.
 
 ![Obsidian](obsidian.svg)
 > **Figure 3:** The Obsidian Desktop

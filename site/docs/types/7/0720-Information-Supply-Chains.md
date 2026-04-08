@@ -24,11 +24,7 @@ If additional processing is required to move the data between solution component
 
 ## InformationSupplyChain entity
 
-An *InformationSupplyChain* entity is a [Referenceables](/types/0/0010-Base-Model) that identifies an information supply chain.  It contains the description of the purposes and scope of the information supply chain and the description of its importance to the business.
-
-## InformationSupplyChainComposition relationship
-
-The *InformationSupplyChainComposition* relationship links an *InformationSupplyChain* entity to its segments.
+An *InformationSupplyChain* entity is a [Collection](/types/0/0021-Collections) that identifies an information supply chain.  It contains the description of the purposes and scope of the information supply chain and the description of its importance to the business.
 
 ## InformationSupplyChainLink
 
@@ -51,7 +47,6 @@ The second segment from the landing area to the data lake is the responsibility 
 
 
 ??? info "Further information"
-    * The implementation of this information supply chain is build out in the *Automated Curation* [Open Metadata Lab](/education/open-metadata-labs/overview).
     * Further detail on the modelling of the solution components can be found in [0735 Solution Ports and Wires](/types/7/0735-Solution-Ports-and-Wires).
 
 

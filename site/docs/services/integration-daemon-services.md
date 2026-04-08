@@ -28,6 +28,6 @@ Inside the Integration Daemon, the [integration connectors](/concepts/integratio
 * [Trouble shooting issues](/guides/diagnostic/integration-daemon-diagnostic-guide) with the integration daemon
 * [Configuring](/concepts/integration-daemon) the integration daemon
 * Learning more about [integration connectors](/concepts/integration-connector)
-* [Solutions](/solutions/data-manager-integration) using the integration daemon
+* [Solutions](/egeria-solutions/leveraging-your-estate) using the integration daemon
 
 --8<-- "snippets/abbr.md"

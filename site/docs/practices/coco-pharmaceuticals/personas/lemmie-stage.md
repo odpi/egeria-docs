@@ -3,13 +3,17 @@
 
 # Lemmie Stage - DevOps Specialist
 
+## Persona Description
+
+----
+
 ![Icon](lemmie-stage.png)
 
 Age: 62
 
 Skills:  Automation, Containerized deployment of services.
 
-Scope: IT – deploys new services and systems.
+Scope: IT - deploys new services and systems.
 
 Job:
 
@@ -24,7 +28,7 @@ Thinks/Feels:
 
 Hears:
 
-* New requirements for additional systems and container changes – everything else is filtered out.
+* New requirements for additional systems and container changes - everything else is filtered out.
 
 Says/Does:
 
@@ -45,5 +49,6 @@ Desired Outcome:
 * He would like to get all the IT systems and services onto the latest container technology with full automation and consistent software stacks.
 * He would like [Polly](/practices/coco-pharmaceuticals/personas/polly-tasker) and [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) (Information Architect) to appreciate how vital he is to the business and realize how skilled he is. 
 
+-----
 
 --8<-- "snippets/abbr.md"

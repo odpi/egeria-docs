@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: ReferenceCodeTable - Data set for fileType Valid Values [c32bac0e-9cca-48b5-b8f8-353aa5e44260]
+title: ReferenceCodeTable - Data set for fileType Valid Values [024e7105-8417-4ee1-b0d2-f9281e4bf5fe]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -8,7 +8,7 @@ flowchart TD
 1@{ shape: rounded, label: "*Reference Code Table*
 **Data set for fileType Valid Values**"}
 2@{ shape: delay, label: "*Search Keyword*
-**0a3caf6f-4c1f-49b9-90ac-82120f8e261b**"}
+**d0691a47-63f3-44b4-ad5b-60f2deff7163**"}
 1==>|"Search Keyword Link"|2
 3@{ shape: rect, label: "*Digital Product*
 **fileType Valid Values**"}
@@ -35,23 +35,23 @@ flowchart TD
 **Notification type for Ongoing update subscription for product Valid Metadata Value Set: fileType**"}
 10==>|"product asset [Monitored Resource]"|1
 11@{ shape: processes, label: "*Governance Action Process*
-**Create Daily refresh subscription for Valid Metadata Value Set: fileType**"}
+**Create Weekly refresh subscription for Valid Metadata Value Set: fileType**"}
 11==>|"sourceDataSet [Target For Governance Action]"|1
 12@{ shape: processes, label: "*Governance Action Process*
-**Create Evaluation subscription for Valid Metadata Value Set: fileType**"}
+**Create Ongoing update subscription for Valid Metadata Value Set: fileType**"}
 12==>|"sourceDataSet [Target For Governance Action]"|1
 13@{ shape: processes, label: "*Governance Action Process*
-**Create Ongoing update subscription for Valid Metadata Value Set: fileType**"}
+**Create Daily refresh subscription for Valid Metadata Value Set: fileType**"}
 13==>|"sourceDataSet [Target For Governance Action]"|1
 14@{ shape: processes, label: "*Governance Action Process*
-**Create Weekly refresh subscription for Valid Metadata Value Set: fileType**"}
+**Create Evaluation subscription for Valid Metadata Value Set: fileType**"}
 14==>|"sourceDataSet [Target For Governance Action]"|1
-style 11 color:#000000, fill:#53bbb4, stroke:#000000
-style 12 color:#000000, fill:#53bbb4, stroke:#000000
-style 13 color:#000000, fill:#53bbb4, stroke:#000000
-style 14 color:#000000, fill:#53bbb4, stroke:#000000
+style 11 color:#000000, fill:#40E0D0, stroke:#000000
+style 12 color:#000000, fill:#40E0D0, stroke:#000000
+style 13 color:#000000, fill:#40E0D0, stroke:#000000
+style 14 color:#000000, fill:#40E0D0, stroke:#000000
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#9acd32, fill:#8b008b, stroke:#004563
+style 2 color:#9ACD32, fill:#8B008B, stroke:#004563
 style 3 color:#000000, fill:#838cc7, stroke:#3079ab
 style 4 color:#000000, fill:#39add1, stroke:#004563
 style 5 color:#000000, fill:#39add1, stroke:#004563

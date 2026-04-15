@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: ArchiveFile - Open Metadata Types [a5ebc739-4f94-4181-95b2-950038350a8d]
+title: ArchiveFile - Open Metadata Types [96105aad-b87a-43a0-bca3-8c9bf492c2a5]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -19,14 +19,10 @@ flowchart TD
 5@{ shape: rounded, label: "*Endpoint*
 **OpenMetadataTypes.omarchive endpoint**"}
 3==>|"Connect To Endpoint"|5
-6@{ shape: div-rect, label: "*File Folder*
-**content-packs**"}
-6==>|"Nested File"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#004563, fill:#b0e0e6, stroke:#004563
 style 3 color:#000000, fill:#39add1, stroke:#004563
 style 4 color:#000000, fill:#39add1, stroke:#004563
 style 5 color:#000000, fill:#39add1, stroke:#004563
-style 6 color:#000000, fill:#bdb76b, stroke:#004563
 ```
 > Open Metadata Types: Standard types for open metadata repositories. (Extracted from 6.0-SNAPSHOT)

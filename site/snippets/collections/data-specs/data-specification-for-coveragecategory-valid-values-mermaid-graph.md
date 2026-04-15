@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataSpec - Data Specification for coverageCategory Valid Values [65898c37-7077-4377-9de7-02a2020436fc]
+title: DataSpec - Data Specification for coverageCategory Valid Values [cc5c2574-4014-4460-ab2e-c7f5f2c1942b]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,6 +11,6 @@ flowchart TD
 **Data Structure for coverageCategory Valid Values**"}
 1==>|"Collection Membership"|2
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#f9845b, stroke:#000000
+style 2 color:#000000, fill:#FFA500, stroke:#000000
 ```
 > Data Specification for coverageCategory Valid Values: The data specification lists the fields in the Valid Metadata Value Set: coverageCategory product. (Extracted from 6.0-SNAPSHOT)

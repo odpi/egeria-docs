@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataSpec - Data Specification for projectHealth Valid Values [1cbb46e2-35bf-492c-a5f3-5bfd6200a22f]
+title: DataSpec - Data Specification for projectHealth Valid Values [10578361-933f-4b1c-82a7-c4270c6a24f4]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,6 +11,6 @@ flowchart TD
 **Data Structure for projectHealth Valid Values**"}
 1==>|"Collection Membership"|2
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#f9845b, stroke:#000000
+style 2 color:#000000, fill:#FFA500, stroke:#000000
 ```
 > Data Specification for projectHealth Valid Values: The data specification lists the fields in the Valid Metadata Value Set: projectHealth product. (Extracted from 6.0-SNAPSHOT)

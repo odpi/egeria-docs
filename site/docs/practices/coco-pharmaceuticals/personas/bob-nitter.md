@@ -27,12 +27,12 @@ Thinks/Feels:
 
 Hears:
 
-* Concerns that he works too slowly and is old-fashioned in approach. They say, “if only he used agile development then he could create services much quicker.”
+* Concerns that he works too slowly and is old-fashioned in approach. They say, *if only he used agile development then he could create services much quicker.*
 
 Says/Does:
 
 * Much of Bob's time is spent installing tools, connecting to systems, testing different approaches to find out what works and hardening that. 
-* He is unsure he is integrating the systems the best way - he often just has time to get “something” working.
+* He is unsure he is integrating the systems the best way - he often just has time to get *something* working.
 
 Sees:
 

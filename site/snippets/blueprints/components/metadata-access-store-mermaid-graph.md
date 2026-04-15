@@ -20,13 +20,13 @@ flowchart TD
 **Open Metadata Digital Products Content Pack**"}
 5==>|"Collection Membership"|1
 6@{ shape: rect, label: "*Solution Blueprint*
-**Egeria Default Runtime Solution Blueprint**"}
+**Egeria Observability Content Pack**"}
 6==>|"Collection Membership"|1
 7@{ shape: rect, label: "*Solution Blueprint*
-**Egeria Workspaces Servers Solution Blueprint**"}
+**Egeria Default Runtime Solution Blueprint**"}
 7==>|"Collection Membership"|1
 8@{ shape: stadium, label: "*Collection Membership*
-**... plus 1 Items**"}
+**... plus 2 Items**"}
 8-.->1
 9@{ shape: rect, label: "*Solution Component*
 **Open Metadata Repository**"}
@@ -60,22 +60,22 @@ flowchart TD
 **Delete OMAG Server Platform from Open Metadata**"}
 18==>|"metadata [Solution Linking Wire]"|1
 19@{ shape: stadium, label: "*Solution Linking Wire*
-**... plus 74 Items**"}
+**... plus 79 Items**"}
 19-.->1
 20@{ shape: hex, label: "*Software Server*
 **qs-metadata-store on https:/ /localhost:9443**"}
 1==>|"running instance [Implemented By]"|20
 21@{ shape: stadium, label: "*Solution Linking Wire*
-**... plus 74 Items**"}
+**... plus 79 Items**"}
 21-.->1
-style 11 color:#000000, fill:#dda0dd, stroke:#000000
-style 12 color:#000000, fill:#dda0dd, stroke:#000000
-style 13 color:#000000, fill:#dda0dd, stroke:#000000
-style 14 color:#000000, fill:#dda0dd, stroke:#000000
-style 15 color:#000000, fill:#dda0dd, stroke:#000000
-style 16 color:#000000, fill:#dda0dd, stroke:#000000
-style 17 color:#000000, fill:#dda0dd, stroke:#000000
-style 18 color:#000000, fill:#dda0dd, stroke:#000000
+style 11 color:#000000, fill:#DDA0DD, stroke:#000000
+style 12 color:#000000, fill:#DDA0DD, stroke:#000000
+style 13 color:#000000, fill:#DDA0DD, stroke:#000000
+style 14 color:#000000, fill:#DDA0DD, stroke:#000000
+style 15 color:#000000, fill:#DDA0DD, stroke:#000000
+style 16 color:#000000, fill:#DDA0DD, stroke:#000000
+style 17 color:#000000, fill:#DDA0DD, stroke:#000000
+style 18 color:#000000, fill:#DDA0DD, stroke:#000000
 style 19 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
@@ -85,9 +85,9 @@ style 5 color:#000000, fill:#f5fffa, stroke:#000000
 style 6 color:#000000, fill:#f5fffa, stroke:#000000
 style 7 color:#000000, fill:#f5fffa, stroke:#000000
 style 8 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
-style 20 color:#000000, fill:#bdb76b, stroke:#004563
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
+style 20 color:#000000, fill:#BDB76B, stroke:#004563
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
 style 21 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 click 11 "https://egeria-project.org/concepts/open-metadata-archive/" "Click for more documentation" _blank
 click 1 "https://egeria-project.org/concepts/metadata-access-store/" "Click for more documentation" _blank

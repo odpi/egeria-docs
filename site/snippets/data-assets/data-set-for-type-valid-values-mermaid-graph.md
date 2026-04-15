@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: ReferenceCodeTable - Data set for type Valid Values [4f4b25a7-c867-45e0-acee-dc28f835c365]
+title: ReferenceCodeTable - Data set for type Valid Values [eb016ad4-85e7-44c6-ae22-e30f465e30c6]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -8,7 +8,7 @@ flowchart TD
 1@{ shape: rounded, label: "*Reference Code Table*
 **Data set for type Valid Values**"}
 2@{ shape: delay, label: "*Search Keyword*
-**76edc74b-5d86-49ce-b3ed-4ba7cdb11f00**"}
+**9f5cbfac-5401-478c-8df7-c0c4ecbd5b94**"}
 1==>|"Search Keyword Link"|2
 3@{ shape: rect, label: "*Digital Product*
 **type Valid Values**"}
@@ -35,23 +35,23 @@ flowchart TD
 **Notification type for Ongoing update subscription for product Valid Metadata Value Set: type**"}
 10==>|"product asset [Monitored Resource]"|1
 11@{ shape: processes, label: "*Governance Action Process*
-**Create Ongoing update subscription for Valid Metadata Value Set: type**"}
+**Create Weekly refresh subscription for Valid Metadata Value Set: type**"}
 11==>|"sourceDataSet [Target For Governance Action]"|1
 12@{ shape: processes, label: "*Governance Action Process*
-**Create Weekly refresh subscription for Valid Metadata Value Set: type**"}
+**Create Ongoing update subscription for Valid Metadata Value Set: type**"}
 12==>|"sourceDataSet [Target For Governance Action]"|1
 13@{ shape: processes, label: "*Governance Action Process*
-**Create Daily refresh subscription for Valid Metadata Value Set: type**"}
+**Create Evaluation subscription for Valid Metadata Value Set: type**"}
 13==>|"sourceDataSet [Target For Governance Action]"|1
 14@{ shape: processes, label: "*Governance Action Process*
-**Create Evaluation subscription for Valid Metadata Value Set: type**"}
+**Create Daily refresh subscription for Valid Metadata Value Set: type**"}
 14==>|"sourceDataSet [Target For Governance Action]"|1
-style 11 color:#000000, fill:#53bbb4, stroke:#000000
-style 12 color:#000000, fill:#53bbb4, stroke:#000000
-style 13 color:#000000, fill:#53bbb4, stroke:#000000
-style 14 color:#000000, fill:#53bbb4, stroke:#000000
+style 11 color:#000000, fill:#40E0D0, stroke:#000000
+style 12 color:#000000, fill:#40E0D0, stroke:#000000
+style 13 color:#000000, fill:#40E0D0, stroke:#000000
+style 14 color:#000000, fill:#40E0D0, stroke:#000000
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#9acd32, fill:#8b008b, stroke:#004563
+style 2 color:#9ACD32, fill:#8B008B, stroke:#004563
 style 3 color:#000000, fill:#838cc7, stroke:#3079ab
 style 4 color:#000000, fill:#39add1, stroke:#004563
 style 5 color:#000000, fill:#39add1, stroke:#004563

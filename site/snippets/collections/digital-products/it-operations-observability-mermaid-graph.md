@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DigitalProductFamily - IT Operations Observability [eb2ced5b-9941-4231-a1dd-56f55ffdabd1]
+title: DigitalProductFamily - IT Operations Observability [899a775c-ffe7-4ea1-89ae-6727f513c8c0]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%

@@ -34,12 +34,12 @@ flowchart TD
 1-.->9
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#8fbc8f, stroke:#000000
-style 3 color:#000000, fill:#66cdaa, stroke:#008080
-style 4 color:#000000, fill:#66cdaa, stroke:#008080
-style 5 color:#000000, fill:#66cdaa, stroke:#008080
-style 6 color:#000000, fill:#66cdaa, stroke:#008080
-style 7 color:#000000, fill:#66cdaa, stroke:#008080
-style 8 color:#000000, fill:#66cdaa, stroke:#008080
+style 3 color:#000000, fill:#66CDAA, stroke:#008080
+style 4 color:#000000, fill:#66CDAA, stroke:#008080
+style 5 color:#000000, fill:#66CDAA, stroke:#008080
+style 6 color:#000000, fill:#66CDAA, stroke:#008080
+style 7 color:#000000, fill:#66CDAA, stroke:#008080
+style 8 color:#000000, fill:#66CDAA, stroke:#008080
 style 9 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 ```
 > Coco Pharmaceuticals Clinical Trial Terminology: This glossary describes terminology invented for the fictitious Coco Pharmaceuticals case study.  Used in scenarios that show techniques for the collection and processing of data associated with a clinical trial. (Extracted from 6.0-SNAPSHOT)

@@ -48,19 +48,19 @@ flowchart TD
 **View Server**"}
 1==>|"access metadata [Solution Linking Wire]"|14
 style 11 color:#000000, fill:#FFE599, stroke:#000000
-style 12 color:#000000, fill:#dda0dd, stroke:#000000
-style 13 color:#000000, fill:#dda0dd, stroke:#000000
-style 14 color:#000000, fill:#dda0dd, stroke:#000000
+style 12 color:#000000, fill:#DDA0DD, stroke:#000000
+style 13 color:#000000, fill:#DDA0DD, stroke:#000000
+style 14 color:#000000, fill:#DDA0DD, stroke:#000000
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
 style 9 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
 click 1 "https://egeria-project.org/user-interfaces/hey-egeria/overview/" "Click for more documentation" _blank
 click 12 "https://egeria-project.org/concepts/open-metadata-repository/" "Click for more documentation" _blank
 click 13 "https://egeria-project.org/concepts/open-metadata-archive/" "Click for more documentation" _blank

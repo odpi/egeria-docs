@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: Specification for - Create Daily refresh subscription for Valid Metadata Value Set: domainIdentifier [57ec5359-d2d9-4bbf-9134-6007dfcee894]
+title: Specification for - Create Daily refresh subscription for Valid Metadata Value Set: domainIdentifier [b4f0b7bb-2b3a-406a-a7d4-2b2739268ecf]
 ---
 flowchart LR
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,15 +11,15 @@ flowchart LR
 **producedGuard**"}
 1==>2
 3@{ shape: hex, label: "*Specification Property Value*
-**service-failed**"}
+**missing-request-parameter**"}
 2==>3
-subgraph 4 [service-failed details]
+subgraph 4 [missing-request-parameter details]
 5@{ shape: text, label: "*description:*
-**An unexpected error occurred while the governance service was running.  Messages are logged to the audit log explaining the source of the error.**"}
+**The named request parameter has not been supplied.**"}
 6@{ shape: text, label: "*completion Status:*
-**Failed (The governance action service failed to execute the requested action.)**"}
+**Invalid (The governance action service has not performed the requested action because it is not appropriate (for example, a false positive).)**"}
 7@{ shape: text, label: "*completion Status Description:*
-**The governance action service failed to execute the requested action.**"}
+**The governance action service has not performed the requested action because it is not appropriate (for example, a false positive).**"}
 end
 3==>4
 8@{ shape: hex, label: "*Specification Property Value*
@@ -35,23 +35,23 @@ subgraph 9 [missing-action-target details]
 end
 8==>9
 13@{ shape: hex, label: "*Specification Property Value*
-**delete-complete**"}
+**service-failed**"}
 2==>13
-subgraph 14 [delete-complete details]
+subgraph 14 [service-failed details]
 15@{ shape: text, label: "*description:*
-**The digital subscription has been deleted.**"}
+**An unexpected error occurred while the governance service was running.  Messages are logged to the audit log explaining the source of the error.**"}
 16@{ shape: text, label: "*completion Status:*
-**Actioned (The governance action service for the governance action has successfully completed processing.)**"}
+**Failed (The governance action service failed to execute the requested action.)**"}
 17@{ shape: text, label: "*completion Status Description:*
-**The governance action service for the governance action has successfully completed processing.**"}
+**The governance action service failed to execute the requested action.**"}
 end
 13==>14
 18@{ shape: hex, label: "*Specification Property Value*
-**set-up-complete**"}
+**delete-complete**"}
 2==>18
-subgraph 19 [set-up-complete details]
+subgraph 19 [delete-complete details]
 20@{ shape: text, label: "*description:*
-**The new digital subscription has been created.  Its unique identifier (guid) is published in the ''newDigitalSubscription'' action target**"}
+**The digital subscription has been deleted.**"}
 21@{ shape: text, label: "*completion Status:*
 **Actioned (The governance action service for the governance action has successfully completed processing.)**"}
 22@{ shape: text, label: "*completion Status Description:*
@@ -59,44 +59,44 @@ subgraph 19 [set-up-complete details]
 end
 18==>19
 23@{ shape: hex, label: "*Specification Property Value*
-**missing-request-parameter**"}
+**set-up-complete**"}
 2==>23
-subgraph 24 [missing-request-parameter details]
+subgraph 24 [set-up-complete details]
 25@{ shape: text, label: "*description:*
-**The named request parameter has not been supplied.**"}
+**The new digital subscription has been created.  Its unique identifier (guid) is published in the ''newDigitalSubscription'' action target**"}
 26@{ shape: text, label: "*completion Status:*
-**Invalid (The governance action service has not performed the requested action because it is not appropriate (for example, a false positive).)**"}
+**Actioned (The governance action service for the governance action has successfully completed processing.)**"}
 27@{ shape: text, label: "*completion Status Description:*
-**The governance action service has not performed the requested action because it is not appropriate (for example, a false positive).**"}
+**The governance action service for the governance action has successfully completed processing.**"}
 end
 23==>24
 28@{ shape: hex, label: "*Specification Property Assignment*
 **supportedActionTarget**"}
 1==>28
 29@{ shape: hex, label: "*Specification Property Value*
-**digitalSubscriptionRequester**"}
+**destinationDataSet**"}
 28==>29
-subgraph 30 [digitalSubscriptionRequester details]
+subgraph 30 [destinationDataSet details]
 31@{ shape: text, label: "*description:*
-**An actor requesting the digital subscription.**"}
+**The Asset that is the target of the subscription.**"}
 32@{ shape: text, label: "*type Name:*
-**Actor**"}
+**DataAsset**"}
 33@{ shape: text, label: "*deployed Implementation Type:*
-"}
+**Data Asset**"}
 34@{ shape: text, label: "*required:*
 **false**"}
 end
 29==>30
 35@{ shape: hex, label: "*Specification Property Value*
-**destinationDataSet**"}
+**digitalSubscriptionRequester**"}
 28==>35
-subgraph 36 [destinationDataSet details]
+subgraph 36 [digitalSubscriptionRequester details]
 37@{ shape: text, label: "*description:*
-**The Asset that is the target of the subscription.**"}
+**An actor requesting the digital subscription.**"}
 38@{ shape: text, label: "*type Name:*
-**DataAsset**"}
+**Actor**"}
 39@{ shape: text, label: "*deployed Implementation Type:*
-**Data Asset**"}
+"}
 40@{ shape: text, label: "*required:*
 **false**"}
 end
@@ -150,7 +150,7 @@ style 17 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 style 39 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 style 18 color:#260d1b, fill:#d98cb6, stroke:#260d1b
 style 19 color:#260d1b, fill:#d98cb6, stroke:#260d1b
-style 1 color:#000000, fill:#53bbb4, stroke:#000000
+style 1 color:#000000, fill:#40E0D0, stroke:#000000
 style 2 color:#f2d9e7, fill:#260d1b, stroke:#f2d9e7
 style 3 color:#260d1b, fill:#d98cb6, stroke:#260d1b
 style 4 color:#260d1b, fill:#d98cb6, stroke:#260d1b

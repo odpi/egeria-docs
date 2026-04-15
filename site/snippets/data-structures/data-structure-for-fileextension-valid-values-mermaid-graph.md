@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataStructure - Data Structure for fileExtension Valid Values [a38e5651-e4db-4dd5-b309-3840b23b7917]
+title: DataStructure - Data Structure for fileExtension Valid Values [b47844ba-73cf-4a4a-880e-e3d9fb229675]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,34 +11,34 @@ flowchart TD
 **Data Specification for fileExtension Valid Values**"}
 2==>|"Collection Membership"|1
 3@{ shape: rect, label: "*Data Field*
-**Qualified Name**"}
-1==>|"[4] 0..0 [Member Data Field]"|3
+**Description**"}
+1==>|"[7] 0..0 [Member Data Field]"|3
 4@{ shape: rect, label: "*Data Field*
-**Identifier**"}
-1==>|"[5] 0..0 [Member Data Field]"|4
+**Qualified Name**"}
+1==>|"[4] 0..0 [Member Data Field]"|4
 5@{ shape: rect, label: "*Data Field*
-**Scope**"}
-1==>|"[13] 0..0 [Member Data Field]"|5
+**Element Last Update Time**"}
+1==>|"[3] 0..0 [Member Data Field]"|5
 6@{ shape: rect, label: "*Data Field*
-**Namespace**"}
+**NamespacePath**"}
 1==>|"[9] 0..0 [Member Data Field]"|6
 7@{ shape: rect, label: "*Data Field*
-**Element Last Update Time**"}
-1==>|"[3] 0..0 [Member Data Field]"|7
+**Preferred Value**"}
+1==>|"[10] 0..0 [Member Data Field]"|7
 8@{ shape: rect, label: "*Data Field*
-**Display Name**"}
-1==>|"[6] 0..0 [Member Data Field]"|8
+**Category**"}
+1==>|"[8] 0..0 [Member Data Field]"|8
 9@{ shape: stadium, label: "*Member Data Field*
 **... plus 8 Items**"}
 1-.->9
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#deb887, stroke:#000000
-style 3 color:#000000, fill:#ffe3cc, stroke:#f9845b
-style 4 color:#000000, fill:#ffe3cc, stroke:#f9845b
-style 5 color:#000000, fill:#ffe3cc, stroke:#f9845b
-style 6 color:#000000, fill:#ffe3cc, stroke:#f9845b
-style 7 color:#000000, fill:#ffe3cc, stroke:#f9845b
-style 8 color:#000000, fill:#ffe3cc, stroke:#f9845b
+style 2 color:#000000, fill:#DEB887, stroke:#000000
+style 3 color:#000000, fill:#ffe3cc, stroke:#FFA500
+style 4 color:#000000, fill:#ffe3cc, stroke:#FFA500
+style 5 color:#000000, fill:#ffe3cc, stroke:#FFA500
+style 6 color:#000000, fill:#ffe3cc, stroke:#FFA500
+style 7 color:#000000, fill:#ffe3cc, stroke:#FFA500
+style 8 color:#000000, fill:#ffe3cc, stroke:#FFA500
 style 9 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 ```
 > Data Structure for fileExtension Valid Values: The data structure lists the fields in the Valid Metadata Value Set: fileExtension product. (Extracted from 6.0-SNAPSHOT)

@@ -30,7 +30,7 @@ An [AuthoredReferenceable](/type/0/0010-Base-Model) that describes a data field.
 * *absoluteUncertainty* - What is the range of uncertainty associated with the measurement instrument used to create the data values stored under this data field.
 * *relativeUncertainty* - What is the percentage range of uncertainty associated with the measurement instrument used to create the data values stored under this data field.
 * *minimumLength* - What is the minimum length of this field - typically used with string fields.
-* *length* -  What is the length (in bytes) table up by this field.
+* *length* -  What is the length (in bytes) taken up by this field.
 * *precision* - How many digits after the decimal point.
 * *orderedValues* - Are the values sorted
 * *sortOrder* - DataItemSortOrder value identifying the sort direction used on the data field values.

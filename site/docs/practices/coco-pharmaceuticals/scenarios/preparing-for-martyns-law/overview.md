@@ -15,6 +15,9 @@ Although the Act has been passed into law, it is not yet being enforced.  The UK
 
 As Ivor reviews the new law, he uses [Dr.Egeria](/user-interfaces/dr-egeria/overview) markdown format and command processor to capture the key information.  This helps his thinking process by structuring the information in a logical way, and puts the definitions in place in Egeria for when he needs to refer to them.
 
+![Capruring Martyn's Law](capturing-martyns-law.svg)
+> **Figure 1:** Capturing Martyn's Law
+
 Ivor begins by building a list of the key documents that he needs to understand the new law.  These are represented using [External References](/concepts/external-reference). 
 
 As Ivor continues his reading, he begins to notice new terms and concepts in the documents.  Again he uses Dr.Egeria markdown commands to create a list of new glossary terms, each with a simple definition cut and pasted from the websites.
@@ -31,7 +34,12 @@ He realizes he needs a new role definition for the *Responsible Person* defined 
 
 He needs information from the venue about the escape routes and other safety measures they have.  Then he can assess if they need additional safety measures.
 
-??? info "Further Information"
+Finally, he creates a project definition and meeting requests to take the next steps in preparing for Martyn's Law.
+
+![Modelling Martyn's Law](documenting-martyns-law.svg)
+> **Figure 2:** Modelling Martyn's Law
+
+???+ info "Further Information"
     * **Egeria's Assessing a New Regulation Solution**. In this scenario, Ivor was using Egeria's [Assessing New Regulation](/egeria-solutions/assessing-new-regulation/overview) solution to build up an inventory and understanding of the new law.
     * **Egeria's Threat Modelling Solution**. After building a definition of Martyn's Law, Ivor used Egeria's [Threat Modelling](/egeria-solutions/threat-modelling/overview) solution to model the impact of the new law on Coco Pharmaceuticals' annual conference.
 

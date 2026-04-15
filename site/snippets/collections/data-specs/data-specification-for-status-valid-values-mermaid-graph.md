@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataSpec - Data Specification for status Valid Values [338c51bc-0477-43d0-b7b6-49af27bb69e9]
+title: DataSpec - Data Specification for status Valid Values [e9cf85db-4312-4a29-8220-915c8a0650ee]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,6 +11,6 @@ flowchart TD
 **Data Structure for status Valid Values**"}
 1==>|"Collection Membership"|2
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#f9845b, stroke:#000000
+style 2 color:#000000, fill:#FFA500, stroke:#000000
 ```
 > Data Specification for status Valid Values: The data specification lists the fields in the Valid Metadata Value Set: status product. (Extracted from 6.0-SNAPSHOT)

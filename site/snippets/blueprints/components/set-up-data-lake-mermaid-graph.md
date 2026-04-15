@@ -27,10 +27,10 @@ flowchart TD
 1==>|"Implementation Resource"|7
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
 style 6 color:#000000, fill:#FFE599, stroke:#000000
-style 7 color:#000000, fill:#53bbb4, stroke:#000000
+style 7 color:#000000, fill:#40E0D0, stroke:#000000
 ```
 > Set up Data Lake: Set up the data stores for receiving data from the hospitals - this includes the file system directory and Unity Catalog Volume for incoming patient measurements, along with the data set collection for certified measurement files. (Extracted from V1.0)

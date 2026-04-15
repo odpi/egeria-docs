@@ -9,7 +9,7 @@ The Glossary Manager Open Metadata View Service (OMVS) is a REST API designed to
 
 ## Why use a controlled glossary workflow
 
-The purpose of a controlled glossary workflow is to manage the visibility of glossary terms and any updates to them that are “in progress”.  Typically, this visibility's is restricted to the authors of the glossary terms and the approvers.  Once approved, and incorporated back into the "live" glossary, the updates are visible to all.
+The purpose of a controlled glossary workflow is to manage the visibility of glossary terms and any updates to them that are *in progress*.  Typically, this visibility's is restricted to the authors of the glossary terms and the approvers.  Once approved, and incorporated back into the "live" glossary, the updates are visible to all.
 
 For example, consider a glossary term called "customer identifier".  The first version of the glossary term may just provide the *display name* and *summary*.  The author of the glossary term plans to fill out the description and examples in version 2. Version 1 is published so that, for example, data stewards can begin linking it to the data assets describing the data landscape.
 

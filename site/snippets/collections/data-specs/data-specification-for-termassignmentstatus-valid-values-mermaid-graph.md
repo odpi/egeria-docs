@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataSpec - Data Specification for termAssignmentStatus Valid Values [f3590c5a-c434-442a-81d2-bece92c2a2c3]
+title: DataSpec - Data Specification for termAssignmentStatus Valid Values [aabdfbce-9b26-4709-aac7-3bda784d3fde]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,6 +11,6 @@ flowchart TD
 **Data Structure for termAssignmentStatus Valid Values**"}
 1==>|"Collection Membership"|2
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#f9845b, stroke:#000000
+style 2 color:#000000, fill:#FFA500, stroke:#000000
 ```
 > Data Specification for termAssignmentStatus Valid Values: The data specification lists the fields in the Valid Metadata Value Set: termAssignmentStatus product. (Extracted from 6.0-SNAPSHOT)

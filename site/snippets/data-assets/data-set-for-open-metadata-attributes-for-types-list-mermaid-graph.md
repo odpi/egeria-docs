@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: TabularDataSet - Data set for Open Metadata Attributes For Types List [2cae322b-6aa8-47d4-a80f-d191455b943b]
+title: TabularDataSet - Data set for Open Metadata Attributes For Types List [a659d5ac-05bc-43df-8a10-7638f46ee790]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -8,7 +8,7 @@ flowchart TD
 1@{ shape: rounded, label: "*Tabular Data Set*
 **Data set for Open Metadata Attributes For Types List**"}
 2@{ shape: delay, label: "*Search Keyword*
-**067b71b3-a8b2-4cb5-b8a4-793b04614e39**"}
+**f37057ab-b913-4824-84a5-03afe13e56be**"}
 1==>|"Search Keyword Link"|2
 3@{ shape: rect, label: "*Digital Product*
 **Open Metadata Attributes For Types List**"}
@@ -29,12 +29,12 @@ flowchart TD
 **Create Ongoing update subscription for Open Metadata Attributes For Types List**"}
 8==>|"sourceDataSet [Target For Governance Action]"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#9acd32, fill:#8b008b, stroke:#004563
+style 2 color:#9ACD32, fill:#8B008B, stroke:#004563
 style 3 color:#000000, fill:#838cc7, stroke:#3079ab
 style 4 color:#FFFFFF, fill:#006400, stroke:#000000
-style 5 color:#000000, fill:#53bbb4, stroke:#000000
-style 6 color:#000000, fill:#53bbb4, stroke:#000000
-style 7 color:#000000, fill:#53bbb4, stroke:#000000
-style 8 color:#000000, fill:#53bbb4, stroke:#000000
+style 5 color:#000000, fill:#40E0D0, stroke:#000000
+style 6 color:#000000, fill:#40E0D0, stroke:#000000
+style 7 color:#000000, fill:#40E0D0, stroke:#000000
+style 8 color:#000000, fill:#40E0D0, stroke:#000000
 ```
 > Data set for Open Metadata Attributes For Types List: This asset represents the source of data for the digital product. (Extracted from 6.0-SNAPSHOT)

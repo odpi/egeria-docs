@@ -28,10 +28,10 @@ flowchart TD
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
 style 3 color:#000000, fill:#f5fffa, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
 click 1 "https://egeria-project.org/features/lineage-management/overview/#egerias-open-lineage-support" "Click for more documentation" _blank
 click 4 "https://kafka.apache.org/" "Click for more documentation" _blank
 click 5 "https://egeria-project.org/features/lineage-management/overview/#egerias-open-lineage-support" "Click for more documentation" _blank

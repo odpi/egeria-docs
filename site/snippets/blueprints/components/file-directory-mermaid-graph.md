@@ -51,28 +51,28 @@ flowchart TD
 **Open Lineage File Publisher**"}
 15==>|"Catalog Resource [Solution Linking Wire]"|1
 16@{ shape: stadium, label: "*Solution Linking Wire*
-**... plus 4 Items**"}
+**... plus 5 Items**"}
 16-.->1
 17@{ shape: stadium, label: "*Solution Linking Wire*
-**... plus 4 Items**"}
+**... plus 5 Items**"}
 17-.->1
-style 11 color:#000000, fill:#dda0dd, stroke:#000000
-style 12 color:#000000, fill:#dda0dd, stroke:#000000
-style 13 color:#000000, fill:#dda0dd, stroke:#000000
-style 14 color:#000000, fill:#dda0dd, stroke:#000000
-style 15 color:#000000, fill:#dda0dd, stroke:#000000
+style 11 color:#000000, fill:#DDA0DD, stroke:#000000
+style 12 color:#000000, fill:#DDA0DD, stroke:#000000
+style 13 color:#000000, fill:#DDA0DD, stroke:#000000
+style 14 color:#000000, fill:#DDA0DD, stroke:#000000
+style 15 color:#000000, fill:#DDA0DD, stroke:#000000
 style 16 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 style 17 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
 style 3 color:#000000, fill:#f5fffa, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
 click 11 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 12 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 13 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank

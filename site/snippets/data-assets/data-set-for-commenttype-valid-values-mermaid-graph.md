@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: ReferenceCodeTable - Data set for commentType Valid Values [da1efd38-15ef-444e-aca1-49b2296a7d27]
+title: ReferenceCodeTable - Data set for commentType Valid Values [f09d9fbd-95a5-4e34-af35-5da8235fbcdb]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -8,7 +8,7 @@ flowchart TD
 1@{ shape: rounded, label: "*Reference Code Table*
 **Data set for commentType Valid Values**"}
 2@{ shape: delay, label: "*Search Keyword*
-**5fa58c1c-f601-40c1-91e1-b605360c4165**"}
+**3e04a078-08d8-43ef-aa0a-237d1034310a**"}
 1==>|"Search Keyword Link"|2
 3@{ shape: rect, label: "*Digital Product*
 **commentType Valid Values**"}
@@ -46,12 +46,12 @@ flowchart TD
 14@{ shape: processes, label: "*Governance Action Process*
 **Create Daily refresh subscription for Valid Metadata Value Set: commentType**"}
 14==>|"sourceDataSet [Target For Governance Action]"|1
-style 11 color:#000000, fill:#53bbb4, stroke:#000000
-style 12 color:#000000, fill:#53bbb4, stroke:#000000
-style 13 color:#000000, fill:#53bbb4, stroke:#000000
-style 14 color:#000000, fill:#53bbb4, stroke:#000000
+style 11 color:#000000, fill:#40E0D0, stroke:#000000
+style 12 color:#000000, fill:#40E0D0, stroke:#000000
+style 13 color:#000000, fill:#40E0D0, stroke:#000000
+style 14 color:#000000, fill:#40E0D0, stroke:#000000
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#9acd32, fill:#8b008b, stroke:#004563
+style 2 color:#9ACD32, fill:#8B008B, stroke:#004563
 style 3 color:#000000, fill:#838cc7, stroke:#3079ab
 style 4 color:#000000, fill:#39add1, stroke:#004563
 style 5 color:#000000, fill:#39add1, stroke:#004563

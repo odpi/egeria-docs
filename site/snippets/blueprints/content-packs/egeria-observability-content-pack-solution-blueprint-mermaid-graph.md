@@ -49,15 +49,15 @@ subgraph 1 [Components and Actors]
 end
 style 11 color:#000000, fill:#FFE599, stroke:#000000
 style 1 color:#FFFFFF, fill:#3079ab, stroke:#000000
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
 click 2 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 3 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 4 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
@@ -66,3 +66,4 @@ click 6 "https://egeria-project.org/concepts/integration-connector/" "Click for 
 click 8 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
 click 9 "https://egeria-project.org/concepts/metadata-access-store/" "Click for more documentation" _blank
 ```
+> Egeria Observability Content Pack: Solution blueprint showing the analytical components that add observability statistics to the open metadata ecosystem. (Extracted from 6.0-SNAPSHOT)

@@ -21,10 +21,11 @@ flowchart TD
 1==>|"Implemented By"|5
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#bdb76b, stroke:#004563
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#BDB76B, stroke:#004563
 click 1 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
 click 3 "https://www.postgresql.org/" "Click for more documentation" _blank
 click 4 "https://egeria-project.org/concepts/metadata-access-store/" "Click for more documentation" _blank
 ```
+> Harvest Surveys: Scans for new survey reports in the open metadata ecosystem and populates a PostgreSQL database schema. (Extracted from 6.0-SNAPSHOT)

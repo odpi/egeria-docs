@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: ArchiveFile - Coco Pharmaceuticals Clinical Trials Templates [1071a53b-99c0-44d7-92a9-c5bf9587ee14]
+title: ArchiveFile - Coco Pharmaceuticals Clinical Trials Templates [54e6eb9a-aeb6-4ba5-a0f2-1d8dd1b6d6fa]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -19,13 +19,9 @@ flowchart TD
 5@{ shape: rounded, label: "*Endpoint*
 **CocoClinicalTrialsTemplatesArchive.omarchive endpoint**"}
 3==>|"Connect To Endpoint"|5
-6@{ shape: div-rect, label: "*File Folder*
-**content-packs**"}
-6==>|"Nested File"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#004563, fill:#b0e0e6, stroke:#004563
 style 3 color:#000000, fill:#39add1, stroke:#004563
 style 4 color:#000000, fill:#39add1, stroke:#004563
 style 5 color:#000000, fill:#39add1, stroke:#004563
-style 6 color:#000000, fill:#bdb76b, stroke:#004563
 ```

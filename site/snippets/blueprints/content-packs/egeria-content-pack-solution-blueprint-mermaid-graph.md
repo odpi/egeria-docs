@@ -38,12 +38,12 @@ subgraph 1 [Components and Actors]
 [Solution Linking Wire]"|7
 end
 style 1 color:#FFFFFF, fill:#3079ab, stroke:#000000
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
 style 8 color:#000000, fill:#FFE599, stroke:#000000
 click 2 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 3 "https://egeria-project.org/concepts/omag-server-platform/" "Click for more documentation" _blank

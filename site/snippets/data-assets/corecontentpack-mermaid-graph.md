@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: ArchiveFile - CoreContentPack [ff6e651a-5c84-4ed7-99c3-8ec4bedd100d]
+title: ArchiveFile - CoreContentPack [3f15658d-0f6c-4d40-a5a8-01bf830c1aa9]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -19,13 +19,9 @@ flowchart TD
 5@{ shape: rounded, label: "*Endpoint*
 **CoreContentPack.omarchive endpoint**"}
 3==>|"Connect To Endpoint"|5
-6@{ shape: div-rect, label: "*File Folder*
-**content-packs**"}
-6==>|"Nested File"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#004563, fill:#b0e0e6, stroke:#004563
 style 3 color:#000000, fill:#39add1, stroke:#004563
 style 4 color:#000000, fill:#39add1, stroke:#004563
 style 5 color:#000000, fill:#39add1, stroke:#004563
-style 6 color:#000000, fill:#bdb76b, stroke:#004563
 ```

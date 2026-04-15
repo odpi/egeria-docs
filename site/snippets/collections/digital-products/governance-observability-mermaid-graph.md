@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DigitalProductFamily - Governance Observability [96660e9f-a966-4511-8c51-16b0e1510a80]
+title: DigitalProductFamily - Governance Observability [c4a5a6c6-33e6-42c6-971f-9070cb88c498]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%

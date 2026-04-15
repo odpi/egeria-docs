@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: ArchiveFile - SimpleComboCatalog [517b5448-1978-48cc-a564-c641f88297db]
+title: ArchiveFile - SimpleComboCatalog [66d2be04-e4f8-4abc-8186-249e35f0edc4]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -19,13 +19,9 @@ flowchart TD
 5@{ shape: rounded, label: "*Endpoint*
 **SimpleCatalog.omarchive endpoint**"}
 3==>|"Connect To Endpoint"|5
-6@{ shape: div-rect, label: "*File Folder*
-**content-packs**"}
-6==>|"Nested File"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#004563, fill:#b0e0e6, stroke:#004563
 style 3 color:#000000, fill:#39add1, stroke:#004563
 style 4 color:#000000, fill:#39add1, stroke:#004563
 style 5 color:#000000, fill:#39add1, stroke:#004563
-style 6 color:#000000, fill:#bdb76b, stroke:#004563
 ```

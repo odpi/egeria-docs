@@ -1,24 +1,31 @@
+---
+hide:
+- toc
+---
+
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
 # 0040 Software Servers
 
-`SoftwareServer`s describe the middleware software servers (such as application servers, data movement engines and database servers) that run on the [`SoftwareServerPlatform`s](/types/0/0037-SoftwareServerPlatform).
+A *SoftwareServer* entity describes the middleware software servers (such as application servers, data movement engines and database servers) that may run on a [Host](/types/0/0035-Complex-Hosts) machine or on a [SoftwareServerPlatform](/types/0/0037-Software-Server-Platforms).
 
 ![UML](0040-Software-Servers.svg)
 
-Within the `SoftwareServer` type it is possible to capture the `userId` that it operates under. By storing the user identifier for the server, it is possible to correlate the server with the calls that it makes.
+An [OMAG Server](/concepts/omag-server) is catalogued using a *SoftwareServer* entity in the [Leveraging Egeria](/egeria-solutions/leveraging-egeria/overview) solution.
+Similarly *SoftwareServer* entities are used to describe the following servers:
 
-An [OMAG Server](/concepts/omag-server) is an example of a `SoftwareServer`.
+* PostgreSQL Database servers in the [Leveraging your PostgreSQL estate](/egeria-solutions/leveraging-postgres/overview) solution.
+* Unity Catalog servers in the [Leveraging your Unity Catalog estate](/egeria-solutions/leveraging-unity-catalog/overview) solution.
+* Apache Kafka servers in the [Leveraging your Apache Kafka estate](/egeria-solutions/leveraging-apache-kafka/overview) solution.
+* Apache Atlas servers in the [Leveraging your Apache Atlas estate](/egeria-solutions/leveraging-apache-atlas/overview) solution.
 
-??? education "Further information"
+The different server implementations are distinguished using the [deployedImplementationType](/concepts/deployed-implementation-type) property.
+
+???+ education "Further information"
     
-    See [0110 Actors](/types/1/0110-Actors) and [0117 IT Profiles](/types/1/0117-IT-Profiles) for al alternative approach to capturing the user identity used by a software server.
+    * See [0110 Actors](/types/1/0110-Actors) and [0117 IT Profiles](/types/1/0117-IT-Profiles) for capturing the user identity used by a software server.  By storing the user identifier for the server, it is possible to correlate the server with the calls that it makes.
+    * See [`DeployedOn`](/types/0/0035-Complex-Hosts) for the relationship between a *SoftwareServer* entity and a host/platform.
 
-    See [0041 Server Purposes](/types/0/0041-Server-Purposes) for additional classifications to adorn a software server to give more detail as to its purpose in the IT landscape.
-
-
-??? deprecated "Deprecated types"
-    - `SoftwareServerDeployment` is deprecated in favor of [`DeployedOn`](/types/0/0035-Complex-Hosts).
 
 --8<-- "snippets/abbr.md"

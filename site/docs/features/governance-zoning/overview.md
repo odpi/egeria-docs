@@ -64,13 +64,24 @@ Here is an example:
 
 A user only has to have access through **either** of the listed zones to be able to perform their desired operation on the element.
 
+## Using zone membership to filter query results
+
+[QueryOptions](/services/omvs) (and by definition SearchOptions too) includes a property called `governanceZoneFilter` that can be used to restrict the results of a query to only those elements that are explicitly in **all** the specified zones.
+
+> Note:
+> 
+>  * The `governanceZoneFilter` property is a list of zone names.  If multiple zones are specified, then only elements that are members of **all** of the specified zones will be returned. For example, to find all elements that are both in the `digital-product` zone and the `security` zone, you would set `governanceZoneFilter` to `["digital-product", "security"]`.  This can be useful for finding elements that are specific to a community nad in a specific state for example.
+>  * An element that has no ZoneMembership classification is, by default, a member of all zones.  However, for this filter, such elements will not be returned.
+>  * When a governance zone is applied to an anchor element, all elements anchored to it are in the same zone.  Therefore governanceoneFilter can be used on all types of elements.
+
+
 ## Standard Governance Zones for Egeria
 
 There are a number of standard governance zones defined in Egeria:
 
-* **digital-product** - this is the zone that elements describing digital products belong to.  It is set up to allow read access to all active users, whilst restricting update/delete access to digital product managers (`securityRole=digitalProductManager`).
+* **digital-product** - this is the zone that elements describing digital products belong to.  It is set up as an unsecured zone which means it can be used as a filter on searches.  Access to digital produces is typically controlled by additional governance zones that represents the communities that create and consume these products.
 * **egeria-runtime** - this is the zone that elements describing the runtime environment of Egeria belong to.  It is set up to allow read access to all active users, whilst restricting update/delete access to runtime managers (`securityRole=runtimeManager`).
-* **security** - this is the zone that links users to the security access controls.  It is set up to restricting all access to security managers (`securityRole=securityManager`).
+* **security** - this is the zone that links users to the security access controls.  It is set up to restricting all access to security managers (`securityRole=securityManager`) only.  
 
 There is also a feature called the **user's personal zone**.  This is  a governance zone with a name that matches the user's userId.  It gives that user full access to all elements in that zone. 
 
@@ -124,26 +135,44 @@ A summary of the governance zone is created in the open metadata repository by t
 > 2. The Secrets Store Monitor integration connector detects the change to the secrets store and updates the governance definition summaries in the open metadata repositories.
 > 3. The governance zone summary is a type of governance definition that may be queried using the Governance Officer API.
 
-This is the default definition for the `digital-product` zone. 
+This is the default definition for the `egeria-runtime`, `digital-product` and `security` zones. 
 
 ```yaml
-      digital-product:
-        controlDisplayName: Digital Products Zone
+      # Governance Zones Access Controls
+      egeria-runtime:
+        controlDisplayName: Egeria's Runtime Zone
         controlTypeName: GovernanceZone
-        description: Resources describing the digital products that are being managed by Egeria.
+        description: Resources describing Egeria's runtime components including the OMAG Server Platform, OMAG Servers, Integration Connectors, Governance Engines and the Governance Services.  The contents of this zone are readable to all, but may only be maintained by the runtime manager processed.
         associatedSecurityList:
           READ:
             - openMetadataMember
           DEFAULT:
-            - digitalProductManager
+            - runtimeManager
+
+      digital-product:
+        controlDisplayName: Digital Products Zone
+        controlTypeName: GovernanceZone
+        description: Resources describing the digital products that are being managed by Egeria.  This is an unsecured governance zone.
+
+      security:
+        controlDisplayName: Security Zone
+        controlTypeName: GovernanceZone
+        description: Resources used by the security team for audit and diagnostic purposes.  It is secured so that only authorized security people, teams and processes can access it.
+        associatedSecurityList:
+          DEFAULT:
+            - securityManager
 ```
-The `associatedSecurityList` defines the permissions for the zone based on the requested operation (`READ`, `DEFAULT` in this case).  The `DEFAULT` operation means any operation not explicitly listed.  
+The `associatedSecurityList` defines the permissions for the zone based on the requested operation (`READ`, `DEFAULT` for example, or it may be the name of a service operation).  The `DEFAULT` operation means any operation not explicitly listed.  
 
 Under each operation are the security roles/groups that are permitted to perform that operation.
 
+## Zone Membership Profile
 
-## Further information
+The *ZoneMembershipProfile* is a classification attached to the *GovernanceZone* entity describing a governance zone.  It includes counts of all of the members of the zone, and also by type.  The values are calculated by a [Lovelace Insight Service](/patterns/metadata-insight/overview) called the [Zone Membership Profiler Lovelace Service](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/lovelace-insights).  It also includes the time that the values were calculated.  The Babbage Integration connector that initializes this service is set to refresh once a day by default.
 
-See [Metadata Security](/features/metadata-security/overview) for more information on security in Egeria.
+???+ info "Further information"
+
+    * See [Metadata Security](/features/metadata-security/overview) for more information on security in Egeria.
+    * See [Model 0424 Governance Zones](/types/4/0424-Governance-Zones) for more information on the GovernanceZone entity.
 
 --8<-- "snippets/abbr.md"

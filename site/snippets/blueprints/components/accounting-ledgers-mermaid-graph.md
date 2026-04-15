@@ -19,6 +19,6 @@ flowchart TD
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
 style 3 color:#000000, fill:#f5fffa, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
 ```
 > Accounting ledgers: Application for recording and tracing the income and spending of Coco Pharmaceuticals.  This can help to identify how much the company is spending on particular materials and activities. (Extracted from V1.0)

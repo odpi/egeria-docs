@@ -37,18 +37,18 @@ Says/Does:
 Sees:
 
 * Many practices in the business that either damage the quality of data, or result in inaccurate or incomplete information being used for decision making.
-* Too many spreadsheets used for decision making that contain data of dubious origin, accuracy and completeness.
+* Too many spreadsheets used for decision-making that contain data of dubious origin, accuracy and completeness.
 
 Top challenges:
 
-* To establish a sense of ownership and personal responsibility for the accuracy of data and the proper use of information within the business teams.  This is no longer an “IT problem”.
+* To establish a sense of ownership and personal responsibility for the accuracy of data and the proper use of information within the business teams.  This is no longer an *IT problem*.
 * To automate as much of the management of information as possible whilst still enabling flexibility in the use of information.
 
 Desired Outcome:
 
 * Data/information is established as a major asset of the organization.
 * A measurable and continuous improvement in the quality of their data.
-* A broadening in the type of data available for decision making.
+* A broadening in the type of data available for decision-making.
 * An increase in the number of decisions that are backed by sound information.
 * Transparency in the operations of the organization due to the provision of timely comprehensive information.
 

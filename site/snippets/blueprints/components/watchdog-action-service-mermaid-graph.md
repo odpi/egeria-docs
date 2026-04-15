@@ -11,7 +11,7 @@ flowchart TD
 **Watchdog Action Engine**"}
 2==>|"Solution Composition"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
 click 1 "https://egeria-project.org/concepts/watchdog-action-service/" "Click for more documentation" _blank
 click 2 "https://egeria-project.org/concepts/watchdog-action-engine/" "Click for more documentation" _blank
 ```

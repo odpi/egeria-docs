@@ -37,13 +37,13 @@ flowchart TD
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
 style 3 color:#000000, fill:#f5fffa, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
-style 10 color:#000000, fill:#bdb76b, stroke:#004563
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
+style 10 color:#000000, fill:#BDB76B, stroke:#004563
 click 1 "https://egeria-project.org/concepts/metadata-access-server/" "Click for more documentation" _blank
 click 4 "https://egeria-project.org/concepts/omag-server-platform/" "Click for more documentation" _blank
 click 6 "https://egeria-project.org/user-interfaces/hey-egeria/overview/" "Click for more documentation" _blank

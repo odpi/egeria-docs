@@ -39,20 +39,20 @@ flowchart TD
 **Copy File**"}
 11==>|"works with [Solution Linking Wire]"|4
 12@{ shape: stadium, label: "*Solution Linking Wire*
-**... plus 6 Items**"}
+**... plus 7 Items**"}
 12-.->4
-style 11 color:#000000, fill:#dda0dd, stroke:#000000
+style 11 color:#000000, fill:#DDA0DD, stroke:#000000
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 12 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
 click 11 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 1 "https://egeria-project.org/types/0/0056-Resource-Managers/" "Click for more documentation" _blank
 click 2 "https://egeria-project.org/types/2/0220-Files-and-Folders/" "Click for more documentation" _blank

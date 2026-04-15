@@ -14,7 +14,7 @@ For example, figure 1 shows some roles that [Tessa Tube](/practices/coco-pharmac
 
 A role has a context. For example, Tessa is a manager, but not for everyone in Coco Pharmaceuticals. She is a manager of a specific team. Similarly, she may be a system owner, but not of all systems.
 
-So a role has a scope, and roles can be combined to form the complete “job” that an individual performs.
+So a role has a scope, and roles can be combined to form the complete "job" that an individual performs.
 
 Now consider what a role is from an organization's perspective. Roles can be thought of as slots, or vacancies, in the organization's teams that individuals are appointed to for a span of time.  A role can have more than one person appointed. [Head count](/concepts/person-role/#head-count-limit) is an optional attribute that indicates how many people are expected to be assigned to the role.
 

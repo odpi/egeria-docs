@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataSpec - Data Specification for activityStatus Valid Values [33b764c5-9775-4001-a19f-26d4fe7d652d]
+title: DataSpec - Data Specification for activityStatus Valid Values [64ae5b5d-1b07-455d-9cfa-45fbb8e5b588]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,6 +11,6 @@ flowchart TD
 **Data Structure for activityStatus Valid Values**"}
 1==>|"Collection Membership"|2
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#f9845b, stroke:#000000
+style 2 color:#000000, fill:#FFA500, stroke:#000000
 ```
 > Data Specification for activityStatus Valid Values: The data specification lists the fields in the Valid Metadata Value Set: activityStatus product. (Extracted from 6.0-SNAPSHOT)

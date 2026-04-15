@@ -2,15 +2,15 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 # Defining Subject Areas
 
-[Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) asks [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) for a list of the key subject areas of data that they need to manage.
+[Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) asks [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) for a list of key subject areas for the data that they need to manage.
 
-To be sure she understands, Erin asks Jules what he means by “subject area” - Jules replies - *subject areas* are topics or domains of knowledge that are important to the organization.  Typically, they cover data that is widely shared across the organization and there is business value in maintaining consistency in the data values in each copy.
+To be sure she understands, Erin asks Jules what he means by *subject area* - Jules replies - *subject areas* are topics or domains of knowledge that are important to the organization.  Typically, they cover data that is widely shared across the organization and there is business value in maintaining consistency in the data values in each copy.
 
 !!! question "Subject area verses Data Domain?"
-    To Erin “subject area” sounds like a “data domain” and Jules agreed they are similar.  Data Domain typically refers to the data that the subject area's definitions apply to. (See the [Subject Area](/concepts/subject-area) definition for further information on the subject area and its contents.)
+    To Erin *subject area* sounds like a *data domain* and Jules agreed they are similar.  Data Domain typically refers to the data that the subject area's definitions apply to. (See the [Subject Area](/concepts/subject-area) definition for further information on the subject area and its contents.)
 
 !!! question "How granular are subject areas?"
-    Erin then asks how granular should they go in defining the subject areas - for example, “Address” is a subject area but very fine-grained.  Alternatively, they could start with some broader subject areas (say about 10) that would make it easier to engage the other teams and help find business owners.
+    Erin then asks how granular they should go in defining the subject areas - for example, *Address* is a subject area but very fine-grained.  Alternatively, they could start with some broader subject areas (say about 10) that would make it easier to engage the other teams and help find business owners.
 
     Jules agrees they are going to need the very granular subject areas eventually but to get them started, the broader, business oriented subject areas are more useful.  He also suggests that rather than focusing on the whole business, she should emphasise the areas of the business that are most impacted by the move to personalised medicine - such as patient, treatments and sales.
 

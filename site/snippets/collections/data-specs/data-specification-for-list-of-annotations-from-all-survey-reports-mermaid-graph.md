@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataSpec - Data Specification for List of Annotations from all Survey Reports [85aeb868-83d4-4e21-908c-e4e683c9320d]
+title: DataSpec - Data Specification for List of Annotations from all Survey Reports [fca75ece-97bc-4a6e-9294-5fbace07030f]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,6 +11,6 @@ flowchart TD
 **Data Structure for List of Annotations from all Survey Reports**"}
 1==>|"Collection Membership"|2
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#f9845b, stroke:#000000
+style 2 color:#000000, fill:#FFA500, stroke:#000000
 ```
 > Data Specification for List of Annotations from all Survey Reports: The data specification lists the fields in the Annotations List product. (Extracted from 6.0-SNAPSHOT)

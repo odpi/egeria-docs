@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DigitalProduct - additionalProperties Valid Values [37b89125-241d-4cff-b685-902026cfa9f7]
+title: DigitalProduct - additionalProperties Valid Values [78b51b9b-c1f0-4598-bc2b-efc9c9544d9e]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -8,10 +8,10 @@ flowchart TD
 1@{ shape: rounded, label: "*Digital Product*
 **additionalProperties Valid Values**"}
 2@{ shape: processes, label: "*Governance Action Process*
-**Create Daily refresh subscription for Valid Metadata Value Set: additionalProperties**"}
+**Create Ongoing update subscription for Valid Metadata Value Set: additionalProperties**"}
 1==>|"Create Subscription [Resource List]"|2
 3@{ shape: processes, label: "*Governance Action Process*
-**Create Ongoing update subscription for Valid Metadata Value Set: additionalProperties**"}
+**Create Daily refresh subscription for Valid Metadata Value Set: additionalProperties**"}
 1==>|"Create Subscription [Resource List]"|3
 4@{ shape: processes, label: "*Governance Action Process*
 **Create Evaluation subscription for Valid Metadata Value Set: additionalProperties**"}
@@ -31,17 +31,17 @@ flowchart TD
 9@{ shape: doc, label: "*License Type*
 **Data for Internal Use**"}
 1==>|"subscriber''s license [Governed By]"|9
-2==>|"digitalSubscriptionItem [Target For Governance Action]"|1
 5==>|"digitalSubscriptionItem [Target For Governance Action]"|1
 3==>|"digitalSubscriptionItem [Target For Governance Action]"|1
 4==>|"digitalSubscriptionItem [Target For Governance Action]"|1
+2==>|"digitalSubscriptionItem [Target For Governance Action]"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#53bbb4, stroke:#000000
-style 3 color:#000000, fill:#53bbb4, stroke:#000000
-style 4 color:#000000, fill:#53bbb4, stroke:#000000
-style 5 color:#000000, fill:#53bbb4, stroke:#000000
+style 2 color:#000000, fill:#40E0D0, stroke:#000000
+style 3 color:#000000, fill:#40E0D0, stroke:#000000
+style 4 color:#000000, fill:#40E0D0, stroke:#000000
+style 5 color:#000000, fill:#40E0D0, stroke:#000000
 style 6 color:#000000, fill:#838cc7, stroke:#3079ab
-style 7 color:#000000, fill:#bdb76b, stroke:#004563
+style 7 color:#000000, fill:#BDB76B, stroke:#004563
 style 8 color:#000000, fill:#FFE599, stroke:#000000
 style 9 color:#FFFFFF, fill:#006400, stroke:#000000
 ```

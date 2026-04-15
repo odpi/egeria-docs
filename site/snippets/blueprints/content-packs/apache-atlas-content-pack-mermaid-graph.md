@@ -75,28 +75,28 @@ flowchart TD
 22@{ shape: stadium, label: "*Collection Membership*
 **... plus 4 Items**"}
 1-.->22
-style 11 color:#000000, fill:#dda0dd, stroke:#000000
+style 11 color:#000000, fill:#DDA0DD, stroke:#000000
 style 22 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 12 color:#000000, fill:#dda0dd, stroke:#000000
-style 13 color:#000000, fill:#dda0dd, stroke:#000000
-style 14 color:#000000, fill:#dda0dd, stroke:#000000
+style 12 color:#000000, fill:#DDA0DD, stroke:#000000
+style 13 color:#000000, fill:#DDA0DD, stroke:#000000
+style 14 color:#000000, fill:#DDA0DD, stroke:#000000
 style 15 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 16 color:#000000, fill:#dda0dd, stroke:#000000
-style 17 color:#000000, fill:#dda0dd, stroke:#000000
-style 18 color:#000000, fill:#53bbb4, stroke:#000000
+style 16 color:#000000, fill:#DDA0DD, stroke:#000000
+style 17 color:#000000, fill:#DDA0DD, stroke:#000000
+style 18 color:#000000, fill:#40E0D0, stroke:#000000
 style 19 color:#000000, fill:#FFE599, stroke:#000000
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#53bbb4, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
-style 20 color:#000000, fill:#dda0dd, stroke:#000000
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
-style 21 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#40E0D0, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
+style 20 color:#000000, fill:#DDA0DD, stroke:#000000
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
+style 21 color:#000000, fill:#DDA0DD, stroke:#000000
 click 11 "https://egeria-project.org/egeria-solutions/leveraging-files/overview/" "Click for more documentation" _blank
 click 12 "https://egeria-project.org/egeria-solutions/leveraging-unity-catalog/overview/" "Click for more documentation" _blank
 click 13 "https://egeria-project.org/types/2/0220-Files-and-Folders/" "Click for more documentation" _blank

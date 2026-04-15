@@ -42,76 +42,84 @@ flowchart TD
 **Open Lineage File Publisher**"}
 12==>|"Catalog Resource [Solution Linking Wire]"|2
 13@{ shape: stadium, label: "*Solution Linking Wire*
-**... plus 6 Items**"}
+**... plus 7 Items**"}
 13-.->2
 14@{ shape: rect, label: "*Solution Component*
 **Survey CSV File**"}
 1==>|"Collection Membership"|14
-15@{ shape: rect, label: "*Solution Component*
-**Metadata Access Store**"}
-14==>|"metadata [Solution Linking Wire]"|15
+15@{ shape: rect, label: "*Report Type*
+**Survey report produced by survey-csv-file (FileSurvey)**"}
+14==>|"creates report [Solution Linking Wire]"|15
 16@{ shape: rect, label: "*Solution Component*
+**Metadata Access Store**"}
+14==>|"metadata [Solution Linking Wire]"|16
+17@{ shape: rect, label: "*Solution Component*
 **CSV Data File**"}
-14==>|"works with [Solution Linking Wire]"|16
-17@{ shape: tag-rect, label: "*Governance Action Type*
-**survey-csv-file (FileSurvey)**"}
-14==>|"Implemented By"|17
-1==>|"Collection Membership"|7
-7==>|"metadata [Solution Linking Wire]"|15
+14==>|"works with [Solution Linking Wire]"|17
 18@{ shape: tag-rect, label: "*Governance Action Type*
+**survey-csv-file (FileSurvey)**"}
+14==>|"Implemented By"|18
+1==>|"Collection Membership"|7
+7==>|"metadata [Solution Linking Wire]"|16
+19@{ shape: tag-rect, label: "*Governance Action Type*
 **move-file (FileGovernance)**"}
-7==>|"Implemented By"|18
-19@{ shape: rect, label: "*Solution Component*
+7==>|"Implemented By"|19
+20@{ shape: rect, label: "*Solution Component*
 **Delete with Template Governance Action Process for Data Folder**"}
-1==>|"Collection Membership"|19
-20@{ shape: trap-t, label: "*Solution Actor Role*
+1==>|"Collection Membership"|20
+21@{ shape: trap-t, label: "*Solution Actor Role*
 **Open Metadata User**"}
-20==>|"delete Data Folder [Solution Component Actor]"|19
-21@{ shape: rect, label: "*Solution Component*
-**Delete Data Folder from Open Metadata**"}
-19==>|"step 1 [Solution Linking Wire]"|21
-1==>|"Collection Membership"|9
-9==>|"metadata [Solution Linking Wire]"|15
+21==>|"delete Data Folder [Solution Component Actor]"|20
 22@{ shape: rect, label: "*Solution Component*
+**Delete Data Folder from Open Metadata**"}
+20==>|"step 1 [Solution Linking Wire]"|22
+1==>|"Collection Membership"|9
+9==>|"metadata [Solution Linking Wire]"|16
+23@{ shape: rect, label: "*Report Type*
+**Survey report produced by survey-all-folders-and-files (FileSurvey)**"}
+9==>|"creates report [Solution Linking Wire]"|23
+24@{ shape: rect, label: "*Solution Component*
 **Create and Survey Governance Action Process for File System Directory**"}
-22==>|"step 2 [Solution Linking Wire]"|9
-23@{ shape: tag-rect, label: "*Governance Action Type*
+24==>|"step 2 [Solution Linking Wire]"|9
+25@{ shape: tag-rect, label: "*Governance Action Type*
 **survey-all-folders-and-files (FileSurvey)**"}
-9==>|"Implemented By"|23
-24@{ shape: stadium, label: "*Collection Membership*
+9==>|"Implemented By"|25
+26@{ shape: stadium, label: "*Collection Membership*
 **... plus 24 Items**"}
-1-.->24
-style 11 color:#000000, fill:#dda0dd, stroke:#000000
-style 22 color:#000000, fill:#dda0dd, stroke:#000000
-style 12 color:#000000, fill:#dda0dd, stroke:#000000
-style 23 color:#000000, fill:#53bbb4, stroke:#000000
+1-.->26
+style 22 color:#000000, fill:#DDA0DD, stroke:#000000
+style 23 color:#000000, fill:#DEB887, stroke:#000000
+style 24 color:#000000, fill:#DDA0DD, stroke:#000000
+style 25 color:#000000, fill:#40E0D0, stroke:#000000
+style 26 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
+style 11 color:#000000, fill:#DDA0DD, stroke:#000000
+style 12 color:#000000, fill:#DDA0DD, stroke:#000000
 style 13 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 24 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 14 color:#000000, fill:#dda0dd, stroke:#000000
-style 15 color:#000000, fill:#dda0dd, stroke:#000000
-style 16 color:#000000, fill:#dda0dd, stroke:#000000
-style 17 color:#000000, fill:#53bbb4, stroke:#000000
-style 18 color:#000000, fill:#53bbb4, stroke:#000000
-style 19 color:#000000, fill:#dda0dd, stroke:#000000
+style 14 color:#000000, fill:#DDA0DD, stroke:#000000
+style 15 color:#000000, fill:#DEB887, stroke:#000000
+style 16 color:#000000, fill:#DDA0DD, stroke:#000000
+style 17 color:#000000, fill:#DDA0DD, stroke:#000000
+style 18 color:#000000, fill:#40E0D0, stroke:#000000
+style 19 color:#000000, fill:#40E0D0, stroke:#000000
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
-style 20 color:#000000, fill:#FFE599, stroke:#000000
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
-style 21 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
+style 20 color:#000000, fill:#DDA0DD, stroke:#000000
+style 21 color:#000000, fill:#FFE599, stroke:#000000
 click 11 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
-click 22 "https://egeria-project.org/egeria-solutions/leveraging-files/overview/" "Click for more documentation" _blank
+click 22 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 12 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
+click 24 "https://egeria-project.org/egeria-solutions/leveraging-files/overview/" "Click for more documentation" _blank
 click 14 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
-click 15 "https://egeria-project.org/concepts/metadata-access-store/" "Click for more documentation" _blank
-click 16 "https://egeria-project.org/types/2/0220-Files-and-Folders/" "Click for more documentation" _blank
-click 19 "https://egeria-project.org/egeria-solutions/leveraging-files/overview/" "Click for more documentation" _blank
+click 16 "https://egeria-project.org/concepts/metadata-access-store/" "Click for more documentation" _blank
+click 17 "https://egeria-project.org/types/2/0220-Files-and-Folders/" "Click for more documentation" _blank
 click 2 "https://egeria-project.org/types/2/0220-Files-and-Folders/" "Click for more documentation" _blank
 click 3 "https://egeria-project.org/types/2/0220-Files-and-Folders/" "Click for more documentation" _blank
 click 4 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
@@ -120,7 +128,7 @@ click 6 "https://egeria-project.org/concepts/governance-action-type/" "Click for
 click 7 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 8 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 9 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
+click 20 "https://egeria-project.org/egeria-solutions/leveraging-files/overview/" "Click for more documentation" _blank
 click 10 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
-click 21 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 ```
 > Files Content Pack: Solution blueprint containing integration connectors for working with files. (Extracted from 6.0-SNAPSHOT)

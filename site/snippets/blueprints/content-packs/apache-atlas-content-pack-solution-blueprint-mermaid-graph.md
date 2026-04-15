@@ -53,18 +53,18 @@ subgraph 1 [Components and Actors]
 9==>|"step 2,
 [Solution Linking Wire]"|11
 end
-style 11 color:#000000, fill:#dda0dd, stroke:#000000
+style 11 color:#000000, fill:#DDA0DD, stroke:#000000
 style 1 color:#FFFFFF, fill:#3079ab, stroke:#000000
 style 12 color:#000000, fill:#FFE599, stroke:#000000
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
 click 11 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 2 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 3 "https://atlas.apache.org/" "Click for more documentation" _blank

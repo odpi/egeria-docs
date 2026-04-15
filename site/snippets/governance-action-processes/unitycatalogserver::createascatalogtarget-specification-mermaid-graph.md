@@ -101,7 +101,7 @@ style 16 color:#260d1b, fill:#d98cb6, stroke:#260d1b
 style 17 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 style 18 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 style 19 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 1 color:#000000, fill:#53bbb4, stroke:#000000
+style 1 color:#000000, fill:#40E0D0, stroke:#000000
 style 2 color:#f2d9e7, fill:#260d1b, stroke:#f2d9e7
 style 3 color:#260d1b, fill:#d98cb6, stroke:#260d1b
 style 4 color:#260d1b, fill:#d98cb6, stroke:#260d1b

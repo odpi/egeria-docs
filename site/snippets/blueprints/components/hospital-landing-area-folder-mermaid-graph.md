@@ -18,7 +18,7 @@ flowchart TD
 4==>|"publish [Solution Linking Wire]"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
 ```
 > Hospital Landing Area Folder: Destination for incoming files from a particular hospital. (Extracted from V1.0)

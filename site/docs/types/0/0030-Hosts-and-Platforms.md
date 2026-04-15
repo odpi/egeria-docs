@@ -7,9 +7,6 @@ The host and platform metadata entities provide a simple model for the IT infras
 
 ![UML](0030-Hosts-and-Platforms.svg)
 
-## ITInfrastructure entity
-
-*ITInfrastructure* entity is a type of [Asset](/types/0/0010-Base-Model) that supports the running of software systems.
 
 ## OperatingPlatform entity
 

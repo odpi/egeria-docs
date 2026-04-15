@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: MetadataCollection - Metadata collection for server qs-metadata-store [c3561f72-7e69-4555-b689-694afcca6463]
+title: MetadataCollection - Metadata collection for server qs-metadata-store [d3c1e48c-26c7-44c1-8dd0-1c873145177d]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%

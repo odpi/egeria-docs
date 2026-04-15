@@ -18,7 +18,7 @@ Scope: All patient data held by the hospital and its use.
 Job:
 
 * Robbie is responsible for the proper collection,
-management and security of patient data.
+management, and security of patient data.
 
 Thinks/Feels:
 
@@ -26,7 +26,7 @@ Thinks/Feels:
 * Much of his Job is very dull, chasing up missing information
 and making routine changes to the data to fix errors in it.
 However he feels he has tremendous responsibility with this job and
-wants to spend more time working on better processes to managing this data.
+wants to spend more time working on better processes for managing this data.
 
 Hears:
 
@@ -35,10 +35,9 @@ Hears:
 
 Says/Does:
 
-* Robbie maintains a very hard-line attitude to new uses of patient data.
-His default answer is “no” unless he can see a clear description of
-where the data is going, how it is to be used, the safe-guards around
-it - and what happens at the end of the project.
+* Robbie maintains a *very* hard-line attitude to new uses of patient data.
+His default answer is **no** unless he can see a clear description of
+where the data is going, how it is to be used, the surrounding safeguards, and what happens at the end of the project.
 
 Sees:
 
@@ -51,12 +50,12 @@ Top challenges:
 * Ensuring the right data is collected in situ during patient
 interactions and clinical work.
 * Many of the medical devices store data in private, proprietary
-forms and it is difficult to retrieve the data.
+formats, and it is challenging to retrieve the data.
 
 Desired Outcome:
 
 * Complete transparency on how all patent data is collected,
-stored, managed and disposed of through the hospital and partner organizations.
+stored, managed, and disposed of through the hospital and partner organizations.
 
 ----
 

@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataSpec - Data Specification for Missing File Classifiers [fa28350e-da57-468d-873b-4075b09def7a]
+title: DataSpec - Data Specification for Missing File Classifiers [9d028c74-a25a-45ae-a11b-5f8ec2df863a]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,6 +11,6 @@ flowchart TD
 **Data Structure for Missing File Classifiers**"}
 1==>|"Collection Membership"|2
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#f9845b, stroke:#000000
+style 2 color:#000000, fill:#FFA500, stroke:#000000
 ```
 > Data Specification for Missing File Classifiers: The data specification lists the fields in the Missing File Classifiers product. (Extracted from 6.0-SNAPSHOT)

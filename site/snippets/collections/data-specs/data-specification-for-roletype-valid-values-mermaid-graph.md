@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: DataSpec - Data Specification for roleType Valid Values [a4ef4149-b2ef-42fd-8047-6644382da6eb]
+title: DataSpec - Data Specification for roleType Valid Values [2c1f340a-25da-4bdc-837f-95b7c8538d5c]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -11,6 +11,6 @@ flowchart TD
 **Data Structure for roleType Valid Values**"}
 1==>|"Collection Membership"|2
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#f9845b, stroke:#000000
+style 2 color:#000000, fill:#FFA500, stroke:#000000
 ```
 > Data Specification for roleType Valid Values: The data specification lists the fields in the Valid Metadata Value Set: roleType product. (Extracted from 6.0-SNAPSHOT)

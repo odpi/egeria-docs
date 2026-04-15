@@ -16,9 +16,9 @@ subgraph 1 [Components and Actors]
 [Solution Linking Wire]"|2
 end
 style 1 color:#FFFFFF, fill:#3079ab, stroke:#000000
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
 click 2 "https://egeria-project.org/concepts/metadata-access-store/" "Click for more documentation" _blank
 click 3 "https://egeria-project.org/types/0/0026-Endpoints/" "Click for more documentation" _blank
 click 4 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank

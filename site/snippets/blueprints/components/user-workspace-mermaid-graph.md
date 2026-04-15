@@ -31,13 +31,13 @@ flowchart TD
 **Apache Web Server**"}
 7==>|"read [Solution Linking Wire]"|8
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
 style 3 color:#000000, fill:#FFE599, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
 click 2 "https://jupyter.org/" "Click for more documentation" _blank
 click 4 "https://egeria-project.org/concepts/pyegeria/" "Click for more documentation" _blank
 click 5 "https://en.wikipedia.org/wiki/Markdown" "Click for more documentation" _blank

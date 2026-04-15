@@ -1,6 +1,6 @@
 ```mermaid
 ---
-title: ArchiveFile - Coco Pharmaceuticals Combination [1f7bc883-719a-4228-8409-0086e7bb660d]
+title: ArchiveFile - Coco Pharmaceuticals Combination [4cba0e93-d37c-4aba-9838-f5e9f6a456b4]
 ---
 flowchart TD
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
@@ -19,13 +19,9 @@ flowchart TD
 5@{ shape: rounded, label: "*Endpoint*
 **CocoComboArchive.omarchive endpoint**"}
 3==>|"Connect To Endpoint"|5
-6@{ shape: div-rect, label: "*File Folder*
-**content-packs**"}
-6==>|"Nested File"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#004563, fill:#b0e0e6, stroke:#004563
 style 3 color:#000000, fill:#39add1, stroke:#004563
 style 4 color:#000000, fill:#39add1, stroke:#004563
 style 5 color:#000000, fill:#39add1, stroke:#004563
-style 6 color:#000000, fill:#bdb76b, stroke:#004563
 ```

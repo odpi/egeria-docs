@@ -51,7 +51,7 @@ flowchart TD
 **Babbage Analytical Engine**"}
 15==>|"metadata [Solution Linking Wire]"|8
 16@{ shape: stadium, label: "*Solution Linking Wire*
-**... plus 77 Items**"}
+**... plus 82 Items**"}
 16-.->8
 17@{ shape: rect, label: "*Solution Component*
 **Engine Host**"}
@@ -106,38 +106,38 @@ flowchart TD
 32@{ shape: hex, label: "*Software Server Platform*
 **OMAG Server Platform**"}
 1==>|"running instance [Implemented By]"|32
-style 22 color:#000000, fill:#dda0dd, stroke:#000000
-style 23 color:#000000, fill:#dda0dd, stroke:#000000
-style 24 color:#000000, fill:#dda0dd, stroke:#000000
-style 25 color:#000000, fill:#dda0dd, stroke:#000000
+style 22 color:#000000, fill:#DDA0DD, stroke:#000000
+style 23 color:#000000, fill:#DDA0DD, stroke:#000000
+style 24 color:#000000, fill:#DDA0DD, stroke:#000000
+style 25 color:#000000, fill:#DDA0DD, stroke:#000000
 style 26 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 27 color:#000000, fill:#dda0dd, stroke:#000000
-style 28 color:#000000, fill:#dda0dd, stroke:#000000
-style 29 color:#000000, fill:#dda0dd, stroke:#000000
-style 30 color:#000000, fill:#dda0dd, stroke:#000000
-style 31 color:#000000, fill:#dda0dd, stroke:#000000
+style 27 color:#000000, fill:#DDA0DD, stroke:#000000
+style 28 color:#000000, fill:#DDA0DD, stroke:#000000
+style 29 color:#000000, fill:#DDA0DD, stroke:#000000
+style 30 color:#000000, fill:#DDA0DD, stroke:#000000
+style 31 color:#000000, fill:#DDA0DD, stroke:#000000
 style 10 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 32 color:#000000, fill:#bdb76b, stroke:#004563
-style 11 color:#000000, fill:#dda0dd, stroke:#000000
-style 12 color:#000000, fill:#dda0dd, stroke:#000000
-style 13 color:#000000, fill:#dda0dd, stroke:#000000
-style 14 color:#000000, fill:#dda0dd, stroke:#000000
-style 15 color:#000000, fill:#dda0dd, stroke:#000000
+style 32 color:#000000, fill:#BDB76B, stroke:#004563
+style 11 color:#000000, fill:#DDA0DD, stroke:#000000
+style 12 color:#000000, fill:#DDA0DD, stroke:#000000
+style 13 color:#000000, fill:#DDA0DD, stroke:#000000
+style 14 color:#000000, fill:#DDA0DD, stroke:#000000
+style 15 color:#000000, fill:#DDA0DD, stroke:#000000
 style 16 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 17 color:#000000, fill:#dda0dd, stroke:#000000
-style 18 color:#000000, fill:#dda0dd, stroke:#000000
-style 19 color:#000000, fill:#dda0dd, stroke:#000000
+style 17 color:#000000, fill:#DDA0DD, stroke:#000000
+style 18 color:#000000, fill:#DDA0DD, stroke:#000000
+style 19 color:#000000, fill:#DDA0DD, stroke:#000000
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
 style 2 color:#000000, fill:#f5fffa, stroke:#000000
 style 3 color:#000000, fill:#f5fffa, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#dda0dd, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#dda0dd, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#DDA0DD, stroke:#000000
 style 20 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 21 color:#000000, fill:#dda0dd, stroke:#000000
+style 21 color:#000000, fill:#DDA0DD, stroke:#000000
 click 11 "https://egeria-project.org/concepts/open-metadata-repository/" "Click for more documentation" _blank
 click 12 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 23 "https://egeria-project.org/user-interfaces/hey-egeria/overview/" "Click for more documentation" _blank

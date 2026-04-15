@@ -3,7 +3,7 @@
 
 # Organization Insight Content Pack
 
-The *OrganizationIsightContentPack* contains the connector definitions for the Lovelace governance services supplied in the *omag-server-platform* distribution that add insight into the structure and activity within each defined organization in the Open Metadata ecosystem. This content pack is designed to augment the open metadata insight.
+The *OrganizationIsightContentPack* contains the connector definitions for Lovelace services supplied in the *omag-server-platform* distribution that add insight into the open metadata ecosystem.
 
 This content pack is built by the [core-content-pack](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/) module.
 

@@ -29,12 +29,12 @@ flowchart TD
 **... plus 3 Items**"}
 1-.->8
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#66cdaa, stroke:#008080
-style 3 color:#000000, fill:#66cdaa, stroke:#008080
-style 4 color:#000000, fill:#66cdaa, stroke:#008080
-style 5 color:#000000, fill:#66cdaa, stroke:#008080
-style 6 color:#000000, fill:#66cdaa, stroke:#008080
-style 7 color:#000000, fill:#66cdaa, stroke:#008080
+style 2 color:#000000, fill:#66CDAA, stroke:#008080
+style 3 color:#000000, fill:#66CDAA, stroke:#008080
+style 4 color:#000000, fill:#66CDAA, stroke:#008080
+style 5 color:#000000, fill:#66CDAA, stroke:#008080
+style 6 color:#000000, fill:#66CDAA, stroke:#008080
+style 7 color:#000000, fill:#66CDAA, stroke:#008080
 style 8 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 click 2 "https://en.wikipedia.org/wiki/Hydrofluorocarbon" "Click for more documentation" _blank
 click 4 "https://ghgprotocol.org" "Click for more documentation" _blank

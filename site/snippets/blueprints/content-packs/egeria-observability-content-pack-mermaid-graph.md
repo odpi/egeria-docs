@@ -54,7 +54,7 @@ flowchart TD
 14==>|"schedules [Solution Linking Wire]"|15
 14==>|"metadata [Solution Linking Wire]"|3
 16@{ shape: rect, label: "*Solution Blueprint*
-**Jacquard Harvester Content Pack**"}
+**Open Metadata Digital Products Content Pack**"}
 16==>|"Collection Membership"|14
 17@{ shape: rect, label: "*Solution Blueprint*
 **Core Content Pack**"}
@@ -83,30 +83,30 @@ flowchart TD
 24@{ shape: stadium, label: "*Collection Membership*
 **... plus 3 Items**"}
 1-.->24
-style 11 color:#000000, fill:#dda0dd, stroke:#000000
+style 11 color:#000000, fill:#DDA0DD, stroke:#000000
 style 22 color:#000000, fill:#FFE599, stroke:#000000
-style 12 color:#000000, fill:#dda0dd, stroke:#000000
-style 23 color:#000000, fill:#dda0dd, stroke:#000000
-style 13 color:#000000, fill:#bdb76b, stroke:#004563
+style 12 color:#000000, fill:#DDA0DD, stroke:#000000
+style 23 color:#000000, fill:#DDA0DD, stroke:#000000
+style 13 color:#000000, fill:#BDB76B, stroke:#004563
 style 24 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 14 color:#000000, fill:#dda0dd, stroke:#000000
-style 15 color:#000000, fill:#dda0dd, stroke:#000000
+style 14 color:#000000, fill:#DDA0DD, stroke:#000000
+style 15 color:#000000, fill:#DDA0DD, stroke:#000000
 style 16 color:#000000, fill:#f5fffa, stroke:#000000
 style 17 color:#000000, fill:#f5fffa, stroke:#000000
 style 18 color:#000000, fill:#f5fffa, stroke:#000000
 style 19 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#dda0dd, stroke:#000000
-style 3 color:#000000, fill:#dda0dd, stroke:#000000
-style 4 color:#000000, fill:#dda0dd, stroke:#000000
-style 5 color:#000000, fill:#dda0dd, stroke:#000000
-style 6 color:#000000, fill:#53bbb4, stroke:#000000
-style 7 color:#000000, fill:#dda0dd, stroke:#000000
-style 8 color:#000000, fill:#dda0dd, stroke:#000000
-style 9 color:#000000, fill:#53bbb4, stroke:#000000
-style 20 color:#000000, fill:#dda0dd, stroke:#000000
-style 10 color:#000000, fill:#dda0dd, stroke:#000000
-style 21 color:#000000, fill:#bdb76b, stroke:#004563
+style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 3 color:#000000, fill:#DDA0DD, stroke:#000000
+style 4 color:#000000, fill:#DDA0DD, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#40E0D0, stroke:#000000
+style 7 color:#000000, fill:#DDA0DD, stroke:#000000
+style 8 color:#000000, fill:#DDA0DD, stroke:#000000
+style 9 color:#000000, fill:#40E0D0, stroke:#000000
+style 20 color:#000000, fill:#DDA0DD, stroke:#000000
+style 10 color:#000000, fill:#DDA0DD, stroke:#000000
+style 21 color:#000000, fill:#BDB76B, stroke:#004563
 click 11 "https://www.postgresql.org/" "Click for more documentation" _blank
 click 12 "https://egeria-project.org/types/2/0220-Files-and-Folders/" "Click for more documentation" _blank
 click 23 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
@@ -119,3 +119,4 @@ click 7 "https://egeria-project.org/concepts/governance-action-type/" "Click for
 click 20 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
 click 10 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
 ```
+> Egeria Observability Content Pack: Solution blueprint showing the analytical components that add observability statistics to the open metadata ecosystem. (Extracted from 6.0-SNAPSHOT)

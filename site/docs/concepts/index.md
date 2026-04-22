@@ -103,7 +103,7 @@
 - [Event Management Services Subsystem (OMRS)](/services/omrs)
 - [Extended Properties](/parameters/overview/#extended-properties)
 - [External Identifiers](/features/external-identifiers/overview)
-- [External References](/features/external-references/overview)
+- [External References](/concepts/external-reference)
 
 ## F
 
@@ -277,12 +277,12 @@
 ## P
 
 - [Parameters](/parameters/overview)
-- [Peer Network](/concepts/peer-network)
+- [Peer Network](/concepts/personal-profile)
 - [Person Role](/concepts/person-role)
-- [Personal Message](/concepts/personal-message)
-- [Personal Note](/concepts/personal-notes)
+- [Personal Message](/concepts/personal-profile)
+- [Personal Note](/concepts/personal-profile)
 - [Personal Profile](/concepts/personal-profile)
-- [Personal Roles](/concepts/personal-roles)
+- [Personal Roles](/concepts/personal-profile)
 - [Placeholder](/concepts/placeholder)
 - [Platform Chassis](/services/platform-chassis)
 - [Platform Metadata Security Connector](/concepts/platform-metadata-security-connector)

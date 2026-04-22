@@ -24,4 +24,11 @@ interest to [Grant](/practices/coco-pharmaceuticals/personas/grant-able) and [Te
 
 ---
 
+## Interactions
+
+Angela works with the other researchers at Hampton Hospital.
+
+
+![Angela Cummings](angela-cummings-interactions.svg)
+
 --8<-- "snippets/abbr.md"

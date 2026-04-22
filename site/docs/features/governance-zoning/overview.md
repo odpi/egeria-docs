@@ -72,7 +72,8 @@ A user only has to have access through **either** of the listed zones to be able
 > 
 >  * The `governanceZoneFilter` property is a list of zone names.  If multiple zones are specified, then only elements that are members of **all** of the specified zones will be returned. For example, to find all elements that are both in the `digital-product` zone and the `security` zone, you would set `governanceZoneFilter` to `["digital-product", "security"]`.  This can be useful for finding elements that are specific to a community nad in a specific state for example.
 >  * An element that has no ZoneMembership classification is, by default, a member of all zones.  However, for this filter, such elements will not be returned.
->  * When a governance zone is applied to an anchor element, all elements anchored to it are in the same zone.  Therefore governanceoneFilter can be used on all types of elements.
+>  * When a governance zone is applied to an anchor element, all elements anchored to it are in the same zone.  Therefore, governanceoneFilter can be used on all types of elements.
+>  * The `governanceZoneFilter` property is ignored if the caller is not authorized to see the element.
 
 
 ## Standard Governance Zones for Egeria
@@ -115,13 +116,6 @@ There is also a `withdrawMetadataElement` operation. This sets the governance zo
 
 The `withdrawMetadataElement` operation is useful when performing remediation work on a metadata element after it has been published.
 For example, if a number of changes need to be made to an element and while this is happening, the element should not be visible to general users, calling `withdrawMetadataElement` can be used to hide the element from general users.  Once the updates are complete, the element can be published again to broaden its visibility.
-
-
-## Filtering query results using governanceZoneFilter
-
-[Egeria's APIs](/services/omvs) have a **governanceZoneFilter** option on query requests that allow the caller to further restrict the elements returned based on their governance zone membership.  
-
-> Note: This filtering is done after the security connector has filtered out elements that are not visible to the calling user.
 
 ## Defining Governance Zones
 

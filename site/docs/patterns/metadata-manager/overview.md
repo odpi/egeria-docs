@@ -234,7 +234,7 @@ This is built on an [extensible type system](/types) that allows further informa
     
     ![Asset external descriptions](asset-external-descriptions.svg)
     
-    Not everything that is known about a resource is stored in Egeria. There may be documents, web resources, images, videos and audio files that provide more detail. Through [External Linking](/services/omvs/external-linking/overview) it is possible to add links to external resources and media.
+    Not everything that is known about a resource is stored in Egeria. There may be documents, web resources, images, videos and audio files that provide more detail. Through [External Linking](/services/omvs/external-links/overview) it is possible to add links to external resources and media.
     
     !!! summary "Usage"
         Using the links to external resources, an individual is able to learn more about the resource they are considering to use to complete their task.

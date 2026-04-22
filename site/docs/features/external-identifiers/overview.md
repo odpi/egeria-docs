@@ -55,7 +55,7 @@ The open metadata types for external identifier are in [model 0017](/types/0/001
 
 ## Implementations
 
-The [External Linking](/services/omvs/external-linking/overview) API provides support for external identifier mapping. 
+The [External Linking](/services/omvs/external-links/overview) API provides support for external identifier mapping. 
 
 
 --8<-- "snippets/abbr.md"

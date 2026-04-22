@@ -9,7 +9,7 @@ Linked media types describe the simple structures that are used repeatedly in op
 
 ## ExternalReference entity
 
-*ExternalReference* entity ia an [AuthoredReferenceable](/types/0/0010-Basic-Model) that describes an external source of information.
+*ExternalReference* entity is an [AuthoredReferenceable](/types/0/0010-Basic-Model) that describes an external source of information.
 
 ## ExternalReferenceLink relationship
 

@@ -7,7 +7,7 @@
 *[Anchors](/concepts/anchor)* are [Referenceable](/concepts/referenceable) metadata entities that group other entities together.  They act like containers.  This means, for example, if the anchor entity is deleted, all the entities anchored to this entity are also deleted.   The value of establishing this grouping is to ensure that entities that have little meaning without their anchor entity are cleaned up properly and are not left to uselessly clutter the repository when the anchor is deleted. 
 
 !!! example "Example: personal messages and profiles"
-    For example, if a [personal message](/concepts/personal-message) is attached to a [personal profile](/concepts/personal-profile) then that personal profile is its anchor.  If the personal profile is deleted then the personal message is deleted too.
+    For example, if a personal message is attached to a [personal profile](/concepts/personal-profile) then that personal profile is its anchor.  If the personal profile is deleted then the personal message is deleted too.
 
 Anchored entities are also bound by the visibility and security restrictions of their anchor. 
 

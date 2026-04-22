@@ -11,9 +11,8 @@ hide:
 *Comments* are informal messages or feedback.  They can be attached to many places, for example
 
 * an [asset](/concepts/asset),
-* a [personal note](/concepts/personal-notes),
 * a [community](/concepts/community), 
-* a [community forum or community forum contribution](/concepts/community/#community-forum),
+* a [community forum or community forum contribution](/concepts/community),
 * a [review](/concepts/review),
 * an [external reference](/concepts/external-reference),
 * or another comment.

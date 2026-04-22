@@ -46,4 +46,11 @@ Desired Outcome:
 
 ----
 
+## Interactions
+
+Grant's research work has built a network of fellow researchers and contacts at their research partner, Coco Pharmaceuticals.
+
+![Grant Able](grant-able-interactions.svg)
+
+
 --8<-- "snippets/abbr.md"

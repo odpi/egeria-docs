@@ -39,7 +39,7 @@ nav:
                 - Capturing expertise: egeria-solutions/capturing-knowledge/overview.md
                 - Blueprints to delivery: egeria-solutions/solution-blueprints/overview.md
                 - Crossing data boundaries: egeria-solutions/crossing-data-boundaries/overview.md
-                - Human in the loop: egeria-solutions/human-in-loop/overview.md
+                - Human in the loop: egeria-solutions/human-in-the-loop/overview.md
             - Accelerating Insight:
                 - Accelerating Insight: egeria-solutions/accelerating-insight/index.md
                 - Organization Insight: egeria-solutions/organization-insight/overview.md
@@ -319,7 +319,6 @@ nav:
         - Duplicate Management: features/duplicate-management/overview.md
         - Effectivity Dates: features/effectivity-dates/overview.md
         - External Identifiers: features/external-identifiers/overview.md
-        - External References: features/external-references/overview.md
         - Governance Zoning: features/governance-zoning/overview.md
         - Incident Reporting: features/incident-reporting/overview.md
         - Integrated Cataloguing: features/integrated-cataloguing/overview.md
@@ -709,7 +708,6 @@ nav:
       - Metadata Collection Id: concepts/metadata-collection-id.md
       - Metadata Discovery: features/discovery-and-stewardship/overview.md
       - Metadata Repository: concepts/metadata-repository.md
-      - Multi-link Relationships: concepts/uni-multi-link.md
       - Note Log: concepts/note-log.md
       - Notification: concepts/notification.md
       - Notification Type: concepts/notification-type.md
@@ -727,11 +725,7 @@ nav:
       - Organization: concepts/organization.md
       - Out Topic: concepts/out-topic.md
       - Parameters: parameters/overview.md
-      - Peer Network: concepts/peer-network.md
-      - Personal Message: concepts/personal-message.md
-      - Personal Notes: concepts/personal-notes.md
       - Personal Profile: concepts/personal-profile.md
-      - Personal Roles: concepts/personal-roles.md
       - Person Role: concepts/person-role.md
       - Placeholders: concepts/placeholder.md
       - Platform URL Root: concepts/platform-url-root.md
@@ -740,6 +734,7 @@ nav:
       - pyegeria: concepts/pyegeria.md
       - Rating: concepts/rating.md
       - Referenceable: concepts/referenceable.md
+      - Relationship Category: concepts/uni-multi-link.md
       - Report: concepts/report.md
       - Report Type: concepts/report-type.md
       - Repository Governance Engine: concepts/repository-governance-engine.md

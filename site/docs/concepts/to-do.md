@@ -21,7 +21,7 @@ individuals.
 The creator of a *to do* is called the **originator**.
 The person, or people assigned to complete the task are
 called the **assigned resources**.  Assigned to dos are 
-attached to one of their [roles](/concepts/personal-roles) rather than
+attached to one of their [roles](/concepts/personal-profile) rather than
 directly to their [personal profile](egeria-docs/concepts/personal-profile).
 
 Each to do has a priority and a status:

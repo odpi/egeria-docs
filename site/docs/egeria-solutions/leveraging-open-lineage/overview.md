@@ -10,7 +10,7 @@ hide:
 
 --8<-- "snippets/work-in-progress.md"
 
-Egeria ia able to capture open lineage events to:
+Egeria is able to capture open lineage events to:
 
 * Harvest information about data stores and processes that are emitting open lineage events.
 * Providing organized storage of open lineage events to allow later analysis.

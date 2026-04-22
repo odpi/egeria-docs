@@ -18,7 +18,8 @@ This service only has one operation called *getMyProfile*.  It extracts the user
 
 ## Setting up a personal profile
 
-If nothing is returned from *getMyProfile* it means you do not have a personal profile.  It is easy to set one up through the [Actor Manager API](/services/omvs/actor-manager/overview).  First you create a *Person* element that acts as the root of the personal profile.  Then you link a UserIdentity element to it for your user identity.  When you call *getMyProfile*, Egeria first looks up the UserIdentity element based on your user identity in the bearer token and then navigates to the Person element.
+If nothing is returned from *getMyProfile* it means you do not have a personal profile.  Use the *addMyProfile* operation to create one.
+
 ## Notification Inbox
 
 The Notification Inbox is a feature of My Profile API designed to back user interfaces (UIs) that support notification for a specific user.

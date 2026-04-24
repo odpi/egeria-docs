@@ -79,5 +79,9 @@ Finally, Dr.Egeria supports the the management of projects that can be used to o
 
 ![Managing the effort](managing-effort.svg)
 
+## Summary
 
+This guide provides an overview of how to use Dr.Egeria to assess new regulations and manage the effort required to support them.  It covers the three main types of policy, organizing your definitions, and managing the effort required to support the regulation.
+
+The fully worked example is available in the [Egeria workspaces](/egeria-solutions).
 --8<-- "snippets/abbr.md"

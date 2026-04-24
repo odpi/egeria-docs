@@ -18,7 +18,7 @@ Scope: Company-wide - finance department.
 Job: Business Intern.
 
 * Anita Job is a business intern.  She works for [Tom Tally](/practices/coco-pharmaceuticals/personas/tom-tally).
-* She has joined Coco Pharmaceuticals as a pert of her Masters Degree.  The plan is to spend 6 weeks in various parts of the business, gaining experience how they are each managed.
+* She has joined Coco Pharmaceuticals as a part of her Masters Degree.  The plan is to spend 6 weeks in various parts of the business, gaining experience how they are each managed.
 * She plans to right a report on her observations of the business.
 
 Thinks/Feels:

@@ -13,7 +13,7 @@ Glossary terms are organized into special types of collections called [glossarie
 ???+ info "Further information"
 
     * [Anatomy of a Glossary](/practices/common-data-definitions/anatomy-of-a-glossary) describes how glossary terms are organized.
-    * [Glossary Manager API](/services/omas/glossary-manager/overview) provides the operations to create your own glossary terms.
+    * [Glossary Manager API](/services/omvs/glossary-manager/overview) provides the operations to create your own glossary terms.
     * [Type definition for a glossary term](/types/3/0330-Terms)
     * [Type definition for a glossary](/types/3/0310-Glossary)
 

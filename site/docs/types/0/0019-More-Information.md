@@ -20,7 +20,7 @@ For example, the *ResourceList* relationship may link:
 The description of what the linked element is used for, and hints on how to use it are provided in the relationship properties.
 
 * *resourceUse* describes the use that the resource is designed to support.  See [Resource Use](/concepts/resource-use) for examples.
-* *displayName* provides the short name of the use of the resource for use on menus and buttons.
+* *label* provides the short name for the use of the resource for use on menus and buttons.  This defaults to the *resourceUse* value if not set explicitly.
 * *description* provides more description on the use of the resource.
 * *additionalProperties* provides the property values needed to use the resource.
 

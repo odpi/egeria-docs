@@ -19,7 +19,8 @@ nav:
             - Our Solution: introduction/overview.md
       - Egeria Workspaces:
             - Egeria Workspaces: egeria-workspaces/index.md
-            - Quick start: egeria-workspaces/quick-start/overview.md
+            - Quickstart: egeria-workspaces/quick-start/overview.md
+            - Freshstart: egeria-workspaces/fresh-start/overview.md
             - Optional runtimes: egeria-workspaces/optional-runtimes/overview.md
       - Egeria's Solutions:
             - Solutions Overview: egeria-solutions/index.md

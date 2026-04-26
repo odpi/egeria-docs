@@ -3,6 +3,8 @@
 
 # Planning Guide
 
+[Egeria Workspaces](/egeria-workspaces) provides a simple, up and running environment using docker-compose.  It supports and individual, or small team.  If, however, you have out-grown egeria-workspaces, or like to build your own deployment environment from scratch then this planning guide is the place to start.
+
 Egeria is highly modular, allowing you to choose which components to use "as supplied", and which to remove, extend, or replace with something customized for your organization.
 Typically, Egeria's function is broader than you need, at least initially, so often the challenge is to know which pieces you need to do the things you want to do, and what you can safely ignore.
 

@@ -17,8 +17,7 @@ Scope: All patient data held by the hospital and its use.
 
 Job:
 
-* Robbie is responsible for the proper collection,
-management, and security of patient data.
+* Robbie is responsible for the proper collection, management, and security of patient data.
 
 Thinks/Feels:
 
@@ -59,5 +58,11 @@ stored, managed, and disposed of through the hospital and partner organizations.
 
 ----
 
+## Interactions
+
+Robbie Records has interactions with the medical staff at Hampton Hospital that are engaged in research work.  He also has contacts with the clinical trials team in Coco Pharmaceuticals. 
+
+
+![Ivor Padlock](robbie-records-interactions.svg)
 
 --8<-- "snippets/abbr.md"

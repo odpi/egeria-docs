@@ -5,7 +5,9 @@
 
 ## The nature of organizations
 
-Everyone plays multiple roles in their lives: parent, daughter, employee, scout leader, … even within an organization it is not uncommon, particularly for more experienced people, to be assigned to multiple roles.
+Everyone plays multiple roles in their lives: parent, daughter, employee, scout leader, ... 
+
+Even within an organization it is not uncommon, particularly for more experienced people, to be assigned to multiple roles.
 
 For example, figure 1 shows some roles that [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) performs at [Coco Pharmaceuticals](/practices/coco-pharmaceuticals).  *Researcher* is her primary role, but she is also a manager, system owner and information consumer.  Each of these roles needs particular skills and knowledge.  They will also take up some of her time.
 
@@ -34,12 +36,12 @@ Coco Pharmaceuticals is a small company but even so, its organization structure 
 
 An individual acquires their roles from the projects they work on and the communities they belong to as well as their direct team in the organization hierarchy (department).
 
-Figure 4 shows a role attached to a community.  The `CommunityMembership` relationship defines the type of members that perform the role.  So a community may have a community leader role that is separate from the community administrator role for example.
+Figure 4 shows a role attached to a community.  The `AssignmentScope` relationship defines the type of members that perform the role.  So a community may have a community leader role that is separate from the community administrator role for example.
 
 ![Figure 4](community-roles.svg)
 > **Figure 4**: Linking of a role to a community showing the type of membership associated with the role
 
-Figure 5 shows the roles associated with a project.  There are the roles associated with the management of the project as well as the project team that performs the work of the project.
+Figure 5 shows the roles associated with a project.  There are the roles associated with the management of the project as well as the project team that performs the work of the project.  Notice that the *AssignmentScope* is also used to link projects to the roles that are supporting it.
 
 ![Figure 5](project-roles.svg)
 > **Figure 5**: Linking of roles to a project.  There is a separation of the roles to manage the project from the roles to lead the team that does the work.
@@ -47,15 +49,16 @@ Figure 5 shows the roles associated with a project.  There are the roles associa
 
 ## Types of roles
 
-Egeria's [open metadata types](/types) represent a role using the [`PersonRole`](/types/1/0122-People) entity type.  Figure 6 shows a hierarchy of subtypes for 'PersonRole' that are also included in the open metadata types to help structure your organization's role types into broad groups that identify particular skill sets.  For example, Coco Pharmaceuticals may define role types of `Researcher` and `Data Scientist` that inherit from `PersonRole`; a role type of `DepartmentManager` that inherits from `TeamLeader`; and a role type of `ClinicalTrialLeader` that inherits from `ProjectLeader`. 
+Egeria's [open metadata types](/types) represent a role using the [`ActorRole`](/types/1/0118-Actor-Roles/) entity type.  Figure 6 shows a hierarchy of subtypes for 'ActorRole' that are also included in the open metadata types to help structure your organization's role types into broad groups that identify particular skill sets.  For example, Coco Pharmaceuticals may define role types of `Researcher` and `Data Scientist` that inherit from `PersonRole`; a role type of `DepartmentManager` that inherits from `TeamLeader`; and a role type of `ClinicalTrialLeader` that inherits from `ProjectLeader`. 
 
-![Figure 6](person-role-types.svg)
+![Figure 6](actor-role-types.svg)
 > **Figure 6**: Inheriting from PersonRole (from model 0112) are the team roles (from model 0115) of TeamMember and TeamLeader; the ProjectLeader role (from model 0130); the CommunityMember role (from model 0140) and the GovernanceRole roles (from model 0445) of Governance Officer, Asset Owner, SubjectAreaOwner ComponentOwner and DataItemOwner.
 
-Instances of a role type (ie role instances) describe a specific role in the organization that has a scope and potentially people appointed to it.  For example, in figure 7, an instance of the `ClinicalTrialLeader` role has been created for the *Drop Foot Clinical Trial* project.  *Tessa Tube* has been appointed to that role to indicate that she is the leader of that project.
+## Appointment History
 
-![Figure 7](clinical-trial-leader-example.svg)
-> **Figure 7**: The left-hand side of the diagram shows the inheritance hierarchy of the type for `ClinicalTrialLeader` which inherits from `ProjectLeader` which inherits from `PersonRole`. The right hand-side shows the instances: the Person entity for Tessa Tube is linked to the ClinicalTrialLeader entity for the Drop Foot Clinical Trial which in turn is linked to the Project entity for the Drop Foot clinical trial project.
+
+![Figure 7](appointment-history.svg)
+> **Figure 7**: A historical perspective of actors assigned to roles.
 
 ## Roles in action
 

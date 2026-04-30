@@ -23,7 +23,7 @@ A team is a group of people who are working to a common goal. This is recorded i
 
 Long-standing teams are often responsible for particular [*business capabilities*](/types/4/0440-Organizational-Controls/#businesscapability).  Teams can also be linked to [projects](/types/1/0130-Projects).
 
-The roles within a team are shown on [Model 0119 - Team Roles](/types/1/0119-Team-Roles).
+The person roles within a team are linked to the team using the [AssignmentScope](/types/1/0120-Assignment-Scopes) relationship.
 
 [People, Roles and Organizations](/features/people-roles-organizations/overview) describes how metadata about teams is populated and used.
 

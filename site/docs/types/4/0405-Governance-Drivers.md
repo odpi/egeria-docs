@@ -7,28 +7,32 @@ Governance drivers define the motivations behind the governance program.  Often 
 
 ![UML](0405-Governance-Drivers.svg)
 
-## GovernanceDriver
+## GovernanceDriver entity
 
 The *GovernanceDriver* entity is the common super type for the governance drivers.
 
-## GovernanceStrategy
+## GovernanceStrategy entity
 
 The *GovernanceStrategy* entity defines the strategy used in the development of the governance domain's activities.
 It defines how the governance domain supports the business strategy.  It is possible to define the business imperatives that drive the strategy directly in this entity, or model them as independent *BusinessImperative* entities. 
 
-## BusinessImperative
+## BusinessImperative entity
 
 The *BusinessImperative* entity defines a business goal that is critical to the success of the organization.
 
-## Regulation
+## Regulation entity
 
 The *Regulation* entity defines a relevant legal regulation that the business operation must comply with.  Often regulations are divided in regulation articles.
 
-## RegulationArticle
+## Regulator relationship
+
+The *Regulator* relationship links a regulation to one or more regulators.
+
+## RegulationArticle entity
 
 A *RegulationArticle* entity is an article in a regulation.  Dividing the regulation into articles can help in planning compliance approaches and reporting on the effectiveness of the associated activities.
 
-## Threat
+## Threat entity
 
 The *Threat* entity describes a particular threat to the organization's operations that must either be guarded against or some form of mitigation must be in place to reduce its impact.
 

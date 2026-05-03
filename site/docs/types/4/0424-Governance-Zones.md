@@ -38,8 +38,12 @@ The *ZoneMembership* classification is used to record the zones that an element 
 
 The *ZoneMembershipProfile* classification is used to record the number of elements in the attached governance zone for each open metadata type.
 
-* *totalMembership* is the number of elements in the zone.
-* *typeMembership* is a map from open metadata type name to the number of elements of that type in the zone.
+* *totalMembership* is the number of anchor elements in the zone.  This is extracted from the setting in the ZoneMembership classifications.
+* *typeMembership* is a map from open metadata type name to the anchor elements count of that type in the zone.
+* *anchoredTotalMembership* in the anchored element count for the attached governance zone.
+* *anchoredTypeMembership* is the statistics describing the types of elements that are members of the zone due to an anchor association.  This profile is derived from the setting of zoneMembership in the Anchors classification.
+* *allTotalMembership* is the anchor and anchored elements count for the attached governance zone.
+* *allTypeMembership* is the statistics describing the types of elements that are members of the zone either explicitly or via an anchor association.   This profile is the combination of typeMembership and anchoredTypeMembership.
 * *analysisTime* is the time when these counts were made.
 
 ???+ info "Related information"

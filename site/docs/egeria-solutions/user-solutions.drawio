@@ -731,7 +731,7 @@
         <mxCell id="aEbv8yQVV0-F87_E71nj-110" parent="1" style="shape=internalStorage;whiteSpace=wrap;html=1;dx=15;dy=15;rounded=1;arcSize=8;strokeWidth=2;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Open Metadata Archives" vertex="1">
           <mxGeometry height="70" width="70" x="2432.5" y="568" as="geometry" />
         </mxCell>
-        <mxCell id="aEbv8yQVV0-F87_E71nj-111" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;align=left;" value="Markdown&lt;div&gt;Reports&lt;/div&gt;" vertex="1">
+        <mxCell id="aEbv8yQVV0-F87_E71nj-111" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;align=left;" value="&lt;div&gt;Reports&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="88" x="2432.5" y="722" as="geometry" />
         </mxCell>
         <mxCell id="aEbv8yQVV0-F87_E71nj-112" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;align=left;" value="Markdown&lt;div&gt;Forms&lt;/div&gt;" vertex="1">
@@ -784,7 +784,7 @@
         <mxCell id="aEbv8yQVV0-F87_E71nj-127" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Reviewing Metadata&lt;/span&gt;" vertex="1">
           <mxGeometry height="30" width="120" x="1441" y="419" as="geometry" />
         </mxCell>
-        <mxCell id="aEbv8yQVV0-F87_E71nj-131" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;align=left;" value="Markdown&lt;div&gt;Reports&lt;/div&gt;" vertex="1">
+        <mxCell id="aEbv8yQVV0-F87_E71nj-131" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;align=left;" value="&lt;div&gt;Reports&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="88" x="1823.5" y="406" as="geometry" />
         </mxCell>
         <mxCell id="aEbv8yQVV0-F87_E71nj-132" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;align=left;" value="Markdown&lt;div&gt;Forms&lt;/div&gt;" vertex="1">
@@ -843,6 +843,27 @@
         </mxCell>
         <mxCell id="aEbv8yQVV0-F87_E71nj-151" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" value="Git" vertex="1">
           <mxGeometry height="20" width="50" x="3016.5" y="83.25" as="geometry" />
+        </mxCell>
+        <mxCell id="aEbv8yQVV0-F87_E71nj-152" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.display;whiteSpace=wrap;flipH=1;legacyAnchorPoints=0;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" value="Egeria&lt;div&gt;Webserver&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="2114" y="1917" as="geometry" />
+        </mxCell>
+        <mxCell id="aEbv8yQVV0-F87_E71nj-153" edge="1" parent="1" source="aEbv8yQVV0-F87_E71nj-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="aEbv8yQVV0-F87_E71nj-152">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aEbv8yQVV0-F87_E71nj-154" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Review Published Information&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="1859.25" y="1932" as="geometry" />
+        </mxCell>
+        <mxCell id="aEbv8yQVV0-F87_E71nj-157" edge="1" parent="1" source="aEbv8yQVV0-F87_E71nj-152" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="aEbv8yQVV0-F87_E71nj-161">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2113.5" y="1947" as="sourcePoint" />
+            <mxPoint x="2276" y="1947" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aEbv8yQVV0-F87_E71nj-159" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="HTML" vertex="1">
+          <mxGeometry height="30" width="60" x="2205.5" y="1917" as="geometry" />
+        </mxCell>
+        <mxCell id="aEbv8yQVV0-F87_E71nj-161" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;align=left;" value="HTML&lt;div&gt;Reports&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="88" x="2278.5" y="1917" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

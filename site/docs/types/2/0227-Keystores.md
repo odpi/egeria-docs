@@ -21,5 +21,20 @@ The diagram below shows the structure of the `coco-user-directory.omsecrets` fil
 
 ![Key Store Example](keystore-example.svg)
 
+## UserAccountProfile classification
+
+The *UserAccountProfile* classification is used to describe the type and status of user accounts that are defined in the attach secrets collection.
+
+* *userAccountCount* - Count of the user accounts in the secrets store.
+* *employeeAccountCount* - Count of the employee user accounts in the secrets store.
+* *contractorAccountCount* - Count of the contractor user accounts in the secrets store.
+* *externalAccountCount* - Count of the external user accounts in the secrets store.
+* *digitalAccountCount* - Count of the digital user accounts in the secrets store.
+* *activeAccountCount* - Count of the active user accounts in the secrets store.
+* *expiredAccountCount* - Count of the user accounts with expired credentials in the secrets store.
+* *lockedAccountCount* - Count of the locked user accounts in the secrets store."
+* *disabledAccountCount* - Count of the disabled user accounts in the secrets store.
+* *additionalProperties* - additional properties for the user account profile.
+
 --8<-- "snippets/abbr.md"
 

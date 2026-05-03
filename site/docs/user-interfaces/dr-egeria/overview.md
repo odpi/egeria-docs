@@ -50,8 +50,8 @@ Obsidian therefore makes a very flexible and easy to use desktop environment for
 
 ???+ note "Further Information"
     * [Mermaid Diagrams](/user-interfaces/mermaid/overview)
-    * [Dr.Egeria Introduction - Part 1](https://github.com/odpi/egeria-python/blob/main/sample-data/egeria-inbox/dr-egeria-inbox/dr_egeria_intro_part1.md)
-    * [Dr.Egeria Introduction - Part 2](https://github.com/odpi/egeria-python/blob/main/sample-data/egeria-inbox/dr-egeria-inbox/dr_egeria_intro_part2.md)
-    * [Dr.Egeria Introduction - Part 3](https://github.com/odpi/egeria-python/blob/main/sample-data/egeria-inbox/dr-egeria-inbox/dr_egeria_intro_part3.md)
+    * [Dr.Egeria Introduction - Part 1](https://github.com/odpi/egeria-python/blob/main/sample-data/egeria-inbox/dr_egeria_intro_part1.md)
+    * [Dr.Egeria Introduction - Part 2](https://github.com/odpi/egeria-python/blob/main/sample-data/egeria-inbox/dr_egeria_intro_part2.md)
+    * [Dr.Egeria Introduction - Part 3](https://github.com/odpi/egeria-python/blob/main/sample-data/egeria-inbox/dr_egeria_intro_part3.md)
 
 --8<-- "snippets/abbr.md"

@@ -1148,7 +1148,7 @@ Here is the typeDef for *Project*.
 
 ### Retrieving a list of a type's subtypes
 
-The Valid Metadata API is able to return the list of types that inherit from a particular type (called the super type).  This is useful because the different Egeria APIs often focus around maintain a particular entity type that is quite high in the inheritance hierarchy.  Understanding their subtypes helps to appreciate the scope that the API covers.  For example, it is probably no surprise that the [Collection Manager API](/services/omvs/collection-manager/overview) supports the [Collection](/types/1/0021-Collections) entity type.  Now consider the subtypes of *Collection* to appreciate how important this API is:
+The Valid Metadata API is able to return the list of types that inherit from a particular type (called the super type).  This is useful because the different Egeria APIs often focus around maintain a particular entity type that is quite high in the inheritance hierarchy.  Understanding their subtypes helps to appreciate the scope that the API covers.  For example, it is probably no surprise that the [Collection Manager API](/services/omvs/collection-manager/overview) supports the [Collection](/types/0/0021-Collections) entity type.  Now consider the subtypes of *Collection* to appreciate how important this API is:
 
 ??? info "Code sample - retrieve subtypes of a TypeDef - Collection"
 

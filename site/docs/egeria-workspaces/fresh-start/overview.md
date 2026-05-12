@@ -8,5 +8,6 @@ start using Egeria for their own projects without having to configure everything
 
 --8<-- "snippets/work-in-progress.md"
 
+![Freshstart Environment](egeria-workspaces-freshstart.svg)
 
 --8<-- "snippets/abbr.md"

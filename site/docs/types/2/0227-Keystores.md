@@ -26,6 +26,8 @@ The diagram below shows the structure of the `coco-user-directory.omsecrets` fil
 The *UserAccountProfile* classification is used to describe the type and status of user accounts that are defined in the attach secrets collection.
 
 * *userAccountCount* - Count of the user accounts in the secrets store.
+* *userAccountTypes* - Map of UserAccountType value to the count of the user accounts in the secrets store of that type.
+* *userAccountStatuses* - Map of UserAccountStatus value to the count of the user accounts in the secrets store with that status.
 * *employeeAccountCount* - Count of the employee user accounts in the secrets store.
 * *contractorAccountCount* - Count of the contractor user accounts in the secrets store.
 * *externalAccountCount* - Count of the external user accounts in the secrets store.

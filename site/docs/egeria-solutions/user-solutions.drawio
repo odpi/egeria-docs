@@ -698,8 +698,8 @@
         <mxCell id="aEbv8yQVV0-F87_E71nj-79" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Edit/Run" vertex="1">
           <mxGeometry height="30" width="60" x="2510" y="343" as="geometry" />
         </mxCell>
-        <mxCell id="aEbv8yQVV0-F87_E71nj-80" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=4.428571428571104;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="ODS" vertex="1">
-          <mxGeometry height="30" width="30" x="1818.5" y="1787" as="geometry" />
+        <mxCell id="aEbv8yQVV0-F87_E71nj-80" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=4.428571428571104;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="PostgreSQL" vertex="1">
+          <mxGeometry height="30" width="81.5" x="1796.75" y="1787" as="geometry" />
         </mxCell>
         <mxCell id="aEbv8yQVV0-F87_E71nj-101" edge="1" parent="1" source="aEbv8yQVV0-F87_E71nj-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="aEbv8yQVV0-F87_E71nj-112">
           <mxGeometry relative="1" as="geometry" />

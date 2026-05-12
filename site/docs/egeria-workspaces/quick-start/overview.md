@@ -12,4 +12,7 @@ get a feel for the platform without having to configure everything from scratch.
 --8<-- "snippets/work-in-progress.md"
 
 
+![Quickstart Environment](egeria-workspaces-quickstart.svg)
+
+
 --8<-- "snippets/abbr.md"

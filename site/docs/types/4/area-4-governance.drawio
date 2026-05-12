@@ -2795,7 +2795,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="K3GvzW6t4wGOg744KcmP" name="0481-Licenses">
-    <mxGraphModel dx="1234" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1106" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="S4pzYwjSVJKoAjeZp5je-0" />
         <mxCell id="S4pzYwjSVJKoAjeZp5je-1" parent="S4pzYwjSVJKoAjeZp5je-0" />
@@ -2829,7 +2829,7 @@
             <mxPoint x="550.25" y="740" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QnCwK56YzKgI9n2piC8_-16" parent="S4pzYwjSVJKoAjeZp5je-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="licenseGUID : string&lt;br&gt;coverageStart : date&lt;br&gt;coverageEnd : date&lt;br&gt;conditions : string&lt;br&gt;licensedBy : string&lt;br&gt;licensedByTypeName : string&lt;br&gt;licensedByPropertyName : string&lt;br&gt;custodian : string&lt;br&gt;custodianTypeName : string&lt;br&gt;custodianPropertyName : string&lt;br&gt;licensee : string&lt;br&gt;licenseeTypeName : string&lt;br&gt;licenseePropertyName : string&lt;br&gt;entitlements : map&amp;lt;string, string&amp;gt;&lt;br&gt;restrictions : map&amp;lt;string, string&amp;gt;&lt;br&gt;obligations : map&amp;lt;string, string&amp;gt;&lt;br&gt;notes : string" vertex="1">
+        <mxCell id="QnCwK56YzKgI9n2piC8_-16" parent="S4pzYwjSVJKoAjeZp5je-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="licenseId : string&lt;br&gt;coverageStart : date&lt;br&gt;coverageEnd : date&lt;br&gt;conditions : string&lt;br&gt;licensedBy : string&lt;br&gt;licensedByTypeName : string&lt;br&gt;licensedByPropertyName : string&lt;br&gt;custodian : string&lt;br&gt;custodianTypeName : string&lt;br&gt;custodianPropertyName : string&lt;br&gt;licensee : string&lt;br&gt;licenseeTypeName : string&lt;br&gt;licenseePropertyName : string&lt;br&gt;entitlements : map&amp;lt;string, string&amp;gt;&lt;br&gt;restrictions : map&amp;lt;string, string&amp;gt;&lt;br&gt;obligations : map&amp;lt;string, string&amp;gt;&lt;br&gt;notes : string" vertex="1">
           <mxGeometry height="272" width="210" x="460.25" y="381" as="geometry" />
         </mxCell>
         <mxCell id="QnCwK56YzKgI9n2piC8_-17" parent="S4pzYwjSVJKoAjeZp5je-1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="licensed" vertex="1">
@@ -2845,7 +2845,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="u7Zb82QUbdXRAVxmy1tG" name="0482-Certifications">
-    <mxGraphModel dx="1234" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1106" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="aLVyktp9HCnekv0MbXhn-0" />
         <mxCell id="aLVyktp9HCnekv0MbXhn-1" parent="aLVyktp9HCnekv0MbXhn-0" />
@@ -2884,7 +2884,7 @@
             <mxPoint x="645.75" y="730" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="bVWAr4kzmAg5rucortz--11" parent="aLVyktp9HCnekv0MbXhn-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="certificateGUID : string&lt;br&gt;coverageStart : date&lt;br&gt;coverageEnd : date&lt;br&gt;conditions : string&lt;br&gt;certifiedBy : string&lt;br&gt;certifiedByTypeName : string&lt;br&gt;certifiedByPropertyName : string&lt;br&gt;custodian : string&lt;br&gt;custodianTypeName : string&lt;br&gt;custodianPropertyName : string&lt;br&gt;recipient : string&lt;br&gt;recipientTypeName : string&lt;br&gt;recipientPropertyName : string&lt;br&gt;notes : string" vertex="1">
+        <mxCell id="bVWAr4kzmAg5rucortz--11" parent="aLVyktp9HCnekv0MbXhn-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="certificateId&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;&amp;nbsp;: string&lt;/span&gt;&lt;div&gt;coverageStart : date&lt;br&gt;coverageEnd : date&lt;br&gt;conditions : string&lt;br&gt;certifiedBy : string&lt;br&gt;certifiedByTypeName : string&lt;br&gt;certifiedByPropertyName : string&lt;br&gt;custodian : string&lt;br&gt;custodianTypeName : string&lt;br&gt;custodianPropertyName : string&lt;br&gt;recipient : string&lt;br&gt;recipientTypeName : string&lt;br&gt;recipientPropertyName : string&lt;br&gt;notes : string&lt;/div&gt;" vertex="1">
           <mxGeometry height="217" width="206" x="555.75" y="371" as="geometry" />
         </mxCell>
         <mxCell id="bVWAr4kzmAg5rucortz--12" parent="aLVyktp9HCnekv0MbXhn-1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="certifies" vertex="1">

@@ -21,6 +21,7 @@ Area 1 collects information from people using their organization's assets. It in
 - [0130 Projects](/types/1/0130-Projects) - projects for organizing change to the IT landscape
 - [0135 Actions for People](/types/1/0135-Actions-For-People) - descriptions of actions for people such as ToDos and Meetings
 - [0140 Communities](/types/1/0140-Communities) - communities of like-minded people
+- [0145 Perspectives](/types/1/0145-Perspectives) - context for actors
 - [0150 Feedback](/types/1/0150-Feedback) - comments, likes, reviews and ratings
 - [0155 Crowd Sourcing](/types/1/0155-Crowd-Sourcing) - collecting ideas from subject-matter experts
 - [0160 Notes](/types/1/0160-Notes) - maintaining notes and note logs

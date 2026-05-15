@@ -29,9 +29,12 @@ ActivityDescription has a single property called *activityType* which is an enum
 
 *AbstractConcept* is a classification that means that the term describes an abstract concept.
 
-## DataValue classification
+## DataValueMeaning classification
 
-*DataValue* is a classification that means that the glossary term describes a valid value for a data item.
+*DataValueMeaning* is a classification that means that the glossary term describes a valid value for a data item.
 
+## Question classification
+
+*Question* is a classification that means that the term describes a question that can be asked by an actor.
 
 --8<-- "snippets/abbr.md"

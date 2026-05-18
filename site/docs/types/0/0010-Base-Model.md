@@ -67,7 +67,9 @@ It is used in *Infrastructure* and [DigitalProduct](/types/7/0710-Digital-Produc
 
 ## OpenMetadataRoot entity
 
-*OpenMetadataRoot* is the root entity for all open metadata entity types.
+*OpenMetadataRoot* is the root entity (super-type) for all open metadata entity types.  It has the following attribute:
+
+* *legal* - copyright and/or license information for the element or associated resource.
 
 ## Referenceable entity
 

@@ -35,8 +35,8 @@ The glossary term may then be organized into one or more [collections](/concepts
 
 Glossary terms can be linked together in pairs to show that they are related in some way.
 
-![Figure 4](glossary-term-relationships.svg)
-> Figure 4: Glossary term relationships
+![Figure 3](glossary-term-relationships.svg)
+> Figure 3: Glossary term relationships
 
 The relationships between glossary terms are divided into two groups:
 
@@ -59,8 +59,8 @@ The relationships between glossary terms are divided into two groups:
 
 The contents of a glossary can be further described using classifications. These are descriptions that tell the consumer more about how the glossary is defines and used.
 
-![Figure 5](glossary-classifications.svg)
-> Figure 5: Glossary classifications
+![Figure 4](glossary-classifications.svg)
+> Figure 4: Glossary classifications
 
 There are different types of classifications for the glossary itself, each glossary category and each glossary term.
 
@@ -75,7 +75,7 @@ A glossary may be classified to describe the way its content should be used.
 * [EditingCollection](/types/3/0385-Controlled-Glossary-Development) means that the glossary contains a collection of glossary terms and categories that are in the process of being edited.
 
 * [StagingCollection](/types/3/0385-Controlled-Glossary-Development) means that the glossary contains a collection of glossary terms and categories that are in the process of being reviewed ready for publishing.
-* 
+
 * [ScopingCollection](/types/3/0385-Controlled-Glossary-Development) means that the glossary contains a collection of glossary terms and categories that are being considered for inclusion in a project.
 
 ### Classifications for a term

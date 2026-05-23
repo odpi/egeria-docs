@@ -4,7 +4,7 @@
 
 # 0541 Data Classes and Data Grains
 
-[Data classes](/concepts/data-class) describe logical data types that can be used to classify data values in a consistent and standardized way.  They are particularly important in [data quality assessments](/features/data-quality/overview) and [metadata discovery](/features/discovery-and-stewardship/overview).
+[Data classes](/concepts/data-class) describe logical data types that can be used to classify data values in a consistent and standardized way.  They are particularly important in [data quality assessments](/features/data-quality/overview) and [metadata discovery](/features/metadata-discovery/overview).
 
 [Data Grains](/concepts/data-grain) define the granularity of data.
 They were invented by [the Kimball Group](https://www.kimballgroup.com/2008/11/fact-tables/) to describe the granularity of data in a data warehouse fact table.  The concept fits well into a metadata landscape too.  For example, you may have multiple data sources that capture sales data for your organization.  One data source may contain daily figures, another contains  weekly figures, and another contains monthly figures.  They are all the same type of data if you consider there [subject area](/concepts/subject-area).  They may even have the same [schema](/concepts/schema) so they will be technically easy to combine.  However, their different granularity means they can not be combined without transformation, and only at the most course-grained level, if distortion is to be avoided.

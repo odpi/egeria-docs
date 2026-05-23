@@ -38,8 +38,8 @@ Finally, an integration connector can manage the [two-way synchronization betwee
 
 Below are other types of automation to minimise the effort in managing your asset catalog.
 
-* [Templated cataloguing](/features/templated-cataloguing) - copies the values from an existing catalogued asset into the catalog entry for a new asset. This can reduce the opportunities for error where similar assets are being catalogued.  It can be used both in manual cataloguing and integrated cataloguing.
-* [Discovery and stewardship](/features/discovery-and-stewardship) - analyses the contents of a digital resource to discover metadata and attach it as annotations to the corresponding asset in the catalog.
+* [Templated cataloguing](/features/templated-cataloguing/overview) - copies the values from an existing catalogued asset into the catalog entry for a new asset. This can reduce the opportunities for error where similar assets are being catalogued.  It can be used both in manual cataloguing and integrated cataloguing.
+* [Discovery and stewardship](/features/metadata-discovery/overview) - analyses the contents of a digital resource to discover metadata and attach it as annotations to the corresponding asset in the catalog.
 
 
 --8<-- "snippets/abbr.md"

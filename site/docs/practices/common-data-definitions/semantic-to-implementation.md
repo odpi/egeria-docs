@@ -166,7 +166,7 @@
 
     An [survey action service](/concepts/survey-action-service) is a process that runs a pipeline of analytics to describe the data content of a resource. It uses statistical analysis, reference data and other techniques to determine the data class and range of values stored, potentially what the data means and its level of quality. The result of the analysis is stored in metadata objects called [annotations](/concepts/discovery-analysis-report/#discovery-annotations).
 
-    Part of the discovery process is called *Schema Extraction*.  This is where the discovery service inspects the schema in the digital resource and builds a matching structure of *[DataField]/types/6/0615-Schema-Extraction/)* elements in open metadata.  As it goes on to analyse the content of a particular data field in the resource, it can add its results to an annotation that is attached to the DataField element.  It can also maintain a link between the DataField element and its corresponding SchemaAttribute element if the schema has already been attached.  Through ths process it is possible to detect any anomalies between the documented schema and what is actually implemented.
+    Part of the discovery process is called *Schema Extraction*.  This is where the discovery service inspects the schema in the digital resource and builds a matching structure of *[DataField](/types/6/0615-Schema-Extraction/)* elements in open metadata.  As it goes on to analyse the content of a particular data field in the resource, it can add its results to an annotation that is attached to the DataField element.  It can also maintain a link between the DataField element and its corresponding SchemaAttribute element if the schema has already been attached.  Through ths process it is possible to detect any anomalies between the documented schema and what is actually implemented.
 
     Part of the analysis of a single data field may be to identify its *data class* (or a list of possible data classes if the analysis is not conclusive).  THe data class in turn may identify a list of possible glossary terms that could apply to the data field.
 
@@ -176,7 +176,7 @@
     > Figure 13: Output from a metadata discovery service
 
     !!! education "Further information"
-        * See [Discovery and Stewardship](/features/discovery-and-stewardship/overview) to understand how metadata discovery works.
+        * See [Discovery and Stewardship](/features/metadata-discovery/overview) to understand how metadata discovery works.
         * See [Area 6](/types/6) in the *Open Metadata Types* to understand how discovery metadata is represented.
 
 ??? summary "Bringing it all together"

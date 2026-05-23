@@ -83,7 +83,7 @@
 - [Digital Resource](/concepts/digital-resource)
 - [Digital Resource Connector](/concepts/digital-resource-connector)
 - [Digital Service](/practices/digital-services/overview)
-- [Discovery (metadata)](/features/discovery-and-stewardship/overview)
+- [Discovery (metadata)](/features/metadata-discovery/overview)
 - [Dynamic Integration Group](/concepts/integration-group)
 
 ## E
@@ -224,7 +224,7 @@
 - [Metadata Archives](/concepts/open-metadata-archive)
 - [Metadata Catalog](/patterns/metadata-catalog/overview)
 - [Metadata Collection](/concepts/metadata-collection)
-- [Metadata Discovery](/features/discovery-and-stewardship/overview)
+- [Metadata Discovery](/features/metadata-discovery/overview)
 - [Metadata Highway](/services/omrs)
 - [Metadata Instances](/concepts/open-metadata-instances)
 - [Metadata Provenance](/features/metadata-provenance/overview)
@@ -355,7 +355,7 @@
 - [Specification Properties](/concepts/specification)
 - [Star Ratings](/concepts/review)
 - [Specification](/concepts/specification)
-- [Stewardship](/features/discovery-and-stewardship/overview)
+- [Stewardship](/features/metadata-discovery/overview)
 - [Stewardship Engine](/concepts/governance-engine)
 - [Stewardship Server](/concepts/engine-host)
 - [Subject Area](/concepts/subject-area)

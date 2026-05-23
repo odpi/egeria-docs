@@ -5,6 +5,27 @@
 
 # People Organizer API
 
+The People Organizer API provides a REST API to support user interfaces (UIs)
+relating to the definition of teams, roles and organizational structures.
+
+## Key Features
+
+The People Organizer API supports the following key features:
+
+* **Person Peer Management**: Define and maintain peer relationships between people profiles to represent
+  professional networks and collaborations.
+* **Team Structure Management**: Build hierarchical team structures by linking super teams and subteams,
+  including the definition of delegation and escalation authority.
+
+## Further information
+
+* [Personal Profile Concept](/concepts/personal-profile/)
+* [Team Concept](/concepts/team/)
+
+Sample requests for the REST API can be found in [Egeria-api-people-organizer.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/people-organizer/Egeria-api-people-organizer.http). [Egeria-coco-peer-networks.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/people-organizer/Egeria-coco-peer-networks.http) shows the peer networks in Coco Pharmaceuticals.
+
+## API Overview
+
 The People Organizer API is a REST API used to define links between people and teams to show how an organization is linked together.  There are two types of relationships it supports:
 
 * the [Peer](/types/1/0112-People) relationship that shows a person's peer network.

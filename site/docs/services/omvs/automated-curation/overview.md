@@ -1,14 +1,18 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
 --8<-- "snippets/content-status/stable.md"
 
-# Automated Curation Open Metadata View Service (OMVS)
+# Automated Curation API
+
+Key features of this service include:
+
+* **Technology Type Management**: Browsing and searching for the technology types supported by the ecosystem's integration connectors and governance engines.
+* **Governance and Engine Action Management**: Initiating, canceling, and monitoring governance actions and engine actions.
+* **Templated Cataloguing**: Support for creating metadata elements using templates, ensuring consistency in the cataloguing process.
+* **Client-Side Secret Management**: Saving and deleting secrets (such as credentials) used by client-side integration components.
+
+## API Operations
 
 The Automated Curation API provides services that can be used to set up and monitor the automation services from Egeria:
 
@@ -20,7 +24,7 @@ The Automated Curation API provides services that can be used to set up and moni
 
 ## Retrieving details about supported technologies
 
-Automated Curation OMAS provides methods to query the supported technology types.  The technology types provide the reference data to guide the curator.  They are extracted from the valid values for [*deployedImplementationType*](/concepts/deployed-implementation-type).
+Automated Curation API provides methods to query the supported technology types.  The technology types provide the reference data to guide the curator.  They are extracted from the valid values for [*deployedImplementationType*](/concepts/deployed-implementation-type).
 
 The `getTechnologyTypesForOpenMetadataType` operation retrieves the list of deployed implementation type metadata elements linked to a particular open metadata type.
 
@@ -363,4 +367,14 @@ Finally, this is an example of an external reference.
       }
     ]
 ```
+
+## Further information
+
+* [Integration Connector Concept](https://egeria-project.org/concepts/integration-connector/)
+* [Governance Action Concept](https://egeria-project.org/concepts/governance-action/)
+* [Integration Daemon Concept](https://egeria-project.org/concepts/integration-daemon/)
+
+Sample REST API requests can be found in [Egeria-api-automated-curation.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-server-generic-services/automated-curation/Egeria-api-automated-curation.http).
+
+
 --8<-- "snippets/abbr.md"

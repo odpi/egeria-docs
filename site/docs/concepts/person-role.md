@@ -16,7 +16,6 @@ It is also common that an individual performs many roles in an organization.
 
 !!! education "Further information"
 
-    * [Examples of roles](/practices/roles/overview)
     * [Using roles in an organization](/features/people-roles-organizations/overview)
     * [Using roles in a governance program](/guides/planning/governance-program/overview)
 

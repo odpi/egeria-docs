@@ -12,7 +12,7 @@ effort without actually becoming compliant.
 
 The aim of the data privacy pack is to provide support to a person
 responsible for implementing data privacy in an organization.
-We refer to this role as the [Privacy Officer](/practices/roles/overview/#privacy-officer-role).
+We refer to this role as the [Privacy Officer](/practices/perspectives/overview/#privacy-officer-role).
 
 The pack will eventually support the following phases in the Privacy Officer's work:
 

@@ -8,5 +8,6 @@ hide:
 
 # Valid Value Definition
 
+--8<-- "snippets/work-in-progress.md"
 
 --8<-- "snippets/abbr.md"

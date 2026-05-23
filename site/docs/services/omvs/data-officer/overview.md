@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -11,6 +6,8 @@ hide:
 # Data Officer API
 
 The Data Officer API is a REST API that supports a Data Officer as they lead the data governance program.  This builds on the capabilities of the [Governance Officer API](/services/omvs/governance-officer/overview).
+
+--8<-- "snippets/work-in-progress.md"
 
 ---8<-- "snippets/abbr.md"
 

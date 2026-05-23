@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -10,24 +5,25 @@ hide:
 
 # Template Manager API
 
-The Template Manager API is a REST API designed to support user interfaces (UIs) that support the management of [templates](/features/templated-cataloguing/overview) that are used when creating new metadata.
+The Template Manager API enables the caller to retrieve and refine the templates for use during cataloguing.
+It supports the management of template definitions and their application to other metadata elements.
 
-## The Template classification
+## Key Features
 
-## Specification properties
+Key features of the service include:
 
-[Specification properties](/concepts/specification) are attached to templates to guide people when using a template.  They define which values need to be supplied in order to use the template successfully.
+* **Template Management**: Classifying metadata elements as templates or template substitutes, which allows them to be used as blueprints for creating new elements.
+* **Templated Cataloguing**: Linking elements to the templates they were sourced from, maintaining the connection between the template and its instances.
+* **Catalog Template Management**: Associating templates with broader contexts, such as projects, to make them easily discoverable for specific cataloguing tasks.
 
-There are two types of specification properties:
+These capabilities help ensure consistency and quality in the metadata catalog by promoting the reuse of well-defined templates.
 
-* *replacementAttribute* - Name of attribute that should be provided when using the attached template.  Replacement attributes map to the root entity of the template, or, the first occurrence of the attribute in attached relationships, classifications or entities.
-* *placeholderProperty* - Placeholder names are located through the attribute values found in a template.  They are identified with double braces, for example {{variableName}}.  The value supplied is substituted for the placeholder variable.
+## Further information
 
-They can be attached to a template, and maintained through the [Valid Metadata API](/services/omvs/valid-metadata/overview).
+* [Templated Cataloguing](/features/templated-cataloguing/overview/)
 
-## Linking templates to technology types
-
-The [Automated Curation API](/services/omvs/automated-curation/overview) supports the retrieval of the templates and connectors that support a particular type of technology.  It uses the valid metadata values for [] 
+----
+Sample REST API requests can be found in [Egeria-api-template-manager.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/template-manager/Egeria-api-template-manager.http).
 
 ---8<-- "snippets/abbr.md"
 

@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -10,7 +5,22 @@ hide:
 
 # Product Manager API
 
-The Product Manager API is a REST API that enables the caller to manage the definition of digital products and monitor their use and feedback.
+The Product Manager API provides a REST API to support user interfaces (UIs)
+relating to the definition and maintenance of digital products and digital product families.
+
+## Key Features
+
+The Product Manager API supports the following key features:
+
+* **Digital Product Dependency Management**: Link and unlink dependent digital products to represent product hierarchies and usage.
+* **Product Manager Assignment**: Assign and detach product managers to digital products to define responsibility and ownership.
+
+## Further information
+
+* [Product Manager API Overview](https://egeria-project.org/services/omvs/product-manager/overview/)
+* [Digital Product Concept](https://egeria-project.org/concepts/digital-product/)
+
+Sample requests for the REST API can be found in `Egeria-api-product-manager.http`.
 
 ---8<-- "snippets/abbr.md"
 

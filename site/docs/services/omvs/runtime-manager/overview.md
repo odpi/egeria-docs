@@ -1,7 +1,3 @@
----
-hide:
-- toc
----
 
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
@@ -9,6 +5,42 @@ hide:
 --8<-- "snippets/content-status/stable.md"
 
 # Runtime Manager API
+
+he Runtime Manager API enables the caller to retrieve configuration and status from platforms and servers.
+It is also used to manage the lifecycle of servers, their registration in cohorts and the loading
+of open metadata archives.
+
+## Key Features
+
+Key features of the API include:
+
+* **Platform Management**: Retrieving configuration and status (reports) from OMAG Server Platforms.
+* **Server Management**: Retrieving configuration and status (reports) from OMAG Servers.
+* **Server Lifecycle Management**: Activating and shutting down OMAG Servers using stored configuration.
+* **Cohort Management**: Managing open metadata repository cohorts and their members, including connecting, disconnecting, and unregistering servers.
+* **Archive Management**: Loading open metadata archives into running repositories.
+* **Engine and Integration Management**: Refreshing configuration for governance engines and integration daemons, and managing integration connectors (configuration properties, endpoints, and connections).
+* **Open Lineage Support**: Publishing open lineage events to the integration service.
+
+Sample REST API requests can be found in the
+[Egeria-api-runtime-manager.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/runtime-manager/Egeria-api-runtime-manager.http) file.
+In addition
+
+* [Egeria-load-content-packs.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/runtime-manager/Egeria-load-content-packs.http) illustrates how to load a content pack in a running system.
+* [Egeria-omag-server-reports.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/runtime-manager/Egeria-omag-server-reports.http) illustrates how to retrieve reports from a running Egeria platform.
+* [Egeria-baudot-tabular-data-sets.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/runtime-manager/Egeria-baudot-tabular-data-sets.http) illustrates how to retrieve tabular data sets supporting the Open Metadata Digital Products from a running Egeria platform.
+
+## Further Information
+
+* [OMAG Server Platform](/concepts/omag-server-platform/)
+* [OMAG Server](/concepts/omag-server/)
+* [Cohort](/concepts/cohort-member/)
+* [Open Metadata Archive](/concepts/open-metadata-archive/)
+* [Governance Engine](/concepts/governance-engine/)
+* [Integration Connector](/concepts/integration-connector/)
+
+
+## API Overview
 
 The Runtime Manager API is a REST API designed to support user interfaces (UIs) and python environments that work with the Egeria infrastructure to:
 

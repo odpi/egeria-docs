@@ -8,9 +8,11 @@ hide:
 
 --8<-- "snippets/content-status/in-development.md"
 
-# Devops Pipeline API
+# DevOps Pipeline API
 
-The Devops Pipeline API is a REST API that enables a devops engineer to maintain the metadata about the changing digital resources being deployed through devops pipelines.
+The DevOps Pipeline API is a REST API that enables a devops engineer to maintain the metadata about the changing digital resources being deployed through devops pipelines.
+
+--8<-- "snippets/work-in-progress.md"
 
 ---8<-- "snippets/abbr.md"
 

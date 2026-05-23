@@ -61,7 +61,7 @@ approved purposes.
 
 ## Interactions
 
-Ivor Padlock is responsible for security at Coco Pharmaceuticals.  This is both the physical security of the premises, equipment and people, as well as the IT system security.  He has a lot of experience on the physical security aspect of his role.  However, on the IT side he is not a deep expert and relies on help from colleagues in the IT Operations team to review and improve their procedures.  He is also responsible for the education of employees on the proper protection of information.  For this he needs help from [Faith Broker](faith-broker.md) who has taken on the role of [Privacy Officer](../../roles/overview.md).  The picture below shows the interactions between Ivor Padlock and the other people in the organization.
+Ivor Padlock is responsible for security at Coco Pharmaceuticals.  This is both the physical security of the premises, equipment and people, as well as the IT system security.  He has a lot of experience on the physical security aspect of his role.  However, on the IT side he is not a deep expert and relies on help from colleagues in the IT Operations team to review and improve their procedures.  He is also responsible for the education of employees on the proper protection of information.  For this he needs help from [Faith Broker](faith-broker.md) who has taken on the role of [Privacy Officer](../../perspectives/overview.md).  The picture below shows the interactions between Ivor Padlock and the other people in the organization.
 
 
 

@@ -10,6 +10,6 @@
 *Dojo content will go here*
 
 !!! education "Further information"
-    - [Metadata discovery and stewardship](/features/discovery-and-stewardship/overview)
+    - [Metadata discovery and stewardship](/features/metadata-discovery/overview)
 
 

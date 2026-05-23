@@ -34,6 +34,6 @@ The engine host services shown at the top of the diagram are responsible for:
 
     Instructions for [configuring an Engine Host OMAG Server](/guides/admin/server/configuring-an-engine-host) are found in the [Administration Guide](/guides/admin).
 
-    Instructions for defining Governance Engines and Governance Services are located under the [Discovery and Stewardship](/features/discovery-and-stewardship) feature.
+    Instructions for defining Governance Engines and Governance Services are located under the [Discovery and Stewardship](/features/metadata-discovery) feature.
 
 --8<-- "snippets/abbr.md"

@@ -12,6 +12,8 @@ hide:
 
 The Privacy Officer API is a REST API that supports a Privacy Officer as they lead the privacy governance program.  This builds on the capabilities of the [Governance Officer API](/services/omvs/governance-officer/overview).
 
+--8<-- "snippets/work-in-progress.md"
+
 ---8<-- "snippets/abbr.md"
 
 

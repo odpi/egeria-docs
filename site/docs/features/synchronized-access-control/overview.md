@@ -69,7 +69,7 @@ Figure 4 shows an Apache Ranger rule that works with a security property `expire
 
 ### Augment
 
-Using [templates](/features/templated-cataloguing/overview), [metadata discovery](/features/discovery-and-stewardship/overview) or [governance action services](/guides/developer/governance-action-services/overview), governance metadata is added to the assets that provide the business and jurisdictional context to the assets.
+Using [templates](/features/templated-cataloguing/overview), [metadata discovery](/features/metadata-discovery/overview) or [governance action services](/guides/developer/governance-action-services/overview), governance metadata is added to the assets that provide the business and jurisdictional context to the assets.
 
 ### Consolidate
 

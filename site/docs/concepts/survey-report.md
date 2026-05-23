@@ -22,6 +22,6 @@ The survey report is created in the open metadata repository by the [Survey Acti
 
 
 !!! education "Further information"
-    [Metadata Discovery and Stewardship](/features/discovery-and-stewardship/overview)
+    [Metadata Discovery and Stewardship](/features/metadata-discovery/overview)
 
 --8<-- "snippets/abbr.md"

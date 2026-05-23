@@ -3,7 +3,7 @@
 
 # Data Privacy
 
-This page describes best practices and related content to assist an organization in creating a data privacy program and implementing it across its operations.  The contents are written for the organization's **[privacy officer](/practices/roles/#privacy-officer-role)**.  This is the person responsible for defining the privacy policies and ensuring they are implemented and followed.
+This page describes best practices and related content to assist an organization in creating a data privacy program and implementing it across its operations.  The contents are written for the organization's **[privacy officer](/practices/perspectives/#privacy-officer-role)**.  This is the person responsible for defining the privacy policies and ensuring they are implemented and followed.
 
 ## Why is a data privacy program important?
 
@@ -25,7 +25,7 @@ At a high level, it entails:
 
 * Documenting where personal data is stored and used.
 
-* Validating that all processing of personal data is with consent of the individual concerned (called the [data subject](/practices/roles/#data-subject-role)).
+* Validating that all processing of personal data is with consent of the individual concerned (called the [data subject](/practices/perspectives/#data-subject-role)).
 
 * Creating, implementing and enforcing governance controls that ensure any changes to the processing of personal data are recorded and validated according to the privacy policies.
 

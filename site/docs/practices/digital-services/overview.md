@@ -17,7 +17,7 @@ As part of its operation, a digital service will exchange data with its callers.
 
 Organizations today increasingly rely on digital services to transact their business with their customers, employees and business partners. The result is that data is being generated and exchanged in a complex network of digital services that belong to different organizations.
 
-Privacy regulations such as the EU's General Data Protection Regulation require an organization to guarantee that they are only processing personal data with the consent of the **[data subject](/practices/roles/data-subject-role)**. This means an organization needs to understand and manage the personal data consumed by their digital services.
+Privacy regulations such as the EU's General Data Protection Regulation require an organization to guarantee that they are only processing personal data with the consent of the **[data subject](/practices/perspectives/data-subject-role)**. This means an organization needs to understand and manage the personal data consumed by their digital services.
 
 ## Digital Service Lifecycle
 

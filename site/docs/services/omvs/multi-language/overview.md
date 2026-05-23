@@ -12,6 +12,8 @@ hide:
 
 The Multi Language API is a REST API that enables the caller to set up translations for key metadata attributes in one or more languages..
 
+--8<-- "snippets/work-in-progress.md"
+
 ---8<-- "snippets/abbr.md"
 
 

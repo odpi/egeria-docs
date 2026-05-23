@@ -7,6 +7,20 @@
 
 The Collection Manager API is a REST API designed to back user interfaces (UIs) that support the maintenance and browsing of hierarchies of [collections](/concepts/collection) and their members.
 
+### Key Features
+
+* **Collection Management**: Support for creating, retrieving, updating, and deleting collections of metadata elements.
+* **Collection Hierarchies**: Building and navigating hierarchies of nested collections to organize metadata.
+* **Membership Management**: Adding and removing elements (assets, schema elements, etc.) from collections, with support for specific membership properties.
+* **Specialized Collections**:
+    * **Digital Products**: Managing collections representing digital products and their deployment status.
+    * **Agreements**: Linking actors and items to agreements, including support for external contract references.
+    * **Skill Sets**: Associating required skill sets with actors and other elements.
+* **Collection Classification**: Applying classifications like *Editing*, *Scoping*, or *Staging* to collections to indicate their purpose and lifecycle state.
+* **Data Descriptions**: Linking data descriptions to collections to provide context on the data being managed.
+
+## API Operations
+
 Collections are used to organize elements.  Elements (including other collections) are linked to a collection to show that they are a member of the collection.  An element can be a member of none, one or multiple collections.
 
 There are different types of collections that are identified by their classifications and *collectionType* property.  These are some examples:
@@ -30,7 +44,7 @@ The Collection Manager API supports:
 When working with collections, there are 4 concepts that you need to keep in mind:
 
 * Which elements, if any, is the collection linking to.  These elements are called the parent elements.
-* Is the collection its own [anchor](/featires/anchor-management/overview) or is it anchored to another element.
+* Is the collection its own [anchor](/features/anchor-management/overview) or is it anchored to another element.
 * What values should be assigned to it attributes.
 * Which classifications should be added to the collection to indicate its purpose and usage.
 

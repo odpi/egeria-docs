@@ -308,7 +308,7 @@ Egeria offers the following approaches to cataloging assets:
 
 - [Templated cataloging](/features/templated-cataloguing/overview) - copying predefined assets.
 - [Integrated cataloging](/features/integrated-cataloging/overview) - automated extraction of metadata from third party technologies.
-- [Discovery and stewardship](/features/discovery-and-stewardship/overview) - analysis of asset contents to create metadata
+- [Discovery and stewardship](/features/metadata-discovery/overview) - analysis of asset contents to create metadata
 
 The idea is that these approaches are selected for each type of asset and blended together to balance the investment in the automation, against the time commitment of subject-matter experts, against the business value of the resulting catalog.
 

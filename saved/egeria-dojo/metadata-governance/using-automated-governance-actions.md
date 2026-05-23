@@ -15,7 +15,7 @@ The open metadata ecosystem collects, links and disseminates metadata from many 
     --8<-- "docs/patterns/metadata-governance/setting-up-the-engine-host.md"
 
 ??? advanced "Using metadata discovery (1 hour)"
-    --8<-- "docs/features/discovery-and-stewardship/overview.md"
+    --8<-- "docs/features/metadata-discovery/overview.md"
 
 ??? advanced "Incident reporting and management (30 mins)"
     --8<-- "docs/features/incident-reporting/overview.md"

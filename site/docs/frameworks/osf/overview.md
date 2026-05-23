@@ -5,7 +5,7 @@
 
 # Open Survey Framework (OSF)
   
-The *Open Survey Framework (OSF)* enables [metadata survey tools](/features/discovery-and-stewardship) to integrate with open metadata repositories by defining the interfaces for surveyor components (called [survey action services](/concepts/survey-action-service)) to:
+The *Open Survey Framework (OSF)* enables [metadata survey tools](/features/metadata-discovery/overview) to integrate with open metadata repositories by defining the interfaces for surveyor components (called [survey action services](/concepts/survey-action-service)) to:
 
 - Access survey request configuration.
 - Search for [assets](/concepts/asset) and related metadata in the metadata repository.

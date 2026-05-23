@@ -12,7 +12,6 @@ An IT profile role is a placeholder in an organization that defines a set of cap
 
 !!! education "Further information"
 
-    * [Examples of roles](/practices/roles/overview)
     * [Using roles in an organization](/features/people-roles-organizations/overview)
     * [Using roles in a governance program](/guides/planning/governance-program/overview)
 

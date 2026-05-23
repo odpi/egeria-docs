@@ -7,6 +7,8 @@
 
 The *Valid Metadata API* manages lists of valid values and definitions to support the consistent and effective use of metadata - since consistency in metadata increases trust in its content, helps to communicate clear information, and enables reliable automation.
 
+## Key Features
+
 The API supports three types of operations:
 
 * Maintain and query the lists of valid values for open metadata attributes.

@@ -16,7 +16,6 @@ The organization can choose to increase the head count limit or remove one of th
 
 !!! education "Further information"
 
-    * [Examples of roles](/practices/roles/overview)
     * [Using roles in an organization](/features/people-roles-organizations/overview)
     * [Using roles in a governance program](/guides/planning/governance-program/overview)
 

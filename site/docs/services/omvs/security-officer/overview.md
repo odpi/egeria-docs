@@ -5,8 +5,28 @@
 
 # Security Officer API
 
-The Security Officer API supports the configuration of security in the open metadata ecosystem. This includes configuring users that wish to connect to the open metadata ecosystem and controlling their visibility to open metadata.
+The Security Officer API is a REST API designed to support user interfaces (UIs) for supporting a Security Officer as they lead the security governance program.  This builds on the capabilities of the Governance Officer OMVS.
 
+## Key Features
+
+The Security officer API features include:
+
+* **User Account Management**: Setting up and maintaining user accounts within the platform's security connectors.
+* **Security Access Control**: Configuring and retrieving security access control rules that protect open metadata.
+* **Governance Zone Management**: Defining and managing the hierarchy of governance zones, which are used to control access to assets and other metadata elements.
+
+## Further information
+
+* [Governance Zone Concept](/concepts/governance-zone/)
+* [Metadata Security](/features/metadata-security/overview/)
+
+Sample REST API requests can be found in the [Egeria-api-security-officer.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/security-officer/Egeria-api-security-officer.http) file.
+Additional sample files for specific scenarios include:
+
+* [Egeria-coco-audit-users.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/security-officer/Egeria-coco-audit-users.http)
+* [Egeria-coco-manage-users.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/security-officer/Egeria-coco-manage-users.http)
+
+## API Overview
 
 ---8<-- "snippets/services/api-forms.md"
 

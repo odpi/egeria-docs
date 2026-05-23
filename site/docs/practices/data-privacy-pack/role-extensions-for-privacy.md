@@ -8,7 +8,7 @@ uses personal data.
 
 ## Privacy Officer
 
-![Icon](/privacy/roles/privacy-officer-role.png) [Base description](/privacy/roles/overview/#privacy-officer-role)
+![Icon](/privacy/perspectives/privacy-officer-role.png) [Base description](/privacy/perspectives/overview/#privacy-officer-role)
 
 The privacy officer is the key role dedicated to ensuring privacy.
 They interact with the digital service team to aid them with privacy related questions
@@ -24,7 +24,7 @@ and actions.  For example:
 
 ## Asset Owner
 
-![Icon](/privacy/roles/asset-owner-role.png) [Base description](/privacy/roles/overview/#asset-owner-role)
+![Icon](/privacy/perspectives/asset-owner-role.png) [Base description](/privacy/perspectives/overview/#asset-owner-role)
 
 The owner of the digital service (aka asset owner) is responsible for investment decision related to
 the offering.  As such they make choices on the types of data that are
@@ -50,7 +50,7 @@ legitimate interest processing.
 
 ## Architect Role
 
-![Icon](/privacy/roles/architect-role.png) [Base description](/privacy/roles/overview/#architect-role)
+![Icon](/privacy/perspectives/architect-role.png) [Base description](/privacy/perspectives/overview/#architect-role)
 
 As a leader of the development of a digital offering that
 includes personal data, the architect is responsible for:
@@ -64,7 +64,7 @@ it passes the data processing certification and security certifications.
 
 ## Data Officer Role
 
-![Icon](/privacy/roles/data-officer-role.png) [Base description](/privacy/roles/overview/#data-officer-role)
+![Icon](/privacy/perspectives/data-officer-role.png) [Base description](/privacy/perspectives/overview/#data-officer-role)
 
 
 The data officer role does not have any specific responsibility
@@ -77,7 +77,7 @@ in conflict with privacy requirements.
 
 ## Customer
 
-![Icon](/privacy/roles/customer-role.png) [Base description](/privacy/roles/overview/#customer-role)
+![Icon](/privacy/perspectives/customer-role.png) [Base description](/privacy/perspectives/overview/#customer-role)
 
 A customer is an individual, employee, or legal representative of an external organization
 that is buying services from the organization.
@@ -92,7 +92,7 @@ is compromised.
 
 ## Asset Consumer
 
-![Icon](/privacy/roles/asset-consumer-role.png) [Base description](/privacy/roles/overview/#asset-consumer-role)
+![Icon](/privacy/perspectives/asset-consumer-role.png) [Base description](/privacy/perspectives/overview/#asset-consumer-role)
 
 An end user of the digital service is an asset consumer.
 Depending on the capabilities of the digital service,

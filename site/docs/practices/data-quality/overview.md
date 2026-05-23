@@ -31,7 +31,7 @@ Detected errors are [captured as exceptions](#correction-of-data) and routed to 
 
 The management of data quality involves:
 
-* [Understanding the source data values](#understanding-data-values) - Analysing the data content of a [digital resource](/concepts/digital-resource), typically running [survey action services](/features/discovery-and-stewardship/overview), to get an assessment of the data values it contains. This may be simple fact gathering using *data profiling* or executing *quality rules* to determine how well it fits to the data specifications needed for its different purposes.
+* [Understanding the source data values](#understanding-data-values) - Analysing the data content of a [digital resource](/concepts/digital-resource), typically running [survey action services](/features/metadata-discovery/overview), to get an assessment of the data values it contains. This may be simple fact gathering using *data profiling* or executing *quality rules* to determine how well it fits to the data specifications needed for its different purposes.
 
 * [Adding context to the data](#adding-context-to-the-data) - Using the findings from the open discovery service to assign additional classifications and links that help to identify the data as fit for the different purposes.  This assignment may be by an automated process or human curation and ensures the data resource will appear in the search results of related data catalog queries.
   
@@ -78,15 +78,15 @@ In the diagram below, the *Employee Data Of Birth* glossary term is linked to a 
 
 ## Correction of data
 
-The execution of data quality rules can be embedded into [open discovery services](/features/discovery-and-stewardship/overview) and the results recorded in [*QualityScoreAnnotations*](/features/discovery-and-stewardship/overview/#calculating-quality-scores).
+The execution of data quality rules can be embedded into [open survey services](/features/metadata-discovery/overview) and the results recorded in [*QualityScoreAnnotations*](/features/metadata-discovery/overview).
 
-Any errors detected can result in a [request for action](/features/discovery-and-stewardship/overview/#requesting-stewardship-action) that notifies an appropriate steward to correct the data.
+Any errors detected can result in a [request for action](/features/metadata-discovery/overview) that notifies an appropriate steward to correct the data.
 
 Alternatively, an error may be corrected automatically using [reference data](/features/reference-data-management/overview).
 
 ## Extending data quality capability
 
-The process of [data profiling](/features/discovery-and-stewardship/overview/#data-profiling) captures list of data values found in a data source.  These values can be mined to create candidate data classes and valid value sets to use in future data quality assessments.
+The process of [data profiling](/features/metadata-discovery/overview) captures list of data values found in a data source.  These values can be mined to create candidate data classes and valid value sets to use in future data quality assessments.
 
 !!! education "Further information"
     * [Survey action services supplied by the Egeria project](/connectors/#survey-action-services)

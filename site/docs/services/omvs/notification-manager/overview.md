@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -11,6 +6,29 @@ hide:
 # Notification Manager API
 
 The Notification Manager API is a REST API designed to support the management of resource monitoring, the maintenance of the list of subscribers to that monitoring, and the notification of significant events or situations to the registered subscribers.  
+
+It supports a personalized notification service.  This includes the definition of the trigger for the
+notification, the style of notification and the recipient.
+
+## Key Features
+
+The Notification Manager API supports the following key features:
+
+* **Monitored Resources**: Link notification types to the metadata elements that should be monitored for changes.
+* **Notification Subscribers**: Define the recipients of notifications for specific notification types.
+
+## Further information
+
+* [Notification Type Concept](/concepts/notification-type/)
+
+Sample requests for the REST API can be found in [Egeria-api-notification-manager.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/notification-manager/Egeria-api-notification-manager.http).
+In addition:
+
+* [Egeria-baudot-create-subscription.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/notification-manager/Egeria-baudot-create-subscription.http) shows how to create a subscription for an Open Metadata Digital Product.
+* [Egeria-baudot-subscription-processes.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/notification-manager/Egeria-baudot-subscription-processes.http) shows the subscription processes for an Open Metadata Digital Product.
+* [Egeria-notification-types-and-actions.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/notification-manager/Egeria-notification-types-and-actions.http) shows how to retrieve informaiton about the notification types used in Egeria.
+
+## Usage Examples
 
 Examples of events that could trigger a notification include:
 

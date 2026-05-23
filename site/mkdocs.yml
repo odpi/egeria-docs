@@ -325,6 +325,7 @@ nav:
         - Integrated Cataloguing: features/integrated-cataloguing/overview.md
         - Lineage Management: features/lineage-management/overview.md
         - Metadata Archiving: features/metadata-archiving/overview.md
+        - Metadata Discovery: features/metadata-discovery/overview.md
         - Metadata Provenance: features/metadata-provenance/overview.md
         - Metadata Security: features/metadata-security/overview.md
         - People, Roles and Organizations: features/people-roles-organizations/overview.md
@@ -657,6 +658,7 @@ nav:
       - Deployed Implementation Type: concepts/deployed-implementation-type.md
       - Digital Product: concepts/digital-product.md
       - Digital Resource: concepts/digital-resource.md
+      - Digital Subscription: concepts/digital-subscription.md
       - Endpoint: concepts/endpoint.md
       - Engine Action: concepts/engine-action.md
       - Engine Host: concepts/engine-host.md
@@ -707,7 +709,6 @@ nav:
       - Metadata Access Store: concepts/metadata-access-store.md
       - Metadata Collection: concepts/metadata-collection.md
       - Metadata Collection Id: concepts/metadata-collection-id.md
-      - Metadata Discovery: features/discovery-and-stewardship/overview.md
       - Metadata Repository: concepts/metadata-repository.md
       - Note Log: concepts/note-log.md
       - Notification: concepts/notification.md
@@ -728,6 +729,7 @@ nav:
       - Parameters: parameters/overview.md
       - Personal Profile: concepts/personal-profile.md
       - Person Role: concepts/person-role.md
+      - Perspective: concepts/perspective.md
       - Placeholders: concepts/placeholder.md
       - Platform URL Root: concepts/platform-url-root.md
       - Process: concepts/process.md
@@ -766,6 +768,7 @@ nav:
       - To Do: concepts/to-do.md
       - Useful Resource: concepts/useful-resource.md
       - User Identity: concepts/user-identity.md
+      - Valid Value Definition: concepts/valid-value-definition.md
       - View Server: concepts/view-server.md
       - Virtual Connection: concepts/connection.md
       - Watchdog Action Engine: concepts/watchdog-action-engine.md
@@ -773,11 +776,10 @@ nav:
       - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md
       - Governance Maturity Model: practices/maturity-model/overview.md
-      - Governance Roles: practices/roles/overview.md
+      - Governance Perspectives: practices/perspectives/overview.md
       - Digital Services: practices/digital-services/overview.md
       - Data Quality: practices/data-quality/overview.md
       - Data Specification: practices/data-specification/overview.md
-      - Discovery and Stewardship: practices/discovery-and-stewardship/overview.md
       - Data Privacy: practices/data-privacy-pack/overview.md
       - Common Data Definitions:
           - Overview: practices/common-data-definitions/overview.md

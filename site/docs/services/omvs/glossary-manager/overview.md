@@ -3,11 +3,36 @@
 
 --8<-- "snippets/content-status/stable.md"
 
-# Glossary Manager
+# Glossary Manager API
 
-The Glossary Manager Open Metadata View Service (OMVS) is a REST API designed to support UIs that enable the maintenance of [glossary content](/practices/common-data-definitions/anatomy-of-a-glossary) using a controlled workflow process. 
+The Glossary Manager API is a REST API designed to support UIs that enable the maintenance of [glossary content](/practices/common-data-definitions/anatomy-of-a-glossary) using a controlled workflow process. 
 
-## Why use a controlled glossary workflow
+The Glossary Manager API provides a REST API to support user interfaces (UIs)
+relating to the definition and maintenance of glossaries and their terms.
+
+## Key Features
+
+The Glossary Manager API supports the following key features:
+
+* **Glossary Management**: Create and maintain glossaries. A glossary can be classified as a
+  **taxonomy** (organized into a strict hierarchy) or a **canonical vocabulary** (where each term has a unique name).
+* **Glossary Term Management**: Create, update, and delete glossary terms. Terms can be categorized and
+  classified as abstract concepts, data values, questions, activities, or context definitions.
+* **Relationship Management**: Define various relationships between glossary terms to show how they are
+  related (e.g., synonyms, related terms, etc.).
+* **Controlled Workflow**: Support for a controlled workflow process, allowing for review and approval
+  cycles for glossary content.
+
+## Further information
+
+* [Glossary Concept](/concepts/glossary/)
+* [Glossary Term Concept](/concepts/glossary-term/)
+
+Sample requests for the REST API can be found in [Egeria-api-glossary-manager.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/glossary-manager/Egeria-api-glossary-manager.http).
+
+## Controlled Glossaries
+
+### Why use a controlled glossary workflow
 
 The purpose of a controlled glossary workflow is to manage the visibility of glossary terms and any updates to them that are *in progress*.  Typically, this visibility's is restricted to the authors of the glossary terms and the approvers.  Once approved, and incorporated back into the "live" glossary, the updates are visible to all.
 
@@ -15,7 +40,7 @@ For example, consider a glossary term called "customer identifier".  The first v
 
 While the data stewards are creating [semantic assignment](/patterns/metadata-manager/overview/#asset-classifiers) links to this glossary term, the glossary term author needs to edit the glossary term properties.  These changes need to be reviewed and possibly corrected before they are visible to the data stewards.  As such they are made in a private copy of the glossary term.  When the changes are complete, the properties from the copy are added to the glossary term that the data stewards are using.  Thus version 2 is "published".  The next time the data stewards query the glossary term, they see the updated properties.
 
-## Designing your glossary workflow process
+### Designing your glossary workflow process
 
 Although the general idea is simple, there are a number of choices to make on how the workflow operates.  This includes:
 
@@ -25,7 +50,7 @@ Although the general idea is simple, there are a number of choices to make on ho
 * What type of revision history is required?  Every save of a glossary term to the repository is a new version in the repository.  However, does the team wish to have a version identifier that reflects how often it has been published, and whether it is a major or minor version. Do the team wish to add a description of the changes being made to the glossary terms (called the revision history). When are descriptions in the revision history created and by whom?
 * How much access is needed to previous versions of a glossary term or glossary category, particularly once it has been approved?
 
-## Styles of glossary workflow operation
+### Styles of glossary workflow operation
 
 The different styles of glossary workflow provide choices on who is providing content, how decisions are made on what is accepted, how the updates are grouped, both for the review process and when they are published.  
 
@@ -53,13 +78,13 @@ Where multiple glossaries are in play, each can operate a different style.  The 
 
 ----
 
-## Implementation
+### Implementation
 
 The different styles of glossary operation are complementary and may be used in combination allowing your approach to change as the glossary matures.  For example, you may begin your glossary with the harvesting style and use the open contribution style to fill in the gaps with new terms.
 
 This flexibility is possible because there is a simple mechanism that underpins Egeria's glossary workflow and this can be used in different combinations to create the affects described above.
 
-### Linked copies of glossary terms
+#### Linked copies of glossary terms
 
 Except the harvested glossary style, controlled glossary development requires multiple copies of the same term to be maintained so that a new version can be created and agreed on while the previous version is still in use.  The copy is made from an original term using the `createTermByTemplate()` call.  This creates a copy of the term, linked by the [*SourcedFrom*](/types/0/0011-Templates) relationship.
 
@@ -72,7 +97,7 @@ There is also a type of glossary called the [staging glossary](/types/3/0385-Con
 The use of either the editing or staging glossaries, and the way the copy is managed and merged into the appropriate destination depends on the style of glossary and whether you wish each published version to be retained.
 Care is made to copy the contents, rather than replace the term itself during these maneuvers, because terms have many relationships to other elements (such as data assets) and these relationships need to be preserved.
 
-#### Temporary editing glossary
+##### Temporary editing glossary
 
 The first pattern of operation is where the copies are managed in a temporary editing glossary as follows:
 
@@ -85,7 +110,7 @@ The first pattern of operation is where the copies are managed in a temporary ed
 
 If a batch of terms is being updated together, then the editing glossary can hold copies of all the terms being updated together. The editing glossary can be deleted when all desired changes have been made to the original terms.  When a glossary is deleted, all its terms and categories are deleted too.
 
-#### Rolling editing glossary
+##### Rolling editing glossary
 
 In this next pattern, the editing glossary maintains an audit trail of each version of the term.
 
@@ -97,7 +122,7 @@ In this next pattern, the editing glossary maintains an audit trail of each vers
 | ![Step 4](rolling-editing-glossary-4.svg) | Changes are made to V2 of the glossary term.                                                                                                                                   |
 | ![Step 5](rolling-editing-glossary-5.svg) | When V2 is complete, the term in the live glossary is updated to match the content in V2 and its *SourcedFrom* relationship is updated to point to V2 in the editing glossary. |
 
-#### Temporary staging glossary
+##### Temporary staging glossary
 
 The temporary staging glossary pattern of operation is where an editing glossary is used to hold the copies of terms that are proposed for including into another (destination) glossary.
 
@@ -112,7 +137,7 @@ The temporary staging glossary pattern of operation is where an editing glossary
 | ![Step 7](temporary-staging-glossary-7.svg) | V2.1 of the term is copied into the V1 term in the destination glossary and linked back to the V2 in the source glossary.                                                                         |
 | ![Step 8](temporary-staging-glossary-8.svg) | The staging glossary is deleted, which deletes its V2.1 copy of the term.                                                                                                                         |
 
-#### Rolling staging glossary
+##### Rolling staging glossary
 
 The rolling staging glossary pattern of operation is where an editing glossary is used to hold all versions of terms that are proposed for including into another (destination) glossary.
 
@@ -125,7 +150,7 @@ The rolling staging glossary pattern of operation is where an editing glossary i
 | ![Step 5](rolling-staging-glossary-5.svg) | If the team that owns the destination glossary want to make some minor changes to the term, they can do so in the staging glossary.  They label their updates as V2.1 to show there was a change.             |
 | ![Step 6](rolling-staging-glossary-6.svg) | V2.1 of the term is copied into the V1 term in the destination glossary and linked back to the V2.1 in the staging glossary.                                                                                  |
 
-### Controlled glossary terms
+#### Controlled glossary terms
 
 The patterns above show how copies of terms are linked and managed throughout the update process.  While a specific term is under review it may be helpful to identify where it is in the review process.
 
@@ -142,7 +167,7 @@ The [*ControlledGlossaryTerm*](/types/3/0385-Controlled-Glossary-Development) ex
 
 These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-metadata-values/overview).
 
-### Relationship statuses
+#### Relationship statuses
 
 Similarly, the relationship between glossary terms have a status that can also be used to show where the relationship is in the review process.
 
@@ -152,11 +177,11 @@ Similarly, the relationship between glossary terms have a status that can also b
 * OBSOLETE - The relationship should not be used anymore.
 * OTHER - The status is not one of the statuses listed above.  The description field can be used to add more details.
 
-## Revision history
+### Revision history
 
 Updates to glossary terms are automatically recorded in a revision history.  It is possible to add a description about a particular change through the *updateDescription* parameter on the update or create requests.
 
-## External workflow
+### External workflow
 
 If the approval process is complex, you may wish to control it through a workflow engine that is running outside of Egeria.  There are two basic approaches.
 

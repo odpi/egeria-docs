@@ -84,13 +84,15 @@ This is a checklist of planning tasks for the deployment of your OMAG Server Pla
 
 ## Container platform deployment
 
+Egeria's compiled and packaged software that is ready to run is available either on [Docker Hub](https://hub.docker.com/r/odpi/egeria) or [Quay.io](https://quay.io/repository/odpi/egeria).
+
 Egeria software architecture adopts well the microservice architecture principles. OMAG server can be configured to provide specific capabilities and context bound metadata services. Container platform deployment style complements this with the runtime aspects allowing you to run OMAG servers independently as isolated, stateless and immutable containers.
 
 ![Container platform](/guides/planning/runtime/container-deployment.svg)
 
 Kubernetes (or k8s) is de-facto standard platform for deploying, scaling and managing containerized applications. To support this deployment model better, Egeria offers implementation that is designed to start server in a container more efficiently complying with the principles mentioned above.
 
-> It is very important to note that wether you choose to run server on a native OMAG platform or in a stand alone container runtime, the same functional principles apply - all servers are interoperable and comply to the open metadata exchange protocols.
+> It is very important to note that whether you choose to run server on a native OMAG platform or in a standalone container runtime, the same functional principles apply - all servers are interoperable and comply to the open metadata exchange protocols.
 
 ## More detail to follow
 

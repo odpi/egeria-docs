@@ -3,7 +3,7 @@
 
 ### Getting a GitHub Id
 
-Although all of the git repositories on GitHub are public, it is necessary to
+Although all the git repositories on GitHub are public, it is necessary to
 have a GitHub id to work with the Egeria content.
 
 Creating a GitHub account can be done from the top of the [GitHub home page](https://github.com).

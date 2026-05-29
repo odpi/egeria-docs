@@ -3,7 +3,6 @@
 
 # Creating a data governance program
 
-![Icon](/practices/coco-pharmaceuticals/personas/jules-keeper.png)
 
 [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) is the Chief Data Officer (CDO) for Coco Pharmaceuticals. He is responsible for improving the management and use of their information. This includes the information governance program.
 
@@ -18,6 +17,8 @@ In this scenario we walk through the steps that Jules takes to set up a governan
 * Defining policies and rules that specify how information of each classification should be handled when working with a particular classification of technology or performing a certain classification of activity in a particular context.
 
 * Making the governance program actionable by assigning governance roles and responsibilities, providing education and commissioning new IT projects to improve the automation of the information landscape.
+
+![Jules Keeper working on Governance Program](jules-working-on-governance-program-proposal.png)
 
 
 ## Data governance policies

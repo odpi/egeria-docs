@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Defining the data strategy - "better data for everyone"
+# Defining the data strategy
 
 The fundamental question behind any data strategy is:
 
@@ -11,20 +11,25 @@ The fundamental question behind any data strategy is:
 ```
 
 The business strategy may be to move into a new geography, radically change its operations to meet competitive challenges or to develop a new product line.
+
 Whatever the direction of the business strategy, there is always an element of internal business transformation and a need for information about the new opportunity that the business strategy embraces.
+
+## Jules' journey to a new data strategy
 
 [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) was hired by Coco Pharmaceuticals to drive their data strategy.
 
+![Jules Joining Coco Pharmaceuticals](jules-joining-coco-pharmaceuticals.png)
+
 During his first few weeks at Coco Pharmaceuticals, Jules spent his time understanding the workings of the business and the impact of the new business strategy of moving towards personalised medicine.
 
-To date they have developed one new personalised treatment that is designed for patients with a specific genomic marker.
+To date they have developed one new personalised treatment designed for patients with a specific genomic marker.
 The impact on the business was as follows:
 
 * The research cycle was quicker since developing proof of a drug's efficacy was simpler.
 * Since the new drug was only designed for a subset of patients, the hospitals are not willing to order big batches of the drug.   They are looking for a more on-demand ordering model.
 * The manufacturing team realized that they will need to operate a hybrid model where all existing drugs are manufactured according to the existing batch processes, and the new drugs need more agile planning, manufacturing and delivery processes.  This has a knock on effect to their suppliers and finance.
 
-As Jules dug deeper he noticed that the exchange of data between different parts of Coco Pharmaceuticals was pretty minimal, focused on the regularly scheduled processing of orders, manufacturing and deliveries.  Going forward, Jules could see that key people in Coco Pharmaceuticals are going to need accurate real-time data that helps them manage a dynamic and constantly changing business.
+As Jules dug deeper, he noticed that the exchange of data between different parts of Coco Pharmaceuticals was pretty minimal, focused on the regularly scheduled processing of orders, manufacturing and deliveries.  Going forward, Jules could see that key people in Coco Pharmaceuticals are going to need accurate real-time data that helps them manage a dynamic and constantly changing business.
 
 In particular:
 
@@ -38,6 +43,10 @@ In particular:
 The purpose of the data strategy is to identify and plan how data can transform business to meet its strategic goals.
 
 In Coco Pharmaceutical's case they need to reduce cycle times across business.  Data needs to be exchanged between different parts of the business as triggers for the different life cycles.   New types of data needs to be collected, managed and used - all of this this implies an investment in new systems.
+
+## The data strategy framework
+
+![Jules writing data strategy](jules-writing-data-strategy.png)
 
 Jules realizes there is a lot to do!  He creates a simple framework that organizes what needs to be done into understandable chunks that can be delivered and measured incrementally.  Figure 1 shows his first attempt.
 
@@ -55,13 +64,24 @@ business partners, it needs shared agreements on what this data means, how it is
 * **Data enabled employees** - the managers of each part of the business, and the board, needs access to up-to-date information about how their business is operating.  They need to be able to use data to continuously evolve and expand the rand of treatments on offer.
 * **Multi-faceted governance model** - finally, their governance model can not just cover data - their transformation needs and integrated governance program that covers data, infrastructure, privacy, security and corporate operations.  Jules needs to talk to the board about a comprehensive approach.  He envisages a team of governance leaders, each responsible for their own governance domain, but working together in a coordinated response.
 
-Jules shares this framework with the board and his peers.  They are cautiously supportive but want to see more detail before committing to it.  The company has prided itself in its informality, collaboration and trust and this seems to be moving away from this model.  The board understands that things need to change but they created Coco Pharmaceuticals as a startup and is it very dear to them.  They have no experience of how to scale it up to meet the new business needs.  The effort looks expensive and is likely to divert investment from pure research which is also something that they are concerned about.
+## The first data strategy review
+
+Jules shares this framework with the board and his peers.  They are cautiously supportive but want to see more detail before committing to it.  
+
+The company has prided itself in its informality, collaboration and trust and this seems to be moving away from this model.  The board understands that things need to change but they created Coco Pharmaceuticals as a startup and is it very dear to them.  They have no experience of how to scale it up to meet the new business needs.  The effort looks expensive and is likely to divert investment from pure research which is also something that they are concerned about.
+
+![Jules sharing data strategy with board](jules-presents-the-data-strategy-to-the-board.png)
 
 Jules is not discouraged by the feedback - in fact, he is pleased that his colleagues have openly expressed their concerns so he can work with them to ensure the right compromises between evolution and tradition are maintained.
 
-He begins to work on the next level of detail:
+## Next steps
 
-* [Planning for Subject Area Materials](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
+He begins to work on the next level of detail with [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview).
+
+
+They divide the work into the following areas:
+
+* [Planning for creating common definitions materials](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
 * [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
 * [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview)
 * [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview)
@@ -69,6 +89,9 @@ He begins to work on the next level of detail:
 * [Defining how employees can be data-enabled](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
 * [Defining why a multi-faceted governance model is needed](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview)
 
+## Further information
+
+* You can load Jules' data strategy framework into the [Coco Pharmaceuticals Data Strategy Framework](https://egeria.odpi.org/open-metadata-resources/cohorts/coco-pharmaceuticals/data-strategy-framework) OMRS Cohort.
 
 
 

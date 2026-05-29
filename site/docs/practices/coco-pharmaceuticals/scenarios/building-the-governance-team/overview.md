@@ -5,6 +5,8 @@
 
 When [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) joined Coco Pharmaceuticals as the CDO, he soon realized that the execution of their business strategy to move to personalized medicine was being held back by their operational practices. Some of this was related to their use and management of data (his responsibility to fix of course), but there were broader issues relating to security, IT infrastructure management, software development and their corporate governance.  He realizes that he can not do this alone and calls his colleagues together to discuss how they proceed.
 
+![Calling the governance leaders together](governance-leaders-meeting-in-progress.png)
+
 They agree to divide the work amongst themselves, using the traditional governance domains to divide out the responsibilities, but maintaining the governance information using open metadata (Egeria) to be able to coordinate their work across the governance domains.
 
 The result is as follows:
@@ -18,6 +20,6 @@ The result is as follows:
 
 [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) is also appointed the CDO for IT systems.  This makes her a deputy for Jules and recognizes her role in ensure data is properly managed by IT.
 
-
+![The governance leadership team](meeting-of-the-governance-leaders-2.png)
 
 --8<-- "snippets/abbr.md"

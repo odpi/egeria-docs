@@ -3,15 +3,21 @@
 
 # Egeria Workspaces
 
-[**Egeria Workspaces**](https://github.com/odpi/egeria-workspaces) offers a preconfigured, containerized egeria environment that you can quickly download and run.  Once running, Egeria workspaces has a Jupyter notebook, command line and a Markdown environment for activating Egeria's governance solutions and configuring them to work with your organization's digital resources.  There is also an MCP Server, Apache Web Server, Apache Kafka Event Bus, an Open Lineage Proxy and a PostgreSQL server to play with.
+[**Egeria Workspaces**](https://github.com/odpi/egeria-workspaces) offers a preconfigured, containerized Egeria environment that you can quickly download and run.  Once running, Egeria workspaces has an explorer web application, JupyterLab notebook environment, command line and a Markdown environment for activating Egeria's governance solutions and configuring them to work with your organization's digital resources.  There is also an MCP Server, Apache Web Server, Apache Kafka Event Bus, an Open Lineage Proxy and a PostgreSQL server to play with.
 
-There are two choices of environment provided by Egeria Workspaces: Quickstart and freshstart.
+There are two choices of environment provided by Egeria Workspaces: **Quickstart** and **Freshstart**. You can select just one, or run them both together.
 
 ![Egeria Workspaces](egeria-workspaces-environments.svg)
 
-If you are new to Egeria and want to find out what it does, you should start with the [Quickstart environment](/egeria-workspaces/quickstart).  If you are already familiar with Egeria and want to use it for your own projects, you should use with the [Freshstart environment](/egeria-workspaces/freshstart).
+If you are new to Egeria and want to find out what it does, you should start with the [Quickstart environment](/egeria-workspaces/quickstart).  If you are already familiar with Egeria and want to use it for your own projects, you should use the [Freshstart environment](/egeria-workspaces/freshstart).
 
-There are also a number of containerized environments that you may wish to connect to Egeria.  For example:
+## What is included?
+
+The diagram below outlines what to expect in a Egeria Workspaces environment.  The components in blue are part of the basic Egeria environment that are started with either Quickstart and/or Freshstart.
+
+![What is included](egeria-workspaces.svg)
+
+There are also a number of containerized environments that you may wish to connect to Egeria.  These are the components in green.  They can be started with additional commands to expand the technologies working with the open metadata ecosystem.  For example:
 
 * Apache Airflow and Marquez
 * Apache Atlas,
@@ -22,27 +28,20 @@ There are also a number of containerized environments that you may wish to conne
 * MLFlow
 * Ollama
 
-## What is included?
-
-The diagram below outlines what to expect in a Egeria Workspaces environment.
-
-![What is included](egeria-workspaces.svg)
-
 As you activate [Egeria's solutions](/egeria-solutions), the associate runtimes are connected to Egeria.
 
-The following solutions are activated automatically:
+In addition, Egeria servers are automatically configured and started.  This gives you:
 
-* [Leveraging Egeria](/egeria-solutions/leveraging-egeria/overview)
-* [Leveraging Your Files](/egeria-solutions/leveraging-files/overview)
-
-In addition, Egeria's *quick start* configuration is active.  This gives you:
-
-* **qs-view-server** providing the [external REST APIs](/services/omvs) for accessing Egeria's services.
-* **qs-metadata-store** providing the metadata repository services backed by [PostgreSQL storage](/connectors/repository/postgres/overview).
-* **qs-integration-daemon** for running the integration connectors that synchronize metadata with different tools and runtimes.
-* **qs-engine-host** for running governance services both on the open metadata and the connected tools and runtimes.
+* A [View Server](/concepts/view-server) providing the [REST APIs](/services/omvs) for accessing Egeria's services.
+* A [Metadata Access Store](/concepts/metadata-access-store) providing the metadata repository services backed by [PostgreSQL storage](/connectors/repository/postgres/overview).
+* An [Integration Daemon](/concepts/integration-daemon) for running the integration connectors that synchronize metadata with different tools and runtimes.
+* An [Engine Host](/concepts/engine-host) for running governance services both on the open metadata and the connected tools and runtimes.
 
 ![What is inside](egeria-workspaces-exposed.svg)
+
+## Quickstart vs Freshstart
+
+The table below summarizes the differences between the Quickstart and Freshstart environments.
 
 | Content       | Quickstart                                | Freshstart                                |
 |---------------|-------------------------------------------|-------------------------------------------|
@@ -61,4 +60,6 @@ In addition, Egeria's *quick start* configuration is active.  This gives you:
 |               | UnityCatalogContentPack.omarchive         |                                           |
 |               | CocoComboArchive.omarchive                |                                           |
 |               | CocoTypesArchive.omarchive                |                                           |
-|               | SimpTyesalog.omarchive                    |                                           |
+|               | SimpleCatalog.omarchive                   |                                           |
+
+--8<-- "snippets/abbr.md"

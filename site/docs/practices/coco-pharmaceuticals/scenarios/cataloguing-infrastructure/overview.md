@@ -5,25 +5,27 @@
 
 [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) has maintained a list of all the servers used at Coco Pharmaceuticals that are his responsibility.  Individual departments may have bought their own equipment (servers/laptops etc) but he is not responsible for them.
 
-![System Inventory Spreadsheet](cataloguing-infrastructure-system-inventory-spreadsheet.svg)
+![System Inventory Spreadsheet](gary-geeke-updating-systems-spreadsheet.png)
 
 He has been pleased with this solution since it allows him to:
 
 * List of all machines in his care at each location
 * Plan capital for new purchases
-* Keep track of software levels on all of the machines
-* Reorganize workload when new projects start up
+* Keep track of software levels on all the machines
+* Reorganize the workload when new projects start up
 
 However:
 
 * Maintaining the content - particularly for software levels - was tedious and sometime he got behind in cataloguing them.
-* It was difficult to share with team
-* No automation possible based off of this information.
-* It was difficult to correlate with other processes - dev ops, auditing, ...
+* It was challenging to share with team
+* No automation was possible based off of this information.
+* It was not possible to correlate with other processes - dev ops, auditing, ...
 
 He decides to add the spreadsheet contents to Egeria to make it easy to manage.  He writes a simple script to load the contents through the [DevOps Pipeline](/services/omvs/devops-pipeline/overview) API. After experimenting with a number of queries, he discovers that his data was not as consistent as he had thought and starts to clean up the data through the Egeria APIs.
 
-He builds new scripts that populate different spreadsheet structures for his team's projects and are able to load any updates they make.
+He builds new scripts that populate different spreadsheet structures for his team's projects and he is able to load any updates they make.
+
+![Gary sees benefits in an online systems inventory](gary-geeke-viewing-lineage.png)
 
 He saw the following benefits:
 

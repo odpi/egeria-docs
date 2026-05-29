@@ -31,9 +31,12 @@ There were many promising candidates put forward, but at the end of the discussi
 
 To provide overall guidance and oversight it was agreed that a partnership between [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) and [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) would provide executive sponsorship.
 
+
 ## First steps
 
 Reggie Mint and Jules Keeper call a meeting with the newly formed team of  Tom, Stew and Erin. They explain the situation as related to them from the board meeting and lay out the business imperatives that they must all achieve.  Reggie and Jules ask the team to put together an initial proposal for how to proceed - and to come back in a week to discuss. Tom, Stew and Erin nervously agree and depart to discuss over a working lunch.
+
+![The sustainability team](tom-jules-stew-erin-in-sustainability-meeting.png)
 
 ## Establishing the new domain
 

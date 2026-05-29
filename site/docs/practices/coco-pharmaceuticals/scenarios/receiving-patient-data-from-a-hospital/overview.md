@@ -3,6 +3,6 @@
 
 # Receiving patient data from a hospital
 
-
+![Peter monitoring incoming data](peter-working-on-computer.png)
 
 --8<-- "snippets/abbr.md"

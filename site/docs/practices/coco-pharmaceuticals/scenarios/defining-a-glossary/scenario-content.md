@@ -8,7 +8,9 @@ Often organizations begin with a simple exercise to identify the broad topics th
 
 In this scenario, Erin is working with [Faith Broker](/practices/coco-pharmaceuticals/personas/faith-broker) the director for human resources on the employee data subject area.
 
-## What are the initial list of key concepts?
+![Erin and Faith working together](erin-and-faith-defining-employee-subject-area.png)
+
+## What in the initial list of key concepts?
 
 Erin and Faith begin by identifying key concepts and create a short description for each one.  Each of these concepts will be recorded in a [glossary term](/practices/common-data-definitions/anatomy-of-a-glossary/#inside-a-glossary-term).   The descriptions often reveal new concepts that need explaining.
 

@@ -3,7 +3,12 @@
 
 # New digital service for clinical trials scenario
 
+![Tessa Tube is responsible for clinical trials](tessa-tube-on-ipad.png)
 
+
+## Shaping a new clinical trial
+
+![Tessa, Callie and Tanya discussing a new clinical trial](tessa-callie-tanya-discussing-new-clinical-trial.png)
 
 
 --8<-- "snippets/abbr.md"

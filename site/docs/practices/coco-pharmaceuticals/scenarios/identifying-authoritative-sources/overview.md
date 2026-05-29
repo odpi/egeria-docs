@@ -7,6 +7,8 @@ An **authoritative source** can be thought of as the "best" source of a particul
 
 [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) asks [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) to work with [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) to build a list of authoritative sources for the business.
 
+![Erin meets with Gary Geeke](erin-and-gary-discuss-authorative-sources.png)
+
 Erin and Gary have two resources to work with:
 
 * Gary has a catalog of all of Coco Pharmaceutical's systems

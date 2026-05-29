@@ -10,32 +10,49 @@ start using Egeria for their own projects without having to configure everything
 
 ---8<-- "snippets/tasks/task-getting-workspaces.md"
 
-Now, from the `egeria-workspaces` directory,
-run the start up command.
 
-=== "Single Machine Operation"
+??? tip "4. "Set up your organization name"
+    Edit the file `runtime-volumes/freshstart-platform-data/freshstart.application.properties` and scroll down to the `platform.organization.name` property to your organization name.  By default, it is set to `Egeria Freshstart`.  Make your name match the name of the group that your users belong to, or the owners of metadata managed by this deployment of freshstart.  So, for example, use your team name if it is a team deployment, or the organization name if it is for the whole organzation.
 
-    if everything is to run on a single computer use the following command to start the environment:
+    For example, when [Robbie Records](/practices/coco-pharmaceuticals/persona/robbie-records) sets up his environment, he uses the name `Patient Records Data Sharing Hub`.
 
-    ```bash
-    ./fresh-start-local
+    ```yaml
+    ###############################################
+    ### Set up the name of who is running this platform.
+    ##### If this is for personal use, add your own name.
+    ##### If this is for your team, add your team name ...
+    ################################################
+    platform.organization.name=Patient Records Data Sharing Hub
     ```
 
-=== "Multi-Machine Operation"
+??? tip "5. "Run the start-up command"
+    Now, from the `egeria-workspaces` directory,
+    run the startup command.
     
-    If you want to run Egeria as a server, that people can connect to from their own machines use the following command to start the environment:
+    === "Single Machine Operation"
+    
+        if everything is to run on a single computer use the following command to start the environment:
+    
+        ```bash
+        ./fresh-start-local
+        ```
+    
+    === "Multi-Machine Operation"
+        
+        If you want to run Egeria as a server, that people can connect to from their own machines use the following command to start the environment:
+    
+        ```bash
+        ./fresh-start-multi-host` 
+        ```
+    ____
+ 
+    The workspaces start up script will download all the software needed by Egeria and start it up. When it has completed the set up, it will display the URL of the *Egeria Portal*.  Click on the link, or copy the link and paste it into your browser.
 
-    ```bash
-    ./fresh-start-multi-host` 
-    ```
-____
+??? tip "6. Start up the Egeria Portal"
 
+    The Egeria Portal is a web application that allows you to explore the metadata that is stored in Egeria.
 
-The script will download all the software needed by Egeria and start it up.
-
-
-
-
+??? tip "7. Set up your users"
 
 --8<-- "snippets/work-in-progress.md"
 

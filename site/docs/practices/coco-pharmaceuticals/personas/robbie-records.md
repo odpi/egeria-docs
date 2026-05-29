@@ -63,6 +63,13 @@ stored, managed, and disposed of through the hospital and partner organizations.
 Robbie Records has interactions with the medical staff at Hampton Hospital that are engaged in research work.  He also has contacts with the clinical trials team in Coco Pharmaceuticals. 
 
 
-![Ivor Padlock](robbie-records-interactions.svg)
+![Robbie Records' Peers](robbie-records-interactions.svg)
+
+
+## Current Projects
+
+Robbie Records is currently working on the following projects:
+
+* [Patient Data Sharing Hub](/practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview)
 
 --8<-- "snippets/abbr.md"

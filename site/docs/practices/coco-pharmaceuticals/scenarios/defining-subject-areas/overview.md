@@ -16,6 +16,8 @@ To be sure she understands, Erin asks Jules what he means by *subject area* - Ju
 
 Erin enlists [Peter Profile](/practices/coco-pharmaceuticals/personas/peter-profile) to help.
 
+![Erin and Peter defining the subject areas](erin-and-peter-discussing-subject-areas.png)
+
 ## Considering the Enterprise Information Model
 
 Peter reminds Erin that they worked on an enterprise information model (EIM) a few years ago which may be a useful input.

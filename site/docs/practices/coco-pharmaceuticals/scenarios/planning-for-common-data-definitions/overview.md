@@ -1,13 +1,15 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Planning for Subject Areas
+# Planning for Common Definitions
 
 Part of [Jules Keeper's](/practices/coco-pharmaceuticals/personas/jules-keeper) [data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy) includes creating common data definitions. The board of Coco Pharmaceuticals asked for more details on what this means, how they would be defined and used as well as the likely cost.
 
+![Erin and Jules discussing next phase of data strategy](jules-and-erin-discuss-data-strategy.png)
+
 Working with [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview), they seek to outline the following questions:
 
-* What is are [subject areas and their materials](/practices/common-data-definitions/overview)?
+* What are [common definitions and their materials](/practices/common-data-definitions/overview)?
 * How does it help the business?
 * How are common data definitions created and managed?
 * How are common data definitions used in analytics tools, such as those used by the data science teams?

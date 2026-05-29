@@ -7,15 +7,24 @@ These are the steps to get up and running with your chosen egeria-workspaces env
 ??? tip "1. Download and install a **Docker hosting environment**"
     The Egeria community typically uses [Docker Desktop](https://www.docker.com/products/docker-desktop) which is free for individuals, and offers a selection of plans for businesses that wish to create a supported environment.  Alternatively you could use something like [Podman](https://podman.io/docs) or [Vagrant](https://www.vagrantup.com/) to run the environment.
 
-??? tip "2. Download and install `git`"
-    This is a source code management system that provides access to Egeria's code. Type the command `git -v` to see if it is installed.  If the git command is not recognized, the [Install Git](https://github.com/git-guides/install-git) guide provides instructions for various operating systems.
+??? tip "2. Download and install `git` (optional, but simplifies the process of keeping Egeria up to date)"
+    Git is a source code management system that provides access to Egeria's code. Type the command `git -v` to see if it is installed.  If the git command is not recognized, the [Install Git](https://github.com/git-guides/install-git) guide provides instructions for various operating systems.
 
 ??? tip "3. Download Egeria's workspaces' Git repository"
-    Egeria's workspaces' git repository is on [GitHub](https://github.com/odpi/egeria-workspaces).  There are two approaches, a simple download (clone) or using a fork and clone.  The latter is recommended because it is easy to refresh your environment with the latest workspaces function.  However, it does require a GitHub account. (How to [create a GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) if you do not already have one.)
+    Egeria's workspaces' git repository is on [GitHub](https://github.com/odpi/egeria-workspaces).  There are three approaches, a simple download, a git clone or using a git fork and clone.  The latter two are recommended because they make it easy to refresh your environment with the latest workspaces function.  However, they do require 'git' to be installed on your local machine (see step above).  
 
-    === "Simple download (clone)"
+    The fork and clone method is only needed if you think you may wish to contribute some of your work to the Egeria project.  You need a GitHub account to create a fork. (How to [create a GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) if you do not already have one.).
+
+    === "Simple download"
+        Download the latest version of Egeria's workspaces from GitHub by clicking on the green **Code** button and selecting **Download ZIP**.
+
+        ![Download Egeria Workspaces ZIP file](/egeria-workspaces/download-egeria-workspaces.png)
+        
+        Unzip the file and change to the `egeria-workspaces` directory.
+        
+    === "Simple git clone"
     
-        Create a new directory for Egeria's workspaces.
+        From a command window, create a new directory (folder) for Egeria's workspaces on your local machine.
     
         ```bash
         mkdir egeria-workspaces
@@ -39,9 +48,9 @@ These are the steps to get up and running with your chosen egeria-workspaces env
         cd egeria-workspaces
         ```
      
-    === "Fork and clone"
+    === "Fork and clone for project contributors"
     
-        Create a new directory for Egeria's workspaces.
+        From a command window, create a new directory (folder) for Egeria's workspaces on your local machine.
     
         ```bash
         mkdir egeria-workspaces

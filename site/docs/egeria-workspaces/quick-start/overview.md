@@ -3,7 +3,7 @@
 
 # Quickstart Environment
 
-The **quickstart** environment is a pre-configured environment around [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) that is designed to be used for
+The **quickstart** environment is a pre-configured environment based around the [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) scenarios, designed for
 learning and experimentation.  It is a good starting point for those who are new to Egeria and want to
 get a feel for the platform without having to configure everything from scratch.
 
@@ -11,28 +11,34 @@ get a feel for the platform without having to configure everything from scratch.
 
 ---8<-- "snippets/tasks/task-getting-workspaces.md"
 
-Now, from the `egeria-workspaces` directory,
-run the start up command.
+??? tip "4. "Run the start-up command"
 
-=== "Single Machine Operation"
+    Now, from the `egeria-workspaces` directory,
+    run the start up command.
+    
+    === "Single Machine Operation"
+    
+        if everything is to run on a single computer use the following command to start the environment:
+    
+        ```bash
+        ./quick-start-local
+        ```
+    
+    === "Multi-Machine Operation"
+    
+        If you want to run Egeria as a server, that people can connect to from their own machines use the following command to start the environment:
+    
+        ```bash
+        ./quick-start-multi-host` 
+        ```
+    ____
+    
+    
+    The script will download all the software needed by Egeria and start it up.  Once it has completed, you are ready to go ...
 
-    if everything is to run on a single computer use the following command to start the environment:
-
-    ```bash
-    ./quick-start-local
-    ```
-
-=== "Multi-Machine Operation"
-
-    If you want to run Egeria as a server, that people can connect to from their own machines use the following command to start the environment:
-
-    ```bash
-    ./quick-start-multi-host` 
-    ```
-____
+??? tip "5. Start exploring the open metadata ecosystem with **Egeria Explorer**"
 
 
-The script will download all the software needed by Egeria and start it up.  Once it has completed, you are ready to go ...
 
 ## Begin with the Explorer
 

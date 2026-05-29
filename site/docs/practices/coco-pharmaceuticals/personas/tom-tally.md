@@ -29,7 +29,7 @@ Thinks/Feels:
 
 Hears:
 
-* Urgent enquiries on how the fraud could have happened and why were they targeted.
+* Urgent enquiries on how the fraud could have happened and why they (Coco Pharmaceuticals) were targeted.
 
 Says/Does:
 

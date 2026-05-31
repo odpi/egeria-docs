@@ -36,10 +36,10 @@ Start the OMAG server platform with the following command:
 java -Dloader.path=lib,extra -jar omag-server-platform*.jar
 ```
 
-This starts the platform listening on port `9443`.  Add the `-Dserver.port` parameter before the `-jar` parameter if you wish the platform to listen on a different port. For example, the following command starts the platform listening on port `9444`.  Multiple instances of the same OMAG Server Platform may run in a single machine (or in the same container).  However, they each need to listen on a different port.
+This starts the platform listening on port `7443`.  Add the `-Dserver.port` parameter before the `-jar` parameter if you wish the platform to listen on a different port. For example, the following command starts the platform listening on port `7444`.  Multiple instances of the same OMAG Server Platform may run in a single machine (or in the same container).  However, they each need to listen on a different port.
 
 ```bash
-java -Dloader.path=lib,extra -Dserver.port=9444 -jar omag-server-platform*.jar
+java -Dloader.path=lib,extra -Dserver.port=7444 -jar omag-server-platform*.jar
 ```
 
 When the OMAG Server Platform starts up, it displays the `OMAG Server Platform` banner and then details of its configuration.
@@ -56,11 +56,11 @@ When the OMAG Server Platform starts up, it displays the `OMAG Server Platform` 
 
 18:22:43.638 [main] INFO  o.o.o.p.s.OMAGServerPlatform - Starting OMAGServerPlatform using Java 17.0.9 with PID 68372 (/egeria-release-5.2/egeria/open-metadata-distribution/omag-server-platform/build/unpacked/egeria-platform-5.2-distribution.tar.gz/assembly/platform/omag-server-platform-5.2.jar started by egeriauser in /egeria-release-5.2/egeria/open-metadata-distribution/omag-server-platform/build/unpacked/egeria-platform-5.2-distribution.tar.gz/assembly/platform)
 18:22:43.639 [main] INFO  o.o.o.p.s.OMAGServerPlatform - No active profile set, falling back to 1 default profile: "default"
-18:22:45.987 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9443 (https)
+18:22:45.987 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7443 (https)
 18:22:47.639 [main] INFO  o.o.o.p.s.OMAGServerPlatform - Working directory is: /egeria-release-5.2/egeria/open-metadata-distribution/omag-server-platform/build/unpacked/egeria-platform-5.2-distribution.tar.gz/assembly/platform
 18:22:47.639 [main] WARN  o.o.o.p.s.OMAGServerPlatform - Option strict.ssl is set to false! Invalid certificates will be accepted for connection!
 18:22:47.641 [main] WARN  o.o.o.p.s.OMAGServerPlatform - Java trust store 'javax.net.ssl.trustStore' is null - this is needed by Tomcat - using 'server.ssl.trust-store'
-18:22:49.135 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9443 (https) with context path ''
+18:22:49.135 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7443 (https) with context path ''
 18:22:49.144 [main] INFO  o.o.o.p.s.OMAGServerPlatform - Started OMAGServerPlatform in 5.901 seconds (process running for 6.311)
 ```
 
@@ -68,14 +68,14 @@ When you see the `Started OMAGServerPlatform in xxxx seconds (process running fo
 
 If you get an error that the port is in use, check for any applications using the same port and make sure they are each using unique ports.
 
-Try the following command (replace 9443 accordingly if using a non-standard port):
+Try the following command (replace 7443 accordingly if using a non-standard port):
 
 ```bash
-curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/users/test/server-platform/origin
+curl --insecure -X GET https://localhost:7443/open-metadata/platform-services/users/test/server-platform/origin
 ```
 Returns
 ```text
-Egeria OMAG Server Platform (version 5.2)
+Egeria OMAG Server Platform (version 6.0)
 ```
 
 This calls the OMAG server platform using a REST API call.  The response `Egeria OMAG Server Platform (release X.x)` means the curl command communicated with a running OMAG Server Platform instance.

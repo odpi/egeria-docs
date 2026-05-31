@@ -495,8 +495,9 @@ nav:
               - Relationship Discovery: types/6/0650-Relationship-Discovery.md
               - Resource Measures: types/6/0660-Resource-Measures.md
               - Request for Action: types/6/0690-Request-for-Action.md
-          - 7. Lineage:
+          - 7. Lineage and Usage:
               - Area 7 Lineage: types/7/index.md
+              - Data Sharing: types/7/0705-Data-Sharing.md
               - Digital Products: types/7/0710-Digital-Products.md
               - Agreements: types/7/0711-Agreements.md
               - Digital Subscription: types/7/0712-Digital-Subscription.md

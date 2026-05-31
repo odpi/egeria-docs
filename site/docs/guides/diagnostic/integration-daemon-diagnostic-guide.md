@@ -63,8 +63,8 @@ It then begins its periodic refresh of the connectors.
 
 When a new connector initializes the context that provides the connector with access to open metadata.
 ```
-Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OIF-CONNECTOR-0001 The integration connector context manager is being initialized for calls to server active-metadata-store on platform https://localhost:9443
-Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OPEN-GOVERNANCE-0002 The open integration context manager is being initialized for calls to server active-metadata-store on platform https://localhost:9443
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OIF-CONNECTOR-0001 The integration connector context manager is being initialized for calls to server active-metadata-store on platform https://localhost:7443
+Sat Nov 22 18:46:12 GMT 2025 integration-daemon Startup OPEN-GOVERNANCE-0002 The open integration context manager is being initialized for calls to server active-metadata-store on platform https://localhost:7443
 ```
 
 

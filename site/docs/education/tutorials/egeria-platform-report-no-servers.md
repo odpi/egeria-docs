@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Platform report for: https://localhost:9443
+# Platform report for: https://localhost:7443
 
 ## Platform deployment
 * **Egeria version**: Egeria OMAG Server Platform (version 3.12)

@@ -31,8 +31,8 @@ This is the error returned to the requester if the user does not have an account
 This is the console logging:
 ```
 Security OPEN-METADATA-SECURITY-0022 User freddiemercury is not recognized
-16:53:51.158 [https-jsse-nio-9443-exec-4] ERROR o.o.o.userauthn.LoginController - User account not found for user: freddiemercury.
-16:53:51.160 [https-jsse-nio-9443-exec-4] ERROR o.o.o.u.AuthenticationExceptionHandler - Authentication error: User account not found for user: freddiemercury.
+16:53:51.158 [https-jsse-nio-7443-exec-4] ERROR o.o.o.userauthn.LoginController - User account not found for user: freddiemercury.
+16:53:51.160 [https-jsse-nio-7443-exec-4] ERROR o.o.o.u.AuthenticationExceptionHandler - Authentication error: User account not found for user: freddiemercury.
 org.springframework.security.authentication.AuthenticationServiceException: User account not found for user: freddiemercury.
 	at org.odpi.openmetadata.userauthn.LoginController.platformToken(LoginController.java:136)
 	at jdk.internal.reflect.GeneratedMethodAccessor544.invoke(Unknown Source)
@@ -63,8 +63,8 @@ This is the error returned to the requester if the user is using the wrong passw
 This is the console logging:
 
 ```bash
-16:55:21.807 [https-jsse-nio-9443-exec-2] ERROR o.o.o.userauthn.LoginController - User authentication failed for user: calliequartile - Bad credentials
-16:55:21.808 [https-jsse-nio-9443-exec-2] ERROR o.o.o.u.AuthenticationExceptionHandler - Authentication error: User authentication failed for user: calliequartile - Bad credentials
+16:55:21.807 [https-jsse-nio-7443-exec-2] ERROR o.o.o.userauthn.LoginController - User authentication failed for user: calliequartile - Bad credentials
+16:55:21.808 [https-jsse-nio-7443-exec-2] ERROR o.o.o.u.AuthenticationExceptionHandler - Authentication error: User authentication failed for user: calliequartile - Bad credentials
 org.springframework.security.authentication.AuthenticationServiceException: User authentication failed for user: calliequartile - Bad credentials
 	at org.odpi.openmetadata.userauthn.LoginController.platformToken(LoginController.java:90)
 	at jdk.internal.reflect.GeneratedMethodAccessor544.invoke(Unknown Source)
@@ -93,8 +93,8 @@ This is the error returned to the requester if the user's credentials have expir
 This is the console logging:
 ```bash
 Security OPEN-METADATA-SECURITY-0024 User freddiemercury has expired credentials
-16:56:52.602 [https-jsse-nio-9443-exec-11] ERROR o.o.o.userauthn.LoginController - Credentials expired for user: freddiemercury.
-16:56:52.602 [https-jsse-nio-9443-exec-11] ERROR o.o.o.u.AuthenticationExceptionHandler - Authentication error: Credentials expired for user: freddiemercury.
+16:56:52.602 [https-jsse-nio-7443-exec-11] ERROR o.o.o.userauthn.LoginController - Credentials expired for user: freddiemercury.
+16:56:52.602 [https-jsse-nio-7443-exec-11] ERROR o.o.o.u.AuthenticationExceptionHandler - Authentication error: Credentials expired for user: freddiemercury.
 org.springframework.security.authentication.AuthenticationServiceException: Credentials expired for user: freddiemercury.
 	at org.odpi.openmetadata.userauthn.LoginController.platformToken(LoginController.java:130)
 	at jdk.internal.reflect.GeneratedMethodAccessor544.invoke(Unknown Source)

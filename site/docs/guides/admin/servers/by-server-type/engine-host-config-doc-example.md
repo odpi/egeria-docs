@@ -11,7 +11,7 @@
         "versionId": "V2.0",
         "localServerId": "099d1128-b466-4426-bca2-b6087f394f72",
         "localServerName": "engine-host",
-        "localServerURL": "https://localhost:9443",
+        "localServerURL": "https://localhost:7443",
         "localServerUserId": "enginehostnpa",
         "maxPageSize": 1000,
         "repositoryServicesConfig": {
@@ -67,12 +67,12 @@
                     "engineUserId": "generalnpa"
                 }
             ],
-            "omagserverPlatformRootURL": "https://localhost:9443",
+            "omagserverPlatformRootURL": "https://localhost:7443",
             "omagserverName": "active-metadata-store"
         },
         "auditTrail": [
             "Fri Jan 26 15:13:20 GMT 2024 garygeeke updated configuration for local server's userId to enginehostnpa.",
-            "Fri Jan 26 15:13:54 GMT 2024 garygeeke updated configuration for Engine Host Services access service root url to https://localhost:9443.",
+            "Fri Jan 26 15:13:54 GMT 2024 garygeeke updated configuration for Engine Host Services access service root url to https://localhost:7443.",
             "Fri Jan 26 15:14:10 GMT 2024 garygeeke updated engine list."
         ]
     }

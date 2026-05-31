@@ -130,7 +130,7 @@ sends the local metadata collection id and a registration event like the followi
         "qualifiedName": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
         "name": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
         "description": "OMRS default repository REST API endpoint.",
-        "address": "https://localhost:9443/openmetadata/repositoryservices/"
+        "address": "https://localhost:7443/openmetadata/repositoryservices/"
       }
     }
   }

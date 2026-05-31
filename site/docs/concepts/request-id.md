@@ -60,7 +60,7 @@ This is an example of an audit log message. Notice the requestId close to the th
   },
   "actionDescription": "userMonitoring",
   "threadId": 36,
-  "threadName": "https-jsse-nio-9443-exec-3",
+  "threadName": "https-jsse-nio-7443-exec-3",
   "requestId": "fa106f19-5997-46d6-a3cf-ec0ce312af7b",
   "severityCode": 15,
   "severity": "Activity",

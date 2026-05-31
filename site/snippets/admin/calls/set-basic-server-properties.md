@@ -9,7 +9,7 @@
         ```java
         String adminUserId = "garygeeke";
         String serverName = "active-metadata-server"
-        String adminPlatformURLRoot = "https://127.0.0.1:9443";
+        String adminPlatformURLRoot = "https://127.0.0.1:7443";
 
         OMAGServerConfigurationClient configurationClient = new OMAGServerConfigurationClient(adminUserId, 
                                                                                               serverName, 
@@ -20,7 +20,7 @@
         String serverDescription = "This server supports the governance teams";
         String serverUserId = "cocomds2npa";
         String serverPassword = "secret";
-        String serverURLRoot = "https://localhost:9443"
+        String serverURLRoot = "https://localhost:7443"
         int    maxPageSize = 1000
 
         configurationClient.setBasicServerProperties(organizationName,
@@ -36,7 +36,7 @@
         ```python
         admin_user_id="garygeeke"
         server_name="active-metadata-store"
-        admin_platform_url_root="https://127.0.0.1:9443"
+        admin_platform_url_root="https://127.0.0.1:7443"
         
         config_client=CoreServerConfig(server_name,
                                        admin_platform_url_root,
@@ -44,7 +44,7 @@
         
         local_server_description="This server supports the governance teams"
         organization_name="Coco Pharmaceuticals"
-        local_server_url="https://127.0.0.1:9443"
+        local_server_url="https://127.0.0.1:7443"
         local_server_user_id="cocomds2npa"
         local_server_password="secret"
         max_page_size = 1000
@@ -66,7 +66,7 @@
         {
           "localServerDescription" : "This server supports the governance teams",
           "organizationName" : "Coco Pharmaceuticals",
-          "localServerURL" : "https://localhost:9443",
+          "localServerURL" : "https://localhost:7443",
           "localServerUserId" : "cocomds2npa",
           "localServerPassword" : "secret",
           "maxPageSize" : 600

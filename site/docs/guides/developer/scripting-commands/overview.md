@@ -45,7 +45,7 @@ All of the widgets have optional command line arguments. You can see them by set
 
 Most of the commands allow you to specify an Egeria OMAG Platform, Server (usually a view server), and user identity.  If not specified, default values will use the Egeria default configuration with:
 
-* platform = "https://localhost:9443"
+* platform = "https://localhost:7443"
 * server = "view-server"
 * user id = a user, such as **erinoverview** from the fictitious [Coco Pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/) environment.
 

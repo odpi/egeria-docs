@@ -6,7 +6,7 @@
 An [OMAG Server](/concepts/omag-server)'s configuration document can be deleted from the configuration store using the following command.
 
 ```
-DELETE https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/instance
+DELETE https://localhost:7443/open-metadata/admin-services/users/garygeeke/servers/cocoMDS1/instance
 ```
 
 

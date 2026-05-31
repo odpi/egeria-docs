@@ -26,7 +26,7 @@ $ java <command line options> -jar omag-server-platform-{release}.jar
 ```
 The directory where this command is issued from is called the platform's *working directory*.  The platform code assumes its `application.properties` file is located in this directory and the java libraries for its classpath are in the `lib` subdirectory.
 
-The working directory is displayed in one of the messages emitted by the OMAG Server Platform when it starts up.  You can also see that it is listening on port `9443`.
+The working directory is displayed in one of the messages emitted by the OMAG Server Platform when it starts up.  You can also see that it is listening on port `7443`.
 
 ```text
 %  Project Egeria - Open Metadata and Governance
@@ -40,7 +40,7 @@ The working directory is displayed in one of the messages emitted by the OMAG Se
 
 2023-06-13T11:53:54.571+01:00  INFO 55711 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Starting OMAGServerPlatform using Java 17.0.6 with PID 55711 (/egeria/deployments/platform/omag-server-platform-4.2.jar started by adminUser in /egeria/deployments)
 2023-06-13T11:53:54.573+01:00  INFO 55711 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : No active profile set, falling back to 1 default profile: "default"
-2023-06-13T11:53:58.709+01:00  INFO 55711 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (https)
+2023-06-13T11:53:58.709+01:00  INFO 55711 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7443 (https)
 2023-06-13T11:54:00.187+01:00  INFO 55711 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Working directory is: /egeria/deployments
 
 ```
@@ -375,7 +375,7 @@ springdoc.swagger-ui.tagsSorter=alpha
 springdoc.swagger-ui.operationsSorter=alpha
 springdoc.swagger-ui.docExpansion=none
 ```
-With this configuration, and assuming the platform is running on your local machine on port `9443`, the swagger UI can be launched from this URL: [https://localhost:9443/swagger-ui/index.html](https://localhost:9443/swagger-ui/index.html).
+With this configuration, and assuming the platform is running on your local machine on port `7443`, the swagger UI can be launched from this URL: [https://localhost:7443/swagger-ui/index.html](https://localhost:7443/swagger-ui/index.html).
 
 ![Swagger Web Page](swagger-web-page.png)
 

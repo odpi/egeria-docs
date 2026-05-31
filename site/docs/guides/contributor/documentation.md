@@ -42,7 +42,7 @@ As indicated above, to edit existing SVG diagrams, you should be able to simply:
 
 Swagger automatically generates a website that documents the REST APIs supported by the [OMAG Server Platform](/concepts/omag-server-platform). It is based on the [Open API Specification (V3) :material-dock-window:](http://spec.openapis.org/oas/v3.0.3){ target=api }.
 
-The website is found at `<serverURLroot>/swagger-ui.html`, where `<serverURLroot>` is the location of the OMAG Server Platform (for example, `https://localhost:9443/swagger-ui.html`).
+The website is found at `<serverURLroot>/swagger-ui.html`, where `<serverURLroot>` is the location of the OMAG Server Platform (for example, `https://localhost:7443/swagger-ui.html`).
 
 The top of the page gives a general description of the OMAG Server Platform plus a link to more documentation.
 

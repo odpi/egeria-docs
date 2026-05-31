@@ -24,7 +24,7 @@ occurs.
 
  :: Powered by Spring Boot (v2.4.5) ::
 
-2021-05-12 12:34:19.988  INFO 7118 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (https)
+2021-05-12 12:34:19.988  INFO 7118 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7443 (https)
 2021-05-12 12:34:24.505 ERROR 7118 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
@@ -33,11 +33,11 @@ APPLICATION FAILED TO START
 
 Description:
 
-Web server failed to start. Port 9443 was already in use.
+Web server failed to start. Port 7443 was already in use.
 
 Action:
 
-Identify and stop the process that's listening on port 9443 or configure this application to listen on another port.
+Identify and stop the process that's listening on port 7443 or configure this application to listen on another port.
 
 
 Process finished with exit code 1
@@ -69,7 +69,7 @@ MyBox:~/egeria/open-metadata-implementation/server-chassis/server-chassis-spring
 
  :: Powered by Spring Boot (v2.4.4) ::
 
-2021-04-28 16:00:18.467  INFO 48842 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (https)
+2021-04-28 16:00:18.467  INFO 48842 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7443 (https)
 2021-04-28 16:00:22.212 ERROR 48842 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server

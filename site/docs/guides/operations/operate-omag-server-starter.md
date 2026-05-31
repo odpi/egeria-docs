@@ -75,17 +75,17 @@ Below are reference properties that define the behaviour of the application.
 
 ### Web Server and SSL Transport
 
-| Property name           | Environment variable  | Description  | Example |
-|-------------------------|-----------------------|--------------|---------|
-|`server.port` | SERVER_PORT | Server transport port | server.port=9443 |
+| Property name           | Environment variable  | Description  | Example                                                                                                      |
+|-------------------------|-----------------------|--------------|--------------------------------------------------------------------------------------------------------------|
+|`server.port` | SERVER_PORT | Server transport port | server.port=7443                                                                                             |
 |`server.ssl.enabled`| SERVER_SSL_ENABLED | Enables SSL transport for the embedded web server (Tomcat) | server.ssl.enabled=false disables server ssl. In this case all other server.ssl properties are not required. |
-|`server.ssl.key-store`| SERVER_SSL_KEYSTORE | Java keystore file used to load server certificates | server.ssl.key-store=keystore.p12 |
-|`server.ssl.key-store-password`| SERVER_SSL_KEYSTORE_PASSWORD | Secret used by the server to access the keystore file | server.ssl.key-store-password=egeria |
-|`server.ssl.keyStoreType` | SERVER_SSL_KEYSTORETYPE | The type of keystore file used | server.ssl.keyStoreType=PKCS12 |
-|`server.ssl.keyAlias`| SERVER_SSL_KEYALIAS | The alias used for the SSL key | server.ssl.keyAlias=egeriaserverchassis |
-|`server.ssl.trust-store` | SERVER_SSL_TRUSTSTORE | Java truststore file used by the server | server.ssl.trust-store=truststore.p12 |
-|`server.ssl.trust-store-password` | SERVER_SSL_TRUSTSTOREPASSWORD | Secret used by the server to access truststore file | server.ssl.trust-store-password=egeria |
-|`strict.ssl`| STRICT_SSL | Controls mTLS for the http client, i.e. whether to validate SSL for outgoing connections. | strict.ssl=false will disable client SSL validation for external servers (considered insecure). |
+|`server.ssl.key-store`| SERVER_SSL_KEYSTORE | Java keystore file used to load server certificates | server.ssl.key-store=keystore.p12                                                                            |
+|`server.ssl.key-store-password`| SERVER_SSL_KEYSTORE_PASSWORD | Secret used by the server to access the keystore file | server.ssl.key-store-password=egeria                                                                         |
+|`server.ssl.keyStoreType` | SERVER_SSL_KEYSTORETYPE | The type of keystore file used | server.ssl.keyStoreType=PKCS12                                                                               |
+|`server.ssl.keyAlias`| SERVER_SSL_KEYALIAS | The alias used for the SSL key | server.ssl.keyAlias=egeriaserverchassis                                                                      |
+|`server.ssl.trust-store` | SERVER_SSL_TRUSTSTORE | Java truststore file used by the server | server.ssl.trust-store=truststore.p12                                                                        |
+|`server.ssl.trust-store-password` | SERVER_SSL_TRUSTSTOREPASSWORD | Secret used by the server to access truststore file | server.ssl.trust-store-password=egeria                                                                       |
+|`strict.ssl`| STRICT_SSL | Controls mTLS for the http client, i.e. whether to validate SSL for outgoing connections. | strict.ssl=false will disable client SSL validation for external servers (considered insecure).              |
 
 ### Logging
 
@@ -147,6 +147,6 @@ All other settings can be configured by setting the environment variables that c
 To run OMAG Server as a metadata repository using the sample configuration, run the following command:
 
 ```bash
-docker run --name omag-server -p 9443:9443 --env JAVA_APP_JAR="/deployments/server/omag-server-5.0.jar" --env LOADER_PATH="/deployments/server/lib" --env OMAG_SERVERCONFIGFILE="classpath:samples/metadata-repository-server.json" quay.io/odpi/egeria:5.0
+docker run --name omag-server -p 7443:7443 --env JAVA_APP_JAR="/deployments/server/omag-server-5.0.jar" --env LOADER_PATH="/deployments/server/lib" --env OMAG_SERVERCONFIGFILE="classpath:samples/metadata-repository-server.json" quay.io/odpi/egeria:5.0
 ```
 

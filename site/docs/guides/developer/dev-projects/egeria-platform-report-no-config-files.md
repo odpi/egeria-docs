@@ -8,10 +8,10 @@ The first time the platform report is run, you see an exception to say that the 
 ===============================
 OMAG Server Platform Report:    Wed Feb 09 11:36:27 GMT 2022
 ===============================
-Running against platform: https://localhost:9443
+Running against platform: https://localhost:7443
 Using userId: garygeeke
 
-Platform report for: https://localhost:9443
+Platform report for: https://localhost:7443
    Platform deployment
       Egeria version: Egeria OMAG Server Platform (version 3.8-SNAPSHOT)
       Configuration document store connector: <null>

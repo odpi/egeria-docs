@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="3">
   <diagram name="product-catalog-3" id="mJARXA5rD6-naD0-85ki">
-    <mxGraphModel dx="4126" dy="3427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3715" dy="3167" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="vQziVG4-nQfIgHgS_Oxc-0" />
         <mxCell id="vQziVG4-nQfIgHgS_Oxc-1" parent="vQziVG4-nQfIgHgS_Oxc-0" />
@@ -228,7 +228,7 @@
         <mxCell id="vQziVG4-nQfIgHgS_Oxc-75" parent="vQziVG4-nQfIgHgS_Oxc-1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#2D7600;fillColor=#60a917;fontColor=#ffffff;" value="Provisioning&lt;div&gt;GovernanceAction&lt;/div&gt;&lt;div&gt;Process&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="1293" y="-745.5" as="geometry" />
         </mxCell>
-        <mxCell id="vQziVG4-nQfIgHgS_Oxc-76" parent="vQziVG4-nQfIgHgS_Oxc-1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;" value="Reference Data Set" vertex="1">
+        <mxCell id="vQziVG4-nQfIgHgS_Oxc-76" parent="vQziVG4-nQfIgHgS_Oxc-1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;" value="Tabular Data Set" vertex="1">
           <mxGeometry height="60" width="120" x="1020" y="-634.5" as="geometry" />
         </mxCell>
         <mxCell id="vQziVG4-nQfIgHgS_Oxc-77" parent="vQziVG4-nQfIgHgS_Oxc-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="MonitorResource" vertex="1">

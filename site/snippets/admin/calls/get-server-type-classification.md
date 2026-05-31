@@ -9,7 +9,7 @@
         ```java
         String adminUserId = "garygeeke";
         String serverName = "active-metadata-server"
-        String adminPlatformURLRoot = "https://127.0.0.1:9443";
+        String adminPlatformURLRoot = "https://127.0.0.1:7443";
 
         OMAGServerConfigurationClient configurationClient = new OMAGServerConfigurationClient(adminUserId, 
                                                                                               serverName, 
@@ -24,7 +24,7 @@
         ```python
         admin_user_id="garygeeke"
         server_name="active-metadata-store"
-        admin_platform_url_root="https://127.0.0.1:9443"
+        admin_platform_url_root="https://127.0.0.1:7443"
         
         config_client=CoreServerConfig(server_name,
                                        admin_platform_url_root,

@@ -23,10 +23,10 @@ where `{{platformURLRoot}}` is typically the host name and port number for the s
 
 The response is a single string describing the implementation and version of the server platform.
 
-For example, this is the response from the Egeria implementation of the OMAG Server Platform which has an endpoint of `https://localhost:9443`.  Gary Geeke (`garygeeke`) is the administrator.
+For example, this is the response from the Egeria implementation of the OMAG Server Platform which has an endpoint of `https://localhost:7443`.  Gary Geeke (`garygeeke`) is the administrator.
 
 ```bash
-$ curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/origin
+$ curl --insecure -X GET https://localhost:7443/open-metadata/platform-services/users/garygeeke/server-platform/origin
 Egeria OMAG Server Platform (version 4.2)
 ```
 

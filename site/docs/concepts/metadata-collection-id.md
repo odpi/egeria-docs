@@ -69,7 +69,7 @@ If the server is connected to a cohort, it sends the local metadata collection i
         "qualifiedName": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
         "name": "DefaultRepositoryRESTAPI.Endpoint.cocoMDS1",
         "description": "OMRS default repository REST API endpoint.",
-        "address": "https://localhost:9443/openmetadata/repositoryservices/"
+        "address": "https://localhost:7443/openmetadata/repositoryservices/"
       }
     }
   }

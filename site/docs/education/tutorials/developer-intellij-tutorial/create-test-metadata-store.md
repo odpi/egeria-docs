@@ -6,7 +6,7 @@
 ==================================
 OMAG Server Configuration Utility:    Wed Sep 13 12:48:44 BST 2023
 ==================================
-Running against platform: https://localhost:9443 - Egeria OMAG Server Platform (version 5.0)
+Running against platform: https://localhost:7443 - Egeria OMAG Server Platform (version 5.0)
 Using userId: garygeeke
 
 Enter a command along with the server name and any optional parameters. Press enter to execute request.

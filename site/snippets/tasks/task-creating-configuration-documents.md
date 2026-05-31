@@ -27,14 +27,14 @@ GET {platformURLRoot}/open-metadata/admin-services/users/{adminUserId}/servers/{
 ```
 
 where:
-* `{platformURLRoot}` is the host name and port number of the OMAG Server Platform (eg https://localhost:9443).
+* `{platformURLRoot}` is the host name and port number of the OMAG Server Platform (eg https://localhost:7443).
 * `{adminUserId}` is the user id of the administrator making the calls.
 * `{serverName}` is the name of the OMAG server that is being configured.
 
 Try the following command (this is request **2.** in Postman): 
 
 ```
-GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/configuration
+GET https://localhost:7443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/configuration
 ```
 
 The response is in JSON format and contains the following information:
@@ -49,7 +49,7 @@ The response is in JSON format and contains the following information:
     "localServerId": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff",
     "localServerName": "myMetadataServer",
     "localServerType": "Open Metadata and Governance Server",
-    "localServerURL": "https://localhost:9443",
+    "localServerURL": "https://localhost:7443",
     "localServerUserId": "OMAGServer",
     "maxPageSize": 1000
   }
@@ -65,7 +65,7 @@ The **localServerType**, **localServerURL**, **localServerUserId** and **maxPage
 For example, try the following command (this is request **3.** in Postman):
 
 ```
-POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/server-type?typeName="Metadata Access Store"
+POST https://localhost:7443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/server-type?typeName="Metadata Access Store"
 ```
 
 Then query the configuration again (this is request **2.** in Postman):
@@ -80,7 +80,7 @@ Then query the configuration again (this is request **2.** in Postman):
     "localServerId": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff",
     "localServerName": "myMetadataServer",
     "localServerType": "Metadata Access Store",
-    "localServerURL": "https://localhost:9443",
+    "localServerURL": "https://localhost:7443",
     "localServerUserId": "OMAGServer",
     "maxPageSize": 1000,
     "auditTrail": [
@@ -95,7 +95,7 @@ Notice that the localServerType has changed and an audit trail has also appeared
 The next command configures in type of metadata repository (this is request **4.** in Postman).  In this example, we are using a simple in-memory repository which is useful for testing.
 
 ```
-POST https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/local-repository/mode/in-memory-repository
+POST https://localhost:7443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/local-repository/mode/in-memory-repository
 ```
 
 This has added the configuration for the local repository using default values. If you query the configuration again (this is request **2.** in Postman) you see a lot has been added.  This includes the definition for the repository as well as a default audit logging destination which ensures that the server writes it audit log messages to the console when it starts up.
@@ -110,7 +110,7 @@ This has added the configuration for the local repository using default values. 
     "localServerId": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff",
     "localServerName": "myMetadataServer",
     "localServerType": "Metadata Access Store",
-    "localServerURL": "https://localhost:9443",
+    "localServerURL": "https://localhost:7443",
     "localServerUserId": "OMAGServer",
     "maxPageSize": 1000,
     "repositoryServicesConfig": {
@@ -224,7 +224,7 @@ This has added the configuration for the local repository using default values. 
           "endpoint": {
             "class": "Endpoint",
             "headerVersion": 0,
-            "address": "https://localhost:9443/servers/myMetadataServer"
+            "address": "https://localhost:7443/servers/myMetadataServer"
           }
         },
         "eventsToSaveRule": "ALL",
@@ -244,7 +244,7 @@ The next command to configure the server is to enable the [Open Metadata Access 
 It is possible to activate each OMAS individually, but for the sake of this exercise we are going to activate them all using this command (request **5.** in Postman).
 
 ```
-GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/access-services/no-topics
+GET https://localhost:7443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/access-services/no-topics
 ```
 
 The OMASs provide both REST APIs and notifications.  The `no-topics` part of the command turns off the notifications, so we don't need to set up Apache Kafka for this exercise.
@@ -252,7 +252,7 @@ The OMASs provide both REST APIs and notifications.  The `no-topics` part of the
 The final command requests that an [Open Metadata Archive](/concepts/open-metadata-archive) is loaded to provide some sample metadata.  The name of the open metadata archive file (`content-packs/SimpleCatalog.json`) is sent in the request body.
 
 ```
-GET https://localhost:9443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/open-metadata-archives/file
+GET https://localhost:7443/open-metadata/admin-services/users/garygeeke/servers/myMetadataServer/open-metadata-archives/file
 ```
 
 When the configuration is next queried (this is request **2.** in Postman), the complete configuration document is shown.
@@ -267,7 +267,7 @@ When the configuration is next queried (this is request **2.** in Postman), the 
     "localServerId": "b49ab686-7b3b-4429-97fd-8d964ef3a4ff",
     "localServerName": "myMetadataServer",
     "localServerType": "Metadata Access Store",
-    "localServerURL": "https://localhost:9443",
+    "localServerURL": "https://localhost:7443",
     "localServerUserId": "OMAGServer",
     "maxPageSize": 1000,
     "accessServicesConfig": [
@@ -645,7 +645,7 @@ When the configuration is next queried (this is request **2.** in Postman), the 
           "endpoint": {
             "class": "Endpoint",
             "headerVersion": 0,
-            "address": "https://localhost:9443/servers/myMetadataServer"
+            "address": "https://localhost:7443/servers/myMetadataServer"
           }
         },
         "eventsToSaveRule": "ALL",

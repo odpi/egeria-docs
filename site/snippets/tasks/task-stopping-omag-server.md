@@ -6,7 +6,7 @@
 Once you have finished calling the open metadata and governance APIs you can stop your server in the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is command **8.** in Postman).
 
 ```
-POST https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance
+POST https://localhost:7443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance
 ```
 
 The window where your OMAG server platform is running will show the shutdown messages
@@ -51,7 +51,7 @@ Sun Jun 11 21:52:43 BST 2023 myMetadataServer Shutdown OMRS-AUDIT-0016 The liste
 Even though the server has stopped, the platform is still running, and it is possible to query the platform about the server.  The next command queries the status of the server (this is command **9.** in Postman).
 
 ```
-GET https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/status
+GET https://localhost:7443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/status
 ```
 
 You can see that it is not currently active and the times when it was active.

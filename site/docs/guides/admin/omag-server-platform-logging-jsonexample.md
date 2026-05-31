@@ -99,7 +99,7 @@ Here we configure a simple [Metadata Access Store](/concepts/metadata-access-sto
 # - this will facilitate error handling (vs very verbose scripting). Groovy an alternative
 # Initial a version a script to get the basics working
 
-EGERIA_ENDPOINT=https://localhost:9443
+EGERIA_ENDPOINT=https://localhost:7443
 EGERIA_USER=garygeeke
 EGERIA_SERVER=mds1
 

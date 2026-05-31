@@ -14,12 +14,12 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
     ===============================
     OMAG Server Platform Report:    Mon Sep 04 18:00:51 BST 2023
     ===============================
-    Running against platform: https://localhost:9443
+    Running against platform: https://localhost:7443
     Using userId: garygeeke
     
-    Platform report for: https://localhost:9443
+    Platform report for: https://localhost:7443
     Platform deployment
-    There was an org.odpi.openmetadata.frameworks.connectors.ffdc.PropertyServerException exception when calling the platform.  Error message is: OMAG-COMMON-503-001 A client-side exception was received from API call getPlatformOrigin to OMAG Server EgeriaPlatform at https://localhost:9443.  The error message was CLIENT-SIDE-REST-API-CONNECTOR-503-002 A client-side exception org.springframework.web.client.ResourceAccessException was received by method getPlatformOrigin from API call https://localhost:9443/open-metadata/platform-services/users/{1}/server-platform/origin to server EgeriaPlatform on platform https://localhost:9443.  The error message was I/O error on GET request for "https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/origin": PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+    There was an org.odpi.openmetadata.frameworks.connectors.ffdc.PropertyServerException exception when calling the platform.  Error message is: OMAG-COMMON-503-001 A client-side exception was received from API call getPlatformOrigin to OMAG Server EgeriaPlatform at https://localhost:7443.  The error message was CLIENT-SIDE-REST-API-CONNECTOR-503-002 A client-side exception org.springframework.web.client.ResourceAccessException was received by method getPlatformOrigin from API call https://localhost:7443/open-metadata/platform-services/users/{1}/server-platform/origin to server EgeriaPlatform on platform https://localhost:7443.  The error message was I/O error on GET request for "https://localhost:7443/open-metadata/platform-services/users/garygeeke/server-platform/origin": PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
     
     Process finished with exit code 255   
     ```
@@ -48,10 +48,10 @@ In the `omag-server-platform` assembly, there is a jar file called `egeria-platf
     ===============================
     OMAG Server Platform Report:    Mon Sep 04 19:38:03 BST 2023
     ===============================
-    Running against platform: https://localhost:9443
+    Running against platform: https://localhost:7443
     Using userId: garygeeke
     
-    Platform report for: https://localhost:9443
+    Platform report for: https://localhost:7443
     ```
     
     Then `EgeriaPlatfromReport` starts to call the Egeria APIs that are used for configuring and managing the OMAG Server Platform.

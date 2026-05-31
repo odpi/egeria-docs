@@ -36,7 +36,7 @@ The code below extracts the values from these environment variables for use in t
 import os
 
 view_server = os.environ.get("VIEW_SERVER","view-server")
-url = os.environ.get("EGERIA_VIEW_SERVER_URL","https://host.docker.internal:9443")
+url = os.environ.get("EGERIA_VIEW_SERVER_URL","https://host.docker.internal:7443")
 user_id = os.environ.get("EGERIA_USER", "peterprofile")
 user_pwd = os.environ.get("EGERIA_USER_PASSWORD")
 

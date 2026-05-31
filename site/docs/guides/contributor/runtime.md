@@ -109,10 +109,10 @@ At the top of the Java class is a declaration of the URI that is common for all 
     @RequestMapping("/open-metadata/repository-services")
     ```
 
-    Such a URI follows the root URL of the server: so if the server was using `https://localhost:9443`, the methods are called using:
+    Such a URI follows the root URL of the server: so if the server was using `https://localhost:7443`, the methods are called using:
 
     ```
-    https://localhost:9443/open-metadata/repository-services ...
+    https://localhost:7443/open-metadata/repository-services ...
     ```
 
 For each method / operation, the rest of the URL is defined and mapped through additional annotations.

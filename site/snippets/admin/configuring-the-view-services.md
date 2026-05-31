@@ -166,19 +166,19 @@ A resource endpoint describing an OMAG Server has the following properties:
     {
         "class":"ViewServiceRequestBody",
         "omagserverName":"active-metadata-store",
-        "omagserverPlatformRootURL":"https://localhost:9443",
+        "omagserverPlatformRootURL":"https://localhost:7443",
         "resourceEndpoints" : [
             {
                 "class"              : "ResourceEndpointConfig",
                 "resourceCategory"   : "Platform",
-                "platformName"       : "Platform:9443",
-                "platformRootURL"    : "http://localhost:9443",
+                "platformName"       : "Platform:7443",
+                "platformRootURL"    : "http://localhost:7443",
                 "description"        : "This is the default OMAG Server Platform."
             },
             {
                 "class"              : "ResourceEndpointConfig",
                 "resourceCategory"   : "Server",
-                "platformName"       : "Platform:9443",
+                "platformName"       : "Platform:7443",
                 "serverInstanceName" : "Active Metadata Access Store",
                 "serverName"         : "active-metadata-store",
                 "description"        : "Metadata server with XTDB repository and supporting Apache Kafka notifications."
@@ -186,7 +186,7 @@ A resource endpoint describing an OMAG Server has the following properties:
             {
                 "class"              : "ResourceEndpointConfig",
                 "resourceCategory"   : "Server",
-                "platformName"       : "Platform:9443",
+                "platformName"       : "Platform:7443",
                 "serverInstanceName" : "Simple Metadata Access Store",
                 "serverName"         : "simple-metadata-store",
                 "description"        : "Metadata server with in-memory repository and no event notifications."
@@ -194,7 +194,7 @@ A resource endpoint describing an OMAG Server has the following properties:
             {
                 "class"              : "ResourceEndpointConfig",
                 "resourceCategory"   : "Server",
-                "platformName"       : "Platform:9443",
+                "platformName"       : "Platform:7443",
                 "serverInstanceName" : "Integration Daemon",
                 "serverName"         : "integration-daemon",
                 "description"        : "Integration daemon supporting the synchronization of metadata with thrid party platfrms and tools."
@@ -202,7 +202,7 @@ A resource endpoint describing an OMAG Server has the following properties:
             {
                 "class"              : "ResourceEndpointConfig",
                 "resourceCategory"   : "Server",
-                "platformName"       : "Platform:9443",
+                "platformName"       : "Platform:7443",
                 "serverInstanceName" : "Engine Host",
                 "serverName"         : "engine-host",
                 "description"        : "Engine host server running the AssetSurvey and Asset Governance governance engines."
@@ -210,7 +210,7 @@ A resource endpoint describing an OMAG Server has the following properties:
             {
                 "class"              : "ResourceEndpointConfig",
                 "resourceCategory"   : "Server",
-                "platformName"       : "Platform:9443",
+                "platformName"       : "Platform:7443",
                 "serverInstanceName" : "View Server",
                 "serverName"         : "view-server",
                 "description"        : "View server providing REST API support to user interfaces and non-Java environments."

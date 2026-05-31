@@ -58,7 +58,7 @@ Egeria's docker image includes the Egeria install image.  When the image is star
 using docker, a new egeria docker container is created.  As it starts up, an instance of
 the Egeria runtime - that is the
 [OMAG Server Platform](/concepts/omag-server-platform) -
-is started at port https 9443.
+is started at port https 7443.
 
 This container can be incorporated into larger container orchestration environments or used standalone.
 This tutorial describes how to use it standalone.  The [Open Metadata Labs](/education/open-metadata-labs/overview)
@@ -110,13 +110,13 @@ Status: Downloaded newer image for odpi/egeria:latest
 docker.io/odpi/egeria:latest
 $
 ```
-To check it will run, try the `docker run --publish 19443:9443 odpi/egeria`.
+To check it will run, try the `docker run --publish 17443:7443 odpi/egeria`.
 This will start the image as a new docker container.  As the container initializes it starts a single copy of the
 [OMAG Server Platform](/concepts/omag-server-platform).
 The OMAG Server Platform is the Egeria runtime platform where the Egeria REST services run.
 
-The `--publish 19443:9443` parameter maps the 9443 port inside the docker that the OMAG Server Platform
-has registered with to port 19443
+The `--publish 17443:7443` parameter maps the 7443 port inside the docker that the OMAG Server Platform
+has registered with to port 17443
 
 ![Docker container structure](docker-container-overview.png)
 
@@ -126,7 +126,7 @@ You should see the server logo come up and finally a message
 Once you can see that it has started, use `Control-C` to stop it.
 
 ```bash
-$ docker run --publish 19443:9443 odpi/egeria
+$ docker run --publish 17443:7443 odpi/egeria
 Picked up JAVA_TOOL_OPTIONS: 
  ODPi Egeria
     ____   __  ___ ___    ______   _____                                 ____   _         _     ___
@@ -137,8 +137,8 @@ Picked up JAVA_TOOL_OPTIONS:
 
  :: Powered by Spring Boot (v2.3.0.RELEASE) ::
 
-10:12:28.047 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9443 (https)
-10:12:41.688 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9443 (https) with context path ''
+10:12:28.047 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7443 (https)
+10:12:41.688 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 7443 (https) with context path ''
 
 Thu Jun 04 10:12:32 BST 2020 No OMAG servers listed in startup configuration
 Thu Jun 04 10:12:41 BST 2020 OMAG server platform ready for more configuration
@@ -243,7 +243,7 @@ when you have finished because it is needed for the rest of the session.
 ![Docker Desktop running view](docker-desktop-running-options.png)
 
 The final button is "DELETE".  As described above, it deletes the container and uoi need to start again with
-`docker run --publish 19443:9443 odpi/egeria`.
+`docker run --publish 17443:7443 odpi/egeria`.
 
 If you now click on the whitespace of the container's entry, a new section opens up with 3 tabs.
 

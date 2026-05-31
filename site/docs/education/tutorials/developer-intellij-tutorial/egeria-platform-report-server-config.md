@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Platform report for: https://localhost:9443
+# Platform report for: https://localhost:7443
 
 ## Platform deployment
 * **Egeria version**: Egeria OMAG Server Platform (version 5.0)
@@ -36,7 +36,7 @@
 ## Platform servers
 ### Server: test-metadata-store
 * **Type**: *null*
-* **Description**: Metadata Access Store called test-metadata-store running on platform https://localhost:9443
+* **Description**: Metadata Access Store called test-metadata-store running on platform https://localhost:7443
 * **UserId**: cocoMDS1npa
 #### Security Connector
 * **Implementation**: org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaServerSecurityProvider
@@ -48,7 +48,7 @@
 * **Location**: *null*
 ##### Local Repository Remote Connector
 * **Implementation**: org.odpi.openmetadata.adapters.repositoryservices.rest.repositoryconnector.OMRSRESTRepositoryConnectorProvider
-* **Location**: https://localhost:9443/servers/test-metadata-store
+* **Location**: https://localhost:7443/servers/test-metadata-store
 #### Runtime Status
 #### Services
 ##### Service: Asset Manager OMAS

@@ -3,7 +3,7 @@
 
 ### What are the REST APIs supported by the Platform?
 
-The OMAG Server Platform has many REST APIs.  Enter **https://localhost:9443/swagger-ui/index.html** into your browser to see the list of available REST APIs.
+The OMAG Server Platform has many REST APIs.  Enter **https://localhost:7443/swagger-ui/index.html** into your browser to see the list of available REST APIs.
 
 Broadly speaking, the OMAG Server Platform supports:
 

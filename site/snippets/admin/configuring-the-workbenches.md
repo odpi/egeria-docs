@@ -63,7 +63,7 @@ The Open Metadata Conformance Suite also has a client called `OpenMetadataConfor
     =======================================
     Open Metadata Conformance Test Report
     =======================================
-    Contacting conformance suite server: cts (https://localhost:9443)
+    Contacting conformance suite server: cts (https://localhost:7443)
     
     Saving full profile details into 'profile-details' directory...
     Summary of profile results:
@@ -103,7 +103,7 @@ The Open Metadata Conformance Suite also has a client called `OpenMetadataConfor
     =======================================
     Open Metadata Conformance Test Report
     =======================================
-    Contacting conformance suite server: cts (https://localhost:9443)
+    Contacting conformance suite server: cts (https://localhost:7443)
     
     Saving full profile details into 'profile-details' directory...
     Summary of profile results:

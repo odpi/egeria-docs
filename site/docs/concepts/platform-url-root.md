@@ -19,7 +19,7 @@ in their URLs:
 ```
 
 The platform URL root is the content of the URL prior to `/servers/`.
-The default value an OMAG Server Platform is **"https://localhost:9443"**.
+The default value an OMAG Server Platform is **"https://localhost:7443"**.
 
 The `{serverName}` is explained [here](server-name.md).
 

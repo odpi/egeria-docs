@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Platform report for: https://localhost:9443
+# Platform report for: https://localhost:7443
 
 ## Platform deployment
 * **Egeria version**: Egeria OMAG Server Platform (version 3.12)
@@ -35,7 +35,7 @@
 ## Platform servers
 ### Server: mds1
 * **Type**: Metadata Access Store
-* **Description**: Metadata Access Store called mds1 running on platform https://localhost:9443
+* **Description**: Metadata Access Store called mds1 running on platform https://localhost:7443
 * **UserId**: cocoMDS1npa
 #### Security Connector
 * **Implementation**: org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaServerSecurityProvider
@@ -47,7 +47,7 @@
 * **Location**: *null*
 ##### Local Repository Remote Connector
 * **Implementation**: org.odpi.openmetadata.adapters.repositoryservices.rest.repositoryconnector.OMRSRESTRepositoryConnectorProvider
-* **Location**: https://localhost:9443/servers/mds1
+* **Location**: https://localhost:7443/servers/mds1
 #### Runtime Status
 * **Last Start Time**: Mon Feb 14 11:31:24 GMT 2022
 * **Server Active Status**: Running

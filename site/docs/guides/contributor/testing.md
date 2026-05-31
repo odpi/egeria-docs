@@ -29,7 +29,7 @@ The command that is most commonly available is `curl`.
 
 !!! cli "Example `curl` command"
     ```shell
-    curl --insecure -X GET https://localhost:9443/open-metadata/platform-services/users/test/server-platform/origin
+    curl --insecure -X GET https://localhost:7443/open-metadata/platform-services/users/test/server-platform/origin
     ```
 
 !!! attention "Disable SSL certificate verification"

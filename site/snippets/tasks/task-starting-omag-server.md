@@ -6,7 +6,7 @@
 Once you have created a configuration document for an OMAG server, it is started in the [OMAG Server Platform](/concepts/omag-server-platform) using the following command (this is request **7.** in Postman).
 
 ```
-POST https://localhost:9443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance
+POST https://localhost:7443/open-metadata/platform-services/users/garygeeke/server-platform/servers/myMetadataServer/instance
 ```
 
 The response from the command lists the subsystems that have been activated in the OMAG server:
@@ -33,10 +33,10 @@ The window where your OMAG Server Platform is running will show the start-up aud
 
 2023-06-11T20:48:53.256+01:00  INFO 4805 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Starting OMAGServerPlatform using Java 17.0.6 with PID 4805 (/Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz/platform/omag-server-platform-4.3-SNAPSHOT.jar started by mandy-chessell in /Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz)
 2023-06-11T20:48:53.259+01:00  INFO 4805 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : No active profile set, falling back to 1 default profile: "default"
-2023-06-11T20:48:56.607+01:00  INFO 4805 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9443 (https)
-2023-06-11T20:48:57.924+01:00  INFO 4805 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Working directory is: /Users/mandy-chessell/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz
+2023-06-11T20:48:56.607+01:00  INFO 4805 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7443 (https)
+2023-06-11T20:48:57.924+01:00  INFO 4805 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Working directory is: /Users/me/CloudStation/Drive/Code/ODPi/egeria-code/egeria/open-metadata-distribution/open-metadata-assemblies/build/unpacked/egeria-4.3-distribution.tar.gz
 2023-06-11T20:48:57.924+01:00  WARN 4805 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Java trust store 'javax.net.ssl.trustStore' is null - this is needed by Tomcat - using 'server.ssl.trust-store'
-2023-06-11T20:49:00.519+01:00  INFO 4805 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9443 (https) with context path ''
+2023-06-11T20:49:00.519+01:00  INFO 4805 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7443 (https) with context path ''
 2023-06-11T20:49:00.539+01:00  INFO 4805 --- [           main] o.o.o.s.springboot.OMAGServerPlatform    : Started OMAGServerPlatform in 7.942 seconds (process running for 8.699)
 Sun Jun 11 20:49:00 BST 2023 No OMAG servers listed in startup configuration
 Sun Jun 11 20:49:00 BST 2023 OMAG server platform ready for more configuration

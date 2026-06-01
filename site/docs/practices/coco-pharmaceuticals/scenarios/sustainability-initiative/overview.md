@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Sustainability Initiative
+# New Sustainability Initiative
 
 Climate change is upon us. Public and private institutions recognize the role that each have in reaching sustainability goals to slow climate change as well as mitigate and adapt to the various risks that climate change is driving.
 
@@ -40,9 +40,10 @@ Reggie Mint and Jules Keeper call a meeting with the newly formed team of  Tom, 
 
 ## Establishing the new domain
 
-After some discussion, they agree that sustainability is another governance domain in their governance program.  Thia will allow them to make use of many of the definitions and organizational structures already in place.
+After some lively discussion, they agree that sustainability is another governance domain in their governance program.  This will allow them to make use of many of the definitions and organizational structures already in place.
 
-The definition of this new domain is described in the [egeria-samples-api.git](https://github.com/odpi/egeria-samples-api) repository.
+???+ info "Governance Domain definition"
+    The definition of this new domain can be seen in [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Valid Values** tile, look for the **Governance Domain** valid value set.  Setting up a new domain is through the [Valid Metadata API](/services/omvs/valid-metadata/overview)
 
 
 --8<-- "snippets/abbr.md"

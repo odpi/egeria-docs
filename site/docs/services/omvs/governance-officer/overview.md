@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
@@ -25,13 +20,20 @@ governance action processes.
 * **Governance Action Process Exploration**: Visualizing and exploring the structure of governance action processes through process graphs.
 * **Implementation and Design Tracking**: Linking design elements to implementation resources and implementation elements to track how governance requirements are realized.
 
-## Further information
+??? info "Further information"
 
-* [Governance Definition Concept](/concepts/governance-definition/)
-* [Governance Action Concept](/concepts/governance-action/)
+    * [Governance Definition Concept](/concepts/governance-definition/)
+    * [Governance Action Concept](/concepts/governance-action/)
+    * [Defining a governance program](/guides/planning/governance-program/overview)
 
 ----
 Sample REST API requests can be found in [Egeria-api-governance-officer.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-server-generic-services/governance-officer/Egeria-api-governance-officer.http).
+
+## Defining a governance strategy
+
+??? info "Further information"
+    * [Defining the data strategy for Coco Pharmaceuticals](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview)
+
 
 
 

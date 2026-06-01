@@ -10,9 +10,13 @@ The fundamental question behind any data strategy is:
              
 ```
 
-The business strategy may be to move into a new geography, radically change its operations to meet competitive challenges or to develop a new product line.
+The business strategy may be to:
 
-Whatever the direction of the business strategy, there is always an element of internal business transformation and a need for information about the new opportunity that the business strategy embraces.
+* move into a new geography
+* radically change its operations to meet competitive challenges or
+* to develop a new product line.
+
+Whatever the direction of the business strategy, there is always an element of internal business transformation and a need for information about the new opportunity that the business strategy embraces.  This should be the heart of the data strategy since it follows the money and makes it easier for the data team to demonstrate relevance and value.  Often the effort helps to clean up the upstream data sources as a knock on effect.
 
 ## Jules' journey to a new data strategy
 
@@ -56,12 +60,21 @@ Jules realizes there is a lot to do!  He creates a simple framework that organiz
 He feels the names of the framework could be improved, but it essentially covers the major building blocks:
 
 * **Common data definitions** - in order for Coco Pharmaceuticals to share data across its organization and with its
-business partners, it needs shared agreements on what this data means, how it is formatted, expected quality and how it can be used.   This information is managed in a metadata catalog and should be used to configure the tools and IT systems used by the organization.
-* **Data driven systems architecture** - the IT systems need to evolve to support the new data and process requirements.  They need to be integrated so that data flows between them in real-time enabling the new business model to execute effectively.
+business partners, it needs shared agreements on:
+
+    * what data is required, 
+    * what this data means, 
+    * how it is formatted, 
+    * the expected quality, granularity, update frequency and valid values, and 
+    * how it can be used.
+  
+  This information is managed in a metadata catalog and should be used to configure the tools and IT systems used by the organization.
+
+* **Data driven systems architecture** - the IT systems need to evolve to support the new data and process requirements.  They need to be integrated so that data flows between them in real-time, enabling the new business model to execute effectively.
 * **Optimized information supply chains** - the flow of data between the systems needs to be understood, optimized and managed so that any failure is quickly detected, located and resolved without affecting the service offered to the hospitals.
-* **Authoritative sources** - provides trusted sources of key information.
+* **Authoritative sources** - provides trusted sources of key information, often used by multiple parts of the business.
 * **Continuous analytics** - analytics is core to the discovery and validation of personalized medicine.  In addition, the agile nature of the corresponding business operations needs analytics to automate and monitor the flow of orders, manufacturing, delivery of drugs and payments.
-* **Data enabled employees** - the managers of each part of the business, and the board, needs access to up-to-date information about how their business is operating.  They need to be able to use data to continuously evolve and expand the rand of treatments on offer.
+* **Data enabled employees** - the employees of each part of the business, and the board, needs access to up-to-date information about how their business is operating.  They need to be able to use data to continuously evolve and expand the rand of treatments on offer.
 * **Multi-faceted governance model** - finally, their governance model can not just cover data - their transformation needs and integrated governance program that covers data, infrastructure, privacy, security and corporate operations.  Jules needs to talk to the board about a comprehensive approach.  He envisages a team of governance leaders, each responsible for their own governance domain, but working together in a coordinated response.
 
 ## The first data strategy review
@@ -76,10 +89,7 @@ Jules is not discouraged by the feedback - in fact, he is pleased that his colle
 
 ## Next steps
 
-He begins to work on the next level of detail with [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview).
-
-
-They divide the work into the following areas:
+He begins to work on the next level of detail with [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview). They divide the work into the following areas:
 
 * [Planning for creating common definitions materials](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
 * [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
@@ -91,7 +101,12 @@ They divide the work into the following areas:
 
 ## Further information
 
-* You can load Jules' data strategy framework into the [Coco Pharmaceuticals Data Strategy Framework](https://egeria.odpi.org/open-metadata-resources/cohorts/coco-pharmaceuticals/data-strategy-framework) OMRS Cohort.
+Jules' data strategy framework is preloaded into the [Quickstart environment](/egeria-workspaces/quick-start/overview).  If you are not using quickstart, you can load it into your own metadata store using [CocoComboArchive.omarchive](/content-packs/coco-content-pack/overview).
+
+Use the [Egeria Explorer](/user-interfaces/egeria-explorer/overview) to explore the data strategy.  Select the **Governance Definitions** tile and you will see **Governance Strategy** in the left-hand column.  Open it up and the strategy is there.
+
+You can define your own data strategy through the [Governance Officer API](/services/omvs/governance-officer/overview).
+
 
 
 

@@ -5,6 +5,8 @@
 
 Egeria is an open source project from Linux Foundation (LF) AI and Data.  It is developed by a team of enthusiasts from different organizations, collectively called the *Egeria Community* that is [free to join](/guides/community).
 
+--8<-- "snippets/getting-started.md"
+
 ## What does Egeria do?
 
 Egeria manages context (linked information) about your organization's digital operations, including your data, systems, projects, locations, processes and the people around them.  In the age of AI, there is increasing recognition that this type of context improves the reliability of AI applications by helping to identify the scope of what is relevant to the requester.  
@@ -28,6 +30,7 @@ Egeria benefits individuals as well as organizations.  A person can build their 
 
 At last, the long-awaited release of [Egeria 6.0](/release-notes/latest) has been published!  This release is a major milestone in the evolution of Egeria.  It seeks to support organizations as they transition to a more data and AI-driven world.  This world requires a greater understanding of context for description, knowledge, systems and data.
 
+--8<-- "snippets/getting-started.md"
 
 
 --8<-- "snippets/abbr.md"

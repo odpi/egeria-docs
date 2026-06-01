@@ -22,10 +22,16 @@ For Coco Pharmaceuticals, Jules and Erin decide they will:
 * The glossary terms will be organized into categories and linked together.
 * The glossary terms will then be classified to define how data of that type should be governed.
 
-Figure 1 shows the over all process for using these subject area materials.
+This will provide an initial set of guidance for the business to use when defining new data sources and integrations.
+
+Figure 1 shows the overall process for using these common data definition materials.
 
 ![Figure 1](using-common-data-definitions.png)
 > Figure 1: process for using common data definitions
+
+## Next steps
+
+* []
 
 
 --8<-- "snippets/abbr.md"

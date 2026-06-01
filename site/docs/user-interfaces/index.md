@@ -9,11 +9,11 @@ Egeria adds the following specialized user interfaces that view metadata across 
 
 | User Interface Name                                           | Description                                                                                                                                                         |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Egeria Explorer](/user-interfaces/egeria-explorer/overview)  | A web-based browser for searching, viewing and navigating through your open metadata.                                                                               |  
 | [Dr.Egeria](/user-interfaces/dr-egeria/overview)              | A markdown processor that can be used to create, update and delete open metadata and to create reports.                                                             |  
 | [Hey Egeria](/user-interfaces/hey-egeria/overview)            | Command line services and visualizations for technical and data professionals working with the open metadata ecosystem or managing Egeria's infrastructure.         |  
 | [My Egeria](/user-interfaces/my-egeria/overview)              | Interactive user interface for nagivating collections of open metadata and performing multi-step tasks.                                                             |  
 | [Mermaid Diagrams](/user-interfaces/mermaid/overvew)          | Markdown based diagrams showing collections of linked metadata elements that can be rendered in a JavaScript display such as Jupyter Notebooks and drawio diagrams. |  
-| [Egeria Explorers](/user-interfaces/brain-explorers/overview) | A cloud-based graphical interface for exploring Egeria's [Open Metadata Type System](/types) and its [Content Packs](/content-packs).                               |  
 
 These user interfaces are under constant development, and it is worthwhile to keep engaged with the community members that are developing them.
 

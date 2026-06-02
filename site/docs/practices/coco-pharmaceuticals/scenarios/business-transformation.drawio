@@ -200,34 +200,40 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="x6QfSHBV9b46Ult0_bTR-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Assuring IT Systems Security" vertex="1">
-          <mxGeometry height="60" width="120" x="130" y="736" as="geometry" />
+          <mxGeometry height="60" width="120" x="290" y="700" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Auditing IT System Users" vertex="1">
-          <mxGeometry height="60" width="120" x="130" y="590" as="geometry" />
+          <mxGeometry height="60" width="120" x="290" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="x6QfSHBV9b46Ult0_bTR-37" edge="1" parent="1" source="x6QfSHBV9b46Ult0_bTR-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="x6QfSHBV9b46Ult0_bTR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x6QfSHBV9b46Ult0_bTR-38" edge="1" parent="1" source="x6QfSHBV9b46Ult0_bTR-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="x6QfSHBV9b46Ult0_bTR-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Building a Data Security Strategy" vertex="1">
           <mxGeometry height="60" width="120" x="130" y="666" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Building the Governance Team" vertex="1">
-          <mxGeometry height="60" width="120" x="490" y="350" as="geometry" />
+          <mxGeometry height="60" width="120" x="475" y="420" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Cataloguing Infrastructure" vertex="1">
           <mxGeometry height="60" width="120" x="130" y="890" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Creating a Data Governance Program" vertex="1">
-          <mxGeometry height="60" width="120" x="490" y="420" as="geometry" />
+          <mxGeometry height="60" width="120" x="475" y="490" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Defining a Glossary" vertex="1">
-          <mxGeometry height="60" width="120" x="500" y="70" as="geometry" />
+          <mxGeometry height="60" width="120" x="485" y="140" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Defining Continuous Analytics" vertex="1">
-          <mxGeometry height="60" width="120" x="310" y="280" as="geometry" />
+          <mxGeometry height="60" width="120" x="295" y="350" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Defining Data Enabled Employees" vertex="1">
-          <mxGeometry height="60" width="120" x="310" y="350" as="geometry" />
+          <mxGeometry height="60" width="120" x="295" y="420" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Defining Information Supply Chains" vertex="1">
-          <mxGeometry height="60" width="120" x="310" y="210" as="geometry" />
+          <mxGeometry height="60" width="120" x="295" y="280" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-26" edge="1" parent="1" source="x6QfSHBV9b46Ult0_bTR-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="x6QfSHBV9b46Ult0_bTR-4">
           <mxGeometry relative="1" as="geometry" />
@@ -236,13 +242,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Defining Multi-Faceted Governance" vertex="1">
-          <mxGeometry height="60" width="120" x="310" y="420" as="geometry" />
+          <mxGeometry height="60" width="120" x="295" y="490" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Defining New Systems Architecture Overview" vertex="1">
-          <mxGeometry height="60" width="120" x="310" y="140" as="geometry" />
+          <mxGeometry height="60" width="120" x="295" y="210" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Defining Subject Areas" vertex="1">
-          <mxGeometry height="60" width="120" x="500" as="geometry" />
+          <mxGeometry height="60" width="120" x="485" y="70" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-29" edge="1" parent="1" source="x6QfSHBV9b46Ult0_bTR-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="x6QfSHBV9b46Ult0_bTR-21">
           <mxGeometry relative="1" as="geometry" />
@@ -266,10 +272,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Defining the Data Strategy" vertex="1">
-          <mxGeometry height="60" width="120" x="110" as="geometry" />
+          <mxGeometry height="60" width="120" x="95" y="70" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Identifying Authoritative Sources" vertex="1">
-          <mxGeometry height="60" width="120" x="310" y="70" as="geometry" />
+          <mxGeometry height="60" width="120" x="295" y="140" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Investigating Suspicious Activity" vertex="1">
           <mxGeometry height="60" width="120" x="130" y="990" as="geometry" />
@@ -290,7 +296,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Planning for Common Data Definitions" vertex="1">
-          <mxGeometry height="60" width="120" x="310" as="geometry" />
+          <mxGeometry height="60" width="120" x="295" y="70" as="geometry" />
         </mxCell>
         <mxCell id="x6QfSHBV9b46Ult0_bTR-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Preparing for&lt;div&gt;Martyn&#39;s Law&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="130" y="806" as="geometry" />

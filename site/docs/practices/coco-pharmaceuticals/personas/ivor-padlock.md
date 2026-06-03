@@ -61,7 +61,7 @@ approved purposes.
 
 ## Interactions
 
-Ivor Padlock is responsible for security at Coco Pharmaceuticals.  This is both the physical security of the premises, equipment and people, as well as the IT system security.  He has a lot of experience on the physical security aspect of his role.  However, on the IT side he is not a deep expert and relies on help from colleagues in the IT Operations team to review and improve their procedures.  He is also responsible for the education of employees on the proper protection of information.  For this he needs help from [Faith Broker](faith-broker.md) who has taken on the role of [Privacy Officer](../../perspectives/overview.md).  The picture below shows the interactions between Ivor Padlock and the other people in the organization.
+Ivor Padlock is responsible for security at Coco Pharmaceuticals.  This is both the physical security of the premises, equipment and people, as well as the IT system security.  He has a lot of experience on the physical security aspect of his role.  However, on the IT side he is not a deep expert and relies on help from colleagues in the IT Operations team to review and improve their procedures.  He is also responsible for the education of employees on the proper protection of information.  For this he needs help from [Faith Broker](faith-broker.md) who has taken on the role of [Privacy Officer](../../role-types/overview.md).  The picture below shows the interactions between Ivor Padlock and the other people in the organization.
 
 
 
@@ -118,6 +118,7 @@ Ivor Padlock is currently working on the following projects:
 * Ensure the [auditability of IT System users](/practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview) and their access to data.
 * Improving the [IT Systems Security](/practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview), working with [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) and [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage).
 * [Investigation into suspicious activity](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview) relating to suppliers and deliveries to the various depots and warehouses.
+* [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview) to ensure all employees have the knowledge they need.
 
 
 --8<-- "snippets/abbr.md"

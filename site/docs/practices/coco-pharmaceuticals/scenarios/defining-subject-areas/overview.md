@@ -37,6 +37,8 @@ Erin guessed that personalised medicine may well increase the data sharing betwe
 
 Erin spoke to [Stew Faster](/practices/coco-pharmaceuticals/personas/stew-faster) from manufacturing. He has been looking at modernization of the manufacturing line to make it ready for their new lines of drugs. He said their future plant would use a lot more data and automation since they needed to be able to manufacture much smaller batch runs, maybe even down to a single patient dose for some drugs.
 
+![Erin and Stew discussing the data he needs for manufacturing](erin-and-stew-discussing-subject-areas.png)
+
 He said today, once a new drug is approved, they effectively get a recipe from the research team and works with their procurement team to find suppliers.  He then designed the manufacturing and quality control processes. Big batches of each drug are manufactured, a small percentage is pulled to one side for quality testing and once approved, the rest is packages and distributed to the customers (typically hospitals).
 
 Going forward he sees them needing to support a much broader list of manufactured products, with short lead times to first put a manufacturing process into place and then to create small batches on demand. The distribution process needs a big overhaul as the resulting drugs need to be sent to the right clinician in the right hospital for the right patient at the right time. This is very different from a regular delivery of a fixed order to each hospital.
@@ -44,6 +46,8 @@ Going forward he sees them needing to support a much broader list of manufacture
 ## View from Sales
 
 Erin then goes to talk to [Harry Hopeful](/practices/coco-pharmaceuticals/personas/harry-hopeful) from Sales.  Harry is an experienced sales person and knows everyone in the research hospitals where Coco Pharmaceuticals has their main business.  Erin asked how the sales process would change.  He said that today he works with the consultants and persuades them of the value of the drugs offered by Coco Pharmaceuticals.  Harry then works with the consultants to put pressure on the procurement department to approve the desired products. Procurement then orders batches of the drugs as the consultants use up the stock.  Harry gets paid for each order that comes in.
+
+![Erin and Harry discussing the data he needs for sales](erin-and-harry-hopeful-discussing-subject-areas.png)
 
 Prior to talking to Erin, Harry had expecting that much of the same selling process will continue as before. However he realises that the orders will need to come in in smaller batches, based on treatment need. Coco Pharmaceuticals needs to begin working with the procurement teams at the hospitals now to change the approval process for orders since they can not be delayed for the standard procurement process.  At the same time the procurement teams will need some role to control costs so he imagines he will be more involved with them as they jointly monitor usage over time.
 

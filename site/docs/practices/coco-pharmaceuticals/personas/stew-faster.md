@@ -53,4 +53,9 @@ Desired Outcome:
 
 ----
 
+## Current Projects
+
+* [Sustainability Initiative](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview)
+* [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
+
 --8<-- "snippets/abbr.md"

@@ -778,7 +778,7 @@ nav:
       - Practices: practices/index.md
       - Governance Basics: practices/governance-basics/overview.md
       - Governance Maturity Model: practices/maturity-model/overview.md
-      - Governance Perspectives: practices/perspectives/overview.md
+      - Governance Roles: practices/role-types/overview.md
       - Digital Services: practices/digital-services/overview.md
       - Data Quality: practices/data-quality/overview.md
       - Data Specification: practices/data-specification/overview.md
@@ -790,7 +790,7 @@ nav:
       - Coco Pharmaceuticals:
           - Coco Pharmaceuticals: practices/coco-pharmaceuticals/index.md
           - Scenarios:
-              - Introduction: practices/coco-pharmaceuticals/scenarios/overview.md
+              - Introduction: practices/coco-pharmaceuticals/scenarios/index.md
               - Assuring IT System Security: practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview.md
               - Auditing IT System Users: practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview.md
               - Authoritative Sources: practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview.md
@@ -800,6 +800,7 @@ nav:
               - Continuous Analytics: practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview.md
               - Data Enabled Employees: practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview.md
               - Data Strategy: practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview.md
+              - DevOps Cataloguing: practices/coco-pharmaceuticals/scenarios/devops-cataloguing/overview.md
               - Glossaries: practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview.md
               - Governance Program: practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview.md
               - Governance Team: practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview.md

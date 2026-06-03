@@ -63,4 +63,9 @@ that the team discovered during the trial.
 
 ----
 
+## Current Projects
+
+1. [Defining a new digital service for clinical trials](/practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview)
+3. [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
+
 --8<-- "snippets/abbr.md"

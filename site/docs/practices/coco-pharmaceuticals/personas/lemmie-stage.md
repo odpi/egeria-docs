@@ -51,4 +51,10 @@ Desired Outcome:
 
 -----
 
+## Current Projects
+
+* [Defining the IT Systems Security Strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview)
+* [DevOps Cataloguing](/practices/coco-pharmaceuticals/scenarios/devops-cataloguing/overview)
+* [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
+
 --8<-- "snippets/abbr.md"

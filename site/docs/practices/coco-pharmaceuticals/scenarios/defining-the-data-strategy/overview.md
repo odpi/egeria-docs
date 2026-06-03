@@ -40,8 +40,8 @@ In particular:
 * The physicians and supporting medical staff will need interactive support for drug choices based on their patients' characteristics and responses.
 * The new team that works with the hospitals supporting new orders, validating results, liaising with manufacturing and research will need up to date information about the clinicians and patients under treatment.   They need to be supported by predictive analytics driven by the treatment plans and patient trends.
 * Measurements from existing treatments could provide active data to supplement the research team as they look for new opportunities to cure different cancers for a broader range of patients.
-* Finance need up to date information on suppliers orders / payments, patients orders / payments and future predictions so they can manage the cash flow.
-* The board need to be able to understand which drugs are delivering profit, where the gaps are so they can direct research and sales/marketing.
+* Finance needs up-to-date information on suppliers' orders / payments, patients orders / payments and future predictions so they can manage the cash flow.
+* The board needs to be able to understand which drugs are delivering profit, where the gaps are so they can direct research and sales/marketing.
 * Manufacturing need details of the drug requirements coming from the active treatment plans so that they can plan and drive the manufacturing processes.
 
 The purpose of the data strategy is to identify and plan how data can transform business to meet its strategic goals.

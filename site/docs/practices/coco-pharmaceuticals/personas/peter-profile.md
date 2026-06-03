@@ -48,4 +48,10 @@ Desired Outcome:
 
 ----
 
+
+## Current Projects
+
+* [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
+
+
 --8<-- "snippets/abbr.md"

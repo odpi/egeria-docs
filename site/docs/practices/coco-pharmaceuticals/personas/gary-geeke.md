@@ -60,6 +60,7 @@ Gary Geeke is currently working on the following projects:
 * Ensure the [auditability of IT System users](/practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview) and their access to data.
 * Improving the [IT Systems Security](/practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview), working with [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) and [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage).
 * Building an [inventory of IT systems](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview) and their current status.
+* [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
 
 
 

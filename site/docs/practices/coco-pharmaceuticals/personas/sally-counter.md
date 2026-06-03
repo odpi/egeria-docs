@@ -23,4 +23,10 @@ Job:
 
 ----
 
+## Current Projects
+
+* [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
+* [Investigating Suspicious Activity](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview)
+
+
 --8<-- "snippets/abbr.md"

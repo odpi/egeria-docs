@@ -3,14 +3,22 @@
 
 # Creating a data governance program
 
+Organizations expect data (information) governance will deliver:
 
-[Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) is the Chief Data Officer (CDO) for Coco Pharmaceuticals. He is responsible for improving the management and use of their information. This includes the information governance program.
+- Understanding of the data they have
+- confidence to share and reuse data
+- protection from unauthorized access and use
+- monitoring of activity around the data
+- tracking of the provenance (lineage) of data
+- management of the growth and distribution of data
 
-When Jules joined Coco Pharmaceuticals the rules for handling data were documented on an internal website. They defined how researchers should manage data for clinical trials in order to be compliant with FDA regulations.
+[Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) is the Chief Data Officer (CDO) for Coco Pharmaceuticals. He is responsible for improving the management and use of their information. This includes the data governance program.
+
+When Jules joined Coco Pharmaceuticals the rules for handling data were documented on an internal website. They defined how researchers should manage data for clinical trials to be compliant with FDA regulations.
 
 A recent [fraud incident](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activcity/overview) with a bogus supplier and demands to use more data by the clinical research teams showed that the company should have a more focused approach to information governance - and so Jules was appointed CDO.
 
-In this scenario we walk through the steps that Jules takes to set up a governance program for Coco Pharmaceuticals.  This includes:
+In this scenario we walk through the steps that Jules takes to set up a data governance program for Coco Pharmaceuticals.  This includes:
 
 * Defining classification schemes for information, technology capability, roles and activities.
 
@@ -52,13 +60,13 @@ The governance principles are added to open metadata using the [Governance Offic
 
 Ivor and Faith have governance leadership roles in other governance domains.  The principles that Jules is defining need to tie into their work. 
 
-Jules works with other members of the company to define more detailed policies and rules in the metadata catalog.  He considers:
+Jules works with other members of the company to define more detailed policies and rules in the open metadata catalog.  He considers:
 
 * How do they define KPIs and their status?
 
 * How do they automate the measurement and monitoring of these principles.
 
-For example, for the principle *Information users are identified* Ivor may define additional security principles such as
+For example, for the principle *Information users are identified* Ivor may define additional security approaches such as
 
 * *Everyone has their own user logon*
 * *Passwords must be changed frequently*
@@ -67,9 +75,10 @@ For example, for the principle *Information users are identified* Ivor may defin
 
 ## Data policy driving the governance lifecycle
 
-1. Jules Keeper establishes a set of information governance principles that will be the foundation of the governance program.  These are widely reviewed and agreed and loaded into the governance catalog.
-2. Jules works with Ivor Padlock (Security) and Faith Keeper (Auditor) to expand the definitions of the principles to cover the security and audit requirements around information.
-3. Each of the information owners, such as Tom Tally (Accounts Manager), Tessa Tube (Lead Researcher) and Harry Hopeful (Sales) work with Jules and Erin Overview (Information Architect) to consider how these principles should be implemented for their information.  They flesh out more detailed policies and rules that they will follow.  Again these are documented in the Governance catalog.
+1. Jules Keeper establishes a set of data governance principles that will be the foundation of the data governance program.  These are widely reviewed and agreed and loaded into the governance catalog.
+2. Jules works with Ivor Padlock (Security) and Faith Keeper (Privacy) to expand the definitions of the principles to cover the security and audit requirements around information.
+2. Jules works with Gary Geeke (IT Lead) and Lemmie Stage (DevOps) to [create a systems and data store inventory](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview), and the mechanisms to keep it current.
+3. Each of the subject area owners, such as Faith Keeper (HR), Tom Tally (Accounts Manager), Tessa Tube (Lead Researcher) and Harry Hopeful (Sales) work with Jules and Erin Overview (Information Architect) to [build a glossary for their subject area](/practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview) and consider how these principles should be implemented for their information.  They flesh out more detailed policies and rules that they will follow.  Again these are documented in the Egeria open metadata catalog.
 4. Erin and Peter Profile (Information Analyst) ensure information is classified correctly so they are assigned to the correct policies and rules.  The classification involves creating a basic definition to the information sources and classifying them according to their content. 
 5. For important sources, Peter uses the survey framework is used to initiate deeper analysis of the information sources.   He sets this analysis up to run over night when the load on the systems is low.
 6. Erin asks Polly Tasker (IT Project Manager) to get her team to implement some new quality rules and exception management capability to support the program.

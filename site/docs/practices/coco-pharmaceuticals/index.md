@@ -37,21 +37,20 @@ Through Jules' influence:
 
 ## The scenarios
 
-The [scenarios](/practices/coco-pharmaceuticals/scenarios/overview) follow the Coco Pharmaceutical personas as they work to set up their new roles and meet the challenges their new responsibilities bring.  Examples include:
+The [scenarios](/practices/coco-pharmaceuticals/scenarios) follow the Coco Pharmaceutical personas as they work to set up their new roles and meet the challenges their new responsibilities bring.  Examples include:
 
-* [Defining the data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview).
-* [Setting up the data governance program](/practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview).
-* [Investigating suspicious activity](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview).
-* [Receiving patient data from a hospital](/practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview).
-* [Developing a new digital service using personal data](/practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview).
-* [Creating a data sharing hub](/practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview).
-* [Initiating a sustainability initiative](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview).
+* [Defining the data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview) - this is the first step in Coco Pharmaceuticals' transformation journey.
+* [Setting up the governance leadership](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview) - this shows the importance of aligning governance with the business needs and the need for the governance domains to collaborate.
+* [Developing a new digital service using personal data](/practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview) considers how context management and governance along a critical business capability can increase effectivness and compliance.
+* [Creating a data sharing hub](/practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview) - this shows how the data sharing hub can help to improve the use and availability of protected data whilst ensuring protection and governance.
+* [Initiating a sustainability initiative](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview) - the shows the establishment of a company-wide sustainability reporting initiative.
 
 
 ## More information
 
 * [Detailed descriptions of the personas](/practices/coco-pharmaceuticals/personas)
 * [Roles verses Personas](/practices/coco-pharmaceuticals/roles-vs-personas/overview)
+* [Access to the Coco Pharmaceuticals' Egeria environment](/egeria-workspaces/quick-start/overview)
 
 
 --8<-- "snippets/abbr.md"

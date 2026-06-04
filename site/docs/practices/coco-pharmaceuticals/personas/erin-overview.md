@@ -64,6 +64,7 @@ business about their responsibilities around data.
 
 ## Current Projects
 
+* [Identifying Authoritative Sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
 * [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
 
 

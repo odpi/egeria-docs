@@ -9,7 +9,7 @@ There are two choices of environment provided by Egeria Workspaces: **Quickstart
 
 ![Egeria Workspaces](egeria-workspaces-environments.svg)
 
-If you are new to Egeria and want to find out what it does, you should start with the [Quickstart environment](/egeria-workspaces/quickstart).  If you are already familiar with Egeria and want to use it for your own projects, you should use the [Freshstart environment](/egeria-workspaces/freshstart).
+If you are new to Egeria and want to find out what it does, you should start with the [Quickstart environment](/egeria-workspaces/quick-start/overview).  If you are already familiar with Egeria and want to use it for your own projects, you should use the [Freshstart environment](/egeria-workspaces/fresh-start/overview).
 
 ## What is included?
 

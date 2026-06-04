@@ -19,6 +19,7 @@ nav:
             - Our Solution: introduction/overview.md
       - Egeria Workspaces:
             - Egeria Workspaces: egeria-workspaces/index.md
+            - Demo Environment: egeria-workspaces/demo-environment/overview.md
             - Quickstart: egeria-workspaces/quick-start/overview.md
             - Freshstart: egeria-workspaces/fresh-start/overview.md
             - Optional runtimes: egeria-workspaces/optional-runtimes/overview.md

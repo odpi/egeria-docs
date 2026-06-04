@@ -12,7 +12,7 @@ An **authoritative source** can be thought of as the "best" source of a particul
 Erin and Gary have two resources to work with:
 
 * Gary has a catalog of all of Coco Pharmaceutical's systems
-* Erin has the [subject area definitions](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas)
+* Erin has the [subject area definitions](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview)
 
 For each subject area, they need to identify one or two systems that could act as an authoritative source for that type of information.
 

@@ -15,7 +15,7 @@ Notice that the project acts as an anchor for collections of resources that the 
 The project entity represents a single project.  It inherits from [*Referenceable*](/types/0/0010-Base-Model) and includes attributes for defining the timeframe for the project and its status.
 
 * *mission* describes in free-form text, the hoped for outcome of the project(s) commissioned under this charter.
-* *purposes* define a list of formal purposes for the project.  These are inspired by the need to identify processing purposes in the EU's General Data Protection Legislation (GDPR).  These purposes can also be set up in a valid metadata set.
+* *dataProcessingPurposes* define a list of formal purposes for the project.  These are inspired by the need to identify processing purposes in the EU's General Data Protection Legislation (GDPR).  These purposes can also be set up in a valid metadata set.
 * *successCriteeria* lists the criteria that should be used to evaluate the success of the project.
 * *plannedStartDate* defines the expected start date of the project.
 * *actualStartDate* defines the actual start date of the project.

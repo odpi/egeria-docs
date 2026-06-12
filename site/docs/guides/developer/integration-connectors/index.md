@@ -5,7 +5,7 @@
 
 ---8<-- "snippets/connectors/integration-connector-intro.md"
 
-The purpose of the integration daemon is to minimise the effort required to integrate a third party technology into the open metadata ecosystem.  They handle:
+The purpose of the [integration daemon](/concepts/integration-daemon) is to minimise the effort required to integrate a third party technology into the open metadata ecosystem.  They handle:
 
 * Management of configuration - including user security information.
 * Starting and stopping of your integration logic.
@@ -16,6 +16,7 @@ The purpose of the integration daemon is to minimise the effort required to inte
 
 This means you can focus on interacting with the third party technology and mapping its metadata to open metadata in your integration connector.
 
+Integration connectors are also useful for tasks that need to run regularly.  Egeria uses integration connectors to monitor the health of the open metadata ecosystem and to add its own insights.
 
 ## Integration connector interface
 
@@ -168,7 +169,7 @@ The connection object is stored in the `connectionProperties` instance variable 
 
 ### Accessing context
 
-The context is retrieved using the `getContext()` method.   This is a synchronized method that can be called from multiple threads, that occurs when the connector is using listeners.
+The context is retrieved using the `getIntegrationContext()` method.   This is a synchronized method that can be called from multiple threads, that occurs when the connector is using listeners.
 
 ### Registering a listener with open metadata
 
@@ -190,7 +191,7 @@ Your integration connector registers itself as a listener in the `start()` metho
         :
         :
                                 
-        myContext = super.getContext();
+        myContext = super.getIntegrationContext();
 
         if (myContext != null)
         {
@@ -242,7 +243,7 @@ Ideally your integration connector should use an embedded [digital resource conn
 
         final String methodName = "start";
 
-        myContext = super.getContext();
+        myContext = super.getIntegrationContext();
 
         if (myContext != null)
         {

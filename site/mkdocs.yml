@@ -153,7 +153,9 @@ nav:
               - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
           - Building Utilities: guides/developer/building-utilities/overview.md
           - Building Connectors:
-              - Integration Connectors: guides/developer/integration-connectors/overview.md
+              - Integration Connectors:
+                    - Anatomy: guides/developer/integration-connectors/index.md
+                    - Self-Registering: guides/developer/integration-connectors/self-registering-integration-connectors.md
               - Survey Action Services: guides/developer/survey-action-services/overview.md
               - Governance Action Services: guides/developer/governance-action-services/overview.md
               - Watchdog Action Services: guides/developer/watchdog-action-services/overview.md

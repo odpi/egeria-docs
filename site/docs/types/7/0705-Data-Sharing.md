@@ -10,10 +10,10 @@ Data sharing describes the process of sharing data between different organizatio
 
 ## DataHub entity
 
-The *DataHub* entity describes a collection of data assets that are available for sharing, as long as the requester satisfies the requirements laid down by the data owner.
+The *DataHub* entity describes a [collection](/types/0/0021-Collections) of data assets that are available for sharing, as long as the requester satisfies the requirements laid down by the data owner.
 
 ## DataSharingRequest entity
 
-The *DataSharingRequest* entity describes a request for data sharing.  It is used to track the status of the request and gather the details of the request (such as the requested data specification) and the data sharing agreement and related resources.
+The *DataSharingRequest* entity describes a request to another party for them to share data.   It is a type of [ToDo](/types/1/0135-Actions-For-People) since there is work involved. It is used to track the status of the request and gather the details of the request (such as the requested data specification) and the data sharing agreement and related resources.
 
 --8<-- "snippets/abbr.md"

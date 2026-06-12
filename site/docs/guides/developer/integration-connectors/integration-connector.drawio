@@ -1,56 +1,103 @@
-<mxfile host="Electron" modified="2024-03-22T13:09:52.702Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="fI0cSImJ-o1XFFP2h4hf" version="23.0.2" type="device" pages="5">
-  <diagram id="64aDKeuYOhuSxBOflMIt" name="integration-connector">
-    <mxGraphModel dx="1242" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" pages="5">
+  <diagram id="64aDKeuYOhuSxBOflMIt" name="integration-connector-methods">
+    <mxGraphModel dx="2391" dy="1662" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="YQMm9Tc21oN1GBCdeoTT-0" />
         <mxCell id="YQMm9Tc21oN1GBCdeoTT-1" parent="YQMm9Tc21oN1GBCdeoTT-0" />
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-2" value="&lt;br&gt;&lt;br&gt;initialize()&lt;br&gt;&lt;br&gt;&lt;br&gt;setAuditLog()&lt;br&gt;setConnectorName()&lt;br&gt;initializeEmbeddedConnectors()&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;start()&lt;br&gt;&lt;br&gt;&lt;br&gt;engage()&lt;br&gt;&lt;br&gt;&lt;br&gt;refresh()&lt;br&gt;&lt;br&gt;&lt;br&gt;disconnect()" style="rounded=1;whiteSpace=wrap;html=1;align=left;perimeterSpacing=0;spacingLeft=6;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="240" y="120" width="190" height="410" as="geometry" />
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-1" edge="1" parent="YQMm9Tc21oN1GBCdeoTT-1" source="YQMm9Tc21oN1GBCdeoTT-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="J36SM_s0nvAz6qOgvg3B-0">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-3" value="&lt;b&gt;IntegrationConnector&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="265" y="130" width="140" height="20" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-2" parent="YQMm9Tc21oN1GBCdeoTT-1" style="rounded=1;whiteSpace=wrap;html=1;align=left;perimeterSpacing=0;spacingLeft=6;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" value="&lt;br&gt;&lt;br&gt;initialize()&lt;br&gt;&lt;br&gt;&lt;br&gt;setAuditLog()&lt;br&gt;setConnectorName()&lt;br&gt;initializeEmbeddedConnectors()&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;start()&lt;br&gt;&lt;br&gt;&lt;br&gt;engage()&lt;br&gt;&lt;br&gt;&lt;br&gt;refresh()&lt;br&gt;&lt;br&gt;&lt;br&gt;disconnect()" vertex="1">
+          <mxGeometry height="410" width="190" x="240" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-6" value="Indicates that the connector is completely configured and can begin processing.&amp;nbsp; This call can be used to register with non-blocking services.&amp;nbsp; For example it can register a listener with the OMAS Out Topic with the context." style="text;whiteSpace=wrap;html=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="444" y="318" width="470" height="40" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-3" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="&lt;b&gt;IntegrationConnector&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="140" x="265" y="130" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-7" value="For saving connector instance identifier and connection object.&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;Called from the ConnectorBroker.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="438" y="185" width="350" height="30" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-6" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;whiteSpace=wrap;html=1;" value="Indicates that the connector is completely configured and can begin processing.&amp;nbsp; This call can be used to register with non-blocking services.&amp;nbsp; For example it can register a listener with the OMAS Out Topic with the context." vertex="1">
+          <mxGeometry height="40" width="470" x="444" y="318" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-8" value="Provides the logging destination." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="438" y="224" width="190" height="20" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-7" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="For saving connector instance identifier and connection object.&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;Called from the ConnectorBroker.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="350" x="438" y="185" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-9" value="Provides the name of the connector for logging." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="438" y="238" width="270" height="20" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-8" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="Provides the logging destination." vertex="1">
+          <mxGeometry height="20" width="190" x="438" y="224" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-11" value="Used for blocking calls to wait for new metadata.  It is called from its own thread iff the connector is configured to have its own thread.  It is recommended that the engage() method returns when each blocking call completes.  The integration daemon will pause a second and then call engage() again.  This pattern enables the calling thread to detect the shutdown of the integration daemon server." style="text;whiteSpace=wrap;html=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="444" y="379" width="550" height="70" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-9" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="Provides the name of the connector for logging." vertex="1">
+          <mxGeometry height="20" width="270" x="438" y="238" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-12" value="Free up any resources held since the connector is no longer needed." style="text;whiteSpace=wrap;html=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="444" y="519" width="400" height="30" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-11" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;whiteSpace=wrap;html=1;" value="Used for blocking calls to wait for new metadata.  It is called from its own thread iff the connector is configured to have its own thread.  It is recommended that the engage() method returns when each blocking call completes.  The integration daemon will pause a second and then call engage() again.  This pattern enables the calling thread to detect the shutdown of the integration daemon server." vertex="1">
+          <mxGeometry height="70" width="550" x="444" y="379" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-14" value="Requests that the connector does a comparison of the metadata in the third party technology and open metadata repositories. Refresh is called when the integration connector first starts and then at intervals defined in the connector&#39;s configuration as well as any external REST API calls to explicitly refresh the connector." style="text;whiteSpace=wrap;html=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="444" y="449" width="550" height="70" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-12" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;whiteSpace=wrap;html=1;" value="Free up any resources held since the connector is no longer needed." vertex="1">
+          <mxGeometry height="30" width="400" x="444" y="519" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-15" value="Set up the integration service specific context." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="438" y="288" width="260" height="20" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-14" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;whiteSpace=wrap;html=1;" value="Requests that the connector does a comparison of the metadata in the third party technology and open metadata repositories. Refresh is called when the integration connector first starts and then at intervals defined in the connector&#39;s configuration as well as any external REST API calls to explicitly refresh the connector.&amp;nbsp; This is when the target processors are called." vertex="1">
+          <mxGeometry height="70" width="550" x="444" y="449" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-16" value="setContext()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;opacity=40;align=left;spacingLeft=5;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="240" y="281" width="190" height="40" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-15" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="Set up the integration service specific context." vertex="1">
+          <mxGeometry height="20" width="260" x="438" y="288" as="geometry" />
         </mxCell>
-        <mxCell id="YQMm9Tc21oN1GBCdeoTT-17" value="&lt;br&gt;registerListener()&lt;br&gt;sendEvent()&lt;br&gt;&lt;br&gt;createXXX()&lt;br&gt;createXXXByTemplate()&lt;br&gt;updateXXX()&lt;br&gt;&lt;br&gt;publishXXX()&lt;br&gt;withdrawXXX()&lt;br&gt;&lt;br&gt;removeXXX()&lt;br&gt;&lt;br&gt;findXXXs()&lt;br&gt;getXXXsByName()&lt;br&gt;getMyXXXs()&lt;br&gt;getXXXByGUID()" style="whiteSpace=wrap;html=1;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;spacingLeft=3;shadow=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="30" y="273" width="155" height="280" as="geometry" />
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-16" parent="YQMm9Tc21oN1GBCdeoTT-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;opacity=40;align=left;spacingLeft=5;" value="setContext()" vertex="1">
+          <mxGeometry height="40" width="190" x="240" y="281" as="geometry" />
         </mxCell>
-        <mxCell id="NjhM_B7wD2fwzGD4Wnjn-0" value="Context" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="77.5" y="273" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="NjhM_B7wD2fwzGD4Wnjn-1" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=1.006;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="YQMm9Tc21oN1GBCdeoTT-1" source="YQMm9Tc21oN1GBCdeoTT-17" target="YQMm9Tc21oN1GBCdeoTT-16" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxCell id="NjhM_B7wD2fwzGD4Wnjn-1" edge="1" parent="YQMm9Tc21oN1GBCdeoTT-1" source="YQMm9Tc21oN1GBCdeoTT-17" style="shape=flexArrow;endArrow=classic;html=1;exitX=1.006;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YQMm9Tc21oN1GBCdeoTT-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="410" y="523" as="sourcePoint" />
             <mxPoint x="460" y="473" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TD823NDiEud7Kh6_wdNZ-0" value="Initializes embedded connectors" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" parent="YQMm9Tc21oN1GBCdeoTT-1" vertex="1">
-          <mxGeometry x="438" y="253" width="190" height="20" as="geometry" />
+        <mxCell id="TD823NDiEud7Kh6_wdNZ-0" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="Initializes embedded connectors" vertex="1">
+          <mxGeometry height="20" width="190" x="438" y="253" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-0" parent="YQMm9Tc21oN1GBCdeoTT-1" style="rounded=1;whiteSpace=wrap;html=1;align=left;perimeterSpacing=0;spacingLeft=6;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;start()&lt;br&gt;&lt;br&gt;&lt;br&gt;refresh()&lt;br&gt;&lt;br&gt;&lt;br&gt;disconnect()" vertex="1">
+          <mxGeometry height="190" width="190" x="410" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-2" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="&lt;b&gt;TargetProcessor&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="445" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-3" edge="1" parent="YQMm9Tc21oN1GBCdeoTT-1" source="YQMm9Tc21oN1GBCdeoTT-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="J36SM_s0nvAz6qOgvg3B-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="560" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-4" parent="YQMm9Tc21oN1GBCdeoTT-1" style="rounded=1;whiteSpace=wrap;html=1;align=left;perimeterSpacing=0;spacingLeft=6;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;start()&lt;br&gt;&lt;br&gt;&lt;br&gt;refresh()&lt;br&gt;&lt;br&gt;&lt;br&gt;disconnect()" vertex="1">
+          <mxGeometry height="190" width="190" x="425" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-5" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="&lt;b&gt;TargetProcessor&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="460" y="625" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-6" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="One for each catalog target" vertex="1">
+          <mxGeometry height="30" width="160" x="639" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-7" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="The target processesor has the main implementation logic for the connector." vertex="1">
+          <mxGeometry height="30" width="230" x="640" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-8" edge="1" parent="YQMm9Tc21oN1GBCdeoTT-1" source="YQMm9Tc21oN1GBCdeoTT-17" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="J36SM_s0nvAz6qOgvg3B-0" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="53" y="733" />
+            </Array>
+            <mxPoint x="500" y="550" as="sourcePoint" />
+            <mxPoint x="550" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-9" parent="YQMm9Tc21oN1GBCdeoTT-1" style="whiteSpace=wrap;html=1;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;spacingLeft=3;shadow=1;" value="&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;getConnectorName()&lt;/div&gt;&lt;div&gt;getConnectorInstanceId()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;getMetadataAccessServer()&lt;/div&gt;&lt;div&gt;getMetadataAccessServerPlatformURLRoot()&lt;/div&gt;&lt;div&gt;getLocalServerName()&lt;/div&gt;&lt;div&gt;getLocalServiceName()&lt;/div&gt;&lt;div&gt;getMyUserId()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;getActivityReportWriter()&lt;/div&gt;&lt;div&gt;startRecording()&lt;/div&gt;&lt;div&gt;stopRecording()&lt;/div&gt;&lt;div&gt;publishReport()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;getFileClassifier()&lt;/div&gt;&lt;div&gt;registerDirectoryListener()&lt;/div&gt;&lt;div&gt;&lt;div&gt;unregisterDirectoryListener()&lt;/div&gt;&lt;div&gt;registerDirectoryTreeListener()&lt;/div&gt;&lt;/div&gt;&lt;div&gt;unregisterDirectoryTreeListener()&lt;/div&gt;&lt;br&gt;getXXXClient()&lt;div&gt;&lt;br&gt;&lt;div&gt;getMaxPageSize()&lt;/div&gt;&lt;div&gt;isTypeOf()&lt;/div&gt;&lt;div&gt;&lt;div&gt;getAnchorGUID()&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;createIncidentReport()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;openToDo()&lt;/div&gt;&lt;div&gt;createNoteLogEntry()&lt;/div&gt;&lt;div&gt;registerContextEvent()&lt;/div&gt;&lt;div&gt;createProcessFromGovernanceActionType&lt;/div&gt;&lt;div&gt;createGovernanceActionRocess()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;disconnect()&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="534" width="265" x="-80" y="-264" as="geometry" />
+        </mxCell>
+        <mxCell id="YQMm9Tc21oN1GBCdeoTT-17" parent="YQMm9Tc21oN1GBCdeoTT-1" style="whiteSpace=wrap;html=1;align=left;fillColor=#ffe6cc;strokeColor=#d79b00;spacingLeft=3;shadow=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;getPermittedSynchronization()&lt;/div&gt;&lt;div&gt;getIntegrationConnectorGUID()&lt;/div&gt;&lt;div&gt;getMetadataSourceGUID()&lt;/div&gt;&lt;div&gt;getMetadataSourceQualifiedName()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;r&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;egisterOpenLineageListener()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;publishOpenLineageEvent()&lt;/div&gt;&lt;div&gt;noListenerRegistered()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;elementShouldBeCatalogued|()&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;registerListener()&lt;br&gt;sendEvent()&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;getRefreshStartTime()&lt;/div&gt;&lt;div&gt;getNextScheduleRefreshTime()&lt;/div&gt;&lt;div&gt;getMinMinutesBetweenRefresh()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="307" width="265" x="-80" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="NjhM_B7wD2fwzGD4Wnjn-0" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="&lt;b&gt;IntegrationContext&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="-20" y="273" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-10" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" value="&lt;b&gt;ConnectorContextBase&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="160" x="-40" y="-264" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-11" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Connector context base for integration connectors and governance serivces." vertex="1">
+          <mxGeometry height="30" width="180" x="200" y="-250" as="geometry" />
+        </mxCell>
+        <mxCell id="J36SM_s0nvAz6qOgvg3B-12" parent="YQMm9Tc21oN1GBCdeoTT-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;rounded=0;" value="Context methods for integration connectors" vertex="1">
+          <mxGeometry height="40" width="130" x="-220" y="278" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

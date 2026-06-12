@@ -14,7 +14,7 @@ The information supply chain is typically broken down into segments also represe
 
 The unique names of the information supply chains, are encoded in the lineage relationships captured in the lower levels of lineage detail:
 
-* The architectural view of the flow of data that the information supply chain represents is described using [solution components](/types/7/0730-Solution-Components) that are linked via [ports and wires](/types/7/0735-Solution-Ports-and-Wires).  The [*SolutionLinkingWire*](/types/7/0735-Solution-Ports-and-Wires) contains the unique names (qualifiedName) of the information supply chains that it implements.  The is is required because multiple information supply chains may share a part of the data flow.
+* The architectural view of the data flow that the information supply chain represents is described using [solution components](/types/7/0730-Solution-Components) that are linked via [ports and wires](/types/7/0735-Solution-Ports-and-Wires).  The [*SolutionLinkingWire*](/types/7/0735-Solution-Ports-and-Wires) contains the unique names (qualifiedName) of the information supply chains that it implements.  The is is required because multiple information supply chains may share a part of the data flow.
 
 * The fine-grained view captured from the implementation and operation of the deployed technology is described using the [data passing](/types/7/0750-Data-Passing) and [lineage mapping](/types/7/0770-Lineage-Mapping)  relationships.
 

@@ -3,8 +3,10 @@
 
 # 0401 Governance Definitions
 
-The world of governance is divided into different governance domains that focus on a specific set of assets or activities.
-Egeria aims to unify the metadata and governance activity across these governance domains.
+The world of governance is divided into different [governance domains](/concepts/governance-domain) that focus on a specific set of assets or activities.
+
+Egeria aims to unify the metadata and governance activity across these governance domains.  The description of how a governance domain is operating is described in a [governance definition](/concepts/governance-definition).
+The governance definitions are linked to the elements they govern through the *GovernedBy* relationship.
 
 ![UML](0401-Governance-Definitions.svg)
 
@@ -14,7 +16,7 @@ Egeria aims to unify the metadata and governance activity across these governanc
 
 *GovernanceDefinition* describes an aspect of a governance program. They are authored in the metadata repository. They inherit from [AuthoredReferenceable](/types/0/0010-Base-Model), which means they have a unique identifier and link to external references for more information.
 
-The *GovernanceDomainIdentifier* defines which governance domain this governance definition belongs to (0 for all). The following are examples of governance domains:
+The *domainIdentifier* defines which governance domain this governance definition belongs to (0 for all). The following are examples of governance domains:
 
 * DATA - the governance of data and its use.
 * PRIVACY - the support for data privacy.
@@ -50,7 +52,7 @@ The *GovernedBy* relationship links the governance definitions to the elements t
 * *description* - the description of how the governance is defined.
 
 !!! info "Related types"
-    * The role of leader of a governance domain is represented as a [*GovernanceOfficer*](/types/4/0445-Governance-Roles) entity.
+    * The role of leader of a governance domain is represented as a [*GovernanceRole*](/types/4/0445-Governance-Roles) entity with the *actorRoleType* of *GovernanceOfficer*.
     * The scope of a governance definition is represented through the [ScopedBy](/types/1/0120-Assignment-Scopes).
 
 !!! info "Implementing Services"

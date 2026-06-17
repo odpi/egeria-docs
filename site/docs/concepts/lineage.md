@@ -11,7 +11,8 @@ Lineage shows how data and control flows from its origins to its various destina
 
 * whether the operational processes that implement the data flows are executing correctly (known as *governance by expectation*).
 
-[Lineage Management](/features/lineage-management/overview) describes how lineage is collected, managed and used in Egeria.
+[Lineage Management](/features/lineage-management/overview) describes how lineage is collected, managed and used in Egeria.     [Information Supply Chains](/concepts/information-supply-chain) are used to create business-friendly views of lineage.
+
 
 ???+ info "Further information"
 
@@ -22,7 +23,7 @@ Lineage shows how data and control flows from its origins to its various destina
     * [Model 0750](/types/7/0750-Data-Passing) for the DataFlow, ProcessCall and ControlFlow relationships.
     * [Model 0755](/types/7/0755-Ultimate-Source-Destination) for the UltimateSource and UltimateDestination relationships.
     * [Model 0760](/types/7/0760-Business-Lineage) for the BusinessLineage classification.
-    * [Model 0770](/types/7/0770-Lineage-Mapping) for the LineageMapping and DataMapping relaitonships.
+    * [Model 0770](/types/7/0770-Lineage-Mapping) for the LineageMapping and DataMapping relationships.
 
     Also see how to set up an [information supply chain](/concepts/information-supply-chain).
 

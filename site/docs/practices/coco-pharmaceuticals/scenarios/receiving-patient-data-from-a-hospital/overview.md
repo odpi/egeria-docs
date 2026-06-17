@@ -5,4 +5,9 @@
 
 ![Peter monitoring incoming data](peter-working-on-computer.png)
 
+
+## Shaping a new clinical trial
+
+![Tessa, Callie and Tanya discussing a new clinical trial](tessa-callie-tanya-discussing-new-clinical-trial.png)
+
 --8<-- "snippets/abbr.md"

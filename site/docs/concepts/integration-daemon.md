@@ -24,7 +24,7 @@ The specific interface that the integration connector needs to implement is defi
 
 The integration connectors that run inside the integration daemon are managed dynamically as open metadata using [integration groups](/concepts/integration-group).  Integration connectors are able to modify the integration groups dynamically, and also initiate [governance actions](/concepts/governance-action), create [to dos](/concepts/to-do) and raise [incident reports](/concepts/incident-report).  
 
-Each time the integration connector is called (refreshed) by the integration daemon, it produces an [integration report](/concpets/integraiton-report) listing the metadata elements it has created, updated or deleted.  The integration report is stored in the open metadata repository.  It is possible to disable this function in the integration connector's configuration.
+Each time the integration connector is called (refreshed) by the integration daemon, it produces an [integration report](/concpets/integration-report) listing the metadata elements it has created, updated or deleted.  The integration report is stored in the open metadata repository.  It is possible to disable this function in the integration connector's configuration.
 
 !!! info "Further information"
 

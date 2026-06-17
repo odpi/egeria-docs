@@ -67,6 +67,8 @@ nav:
       - User Interfaces:
           - User Interface overview: user-interfaces/index.md
           - Egeria Explorer: user-interfaces/egeria-explorer/overview.md
+          - Lineage Explorer: user-interfaces/lineage-explorer/overview.md
+          - The Catalog: user-interfaces/the-catalog/overview.md
           - Dr.Egeria: user-interfaces/dr-egeria/overview.md
           - Hey Egeria: user-interfaces/hey-egeria/overview.md
           - My Egeria: user-interfaces/my-egeria/overview.md
@@ -810,7 +812,7 @@ nav:
               - Governance Team: practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview.md
               - Information Supply Chains: practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview.md
               - Multi-Faceted Governance: practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview.md
-              - New Systems Architecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview.md
+              - New Systems Architecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview.md
               - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
               - Patient Data Sharing Hub: practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview.md
               - Preparing for Martyn's Law: practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview.md

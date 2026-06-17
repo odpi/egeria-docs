@@ -5,14 +5,29 @@
 
 The personas from [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) are fictitious, although they are blended from the experiences of real people working with data today.  They are used to illustrate the types of people that work with data in an organization and how they use Egeria to support their work.
 
+## Sustainability team
+
+These personas are responsible for leading [sustainability improvements](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview) within the company's operations.
+
+* [Tom Tally](/practices/coco-pharmaceuticals/personas/tom-tally) - Accounts Manager
+* [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) - Information Architect
+* [Stew Faster](/practices/coco-pharmaceuticals/personas/stew-faster) - Manufacturing General Manager
+* [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) - Chief Data Officer
+* [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) - Chief Finance Officer
+
+![Sustainability Team](../scenarios/sustainability-team.png)
+
 ## Security team
 
-These personas are responsible for defining the security strategy for Coco Pharmaceuticals and ensuring compliance.
+These personas are responsible for defining the [security strategy](/practices/coco-pharmaceuticals/scenarios/) for Coco Pharmaceuticals and ensuring compliance.
 
 * [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) - Security Officer
 * [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) - IT Infrastructure Lead
 * [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage) - DevOps Specialist
-* [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) - IT Project Leader
+* [Simon Burr](/practices/coco-pharmaceuticals/personas/simon-burr) - Cyber Security Specialist
+* [Sidney Seeker](/practices/coco-pharmaceuticals/personas/sidney-seeker) - Fraud Investigator
+
+![Security Team](../scenarios/security-team.png)
 
 ## AI pilot team
 
@@ -24,7 +39,9 @@ It is very experimental at this time but has a lot of interest at board level.
 * [Bob Nitter](/practices/coco-pharmaceuticals/personas/bob-nitter) - Integration Architect/Developer 
 * [Harry Hopeful](/practices/coco-pharmaceuticals/personas/harry-hopeful) - Sales
 * [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) - Lead Researcher
+* [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) - IT Project Leader
 
+![AI Pilot Team](../scenarios/ai-pilot-team.png)
 
 ## Fraud investigation team
 
@@ -36,13 +53,7 @@ These personas are investigating a [potential incidence of fraud](/practices/coc
 * [Harry Hopeful](/practices/coco-pharmaceuticals/personas/harry-hopeful) - Sales
 * [Sidney Seeker](/practices/coco-pharmaceuticals/personas/sidney-seeker) - Fraud Investigator
 
-## Sustainability team
-
-These personas are responsible for leading sustainability improvements within the company's operations.
-
-* [Tom Tally](/practices/coco-pharmaceuticals/personas/tom-tally) - Accounts Manager
-* [Stew Faster](/practices/coco-pharmaceuticals/personas/stew-faster) - Manufacturing General Manager
-* [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) - Chief Data Officer
+![Fraud Investigation Team](../scenarios/fraud-investigation-team.png)
 
 ## Corporate governance
 
@@ -52,21 +63,6 @@ These personas are the executives whose full-time job is the governance and prot
 * [Faith Broker](/practices/coco-pharmaceuticals/personas/faith-broker) - HR director and Privacy Officer
 * [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) - Security Officer
 * [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) - Chief Finance Officer
-
-
-## IT operations team
-
-These personas are responsible for the planning and operation of the IT systems used by the company. They are not all of the people involved, but they each have a potential impact on the way the company's data is managed.
-
-* [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) - Information Architect
-* [Peter Profile](/practices/coco-pharmaceuticals/personas/peter-profile) - Information Analyst
-* [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) - IT Infrastructure Lead
-
-## Digital product managers
-
-Peter is responsible for the digital products that are managed by Egeria.
-
-* [Peter Profile](/practices/coco-pharmaceuticals/personas/peter-profile) - Information Analyst
 
 
 ## IT project team
@@ -87,7 +83,10 @@ Bob Nitter supports the multitude of application systems that the company runs. 
 Coco Pharmaceuticals has its own manufacturing plants.  Stew Faster is the general manager of the plants and is involved in the digitization program for manufacturing and distribution of the products.
 
 * [Stew Faster](/practices/coco-pharmaceuticals/personas/stew-faster) - Manufacturing General Manager
+* [Florence Paynter](/practices/coco-pharmaceuticals/personas/florence-paynter) - Cancer Patient
+* [George Pie](/practices/coco-pharmaceuticals/personas/george-pie) - Cancer Patient
 
+![Manufacturing Team](../scenarios/manufacturing-team.png)
 
 ## Clinical trials team
 
@@ -98,18 +97,8 @@ This is the first use of the company's data lake.
 * [Callie Quartile](/practices/coco-pharmaceuticals/personas/callie-quartile) - Data Scientist
 * [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) - Lead Researcher
 * [Tanya Tidie](/practices/coco-pharmaceuticals/personas/tanya-tidie) - Clinical Records Clerk
-* [Angela Cummings](/practices/coco-pharmaceuticals/personas/angela-cummings) - Nurse
-* [Grant Able](/practices/coco-pharmaceuticals/personas/grant-able) - Consultant
-* [Julie Stitched](/practices/coco-pharmaceuticals/personas/julie-stitched) - Surgeon
-* [Robbie Records](/practices/coco-pharmaceuticals/personas/robbie-records) - Patient Data Manager
+* [Peter Profile](/practices/coco-pharmaceuticals/personas/peter-profile) - Information Analyst
 
-
-## Cancer Patients
-
-These personas represent external data subjects for Coco Pharmaceuticals.
-
-* [Florence Paynter](/practices/coco-pharmaceuticals/personas/florence-paynter) - Cancer Patient
-* [George Pie](/practices/coco-pharmaceuticals/personas/george-pie) - Cancer Patient
 
 
 ## External consultants

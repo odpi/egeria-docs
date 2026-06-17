@@ -7,23 +7,29 @@ Most metadata is created and used through the tools and platforms (third party t
 
 Egeria adds the following specialized user interfaces that view metadata across the open metadata ecosystem, irrespective of which technology originated it, or where it is stored.  They also allow your to create the descriptive metadata that provides the business context to your metadata.
 
-| User Interface Name                                           | Description                                                                                                                                                         |
-|---------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Egeria Explorer](/user-interfaces/egeria-explorer/overview)  | A web-based browser for searching, viewing and navigating through your open metadata.                                                                               |  
-| [Dr.Egeria](/user-interfaces/dr-egeria/overview)              | A markdown processor that can be used to create, update and delete open metadata and to create reports.                                                             |  
-| [Hey Egeria](/user-interfaces/hey-egeria/overview)            | Command line services and visualizations for technical and data professionals working with the open metadata ecosystem or managing Egeria's infrastructure.         |  
-| [My Egeria](/user-interfaces/my-egeria/overview)              | Interactive user interface for nagivating collections of open metadata and performing multi-step tasks.                                                             |  
-| [Mermaid Diagrams](/user-interfaces/mermaid/overvew)          | Markdown based diagrams showing collections of linked metadata elements that can be rendered in a JavaScript display such as Jupyter Notebooks and drawio diagrams. |  
+| User Interface Name                                            | Description                                                                                                                                                         |
+|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Egeria Explorer](/user-interfaces/egeria-explorer/overview)   | A web-based browser for searching, viewing and navigating through your open metadata.                                                                               |  
+| [Lineage Explorer](/user-interfaces/lineage-explorer/overview) | A web-based browser for exploring lineage graphs at different levels of detail.                                                                                     |  
+| [The Catalog](/user-interfaces/the-catalog/overview)           | A web-based browser for searching, viewing and navigating through your inventories of infratrusture assets, data assets, APIs and processes.                        |  
+| [Dr.Egeria](/user-interfaces/dr-egeria/overview)               | A markdown processor that can be used to create, update and delete open metadata and to create reports.                                                             |  
+| [Hey Egeria](/user-interfaces/hey-egeria/overview)             | Command line services and visualizations for technical and data professionals working with the open metadata ecosystem or managing Egeria's infrastructure.         |  
+| [My Egeria](/user-interfaces/my-egeria/overview)               | Interactive user interface for nagivating collections of open metadata and performing multi-step tasks.                                                             |  
+| [Mermaid Diagrams](/user-interfaces/mermaid/overvew)           | Markdown based diagrams showing collections of linked metadata elements that can be rendered in a JavaScript display such as Jupyter Notebooks and drawio diagrams. |  
 
 These user interfaces are under constant development, and it is worthwhile to keep engaged with the community members that are developing them.
 
 Egeria also integrates with other popular user technologies to provide a comprehensive metadata management experience.  These are described in the following sections.
 
-## Subject Matter Experts (SMEs)
+## User Perspectives
+
+--8<-- "snippets/work-in-progress.md"
+
+### Subject Matter Experts (SMEs)
 
 If you are a subject matter expert asked to create some definitions (such as glossary terms, data standards, ...) or to capture the results of some research you are doing, Egeria provides a number of tools to help you do this.  These tools are built on open standard formats such as Markdown and HTML.  They work with files, so you can edit them using your favourite editor, share your work with colleagues for review and feedback and backup your files to a tool such as GitHub for safe-keeping and audit.  When the content is ready, it can be loaded into open metadata, linked to other information, queried using different report styles and published to a website. 
 
-### Dr.Egeria 
+#### Dr.Egeria 
 
 Dr.Egeria validates and processes markdown documents that include Dr.Egeria commands to maintain and query the open metadata in Egeria.  The queries generate reports in a variety of formats including Markdown and HTML.
 
@@ -32,13 +38,13 @@ Dr.Egeria validates and processes markdown documents that include Dr.Egeria comm
 [More information on Dr.Egeria](/user-interfaces/dr-egeria/overview)
 
 
-### Egeria's Webserver
+#### Egeria's Webserver
 
-[Egeria Workspaces](/egeria-workspaces) includes a webserver in both the [quickstart](/egeria-workspaces/quick-start/overview) and [freshstart](/egeria-workspaces/fresh-start/overview) environments.  This webserver can publish HTML reports generated by **Dr.Egeria** as a website to share informaiton with other people.
+[Egeria Workspaces](/egeria-workspaces) includes a webserver in both the [quickstart](/egeria-workspaces/quick-start/overview) and [freshstart](/egeria-workspaces/fresh-start/overview) environments.  This webserver can publish HTML reports generated by **Dr.Egeria** as a website to share information with other people.
 
 ![Egeria Webserver](egeria-webserver-ui.svg)
 
-### Apache SuperSet dashboards
+#### Apache SuperSet dashboards
 
 [Apache SuperSet](https://superset.apache.org/) is an open source dashboard and reporting tool.  It reads data from relational databases.
 
@@ -48,19 +54,19 @@ With the technology managed by Egeria Workspaces, you to create dashboards and r
 
 ![Apache SuperSet](super-set-dashboard-ui.svg)
 
-## Data Engineers and Data Scientists
+### Data Engineers and Data Scientists
 
-## DevOps and Operations Engineers
+### DevOps and Operations Engineers
 
 
 
-## Software Developers
+### Software Developers
 
-### Connector Developers
+#### Connector Developers
 
-### Python Developers
+#### Python Developers
 
-### Egeria Contributors
+#### Egeria Contributors
 
 
 

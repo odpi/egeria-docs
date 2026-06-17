@@ -26,7 +26,7 @@ In addition:
 
 * [Egeria-baudot-create-subscription.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/notification-manager/Egeria-baudot-create-subscription.http) shows how to create a subscription for an Open Metadata Digital Product.
 * [Egeria-baudot-subscription-processes.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/notification-manager/Egeria-baudot-subscription-processes.http) shows the subscription processes for an Open Metadata Digital Product.
-* [Egeria-notification-types-and-actions.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/notification-manager/Egeria-notification-types-and-actions.http) shows how to retrieve informaiton about the notification types used in Egeria.
+* [Egeria-notification-types-and-actions.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/notification-manager/Egeria-notification-types-and-actions.http) shows how to retrieve information about the notification types used in Egeria.
 
 ## Usage Examples
 

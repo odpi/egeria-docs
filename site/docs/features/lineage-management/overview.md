@@ -262,7 +262,7 @@ The numbers on the diagram refer to the notes below.
 
 2. A third party technology is using the proxy backend to publish Open Lineage event to a Kafka topic.
 
-3. The [Open Lineage Event Receiver](/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving Open Lineage events from the Kafka topic.  It passes them to the integraiton daemon's context manager via its own context.
+3. The [Open Lineage Event Receiver](/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving Open Lineage events from the Kafka topic.  It passes them to the integration daemon's context manager via its own context.
 
 4. The [Governance Action Open Lineage](/connectors/integration/governance-action-open-lineage-integration-connector) integration connector has registered a listener to receive events about the [engine actions](/concepts/engine-action) that are being processed in the open metadata ecosystem.  
 

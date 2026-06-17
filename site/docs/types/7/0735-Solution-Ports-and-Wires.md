@@ -18,7 +18,7 @@ The *SolutionComponentPort* relationship links a solution component to one of it
 
 ## SolutionLinkingWire relationship
 
-The *SolutionLinkingWire* shows the linkage between solution components via their ports to other elements in the architecture.  The *iscQualifiedNames* property allows linkage to the [information supply chains](/types/7/0720-Information-Supply-Chains) that identify critical data flows for the organization.  The *label* and *description* attributes help to explain how/why the lineage flow progresses.
+The *SolutionLinkingWire* shows the linkage between solution components via their ports to other elements in the architecture.  The *iscQualifiedNames* attribute allows linkage to the [information supply chains](/types/7/0720-Information-Supply-Chains) that identify critical data flows for the organization.  The *label* and *description* attributes help to explain how/why the lineage flow progresses.
 
 ## SolutionPortDelegation relationship
 

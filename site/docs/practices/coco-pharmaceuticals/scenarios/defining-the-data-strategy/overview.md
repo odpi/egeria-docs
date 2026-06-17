@@ -93,7 +93,7 @@ He begins to work on the next level of detail with [Erin Overview](/practices/co
 
 * [Planning for creating common definitions materials](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
 * [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
-* [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture-overview/overview)
+* [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview)
 * [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview)
 * [Defining what is meant by continuous analytics](/practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview)
 * [Defining how employees can be data-enabled](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)

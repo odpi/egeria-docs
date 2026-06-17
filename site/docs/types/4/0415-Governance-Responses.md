@@ -17,7 +17,7 @@ There are three main types of policy:
 
 * Principles define the overall values and guidelines for the organization.
 * Obligations define specific actions or processing that must be accommodated.
-* Approaches define best practices for how a resource should be implemented and managed.
+* Approaches define new initiatives, best practices and ways of working that will be adopted.
 
 ## GovernancePrinciple
 
@@ -29,7 +29,7 @@ The *GovernanceObligation* entity defines a policy that describes a requirement,
 
 ## GovernanceApproach
 
-The *GovernanceApproach* entity defines a policy that describes a method that should be used for a particular activity.
+The *GovernanceApproach* entity defines a policy that describes a method that should be used for a particular activity, or a new activity/initiative that will be adopted.
 
 ## GovernanceResponse
 

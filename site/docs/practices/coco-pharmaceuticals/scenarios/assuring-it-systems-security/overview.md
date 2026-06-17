@@ -3,6 +3,8 @@
 
 # Assuring IT System Security
 
+This scenario illustrates how Egeria can be used to support the assurance of IT system security.
+
 
 ![Assuring IT Security Strategy](ivor-si-lemmie-gary-it-security-review-meeting.png)
 

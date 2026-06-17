@@ -22,7 +22,7 @@ In addition to training, to make permanent changes to the culture, leaders need 
 
 When the [governance leaders](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview) began to discuss staff training, they quickly agreed that it should be an interactive experience, with everyone given the opportunity to consider the issues, identify key asset, threats and positive actions as well as build a personal plan of action.
 
-As such, each training course they identified included a basic set of training informaiton followed by a set of questions that they were to work through, some as a team and others individually.  The aim was to make it personal and real to all who participated.  It also spread the start-up costs of creating the inventory of the companies assets and their role in the business.
+As such, each training course they identified included a basic set of training information followed by a set of questions that they were to work through, some as a team and others individually.  The aim was to make it personal and real to all who participated.  It also spread the start-up costs of creating the inventory of the companies assets and their role in the business.
 
 For example, each team discussed cyber-security they were taught about data breaches, phishing attacks, and ransomware.  Then they were aske to identify shared passwords, systems that might be vulnerable, and other ways they could safe-guard their personal privacy and Coco Pharmaceuticals, operations and intellectual property.
 
@@ -41,6 +41,6 @@ In particular, the teams were asked to separate out the valuable data assets fro
 
 The results from the training sessions were collated into Egeria, mostly through [Dr Egeria](/user-interfaces/dr-egeria/overview) markwoen document processing with oversight from the governance leaders.
 
-![Consolidating informaiton into Egeria](consolidating-information-into-egeria.png)
+![Consolidating information into Egeria](consolidating-information-into-egeria.png)
 
 --8<-- "snippets/abbr.md"

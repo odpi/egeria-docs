@@ -20,6 +20,7 @@ The *EngineAction* entity has the following attributes used to gather informatio
 * *executorEngineGUID* - Unique identifier of the governance engine nominated to run the request.
 * *executorEngineName* - Unique name of the governance engine nominated to run the request.
 * *processName* - Unique name of the process that initiated this request (if applicable).
+* *iscQualfiedName* - Unique name of the information supply chain that this is a part of.
 * *processStepGUID* - Unique identifier of the governance action process step that initiated this request (if applicable).
 * *processStepName* - Unique name of the governance action process step that initiated this request (if applicable).
 * *governanceActionTypeGUID* - Unique identifier of the governance action type that initiated this request (if applicable).

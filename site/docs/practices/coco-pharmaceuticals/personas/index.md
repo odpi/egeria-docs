@@ -63,11 +63,14 @@ These personas are the executives whose full-time job is the governance and prot
 * [Faith Broker](/practices/coco-pharmaceuticals/personas/faith-broker) - HR director and Privacy Officer
 * [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) - Security Officer
 * [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) - Chief Finance Officer
+* [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) - Chief Information Officer
+
+![Corporate Governance Team](../scenarios/governance-team.png)
 
 
 ## IT project team
 
-This is the IT Project Team enhancing the IT Systems to create a supplier/customer hub, to provide end-to-end monitoring of the manufacturing process, and to provide support for a data lake for the clinical research teams.
+This is the IT Project Team enhancing the IT Systems to [create a supplier/customer hub](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview), to provide end-to-end monitoring of the manufacturing process, and to provide support for a data lake for the clinical research teams.  This is their first use of 
 
 Bob Nitter supports the multitude of application systems that the company runs. Lemmie Stage does the integration backbone implementation that supports the information supply chains that shift data between the applications.  Bob and Lemmie work for Polly.  Polly has engaged external consultants [Nancy Noah](/practices/coco-pharmaceuticals/personas/nancy-noah) and [Des Signa](/practices/coco-pharmaceuticals/personas/des-signa) to help with their development of the new personalized medicine capabilities.
 
@@ -77,39 +80,30 @@ Bob Nitter supports the multitude of application systems that the company runs. 
 * [Nancy Noah](/practices/coco-pharmaceuticals/personas/nancy-noah) - Cloud Specialist
 * [Des Signa](/practices/coco-pharmaceuticals/personas/des-signa) - Mobile Developer
 
+![IT Project Team](../scenarios/it-team.png)
 
 ## Manufacturing
 
 Coco Pharmaceuticals has its own manufacturing plants.  Stew Faster is the general manager of the plants and is involved in the digitization program for manufacturing and distribution of the products.
 
 * [Stew Faster](/practices/coco-pharmaceuticals/personas/stew-faster) - Manufacturing General Manager
-* [Florence Paynter](/practices/coco-pharmaceuticals/personas/florence-paynter) - Cancer Patient
-* [George Pie](/practices/coco-pharmaceuticals/personas/george-pie) - Cancer Patient
+* [Florence Paynter](/practices/coco-pharmaceuticals/personas/florence-paynter) - Manufacturing Automation Specialist
+* [George Pie](/practices/coco-pharmaceuticals/personas/george-pie) - Quality Control
 
 ![Manufacturing Team](../scenarios/manufacturing-team.png)
 
 ## Clinical trials team
 
-These personas are involved in the clinical trial for a new cancer drug developed by the company.
-They are collaborating on their findings as selected patients are given the new drug.
-This is the first use of the company's data lake.
+These personas are involved in the clinical trials for new cancer drugs developed by the company.
+They have a new [data pipeline](/practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview) to receive data from the participating hospitals.
+They are also collaborating on their findings as selected patients are given the new drug.
 
 * [Callie Quartile](/practices/coco-pharmaceuticals/personas/callie-quartile) - Data Scientist
 * [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube) - Lead Researcher
 * [Tanya Tidie](/practices/coco-pharmaceuticals/personas/tanya-tidie) - Clinical Records Clerk
 * [Peter Profile](/practices/coco-pharmaceuticals/personas/peter-profile) - Information Analyst
 
-
-
-## External consultants
-
-Additional subject-matter experts supporting specific projects for Coco Pharmaceuticals.  They are providing specialist skills to help in the transformation of Coco Pharmaceuticals' business.
-
-
-* [Nancy Noah](/practices/coco-pharmaceuticals/personas/nancy-noah) - Cloud Architect
-* [Des Signa](/practices/coco-pharmaceuticals/personas/des-signa) - Mobile Developer
-* [Sidney Seeker](/practices/coco-pharmaceuticals/personas/sidney-seeker) - Fraud Investigator
-
+![Clinical Trials Team](../scenarios/clinical-trials-team.png)
 
 
 --8<-- "snippets/abbr.md"

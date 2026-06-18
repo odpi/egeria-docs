@@ -7,7 +7,9 @@ Climate change is upon us. Many public and private institutions recognize they h
 
 Making a systemic change in the way an organization does business is a major cross-cutting initiative with many complexities.  It is likely to affect all parts of the business and require upfront investment. On the other hand, if done well, it will provide opportunities for innovation, differentiation and cost-savings over time - as well as meet commitments to shareholders, partners and regulators.
 
-**Choosing a good starting point that is tangible, understandable and incrementally achievable is important.** 
+**Choosing a starting point that is tangible, understandable and incrementally achievable is important. And good information is the heart of a successful change.** 
+
+With this mission in mind, the Coco Pharmaceuticals' board decides to establish a sustainability program.
 
 The foundation for sustainability reporting is accounting for carbon emissions (and their equivalence) by following protocols such as the [Greenhouse Gas (GHG) Protocol](https://ghgprotocol.org/). This can help all stakeholders establish:
 
@@ -16,8 +18,6 @@ The foundation for sustainability reporting is accounting for carbon emissions (
 * Campaigns and projects to achieve these goals
 * Progress monitoring and reporting
 * Auditable results to publish to stakeholders - governmental, financial and market.
-
-With this mission in mind, the Coco Pharmaceuticals' board decides to establish a sustainability program.
 
 ## Leadership
 
@@ -71,7 +71,7 @@ There was a *business imperative* to protect Coco Pharmaceuticals from global in
 Erin said they need to define how they want to structure the sustainability program.  She also showed Tom the types of approaches both the [Data Governance](/practices/coco-pharmaceuticals/scenarios/defining-the-data-governance-program/overview) and [Security](/practices/coco-pharmaceuticals/scenarios/defining-the-data-security-strategy/overview) teams have created.
 
 ???+ info "Governance Definitions"
-    Governance drivers and principles are types of governance definitions. Governance definitions are used to record precise requirements, decisions, intents around governance to help people understand what is being asked of them, why, and how their activity will be measured.
+    Governance drivers and principles are types of [governance definitions](/concepts/governance-definition). Governance definitions are used to record precise requirements, decisions, intents around governance to help people understand what is being asked of them, why, and how their activity will be measured.
 
     You can browse the governance definitions using [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Governance Definitions** tile.  They are organized by type and can be filtered by  **domainIdentifier**.  Setting up a new governance definition is through the [Governance Officer API](/services/omvs/governance-officer/overview).
 
@@ -124,7 +124,9 @@ When Tom takes Erin and Stew through the community structure, Erin shows them ho
 ???+ info "Reviewing the Communities"
     You can browse the communities using [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Communities** tile.
 
-    ![Touring the sustainability communities](communities.png)
+    ![Touring the community](communities.png)
+
+    Communities are managed through the [Community Matters API](/services/omvs/community-matters/overview).
 
 ## Mapping out the company
 

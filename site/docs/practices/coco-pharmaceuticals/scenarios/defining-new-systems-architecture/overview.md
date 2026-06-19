@@ -3,8 +3,15 @@
 
 # Defining the new system architecture overview
 
-![Figure 1](data-driven-systems-architecture.png)
-> Figure 1: Proposed data driven systems architecture
+![High level systems architecture](data-driven-systems-architecture.svg)
+> Proposed data-driven systems architecture
 
+## New AI practices
+
+![Team discussing AI development practices](it-team-disussing-ai-development-process.png)
+
+## Building the Data Hub
+
+![Building the Data Hub](peter-creating-a-data-hub.png)
 
 --8<-- "snippets/abbr.md"

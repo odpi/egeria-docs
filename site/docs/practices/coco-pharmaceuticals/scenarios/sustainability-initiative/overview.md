@@ -147,63 +147,17 @@ When Tom takes Erin and Stew through the community structure, Erin shows them ho
 
 ## Designing the Sustainability Supply Chain
 
-To build the supply chain we need to first understand the requirements. A good way to start is to work backwards from the results we are trying to produce. In this case, we are producing a sustainability dashboard that documents Scope 1 and Scope 2 emissions across a number of dimensions - so lets start there.
-A quick look at the Dashboard
+The sustainability supply chain collects, processes and delivers the greenhouse gas emissions data to a dashboard that is used to track the progress of the initiative.
 
-While we won't always be able to start with a concrete target such as this dashboard, in the case of sustainability reporting all we have to do is to look at the kinds of material different companies produce to get an idea of what Coco Pharmaceuticals will need to construct. With that in mind, we've put together the following prototype sustainability dashboard. This dashboard is for internal stakeholders within Coco Pharmaceuticals - it contains much more information than would typically be published to broader communities.
+To build the supply chain the team first need understand the requirements. A good way to start is to work backwards from the results they are trying to produce. In this case, they are looking to produce a sustainability dashboard that documents Scope 1 and Scope 2 emissions across a number of dimensions.
 
+This dashboard is for internal stakeholders within Coco Pharmaceuticals - it contains much more information than would typically be published to broader communities.
 
 ![Discussing how to deliver the sustainability dashboard](bob-polly-peter-callie-top-discussing-collection-of-sustainability-data.png)
 
-### What type of data is needed?
-
-![Delivery at Hampton Hospital](delivery-at-hampton-hospital.png)
-![Tessa accessing HasMat](tessa-accessing-hazardous-materials.png)
-![Employee Travel](zach-working-on-plane.png)
-
-### Where will the data come from?
-
-![Tom mapping fuel types](tom-mapping-fuel-types.png)
-
-### Where will the data be stored?
-
-### How will the data be processed?
-
-![Dicussing GHG calculations](callie-tom-discussing-ghg-calculations.png)
-
-### How will the data be visualized?
-
-=== "Sustainability Dashboard - Enterprise Level"
-
-    The main page of the dashboard looks like this:
-
-    ![Sustainability Dashboard - Enterprise Level](Sustainability-Dashboard-Enterprise.png)
-
-=== "Sustainability Dashboard - by Scope"
-
-    To gain a better understanding of how emissions are being produced and from where we need to be able to drill-in to the data to investigate further. The first step is to break the emissions down by scope:
-
-    ![Sustainability Dashboard - by Scope](Sustainability-Dashboard-by-Scope.png)
-
-    This tells us that Scope 2 emissions from electric utilities are the primary contributors. We can also see that this starts to show how the different work locations (sites) contribute to the scope 1 and scope 2 totals.
-
-=== "Sustainability Dashboard - by Site"
-
-    We also want to understand how each of the work locations contributes to the overall enterprise emissions. These graphs shows the emissions for each site - note that the number of sites has increased over the years as the business continues to expand and change.
-
-    ![Sustainability Dashboard - by Site](Sustainability-Dashboard-by-Site.png)
-
-=== "Sustainability Dashboard - by Operation"
-
-    To understand why some sites produce more emissions than others, it is important to consider what kinds of business operations are taking place. From the graphs we can see that some sites have a combination of offices workers, research and a computer room while manufacturing and distribution happens elsewhere. Manufacturing produces much more scope 1 emissions than research does.
-
-    ![Sustainability Dashboard - by Operation](Sustainability-Dashboard-by-Operation.png)
-
-    It is important for us to gain a detailed understanding of how emissions are produced in order for realistic reduction targets to be set and improvement programs designed.
-
 #### Inferred requirements
 
-By understanding the dashboard we can better understand some key requirements for the supply chain that we need to design and implement:
+By understanding the dashboard they can better understand some key requirements for the supply chain that we need to design and implement:
 
 * Collect data and calculate scope 1 and scope 2 emissions
 * Collect information per site and operation
@@ -211,9 +165,9 @@ By understanding the dashboard we can better understand some key requirements fo
 * Aggregate data across time, site, scope, operations
 * Accommodate change - new sites, changing operations, changing business structure, business expansion
 
-Designing a supply chain
+#### Designing the supply chain
 
-The inferred requirements are the beginning of the supply chain design process. As we continue to work backwards, the issues that we have to address include:
+The inferred requirements are the beginning of the supply chain design process. As they continue to work backwards, the issues that they have to address include:
 
 * How often does the dashboard need to be updated?
 * How often do emissions calculations need to be run?
@@ -222,13 +176,48 @@ The inferred requirements are the beginning of the supply chain design process. 
 * How do we need to prepare this data for calculations to be performed?
 * Who owns the source data that we need?
 
-Working through these questions leads us to break the supply chain down into three logical stages:
+Working through these questions leads them to break the supply chain down into three logical stages:
 
 * Collect data from source systems
 * Refine and process this data to calculate emissions
 * Store the results and aggregations for analysis and reporting
 
-These stages are discussed further in Creating the Data Pipeline
+
+### What type of data is needed?
+
+
+
+|                        Company Operations                         |                        Hazardous Materials                         |                Employee Travel                |
+|:-----------------------------------------------------------------:|:------------------------------------------------------------------:|:---------------------------------------------:|
+| ![Delivery at Hampton Hospital](delivery-at-hampton-hospital.png) | ![Tessa accessing HasMat](tessa-accessing-hazardous-materials.png) | ![Employee Travel](zach-working-on-plane.png) |
+
+
+
+### Where will the data come from?
+
+![Tom mapping fuel types](tom-mapping-fuel-types.png)
+
+### Where will the data be stored?
+
+They decide to build an Operational Data Store - this is a database that holds a copy of the data extracted from various systems and organized to support the calculations and reporting requirements.  This new database is given the name `coco-sus` and will become part of the [Coco Pharmaceuticals Data Hub](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview).
+
+### How will the data be processed?
+
+![Dicussing GHG calculations](callie-tom-discussing-ghg-calculations.png)
+
+### How will the data be visualized?
+
+It is important for Coco Pharmaceuticals to gain a detailed understanding of how emissions are produced in order for realistic reduction targets to be set and improvement programs designed.
+
+The team decided to have 4 main views of the data:
+
+- Enterprise Level - company level totals
+- By Scope - To gain a better understanding of how emissions are being produced and from where they need to be able to drill-in to the data to investigate further. The first step is to break the emissions down by scope:
+- By Site - They also want to understand how each of the work locations contributes to the overall enterprise emissions. 
+- By Operation - To understand why some sites produce more emissions than others, it is important to consider what kinds of business operations are taking place. 
+
+
+
 
 ### Putting it all together
 
@@ -236,8 +225,13 @@ Peter Profile and Bob Nitter work together on delivering the sustainability info
 
 ![Peter Profile building the Sustainability Pipelines](peter-building-sustainability-pipeline.png)
 
-When the pipelines are running, they can be viewed in the [Lineage Explorer](/user-interfaces/lineage-explorer/overview).  Enter `coco`
-[Egeria Explorer](/user-interfaces/egeria-explorer/overview) through the 
+
+???+ info "Viewing Information Supply Chains and Lineage"
+
+    You can see the sustainability information supply chain in "Information Supply Chains" tile of [Egeria Explorer](/user-interfaces/egeria-explorer/overview).  Search for "Sustainability".  If you are logged in as Tom, you can see the design view.  If you are logged in as Peter, you can also see the system implementation view.
+
+    When the pipelines are running, they can be viewed in the [Lineage Explorer](/user-interfaces/lineage-explorer/overview).  Enter `coco` in the search box.
+
 
 And this is the resulting dashboard:
 
@@ -249,13 +243,19 @@ And this is the resulting dashboard:
 
     ![Sustainability Dashboard - by Scope](Sustainability-Dashboard-by-Scope.png)
 
+    This tells us that Scope 2 emissions from electric utilities are the primary contributors. We can also see that this starts to show how the different work locations (sites) contribute to the scope 1 and scope 2 totals.
+
 === "Sustainability Dashboard - by Site"
 
     ![Sustainability Dashboard - by Site](Sustainability-Dashboard-by-Site.png)
 
+    These graphs shows the emissions for each site - note that the number of sites has increased over the years as the business continues to expand and change.
+
 === "Sustainability Dashboard - by Operation"
 
     ![Sustainability Dashboard - by Operation](Sustainability-Dashboard-by-Operation.png)
+
+     From the graphs we can see that some sites have a combination of offices workers, research and a computer room while manufacturing and distribution happens elsewhere. Manufacturing produces much more scope 1 emissions than research does.
 
 ----
 > Version 1 of the sustainability dashboard running in Apache Superset

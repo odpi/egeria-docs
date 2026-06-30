@@ -7,15 +7,21 @@ Most metadata is created and used through the tools and platforms (third party t
 
 Egeria adds the following specialized user interfaces that view metadata across the open metadata ecosystem, irrespective of which technology originated it, or where it is stored.  They also allow your to create the descriptive metadata that provides the business context to your metadata.
 
-| User Interface Name                                            | Description                                                                                                                                                         |
-|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Egeria Explorer](/user-interfaces/egeria-explorer/overview)   | A web-based browser for searching, viewing and navigating through your open metadata.                                                                               |  
-| [Lineage Explorer](/user-interfaces/lineage-explorer/overview) | A web-based browser for exploring lineage graphs at different levels of detail.                                                                                     |  
-| [The Catalog](/user-interfaces/the-catalog/overview)           | A web-based browser for searching, viewing and navigating through your inventories of infratrusture assets, data assets, APIs and processes.                        |  
-| [Dr.Egeria](/user-interfaces/dr-egeria/overview)               | A markdown processor that can be used to create, update and delete open metadata and to create reports.                                                             |  
-| [Hey Egeria](/user-interfaces/hey-egeria/overview)             | Command line services and visualizations for technical and data professionals working with the open metadata ecosystem or managing Egeria's infrastructure.         |  
-| [My Egeria](/user-interfaces/my-egeria/overview)               | Interactive user interface for nagivating collections of open metadata and performing multi-step tasks.                                                             |  
-| [Mermaid Diagrams](/user-interfaces/mermaid/overvew)           | Markdown based diagrams showing collections of linked metadata elements that can be rendered in a JavaScript display such as Jupyter Notebooks and drawio diagrams. |  
+
+| User Interface Name                                              | Description                                                                                                                                                                       |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Egeria Explorer](/user-interfaces/egeria-explorer/overview)     | A web-based browser for searching, viewing and navigating through your open metadata.                                                                                             |  
+| [Lineage Explorer](/user-interfaces/lineage-explorer/overview)   | A web-based browser for exploring lineage graphs at different levels of detail.                                                                                                   |  
+| [The Catalog](/user-interfaces/the-catalog/overview)             | A web-based browser for searching, viewing and navigating through your inventories of infratrusture assets, data assets, APIs and processes.                                      |  
+| [Egeria Operations](/user-interfaces/egeria-operations/overview) | A web-based browser for viewing the status of servers, connectors, governance engines and engine actions.  It is possible to issue simple commands such as refresh/restart/cancel |  
+| [Egeria Audit](/user-interfaces/egeria-audit/overview)           | A web-based browser for viewing exceptions, certifications,  licenses and users.  It is possible to updatethe status of a user and reset their password.                          |  
+| [Dr.Egeria](/user-interfaces/dr-egeria/overview)                 | A markdown processor that can be used to create, update and delete open metadata and to create reports.                                                                           |  
+| [Hey Egeria](/user-interfaces/hey-egeria/overview)               | Command line services and visualizations for technical and data professionals working with the open metadata ecosystem or managing Egeria's infrastructure.                       |  
+| [My Egeria](/user-interfaces/my-egeria/overview)                 | Interactive user interface for nagivating collections of open metadata and performing multi-step tasks.                                                                           |  
+| [Mermaid Diagrams](/user-interfaces/mermaid/overvew)             | Markdown based diagrams showing collections of linked metadata elements that can be rendered in a JavaScript display such as Jupyter Notebooks and drawio diagrams.               |  
+
+Egeria also has a portal that provide simple access to the different user interfaces.
+
 
 These user interfaces are under constant development, and it is worthwhile to keep engaged with the community members that are developing them.
 

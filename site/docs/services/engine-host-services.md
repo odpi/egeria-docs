@@ -22,7 +22,7 @@ The internals of the Engine Host OMAG Server are shown in Figure 1:
 The engine host services shown at the top of the diagram are responsible for:
 
 * Starting up each of the configured OMESs for the engine host.
-* Retrieving the configuration for each governance engine and its governance services configured within the OMESs using the Governance Server OMAS.
+* Retrieving the configuration for each governance engine and its governance services configured within the OMESs using the Open Governance Service.
 * Initializing an appropriate governance engine handler (implemented by the OMES) for each retrieved governance engine configuration.
 * Listening for [governance action](/concepts/governance-action/overview) requests and passing each one to the appropriate governance engine handler for the governance engine that supports the [request type](/concepts/governance-request-type).  
 * Monitor changes in the governance engine configuration and passing them on to the corresponding governance engine handler so the OMESs have the latest configuration.

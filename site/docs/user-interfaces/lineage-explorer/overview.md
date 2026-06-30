@@ -10,7 +10,7 @@ hide:
 
 **Lineage Explorer** is a user interface for exploring lineage at different levels of detail.  
 
---8<-- "snippets/work-in-progress.md"
+![Lineage Explorer](lineage-explorer.png)
 
 
 --8<-- "snippets/abbr.md"

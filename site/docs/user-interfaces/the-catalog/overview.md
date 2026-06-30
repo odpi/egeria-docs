@@ -8,9 +8,10 @@ hide:
 
 # The Catalog
 
-**The Catalog** is a user interface for exploring technical assets such as infrastructure, data assets, APIs and software processes.  
+**The Catalog** is a user interface for exploring technical assets such as infrastructure, data assets, APIs and software processes. It is accessed from Egeria's portal. 
 
---8<-- "snippets/work-in-progress.md"
+![The Catalog](the-catalog-homepage.png)
+
 
 
 --8<-- "snippets/abbr.md"

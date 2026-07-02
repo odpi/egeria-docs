@@ -21,9 +21,31 @@ However:
 * No automation was possible based off of this information.
 * It was not possible to correlate with other teams – such as devOps, security and finance, ...
 
-He decides to add the spreadsheet contents to Egeria to make it easy to manage.  He writes a simple script to load the contents through the [pyegeria](/concepts/pyegeria) API. After experimenting with a number of queries, he discovers that his data was not as consistent as he had thought and starts to clean up the data through the Egeria APIs.
+He decides to add the spreadsheet contents to Egeria to make it easy to manage.  He writes a simple script to load the contents through the [pyegeria](/concepts/pyegeria) API.
+He he also builds new scripts that populate different spreadsheet structures for his team's projects, and he is able to load any updates they make.
 
-He builds new scripts that populate different spreadsheet structures for his team's projects, and he is able to load any updates they make.
+After experimenting with a number of queries, he discovers that his data was not as consistent as he had thought and starts to clean up the data through the Egeria APIs.
+
+??? info "Viewing system metadata"
+    Gary is able to view the metadata for the systems in his inventory through [The Catalog](/user-interfaces/the-catalog/overview) under the **IT Infrastructure** card.  Setting up a new system, or editing its details is through the [Asset Maker API](/services/omvs/asset-maker/overview).
+
+    ![System View in the Catalog](system-view-in-the-catalog.png)
+
+He also has no systems data for the new acquisitions in Austin and Bucharest and contacts them to get the data.  These each have a slightly different format, but are easy to incorporate.
+
+??? info "Loading systems into Egeria"
+    There is a Jupyter Notebook that shows the loading of the Austin and Bucharest systems metadata into Egeria.  It is located in 'coco-workbooks/4. keeping-safe/creating-systems-inventory'.  [Link to the notebook](https://github.com/odpi/egeria-workspaces/tree/master/coco-workbooks/4. keeping-safe/creating-systems-inventory)
+
+??? info "Viewing systems at a location"
+    Gary is able to see the systems at a location through [Egeria Explorer](/user-interfaces/egeria-explorer/overview) under the **Location** card.  Setting up a new location is through the [Location Arena API](/services/omvs/location-arena/overview).
+
+    ![Systems at a location](navigating-from-location.png)
+
+Looking at the system definitions from these sites he realizes ruefully that their operation is much more sophisticated that the original Coco Pharmaceuticals systems.  For example, they include the security monitoring software that was identified as lacking when they [did the IT Systems Security Strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview).
+
+![Gary sees the security monitoring software](siem-flow.png)
+
+## Benefits of using Egeria
 
 ![Gary sees benefits in an online systems inventory](gary-geeke-viewing-lineage.png)
 
@@ -31,13 +53,12 @@ He gained the following benefits:
 
 * Validation of system status was automated, simple check on reports and alerts
 * Team freed up from maintaining the spreadsheets for infrastructure projects
-* Formalisation of software levels into standard operating platforms reduced variation in system stacks and enabled a systematic upgrade process 
+* Formalisation of software levels into standard operating platforms reduced variation in system stacks and enabled a systematic upgrade process
+* The security team had a systems inventory to build their security policies around
+* The DevOps team could automate the creation of new systems through the [Egeria APIs](/services/omvs/overview)
 
-???+ info "Viewing system metadata"
-    Gary is able to view the metadata for the systems in his inventory through [The Catalog](/user-interfaces/egeria-ui).
-The definition of the governance domains can be seen in [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Valid Values** tile, look for the **domainIdentifier** valid value set.  Setting up a new domain is through the [Valid Metadata API](/services/omvs/valid-metadata/overview).
 
-    ![Valid Values for domainIdentifier](domain-identifier-valid-values.png)
+## Next Steps
 
 Gary is ready to collaborate with [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage) on automating metadata capture during the DevOps pipeline.
 

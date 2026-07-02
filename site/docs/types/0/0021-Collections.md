@@ -73,6 +73,10 @@ The *Folio* entity indicates that the collection is a set of elements that are p
 
 The *HomeCollection* classification indicates that the collection is used to provide the starting node for a hierarchy of collections.
 
+## ITSubsystems entity
+
+The *ITSubsystems* entity is a collection of systems and related equipment that supports a vial function of the business.
+
 ## Namespace entity
 
 The *Namespace* entity indicates that the collection is a set of elements that are organized by namespace.

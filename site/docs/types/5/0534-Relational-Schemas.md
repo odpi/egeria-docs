@@ -7,15 +7,23 @@ Model 0534 describes the parts of a relational schema. These are used in relatio
 
 ![UML](0534-Relational-Schemas.svg)
 
-## RelationalDBSchemaType
+## RelationalDBSchemaTypeList entity
 
-The starting entity for a relational schema (known as the [*RootSchemaType*](/types/5/0530-Tabular-Schemas)) is the *RelationalDBSchemaType*.  It is linked to one or more *RelationalTable* entities using the [*AttributeForSchema*](/types/5/0505-Schema-Attributes) relationship.
+The starting entity for a relational database (known as the [*RootSchemaType*](/types/5/0530-Tabular-Schemas)) is the *RelationalDBSchemaTypeList*.  It is linked to one or more *RelationalDBSchemaType* entities using the *RelationalDBSchema* relationship.
 
-## RelationalTable
+## RelationalDBSchema relationship
+
+Links the schema type for a database (*RelationalDBSchemaTypeList*) to each of its schemas' schema types (*RelationalDBSchemaType*).
+
+## RelationalDBSchemaType entity
+
+The starting entity for a relational schema (also a the [*RootSchemaType*](/types/5/0530-Tabular-Schemas)) is the *RelationalDBSchemaType*.  It is linked to one or more *RelationalTable* entities using the [*AttributeForSchema*](/types/5/0505-Schema-Attributes) relationship.
+
+## RelationalTable entity
 
 The *RelationalTable* entity represents a table in a relational schema.  *RelationalTable* inherits from [*SchemaAttribute*](/types/5/0505-Schema-Attributes).  The schema type to use with a *RelationalTable* is *RelationalTableType*.
 
-## RelationalTableType
+## RelationalTableType enity
 
 *RelationalTableType* is the schema type for a *RelationalTable* entity.  It inherits from [*ComplexSchemaType*](/types/5/Schema-Attributes) to show that it is made up of multiple elements - in this case, the elements are *RelationalColumn* entities.
 
@@ -34,7 +42,7 @@ The *RelationalTable* entity represents a table in a relational schema.  *Relati
 
     A relational view is represented as a *RelationalTable* entity with the [*CalculatedValue*](0512-Derived-Schema-Elements) classification attached.  The query string used to create the view is stored in the *formula* attribute.
 
-## RelationalColumn
+## RelationalColumn entity
 
 A *RelationalColumn* entity represents a column in a relational table.  It inherits from [*SchemaAttribute*](/types/5/0505-Schema-Attributes).
 
@@ -48,11 +56,11 @@ A *RelationalColumn* entity represents a column in a relational table.  It inher
 
     Columns that are calculated on retrieval are called derived relational columns.  Such a derived relational column is represented by a *RelationalColumn* entity with an attached [*CalculatedValue*](/types/5/0512-Derived-Schema-Elements) classification.
 
-## PrimaryKey
+## PrimaryKey classification
 
 The *PrimaryKey* classification can be attached to a *RelationalColumn* to indicate that the value stored for this column in each row of the table is a unique identifier for the row.
 
-## ForeignKey
+## ForeignKey relationship
 
 The *ForeignKey* relationship links a relational column in one relational table to a relational column in another relational table.
 

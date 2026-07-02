@@ -23,9 +23,6 @@ The *GovernanceActionType* entity describes a type of call to a [governance serv
 
 It inherits from *GovernanceAction* and so has a unique name (*qualifiedName*) and *additionalProperties* attributes.  In addition, this type adds:
 
-* *domainIdentifier* links the action to a specific [governance domain](/concepts/governance-domain).
-* *displayName* - human-readable name for messages and user interfaces.
-* *description* - description of the governance action that is taken.
 * *waitTime* - the minimum number of minutes that the engine action should wait before starting.  This is in addition to any requested start time from the initiating user.
 
 ## GovernanceActionExecutor relationship

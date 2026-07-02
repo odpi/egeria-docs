@@ -34,7 +34,7 @@ The *NotificationSubscriber* relationship links the notification type to the act
 * *description* - additional information about the notification subscriber.
 * *activityStatus* - the status of the notification subscriber.
 * *zoneMembership* - the zones that any notification sent to this notification subscriber should be tagged with.
-* *iscQualfiedName* - Unique name of the information supply chain that any notifications should be a part of.
+* *iscQualifiedName* - Unique name of the information supply chain that any notifications should be a part of.
 
 Notice that the *NotificationSubscriber* relationship is a [multi-link](/concepts/uni-multi-link) relationships which allows a subscriber to have multiple subscriptions to the same notification type.  Each of these subscriptions would be in a different state with typically only one in an active state.
 

@@ -9,33 +9,38 @@ Governance policies are written in language that describes the desired end state
 
 ![UML](0415-Governance-Responses.svg)
 
-## GovernancePolicy
+## GovernancePolicy entity
 
 The *GovernancePolicy* entity is a type of [*GovernanceDefinition*](/types/4/0401-Governance-Definitions).
 
-There are three main types of policy:
+There are four main types of policy:
 
 * Principles define the overall values and guidelines for the organization.
 * Obligations define specific actions or processing that must be accommodated.
 * Approaches define new initiatives, best practices and ways of working that will be adopted.
+* Risks define the likelihood and impact of a threat occurring.
 
-## GovernancePrinciple
+## GovernancePrinciple entity
 
 The *GovernancePrinciple* entity defines a policy that describes an end state that the organization aims to achieve.  
 
-## GovernanceObligation
+## GovernanceObligation entity
 
 The *GovernanceObligation* entity defines a policy that describes a requirement, often coming from regulations, or from the organization's core values, that must be met.
 
-## GovernanceApproach
+## GovernanceApproach entity
 
 The *GovernanceApproach* entity defines a policy that describes a method that should be used for a particular activity, or a new activity/initiative that will be adopted.
 
-## GovernanceResponse
+## Risk entity
+
+The *Risk* entity describes the probability that a [threat](/types/4/0405-Governance-Drivers) will materialize and the potential consequences if it does. It combines the likelihood of an event occurring with the severity of its impact on assets or objectives. Risk assessment evaluates exposure, potential harm, and vulnerabilities, transforming abstract threats into actionable insights for mitigation and decision-making. Risks can be expressed qualitatively or quantitatively, often factoring in threat, vulnerability, and consequence.
+
+## GovernanceResponse relationship
 
 The *GovernanceResponse* relationship links a GovernanceDriver entity to a GovernancePolicy entity to show that following the policy will help to support the governance driver.
 
-## GovernancePolicyLink
+## GovernancePolicyLink relationship
 
 The *GovernancePolicyLink* relationship connects two related *GovernancePolicy* entities.
 

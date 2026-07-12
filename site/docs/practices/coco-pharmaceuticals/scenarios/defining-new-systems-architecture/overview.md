@@ -23,10 +23,11 @@ Erin creates a [solution blueprint](/concepts/solution-blueprint) called **Data-
 The solution blueprint makes the architecture visible to a broader audience, and as implementation is linked to the solution components of the blueprint, they are able to follow the progress of the implementation.  Once operational, the solution blueprint becomes an aggregation point for statistics and other analytical results related to data sharing across the organization.  This helps the teams reliant on the data exchange to verify that all is working well.
 
 ??? info "Loading the solution blueprint"
-    The markdown file containing the solution blueprint is available in either the JupyterLab or Obsidian environment of [Quickstart](/egeria-workspaces/quick-start/overview) .  It is located in 'coco-workbooks/1. coco-data-hub/solution-design.md'.  [Link to the Markdown document on GitHub](https://github.com/odpi/egeria-workspaces/tree/master/coco-workbooks/1. coco-data-hub/solution-design.md).  Follow the instructions in the `README.md` file to load the solution blueprint into Egeria.
+    The Markdown file containing the solution blueprint is available in either the JupyterLab or Obsidian environment of [Quickstart](/egeria-workspaces/quick-start/overview) .  It is located in 'coco-workbooks/1. coco-data-hub/solution-design.md'.  [Link to the Markdown document on GitHub](https://github.com/odpi/egeria-workspaces/tree/master/coco-workbooks/1. coco-data-hub/solution-design.md).  Follow the instructions in the `README.md` file to load the solution blueprint into Egeria.
 
 ??? info "Viewing the solution blueprint"
     The solution blueprint can be viewed through [Egeria Explorer](/user-interfaces/egeria-explorer/overview) either through the **Solution Architect** card or **Collections** card and selecting **Strategic Solutions**.
+    ![Viewing the solution blueprint](viewing-solution-blueprint.png)
 
 ## New AI practices
 

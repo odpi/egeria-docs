@@ -39,45 +39,51 @@ He downloads [egeria-workspaces](https://github.com/odpi/egeria-workspaces) from
 
 ## Building a Data Dictionary for the Patient Data Sharing Hub
 
-The first step is to build an inventory of the patient data fields he has on offer.  He needs a data dictionary that data requesters can select from.
+The first step is to create a data hub element in Egeria.  He then catalogues the database server and folders where the digital images are located. He links them to the data hub.   This process is called [metadata discovery](/features/metadata-discovery/overview).
 
-Robbie begins by requesting Egeria performs a survey of the patient data and catalogues its schema.  This process is called [metadata discovery](/features/metadata-discovery/overview).  
+From this definition, Egeria automatically builds an inventory of the patient data fields he has on offer in the data hub.  These are organized into a data dictionary that data requesters can select from.
 
-He then requests Egeria creates a skeleton data dictionary for the patient data sharing hub based on the database schema.  
 
-The skeleton data dictionary will be complete, in terms of the data fields and their types, but lacking in descriptions that explain the values, where they come from and what they mean.   He will need to add these descriptions to the data dictionary.
+This skeleton data dictionary is extracted from the schema extraction and profiling performed by Egeris.  It will be complete, in terms of the data fields and their types, but lacking in descriptions that explain the values, where they come from and what they mean.  Robbie will need to add these descriptions to the data dictionary.
 
-Robbie requests an update FORM from Egeria for all the fields in the data dictionary.  This form is a Markdown document with a section for each field.  It is a big task, but interesting.  Many of the fields, Robbie is familiar with, but he discovered other data he was not aware of.  He shares the Markdown document with collegues who help him to fill out some the details he is not sure of.  
+Robbie requests an update FORM from Egeria for all the fields in the data dictionary.  This form is a Markdown document with a section for each field.  It is a big task, but interesting.  Many of the fields, Robbie is familiar with, but he discovered other data he was not aware of.  He shares the Markdown document with collegues who help him to fill out the details he is not sure of.  
 
 The document itself sparks interest and discussion.  A number of people request a copy when it is finished.  
 
 Robbie loads the Markdown document into Egeria so that all the descriptions are added to the data dictionary in the open metadata repository.  He uses Egeria's portal to check the descriptions were added correctly.  He also notices that each field in the data dictionary is linked to the corresponding schema elements representing the tables and columns in the patient database.  This linkage could allow an automated pipeline to navigate from the data fields requested by a data requestor to the actual data in the database.
 
-He requests an HTML report of the data dictionary and installs it in Egeria's webserver.  It creates a nice website for the data dictionary that is easy to read and navigate. This could be ta site used by future data requestors to find out what data is available.  However, it is only accessible through his machine at the moment.  He is not sure about the security of opening it up to others.  He puts the idea to one side for now.  Instead, he requests a Markdown document REPORT of the completed data dictionary.
+He requests an HTML report of the data dictionary and installs it in Egeria's webserver.  It creates a nice website for the data dictionary that is easy to read and navigate. This could be the site used by future data requestors to find out what data is available.  However, it is only accessible through his machine at the moment.  He is not sure about the security of opening it up to others.  He puts the idea to one side for now.  Instead, he requests a Markdown document REPORT of the completed data dictionary.
 
 Robbie is pleased with the result and shares it with his colleagues.  They are impressed with the level of detail and the quality of the descriptions.  They also appreciate the effort that went into creating the document.  He also shows them the website and they agree that would be useful too.
 
 ## Creating a data sharing request form
 
-Now Robbie needs to design a form that data requesters fill in to describe the data they want and the purpose for it.   
+Now Robbie needs to design a form that data requesters fill in to describe the data they want and the purpose for it.   This is a markdown document that includes the commands that defines the data sharing agreement in Egeria.  It also includes a list of the data fields from the data dictionary that the data requester wants to receive.  The form is a Markdown document that is easy to read, review and edit.  Once everyone is in agreement, the form is submitted to Egeria for processing.
 
 ## Creating the solution blueprint
 
+Robbie creates a solution blueprint that describes the data sharing hub.  This is also a Markdown document that includes the commands that defines the components and how they are wired together in Egeria.
+
+This blueprint is to show stakeholders how the solution works.
+
 ## Processing a data sharing request from a member of the hospital medical staff
 
+Robbie is now ready to start using Egeria to manage his data sharing requests.  He works with once of the consultants, [Grant Able](/practices/coco-pharmaceuticals/personas/grant-able) to create the first data sharing agreement.  Robbie uses this to test his data pipelines that read the data sharing agreement and delivers the data.
 
 ## Processing a data sharing request from a third party
 
+Robbie has one more test.  Coco Pharmaceuticals is running [a clinical trial for **Teddy Bear Drop Foot**](/practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview).  When Robbie receives the data sharing request for the clinical trial, he creates the data sharing agreement, and with a few minor changes, was able to get the data pipelines to produce the right data for the clinical trial.
+
 ## The IT Team arrive ...
 
-Once the Patient Data Sharing Hub is up and running and Robbie is managing data sharing requests from medical staff and external third parties, the hospital's IT team hear about it.   They visit Robbie to express their concerns at him running his own system.  This is a critical moment for Robbie's new system.  With the manual system, auditing was always a major headache since he had to reconstruct the specific data sharing process every time he needed to demonstrate compliance with regulations and contracts.
+Once the Patient Data Sharing Hub ready to manage data sharing requests from medical staff and external third parties, Robbie invites the hospital's IT team to review it.   They visit Robbie to express their concerns at him running his own system.  This is a critical moment for Robbie's new system.  With the manual system, auditing was always a major headache since he had to reconstruct the specific data sharing process every time he needed to demonstrate compliance with regulations and contracts.
 
 Egeria's portal includes reports that enable Robbie to demonstrate how the system works at a general level and then dive into specific cases.  There are details on the user's with access and exactly what they have access to.  He can show the data sharing agreements for each request and exactly what data was shared.
 
 The system is containerized to limit the vectors for a security breach.
-The IT team examines the setup and agrees it looks secure, and he has covered the privacy and security requirements well.  However, there are no backups and they wondered if Robbie was willing to manage all of the patching and upgrading of the system over time.  They would like to perform some security scans on the software and perform some penetration tests too. 
+The IT team examines the setup and agrees it looks secure, and he has covered the privacy and security requirements well.  However, there are no backups, and they wondered if Robbie was willing to manage all of the patching and upgrading of the system over time.  They would like to perform some security scans on the software and perform some penetration tests too. 
 
-The IT team offered to take over the maintenance and backup of the system. Robbie would retain admin access to allow him to make improvements.  The IT team would monitor the hub and ensure that it remained up-to-date and backed up.  They also offered to securely host his website containing the solution descriptions and data dictionary. 
+The IT team offered to take over the maintenance and backup of the system. Robbie would retain admin access to Egeria to allow him to make improvements.  The IT team would monitor the hub and ensure that it remained up-to-date and backed up.  They also offered to securely host his website containing the solution descriptions and data dictionary. 
 
 This seemed a reasonable agreement to Robbie - in fact, just perfect :).
 

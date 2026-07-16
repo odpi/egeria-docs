@@ -10,7 +10,7 @@ hide:
 
 **Egeria Audit** is a user interface for checking the status of exceptions, certifications, licenses and users. It is accessed from Egeria's portal. 
 
-![Egeria Audit](egeria-audit-exceptions.png)
+![Egeria Audit showing exceptions](egeria-audit-exceptions.png)
 
 
 

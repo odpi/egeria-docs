@@ -59,6 +59,8 @@ Everyone agreed and it went on the board.  With the ice broken, they came up wit
 * All software should be built with verification in mind.  This includes testability during development and first-failure data capture in operation.
 * All software should be built with resilience in mind.  Resilience ensures these business-critical processes do not fail - or in extreme circumstances, degrade gracefully alerting the relevant people.
 
+Callie also added an obligation to "use AI wisely".  It uses a lot of resources (energy, water) and so should not be used for routine, repeatable tasks, but instead to generate artifacts such as programs, data models, open metadata, and documentation that will efficiently support the business.
+
 Polly suggested that they next walk through how a simple data pipeline and data model are created and how AI should change that process.  The aim is to determine their general approach and map out an initial development process flow.
 
 This included:
@@ -75,21 +77,32 @@ They saw uses for AI in every stage.  The biggest *aha* realization was in the r
 
 With this in mind, they evolved their approach to AI-based data integration.
 
+After the meeting, Polly entered the notes from the meeting into [Claude Code](claude.com/claude-code) and it produced a [Dr.Egeria](/user-interfaces/dr-egeria/overview) file that included the commands to create the governance program for their AI-based software development.  Claude event made some helpful suggestions on they types of metrics they could consider.
+
+??? info "Loading the AI-based software development process"
+  The Markdown file containing the AI-based software development process is available in either the JupyterLab or Obsidian environment of [Quickstart](/egeria-workspaces/quick-start/overview).
+  It is located in 'coco-workbooks/1. coco-data-hub/solution-design.md'.  [Link to the Markdown document on GitHub](https://github.com/odpi/egeria-workspaces/tree/master/coco-workbooks/1. coco-data-hub/solution-design.md).  Follow the instructions in the `README.md` file to load the solution blueprint into Egeria.
+
+??? info "Viewing the AI-based software development process"
+  The governance definitions can be viewed through [Egeria Explorer](/user-interfaces/egeria-explorer/overview) either through the **Governance Definitions** card or **Collections** card and selecting **Folios** and then **Govrnance Folios** and then **Senior Software Manager — Governance Folio**.
+  ![Viewing the governance folio](viewing-governance-folio.png)
+
 
 ## Building the Data Hub
 
 One of the initial development tasks was to create the definitions for the data hub and the data stores the knew they would need.  This was considered a *No Regrets* activity and created the base definitions for the new integrations they will build.
 
-You can see/run the process of building the data hub in the JupyterHub of the [Quickstart environment](/egeria-workspaces/quick-start/overview).  It is found in the `coco-workbooks` under `1. coco-data-hub`.  The [README.md](https://github.com/odpi/egeria-workspaces/blob/master/coco-workbooks/1.%20coco-data-hub/README.md) provides more information how to run the notebook.  The notebooks is called [setting-up-the-data-hub.ipynb](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/2.%20setting-up-the-data-hub.ipynb).
-
 ![Building the Data Hub](peter-creating-a-data-hub.png)
 
+??? info "Building the Data Hub"
+   You can see/run the process of building the data hub in the JupyterHub of the [Quickstart environment](/egeria-workspaces/quick-start/overview).  It is found in the `coco-workbooks` under `1. coco-data-hub`.  The [README.md](https://github.com/odpi/egeria-workspaces/blob/master/coco-workbooks/1.%20coco-data-hub/README.md) provides more information how to run the notebook.  The notebooks is called [setting-up-the-data-hub.ipynb](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/2.%20setting-up-the-data-hub.ipynb).
 
-## Designing the Data Hub Stores
+
+<!-- ## Designing the Data Hub Stores -->
 
 
 
-## Implementing the Data Pipelines
+<!-- ## Implementing the Data Pipelines -->
 
 
 --8<-- "snippets/abbr.md"

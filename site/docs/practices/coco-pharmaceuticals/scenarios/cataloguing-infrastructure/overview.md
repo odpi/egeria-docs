@@ -34,7 +34,7 @@ After experimenting with a number of queries, he discovers that his data was not
 He also has no systems data for the new acquisitions in Austin and Bucharest and contacts them to get the data.  These each have a slightly different format, but are easy to incorporate.
 
 ??? info "Loading systems into Egeria"
-    There is a Jupyter Notebook that shows the loading of the Austin and Bucharest systems metadata into Egeria.  It is located in 'coco-workbooks/4. keeping-safe/creating-systems-inventory'.  [Link to the notebook](https://github.com/odpi/egeria-workspaces/tree/master/coco-workbooks/4. keeping-safe/creating-systems-inventory).
+    There is a Jupyter Notebook that shows the loading of the Austin and Bucharest systems metadata into Egeria.  It is located in 'coco-workbooks/4. keeping-safe/creating-systems-inventory'.  [Link to the notebook](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/4.%20keeping-safe/creating-system-inventory/creating-system-inventory.ipynb).
 
 ??? info "Viewing systems at a location"
     Gary is able to see the systems at a location through [Egeria Explorer](/user-interfaces/egeria-explorer/overview) under the **Location** card.  Setting up a new location is through the [Location Arena API](/services/omvs/location-arena/overview).

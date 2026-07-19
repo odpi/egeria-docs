@@ -13,6 +13,8 @@ Software capabilities are the capabilities implemented in software and supported
 
 *SoftwareCapability* is a [*Referenceable*](/types/0/0010-Base-Model) that adds the following attributes:
 
+* *resourceName* - name of the capability as a resource - used in naming.
+* *namespacePath* - namespace path of the capability as a resource - used in naming. 
 * *patchLevel* - any patches applied to the version.
 * *source* - supplier of the capability.
 * *deployedImplementationType* - the class of technology that is used in its implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.

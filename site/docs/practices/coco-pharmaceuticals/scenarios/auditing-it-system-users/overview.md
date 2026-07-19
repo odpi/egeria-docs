@@ -10,21 +10,25 @@ With access to these accounts, an attacker can use them to steal or alter data i
 For Egeria, this audit is performed using the [Egeria Audit](/user-interfaces/egeria-audit/overview) card on the Egeria portal.  Egeria routinely identifies users defined in its user directory that: 
 
 * have clear text passwords (used for bootstrapping the system on first install which should be removed before the system is put into production) or 
-* do not have a user profile in the Egeria repository.
+* do not have a user profile in the Egeria repository (suggesting an unnecessary user account).
 
 Egeria Audit shows these exceptions.  It also shows the user accounts defined in the user directory, with options to disable or remove any that are no longer needed. 
 
 This allows the security team to quickly complete the review.
 
+???+ note "Notes on Quickstart Environment"
+    The screen shots that follow are from the Quickstart demo environment.  Because it is a demo environment, there are many users with clear text passwords and missing user profiles.  This is to show off the auditing feature of Egeria and to make the system accessible to people exploring Egeria's capabilities.  Feel free to experiment with with fixing/disabling invalid user accounts.
+
+
 ## Clear text passwords
 
-This is a screenshot of an exception identifying a user that still has the setup clear text password.  It should be changed immediately causing it to be encrypted.  (This can be done during the user logon.)
+This is a screenshot of an exception identifying a user that still has the setup clear text password.  It should be changed immediately causing it to be encrypted.  (This can be done during the user logon.). The auditors should set the credentials invalid to force the user to change their password on the next login.
 
 ![Clear text passwords](clear-text-password.png)
 
 ## Missing user profiles
 
-This next screenshot shows a user that is missing a user profile.  It is not necessarily an error.  However, it is a good idea to create a user profile for this user to make it easy to identify who or what took specific actions in open metadata.
+This next screenshot shows a user that is missing a user profile.  It is not necessarily an error.  Typically a person would create their profile when they log on for the first time (see [My Egeria](/user-interfaces/my-egeria/overview)).  User profiles for digital processes (ITProfiles) need to be added by a program.  It is a good idea to create a user profile for digital users to simplify the identification of who or what took specific actions in open metadata.
 
 ![Missing user profiles](missing-user-profile.png)
 

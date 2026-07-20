@@ -7,6 +7,11 @@ The **quickstart** environment is a pre-configured environment based around the 
 learning and experimentation.  It is a good starting point for those who are new to Egeria and want to
 get a feel for the platform without having to configure everything from scratch.
 
+
+<div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1Sfu5mHA1u8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 The instructions below will guide you through the process of setting up the environment on you own computer.  There is also a public version of the environment that you can use to explore Egeria, called the [Egeria Quickstart Demo Sandbox](/egeria-workspaces/demo-environment/overview).
 
 ## Up and running with Quickstart

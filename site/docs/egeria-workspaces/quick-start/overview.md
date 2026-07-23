@@ -18,7 +18,7 @@ The instructions below will guide you through the process of setting up the envi
 
 ---8<-- "snippets/tasks/task-getting-workspaces.md"
 
-??? tip "4. "Run the start-up command"
+??? tip "4. Run the start-up command"
 
     Now, from the `egeria-workspaces` directory,
     run the start up command.

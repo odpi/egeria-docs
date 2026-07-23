@@ -7,6 +7,10 @@
 
 [Pragmatic Data Research](https://pdr-associates.com/) has kindly offered to host a version of [Egeria Quickstart](/egeria-workspaces/quick-start/overview) on their website.  You can access it at [https://egeria.pdr-associates.com](https://egeria.pdr-associates.com).  It is a public environment that is reset each day so you cannot store your own metadata in it, if you want to keep it, that is :).  It is also possible that a previous user may have already run some labs.  
 
+<div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JV2UdEo1k8A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## Registering for the Demo Environment
 
 The first time you access the demo environment, you will be prompted to register.  This is a simple process that involves providing your name and email address.  

@@ -11,6 +11,10 @@ There are two choices of environment provided by Egeria Workspaces: **Quickstart
 
 If you are new to Egeria and want to find out what it does, you should start with the [Quickstart environment](/egeria-workspaces/quick-start/overview).  If you are already familiar with Egeria and want to use it for your own projects, you should use the [Freshstart environment](/egeria-workspaces/fresh-start/overview).
 
+<div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/igIVACD4b_g" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## What is included?
 
 The diagram below outlines what to expect in a Egeria Workspaces environment.  The components in blue are part of the basic Egeria environment that are started with either Quickstart and/or Freshstart.

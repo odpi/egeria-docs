@@ -17,7 +17,7 @@ The *ImplementationResource* relationship identifies useful components when buil
 The *ImplementedBy* relationship can be used to identify how design elements, such as solution components and [design models](/types/5/0565-Design-Models) can be refined into implementation artifacts.  The ends of this relationship are [Referenceable](/types/0/0010-Base-Model) to allow flexibility in the level of detail that is captured in open metadata.
 
 
-??? deprecated "Deprecated types"
-    - The *DigitalServiceImplementation* (0710), *InformationSupplyChainImplementation* (0720) and *SolutionComponentImplementation* relationships are deprecated in favour of the more generic *ImplementedBy* relationship.
+???+ info "API Support"
+    Support for creating and maintaining these relationships is found in [Governance Officer API](/services/omvs/governance-officer/overview) and, for connectors, in the [GovernanceDefinitionClient](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/connectorcontext/GovernanceDefinitionClient.html) of the connector's context.
 
 --8<-- "snippets/abbr.md"

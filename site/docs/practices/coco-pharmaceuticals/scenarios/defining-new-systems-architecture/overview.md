@@ -77,7 +77,7 @@ They saw uses for AI in every stage.  The biggest *aha* realization was in the r
 
 With this in mind, they evolved their approach to AI-based data integration.
 
-After the meeting, Polly entered the notes from the meeting into [Claude Code](claude.com/claude-code) and it produced a [Dr.Egeria](/user-interfaces/dr-egeria/overview) file that included the commands to create the governance program for their AI-based software development.  Claude event made some helpful suggestions on they types of metrics they could consider.
+After the meeting, Polly entered the notes from the meeting into [Claude Code](claude.com/claude-code) and it produced a [Dr.Egeria](/user-interfaces/dr-egeria/overview) file that included the commands to create the governance program for their AI-based software development.  Claude even made some helpful suggestions on they types of metrics they could consider.
 
 ??? info "Loading the AI-based software development process"
   The Markdown file containing the AI-based software development process is available in either the JupyterLab or Obsidian environment of [Quickstart](/egeria-workspaces/quick-start/overview).

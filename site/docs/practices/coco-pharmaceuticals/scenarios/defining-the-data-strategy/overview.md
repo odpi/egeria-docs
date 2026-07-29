@@ -54,7 +54,7 @@ In Coco Pharmaceutical's case they need to reduce cycle times across business.  
 
 Jules realizes there is a lot to do!  He creates a simple framework that organizes what needs to be done into understandable chunks that can be delivered and measured incrementally.  Figure 1 shows his first attempt.
 
-![Figure 1](data-strategy-framework.png)
+![Figure 1](data-strategy-framework-with-comments.svg)
 > Figure 1: Data Strategy Framework
 
 He feels the names of the framework could be improved, but it essentially covers the major building blocks:
@@ -74,7 +74,7 @@ business partners, it needs shared agreements on:
 * **Optimized information supply chains** - the flow of data between the systems needs to be understood, optimized and managed so that any failure is quickly detected, located and resolved without affecting the service offered to the hospitals.
 * **Authoritative sources** - provides trusted sources of key information, often used by multiple parts of the business.
 * **Continuous analytics** - analytics is core to the discovery and validation of personalized medicine.  In addition, the agile nature of the corresponding business operations needs analytics to automate and monitor the flow of orders, manufacturing, delivery of drugs and payments.
-* **Data enabled employees** - the employees of each part of the business, and the board, needs access to up-to-date information about how their business is operating.  They need to be able to use data to continuously evolve and expand the rand of treatments on offer.
+* **Data enabled employees** - the employees of each part of the business, and the board, needs access to up-to-date information about how their business is operating.  They need to be able to use data to continuously evolve and expand the range of treatments on offer.
 * **Multi-faceted governance model** - finally, their governance model can not just cover data - their transformation needs and integrated governance program that covers data, infrastructure, privacy, security and corporate operations.  Jules needs to talk to the board about a comprehensive approach.  He envisages a team of governance leaders, each responsible for their own governance domain, but working together in a coordinated response.
 
 ## The first data strategy review

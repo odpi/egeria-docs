@@ -61,4 +61,15 @@ Desired Outcome:
 * [Defining Multi-Faceted Governance](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview)
 * [New Governance Education Program](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
 
+## Video blogs
+
+### My first 30 days at Coco Pharmaceuticals
+
+<div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/W-BfHCqKWpU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+
 --8<-- "snippets/abbr.md"

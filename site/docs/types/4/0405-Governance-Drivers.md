@@ -38,7 +38,6 @@ The *GovernanceDriverLink* relationship is used to link related governance drive
 ## Related Information
 
 * Governance Drivers are types of *GovernanceDefinitions* which are located in model [0401](/types/4/0401-Governance-Definitions).
-
-* The [Governance Officer API](/services/omvs/governance-officer/overview) provides support for defining governance drivers. 
+* Governance definitions can be set up through the [Governance Officer API](/services/omvs/governance-officer/overview), or more typically using [Dr.Egeria](/user-interfaces/dr-egeria/overview).
 
 --8<-- "snippets/abbr.md"

@@ -2,7 +2,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Dr Egeria MD
+# Dr.Egeria MD
 
 MD is short for Markdown.  It is a lightweight markup language that can be used to create documents.  Markdown is widely used in software development, documentation, and blogging.  It is also supported in a great many tools.  Markdown documents can be shared through email and chat interfaces.  They are also parsable by AI document processors.  In summary, markdown is an excellent format for gathering information from subject-matter experts and documenting projects, ideas, requirements, specifications, and other proposals. 
 

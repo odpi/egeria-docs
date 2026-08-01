@@ -24,7 +24,7 @@ A *GovernanceControlLink* relationship links two related *GovernanceControl* ent
 
 !!! info "Further Information"
 
-    * The [Governance Officer OMVS](/services/omvs/governance-officer/overview) provides support for defining governance definitions through its REST API. 
+    * Governance definitions can be set up through the [Governance Officer API](/services/omvs/governance-officer/overview), or more typically using [Dr.Egeria](/user-interfaces/dr-egeria/overview).
 
     * There is further detail on the content of the governance controls in the following models:
 

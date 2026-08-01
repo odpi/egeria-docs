@@ -101,11 +101,11 @@ He begins to work on the next level of detail with [Erin Overview](/practices/co
 
 ## Further information
 
-Jules' data strategy framework is preloaded into the [Quickstart environment](/egeria-workspaces/quick-start/overview).  If you are not using quickstart, you can load it into your own metadata store using [CocoComboArchive.omarchive](/content-packs/coco-content-pack/overview).
+Jules' data strategy framework is available on [GitHub egeria-workspaces](https://github.com/odpi/egeria-workspaces/tree/main/coco-workbooks/0.%20data-governance-program) and can be loaded into the [Quickstart environment](/egeria-workspaces/quick-start/overview).  If you are not using quickstart, you can load it into your own metadata store using [Dr.Egeria](/user-interfaces/dr-egeria/overview).
 
-Use the [Egeria Explorer](/user-interfaces/egeria-explorer/overview) to explore the data strategy.  Select the **Governance Definitions** tile and you will see **Governance Strategy** in the left-hand column.  Open it up and the strategy is there.
+Once loaded, use the [Egeria Explorer](/user-interfaces/egeria-explorer/overview) to explore the data strategy.  Select the **Solution Architect** tile and you will see **Data Strategy** in the left-hand column.  Open it up and the strategy is there.  You can navigate to elements linked from the data strategy as the program is developed.
 
-You can define your own data strategy through the [Governance Officer API](/services/omvs/governance-officer/overview).
+You can define your own data strategy framework through the [Solution Architect API](/services/omvs/solution-architect/overview), or more typically using [Dr.Egeria](/user-interfaces/dr-egeria/overview).
 
 
 

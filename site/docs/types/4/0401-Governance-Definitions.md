@@ -57,6 +57,7 @@ The *GovernedBy* relationship links the governance definitions to the elements t
 
 !!! info "Implementing Services"
 
+    * Governance definitions are typically defined using [Dr.Egeria](/user-interfaces/dr-egeria/overview).
     * The [Governance Officer API](/services/omvs/governance-officer/overview) provides the APIs for maintaining the definitions of the governance zones, governance definitions, subject area definitions and governance officers. It uses the *GovernedBy* relationship to link governance definitions with [subject area definitions](/types/4/0425-Subject-Areas) and [governance zone definitions](/types/4/0424-Governance-Zones).
 
 --8<-- "snippets/abbr.md"

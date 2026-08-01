@@ -45,6 +45,6 @@ The *GovernanceResponse* relationship links a GovernanceDriver entity to a Gover
 The *GovernancePolicyLink* relationship connects two related *GovernancePolicy* entities.
 
 !!! info "Further Information"
-    The [Governance Officer](/services/omvs/governance-officer/overview) API provides support for defining governance policies. 
+    Governance definitions can be set up through the [Governance Officer API](/services/omvs/governance-officer/overview), or more typically using [Dr.Egeria](/user-interfaces/dr-egeria/overview).
 
 --8<-- "snippets/abbr.md"

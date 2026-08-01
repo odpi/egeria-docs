@@ -85,5 +85,13 @@ For example, for the principle *Information users are identified* Ivor may defin
 7. Individuals are given responsibility for correcting errors that are found in particular types of data.  For example, Harry Hopeful (Sales) becomes responsible for data about his customers.  He is notified when issues are discovered and he must fix them as soon as possible.
 8. The summaries of the rules execution and exceptions detected are recorded for Jules to review.  He is looking for continual improvement.  He reviews the results with Erin and they plan further improvements.
 
+## Further information
+
+Jules' data governance program is available on [GitHub egeria-workspaces](https://github.com/odpi/egeria-workspaces/tree/main/coco-workbooks/0.%20data-governance-program) and can be loaded into the [Quickstart environment](/egeria-workspaces/quick-start/overview).  If you are not using quickstart, you can load it into your own metadata store using [Dr.Egeria](/user-interfaces/dr-egeria/overview).
+
+Use the [Egeria Explorer](/user-interfaces/egeria-explorer/overview) to explore the data strategy.  Select the **Governance Definitions** tile and you will see **Governance Drivers** in the left-hand column.  Open it up and the governance program is there.
+
+You can define your own data governance program through the [Governance Officer API](/services/omvs/governance-officer/overview), or more typically through [Dr.Egeria](/user-interfaces/dr-egeria/overview).
+
 
 --8<-- "snippets/abbr.md"

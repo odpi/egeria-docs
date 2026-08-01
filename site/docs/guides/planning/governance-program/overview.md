@@ -163,7 +163,7 @@ A *Governance Definition* is a metadata element that describes the context or pu
 > Using governance definitions to provide traceability from business drivers and regulations to actions.
 
 ??? education "Defining governance definitions"
-    Governance definitions can be set up through the [Governance Officer OMVS](/services/omvs/governance-officer/overview).
+    Governance definitions can be set up through the [Governance Officer API](/services/omvs/governance-officer/overview), or more typically using [Dr.Egeria](/user-interfaces/dr-egeria/overview).
 
 ## Subject areas
 

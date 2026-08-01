@@ -506,15 +506,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="jvJXFqL6fXRPoGgnXWhq" name="governance-definitions">
-    <mxGraphModel dx="1767" dy="642" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3271" dy="1658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="N59K1eUxawvdz6MUQs9t-0" />
         <mxCell id="N59K1eUxawvdz6MUQs9t-1" parent="N59K1eUxawvdz6MUQs9t-0" />
         <mxCell id="4zBXKA-9XV_gSS2ZH7ja-5" parent="N59K1eUxawvdz6MUQs9t-1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontColor=#000000;align=center;" value="" vertex="1">
           <mxGeometry height="139" width="343" x="812.5" y="1391" as="geometry" />
-        </mxCell>
-        <mxCell id="N59K1eUxawvdz6MUQs9t-2" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Business Imperative" vertex="1">
-          <mxGeometry height="60" width="120" x="354.5" y="120" as="geometry" />
         </mxCell>
         <mxCell id="N59K1eUxawvdz6MUQs9t-3" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Regulation" vertex="1">
           <mxGeometry height="60" width="120" x="514.5" y="120" as="geometry" />
@@ -537,14 +534,8 @@
         <mxCell id="dd0iA4J-TGq2k0IaQKYA-5" edge="1" parent="N59K1eUxawvdz6MUQs9t-1" source="N59K1eUxawvdz6MUQs9t-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="dd0iA4J-TGq2k0IaQKYA-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="N59K1eUxawvdz6MUQs9t-7" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#b1ddf0;strokeColor=#10739e;" value="Business Imperatives" vertex="1">
+        <mxCell id="N59K1eUxawvdz6MUQs9t-7" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#b1ddf0;strokeColor=#10739e;" value="Business Strategy" vertex="1">
           <mxGeometry height="60" width="120" x="354.5" y="40" as="geometry" />
-        </mxCell>
-        <mxCell id="N59K1eUxawvdz6MUQs9t-8" edge="1" parent="N59K1eUxawvdz6MUQs9t-1" source="N59K1eUxawvdz6MUQs9t-7" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="N59K1eUxawvdz6MUQs9t-2" value="">
-          <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="444.5" y="390" as="sourcePoint" />
-            <mxPoint x="494.5" y="340" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="N59K1eUxawvdz6MUQs9t-9" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Governance&lt;br&gt;Principle" vertex="1">
           <mxGeometry height="60" width="120" x="442.5" y="280" as="geometry" />

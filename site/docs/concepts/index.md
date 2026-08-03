@@ -208,6 +208,7 @@
 - [Likes](/concepts/like)
 - [Lineage](/features/lineage-management/overview)
 - [Lineage Warehouse](/concepts/lineage-warehouse)
+- [Literate Governance](/concepts/literate-governance)
 - [Local Metadata Collection Id](/concepts/metadata-collection-id)
 - [Local Repository Services (OMRS)](/services/omrs)
 

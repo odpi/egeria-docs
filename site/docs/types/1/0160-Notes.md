@@ -11,6 +11,10 @@
 
 A *NoteLog* entity provides a collection point for actions about a particular subject or element.
 
+## Note entity
+
+A *Note* entity provides a place to document an opinion or additional information about another element or situation.
+
 ## AttachedNoteLog relationship
 
 The *AttachedNoteLog* connects a note log to one or more elements that are described in the note log's entries. A referenceable object can have many note logs linked off of it.  If the note log is linked to only one referenceable, it may also be anchored to the referenceable so it is deleted with the referenceable.

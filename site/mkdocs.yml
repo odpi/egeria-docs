@@ -713,6 +713,7 @@ nav:
       - Like: concepts/like.md
       - Lineage: concepts/lineage.md
       - Lineage Warehouse: concepts/lineage-warehouse.md
+      - Literate Governance: concepts/literate-governance.md
       - Meeting: concepts/meeting.md
       - Memento Classification: concepts/memento.md
       - Metadata Access Point: concepts/metadata-access-point.md

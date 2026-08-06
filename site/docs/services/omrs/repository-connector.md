@@ -46,15 +46,14 @@ This connector translates the calls to its OMRS Connector API to IGC's REST API 
 then translates the results of these calls to appropriate responses on its API.
 This connector also runs in a [repository proxy](/concepts/repository-proxy) server.
 
-* **[In-memory OMRS Repository Connector](/connectors/repository/in-memory/overview)** -
+* **[In-memory OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector/README.md#in-memory-repository-connector){ target=gh }** -
 This connector provides a simple in-memory repository for testing/demos or
 small-scale environments where metadata is being managed remotely and cached locally.
 It has native support for the open metadata types an instances
 and so runs in a [metadata server](/concepts/metadata-access-store).
 
-* **[Graph OMRS Repository Connector](/connectors/repository/janus-graph/overview)** -
-This connector is provides a high functioning open metadata repository implementation built on JanusGraph.
-It also has native support for the open metadata types an instances
-and so runs in a [metadata access server](/concepts/metadata-access-store).
+* **[PostgreSQL OMRS Repository Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/postgres-repository-connector/README.md){ target=gh }** -
+This connector provides a high-speed bi-temporal repository implementation that stores the open metadata in a PostgreSQL database schema.
+It has native support for the open metadata types and instances and so runs in a [metadata access store](/concepts/metadata-access-store).
 
 --8<-- "snippets/abbr.md"

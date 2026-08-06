@@ -29,7 +29,7 @@ To join an open metadata repository cohort, a server first adds a [registration 
 
 ### Subsequent servers
 
-When another server joins the cohort, it also adds its registration event to the cohort topic(s) and begins to receive the registration events from other members. The other members respond with [re-registration events](/concepts/cohort-events/#registry-events) to ensure the new member has the latest information about the originator's capabilities. The exchange of registration information causes all members to verify that they have the latest information about their peers. This is maintained in their own [cohort registry store](/connectors/cohort-registry-store-connector) so that they can reconfigure themselves on restart without needing the other members to resend their registration information.
+When another server joins the cohort, it also adds its registration event to the cohort topic(s) and begins to receive the registration events from other members. The other members respond with [re-registration events](/concepts/cohort-events/#registry-events) to ensure the new member has the latest information about the originator's capabilities. The exchange of registration information causes all members to verify that they have the latest information about their peers. This is maintained in their own [cohort registry store](/concepts/cohort-registry-store-connector) so that they can reconfigure themselves on restart without needing the other members to resend their registration information.
 
 ![Figure 2](formation-of-a-cohort-2.svg)
 > **Figure 2:** When another server joins the cohort they exchange registration information.
@@ -90,12 +90,12 @@ The list of servers that are called by a federated query is built dynamically fr
 In the *Local Repository* section of the configuration document are two connections:
 
 * *LocalRepositoryLocalConnection* is the [connector to the metadata repository](/concepts/repository-connector) for this local server.
-* *LocalRepositoryRemoteConnection* is the [connector that remote servers](/connectors/#cohort-member-client-connectors) should use in their federated queries to retrieve information from this local repository.
+* *LocalRepositoryRemoteConnection* is the [connector that remote servers](/concepts/cohort-member-client-connector) should use in their federated queries to retrieve information from this local repository.
 
 ![Local Repository Configuration](remote-connection.svg)
 > Configuration document showing the both the local and remote connections for the local repository in a [metadata access store](/concepts/metadata-access-store) or [repository proxy](/concepts/repository-proxy).  In a [metadata access point](/concepts/metadata-access-point), both connections are null. In a metadata access store that does not support federated queries, LocalRepositoryRemoteConnection is null.
 
-The LocalRepositoryRemoteConnection is sent to the other cohort members in the registration request events. The default value specifies the [OMRS REST Repository Connector](/connectors/#cohort-member-client-connectors) as the remote repository connector.
+The LocalRepositoryRemoteConnection is sent to the other cohort members in the registration request events. The default value specifies the [OMRS REST Repository Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector/README.md){ target=gh } as the remote repository connector.
 
 ![Default Remote Repository Connector](default-remote-connector.svg)
 > The default remote-repository connector is a REST API client for the Repository REST API supported by Egeria OMAG Server Platform.

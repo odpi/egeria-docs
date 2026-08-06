@@ -59,7 +59,7 @@ For example, Egeria has a JDBC digital resource connector for accessing database
 
 When the digital resource connectors are defined in a virtual connection (rather than being initialized in the integration connector logic), the integration daemon can manage the lifecycle of the embedded connectors with the lifecycle of the integration connectors, reducing the chances of memory leaks and held resources as the connectors/integration daemon are restarted over the lifetime of their hosting OMAG Server Platform.
 
-This pattern is not always possible if the integration connector needs to use a different interface to access the third party technology's metadata from its resources.  For example, the [Kafka Monitor Integration Connector](/connectors/integration/kafka-monitor-integration-connector), which detects the creation of new Kafka Topics and catalogues them in open metadata, does not use the [Kafka Open Metadata Topic Connector](/connectors/resource/kafka-open-metadata-topic-connector) because it uses a different Apache Kafka interface to do its work.
+This pattern is not always possible if the integration connector needs to use a different interface to access the third party technology's metadata from its resources.  For example, the [Kafka Monitor Integration Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-kafka-connectors/README.md#kafka-monitor-integration-connector){ target=gh }, which detects the creation of new Kafka Topics and catalogues them in open metadata, does not use the [Kafka Open Metadata Topic Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/kafka-open-metadata-topic-connector/README.md){ target=gh } because it uses a different Apache Kafka interface to do its work.
 
 ### Metadata flow for your connector
 
@@ -224,7 +224,7 @@ The `isRefreshInProgress()` call is used to ensure this connector ignores events
 
 ### Working with the third party technology
 
-Ideally your integration connector should use an embedded [digital resource connector](/concepts/digital-resource-connector).  This is configured as an *embedded connection* in the VirtualConnection used to configure the integration connector.  When the integration connector is initialized, the embedded connections are used to create the embedded connectors.  They can be accessed via the *embeddedConnectors* variable.  As an example, here is the `start()` method from the [OpenLineage Event Receiver Integration Connector](/connectors/integration/open-lineage-event-receiver-integration-connector) which uses an embedded [Open Metadata Topic Connector](/concepts/open-metadata-topic-connector) to access an event source:
+Ideally your integration connector should use an embedded [digital resource connector](/concepts/digital-resource-connector).  This is configured as an *embedded connection* in the VirtualConnection used to configure the integration connector.  When the integration connector is initialized, the embedded connections are used to create the embedded connectors.  They can be accessed via the *embeddedConnectors* variable.  As an example, here is the `start()` method from the [OpenLineage Event Receiver Integration Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-event-receiver-integration-connector){ target=gh } which uses an embedded [Open Metadata Topic Connector](/concepts/open-metadata-topic-connector) to access an event source:
 
 ```java
 
@@ -299,7 +299,7 @@ Ideally your integration connector should use an embedded [digital resource conn
 ```
 Notice that *embeddedConnectors* is a list, since multiple connectors can be embedded.  The integration connector ignores any embedded connectors that are not *OpenMetadataTopicConnectors*.
 
-The [OpenLineage Event Receiver Integration Connector](/connectors/integration/open-lineage-event-receiver-integration-connector) also demonstrates how the register a listener with an [Open Metadata Topic Connector](/concepts/open metadata-topic-connector) to receive events from an event broker such as [Apache Kafka](https://kafka.apache.org/).
+The [OpenLineage Event Receiver Integration Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-event-receiver-integration-connector){ target=gh } also demonstrates how the register a listener with an [Open Metadata Topic Connector](/concepts/open-metadata-topic-connector) to receive events from an event broker such as [Apache Kafka](https://kafka.apache.org/).
 
 The integration connector implements [OpenMetadataTopicListener](https://odpi.github.io/egeria/org/odpi/openmetadata/repositoryservices/connectors/openmetadatatopic/OpenMetadataTopicListener.html).
 

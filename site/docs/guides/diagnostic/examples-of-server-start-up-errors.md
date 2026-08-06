@@ -163,7 +163,7 @@ Caused by: java.util.concurrent.ExecutionException: org.apache.kafka.common.erro
 Caused by: org.apache.kafka.common.errors.TimeoutException: Call(callName=listNodes, deadlineMs=1620829049902, tries=1, nextAllowedTryMs=1620829050010) timed out at 1620829049910 after 1 attempt(s)
 Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: listNodes
 ```
-Refer to [kafka topic connector](/connectors/resource/kafka-open-metadata-topic-connector) for more information on the connector behaviour and configuration options including startup behaviour.
+Refer to [kafka topic connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/kafka-open-metadata-topic-connector/README.md){ target=gh } for more information on the connector behaviour and configuration options including startup behaviour.
 
 
 ## Further information

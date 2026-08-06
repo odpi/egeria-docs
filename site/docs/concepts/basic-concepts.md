@@ -45,7 +45,7 @@ Many organizations establish a standard choice of their event
 broker service which is why Egeria uses connectors to connect to the event broker so that Apache Kafka can be swapped out
 for a different event broker implementation.
 As such, each topic is accessed through an
-[open metadata topic connector](/connectors/#open-metadata-topic-connectors).
+[open metadata topic connector](/concepts/open-metadata-topic-connector).
 
 ??? education "Further information"
     - [Configuring the event broker for Egeria](/concepts/event-bus)
@@ -107,7 +107,7 @@ Often an asset manager is specialized for particular types of assets. For exampl
 
 An asset manager may integrate with the open metadata ecosystem using one of three methods:
 
-* as a [cohort member](/concepts/cohort-member) through the [Open Metadata Repository Services (OMRS) connectors](/connectors/#repository-and-event-mapper-connectors) or 
+* as a [cohort member](/concepts/cohort-member) through the [Open Metadata Repository Services (OMRS) connectors](/concepts/repository-connector) or 
 
 * using an [integration connector](/concepts/integration-connector) or
 

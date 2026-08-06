@@ -114,7 +114,7 @@ Archives can also be loaded to a running server. Typically, an open metadata arc
 
     The body of the request should be the fully-qualified path name or path relative to the startup directory of the OMAG Server Platform -- and the file name should not have any quotes around it.
 
-Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/concepts/connection). These connections refer to [open metadata archive connectors](/connectors/open-metadata-archive-store-connector) that can read and retrieve the open metadata archive content.
+Alternatively it is possible to set up the list of open metadata archives as a list of [connections](/concepts/connection). These connections refer to [open metadata archive connectors](/concepts/open-metadata-archive-store-connector) that can read and retrieve the open metadata archive content.
 
 !!! post "POST - load from connection(s)"
     ```

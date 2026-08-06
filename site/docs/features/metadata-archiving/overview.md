@@ -70,7 +70,7 @@ The open metadata archive has three parts to it.  This is shown in **Figure 4**.
 
 ## Loading open metadata archives
 
-A metadata server's configuration document can list the archives to load each time the server is started.  This is useful if the server does not retain metadata through a server restart (like the [in-memory metadata repository](/connectors/repository/in-memory)).  Open metadata archives may also be loaded while the server is running using a REST API call.
+A metadata server's configuration document can list the archives to load each time the server is started.  This is useful if the server does not retain metadata through a server restart (like the [in-memory metadata repository :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/inmemory-repository-connector/README.md#in-memory-repository-connector){ target=gh }).  Open metadata archives may also be loaded while the server is running using a REST API call.
 
 These articles describe how to load open metadata archives into a server:
 

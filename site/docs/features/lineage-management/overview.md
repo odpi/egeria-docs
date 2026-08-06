@@ -227,7 +227,7 @@ Since the proxy backend is only supporting one processing engine it can be manag
 
 ### Egeria's Open Lineage support
 
-Egeria offers two approaches to capture Open Lineage events from the processing engines.  The first (figure 23) uses an [integration connector](/connectors/integration/open-lineage-event-receiver-integration-connector) listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
+Egeria offers two approaches to capture Open Lineage events from the processing engines.  The first (figure 23) uses an [integration connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-event-receiver-integration-connector){ target=gh } listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
 
 ![Figure 23](/features/lineage-management/open-lineage-async-egeria-integration.svg)
 > **Figure 23:** Receiving events via the Kafka topic populated by the proxy backend
@@ -237,7 +237,7 @@ Egeria's [integration daemon](/concepts/integration-daemon) also supports the Op
 ![Figure 24](/features/lineage-management/open-lineage-direct-egeria-integration.svg)
 > **Figure 24:** Receiving events via the Open Lineage API directly into the integration daemon
 
-The integration daemon hosts the integration connectors that [process the Open Lineage events](https://egeria-project.org/connectors/#capturing-and-publishing-lineage).  They are divided into two groups:
+The integration daemon hosts the integration connectors that [process the Open Lineage events :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md){ target=gh }.  They are divided into two groups:
 
 - the integration connectors that are acquiring or creating the Open Lineage events.
 
@@ -251,7 +251,7 @@ They are connected to each other by the integration daemon:
 
 - An integration connector may register a listener to the Open Metadata Service's OutTopic and issue requests to the Open Metadata Service's REST API to correlate the metadata in the open metadata ecosystem with the content of the Open Lineage events.  
 
-Figure 25 illustrates these mechanisms with the [five pre-build integration connectors](/connectors/#capturing-and-publishing-lineage) supplied by Egeria.
+Figure 25 illustrates these mechanisms with the [five pre-build integration connectors :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md){ target=gh } supplied by Egeria.
 
 ![Figure 25](/features/lineage-management/open-lineage-integration-connectors.svg)
 > **Figure 25:** The pre-built integration connectors supplied by Egeria
@@ -262,19 +262,19 @@ The numbers on the diagram refer to the notes below.
 
 2. A third party technology is using the proxy backend to publish Open Lineage event to a Kafka topic.
 
-3. The [Open Lineage Event Receiver](/connectors/integration/open-lineage-event-receiver-integration-connector) integration connector is receiving Open Lineage events from the Kafka topic.  It passes them to the integration daemon's context manager via its own context.
+3. The [Open Lineage Event Receiver :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-event-receiver-integration-connector){ target=gh } integration connector is receiving Open Lineage events from the Kafka topic.  It passes them to the integration daemon's context manager via its own context.
 
-4. The [Governance Action Open Lineage](/connectors/integration/governance-action-open-lineage-integration-connector) integration connector has registered a listener to receive events about the [engine actions](/concepts/engine-action) that are being processed in the open metadata ecosystem.  
+4. The [Governance Action Open Lineage :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#governance-action-open-lineage-integration-connector){ target=gh } integration connector has registered a listener to receive events about the [engine actions](/concepts/engine-action) that are being processed in the open metadata ecosystem.  
 
 5. The Governance Action Open Lineage integration connector creates Open Lineage events to represent the processing by the governance actions and passes them to the integration daemon's context manager via its own context.
 
 6. An integration connector that wishes to receive Open Lineage events must register a listener with the integration daemon's context manager via its own context.  Once it is registered, it receives all Open Lineage events that are subsequently passed to the context manager.
 
-7. The [API-based Open Lineage Log Store](/connectors/integration/api-based-open-lineage-log-store-integration-connector) registers a listener for Open Lineage events and passes each one received to a remote server supporting the Open Lineage API (such as [Marquez](https://marquezproject.github.io/marquez/)).
+7. The [API-based Open Lineage Log Store :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#api-based-open-lineage-log-store-integration-connector){ target=gh } registers a listener for Open Lineage events and passes each one received to a remote server supporting the Open Lineage API (such as [Marquez](https://marquezproject.github.io/marquez/)).
 
-8. The [File-based Open Lineage Log Store](/connectors/integration/file-based-open-lineage-log-store-integration-connector) registers a listener for Open Lineage events and stores each event received as a file in a nominated folder on the file system.
+8. The [File-based Open Lineage Log Store :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#file-based-open-lineage-log-store-integration-connector){ target=gh } registers a listener for Open Lineage events and stores each event received as a file in a nominated folder on the file system.
 
-9. The [Open Lineage Cataloguer](/connectors/integration/open-lineage-cataloguer-integration-connector) registers a listener for Open Lineage events and ensures the jobs describe in them are catalogued as [Processes](/types/2/0215-Software-Components) in open metadata.  Depending on its configuration, it may also catalog each run as a *TransientEmbeddedProcess* entity linked to the job's process entity.
+9. The [Open Lineage Cataloguer :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-cataloguer-integration-connector){ target=gh } registers a listener for Open Lineage events and ensures the jobs describe in them are catalogued as [Processes](/types/2/0215-Software-Components) in open metadata.  Depending on its configuration, it may also catalog each run as a *TransientEmbeddedProcess* entity linked to the job's process entity.
 
 ### Open Lineage Log Store
 

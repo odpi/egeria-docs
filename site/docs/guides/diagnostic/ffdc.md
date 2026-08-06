@@ -81,7 +81,7 @@ Below is an example of an audit log record formatted in JSON.  This is the style
         "componentDevelopmentStatus": "IN_DEVELOPMENT",
         "componentName": "Egeria:IntegrationConnector:Catalog:ApacheAtlas:3ab99700-7750-4eca-8670-55b6f21bda14",
         "componentDescription": "Connector publishes active glossary terms to Apache Atlas.",
-        "componentWikiURL": "https://egeria-project.org/connectors/integration/apache-atlas-integration-connector/"
+        "componentWikiURL": "https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors/docs/apache-atlas-catalog-integration-connector.md"
     },
     "actionDescription": "processAtlasGlossaryTerm",
     "threadId": 185,
@@ -115,7 +115,7 @@ This next example shows an *Exception* message.  Typically, these are produced (
         "componentDevelopmentStatus": "IN_DEVELOPMENT",
         "componentName": "Egeria:IntegrationConnector:Catalog:ApacheAtlas:3ab99700-7750-4eca-8670-55b6f21bda14",
         "componentDescription": "Connector publishes active glossary terms to Apache Atlas.",
-        "componentWikiURL": "https://egeria-project.org/connectors/integration/apache-atlas-integration-connector/"
+        "componentWikiURL": "https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors/docs/apache-atlas-catalog-integration-connector.md"
     },
     "actionDescription": "saveAtlasGlossaryCategory(glossaryGUID)",
     "threadId": 297,

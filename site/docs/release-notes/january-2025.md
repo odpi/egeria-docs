@@ -9,7 +9,7 @@ Welcome to the Egeria community's January 2025 newsletter.  Since our [last news
 
 We are excited to announce a new open metadata repository choice for Egeria, hosted on PostgreSQL.  The contents of the repository are stored in 7 tables within its own database schema.  A single PostgreSQL server/database may host multiple repositories.  
 
-The [PostgresRepositoryConnector](https://egeria-project.org/connectors/repository/postgres/overview/) offers high-speed metadata loading, full range of queries, including bi-temporal queries and queries into metadata properties of type array and map.  It is possible to turn on debug logging and see every SQL command issued by Egeria.  This transparency has helped in debugging issues both in Egeria and calling code.  It has also lead to some valuable performance improvements in Egeria's core runtime.  These are incorporated in Egeria's 5.2 release.
+The [PostgresRepositoryConnector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/postgres-repository-connector/README.md){ target=gh } offers high-speed metadata loading, full range of queries, including bi-temporal queries and queries into metadata properties of type array and map.  It is possible to turn on debug logging and see every SQL command issued by Egeria.  This transparency has helped in debugging issues both in Egeria and calling code.  It has also lead to some valuable performance improvements in Egeria's core runtime.  These are incorporated in Egeria's 5.2 release.
 
 Operationally, PostgreSQL has the advantage that it is available on many (all?) cloud platforms and most organizations have experience in managing PostgreSQL database (such as high-availability, backup and restore).
 
@@ -36,7 +36,7 @@ The [Technology Content Packs](https://egeria-project.org/content-packs/) contai
 * **Delete Governance Action Processes** accept the placeholders for a technology template, looks up the corresponding metadata element that represents the requested instance of the technology and deletes it.  This is useful if you pass incorrect values to the previous two governance action process, since it cleans up the metadata created with the wrong values allowing you to start again.
 * **Provision Governance Action Processes** accepts the identifier of a metadata element that describes a desired digital resource and provisions the resource in the appropriate third party technology.
 
-As an example, below are mermaid visualizations for some of the new processes for [Unity Catalog](https://egeria-project.org/connectors/unity-catalog/):
+As an example, below are mermaid visualizations for some of the new processes for [Unity Catalog :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-manager-connectors/unity-catalog-connectors){ target=gh }:
 
 ![Create and Survey](https://egeria-project.org/governance-action-processes/unity-catalog-server-create-and-survey.png)
 
@@ -45,7 +45,7 @@ As an example, below are mermaid visualizations for some of the new processes fo
 
 ## Governance Action Process Lineage
 
-In addition to publishing [open lineage events](https://egeria-project.org/connectors/integration/governance-action-open-lineage-integration-connector/) when they run, governance action processes also create a [GovernanceActionProcessInstance](https://egeria-project.org/types/4/0462-Governance-Action-Processes/) entity linked to the [engine actions](https://egeria-project.org/concepts/engine-action/) that were created during the execution of the governance action process.  It is then possible to query both the design and the execution of the process via *pyegeria* and compare then using Mermaid visualizations.
+In addition to publishing [open lineage events :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#governance-action-open-lineage-integration-connector){ target=gh } when they run, governance action processes also create a [GovernanceActionProcessInstance](https://egeria-project.org/types/4/0462-Governance-Action-Processes/) entity linked to the [engine actions](https://egeria-project.org/concepts/engine-action/) that were created during the execution of the governance action process.  It is then possible to query both the design and the execution of the process via *pyegeria* and compare then using Mermaid visualizations.
 
 | Design of Governance Action Process | Single Execution of this Governance Action Process |
 | ----------------------------------- | --------------------------------------------------- |

@@ -63,13 +63,26 @@ Desired Outcome:
 
 ## Video blogs
 
+These video blogs describe the journey that Jules Keeper made in setting the Coco Pharmaceuticals governance program using Egeria.
+
 ### My first 30 days at Coco Pharmaceuticals
+
+This video covers Jules Keeper, CDO, recalling his experiences during his first 30 days at Coco Pharmaceuticals.  He discusses his philosophy relating to governance, and his overall approach.  It shows him interviewing various colleagues across the company, and pulling together his first outline for their data strategy.
 
 <div class="video-wrapper">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/W-BfHCqKWpU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+### Literate Governance
 
+This video shows Jules' first use of Dr.Egeria as he bring key executives together to create a collaborating team of govenrance leaders.  He discusses the importance of literate governance, and why it worked so well at these stages.  
+
+<div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/OyGForxkmM4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+???+ info "Use of Claude AI"
+    In this video we cove the use of the Claude AI service to help with the word-smithing of definitions.  Claude works flawlessly with Dr.Egeria, but so do other public AI services.  The important step is to provide the AI with the templates so it has access to the correct command structure.  The templates are available in the [Egeria Workspaces GitHub repository](https://github.com/odpi/egeria-workspaces/tree/main/templates).
 
 
 --8<-- "snippets/abbr.md"

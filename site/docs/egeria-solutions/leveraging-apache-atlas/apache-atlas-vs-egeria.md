@@ -47,7 +47,7 @@ The diagram below shows an equivalent deployment of Egeria to cover the Apache A
 
 The first difference you notice is that Egeria has many more "servers" running.  These are logical [OMAG Servers](/concepts/omag-server) that can be deployed together on a single [OMAG Server Platform](/concepts/omag-server-platform) or replicated/distributed across multiple platforms to support horizontal scaling, isolation and high availability.
 
-Egeria's [Metadata Access Store](/concepts/metadata-access-store) is similar to Apache Atlas's server.  It provides REST APIs to maintain and search for metadata.  It also uses an external persistence store that is controlled by the libraries "plugged into" the metadata access store via a [repository connector](/concepts/repository-connector).  Egeria does have a [repository connector for JanusGraph](/connectors/repository/janus-graph/overview), so it is possible to deploy Egeria with the same type of persistent capability as Apache Atlas, however, neither server can read the other's repository despite using the same type of technology.  Egeria also has other repository connector implementations to provide additional features.  For example, the [XTDB repository connector](/connectors/repository/xtdb) provides historical queries over the metadata.
+Egeria's [Metadata Access Store](/concepts/metadata-access-store) is similar to Apache Atlas's server.  It provides REST APIs to maintain and search for metadata.  It also uses an external persistence store that is controlled by the libraries "plugged into" the metadata access store via a [repository connector](/concepts/repository-connector).  Egeria's [PostgreSQL repository connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/postgres-repository-connector/README.md){ target=gh } provides a high-speed, bi-temporal persistence option so it is possible to deploy Egeria with a similarly robust persistent capability to Apache Atlas, however, neither server can read the other's repository despite using a similar type of technology.
 
 The [Open Metadata Repository Services (OMRS)](/services/omrs) REST APIs are similar to Apache Atlas's Types, Entity, Relationship and Discovery Rest APIs.  Egeria also has more domain-specific REST APIs called [Open Metadata Access Services (OMAS)](/services/omas) to provide technical, governance and business metadata services for different user roles and use cases.
 
@@ -55,7 +55,7 @@ The OMRS also creates instance notifications similar to Apache Atlas's Entity an
 
 Egeria's UI is supported via the REST services of the [View Server](/concepts/view-server).  The *View Server* is stateless and can be scaled independently to the *Metadata Access Store*.  It provides additional validation to protect the metadata services behind it from cyberattacks.
 
-Egeria's [Integration Daemon](/concepts/integration-daemon) is Egeria's equivalent to Apache Atlas's hooks and bridges.  Just like the *View Server*, it can be deployed with the *Metadata Access Store* or deployed and scaled independently.  It runs [integration connectors](/concepts/integration-connector) that each connect to a third party technology to exchange metadata.  Egeria supports some integration connectors [out of the box](/connectors/#integration-connectors) plus a SDK to allow you to [build and deploy your own](/guides/developer/integration-connectors/overview).
+Egeria's [Integration Daemon](/concepts/integration-daemon) is Egeria's equivalent to Apache Atlas's hooks and bridges.  Just like the *View Server*, it can be deployed with the *Metadata Access Store* or deployed and scaled independently.  It runs [integration connectors](/concepts/integration-connector) that each connect to a third party technology to exchange metadata.  Egeria supports some integration connectors [out of the box](/connectors) plus a SDK to allow you to [build and deploy your own](/guides/developer/integration-connectors/overview).
 
 Egeria also has [Governance Servers](/concepts/governance-server) that enable different types of governance processes to be configured and controlled.
 
@@ -71,9 +71,9 @@ The biggest differences are:
 When you are either migrating between Apache Atlas and Egeria, the differences in the pre-defined types is the biggest challenge you are going to face.
 
 !!! education "Connectors for Apache Atlas"
-    * [Apache Atlas REST Connector](/connectors/system/apache-atlas-rest-connector) provides a Java interface to the Apache Atlas REST APIs.
-    * [Apache Atlas Survey Service](/connectors/discovery/apache-atlas-survey-service) builds a discovery analysis report on the contents of an Apache Atlas metadata repository.
-    * [Apache Atlas Integration Connector](/connectors/integration/apache-atlas-catalog-integration-connector) synchronizes metadata between Apache Atlas and the open metadata ecosystem.
+    * [Apache Atlas REST Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors/docs/apache-atlas-rest-connector.md){ target=gh } provides a Java interface to the Apache Atlas REST APIs.
+    * [Apache Atlas Survey Service :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors/docs/apache-atlas-survey-action-service.md){ target=gh } builds a discovery analysis report on the contents of an Apache Atlas metadata repository.
+    * [Apache Atlas Integration Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors/docs/apache-atlas-catalog-integration-connector.md){ target=gh } synchronizes metadata between Apache Atlas and the open metadata ecosystem.
 
 
 --8<-- "snippets/abbr.md"

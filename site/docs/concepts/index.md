@@ -114,8 +114,8 @@
 - Files
 
     - [omag.server.servername.config](/concepts/configuration-document)
-    - [servername.cohortname.registrystore](/connectors/runtime/file-cohort-registry-store-connector)
-    - [*.omarchive](/connectors/runtime/file-based-open-metadata-archive-store-runtime-connector)
+    - [servername.cohortname.registrystore :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/cohort-registry-store-connectors/cohort-registry-file-store-connector/README.md){ target=gh }
+    - [*.omarchive :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors/open-metadata-archive-file-connector/README.md){ target=gh }
 
 - [Framework Services](/services/#framework-services)
 - [Frameworks](/frameworks)
@@ -197,7 +197,7 @@
 
 ## K
 
-- [Kafka Connectivity](/connectors/resource-connectors/kafka-event-bus-connector)
+- [Kafka Connectivity :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/kafka-open-metadata-topic-connector/README.md){ target=gh }
 - [Karma Point](/concepts/karma-point)
 - [Karma Point Threshold](/concepts/karma-point)
 - [Karma Point Plateau](/concepts/karma-point-plateau)
@@ -328,7 +328,7 @@
 - [ResourceUse](/concepts/resource-use)
 - [Resource Connector](/concepts/digital-resource-connector)
 - [REST Client Connector](/concepts/rest-client-connector)
-- [REST Repository Connector](/connectors/runtime/omrs-rest-repository-connector)
+- [REST Repository Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/omrs-rest-repository-connector/README.md){ target=gh }
 - [Reviews](/concepts/review)
 - [Role](/concepts/person-role)
 - [Root URL](/concepts/platform-url-root)

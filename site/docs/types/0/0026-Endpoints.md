@@ -19,7 +19,7 @@ Endpoints are part of a [Connection](/types/2/0201-Connectors-and-Connections). 
 
 ## ServerEndpoint
 
-Endpoints can also be linked to infrastructure elements using the *ServerEndpoint* relationship to document their network address(s). These are often the values needed in the connection objects configured for [integration connectors](/connectors/integration-connector) running in an [integration daemon](/concepts/integration-daemon) and so the endpoint can be looked up either as the integration connector is being configured, or dynamically when the integration connector is running.
+Endpoints can also be linked to infrastructure elements using the *ServerEndpoint* relationship to document their network address(s). These are often the values needed in the connection objects configured for [integration connectors](/concepts/integration-connector) running in an [integration daemon](/concepts/integration-daemon) and so the endpoint can be looked up either as the integration connector is being configured, or dynamically when the integration connector is running.
 
 !!! example "Endpoint examples"
     The following picture illustrates the different uses of *Endpoint* entities. The top of the diagram shows the endpoint as part of a connection object used to create a connector to the real resource described by the *Asset* entities shown in green.

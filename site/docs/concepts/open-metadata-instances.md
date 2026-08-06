@@ -60,7 +60,7 @@ The [*InstanceAuditHeader*](https://odpi.github.io/egeria/org/odpi/openmetadata/
 * *version* is the version number.  This number is increased on each update.  Egeria adds 1 to the version number - other technologies may use an update timestamp.
 * *currentStatus* is the status of the element.
 * *statusOnDelete* is typically null.  It is set to the currentStatus value when the element is soft-deleted. It is used to restore currentStatus after a restore request that undoes the soft-delete.  
-* *mappingProperties* - optional properties used by a repository connector to map open metadata elements to third party metadata.  It is used in the [Adapter Pattern](https://egeria-project.org/connectors/#repository-and-event-mapper-connectors).
+* *mappingProperties* - optional properties used by a repository connector to map open metadata elements to third party metadata.  It is used in the [Adapter Pattern](/concepts/repository-connector).
 
 ### InstanceType
 

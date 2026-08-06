@@ -14,7 +14,7 @@ Search methods can be thought of as having 2 phases:
 
 ### Repository mechanisms
 
-Egeria's [native metadata repositories](/connectors/#repository-and-event-mapper-connectors) have 2 mechanisms to retrieve metadata illustrated in the diagram below.  There is a graph store and an index store.
+Egeria's [native metadata repositories](/concepts/repository-connector) have 2 mechanisms to retrieve metadata illustrated in the diagram below.  There is a graph store and an index store.
 
 ![Mechanisms for retrieving metadata](retrieving-metadata-mechanisms.svg)
 > An Egeria native repository has a graph store and an index store.
@@ -25,7 +25,7 @@ The **graph store** supports requests to retrieve metadata that involves navigat
 
 The **index store** contains lists of values with links to the instance they came from.  It is used to locate instances that have particular values.  For example, a request to retrieve all glossary terms with a particular name would use the index store.  The terms returned could come from any glossary.
 
-Within the index store, there will be many indexes created by Egeria to speed up metadata searches.  For example, the [JanusGraph Repository Connector](/connectors/repository/janus-graph/overview) builds an index for each primitive property in the type system as well as the standard header properties - such as guid, createTime , ...  JanusGraph then maps this call down onto whatever search technology is configured.
+Within the index store, there will be many indexes created by Egeria to speed up metadata searches.  For example, a graph-based repository connector builds an index for each primitive property in the type system as well as the standard header properties - such as guid, createTime, ...  It then maps this call down onto whatever search technology is configured.
 
 ### Filtering
 

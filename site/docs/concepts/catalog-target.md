@@ -13,7 +13,7 @@ The developer of an integration connector is able to specify one or more types o
 * **deployedImplementationType** - the [deployed implementation type](/concepts/deployed-implementation-type) of the element that describes a specific catalog type.  This allows a more fine-grained specification of the type of technology supported by the integration connector.
 * **otherPropertyNames** - as the name suggests, this allows other properties that are useful to a person deploying the connector.
 
-The catalog target type is given a name called the **catalogTargetName**.  Here is a code snippet from the [Data Files Monitor Integration Connector's](/connectors/integration/data-files-monitor-integration-connector) connector provider showing how the catalog target types are set up.  This connector is configured with the name of a directory (folder) on a filesystem and it catalogues the files underneath this folder.  Therefore, the catalog target type describes a directory.
+The catalog target type is given a name called the **catalogTargetName**.  Here is a code snippet from the [Data Files Monitor Integration Connector's :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/files-integration-connectors/README.md#data-files-monitor-integration-connector){ target=gh } connector provider showing how the catalog target types are set up.  This connector is configured with the name of a directory (folder) on a filesystem and it catalogues the files underneath this folder.  Therefore, the catalog target type describes a directory.
 
 ```java
 

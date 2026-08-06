@@ -18,9 +18,9 @@ The governance action services can be used for three purposes:
 
 ## Governance Action Service
 
-A *governance action service* is a specialized [connector](/concepts/connector) that performs monitoring of metadata changes, validation of metadata, triage of issues, assessment and/or remediation activities on request.
+A *governance action service* is a specialized [connector](/concepts/connector) that performs validation of metadata, triage of issues, assessment and/or remediation activities on request.
 
-There are five types of governance action services, each of which supports a specialist governance activity (see subsections).
+There are four types of governance action services, each of which supports a specialist governance activity (see subsections).  Each is designed to run as a short, atomic action - it starts, does its work, and completes.  Watching for a situation to occur is a different shape of problem, since it may need to keep running indefinitely, so that capability now has its own framework and engine service - see the [watchdog action service](/frameworks/owf/overview) defined by the [Open Watchdog Framework (OWF)](/frameworks/owf/overview).
 
 These are often used in conjunction with the [survey action services](/concepts/survey-action-service) from the [Open Survey Framework (OSF)](/frameworks/osf/overview). Collectively they are called the *governance services* and they can be linked together into [governance action processes](/concepts/governance-action-process).
 
@@ -31,10 +31,6 @@ Some governance action services invoke functions in external engines that are wo
 
 The governance request parameters are a collection of name-value properties that are passed to a governance action service via the governance action context when it starts.
 
-
-### Watchdog governance action service
-
---8<-- "snippets/connectors/watchdog-governance-action-service-intro.md"
 
 ### Verification governance action service
 

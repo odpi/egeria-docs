@@ -27,11 +27,11 @@ The following connectors are now available for testing in `4.1-SNAPSHOT` and wil
 
 ### Secrets Store Connectors
 
-The [Secrets Store Connector](/concepts/secrets-store-connector){target=blank} is a new type of connector that enables a connector to access its secrets (passwords, certificates, ...) from a secure location at runtime.  There is an implementation of this new type of connector that works with environment variables.  See the [connector catalog](/connectors/secrets/environment-variable-secrets-store-connector){target=blank} for more details.
+The [Secrets Store Connector](/concepts/secrets-store-connector){target=blank} is a new type of connector that enables a connector to access its secrets (passwords, certificates, ...) from a secure location at runtime.  There is an implementation of this new type of connector that works with environment variables.  See the [connector catalog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/secrets-store-connectors/README.md){ target=gh } for more details.
 
 ### Apache Atlas Integration Connector
 
-There is a new [Apache Atlas](/connectors/integration/apache-atlas-catalog-integration-connector){target=blank} integration connector that is able to publish active glossary terms to one or more glossaries in Apache Atlas.
+There is a new [Apache Atlas :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors/docs/apache-atlas-catalog-integration-connector.md){ target=gh } integration connector that is able to publish active glossary terms to one or more glossaries in Apache Atlas.
 
 ### Server Metadata Security Connector
 

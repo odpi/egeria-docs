@@ -37,7 +37,7 @@ As you activate [Egeria's solutions](/egeria-solutions), the associate runtimes 
 In addition, Egeria servers are automatically configured and started.  This gives you:
 
 * A [View Server](/concepts/view-server) providing the [REST APIs](/services/omvs) for accessing Egeria's services.
-* A [Metadata Access Store](/concepts/metadata-access-store) providing the metadata repository services backed by [PostgreSQL storage](/connectors/repository/postgres/overview).
+* A [Metadata Access Store](/concepts/metadata-access-store) providing the metadata repository services backed by [PostgreSQL storage :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors/postgres-repository-connector/README.md){ target=gh }.
 * An [Integration Daemon](/concepts/integration-daemon) for running the integration connectors that synchronize metadata with different tools and runtimes.
 * An [Engine Host](/concepts/engine-host) for running governance services both on the open metadata and the connected tools and runtimes.
 

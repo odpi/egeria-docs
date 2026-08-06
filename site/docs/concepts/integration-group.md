@@ -13,7 +13,7 @@ Each integration connector is represented by an entity of type [*IntegrationConn
 
 ## Examples of integration connector definitions
 
-The exact specification of an integration connector depends on how the integration connector is implemented.  Details of the integration connectors supplied with Egeria, and how to configure them are available in the [connector catalog](/connectors/#integration-connectors).
+The exact specification of an integration connector depends on how the integration connector is implemented.  Details of the integration connectors supplied with Egeria, and how to configure them are available in the [connector catalog](/connectors) and the [integration connector concept page](/concepts/integration-connector).
 
 Some integration connectors use a simple connection structure. The [*ConnectorType*](/concepts/connector-type) linked to the connection identifies the implementation of the integration connector.  The endpoint describes how to connect to the third party technology.
 

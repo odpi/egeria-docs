@@ -17,7 +17,7 @@ Each topic maintains a pointer to the last event that a server has read so that 
 
 There are different event broker implementations with greater or lesser reliability and performance. Many organizations establish a standard choice of their event broker service which is why Egeria uses an [open metadata topic connector](/concepts/open-metadata-topic-connector) to access each connector.
 
-Egeria's default event broker is [Apache Kafka :material-dock-window:](https://kafka.apache.org/){ target=kafka } and it typically uses the [Kafka Open Metadata Topic Connector](/connectors/resource/kafka-open-metadata-topic-connector). 
+Egeria's default event broker is [Apache Kafka :material-dock-window:](https://kafka.apache.org/){ target=kafka } and it typically uses the [Kafka Open Metadata Topic Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/kafka-open-metadata-topic-connector/README.md){ target=gh }. 
 
 ![The event bus in use by OMAG Servers and other technologies](event-bus-role.svg)
 

@@ -23,7 +23,7 @@ The Open Metadata and Governance APIs for core Egeria now support API Tokens.  T
 
 ## Database support
 
-Testing of the new [JDBC Resource Connector](/connectors/resource/jdbc-resource-connector) and [JDBC Integration Connector](/connectors/integration/jdbc-integration-connector) is going well with support for **PostgreSQL** and **MariaDB** demonstrated.
+Testing of the new [JDBC Resource Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/jdbc-resource-connector/README.md){ target=gh } and [JDBC Integration Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/jdbc-integration-connector/README.md){ target=gh } is going well with support for **PostgreSQL** and **MariaDB** demonstrated.
 
 ## Data products
 

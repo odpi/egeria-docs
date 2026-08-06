@@ -31,6 +31,7 @@ nav:
                 - Files: egeria-solutions/leveraging-files/overview.md
                 - Open Lineage: egeria-solutions/leveraging-open-lineage/overview.md
                 - PostgreSQL: egeria-solutions/leveraging-postgres/overview.md
+                - Microsoft SQL Server: egeria-solutions/leveraging-mssql/overview.md
                 - Unity Catalog: egeria-solutions/leveraging-unity-catalog/overview.md
                 - Apache Atlas: egeria-solutions/leveraging-apache-atlas/overview.md
                 - Apache Kafka: egeria-solutions/leveraging-apache-kafka/overview.md
@@ -600,8 +601,9 @@ nav:
           - Open Metadata (OMF): frameworks/omf/overview.md
           - Open Connectors (OCF): frameworks/ocf/overview.md
           - Open Integration (OIF): frameworks/oif/overview.md
-          - Governance Actions (OGF): frameworks/ogf/overview.md
-          - Survey Actions (SAF): frameworks/saf/overview.md
+          - Open Governance (OGF): frameworks/ogf/overview.md
+          - Open Survey (OSF): frameworks/osf/overview.md
+          - Open Watchdog (OWF): frameworks/owf/overview.md
       - Conformance Test Suite:
           - Conformance Test Suite Overview: guides/cts/index.md
           - Platform Profiles:

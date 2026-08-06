@@ -11,11 +11,12 @@ The governance engine types in this model are used to create a [governance engin
 
 A [governance engine](/concepts/governance-engine) is a [software capability](/types/0/0042-Software-Capabilities) that is able to run specific services on demand.  These services, called [governance services](/concepts/governance-service), typically implement specific logic that is needed to govern an organization's resources or the metadata associated with them.
 
-Open metadata recognizes three types of governance engine:
+Open metadata recognizes four types of governance engine:
 
 * *GovernanceActionEngine* - [Governance action engines and services](/concepts/governance-action-engine) support the active governance of metadata and the resources they represent.  There are different types of governance action engines/services that are defined by the [Open Governance Framework (OGF)](/frameworks/ogf/overview).
 * *RepositoryGovernanceEngine* - [Repository governance engines and services](/concepts/repository-governance-engine) support the maintenance of repository level concerns, such as monitoring audit logs and maintaining [open metadata archives](/concepts/open-metadata-archive) that are defined in the [Open Metadata Repository Services (OMRS)](/services/omrs).
 * *SurveyActionEngine* - [Survey action engines and services](/concepts/survey-action-engine) support the analysis of [digital resources](/concepts/digital-resource).  The results of this analysis are stored in a [survey report](/types/6/0603-Survey-Reports) chained off of the corresponding [Asset](/types/0/0010-Base-Model) metadata element. The interfaces for surveys are found in the  [Open Survey Framework (OSF)](/frameworks/osf/overview).  
+* *WatchdogActionEngine* - [Watchdog action engines and services](/concepts/watchdog-action-engine) support the monitoring of resources and situations/events, notifying subscribers when they occur.  Unlike the other types of governance engine, a watchdog action service is expected to keep running for as long as the situation needs watching, rather than completing quickly.  The interfaces for watchdog action services are found in the [Open Watchdog Framework (OWF)](/frameworks/owf/overview).
 
 ## SupportedGovernanceService relationship
 
@@ -40,6 +41,7 @@ The subtype of the governance service linked via the *SupportedGovernanceService
 * A *GovernanceActionService* is linked to a *GovernanceActionEngine*.
 * A *SurveyActionService* is linked to an *SurveyActionService*.
 * A *RepositoryGovernanceService* is linked to a *RepositoryGovernanceEngine*.
+* A *WatchdogActionService* is linked to a *WatchdogActionEngine*.
 
 
 ## DeleteMethod enumeration

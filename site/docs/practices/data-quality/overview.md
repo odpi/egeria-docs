@@ -89,7 +89,7 @@ Alternatively, an error may be corrected automatically using [reference data](/f
 The process of [data profiling](/features/metadata-discovery/overview) captures list of data values found in a data source.  These values can be mined to create candidate data classes and valid value sets to use in future data quality assessments.
 
 !!! education "Further information"
-    * [Survey action services supplied by the Egeria project](/connectors/#survey-action-services)
+    * [Survey action services supplied by the Egeria project](/concepts/survey-action-service)
     * [Writing your own survey action services](/guides/developer/survey-action-services/overview)
 
 --8<-- "snippets/abbr.md"

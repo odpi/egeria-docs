@@ -12,7 +12,7 @@ A *survey action engine* is a type of [governance engine](/concepts/governance-e
 
 A survey action is hosted in the [Survey Action Open Metadata Engine Service (OMES)](/services/omes/survey-action/overview) running on one or more [Engine Host OMAG Servers](/concepts/engine-host).
 
-![Survey Action Engine](/connectors/survey-action/survey-action-service.svg)
+![Survey Action Engine](/concepts/survey-action-service.svg)
 
 When a survey action engine is called, it is passed a governance request type and request parameters. This is mapped to a call to an open discovery service through the [open discovery engine definition](/concepts/governance-engine-definition).
 

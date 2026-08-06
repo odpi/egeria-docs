@@ -31,7 +31,7 @@ Example 2 shows an [survey action service](/concepts/survey-action-service) amon
 
 ## Capturing lineage for a governance action process
 
-The [engine actions](/concepts/engine-action) generated when a governance action process runs provide a complete audit trace of the governance services that ran and their results.  The [Governance Action Open Lineage Integration Connector](/connectors/integration/governance-action-open-lineage-integration-connector) is able to monitor the operation of the governance actions and produce [OpenLineage events](/features/lineage-management/overview/#the-openlineage-standard) to provide operational lineage for governance action processes.  Egeria is also able to [capture these events](/connectors/#capturing-and-publishing-lineage) (along with OpenLineage events from other technologies) for later analysis.
+The [engine actions](/concepts/engine-action) generated when a governance action process runs provide a complete audit trace of the governance services that ran and their results.  The [Governance Action Open Lineage Integration Connector](/connectors/integration/governance-action-open-lineage-integration-connector) is able to monitor the operation of the governance actions and produce [OpenLineage events](/features/lineage-management/overview/#the-open-lineage-standard) to provide operational lineage for governance action processes.  Egeria is also able to [capture these events](/connectors/#capturing-and-publishing-lineage) (along with OpenLineage events from other technologies) for later analysis.
 
 ## Governance Action Process Lifecycle
 

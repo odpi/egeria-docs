@@ -82,7 +82,7 @@ This video shows Jules' first use of Dr.Egeria as he bring key executives togeth
 </div>
 
 ???+ info "Use of Claude AI"
-    In this video we cove the use of the Claude AI service to help with the word-smithing of definitions.  Claude works flawlessly with Dr.Egeria, but so do other public AI services.  The important step is to provide the AI with the templates so it has access to the correct command structure.  The templates are available in the [Egeria Workspaces GitHub repository](https://github.com/odpi/egeria-workspaces/tree/main/templates).
+    In this video we cover the use of the Claude AI service to help with the word-smithing of definitions.  Claude works flawlessly with Dr.Egeria, but so do other public AI services.  The important step is to provide the AI with the templates so it has access to the correct command structure.  The templates are available in the [Egeria Workspaces GitHub repository](https://github.com/odpi/egeria-workspaces/tree/main/templates).
 
 
 --8<-- "snippets/abbr.md"

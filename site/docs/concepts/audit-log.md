@@ -1,7 +1,4 @@
----
-hide:
-- toc
----
+
 
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
@@ -18,7 +15,7 @@ Egeria's audit log is implemented by the [Open Metadata Repository Services](/se
 
 Each audit log record written to the audit log includes information about the component that created it, the server/thread it was running in, a severity code, message description and information on how to fix the problem.
 
-![Figure 1](/concepts/audit-log-record-structure.svg)
+![Figure 1](/frameworks/alf/audit-record-structure.svg)
 > **Figure 1:** Structure of the audit log record.
 
 The structure is defined by the Audit Log Framework (ALF).  The Open Metadata Repository Services (OMRS) extends the record structure with the list of severity codes designed for the open metadata ecosystem.

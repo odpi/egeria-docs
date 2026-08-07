@@ -32,6 +32,7 @@ nav:
                 - Open Lineage: egeria-solutions/leveraging-open-lineage/overview.md
                 - PostgreSQL: egeria-solutions/leveraging-postgres/overview.md
                 - Microsoft SQL Server: egeria-solutions/leveraging-mssql/overview.md
+                - Oracle Database: egeria-solutions/leveraging-oracle/overview.md
                 - Unity Catalog: egeria-solutions/leveraging-unity-catalog/overview.md
                 - Apache Atlas: egeria-solutions/leveraging-apache-atlas/overview.md
                 - Apache Kafka: egeria-solutions/leveraging-apache-kafka/overview.md

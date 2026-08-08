@@ -41,7 +41,7 @@ The collection type is generically useful and there are many subtypes that descr
 * [NamingStandardsRuleSet](/types/4/0438-Naming-Standards) means the collection is a set of naming standard rules.
 * [RecentAccess](#recentaccess-entity) means the collection is a set of elements that have been recently accesses by a user.
 * [ReportType](/types/5/0580-Data-Dictionaries) described of a type of report where the membership element describe what to expect from the instance of a report.
-* [ResultsSet](#resultsset-entity) means the collection is a set of related results.
+* [ResultsSet](/types/7/0725-Smart-Collections) means the collection is a set of related results.
 * [RootCollection](#rootcollection-entity) described a master collection of collections.
 * [SoftwareArchive](/types/0/0030-Hosts-and-Platforms) described a collection of software components.
 * [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components performing a solution.
@@ -81,9 +81,6 @@ The *ITSubsystems* entity is a collection of systems and related equipment that 
 
 The *Namespace* entity indicates that the collection is a set of elements that are organized by namespace.
 
-## ResultsSet entity
-
-The *ResultsSet* entity indicates that the collection is a set of elements that are the results from a specific request or query.
 
 ## RecentAccess entity
 

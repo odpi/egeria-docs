@@ -18,6 +18,7 @@ Area 7 provides the structures for adding context to the asset definition of a r
 - [0712 Digital Subscription](/types/7/0712-Digital-Subscription)
 - [0715 Digital Business](/types/7/0715-Digital-Business)
 - [0720 Information Supply Chains](/types/7/0720-Information-Supply-Chains)
+- [0725 Smart Collections](/types/7/0725-Smart-Collections)
 - [0730 Solution Components](/types/7/0730-Solution-Components)
 - [0735 Solution Ports and Wires](/types/7/0735-Solution-Ports-and-Wires)
 - [0737 Solution Implementation](/types/7/0737-Solution-Implementation)

@@ -1,0 +1,510 @@
+/* SPDX-License-Identifier: CC-BY-4.0 */
+/* Copyright Contributors to the Egeria project. */
+
+:root > * {
+    --goreleaser-primary-color:   #3b5672;
+    --md-primary-fg-color:        rgb(0, 174, 185);
+    --md-primary-fg-color--light: rgb(0, 174, 185);
+    --md-primary-fg-color--dark:  rgb(0, 174, 185);
+    --md-admonition-icon--graduation-cap: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M622.34 153.2 343.4 67.5c-15.2-4.67-31.6-4.67-46.79 0L17.66 153.2c-23.54 7.23-23.54 38.36 0 45.59l48.63 14.94c-10.67 13.19-17.23 29.28-17.88 46.9C38.78 266.15 32 276.11 32 288c0 10.78 5.68 19.85 13.86 25.65L20.33 428.53C18.11 438.52 25.71 448 35.94 448h56.11c10.24 0 17.84-9.48 15.62-19.47L82.14 313.65C90.32 307.85 96 298.78 96 288c0-11.57-6.47-21.25-15.66-26.87.76-15.02 8.44-28.3 20.69-36.72L296.6 284.5c9.06 2.78 26.44 6.25 46.79 0l278.95-85.7c23.55-7.24 23.55-38.36 0-45.6zM352.79 315.09c-28.53 8.76-52.84 3.92-65.59 0l-145.02-44.55L128 384c0 35.35 85.96 64 192 64s192-28.65 192-64l-14.18-113.47-145.03 44.56z"/></svg>');
+    --md-admonition-icon--beginner: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 15.38 12 12V5.32l6 3.37v6.69m3 1.12c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 5 8.09v7.82l7 3.94 7-3.94V8.09l-7-3.94z"/></svg>');
+    --md-admonition-icon--intermediate: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 5.32 6 3.37v6.62l-6 3.37V5.32m9 11.18c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 5 8.09v7.82l7 3.94 7-3.94V8.09l-7-3.94z"/></svg>');
+    --md-admonition-icon--advanced: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 5.32 6 3.37v6.62l-6 3.37-5.94-3.34L12 12V5.32m9 11.18c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 5 8.09v7.82l7 3.94 7-3.94V8.09l-7-3.94z"/></svg>');
+    --md-admonition-icon--expert: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 5.32 6 3.37v6.62l-6 3.37-6-3.37V8.69l6-3.37m9 11.18c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15 5 8.09v7.82l7 3.94 7-3.94V8.09l-7-3.94z"/></svg>');
+    --md-admonition-icon--calculator: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-6 4.1L14.1 6l1.4 1.4L16.9 6 18 7.1l-1.4 1.4L18 9.9 16.9 11l-1.4-1.4-1.4 1.4L13 9.9l1.4-1.4L13 7.1m-6.8.6h5v1.5h-5V7.7m5.3 8.3h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2V16m6.5 1.2h-5v-1.5h5v1.5m0-2.4h-5v-1.5h5v1.5z"/></svg>');
+    --md-admonition-icon--braces: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3h2z"/></svg>');
+    --md-admonition-icon--bug: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12h-4v-2h4m0 6h-4v-2h4m6-6h-2.81a5.985 5.985 0 0 0-1.82-1.96L17 4.41 15.59 3l-2.17 2.17a6.002 6.002 0 0 0-2.83 0L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8z"/></svg>');
+    --md-admonition-icon--security: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12h7c-.53 4.11-3.28 7.78-7 8.92V12H5V6.3l7-3.11M12 1 3 5v6c0 5.55 3.84 10.73 9 12 5.16-1.27 9-6.45 9-12V5l-9-4z"/></svg>');
+    --md-admonition-icon--status: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 11 13 7.5l1.4-1.4 2.1 2.1L20.7 4l1.4 1.4-5.6 5.6M11 7H2v2h9V7m10 6.4L19.6 12 17 14.6 14.4 12 13 13.4l2.6 2.6-2.6 2.6 1.4 1.4 2.6-2.6 2.6 2.6 1.4-1.4-2.6-2.6 2.6-2.6M11 15H2v2h9v-2z"/></svg>');
+    --md-admonition-icon--added: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>');
+    --md-admonition-icon--modified: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m3-8a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3z"/></svg>');
+    --md-admonition-icon--deprecated: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 13h-2V7h2m0 10h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>');
+    --md-admonition-icon--removed: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13H7v-2h10m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>');
+    --md-admonition-icon--cli: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19v-3h8v3h-8m-4.5-6L2.47 7h4.24l4.96 4.95c.58.59.58 1.55 0 2.12L6.74 19H2.5l6-6z"/></svg>');
+    --md-admonition-icon--file: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2h9m3-4v-2H6v2h12z"/></svg>');
+    --md-admonition-icon--api: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2z"/></svg>');
+    --md-admonition-icon--checks: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7z"/></svg>');
+    --md-admonition-icon--magnify-scan: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 22v-2h3v-3h2v3.5c0 .39-.16.74-.46 1.04-.3.3-.65.46-1.04.46H17M7 22H3.5c-.39 0-.74-.16-1.04-.46-.3-.3-.46-.65-.46-1.04V17h2v3h3v2M17 2h3.5c.39 0 .74.16 1.04.46.3.3.46.65.46 1.04V7h-2V4h-3V2M7 2v2H4v3H2V3.5c0-.39.16-.74.46-1.04.3-.3.65-.46 1.04-.46H7m3.5 4C13 6 15 8 15 10.5c0 .88-.25 1.7-.69 2.4l3.26 3.26-1.41 1.41-3.26-3.26c-.7.44-1.52.69-2.4.69C8 15 6 13 6 10.5S8 6 10.5 6m0 2a2.5 2.5 0 0 0 0 5 2.5 2.5 0 0 0 0-5z"/></svg>');
+    --md-admonition-icon--tools: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.71 20.29-1.42 1.42a1 1 0 0 1-1.41 0L7 9.85A3.81 3.81 0 0 1 6 10a4 4 0 0 1-3.78-5.3l2.54 2.54.53-.53 1.42-1.42.53-.53L4.7 2.22A4 4 0 0 1 10 6a3.81 3.81 0 0 1-.15 1l11.86 11.88a1 1 0 0 1 0 1.41M2.29 18.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0l5.47-5.46-2.83-2.83M20 2l-4 2v2l-2.17 2.17 2 2L18 8h2l2-4z"/></svg>');
+    --md-admonition-icon--message-question: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-7 12h-2v-2h2v2m1.8-5c-.3.4-.7.6-1.1.8-.3.2-.4.3-.5.5-.2.2-.2.4-.2.7h-2c0-.5.1-.8.3-1.1.2-.2.6-.5 1.1-.8.3-.1.5-.3.6-.5.1-.2.2-.5.2-.7 0-.3-.1-.5-.3-.7-.2-.2-.5-.3-.8-.3-.3 0-.5.1-.7.2-.2.1-.3.3-.3.6h-2c.1-.7.4-1.3.9-1.7.5-.4 1.2-.5 2.1-.5.9 0 1.7.2 2.2.6.5.4.8 1 .8 1.7.1.4 0 .8-.3 1.2z"/></svg>');
+    --md-admonition-icon--check-decagram: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12m-13 5-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>');
+    --md-admonition-icon--clock-alert: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12h2v6h-2v-6m0 8h2v2h-2v-2M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c2.3 0 4.3-.8 6-2V10h3.8c-.9-4.6-5-8-9.8-8m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>');
+}
+
+.md-announce {
+    height: 20px;
+}
+
+.md-announce__inner {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Custom admonition for educational content */
+.md-typeset .admonition.education,
+.md-typeset details.education {
+  border-color: rgb(247, 207, 9);
+}
+.md-typeset .education > .admonition-title,
+.md-typeset .education > summary {
+  background-color: rgba(247, 207, 9, 0.1);
+  border-color: rgb(247, 207, 9);
+}
+.md-typeset .education > .admonition-title::before,
+.md-typeset .education > summary::before {
+  background-color: rgb(247, 207, 9);
+  -webkit-mask-image: var(--md-admonition-icon--graduation-cap);
+          mask-image: var(--md-admonition-icon--graduation-cap);
+}
+
+/* Custom admonition for functional content */
+.md-typeset .admonition.functional,
+.md-typeset details.functional {
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .functional > .admonition-title,
+.md-typeset .functional > summary {
+  background-color: rgba(42, 68, 93, 0.1);
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .functional > .admonition-title::before,
+.md-typeset .functional > summary::before {
+  background-color: rgb(42, 68, 93);
+  -webkit-mask-image: var(--md-admonition-icon--calculator);
+          mask-image: var(--md-admonition-icon--calculator);
+}
+
+/* Custom admonition for type content */
+.md-typeset .admonition.types,
+.md-typeset details.types {
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .types > .admonition-title,
+.md-typeset .types > summary {
+  background-color: rgba(42, 68, 93, 0.1);
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .types > .admonition-title::before,
+.md-typeset .types > summary::before {
+  background-color: rgb(42, 68, 93);
+  -webkit-mask-image: var(--md-admonition-icon--braces);
+          mask-image: var(--md-admonition-icon--braces);
+}
+
+/* Custom admonition for bug fix content */
+.md-typeset .admonition.bugs,
+.md-typeset details.bugs {
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .bugs > .admonition-title,
+.md-typeset .bugs > summary {
+  background-color: rgba(42, 68, 93, 0.1);
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .bugs > .admonition-title::before,
+.md-typeset .bugs > summary::before {
+  background-color: rgb(42, 68, 93);
+  -webkit-mask-image: var(--md-admonition-icon--bug);
+          mask-image: var(--md-admonition-icon--bug);
+}
+
+/* Custom admonition for security fix content */
+.md-typeset .admonition.security,
+.md-typeset details.security {
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .security > .admonition-title,
+.md-typeset .security > summary {
+  background-color: rgba(42, 68, 93, 0.1);
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .security > .admonition-title::before,
+.md-typeset .security > summary::before {
+  background-color: rgb(42, 68, 93);
+  -webkit-mask-image: var(--md-admonition-icon--security);
+          mask-image: var(--md-admonition-icon--security);
+}
+
+/* Custom admonition for status content */
+.md-typeset .admonition.status,
+.md-typeset details.status {
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .status > .admonition-title,
+.md-typeset .status > summary {
+  background-color: rgba(42, 68, 93, 0.1);
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .status > .admonition-title::before,
+.md-typeset .status > summary::before {
+  background-color: rgb(42, 68, 93);
+  -webkit-mask-image: var(--md-admonition-icon--status);
+          mask-image: var(--md-admonition-icon--status);
+}
+
+/* Custom admonition for beginner content */
+.md-typeset .admonition.beginner,
+.md-typeset details.beginner {
+  border-color: rgb(43, 155, 70);
+}
+.md-typeset .beginner > .admonition-title,
+.md-typeset .beginner > summary {
+  background-color: rgba(43, 155, 70, 0.1);
+  border-color: rgb(43, 155, 70);
+}
+.md-typeset .beginner > .admonition-title::before,
+.md-typeset .beginner > summary::before {
+  background-color: rgb(43, 155, 70);
+  -webkit-mask-image: var(--md-admonition-icon--beginner);
+          mask-image: var(--md-admonition-icon--beginner);
+}
+
+/* Custom admonition for intermediate content */
+.md-typeset .admonition.intermediate,
+.md-typeset details.intermediate {
+  border-color: rgb(88, 135, 255);
+}
+.md-typeset .intermediate > .admonition-title,
+.md-typeset .intermediate > summary {
+  background-color: rgba(88, 135, 255, 0.1);
+  border-color: rgb(88, 135, 255);
+}
+.md-typeset .intermediate > .admonition-title::before,
+.md-typeset .intermediate > summary::before {
+  background-color: rgb(88, 135, 255);
+  -webkit-mask-image: var(--md-admonition-icon--intermediate);
+          mask-image: var(--md-admonition-icon--intermediate);
+}
+
+/* Custom admonition for advanced content */
+.md-typeset .admonition.advanced,
+.md-typeset details.advanced {
+  border-color: rgb(228, 53, 91);
+}
+.md-typeset .advanced > .admonition-title,
+.md-typeset .advanced > summary {
+  background-color: rgba(228, 53, 91, 0.1);
+  border-color: rgb(228, 53, 91);
+}
+.md-typeset .advanced > .admonition-title::before,
+.md-typeset .advanced > summary::before {
+  background-color: rgb(228, 53, 91);
+  -webkit-mask-image: var(--md-admonition-icon--advanced);
+          mask-image: var(--md-admonition-icon--advanced);
+}
+
+/* Custom admonition for expert content */
+.md-typeset .admonition.expert,
+.md-typeset details.expert {
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .expert > .admonition-title,
+.md-typeset .expert > summary {
+  background-color: rgba(42, 68, 93, 0.1);
+  border-color: rgb(42, 68, 93);
+}
+.md-typeset .expert > .admonition-title::before,
+.md-typeset .expert > summary::before {
+  background-color: rgb(42, 68, 93);
+  -webkit-mask-image: var(--md-admonition-icon--expert);
+          mask-image: var(--md-admonition-icon--expert);
+}
+
+/* Custom admonition for added content */
+.md-typeset .admonition.added,
+.md-typeset details.added {
+  border-color: rgb(79, 197, 80);
+}
+.md-typeset .added > .admonition-title,
+.md-typeset .added > summary {
+  background-color: rgba(79, 197, 80, 0.1);
+  border-color: rgb(79, 197, 80);
+}
+.md-typeset .added > .admonition-title::before,
+.md-typeset .added > summary::before {
+  background-color: rgb(79, 197, 80);
+  -webkit-mask-image: var(--md-admonition-icon--added);
+          mask-image: var(--md-admonition-icon--added);
+}
+
+/* Custom admonition for modified content */
+.md-typeset .admonition.modified,
+.md-typeset details.modified {
+  border-color: rgb(247, 207, 9);
+}
+.md-typeset .modified > .admonition-title,
+.md-typeset .modified > summary {
+  background-color: rgba(247, 207, 9, 0.1);
+  border-color: rgb(247, 207, 9);
+}
+.md-typeset .modified > .admonition-title::before,
+.md-typeset .modified > summary::before {
+  background-color: rgb(247, 207, 9);
+  -webkit-mask-image: var(--md-admonition-icon--modified);
+          mask-image: var(--md-admonition-icon--modified);
+}
+
+/* Custom admonition for deprecated content */
+.md-typeset .admonition.deprecated,
+.md-typeset details.deprecated {
+  border-color: rgb(242, 152, 18);
+}
+.md-typeset .deprecated > .admonition-title,
+.md-typeset .deprecated > summary {
+  background-color: rgba(242, 152, 18, 0.1);
+  border-color: rgb(242, 152, 18);
+}
+.md-typeset .deprecated > .admonition-title::before,
+.md-typeset .deprecated > summary::before {
+  background-color: rgb(242, 152, 18);
+  -webkit-mask-image: var(--md-admonition-icon--clock-alert);
+          mask-image: var(--md-admonition-icon--clock-alert);
+}
+
+/* Custom admonition for deleted content */
+.md-typeset .admonition.removed,
+.md-typeset details.removed {
+  border-color: rgb(239, 98, 86);
+}
+.md-typeset .removed > .admonition-title,
+.md-typeset .removed > summary {
+  background-color: rgba(239, 98, 86, 0.1);
+  border-color: rgb(239, 98, 86);
+}
+.md-typeset .removed > .admonition-title::before,
+.md-typeset .removed > summary::before {
+  background-color: rgb(239, 98, 86);
+  -webkit-mask-image: var(--md-admonition-icon--removed);
+          mask-image: var(--md-admonition-icon--removed);
+}
+
+/* Custom admonition for command-line content */
+.md-typeset .admonition.cli,
+.md-typeset details.cli {
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .cli > .admonition-title,
+.md-typeset .cli > summary {
+  background-color: rgba(158, 158, 158, 0.1);
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .cli > .admonition-title::before,
+.md-typeset .cli > summary::before {
+  background-color: rgb(158, 158, 158);
+  -webkit-mask-image: var(--md-admonition-icon--cli);
+          mask-image: var(--md-admonition-icon--cli);
+}
+
+/* Custom admonition for file content */
+.md-typeset .admonition.file,
+.md-typeset details.file {
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .file > .admonition-title,
+.md-typeset .file > summary {
+  background-color: rgba(158, 158, 158, 0.1);
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .file > .admonition-title::before,
+.md-typeset .file > summary::before {
+  background-color: rgb(158, 158, 158);
+  -webkit-mask-image: var(--md-admonition-icon--file);
+          mask-image: var(--md-admonition-icon--file);
+}
+
+/* Custom admonition for POST content */
+.md-typeset .admonition.post,
+.md-typeset details.post {
+  border-color: rgb(105, 201, 143);
+}
+.md-typeset .post > .admonition-title,
+.md-typeset .post > summary {
+  background-color: rgba(105, 201, 143, 0.1);
+  border-color: rgb(105, 201, 143);
+}
+.md-typeset .post > .admonition-title::before,
+.md-typeset .post > summary::before {
+  background-color: rgb(105, 201, 143);
+  -webkit-mask-image: var(--md-admonition-icon--api);
+          mask-image: var(--md-admonition-icon--api);
+}
+
+/* Custom admonition for GET content */
+.md-typeset .admonition.get,
+.md-typeset details.get {
+  border-color: rgb(116, 172, 254);
+}
+.md-typeset .get > .admonition-title,
+.md-typeset .get > summary {
+  background-color: rgba(116, 172, 254, 0.1);
+  border-color: rgb(116, 172, 254);
+}
+.md-typeset .get > .admonition-title::before,
+.md-typeset .get > summary::before {
+  background-color: rgb(116, 172, 254);
+  -webkit-mask-image: var(--md-admonition-icon--api);
+          mask-image: var(--md-admonition-icon--api);
+}
+
+/* Custom admonition for PUT content */
+.md-typeset .admonition.put,
+.md-typeset details.put {
+  border-color: rgb(241, 166, 52);
+}
+.md-typeset .put > .admonition-title,
+.md-typeset .put > summary {
+  background-color: rgba(241, 166, 52, 0.1);
+  border-color: rgb(241, 166, 52);
+}
+.md-typeset .put > .admonition-title::before,
+.md-typeset .put > summary::before {
+  background-color: rgb(241, 166, 52);
+  -webkit-mask-image: var(--md-admonition-icon--api);
+          mask-image: var(--md-admonition-icon--api);
+}
+
+/* Custom admonition for DELETE content */
+.md-typeset .admonition.delete,
+.md-typeset details.delete {
+  border-color: rgb(233, 82, 67);
+}
+.md-typeset .delete > .admonition-title,
+.md-typeset .delete > summary {
+  background-color: rgba(233, 82, 67, 0.1);
+  border-color: rgb(233, 82, 67);
+}
+.md-typeset .delete > .admonition-title::before,
+.md-typeset .delete > summary::before {
+  background-color: rgb(233, 82, 67);
+  -webkit-mask-image: var(--md-admonition-icon--api);
+          mask-image: var(--md-admonition-icon--api);
+}
+
+/* Custom admonition for assertion content */
+.md-typeset .admonition.assertion,
+.md-typeset details.assertion {
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .assertion > .admonition-title,
+.md-typeset .assertion > summary {
+  background-color: rgba(158, 158, 158, 0.1);
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .assertion > .admonition-title::before,
+.md-typeset .assertion > summary::before {
+  background-color: rgb(158, 158, 158);
+  -webkit-mask-image: var(--md-admonition-icon--checks);
+          mask-image: var(--md-admonition-icon--checks);
+}
+
+/* Custom admonition for discovered content */
+.md-typeset .admonition.discovered,
+.md-typeset details.discovered {
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .discovered > .admonition-title,
+.md-typeset .discovered > summary {
+  background-color: rgba(158, 158, 158, 0.1);
+  border-color: rgb(158, 158, 158);
+}
+.md-typeset .discovered > .admonition-title::before,
+.md-typeset .discovered > summary::before {
+  background-color: rgb(158, 158, 158);
+  -webkit-mask-image: var(--md-admonition-icon--magnify-scan);
+          mask-image: var(--md-admonition-icon--magnify-scan);
+}
+
+/* Custom admonition for in-development status */
+.md-typeset .admonition.development,
+.md-typeset details.development {
+  border-color: rgb(239, 98, 86);
+}
+.md-typeset .development > .admonition-title,
+.md-typeset .development > summary {
+  background-color: rgba(239, 98, 86, 0.1);
+  border-color: rgb(239, 98, 86);
+}
+.md-typeset .development > .admonition-title::before,
+.md-typeset .development > summary::before {
+  background-color: rgb(239, 98, 86);
+  -webkit-mask-image: var(--md-admonition-icon--tools);
+          mask-image: var(--md-admonition-icon--tools);
+}
+
+/* Custom admonition for tech-preview status */
+.md-typeset .admonition.preview,
+.md-typeset details.preview {
+  border-color: rgb(247, 207, 9);
+}
+.md-typeset .preview > .admonition-title,
+.md-typeset .preview > summary {
+  background-color: rgba(247, 207, 9, 0.1);
+  border-color: rgb(247, 207, 9);
+}
+.md-typeset .preview > .admonition-title::before,
+.md-typeset .preview > summary::before {
+  background-color: rgb(247, 207, 9);
+  -webkit-mask-image: var(--md-admonition-icon--message-question);
+          mask-image: var(--md-admonition-icon--message-question);
+}
+
+/* Custom admonition for released status */
+.md-typeset .admonition.released,
+.md-typeset details.released {
+  border-color: rgb(79, 197, 80);
+}
+.md-typeset .released > .admonition-title,
+.md-typeset .released > summary {
+  background-color: rgba(79, 197, 80, 0.1);
+  border-color: rgb(79, 197, 80);
+}
+.md-typeset .released > .admonition-title::before,
+.md-typeset .released > summary::before {
+  background-color: rgb(79, 197, 80);
+  -webkit-mask-image: var(--md-admonition-icon--check-decagram);
+          mask-image: var(--md-admonition-icon--check-decagram);
+}
+
+
+/* Custom admonition for stable status */
+.md-typeset .admonition.stable,
+.md-typeset details.stage {
+    border-color: rgb(79, 197, 80);
+}
+.md-typeset .stable > .admonition-title,
+.md-typeset .stable > summary {
+    background-color: rgba(79, 197, 80, 0.1);
+    border-color: rgb(79, 197, 80);
+}
+.md-typeset .stable > .admonition-title::before,
+.md-typeset .stable > summary::before {
+    background-color: rgb(79, 197, 80);
+    -webkit-mask-image: var(--md-admonition-icon--check-decagram);
+    mask-image: var(--md-admonition-icon--check-decagram);
+}
+
+/* Embed videos (16:9 aspect ratio): https://github.com/squidfunk/mkdocs-material/issues/492#issuecomment-336640342 */
+.video-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+.video-wrapper > iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*Making SVG images from content when dark mode white background and 10px padding*/
+body[data-md-color-scheme="slate"] .md-content img[src $= "svg"],
+body[data-md-color-scheme="slate"] .md-content img[src $= "png"]{
+    background-color: white;
+    padding: 10px;
+}

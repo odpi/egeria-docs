@@ -19,7 +19,7 @@ The *ResultsSet* entity is a type of [Collection](/types/1/0021-Collections) who
 
 ## SavedQuery entity
 
-An *SavedQuery* entity is a [DataSet](/types/2/0210-Data-Stores) that provides the definition of a RESTful query to Egeria that returns Open Metadata Elements.
+A *SavedQuery* entity is a [DataSet](/types/2/0210-Data-Stores) that provides the definition of a RESTful query to Egeria that returns Open Metadata Elements.
 
 * *queryURL* - the query URL to issue to Egeria.
 * *queryRequestBody* - the parameters to the query organized into a request body structure (JSON).

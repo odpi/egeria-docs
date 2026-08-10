@@ -31,11 +31,16 @@ The connectors that support the exchange and maintenance of metadata help to acc
 
 * [File connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors) work with different types of files.
 * [JDBC Database connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/jdbc-resource-connector) make use of the JDBC standards to work with different types of relational databases.
+* [Microsoft SQL Server connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-manager-connectors/mssql-server-connectors) work with the contents of a Microsoft SQL Server database server.
+* [Oracle Database connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-manager-connectors/oracle-server-connectors) work with the contents of an Oracle Database server, including its pluggable databases.
+* [Db2 for Linux, UNIX and Windows connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-manager-connectors/db2luw-server-connectors) work with the contents of a Db2 for Linux, UNIX and Windows database server.
+* [DuckDB connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-manager-connectors/duckdb-connectors) work with the contents of an embedded DuckDB database, including its federated data sources.
 * [Unity Catalog connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-manager-connectors/unity-catalog-connectors) work with the contents of the Unity Catalog server.
 * [Apache Kafka connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-kafka-connectors) work with the topics and/or events passing through the Apache Kafka event broker.
 * [Apache Atlas connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors) work with an Apache Atlas server.
 * [Open API Specification connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openapi-integration-connector) extract metadata about APIs through the Open API interfaces provided through the Swagger API.
 * [Open Lineage Event connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors) works with the open lineage event standard.
+* [Smart Collections integration connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/smart-collections-integration-connector) maintains the membership of a [smart collection](/egeria-solutions/smart-collections/overview) by running its saved query and keeping the results set in sync with the answer.
 
 
 ## Open Metadata Governance Connectors

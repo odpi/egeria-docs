@@ -506,7 +506,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="jvJXFqL6fXRPoGgnXWhq" name="governance-definitions">
-    <mxGraphModel dx="3271" dy="1658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2265" dy="975" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="N59K1eUxawvdz6MUQs9t-0" />
         <mxCell id="N59K1eUxawvdz6MUQs9t-1" parent="N59K1eUxawvdz6MUQs9t-0" />
@@ -538,13 +538,13 @@
           <mxGeometry height="60" width="120" x="354.5" y="40" as="geometry" />
         </mxCell>
         <mxCell id="N59K1eUxawvdz6MUQs9t-9" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Governance&lt;br&gt;Principle" vertex="1">
-          <mxGeometry height="60" width="120" x="442.5" y="280" as="geometry" />
+          <mxGeometry height="60" width="120" x="370" y="280" as="geometry" />
         </mxCell>
         <mxCell id="N59K1eUxawvdz6MUQs9t-10" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Governance&lt;br&gt;Obligation" vertex="1">
-          <mxGeometry height="60" width="120" x="582.5" y="280" as="geometry" />
+          <mxGeometry height="60" width="120" x="510" y="280" as="geometry" />
         </mxCell>
         <mxCell id="N59K1eUxawvdz6MUQs9t-11" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Governance&lt;br&gt;Approach" vertex="1">
-          <mxGeometry height="60" width="120" x="722.5" y="280" as="geometry" />
+          <mxGeometry height="60" width="120" x="650" y="280" as="geometry" />
         </mxCell>
         <mxCell id="N59K1eUxawvdz6MUQs9t-20" edge="1" parent="N59K1eUxawvdz6MUQs9t-1" source="N59K1eUxawvdz6MUQs9t-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="N59K1eUxawvdz6MUQs9t-15">
           <mxGeometry relative="1" as="geometry" />
@@ -917,6 +917,9 @@
         </mxCell>
         <mxCell id="mRdAOipsdG36xt9C1egW-1" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Exception Type" vertex="1">
           <mxGeometry height="50" width="89.5" x="981" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="CnD0HAIgn-pIZ_glbHON-0" parent="N59K1eUxawvdz6MUQs9t-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Risk" vertex="1">
+          <mxGeometry height="60" width="120" x="788.38" y="280" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

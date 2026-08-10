@@ -3,7 +3,7 @@
 
 # Open Metadata Repository Cohort Operation
 
-An *Open Metadata Repository Cohort* (or more simply, just a *cohort*) is a collection of [servers](#cohort-members) sharing metadata using a peer-to-peer exchange protocol.  Once a server becomes a member of the cohort, it can share metadata with, and receive metadata from, any other member either through events, or through [federated queries](#federated-queries).
+An *Open Metadata Repository Cohort* (or more simply, just a *cohort*) is a collection of servers sharing metadata using a peer-to-peer exchange protocol.  Once a server becomes a member of the cohort, it can share metadata with, and receive metadata from, any other member either through events, or through [federated queries](#federated-queries).
 
 The following types of servers can become a member of one or more cohorts.  
 
@@ -83,7 +83,7 @@ A federated query combines metadata retrieved from all members of the connected 
 ![Federated Query](federated-query.svg)
 > Federated query visiting the local repository and then calling all other servers connected via the cohort(s).
 
-The list of servers that are called by a federated query is built dynamically from the [cohort registration request](#cohort-registration) events.  These events take information from the [configuration document](/concepts/configuration-document) for the server.  
+The list of servers that are called by a federated query is built dynamically from the [cohort registration request events](/concepts/cohort-events).  These events take information from the [configuration document](/concepts/configuration-document) for the server.  
 
 ### Configuring the local repository for federated queries
 

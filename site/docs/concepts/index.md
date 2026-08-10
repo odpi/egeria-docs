@@ -12,6 +12,7 @@
 - [Anchor](/concepts/anchor)
 - [Anchor Grouping](/concepts/anchor)
 - [Anchor Domain](/concepts/anchor)
+- [Annotations](/concepts/survey-report/#annotations)
 - [Application Programming Interface (API)](/concepts/basic-concepts)
 - [Archives for Open Metadata](/concepts/open-metadata-archive)
 - [Asset](/concepts/asset)

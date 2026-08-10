@@ -21,7 +21,7 @@ The survey report is created automatically in the open metadata repository when 
 
 ![Survey reports linked from the asset](asset-to-survey-reports.svg)
 
-The results of the analysis are published by the survey acton service to the open metadata repository as [*annotations*](#annotations).
+The results of the analysis are published by the survey acton service to the open metadata repository as [*annotations*](/concepts/survey-report/#annotations).
 The *survey report* lists the [annotations](#annotations) that were created during the execution of a [survey action service](/concepts/survey-action-service).  Each annotation may also link to a metadata entity that it describes.  For example, if the annotation describes the data in a particular column of a CSV file, it may also be linked to the [Schema Attribute](/types/5/0505-Schema-Attributes) entity that describes that column.
 
 ![Survey reports with their annotations](survey-report-structure.svg)
@@ -128,7 +128,7 @@ The [governance action services](/concepts/governance-action-service) are implem
 
 A survey action service is implemented as a specialized [connector](/concepts/connector) that is passed a *survey context* as part of its initialization process.
 
-The *survey context* provides the [survey action service](#survey-action-service) with access to information about the survey request along with the open metadata repository interfaces.
+The *survey context* provides the [survey action service](/concepts/survey-action-service) with access to information about the survey request along with the open metadata repository interfaces.
 
 ![Survey context](survey-context.svg)
 

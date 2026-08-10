@@ -120,7 +120,7 @@ View services can be configured into a view server either altogether or individu
         ```
 
         The request body must contain a `ViewServiceRequestBody` object, while the `serviceURLMarker` can
-        be found by [listing the registered view services](#list-configured-view-services).
+        be found by listing the registered view services.
 
 === "configure all view services"
 
@@ -345,7 +345,7 @@ Finally, view service configuration can easily be removed from a server configur
         {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services/{{serviceURLMarker}}
         ```
 
-        The `serviceURLMarker` can be found by [listing the registered view services](#list-configured-view-services).
+        The `serviceURLMarker` can be found by listing the registered view services.
 
 === "Removing configuration for all view services"
 

@@ -5,7 +5,7 @@
 
 # Open Governance Framework (OGF)
   
-The *governance action framework (OGF)* provides the interfaces and base implementations for [governance action services](#governance-action-services) that take action to:
+The *governance action framework (OGF)* provides the interfaces and base implementations for [governance action services](/concepts/governance-action-service) that take action to:
 
 - detect, report and eventually correct a situation that is harmful to the data or the organization in some way or 
 - to enhance the metadata to improve its use.

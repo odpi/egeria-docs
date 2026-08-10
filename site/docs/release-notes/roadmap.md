@@ -11,7 +11,7 @@ Egeria aims to deliver against 7 capability layers:
 
 [![Governance Solutions](governance-solution-functional-detail.svg)](#governance-solutions)
 [![Education](education-functional-detail.svg)](#education)
-[![User Interaction](ui-functional-detail.svg)](#user-interfaces)
+[![User Interaction](ui-functional-detail.svg)](#user-interaction)
 [![Integration Platform](integration-platform-functional-detail.svg)](#integration-platform)
 [![Developer Platform](developer-platform-functional-detail.svg)](#developer-platform)
 [![Deployment Runtimes](deployment-runtimes-functional-detail.svg)](#deployment-runtimes)
@@ -23,7 +23,7 @@ The governance solutions aim to support an organization's governance efforts by 
 
 ![Governance Solutions](governance-solution-functional-detail.svg)
 
-The implementation of a governance solution is focused mainly on the extension of the [Egeria User Interfaces](/user-interfaces) and associated reference data to support additional roles and functions. They make use of the services provided by the [developer platform](#developer-platform) and may exploit additional content, utilities and connector implementations from the integration platform.
+The implementation of a governance solution is focused mainly on the extension of the [Egeria User Interfaces](/user-interaction) and associated reference data to support additional roles and functions. They make use of the services provided by the [developer platform](#developer-platform) and may exploit additional content, utilities and connector implementations from the integration platform.
 
 ### Education
 

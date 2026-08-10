@@ -9,6 +9,6 @@
 *Dojo content will go here*
 
 !!! education "Further information"
-    - [Open Lineage log store](/features/lineage-management/overview/#openlineage-log-store)
+    - [Open Lineage log store](/features/lineage-management/overview/#open-lineage-log-store)
 
 

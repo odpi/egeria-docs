@@ -211,7 +211,7 @@ The different types of labels used to group assets/resources are used for differ
 
 * [Governance Zones](/concepts/governance-zone) group assets according to their use.  They are typically is used for [controlling visibility to the resource's asset definition](/features/governance-zoning/overview).
 
-* [Governance Classifications](#setting-up-the-levels-for-your-governance-classifications) define the groups used for specific types of governance.
+* [Governance Classifications](#setting-up-the-levels-for-your-governance-data-classifications) define the groups used for specific types of governance.
 
     * Confidence Governance Classification defines the level of confidence that should be placed in the accuracy of related data items.  This limits the scope that the data can be used in.
     * Confidentiality Governance Classification defines the level of confidentiality or secrecy needed with particular data.

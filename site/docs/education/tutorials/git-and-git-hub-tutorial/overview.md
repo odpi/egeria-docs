@@ -14,7 +14,7 @@ This tutorial covers common tasks associated with using Git and GitHub to work w
 * [Getting a GitHub user log in](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github) - This is required to add anything - even a comment - to the Egeria project's repositories.
 * [Creating an Issue on GitHub](#creating-an-issue-on-github) - Issues are used by developers to describe a contribution.  They are also used by consumers of Egeria to request help with function they think is not working.
 * [Installing Git on your local Machine](https://github.com/git-guides/install-git) - Git provides the commands to manage Egeria's content on your local machine.
-* [Downloading Egeria to build and run](#downloading-the-egeria-source-from-github) - If you do not want to make changes to Egeria, but want to build the distribution file to run it natively on your machine then follow this task.  If you want to be able to make changes to Egeria and contribute them back to the community, then follow the contributors tasks.
+* [Downloading Egeria to build and run](#downloading-egeria-from-github-website) - If you do not want to make changes to Egeria, but want to build the distribution file to run it natively on your machine then follow this task.  If you want to be able to make changes to Egeria and contribute them back to the community, then follow the contributors tasks.
 
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-getting-git-hub-id.md"
 --8<-- "docs/education/tutorials/git-and-git-hub-tutorial/task-creating-an-issue-on-git-hub.md"

@@ -146,7 +146,7 @@ The diagram below summarizes how Egeria's governance automation works.  Descript
     A governance action process can be run many times with different parameters.  It can be changed, simply by updating the governance action process step metadata entities in the governance action process definition.  New processes can be created by creating the appropriate governance process definition.
 
     If a desired request type cannot be supported by the existing governance services, a developer is asked to extend a governance service implementation or create a new one that can be configured into a governance engine to support the desired governance request type.
-
+:wq
 ??? example "Governance services supplied with Egeria"
     * [Governance Action Services](/concepts/governance-action-service)
     * [Survey Action Services](/concepts/survey-action-service)

@@ -107,7 +107,7 @@ The mapping from Unity Catalog metadata elements to the Open Metadata Types used
 | Unity Catalog Table    | [VirtualRelationalTable](/types/2/0235-Information-View) with an associated [DataFolder](/types/2/0220-Files-and-Folders) for its files.             |
 | Unity Catalog Volume   | [DataFolder](/types/2/0220-Files-and-Folders)                                                                                                        |
 
-In addition, each of these elements have a [PropertyFacet](/types/0/0020-Property-Facets) and an [External Identifier](/types/0/0017-External-Identifiers) attached.  The property facet contains implementation specific details; the external identifier includes the guid from unity catalog plus other mapping values such as the catalog name, schema name and short name to enable the Unity Catalog connectors to ensure that the name of a element has not changed since the last time a Unity Catalog element was retrieved.
+In addition, each of these elements have a [PropertyFacet](/types/0/0020-Property-Facets) and an [External Identifier](/types/0/0017-External-Identifiers) attached.  The property facet contains implementation-specific details; the external identifier includes the guid from unity catalog plus other mapping values such as the catalog name, schema name and short name to enable the Unity Catalog connectors to ensure that the name of a element has not changed since the last time a Unity Catalog element was retrieved.
 
 The diagram below illustrates the mapping of the Unity Catalog metadata resource to the Open Metadata Types.
 

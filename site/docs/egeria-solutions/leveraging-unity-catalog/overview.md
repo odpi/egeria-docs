@@ -5,17 +5,16 @@
 # Leveraging your Unity Catalog estate
 
 
-[Unity Catalog](https://www.unitycatalog.io/) is a data manager catalog that governs access to data.  It is typically managing data from data lakes and lakehouses where much of the data is in a parquet format, with a table abstraction over the top.  Unity catalog also supports folders of files (called Volumes) and functions.  Unity catalog is able to provide access to the data in its catalogs, and run the functions.
+[Unity Catalog](https://www.unitycatalog.io/) is a data manager catalog that governs access to data.  It is typically managing data from data lakes and lakehouses where much of the data is in a parquet format, and the data platform has provided a table abstraction over the top.  Unity catalog also supports folders of files (called Volumes) and functions.  Unity catalog is able to provide access to the data in its catalogs, and run the functions.
 
 Often an organization has multiple Unity Catalog servers, each co-located with a data platform.  These data platforms may have been deployed on premises and/or across various cloud platforms depending on the project dynamics and funding at the time of deployment.  As data accumulates on these platforms, its sheer size makes it difficult to move, and so these platforms have a long life and are rarely consolidated.
 
 Egeria's *Leveraging your Unity Catalog estate* solution gives you oversight across all of your Unity Catalog servers.  This includes:
 
-* Ongoing surveys to give you a view of the types of data and models you have, where they are deployed, and how this is changing over time.
+* Ongoing surveys to give you a view of data and models you have, where they are deployed, and how this is changing over time.
 * Selective metadata synchronization between Unity Catalog servers.
-* Creation of a full inventory of all of your data and models managed by your Unity Catalog estate, irrespective of their deployment location.  This inventory can be searched, classified and used to drive governance of your Unity Catalog resources.
-* Coordination of the deployment of definitions to multiple destinations including Unity Catalog servers.
-
+* Generate a comprehensive list of all data and models within your Unity Catalog environment, regardless of where they are deployed. This catalog can then be utilized for searching, categorizing, and enforcing governance policies on your Unity Catalog assets.
+* Deployment coordination of definitions to multiple destinations, including Unity Catalog servers.
 
 
 ## Unity Catalog in Action
@@ -102,7 +101,7 @@ The mapping from Unity Catalog metadata elements to the Open Metadata Types used
 | Technology Type        | Open Metadata Type                                                                                                                                   |
 |------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unity Catalog Server   | [SoftwareServer](/types/0/0040-Software-Servers)                                                                                                     |
-| Unity Catalog Catalog  | [Catalog](/types/0/0050-Applications-and-Processes)                                                                                                  |
+| Unity Catalog Catalog  | [Namespace](/types/0/0021-Collections)                                                                                                               |
 | Unity Catalog Schema   | [DeployedDatabaseSchema](/types/2/0224-Databases)                                                                                                    |
 | Unity Catalog Function | [DeployedAPI](/types/2/0212-Deployed-APIs) with an associated [DeployedSoftwareComponent](/types/2/0215-Software-Components) for its implementation. |
 | Unity Catalog Table    | [VirtualRelationalTable](/types/2/0235-Information-View) with an associated [DataFolder](/types/2/0220-Files-and-Folders) for its files.             |

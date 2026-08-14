@@ -5,14 +5,14 @@
 
 [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) asked [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) and [Peter Profile](/practices/coco-pharmaceuticals/personas/peter-profile) to define an architecture that supports the exchange of data between the different parts of the business.  They are looking for a high-level view that their sponsors can understand.  They also need an approach that will allow them to start simple and then build up the scope of data as they gain experience.  
 
-![Designing Data Hub](erin-peter-designing-new-architecture.png)
+![Designing Data Sharing Hub](erin-peter-designing-new-architecture.png)
 
 The sketch below shows what they came up with.
 
 ![High level systems architecture](data-driven-systems-architecture.svg)
 > Proposed data-driven systems architecture
 
-It shows a data hub in the center with data flows to and from it into the different business units.  The data flows are shown as arrows, labelled with the type of data flowing.  Each business owner can therefore see the data their teams need to contribute and the data they will receive in return.
+It shows a data sharing hub in the center with data flows to and from it into the different business units.  The data flows are shown as arrows, labelled with the type of data flowing.  Each business owner can therefore see the data their teams need to contribute and the data they will receive in return.
 
 The implementation plan can be built up flow by flow, with the development team working with each business team in turn to extract information about the data they work with, its associated business rules and volumetrics.
 
@@ -66,11 +66,11 @@ Polly suggested that they next walk through how a simple data pipeline and data 
 This included:
 
 * Extracting the specification of the source system's data feed.  Including its schema, valid values, and volumetrics (frequency, trigger, expected volumes, peak times etc).
-* Extracting the schema of existing data stores (primarily Operational Data Stores (ODSs)) that will be included in the data hub.
-* Designing any new data stores for the data hub.
+* Extracting the schema of existing data stores (primarily Operational Data Stores (ODSs)) that will be included in the data sharing hub.
+* Designing any new data stores for the data sharing hub.
 * Extracting the specification of the target system's API and data store.  Including its schema, valid values, and volumetrics (frequency, trigger, expected volumes, peak times etc).
-* Modelling mappings between source systems, data hub stores and target systems.
-* Designing the data pipelines to move the data from the source systems to the data hub.
+* Modelling mappings between source systems, data sharing hub stores and target systems.
+* Designing the data pipelines to move the data from the source systems to the data sharing hub.
 * Designing the data pipelines to move the data from the data store to the target systems.
 
 They saw uses for AI in every stage.  The biggest *aha* realization was in the role of Egeria.  They all understood that it would be where all the data stores and pipelines would eventually be catalogued, linked to the business context in the form of [solution blueprints](/concepts/solution-blueprint) and [information supply chains](/concepts/informaiton-supply-chain), so that operational data could be organized and aggregated for business users.  What they began to appreciate was that by involving Egeria in all phases of the engineering work, the mapping of the business context to implementation evolved naturally, allowing testing and review of the resulting observability to be validated at each stage.  AI could be used in the development of this business context, making open metadata a key part of the development process.
@@ -88,17 +88,17 @@ After the meeting, Polly entered the notes from the meeting into [Claude Code](c
   ![Viewing the governance folio](viewing-governance-folio.png)
 
 
-## Building the Data Hub
+## Building the Data Sharing Hub
 
-One of the initial development tasks was to create the definitions for the data hub and the data stores the knew they would need.  This was considered a *No Regrets* activity and created the base definitions for the new integrations they will build.
+One of the initial development tasks was to create the definitions for the data sharing hub and the data stores the knew they would need.  This was considered a *No Regrets* activity and created the base definitions for the new integrations they will build.
 
-![Building the Data Hub](peter-creating-a-data-hub.png)
+![Building the Data Sharing Hub](peter-creating-a-data-hub.png)
 
-??? info "Building the Data Hub"
-   You can see/run the process of building the data hub in the JupyterHub of the [Quickstart environment](/egeria-workspaces/quick-start/overview).  It is found in the `coco-workbooks` under `1. coco-data-hub`.  The [README.md](https://github.com/odpi/egeria-workspaces/blob/master/coco-workbooks/1.%20coco-data-hub/README.md) provides more information how to run the notebook.  The notebooks is called [setting-up-the-data-hub.ipynb](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/2.%20setting-up-the-data-hub.ipynb).
+??? info "Building the Data Sharing Hub"
+   You can see/run the process of building the data sharing hub in the JupyterHub of the [Quickstart environment](/egeria-workspaces/quick-start/overview).  It is found in the `coco-workbooks` under `1. coco-data-hub`.  The [README.md](https://github.com/odpi/egeria-workspaces/blob/master/coco-workbooks/1.%20coco-data-hub/README.md) provides more information how to run the notebook.  The notebooks is called [setting-up-the-data-hub.ipynb](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/2.%20setting-up-the-data-hub.ipynb).
 
 
-<!-- ## Designing the Data Hub Stores -->
+<!-- ## Designing the Data Sharing Hub Stores -->
 
 
 

@@ -39,9 +39,9 @@ He downloads [egeria-workspaces](https://github.com/odpi/egeria-workspaces) from
 
 ## Building a Data Dictionary for the Patient Data Sharing Hub
 
-The first step is to create a data hub element in Egeria.  He then catalogues the database server and folders where the digital images are located. He links them to the data hub.   This process is called [metadata discovery](/features/metadata-discovery/overview).
+The first step is to create a data sharing hub element in Egeria.  He then catalogues the database server and folders where the digital images are located. He links them to the data sharing hub.   This process is called [metadata discovery](/features/metadata-discovery/overview).
 
-From this definition, Egeria automatically builds an inventory of the patient data fields he has on offer in the data hub.  These are organized into a data dictionary that data requesters can select from.
+From this definition, Egeria automatically builds an inventory of the patient data fields he has on offer in the data sharing hub.  These are organized into a data dictionary that data requesters can select from.
 
 
 This skeleton data dictionary is extracted from the schema extraction and profiling performed by Egeris.  It will be complete, in terms of the data fields and their types, but lacking in descriptions that explain the values, where they come from and what they mean.  Robbie will need to add these descriptions to the data dictionary.

@@ -29,4 +29,12 @@ Business domains can be modelled with nested business areas and business service
 
 *DigitalSupport* describes the support provided by a digital service to a business capability.  The *supportedBusinessCapability* is supported by the *usesDigitalService* element that is typically an [Asset](/concepts/asset) or [DigitalProduct](/concepts/digital-product).
 
+## AccountingCodes classification
+
+The *AccountingCodes* classification describes the accounting codes associated with an element.  These codes are used to track the financial aspects of the element. Some organization have complex accounting structures and so the *AccountingCodes* classification has multiple options for expressing one or more codes.
+
+* The *accountingCode* attribute is used to describe a single code.
+* The *accountingCodeList* attribute is used to describe a set of codes.  If multiple codes are used then *accountingCode* would contain the primary/default/preferred value.
+* The *accountingCodeMap* attribute is used to describe a set of name-to-code mappings.
+
 --8<-- "snippets/abbr.md"

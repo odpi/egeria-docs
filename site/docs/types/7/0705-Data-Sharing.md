@@ -8,9 +8,9 @@ Data sharing describes the process of sharing data between different organizatio
 
 ![UML](0705-Data-Sharing.svg)
 
-## DataHub entity
+## DataSharingHub entity
 
-The *DataHub* entity describes a [collection](/types/0/0021-Collections) of data assets that are available for sharing, as long as the requester satisfies the requirements laid down by the data owner.
+The *DataSharingHub* entity describes a [collection](/types/0/0021-Collections) of data assets that are available for sharing, as long as the requester satisfies the requirements laid down by the data owner.
 
 ## DataSharingRequest entity
 

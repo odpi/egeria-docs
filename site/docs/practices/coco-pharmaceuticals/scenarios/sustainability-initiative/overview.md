@@ -199,7 +199,7 @@ Working through these questions leads them to break the supply chain down into t
 
 ### Where will the data be stored?
 
-They decide to build an Operational Data Store - this is a database that holds a copy of the data extracted from various systems and organized to support the calculations and reporting requirements.  This new database is given the name `coco-sus` and will become part of the [Coco Pharmaceuticals Data Hub](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview).
+They decide to build an Operational Data Store - this is a database that holds a copy of the data extracted from various systems and organized to support the calculations and reporting requirements.  This new database is given the name `coco-sus` and will become part of the [Coco Pharmaceuticals Data Sharing Hub](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview).
 
 ### How will the data be processed?
 

@@ -68,34 +68,34 @@ try
             }
 
             /*
-             * Process any new data hubs.
+             * Process any new data sharing hubs.
              */
             CollectionClient collectionClient = integrationContext.getCollectionClient(OpenMetadataType.DATA_HUB.typeName);
             startFrom = 0;
 
-            List<OpenMetadataRootElement> dataHubs = collectionClient.findCollections(null,
+            List<OpenMetadataRootElement> dataSharingHubs = collectionClient.findCollections(null,
                                                                                       collectionClient.getSearchOptions(startFrom, integrationContext.getMaxPageSize()));
 
-            while (dataHubs != null)
+            while (dataSharingHubs != null)
             {
-                for (OpenMetadataRootElement dataHub : dataHubs)
+                for (OpenMetadataRootElement dataSharingHub : dataSharingHubs)
                 {
-                    if ((dataHub != null) && (! knownCatalogTargets.contains(dataHub.getElementHeader().getGUID())) && (dataHub.getProperties() instanceof DataHubProperties dataHubProperties))
+                    if ((dataSharingHub != null) && (! knownCatalogTargets.contains(dataSharingHub.getElementHeader().getGUID())) && (dataSharingHub.getProperties() instanceof DataSharingHubProperties dataSharingHubProperties))
                     {
                         /*
-                         * This is a new data hub.  Add it as a catalog target.
+                         * This is a new data sharing hub.  Add it as a catalog target.
                          */
                         CatalogTargetProperties catalogTargetProperties = new CatalogTargetProperties();
-                        catalogTargetProperties.setCatalogTargetName(dataHubProperties.getDisplayName() + "(" + dataHub.getElementHeader().getGUID() + ")");
+                        catalogTargetProperties.setCatalogTargetName(dataSharingHubProperties.getDisplayName() + "(" + dataSharingHub.getElementHeader().getGUID() + ")");
                         assetClient.addCatalogTarget(integrationContext.getIntegrationConnectorGUID(),
-                                                     dataHub.getElementHeader().getGUID(),
+                                                     dataSharingHub.getElementHeader().getGUID(),
                                                      assetClient.getMakeAnchorOptions(false),
                                                      catalogTargetProperties);
                     }
                 }
 
                 startFrom = startFrom + integrationContext.getMaxPageSize();
-                dataHubs  = collectionClient.findCollections(null,
+                dataSharingHubs  = collectionClient.findCollections(null,
                                                              collectionClient.getSearchOptions(startFrom, integrationContext.getMaxPageSize()));
             }
         }
@@ -119,7 +119,7 @@ It is up to the implementation to determine how to discover the metadata element
 
 
 ???+ info "Code Example"
-    See the [LiskovDataHubManagerConnector](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/nanny-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/liskov/DataHubManagerConnector.java)
+    See the [LiskovDataSharingHubManagerConnector](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/nanny-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/liskov/DataSharingHubManagerConnector.java)
 
 
 

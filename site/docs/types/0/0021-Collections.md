@@ -39,7 +39,7 @@ The collection type is generically useful and there are many subtypes that descr
 * [InformationSupplyChain](/types/7/0720-Information-Supply-Chain) described a collection of components performing an important data flow.
 * [Namespace](#namespace-entity) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
 * [NamingStandardsRuleSet](/types/4/0438-Naming-Standards) means the collection is a set of naming standard rules.
-* [RecentAccess](#recentaccess-entity) means the collection is a set of elements that have been recently accesses by a user.
+* [RecentAccess](#recentaccess-entity) means the collection is a set of elements that have been recently accessed by a user.
 * [ReportType](/types/5/0580-Data-Dictionaries) described of a type of report where the membership element describe what to expect from the instance of a report.
 * [ResultsSet](/types/7/0725-Smart-Collections) means the collection is a set of related results.
 * [RootCollection](#rootcollection-entity) described a master collection of collections.
@@ -47,7 +47,8 @@ The collection type is generically useful and there are many subtypes that descr
 * [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components performing a solution.
 * [SecurityList](/types/4/0423-Security-Definitions) represents a group of [users](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.
 * [SubjectArea](/types/4/0425-Subject-Areas) described a collection of elements that describe a subject area.
-* [WorkItemList](#workitemlist-entity) means the collection is a set of elements that have been recently accesses by a user.
+* [WorkingSet](#workingSet-entity) means the collection is a set of elements that are being worked on by a user or process and have a particular status.
+* [WorkItemList](#workitemlist-entity) means the collection is a set of elements that define the work for a user.
 
 
 ## RootCollection entity
@@ -85,6 +86,10 @@ The *Namespace* entity indicates that the collection is a set of elements that a
 ## RecentAccess entity
 
 The *RecentAccess* entity indicates that the collection is a set of elements that have been accessed recently.
+
+## WorkingSet entity
+
+The *WorkingSet* entity indicates that the collection is organizing a set of elements that are being worked on by a specific person or process.  The *disposition* attribute describes the status of the elements in the collection.
 
 ## WorkItemList entity
 

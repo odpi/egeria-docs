@@ -19,7 +19,7 @@ The data fields in the event are represented using *EventSchemaAttribute* entiti
 
 In the example below, *EventTypeList* is linked to the asset (*KafkaTopic* in this case) via the *Schema* relationship and the event types represent each event option.  The *EventType* entities are linked to the *EventTypeList* using the *SchemaTypeOption* relationship.
 
-![Schema for the Asset Manager OMAS Event](json-event-example.svg)
+![Schema for the Open Metadata Event](json-event-example.svg)
 
 ## EventTypeList
 

@@ -5,7 +5,7 @@
 
 Part of Jules' vision for the organization is to link the different types of governance (data governance, security, IT infrastructure governance) together to create a coordinated program that can support the organization's goals and objectives.
 
-![Jules Keeper working on Multi-Faceted Governance description](jules-creating-multi-faceted-governance.png)
+![Jules Keeper working on Multi-Faceted Governance description](jules-defines-multi-faceted-governance.png)
 > Jules defining the concept of multi-faceted governance
 
 

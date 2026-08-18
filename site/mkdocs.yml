@@ -806,31 +806,29 @@ nav:
           - Open Metadata Implementation: practices/common-data-definitions/open-metadata-for-common-definitions.md
       - Coco Pharmaceuticals:
           - Coco Pharmaceuticals: practices/coco-pharmaceuticals/index.md
-          - Scenarios:
-              - Introduction: practices/coco-pharmaceuticals/scenarios/index.md
-              - Assuring IT System Security: practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview.md
-              - Auditing IT System Users: practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview.md
-              - Authoritative Sources: practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview.md
-              - Building Data Security Strategy: practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview.md
-              - Cataloguing Infrastructure: practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview.md
-              - Common Data Definitions: practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview.md
-              - Continuous Analytics: practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview.md
-              - Data Enabled Employees: practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview.md
-              - Data Strategy: practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview.md
-              - DevOps Cataloguing: practices/coco-pharmaceuticals/scenarios/devops-cataloguing/overview.md
-              - Glossaries: practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview.md
-              - Governance Program: practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview.md
-              - Governance Team: practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview.md
-              - Information Supply Chains: practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview.md
-              - Multi-Faceted Governance: practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview.md
-              - New Systems Architecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview.md
-              - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
-              - Patient Data Sharing Hub: practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview.md
-              - Preparing for Martyn's Law: practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview.md
-              - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
-              - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md
-              - Sustainability: practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview.md
-              - Suspicious Activity: practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview.md
+          - Assuring IT System Security: practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview.md
+          - Auditing IT System Users: practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview.md
+          - Authoritative Sources: practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview.md
+          - Building Data Security Strategy: practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview.md
+          - Cataloguing Infrastructure: practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview.md
+          - Common Data Definitions: practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview.md
+          - Continuous Analytics: practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview.md
+          - Data Enabled Employees: practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview.md
+          - Data Strategy: practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview.md
+          - DevOps Cataloguing: practices/coco-pharmaceuticals/scenarios/devops-cataloguing/overview.md
+          - Glossaries: practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview.md
+          - Governance Program: practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview.md
+          - Governance Team: practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview.md
+          - Information Supply Chains: practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview.md
+          - Multi-Faceted Governance: practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview.md
+          - New Systems Architecture: practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview.md
+          - New Digital Service: practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview.md
+          - Patient Data Sharing Hub: practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview.md
+          - Preparing for Martyn's Law: practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview.md
+          - Receiving Patient Data: practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview.md
+          - Subject Areas: practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview.md
+          - Sustainability: practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview.md
+          - Suspicious Activity: practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview.md
 
 theme:
   name: material

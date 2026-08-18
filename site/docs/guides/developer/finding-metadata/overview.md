@@ -77,11 +77,11 @@ In order for this loop to work, the caller needs to know the real paging size us
 
 Egeria APIs each have their own data models which affects the structure of information returned on a retrieval call.
 
-For example, the repository services (OMRS) return entity and relationship instances.  The access services (OMASs) return assets, glossary terms, connections, ... elements.
+For example, the repository services (OMRS) return entity and relationship instances.  The view services (OMVSs) return assets, glossary terms, connections, ... elements.
 
-Often the results returned by an OMAS includes information from multiple OMRS instances.  These are filled in via additional navigational retrieval requests once the initial retrieval from the repository services has returned a selection of OMRS instances.
+Often the results returned by an OMVS includes information from multiple OMRS instances.  These are filled in via additional navigational retrieval requests once the initial retrieval from the repository services has returned a selection of OMRS instances.
 
-The most perfect, rich result set from an OMAS for your needs, may involve many requests to the repositories. If an OMAS query seems to be taking a lot of time, it might just be that it is doing a lot of work. However, if too much information is being returned, it may be that the API call is not the best choice for your needs.
+The most perfect, rich result set from an OMVS for your needs, may involve many requests to the repositories. If an OMVS query seems to be taking a lot of time, it might just be that it is doing a lot of work. However, if too much information is being returned, it may be that the API call is not the best choice for your needs, or the options ned to be adjusted to prune the results.  For example, if you are only processing the main element and do not care about its relationships, set `graphQueryDepth=0` in the get/query/search options.
 
 ## Metadata elements
 
@@ -120,7 +120,7 @@ Classifications are structured as follows.  Notice they include the same header 
 
 ### Composite metadata elements
 
-Metadata elements can include information from multiple OMRS instances.  For example, this is the connection element from Asset Owner OMAS.  Besides it own properties, a valid [connection](/concepts/connection) is always linked to a connector type.  It may have a link to an endpoint and may be linked to other embedded connections.  The connection element therefore includes information about these important linked objects.
+Metadata elements can include information from multiple OMRS instances.  For example, this is the connection element from Connection Maker API.  Besides it own properties, a valid [connection](/concepts/connection) is always linked to a connector type.  It may have a link to an endpoint and may be linked to other embedded connections.  The connection element therefore includes information about these important linked objects.
 
 ![ConnectionElement](retrieving-metadata-connection-element.svg)
 
@@ -136,7 +136,7 @@ Often an element stub is included in the metadata element because the relationsh
 
 Some metadata elements may look like they are returning a single OMRS instance, but in fact represent a collection of instances that are maintained through a composite properties object.
 
-For example, this is asset element from the Asset Owner OMAS.
+For example, this is asset element from the Asset Maker API.
 
 ![AssetElement](retrieving-metadata-asset-element.svg)
 
@@ -189,7 +189,7 @@ The open metadata repositories support for following retrieval requests:
     * Get the entities that link two entities together.
     * Get all entities of a specific type that are connected to a starting entity either directly or indirectly.
 
-The OMAS APIs are then built up from these basic building block queries.
+The OMVS APIs are then built up from these basic building block queries.
 
 
 

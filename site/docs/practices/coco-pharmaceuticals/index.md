@@ -30,20 +30,53 @@ Jules instigated a [company-wide data strategy](/practices/coco-pharmaceuticals/
 Through Jules' influence:
 
 * [Faith Broker](/practices/coco-pharmaceuticals/personas/faith-broker), their HR director, was also appointed as their Privacy Officer.
-* [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock), their security officer was teamed up with [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke), their IT infrastructure expert to be responsible for cyber security.
+* [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock), their security officer, was teamed up with [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke), their IT infrastructure expert to be responsible for cybersecurity.
 * [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview), their IT Architect, was given greater prominence in the organization since her deep expertise is in information architecture. She was able then to get some investment in master data management, a data lake for the researchers and metadata management tools.
 * Individuals throughout the business were appointed as data owners. For example, [Tom Tally](/practices/coco-pharmaceuticals/personas/tom-tally) from Finance was appointed the data owner of the accounts data, and [Tessa Tube](/practices/coco-pharmaceuticals/personas/tessa-tube), the Lead Researcher, became the data owner for their clinical research data.
 * Jules also appointed data stewards for critical data sets. [Tanya Tidie](/practices/coco-pharmaceuticals/personas/tanya-tidie), their clinical records clark, became a data steward for all patient records maintained during clinical trials.
 
 ## The scenarios
 
-The [scenarios](/practices/coco-pharmaceuticals/scenarios) follow the Coco Pharmaceutical personas as they work to set up their new roles and meet the challenges their new responsibilities bring.  Examples include:
+The [scenarios](/practices/coco-pharmaceuticals/scenarios) follow the Coco Pharmaceutical personas as they work to set up their new roles and meet the challenges their new responsibilities bring.
 
-* [Defining the data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview) - this is the first step in Coco Pharmaceuticals' transformation journey.
-* [Setting up the governance leadership](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview) - this shows the importance of aligning governance with the business needs and the need for the governance domains to collaborate.
+
+* [Defining the data strategy](/practices/coco-pharmaceuticals/scenarios/defining-the-data-strategy/overview) is the first step in Coco Pharmaceuticals' transformation journey.
+
+    - [Planning for common data definitions](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
+  
+        - [Defining the subject areas for data](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview)
+        - [Defining a glossary](/practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview)
+  
+    - [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
+    - [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview)
+    - [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview)
+    - [Defining what is meant by continuous analytics](/practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview)
+    - [Defining how employees can be data-enabled](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
+    - [Defining why a multi-faceted governance model is needed](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview)
+
+* [Building the multi-faceted governance team](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview) shows the importance of aligning governance with the business needs and the need for the governance domains to collaborate.
+
+* [Setting up the data governance program](/practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview)
+
+* Security and Assurance
+
+    - [Assuring IT Systems Security](/practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview)
+    - [Cataloguing Infrastructure](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview)
+    - [DevOps Cataloguing](/practices/coco-pharmaceuticals/scenarios/devop-cataloguing/overview)
+    - [Auditing IT System Users](/practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview)
+    - [Building a data security strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview)
+    - [Preparing for Martyn's Law](/practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview)
+
+* [Investigating suspicious activity](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview)
+
+* [Initiating a sustainability initiative](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview) shows the establishment of a company-wide sustainability reporting initiative.
+
+* [Receiving patient data from a hospital](/practices/coco-pharmaceuticals/scenarios/receiving-patient-data-from-a-hospital/overview)
+
+* [Creating a data sharing hub](/practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview) shows how the data sharing hub can help to improve the use and availability of protected data whilst ensuring protection and governance.
+
 * [Developing a new digital service using personal data](/practices/coco-pharmaceuticals/scenarios/new-clinical-trials-digital-service/overview) considers how context management and governance along a critical business capability can increase effectivness and compliance.
-* [Creating a data sharing hub](/practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview) - this shows how the data sharing hub can help to improve the use and availability of protected data whilst ensuring protection and governance.
-* [Initiating a sustainability initiative](/practices/coco-pharmaceuticals/scenarios/sustainability-initiative/overview) - the shows the establishment of a company-wide sustainability reporting initiative.
+
 
 
 ## More information

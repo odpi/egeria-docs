@@ -31,7 +31,7 @@ Here is another view of the process, but shown as a flow from left to right.
 
 At each stage, there is a trigger (typically detecting something has changed), metadata is assembled, updated and when it is read, made visible through the open metadata ecosystem.
 
-![Metadata Update Specification Pattern](/patterns/metadata-governance/metadata-update-specification-pattern.svg)
+![Metadata Update Specification Pattern](/patterns/active-governance/metadata-update-specification-pattern.svg)
 > A three-step specification pattern of *Trigger*, *Maintain Metadata* and *Make Visible*.
 
 
@@ -81,6 +81,6 @@ ETL engines have a long history of capturing lineage, since it is a common requi
 
 !!! education "Related information"
     - [Choosing the integration style for metadata repositories/catalogs](/guides/integration/types-of-metadata-repository)
-    - [Building an integration connector](/guides/developer/integration-connectors/overview)
+    - [Building an integration connector](/guides/developer/integration-connectors)
     - [Building a repository connector](/guides/developer/repository-connectors/overview)
 

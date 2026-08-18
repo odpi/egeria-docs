@@ -74,7 +74,7 @@ There are various destinations that can be configured for the audit log:
             If an empty list is passed as the request body then all severities are supported by the destination.
 
 === "event"
-    This destination writes each log record as an event on the supplied event topic. It assumes that the [event bus](#set-up-the-default-event-bus) is set up first.
+    This destination writes each log record as an event on the supplied event topic. It assumes that the [event bus](/guides/admin/servers/by-section/event-bus-config-section) is set up first.
 
     !!! post "POST - add event-based audit log destination"
         ```

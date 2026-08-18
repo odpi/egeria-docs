@@ -9,7 +9,7 @@ Model 0531 shows the definitions for describing the schema of structured documen
 
 ## DocumentSchemaType
 
-The root of the schema is represented by an entity of type *DocumentSchemaType*.  This would [link to the asset](/types/5/0503-Asset-Schema) that represents the document, or the [port where the document is passed to a process](/types/5/0520-Process-Schemas).
+The root of the schema is represented by an entity of type *DocumentSchemaType*.  This would [link to the asset](/types/5/0503-Asset-Schema) that represents the document, or the [port where the document is passed to a process](/types/2/0217-Ports).
 
 ## DocumentSchemaAttribute
 

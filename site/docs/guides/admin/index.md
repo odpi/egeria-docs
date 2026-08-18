@@ -55,7 +55,6 @@ Once the configuration document is in place, the OMAG Server can be activated an
     - [Configuring the OMAG Server Platform](/guides/admin/configuring-the-omag-server-platform)
     - [Configuring an OMAG Server](/guides/admin/servers)
     - [Operating the OMAG Server](/guides/operations/overview/#operating-an-omag-server)
-    - [Migrating OMAG Server Configuration Documents](/guides/migration/migrating-configuration-documents)
 
 
 --8<-- "snippets/abbr.md"

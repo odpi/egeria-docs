@@ -97,7 +97,7 @@ Tanya Tidie needs to ensure that only the clinical trials team have access to th
 
 ## Actor Profiles
 
-Figures 2, 3 and 7 show that individuals are represented using a `Person` instance.  Figures 2 and 3 also show `Team` instances for each team.  Both `Person` and `Team` are types of [`ActorProfile`](/types/1/0110-Actor-Profile).  [`ITProfile`](/types/1/0117-IT-Profiles) is another type of ActorProfile that are linked to [Assets](/concepts/asset) to show the user information, typically of a process (such as a connector) or some IT Infrastructure (such as a software server).
+Figures 2, 3 and 7 show that individuals are represented using a `Person` instance.  Figures 2 and 3 also show `Team` instances for each team.  Both `Person` and `Team` are types of [`ActorProfile`](/types/1/0110-Actors).  [`ITProfile`](/types/1/0117-IT-Profiles) is another type of ActorProfile that are linked to [Assets](/concepts/asset) to show the user information, typically of a process (such as a connector) or some IT Infrastructure (such as a software server).
 
 Figure 11 shows the different types of actor profile as well as a link to a `UserIdentity` entity. This describes a user account or userId associated with the profile. 
 

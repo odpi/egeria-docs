@@ -55,7 +55,7 @@ Once an [OMAG Server](/concepts/omag-server) is [configured](/guides/admin/serve
 
 * [Starting and stopping an OMAG Server](#starting-and-stopping-an-omag-server)
 
-It is possible to load an [Open Metadata Archive](/concepts/open-metadata-archives) into running OMAG Servers that are of type [Metadata Access Store](/concepts/metadata-access-store).
+It is possible to load an [Open Metadata Archive](/concepts/open-metadata-archive) into running OMAG Servers that are of type [Metadata Access Store](/concepts/metadata-access-store).
 
 * [Adding an Open Metadata Archive to a running Metadata Access Store](#adding-an-archive-to-a-running-metadata-access-store)
 
@@ -96,9 +96,9 @@ DELETE {platformURLRoot}/open-metadata/admin-services/users/{adminUserId}/server
 
 ### Adding an archive to a running Metadata Access Store
 
-[Open Metadata Archives](/concepts/open-metadata-archives) contain pre-canned metadata types and instances for [Cohort Members](/concepts/cohort-member).
+[Open Metadata Archives](/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [Cohort Members](/concepts/cohort-member).
 
-Archives can be [added to the configuration document](/guides/operations/configuring-the-startup-archives) of a server to ensure their content is loaded each time the server is started.  This is intended for:
+Archives can be [added to the configuration document](/guides/operations/adding-archive-to-running-server) of a server to ensure their content is loaded each time the server is started.  This is intended for:
 
 - Archives containing type definitions.
 - Archives containing instances for repositories that do not store the archive content but keep it in memory.

@@ -21,7 +21,7 @@ When a digital resource is catalogued in open metadata, it is represented as an 
 
 Thus the combination of the asset and its connection allows the distribution of both descriptive information about the digital resource, plus the information needed to access it.
 
-Since different users may be granted different levels of access to the digital resource's contents, it is also possible to add multiple connections to the asset, each with different security information attached.  When a particular user requests the digital resource connector for the asset, the [Metadata Access Server](/concepts/metadata-access-server) supplying the connection metadata calls its [server metadata security connector](/concepts/server-metadata-security-conector) to choose the appropriate connection for the user.
+Since different users may be granted different levels of access to the digital resource's contents, it is also possible to add multiple connections to the asset, each with different security information attached.  When a particular user requests the digital resource connector for the asset, the [Metadata Access Server](/concepts/metadata-access-server) supplying the connection metadata calls its [server metadata security connector](/concepts/server-metadata-security-connector) to choose the appropriate connection for the user.
 
 ## How are digital resource connectors used?
 
@@ -29,7 +29,7 @@ The [Open Connector Framework (OCF)](/frameworks/ocf/overview) has a client call
 
 ![Digital Resource Connector](digital-resource-connector.svg)
 
-For example, this mechanism is used by the [Data Engineer API](/services/data-engineer/overview) to extract tabular data sets, and by the [Runtime Manager API](/services/runtime-manager/overview) to manage Egeria's runtime environments.
+For example, this mechanism is used by the [Data Engineer API](/services/omvs/data-engineer/overview) to extract tabular data sets, and by the [Runtime Manager API](/services/omvs/runtime-manager/overview) to manage Egeria's runtime environments.
 
 ## Egeria's Digital Resource Connectors
 

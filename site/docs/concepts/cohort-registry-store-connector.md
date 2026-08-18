@@ -24,7 +24,7 @@ Egeria provides a single implementation of a cohort registry store connector:
 ??? education "Further information relating to Cohort Registry Store Connectors"
 
     - [Configuring a Cohort Registry Store Connector](/guides/admin/servers/by-section/repository-services-section/#registering-the-server-with-a-cohort) in the [Cohort Member](/concepts/cohort-member) server.
-    - [Cohort Operations](/features/cohort-operations/overview) to understand the way the cohort is formed.
+    - [Cohort Operations](/features/cohort-operation/overview) to understand the way the cohort is formed.
     - [Writing a Cohort Registry Store Connector](/guides/developer/runtime-connectors/cohort-registry-store-connector).
 
 

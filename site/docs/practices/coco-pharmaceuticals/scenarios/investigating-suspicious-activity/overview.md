@@ -7,7 +7,7 @@
 
 [Sally Counter](/practices/coco-pharmaceuticals/personas/sally-counter), a payment clerk in Finance, spotted irregular payments being made to some suppliers.  She reported it and the finance and sales teams are engaged in an investigation into these payments and related activities ...
 
-![Sally and Tom discussing the suspicious activity](tom-and-sally-discussing-the-possilbe-fraud.png)
+![Sally and Tom discussing the suspicious activity](tom-and-sally-discussing-the-possible-fraud.png)
 
 ## The team
 

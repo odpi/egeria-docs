@@ -3,13 +3,13 @@
 
 # 0712 Digital Subscription
 
-A digital subscription is an agreement by a producer of a digital artifact (typically a [DigitalProduct](/types/7/0710-Digital-Service)) to deliver it to a consumer at an agreed time and quality.
+A digital subscription is an agreement by a producer of a digital artifact (typically a [DigitalProduct](/types/7/0710-Digital-Products)) to deliver it to a consumer at an agreed time and quality.
 
 ![UML](0712-Digital-Subscription.svg)
 
 ## DigitalSubscription
 
-The *DigitalSubscription* entity is a specialized [Agreement](/types/7/0711-Agreements) for a subscription to a [Digital Service](/types/7/0710-Digital-Service), [Digital Product](/types/7/0710-Digital-Service) or [Asset](/types/0/0010-Base-Model).  The [AgreementItem](/types/7/0711-Agreements) relationship links the *DigitalSubscription* entity to the element being subscribed to.
+The *DigitalSubscription* entity is a specialized [Agreement](/types/7/0711-Agreements) for a subscription to a [Digital Service](/types/7/0710-Digital-Products), [Digital Product](/types/7/0710-Digital-Products) or [Asset](/types/0/0010-Base-Model).  The [AgreementItem](/types/7/0711-Agreements) relationship links the *DigitalSubscription* entity to the element being subscribed to.
 
 ## DigitalSubscriber
 

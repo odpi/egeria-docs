@@ -32,7 +32,7 @@ Data classes can be used to augment the definition of a [DataStructure](/types/5
 
 ## DataValueAssignment relationship
 
-Data value specifications can be assigned to elements to show that the data associated with the element conforms to the specification.  A [survey action service](/concepts/survey-action-service) can propose a list of data value assignments and these are stored in the [*DataClassAnnotation*](/type/6/0625-Data-Class-Discovery) or [*DataGrainAnnotation*](/type/6/0626-Data-Grain-Discovery).  Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the *DataValueAssignment* relationship.
+Data value specifications can be assigned to elements to show that the data associated with the element conforms to the specification.  A [survey action service](/concepts/survey-action-service) can propose a list of data value assignments and these are stored in the [*DataClassAnnotation*](/types/6/0625-Data-Class-Discovery) or [*DataGrainAnnotation*](/types/6/0626-Data-Grain-Discovery).  Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the *DataValueAssignment* relationship.
 
 ## DataValueAssignmentStatus enumeration
 

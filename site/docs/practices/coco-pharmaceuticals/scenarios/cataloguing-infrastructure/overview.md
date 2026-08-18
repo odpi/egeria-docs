@@ -54,7 +54,7 @@ He gained the following benefits:
 * He could see the systems from the newly acquired companies, and how they were operating.
 * It was easier to collaborate with other teams that needed visibility to the system inventory:
     * The security team had a systems inventory to build their security policies around
-    * The DevOps team could automate the creation of new systems through the [Egeria APIs](/services/omvs/overview)
+    * The DevOps team could automate the creation of new systems through the [Egeria APIs](/services/omvs)
 * Validation of system status was automated, simple check on reports and alerts
 * Team freed up from maintaining the spreadsheets for infrastructure projects
 * Formalisation of software levels into standard operating platforms reduced variation in system stacks and enabled a systematic upgrade process

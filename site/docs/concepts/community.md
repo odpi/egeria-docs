@@ -12,7 +12,7 @@ Communities are typically long running endeavours.
 Communities have [members](#community-member).  These are the people working together in the
 community.
 
-The community can gather together a [collection](/concepts/collection) of [useful metadata elements, such as assets, projects, glossary terms](/concepts/useful-resource), and a collection of [external references](/conceepts/external-reference). 
+The community can gather together a [collection](/concepts/collection) of [useful metadata elements, such as assets, projects, glossary terms](/concepts/useful-resource), and a collection of [external references](/concepts/external-reference). 
 
 The members can create [forums](#community-forum) on different topics to share information.
 

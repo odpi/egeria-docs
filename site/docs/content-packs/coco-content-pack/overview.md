@@ -3,7 +3,7 @@
 
 # Coco Pharmaceuticals Content Pack
 
-The *CocoComboArchive* supplies metadata to support the [Coco Pharmaceuticals scenarios](/practices/coco-pharmaceuticals/). It is a useful content pack to load when experimenting with Egeria's capabilities since it provides examples of many types of open metadata.  In addition, this metadata is also available in the following archives that are used in the[Open Metadata Labs](/education/open-metadata-labs/overview/) where different subsets of this metadata are loading into each of the servers.
+The *CocoComboArchive* supplies metadata to support the [Coco Pharmaceuticals scenarios](/practices/coco-pharmaceuticals/). It is a useful content pack to load when experimenting with Egeria's capabilities since it provides examples of many types of open metadata.  In addition, this metadata is also available in the following archives that are used in the[Open Metadata Labs](/egeria-workspaces) where different subsets of this metadata are loading into each of the servers.
 
 * *CocoBusinessSystemsArchive* provides a catalog of the business systems and the lineage between them and the load of their data into the data lake.  This archive simulates the type of metadata expected from an ETL tool suite.  It is intended for **cocoMDS5** in the open metadata labs but can be used in any server.
 

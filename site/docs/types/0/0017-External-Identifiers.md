@@ -62,7 +62,7 @@ This relationship includes properties to help to map the *OpenMetadataRoot* enti
 
 ## Example
 
-There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the [*ScopedBy*](/types/1/0120-Assognment-Scopes) relationship links the external identifier to the [Referenceable](/types/0/0010-Base-Model/#referenceable) that represents the third party system. Typically, this is a type of [MetadataCollection](/types/2/0225-Metadata-Repositories) asset.
+There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the [*ScopedBy*](/types/1/0120-Assignment-Scopes) relationship links the external identifier to the [Referenceable](/types/0/0010-Base-Model/#referenceable) that represents the third party system. Typically, this is a type of [MetadataCollection](/types/2/0225-Metadata-Repositories) asset.
 
 The picture below shows the value of the external identifiers in providing traceability between metadata elements in different systems.  
 

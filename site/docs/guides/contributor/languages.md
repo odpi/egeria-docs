@@ -35,13 +35,13 @@ Also, you must ensure `JAVA_HOME` is set, and pointing to a JDK. If this is not 
 
 Python is an interpreted programming language. It is favored by data scientists and script-writers because it supports writing in snippets where variables can be created on the fly and are typically global.
 
-Python is used in much of the educational material. For example, Egeria uses Python in the [hands-on labs](/education/open-metadata-labs) since it is the native language of the [Jupyter Notebooks](/education/tutorials/jupyter-tutorial/overview) environment we use for the labs.
+Python is used in much of the educational material. For example, Egeria uses Python in the [hands-on labs](/egeria-workspaces) since it is the native language of the [Jupyter Notebooks](/education/tutorials/jupyter-tutorial/overview) environment we use for the labs.
 
 
 
 ## Markdown
 
-Markdown is a simple tagging language that generates HTML webpages. We use it for documentation (this page is written in Markdown for example), in GitHub comments and in the [Jupyter Notebooks](/education/tutorials/jupyter-tutorial/overview) that form the teaching material for the [hand-on labs](/education/open-metadata-labs).
+Markdown is a simple tagging language that generates HTML webpages. We use it for documentation (this page is written in Markdown for example), in GitHub comments and in the [Jupyter Notebooks](/education/tutorials/jupyter-tutorial/overview) that form the teaching material for the [hand-on labs](/egeria-workspaces).
 
 GitHub provides [a useful summary for Markdown :material-dock-window:](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf){ target=gh } and our own [documentation guide](/guides/documentation/guide) provides Egeria-specific formatting and stylistic pointers, as well as further information on the system we use to translate such `.md` files into the website you are currently reading.
 

@@ -6,7 +6,7 @@
 The [Open Metadata Access Services (OMASs)](/services/omas) provide the domain-specific APIs for metadata management and governance. They run in a [metadata access store](/concepts/metadata-access-store) or [metadata access point](/concepts/metadata-access-point) and typically offer a REST API, Java client and an event-based interface for asynchronous interaction.
 
 !!! attention "Prerequisite configuration"
-    The access service configuration depends on the definitions of the [event bus](#set-up-the-default-event-bus) and the [local server's userId](#configure-the-basic-server-properties).
+    The access service configuration depends on the definitions of the [event bus](/guides/admin/servers/by-section/event-bus-config-section) and the [local server's userId](/guides/admin/servers/by-section/basic-server-properties-section).
 
 ### List available access services
 

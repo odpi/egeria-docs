@@ -3,7 +3,7 @@
 
 # 0265 Analytics Assets
 
-The term *Analytics* is use here to describe processing that is trained and operated using data.  [Analytical Development Assets](/types/2/0285-Analytical-Development-Assets) cover the training process.  The assets below describe the deployed and running components.
+The term *Analytics* is use here to describe processing that is trained and operated using data.  [Analytical Development Assets](/types/2/0285-Analytics-Development-Assets) cover the training process.  The assets below describe the deployed and running components.
 
 ![UML](0265-Analytics-Assets.svg)
 

@@ -20,7 +20,7 @@ There are six types of external references:
 A list of external references can be attached to any [referenceable](/concepts/referenceable) such as
 a [personal profile](/concepts/personal-profile),
 a [community](/concepts/community),
-a [team](/concepts/organizations/#team),
+a [team](/concepts/team),
 a [governance definition](/concepts/governance-definition),
 or an [asset](/concepts/asset).
 
@@ -36,7 +36,7 @@ The *ExternalReferenceLink* relationship is used to connect the external referen
 
 An *ExternalDataSource* element is a type of external reference that describes a data source such as a digital product or data set in an external data catalog or marketplace.  The URL in the link to the catalog entry page for the data source.  External data sources are also linked to their related elements using *ExternalReferenceLink* relationships.  This may be, for example, the equivalent [digital product description](/concepts/digital-product) in the open metadata ecosystem, or a [project](/concepts/project) that is using the external data source.
 
-If an [asset](/concepts/asset) describes a [digital resource](/concepts/digital-resource) that is derived from the external data source, the asset should be linked to the external data source using a [lineage relationship](/concepts/lineage) such as [*DataFlow*]() or *DataSetContent*.
+If an [asset](/concepts/asset) describes a [digital resource](/concepts/digital-resource) that is derived from the external data source, the asset should be linked to the external data source using a [lineage relationship](/concepts/lineage) such as [*DataFlow*](/types/7/0750-Data-Passing) or *DataSetContent*.
 
 ## External Model Source
 

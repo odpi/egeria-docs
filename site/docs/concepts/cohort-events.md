@@ -3,7 +3,7 @@
 
 # Cohort events
 
-*Cohort events* are messages used to notify [members of an open metadata repository cohort](/concepts/cohort-members) of changes to:
+*Cohort events* are messages used to notify [members of an open metadata repository cohort](/concepts/cohort-member) of changes to:
 
 - The membership of the open metadata repository cohort.
 - The types of metadata being managed by members of the open metadata repository cohort.
@@ -58,7 +58,7 @@ Every event has a:
 - Timestamp - indicating the time the event was created.
 - Originator - detailing the server that originated the message.
     - The [metadata collection id](/concepts/metadata-collection-id) of the sending open metadata repository's metadata collection.  (The only time this is not set is when a message is sent from a server that does not have a local metadata repository configured.)
-    - The server name, type and organization are optional descriptive fields used in audit logging and problem determination. These values are set up through the [administration services](/guides/admin/guide).
+    - The server name, type and organization are optional descriptive fields used in audit logging and problem determination. These values are set up through the [administration services](/guides/admin).
 - Version - the version number of the event (set to `OMRS V1.0` in the initial version).
 
 The setting of the category determines which category-specific section is used. Each category-specific section begins with a category-specific event type that describes the type of the event, and hence the properties that will be found in the category-specific section.

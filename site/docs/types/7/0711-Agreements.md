@@ -19,11 +19,11 @@ The *DataSharingAgreement* indicates that the agreement relates to the sharing o
 
 ## ContractLink relationship
 
-The *ContractLink* relationship links in the [ExternalReference](/types/0/0115-Linked-Media-Types) that identifies the location of an associated contract.
+The *ContractLink* relationship links in the [ExternalReference](/types/0/0015-Linked-Media-Types) that identifies the location of an associated contract.
 
 ## AgreementItem relationship
 
-The *AgreementItem* relationship identifies an element (any [Referenceable](/types/0/0010-Base-Model)) that is a part of the agreement.  For example, the *Agreement* may represent the End User License Agreement (EULA) for a user of a data product marketplace.  The *AgreementItem* would link to each data product that the user has subscribed to.  The properties of the *AgreementItem* fixes the details of the agreement with respect to the specific [digital product](/types/7/0710-Digital-Service).
+The *AgreementItem* relationship identifies an element (any [Referenceable](/types/0/0010-Base-Model)) that is a part of the agreement.  For example, the *Agreement* may represent the End User License Agreement (EULA) for a user of a data product marketplace.  The *AgreementItem* would link to each data product that the user has subscribed to.  The properties of the *AgreementItem* fixes the details of the agreement with respect to the specific [digital product](/types/7/0710-Digital-Products).
 
 ## AgreementActor relationship
 

@@ -49,7 +49,7 @@ They are driven by specific archive logic that knows what content to add to the 
 ![Figure 5](/guides/developer/open-metadata-archives/on-disk-archive-construction.svg)
 > **Figure 5:** Assembling an open metadata archive directly on disk
 
-The archive logic can either be an [offline utility](#supported-utilities-for-open-metadata-archives) or an [archive service](/guides/developer/archive-services/overview) running in an [archive engine](/concepts/archive-engine).
+The archive logic can either be an [offline utility](#supported-utilities-for-open-metadata-archives) or an [archive service](/guides/developer/repository-governance-services/overview) running in an [archive engine](/concepts/repository-governance-engine).
 
 ## Inside an Open Metadata Archive
 
@@ -113,12 +113,10 @@ added to the repository.
 Egeria supports the following open metadata archives.  Associated with each archive
 are utilities that help you build additional archives of your own content.
 
-- [Open Metadata Types :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types){ target=gh } - contains Egeria's [Open Metadata Type Definitions](/types).  This archive is always loaded by each type of [cohort Member](/concepts/cohort-member) capable OMAG Server at start-up.  This is to reduce the chance that new types developed by a third party have names that conflict with the open metadata types. There is also a [utility :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types-utility){ target=gh } to create the [archive file :material-github:](https://github.com/odpi/egeria/blob/main/content-packs/OpenMetadataTypes.json){ target=gh } for these open metadata types.
+- [Open Metadata Types :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types){ target=gh } - contains Egeria's [Open Metadata Type Definitions](/types).  This archive is always loaded by each type of [cohort Member](/concepts/cohort-member) capable OMAG Server at start-up.  This is to reduce the chance that new types developed by a third party have names that conflict with the open metadata types. There is also a [utility :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types-utility){ target=gh } to create the [archive file :material-github:](https://github.com/odpi/egeria/blob/main/content-packs/OpenMetadataTypes.omarchive){ target=gh } for these open metadata types.
 
-- [Open Connector Archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } - provides utilities for building open metadata archives containing information about one or more connectors that follow the [Open Connector Framework (OCF)](/frameworks/ocf/overview).  In addition, there are utilities for building an open metadata archive containing the connector type definitions for Egeria's data store connectors.
+- [Core Content Pack :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/core-content-pack){ target=gh } - builds the [Core Content Pack](/content-packs/core-content-pack/overview) and its related packs.  It began as a set of connector definitions for connectors that follow the [Open Connector Framework (OCF)](/frameworks/ocf/overview), and now also supplies the reference data, [governance action process](/concepts/governance-action-process) definitions, [solution blueprints](/concepts/solution-blueprint) and other context needed to put those connectors to work - which is why it is no longer called *open connector archives*.
 
-- [Design Model Archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/design-model-archives){ target=gh } - provides utilities to manage common/standard model content from third parties.  It includes
-an example archive for the [Cloud Information Model (CIM)](https://cloudinformationmodel.org).
 
 
 ---8<-- "snippets/abbr.md"

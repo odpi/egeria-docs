@@ -61,7 +61,7 @@ Cezar Sirbu demonstrated how to incorporate Egeria's common web components into 
 
 The new general user interface using this technology is pencilled in to be included in the helm charts for the V4.0 release of Egeria.
 
-Focus now moves to the services that support the web components.  Today we have the view services that run in the OMAG Server Platform and the services that run in the Egeria UI Platform.  The view services also run in the Egeria UI platform, so this platform has the potential to offer the common back-end services for all UIs (effectively replacing the [Presentation Server](/concepts/presentation-server).  The next step is to validate that it is possible to support pluggable user directories.  There needs to one user directory per tenant to support authentication of incoming users.
+Focus now moves to the services that support the web components.  Today we have the view services that run in the OMAG Server Platform and the services that run in the Egeria UI Platform.  The view services also run in the Egeria UI platform, so this platform has the potential to offer the common back-end services for all UIs (effectively replacing the [Presentation Server](/user-interfaces).  The next step is to validate that it is possible to support pluggable user directories.  There needs to one user directory per tenant to support authentication of incoming users.
 
 We are also looking for volunteers to help convert the remaining components from the React UI to the new style of web components using TypeScript.
 
@@ -100,7 +100,7 @@ On 9th January 2023 we recorded another webinar, this one entitled, *"What next 
 
 Over the last few community meetings ...
 
-* We reviewed the design of the [governance action process](/patterns/metadata-governance/overview) choreography.
+* We reviewed the design of the [governance action process](/patterns/active-governance/overview) choreography.
 * On the last community call of 2022, we had the traditional *Review of the Year* celebration that highlighted the achievements of 2022.
 * The 2023 community calls began with a review of the Asset Consumer OMAS, Connected Asset Services and Open Metadata Store.
 * The following week, Dan Wolfson took us through the design and implementation of a new Python client for Asset Consumer OMAS.
@@ -115,7 +115,7 @@ The Egeria project annual review by the [Technical Advisory Board (TAC)](https:/
 Each month we will select one or more new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org) so you can keep up-to-date with how it is evolving.
 
 * [Categories of Metadata](/patterns/metadata-manager/categories-of-metadata)
-* [Description of a Digital Service](/types/7/0710-Digital-Service)
+* [Description of a Digital Service](/types/7/0710-Digital-Products)
 
 ## Moving to Gradle
 

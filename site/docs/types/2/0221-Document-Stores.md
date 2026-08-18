@@ -20,7 +20,7 @@ The *MediaFile* entity describes a [*DataFile*](/types/2/0220-Files-and-Folders)
 
 ## MediaCollection entity
 
-A *MediaCollection* entity describes a collection of media files.  An example would be a playlist.  The collection could be manually curated or automatically curated using different criteria or algorithms.  Since *MediaCollection* inherits from [*DataSet*](/types/0/0010-Basic-Model) its members are linked to using the [*DataSetContent*](/types/2/0210-Data-Stores) relationship.
+A *MediaCollection* entity describes a collection of media files.  An example would be a playlist.  The collection could be manually curated or automatically curated using different criteria or algorithms.  Since *MediaCollection* inherits from [*DataSet*](/types/0/0010-Base-Model) its members are linked to using the [*DataSetContent*](/types/2/0210-Data-Stores) relationship.
 
 ??? deprecated "Deprecated types"
  * The *GroupedMedia* relationship is deprecated in favour of [*DataSetContent*](/types/2/0210-Data-Stores).

@@ -5,7 +5,7 @@
 
 A *subsystem* is a collection of components within a software server platform that supports one or more related services. Subsystems can be organized in a hierarchy where course-grained subsystems can be decomposed into more fine-grained subsystems.
 
-The [OMAG Server Platform](/concepts/omag-server-platform) is a collection of subsystems that support open metadata and governance services as well as its own operational needs.  It is designed to provide a runtime where nothing is running when it starts.  Services are activated dynamically through the [Administration services](/services/admin/services/overview).
+The [OMAG Server Platform](/concepts/omag-server-platform) is a collection of subsystems that support open metadata and governance services as well as its own operational needs.  It is designed to provide a runtime where nothing is running when it starts.  Services are activated dynamically through the [Administration services](/services/admin-services/overview).
 
 ## Fixed services
 
@@ -13,7 +13,7 @@ Fixed services that are always present in the platform:
 
 - [Platform Chassis](/services/platform-chassis) provides the main class of the OMAG Server Platform that manages the start up, and shutdown of an OMAG Server instance.
 
-- [Administration Services](/services/admin-services/overview) support the configuration and operation (such as starting and stopping) of [OMAG Servers](/concepts/omag-servers).
+- [Administration Services](/services/admin-services/overview) support the configuration and operation (such as starting and stopping) of [OMAG Servers](/concepts/omag-server).
 
 - [First Failure Data Capture (FFDC) services](/services/ffdc-services) support the capture of diagnostics.
 

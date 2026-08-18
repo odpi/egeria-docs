@@ -23,6 +23,6 @@ The individual tutorials focus on a specific tool, or group of related tasks.  T
 
 ## Webinars
 
-[Egeria's webinars](/education/webinar-program/overview) run each month and provide a deep dive into a particular topic.  All webinars are recorded and are available on YouTube.
+Egeria's webinars run each month and provide a deep dive into a particular topic.  All webinars are recorded and are available on YouTube.
 
 --8<-- "snippets/abbr.md"

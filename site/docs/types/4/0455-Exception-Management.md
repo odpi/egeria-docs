@@ -49,7 +49,7 @@ The types of operational logs and associated processing are:
 
 ## ExceptionType entity
 
-The *ExceptionType* entity describes an anticipated type of exception that may be discovered.  It is linked to the associated policy using the [GovernanceResponse](0460-Governance-Response.md) relationship.
+The *ExceptionType* entity describes an anticipated type of exception that may be discovered.  It is linked to the associated policy using the [GovernanceResponse](/types/4/0415-Governance-Responses) relationship.
 
 ## Exception relationship
 

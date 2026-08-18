@@ -22,7 +22,7 @@ However, they are not very consumable for people, so most metadata instances als
 for displaying information to end users.
 
 There is a tiny chance that two servers will generate the same guid. If this happens, it is
-detected by the [repository services](/services/omrs/overview) and messages are
+detected by the [repository services](/services/omrs) and messages are
 output on the detecting server's 
 [audit log](/concepts/audit-log).
 The repository services also have APIs for re-identifying (ie changing the guid)

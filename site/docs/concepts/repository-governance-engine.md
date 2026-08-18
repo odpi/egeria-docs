@@ -8,7 +8,7 @@ hide:
 
 # Repository Governance Engine
 
-The repository governance engine describes a set of related [repository governance services](/guides/developer/repository-governance-services/overview) that perform governance on open metadata repositories such as dynamically manage [open metadata archives](/concepts/open-metadata-archives) based on changes in the open metadata.
+The repository governance engine describes a set of related [repository governance services](/guides/developer/repository-governance-services/overview) that perform governance on open metadata repositories such as dynamically manage [open metadata archives](/concepts/open-metadata-archive) based on changes in the open metadata.
 
 A repository governance engine is hosted in the [Repository Governance Open Metadata Engine Service (OMES)](/services/omes/repository-governance/overview) running on one or more [Engine Host OMAG Servers](/concepts/engine-host).
 

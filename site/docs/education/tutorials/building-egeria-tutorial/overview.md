@@ -38,7 +38,7 @@ Alternatively ...
 
 * [Set up IntelliJ ready to develop connectors or clients that use Egeria](/education/tutorials/developer-intellij-tutorial/overview)
 or
-* [Run the open metadata labs to get experience with using Egeria](/education/open-metadata-labs/overview)
+* [Run the open metadata labs to get experience with using Egeria](/egeria-workspaces)
 or
 * [Learn about developing extensions to Egeria](/guides/developer)
 or

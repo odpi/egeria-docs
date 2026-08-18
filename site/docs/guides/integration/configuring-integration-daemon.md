@@ -9,5 +9,5 @@ The [connector catalog](/connectors) lists the integration connectors that are p
 
 ??? education "Further information"
     - [Configuring the integration daemon](/guides/admin/servers/by-server-type/configuring-an-integration-daemon)
-    - [Writing integration connectors](/guides/developer/integration-connectors/overview)
+    - [Writing integration connectors](/guides/developer/integration-connectors)
 

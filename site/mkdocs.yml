@@ -17,6 +17,7 @@ nav:
       - Background:
             - The Challenge: introduction/challenge.md
             - Our Solution: introduction/overview.md
+      - Try Egeria: try-egeria/overview.md
       - Egeria Workspaces:
             - Egeria Workspaces: egeria-workspaces/index.md
             - Demo Environment: egeria-workspaces/demo-environment/overview.md
@@ -33,10 +34,12 @@ nav:
                 - PostgreSQL: egeria-solutions/leveraging-postgres/overview.md
                 - Microsoft SQL Server: egeria-solutions/leveraging-mssql/overview.md
                 - Oracle Database: egeria-solutions/leveraging-oracle/overview.md
+                - Enterprise Oracle: egeria-solutions/enterprise-oracle/overview.md
                 - Db2 for Linux, UNIX and Windows: egeria-solutions/leveraging-db2luw/overview.md
                 - DuckDB: egeria-solutions/leveraging-duckdb/overview.md
                 - Unity Catalog: egeria-solutions/leveraging-unity-catalog/overview.md
                 - Apache Atlas: egeria-solutions/leveraging-apache-atlas/overview.md
+                - Apache Atlas compared with Egeria: egeria-solutions/leveraging-apache-atlas/apache-atlas-vs-egeria.md
                 - Apache Kafka: egeria-solutions/leveraging-apache-kafka/overview.md
                 - Open APIs: egeria-solutions/leveraging-apis/overview.md
             - Evolving to the Future:
@@ -59,6 +62,7 @@ nav:
                 - Distributed Secrets: egeria-solutions/distributed-secrets/overview.md
                 - Proactive Cataloguing: egeria-solutions/proactive-cataloguing/overview.md
                 - Threat Modelling: egeria-solutions/threat-modelling/overview.md
+                - Incident Management: egeria-solutions/incident-management/overview.md
       - Patterns of Use:
             - Patterns of Use: patterns/index.md
             - Metadata Manager: patterns/metadata-manager/overview.md
@@ -107,6 +111,7 @@ nav:
               - Files Content Pack: content-packs/files-content-pack/overview.md
               - Open Lineage Content Pack: content-packs/open-lineage-content-pack/overview.md
               - Organization Insight Content Pack: content-packs/organization-insight-content-pack/overview.md
+              - Metadata Observability Content Pack: content-packs/observability-content-pack/overview.md
               - Products Content Pack: content-packs/products-content-pack/overview.md
               - PostgreSQL Content Pack: content-packs/postgres-content-pack/overview.md
               - Microsoft SQL Server Content Pack: content-packs/mssql-content-pack/overview.md
@@ -114,7 +119,6 @@ nav:
               - Db2 for LUW Content Pack: content-packs/db2luw-content-pack/overview.md
               - DuckDB Content Pack: content-packs/duckdb-content-pack/overview.md
               - Unity Catalog Content Pack: content-packs/unity-catalog-content-pack/overview.md
- #             - Cloud Information Model: content-packs/cim-content-pack/overview.md
               - Coco Pharmaceuticals: content-packs/coco-content-pack/overview.md
               - Simple Catalog: content-packs/simple-content-pack/overview.md
               - Open Metadata Types: content-packs/types-content-pack/overview.md
@@ -151,6 +155,7 @@ nav:
           - Retrieving Metadata: guides/developer/finding-metadata/overview.md
           - Mapping Technology:
                 - Mapping Technology: guides/developer/mapping-technology/index.md
+                - Data Managers: guides/developer/mapping-technology/data-manager.md
                 - APIs: guides/developer/mapping-technology/apis/overview.md
                 - Databases: guides/developer/mapping-technology/databases/overview.md
                 - Displays: guides/developer/mapping-technology/displays/overview.md
@@ -163,6 +168,7 @@ nav:
           - Building Archives:
               - Content Packs: guides/developer/open-metadata-archives/creating-content-packs.md
               - Governance Engine Packs: guides/developer/open-metadata-archives/creating-governance-engine-packs.md
+              - Governance Pack Introduction: guides/developer/open-metadata-archives/governance-pack-intro.md
               - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
           - Building Utilities: guides/developer/building-utilities/overview.md
           - Building Connectors:
@@ -173,20 +179,29 @@ nav:
               - Governance Action Services: guides/developer/governance-action-services/overview.md
               - Watchdog Action Services: guides/developer/watchdog-action-services/overview.md
               - Repository Governance Services: guides/developer/repository-governance-services/overview.md
-              - Repository Connectors: guides/developer/repository-connectors/overview.md
+              - Repository Connectors:
+                  - Repository Connectors: guides/developer/repository-connectors/overview.md
+                  - Implementing a Repository Connector: guides/developer/implement-repository-connector.md
+                  - Event Mapper Connector: guides/developer/repository-connectors/event-mapper-connector.md
+                  - OMRS Metamodel: guides/developer/repository-connectors/metamodel/overview.md
               - Runtime Connectors:
                   - Audit Log Destination: guides/developer/runtime-connectors/audit-log-destination-connector.md
+                  - Cohort Member Client: guides/developer/runtime-connectors/cohort-member-client-connector.md
                   - Cohort Registry Store: guides/developer/runtime-connectors/cohort-registry-store-connector.md
                   - Configuration Document Store: guides/developer/runtime-connectors/configuration-document-store-connector.md
                   - Open Metadata Archive Store: guides/developer/runtime-connectors/open-metadata-archive-store-connector.md
                   - Platform Metadata Security Connector: guides/developer/runtime-connectors/platform-metadata-security-connector.md
                   - Server Metadata Security Connector: guides/developer/runtime-connectors/server-metadata-security-connector.md
+                  - REST Client Connector: guides/developer/runtime-connectors/rest-client-connector.md
               - Resource Connectors:
                   - New types of connectors: guides/developer/resource-connectors/overview.md
                   - Open Metadata Topic Connector: guides/developer/resource-connectors/open-metadata-topic-connector.md
           - Clients:
               - Python clients: guides/developer/python-clients/overview.md
               - Java clients: guides/developer/java-clients/overview.md
+              - REST APIs: guides/developer/rest-apis.md
+              - Configuring Logback: guides/developer/logback/overview.md
+              - Using HTTP Helper: guides/developer/http-helper/overview.md
           - Javadoc: https://odpi.github.io/egeria/index.html
           - Defining new open metadata types: guides/developer/open-metadata-archives/defining-new-types.md
       - Administration:
@@ -202,6 +217,7 @@ nav:
                   - View Server: guides/admin/servers/by-server-type/configuring-a-view-server.md
                   - Integration Daemon: guides/admin/servers/by-server-type/configuring-an-integration-daemon.md
                   - Engine Host: guides/admin/servers/by-server-type/configuring-an-engine-host.md
+                  - Engine Host Configuration Document Example: guides/admin/servers/by-server-type/engine-host-config-doc-example.md
                   - Conformance Test Server: guides/admin/servers/by-server-type/configuring-a-conformance-test-server.md
               - By Section:
                   - Configuring an OMAG Server by configuration document section: guides/admin/servers/by-section/index.md
@@ -214,14 +230,27 @@ nav:
                   - View Services: guides/admin/servers/by-section/view-services-section.md
                   - Integration Daemon Services: guides/admin/servers/by-section/integration-daemon-services-section.md
                   - Engine Host Services: guides/admin/servers/by-section/engine-host-services-section.md
+          - Platform Debug Logging: guides/admin/omag-server-platform-logging.md
+          - Platform Logging JSON Example: guides/admin/omag-server-platform-logging-jsonexample.md
+          - Transport Level Security (TLS): guides/admin/omag-server-platform-transport-level-security.md
       - Operations Guide:
           - Operate OMAG Server Platform: guides/operations/overview.md
+          - Starting and Stopping an OMAG Server: guides/operations/starting-and-stopping-omag-server.md
+          - OMAG Server Starter: guides/operations/operate-omag-server-starter.md
+          - Adding an Archive to a Running Server: guides/operations/adding-archive-to-running-server.md
+          - Platform Origin Service: guides/operations/server-platform-origin-service.md
       - Diagnostic Guide:
           - Diagnostic Process: guides/diagnostic/overview.md
           - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
           - First failure data capture (FFDC): guides/diagnostic/ffdc.md
           - Tracing REST Calls: guides/diagnostic/tracing-rest-calls.md
           - Logon Problems: guides/diagnostic/logon-problems.md
+          - Diagnostic APIs: guides/diagnostic/diagnostic-apis.md
+          - Error Examples:
+              - Platform Start Up Errors: guides/diagnostic/examples-of-platform-start-up-errors.md
+              - Server Start Up Errors: guides/diagnostic/examples-of-server-start-up-errors.md
+              - Cohort Errors: guides/diagnostic/examples-of-cohort-errors.md
+              - Common REST API Errors: guides/diagnostic/examples-of-common-rest-api-errors.md
           - Server Diagnostic Guides:
               - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
@@ -267,25 +296,48 @@ nav:
       - Tutorials:
           - Tutorials: education/tutorials/index.md
           - Setting up Egeria: education/tutorials/building-egeria-tutorial/overview.md
-          - Using Egeria:
-              - Platform and Servers: education/tutorials/omag-server-tutorial/overview.md
-              - Reports and Utilities: education/tutorials/omag-client-tutorial.md
-              - Sample Clients: education/tutorials/running-samples-tutorial.md
           - Developing with Egeria:
               - Setting up IntelliJ: education/tutorials/developer-intellij-tutorial/overview.md
+              - Create a Test Metadata Store: education/tutorials/developer-intellij-tutorial/create-test-metadata-store.md
+              - Platform Report - No Servers: education/tutorials/developer-intellij-tutorial/egeria-platform-report-no-servers.md
+              - Platform Report - Server Configured: education/tutorials/developer-intellij-tutorial/egeria-platform-report-server-config.md
+              - Platform Report - Server Running: education/tutorials/developer-intellij-tutorial/egeria-platform-report-server-running.md
+              - Platform Report - No Config Files: guides/developer/dev-projects/egeria-platform-report-no-config-files.md
               - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
+          - Downloading Egeria: education/tutorials/downloading-egeria/overview.md
+          - Using Egeria:
+              - Platform and Servers: education/tutorials/omag-server-tutorial/overview.md
+              - Trust Store Errors: education/tutorials/omag-server-tutorial/no-trust-store-error.md
+              - Reports and Utilities: education/tutorials/omag-client-tutorial.md
+              - Sample Clients: education/tutorials/running-samples-tutorial.md
+              - Types of APIs and Platform Deployment: education/tutorials/running-from-assembly-tutorial/different-types-of-apis-platform-deployment.md
+              - Platform Reports:
+                  - No Servers Configured: education/tutorials/egeria-platform-report-no-servers.md
+                  - Metadata Store Configured: education/tutorials/egeria-platform-report-mds1-configured.md
+                  - Metadata Store Running: education/tutorials/egeria-platform-report-mds1-running.md
+                  - Running the Platform in IntelliJ: education/tutorials/intellij-run-omag-server-platform.md
           - Tools:
               - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
-              - Using Kubernetes: guides/operations/kubernetes/index.md
               - Using Docker: education/tutorials/docker-tutorial/overview.md
-              - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
-              - Using Postman: education/tutorials/postman-tutorial/overview.md
+              - Using Jupyter: education/tutorials/jupyter-tutorial/overview.md
+              - Using Swagger: education/tutorials/swagger-tutorial/overview.md
+              - Using IntelliJ:
+                  - Using IntelliJ: education/tutorials/intellij-tutorial/overview.md
+                  - Installing IntelliJ: education/tutorials/intellij-tutorial/task-installing-intellij.md
+                  - Installing Egeria via IntelliJ: education/tutorials/intellij-tutorial/intellij-installing-egeria.md
+                  - Add as a Maven Project: education/tutorials/intellij-tutorial/intellij-add-as-maven-project.md
+                  - Add a Directory: education/tutorials/intellij-tutorial/intellij-add-directory.md
+                  - Add a Sources Root: education/tutorials/intellij-tutorial/intellij-add-sources-root.md
+                  - Resolve External Dependencies: education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies.md
+                  - Resolve External Dependencies Choice: education/tutorials/intellij-tutorial/intellij-resolve-external-dependencies-choice.md
               - Using Kafka: education/tutorials/kafka-tutorial/overview.md
   - Community:
       - Community Recognition: community/index.md
       - Community Guide: guides/community.md
       - Contributing:
+          - Contributor Guide: guides/contributor/overview.md
           - Project Operations: guides/project-operations.md
+          - Egeria Badges: guides/contributor/badges/overview.md
           - Code:
               - Coding Guidelines: guides/contributor/guidelines.md
               - Way of Working:
@@ -294,6 +346,8 @@ nav:
                       - Release process: guides/contributor/release-process/index.md
                       - Egeria Core Release process: guides/contributor/release-process/egeria-core-release.md
                       - Maven Publishing reference: guides/contributor/release-process/maven-publish.md
+                      - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
+                      - Egeria Docs Release process: guides/contributor/release-process/egeria-docs-release.md
                       - GitHub Secrets reference: guides/contributor/release-process/secrets.md
               - Specific Guidance:
                   - Programming Languages: guides/contributor/languages.md
@@ -393,7 +447,9 @@ nav:
               - Teams: types/1/0115-Teams.md
               - IT Profiles: types/1/0117-IT-Profiles.md
               - Actor Roles: types/1/0118-Actor-Roles.md
+              - Team Roles: types/1/0119-Team-Roles.md
               - Assignment Scopes: types/1/0120-Assignment-Scopes.md
+              - Collections (Area 1): types/1/0120-Collections.md
               - Contribution: types/1/0125-Contribution.md
               - Projects: types/1/0130-Projects.md
               - Actions for People: types/1/0135-Actions-For-People.md
@@ -492,6 +548,7 @@ nav:
               - Reference Data: types/5/0545-Reference-Data.md
               - Instance Metadata: types/5/0550-Instance-Metadata.md
               - Design Models: types/5/0565-Design-Models.md
+              - Design Model Organization: types/5/0566-Design-Model-Organization.md
               - Metamodels: types/5/0570-Metamodels.md
               - Concept Models: types/5/0571-Concept-Models.md
               - Data Dictionaries: types/5/0580-Data-Dictionaries.md
@@ -540,7 +597,56 @@ nav:
                   - Cohorts: services/omrs/cohort.md
                   - Metadata Repositories: services/omrs/metadata-repositories.md
                   - Cohort Events: concepts/cohort-events.md
+                  - Exception Descriptions: services/omrs/exception-descriptions.md
+                  - Subsystems:
+                      - OMRS Subsystems: services/omrs/subsystem-descriptions/index.md
+                      - Administration Services: services/omrs/subsystem-descriptions/administration-services.md
+                      - Cohort Services: services/omrs/subsystem-descriptions/cohort-services.md
+                      - Enterprise Repository Services: services/omrs/subsystem-descriptions/enterprise-repository-services.md
+                      - Event Management Services: services/omrs/subsystem-descriptions/event-management-services.md
+                      - Local Repository Services: services/omrs/subsystem-descriptions/local-repository-services.md
+                  - Components:
+                      - OMRS Components: services/omrs/component-descriptions/index.md
+                      - Archive Manager: services/omrs/component-descriptions/archive-manager.md
+                      - Audit Log: services/omrs/component-descriptions/audit-log.md
+                      - Cohort Manager: services/omrs/component-descriptions/cohort-manager.md
+                      - Cohort Registry: services/omrs/component-descriptions/cohort-registry.md
+                      - Configuration Factory: services/omrs/component-descriptions/configuration-factory.md
+                      - Enterprise Connector Manager: services/omrs/component-descriptions/enterprise-connector-manager.md
+                      - Enterprise Repository Connector: services/omrs/component-descriptions/enterprise-repository-connector.md
+                      - Enterprise Topic Listener: services/omrs/component-descriptions/enterprise-topic-listener.md
+                      - Event Listener: services/omrs/component-descriptions/event-listener.md
+                      - Event Manager: services/omrs/component-descriptions/event-manager.md
+                      - Event Publisher: services/omrs/component-descriptions/event-publisher.md
+                      - Local Repository Connector: services/omrs/component-descriptions/local-repository-connector.md
+                      - Local Repository Instance Event Processor: services/omrs/component-descriptions/local-repository-instance-event-processor.md
+                      - Local Repository TypeDef Event Processor: services/omrs/component-descriptions/local-repository-typedef-event-processor.md
+                      - Metadata Highway Manager: services/omrs/component-descriptions/metadata-highway-manager.md
+                      - OMRS REST Services: services/omrs/component-descriptions/omrs-rest-services.md
+                      - Operational Services: services/omrs/component-descriptions/operational-services.md
+                      - Repository Content Manager: services/omrs/component-descriptions/repository-content-manager.md
+                      - Repository Helper: services/omrs/component-descriptions/repository-helper.md
+                      - Repository Validator: services/omrs/component-descriptions/repository-validator.md
+                      - REST Repository Connector: services/omrs/component-descriptions/rest-repository-connector.md
+                      - TypeDef Manager: services/omrs/component-descriptions/typedef-manager.md
+                  - Connectors:
+                      - OMRS Connectors: services/omrs/component-descriptions/connectors/index.md
+                      - OMRS Topic Connector: services/omrs/component-descriptions/connectors/omrs-topic-connector.md
+                      - OMRS Repository Connector: services/omrs/component-descriptions/connectors/repository-connector.md
+                  - Reference:
+                      - Archive Manager: services/omrs/archive-manager.md
+                      - OMRS Repository Connector: services/omrs/repository-connector.md
+                      - OMRS Topic Connector: services/omrs/omrs-topic-connector.md
+                      - Repository Content Manager: services/omrs/repository-content-manager.md
+                      - TypeDef Manager: services/omrs/typedef-manager.md
               - First Failure Data Capture (FFDC): services/ffdc-services.md
+              - Common Services: services/common-services.md
+              - Framework Services: services/framework-services.md
+              - Governance Server Services: services/governance-server-services.md
+              - Connected Asset Services: services/connected-asset-services.md
+              - Repository Handler: services/repository-handler.md
+              - Platform Chassis: services/platform-chassis.md
+              - Server Chassis: services/server-chassis.md
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
               - Platform Services: services/platform-services/overview.md
@@ -551,6 +657,7 @@ nav:
               - Access Services (OMAS):
                   - Open Metadata Access Services: services/omas/index.md
                   - Open Metadata Store Services: services/open-metadata-store.md
+                  - OMS Metadata Management: services/oms-metadata-management.md
                   - Connected Asset Services: services/ocf-metadata-management.md
                   - Governance Configuration Services: services/governance-configuration-services.md
                   - Open Governance Services: services/open-governance-services.md
@@ -618,8 +725,8 @@ nav:
               - Platform Origin: guides/cts/platform-workbench/profiles/platform-origin.md
           - Repository Profiles:
               - Metadata Sharing: guides/cts/repository-workbench/profiles/metadata-sharing.md
-              - Reference Copies: guides/cts/repository-workbench/reference-copies.md
-              - Metadata Maintenance: guides/cts/repository-profiles/metadata-maintenance.md
+              - Reference Copies: guides/cts/repository-workbench/profiles/reference-copies.md
+              - Metadata Maintenance: guides/cts/repository-workbench/profiles/metadata-maintenance.md
               - Effectivity Dating: guides/cts/repository-workbench/profiles/effectivity-dating.md
               - Dynamic Types: guides/cts/repository-workbench/profiles/dynamic-types.md
               - Historical Search: guides/cts/repository-workbench/profiles/historical-search.md
@@ -633,6 +740,37 @@ nav:
               - Relationship Search: guides/cts/repository-workbench/profiles/relationship-search.md
               - Entity Advanced Search: guides/cts/repository-workbench/profiles/entity-advanced-search.md
               - Relationship Advanced Search: guides/cts/repository-workbench/profiles/relationship-advanced-search.md
+              - External Instances: guides/cts/repository-workbench/profiles/external-instances.md
+              - Home Classifications: guides/cts/repository-workbench/profiles/home-classifications.md
+              - Instance Versions: guides/cts/repository-workbench/profiles/instance-versions.md
+              - Restore from Backup: guides/cts/repository-workbench/profiles/restore-from-backup.md
+              - Test Cases:
+                  - Repository type definition test case: guides/cts/repository-workbench/test-cases/repository-attribute-typedef-test-case.md
+                  - Repository classification lifecycle test case: guides/cts/repository-workbench/test-cases/repository-classification-lifecycle-test-case.md
+                  - Verify consistency of type definition from event and REST API: guides/cts/repository-workbench/test-cases/repository-consistency-of-attribute-typedef-test-case.md
+                  - Verify consistency of type definition from event and REST API: guides/cts/repository-workbench/test-cases/repository-consistency-of-typedef-test-case.md
+                  - Repository entity lifecycle test case: guides/cts/repository-workbench/test-cases/repository-entity-lifecycle-test-case.md
+                  - Repository entity property advanced search test case: guides/cts/repository-workbench/test-cases/repository-entity-property-advanced-search-test-case.md
+                  - Repository entity property search test case: guides/cts/repository-workbench/test-cases/repository-entity-property-search-test-case.md
+                  - Repository entity reference copy lifecycle test case: guides/cts/repository-workbench/test-cases/repository-entity-reference-copy-lifecycle-test-case.md
+                  - Repository entity reidentify test case: guides/cts/repository-workbench/test-cases/repository-entity-reidentify-test-case.md
+                  - Repository entity retype test case: guides/cts/repository-workbench/test-cases/repository-entity-retype-test-case.md
+                  - Repository entity sharing property search test case: guides/cts/repository-workbench/test-cases/repository-entity-sharing-property-search-test-case.md
+                  - Repository find attribute type definitions by category test case: guides/cts/repository-workbench/test-cases/repository-find-attribute-typedefs-by-category-test-case.md
+                  - Repository find type definitions by category test case: guides/cts/repository-workbench/test-cases/repository-find-typedefs-by-category-test-case.md
+                  - Repository find type definitions by external standard identifiers test case: guides/cts/repository-workbench/test-cases/repository-find-types-by-external-standard-identifiers-test-case.md
+                  - Repository get type definition gallery test case: guides/cts/repository-workbench/test-cases/repository-get-typedef-gallery-test-case.md
+                  - Repository metadata collection id test case: guides/cts/repository-workbench/test-cases/repository-metadata-collection-id-test-case.md
+                  - Repository entity reference copy lifecycle test case: guides/cts/repository-workbench/test-cases/repository-reference-copy-classification-lifecycle-test-case.md
+                  - Repository relationship lifecycle test case: guides/cts/repository-workbench/test-cases/repository-relationship-lifecycle-test-case.md
+                  - Repository relationship property advanced search test case: guides/cts/repository-workbench/test-cases/repository-relationship-property-advanced-search-test-case.md
+                  - Repository relationship property search test case: guides/cts/repository-workbench/test-cases/repository-relationship-property-search-test-case.md
+                  - Repository relationship reference copy lifecycle test case: guides/cts/repository-workbench/test-cases/repository-relationship-reference-copy-lifecycle-test-case.md
+                  - Repository relationship reidentify test case: guides/cts/repository-workbench/test-cases/repository-relationship-reidentify-test-case.md
+                  - Repository relationship sharing property search test case: guides/cts/repository-workbench/test-cases/repository-relationship-sharing-property-search-test-case.md
+                  - Repository server identifiers test case: guides/cts/repository-workbench/test-cases/repository-server-ids-test-case.md
+                  - Validate incoming type definition event test case: guides/cts/repository-workbench/test-cases/repository-type-definition-event-test-case.md
+                  - Repository type definition test case: guides/cts/repository-workbench/test-cases/repository-typedef-test-case.md
   - Concepts:
       - Egeria Glossary: concepts/index.md
       - Basic Concepts: concepts/basic-concepts.md
@@ -648,6 +786,7 @@ nav:
       - Business Capability: concepts/business-capability.md
       - Catalog Target: concepts/catalog-target.md
       - Catalog Template: concepts/catalog-template.md
+      - Client-side Secret: concepts/client-side-secret.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
       - Cohort Registry: concepts/cohort-registry.md
@@ -671,6 +810,7 @@ nav:
       - Data Grain: concepts/data-grain.md
       - Data Sharing Hub: concepts/data-sharing-hub.md
       - Data Lens: concepts/data-lens.md
+      - Data Processing Description: concepts/data-processing-description.md
       - Data Specification: concepts/data-specification.md
       - Data Structure: concepts/data-structure.md
       - Data Domain: concepts/subject-area.md
@@ -699,6 +839,7 @@ nav:
       - Governance Engine: concepts/governance-engine.md
       - Governance Engine Definition: concepts/governance-engine-definition.md
       - Governance Engine Pack: concepts/governance-engine-pack.md
+      - Governance Execution Point: concepts/governance-execution-point.md
       - Governance Request Type: concepts/governance-request-type.md
       - Governance Server: concepts/governance-server.md
       - Governance Service: concepts/governance-service.md
@@ -715,6 +856,7 @@ nav:
       - Integration Daemon: concepts/integration-daemon.md
       - Integration Group: concepts/integration-group.md
       - Integration Report: concepts/integration-report.md
+      - IsPublic: concepts/is-public.md
       - IT Profile Role: concepts/it-profile-role.md
       - IT Profile: concepts/it-profile.md
       - Javadoc: concepts/javadoc.md
@@ -774,6 +916,7 @@ nav:
       - Security Access Control: concepts/security-access-control.md
       - Security Tags: concepts/security-tags.md
       - Server Name: concepts/server-name.md
+      - Service URL Marker: concepts/service-url-marker.md
       - Software Capability: concepts/software-capability.md
       - Software Server Capability: concepts/software-server-capability.md
       - Solution Blueprint: concepts/solution-blueprint.md
@@ -785,6 +928,7 @@ nav:
       - Survey Action Engine: concepts/survey-action-engine.md
       - Tabular Data Set: concepts/tabular-data-set.md
       - Team: concepts/team.md
+      - Team Role: concepts/team-role.md
       - Template: concepts/template.md
       - To Do: concepts/to-do.md
       - Useful Resource: concepts/useful-resource.md
@@ -798,10 +942,15 @@ nav:
       - Governance Basics: practices/governance-basics/overview.md
       - Governance Maturity Model: practices/maturity-model/overview.md
       - Governance Roles: practices/role-types/overview.md
-      - Digital Services: practices/digital-services/overview.md
+      - Digital Services:
+          - Digital Services: practices/digital-services/overview.md
+          - Digital Service Lifecycle: practices/digital-services/digital-service-lifecycle.md
       - Data Quality: practices/data-quality/overview.md
       - Data Specification: practices/data-specification/overview.md
-      - Data Privacy: practices/data-privacy-pack/overview.md
+      - Data Privacy:
+          - Data Privacy: practices/data-privacy-pack/overview.md
+          - The Data Privacy Pack: practices/data-privacy-pack/proposal.md
+          - Role Extensions for Privacy: practices/data-privacy-pack/role-extensions-for-privacy.md
       - Common Data Definitions:
           - Overview: practices/common-data-definitions/overview.md
           - Anatomy of a Glossary: practices/common-data-definitions/anatomy-of-a-glossary.md

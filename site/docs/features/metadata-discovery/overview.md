@@ -64,7 +64,7 @@ Data class discovery captures the analysis on how close a data field matches the
 
 The recommendation for a specific data class are stored in a [data class annotation](/types/6/0625-Data-Class-Discovery) linked off of the appropriate data field.  Data class discovery needs to run after schema extraction.  It often builds on the information provided by resource profiling.
 
-Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the [*DataValueAssignment*](/types/5/0540-Data-Value-Assignment) relationship.
+Subsequent stewardship - either automated or with human assistance - can confirm the correct assignment using the [*DataValueAssignment*](/types/5/0540-Data-Value-Specification) relationship.
 
 ### Semantic discovery
 
@@ -83,7 +83,7 @@ If the classification is for the asset, the classification annotation is linked 
 
 ### Calculating quality scores
 
-Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.   This type of annotation is often used within a [data quality program](/features/data-quality/overview) to provide assessments of the data for different purposes.
+Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.   This type of annotation is often used within a [data quality program](/practices/data-quality/overview) to provide assessments of the data for different purposes.
 
 ![Quality Scores](/frameworks/osf/survey-action-quality-scores.svg)
 
@@ -99,15 +99,15 @@ It is possible to create the relationship as a relationship annotation or attach
 
 The measure annotations capture a snapshot of the physical dimensions and activity levels at a particular moment in time.  For example, it may calculate the size of the resource or the number of users accessing it.
 
-![Data source measurements](/frameworks/osf/survey-action-data-source-measurement.svg)
+![Data source measurements](/frameworks/osf/survey-action-resource-measurement.svg)
 
 ### Requesting stewardship action
 
-A RequestForAction entity (RfA) is used when a survey action service performs a test on the data (such as a [quality rule](/features/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.
+A RequestForAction entity (RfA) is used when a survey action service performs a test on the data (such as a [quality rule](/practices/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.
 
 ![Request for action](/frameworks/osf/survey-action-request-for-action.svg)
 
-The [Governance Services](/conepts/governance-service) are designed to respond to the requests for actions (RfAs).
+The [Governance Services](/concepts/governance-service) are designed to respond to the requests for actions (RfAs).
 
 ## Working with external engines
 

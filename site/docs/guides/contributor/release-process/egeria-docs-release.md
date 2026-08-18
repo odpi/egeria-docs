@@ -19,7 +19,7 @@ you should
     * make a new link for the new release and point to a new page for example [https://egeria-project.org/release-notes/3-5/](https://egeria-project.org/release-notes/3-5/)
     * Copy the latest content to the new release page
     * Ensure that the [Latest Release Notes](https://egeria-project.org/release-notes/latest/) are updated
-    * Ensure the [Next Release Notes](/release-notes/overview/next) is updated
+    * Ensure the [Next Release Notes](/release-notes/next) is updated
 !!! success "4. test locally"
 !!! success "5. merge changes"
 

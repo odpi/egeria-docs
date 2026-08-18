@@ -30,8 +30,8 @@ Egeria is a rapidly evolving project and new material and software is being adde
 * [Common Data Definitions](/practices/common-data-definitions/overview) describes how to build a glossary of standard terms.
 * [Data Quality](/practices/data-quality/overview) describes how to assess and improve data quality.
 * [Metadata Discovery](/features/metadata-discovery/overview) - automated metadata discovery and stewardship of results.
-* [Data Specification](/features/data-specification/overview) - describing the data that you need for a project.
-* [Governance Roles](/practices/perspectives/overview) describes the different roles that people perform in a governance program.
+* [Data Specification](/practices/data-specification/overview) - describing the data that you need for a project.
+* [Governance Roles](/practices/role-types/overview) describes the different roles that people perform in a governance program.
 * [Digital Services](/practices/digital-services/overview) describes concept of a digital service and the lifecycle stages it goes through.
 
 * [Coco Pharmaceuticals Personas and Scenarios](/practices/coco-pharmaceuticals) describes the personas and scenarios that are driving the work of the Egeria community.

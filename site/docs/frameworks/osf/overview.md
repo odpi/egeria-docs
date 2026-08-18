@@ -98,7 +98,7 @@ If the classification is for the asset, the classification annotation is linked 
 
 #### Calculating quality scores
 
-Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.   This type of annotation is often used within a [data quality program](/features/data-quality/overview) to provide assessments of the data for different purposes.
+Quality scores describe how well the data values, typically in a data field, conform to a specification.  For example, do the values match a list of valid values.   This type of annotation is often used within a [data quality program](/practices/data-quality/overview) to provide assessments of the data for different purposes.
 
 ![Quality Scores](survey-action-quality-scores.svg)
 
@@ -114,11 +114,11 @@ It is possible to create the relationship as a relationship annotation or attach
 
 The measure annotations capture a snapshot of the physical dimensions and activity levels of the resource at a particular moment in time.  For example, it may calculate the size of the resource or the number of users accessing it.
 
-![Resource measurements](survey-action-resource-measure.svg)
+![Resource measurements](survey-action-resource-measurement.svg)
 
 #### Requesting stewardship action
 
-A RequestForAction (RfA) annotation is used when a survey action service performs a test on the data (such as a [quality rule](/features/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.  The anomaly typically refers to the elements within the asset being surveyed.  However, it may be in other data used in the survey process.  In either case, it is possible to use a *RequestForActionTarget* relationship to identify where action is required. 
+A RequestForAction (RfA) annotation is used when a survey action service performs a test on the data (such as a [quality rule](/practices/data-quality/overview)) or has discovered an anomaly in the data landscape compared to its metadata that potentially needs a steward or a curator's action.  The anomaly typically refers to the elements within the asset being surveyed.  However, it may be in other data used in the survey process.  In either case, it is possible to use a *RequestForActionTarget* relationship to identify where action is required. 
 
 ![Request for action](survey-action-request-for-action.svg)
 
@@ -136,7 +136,7 @@ The survey context provides parameters used by a survey action service to locate
 
 ### Annotation store
 
-The annotation store provides a survey action service with methods to write [annotations](#annotation) to an open metadata repository. These annotations describe the results of the analysis performed on an asset by the survey action service.
+The annotation store provides a survey action service with methods to write [annotations](#annotations) to an open metadata repository. These annotations describe the results of the analysis performed on an asset by the survey action service.
 
 The annotations are automatically linked to the survey report that is in turn linked off of the analysed asset.  Each annotation can also be linked to other metadata elements that is describes.
 

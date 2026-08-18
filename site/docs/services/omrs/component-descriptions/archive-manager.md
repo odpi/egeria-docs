@@ -23,6 +23,6 @@ can be found in the [open-metadata-archives](/concepts/open-metadata-archive)
 modules.
 
 Details for configuring a metadata access store to load archives can be found in the
-[Administration Guide](/guides/admin/configuring-a-metadata-access-store).
+[Administration Guide](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store).
 
 ---8<-- "snippets/abbr.md"

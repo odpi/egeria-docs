@@ -66,7 +66,7 @@ The `application.properties` file may include properties that configure Tomcat, 
 The implementation of the two platform connectors can be specified in the `application.properties` file:
 
 * The [configuration document store connector](/concepts/configuration-document-store-connector) manages the storage and retrieval of [configuration documents](/concepts/configuration-document) - one for each OMAG server.
-* The [platform metadata security connector](/concepts/platform-metadata-security-connector) authorizes calls to the [Administration Services](/services/admin/services/overview) that maintain the configuration documents as well as the [Platform Services](/services/platform-services/overview) that control the platform when it is running.
+* The [platform metadata security connector](/concepts/platform-metadata-security-connector) authorizes calls to the [Administration Services](/services/admin-services/overview) that maintain the configuration documents as well as the [Platform Services](/services/platform-services/overview) that control the platform when it is running.
 
 If these connectors are specified in the `application.properties` file, they are activated as part of the platform start up - assuming the JAR file(s) containing the implementation of the specified connectors is in the classpath.  If these connectors are not specified in the `application.properties` file then each configuration document is stored in its own encrypted file and there is no platform security authorization.  This default may be sufficient for a development environment.  For production the platform should be configured with a platform metadata security connector because this ensures the management of OMAG Server is performed by authorized users.
 

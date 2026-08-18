@@ -5,7 +5,7 @@
 
 The *server metadata security connector* provides authorization support for requests to an [OMAG Server](/concepts/omag-server).  There is one server metadata security connector configured for each OMAG Server.
 
-![Server Metadata Security Connector](/server-metadata-security-connector.svg)
+![Server Metadata Security Connector](/concepts/server-metadata-security-connector.svg)
 
 This connector is called each time a request is made to the server.  It is called to:
 

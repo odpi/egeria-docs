@@ -19,7 +19,7 @@ The [Integration Daemon](/concepts/integration-daemon){target=blank} can now be 
 
 ## Integration Reports
 
-When an [integration connector](/concepts/integration-connector){target=blank} is running, is [integration service](/services/omis){target=blank} is monitoring the changes that the connector is making to open metadata and publishing them in an [integration report](/concepts/integration-report){target=blank}.
+When an [integration connector](/concepts/integration-connector){target=blank} is running, is [integration service](/frameworks/oif/overview){target=blank} is monitoring the changes that the connector is making to open metadata and publishing them in an [integration report](/concepts/integration-report){target=blank}.
 
 ## Connectors
 
@@ -53,7 +53,7 @@ Glossary Manager OMVS supports the development of glossaries using a controlled 
 
 ### Glossary Browser OMVS
 
-Glossary Browser OMVS supports the searching and navigation through a published glossary plus the ability to add feedback (comments, likes and reviews) to its content [... more information](/services/omvs/glossary-browser/overview){target=blank}.
+Glossary Browser OMVS supports the searching and navigation through a published glossary plus the ability to add feedback (comments, likes and reviews) to its content [... more information](/services/omvs/glossary-manager/overview){target=blank}.
 
 ## New User Interface (UI)
 

@@ -27,7 +27,7 @@ The *RequestResponseInterface* classification indicates that the API provides a 
 
 ## ListenerInterface
 
-The *ListenerInterface* classification indicates that the API registers with an event emitting asset (such as a [Topic](/types/2/0223-Events-and-Logs) or a [DataFeed](/0223-Events-and-Logs)) and processes events as they are received.
+The *ListenerInterface* classification indicates that the API registers with an event emitting asset (such as a [Topic](/types/2/0223-Events-and-Logs) or a [DataFeed](/types/2/0223-Events-and-Logs)) and processes events as they are received.
 
 ## PublisherInterface
 

@@ -18,7 +18,7 @@ Zones are typically independent of one another, but they can be nested if desire
 
 An element can belong to all, one or many zones. The list of zones that an element belongs to is configured in the `zoneMembership` property of an attached [ZoneMembership](/types/4/0424-Governance-Zones) classification. If it is blank, or the classification is not present, it means the element logically belongs to all zones. Otherwise, it belongs only to the zones that are listed. Add or remove it from a zone by updating the element's `zoneMembership` property.
 
-All [Open Metadata View Services (OMVS)](/concepts/omvs) that retrieve elements, support the `governanceZoneFilter` option to limit the elements retrieved by governance zone. The [metadata security connectors](/features/metadata-security/overview) can also use the zone membership to restrict the elements returned on a query or specified in a maintenance request.  The metadata security connectors can also determine the default zones for a newly created element, and supply the list of zones when an element is published.
+All [Open Metadata View Services (OMVS)](/services/omvs) that retrieve elements, support the `governanceZoneFilter` option to limit the elements retrieved by governance zone. The [metadata security connectors](/features/metadata-security/overview) can also use the zone membership to restrict the elements returned on a query or specified in a maintenance request.  The metadata security connectors can also determine the default zones for a newly created element, and supply the list of zones when an element is published.
 
 The meaning, purpose and governance requirements for elements within a specific zone are maintained through linked [Governance definitions](/concepts/governance-definition).
 

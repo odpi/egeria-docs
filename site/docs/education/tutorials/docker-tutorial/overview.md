@@ -61,10 +61,10 @@ the Egeria runtime - that is the
 is started at port https 7443.
 
 This container can be incorporated into larger container orchestration environments or used standalone.
-This tutorial describes how to use it standalone.  The [Open Metadata Labs](/education/open-metadata-labs/overview)
+This tutorial describes how to use it standalone.  The [Open Metadata Labs](/egeria-workspaces)
 use this container with `Kubernetes`
 container services to create a complete open metadata solution.
-Link to [Open Metadata Labs](/education/open-metadata-labs/overview) to learn more.
+Link to [Open Metadata Labs](/egeria-workspaces) to learn more.
 
 ## Working with Egeria's docker image
 

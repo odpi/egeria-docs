@@ -75,7 +75,7 @@ A project that needs the results of another project to complete its work can be 
 
 ## ProjectTeam relationship
 
-The *ProjectTeam* relationship links a project to the [*Actors*](/types/1/0110-Actor) that will perform the work defined by the project.
+The *ProjectTeam* relationship links a project to the [*Actors*](/types/1/0110-Actors) that will perform the work defined by the project.
 
 ## ProjectManagement relationship
 

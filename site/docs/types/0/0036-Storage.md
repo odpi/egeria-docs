@@ -10,7 +10,7 @@ It is common for the processing running on a [*Host*](/types/0/0030-Hosts-and-Pl
 
 ## StorageVolume entity
 
-*StorageVolume* describes a persistent storage volume.  It inherits from the [Referenceable](/types/0/0010-Basic-Model) entity that supplied the attributes to name and describe the volume.  It adds the following attributes:
+*StorageVolume* describes a persistent storage volume.  It inherits from the [Referenceable](/types/0/0010-Base-Model) entity that supplied the attributes to name and describe the volume.  It adds the following attributes:
 
 * *storageCapacity* - the amount of data the volume can store.
 * *units* - the units of measurement for the capacity, such as bytes, kilobytes, megabytes, etc.

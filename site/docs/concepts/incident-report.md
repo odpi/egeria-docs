@@ -14,7 +14,7 @@ As the incident is handled, details of the cause, affected resources and actions
 
 ![incident](/features/incident-reporting/incident-report.svg)
 
-Incident reports are typically created by [governance services](/concepts/governance-service), [integration connectors](/concepts/integration-connectors) or an external incident management tools such as GitHub or Jira.
+Incident reports are typically created by [governance services](/concepts/governance-service), [integration connectors](/concepts/integration-connector) or an external incident management tools such as GitHub or Jira.
 
 
 !!! education "Further information"

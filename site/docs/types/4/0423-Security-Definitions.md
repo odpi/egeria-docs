@@ -49,7 +49,7 @@ The *SecurityListMembership* classification summarizes the list of security grou
 
 ## SecurityTags classification
 
-*SecurityTags* identify labels and properties that are used in determining which access control rules should be executed when access to a particular resource is requested.  They can be attached to [assets](/types/0/0010-Base_Model), [schema elements](/types/5/0501-Schema-Elements) and [glossaries](/types/3/0310-Glossary) depending on the scope of resource that the security tags apply to. The [synchronized access control](/features/synchronized-access-control) feature describes how security tags are set up and used.
+*SecurityTags* identify labels and properties that are used in determining which access control rules should be executed when access to a particular resource is requested.  They can be attached to [assets](/types/0/0010-Base-Model), [schema elements](/types/5/0501-Schema-Elements) and [glossaries](/types/3/0310-Glossary) depending on the scope of resource that the security tags apply to. The [synchronized access control](/features/synchronized-access-control) feature describes how security tags are set up and used.
 
 
 --8<-- "snippets/abbr.md"

@@ -20,7 +20,7 @@ Security managers, such as Apache Ranger, however just needs to know that the co
 
 ## Representing security tags
 
-Figure 1 shows the open metadata type definition for the *SecurityTag* classification from [model 0423](/types/4/0423-Security-Tags).
+Figure 1 shows the open metadata type definition for the *SecurityTag* classification from [model 0423](/types/4/0423-Security-Definitions).
 
 ![Figure 1](security-tags-type-def.svg)
 > **Figure 1:** The classification *SecurityTags* contains the list of security labels and properties that can be attached to assets and schema attributes that describe the data fields within the asset 

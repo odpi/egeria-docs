@@ -25,7 +25,7 @@ The *RelationalTable* entity represents a table in a relational schema.  *Relati
 
 ## RelationalTableType enity
 
-*RelationalTableType* is the schema type for a *RelationalTable* entity.  It inherits from [*ComplexSchemaType*](/types/5/Schema-Attributes) to show that it is made up of multiple elements - in this case, the elements are *RelationalColumn* entities.
+*RelationalTableType* is the schema type for a *RelationalTable* entity.  It inherits from [*ComplexSchemaType*](/types/5/0505-Schema-Attributes) to show that it is made up of multiple elements - in this case, the elements are *RelationalColumn* entities.
 
 ??? info "Choices on representing the schema type for a relational table"
     The type information for each table is typically embedded in the *RelationalTable* through the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes) classification. The *typeName* attribute of this classification is set to *RelationalTableType*.

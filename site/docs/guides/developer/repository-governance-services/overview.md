@@ -22,7 +22,7 @@ The interface that all [repository governance services](/concepts/repository-gov
     - [Metadata Archiving](/features/metadata-archiving/overview) to understand the different mechanisms that use open metadata archives.
     - [Open Metadata Archives](/concepts/open-metadata-archive) to understand structure of an open metadata archive.
     - [Configuring an engine host](/guides/admin/servers/by-server-type/configuring-an-engine-host) to understand how to set up an archive service.
-    - [Defining a governance engine in a content pack](/guides/developer/open-metadata-archives/creating-governance-engine-content-packs) to add 
+    - [Defining a governance engine in a content pack](/guides/developer/open-metadata-archives/creating-governance-engine-packs) to add 
     - [Writing a Open Metadata Archive Store Connector](/guides/developer/runtime-connectors/open-metadata-archive-store-connector).
     - [Loading an Open Metadata Archive at server statup](/guides/admin/servers/by-section/repository-services-section/#configuring-the-open-metadata-archives-to-load-on-server-startup)
     - [Loading an Open Metadata Archive in a running server](/guides/operations/adding-archive-to-running-server)

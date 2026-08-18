@@ -14,7 +14,7 @@ start using Egeria for their own projects without having to configure everything
 ??? tip "4. "Set up your organization name"
     Edit the file `runtime-volumes/freshstart-platform-data/freshstart.application.properties` and scroll down to the `platform.organization.name` property to your organization name.  By default, it is set to `Egeria Freshstart`.  Make your name match the name of the group that your users belong to, or the owners of metadata managed by this deployment of freshstart.  So, for example, use your team name if it is a team deployment, or the organization name if it is for the whole organzation.
 
-    For example, when [Robbie Records](/practices/coco-pharmaceuticals/persona/robbie-records) sets up his environment, he uses the name `Patient Records Data Sharing Hub`.
+    For example, when [Robbie Records](/practices/coco-pharmaceuticals/personas/robbie-records) sets up his environment, he uses the name `Patient Records Data Sharing Hub`.
 
     ```yaml
     ###############################################

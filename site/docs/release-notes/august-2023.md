@@ -66,7 +66,7 @@ Each directory in the assembly includes a README.md file to explain its contents
 
 ## Extended integration connector function (4.3)
 
-[Integration connectors](/concepts/integration-connector) can now check to see if they are in the middle of refresh() processing.  This is valuable in multi-threaded operation, for example when processing events.  Typically many of the events that are generated while the connector is being called to `refresh()` are caused by the connector's activity.  There is a new method on the integration context called [`isRefreshInProgress()`](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/integration/context/IntegrationContext.html).  It returns true if the connector is currently running its `refresh()` method.  An example of how to use this method is found in the [developer guide](/guides/developer/integration-connectors/overview/#registering-a-listener-with-open-metadata).
+[Integration connectors](/concepts/integration-connector) can now check to see if they are in the middle of refresh() processing.  This is valuable in multi-threaded operation, for example when processing events.  Typically many of the events that are generated while the connector is being called to `refresh()` are caused by the connector's activity.  There is a new method on the integration context called [`isRefreshInProgress()`](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/integration/context/IntegrationContext.html).  It returns true if the connector is currently running its `refresh()` method.  An example of how to use this method is found in the [developer guide](/guides/developer/integration-connectors).
 
 
 ## Improved use of Apache Kafka (4.2)
@@ -126,7 +126,7 @@ Glossary Manager OMVS supports the development of glossaries using a controlled 
 ### Glossary Browser OMVS
 
 Glossary Browser OMVS supports the searching and navigation through a published glossary plus the ability to add feedback (comments, likes and reviews) to its content.
-[... more information](/services/omvs/glossary-browser/overview){target=blank}.
+[... more information](/services/omvs/glossary-manager/overview){target=blank}.
 
 ### My Profile OMVS
 
@@ -143,7 +143,7 @@ You can find the workgroup updates on the [wiki page](https://wiki.lfaidata.foun
 
 Each month we will select one or more new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org){target=blank} so you can keep up-to-date with how it is evolving.
 
-- [How to use Egeria's new UI](/user-interfaces/general/overview){target=blank}
+- [How to use Egeria's new UI](/user-interfaces){target=blank}
 - [Configuring the OMAG Server Platform](/guides/admin/configuring-the-omag-server-platform/){target=blank}
 
 

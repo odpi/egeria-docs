@@ -29,7 +29,7 @@ The *TermsAndConditions* entity identifies the rules relating the use of an elem
 
 The data economy brings licensing to data and metadata.  Even open data typically has a license. The license type defines the permitted uses and other requirements for using the resource. The [GovernedBy](/types/4/0401-Governance-Definitions) relationship is used to link the license type to the resources where the license applies, and the [License](/types/4/0481-Licenses) relationship is used to link the consumers of the resource to the license.  
 
-For example, if the resource was a [Digital Product](/types/7/0710-Digital-Product), it would be linked to the *LicenseType* using the *GovernedBy* relationship. The consumers of the digital product would be granted a license to the digital product using the *License* relationship.
+For example, if the resource was a [Digital Product](/types/7/0710-Digital-Products), it would be linked to the *LicenseType* using the *GovernedBy* relationship. The consumers of the digital product would be granted a license to the digital product using the *License* relationship.
 
 
 ### CertificationType entity

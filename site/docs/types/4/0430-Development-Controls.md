@@ -30,7 +30,7 @@ The *DataLens* entity identifies the scope of data for a particular type of proc
 * *scopeElements* - map from name (such as open metadata type name) to guid of the element that defines the scope of the data.  Examples of the types of elements used to define the scope of the data are:
 
     * [Business Capabilities](/concepts/business-capability)
-    * [Locations](/concepts/location)
+    * [Locations](/types/0/0025-Locations)
     * [Subject Areas](/concepts/subject-area)
     * [Governance Definitions](/concepts/governance-definition)
     * [Teams and Organizations](/concepts/team)

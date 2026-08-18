@@ -74,7 +74,7 @@ A governance service definition is then linked into one or more [Governance Engi
 
 !!! education "Further information"
 
-    * Governance engine definitions are typically defined in a [governance engine pack](/guides/developer/open-metadata-archives/creating-governance-engine-packs) or through the [Action Author](/services/omns/action-author/overview) API.  This will typically include the governance service definitions.
+    * Governance engine definitions are typically defined in a [governance engine pack](/guides/developer/open-metadata-archives/creating-governance-engine-packs) or through the [Action Author](/services/omvs/action-author/overview) API.  This will typically include the governance service definitions.
     * Governance engines are run by the [Open Metadata Engine Services (OMES)](/services/omes) in an [Engine Host](/concepts/engine-host) OMAG Server.  
   
 

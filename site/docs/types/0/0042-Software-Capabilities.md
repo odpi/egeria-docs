@@ -3,7 +3,7 @@
 
 # 0042 Software Capabilities
 
-Software capabilities are the capabilities implemented in software and supported by [ITInfrastructure](/types/0/0030-Hosts-and-Platforms) such as hosts, software server platforms and software servers.  They are composed of, support and/or consume various [digital resources](/concepts/resources) represented as [Asset entities](/types/0/0010-Base-Model).  They are linked together using the [ServerAssetUse relationship](/types/0045-Servers-and-Assets). 
+Software capabilities are the capabilities implemented in software and supported by [ITInfrastructure](/types/0/0030-Hosts-and-Platforms) such as hosts, software server platforms and software servers.  They are composed of, support and/or consume various [digital resources](/concepts/resource) represented as [Asset entities](/types/0/0010-Base-Model).  They are linked together using the [ServerAssetUse relationship](/types/0/0045-Servers-and-Assets). 
 
 ![UML](0042-Software-Capabilities.svg)
 
@@ -19,11 +19,11 @@ Software capabilities are the capabilities implemented in software and supported
 * *source* - supplier of the capability.
 * *deployedImplementationType* - the class of technology that is used in its implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 
-Different organizations and tools can choose the granularity in which the capabilities are catalogued in order to provide [appropriate context](/0/0045-Servers-and-Assets) to [assets](/types/0/0010-Base-Model) that are managed by the capabilities and the decisions made around them.
+Different organizations and tools can choose the granularity in which the capabilities are catalogued in order to provide [appropriate context](/types/0/0045-Servers-and-Assets) to [assets](/types/0/0010-Base-Model) that are managed by the capabilities and the decisions made around them.
 
 ## SoftwareServerCapability entity
 
-The *SoftwareServerCapability* describes a capability that is implemented in a [software server](/types/0/0040-Software-Server).  
+The *SoftwareServerCapability* describes a capability that is implemented in a [software server](/types/0/0040-Software-Servers).  
 
 These are the subtypes of software server capabilities defined in the open metadata types:
 

@@ -5,7 +5,7 @@
 
 An *integration daemon* is an [OMAG Server](/concepts/omag-server) that provides metadata exchange services between third party technology and the open metadata ecosystem.
 
-The integration daemon interacts with the open metadata ecosystem through [Open Metadata Access Services (OMASs)](/services/omas) running in a [metadata access server](/concepts/metadata-accces-server).
+The integration daemon interacts with the open metadata ecosystem through [Open Metadata Access Services (OMASs)](/services/omas) running in a [metadata access server](/concepts/metadata-access-server).
 
 Typically, an integration daemon is deployed close to the artifacts/resources/data it is synchronizing because it can generate a lot of network traffic when its services are running. Multiple integration daemons may connect to the same metadata access server to provide horizontal scalability.
 
@@ -24,12 +24,12 @@ The specific interface that the integration connector needs to implement is defi
 
 The integration connectors that run inside the integration daemon are managed dynamically as open metadata using [integration groups](/concepts/integration-group).  Integration connectors are able to modify the integration groups dynamically, and also initiate [governance actions](/concepts/governance-action), create [to dos](/concepts/to-do) and raise [incident reports](/concepts/incident-report).  
 
-Each time the integration connector is called (refreshed) by the integration daemon, it produces an [integration report](/concpets/integration-report) listing the metadata elements it has created, updated or deleted.  The integration report is stored in the open metadata repository.  It is possible to disable this function in the integration connector's configuration.
+Each time the integration connector is called (refreshed) by the integration daemon, it produces an [integration report](/concepts/integration-report) listing the metadata elements it has created, updated or deleted.  The integration report is stored in the open metadata repository.  It is possible to disable this function in the integration connector's configuration.
 
 !!! info "Further information"
 
-    - Issues with the integration daemon are covered in the [Diagnostic Guide](/guides/diagnotic/integration-daemon-diagnostic-guide).
-    - Writing integration connectors is covered in the [Developer Guide](/guides/developer/integration-connectors/overview).
+    - Issues with the integration daemon are covered in the [Diagnostic Guide](/guides/diagnostic/integration-daemon-diagnostic-guide).
+    - Writing integration connectors is covered in the [Developer Guide](/guides/developer/integration-connectors).
     - Configuring an integration daemon is described in the [Administration Guide](/guides/admin/servers/by-server-type/configuring-an-integration-daemon).
     - The integration daemon is implemented by the [Integration Daemon Services](/services/integration-daemon-services).
 

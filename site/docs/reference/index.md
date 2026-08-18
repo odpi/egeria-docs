@@ -159,17 +159,17 @@ There should be, at most, a *tiny* chance[^3] that two servers will generate the
 
 ## Conformance
 
-Adhering to these concepts and the principles by which they behave is the subject of *conformance*. Egeria provides an [automated testing suite to validate that a given repository or third party integration behaves according to these expectations](/guides/cts/overview), the successful completion of which is a necessary input to a tool being granted the use of an Egeria conformance mark.
+Adhering to these concepts and the principles by which they behave is the subject of *conformance*. Egeria provides an [automated testing suite to validate that a given repository or third party integration behaves according to these expectations](/guides/cts), the successful completion of which is a necessary input to a tool being granted the use of an Egeria conformance mark.
 
 ## Patterns of Use
 
 These pages describe how these concepts can be combined to support different patterns of use of the Egeria technology.
 
 * [Metadata Manager](/patterns/metadata-manager/overview) - describing your digital resources
-* [Metadata Engagement](/patterns/metadata-engagement/overview) - no-code interaction for subject matter experts and data users.
-* [Metadata Exchange](/patterns/metadata-exchange/overview) - creating interoperable metadata that drives up the value of your tools and teams.
-* [Metadata Governance](/patterns/metadata-governance/overview) - validating, augmenting, linking and deduping your metadata.
-* [Metadata Harvester](/patterns/metadata-harvester/overview) - automated notification and digital product management with active subscriptions and data delivery.
+* [Metadata Engagement](/patterns/organization-engagement/overview) - no-code interaction for subject matter experts and data users.
+* [Metadata Exchange](/patterns/information-exchange/overview) - creating interoperable metadata that drives up the value of your tools and teams.
+* [Metadata Governance](/patterns/active-governance/overview) - validating, augmenting, linking and deduping your metadata.
+* [Metadata Harvester](/patterns/harvest-and-publish/overview) - automated notification and digital product management with active subscriptions and data delivery.
 * [Metadata Insight](/patterns/metadata-insight/overview) - monitoring and analysis of activity and metadata to create insight into who is delivering value, where it occur, the size of different aspect of your estate and trends associated with your operation.
 
 --8<-- "snippets/getting-started.md"

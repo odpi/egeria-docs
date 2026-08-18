@@ -19,7 +19,7 @@ The schema type that is linked to via the *LinkedExternalSchemaType* relationshi
 The *LinkedExternalSchemaType* is linked from a [*SchemaElement*](/types/5/0501-Schema-Elements) to enable it to be used either by a *SchemaType* or a *SchemaAttribute* that has its schema type defined in the [*TypeEmbeddedAttribute*](/types/5/0505-Schema-Attributes) classification.
 
 ??? deprecated "Deprecated types"
-    The following types are replaced by the attributes in [SchemaAttribute](/type/5/0505-Schema-Attributes).
+    The following types are replaced by the attributes in [SchemaAttribute](/types/5/0505-Schema-Attributes).
     - *BoundedSchemaType*
     - *BoundedSchemaElementType*
     - *ArraySchemaType*

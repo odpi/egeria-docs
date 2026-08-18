@@ -70,7 +70,7 @@ This is why it is common that the repository connectors for third party metadata
 
 Both IGC's and Atlas's repository connectors are read-only.  Figure 2 shows them connected to their repository proxies and how they operate.
 
-![Figure 2](connecting-read-only-repository.svg)
+![Figure 2](/patterns/information-exchange/connecting-read-only-repository.svg)
 > **Figure 2:** Read only repository connector operation
 
 Because of their read-only nature, if we just connected them together in a cohort, it would be like two people talking and no-one listening. There would be no value to the solution.
@@ -79,7 +79,7 @@ Because of their read-only nature, if we just connected them together in a cohor
 
 Figure 3 shows a possible extension using an OMAG Server called the [Metadata Access Point](/concepts/metadata-access-point). This provides specialist APIs and events for retrieving and maintaining open metadata.  The metadata access point can be augmented with a [View Server](/concepts/view-server) to support a UI, or provide services to other third party tools.
 
-![Figure 3](enterprise-view.svg)
+![Figure 3](/patterns/information-exchange/enterprise-view.svg)
 > **Figure 3:** Using a metadata access point to create an enterprise view
 
 With this approach it is possible to issue queries that return metadata content from both Atlas and IGC as if they were one metadata repository.   However, there is no support for updates or linking this metadata together.
@@ -89,14 +89,14 @@ With this approach it is possible to issue queries that return metadata content 
 Figure 4 adds an Egeria [metadata access store](/concepts/metadata-access-store) to the cohort enabling the storage of new metadata.  This means that the APIs of the metadata access point can be used to link glossary terms from IGC to asset definitions from Atlas. These links (called relationships) are stored in the metadata access store.  When queries for metadata are made through the metadata access point, the IGC glossary terms are shown linked to the Atlas assets as if all the metadata is stored in a single repository.
 
 
-![Figure 4](enterprise-linking.svg)
+![Figure 4](/patterns/information-exchange/enterprise-linking.svg)
 > **Figure 4:** Using a metadata access store to provide storage for relationships between IGC and Atlas metadata
 
 ### Expanding the scope of metadata being captured
 
 With the metadata access store in place, it is possible to connect an [Integration Daemon](/concepts/integration-daemon) to the metadata access store to provide metadata synchronization to/from additional third party technologies as shown in figure 5.
 
-![Figure 5](enterprise-catalog.svg)
+![Figure 5](/patterns/information-exchange/enterprise-catalog.svg)
 > **Figure 5:** Using a metadata server to provide storage for new metadata
 
 With the above capabilities deployed, there is now a rich source of metadata visible through the metadata access point. Metadata from the IGC and Atlas repositories can be retrieved, combined and used in new ways without needing to change their implementation.
@@ -111,7 +111,7 @@ Figure 6 shows IGC connected using this alternative approach.  IGC is now connec
 
 With this approach, IGC can update its own metadata, and any metadata created through the metadata access point. However, an attempt to update metadata that originated in Atlas would fail when the integration daemon attempted to publish this update into the metadata access store.  (See [metadata provenance](/features/metadata-provenance/overview) to understand why.)
 
-![Figure 6](enterprise-metadata-ecosystem.svg)
+![Figure 6](/patterns/information-exchange/enterprise-metadata-ecosystem.svg)
 > **Figure 6:** Integrating a third party metadata server through the integration daemon
 
 **Note:** this pattern could be repeated to move Apache Atlas to connect through an integration daemon too.

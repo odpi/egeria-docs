@@ -7,12 +7,12 @@ The *OMAG Server Platform* provides a runtime process for all of [Egeria's servi
 
 When the OMAG Server Platform is first started, all of its REST APIs are visible and callable by external clients. However, only the [Administration Services](/services/admin-services/overview) and [Platform Services](/services/platform-services/overview) are operational at this point. The other services will give an error response if called.
 
-The other services are configured and activated in OMAG Servers using the [administration services](/guides/admin/guide). The configuration operations of the administration services create [configuration documents](/concepts/configuration-document), one for each OMAG Server. Inside a configuration document is the definition of which services to activate for the server. These include:
+The other services are configured and activated in OMAG Servers using the [administration services](/guides/admin). The configuration operations of the administration services create [configuration documents](/concepts/configuration-document), one for each OMAG Server. Inside a configuration document is the definition of which services to activate for the server. These include:
 
 * The [Open Metadata Repository Services (OMRS)](/services/omrs) (any type of server), 
-* The [Open Metadata Access Services (OMASs)](/services/omas) (for [metadata access servers](/concepts/metadata-access-servers)), 
+* The [Open Metadata Access Services (OMASs)](/services/omas) (for [metadata access servers](/concepts/metadata-access-server)), 
 * The [Open Metadata Engine Services (OMESs)](/services/omes) (for [engine host](/concepts/engine-host) servers), 
-* The [Open Metadata View Services (OMVSs)](/services/omvs) (for [view servers](/concepts/view-servers)).
+* The [Open Metadata View Services (OMVSs)](/services/omvs) (for [view servers](/concepts/view-server)).
 
 Each server is configured to support specific set of Egeria services and connect to a specific set of metadata resources.   When it runs, each server is isolated within the platform and so the OMAG Server Platform can be used to support [multi-tenant :material-dock-window:](https://en.wikipedia.org/wiki/Multitenancy){ target=wikipedia } operation for a cloud service, or host a variety of different OMAG Servers needed at a particular location.
 
@@ -29,12 +29,12 @@ The OMAG Server Platform can host multiple OMAG Servers at any one time and a si
 - **B** - Multiple OMAG Servers are hosted on the same OMAG Server Platform. The OMAG Server Platform routes inbound requests to the right server based on the server name specified in the request URL. The servers may all be of the same type offering the same services but to different groups of people or be a set of collaborating servers of different types consolidated onto the same platform.
 - **C** - Multiple copies of same server instance each running on different platforms to provide high availability and distribution of workload (horizontal scalability).
 
-The OMAG Server platform is included in the [Egeria Distribution TAR file](https://github.com/odpi/egeria/tree/main/open-metadata-distribution/open-metadata-assemblies) which can be installed on your machine by following the [Installing Egeria Tutorial](/education/tutorials/building-egeria-tutorial/task-installing-egeria).
+The OMAG Server platform is included in the [Egeria Distribution TAR file](https://github.com/odpi/egeria/tree/main/open-metadata-distribution/open-metadata-assemblies) which can be installed on your machine by following the [Installing Egeria Tutorial](/education/tutorials/downloading-egeria/overview).
 
 ??? education "Further reading"
 
     - [Configuring the OMAG Server Platform](/guides/admin/configuring-the-omag-server-platform)
-    - [Installing the OMAG Server Platform Tutorial](/education/tutorials/building-egeria-tutorial/task-installing-egeria)
+    - [Installing the OMAG Server Platform Tutorial](/education/tutorials/downloading-egeria/overview)
     - [Running the OMAG Server Platform Tutorial](/education/tutorials/omag-server-tutorial/overview)
 
 
@@ -58,7 +58,7 @@ The configuration services are used to create [configuration documents](/concept
 ![Figure 2](omag-server-platform-configure.svg)
 > Figure 2: Creating configuration documents for OMAG Servers
 
-The [Administration Guide](/guides/admin/guide) provides detailed instructions on creating configuration documents.
+The [Administration Guide](/guides/admin) provides detailed instructions on creating configuration documents.
 
 Once a configuration document for an OMAG Server is used by the operational services initialize the requested services in the OMAG Server. The OMAG Server can be started in any OMAG Server platform. It does not have to be the same OMAG Server platform that created the configuration document.
 

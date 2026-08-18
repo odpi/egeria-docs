@@ -29,7 +29,7 @@ Sample requests for the REST API can be found in [Egeria-api-people-organizer.ht
 The People Organizer API is a REST API used to define links between people and teams to show how an organization is linked together.  There are two types of relationships it supports:
 
 * the [Peer](/types/1/0112-People) relationship that shows a person's peer network.
-* the [TeamStructure](/types/1/0113-Team) relationship that shows how teams are linked together to form the organizational structure.
+* the [TeamStructure](/types/1/0115-Teams) relationship that shows how teams are linked together to form the organizational structure.
 
 
 ---8<-- "snippets/services/api-forms.md"

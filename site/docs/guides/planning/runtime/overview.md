@@ -37,7 +37,7 @@ Object-oriented software engineers would know of this type of relationship as *b
 
 ![How the OMAG Servers interact](/concepts/omag-server-ecosystem.svg)
 
-- The [cohort members](/concepts/cohort-members) communicate with one another via an [open metadata repository cohort](/services/omrs/cohort). This means that they exchange metadata through a low level, fine-grained API supported by the [Open Metadata Repository Services (OMRS)](/services/omrs).
+- The [cohort members](/concepts/cohort-member) communicate with one another via an [open metadata repository cohort](/services/omrs/cohort). This means that they exchange metadata through a low level, fine-grained API supported by the [Open Metadata Repository Services (OMRS)](/services/omrs).
 - The [Open Metadata Access Services (OMAS)](/services/omas) are built on top of the repository services. They live in the [metadata access store](/concepts/metadata-access-store). They offer more course-grained interfaces, specialized for particular types of technology.
 - The [governance servers](/concepts/governance-server) are again specialized for particular types of metadata integration or additional governance activity. They connect to a metadata access point / metadata server.
 - Finally, the [view servers](/concepts/view-server) support the services for the solution user interfaces. They also connect to a metadata access point / metadata server.
@@ -56,11 +56,11 @@ This architecture means that you can incrementally add function to your deployme
 4. If you then want to add in metadata synchronization with other types of technology beyond metadata repositories, work out which [integration daemons](/concepts/integration-daemon) you need and [configure them to connect to the metadata access server](/guides/admin/servers/by-server-type/configuring-an-integration-daemon). Make sure the appropriate [access services](/services/omas) for these integration daemons are enabled in the metadata server.
 5. If you want to use the governance services then these run in an [engine host server](/concepts/engine-host).
 
-Working through this exercise gives you an understanding of the Egeria technology that you need for your deployment and how it connects together. The [Solutions Guide](/introduction/patterns) describes different solutions that you can build with Egeria, how they work and the configuration that you will need.
+Working through this exercise gives you an understanding of the Egeria technology that you need for your deployment and how it connects together. The [Solutions Guide](/patterns) describes different solutions that you can build with Egeria, how they work and the configuration that you will need.
 
 ## Building connectors
 
-If you discover that there is a third party technology that is not currently supported by Egeria then you need to [build a connector](/guides/developer/guide) to translate between the APIs and events of that technology and the open metadata APIs and events.
+If you discover that there is a third party technology that is not currently supported by Egeria then you need to [build a connector](/guides/developer) to translate between the APIs and events of that technology and the open metadata APIs and events.
 
 ## Identify the scope of the metadata integration
 
@@ -74,11 +74,11 @@ This is a checklist of planning tasks for the deployment of your OMAG Server Pla
 
 - [ ] [Set up unique certificates](/guides/admin/configuring-the-omag-server-platform/#transport-layer-security-tls) for your OMAG Server Platforms.
 - [ ] [Use an encrypted configuration document store](/guides/admin/configuring-the-omag-server-platform/#configuration-store) for your platforms since configuration documents can have certificates and passwords in them.
-- [ ] [Implement the metadata security connectors for your organization](/features/metdata-security/overview) to ensure only authorized users access metadata.
+- [ ] [Implement the metadata security connectors for your organization](/features/metadata-security/overview) to ensure only authorized users access metadata.
 - [ ] Choose and [configure the audit log destinations](/guides/admin/servers/by-section/repository-services-section/#configuring-the-audit-log) for your OMAG Servers.
 - [ ] Ensure you have at least one [Egeria metadata access store](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store) in each of your [open metadata repository cohorts](/services/omrs/cohort).
 - [ ] [Assign a separate user id for each of your servers](/guides/admin/servers/by-section/basic-server-properties-section) and ensure they are defined in your user directory and are authorized users according to the metadata security connectors.
-- [ ] Consider where you need to have [multiple instances of the same server running to give continuous availability](/guides/admin/guide).
+- [ ] Consider where you need to have [multiple instances of the same server running to give continuous availability](/guides/admin).
 - [ ] Plan your use of the [event bus](/concepts/event-bus): which technology to use (Apache Kafka is the default) and the names of the topics that your OMAG Servers will use.
 - [ ] Design the [governance zones](/concepts/governance-zone) that you want to use to control the visibility of assets to different communities of users - or processes.
 

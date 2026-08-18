@@ -17,7 +17,7 @@ The integration daemon also has simple REST API for manually restarting and refr
 to enable the integration daemon to recover from errors.
 
 If a connector is incorrectly configured, the integration daemon's configuration document needs to be changed
-using [administration commands](/user/admin/servers/configuring-an-integration-daemon/#configuring-the-integration-services)
+using [administration commands](/guides/admin/servers/by-server-type/configuring-an-integration-daemon)
 and the integration daemon [restarted](/guides/operations/overview/#starting-and-stopping-an-omag-server).
 
 ## Sources of errors

@@ -3,7 +3,7 @@
 
 # Building a Data Security Strategy
 
-[Ivor Padlock](/coco-pharmaceuticals/personas/ivor-padlock) invites [Sidney Seeker](/coco-pharmaceuticals/personas/sidney-seeker), [Gary Geeke](/coco-pharmaceuticals/personas/gary-geeke) and [Lemmie Stage](/coco-pharmaceuticals/personas/lemmie-stage) to a meeting to discuss the data security strategy.  Lemmie and Gary describe their processes to secure the IT systems.  They use certificates, a firewall and SSL on the internal network, along with strong passwords on administrative user accounts.
+[Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) invites [Sidney Seeker](/practices/coco-pharmaceuticals/personas/sidney-seeker), [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) and [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage) to a meeting to discuss the data security strategy.  Lemmie and Gary describe their processes to secure the IT systems.  They use certificates, a firewall and SSL on the internal network, along with strong passwords on administrative user accounts.
 
 Sidney asks if the security of the systems has ever been tested, by an expert - or using advanced tools?  The answer was "no".  
 
@@ -17,7 +17,7 @@ Ivor realizes that this is a serious situation.  Coco Pharmaceuticals' future de
 
 ## Supporting the Data Security Strategy
 
-A key finding of their analysis was that Ivor needed specialist help to monitor, test and improve the security of the IT systems.  As a result, Coco Pharmaceuticals hire [Simon Burr](/coco-pharmaceuticals/personas/simon-burr) (known as Si to his friends) to lead their Cyber Security practice.
+A key finding of their analysis was that Ivor needed specialist help to monitor, test and improve the security of the IT systems.  As a result, Coco Pharmaceuticals hire [Simon Burr](/practices/coco-pharmaceuticals/personas/simon-burr) (known as Si to his friends) to lead their Cyber Security practice.
 
 ![Ivor welcoming Simon Burr to Coco Pharmaceuticals](ivor-welcoming-si-to-coco.png)
 

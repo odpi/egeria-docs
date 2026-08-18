@@ -58,7 +58,7 @@ or
 
 * Through direct calls to the [Asset Maker](/services/omvs/asset-maker/overview) API.
 
-The [Metadata Server Exchange](/patterns/metadata-server-exchange/overview)
+The [Metadata Server Exchange](/patterns/information-exchange/overview)
 pattern provides more information on these options.
 
 ## Master data manager

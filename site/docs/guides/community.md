@@ -31,7 +31,7 @@ The community tends to use the [mailing list :material-dock-window:](https://lis
 
 ### Other websites and resources
 
-From time to time we screen webinars that are open to all.  The aim of these webinars is to create in depth videos of a particular topic of interest. Past webinars are described on the [webinars page](/education/webinar-program/overview).
+From time to time we screen webinars that are open to all.  The aim of these webinars is to create in depth videos of a particular topic of interest. Past webinars are available on the Egeria project's YouTube channel.
 
 ## Git repositories
 

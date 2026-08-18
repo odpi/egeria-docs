@@ -59,7 +59,7 @@ Egeria's platform is highly configurable.  It also supports multi-tenant operati
 * The [View Server](/concepts/view-server) provides the [REST APIs to maintaining/query open metadata](/services/omvs) and to initiate/control [governance actions](/concepts/governance-action).
 * The [Metadata Access Server](/concepts/metadata-access-server) provides services for the open metadata repositories and metadata change events (sent on the [OutTopic](/concepts/out-topic)) for other servers.
 * The [Integration Daemon](/concepts/integration-daemon) hosts [integration connectors](/concepts/integration-connector).
-* The [Engine Host](/concepts/engine-host) hosts the execution of calls to [governance services](/concepts/governance-services) that perform [governance actions](/concepts/governance-action).
+* The [Engine Host](/concepts/engine-host) hosts the execution of calls to [governance services](/concepts/governance-service) that perform [governance actions](/concepts/governance-action).
 * The [Repository Proxy](/concepts/repository-proxy) hosts an [adapter repository connector](https://egeria-project.org/concepts/repository-connector/) that is integrating with a third party metadata repository.
 
 A platform can run multiple OMAG servers of each kind.

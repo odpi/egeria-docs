@@ -8,7 +8,7 @@ hide:
 
 # Resource Use
 
-A *resource use* [metadata valid value](/guides/planning/valid-values/overview) describes the difference values used in the *resourceUse* property found in the [ResourceList](/types/0/0019-More_Information) relationship.
+A *resource use* [metadata valid value](/guides/planning/valid-values/overview) describes the difference values used in the *resourceUse* property found in the [ResourceList](/types/0/0019-More-Information) relationship.
 
 Here are some example values.
 

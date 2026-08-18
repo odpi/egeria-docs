@@ -261,7 +261,7 @@ This is built on an [extensible type system](/types) that allows further informa
     - Unique identifier (GUID) of the business capability that owns the resource.  Examples of a business capabilities include "Finance", "Human Resources", "Manufacturing", "Sales", etc.
     - Unique identifier (GUID) of the organization that owns the resource.  This could be a unit within the organization or an external organization.
     
-    The organization is maintained through the [People Organizer](/services/omvs/people-organizer/overview) API and business capability information is maintained through the [Business Domain](/services/omvs/business-domain/overview) and documented in the Ownership classification by the [Classification Manager](/services/omvs/classification-manager/overview).
+    The organization is maintained through the [People Organizer](/services/omvs/people-organizer/overview) API and business capability information is maintained through the [Business Domain](/services/omvs/digital-business/overview) and documented in the Ownership classification by the [Classification Manager](/services/omvs/classification-explorer/overview).
     
     !!! summary "Usage"
         Lineage information helps consumers (individuals and/or automated processes) make choices about which is the appropriate resource to use for a certain task.  It gives a sense of whether the resource contains data from an authoritative source/business capability/organization/process.
@@ -329,7 +329,7 @@ Therefore, as we look at the different types of automation, each comes with its 
 Egeria offers the following approaches to cataloging assets:
 
 - [Templated cataloging](/features/templated-cataloguing/overview) - copying predefined assets.
-- [Integrated cataloging](/features/integrated-cataloging/overview) - automated extraction of metadata from third party technologies.
+- [Integrated cataloging](/features/integrated-cataloguing/overview) - automated extraction of metadata from third party technologies.
 - [Discovery and stewardship](/features/metadata-discovery/overview) - analysis of asset contents to create metadata
 
 The idea is that these approaches are selected for each type of asset and blended together to balance the investment in the automation, against the time commitment of subject-matter experts, against the business value of the resulting catalog.
@@ -390,7 +390,7 @@ The [Harvest and Publish](/patterns/harvest-and-publish/overview) pattern takes 
     - The [Asset](/concepts/asset) page provides more information on the different types of assets supported by open metadata.  The asset types can be extended dynamically if needed.
     - The type definition for the *Asset* entity is found in model [0010 Basic Model](/types/0/0010-Base-Model).
     - Examples of representing different types of assets using the open metadata types are found in [Mapping Technology](/guides/developer/mapping-technology).
-    - The [Open Metadata Labs](/education/open-metadata-labs/overview) provide practical examples showing all of the techniques to manage an asset catalog, allowing you to try each of the features to assess how they could work in your organization.
+    - The [Open Metadata Labs](/egeria-workspaces) provide practical examples showing all of the techniques to manage an asset catalog, allowing you to try each of the features to assess how they could work in your organization.
 
 --8<-- "snippets/getting-started.md"
 

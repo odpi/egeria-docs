@@ -15,7 +15,7 @@ The cloud provider may offer infrastructure as a service (IaaS), in which case, 
 
 ## CloudPlatform
 
-The *CloudPlatform* classification indicates that a [*SoftwareServerPlatform*](/types/0/0037-Software-Server-Platform) is running in a cloud service. The *deployedImplementationType* attribute describes the class of technology that describes the cloud platform implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set. If the cloud provider is offering platform as a service (PaaS), an application may deploy software servers and software capabilities onto the *CloudPlatform*.
+The *CloudPlatform* classification indicates that a [*SoftwareServerPlatform*](/types/0/0037-Software-Server-Platforms) is running in a cloud service. The *deployedImplementationType* attribute describes the class of technology that describes the cloud platform implementation. Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set. If the cloud provider is offering platform as a service (PaaS), an application may deploy software servers and software capabilities onto the *CloudPlatform*.
 
 ## CloudService
 

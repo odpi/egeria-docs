@@ -20,11 +20,11 @@ Finally, the organization of metadata elements using anchors is helpful in scopi
 
 ## Anchors classification
 
-The [Anchors](/types/0/0010-Basic-Model/#Anchors) classification contains the unique identifier (GUID) of an anchor entity.  A GUID is attached to an anchored entity which makes it easier to navigate from an anchored entity to other entities anchored to it.
+The [Anchors](/types/0/0010-Base-Model/#anchors-classification) classification contains the unique identifier (GUID) of an anchor entity.  A GUID is attached to an anchored entity which makes it easier to navigate from an anchored entity to other entities anchored to it.
 
 
 !!! example "Example: SchemaElements and Comments"
-    Figure 1 is an illustration of this example, with the addition of an Asset. The entities that have the *Anchors* classification are those that are anchored to the Asset.  This includes entities such as Ratings, Likes and Attachments (from the [Open Discovery Framework (ODF)](/frameworks/odf/overview).
+    Figure 1 is an illustration of this example, with the addition of an Asset. The entities that have the *Anchors* classification are those that are anchored to the Asset.  This includes entities such as Ratings, Likes and Attachments (from the [Open Discovery Framework (ODF)](/frameworks/osf/overview).
 
     ![Figure 1](/features/anchor-management/anchors-classifications-on-dependant-objects.svg)
     > **Figure 1:** Examples of dependent entities that are anchored to an Asset

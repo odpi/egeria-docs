@@ -15,6 +15,6 @@ In Figure 1, the responsibilities of someone assigned to manage a particular asp
 
 ## Ownership classification
 
-Ownership is assigned to an element by adding the *Ownership* classification to it. This classification can assign ownership as an [ActorProfile](/1/0110-Actors), [UserIdentity](/types/1/0110-Actors) or [PersonRole](/types/1/0112-People).  The *userIds* property is used by the security connector if you want to restrict access to the resource based on the ownership.
+Ownership is assigned to an element by adding the *Ownership* classification to it. This classification can assign ownership as an [ActorProfile](/types/1/0110-Actors), [UserIdentity](/types/1/0110-Actors) or [PersonRole](/types/1/0112-People).  The *userIds* property is used by the security connector if you want to restrict access to the resource based on the ownership.
 
 --8<-- "snippets/abbr.md"

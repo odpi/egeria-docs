@@ -101,7 +101,7 @@ The full list of relationships supported are:
 * [DataFlow](/types/7/0750-Data-Passing) - how is data flowing
 * [ProcessCall](/types/7/0750-Data-Passing) - which system is calling another
 * [ControlFlow](/types/7/0750-Data-Passing) - how is control passed between processes that are under the control of a workflow manager
-* [LineageMapping](/types/7/0770-Lineage_Mapping) - how do elements catalogued from different lineage systems relate to one another
+* [LineageMapping](/types/7/0770-Lineage-Mapping) - how do elements catalogued from different lineage systems relate to one another
 * [DataSetContent](/types/2/0210-Data-Stores) - how are data sources combined to create a data set
 * [DerivedSchemaTypeQueryTarget](/types/5/0512-Derived-Schema-Elements) - what are the queries used to create derived data fields and views
 

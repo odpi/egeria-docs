@@ -33,7 +33,7 @@ Both of these REST APIs are callable through the [Runtime Manager API](/services
 
 !!! education "Further information"
     - [Lineage Management](/features/lineage-management/overview) describes how to set up Egeria to capture, steward, preserve and use lineage.
-    - [Writing an Integration Connector](/guides/developer/integration-connectors/overview) describes how to wrote your own integration connectors for the Lineage Integrator OMAS.
+    - [Writing an Integration Connector](/guides/developer/integration-connectors) describes how to wrote your own integration connectors for the Lineage Integrator OMAS.
 
 
 --8<-- "snippets/abbr.md"

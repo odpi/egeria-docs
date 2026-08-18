@@ -23,7 +23,7 @@ The governance solutions aim to support an organization's governance efforts by 
 
 ![Governance Solutions](governance-solution-functional-detail.svg)
 
-The implementation of a governance solution is focused mainly on the extension of the [Egeria User Interfaces](/user-interaction) and associated reference data to support additional roles and functions. They make use of the services provided by the [developer platform](#developer-platform) and may exploit additional content, utilities and connector implementations from the integration platform.
+The implementation of a governance solution is focused mainly on the extension of the [Egeria User Interfaces](/user-interfaces) and associated reference data to support additional roles and functions. They make use of the services provided by the [developer platform](#developer-platform) and may exploit additional content, utilities and connector implementations from the integration platform.
 
 ### Education
 
@@ -35,7 +35,7 @@ Egeria's education aims to broaden the knowledge of people who need to work with
 
 - The [Egeria workbooks](https://github.com/odpi/egeria-workspaces/blob/main/workspaces/egeria-workbooks.ipynb) are part of the [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main) deployment environments.  They provide guidance and examples on how to use Egeria and how to adapt it to support your use cases.  This is an excellent starting point to get hands-on experience with Egeria.
 - The [open-metadata-samples](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples) module in the main git repository for the Egeria code - *egeria.git* - includes many coding samples showing how to use the Egeria interfaces. There are also many sample clients, server configurations and sample data included in the *[open-metadata-deployment](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-deployment)* module.  They are accompanied by `README.md` files to explain how to use them.
-- The [Open Metadata Labs](/education/open-metadata-labs/overview) are also part of the [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main) and build out an operational open metadata ecosystem to show how different governance use cases can be implemented. 
+- The [Open Metadata Labs](/egeria-workspaces) are also part of the [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main) and build out an operational open metadata ecosystem to show how different governance use cases can be implemented. 
 - This website ([https://egeria-project.org/](https://egeria-project.org/)) contains comprehensive documentation on Egeria's features.
 - The [Governance practices](/practices) provides governance best practices. They aim to guide a team that is setting up or revising their governance program through common governance tasks.
 
@@ -50,7 +50,7 @@ Most users will experience the open metadata ecosystem via their own tools.  How
 - *My Egeria* provides form-based based editing of open metadata.
 - *[Monitoring Widgets](/user-interfaces/hey-egeria/overview/)* provide an ongoing display of the status of the Egeria infrastructure and its connectors.
 - *[Scripting commands](/guides/developer/scripting-commands/overview)* allow calls to Egeria's services from scripting languages to aid automation of governance.
-- *[Brain Explorers](/user-interfaces/brain-explorers/overview/)* are cloud based websites allowing you to interact with a graph interface to visualized open metadata content.
+- *[Brain Explorers](/user-interfaces/egeria-explorer/overview/)* are cloud based websites allowing you to interact with a graph interface to visualized open metadata content.
 - *[Mermaid graph visualization](/user-interfaces/mermaid/overview)* for visualizing collections of related open metadata elements.
 - *SuperSet Dashboards* provide an overview on the operation of the open metadata ecosystem.
 
@@ -61,7 +61,7 @@ Supports the integration of popular technologies into the open metadata ecosyste
 ![Integration Platform](integration-platform-functional-detail.svg)
 
 - The *[Connector Catalog](/connectors)* provides connectors to popular third party technologies such as metadata repositories, databases, data formats and platforms; data movement engines, data virtualization engines, dev ops tools, analytics/AI tools, data catalogs, MDM and user directories, CMDBs, SDLC tools, ...
-- The *[Content Packs](/content-packs)* provide metadata, reference data and connector configurations to help get you up-and running with the supplied capability of Egeria.  They are formatted as [Open Metadata Archives](/concepts/open-metadata-arachive) and can be configured to load at server startup using the [Administration Services](/guides/admin/servers) or while the server is running using the [Runtime Manager OMVS](/services/omvs/runtime-manager/overview).
+- The *[Content Packs](/content-packs)* provide metadata, reference data and connector configurations to help get you up-and running with the supplied capability of Egeria.  They are formatted as [Open Metadata Archives](/concepts/open-metadata-archive) and can be configured to load at server startup using the [Administration Services](/guides/admin/servers) or while the server is running using the [Runtime Manager OMVS](/services/omvs/runtime-manager/overview).
 
 ### Developer platform
 
@@ -77,13 +77,13 @@ Its use is described in the [developer's guide](/guides/developer).
 - The *[utilities](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-dev-utilities)* and *[reports](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-reports)* support common tasks that retrieve and update metadata.
 - The *[Unit Test Utilities](https://github.com/odpi/egeria/tree/main/open-metadata-test/open-metadata-ut)* help to unit test Egeria specific components. They work with standard test harnesses.
 - The *[Function Verification Tests](https://github.com/odpi/egeria/tree/main/open-metadata-test/open-metadata-fvt)* are used to test Egeria's runtime.  However they illustrate how to automate tests for your components that work with the Egeria runtime. 
-- The *[Conformance Test Suite (CTS)](/guides/cts/overview)* supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
+- The *[Conformance Test Suite (CTS)](/guides/cts)* supports the testing of third party connectors. Each type of connector or service is supported by its own test workbench.
 
 - Open Metadata and Governance (OMAG) registered services are dynamically loaded in the OMAG Server Platform. This means they can be added and removed as needed to create a customized platform. This may include registered services written by the Egeria community and supplied by third parties.
 
     - [Access services](/services/omas) provide specialist APIs / events for different types of tools. They work with the pre-defined [open metadata types](/types) and use the [repository services](/services/omrs) to access metadata.
     - [Engine services](/services/omes) provide the services that host a specific type of governance engine. The governance engines collectively provide active governance to the assets and their associated metadata.
-    - [Integration services](/services/omis) each provide a specialized API to integration connectors. These are hosted in an [integration daemon](/concepts/integration-daemon). The purpose of the integration services is to simplify the implementation and management of connectors that integrate metadata exchange with third party technologies.
+    - [Integration services](/frameworks/oif/overview) each provide a specialized API to integration connectors. These are hosted in an [integration daemon](/concepts/integration-daemon). The purpose of the integration services is to simplify the implementation and management of connectors that integrate metadata exchange with third party technologies.
     - [View services](/services/omvs) provide the services used by UIs. They are typically fine-grained services and they run in the [view server](/concepts/view-server). The use of the separate server (and server platform) enables an extra firewall to be erected between the view servers and the metadata servers and governance servers, hiding the internal systems from end users.
   
 - The [Open Metadata Types](/types) provide definitions for the different types of metadata needed by an organization. The open metadata type system is extendable; however, by providing a comprehensive starter set, and encouraging tools to use them, Egeria ensures metadata can be seamlessly shared amongst them.
@@ -92,18 +92,18 @@ Its use is described in the [developer's guide](/guides/developer).
     - [Connected Asset](/services/ocf-metadata-management) supports the creation of connectors and the retrieval of metadata about the attached asset.
     - [Open Metadata Store](/services/gaf-metadata-management) supports the retrieval and maintenance of any type of open metadata.
     - [Open Integration Service](/services/oif-metadata-management) provides the runtime services for integration connectors.
-    - [Open Governance Service](/service/gaf-metadata-management) supports the execution of [engine actions](/concepts/engine-action) and [governance action processes](/concepts/governance-action-process).
+    - [Open Governance Service](/services/gaf-metadata-management) supports the execution of [engine actions](/concepts/engine-action) and [governance action processes](/concepts/governance-action-process).
   
 - The [OMAG Server Platform](/concepts/omag-server-platform) provides a multi-tenant runtime platform for [OMAG Servers](/concepts/omag-server). Each OMAG Server hosts the connectors along with the Egeria services to integrate third party technology.
 
     - The [platform chassis](/services/platform-chassis) uses Spring Boot to provide the web server and REST API support for the platform.
     - The [server chassis](/services/server-chassis) uses Spring Boot to provide the web server and REST API support for a single OMAG Server.
-    - The [administration services](/services/admin-services/overview) supports configuring the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/guides/admin/guide)
+    - The [administration services](/services/admin-services/overview) supports configuring the OMAG Platform and Servers. Details of how to use the admin services are provided in the [administration guide](/guides/admin)
     - The [server operations](/services/server-operations) and [platform services](/services/platform-services/overview) provide the means to start, stop and query the OMAG Servers and services running on an OMAG Server Platform.
     - The [multi-tenancy management](/services/multi-tenant) module supports multiple OMAG Servers running on an OMAG Server Platform.
     - The [repository services](/services/omrs) provide the basic ability to share metadata between metadata repositories. The metadata repositories are organized
       into [open metadata repository cohorts](/concepts/cohort-member). These cohorts define the scope of the metadata sharing and ensure metadata is available to all consumers within the cohort.
-    - The [metadata security](/services/metadata-security) module provides customizable authorization checks for calls to the OMAG Server Platform, OMAG Server and the open metadata instances themselves.
+    - The [metadata security](/features/metadata-security/overview) module provides customizable authorization checks for calls to the OMAG Server Platform, OMAG Server and the open metadata instances themselves.
     - A governance server makes use of open metadata to actively manage an aspect of the digital landscape. The [governance server services :material-dock-window:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/governance-servers){ terget=gh } each provide the principle subsystem of a [type of governance server](/concepts/governance-server).
     - The [generic handlers](/services/generic-handlers) provide support for the type specific maintenance and retrieval of metadata that follows the [open metadata types](/types). This includes managing visibility of metadata through the [Governance Zones](/concepts/governance-zone/), calls to [Open Metadata Security](/features/metadata-security/overview/) and [metadata management using templates](/features/templated-cataloguing/overview/).
 
@@ -149,12 +149,12 @@ Today we have a robust [OMAG Server Platform](/concepts/omag-server-platform) an
 ### History
 
 The initial implementation of Egeria focused on the [Open Metadata Repository Services (OMRS)](/services/omrs) to support different types of metadata repositories exchanging metadata via an [open metadata repository cohort](/concepts/cohort-member).  This also involved the build out of the [OMAG Server Platform](/concepts/omag-server-platform) to host this code.
-The aim was to demonstrate how third party metadata servers could exchange metadata. This capability was delivered along with two repository connectors for the following third party connectors along with the [Conformance Test Suite](guides/cts/overview).
+The aim was to demonstrate how third party metadata servers could exchange metadata. This capability was delivered along with two repository connectors for the following third party connectors along with the [Conformance Test Suite](/guides/cts).
 
 - [IBM Information Governance Catalog (IGC) :material-dock-window:](https://github.com/odpi/egeria-connector-ibm-information-server){ target=gh }
 - [Apache Atlas :material-dock-window:](https://github.com/odpi/egeria-connector-hadoop-ecosystem){ target=gh }
 
-Through 2020, our focus shifted to the integration platform as we added [connector implementations](/guides/developer/guide/#what-is-a-connector) for popular third party technologies (see the [connector catalog](/connectors)) and built out the [ecosystem user interface (UI) :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=gh } that enables an organization to:
+Through 2020, our focus shifted to the integration platform as we added [connector implementations](/concepts/connector) for popular third party technologies (see the [connector catalog](/connectors)) and built out the [ecosystem user interface (UI) :material-dock-window:](https://github.com/odpi/egeria-react-ui){ target=gh } that enables an organization to:
 
 - configure OMAG Servers on OMAG Server Platforms
 - visualize the open metadata types through the type explorer (TEX)

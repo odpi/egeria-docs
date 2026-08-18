@@ -17,7 +17,7 @@ Finally, open metadata and governance aims to lower the barrier of entry for ope
 
 New vendor product can also be built using these servers (or the reference implementation libraries) since the vendor  is able take the open metadata and governance libraries as the basis of their product and plug-in their value add to create a new offering.
 
-The open metadata and governance technology is developed in the **[Egeria github repository](https://github.com/odpi/egeria)**. It is backed up by a set of [guidance](governance-basics) that describes how to create the governance capability for an organization.
+The open metadata and governance technology is developed in the **[Egeria github repository](https://github.com/odpi/egeria)**. It is backed up by a set of [guidance](/practices/governance-basics/overview) that describes how to create the governance capability for an organization.
 
 
 

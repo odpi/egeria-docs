@@ -4,7 +4,7 @@
 # 0511 Map Schema Elements
 
 Maps hold the relationship between pairs of values.  Often they show how one value (the domain) can be mapped to another value (the range).
-The relationships start from [SchemaElement](/type/5/0501-Schema-Elements) rather than MapSchemaType since the schema type may be located in the [TypeEmbeddedAttribute classification](/types/5/0505-Schema-Attributes).
+The relationships start from [SchemaElement](/types/5/0501-Schema-Elements) rather than MapSchemaType since the schema type may be located in the [TypeEmbeddedAttribute classification](/types/5/0505-Schema-Attributes).
 
 ![UML](0511-Map-Schema-Elements.svg)
 

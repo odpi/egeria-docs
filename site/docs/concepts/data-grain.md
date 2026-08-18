@@ -39,7 +39,7 @@ Another point to note is that data grain may be event driven - for example, a ne
 Finally, it is important to validate that master/detail (aka header/line) information is not incorporated into the same row leading to unnecessary duplication of data - and double-counting as further analysis takes place.  This is called the **mixed grain trap**.
 
 ???+ info "Additional information"
-    * The open metadata types for a data grain are found in [Model 0541 Data Grains](/types/5/0541-Data-Grains/).
+    * The open metadata types for a data grain are found in [Model 0541 Data Grains](/types/5/0541-Data-Classes-and-Data-Grains/).
     * The open metadata types for data grain discovery are found in [Model 0626 Data Grain Discovery](/types/6/0626-Data-Grain-Discovery/).
     * [Data Designer OMVS](/services/omvs/data-designer/overview) provides the API for creating data grains.
 

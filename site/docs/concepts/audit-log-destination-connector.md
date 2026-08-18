@@ -3,14 +3,14 @@
 
 # Audit Log Destination Connector
 
-An *[audit log destination connector](/concepts/audit-log-destination-connector)* provides support for a specific *audit log destination*. At least one audit log destination connector is [configured](/concepts/audit-log/#configure-the-audit-log) in every [OMAG Server's](/concepts/omag-server) [configuration document](/concepts/configuraton-document) and used by its [audit log](/concepts/audit-log) component when the server runs.
+An *[audit log destination connector](/concepts/audit-log-destination-connector)* provides support for a specific *audit log destination*. At least one audit log destination connector is [configured](/concepts/audit-log/#configure-the-audit-log) in every [OMAG Server's](/concepts/omag-server) [configuration document](/concepts/configuration-document) and used by its [audit log](/concepts/audit-log) component when the server runs.
 
 ![Audit Log Destination Connector](audit-log-destination-connector.svg)
 
 
 An audit log destination's purpose may be either to store, process or distribute audit log records to diagnostic systems.  Its associated configuration controls which severities of audit log record it receives.  The implementation for the audit log destination connector can make further choices about how each log record is processed.
 
-An [OMAG Server](/concepts/omag-server) can have [multiple audit log destinations](/guides/admin/servers/by-section/respository-services-section/#configuring-the-audit-log) configured.  This configuration can control which severities of audit log record are sent to each destination.
+An [OMAG Server](/concepts/omag-server) can have [multiple audit log destinations](/guides/admin/servers/by-section/repository-services-section) configured.  This configuration can control which severities of audit log record are sent to each destination.
 
 The implementation for the audit log destination connector can make further choices about how each log record is processed.
 

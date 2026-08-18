@@ -20,7 +20,7 @@ A governance domain typically has a [community](/concepts/community) that is use
 
 Governance domains are represented by *[valid metadata values](/guides/planning/valid-values/overview)* that are referenced by the *domainIdentifier* property.  This is an integer and by convention "0" means "applies to all domains".
 
-The [Core Content Pack](/concept-packs/core-content-pack/overview) adds the following governance domain definitions:
+The [Core Content Pack](/content-packs/core-content-pack/overview) adds the following governance domain definitions:
 
 | Domain Identifier | Domain Name | Description                                                                                                           |
 | :-------- | :-------- |:----------------------------------------------------------------------------------------------------------------------|

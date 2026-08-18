@@ -8,6 +8,14 @@ Reports described assembled information about a particular topic. It can be link
 
 ![UML](0239-Reports.svg)
 
+## ReportType entity
+
+The *ReportType* entity is the template for generating a report - the definition that reports are produced from.  It is a specialized [data specification](/types/5/0580-Data-Dictionaries) collection, so the content of the report is described using data structures and data fields in the same way as the data requirements for any other digital service.  It has the following attributes:
+
+* *createdTime* - the time the report type was created.
+* *lastModifiedTime* - the time the report type was last modified.
+* *lastModifier* - the userId of the last person to modify the report type.
+
 ## Report entity
 
 The *Report* entity describes an instance of a populated report.  It has the following attributes:

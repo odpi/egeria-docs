@@ -21,7 +21,7 @@ The Privacy Officer API provides specialized capabilities for managing the descr
 * [Data Processing Description Concept](/concepts/data-processing-description/)
 
 ----
-Sample REST API requests can be found in [Egeria-api-privacy-officer.http](Egeria-api-privacy-officer.http).
+Sample REST API requests can be found in [Egeria-api-privacy-officer.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/privacy-officer/Egeria-api-privacy-officer.http).
 
 
 ---8<-- "snippets/abbr.md"

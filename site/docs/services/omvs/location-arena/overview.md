@@ -19,7 +19,7 @@ The Location Arena API supports the following key features:
 
 ## Further information
 
-* [Location Concept](/concepts/location/)
+* [Location Concept](/types/0/0025-Locations/)
 
 Sample requests for the REST API can be found in `Egeria-api-location-arena.http`.
 

@@ -8,7 +8,7 @@ hide:
 
 # 0512 Derived Schema Elements
 
-Derived schema elements access other data, possibly in the same or a different asset to generate/derive the values for the attribute.  Examples of this are [database views](/types/5/0534-Relational-Schemas) and [derived database columns]((/types/5/0534-Relational-Schemas)).
+Derived schema elements access other data, possibly in the same or a different asset to generate/derive the values for the attribute.  Examples of this are [database views](/types/5/0534-Relational-Schemas) and [derived database columns](/types/5/0534-Relational-Schemas).
 
 
 ![UML](0512-Derived-Schema-Elements.svg)

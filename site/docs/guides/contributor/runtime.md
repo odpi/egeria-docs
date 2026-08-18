@@ -130,7 +130,7 @@ For each method / operation, the rest of the URL is defined and mapped through a
 
 ## Jupyter Notebooks
 
-[Project Jupyter :material-dock-window:](https://jupyter.org){ target=jupyter } provides tools for interactive computing. In particular, we use Jupyter notebooks to provide an interactive environment for running snippets of [Python](/guides/developer/languages/#python) code, interspersed with [Markdown](/guides/developer/languages/#markdown) documentation, for our [hands-on labs](/education/open-metadata-labs).
+[Project Jupyter :material-dock-window:](https://jupyter.org){ target=jupyter } provides tools for interactive computing. In particular, we use Jupyter notebooks to provide an interactive environment for running snippets of [Python](/guides/contributor/languages/#python) code, interspersed with [Markdown](/guides/contributor/languages/#markdown) documentation, for our [hands-on labs](/egeria-workspaces).
 
 ![Example Jupyter notebook from the hands-on labs](../../education/tutorials/jupyter-tutorial/jupyter-notebook-browser-window.png)
 

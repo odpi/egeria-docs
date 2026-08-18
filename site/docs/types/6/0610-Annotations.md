@@ -18,7 +18,7 @@ for capturing analysis from third-party tools.
 
 ## Annotation entity
 
-The *Annotation* entity inherits from [*OpenMetadataRoot*](/types/0/0010-Base_Model) and adds the following attributes:
+The *Annotation* entity inherits from [*OpenMetadataRoot*](/types/0/0010-Base-Model) and adds the following attributes:
 
 * *annotationType* - descriptive string that acts as an identifier for the specific annotation type.  This is a simple means to sub-type any one of the annotation subclasses.
 * *summary* - a human-readable string to describe the annotation.

@@ -27,7 +27,7 @@ Testing of the new [JDBC Resource Connector :material-github:](https://github.co
 
 ## Data products
 
-Egeria's data product support is progressing well.  New types based around [Digital Services](/types/7/0710-Digital-Service) and [Solution Components](/types/7/0730-Solution-Components) have been added to the [Open Metadata Types](/types).  These types represent the business aspects of data products and link to the [Assets](/concepts/asset) that implement them.
+Egeria's data product support is progressing well.  New types based around [Digital Services](/types/7/0710-Digital-Products) and [Solution Components](/types/7/0730-Solution-Components) have been added to the [Open Metadata Types](/types).  These types represent the business aspects of data products and link to the [Assets](/concepts/asset) that implement them.
 
 Next month look our for the new APIs in Digital Service OMAS, Digital Architecture OMAS, Asset Owner OMAS and Asset Consumer OMAS.
 
@@ -37,10 +37,10 @@ Congratulations to [Dan Wolfson](https://github.com/dwolfson) who becomes our la
 
 ## Core Egeria
 
-The *Core Egeria* technology is located in the [egeria.git](https://github.com/odpi/egeria) repository.  It provides the [OMAG Server Platform](/concepts/omag-server-platform), java clients for the [OMAG Servers](/concepts/omag-server) that run on the OMAG Server Platform along with the [Conformance Test Suite (CTS)](/guides/cts/overview).  
+The *Core Egeria* technology is located in the [egeria.git](https://github.com/odpi/egeria) repository.  It provides the [OMAG Server Platform](/concepts/omag-server-platform), java clients for the [OMAG Servers](/concepts/omag-server) that run on the OMAG Server Platform along with the [Conformance Test Suite (CTS)](/guides/cts).  
 
 !!! info "Core Egeria Releases"
-    [Release 3.12](/release-notes/previous/#release-312-october-2022) was shipped in October 2022.  The work this month is contributing to [Release 3.13](/release-notes/3-13).
+    [Release 3.12](/release-notes/previous/#release-312-october-2022) was shipped in October 2022.  The work this month is contributing to [Release 3.13](/release-notes/previous).
 
 The database support for the Data Manager OMAS REST API has had a major refactor to improve its consistency with other parts of the REST API and to allow databases to be catalogued in the [Local Cohort](/concepts/metadata-collection) metadata collections.
 

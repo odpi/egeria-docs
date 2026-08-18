@@ -62,6 +62,6 @@ metadata repository cohort in
 The administration hands on lab called "**Understanding Cohort Configuration Lab**"
 provides an opportunities to query the cohort registries of cohort members as they
 exchange metadata for Coco Pharmaceuticals.
-Instructions for running the labs [can be found here](/education/open-metadata-labs/overview).
+Instructions for running the labs [can be found here](/egeria-workspaces).
 
 --8<-- "snippets/abbr.md"

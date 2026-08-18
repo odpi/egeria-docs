@@ -7,7 +7,7 @@ A Connector is a Java class that supports the standard [Open Connector Framework
 
 * **[Audit Log Destination Connector](/concepts/audit-log-destination-connector)** - supports the reading and writing of audit log records to specific destinations on behalf of the **[OMRS Audit Log](/concepts/audit-log**.
 
-* **[Cohort Registry Store Connector](/concepts/cohort-registry-store-connector)** - supports the reading and writing of the cohort registry store to specific destinations on behalf of the **[Cohort Registry](/services/omrs/cohort-registry)**.
+* **[Cohort Registry Store Connector](/concepts/cohort-registry-store-connector)** - supports the reading and writing of the cohort registry store to specific destinations on behalf of the **[Cohort Registry](/concepts/cohort-registry)**.
 
 * **[Event Mapper Connector](/concepts/event-mapper-connector)** - informs a cohort of changes to metadata mastered in a third party metadata repository that occurred through the third party technology's own mechanisms. It is always paired with the repository connector for the third party technology.
 

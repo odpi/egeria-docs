@@ -19,7 +19,7 @@ Governance execution points are created during the design of the governance doma
 
 ## Open Metadata Types
 
-A governance execution point is represented in open metadata by an [*ExecutionPointDefinition* entity](/types/4/0460-Execution-Points). The *ExecutionPointDefinition* entities are created during the design of the governance program.  They are linked to the governance controls that they support using the *ExecutionPointUse* relationship.
+A governance execution point is represented in open metadata by an [*ExecutionPointDefinition* entity](/types/4/0460-Governance-Execution-Points). The *ExecutionPointDefinition* entities are created during the design of the governance program.  They are linked to the governance controls that they support using the *ExecutionPointUse* relationship.
 
 The classifications *ControlPoint*, *VerificationPoint* and *EnforcementPoint* are used to label entities describing implementation components such as [Processes](/types/0/0010-Base-model) with the type of execution point and the qualified name of the corresponding definition if any. They are often found on elements such as:
 

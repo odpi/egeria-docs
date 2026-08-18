@@ -17,12 +17,12 @@ Organization entities are specialized types of teams that represent the top of a
 
 ## Project teams
 
-[Projects](/concepts/projects) typically have one or more teams defined to identify the people who are performing its task.
+[Projects](/concepts/project) typically have one or more teams defined to identify the people who are performing its task.
 
 ![project teams](project-teams.svg)
 
 
 !!! info "Further information"
-    * The Open Metadata Type definitions for teams are in model [0115](/types/1/1005-teams).
+    * The Open Metadata Type definitions for teams are in model [0115](/types/1/0115-Teams).
 
 ---8<-- "snippets/abbr.md"

@@ -16,7 +16,7 @@ Organizations expect data (information) governance will deliver:
 
 When Jules joined Coco Pharmaceuticals the rules for handling data were documented on an internal website. They defined how researchers should manage data for clinical trials to be compliant with FDA regulations.
 
-A recent [fraud incident](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activcity/overview) with a bogus supplier and demands to use more data by the clinical research teams showed that the company should have a more focused approach to information governance - and so Jules was appointed CDO.
+A recent [fraud incident](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview) with a bogus supplier and demands to use more data by the clinical research teams showed that the company should have a more focused approach to information governance - and so Jules was appointed CDO.
 
 In this scenario we walk through the steps that Jules takes to set up a data governance program for Coco Pharmaceuticals.  This includes:
 

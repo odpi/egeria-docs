@@ -16,7 +16,7 @@ This is November's monthly report from the Egeria community.
 
 The repository services now support the DEREGISTERED_REPOSITORY [provenance type](/features/metadata-provenance/overview) when elements are retrieved from the repository.  This value is set in the header of each element and indicates that it originated from a repository that is no longer registered with any connected cohorts.  It acts as a warning that this metadata is no longer being updated and may be out-of-date.
 
-This required an update to the [Conformance Test Suite (CTS)](/guides/cts/overview) which was coding around this missing function.
+This required an update to the [Conformance Test Suite (CTS)](/guides/cts) which was coding around this missing function.
 
 ### Connectors
 
@@ -34,7 +34,7 @@ This month we clarified the relationship between a subject area and a data domai
 
 ### Open Metadata Labs
 
-The [open metadata labs](/education/open-metadata-labs/overview) are Jupyter Notebooks that allow you to issue commands to the Egeria APIs to explore various capabilities.  These are the latest updates and will run with Egeria 3.14 or later:
+The [open metadata labs](/egeria-workspaces) are Jupyter Notebooks that allow you to issue commands to the Egeria APIs to explore various capabilities.  These are the latest updates and will run with Egeria 3.14 or later:
 
 * **The Information Architecture Labs** - in the first information architecture lab, *Working with Standard Models*, Erin Overview is using the Cloud Information Model as a set of standard terms to clarify the new sales procedures needed for their personalized medicine business.
 * **The Development Labs** - there are currently three development labs that show Erin and Peter giving education sessions to the software development team. These labs demonstrate the technical details and operation of various mechanisms in Egeria's software.
@@ -52,7 +52,7 @@ The [open metadata labs](/education/open-metadata-labs/overview) are Jupyter Not
 
 Each month we select some new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org) so you can keep up-to-date with how our website is evolving.
 
-* [Metadata governance introduction](/patterns/metadata-governance/overview)
+* [Metadata governance introduction](/patterns/active-governance/overview)
 * [Building subject area materials](/practices/common-data-definitions/open-metadata-for-common-definitions)
 
 ## Egeria plans
@@ -69,7 +69,7 @@ Congratulations to [Juergen Hemelt](https://github.com/juergenhemelt) who become
 
 ### Metadata Governance Dojo
 
-The big event this month was the new *Metadata Governance Dojo*.  We held two live sessions (3 hours each) and extended the discussion of the governance engines to one of the community calls.  The topics covered the philosophy and purpose of metadata governance, details of the operation of the [Integration Daemon](/concepts/integration-daemon) as well as [governance processes](/concepts/governance-action-process) and [services](/concepts/governance-service) running in the [Engine Host](/concepts/engine-host).  There are also sections on building the materials for a [subject area](/concepts/subject-area), [incident reporting](/concepts/incident-report), [lineage](/concepts/lineage) and [templated cataloguing](/features/templated-catalouing/overview).
+The big event this month was the new *Metadata Governance Dojo*.  We held two live sessions (3 hours each) and extended the discussion of the governance engines to one of the community calls.  The topics covered the philosophy and purpose of metadata governance, details of the operation of the [Integration Daemon](/concepts/integration-daemon) as well as [governance processes](/concepts/governance-action-process) and [services](/concepts/governance-service) running in the [Engine Host](/concepts/engine-host).  There are also sections on building the materials for a [subject area](/concepts/subject-area), [incident reporting](/concepts/incident-report), [lineage](/concepts/lineage) and [templated cataloguing](/features/templated-cataloguing/overview).
 
 ### Community Meetings
 

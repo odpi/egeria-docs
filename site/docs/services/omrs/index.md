@@ -114,7 +114,7 @@ The OMRS can also support a server without any local repository - so that all me
 
 ![Repository proxy](omrs-role-repository-proxy.png)
 
-The OMRS can support a server where the OMAS's are not deployed and the local repository is configured to connect as an adapter for a non-native open metadata repository. The cohort services connect this metadata repository with other members in one or more cohorts. This is called the *[adapter integration pattern](/patterns/metadata-exchange/overview/#metadata-exchange-patterns)* and is used in a [repository proxy OMAG Server](/concepts/repository-proxy).
+The OMRS can support a server where the OMAS's are not deployed and the local repository is configured to connect as an adapter for a non-native open metadata repository. The cohort services connect this metadata repository with other members in one or more cohorts. This is called the *[adapter integration pattern](/patterns/information-exchange/overview/#metadata-exchange-patterns)* and is used in a [repository proxy OMAG Server](/concepts/repository-proxy).
 
 ### Connected metadata server
 

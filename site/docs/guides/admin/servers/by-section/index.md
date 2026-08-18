@@ -20,7 +20,7 @@ The configuration document is divided into sections.  Some sections contain prop
 * The [*Basic Server Properties*](basic-server-properties-section.md) provides the standard properties of a server such as its user identifier and password.
 * The [*Server Security Connection*](server-security-connection-section.md) provides the information needed to enable fine-grained metadata authorization checks.
 * The [*Repository Services*](repository-services-section.md) defines the type of audit logging and metadata repository supported by the server.  It also defines which [open metadata repository cohorts](/concepts/cohort-member) that the server belongs to.
-* The [*Access Services*](access-services-section.md) define which metadata APIs are activated in a [metadata access server](/concepts/metadata-access-service).
+* The [*Access Services*](access-services-section.md) define which metadata APIs are activated in a [metadata access server](/concepts/metadata-access-server).
 * The [*Engine Host Services*](engine-host-services-section.md) define which governance engines are activated in an [engine host](/concepts/engine-host) server.
 * The [*Integration Daemon Services*](integration-daemon-services-section.md) define which integration connectors run in an [integration daemon](/concepts/integration-daemon) server.
 * The [*View Services*](view-services-section.md) define which REST APIs are enabled in a [view server](/concepts/view-server).

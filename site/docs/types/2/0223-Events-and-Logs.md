@@ -18,7 +18,7 @@ The additional attributes for *Topic* are:
 
 ## KafkaTopic entity
 
-[Apache Kafka](https://kafka.apache.org/) is a popular open source technology that provides support for *Topics*.  There is a specific type for an Apache Kafka topic because there is a [resource connector](/contectors/resource/kafka-open-metadata-topic-connector) for Apache Kafka and this type identifies when it is appropriate to use this connector to access the topic contents.
+[Apache Kafka](https://kafka.apache.org/) is a popular open source technology that provides support for *Topics*.  There is a specific type for an Apache Kafka topic because there is a [resource connector](/guides/developer/resource-connectors/open-metadata-topic-connector) for Apache Kafka and this type identifies when it is appropriate to use this connector to access the topic contents.
 
 ## SubscriberList entity and TopicSubscribers relationship
 

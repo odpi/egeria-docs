@@ -38,11 +38,11 @@ FFDC requires careful design by the developer because they need to anticipate th
 
 The result is the consistent availability of detailed diagnostics when things go wrong.
 
-In addition, the [Open Metadata Repository Services (OMRS)](/services/omrs) provides an extension to the ALF's audit log destination that supports multiple [audit log store connectors](/concepts/audit-log-connectors). This means that an OMAG Server can be configured to route audit log messages to multiple destinations.
+In addition, the [Open Metadata Repository Services (OMRS)](/services/omrs) provides an extension to the ALF's audit log destination that supports multiple [audit log store connectors](/concepts/audit-log-destination-connector). This means that an OMAG Server can be configured to route audit log messages to multiple destinations.
 
 ![Using different log destination](/frameworks/alf/audit-log-framework-overview.svg)
 
-Details of the supported audit log store connectors and how to set them up are described in [Configuring the Audit Log](/guides/admin/servers/by-section-repository-services-section/#configuring-the-audit-log).
+Details of the supported audit log store connectors and how to set them up are described in [Configuring the Audit Log](/guides/admin/servers/by-section/repository-services-section).
 
 ## FFDC principles practised by the Egeria community
 
@@ -192,7 +192,7 @@ Additional examples of common errors are shown [here](/guides/diagnostic/example
 
 The diagram below illustrates the structure of the audit log records:
 
-![Audit log record structure](/concepts/audit-log-record.svg)
+![Audit log record structure](/concepts/audit-log-destination-connector.svg)
 
 ### Audit Log Record Severities
 

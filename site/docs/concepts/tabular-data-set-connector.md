@@ -9,7 +9,7 @@ A *Tabular Data Set Collection* is a collection of related tabular data sets.  F
 
 ## Implementation
 
-Egeria's [Open Connector Framework (OCF)](/frameworks/ocf/overview) defines a standard connector interface for accessing different implementations of a tabular data set and tabular data set collection.  This means that [governance action services](/concepts/governance-action-services) and [integration connectors](/concepts/integration-connector) can operate on tabular data stored in many types of technologies without needing to know the specifics of the underlying technology.
+Egeria's [Open Connector Framework (OCF)](/frameworks/ocf/overview) defines a standard connector interface for accessing different implementations of a tabular data set and tabular data set collection.  This means that [governance action services](/concepts/governance-action-service) and [integration connectors](/concepts/integration-connector) can operate on tabular data stored in many types of technologies without needing to know the specifics of the underlying technology.
 
 Typically, the tabular data set connectors for a particular technology type are implemented as a pair: one for the tabular data set itself, and one for a collection of tabular data sets.  For example, the connector for a CSV file-based tabular data set has a companion connector that supports a file directory (folder) of CSV Files.  Similarly, the connector for a PostgreSQL table-based tabular data set has a companion connector for a PostgreSQL Schema that manages a collection of PostgreSQL tables.
 

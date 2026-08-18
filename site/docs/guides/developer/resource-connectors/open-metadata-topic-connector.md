@@ -7,7 +7,7 @@ The open metadata topic connector provides a topic interface to a generic string
 
 It is the interface implemented by specific [event buses](/concepts/event-bus).
 
-Topic connectors for specific types of events (such as the [OMRS Topic Connector](/services/omrs/connectors/omrs-topic-connector)) are configured with an instance of an open metadata topic connector embedded inside it.
+Topic connectors for specific types of events (such as the [OMRS Topic Connector](/services/omrs/component-descriptions/connectors/omrs-topic-connector)) are configured with an instance of an open metadata topic connector embedded inside it.
 
 The open metadata topic connector means that only one connector need be implemented for each type of event bus - rather than one for each type of topic that Egeria supports.
 

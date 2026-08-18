@@ -15,7 +15,7 @@ Under that, each operation defines its requests and responses.
 
 ## APISchemaType
 
-The *APISchemaType* entity provides the [RootSchemaType](/types/5/0530-Tqbular-Schemas) for the API's schema.
+The *APISchemaType* entity provides the [RootSchemaType](/types/5/0530-Tabular-Schemas) for the API's schema.
 
 ## APIOperations
 

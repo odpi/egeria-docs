@@ -7,7 +7,7 @@ A [survey action service](/concepts/survey-action-service) is implemented as a s
 
 ### Dependencies
 
-The interfaces and base classes of the connector provider and survey action service implementation are provided by the [Survey Action Framework (ODF)](/frameworks/odf/overview).  This means you need to include the following Egeria modules in your build script:
+The interfaces and base classes of the connector provider and survey action service implementation are provided by the [Survey Action Framework (ODF)](/frameworks/osf/overview).  This means you need to include the following Egeria modules in your build script:
 
 * Open Connector Framework
 * Survey Action Framework

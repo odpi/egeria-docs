@@ -68,7 +68,7 @@ There was a *business imperative* to protect Coco Pharmaceuticals from global in
 
 ![Governance Drivers for Sustainability](governance-drivers.svg)
 
-Erin said they need to define how they want to structure the sustainability program.  She also showed Tom the types of approaches both the [Data Governance](/practices/coco-pharmaceuticals/scenarios/defining-the-data-governance-program/overview) and [Security](/practices/coco-pharmaceuticals/scenarios/defining-the-data-security-strategy/overview) teams have created.
+Erin said they need to define how they want to structure the sustainability program.  She also showed Tom the types of approaches both the [Data Governance](/practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview) and [Security](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview) teams have created.
 
 ???+ info "Governance Definitions"
     Governance drivers and principles are types of [governance definitions](/concepts/governance-definition). Governance definitions are used to record precise requirements, decisions, intents around governance to help people understand what is being asked of them, why, and how their activity will be measured.
@@ -270,7 +270,7 @@ She also had the pleasure of announcing their first initiative - the CFC-Free In
 
 ## The CFC-Free Initiative
 
-In the first phase of the sustainability initiative, Tom is keen to run an initiative that makes a difference to sustainability.  [Zach Now](/practices/coco-pharmaceuticals/personas/zach-now), founder and leader of the New York Lab suggested they run a campaign to reduce the use of chlorofluorocarbons (CFCs) in refrigeration units throughout the company.  These are principally in the labs and manufacturing units. 
+In the first phase of the sustainability initiative, Tom is keen to run an initiative that makes a difference to sustainability.  [Zach Now](/practices/coco-pharmaceuticals/personas), founder and leader of the New York Lab suggested they run a campaign to reduce the use of chlorofluorocarbons (CFCs) in refrigeration units throughout the company.  These are principally in the labs and manufacturing units. 
 
 ![Discussing CFC-Free Initiative](tom-zach-discussing-refrigerants.png)
 > Tom and Zach discussing the CFC-Free Initiative
@@ -283,7 +283,7 @@ Tom discovers that although the refrigeration units were catalogued in the vario
 
 #### Is this the right solution?
 
-Tom looks at the existing [open metadata types](/types) and cannot find a good place to store details of their refrigeration units.  She proposes to add a new RefrigerationUnit type to Egeria.  It would inherit from [Infrastructure](/types/0/001-Base-Model) and include a new attribute called *coolantType*. 
+Tom looks at the existing [open metadata types](/types) and cannot find a good place to store details of their refrigeration units.  She proposes to add a new RefrigerationUnit type to Egeria.  It would inherit from [Infrastructure](/types/0/0010-Base-Model) and include a new attribute called *coolantType*. 
 
 ![New Type Definition](refrigeration-unit-type.svg)
 
@@ -316,7 +316,7 @@ There are three steps to adding a new open metadata type:
 
 Once the RefrigerationUnit was installed in Egeria, Tom was able to load the refrigeration unit data that she had collected from the different sites.   She showed the results to her boos, [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) to request budget to replace the CFC-containing units with CFC-free alternatives.  He agrees because it matches their strategy and the budget is approved.  
 
-Then the race is on to acquire the CFC-free alternatives.  Which location will be the first to be CFC-Free?  Not surprisingly, the New York lab is the first, because [Zach Now](/practices/coco-pharmaceuticals/personas/zach-now), forewarned of the initiative, had gone ahead and ordered new units before Tom had the data into Egeria!  The other locations followed over the next few months allowing Tom to declare the company CFC-Free.
+Then the race is on to acquire the CFC-free alternatives.  Which location will be the first to be CFC-Free?  Not surprisingly, the New York lab is the first, because [Zach Now](/practices/coco-pharmaceuticals/personas), forewarned of the initiative, had gone ahead and ordered new units before Tom had the data into Egeria!  The other locations followed over the next few months allowing Tom to declare the company CFC-Free.
 
 ![Tom awarding Zach the CFC-Free certificate](tom-awarding-zach-cfc-free-certificate.png)
 

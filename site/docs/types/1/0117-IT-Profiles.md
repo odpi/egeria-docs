@@ -14,7 +14,7 @@ The `ActorProfile` links to the `UserIdentity` entities for this piece of IT inf
 
 ## ITInfrastructureProfile
 
-`ITinfrastructureProfile` links the actor profile to the [`ITInfrastructure`](/types/0/0030-Hosts-and-Platform) asset that represents the specific piece of IT Infrastructure that it represents.
+`ITinfrastructureProfile` links the actor profile to the [`ITInfrastructure`](/types/0/0030-Hosts-and-Platforms) asset that represents the specific piece of IT Infrastructure that it represents.
 
 
 

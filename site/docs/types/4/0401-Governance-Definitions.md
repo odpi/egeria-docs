@@ -42,11 +42,11 @@ The governance definitions are organized into specific subtypes and linked toget
   * [0440 Organizational Controls](/types/4/0440-Organizational-Controls) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
   * [0450 Governance Rollout](/types/4/0450-Governance-Rollout) - describes governance controls that are used when rolling out a governance program to the organization.
   * [0451 Notifications](/types/4/0451-Notifications) - describes governance controls that are used to notify people of changes, schedules and events.
-  * [0462 Governance Actions](/types/4/0462-Governance-Actions) - describes governance controls that are used to implement governance actions.
+  * [0462 Governance Actions](/types/4/0462-Governance-Action-Processes) - describes governance controls that are used to implement governance actions.
 
 ## GovernedBy relationship
 
-The *GovernedBy* relationship links the governance definitions to the elements they are governing.  These elements are [Referenceable](/types/0/0010-Base-Model), so they could be [Assets](/types/0/0010-Base-Model), [Processes](/types/0/0010-Base-Model), [Infrastructure](/types/0/0010-Base-Model), [People](/types/1/0112-People) and [Teams](/types/1/0115-Teams), [Glossary Terms](/types/3/0330-Terms), [Digital Services](/types/7/0710-Digital-Service) for example.
+The *GovernedBy* relationship links the governance definitions to the elements they are governing.  These elements are [Referenceable](/types/0/0010-Base-Model), so they could be [Assets](/types/0/0010-Base-Model), [Processes](/types/0/0010-Base-Model), [Infrastructure](/types/0/0010-Base-Model), [People](/types/1/0112-People) and [Teams](/types/1/0115-Teams), [Glossary Terms](/types/3/0330-Terms), [Digital Services](/types/7/0710-Digital-Products) for example.
 
 * *label* - the role of the governance definition with respect to the element it is governing.
 * *description* - the description of how the governance is defined.

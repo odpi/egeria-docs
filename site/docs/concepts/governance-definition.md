@@ -28,7 +28,7 @@ They are said to be the "responses to the challenges proposed by the governance 
 
 Governance is enabled through People, Process and Technology. The governance controls describe actions and activities that support achieving the governance policies that support the drivers.  Traditionally governance controls are divided into technical controls (implemented IT function) and organizational controls (training, responsibility, buddy-checking etc).  In Egeria we do not formally distinguish between technical and organization controls in the type system since the dividing line between the things that humans do and those that are automated is changing all the time. 
 
-[Governance controls](/types/4/0425-Governance-Controls) are linked to their relevant governance policies using the [GovernanceMechanism](/types/4/0425-Governance-Controls) relationship.  They include [Governance Actions](/concepts/governance-action) and [Governance Zones](/concepts/governance-zone).
+[Governance controls](/types/4/0420-Governance-Controls) are linked to their relevant governance policies using the [GovernanceMechanism](/types/4/0420-Governance-Controls) relationship.  They include [Governance Actions](/concepts/governance-action) and [Governance Zones](/concepts/governance-zone).
 
 ???+ info "Further information"
 

@@ -17,7 +17,7 @@ A *SecretsStoreCollection* entity represents a collection of related secrets. A 
 
 The secrets store collection may contain many types of secrets, from credentials to user accounts, security groups security roles and security access controls.
 
-The diagram below shows the structure of the `coco-user-directory.omsecrets` file that holds the default user directory for the [OMAG Server Platform](/concepts/omag-server-platform).  The types used to model the secrets inside a secrets collection are defined in [model 0423](/types/4/0423-Security-Controls).
+The diagram below shows the structure of the `coco-user-directory.omsecrets` file that holds the default user directory for the [OMAG Server Platform](/concepts/omag-server-platform).  The types used to model the secrets inside a secrets collection are defined in [model 0423](/types/4/0423-Security-Definitions).
 
 ![Key Store Example](keystore-example.svg)
 

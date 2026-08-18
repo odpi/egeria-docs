@@ -31,7 +31,6 @@ The Solution Architect API supports the definition and display of these elements
 
 * [Solution Blueprint Concept](/concepts/solution-blueprint)
 * [Information Supply Chain Concept](/concepts/information-supply-chain)
-* [Design Pattern Concept](/concepts/design-pattern)
 
 Sample requests for the REST API can be found in [Egeria-api-solution-architect.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/solution-architect/Egeria-api-solution-architect.http).
 [Egeria-jacquard-solution-blueprints.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/solution-architect/Egeria-jacquard-solution-blueprints.http) shows how to retrieve the solution blueprints that describe the behaviour of the connectors supporting the Open Metadata Digital Product Catalog function.

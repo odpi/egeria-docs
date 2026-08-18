@@ -13,7 +13,7 @@ It is loaded automatically in the *simple-metadata-store* sample server.
 SimpleCatalog is also supplied as four archives for use in a demo showing 4 metadata access servers connected together in a single cohort.
 The archives are each loaded into a different server.
 It is then possible to show how the cohort integrates metadata from different catalogs.
-These archives are used in the *Development labs* which are part of the [Open Metadata Labs](/education/open-metadata-labs/overview/).
+These archives are used in the *Development labs* which are part of the [Open Metadata Labs](/egeria-workspaces).
 
 * *SimpleAPICatalog* - API metadata typically found in an API catalog.
 

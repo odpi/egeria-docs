@@ -8,7 +8,7 @@ hide:
 
 # Repository Connector
 
-The [repository connector](/concepts/repository-connector), and its optional [event mapper connector](/concepts/event-mmapper-connector) provide the ability to integrate a metadata repository into the open metadata ecosystem.  These connector have direct access to the connected [open metadata repository cohorts](/concepts/cohort-member).  There are two patterns of use for these connectors.
+The [repository connector](/concepts/repository-connector), and its optional [event mapper connector](/concepts/event-mapper-connector) provide the ability to integrate a metadata repository into the open metadata ecosystem.  These connector have direct access to the connected [open metadata repository cohorts](/concepts/cohort-member).  There are two patterns of use for these connectors.
 
 In the first pattern, called the *native repository connector*, the [repository connector](/concepts/repository-connector) delegates all of its methods to a particular type of persistence store.  Metadata is only accessible through the Egeria APIs and it is stored as entities, relationships and classifications enabling it to support any valid type of open metadata. This type of repository connector runs as the local repository  within an Egeria [Metadata Access Store](/concepts/metadata-access-store) server.
 

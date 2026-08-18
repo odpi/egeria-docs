@@ -27,15 +27,15 @@ An survey action service is designed to run at regular intervals to gather a det
     * via a [governance action type](/concepts/governance-action-type), or
     * via a [governance action process](/concepts/governance-action-process).
 
-Each time the survey action service starts, the Survey Action OMES creates a new [Survey Report](/concepts/survey-report) via a call to the Asset Owner OMAS.  As the survey action service runs, it is retrieving metadata, and storing annotations, via its [survey context](/concepts/survey-context).  The Survey Action OMES routes these requests to the Asset Owner OMAS which has access to the open metadata repositories.
+Each time the survey action service starts, the Survey Action OMES creates a new [Survey Report](/concepts/survey-report) via a call to the Asset Owner OMAS.  As the survey action service runs, it is retrieving metadata, and storing annotations, via its [survey context](/frameworks/osf/overview).  The Survey Action OMES routes these requests to the Asset Owner OMAS which has access to the open metadata repositories.
 
 
 ??? info "Runtime for a survey action service"
     Survey action services are packaged into [Survey Action Engines](/concepts/survey-action-engine) that run in the [Survey Action OMES](/services/omes/survey-action/overview) hosted in an [Engine Host](/concepts/engine-host).
 
-    The metadata repository interface for metadata discovery tools is implemented by the [Asset Owner OMAS](/services/omas/asset-owner/overview) that runs in a [Metadata Access Server](/concepts/metadata-access-server).
+    The metadata repository interface for metadata discovery tools is implemented by the [Asset Owner OMAS](/services/open-metadata-store) that runs in a [Metadata Access Server](/concepts/metadata-access-server).
 
-    A survey action service may be triggered via an [Engine Action](/concepts/engine-action), a [governance action type](/concepts/overnance-action-type) or as part of a [governance action process](/concepts/governance-action-process).
+    A survey action service may be triggered via an [Engine Action](/concepts/engine-action), a [governance action type](/concepts/governance-action-type) or as part of a [governance action process](/concepts/governance-action-process).
 
     ![Survey Action Service](survey-action-service.svg)
 

@@ -13,6 +13,6 @@ Cited documents support open metadata elements to link to a precise citation to 
 
 ## CitedDocumentLink
 
-*CitedDocumentLink* connects a [Referenceable](/types/0/0010-Basic-Model) to a CitedDocument entity.  It allows a *referenceId* and a precise page range (*pages* attribute) to be specified along with a short description of the relevance of the citation.  This relationship is a multi-link relationship so the same referenceable can link to the same cited document multiple times, with different referenceIds.
+*CitedDocumentLink* connects a [Referenceable](/types/0/0010-Base-Model) to a CitedDocument entity.  It allows a *referenceId* and a precise page range (*pages* attribute) to be specified along with a short description of the relevance of the citation.  This relationship is a multi-link relationship so the same referenceable can link to the same cited document multiple times, with different referenceIds.
 
 --8<-- "snippets/abbr.md"

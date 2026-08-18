@@ -17,7 +17,7 @@ There are [different types of OMAG Server](/concepts/omag-server#types-of-omag-s
 
 ![Configuration Document Sections](configuration-document-structure-simplified.svg)
 
-Many of the configuration values are [connections](/concepts/connection) to allow the server to create the [connectors](/concepts/connectors) to the [digital resources](/concepts/digital-resource) it needs.
+Many of the configuration values are [connections](/concepts/connection) to allow the server to create the [connectors](/concepts/connector) to the [digital resources](/concepts/digital-resource) it needs.
 
 These connectors enable Egeria to run in different deployment environments and to connect to different third party technologies.
 

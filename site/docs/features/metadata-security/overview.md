@@ -63,7 +63,7 @@ The security connectors are optional.  If they are not defined then there are no
 
 Egeria has a single metadata security connector that implements both interfaces:
 
-* The [Open Metadata Access Security Connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors/open-metadata-access-security-connector) uses information from an embedded [secrets store connector](/concepts/secrests-store-connector) so all authorization decisions can be controlled through the contents of the externalized secrets store.
+* The [Open Metadata Access Security Connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors/open-metadata-access-security-connector) uses information from an embedded [secrets store connector](/concepts/secrets-store-connector) so all authorization decisions can be controlled through the contents of the externalized secrets store.
 
 ## Metadata security APIs
 
@@ -74,7 +74,7 @@ Egeria has a single metadata security connector that implements both interfaces:
 * **OpenMetadataServerSecurity** - secure any request to an OMAG Server.
 * **OpenMetadataServiceSecurity** - secure requests to specific OMAG Server's services.
 * **OpenMetadataElementSecurity** - secure requests to specific open metadata elements depending on their type, the requested operation, who created the element and the settings of their classifications such as Governance Zones or Ownership.
-* **OpenMetadataRepositorySecurity** - secure all requests to the [open metadata repositories](/concepts/open-metadata-repositories).  This allows a repository to redact sensitive properties for specific users.
+* **OpenMetadataRepositorySecurity** - secure all requests to the [open metadata repositories](/concepts/open-metadata-repository).  This allows a repository to redact sensitive properties for specific users.
 * **OpenMetadataEventsSecurity** - secure sending and receiving of instance events between the open metadata repositories connected via an [open metadata repository cohort](/concepts/cohort-member/).  This allows a repository to withold sensitive instances from the rest of the cohort, or prevent local caching of specific instances.
 
 

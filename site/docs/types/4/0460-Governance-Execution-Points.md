@@ -3,7 +3,7 @@
 
 # 0460 Governance Execution Points
 
-A [*governance execution point*](/concepts/governance-execution) defines specific activity that is implementing a requirement of the governance program.  
+A [*governance execution point*](/concepts/governance-execution-point) defines specific activity that is implementing a requirement of the governance program.  
 
 ![UML](0460-Governance-Execution-Points.svg)
 

@@ -3,7 +3,7 @@
 
 # Like
 
-A *like* is an attachment that a user can attach to a [referenceable](/concepts/referencable) element to indicate his/her approval of the referenceable's presence or content.  A user can only attach a single *like* to a specific referenceable.  The attachment may be private to the user or public.
+A *like* is an attachment that a user can attach to a [referenceable](/concepts/referenceable) element to indicate his/her approval of the referenceable's presence or content.  A user can only attach a single *like* to a specific referenceable.  The attachment may be private to the user or public.
 
 Often, data catalogs count up the number of likes attached to an element as a measurement of its popularity.
 

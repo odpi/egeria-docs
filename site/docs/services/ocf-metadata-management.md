@@ -14,7 +14,7 @@ OCF metadata management implements the *Connected Asset Services* from the [Open
 
 ## Connected Asset Services
 
-An OCF connector supports a method called [`getConnectedAssetProperties`](/concepts/connected-asset-properties).  It is intended to return metadata about its resource.  By default this method returns null because it needs to be configured with the location of the metadata repositor(y/ies) it is to call. If the connector is created by one of the OMAS clients listed above, this method is configured to retrieve metadata from the same open metadata repository as the OMAS.  This metadata includes details of the structure, origin, meaning and governance requirements associated with the resource.
+An OCF connector supports a method called [`getConnectedAssetProperties`](/services/connected-asset-services).  It is intended to return metadata about its resource.  By default this method returns null because it needs to be configured with the location of the metadata repositor(y/ies) it is to call. If the connector is created by one of the OMAS clients listed above, this method is configured to retrieve metadata from the same open metadata repository as the OMAS.  This metadata includes details of the structure, origin, meaning and governance requirements associated with the resource.
 
 
 --8<-- "snippets/abbr.md"

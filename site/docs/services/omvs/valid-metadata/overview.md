@@ -671,7 +671,7 @@ This JSON shows a query for the consistent values for the *fileType* of "CSV Fil
     }
     ```
 
-This values are used by the connectors and services in Egeria's [leveraging your files](/egeria-solutions/leveraging-files/overview) solution.  If a connector defines a file with an extension of `csv`, it looks up the consistent values to determine the correct values for the open metadata type ([CSVFile](types/2/0220-Files-and-Folders)), *deployedImplementationType* ("CSV Data File") and *fileType* ("CSV File").
+This values are used by the connectors and services in Egeria's [leveraging your files](/egeria-solutions/leveraging-files/overview) solution.  If a connector defines a file with an extension of `csv`, it looks up the consistent values to determine the correct values for the open metadata type ([CSVFile](/types/2/0220-Files-and-Folders)), *deployedImplementationType* ("CSV Data File") and *fileType* ("CSV File").
 The result is a richer catalog entry for the file, plus the ability to use attributes such as the *fileType* and *deployedImplementationType* to create summary statistics.
 
 ??? education "Further information on file reference data"

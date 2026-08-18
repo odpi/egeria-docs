@@ -73,7 +73,7 @@ Roles that interact with the organization:
     
     #### Further information
     
-    * [Extensions to the customer role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy/practices)
+    * [Extensions to the customer role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
     
 ??? tip "Regulator Role."
     ### Regulator Role
@@ -117,7 +117,7 @@ Roles that occur when governance programs are in place:
         #### Further information
     
         * [Extensions to the security officer role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
-        * The security officer is supported by the [Security Officer](/concepts/omvs/security-officer/overview).
+        * The security officer is supported by the [Security Officer](/services/omvs/security-officer/overview).
 
 
 ??? tip "Incident Owner Role."
@@ -193,7 +193,7 @@ Roles involved in the day-to-day use of an organization's resources:
     #### Further information
     
     * [Extensions to the asset owner role for privacy](/practices/data-privacy-pack/role-extensions-for-privacy)
-    * The Asset Owner is supported by the [Classification Manager](/concepts/omvs/classification-manager/overview).
+    * The Asset Owner is supported by the [Classification Manager](/services/omvs/classification-explorer/overview).
 
 ??? tip "Asset Consumer Role."
     ### Asset Consumer Role
@@ -273,7 +273,7 @@ Roles for building and using digital services:
 
     #### Further information
 
-    * The project manager role is supported by the [Project Manager](/concepts/omvs/project-manager/overview) API.
+    * The project manager role is supported by the [Project Manager](/services/omvs/project-manager/overview) API.
     
 
 ??? tip "Developer Role."

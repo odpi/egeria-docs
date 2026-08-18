@@ -7,7 +7,7 @@
 
 It is early 2026 and [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) is keen to explore the implications of the new UK Terrorism (Protection of Premises) Act 2025 (Martyn's Law) on Coco Pharmaceuticals' annual conference in London. The number of people attending has been growing steadily, and they are now around 700 people.  
 
-The new act kicks in for events of over 200 people with a higher tier at 800 people.  It is expected to be enforced from 2027 and [Ivor Padlock](/practices/coco-pharmaceuticals/persona/ivor-padlock) is keen to understand the impact, firstly with the current attendance and the impact if attendance grows over 800.  He likes to keep ahead of the game since these government initiatives tend to offer useful insights and best-practices.
+The new act kicks in for events of over 200 people with a higher tier at 800 people.  It is expected to be enforced from 2027 and [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) is keen to understand the impact, firstly with the current attendance and the impact if attendance grows over 800.  He likes to keep ahead of the game since these government initiatives tend to offer useful insights and best-practices.
 
 ## Documenting the Act using Dr.Egeria
 

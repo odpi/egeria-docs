@@ -37,7 +37,7 @@ The common services support clients and the registered services that run in the 
 * [Generic Handlers](/services/generic-handlers) - supports the management of specific types of open metadata elements.  The generic handlers provide services to translate OMAS requests built around that service's private beans into calls to the repository services (through the repository handler).
 
 * [Repository Handler](/services/repository-handler) - supports access to multiple related metadata instances from the
-[Open Metadata Repository Services (OMRS)](/services/omrs/overview). It manages the provenance checking, deduplication and translates OMRS exceptions into [Open Connector Framework (OCF)](/frameworks/ocf/overview) exceptions that are
+[Open Metadata Repository Services (OMRS)](/services/omrs). It manages the provenance checking, deduplication and translates OMRS exceptions into [Open Connector Framework (OCF)](/frameworks/ocf/overview) exceptions that are
 used extensively across the [Open Metadata Access Services (OMASs)](/services/omas).
 
 

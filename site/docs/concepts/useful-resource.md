@@ -9,7 +9,7 @@ governance definitions, models, system definitions or process definitions.
 
 It is possible to maintain a list of useful resources for a
 [personal profile](/concepts/personal-profile), 
-a [team](/concepts/organizations/#team) or a [community](/concepts/community).
+a [team](/concepts/team) or a [community](/concepts/community).
 
 
 

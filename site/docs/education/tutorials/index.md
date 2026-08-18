@@ -15,7 +15,7 @@ The tutorials provide step-by-step guides to help you work with Egeria and its a
 
 Egeria can be set up and run using the following methods:
 
-* Set-up to support the open metadata labs.  These labs show Egeria in an operational mode serving different users in the Coco Pharmaceuticals business.  Egeria is integrated with a variety of technologies in this environment, and it is set up to specifically support the scenarios within the labs.  Follow [this link if you want to run the labs](/education/open-metadata-labs/overview).
+* Set-up to support the open metadata labs.  These labs show Egeria in an operational mode serving different users in the Coco Pharmaceuticals business.  Egeria is integrated with a variety of technologies in this environment, and it is set up to specifically support the scenarios within the labs.  Follow [this link if you want to run the labs](/egeria-workspaces).
 
 * Used directly from a prebuilt docker image from either [DockerHub](https://hub.docker.com/r/odpi/egeria) or [Quay.io](https://quay.io/repository/odpi/egeria).  This docker image includes all the Egeria runtimes and can be used to experiment with different features of Egeria.  If this option is for you, [go to the docker tutorial](/education/tutorials/docker-tutorial/overview).
 

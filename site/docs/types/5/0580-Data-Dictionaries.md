@@ -9,7 +9,7 @@ hide:
 # 0580 Data Dictionaries
 
 At the start of a data project, it is often necessary to describe the types of data that is needed.  This is called a data specification.  
-*DataField* entities are used to model specific data fields required by the data project.  As the project progresses, [data schemas](/tpyes/5/0505-Schema-Attributes) are defined to describe how data is organized in the different data assets used by the project.
+*DataField* entities are used to model specific data fields required by the data project.  As the project progresses, [data schemas](/types/5/0505-Schema-Attributes) are defined to describe how data is organized in the different data assets used by the project.
 
 The data dictionary maintains lists of pre-defined, reusable data fields.
 
@@ -17,7 +17,7 @@ The data dictionary maintains lists of pre-defined, reusable data fields.
 
 ## DataField entity
 
-An [AuthoredReferenceable](/type/0/0010-Base-Model) that describes a data field.
+An [AuthoredReferenceable](/types/0/0010-Base-Model) that describes a data field.
 
 * *namespacePath* - Optional namespace to help build a qualified name for the data field.
 * *aliases* - Alternative name to use for the data field - useful when matching against a schema.
@@ -41,11 +41,11 @@ The *ObjectIdentifier* classification indicates that a data item is typically us
 
 ## DataDictionary Entity
 
-Identifies that a [collection](/type/0/0021-Collections) is a [data dictionary](/concepts/data-dictionary).  This is an organized collection of defined data fields that can be used as a knowledge base of preferred data definitions for data professionals.
+Identifies that a [collection](/types/0/0021-Collections) is a [data dictionary](/concepts/data-dictionary).  This is an organized collection of defined data fields that can be used as a knowledge base of preferred data definitions for data professionals.
 
 ## DataSpec Entity
 
-Identifies that this is a [collection](/type/0/0021-Collections) is a [data specification](/concepts/data-specification) that describes the data requirements for a project or initiative.  Its members are typically [data structures](/concepts/data-structure).
+Identifies that this is a [collection](/types/0/0021-Collections) is a [data specification](/concepts/data-specification) that describes the data requirements for a project or initiative.  Its members are typically [data structures](/concepts/data-structure).
 
 
 ## ReportType entity
@@ -58,7 +58,7 @@ The *ReportType* entity describes a report design.  It specifies the schema (str
 
 ## DataStructure entity
 
-An [AuthoredReferenceable](/type/0/0010-Base-Model) that provides list of data fields that describe the structure of a data source within a data specification.
+An [AuthoredReferenceable](/types/0/0010-Base-Model) that provides list of data fields that describe the structure of a data source within a data specification.
 
 * *namespacePath* - Optional namespace to help build a qualified name for the data structure.
 * *namePatterns* - List of patterns to use to match a name against a schema attribute - useful when matching against a schema.

@@ -12,7 +12,7 @@ The cohort registry maintains its record of the membership of the cohort in a [C
 ## Further information
 
 * [Configuring the cohort registry in an OMAG Server](/concepts/cohort-member)
-* [Overview of a cohort](/features/cohort-operations/overview)
+* [Overview of a cohort](/features/cohort-operation/overview)
 
 
 ---8<-- "snippets/abbr.md"

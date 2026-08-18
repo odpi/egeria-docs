@@ -11,7 +11,7 @@ As such, these guidelines exist to remind us of these broader responsibilities.
 
 ## Build environment
 
-The core of Egeria is written primarily in [Java](/guides/developer/languages/#java), and the minimum level required to build and run it is 17.
+The core of Egeria is written primarily in [Java](/guides/contributor/languages/#java), and the minimum level required to build and run it is 17.
 
 Most developers use MacOS, while our official builds use Linux (Ubuntu/Centos/RHEL should all be fine).
 
@@ -86,7 +86,7 @@ Javadoc is published as part of each published artifact, which allows IDEs to sh
 
 ## Log through ALF
 
-Egeria will typically be embedded in complex deployment environments. This means that we cannot rely on standard developer logging provided by components such as SLF4J. Instead, we use [First Failure Data Capture (FFDC)](/services/common/ffdc-services) through the [Audit Log Framework (ALF)](/frameworks/alf/overview).
+Egeria will typically be embedded in complex deployment environments. This means that we cannot rely on standard developer logging provided by components such as SLF4J. Instead, we use [First Failure Data Capture (FFDC)](/services/ffdc-services) through the [Audit Log Framework (ALF)](/frameworks/alf/overview).
 
 ## Be consistent with style and layout
 
@@ -114,9 +114,9 @@ cannot be incorporated into main if any unit tests are failing. They should not 
 
 External APIs (typically they include both a client and a server component) are tested using functional verification tests (FVTs). These are located in the [open-metadata-test/open-metadata-fvt :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-test/open-metadata-fvt) module. The aim of these tests is to check that the APIs validate all of their parameters and function correctly in a single server environment. These tests also operate as part of the build but are not run as part of the PR process. Modules should ensure they include some FVTs as they move [from development to technical preview](/release-notes/content-status). By the time the module is moving to released function, the FVTs should be able to validate that this function is stable and correct.
 
-Some connectors are tested via the [Conformance Test Suite](/guides/cts/overview). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into main. The conformance test suite is also run as part of the release process.
+Some connectors are tested via the [Conformance Test Suite](/guides/cts). If you deliver a connector that is covered by this test suite, you should run the tests before merging changes into main. The conformance test suite is also run as part of the release process.
 
-Egeria's [hands on labs](/education/open-metadata-labs) provide a complex multi-server environment and are typically used by contributors to verify that their changes have not regressed any of the
+Egeria's [hands on labs](/egeria-workspaces) provide a complex multi-server environment and are typically used by contributors to verify that their changes have not regressed any of the
 basic function.
 
 We are also interested in building out a comprehensive integration test to allow automated complex multi-server scenarios that can be running continuously.
@@ -258,7 +258,7 @@ The maintainers will review these regularly and action any required changes thro
 Egeria code itself is also scanned for vulnerabilities by various scanners which vary by repository. Sonatype Lift and Github CodeQL are commonly used, and will add notes into PRs for developers to review.
 
 
-For more information on how potential security issues are handled, see [security hardening](/guides/developer/process/#security-hardening).
+For more information on how potential security issues are handled, see [security hardening](/guides/contributor/process/#security-hardening).
 
 ## Keeping dependencies up to date
 

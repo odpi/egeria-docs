@@ -15,7 +15,6 @@ Egeria's guides provide practical guidance on different aspects of using Egeria 
 
 * [Integration Guide](/guides/integration) - the integration guides describes how to set up integrations between Egeria and third party technologies.  It also makes use of the content packs and connector catalogs.
 * [Administration Guide](/guides/admin) - the administration guide describes how to mange Egeria's configuration.
-* [Migration Guide](/guides/migration/migrating-configuration-documents) - Egeria strives to maintain compatibility of APIs and file formats from release to release.  The migration guide covers techniques to migrate aspects of Egeria where compatibility between releases was not possible..
 * [Operations Guide](/guides/operations/overview) - Describes commands to control and monitor an Egeria deployment.
 * [Diagnostic Guide](/guides/diagnostic/overview) - Problem determination methods and guidance.
 * [Developer Guide](/guides/developer) - the developer covers how to build connectors, utilities that call Egeria, and open metadata archives.

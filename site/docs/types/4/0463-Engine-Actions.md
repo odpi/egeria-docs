@@ -5,7 +5,7 @@
 
 A *EngineAction* entity is an [*Action*](/types/0/0013-Actions) used to control the execution of a single call to a [governance service](/concepts/governance-service).
 
-The creation of an *EngineAction* entity typically triggers the execution of a [governance service](/concepts/governance-service) in a [governance engine](/concepts/governance-engine). As the governance service runs, the governance engine adds information to the EngineAction describing the status of the governance service and the actions taken against specific [resources](/concepts/resources). Once the action is complete, the *EngineAction* entity acts as an audit record for the actions taken.
+The creation of an *EngineAction* entity typically triggers the execution of a [governance service](/concepts/governance-service) in a [governance engine](/concepts/governance-engine). As the governance service runs, the governance engine adds information to the EngineAction describing the status of the governance service and the actions taken against specific [resources](/concepts/resource). Once the action is complete, the *EngineAction* entity acts as an audit record for the actions taken.
 
 ![UML](0463-Engine-Actions.svg)
 

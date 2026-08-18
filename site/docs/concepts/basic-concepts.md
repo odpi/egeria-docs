@@ -11,7 +11,7 @@ the [REST API :material-dock-window:](https://en.wikipedia.org/wiki/Representati
 style that piggybacks on top of the HTTP protocol that powers the Internet. Egeria makes extensive use of REST APIs.
 
 ??? education "Further information"
-    Details of the different types of APIs provided by Egeria can be found in the [developer guide](/guides/developer/guide).
+    Details of the different types of APIs provided by Egeria can be found in the [developer guide](/guides/developer).
     In addition, it is possible to automatically catalog details of the APIs that your organization uses:
     
     - [Cataloguing APIs](/egeria-solutions/leveraging-apis/overview)
@@ -24,12 +24,12 @@ It is sent on a [topic](#topic) to share its information with other servers.
 ??? education "Further information"
     Details of the different types of events used by Egeria
 
-    - [OMRS topic events](/concepts/metadata-events) - for open metadata repository cohorts
+    - [OMRS topic events](/concepts/cohort-events) - for open metadata repository cohorts
     - [OutTopic Events](/concepts/out-topic) - for incoming events from an Open Metadata Access Service (OMAS)
 
     In addition, it is possible to automatically catalog details of the types of events that your organization uses:
     
-    - [Cataloguing topics and event types for an event broker](/egeria-solutions/leveraging-apache-topics/overview).
+    - [Cataloguing topics and event types for an event broker](/egeria-solutions/leveraging-apache-kafka/overview).
 
 ## Event Broker
 
@@ -65,7 +65,7 @@ order, but that is not necessarily guaranteed since it depends on the type and c
 ??? education "Further information"
     Details of the different types of topics used by Egeria
 
-    - [OMRSTopic](/concepts/metadata-events) - for open metadata repository cohorts
+    - [OMRSTopic](/concepts/cohort-events) - for open metadata repository cohorts
     - [OutTopic](/concepts/out-topic) - for receiving events from an Open Metadata Access Service (OMAS)
 
     In addition, it is possible to automatically catalog details of the event brokers that your organization uses:
@@ -95,7 +95,7 @@ A *master data manager* is a capability in a software server to manage an author
 collection of master data, typically about people, organizations, products and accounts.
 
 Master data managers that hold information about the people and organizations using open metadata
-integrate their data through the [Community Profile OMAS](../../../community-profile).
+integrate their data through the [People Organizer API](/services/omvs/people-organizer/overview).
 
 ## Asset Manager
 
@@ -113,7 +113,7 @@ An asset manager may integrate with the open metadata ecosystem using one of thr
 
 * through direct calls to the [Asset Maker](/services/omvs/asset-maker/overview) API.
 
-The [Metadata Server Exchange](/patterns/metadata-server-exchange/overview) solution provides more information on these options.
+The [Metadata Server Exchange](/patterns/information-exchange/overview) solution provides more information on these options.
 
 ## Subsystem
 

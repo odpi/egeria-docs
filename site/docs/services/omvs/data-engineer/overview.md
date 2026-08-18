@@ -9,7 +9,7 @@
 The Data Engineer API provides a persona-specific view for individuals responsible for
 designing, building, and maintaining data processing systems and pipelines.
 It enables the creation and maintenance of data pipelines, reference data, and tabular data sets.
-It is used in conjunction with the [Asset Maker API](/services/asset-maker/overview).
+It is used in conjunction with the [Asset Maker API](/services/omvs/asset-maker/overview).
 
 ## Key Features
 

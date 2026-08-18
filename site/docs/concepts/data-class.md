@@ -11,23 +11,23 @@ Data classes can be specialized to define the logical data type more precisely t
 
 The example below defines the data class for an *Address* and also identifies two variations: one for USA addresses and one for UK addresses.
 
-![Address specialization](/features/data-quality/address-data-class-specialization.svg)
+![Address specialization](/practices/data-quality/address-data-class-specialization.svg)
 
 Complex data types can be broken down into fields to allow more detailed understanding of its content.  In the diagram below, the structure of the US and UK addresses is shown.
 
-The data classes can be augmented with valid value sets and validation rules to enable [automated quality processes](/features/data-quality/overview) to be metadata-driven.
+The data classes can be augmented with valid value sets and validation rules to enable [automated quality processes](/practices/data-quality/overview) to be metadata-driven.
 
-![Address composition](/features/data-quality/address-data-class-composition.svg)
+![Address composition](/practices/data-quality/address-data-class-composition.svg)
 
 Data classes can be linked to glossary terms to show how data fo a specific meaning is implemented.
 
-![Semantic context](/features/data-quality/data-quality-semantic-context.svg)
+![Semantic context](/practices/data-quality/data-quality-semantic-context.svg)
 
 Finally, data classes can be linked to [Implementation Snippets](/types/5/0504-Implementation-Snippets) that show how it is represented in different programming languages and technical formats.  This aids discovery as well as gneration of artifacts from metadata.
 
 !!! education "Further information"
 
-    - [Using Data classes in data quality management](/features/data-quality/overview)
+    - [Using Data classes in data quality management](/practices/data-quality/overview)
     - [Data class discovery annotation](/features/metadata-discovery/overview)
     - [DataClass open metadata type](/types/5/0541-Data-Classes-and-Data-Grains)
 

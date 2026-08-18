@@ -25,7 +25,7 @@ The Glossary Manager API supports the following key features:
 
 ## Further information
 
-* [Glossary Concept](/concepts/glossary/)
+* [Glossary Concept](/concepts/glossary-term/)
 * [Glossary Term Concept](/concepts/glossary-term/)
 
 Sample requests for the REST API can be found in [Egeria-api-glossary-manager.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/glossary-manager/Egeria-api-glossary-manager.http).
@@ -165,7 +165,7 @@ The [*ControlledGlossaryTerm*](/types/3/0385-Controlled-Glossary-Development) ex
 * DEPRECATED - The term is out of date and should not be used.
 * OTHER      - The term is in a locally defined state.
 
-These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-metadata-values/overview).
+These status values can be thought of as the system-defined statuses.  It is possible to replace, or extend these statuses using the `userDefinedStatus` attribute that can be controlled through the use of [valid metadata values](/guides/planning/valid-values/overview).
 
 #### Relationship statuses
 

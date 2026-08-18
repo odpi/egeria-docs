@@ -72,7 +72,7 @@ The server's [metadata security connector](/features/metadata-security/overview)
 
 
 !!! education "Explore hands-on"
-    The administration [hands-on lab](/education/open-metadata-labs) called "Understanding Cohort Configuration Lab" provides an opportunity to query the cohort registries of cohort members as they exchange metadata for Coco Pharmaceuticals.
+    The administration [hands-on lab](/egeria-workspaces) called "Understanding Cohort Configuration Lab" provides an opportunity to query the cohort registries of cohort members as they exchange metadata for Coco Pharmaceuticals.
 
 
 

@@ -35,8 +35,8 @@ properties, such as roles, identities, and skills.
 
 ----
 Sample REST API requests:
-- [Egeria-api-actor-manager.http](Egeria-api-actor-manager.http)
-- [Egeria-jacquard-actors.http](Egeria-jacquard-actors.http)
+- [Egeria-api-actor-manager.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/actor-manager/Egeria-api-actor-manager.http)
+- [Egeria-jacquard-actors.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/actor-manager/Egeria-jacquard-actors.http)
 
 ---8<-- "snippets/abbr.md"
 

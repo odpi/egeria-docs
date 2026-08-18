@@ -9,7 +9,7 @@ The [pyegeria python library](https://github.com/odpi/egeria-python) provides a 
 
 It is available in through a variety of interfaces.
 
-* A [Python client](/guides/developer/python-client/overview) supporting a collection of python functions for calling Egeria's [Open Metadata and Governance (OMAG) services](/services/omvs) from a python program - or programming environment, such as Jupyter notebooks.
+* A [Python client](/guides/developer/python-clients/overview) supporting a collection of python functions for calling Egeria's [Open Metadata and Governance (OMAG) services](/services/omvs) from a python program - or programming environment, such as Jupyter notebooks.
 * A [command level interface (CLI)](/user-interfaces/hey-egeria/overview) for issuing commands to Egeria and widgets to display information held by Egeria.
 * A [text-based menu of commands](/user-interfaces/hey-egeria/overview) allowing you to enter the options in a form and execute the command.
 * A [markdown processor](/user-interfaces/dr-egeria/overview) for creating open metadata definitions such as solution blueprints, digital products, data specifications and glossaries of terms. It can also be used to create markdown reports and forms for updating metadata.

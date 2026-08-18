@@ -29,7 +29,7 @@ Figure 2 shows the new types for representing a schema attribute and its type.
 
 Schema type entities are still used:
 
-* to connect [Assets](/types/5/0503-Asset-Schema) and [Ports](/types/5/0520-Process-Schemas) to their schemas
+* to connect [Assets](/types/5/0503-Asset-Schema) and [Ports](/types/2/0217-Ports) to their schemas
 * to connect structural schema types such as [maps](/types/5/0511-Map-Schema-Elements)
   and [external schemas](/types/5/0507-External-Schema-Type) to other types that represent their contents.
 

@@ -28,7 +28,7 @@ It may be that this simple set of survivorship rules and consolidation process i
 
 ## Support for duplicate processing
 
-The [Classification Manager](/services/omvs/classification-mnager/overview) API provides operations for setting up peer duplicates and consolidated entities.
+The [Classification Manager](/services/omvs/classification-explorer/overview) API provides operations for setting up peer duplicates and consolidated entities.
 
 The [Governance Action Services](/concepts/governance-action-service) running in the [Governance Engines](/concepts/governance-engine) can automate the detection of duplicates and the maintenance of consolidated entities.  
 

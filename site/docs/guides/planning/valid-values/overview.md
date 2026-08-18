@@ -31,7 +31,7 @@ For example, the `CoreContentPack.omarchive`, which is loaded automatically when
 
 * The *deployedImplementationType* valid values are used to provide an index of connectors, templates and other resources that support specific types of technology.  The [Automated Curation OMVS](/services/omvs/automated-curation/overview) provides an API to query these valid values and the linked resources.
 
-* The *fileType*, *fileName* and *fileExtension* valid values are used by the [file connectors](connectors/#files) that survey and catalog files in the file system.  They allow the known files to classified in various way to increase the insight into the files available to the organization.
+* The *fileType*, *fileName* and *fileExtension* valid values are used by the [file connectors](/connectors) that survey and catalog files in the file system.  They allow the known files to classified in various way to increase the insight into the files available to the organization.
 
 These values can be updated and augmented to match the needs of your organization.
 

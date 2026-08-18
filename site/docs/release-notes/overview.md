@@ -16,7 +16,7 @@ The [roadmap for Egeria](/release-notes/roadmap) describes the end vision for Eg
 
 ## Core Egeria Function
 
-The *Core Egeria* technology is located in the [egeria.git](https://github.com/odpi/egeria) repository.  It provides the [OMAG Server Platform](/concepts/omag-server-platform), java clients for the [OMAG Servers](/concepts/omag-server) that run on the OMAG Server Platform along with the [Conformance Test Suite (CTS)](/guides/cts/overview).
+The *Core Egeria* technology is located in the [egeria.git](https://github.com/odpi/egeria) repository.  It provides the [OMAG Server Platform](/concepts/omag-server-platform), java clients for the [OMAG Servers](/concepts/omag-server) that run on the OMAG Server Platform along with the [Conformance Test Suite (CTS)](/guides/cts).
 
 The project aims to produce a new release of Core Egeria about once every 6 weeks. Each release includes new features and fixes to existing function.  This is also an opportunity to update the levels of our dependencies to reduce vulnerabilities.
 

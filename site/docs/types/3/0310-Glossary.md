@@ -3,7 +3,7 @@
 
 # 0310 Glossary Model
 
-A [glossary](/practices/common-data-definitions/anatomy-of-a-glossary) is a collection of related semantic definitions. A semantic definition describes the meaning of something.  This may be, for example, a concept, object or activity.  These are defined as [Glossary Terms](/types/3/0330-Terms).  The *Glossary* is a collection of glossary terms and other related definitions.  These can be organized into [folders](/types/0021-Collections).
+A [glossary](/practices/common-data-definitions/anatomy-of-a-glossary) is a collection of related semantic definitions. A semantic definition describes the meaning of something.  This may be, for example, a concept, object or activity.  These are defined as [Glossary Terms](/types/3/0330-Terms).  The *Glossary* is a collection of glossary terms and other related definitions.  These can be organized into [folders](/types/0/0021-Collections).
 
 A metadata repository may contain many glossaries, particularly when it is part of a bigger enterprise.  Each glossary may come from a specific team or external organization. Or it may be focused on a particular topic or set of use cases.
 

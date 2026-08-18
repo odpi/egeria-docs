@@ -48,8 +48,8 @@ At the end of this tutorial you will be able to perform the following tasks.
 
 ## Digging Deeper
 
-* [Running the Egeria samples](/education/tutorials/running-samples-tutorial/overview) to understand more about the different Egeria APIs.
-* [Calling the OMAG Clients from Java](/education/tutorials/omag-client-tutorial/overview) to understand how to call Egeria APIs from your code.
-* [Running the Open Metadata Conformance Suite](/guides/cts/overview) to understand how a technology/software product can demonstrate its conformance to the Egeria standards.
+* [Running the Egeria samples](/education/tutorials/running-samples-tutorial) to understand more about the different Egeria APIs.
+* [Calling the OMAG Clients from Java](/education/tutorials/omag-client-tutorial) to understand how to call Egeria APIs from your code.
+* [Running the Open Metadata Conformance Suite](/guides/cts) to understand how a technology/software product can demonstrate its conformance to the Egeria standards.
 
 --8<-- "snippets/abbr.md"

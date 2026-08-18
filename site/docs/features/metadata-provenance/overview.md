@@ -45,7 +45,7 @@ Figure 2 shows the different values of Element Origin and how they tie into the 
        
 * *External Source* means the metadata originates in a third party technology and a copy is maintained through an [Open Metadata Access Service (OMAS)](/services/omas). Typically, the OMAS is called via an [Integration Daemon](/concepts/integration-daemon).  The metadata collection id and name is defined in Open Metadata as the [unique identifier, or GUID,](/concepts/guid) and [unique name, or qualified name,](/concepts/referenceable) of a [Software Capability](/concepts/software-capability) representing the source technology.
   
-* *Configuration* means the metadata comes from a [Configuration Document](/concepts/configuration-document).  Configuration documents control the capabilities of an [OMAG Server](/concepts/omag-server).  This metadata is maintained through Egeria's [Administration Services](/guides/admin/overview).
+* *Configuration* means the metadata comes from a [Configuration Document](/concepts/configuration-document).  Configuration documents control the capabilities of an [OMAG Server](/concepts/omag-server).  This metadata is maintained through Egeria's [Administration Services](/guides/admin).
   
 * *Content Pack* means the metadata comes from an open metadata archive that contains a collection of standard definitions.  Content packs could contain glossaries, reference data sets, definitions from regulations and other types of standards. The archive documents the metadata collection id and name for the collection.  In addition, a content pack is used to define [Open Metadata Types](/types).  The metadata from a content pack can be updated by loading a later version of the content pack.  Updated instances and types from the archive are replaced by the newer versions.
   
@@ -74,8 +74,8 @@ The [Open Metadata Repository Services](/services/omrs) supports commands to cha
 
     * Find out more about [membership of a cohort](/concepts/cohort-member).
     * Learn about how [external sources can integrate with the open metadata ecosystem](/concepts/integration-daemon).
-    * Set up [metadata solutions that integrate metadata from many sources](/patterns/metadata-exchange/overview).
-    * Create and load [Open Metadata Archives](/concepts/open-metadata-archives) into your open metadata ecosystem.
+    * Set up [metadata solutions that integrate metadata from many sources](/patterns/information-exchange/overview).
+    * Create and load [Open Metadata Archives](/concepts/open-metadata-archive) into your open metadata ecosystem.
     * Learn about [Configuration Documents](/concepts/configuration-document) that control the behaviour of OMAG Servers and how to set them up.
 
 --8<-- "snippets/abbr.md"

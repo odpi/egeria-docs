@@ -49,7 +49,7 @@ They are driven by specific archive logic that knows what content to add to the 
 ![Figure 5](/guides/developer/open-metadata-archives/on-disk-archive-construction.svg)
 > **Figure 5:** Assembling an open metadata archive directly on disk
 
-The archive logic can either be an [offline utility](#supported-utilities-for-open-metadata-archives) or an [archive service](/guides/developer/archive-services/overview) running in an [archive engine](/concepts/archive-engine).
+The archive logic can either be an [offline utility](#supported-utilities-for-open-metadata-archives) or an [archive service](/guides/developer/repository-governance-services/overview) running in an [archive engine](/concepts/repository-governance-engine).
 
 ## Inside an Open Metadata Archive
 

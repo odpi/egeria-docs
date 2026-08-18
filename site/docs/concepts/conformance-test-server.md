@@ -8,7 +8,7 @@ hide:
 
 # Conformance Test Server
 
-The *conformance test server* is an [OMAG Server](/concepts/omag-server) that hosts the [Conformance Test Suite (CTS)](/guides/cts/overview).
+The *conformance test server* is an [OMAG Server](/concepts/omag-server) that hosts the [Conformance Test Suite (CTS)](/guides/cts).
 
 ![Conformance test server hosting the conformance test suite](conformance-test-server.svg)
 

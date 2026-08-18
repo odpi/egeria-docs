@@ -3,7 +3,7 @@
 
 # OMRS Event Listener
 
-The OMRS event listener receives OMRS events from the **[OMRS event topic](/concepts/cohort-event)**.
+The OMRS event listener receives OMRS events from the **[OMRS event topic](/concepts/cohort-events)**.
 
 
 ---8<-- "snippets/abbr.md"

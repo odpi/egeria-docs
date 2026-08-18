@@ -27,7 +27,7 @@ These are the specification properties for integration connectors.
 * *Supported Template* - Description of a template that should be used by the connector when creating new elements of a certain type.
 * *Supported Configuration Property* - Description of a configuration property that is used to affect the behaviour of a connector.
 
-They are attached to the [Integration Connector](/types/4/0464-Dynanic-Integration-Groups) entity used to define the integration connector in open metadata, and maintained through the [Valid Metadata API](/services/omvs/valid-metadata/overview).
+They are attached to the [Integration Connector](/types/4/0464-Dynamic-Integration-Groups) entity used to define the integration connector in open metadata, and maintained through the [Valid Metadata API](/services/omvs/valid-metadata/overview).
 
 ## Governance Service Specifications
 

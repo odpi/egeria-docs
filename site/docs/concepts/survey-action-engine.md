@@ -16,7 +16,7 @@ A survey action is hosted in the [Survey Action Open Metadata Engine Service (OM
 
 When a survey action engine is called, it is passed a governance request type and request parameters. This is mapped to a call to an open discovery service through the [open discovery engine definition](/concepts/governance-engine-definition).
 
-![Survey Action Engine Definition Structure](/guides/developer/open-metadata-archives/survey-action-engine-definition.svg)
+![Survey Action Engine Definition Structure](/guides/developer/open-metadata-archives/open-discovery-engine-definition.svg)
 > Logical structure of a survey action engine definition showing how the governance request types map to the survey action service definitions
 
 !!! education "Further information"

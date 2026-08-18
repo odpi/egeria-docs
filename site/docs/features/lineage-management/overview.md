@@ -66,7 +66,7 @@ The three parts of the lineage architecture are summarized in figure 4.
 
 Capturing lineage has both a static and a dynamic aspect to it.  
 
-- The *static* aspect involves cataloguing all the [digital resources](/concepts/digital-resource) that are deployed into your digital landscape.  This defines the data sources and processing engines and how they link together.  Ideally this cataloguing is done as these resources are deployed, which may then be augmented with [automated cataloguing](/features/integrated-cataloguing/overview) of resources and [metadata discovery](/features/metadata-discovery/overview).  It is also possible that tools may catalogue resources under the guidance of their users and this metadata is [shared with the open metadata ecosystem](/patterns/metadata-exchange).
+- The *static* aspect involves cataloguing all the [digital resources](/concepts/digital-resource) that are deployed into your digital landscape.  This defines the data sources and processing engines and how they link together.  Ideally this cataloguing is done as these resources are deployed, which may then be augmented with [automated cataloguing](/features/integrated-cataloguing/overview) of resources and [metadata discovery](/features/metadata-discovery/overview).  It is also possible that tools may catalogue resources under the guidance of their users and this metadata is [shared with the open metadata ecosystem](/patterns/information-exchange).
 
 - The *dynamic* aspect captures information about the activity that happens day-to-day, such as the running of processes, and its effects.  This could include details of the volumes of data discovered and/or processed along with any analysis of its contents.
 
@@ -347,7 +347,7 @@ As the lineage mappings are added, the lineage graph grows. Figure 33 shows the 
 
 ### Governing expectations
 
-Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](egeria-docs/concepts/engine-host) can be used to read from the [Open Lineage Log Store](#open-lineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
+Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](/concepts/engine-host) can be used to read from the [Open Lineage Log Store](#open-lineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
 
 ![Figure 34](/features/lineage-management/governance-by-expectation.svg)
 > **Figure 34:** A governance action service called *Process Validation Connector* running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.

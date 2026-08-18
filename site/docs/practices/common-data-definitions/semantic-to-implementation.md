@@ -142,7 +142,7 @@
     > Figure 11: Classifying glossary terms to identify the governance definitions that apply to all data values associated with the glossary term 
 
     !!! education "Further information"
-        * [Setting up your Governance Program](guides/planning/governance-program/overview/) describes how different types of governance metadata are used.
+        * [Setting up your Governance Program](/guides/planning/governance-program/overview/) describes how different types of governance metadata are used.
 
 
 ??? info "Connectors and connections"
@@ -160,11 +160,11 @@
 
     !!! education "Further information"
         * See the [connector catalog](/connectors) to understand how connectors are used in Egeria.
-        * See [Model 0201](/types/2/0201/Connectors-and-Connections) in the *Open Metadata Types* to understand how connections are represented.
+        * See [Model 0201](/types/2/0201-Connectors-and-Connections) in the *Open Metadata Types* to understand how connections are represented.
 
 ??? info "Metadata discovery"
 
-    An [survey action service](/concepts/survey-action-service) is a process that runs a pipeline of analytics to describe the data content of a resource. It uses statistical analysis, reference data and other techniques to determine the data class and range of values stored, potentially what the data means and its level of quality. The result of the analysis is stored in metadata objects called [annotations](/concepts/discovery-analysis-report/#discovery-annotations).
+    An [survey action service](/concepts/survey-action-service) is a process that runs a pipeline of analytics to describe the data content of a resource. It uses statistical analysis, reference data and other techniques to determine the data class and range of values stored, potentially what the data means and its level of quality. The result of the analysis is stored in metadata objects called [annotations](/concepts/survey-report/#annotations).
 
     Part of the discovery process is called *Schema Extraction*.  This is where the discovery service inspects the schema in the digital resource and builds a matching structure of *[DataField](/types/6/0615-Schema-Extraction/)* elements in open metadata.  As it goes on to analyse the content of a particular data field in the resource, it can add its results to an annotation that is attached to the DataField element.  It can also maintain a link between the DataField element and its corresponding SchemaAttribute element if the schema has already been attached.  Through ths process it is possible to detect any anomalies between the documented schema and what is actually implemented.
 

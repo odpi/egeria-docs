@@ -30,7 +30,7 @@ This workbench supports the following profiles:
 
 The open metadata conformance repository workbench is responsible for testing the ability of an open metadata repository to connect and interact with other open metadata repositories in a conformant way.
 
-It tests both the repository's repository services API and its ability to exchange events with the [OMRS cohort event topic](/services/omrs/metadata-events/#omrs-event-topic).
+It tests both the repository's repository services API and its ability to exchange events with the [OMRS cohort event topic](/concepts/cohort-events).
 
 The workbench uses the registration information that is passed when the technology under test registers with the same [open metadata repository cohort](/services/omrs/cohort) as the conformance suite. It will confirm that the information received in the events matches the information returned by the technology under test's repository services.
 

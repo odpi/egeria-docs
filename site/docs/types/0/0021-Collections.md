@@ -24,7 +24,7 @@ The collection type is generically useful and there are many subtypes that descr
 * [BusinessCapability](/types/7/0715-Digital-Business) described a collection of capabilities needed to operate the business of an organization.
 * [CollectionFolder](#collectionfolder-entity) described a collection of elements.
 * [ConceptModel](/types/5/0571-Concept-Models) described a collection of modelled concepts.
-* [ContextEventCollection](/types/4/0475-Concept-Models) described a collection of [context events](/concepts/context-event).
+* [ContextEventCollection](/types/5/0571-Concept-Models) described a collection of [context events](/concepts/context-event).
 * [DataDictionary](/types/5/0580-Data-Dictionaries) described a collection of commonly used data field definitions.
 * [DataSpec](/types/5/0580-Data-Dictionaries) described a collection of data fields and related definitions that describe the data required.
 * [DesignModel](/types/5/0565-Design-Models) described a collection of modelled elements.
@@ -36,7 +36,7 @@ The collection type is generically useful and there are many subtypes that descr
 * [Folio](#folio-entity) described a collection of event schema definitions.
 * [Glossary](/types/3/0310-Glossary) described a collection of [GlossaryTerms](/types/3/0330-Terms).
 * [HomeCollection](#homecollection-entity) means the collection is the top-level node in a collection hierarchy anchored to a specific [Referenceable](/types/0/0010-Base-Model).  The members of this collection may or may not be collections.
-* [InformationSupplyChain](/types/7/0720-Information-Supply-Chain) described a collection of components performing an important data flow.
+* [InformationSupplyChain](/types/7/0720-Information-Supply-Chains) described a collection of components performing an important data flow.
 * [Namespace](#namespace-entity) means the collection is a set of elements that are organized by namespace (for example, a collection of processes, or schema).
 * [NamingStandardsRuleSet](/types/4/0438-Naming-Standards) means the collection is a set of naming standard rules.
 * [RecentAccess](#recentaccess-entity) means the collection is a set of elements that have been recently accessed by a user.
@@ -100,7 +100,7 @@ The *WorkItemList* entity indicates that the collection is organizing a set of e
 
 The *CollectionMembership* relationship is used to link a [*Referenceable*](/types/0/0010-Base-Model) entity to a *Collection* entity to indicate that it is a member of the collection.
 
-The *Collection* entity inherits from [*Referenceable*](/types/0/0010-Base-Model) so a collection can be a member of other collections.  For example, it is possible to create a nested set of folders for [assets](/concepts/assets).
+The *Collection* entity inherits from [*Referenceable*](/types/0/0010-Base-Model) so a collection can be a member of other collections.  For example, it is possible to create a nested set of folders for [assets](/concepts/asset).
 
 ![Asset Folder Hierarchy](asset-folder-hierarchy.svg)
 

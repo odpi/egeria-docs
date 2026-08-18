@@ -15,7 +15,7 @@ Overall, threat modelling is a critical part of any organization's security stra
 
 ## System Modelling
 
-System modelling identifies the components of a system and their interactions.  Each component is modelled using a [Solution Component](/concepts/solution-component).  The components are connected using  [Solution Linking Wires](/concepts/connector).  The solution blueprint also shows the actors (both humans and software) that are involved in the system.  They include both the legitimate users and the bad actors.  They are modelled as [Solution Actor Roles]() and linked to the solution components using the [Solution Component Actor](/types/solution-access) relationship.
+System modelling identifies the components of a system and their interactions.  Each component is modelled using a [Solution Component](/concepts/solution-component).  The components are connected using  [Solution Linking Wires](/concepts/connector).  The solution blueprint also shows the actors (both humans and software) that are involved in the system.  They include both the legitimate users and the bad actors.  They are modelled as [Solution Actor Roles](/types/7/0730-Solution-Components) and linked to the solution components using the [Solution Component Actor](/types/7/0730-Solution-Components) relationship.
 
 ![System Modelling Components](system-modelling-components.svg)
 
@@ -23,7 +23,7 @@ Solution components can be nested to represent the structure of the system.  Thi
 
 ![System Modelling Nested Components](system-modelling-example.svg)
 
-[Solution Blueprints](/concepts/solution_blueprint) are used to select components and roles to illustrate an aspect of the system.  This helps to create a focus and scope for a review meeting by selecting just the components that are relevant to the review, with maybe details of the context they operate in
+[Solution Blueprints](/concepts/solution-blueprint) are used to select components and roles to illustrate an aspect of the system.  This helps to create a focus and scope for a review meeting by selecting just the components that are relevant to the review, with maybe details of the context they operate in
 
 ## Threat Elicitation
 

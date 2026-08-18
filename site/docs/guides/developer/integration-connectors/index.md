@@ -43,7 +43,7 @@ Your integration connector is created and initialized with a connection object. 
 ![A connection with no endpoint](learned-endpoints.svg)
 > If no endpoint is configured in the integration connector's connection, the endpoint information can be retrieved from open metadata by calling the context object and/or listening for notifications from the partner OMAS.
 
-An alternative approach to calling the third party technology directly in your integration connector is to use one or more appropriate [digital resource connectors](/concepts/digital-resource-connectors) to call the third party technology.  The connection objects for these digital resource connectors are embedded in the connection object for the integration connector.  
+An alternative approach to calling the third party technology directly in your integration connector is to use one or more appropriate [digital resource connectors](/concepts/digital-resource-connector) to call the third party technology.  The connection objects for these digital resource connectors are embedded in the connection object for the integration connector.  
 
 ![A virtual connection include embedded connection](virtual-connector.svg)
 > A [Virtual Connection](/concepts/connection/#virtual-connections) is a special type of connection that allows connections for different connectors to be embedded.  This style of connection can be used by an integration connector that is making use of digital resource connectors to call its third party technology.  Typically, there is only one embedded connection, but multiple embedded connections can be used.  Also, the embedded connections themselves may be virtual connections.

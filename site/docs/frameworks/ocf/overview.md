@@ -25,7 +25,7 @@ The following factors influenced the design of the OCF.
 
 - There are many existing connectors and connector frameworks in the industry today. It is important that these existing connectors can be incorporated into the OCF. Thus, the OCF includes placeholders for adapters to external connector providers and connectors.
 - Application developers will only adopt a connector framework if it is easy to use. Thus, the connector interfaces allow for the use of native data APIs to minimize the effort an application developer has to take in order to use the OCF connectors.
-- Access to the all properties known about an asset should be available to the consumers of the corresponding resource.  Therefore, the OCF provides a standard interface for accessing these properties. Different providers of these properties can plug into the OCF. Egeria provides an implementation of this interface to supply asset properties stored in open metadata repositories in the [OCF metadata management common service](/services/common/ocf-metadata-management).
+- Access to the all properties known about an asset should be available to the consumers of the corresponding resource.  Therefore, the OCF provides a standard interface for accessing these properties. Different providers of these properties can plug into the OCF. Egeria provides an implementation of this interface to supply asset properties stored in open metadata repositories in the [OCF metadata management common service](/services/ocf-metadata-management).
 
 ## Terminology
 
@@ -40,14 +40,14 @@ An OCF connector provides four APIs:
 | API | Description                                                                                                                                                                                                                                                                                                                                                                                             |
 |---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Connector lifecycle | Manages the lifecycle state of the connector and includes `initialize()`, `start()` and `disconnect()`.                                                                                                                                                                                                                                                                                                 |
-| Metadata store initialization | If the connector is created by a metadata service then it adds a client to the metadata server called [`ConnectedAssetProperties`](/concepts/connected-asset-properties) to the connector between `initialize()` and `start()`. The `ConnectedAssetProperties` client can be retrieved from the connector instance and used to retrieve metadata about the asset that is stored in the metadata server. |
+| Metadata store initialization | If the connector is created by a metadata service then it adds a client to the metadata server called [`ConnectedAssetProperties`](/services/connected-asset-services) to the connector between `initialize()` and `start()`. The `ConnectedAssetProperties` client can be retrieved from the connector instance and used to retrieve metadata about the asset that is stored in the metadata server. |
 | Specific initialization for the type of connector | Some types of connectors need additional initialization. These methods are called by the component creating the connector before the `start()` method is called.                                                                                                                                                                                                                                        |
 | Asset content | This API is crafted to provide the most natural interface to the asset's contents. Therefore, the asset content API is typically different for each type of connector.                                                                                                                                                                                                                                  |
 
 OCF connectors are not limited to representing assets as they are physically implemented. An OCF connector can represent a simplified logical (virtual) asset, such as a data set, that is designed for the needs of a specific application or tool. This type of connector delegates the requests it receives to one or more physical data resources. It is called a *virtual connector*.
 
 !!! education "Further information"
-    See the [developer guide](/guides/developer/guide) for information on writing connectors.
+    See the [developer guide](/guides/developer) for information on writing connectors.
 
 ### Connection
 
@@ -104,7 +104,7 @@ The advantage of retrieving the connection information from a metadata repositor
 
 #### Configuring connections
 
-The [administration guide](/guides/admin/guide) describes how to configure Egeria's OMAG Server Platforms and servers. Both the platform and the servers use connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies. This means that the configuration includes connection definitions for these connectors.
+The [administration guide](/guides/admin) describes how to configure Egeria's OMAG Server Platforms and servers. Both the platform and the servers use connectors for access to the external resources to support their basic operation and to coordinate metadata and governance with third party technologies. This means that the configuration includes connection definitions for these connectors.
 
 All of these interfaces have Java clients that enable you to set up the connection using the OCF connection bean. However, if you want to use the REST API directly, then you need to specify the connection in JSON.
 
@@ -303,7 +303,7 @@ Open metadata repositories are able to store information needed to use OCF conne
     - The [OCF Metadata Management](/services/ocf-metadata-management) supports the retrieval of connection and connected asset properties from the open metadata repository/repositories.
     - The [Open Metadata Repository Services (OMRS)](/services/omrs) make extensive use of OCF connectors for accessing open metadata repository servers and other resources. These connectors are collectively called the [OMRS connectors](#connector).
     - Many of the [Open Metadata Governance Servers](/concepts/governance-server) make use of OCF connectors to loosely-couple integration with a variety of underlying technologies.
-    - The [developer guide](/guides/developer/guide) provides more information on writing connectors for Egeria.
+    - The [developer guide](/guides/developer) provides more information on writing connectors for Egeria.
     - The [connector catalog](/connectors) lists the pre-built connectors supplied by Egeria.
 
 --8<-- "snippets/abbr.md"

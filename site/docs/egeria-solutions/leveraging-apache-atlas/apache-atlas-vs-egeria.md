@@ -55,7 +55,7 @@ The OMRS also creates instance notifications similar to Apache Atlas's Entity an
 
 Egeria's UI is supported via the REST services of the [View Server](/concepts/view-server).  The *View Server* is stateless and can be scaled independently to the *Metadata Access Store*.  It provides additional validation to protect the metadata services behind it from cyberattacks.
 
-Egeria's [Integration Daemon](/concepts/integration-daemon) is Egeria's equivalent to Apache Atlas's hooks and bridges.  Just like the *View Server*, it can be deployed with the *Metadata Access Store* or deployed and scaled independently.  It runs [integration connectors](/concepts/integration-connector) that each connect to a third party technology to exchange metadata.  Egeria supports some integration connectors [out of the box](/connectors) plus a SDK to allow you to [build and deploy your own](/guides/developer/integration-connectors/overview).
+Egeria's [Integration Daemon](/concepts/integration-daemon) is Egeria's equivalent to Apache Atlas's hooks and bridges.  Just like the *View Server*, it can be deployed with the *Metadata Access Store* or deployed and scaled independently.  It runs [integration connectors](/concepts/integration-connector) that each connect to a third party technology to exchange metadata.  Egeria supports some integration connectors [out of the box](/connectors) plus a SDK to allow you to [build and deploy your own](/guides/developer/integration-connectors).
 
 Egeria also has [Governance Servers](/concepts/governance-server) that enable different types of governance processes to be configured and controlled.
 

@@ -10,6 +10,6 @@ hide:
 
 ## Server Chassis
 
-The server chassis provides the base for a Spring application that runs a single [OMAG Server](/concepts/omag-server) in a cloud native style.  This runtime is called the [OMAG Server Runtime](/concepts/omag-server-runtime).
+The server chassis provides the base for a Spring application that runs a single [OMAG Server](/concepts/omag-server) in a cloud native style.  This runtime is called the [OMAG Server Runtime](/guides/operations/operate-omag-server-starter).
 
 --8<-- "snippets/abbr.md"

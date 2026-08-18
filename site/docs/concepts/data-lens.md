@@ -65,7 +65,7 @@ The example above shows a situation where none of the data sets exactly match th
 
 ??? info "Further information"
 
-    * A data lens is a type of governance definition and is maintained and queried using the [Governance Officer API](/services/omvs/governance-office/overview).
+    * A data lens is a type of governance definition and is maintained and queried using the [Governance Officer API](/services/omvs/governance-officer/overview).
     * The *DataLens* open metadata type is described in [Model 0430 Development Controls](/types/4/0430-Development-Controls/).
 
 --8<-- "snippets/abbr.md"

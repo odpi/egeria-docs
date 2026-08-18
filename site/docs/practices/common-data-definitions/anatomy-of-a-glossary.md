@@ -97,6 +97,6 @@ A glossary may be classified to describe the way its content should be used.
 !!! info "Further information"
     * [Defining a glossary example](/practices/coco-pharmaceuticals/scenarios/defining-a-glossary/overview)
     * [Glossary Manager API](/services/omvs/glossary-manager/overview)
-    * [Open metadata types for a glossary](/types/3/overview)
+    * [Open metadata types for a glossary](/types/3/0310-Glossary)
 
 --8<-- "snippets/abbr.md"

@@ -8,7 +8,7 @@ hide:
 
 # Governance server
 
-A *Governance Server* is a specialized [OMAG Server](/concepts/omag-server). It is designed to host specific governance services that manage metadata in different technologies or perform specific active [governance actions](/concepts/governance-actions).
+A *Governance Server* is a specialized [OMAG Server](/concepts/omag-server). It is designed to host specific governance services that manage metadata in different technologies or perform specific active [governance actions](/concepts/governance-action).
 
 ![Governance server](governance-server.svg)
 

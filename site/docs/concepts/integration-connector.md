@@ -5,7 +5,7 @@
 
 The *integration connectors* support the exchange of metadata with third party technologies.  This exchange may be inbound and/or outbound; synchronous, polling or event-driven.
 
-An integration connector runs in an [Open Metadata Integration Service (OMIS)](/services/omis) which is in turn hosted in an [Integration Daemon](/concepts/integration-daemon) server.  Each integration service provides a specialist interface designed to aid the integration with a specific type of technology.  The integration connector implementation is therefore dependent on a specific OMIS.
+An integration connector runs in an [Open Metadata Integration Service (OMIS)](/frameworks/oif/overview) which is in turn hosted in an [Integration Daemon](/concepts/integration-daemon) server.  Each integration service provides a specialist interface designed to aid the integration with a specific type of technology.  The integration connector implementation is therefore dependent on a specific OMIS.
 
 ![Deployed Integration Connector](integration-connector.svg)
 > An integration connector is shown deployed in an integration service running in an integration daemon.  The connector is linking to a third party technology and also calling the open metadata APIs of Egeria to manage the exchange of metadata.
@@ -14,7 +14,7 @@ An integration connector runs in an [Open Metadata Integration Service (OMIS)](/
 !!! education "Further information"
     
     - [Configuring an integration connector](/guides/admin/servers/by-section/integration-daemon-services-section).
-    - [Writing an integration connector](/guides/developer/integration-connectors/overview).
+    - [Writing an integration connector](/guides/developer/integration-connectors).
     - [Open Connector Framework (OCF)](/frameworks/ocf/overview).
 
 ---8<-- "snippets/abbr.md"

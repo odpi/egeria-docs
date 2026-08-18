@@ -10,7 +10,7 @@ Smart collections use open metadata queries to populate a results set collection
 
 ## ResultsSet entity
 
-The *ResultsSet* entity is a type of [Collection](/types/1/0021-Collections) whose membership is set of elements that are the results from a specific request or query.
+The *ResultsSet* entity is a type of [Collection](/types/0/0021-Collections) whose membership is set of elements that are the results from a specific request or query.
 
 * *createdTime* - the time the first query was run.
 * *startTime* - the start of the last query to run.

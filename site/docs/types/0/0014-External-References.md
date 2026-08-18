@@ -15,9 +15,13 @@ Linked media types describe the simple structures that are used repeatedly in op
 
 *ExternalReferenceLink* connects another [Referenceable](/types/0/0010-Basic-Model) to an ExternalReference entity.  It allows a *label* to be specified along with a short description of the relevance of the external reference.  This relationship is a multi-link relationship so the same referenceable can link to the same external reference entity multiple times, typically with different labels.
 
+## ExternalStandard entity
+
+*ExternalStandard* is a special type of external reference that refers to a published standard. If a component created from this standard is catalogued, it is linked to the ExternalStandard using the *ExternalReferenceLink* relationship.
+
 ## ExternalSourceCode entity
 
-*ExternalSourceCode* is a special type of external reference that refers to software source code source. If the component created from this sourcecode is catalogued, it is linked to the ExternalSourceCode using the *ExternalReferenceLink* relationship.
+*ExternalSourceCode* is a special type of external reference that refers to software source code source. If the component created from this source code is catalogued, it is linked to the ExternalSourceCode using the *ExternalReferenceLink* relationship.
 
 ## ExternalDataSource entity
 

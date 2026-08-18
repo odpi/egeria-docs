@@ -47,7 +47,7 @@ The collection type is generically useful and there are many subtypes that descr
 * [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components performing a solution.
 * [SecurityList](/types/4/0423-Security-Definitions) represents a group of [users](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.
 * [SubjectArea](/types/4/0425-Subject-Areas) described a collection of elements that describe a subject area.
-* [WorkingSet](#workingSet-entity) means the collection is a set of elements that are being worked on by a user or process and have a particular status.
+* [WorkingSet](#workingset-entity) means the collection is a set of elements that are being worked on by a user or process and have a particular status.
 * [WorkItemList](#workitemlist-entity) means the collection is a set of elements that define the work for a user.
 
 

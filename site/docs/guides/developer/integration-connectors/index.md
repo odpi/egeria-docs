@@ -200,8 +200,8 @@ Your integration connector registers itself as a listener in the `start()` metho
     }
 
      /**
-      * Process an event that was published by the Asset Manager OMAS.  This connector is only interested in
-      * glossaries, glossary categories and glossary terms.   The listener is only registered if metadata is flowing
+      * Process an event that was published by the Open Metadata Service.  This connector is only interested in
+      * glossaries, glossary categories, and glossary terms.   The listener is only registered if metadata is flowing
       * from the open metadata ecosystem to Apache Atlas.
       *
       * @param event event object

@@ -77,6 +77,11 @@ business partners, it needs shared agreements on:
 * **Data enabled employees** - the employees of each part of the business, and the board, needs access to up-to-date information about how their business is operating.  They need to be able to use data to continuously evolve and expand the range of treatments on offer.
 * **Multi-faceted governance model** - finally, their governance model can not just cover data - their transformation needs and integrated governance program that covers data, infrastructure, privacy, security and corporate operations.  Jules needs to talk to the board about a comprehensive approach.  He envisages a team of governance leaders, each responsible for their own governance domain, but working together in a coordinated response.
 
+??? info "Viewing the Data Strategy Framework in Egeria"
+    The data strategy framework is available on [GitHub egeria-workspaces](https://github.com/odpi/egeria-workspaces/tree/main/coco-workbooks/0.%20data-governance-program) and can be loaded into the [Quickstart environment](/egeria-workspaces/quick-start/overview).  Once it is loaded, it can be viewed as a [solution blueprint](/concepts/solution-blueprint) in [Egeria Explorer](/user-interfaces/egeria-explorer/overview) through the **Solution Architect** tile.
+    ![Figure 2](egeria-data-strategy-framework.png)
+    > Figure 2: Data Strategy framework in Egeria
+
 ## The first data strategy review
 
 Jules shares this framework with the board and his peers.  They are cautiously supportive but want to see more detail before committing to it.  
@@ -91,13 +96,13 @@ Jules is not discouraged by the feedback - in fact, he is pleased that his colle
 
 He begins to work on the next level of detail with [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview). They divide the work into the following areas:
 
+* [Defining why a multi-faceted governance model is needed](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview)
 * [Planning for creating common definitions materials](/practices/coco-pharmaceuticals/scenarios/planning-for-common-data-definitions/overview)
 * [Identifying authoritative sources](/practices/coco-pharmaceuticals/scenarios/identifying-authoritative-sources/overview)
 * [Defining the new data-driven systems architecture overview](/practices/coco-pharmaceuticals/scenarios/defining-new-systems-architecture/overview)
 * [Defining the key information supply chains](/practices/coco-pharmaceuticals/scenarios/defining-information-supply-chains/overview)
 * [Defining what is meant by continuous analytics](/practices/coco-pharmaceuticals/scenarios/defining-continuous-analytics/overview)
 * [Defining how employees can be data-enabled](/practices/coco-pharmaceuticals/scenarios/defining-data-enabled-employees/overview)
-* [Defining why a multi-faceted governance model is needed](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview)
 
 ## Further information
 

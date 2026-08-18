@@ -3,7 +3,7 @@
 
 # Writing a Governance Action Service
 
-A [governance action service](/concepts/governance-action-service) is passed a context as it is started. This provides access to the [request type and associated request parameters (name-value pairs)](/concepts/governance-request-type) used to invoke the governance action service, along with its [action targets](/concepts/action-target).  There is also a client to access open metadata through the Governance Server OMAS.
+A [governance action service](/concepts/governance-action-service) is passed a context as it is started. This provides access to the [request type and associated request parameters (name-value pairs)](/concepts/governance-request-type) used to invoke the governance action service, along with its [action targets](/concepts/action-target).  There is also a client context to access open metadata through the Open Metadata Store.
 
 ![Structure of the governance context](/frameworks/ogf/governance-action-service-with-context.svg)
 
@@ -18,7 +18,7 @@ The methods of the context are colour-coded.  The methods shown in white are ava
   
 * Performing the action
 
-    * getOpenMetadataStore - returns a client to the Governance Server OMAS that supports the retrieval of metadata elements, their classifications and relationships.
+    * getOpenMetadataStore - returns a client to the Open Metadata Store that supports the retrieval of metadata elements, their classifications and relationships.
     * createIncidentReport - creates an [incident report](/concepts/incident-report) that can provide a focal point for collaboration to resolve a particular issue.  Incident reports are often managed by an [incident management tool](/features/incident-reporting/overview).
   
 * Recording the outcome of the processing

@@ -11,7 +11,7 @@ The content packs are as follows:
 
     * [CoreContentPack](/content-packs/core-content-pack/overview) - contains the connector definitions for the Egeria and File System connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for a new Egeria deployment.
   
-    * [EgeriaContentPack](/content-packs/)
+    * [EgeriaContentPack](/content-packs/egeria-content-pack/overview) - contains the connector definitions for the connectors that catalog and monitor the Egeria infrastructure itself.
   
     * [ApacheAtlasContentPack](/content-packs/apache-atlas-content-pack/overview) - contains the connector definitions for the Apache Atlas connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for connecting Egeria to Apache Atlas. 
   
@@ -21,13 +21,26 @@ The content packs are as follows:
    
     * [PostgreSQLContentPack](/content-packs/postgres-content-pack/overview) - contains the connector definitions for the PostgreSQL connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for connecting Egeria to PostgreSQL databases.
   
+    * [MSSQLContentPack](/content-packs/mssql-content-pack/overview) - contains the connector definitions for the Microsoft SQL Server connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. It provides templates for Microsoft SQL Server services and databases, along with the function to survey the contents of Microsoft SQL Server databases and catalog their schemas.
+  
+    * [OracleContentPack](/content-packs/oracle-content-pack/overview) - contains the connector definitions for the Oracle Database connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. It provides templates for Oracle Database servers and pluggable databases, along with the function to survey the contents of Oracle pluggable databases and catalog their schemas.
+  
+    * [DB2LUWContentPack](/content-packs/db2luw-content-pack/overview) - contains the connector definitions for the IBM Db2 for Linux, UNIX and Windows (LUW / UDB) connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. It provides templates for Db2 servers and databases, along with the function to survey the contents of Db2 databases and catalog their schemas.
+  
+    * [DuckDBContentPack](/content-packs/duckdb-content-pack/overview) - contains the connector definitions for the DuckDB connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. It provides a template for DuckDB databases, along with the function to survey the contents of a DuckDB database - including its attached and federated data sources - and catalog its schemas.
+  
     * [UnityCatalogContentPack](/content-packs/unity-catalog-content-pack/overview) - contains the connector definitions for the Unity Catalog connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support. This content pack is designed to provide a good starting point for connecting Egeria to Unity Catalog.
 
 * Functional Content Packs
 
     * [OpenLineageContentPack](/content-packs/open-lineage-content-pack/overview) - contains the connector definitions for the Open Lineage connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support.
-    * 
- 
+
+    * [FilesContentPack](/content-packs/files-content-pack/overview) - contains the connector definitions and governance services for surveying and cataloguing files in the file system.
+
+    * [OrganizationInsightContentPack](/content-packs/organization-insight-content-pack/overview) - contains the connector definitions for the connectors that monitor, analyse and capture insight into organization activity and effectiveness.
+
+    * [OpenMetadataDigitalProductsContentPack](/content-packs/products-content-pack/overview) - open metadata collections packaged into dynamic digital products.
+
 * [CloudInformationModel](/content-packs/cim-content-pack/overview) - glossary from the Cloud Information Model's JSONLD formatted model. The content covers basic commerce concepts such as Party, Product, Invoice and Shipping. The cloud information project has been archived. However, this is a useful starter set glossary,
 
 * [OpenMetadataTypes](/content-packs/types-content-pack/overview) - Archive of the open metadata types defined by Egeria. This archive contains all the open metadata type definitions provided by Egeria. It is supplied for external utilities since each OMAG server capable of being a cohort member will load these types on start up.

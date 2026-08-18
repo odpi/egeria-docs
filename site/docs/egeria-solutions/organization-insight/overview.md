@@ -49,6 +49,6 @@ The Enterprise Oracle will provide insight into the amount and type of activity 
     * [Karma point](/concepts/karma-point) - what earns a point and how it is awarded.
     * [Model 0125 Contribution](/types/1/0125-Contribution) - the contribution record and its relationship to the actor profile.
     * [Karma points](/features/people-roles-organizations/overview/#karma-points) - how contribution fits into the wider picture of people, roles and organizations.
-    * [Organization Insight Content Pack](/content-packs/observability-content-pack/overview) - the connector definitions that deliver these services.
+    * [Organization Insight Content Pack](/content-packs/organization-insight-content-pack/overview) - the connector definitions that deliver these services.
 
 --8<-- "snippets/abbr.md"

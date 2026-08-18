@@ -106,4 +106,4 @@ Here are some examples of mitigation techniques for different types of threat:
 
 
 
---8<-- "snippets/abbr.md" 
+--8<-- "snippets/abbr.md"

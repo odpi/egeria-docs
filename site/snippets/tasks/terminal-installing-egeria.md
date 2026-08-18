@@ -107,11 +107,16 @@ The `opt/content-packs` directory contains [Open Metadata Archives](/concepts/op
 ls content-packs
 ```
 ```bash
-CloudInformationModel.json                      CocoGovernanceProgramArchive.json               OpenConnectorsArchive.json                      SimpleDataCatalog.json
-CocoBusinessSystemsArchive.json                 CocoOrganizationArchive.json                    OpenMetadataTypes.json                          SimpleEventCatalog.json
-CocoClinicalTrialsTemplatesArchive.json         CocoSustainabilityArchive.json                  README.md                                       SimpleGovernanceCatalog.json
-CocoComboArchive.json                           CocoTypesArchive.json                           SimpleAPICatalog.json
-CocoGovernanceEngineDefinitionsArchive.json     DataStoreConnectorTypes.json                    SimpleCatalog.json
+APIsContentPack.omarchive                         CocoTypesArchive.omarchive                        OracleContentPack.omarchive
+ApacheAtlasContentPack.omarchive                  CoreContentPack.omarchive                         OrganizationInsightContentPack.omarchive
+ApacheKafkaContentPack.omarchive                  DB2LUWContentPack.omarchive                       PostgresContentPack.omarchive
+CocoBusinessSystemsArchive.omarchive              DuckDBContentPack.omarchive                       README.md
+CocoClinicalTrialsTemplatesArchive.omarchive      EgeriaContentPack.omarchive                       SimpleAPICatalog.omarchive
+CocoComboArchive.omarchive                        FilesContentPack.omarchive                        SimpleCatalog.omarchive
+CocoGovernanceEngineDefinitionsArchive.omarchive  MSSQLContentPack.omarchive                        SimpleDataCatalog.omarchive
+CocoGovernanceProgramArchive.omarchive            OpenLineageContentPack.omarchive                  SimpleEventCatalog.omarchive
+CocoOrganizationArchive.omarchive                 OpenMetadataDigitalProductsContentPack.omarchive  SimpleGovernanceCatalog.omarchive
+CocoSustainabilityArchive.omarchive               OpenMetadataTypes.omarchive                       UnityCatalogContentPack.omarchive
 ```
 The `/opt/sample-data` directory contains sample data that is used in various labs and samples.
 ```bash

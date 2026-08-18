@@ -171,7 +171,7 @@ This is an example of a template description.  Notice the specification identifi
             "sourceServer": "active-metadata-store",
             "originCategory": "CONTENT_PACK",
             "homeMetadataCollectionId": "09450b83-20ff-4a8b-a8fb-f9b527bbcba6",
-            "homeMetadataCollectionName": "OpenConnectorsArchive",
+            "homeMetadataCollectionName": "CoreContentPack",
             "license": "Apache-2.0"
           },
           "versions": {
@@ -195,7 +195,7 @@ This is an example of a template description.  Notice the specification identifi
                 "sourceServer": "active-metadata-store",
                 "originCategory": "CONTENT_PACK",
                 "homeMetadataCollectionId": "09450b83-20ff-4a8b-a8fb-f9b527bbcba6",
-                "homeMetadataCollectionName": "OpenConnectorsArchive"
+                "homeMetadataCollectionName": "CoreContentPack"
               },
               "versions": {
                 "createdBy": "Egeria Project",
@@ -223,7 +223,7 @@ This is an example of a template description.  Notice the specification identifi
                 "sourceServer": "active-metadata-store",
                 "originCategory": "CONTENT_PACK",
                 "homeMetadataCollectionId": "09450b83-20ff-4a8b-a8fb-f9b527bbcba6",
-                "homeMetadataCollectionName": "OpenConnectorsArchive"
+                "homeMetadataCollectionName": "CoreContentPack"
               },
               "versions": {
                 "createdBy": "Egeria Project",
@@ -304,7 +304,7 @@ This is an example of an entry in the `resourceList`.  It is for a [governance a
             "sourceServer": "active-metadata-store",
             "originCategory": "CONTENT_PACK",
             "homeMetadataCollectionId": "09450b83-20ff-4a8b-a8fb-f9b527bbcba6",
-            "homeMetadataCollectionName": "OpenConnectorsArchive",
+            "homeMetadataCollectionName": "CoreContentPack",
             "license": "Apache-2.0"
           },
           "versions": {
@@ -328,7 +328,7 @@ This is an example of an entry in the `resourceList`.  It is for a [governance a
                 "sourceServer": "active-metadata-store",
                 "originCategory": "CONTENT_PACK",
                 "homeMetadataCollectionId": "09450b83-20ff-4a8b-a8fb-f9b527bbcba6",
-                "homeMetadataCollectionName": "OpenConnectorsArchive"
+                "homeMetadataCollectionName": "CoreContentPack"
               },
               "versions": {
                 "createdBy": "Egeria Project",

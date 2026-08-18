@@ -174,7 +174,7 @@ The connector type is linked to the [connection](#connection) objects that reque
 
 !!! education "Further information"
     - The open metadata type for a connector type is defined in [model 0201](/types/2/0201-Connectors-and-Connections).
-    - The [open connector archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } module provides an open metadata archive that contains connector types for connectors supported by Egeria.
+    - The [core-content-pack :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/core-content-pack){ target=gh } module builds the [Core Content Pack](/content-packs/core-content-pack/overview), which contains the connector types for the connectors supported by Egeria.
 
 ### Connector provider
 

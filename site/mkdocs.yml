@@ -119,7 +119,6 @@ nav:
               - Db2 for LUW Content Pack: content-packs/db2luw-content-pack/overview.md
               - DuckDB Content Pack: content-packs/duckdb-content-pack/overview.md
               - Unity Catalog Content Pack: content-packs/unity-catalog-content-pack/overview.md
- #             - Cloud Information Model: content-packs/cim-content-pack/overview.md
               - Coco Pharmaceuticals: content-packs/coco-content-pack/overview.md
               - Simple Catalog: content-packs/simple-content-pack/overview.md
               - Open Metadata Types: content-packs/types-content-pack/overview.md

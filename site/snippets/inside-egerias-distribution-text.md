@@ -17,7 +17,6 @@ To run the platform, change to the `platform` directory and follow the instructi
 The content packs are located in the `opt/content-packs` directory.  They include:
 
 * [Core Content Pack](/content-packs/core-content-pack/overview) that provides metadata to configure and call the connectors included in the distribution.
-* [Cloud Information Model](/content-packs/cim-content-pack/overview) that provides a simple commerce [glossary](/practices/common-data-definitions/overview).
 * [Coco Pharmaceuticals Sample Metadata](/content-packs/coco-content-pack/overview) that provides metadata that drives the [Coco Pharmaceuticals scenarios](/practices/coco-pharmaceuticals).
 * [Simple Catalog Content Pack](/content-packs/simple-content-pack/overview) that provides a simple asset catalog showing how databases, APIs and Events can be catalogued and linked together with a glossary term.
 * [Open Metadata Types Content Pack](/content-packs/types-content-pack/overview) that provides the definitions of the [Open Metadata Types](/types).

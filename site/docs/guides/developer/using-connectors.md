@@ -25,7 +25,7 @@ For example, there is typically one connector type for each connector implementa
 
 ![Uses of a connector implementation](uses-of-a-connector-implementation.svg)
 
-The connector types for Egeria's data store connectors are available in an open metadata archive called `DataStoreConnectorTypes.json` that can be loaded into the server. This approach can be used for all of your connector implementations to create the connector type objects in our metadata repository. See the [open-connector-archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-connector-archives){ target=gh } for more detail.
+The connector types for Egeria's connectors are supplied in the [Core Content Pack](/content-packs/core-content-pack/overview), which can be loaded into the server. This approach can be used for all of your connector implementations to create the connector type objects in your metadata repository. See the [core-content-pack :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/core-content-pack){ target=gh } module for more detail.
 
 
 !!! education "Further information"

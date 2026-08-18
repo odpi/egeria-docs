@@ -106,9 +106,13 @@ nav:
               - Egeria Content Pack: content-packs/egeria-content-pack/overview.md
               - Files Content Pack: content-packs/files-content-pack/overview.md
               - Open Lineage Content Pack: content-packs/open-lineage-content-pack/overview.md
-              - Organization Insight Content Pack: content-packs/observability-content-pack/overview.md
+              - Organization Insight Content Pack: content-packs/organization-insight-content-pack/overview.md
               - Products Content Pack: content-packs/products-content-pack/overview.md
               - PostgreSQL Content Pack: content-packs/postgres-content-pack/overview.md
+              - Microsoft SQL Server Content Pack: content-packs/mssql-content-pack/overview.md
+              - Oracle Database Content Pack: content-packs/oracle-content-pack/overview.md
+              - Db2 for LUW Content Pack: content-packs/db2luw-content-pack/overview.md
+              - DuckDB Content Pack: content-packs/duckdb-content-pack/overview.md
               - Unity Catalog Content Pack: content-packs/unity-catalog-content-pack/overview.md
  #             - Cloud Information Model: content-packs/cim-content-pack/overview.md
               - Coco Pharmaceuticals: content-packs/coco-content-pack/overview.md

@@ -13,7 +13,7 @@ The diagram below shows the Egeria components that make up the catalog.
 
 It includes:
 
-* [Egeria' User Interfaces](/user-interfaces) that provides asset search and lineage.
+* [Egeria's User Interfaces](/user-interfaces) that provide asset search, exploration and lineage.  [The Catalog](/user-interfaces/the-catalog/overview) works with the inventories of technical assets, [Egeria Explorer](/user-interfaces/egeria-explorer/overview) navigates the wider knowledge graph that gives those assets their context, and [Lineage Explorer](/user-interfaces/lineage-explorer/overview) shows where their data came from.
 * [View Server](/concepts/metadata-access-store) that provides the open metadata APIs to the user interfaces.
 * [Metadata Access Store](/concepts/metadata-access-store) that provides the metadata management and repository.
 
@@ -288,10 +288,32 @@ Manual cataloging uses no automation beyond the management of the metadata once 
 
 The [Asset Maker](/services/omvs/asset-maker/overview) API is the principle interface for manual cataloging.  It is possible to catalog any type of asset through this interface, although it is biased towards cataloging data assets such as data stores, data feeds, files, data sets, APIs and events.
 
-## Asset catalog search services
+## Working with the asset catalog
 
-Once the asset catalog is established, it can offer search interfaces through the [Asset Catalog](/services/omvs/asset-catalog/overview) provides advanced searches for assets and their related information.
-  
+Once the asset catalog is established, people need to be able to find their way around it.  Egeria provides both APIs and user interfaces for searching, exploring, viewing and curating the assets and the context that surrounds them.
+
+The [Asset Catalog](/services/omvs/asset-catalog/overview) API provides advanced searches for assets and their related information.  It is the search service behind Egeria's user interfaces, and it is equally available to your own tools and applications.
+
+???+ info "The Catalog"
+    [The Catalog](/user-interfaces/the-catalog/overview) is the user interface for the inventories of technical assets: IT infrastructure, data assets, APIs and software processes.  Each card on its home page leads to a category of asset, from where you can search and filter the list, and then drill into an individual asset to see the properties, schema, relationships and governance definitions described above.
+
+    ![The Catalog](/user-interfaces/the-catalog/the-catalog-homepage.png)
+
+???+ info "Egeria Explorer"
+    [Egeria Explorer](/user-interfaces/egeria-explorer/overview) provides a navigable view of the whole open metadata knowledge graph, rather than just the assets.  This is how the context around an asset is followed: the glossary terms that give meaning to its data fields, the locations it is deployed to, the people and roles responsible for it, and the solution components and information supply chains it takes part in.  Its **Type Explorer** and **Valid Values** tiles show the [type system](/types) and reference data that the catalog is built on.
+
+    ![Egeria Explorer](/user-interfaces/egeria-explorer/egeria-explorer.png)
+
+???+ info "Lineage Explorer"
+    [Lineage Explorer](/user-interfaces/lineage-explorer/overview) displays the [lineage](#asset-lineage) associated with an asset at different levels of detail, from the flow between individual processes and data stores up to the information supply chains that describe the movement of data across the organization.
+
+???+ info "Curating the catalog"
+    Searching and exploring the catalog shows up what is missing as well as what is there, and both the user interfaces and the APIs support the work of filling in the gaps.
+
+    The [Asset Maker](/services/omvs/asset-maker/overview) API maintains the assets themselves, the [Feedback Manager](/services/omvs/feedback-manager/overview) API adds comments, tags, reviews and note logs, and the [Collection Manager](/services/omvs/collection-manager/overview) API groups related assets together.
+
+    [Dr.Egeria](/user-interfaces/dr-egeria/overview) allows this curation to be done in Markdown documents, so that the content can be drafted, reviewed and shared with colleagues before it is loaded into open metadata, and [My Egeria](/user-interfaces/my-egeria/overview) supports the multi-step tasks that a steward performs as they work through their to-dos.
+
 ## Scaling the asset catalog through automation
 
 Automation is critical when it comes to managing an asset catalog. It reduces the administrative work of subject-matter experts and asset owners, increases the reliability, reach and richness of the asset catalog whilst reducing the cost of its maintenance.
@@ -311,6 +333,57 @@ Egeria offers the following approaches to cataloging assets:
 - [Discovery and stewardship](/features/metadata-discovery/overview) - analysis of asset contents to create metadata
 
 The idea is that these approaches are selected for each type of asset and blended together to balance the investment in the automation, against the time commitment of subject-matter experts, against the business value of the resulting catalog.
+
+
+## Cataloguing technology out of the box
+
+Most of the automation described above is delivered by [connectors](/connectors) maintained by the Egeria community, so that the common technologies found in a digital landscape can be catalogued without writing any code.  Each family of connectors typically includes a [digital resource connector](/concepts/digital-resource-connector) that knows how to call the technology, an [integration connector](/concepts/integration-connector) that catalogues its contents and keeps the catalog up to date, and [survey action services](/concepts/survey-action-service) that analyse what it holds.  They are accompanied by a [content pack](/content-packs) that supplies the templates, valid values and governance engine definitions needed to run them.
+
+| Technology                                                             | What is catalogued                                                                                     |
+|------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| [Files and file systems](/egeria-solutions/leveraging-files/overview)  | Files, folders and the data sets built from them, along with surveys of their contents.                 |
+| [PostgreSQL](/egeria-solutions/leveraging-postgres/overview)           | Database servers, databases, schemas, tables and columns.                                               |
+| [Oracle](/egeria-solutions/leveraging-oracle/overview)                 | Database servers, their pluggable databases, schemas, tables and columns.                               |
+| [Microsoft SQL Server](/egeria-solutions/leveraging-mssql/overview)    | Database servers, databases, schemas, tables and columns.                                               |
+| [Db2 for Linux, UNIX and Windows](/egeria-solutions/leveraging-db2luw/overview) | Database servers, databases, schemas, tables and columns.                                     |
+| [DuckDB](/egeria-solutions/leveraging-duckdb/overview)                 | Embedded databases and the federated data sources they reach.                                           |
+| [Unity Catalog](/egeria-solutions/leveraging-unity-catalog/overview)   | Catalogs, schemas, tables and their columns, volumes, and functions and their parameters.                |
+| [Apache Kafka](/egeria-solutions/leveraging-apache-kafka/overview)     | Event brokers, their topics and the schemas of the events flowing through them.                         |
+| [APIs](/egeria-solutions/leveraging-apis/overview)                     | API specifications and the schemas of their requests and responses.                                     |
+| [Apache Atlas](/egeria-solutions/leveraging-apache-atlas/overview)     | Metadata exchanged with an Apache Atlas server.                                                         |
+| [Open Lineage](/egeria-solutions/leveraging-open-lineage/overview)     | Lineage captured from tools that emit open lineage events.                                              |
+| [Egeria itself](/egeria-solutions/leveraging-egeria/overview)          | The platforms, servers, connectors and engines of your own open metadata ecosystem.                     |
+
+Alongside these are connectors that maintain the catalog rather than extract from it, such as the [smart collections](/egeria-solutions/smart-collections/overview) integration connector, which keeps the membership of a collection in step with the results of a saved query.
+
+The full list, including the governance and runtime connectors, is in the [connector catalog](/connectors).
+
+## Building a deeper understanding through surveys
+
+Cataloguing establishes what resources exist and how they are structured.  [Survey action services](/concepts/survey-action-service) go a step further and analyse the *contents* of a resource: measuring its size and shape, profiling the values in its data fields, matching those values against known [data classes](/concepts/data-class), and assessing quality.
+
+The findings are recorded in a [survey report](/concepts/survey-report) attached to the asset, so successive surveys can be compared to show how a resource is changing.  From there, the results can either be applied to the catalog entry automatically, or presented to a subject-matter expert to confirm through a stewardship process.  This is described in more detail under [metadata discovery](/features/metadata-discovery/overview).
+
+!!! summary "Usage"
+    Surveys turn a catalog of resources into an understanding of what those resources actually contain, which is what allows consumers to judge whether a resource is fit for their task, and allows governance to be targeted at the resources that need it.
+
+## Cataloguing in practice
+
+The [Coco Pharmaceuticals scenarios](/practices/coco-pharmaceuticals) show these capabilities being used by a fictitious organization, and they are a good way to see the practical steps involved in creating and using an asset catalog.
+
+* [Cataloguing infrastructure](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview) follows [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) as he moves his systems inventory out of a spreadsheet and into Egeria.  Once the data is queryable, he discovers it is less consistent than he thought and begins to clean it up; once it is shared, the security and DevOps teams can build on it rather than maintaining their own copies.  Loading the inventories of the newly acquired sites in Austin and Bucharest is also an education: their systems turn out to be considerably more sophisticated than Coco Pharmaceuticals' own, including the security monitoring software that Coco had identified as missing.
+
+* [DevOps cataloguing](/practices/coco-pharmaceuticals/scenarios/devops-cataloguing/overview) shows [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage) taking the next step, capturing metadata automatically as part of the deployment pipeline so that the inventory stays correct without anyone maintaining it by hand.
+
+* [Creating a data sharing hub](/practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview) follows [Robbie Records](/practices/coco-pharmaceuticals/personas/robbie-records) at Hampton Hospital as he catalogues his patient databases and image folders, and uses the resulting catalog to build a data dictionary that data requesters can select from.
+
+## Increasing the value of selected assets
+
+A catalog of assets is valuable in itself, but some assets are worth offering to a wider audience in a more managed way.  Two capabilities build on the asset catalog to do this.
+
+A [data sharing hub](/concepts/data-sharing-hub) collects together the data stores that hold authoritative data suitable for sharing.  Egeria derives a data dictionary from the schemas of the members of the hub, giving a would-be consumer a single description of the data on offer, independently of which data store it happens to live in.  Requests for data are then managed against that dictionary, and each request retains the link back to the assets that satisfied it, which is what makes the sharing auditable.  The types involved are described in [model 0705 Data Sharing](/types/7/0705-Data-Sharing).
+
+The [Harvest and Publish](/patterns/harvest-and-publish/overview) pattern takes the same idea further, harvesting selected content from the open metadata ecosystem into a [digital product](/concepts/digital-product) catalog, and adding subscriptions, notification and a distribution pipeline that delivers the product data to where its subscribers need it.
 
 !!! info "Related information"
 

@@ -139,7 +139,7 @@ This is built on an [extensible type system](/types) that allows further informa
     
     ![Asset zone membership](asset-zone-membership.svg)
     
-    [Governance zones](/concepts/governance-zone) group resource according to their usage. Governance Zones are defined by the [Security Officer](/services/omvs/security-officer/overview). It is possible to assign `SupportedZones` to users to limit the scope of the assets that are returned from searches. More information on the use of governance zones is described in the [governance zoning](/features/governance-zoning/overview) feature.
+    [Governance zones](/concepts/governance-zone) group resources according to their usage.  A governance zone is a type of [security access control](/concepts/security-access-control) created through the [Security Officer](/services/omvs/security-officer/overview) API and maintained in the OMAG Server Platform's user directory.  It is the user's account in that directory that determines which zones they can see - and hence the scope of the assets returned to them from a search - along with the *defaultZones* assigned to the elements they create and the *publishZones* applied when they publish one.  A query can also narrow its own results to particular zones using the `governanceZoneFilter` option.  More information on the use of governance zones is described in the [governance zoning](/features/governance-zoning/overview) feature.
     
     !!! summary "Usage"
         Using governance zones allows the organization to scope the assets, and hence resources, that are returned to a community of users who are using the asset catalog.

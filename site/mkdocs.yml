@@ -539,7 +539,6 @@ nav:
               - First Failure Data Capture (FFDC): services/ffdc-services.md
               - Multi-tenant Services: services/multi-tenant.md
               - Generic Handlers: services/generic-handlers.md
-              - Metadata Security Services: services/metadata-security-services.md
               - Platform Services: services/platform-services/overview.md
               - Server Operations: services/server-operations.md
               - Integration Daemon Services: services/integration-daemon-services.md
@@ -716,7 +715,6 @@ nav:
       - IT Profile: concepts/it-profile.md
       - Javadoc: concepts/javadoc.md
       - Karma Point: concepts/karma-point.md
-      - Karma Point Plateau: concepts/karma-point-plateau.md
       - Like: concepts/like.md
       - Lineage: concepts/lineage.md
       - Lineage Warehouse: concepts/lineage-warehouse.md

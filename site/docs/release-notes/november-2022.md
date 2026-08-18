@@ -48,10 +48,6 @@ The [open metadata labs](/education/open-metadata-labs/overview) are Jupyter Not
     * The *Automated Curation Lab* shows Peter and Erin automating the cataloguing procedure described in Building a Data Catalog so that files are made available to Callie as soon as they arrive.  This lab has been redesigned to work with governance engine definitions that are loaded from an archive.  It required some fixes to Egeria Core and so requires Egeria 3.15-SNAPSHOT or later to run.
     * The *Improving Data Quality* and *Understanding an Asset* labs are still incomplete.
 
-### Postman collections
-
-No new postman collections this month.
-
 ### New documentation pages
 
 Each month we select some new pages that where added/updated in the last month to [https://egeria-project.org](https://egeria-project.org) so you can keep up-to-date with how our website is evolving.

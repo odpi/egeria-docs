@@ -13,7 +13,7 @@ Egeria provides unified capabilities that can be configured together in various 
 
 [Egeria as a Metadata Manager](/patterns/metadata-manager/overview) shows a tradition role of a metadata catalog, describing the [digital resources](/concepts/digital-resource) used by your organization.  It shows how the basic technical metadata that can be extracted from digital resources can be enhanced with additional metadata that improves understanding and manageability of these digital resources.
 
-[Organization Engagement](/patterns/organization-engagement/overview) provides no-code services for subject matter experts and data users to work with metadata.
+[Organization Engagement](/patterns/organization-engagement/overview) describes your organization, its structure and the business it is in, and connects the responsibilities in your governance program to the people who hold them.  It includes the communities that support cross-organization initiatives, and the no-code services - such as [Dr.Egeria](/user-interfaces/dr-egeria/overview) and [literate governance](/concepts/literate-governance) - that make it easy for subject matter experts and data users to contribute.
 
 [Information Exchange](/patterns/information-exchange/overview) describes the automation mechanisms for synchronizing metadata, reference data and master data between different tools, systems and platforms.  The aim is to create interoperable metadata that drives up the value of your tools and teams.
 

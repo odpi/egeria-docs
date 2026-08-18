@@ -62,7 +62,7 @@ The [scenarios](/practices/coco-pharmaceuticals/scenarios) follow the Coco Pharm
 
     - [Assuring IT Systems Security](/practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview)
     - [Cataloguing Infrastructure](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview)
-    - [DevOps Cataloguing](/practices/coco-pharmaceuticals/scenarios/devop-cataloguing/overview)
+    - [DevOps Cataloguing](/practices/coco-pharmaceuticals/scenarios/devops-cataloguing/overview)
     - [Auditing IT System Users](/practices/coco-pharmaceuticals/scenarios/auditing-it-system-users/overview)
     - [Building a data security strategy](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview)
     - [Preparing for Martyn's Law](/practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview)

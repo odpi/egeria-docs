@@ -3,11 +3,11 @@
 
 # Calling Egeria's REST APIs
 
-Egeria uses REST APIs to issue synchronous calls between its servers and platforms.  These APIs are called via the [Java clients](/guides/developer/java-clients) and are considered internal to Egeria and there are no guarantees that they are backward compatible unless the individual module declares the REST API to be *supported*.
+Egeria's REST APIs are also called Open Metadata View Services (OMVS) because they run in the [View Server](/concepts/view-server).  Their 
 
-Having said that, each REST API includes parameter validation and technically can be called by third party applications that do not support Java.  You can see examples of this in the [open metadata labs](/education/open-metadata-labs) where the REST APIs are called from the python notebooks.
+Egeria also uses REST APIs to issue synchronous calls between its servers and platforms.  These APIs are called via the [Java clients](/guides/developer/java-clients) and are considered internal to Egeria and there are no guarantees that they are backward compatible unless the individual module declares the REST API to be *supported*.
 
-Developers and architects experimenting with Egeria also find it useful to call Egeria through the REST APIs using tools such as [postman](/education/tutorials/postman-tutorial/overview).  As such the REST APIs are published through Swagger at this URL:
+All the REST APIs are published through Swagger at this URL:
 
 ```
 
@@ -24,7 +24,7 @@ It is also possible to get the raw Open API Specification from this URL:
 
 ```
 
-Some modules also provide postman collections.
+Most modules also provide IntelliJ HTTP Client collections.  These can execute in an IntelliJ environment.  They are also easy to read and so are probably the best documentation of our REST API.
 
 
 --8<-- "snippets/abbr.md"

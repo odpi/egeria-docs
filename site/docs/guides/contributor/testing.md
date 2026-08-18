@@ -3,25 +3,14 @@
 
 # Testing Tools
 
-## Postman
+## HTTP Client Collections
 
-[Postman :material-dock-window:](https://www.postman.com/){ target=postman } is an interactive tool for calling REST APIs. The Egeria community uses Postman for demos and education as well as testing APIs during development.
-
-![Postman client](/education/tutorials/postman-tutorial/postman-client.png)
-
-!!! attention "Disable SSL certificate verification"
-    Egeria by default uses secure HTTP requests (`https://`) with a self-signed certificate. By default, Postman does not allow self-signed certificates. Any Postman users will therefore need to go into **Preferences** -> **Settings** and on the **General** tab, turn off **SSL certificate verification** or requests will fail.
-
-    ![Turn off self-signed certificate checking](/education/tutorials/postman-turn-off-certificate-checking.png)
-
-!!! education "Further information"
-
-    - [Egeria-specific Postman tutorial](/education/tutorials/postman-tutorial/overview).
-    - [Adding Postman samples](/guides/contributor/guidelines/#postman-artifacts-for-apis)
+IntelliJ supports a simple format for describing calls to REST APIs.  These are called [HTTP Client Collections](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html).
+The beauty of them is that in addition to being executable in an IntelliJ environment, they are very readable and so the Egeria community uses them to document the OMAG Server Platform REST API.  These files have a http file extension.
 
 ## Command-line request tools
 
-In addition to [Postman](#postman) there are command line tools for calling REST APIs.
+In addition to IntelliJ there are command line tools for calling REST APIs.
 
 ### `curl`
 

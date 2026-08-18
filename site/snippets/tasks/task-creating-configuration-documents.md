@@ -11,11 +11,11 @@ Each OMAG Server supports selected open metadata and governance services based o
 
 A [configuration document](/concepts/configuration-document) defines the configuration properties for an OMAG server.  It includes the properties for an OMAG server including the services that it supports.
 
-Configuration documents are typically created using the OMAG Server Platform [Administration Services](/services/admin-services/overview).  In order to experiment with these services, this tutorial uses the [Postman](/education/tutorials/omag-server-tutorial/task-working-with-postman) test tool. This is a tool that enables you to type in REST API calls and execute them against the OMAG server platform.
+Configuration documents are typically created using the OMAG Server Platform [Administration Services](/services/admin-services/overview).  In order to experiment with these services, this tutorial uses the HTTP Client Collections test tool. This is a tool that enables you to type in REST API calls and execute them against the OMAG server platform.
 
-There is also a postman collection [omag-server-platform-tutorial.postman_collection.json](https://github.com/odpi/egeria-docs/blob/main/site/docs/education/tutorials/omag-server-tutorial/resources/omag-server-platform-tutorial.postman_collection.json) that you can download and import into postman to support this tutorial.  (see **Import** button top left of the Postman user interface).
+There is also a number of HTTP Client Collections in the [Admin Services Module](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/admin-services) to support this tutorial.
 
-This tutorial will also use `curl` commands to illustrate calls to the administration services as well as refer to the pre-canned calls in the postman collection.
+This tutorial will also use `curl` commands to illustrate calls to the administration services as well as refer to the pre-canned calls in the HTTP Client Collection.
 
 
 #### Creating the configuration document

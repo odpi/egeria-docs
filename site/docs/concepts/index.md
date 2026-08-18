@@ -201,7 +201,6 @@
 - [Kafka Connectivity :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/event-bus-connectors/open-metadata-topic-connectors/kafka-open-metadata-topic-connector/README.md){ target=gh }
 - [Karma Point](/concepts/karma-point)
 - [Karma Point Threshold](/concepts/karma-point)
-- [Karma Point Plateau](/concepts/karma-point-plateau)
 
 
 ## L

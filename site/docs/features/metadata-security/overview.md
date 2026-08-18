@@ -111,36 +111,44 @@ The connector that can be defined for an OMAG Server offers a series of layers o
 * **validateUserForService** - Checks that the calling user is authorized to issue this request.
 * **validateUserForServiceOperation** - Checks that the calling user is authorized to issue this specific request.
 
-#### OpenMetadataAssetSecurity
+#### OpenMetadataElementSecurity
 
-*OpenMetadataAssetSecurity* validates what a user is allowed to do with to Assets.  The methods are given access to the whole asset to allow a variety of values to be tested.
+*OpenMetadataElementSecurity* implements security rules based on the elements being accessed.  It is the interface that decides what a user may do with a particular metadata element, taking account of the element's type, the operation requested, who created it, and the settings of its classifications - such as its [governance zones](/features/governance-zoning/overview) or ownership.
 
-* **setSupportedZonesForUser** - Provides an opportunity to override the deployed module setting of [supportedZones](/features/governance-zoning) for a user specific list.
-* **validateUserForAssetCreate** - Tests for whether a specific user should have the right to create an asset.
-* **validateUserForAssetRead** - Tests for whether a specific user should have read access to a specific asset.
-* **validateUserForAssetDetailUpdate** - Tests for whether a specific user should have the right to update an asset.  This is used for a general asset update, which may include changes to the zones and the ownership.
-* **validateUserForAssetAttachmentUpdate** - Tests for whether a specific user should have the right to update elements attached directly  to an asset such as schema and connections.
-* **validateUserForAssetFeedback** - Tests for whether a specific user should have the right to attach feedback - such as comments, ratings, tags and likes, to the asset.
-* **validateUserForAssetDelete** - Tests for whether a specific user should have the right to delete an asset.
+The checks divide into three groups.
 
-#### OpenMetadataConnectionSecurity
+The first group covers operations on an element in its own right:
 
-*OpenMetadataConnectionSecurity* defines the interface of a connector that is validating whether a specific user should be given access to a specific Connection object.  This connection information is retrieved from an open metadata repository.  It is used to create a Connector to an Asset.  It may include user credentials that could enhance the access to data and function within the Asset that is far above the specific user's approval.  This is why this optional check is performed by any open metadata service that is returning a Connection object (or a Connector created with the Connection object) to an external party.
+* **validateUserForElementCreate** - Can the user create this element?
+* **validateUserForElementRead** - Can the user have read access to this element and its contents?
+* **validateUserForElementDetailUpdate** - Can the user update the properties of this element?
+* **validateUserForElementStatusUpdate** - Can the user update the status of this element?
+* **validateUserForElementAttach** - Can the user link unanchored elements to this element?
+* **validateUserForElementDetach** - Can the user remove those links?
+* **validateUserForElementAddFeedback** - Can the user attach feedback - comments, ratings, tags and likes - to this element?
+* **validateUserForElementDeleteFeedback** - Can the user remove that feedback?
+* **validateUserForElementClassify** - Can the user add or update a classification on this element?
+* **validateUserForElementDeclassify** - Can the user remove a classification from this element?
+* **validateUserForElementDelete** - Can the user delete this element and all of its contents?
 
-* **validateUserForConnection** - Tests for whether a specific user should have access to a connection.
-* **validateUserForAssetConnectionList** - Selects an appropriate connection for a user from the list of connections attached to an Asset.
+The second group covers elements that are [anchored](/features/anchor-management/overview) to another element - the terms and categories of a glossary, or the schema and connections attached to an asset - where the authority to act comes from the anchor rather than the member:
 
-#### OpenMetadataGlossarySecurity
+* **validateUserForAnchorMemberCreate** - Can the user create new elements as members of this anchor?
+* **validateUserForAnchorMemberAdd** - Can the user add an element as a member of this anchor?
+* **validateUserForAnchorMemberRead** - Can the user have read access to a member of this anchor?
+* **validateUserForAnchorMemberUpdate** - Can the user update elements attached directly to this anchor, such as its glossary terms or attached assets?
+* **validateUserForAnchorMemberStatusUpdate** - Can the user update the status of a member?
+* **validateUserForAnchorMemberDelete** - Can the user delete a member and all of its contents?
+* **validateUserForAnchorAttach** - Can the user link unanchored elements to this anchor?
+* **validateUserForAnchorDetach** - Can the user remove those links?
+* **validateUserForAnchorAddFeedback** - Can the user attach feedback to this anchor or one of its members?
+* **validateUserForAnchorDeleteFeedback** - Can the user remove that feedback?
+* **validateUserForAnchorClassify** - Can the user add or update a classification on this anchor or one of its members?
+* **validateUserForAnchorDeclassify** - Can the user remove a classification from this anchor or one of its members?
 
-*OpenMetadataGlossarySecurity* validates that a specific user is authorized to perform various operations on a glossary and its contents (terms and categories).
+The third is a single method that makes a choice rather than a yes/no decision:
 
-* **validateUserForGlossaryCreate** - Can the user create a new glossary?
-* **validateUserForGlossaryRead** - Can the user have read access to a specific glossary and its contents?
-* **validateUserForGlossaryDetailUpdate** - Can the user have the right to update the properties/classifications of the top-level glossary object?
-* **validateUserForGlossaryMemberUpdate** - Can the user have the right to update the terms and categories of a glossary? These updates could be to their properties, classifications and relationships. It also includes attaching valid values but not semantic assignments since they are considered updates to the associated asset.
-* **validateUserForGlossaryMemberStatusUpdate** - Can the user have the right to update the instance status of a term anchored in a specific glossary?
-* **validateUserForGlossaryFeedback** - Can the user have the right to attach feedback - such as comments, ratings, tags and likes, to the glossary, or its terms and categories.
-* **validateUserForGlossaryDelete** - Can the user delete a glossary and all its anchored contents, such as its terms and categories.
+* **selectConnection** - Chooses which [connection](/concepts/connection) should be supplied to the requesting user from those available.  A connection may carry credentials that grant far more access to the resource than the requesting user is approved for, which is why the choice is made by the security connector rather than by the service returning it.
 
 #### OpenMetadataRepositorySecurity
 
@@ -166,10 +174,12 @@ The connector that can be defined for an OMAG Server offers a series of layers o
 
 #### OpenMetadataEventsSecurity
 
-*OpenMetadataEventsSecurity* defines security checks for sending and receiving events on the [open metadata repository cohorts](/concepts/cohort-member).
-  
+*OpenMetadataEventsSecurity* defines security checks for sending and receiving events on the [open metadata repository cohorts](/concepts/cohort-member).  Implementing this interface means the security connector is called every time an event is about to be sent to, or has just been received from, a cohort topic.  Both methods are given the name of the cohort and the contents of the event, and each has three possible outcomes: return the event unchanged, return a modified event with sensitive content removed, or return null to filter the event out entirely.
+
 * **validateInboundEvent** - Validates whether an event received from another member of the cohort should be processed by this server.   May also remove content from the event before it is processed by the server.
 * **validateOutboundEvent** - Validates whether an event should be sent to the other members of the cohort by this server.   May also remove content from the event before it is sent to the cohort.
+
+This is what allows a repository to withhold sensitive instances from the rest of the cohort, or to prevent instances it receives from being cached locally.
     
 
 ## Sample connectors

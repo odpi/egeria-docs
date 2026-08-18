@@ -283,13 +283,11 @@ Organization data is widely distributed across an organization's systems.  Each 
 
 A [contribution record](/types/1/0125-Contribution) is used to accumulate information about an actor's (individual or automation) contribution.  It is linked (1-1) with the actor's [actor profile](/types/1/0110-Actors) element.
 
-### Karma points and karma point plateaus
+### Karma points
 
 [Karma points](/concepts/karma-point) recognize actors (both individuals and automation) based on their contributions (create, update, delete) to open metadata.  Each karma point is award through the userId making the change.  However, they are only accumulated in a contribution record if the userId is linked to an [actor profile](/types/1/0110-Actors).  Therefore, it is necessary to create a user identity linked to an actor profile for each user that you want to be awarded karma points.
 
-The [karma point plateau](/concepts/karma-point-plateau) identifies a threshold for karma points that should be recognised as significant.  The default threshold is 500 karma points.
-
-Karma points and/or karma point plateaus can be used to add gamification into the open metadata ecosystem in order to reward the highest contributors.  Since karma points may be awarded to both individuals and automation, it is reasonable to maintain different league tables for people from automated processes.
+Karma points can be used to add gamification into the open metadata ecosystem in order to reward the highest contributors.  Since karma points may be awarded to both individuals and automation, it is reasonable to maintain different league tables for people from automated processes.
 
 ## Summary
 

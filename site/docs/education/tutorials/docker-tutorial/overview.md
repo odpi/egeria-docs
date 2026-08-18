@@ -208,10 +208,6 @@ You can see that through the Swagger UI it is possible to try out different REST
 platform is operating correctly.    The platform origin request is particularly useful for verifying
 what version of the OMAG Server Platform is running.
 
-The Swagger UI is useful for ad hoc testing.
-However, later in the Dojo we will cover a tool called [Postman](/education/tutorials/postman-tutorial/overview)
-that provides a more powerful testing experience.
-
 So back to the Docker Desktop.  The second option on the docker desktop is "CLI".  
 
 ![Docker Desktop running view](docker-desktop-running-options.png)

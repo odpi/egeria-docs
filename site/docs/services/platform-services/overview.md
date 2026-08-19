@@ -329,7 +329,7 @@ Security is configured for a specific platform once it is running by using the f
     the [platform URL root](/concepts/omag-server/#platform-url-root) of the platform.
 
 ??? example "Example: sample platform security connector"
-    For example, this is the request body that would set up the [sample platform security connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } provided for the Coco Pharmaceuticals case study:
+    For example, this is the request body that would set up the [platform security connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors){ target=gh }:
 
     ```json
     {

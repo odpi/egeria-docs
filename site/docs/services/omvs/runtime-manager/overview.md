@@ -28,7 +28,7 @@ In addition
 
 * [Egeria-load-content-packs.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/runtime-manager/Egeria-load-content-packs.http) illustrates how to load a content pack in a running system.
 * [Egeria-omag-server-reports.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/runtime-manager/Egeria-omag-server-reports.http) illustrates how to retrieve reports from a running Egeria platform.
-* [Egeria-baudot-tabular-data-sets.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/runtime-manager/Egeria-baudot-tabular-data-sets.http) illustrates how to retrieve tabular data sets supporting the Open Metadata Digital Products from a running Egeria platform.
+* [Egeria-baudot-tabular-data-connectors.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/runtime-manager/Egeria-baudot-tabular-data-connectors.http) illustrates how to retrieve tabular data sets supporting the Open Metadata Digital Products from a running Egeria platform.
 
 ## Further Information
 

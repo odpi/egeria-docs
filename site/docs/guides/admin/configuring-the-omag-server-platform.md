@@ -101,7 +101,7 @@ These two pieces of information can be provided through these two properties:
 * `platform.configstore.provider` - class name of the configuration document store provider.
 * `platform.configstore.endpoint` - name/pattern of resource, eg file name, needed by the connector.
 
-The default configuration document store connector is the [encrypted file store connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector).  If you wanted your configuration documents to be stored in clear text, set the following properties in the `application.properties` file:
+The default configuration document store connector is the [file store connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector), which stores each configuration document as a clear text JSON file.  To use a different store, set the following properties in the `application.properties` file:
 
 ```properties
 platform.configstore.provider=org.odpi.openmetadata.adapters.adminservices.configurationstore.file.FileBasedServerConfigStoreProvider
@@ -311,7 +311,7 @@ Together, both set some important characteristics that are needed to allow the c
 
     It's also recommended to install the IntelliJ 'PlantUML' plugin to get a real-time preview whilst updating the diagrams.
 
-For more details on the encrypted format, see the [encrypted file store connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector){ target=gh }.
+For more details on the stored format, see the [file store connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector){ target=gh }.
 
 ### Logging
 

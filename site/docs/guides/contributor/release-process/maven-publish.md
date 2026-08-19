@@ -50,7 +50,7 @@ See release tasks below.
 ## Implementation in pipelines
 ### Example action snippets
 
-A repository will typically contain file called something like `.github/workflows/merge.yml` for example in [egeria](https://github.com/odpi/egeria/blob/main/.github/workflows/merge-v4.yml) and within, the gradle file specifically contains `publish` as a target, for example
+A repository will typically contain file called something like `.github/workflows/merge.yml` for example in [egeria](https://github.com/odpi/egeria/blob/main/.github/workflows/merge-v6.yml) and within, the gradle file specifically contains `publish` as a target, for example
 ```yaml
       - name: build and publish to maven central
         uses: gradle/gradle-build-action@v2

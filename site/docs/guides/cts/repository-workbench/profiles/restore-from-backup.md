@@ -10,5 +10,5 @@ The technology under test supports the receipt of events from a backup archive. 
 ???+ assertion "Assertions"
     | ID | Description |
     |---|---|
-    | [`restore-from-backup-01` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-conformance-suite/open-metadata-conformance-suite-server/src/main/java/org/odpi/openmetadata/conformance/tests/repository/instances/TestRestoreFromBackup.java){ target=gh } | entity restored. This tests the [`saveReferenceCopy` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/OMRSMetadataCollection.java){ target=gh } method of the `OMRSMetadataCollection` interface. | 
+    | `restore-from-backup-01` | entity restored. This tests the [`saveReferenceCopy` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/OMRSMetadataCollection.java){ target=gh } method of the `OMRSMetadataCollection` interface. | 
 

@@ -210,7 +210,7 @@ Provides access to all types of open metadata through the Open Metadata Framewor
 
 ## Example implementations
 
-The definition of the connector interfaces for survey action services is defined in the [survey-action-services :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/frameworks/survey-action-framework/src/main/java/org/odpi/openmetadata/frameworks/survey){ target=gh } module.
+The definition of the connector interfaces for survey action services is defined in the [survey-action-services :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/frameworks/open-survey-framework/src/main/java/org/odpi/openmetadata/frameworks/opensurvey){ target=gh } module.
 
 There are implementations of survey action services in the [survey action service concept page](/concepts/survey-action-service) and the [file-survey-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/file-survey-connectors){ target=gh } module.
 

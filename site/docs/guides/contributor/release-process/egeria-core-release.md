@@ -96,13 +96,15 @@ If an urgent release is required with, for example, a critical security fix, the
     - Contact the release lead to move the artifacts from the maven staging repository to final release as in 7. above
 
 ??? success "9. Release notes in egeria-docs"
-    - In addition to the automated release notes above, update the release
-      notes published on the egeria-docs website.
+    - In addition to the automated release notes above, update the release notes published on the egeria-docs website. List known issues, breaking changes, major enhancements in this release (refer to previous release notes for examples)
     - Refer to the files at https://github.com/odpi/egeria-docs/tree/main/site/docs/release-notes
-    - Create a new file for the release you are working on ie '3-9.md' where the '.' for the version is replaced by a hyphen '-'
-    - Add the new release to mkdocs.yml (for the left navigation bar)
-    - update 'latest.md' and 'next.md' to point to the current/next release accordingly
-    - List known issues, breaking changes, major enhancements in this release (refer to previous release notes for examples)
+    - Create a new file for the next release you are working on ie '3-9.md' in snippets/release-notes.  The name of the file replaces the '.' for the version with a hyphen '-'
+    - Add the new file to mkdocs.yml (for the left navigation bar)
+    - update 'latest.md' and 'next.md' to point to the current/next release accordingly.
+    - Update previous with the new release file and change the date of this latest release to today
+
+??? success "10. Run the release workflow"
+    - Run the release workflow (under the "Actions" tab) to publish the release to maven central and DockerHub.
 
 
 --8<-- "snippets/abbr.md"

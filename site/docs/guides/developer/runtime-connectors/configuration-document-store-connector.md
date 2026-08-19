@@ -43,7 +43,6 @@ The configuration document is represented by the `OMAGServerConfig` structure. T
 The implementations of this connector provided by Egeria are found in the [configuration-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh } module. There are two connectors:
 
 - [configuration-file-store-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector){ target=gh } supports managing the open metadata configuration as a clear text JSON file.
-- [configuration-encrypted-file-store-connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-encrypted-file-store-connector){ target=gh } supports managing the open metadata configuration as an encrypted JSON file.
 
 
 !!! education "Further information"

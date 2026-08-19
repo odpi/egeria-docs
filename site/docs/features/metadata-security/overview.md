@@ -184,7 +184,7 @@ This is what allows a repository to withhold sensitive instances from the rest o
 
 ## Sample connectors
 
-There are sample implementations of the security connectors for [Coco Pharmaceuticals](/practices/coco-pharmaceuticals) in the "samples" module under [open-metadata-security-samples](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples)
+Implementations of the security connectors are supplied in the [metadata-security-connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors) module
 
 
 --8<-- "snippets/abbr.md"

@@ -3,6 +3,6 @@
 
 # Writing Server Metadata Security Connectors
 
-An example implementation of a [server metadata security connector](/concepts/server-metadata-security-connector) is located in the [[open-metadata-security-samples :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } module.
+An example implementation of a [server metadata security connector](/concepts/server-metadata-security-connector) is located in the [metadata-security-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors){ target=gh } module.
 
 --8<-- "snippets/abbr.md"

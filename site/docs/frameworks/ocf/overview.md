@@ -71,7 +71,7 @@ Connections are typically managed in a metadata repository, but they can also be
 The OCF offers two implementations of the connection:
 
 - [`Connection` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/properties/beans/Connection.java){ target=gh } is a bean implementation of the connection used in REST API requests and events. It allows properties to be set up and retrieved.
-- [`ConnectionProperties` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/properties/ConnectionProperties.java){ target=gh } is a read-only wrapper for the connection properties that is used in client interfaces that do not allow the properties to be updated.
+- [`ConnectionProperties` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-metadata-framework/src/main/java/org/odpi/openmetadata/frameworks/openmetadata/properties/connections/ConnectionProperties.java){ target=gh } is a read-only wrapper for the connection properties that is used in client interfaces that do not allow the properties to be updated.
 
 #### Connection properties
 

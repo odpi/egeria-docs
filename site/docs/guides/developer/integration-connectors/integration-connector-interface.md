@@ -80,7 +80,7 @@ These dependencies are in addition to the standard dependencies for an integrati
 
 You will also need to add the dependencies for the third party technology that your connector is calling.
 
-All the integration connector base classes inherit from (extend) the [`IntegrationConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/governance-servers/integration-daemon-services/integration-daemon-services-api/src/main/java/org/odpi/openmetadata/governanceservers/integrationdaemonservices/connectors/IntegrationConnectorBase.java){ target=gh }.  This class defines the lifecycle methods of the integration connector.
+All the integration connector base classes inherit from (extend) the [`IntegrationConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/connectors/IntegrationConnectorBase.java){ target=gh }.  This class defines the lifecycle methods of the integration connector.
 
 ![Methods implemented by an integration connector](/guides/developer/integration-connectors/integration-connector-methods.svg)
 > Methods implemented by an integration connector.  The base class implements the initialize(), setAuditLog(), setConnectorName(), and setContext() methods.  Your integration connector only needs to supply the start, refresh and disconnect method.  It implements the engage method only if it needs to issue a blocking call.

@@ -12,7 +12,7 @@ The *platform metadata security connector* provides authorization support for re
 
 ## Example Implementations
 
-An example implementation of this type of connector is located in the [open-metadata-security-samples :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/open-metadata-security-samples){ target=gh } module.
+An implementation of this type of connector is located in the [metadata-security-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors){ target=gh } module.
 
 ## Build Dependencies
 

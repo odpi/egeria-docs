@@ -50,6 +50,7 @@ If an urgent release is required with, for example, a critical security fix, the
     - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with the next version, e.g. change `1.3-SNAPSHOT` to `1.4-SNAPSHOT`. Most of the changes are in gradle files, however some code and documentation also has references to our versions and all need modifying.
     - If using an IDE like IntelliJ, make sure you have all hits by searching again as [by default only a limited number of hits are shown :material-dock-window:](https://youtrack.jetbrains.com/issue/IDEA-157855){ target=intellij }.
     - Create new java class for new release and ensure all type changes in [OpenMetadataArchive](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types) are moved to this new file.
+    - Recreate the archives and rebuild to run the BVT.
     - Commit
     - Create a PR, have reviewed / approved and merged as usual - aim to do this as quickly as reasonable so that there is no potential for version clash
 
@@ -66,7 +67,8 @@ If an urgent release is required with, for example, a critical security fix, the
     - Aim to make this change when the code appears to be ready to ship apart from final tests in order to avoid version confusion
     - `git checkout egeria-release-x.y`
     - `git pull upstream egeria-release-x.y`
-    - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with `x.y`, i.e. removing the `-SNAPSHOT` designation. Most of the changes are in `pom.xml` files; however, some code and documentation also has references to our versions and all need modifying.
+    - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with `x.y`, i.e. removing the `-SNAPSHOT` designation. Most of the changes are in the archive files; however, some code and documentation also have references to our versions and all need modifying.
+    - Recreate the archives and rebuild to run the BVT.
     - Commit, and do not make any other changes.
     - Create a PR, have reviewed / approved and merged as usual
 

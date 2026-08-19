@@ -2,96 +2,106 @@
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
 
-Each connector provider for an integration connector extends the [IntegrationConnectorProvider](https://odpi.github.io/egeria/org/odpi/openmetadata/governanceservers/integrationdaemonservices/connectors/IntegrationConnectorProvider.html) base class, which in turn extends the standard `ConnectorProviderBase`:
+Each connector provider for an integration connector extends the [`IntegrationConnectorProvider` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/connectors/IntegrationConnectorProvider.java){ target=gh } base class, which in turn extends `OpenConnectorProviderBase` and `ConnectorProviderBase`.
 
-This assumes the integration connector's implementation class is instantiated via the default constructor and all of its configuration information is contained in the [Connection](/concepts/connection) object supplied on the `initialize()` method.
+This assumes the integration connector's implementation class is instantiated via the default constructor and all of its configuration information is contained in the [Connection](/concepts/connection) object supplied on the `initialize()` method, plus the [catalog targets](/concepts/catalog-target) attached to it at runtime.
 
-If your connector implementation matches these requirements, its connector provider implementation need only implement a constructor to configure the base class's function with details of itself and the Java class of the connector it needs using:
-               
-- a GUID for the [connector type](/concepts/connector-type)
-- a name for the connector type.
-- a description of what the connector is for and how to configure it.
+The descriptive information about the connector is supplied through an implementation of the [`OpenConnectorDefinition` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/OpenConnectorDefinition.java){ target=gh } interface.  Defining it as an enum keeps the descriptions of all the connectors in your library together, and makes it easy to generate an open metadata archive that describes them.  Egeria's own connectors use the `EgeriaOpenConnectorDefinition` enum for this.
+
+The definition supplies:
+
+- a GUID for the [connector type](/concepts/connector-type), and its qualified name, display name and description.
+- a unique component identifier and wiki page used in the connector's audit log messages (Egeria uses numbers under 1000 for its own connectors, so choose a number above that).
+- the class name of the connector provider, and the development status of the connector.
+- the open metadata type and [deployed implementation type](/concepts/deployed-implementation-type) of the asset that a connection for this connector should be linked to.
+
+The connector provider's constructor then adds the information that is specific to integration connectors:
+
 - the connector class it instantiates.
-- a list of the additional properties, configuration properties and secured properties needed to configure instances of the connector.
-- a description of the connector for its audit log (if the connector implements `AuditLoggingComponent`).
+- the names of the configuration properties it recognizes, and their full descriptions.
+- the types of element it accepts as a [catalog target](/concepts/catalog-target).
+- the technology types it supports, and any templates it uses.
+- optionally, the default refresh interval and whether the connector issues blocking calls.
 
 ```java
 /**
- * XXXStoreProvider is the OCF connector provider for the XXX integration connector.
+ * XXXStoreProvider is the connector provider for the XXX integration connector.
  */
-public class XXXStoreProvider extends IntegrationConnectorProviderBase
+public class XXXStoreProvider extends IntegrationConnectorProvider
 {
     /*
-     * Unique identifier of the connector for the audit log.
-     */
-    private static final int    connectorComponentId   = 10001; /* Add unique number here - Egeria uses numbers under 1000 */
-
-    /*
-     * Unique identifier for the connector type.
-     */
-    private static final String connectorTypeGUID      = "Add unique GUID here";
-
-    /*
-     * Descriptive information about the connector for the connector type and audit log.
-     */
-    private static final String connectorQualifiedName = "MyOrg:Integration:XXXStoreConnector";
-    private static final String connectorDisplayName   = "XXX Store Connector";
-    private static final String connectorDescription   = "Connector supports ... add details here.";
-    private static final String connectorWikiPage      = "Add url to documentation here";
-
-
-    /*
-     * Define the name of the connector implementation.
+     * Class of the connector implementation.
      */
     private static final String connectorClassName = "packagename.XXXStoreConnector";
-    
-    /*
-     * Define the name of configuration properties (optional).
-     */
-    public static final String TEMPLATE_QUALIFIED_NAME_CONFIGURATION_PROPERTY = "templateQualifiedName";
+
 
     /**
-     * Constructor used to initialize the ConnectorProviderBase class.
+     * Constructor used to initialize the base class with details of this connector.
      */
     public XXXStoreProvider()
     {
-        super();
+        super(MyOpenConnectorDefinition.XXX_STORE_INTEGRATION_CONNECTOR,
+              connectorClassName,
+              XXXConfigurationProperty.getRecognizedConfigurationProperties());
 
         /*
-         * Set up the class name of the connector that this provider creates.
+         * The technology that this connector works with.
          */
-        super.setConnectorClassName(connectorClassName);
+        super.supportedTechnologyTypes = SupportedTechnologyType.getSupportedTechnologyTypes(
+                new DeployedImplementationTypeDefinition[]{XXXDeployedImplementationType.XXX_SERVER});
 
         /*
-         * Set up the connector type that should be included in a connection used to configure this connector.
+         * The types of element that can be attached to this connector as a catalog target.
          */
-        ConnectorType connectorType = new ConnectorType();
-        connectorType.setType(ConnectorType.getConnectorTypeType());
-        connectorType.setGUID(connectorTypeGUID);
-        connectorType.setQualifiedName(connectorQualifiedName);
-        connectorType.setDisplayName(connectorDisplayName);
-        connectorType.setDescription(connectorDescription);
-        connectorType.setConnectorProviderClassName(this.getClass().getName());
+        super.catalogTargets = XXXTarget.getCatalogTargetTypes();
 
-        List<String> recognizedConfigurationProperties = new ArrayList<>();
-        recognizedConfigurationProperties.add(TEMPLATE_QUALIFIED_NAME_CONFIGURATION_PROPERTY);
-        connectorType.setRecognizedConfigurationProperties(recognizedConfigurationProperties);
- 
-        super.connectorTypeBean = connectorType;
- 
         /*
-         * Set up the component description used in the connector's audit log messages.
+         * Full descriptions of the configuration properties, for the person deploying the connector.
          */
-        AuditLogReportingComponent componentDescription = new AuditLogReportingComponent();
- 
-        componentDescription.setComponentId(connectorComponentId);
-        componentDescription.setComponentName(connectorQualifiedName);
-        componentDescription.setComponentDescription(connectorDescription);
-        componentDescription.setComponentWikiURL(connectorWikiPage);
- 
-        super.setConnectorComponentDescription(componentDescription);
+        super.supportedConfigurationProperties = XXXConfigurationProperty.getConfigurationPropertyTypes();
+
+        /*
+         * Optional: how often refresh() should be called, in minutes.  Zero means only at start up
+         * and when explicitly requested.  The default is 60.
+         */
+        super.setRefreshTimeInterval(30L);
     }
 }
 ```
 
+### Catalog target types
+
+The `catalogTargets` list tells the people (and the tools) that deploy this connector which elements it can work with.  Each [`CatalogTargetType` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/controls/CatalogTargetType.java){ target=gh } has:
+
+* **name** - the *catalogTargetName* used on the *CatalogTarget* relationship.  A connector that accepts more than one kind of target uses this name to tell them apart.
+* **typeName** - the [open metadata type](/types) of the element, such as `SoftwareServer` or `DataFolder`.
+* **deployedImplementationType** - a more precise description of the technology, such as `PostgreSQL Server`.
+* **otherPropertyValues** - additional property values that a compatible catalog target should have.
+
+These are typically defined as an enum alongside the connector.  From the PostgreSQL connectors:
+
+```java
+public enum PostgresTarget
+{
+    SERVER("postgreSQLServer",
+           PostgresDeployedImplementationType.POSTGRESQL_SERVER.getDescription(),
+           PostgresDeployedImplementationType.POSTGRESQL_SERVER.getAssociatedTypeName(),
+           PostgresDeployedImplementationType.POSTGRESQL_SERVER.getDeployedImplementationType(),
+           null),
+
+    DATABASE("postgresDatabase",
+             PostgresDeployedImplementationType.POSTGRESQL_DATABASE.getDescription(),
+             PostgresDeployedImplementationType.POSTGRESQL_DATABASE.getAssociatedTypeName(),
+             PostgresDeployedImplementationType.POSTGRESQL_DATABASE.getDeployedImplementationType(),
+             null),
+    ;
+}
+```
+
+The catalog target processor should still validate the element it is given, since the relationship can be created by anyone - see [writing the catalog target processor](/guides/developer/integration-connectors/catalog-targets/#writing-the-catalog-target-processor).
+
+### Refresh interval and blocking calls
+
+- `setRefreshTimeInterval(minutes)` sets the default number of minutes between calls to `refresh()`.  Zero means `refresh()` is only called at start up and when an operator explicitly requests it.  The value can be overridden in the connector's configuration.
+- `setUsesBlockingCalls(true)` tells the integration daemon to run the connector on its own thread and to call `engage()` rather than `refresh()`.
 

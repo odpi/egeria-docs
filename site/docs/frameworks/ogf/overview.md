@@ -24,9 +24,7 @@ There are four types of governance action services, each of which supports a spe
 
 These are often used in conjunction with the [survey action services](/concepts/survey-action-service) from the [Open Survey Framework (OSF)](/frameworks/osf/overview). Collectively they are called the *governance services* and they can be linked together into [governance action processes](/concepts/governance-action-process).
 
-Some governance action services invoke functions in external engines that are working with data and related assets. The GAF offers embeddable functions and APIs to simplify the implementation of governance action services, and their integration into the broader digital landscape, whilst being resilient and with good performance.
-
-![Programming model for a governance action service](governance-action-service-with-context.svg)
+Some governance action services invoke functions in external engines that are working with data and related assets. The OGF offers embeddable functions and APIs to simplify the implementation of governance action services, and their integration into the broader digital landscape, whilst being resilient and with good performance.
 
 
 The governance request parameters are a collection of name-value properties that are passed to a governance action service via the governance action context when it starts.

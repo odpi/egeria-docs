@@ -104,7 +104,7 @@ If an urgent release is required with, for example, a critical security fix, the
     - Update previous with the new release file and change the date of this latest release to today
 
 ??? success "10. Run the release workflow"
-    - Run the release workflow (under Actons tab) to publish the release to maven central and DockerHub.
+    - Run the release workflow (under the "Actions" tab) to publish the release to maven central and DockerHub.
 
 
 --8<-- "snippets/abbr.md"

@@ -570,6 +570,7 @@ nav:
               - Quality Scores: types/6/0640-Quality-Scores.md
               - Relationship Discovery: types/6/0650-Relationship-Discovery.md
               - Resource Measures: types/6/0660-Resource-Measures.md
+              - Code Analysis: types/6/0680-Code-Analysis.md
               - Request for Action: types/6/0690-Request-for-Action.md
           - 7. Lineage and Usage:
               - Area 7 Lineage: types/7/index.md
@@ -588,7 +589,6 @@ nav:
               - Ultimate Sources and Destinations: types/7/0755-Ultimate-Source-Destination.md
               - Business Lineage: types/7/0760-Business-Lineage.md
               - Lineage Mapping: types/7/0770-Lineage-Mapping.md
-              - Code Analysis: types/7/0780-Code-Analysis.md
               - Incomplete: types/7/0790-Incomplete.md
       - Services:
           - Services: services/index.md

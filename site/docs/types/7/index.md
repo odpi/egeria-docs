@@ -27,7 +27,6 @@ Area 7 provides the structures for adding context to the asset definition of a r
 - [0755 Ultimate Sources and Destinations](/types/7/0755-Ultimate-Source-Destination)
 - [0760 Business Lineage](/types/7/0760-Business-Lineage)
 - [0770 Lineage Mapping](/types/7/0770-Lineage-Mapping)
-- [0780 Code Analysis](/types/7/0780-Code-Analysis)
 - [0790 Incomplete](/types/7/0790-Incomplete)
 
 

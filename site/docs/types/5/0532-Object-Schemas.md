@@ -12,5 +12,13 @@ Model 0532 describes an object schema - such as the structure for a series of PO
 
 ![UMl](0532-Object-Schemas.svg)
 
+## ObjectAttribute entity
+
+An attribute in an object schema type.
+
+## ObjectSchemaType entity
+
+A schema root for an object.
+
 
 --8<-- "snippets/abbr.md"

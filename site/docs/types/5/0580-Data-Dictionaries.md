@@ -22,13 +22,10 @@ An [AuthoredReferenceable](/types/0/0010-Base-Model) that describes a data field
 * *namespacePath* - Optional namespace to help build a qualified name for the data field.
 * *aliases* - Alternative name to use for the data field - useful when matching against a schema.
 * *namePatterns* - List of patterns to use to match a name against a schema attribute - useful when matching against a schema.
-* *isDeprecated* - Is this data field deprecated?
 * *defaultValue* - Default value to use if the actual data value is null.
 * *isNullable* - Can the data field store null?
 * *dataType* - What is the data type of this field
 * *units* - What are the units used in the data values stored under this data field
-* *absoluteUncertainty* - What is the range of uncertainty associated with the measurement instrument used to create the data values stored under this data field.
-* *relativeUncertainty* - What is the percentage range of uncertainty associated with the measurement instrument used to create the data values stored under this data field.
 * *minimumLength* - What is the minimum length of this field - typically used with string fields.
 * *length* -  What is the length (in bytes) taken up by this field.
 * *precision* - How many digits after the decimal point.
@@ -47,7 +44,6 @@ Identifies that a [collection](/types/0/0021-Collections) is a [data dictionary]
 
 Identifies that this is a [collection](/types/0/0021-Collections) is a [data specification](/concepts/data-specification) that describes the data requirements for a project or initiative.  Its members are typically [data structures](/concepts/data-structure).
 
-
 ## ReportType entity
 
 The *ReportType* entity describes a report design.  It specifies the schema (structure) of the data that will be assembled in a populated report.  It has the following attributes:
@@ -55,6 +51,10 @@ The *ReportType* entity describes a report design.  It specifies the schema (str
 * creationTime - the time the report type was created.
 * lastModificationTime - the time the report type content was last modified.
 * lastModifier - the userId of the last person to modify the report type.
+
+* *createdTime* - Report create time.
+* *lastModifiedTime* - Report last modified time.
+* *lastModifier* - UserId of the report last modifier.
 
 ## DataStructure entity
 
@@ -65,10 +65,14 @@ An [AuthoredReferenceable](/types/0/0010-Base-Model) that provides list of data 
 
 It is used to specify/validate the values in an asset's [schema](/concepts/schema), which in turn describes the structure of data in the [digital resource](/concepts/digital-resource).
 
-
 ## MemberDataField relationship
 
 Represents an association between a data structure and one of its data fields.
+
+* *coverageCategory* - Used to describe how a collection of data values for an attribute covers the domain of the possible values to the linked attribute.
+* *position* - Position of the element in a collection of relationships. Zero means no position set. A positive value identified the position starting from 1 for the first position.
+* *minCardinality* - Minimum number of allowed instances.
+* *maxCardinality* - Maximum number of allowed instances.
 
 ## DataDescription relationship
 

@@ -9,7 +9,6 @@ The membership of a collection is established via a [*CollectionMembership* rela
 
 Since a collection is a *Referenceable* entity, collections can be organized into hierarchies - like a directory structure on the filesystem.
 
-
 ![UML](0021-Collections.svg)
 
 ## Collection entity
@@ -43,13 +42,14 @@ The collection type is generically useful and there are many subtypes that descr
 * [ReportType](/types/5/0580-Data-Dictionaries) described of a type of report where the membership element describe what to expect from the instance of a report.
 * [ResultsSet](/types/7/0725-Smart-Collections) means the collection is a set of related results.
 * [RootCollection](#rootcollection-entity) described a master collection of collections.
-* [SoftwareArchive](/types/0/0030-Hosts-and-Platforms) described a collection of software components.
+* [SoftwareArchive](/types/0/0030-Operating-Platforms) described a collection of software components.
 * [SolutionBlueprint](/types/7/0740-Solution-Blueprints) described a collection of components performing a solution.
 * [SecurityList](/types/4/0423-Security-Definitions) represents a group of [users](/types/1/0110-Actors) that need to be given the same access to a specific set of resources.  It includes the `distinguishedName` used in LDAP based user directories.
 * [SubjectArea](/types/4/0425-Subject-Areas) described a collection of elements that describe a subject area.
 * [WorkingSet](#workingset-entity) means the collection is a set of elements that are being worked on by a user or process and have a particular status.
 * [WorkItemList](#workitemlist-entity) means the collection is a set of elements that define the work for a user.
 
+* *purpose* - Provides additional reasons, or expectations from the results. This is typically expressed in business terms.
 
 ## RootCollection entity
 
@@ -74,14 +74,13 @@ The *Folio* entity indicates that the collection is a set of elements that are p
 
 The *HomeCollection* classification indicates that the collection is used to provide the starting node for a hierarchy of collections.
 
-## ITSubsystems entity
+## ITSubsystem entity
 
-The *ITSubsystems* entity is a collection of systems and related equipment that supports a vial function of the business.
+The *ITSubsystem* entity is a collection of systems and related equipment that supports a vital function of the business.
 
 ## Namespace entity
 
 The *Namespace* entity indicates that the collection is a set of elements that are organized by namespace.
-
 
 ## RecentAccess entity
 
@@ -91,10 +90,11 @@ The *RecentAccess* entity indicates that the collection is a set of elements tha
 
 The *WorkingSet* entity indicates that the collection is organizing a set of elements that are being worked on by a specific person or process.  The *disposition* attribute describes the status of the elements in the collection.
 
+* *disposition* - An identifier used to defined the state or status of an element.
+
 ## WorkItemList entity
 
 The *WorkItemList* entity indicates that the collection is organizing a set of elements (typically [ToDos](/types/1/0135-Actions-For-People), or [Tasks](/types/1/0130-Projects)).
-
 
 ## CollectionMembership relationship
 
@@ -118,6 +118,17 @@ The attributes for the *CollectionMembership* relationship establish the level o
 * The *membershipStatus* attribute indicates the status of the member in the collection.  It is a [MembershipStatus](#membershipstatus-enumeration) value.
 * The *userDefinedStatus* provides a status value when *status=OTHER*.
 
+* *membershipType* - Name of the type of membership.
+* *membershipRationale* - Description of how the member is used, or why it is useful in this collection.
+* *expression* - Expression used to create the annotation.
+* *membershipStatus* - Defines the provenance and confidence that a member belongs in a collection.
+* *userDefinedStatus* - Extend or replace the valid element statuses with additional statuses controlled through valid metadata values.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
 
 ## MembershipStatus enumeration
 
@@ -142,5 +153,9 @@ The status value could be *Discovered* in each *CollectionMembership* relationsh
 * *Obsolete* - The resource should be retained.
 
 Once the review is complete, another governance action would drive the archive process for all resources indicated by the *CollectionMembership* relationships with *Validated* status.
+
+## ReferenceList entity
+
+Defines that a collection is a set of external references such as external data/model sources, links to media, or cited documents.
 
 --8<-- "snippets/abbr.md"

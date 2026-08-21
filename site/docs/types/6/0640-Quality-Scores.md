@@ -35,4 +35,13 @@ the average of the scores for all its columns, but other factors may be taken in
 account by a given system and we should be able to associate a score to an Asset,
 independently of the way it is calculated.
 
----8<-- "snippets/abbr.md"
+-
+
+## QualityAnnotation entity
+
+A calculation of the level of quality found in the values associated with a resource.
+
+* *qualityDimension* - Type of quality calculation.
+* *qualityDescription* - Descriptive quality assessment such as high, medium, or low.
+* *qualityScore* - Calculated quality value.
+--8<-- "snippets/abbr.md"

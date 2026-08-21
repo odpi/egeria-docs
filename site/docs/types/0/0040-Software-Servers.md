@@ -27,5 +27,9 @@ The different server implementations are distinguished using the [deployedImplem
     * See [0110 Actors](/types/1/0110-Actors) and [0117 IT Profiles](/types/1/0117-IT-Profiles) for capturing the user identity used by a software server.  By storing the user identifier for the server, it is possible to correlate the server with the calls that it makes.
     * See [`DeployedOn`](/types/0/0035-Complex-Hosts) for the relationship between a *SoftwareServer* entity and a host/platform.
 
+## SoftwareServer entity
+
+Software services to support a runtime environment for applications and data stores.
+
 
 --8<-- "snippets/abbr.md"

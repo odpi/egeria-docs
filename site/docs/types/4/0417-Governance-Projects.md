@@ -13,5 +13,9 @@ The **GovernanceProject** classification tags these projects to make it easy for
 
 ![UML](0417-Governance-Projects.svg)
 
+## GovernanceProject classification
+
+Identifies that a project is rolling out new capability to support the governance program.
+
 
 --8<-- "snippets/abbr.md"

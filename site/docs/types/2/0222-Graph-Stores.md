@@ -12,5 +12,9 @@ Graph stores describe a type of data store that has its content organized as a g
 
 ![UML](0222-Graph-Stores.svg)
 
+## GraphStore entity
+
+Identifies a data store as one that contains one or more graphs.
+
 
 --8<-- "snippets/abbr.md"

@@ -25,7 +25,7 @@ Figure 2 shows the open metadata types used to represent the metadata.
 > **Figure 2:** Topic open metadata types supported by open metadata
 
 If an EventBroker is defined, any topic created is automatically linked to it using the
-[ServerAssetUse](/types/0/0045-Servers-and-Assets)
+[CapabilityAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 When an event type is created for the topic,
 the service automatically inserts the

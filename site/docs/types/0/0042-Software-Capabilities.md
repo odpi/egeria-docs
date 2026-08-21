@@ -3,13 +3,13 @@
 
 # 0042 Software Capabilities
 
-Software capabilities are the capabilities implemented in software and supported by [ITInfrastructure](/types/0/0030-Hosts-and-Platforms) such as hosts, software server platforms and software servers.  They are composed of, support and/or consume various [digital resources](/concepts/resource) represented as [Asset entities](/types/0/0010-Base-Model).  They are linked together using the [ServerAssetUse relationship](/types/0/0045-Servers-and-Assets). 
+Software capabilities are the capabilities implemented in software and supported by [ITInfrastructure](/types/0/0030-Operating-Platforms) such as hosts, software server platforms and software servers.  They are composed of, support and/or consume various [digital resources](/concepts/resource) represented as [Asset entities](/types/0/0010-Base-Model).  They are linked together using the [CapabilityAssetUse relationship](/types/0/0045-Servers-and-Assets). 
 
 ![UML](0042-Software-Capabilities.svg)
 
 ## SoftwareCapability entity
 
-[*IT Infrastructure*](/types/0/0030-Hosts-and-Platforms) contains many capabilities.  Each capability can be catalogued using the *SoftwareCapability* entity and linked to the hosting *ITInfrastructure* entity using the *SupportedSoftwareCapability* relationship.
+[*IT Infrastructure*](/types/0/0030-Operating-Platforms) contains many capabilities.  Each capability can be catalogued using the *SoftwareCapability* entity and linked to the hosting *ITInfrastructure* entity using the *SupportedSoftwareCapability* relationship.
 
 *SoftwareCapability* is a [*Referenceable*](/types/0/0010-Base-Model) that adds the following attributes:
 
@@ -21,11 +21,13 @@ Software capabilities are the capabilities implemented in software and supported
 
 Different organizations and tools can choose the granularity in which the capabilities are catalogued in order to provide [appropriate context](/types/0/0045-Servers-and-Assets) to [assets](/types/0/0010-Base-Model) that are managed by the capabilities and the decisions made around them.
 
-## SoftwareServerCapability entity
+* *deploymentStatus* - Defines the current status of an infrastructure element.
+* *userDefinedDeploymentStatus* - Extend or replace the valid deployment statuses with additional statuses controlled through valid metadata values.
 
-The *SoftwareServerCapability* describes a capability that is implemented in a [software server](/types/0/0040-Software-Servers).  
 
-These are the subtypes of software server capabilities defined in the open metadata types:
+## Subtypes of SoftwareCapability
+
+These are the subtypes of software capability defined in the open metadata types:
 
 - [*AuthorizationManager*](/types/0/0050-Applications-and-Processes) - A capability that manages access to specific resources.
 - [*APIManager*](/types/0/0050-Applications-and-Processes) - A capability that manages callable APIs that typically delegate onto Software Services.
@@ -67,15 +69,22 @@ In addition, it is possible to augment software capabilities with the following 
 
 - [*CloudService*](/types/0/0090-Cloud-Platforms-and-Services) - A capability enabled for a tenant on a cloud platform.
 
+* *deploymentStatus* - Defines the current status of an infrastructure element.
+* *userDefinedDeploymentStatus* - Extend or replace the valid deployment statuses with additional statuses controlled through valid metadata values.
+* *patchLevel* - Patch level of the software server capability.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *deployedImplementationType* - Name of a particular type of technology. It is more specific than the open metadata types and increases the precision in which technology is catalogued. This helps human understanding and enables connectors and other actions to be targeted to the right technology.
+* *resourceName* - Full name that the element is known as in the owning deployed technology. This name is typically unique within the scope of the owing technology.
+* *namespacePath* - Prefix for element names to ensure uniqueness.
+
 ## SupportedSoftwareCapability relationship
 
-Defines the relationship between a *SoftwareCapability* and the *ITInfrastructure* entity that hosts it.  This relationship, plus the attached *SoftwareCapability* entity, help to build out a picture of the capabilities of a particular deployed host, software server platform or software server.  Together they help to describe where and how various IT capabilities are delivered to the owning organization.  This model can form the basis of traceability from business function to IT Infrastructure, particularly when combined with [location information](/types/0/0025-Locations) and [links to the data assets and APIs](/types/0/0045-Servers-and-Assets). 
+Defines the relationship between a *SoftwareCapability* and the *ITInfrastructure* entity that hosts it.  This relationship, plus the attached *SoftwareCapability* entity, help to build out a picture of the capabilities of a particular deployed host, software server platform or software server.  Together they help to describe where and how various IT capabilities are delivered to the owning organization.  This model can form the basis of traceability from business function to IT Infrastructure, particularly when combined with [location information](/types/0/0025-Locations) and [links to the data assets and APIs](/types/0/0045-Servers-and-Assets).
 
-## ProcessingState classification
+* *deploymentTime* - Time that the IT Infrastructure was deployed.
+* *deployer* - Person, organization, or engine that deployed the IT Infrastructure.
+* *deployerTypeName* - Type name of deployer.
+* *deployerPropertyName* - Identifying property name of deployer.
+ 
 
-Defines a classification for a *SoftwareCapability*. The *ProcessingState* can be used to describe additional runtime processing information used by the component represented by the *SoftwareCapability* entity.
-
-??? deprecated "Deprecated types"
-    - *SoftwareServerSupportedCapability* is deprecated in favour of the *SupportedSoftwareCapability* relationship.
-    
 --8<-- "snippets/abbr.md"

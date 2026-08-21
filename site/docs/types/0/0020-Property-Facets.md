@@ -11,8 +11,13 @@ Property facets allow any entity to be extended with additional properties. This
 
 The *PropertyFacet* entity describes the additional properties.
 
+* *description* - Description of the element or associated resource in free-text.
+* *properties* - Property name-value pairs.
+
 ## ReferenceableFacet
 
 The *ReferenceableFacet* relationship indicates the source of the additional properties.
+
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
 
 --8<-- "snippets/abbr.md"

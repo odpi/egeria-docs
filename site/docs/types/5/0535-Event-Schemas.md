@@ -17,7 +17,7 @@ The data fields in the event are represented using *EventSchemaAttribute* entiti
 
 *EventSchemaAttribute* describes a data field or structure in an event schema.  The data type of the data field is stored in an attached [*TypeEmbeddedAttribute*](/types/5/0505-Schema-Attributes) classification.  If the data field is a structure, the *typeName* property in *TypeEmbeddedAttribute* is set to `StructSchemaType` and the nested data fields, represented by their own *EventSchemaAttribute* entities, are linked via the [*NestedSchemaAttribute*](/types/5/0505-Schema-Attributes) relationship.
 
-In the example below, *EventTypeList* is linked to the asset (*KafkaTopic* in this case) via the *Schema* relationship and the event types represent each event option.  The *EventType* entities are linked to the *EventTypeList* using the *SchemaTypeOption* relationship.
+In the example below, *EventTypeList* is linked to the asset (a *Topic* in this case) via the *Schema* relationship and the event types represent each event option.  The *EventType* entities are linked to the *EventTypeList* using the *SchemaTypeOption* relationship.
 
 ![Schema for the Open Metadata Event](json-event-example.svg)
 

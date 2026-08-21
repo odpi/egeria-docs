@@ -15,10 +15,13 @@ The different server platform implementations are distinguished using the [deplo
 
 The [OMAG Server Platform](/concepts/omag-server-platform) is catalogued using a *SoftwareServerPlatform* entity in the [Leveraging Egeria](/egeria-solutions/leveraging-egeria/overview) solution.
 
-
 ???+ education "Further information"
 
     * See [0110 Actors](/types/1/0110-Actors) and [0117 IT Profiles](/types/1/0117-IT-Profiles) for capturing the user identity used by a software server platform.  By storing the user identifier for the platform, it is possible to correlate the server with the resourfes that it creates/updates.
     * See [DeployedOn](/types/0/0035-Complex-Hosts) for the relationship between a *SoftwareServerPlatform* entity and a host.
+
+## SoftwareServerPlatform entity
+
+Software services packaged as an operating system process to support a runtime environment for a virtual software server.
 
 --8<-- "snippets/abbr.md"

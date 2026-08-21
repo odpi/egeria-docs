@@ -18,5 +18,9 @@ A [tabular data set](/types/2/0211-Tabular-Data-Sets) containing code values and
 
 A [tabular data set](/types/2/0211-Tabular-Data-Sets) containing mappings between code values from different data sets.
 
+## ReferenceCodeTable entity
+
+A data set containing code values and their translations.
+
 
 --8<-- "snippets/abbr.md"

@@ -81,7 +81,7 @@
         <mxCell id="wNEHrFs8hky6LIAc2jGF-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="X2_bd1RgX8qBtSuRQkGr-1" source="wujzs7ocMWRj_HPj3dZF-4" target="wNEHrFs8hky6LIAc2jGF-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="wujzs7ocMWRj_HPj3dZF-5" value="«classification»&lt;br&gt;&lt;b&gt;Taxonony&lt;/b&gt;" style="html=1;strokeColor=#0e8088;align=center;fillColor=#b0e3e6;gradientColor=#00CCCC;" parent="X2_bd1RgX8qBtSuRQkGr-1" vertex="1">
+        <mxCell id="wujzs7ocMWRj_HPj3dZF-5" value="«classification»&lt;br&gt;&lt;b&gt;Taxonomy&lt;/b&gt;" style="html=1;strokeColor=#0e8088;align=center;fillColor=#b0e3e6;gradientColor=#00CCCC;" parent="X2_bd1RgX8qBtSuRQkGr-1" vertex="1">
           <mxGeometry x="240" y="261" width="190" height="50" as="geometry" />
         </mxCell>
         <mxCell id="wujzs7ocMWRj_HPj3dZF-8" value="«entity»&lt;br&gt;&lt;b&gt;Collection&lt;/b&gt;" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" parent="X2_bd1RgX8qBtSuRQkGr-1" vertex="1">

@@ -7,7 +7,6 @@ Roles describe collections of responsibilities.  These responsibilities can be f
 
 Open metadata separates the [ActorProfile](/types/1/0110-Actors) from the roles they perform. This is because people often perform many roles and these change over time. Also roles may be put in place before the actor is appointed to it and the actor appointed can change from time to time.
 
-
 ![UML](0118-Actor-Roles.svg "Describing the role for an actor profile")
 
 ## ActorRole entity
@@ -31,6 +30,8 @@ The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppoi
 The *EacmRole* entity describes an actor role that is intended to be performed by a [team](/types/1/0115-Teams).
 It is extended by the ['GovernanceRole'](/types/4/0445-Governance-Roles/#governancerole) type.
 
+* *headCount* - Number of people that can be appointed to the role.
+
 ## PersonRoleAppointment
 
 The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppointment* relationship to show that the person has been appointed.  It is common for [effectivity dates](/features/effectivity-dates) to be set on this relationship.
@@ -40,9 +41,13 @@ The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppoi
 The *PersonRole* entity describes an actor role that is intended to be performed by a person.
 It is extended by the ['GovernanceRole'](/types/4/0445-Governance-Roles/#governancerole) type.
 
+* *headCount* - Number of people that can be appointed to the role.
+
 ## PersonRoleAppointment
 
 The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppointment* relationship to show that the person has been appointed.  It is common for [effectivity dates](/features/effectivity-dates) to be set on this relationship.
+
+* *expectedTimeAllocationPercent* - What percentage of time is the appointee expected to devote to this role.
 
 ## Further information
 
@@ -51,5 +56,19 @@ The *PersonRole* entity is linked to a *Person* entity with the *PersonRoleAppoi
 The [Actor Manager](/services/omvs/actor-manager/overview) provides support for managing actor profiles and roles.
 
 The [People Organizer](/services/omvs/people-organizer/overview) supports the definition of team structures.
+
+## ITProfileRole entity
+
+A role performed by some software automation.
+
+## ITProfileRoleAppointment relationship
+
+Relationship identifying a software automation executable's roles.
+
+## TeamRoleAppointment relationship
+
+Relationship identifying a team's roles.
+
+* *expectedTimeAllocationPercent* - What percentage of time is the appointee expected to devote to this role.
 
 --8<-- "snippets/abbr.md"

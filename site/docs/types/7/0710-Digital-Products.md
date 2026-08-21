@@ -1,7 +1,6 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-
 # 0710 Digital Products
 
 The digital products provide a business perspective on the services and data provided by IT.  When they are linked to the metadata that describes the IT implementation landscape, it provides traceability between the business leaders' perspective of IT and its actual implementation.  This helps to identify how the value/cost of IT delivers value to the business.
@@ -30,17 +29,26 @@ A digital product has two lifecycle statues:
 * It has optional lifecycle states for its descriptive content defined either by the [*ContentStatus*](/types/0/0010-Base-Model) enumeration, or if *contentStatus==OTHER*, the *userDefinedContentStatus* attribute.
 * It has optional lifecycle states for its implementation content defined either by the *DeploymentStatus* enumeration, or if *deploymentStatus==OTHER*, the *userDefinedDeploymentStatus* attribute.
 
+* *deploymentStatus* - Defines the current status of an infrastructure element.
+* *userDefinedDeploymentStatus* - Extend or replace the valid deployment statuses with additional statuses controlled through valid metadata values.
+* *productName* - Display name of the product.
+* *introductionDate* - Date that the product was made available.
+* *maturity* - Level of maturity for the product.
+* *serviceLife* - Length of time that the product is expected to be in service.
+* *nextVersionDate* - Date when the next version is expected to be released.
+* *withdrawDate* - Date when the product is expected to be (or has been) withdrawn, preventing new consumers from subscribing.
+* *additionalProperties* - Additional properties for the element.
+
 ## DigitalProductDependency relationship
 
 The *DigitalProductDependency* relationship allows an organization to capture the dependencies between digital products.  The nature of the dependency is supplied in the *description* property.
-
-## DigitalProductManager entity
-
-*DigitalProductManager* is an [ActorRole](/types/1/0118-Actor-Roles) that can be used as the product manager for a digital product.  Since it is a role, one or more individuals can be appointed to the position.
 
 ## DigitalProductCatalog entity
 
 *DigitalProductCatalog* is the top-level [Collection](/types/0/0021-Collections) for a catalog of digital products.  The members of this collection are digital products or folders of digital products.
 
+## DigitalProductFamily entity
+
+A collection of digital products designed to be used together.
 
 --8<-- "snippets/abbr.md"

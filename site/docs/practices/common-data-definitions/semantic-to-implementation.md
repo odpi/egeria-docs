@@ -127,7 +127,7 @@
 
     * [SemanticAssignment](/types/3/0370-Semantic-Assignment) - Semantic assignments indicate that the data stored in the associated data field has the meaning described in the glossary term.
     * [ValidValuesAssignment](/types/5/0545-Reference-Data) - Valid value sets define a list of valid values.  They can be used to the values that are allowed to be stored in a particular data field if it can be described as a discrete set.  
-    * [DataValueAssignment](/types/5/0540-Data-Value-Specification) - A data value assignment means that the data in the data field conforms to the type described in the data value specification (data class or data grain).
+    * [DataValueAssignment](/types/5/0540-Data-Value-Specifications) - A data value assignment means that the data in the data field conforms to the type described in the data value specification (data class or data grain).
 
     When these relationships are used in combination, there should be consistency between the assignments to the data field and those to the associated glossary term.
 

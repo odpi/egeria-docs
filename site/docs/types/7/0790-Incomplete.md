@@ -12,5 +12,9 @@ hide:
 
 ![UML](0790-Incomplete.svg)
 
+## Incomplete classification
+
+Accompanies a partial, incomplete Referenceable.
+
 
 --8<-- "snippets/abbr.md"

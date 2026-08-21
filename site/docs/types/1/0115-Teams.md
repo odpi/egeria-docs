@@ -9,11 +9,17 @@ Team are groups of people organized to support a specific goal or responsibility
 
 ## Team entity
 
-A team is a group of people who are working to a common goal. This is recorded in the *Team* entity which is an extension of [ActorProfile](/types/1/0110-Actors/#actorprofile). 
+A team is a group of people who are working to a common goal. This is recorded in the *Team* entity which is an extension of [ActorProfile](/types/1/0110-Actors/#actorprofile).
+
+* *teamType* - Type of team, such as division, or department.
+ 
 
 ## TeamStructure relationship
 
-*TeamStructure* is used to link teams into an organization's hierarchical department structure.  Typically the 
+*TeamStructure* is used to link teams into an organization's hierarchical department structure.  Typically the
+
+* *delegationEscalationAuthority* - Can delegations and escalations flow on this relationship.
+ 
 
 ## Organization
 

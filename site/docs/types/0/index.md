@@ -24,7 +24,7 @@ Area 0 describes base types and infrastructure. This includes types for `Asset`,
 - [0022 Translations](0022-Translations.md)
 - [0025 Locations](0025-Locations.md)
 - [0026 Endpoints](0026-Endpoints.md)
-- [0030 Operating Platforms](0030-Hosts-and-Platforms.md)
+- [0030 Operating Platforms](0030-Operating-Platforms.md)
 - [0035 Hosts](0035-Complex-Hosts.md)
 - [0036 Storage](0036-Storage.md)
 - [0037 Software Server Platforms](0037-Software-Server-Platforms.md)

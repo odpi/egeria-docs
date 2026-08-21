@@ -7,7 +7,6 @@ Many processes running in an organization's IT landscape are implemented as plug
 
 ![UML](0215-Software-Components.svg)
 
-
 ## DeployedSoftwareComponent entity
 
 The *DeployedSoftwareComponent* entity describes a code [asset](/types/0/0010-Base-Model) that is deployed to implement a [software capability](/types/0/0042-Software-Capabilities). Each software component has a well defined interface describe by an [APISchema](/types/5/0536-API-Schemas) entity that is linked to the *DeployedSoftwareComponent* by the [Schema](/types/5/0503-Asset-Schema) relationship. Its optional properties are:
@@ -35,7 +34,6 @@ he *FunctionCall* entity describes a call to an external function.
 
 The *ProcessHierarchy* relationship defines a parent-child relationship between processes, which can be used to define more abstract processes that are comprised of lower-level processes; helping to support navigating the process hierarchy.  Typically the top if the process hierarchy inherits from *DeployedSoftwareComponent* and the nested processes inherit from *EmbeddedProcess*.
 
-
 ??? education "Further information"
 
     Related Open Metadata Type Definitions
@@ -49,5 +47,7 @@ The *ProcessHierarchy* relationship defines a parent-child relationship between 
 
     * [Egeria Developer Guide](/guides/developer) for more information on connectors and how to implement them.
     * [Lineage](/features/lineage-management/overview) describes the different types of lineage and how the open metadata types linktogether to form lineage graphs.
+
+* *containmentType* - The containment relationship between two processes: the parent and one of its children.
 
 --8<-- "snippets/abbr.md"

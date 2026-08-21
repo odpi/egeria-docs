@@ -28,7 +28,7 @@ Figure 2 shows the open metadata types used to represent the metadata created th
 > **Figure 2:** API open metadata types
 
 If an APIManager is defined, any API created is automatically linked to it using the
-[ServerAssetUse](/types/0/0045-Servers-and-Assets)
+[CapabilityAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 When an APIOperation is created for the API,
 the service automatically inserts the

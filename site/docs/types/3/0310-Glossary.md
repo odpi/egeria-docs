@@ -16,15 +16,21 @@ The *Glossary* entity in.
 The *Taxonomy* and *CanonicalVocabulary* classifications associated with the glossary entity are used to document the type of vocabulary it contains and its purpose.
 These classifications are independent of one another, so a Glossary object may have none, one or both of these classifications attached.
 
+* *language* - Natural language used in the glossary.
+* *usage* - Guidance on how the element should be used.
+
 ## Taxonomy classification
 
 The *Taxonomy* classification means the glossary includes a formal hierarchy of [Folders](/types/0/0021-Collections) and that a glossary term many only be linked into one of these folders. 
 
 Such a taxonomy can be used to organize a complete collection of formal terms.  It can also be exported onto a content management system and be used to categorize and organize documents and other media in content repositories.
 
+* *organizingPrinciple* - Characteristics that influence the organization of the taxonomy.
+
 ## CanonicalVocabulary classification
 
 The *CanonicalVocabulary* classification means that all the terms in the glossary have a unique name. Typically such a glossary is used to link entities representing data fields with glossary terms via the [SemanticAssignment](/types/3/0370-Semantic-Assignment) relationship to indicate that the glossary term describes the meaning of the data stored in the data field.
 
+* *scope* - Breadth of responsibility or coverage.
 
 --8<-- "snippets/abbr.md"

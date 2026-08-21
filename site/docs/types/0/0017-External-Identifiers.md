@@ -20,6 +20,8 @@ The *ExternalId* entity describes an external identifier from a specific third p
 * *externalInstanceLastUpdateTime* - the date/time that the instance in the external system was last updated.
 * *externalInstanceVersion* - the latest version of the element in the external system.
 
+* *key* - The third party system identifier.
+
 ### KeyPattern enumeration
 
 *KeyPattern* describes the pattern used for the identifier (how it is generated and managed). These are the values it can take, with the default (and most used) being `LOCAL_KEY`:  
@@ -34,7 +36,6 @@ The *ExternalId* entity describes an external identifier from a specific third p
 | CALLERS_KEY   | 5     | "Caller's Key"   | Key from another system can bey used if system name provided.                                                 |
 | STABLE_KEY    | 6     | "Stable Key"     | Key value will remain active even if records are merged.                                                      |
 | OTHER         | 99    | "Other"          | Another key pattern.                                                                                          |
-
 
 ## ExternalIdLink relationship
 
@@ -59,7 +60,6 @@ This relationship includes properties to help to map the *OpenMetadataRoot* enti
 | FROM_THIRD_PARTY | 2     | "From Third Party" | The third party technology is logically upstream (the originator and owner of the metadata).  Any updates made in open metadata are not passed to the third party technology and the third party technology is requested to refresh the open metadata version.                              |
 | OTHER            | 99    | "Other"          | Another type of synchronization rule - see description property.                                                                                                                                                                                                                            |
 
-
 ## Example
 
 There is no guarantee that external identifiers from a third party metadata catalog are globally unique and so the [*ScopedBy*](/types/1/0120-Assignment-Scopes) relationship links the external identifier to the [Referenceable](/types/0/0010-Base-Model/#referenceable) that represents the third party system. Typically, this is a type of [MetadataCollection](/types/2/0225-Metadata-Repositories) asset.
@@ -75,8 +75,6 @@ From one of the *ExternalId* entities it is possible to navigate to the open met
 An open metadata ecosystem entity may have been synchronized with multiple third party systems.  Following all the *ExternalIdLink* relationships from such an open metadata entity creates a list of external identifiers for each of the third party systems it has been synchronized with.  In this example, the glossary term has been synchronized with Apache Atlas and DataHub servers.  The *lastSynchronized* property in the *externalIdLink* documents when Egeria last checked for updates from the associated third party system.  The other properties in the *ExternalId* entity provide more detail about the element in the third party system.
 
 ![Example](external-identifier-example.svg)
-
-
 
 ??? education "Further information"
     There is an article on [managing external identifiers](/features/external-identifiers/overview) to correlate metadata elements from different types of technologies.

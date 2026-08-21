@@ -1,7 +1,6 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-
 # 0735 Solution Ports and Wires
 
 [Solution components](/types/7/0730-Solution-Components) need well-defined interfaces.  These may be APIs or other types of request and information exchange mechanisms such as eventing.
@@ -12,9 +11,14 @@
 
 The interfaces for a solution component are defined using a *SolutionPort* entity.  Each port represents the interface for a particular type of consumer.  The port may offer multiple technology mechanisms (APIs, events, ...) to the consumer.  However, if these mechanisms are used for different purposes, they are better represented as different ports.
 
+* *direction* - Which way is data flowing?
+
 ## SolutionComponentPort relationship
 
 The *SolutionComponentPort* relationship links a solution component to one of its ports.
+
+* *role* - Role that this artifact plays in implementing the abstract representation.
+* *description* - Description of the element or associated resource in free-text.
 
 ## SolutionLinkingWire relationship
 
@@ -28,10 +32,19 @@ The *SolutionLinkingWire* is a multi-link relationship that shows the linkage be
 * The *protocol* attribute indicates the type of protocol used to implement the linkage.
 * The *dataExchanged* attribute describes the type of data exchanged.
 
+* *iscQualifiedNames* - List of unique names of the information supply chains that this wire belongs to.
+* *oneWay* - Is the data flowing one-way or bidirectional?
+* *integrationStyle* - Mechanism to flow data and control along the segment.
+* *protocol* - Name of the protocol used to connect to the endpoint.
+* *frequency* - How frequently is this expected to run? e.g.real-time, hourly, daily, on batch completion?
+* *dataExchanged* - A full explanation of what data flows and why.
+
 ## SolutionPortDelegation relationship
 
 Solution components can be decomposed into smaller solution components.  The *SolutionPortDelegation* relationship shows which ports in the parent solution components map to the ports of the solution components it is decomposed into.
 
+* *role* - Role that this artifact plays in implementing the abstract representation.
+* *description* - Description of the element or associated resource in free-text.
 
 ## Example
 

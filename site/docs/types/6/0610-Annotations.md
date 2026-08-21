@@ -3,7 +3,6 @@
 
 # 0610 Annotations
 
-
 An annotation captures specific discovered characteristics of a real-world digital resource.
 
 Annotations are created by the analysis steps in the survey action service.
@@ -39,11 +38,22 @@ The types that follow provide more specialized annotations.
 * **[0640 Quality Scores](0640-Quality-Scores.md)**
 * **[0650 Relationship Discovery](0650-Relationship-Discovery.md)**
 * **[0660 Measurements](0660-Resource-Measures.md)**
-* **[0690 Request for Action](0690-Request-for-Action.md)**
+* **[0690 Request for Action](0690-Request-For-Action.md)**
+
+* *sampleSize* - Count of elements in the sample.
+* *samplePercent* - Percentage of total elements in the sample.
+* *samplingMethod* - Description of the technique used to create the sample.
+* *units* - The units of measure used in the data value.
+* *absoluteUncertainty* - The range of variation in the accuracy of the measurement expressed in the units of the measurement.
+* *relativeUncertainty* - The range of variation in the accuracy of the measurement expressed as a percentage.
 
 ## DataFieldAnnotation entity
 
 The *DataFieldAnnotation* type is used as a marker to indicate that the annotations that inherit from it will typically refer to a single schema attribute (data field) rather than the whole resource.
+
+* *dataType* - The name of a primitive data type.
+* *matchingValues* - Count of values that match the data class specification.
+* *nonMatchingValues* - Count of values that do not match the data class specification.
 
 ## ReportedAnnotation relationship
 
@@ -56,5 +66,12 @@ The *AssociatedAnnotation* relationship links an annotation to an element that i
 ## AnnotationExtension relationship
 
 The *AnnotationExtension* relationship allows an annotation from a later run of the survey action service to add information to an annotation from a previous run.
+
+## AnnotationMatch relationship
+
+The link between an annotation and the matching element, such as a data class, data grain, or glossary term.
+
+* *method* - Method used to identify data class.
+* *threshold* - What was the percentage of matching values used to determine that the data class matched.
 
 --8<-- "snippets/abbr.md"

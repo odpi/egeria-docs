@@ -24,11 +24,9 @@ There are subtypes for *DataFile* that identify the format of the file:
 - *ParquetFile* is encoded using [the Apache Parquet format](https://parquet.apache.org/).
 - *SpreadsheetFile* is a file containing tabular data and formula.
 
-
 ## FileFolder
 
 A *FileFolder* entity represents a folder or directory used to group related files together. It adds the *pathName* property which contains the fully qualified path name of the folder.
-
 
 ## FolderHierarchy
 
@@ -50,9 +48,40 @@ Files can also have a symbolic link (*LinkedFile* relationship) to an element to
 
 The diagram below illustrates the structure of a file system.
 
-The [*FileSystem*](/types/0/0056-Resource-Managers) is typically a [Software Capability](/types/0/0042-Software-Capabilities).  The root folders (of type *FileFolder*) are connected to it using the [*ServerAssetUse*](/types/0/0045-Servers-and-Assets) relationship.  Beneath that are *FileFolder* entities with *DataFile* entities nested beneath them.
+The [*FileSystem*](/types/0/0056-Resource-Managers) is typically a [Software Capability](/types/0/0042-Software-Capabilities).  The root folders (of type *FileFolder*) are connected to it using the [*CapabilityAssetUse*](/types/0/0045-Servers-and-Assets) relationship.  Beneath that are *FileFolder* entities with *DataFile* entities nested beneath them.
  
 
 ![File system structure](0220-Files-and-Folders-Example.png)
+
+## AvroFile entity
+
+A description of a file that follows the Apache Avro specification.
+
+## CSVFile entity
+
+A file containing comma-separated (or similar delimited) data.
+
+* *delimiterCharacter* - Character used between each column.
+* *quoteCharacter* - The character used to group the content of the column that contains one or more delimiter characters.
+
+## DataFileCollection entity
+
+A data set that consists of a collection files (do not need to be co-located).
+
+## JSONFile entity
+
+A description of a file that follows the JavaScript Object Notation specification.
+
+## ParquetFile entity
+
+A data file which is formatted using the Apache Parquet format.
+
+## SpreadsheetFile entity
+
+A file containing tabular data with formula.
+
+## XMLFile entity
+
+A file containing an XML structure.
 
 --8<-- "snippets/abbr.md"

@@ -1260,7 +1260,7 @@ style 9 color:#492673, fill:#af8cd9, stroke:#492673
 style 10 color:#492673, fill:#af8cd9, stroke:#492673
 click 11 "https://egeria-project.org/types/7/0712-Digital-Subscription/" "Click for more documentation" _blank
 click 12 "https://egeria-project.org/types/5/0580-Data-Dictionaries/" "Click for more documentation" _blank
-click 13 "https://egeria-project.org/types/0/0030-Hosts-and-Platforms/" "Click for more documentation" _blank
+click 13 "https://egeria-project.org/types/0/0030-Operating-Platforms/" "Click for more documentation" _blank
 click 14 "https://egeria-project.org/types/7/0720-Information-Supply-Chains/" "Click for more documentation" _blank
 click 15 "https://egeria-project.org/types/7/0711-Agreements/" "Click for more documentation" _blank
 click 16 "https://egeria-project.org/types/5/0535-Event-Schemas/" "Click for more documentation" _blank

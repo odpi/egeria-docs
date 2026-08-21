@@ -35,8 +35,7 @@ Separately, the **ProjectClassification** classification records the *approach* 
 
 * *ProjectHierarchy* breaks a project down into smaller projects that different teams can run on their own timelines with their own budgets.
 * *ProjectDependency* records that one project needs the results of another before it can complete.
-* *ProjectTeam* links the project to the [actors](/concepts/actor) doing the work.
-* *ProjectManagement* links the project to the [person role](/concepts/person-role) that coordinates it; the role in turn identifies whoever is currently appointed to it.
+* *AssignmentScope* links the project to the [actors](/concepts/actor) doing the work, including the [person role](/concepts/person-role) that coordinates it; each role in turn identifies whoever is currently appointed to it.
 
 ???+ info "Additional information"
     * The *Project* type, its classifications and its relationships are described in [Model 0130 Projects](/types/1/0130-Projects).

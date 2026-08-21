@@ -19,9 +19,12 @@ The *Skill* entity describes a particular skill that a person, team or digital p
 
 A *SkillSet* entity is a specialized [Collection](/types/0/0021-Collections) that is used to group skills.
 
-## AssociatedSkills relationship
+## AssociatedSkillSet relationship
 
-The *AssociatedSkills* relationship is used to link an [Actor](/types/1/0110-Actors) to a *SkillSet* collection.
+The *AssociatedSkillSet* relationship is used to link an [Actor](/types/1/0110-Actors) to a *SkillSet* collection.
+
+* *label* - Display label to use when displaying this lineage relationship in a lineage graph.
+* *description* - Description of the element or associated resource in free-text.
 
 
 --8<-- "snippets/abbr.md"

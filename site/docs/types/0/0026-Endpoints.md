@@ -11,6 +11,10 @@
 
 Endpoints are part of a [Connection](/types/2/0201-Connectors-and-Connections). The connection provides the information to create an instance of a connector that is accessing a remote asset. In this situation the *networkAddress* attribute is set up to the URL needed to connect to the specific asset.
 
+* *networkAddress* - Network address used to connect to the endpoint.
+* *protocol* - Name of the protocol used to connect to the endpoint.
+* *encryptionMethod* - Type of encryption used at the endpoint (if any).
+
 ## ITInfrastructure entity
 
 *ITInfrastructure* entity is a type of [Asset](/types/0/0010-Base-Model) that supports the running of software systems.  It includes the *userId* attribute to indicate the user that the software runs with.  This userId can help identify the source of digital resources.

@@ -10,12 +10,11 @@ This is then either matched with an existing schema or a new schema is created (
 
 ![UML](0615-Schema-Extraction.svg)
 
-## SchemaAnalysis entity
+## SchemaAnalysisAnnotation entity
 
-The *SchemaAnalysis* entity identifies that the [survey action service](/concepts/survey-action-service) either created or verified the schema description for the analysed resource.  It identifies which schema it analysed both in its attributes and, typically using the [*AssociatedAnnotation*](/types/6/0610-Annotations) relationship to link to the root schema type.
+The *SchemaAnalysisAnnotation* entity identifies that the [survey action service](/concepts/survey-action-service) either created or verified the schema description for the analysed resource.  It identifies which schema it analysed both in its attributes and, typically using the [*AssociatedAnnotation*](/types/6/0610-Annotations) relationship to link to the root schema type.
 
-## DiscoveredSchemaType relationship
-
-The *DiscoveredSchemaType* relationship links the *SchemaAnalysis* annotation to the newly created schema.
+* *schemaName* - Display name for the discovered schema.
+* *schemaType* - Type name for the discovered schema.
 
 --8<-- "snippets/abbr.md"

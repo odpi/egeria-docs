@@ -13,5 +13,13 @@ The *InstanceMetadata* classification is used to show that a data field represen
 
 ![UML](0550-Instance-Metadata.svg)
 
+## InstanceMetadata classification
+
+Defines a data field that contains metadata for the row/record/object.
+
+* *instanceMetadataTypeName* - Name of the metadata data type extracted from an instance.
+* *description* - Description of the element or associated resource in free-text.
+* *additionalProperties* - Additional properties for the element.
+
 
 --8<-- "snippets/abbr.md"

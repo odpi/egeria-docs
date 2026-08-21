@@ -29,6 +29,11 @@ The *EmbeddedConnection* relationship links a virtual connection to an embedded 
 ??? education "Further information"
 
     [Using connectors](/guides/developer/using-connectors)
+
+* *displayName* - Display name of the element used for summary tables and titles.
+* *arguments* - Additional arguments needed by the virtual connector when using each connection.
+* *position* - Position of the element in a collection of relationships. Zero means no position set. A positive value identified the position starting from 1 for the first position.
+
     
 --8<-- "snippets/abbr.md"
  

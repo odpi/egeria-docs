@@ -5,7 +5,6 @@
 
 Open metadata supports the capture of the business and organizational context around the catalogued assets.  Part of this context identifies who is responsible for, say driving a result, or resolving an issue.  This model defines two important relationships for identifying responsibility called *AssignmentScope* and *Stakeholder*.
 
-
 ![UML](0120-Assignment-Scopes.svg)
 
 ## AssignmentScope relationship
@@ -22,9 +21,11 @@ The *assignmentScope* attribute describes the type of association.  Its values a
 * *Sponsor* - Individual is funding/supporting the work of the initiative.
 * *Other* - Another meaning.
 
+* *assignmentType* - What is the scope or nature of the assignment.
+* *description* - Description of the element or associated resource in free-text.
+
 ## ScopedBy relationship
 
 *ScopedBy* links an element to the elements ([Organizations](/types/5/), [Projects](/types/1/0115-Teams), [Teams](/types/1/0115-Teams), ...) that are scoping the impact or applicability of its affect.
-
 
 --8<-- "snippets/abbr.md"

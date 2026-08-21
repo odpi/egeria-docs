@@ -16,15 +16,16 @@ The project entity represents a single project.  It inherits from [*Referenceabl
 
 * *mission* describes in free-form text, the hoped for outcome of the project(s) commissioned under this charter.
 * *dataProcessingPurposes* define a list of formal purposes for the project.  These are inspired by the need to identify processing purposes in the EU's General Data Protection Legislation (GDPR).  These purposes can also be set up in a valid metadata set.
-* *successCriteeria* lists the criteria that should be used to evaluate the success of the project.
+* *successCriteria* lists the criteria that should be used to evaluate the success of the project.
 * *plannedStartDate* defines the expected start date of the project.
 * *actualStartDate* defines the actual start date of the project.
 * *plannedCompletionDate* defines the expected end date of the project.
 * *actualCompletionDate* defines the actual end date of the project.
-* *projectScope* defines the scope of the project.
 * *projectStatus* defines the status of the project.
 * *projectHealth* defines the health of the project.
 * *priority* defines the priority of the project.
+
+* *projectPhase* - The phase in the lifecycle of the project.
 
 
 ## Campaign classification
@@ -35,13 +36,13 @@ A campaign classification is typically attached to  a [*Project*](#project-entit
 
 ## Task classification
 
-The *Task* classification is attached to a *Project* entity to indicate that this entity represents a small piece of work that is typically assigned to a single person (identified via the [*ProjectTeam*](#projectteam-relationship) relationship).  Such a task is linked to a parent project via the [*ProjectHierarchy*](#projecthierarchy-relationship) relationship.
+The *Task* classification is attached to a *Project* entity to indicate that this entity represents a small piece of work that is typically assigned to a single person (identified via the [*AssignmentScope*](/types/1/0120-Assignment-Scopes) relationship).  Such a task is linked to a parent project via the [*ProjectHierarchy*](#projecthierarchy-relationship) relationship.
 
 ## PersonalProject classification
 
-The *PersonalProject* classification is attached to a *Project* entity to indicate that this entity represents an informal project that has been created by single person (identified via the [*ProjectTeam*](#projectteam-relationship) relationship) to help organize a part of their work.  These projects are typically not linked to into a project hierarchy.  They may be linked to other project entities via the [*ProjectDependency*](#projectdependency-relationship) relationship.
+The *PersonalProject* classification is attached to a *Project* entity to indicate that this entity represents an informal project that has been created by single person (identified via the [*AssignmentScope*](/types/1/0120-Assignment-Scopes) relationship) to help organize a part of their work.  These projects are typically not linked to into a project hierarchy.  They may be linked to other project entities via the [*ProjectDependency*](#projectdependency-relationship) relationship.
 
-Personal projects do not typically have a [Project Manager](#projectmanagement-relationship) assigned.
+Personal projects do not typically have a project manager assigned.
 
 ## StudyProject classification
 
@@ -72,14 +73,6 @@ A project that needs the results of another project to complete its work can be 
 
 * label - the label to use when displaying this relationship.
 * description - the description of the relationship between the projects.
-
-## ProjectTeam relationship
-
-The *ProjectTeam* relationship links a project to the [*Actors*](/types/1/0110-Actors) that will perform the work defined by the project.
-
-## ProjectManagement relationship
-
-The *ProjectManagement* relationship links a project to the [PersonRole](/types/1/0112-People) entity that will coordinate and track the efforts of the project team.  The role in turn links to the individual(s) appointed to perform the role.
 
 ## ProjectClassification classification
 

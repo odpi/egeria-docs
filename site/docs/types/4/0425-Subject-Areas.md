@@ -1,7 +1,6 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-
 # 0425 Subject Areas
 
 [Subject areas](/concepts/subject-area) are topic areas that are important to the organization.  Typically, they cover data that is widely shared across the organization and there is business value in maintaining consistency in the data values in each copy.  
@@ -22,6 +21,10 @@ The role of the [SubjectArea](/types/4/0440-Organizational-Controls) definition 
 Creating the subject area definition is a declaration that data about this subject area is of significance to the organization and will be receiving special attention.
 
 The subject area definition can be linked to governance definitions via the [*GovernanceBy*](/types/4/0401-Governance-Definitions) relationship.
+
+* *domainIdentifier* - Identifier of the governance domain that recognizes this process. Zero typically means 'any' domain.
+* *scope* - Breadth of responsibility or coverage.
+* *usage* - Guidance on how the element should be used.
 
 ## SubjectAreaHierarchy relationship
 

@@ -44,7 +44,7 @@ with the [Calculated Value](/types/5/0512-Derived-Schema-Elements)
 classification attached.
 
 If a DatabaseManager is defined, any Database created is automatically linked to it using the
-[ServerAssetUse](/types/0/0045-Servers-and-Assets)
+[CapabilityAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 When a DeployedDatabaseSchema is created for the Database,
 the service automatically inserts the

@@ -54,7 +54,7 @@ Linked to a host via the *DeployedOn* relationship are the *SoftwareServerPlatfo
 ![Figure 6](software-server-platform.svg)
 > **Figure 6:** The software server platforms running on the host
 
-The functions of the software server platform are described using *SoftwareCapabilities*.  They typically host/manage assets such as *DataSets*, *DataStores* and *Processes* that are linked to the software capability using the **ServerAssetUse** relationship.
+The functions of the software server platform are described using *SoftwareCapabilities*.  They typically host/manage assets such as *DataSets*, *DataStores* and *Processes* that are linked to the software capability using the **CapabilityAssetUse** relationship.
 
 Some technologies are written as a single stack.
 Figure 7 shows the structure of the metadata elements

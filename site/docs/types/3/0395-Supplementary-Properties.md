@@ -18,5 +18,16 @@ even if the element is read-only because it is technical metadata extracted from
 
 Egeria makes use of this relationship to link an asset to a glossary term that is providing supplementary properties to the asset.
 
+## SupplementaryProperties relationship
+
+Provides additional descriptive properties to augment technical metadata extracted from a third party technology.
+
+* *label* - Display label to use when displaying this lineage relationship in a lineage graph.
+* *description* - Description of the element or associated resource in free-text.
+
+## ElementSupplement classification
+
+Identifies a glossary term that is being used to supplement asset descriptions.
+
 
 --8<-- "snippets/abbr.md"

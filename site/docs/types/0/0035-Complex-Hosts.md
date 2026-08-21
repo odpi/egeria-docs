@@ -18,6 +18,11 @@ The host can be linked to its location through the [AssetLocation](/types/0/0025
 
 The *DeployedOn* relationship shows where IT Infrastructure is deployed to.
 
+* *deploymentTime* - Time that the IT Infrastructure was deployed.
+* *deployer* - Person, organization, or engine that deployed the IT Infrastructure.
+* *deployerTypeName* - Type name of deployer.
+* *deployerPropertyName* - Identifying property name of deployer.
+
 ## BareMetalComputer entity
 
 A *BareMetalComputer* describes a connected set of physical hardware. The open metadata types today do not attempt to model hardware in detail but this could be easily added if a contributor with the appropriate expertise was willing to work on it.
@@ -30,7 +35,7 @@ A *VirtualMachine* provides virtualized hardware through a hypervisor that allow
 
 A *VirtualContainer* provides the services of a host to the [software servers](/types/0/0040-Software-Servers) deployed on it. When the server makes requests for storage, network access, and other resources, the *VirtualContainer* delegates the requests to the equivalent services of the actual host it is deployed on.
 
-*VirtualContainer*s can be hosted on other *VirtualContainer*'s, but to actually run they need to ultimately be deployed onto a real physical [Host](/types/0/0030-Hosts-and-Platforms/#host).
+*VirtualContainer*s can be hosted on other *VirtualContainer*'s, but to actually run they need to ultimately be deployed onto a real physical [Host](/types/0/0030-Operating-Platforms/#host).
 
 ### Examples
 
@@ -40,7 +45,7 @@ A *VirtualContainer* provides the services of a host to the [software servers](/
 
 A *HostCluster* describes a collection of hosts that together are providing a service. Clusters are often used to provide horizontal scaling of services.
 
-Within the host cluster there may be a special host (node) that is controlling the execution of the other members. This host is modelled with a [SoftwareServerPlatform](/types/0/0037-Software-Server-Platforms/#softwareserverplatform) that describes the cluster management platform, and optional [SoftwareServer](/types/0/0040-Software-Servers/#softwareserver) assets.  [SoftwareCapabilities](/types/0/0042-Software-Capabilities/#softwarecapability) needed to manage the cluster are linked to these [ITInfrastructure](/types/0/0030-Hosts-and-Platforms/#itinfrastructure) using the [ServerAssetUse](/types/0/0045-Servers-and-Assets/#serverassetuse) relationship.
+Within the host cluster there may be a special host (node) that is controlling the execution of the other members. This host is modelled with a [SoftwareServerPlatform](/types/0/0037-Software-Server-Platforms/#softwareserverplatform) that describes the cluster management platform, and optional [SoftwareServer](/types/0/0040-Software-Servers/#softwareserver) assets.  [SoftwareCapabilities](/types/0/0042-Software-Capabilities/#softwarecapability) needed to manage the cluster are linked to these [ITInfrastructure](/types/0/0030-Operating-Platforms/#itinfrastructure) using the [CapabilityAssetUse](/types/0/0045-Servers-and-Assets/#capabilityassetuse) relationship.
 
 ### Examples 
 

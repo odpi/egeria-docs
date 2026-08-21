@@ -31,7 +31,7 @@ Figure 2 shows the open metadata types used to represent the CSV File metadata.
 > **Figure 2:** CSV file open metadata types
 
 If a FileSystem or FileManager is defined, any CSVFile asset created is automatically linked to it using the
-[ServerAssetUse](/types/0/0045-Servers-and-Assets)
+[CapabilityAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 When a TabularColumn is created for the file,
 the service automatically inserts the
@@ -60,7 +60,7 @@ Figure 2 shows the open metadata types used to represent the Avro File metadata 
 > **Figure 2:** Avro file open metadata types
 
 If a FileSystem or FileManager is defined, any AvroFile asset created is automatically linked to it using the
-[ServerAssetUse](/types/0/0045-Servers-and-Assets)
+[CapabilityAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 When an ObjectAttribute is created for the file,
 the service automatically inserts the
@@ -90,7 +90,7 @@ Figure 2 shows the open metadata types used to represent the JSON File metadata.
 > **Figure 2:** JSON file open metadata types supported by the file classifier from the integration context
 
 If a FileSystem or FileManager is defined, any JSONFile asset created is automatically linked to it using the
-[ServerAssetUse](/types/0/0045-Servers-and-Assets)
+[CapabilityAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 When a DocumentSchemaAttribute is created for the file,
 the service automatically inserts the

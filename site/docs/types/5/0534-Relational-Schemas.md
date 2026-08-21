@@ -60,6 +60,9 @@ A *RelationalColumn* entity represents a column in a relational table.  It inher
 
 The *PrimaryKey* classification can be attached to a *RelationalColumn* to indicate that the value stored for this column in each row of the table is a unique identifier for the row.
 
+* *keyPattern* - Type of identifier that identifies its lifecycle, for example, its scope and whether the value is reused.
+* *displayName* - Display name of the element used for summary tables and titles.
+
 ## ForeignKey relationship
 
 The *ForeignKey* relationship links a relational column in one relational table to a relational column in another relational table.
@@ -67,6 +70,12 @@ The *ForeignKey* relationship links a relational column in one relational table 
 It indicates that the values stored in the first relational column are values from the second relational column.  Typically, the second relational column is a *PrimaryKey*.
 
 Foreign keys are used to represent relationships between relational tables.
+
+* *displayName* - Display name of the element used for summary tables and titles.
+* *description* - Description of the element or associated resource in free-text.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
 
 ## Example
 

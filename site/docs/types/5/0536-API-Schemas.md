@@ -12,7 +12,6 @@ Under that, each operation defines its requests and responses.
 
 ![UML](0536-API-Schemas.svg)
 
-
 ## APISchemaType
 
 The *APISchemaType* entity provides the [RootSchemaType](/types/5/0530-Tabular-Schemas) for the API's schema.
@@ -24,6 +23,9 @@ The *APIOperations* relationship links the *APISchemaType* entity to one of its 
 ## APIOperation
 
 The *APIOperation* entity represents a single operation (also known as a method, or function).  If this is a ReSt API, set the *pathName* variable to the path of the operation.  Add the name of the operation/function/method to the *command* attribute.
+
+* *path* - The url path segments that identify this API operation.
+* *command* - The REST command for this API operation.
 
 ## APIHeader
 
@@ -41,17 +43,18 @@ The structure of the response (results) of an operation can be documented in a [
 
 The *APIParameterList* entity is a specialized [ComplexSchemaType](/types/5/0505-Schema-Attributes) that allows a list of parameters to be defined.
 
+* *required* - Is this value required?
+
 ## APIParameter
 
 The *APIParameter* entity is a specialized [SchemaAttribute](/types/5/0505-Schema-Attributes) that indicates that the parameter is part of an API.  It helps consumers of the metadata to understand the difference between, for example, ta data element send on an API from a [database column](/types/5/0534-Relational-Schemas/#relationalcolumn) stored in a database.
 
+* *parameterType* - What type of parameter is it.
 
 ## Example API Schema
 
 Here is an example of an API schema called *CustomerAPI Specification*.  It shows one API operation called *getCustomer*.  This operation takes a *customerNo* string as an input parameter and returns *customerNo*, *customerName* and *customerCardId* strings in the response.
 
 ![Example API Schema](api-example.svg)
-
-
 
 --8<-- "snippets/abbr.md"

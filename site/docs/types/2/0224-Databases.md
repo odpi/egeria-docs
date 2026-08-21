@@ -10,7 +10,11 @@ A database is a structured store of data.  It is typically managed as a shared d
 
 ## Database entity
 
-The *Database* entity represents the database store.  It inherits from [*DataStore*](/types/2/0210-Data-Stores) to indicate that the physical data is stored under this asset.  
+The *Database* entity represents the database store.  It inherits from [*DataStore*](/types/2/0210-Data-Stores) to indicate that the physical data is stored under this asset.
+
+* *databaseInstance* - Instance of the database.
+* *importedFrom* - System that the data was imported from.
+  
 
 ## RelationalDatabase entity
 

@@ -10,8 +10,6 @@ The governance definitions are linked to the elements they govern through the *G
 
 ![UML](0401-Governance-Definitions.svg)
 
-
-
 ## GovernanceDefinition entity
 
 *GovernanceDefinition* describes an aspect of a governance program. They are authored in the metadata repository. They inherit from [AuthoredReferenceable](/types/0/0010-Base-Model), which means they have a unique identifier and link to external references for more information.
@@ -43,6 +41,15 @@ The governance definitions are organized into specific subtypes and linked toget
   * [0450 Governance Rollout](/types/4/0450-Governance-Rollout) - describes governance controls that are used when rolling out a governance program to the organization.
   * [0451 Notifications](/types/4/0451-Notifications) - describes governance controls that are used to notify people of changes, schedules and events.
   * [0462 Governance Actions](/types/4/0462-Governance-Action-Processes) - describes governance controls that are used to implement governance actions.
+
+* *domainIdentifier* - Identifier of the governance domain that recognizes this process. Zero typically means 'any' domain.
+* *summary* - Short description for summary tables.
+* *scope* - Breadth of responsibility or coverage.
+* *usage* - Guidance on how the element should be used.
+* *importance* - Relative importance of this definition compared to its peers.
+* *implications* - Impact on the organization, people and services when adopting the recommendation in this governance definition.
+* *outcomes* - Expected outcomes.
+* *results* - Actual results.
 
 ## GovernedBy relationship
 

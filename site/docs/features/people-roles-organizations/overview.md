@@ -49,10 +49,30 @@ Figure 5 shows the roles associated with a project.  There are the roles associa
 
 ## Types of roles
 
-Egeria's [open metadata types](/types) represent a role using the [`ActorRole`](/types/1/0118-Actor-Roles/) entity type.  Figure 6 shows a hierarchy of subtypes for 'ActorRole' that are also included in the open metadata types to help structure your organization's role types into broad groups that identify particular skill sets.  For example, Coco Pharmaceuticals may define role types of `Researcher` and `Data Scientist` that inherit from `PersonRole`; a role type of `DepartmentManager` that inherits from `TeamLeader`; and a role type of `ClinicalTrialLeader` that inherits from `ProjectLeader`. 
+Egeria's [open metadata types](/types) represent a role using the
+[`ActorRole`](/types/1/0118-Actor-Roles/) entity type.  Four subtypes distinguish what the role is
+attached to: `PersonRole` for a role held by a person, `TeamRole` for a role held by a team,
+`ITProfileRole` for a role held by a piece of IT infrastructure, and `SolutionActorRole` for a role in
+a solution design.
 
+Roles are grouped using the `actorRoleGroups` attribute rather than by defining a subtype for each
+kind of role.  It holds a list of group names - such as `asset-owner`, `team-leader`,
+`governance-officer` or `project-manager` - so a single role can belong to several groups at once, and
+new groupings can be introduced without changing the type system.  For example, Coco Pharmaceuticals
+may define role types of `Researcher` and `Data Scientist` that inherit from `PersonRole`, a
+`DepartmentManager` role tagged with the `team-leader` group, and a `ClinicalTrialLeader` role tagged
+with the `project-manager` group.
+
+Earlier versions of the open metadata types defined a specialized subtype for each of these groupings -
+`TeamLeader`, `TeamMember`, `CommunityMember`, `GovernanceOfficer`, `AssetOwner`, `SubjectAreaOwner`,
+`ComponentOwner`, `DataItemOwner` and others.  These subtypes were deprecated in release 6.1 and
+replaced by `actorRoleGroups`.
+
+<!-- STALE DIAGRAM: actor-role-types.svg still draws the role subtypes deprecated in 6.1.
+     It needs redrawing around ActorRole, its four subtypes and actorRoleGroups. -->
 ![Figure 6](actor-role-types.svg)
-> **Figure 6**: Inheriting from PersonRole (from model 0112) are the team roles (from model 0115) of TeamMember and TeamLeader; the ProjectLeader role (from model 0130); the CommunityMember role (from model 0140) and the GovernanceRole roles (from model 0445) of Governance Officer, Asset Owner, SubjectAreaOwner ComponentOwner and DataItemOwner.
+> **Figure 6**: The role type hierarchy.  This diagram predates release 6.1 and still shows the
+> specialized role subtypes that `actorRoleGroups` replaced; it is awaiting an update.
 
 ## Appointment History
 

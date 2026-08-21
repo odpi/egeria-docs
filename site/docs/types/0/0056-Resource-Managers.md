@@ -46,13 +46,29 @@ A `NotificationManager` entity describes a server that manages the distribution 
 
 A `SourceControlLibrary` entity describes a server that manages version of files related to software source and its related resources.
 
+* *libraryType* - The type of library - may be a product name or open source project name.
+
 ## ChangeManagementLibrary
 
 A `ChangeManagementLibrary` entity describes a server that manages descriptions and decisions about potential and actual changes to the IT landscape.
+
+* *libraryType* - The type of library - may be a product name or open source project name.
 
 ## SoftwareLibrary
 
 A `SoftwareLibrary` entity describes a server that manages the distribution of software modules and libraries in the deployment of capability to the IT landscape.
 
+* *libraryType* - The type of library - may be a product name or open source project name.
+
+
+## ResourceManager entity
+
+Defines a manager of resources. Typically, a software capability or an asset.
+
+## UserAccessDirectory entity
+
+A system that stores the access rights and groups for users (people and automated processes).
+
+* *libraryType* - The type of library - may be a product name or open source project name.
 
 --8<-- "snippets/abbr.md"

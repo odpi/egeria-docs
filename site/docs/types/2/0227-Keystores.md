@@ -21,6 +21,8 @@ The diagram below shows the structure of the `coco-user-directory.omsecrets` fil
 
 ![Key Store Example](keystore-example.svg)
 
+* *refreshTimeInterval* - Describes how frequently the processing should run - in minutes.
+
 ## UserAccountProfile classification
 
 The *UserAccountProfile* classification is used to describe the type and status of user accounts that are defined in the attach secrets collection.

@@ -1,9 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project 2020. -->
 
-
 # 0720 Information Supply Chains
-
 
 An [InformationSupplyChain](/concepts/information-supply-chain) is a high level view of lineage.
 
@@ -12,6 +10,11 @@ An [InformationSupplyChain](/concepts/information-supply-chain) is a high level 
 ## InformationSupplyChain entity
 
 An *InformationSupplyChain* entity is a [Collection](/types/0/0021-Collections) that identifies an information supply chain.  It contains the description of the purposes and scope of the information supply chain and the description of its importance to the business.
+
+* *scope* - Breadth of responsibility or coverage.
+* *dataProcessingPurposes* - The reasons why some processing is occurring or some data is retained.
+* *integrationStyle* - Mechanism to flow data and control along the segment.
+* *estimatedVolumetrics* - Properties that describe the expected volumes of data flowing through this segment.
 
 ## InformationSupplyChainLink
 
@@ -32,10 +35,7 @@ The second segment from the landing area to the data lake is the responsibility 
 
 ![Modelled Lineage Flow](area-7-lineage-example-summary.svg)
 
-
 ??? info "Further information"
     * Further detail on the modelling of the solution components can be found in [0735 Solution Ports and Wires](/types/7/0735-Solution-Ports-and-Wires).
-
-
 
 --8<-- "snippets/abbr.md"

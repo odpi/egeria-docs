@@ -16,7 +16,6 @@ In Egeria, the [Open Governance Service](/services/gaf-metadata-management) prov
 
 The *GovernanceAction* entity defines an executable action, or sequence of actions, to support a governance requirement.  It is a type of [GovernanceControl](/types/4/0420-Governance-Controls).
 
-
 ## GovernanceActionType entity
 
 The *GovernanceActionType* entity describes a type of call to a [governance service](/concepts/governance-service) running in a [governance engine](/concepts/governance-engine).  The engine to call is defined using the *GovernanceActionExecutor* relationship.  When the governance action type is used to initiate some activity, it results in the creation of an [Engine Action](/concepts/engine-action) to control the call to the governance service running in the linked governance engine.
@@ -24,6 +23,8 @@ The *GovernanceActionType* entity describes a type of call to a [governance serv
 It inherits from *GovernanceAction* and so has a unique name (*qualifiedName*) and *additionalProperties* attributes.  In addition, this type adds:
 
 * *waitTime* - the minimum number of minutes that the engine action should wait before starting.  This is in addition to any requested start time from the initiating user.
+
+* *producedGuards* - List of guards that this action type produces.
 
 ## GovernanceActionExecutor relationship
 
@@ -36,9 +37,9 @@ The *GovernanceActionExecutor* relationship identifies the [governance service](
 * *actionTargetFilter* - lists the names of the action targets to remove from the supplied action targets.
 * *actionTargetMap* - provides a translation map between the supplied name of an action target and the name supported by the implementation of the governance service.
 
-## TargetForActionType relationship
+## TargetForGovernanceAction relationship
 
-The *TargetForActionType* relationship identifies an element that should be passed to the [engine action](/concepts/engine-action) as a [TargetForAction](/types/4/0463-Engine-Actions) when it is started.  The caller may also add additional action targets.  It has the following attribute.
+The *TargetForGovernanceAction* relationship identifies an element that should be passed to the [engine action](/concepts/engine-action) as a [TargetForAction](/types/4/0463-Engine-Actions) when it is started.  The caller may also add additional action targets.  It has the following attribute.
 
 * *actionTargetName* is an identifier used by the resulting governance service to determine how to use the associated element.
 
@@ -52,7 +53,10 @@ GovernanceActionProcess also inherits from *GovernanceAction* so that it can be 
 
 The *GovernanceActionProcessFlow* relationship defines the first *GovernanceActionProcessStep* to run in a governance action process.   It includes an optional *guard* attribute that can be used by the processing engine for logging and predefined *requestParameters* to pass to the governance service when called.
 
-## GovernanceProcessStep entity
+* *guard* - Function, or value that must be true to travel down this control flow.
+* *requestParameters* - Request parameters to pass to the governance service when called.
+
+## GovernanceActionProcessStep entity
 
 The *GovernanceActionProcessStep* entity defines a [governance action process step](/concepts/governance-action-process-step).  This represents a step in a governance action process.  Its attributes provide a template for initializing an [engine action](/concepts/engine-action) when the step in the process runs.
 
@@ -60,9 +64,9 @@ GovernanceActionProcessStep is a *GovernanceActionType* and so has all of the at
 
 * *ignoreMultipleTriggers* - indicates that a governance action should only be triggered once from this governance action process step, no matter how many times the appropriate guards are produced.  This is important for long-running governance actions that may be triggered by multiple instances of previous steps but is held waiting for the mandatory guard.
 
-## NextGovernanceProcessStep relationship
+## NextGovernanceActionProcessStep relationship
 
-The *NextGovernanceProcessStep* relationship identifies the next step in the process flow.
+The *NextGovernanceActionProcessStep* relationship identifies the next step in the process flow.
 
 * *guard* - identifies the guard produced by the previous step that will cause this step to execute.
 * *mandatoryGuard* - indicates that this guard must be produced before the follow-on step is processed.
@@ -73,9 +77,28 @@ The follow-on action runs when all of its mandatory guards are produced by previ
 
 The *GovernanceActionProcessInstance* entity describes a running instance of a *GovernanceActionProcess*.  It is linked to its process using the [ProcessHierarchy](/types/2/0215-Software-Components) relationship.
 
+## AnalyticalActionProcess entity
+
+The *AnalyticalActionProcess* entity describes a governance action process that is used to drive an [analytical engine](/concepts/analytical-engine) to produce a report or other output.
+
+## CataloguingActionProcess entity
+
+The *CataloguingActionProcess* entity describes a governance action process that is used to extract metadata from an external source and catalog it in the open metadata repository.
+
+## SurveyingActionProcess entity
+
+The *SurveyingActionProcess* entity describes a governance action process that is used to survey a digital resource to deeply understand its content and context.
+
+## ExploringActionProcess entity
+
+The *ExploringActionProcess* entity describes a governance action process that is used to explore a digital resource to understand an overview of its content and context.
+
+## ProvisioningActionProcess entity
+
+The *ProvisioningActionProcess* entity describes a governance action process that is used to provision a digital resource to a target environment.
 
 ???+ deprecated "Deprecated types"
-    The *ignoreMultipleTriggers* attribute in the *NextGovernanceProcessStep* has been deprecated.  It is now located in the *GovernanceActionType* entity.
+    The *ignoreMultipleTriggers* attribute in the *NextGovernanceActionProcessStep* has been deprecated.  It is now located in the *GovernanceActionType* entity.
     The *supportedGuards* attribute in the *GovernanceActionType* has been deprecated in favour of the *producedGuards* entity.
 
 --8<-- "snippets/abbr.md"

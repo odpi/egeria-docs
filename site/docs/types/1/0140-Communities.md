@@ -9,4 +9,10 @@
 
 ![UML](0140-Communities.svg)
 
+## Community entity
+
+A group of people with a common interest or skill.
+
+* *mission* - The high-level goal of the activity.
+
 --8<-- "snippets/abbr.md"

@@ -26,4 +26,26 @@ Ports are used to define the interfaces of [Processes](/types/0/0010-Base-Model)
 * [LineageMapping relationships](/types/7/0770-Lineage-Mapping)
 * [Process Hierarchies](/types/2/0215-Software-Components)
 
+## Port entity
+
+An interface where data flows in and/or out of a process.
+
+* *portType* - Descriptor for a port that indicates the direction that data is flowing.
+
+## PortAlias entity
+
+A port for a composed process whose implementation comes from the port linked via a port delegation relationship.
+
+## PortImplementation entity
+
+A port with a concrete implementation.
+
+## PortDelegation relationship
+
+A relationship between a parent (composed) process port and a port from a more granular process. The relationship shows where data passed to the parent process is directed.
+
+## ProcessPort relationship
+
+A link between a process and one of its ports.
+
 --8<-- "snippets/abbr.md"

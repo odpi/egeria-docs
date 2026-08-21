@@ -5,7 +5,7 @@
 
 A *software server capability* is a [software capability](/concepts/software-capability) that is implemented in a [software server](/types/0/0040-Software-Servers).
 
-The distinction matters when cataloguing IT infrastructure.  A software capability may be supported by any kind of [IT infrastructure](/types/0/0030-Hosts-and-Platforms) - a host, a software server platform or a software server.  A *software server capability* narrows this to the capabilities that a running server offers, which is where most of the capabilities that manage data and metadata are found.
+The distinction matters when cataloguing IT infrastructure.  A software capability may be supported by any kind of [IT infrastructure](/types/0/0030-Operating-Platforms) - a host, a software server platform or a software server.  A *software server capability* narrows this to the capabilities that a running server offers, which is where most of the capabilities that manage data and metadata are found.
 
 Open metadata defines a large number of specializations, including:
 
@@ -19,7 +19,7 @@ Open metadata defines a large number of specializations, including:
 A software server capability is linked to the infrastructure that hosts it using the *SupportedSoftwareCapability* relationship, and to the [assets](/concepts/asset) it manages using the *ServerAssetUse* relationship.  Where the capability is the true master of the metadata it manages, its identifier is used to [document the provenance](/features/metadata-provenance/overview) of that metadata.
 
 ???+ info "Additional information"
-    * The *SoftwareServerCapability* type and the full list of its subtypes are described in [Model 0042 Software Capabilities](/types/0/0042-Software-Capabilities).
+    * The *SoftwareCapability* type and the full list of its subtypes are described in [Model 0042 Software Capabilities](/types/0/0042-Software-Capabilities).
     * [Software capability](/concepts/software-capability) describes the broader concept, including the capabilities that act as masters of metadata.
 
 --8<-- "snippets/abbr.md"

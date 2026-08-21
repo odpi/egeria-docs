@@ -33,16 +33,17 @@ A *TabularFileColumn* is a specialization of *TabularColumn* to enable a column 
 ![Schema for the CostCodes.csv file](csv-schema-example.svg)
 
 
-
-
 !!! info "Further Information"
 
     * [Relational database columns](/types/5/0534-Relational-Schemas) are specializations of the tabular schema.
 
 
-
 ??? deprecated "Deprecated types"
     The **TabularColumnType** entity has been deprecated because it restricts tabular columns to primitive types and some technologies will be able to support more types.
+
+## RootSchemaType entity
+
+The root of a complex schema - normally attaches to an asset or port.
 
 
 --8<-- "snippets/abbr.md"

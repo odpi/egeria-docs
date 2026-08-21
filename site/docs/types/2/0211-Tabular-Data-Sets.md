@@ -18,5 +18,9 @@ A data set with a tabular organization.
 
 A data set containing a collection of tabular data sets.
 
+## TabularDataSet entity
+
+A collection of data organized as tabular data.
+
 
 --8<-- "snippets/abbr.md"

@@ -13,16 +13,8 @@ A *Topic* is a type of [*DataSet*](/types/0/0010-Base-Model/#dataset) that is ac
 
 The additional attributes for *Topic* are:
 
-* *topicName* holds the fully qualified name of the topic.  This frees up the *name* property to hold a shorter, more human-readable name.
+* *resourceName* holds the fully qualified name of the topic.  This frees up the *displayName* property to hold a shorter, more human-readable name.
 * *topicType* identifies the type of topic.  This may refer to its reliability or other features supported by the event broker.
-
-## KafkaTopic entity
-
-[Apache Kafka](https://kafka.apache.org/) is a popular open source technology that provides support for *Topics*.  There is a specific type for an Apache Kafka topic because there is a [resource connector](/guides/developer/resource-connectors/open-metadata-topic-connector) for Apache Kafka and this type identifies when it is appropriate to use this connector to access the topic contents.
-
-## SubscriberList entity and TopicSubscribers relationship
-
-Some services manage a specific subscriber list.  This is represented by the *SubscriberList* entity type.  The links to the topics that the subscription refers to is represented by the *TopicSubscribers* relationship type.
 
 ## LogFile entity
 

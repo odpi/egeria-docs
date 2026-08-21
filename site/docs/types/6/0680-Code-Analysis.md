@@ -34,9 +34,9 @@ The *CodeAnalysisAnnotation* entity captures the results from the analysis of a 
 * *testFileCount* - Number of files in the source code repository that contain tests.
 * *documentedSymbolCount* - Number of exported symbols that carry documentation.  Paired with publicSymbolCount, this gives the documentation coverage of the component's public surface.
 
-## RepositoryAnalysisAnnotation entity
+## ContributorAnalysisAnnotation entity
 
-The *RepositoryAnalysisAnnotation* entity captures the results from the analysis of a source code repository.
+The *ContributorAnalysisAnnotation* entity captures the results from the analysis of a source code repository.
 
 * *busFactor* -  the minimum number of team members that have to suddenly disappear from a project before the project stalls due to lack of knowledgeable or competent personnel.
 * *totalContributorCount* - the number of distinct contributors to the repository during its lifetime.

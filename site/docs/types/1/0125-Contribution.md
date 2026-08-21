@@ -14,6 +14,8 @@ The *ContributionRecord* accumulates achievements of an individual. Specifically
 - `isPublic` indicates whether the values in the contribution record can be shared with colleagues or is only visible to user(s) that connect with one of the linked user identities or systems that are part of the open metadata ecosystem.
 - `karmaPoints` captures the total number of points that the actor has earned from their activity.
 
+* *karmaPoints* - Points capturing a person's engagement with open metadata.
+
 
 ## Contribution relationship
 

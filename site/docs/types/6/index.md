@@ -29,7 +29,7 @@ The annotations from a particular run of a survey action service are grouped tog
 * **[0650 Relationship Discovery](0650-Relationship-Discovery.md)**
 * **[0660 Measurements](0660-Resource-Measures.md)**
 * **[0680 Code Analysis](/types/6/0680-Code-Analysis)**
-* **[0690 Request for Action](0690-Request-for-Action.md)**
+* **[0690 Request for Action](0690-Request-For-Action.md)**
 
 ![UML Packages](area-6-discovery-overview.svg)
 

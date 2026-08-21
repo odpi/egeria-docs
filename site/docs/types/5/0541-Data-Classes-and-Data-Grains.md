@@ -18,7 +18,7 @@ The *DataClass* entity provides the specification of a [logical data type](/conc
 
 The data class is describing a set of data values found in a data field of a digital resource.  For example, the data values stored in a particular column of a database table.  When an automated process uses the data class, it assesses each of the data values it finds against the definition of the data class and determines the percentage of values that match the specification.  The *matchThreshold* determines what percentage of values must match to consider the data to be of the type described in the data class.  This discovered percentage can also be used as a confidence level or quality score.
 
-The *DataClass* entity inherits from [DataValueSpecification](/types/5/0540-Data-Value-Specification) and adds the following attributes:
+The *DataClass* entity inherits from [DataValueSpecification](/types/5/0540-Data-Value-Specifications) and adds the following attributes:
 
 * *allowsDuplicateValues* - Indicates whether the values in the data resource may repeat, or whether this is a list of unique identifiers/values.
 * *isNullable* - Are null values allowed?
@@ -29,13 +29,16 @@ The *DataClass* entity inherits from [DataValueSpecification](/types/5/0540-Data
 * *sampleValues* - List of sample values for the data field.  This helps people select an appropriate data class.
 * *dataPatterns* - Regular expressions that characterize the values in the data field.
 
+* *isCaseSensitive* - Is this valid value case-sensitive, or should the values match irrespective of case?
+* *valueRangeTo* - Highest value in the data.
+
 ## DataClassComposition relationship
 
 Data classes can be organized into a structural hierarchy using the *DataClassComposition* relationship.  For example, an address data class could be composed of a number of data classes that each describe a part of the address.  The properties in this relationship show how the fields are arranged.
 
 ## DataGrain entity
 
-The *DataGrain* entity describes a description of a specific granularity.  It also inherits from [DataValueSpecification](/types/5/0540-Data-Value-Specification) and adds the following attributes:
+The *DataGrain* entity describes a description of a specific granularity.  It also inherits from [DataValueSpecification](/types/5/0540-Data-Value-Specifications) and adds the following attributes:
 
 * *granularityBasis* - Describes the dimension that controls the granularity.
 * *grainStatement* - Defines the granularity of the data in terms of a single row/object.

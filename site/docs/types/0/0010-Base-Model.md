@@ -89,10 +89,16 @@ Referenceable also has provision for storing optional descriptive information:
     * [Further information on the use of Referenceable.](/concepts/referenceable)
     * [Further information on external identifiers](/features/external-identifiers/overview)
 
+* *qualifiedName* - Unique name for the element.
 
 ## AuthoredReferenceable entity
 
-The *AuthoredReferenceable* is an element that has optional lifecycle states defined either by the *ContentStatus* enumeration, or if *contentStatus==OTHER*, the *userDefinedContentStatus* attribute. 
+The *AuthoredReferenceable* is an element that has optional lifecycle states defined either by the *ContentStatus* enumeration, or if *contentStatus==OTHER*, the *userDefinedContentStatus* attribute.
+
+* *contentStatus* - Defines the current status of an authored referenceable.
+* *userDefinedContentStatus* - Extend or replace the valid content statuses with additional statuses controlled through valid metadata values.
+* *authors* - List of authors for the external source.
+ 
 
 ## Asset entity
 
@@ -104,7 +110,6 @@ An [Asset](/concepts/asset) is a metadata entity that describes a [resource](/co
 * *namespacePath* provides a qualifying name that defines how the digital resources of a particular type are organized.  Often, concatenating the namespace with the resource name creates the unique name of the resource for a particular context.
 * *deployedImplementationType* attribute describes the class of technology that the asset belongs to.  Values for this attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
 * *source* attribute identifies the organization that supplies the technology.  For example, if the asset described a DB2 database, then the source would be IBM.
-* *userDefinedStatus* can be used to extend the lifecycle status values.  It is set up when the lifecycle status is OTHER. 
 
 The values set in an *Asset* entity tend to be focused around the implementation of the resource.  The [*SupplementaryProperties*](/types/3/0395-Supplementary-Properties) relationship allows a more business-oriented description to be attached.
 
@@ -114,14 +119,16 @@ More information on assets can be found in the [Metadata Manager](/patterns/meta
 
 *Infrastructure* represents both the physical and digital assets that the organization runs its business on.  It has optional lifecycle states defined either by the *DeploymentStatus* enumeration, or if *deploymentStatus==OTHER*, the *userDefinedDeploymentStatus* attribute.
 
-[*ITInfrastructure*](/types/0/0030-Hosts-and-Platforms) is a subtype of *Infrastructure* describing Information Technology (IT) infrastructure that runs IT services.  There is more information on the different types of *ITInfrastructure* in:
+[*ITInfrastructure*](/types/0/0030-Operating-Platforms) is a subtype of *Infrastructure* describing Information Technology (IT) infrastructure that runs IT services.  There is more information on the different types of *ITInfrastructure* in:
 
-- [0030 Hosts and Platforms](/types/0/0030-Hosts-and-Platforms)
+- [0030 Hosts and Platforms](/types/0/0030-Operating-Platforms)
 - [0035 Complex Hosts](/types/0/0035-Complex-Hosts)
 - [0037 Software Server Platforms](/types/0/0037-Software-Server-Platforms)
 - [0040 Software Servers](/types/0/0040-Software-Servers)
 - [0042 Software Capabilities](/types/0/0042-Software-Capabilities)
 
+* *deploymentStatus* - Defines the current status of an infrastructure element.
+* *userDefinedDeploymentStatus* - Extend or replace the valid deployment statuses with additional statuses controlled through valid metadata values.
 
 ## Process entity
 
@@ -152,9 +159,15 @@ The *DataAsset* entity described a collection of data.  It has optional lifecycl
 
 [Area 2](/types/2/0210-Data-Stores) provides more detail on the different types of data assets.  A good place to start is model [0210 Data Stores](/types/2/0210-Data-Stores/).
 
+* *contentStatus* - Defines the current status of an authored referenceable.
+* *userDefinedContentStatus* - Extend or replace the valid content statuses with additional statuses controlled through valid metadata values.
+* *authors* - List of authors for the external source.
+
 ## SampleData relationship
 
 The *SampleData* relationship links an *Asset* entity describing a collection of sample data that originates from the resource represented by the *Referenceable* entity.
+
+* *samplingMethod* - Description of the technique used to create the sample.
 
 ## Anchors classification
 
@@ -174,6 +187,11 @@ The *Anchors* classification is used internally by the open metadata ecosystem t
 
 Finally, the *Memento* classification identifies that the Referenceable entity it is attached to, refers to a real-world asset/artifact that has either been deleted or archived offline. The entity has been retained to show its role in the [lineage of other assets/artifacts](/features/lineage-management/overview). The properties in this classification identifies the archive processing and any information that helps to locate the asset/artifact in the archive (if applicable).
 
-
+* *archiveDate* - Timestamp when the archive occurred or was detected.
+* *archiveUser* - Name of user that performed the archive - or detected the archive.
+* *archiveProcess* - Name of process that performed the archive - or detected the archive.
+* *archiveService* - Name of service that created this classification.
+* *archiveMethod* - Name of method that created this classification.
+* *archiveProperties* - Properties to locate the real-world counterpart in the archive.
 
 --8<-- "snippets/abbr.md"

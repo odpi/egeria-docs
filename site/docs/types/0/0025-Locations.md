@@ -29,21 +29,30 @@ The notion of a location is variable, and the classifications help to clarify th
 
 ### FixedLocation classification
 
-*FixedLocation* means that the location represents a physical place where, for example, [`Host`s](/types/0/0030-Hosts-and-Platforms/#host), [servers](/types/0/0040-Software-Servers) and hence data may be located. This could be an area of a data center, the building the data center is located in, or even the country where the server/data is located.
+*FixedLocation* means that the location represents a physical place where, for example, [`Host`s](/types/0/0030-Operating-Platforms/#host), [servers](/types/0/0040-Software-Servers) and hence data may be located. This could be an area of a data center, the building the data center is located in, or even the country where the server/data is located.
 
 The physical location may be defined using a postal address or coordinates. The coordinates should be accompanied by the type of map projection used. For example, Goode's Homolosine Equal Area Projection, Mercator Projection, Gall-Peters Projection, Miller Cylindrical Projection, Mollweide Projection, Sinusoidal EqualArea Projection or Robinson Projection.
+
+* *postalAddress* - Postal address of the location.
+* *mapProjection* - The scheme used to define the meaning of the coordinates.
+* *coordinates* - Geographical coordinates of this location.
+* *timeZone* - Timezone for the location.
 
 ### SecureLocation classification
 
 *SecureLocation* indicates that there is restricted access to the location. This can include a description of the type of security.
 
+* *description* - Description of the element or associated resource in free-text.
+* *level* - Level of security at this location.
+
 ### CyberLocation classification
 
 *CyberLocation* means that the location describes something in cyberspace. It may include the network address of this location.
 
-### MobileAsset classification
+* *networkAddress* - Network address used to connect to the endpoint.
+
+### MobileResource classification
 
 Indicates that an asset has no fixed physical location.
-
 
 --8<-- "snippets/abbr.md"

@@ -36,5 +36,71 @@ Hence one is a translation of the other.  The language of each term is defined i
 For example, this relationship would be use to say that "Cat" ISA "Animal".
 * **ValidValue** is a relationship that shows the validValue term represents one of the valid values that could be assigned to a data item that has the meaning described in the **validValueFor** term.
 
+## Antonym relationship
+
+Link between glossary terms that have the opposite meaning.
+
+* *description* - Description of the element or associated resource in free-text.
+* *expression* - Expression used to create the annotation.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *termRelationshipStatus* - Defines the confidence in the assigned relationship.
+
+## ISARelationship relationship
+
+Link between a more general glossary term and a more specific definition.
+
+* *description* - Description of the element or associated resource in free-text.
+* *expression* - Expression used to create the annotation.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *termRelationshipStatus* - Defines the confidence in the assigned relationship.
+
+## PreferredTerm relationship
+
+Link to an alternative term that the organization prefers to use.
+
+* *description* - Description of the element or associated resource in free-text.
+* *expression* - Expression used to create the annotation.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *termRelationshipStatus* - Defines the confidence in the assigned relationship.
+
+## RelatedTerm relationship
+
+Link between similar glossary terms.
+
+* *description* - Description of the element or associated resource in free-text.
+* *expression* - Expression used to create the annotation.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *termRelationshipStatus* - Defines the confidence in the assigned relationship.
+
+## ReplacementTerm relationship
+
+Link to a glossary term that is replacing an obsolete glossary term.
+
+* *description* - Description of the element or associated resource in free-text.
+* *expression* - Expression used to create the annotation.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *termRelationshipStatus* - Defines the confidence in the assigned relationship.
+
+## Synonym relationship
+
+Link between glossary terms that have the same meaning.
+
+* *description* - Description of the element or associated resource in free-text.
+* *expression* - Expression used to create the annotation.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *termRelationshipStatus* - Defines the confidence in the assigned relationship.
+
 
 --8<-- "snippets/abbr.md"

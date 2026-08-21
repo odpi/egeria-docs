@@ -3,7 +3,7 @@
 
 # 0117 IT Profiles
 
-Often [IT infrastructure](/types/0/0030-Hosts-and-Platforms) runs as a background process with its own user identity. The ability to create an IT profile helps to identify which pieces of IT infrastructure is responsible for specific activity.
+Often [IT infrastructure](/types/0/0030-Operating-Platforms) runs as a background process with its own user identity. The ability to create an IT profile helps to identify which pieces of IT infrastructure is responsible for specific activity.
 
 ![UML](0117-IT-Profiles.svg "Describing an engine's user identities")
 
@@ -14,7 +14,7 @@ The `ActorProfile` links to the `UserIdentity` entities for this piece of IT inf
 
 ## ITInfrastructureProfile
 
-`ITinfrastructureProfile` links the actor profile to the [`ITInfrastructure`](/types/0/0030-Hosts-and-Platforms) asset that represents the specific piece of IT Infrastructure that it represents.
+`ITinfrastructureProfile` links the actor profile to the [`ITInfrastructure`](/types/0/0030-Operating-Platforms) asset that represents the specific piece of IT Infrastructure that it represents.
 
 
 

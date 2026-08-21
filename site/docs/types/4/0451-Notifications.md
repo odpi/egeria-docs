@@ -38,5 +38,7 @@ The *NotificationSubscriber* relationship links the notification type to the act
 
 Notice that the *NotificationSubscriber* relationship is a [multi-link](/concepts/uni-multi-link) relationships which allows a subscriber to have multiple subscriptions to the same notification type.  Each of these subscriptions would be in a different state with typically only one in an active state.
 
+* *lastNotification* - Records the last time a notification was sent to a subscriber.
+
 
 --8<-- "snippets/abbr.md"

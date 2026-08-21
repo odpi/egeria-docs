@@ -428,7 +428,7 @@ nav:
               - Translations: types/0/0022-Translations.md
               - Locations: types/0/0025-Locations.md
               - Endpoints: types/0/0026-Endpoints.md
-              - Operating Platforms: types/0/0030-Hosts-and-Platforms.md
+              - Operating Platforms: types/0/0030-Operating-Platforms.md
               - Hosts: types/0/0035-Complex-Hosts.md
               - Storage: types/0/0036-Storage.md
               - Software Server Platforms: types/0/0037-Software-Server-Platforms.md
@@ -449,9 +449,7 @@ nav:
               - Teams: types/1/0115-Teams.md
               - IT Profiles: types/1/0117-IT-Profiles.md
               - Actor Roles: types/1/0118-Actor-Roles.md
-              - Team Roles: types/1/0119-Team-Roles.md
               - Assignment Scopes: types/1/0120-Assignment-Scopes.md
-              - Collections (Area 1): types/1/0120-Collections.md
               - Contribution: types/1/0125-Contribution.md
               - Projects: types/1/0130-Projects.md
               - Actions for People: types/1/0135-Actions-For-People.md
@@ -545,12 +543,11 @@ nav:
               - Event Schemas: types/5/0535-Event-Schemas.md
               - API Schemas: types/5/0536-API-Schemas.md
               - Display Schemas: types/5/0537-Display-Schemas.md
-              - Data Value Specification: types/5/0540-Data-Value-Specification.md
+              - Data Value Specification: types/5/0540-Data-Value-Specifications.md
               - Data Classes and Data Grains: types/5/0541-Data-Classes-and-Data-Grains.md
               - Reference Data: types/5/0545-Reference-Data.md
               - Instance Metadata: types/5/0550-Instance-Metadata.md
               - Design Models: types/5/0565-Design-Models.md
-              - Design Model Organization: types/5/0566-Design-Model-Organization.md
               - Metamodels: types/5/0570-Metamodels.md
               - Concept Models: types/5/0571-Concept-Models.md
               - Data Dictionaries: types/5/0580-Data-Dictionaries.md
@@ -571,7 +568,7 @@ nav:
               - Relationship Discovery: types/6/0650-Relationship-Discovery.md
               - Resource Measures: types/6/0660-Resource-Measures.md
               - Code Analysis: types/6/0680-Code-Analysis.md
-              - Request for Action: types/6/0690-Request-for-Action.md
+              - Request for Action: types/6/0690-Request-For-Action.md
           - 7. Lineage and Usage:
               - Area 7 Lineage: types/7/index.md
               - Data Sharing: types/7/0705-Data-Sharing.md

@@ -25,12 +25,15 @@ The *TermsAndConditions* entity identifies the rules relating the use of an elem
 
 *LicenseType* and *CertificationType* are special types of *TermsAndConditions* entities.
 
+* *entitlements* - The named list of rights and permissions granted.
+* *restrictions* - The named list of limiting conditions or measures imposed.
+* *obligations* - The named list of actions, duties, or commitments required.
+
 ### LicenseType entity
 
 The data economy brings licensing to data and metadata.  Even open data typically has a license. The license type defines the permitted uses and other requirements for using the resource. The [GovernedBy](/types/4/0401-Governance-Definitions) relationship is used to link the license type to the resources where the license applies, and the [License](/types/4/0481-Licenses) relationship is used to link the consumers of the resource to the license.  
 
 For example, if the resource was a [Digital Product](/types/7/0710-Digital-Products), it would be linked to the *LicenseType* using the *GovernedBy* relationship. The consumers of the digital product would be granted a license to the digital product using the *License* relationship.
-
 
 ### CertificationType entity
 
@@ -48,6 +51,5 @@ Organizations define service level objectives (SLOs) to measure the performance 
 Privacy regulations such as the EU's General Data Processing Regulation (GDPR) require data subjects to agree the processing that is permitted on their data. Often the processing is summarized in terms of the outcome (or the "purpose" of the processing) with the option to drill down into the details of how this processing is achieved.
 
 *DataProcessingPurpose* is use to document a particular purpose.  [Model 0485](/types/4/0485-Data-Processing-Purposes) provides additional types to capture the detailed data processing descriptions associated with a *DataProcessingPurpose* and record who or what has permission to perform the specified processing.
-
 
 --8<-- "snippets/abbr.md"

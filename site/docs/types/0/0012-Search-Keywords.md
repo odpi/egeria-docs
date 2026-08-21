@@ -13,6 +13,9 @@ It is possible to link assets and schemas to glossary terms to make them findabl
 
 The *SearchKeyword* entity stores the definition of the search keyword.
 
+* *displayName* - Display name of the element used for summary tables and titles.
+* *description* - Description of the element or associated resource in free-text.
+
 ## SearchKeywordLink
 
 The *SearchKeywordLink* relationship links *SearchKeyword*s with the asset and their associated elements.

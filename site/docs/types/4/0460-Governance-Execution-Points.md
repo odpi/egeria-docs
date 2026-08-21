@@ -7,30 +7,40 @@ A [*governance execution point*](/concepts/governance-execution-point) defines s
 
 ![UML](0460-Governance-Execution-Points.svg)
 
-## ExecutionPointDefinition entity
+## ExecutionPoint classification
 
-An execution point is represented by an *ExecutionPointDefinition* entity.  There are three subtypes:
+An execution point is represented by the *ExecutionPoint* classification, attached to the
+[Referenceable](/types/0/0010-Base-Model) that implements it.  It has one attribute:
 
-* *ControlPointDefinition* describes a decision that must be made to resolve a situation.  The decision is typically passed to a human, but it could be an analytical process.
-* *EnforcementPointDefinition* describes an action that is taken to enforce a governance control.
-* *VerificationPointDefinition* describes a test that must be made to determine if a particular condition is true.  The result is logged, and typically follow-on actions are initiated if the result is not what was expected.
+* *qualifiedName* - the qualified name of the governance definition that this execution point implements.
 
-The *ExecutionPointDefinition* entities are created during the design of the governance program.  They characterize the types of implementation components that are needed to support the governance requirements.  
-
-## ExecutionPointUse relationship
-
-*ExecutionPointDefinition* entities are linked to the appropriate [Governance Definition](/types/4/0401-Governance-Definitions) using the *ExecutionPointUse* relationship. Typically, the governance definitions linked to the governance execution point definitions are [Governance Controls](/types/4/0420-Governance-Controls).
-
-## ControlPoint, VerificationPoint and EnforcementPoint classifications
-
-The classifications *ControlPoint*, *VerificationPoint* and *EnforcementPoint* are used to label entities describing implementation components such as [Processes](/types/0/0010-Base-model) with the type of execution point and its qualified name that they implement. They are often found on elements such as:
+Execution points label the implementation components that carry out a requirement of the governance
+program - typically elements such as:
 
 * [Governance Action Process Steps](/types/4/0462-Governance-Action-Processes)
 * [Engine Actions](/types/4/0463-Engine-Actions)
+* [Processes](/types/0/0010-Base-Model)
 
-These classifications can be used to drive additional audit logging when the implementation component is running. Logging information about the activities of these components with the qualifiedName of the execution point definition makes it easier to correlate the activity with the governance definitions. 
+Recording the *qualifiedName* of the governance definition alongside the running component makes it
+possible to correlate the component's activity with the governance definitions it serves, and can be
+used to drive additional audit logging while that component runs.  The governance definitions referred
+to are usually [Governance Controls](/types/4/0420-Governance-Controls).
 
+The three subtypes below distinguish what kind of activity the component performs.
 
+## ControlPoint classification
 
+*ControlPoint* describes a decision that must be made to resolve a situation.  The decision is
+typically passed to a human, but it could be an analytical process.
+
+## VerificationPoint classification
+
+*VerificationPoint* describes a test that must be made to determine whether a particular condition is
+true.  The result is logged, and follow-on actions are typically initiated if the result is not what
+was expected.
+
+## EnforcementPoint classification
+
+*EnforcementPoint* describes an action that is taken to enforce a governance control.
 
 --8<-- "snippets/abbr.md"

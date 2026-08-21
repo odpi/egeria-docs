@@ -53,11 +53,11 @@ The principle asset types are
 [InformationView](/types/2/0235-Information-View)
 for forms, reports and queries respectively.
 
-If a SoftwareServerCapability such as an
+If a SoftwareCapability such as an
 [Application](/types/0/0050-Applications-and-Processes) or 
 [ReportingEngine](/types/0/0055-Data-Processing-Engines) is defined,
 any asset created is automatically linked to it using the
-[ServerAssetUse](/types/0/0045-Servers-and-Assets)
+[CapabilityAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 
 When a **DataContainer** is created for a report or a form, it is represented as a

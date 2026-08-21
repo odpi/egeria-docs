@@ -22,15 +22,20 @@ Once approved, the changes identified in the editing collection are made to the 
 
 The *ScopingCollection* classification identifies that a collection contains copies of elements that are being selected for a project or other activity.  It is used to allow discussion and review for which elements are to be worked on.
 
+* *description* - Description of the element or associated resource in free-text.
+
 ## EditingCollection classification
 
 The *EditingCollection* classification identifies that a collection contains copies of live elements that are being updated as part of a controlled development process.
 
 The contents of the editing collection may represent a single change, changes associated with a particular project/community or may represent a new release of the whole collection.
 
+* *description* - Description of the element or associated resource in free-text.
+
 ## StagingCollection classification
 
 The *StagingCollection* classification identifies that a collection contains copies of elements that are approved to be copied from one collection to another.  When the staging collection's elements are merged into the new collection, an elements that have been previously published this way are updated.
 
+* *description* - Description of the element or associated resource in free-text.
 
 --8<-- "snippets/abbr.md"

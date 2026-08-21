@@ -23,4 +23,28 @@ The *Notification* describes information that needs to be passed to an actor.
 
 The *Review* entity describes an assessment of the element(s) linked via the *ActionTarget* relationship.
 
+* *reviewDate* - Date of the review.
+* *comment* - Notes provided by the steward.
+
+
+## ActivityEntry entity
+
+Details of an activity performed by an actor.
+
+## BlogEntry entity
+
+Entry in a blog published by an actor.
+
+## JournalEntry entity
+
+Private journal entry by an actor.
+
+## Meeting entity
+
+Two or more people come together to discuss a topic, agree and action or exchange information.
+
+* *objective* - Reason for the meeting and intended outcome.
+* *minutes* - Description of what happened at the meeting.
+* *decisions* - Decisions made during the meeting.
+
 --8<-- "snippets/abbr.md"

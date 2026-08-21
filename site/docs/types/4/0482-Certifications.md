@@ -9,13 +9,26 @@ The description of a particular type of certification is described using a [*Cer
 
 The certifications awarded can be captured in the metadata repository to enable both use and management of the certification process.  
 
-
-
 ![UML](0482-Certifications.svg)
 
 ## Certification relationship
 
 An element that meets the requests laid out in a certification type is said to be "certified".  This is represented by the *Certification* relationship. This relationship is a *multi-link* relationship so multiple certifications, with different conditions, can be defined at one time.
+
+* *certificateId* - Unique identifier of the actual certificate.
+* *coverageStart* - Start date for the certification/license.
+* *coverageEnd* - End date for the certification/license.
+* *conditions* - Any special conditions or endorsements over the basic certification/license type.
+* *certifiedBy* - Person or organization awarding the certification.
+* *certifiedByTypeName* - Type of element referenced in the certifiedBy property.
+* *certifiedByPropertyName* - Name of the property from the element used to identify the certifiedBy property.
+* *custodian* - The person, engine or organization that will ensure the certification/license is honored.
+* *custodianTypeName* - Type of element referenced in the custodian property.
+* *custodianPropertyName* - Name of the property from the element used to identify the custodian property.
+* *recipient* - The person or organization that received the certification.
+* *recipientTypeName* - Type of element referenced in the recipient property.
+* *recipientPropertyName* - Name of the property from the element used to identify the recipient property.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
 
 ## RegulationCertificationType relationship
 

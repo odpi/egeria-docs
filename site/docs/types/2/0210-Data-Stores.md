@@ -11,9 +11,16 @@
 
 *DataSet* represents a collection of related data. This data does not need to be stored together. The *formula* property describes the logic used to populate the DataSet, *formulaType* describes the notation language used to describe the formula, and *deployedImplementationType* describes the class of technology that this data set belongs to.
 
+* *formula* - Formula that describes the behaviour of the element. May include placeholders for queryIds.
+* *formulaType* - Format of the expression provided in the formula attribute.
+
 ## DataStore entity
 
 The *DataStore* entity describes a physical [digital resource](/concepts/digital-resource) that supplies data.  The *deployedImplementationType* attribute describes the class of technology that is used in its implementation.  Values for the *deployedImplementationType* attribute can be managed for consistency in a [*deployed implementation type*](/concepts/deployed-implementation-type) valid value set.
+
+* *pathName* - The fully qualified physical location of the data store.
+* *storeCreateTime* - Creation time of the data store.
+* *storeUpdateTime* - Last known modification time.
 
 ## DataFeed entity
 
@@ -23,9 +30,19 @@ The *DataStore* entity describes a physical [digital resource](/concepts/digital
 
 The *DataSetContent* relationship defines how data is supplied to a [DataSet](/types/0/0010-Base-Model) from a particular [digital resources](/concepts/digital-resource).  The DataSet entity includes a property called *formula*.  This describes the logic that is used to populate the data set.  The formula can include placeholders.  These placeholders are defined by the *queryId* properties in the linked DataSetContent relationships.  The associated *query* property describes how the data from the linked dataContent resource is selected and *queryType* identifies the language that the query is written in.
 
+* *query* - Query used to extract data, can include placeholders.
+* *queryId* - Placeholder for a query.
+* *queryType* - Type of query used to extract data.
+* *iscQualifiedName* - Unique name for the associated Information Supply Chain.
+
 ## DataAssetEncoding classification
 
 The *DataAssetEncoding* classification provides the ability to store details of the data asset's format.
+
+* *encodingType* - Type of encoding scheme used on the data.
+* *encodingLanguage* - Language used in the encoding.
+* *encodingDescription* - Description of the encoding.
+* *encodingProperties* - Additional properties describing the encoding.
 
 ## DataScope classification
 

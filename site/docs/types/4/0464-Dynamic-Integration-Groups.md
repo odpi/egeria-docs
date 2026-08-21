@@ -21,12 +21,14 @@ The integration connectors to run in an *integration group* are specified via th
 - *startDate* sets up a date/time that determines when the integration connector can start running.
 - *refreshTimeInterval* sets up the number of minutes between each call to the connector to refresh the metadata. Zero means that refresh is only called at server start up and whenever the refresh REST API request is made to the integration daemon. If the refresh time interval is greater than 0 then additional calls to refresh are added spaced out by the refresh time interval.
 - *connectorShutdownDate* sets up a date/time that determines when the integration connector must stop running.
-- *generateIntegrationReport* indicates whether the integration connector should be generating integration reports each time it runs.
 - *permittedSynchronization* is an optional property that defines the permitted directions of metadata flow between the third party technology and open metadata. If the integration connector attempts to flow metadata in a direction that is not permitted, it receives the `UserNotAuthorizedException`. These are the different values for this property and their effect:
     
     - `TO_THIRD_PARTY` - The third party technology is logically downstream of open metadata. This means the open metadata ecosystem is the originator and owner of the metadata being synchronized. Any updates detected in the third technology are overridden by the latest open metadata values.
     - `FROM_THIRD_PARTY` - The third party technology is logically upstream (the originator and owner of the metadata). Any updates made in open metadata are not passed to the third party technology and the third party technology is requested to refresh the open metadata version.
     - `BOTH_DIRECTIONS` - Metadata exchange is permitted in both directions. Synchronization is halted on a specific element if potentially clashing updates have occurred both in the third party technology and open metadata. Such conflicts are logged on the audit log and resolved through manual stewardship.
+
+* *metadataCollectionQualifiedName* - Qualified name of a metadata collection asset that is the home of the metadata catalogued by the integration connector.
+* *generateConnectorActivityReports* - Should the service/connector create integration reports based on its activity? (Default is true.).
 
 ## IntegrationConnector entity
 
@@ -35,6 +37,8 @@ The integration connectors to run in an *integration group* are specified via th
 An integration connector can be linked to multiple integration groups via the *RegisteredIntegrationConnector* relationship.  It can only be linked to a specific integration group once.  If multiple instances of the same integration connector implementation is to be specified in a group. each one is represented by an *IntegrationConnector* entity linked to its own *Connection* entity that describes its required behaviour.
 
 The *usesBlockingCalls* attribute determines whether the integration daemon calls the integration connector using the `engage()` methods (to allow it to make blocking calls), or the `refresh()` method.
+
+* *usesBlockingCalls* - The integration connector needs to use blocking calls to a third party technology and so needs to run in its own thread.
 
 ## CatalogTarget relationship
 
@@ -58,25 +62,6 @@ An integration connector may have multiple catalog targets.  The attributes of t
   - `ARCHIVE` is the default value and means that the element is archived so that it is still available for lineage queries, even though it is no longer returned on normal queries.
   - `SOFT_DELETE` means that the element is deleted.  It is no longer visible to metadata queries.  However it can be restored back into the active repository if it has been deleted in error.
 
-## IntegrationReport entity
-
-The *IntegrationReport* entity describes the updates made by an [integration connector](/concepts/integration-connector) during a single call to its `refresh()` method.  A report is only created if the connector made changes (create, update, delete) to the metadata.
-
-The attributes are as follows:
-
-* *serverName* - name of the [integration daemon](/concepts/integration-daemon) where the integration connector is running/ran.
-* *connectorId* : unique identifier of the connector.  This is either set in the integration daemon's configuration document or it is the unique identifier (guid) of the *RegisteredIntegrationConnector* relationship that links the integration connector into a running integration group.
-* *connectorName* : name of the connector.  This is either set in the integration daemon's configuration document or it is the unique identifier (guid) of the *RegisteredIntegrationConnector* relationship that links the integration connector into a running integration group.
-* *refreshStartDate* : The date/time that the `refresh()` call was made to the integration connector.
-* *refreshCompletionDate* : The date/time that the integration connector returned from the `refresh()` call.
-* *createCounts* : A map of element type names to the number of instances of that type that were created and anchored to the anchor subject.
-* *updateCounts* : A map of element type names to the number of instances of that type that were updated while anchored to the anchor subject.
-* *deleteCounts* : A map of element type names to the number of instances of that type that were deleted while anchored to the anchor subject.
-* *additionalProperties* - additional properties of importance to the integration connector.
-
-## RelatedIntegrationReport relationship
-
-The *RelatedIntegrationReport* relationship links the anchor entity to an integration report.
-
+* *metadataCollectionQualifiedName* - Qualified name of a metadata collection asset that is the home of the metadata catalogued by the integration connector.
 
 --8<-- "snippets/abbr.md"

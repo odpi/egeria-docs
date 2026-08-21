@@ -19,9 +19,16 @@ The *BusinessImperative* entity defines a business goal that is critical to the 
 
 The *Regulation* entity defines a relevant legal regulation that the business operation must comply with.  Often regulations are divided in regulation articles.
 
+* *regulationSource* - Source of the regulation.
+* *regulators* - Enforcers of the regulation.
+
 ## Regulator relationship
 
 The *Regulator* relationship links a regulation to one or more regulators.
+
+* *label* - Display label to use when displaying this lineage relationship in a lineage graph.
+* *description* - Description of the element or associated resource in free-text.
+* *scope* - Breadth of responsibility or coverage.
 
 ## RegulationArticle entity
 

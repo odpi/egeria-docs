@@ -50,7 +50,7 @@ described aimed at different types of technology.
 Data value specification describe the characteristics of data values. For example, the data class specifies logical types of data - such as data, address, credit card, social security number.
 A data grain identifies the granularity of a row/object.
 
-* **[0540 Data Value Specification](0540-Data-Value-Specification.md)**
+* **[0540 Data Value Specification](0540-Data-Value-Specifications.md)**
 * **[0541 Data Classes and Data Grains](0541-Data-Classes-and-Data-Grains.md)**
 
 Reference data describes standard sets of data values - such as a list of country codes.

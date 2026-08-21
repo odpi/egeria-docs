@@ -11,6 +11,13 @@ Since metadata is being created by many tools, it is possible that the same reso
 
 When a governance engine or steward detects that two elements are duplicates of one another, they are linked using the *PeerDuplicateLink*.  This link on its own indicates a potential duplicate.
 
+* *statusIdentifier* - Defines the status values of a governance action classification.
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+
 ## KnownDuplicate
 
 When the duplicate is confirmed (either by a steward, or a governance engine) the *KnownDuplicate* classification is added to the entities that are linked with the *PeerDuplicateLink*.   This classification is detected by metadata retrieval processes and triggers the following duplicate processing:
@@ -25,6 +32,12 @@ There is no special duplicate processing when a relationship is retrieved indepe
 
 It may be that this simple set of survivorship rules and consolidation process is insufficient (or too expensive from a performance perspective).  It is possible for a steward/governance engine to construct and store a consolidated entity with its consolidated classification and relationships.  Such an entity is decorated with the *ConsolidatedDuplicate* classification and is linked to each of the source entities using the *ConsolidatedDuplicateLink* relationship.  Once the *ConsolidatedDuplicateLink* relationship is in place, the simple survivorship rules and peer consolidation process are ignored and the properties, classifications and relationships from the consolidated entity are used for a query to one of the linked entities with the *KnownDuplicate* classification. The steward/governance engine is responsible for the ongoing maintenance of this consolidated entity.
 
+* *statusIdentifier* - Defines the status values of a governance action classification.
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
 
 ## Support for duplicate processing
 
@@ -34,5 +47,9 @@ The [Governance Action Services](/concepts/governance-action-service) running in
 
 ??? deprecated "Deprecated types"
     - *KnownDuplicateLink* is deprecated in favor of the two specialized relationships: PeerDuplicateLink and ConsolidatedDuplicateLink.
+
+## ConsolidatedDuplicateLink relationship
+
+Link between a detected duplicate entity and an entity that contains the combined values of this entity and its other duplicates.
 
 --8<-- "snippets/abbr.md"

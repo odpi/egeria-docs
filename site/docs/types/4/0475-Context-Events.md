@@ -28,10 +28,10 @@ A [NoteLog](/types/1/0160-Notes) can be attached to a context event or context e
 
 The *ContextEvent* entity is used to record a context event.  It is a [*Referenceable*](/types/0/0010-Base-Model) that adds the following attributes:
 
-* *name* - a display name that describes the event.
+* *displayName* - a display name that describes the event.
 * *description* - a more detailed description of the event.
 * *eventEffect* - describes the expected effects of the event on the organization.
-* *contextEventType* - describes the type of event.  Valid values for this attribute can be managed in a [valid metadata value](/guides/planning/valid-values/overview) set.
+* *category* - describes the type of event.  Valid values for this attribute can be managed in a [valid metadata value](/guides/planning/valid-values/overview) set.
 * *plannedStartDate* - provides a planned date/time when the event should start.
 * *actualStartDate* - provides a definitive date/time when the event did start.
 * *plannedDuration* - defines, in milliseconds, the length of time that the event is expected to last.
@@ -76,9 +76,17 @@ Sometime these relationships are clear, obvious and certain.  Others are less ob
 * source - Source of the association.
 * notes - Information relating to the association.
 
-## ContextEventCollection classification
+* *statusIdentifier* - Defines the status values of a governance action classification.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
 
-A *ContextEventCollection* classification is used to indicate that a particular collection contains a list of context events.  It is used to group context events that are being managed together.  The collection could then be attached to, say, a [*Project*](/types/1/0130-Projects) using the [*ResourceList*](/types/0/0019-More-Information) relationship.
+## ContextEventCollection entity
+
+A *ContextEventCollection* is a [*Collection*](/types/0/0021-Collections) that contains a list of context events.  It is used to group context events that are being managed together.  The collection could then be attached to, say, a [*Project*](/types/1/0130-Projects) using the [*ResourceList*](/types/0/0019-More-Information) relationship.
 
 The optional *timeline* attribute allows a description of the timeline that summarizes the timeline of the events in the collection.
 
@@ -88,10 +96,10 @@ The *ContextEventImpact* relationship allows a *ContextEvent* entity to be linke
 
 The *severityLevelIdentifier* attribute describes the severity of the impact on the *Referenceable* entity.  Its value is taken from the list of severities defined using the [Valid Metadata Values](/guides/planning/valid-values/overview) services.  The *description* attribute allows further information on the impact to be documented.
 
+* *severityLevel* - How severe is the impact on the resource?
+
 ## ContextEventForTimelineEffects relationship
 
 The *ContextEventForTimelineEffects* relationship is used to associate a referenceable entity (typically an [*Asset*](/types/0/0010-Base-Model) or [*SchemaAttribute*](/types/5/0505-Schema-Attributes)) with a context event to show that the context event affected the data associated with the entity.  For example, consider a data store that records a server's availability.  A power outage resulted in the server being down.  The *ContextEventForTimeline* relationship can be used to associate the server availability data store with the context event describing the power outage.  When the context event's date/time/duration is viewed in conjunction with the server availability data, it is possible to understand why there was a server outage at a particular moment in time.  The context event explained why there was an outage at a particular point in time.
-
-
 
 --8<-- "snippets/abbr.md"

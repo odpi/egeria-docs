@@ -40,6 +40,8 @@ The *Risk* entity describes the probability that a [threat](/types/4/0405-Govern
 
 The *GovernanceResponse* relationship links a GovernanceDriver entity to a GovernancePolicy entity to show that following the policy will help to support the governance driver.
 
+* *rationale* - Describes the reasoning for defining the relationship.
+
 ## GovernancePolicyLink relationship
 
 The *GovernancePolicyLink* relationship connects two related *GovernancePolicy* entities.

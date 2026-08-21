@@ -17,7 +17,6 @@ The subtypes of *ActorProfile* add further information about actors:
 - [Team](/types/1/0115-Teams) for profiles describing teams.
 - [ITProfile](/types/1/0117-IT-Profiles) for profiles describing specific IT processes and systems.
 
-
 ## UserIdentity entity
 
 Most metadata repositories are run in a secure mode requiring incoming requests to include the requester's security credentials. Therefore, we have an identifier for each unique logged on security identity (aka userId). This identity is recorded in the header of the metadata elements when they are created or updated. 
@@ -25,6 +24,9 @@ Most metadata repositories are run in a secure mode requiring incoming requests 
 `UserIdentity` provides a structure for storing details about a particular userId. Initially we have a simple string for the userId - but this could be extended to include more sophisticated identification information.
 
 - `distinguishedName` - the fully qualified name in LDAP.
+
+* *userId* - The user identifier for the person/system executing the request.
+* *distinguishedName* - The LDAP distinguished name (DN) that gives a unique positional name in the LDAP DIT.
 
 ## ProfileIdentity relationship
 
@@ -34,11 +36,22 @@ Most metadata repositories are run in a secure mode requiring incoming requests 
 - `roleGUID`: the unique identifier of the specific role that the `UserIdentity` is used for.
 - `description`: a human-readable description of the use of the `UserIdentity` by the actor.
 
-
-
 !!! info "Further information"
     [People, Roles and Organizations](/features/people-roles-organizations/overview) describes how metadata about people is populated and used.
     
     The [Actor Manager](/services/omvs/actor-manager/overview) API supports the maintenance of actor profiles.
+
+* *roleTypeName* - The open metadata type name of the element used to identify the role.
+* *roleGUID* - The unique identifier of the specific PersonRole that the UserIdentity is used for.
+* *description* - Description of the element or associated resource in free-text.
+
+
+## Actor entity
+
+The representation of a person or group of people that are identified to perform an action or take on a responsibility.
+
+* *roleTypeName* - The open metadata type name of the element used to identify the role.
+* *roleGUID* - The unique identifier of the specific PersonRole that the UserIdentity is used for.
+* *description* - Description of the element or associated resource in free-text.
 
 --8<-- "snippets/abbr.md"

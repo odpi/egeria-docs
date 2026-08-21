@@ -13,6 +13,11 @@ An incident report may be related to the [context event(s)](/types/4/0475-Contex
 
 The *IncidentReport* entity is a [*Report*](/types/2/0239-Reports) that describes the incident, when it occurred and its current status.
 
+* *domainIdentifier* - Identifier of the governance domain that recognizes this process. Zero typically means 'any' domain.
+* *background* - Description of the background cause or activity.
+* *incidentClassifiers* - Map of label to level indicator to provide customizable grouping of incidents.
+* *incidentStatus* - Defines the status of an incident report.
+
 ## IncidentReportStatus enumeration
 
 The *IncidentReportStatus* enumeration provides the valid values for the status describing the progress made to resolving the issue described in the incident report.
@@ -29,5 +34,6 @@ The *IncidentReportStatus* enumeration provides the valid values for the status 
 
 The *ImpactedResource* relationship allows an *IncidentReport* entity to be linked to [*Referenceable*](/types/0/0010-Base-Model) entities that describe resources that are impacted by the incident.  For example, it may link an incident report to a [*SoftwareServer*](/types/0/0040-Software-Servers) that is unavailable.  The *severityLevelIdentifier* describes the severity of the impact on the *Referenceable* entity.  Its value is taken from the list of severities defined using the [Valid Metadata Values](/guides/planning/valid-values/overview) services.
 
+* *severityLevel* - How severe is the impact on the resource?
 
 --8<-- "snippets/abbr.md"

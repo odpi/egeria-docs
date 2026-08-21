@@ -11,11 +11,13 @@ A digital subscription is an agreement by a producer of a digital artifact (typi
 
 The *DigitalSubscription* entity is a specialized [Agreement](/types/7/0711-Agreements) for a subscription to a [Digital Service](/types/7/0710-Digital-Products), [Digital Product](/types/7/0710-Digital-Products) or [Asset](/types/0/0010-Base-Model).  The [AgreementItem](/types/7/0711-Agreements) relationship links the *DigitalSubscription* entity to the element being subscribed to.
 
+* *supportLevel* - Level of support agreed for the subscriber.
+* *serviceLevels* - Levels of service agreed with the subscriber.
+
 ## DigitalSubscriber
 
 The *DigitalSubscriber* relationship links to the element that represents the subscriber.  For example, this could be a [UserIdentifier](/types/1/0110-Actors), [PersonRole](/types/1/0112-People), [ActorProfile](/types/1/0110-Actors) or [Asset](/types/0/0010-Base-Model) such as a system.
 
-
-
+* *subscriberId* - Unique identifier for the subscriber. This is typically supplied by an external subscription manager.
 
 --8<-- "snippets/abbr.md"

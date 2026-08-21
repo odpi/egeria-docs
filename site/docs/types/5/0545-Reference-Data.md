@@ -13,7 +13,6 @@ A *ValidValueDefinition* can also be implemented in an asset that can be used as
 
 Valid values can also be used as tags to indicate that an element has a particular property or belongs in a particular group.  The element to be tagged is linked to the appropriate valid value using the *ReferenceValueAssignment* relationship.
 
-
 ![UML](0545-Reference-Data.svg)
 
 ## ValidValueDefinition entity
@@ -54,7 +53,6 @@ The *ValidMetadataValue* entity is a type of valid value definition that represe
 
 The *TechnologyType* is a special type of *ValidMetadataValue* entity used for the valid values of the *deployedImplementationType*.  These values are used to define the technology types that are queryable through the [Automated Curation API](/services/omvs/automated-curation/overview).
 
-
 ## ValidValueMember relationship
 
 Code tables group related code values together to act as a look-up table.  The *ValidValueMember* relationship can be used to organize *ValidValueDefinition*s.
@@ -70,12 +68,13 @@ The attributes of the *ValidValueMember* relationship are:
 * *ordinal* - an integer used to sequence the valid values in a set.  This overrides the ordinal in the valid value.
 * *isDefaultValue* - an integer used to sequence the valid valid values in a set.
 
-
 ## ValidValuesAssignment relationship
 
 Often the values in a data field need to be restricted to a set of valid values (or possibly a single valid value).  The *ValidValuesAssignment* creates a link between the metadata element for the data field (typically a [GlossaryTerm](/types/3/0330-Terms) or a [SchemaElement](/types/5/0501-Schema-Elements)) and the appropriate valid values.
 
 ![Valid Values Assignment](/features/reference-data-management/valid-values-assignment.svg)
+
+* *strictRequirement* - Only values from the ValidValues set/definition are allowed.
 
 ## ReferenceValueAssignment relationship
 
@@ -87,6 +86,12 @@ This tagging is done using the *ReferenceValueAssignment* relationship.
 
 ![Reference Value Assignment](/features/reference-data-management/reference-value-assignment.svg)
 
+* *attributeName* - The name of the attribute that the reference data assignment represents.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
 
 ## ValidValuesMapping relationship
 
@@ -97,6 +102,13 @@ Valid values can come from many sources (such as standards, regulations, industr
 The *ValidValuesMapping* relationship allows this mapping to be captured.
 
 ![Valid Values Mapping](/features/reference-data-management/valid-values-mapping.svg)
+
+* *associationDescription* - Brief description describing how they are related.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
 
 ## ConsistentValidValues relationship
 
@@ -112,9 +124,15 @@ The *ConsistentValidValues* relationship allows this mapping to be captured.
 
 The *ValidValueAssociation* relationship allows arbitrary relationships between valid value definitions to be recorded.
 
+* *associationName* - Descriptive name of the association.
+* *associationType* - Type of the association, such as 'containment', 'aggregation' or 'inheritance.'.
+* *additionalProperties* - Additional properties for the element.
+
 ## SpecificationPropertyAssignment relationship
 
 The *SpecificationPropertyAssignment* relationship is used to attach a valid value that describes a type of configurable property to the element that represents the implementation.  Examples include connectors and templates.
+
+* *propertyName* - The name of the property that the valid value represents.
 
 ## ValidValuesImplementation relationship and ReferenceData classification
 
@@ -132,8 +150,20 @@ Or even build mapping tables to help processes moving data between different sys
 
 ![Valid Values Mapping Table](/features/reference-data-management/mapping-table.svg)
 
-
 !!! info "Further Information"
     * [Reference Data Management](/features/reference-data-management/overview)
+
+* *implementationValue* - Value in the asset that maps to this valid value if different from the preferred value.
+* *symbolicName* - Name of the valid value used in code.
+* *additionalValues* - Additional values for additional columns or fields in the reference data store.
+
+
+## ReferenceData classification
+
+An asset that contains trusted values for use as reference data.
+
+* *implementationValue* - Value in the asset that maps to this valid value if different from the preferred value.
+* *symbolicName* - Name of the valid value used in code.
+* *additionalValues* - Additional values for additional columns or fields in the reference data store.
 
 --8<-- "snippets/abbr.md"

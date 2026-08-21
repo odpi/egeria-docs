@@ -19,6 +19,8 @@ or related metadata.
 
 The *AnnotationReview* entity is a [Review](/types/1/0135-Actions-For-People) entity that records a review of the suitability/quality of the annotations linked as [ActionTargets](/types/0/0013-Actions).
 
+* *annotationStatus* - Status of the processing as a result of the annotation.
+
 
 ## AnnotationStatus enumeration
 

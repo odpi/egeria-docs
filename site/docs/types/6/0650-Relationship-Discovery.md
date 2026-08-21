@@ -13,4 +13,12 @@ different assets (or parts of assets), such as 2 columns that have a foreign key
 
 ![UML](0650-Relationship-Discovery.svg)
 
+## RelationshipAdviceAnnotation entity
+
+A recommendation of the relationships that could be added to all or part of an Asset.
+
+* *relationshipTypeName* - Type name of the potential relationship.
+* *relationshipProperties* - Properties to add to the relationship.
+* *relatedEntityGUID* - Entity that should be linked to the asset being analyzed.
+
 --8<-- "snippets/abbr.md"

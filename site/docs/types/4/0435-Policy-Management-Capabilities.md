@@ -43,6 +43,35 @@ The open metadata types are implemented as classifications.  The classifications
 ## Using the Policy Management Capabilities open metadata types
 
 The [Security Officer](/services/omvs/security-officer/overview) API provides mechanisms to set up the Policy Management Capabilities classifications on metadata elements.
+
+## PolicyAdministrationPoint classification
+
+Describes the capability where policies are maintained.
+
+## PolicyDecisionPoint classification
+
+Describes the capability where policies are evaluated for a specific situation.
+
+## PolicyEnforcementPoint classification
+
+Describes the capability where the result of a policy decision are enforced.
+
+## PolicyInformationPoint classification
+
+Describes the capability where additional information used in a policy decision are stored.
+
+## PolicyManagementPoint classification
+
+Describes the capability where policies are managed.
+
+* *label* - Display label to use when displaying this lineage relationship in a lineage graph.
+* *description* - Description of the element or associated resource in free-text.
+* *pointType* - Descriptive type information about the the policy management capability.
+
+## PolicyRetrievalPoint classification
+
+Describes the capability where policies are retrieved.
+
  
 
 --8<-- "snippets/abbr.md"

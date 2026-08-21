@@ -24,10 +24,25 @@ Typically, the `name` is set to a person's preferred name.  The `qualifiedName` 
 - `preferredLanguage` is on or more spoken or written language identifiers preferred by the person.
 - `isPublic` indicates whether the information in the profile can be shared with colleagues or is only visible to the user(s) that connect with one of the linked user identities or systems that are part of the open metadata ecosystem.
 
+* *fullName* - Full or official/legal name of the individual (if different from known name).
+* *jobTitle* - Principle role or level in the organization.
+* *residentCountry* - Country that is the person's primary residence.
+* *timeZone* - Timezone for the location.
+* *pronouns* - Preferred pronouns to use when addressing this person.
+* *courtesyTitle* - The honorific title for the person.
+* *givenNames* - The names that are the part of a person's name that is not their surname.
+* *surname* - The family name of the person.
+* *employeeNumber* - The unique identifier of a person used by their employer.
+* *employeeType* - Code used by employer typically to describe the type of employment contract.
+* *preferredLanguage* - Spoken or written language preferred by the person.
+* *initials* - First letter of each of the person's given names.
+
 ## Peer relationship
 
 The *Peer* relationship links two people together as peers in an organization.  Peers represents a list of a person's close/important colleagues. The perspective on who is a close/important colleague is a personal perspective. Therefore the *Peer* relationship separates the concept of who has linked to a person (*myFollowers*) from who they have specifically linked to (*myPeers*).
 
+* *label* - Display label to use when displaying this lineage relationship in a lineage graph.
+* *description* - Description of the element or associated resource in free-text.
 
 ## Further information
 

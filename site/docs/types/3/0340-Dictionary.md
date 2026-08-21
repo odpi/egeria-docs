@@ -24,6 +24,9 @@ ActivityDescription has a single property called *activityType* which is an enum
 * PROCESS - describes a process, which is a series of steps that are performed in a defined order.
 * PROJECT - describes a type of project.
 * OTHER - describes some other type of activity
+
+* *activityType* - Different types of activities.
+
   
 ## AbstractConcept classification
 

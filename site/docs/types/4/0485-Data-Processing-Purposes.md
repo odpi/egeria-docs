@@ -26,5 +26,17 @@ The *DataProcessingAction* entity captures an action that is performed on a data
 
 DataProcessingAction entities are often members of DataProcessingDescription entities.
 
+## DataProcessingPurpose entity
+
+Expected outcome, service or value from processing.
+
+## ApprovedPurpose relationship
+
+Relationship identifying the purposes that processes/people have permission to process data for.
+
+## DataProcessingTarget relationship
+
+Relationship identifying the actions being performed on data.
+
 
 --8<-- "snippets/abbr.md"

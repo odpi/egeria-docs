@@ -19,7 +19,7 @@ to access the data in the data asset.
 * **Schema Element(s)** describe the structure of the data managed by the data asset.
 
 To make it possible to search for particular types of asset, there are many specialized asset types defined in Egeria.
-The full list is shown [here](/concepts/asset), however Data Manager OMAS supports
+The full list is shown [here](/concepts/asset), however Egeria supports
 the following subtypes of Asset (and any additional subtypes of these types that you wish to define yourself).
 
 * **DeployedAPI** for API descriptions.
@@ -35,7 +35,7 @@ the following subtypes of Asset (and any additional subtypes of these types that
 * **InformationView** for queries.
 
 
-The Data Manager OMAS APIs needs to accommodate slight variations between different vendor
+The Egeria APIs needs to accommodate slight variations between different vendor
 implementations of data managers, along with information relating to local deployment standards.
 As such there is provision in these interfaces to support:
 
@@ -44,7 +44,7 @@ As such there is provision in these interfaces to support:
 
 ## Data Managers
 
-The Data Manager OMAS Supports the following types of data managers:
+Egeria supports the following types of data managers:
 
 | Icon                                   | Name     | Provenance | Description |
 | :----------------------------------:   | :---------- | :------------------------------------------------------: | :---------- |

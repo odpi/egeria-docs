@@ -26,6 +26,8 @@ There is more information on governance zones in [governance zoning](/features/g
 
 The *GovernanceZone* entity is a [SecurityAccessControl](/types/4/0423-Security-Definitions) that describes a collection of elements that have the same visibility.
 
+* *criteria* - Definition of the types of assets that belong in this zone.
+
 ## ZoneHierarchy relationship
 
 The *ZoneHierarchy* relationship links a parent zone to its children.
@@ -33,6 +35,8 @@ The *ZoneHierarchy* relationship links a parent zone to its children.
 ## ZoneMembership classification
 
 The *ZoneMembership* classification is used to record the zones that an element is a member of.
+
+* *zoneMembership* - The list of governance zones that this element belongs to.
 
 ## ZoneMembershipProfile classification
 
@@ -53,6 +57,6 @@ The *ZoneMembershipProfile* classification is used to record the number of eleme
     * The access control enabled by the governance zones is implemented in the [security connectors](/features/metadata-security/overview).
     * The *ZoneMembershipProfile* classification is updated by a [Lovelace service](/patterns/metadata-insight/overview).
 
-
+* *securityGroups* - List of security group names.
 
 --8<-- "snippets/abbr.md"

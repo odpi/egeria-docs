@@ -44,7 +44,6 @@ The types of operational logs and associated processing are:
 * Exception management handles errors detected by [verification points](0460-Governance-Execution-Points.md).
   Exception records are managed in one or more **ExceptionBacklog** collections.
 
-
 ![UML](0455-Exception-Management.svg)
 
 ## ExceptionType entity
@@ -55,6 +54,78 @@ The *ExceptionType* entity describes an anticipated type of exception that may b
 
 The *Exception* relationship links an element that is suspected of having an exception to the associated exception type.
 
-## 
+##
+
+* *label* - Display label to use when displaying this lineage relationship in a lineage graph.
+* *description* - Description of the element or associated resource in free-text.
+* *lastReviewTime* - The Date/time that this activity was reviewed.
+* *reviewDate* - Date of the review.
+* *conditions* - Any special conditions or endorsements over the basic certification/license type.
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+
+
+## AuditLog classification
+
+An asset holding related audit log records.
+
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+* *process* - Unique identifier of the automated process that processes this log.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+
+## ExceptionBacklog classification
+
+An asset containing details of exceptions found in data that need to be resolved.
+
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+* *process* - Unique identifier of the automated process that processes this log.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+
+
+## LineageLog classification
+
+A collection of related operational lineage log records.
+
+* *process* - Unique identifier of the automated process that processes this log.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+
+## LogAnalysis classification
+
+A set of results from the analysis of a log record - or collection of log records.
+
+* *process* - Unique identifier of the automated process that processes this log.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *dataCollectionStartTime* - If the data is bound by time, this is the start time.
+* *dataCollectionEndTime* - If the data is bound by time, this is the end time.
+* *counts* - A set of metric name to count value pairs.
+* *values* - A set of metric name to string value pairs.
+* *flags* - A set of metric name to boolean value pairs.
+* *dates* - A set of metric name to date value pairs.
+
+## MeteringLog classification
+
+An asset containing records that can be used to identify usage of resources.
+
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+* *process* - Unique identifier of the automated process that processes this log.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+
+## SecurityLog classification
+
+An asset holding related security log records.
+
+* *process* - Unique identifier of the automated process that processes this log.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+
+ 
 
 --8<-- "snippets/abbr.md"

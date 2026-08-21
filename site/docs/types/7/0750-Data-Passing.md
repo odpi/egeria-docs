@@ -12,9 +12,30 @@ Describes relationships that show where data and control is passed between compo
 
 ![UML](0750-Data-Passing.svg)
 
-
 ??? deprecated "Deprecated types"
     - *ProcessInput*
     - *ProcessOutput*
+
+## ControlFlow relationship
+
+Shows that when one element completes processing, control passes to the next element.
+
+* *guard* - Function, or value that must be true to travel down this control flow.
+* *mandatoryGuard* - Is this guard mandatory for the next step to run.
+
+## DataFlow relationship
+
+Shows that data flows in one direction from one element to another.
+
+* *formula* - Formula that describes the behaviour of the element. May include placeholders for queryIds.
+* *formulaType* - Format of the expression provided in the formula attribute.
+
+## ProcessCall relationship
+
+Shows a request-response call between two elements.
+
+* *formula* - Formula that describes the behaviour of the element. May include placeholders for queryIds.
+* *formulaType* - Format of the expression provided in the formula attribute.
+* *lineNumber* - Location of the call in the implementation.
 
 --8<-- "snippets/abbr.md"

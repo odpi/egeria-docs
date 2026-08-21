@@ -24,6 +24,16 @@ The setting up of the *SemanticAssignment* relationship needs to be controlled w
 * The *confidence* attribute in the relationship stores the level of confidence (0-100%) in the correctness of the relationship - it is typically set up by [survey action engines](/concepts/survey-action-engine).
 * The *steward* is the person responsible for assessing the relationship and deciding if it should be approved or not.
 
+* *termAssignmentStatus* - Defines the provenance and confidence of a term assignment.
+* *description* - Description of the element or associated resource in free-text.
+* *expression* - Expression used to create the annotation.
+* *confidence* - Level of confidence in the correctness of the element. 0=unknown; 1=low confidence; 100=total confidence.
+* *steward* - Unique identifier for the steward performing the action.
+* *stewardTypeName* - Type name of the Actor entity identifying the steward.
+* *stewardPropertyName* - Property name for the steward's unique identifier (typically guid or qualifiedName).
+* *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
+* *notes* - Notes on why decision were made relating to this element, and other useful information.
+
 
 ## TermAssignmentStatus enum
 
@@ -36,7 +46,6 @@ The setting up of the *SemanticAssignment* relationship needs to be controlled w
 * DEPRECATED - this relationship is being phased out.  There may be another semantic relationship to the Referenceable that will ultimately replace this relationship.
 * OBSOLETE - this relationship is no longer in use.
 * OTHER - the status of the relationship does not match any of the other term status values.  The description field can be used to add details about the relationship.
-
 
 
 !!! info "Similar relationships"

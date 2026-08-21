@@ -38,7 +38,7 @@ A [survey action service](/concepts/survey-action-service) proposes data value a
 The *DataValueDefinition* relationship augments a [data structure](/concepts/data-structure) or [data field](/concepts/data-field) with its data value specification, so that a [data specification](/concepts/data-specification) carries the value-level requirements alongside the structural ones.
 
 ???+ info "Additional information"
-    * The *DataValueSpecification* type and its relationships are described in [Model 0540 Data Value Specification](/types/5/0540-Data-Value-Specification).
+    * The *DataValueSpecification* type and its relationships are described in [Model 0540 Data Value Specification](/types/5/0540-Data-Value-Specifications).
     * The [Data Designer API](/services/omvs/data-designer/overview) provides the operations for defining data value specifications and attaching them to data structures and fields.
 
 --8<-- "snippets/abbr.md"

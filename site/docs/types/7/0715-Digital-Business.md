@@ -7,10 +7,12 @@ This model supports the description of the business domain where the digital pro
 
 ![UML](0715-Digital-Business.svg)
 
-
 ## BusinessCapability entity
 
 *BusinessCapability* describes the business responsibility or services provided by a team in an organization.  It is linked to the owning team using the *CollectionMembership* relationship.
+
+* *businessCapabilityType* - Defines the type or category of a business capability.
+* *businessImplementationType* - Implementation type for the business capability.
 
 ## BusinessCapabilityType enum
 
@@ -19,7 +21,6 @@ This model supports the description of the business domain where the digital pro
 * *BusinessService* - A functional business capability.
 * *BusinessArea* - A collection of related business services.
 * *BusinessDomain* - An overall area of activity in which a business operates.  A single organization may operate multiple business domains, such a retail, distribution, banking, ...
-
 
 ## BusinessCapabilityDependency relationship
 
@@ -36,5 +37,10 @@ The *AccountingCodes* classification describes the accounting codes associated w
 * The *accountingCode* attribute is used to describe a single code.
 * The *accountingCodeList* attribute is used to describe a set of codes.  If multiple codes are used then *accountingCode* would contain the primary/default/preferred value.
 * The *accountingCodeMap* attribute is used to describe a set of name-to-code mappings.
+
+* *accountingCode* - An identifier used to tie an element to an account or budget.
+* *description* - Description of the element or associated resource in free-text.
+* *accountingCodeList* - A list of accounting codes used to tie an element to multiple accounts or budgets.
+* *accountingCodeMap* - A map of names to accounting codes used to tie an element to multiple accounts or budgets.
 
 --8<-- "snippets/abbr.md"

@@ -17,9 +17,12 @@ A *CohortMember* service describes the cohort services provided by the [Open Met
 
 A *MetadataRepositoryCohort* entity describes a peer to peer metadata sharing exchange between open metadata repositories.  This is call an [Open Metadata Repository Cohort](/features/cohort-operation/overview).
 
+* *cohortTopics* - Name of the topic(s) used to exchange registration, type definitions and metadata instances between the members of the open metadata repository cohort.
+
 ## MetadataCohortPeer relationship
 
 A *MetadataCohortPeer* links a cohort member to its cohort(s).
 
+* *registrationDate* - Date first registered with the cohort.
 
 --8<-- "snippets/abbr.md"

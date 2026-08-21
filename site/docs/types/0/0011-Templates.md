@@ -19,12 +19,13 @@ The *Template* classification indicates that a [*Referenceable*](/types/0/0010-B
 
 The properties for the *Template* classification are:
 
-* *name* - name of the template, designed to help the selection of the correct template.
 * *description* - further information on the purpose of the template.
 * *versionIdentifier* - allows different versions of a template to be kept in the metadata repository. 
 * *additionalProperties* - allows additional information about the template to be supplied
 
 Templates can include relationships.  If the relationship links to an entity that has the same anchor as the starting entity, the entity and the relationship is replicated.  If the linked entity is part of a different anchor, only the relationship is created.  In the example above, the glossary term has a different anchor to the asset.  Therefore any assets created with *tAsset* as a template will be linked to the same glossary term.
+
+* *displayName* - Display name of the element used for summary tables and titles.
 
 ## TemplateSubstitute classification
 
@@ -43,6 +44,8 @@ When one *Referenceable* entity is created by using another *Referencable* entit
 The *SourcedFrom* relationship is used to show the provenance of the information from the template. This is useful to help trace where information has come from and to help understand any potential impact cause by a change to the template if this change also needs to be made to the elements that were copied from it.
 
 The *sourceVersionNumber* identifies the version number of the template used when the new entity was created.
+
+* *sourceVersionNumber* - The version number of the template element when the copy was created.
 
 ## CatalogTemplate relationship
 

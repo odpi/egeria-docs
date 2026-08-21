@@ -11,8 +11,22 @@ The TranslationDetails are linked to the original entity using the *TranslationL
 
 ![UML](0022-Translations.svg)
 
-
 ??? info "Further information"
     Translations can be maintained through the [Multi Language API](/services/omvs/multi-language/overview) and are retrieved with the element they are linked to.
+
+## TranslationDetail entity
+
+A collection of translated properties.
+
+* *language* - Natural language used in the glossary.
+* *languageCode* - Code for identifying the language - for example from ISO-639.
+* *locale* - Locale for the translation.
+* *displayName* - Display name of the element used for summary tables and titles.
+* *description* - Description of the element or associated resource in free-text.
+* *additionalTranslations* - Translations of other string properties found in the linked entity.
+
+## TranslationLink relationship
+
+Links an entity to a collection of translated properties.
 
 --8<-- "snippets/abbr.md"

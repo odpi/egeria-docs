@@ -38,6 +38,8 @@ Naming standards ensure clarity, consistency, and traceability. They help users,
 
 The *NamingStandardRule* entity is a [GovernanceControl](/types/4/0420-Governance-Controls) that describes a naming standard rule.  This includes the naming patterns it supports.
 
+* *namePatterns* - A list of name patterns to use when generating schemas. Use space separated capitalized works so the schema generators can easily convert to valid language keywords.
+
 ## NamingStandardRuleSet entity
 
 The *NamingStandardRuleSet* entity is a [Collection](/types/0/0021-Collections) of naming standard rules.
@@ -46,16 +48,13 @@ The *NamingStandardRuleSet* entity is a [Collection](/types/0/0021-Collections) 
 
 When we are naming data items, it is useful to have a glossary of name parts that can be combined to form consistent names. The classifications below are used to classify the type of name part that a glossary term represents.  
 
-
 Using this type of approach reduces the number of glossary terms needed to define a naming convention.
-
 
 ### PrimeWord classification
 
 The *PrimeWord* classification is typically attached to a [GlossaryTerm](/types/3/0330-Terms) used to describe the type of word that is considered a prime word.
 
 Prime words are nouns that describe the subject area of the data, such as "Employee" or "Company." 
-
 
 ### Modifier classification
 The *Modifier* classification is used to describe the type of word that is considered a modifier.

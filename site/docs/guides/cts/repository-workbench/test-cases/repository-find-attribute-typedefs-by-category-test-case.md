@@ -32,6 +32,13 @@ the original complied lists.
 
 ## Example Output
 
+!!! info "About this sample"
+    The output below is illustrative.  It was captured from one repository running an earlier release, and
+    shows the *shape* of the result rather than the current type system: the type and attribute-type lists
+    are elided, and the counts are the ones that run reported.  Both depend on the repository under test and
+    the release it supports.  For the types Egeria defines today, see the
+    [open metadata type models](/types).
+
 
 ```json
 {
@@ -46,9 +53,9 @@ the original complied lists.
         "Number of supported CollectionDefs" : 4,
         "Number of supported EnumDefs" : 24,
         "Number of supported PrimitiveDefs" : 13,
-        "Supported PrimitiveDefs" : [ "string", "char", "boolean", "biginteger", "byte", "long", "double", "date", "object", "bigdecimal", "short", "float", "int" ],
-        "Supported CollectionDefs" : [ "array<int>", "map<string,string>", "array<string>", "map<string,object>" ],
-        "Supported EnumDefs" : [ "CrowdSourcingRole", "CriticalityLevel", "TermRelationshipStatus", "DataValueAssignmentStatus", "Endianness", "ContactMethodType", "GovernanceClassificationStatus", "BusinessCapabilityType", "StarRating", "OperationalStatus", "OrderBy", "TermAssignmentStatus", "RetentionBasis", "ServerAssetUse", "ConfidentialityLevel", "MediaUsage", "ActivityType", "CommunityMembershipType", "ConfidenceLevel", "KeyPattern", "CommentType", "MediaType", "GovernanceDomain", "ToDoStatus" ]
+        "Supported PrimitiveDefs" : [ "string", "char", "boolean", "biginteger", "byte", "long", "double", "date", "..." ],
+        "Supported CollectionDefs" : [ "array<string>", "map<string,string>", "..." ],
+        "Supported EnumDefs" : [ "CrowdSourcingRole", "TermRelationshipStatus", "DataValueAssignmentStatus", "ContactMethodType", "BusinessCapabilityType", "StarRating", "TermAssignmentStatus", "MediaUsage", "..." ]
       }
 }
 ```

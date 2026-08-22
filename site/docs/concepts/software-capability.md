@@ -102,5 +102,28 @@ Examples of tools include:
 * Analytics tool - for creating analytics - for example, a python notebook.
 * Process automation tools - for creating workflows for workflow engines.
 
+## Open Metadata Types for software capabilities
+
+Open metadata defines a large number of specializations, including:
+
+* **Data managers** - a *DataManager* manages collections of data; a *DatabaseManager* (a DBMS) manages data organized as relational schemas; a *FileSystem* and a *FileManager* manage files and folders.
+* **Application and API capabilities** - an *Application* supports a specific business function; an *APIManager* or *RESTAPIManager* manages callable APIs; a *SoftwareService* provides externally callable functions to other services.
+* **Engines** - an *Engine* runs automated processes, with specializations for workflow, reporting, analytics, data movement and data virtualization.  A [governance engine](/concepts/governance-engine) is the specialization Egeria uses to group its own [governance services](/concepts/governance-service).
+* **Event handling** - an *EventBroker* routes events to subscribers around topics; an *EventManager* supports event-based services; a *NotificationManager* distributes events from a topic to its subscriber list.
+* **Catalogs and libraries** - an *InventoryCatalog* manages descriptions of people, places, digital assets and things; a *MasterDataManager* reconciles master data entities from many sources; a *SoftwareLibrary* stores software modules; a *ContentCollectionManager* manages controlled documents.
+* **Egeria's own capabilities** - a *CohortMember* is the capability that enables a server to join an [open metadata repository cohort](/concepts/cohort-member).
+
+A software capability is linked to the infrastructure that hosts it using the *SupportedSoftwareCapability* relationship, and to the [assets](/concepts/asset) it manages using the *CapabilityAssetUse* relationship.  Where the capability is the true master of the metadata it manages, its identifier is used to [document the provenance](/features/metadata-provenance/overview) of that metadata.
+
+???+ info "Additional information"
+    * The *SoftwareCapability* type and the full list of its subtypes are described in [Model 0042 Software Capabilities](/types/0/0042-Software-Capabilities).
+
+## Historical Note
+
+Earlier versions of Egeria included a specialization of software capability called *SoftwareServerCapability* that was used to describe the capabilities found in software servers specifically.
+The thinking was that this was where the capabilities that managed data and metadata are found.  Unfortunately, the real infrastructure landscape is not so neat and tidy so the distinction was dropped.
+
+
+
 
 --8<-- "snippets/abbr.md"

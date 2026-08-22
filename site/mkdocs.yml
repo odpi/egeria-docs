@@ -917,7 +917,6 @@ nav:
       - Server Name: concepts/server-name.md
       - Service URL Marker: concepts/service-url-marker.md
       - Software Capability: concepts/software-capability.md
-      - Software Server Capability: concepts/software-server-capability.md
       - Solution Blueprint: concepts/solution-blueprint.md
       - Solution Component: concepts/solution-component.md
       - Solution Role: concepts/solution-role.md

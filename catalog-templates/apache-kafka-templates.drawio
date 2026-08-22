@@ -1,0 +1,123 @@
+<mxfile host="Electron" modified="2024-03-22T14:47:22.673Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Z_hmOqsL5DCFvZKWlCRq" version="23.0.2" type="device">
+  <diagram name="catalog-templates" id="TDWtUl6oVAiIhDJUpcDL">
+    <mxGraphModel dx="1114" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="780snM6feV9xTrxozphn-1" value="ApacheKafkaServer:&lt;br&gt;{{serverName}}&lt;br&gt;&lt;br&gt;deployedImplementationType =&quot;Apache Kafka Server&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="310" y="102" width="190" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-2" value="SoftwareServer" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="310" y="72" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="780snM6feV9xTrxozphn-3" target="780snM6feV9xTrxozphn-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="780snM6feV9xTrxozphn-3" target="780snM6feV9xTrxozphn-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-3" value="ApacheKafkaServer:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{serverName}}&lt;br&gt;:Connection" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="630" y="90" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-4" value="Connection" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="630" y="60" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-6" value="ConnectionToAsset" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="500" y="128" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-7" value="Kafka Server&lt;br&gt;Admin Connector" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="850" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-8" value="ConnectorType" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="850" y="180" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7KLWLRxbsAnZzyIl1uyj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="780snM6feV9xTrxozphn-10" target="780snM6feV9xTrxozphn-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-10" value="ApacheKafkaServer:{{serverName}}:Endpoint&lt;br&gt;&lt;br&gt;name={{serverName}} endpoint&lt;br&gt;&lt;br&gt;address={{hostIdentifier}}:{{portNumber}}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="990" y="105" width="420" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-11" value="Endpoint" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="990" y="75" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-13" value="ConnectionConnectorType" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="760" y="270" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-14" value="ConnectionEndpoint" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="840" y="125" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="780snM6feV9xTrxozphn-16" value="Apache Kafka Server Template" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="45" y="72" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t5AhHzGSxBg5bSRpzmGk-24" value="Apache Kafka Topic Template" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="45" y="500" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-3" value="KafkaTopic:&lt;br&gt;{{serverName}}:&lt;br&gt;{{topicName}}&lt;br&gt;&lt;br&gt;deployedImplementationType =&quot;Apache Kafka Topic&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="310" y="582" width="190" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-4" value="KafkaTopic" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="310" y="552" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mHtF1pgwz7ZxQ6UxLGhy-8" target="mHtF1pgwz7ZxQ6UxLGhy-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="mHtF1pgwz7ZxQ6UxLGhy-8" target="mHtF1pgwz7ZxQ6UxLGhy-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-8" value="KafkaTopic:{{serverName}}:{{topicName}}:Connection&lt;br&gt;&lt;br&gt;configurationProperties = &quot;{ producer : { bootstrap.servers : {{hostIdentifier}}:{{portName}} },&lt;br&gt;consumer : { bootstrap.servers : {{hostIdentifier}}:{{portName}} }," style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="630" y="570" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-9" value="Connection" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="630" y="540" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-10" value="ConnectionToAsset" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="500" y="608" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-11" value="Kafka Open Metadata Topic Connector" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="940" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-12" value="ConnectorType" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="940" y="660" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7KLWLRxbsAnZzyIl1uyj-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="mHtF1pgwz7ZxQ6UxLGhy-13" target="mHtF1pgwz7ZxQ6UxLGhy-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-13" value="KafkaTopic:{{serverName}}:{{topicName}}:Endpoint&lt;br&gt;&lt;br&gt;name={{topicName}} endpoint&lt;br&gt;&lt;br&gt;address={{topicName}}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="572.5" width="400" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-14" value="Endpoint" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1080" y="542.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-15" value="ConnectionConnectorType" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="770" y="720" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mHtF1pgwz7ZxQ6UxLGhy-16" value="ConnectionEndpoint" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="930" y="605" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-1" value="hostIdentifier&lt;br&gt;portNumber&lt;br&gt;serverName" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="70" y="130" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MOPJvNTGCrpKyyy_cZIb-2" value="hostIdentifier&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;portNumber&lt;br&gt;serverName&lt;br&gt;topicName" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="70" y="580" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="780snM6feV9xTrxozphn-1" target="arFYRd3ZnFPtYKxmsfah-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="-70" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-8" value="ApacheKafkaServer:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;{{serverName}}:&lt;br&gt;EventBroker&lt;br&gt;&lt;br&gt;deployedImplementationType = Apache Kafka Event Broker" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="465" y="343" width="190" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-9" value="EventBroker" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="465" y="313" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-10" value="SupportedSoftwareCapability" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="380" y="233" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="arFYRd3ZnFPtYKxmsfah-11" value="operationalStatus=ENABLED(1)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="385" y="263" width="190" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

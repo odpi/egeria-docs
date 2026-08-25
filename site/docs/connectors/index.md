@@ -43,13 +43,15 @@ The connectors that support the exchange and maintenance of metadata help to acc
 * [Smart Collections integration connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/smart-collections-integration-connector) maintains the membership of a [smart collection](/egeria-solutions/smart-collections/overview) by running its saved query and keeping the results set in sync with the answer.
 
 
-## Open Metadata Governance Connectors
+## Open metadata governance connectors
 
 * [Governance Action Services](/concepts/governance-action-service) are used to govern the open metadata ecosystem.
 * [Survey Action Services](/concepts/survey-action-service) are used to gather information about the technology deployed within reach of the open metadata ecosystem.
 * [Watchdog Action Services](/concepts/watchdog-action-service) monitors specific situations occurring in the open metadata ecosystem and initiate governance actions.
 * [Repository Governance Services](/concepts/repository-governance-service) manages the activity in the [repository services](/services/omrs).
 
+## Nanny connectors
+Nanny connectors are used to monitor the health of the Egeria platform and open metadata ecosystem
 
 ## Runtime connectors
 

@@ -47,9 +47,7 @@ The relationships between glossary terms are divided into two groups:
     * *Antonym* is a relationship between glossary terms that have the opposite (or near opposite) meaning.
     * *PreferredTerm* is a relationship that indicates that one term should be used in place of the other term linked by the relationship.
     * *ReplacementTerm* is a relationship that indicates that one term must be used instead of the other. This is stronger version of the PreferredTerm.
-    * *Translation* is a relationship that defines that the linked terms represent the same meaning, but each are written in a different language. Hence one is a translation of the other. The language of each term is defined in the Glossary that owns the term.
     * *IsARelationship* is a relationship that defines that the one term is a more generic term than the other term. For example, this relationship would be used to say that "Cat" IsA "Animal".
-    * *ValidValue* is a relationship that defines that the one term represents a value that than the other term can be set to. For example, this relationship would be used to say that "France" is a valid value for "Country".
 
 * [Relationships](/types/3/0360-Contexts) that show how terms are typically used together:
   

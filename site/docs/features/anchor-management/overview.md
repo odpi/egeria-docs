@@ -24,7 +24,7 @@ The [Anchors](/types/0/0010-Base-Model/#anchors-classification) classification c
 
 
 !!! example "Example: SchemaElements and Comments"
-    Figure 1 is an illustration of this example, with the addition of an Asset. The entities that have the *Anchors* classification are those that are anchored to the Asset.  This includes entities such as Ratings, Likes and Attachments (from the [Open Discovery Framework (ODF)](/frameworks/osf/overview).
+    Figure 1 is an illustration of this example, with the addition of an Asset. The entities that have the *Anchors* classification are those that are anchored to the Asset.  This includes entities such as Ratings, Likes and Annotations (from the [Open Survey Framework (OSF)](/frameworks/osf/overview).
 
     ![Figure 1](/features/anchor-management/anchors-classifications-on-dependant-objects.svg)
     > **Figure 1:** Examples of dependent entities that are anchored to an Asset
@@ -36,7 +36,7 @@ If a [GlossaryTerm](/practices/common-data-definitions/anatomy-of-a-glossary), o
 !!! example "Example: NoteLog and Referenceables"
     For example, these are cases where the NoteLog is anchored to another Referenceable
 
-    - NoteLogs are used to support the personal blog linked off of the Personal Profile in Community Profile OMAS.
+    - NoteLogs are used to support the personal blog linked off of the Personal Profile in [Feedback Manager API](/services/omve/feedback-manager/overview).
     - Assets may have a NoteLog to record "news" for consumers such as planned maintenance and unexpected situations.
 
     Egeria uses the Anchors classification on a NoteLog to indicate that the NoteLog is tied to the Referenceable it is attached to. 
@@ -49,7 +49,7 @@ If a [GlossaryTerm](/practices/common-data-definitions/anatomy-of-a-glossary), o
     The one with the Anchors classification is anchored to the the Asset. The one without the Anchors classification is
     independent of the Asset.
     
-    ![Figure 2](/features/anchor-management/anchors-classifications-on-attached-objects.svg)
+    ![Figure 2](anchors-classifications-on-attached-objects.svg)
     > **Figure 2:** Examples of other types of entities that are linked to an Asset but not necessarily anchored there
     
 It is worthwhile maintaining the `Anchors` classification because reads of, and updates to the anchored entities will happen many times, and it is rare that an anchored entity will change its anchor during its lifetime.

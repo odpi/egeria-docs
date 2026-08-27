@@ -97,6 +97,14 @@ The *ExploringActionProcess* entity describes a governance action process that i
 
 The *ProvisioningActionProcess* entity describes a governance action process that is used to provision a digital resource to a target environment.
 
+## DeletingActionProcess entity
+
+The *DeletingActionProcess* entity describes a governance action process that is used to delete metadata descriptions.
+
+## SubscribingActionProcess entity
+
+The *SubscribingActionProcess* entity describes a governance action process that is used to create a subscription a digital resource.
+
 ???+ deprecated "Deprecated types"
     The *ignoreMultipleTriggers* attribute in the *NextGovernanceActionProcessStep* has been deprecated.  It is now located in the *GovernanceActionType* entity.
     The *supportedGuards* attribute in the *GovernanceActionType* has been deprecated in favour of the *producedGuards* entity.

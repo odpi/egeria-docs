@@ -33,7 +33,7 @@ Each time the survey action service starts, the Survey Action OMES creates a new
 ??? info "Runtime for a survey action service"
     Survey action services are packaged into [Survey Action Engines](/concepts/survey-action-engine) that run in the [Survey Action OMES](/services/omes/survey-action/overview) hosted in an [Engine Host](/concepts/engine-host).
 
-    The metadata repository interface for metadata discovery tools is implemented by the [Asset Owner OMAS](/services/open-metadata-store) that runs in a [Metadata Access Server](/concepts/metadata-access-server).
+    The metadata repository interface for metadata discovery tools is implemented by the [Open Metadata Store](/services/open-metadata-store) that runs in a [Metadata Access Server](/concepts/metadata-access-server).
 
     A survey action service may be triggered via an [Engine Action](/concepts/engine-action), a [governance action type](/concepts/governance-action-type) or as part of a [governance action process](/concepts/governance-action-process).
 

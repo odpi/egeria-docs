@@ -11,7 +11,10 @@
 *[JVM]: Java Virtual Machine
 *[MDM]: Master Data Management
 *[OCF]: Open Connector Framework
-*[ODF]: Open Discovery Framework
+*[OMF]: Open Metadata Framework
+*[OGF]: Open Governance Framework
+*[OWF]: Open Watchdog Framework
+*[OSF]: Open Survey Framework
 *[OMAG]: Open Metadata and Governance
 *[OMAS]: Open Metadata Access Service
 *[OMASs]: Open Metadata Access Services

@@ -129,19 +129,9 @@ contains the Software Capabilities defined in the open metadata types.
 * *Cohort Member* - A capability enabling a server to access an open metadata repository cohort.
 * *Governance Engine* - A collection of related governance services of the same type.
     * *Governance Action Engine* - A collection of related governance services supporting the Open Governance Framework (OGF).
-    * *Open Discovery Engine* - A collection of related governance services supporting the Open Discovery Framework (ODF).
-
-In addition it is possible to augment software capabilities with classifications.
-The following classifications are typically associated with the **DataManager**:
-
-* *Content Collection Manager* - A manager of controlled documents and related media.
-* *File System* - A capability that supports a store of files organized into a hierarchy of file folders for general use.
-* *File Manager* - A manager of a collection of files and folders.
-
-The following are more generally applied.
-
-* *Notification Manager* - A software capability that is distributing events from a topic to its subscriber list.
-* *Cloud Service* - A software capability enabled for a tenant on a cloud platform.
+    * *Survey Action Engine* - A collection of related governance services supporting the Open Survey Framework (OSF).
+    * *Watchdog Action Engine* - A collection of related governance services supporting the Open Watchdog Framework (OWF).
+    * *Repository Governance Engine* - A collection of related governance services supporting the Open Metadta Repository Service (OMRS).
 
 ### Types of endpoints
 

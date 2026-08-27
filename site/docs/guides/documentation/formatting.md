@@ -158,18 +158,17 @@ The **only** exceptions to this should be as follows:
 - Any phrase that is prefixed or suffixed with Open Metadata (or an OMxx abbreviation)
 - Any phrase that we commonly abbreviate using an acronym (i.e. frameworks like Open Discovery Framework): check the `snippets/abbr.md` for a list of such common abbreviations.
 
-| Do | Don't |
-|---|---|
-| Egeria | egeria |
+| Do                                       | Don't                             |
+|------------------------------------------|-----------------------------------|
+| Egeria                                   | egeria                            |
 | Open Metadata Repository Services (OMRS) | open metadata repository services |
-| repository services | Repository Services |
-| Asset Consumer OMAS | asset consumer OMAS |
-| OMAG Server Platform | OMAG server platform |
-| OMAG Server | OMAG server |
-| metadata access point | Metadata Access Point |
-| Metadata Access Point OMAG Server | metadata access point OMAG Server |
-| Open Discovery Framework (ODF) | open discovery framework |
-| Audit Log Framework (ALF) | audit log framework |
+| repository services                      | Repository Services               |
+| Asset Catalog API                        | Asset Catalog API                 |
+| OMAG Server Platform                     | OMAG server platform              |
+| OMAG Server                              | OMAG server                       |
+| Metadata Access Point OMAG Server        | metadata access point OMAG Server |
+| Open Survey Framework (OSF)              | open survey framework             |
+| Audit Log Framework (ALF)                | audit log framework               |
 
 ## Avoid using acronyms
 

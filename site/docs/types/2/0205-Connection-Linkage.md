@@ -14,9 +14,12 @@ In addition, some connectors are virtual connectors - by that we mean they imple
 
 ![UML](0205-Connection-Linkage.svg)
 
-## AssetConnection relationship
+## ResourceConnection relationship
 
-The *AssetConnection* relationship links an asset to a connection that describes how to connect to the associated digital resource.
+The *ResourceConnection* relationship links a [Referenceable](/types/0/0010-Base-Model) to a [Connection](/types/2/0201-Connectors-and-Connections) that describes how to connect to the associated digital resource.
+
+???+ deprecated "Deprecated types"
+    The *AssetConnection* relationship is deprecated in favour of the *ResourceConnection* relationship.
 
 ## VirtualConnection entity
 

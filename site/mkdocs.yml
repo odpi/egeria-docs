@@ -348,7 +348,6 @@ nav:
                       - Release process: guides/contributor/release-process/index.md
                       - Egeria Core Release process: guides/contributor/release-process/egeria-core-release.md
                       - Maven Publishing reference: guides/contributor/release-process/maven-publish.md
-                      - Egeria Charts Release process: guides/contributor/release-process/egeria-charts-release.md
                       - Egeria Docs Release process: guides/contributor/release-process/egeria-docs-release.md
                       - GitHub Secrets reference: guides/contributor/release-process/secrets.md
               - Specific Guidance:

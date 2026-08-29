@@ -317,7 +317,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="FwLlVJSZW75AKCVvg8So" name="data-driven-systems-architecture">
-    <mxGraphModel dx="1222" dy="829" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1211" dy="821" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -424,6 +424,38 @@
         </mxCell>
         <mxCell id="MaMv1SNCb-3dQ-Ja9Qkq-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="new-orders" vertex="1">
           <mxGeometry height="30" width="80" x="422" y="259" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-1" edge="1" parent="1" source="Hadl3BJ_0JPdq3oytBZT-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Hadl3BJ_0JPdq3oytBZT-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;sketch=1;curveFitting=1;jiggle=2;" value="Patient Treatment&lt;div&gt;(Sales/Direct)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="322" y="763" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=1;curveFitting=1;jiggle=2;" value="Data Hub" vertex="1">
+          <mxGeometry height="67" width="120" x="322" y="873" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="new-drug-order" vertex="1">
+          <mxGeometry height="30" width="110" x="383" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Hadl3BJ_0JPdq3oytBZT-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="382" y="938" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;sketch=1;curveFitting=1;jiggle=2;" value="Manufacturing" vertex="1">
+          <mxGeometry height="60" width="120" x="322" y="995" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="new-drug-order" vertex="1">
+          <mxGeometry height="30" width="80" x="390" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-8" edge="1" parent="1" source="Hadl3BJ_0JPdq3oytBZT-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Hadl3BJ_0JPdq3oytBZT-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;sketch=1;curveFitting=1;jiggle=2;" value="Hospital" vertex="1">
+          <mxGeometry height="60" width="120" x="322" y="654" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="new-drug-order" vertex="1">
+          <mxGeometry height="30" width="110" x="383" y="721" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

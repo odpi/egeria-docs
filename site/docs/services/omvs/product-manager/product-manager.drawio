@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="3">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" pages="3">
   <diagram name="product-catalog-3" id="mJARXA5rD6-naD0-85ki">
-    <mxGraphModel dx="3715" dy="3167" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3827" dy="3250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="vQziVG4-nQfIgHgS_Oxc-0" />
         <mxCell id="vQziVG4-nQfIgHgS_Oxc-1" parent="vQziVG4-nQfIgHgS_Oxc-0" />
@@ -217,7 +217,7 @@
         <mxCell id="vQziVG4-nQfIgHgS_Oxc-72" parent="vQziVG4-nQfIgHgS_Oxc-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="DigitalSubscriber" vertex="1">
           <mxGeometry height="30" width="110" x="1628.5" y="-788.5" as="geometry" />
         </mxCell>
-        <mxCell id="vQziVG4-nQfIgHgS_Oxc-73" edge="1" parent="vQziVG4-nQfIgHgS_Oxc-1" source="vQziVG4-nQfIgHgS_Oxc-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;" target="vQziVG4-nQfIgHgS_Oxc-76">
+        <mxCell id="vQziVG4-nQfIgHgS_Oxc-73" edge="1" parent="vQziVG4-nQfIgHgS_Oxc-1" source="vQziVG4-nQfIgHgS_Oxc-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;" target="vQziVG4-nQfIgHgS_Oxc-76">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1344" y="-685.5" as="sourcePoint" />
           </mxGeometry>

@@ -7,6 +7,8 @@ One of the major causes of security breaches is the misuse of IT system user acc
 
 With access to these accounts, an attacker can use them to steal or alter data in the systems.  Not long ago, Coco Pharmaceuticals was the [victim of a fraud](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview) around their supplier database.  Additional supplier records and invoices were added using that accounts of employees who left the company.  Since then there has been a systematic scrubbing of old user accounts and a routine review by each system owner to ensure that only the necessary accounts are in use.
 
+Account misuse of this kind sits behind several entries in the governance team's [risk register](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview#the-risk-register), including insider misuse of sensitive patient data and accidental disclosure of patient data through misconfigured access.
+
 For Egeria, this audit is performed using the [Egeria Audit](/user-interfaces/egeria-audit/overview) card on the Egeria portal.  Egeria routinely identifies users defined in its user directory that: 
 
 * have clear text passwords (used for bootstrapping the system on first install which should be removed before the system is put into production) or 

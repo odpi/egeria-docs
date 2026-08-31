@@ -26,7 +26,7 @@ He decides to create a glossary to group these terms.
 He creates a Regulation governance definition for the Act and links the glossary and the external references to the Regulation governance definition using the [Resource List](/types/0/0019-More-Information) relationship.
 
 !!! education "Further Information"
-    The markdown documents that Ivor creates to set up the initial definition of the Act can be found in [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/keeping-safe/martyns-law)
+    The markdown documents that Ivor creates to set up the initial definition of the Act can be found in [Egeria Workspaces](https://github.com/odpi/egeria-workspaces/tree/main/coco-workbooks/4.%20keeping-safe/martyns-law)
 
 ## Modelling the Impact of the Act
 
@@ -37,6 +37,8 @@ He realizes he needs a new role definition for the *Responsible Person* defined 
 He needs information from the venue about the escape routes and other safety measures they have.  Then he can assess if they need additional safety measures.
 
 Finally, he creates a project definition and meeting requests to take the next steps in preparing for Martyn's Law.
+
+The two risks Ivor identifies through this work - a terrorism-related incident at the annual conference, and failure to discharge the responsible person duties the Act creates - become the event security category of the company's [risk register](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview#the-risk-register).  They also expose a gap in the governance model: the Act had been captured as a regulation but never as a threat, so there was no driver for either risk to answer to until one was defined.
 
 ![Modelling Martyn's Law](documenting-martyns-law.svg)
 > **Figure 2:** Modelling Martyn's Law

@@ -23,7 +23,7 @@ Erin creates a [solution blueprint](/concepts/solution-blueprint) called **Data-
 The solution blueprint makes the architecture visible to a broader audience, and as implementation is linked to the solution components of the blueprint, they are able to follow the progress of the implementation.  Once operational, the solution blueprint becomes an aggregation point for statistics and other analytical results related to data sharing across the organization.  This helps the teams reliant on the data exchange to verify that all is working well.
 
 ??? info "Loading the solution blueprint"
-    The Markdown file containing the solution blueprint is available in either the JupyterLab or Obsidian environment of [Quickstart](/egeria-workspaces/quick-start/overview) .  It is located in 'coco-workbooks/1. coco-data-hub/solution-design.md'.  [Link to the Markdown document on GitHub](https://github.com/odpi/egeria-workspaces/tree/master/coco-workbooks/1. coco-data-hub/solution-design.md).  Follow the instructions in the `README.md` file to load the solution blueprint into Egeria.
+    The Markdown file containing the solution blueprint is available in either the JupyterLab or Obsidian environment of [Quickstart](/egeria-workspaces/quick-start/overview) .  It is located in 'coco-workbooks/1. coco-data-hub/solution-design.md'.  [Link to the Markdown document on GitHub](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/solution-design.md).  Follow the instructions in the `README.md` file to load the solution blueprint into Egeria.
 
 ??? info "Viewing the solution blueprint"
     The solution blueprint can be viewed through [Egeria Explorer](/user-interfaces/egeria-explorer/overview) either through the **Solution Architect** card or **Collections** card and selecting **Strategic Solutions**.
@@ -81,10 +81,10 @@ After the meeting, Polly entered the notes from the meeting into [Claude Code](h
 
 ??? info "Loading the AI-based software development process"
   The Markdown file containing the AI-based software development process is available in either the JupyterLab or Obsidian environment of [Quickstart](/egeria-workspaces/quick-start/overview).
-  It is located in 'coco-workbooks/1. coco-data-hub/solution-design.md'.  [Link to the Markdown document on GitHub](https://github.com/odpi/egeria-workspaces/tree/master/coco-workbooks/1. coco-data-hub/solution-design.md).  Follow the instructions in the `README.md` file to load the solution blueprint into Egeria.
+  It is located in 'coco-workbooks/1. coco-data-hub/software-development-governance-program.md'.  [Link to the Markdown document on GitHub](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/software-development-governance-program.md).  Follow the instructions in the `README.md` file to load the governance definitions into Egeria.
 
 ??? info "Viewing the AI-based software development process"
-  The governance definitions can be viewed through [Egeria Explorer](/user-interfaces/egeria-explorer/overview) either through the **Governance Definitions** card or **Collections** card and selecting **Folios** and then **Govrnance Folios** and then **Senior Software Manager — Governance Folio**.
+  The governance definitions can be viewed through [Egeria Explorer](/user-interfaces/egeria-explorer/overview) either through the **Governance Definitions** card or **Collections** card and selecting **Folios** and then **Govrnance Folios** and then **Senior Software Manager &mdash; Governance Folio**.
   ![Viewing the governance folio](viewing-governance-folio.png)
 
 
@@ -95,7 +95,7 @@ One of the initial development tasks was to create the definitions for the data 
 ![Building the Data Sharing Hub](peter-creating-a-data-hub.png)
 
 ??? info "Building the Data Sharing Hub"
-   You can see/run the process of building the data sharing hub in the JupyterHub of the [Quickstart environment](/egeria-workspaces/quick-start/overview).  It is found in the `coco-workbooks` under `1. coco-data-hub`.  The [README.md](https://github.com/odpi/egeria-workspaces/blob/master/coco-workbooks/1.%20coco-data-hub/README.md) provides more information how to run the notebook.  The notebooks is called [setting-up-the-data-hub.ipynb](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/2.%20setting-up-the-data-hub.ipynb).
+   You can see/run the process of building the data sharing hub in the JupyterHub of the [Quickstart environment](/egeria-workspaces/quick-start/overview).  It is found in the `coco-workbooks` under `1. coco-data-hub`.  The [README.md](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/README.md) provides more information how to run the notebook.  The notebooks is called [setting-up-the-data-hub.ipynb](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/setting-up-the-data-hub.ipynb).
 
 
 <!-- ## Designing the Data Sharing Hub Stores -->

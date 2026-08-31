@@ -43,7 +43,7 @@ replacing `{myversion}` with a tag name for this docker image.  The example belo
  => => naming to docker.io/library/egeria-platform:latest                                                                                            0.0s
 
 What's Next?
-  View summary of image vulnerabilities and recommendations → docker scout quickview
+  View summary of image vulnerabilities and recommendations -> docker scout quickview
 ```
 
 The resulting docker image is published to the docker service configured on your local machine.

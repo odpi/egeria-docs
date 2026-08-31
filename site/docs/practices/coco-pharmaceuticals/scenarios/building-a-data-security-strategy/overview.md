@@ -14,6 +14,8 @@ Since cyber threats are not static, and evolve rapidly, it is necessary to perfo
 
 Ivor realizes that this is a serious situation.  Coco Pharmaceuticals' future depends on taking care of its intellectual property and reputation.  Both are at risk from cyber attacks. It needs to take steps to protect their data and ensure that it is safe and secure. He asks Sidney to help him build a briefing for the board to raise awareness of the situation and request further investment in IT security.
 
+Both of those exposures are later recorded as entries in the governance team's [risk register](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview#the-risk-register): theft of personalised treatment intellectual property, and ransomware disruption to manufacturing operations.  Ivor owns them, and both are rated Critical.
+
 
 ## Supporting the Data Security Strategy
 

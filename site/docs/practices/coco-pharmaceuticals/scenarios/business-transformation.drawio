@@ -429,33 +429,42 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;sketch=1;curveFitting=1;jiggle=2;" value="Patient Treatment&lt;div&gt;(Sales/Direct)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="60" width="120" x="322" y="763" as="geometry" />
+          <mxGeometry height="60" width="120" x="253" y="775" as="geometry" />
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=1;curveFitting=1;jiggle=2;" value="Data Hub" vertex="1">
-          <mxGeometry height="67" width="120" x="322" y="873" as="geometry" />
+          <mxGeometry height="67" width="120" x="253" y="885" as="geometry" />
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="new-drug-order" vertex="1">
-          <mxGeometry height="30" width="110" x="383" y="830" as="geometry" />
+          <mxGeometry height="30" width="110" x="314" y="842" as="geometry" />
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Hadl3BJ_0JPdq3oytBZT-6">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="382" y="938" as="sourcePoint" />
+            <mxPoint x="313" y="950" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;sketch=1;curveFitting=1;jiggle=2;" value="Manufacturing" vertex="1">
-          <mxGeometry height="60" width="120" x="322" y="995" as="geometry" />
+          <mxGeometry height="60" width="120" x="253" y="1007" as="geometry" />
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="new-drug-order" vertex="1">
-          <mxGeometry height="30" width="80" x="390" y="950" as="geometry" />
+          <mxGeometry height="30" width="80" x="321" y="962" as="geometry" />
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-8" edge="1" parent="1" source="Hadl3BJ_0JPdq3oytBZT-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="Hadl3BJ_0JPdq3oytBZT-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;sketch=1;curveFitting=1;jiggle=2;" value="Hospital" vertex="1">
-          <mxGeometry height="60" width="120" x="322" y="654" as="geometry" />
+          <mxGeometry height="60" width="120" x="253" y="666" as="geometry" />
         </mxCell>
         <mxCell id="Hadl3BJ_0JPdq3oytBZT-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="new-drug-order" vertex="1">
-          <mxGeometry height="30" width="110" x="383" y="721" as="geometry" />
+          <mxGeometry height="30" width="110" x="314" y="733" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-11" parent="1" style="shape=tape;whiteSpace=wrap;html=1;size=0.2;" value="New Drug Order" vertex="1">
+          <mxGeometry height="60" width="209" x="193" y="551" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-12" parent="1" style="shape=tape;whiteSpace=wrap;html=1;size=0.2;" value="New Recipe" vertex="1">
+          <mxGeometry height="60" width="209" x="437" y="551" as="geometry" />
+        </mxCell>
+        <mxCell id="Hadl3BJ_0JPdq3oytBZT-13" parent="1" style="shape=tape;whiteSpace=wrap;html=1;size=0.2;" value="New Procurement Order" vertex="1">
+          <mxGeometry height="60" width="209" x="681" y="548" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

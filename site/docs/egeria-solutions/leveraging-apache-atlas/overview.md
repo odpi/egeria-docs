@@ -141,7 +141,7 @@ The connector's connection accepts:
 
 | Property | Purpose |
 |---|---|
-| `permittedSynchronization` | Controls the direction of flow: `FROM_THIRD_PARTY` (Apache Atlas → Egeria only), `TO_THIRD_PARTY` (Egeria → Apache Atlas only), or `BOTH_DIRECTIONS`. |
+| `permittedSynchronization` | Controls the direction of flow: `FROM_THIRD_PARTY` (Apache Atlas -> Egeria only), `TO_THIRD_PARTY` (Egeria -> Apache Atlas only), or `BOTH_DIRECTIONS`. |
 | `egeriaGlossaryQualifiedName` | Restricts publishing to a single named Egeria glossary.  If unset, every glossary in the open metadata ecosystem is copied to Apache Atlas. |
 | `atlasGlossaryName` | Restricts synchronization to a single named Apache Atlas glossary.  If unset, every glossary in Apache Atlas is copied into the open metadata ecosystem. |
 | `metadataSourceQualifiedName` | A unique name for this Apache Atlas server instance, used to identify the origin of the metadata it contributes - important if you are cataloguing more than one Apache Atlas server. |

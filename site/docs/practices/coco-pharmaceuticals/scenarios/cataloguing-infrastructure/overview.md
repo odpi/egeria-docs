@@ -19,7 +19,7 @@ However:
 * Maintaining the content - particularly for software levels - was tedious, and sometimes he got behind in cataloguing them.
 * It was challenging to share the data with his team, since it resulted in multiple copies of the spreadsheet, and sometimes they got out of sync.
 * No automation was possible based off of this information.
-* It was not possible to collaborate with other teams – such as devOps, security and finance, ...
+* It was not possible to collaborate with other teams - such as devOps, security and finance, ...
 
 He decides to add the spreadsheet contents to Egeria to make it easy to manage.  He writes a simple script to load the contents through the [pyegeria](/concepts/pyegeria) API.
 He also builds new scripts that populate different spreadsheet structures for his team's projects, and he is able to load any updates they make.

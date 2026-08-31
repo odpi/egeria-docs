@@ -125,7 +125,7 @@ We are also interested in building out a comprehensive integration test to allow
 
 We have tried to make it as easy as possible to make contributions. This applies to how we handle the legal aspects of contribution.
 
-We simply ask that when submitting a patch for review, the developer must include a sign-off statement in the commit message. This is the same approach that the [Linux® Kernel community :material-dock-window:](http://elinux.org/Developer_Certificate_Of_Origin){ target=dco } uses to manage code contributions.
+We simply ask that when submitting a patch for review, the developer must include a sign-off statement in the commit message. This is the same approach that the [Linux&reg; Kernel community :material-dock-window:](http://elinux.org/Developer_Certificate_Of_Origin){ target=dco } uses to manage code contributions.
 
 Here is an example `Signed-off-by` line, which indicates that the submitter accepts the DCO:
 

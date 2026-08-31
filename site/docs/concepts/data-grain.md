@@ -23,7 +23,7 @@ The grain statement is a formal definition of the granularity of a data set.   I
 
 ## Discovering the data grain
 
-It is possible to examine the data values within a data source to come up with a grain statement.  For example, you can evaluate the "resolution" of the data by looking for the **lowest common denominator** in these three core pillars:
+It is possible to examine the data values within a data source to come up with a grain statement.  For example, you can evaluate the "resolution" of the data by looking for the **lowest common denominator** in these three core pillars:
 
 |Dimension|How to Evaluate Grain| Examples of Grain Levels                                              |
 |---|---|-----------------------------------------------------------------------|

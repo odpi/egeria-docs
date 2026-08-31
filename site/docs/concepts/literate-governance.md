@@ -7,9 +7,9 @@ Literate governance is a concept that emphasizes the importance of documentation
 
 ![Literate Governance Process](literate-governance-process.png)
 
-The concept borrows heavily from Donald Knuth’s philosophy of _Literate Programming_. Instead of writing disconnected code or filling out rigid forms, governance officers, data stewards and engineers can author integrated documents that explains _why_ a structure exists in plain natural language, right alongside the precise commands that _create_ it.
+The concept borrows heavily from Donald Knuth's philosophy of _Literate Programming_. Instead of writing disconnected code or filling out rigid forms, governance officers, data stewards and engineers can author integrated documents that explains _why_ a structure exists in plain natural language, right alongside the precise commands that _create_ it.
 
-Dr.Egeria’s markdown-based architecture is natively built for this. A single Dr.Egeria file is essentially a structural narrative document. It can contain blocks of descriptive text, separated by native markdown commands that define governance definitions, asset schemas, or module relationships.  When the document is passed to the Dr.Egeria processor, it interprets the document and creates the appropriate definitions in Egeria's knowledge graph.
+Dr.Egeria's markdown-based architecture is natively built for this. A single Dr.Egeria file is essentially a structural narrative document. It can contain blocks of descriptive text, separated by native markdown commands that define governance definitions, asset schemas, or module relationships.  When the document is passed to the Dr.Egeria processor, it interprets the document and creates the appropriate definitions in Egeria's knowledge graph.
 
 The command language includes report requests so it is easy to validate that the content has been loaded and linked correctly.
 

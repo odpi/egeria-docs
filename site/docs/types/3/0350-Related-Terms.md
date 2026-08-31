@@ -14,7 +14,7 @@ The *TermRelationshipStatus* enum defines how reliable the relationship is betwe
 
 * DRAFT means the relationship is under development.
 * ACTIVE means the relationship is validated and in use.
-* DEPRECATED means the the relationship is being phased out.
+* DEPRECATED means the relationship is being phased out.
 * OBSOLETE means that the relationship should not be used anymore.
 * OTHER means that the status is not one of the statuses listed above.  The description field can be used to add more details.
 

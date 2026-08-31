@@ -63,7 +63,7 @@ Also ensure the following symbolic links are set up for helm & kubectl. If you a
 
 ![Utility settings](rancherutils.png)
 
-If you experience problems setting these links you can can do one of
+If you experience problems setting these links you can do one of
  * create the links manually. For instance on macOS using brew, these can be seen with `ls -la /usr/local/bin | grep Rancher`
  * Use your own local install of [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl){ target=k8s } or [helm](https://helm.sh/docs/intro/install/){ target=helm }
  * set your PATH to point directly to the Rancher binaries

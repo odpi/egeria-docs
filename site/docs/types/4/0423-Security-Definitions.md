@@ -29,7 +29,7 @@ The *SecurityAccessControl* entity is a type of [GovernanceControl](/types/4/042
 
 The *ServiceAccessControl* entity is a type of *SecurityAccessControl* that describes the permissions associated with a service.  This may cover a server or a service.  The *mappingProperties* are used to define the exact scope that the control refers to.
 
-* *mappingProperties* - Additional properties to aid the mapping to the the element in an external resource.
+* *mappingProperties* - Additional properties to aid the mapping to the element in an external resource.
 
 ## SecretsCollectionSecurityList relationship
 

@@ -18,7 +18,7 @@ The [*survey action services*](/concepts/survey-action-service) build on this in
 
 The results of this analysis is added to a [survey report](/concepts/survey-report) linked off of the asset for the digital resource.
 
-The analysis results documented in the survey report report can either be [automatically applied](/concepts/governance-action) to the asset's catalog entry or it can go through a *stewardship process* where a subject-matter expert confirms the findings (or not).  
+The analysis results documented in the survey report can either be [automatically applied](/concepts/governance-action) to the asset's catalog entry or it can go through a *stewardship process* where a subject-matter expert confirms the findings (or not).  
 
 Discovery and stewardship are the most advanced form of automation for asset cataloging. Egeria provides the server runtime environment and component framework to allow third parties to create survey action services and governance action implementations. It has only simple implementations of these components, mostly for demonstration purposes. This is an area where vendors and other open source projects are expected to provide additional value.
 

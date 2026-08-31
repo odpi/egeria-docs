@@ -9,7 +9,7 @@ Solution components provide an architectural summary of the logical components t
 
 ## SolutionComponent entity
 
-A *SolutionComponent* is an architecture description of a digital implementation that provides a well-defined function.  They can be modelled as *UML components* and provide a way to organize the digital landscape into course-grained functional components. Solution components communicate via [ports and wires](/types/7/0735-Solution-Ports-and-Wires).
+A *SolutionComponent* is an architecture description of a digital implementation that provides a well-defined function.  They can be modelled as *UML components* and provide a way to organize the digital landscape into coarse-grained functional components. Solution components communicate via [ports and wires](/types/7/0735-Solution-Ports-and-Wires).
 
 * *solutionComponentType* - The type of solution component - for example, is it a process, of file or database.
 * *plannedDeployedImplementationType* - The type of software component that is likely to serve as an implementation for this solution component.

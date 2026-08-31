@@ -155,7 +155,7 @@ are received and distributed by the inbound event manager.
 > Figure 13: Startup Sequence 10 - Cohort events wired to enterprise topic
 
 At this point, the OMRS has completed initializing, it is processing events
-from the cohort and and is ready for requests from the OMASs.
+from the cohort and is ready for requests from the OMASs.
 It returned to the Egeria Administration Services which then starts the OMASs.
 
 The Egeria Administration Services asks the OMRS enterprise connector manager

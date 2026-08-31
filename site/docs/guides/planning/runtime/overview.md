@@ -38,7 +38,7 @@ Object-oriented software engineers would know of this type of relationship as *b
 ![How the OMAG Servers interact](/concepts/omag-server-ecosystem.svg)
 
 - The [cohort members](/concepts/cohort-member) communicate with one another via an [open metadata repository cohort](/services/omrs/cohort). This means that they exchange metadata through a low level, fine-grained API supported by the [Open Metadata Repository Services (OMRS)](/services/omrs).
-- The [Open Metadata Access Services (OMAS)](/services/omas) are built on top of the repository services. They live in the [metadata access store](/concepts/metadata-access-store). They offer more course-grained interfaces, specialized for particular types of technology.
+- The [Open Metadata Access Services (OMAS)](/services/omas) are built on top of the repository services. They live in the [metadata access store](/concepts/metadata-access-store). They offer more coarse-grained interfaces, specialized for particular types of technology.
 - The [governance servers](/concepts/governance-server) are again specialized for particular types of metadata integration or additional governance activity. They connect to a metadata access point / metadata server.
 - Finally, the [view servers](/concepts/view-server) support the services for the solution user interfaces. They also connect to a metadata access point / metadata server.
 

@@ -49,7 +49,7 @@ Erin then goes to talk to [Harry Hopeful](/practices/coco-pharmaceuticals/person
 
 ![Erin and Harry discussing the data he needs for sales](erin-and-harry-hopeful-discussing-subject-areas.png)
 
-Prior to talking to Erin, Harry had expecting that much of the same selling process will continue as before. However he realises that the orders will need to come in in smaller batches, based on treatment need. Coco Pharmaceuticals needs to begin working with the procurement teams at the hospitals now to change the approval process for orders since they can not be delayed for the standard procurement process.  At the same time the procurement teams will need some role to control costs so he imagines he will be more involved with them as they jointly monitor usage over time.
+Prior to talking to Erin, Harry had expected that much of the same selling process would continue as before. However he realises that the orders will need to come in smaller batches, based on treatment need. Coco Pharmaceuticals needs to begin working with the procurement teams at the hospitals now to change the approval process for orders since they can not be delayed for the standard procurement process.  At the same time the procurement teams will need some role to control costs so he imagines he will be more involved with them as they jointly monitor usage over time.
 
 ## Conclusions
 

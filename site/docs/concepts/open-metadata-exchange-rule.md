@@ -25,6 +25,6 @@ The open metadata exchange rule can be set to one of the following values:
 * `DESELECTED_TYPES` - Registration plus all type definitions (TypeDefs) and metadata instances (Entities and Relationships) NOT listed in selected types.
 * `ALL` - Registration plus all type definitions (TypeDefs) and metadata instances (Entities and Relationships).  This is the default setting for all of the rules.
 
-These settings are fairly course-grained.  If you need to control the flow of instance events at a more granular level then the [open metadata security connectors](/features/metadata security/overview) provide control at the individual 
+These settings are fairly coarse-grained.  If you need to control the flow of instance events at a more granular level then the [open metadata security connectors](/features/metadata security/overview) provide control at the individual 
 
 --8<-- "snippets/abbr.md"

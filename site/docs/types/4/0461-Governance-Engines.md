@@ -53,7 +53,7 @@ The subtype of the governance service linked via the *SupportedGovernanceService
 
 ## DeleteMethod enumeration
 
-*DeleteMethod* defines the the type of delete method to use when the connector/governance service deletes an element.
+*DeleteMethod* defines the type of delete method to use when the connector/governance service deletes an element.
 
 | Enumeration      | Value | Name                  | Description                                                                                                                                                                                                                                                                                                                 |
 |------------------|-------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

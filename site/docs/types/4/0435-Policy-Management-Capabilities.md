@@ -66,7 +66,7 @@ Describes the capability where policies are managed.
 
 * *label* - Display label to use when displaying this lineage relationship in a lineage graph.
 * *description* - Description of the element or associated resource in free-text.
-* *pointType* - Descriptive type information about the the policy management capability.
+* *pointType* - Descriptive type information about the policy management capability.
 
 ## PolicyRetrievalPoint classification
 

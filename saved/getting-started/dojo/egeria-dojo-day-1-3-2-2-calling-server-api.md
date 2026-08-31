@@ -14,7 +14,7 @@ For this exercise, you will be using the following Postman collections:
 * `Egeria-asset-owner-omas`
 
 The aim is to show the differences between the fine-grained repository services APIs and the 
-courser-grained, but more specialized access services APIs.
+coarse-grained, but more specialized access services APIs.
 
 ![Design philosophy](/guides/developer/design-philosophy-omas-omrs.png)
 

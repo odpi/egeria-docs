@@ -36,7 +36,7 @@ The governance definitions are organized into specific subtypes and linked toget
 
   * [0423 Security Definitions](/types/4/0423-Security-Definitions) - describes governance controls that focus on protecting the organization.
   * [0424 Governance Zones](/types/4/0424-Governance-Zones) - describes security controls that control how access to a collection of metadata is controlled.
-  * [0430 Development Controls](/types/4/0430-Development-Controls) - describes governance controls that that focus on fulfilling unmet needs of the organization through the development of technology.
+  * [0430 Development Controls](/types/4/0430-Development-Controls) - describes governance controls that focus on fulfilling unmet needs of the organization through the development of technology.
   * [0440 Organizational Controls](/types/4/0440-Organizational-Controls) - identity governance roles and manual procedures (such as approvals) that implement a governance control.
   * [0450 Governance Rollout](/types/4/0450-Governance-Rollout) - describes governance controls that are used when rolling out a governance program to the organization.
   * [0451 Notifications](/types/4/0451-Notifications) - describes governance controls that are used to notify people of changes, schedules and events.

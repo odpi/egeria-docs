@@ -4,7 +4,7 @@
 
 ## Configuring Data Engine Proxy Services
 
-    ???+ intermediate "Course-grained helper command"
+    ???+ intermediate "Coarse-grained helper command"
         !!! post "POST - Configure Date Engine Proxy Services"
             ```
             {{serverURLRoot}}/open-metadata/admin-services/users/{{userId}}/servers/{{serverName}}/data-engine-proxy-service/configuration
@@ -42,7 +42,7 @@
     
     #### Removing the Data Engine Services from the server configuration
     
-    ???+ intermediate "Course-grained helper command"
+    ???+ intermediate "Coarse-grained helper command"
         !!! delete  "DELETE - Remove Data Engine Configuration from the server"
             ```
             {{serverURLRoot}}/open-metadata/admin-services/users/{{userId}}/servers/{{serverName}}/data-engine-proxy-service/configuration

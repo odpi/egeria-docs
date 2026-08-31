@@ -97,7 +97,7 @@ The face-to-face workshop in Bucharest saw important progress on cloud-native de
 
 ***Afternoon session***
 
-- UI platforms consolidation: open discussion, agree on concrete design and work plan (as much as possible possible)
+- UI platforms consolidation: open discussion, agree on concrete design and work plan (as much as possible)
 - Overview on the new Lineage Types: Solution Ports and Wires vs Information Supply Chains
 
 ### Day 2 Egeria workshop
@@ -132,7 +132,7 @@ The face-to-face workshop in Bucharest saw important progress on cloud-native de
 ***Morning session***
 
 - Project health, regular component owners and component status review
-- UI platforms consolidation, open discussion - agree on concrete design and work plan (as much as possible possible)
+- UI platforms consolidation, open discussion - agree on concrete design and work plan (as much as possible)
 
 ***Afternoon session***
 

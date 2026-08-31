@@ -22,7 +22,7 @@ your code so that it is discovering syntax other coding errors as you type.
 This is useful in getting a first pass of your code.
 
 However, IntelliJ does not understand the egeria structure - only Maven
-does, so the Maven build is important to to verify your changes are
+does, so the Maven build is important to verify your changes are
 OK at the project level.
 
 

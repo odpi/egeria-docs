@@ -48,7 +48,7 @@ and `File System Extractor`.  It is show in a different integration daemon for t
 
 Figure 4 shows two integration connectors that are maintaining database views in a Data Virtualization Engine.
 `Database View Maker` is listening for new databases and schema changes and automatically configuring views over
-these data sources and the second copy of `Database Extractor` is detecting the schema changes in the Data
+these data sources and the second copy of `Database Extractor` is detecting the schema changes in the
 Data Virtualization Engine and is cataloguing them in open metadata.
 
 It is possible for `Database View Maker` to create the metadata for the views that it is creating.

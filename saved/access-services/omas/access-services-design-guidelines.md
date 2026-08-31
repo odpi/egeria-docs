@@ -202,9 +202,9 @@ implementing the OMAS one scenario at a time.
   
   Document the REST API operations in ***omas-name*/*omas-name*-server/docs/user**
   
-  Link to the the top-level README.md for the OMAS's server module (***omas-name*/*omas-name*-server/README.md**).
+  Link to the top-level README.md for the OMAS's server module (***omas-name*/*omas-name*-server/README.md**).
   
-  Implement the ***omas-name*/*omas-name*-server-spring** module for the OMAS.  This contains the sever-side
+  Implement the ***omas-name*/*omas-name*-server-spring** module for the OMAS.  This contains the server-side
   resource classes that support the REST API.
   
   Add the ***omas-name*/*omas-name*-server-spring** module to the `pom.xml` file for the

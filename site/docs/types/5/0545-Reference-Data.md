@@ -66,7 +66,7 @@ Some code values need to be organized into a hierarchy.  The *ValidValueMember* 
 The attributes of the *ValidValueMember* relationship are:
 
 * *ordinal* - an integer used to sequence the valid values in a set.  This overrides the ordinal in the valid value.
-* *isDefaultValue* - an integer used to sequence the valid valid values in a set.
+* *isDefaultValue* - an integer used to sequence the valid values in a set.
 
 ## ValidValuesAssignment relationship
 

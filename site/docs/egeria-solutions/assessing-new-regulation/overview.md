@@ -75,7 +75,7 @@ You may wish to organize your definitions using a hierarchy of collections.  For
 
 ## Managing the effort
 
-Finally, Dr.Egeria supports the the management of projects that can be used to organize people into teams reposible for different aspects of the effort needed to support the regulation.
+Finally, Dr.Egeria supports the management of projects that can be used to organize people into teams responsible for different aspects of the effort needed to support the regulation.
 
 ![Managing the effort](managing-effort.svg)
 

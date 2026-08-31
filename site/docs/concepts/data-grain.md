@@ -5,10 +5,10 @@
 
 A *Data Grain* is part of a [data specification](/concepts/data-specification) that describes the level of detail in a single row/object in a data source.  Data warehouses aim to capture data at the most granular level that can be achieved whilst ensuring the granularity of every row in the table is the same.
 
-In Egeria, the data grain is one on the dimensions of scope captured in a [data lens](/concepts/data-lens).  It is used to filter out data that is too course-grained to be used by a project.
+In Egeria, the data grain is one on the dimensions of scope captured in a [data lens](/concepts/data-lens).  It is used to filter out data that is too coarse-grained to be used by a project.
 
 ![Purpose of a data grain](data-grain.svg)
-> A data grain definition can be used to filter out data sources whose data is too course-grained.
+> A data grain definition can be used to filter out data sources whose data is too coarse-grained.
 
 Data grains are often linking in order of granularity to enable the matching of data sources to a data lens to consider more finely-grained data sources as potential candidates for the project because their detail can be rolled out to the desired granularity. 
 

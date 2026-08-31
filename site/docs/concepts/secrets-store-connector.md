@@ -10,7 +10,7 @@ With the secrets store connector, it is possible to manage:
 
 * A user directory containing log-on information (userId, password), groups and roles to support an authentication service, such as a token issuing service.
 * Secrets needed by a connector or other type of automated service in order to connect to a remote service.  This includes a description of the token API to call and the secret values to use.
-* Named lists of users, roles and groups that define access to specific resources.  These list are used to to support a service that is providing authorization control, such as the [Open Metadata Security Connectors](/features/metadata-security/overview/).
+* Named lists of users, roles and groups that define access to specific resources.  These list are used to support a service that is providing authorization control, such as the [Open Metadata Security Connectors](/features/metadata-security/overview/).
 
 The secrets store connector is typically embedded in a connector that needs one or more secrets to perform its tasks.  Both connectors are initialised together by the [ConnectorBroker](/concepts/connector-broker).  The secrets store connector is called by the surrounding connector to extract the needed secrets.
 

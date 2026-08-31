@@ -142,7 +142,7 @@ This has also resulted in the OMAG Server Platform being the first-class resourc
 
 A Deployment manages scaling of a set of containers (such as egeria platform) across multiple pods. A *Statefulset* extends this to provide a unique identity which can be used for unique service definitions, or for maintaining an association with dedicated storage.
 
-In the current Egeria helm chart we use a stateful set that that persistent storage can be allocated uniquely to each
+In the current Egeria helm chart we use a stateful set so that persistent storage can be allocated uniquely to each
 pod & retained across restarts.
 
 However, the assumption in the operator environment is that Egeria is stateless (beyond the config & CR), and that any persistent state is managed

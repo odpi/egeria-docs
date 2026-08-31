@@ -48,7 +48,7 @@ To understand if all of these data sets are relevant, a bit of digging into thei
 
 It is clear that the synthetic data from the test system is of no use.  It also suggests that there are uncatalogued regional ODSs.
 
-The next picture reveals the results of an analysis of the data in the remaining data sets on the this.  This shows that the the global sales data mart does not have the [granularity](/concepts/data-grain) needed by the project.  The result is that the team should combine global ODS data to get the appropriate scope and granularity.
+The next picture reveals the results of an analysis of the data in the remaining data sets.  This shows that the global sales data mart does not have the [granularity](/concepts/data-grain) needed by the project.  The result is that the team should combine global ODS data to get the appropriate scope and granularity.
 
 ![Sales data with survey results](data-lens-sales-data-survey-data.svg)
 

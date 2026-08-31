@@ -3,7 +3,7 @@
 
 # Open Metadata and Governance (OMAG) Subsystems
 
-A *subsystem* is a collection of components within a software server platform that supports one or more related services. Subsystems can be organized in a hierarchy where course-grained subsystems can be decomposed into more fine-grained subsystems.
+A *subsystem* is a collection of components within a software server platform that supports one or more related services. Subsystems can be organized in a hierarchy where coarse-grained subsystems can be decomposed into more fine-grained subsystems.
 
 The [OMAG Server Platform](/concepts/omag-server-platform) is a collection of subsystems that support open metadata and governance services as well as its own operational needs.  It is designed to provide a runtime where nothing is running when it starts.  Services are activated dynamically through the [Administration services](/services/admin-services/overview).
 

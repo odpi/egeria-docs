@@ -31,7 +31,7 @@ Egeria provides a number of implementations of such a repository -- only one of 
         ```
         POST {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/local-repository/mode/xtdb-local-repository
         ```
-        The request body is a map of property names to values that are passed directly to XTDB when the sever starts up.
+        The request body is a map of property names to values that are passed directly to XTDB when the server starts up.
 
         ??? info "For Egeria releases before version 5.0 ...
             The XTDB connector is located in its own git repository [egeria-connector-xtdb.git](https://github.com/odpi/egeria-connector-xtdb).  The JAR file needs to be built from this repository and placed the OMAG Server Platform's class path.  It is configured in the Metadata Access Store using the follwoing command: 

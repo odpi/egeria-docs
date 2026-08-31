@@ -27,7 +27,7 @@
 This may be caused by a configuration error, or a server outage.
 * `StatusNotSupportedException` - the metadata repository hosting the metadata collection does not support the requested status.
 * `TypeDefConflictException` - the new TypeDef conflicts with an existing TypeDef.
-* `TypeDefInUseException` - the TypeDef cannot be deleted because there are instances of this type in the
+* `TypeDefInUseException` - the TypeDef cannot be deleted because there are instances of this type in
 the metadata collection.  These instances need to be purged before the TypeDef can be deleted.
 * `TypeDefKnownException` - the TypeDef is already stored in the repository.
 * `TypeDefNotKnownException` - the requested TypeDef is not known in the metadata collection.

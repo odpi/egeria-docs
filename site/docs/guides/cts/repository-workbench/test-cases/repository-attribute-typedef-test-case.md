@@ -46,7 +46,7 @@ is valid and consistent with other calls.
   
 * **repository-attribute-typedef-`type name`-06** - primitive type definition has a valid category.
 
-  Each primitive attribute has a primitive category that defines the specific type of
+  Each primitive attribute has a primitive category that defines the specific type
   of the attribute such as string, integer, etc.
   
 * **repository-attribute-typedef-`type name`-07** - collection type definition has a valid category.

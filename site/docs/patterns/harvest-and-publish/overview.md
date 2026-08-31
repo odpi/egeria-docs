@@ -24,7 +24,9 @@ An architecture built around a hub also gives the business a picture it can reas
 
 Maintaining a description of what a hub contains is exactly the sort of work that should not be done by hand.  The *Liskov Data Sharing Hub Manager* - named in recognition of [Barbara Liskov](https://en.wikipedia.org/wiki/Barbara_Liskov)'s work on data abstraction - is the [integration connector](/concepts/integration-connector) that does it.
 
-Liskov detects each data sharing hub as it is created and begins monitoring the data stores that are members of it.  From their schemas it builds an abstracted [data dictionary](/concepts/data-dictionary), anchored to the hub, containing:
+Liskov detects each data sharing hub as it is created and begins monitoring the data stores that are members of it.  On each refresh it does two things for every member: it [makes sure the member is being catalogued and surveyed](#keeping-the-hubs-members-described), so that there is an accurate and current description to work from, and it abstracts what that description contains into the hub's data dictionary.
+
+From the members' schemas it builds an abstracted [data dictionary](/concepts/data-dictionary), anchored to the hub and created the first time it is needed, containing:
 
 * **[Data fields](/concepts/data-field)** - the types of data value found in the hub.  A data field identifies *similar data in different data stores*, so a consumer asks for the data they want once, rather than once per store.
 * **[Data structures](/concepts/data-structure)** - the groupings of those fields that reflect how the data is organized.
@@ -35,6 +37,20 @@ The generated dictionary is complete but bare - it has the fields and their type
 
 Crucially, each entry in the dictionary stays linked to the schema elements it was derived from.  That linkage is what allows an automated pipeline to navigate from the fields a requester asked for to the actual tables and columns that hold them.
 
+### Keeping the hub's members described
+
+A data dictionary is only as good as the descriptions of the data stores it is built from, and those descriptions are not Liskov's to write - they come from the integration connectors and [survey action services](/concepts/survey-action-service) that specialize in each technology.  What Liskov does is make sure they are running, rather than waiting for somebody to notice that a member has never been described.
+
+Egeria's [content packs](/concepts/open-metadata-archive) define [governance action types](/concepts/governance-action-type) that catalog and survey each kind of technology, and link them to the [technology type](/concepts/deployed-implementation-type) they support with a [ResourceList](/types/0/0019-More-Information) relationship, qualified by what the resource is used for.  Liskov follows those links from each member's `deployedImplementationType` and, for every member it encounters:
+
+* **Enables cataloguing, if it is not already enabled.**  A cataloguing governance action type carries the integration connector that will do the work as a predefined action target, so Liskov treats cataloguing as already enabled when the member is one of that connector's [catalog targets](/concepts/catalog-target).  Otherwise it starts the governance action type, passing the member as the `newAsset` action target.  This is what reveals the *contents* of a member: cataloguing a file system directory creates the assets for the files inside it, and each of those files is then catalogued and surveyed in its own right - a CSV file has its own file-type-specific survey, which is what puts its columns within reach of the dictionary.
+* **Requests a survey.**  A fresh survey is started on every refresh, so that the description of what a member actually contains keeps pace with the data rather than reflecting the day the member joined the hub.
+
+Both kinds of request are [engine actions](/concepts/engine-action) that run asynchronously in a [governance engine](/concepts/governance-engine), so their results are picked up by a later refresh rather than the one that asked for them.  A request is skipped when an engine action started from the same governance action type is already running - or waiting to run - against the same member, so an outstanding request from an earlier refresh is never duplicated.  Liskov records the hub it is managing as the source of each request, and reports the requests it starts on the [audit log](/concepts/audit-log) as `LISKOV-DATA-HUB-MANAGER-0020` for cataloguing and `LISKOV-DATA-HUB-MANAGER-0021` for a survey.  A member whose `deployedImplementationType` matches no known technology type is reported as `LISKOV-DATA-HUB-MANAGER-0022` and left alone: nothing is registered that knows how to describe it.
+
+!!! tip "Turning off the surveys you do not want"
+    By default every survey registered for a member's technology type is run.  Most technology types register exactly one, but a file system directory registers four - `survey-folder`, `survey-folder-and-files`, `survey-all-folders` and `survey-all-folders-and-files` - and running all of them on every refresh is rarely worth the cost.  The `excludedSurveyRequestTypes` configuration property takes a comma-separated list of the surveys to skip.  Each value is either the survey's request type (`survey-folder`) or the qualified name of its governance action type (`FileSurvey::survey-folder`).  Set it on the connector's connection to apply to every data sharing hub, or on an individual [catalog target](/concepts/catalog-target) to apply to just that hub - where both are set, the catalog target's value wins.
+
 ### Managing data sharing requests
 
 A request for data is work, not just a record, so the *DataSharingRequest* entity is a type of [ToDo](/types/1/0135-Actions-For-People).  It tracks the status of the request and gathers its details: the [data specification](/concepts/data-specification) describing the data being asked for, the data sharing agreement, and the related resources.
@@ -44,7 +60,7 @@ This covers both directions of sharing.  A requester inside the organization can
 The benefit that turns out to matter most is auditability.  In the [patient data sharing hub](/practices/coco-pharmaceuticals/scenarios/patient-data-sharing-hub/overview) scenario, [Robbie Records](/practices/coco-pharmaceuticals/personas/robbie-records) is managing requests by hand: copying data into a new database per project, keeping a folder of documents describing each one, and exporting password-protected CSV files.  Reconstructing what happened for an auditor was a job in itself.  With the hub in place, the agreements, the users with access, and exactly what data was shared are all recorded as they happen, and the reports that demonstrate compliance can be produced on demand.
 
 !!! summary "Usage"
-    A data sharing hub turns ad-hoc data sharing into a managed service: a single description of what is on offer, a tracked request and agreement for each consumer, and a durable record of what was shared with whom.
+    A data sharing hub turns ad-hoc data sharing into a managed service: a single description of what is on offer - kept current by Liskov driving the cataloguing and surveys behind it - a tracked request and agreement for each consumer, and a durable record of what was shared with whom.
 
 ## From data sharing hub to digital product
 
@@ -71,7 +87,7 @@ The *Open Metadata Digital Product Catalog* is Egeria's own catalog of such prod
 | Component | Role |
 |-----------|------|
 | **Jacquard Digital Product Loom** | An integration connector that harvests open metadata and weaves it into digital products, each presented as a [tabular data set](/concepts/tabular-data-set), organized into the product catalog.  Named for [Joseph Marie Jacquard](https://en.wikipedia.org/wiki/Joseph_Marie_Jacquard). |
-| **Baudot Subscription Manager** | An integration connector that manages the subscriptions to those products, including issuing notifications to subscribers.  Named for [Emile Baudot](https://en.wikipedia.org/wiki/%C3%89mile_Baudot). |
+| **Baudot Subscription Manager** | A [watchdog action service](/concepts/watchdog-action-service) that manages the subscriptions to those products.  It watches the products for changes and the subscribers as they come and go, issues the resulting notifications, and is designed to run indefinitely rather than complete.  Named for [Emile Baudot](https://en.wikipedia.org/wiki/%C3%89mile_Baudot). |
 | **Wedgwood Data Provisioner** | A [governance action service](/concepts/governance-action-service), called from Baudot, that provisions the product data into the destination the subscriber supplied.  Named for [Thomas Wedgwood](https://en.wikipedia.org/wiki/Thomas_Wedgwood_(photographer)). |
 | **Babbage Analytical Engine** and **Lovelace Services** | An integration connector and the governance services it orchestrates, which analyse the content of open metadata and store the resulting insight as classifications.  These insights become the raw material for the observability products described below, and are covered by the [Metadata Insight](/patterns/metadata-insight/overview) pattern. |
 | **External harvester connectors** | Harvest data from sources outside the ecosystem and record the resulting insight in open metadata for Jacquard to publish. |
@@ -123,6 +139,7 @@ Consumers browse and subscribe through the [Product Catalog](/services/omvs/prod
     * [Model 0705 Data Sharing](/types/7/0705-Data-Sharing) - the data sharing hub and data sharing request types.
     * [Model 0710 Digital Products](/types/7/0710-Digital-Products), [0711 Agreements](/types/7/0711-Agreements) and [0712 Digital Subscription](/types/7/0712-Digital-Subscription) - the digital product, agreement and subscription types.
     * [Data dictionary](/concepts/data-dictionary), [data field](/concepts/data-field) and [data structure](/concepts/data-structure) - the elements Liskov maintains.
+    * [Governance action type](/concepts/governance-action-type) and [technology type](/concepts/deployed-implementation-type) - how Liskov finds the cataloguing and survey requests to make for each member of a hub.
     * [Tabular data set](/concepts/tabular-data-set) - the form every open metadata digital product takes.
     * [Metadata Insight](/patterns/metadata-insight/overview) - where the insight published by the observability products comes from.
 

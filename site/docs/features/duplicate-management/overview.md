@@ -261,7 +261,7 @@ Whenever the filtering changes the number of relationships being returned, the r
 Deduplication has to be suppressed for the processes that manage the duplicates, otherwise they would be unable to see the instances they are working on:
 
 * When a request is made with `forDuplicateProcessing` set to `true`, none of the processing described above takes place.  The entity that was retrieved is returned as it stands, with no peers gathered and no classifications merged, and every relationship is returned including the `PeerDuplicateLink` and `ConsolidatedDuplicateLink` relationships themselves.  This is the mode used by the governance actions that detect and link duplicates, by the [Mendel Automated Duplicate Manager](#the-mendel-automated-duplicate-manager) for every read and write it makes, and by the stewardship interfaces such as the [Classification Explorer](/services/omvs/classification-explorer/overview) that the steward uses to confirm them.
-* Requests that count matching entities or relationships rather than returning them are not filtered either.  Producing a deduplicated count would mean retrieving every matching instance, which defeats the purpose of a count operation.  A count may therefore be higher than the number of instances a retrieval would return.
+* Requests that count matching entities or relationships rather than returning them are not filtered by default, so a count can be higher than the number of instances a retrieval would return.  The caller chooses which they want with the `pushDown` parameter on the count operations.  With `pushDown` set to `true` - the default - the repository counts the matching rows itself, which never materializes an instance and is therefore fast, but counts what matches the search rather than what the caller would be given.  With `pushDown` set to `false` the instances are retrieved and counted, so the answer agrees with the list by construction, at the cost of reading every one of them.  Deduplication is only one of the reasons the two answers differ - a retrieval also drops the instances whose anchor the caller is not authorized to read.
 
 ## Automated duplicate management
 
@@ -270,7 +270,7 @@ The duplicate detection in figures 5 and 6 is deliberately pluggable, because mo
 Egeria's automated duplicate management works on that case, and it comes in two halves:
 
 * **Detection.**  When metadata is retrieved by a name that is supposed to be unique and more than one entity matches, the entities are linked to one another with candidate `PeerDuplicateLink` relationships.  Nothing else changes: no classifications are added, and the retrieval processing goes on returning the entities separately.
-* **Management.**  The [Mendel Automated Duplicate Manager](#the-mendel-automated-duplicate-manager) reviews those duplicate links.  It confirms the ones it is sure of, passes the rest to a steward, takes the classifications back off the duplicates that a steward has separated, and consolidates the clusters that have grown large enough.
+* **Management.**  The [Mendel Automated Duplicate Manager](#the-mendel-automated-duplicate-manager) reviews those duplicate links.  It confirms the ones it is sure of, passes the rest to a steward, takes back its own confirmations when the grounds for them disappear, takes the classifications off the duplicates that are no longer combined with anything, and consolidates the clusters that have grown large enough.
 
 The two halves are independent of one another.  Detection leaves its record whether or not anyone is running Mendel, and Mendel works on every `PeerDuplicateLink` relationship in the ecosystem, however it was created - by detection, by a [governance action service](/concepts/governance-action-service), by a steward, or by a tool outside Egeria.
 
@@ -340,7 +340,7 @@ It is defined in the [core content pack](/content-packs/core-content-pack/overvi
 
 Mendel works across the whole open metadata ecosystem rather than through [catalog targets](/concepts/catalog-target), and every read and write it makes sets `forDuplicateProcessing` to `true`.  A connector that manages duplicates has to be able to see them: reading [the combined view](#requests-that-do-not-deduplicate) would mean seeing one element where there are three, with the relationships of all three merged onto it, which is neither what is stored nor what needs changing.
 
-Each refresh retrieves every `PeerDuplicateLink` relationship in the ecosystem and makes three passes over that one snapshot.
+Each refresh retrieves every `PeerDuplicateLink` relationship in the ecosystem and makes four passes over that one snapshot.
 
 ```mermaid
 flowchart TD
@@ -353,32 +353,41 @@ flowchart TD
     a **Referenceable**,
     and the same
     qualified name?`"}
-    C -->|yes| D["`Set the link to **VALIDATED**
-    and add **KnownDuplicate**
-    to both entities`"]
+    C -->|yes| D["`Set the link to **VALIDATED**,
+    record the grounds on it, and add
+    **KnownDuplicate** to both entities`"]
     C -->|no| E["`Raise a **to do** for the
     DuplicateMetadataSteward role`"]
-    B -->|"`**2.** DEPRECATED,
-    OBSOLETE`"| F{"Are any of the entity's
-    other duplicate links
-    still live?"}
+    B -->|"**2.** VALIDATED"| L{"Was this Mendel's
+    own decision?"}
+    L -->|no| Z(["Leave it
+    alone"])
+    L -->|yes| M{"Are the entities
+    still a close match?"}
+    M -->|yes| Z
+    M -->|no| N["`Move the link to **DEPRECATED**
+    and record why`"]
+    B -->|"`**3.** DEPRECATED,
+    OBSOLETE`"| F{"`Is the entity still
+    deduplicated by some other
+    route - a live peer link, or a
+    **ConsolidatedDuplicateLink**?`"}
+    F -->|yes| Z
     F -->|no| G["`Remove **KnownDuplicate**
     from the entity`"]
-    F -->|yes| H(["Leave the
-    entity alone"])
-    B -->|"**3.** VALIDATED"| I["Gather the cluster of
+    B -->|"**4.** VALIDATED"| I["Gather the cluster of
     entities that the validated
     links connect together"]
     I --> J{"`Has the cluster reached
     **duplicateClusterSize**?`"}
-    J -->|no| H
+    J -->|no| Z
     J -->|yes| K["Build the consolidated
     entity and link it to
     each member"]
 ```
-> **Figure 13:** The three passes that the Mendel Automated Duplicate Manager makes over the duplicate links
+> **Figure 13:** The four passes that the Mendel Automated Duplicate Manager makes over the duplicate links
 
-Because all three passes work from the same snapshot, the links that a refresh validates are consolidated by the *next* refresh rather than the one that validated them.  A duplicate link that can not be processed is logged and skipped, so one problem link does not stop the rest of the pass.
+Validated links are looked at twice - once by the pass that asks whether the decision still holds, and once by the pass that builds clusters out of the ones that do.  Because all four passes work from the same snapshot, the links that a refresh validates are consolidated by the *next* refresh rather than the one that validated them.  A link that a refresh withdraws is the exception: the new status is written back onto the snapshot as well as into the repository, so the two passes that follow see the decision that has just been made rather than the state the link was retrieved in.  A duplicate link that can not be processed is logged and skipped, so one problem link does not stop the rest of the pass.
 
 #### Pass one - the links waiting for a decision
 
@@ -392,7 +401,9 @@ This is the same reasoning that detection uses, and it is deliberately the only 
 
 Where the entities are a close match, the `statusIdentifier` of the link is moved to `VALIDATED` and the `KnownDuplicate` classification is added to each entity that does not already carry it.  Both are needed before the retrieval processing combines anything.  The outcome is recorded as `MENDEL-DUPLICATE-MANAGER-0004`.
 
-Where they are not, a [`ToDo`](/concepts/to-do) is created for a steward and recorded as `MENDEL-DUPLICATE-MANAGER-0005`.  The to do describes the decision to be made, and carries both entities as action targets named `duplicateElement` so that the steward can work on them directly.  It is assigned to the `DuplicateMetadataSteward` [person role](/types/1/0118-Actor-Roles), which Mendel creates the first time it needs it - recorded as `MENDEL-DUPLICATE-MANAGER-0003`.
+The status is what the retrieval processing acts on; the rest of what is written to the link is for whoever reads it afterwards.  The `steward` property holds Mendel's own userId, with `stewardTypeName` of `UserIdentity` and `stewardPropertyName` of `userId`; `source` names the connector; and `notes` records the grounds - the three tests above, and the fact that a pairing failing any of them is referred to a steward instead.  A steward looking at a pair of combined entities can therefore see that the decision was the connector's rather than a person's, and on what basis.  That distinction is what the [next pass](#pass-two---the-decisions-mendel-can-take-back) turns on.
+
+Where the entities are not a close match, a [`ToDo`](/concepts/to-do) is created for a steward and recorded as `MENDEL-DUPLICATE-MANAGER-0005`.  The to do describes the decision to be made, and carries both entities as action targets named `duplicateElement` so that the steward can work on them directly.  It is assigned to the `DuplicateMetadataSteward` [person role](/types/1/0118-Actor-Roles), which Mendel creates the first time it needs it - recorded as `MENDEL-DUPLICATE-MANAGER-0003`.
 
 !!! tip "Appoint someone to the role"
     The to dos are only useful once somebody holds the role they are assigned to.  Appointing one or more people to `DuplicateMetadataSteward` is the step that turns Mendel's referrals into decisions.
@@ -401,13 +412,33 @@ There is one to do per duplicate link.  Its qualified name is derived from the l
 
 The steward's side of the decision is the same either way: confirming the duplicates means moving the link to `VALIDATED` and adding `KnownDuplicate` to both entities, and rejecting them means moving the link to `DEPRECATED`.  Both are done through the [Classification Explorer](/services/omvs/classification-explorer/overview).
 
-#### Pass two - the links a steward has retired
+#### Pass two - the decisions Mendel can take back
 
-`DEPRECATED` and `OBSOLETE` mean that a steward has ruled that the entities are not duplicates after all.  Retiring the link is not enough on its own, because it is the `KnownDuplicate` classification on the entity that makes the retrieval processing look for peers at all.
+A close match can stop being one.  The usual way is that somebody corrects a qualified name - which is exactly what a pair that only ever shared a name by mistake looks like once the mistake is fixed.  Nothing else revisits a validated link, so without this pass the two entities would go on being combined for ever on the strength of a match that no longer exists.
 
-An entity becomes a candidate for having its classification removed when it is found at the end of a retired link, and is disqualified as soon as it is found at the end of a link that is not retired - a single live link is enough to mean the entity is still combined with something.  The classification is removed from the candidates that survive, and the removal is recorded as `MENDEL-DUPLICATE-MANAGER-0006`.
+Mendel therefore re-tests the close match rule on every validated link, and where the grounds have gone it withdraws its decision:
 
-#### Pass three - consolidating the clusters
+* The link is moved to `DEPRECATED` rather than deleted, so the decision stays visible and reversible.  Its `notes` are replaced with an explanation of what was withdrawn and why, including the fact that a steward who believes the entities really are duplicates can validate the link again.
+* The `KnownDuplicate` classifications are not touched here.  [Pass three](#pass-three---the-entities-that-are-no-longer-combined) takes them off once the entity is no longer deduplicated by any route, which is the same rule that applies when a steward retires a link.
+* The withdrawal is recorded as `MENDEL-DUPLICATE-MANAGER-0017`.
+
+!!! warning "Only Mendel's own decisions are reconsidered"
+    A steward's decision is a judgement the connector is not entitled to overturn - a steward may well validate a pair that was never a close match, and that is the normal case rather than an exception.  The two are told apart by the link's `updatedBy`: Mendel writes its decisions under its own userId, so a link last updated by anyone else was ruled on by somebody else and is left alone.
+
+A withdrawal does not break up a consolidated cluster.  The members of a cluster go on being reached through the entity that replaced them, whatever happens to the pairwise links behind it, and whether a cluster should be broken up is a steward's decision rather than a side effect of retiring the evidence that first justified it.  What the withdrawal does mean is that the cluster now rests on less than it did, so when either end of a withdrawn link belongs to a consolidated cluster, `MENDEL-DUPLICATE-MANAGER-0018` is raised at `ACTION` severity to put the question in front of a steward.
+
+#### Pass three - the entities that are no longer combined
+
+`DEPRECATED` and `OBSOLETE` mean that the link no longer stands - because a steward has ruled that the entities are not duplicates after all, or because [pass two](#pass-two---the-decisions-mendel-can-take-back) has withdrawn a decision of Mendel's own.  Retiring the link is not enough on its own, because it is the `KnownDuplicate` classification on the entity that makes the retrieval processing look for peers at all.
+
+The classification may only come off an entity that is not deduplicated by *either* route:
+
+* No live peer link.  An entity becomes a candidate when it is found at the end of a retired link, and is disqualified as soon as it is found at the end of a link that is not retired - a single live link is enough to mean the entity is still combined with something.
+* No `ConsolidatedDuplicateLink`.  The classification is also what gates the redirect to a consolidated entity, so taking it off a member of a consolidated cluster would silently detach that one member: it would start returning itself while the rest of the cluster went on returning the consolidated entity, which still carries the content merged from it.
+
+The classification is removed from the candidates that survive both tests, and the removal is recorded as `MENDEL-DUPLICATE-MANAGER-0006`.
+
+#### Pass four - consolidating the clusters
 
 Two entities are in the same cluster when there is a chain of `VALIDATED` links between them, so the clusters are the connected components of the graph that the validated links form.  Mendel builds those clusters from the snapshot and consolidates each one that has reached `duplicateClusterSize` members.  A cluster that is already linked to a consolidated entity is skipped.
 
@@ -415,11 +446,11 @@ Consolidation is an optimization rather than a prerequisite.  A smaller cluster 
 
 The consolidated entity is built from the cluster's members ordered latest first, using the update time of each member, or its creation time where it has never been updated:
 
+* **Type.**  The consolidated entity takes the type of the latest member.  The members of a cluster are not necessarily all of the same type - a steward can validate a duplicate link between entities of different types - so this choice governs what the rest of the merge is allowed to carry.
 * **Properties.**  The latest member's properties are taken first, and each earlier member then contributes any property that no later member supplied.  Nothing that a member knows about is lost, and where the members disagree the latest value wins.
 * **Qualified name.**  This is the one property that is not inherited.  The members are still there holding their own qualified names, and a qualified name is unique, so the consolidated entity is given a derived one: the original with the ISO-8601 time of the merge appended.  Without this the repository would reject the new entity as a duplicate of the very entities it is consolidating.
-* **Type.**  The consolidated entity takes the type of the latest member.
-* **Classifications.**  These are gathered in the same way as the [peer combination](#combining-the-peer-entities) gathers them, and for the same reason: a classification that only one member of the cluster carries is still information about the concept that the cluster describes.  The consolidated entity therefore carries one instance of every classification name found anywhere in the cluster, and where more than one member carries the same classification it is the most recently updated version that is kept.
-* **The `ConsolidatedDuplicate` classification.**  On top of the members' classifications, the consolidated entity is created with the `ConsolidatedDuplicate` classification, carrying a `statusIdentifier` of `VALIDATED` and a `source` naming the connector.  Without a validated `ConsolidatedDuplicate` classification the retrieval processing ignores the consolidated entity and goes on returning the members separately.
+* **Classifications.**  These are gathered in the same way as the [peer combination](#combining-the-peer-entities) gathers them, and for the same reason: a classification that only one member of the cluster carries is still information about the concept that the cluster describes.  The consolidated entity therefore carries one instance of every classification name found anywhere in the cluster, and where more than one member carries the same classification it is the latest member's version that is kept.  Four classifications are deliberately left behind: `KnownDuplicate` and `ConsolidatedDuplicate`, because the consolidated entity is the survivor of the cluster rather than another member of it; `Anchors`, because it is created as its own anchor; and [`Memento`](/concepts/memento), because one member being archived says nothing about the entity that replaces the whole cluster.
+* **The `ConsolidatedDuplicate` classification.**  On top of the members' classifications, and added last so that nothing picked up from a member can displace it, the consolidated entity is created with the `ConsolidatedDuplicate` classification, carrying a `statusIdentifier` of `VALIDATED` and a `source` naming the connector.  Without a validated `ConsolidatedDuplicate` classification the retrieval processing ignores the consolidated entity and goes on returning the members separately.
 * **Links to the members.**  Each member is linked to the consolidated entity with a `ConsolidatedDuplicateLink` relationship, created through the Classification Explorer's `linkConsolidatedDuplicateToSourceElement()` operation so that the stewardship API owns how a consolidated entity is tied to the entities it was built from.  The member is at end 1 and the consolidated entity at end 2, which is the direction the retrieval processing looks in.
 * **Relationships.**  The members' relationships are copied onto the consolidated entity, again latest member first.  The `PeerDuplicateLink` and `ConsolidatedDuplicateLink` relationships are not copied, and neither are the relationships between members of the same cluster - they describe the members' relationship to each other, not to the world.  The same relationship is never created twice between the same two entities, and where the type only permits one relationship at the consolidated entity's end - an [end cardinality](/concepts/uni-multi-link) of `AT_MOST_ONE` on the opposite end - the first one to be offered wins, which is the latest member's.
 
@@ -428,13 +459,35 @@ The consolidated entity is built from the cluster's members ordered latest first
 
 The result is recorded as `MENDEL-DUPLICATE-MANAGER-0007`.  From this point the retrieval processing returns the consolidated entity in place of any of its members, and the combining work is no longer done on each request.
 
+##### What the merge leaves behind
+
+A merge is a series of choices, and every choice discards something.  Rather than let that happen silently, each discarded value is written to the [audit log](/concepts/audit-log) at `DECISION` severity, naming the member it came from and the value that was kept instead, so that a steward can see exactly what the consolidated entity does not carry.
+
+Some content is dropped because a later member has already supplied it:
+
+| | |
+|---|---|
+| `MENDEL-DUPLICATE-MANAGER-0011` | A property value, because a more recently updated member supplies a different one.  The qualified name is left out of this check: the members are expected to disagree on it, and the consolidated entity takes neither value. |
+| `MENDEL-DUPLICATE-MANAGER-0013` | A classification, because a more recently updated member carries the same classification with different properties. |
+| `MENDEL-DUPLICATE-MANAGER-0015` | A relationship, because the type only permits one at the consolidated entity's end and a more recently updated member has supplied it. |
+
+The rest is dropped because the consolidated entity's type cannot hold it.  This is the cost of a cluster whose members are not all of the same type: the consolidated entity has one type, and content belonging to another member's type has nowhere to go.  Storing it anyway would have the repository reject the whole consolidation.
+
+| | |
+|---|---|
+| `MENDEL-DUPLICATE-MANAGER-0012` | A property that the consolidated entity's type does not define. |
+| `MENDEL-DUPLICATE-MANAGER-0014` | A classification that cannot be attached to the consolidated entity's type. |
+| `MENDEL-DUPLICATE-MANAGER-0016` | A property of a classification that the classification's own type does not define - which happens when a member was created against a different version of the open metadata types. |
+
+Where nothing is known about a type - its properties are not available, or a classification does not say which entities it can attach to - the value is passed on and the repository has the final say.
+
 #### Reacting to duplicate links as they appear
 
 Once the first refresh has worked through the backlog of duplicate links, Mendel registers a listener for open metadata events - recorded as `MENDEL-DUPLICATE-MANAGER-0009` - so that a new or updated duplicate link is reviewed as it occurs rather than waiting up to a day for the next refresh.  Registering the listener after the first refresh rather than at start up means the events for the links that refresh has just processed are not delivered as well.
 
 The listener is deliberately narrow:
 
-* Only the creation and update of a `PeerDuplicateLink` relationship is of interest.  A deleted link means the duplicates have been separated again, which needs no action, and the retirement and consolidation passes depend on all of the duplicate links attached to an entity rather than the one that changed, so they stay on the refresh cycle.
+* Only the creation and update of a `PeerDuplicateLink` relationship is of interest.  A deleted link means the duplicates have been separated again, which needs no action.  The other three passes stay on the refresh cycle: the retirement and consolidation passes depend on all of the duplicate links attached to an entity rather than the one that changed, and the pass that reconsiders Mendel's own decisions turns on a change to an *entity* - a corrected qualified name - which produces no duplicate link event at all.
 * An event whose link is not in one of the undecided statuses is ignored.  This is also what stops a loop: the update that Mendel makes to a link produces another event for the same relationship, and by then its status is `VALIDATED`.
 * Events are ignored while a refresh is in progress, so that a duplicate link is not worked on by both threads at once.
 

@@ -110,6 +110,7 @@ nav:
               - Egeria Content Pack: content-packs/egeria-content-pack/overview.md
               - Files Content Pack: content-packs/files-content-pack/overview.md
               - Open Lineage Content Pack: content-packs/open-lineage-content-pack/overview.md
+              - Bitol Content Pack: content-packs/bitol-content-pack/overview.md
               - Organization Insight Content Pack: content-packs/organization-insight-content-pack/overview.md
               - Metadata Observability Content Pack: content-packs/observability-content-pack/overview.md
               - Products Content Pack: content-packs/products-content-pack/overview.md
@@ -389,6 +390,7 @@ nav:
         - Features Overview: features/index.md
         - Anchor Management: features/anchor-management/overview.md
         - Cohort Operation: features/cohort-operation/overview.md
+        - Digital Product Management: features/digital-product-management/overview.md
         - Duplicate Management: features/duplicate-management/overview.md
         - Effectivity Dates: features/effectivity-dates/overview.md
         - External Identifiers: features/external-identifiers/overview.md

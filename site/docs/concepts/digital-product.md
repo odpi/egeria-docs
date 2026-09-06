@@ -21,6 +21,10 @@ A digital product definition is modelled in open metadata using the [DigitalProd
 Related digital products can be grouped into [digital product families](/types/7/0710-Digital-Products).  These are also specialized collections.  A product consumer can subscribe to a digital product family to receive the data from all the digital products in that family.
 
 
+## Exchanging digital product definitions with the Bitol standards
+
+Digital products and their data sharing agreements can be imported from, and exported to, the [Bitol](https://bitol.io) *Open Data Product Standard (ODPS)* and *Open Data Contract Standard (ODCS)* YAML documents that many product teams keep in git.  The mapping and the connectors that perform it are described in [digital product management](/features/digital-product-management/overview).
+
 ## Digital product lifecycle
 
 A new product asset is typically created when there is new data to share.

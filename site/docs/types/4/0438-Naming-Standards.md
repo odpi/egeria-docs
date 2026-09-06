@@ -44,7 +44,7 @@ The *NamingStandardRule* entity is a [GovernanceControl](/types/4/0420-Governanc
 
 The *NamingStandardRuleSet* entity is a [Collection](/types/0/0021-Collections) of naming standard rules.
 
-## Glossary term classifications
+## Grammar classifications
 
 When we are naming data items, it is useful to have a glossary of name parts that can be combined to form consistent names. The classifications below are used to classify the type of name part that a glossary term represents.  
 

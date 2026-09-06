@@ -33,16 +33,17 @@ It is used with *Process* entities.
 
 The *ContentStatus* shows the lifecycle states of an element that is being authored through open metadata.
 
-| Enumeration | Value | Name        | Description                                         |
-|-------------|-------|-------------|-----------------------------------------------------|
-| DRAFT       | 0     | Draft       | The content is incomplete.                          |
-| PREPARED    | 1     | Prepared    | The content is ready for review.                    |
-| PROPOSED    | 2     | Proposed    | The content is in review.                           |
-| APPROVED    | 3     | Approved    | The content is approved.                            |
-| REJECTED    | 4     | Rejected    | The request or proposal is rejected.                |
-| ACTIVE      | 5     | Active      | The instance is approved and in use.                |
-| DEPRECATED  | 6     | Deprecated  | The instance is out of date and should not be used. |
-| OTHER       | 99    | Other       | The instance is in a locally defined state.         |
+| Enumeration | Value | Name       | Description                                              |
+|-------------|-------|------------|----------------------------------------------------------|
+| DRAFT       | 0     | Draft      | The content is incomplete.                               |
+| PREPARED    | 1     | Prepared   | The content is ready for review.                         |
+| PROPOSED    | 2     | Proposed   | The content is in review.                                |
+| APPROVED    | 3     | Approved   | The content is approved.                                 |
+| REJECTED    | 4     | Rejected   | The request or proposal is rejected.                     |
+| ACTIVE      | 5     | Active     | The instance is approved and in use.                     |
+| DEPRECATED  | 6     | Deprecated | The instance is out of date and should not be used.      |
+| OBSOLETE    | 7     | Obsolete   | The instance is no longer active and should not be used. |
+| OTHER       | 99    | Other      | The instance is in a locally defined state.              |
 
 It is used in *AuthoredReferenceable* and *DataAsset* entities.
 

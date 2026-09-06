@@ -34,6 +34,7 @@ The content packs are as follows:
 * Functional Content Packs
 
     * [OpenLineageContentPack](/content-packs/open-lineage-content-pack/overview) - contains the connector definitions for the Open Lineage connectors and governance services supplied in the *omag-server-platform* distribution along with the valid metadata values for the technologies they support.
+    * [BitolContentPack](/content-packs/bitol-content-pack/overview) - contains the connector definitions for the integration connectors that receive, catalog, generate and store Bitol Open Data Contract Standard (ODCS) and Open Data Product Standard (ODPS) documents.
 
     * [FilesContentPack](/content-packs/files-content-pack/overview) - contains the connector definitions and governance services for surveying and cataloguing files in the file system.
 

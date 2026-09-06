@@ -32,6 +32,6 @@ The *ContactDetails* entity is a [Referenceable](/types/0/0010-Base-Model) that 
  
 ## ContactThrough Relationship
 
-The *ContactThrough* relationship links a referenceable to its contact details.
+The *ContactThrough* relationship links a referenceable to its contact details.  For example, a [digital product](/types/7/0710-Digital-Products) or a [data sharing agreement](/types/7/0711-Agreements) can record the support channels through which its consumers raise questions and problems.  Releases before 6.2 restricted end 1 of this relationship to [actor profiles](/types/1/0110-Actors) in the type definition; a repository loaded with an earlier types archive rejects contact details on other referenceables.
 
 --8<-- "snippets/abbr.md"

@@ -58,7 +58,7 @@ A *RelationalColumn* entity represents a column in a relational table.  It inher
 
 ## PrimaryKey classification
 
-The *PrimaryKey* classification can be attached to a *RelationalColumn* to indicate that the value stored for this column in each row of the table is a unique identifier for the row.
+The *PrimaryKey* classification can be attached to a *RelationalColumn* to indicate that the value stored for this column in each row of the table is a unique identifier for the row.  It may also be attached to a [*DataField*](/types/5/0581-Data-Field-Implementation) in a data specification to indicate that the field is part of the identifier of each record, before the implementing schema exists.
 
 * *keyPattern* - Type of identifier that identifies its lifecycle, for example, its scope and whether the value is reused.
 * *displayName* - Display name of the element used for summary tables and titles.

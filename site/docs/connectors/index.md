@@ -40,6 +40,7 @@ The connectors that support the exchange and maintenance of metadata help to acc
 * [Apache Atlas connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-atlas-connectors) work with an Apache Atlas server.
 * [Open API Specification connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openapi-integration-connector) extract metadata about APIs through the Open API interfaces provided through the Swagger API.
 * [Open Lineage Event connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors) works with the open lineage event standard.
+* [Bitol connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/bitol-integration-connectors) receive, catalog, generate and store [Bitol](https://bitol.io) Open Data Contract Standard (ODCS) and Open Data Product Standard (ODPS) documents.
 * [Smart Collections integration connector](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/smart-collections-integration-connector) maintains the membership of a [smart collection](/egeria-solutions/smart-collections/overview) by running its saved query and keeping the results set in sync with the answer.
 
 

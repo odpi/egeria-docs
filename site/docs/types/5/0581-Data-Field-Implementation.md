@@ -33,6 +33,15 @@ Data field nested under a single parent data field.
 * *minCardinality* - Minimum number of allowed instances.
 * *maxCardinality* - Maximum number of allowed instances.
 
+## PrimaryKey classification
+
+The [*PrimaryKey*](/types/5/0534-Relational-Schemas) classification, defined for relational columns, may also be attached to a [*DataField*](/types/5/0580-Data-Dictionaries).  It indicates that the field is part of the identifier of each record described by the data structure - for example, a data contract declares which of its schema properties are the primary key, and this is recorded on the corresponding data fields.
+
+This is a statement of the specification, made before any implementing schema exists.  When the schema of the implementing data asset is catalogued and the data field is linked to its schema attribute using *SchemaAttributeDefinition*, the classification indicates which relational columns are expected to carry the *PrimaryKey* classification in that schema, and a difference between the two is a candidate for stewardship.
+
+* *keyPattern* - Type of identifier that identifies its lifecycle, for example, its scope and whether the value is reused.
+* *displayName* - Display name of the element used for summary tables and titles.
+
 ## SchemaAttributeDefinition relationship
 
 Link between a data field and the identified schema attribute definition.

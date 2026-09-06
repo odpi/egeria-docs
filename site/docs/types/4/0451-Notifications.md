@@ -15,6 +15,7 @@ The *NotificationType* entity describes a situation or event.  It is linked to r
 * *multipleNotificationsPermitted* - flag to indicate whether multiple notifications should be sent to the notification subscribers when the situation/event occurs.
 * *minimumNotificationInterval* - the minimum time between notifications that should be sent to the notification subscribers when the situation/event occurs.
 * *notificationInterval* - the time between notifications that should be sent to the notification subscribers. Used for periodic subscriptions.
+* *lastNotification* - records the last time a notification was sent to a subscriber.
 * *nextScheduledNotification* - the time when the next notification is expected. Used for periodic subscriptions.  Will be null if one or more resources are being monitored.
 * *notificationCount* - the number of notifications that have been triggered. The notification is sent only to the notification subscribers that are in the correct state.
 * *plannedCompletionDate* - the date that the notification type is planned to become inactive.
@@ -34,11 +35,11 @@ The *NotificationSubscriber* relationship links the notification type to the act
 * *description* - additional information about the notification subscriber.
 * *activityStatus* - the status of the notification subscriber.
 * *zoneMembership* - the zones that any notification sent to this notification subscriber should be tagged with.
-* *iscQualifiedName* - Unique name of the information supply chain that any notifications should be a part of.
+* *iscQualifiedName* - unique name of the information supply chain that any notifications should be a part of.
+* *lastNotification* - the last time a notification was sent to this notification subscriber.
 
 Notice that the *NotificationSubscriber* relationship is a [multi-link](/concepts/uni-multi-link) relationships which allows a subscriber to have multiple subscriptions to the same notification type.  Each of these subscriptions would be in a different state with typically only one in an active state.
 
-* *lastNotification* - Records the last time a notification was sent to a subscriber.
 
 
 --8<-- "snippets/abbr.md"

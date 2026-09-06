@@ -16,6 +16,24 @@ The associated measurements for the metric an either be stored in a data source 
 The *GovernanceRule* entity defines an executable rule that can be deployed at particular points in the processing.
 It is a type of [GovernanceControl](/types/4/0420-Governance-Controls).
 
+## DataQualityRule entity
+
+The *DataQualityRule* entity is a type of *GovernanceRule* that describes a check on the quality of data, for example that a data field has no null values or that a data set has an expected number of rows.  It captures the check in the terms used by data contract standards such as the [Open Data Contract Standard (ODCS)](https://bitol.io), so that a check declared in a contract can be catalogued, governed and regenerated.  The rule is typically linked to the [data structure or data field](/types/5/0580-Data-Dictionaries) it checks using the [GovernedBy](/types/4/0401-Governance-Definitions) relationship.
+
+* *qualityDimension* - The dimension of quality being checked, for example accuracy, completeness, conformity, consistency, coverage, timeliness or uniqueness.
+* *checkType* - The type of data quality check: text (described for humans), library (a standard metric), sql (a query) or custom (run by a named engine).
+* *metric* - The name of the standard metric evaluated by a library check, for example nullValues, missingValues, invalidValues, duplicateValues or rowCount.
+* *severity* - The severity of a failure of the rule, for example info, warning or error.
+* *businessImpact* - The business impact of a failure of the rule, for example operational or regulatory.
+* *method* - How the check is performed.
+* *units* - The units of measure of the measured value, for example rows, percent or a currency.
+* *schedule* - The schedule configuration for the scheduler, for example a cron expression.
+* *scheduler* - The name of the scheduler that runs the check, for example cron.
+* *expression* - The query or expression evaluated by a sql check.
+* *qualityEngine* - The name of the engine that runs a custom check, for example soda or great-expectations.
+* *comparisonOperator* - The operator used to compare the measured value with the threshold values, for example mustBe, mustNotBe, mustBeGreaterThan, mustBeGreaterOrEqualTo, mustBeLessThan, mustBeLessOrEqualTo, mustBeBetween or mustNotBeBetween.
+* *thresholdValues* - The threshold values that the measured value is compared with.  Most operators take one value; the between operators take two.
+
 ## GovernanceMetric entity
 
 An important aspect of the governance program is the ability to measure its effectiveness and identify the activities that are delivering the highest value, or operating with the greatest efficiency etc.

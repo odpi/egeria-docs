@@ -14,6 +14,7 @@ The Egeria features describe the value-add features that Egeria adds to its abil
 - [Incident Reporting](/features/incident-reporting/overview) - reporting and managing the actions associated with a detected incident or issue relating to a metadata element or associated [digital-resource](/concepts/digital-resource).
 - [Integrated Cataloguing](/features/integrated-cataloguing/overview) - using automation to automatically synchronize metadata between Egeria and external tools and platforms.
 - [Lineage Management](/features/lineage-management/overview) - Tracing the origin and uses of resources in the organization.
+- [Digital Product Management](/features/digital-product-management/overview) - Defining, sharing and subscribing to digital products, including the exchange of Bitol data contract and data product documents.
 - [Metadata Archiving](/features/metadata-archiving/overview) - capturing and storing metadata into archives for backups, to share standard definitions between organizations or independently deployed metadata ecosystems.
 - [Metadata Discovery](/features/metadata-discovery/overview) - extracting data from documents and technical implementations.
 - [Metadata Provenance](/features/metadata-provenance/overview) - maintaining the origin of each metadata element.

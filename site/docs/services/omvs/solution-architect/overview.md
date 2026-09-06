@@ -23,6 +23,7 @@ components that are to be developed and how they relate to existing components.
   These can then be linked to metadata about the systems and pipelines that implement them, providing a
   means to summarize statistics from lineage about the operation of the data flows.
 * **Solution components** represent the individual parts of a solution.
+* **Solution ports** describe the interfaces through which data enters and leaves a solution component.  They are used, for example, to represent the input and output ports of a [digital product](/concepts/digital-product) and to link them to the data sharing agreements that describe the data exchanged.
 * **Design patterns** provide reusable solutions to commonly occurring problems in solution design.
 
 The Solution Architect API supports the definition and display of these elements and their relationships.

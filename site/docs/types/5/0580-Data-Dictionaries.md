@@ -31,6 +31,13 @@ An [AuthoredReferenceable](/types/0/0010-Base-Model) that describes a data field
 * *precision* - How many digits after the decimal point.
 * *orderedValues* - Are the values sorted
 * *sortOrder* - DataItemSortOrder value identifying the sort direction used on the data field values.
+* *allowsDuplicateValues* - When multiple occurrences are allowed, indicates whether duplicates of the same value are allowed or not.  A data field whose values must be unique across the data structure has this set to false.
+* *isPartitionKey* - Indicates whether the data field is part of the key used to partition the data.
+* *partitionKeyPosition* - Position of the data field in the partition key, starting from 1.
+
+The last three attributes capture constraints and organization intent stated in a data specification (for example, a data contract) so that they are available when the [schema](/types/5/0505-Schema-Attributes) of the implementing data asset is catalogued and linked to the data structure.
+
+A data field that identifies a record may carry the [*PrimaryKey*](/types/5/0581-Data-Field-Implementation) classification.
 
 ## ObjectIdentifier classification
 

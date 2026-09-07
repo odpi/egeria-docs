@@ -84,5 +84,15 @@ This video shows Jules' first use of Dr.Egeria as he bring key executives togeth
 ???+ info "Use of Claude AI"
     In this video we cover the use of the Claude AI service to help with the word-smithing of definitions.  Claude works flawlessly with Dr.Egeria, but so do other public AI services.  The important step is to provide the AI with the templates so it has access to the correct command structure.  The templates are available in the [Egeria Workspaces GitHub repository](https://github.com/odpi/egeria-workspaces/tree/main/templates).
 
+### Establishing Data Governance
+
+In this video we continue Jules' journey as a new Chief Data Officer at Coco Pharmaceuticals as he explains the complexities of data governance and his philosophy for keeping it manageable and in lien with the business need.
+
+<div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wCl9P_xXFOE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
 
 --8<-- "snippets/abbr.md"

@@ -60,6 +60,10 @@ The *Experiment* classification means that the project is describing an experime
 
 This hypothesis is typically based on a [research question](/types/4/0430-Development-Controls).
 
+## Investigation classification
+
+The *Investigation* classification means that the project is describing an investigation that is being conducted to answer a question or to seek out information.
+
 ## ProjectHierarchy relationship
 
 Projects can be broken down into smaller projects that can be executed by different teams on different timelines with different project manager(s) and a specific slice of the budget.  The projects that are broken down in this way are linked together using the *ProjectHierarchy* relationship.

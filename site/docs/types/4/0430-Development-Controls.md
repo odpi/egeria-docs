@@ -25,8 +25,12 @@ The *DataLens* entity identifies the scope of data for a particular type of proc
 * *maxLatitude* - if the data is bound by an area, this is the latitude for top-right corner of the bounding box (BBOX) for the area covered by the data.
 * *minHeight* - if the height above ground is relevant, this is the lowest height that the data covers.
 * *maxHeight* - if the height above ground is relevant, this is the highest height that the data covers.
-* *dataCollectionStartTime* - if the data is bound by time, this is the start time.
-* *dataCollectionEndTime* - if the data is bound by time, this is the end time.
+* *dataCollectionStartTime* - this is the start time that the data collection begins.
+* *dataCollectionEndTime* - this is the end time that the data collection ends.
+* *dataValidityStartTime* - this is the start time that the data is valid.
+* *dataValidityEndTime* - this is the end time that the data is valid.
+* *dataCoverageStartTime* - if the data is bound by time, this is the start time that the data coverage begins.
+* *dataCoverageEndTime* - if the data is bound by time, this is the end time that the data coverage ends.
 * *scopeElements* - map from name (such as open metadata type name) to guid of the element that defines the scope of the data.  Examples of the types of elements used to define the scope of the data are:
 
     * [Business Capabilities](/concepts/business-capability)

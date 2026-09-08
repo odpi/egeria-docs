@@ -375,10 +375,10 @@
           <mxGeometry height="50" width="210" x="424" y="317" as="geometry" />
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-18" parent="ZkdmF8SgiHobN41Bp5xa-1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="*" vertex="1">
-          <mxGeometry height="20" width="40" x="384" y="180" as="geometry" />
+          <mxGeometry height="20" width="40" x="384" y="157" as="geometry" />
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-19" parent="ZkdmF8SgiHobN41Bp5xa-1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="dataSetContent" vertex="1">
-          <mxGeometry height="20" width="80" x="344" y="150" as="geometry" />
+          <mxGeometry height="20" width="80" x="335" y="127" as="geometry" />
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-20" parent="ZkdmF8SgiHobN41Bp5xa-1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="supportedDataSets" vertex="1">
           <mxGeometry height="20" width="100" x="130" y="620" as="geometry" />
@@ -388,15 +388,15 @@
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-22" edge="1" parent="ZkdmF8SgiHobN41Bp5xa-1" style="endArrow=none;dashed=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ZkdmF8SgiHobN41Bp5xa-24" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="233" y="180" as="sourcePoint" />
-            <mxPoint x="223.5" y="393" as="targetPoint" />
+            <mxPoint x="233" y="155" as="sourcePoint" />
+            <mxPoint x="223.5" y="368" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-23" parent="ZkdmF8SgiHobN41Bp5xa-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="queryId : string&lt;br&gt;query : string&lt;div&gt;queryType : string&lt;/div&gt;&lt;div&gt;iscQualifiedName : string&lt;/div&gt;" vertex="1">
-          <mxGeometry height="78" width="206" x="130" y="271" as="geometry" />
+          <mxGeometry height="78" width="206" x="130" y="246" as="geometry" />
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-24" parent="ZkdmF8SgiHobN41Bp5xa-1" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" value="«relationship»&lt;br&gt;&lt;b&gt;DataSetContent&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="206" x="130" y="221" as="geometry" />
+          <mxGeometry height="50" width="206" x="130" y="196" as="geometry" />
         </mxCell>
         <mxCell id="ZkdmF8SgiHobN41Bp5xa-25" parent="ZkdmF8SgiHobN41Bp5xa-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="encodingType : string&lt;br&gt;encodingLanguage : string&lt;br&gt;encodingDescription : string&lt;br&gt;encodingProperties : map&amp;lt;string, string&amp;gt;" vertex="1">
           <mxGeometry height="70" width="245.5" x="714.5" y="490" as="geometry" />
@@ -408,7 +408,7 @@
           <mxGeometry height="61" width="210" x="668" y="699" as="geometry" />
         </mxCell>
         <mxCell id="GEWuKwrQHwWerRitYt6y-1" parent="ZkdmF8SgiHobN41Bp5xa-1" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="210.75" x="424" y="150" as="geometry" />
+          <mxGeometry height="50" width="210.75" x="424" y="127" as="geometry" />
         </mxCell>
         <mxCell id="GEWuKwrQHwWerRitYt6y-4" edge="1" parent="ZkdmF8SgiHobN41Bp5xa-1" source="GEWuKwrQHwWerRitYt6y-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="GEWuKwrQHwWerRitYt6y-6">
           <mxGeometry relative="1" as="geometry">
@@ -416,11 +416,11 @@
             <mxPoint x="568.2500000000001" y="395" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GEWuKwrQHwWerRitYt6y-5" parent="ZkdmF8SgiHobN41Bp5xa-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="minLongitude : float&lt;br&gt;minLatitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLongitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLatitude : float&lt;br&gt;minHeight : float&lt;br&gt;maxHeight : float&lt;br&gt;dataCollectionStartTime : date&lt;br&gt;dataCollectionEndTime : date&lt;div&gt;scopeElements : map&amp;lt;string, string&amp;gt;&lt;/div&gt;&lt;div&gt;additionalProperties : map&amp;lt;string, string&amp;gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="170" width="255.5" x="706.5" y="200" as="geometry" />
+        <mxCell id="GEWuKwrQHwWerRitYt6y-5" parent="ZkdmF8SgiHobN41Bp5xa-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="minLongitude : float&lt;br&gt;minLatitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLongitude : float&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;maxLatitude : float&lt;br&gt;minHeight : float&lt;br&gt;maxHeight : float&lt;br&gt;dataCollectionStartTime : date&lt;br&gt;dataCollectionEndTime : date&lt;div&gt;&lt;div&gt;dataValidityStartTime : date&lt;br&gt;dataValidityEndTime : date&lt;/div&gt;&lt;div&gt;dataCoverageStartTime : date&lt;br&gt;dataCoverageEndTime : date&lt;/div&gt;&lt;div&gt;scopeElements : map&amp;lt;string, string&amp;gt;&lt;/div&gt;&lt;div&gt;additionalProperties : map&amp;lt;string, string&amp;gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="255.5" x="706.5" y="177" as="geometry" />
         </mxCell>
         <mxCell id="GEWuKwrQHwWerRitYt6y-6" parent="ZkdmF8SgiHobN41Bp5xa-1" style="html=1;strokeColor=#6c8ebf;align=center;fillColor=#dae8fc;gradientColor=#7ea6e0;" value="«classification»&lt;br&gt;&lt;b&gt;DataScope&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="255.5" x="706.5" y="150" as="geometry" />
+          <mxGeometry height="50" width="255.5" x="706.5" y="127" as="geometry" />
         </mxCell>
         <mxCell id="GEWuKwrQHwWerRitYt6y-7" edge="1" parent="ZkdmF8SgiHobN41Bp5xa-1" source="ZkdmF8SgiHobN41Bp5xa-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=16;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="GEWuKwrQHwWerRitYt6y-1">
           <mxGeometry relative="1" as="geometry">
@@ -473,7 +473,7 @@
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
               <mxPoint x="100" y="675" />
-              <mxPoint x="100" y="175" />
+              <mxPoint x="100" y="152" />
             </Array>
             <mxPoint x="-59" y="584" as="sourcePoint" />
             <mxPoint x="-9" y="534" as="targetPoint" />

@@ -38,11 +38,11 @@ The [Open Integration Framework (OIF)](/frameworks/oif/overview) provides Java b
 
 The [Bitol connectors :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/bitol-integration-connectors/README.md){ target=gh } supplied by Egeria, and packaged in the [Bitol Content Pack](/content-packs/bitol-content-pack/overview), are divided into the connectors that acquire documents (the *receivers*) and the connectors that process or distribute them:
 
-1. The **Bitol Files Receiver** monitors directories - typically a git checkout or a drop folder - and publishes the new and changed documents it finds.
+1. The **Bitol Files Receiver** monitors directories - typically a git checkout or a drop folder - and publishes the new and changed documents it finds.  It also catalogs each document file as a data asset, from the YAML or JSON file template with a deployed implementation type that identifies it as an ODCS or ODPS document, and links it to the catalogued agreement or product as a *Bitol Document* resource.
 2. The **Bitol Event Receiver** receives documents from Apache Kafka topics attached as catalog targets.
 3. The **Bitol Data Product Cataloguer** and **Bitol Data Contract Cataloguer** register listeners and catalog each document they receive using the mapping above.
 4. The **Bitol Document Publisher** listens for changes to digital products and data sharing agreements in open metadata, regenerates their documents and publishes them to the other listeners.  On each refresh it also regenerates the documents for every member of the digital product catalogs attached as catalog targets.
-5. The **Bitol File Store** registers a listener and writes every document it receives to the file system as `{kind}/{id}/{version}.yaml`, so that the directory can be committed to git.
+5. The **Bitol File Store** registers a listener and writes every document it receives to the file system as `{kind}/{id}/{version}.yaml`, so that the directory can be committed to git.  The files it writes are catalogued and linked in the same way.
 
 A product team can therefore commit a data contract to git and have it appear in the catalog, while a product manager working in Egeria's user interfaces sees their products written back to the same repository in the standard format.
 

@@ -34,6 +34,33 @@ he *FunctionCall* entity describes a call to an external function.
 
 The *ProcessHierarchy* relationship defines a parent-child relationship between processes, which can be used to define more abstract processes that are comprised of lower-level processes; helping to support navigating the process hierarchy.  Typically the top if the process hierarchy inherits from *DeployedSoftwareComponent* and the nested processes inherit from *EmbeddedProcess*.
 
+* *containmentType* - The containment relationship between two processes: the parent and one of its children.
+
+## RunMetrics classification
+
+The *RunMetrics* classification records statistics about the runs of a [process](/types/0/0010-Base-Model): how many times it has run, when, for how long and how much data it handled.  It is attached to the process (typically a *DeployedSoftwareComponent*) rather than to the individual runs, so it answers questions such as "how often does this process run?" and "how much data does it process?" without needing an element for every run.  Its values are maintained as the runs are observed, for example by the [OpenLineage cataloguer](/egeria-solutions/leveraging-open-lineage/overview) as [OpenLineage](/features/lineage-management/overview) run events arrive, and refined by periodic analysis of the run history.  The attributes are:
+
+* *runCount* - number of runs of the process that have been recorded.
+* *failedRunCount* - number of recorded runs of the process that failed.
+* *firstRunStartTime* - start time of the earliest recorded run of the process.
+* *lastRunId* - identifier of the most recent run of the process.
+* *lastRunStartTime* - start time of the most recent run of the process.
+* *lastRunEndTime* - end time of the most recent run of the process.
+* *lastRunStatus* - status reported for the most recent run of the process (for example START, RUNNING, COMPLETE, FAIL or ABORT).
+* *lastRunDuration* - duration of the most recent completed run of the process in milliseconds.
+* *totalRunDuration* - sum of the durations of the recorded completed runs of the process in milliseconds.
+* *lastRunRowsRead* - number of rows (records) read by the most recent run of the process.
+* *lastRunRowsWritten* - number of rows (records) written by the most recent run of the process.
+* *lastRunBytesRead* - number of bytes read by the most recent run of the process.
+* *lastRunBytesWritten* - number of bytes written by the most recent run of the process.
+* *totalRowsRead* - sum of the rows (records) read by the recorded runs of the process.
+* *totalRowsWritten* - sum of the rows (records) written by the recorded runs of the process.
+* *totalBytesRead* - sum of the bytes read by the recorded runs of the process.
+* *totalBytesWritten* - sum of the bytes written by the recorded runs of the process.
+* *additionalProperties* - additional statistics about the runs that are not covered by the standard attributes, such as derived values from an analysis of the run history (run interval, regularity, inferred schedule, typical duration, mean data volume per run).
+
+Together, *runCount*, *firstRunStartTime*, *lastRunStartTime* and *totalRunDuration* give the average interval between runs and the average run duration.
+
 ??? education "Further information"
 
     Related Open Metadata Type Definitions
@@ -47,7 +74,5 @@ The *ProcessHierarchy* relationship defines a parent-child relationship between 
 
     * [Egeria Developer Guide](/guides/developer) for more information on connectors and how to implement them.
     * [Lineage](/features/lineage-management/overview) describes the different types of lineage and how the open metadata types linktogether to form lineage graphs.
-
-* *containmentType* - The containment relationship between two processes: the parent and one of its children.
 
 --8<-- "snippets/abbr.md"

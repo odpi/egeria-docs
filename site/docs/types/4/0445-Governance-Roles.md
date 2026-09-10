@@ -23,5 +23,6 @@ Ownership is assigned to an element by adding the *Ownership* classification to 
 * *ownerTypeName* - Type of element that describes the owner.
 * *ownerPropertyName* - Name of the property from the element used to identify the owner.
 * *userIds* - A list of user identifies (userIds).
+* *additionalProperties* - Details of the owner as known to the source of the ownership, recorded whether or not the owner has been resolved to an element in open metadata.  For example, the [OpenLineage cataloguer](/egeria-solutions/leveraging-open-lineage/overview) records the owner name and type from an OpenLineage ownership facet here, so that the original identity is preserved even when it is matched to an *ActorProfile*.
 
 --8<-- "snippets/abbr.md"

@@ -28,7 +28,7 @@ The *TransientEmbeddedProcess* entity describes an *EmbeddedProcess* entity that
 
 ## FunctionCall entity
 
-he *FunctionCall* entity describes a call to an external function.
+The *FunctionCall* entity describes a call to an external function.
 
 ## ProcessHierarchy relationship
 

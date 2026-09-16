@@ -16,6 +16,8 @@ An *InformationSupplyChain* entity is a [Collection](/types/0/0021-Collections) 
 * *integrationStyle* - Mechanism to flow data and control along the segment.
 * *estimatedVolumetrics* - Properties that describe the expected volumes of data flowing through this segment.
 
+The membership of an information supply chain (linked via the *Collection Membership* relationship) is either nested information supply chains or elements used to describe the high-level steps in the information supply chain.  These are typically [solution components](/types/7/0730-Solution-Components), but may be actors, such as organizations, or collections.
+
 ## InformationSupplyChainLink
 
 The *InformationSupplyChainLink* relationship links an information supply chain's components, and descriptions of the data sources and destinations together into a graph.  This graph represents the highest level abstraction of the operation of the information supply chain. The *label* and *description* attributes help to explain how/why the information supply chain progresses.

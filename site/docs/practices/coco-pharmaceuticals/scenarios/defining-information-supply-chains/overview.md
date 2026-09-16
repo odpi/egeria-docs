@@ -47,7 +47,6 @@ With the tests agreed, each governance leader nominates the flows from their dom
 | 15 | Data Subject Rights | regulatory |
 | 16 | Sustainability Reporting | regulatory |
 
-Seven of the sixteen already exist in Egeria - they are supplied by the metadata archive that is loaded when the metadata server starts, and are already wired to the components that produce their lineage.  The register **adopts** those rather than recreating them.  The other nine are flows the governance programs plainly depend on, but which nothing had yet named as a supply chain.
 
 Several arguments from the meeting are worth recording, because they are the reason particular flows are on the list:
 
@@ -59,6 +58,8 @@ Several arguments from the meeting are worth recording, because they are the rea
 The group also agrees the **handovers** between chains, because that is where accountability changes hands and where a fault in one chain becomes a failure in the next.  Batch Manufacturing and Release turns out to be the busiest junction in the company: a batch cannot be certified unless the product definition was correct, the raw material was verified and the operator was qualified - three facts arriving from three different chains with three different owners.
 
 ??? info "Loading the strategic information supply chains"
+    Seven of the sixteen already exist in Egeria - they are supplied by the [CocoComboArchive.omarchive](/content-packs/coco-content-pack/overview) archive that is loaded when the metadata server starts, and are already wired to the components that produce their lineage.  The register **adopts** those rather than recreating them.  The other nine are flows the governance programs plainly depend on, but which nothing had yet named as a supply chain.
+
     The Markdown file containing the register is available in either the JupyterLab or Obsidian environment of [Quickstart](/egeria-workspaces/quick-start/overview).  It is located in 'coco-workbooks/0. data-governance-program/strategic-information-supply-chains.md'.  [Link to the Markdown document on GitHub](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/0.%20data-governance-program/strategic-information-supply-chains.md).  It creates the nine new chains, adopts the seven from the archive, links the handovers between them, and attaches each chain to the [governance definitions](/concepts/governance-definition) that govern it.
 
 ??? info "Viewing the information supply chains"
@@ -124,14 +125,20 @@ Where both ends of a wire do map to real systems, it becomes possible to ask how
 
 None of these is a new discovery to the team that owns it.  What is new is that they are now visible as the *same* defect, in one picture, ranked by the supply chains that run through them - which turns a list of local irritations into an integration backlog with a business case attached.
 
+??? info "Linking the components to the systems"
+    The mapping is carried as a spreadsheet - one row per candidate system per component, across all three estates, each with a confidence - and a Jupyter Notebook creates the `ImplementedBy` relationships from it and produces the gap report.  Both are in the JupyterLab environment of [Quickstart](/egeria-workspaces/quick-start/overview), in 'coco-workbooks/1. coco-data-hub/mapping-the-systems'.  [Link to the notebook on GitHub](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/mapping-the-systems/mapping-the-systems.ipynb).  The reasoning behind each row is in [strategic-supply-chain-system-matches.md](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/strategic-supply-chain-system-matches.md).
+
+??? info "Attaching the supply chains to the lineage between systems"
+    A second notebook, [supply-chain-lineage.ipynb](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/mapping-the-systems/supply-chain-lineage.ipynb), attaches each supply chain to the `DataFlow` relationships between the systems.  The interactions loaded with the acquisitions' inventories are updated in place with `mergeUpdate` so nothing the site teams recorded is lost, and because lineage relationships are multi-links, a hop that carries several supply chains gets one `DataFlow` per chain - each cloned from the original with the chain's qualified name added.
+
 ## Cataloguing the missing systems and scoping the Data Hub
 
 The work splits in two.
 
-Gary takes the list of missing systems and catalogues them, extending the inventory beyond the infrastructure he owns to the systems the business depends on.  He is already doing this for the recently acquired Austin and Bucharest sites, whose systems arrived as spreadsheets from teams that had catalogued their own estates, so the mechanism exists and it is the coverage that changes.  Along the way he discovers that each site had invented its own systematic naming convention, and captures both as naming standard rules - a small piece of housekeeping that makes the two estates comparable.
+Gary takes the list of missing systems and asks how widespread the problem is.  The two recently acquired sites, in Austin and Bucharest, are not in his inventory at all, so he asks each of them for their systems data - and gets a pleasant surprise.  Their systems arrive as spreadsheets from teams that had catalogued their own estates, and they describe a more sophisticated operation than the parent company's: the laboratory, quality and batch record systems the supply chain components need already exist there.  The mechanism for loading a spreadsheet exists from [cataloguing his own infrastructure](/practices/coco-pharmaceuticals/scenarios/cataloguing-infrastructure/overview), so it is the coverage that changes.  Along the way he discovers that each site had invented its own systematic naming convention, and captures both as naming standard rules - a small piece of housekeeping that makes the two estates comparable.
 
 ??? info "Extending the systems inventory"
-    The notebook that loads the additional systems is available in the JupyterLab environment of [Quickstart](/egeria-workspaces/quick-start/overview), in 'coco-workbooks/4. keeping-safe/extending-the-systems-inventory'.  [Link to the notebook on GitHub](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/4.%20keeping-safe/extending-the-systems-inventory/extending-the-systems-inventory.ipynb).  The naming conventions the two sites had each invented are captured in [naming-conventions.md](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/4.%20keeping-safe/extending-the-systems-inventory/naming-conventions.md).
+    The notebook that loads the additional systems is available in the JupyterLab environment of [Quickstart](/egeria-workspaces/quick-start/overview), in 'coco-workbooks/1. coco-data-hub/extending-the-systems-inventory'.  [Link to the notebook on GitHub](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/extending-the-systems-inventory/extending-the-systems-inventory.ipynb).  The naming conventions the two sites had each invented are captured in [naming-conventions.md](https://github.com/odpi/egeria-workspaces/blob/main/coco-workbooks/1.%20coco-data-hub/extending-the-systems-inventory/naming-conventions.md).
 
 Erin and Peter take the integration gaps and use them to scope the Coco Data Hub.  They now have something the architecture discussion had been missing: an ordered list of the flows that matter, the components at each end of them, and evidence of which handovers are carried today by an extract or a person.  The chains that cross the most boundaries, and the wires that implement more than one chain, are where the hub earns its place - and the ones that do not need it can be left alone.
 

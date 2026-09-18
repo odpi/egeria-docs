@@ -20,5 +20,6 @@ Physical resources - buildings, equipment, people - are also catalogued using as
     * [Asset](/concepts/asset) describes how digital resources are catalogued and governed.
     * [Digital resource connector](/concepts/digital-resource-connector) describes how a running process gains access to the resource behind an asset.
     * [Digital product](/concepts/digital-product) describes how digital resources are packaged for consumption by others.
+    * [Data fabric](/concepts/data-fabric) describes how the digital resources that store and move data, and the lineage between them, form the foundation for the organization's digital products.
 
 --8<-- "snippets/abbr.md"

@@ -184,6 +184,18 @@ The *Anchors* classification is used internally by the open metadata ecosystem t
     * [Anchor Management](/concepts/anchor).
     * [Governance Zone](/concepts/governance-zone).
 
+## Promise classification
+
+The *Promise* classification is used to indicate that the entity it is attached to is a promise to deliver a real-world digital resource/artifact.  It is only visible in lineage requests (`forLineage=true`).  Its attributes describe when the real-world digital resource/artifact will be delivered.
+
+* *deploymentStatus* - Defines the current status of an infrastructure element.
+* *userDefinedDeploymentStatus* - Extend or replace the valid deployment statuses with additional statuses controlled through valid metadata values.
+* *startTime* - When the work on the requested digital resource/artifact started.
+* *dueTime* - When the requested digital resource/artifact is expected to be completed.
+* *lastReviewTime* - When the delivery progress was last reviewed.
+* *completionTime* - When the delivery of the requested digital resource/artifact was completed.
+* *additionalProperties* - a set of name-value pairs (i.e. a map) where the values are all strings.  It can be used for other properties that are not directly supported by the open metadata types.
+
 ## Memento classification
 
 Finally, the *Memento* classification identifies that the Referenceable entity it is attached to, refers to a real-world asset/artifact that has either been deleted or archived offline. The entity has been retained to show its role in the [lineage of other assets/artifacts](/features/lineage-management/overview). The properties in this classification identifies the archive processing and any information that helps to locate the asset/artifact in the archive (if applicable).

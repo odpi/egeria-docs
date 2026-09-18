@@ -59,6 +59,7 @@ The lineage relationships that support information supply chains include:
 * The [DataSetContent](/types/2/0210-Data-Stores) relationship.
 * The [DerivedSchemaTypeQueryTarget](/types/5/0512-Derived-Schema-Elements) relationship.
 * The [ImplementedBy](/types/7/0737-Solution-Implementation) relationship.
+* The [DigitalProductDependency](/types/7/0710-Digital-Products) relationship, which records that one digital product consumes data from another.  These relationships form the [data mesh](/concepts/data-mesh) and are shown in a **Data Mesh** subgraph when the information supply chain's implementation is displayed.  The remaining lineage relationships describe the [data fabric](/concepts/data-fabric) and are shown in a **Data Fabric** subgraph.
 
 
 ???+ info "Further information"

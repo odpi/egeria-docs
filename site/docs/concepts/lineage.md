@@ -13,6 +13,8 @@ Lineage shows how data and control flows from its origins to its various destina
 
 [Lineage Management](/features/lineage-management/overview) describes how lineage is collected, managed and used in Egeria.     [Information Supply Chains](/concepts/information-supply-chain) are used to create business-friendly views of lineage.
 
+The assets connected by lineage form the [data fabric](/concepts/data-fabric), the landscape of stores, processes and data sets that the organization's [digital products](/concepts/digital-product) are built from.  Following lineage across the fabric reveals the dependencies between digital products that make up the [data mesh](/concepts/data-mesh).
+
 
 ???+ info "Further information"
 

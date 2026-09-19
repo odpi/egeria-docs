@@ -86,17 +86,26 @@ Data sets are how the data fabric presents a consumer-oriented shape without phy
 
 ## Data flows through the fabric
 
-The connections between the assets of the data fabric are the [lineage](/concepts/lineage) relationships.  They describe how data flows from its origins to its destinations and the processing that happens along the way:
+The connections between the assets of the data fabric are the [lineage](/concepts/lineage) relationships - the subtypes of [*LineageRelationship*](/types/0/0010-Base-Model/#lineagerelationship-relationship).  They describe how data flows from its origins to its destinations and the processing that happens along the way:
 
 * the [data passing](/types/7/0750-Data-Passing) relationships: *DataFlow* shows data moving between two elements, *ControlFlow* shows one process triggering another, and *ProcessCall* shows a process invoking another and waiting for the result;
 * the [lineage mapping](/types/7/0770-Lineage-Mapping) relationships: *LineageMapping* and *DataMapping* show how individual data fields in one asset map to those in another;
-* the [*DataSetContent*](/types/2/0210-Data-Stores) relationship shows the resources that a data set draws on;
-* the [*DerivedSchemaTypeQueryTarget*](/types/5/0512-Derived-Schema-Elements) relationship shows the sources of a calculated data field;
 * the [ultimate edges](/types/7/0755-Ultimate-Source-Destination) relationships, *UltimateSource* and *UltimateDestination*, summarize long chains of flow into a single relationship for fast traceability queries.
+
+Two other relationships also show where the content of an element comes from, and are followed when the fabric is explored, but they are not lineage relationships: the [*DataSetContent*](/types/2/0210-Data-Stores) relationship, which shows the resources that a data set draws on, and the [*DerivedSchemaTypeQueryTarget*](/types/5/0512-Derived-Schema-Elements) relationship, which shows the sources of a calculated data field.  Because they are not subtypes of *LineageRelationship* they have no *iscQualifiedName*, so they cannot be assigned to an [information supply chain](/concepts/information-supply-chain) and they are not part of the lineage that the derivations below are made from.
 
 Following these relationships from asset to process to asset produces the lineage graph of the data fabric.  Because processes can be decomposed using the *ProcessHierarchy* relationship, and long chains can be summarized using the ultimate edges, the same fabric can be viewed at whatever level of detail a question requires.
 
-Each lineage relationship can also carry an *iscQualifiedName*.  This tags the relationship as part of a particular [information supply chain](/concepts/information-supply-chain), which is a business-level description of a kind of data travelling across the fabric, such as the flow of patient measurements from a hospital to a clinical trial report.  When an information supply chain is displayed with its implementation, the lineage relationships tagged with its name are drawn in a **Data Fabric** subgraph beneath the **Data Mesh** subgraph of product dependencies.  In this way the same lineage supports three views: the technical view of the fabric itself, the business flow view of the information supply chain, and the product view of the data mesh.
+### Flows that are derived from finer-grained flows
+
+Lineage is captured at whatever level of detail the technology that supplies it works at, and that is usually finer than the level at which the fabric is discussed.  The [*Darwin Product Dependency Manager*](/features/lineage-management/overview/#rolling-up-the-lineage) maintains the coarser flows that the finer ones imply, so that they can be queried and drawn like any other lineage:
+
+* a *DataFlow* relationship between two [data assets](/types/2/0210-Data-Stores), wherever a *DataMapping* relationship joins a schema element of one to a schema element of the other;
+* a *DataFlow* relationship between two [software servers](/types/0/0040-Software-Servers), wherever the lineage leads from a data asset owned by one server's software capability to a data asset owned by another's.
+
+Both are derived by following the finer-grained lineage within a single information supply chain, and both are withdrawn automatically once that lineage no longer supports them.  A flow that somebody has asserted by hand always takes precedence over the derived one.  The third level that Darwin maintains, the dependencies between digital products, belongs to the [data mesh](/concepts/data-mesh) above the fabric.
+
+Each of these lineage relationships can also carry an *iscQualifiedName*.  This tags the relationship as part of a particular [information supply chain](/concepts/information-supply-chain), which is a business-level description of a kind of data travelling across the fabric, such as the flow of patient measurements from a hospital to a clinical trial report.  When an information supply chain is displayed with its implementation, the lineage relationships tagged with its name are drawn in a **Data Fabric** subgraph beneath the **Data Mesh** subgraph of product dependencies.  In this way the same lineage supports three views: the technical view of the fabric itself, the business flow view of the information supply chain, and the product view of the data mesh.
 
 ## Controlling the data fabric
 
@@ -112,7 +121,7 @@ Lineage does more than describe the data fabric.  It is the basis on which the f
 
 Comparing operational lineage with design lineage is how the data fabric is controlled.  This is called *governance by expectation*: [governance action services](/concepts/governance-action-service) running in an [engine host](/concepts/engine-host) read the operational lineage and validate that the expected processes ran at the expected times, consumed the expected inputs and produced the expected outputs.  A process that should have run but did not, a process that ran against an uncatalogued resource, or a data set whose contents were not refreshed can all be detected and raised as [incident reports](/concepts/incident-report) or [to-dos](/concepts/to-do) for stewards.  Where the lineage volumes are large, the lineage is consolidated into a [lineage warehouse](/concepts/lineage-warehouse) for this kind of analysis.
 
-The same mechanism keeps the data mesh honest.  The [dependencies between digital products](/concepts/data-mesh) can be derived by following the lineage of the assets in each product across the fabric.  When the operational lineage shows data flowing between the assets of two products that have no declared dependency, the organization has discovered an undocumented use of one team's data by another.  When a declared dependency has no supporting flow in the fabric, either the lineage capture is incomplete or the dependency is no longer real.
+The same mechanism keeps the data mesh honest.  The [dependencies between digital products](/concepts/data-mesh) are derived by following the lineage of the assets in each product across the fabric.  When the lineage shows data flowing between the assets of two products that have no declared dependency, the organization has discovered an undocumented use of one team's data by another, and Darwin records the dependency.  When a declared dependency has no supporting flow in the fabric, either the lineage capture is incomplete or the dependency is no longer real, and Darwin records an [exception](/types/4/0455-Exception-Management) against the product for a steward to resolve.
 
 ## Working with the data fabric
 

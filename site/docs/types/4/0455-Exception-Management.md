@@ -58,6 +58,9 @@ The *Exception* relationship links an element that is suspected of having an exc
 
 * *label* - Display label to use when displaying this lineage relationship in a lineage graph.
 * *description* - Description of the element or associated resource in free-text.
+* *affectedClassifications* - Map of element GUIDs to classification names that are affected by this exception.
+* *affectedElements* - List of additional element GUIDs that are affected by this exception.  This allows the exception to be attached to the anchor element and also list the anchored elements that are affected.
+* *affectedRelationships* - List of relationship GUIDs that are affected by this exception.  
 * *lastReviewTime* - The Date/time that this activity was reviewed.
 * *reviewDate* - Date of the review.
 * *conditions* - Any special conditions or endorsements over the basic certification/license type.

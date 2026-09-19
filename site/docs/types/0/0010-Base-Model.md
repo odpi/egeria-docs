@@ -164,6 +164,60 @@ The *DataAsset* entity described a collection of data.  It has optional lifecycl
 * *userDefinedContentStatus* - Extend or replace the valid content statuses with additional statuses controlled through valid metadata values.
 * *authors* - List of authors for the external source.
 
+## LabeledRelationship relationship
+
+*LabeledRelationship* is the common root for the relationships that carry a label and a description.  It is not used directly.  It exists so that the many relationships that need to explain themselves - when they are drawn in a graph, or listed in a user interface - inherit the same two attributes rather than each defining their own.
+
+Both ends are *OpenMetadataRoot*, with any number of relationships permitted at each end, which leaves each subtype free to narrow the ends to the types it actually connects.
+
+* *label* - display label to use when the relationship is drawn in a graph.  For example, `provision data`.
+* *description* - description of the relationship in free-text.
+
+Over fifty relationship types inherit from *LabeledRelationship*.  *LineageRelationship* below is one of them; others include [*GovernedBy*](/types/4/0401-Governance-Definitions), [*MoreInformation*](/types/0/0019-More-Information), [*ExternalReferenceLink*](/types/0/0014-External-References) and [*SolutionLinkingWire*](/types/7/0735-Solution-Ports-and-Wires).
+
+## LineageRelationship relationship
+
+*LineageRelationship* is the common root for the relationships that make up the [lineage graph](/features/lineage-management/overview).  It is a subtype of *LabeledRelationship*, so a lineage relationship carries a *label* and a *description* as well, and it adds one attribute of its own:
+
+* *iscQualifiedName* - unique name of the [information supply chain](/concepts/information-supply-chain) that this relationship belongs to.  For example, `InformationSupplyChain:Monthly Reporting`.
+
+Because *iscQualifiedName* is defined here, the subtypes of *LineageRelationship* are exactly the relationships that can belong to an information supply chain.  Retrieving an information supply chain along with its implementation matches on this attribute alone, with no restriction on the relationship type, so a relationship that does not inherit from *LineageRelationship* can never form part of one.
+
+*LineageRelationship* is also [multi-link](/concepts/uni-multi-link).  Where more than one information supply chain makes use of the same connection between the same two elements, each has its own relationship carrying its own *iscQualifiedName*.
+
+Its subtypes are:
+
+* *DataLineageRelationship* below, and through it the [*DataFlow* and *ProcessCall*](/types/7/0750-Data-Passing) relationships, the [*LineageMapping*](/types/7/0770-Lineage-Mapping) relationship, and the [*UltimateSource* and *UltimateDestination*](/types/7/0755-Ultimate-Source-Destination) ultimate edges.
+* The [*ControlFlow*](/types/7/0750-Data-Passing) relationship, which shows one process triggering another.
+* The [*DataMapping*](/types/7/0770-Lineage-Mapping) relationship, which shows data being copied from one schema element to another.
+* The [*DigitalProductDependency*](/types/7/0710-Digital-Products) relationship, which records that one [digital product](/concepts/digital-product) consumes data from another, and so forms the [data mesh](/concepts/data-mesh).
+* The [*ActionRequester*](/types/0/0013-Actions) relationship, which links an action to the element that requested it.
+
+## DataLineageRelationship relationship
+
+*DataLineageRelationship* is the common root for the lineage relationships along which data actually moves, as distinct from those that describe control, equivalence, or a business-level dependency.  It is a subtype of *LineageRelationship*, and both of its ends are *Referenceable*: the sources at end 1 (*dataLineageSources*) and the destinations at end 2 (*dataLineageDestinations*).  Data therefore flows from end 1 to end 2 in every subtype except *UltimateSource*, whose end 2 holds the source that end 1 is downstream of.
+
+Its attributes describe how the data moves:
+
+* *oneWay* - is the data flowing one-way or bidirectional?
+* *integrationStyle* - mechanism to flow data and control along the segment.
+* *protocol* - name of the protocol used to make the connection.
+* *frequency* - how frequently this is expected to run.  For example, real-time, hourly, daily, or on batch completion.
+* *dataExchanged* - a full explanation of what data flows and why.
+
+These are the relationships that the [Darwin Product Dependency Manager](/features/lineage-management/overview/#rolling-up-the-lineage) follows when it derives the coarse-grained lineage from the finer-grained lineage beneath it.
+
+## RoledRelationship relationship
+
+*RoledRelationship* is the common root for the relationships that carry a role and a description.  It is the counterpart of *LabeledRelationship* for the cases where the useful thing to record about a link is not what to call it, but what part the element at one end plays in the other.
+
+Both ends are *OpenMetadataRoot*, with any number of relationships permitted at each end.
+
+* *role* - role that this artifact plays in implementing the abstract representation.
+* *description* - description of the relationship in free-text.
+
+No relationship type inherits from *RoledRelationship* yet.  It is defined, and supported by the relationship beans of the [Open Metadata Framework (OMF)](/frameworks/omf/overview), ready for the relationship types that need this pattern.
+
 ## SampleData relationship
 
 The *SampleData* relationship links an *Asset* entity describing a collection of sample data that originates from the resource represented by the *Referenceable* entity.

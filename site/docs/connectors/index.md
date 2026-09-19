@@ -52,7 +52,16 @@ The connectors that support the exchange and maintenance of metadata help to acc
 * [Repository Governance Services](/concepts/repository-governance-service) manages the activity in the [repository services](/services/omrs).
 
 ## Nanny connectors
-Nanny connectors are used to monitor the health of the Egeria platform and open metadata ecosystem
+
+Nanny connectors are used to monitor the health of the Egeria platform and open metadata ecosystem, and to keep the open metadata that describes it in good order.  They are supplied in the [nanny connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/nanny-connectors){ target=gh } module, and each is named after somebody whose work the connector's own job recalls.
+
+* [Babbage Analytical Engine](/patterns/metadata-insight/overview) orchestrates the [Lovelace services](/egeria-solutions/organization-insight/overview) that analyse the content of open metadata and record what they observe as classifications.
+* [Mendel Automated Duplicate Manager](/features/duplicate-management/overview/#the-mendel-automated-duplicate-manager) reviews the duplicate links between metadata elements, confirms the ones it is sure of, refers the rest to a steward, and consolidates the clusters that have grown large enough.
+* [Darwin Product Dependency Manager](/features/lineage-management/overview/#rolling-up-the-lineage) maintains the coarse-grained lineage implied by the finer-grained lineage beneath it, up to the dependencies between [digital products](/concepts/digital-product) that make up the [data mesh](/concepts/data-mesh).
+* [Jacquard Digital Product Loom](/patterns/harvest-and-publish/overview) harvests open metadata and weaves it into the digital products of the Open Metadata Digital Product Catalog.
+* [Baudot Subscription Manager](/frameworks/owf/overview/#watching-through-a-notification-type) manages the subscriptions to those products and issues the resulting notifications.
+* [Wedgwood Data Provisioner](/patterns/harvest-and-publish/overview) provisions the product data into the destination that the subscriber supplied.
+* [Liskov Data Sharing Hub Manager](/patterns/harvest-and-publish/overview/#the-liskov-data-sharing-hub-manager) maintains the data dictionary of a data sharing hub, and keeps the members of the hub catalogued and surveyed.
 
 ## Runtime connectors
 

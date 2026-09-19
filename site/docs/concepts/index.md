@@ -409,6 +409,7 @@
 - [Products Content Pack](/content-packs/products-content-pack/overview)
 - [Project](/concepts/project)
 - [Project Manager OMVS](/services/omvs/project-manager/overview)
+- [Promise Classification](/concepts/promise)
 - [Provenance of metadata](/features/metadata-provenance/overview)
 - [Purpose](/concepts/data-processing-description)
 - [pyegeria](/concepts/pyegeria)

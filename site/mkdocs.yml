@@ -899,6 +899,7 @@ nav:
       - Platform URL Root: concepts/platform-url-root.md
       - Process: concepts/process.md
       - Project: concepts/project.md
+      - Promise Classification: concepts/promise.md
       - pyegeria: concepts/pyegeria.md
       - Rating: concepts/rating.md
       - Referenceable: concepts/referenceable.md

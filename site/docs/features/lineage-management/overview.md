@@ -352,6 +352,18 @@ Governing expectations is where the lineage information is used to validate that
 ![Figure 34](/features/lineage-management/governance-by-expectation.svg)
 > **Figure 34:** A governance action service called *Process Validation Connector* running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.
 
+### Promises and mementos
+
+The resources that make up a lineage graph do not all exist at the same time.  Some are planned but not yet built, and others have been retired.  Two classifications from the [base model](/types/0/0010-Base-Model) allow these resources to remain in the graph without confusing the users of the catalog:
+
+- The *[Promise](/concepts/promise)* classification marks an element that describes a resource that has not yet been delivered.  It is added when the lineage is designed ahead of the implementation, so that the relationships to the new resource can be created and reviewed.  Its properties record the delivery status and the dates when the work started, is due, was last reviewed and completed.  The classification is removed once the resource is delivered.
+
+- The *[Memento](/concepts/memento)* classification marks an element that describes a resource that has been deleted or archived.  The element is retained so that the lineage of the resources that depended on it is still complete.  Its properties record when the archive occurred and how to locate the resource in the archive.
+
+Elements with either classification are hidden from normal catalog queries.  They are returned only when the caller sets the *forLineage* parameter to `true`, which is what the lineage graph queries do.  The classifications therefore mark the two ends of an element's life in the lineage graph: a *Promise* before the resource exists, and a *Memento* after it has gone.
+
+The *Promise* classification is added and removed through the [Classification Explorer API](/services/omvs/classification-explorer/overview).  While it is in place, the element's *qualifiedName* remains reserved, so the eventual delivery of the resource updates the promised element rather than creating a duplicate.  Both kinds of element are drawn in their own visual style in the mermaid lineage graphs.
+
 ## Lineage preservation and use
 
 Design lineage can be consolidated and exported for preservation by the integration daemon's context and then stored in the [Lineage Warehouse](/concepts/lineage-warehouse).

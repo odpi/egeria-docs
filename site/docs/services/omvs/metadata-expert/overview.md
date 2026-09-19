@@ -142,7 +142,7 @@ This segment of the URL normally takes the URL marker for the particular view se
 
 There are optional request parameters for lineage and duplicate processing requests.
 
-* forLineage (default=false) - set this request parameter to true if this request is to support a lineage query - it will include the mementos representing elements in the graph that are deleted.
+* forLineage (default=false) - set this request parameter to true if this request is to support a lineage query - it will include the [promises](/concepts/promise) representing elements in the graph that are not yet delivered and the [mementos](/concepts/memento) representing elements in the graph that are deleted.
 * forDuplicateProcessing (default=false) - set this request parameter to true if the query is supporting deduplication processing and so it turns off the automatic deduplicate processing
 
 ## A note on the use of regular expressions (RegEx)

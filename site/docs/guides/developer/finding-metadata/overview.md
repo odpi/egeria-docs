@@ -52,7 +52,7 @@ Egeria's ordering choice is not going to be optimal for all situations.  The aim
 The example above combined a value search with a navigational one.  There are other types of options on search requests that are always filters because they describe situations that are not directly supported by the repositories.
 
 * The *effectiveTime* option requests that results only include elements that have their effectivity dates set up so that they are effective at that time.  You may notice this option on create, update and delete requests too.  This is because they involve at least one query to locate, say the instance that the new instance is to be connected to.
-* The *forLineage* option requests that the results include instances that have been archived using the *Memento* classification.  Normally these instances are not returned.  They are only used in lineage to show resources involved in a lineage flow that no longer exist.
+* The *forLineage* option requests that the results include instances that have been archived using the [*Memento*](/concepts/memento) classification, and instances that are not yet delivered and carry the [*Promise*](/concepts/promise) classification.  Normally these instances are not returned.  They are only used in lineage to show resources involved in a lineage flow that no longer exist, or do not exist yet.
 * The *forDuplicateProcessing* option turns off Egeria's deduplication processing to allow the caller to modify how the duplicates are linked together.  Normally, duplicates are selected and merged by Egeria during its filtering stage.
 
 ### Paging

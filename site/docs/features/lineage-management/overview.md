@@ -345,12 +345,156 @@ As the lineage mappings are added, the lineage graph grows. Figure 33 shows the 
 ![Figure 33](/features/lineage-management/lineage-mapping-stitched-graph.svg)
 > **Figure 33:** In a complex nested process, the elements may be already linked with the data passing relationships.
 
+### Rolling up the lineage
+
+Stitching joins the lineage graph at the level of detail it was captured at.  That is rarely the level at which questions are asked: the graph records that a column in one table is copied into a column in another, while the question is which servers exchange data, or which [digital products](/concepts/digital-product) a change to this one would disturb.  The coarse-grained answers are implied by the fine-grained graph, but nothing states them, so nothing can query, draw or govern them.
+
+The *Darwin Product Dependency Manager* is the [integration connector](/concepts/integration-connector) that states them.  It is named in tribute to [Charles Darwin](https://en.wikipedia.org/wiki/Charles_Darwin), who traced the origin of species - Darwin traces the origin of each digital product's data.
+
+--8<-- "snippets/content-status/tech-preview.md"
+
+It is defined in the [core content pack](/content-packs/core-content-pack/overview) and runs in its own [integration group](/concepts/integration-group), so all that is needed to start it is to configure an [integration daemon](/concepts/integration-daemon) with that group.
+
+| | |
+|---|---|
+| **Connector name** | `DarwinProductDependencyManager` |
+| **Integration group** | `Egeria:IntegrationGroup:Darwin` |
+| **Provider class** | `org.odpi.openmetadata.adapters.connectors.darwin.DarwinProductDependencyManagerProvider` |
+| **Connector userId** | `darwinnpa` |
+| **Refresh interval** | 1 hour |
+| **Configuration property** | `maxLineageDepth` - the number of lineage relationships that are followed downstream from an asset before the search is abandoned.  The default is 20; a configured value of zero or less falls back to that default. |
+| **Audit log messages** | `DARWIN-PRODUCT-DEPENDENCY-MANAGER-` |
+
+Like the [Mendel Automated Duplicate Manager](/features/duplicate-management/overview/#the-mendel-automated-duplicate-manager), Darwin works across the whole open metadata ecosystem rather than through [catalog targets](/concepts/catalog-target).  Each refresh reconciles from a fresh snapshot of the ecosystem, so nothing is carried between refreshes but the identity of the [exception type](#unproven-dependencies) that it records its findings against.
+
+#### The three levels
+
+Lineage bubbles up from the very detailed to the coarse-grained, so each refresh works upwards through three levels.  The *iscQualifiedName* of the finer-grained relationship - the [information supply chain](/concepts/information-supply-chain) that it belongs to - is carried up onto the coarser relationship at every step.
+
+```mermaid
+flowchart TB
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
+
+subgraph products ["Level three - digital products"]
+    P2@{ shape: rect, label: "*Digital Product*
+    **Treatment Efficacy Analysis**"}
+    P1@{ shape: rect, label: "*Digital Product*
+    **Clinical Trial Measurements**"}
+    P2==>|"Digital Product Dependency"|P1
+end
+
+subgraph servers ["Level two - software servers"]
+    S1@{ shape: rect, label: "*Software Server*
+    **Clinical trials server**"}
+    S2@{ shape: rect, label: "*Software Server*
+    **Analysis server**"}
+    S1==>|"Data Flow"|S2
+end
+
+subgraph assets ["Level one - data assets"]
+    A1@{ shape: cyl, label: "*Relational Table*
+    **Validated measurements**"}
+    A2@{ shape: cyl, label: "*Relational Table*
+    **Efficacy input**"}
+    A1==>|"Data Flow"|A2
+end
+
+subgraph schema ["Captured lineage - schema elements"]
+    C1@{ shape: rect, label: "*Relational Column*
+    **patient_id**"}
+    C2@{ shape: rect, label: "*Relational Column*
+    **subject_ref**"}
+    C1-->|"Data Mapping"|C2
+end
+
+schema-.->|"derives"|assets
+assets-.->|"derives"|servers
+assets-.->|"derives"|products
+```
+> **Figure 34:** The three levels that Darwin works upwards through.  The thick arrow in each level is the relationship it maintains, derived from the level beneath: the data flow between the two tables from the data mapping between their columns, and both the data flow between the two servers and the dependency between the two products from the data flow between the tables.
+
+* **Schema elements to data assets.**  A [*DataMapping*](/types/7/0770-Lineage-Mapping) relationship between two schema elements shows data being copied from one to the other.  An end belongs to the [data asset](/types/2/0210-Data-Stores) that it is [anchored](/features/anchor-management/overview) to - or is the asset itself, where a mapping has been made directly between assets - and where the two ends belong to different assets, Darwin maintains a *DataFlow* relationship from the source's asset to the target's.
+
+* **Data assets to software servers.**  A [software server](/types/0/0040-Software-Servers) hosts software capabilities through the [*SupportedSoftwareCapability*](/types/0/0042-Software-Capabilities) relationship, and a capability owns data assets through the [*CapabilityAssetUse*](/types/0/0045-Servers-and-Assets) relationship with a *useType* of `OWNS`.  Darwin follows the data lineage downstream from each owned asset, and where a path reaches an asset owned by a different server's capability it maintains a *DataFlow* relationship between the two servers.
+
+* **Data assets to digital products.**  The assets that are members of a digital product, through the [*CollectionMembership*](/types/0/0021-Collections) relationship, are the start of the same walk.  Where a path reaches an asset that is a member of another product, Darwin maintains a [*DigitalProductDependency*](/types/7/0710-Digital-Products) relationship between the two products.  This is the level that builds the [data mesh](/concepts/data-mesh).
+
+The levels are worked in this order because each one rests on the one beneath it.  The server level follows the asset-level data flows before they have reached the repository, and they are written to the repository before the product level runs, so the products see them.
+
+#### Following the lineage downstream
+
+The server and product levels use the same walk, made from each of the group's assets in turn.  It follows the subtypes of *DataLineageRelationship*: [*DataFlow* and *ProcessCall*](/types/7/0750-Data-Passing), [*LineageMapping*](/types/7/0770-Lineage-Mapping), and [*UltimateSource* and *UltimateDestination*](/types/7/0755-Ultimate-Source-Destination).  Data flows from end 1 to end 2 of all of them except *UltimateSource*, where end 2 is the source, so that one is followed in reverse.
+
+* **A path keeps to one information supply chain.**  The first relationship out of the asset fixes the *iscQualifiedName* for the path, and only relationships carrying the same value are followed after that.  A path that would change supply chain is not followed: it belongs to a different journey.
+* **A path may be indirect.**  It may pass through any number of intermediate elements - processes, or assets that belong to no product and no server - up to `maxLineageDepth` steps.  A path that has not arrived by then is abandoned and counted, and the tally is reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0009`.
+* **A path stops at the first group it reaches.**  The relationship with whatever lies further downstream belongs to the group just reached rather than to the one the walk started from, which is what keeps the coarse-grained graph a chain rather than a fan of shortcuts.
+* **Lineage between two assets of the same group is not a relationship of the group with itself**, and is discarded.
+
+The same element may be reached along different supply chains, and each is a separate path, so an element is only revisited when the supply chain differs.  That is also what stops a cycle in the lineage being followed forever.
+
+The relationship that results is oriented by its kind.  Data flows from the group the walk started at to the group it reached, so that group is at end 1 of a *DataFlow*; a *DigitalProductDependency* runs the other way, with the product reached at end 1 as the dependent product and the product the walk started from at end 2 as the product it depends on.
+
+#### Reconciling with what is stored
+
+Every one of these relationship types is [multi-link](/concepts/uni-multi-link), so there is one relationship per information supply chain between the same two elements, and a derived relationship is identified by its two ends together with its *iscQualifiedName*.  Darwin runs under its own userId, so it recognizes the relationships it created itself by the *createdBy* in their header.  Every level is then reconciled with the repository the same way.
+
+```mermaid
+flowchart TD
+    A["`Every relationship of the type in
+    the open metadata ecosystem`"] --> B{"`Created by
+    Darwin?`"}
+    B -->|"`**no** - asserted by
+    an external user`"| C{"`Does it name an information
+    supply chain?`"}
+    C -->|yes| D{"`Does the finer-grained
+    lineage support it?`"}
+    D -->|yes| E["`Leave it; it accounts for
+    the derived relationship`"]
+    D -->|no| F["`**Unproven** - recorded as an
+    exception if it is a product dependency`"]
+    C -->|no| G{"`Does the lineage support a
+    relationship between the
+    same two elements?`"}
+    G -->|yes| H["`Fill in the **iscQualifiedName**
+    from the first one found`"]
+    G -->|no| F
+    B -->|yes| I{"`Does the finer-grained lineage
+    still support it, and has nothing
+    else accounted for it?`"}
+    I -->|yes| J["Leave it"]
+    I -->|no| K["Remove it"]
+    L["`Derived relationships that no
+    stored relationship accounts for`"] --> M["Create them"]
+```
+> **Figure 35:** How Darwin reconciles the stored relationships of one type with the ones the finer-grained lineage supports
+
+Relationships asserted by external users are considered first, because they take precedence: one that the lineage proves accounts for the derived relationship, and any relationship of Darwin's own for the same thing is then redundant and removed.  **Darwin never removes a relationship that it did not create.**
+
+Where an externally asserted relationship does not name an information supply chain, Darwin fills one in from the first derived relationship between the same two elements, preferring one that no other stored relationship has accounted for, and reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0006` for a product dependency or `-0014` for a data flow.  The candidates are considered in a fixed order, so the same choice comes out on every refresh, and a relationship that is not owned by the local repository is updated on behalf of the metadata collection that owns it.  Darwin does not change an information supply chain once it is set, so a value that belongs to a different supply chain has to be corrected by hand.
+
+The relationships that Darwin creates carry the *iscQualifiedName* of the lineage they were derived from, together with a *label* and *description* that say which level derived them and that they are removed automatically when that lineage no longer supports them.  Creations are reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0004` and `-0012`, removals as `-0005` and `-0013`, and each refresh ends with a tally of the lineage levels (`-0015`) and of the product level (`-0010`).
+
+#### Unproven dependencies
+
+An externally asserted *DataFlow* that the finer-grained lineage does not account for is simply the ordinary lineage of the repository - most data flows are not derived from anything - so nothing is recorded for it.  An externally asserted *DigitalProductDependency* is different: the product manager has declared that their product consumes another, and the lineage ought to show it.  Where it does not, the discrepancy is worth a steward's attention.
+
+Darwin has its own [*ExceptionType*](/types/4/0455-Exception-Management), `ExceptionType::UnprovenDigitalProductDependency`, which it creates the first time it needs it - reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0003`.  Each dependent product that has unproven dependencies is linked to it with an *Exception* relationship whose *affectedRelationships* property lists them, so the exception hangs off the product while naming exactly which of its relationships are in question.  The relationship also records Darwin's own userId as the *steward*, the *lastReviewTime* of the refresh that wrote it, and notes saying that it is maintained automatically.
+
+The list is updated as it changes, reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0007` at `ACTION` severity, and the relationship is removed once nothing is left on it (`-0008`).  Only the *Exception* relationships that Darwin created are touched, so an exception raised by a steward against the same product is left alone.
+
+!!! tip "Three ways to clear an unproven dependency"
+    Either the lineage between the two products' assets is incomplete and needs capturing or [stitching](#stitching), or the information supply chain named on the relationship is the wrong one, or the dependency is not real and the relationship should be removed.  Linking the exception type to the appropriate [governance policy](/types/4/0415-Governance-Responses) brings these discrepancies into the governance program's own review cycle.
+
+!!! summary "Usage"
+    Darwin turns the fine-grained lineage that has been captured and stitched into the coarse-grained views that are actually asked for - which servers exchange data, and which digital products depend on which - and keeps them in step with the graph beneath them rather than with whoever last remembered to update them.  It also closes the loop on the dependencies that people declare by hand, by reporting the ones that the implementation does not bear out.
+
+
 ### Governing expectations
 
-Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](/concepts/engine-host) can be used to read from the [Open Lineage Log Store](#open-lineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 34.
+Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](/concepts/engine-host) can be used to read from the [Open Lineage Log Store](#open-lineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 36.
 
-![Figure 34](/features/lineage-management/governance-by-expectation.svg)
-> **Figure 34:** A governance action service called *Process Validation Connector* running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.
+![Figure 36](/features/lineage-management/governance-by-expectation.svg)
+> **Figure 36:** A governance action service called *Process Validation Connector* running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.
 
 ### Promises and mementos
 
@@ -368,10 +512,10 @@ The *Promise* classification is added and removed through the [Classification Ex
 
 Design lineage can be consolidated and exported for preservation by the integration daemon's context and then stored in the [Lineage Warehouse](/concepts/lineage-warehouse).
 
-Figure 35 shows metadata capture using the [Integration Daemon](/concepts/integration-daemon/) to retrieve lineage metadata in automated way and push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the Lineage Warehouse.
+Figure 37 shows metadata capture using the [Integration Daemon](/concepts/integration-daemon/) to retrieve lineage metadata in automated way and push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the Lineage Warehouse.
 
-![Figure 35](/features/lineage-management/lineage-capture-for-lineage-warehouse.svg)
-> **Figure 35:** Capturing lineage using the Integration Daemon, Partner OMAS(s) and Asset Manager OMAS
+![Figure 37](/features/lineage-management/lineage-capture-for-lineage-warehouse.svg)
+> **Figure 37:** Capturing lineage using the Integration Daemon, Partner OMAS(s) and Asset Manager OMAS
 
 Once the lineage graphs are assembled in the Lineage Warehouse, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
 
@@ -379,8 +523,8 @@ Once the lineage graphs are assembled in the Lineage Warehouse, the lineage can 
 
 The [Lineage Warehouse](/concepts/lineage-warehouse) is the warehouse for lineage. It is fed by a specialized [integration connector](/concepts/integration-connector) running in the integration daemon.  The integration connector receives lineage information though its context.
 
-![Figure 36](/features/lineage-management/lineage-warehouse.svg)
-> **Figure 36:** Lineage Warehouse preservation and use details
+![Figure 38](/features/lineage-management/lineage-warehouse.svg)
+> **Figure 38:** Lineage Warehouse preservation and use details
 
 ### User views
 
@@ -388,15 +532,15 @@ The [Lineage Warehouse](/concepts/lineage-warehouse) is the warehouse for lineag
 
 Organizations use horizontal lineage view to understand and visualize how their data flows from origin to various destinations enabling comprehensive data traceability. This view can represent both design or operational lineage aspect with different styles and level of details.
 
-![Figure 37](/features/lineage-management/lineage-horizontal-view.svg)
-> **Figure 37:** Lineage between data stores and processes on different levels
+![Figure 39](/features/lineage-management/lineage-horizontal-view.svg)
+> **Figure 39:** Lineage between data stores and processes on different levels
 
 #### Vertical lineage
 
 Organizations use vertical lineage view to visualize how business concepts such as glossaries, terms are mapped to data assets and related elements. This allows business users to understand how digital landscape is implemented and perform impact analysis when needed.
 
-![Figure 38](/features/lineage-management/lineage-vertical-view.svg)
-> **Figure 38:** Lineage between business glossaries and data stores
+![Figure 40](/features/lineage-management/lineage-vertical-view.svg)
+> **Figure 40:** Lineage between business glossaries and data stores
 
 !!! summary "Summary"
     Egeria's lineage support is comprehensive both in its capability and reach. Since the lineage is an integral part of the open metadata type system, metadata captured for lineage is useful for other purposes such as governance and quality management. Similarly, metadata captured to support a data catalog becomes part of the lineage graph.

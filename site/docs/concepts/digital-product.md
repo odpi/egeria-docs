@@ -20,7 +20,7 @@ A digital product definition is modelled in open metadata using the [DigitalProd
 
 Related digital products can be grouped into [digital product families](/types/7/0710-Digital-Products).  These are also specialized collections.  A product consumer can subscribe to a digital product family to receive the data from all the digital products in that family.
 
-Digital products often consume data from other digital products.  These dependencies are captured using the [DigitalProductDependency](/types/7/0710-Digital-Products) relationship, either declared explicitly by the product manager or derived from the lineage of the assets in each product.  The resulting network of products and their dependencies is called the [data mesh](/concepts/data-mesh).
+Digital products often consume data from other digital products.  These dependencies are captured using the [DigitalProductDependency](/types/7/0710-Digital-Products) relationship, either declared explicitly by the product manager or derived from the lineage of the assets in each product by the [Darwin Product Dependency Manager](/features/lineage-management/overview/#rolling-up-the-lineage).  The resulting network of products and their dependencies is called the [data mesh](/concepts/data-mesh).
 
 
 ## Exchanging digital product definitions with the Bitol standards

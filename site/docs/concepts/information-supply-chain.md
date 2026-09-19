@@ -51,15 +51,16 @@ An information supply chain segment is also represented by an *InformationSupply
 
 The unique identifiers/names of the information supply chain segments, or information supply chain itself, are encoded in the *iscQualifiedName* attribute of the lineage relationships captured in the lower levels of lineage detail.
 
-The lineage relationships that support information supply chains include:
+The *iscQualifiedName* attribute is defined on [*LineageRelationship*](/types/0/0010-Base-Model/#lineagerelationship-relationship), so the relationships that can be tagged with an information supply chain are its subtypes:
 
 * The [data passing](/types/7/0750-Data-Passing) relationships: DataFlow, ControlFlow and ProcessCall.
 * The [lineage mapping](/types/7/0770-Lineage-Mapping) relationships: LineageMapping and DataMapping.
-* The [ultimate edges](/types/7/0755-Ultimate-Source-Destination) relationships: UltimateSource and UltimateDesination.
-* The [DataSetContent](/types/2/0210-Data-Stores) relationship.
-* The [DerivedSchemaTypeQueryTarget](/types/5/0512-Derived-Schema-Elements) relationship.
-* The [ImplementedBy](/types/7/0737-Solution-Implementation) relationship.
+* The [ultimate edges](/types/7/0755-Ultimate-Source-Destination) relationships: UltimateSource and UltimateDestination.
 * The [DigitalProductDependency](/types/7/0710-Digital-Products) relationship, which records that one digital product consumes data from another.  These relationships form the [data mesh](/concepts/data-mesh) and are shown in a **Data Mesh** subgraph when the information supply chain's implementation is displayed.  The remaining lineage relationships describe the [data fabric](/concepts/data-fabric) and are shown in a **Data Fabric** subgraph.
+
+Retrieving an information supply chain with its implementation matches on the *iscQualifiedName* alone, with no restriction on the relationship type, so a relationship type that does not inherit the attribute can never form part of an implementation.  The [DataSetContent](/types/2/0210-Data-Stores), [DerivedSchemaTypeQueryTarget](/types/5/0512-Derived-Schema-Elements) and [ImplementedBy](/types/7/0737-Solution-Implementation) relationships are in that position: each of them reveals where something's content comes from - the resources a data set draws on, the sources of a calculated data field, and the assets that implement a [solution component](/concepts/solution-component) - but none of them is a *LineageRelationship*, so none can be assigned to an information supply chain.
+
+The coarser-grained of these relationships do not have to be captured by hand.  The [Darwin Product Dependency Manager](/features/lineage-management/overview/#rolling-up-the-lineage) derives the data flows between data assets, the data flows between software servers, and the dependencies between digital products from the finer-grained lineage beneath them, and carries the *iscQualifiedName* up from the finer-grained relationship onto the coarser one at each step, so that the whole of an information supply chain's implementation stays tagged with its name.  Where a relationship has been asserted by hand without an *iscQualifiedName*, and the lineage proves it, Darwin fills the value in.
 
 
 ???+ info "Further information"

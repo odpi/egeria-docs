@@ -33,7 +33,7 @@ In the example above, the *Treatment Efficacy Analysis* product uses data from b
 
 The connections in the data mesh are captured using the [*DigitalProductDependency*](/types/7/0710-Digital-Products) relationship.  It links the digital product that consumes the data (the *usedByDigitalProducts* end) to the digital product that supplies it (the *usesDigitalProducts* end).  The *label* and *description* properties record the nature of the dependency, for example which part of the supplying product's data is used and why.
 
-*DigitalProductDependency* is a type of [*LineageRelationship*](/types/0/0010-Base-Model), which means it also carries the *iscQualifiedName* property.  This allows a dependency to be associated with a specific [information supply chain](/concepts/information-supply-chain).  The same pair of digital products may participate in more than one information supply chain, so the relationship is [multi-link](/concepts/uni-multi-link): each information supply chain that flows between the two products has its own *DigitalProductDependency* relationship, with its own *iscQualifiedName*.  A dependency that is not specific to any information supply chain simply leaves *iscQualifiedName* blank.
+*DigitalProductDependency* is a type of [*LineageRelationship*](/types/0/0010-Base-Model/#lineagerelationship-relationship), which means it also carries the *iscQualifiedName* property.  This allows a dependency to be associated with a specific [information supply chain](/concepts/information-supply-chain).  The same pair of digital products may participate in more than one information supply chain, so the relationship is [multi-link](/concepts/uni-multi-link): each information supply chain that flows between the two products has its own *DigitalProductDependency* relationship, with its own *iscQualifiedName*.  A dependency that is not specific to any information supply chain simply leaves *iscQualifiedName* blank.
 
 There are two ways that a *DigitalProductDependency* relationship comes into existence.
 
@@ -51,16 +51,15 @@ Explicit dependencies are created, updated and removed through the [Product Mana
 
 A digital product is a [collection](/concepts/collection) whose members are the assets that describe the product's [digital resources](/concepts/digital-resource).  These assets are also the elements that appear in [lineage](/concepts/lineage).  When the lineage of the assets in one digital product leads to the assets in another digital product, there is a dependency between the two products, whether or not anyone has declared it.
 
-The lineage relationships that reveal a dependency are the same ones that implement an information supply chain:
+The derivation is performed by the [*Darwin Product Dependency Manager*](/features/lineage-management/overview/#rolling-up-the-lineage), an [integration connector](/concepts/integration-connector) supplied in the [core content pack](/content-packs/core-content-pack/overview).  It follows the subtypes of *DataLineageRelationship* downstream from each asset that is a member of a digital product:
 
-* the [data passing](/types/7/0750-Data-Passing) relationships: *DataFlow*, *ControlFlow* and *ProcessCall*;
-* the [lineage mapping](/types/7/0770-Lineage-Mapping) relationships: *LineageMapping* and *DataMapping*;
-* the [ultimate edges](/types/7/0755-Ultimate-Source-Destination) relationships: *UltimateSource* and *UltimateDestination*;
-* the [*DataSetContent*](/types/2/0210-Data-Stores) relationship, which shows that a data set is built from other data stores;
-* the [*DerivedSchemaTypeQueryTarget*](/types/5/0512-Derived-Schema-Elements) relationship, which shows the sources of a derived data field;
-* the [*ImplementedBy*](/types/7/0737-Solution-Implementation) relationship, which links a [solution component](/concepts/solution-component) to the assets that implement it.
+* the [data passing](/types/7/0750-Data-Passing) relationships *DataFlow* and *ProcessCall*;
+* the [*LineageMapping*](/types/7/0770-Lineage-Mapping) relationship;
+* the [ultimate edges](/types/7/0755-Ultimate-Source-Destination) relationships *UltimateSource* and *UltimateDestination*.
 
-The derivation follows these relationships from the assets that are members of a digital product until it reaches an asset that is a member of a different digital product.  Each distinct pair of products discovered in this way becomes a *DigitalProductDependency* relationship.  When the lineage relationships that were followed carry an *iscQualifiedName*, the derived dependency is given the same value, so that it appears in the right information supply chain.
+Darwin also derives the *DataFlow* relationships between data assets that are implied by the [*DataMapping*](/types/7/0770-Lineage-Mapping) relationships between their schema elements, and it does this before deriving the product dependencies, so a mapping made at column level contributes to the data mesh as well.
+
+A path may pass through any number of intermediate elements - processes, or assets that belong to no product - but every relationship on it must carry the same *iscQualifiedName*, so a path that would change information supply chain is not followed.  When the path reaches an asset that is a member of another product, that product depends on the product the path started from, through that information supply chain, and the path stops there: the dependency on anything further downstream belongs to the product just reached.  Each distinct pair of products discovered in this way becomes a *DigitalProductDependency* relationship carrying the *iscQualifiedName* of the path, so that it appears in the right information supply chain.
 
 Deriving dependencies from lineage has several advantages over relying on explicit declarations alone:
 
@@ -68,7 +67,9 @@ Deriving dependencies from lineage has several advantages over relying on explic
 * it detects dependencies that were introduced by a change to a data pipeline without the product manager being aware of it;
 * it can be re-run as the implementation evolves, so the data mesh stays in step with reality.
 
-Derived dependencies and explicit dependencies can coexist for the same pair of products.  A useful governance check is to compare the two: an explicit dependency with no supporting lineage may indicate that lineage capture is incomplete, or that the dependency is no longer real.  A derived dependency with no explicit declaration may indicate an undocumented, and possibly unapproved, use of another team's data.
+Derived dependencies and explicit dependencies can coexist for the same pair of products, and Darwin reconciles the two on every refresh.  An explicit dependency takes precedence over anything Darwin would derive: Darwin never removes a relationship it did not create, and where an explicit dependency does not name an information supply chain but the lineage proves it, Darwin fills the *iscQualifiedName* in.  A dependency that Darwin itself created is withdrawn as soon as the lineage stops supporting it.
+
+An explicit dependency that no lineage path proves is recorded as an [exception](/types/4/0455-Exception-Management) against the dependent product, listing the relationships in question, so that a steward can decide whether the lineage capture is incomplete, the information supply chain named on the relationship is wrong, or the dependency is no longer real.  A derived dependency with no explicit declaration is worth reviewing too: it may indicate an undocumented, and possibly unapproved, use of another team's data.
 
 ## Viewing the data mesh
 
@@ -96,7 +97,7 @@ The data mesh supports a number of governance activities:
     * [Digital subscription](/concepts/digital-subscription) describes the agreement between a product consumer and a product provider.
     * [Information supply chain](/concepts/information-supply-chain) describes the business-level view of a data flow that the data mesh is aligned with.
     * [Data fabric](/concepts/data-fabric) describes the stores, processes and data sets that the data mesh is built on.
-    * [Lineage management](/features/lineage-management/overview) describes how the lineage that dependencies are derived from is captured.
+    * [Lineage management](/features/lineage-management/overview) describes how the lineage that dependencies are derived from is captured, and the [Darwin Product Dependency Manager](/features/lineage-management/overview/#rolling-up-the-lineage) that derives them.
     * [Digital product management](/features/digital-product-management/overview) describes the end-to-end management of digital products.
     * The [DigitalProductDependency](/types/7/0710-Digital-Products) relationship is defined in model 0710.
 

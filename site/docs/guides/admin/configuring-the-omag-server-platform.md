@@ -313,6 +313,25 @@ Together, both set some important characteristics that are needed to allow the c
 
 For more details on the stored format, see the [file store connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors/configuration-file-store-connector){ target=gh }.
 
+### User security
+
+When the OMAG Server Platform is running with its own user directory (`authentication.source=platform`), it provides a logon service that authenticates a user and returns a [bearer token](/concepts/view-server).  The caller then passes this token on the requests that follow.  Problems with this exchange are covered in the [logon problems](/guides/diagnostic/logon-problems) guide.
+
+Two properties in the `application.properties` file control the bearer tokens that this service issues:
+
+* `rsa.key-id` - the key used to control the encryption of the bearer token.  If it is not set, a new random key is generated each time the platform starts.  This means that tokens issued by an earlier run of the platform - or by another platform - are not accepted.  Set it to a fixed value if you need tokens to survive a platform restart, or to be recognized by more than one platform.
+* `bearerTokenTimeout` - the number of hours that an issued bearer token remains valid for.  Once this time has passed, the caller must log on again to obtain a new token.  If the property is not set, the default of 1 hour is used.  A value that is not a positive number of hours, such as `0`, is not valid: the platform logs a warning and uses the default as if the property was not set.  A value that is not a number at all stops the platform from starting.
+
+These are the default values for the OMAG Server Platform.
+
+```properties
+authentication.source=platform
+rsa.key-id=
+bearerTokenTimeout=1
+```
+
+A shorter timeout limits how long a stolen token is useful for, at the cost of logging on more often; a longer timeout suits long-running clients that are not able to log on again part way through their work.
+
 ### Logging
 
 The `application.properties` file controls which types of developer/debug logging should be produced by the OMAG Server Platform.  The Egeria code (and most third party technology integrated into it) uses SLF4J (or its predecessor Log4J which can be routed to SLF4J) to write log entries that explain the code pathways that are running and any errors encountered.  This can be extremely useful when debugging a set up or code issue.  However, it is very expensive in terms of performance and should be used when needed.

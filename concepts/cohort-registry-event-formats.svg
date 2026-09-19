@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="73.5 27.5 1193.5 383.65696" width="1193.5" height="383.65696">
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="-750" x-height="517" cap-height="714" ascent="957.0007" descent="-212.99744" font-style="italic" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Italic"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="14" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="14" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="12" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="12" panose-1="2 0 5 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="-1e3" x-height="517" cap-height="714" ascent="957.0007" descent="-212.99744" font-style="italic" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Italic"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="14" panose-1="2 0 5 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="-857.1429" x-height="517" cap-height="714" ascent="957.0007" descent="-212.99744" font-style="italic" font-weight="400">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Italic"/>
+      </font-face-src>
+    </font-face>
+    <font-face font-family="Helvetica Neue" font-size="8" panose-1="2 0 8 3 0 0 0 9 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="975.0061" descent="-216.99524" font-weight="700">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue-Bold"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.18.6\n2018-07-23 15:23:08 +0000</metadata>
+  <g id="OMRS_Event_Categories" fill-opacity="1" stroke="none" stroke-dasharray="none" stroke-opacity="1" fill="none">
+    <title>OMRS Event Categories</title>
+    <g id="OMRS_Event_Categories_Layer_1">
+      <title>Layer 1</title>
+      <g id="Line_197">
+        <line x1="1254.8768" y1="218" x2="1256" y2="409.65696" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_196">
+        <rect x="1256" y="377.65696" width="11" height="32" fill="white"/>
+      </g>
+      <g id="Line_195">
+        <line x1="429.41016" y1="410.0863" x2="1256" y2="409.65696" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_192">
+        <rect x="291.41016" y="46" width="138" height="35" fill="white"/>
+        <rect x="291.41016" y="46" width="138" height="35" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(296.41016 54.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="24.128" y="15">Timestamp</tspan>
+        </text>
+      </g>
+      <g id="Graphic_191">
+        <rect x="291.41016" y="81" width="138" height="35" fill="white"/>
+        <rect x="291.41016" y="81" width="138" height="35" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(296.41016 89.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="28.592" y="15">Originator</tspan>
+        </text>
+      </g>
+      <g id="Graphic_190">
+        <rect x="291.41016" y="116" width="138" height="35" fill="white"/>
+        <rect x="291.41016" y="116" width="138" height="35" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(296.41016 124.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-weight="400" fill="black" x="37.776" y="15">Version</tspan>
+        </text>
+      </g>
+      <g id="Graphic_189">
+        <rect x="291.41016" y="151" width="138" height="35" fill="#c0ffff"/>
+        <rect x="291.41016" y="151" width="138" height="35" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(296.41016 159.276)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="31.56" y="15">Category</tspan>
+        </text>
+      </g>
+      <g id="Graphic_188">
+        <rect x="291.41016" y="185.74326" width="138" height="96" fill="white"/>
+        <rect x="291.41016" y="185.74326" width="138" height="96" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(296.41016 206.07126)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="31.56" y="15">Category</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="35.256" y="33.448">Specific</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="36.888" y="51.895996">Section</tspan>
+        </text>
+      </g>
+      <g id="Graphic_187">
+        <rect x="74" y="28" width="154.5" height="32" fill="white"/>
+        <rect x="74" y="28" width="154.5" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(79 35.804)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="5.225" y="13">MetadataCollectionId</tspan>
+        </text>
+      </g>
+      <g id="Graphic_186">
+        <rect x="74" y="60" width="154.5" height="32" fill="white"/>
+        <rect x="74" y="60" width="154.5" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(79 67.804)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="33.491" y="13">ServerName</tspan>
+        </text>
+      </g>
+      <g id="Graphic_185">
+        <rect x="74" y="92" width="154.5" height="32" fill="white"/>
+        <rect x="74" y="92" width="154.5" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(79 99.804)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="37.383" y="13">ServerType</tspan>
+        </text>
+      </g>
+      <g id="Graphic_184">
+        <rect x="74" y="124" width="154.5" height="32" fill="white"/>
+        <rect x="74" y="124" width="154.5" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(79 131.804)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="14.241" y="13">OrganizationName</tspan>
+        </text>
+      </g>
+      <g id="Line_183">
+        <path d="M 291.41016 98.5 L 265.03516 98.5 L 265.03516 44 L 228.5 44" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_182">
+        <path d="M 291.41016 98.5 L 264.60156 98.5 L 264.60156 76 L 228.5 76" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_181">
+        <path d="M 291.41016 98.5 L 264.96484 98.5 L 264.96484 108 L 228.5 108" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_180">
+        <path d="M 291.41016 98.5 L 265.01562 98.5 L 265.01562 140 L 228.5 140" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_179">
+        <rect x="476.9547" y="151" width="156" height="35" fill="#c0ffff"/>
+        <rect x="476.9547" y="151" width="156" height="35" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(481.9547 159.79695)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="700" fill="black" x="26.457" y="14">RegistryEvent</tspan>
+        </text>
+      </g>
+      <g id="Graphic_178">
+        <rect x="682.9167" y="151" width="156" height="35" fill="#c0ffff"/>
+        <rect x="682.9167" y="151" width="156" height="35" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(687.9167 159.79695)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="700" fill="black" x="26.457" y="14">RegistryEvent</tspan>
+        </text>
+      </g>
+      <g id="Graphic_177">
+        <rect x="1098.8768" y="151" width="156" height="35" fill="#c0ffff"/>
+        <rect x="1098.8768" y="151" width="156" height="35" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1103.8768 159.79695)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="700" fill="black" x="26.457" y="14">RegistryEvent</tspan>
+        </text>
+      </g>
+      <g id="Graphic_176">
+        <rect x="1098.8768" y="346.1726" width="156" height="32" fill="white"/>
+        <rect x="1098.8768" y="346.1726" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1103.0408 355.0046)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="black" x="0" y="11">TargetMetadataCollectionId</tspan>
+        </text>
+      </g>
+      <g id="Graphic_175">
+        <rect x="1098.8768" y="282.1726" width="156" height="32" fill="#c0ffc0"/>
+        <rect x="1098.8768" y="282.1726" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1149.3248 291.0046)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-style="italic" font-weight="400" fill="black" x="0" y="11">ErrorCode</tspan>
+        </text>
+      </g>
+      <g id="Graphic_174">
+        <rect x="1098.8768" y="314.1726" width="156" height="32" fill="white"/>
+        <rect x="1098.8768" y="314.1726" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1139.5448 323.0046)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="black" x="3339551e-19" y="11">ErrorMessage</tspan>
+        </text>
+      </g>
+      <g id="Line_173">
+        <line x1="429.41016" y1="186" x2="1098.8768" y2="186" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Line_172">
+        <line x1="429.41016" y1="151" x2="1098.8768" y2="151" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_171">
+        <rect x="476.9547" y="186" width="156" height="32" fill="#ffffc0"/>
+        <rect x="476.9547" y="186" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(481.9547 193.804)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-style="italic" font-weight="400" fill="black" x="15.586" y="13">RegistryEventType</tspan>
+        </text>
+      </g>
+      <g id="Graphic_170">
+        <rect x="682.9167" y="186" width="156" height="32" fill="#ffffc0"/>
+        <rect x="682.9167" y="186" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(687.9167 193.804)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-style="italic" font-weight="400" fill="black" x="15.586" y="13">RegistryEventType</tspan>
+        </text>
+      </g>
+      <g id="Graphic_169">
+        <rect x="1098.8768" y="186" width="156" height="32" fill="#ffffc0"/>
+        <rect x="1098.8768" y="186" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(1103.8768 193.804)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="17.777" y="13">RegistrationEvent</tspan>
+        </text>
+      </g>
+      <g id="Graphic_168">
+        <rect x="291.41016" y="282.1726" width="138" height="127.9137" fill="white"/>
+        <rect x="291.41016" y="282.1726" width="138" height="127.9137" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(296.41016 327.68144)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="46.672" y="15">Error</tspan>
+          <tspan font-family="Helvetica Neue" font-size="16" font-style="italic" font-weight="400" fill="black" x="36.888" y="33.448">Section</tspan>
+        </text>
+      </g>
+      <g id="Line_167">
+        <line x1="429.41016" y1="281.74326" x2="1098.8768" y2="282.1726" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_166">
+        <rect x="476.9547" y="250" width="156" height="32" fill="white"/>
+        <rect x="476.9547" y="250" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(481.9547 258.832)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="black" x="21.1" y="11">RemoteConnection</tspan>
+        </text>
+      </g>
+      <g id="Graphic_165">
+        <rect x="476.9547" y="218" width="156" height="32" fill="white"/>
+        <rect x="476.9547" y="218" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(481.9547 226.832)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="black" x="10.876" y="11">RegistrationTimestamp</tspan>
+        </text>
+      </g>
+      <g id="Line_164">
+        <line x1="1098.8768" y1="218" x2="1098.8768" y2="282.1726" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_163">
+        <rect x="890.4102" y="151" width="156" height="35" fill="#c0ffff"/>
+        <rect x="890.4102" y="151" width="156" height="35" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(895.4102 159.79695)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="700" fill="black" x="26.457" y="14">RegistryEvent</tspan>
+        </text>
+      </g>
+      <g id="Graphic_162">
+        <rect x="890.4102" y="346.1726" width="156" height="32" fill="white"/>
+        <rect x="890.4102" y="346.1726" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(894.5742 355.0046)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="black" x="0" y="11">TargetMetadataCollectionId</tspan>
+        </text>
+      </g>
+      <g id="Graphic_161">
+        <rect x="890.4102" y="282.1726" width="156" height="32" fill="#c0ffc0"/>
+        <rect x="890.4102" y="282.1726" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(940.8582 291.0046)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-style="italic" font-weight="400" fill="black" x="0" y="11">ErrorCode</tspan>
+        </text>
+      </g>
+      <g id="Graphic_160">
+        <rect x="890.4102" y="314.1726" width="156" height="32" fill="white"/>
+        <rect x="890.4102" y="314.1726" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(931.0782 323.0046)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="black" x="3339551e-19" y="11">ErrorMessage</tspan>
+        </text>
+      </g>
+      <g id="Graphic_159">
+        <rect x="890.4102" y="186" width="156" height="32" fill="#ffffc0"/>
+        <rect x="890.4102" y="186" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(895.4102 193.804)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="14" font-weight="400" fill="black" x="20.248" y="13">RegistrationError</tspan>
+        </text>
+      </g>
+      <g id="Graphic_158">
+        <rect x="890.4102" y="378.0863" width="156" height="32" fill="white"/>
+        <rect x="890.4102" y="378.0863" width="156" height="32" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(900.1242 386.9183)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="12" font-weight="400" fill="black" x="5684342e-20" y="11">TargetRemoteConnection</tspan>
+        </text>
+      </g>
+      <g id="Line_157">
+        <line x1="1046.4102" y1="182.65696" x2="1046.4102" y2="282.1726" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Line_156">
+        <line x1="890.4102" y1="218" x2="890.4102" y2="282.1726" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+      </g>
+      <g id="Graphic_24">
+        <circle cx="760.9167" cy="124.75" r="8.75001398164162" fill="#ffffc0"/>
+        <circle cx="760.9167" cy="124.75" r="8.75001398164162" stroke="#b34400" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(758.6927 119.63397)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="8" font-weight="700" fill="black" x="15987212e-20" y="8">2</tspan>
+        </text>
+      </g>
+      <g id="Graphic_23">
+        <circle cx="554.9547" cy="124.75" r="8.75001398164163" fill="#ffffc0"/>
+        <circle cx="554.9547" cy="124.75" r="8.75001398164163" stroke="#b34400" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(552.7307 119.63397)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="8" font-weight="700" fill="black" x="15987212e-20" y="8">1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_22">
+        <circle cx="968.4102" cy="124.75" r="8.75001398164162" fill="#ffffc0"/>
+        <circle cx="968.4102" cy="124.75" r="8.75001398164162" stroke="#b34400" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(966.1862 119.63397)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="8" font-weight="700" fill="black" x="15987212e-20" y="8">3</tspan>
+        </text>
+      </g>
+      <g id="Graphic_21">
+        <circle cx="1176.8768" cy="124.75" r="8.7500139816416" fill="#ffffc0"/>
+        <circle cx="1176.8768" cy="124.75" r="8.7500139816416" stroke="#b34400" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(1174.6528 119.63397)" fill="black">
+          <tspan font-family="Helvetica Neue" font-size="8" font-weight="700" fill="black" x="15987212e-20" y="8">4</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

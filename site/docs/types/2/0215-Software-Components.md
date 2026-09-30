@@ -69,6 +69,7 @@ Together, *runCount*, *firstRunStartTime*, *lastRunStartTime* and *totalRunDurat
     * [Linking of processes into lineage graphs](/types/7)
     * [Ports to show specific input and output flows for a process](/types/2/0217-Ports)
     * [Schema relationships to describe the structure of data supported by a Port](/types/5/0503-Asset-Schema)
+    * This classification can also be attached to [GovernanceActionProcessStep](/types/4/0462-Governance-Action-Processes)
 
     Use of these open metadata types
 

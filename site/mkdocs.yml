@@ -30,7 +30,10 @@ nav:
                 - Leveraging existing estate: egeria-solutions/leveraging-your-estate/index.md
                 - Egeria: egeria-solutions/leveraging-egeria/overview.md
                 - Files: egeria-solutions/leveraging-files/overview.md
-                - Open Lineage: egeria-solutions/leveraging-open-lineage/overview.md
+                - Open Lineage:
+                    - Overview: egeria-solutions/leveraging-open-lineage/overview.md
+                    - Custom Facets:
+                        - Egeria Governance Facets: openlineage/facets/index.md
                 - PostgreSQL: egeria-solutions/leveraging-postgres/overview.md
                 - Microsoft SQL Server: egeria-solutions/leveraging-mssql/overview.md
                 - Oracle Database: egeria-solutions/leveraging-oracle/overview.md

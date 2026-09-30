@@ -64,6 +64,8 @@ GovernanceActionProcessStep is a *GovernanceActionType* and so has all of the at
 
 * *ignoreMultipleTriggers* - indicates that a governance action should only be triggered once from this governance action process step, no matter how many times the appropriate guards are produced.  This is important for long-running governance actions that may be triggered by multiple instances of previous steps but is held waiting for the mandatory guard.
 
+It is also possible to attach the [RunMetrics](/types/2/0215-Software-Components) classification to this entity to record the number of times the step is run and the number of times it is successful.
+
 ## NextGovernanceActionProcessStep relationship
 
 The *NextGovernanceActionProcessStep* relationship identifies the next step in the process flow.

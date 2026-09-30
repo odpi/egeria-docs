@@ -12,7 +12,7 @@ hide:
 
 OMS metadata management provides the *Metadata Store Services* that are
 consumed by the [Open Connector Framework (OCF)](/frameworks/ocf/overview), [Open Integration Framework (OIF)](/frameworks/oif/overview), [Open Survey Framework (OSF)](/frameworks/osf/overview), [Open Governance Framework (OGF)](/frameworks/ogf/overview) and are available through all
-[Open Metadata Access Services (OMASs)](/services/omas).
+[Open Metadata View Services (OMVSs)](/services/omvs).
 
 OMS metadata management also provides a comprehensive interface for working with all types of metadata, subject to the user's (and the associated OMAS's) security permissions.
 the interface supports search, maintenance of metadata elements, classifications and relationships plus the ability to raise incident reports

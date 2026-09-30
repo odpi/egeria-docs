@@ -98,7 +98,7 @@ The properties for a connection are defined in [model 0201](/types/2/0201-connec
 
 Each connection stored in a metadata repository has a unique identifier. An application can request a connector instance through the Egeria interfaces with just the unique identifier or name of a connection.
 
-The OMAS retrieves the connection object from the open metadata repositories and passes it to the [connector broker](#connector-broker) factory object. The connector broker (and underlying [connector provider](#connector-provider)) uses the information from the connection object to create an instance of the connector.
+The [Open Metadata Store](/services/oms-metadata-management) retrieves the connection object from the open metadata repositories and passes it to the [connector broker](#connector-broker) factory object. The connector broker (and underlying [connector provider](#connector-provider)) uses the information from the connection object to create an instance of the connector.
 
 The advantage of retrieving the connection information from a metadata repository is that the connection properties do not need to be hard-coded in the consuming applications.
 

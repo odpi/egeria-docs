@@ -1,6 +1,8 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
+![Coco Pharmaceuticals](coco-pharmaceuticals-logo.jpg)
+
 # Introducing Coco Pharmaceuticals
 
 ???+ note "Background"

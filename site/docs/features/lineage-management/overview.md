@@ -28,21 +28,21 @@ Figure 1 shows some examples of different types of processes and data stores.
 On the left here is an Apache Spark job that reads from a file, looks up a value in an Apache Hive table, makes a calculation and writes the results to an Apache Kafka topic. On the right, an API is called that invokes a microservice.  The microservice updates a data store.  This data store is also loaded by an ETL job and any changes to it are copied to other stores via a data replication service.  This second example illustrates that the data in the data store may have come from two sources, either the API caller or the data sources used by the ETL job.
 
 
-![Figure 1](/features/lineage-management/lineage-examples.svg)
+![Figure 1](lineage-examples.svg)
 > **Figure 1:** Examples of processes
 
 As the importance of lineage is understood, it is becoming common that individual technologies provide a lineage view of their processing similar to figure 1.  This is very useful to the immediate users of that technology.  However, from an enterprise perspective these technologies do not run in isolation.  Enterprises need to be able to link the lineage from these technologies together to show how data flows from its original sources to its ultimate destinations.
 
 Figure 2 shows a flow of data through multiple technologies.  It begins with a Relational Database (RDB). This is read by an ETL job that writes all or some of its contents to an Apache Hive table. A report is requested which calls an API to retrieve the data. An Apache Spark job is initiated through the API. It reads from the Apache Hive table, runs an analytics model based on the data from the table and invokes an Apache Airflow DAG (process) before returning the results to the report.  The Apache Airflow DAG writes information into an Apache Avro file and an event to an Apache Kafka topic. 
 
-![Figure 2](/features/lineage-management/lineage-capture.svg)
+![Figure 2](lineage-capture.svg)
 > **Figure 2:** The lineage graph emerges
 
 You can also imagine that this flow is only a part of something much bigger.  For example, what is responsible for maintaining the data in the relational database?  Which technologies are consuming the events in the Apache Kafka topic.  Lineage graphs can get very large.
 
 Figure 3 abstracts the example shown in figure 2.  From this you can see that the flow is not a simple progression from left to right.  API calls can pass data in either direction for example. 
 
-![Figure 3](/features/lineage-management/basic-concept-of-lineage.svg)
+![Figure 3](basic-concept-of-lineage.svg)
 > **Figure 3:** The abstract lineage graph
 
 There may also be systems that act as a hub, with many processes extracting data, performing processing and then storing the results back into the same system.  Other stores act as a consolidation point, receiving data from many systems and then distributing to multiple downstream stores.  So the graph also involves loops and fan-in-fan-out structures.
@@ -55,11 +55,11 @@ Figure 4 shows Egeria's architecture for lineage.  There are three parts to it:
 
 * *Stewardship* - the lineage information from each of the technologies is linked together.  Where the naming of data sources and processes is consistent, this assembling of the lineage graph is automatic.  However, experience shows that if it can be different, it will be different. Many technologies make their own choices in naming and so governance action services along with human stewardship is required to match and link the graphs together.  The governance action services run in the [Engine Host](/concepts/engine-host) server.  They automatically add the relationships between the lineage contributions from each technology that may need to be verified by a human steward.  The human steward may also manually add relationships where there is no well known pattern that can be encoded in a governance action services.  Stewardship also involves analysis of the lineage to ensure the digital landscape is operating as it should.
 
-* *Preservation and Use* - Once the lineage graphs are assembled, the lineage can be viewed and analysed from a business perspective.  Could, for example, the operation of the digital landscape be optimized?  Lineage is accessible through standard open metadata queries. However, since the lineage data is typically large, lineage can be distributed via the integration daemon to a [Lineage Warehouse](/concepts/lineage-warehouse).  This optimizes the lineage graphs for quick retrieval and analysis.  Its presence allows lineage data to be regularly archived from the operational open metadata ecosystem.  This is particularly important in regulated industries where lineage for critical reports may need to be kept for many years.
+* *Preservation and Use* - Once the lineage graphs are assembled, the lineage can be viewed and analysed from a business perspective.  Could, for example, the operation of the digital landscape be optimized?  
 
 The three parts of the lineage architecture are summarized in figure 4.
 
-![Figure 4](/features/lineage-management/lineage-architecture.svg)
+![Figure 4](lineage-architecture.svg)
 > **Figure 4:** The lineage architecture showing the three phases of (1) lineage capture typically through Egeria's automated cataloguing capabilities, (2) automated and human stewardship to stitch the lineage contributions together into full data flows, and finally (3) lineage preservation and use in the lineage warehouse.
 
 ## Lineage capture
@@ -92,8 +92,8 @@ Figure 5 illustrates the difference between design lineage and operational linea
 
 Similarly, if there is a proposal to change the schema of either databases, the lineage relationships identify that the process is likely to be impacted by this change and that it will need updating at the same time. 
  
-![Figure 5](/features/lineage-management/operational-lineage.svg)
-> **Figure 5:** The design lineage known at deployment describes how a particular process reads data from the source database and writes to destination database.  The operational lineage captures a process instance each time the process runs which may include details of the amount of data processed and any errors or issues encountered.
+![Figure 5](operational-lineage.svg)
+> **Figure 5:** The design lineage known at deployment describes how a particular process reads data from the source database and writes to the destination database.  The operational lineage captures a process instance each time the process runs which may include details of the amount of data processed and any errors or issues encountered.
 
 The operational lineage shown at the bottom of figure 5 captures process instance information each time the process runs.  It is then possible to see how often it runs, and how much data it processes each time.  This could uncover that the quality problem identified in the destination database was caused by the fact that although the process should run every hour, it had not run for a week and so the values from the source database have not been transferred.
 
@@ -107,34 +107,34 @@ At deployment time, the files do not exist and so the process is not connected t
 
 It is not until the process runs that its lineage is captured.  Figures 6-11 show different levels of detail that could be captured.  Figure 6 begins with the capture of every run of the process (that is its process instances) linked to the particular file that was processed. 
 
-![Figure 6](/features/lineage-management/operational-lineage-files-1.svg)
+![Figure 6](operational-lineage-files-1.svg)
 > **Figure 6:** New files are read and created each time the process runs.  The operational lineage shows which files are associated with each run of the process.
 
 Figure 6 provides complete information, but imagine it running every second, every day of the week.  There would be a huge amount of lineage created, and it may not be necessary.
 
 In figure 7, only the files are dynamically captured and linked to the process for design lineage.  No process instances are captured. This may not matter if the process runs regularly and the creation times of the files are sufficient to correlate them with the processing.
 
-![Figure 7](/features/lineage-management/operational-lineage-files-2.svg)
+![Figure 7](operational-lineage-files-2.svg)
 > **Figure 7:** New files are read and created each time the process runs; these are catalogued and linked to the process as soon as they are detected; however no operation lineage is captured, so it is not possible to know which process instance created each file.  
 
 In figure 8, the attempt to link each of the destination files to the process has been abandoned and only the folder is linked.  The source files are still linked to the process instances because, for example, it is important to know when they were processed.
 
-![Figure 8](/features/lineage-management/operational-lineage-files-3.svg)
+![Figure 8](operational-lineage-files-3.svg)
 > **Figure 8:** New files are catalogued in the destination - but only the folder that they belong to is linked to the process.  This is very efficient if all files in the folder come from the process.  However, if multiple processes are populating the folder, there is no information on which process created each destination file.
 
 Figure 9 shows that the process instances are not captured and the source files are linked directly to the process.  If this always done in a timely manner then the creation time of the relationship may be sufficient to know when the process instance that worked on the source file ran.
 
-![Figure 9](/features/lineage-management/operational-lineage-files-4.svg)
+![Figure 9](operational-lineage-files-4.svg)
 > **Figure 9:** In this example, sources files are linked to the process, but again the destination is only shown at the folder level.
 
 In figure 10, the files are being catalogued, but they are not linked to the process.  
 
-![Figure 10](/features/lineage-management/operational-lineage-files-5.svg)
+![Figure 10](operational-lineage-files-5.svg)
 > **Figure 10:** This example shows no linkage between the process and the files.  The new files are just catalogued in their folder as they are created.
 
 It is also possible that even the cataloguing of the files themselves is not useful since they are processed as a collection and each file is effectively like a row in a database table.  In this case, all the design lineage information can be catalogued at deployment time.  This is shown in figure 11.
 
-![Figure 11](/features/lineage-management/operational-lineage-files-6.svg)
+![Figure 11](operational-lineage-files-6.svg)
 > **Figure 11:** A simple static lineage flow between the source folder, process and destination folder.
 
 Each of the patterns shown in figures 7-11 reduce the amount of metadata that is captured compared to the full lineage shown in figure 6. The missing metadata can be filled out with knowledge of how the process works. This knowledge may be needed when making use of the lineage at a later date.
@@ -145,17 +145,17 @@ Each of the patterns shown in figures 7-11 reduce the amount of metadata that is
  
  Figure 12 shows the scope of the standard.  When a processing engine such as *Apache Spark* runs a process, it produces a series of events called *RunEvents* that describe the activity of the process.  The standard covers the format of the events and a simple REST API that receives the events.  The REST API only has one operation called `{{urlroot}}/api/v1/lineage` that takes a single event as the request body.
 
-![Figure 12](/features/lineage-management/open-lineage-standard-defines.svg)
+![Figure 12](open-lineage-standard-defines.svg)
 > **Figure 12:** The Open Lineage standard defines the payload for *RunEvents* as well as a standard URL for a service that acts as a collection point for RunEvents.
 
 Processes can log information about their internal structure.  Figure 13 shows a process with three steps.
 
-![Figure 13](/features/lineage-management/open-lineage-example-process.svg)
+![Figure 13](open-lineage-example-process.svg)
 > **Figure 13:** a three-step process: (1) run quality analysis, (2) categorize data file and (3) move the data file to its destination.
 
 Figure 14 shows the events from an instance of this process.  Notice each event has an *eventType* that describes the type of action that the process instance took.  The *runId* identifies the process instance.  The sub-process instances are linked to the top-level process instance via the *parentRunId*.
 
-![Figure 14](/features/lineage-management/open-lineage-example-events.svg)
+![Figure 14](open-lineage-example-events.svg)
 > **Figure 14:** RunEvents from a three-step process show the start and end of each process instance along with additional events to report on its findings such as a data quality assessment.
 
 ### RunEvent format
@@ -171,7 +171,7 @@ Figure 15 shows the structure of a run event that is defined in the [Open Lineag
 - *producer* - the name/location of the processing engine producing the events.
 - *schemaURL* - the location of the JSON schema that describes the structure of the RunEvent.
 
-![Figure 15](/features/lineage-management/open-lineage-payload-run-event.svg)
+![Figure 15](open-lineage-payload-run-event.svg)
 > **Figure 15:** The structure of a RunEvent
 
 The *namespace* groups related processes together, for example the processes from the same subsystem or business process.  The Open Lineage standard provides suggested [naming conventions for the *name* of jobs and data sources](https://github.com/OpenLineage/OpenLineage/blob/main/spec/Naming.md).
@@ -184,27 +184,27 @@ Figures 16-20 show the current set of standard facets defined by Open Lineage.
 
 The standard *Run Facets* in figure 16 can be carried in the *run* section of the event and provide more detail of the process instance.  The *nominalTime* specifies the time when something should have happened.  This can be compared with the actual time in the event header.  The *parent* links a child process instance to a parent process instance.
 
-![Figure 16](/features/lineage-management/open-lineage-payload-run-facets.svg)
+![Figure 16](open-lineage-payload-run-facets.svg)
 > **Figure 16:** Standard Run facets of nominalTime and parent.
 
 The *Job Facets* in figure 17 describe the process in more detail.  This includes the *documentation* links, *source code location* and the *SQL query* used by the process (if any).  These are *static* elements that can either be used in cataloguing for design lineage, or to correlate the other information in the event with existing catalog elements.
 
-![Figure 17](/features/lineage-management/open-lineage-payload-job-facets.svg)
+![Figure 17](open-lineage-payload-job-facets.svg)
 > **Figure 17:** Standard Job facets of documentation, sourceCodeLocation and sql.
 
 The *DataSet Facets* in figure 18 can be used in both the description of the inputs and the outputs.  It includes *documentation* links, the structure (*schema*) of the data set and the location of the *data source*.  These are also *static* elements that can either be used in cataloguing for design lineage, or to correlate the other information in the event with existing catalog elements.
 
-![Figure 18](/features/lineage-management/open-lineage-payload-data-set-facets.svg)
+![Figure 18](open-lineage-payload-data-set-facets.svg)
 > **Figure 18:** Standard DataSet facets that can be used in both the inputs or outputs section.
 
 The *InputDataSet Facets* describe the dynamic details of processing the inputs such as the *data quality metrics*.
 
-![Figure 19](/features/lineage-management/open-lineage-payload-input-data-set-facets.svg)
+![Figure 19](open-lineage-payload-input-data-set-facets.svg)
 > **Figure 19:** Standard InputDataSet facets covering dataQualityMetrics.
 
 Similarly, the *OutputDataSet Facets* describe the dynamic details of processing the outputs such as the *output statistics*.
 
-![Figure 20](/features/lineage-management/open-lineage-payload-output-data-set-facets.svg)
+![Figure 20](open-lineage-payload-output-data-set-facets.svg)
 > **Figure 20:** Standard OutputDataSet facets covering outputStatistics.
 
 With this extensible payload, it is possible to create, distributed and interpret operational lineage in a heterogeneous digital landscape.
@@ -213,14 +213,14 @@ With this extensible payload, it is possible to create, distributed and interpre
 
 Any server can implement the Open Lineage REST API.  Figure 21 shows [Marquez](https://marquezproject.github.io/marquez/), the reference implementation of the standard, acting as the back end to receive Open Lineage events from a spark processing engine.
 
-![Figure 21](/features/lineage-management/open-lineage-reference-implementation-marquez.svg)
+![Figure 21](open-lineage-reference-implementation-marquez.svg)
 > **Figure 21:** Marquez capturing the Open Lineage events.
 
 The disadvantage of the API is that the server supporting it must be available whenever the processing engine is running.
 
 The Open Lineage project provides a simple implementation of the Open Lineage API called the *proxy backend* (figure 22).  This is designed to act as a side-car to the processing engine that can distribute the Open Lineage events to multiple external consumers through a kafka topic.
 
-![Figure 22](/features/lineage-management/open-lineage-proxy-backend.svg)
+![Figure 22](open-lineage-proxy-backend.svg)
 > **Figure 22:** The proxy backend transfers RunEvents received on its API to a Kafka topic 
 
 Since the proxy backend is only supporting one processing engine it can be managed by the same team as the processing engine and hence its availability can be matched to the needs of the processing engine.
@@ -229,12 +229,12 @@ Since the proxy backend is only supporting one processing engine it can be manag
 
 Egeria offers two approaches to capture Open Lineage events from the processing engines.  The first (figure 23) uses an [integration connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-event-receiver-integration-connector){ target=gh } listening on the kafka topic(s) populated by the proxy backends tied to each of the processing engines.
 
-![Figure 23](/features/lineage-management/open-lineage-async-egeria-integration.svg)
+![Figure 23](open-lineage-async-egeria-integration.svg)
 > **Figure 23:** Receiving events via the Kafka topic populated by the proxy backend
 
 Egeria's [integration daemon](/concepts/integration-daemon) also supports the Open Lineage API for local processing engines. 
 
-![Figure 24](/features/lineage-management/open-lineage-direct-egeria-integration.svg)
+![Figure 24](open-lineage-direct-egeria-integration.svg)
 > **Figure 24:** Receiving events via the Open Lineage API directly into the integration daemon
 
 The integration daemon hosts the integration connectors that [process the Open Lineage events :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md){ target=gh }.  They are divided into two groups:
@@ -253,7 +253,7 @@ They are connected to each other by the integration daemon:
 
 Figure 25 illustrates these mechanisms with the [five pre-build integration connectors :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md){ target=gh } supplied by Egeria.
 
-![Figure 25](/features/lineage-management/open-lineage-integration-connectors.svg)
+![Figure 25](open-lineage-integration-connectors.svg)
 > **Figure 25:** The pre-built integration connectors supplied by Egeria
 
 The numbers on the diagram refer to the notes below.
@@ -282,12 +282,12 @@ The Open Lineage log store is a destination where Open Lineage events can be wri
 
 Figure 26 shows the capture of Open Lineage events into the Open Lineage log store which is a directory (folder) in the filesystem.  The content of the log store is later queried by the *ProcessValidatorConnector* (a [governance verification service](/concepts/governance-service) running in an [engine host](/concepts/engine-host)) to determine if the [processes are operating as expected](#governing-expectations).
 
-![Figure 26](/features/lineage-management/open-lineage-example-deployment.svg)
+![Figure 26](open-lineage-example-deployment.svg)
 > **Figure 26:** An example deployment of Egeria that is capturing and processing Open Lineage events. On the left-hand side the integration connectors running in the integration daemon are capturing the events, storing them in the Open Lineage log store and creating additional metadata as appropriate.  On the right-hand side of the diagram, are the stewardship processes that are stitching together the lineage and validating that the digital landscape is operating as expected.
 
 The implementation of the Open Lineage log store is pluggable so an Open Lineage log store could be implemented as a server such as [Marquez](https://marquezproject.github.io/marquez/).  This is shown in figure 27.
 
-![Figure 27](/features/lineage-management/open-lineage-example-deployment-marquez.svg)
+![Figure 27](open-lineage-example-deployment-marquez.svg)
 > **Figure 27:** Using Marquez as the Open Lineage log store.  This is the same diagram as figure 26 except tha Marquez has replaced the file system as the log store.  Marquez provides an API to simplify the processing of the Open Lineage events.
 
 ## Lineage stewardship
@@ -317,41 +317,42 @@ The adding of relationships in the metadata to link the lineage graph together i
 
 The stitching relationships can be added at different levels of granularity in the lineage graph.  For example, in figure 28, the process call relationship shows one process calling another.
 
-![Figure 28](/features/lineage-management/lineage-stitching-process-to-process.svg)
-> **Figure 28:** Process between processes
+![Figure 28](lineage-stitching-process-to-process.svg)
+> **Figure 28:** Lineage between processes
 
 Figure 29 shows lineage mapping between the ports of a process to show that the output of one port is actually the same as the input of another process.
 
-![Figure 29](/features/lineage-management/lineage-stitching-port-to-port.svg)
-> **Figure 29:** Lineage mapping between ports
+![Figure 29](lineage-stitching-port-to-port.svg)
+> **Figure 29:** Lineage between ports
 
 Figure 30 goes down a level further and links specific data fields.  This level of mapping allows the possible paths of individual data fields to be exposed.
 
-![Figure 30](/features/lineage-management/lineage-stitching-data-fields.svg)
-> **Figure 30:** Lineage mapping between data fields
+![Figure 30](lineage-stitching-data-fields.svg)
+> **Figure 30:** Lineage between data fields
 
 Some technologies provide metadata of detailed internal processing using the [data passing relationships](/types/7/0750-Data-Passing).  Figure 31 shows an example.
 
-![Figure 31](/features/lineage-management/lineage-mapping-complex-process.svg)
+![Figure 31](lineage-mapping-complex-process.svg)
 > **Figure 31:** In a complex nested process, the elements may be already linked with the data passing relationships.
 
 This detail may be useful for some purposes, but it is too much for lineage so the lineage mapping is used to create a shortcut between the outer input ports and the equivalent outer output ports.  Figure 32 shows the use of the lineage mapping on the process shown in figure 30.
 
-![Figure 32](/features/lineage-management/lineage-mapping-short-cut.svg)
+![Figure 32](lineage-mapping-short-cut.svg)
 > **Figure 32:** Lineage mapping linking input port to output port to skip the detail
 
 As the lineage mappings are added, the lineage graph grows. Figure 33 shows the lineage mappings linking the graph together.
 
-![Figure 33](/features/lineage-management/lineage-mapping-stitched-graph.svg)
+![Figure 33](lineage-mapping-stitched-graph.svg)
 > **Figure 33:** In a complex nested process, the elements may be already linked with the data passing relationships.
+
+
+## Lineage preservation and use
 
 ### Rolling up the lineage
 
 Stitching joins the lineage graph at the level of detail it was captured at.  That is rarely the level at which questions are asked: the graph records that a column in one table is copied into a column in another, while the question is which servers exchange data, or which [digital products](/concepts/digital-product) a change to this one would disturb.  The coarse-grained answers are implied by the fine-grained graph, but nothing states them, so nothing can query, draw or govern them.
 
 The *Darwin Product Dependency Manager* is the [integration connector](/concepts/integration-connector) that states them.  It is named in tribute to [Charles Darwin](https://en.wikipedia.org/wiki/Charles_Darwin), who traced the origin of species - Darwin traces the origin of each digital product's data.
-
---8<-- "snippets/content-status/tech-preview.md"
 
 It is defined in the [core content pack](/content-packs/core-content-pack/overview) and runs in its own [integration group](/concepts/integration-group), so all that is needed to start it is to configure an [integration daemon](/concepts/integration-daemon) with that group.
 
@@ -405,7 +406,7 @@ subgraph schema ["Captured lineage - schema elements"]
     C2@{ shape: rect, label: "*Relational Column*
     **subject_ref**"}
     C1-->|"Data Mapping"|C2
-end
+end 
 
 schema-.->|"derives"|assets
 assets-.->|"derives"|servers
@@ -493,7 +494,7 @@ The list is updated as it changes, reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGE
 
 Governing expectations is where the lineage information is used to validate that the processes are operating as expected.  [Governance Action Services](/concepts/governance-service) running in an [engine host](/concepts/engine-host) can be used to read from the [Open Lineage Log Store](#open-lineage-log-store) to validate that the right processes are running at the expected times and are processing the expected events.  This is shown in figure 36.
 
-![Figure 36](/features/lineage-management/governance-by-expectation.svg)
+![Figure 36](governance-by-expectation.svg)
 > **Figure 36:** A governance action service called *Process Validation Connector* running in an Engine Host server is reading the openLineage log and validating the processes that are running and detecting the processes that should have run but did not.
 
 ### Promises and mementos
@@ -508,39 +509,22 @@ Elements with either classification are hidden from normal catalog queries.  The
 
 The *Promise* classification is added and removed through the [Classification Explorer API](/services/omvs/classification-explorer/overview).  While it is in place, the element's *qualifiedName* remains reserved, so the eventual delivery of the resource updates the promised element rather than creating a duplicate.  Both kinds of element are drawn in their own visual style in the mermaid lineage graphs.
 
-## Lineage preservation and use
-
-Design lineage can be consolidated and exported for preservation by the integration daemon's context and then stored in the [Lineage Warehouse](/concepts/lineage-warehouse).
-
-Figure 37 shows metadata capture using the [Integration Daemon](/concepts/integration-daemon/) to retrieve lineage metadata in automated way and push metadata into the open metadata ecosystem so that is it picked up by the Asset Lineage OMAS and then stored by the Lineage Warehouse.
-
-![Figure 37](/features/lineage-management/lineage-capture-for-lineage-warehouse.svg)
-> **Figure 37:** Capturing lineage using the Integration Daemon, Partner OMAS(s) and Asset Manager OMAS
-
-Once the lineage graphs are assembled in the Lineage Warehouse, the lineage can be viewed and analyzed for business cases such as traceability of data, impact analysis or data processes monitoring.
-
-### Building a lineage warehouse
-
-The [Lineage Warehouse](/concepts/lineage-warehouse) is the warehouse for lineage. It is fed by a specialized [integration connector](/concepts/integration-connector) running in the integration daemon.  The integration connector receives lineage information though its context.
-
-![Figure 38](/features/lineage-management/lineage-warehouse.svg)
-> **Figure 38:** Lineage Warehouse preservation and use details
 
 ### User views
 
 #### Horizontal lineage
 
-Organizations use horizontal lineage view to understand and visualize how their data flows from origin to various destinations enabling comprehensive data traceability. This view can represent both design or operational lineage aspect with different styles and level of details.
+Organizations use horizontal lineage views to understand and visualize how their data flows from origin to various destinations enabling comprehensive data traceability. This view can represent both design or operational lineage aspect with different styles and level of details.
 
-![Figure 39](/features/lineage-management/lineage-horizontal-view.svg)
-> **Figure 39:** Lineage between data stores and processes on different levels
+![Figure 37](lineage-horizontal-view.svg)
+> **Figure 37:** Lineage between data stores and processes on different levels
 
 #### Vertical lineage
 
-Organizations use vertical lineage view to visualize how business concepts such as glossaries, terms are mapped to data assets and related elements. This allows business users to understand how digital landscape is implemented and perform impact analysis when needed.
+Organizations use vertical lineage views to visualize how business concepts such as glossaries, terms are mapped to data assets and related elements. This allows business users to understand how digital landscape is implemented and perform impact analysis when needed.
 
-![Figure 40](/features/lineage-management/lineage-vertical-view.svg)
-> **Figure 40:** Lineage between business glossaries and data stores
+![Figure 38](lineage-vertical-view.svg)
+> **Figure 38:** Lineage between business glossaries and data stores
 
 !!! summary "Summary"
     Egeria's lineage support is comprehensive both in its capability and reach. Since the lineage is an integral part of the open metadata type system, metadata captured for lineage is useful for other purposes such as governance and quality management. Similarly, metadata captured to support a data catalog becomes part of the lineage graph.

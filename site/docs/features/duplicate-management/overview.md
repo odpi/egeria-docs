@@ -63,7 +63,7 @@ The numbers on the diagram refer to the following points:
 
 5. Alternatively, the duplicates can be validated and actioned by a steward.
 
-6. When a [service](/services/omas) detects duplicates during a request to retrieve metadata from the repositories it automatically processes the duplicates so the caller is not aware that the duplicates exist.
+6. When a [service](/services/omvs) detects duplicates during a request to retrieve metadata from the repositories it automatically processes the duplicates so the caller is not aware that the duplicates exist.
 
 Figure 6 shows an example of a [governance action process](/concepts/governance-action-process) that controls the governance actions and the use of the stewards for duplicate detection.
 
@@ -94,7 +94,7 @@ Consolidation is the process where the combined results of the duplicates is pre
 
 ### Metadata retrieval of duplicates
 
-When an Egeria retrieval operation is requested by an [Open Metadata Access Service (OMAS)](/services/omas), it monitors for the `KnownDuplicate` classification on the entities it is retrieving.  When found, and the retrieval request is not part of duplication management, deduplication occurs.  
+When an Egeria retrieval operation is requested by an [Open Metadata View Service (OMVS)](/services/omvs), it monitors for the `KnownDuplicate` classification on the entities it is retrieving.  When found, and the retrieval request is not part of duplication management, deduplication occurs.  
 
 #### Deduplication
 

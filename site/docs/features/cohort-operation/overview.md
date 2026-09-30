@@ -42,7 +42,7 @@ Once the registration information is exchanged and stored in each member's cohor
 > **Figure 3:** Once the registration is complete the cohort members can issue federated queries.
 
 !!! tip "Primary mechanism for accessing metadata"
-    This peer-to-peer operation and federated queries are the primary mechanism for accessing metadata, because the [access services](/services/omas) use federated queries for every request they make for metadata.
+    This peer-to-peer operation and federated queries are the primary mechanism for accessing metadata, because the [open metadata store services](/services/oms-metadata-management) use federated queries for every request they make for metadata.
 
 ### Metadata exchange
 
@@ -107,7 +107,7 @@ When the registration request is accepted, the receiving system uses the LocalRe
 
 ### Making federated queries
 
-Whenever an [Open Metadata Access Service (OMAS)](/services/omas) is called, it uses the enterprise repository connector to create, retrieve, update and delete metadata.
+Whenever the [Open Metadata Store](/services/) is called, it uses the enterprise repository connector to create, retrieve, update and delete metadata.
 
 The operation of the enterprise repository connector depends on the type of request.  When metadata is retrieved, the request is passed to all connected repositories and the results are combined.
 

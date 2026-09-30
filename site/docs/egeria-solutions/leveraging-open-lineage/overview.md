@@ -78,13 +78,47 @@ Because any combination of these connectors can be configured in the same integr
 
 ### Cataloguing the events
 
-The Open Lineage Cataloguer maps each run event into open metadata as it arrives:
+The Open Lineage Cataloguer maps each run event into open metadata as it arrives.  The namespace and name that Open Lineage gives each job and dataset are extracted from the technology itself, following the [Open Lineage naming conventions](https://openlineage.io/docs/spec/naming/), so they are the most reliable identity for a resource.  The cataloguer's first job is to use them to find the elements that already describe the resource, so that the lineage from the events joins up with what other connectors have catalogued rather than building a parallel picture.
 
-* The **job** becomes a *DeployedSoftwareComponent* process named `DeployedSoftwareComponent::{namespace}::{name}`, with its description, SQL, source code location, job type, tags and ownership taken from the job facets.  Parent and root jobs from the parent run facet become processes that own it through *ProcessHierarchy* relationships, and job dependencies become *ControlFlow* relationships.
-* Each **input and output dataset** becomes a data asset whose type (*TabularDataSet*, *DataFile*, *DataFolder*, *Topic* or *DataSet*) is chosen from the dataset's namespace and facets.  Before creating one, the cataloguer looks for an existing asset whose *resourceName* and *namespacePath* match the Open Lineage name and namespace - the identity that other connectors also record - and reuses it when there is a single, type-compatible match.  Anything else that matches is linked to the new asset with a *PeerDuplicateLink* for the [duplicate management](/features/duplicate-management/overview) process to resolve.  The schema facet creates the asset's tabular schema; a rename updates the asset's names in place and a drop archives or deletes it according to the connector's delete method.
-* **Lineage** is recorded as *DataFlow* relationships from the inputs to the process and from the process to the outputs, with *LineageMapping* relationships between columns from the column lineage facets.
+#### Datasets
+
+The lineage is attached to the elements that describe the *physical* landscape - the tables, topics and files catalogued by Egeria's technology connectors.  The cataloguer finds every element that describes a dataset:
+
+* elements whose *resourceName* and *namespacePath* are the dataset's name and namespace;
+* elements catalogued by technology connectors, found through the endpoints of their connections.  For example, the dataset `sales.public.orders` in the namespace `postgres://db` is matched to the *RelationalTable* that the PostgreSQL connectors catalogued for the database whose endpoint is `jdbc:postgresql://db:5432/sales`.  The spelling of the scheme and any default port are normalized before the comparison.  Kafka topics, local files and Unity Catalog tables are matched in the same way;
+* for a dataset in the `egeria` namespace, the element whose qualified name is the dataset's name.  This is how Egeria's own governance actions name data that has no Open Lineage identity.
+
+The matches fall into two groups:
+
+* **Physical elements.**  One of them is chosen to receive the lineage: elements catalogued by technology connectors are preferred over elements created from Open Lineage events, and the oldest is preferred within each group.  Any other physical match is linked to the chosen element with a *PeerDuplicateLink* for the [duplicate management](/features/duplicate-management/overview) process to resolve.
+* **Abstractions** - *TabularDataSet* and *TabularDataSetCollection* assets, such as the data sets offered by digital products.  They never receive lineage themselves.  Instead each is linked to the physical element that it is a view over with a [*DataSetContent*](/types/2/0210-Data-Stores) relationship.
+
+The cataloguer only updates the properties, schema, names and lifecycle of assets that it created itself.  Elements catalogued by technology connectors are left as their connectors maintain them, apart from gaining an owner and the Open Lineage identity if they have none.
+
+#### Datasets and jobs that are not catalogued yet
+
+When nothing describes a dataset or job, the cataloguer creates it from the [catalog template](/features/templated-cataloguing/overview) for its technology, so that it has the right open metadata type and technology type (*deployedImplementationType*).
+
+* **Datasets.**  The technology is identified by the namespace scheme.  For example, a `snowflake://` dataset becomes a *Snowflake Table* (a *DataSet*), an `s3://` dataset becomes an *Amazon S3 Object* (a *DataFile*), or an *Amazon S3 Folder* when the name ends with `/`, and a `kafka://` dataset becomes an *Apache Kafka Topic*.  Templates cover the relational databases, data warehouses, NoSQL stores, object and file stores, document management systems and event streams named in the Open Lineage naming conventions.  A dataset from an unrecognized technology becomes a generic *DataStore*, which can be retyped to a more specific subtype later.
+* **Jobs.**  The technology is identified by the *jobType* job facet.  For example, an Airflow task becomes an *Apache Airflow Task*, and its parent job becomes an *Apache Airflow DAG*.  Spark jobs, Debezium connector tasks and SQL jobs are handled in the same way.  A job whose technology is unrecognized becomes a generic *DeployedSoftwareComponent*.
+
+The new asset is named `{typeName}::{namespace}::{name}`, with the namespace and name in its *namespacePath* and *resourceName*.  Its description, formula, ownership and other details are taken from the job and dataset facets.  The templates are in the Core Content Pack, and the table templates for PostgreSQL, SQL Server, Oracle, Db2 and Unity Catalog are in those technologies' content packs.
+
+#### Jobs and lineage
+
+* The **job** is matched in the same way as a dataset, by its *namespacePath* and *resourceName*.  Parent and root jobs named in the *parent* run facet become processes that own the job through *ProcessHierarchy* relationships.  Job dependencies become *ControlFlow* relationships.
+* **Lineage** is recorded as *DataFlow* relationships from the inputs to the process and from the process to the outputs.  When a dataset is a table, the *DataFlow* is recorded both for the table and for the asset that holds it - the database schema or database - so the lineage can be seen at the asset level as well as in detail.  The column lineage facets become *DataMapping* relationships between the columns, and between the tables that hold them.
 * **Run metrics** - run count, failures, first and last run times, last run duration and status, rows and bytes read and written - are maintained in the [*RunMetrics*](/types/2/0215-Software-Components) classification of the process.
-* Optionally, the cataloguer also catalogues each **run** as a *TransientEmbeddedProcess* owned by the job's process, captures the statistics and data quality facets as a survey report per event with one annotation per assertion, and maintains the [*DataScope*](/types/2/0210-Data-Stores) classification of each output asset from the times and statistics of the writes.
+* Optionally, the cataloguer also catalogues each **run** as a *TransientEmbeddedProcess* owned by the job's process.  It can also capture the statistics and data quality facets as a survey report per event, with one annotation per assertion, and maintain the [*DataScope*](/types/2/0210-Data-Stores) classification of each output asset from the times and statistics of the writes.
+
+#### Governance action runs and information supply chains
+
+Egeria defines two custom run facets, described in [Egeria's Open Lineage Facets](/openlineage/facets):
+
+* **`egeria_governanceAction`** is added by the Governance Action Open Lineage connector to the events it creates for Egeria's own [engine actions](/concepts/engine-action).  A run with this facet is not catalogued as a new job.  Instead its lineage is attached to the [governance action process](/concepts/governance-action-process) that the run is part of.  Provisioning services connect their own lineage to this same element, so the lineage from every run of the process meets there.  The *RunMetrics* classification is kept on the [process step](/concepts/governance-action-process-step), because each step runs separately.  The governance action process instance represents the run.
+* **`egeria_informationSupplyChain`** can be added by any producer - for example an Apache Airflow DAG - to name the [information supply chain](/concepts/information-supply-chain) that the run belongs to.
+
+Every lineage relationship that the cataloguer creates from an event, and every *DataSetContent* link to an abstraction, is tagged with the event's information supply chain.  The supply chain is taken from the `egeria_informationSupplyChain` facet or, if there is none, from the `egeria_governanceAction` facet.  The same data can take part in several supply chains, so a relationship is only reused when it is tagged with the same one.
 
 Everything the cataloguer records is structural or is a "latest value": it is designed to keep the catalog current as events stream in, while leaving anything that needs the history of many runs to the analysis services described below.
 
@@ -130,6 +164,7 @@ See [Lineage Management](/features/lineage-management/overview) for the full arc
 
 * [Lineage Management](/features/lineage-management/overview) - the complete lineage story: capture, stewardship and preservation.
 * [Open Lineage project](https://github.com/OpenLineage/OpenLineage) - the standard itself, including the full facet specifications.
+* [Egeria's Open Lineage Facets](/openlineage/facets) - the custom facets that Egeria defines, and their schemas.
 * [Integration Daemon](/concepts/integration-daemon) - the server that hosts the Open Lineage connectors.
 * [Lineage Warehouse](/concepts/lineage-warehouse) - where preserved lineage graphs are stored for analysis.
 

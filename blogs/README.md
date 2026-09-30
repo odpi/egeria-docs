@@ -12,6 +12,7 @@
 2. [Five Windows Into Your Metadata: Egeria's New Web User Interfaces](blog-2-five-new-user-interfaces)
 3. [You Don't Need to Migrate Everything to Catalog It: Egeria's Growing Connector Library](blog-3-new-connectors)
 4. [Better Data for Everyone: How Coco Pharmaceuticals Puts Egeria's Governance Model to Work](blog-4-coco-pharmaceuticals)
+5. [Standing on the Shoulders of Giants: The Nanny Connectors That Keep AI's Context Trustworthy](blog-5-standing-on-the-shoulders-of-giants)
 
 ----
 License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),

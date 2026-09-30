@@ -58,4 +58,4 @@ Across this series we've looked at a platform that got smaller and more capable 
 
 *Read the full set of scenarios at [egeria-project.org/practices/coco-pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/), and follow along with the rest of the project at [egeria-project.org](https://egeria-project.org/).*
 
-*Previous: [Egeria's Growing Connector Library](../blog-3-new-connectors)*
+*Previous: [Egeria's Growing Connector Library](../blog-3-new-connectors) · Next: [Standing on the Shoulders of Giants](../blog-5-standing-on-the-shoulders-of-giants)*

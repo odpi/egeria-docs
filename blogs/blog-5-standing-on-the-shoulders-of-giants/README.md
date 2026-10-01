@@ -13,11 +13,11 @@
 
 Ask almost anyone building AI applications how they plan to give their models the right context and you will hear the same answer: a knowledge graph. It is a sensible answer. A graph of the things an organization cares about, and how they relate, is a far better grounding for a model than a pile of unrelated documents.
 
-But a knowledge graph is a snapshot of what somebody once knew. If one team is experimenting with one assistant, that is often enough. If you plan to make *widespread* use of AI - dozens of agents and applications, each making decisions on the strength of the context it is handed - the graph has to be something you can trust, and that takes far more than loading it.
+But a knowledge graph is a snapshot and often a single perspective. If one team is experimenting with one assistant, that is often enough. If you plan to make *widespread* use of AI - with dozens of agents and applications, each making decisions on the strength of the context it is handed - the graph has to be something you can trust, and that takes far more investment.
 
 ## Context is a living thing
 
-Think about what widespread use asks of the context behind it.
+Think about what widespread use of AI asks of the context behind it.
 
 - **It has to stay current.** Data lands in new places, pipelines are rewired and systems are retired. Context that describes last quarter's estate quietly misleads every application that relies on it.
 - **It has to be consistent.** The same customer, product or supplier is described in half a dozen systems. If an AI application sees them as half a dozen different things, its answers will be confidently wrong.
@@ -28,7 +28,7 @@ Think about what widespread use asks of the context behind it.
 
 None of that is a modelling problem. It is an *operations* problem: somebody, or something, has to keep looking after the catalog. In a small deployment that "somebody" is a hard-pressed steward with a spreadsheet. At enterprise scale it has to be automated.
 
-That is the job of Egeria's **nanny connectors**.
+That is the job of Egeria's **Nanny Connectors**.
 
 ## Why "nanny"?
 
@@ -44,40 +44,40 @@ No single one of those platforms can see the whole picture, and none of them has
 
 Each nanny connector is named after a person whose work contributed to the IT capability we take for granted today - some directly, some through the ideas that computing later borrowed. Between them they span two centuries:
 
-- **Charles Babbage** designed the Analytical Engine, the first general-purpose mechanical computer.
-- **Ada Lovelace** wrote the first program for Babbage's machine and saw that it could work on more than numbers.
-- **Joseph Marie Jacquard** used punched cards to control a loom, an early demonstration that a machine can be programmed.
-- **Emile Baudot** devised the telegraph code and multiplexing that underpin modern data communication (the unit of signalling speed, the baud, is named after him).
-- **Thomas Wedgwood** experimented with capturing images on light-sensitive surfaces, an early step towards recording and reproducing information.
-- **Gregor Mendel** established the laws of inheritance, the model for deciding which properties a combined element takes from its parents.
-- **Charles Darwin** traced the ancestry of species, the same shape of problem as tracing the lineage of data.
-- **Barbara Liskov** pioneered data abstraction and the substitution principle that underpin modern programming languages and system design.
+- [**Charles Babbage**](https://en.wikipedia.org/wiki/Charles_Babbage) designed the Analytical Engine, the first general-purpose mechanical computer.
+- [**Ada Lovelace**](https://en.wikipedia.org/wiki/Ada_Lovelace) wrote the first program for Babbage's machine and saw that it could work on more than numbers.
+- [**Joseph Marie Jacquard**](https://en.wikipedia.org/wiki/Joseph_Marie_Jacquard) used punched cards to control a loom, an early demonstration that a machine can be programmed.
+- [**Emile Baudot**](https://en.wikipedia.org/wiki/%C3%89mile_Baudot) devised the telegraph code and multiplexing that underpin modern data communication (the unit of signalling speed, the baud, is named after him).
+- [**Thomas Wedgwood**](https://en.wikipedia.org/wiki/Thomas_Wedgwood_(photographer)) experimented with capturing images on light-sensitive surfaces, an early step towards recording and reproducing information.
+- [**Gregor Mendel**](https://en.wikipedia.org/wiki/Gregor_Mendel) established the laws of inheritance, the model for deciding which properties a combined element takes from its parents.
+- [**Charles Darwin**](https://en.wikipedia.org/wiki/Charles_Darwin) traced the ancestry of species, the same shape of problem as tracing the lineage of data.
+- [**Barbara Liskov**](https://en.wikipedia.org/wiki/Barbara_Liskov) pioneered data abstraction and the substitution principle that underpin modern programming languages and system design.
 
 The sections below describe what each connector does and why the name fits.
 
 ### Babbage and Lovelace: making sense of what has been collected
 
-The [Babbage Analytical Engine](https://en.wikipedia.org/wiki/Charles_Babbage) is an integration connector that orchestrates a set of analysis services, the *Lovelace* services (after [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace), who wrote the first program for Charles Babbage's machine). Each Lovelace service is a [governance service](https://egeria-project.org/concepts/governance-service/) that does one focused job and records what it finds as a classification on the element it analysed. The current set includes:
+The *Babbage Analytical Engine* is an integration connector that orchestrates a set of analysis services, the *Lovelace Services*. Each Lovelace Service is a [governance service](https://egeria-project.org/concepts/governance-service/) that does one focused analysis on the knowledge graph and records what it finds as a classification on the root element it analysed. The current set includes:
 
 - **Award Karma Points** - a healthy catalog depends on people contributing to it, and this service notices and rewards them.
-- **Build Zone Membership Profile** - summarises the makeup of each governance zone.
-- **Profile OpenLineage Runs** - analyses the runs of each job in an OpenLineage log store and records their frequency, regularity, duration, failure rate and data volume against the job.
-- **Refine OpenLineage Data Scope** - works out from the reads and writes of each dataset the pattern in which it is written and the window of data it covers.
-- **Summarise OpenLineage Data Quality** - turns the data quality assertions and tests in the log store into a survey report with the pass rate of each quality dimension.
+- **Build Zone Membership Profile** - summarises the make-up of each governance zone.
+- **Profile Pipeline Runs** - analyses the runs of each job in an [Open Lineage](https://openlineage.io/) log store and records their frequency, regularity, duration, failure rate and data volume against the job.
+- **Refine Data Scope** - works out from the reads and writes of each dataset the pattern in which it is written and the window of data it covers based on Open Lineage events.
+- **Summarise Data Quality** - turns the data quality assertions and tests found in the Open Lineage log store into a survey report with the pass rate of each quality dimension.
 
-Notice what the last three have in common. The raw OpenLineage events are already being produced by the pipelines. What is missing is the *interpretation*: is this job reliable, how much history does this dataset hold, is its quality good enough for what I want to do? Those are exactly the questions an AI application, or the person who has to sign off on it, needs answered. The services are selected independently, so a deployment runs only the analyses it wants.
+Notice what the last three have in common. The raw Open Lineage events are already being produced by the pipelines. What is missing is the *interpretation*: is this job reliable, how much history does this dataset hold, is its quality good enough for what I want to do? Those are exactly the questions an AI application, or the person who has to sign off on it, needs answered. The services are selected independently, so a deployment runs only the analyses it wants.
 
 ### Mendel: one thing, described once
 
-When many systems describe the same real-world thing, the catalog fills with near-duplicates. The [Mendel Automated Duplicate Manager](https://en.wikipedia.org/wiki/Gregor_Mendel) takes its name from the geneticist because its survivorship rules decide which properties are inherited by the combined element.
+When many systems describe the same real-world thing, the catalog fills with near-duplicates. The *Mendel Automated Duplicate Manager* takes its name from the geneticist because its survivorship rules decide which properties are inherited by the combined element derived from the neer-duplicates.
 
-When a potential duplicate is discovered, Mendel either validates it, if the match is close enough, or raises a *to do* for a steward to decide. It also revisits its own earlier decisions: a match that has stopped being a match (say, because a qualified name was corrected) is withdrawn rather than left in place for ever, while decisions taken by a human steward are never overturned. Once enough validated duplicates cluster together, they are merged into a single consolidated element that carries everything its members know.
+When a potential duplicate is discovered, Mendel either validates it, if the match is close enough, or raises a *to do* for a steward to decide. It also revisits its own earlier decisions: a match that has stopped being a match (say, because a qualified name was corrected) is withdrawn rather than left in place forever, while decisions taken by a human steward are never overturned. Once enough validated duplicates cluster together, they are merged into a single consolidated element that carries everything its members know.
 
 Just as importantly, wherever the merge has to choose between conflicting values, the losing value is written to the audit log. A steward can see what was left behind instead of having to guess. For an AI application that asks "tell me about this customer", the difference between one well-formed answer and six competing ones is the difference between being useful and being misleading.
 
 ### Darwin: tracing where everything came from
 
-The [Darwin Product Dependency Manager](https://en.wikipedia.org/wiki/Charles_Darwin) traces the origin of each digital product's data. Lineage is captured in great detail - column to column mappings between individual schema elements - but the questions people ask are coarse-grained ones: which systems feed this server, and which products does this product depend on?
+The *Darwin Product Dependency Manager* traces the origin of each digital product's data. Lineage is captured in great detail - column to column mappings between individual schema elements - but the questions people ask are coarse-grained ones: which systems feed this server, and which products does this product depend on?
 
 Darwin works upwards through three levels: from schema elements to the data assets that contain them, from data assets to the software servers that host them, and from data assets to the [digital products](https://egeria-project.org/concepts/digital-product/) that package them. At each level it follows the flow of data along a single [information supply chain](https://egeria-project.org/concepts/information-supply-chain/), and it maintains the resulting `DataFlow` and `DigitalProductDependency` relationships automatically. Dependencies that a person has asserted but that no lineage proves are not deleted; they are recorded as exceptions for someone to look at.
 
@@ -85,19 +85,19 @@ If an AI application is built on a digital product, this is how you find out wha
 
 ### Jacquard and Baudot: turning metadata into products
 
-[Joseph Marie Jacquard](https://en.wikipedia.org/wiki/Joseph_Marie_Jacquard) used punched cards to control a loom and weave complex patterns automatically. The **Jacquard Digital Product Loom** does the equivalent for metadata. It harvests data from the open metadata repositories and weaves it into [digital products](https://egeria-project.org/concepts/digital-product/) that are organized into a digital product catalog, so the ecosystem's own metadata is published in the same way as any other product.
+Joseph Marie Jacquard used punched cards to control a loom and weave complex patterns automatically. The *Jacquard Digital Product Loom* does the equivalent for metadata. It harvests data from the open metadata repositories and weaves it into [digital products](https://egeria-project.org/concepts/digital-product/) that are organized into a digital product catalog, so the ecosystem's own metadata is published in the same way as any other product.
 
-Once there is a catalog of products, people need to subscribe to them. [Emile Baudot](https://en.wikipedia.org/wiki/%C3%89mile_Baudot), whose telegraph code was a foundation of modern data communication, gives his name to the **Baudot Subscription Manager**. It looks after the subscriptions to the products in the catalog, sending the welcome, one-time and periodic notifications that each subscriber is due, and reacting to changes in the resources being monitored as they arrive.
+Once there is a catalog of products, people need to subscribe to them. Emile Baudot, whose telegraph code was a foundation of modern data communication, gives his name to the **Baudot Subscription Manager**. It looks after the subscriptions to the products in the catalog, sending the welcome, one-time and periodic notifications that each subscriber is due, and reacting to changes in the resources being monitored as they arrive.
 
 ### Wedgwood: delivering the goods
 
-A subscription is a promise to deliver data. The **Wedgwood Data Provisioner** (after [Thomas Wedgwood](https://en.wikipedia.org/wiki/Thomas_Wedgwood_(photographer)), an early experimenter in capturing images) is the governance action service that keeps it. Called from the Baudot Subscription Manager, it provisions the data from the digital products to the systems or teams that subscribed to them for their projects.
+A subscription is a promise to deliver data. The **Wedgwood Data Provisioner** (after Thomas Wedgwood), an early experimenter in capturing images) is the governance action service that keeps it. Called from the *Baudot Subscription Manager*, it provisions the data from the digital products to the systems or teams that subscribed to them for their projects.
 
 Together, Jacquard, Baudot and Wedgwood make a complete loop: publish a product, subscribe to it, receive its data. For AI this matters because the alternative is every project building its own copy of the data through its own pipeline, with no record of what went where.
 
 ### Liskov: a common language for many data stores
 
-[Barbara Liskov](https://en.wikipedia.org/wiki/Barbara_Liskov)'s work on data abstraction is the inspiration for the **Liskov Data Sharing Hub Manager**. A data sharing hub is a collection of related data stores that together provide a data-oriented service to other systems or teams. Liskov monitors the schemas of those stores and maintains a **data dictionary** of the fields and structures they hold, identifying similar data in different stores and abstracting it away from the technical implementation. Curated descriptions can then be added to give the fields context and meaning.
+Barbara Liskov's work on data abstraction is the inspiration for the **Liskov Data Sharing Hub Manager**. A data sharing hub is a collection of related data stores that together provide a data-oriented service to other systems or teams. Liskov monitors the schemas of those stores and maintains a **data dictionary** of the fields and structures they hold, identifying similar data in different stores and abstracting it away from the technical implementation. Curated descriptions can then be added to give the fields context and meaning.
 
 A dictionary is only as good as the descriptions beneath it, so each time it runs Liskov also works to improve them. It follows the links from each member's technology type to the governance action types that know how to catalog and survey that type of technology, starts cataloguing if it is not already enabled, and requests a fresh survey so that the description of the contents stays up to date. Requests that are already outstanding are not duplicated, and the surveys that are not wanted can be excluded through configuration.
 

@@ -5,7 +5,7 @@
 
 *By Mandy Chessell, Egeria Project Leader, Pragmatic Data Research (PDR) Ltd*
 
-*Part 1 of a four-part series on recent work in the [Egeria](https://egeria-project.org/) project, an LF AI & Data project for open metadata and governance.*
+*Part 1 of the series on recent work in the [Egeria](https://egeria-project.org/) project, an LF AI & Data project for open metadata and governance.*
 
 ---
 

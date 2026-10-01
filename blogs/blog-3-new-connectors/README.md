@@ -5,7 +5,7 @@
 
 *By Mandy Chessell, Egeria Project Leader, Pragmatic Data Research (PDR) Ltd*
 
-*Part 3 of a four-part series on recent work in the [Egeria](https://egeria-project.org/) project, an LF AI & Data project for open metadata and governance.*
+*Part 3 of the series on recent work in the [Egeria](https://egeria-project.org/) project, an LF AI & Data project for open metadata and governance.*
 
 
 ---
@@ -39,7 +39,7 @@ Estate cataloguing connectors are, in a sense, the practical complement to the s
 
 ## What's next
 
-Connectors and interfaces are one thing in the abstract and another thing applied to a real (if fictional) organization. The final post in this series looks at Coco Pharmaceuticals — Egeria's long-running example company — and the governance scenarios the project has recently expanded around it.
+Connectors and interfaces are one thing in the abstract and another thing applied to a real (if fictional) organization. The next post in this series looks at Coco Pharmaceuticals — Egeria's long-running example company — and the governance scenarios the project has recently expanded around it.
 
 *Explore the full connector catalog at [egeria-project.org/egeria-solutions/leveraging-your-estate](https://egeria-project.org/egeria-solutions/leveraging-your-estate/).*
 

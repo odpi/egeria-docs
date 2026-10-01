@@ -5,7 +5,7 @@
 
 *By Mandy Chessell, Egeria Project Leader, Pragmatic Data Research (PDR) Ltd*
 
-*Part 4 of a four-part series on recent work in the [Egeria](https://egeria-project.org/) project, an LF AI & Data project for open metadata and governance.*
+*Part 4 of the series on recent work in the [Egeria](https://egeria-project.org/) project, an LF AI & Data project for open metadata and governance.*
 
 
 ---
@@ -52,9 +52,9 @@ It also gives the project a low-stakes place to work through hard, realistic pro
 ![Designing the Data Sharing Hub](solution-blueprints.png)
 
 
-## Closing the series
+## Looking back
 
-Across this series we've looked at a platform that got smaller and more capable at the same time (6.0), five new interfaces that made its metadata visible to people who aren't developers (6.1's UIs), connectors that bring existing databases and catalogs into view without forcing migration, and now a worked example that ties governance capability back to a plausible organizational story. Individually, each is a meaningful piece of work; together, they represent a platform maturing from "a set of capabilities" toward "something a real governance team could actually run."
+So far in this series we've looked at a platform that got smaller and more capable at the same time (6.0), five new interfaces that made its metadata visible to people who aren't developers (6.1's UIs), connectors that bring existing databases and catalogs into view without forcing migration, and now a worked example that ties governance capability back to a plausible organizational story. The next post looks at the nanny connectors that keep that governed metadata current and usable as AI adoption widens. Individually, each is a meaningful piece of work; together, they represent a platform maturing from "a set of capabilities" toward "something a real governance team could actually run."
 
 *Read the full set of scenarios at [egeria-project.org/practices/coco-pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/), and follow along with the rest of the project at [egeria-project.org](https://egeria-project.org/).*
 

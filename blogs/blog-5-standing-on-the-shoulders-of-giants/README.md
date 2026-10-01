@@ -57,7 +57,7 @@ The sections below describe what each connector does and why the name fits.
 
 ### Babbage and Lovelace: making sense of what has been collected
 
-The *Babbage Analytical Engine* is an integration connector that orchestrates a set of analysis services, the *Lovelace Services*. Each Lovelace Service is a [governance service](https://egeria-project.org/concepts/governance-service/) that does one focused analysis on the knowledge graph and records what it finds as a classification on the root element it analysed. The current set includes:
+The **Babbage Analytical Engine** is an integration connector that orchestrates a set of analysis services, the **Lovelace Services**. Each Lovelace Service is a [governance service](https://egeria-project.org/concepts/governance-service/) that does one focused analysis on the knowledge graph and records what it finds as a classification on the root element it analysed. The current set includes:
 
 - **Award Karma Points** - a healthy catalog depends on people contributing to it, and this service notices and rewards them.
 - **Build Zone Membership Profile** - summarises the make-up of each governance zone.
@@ -69,7 +69,7 @@ Notice what the last three have in common. The raw Open Lineage events are alrea
 
 ### Mendel: one thing, described once
 
-When many systems describe the same real-world thing, the catalog fills with near-duplicates. The *Mendel Automated Duplicate Manager* takes its name from the geneticist because its survivorship rules decide which properties are inherited by the combined element derived from the neer-duplicates.
+When many systems describe the same real-world thing, the catalog fills with near-duplicates. The **Mendel Automated Duplicate Manager** takes its name from the geneticist because its survivorship rules decide which properties are inherited by the combined element derived from the neer-duplicates.
 
 When a potential duplicate is discovered, Mendel either validates it, if the match is close enough, or raises a *to do* for a steward to decide. It also revisits its own earlier decisions: a match that has stopped being a match (say, because a qualified name was corrected) is withdrawn rather than left in place forever, while decisions taken by a human steward are never overturned. Once enough validated duplicates cluster together, they are merged into a single consolidated element that carries everything its members know.
 
@@ -77,7 +77,7 @@ Just as importantly, wherever the merge has to choose between conflicting values
 
 ### Darwin: tracing where everything came from
 
-The *Darwin Product Dependency Manager* traces the origin of each digital product's data. Lineage is captured in great detail - column to column mappings between individual schema elements - but the questions people ask are coarse-grained ones: which systems feed this server, and which products does this product depend on?
+The **Darwin Product Dependency Manager** traces the origin of each digital product's data. Lineage is captured in great detail - column to column mappings between individual schema elements - but the questions people ask are coarse-grained ones: which systems feed this server, and which products does this product depend on?
 
 Darwin works upwards through three levels: from schema elements to the data assets that contain them, from data assets to the software servers that host them, and from data assets to the [digital products](https://egeria-project.org/concepts/digital-product/) that package them. At each level it follows the flow of data along a single [information supply chain](https://egeria-project.org/concepts/information-supply-chain/), and it maintains the resulting `DataFlow` and `DigitalProductDependency` relationships automatically. Dependencies that a person has asserted but that no lineage proves are not deleted; they are recorded as exceptions for someone to look at.
 
@@ -85,7 +85,7 @@ If an AI application is built on a digital product, this is how you find out wha
 
 ### Jacquard and Baudot: turning metadata into products
 
-Joseph Marie Jacquard used punched cards to control a loom and weave complex patterns automatically. The *Jacquard Digital Product Loom* does the equivalent for metadata. It harvests data from the open metadata repositories and weaves it into [digital products](https://egeria-project.org/concepts/digital-product/) that are organized into a digital product catalog, so the ecosystem's own metadata is published in the same way as any other product.
+Joseph Marie Jacquard used punched cards to control a loom and weave complex patterns automatically. The **Jacquard Digital Product Loom** does the equivalent for metadata. It harvests data from the open metadata repositories and weaves it into [digital products](https://egeria-project.org/concepts/digital-product/) that are organized into a digital product catalog, so the ecosystem's own metadata is published in the same way as any other product.
 
 Once there is a catalog of products, people need to subscribe to them. Emile Baudot, whose telegraph code was a foundation of modern data communication, gives his name to the **Baudot Subscription Manager**. It looks after the subscriptions to the products in the catalog, sending the welcome, one-time and periodic notifications that each subscriber is due, and reacting to changes in the resources being monitored as they arrive.
 

@@ -46,11 +46,12 @@
 - [Business Area](/concepts/business-capability)
 - [Business Capability](/concepts/business-capability)
 - [Business Domain](/concepts/business-capability)
-
 - [Business Service](/concepts/business-capability)
+
 ## C
 
 - [Campaign](/concepts/project)
+- [Cascade Delete](/concepts/cascade-delete)
 - [Catalog Target](/concepts/catalog-target)
 - [Catalog Target Type](/concepts/catalog-target)
 - [Catalog Template](/concepts/catalog-template)
@@ -148,6 +149,7 @@
 - [Egeria Content Pack](/content-packs/egeria-content-pack/overview)
 - [Egeria Explorer](/user-interfaces/egeria-explorer/overview)
 - [Egeria Operations](/user-interfaces/egeria-operations/overview)
+- [Egeria Advisor](/concepts/trellis)
 - [Egeria Workspaces](/egeria-workspaces)
 - [Endpoint](/concepts/endpoint)
 - [Engine](/concepts/software-capability/#engine)
@@ -450,6 +452,7 @@
 - [Request For Action (RfA)](/concepts/request-for-action)
 - [Request Id](/concepts/request-id)
 - [Resource](/concepts/resource)
+- [Resource Explorer](/concepts/trellis)
 - [ResourceUse](/concepts/resource-use)
 - [Resource Connector](/concepts/digital-resource-connector)
 - [REST Client Connector](/concepts/rest-client-connector)
@@ -532,6 +535,7 @@
 - [Tool](/concepts/software-capability/#tool)
 - Tombstone - see [Memento](#m)
 - [To Do](/concepts/to-do)
+- [Trellis](/concepts/trellis)
 - [Topic](/concepts/basic-concepts/#topic)
 
   - [Cohort Topic](/concepts/cohort-events)

@@ -191,6 +191,7 @@ Cataloguing turns what the survey found into open metadata assets you can search
 
 * **Oracle Database Server** - creates the *SoftwareServer* asset and starts the **Oracle Database Server Cataloguer**, which discovers and catalogues its pluggable databases (subject to the include/exclude lists above).
 * **Oracle Relational Database** - creates the *RelationalDatabase* asset and starts the **JDBC Database Cataloguer** against it, which catalogues its schemas, tables, columns, primary keys and foreign keys.
+* **Oracle Relational Database Schema** - creates the *DeployedDatabaseSchema* asset scoped to a single schema, again backed by the JDBC Database Cataloguer.  The schema is named in the `databaseSchema` configuration property of the connection, since only PostgreSQL can select a schema through its JDBC URL.
 
 There is no separate schema-level template or governance action process for Oracle (the same as Microsoft SQL Server, and unlike PostgreSQL, which offers one) - a database's schemas are still catalogued and become their own *Oracle Relational Database Schema* assets, just always as part of cataloguing the whole pluggable database.
 
@@ -212,6 +213,8 @@ All of the capabilities above are packaged as ready-to-run **governance action p
 | `OracleDatabase:CreateAndSurveyGovernanceActionProcess`                | Creates an *Oracle Relational Database* asset and runs the Oracle Pluggable Database Survey against it.                      |
 | `OracleDatabase::CreateAsCatalogTargetGovernanceActionProcess`         | Creates an *Oracle Relational Database* asset and configures the JDBC Database Cataloguer to catalogue it.                   |
 | `OracleDatabase:DeleteAssetWithTemplateGovernanceActionProcess`        | Deletes the database asset (and everything anchored to it) using the same template properties used to create it.            |
+| `OracleDatabaseSchema::CreateAsCatalogTargetGovernanceActionProcess` | Creates an *Oracle Relational Database Schema* asset and configures the JDBC Database Cataloguer to catalogue just that schema.  The schema is named in the `databaseSchema` configuration property of the connection. |
+| `OracleDatabaseSchema:DeleteAssetWithTemplateGovernanceActionProcess` | Deletes the schema asset (and everything anchored to it) using the same template properties used to create it. |
 
 Each *CreateAndSurvey* process runs the same three steps as its PostgreSQL and Microsoft SQL Server equivalents: create the asset, run the survey, then print the resulting report; each *CreateAsCatalogTarget* process runs two steps: create the asset, then attach it as a catalog target to the appropriate integration connector.
 

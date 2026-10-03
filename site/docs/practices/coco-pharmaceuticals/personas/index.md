@@ -87,8 +87,8 @@ Bob Nitter supports the multitude of application systems that the company runs. 
 Coco Pharmaceuticals has its own manufacturing plants.  Stew Faster is the general manager of the plants and is involved in the digitization program for manufacturing and distribution of the products.
 
 * [Stew Faster](/practices/coco-pharmaceuticals/personas/stew-faster) - Manufacturing General Manager
-* [Florence Paynter](/practices/coco-pharmaceuticals/personas/florence-paynter) - Manufacturing Automation Specialist
-* [George Pie](/practices/coco-pharmaceuticals/personas/george-pie) - Quality Control
+* [Florence Paynter](/practices/coco-pharmaceuticals/personas/florence-paynter) - Graduate Chemist
+* [George Pie](/practices/coco-pharmaceuticals/personas/george-pie) - Manufacturing Engineer (on secondment from Austin)
 
 ![Manufacturing Team](../scenarios/manufacturing-team.png)
 

@@ -60,6 +60,7 @@ It is worthwhile maintaining the `Anchors` classification because reads of, and 
     - [Open Metadata Type definitions for Anchors classification](/types/0/0010-Base-Model)
     - [Open Metadata security checks for Assets and Connections](/features/metadata-security/overview)
     - [Governance Zones and Assets](/features/governance-zoning/overview)
+    - [Cascade Delete](/concepts/cascade-delete)
     
 
 

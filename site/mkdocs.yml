@@ -80,6 +80,7 @@ nav:
           - User Interface overview: user-interfaces/index.md
           - Egeria Explorer: user-interfaces/egeria-explorer/overview.md
           - Lineage Explorer: user-interfaces/lineage-explorer/overview.md
+          - Data Mesh: user-interfaces/data-mesh/overview.md
           - The Catalog: user-interfaces/the-catalog/overview.md
           - Egeria Operations: user-interfaces/egeria-operations/overview.md
           - Egeria Audit: user-interfaces/egeria-audit/overview.md
@@ -787,6 +788,7 @@ nav:
       - Asset Log Message: concepts/asset-log-message.md
       - Audit Log: concepts/audit-log.md
       - Business Capability: concepts/business-capability.md
+      - Cascade Delete: concepts/cascade-delete.md
       - Catalog Target: concepts/catalog-target.md
       - Catalog Template: concepts/catalog-template.md
       - Client-side Secret: concepts/client-side-secret.md
@@ -936,6 +938,7 @@ nav:
       - Team Role: concepts/team-role.md
       - Template: concepts/template.md
       - To Do: concepts/to-do.md
+      - Trellis: concepts/trellis.md
       - Useful Resource: concepts/useful-resource.md
       - User Identity: concepts/user-identity.md
       - Valid Value Definition: concepts/valid-value-definition.md

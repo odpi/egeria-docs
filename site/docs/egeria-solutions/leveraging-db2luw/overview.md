@@ -202,6 +202,7 @@ Cataloguing turns what the survey found into open metadata assets you can search
 
 * **Db2 LUW Server** - creates the *SoftwareServer* asset and starts the **Db2 LUW Server Cataloguer**, which catalogues the databases named in `includeDatabaseList` (or, if none are given, just the one database the connector's own connection names).
 * **Db2 LUW Relational Database** - creates the *RelationalDatabase* asset and starts the **JDBC Database Cataloguer** against it, which catalogues its schemas, tables, columns, primary keys and foreign keys.
+* **Db2 for Linux, UNIX and Windows Relational Database Schema** - creates the *DeployedDatabaseSchema* asset scoped to a single schema, again backed by the JDBC Database Cataloguer.  The schema is named in the `databaseSchema` configuration property of the connection, since only PostgreSQL can select a schema through its JDBC URL.
 
 There is no separate schema-level template or governance action process for Db2 LUW (the same as Microsoft SQL Server and Oracle, and unlike PostgreSQL, which offers one) - a database's schemas are still catalogued and become their own *Db2 for Linux, UNIX and Windows Relational Database Schema* assets, just always as part of cataloguing the whole database.
 
@@ -223,6 +224,8 @@ All of the capabilities above are packaged as ready-to-run **governance action p
 | `DB2LUWDatabase:CreateAndSurveyGovernanceActionProcess`                 | Creates a *Db2 for Linux, UNIX and Windows Relational Database* asset and runs the Db2 LUW Database Survey against it.       |
 | `DB2LUWDatabase::CreateAsCatalogTargetGovernanceActionProcess`          | Creates a *Db2 for Linux, UNIX and Windows Relational Database* asset and configures the JDBC Database Cataloguer to catalogue it. |
 | `DB2LUWDatabase:DeleteAssetWithTemplateGovernanceActionProcess`         | Deletes the database asset (and everything anchored to it) using the same template properties used to create it.            |
+| `DB2LUWDatabaseSchema::CreateAsCatalogTargetGovernanceActionProcess` | Creates a *Db2 for Linux, UNIX and Windows Relational Database Schema* asset and configures the JDBC Database Cataloguer to catalogue just that schema.  The schema is named in the `databaseSchema` configuration property of the connection. |
+| `DB2LUWDatabaseSchema:DeleteAssetWithTemplateGovernanceActionProcess` | Deletes the schema asset (and everything anchored to it) using the same template properties used to create it. |
 
 Each *CreateAndSurvey* process runs the same three steps as its PostgreSQL, Microsoft SQL Server and Oracle equivalents: create the asset, run the survey, then print the resulting report; each *CreateAsCatalogTarget* process runs two steps: create the asset, then attach it as a catalog target to the appropriate integration connector.
 

@@ -31,6 +31,8 @@ There are also a number of containerized environments that you may wish to conne
 * Milvus
 * MLFlow
 * Ollama
+* Dagster and Prefect
+* Resource Explorer and Egeria Advisor (the [Trellis](/concepts/trellis) AI applications, technical preview)
 
 As you activate [Egeria's solutions](/egeria-solutions), the associate runtimes are connected to Egeria.
 
@@ -47,23 +49,29 @@ In addition, Egeria servers are automatically configured and started.  This give
 
 The table below summarizes the differences between the Quickstart and Freshstart environments.
 
-| Content       | Quickstart                                | Freshstart                                |
-|---------------|-------------------------------------------|-------------------------------------------|
-| UserDirectory | coco-user-directory.omsecrets             | egeria-user-directory.omsecrets           |
-|               |                                           |                                           |
-| Port          | 9443                                      | 8443                                      |
-|               |                                           |                                           |
-| Content Packs | CoreContentPack.omarchive                 | CoreContentPack.omarchive                 |
-| loaded at     | EgeriaContentPack.omarchive               | EgeriaContentPack.omarchive               |
-| startup       | APIsContentPack.omarchive                 | APIsContentPack.omarchive                 |
-|               | FilesContentPack.omarchive                | FilesContentPack.omarchive                |
-|               | OpenLineageContentPack.omarchive          | OpenLineageContentPack.omarchive          |
-|               | OpenMetadataDigitalProducts.omarchive     | OpenMetadataDigitalProducts.omarchive     |
-|               | OrganizationInsightsContentPack.omarchive | OrganizationInsightsContentPack.omarchive |
-|               | PostgresContentPack.omarchive             | PostgresContentPack.omarchive             |
-|               | UnityCatalogContentPack.omarchive         |                                           |
-|               | CocoComboArchive.omarchive                |                                           |
-|               | CocoTypesArchive.omarchive                |                                           |
-|               | SimpleCatalog.omarchive                   |                                           |
+| Content       | Quickstart                                       | Freshstart                                       |
+|---------------|--------------------------------------------------|--------------------------------------------------|
+| UserDirectory | coco-user-directory.omsecrets                    | egeria-user-directory.omsecrets                  |
+|               |                                                  |                                                  |
+| Port          | 9443                                             | 8443                                             |
+|               |                                                  |                                                  |
+| Content Packs | CoreContentPack.omarchive                        | CoreContentPack.omarchive                        |
+| loaded at     | OrganizationInsightContentPack.omarchive         | OrganizationInsightContentPack.omarchive         |
+| startup       | EgeriaContentPack.omarchive                      | EgeriaContentPack.omarchive                      |
+|               | FilesContentPack.omarchive                       | FilesContentPack.omarchive                       |
+|               | PostgresContentPack.omarchive                    | PostgresContentPack.omarchive                    |
+|               | MSSQLContentPack.omarchive                       | MSSQLContentPack.omarchive                       |
+|               | OracleContentPack.omarchive                      | OracleContentPack.omarchive                      |
+|               | LUWContentPack.omarchive                         | LUWContentPack.omarchive                         |
+|               | DuckDBContentPack.omarchive                      | DuckDBContentPack.omarchive                      |
+|               | OpenLineageContentPack.omarchive                 | OpenLineageContentPack.omarchive                 |
+|               | BitolContentPack.omarchive                       | BitolContentPack.omarchive                       |
+|               | OpenMetadataDigitalProductsContentPack.omarchive | OpenMetadataDigitalProductsContentPack.omarchive |
+|               | APIsContentPack.omarchive                        | APIsContentPack.omarchive                        |
+|               | UnityCatalogContentPack.omarchive                | UnityCatalogContentPack.omarchive                |
+|               | ApacheKafkaContentPack.omarchive                 | ApacheKafkaContentPack.omarchive                 |
+|               | CocoComboArchive.omarchive                       |                                                  |
+|               | CocoTypesArchive.omarchive                       |                                                  |
+|               | SimpleCatalog.omarchive                          |                                                  |
 
 --8<-- "snippets/abbr.md"

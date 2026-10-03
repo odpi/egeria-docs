@@ -28,12 +28,11 @@ The description field can be used to explain why the linked term is of interest.
 * [**Synonym**](#synonym-relationship) is a relationship between glossary terms that have the same, or a very similar meaning.
 * [**Antonym**](#antonym-relationship) is a relationship between glossary terms that have the opposite (or near opposite) meaning.
 * [**PreferredTerm**](#preferredterm-relationship) is a relationship that indicates that the preferredTerm should be used in place of the preferredToTerm. 
-* [**ReplacementTerm**](#replacementterm-relationship) is a relationship that indicates that the replacementTerm must be used instead of the replacedByTerm.
-This is stronger version of the PreferredTerm.
-* [**IsA**](#isa-relationship) is a relationship that defines that the "isA" term is a more generic term than the "isOf" term.
+* [**ReplacementTerm**](#replacementterm-relationship) is a relationship that indicates that the replacementTerm must be used instead of the replacedByTerm. This is a stronger version of the PreferredTerm.
+* [**IsA**](#isarelationship-relationship) is a relationship that defines that the "isA" term is a more generic term than the "isOf" term.
 For example, this relationship would be use to say that "Cat" ISA "Animal".
 
-## Antonym relationship
+### Antonym relationship
 
 Link between glossary terms that have the opposite meaning.
 
@@ -44,7 +43,7 @@ Link between glossary terms that have the opposite meaning.
 * *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
 * *termRelationshipStatus* - Defines the confidence in the assigned relationship.
 
-## ISARelationship relationship
+### ISARelationship relationship
 
 Link between a more general glossary term and a more specific definition.
 
@@ -55,7 +54,7 @@ Link between a more general glossary term and a more specific definition.
 * *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
 * *termRelationshipStatus* - Defines the confidence in the assigned relationship.
 
-## PreferredTerm relationship
+### PreferredTerm relationship
 
 Link to an alternative term that the organization prefers to use.
 
@@ -66,7 +65,7 @@ Link to an alternative term that the organization prefers to use.
 * *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
 * *termRelationshipStatus* - Defines the confidence in the assigned relationship.
 
-## RelatedTerm relationship
+### RelatedTerm relationship
 
 Link between similar glossary terms.
 
@@ -77,7 +76,7 @@ Link between similar glossary terms.
 * *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
 * *termRelationshipStatus* - Defines the confidence in the assigned relationship.
 
-## ReplacementTerm relationship
+### ReplacementTerm relationship
 
 Link to a glossary term that is replacing an obsolete glossary term.
 
@@ -88,7 +87,7 @@ Link to a glossary term that is replacing an obsolete glossary term.
 * *source* - Details of the organization, person or process that created the element, or provided the information used to create the element.
 * *termRelationshipStatus* - Defines the confidence in the assigned relationship.
 
-## Synonym relationship
+### Synonym relationship
 
 Link between glossary terms that have the same meaning.
 

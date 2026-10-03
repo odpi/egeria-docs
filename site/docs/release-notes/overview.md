@@ -26,7 +26,7 @@ The table below shows the planned dates for future releases.  The branch date is
 |---------|------------------------|----------------|------------------------------------------------------------------|
 | 6.0     | 1st April 2026         | 1st April 2026 | [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) |
 | 6.1     | 19th August 2026       | 19th August 2026 | New Egeria Portal                                                |
-| 6.2     | Expected December 2026 |                | Context Intelligence                                             |
+| 6.2     | Expected October 2026  |                | Context Intelligence                                             |
 
 
 !!! attention "Backwards compatibility"

@@ -42,7 +42,7 @@ start using Egeria for their own projects without having to configure everything
         If you want to run Egeria as a server, that people can connect to from their own machines use the following command to start the environment:
     
         ```bash
-        ./fresh-start-multi-host` 
+        ./fresh-start-multi-host
         ```
     ____
  

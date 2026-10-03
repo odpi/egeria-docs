@@ -34,8 +34,8 @@ The *NotificationSubscriber* relationship is a [multi-link](/concepts/uni-multi-
 Left unchecked, a monitored situation that recurs frequently produces a flood of notifications that recipients quickly learn to ignore.  The notification type therefore carries properties that shape the delivery:
 
 * *multipleNotificationsPermitted* - whether more than one notification should be sent when the situation recurs.
-* *minimumNotificationInterval* - the shortest permitted gap between notifications.
-* *notificationInterval* and *nextScheduledNotification* - used for periodic subscriptions, where notifications are sent on a schedule rather than being driven by a monitored resource.
+* *minimumNotificationInterval* - the shortest permitted gap between notifications, in minutes.
+* *nextScheduledNotification* - used for periodic subscriptions, where notifications are sent on a schedule rather than being driven by a monitored resource.  (The *notificationInterval* property that was used alongside it is deprecated from release 6.2.)
 * *notificationCount* - how many notifications have been triggered.
 * *plannedStartDate* and *plannedCompletionDate* - the period during which the notification type is intended to be active.
 

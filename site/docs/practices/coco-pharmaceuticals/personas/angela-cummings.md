@@ -3,26 +3,28 @@
 
 # Angela Cummings - Nurse
 
-## Persona Description
 
 ----
 
 ![Icon](angela-cummings.png)
 
+----
 
-Age: 25
+??? info "Who is Angela Cummings?"
+    ## Persona Description
 
-Skills: Cancer nurse.
+    **Age**: 25
+    
+    **Skills**: Cancer nurse.
+    
+    **Scope**: Oncology department.
+    
+    **Job**:
+    
+    Angela is providing direct care to the patients involved in the clinical trial.
+    As such, her observations on the patient's progress are of particular
+    interest to [Grant](/practices/coco-pharmaceuticals/personas/grant-able) and [Tessa](/practices/coco-pharmaceuticals/personas/tessa-tube).
 
-Scope: Oncology department.
-
-Job:
-
-Angela is providing direct care to the patients involved in the clinical trial.
-As such, her observations on the patient's progress are of particular
-interest to [Grant](/practices/coco-pharmaceuticals/personas/grant-able) and [Tessa](/practices/coco-pharmaceuticals/personas/tessa-tube).
-
----
 
 ## Interactions
 

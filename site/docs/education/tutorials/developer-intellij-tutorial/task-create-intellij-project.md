@@ -17,11 +17,11 @@ Press the `Create` button and the new project is opened.
 ![New project window](new-project-is-opened.png)
 
 ??? tip "Set up Java Level ..."
-    Validate that the project is set up with the right level of Java - you need Java 17.  Select `File` and then `Project Structure...`.  When the wizard opens select `Project` and ensure the SDK is Java 17.
+    Validate that the project is set up with the right level of Java - you need Java 21.  Select `File` and then `Project Structure...`.  When the wizard opens select `Project` and ensure the SDK is Java 21.
 
     ![Check Java level](default-java-level.png)
 
-    If the SDK is not 17, click on the dropdown and change it to 17, and click OK to save it.  If Java 17 is not listed, make sure you have Java 17 installed on your machine and retry.
+    If the SDK is not 21, click on the dropdown and change it to 21, and click OK to save it.  If Java 21 is not listed, make sure you have Java 21 installed on your machine and retry.
 
     ![Correct Java Level](correct-java-level.png)
 

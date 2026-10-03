@@ -35,6 +35,8 @@ The *DataSetContent* relationship defines how data is supplied to a [DataSet](/t
 * *queryType* - Type of query used to extract data.
 * *iscQualifiedName* - Unique name for the associated Information Supply Chain.
 
+*DataSetContent* is a [multi-link](/concepts/uni-multi-link) relationship, so that a separate relationship can be recorded between the same data set and digital resource for each information supply chain that uses it.
+
 ## DataAssetEncoding classification
 
 The *DataAssetEncoding* classification provides the ability to store details of the data asset's format.

@@ -36,7 +36,7 @@ The instructions below will guide you through the process of setting up the envi
         If you want to run Egeria as a server, that people can connect to from their own machines use the following command to start the environment:
     
         ```bash
-        ./quick-start-multi-host` 
+        ./quick-start-multi-host
         ```
     ____
     

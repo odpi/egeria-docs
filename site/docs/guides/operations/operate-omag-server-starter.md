@@ -132,7 +132,7 @@ For more information on customising common application properties, see the Sprin
 
 ## Running in a container
 
-To run the server starter application in a container, you need a container image. The Egeria core image provides a variety of ways to run Egeria OMAG applications. As part of the official distribution, the complete Egeria assembly is packaged as a Docker image, including the OMAG server starter jar. The image is based on RedHat's [ubi9/openjdk-17](https://catalog.redhat.com/software/containers/ubi9/openjdk-17-runtime/61ee7d45384a3eb331996bee){ target=_blank } .
+To run the server starter application in a container, you need a container image. The Egeria core image provides a variety of ways to run Egeria OMAG applications. As part of the official distribution, the complete Egeria assembly is packaged as a Docker image, including the OMAG server starter jar. The image is based on RedHat's [ubi9/openjdk-21](https://catalog.redhat.com/search?gs&q=ubi9%2Fopenjdk-21){ target=_blank } .
 
 The executable jar is located in the following location in the image:
 

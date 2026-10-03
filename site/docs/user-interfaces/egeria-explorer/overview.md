@@ -10,7 +10,7 @@ hide:
 
 **Egeria Explorer** is a user interface for exploring open metadata.  It provides a navigable view of the open metadata knowledge graph, and allows users to browse and search for the detail they need.
 
-This is the home page for Egeria Exploere.  Each tile is an entry point into Egeria's knowledge graph.
+This is the home page for Egeria Explorer.  Each tile is an entry point into Egeria's knowledge graph.
 
 ![Egeria Explorer](egeria-explorer.png)
 > This is the home page showing the different entry points into Egeria's knowldege graph.

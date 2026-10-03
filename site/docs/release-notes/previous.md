@@ -4,7 +4,7 @@
 
 # All releases
 
-??? info "Release 6.2 (expected December 2026)"
+??? info "Release 6.2 (expected October 2026)"
     --8<-- "snippets/release-notes/6-2.md"
 
 ??? info "Release 6.1 (August 2026)"

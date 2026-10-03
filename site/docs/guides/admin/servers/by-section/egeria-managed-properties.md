@@ -9,7 +9,7 @@ The following properties do not need be configured explicitly, the admin service
 
 ## Local Server Id
 
-The localServerId is a unique identifier for the server, it is used when accessing resource that require their callers to supply a unique identifier.  For example, when an OMAG server is accessing an Apache Kafka topic, it needs to reliably identify itself with a callerId so that the Kafka server knows which events it has received and which it has not.  The localServerId is used for this purpose when accessing the [open metadata repository cohort topics](/concepts/cohort-events) for example.
+The localServerId is a unique identifier for the server, it is used when accessing resource that require their callers to supply a unique identifier.  For example, when an OMAG server is accessing an Apache Kafka topic, it needs to reliably identify itself with a callerId so that the Kafka server knows which events it has received and which it has not.  Before release 6.2, the localServerId was used for this purpose when accessing the [open metadata repository cohort topics](/concepts/cohort-events).  From release 6.2, a cohort added to a server's configuration names its callers after the server, the cohort and the topic (`<server>.<cohort>.<Registration|Types|Instances>`) so that each cohort topic has its own stable caller identifier.
 
 ## Local Server Name
 

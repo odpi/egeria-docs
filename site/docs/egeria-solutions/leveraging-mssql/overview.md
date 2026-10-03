@@ -186,6 +186,7 @@ Cataloguing turns what the survey found into open metadata assets you can search
 
 * **Microsoft SQL Server** - creates the *SoftwareServer* asset and starts the **Microsoft SQL Server Cataloguer**, which discovers and catalogues its databases (subject to the include/exclude lists above).
 * **Microsoft SQL Server Relational Database** - creates the *RelationalDatabase* asset and starts the **JDBC Database Cataloguer** against it, which catalogues its schemas, tables, columns, primary keys and foreign keys.
+* **Microsoft SQL Server Relational Database Schema** - creates the *DeployedDatabaseSchema* asset scoped to a single schema, again backed by the JDBC Database Cataloguer.  The schema is named in the `databaseSchema` configuration property of the connection, since only PostgreSQL can select a schema through its JDBC URL.
 
 There is no separate schema-level template or governance action process for Microsoft SQL Server (unlike PostgreSQL, which offers one) - a database's schemas are still catalogued and become their own *Microsoft SQL Server Relational Database Schema* assets, just always as part of cataloguing the whole database.
 
@@ -207,6 +208,8 @@ All of the capabilities above are packaged as ready-to-run **governance action p
 | `MSSQLDatabase:CreateAndSurveyGovernanceActionProcess`                | Creates a *Microsoft SQL Server Relational Database* asset and runs the Microsoft SQL Server Database Survey against it.     |
 | `MSSQLDatabase::CreateAsCatalogTargetGovernanceActionProcess`         | Creates a *Microsoft SQL Server Relational Database* asset and configures the JDBC Database Cataloguer to catalogue it.      |
 | `MSSQLDatabase:DeleteAssetWithTemplateGovernanceActionProcess`        | Deletes the database asset (and everything anchored to it) using the same template properties used to create it.            |
+| `MSSQLDatabaseSchema::CreateAsCatalogTargetGovernanceActionProcess` | Creates a *Microsoft SQL Server Relational Database Schema* asset and configures the JDBC Database Cataloguer to catalogue just that schema.  The schema is named in the `databaseSchema` configuration property of the connection. |
+| `MSSQLDatabaseSchema:DeleteAssetWithTemplateGovernanceActionProcess` | Deletes the schema asset (and everything anchored to it) using the same template properties used to create it. |
 
 Each *CreateAndSurvey* process runs the same three steps as its PostgreSQL equivalent: create the asset, run the survey, then print the resulting report; each *CreateAsCatalogTarget* process runs two steps: create the asset, then attach it as a catalog target to the appropriate integration connector.
 

@@ -25,6 +25,8 @@ Here are some example values.
 | Hosted Connector         | A type of connector that can be hosted by this type of service/engine.                                                                                                                                  |
 | Hosted Governance Engine | A type of governance engine that can be hosted by this type of service.                                                                                                                                 |
 | Called Service           | A type of service that may be called by this service.                                                                                                                                                   |
+| Naming Standards         | Vocabulary and/or rule set that defines the naming standards for associated elements.                                                                                                                   |
+| Bitol Document           | The Bitol Open Data Contract Standard (ODCS) or Open Data Product Standard (ODPS) document that the element was catalogued from, or generated to.                                                        |
 
 
 --8<-- "snippets/abbr.md"

@@ -333,7 +333,7 @@ An example is spring where we also include tomcat:
 
 #### Java
 
-The compiler/language version should be reviewed periodically. For Java we have moved from 8, to 11, to 17. Usually we aim to use the current LTS after it has been out for a while. For java 11-17 this was around a year.
+The compiler/language version should be reviewed periodically. For Java we have moved from 8, to 11, to 17, and in release 6.2 to 21. Usually we aim to use the current LTS after it has been out for a while. For java 11-17 this was around a year.
 
 ### Build tools
 

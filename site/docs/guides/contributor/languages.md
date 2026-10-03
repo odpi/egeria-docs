@@ -20,11 +20,11 @@ There are various JDK's available, and you may even have one pre-installed on yo
     java -version
     ```
 
-Egeria requires Java 17 as a minimum level. Language constructs up to Java 17 are permitted, but not above. We use the [Adoptium (formerly AdoptOpenJDK) :material-dock-window:](https://adoptopenjdk.net){ target=jdk } distribution. Official images and maven artifacts are built with this level. Additionally, code must compile and run on the current latest Java release. This is validated before any code can be merged.
+Egeria requires Java 21 as a minimum level (from release 6.2; earlier releases required Java 17). Language constructs up to Java 21 are permitted, but not above. We use the [Adoptium (formerly AdoptOpenJDK) :material-dock-window:](https://adoptopenjdk.net){ target=jdk } distribution. Official images and maven artifacts are built with this level. Additionally, code must compile and run on the current latest Java release. This is validated before any code can be merged.
 
 Java can be installed by:
 
-1. Downloading the *OpenJDK 17 (LTS) HotSpot* JVM from [Adoptium :material-dock-window:](https://adoptopenjdk.net){ target=jdk }.
+1. Downloading the *OpenJDK 21 (LTS) HotSpot* JVM from [Adoptium :material-dock-window:](https://adoptopenjdk.net){ target=jdk }.
 2. Running the installer that is downloaded.
 
 Alternatively, JDK's may be found on your operating system install repositories or via third party tools like [HomeBrew :material-dock-window:](https://brew.sh) on MacOS.

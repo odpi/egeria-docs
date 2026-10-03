@@ -36,7 +36,7 @@ The [DuckDB connectors](https://github.com/odpi/egeria/tree/main/open-metadata-i
 | **JDBC Database Cataloguer**       | [Integration Connector](/concepts/integration-connector)             | Catalogs the schemas, tables, columns, primary keys and foreign keys found inside a single database, whichever relational technology hosts it (including DuckDB). |
 | **DuckDB Database Survey Service** | [Survey Action Service](/concepts/survey-action-service)             | Surveys a single DuckDB database - its schemas, tables and columns, and its federation relationships.                                            |
 
-There is no server-level connector or survey service (DuckDB has no server to survey or catalogue), and no DuckDB-specific tabular data set connector.  These connectors, their template and the associated reference data are delivered together in the *DuckDBContentPack*.
+There is no server-level connector or survey service (DuckDB has no server to survey or catalogue), and no DuckDB-specific tabular data set connector.  These connectors, their templates (for a database and for a single schema within it) and the associated reference data are delivered together in the *DuckDBContentPack*.
 
 
 ## Surveying a DuckDB database
@@ -152,8 +152,13 @@ All of the capabilities above are packaged as ready-to-run **governance action p
 | `DuckDBDatabase:CreateAndSurveyGovernanceActionProcess`                | Creates the *DuckDB Relational Database* asset and runs the DuckDB Database Survey against it, printing out the resulting report. |
 | `DuckDBDatabase::CreateAsCatalogTargetGovernanceActionProcess`         | Creates the *DuckDB Relational Database* asset and configures the DuckDB Database Cataloguer to catalogue it.               |
 | `DuckDBDatabase:DeleteAssetWithTemplateGovernanceActionProcess`        | Deletes the database asset (and everything anchored to it) using the same template properties used to create it.            |
+| `DuckDBDatabaseSchema::CreateAsCatalogTargetGovernanceActionProcess` | Creates a *DuckDB Relational Database Schema* asset and configures the JDBC Database Cataloguer to catalogue just that schema.  The schema is named in the `databaseSchema` configuration property of the connection. |
+| `DuckDBDatabaseSchema:DeleteAssetWithTemplateGovernanceActionProcess` | Deletes the schema asset (and everything anchored to it) using the same template properties used to create it. |
 
-Each *CreateAndSurvey* process runs the same three steps as its PostgreSQL, Microsoft SQL Server, Oracle and Db2 LUW equivalents: create the asset, run the survey, then print the resulting report; the *CreateAsCatalogTarget* process runs two steps: create the asset, then attach it as a catalog target to the DuckDB Database Cataloguer.
+!!! warning "Name the schema in the configuration properties, not the URL"
+    The DuckDB driver treats everything after `jdbc:duckdb:` as a file path.  A URL ending `myDatabase.duckdb?schema=sales` therefore neither fails nor selects the schema - it creates a new, empty database file with that literal name, and the cataloguer reports success having catalogued nothing.  Supply the schema name in the `databaseSchema` configuration property instead.
+
+Each *CreateAndSurvey* process runs the same three steps as its PostgreSQL, Microsoft SQL Server, Oracle and Db2 LUW equivalents: create the asset, run the survey, then print the resulting report; each *CreateAsCatalogTarget* process runs two steps: create the asset, then attach it as a catalog target to its cataloguer - the DuckDB Database Cataloguer for a database, the JDBC Database Cataloguer for a schema.
 
 
 ### Using the REST API

@@ -102,20 +102,18 @@ The descriptive information - connector type GUID, qualified name, display name,
 The constructor then declares the service's specification: `supportedRequestTypes`, `supportedRequestParameters`, `supportedActionTargetTypes`, `producedActionTargetTypes` and `producedGuards`.  The `WatchdogActionServiceProvider` constructor already sets `supportedRequestParameters`, `producedGuards` and `producedActionTargetTypes` to the OWF standard values, so you only override the ones your service changes.
 
 ```java
-public class BaudotSubscriptionManagementProvider extends WatchdogActionServiceProvider
+public class LovelaceKarmaPointAwardsServiceProvider extends WatchdogActionServiceProvider
 {
-    private static final String connectorClassName = BaudotSubscriptionManagementService.class.getName();
-
-    public BaudotSubscriptionManagementProvider()
+    public LovelaceKarmaPointAwardsServiceProvider()
     {
-        super(EgeriaOpenConnectorDefinition.BAUDOT_SUBSCRIPTION_MANAGER,
-              connectorClassName,
+        super(EgeriaOpenConnectorDefinition.KARMA_POINTS_AWARDS_LOVELACE_SERVICE,
+              LovelaceKarmaPointAwardsService.class.getName(),
               null);
 
-        supportedRequestTypes      = null;
-        supportedRequestParameters = null;
-        supportedActionTargetTypes = WatchdogActionTarget.getNotificationActionTargetTypes();
-        producedGuards             = GenericWatchdogGuard.getGuardTypes();
+        super.supportedRequestTypes = null;
+        super.supportedRequestParameters = null;
+        super.supportedActionTargetTypes = null;
+        super.producedGuards = WatchdogActionGuard.getSimpleWatchdogGuardTypes();
     }
 }
 ```
@@ -305,7 +303,6 @@ A watchdog action service can be started via an [engine action](/concepts/engine
 
 The framework itself is in the [open-watchdog-framework :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/frameworks/open-watchdog-framework){ target=gh } module.
 
-* [Baudot Subscription Manager :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/nanny-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/baudot/BaudotSubscriptionManagementService.java){ target=gh } - the notification type pattern.  It manages subscriptions to the digital products in the [Open Metadata Digital Product Catalog](/types/7/0710-Digital-Products), runs indefinitely, and uses each notification type's properties to decide whether to notify subscribers once, on change, or on a schedule.
 * [Lovelace Karma Point Awards Service :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/lovelace-insights/src/main/java/org/odpi/openmetadata/adapters/connectors/organizationinsight/karmapoints/LovelaceKarmaPointAwardsService.java){ target=gh } - the instance/type pattern in its simplest form.  It listens to every event and increments a karma point on the contributing user's profile.
 * [Generic Element Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-element-watchdog-governance-action-service.md){ target=gh } and [Generic Folder Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-folder-watchdog-governance-action-service.md){ target=gh } - ready-to-configure services that run a named governance action process when a chosen kind of event occurs.  These still run as OGF governance action services today; new instance/type watching should be built directly against OWF.
 

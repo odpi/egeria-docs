@@ -24,6 +24,11 @@ The service supports a wide range of operations across the metadata lifecycle:
     - **Graph Retrieval**: Retrieving a graph of anchored elements to visualize complex structures.
     - **Relationship Discovery**: Finding relationships between specific elements or groups of elements.
 - **Metadata Type Support**: Direct interaction with metadata based on their open metadata types, supporting the full richness of the Egeria type system.
+- **Dynamic Type Management**: Adding, updating and deleting open metadata types at runtime (*addTypeDef*, *updateTypeDef*, *deleteTypeDef*, *addEnumDef* and *deleteEnumDef*).  New types are validated against the existing types, homed in the server's local repository, reloaded after the archive types when the server restarts, and shared with the cohort.  Types that came from an open metadata archive or from another cohort member cannot be changed, and a type cannot be deleted while instances of it, or types that refer to it, exist.  The in-memory repository does not keep new types over a restart.
+- **Instance Control**: Changing the control information of an element or relationship rather than its properties - re-identifying it (giving it a new [unique identifier](/concepts/guid)), re-typing it (changing its type), or re-homing it (changing the metadata collection that is its [home](/features/metadata-provenance/overview)).  Re-homing runs in the repository that is taking ownership of the instance.
+
+!!! warning "Securing dynamic type management"
+    Changes to the type system affect every user of the cohort.  Unless a [security connector](/features/metadata-security/overview) restricts it, any authenticated user can add, update or delete types.
 
 
 ## API operations

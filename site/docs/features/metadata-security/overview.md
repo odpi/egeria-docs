@@ -102,7 +102,7 @@ The connector that can be defined for an OMAG Server offers a series of layers o
 * **validateUserForServer** - Checks that the calling user is authorized to issue a (any) request to the OMAG Server.
 * **validateUserAsServerAdmin** - Checks that the calling user is authorized to update the configuration for a server.
 * **validateUserAsServerOperator** - Checks that the calling user is authorized to issue operator requests to the OMAG Server.
-* **validateUserAsServerInvestigator** - Checks that the calling user is authorized to issue operator requests to the OMAG Server.
+* **validateUserAsServerInvestigator** - Checks that the calling user is authorized to issue investigation requests to the OMAG Server, such as reading its configuration document.
 
 #### OpenMetadataServiceSecurity
 

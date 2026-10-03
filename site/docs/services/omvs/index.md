@@ -62,7 +62,7 @@ The specialized APIs are as follows.  They focus on supporting specific types of
 
 ## API Options
 
-Each API request passes a request body that identifies the options and optional properties for the request. The diagram below show how the different types of options are related.
+Each API request passes a request body that identifies the options and optional properties for the request. The diagram below shows how the different types of options are related.
 
 ![API Options](api-options.svg)
 

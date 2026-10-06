@@ -17,7 +17,7 @@ for capturing analysis from third-party tools.
 
 ## Annotation entity
 
-The *Annotation* entity inherits from [*OpenMetadataRoot*](/types/0/0010-Base-Model) and adds the following attributes:
+The *Annotation* entity inherits from [*AuthoredReferenceable*](/types/0/0010-Base-Model) and adds the following attributes:
 
 * *annotationType* - descriptive string that acts as an identifier for the specific annotation type.  This is a simple means to sub-type any one of the annotation subclasses.
 * *summary* - a human-readable string to describe the annotation.
@@ -57,7 +57,7 @@ The *DataFieldAnnotation* type is used as a marker to indicate that the annotati
 
 ## ReportedAnnotation relationship
 
-The *ReportedAnnotation* relationship links an annotation to the [*SurveyReport*](/types/6/0603-Survey-Reports) entity.  It is used with [survey action services](/concepts/survey-action-service).
+The *ReportedAnnotation* relationship links an annotation to the [*SurveyReport*](/types/6/0603-Survey-Reports) entities.  It is used with [survey action services](/concepts/survey-action-service).  The annotation is created on the first run on the survey that discovers the fact it contains.  If subsequent surveys discover that the values have not changed, a new *ReportedAnnotation* relationship is linked between the new survey report and the existing annotation.  This relationship identifies when the annotation was true.
 
 ## AssociatedAnnotation relationship
 

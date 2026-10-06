@@ -7,4 +7,4 @@ hide:
 <!-- Copyright Contributors to the Egeria project. -->
 
 
---8<-- "snippets/release-notes/6-2.md"
+--8<-- "snippets/release-notes/6-3.md"

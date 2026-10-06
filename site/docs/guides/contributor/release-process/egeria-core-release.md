@@ -34,6 +34,7 @@ If an urgent release is required with, for example, a critical security fix, the
     - Clone egeria into a new directory:
 
         - `mkdir egeria-release-x.y`
+        - `cd egeria-release-x.y`
         - `git clone https://github.com/USER/egeria.git`
         - `cd egeria`
         - `git remote add upstream https://github.com/odpi/egeria.git`
@@ -48,7 +49,7 @@ If an urgent release is required with, for example, a critical security fix, the
     - `git checkout main`
     - `git pull upstream main`
     - Edit all files (command line or IDE) to replace `x.y-SNAPSHOT` with the next version, e.g. change `1.3-SNAPSHOT` to `1.4-SNAPSHOT`. Most of the changes are in gradle files, however some code and documentation also has references to our versions and all need modifying.
-    - If using an IDE like IntelliJ, make sure you have all hits by searching again as [by default only a limited number of hits are shown :material-dock-window:](https://youtrack.jetbrains.com/issue/IDEA-157855){ target=intellij }.
+        - If using an IDE like IntelliJ, make sure you have all hits by searching again as [by default only a limited number of hits are shown :material-dock-window:](https://youtrack.jetbrains.com/issue/IDEA-157855){ target=intellij }.
     - Create new java class for new release and ensure all type changes in [OpenMetadataArchive](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types) are moved to this new file.
     - Recreate the archives and rebuild to run the BVT.
     - Commit

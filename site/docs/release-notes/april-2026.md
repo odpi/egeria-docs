@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# April 2025
+# April 2026
 
 Welcome to the Egeria community's April 2026 newsletter.  Since our [last newsletter](https://egeria-project.org/release-notes/january-2025), the community has completed a major revision of Egeria's [OMAG Server Platform](https://egeria-project.org/concepts/omag-server-platform/), that has led to major improvements and extensions to Egeria's python support.
 

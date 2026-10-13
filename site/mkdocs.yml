@@ -374,6 +374,7 @@ nav:
   - Releases:
       - Overview: release-notes/overview.md
       - Newsletters:
+          - October 2026: release-notes/october-2026.md
           - April 2026: release-notes/april-2026.md
           - January 2025: release-notes/january-2025.md
           - October 2024: release-notes/october-2024.md

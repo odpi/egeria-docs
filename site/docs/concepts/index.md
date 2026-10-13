@@ -414,6 +414,7 @@
 - [Promise Classification](/concepts/promise)
 - [Provenance of metadata](/features/metadata-provenance/overview)
 - [Purpose](/concepts/data-processing-description)
+- [Purpose of a relationship](/concepts/relationship-purpose)
 - [pyegeria](/concepts/pyegeria)
 
 
@@ -438,6 +439,7 @@
 - [Registry Events](/concepts/cohort-events)
 - [Registered Services](/concepts/omag-subsystem)
 - [Relationship](/concepts/open-metadata-instances)
+- [Relationship Purpose](/concepts/relationship-purpose)
 - [Report](/concepts/report)
 - [Report Type](/concepts/report-type)
 - [Repository Connector](/concepts/repository-connector)

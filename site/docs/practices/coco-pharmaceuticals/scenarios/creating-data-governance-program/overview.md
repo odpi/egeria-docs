@@ -21,11 +21,13 @@ A recent [fraud incident](/practices/coco-pharmaceuticals/scenarios/investigatin
 
 In this scenario we walk through the steps that Jules takes to set up a data governance program for Coco Pharmaceuticals.  This includes:
 
+* Connecting with other governance officers to establish common governance definition that cover the business imperative, threats and regulations.  The purpose of this [Multi-Faceted Governance Program](/practices/coco-pharmaceuticals/scenarios/defining-multi-faceted-governance/overview) is to ensure that data governance is focused on the most important aspect of the business operations.
+
 * Defining classification schemes for information, technology capability, roles and activities.
 
 * Defining policies and rules that specify how information of each classification should be handled when working with a particular classification of technology or performing a certain classification of activity in a particular context.
 
-* Making the governance program actionable by assigning governance roles and responsibilities, providing education and commissioning new IT projects to improve the automation of the information landscape.
+* Making the governance program actionable by defining metric, assigning governance roles and responsibilities, providing education and commissioning new IT projects to improve the automation of the information landscape.
 
 ![Jules Keeper working on Governance Program](jules-working-on-governance-program-proposal.png)
 

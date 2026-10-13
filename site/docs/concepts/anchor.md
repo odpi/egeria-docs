@@ -15,7 +15,7 @@ For example, an [asset](/concepts/asset) may be linked to its [schema](/concepts
 The value of establishing this *anchor grouping* is to ensure that elements that have little meaning without their anchor are managed consistently. There are four main use cases for the anchor grouping:
 
 * *Security* - when elements within the anchor group are created, updated, deleted or accessed, the security check is whether the user has access to the anchor element.
-* *Deleting* - when the anchor element is deleted, all of the other elements in the anchor grouping are deleted as well. This ensures anchored elements are cleaned up properly and are not left to uselessly clutter the repository.
+* *Deleting* - when the anchor element is deleted, all of the other elements in the anchor grouping are deleted as well. This ensures anchored elements are cleaned up properly and are not left to uselessly clutter the repository.  When a member of the grouping is deleted, only the parts that belong to it go with it; the [relationship purpose](/concepts/relationship-purpose) decides which relationships are followed.
 * *Templated cataloguing* - when a new element is created from a [template](/concepts/template), all the linked elements anchored to the template are copied.  Other elements linked to the template are also linked to the equivalent newly created element(s).
 * *Searching and retrieval* - the [Asset Catalog OMVS](/services/omvs/asset-catalog/overview) uses the anchor information in its search API to enable searches to include all elements anchored to assets.
 
@@ -23,5 +23,6 @@ The value of establishing this *anchor grouping* is to ensure that elements that
 
     - [Anchor Management](/features/anchor-management/overview) provide support for the Anchors  classification.
     - [Anchor Classification](/types/0/0010-Base-Model) is used to implement the anchor grouping.
+    - [Relationship Purpose](/concepts/relationship-purpose) controls which relationships are followed when an operation starts on a member of the grouping.
 
 --8<-- "snippets/abbr.md"

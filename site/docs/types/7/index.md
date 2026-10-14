@@ -10,7 +10,10 @@ hide:
 
 Lineage describes the *origin* of a [resource](/concepts/resource).  This origin may be the development/deployment process that the technology went through to implement the element, the business or organization that caused it to be created, or the processing that populated the data and other history managed within the resource.
 
+
 Area 7 provides the structures for adding context to the asset definition of a resource to help explain its origin.  The aim is to provide information that allows a consumer of the resource to be sure they are looking at the right data from an authoritative source and the intermediate processing is correct.
+
+![UML Packages](area-7-lineage-overview.svg)
 
 - [0705 Data Sharing](/types/7/0705-Data-Sharing)
 - [0710 Digital Products](/types/7/0710-Digital-Products)
@@ -28,8 +31,6 @@ Area 7 provides the structures for adding context to the asset definition of a r
 - [0760 Business Lineage](/types/7/0760-Business-Lineage)
 - [0770 Lineage Mapping](/types/7/0770-Lineage-Mapping)
 - [0790 Incomplete](/types/7/0790-Incomplete)
-
-
-![UML Packages](area-7-lineage-overview.svg)
+- [0795 Usage Activity](/types/7/0795-Usage-Activity)
 
 --8<-- "snippets/abbr.md"

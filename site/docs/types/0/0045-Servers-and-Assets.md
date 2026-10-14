@@ -19,7 +19,7 @@ The *CapabilityAssetUseType* describes the different types of dependencies that 
 
 ## CapabilityAssetUse relationship
 
-[Assets](/types/0/0010-Base-Model/#asset) are managed or consumed by [SoftwareCapabilities](/types/0/0042-Software-Capabilities/#softwarecapability), which is captured by the *CapabilityAssetUse* relationship.  The properties characterize the relationship:
+[Assets](/types/0/0010-Base-Model/#asset) are managed or consumed by [SoftwareCapabilities](/types/0/0042-Software-Capabilities/#softwarecapability-entity), which is captured by the *CapabilityAssetUse* relationship.  The properties characterize the relationship:
 
 * *useType* defines how the software capability depends on the asset as defined by the *SoftwareAssetUseType* enumeration.
 * *description* provides a description of the use of the asset by the software capability.

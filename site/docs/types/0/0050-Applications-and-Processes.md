@@ -7,7 +7,7 @@
 
 ## Application
 
-`Application`s provide business or management logic. They are often custom-built but may also be brought as a package. They are deployed onto a server as a [`SoftwareCapability`](/types/0/0042-Software-Capabilities/#softwarecapability).
+`Application`s provide business or management logic. They are often custom-built but may also be brought as a package. They are deployed onto a server as a [`SoftwareCapability`](/types/0/0042-Software-Capabilities/#softwarecapability-entity).
 
 ## APIManager entity
 

@@ -9,7 +9,7 @@ The host and platform metadata entities provide a simple model for the IT infras
 
 ## OperatingPlatform entity
 
-The *OperatingPlatform* entity is an informational structure to describe the hardware characteristics and software stack (operating system, etc) of the host.
+The *OperatingPlatform* entity is an informational structure (see [operating platform](/concepts/operating-platform)) to describe the hardware characteristics and software stack (operating system, etc) of the host.
 
 * *operatingSystem* - Name of the operating system running on this operating platform.
 * *byteOrdering* - Defines the sequential order in which bytes are arranged into larger numerical values when stored in memory or when transmitted over digital links.

@@ -64,13 +64,26 @@ Here is an example:
 
 A user only has to have access through **either** of the listed zones to be able to perform their desired operation on the element.
 
+## Access control through governance zones
+
+When the [Open Metadata Access Security Connector](/features/metadata-security/overview) is configured, it uses an element's zones to decide what each user may do with it:
+
+* An element with no zones is accessible to every user with an active user account.
+* Otherwise, the user needs **one** of the element's zones to permit the requested operation.  Each zone's permissions are defined by a [security access control](/concepts/security-access-control) of the same name in the OMAG Server Platform's user directory (see [Defining Governance Zones](#defining-governance-zones) below).
+* A zone with the same name as the user's userId is that user's [personal zone](#standard-governance-zones-for-egeria), and gives that user full access.
+* **A zone that has no security access control permits no-one.**  The same applies to a zone whose security access control has neither a list for the requested operation nor a `DEFAULT` list.  The element may still be accessible through one of its other zones.
+
+The last rule means that zone security fails closed: a mistyped zone name, or a zone that was never added to the user directory, hides its elements rather than exposing them.  Every governance zone that is used in `zoneMembership` must therefore be defined in the user directory.
+
+To help find zones that have been missed, the *OMAGServerPlatformCataloguer* integration connector checks each [GovernanceZone](/types/4/0424-Governance-Zones) element in open metadata against the user directory of each platform it catalogues.  If the zone has no security access control in that directory, it attaches a `MISSING-ZONE-ACCESS-CONTROL` exception to the GovernanceZone element, naming the platform.  The exception is removed on a later refresh once the security access control has been defined.
+
 ## Using zone membership to filter query results
 
 [QueryOptions](/services/omvs) (and by definition SearchOptions too) includes a property called `governanceZoneFilter` that can be used to restrict the results of a query to only those elements that are explicitly in **all** the specified zones.
 
 > Note:
 > 
->  * The `governanceZoneFilter` property is a list of zone names.  If multiple zones are specified, then only elements that are members of **all** of the specified zones will be returned. For example, to find all elements that are both in the `digital-product` zone and the `security` zone, you would set `governanceZoneFilter` to `["digital-product", "security"]`.  This can be useful for finding elements that are specific to a community nad in a specific state for example.
+>  * The `governanceZoneFilter` property is a list of zone names.  If multiple zones are specified, then only elements that are members of **all** of the specified zones will be returned. For example, to find all elements that are both in the `digital-products` zone and the `security` zone, you would set `governanceZoneFilter` to `["digital-products", "security"]`.  This can be useful for finding elements that are specific to a community nad in a specific state for example.
 >  * An element that has no ZoneMembership classification is, by default, a member of all zones.  However, for this filter, such elements will not be returned.
 >  * When a governance zone is applied to an anchor element, all elements anchored to it are in the same zone.  Therefore, governanceoneFilter can be used on all types of elements.
 >  * The `governanceZoneFilter` property is ignored if the caller is not authorized to see the element.
@@ -80,9 +93,9 @@ A user only has to have access through **either** of the listed zones to be able
 
 There are a number of standard governance zones defined in Egeria:
 
-* **digital-product** - this is the zone that elements describing digital products belong to.  It is set up as an unsecured zone which means it can be used as a filter on searches.  Access to digital produces is typically controlled by additional governance zones that represents the communities that create and consume these products.
+* **digital-products** - this is the zone that elements describing digital products belong to.  It is set up to allow read access to all active users, whilst restricting other access to digital product managers (`securityRole=digitalProductManager`) and the integration connectors that manage the products and their subscriptions (`securityGroup=integrationConnector`).  It is also useful as a filter on searches.  Access to digital products is typically controlled by additional governance zones that represent the communities that create and consume these products.
 * **egeria-runtime** - this is the zone that elements describing the runtime environment of Egeria belong to.  It is set up to allow read access to all active users, whilst restricting update/delete access to runtime managers (`securityRole=runtimeManager`).
-* **security** - this is the zone that links users to the security access controls.  It is set up to restricting all access to security managers (`securityRole=securityManager`) only.  
+* **security** - this is the zone that links users to the security access controls.  It is set up to restrict all access to security managers (`securityRole=securityManager`), along with the integration connectors and governance engines that maintain and audit the security definitions.  
 
 There is also a feature called the **user's personal zone**.  This is  a governance zone with a name that matches the user's userId.  It gives that user full access to all elements in that zone. 
 
@@ -94,7 +107,7 @@ If the default zones are not defined for this user then no zones are assigned to
 
 Typically, the default zones are only specified for automated users such as integration connectors and governance services. These types of components perform a specific function and it is likely that all elements they create can be assigned to the same zones.
 
-Below is an example of the user account for the Jacquard Digital Product Loom.  This integration connector is responsible for dynamically creating the [Open Metadata Digital Product Catalog](/patterns/harvest-and-publish/overview).  Therefore it is reasonable that it has default zones set to `digital-product`.
+Below is an example of the user account for the Jacquard Digital Product Loom.  This integration connector is responsible for dynamically creating the [Open Metadata Digital Product Catalog](/patterns/harvest-and-publish/overview).  Therefore it is reasonable that it has default zones set to `digital-products`.
 
 ```yaml
       jacquardnpa:
@@ -103,9 +116,9 @@ Below is an example of the user account for the Jacquard Digital Product Loom.  
         userName: JacquardDigitalProductLoomIntegrationConnector
         otherProperties:
           defaultZones:
-            - digital-product
+            - digital-products
           publishZones:
-            - digital-product
+            - digital-products
 ```
 
 ## Publish zone settings
@@ -129,7 +142,7 @@ A summary of the governance zone is created in the open metadata repository by t
 > 2. The Secrets Store Monitor integration connector detects the change to the secrets store and updates the governance definition summaries in the open metadata repositories.
 > 3. The governance zone summary is a type of governance definition that may be queried using the Governance Officer API.
 
-This is the default definition for the `egeria-runtime`, `digital-product` and `security` zones. 
+This is the default definition for the `egeria-runtime`, `digital-products` and `security` zones. 
 
 ```yaml
       # Governance Zones Access Controls
@@ -143,10 +156,16 @@ This is the default definition for the `egeria-runtime`, `digital-product` and `
           DEFAULT:
             - runtimeManager
 
-      digital-product:
+      digital-products:
         controlDisplayName: Digital Products Zone
         controlTypeName: GovernanceZone
-        description: Resources describing the digital products that are being managed by Egeria.  This is an unsecured governance zone.
+        description: Resources describing the public digital products that are being managed by Egeria.  The contents of this zone are readable to all, but may only be maintained by the digital product managers and the integration connectors that manage the products and their subscriptions.
+        associatedSecurityList:
+          READ:
+            - openMetadataMember
+          DEFAULT:
+            - digitalProductManager
+            - integrationConnector
 
       security:
         controlDisplayName: Security Zone
@@ -155,10 +174,14 @@ This is the default definition for the `egeria-runtime`, `digital-product` and `
         associatedSecurityList:
           DEFAULT:
             - securityManager
+            - integrationConnector
+            - governanceEngine
 ```
 The `associatedSecurityList` defines the permissions for the zone based on the requested operation (`READ`, `DEFAULT` for example, or it may be the name of a service operation).  The `DEFAULT` operation means any operation not explicitly listed.  
 
 Under each operation are the security roles/groups that are permitted to perform that operation.
+
+The `associatedSecurityList` must be nested under the zone's name as shown.  A zone whose lists are missing, or misplaced, has no permissions and so [permits no-one](#access-control-through-governance-zones).
 
 ## Zone Membership Profile
 

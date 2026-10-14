@@ -14,6 +14,8 @@ For Egeria, this audit is performed using the [Egeria Audit](/user-interfaces/eg
 * have clear text passwords (used for bootstrapping the system on first install which should be removed before the system is put into production) or 
 * do not have a user profile in the Egeria repository (suggesting an unnecessary user account).
 
+It also identifies [governance zones](/features/governance-zoning/overview) described in open metadata that have no security access control in the user directory.  No-one can access the elements that are only in such a zone.
+
 Egeria Audit shows these exceptions.  It also shows the user accounts defined in the user directory, with options to disable or remove any that are no longer needed. 
 
 This allows the security team to quickly complete the review.
@@ -33,6 +35,12 @@ This is a screenshot of an exception identifying a user that still has the setup
 This next screenshot shows a user that is missing a user profile.  It is not necessarily an error.  Typically a person would create their profile when they log on for the first time (see [My Egeria](/user-interfaces/my-egeria/overview)).  User profiles for digital processes (ITProfiles) need to be added by a program.  It is a good idea to create a user profile for digital users to simplify the identification of who or what took specific actions in open metadata.
 
 ![Missing user profiles](missing-user-profile.png)
+
+## Governance zones without security access controls
+
+Each governance zone used to control access to open metadata needs a security access control in the user directory that lists who may perform each operation on the zone's elements.  A zone without one [permits no-one](/features/governance-zoning/overview#access-control-through-governance-zones).  This is deliberate - a mistyped or forgotten zone name hides elements rather than exposing them - but it can also lock people out of metadata they need.
+
+Egeria Audit shows a *Missing Zone Access Control* exception for each governance zone that has no security access control in the platform's user directory.  The remedy is either to add the security access control, using the [Security Officer API](/services/omvs/security-officer/overview), or to remove the zone from the elements that use it.  The exception is cleared on the next refresh of the platform cataloguer after the security access control has been added.
 
 ## Setting the status on a user account
 

@@ -113,7 +113,7 @@ The connector that can be defined for an OMAG Server offers a series of layers o
 
 #### OpenMetadataElementSecurity
 
-*OpenMetadataElementSecurity* implements security rules based on the elements being accessed.  It is the interface that decides what a user may do with a particular metadata element, taking account of the element's type, the operation requested, who created it, and the settings of its classifications - such as its [governance zones](/features/governance-zoning/overview) or ownership.
+*OpenMetadataElementSecurity* implements security rules based on the elements being accessed.  It is the interface that decides what a user may do with a particular metadata element, taking account of the element's type, the operation requested, who created it, and the settings of its classifications - such as its [governance zones](/features/governance-zoning/overview) or ownership.  The rules that the Open Metadata Access Security Connector applies to governance zones are described in [Access control through governance zones](/features/governance-zoning/overview#access-control-through-governance-zones).
 
 The checks divide into three groups.
 

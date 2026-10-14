@@ -3,14 +3,14 @@
 
 # 0036 Storage
 
-It is common for the processing running on a [*Host*](/types/0/0030-Operating-Platforms/#host) to need to persist data to storage.  Knowing the location of this storage can be critical in managing backups and other data recovery scenarios.  It is also valuable in data sovereignty scenarios where the permitted locations for certain types of data is defined by regulation or law.
+It is common for the processing running on a [*Host*](/types/0/0035-Complex-Hosts/#host-entity) to need to persist data to storage.  Knowing the location of this storage can be critical in managing backups and other data recovery scenarios.  It is also valuable in data sovereignty scenarios where the permitted locations for certain types of data is defined by regulation or law.
 
 
 ![UML](0036-Storage.svg)
 
 ## StorageVolume entity
 
-*StorageVolume* describes a persistent storage volume.  It inherits from the [Referenceable](/types/0/0010-Base-Model) entity that supplied the attributes to name and describe the volume.  It adds the following attributes:
+*StorageVolume* describes a persistent [storage volume](/concepts/storage-volume).  It inherits from the [Referenceable](/types/0/0010-Base-Model) entity that supplied the attributes to name and describe the volume.  It adds the following attributes:
 
 * *storageCapacity* - the amount of data the volume can store.
 * *units* - the units of measurement for the capacity, such as bytes, kilobytes, megabytes, etc.

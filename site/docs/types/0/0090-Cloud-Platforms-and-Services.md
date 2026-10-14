@@ -3,15 +3,15 @@
 
 # 0090 Cloud Platforms and Services
 
-The cloud platforms and services model shows that cloud computing is not so different from what we have been doing before. Cloud infrastructure and services are classified as such to show that the organization is not completely in control of the technology supporting their data and processes.
+The cloud platforms and services model shows that cloud computing is not so different from what we have been doing before. Cloud infrastructure and services are classified as such to show that the organization is not completely in control of the technology supporting their data and processes.  See [cloud platforms and services](/concepts/cloud-platform) for how the classifications are used.
 
 ![UML](0090-Cloud-Platforms-and-Services.svg)
 
 ## CloudProvider
 
-The *`CloudProvider`* is the organization that provides and runs the infrastructure for a cloud service. Typically, the host it offers is actually a [`HostCluster`](/types/0/0035-Complex-Hosts/#hostcluster). 
+The *`CloudProvider`* is the organization that provides and runs the infrastructure for a cloud service. Typically, the host it offers is actually a [`HostCluster`](/types/0/0035-Complex-Hosts/#hostcluster-entity). 
 
-The cloud provider may offer infrastructure as a service (IaaS), in which case, an organization can deploy [`VirtualContainer`s](/types/0/0035-Complex-Hosts/#virtualcontainer) onto the cloud provider's `HostCluster`.
+The cloud provider may offer infrastructure as a service (IaaS), in which case, an organization can deploy [`VirtualContainer`s](/types/0/0035-Complex-Hosts/#virtualcontainer-entity) onto the cloud provider's `HostCluster`.
 
 * *providerName* - Name of the cloud provider.
 

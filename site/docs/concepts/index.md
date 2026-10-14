@@ -59,6 +59,10 @@
 - [Classification](/concepts/open-metadata-instances)
 - [Classification Explorer OMVS](/services/omvs/classification-explorer/overview)
 - [Client-side Secret](/concepts/client-side-secret)
+- [Cloud Platform](/concepts/cloud-platform)
+- [Cloud Provider](/concepts/cloud-platform)
+- [Cloud Service](/concepts/cloud-platform)
+- [Cloud Tenant](/concepts/cloud-platform)
 - [Coco Pharmaceuticals](/practices/coco-pharmaceuticals)
 - [Coco Pharmaceuticals Content Pack](/content-packs/coco-content-pack/overview)
 - [Code Table](/concepts/valid-value-definition)
@@ -248,6 +252,8 @@
 - [Hey Egeria](/user-interfaces/hey-egeria/overview)
 - [Home Metadata Collection](/concepts/metadata-collection-id)
 - [Home Metadata Repository](/concepts/home-metadata-repository)
+- [Host](/concepts/host)
+- [Host Cluster](/concepts/host)
 
 ## I
 
@@ -339,6 +345,8 @@
 
 ## N
 
+- [Network](/concepts/network)
+- [Network Gateway](/concepts/network)
 - [Note Log](/concepts/note-log)
 - [Notification](/concepts/notification)
 - [Notification Manager OMVS](/services/omvs/notification-manager/overview)
@@ -377,6 +385,7 @@
 - [Open Lineage Proxy](/egeria-solutions/leveraging-open-lineage)
 - [Open Lineage Standard](/features/lineage-management/overview/#openlineage-standard)
 - [Open Lineage Topic](/concepts/open-lineage-topic)
+- [Operating Platform](/concepts/operating-platform)
 - [Operational Lineage](/features/lineage-management/overview/#openlineage-standard)
 - [Organization](/concepts/organization)
 - [Organization Engagement Pattern](/patterns/organization-engagement/overview)
@@ -505,6 +514,7 @@
 - [Stewardship](/features/metadata-discovery/overview)
 - [Stewardship Engine](/concepts/governance-engine)
 - [Stewardship Server](/concepts/engine-host)
+- [Storage Volume](/concepts/storage-volume)
 - [Subject Area](/concepts/subject-area)
 - [Subject Area Domain](/concepts/subject-area)
 - [Subject Area OMVS](/services/omvs/subject-area/overview)

@@ -793,6 +793,7 @@ nav:
       - Catalog Target: concepts/catalog-target.md
       - Catalog Template: concepts/catalog-template.md
       - Client-side Secret: concepts/client-side-secret.md
+      - Cloud Platforms and Services: concepts/cloud-platform.md
       - Cohort Events: concepts/cohort-events.md
       - Cohort Member: concepts/cohort-member.md
       - Cohort Registry: concepts/cohort-registry.md
@@ -857,6 +858,7 @@ nav:
       - Guard: concepts/guard.md
       - GUID: concepts/guid.md
       - Home Metadata Repository: concepts/home-metadata-repository.md
+      - Host: concepts/host.md
       - Incident Report: concepts/incident-report.md
       - Informal Tag: concepts/informal-tag.md
       - Instance Status: concepts/instance-status.md
@@ -881,6 +883,7 @@ nav:
       - Metadata Collection: concepts/metadata-collection.md
       - Metadata Collection Id: concepts/metadata-collection-id.md
       - Metadata Repository: concepts/metadata-repository.md
+      - Network: concepts/network.md
       - Note Log: concepts/note-log.md
       - Notification: concepts/notification.md
       - Notification Type: concepts/notification-type.md
@@ -895,6 +898,7 @@ nav:
       - Open Metadata Instance: concepts/open-metadata-instances.md
       - Open Metadata Repository: concepts/open-metadata-repository.md
       - Open Metadata Type Definitions: concepts/open-metadata-type-definitions.md
+      - Operating Platform: concepts/operating-platform.md
       - Organization: concepts/organization.md
       - Out Topic: concepts/out-topic.md
       - Parameters: parameters/overview.md
@@ -932,6 +936,7 @@ nav:
       - Solution Component: concepts/solution-component.md
       - Solution Role: concepts/solution-role.md
       - Specification: concepts/specification.md
+      - Storage Volume: concepts/storage-volume.md
       - Subject Area: concepts/subject-area.md
       - Survey Report: concepts/survey-report.md
       - Survey Action Engine: concepts/survey-action-engine.md

@@ -17,6 +17,7 @@ The Egeria features describe the value-add features that Egeria adds to its abil
 - [Digital Product Management](/features/digital-product-management/overview) - Defining, sharing and subscribing to digital products, including the exchange of Bitol data contract and data product documents.
 - [Metadata Archiving](/features/metadata-archiving/overview) - capturing and storing metadata into archives for backups, to share standard definitions between organizations or independently deployed metadata ecosystems.
 - [Metadata Discovery](/features/metadata-discovery/overview) - extracting data from documents and technical implementations.
+- [Metadata Observability](/features/metadata-observability/overview) - gathering observations from open metadata, logs and runtime metrics to augment metadata elements with an operational view of how digital resources are used and behaving.
 - [Metadata Provenance](/features/metadata-provenance/overview) - maintaining the origin of each metadata element.
 - [Metadata Security](/features/metadata-security/overview) - ensuring metadata elements are only visible to/editable by the appropriate consumers.
 - [People, Roles and Organizations](/features/people-roles-organizations/overview) - how to synchronize information about people, what they do and how they are organized with Egeria to support security, collaboration, escalations and delegations.

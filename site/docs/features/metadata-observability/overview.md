@@ -87,9 +87,6 @@ The audit log records are routed to the destinations configured for each server 
 
 The *Pepys Activity Observer* is named after [Samuel Pepys](https://en.wikipedia.org/wiki/Samuel_Pepys), whose diary so faithfully recorded the activity around him.  It is a dynamic integration connector (`PepysActivityObserverConnector`) supplied in the [nanny connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/nanny-connectors){ target=gh } module.  It listens to the topics that the OMAG Servers write their audit logs to, and maintains the [*UsageActivity*](/types/7/0795-Usage-Activity) classification of each observed anchor element named in the activity messages.
 
-!!! info "Technical preview"
-    The Pepys Activity Observer is new in this release and is supplied as a technical preview.
-
 ### Finding the audit log topics
 
 Pepys does not need to be configured with the topics it listens to.  Its [catalog targets](/concepts/catalog-target) are the *Topic* assets for the audit log topics, and these are added for it by the *OMAG Server Platform Cataloguer*.  As the cataloguer catalogues each OMAG Server and the topic its audit log is written to, it adds that topic as a catalog target of the integration connector named in its `friendshipGUID` configuration property - which the Core Content Pack sets to Pepys.  The cataloguer checks whether the topic is already a catalog target (by looking at the connectors that refresh it) before adding it, and remembers the topics it has registered, so the many servers that share one audit log topic cost a single registration.

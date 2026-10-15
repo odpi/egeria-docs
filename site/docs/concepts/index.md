@@ -329,7 +329,7 @@
 - [Metadata Highway](/services/omrs)
 - [Metadata Instances](/concepts/open-metadata-instances)
 - [Metadata Manager Pattern](/patterns/metadata-manager/overview)
-- [Metadata Observability Content Pack](/content-packs/observability-content-pack/overview)
+- [Metadata Observability](/features/metadata-observability/overview)
 - [Metadata Provenance](/features/metadata-provenance/overview)
 - [Metadata Repository](/concepts/metadata-repository)
 - [Metadata Security Connector for OMAG Server](/concepts/server-metadata-security-connector)

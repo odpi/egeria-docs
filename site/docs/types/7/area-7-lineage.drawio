@@ -2046,7 +2046,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0795-Usage-Activity" id="a3SAOxiADYkVkFLnVJJT">
-    <mxGraphModel dx="1211" dy="821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1211" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="--Nz3NJcNSvhZHW9cqjD-0" />
         <mxCell id="--Nz3NJcNSvhZHW9cqjD-1" parent="--Nz3NJcNSvhZHW9cqjD-0" />
@@ -2057,34 +2057,34 @@
           <mxGeometry height="610" width="1060" x="70" y="60" as="geometry" />
         </mxCell>
         <mxCell id="--Nz3NJcNSvhZHW9cqjD-4" parent="--Nz3NJcNSvhZHW9cqjD-1" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="160" x="313.25" y="130" as="geometry" />
+          <mxGeometry height="50" width="160" x="303.25" y="130" as="geometry" />
         </mxCell>
         <mxCell id="--Nz3NJcNSvhZHW9cqjD-5" edge="1" parent="--Nz3NJcNSvhZHW9cqjD-1" source="--Nz3NJcNSvhZHW9cqjD-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;endArrow=none;endFill=0;jettySize=auto;orthogonalLoop=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="--Nz3NJcNSvhZHW9cqjD-4">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="506" y="265" as="sourcePoint" />
-            <mxPoint x="580" y="265" as="targetPoint" />
+            <mxPoint x="496" y="265" as="sourcePoint" />
+            <mxPoint x="570" y="265" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="--Nz3NJcNSvhZHW9cqjD-6" parent="--Nz3NJcNSvhZHW9cqjD-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="explicitGetCount : long&lt;div&gt;findCount : long&lt;/div&gt;&lt;div&gt;userActionCount : long&lt;/div&gt;" vertex="1">
-          <mxGeometry height="80" width="226.5" x="280" y="290" as="geometry" />
+        <mxCell id="--Nz3NJcNSvhZHW9cqjD-6" parent="--Nz3NJcNSvhZHW9cqjD-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="explicitGetCount : long&lt;div&gt;findCount : long&lt;/div&gt;&lt;div&gt;updatePropertyCount : long&lt;/div&gt;&lt;div&gt;updateAttachmentCount : long&lt;/div&gt;&lt;div&gt;updateFeedbackCount : long&lt;/div&gt;&lt;div&gt;deleteAttachmentCount : long&lt;/div&gt;&lt;div&gt;deleteFeedbackCount : long&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="226" x="270" y="290" as="geometry" />
         </mxCell>
         <mxCell id="--Nz3NJcNSvhZHW9cqjD-7" parent="--Nz3NJcNSvhZHW9cqjD-1" style="html=1;strokeColor=#666666;align=center;fillColor=#f5f5f5;gradientColor=#b3b3b3;" value="«classification»&lt;br&gt;&lt;b&gt;UsageActivity&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="226" x="280" y="240" as="geometry" />
+          <mxGeometry height="50" width="226" x="270" y="240" as="geometry" />
         </mxCell>
         <mxCell id="7pIH2xnoyraVIW42u6-J-0" parent="--Nz3NJcNSvhZHW9cqjD-1" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;" value="«entity»&lt;br&gt;&lt;b&gt;Referenceable&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="160" x="650" y="130" as="geometry" />
+          <mxGeometry height="50" width="160" x="710" y="130" as="geometry" />
         </mxCell>
         <mxCell id="7pIH2xnoyraVIW42u6-J-1" edge="1" parent="--Nz3NJcNSvhZHW9cqjD-1" source="7pIH2xnoyraVIW42u6-J-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;endArrow=none;endFill=0;jettySize=auto;orthogonalLoop=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="7pIH2xnoyraVIW42u6-J-0">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="826" y="265" as="sourcePoint" />
-            <mxPoint x="900" y="265" as="targetPoint" />
+            <mxPoint x="876" y="265" as="sourcePoint" />
+            <mxPoint x="950" y="265" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7pIH2xnoyraVIW42u6-J-2" parent="--Nz3NJcNSvhZHW9cqjD-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="explicitGetCountTotal : long&lt;div&gt;explicitGetCountProfile : map&amp;lt;string, long&amp;gt;&lt;br&gt;&lt;div&gt;findCountTotal : long&lt;/div&gt;&lt;div&gt;findCountProfile :&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;map&amp;lt;string, long&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;userActionCountTotal : long&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;userActionCountProfile :&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;map&amp;lt;string, long&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="120" width="260" x="600" y="290" as="geometry" />
+        <mxCell id="7pIH2xnoyraVIW42u6-J-2" parent="--Nz3NJcNSvhZHW9cqjD-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="explicitGetCountTotal : long&lt;div&gt;explicitGetCountProfile : map&amp;lt;string, long&amp;gt;&lt;br&gt;&lt;div&gt;findCountTotal : long&lt;/div&gt;&lt;div&gt;findCountProfile :&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;map&amp;lt;string, long&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;updatePropertyCountTotal : long&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;updatePropertyCountProfile :&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;map&amp;lt;string, long&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;updateAttachmentCountTotal : long&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;updateAttachmentCountProfile : &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;map&amp;lt;string, long&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;updateFeedbackCountTotal : long&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;updateFeedbackCountProfile : &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;map&amp;lt;string, long&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;deleteAttachmentCountTotal : long&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;deleteAttachmentCountProfile : &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;map&amp;lt;string, long&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;deleteFeedbackCountTotal : long&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;deleteFeedbackCountProfile : &lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;map&amp;lt;string, long&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="280" x="650" y="290" as="geometry" />
         </mxCell>
         <mxCell id="7pIH2xnoyraVIW42u6-J-3" parent="--Nz3NJcNSvhZHW9cqjD-1" style="html=1;strokeColor=#666666;align=center;fillColor=#f5f5f5;gradientColor=#b3b3b3;" value="«classification»&lt;br&gt;&lt;b&gt;MemberPopularityProfile&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="260" x="600" y="240" as="geometry" />
+          <mxGeometry height="50" width="280" x="650" y="240" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

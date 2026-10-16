@@ -9,6 +9,7 @@ Key features of this service include:
 
 * **Technology Type Management**: Browsing and searching for the technology types supported by the ecosystem's integration connectors and governance engines.
 * **Governance and Engine Action Management**: Initiating, canceling, and monitoring governance actions and engine actions.
+* **Governance Action Process Cancellation**: Cancelling every unfinished engine action of a running governance action process instance.
 * **Templated Cataloguing**: Support for creating metadata elements using templates, ensuring consistency in the cataloguing process.
 * **Client-Side Secret Management**: Saving and deleting secrets (such as credentials) used by client-side integration components.
 
@@ -20,6 +21,10 @@ The Automated Curation API provides services that can be used to set up and moni
 * Adding catalog targets to [integration connectors](/concepts/integration-connector) running in an [Integration Daemon](/concepts/integration-daemon).
 * Initiating governance action types, governance action processes and [engine actions](/concepts/engine-action).
 * Monitoring the outcomes of engine actions.
+* Cancelling engine actions and running governance action processes.
+
+!!! warning "The operations for running engine actions have moved to the Governance Engine API"
+    `claimEngineAction`, `getActiveClaimedEngineActions`, `updateEngineActionStatus`, `updateActionTargetStatus` and `recordCompletionStatus` are used by a governance engine to claim an engine action, report its progress and record its completion.  They were previously part of this API and are now in the [Governance Engine API](/services/omvs/governance-engine/overview).  Their paths, request bodies and responses are unchanged, so callers such as [pyegeria](/guides/developer/python-clients/overview) only need to replace the `automated-curation` URL marker with `governance-engine`.
 
 
 ## Retrieving details about supported technologies
@@ -367,6 +372,30 @@ Finally, this is an example of an external reference.
       }
     ]
 ```
+
+## Cancelling engine actions and governance action processes
+
+The `cancelEngineAction` operation requests that an [engine action](/concepts/engine-action) is cancelled.  Its status is set to `CANCELLED` and any governance service running it is told to stop.
+
+```
+###
+# @name cancelEngineAction
+POST {{baseURL}}/servers/{{viewServer}}/api/open-metadata/automated-curation/engine-actions/{{engineActionGUID}}/cancel
+Authorization: Bearer {{token}}
+```
+
+An engine action that has already finished - that is, its status is `COMPLETED`, `INVALID`, `IGNORED`, `FAILED`, `CANCELLED` or `ABANDONED` - is left unchanged, so the record of how it finished is kept.  The request still succeeds, and an informational message, `OMAG-GENERIC-HANDLERS-0026`, is written to the audit log.  Any other engine action can be cancelled, including one that is `PAUSED` or `WAITING`.
+
+The `cancelGovernanceActionProcess` operation cancels a running [governance action process](/concepts/governance-action-process) instance.  The `processInstanceGUID` is the unique identifier returned by `initiateGovernanceActionProcess`.
+
+```
+###
+# @name cancelGovernanceActionProcess
+POST {{baseURL}}/servers/{{viewServer}}/api/open-metadata/automated-curation/governance-action-process-instances/{{processInstanceGUID}}/cancel
+Authorization: Bearer {{token}}
+```
+
+It cancels every engine action of the process instance that has not finished, in the same way as `cancelEngineAction`, and leaves the finished ones unchanged.  Because cancelled engine actions never record their completion, the process instance would otherwise never be marked as complete, so its `completionTime` is set to the time of the cancel - unless it is already set, in which case the process instance had already finished and its own completion time is kept.  The number of engine actions cancelled is reported in the audit log message `OMAG-GENERIC-HANDLERS-0031`.
 
 ## Further information
 

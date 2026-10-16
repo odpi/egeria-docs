@@ -231,6 +231,7 @@
 - [Governance Domain Identifier](/concepts/governance-domain)
 - [Governance Engine](/concepts/governance-engine)
 - [Governance Engine Definition](/concepts/governance-engine-definition)
+- [Governance Engine OMVS](/services/omvs/governance-engine/overview)
 - [Governance Program](/guides/planning/governance-program/overview)
 - [Governance Request Type](/concepts/governance-request-type)
 - [Governance Servers](/concepts/governance-server)

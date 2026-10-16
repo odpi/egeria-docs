@@ -41,8 +41,19 @@ Once the definition of the governance action process is available, an instance o
 
 ![Lifecycle](/concepts/governance-action-process-lifecycle.svg)
 
+## Cancelling a governance action process
+
+A running governance action process instance can be stopped with the `cancelGovernanceActionProcess` operation of the [Automated Curation API](/services/omvs/automated-curation/overview#cancelling-engine-actions-and-governance-action-processes), passing the unique identifier of the process instance that was returned when the process was initiated.
+
+* Every engine action of the process instance that has not finished is cancelled, and any governance service running one of them is told to stop.  Because cancelled engine actions do not produce guards, no further steps of the process are started.
+* Engine actions that have already finished - with a status of `COMPLETED`, `INVALID`, `IGNORED`, `FAILED`, `CANCELLED` or `ABANDONED` - are left unchanged, so the process instance still shows which steps ran and how they ended.
+* The process instance's *completionTime* is set to the time of the cancel, unless it is already set because the process had finished.
+
+A single engine action can be cancelled with `cancelEngineAction`.  It too leaves an engine action that has already finished unchanged.
+
 
 !!! education "Further information"
+    - The [Automated Curation API](/services/omvs/automated-curation/overview) initiates, monitors and cancels governance action processes.  Governance engines that run outside of Egeria use the [Governance Engine API](/services/omvs/governance-engine/overview) to claim and complete the engine actions for their steps.
     - The [0462 Governance Action Processes](/types/4/0462-Governance-Action-Processes) model shows how the governance action process flow is built out of [governance action process steps](/concepts/governance-action-process-step).
     - Governance action processes may be created using the [Governance Server OMAS](/services/omas/governance-server/overview) API.
     - The [Open Metadata Engine Services (OMES)](/services/omes) provide the mechanisms that support the different types of [governance engines](/concepts/governance-engine). These engines run the [governance services](/concepts/governance-service) that execute the [engine actions](/concepts/engine-action) defined by the governance action process.

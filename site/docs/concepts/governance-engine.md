@@ -24,6 +24,8 @@ Calls to the governance engine are made by creating [engine actions](/concepts/e
 ![Calling a governance engine](governance-engine-call.svg)
 > An engine action can be created anywhere in the open metadata ecosystem.  The result is an event that is passed via its connected metadata access server to the engine host.  If the request is for a governance engine that it is hosting, the engine host claims the governance action and passes the request to the governance engine.
 
+A governance engine can also run outside of Egeria.  It uses the [Governance Engine API](/services/omvs/governance-engine/overview) to retrieve the engine actions approved to run on it, claim them and record their completion - the same calls that an engine host makes - so Egeria can still coordinate its engine actions, for example as steps in a [governance action process](/concepts/governance-action-process).
+
 ??? education "Further information"
 
     Each governance engine has a unique name.  A *governance engine definition* for this unique name is either created through the [Asset Maker](/services/omvs/asset-maker/overview) API or as part of a [governance engine pack](/concepts/governance-engine-pack).  The [governance engine is configured](/guides/admin/servers/by-section/engine-host-services-section) in the [engine host](/concepts/engine-host) using this unique name.

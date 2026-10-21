@@ -130,20 +130,98 @@ When Tom takes Erin and Stew through the community structure, Erin shows them ho
 
 ## Mapping out the company
 
+Tom wanted the sustainability reporting to include detailed reports for each location that rolled up to a company level.  She also wanted to be able to show the sustainability position for different business areas of the company.  These different perspectives would allow each of the business and location leaders to understand their position and track their progress.  
 
+These values were not defined anywhere, so Tom decides to master them in Egeria and push them out as reference data sets to the sustainability reporting database.
 
-![Mapping Locations](erin-gary-stew-tom-mapping-locations.png)
+Coco Pharmaceuticals business areas are represented as [business capabilities](/concepts/business-capability/) in Egeria.  
+
+Tom defines the following business capabilities:
+
+* Research - Scientific exploration, discovery, and validation of new treatments for cancer.
+* Clinical Trials - Formal validation of new treatments for cancer with patients.
+* Finance - Management of cash flow and financial health of Coco Pharmaceuticals.
+* Human Resources - Management of people, their skills, and well-being for Coco Pharmaceuticals.
+* IT - Provision of computing services for Coco Pharmaceuticals.
+* Manufacturing - Production of Coco Pharmaceuticals products.
+* Distribution - Warehouse management and distribution of Coco Pharmaceuticals products to customers.
+* Sales - Managing customer relationships to sell them appropriate Coco Pharmaceuticals products.
+* Governance - Management of how Coco Pharmaceuticals operates, balancing business strategy and profits against ethics, legal requirements, and regulations.
+
+Business capabilities are specialized collections.  The members are the teams that support the capability
+
+???+ info "Reviewing the Business Capabilities"
+    You can browse the business capabilities using [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Business Capabilities** tile.
+
+    ![Business Capabilities for Coco Pharmaceuticals](coco-business-capabilities.png)
+
+    When you select a specific business capability you can see the associated teams that support the business capability.
+
+    ![Governance Business Capability with the context diagram showing](governance-business-capability-showing-context.png)
+
+    Viewing a specific team reveals the roles and responsibilities of the team, and the prople involved.
+
+    ![Structure of the Coco Pharmaceuticals board](coco-board-structure.png)
+
+    Business Capabilities are managed through the [Digital Business API](/services/omvs/digital-business/overview).
+
+Tom also needed to map out the locations in the company.  Locations are represented as [locations](/concepts/location/) in Egeria.  They can be nested within other locations.  Tom wanted two levels of location:
+
+* a definition of the sites out of which they operated.
+* the different types of facilities within each location as each type of facility had different sustainability challenges.
+
+To collate this detail, she needed help... firstly, to understand the different sites.
+ 
+![Erin, Gary, Stew and Tom Mapping the different Coco Locations](erin-gary-stew-tom-mapping-locations.png)
+
+Tom defined the following types of facilities:
+
+* Primary Site - Primary location containing multiple facilities within it. These are the organization's primary sites.
+* Research Laboratory - Location where product research is conducted involving chemical and sample storage, experiments, candidate product creation/testing. - Identify locations with lab facilities.  Do not include locations that focus on the analysis and office work associated with product development.
+* Office - Location where staff work at desks with computer equipment.  Identify locations where the primary focus is office workers.
+* Manufacturing Facility - Location where products are manufactured from supplied chemicals.  Identify locations with manufacturing facilities.  Do not include locations that are able to create test batches as part of product development.
+* Warehouse and Distribution Depot - Location where product research is conducted involving chemical and sample storage, experiments, data capture and data science.  Identify locations with lab facilities.  Do not include locations that focus on the analysis and office work associated with product development.
+* Data centre/center - Location where shared computing resource is housed and managed from.  Identify locations with shared computer facilities.  Do not include locations where individuals are using their laptops and other machines allocated to them personally.
+* Cloud provider - Digital location provided by an external cloud vendor.  Identify digital services and systems not managed by Coco Pharmaceuticals.
+
+???+ info "Reviewing the Facility Types"
+    You can browse the list of facility types using [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Reference Data** tile.
+
+    ![Facility Types for Coco Pharmaceuticals](facility-types-reference-data-set.png)
+
+    When you select a specific facility type you can see the associated locations linked via the ReferenceValueAssignment relationship.
+
+    ![Cloud Facilities](cloud-provider-facility-type.png)
+
+    Reference data value lists are managed through the [Reference Data API](/services/omvs/reference-data/overview).
+
+Each site leader identified the facilities within the site.  Here is Stu working on the Facilities plan for one of Coco's original manufacturing sites.
 
 ![Stew working on Facilities plan](stew-working-on-facilities-plan.png)
+
+Here are Tom and Gary working on the Facilities plan for one of Coco's new manufacturing sites - the Bucharest acquisition.
 
 ![Tom and Gary discussing operation of Bucharest Factory](tom-gary-on-zoom-with-bucharest-factory.png)
 
 
+???+ info "Reviewing the Locations"
+    You can browse the list of locations using [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Locations** tile.  These are Coco Pharmaceuticals' locations displayed as a hierarchy with the *Van Leeuwenhoek Cancer Research Laboratory* selected so you can see its structure, its facility type linked bu the *ReferenceValueAssignment* relationship and its lab leader.
+
+    ![Van Leeuwenhoek Cancer Research Laboratory](van-leeuwenhoek-cancer-research-laboratory.png)
+
+    Locations are managed through the [Location Arena API](/services/omvs/location-arena/overview).
 
 
 ## Building the Sustainability Glossary
 
-![Building the sustainability glossary](tom-erin-building-sustainability-glossary.png)
+Sustainability introduces a number of new terms that the members of the initiative need to understand.  Erin helped Tom structure and build a glossary of these terms.
+
+![Tom and Erin building the sustainability glossary](tom-erin-building-sustainability-glossary.png)
+
+???+ info "Reviewing the Sustainability Glossary"
+    You can browse the sustainability glossary using [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Glossary** tile.  This image shows the description of *Carbon Dioxide* defined as a [glossary term](/concepts/glossary-term/).
+
+    ![Carbon Dioxide glossary term](carbon-dioxide-glossary-term.png)
 
 ## Designing the Sustainability Supply Chain
 

@@ -1,0 +1,25 @@
+<mxfile host="Electron" modified="2023-06-13T17:37:45.477Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="l4zYiURa2YGgK9i-vXNt" version="21.1.2" type="device">
+  <diagram name="overview" id="x7urRr_CxyOzv2pgsZPl">
+    <mxGraphModel dx="1114" dy="775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qqYQJv_s3LKinzrOon7i-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9f7ed;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="120" y="140" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="qqYQJv_s3LKinzrOon7i-1" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;OMAG Server Platform" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="310" y="130" width="330" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qqYQJv_s3LKinzrOon7i-2" value="Platform Services REST API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="320" y="150" width="80" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qqYQJv_s3LKinzrOon7i-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="qqYQJv_s3LKinzrOon7i-3" target="qqYQJv_s3LKinzrOon7i-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qqYQJv_s3LKinzrOon7i-3" value="Platform Services&lt;br&gt;Java Client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="150" y="155" width="90" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -41,6 +41,7 @@ nav:
                 - Db2 for Linux, UNIX and Windows: egeria-solutions/leveraging-db2luw/overview.md
                 - DuckDB: egeria-solutions/leveraging-duckdb/overview.md
                 - Unity Catalog: egeria-solutions/leveraging-unity-catalog/overview.md
+                - Apache Airflow: egeria-solutions/leveraging-apache-airflow/overview.md
                 - Apache Atlas: egeria-solutions/leveraging-apache-atlas/overview.md
                 - Apache Atlas compared with Egeria: egeria-solutions/leveraging-apache-atlas/apache-atlas-vs-egeria.md
                 - Apache Kafka: egeria-solutions/leveraging-apache-kafka/overview.md

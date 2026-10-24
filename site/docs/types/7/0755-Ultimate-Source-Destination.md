@@ -15,20 +15,32 @@ These relationships can link [Assets](/types/0/0010-Base-Model/#asset), or [Port
 
 The *UltimateSource* relationship links a node in the lineage graph to its ultimate source - ie the node at the start of the lineage data flow.  Its attributes are:
 
-* iscQualifiedName - Unique name of the associated [information supply chain](/types/7/0720-Information-Supply-Chains).
-* distance - The number of hops along the lineage graph to the ultimate source organized by type of element.
-* hops - enables a record of steps between the two ends of this relationship.
-
+* *label* - type of request.
+* *description* - description of the request.
+* *iscQualifiedName* - qualified name of the associated information supply chain.
+* *derivation* - where did the lineage relationship come from?
+* *integrationStyle* - Mechanism to flow data and control along the segment.
+* *protocol* - Name of the protocol used to connect to the endpoint.
+* *frequency* - How frequently is this expected to run? e.g.real-time, hourly, daily, on batch completion?
+* *dataExchanged* - A full explanation of what data flows and why.
+* *oneWay* - Is the data flowing one-way or bidirectional?
+* *distance* - The number of hops along the lineage graph to the ultimate source organized by type of element.
 * *hops* - The number of hops along the lineage graph to the ultimate source organized by type of element.
 
 ## UltimateDestination relationship
 
 The *UltimateDestination* relationship links a node in the lineage graph to its ultimate destination - ie the node at the end of the lineage data flow.  Its attributes are:
 
-* iscQualifiedName - Unique name of the associated [information supply chain](/types/7/0720-Information-Supply-Chains).
-* distance - The number of hops along the lineage graph to the ultimate destination organized by type of element.
-* hops - enables a record of steps between the two ends of this relationship.
-
+* *label* - type of request.
+* *description* - description of the request.
+* *iscQualifiedName* - qualified name of the associated information supply chain.
+* *derivation* - where did the lineage relationship come from?
+* *integrationStyle* - Mechanism to flow data and control along the segment.
+* *protocol* - Name of the protocol used to connect to the endpoint.
+* *frequency* - How frequently is this expected to run? e.g.real-time, hourly, daily, on batch completion?
+* *dataExchanged* - A full explanation of what data flows and why.
+* *oneWay* - Is the data flowing one-way or bidirectional?
+* *distance* - The number of hops along the lineage graph to the ultimate destination organized by type of element.
 * *hops* - The number of hops along the lineage graph to the ultimate source organized by type of element.
 
 ## DigitalResourceOrigin classification

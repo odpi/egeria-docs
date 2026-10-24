@@ -30,10 +30,11 @@ The *DataStore* entity describes a physical [digital resource](/concepts/digital
 
 The *DataSetContent* relationship defines how data is supplied to a [DataSet](/types/0/0010-Base-Model) from a particular [digital resources](/concepts/digital-resource).  The DataSet entity includes a property called *formula*.  This describes the logic that is used to populate the data set.  The formula can include placeholders.  These placeholders are defined by the *queryId* properties in the linked DataSetContent relationships.  The associated *query* property describes how the data from the linked dataContent resource is selected and *queryType* identifies the language that the query is written in.
 
+* *iscQualifiedName* - qualified name of the associated information supply chain.
+* *derivation* - where did the lineage relationship come from?
 * *query* - Query used to extract data, can include placeholders.
 * *queryId* - Placeholder for a query.
 * *queryType* - Type of query used to extract data.
-* *iscQualifiedName* - Unique name for the associated Information Supply Chain.
 
 *DataSetContent* is a [multi-link](/concepts/uni-multi-link) relationship, so that a separate relationship can be recorded between the same data set and digital resource for each information supply chain that uses it.
 

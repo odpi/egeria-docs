@@ -107,7 +107,7 @@ The new asset is named `{typeName}::{namespace}::{name}`, with the namespace and
 #### Jobs and lineage
 
 * The **job** is matched in the same way as a dataset, by its *namespacePath* and *resourceName*.  Parent and root jobs named in the *parent* run facet become processes that own the job through *ProcessHierarchy* relationships.  Job dependencies become *ControlFlow* relationships.
-* **Lineage** is recorded as *DataFlow* relationships from the inputs to the process and from the process to the outputs.  When a dataset is a table, the *DataFlow* is recorded both for the table and for the asset that holds it - the database schema or database - so the lineage can be seen at the asset level as well as in detail.  The column lineage facets become *DataMapping* relationships between the columns, and between the tables that hold them.
+* **Lineage** is recorded from the inputs to the process and from the process to the outputs: a *DataFlow* for a data asset, and a *DataMapping* for a table, which is a schema attribute.  When a dataset is a table, a *DataFlow* is also recorded for the asset that holds it - the database schema or database - so the lineage can be seen at the asset level as well as in detail.  The column lineage facets become *DataMapping* relationships between the columns, and between the tables that hold them.  Each lineage relationship records in its *derivation* the part of the event it was derived from, such as `derived from OpenLineage columnLineage facet`, and each *DataSetContent* link records how the data set was matched, such as `matched by endpoint and table name`.
 * **Run metrics** - run count, failures, first and last run times, last run duration and status, rows and bytes read and written - are maintained in the [*RunMetrics*](/types/2/0215-Software-Components) classification of the process.
 * Optionally, the cataloguer also catalogues each **run** as a *TransientEmbeddedProcess* owned by the job's process.  It can also capture the statistics and data quality facets as a survey report per event, with one annotation per assertion, and maintain the [*DataScope*](/types/2/0210-Data-Stores) classification of each output asset from the times and statistics of the writes.
 
@@ -116,7 +116,7 @@ The new asset is named `{typeName}::{namespace}::{name}`, with the namespace and
 Egeria defines two custom run facets, described in [Egeria's Open Lineage Facets](/openlineage/facets):
 
 * **`egeria_governanceAction`** is added by the Governance Action Open Lineage connector to the events it creates for Egeria's own [engine actions](/concepts/engine-action).  A run with this facet is not catalogued as a new job.  Instead its lineage is attached to the [governance action process](/concepts/governance-action-process) that the run is part of.  Provisioning services connect their own lineage to this same element, so the lineage from every run of the process meets there.  The *RunMetrics* classification is kept on the [process step](/concepts/governance-action-process-step), because each step runs separately.  The governance action process instance represents the run.
-* **`egeria_informationSupplyChain`** can be added by any producer - for example an Apache Airflow DAG - to name the [information supply chains](/concepts/information-supply-chain) that the run belongs to - one in `iscQualifiedName`, or several in `iscQualifiedNames`.
+* **`egeria_informationSupplyChain`** can be added by any producer - for example [Apache Airflow](/egeria-solutions/leveraging-apache-airflow/overview) - to name the [information supply chains](/concepts/information-supply-chain) that the run belongs to - one in `iscQualifiedName`, or several in `iscQualifiedNames`.
 
 Every lineage relationship that the cataloguer creates from an event, and every *DataSetContent* link to an abstraction, is tagged with the event's information supply chains.  They are taken from the `egeria_governanceAction` facet only if there is no `egeria_informationSupplyChain` facet.  The same data can take part in several supply chains, so each relationship is created once for each of them, and a relationship is only reused when it is tagged with the same one.
 
@@ -165,6 +165,7 @@ See [Lineage Management](/features/lineage-management/overview) for the full arc
 * [Lineage Management](/features/lineage-management/overview) - the complete lineage story: capture, stewardship and preservation.
 * [Open Lineage project](https://github.com/OpenLineage/OpenLineage) - the standard itself, including the full facet specifications.
 * [Egeria's Open Lineage Facets](/openlineage/facets) - the custom facets that Egeria defines, and their schemas.
+* [Leveraging Apache Airflow](/egeria-solutions/leveraging-apache-airflow/overview) - sending Airflow's Open Lineage events to Egeria, with the information supply chain facet.
 * [Integration Daemon](/concepts/integration-daemon) - the server that hosts the Open Lineage connectors.
 * [Lineage Warehouse](/concepts/lineage-warehouse) - where preserved lineage graphs are stored for analysis.
 

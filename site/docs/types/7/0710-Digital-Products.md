@@ -42,7 +42,12 @@ A digital product has two lifecycle statues:
 
 The *DigitalProductDependency* relationship allows an organization to capture the dependencies between digital products.  End 1 (*usedByDigitalProducts*) is the digital product that consumes the data and end 2 (*usesDigitalProducts*) is the digital product that supplies it.  The nature of the dependency is supplied in the *label* and *description* properties.
 
-*DigitalProductDependency* is a subtype of the [LineageRelationship](/types/0/0010-Base-Model) and so inherits the *iscQualifiedName* property that associates it with an [information supply chain](/types/7/0720-Information-Supply-Chains).  It is a [multi-link](/concepts/uni-multi-link) relationship because the same pair of digital products may be linked by more than one information supply chain, each needing its own relationship.  The dependencies may be declared explicitly, or derived from the lineage of the assets that make up each digital product.  The network of digital products and their dependencies is called the [data mesh](/concepts/data-mesh).
+* *label* - type of request.
+* *description* - description of the request.
+* *iscQualifiedName* - qualified name of the associated information supply chain.
+* *derivation* - where did the lineage relationship come from?
+
+*DigitalProductDependency* is a subtype of the [LineageRelationship](/types/0/0010-Base-Model) and so inherits the *iscQualifiedName* and *derivation* property that associates it with an [information supply chain](/types/7/0720-Information-Supply-Chains).  It is a [multi-link](/concepts/uni-multi-link) relationship because the same pair of digital products may be linked by more than one information supply chain, each needing its own relationship.  The dependencies may be declared explicitly, or derived from the lineage of the assets that make up each digital product.  The network of digital products and their dependencies is called the [data mesh](/concepts/data-mesh).
 
 ## DigitalProductCatalog entity
 

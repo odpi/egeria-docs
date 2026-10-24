@@ -17,6 +17,11 @@ The *Action* entity provides a common base class for the [ToDo](/types/1/0135-Ac
 
 The *ActionRequester* links the source for the action, such as a person, meeting or a governance action, to the *Action* entity.
 
+* *label* - type of request.
+* *description* - description of the request.
+* *iscQualifiedName* - qualified name of the associated information supply chain.
+* *derivation* - where did the lineage relationship come from?
+
 ## Actions relationship
 
 The *Actions* relationship links the *Action* entity to the reason or cause of the necessary action.  This is so we can distinguish between the creator (source) of the *Action* and the element (specific rule, project, incident report, deliverable, situation or plan of action) that is being supported/resolved by the action. 

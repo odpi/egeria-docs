@@ -350,9 +350,9 @@ As the lineage mappings are added, the lineage graph grows. Figure 33 shows the 
 
 ### Rolling up the lineage
 
-Stitching joins the lineage graph at the level of detail it was captured at.  That is rarely the level at which questions are asked: the graph records that a column in one table is copied into a column in another, while the question is which servers exchange data, or which [digital products](/concepts/digital-product) a change to this one would disturb.  The coarse-grained answers are implied by the fine-grained graph, but nothing states them, so nothing can query, draw or govern them.
+Stitching joins the lineage graph at the level of detail it was captured at.  That is rarely the level at which questions are asked: the graph records that a column in one table is copied into a column in another, while the question is which servers exchange data, or which [digital products](/concepts/digital-product) a change to this one would disturb.  The coarse-grained answers are implied by the fine-grained graph, but nothing states them, so nothing can query, draw or govern them.  And lineage that people assert by hand at a coarse level may or may not be borne out by the detail beneath it.
 
-The *Darwin Product Dependency Manager* is the [integration connector](/concepts/integration-connector) that states them.  It is named in tribute to [Charles Darwin](https://en.wikipedia.org/wiki/Charles_Darwin), who traced the origin of species - Darwin traces the origin of each digital product's data.
+The *Darwin Product Dependency Manager* is the [integration connector](/concepts/integration-connector) that keeps the layers of lineage consistent with each other.  It states the coarse-grained lineage that the finer-grained lineage implies, checks the lineage that people assert against the detail beneath it, and establishes the [information supply chain](/concepts/information-supply-chain) of each relationship wherever the lineage around it shows what it is.  It is named in tribute to [Charles Darwin](https://en.wikipedia.org/wiki/Charles_Darwin), who traced the origin of species - Darwin traces the origin of each digital product's data.
 
 It is defined in the [core content pack](/content-packs/core-content-pack/overview) and runs in its own [integration group](/concepts/integration-group), so all that is needed to start it is to configure an [integration daemon](/concepts/integration-daemon) with that group.
 
@@ -363,20 +363,37 @@ It is defined in the [core content pack](/content-packs/core-content-pack/overvi
 | **Provider class** | `org.odpi.openmetadata.adapters.connectors.darwin.DarwinProductDependencyManagerProvider` |
 | **Connector userId** | `darwinnpa` |
 | **Refresh interval** | 1 hour |
-| **Configuration property** | `maxLineageDepth` - the number of lineage relationships that are followed downstream from an asset before the search is abandoned.  The default is 20; a configured value of zero or less falls back to that default. |
+| **Configuration property** | `maxLineageDepth` - the number of lineage relationships that are followed downstream from an element before the search is abandoned.  The default is 20; a configured value of zero or less falls back to that default. |
 | **Audit log messages** | `DARWIN-PRODUCT-DEPENDENCY-MANAGER-` |
 
-Like the [Mendel Automated Duplicate Manager](/features/duplicate-management/overview/#the-mendel-automated-duplicate-manager), Darwin works across the whole open metadata ecosystem rather than through [catalog targets](/concepts/catalog-target).  Each refresh reconciles from a fresh snapshot of the ecosystem, so nothing is carried between refreshes but the identity of the [exception type](#unproven-dependencies) that it records its findings against.
+Like the [Mendel Automated Duplicate Manager](/features/duplicate-management/overview/#the-mendel-automated-duplicate-manager), Darwin works across the whole open metadata ecosystem rather than through [catalog targets](/concepts/catalog-target).  Each refresh reconciles from a fresh snapshot of the ecosystem, so nothing is carried between refreshes but the identities of the [exception types](#unproven-lineage) that it records its findings against.
 
-#### The three levels
+#### The layers of lineage
 
-Lineage bubbles up from the very detailed to the coarse-grained, so each refresh works upwards through three levels.  The *iscQualifiedName* of the finer-grained relationship - the [information supply chain](/concepts/information-supply-chain) that it belongs to - is carried up onto the coarser relationship at every step.
+Lineage is built up in layers.  Each layer has its own elements and its own lineage relationships, and is linked to the layer beneath it by relationships that say which lower-level elements each upper-level element is made of.
+
+| Layer | Elements | Lineage within the layer | Linked to the layer below by |
+|---|---|---|---|
+| **[Data mesh](/concepts/data-mesh)** | [*DigitalProduct*](/types/7/0710-Digital-Products) | *DigitalProductDependency* | [*CollectionMembership*](/types/0/0021-Collections) - the product's member assets |
+| **System fabric** | [*ITInfrastructure*](/types/0/0030-Operating-Platforms) such as [software servers](/types/0/0040-Software-Servers) | *DataFlow*, *ControlFlow*, *ProcessCall* | [*SupportedSoftwareCapability*](/types/0/0042-Software-Capabilities) and [*CapabilityAssetUse*](/types/0/0045-Servers-and-Assets) - the data assets and processes that the infrastructure's software capabilities use |
+| **[Data fabric](/concepts/data-fabric)** | [data assets](/types/2/0210-Data-Stores) and [processes](/types/0/0010-Base-Model) | [*DataFlow*, *ControlFlow*, *ProcessCall*](/types/7/0750-Data-Passing) and the other lineage relationships; [*DataSetContent*](/types/2/0210-Data-Stores) where a data set is a view over other assets | the asset's schema - the schema attributes [anchored](/features/anchor-management/overview) to it |
+| **Schema detail** | schema attributes, such as tables and columns | [*DataMapping*](/types/7/0770-Lineage-Mapping) between schema attributes, and between a schema attribute and a process | |
+
+The data mesh and the system fabric both sit on the data fabric: a digital product is made of data fabric assets, and so is the work of a piece of infrastructure.  So there are three boundaries - schema detail to data fabric, data fabric to system fabric, and data fabric to data mesh - and Darwin works across each of them in the same way.
+
+Each boundary has an *owner function* that maps an element of the lower layer to the elements of the upper layer that it belongs to:
+
+* a schema attribute belongs to the data asset it is anchored to, and a process at the end of a *DataMapping* belongs to itself;
+* a data asset belongs to the infrastructure whose software capability uses it with a *useType* of `OWNS`, and a process to the infrastructure whose capability uses it in any way - the capability that runs a process is rarely recorded as owning it;
+* an asset belongs to the digital products it is a member of.
+
+A lineage path in the lower layer between elements with different owners *proves* a relationship between those owners in the layer above.
 
 ```mermaid
 flowchart TB
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
 
-subgraph products ["Level three - digital products"]
+subgraph mesh ["Data mesh"]
     P2@{ shape: rect, label: "*Digital Product*
     **Treatment Efficacy Analysis**"}
     P1@{ shape: rect, label: "*Digital Product*
@@ -384,7 +401,7 @@ subgraph products ["Level three - digital products"]
     P2==>|"Digital Product Dependency"|P1
 end
 
-subgraph servers ["Level two - software servers"]
+subgraph system ["System fabric"]
     S1@{ shape: rect, label: "*Software Server*
     **Clinical trials server**"}
     S2@{ shape: rect, label: "*Software Server*
@@ -392,102 +409,152 @@ subgraph servers ["Level two - software servers"]
     S1==>|"Data Flow"|S2
 end
 
-subgraph assets ["Level one - data assets"]
-    A1@{ shape: cyl, label: "*Relational Table*
-    **Validated measurements**"}
-    A2@{ shape: cyl, label: "*Relational Table*
-    **Efficacy input**"}
-    A1==>|"Data Flow"|A2
+subgraph fabric ["Data fabric"]
+    A1@{ shape: cyl, label: "*Deployed Database Schema*
+    **Clinical trials**"}
+    J1@{ shape: rect, label: "*Process*
+    **Prepare efficacy input**"}
+    A2@{ shape: cyl, label: "*Deployed Database Schema*
+    **Analysis**"}
+    A1==>|"Data Flow"|J1
+    J1==>|"Data Flow"|A2
 end
 
-subgraph schema ["Captured lineage - schema elements"]
-    C1@{ shape: rect, label: "*Relational Column*
-    **patient_id**"}
-    C2@{ shape: rect, label: "*Relational Column*
-    **subject_ref**"}
-    C1-->|"Data Mapping"|C2
-end 
+subgraph schema ["Schema detail"]
+    T1@{ shape: rect, label: "*Relational Table*
+    **Validated measurements**"}
+    T2@{ shape: rect, label: "*Relational Table*
+    **Efficacy input**"}
+end
 
-schema-.->|"derives"|assets
-assets-.->|"derives"|servers
-assets-.->|"derives"|products
+T1-->|"Data Mapping"|J1
+J1-->|"Data Mapping"|T2
+
+schema-.->|"proves"|fabric
+fabric-.->|"proves"|system
+fabric-.->|"proves"|mesh
 ```
-> **Figure 34:** The three levels that Darwin works upwards through.  The thick arrow in each level is the relationship it maintains, derived from the level beneath: the data flow between the two tables from the data mapping between their columns, and both the data flow between the two servers and the dependency between the two products from the data flow between the tables.
+> **Figure 34:** The layers that Darwin works across.  The table-level mappings to and from the process prove the data flows between the schemas and the process; the path through the process proves the data flow between the servers that use the schemas, and the dependency between the products that the schemas are members of.
 
-* **Schema elements to data assets.**  A [*DataMapping*](/types/7/0770-Lineage-Mapping) relationship between two schema elements shows data being copied from one to the other.  An end belongs to the [data asset](/types/2/0210-Data-Stores) that it is [anchored](/features/anchor-management/overview) to - or is the asset itself, where a mapping has been made directly between assets - and where the two ends belong to different assets, Darwin maintains a *DataFlow* relationship from the source's asset to the target's.
+The relationship type carries across the boundary.  A *DataMapping* proves a *DataFlow* in the data fabric.  In the system fabric, the relationship that reaches the owned element decides the type - a *ProcessCall* proves a *ProcessCall*, and any other data lineage a *DataFlow* - while *ControlFlow* relationships form paths of their own and prove a *ControlFlow*.  In the data mesh, any data lineage proves a *DigitalProductDependency*; *ControlFlow* is not followed there, because a product depends on another product's data, not on the order in which their processes run.
 
-* **Data assets to software servers.**  A [software server](/types/0/0040-Software-Servers) hosts software capabilities through the [*SupportedSoftwareCapability*](/types/0/0042-Software-Capabilities) relationship, and a capability owns data assets through the [*CapabilityAssetUse*](/types/0/0045-Servers-and-Assets) relationship with a *useType* of `OWNS`.  Darwin follows the data lineage downstream from each owned asset, and where a path reaches an asset owned by a different server's capability it maintains a *DataFlow* relationship between the two servers.
+Darwin derives relationships only between adjacent layers: a *DataFlow* from A through a process to B in the data fabric does not make Darwin create a *DataFlow* from A to B.  There is one deliberate exception, described below, for the *DataMapping* relationships between a table and a process.
 
-* **Data assets to digital products.**  The assets that are members of a digital product, through the [*CollectionMembership*](/types/0/0021-Collections) relationship, are the start of the same walk.  Where a path reaches an asset that is a member of another product, Darwin maintains a [*DigitalProductDependency*](/types/7/0710-Digital-Products) relationship between the two products.  This is the level that builds the [data mesh](/concepts/data-mesh).
+#### What Darwin does at each boundary
 
-The levels are worked in this order because each one rests on the one beneath it.  The server level follows the asset-level data flows before they have reached the repository, and they are written to the repository before the product level runs, so the products see them.
+On every refresh, Darwin works up the layers - schema detail to data fabric first, then the data fabric to the system fabric and to the data mesh - and writes the relationships for each layer before the layers above it are read, so that they see them.  At each boundary it does three things.
 
-#### Following the lineage downstream
+* **It adds the missing relationships.**  Every relationship that the layer beneath proves, and that nothing in the upper layer records, is created.  When the layer beneath no longer proves a relationship that Darwin created, Darwin removes it.
 
-The server and product levels use the same walk, made from each of the group's assets in turn.  It follows the subtypes of *DataLineageRelationship*: [*DataFlow* and *ProcessCall*](/types/7/0750-Data-Passing), [*LineageMapping*](/types/7/0770-Lineage-Mapping), and [*UltimateSource* and *UltimateDestination*](/types/7/0755-Ultimate-Source-Destination).  Data flows from end 1 to end 2 of all of them except *UltimateSource*, where end 2 is the source, so that one is followed in reverse.
+* **It validates the asserted relationships.**  A relationship in the upper layer that was asserted by someone else - by a person, or derived by another tool from lineage traces - is checked against the layer beneath.  One that nothing proves is *unproven*, and is recorded as an [exception](#unproven-lineage).  The absence of detail is not evidence against a relationship, though, so a relationship is only checked when the layer beneath is catalogued for both of its ends; otherwise it is *unchecked*:
 
-* **A path keeps to one information supply chain.**  The first relationship out of the asset fixes the *iscQualifiedName* for the path, and only relationships carrying the same value are followed after that.  A path that would change supply chain is not followed: it belongs to a different journey.
-* **A path may be indirect.**  It may pass through any number of intermediate elements - processes, or assets that belong to no product and no server - up to `maxLineageDepth` steps.  A path that has not arrived by then is abandoned and counted, and the tally is reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0009`.
-* **A path stops at the first group it reaches.**  The relationship with whatever lies further downstream belongs to the group just reached rather than to the one the walk started from, which is what keeps the coarse-grained graph a chain rather than a fan of shortcuts.
-* **Lineage between two assets of the same group is not a relationship of the group with itself**, and is discarded.
+    | Asserted relationship | Checked when |
+    |---|---|
+    | *DataFlow* in the data fabric | each end has schema attributes (or, for a process, itself) at the end of a *DataMapping* |
+    | *ControlFlow* or *ProcessCall* in the data fabric | never - the schema detail cannot prove them |
+    | *DataFlow*, *ControlFlow* or *ProcessCall* in the system fabric | each end has a software capability that uses a data fabric element |
+    | *DigitalProductDependency* | each product has at least one asset among its members |
 
-The same element may be reached along different supply chains, and each is a separate path, so an element is only revisited when the supply chain differs.  That is also what stops a cycle in the lineage being followed forever.
+    A relationship belongs to a layer when both of its ends are elements of that layer, so an asserted *DataFlow* between two servers is judged against the data fabric, and one between two data assets against the schema detail.
 
-The relationship that results is oriented by its kind.  Data flows from the group the walk started at to the group it reached, so that group is at end 1 of a *DataFlow*; a *DigitalProductDependency* runs the other way, with the product reached at end 1 as the dependent product and the product the walk started from at end 2 as the product it depends on.
+* **It establishes the information supply chain.**  A derived relationship takes the *iscQualifiedName* of the path that proved it, and the [untagged relationships](#establishing-the-information-supply-chain) on a path whose supply chain is known are given it.
+
+#### Following the lineage
+
+A boundary's paths are followed downstream from each element that has an owner, on behalf of each of its owners.  The walk is made over the lineage of the lower layer, which Darwin reads once per refresh: the subtypes of *DataLineageRelationship* - [*DataFlow* and *ProcessCall*](/types/7/0750-Data-Passing), [*LineageMapping*](/types/7/0770-Lineage-Mapping), and [*UltimateSource* and *UltimateDestination*](/types/7/0755-Ultimate-Source-Destination) - together with *ControlFlow* for the system fabric, and *DataMapping* for the schema detail.  Data flows from end 1 to end 2 of all of them except *UltimateSource*, where end 2 is the source, so that one is followed in reverse.
+
+* **A path keeps to one information supply chain.**  A relationship that names no *iscQualifiedName* is treated as *supply chain unknown*: it can appear anywhere on a path, and the first relationship that does name one fixes the supply chain for the whole path.  A relationship that names a different supply chain cannot join the path - it belongs to a different journey.  A path whose relationships name none has an unknown supply chain.
+* **A path may be indirect.**  In the data fabric it may pass through any number of intermediate elements - processes, or assets that belong to no product and no infrastructure - up to `maxLineageDepth` steps.  A path that has not arrived by then is abandoned and counted, and the tally is reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0009`.  Across the schema detail boundary only a direct mapping counts.
+* **A path stops at the first owned element it reaches.**  The relationship with whatever lies further downstream belongs to the owner just reached rather than to the one the walk started from, which is what keeps the coarse-grained graph a chain rather than a fan of shortcuts.
+* **Lineage between two elements with the same owner is not a relationship of the owner with itself**, and is discarded.
+
+The same element may be reached along paths of different supply chains, and each is a separate path, which is also what stops a cycle in the lineage being followed forever.
+
+The relationship that results is oriented by its kind.  Data flows from the owner the walk started at to the owner it reached, so that owner is at end 1 of a *DataFlow*; a *DigitalProductDependency* runs the other way, with the product reached at end 1 as the dependent product and the product the walk started from at end 2 as the product it depends on.
+
+#### Data sets as views
+
+A [*DataSetContent*](/types/2/0210-Data-Stores) relationship says that a data set is a view over its content, rather than that data flows between them.  Darwin treats a data set and its content as the same element when it follows the data fabric up to the system fabric and the data mesh: a walk from a data set also starts from its content, and an element reached belongs to the owners of the data sets over it as well as to its own.  This matters for digital products, whose members are often abstract data sets while the lineage from [lineage traces](#egerias-open-lineage-support) is attached to the physical elements beneath them.  A *DataSetContent* that names an information supply chain only makes the two the same element on the paths of that supply chain - or of an unknown one, which it then makes known.
+
+A data set is often a view over a single relational table, and the lineage between a table and the processes that read and write it is recorded at the level of the table, with *DataMapping* relationships - this is how the [Open Lineage Cataloguer](#egerias-open-lineage-support) records it.  So the walks from the data fabric to the system fabric and the data mesh also follow the *DataMapping* relationships that run between a relational table and a process.  This is the one exception to deriving only between adjacent layers: following just the lineage of the asset that holds the table would treat the data set as a view over every table in that asset.  No relationship is derived from these mappings within the data fabric; they only extend the paths.
 
 #### Reconciling with what is stored
 
-Every one of these relationship types is [multi-link](/concepts/uni-multi-link), so there is one relationship per information supply chain between the same two elements, and a derived relationship is identified by its two ends together with its *iscQualifiedName*.  Darwin runs under its own userId, so it recognizes the relationships it created itself by the *createdBy* in their header.  Every level is then reconciled with the repository the same way.
+Every one of these relationship types is [multi-link](/concepts/uni-multi-link), so there is one relationship per information supply chain between the same two elements, and a derived relationship is identified by its two ends together with its *iscQualifiedName*.  Darwin runs under its own userId, so it recognizes the relationships it created by the *createdBy* in their header, and it records the rule that derived each one in its *derivation* - the attribute of every lineage relationship that says where it came from.  The *label* is left to summarize the data that flows.
+
+| Derivation | Relationship |
+|---|---|
+| `derived from data mappings` | *DataFlow* between data fabric elements, from the *DataMapping* relationships between their schema attributes |
+| `derived from data fabric lineage` | *DataFlow* between items of infrastructure |
+| `derived from process calls` | *ProcessCall* between items of infrastructure |
+| `derived from process control flow` | *ControlFlow* between items of infrastructure |
+| `derived from lineage` | *DigitalProductDependency* between digital products |
+| `supply chain inferred` | a [copy of an untagged relationship](#establishing-the-information-supply-chain) for one of its supply chains |
+
+Each rule is reconciled with the repository on its own, so the data flows of the data fabric and the system fabric - both *DataFlow* relationships - are never confused.  Relationships that earlier releases of Darwin created recorded the rule in the *label*; they are recognized and moved over to the *derivation*.
 
 ```mermaid
 flowchart TD
     A["`Every relationship of the type in
-    the open metadata ecosystem`"] --> B{"`Created by
-    Darwin?`"}
-    B -->|"`**no** - asserted by
-    an external user`"| C{"`Does it name an information
-    supply chain?`"}
-    C -->|yes| D{"`Does the finer-grained
-    lineage support it?`"}
-    D -->|yes| E["`Leave it; it accounts for
-    the derived relationship`"]
-    D -->|no| F["`**Unproven** - recorded as an
-    exception if it is a product dependency`"]
-    C -->|no| G{"`Does the lineage support a
-    relationship between the
-    same two elements?`"}
-    G -->|yes| H["`Fill in the **iscQualifiedName**
-    from the first one found`"]
-    G -->|no| F
-    B -->|yes| I{"`Does the finer-grained lineage
-    still support it, and has nothing
-    else accounted for it?`"}
+    the open metadata ecosystem`"] --> B{"`Created by Darwin, and
+    not updated since by
+    anyone else?`"}
+    B -->|"`**no** - asserted, or
+    adopted`"| C{"`Does the layer beneath prove it,
+    for its supply chain or along a
+    path of unknown supply chain?`"}
+    C -->|yes| E["`Leave it; it accounts for
+    the derived relationship.  Fill in
+    a missing **iscQualifiedName**`"]
+    C -->|no| D{"`Is it in this layer, with the
+    layer beneath catalogued for
+    both of its ends?`"}
+    D -->|yes| F["`**Unproven** - recorded
+    as an exception`"]
+    D -->|no| G["`**Unchecked** - counted`"]
+    B -->|"`yes - one of
+    Darwin's own`"| I{"`Does the layer beneath still
+    prove it, and has nothing else
+    accounted for it?`"}
     I -->|yes| J["Leave it"]
     I -->|no| K["Remove it"]
     L["`Derived relationships that no
     stored relationship accounts for`"] --> M["Create them"]
 ```
-> **Figure 35:** How Darwin reconciles the stored relationships of one type with the ones the finer-grained lineage supports
+> **Figure 35:** How Darwin reconciles the stored relationships of one kind with the ones that the layer beneath proves
 
-Relationships asserted by external users are considered first, because they take precedence: one that the lineage proves accounts for the derived relationship, and any relationship of Darwin's own for the same thing is then redundant and removed.  **Darwin never removes a relationship that it did not create.**
+Relationships asserted by others are considered first, because they take precedence: one that the lineage proves accounts for the derived relationship, and any relationship of Darwin's own for the same thing is then redundant and removed.  **Darwin never removes a relationship that it did not create.**  A path of unknown supply chain proves a relationship of any supply chain, and an untagged relationship that Darwin would derive is not created where a tagged one links the same two elements.
 
-Where an externally asserted relationship does not name an information supply chain, Darwin fills one in from the first derived relationship between the same two elements, preferring one that no other stored relationship has accounted for, and reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0006` for a product dependency or `-0014` for a data flow.  The candidates are considered in a fixed order, so the same choice comes out on every refresh, and a relationship that is not owned by the local repository is updated on behalf of the metadata collection that owns it.  Darwin does not change an information supply chain once it is set, so a value that belongs to a different supply chain has to be corrected by hand.
+Where an asserted relationship does not name an information supply chain, Darwin fills one in from the first derived relationship between the same two elements, preferring one that no other stored relationship has accounted for, and reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0006` for a product dependency or `-0014` for the other relationship types.  The candidates are considered in a fixed order, so the same choice comes out on every refresh, and a relationship that is not owned by the local repository is updated on behalf of the metadata collection that owns it.  Darwin does not change an information supply chain once it is set, so a value that belongs to a different supply chain has to be corrected by hand.
 
-The relationships that Darwin creates carry the *iscQualifiedName* of the lineage they were derived from, together with a *label* and *description* that say which level derived them and that they are removed automatically when that lineage no longer supports them.  Creations are reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0004` and `-0012`, removals as `-0005` and `-0013`, and each refresh ends with a tally of the lineage levels (`-0015`) and of the product level (`-0010`).
+The relationships that Darwin creates carry the *iscQualifiedName* of the lineage they were derived from, the *derivation* of the rule that derived them, and a *description* saying that they are removed automatically when that lineage no longer supports them.  Creations are reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0004` and `-0012`, removals as `-0005` and `-0013`, and each refresh ends with a tally of the data fabric and system fabric (`-0015`) and of the data mesh (`-0010`), including the relationships found unproven and those left unchecked.
 
-#### Unproven dependencies
+#### Adopted relationships
 
-An externally asserted *DataFlow* that the finer-grained lineage does not account for is simply the ordinary lineage of the repository - most data flows are not derived from anything - so nothing is recorded for it.  An externally asserted *DigitalProductDependency* is different: the product manager has declared that their product consumes another, and the lineage ought to show it.  Where it does not, the discrepancy is worth a steward's attention.
+A relationship that Darwin created, and that anyone else has since updated, has been *adopted*.  Darwin treats it from then on as asserted by someone else: it no longer updates or removes it, and validates it against the layer beneath like any other asserted relationship.  So a steward who improves the description of a derived data flow does not lose that edit when the lineage it was derived from changes - if the lineage disappears, the data flow stays, and is reported as unproven instead.  Darwin's own *Exception* relationships are not adopted this way, so a steward can annotate an exception without stopping Darwin from maintaining it.
 
-Darwin has its own [*ExceptionType*](/types/4/0455-Exception-Management), `ExceptionType::UnprovenDigitalProductDependency`, which it creates the first time it needs it - reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0003`.  Each dependent product that has unproven dependencies is linked to it with an *Exception* relationship whose *affectedRelationships* property lists them, so the exception hangs off the product while naming exactly which of its relationships are in question.  The relationship also records Darwin's own userId as the *steward*, the *lastReviewTime* of the refresh that wrote it, and notes saying that it is maintained automatically.
+#### Establishing the information supply chain
 
-The list is updated as it changes, reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0007` at `ACTION` severity, and the relationship is removed once nothing is left on it (`-0008`).  Only the *Exception* relationships that Darwin created are touched, so an exception raised by a steward against the same product is left alone.
+Once a path's information supply chain is known - from a relationship on it that names one, or from the asserted relationship in the layer above that the path proves - the relationships on it that name none are given that supply chain at the end of the refresh:
 
-!!! tip "Three ways to clear an unproven dependency"
-    Either the lineage between the two products' assets is incomplete and needs capturing or [stitching](#stitching), or the information supply chain named on the relationship is the wrong one, or the dependency is not real and the relationship should be removed.  Linking the exception type to the appropriate [governance policy](/types/4/0415-Governance-Responses) brings these discrepancies into the governance program's own review cycle.
+* a relationship for which only one supply chain is known has it filled in, on behalf of the metadata collection that owns it if that is not the local repository, and reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0014`;
+* a relationship that lies on the paths of several supply chains is left untagged - the first supply chain found is no more correct than the others - and Darwin records a copy of it for each supply chain instead, with the *derivation* `supply chain inferred` and the *label* of the relationship it copies.  The copies are reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0018`, and removed (`-0019`) when the lineage no longer places the relationship on that supply chain's paths.
+
+Only relationships asserted by others are changed this way: Darwin's own derived relationships take their supply chain from the lineage beneath them, so they follow on a later refresh.  Each refresh reports how many supply chains it filled in, and how many copies it created and removed, as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0020`.
+
+#### Unproven lineage
+
+An asserted relationship that the layer beneath does not prove, though it is catalogued for both of the relationship's ends, is worth a steward's attention: either the finer-grained lineage is incomplete, the information supply chain named on the relationship is wrong, or the relationship does not reflect what happens.
+
+Darwin has an [*ExceptionType*](/types/4/0455-Exception-Management) for each relationship type - `ExceptionType::UnprovenDataFlow`, `ExceptionType::UnprovenControlFlow`, `ExceptionType::UnprovenProcessCall` and `ExceptionType::UnprovenDigitalProductDependency` - each created the first time it is needed and reported as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0003`.  The element that depends on the unproven relationships - the element that the data or control reaches, or the dependent product - is linked to the exception type with an *Exception* relationship whose *affectedRelationships* property lists them, so the exception hangs off the element while naming exactly which of its relationships are in question.  The relationship also records Darwin's own userId as the *steward*, the *lastReviewTime* of the refresh that wrote it, and notes saying that it is maintained automatically.
+
+The list is updated as it changes, reported at `ACTION` severity as `DARWIN-PRODUCT-DEPENDENCY-MANAGER-0007` for a product and `-0016` for other elements, and the relationship is removed once nothing is left on it (`-0008` and `-0017`).  Only the *Exception* relationships that Darwin created are touched, so an exception raised by a steward against the same element is left alone.
+
+!!! tip "Three ways to clear an unproven relationship"
+    Either the lineage beneath it is incomplete and needs capturing or [stitching](#stitching), or the information supply chain named on the relationship is the wrong one, or the relationship is not real and should be removed.  Linking the exception types to the appropriate [governance policy](/types/4/0415-Governance-Responses) brings these discrepancies into the governance program's own review cycle.
 
 !!! summary "Usage"
-    Darwin turns the fine-grained lineage that has been captured and stitched into the coarse-grained views that are actually asked for - which servers exchange data, and which digital products depend on which - and keeps them in step with the graph beneath them rather than with whoever last remembered to update them.  It also closes the loop on the dependencies that people declare by hand, by reporting the ones that the implementation does not bear out.
+    Darwin turns the fine-grained lineage that has been captured and stitched into the coarse-grained views that are actually asked for - which servers exchange data, and which digital products depend on which - and keeps them in step with the graph beneath them rather than with whoever last remembered to update them.  It closes the loop on the lineage that people assert by hand, by reporting the relationships that the implementation does not bear out, and it spreads the information supply chains across the layers so that each supply chain's implementation can be seen whole.
 
 
 ### Governing expectations

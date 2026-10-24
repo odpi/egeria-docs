@@ -56,7 +56,7 @@ The [Lovelace](/egeria-solutions/leveraging-open-lineage/overview/#analysing-the
 
 ## egeria_informationSupplyChain
 
-Any producer can add this facet to a run to say which information supply chains the run belongs to.  For example, an Apache Airflow DAG that implements part of a supply chain can add it to its runs.  A run can move data along more than one supply chain - for example, a job that publishes a data set that several supply chains consume - so the facet can name several.
+Any producer can add this facet to a run to say which information supply chains the run belongs to.  For example, an Apache Airflow DAG that implements part of a supply chain can add it to its runs - see [Leveraging Apache Airflow](/egeria-solutions/leveraging-apache-airflow/overview/#adding-the-facet-in-airflow).  A run can move data along more than one supply chain - for example, a job that publishes a data set that several supply chains consume - so the facet can name several.
 
 | Property            | Description                                                                                                       |
 |---------------------|-------------------------------------------------------------------------------------------------------------------|

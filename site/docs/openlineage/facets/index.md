@@ -10,7 +10,7 @@ Egeria defines two custom run facets.  Both use the `egeria` prefix, and their s
 | Facet key                       | Schema                                                                                                  | Purpose                                                                                     |
 |---------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | `egeria_governanceAction`       | [EgeriaGovernanceActionRunFacet.json](/openlineage/facets/1-0-0/EgeriaGovernanceActionRunFacet.json)             | Describes the Egeria governance action (engine action) that a run represents.              |
-| `egeria_informationSupplyChain` | [EgeriaInformationSupplyChainRunFacet.json](/openlineage/facets/1-0-0/EgeriaInformationSupplyChainRunFacet.json) | Names the [information supply chain](/concepts/information-supply-chain) that a run is part of. |
+| `egeria_informationSupplyChain` | [EgeriaInformationSupplyChainRunFacet.json](/openlineage/facets/1-1-0/EgeriaInformationSupplyChainRunFacet.json) | Names the [information supply chains](/concepts/information-supply-chain) that a run is part of. |
 
 Published schema versions are never changed.  A change to a facet is published as a new version in a new folder, and the version is part of each facet's `_schemaURL`.
 
@@ -56,23 +56,36 @@ The [Lovelace](/egeria-solutions/leveraging-open-lineage/overview/#analysing-the
 
 ## egeria_informationSupplyChain
 
-Any producer can add this facet to a run to say which information supply chain the run belongs to.  For example, an Apache Airflow DAG that implements part of a supply chain can add it to its runs.
+Any producer can add this facet to a run to say which information supply chains the run belongs to.  For example, an Apache Airflow DAG that implements part of a supply chain can add it to its runs.  A run can move data along more than one supply chain - for example, a job that publishes a data set that several supply chains consume - so the facet can name several.
 
-| Property           | Description                                                                          |
-|--------------------|--------------------------------------------------------------------------------------|
-| `iscQualifiedName` | Qualified name of the information supply chain that the run is part of.  Required. |
+| Property            | Description                                                                                                       |
+|---------------------|-------------------------------------------------------------------------------------------------------------------|
+| `iscQualifiedName`  | Qualified name of the information supply chain that the run is part of.                                          |
+| `iscQualifiedNames` | Qualified names of the information supply chains that the run is part of, when it is part of several.  Added in 1-1-0. |
 
-Schema URL: `https://egeria-project.org/openlineage/facets/1-0-0/EgeriaInformationSupplyChainRunFacet.json#/$defs/EgeriaInformationSupplyChainRunFacet`
+At least one of the two must be present.  If both are, they are combined.
+
+Schema URL: `https://egeria-project.org/openlineage/facets/1-1-0/EgeriaInformationSupplyChainRunFacet.json#/$defs/EgeriaInformationSupplyChainRunFacet`
 
 ```json
 "egeria_informationSupplyChain": {
   "_producer": "https://example.com/producer",
-  "_schemaURL": "https://egeria-project.org/openlineage/facets/1-0-0/EgeriaInformationSupplyChainRunFacet.json#/$defs/EgeriaInformationSupplyChainRunFacet",
+  "_schemaURL": "https://egeria-project.org/openlineage/facets/1-1-0/EgeriaInformationSupplyChainRunFacet.json#/$defs/EgeriaInformationSupplyChainRunFacet",
   "iscQualifiedName": "InformationSupplyChain::Orders"
 }
 ```
 
-The Open Lineage Cataloguer tags the lineage relationships that it creates from the event (for example *DataFlow* and *DataMapping*) with this information supply chain.  It also uses the supply chain when it links a physical data asset to its abstractions with *DataSetContent*: it creates one relationship per supply chain.  If a run has no `egeria_informationSupplyChain` facet, the cataloguer uses the `iscQualifiedName` from the `egeria_governanceAction` facet, if one is present.
+```json
+"egeria_informationSupplyChain": {
+  "_producer": "https://example.com/producer",
+  "_schemaURL": "https://egeria-project.org/openlineage/facets/1-1-0/EgeriaInformationSupplyChainRunFacet.json#/$defs/EgeriaInformationSupplyChainRunFacet",
+  "iscQualifiedNames": ["InformationSupplyChain::Orders", "InformationSupplyChain::Invoicing"]
+}
+```
+
+The Open Lineage Cataloguer tags the lineage relationships that it creates from the event (for example *DataFlow* and *DataMapping*) with these information supply chains.  The lineage relationships are multi-link, so it creates each relationship once for each supply chain.  It does the same when it links a physical data asset to its abstractions with *DataSetContent*.  If a run has no `egeria_informationSupplyChain` facet, the cataloguer uses the `iscQualifiedName` from the `egeria_governanceAction` facet, if one is present.
+
+[Version 1-0-0](/openlineage/facets/1-0-0/EgeriaInformationSupplyChainRunFacet.json) of this facet has `iscQualifiedName` only.  Events that use it are still accepted.
 
 
 ## Related information

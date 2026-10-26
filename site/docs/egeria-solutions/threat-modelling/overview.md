@@ -2,16 +2,19 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
-## Threat Modelling
+# Threat Modelling
 
 Threat modelling is a process used to identify, analyze, and prioritize potential threats to an organization's assets, systems, and operations. It involves creating a model of the system or process being analyzed, identifying potential threats, and assessing the likelihood and impact of those threats. The goal of threat modelling is to help organizations proactively address potential security risks and vulnerabilities before they can be exploited by attackers.
 
-Threat modelling is an essential component of the overall [security strategy](/egeria-solutions/defining-security-strategy/overview) for any organization, as it provides a structured approach to identifying and mitigating potential security risks.
+Threat modelling is an essential component of the overall [security strategy](/egeria-solutions/defining-security-strategy/overview) for any organization, as it provides a structured approach to identifying and mitigating potential security risks.  It is also not a one-off exercise.  Technology changes, new attacks emerge and the business takes on new partners, so the model needs to be revisited regularly - which is easier when it is kept in open metadata alongside the systems it describes, rather than in a drawing that is filed and forgotten.
 
-Egeria's Threat Modelling solution provides a comprehensive approach to threat modelling, including tools and techniques for creating threat models, identifying potential threats, and assessing the likelihood and impact of those threats. The solution also includes guidance and best practices for implementing threat modelling in an organization, as well as templates and examples to help organizations get started with the process.
+Egeria supports threat modelling in three ways:
 
-Overall, threat modelling is a critical part of any organization's security strategy, and Egeria's Threat Modelling solution provides a powerful tool for organizations to proactively address potential security risks and vulnerabilities.
+* the **systems** being modelled are described using solution components and blueprints that can be linked to the real systems in the catalog.
+* the **threats and risks** are recorded as governance definitions, linked to the policies and controls that respond to them.
+* the **inventory** that the model depends on is kept up to date through [proactive cataloguing](/egeria-solutions/proactive-cataloguing/overview), so that new systems and changes to existing ones can be checked against the model.
 
+The steps below follow the widely used approach described by [OWASP](https://owasp.org/www-community/Threat_Modeling_Process).
 
 ## System Modelling
 
@@ -40,22 +43,20 @@ The terms that make up the stride model are:
 * Elevation of Privilege - elevation of privilege is the act of gaining unauthorized access to a system or resource with higher privileges than intended.
 
 
-When you are considering threats, think about all types of data that could be accessed by an attacker.
+When you are considering threats, think about all types of data that could be accessed by an attacker, including:
 
-You need to consider the possibility of threats to the following types of data:
-
-* Configuration data: connection strings to databases
-* Authentication data: user names and passwords stored in your Profiles database.
-* Persistent data: data stored and used by Commerce Server processes such as SQL Server data, XML data, registry data, files, authentication and authorization data, and logs.
-* Data that travels over communications channels: cookies, authentication information, purchasing and ordering information, and credit card numbers.
-* State data: data that indicates whether the user is logged in or logged out, and data stored in shopping baskets.
-* Temporary data: data that is created by the processes running the site.
+* Configuration data: such as connection information for databases and other services.
+* Authentication data: user identifiers, passwords, certificates and tokens.
+* Persistent data: the data stored by the system in databases, files and logs.
+* Data in transit: the requests, responses and events that travel over the network between components.
+* State data: information about the current sessions and activities of users.
+* Temporary data: intermediate results created while processing a request.
 
 It is useful to ask questions such as these:
 
-* How can an attacker change, for example, the authentication data?
-* What is the impact if an attacker can read the user profile data?
-* What happens if access is denied to the user profile database?
+* How could an attacker change, for example, the authentication data?
+* What is the impact if an attacker can read the personal data held by a component?
+* What happens if access is denied to a component that others depend on?
 
 ## Prioritizing Threats
 
@@ -105,5 +106,36 @@ Here are some examples of mitigation techniques for different types of threat:
  |                        | Tamper-resistant network protocols                           |
 
 
+## Recording the results in Egeria
+
+The output of a threat modelling session is recorded as governance definitions so that it can be reviewed, prioritized and tracked:
+
+* Each category of threat that the organization must guard against is a [*Threat*](/types/4/0405-Governance-Drivers) - a governance driver.  Threats are often shared across governance domains, so check for an existing definition first.
+* Each concrete consequence of a threat for this organization is a [*Risk*](/types/4/0415-Governance-Responses), with its likelihood, impact, overall importance and the implications that must be true for the organization to have responded.  Together, the risks form the organization's *risk register*.
+* Each risk is linked to the elements it applies to - the solution components, systems, data assets, teams or events it threatens - with the [*ScopedBy*](/types/1/0120-Assignment-Scopes) relationship.  This is what connects the risk register to the system model.
+* The chosen mitigations become [governance policies](/types/4/0415-Governance-Responses) and [controls](/types/4/0420-Governance-Controls), linked back to the risks and threats they address.
+
+When the systems change, the risks scoped by the affected components show what needs to be revisited, and when a new threat emerges, the risks and controls that relate to it - and the parts of the system they apply to - can be found by following the links.
+
+!!! summary "Usage"
+    Keeping the threat model in open metadata turns it from a design-time artefact into a living part of the security program.  A risk that has no policy responding to it shows up as a gap in the links, and so does a critical component with no risks scoped to it, which has probably never been reviewed.
+
+## A STRIDE template for Dr.Egeria
+
+The [STRIDE threat model template :material-download:](stride-threat-model.txt){ download="stride-threat-model.md" } is a [Dr.Egeria](/user-interfaces/dr-egeria/overview) Markdown file that walks through the steps on this page.  It contains the commands to:
+
+* create a solution blueprint for the review, with its components, actors and data flows;
+* record each risk, link it to its STRIDE threat with *GovernanceResponse*, and scope it to the component it threatens with *ScopedBy*;
+* record each mitigating control and link it to the risks it addresses with *GovernanceMechanism*.
+
+The six STRIDE threats are already defined in the [Core Content Pack](/content-packs/core-content-pack/overview), with qualified names such as `Threat::STRIDE::Spoofing`, so every threat model links its risks to the same six threats.  The mitigations can be your own controls, or controls from the NIST SP 800-53 catalog in the [Security Content Pack](/content-packs/security-content-pack/overview).
+
+It also includes the STRIDE questions to ask of each component and data flow, with typical mitigations for each category.  Replace the values in square brackets, copy command blocks as needed, and check the file with `dr_egeria --validate` before processing it.
+
+## Examples
+
+* [Assuring IT Systems Security](/practices/coco-pharmaceuticals/scenarios/assuring-it-systems-security/overview) shows Coco Pharmaceuticals' security team building on the solution components of its information supply chains to model threats to its systems.
+* [Preparing for Martyn's Law](/practices/coco-pharmaceuticals/scenarios/preparing-for-martyns-law/overview) applies the same approach to a physical security threat - terrorism at a public event.
+* [Planning for security](/guides/planning/security/overview) contains a threat model of an Egeria deployment itself.
 
 --8<-- "snippets/abbr.md"

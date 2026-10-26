@@ -63,7 +63,11 @@
 
 ## Interactions
 
-Ivor Padlock is responsible for security at Coco Pharmaceuticals.  This is both the physical security of the premises, equipment and people, as well as the IT system security.  He has a lot of experience on the physical security aspect of his role.  However, on the IT side he is not a deep expert and relies on help from colleagues in the IT Operations team to review and improve their procedures.  He is also responsible for the education of employees on the proper protection of information.  For this he needs help from [Faith Broker](faith-broker.md) who has taken on the role of [Privacy Officer](../../role-types/overview.md).  The picture below shows the interactions between Ivor Padlock and the other people in the organization.
+Ivor Padlock is responsible for security at Coco Pharmaceuticals.  This is both the physical security of the premises, equipment and people, as well as the IT system security.  He has a lot of experience on the physical security aspect of his role.  However, on the IT side he is not a deep expert and relies on help from colleagues in the IT Operations team, particularly [Gary Geeke](gary-geeke.md), to review and improve their procedures.
+
+When the scenarios begin, Ivor is Coco Pharmaceuticals' only security officer.  His title became Chief Security Officer when [Jules Keeper](jules-keeper.md) brought the governance leaders together to [build the multi-faceted governance program](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview), to recognize his governance leadership.  When the [fraud around the supplier database](/practices/coco-pharmaceuticals/scenarios/investigating-suspicious-activity/overview) is detected, he engages [Sidney Seeker](sidney-seeker.md) as a consultant to help him, since he has no real IT background.  Sidney's review of the situation recommends that the company employs more security staff.  In typical Coco Pharmaceuticals style, they employ one new person - [Simon Burr](simon-burr.md) - as Chief Information Security Officer (CISO), reporting to Ivor.
+
+  He is also responsible for the education of employees on the proper protection of information.  For this he needs help from [Faith Broker](faith-broker.md) who has taken on the role of [Privacy Officer](../../role-types/overview.md).  The picture below shows the interactions between Ivor Padlock and the other people in the organization.
 
 
 

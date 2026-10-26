@@ -23,6 +23,7 @@
     
     * Sidney is an expert in anti-fraud procedures and investigation. He used to work for the police force, but now is a private contractor working with different clients on their fraud detection and prevention procedures.
     * He has been working with this company for about six months advising them on anti-fraud monitoring approaches when a set of unexplained payments are detected and, he is pulled into help with the investigation.
+    * Since [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) has no real IT background, Ivor also engages Sidney as a security consultant.  Sidney's review of the company's security leads to the recommendation that more security staff are needed, and [Simon Burr](/practices/coco-pharmaceuticals/personas/simon-burr) is hired as a result.
     
     **Thinks/Feels**:
     

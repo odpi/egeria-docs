@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Simon (Si) Burr - IT Security
+# Simon (Si) Burr - Chief Information Security Officer
 
 
 ----
@@ -17,12 +17,13 @@
     
     **Skills**: Cyber-security, penetration testing
     
-    **Scope**: IT - reviews and validates of IT systems and services.
+    **Scope**: IT - security of the IT systems and services across the company.
     
     **Job**:
     
-    * Si Burr is a recent hire, responsible for validating the security of Coco Pharmaceuticals' IT systems and services.
-    * Si officially works for [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) but spends most of his time working with [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) on the active IT projects and [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) on the over all IT infrastructure security.
+    * Si Burr is a recent hire and Coco Pharmaceuticals' Chief Information Security Officer (CISO), responsible for monitoring, testing and validating the security of the company's IT systems and services.  He was hired on the recommendation of [Sidney Seeker](/practices/coco-pharmaceuticals/personas/sidney-seeker), who found that the company needed more security staff.
+    * Part of his remit is to set up continuous penetration testing across the company.
+    * Si reports to [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock), the Chief Security Officer, but spends most of his time working with [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) on the active IT projects and [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) on the over all IT infrastructure security.
     
     **Thinks/Feels**:
     

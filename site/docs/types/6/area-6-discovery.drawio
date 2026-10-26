@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" pages="15">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" pages="16">
   <diagram id="mHdgXSSDg3P1Vtlx_zm2" name="overview">
-    <mxGraphModel dx="1222" dy="821" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1211" dy="817" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -94,6 +94,12 @@
         <mxCell id="DgMWdxRmr0fqVjyVv-yX-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="0680&lt;br&gt;Code Analysis" vertex="1">
           <mxGeometry height="80" width="140" x="61" y="672.5" as="geometry" />
         </mxCell>
+        <mxCell id="iYudWLI_2FuapoxKL6cQ-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#ffcd28;strokeColor=#000000;gradientColor=#ffa500;" value="" vertex="1">
+          <mxGeometry height="13" width="40" x="376" y="532.5" as="geometry" />
+        </mxCell>
+        <mxCell id="iYudWLI_2FuapoxKL6cQ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="0665&lt;br&gt;Security Annotations" vertex="1">
+          <mxGeometry height="80" width="140" x="376" y="545.5" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -124,7 +130,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="0610-Annotations" id="B93cejBKThY-TTdXCMpq">
-    <mxGraphModel dx="1514" dy="1026" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1615" dy="1089" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="3fQte9pRHBFsXC9MxjXT-0" />
         <mxCell id="3fQte9pRHBFsXC9MxjXT-1" parent="3fQte9pRHBFsXC9MxjXT-0" />
@@ -631,6 +637,63 @@
         </mxCell>
         <mxCell id="3fQte9pRHBFsXC9MxjXT-10" parent="3fQte9pRHBFsXC9MxjXT-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="resourceCreateTime : date&lt;br&gt;resourceUpdateTime : date&lt;div&gt;resourceLastAccessedTime : date&lt;br&gt;size : long&lt;br&gt;encodingType : string&lt;/div&gt;" vertex="1">
           <mxGeometry height="95.5" width="290" x="362" y="478.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="0665-Security-Annotations" id="hmsF3KMtWvs77i0_vz0C">
+    <mxGraphModel dx="1211" dy="817" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-0" />
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-1" parent="lIvgzeTc3xBjBiWEVJIr-0" />
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-2" parent="lIvgzeTc3xBjBiWEVJIr-1" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#f0a30a;strokeColor=#000000;fontColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="20" width="60" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-3" parent="lIvgzeTc3xBjBiWEVJIr-1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="0665 - Security Annotations" vertex="1">
+          <mxGeometry height="654" width="1060" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-4" edge="1" parent="lIvgzeTc3xBjBiWEVJIr-1" source="lIvgzeTc3xBjBiWEVJIr-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=15;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="lIvgzeTc3xBjBiWEVJIr-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-5" parent="lIvgzeTc3xBjBiWEVJIr-1" style="html=1;strokeColor=#d79b00;align=center;fillColor=#ffcd28;gradientColor=#ffa500;" value="«entity»&lt;br&gt;&lt;b&gt;SecurityFindingAnnotation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="226" x="62" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-6" parent="lIvgzeTc3xBjBiWEVJIr-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="severity : string&lt;div&gt;cvssScore : float&lt;/div&gt;&lt;div&gt;cvssVector : string&lt;/div&gt;&lt;div&gt;vulnerabilityIdentifiers : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;weaknessIdentifiers : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;affectedLocation : string&lt;/div&gt;&lt;div&gt;evidence : string&lt;/div&gt;&lt;div&gt;remediation : string&lt;/div&gt;&lt;div&gt;exploitAvailable : boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="158" width="226" x="62" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-7" parent="lIvgzeTc3xBjBiWEVJIr-1" style="html=1;strokeColor=#d79b00;align=center;fillColor=#ffcd28;gradientColor=#ffa500;" value="«entity»&lt;br&gt;&lt;b&gt;Annotation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="427" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-8" edge="1" parent="lIvgzeTc3xBjBiWEVJIr-1" source="lIvgzeTc3xBjBiWEVJIr-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=15;" target="lIvgzeTc3xBjBiWEVJIr-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-9" parent="lIvgzeTc3xBjBiWEVJIr-1" style="html=1;strokeColor=#d79b00;align=center;fillColor=#ffcd28;gradientColor=#ffa500;" value="«entity»&lt;br&gt;&lt;b&gt;VulnerabilityAnnotation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="198" x="309" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="lIvgzeTc3xBjBiWEVJIr-10" parent="lIvgzeTc3xBjBiWEVJIr-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="packageURL : string&lt;br&gt;installedVersion : string&lt;div&gt;fixedVersion : string&lt;br&gt;patchAvailable : boolean&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="89.5" width="198" x="309" y="315.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jj7f6iwNrGcn2L-79Y7q-0" edge="1" parent="lIvgzeTc3xBjBiWEVJIr-1" source="jj7f6iwNrGcn2L-79Y7q-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=block;endFill=0;endSize=15;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="lIvgzeTc3xBjBiWEVJIr-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1011" y="179" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jj7f6iwNrGcn2L-79Y7q-1" parent="lIvgzeTc3xBjBiWEVJIr-1" style="html=1;strokeColor=#d79b00;align=center;fillColor=#ffcd28;gradientColor=#ffa500;" value="«entity»&lt;br&gt;&lt;b&gt;PenetrationTestFindingAnnotation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="226" x="529" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="jj7f6iwNrGcn2L-79Y7q-2" parent="lIvgzeTc3xBjBiWEVJIr-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="attackVector : string&lt;div&gt;attackTechniques : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;privilegesGained : string&lt;/div&gt;&lt;div&gt;compromisedResources : array&amp;lt;string&amp;gt;&lt;/div&gt;&lt;div&gt;reproductionSteps : string&lt;/div&gt;" vertex="1">
+          <mxGeometry height="101" width="226" x="529" y="315.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jj7f6iwNrGcn2L-79Y7q-3" edge="1" parent="lIvgzeTc3xBjBiWEVJIr-1" source="jj7f6iwNrGcn2L-79Y7q-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=15;" target="lIvgzeTc3xBjBiWEVJIr-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1011" y="179" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jj7f6iwNrGcn2L-79Y7q-4" parent="lIvgzeTc3xBjBiWEVJIr-1" style="html=1;strokeColor=#d79b00;align=center;fillColor=#ffcd28;gradientColor=#ffa500;" value="«entity»&lt;br&gt;&lt;b&gt;SecurityPostureAnnotation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="270" x="779" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="jj7f6iwNrGcn2L-79Y7q-5" parent="lIvgzeTc3xBjBiWEVJIr-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#666666;align=left;fillColor=#f5f5f5;fontColor=#333333;" value="findingCountsBySeverity : map&amp;lt;string, long&amp;gt;&lt;br&gt;resourcesInScopeCount : long&lt;div&gt;resourcesTestedCount : long&lt;br&gt;newFindingCount : long&lt;br&gt;resolvedFindingCount : long&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95.5" width="270" x="779" y="315.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

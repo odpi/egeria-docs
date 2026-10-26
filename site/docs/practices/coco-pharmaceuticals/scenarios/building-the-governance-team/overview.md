@@ -12,11 +12,11 @@ They agree to divide the work amongst themselves, using the traditional governan
 The result is as follows:
 
 * [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) becomes the CDO and head of the DATA governance domain.
-* [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) becomes the CISO and head of the SECURITY governance domain.
+* [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) becomes the Chief Security Officer and head of the SECURITY governance domain.
 * [Faith Broker](/practices/coco-pharmaceuticals/personas/faith-broker) becomes the CPO and head of the PRIVACY governance domain.
 * [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) as the CFO becomes head of the CORPORATE governance domain.
-* [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) as the infrastructure lead becomes head of the IT INFRASTRUCTURE governance domain.
-* [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) as the most senior software manager becomes had of the SOFTWARE DEVELOPMENT governance domain.
+* [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke), until now the IT Infrastructure Lead, becomes the Chief Information Officer and head of the IT INFRASTRUCTURE governance domain.
+* [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) as the most senior software manager becomes head of the SOFTWARE DEVELOPMENT governance domain.
 
 They also add more specialist governance leaders to the team.
 

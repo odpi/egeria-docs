@@ -34,4 +34,8 @@ An element that meets the requests laid out in a certification type is said to b
 
 A [*CertificationType*](/types/4/0440-Organizational-Controls) that comes from a regulation can be linked to the [element describing the Regulation](/types/4/0405-Governance-Drivers) using the *RegulationCertificationType* relationship type.
 
+## Statements of applicability
+
+Some certifications, such as ISO/IEC 27001, are awarded against a standard that contains a reference set of controls.  The organization's record of which of those controls apply to it, why, and how far each one has been implemented is a *statement of applicability*.  It is described in [0423 Security Definitions](/types/4/0423-Security-Definitions#statements-of-applicability) and is linked to the certification type it supports with the [*GovernedBy*](/types/4/0401-Governance-Definitions) relationship.
+
 --8<-- "snippets/abbr.md"

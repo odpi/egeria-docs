@@ -21,11 +21,11 @@ These personas are responsible for leading [sustainability improvements](/practi
 
 These personas are responsible for defining the [security strategy](/practices/coco-pharmaceuticals/scenarios/) for Coco Pharmaceuticals and ensuring compliance.
 
-* [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) - Security Officer
-* [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) - IT Infrastructure Lead
+* [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) - Chief Security Officer
+* [Simon Burr](/practices/coco-pharmaceuticals/personas/simon-burr) - Chief Information Security Officer
+* [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) - Chief Information Officer
 * [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage) - DevOps Specialist
-* [Simon Burr](/practices/coco-pharmaceuticals/personas/simon-burr) - Cyber Security Specialist
-* [Sidney Seeker](/practices/coco-pharmaceuticals/personas/sidney-seeker) - Fraud Investigator
+* [Sidney Seeker](/practices/coco-pharmaceuticals/personas/sidney-seeker) - Fraud Investigator and Security Consultant
 
 ![Security Team](../scenarios/security-team.png)
 
@@ -61,7 +61,7 @@ These personas are the executives whose full-time job is the governance and prot
 
 * [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) - Chief Data Officer
 * [Faith Broker](/practices/coco-pharmaceuticals/personas/faith-broker) - HR director and Privacy Officer
-* [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) - Security Officer
+* [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) - Chief Security Officer
 * [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) - Chief Finance Officer
 * [Gary Geeke](/practices/coco-pharmaceuticals/personas/gary-geeke) - Chief Information Officer
 

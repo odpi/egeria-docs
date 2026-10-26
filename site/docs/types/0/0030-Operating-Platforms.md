@@ -46,7 +46,7 @@ Hardware and base software that supports an IT system.
 
 ## SoftwareArchive entity
 
-A collection of runnable software components.
+A collection of runnable software components, such as a software package.  A software bill of materials (SBOM) is typically represented as a collection with the *SoftwarePackageManifest* classification whose members are *SoftwareArchive* collections, each with the [*RunnableSoftwareComponent*](/types/2/0282-Released-Software-Components) elements it delivers as members.  Dependencies between the runnable software components are recorded with the *DependentSoftwareComponent* relationship, and the *SoftwareSource* relationship traces them back to the [software components and modules](/types/2/0281-Software-Modules) they were built from.
 
 ## SoftwarePackageDependency relationship
 

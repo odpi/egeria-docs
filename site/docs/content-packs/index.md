@@ -42,6 +42,8 @@ The content packs are as follows:
 
     * [OpenMetadataDigitalProductsContentPack](/content-packs/products-content-pack/overview) - open metadata collections packaged into dynamic digital products.
 
+    * [SecurityContentPack](/content-packs/security-content-pack/overview) - the NIST Cybersecurity Framework (CSF) 2.0 and NIST SP 800-53 Rev. 5 control catalogs, for use in statements of applicability, threat models and security programs.
+
 * [OpenMetadataTypes](/content-packs/types-content-pack/overview) - Archive of the open metadata types defined by Egeria. This archive contains all the open metadata type definitions provided by Egeria. It is supplied for external utilities since each OMAG server capable of being a cohort member will load these types on start up.
 
 * [CocoComboArchive](/content-packs/coco-content-pack/overview) - supplies metadata to support the Coco Pharmaceuticals scenarios. It is a useful content pack to load when experimenting with Egeria's capabilities since it provides examples of many types of open metadata. In addition, this metadata is also available in the following archives that are used in the Open Metadata Labs where different subsets of this metadata are loading into each of the servers.

@@ -14,6 +14,7 @@ The Security officer API features include:
 * **User Account Management**: Setting up and maintaining user accounts within the platform's security connectors.
 * **Security Access Control**: Configuring and retrieving security access control rules that protect open metadata.
 * **Governance Zone Management**: Defining and managing the hierarchy of governance zones, which are used to control access to assets and other metadata elements.
+* **Statements of Applicability**: Recording which controls from a standard, such as the Annex A controls of ISO/IEC 27001, apply to the organization, why, and how far each one has been implemented.
 
 ## Further information
 
@@ -280,6 +281,52 @@ If the user is not authorized to perform operations on a user account, the serve
 
 
 
+
+## Statements of applicability
+
+A [statement of applicability](/types/4/0423-Security-Definitions#statements-of-applicability) records which controls from a standard apply to the organization, why each one is included or excluded, and how far each one has been implemented.  It is one of the main documents reviewed when an information security management system is audited for ISO/IEC 27001 certification.
+
+The statement is a *StatementOfApplicability* element.  Each control from the standard is described by a [governance definition](/concepts/governance-definition), and is linked to the statement with a *ControlApplicability* relationship that records its applicability.
+
+| Operation | URL (after `/security-officer`) | Request body |
+|---|---|---|
+| *createStatementOfApplicability* | `/statements-of-applicability` | *NewElementRequestBody* |
+| *createStatementOfApplicabilityFromTemplate* | `/statements-of-applicability/from-template` | *TemplateRequestBody* |
+| *updateStatementOfApplicability* | `/statements-of-applicability/{statementOfApplicabilityGUID}/update` | *UpdateElementRequestBody* |
+| *deleteStatementOfApplicability* | `/statements-of-applicability/{statementOfApplicabilityGUID}/delete` | *DeleteElementRequestBody* |
+| *getStatementsOfApplicabilityByName* | `/statements-of-applicability/by-name` | *FilterRequestBody* |
+| *findStatementsOfApplicability* | `/statements-of-applicability/by-search-string` | *SearchStringRequestBody* |
+| *getStatementOfApplicabilityByGUID* | `/statements-of-applicability/{statementOfApplicabilityGUID}/retrieve` | *GetRequestBody* |
+| *linkControlApplicability* | `/statements-of-applicability/{statementOfApplicabilityGUID}/control-applicability/{controlGUID}/attach` | *NewRelationshipRequestBody* |
+| *detachControlApplicability* | `/statements-of-applicability/{statementOfApplicabilityGUID}/control-applicability/{controlGUID}/detach` | *DeleteRelationshipRequestBody* |
+
+*ControlApplicability* is not a multi-link relationship: a statement has one relationship with each control it assesses.  So the relationship is always identified by the statement and the control.  Linking a control that is already linked updates the properties of the existing relationship, which is how the applicability of a control is kept up to date as its implementation progresses.
+
+```
+###
+# @name linkControlApplicability
+POST {{baseURL}}/servers/{{viewServer}}/api/open-metadata/security-officer/statements-of-applicability/{{statementOfApplicabilityGUID}}/control-applicability/{{controlGUID}}/attach
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "class" : "NewRelationshipRequestBody",
+  "properties": {
+    "class": "ControlApplicabilityProperties",
+    "isApplicable": true,
+    "justification": "Required to treat the risk of ransomware disruption to manufacturing.",
+    "inclusionReasons": ["Risk Treatment"],
+    "implementationStatus": "PARTIALLY_IMPLEMENTED",
+    "implementationDescription": "Manufacturing networks are segmented at Austin and Bucharest; the original sites are in progress.",
+    "reviewDate": "{{$isoTimestamp}}",
+    "label": "add the control's number in the standard here"
+  }
+}
+```
+
+The *implementationStatus* is one of `NOT_STARTED`, `PLANNED`, `PARTIALLY_IMPLEMENTED`, `IMPLEMENTED` or `OTHER`.
+
+The Core Content Pack includes the *CertificationType* for ISO/IEC 27001:2022 (`CertificationType::ISO/IEC 27001:2022`).  The text of the standard's controls is owned by ISO, so the controls themselves are loaded by the organization from its licensed copy of the standard.  The [Security Content Pack](/content-packs/security-content-pack/overview) supplies the public-domain NIST CSF 2.0 and NIST SP 800-53 Rev. 5 control catalogs, whose controls can be linked to a statement of applicability straight away.
 
 ## Managing the Security Controls
 

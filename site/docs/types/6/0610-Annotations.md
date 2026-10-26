@@ -38,6 +38,8 @@ The types that follow provide more specialized annotations.
 * **[0640 Quality Scores](0640-Quality-Scores.md)**
 * **[0650 Relationship Discovery](0650-Relationship-Discovery.md)**
 * **[0660 Measurements](0660-Resource-Measures.md)**
+* **[0665 Security Annotations](0665-Security-Annotations.md)**
+* **[0680 Code Analysis](0680-Code-Analysis.md)**
 * **[0690 Request for Action](0690-Request-For-Action.md)**
 
 * *sampleSize* - Count of elements in the sample.

@@ -28,4 +28,6 @@ The *assignmentScope* attribute describes the type of association.  Its values a
 
 *ScopedBy* links an element to the elements ([Organizations](/types/5/), [Projects](/types/1/0115-Teams), [Teams](/types/1/0115-Teams), ...) that are scoping the impact or applicability of its affect.
 
+For example, a [*Risk*](/types/4/0415-Governance-Responses) is linked to the systems, assets or events that it threatens, and a governance role is linked to the event or organization within which its duties apply.
+
 --8<-- "snippets/abbr.md"

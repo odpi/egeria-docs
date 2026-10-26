@@ -76,4 +76,51 @@ The *SecurityListMembership* classification summarizes the list of security grou
 * *securityLabels* - Labels that apply to the referenceable.
 * *securityProperties* - Properties that apply to the referenceable.
 
+## Statements of applicability
+
+A *statement of applicability* records which controls from a security standard - such as the Annex A controls of ISO/IEC 27001, or the controls of NIST SP 800-53 - apply to an organization, why each one is included or excluded, and how far each one has been implemented.  It is one of the main documents reviewed when an information security management system is audited for [certification](/types/4/0482-Certifications).
+
+The statement is linked:
+
+* to each control from the standard with the *ControlApplicability* relationship.  The controls are [governance definitions](/types/4/0401-Governance-Definitions), typically [*GovernanceControl*](/types/4/0420-Governance-Controls) entities.
+* to the [*CertificationType*](/types/4/0482-Certifications) it supports with the [*GovernedBy*](/types/4/0401-Governance-Definitions) relationship.
+* to the elements that are in scope - the organization, its sites, systems and teams - with the [*ScopedBy*](/types/1/0120-Assignment-Scopes) relationship.
+
+The organization's own controls that implement a control from the standard are linked to it with the [*GovernanceControlLink*](/types/4/0420-Governance-Controls) relationship, and the risks they treat with [*GovernanceMechanism*](/types/4/0420-Governance-Controls), so that each applicable control can be traced to the risks that justify it.
+
+## StatementOfApplicability entity
+
+The *StatementOfApplicability* entity is an [*AuthoredReferenceable*](/types/0/0010-Base-Model), so it records its authors, version and content status - for example, `DRAFT` while it is being prepared and `APPROVED` once it has been signed off for an audit.
+
+* *scope* - The part of the organization that the statement covers, such as the scope of the information security management system.
+* *reviewDate* - The date that the statement was last reviewed.
+
+## ControlApplicability relationship
+
+The *ControlApplicability* relationship links a *StatementOfApplicability* entity (end 1) to a [*GovernanceDefinition*](/types/4/0401-Governance-Definitions) entity (end 2) that describes one control from the standard.  There is one relationship for each control assessed by the statement.
+
+* *isApplicable* - Does the control apply within the scope of the statement of applicability?  A control is treated as applicable unless this is set to false.
+* *justification* - Justification for including or excluding the control.
+* *inclusionReasons* - Reasons that the control is included - for example, risk treatment, a legal or regulatory requirement, a contractual obligation or a business requirement.
+* *implementationStatus* - How far the control has been implemented.  The values come from the *ControlImplementationStatus* enumeration.
+* *implementationDescription* - Description of how the control is implemented within the scope of the statement.
+* *reviewDate* - The date that the applicability of the control was last reviewed.
+* *label* - Label for the control, such as its number in the standard.
+* *description* - Notes on the control's applicability.
+
+## ControlImplementationStatus enumeration
+
+The *ControlImplementationStatus* enumeration defines how far a control listed in a statement of applicability has been implemented.
+
+* *NOT_STARTED* - No work has started on implementing the control.  This is the default.
+* *PLANNED* - The implementation of the control is planned but has not started.
+* *PARTIALLY_IMPLEMENTED* - The control is partially implemented.
+* *IMPLEMENTED* - The control is fully implemented and its implementation is evidenced.
+* *OTHER* - Another implementation status.
+
+!!! education "Further information"
+    * Statements of applicability are maintained through the [Security Officer API](/services/omvs/security-officer/overview#statements-of-applicability).
+    * The Core Content Pack includes a *CertificationType* for ISO/IEC 27001:2022, with the qualified name `CertificationType::ISO/IEC 27001:2022`.  The text of the standard belongs to ISO, so its Annex A controls are not supplied.
+    * The [Security Content Pack](/content-packs/security-content-pack/overview) supplies the NIST CSF 2.0 and NIST SP 800-53 Rev. 5 control catalogs as governance controls that can be linked to a statement of applicability.
+
 --8<-- "snippets/abbr.md"

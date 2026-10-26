@@ -29,5 +29,8 @@ A set of summary properties about the physical status of a resource.
 * *size* - Size of the data source.
 * *encodingType* - Type of encoding scheme used on the data.
 
+!!! info "Security posture"
+    The [*SecurityPostureAnnotation*](/types/6/0665-Security-Annotations) is a type of *ResourceMeasureAnnotation* that summarizes the findings and coverage of one run of a security test.
+
 
 --8<-- "snippets/abbr.md"

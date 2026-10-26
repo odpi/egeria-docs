@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
-# Gary Geeke - IT Infrastructure Administrator
+# Gary Geeke - Chief Information Officer
 
 
 ----
@@ -23,6 +23,8 @@
     
     * Gary is responsible for the set up and operation of all of the IT infrastructure that Coco Pharmaceuticals operates.
     * He works for [Erin Overview](/practices/coco-pharmaceuticals/personas/erin-overview) although he is pretty autonomous since no-one else really understands the systems the way he does.
+    * Gary joined Coco Pharmaceuticals straight from college, and has learnt IT systems management - and the security that goes with it - on the job.  He supports [Ivor Padlock](/practices/coco-pharmaceuticals/personas/ivor-padlock) with the security of the IT systems, but he is no security expert.
+    * Gary's title was IT Infrastructure Lead until [Jules Keeper](/practices/coco-pharmaceuticals/personas/jules-keeper) joined the company and brought all of the governance leaders together to [build the multi-faceted governance program](/practices/coco-pharmaceuticals/scenarios/building-the-governance-team/overview).  Gary became head of the IT Infrastructure governance domain, and his title changed to Chief Information Officer to recognize his governance leadership.  Ivor Padlock's title changed to Chief Security Officer at the same time, for the same reason.
     
     **Thinks/Feels**:
     

@@ -31,7 +31,7 @@ Figure 1 shows the overall process for using these common data definition materi
 
 ## Next steps
 
-* []
+* [Defining the Subject Areas](/practices/coco-pharmaceuticals/scenarios/defining-subject-areas/overview)
 
 
 --8<-- "snippets/abbr.md"

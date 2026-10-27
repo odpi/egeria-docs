@@ -28,7 +28,7 @@ Egeria benefits individuals as well as organizations.  A person can build their 
 
 ## Latest News
 
-At last, the long-awaited release of [Egeria 6.0](/release-notes/latest) has been published!  This release is a major milestone in the evolution of Egeria.  It seeks to support organizations as they transition to a more data and AI-driven world.  This world requires a greater understanding of context for description, knowledge, systems and data.
+We have just released [Egeria 6.2](/release-notes/latest).   It seeks to support organizations as they transition to a more data and AI-driven world.  This world requires a greater understanding of context for description, knowledge, systems and data.
 
 --8<-- "snippets/getting-started.md"
 

@@ -2,7 +2,7 @@
 <!-- Copyright Contributors to the Egeria project. -->
 
 
-For example, the [Data Manager OMAS](/services/omas/data-manager/overview) has support for maintaining metadata about *Topics*.  Topics are special types of [*assets*](/concepts/asset) that provide a destination for exchanging events.
+For example, the [Asset Maker API](/services/omvs/asset-maker/overview) has support for maintaining metadata about *Topics*.  Topics are special types of [*assets*](/concepts/asset) that provide a destination for exchanging events.
 
 Model [0223 Events and Logs](/types/2/0223-Events-and-Logs) extends the `Topic` type with a new type called `KafkaTopic` that introduces two new properties: `partitions` and `replicas`.  `KafkaTopic` is used to represent a topic that is owned and managed by [*Apache Kafka*](https://kafka.apache.org/).  The full type hierarchy for `KafkaTopic` is shown in Figure 1.
 
@@ -47,14 +47,10 @@ Finally, any additional properties that the organization wants to store that are
    additionalProperties.put("jsonPayload", "true");
    topicProperties.setAdditionalProperties(additionalProperties);
 
-   String topicGUID = dataManagerClient.createTopic(userId, 
-                                                    eventBrokerGUID
-                                                    eventBrokerName, 
-                                                    eventBrokerIsHome, 
-                                                    topicProperties);
+   String topicGUID = assetMakerClient.createAsset(..., topicProperties, ...);
 
 ```
 
 !!! info "Further information"
-    * [Data Manager OMAS](/services/omas/data-manager/overview)
+    * [Asset Maker API](/services/omvs/asset-maker/overview)
     

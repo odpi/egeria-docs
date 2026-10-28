@@ -1719,7 +1719,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="eGc2Fq3J0zg0qtuEqHZz" name="refrigeration-types">
-    <mxGraphModel dx="1222" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1211" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1761,8 +1761,8 @@
         <mxCell id="c8bnrQ5nSINEYd2gY4Qw-4" parent="1" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;sketch=1;curveFitting=1;jiggle=2;" value="«entity»&lt;br&gt;&lt;b&gt;Equipment&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="240" x="440" y="800" as="geometry" />
         </mxCell>
-        <mxCell id="c8bnrQ5nSINEYd2gY4Qw-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;sketch=1;curveFitting=1;jiggle=2;" value="lastInspectionDate : date" vertex="1">
-          <mxGeometry height="40" width="239" x="440" y="850" as="geometry" />
+        <mxCell id="c8bnrQ5nSINEYd2gY4Qw-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;sketch=1;curveFitting=1;jiggle=2;" value="make : string&lt;div&gt;model : string&lt;/div&gt;&lt;div&gt;purchaseDate : string&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;usedFor : string&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="239" x="440" y="850" as="geometry" />
         </mxCell>
         <mxCell id="c8bnrQ5nSINEYd2gY4Qw-6" parent="1" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;sketch=1;curveFitting=1;jiggle=2;" value="«entity»&lt;br&gt;&lt;b&gt;Asset&lt;/b&gt;" vertex="1">
           <mxGeometry height="50" width="240" x="440" y="590" as="geometry" />
@@ -1773,10 +1773,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="c8bnrQ5nSINEYd2gY4Qw-8" parent="1" style="html=1;strokeColor=#d6b656;align=center;fillColor=#fff2cc;gradientColor=#ffd966;sketch=1;curveFitting=1;jiggle=2;" value="«entity»&lt;br&gt;&lt;b&gt;RefrigerationUnit&lt;/b&gt;" vertex="1">
-          <mxGeometry height="50" width="240" x="440" y="950" as="geometry" />
+          <mxGeometry height="50" width="240" x="440" y="1000" as="geometry" />
         </mxCell>
-        <mxCell id="c8bnrQ5nSINEYd2gY4Qw-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;sketch=1;curveFitting=1;jiggle=2;" value="refrigerantType : string&lt;div&gt;fullChargeCapacity : int&lt;/div&gt;&lt;div&gt;fullChargeCapacityUnits : string&lt;br&gt;&lt;div&gt;leakRatePercentage : int&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="110" width="239" x="440" y="1000" as="geometry" />
+        <mxCell id="c8bnrQ5nSINEYd2gY4Qw-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;gradientColor=#ffffff;align=left;sketch=1;curveFitting=1;jiggle=2;" value="refrigerantType : string&lt;div&gt;refrigerantVolume : int&lt;/div&gt;&lt;div&gt;refrigerantPercentageLossPerYear : string&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="239" x="440" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="R_xSUlrNh277-_QSq5B--1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Proposed" vertex="1">
+          <mxGeometry height="30" width="60" x="169.5" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="R_xSUlrNh277-_QSq5B--2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Agreed" vertex="1">
+          <mxGeometry height="30" width="60" x="529.5" y="520" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

@@ -363,7 +363,7 @@ Tom discovers that although the refrigeration units were catalogued in the vario
 
 Tom looks at the existing [open metadata types](/types) and cannot find a good place to store details of their refrigeration units.  She proposes to add a new RefrigerationUnit type to Egeria.  It would inherit from [Infrastructure](/types/0/0010-Base-Model) and include a new attribute called *coolantType*. 
 
-![New Type Definition](refrigeration-unit-type.svg)
+![New Type Definition (as proposed by Tom)](refrigeration-unit-type-proposed.svg)
 
 This type would be used to store details of the refrigeration units.  She takes her idea to Erin, who calls a meeting to discuss it.  There are two items on the agenda:
 
@@ -376,23 +376,37 @@ This type would be used to store details of the refrigeration units.  She takes 
 The decision to use Egeria for this data was easy.  Egeria supports the ongoing integration of the company's asset management systems, and providing a common language for describing assets across the company.  It then was well placed to support the governance of this equipment.
 
 The proposed new type generated more discussion.  Erin had picked up on Tom's broader plan to bring details of other equipment relevant to sustainability.  She suggested that they should define a new type called Equipment, and then have RefrigerationUnit inherit from Equipment.
+
+![New Type Definitions (as agreed)](refrigeration-unit-type.svg)
+
 This means that they can have common management of all Equipment, beyond just refrigeration units.  
 
 The others agreed and [Lemmie Stage](/practices/coco-pharmaceuticals/personas/lemmie-stage) was asked to add the new type to Egeria.
 
 #### Adding a new open metadata type for refrigeration units
 
-There are three steps to adding a new open metadata type:
-
-* Create a new type definition in an [Open Metadata Archive](/concepts/open-metadata-archive).
-* Add the new archive to the start-up list of archive files to load at [Metadata Access Store](/concepts/metadata-access-store) start-up.
-* Restart the metadata access store to load the new archive.
+There are two approaches to adding a new open metadata type.  It can be added via an [Open Metadata Archive](/guides/developer/open-metadata-archives/defining-new-types/) or via the [Metadata Expert API](/services/omvs/metadata-expert/overview).  Lemmie decides to use the API.  The [Going CFC-Free Coco Workbook](https://github.com/odpi/egeria-workspaces/tree/main/coco-workbooks/3.%20sustainability/going-cfc-free) shows the code to create these new types and load the refrigeration unit data into Egeria.
 
 ![Lemmie defining the new RefrigerationUnit type](lemmie-defining-refrigeration-unit.png)
 
+???+ info "Viewing the new types in Egeria"
+    You can view the new types in Egeria's type explorer which is part of [Egeria Explorer](/user-interfaces/egeria-explorer/overview).
+    
+    This is the Equipment type.
+    ![Lemmie's new Equipment type](equipment-typedef.png)
+
+    This is the refrigeration unit type.
+    ![Lemmie's new RefrigerationUnit type](refrigeration-unit-typedef.png)
+
+    Because Equipement inherits from Infrastructure, it is visible through [The Catalog](/user-interfaces/the-catalog/overview).  Notice the new *Equipment* tab and the refrigeration units below.
+    ![Refrigeration units in The Catalog](refrigeration-unit.png)
+
+    The new properties are returned directly in the JSON when retrieving them through the [Asset Maker API](/services/omvs/asset-maker/overview).  New properties are added using [extendedProperties](/parameters/overview/#typename-and-extendedproperties).
+    ![Refrigeration Unit JSON](refrigeration-unit-json.png)
+
 ### Awarding the First CFC-Free certificate
 
-Once the RefrigerationUnit was installed in Egeria, Tom was able to load the refrigeration unit data that she had collected from the different sites.   She showed the results to her boos, [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) to request budget to replace the CFC-containing units with CFC-free alternatives.  He agrees because it matches their strategy and the budget is approved.  
+Once the RefrigerationUnit was installed in Egeria, Tom was able to load the refrigeration unit data that she had collected from the different sites.   She showed the results to her boss, [Reggie Mint](/practices/coco-pharmaceuticals/personas/reggie-mint) to request budget to replace the CFC-containing units with CFC-free alternatives.  He agrees because it matches their strategy and the budget is approved.  
 
 Then the race is on to acquire the CFC-free alternatives.  Which location will be the first to be CFC-Free?  Not surprisingly, the New York lab is the first, because [Zach Now](/practices/coco-pharmaceuticals/personas), forewarned of the initiative, had gone ahead and ordered new units before Tom had the data into Egeria!  The other locations followed over the next few months allowing Tom to declare the company CFC-Free.
 

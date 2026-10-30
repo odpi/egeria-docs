@@ -7,92 +7,49 @@ flowchart TD
 
 1@{ shape: rounded, label: "*Solution Blueprint*
 **Organization Insight Content Pack**"}
-2@{ shape: rect, label: "*Solution Component*
-**Metadata Access Store**"}
-1==>|"Collection Membership"|2
+2@{ shape: rect, label: "*Collection Folder*
+**Content Pack Contents**"}
+2==>|"Collection Membership"|1
 3@{ shape: rect, label: "*Solution Component*
-**Open Metadata Repository**"}
-2==>|"Solution Composition"|3
-4@{ shape: rect, label: "*Solution Component*
-**Load Archive**"}
-4==>|"load [Solution Linking Wire]"|3
-2==>|"stores data [Solution Linking Wire]"|3
-5@{ shape: rect, label: "*Solution Blueprint*
-**Open Metadata Archive Solution Blueprint**"}
-5==>|"Collection Membership"|3
-6@{ shape: rect, label: "*Solution Blueprint*
-**Egeria Default Runtime Solution Blueprint**"}
-6==>|"Collection Membership"|3
-7@{ shape: rect, label: "*Solution Component*
-**Create New Product Subscription**"}
-7==>|"metadata [Solution Linking Wire]"|2
-8@{ shape: rect, label: "*Solution Component*
-**Open Lineage Cataloguer**"}
-8==>|"metadata [Solution Linking Wire]"|2
-9@{ shape: rect, label: "*Solution Component*
-**Move File**"}
-9==>|"metadata [Solution Linking Wire]"|2
-10@{ shape: rect, label: "*Solution Component*
 **Babbage Analytical Engine**"}
-10==>|"metadata [Solution Linking Wire]"|2
-11@{ shape: rect, label: "*Solution Component*
-**Create PostgreSQL Schema in Open Metadata**"}
-11==>|"metadata [Solution Linking Wire]"|2
-12@{ shape: rect, label: "*Solution Component*
-**Delete OMAG Server Platform from Open Metadata**"}
-12==>|"metadata [Solution Linking Wire]"|2
-13@{ shape: stadium, label: "*Solution Linking Wire*
-**... plus 88 Items**"}
-13-.->2
-14@{ shape: rect, label: "*Solution Component*
-**Award Karma Points**"}
-1==>|"Collection Membership"|14
-10==>|"schedules [Solution Linking Wire]"|14
-14==>|"metadata [Solution Linking Wire]"|2
-15@{ shape: tag-rect, label: "*Governance Action Type*
-**award-karma-points (EgeriaWatchdog)**"}
-14==>|"Implemented By"|15
-1==>|"Collection Membership"|10
-16@{ shape: rect, label: "*Solution Blueprint*
-**Open Metadata Digital Products Content Pack**"}
-16==>|"Collection Membership"|10
-17@{ shape: rect, label: "*Solution Blueprint*
-**Core Content Pack**"}
-17==>|"Collection Membership"|10
-18@{ shape: rect, label: "*Solution Blueprint*
-**Egeria Observability Content Pack**"}
-18==>|"Collection Membership"|10
-19@{ shape: stadium, label: "*Implemented By*
-**... plus 1 Items**"}
-10-.->19
-style 11 color:#000000, fill:#DDA0DD, stroke:#000000
-style 12 color:#000000, fill:#DDA0DD, stroke:#000000
-style 13 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
-style 14 color:#000000, fill:#DDA0DD, stroke:#000000
-style 15 color:#000000, fill:#40E0D0, stroke:#000000
-style 16 color:#000000, fill:#f5fffa, stroke:#000000
-style 17 color:#000000, fill:#f5fffa, stroke:#000000
-style 18 color:#000000, fill:#f5fffa, stroke:#000000
-style 19 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
+1==>|"Collection Membership"|3
+4@{ shape: rect, label: "*Solution Component*
+**Build Zone Membership Profile**"}
+3==>|"schedules [Solution Linking Wire]"|4
+5@{ shape: rect, label: "*Solution Component*
+**Summarise OpenLineage Data Quality**"}
+3==>|"schedules [Solution Linking Wire]"|5
+6@{ shape: rect, label: "*Solution Component*
+**Refine OpenLineage Data Scope**"}
+3==>|"schedules [Solution Linking Wire]"|6
+7@{ shape: rect, label: "*Solution Component*
+**Build Member Popularity Profile**"}
+3==>|"schedules [Solution Linking Wire]"|7
+8@{ shape: rect, label: "*Solution Component*
+**Profile OpenLineage Runs**"}
+3==>|"schedules [Solution Linking Wire]"|8
+9@{ shape: stadium, label: "*Collection Membership*
+**... plus 4 Items**"}
+9-.->3
+1==>|"Collection Membership"|4
+10@{ shape: tag-rect, label: "*Governance Action Type*
+**build-zone-membership-profile (EgeriaGovernance)**"}
+4==>|"Implemented By"|10
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#DDA0DD, stroke:#000000
+style 2 color:#000000, fill:#8fbc8f, stroke:#000000
 style 3 color:#000000, fill:#DDA0DD, stroke:#000000
 style 4 color:#000000, fill:#DDA0DD, stroke:#000000
-style 5 color:#000000, fill:#f5fffa, stroke:#000000
-style 6 color:#000000, fill:#f5fffa, stroke:#000000
+style 5 color:#000000, fill:#DDA0DD, stroke:#000000
+style 6 color:#000000, fill:#DDA0DD, stroke:#000000
 style 7 color:#000000, fill:#DDA0DD, stroke:#000000
 style 8 color:#000000, fill:#DDA0DD, stroke:#000000
-style 9 color:#000000, fill:#DDA0DD, stroke:#000000
-style 10 color:#000000, fill:#DDA0DD, stroke:#000000
-click 11 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
-click 12 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
-click 2 "https://egeria-project.org/concepts/metadata-access-store/" "Click for more documentation" _blank
-click 3 "https://egeria-project.org/concepts/open-metadata-repository/" "Click for more documentation" _blank
-click 14 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
-click 4 "https://egeria-project.org/concepts/open-metadata-archive/" "Click for more documentation" _blank
+style 9 color:#000000, fill:#F9F7ED, stroke:#b7c0c7
+style 10 color:#000000, fill:#40E0D0, stroke:#000000
+click 3 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
+click 4 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
+click 5 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
+click 6 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 click 7 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
-click 8 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
-click 9 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
-click 10 "https://egeria-project.org/concepts/integration-connector/" "Click for more documentation" _blank
+click 8 "https://egeria-project.org/concepts/governance-action-type/" "Click for more documentation" _blank
 ```
-> Organization Insight Content Pack: Solution blueprint describing the components that deliver organization insight to the open metadata ecosystem. (Extracted from 6.0-SNAPSHOT)
+> Organization Insight Content Pack: Solution blueprint describing the components that deliver organization insight to the open metadata ecosystem. (Extracted from 6.3-SNAPSHOT)

@@ -101,13 +101,15 @@ The descriptive information - connector type GUID, qualified name, display name,
 
 The constructor then declares the service's specification: `supportedRequestTypes`, `supportedRequestParameters`, `supportedActionTargetTypes`, `producedActionTargetTypes` and `producedGuards`.  The `WatchdogActionServiceProvider` constructor already sets `supportedRequestParameters`, `producedGuards` and `producedActionTargetTypes` to the OWF standard values, so you only override the ones your service changes.
 
+The examples in this guide are for an illustrative service, `ChangeWatchdogService`, that watches for every change to open metadata:
+
 ```java
-public class LovelaceKarmaPointAwardsServiceProvider extends WatchdogActionServiceProvider
+public class ChangeWatchdogServiceProvider extends WatchdogActionServiceProvider
 {
-    public LovelaceKarmaPointAwardsServiceProvider()
+    public ChangeWatchdogServiceProvider()
     {
-        super(EgeriaOpenConnectorDefinition.KARMA_POINTS_AWARDS_LOVELACE_SERVICE,
-              LovelaceKarmaPointAwardsService.class.getName(),
+        super(MyOpenConnectorDefinition.CHANGE_WATCHDOG_SERVICE,
+              ChangeWatchdogService.class.getName(),
               null);
 
         super.supportedRequestTypes = null;
@@ -158,7 +160,7 @@ Only one set of filters is active at a time, but a service can call `registerLis
 The OWF supplies [`GenericWatchdogActionListener` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-watchdog-framework/src/main/java/org/odpi/openmetadata/frameworks/openwatchdog/GenericWatchdogActionListener.java){ target=gh }, which simply forwards every event to your connector's `processEvent()` method, so most services do not need a listener class of their own:
 
 ```java
-public class LovelaceKarmaPointAwardsService extends WatchdogActionServiceConnector
+public class ChangeWatchdogService extends WatchdogActionServiceConnector
 {
     private final GenericWatchdogActionListener listener = new GenericWatchdogActionListener(this);
 
@@ -179,10 +181,10 @@ public class LovelaceKarmaPointAwardsService extends WatchdogActionServiceConnec
              * The service cannot do its job, so report the failure and complete.
              */
             AuditLogMessageDefinition completionMessage =
-                    LovelaceInsightAuditCode.UNEXPECTED_EXCEPTION.getMessageDefinition(watchdogActionServiceName,
-                                                                                       error.getClass().getName(),
-                                                                                       methodName,
-                                                                                       error.getMessage());
+                    MyAuditCode.UNEXPECTED_EXCEPTION.getMessageDefinition(watchdogActionServiceName,
+                                                                          error.getClass().getName(),
+                                                                          methodName,
+                                                                          error.getMessage());
 
             auditLog.logException(methodName, completionMessage, error);
 
@@ -303,7 +305,8 @@ A watchdog action service can be started via an [engine action](/concepts/engine
 
 The framework itself is in the [open-watchdog-framework :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/frameworks/open-watchdog-framework){ target=gh } module.
 
-* [Lovelace Karma Point Awards Service :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/lovelace-insights/src/main/java/org/odpi/openmetadata/adapters/connectors/organizationinsight/karmapoints/LovelaceKarmaPointAwardsService.java){ target=gh } - the instance/type pattern in its simplest form.  It listens to every event and increments a karma point on the contributing user's profile.
+Egeria does not currently supply a watchdog action service of its own.  The Lovelace Karma Point Awards Service was the example of the instance/type pattern until release 6.3, when karma points moved to the [Simon Contribution Recorder](/features/metadata-observability/overview#the-simon-contribution-recorder) integration connector.  Its source is in the [6.2 release :material-github:](https://github.com/odpi/egeria/blob/V6.2/open-metadata-implementation/adapters/open-connectors/lovelace-insights/src/main/java/org/odpi/openmetadata/adapters/connectors/organizationinsight/karmapoints/LovelaceKarmaPointAwardsService.java){ target=gh }.
+
 * [Generic Element Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-element-watchdog-governance-action-service.md){ target=gh } and [Generic Folder Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-folder-watchdog-governance-action-service.md){ target=gh } - ready-to-configure services that run a named governance action process when a chosen kind of event occurs.  These still run as OGF governance action services today; new instance/type watching should be built directly against OWF.
 
 ??? education "Further information"

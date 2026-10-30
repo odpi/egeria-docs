@@ -305,9 +305,9 @@ A [contribution record](/types/1/0125-Contribution) is used to accumulate inform
 
 ### Karma points
 
-[Karma points](/concepts/karma-point) recognize actors (both individuals and automation) based on their contributions (create, update, delete) to open metadata.  Each karma point is award through the userId making the change.  However, they are only accumulated in a contribution record if the userId is linked to an [actor profile](/types/1/0110-Actors).  Therefore, it is necessary to create a user identity linked to an actor profile for each user that you want to be awarded karma points.
+[Karma points](/concepts/karma-point) recognize actors based on their contributions (create, update, delete) to open metadata.  They are awarded by the [Simon Contribution Recorder](/egeria-solutions/organization-insight/overview#how-points-are-awarded), one for each change, to the userId making the change.  However, they are only accumulated in a contribution record if the userId is linked to an [actor profile](/types/1/0110-Actors).  Therefore, it is necessary to create a user identity linked to an actor profile for each user that you want to be awarded karma points.
 
-Karma points can be used to add gamification into the open metadata ecosystem in order to reward the highest contributors.  Since karma points may be awarded to both individuals and automation, it is reasonable to maintain different league tables for people from automated processes.
+Karma points can be used to add gamification into the open metadata ecosystem in order to reward the highest contributors.  By default, only people are awarded karma points: the non-personal accounts used by automation are excluded by Simon's `ignoredUserIdPatterns` configuration property.  If you change the property so that automation is awarded karma points too, maintain different league tables for people and for automated processes.
 
 ## Summary
 

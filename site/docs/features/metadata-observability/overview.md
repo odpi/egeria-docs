@@ -22,6 +22,7 @@ flowchart LR
     end
     subgraph Observers
         PEPYS[Pepys Activity<br/>Observer]
+        SIMON[Simon Contribution<br/>Recorder]
         BABBAGE[Babbage Analytical<br/>Engine]
         LOVELACE[Lovelace<br/>services]
     end
@@ -32,9 +33,12 @@ flowchart LR
         RM[RunMetrics]
         DS[DataScope]
         SR[Survey reports]
+        CR[ContributionRecord<br/>karma points]
     end
     AL -- audit log topics --> PEPYS
     PEPYS --> UA
+    OM -- change events --> SIMON
+    SIMON --> CR
     BABBAGE -- initiates --> LOVELACE
     OM --> LOVELACE
     OL --> LOVELACE
@@ -48,7 +52,7 @@ flowchart LR
 
 > **Figure 1:** Observations flow from the sources, through the observers, and are stored as classifications and reports on the open metadata elements they describe.
 
-The work is done by two of Egeria's *nanny connectors* - the [integration connectors](/concepts/integration-connector) that look after the open metadata ecosystem itself.  The *Pepys Activity Observer* turns audit log records into usage counts, and the *Babbage Analytical Engine* runs a set of analytical [governance services](/concepts/governance-service) called the *Lovelace services* that derive higher-level insight.  Pepys feeds Babbage: the counts that Pepys maintains on individual elements are the raw material from which the Lovelace Popularity Profiler builds the popularity of whole collections.
+The work is done by three of Egeria's *nanny connectors* - the [integration connectors](/concepts/integration-connector) that look after the open metadata ecosystem itself.  The *Pepys Activity Observer* turns audit log records into usage counts, the *Simon Contribution Recorder* turns the events that report changes to open metadata into [karma points](/concepts/karma-point) for the people who make them, and the *Babbage Analytical Engine* runs a set of analytical [governance services](/concepts/governance-service) called the *Lovelace services* that derive higher-level insight.  Pepys feeds Babbage: the counts that Pepys maintains on individual elements are the raw material from which the Lovelace Popularity Profiler builds the popularity of whole collections.
 
 !!! summary "Usage"
     Metadata observability lets the people responsible for the data landscape - product owners, data stewards, platform teams and governance leads - see which resources are delivering value, which are being neglected, and which are misbehaving, using the same catalog they already use to find and describe those resources.
@@ -144,6 +148,20 @@ The seven counts of the *UsageActivity* classification each tell a different sto
 
 For example, an asset with a high *findCount* and a low *explicitGetCount* is turning up in searches but is not being chosen - perhaps its description does not make its purpose clear.  An asset with a high *explicitGetCount* but no recent curation may be an important resource whose description is drifting out of date.  A product with growing *updateFeedbackCount* has an engaged community of consumers.
 
+## The Simon Contribution Recorder
+
+The *Simon Contribution Recorder* is named in recognition of [Herbert A. Simon](https://en.wikipedia.org/wiki/Herbert_A._Simon) (1916-2001), whose study of bounded rationality revolutionized how we understand human decision-making.  It is an integration connector (`SimonContributionRecorderConnector`) in the [nanny connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/nanny-connectors){ target=gh } module, and it awards [karma points](/concepts/karma-point) to the people who change open metadata.
+
+Simon follows the same design as Pepys, but its source is the open metadata itself rather than the audit log.  It has no catalog targets: as it starts, it registers a listener with its integration context for the events that report changes to open metadata.
+
+* **Which events count.**  Every event other than a refresh event reports a change, and earns one karma point for the user responsible for it: the user that last updated the element or relationship in the event, or the user that created it if it has not been updated.
+* **Whose changes count.**  The `ignoredUserIdPatterns` configuration property works as it does for Pepys: each pattern is a Java regular expression matched against the whole userId.  The Core Content Pack sets it to `.*npa` and `.*engine`, so that only the contributions of people are recognized.  Simon's own userId is always ignored - each update it makes to a contribution record is reported by an event of its own.
+* **When points are written.**  Points are added to an in-memory tally per userId as the events arrive, and written on each refresh of the connector.  The Core Content Pack sets the refresh interval to 12 minutes.  Any outstanding tally is also written when the connector is disconnected.
+* **How points are added.**  Each user's tally is added to the `karmaPoints` stored in the [ContributionRecord](/types/1/0125-Contribution) attached to their actor profile, which Simon creates if it does not exist.  Users with no actor profile earn nothing.
+* **What happens when a write fails.**  As with Pepys, a failure that retrying will not fix discards the points (SIMON-CONTRIBUTION-RECORDER-0005), and any other failure puts them back for the next refresh (SIMON-CONTRIBUTION-RECORDER-0004).
+
+How the points are awarded, and the audit log messages that report on them, are described in [Organization Insight](/egeria-solutions/organization-insight/overview#how-points-are-awarded).
+
 ## The Babbage Analytical Engine and the Lovelace services
 
 The *Babbage Analytical Engine* is named after [Charles Babbage](https://en.wikipedia.org/wiki/Charles_Babbage), and the analytical services that it drives are named after [Ada Lovelace](https://en.wikipedia.org/wiki/Ada_Lovelace), who wrote the first programs for his Analytical Engine.  The pattern that they follow is described in [Metadata Insight](/patterns/metadata-insight/overview).
@@ -161,12 +179,11 @@ The Lovelace services supplied with Egeria are in the [lovelace-insights :materi
 |--------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|--------------|
 | **Popularity Profiler**                    | The *UsageActivity* of the members of each collection.                      | The [*MemberPopularityProfile*](/types/7/0795-Usage-Activity) classification of the collection.                 | Core |
 | **Zone Membership Profiler**               | The elements in each governance zone.                                       | The [*ZoneMembershipProfile*](/types/4/0424-Governance-Zones) classification of the zone.                       | [Organization Insight](/content-packs/organization-insight-content-pack/overview) |
-| **Karma Point Awards**                     | Changes to open metadata, and the users who make them.                      | [Karma points](/concepts/karma-point) on the contributor's profile.                                             | [Organization Insight](/content-packs/organization-insight-content-pack/overview) |
 | **OpenLineage Run Profiler**               | The runs of each job in the OpenLineage log store.                          | The run profile (frequency, regularity, duration, failure rate, data volume) in the [*RunMetrics*](/types/2/0215-Software-Components) classification of the job's process. | [Open Lineage](/content-packs/open-lineage-content-pack/overview) |
 | **OpenLineage Data Scope**                 | The writes and reads of each dataset in the OpenLineage log store.          | The write pattern and data collection window in the [*DataScope*](/types/2/0210-Data-Stores) classification of the dataset's asset. | [Open Lineage](/content-packs/open-lineage-content-pack/overview) |
 | **OpenLineage Data Quality Summary**       | The data quality assertions and tests in the OpenLineage log store.         | A [survey report](/concepts/survey-report) per dataset (and per job) with the pass rate of each quality dimension. | [Open Lineage](/content-packs/open-lineage-content-pack/overview) |
 
-The Karma Point Awards service is the long-running watchdog; the others are governance action services that run on each Babbage refresh.  The three OpenLineage services turn the logs and runtime metrics of the data pipelines into an operational view of the processes and data sets, and are described in detail in [Leveraging Open Lineage](/egeria-solutions/leveraging-open-lineage/overview).
+Each of these is a governance action service, so it runs once on each Babbage refresh.  (Karma points were awarded by a long-running Lovelace watchdog action service before release 6.3; they are now awarded by the [Simon Contribution Recorder](#the-simon-contribution-recorder).)  The three OpenLineage services turn the logs and runtime metrics of the data pipelines into an operational view of the processes and data sets, and are described in detail in [Leveraging Open Lineage](/egeria-solutions/leveraging-open-lineage/overview).
 
 !!! summary "Usage"
     Babbage and the Lovelace services take observations that only make sense as a series - a month of runs, every member of a collection, the whole content of a zone - and reduce them to a summary that is stored where it is needed: on the element it describes.
@@ -231,7 +248,7 @@ Taken together, these observers augment the open metadata elements with an opera
 | *RunMetrics*                  | Processes                                              | Lovelace OpenLineage Run Profiler   | How often does this job run, how long does it take, how often does it fail? |
 | *DataScope*                   | Data assets                                            | Lovelace OpenLineage Data Scope     | Is this data rebuilt or accumulated, and what period does it cover? |
 | Survey report                 | Data assets and processes                              | Lovelace OpenLineage Data Quality Summary | What proportion of this data's quality checks pass?     |
-| Karma points                  | Contributors' profiles                                 | Lovelace Karma Point Awards         | Who is contributing to open metadata?                         |
+| Karma points                  | Contributors' profiles                                 | Simon Contribution Recorder         | Who is contributing to open metadata?                         |
 
 Since these are ordinary classifications, they are returned in the header of the element by any of the [Open Metadata View Services](/services/omvs) and can be used to sort, filter and highlight elements in tools such as a catalog or a product marketplace.  They are also published along with the rest of the open metadata by the Jacquard Digital Product Loom, in the observability product families described in [Harvest and Publish](/patterns/harvest-and-publish/overview), so that the operational view is available to analysts and AI applications as subscribed data.
 
@@ -242,8 +259,8 @@ Since these are ordinary classifications, they are returned in the header of the
 
 The components are supplied in the content packs and need only to be loaded and run:
 
-* The [Core Content Pack](/content-packs/core-content-pack/overview) defines the Pepys Activity Observer (in the *OpenMetadataObservability* [integration group](/concepts/integration-group)), the OMAG Server Platform Cataloguer configured to pass the audit log topics to Pepys, the Babbage Analytical Engine (in the *Babbage* integration group), and the Lovelace Popularity Profiler registered with Babbage.
-* The [Organization Insight Content Pack](/content-packs/organization-insight-content-pack/overview) adds the Karma Point Awards and Zone Membership Profiler services.
+* The [Core Content Pack](/content-packs/core-content-pack/overview) defines the Pepys Activity Observer (in the *OpenMetadataObservability* [integration group](/concepts/integration-group)), the OMAG Server Platform Cataloguer configured to pass the audit log topics to Pepys, the Simon Contribution Recorder (also in the *OpenMetadataObservability* integration group), the Babbage Analytical Engine (in the *Babbage* integration group), and the Lovelace Popularity Profiler registered with Babbage.
+* The [Organization Insight Content Pack](/content-packs/organization-insight-content-pack/overview) adds the Zone Membership Profiler service.
 * The [Open Lineage Content Pack](/content-packs/open-lineage-content-pack/overview) adds the three OpenLineage analysis services.
 
 For usage activity to be observed, each metadata access server must write its audit log to a topic (so that Pepys can listen to it), and the OMAG Server Platforms must be catalogued (so that the cataloguer can find the topics).  An [integration daemon](/concepts/integration-daemon) runs the integration groups, and an [engine host](/concepts/engine-host) runs the governance engines that host the Lovelace services.

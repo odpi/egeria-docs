@@ -322,8 +322,6 @@ Linking the duplicates is a best-effort operation: the caller's request is alrea
 
 ### The Mendel Automated Duplicate Manager
 
---8<-- "snippets/content-status/tech-preview.md"
-
 The Mendel Automated Duplicate Manager is an [integration connector](/concepts/integration-connector) that manages the duplicate links and classifications that the retrieval processing depends on.  It is named in recognition of the work on inheritance by [Gregor Mendel](https://en.wikipedia.org/wiki/Gregor_Mendel), since the [survivorship rules](#survivorship-rules) decide which properties a combined element inherits in much the same way.
 
 It is defined in the [core content pack](/content-packs/core-content-pack/overview) and runs in its own [integration group](/concepts/integration-group), so all that is needed to start it is to configure an [integration daemon](/concepts/integration-daemon) with that group.

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
---8<-- "snippets/content-status/tech-preview.md"
+--8<-- "snippets/content-status/stable.md"
 
 # Open Watchdog Framework (OWF)
 
@@ -25,7 +25,7 @@ The simplest form of monitoring points a watchdog action service at either a sin
 
 --8<-- "snippets/connectors/watchdog-governance-action-service-intro.md"
 
-The [Generic Element Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-element-watchdog-governance-action-service.md){ target=gh } and [Generic Folder Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-folder-watchdog-governance-action-service.md){ target=gh } governance action services are concrete, ready-to-configure examples of this pattern - the second is simply the first, pre-configured to watch a folder's `DataFile` assets.  Both accept a governance action process qualified name for each kind of event they should react to (see the [`WatchdogRequestParameter`](#reference-data) values below), and can either watch for a single occurrence and stop, or keep watching indefinitely.  They still run as OGF governance action services today, making them exactly the kind of long-running-in-a-short-running-framework case the OWF split is intended to resolve; new instance/type watching should be built directly against OWF's `WatchdogActionServiceConnector`.
+The [Generic Element Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-element-watchdog-governance-action-service.md){ target=gh } and [Generic Folder Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-folder-watchdog-governance-action-service.md){ target=gh } watchdog action services are concrete, ready-to-configure examples of this pattern - the second is simply the first, pre-configured to watch a folder's `DataFile` assets.  Both accept a governance action process qualified name for each kind of event they should react to (see the [`WatchdogRequestParameter`](#reference-data) values below).  They are built on OWF's `WatchdogActionServiceConnector` and run in the *EgeriaWatchdog* [watchdog action engine](/concepts/watchdog-action-engine): its `watch-for-element-change` request type watches for a single occurrence and stops, `watch-for-element-changes` keeps watching indefinitely, and `watch-for-new-files-in-folder` watches the files in a folder.
 
 ### Watching through a notification type
 

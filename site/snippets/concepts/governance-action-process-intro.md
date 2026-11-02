@@ -14,7 +14,7 @@ In the two examples below, each of the rounded boxes represent a governance acti
 
 The governance actions in example 1 are all implemented using [governance action services](/concepts/governance-action-service).  When these services complete, they supply a completion status.  If a service completed successfully, they optionally supply one or more guards and a list of [action targets](/concepts/action-target) for the subsequent governance action(s) to process.  
 
-The first governance action in example 1 is called when a new asset is created.  For example the [Generic Element Watchdog Governance Action Service](/connectors/governance-action/generic-element-watchdog-governance-action-service) could be configured to monitor for new/refresh events for particular types of assets and initiate this governance process then this type of event occurs.
+The first governance action in example 1 is called when a new asset is created.  For example the [Generic Element Watchdog Action Service](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-element-watchdog-governance-action-service.md) could be configured to monitor for new/refresh events for particular types of assets and initiate this governance process then this type of event occurs.
 
 The first governance action to run is *Validate Asset*.  It retrieves the asset and tests that it has the expected classifications assigned.  The guards it produces control with actions follow.
 

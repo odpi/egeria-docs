@@ -32,7 +32,6 @@ The interfaces for governance action services is defined in the [governance-acti
 The [Governance Services Connectors](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors) implement common functions for governing your open metadata ecosystem.
 This includes:
 
-* The **Generic Element Watchdog Governance Action Service** listens for changing metadata elements and initiates governance action processes when certain events occur.
 * The **Origin Seeker Governance Action Service**  walks backwards through the lineage relationships to discover the origin of the data asset.
 * The **Zone Publisher Governance Action Service** updates the zone membership on the target action assets.
 

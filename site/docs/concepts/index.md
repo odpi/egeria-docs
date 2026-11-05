@@ -58,6 +58,7 @@
 - [Certification Type](/concepts/governance-definition)
 - [Classification](/concepts/open-metadata-instances)
 - [Classification Explorer OMVS](/services/omvs/classification-explorer/overview)
+- [Classification Purpose](/concepts/classification-purpose)
 - [Client-side Secret](/concepts/client-side-secret)
 - [Cloud Platform](/concepts/cloud-platform)
 - [Cloud Provider](/concepts/cloud-platform)
@@ -424,6 +425,7 @@
 - [Promise Classification](/concepts/promise)
 - [Provenance of metadata](/features/metadata-provenance/overview)
 - [Purpose](/concepts/data-processing-description)
+- [Purpose of a classification](/concepts/classification-purpose)
 - [Purpose of a relationship](/concepts/relationship-purpose)
 - [pyegeria](/concepts/pyegeria)
 

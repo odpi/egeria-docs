@@ -21,11 +21,14 @@ The *CalculatedValue* classification contains the *formula* attribute which is s
 
 ## DerivedSchemaTypeQueryTarget relationship
 
-The *DerivedSchemaTypeQueryTarget* relationship identifies the schema elements that are queried to generate all or part of the value for the attribute at end 1.
+The *DerivedSchemaTypeQueryTarget* relationship identifies the schema elements that are queried to generate all or part of the value for the attribute at end 1.  It is a subtype of [*LineageRelationship*](/types/0/0010-Base-Model/#lineagerelationship-relationship), so it is part of the lineage graph.
 
 * *query* - Query used to extract data, can include placeholders.
 * *queryId* - Placeholder for a query.
 * *queryType* - Type of query used to extract data.
-* *iscQualifiedName* - Unique name for the associated Information Supply Chain.
+* *label* - Short summary of the relationship (inherited).
+* *description* - Description of the relationship (inherited).
+* *iscQualifiedName* - Unique name for the associated Information Supply Chain (inherited).
+* *derivation* - Where the relationship came from, if it was derived rather than asserted (inherited).
 
 --8<-- "snippets/abbr.md"

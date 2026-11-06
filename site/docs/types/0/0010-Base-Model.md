@@ -192,6 +192,8 @@ Its subtypes are:
 * The [*DataMapping*](/types/7/0770-Lineage-Mapping) relationship, which shows data being copied from one schema element to another.
 * The [*DigitalProductDependency*](/types/7/0710-Digital-Products) relationship, which records that one [digital product](/concepts/digital-product) consumes data from another, and so forms the [data mesh](/concepts/data-mesh).
 * The [*ActionRequester*](/types/0/0013-Actions) relationship, which links an action to the element that requested it.
+* The [*DataSetContent*](/types/2/0210-Data-Stores) relationship, which links a data set to the data it is built from.
+* The [*DerivedSchemaTypeQueryTarget*](/types/5/0512-Derived-Schema-Elements) relationship, which links a derived schema type to the schema elements its values are queried from.
 
 ## DataLineageRelationship relationship
 

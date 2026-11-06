@@ -344,6 +344,7 @@ A record of action that took place.  There are 12 relationship types with this p
 !!! education "Further information"
 
     - [Anchor](/concepts/anchor) describes the anchor grouping.
+    - [Classification Purpose](/concepts/classification-purpose) describes the purposes of the classification types.
     - [Relationship Category](/concepts/uni-multi-link) describes the cardinality rules for relationships.
     - [Cascade Delete](/concepts/cascade-delete) describes deleting a hierarchy of independent elements.
 

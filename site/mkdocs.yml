@@ -797,6 +797,7 @@ nav:
       - Cascade Delete: concepts/cascade-delete.md
       - Catalog Target: concepts/catalog-target.md
       - Catalog Template: concepts/catalog-template.md
+      - Classification Purpose: concepts/classification-purpose.md
       - Client-side Secret: concepts/client-side-secret.md
       - Cloud Platforms and Services: concepts/cloud-platform.md
       - Cohort Events: concepts/cohort-events.md

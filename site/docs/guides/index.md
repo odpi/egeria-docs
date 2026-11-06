@@ -7,6 +7,7 @@ Egeria's guides provide practical guidance on different aspects of using Egeria 
 
 --8<-- "snippets/getting-started.md"
 
+* [User Interfaces](/user-interfaces) - Egeria provides a number of user interfaces that can be used to interact with the metadata repository.  These user interfaces are designed to help you understand and manage the metadata in your repository.
 * [Planning Guide](/guides/planning) - The planning guide describes how to plan your Egeria installation and the development of the metadata definitions that will drive its use.  Part of this planning process makes use of the following catalogs:
 
     * [Content Pack Catalog](/content-packs) - the content pack catalog provides detailed information about the content packs available for Egeria.  These content pack provide metadata to bootstrap your deployment.

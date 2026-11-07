@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
 
@@ -44,11 +39,11 @@ This is a statement of the specification, made before any implementing schema ex
 
 ## SchemaAttributeDefinition relationship
 
-Link between a data field and the identified schema attribute definition.
+Link between a data field and the identified schema attributes that it describes.
 
 ## SchemaTypeDefinition relationship
 
-Link between a data structure and an equivalent schema type.
+Link between a data structure and equivalent schema types.
 
 
 --8<-- "snippets/abbr.md"

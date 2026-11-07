@@ -4,21 +4,22 @@
 
 # 0239 Reports
 
-Reports described assembled information about a particular topic. It can be linked to the process that created it, the elements it describes, and other related reports.
+Reports described assembled information about a particular topic. It can be linked to the process that created it, the elements it describes, and other related reports.  Reports can be generated from [report specifications](/types/5/0582-Report-Specifications).
 
 ![UML](0239-Reports.svg)
 
-## ReportType entity
+## Dashboard entity
 
-The *ReportType* entity is the template for generating a report - the definition that reports are produced from.  It is a specialized [data specification](/types/5/0580-Data-Dictionaries) collection, so the content of the report is described using data structures and data fields in the same way as the data requirements for any other digital service.  It has the following attributes:
+A *Dashboard* is a [DataSet](0210-Data-Stores.md) that is a collection of reports.  It provides the layout information so that the display of the embedded reports is logical and easy to follow.
 
-* *createdTime* - the time the report type was created.
-* *lastModifiedTime* - the time the report type was last modified.
-* *lastModifier* - the userId of the last person to modify the report type.
+* *aliases* - alternative names for the dashboard that can be used when searching for it.
+* *refreshTimeInterval* - how often, in minutes, the dashboard should refresh the data displayed in its reports.
+* *layoutStyle* - the style of layout used to arrange the reports on the dashboard, such as a grid, a set of tabs or a single column.
+
 
 ## Report entity
 
-The *Report* entity describes an instance of a populated report.  It has the following attributes:
+The *Report* entity is a [DataSet](0210-Data-Stores.md) that describes an instance of a populated report.  It has the following attributes:
 
 * *purpose* - purpose of the report.
 * *authors* - userIds of the report authors.
@@ -28,6 +29,8 @@ The *Report* entity describes an instance of a populated report.  It has the fol
 * *createdTime* - the time the report was created.
 * *lastModifiedTime* - the time the report content was last modified.
 * *lastModifier* - the userId of the last person to modify the report.
+* *reportParameters* - parameters used to create the report - typically a JSON String.
+* *outputFormat* - the format used for the content of the report.
 
 Egeria supports three specialized reports:
 
@@ -58,6 +61,6 @@ The *ReportDependency* relationship links a report to another related report.  T
 
 ## Form entity
 
-The *Form* entity is a structure used to request new data.
+The *Form* entity is a [DataSet](0210-Data-Stores.md) that organizes a request for new data.
 
 --8<-- "snippets/abbr.md"

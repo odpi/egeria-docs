@@ -26,9 +26,19 @@ A *SavedQuery* entity is a [DataSet](/types/2/0210-Data-Stores) that provides th
 
 ## SmartQuery relationship
 
-The *SmartQuery* relationship connects a **SavedQuery** entity to a **ResultSet** entity.  This indicates that the result set is populated by the saved query.
+The *SmartQuery* relationship connects a **SavedQuery** entity to a **ResultsSet** entity.  This indicates that the result set is populated by the saved query.
 
 * *label* - the label for the query.
 * *description* - the description for the query.
+
+## ReportRunOf relationship
+
+The *ReportRunOf* relationship connects a **Report** entity to a **ResultsSet** entity.  This indicates that the result set was used to generate the report.
+
+* *label* - the label for the report run.
+* *description* - the description for the report run.
+* *resultState* - status of the results.
+* *resultStateReason* - reason for the resultState.
+* *resultLocation* - where are the results stored.
 
 --8<-- "snippets/abbr.md"

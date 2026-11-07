@@ -71,6 +71,7 @@ The next set of modes are for the specification of data structures.
 
 * **[0580 Data Dictionaries](0580-Data-Dictionaries.md)**
 * **[0581 Data Field Implementation](0581-Data-Field-Implementation.md)**
+* **[0582 Report Specifications](0582-Report-Specifications.md)**
 
 The final set of models capture architectures and patterns.
 

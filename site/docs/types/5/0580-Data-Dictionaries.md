@@ -1,7 +1,3 @@
----
-hide:
-- toc
----
 
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the ODPi Egeria project. -->
@@ -43,25 +39,13 @@ A data field that identifies a record may carry the [*PrimaryKey*](/types/5/0581
 
 The *ObjectIdentifier* classification indicates that a data item is typically used as a unique identifier.  It is typically attached to a data field.
 
-## DataDictionary Entity
+## DataDictionary entity
 
 Identifies that a [collection](/types/0/0021-Collections) is a [data dictionary](/concepts/data-dictionary).  This is an organized collection of defined data fields that can be used as a knowledge base of preferred data definitions for data professionals.
 
-## DataSpec Entity
+## DataSpec entity
 
 Identifies that this is a [collection](/types/0/0021-Collections) is a [data specification](/concepts/data-specification) that describes the data requirements for a project or initiative.  Its members are typically [data structures](/concepts/data-structure).
-
-## ReportType entity
-
-The *ReportType* entity describes a report design.  It specifies the schema (structure) of the data that will be assembled in a populated report.  It has the following attributes:
-
-* creationTime - the time the report type was created.
-* lastModificationTime - the time the report type content was last modified.
-* lastModifier - the userId of the last person to modify the report type.
-
-* *createdTime* - Report create time.
-* *lastModifiedTime* - Report last modified time.
-* *lastModifier* - UserId of the report last modifier.
 
 ## DataStructure entity
 

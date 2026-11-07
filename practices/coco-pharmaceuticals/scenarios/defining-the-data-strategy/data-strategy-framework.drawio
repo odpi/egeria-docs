@@ -1,0 +1,55 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="iFQB_Bcti5ncTvJsRZzT">
+    <mxGraphModel dx="1222" dy="829" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rotation=-90;fontStyle=1;shadow=1;" value="Multi-faceted Governance" vertex="1">
+          <mxGeometry height="75" width="410" x="137.5" y="367.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;shadow=1;" value="Data-enabled employees" vertex="1">
+          <mxGeometry height="60" width="245" x="395" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;shadow=1;" value="Continuous analytics and AI" vertex="1">
+          <mxGeometry height="60" width="245" x="395" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#7EA6E0;fontStyle=1;shadow=1;" value="Authoritative Sources&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="245" x="395" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;shadow=1;" value="Optimized information supply chains" vertex="1">
+          <mxGeometry height="60" width="245" x="395" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;shadow=1;" value="Data-driven systems architecture" vertex="1">
+          <mxGeometry height="60" width="245" x="395" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;shadow=1;" value="Common data definitions" vertex="1">
+          <mxGeometry height="60" width="245" x="395" y="551" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Individuals who understand the the value that data brings to their role, make effective use of data in fulfilling their role and acting responsibly to ensure this data is properly managed." vertex="1">
+          <mxGeometry height="30" width="340" x="660" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Effective development, evaluation and use of analytics and AI throughout the operation of the organization." vertex="1">
+          <mxGeometry height="30" width="330" x="660" y="287" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Identified and managed data sources containing the best information about a particular topic." vertex="1">
+          <mxGeometry height="30" width="320" x="660" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Optimized and managed flow of governed data between the systems and tools used throughout the organization that delivers the right information where and when it is needed." vertex="1">
+          <mxGeometry height="30" width="330" x="660" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Systems and infrastructure to support the sharing of data." vertex="1">
+          <mxGeometry height="30" width="320" x="660" y="497" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Shared understanding of what concepts and their related mean, how they are structure and what the expected range of values are." vertex="1">
+          <mxGeometry height="30" width="320" x="660" y="564" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-16" edge="1" parent="1" source="FHVkp_6ADSdfsL2FtqdJ-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="FHVkp_6ADSdfsL2FtqdJ-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHVkp_6ADSdfsL2FtqdJ-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Integrated approach and methods across all governance domains" vertex="1">
+          <mxGeometry height="30" width="220" x="370" y="650" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

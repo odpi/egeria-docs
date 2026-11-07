@@ -1,0 +1,386 @@
+# STRIDE Threat Model - [System Name]
+
+> **Author:** [Your name]
+> **Version:** 1.0
+> **Status:** DRAFT
+> **Date:** [YYYY-MM-DD]
+> **Description:** A STRIDE threat model of [System Name], written as Dr.Egeria commands so that the system model, threats, risks and mitigations are loaded into Egeria.
+
+---
+
+## How to use this template
+
+This template follows the steps of the [Threat Modelling](https://egeria-project.org/egeria-solutions/threat-modelling/overview/) solution.  Work through it from top to bottom:
+
+1. **Model the system** - describe the components being reviewed, the actors (legitimate and malicious) that interact with them, and the data flows between them.  If the components are already in Egeria (for example from an information supply chain), skip the *Create Solution Component* commands and use their qualified names in the links.
+2. **Record the risks** - for each component, work through the six STRIDE categories using the questions below.  Each concrete way that a threat could affect the component is a risk, rated for likelihood and impact, linked to its STRIDE threat and scoped to the component.
+3. **Record the mitigations** - each control that reduces a risk, linked to the risk it addresses.
+
+The six STRIDE threats are already defined in Egeria's Core Content Pack, which every Egeria server loads, so this template refers to them rather than creating them:
+
+| STRIDE category | Qualified name |
+|---|---|
+| Spoofing | `Threat::STRIDE::Spoofing` |
+| Tampering | `Threat::STRIDE::Tampering` |
+| Repudiation | `Threat::STRIDE::Repudiation` |
+| Information disclosure | `Threat::STRIDE::InformationDisclosure` |
+| Denial of service | `Threat::STRIDE::DenialOfService` |
+| Elevation of privilege | `Threat::STRIDE::ElevationOfPrivilege` |
+
+The mitigations can be your organization's own controls, or controls from a standard catalog such as NIST SP 800-53, which is available in Egeria's Security Content Pack (for example `NIST SP 800-53 Rev 5::AC-2`).
+
+Replace every value in square brackets.  Copy a command block (from `___` to `---`) as many times as you need - for example, once per component, per actor, per data flow, per risk and per control.  Text outside the command blocks, like this section, is ignored by Dr.Egeria, so it can be used for notes from the review.
+
+Set `[Org]` to your organization's prefix for qualified names (for example `CocoPharma`), and `[Model]` to a short name for this model with no spaces.
+
+Validate the file before processing it:
+
+```
+dr_egeria --validate stride-threat-model.md
+dr_egeria --process stride-threat-model.md
+```
+
+### STRIDE questions
+
+| Category | Ask of each component and data flow | Typical mitigations |
+|---|---|---|
+| **S**poofing | Could an actor pretend to be another user, component or system?  How are callers authenticated? | Authentication, protecting and rotating secrets, removing obsolete identities |
+| **T**ampering | Could data or software be changed without authorization - at rest, in transit or in the build pipeline? | Authorization, hashes and signatures, secure storage, tamper-resistant protocols |
+| **R**epudiation | Could someone deny an action because there is no reliable record of who did it? | Audit trails, timestamps, digital signatures |
+| **I**nformation disclosure | Could data be read by someone who should not see it - including configuration, credentials and logs? | Authorization, encryption, data minimization, protecting secrets |
+| **D**enial of service | Could the component be made unavailable, or starve others of resources? | Throttling, quotas, redundancy, quality of service |
+| **E**levation of privilege | Could an actor gain more access than they were granted? | Least privilege, privilege separation, role-based access control |
+
+Consider all the kinds of data a component handles: configuration data, authentication data, persistent data, data in transit, session or state data, and temporary data.
+
+---
+
+## Part 1: The system model
+
+### 1.1 The blueprint for this review
+
+___
+
+## Create Solution Blueprint
+
+### Display Name
+[System Name] Threat Model
+
+### Qualified Name
+[Org]::SolutionBlueprint::ThreatModel::[Model]
+
+### Description
+[The scope of this threat model - which part of the system is being reviewed, and why.]
+
+### Purpose
+Threat model of [System Name] using the STRIDE method.
+
+### Authors
+- [Your name]
+
+### Version Identifier
+1.0
+
+### Content Status
+DRAFT
+
+___
+
+---
+
+### 1.2 Components
+
+Repeat for each component being reviewed.  Nest components inside a boundary component (a network zone, a host, a cloud tenancy) with *Link SubComponent* to show the trust boundaries.
+
+___
+
+## Create Solution Component
+
+### Display Name
+[Component Name]
+
+### Qualified Name
+[Org]::SolutionComponent::[Component]
+
+### Description
+[What the component does, what data it holds or processes, and how sensitive that data is.]
+
+### Solution Component Type
+[For example: Data Storage, Software Service, User Interface, Multi-Step Process]
+
+### Authors
+- [Your name]
+
+### Version Identifier
+1.0
+
+### Content Status
+DRAFT
+
+___
+
+---
+
+___
+
+## Link Solution Component to Blueprint
+
+### Blueprint
+[Org]::SolutionBlueprint::ThreatModel::[Model]
+
+### Component1
+[Org]::SolutionComponent::[Component]
+
+### Membership Rationale
+[Why this component is in scope for the review.]
+
+### Membership Status
+VALIDATED
+
+___
+
+---
+
+### 1.3 Actors
+
+Create one role for each kind of legitimate user and one for each kind of attacker that you want to consider - for example an external attacker, a malicious insider and a compromised supplier.
+
+___
+
+## Create Solution Role
+
+### Display Name
+[Actor Name - for example External Attacker]
+
+### Qualified Name
+[Org]::SolutionRole::[Actor]
+
+### Description
+[Who or what this actor is, what they want, and what access they start with.]
+
+### Role Domain Identifier
+Security
+
+### Authors
+- [Your name]
+
+### Version Identifier
+1.0
+
+### Content Status
+DRAFT
+
+___
+
+---
+
+___
+
+## Link Actor to Blueprint
+
+### Blueprint
+[Org]::SolutionBlueprint::ThreatModel::[Model]
+
+### Solution Role
+[Org]::SolutionRole::[Actor]
+
+### Membership Rationale
+[Why this actor is considered in the review.]
+
+### Membership Status
+VALIDATED
+
+___
+
+---
+
+___
+
+## Link Component to Actor
+
+### Component1
+[Org]::SolutionComponent::[Component]
+
+### Solution Role
+[Org]::SolutionRole::[Actor]
+
+### Label
+[How the actor interacts with the component - for example: uses, administers, attacks]
+
+### Description
+[The entry point the actor uses, and the access they have.]
+
+___
+
+---
+
+### 1.4 Data flows
+
+Repeat for each flow of data between components.  Flows that cross a trust boundary deserve the closest attention.
+
+___
+
+## Link Solution Components
+
+### Component1
+[Org]::SolutionComponent::[Component]
+
+### Component2
+[Org]::SolutionComponent::[Other Component]
+
+### Label
+[Name of the flow]
+
+### Data Exchanged
+[What data travels over this flow.]
+
+### Protocol
+[For example: REST/HTTPS, JDBC, SFTP, Kafka]
+
+### Description
+[Whether the flow crosses a trust boundary, and how it is authenticated and protected.]
+
+___
+
+---
+
+## Part 2: The risks
+
+Repeat this group of three commands for each risk found.  Name the risk after what could happen, not after the category - for example "Stolen administrator password used to change patient records".
+
+Record the likelihood and impact in the description, and the overall rating in *Importance* (for example Low, Medium, High or Critical).  The implications are what would need to be true for the organization to say it has responded.
+
+___
+
+## Create Risk
+
+### Display Name
+[What could happen]
+
+### Qualified Name
+[Org]::Risk::[Model]::[Risk]
+
+### Domain Identifier
+Security
+
+### Summary
+[One sentence describing the risk.]
+
+### Description
+**Likelihood:** [Low / Medium / High] - [why]. **Impact:** [Low / Medium / High / Critical] - [why]. **Overall rating:** [rating].
+
+### Implications
+- [What must be true to mitigate this risk]
+
+### Importance
+[Low / Medium / High / Critical]
+
+### Category
+[STRIDE category - for example Spoofing]
+
+### Authors
+- [Your name]
+
+### Version Identifier
+1.0
+
+### Content Status
+DRAFT
+
+___
+
+---
+
+___
+
+## Link Governance Response
+
+### Driver
+Threat::STRIDE::[Spoofing / Tampering / Repudiation / InformationDisclosure / DenialOfService / ElevationOfPrivilege]
+
+### Policy
+[Org]::Risk::[Model]::[Risk]
+
+### Rationale
+[How this STRIDE threat gives rise to the risk for this component.]
+
+___
+
+---
+
+___
+
+## Link Element To Scope
+
+### Target Element
+[Org]::Risk::[Model]::[Risk]
+
+### Scope Reference
+[Org]::SolutionComponent::[Component]
+
+### Label
+threatened-component
+
+### Description
+[Why this component is exposed to the risk.]
+
+___
+
+---
+
+## Part 3: The mitigations
+
+Repeat for each control that reduces a risk.  A control can be linked to more than one risk.  If the control already exists - for example in your security strategy, or in a standard catalog loaded from the Security Content Pack - skip *Create Governance Control* and use its qualified name in the link.
+
+___
+
+## Create Governance Control
+
+### Display Name
+[Control Name]
+
+### Qualified Name
+[Org]::GovernanceControl::[Control]
+
+### Domain Identifier
+Security
+
+### Summary
+[What the control does.]
+
+### Implementation Description
+[How and where the control is implemented, and who is responsible for it.]
+
+### Authors
+- [Your name]
+
+### Version Identifier
+1.0
+
+### Content Status
+DRAFT
+
+___
+
+---
+
+___
+
+## Link Governance Mechanism
+
+### Policy
+[Org]::Risk::[Model]::[Risk]
+
+### Mechanism
+[Org]::GovernanceControl::[Control]
+
+### Rationale
+[How the control reduces the likelihood or impact of the risk.]
+
+___
+
+---
+
+----
+License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
+Copyright Contributors to the ODPi Egeria project.

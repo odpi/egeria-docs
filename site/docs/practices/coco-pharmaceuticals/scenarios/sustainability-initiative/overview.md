@@ -64,16 +64,22 @@ When they next meet, Erin shows them the list of governance domains operating in
 
 She also showed them the governance definitions that Jules and Reggie had created as a result of the board meeting.
 
-There was a *business imperative* to protect Coco Pharmaceuticals from global instability, and linked to that was a *governance principle* to operate Coco Pharmaceuticals in an increasingly sustainable way.
+There was:
 
-![Governance Drivers for Sustainability](governance-drivers.svg)
+- a **Threat** - *The price of ignoring sustainability*. Increasingly, financial institutions are viewing organizations with a lack of focus in sustainability as a poor risk for the future.
+- a **Business Imperative** - *Protecting Coco Pharmaceuticals from global instability*. Climate change is upon us. Natural resources are being depleted at an alarming rate and some are becoming difficult, if not impossible, to obtain. Coco needs to be actively monitoring its operations ensuring it keeps pace with leaner operations and use of sustainable resources. This is important for operational resilience, and avoiding reputational damage for being a polluter.
+- a **Regulation** - *Corporate Sustainability Reporting Directive (CSRD)*. Details of the types of reporting that organizations must produce for sustainability.
 
-Erin said they need to define how they want to structure the sustainability program.  She also showed Tom the types of approaches both the [Data Governance](/practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview) and [Security](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview) teams have created.
+and linked to that was a **Governance principle** to operate Coco Pharmaceuticals in an increasingly sustainable way.
+
+![Governance Drivers for Sustainability](initial-sustainability-governance-definitions.png)
 
 ???+ info "Governance Definitions"
     Governance drivers and principles are types of [governance definitions](/concepts/governance-definition). Governance definitions are used to record precise requirements, decisions, intents around governance to help people understand what is being asked of them, why, and how their activity will be measured.
 
     You can browse the governance definitions using [egeria-explorer](/user-interfaces/egeria-explorer/overview) under the **Governance Definitions** tile.  They are organized by type and can be filtered by  **domainIdentifier**.  Setting up a new governance definition is through the [Governance Officer API](/services/omvs/governance-officer/overview).
+
+Erin said they need to define how they want to structure the sustainability program.  She also showed Tom the types of approaches both the [Data Governance](/practices/coco-pharmaceuticals/scenarios/creating-data-governance-program/overview) and [Security](/practices/coco-pharmaceuticals/scenarios/building-a-data-security-strategy/overview) teams have created.
 
 Tom offered to come up with an initial plan, and they would meet the next day to discuss it.
 
@@ -90,9 +96,7 @@ There are three main parts to it:
 
 * Build a sustainability community to education and inspire people across the company on their role in the company's sustainability imperative.
 * Using existing data collected by the business, create a sustainability dashboard that can be used to show their current position.  Over time, it would allow them to track the progress of the initiative.
-* Run an initiative to reduce the use of CFCs in refrigeration units.
-
-![Governance Approach](governance-approach.svg)
+* Run an initiative to remove the use of CFCs in refrigeration units.
 
 Reggie and Jules agreed with the approach, and the team moved on to the implementation plan.
 

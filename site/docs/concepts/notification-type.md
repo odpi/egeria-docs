@@ -33,11 +33,26 @@ The *NotificationSubscriber* relationship is a [multi-link](/concepts/uni-multi-
 
 Left unchecked, a monitored situation that recurs frequently produces a flood of notifications that recipients quickly learn to ignore.  The notification type therefore carries properties that shape the delivery:
 
-* *multipleNotificationsPermitted* - whether more than one notification should be sent when the situation recurs.
-* *minimumNotificationInterval* - the shortest permitted gap between notifications, in minutes.
-* *nextScheduledNotification* - used for periodic subscriptions, where notifications are sent on a schedule rather than being driven by a monitored resource.  (The *notificationInterval* property that was used alongside it is deprecated from release 6.2.)
+* *multipleNotificationsPermitted* - whether more than one notification should be sent when the situation recurs.  When it is false, each subscriber is notified once.
+* *minimumNotificationInterval* - the shortest permitted gap between notifications, in minutes.  Its effect depends on whether the notification type has monitored resources:
+    * **With monitored resources**, notifications are triggered by changes to those resources, and *minimumNotificationInterval* limits how often they are sent.
+    * **Without monitored resources**, the notification type is periodic: its subscribers are notified each time *minimumNotificationInterval* has passed.
+* *lastNotification* - when the subscribers were last notified.  It is the starting point for the next *minimumNotificationInterval*.
+* *nextScheduledNotification* - for information only: the earliest time the next notification may be sent.  It is not used to decide whether to send one.
 * *notificationCount* - how many notifications have been triggered.
-* *plannedStartDate* and *plannedCompletionDate* - the period during which the notification type is intended to be active.
+* *plannedStartDate* and *plannedCompletionDate* - the period during which the notification type is intended to be active.  Nothing is sent before the planned start date.  Once the planned completion date has passed, the notification type is made obsolete the next time it notifies its subscribers, and sends nothing more.
+
+The *notificationInterval* property, deprecated in release 6.2, was removed in release 6.3.
+
+## Subscription types
+
+A [digital product](/concepts/digital-product)'s subscription types are notification types serviced by a subscription manager - by default, the Baudot Subscription Manager.  The [Product Manager API](/services/omvs/product-manager/overview) creates three kinds:
+
+* **One-time** subscription types notify each subscriber once (*multipleNotificationsPermitted* is false).
+* **Periodic** subscription types have no monitored resources, so they notify their subscribers each time *minimumNotificationInterval* passes.
+* **Ongoing update** subscription types monitor resources, typically the product's asset, and notify their subscribers when one changes, no more often than *minimumNotificationInterval*.
+
+An ongoing update subscription type is only registered with the subscription manager once it has at least one monitored resource.  Without one, the subscription manager could not tell it from a periodic subscription type, and would notify its subscribers every time its interval passed.  A product family's ongoing update subscription types monitor the product assets of the family's members, so they are registered once a member with a product asset has been catalogued.
 
 ???+ info "Additional information"
     * The *NotificationType* type and its relationships are described in [Model 0451 Notifications](/types/4/0451-Notifications).

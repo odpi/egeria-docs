@@ -33,7 +33,7 @@ The richer form of monitoring is built around a [*NotificationType*](/types/4/04
 
 - The resource, or resources, to monitor - linked via the *[MonitoredResource](/types/4/0451-Notifications#monitoredresource-relationship)* relationship.
 - The subscribers that should be told when the situation occurs - linked via the *[NotificationSubscriber](/types/4/0451-Notifications#notificationsubscriber-relationship)* relationship.  A subscriber can hold more than one subscription to the same notification type at once, each independently tracked through its own [activity status](/types/0/0010-Base-Model).
-- How often notifications should be sent - a single occurrence, on a schedule (*nextScheduledNotification*), or throttled so subscribers aren't overwhelmed (*minimumNotificationInterval*).
+- How often notifications should be sent - a single occurrence (*multipleNotificationsPermitted* is false), or no more often than *minimumNotificationInterval*.  A notification type without monitored resources is periodic, and notifies its subscribers each time the interval passes; one with monitored resources is triggered by changes to them, and the interval stops subscribers being overwhelmed.
 
 When the watchdog action service detects the situation the notification type describes, it works through the current subscribers and, for each one, creates a *[Notification](/types/1/0135-Actions-For-People#notification-entity)* - an action assigned to that subscriber describing what has happened.  A subscriber's relationship to the notification type is updated as this happens, so it is always possible to see who has been told, and who hasn't.
 

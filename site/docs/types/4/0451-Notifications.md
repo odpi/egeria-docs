@@ -13,10 +13,9 @@ The *NotificationType* entity describes a situation or event.  It is linked to r
 
 * *plannedStartDate* - the date that the notification type is planned to become active.
 * *multipleNotificationsPermitted* - flag to indicate whether multiple notifications should be sent to the notification subscribers when the situation/event occurs.
-* *minimumNotificationInterval* - the minimum time, in minutes, between notifications that should be sent to the notification subscribers when the situation/event occurs.
-* *notificationInterval* - **deprecated in release 6.2**.  It put the schedule for periodic notifications on the notification type itself.  Whether a notification may be sent is now assessed from *minimumNotificationInterval* and *nextScheduledNotification*, together with each subscriber's own state.  The attribute is retained so that existing instances can still be read.
+* *minimumNotificationInterval* - the minimum time, in minutes, between notifications that should be sent to the notification subscribers when the situation/event occurs.  For a notification type with no monitored resources, this is the period: the subscribers are notified each time it passes.
 * *lastNotification* - records the last time a notification was sent to a subscriber.
-* *nextScheduledNotification* - the time when the next notification is expected. Used for periodic subscriptions.  Will be null if one or more resources are being monitored.
+* *nextScheduledNotification* - for information only: the earliest time that the next notification may be sent, set after each notification when there is a *minimumNotificationInterval*.  It is not used to decide whether to send a notification.
 * *notificationCount* - the number of notifications that have been triggered. The notification is sent only to the notification subscribers that are in the correct state.
 * *plannedCompletionDate* - the date that the notification type is planned to become inactive.
 

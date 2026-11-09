@@ -29,9 +29,20 @@ The solution blueprint makes the architecture visible to a broader audience, and
     The solution blueprint can be viewed through [Egeria Explorer](/user-interfaces/egeria-explorer/overview) either through the **Solution Architect** card or **Collections** card and selecting **Strategic Solutions**.
     ![Viewing the solution blueprint](viewing-solution-blueprint.png)
 
+## Defining the data sharing hub
+
+The solution blueprint served it purpose.  It was greeted with enthusiasm by the business owners, and they agreed that Erin and Peter should move to the next level of detail.  
+
+The coco data hub itself is implemented in Egeria by an element of type [DataSharingHub](/concepts/data-sharing-hub).  When [data stores](/types/2/0210-Data-Stores) such as database and file system assets are linked to the data sharing hub, Egeria begins to manage the metadata associated with these data stores.  The aim is to invest in the cataloguing and management a collection of high-value data stores that can be used by the business units to share data with other business units.
+
+Erin added a database, file folder and a catalogue in Unity Catalog to provide the storage for data in the data sharing hub.
+
+The next step is to design how data flows into and out of the coco data hub.
+
+
 ## New AI practices
 
-Building the data pipelines and data models for the data driven systems architecture is a large development project.  [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) has been reading about the benefits of using AI for data integration work.  This included:
+Building the data pipelines and data models for the data-driven systems architecture is a large development project.  [Polly Tasker](/practices/coco-pharmaceuticals/personas/polly-tasker) has been reading about the benefits of using AI for data integration work.  This included:
 
 * Using AI to understand the data
 * Using AI to understand the business rules

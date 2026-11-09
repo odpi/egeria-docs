@@ -57,6 +57,8 @@ A relationship type that has no purpose of its own uses the purpose of its neare
 
 The purpose groups the relationships around an element by meaning: what it is made of, what is attached to it, who and what governs it, and where it runs.  User interfaces and tools can read it from the type definition to lay out or filter a view of the element.
 
+Egeria's own [Mermaid graphs](/user-interfaces/mermaid/overview#element-graphs) use it this way.  The context graph returned with each element leaves out the relationships whose purpose is ACTION or ACTIVITY, so it does not keep growing as the element is worked on.  Those relationships are drawn in two separate graphs: the action graph and the activity graph.
+
 ## Relationship types by purpose
 
 Each relationship type links to the page of the type model that defines it.

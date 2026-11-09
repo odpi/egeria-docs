@@ -7,6 +7,20 @@ Egeria visualizes collections of related metadata elements as graphs using Merma
 [Mermaid](https://mermaid.js.org/) is a markdown extension for representing diagram using structured text that can then be rendered in a JavaScript environment.  Selected [Open Metadata View Services (OMVSs)](/services/omvs) REST API calls return a Mermaid markdown string that can be used to render a visual representation of the elements returned on the same request.  
 
 
+## Context, action and activity graphs
+
+Many requests return their elements as an *OpenMetadataRootElement*, which carries the element's properties, its header, the relationships attached to it and the elements at the other end of them.  Each of these comes with Mermaid graphs that draw the element and its relationships.  The relationships are split between three graphs by their [relationship purpose](/concepts/relationship-purpose), which is the purpose Egeria's type system declares for the relationship's type.  A relationship type added by an extension archive takes the purpose of its nearest Egeria super type, and is drawn in the context graph if it has none:
+
+| Graph | What it shows |
+|-------|---------------|
+| `mermaidGraph` | The **context** graph.  The element with every relationship (and the elements it links to, along with any further nested elements) **except** those whose purpose is *Action* or *Activity*.  It shows what the element is, what it is made of, what is attached to it, and how it is governed and deployed. |
+| `actionMermaidGraph` | The element with the relationships attached to it whose purpose is *Action*, such as the targets of a governance action, or the subscribers to a notification, together with any elements nested below them.  Its title includes *Actions*.  It is null if there are no such relationships. |
+| `activityMermaidGraph` | The element with the relationships attached to it whose purpose is *Activity*, such as the record of the actions that have been requested of, or taken on, the element, together with any elements nested below them.  Its title includes *Activity*.  It is null if there are no such relationships. |
+
+Action and activity relationships accumulate as the ecosystem works: every governance action, request for action and recorded action adds more.  Keeping them out of the context graph means that the context graph stays a stable, readable picture of the element's structure however busy the element becomes, while the action and activity graphs show what is happening to it.  Elements that are only reached through action or activity relationships appear only in those graphs.
+
+The context graph also shows how the element was found (its *relatedBy* relationship, when it was returned from a query that followed a relationship), and the hierarchy for elements returned with one.
+
 ## Asset graphs
 
 [Asset Catalog OMVS](/services/omvs/asset-catalog/overview) supports a REST API called *getAssetGraph(assetGUID)* which returns a graph of metadata elements that begins with the requested asset, and includes all the elements anchored to it, along with all the relationships that are attached to the requested asset and all its anchored elements.  In addition it returns a Mermaid string that can be used to visualise this structure.  Below is a screen capture of a rendered asset.

@@ -104,17 +104,28 @@ The products are grouped into families:
 | Reference Data Sets | An extract per reference data set managed in open metadata. |
 | Open Metadata Types | Perspectives on the type system itself: the types, their attributes (including inherited ones), the properties and the data types. |
 | Actors, Places and Products | The master data of the ecosystem - organizations, people, locations and digital products. |
+| Organization Structure | The [business capabilities](/concepts/business-capability) of the organization, its departments (the [teams](/concepts/team) that make up each organization's structure, with the team each one reports to and the organization at the top), and which departments support each business capability. |
 | Survey Reports | The insight produced by [surveys](/concepts/survey-report): the reports, their annotations, requests for action, and the measurements collected from relational data managers, schemas, tables and columns, files, folders, resources and profiles. |
 | Organization Observability | Insight into the activity of the organization as observed through the open metadata ecosystem. |
 | Governance Observability | Governance controls, exceptions, certifications and licenses. |
 | IT Operations Observability | The operational health of the infrastructure supporting the ecosystem, such as the software servers catalogued in open metadata. |
-| Security Observability | The security settings supporting the ecosystem. |
-| Secrets Observability | The secrets stores and secrets collections known to the ecosystem. |
-| User Observability | The user identities and user accounts known to the ecosystem. |
+| Security Observability | The security settings supporting the ecosystem.  This family and the four below it are [restricted to the security team](#products-restricted-to-the-security-team). |
+| Secrets Observability | The secrets stores and secrets collections known to the ecosystem, with a profile of the user accounts in each collection.  The secrets themselves are never published. |
+| User Observability | The user identities known to the ecosystem, with their actor profiles and security groups and roles, and the user accounts each secrets collection defines for them. |
 | Governance Zone Observability | Zone membership totals and profiles, showing what each [governance zone](/concepts/governance-zone) controls the visibility of. |
-| Service Observability | The servers, services and operations supporting the ecosystem, from a security perspective. |
+| Service Observability | The servers, services and operations supporting the ecosystem, from a security perspective.  (No products yet.) |
 
 Some families are populated dynamically: Jacquard generates a product for each valid metadata value set and each reference data set it finds, so the catalog grows with the ecosystem rather than needing to be redefined.
+
+### Products restricted to the security team
+
+The products in the Security Observability family describe the secrets stores, user accounts and governance zones that protect the ecosystem.  That information is useful to an attacker, so these products are hidden from everyone except the security team.  Three things work together to do this:
+
+* **The security zone.**  Each of these products is a member of the `security` [governance zone](/features/governance-zoning/overview), and only people and services that have access to that zone can see it.  The [fail-closed zone rule](/features/governance-zoning/overview#access-control-through-governance-zones) means that nobody can see the product unless the zone's access control lets them.  For everyone else the product does not appear in searches or browsing at all, so they cannot tell that it exists.
+* **Anchoring.**  Jacquard sets the zones only on the product itself.  The product's asset (where its data is read from), its subscription processes, its notification types and its data specification are all [anchored](/concepts/anchor) to the product.  The product's zones are copied to the *Anchors* classification of each of them and kept up to date whenever the product's zones change.  So the data and the means of subscribing to it are exactly as hidden as the product.  If a product's zones change in its definition, Jacquard applies the change on its next refresh.
+* **The license.**  A member of the security team who subscribes is granted the *Highly Sensitive - Security Team Only* license.  It allows the data to be used only by the security team, and the systems they operate, to audit, monitor and protect the organization's systems.  The data must not be shared, copied or reported outside the security team (including to other teams in the organization), or combined with data that others can access.  Copies must be stored only where the security team alone has access, such as resources in the security zone, and deleted when no longer needed, and any suspected disclosure must be reported to the security team at once.
+
+The user accounts product publishes the accounts that the *OMAG Server Platform Cataloguer* records: a *UserAccount* relationship from each secrets collection to the user identity, with the account's security groups and roles.  The secrets stores and secrets collections products describe the stores and collections the cataloguers have recorded.  None of these products reads a secrets store, so no secret can reach a subscriber.
 
 ### Subscriptions and delivery
 

@@ -85,6 +85,18 @@ The messages are defined in the [metadata-observability :material-github:](https
 
 The creation of an anchor element is not counted, since creation says nothing about how much the element is used.  Message 0007 is not written when the anchor element itself is deleted - there is nothing left to count against.
 
+### One record for each request
+
+A request from a user usually passes through more than one server: a view server receives it and calls a metadata access server, which may call others, and each of them retrieves elements to do its work.  So that the counts reflect what the user asked for rather than how the request was carried out, the activity messages are written once for each external request:
+
+* **REST calls (0010).**  The servers pass a request identifier with each call they make on behalf of a request.  When a server on the same platform receives a call carrying the identifier of a request that the platform is already processing, it knows the call is part of that request and writes no 0010 of its own.  Only the server that received the external request writes it.
+* **Retrievals (0002 and 0003).**  An element that is anchored to another observed anchor element is reported against its anchor only (0003), and not against itself as well, even if its own type is an observed anchor type.  For example, an *EngineAction* is reported against the *GovernanceActionProcessInstance* it belongs to.  Each anchor element is reported at most once for each request, however many of the servers involved retrieve it or its attachments.
+
+Retrieving one element therefore writes one 0010 and one 0002 or 0003.  Two kinds of activity are still counted more than once:
+
+* A call to a server on a different OMAG Server Platform cannot be recognised as part of the same request, so that server writes its own 0010.
+* Searches are counted per result: each element returned writes 0008, and the anchor of each returned element writes 0009 once for each search.  An element anchored to another observed element is therefore counted against both.
+
 The audit log records are routed to the destinations configured for each server by its [audit log destination connectors](/concepts/audit-log-destination-connector).  For observability, the destination that matters is an [open metadata topic](/concepts/open-metadata-topic-connector): the records are published as events, which is how the Pepys Activity Observer receives them.
 
 ## The Pepys Activity Observer

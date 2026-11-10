@@ -73,6 +73,6 @@ The repository for a Metadata Access Store may be connected to a conformance tes
     This configuration document is stored by a [configuration document store connector](/concepts/configuration-document/#storage).
 
     - [Configuring an OMAG Server](/guides/admin/servers)
-    - [Start and stop an OMAG Server](/guides/operations/overview/#starting-and-stopping-an-omag-server)
+    - [Start and stop an OMAG Server](/guides/operations/overview#operating-servers)
 
 --8<-- "snippets/abbr.md"

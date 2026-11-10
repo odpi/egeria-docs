@@ -94,7 +94,7 @@ UserNotAuthorizedException{userId='OMAGServer', reportedHTTPCode=400, reportingC
 	at java.base/java.lang.Thread.run(Thread.java:829)
 ```
 
-There is more information on [metadata provenance here](/features/metadata-provenance).
+There is more information on [metadata provenance here](/features/metadata-provenance/overview).
 
 ## The connectors for the platform are built at the wrong level
 

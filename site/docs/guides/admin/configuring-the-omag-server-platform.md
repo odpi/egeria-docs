@@ -68,7 +68,7 @@ The implementation of the two platform connectors can be specified in the `appli
 * The [configuration document store connector](/concepts/configuration-document-store-connector) manages the storage and retrieval of [configuration documents](/concepts/configuration-document) - one for each OMAG server.
 * The [platform metadata security connector](/concepts/platform-metadata-security-connector) authorizes calls to the [Administration Services](/services/admin-services/overview) that maintain the configuration documents as well as the [Platform Services](/services/platform-services/overview) that control the platform when it is running.
 
-If these connectors are specified in the `application.properties` file, they are activated as part of the platform start up - assuming the JAR file(s) containing the implementation of the specified connectors is in the classpath.  If these connectors are not specified in the `application.properties` file then each configuration document is stored in its own encrypted file and there is no platform security authorization.  This default may be sufficient for a development environment.  For production the platform should be configured with a platform metadata security connector because this ensures the management of OMAG Server is performed by authorized users.
+If these connectors are specified in the `application.properties` file, they are activated as part of the platform start up - assuming the JAR file(s) containing the implementation of the specified connectors is in the classpath.  If these connectors are not specified in the `application.properties` file then each configuration document is stored in its own clear-text JSON file and there is no platform security authorization.  This default may be sufficient for a development environment.  For production the platform should be configured with a platform metadata security connector because this ensures the management of OMAG Server is performed by authorized users.
 
 ![Ways to configure the OMAG Server Platform - Platform connectors](configurability-of-platform-2.svg)
 > The platform connectors running in the OMAG Server Platform
@@ -76,7 +76,7 @@ If these connectors are specified in the `application.properties` file, they are
 
 #### Configuration document store
 
-The [configuration document](/concepts/configuration-document) is the place where the configuration for a single [OMAG Server](/concepts/omag-server) is stored. This may include security certificates and passwords.  By default, the configuration document is stored in its own encrypted file under the working directory of the [OMAG Server Platform](/concepts/omag-server-platform), named:
+The [configuration document](/concepts/configuration-document) is the place where the configuration for a single [OMAG Server](/concepts/omag-server) is stored. This may include security certificates and passwords.  By default, the configuration document is stored as clear-text JSON in its own file under the working directory of the [OMAG Server Platform](/concepts/omag-server-platform), named:
 
 ```text
 ./data/servers/{serverName}/config/{serverName}.config
@@ -84,7 +84,7 @@ The [configuration document](/concepts/configuration-document) is the place wher
 You may wish to:
 
 - Move the location of the configuration documents.
-- Change the storage of the configuration documents to clear text.
+- Protect the configuration documents, for example by restricting access to the directory or by writing a connector that encrypts them.  Egeria does not supply an encrypting store, so the [Security Guide](/guides/security/overview#keeping-secrets-out-of-configuration-documents) describes how to keep the passwords out of the files.
 - Write you own alternative store for the configuration documents.
 
 All of these options are possible because the configuration document store is implemented in a [configuration document store connector](/concepts/configuration-document/#storage). It is therefore possible to change the implementation or behavior of this connector with a simple configuration change to the OMAG Server Platform.
@@ -234,12 +234,12 @@ As a Spring application, the OMAG Server Platform's configuration for its networ
 
 | Property | Use |
 |---|---|
-| `server.ssl-key-store` | Used by Tomcat/Spring Boot to locate keys that identify the server |
-| `server.ssl-key-alias` | Used by Tomcat/Spring Boot to identify the alias of the key tomcat should use for itself |
+| `server.ssl.key-store` | Used by Tomcat/Spring Boot to locate keys that identify the server |
+| `server.ssl.key-alias` | Used by Tomcat/Spring Boot to identify the alias of the key tomcat should use for itself |
 | `server.ssl.key-store-password` | Used by Tomcat/Spring Boot for the keystore password (2 way SSL) |
 | `server.ssl.trust-store` | Used by Tomcat/Spring Boot to understand what clients it can trust (2 way SSL) |
 | `server.ssl.trust-store-password` | Used by Tomcat/Spring Boot  for the password of the truststore (2 way SSL) |
-| `strict.ssl` | This is an additional parameter Egeria provides (non-standard Spring property) which if `true` causes SSL verification to be skipped entirely |
+| `strict.ssl` | This is an additional parameter Egeria provides (non-standard Spring property).  It defaults to `true`; setting it to `false` causes SSL verification of outbound calls to be skipped entirely |
 
 For further details on these and other less common configuration options, refer to the Spring Docs.
 
@@ -255,7 +255,7 @@ Standard Java properties need to be set within the JVM running the Egeria client
 | `javax.net.ssl.keyStorePassword` | password for the keystore  (2 way SSL needs this) |
 | `javax.net.ssl.trustStore` | trustStore for the client to use (always needs setting as Egeria makes client calls) |
 | `javax.net.ssl.trustStorePassword` | password for the truststore (always - as above) |
-| `strict.ssl` | For any executable jars provided by Egeria (such as samples), setting this additional parameter to `true` will cause SSL verification to be skipped. This is only recommended for test and development. |
+| `strict.ssl` | For any executable jars provided by Egeria (such as samples), setting this additional parameter to `false` will cause SSL verification to be skipped (the default is `true`). This is only recommended for test and development. |
 
 Note that in the case of Java clients, these are system properties, and do not use Spring conventions.
 
@@ -319,7 +319,7 @@ When the OMAG Server Platform is running with its own user directory (`authentic
 
 Two properties in the `application.properties` file control the bearer tokens that this service issues:
 
-* `rsa.key-id` - the key used to control the encryption of the bearer token.  If it is not set, a new random key is generated each time the platform starts.  This means that tokens issued by an earlier run of the platform - or by another platform - are not accepted.  Set it to a fixed value if you need tokens to survive a platform restart, or to be recognized by more than one platform.
+* `rsa.key-id` - the key identifier (`kid`) placed in the header of each bearer token.  If it is not set, a random identifier is used.  The RSA key pair that signs the tokens is always generated afresh each time the platform starts, whatever the value of this property.  This means that tokens issued by an earlier run of the platform - or by another platform - are never accepted, and callers must log on again after a restart.
 * `bearerTokenTimeout` - the number of hours that an issued bearer token remains valid for.  Once this time has passed, the caller must log on again to obtain a new token.  If the property is not set, the default of 1 hour is used.  A value that is not a positive number of hours, such as `0`, is not valid: the platform logs a warning and uses the default as if the property was not set.  A value that is not a number at all stops the platform from starting.
 
 These are the default values for the OMAG Server Platform.

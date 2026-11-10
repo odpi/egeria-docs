@@ -110,12 +110,12 @@ Each entry in `RegisteredOMAGService` details:
 It is possible to validate whether a specific connector's implementation is included in the OMAG Server Platform's classpath by using the getConnectorType method.  This takes the class name of the connector's provider class.  It tries to create an instance of the connector and returns it supported connector type.
 
 ??? example "Example: Retrieving a connector type"
-    The example retrieves the connector type for the Coco Pharmaceutical's sample platform metadata security connector whose connector provider class is `org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider`.
+    The example retrieves the connector type for the Open Metadata Access Security Connector, which the quickstart uses as its platform metadata security connector.  Its connector provider class is `org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider`.
 
     === "Java"
     
         ```java linenums="1"
-        ConnectorType connectorType = platformServicesClient.getConnectorType(clientUserId, "org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider");
+        ConnectorType connectorType = platformServicesClient.getConnectorType(clientUserId, "org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider");
         ```
         [Javadoc for ConnectorType](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/connectors/properties/beans/ConnectorType.html)
     
@@ -123,7 +123,7 @@ It is possible to validate whether a specific connector's implementation is incl
     
         !!! post "getConnectorType"
             ```
-            POST {{platformURLRoot}}/open-metadata/platform-services/users/{{user}}/server-platform/connector-types/org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider
+            POST {{platformURLRoot}}/open-metadata/platform-services/users/{{user}}/server-platform/connector-types/org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider
             ```
         Returns
         ```json
@@ -143,7 +143,7 @@ It is possible to validate whether a specific connector's implementation is incl
                 "qualifiedName": "Egeria:Sample:PlatformSecurity:CocoPharmaceuticals",
                 "displayName": "Coco Pharmaceuticals Platform Security Connector",
                 "description": "Connector supports a hard-coded user registry and authorization rules for Coco Pharmaceuticals.",
-                "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider",
+                "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider",
                 "connectorFrameworkName": "Open Connector Framework (OCF)",
                 "connectorInterfaceLanguage": "Java",
                 "connectorInterfaces": [
@@ -341,7 +341,7 @@ Security is configured for a specific platform once it is running by using the f
     	    "connectorType": 
     	    {
     	        "class": "ConnectorType",
-    	        "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider"
+    	        "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider"
     	    }
         }
     }
@@ -375,7 +375,7 @@ It is possible to query the setting of the platform security connector using the
                 "class": "Connection",
                 "connectorType": {
                     "class": "ConnectorType",
-                    "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.samples.CocoPharmaPlatformSecurityProvider"
+                    "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider"
                 }
             }
         }

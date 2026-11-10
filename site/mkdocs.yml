@@ -242,11 +242,12 @@ nav:
           - Platform Logging JSON Example: guides/admin/omag-server-platform-logging-jsonexample.md
           - Transport Level Security (TLS): guides/admin/omag-server-platform-transport-level-security.md
       - Operations Guide:
-          - Operate OMAG Server Platform: guides/operations/overview.md
+          - Operating Egeria: guides/operations/overview.md
           - Starting and Stopping an OMAG Server: guides/operations/starting-and-stopping-omag-server.md
           - OMAG Server Starter: guides/operations/operate-omag-server-starter.md
           - Adding an Archive to a Running Server: guides/operations/adding-archive-to-running-server.md
           - Platform Origin Service: guides/operations/server-platform-origin-service.md
+      - Monitoring and Tuning Guide: guides/monitoring/overview.md
       - Diagnostic Guide:
           - Diagnostic Process: guides/diagnostic/overview.md
           - Diagnostic Sources: guides/diagnostic/diagnostic-sources.md
@@ -262,6 +263,8 @@ nav:
           - Server Diagnostic Guides:
               - Integration Daemon: guides/diagnostic/integration-daemon-diagnostic-guide.md
               - Metadata Access Server: guides/diagnostic/metadata-access-server-diagnostic-guide.md
+              - PostgreSQL and Kafka: guides/diagnostic/postgresql-and-kafka-diagnostic-guide.md
+      - Security Guide: guides/security/overview.md
   - Personas and Roles:
         - Overview: practices/coco-pharmaceuticals/personas/index.md
         - Finance and Sales:

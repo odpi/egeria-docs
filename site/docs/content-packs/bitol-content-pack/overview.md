@@ -18,7 +18,7 @@ The content pack defines the *BitolIntegrationGroup* and registers six integrati
 | Bitol Data Product Cataloguer | Catalogs each ODPS document as a *DigitalProduct* with *SolutionPort*s for its input and output ports. |
 | Bitol Data Contract Cataloguer | Catalogs each ODCS document as an *Agreement* classified as a *DataSharingAgreement*, with its schema, quality rules, service levels, servers and security roles. |
 | Bitol Document Publisher | Generates ODPS and ODCS documents from the digital products and data sharing agreements in open metadata whenever they change, and for the members of the *DigitalProductCatalog*s attached as catalog targets. |
-| Bitol File Store | Writes every document published in the integration daemon to the file system (by default `logs/bitol`), organized by kind, identifier and version, ready to be committed to a git repository. |
+| Bitol File Store | Writes every document published in the integration daemon to the file system (by default `distribution-hub/bitol` under the platform's working directory), organized by kind, identifier and version, ready to be committed to a git repository. |
 
 The receivers, cataloguers, publisher and store are linked through the integration daemon's Bitol listener mechanism in the same way as the [Open Lineage connectors](/content-packs/open-lineage-content-pack/overview).  Documents may also be published to the daemon through its REST API and through the [Product Manager OMVS](/services/omvs/product-manager/overview).
 

@@ -61,8 +61,8 @@ it is also fulfilling a **network client** role.
 As a spring application, the OMAG Server Platform's configuration for it's network server role allows the following spring properties
 to be set:
 
-* `server.ssl-key-store`                Used by tomcat/spring boot to locate keys that identify the server
-* `server.ssl-key-alias`                Used by tomcat/spring boot to identify the alias of the key tomcat should use for itself
+* `server.ssl.key-store`                Used by tomcat/spring boot to locate keys that identify the server
+* `server.ssl.key-alias`                Used by tomcat/spring boot to identify the alias of the key tomcat should use for itself
 * `server.ssl.key-store-password`       Used by tomcat/spring boot for the keystore password (2 way SSL)
 * `server.ssl.trust-store`              Used by tomcat/spring boot to understand what clients it can trust (2 way SSL)
 * `server.ssl.trust-store-password`     Used by tomcat/spring boot  for the password of the truststore (2 way SSL)

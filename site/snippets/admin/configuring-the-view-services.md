@@ -16,82 +16,56 @@ To get a description of each of the view services that are supported by an [OMAG
         ```
         
         ??? success "Response from listing registered view services"
+            The response from the quickstart platform lists 40 view services.  Four are shown here.
+
             ```json
             {
                 "class": "RegisteredOMAGServicesResponse",
                 "relatedHTTPCode": 200,
                 "services": [
                     {
-                        "serviceId": 800,
-                        "serviceName": "Glossary Author OMVS",
-                        "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                        "serviceURLMarker": "glossary-author",
-                        "serviceDescription": "View Service for glossary authoring.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/glossary-author/overview"
-                    },
-                    {
-                        "serviceId": 803,
-                        "serviceName": "Dynamic Infrastructure and Operations OMVS",
-                        "serviceDevelopmentStatus": "TECHNICAL_PREVIEW",
-                        "serviceURLMarker": "dino",
-                        "serviceDescription": "Explore and operate an open metadata ecosystem.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/dino/overview"
-                    },
-                    {
-                        "serviceId": 801,
-                        "serviceName": "Repository Explorer OMVS",
-                        "serviceDevelopmentStatus": "TECHNICAL_PREVIEW",
-                        "serviceURLMarker": "rex",
-                        "serviceDescription": "Explore open metadata instances.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/rex/overview"
-                    },
-                    {
-                        "serviceId": 806,
-                        "serviceName": "Glossary Manager OMVS",
-                        "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                        "serviceURLMarker": "glossary-manager",
-                        "serviceDescription": "Create glossary terms and organize them into categories as part of a controlled workflow process. It supports the editing glossary and multiple states.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/glossary-manager/overview/"
-                    },
-                    {
-                        "serviceId": 807,
-                        "serviceName": "My Profile OMVS",
-                        "serviceDevelopmentStatus": "IN_DEVELOPMENT",
+                        "serviceId": 207,
+                        "serviceName": "My Profile API",
+                        "serviceDevelopmentStatus": "STABLE",
                         "serviceURLMarker": "my-profile",
                         "serviceDescription": "Manage information about the logged on user as well as their preferences.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/my-profile/overview/"
+                        "serviceWiki": "https://egeria-project.org/services/omvs/my-profile/overview/",
+                        "serverType": "View Server",
+                        "partnerServiceName": "Open Metadata Store Services",
+                        "partnerServerType": "Metadata Access Server"
                     },
                     {
-                        "serviceId": 802,
-                        "serviceName": "Type Explorer OMVS",
-                        "serviceDevelopmentStatus": "TECHNICAL_PREVIEW",
-                        "serviceURLMarker": "tex",
-                        "serviceDescription": "Explore the open metadata types in a repository or cohort.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/tex/overview"
-                    },
-                    {
-                        "serviceId": 804,
-                        "serviceName": "Server Author OMVS",
-                        "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                        "serviceURLMarker": "server-author",
-                        "serviceDescription": "Author server configuration.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/server-author/overview/"
-                    },
-                    {
-                        "serviceId": 805,
-                        "serviceName": "Glossary Browser OMVS",
-                        "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                        "serviceURLMarker": "glossary-browser",
-                        "serviceDescription": "View glossary terms and categories within a glossary.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/glossary-browser/overview/"
-                    },
-                    {
-                        "serviceId": 808,
-                        "serviceName": "Asset Catalog OMVS",
-                        "serviceDevelopmentStatus": "IN_DEVELOPMENT",
+                        "serviceId": 208,
+                        "serviceName": "Asset Catalog API",
+                        "serviceDevelopmentStatus": "STABLE",
                         "serviceURLMarker": "asset-catalog",
                         "serviceDescription": "Search and understand your assets.",
-                        "serviceWiki": "https://egeria-project.org/services/omvs/asset-catalog/overview/"
+                        "serviceWiki": "https://egeria-project.org/services/omvs/asset-catalog/overview/",
+                        "serverType": "View Server",
+                        "partnerServiceName": "Open Metadata Store Services",
+                        "partnerServerType": "Metadata Access Server"
+                    },
+                    {
+                        "serviceId": 209,
+                        "serviceName": "Collection Manager API",
+                        "serviceDevelopmentStatus": "STABLE",
+                        "serviceURLMarker": "collection-manager",
+                        "serviceDescription": "Build collections of asset and other metadata.",
+                        "serviceWiki": "https://egeria-project.org/services/omvs/collection-manager/overview/",
+                        "serverType": "View Server",
+                        "partnerServiceName": "Open Metadata Store Services",
+                        "partnerServerType": "Metadata Access Server"
+                    },
+                    {
+                        "serviceId": 221,
+                        "serviceName": "Privacy Officer API",
+                        "serviceDevelopmentStatus": "STABLE",
+                        "serviceURLMarker": "privacy-officer",
+                        "serviceDescription": "Manage the governance of privacy.",
+                        "serviceWiki": "https://egeria-project.org/services/omvs/privacy-officer/overview/",
+                        "serverType": "View Server",
+                        "partnerServiceName": "Open Metadata Store Services",
+                        "partnerServerType": "Metadata Access Server"
                     }
                 ]
             }
@@ -106,6 +80,9 @@ The values returned for each registered view service are:
 | `serviceURLMarker`             | Returns the unique name for the view service used in REST API URLs to identify a particular view service. |
 | `serviceDescription`           | Returns a short description of the view service to help you choose which ones you want.                   |
 | `serviceWiki`                  | Link to the documentation for the view service.                                                           |
+| `serverType`                   | The type of OMAG Server that runs the view service - always a view server.                                |
+| `partnerServiceName`           | The access service that the view service calls in the metadata access server.                             |
+| `partnerServerType`            | The type of server that hosts the partner service.                                                        |
 
 To activate a specific view service in a view server, add an entry for the view service to the view server's configuration document.
 View services can be configured into a view server either altogether or individually.
@@ -124,7 +101,7 @@ View services can be configured into a view server either altogether or individu
 
 === "configure all view services"
 
-    It is also possible to configurate a set of view services at the same time, using the following command:
+    It is also possible to configure a set of view services at the same time, using the following command:
 
     !!! post "POST - configure multiple view services"
         ```
@@ -133,91 +110,29 @@ View services can be configured into a view server either altogether or individu
 
         Again the request body must contain a `ViewServiceRequestBody` object.  This object is used to configure each of the registered view services.
 
-The `ViewServiceRequestBody` used on either of these requests contains 4 pieces of information:
+The `ViewServiceRequestBody` used on either of these requests contains:
 
 * `omagServerName` - the name of the metadata access server that is to provide the metadata services to the view service.
 * `omagServerPlatformRootURL` - platform URL root where the metadata access server is running.
-* `viewServiceOptions` - optional list of specific options used to configure the behaviour of the view service.
-* `resourceEndpoints` - a list of `ResourceEndpointConfig` objects.  These objects are used to configure dropdowns on calling user interfaces used to select a specific OMAG Server Platform or OMAG Server that the UI is to connect to.  The aim is to control which platforms and servers can be selected.
-
-A resource endpoint describing a platform contains the following properties:
-
-| Property           | Use                                                                   |
-|--------------------|-----------------------------------------------------------------------|
-| `resourceCategory` | required property, set to "Platform".                                 |
-| `platformName`     | required property, a unique name given to a "Platform" resource.      |
-| `platformURLRoot`  | required property, the URL root used to call the "Platform" resource. |
-| `description`      | optional property that is displayed by some view services.            |
-
-A resource endpoint describing an OMAG Server has the following properties:
-
-| Property             | Use                                                                                                                       |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------|
-| `resourceCategory`   | required property, set to "Server"                                                                                        |
-| `platformName`       | required property, a reference to a named "Platform" resource endpoint describing where the "Server" resource is located. |
-| `serverName`         | required property, set to the name of the OMAG Server.                                                                    |
-| `serverInstanceName` | required property, a unique name for the combination of server and platform.                                              | 
-| `description`        | optional property describing the server.                                                                                  |
-
+* `secretsStoreProvider`, `secretsStoreLocation` and `secretsStoreCollection` - the connector provider class name, location and collection name of the [secrets store](/concepts/secrets-store-connector) that holds the credentials the view service uses to obtain a bearer token from the metadata access server.
+* `viewServiceOptions` - optional map of specific options used to configure the behaviour of the view service.
 
 ??? example "Example ViewServiceRequestBody"
 
+    This is the request body used to configure the view services of the default `view-server` configuration.  The values between `~{` and `}~` are placeholders that are replaced when the configuration is built.
+
     ```json
     {
-        "class":"ViewServiceRequestBody",
-        "omagserverName":"active-metadata-store",
-        "omagserverPlatformRootURL":"https://localhost:7443",
-        "resourceEndpoints" : [
-            {
-                "class"              : "ResourceEndpointConfig",
-                "resourceCategory"   : "Platform",
-                "platformName"       : "Platform:7443",
-                "platformRootURL"    : "http://localhost:7443",
-                "description"        : "This is the default OMAG Server Platform."
-            },
-            {
-                "class"              : "ResourceEndpointConfig",
-                "resourceCategory"   : "Server",
-                "platformName"       : "Platform:7443",
-                "serverInstanceName" : "Active Metadata Access Store",
-                "serverName"         : "active-metadata-store",
-                "description"        : "Metadata server with XTDB repository and supporting Apache Kafka notifications."
-            },
-            {
-                "class"              : "ResourceEndpointConfig",
-                "resourceCategory"   : "Server",
-                "platformName"       : "Platform:7443",
-                "serverInstanceName" : "Simple Metadata Access Store",
-                "serverName"         : "simple-metadata-store",
-                "description"        : "Metadata server with in-memory repository and no event notifications."
-            },
-            {
-                "class"              : "ResourceEndpointConfig",
-                "resourceCategory"   : "Server",
-                "platformName"       : "Platform:7443",
-                "serverInstanceName" : "Integration Daemon",
-                "serverName"         : "integration-daemon",
-                "description"        : "Integration daemon supporting the synchronization of metadata with thrid party platfrms and tools."
-            },
-            {
-                "class"              : "ResourceEndpointConfig",
-                "resourceCategory"   : "Server",
-                "platformName"       : "Platform:7443",
-                "serverInstanceName" : "Engine Host",
-                "serverName"         : "engine-host",
-                "description"        : "Engine host server running the AssetSurvey and Asset Governance governance engines."
-            },
-            {
-                "class"              : "ResourceEndpointConfig",
-                "resourceCategory"   : "Server",
-                "platformName"       : "Platform:7443",
-                "serverInstanceName" : "View Server",
-                "serverName"         : "view-server",
-                "description"        : "View server providing REST API support to user interfaces and non-Java environments."
-            }
-        ]
+        "class": "ViewServiceRequestBody",
+        "omagserverName": "active-metadata-store",
+        "omagserverPlatformRootURL": "~{egeriaEndpoint}~",
+        "secretsStoreProvider" : "~{secretsStoreProvider}~",
+        "secretsStoreLocation"  : "~{egeriaServersSecretsStore}~",
+        "secretsStoreCollection" : "~{egeriaServersSecretsCollection}~"
     }
     ```
+
+When all view services are configured with a single call, each registered view service that is not deprecated is added to the configuration document.
 
 It is possible to list the configured view services for a view Server using the following command:
 
@@ -227,7 +142,7 @@ It is possible to list the configured view services for a view Server using the 
     ```
 
 ??? success "Response from listing configured view services"
-    The response will be a `RegisteredOMAGServicesResponse` which contains a list of `RegisteredOMAGService` objects, that will look something like the following:
+    The response will be a `RegisteredOMAGServicesResponse` which contains a list of `RegisteredOMAGService` objects - one for each configured view service.  It will look something like the following:
 
     ```json
     {
@@ -235,80 +150,31 @@ It is possible to list the configured view services for a view Server using the 
         "relatedHTTPCode": 200,
         "services": [
             {
-                "serviceId": 800,
-                "serviceName": "Glossary Author OMVS",
-                "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                "serviceURLMarker": "glossary-author",
-                "serviceDescription": "View Service for glossary authoring.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/glossary-author/overview"
-            },
-            {
-                "serviceId": 803,
-                "serviceName": "Dynamic Infrastructure and Operations OMVS",
-                "serviceDevelopmentStatus": "TECHNICAL_PREVIEW",
-                "serviceURLMarker": "dino",
-                "serviceDescription": "Explore and operate an open metadata ecosystem.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/dino/overview"
-            },
-            {
-                "serviceId": 801,
-                "serviceName": "Repository Explorer OMVS",
-                "serviceDevelopmentStatus": "TECHNICAL_PREVIEW",
-                "serviceURLMarker": "rex",
-                "serviceDescription": "Explore open metadata instances.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/rex/overview"
-            },
-            {
-                "serviceId": 806,
-                "serviceName": "Glossary Manager OMVS",
-                "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                "serviceURLMarker": "glossary-manager",
-                "serviceDescription": "Create glossary terms and organize them into categories as part of a controlled workflow process. It supports the editing glossary and multiple states.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/glossary-manager/overview/"
-            },
-            {
-                "serviceId": 807,
-                "serviceName": "My Profile OMVS",
-                "serviceDevelopmentStatus": "IN_DEVELOPMENT",
+                "serviceId": 207,
+                "serviceName": "My Profile API",
+                "serviceDevelopmentStatus": "STABLE",
                 "serviceURLMarker": "my-profile",
                 "serviceDescription": "Manage information about the logged on user as well as their preferences.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/my-profile/overview/"
+                "serviceWiki": "https://egeria-project.org/services/omvs/my-profile/overview/",
+                "serverType": "View Server",
+                "partnerServiceName": "Open Metadata Store Services",
+                "partnerServerType": "Metadata Access Server"
             },
             {
-                "serviceId": 802,
-                "serviceName": "Type Explorer OMVS",
-                "serviceDevelopmentStatus": "TECHNICAL_PREVIEW",
-                "serviceURLMarker": "tex",
-                "serviceDescription": "Explore the open metadata types in a repository or cohort.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/tex/overview"
-            },
-            {
-                "serviceId": 804,
-                "serviceName": "Server Author OMVS",
-                "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                "serviceURLMarker": "server-author",
-                "serviceDescription": "Author server configuration.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/server-author/overview/"
-            },
-            {
-                "serviceId": 805,
-                "serviceName": "Glossary Browser OMVS",
-                "serviceDevelopmentStatus": "IN_DEVELOPMENT",
-                "serviceURLMarker": "glossary-browser",
-                "serviceDescription": "View glossary terms and categories within a glossary.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/glossary-browser/overview/"
-            },
-            {
-                "serviceId": 808,
-                "serviceName": "Asset Catalog OMVS",
-                "serviceDevelopmentStatus": "IN_DEVELOPMENT",
+                "serviceId": 208,
+                "serviceName": "Asset Catalog API",
+                "serviceDevelopmentStatus": "STABLE",
                 "serviceURLMarker": "asset-catalog",
                 "serviceDescription": "Search and understand your assets.",
-                "serviceWiki": "https://egeria-project.org/services/omvs/asset-catalog/overview/"
+                "serviceWiki": "https://egeria-project.org/services/omvs/asset-catalog/overview/",
+                "serverType": "View Server",
+                "partnerServiceName": "Open Metadata Store Services",
+                "partnerServerType": "Metadata Access Server"
             }
         ]
     }
     ```
+
 It is also possible to retrieve the full configuration for the view services.  This contains the additional information provided by the platform.
 
 === "Retrieving a specific view service's configuration"
@@ -324,7 +190,7 @@ It is also possible to retrieve the full configuration for the view services.  T
 
     !!! get "GET - retrieve current configuration for all configured view services"
         ```
-        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services
+        {{platformURLRoot}}/open-metadata/admin-services/servers/{{serverName}}/view-services/configuration
         ```
 
     This will return a `ViewServicesResponse` which will contain a list of `ViewServiceConfig` objects.

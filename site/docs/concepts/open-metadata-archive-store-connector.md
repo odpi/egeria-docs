@@ -29,7 +29,7 @@ Egeria provides two implementations of the open metadata archive store connector
     - [Metadata Archiving](/features/metadata-archiving/overview) to understand the different mechanisms that use open metadata archives.
     - [Open Metadata Archives](/concepts/open-metadata-archive) to understand structure of an open metadata archive.
     - [Writing a Open Metadata Archive Store Connector](/guides/developer/runtime-connectors/open-metadata-archive-store-connector).
-    - [Loading an Open Metadata Archive at server statup](/guides/admin/servers/by-section/repository-services-section/#configuring-the-open-metadata-archives-to-load-on-server-startup)
+    - [Loading an Open Metadata Archive at server startup](/guides/admin/servers/by-section/repository-services-section)
     - [Loading an Open Metadata Archive in a running server](/guides/operations/adding-archive-to-running-server)
 
 

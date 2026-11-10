@@ -16,6 +16,7 @@ Access to open metadata is provided via a *context* object defined by the [Open 
 - A [client for each type of open metadata element](/guides/developer/integration-connectors/integration-context/#the-open-metadata-clients) that can create, update, classify, link and delete metadata, along with the retrieval methods needed to compare open metadata with the metadata in the third party technology.
 - The ability to create a [digital resource connector](/concepts/digital-resource-connector) for an asset so that the third party technology can be called.
 - Support for [external identifiers](/features/external-identifiers/overview), [templates](/features/templated-cataloguing/overview) and [external source metadata provenance](/features/metadata-provenance/overview).
+- The ability to publish and receive [open lineage](/features/lineage-management/overview) events, and Bitol data contract and data product documents, between the connectors running in the same integration daemon.
 - Utilities such as the file classifier, the directory listeners and the name case converters.
 
 !!! attention "The integration services have been removed"

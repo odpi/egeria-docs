@@ -10,30 +10,26 @@ hide:
 
 # Lineage Modeling
 
-The open integration framework supports the following services for its hosted [integration connectors](/concepts/integration-connector):
+The [Open Integration Framework (OIF)](/frameworks/oif/overview) supports the following services for its hosted [integration connectors](/concepts/integration-connector):
 
-- Registering a listener for [OpenLineage events](/features/lineage-management/overview/#openlineage-standard) received either:
-    - through the integration daemon's OpenLineage REST API or 
+- Registering a listener for [OpenLineage events](/features/lineage-management/overview/#the-open-lineage-standard) received either:
+    - through the integration daemon's `publish-open-lineage-event` REST API (also available through the [Runtime Manager API](/services/omvs/runtime-manager/overview)), or
     - published by other integration connectors running in the same integration daemon.
-    
-- Registering a listener for events from the Open MEtadata Services OutTopic. These events notify the integration connector of any changes to open metadata elements (entities) that are visible through the Asset Manager OMAS.  These events can be used to drive the publishing of lineage information to third party technologies.
 
-- Publishing OpenLineage events to other integration connectors running in the same integration daemon that have registered a listener for these events.
+- Registering a listener for events from the open metadata ecosystem.  These events notify the integration connector of any changes to open metadata elements that are visible to it.  They can be used to drive the publishing of lineage information to third party technologies.
 
-- Cataloguing lineage information from a third party technology.  Specifically this include process structure, ports, schemas and the data assets they are working with.
+- Publishing OpenLineage run, job and dataset events to other integration connectors running in the same integration daemon that have registered a listener for these events.
 
-It has an external REST API with two operations:
+- Cataloguing lineage information from a third party technology.  Specifically this includes process structure, ports, schemas and the data assets they are working with.  The lineage relationships themselves are maintained through the `LineageClient` returned by the integration context's `getLineageClient()` method.
 
-- Validate whether a connector implementation is an integration connector that will run in the integration daemon.
+The details of these calls are described in [the integration context](/guides/developer/integration-connectors/integration-context/#open-lineage).
 
-- Receive an *OpenLineage event* from a third party.
-
-Both of these REST APIs are callable through the [Runtime Manager API](/services/omvs/runtime-manager/overview).
+The open metadata types used to represent lineage are described in [0750 Data Passing](/types/7/0750-Data-Passing), [0760 Business Lineage](/types/7/0760-Business-Lineage) and [0770 Lineage Mapping](/types/7/0770-Lineage-Mapping).
 
 
 !!! education "Further information"
     - [Lineage Management](/features/lineage-management/overview) describes how to set up Egeria to capture, steward, preserve and use lineage.
-    - [Writing an Integration Connector](/guides/developer/integration-connectors) describes how to wrote your own integration connectors for the Lineage Integrator OMAS.
+    - [Building integration connectors](/guides/developer/integration-connectors) describes how to write your own integration connectors.
 
 
 --8<-- "snippets/abbr.md"

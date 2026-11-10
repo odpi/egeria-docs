@@ -29,7 +29,7 @@ Each connector implementation has a factory object called a [*connector provider
 
 ### Lifecycle of the connector
 
-Each connector has its own unique implementation that is structured around a simple lifecycle that is defined by the OCF. The OCF provides the interface for a connector called [`Connector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/Connector.java){ target=gh } that has three methods: `initialize`, `start` and `disconnect`.
+Each connector has its own unique implementation that is structured around a simple lifecycle that is defined by the OCF. The OCF defines the abstract class for a connector called [`Connector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/Connector.java){ target=gh }.  Its lifecycle is driven by three methods: `initialize`, `start` and `disconnect`.  (`Connector` also offers methods to return the connector's instance identifier and connection, and to maintain statistics counters, properties and timestamps that are reported through `getConnectorStatistics()`.)
 
 This connector interface supports the basic lifecycle of a connector. There are three phases:
 
@@ -39,7 +39,7 @@ This connector interface supports the basic lifecycle of a connector. There are 
 
 2. *Running* - The connector is completely initialized with its context, and it can start processing.
 
-    This phase is initiated by a call to the connector's `start()` method. At this point it should create its client to any third party technology and begin processing. It may also start up threads if it needs to perform any background processing (such as listening for notifications). If the connector throws an exception during start, Egeria knows the connector has a configuration or operational issue and will report the error and move it to disconnected state.
+    This phase is initiated by a call to the connector's `start()` method. At this point it should create its client to any third party technology and begin processing. It may also start up threads if it needs to perform any background processing (such as listening for notifications). The `start()` method may throw `ConnectorCheckedException` or `UserNotAuthorizedException`.  If the connector throws an exception during start, Egeria knows the connector has a configuration or operational issue and will report the error and move it to disconnected state.
 
 3. *Disconnected* - The connector must stop processing and release all of its resources.
 
@@ -47,7 +47,7 @@ This connector interface supports the basic lifecycle of a connector. There are 
 
 Depending on the type of connector you are writing, there may be additional initialization calls occurring between the `initialize()` and the `start()` method. The connector may also support additional methods for its normal operation that can be called between the `start()` and `disconnect()` calls.
 
-The OCF also provides the base class for a connector called [`ConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorBase.java){ target=gh }. The `ConnectorBase` base class manages the lifecycle state of the connector. For example, the default implementation of `initialize()` in the `ConnectorBase` class stores the supplied unique instance identifier and connection values in protected variables called `connectorInstanceId` and `connectionProperties` respectively.
+The OCF also provides the base class for a connector called [`ConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/ConnectorBase.java){ target=gh }. The `ConnectorBase` base class manages the lifecycle state of the connector. For example, the default implementation of `initialize()` in the `ConnectorBase` class stores the supplied unique instance identifier and connection values in protected variables called `connectorInstanceId` and `connectionBean` respectively.  Its `start()` method marks the connector as active and its `disconnect()` method marks it as inactive and disconnects any embedded connectors; `isActive()` returns the current state.  `ConnectorBase` also provides helper methods for reading typed values from the connection's configuration properties, such as `getStringConfigurationProperty()`, `getBooleanConfigurationProperty()`, `getIntConfigurationProperty()` and `getArrayConfigurationProperty()`.
 
 !!! tip "Call the base class's methods in any overrides"
     If you override any of the  `initialize()`, `start()` or `disconnect()` methods, be sure to call `super.xxx()` at the start of your implementation to call the appropriate super class method so that the state is properly maintained.

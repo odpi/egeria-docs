@@ -3,28 +3,15 @@
 
 ### Create test servers
 
-Egeria's assembly includes a utility for configuring servers.  It is called `ServerConfig`.  Select `Edit Configurations` and create another `JAR Application` run configuration entry for `ServerConfig`.
+Servers are configured through the [Administration Services](/services/admin-services/overview).  The `Egeria-admin-services-server-configuration.http` collection in the `{install directory}/assembly/opt/http-client-collections` directory has a request for each configuration call.
 
-=== "V4.3 and before"
-    ![server config settings](server-config-settings-4-3.png)
+Open `Egeria-admin-services-server-configuration.http` in IntelliJ and change the `@server` variable at the top of the file to `test-metadata-store`.  Then run these requests in order by clicking on the green triangle next to each one:
 
-=== "V5.0" and beyond
-    ![server config settings](server-config-settings-4-4.png)
+1. `Token (RequestBody)` - obtains the bearer token used by the other requests.
+2. `Set default audit log destination` - sends the server's audit log messages to the console.
+3. `Enable the in-memory repository` - gives the server a local repository that is cleared each time the server stops, which is ideal for testing.
+4. `Enable all of the access services with no topics` - adds the access services that provide the metadata APIs, without needing an event bus such as Apache Kafka.
 
-When you click `OK`, then `ServerConfig` appears in the dropdown run menu.  Press the green triangle to run the utility and a new tab appears in the panel of the IntelliJ window where the platform is running.
+This creates the configuration document for a new [Metadata Access Store](/concepts/metadata-access-store) called `test-metadata-store`.  Run `Get server configuration document` to see the configuration document that has been built up.
 
-`ServerConfig` prints out a menu of the different configuration options it supports.
-
-![server config started](server-config-started.png)
-
-Click in the ServerConfig run window and enter `create-metadata-store test-metadata-store` and press enter.
-
-![create test-metadata-store](create-test-metadata-store.png)
-
-This will create a new [Metadata Access Store](/concepts/metadata-access-store) called `test-metadata-store`.
-
-![test-metadata-store create](test-metadata-store-created.png)
-
-You can select `PlatformReport` in the dropdown run menu, and click on the green triangle to re-run the `PlatformReport`.  Notice that details of this new server are now included.
-
-![Rerun platform report](re-run-platform-report.png)
+The [administration guide](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store) describes the other options for configuring a metadata access store.

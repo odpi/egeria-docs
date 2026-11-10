@@ -6,10 +6,10 @@
 
 ## Basic metadata model
 
-Figure 1 shows the types of metadata captured by the Data Manager.
+Figure 1 shows the types of metadata that an [integration connector](/concepts/integration-connector) typically captures from a data manager - a technology that stores and manages data, such as a database server, file system or event broker.
 
 ![Figure 1](basic-model.svg)
-> **Figure 1:** Basic metadata capture by the Data Manager
+> **Figure 1:** Basic metadata captured from a data manager
 
 These are:
 
@@ -30,21 +30,21 @@ the following subtypes of Asset (and any additional subtypes of these types that
    * **JSONFile** for files using the JSON format.
 * **Database** for databases.
 * **DeployedDatabaseSchema** for schemas within a database.
-* **DeployedReport** for reports.
+* **Report** for reports.
 * **Form** for interactive forms.
 * **InformationView** for queries.
 
 
-The Egeria APIs needs to accommodate slight variations between different vendor
+The open metadata types need to accommodate slight variations between different vendor
 implementations of data managers, along with information relating to local deployment standards.
-As such there is provision in these interfaces to support:
+As such there is provision to support:
 
-* `VendorProperties` for properties unique to a specific vendor implementation, and
-* `AdditionalProperties` for properties that the metadata team wish to add to the metadata.
+* Vendor properties - properties unique to a specific vendor implementation.  These are stored in a *PropertyFacet* element attached to the element with a *ReferenceableFacet* relationship whose *source* property identifies the vendor.  The [integration iterators](/guides/developer/integration-connectors/integration-context/#integration-iterators) retrieve them with `MemberElement.getVendorProperties(vendorIdentifier)`.
+* `additionalProperties` - a map of string properties on each element for values that the metadata team wish to add to the metadata.
 
 ## Data Managers
 
-Egeria supports the following types of data managers:
+Egeria supports the following types of data managers.  Each is represented by a [software capability](/concepts/software-capability) - for example *FileSystem*, *FileManager*, *DatabaseManager*, *EventBroker*, *APIManager* or *ReportingEngine* - and the provenance column shows whether the metadata is typically stored in the data manager's own [metadata collection](/concepts/metadata-collection) (external provenance) or with local cohort provenance:
 
 | Icon                                   | Name     | Provenance | Description |
 | :----------------------------------:   | :---------- | :------------------------------------------------------: | :---------- |
@@ -59,7 +59,8 @@ Egeria supports the following types of data managers:
 ## More information
 
 * [What is an Asset?](/concepts/asset)
-* [Building an asset catalog](/concepts/basic-concepts/#metadata-manager)
+* [Integrated cataloguing](/features/integrated-cataloguing/overview)
+* [Building integration connectors](/guides/developer/integration-connectors)
 * [Modeling schema structures](/concepts/schema)
 
 

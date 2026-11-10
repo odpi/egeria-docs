@@ -13,9 +13,7 @@ Event mappers are needed in a [repository proxy](/concepts/repository-proxy) ser
 
 ## Related information
 
-Since each event mapper is tied to a third party technology, core Egeria does not supply any implementations of this connector.  There is, however, the following implementation available:
-
-* **[Event Mapper for Apache Atlas](https://github.com/odpi/egeria-connector-hadoop-ecosystem)**
+Since each event mapper is tied to a third party technology, core Egeria does not supply any implementations of this connector.  The community previously maintained an event mapper for Apache Atlas in the [egeria-connector-hadoop-ecosystem :material-github:](https://github.com/odpi/egeria-connector-hadoop-ecosystem){ target=gh } repository.  That repository is now archived, but it is still a useful example.  The [Event Mapper Connector](/guides/developer/repository-connectors/event-mapper-connector) page in the developer guide describes how to write one.
 
 
 ---8<-- "snippets/abbr.md"

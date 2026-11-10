@@ -89,7 +89,7 @@ The [OWF](/frameworks/owf/overview) supports two patterns, and the choice determ
 
     Service a [*NotificationType*](/types/4/0451-Notifications) - a governance definition that formally describes the resources to monitor, the subscribers to tell, and how often to tell them.
 
-    The service is passed its notification types as action targets, and uses the [watchdog context](#the-watchdog-context) to walk the subscriber list, welcoming new subscribers, notifying them when the situation occurs, and dismissing them when their subscription ends.
+    The service is passed its notification types as action targets, and uses the [watchdog context](#the-watchdog-context) to find the monitored resources and to notify the subscribers when the situation occurs.
 
     This pattern is more stateful: the notification type persists in open metadata, and subscribers can be added or removed by people or by other governance processes while the service is running.
 
@@ -99,7 +99,7 @@ Each connector provider extends [`WatchdogActionServiceProvider` :material-githu
 
 The descriptive information - connector type GUID, qualified name, display name, description, wiki page, audit log component identifier and development status - comes from an implementation of the [`OpenConnectorDefinition` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/OpenConnectorDefinition.java){ target=gh } interface.  Egeria's own connectors use the `EgeriaOpenConnectorDefinition` enum for this.
 
-The constructor then declares the service's specification: `supportedRequestTypes`, `supportedRequestParameters`, `supportedActionTargetTypes`, `producedActionTargetTypes` and `producedGuards`.  The `WatchdogActionServiceProvider` constructor already sets `supportedRequestParameters`, `producedGuards` and `producedActionTargetTypes` to the OWF standard values, so you only override the ones your service changes.
+The constructor then declares the service's specification: `supportedRequestTypes`, `supportedRequestParameters`, `supportedActionTargetTypes`, `producedActionTargetTypes` and `producedGuards`.  The `WatchdogActionServiceProvider` constructor already sets `supportedRequestParameters` (from `WatchdogRequestParameter`), `producedGuards` (from `WatchdogActionGuard.getSimpleWatchdogGuardTypes()`) and `producedActionTargetTypes` (from `WatchdogActionTarget`) to the OWF standard values, so you only override the ones your service changes.
 
 The examples in this guide are for an illustrative service, `ChangeWatchdogService`, that watches for every change to open metadata:
 
@@ -120,7 +120,7 @@ public class ChangeWatchdogServiceProvider extends WatchdogActionServiceProvider
 }
 ```
 
-The OWF defines two standard action targets in [`WatchdogActionTarget` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-watchdog-framework/src/main/java/org/odpi/openmetadata/frameworks/openwatchdog/controls/WatchdogActionTarget.java){ target=gh } - `notificationType` and `instanceToMonitor` - matching the two patterns above.  The request parameters for instance/type watching are in `WatchdogRequestParameter`.
+The OWF defines two standard action targets in [`WatchdogActionTarget` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-watchdog-framework/src/main/java/org/odpi/openmetadata/frameworks/openwatchdog/controls/WatchdogActionTarget.java){ target=gh } - `notificationType` and `instanceToMonitor` - matching the two patterns above.  `WatchdogActionTarget.getInstanceActionTargetTypes()` returns just the `instanceToMonitor` definition, for a provider's `supportedActionTargetTypes`.  The request parameters for instance/type watching are in `WatchdogRequestParameter` - `interestingTypeName`, `instanceToMonitor`, the action target name overrides, and one `...ProcessName` parameter per kind of event naming the governance action process to run when it occurs.
 
 !!! warning "Match the provider to the connector"
     A `WatchdogActionServiceProvider` must name a connector class that extends `WatchdogActionServiceConnector`.  The [Watchdog Action OMES](/services/omes/watchdog-action/overview) casts the connector it creates to that class, so pairing a watchdog provider with, say, a `GeneralGovernanceActionService` fails at run time rather than at compile time.
@@ -140,7 +140,7 @@ There are three methods:
 
 * `start()` - register interest in the events the service cares about, and set up any state it needs.  Call `super.start()` first; it checks that the watchdog context has been supplied.  Unlike a governance action service, `start()` returns quickly and the real work happens in `processEvent()`.
 * `processEvent(event)` - **abstract, so you must implement it**.  Called once for each matching event, for as long as the service is registered.
-* `disconnect()` - free up any resources.  The base class disconnects the resource connector and the watchdog context for you, so call `super.disconnect()`.
+* `disconnect()` - free up any resources.  The base class disconnects the resource connector, unregisters the listener and disconnects the watchdog context for you, so call `super.disconnect()`.
 
 ### Registering a listener
 
@@ -155,7 +155,7 @@ There are three methods:
 
 The event types are values of `OpenMetadataEventType` - `NEW_ELEMENT_CREATED`, `ELEMENT_UPDATED`, `ELEMENT_DELETED`, `ELEMENT_CLASSIFIED`, `ELEMENT_RECLASSIFIED`, `ELEMENT_DECLASSIFIED`, `ELEMENT_RESTORED` and others.  The metadata types refer to the subject of the event: the type of the element for element events, the type of the relationship for related-element events, and the name of the classification for classification events.
 
-Only one set of filters is active at a time, but a service can call `registerListener()` again while it is running to change what it is watching for - for example, after it finishes with one notification type and moves on to the next.  `disconnectListener()` stops events being delivered.
+Only one set of filters is active at a time, but a service can call `registerListener()` again while it is running to change what it is watching for - for example, after it finishes with one notification type and moves on to the next.  `disconnectListener()` stops events being delivered.  The registration is keyed by the running instance of the service (its engine action), so two engine actions running the same watchdog service - watching two different folders, say - each keep their own listener.
 
 The OWF supplies [`GenericWatchdogActionListener` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-watchdog-framework/src/main/java/org/odpi/openmetadata/frameworks/openwatchdog/GenericWatchdogActionListener.java){ target=gh }, which simply forwards every event to your connector's `processEvent()` method, so most services do not need a listener class of their own:
 
@@ -217,7 +217,7 @@ public class ChangeWatchdogService extends WatchdogActionServiceConnector
 
 ### Keeping processEvent cheap
 
-`processEvent()` is called on the event delivery thread, once per matching event, potentially at high volume.  Keep it fast: filter early, cache lookups that do not change, and hand anything expensive over to a [governance action process](/concepts/governance-action-process) via the context rather than doing it inline.
+`processEvent()` is called on the event delivery thread, once per matching event, potentially at high volume.  Keep it fast: filter early, cache lookups that do not change, and hand anything expensive over to a [governance action process](/concepts/governance-action-process) with `watchdogContext.initiateGovernanceActionProcess()` rather than doing it inline.  This is how Egeria's generic watchdogs work: each kind of event is mapped to the qualified name of a process to run.
 
 An event that cannot be processed should be reported by throwing `GovernanceServiceException`.  It is logged, and the listener keeps being called - a single bad event does not take the watchdog down.
 
@@ -229,7 +229,11 @@ On top of that it adds:
 
 ### Understanding the request
 
-`getRequestType()`, `getRequestParameters()`, `getIntRequestParameter(name, default)`, `getActionTargetElements()`, `getRequesterUserId()` and `getWatchdogActionServiceName()`.
+`getRequestType()`, `getRequestParameters()`, `getIntRequestParameter(name, default)`, `getActionTargetElements()`, `getRequesterUserId()`, `getEngineActionGUID()` and `getWatchdogActionServiceName()`.
+
+### Handing work on
+
+`initiateGovernanceActionProcess()` starts a [governance action process](/concepts/governance-action-process), passing request parameters and action targets - typically the element the event was about.
 
 ### Watching an instance or type
 
@@ -243,14 +247,15 @@ On top of that it adds:
 | `getNotificationType()` / `updateNotificationType()` | Retrieve or update the details of a specific notification type. |
 | `getMonitoredResources()` | Retrieve the resources linked to a notification type via *MonitoredResource*. |
 | `getNotificationSubscribers()` | Retrieve the actors currently linked to a notification type via *NotificationSubscriber*. |
-| `getNotificationProperties()` | Build the properties of a *Notification* from an audit log style message definition. |
-| `welcomeSubscriber()` / `welcomeMonitoringSubscribers()` | Send the first notification to a new subscriber, or to all of them, when they join. |
-| `notifyMonitoringSubscribers()` | Notify subscribers each time the monitored situation occurs. |
-| `notifyPeriodicSubscribers()` | Notify subscribers because a scheduled interval has elapsed. |
-| `notifyOneTimeSubscribers()` | Send a single notification and mark the subscription as complete. |
-| `dismissSubscriber()` / `dismissSubscribers()` | Tell a subscriber, or all of them, that the subscription has ended. |
+| `getNotificationProperties(messageDefinition, notificationTypeGUID, notificationCount)` | Build the properties of a *Notification* from a message definition - the display name, situation and expected behaviour come from the message. |
+| `notifySubscribers(notificationTypeGUID, initialClassifications, firstNotificationProperties, subsequentNotificationProperties, lastNotificationProperties, requestParameters, actionTargets)` | Create a *Notification* for each subscriber that is eligible to receive one. |
 
-A service using this pattern typically watches the *NotificationSubscriber* relationship as well, so that subscribers are welcomed and dismissed automatically as they subscribe and unsubscribe, and the *ActionTarget* relationship, so that a new notification type can be added to a running instance without restarting it.
+`notifySubscribers()` does the bookkeeping for you.  It considers each subscriber in turn, decides from the notification type's `multipleNotificationsPermitted`, `minimumNotificationInterval` and `nextScheduledNotification` properties whether that subscriber is due a notification, and picks the first, subsequent or last set of notification properties depending on where that subscriber is in its subscription.  The notification type itself is updated whenever it is eligible to deliver notifications, even if it has no subscribers.
+
+A service using this pattern typically also watches the *ActionTarget* relationship, so that a new notification type can be added to a running instance without restarting it.
+
+!!! info "Subscription management for digital products"
+    Welcoming, periodic, one-time and dismissal notifications for [digital product](/concepts/digital-product) subscriptions are not sent by a watchdog action service.  They are handled by the Baudot Subscription Manager, a dynamic [integration connector](/concepts/integration-connector) that sends them on each refresh - see [watching through a notification type](/frameworks/owf/overview#watching-through-a-notification-type) in the OWF description.
 
 ## Completing - or not
 
@@ -269,6 +274,8 @@ Record a completion status only when:
                                                null,
                                                completionMessage);
 ```
+
+The completion message may be an `AuditLogMessageDefinition` (which is formatted for you) or a plain `String`.  Any request parameters you pass are merged over the ones the service was started with before they are handed to whatever runs next.
 
 If the engine host is restarted while a watchdog action service is still watching, its engine action is still incomplete, so the service is restarted too rather than being left behind.
 
@@ -305,9 +312,11 @@ A watchdog action service can be started via an [engine action](/concepts/engine
 
 The framework itself is in the [open-watchdog-framework :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/frameworks/open-watchdog-framework){ target=gh } module.
 
-Egeria does not currently supply a watchdog action service of its own.  The Lovelace Karma Point Awards Service was the example of the instance/type pattern until release 6.3, when karma points moved to the [Simon Contribution Recorder](/features/metadata-observability/overview#the-simon-contribution-recorder) integration connector.  Its source is in the [6.2 release :material-github:](https://github.com/odpi/egeria/blob/V6.2/open-metadata-implementation/adapters/open-connectors/lovelace-insights/src/main/java/org/odpi/openmetadata/adapters/connectors/organizationinsight/karmapoints/LovelaceKarmaPointAwardsService.java){ target=gh }.
+Egeria's own watchdog action services follow the instance/type pattern.  They are in the [`watchdog` package of governance-action-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/watchdog){ target=gh } - the class names still say *GovernanceAction*, but they extend `WatchdogActionServiceConnector` and `WatchdogActionServiceProvider`:
 
-* [Generic Element Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-element-watchdog-governance-action-service.md){ target=gh } and [Generic Folder Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-folder-watchdog-governance-action-service.md){ target=gh } - ready-to-configure services that run a named governance action process when a chosen kind of event occurs.  These still run as OGF governance action services today; new instance/type watching should be built directly against OWF.
+* [Generic Element Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-element-watchdog-governance-action-service.md){ target=gh } and [Generic Folder Watchdog :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/generic-folder-watchdog-governance-action-service.md){ target=gh } - ready-to-configure services that run a named governance action process when a chosen kind of event occurs.  Both share the `GenericWatchdogGovernanceActionConnector` base class, which shows how to build the listener filters from the request parameters, register a `GenericWatchdogActionListener`, and complete only on an unrecoverable error or, when asked to listen for a single event, once that event occurs.  The core content pack registers them as the *Generic Element Watchdog Action Service* and the *New Files Watchdog Action Service*.
+
+The Lovelace Karma Point Awards Service was another example of the instance/type pattern until release 6.3, when karma points moved to the [Simon Contribution Recorder](/features/metadata-observability/overview#the-simon-contribution-recorder) integration connector.  Its source is in the [6.2 release :material-github:](https://github.com/odpi/egeria/blob/V6.2/open-metadata-implementation/adapters/open-connectors/lovelace-insights/src/main/java/org/odpi/openmetadata/adapters/connectors/organizationinsight/karmapoints/LovelaceKarmaPointAwardsService.java){ target=gh }.
 
 ??? education "Further information"
     - [Open Watchdog Framework (OWF)](/frameworks/owf/overview) - the two ways of watching, the notification type model and the full reference data.

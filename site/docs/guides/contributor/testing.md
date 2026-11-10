@@ -52,6 +52,7 @@ Every suite is **opt-in** - none of them run as part of an ordinary build.  Most
 | `duplicate-fvt`        | `-PrunDuplicateFvt`                              | [Duplicate management](/features/duplicate-management/overview), including the Mendel Automated Duplicate Manager.  |
 | `files-fvt`            | `-PrunFilesFvt`, `-PrunFilesFvtNoKafka`          | The file connectors and the Files content pack.                                                                     |
 | `openlineage-fvt`      | `-PrunOpenLineageFvt`                            | The OpenLineage integration connectors.                                                                             |
+| `pasteur-fvt`          | `-PrunPasteurFvt`                                | The Pasteur Action History Cleanup.                                                                                 |
 | `platform-catalog-fvt` | `-PrunPlatformCatalogFvt`                        | The OMAG Server Platform Cataloguer.                                                                                |
 | `postgres-fvt`         | `-PrunPostgresFvt`, `-PrunPostgresFvtNoKafka`    | The PostgreSQL connectors and the PostgreSQL content pack.                                                          |
 | `query-fvt`            | `-PrunQueryFvt`, `-PrunQueryFvtInMemory`         | The repository query surface: paging, sorting, filtering, historical queries and special characters.                |

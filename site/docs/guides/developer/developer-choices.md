@@ -12,7 +12,7 @@ The numbers on the diagram refer to the following notes.  The first three interf
 
 2. There are also services to manage Egeria's runtime.  The [Administration Services](/services/admin-services/overview) are used for configuring servers on Egeria's platform.  The [Platform Services](/services/platform-services/overview) provide details of the capabilities available in a platform.  The [Server Operations Services](/services/server-operations) managing the startup and shutdown of servers on the platform, and their status.
 
-3. Egeria's *[Open Metadata Access Services (OMASs)](/services/omas)* support notifications sent over Apache Kafka [topics](/concepts/basic-concepts/#topic).  They can be accessed through any Apache Kafka client.
+3. Egeria's metadata access servers publish notifications about changes to open metadata on Apache Kafka [topics](/concepts/basic-concepts/#topic).  These are sent by the [Open Metadata Access Services (OMASs)](/services/omas), which today provide the shared metadata management services used by Egeria's frameworks.  The topics can be accessed through any Apache Kafka client.
 
 Egeria's runtime supports a connector framework called the [Open Connector Framework (OCF)](/frameworks/ocf/overview).  This allows components to be "plugged-into" Egeria's runtime.  These components are generically called *[connectors](/concepts/connector)*.  There are different types of connectors that each perform a specific role in the runtime.  The Egeria community provide many useful connectors, described in the [connector catalog](/connectors).  You can also write your own and install them to your Egeria runtime.
 
@@ -20,16 +20,9 @@ Egeria's runtime supports a connector framework called the [Open Connector Frame
 
 5. An [integration connector](/concepts/integration-connector) is responsible for synchronizing metadata between the open metadata repositories and third party technologies.  This synchronization can flow in either (or both) directions.  It is configured to run periodically and can also be driven by event notification.  Integration connectors typically use digital resource connectors to connect to the digital resources in the third party technologies.
 
-6. *[Governance services](/concepts/governance-service)* are specialist *connectors* that automate the maintenance of both metadata and digital resources.  They can provision data, monitor changes in metadata and configure integration connectors.
+6. *[Governance services](/concepts/governance-service)* are specialist *connectors* that automate the maintenance of both metadata and digital resources.  They can provision data, monitor changes in metadata, use open metadata to configure third party digital services and configure integration connectors.
     
-7. A *[Repository connector](/concepts/repository-connector)* provides access to persistent storage services.  It is used to maintain an open metadata store.
-
-6. *Connectors* hosted in the OMAG Server platform may use open metadata to configure a third party digital service.
-
-7. *Connectors* are also used to connect metadata stores and catalogs into the open metadata ecosystem.
+7. A *[Repository connector](/concepts/repository-connector)* provides access to persistent storage services.  It is used to maintain an open metadata store, or to connect a third party metadata store into the open metadata ecosystem.
 
 8. Finally, Egeria uses *runtime connectors* in the OMAG Server Platform to access the services it needs to operate.  Many of these [runtime connectors](/connectors/#runtime-connectors) are based around files.  They can be replaced to enable Egeria to run in new types of containers or operating platforms.
-
-
-
 

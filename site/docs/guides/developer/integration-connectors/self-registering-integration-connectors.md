@@ -11,7 +11,7 @@ In this pattern:
 
 * The integration connector inherits from `DynamicIntegrationConnectorBase`.
 * The `start()` method is minimal, simply initializing any resources needed to perform the discovery of new metadata elements of interest.
-* The discovery logic is implemented in the `refresh()` method.  It compares the existing list of catalog targets with the list of interesting metadata elements retrieved from the metadata repositories.  Any new ones are added as catalog targets.  Any that are no longer of interest are removed.
+* The discovery logic is implemented in the `refresh()` method.  It compares the existing list of catalog targets with the list of interesting metadata elements retrieved from the metadata repositories.  Any new ones are added as catalog targets.  Optionally, any that are no longer of interest are removed.
 * The processing logic is implemented in the [catalog target processor](/guides/developer/integration-connectors/catalog-targets) class.
 * The `disconnect()` method cleans up any resources.
 
@@ -44,10 +44,10 @@ Typically the `start()` method simply outputs an audit log message to indicate t
 
         final String methodName = "start";
 
-        auditLog.logMessage(methodName,
-                            LiskovAuditCode.STARTING_CONNECTOR.getMessageDefinition(connectorName,
-                                                                                    integrationContext.getMetadataAccessServer(),
-                                                                                    integrationContext.getMetadataAccessServerPlatformURLRoot()));
+        logRecord(methodName,
+                  LiskovAuditCode.STARTING_CONNECTOR.getMessageDefinition(connectorName,
+                                                                          integrationContext.getMetadataAccessServer(),
+                                                                          integrationContext.getMetadataAccessServerPlatformURLRoot()));
     }
 ```
 
@@ -59,7 +59,7 @@ The `refresh()` method has three jobs to perform:
 * register any new metadata elements as catalog targets
 * refresh all catalog targets - by calling `super.refresh()` at the end
 
-The first step is to build the set of elements that are already catalog targets, so that they are not added twice.  `integrationContext.getIntegrationConnectorGUID()` returns the unique identifier of the *IntegrationConnector* element that describes this running connector, and `AssetClient` provides the methods to query and maintain its catalog targets.
+The first step is to build the set of elements that are already catalog targets, so that they are not added twice.  `integrationContext.getIntegrationConnectorGUID()` returns the unique identifier of the *IntegrationConnector* element that describes this running connector, and `AssetClient` provides the methods to query and maintain its catalog targets - `getCatalogTargets()`, `addCatalogTarget()` and `removeCatalogTarget()`.  Only the GUIDs of the existing targets are needed, so the graph query depth is set to zero to avoid retrieving the elements' related elements.
 
 ```java
     @Override
@@ -71,11 +71,14 @@ The first step is to build the set of elements that are already catalog targets,
         {
             Set<String> knownCatalogTargets = new HashSet<>();
 
-            AssetClient assetClient = integrationContext.getAssetClient();
-            int         startFrom   = 0;
+            AssetClient  assetClient  = integrationContext.getAssetClient();
+            int          startFrom    = 0;
+            QueryOptions queryOptions = assetClient.getQueryOptions(startFrom, integrationContext.getMaxPageSize());
+
+            queryOptions.setGraphQueryDepth(0); // Only the catalog targets' GUIDs are used.
 
             List<OpenMetadataRootElement> catalogTargetList = assetClient.getCatalogTargets(integrationContext.getIntegrationConnectorGUID(),
-                                                                                            assetClient.getQueryOptions(startFrom, integrationContext.getMaxPageSize()));
+                                                                                            queryOptions);
 
             while (catalogTargetList != null)
             {
@@ -88,8 +91,9 @@ The first step is to build the set of elements that are already catalog targets,
                 }
 
                 startFrom         = startFrom + integrationContext.getMaxPageSize();
+                queryOptions.setStartFrom(startFrom);
                 catalogTargetList = assetClient.getCatalogTargets(integrationContext.getIntegrationConnectorGUID(),
-                                                                  assetClient.getQueryOptions(startFrom, integrationContext.getMaxPageSize()));
+                                                                  queryOptions);
             }
 ```
 
@@ -102,8 +106,11 @@ The second step retrieves the elements that this connector is interested in, and
             CollectionClient collectionClient = integrationContext.getCollectionClient(OpenMetadataType.DATA_SHARING_HUB.typeName);
             startFrom = 0;
 
-            List<OpenMetadataRootElement> dataSharingHubs = collectionClient.findCollections(null,
-                                                                                             collectionClient.getSearchOptions(startFrom, integrationContext.getMaxPageSize()));
+            SearchOptions searchOptions = collectionClient.getSearchOptions(startFrom, integrationContext.getMaxPageSize());
+
+            searchOptions.setGraphQueryDepth(0); // Only the hubs' header and properties are used.
+
+            List<OpenMetadataRootElement> dataSharingHubs = collectionClient.findCollections(null, searchOptions);
 
             while (dataSharingHubs != null)
             {
@@ -116,10 +123,10 @@ The second step retrieves the elements that this connector is interested in, and
                         /*
                          * This is a new data sharing hub.  Add it as a catalog target.
                          */
-                        auditLog.logMessage(methodName,
-                                            LiskovAuditCode.NEW_DATA_HUB.getMessageDefinition(connectorName,
-                                                                                              dataSharingHubProperties.getDisplayName(),
-                                                                                              dataSharingHub.getElementHeader().getGUID()));
+                        logRecord(methodName,
+                                  LiskovAuditCode.NEW_DATA_HUB.getMessageDefinition(connectorName,
+                                                                                    dataSharingHubProperties.getDisplayName(),
+                                                                                    dataSharingHub.getElementHeader().getGUID()));
 
                         CatalogTargetProperties catalogTargetProperties = new CatalogTargetProperties();
 
@@ -132,18 +139,18 @@ The second step retrieves the elements that this connector is interested in, and
                     }
                 }
 
-                startFrom       = startFrom + integrationContext.getMaxPageSize();
-                dataSharingHubs = collectionClient.findCollections(null,
-                                                                   collectionClient.getSearchOptions(startFrom, integrationContext.getMaxPageSize()));
+                startFrom = startFrom + integrationContext.getMaxPageSize();
+                searchOptions.setStartFrom(startFrom);
+                dataSharingHubs = collectionClient.findCollections(null, searchOptions);
             }
         }
         catch (Exception error)
         {
-            auditLog.logMessage(methodName,
-                                LiskovAuditCode.UNEXPECTED_EXCEPTION.getMessageDefinition(connectorName,
-                                                                                          error.getClass().getName(),
-                                                                                          methodName,
-                                                                                          error.getMessage()));
+            logRecord(methodName,
+                      LiskovAuditCode.UNEXPECTED_EXCEPTION.getMessageDefinition(connectorName,
+                                                                                error.getClass().getName(),
+                                                                                methodName,
+                                                                                error.getMessage()));
         }
 
         super.refresh();
@@ -152,14 +159,14 @@ The second step retrieves the elements that this connector is interested in, and
 
 The final call to `super.refresh()` is what causes `DynamicIntegrationConnectorBase` to pick up the catalog targets - including the ones just added - create a processor for each new one, and call `refresh()` on all of them.
 
-It is up to the implementation to determine how to discover the metadata elements of interest.  However, using appropriate queries, it should be possible to identify any elements that are not yet catalog targets.  The `CatalogTargetProperties` you supply behave exactly as they would if a person had attached the target, so the connector can set the catalog target name, configuration properties, templates, metadata source name and permitted synchronization for each element it discovers.
+It is up to the implementation to determine how to discover the metadata elements of interest.  However, using appropriate queries, it should be possible to identify any elements that are not yet catalog targets.  The `CatalogTargetProperties` you supply behave exactly as they would if a person had attached the target, so the connector can set the catalog target name, configuration properties, templates, metadata collection name, permitted synchronization and delete method for each element it discovers.
 
 !!! tip "Give each catalog target a meaningful name"
     The `catalogTargetName` appears in the audit log messages produced as each target is refreshed.  Including the element's display name, as this example does, makes those messages much easier for an operator to follow.
 
 ### Removing catalog targets
 
-Elements that are no longer of interest should be removed so that the connector stops working on them:
+The Data Sharing Hub Manager does not remove catalog targets, but a connector can remove elements that are no longer of interest so that it stops working on them.  `removeCatalogTarget()` takes either the connector and element GUIDs, as shown here, or the GUID of the *CatalogTarget* relationship:
 
 ```java
             assetClient.removeCatalogTarget(integrationContext.getIntegrationConnectorGUID(),
@@ -181,10 +188,10 @@ The `disconnect()` method logs a shutdown message and calls `super.disconnect()`
     {
         final String methodName = "disconnect";
 
-        auditLog.logMessage(methodName,
-                            LiskovAuditCode.CONNECTOR_STOPPING.getMessageDefinition(connectorName,
-                                                                                    integrationContext.getMetadataAccessServer(),
-                                                                                    integrationContext.getMetadataAccessServerPlatformURLRoot()));
+        logRecord(methodName,
+                  LiskovAuditCode.CONNECTOR_STOPPING.getMessageDefinition(connectorName,
+                                                                          integrationContext.getMetadataAccessServer(),
+                                                                          integrationContext.getMetadataAccessServerPlatformURLRoot()));
 
         super.disconnect();
     }

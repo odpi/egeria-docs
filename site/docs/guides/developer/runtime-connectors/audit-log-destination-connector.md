@@ -4,38 +4,53 @@
 # Writing Audit Log Destination Connectors
 
 
-The [audit log](/concepts/audit-log) running in an [OMAG Server](/concepts/omag-server) is implemented by the [Open Metadata Repository Services (OMRS)](/services/omrs).  It is called `OMRSAuditLog` and is an extension to the `AuditLog` interface defined in the [Audit Log Framework (ALF)](/frameworks/alf/overview).  The ALF supports an audit log with a single destination.  The OMRS extends this capability by implementing the ALF destination as an audit log record distributor that passes audit log records to each of the audit log destination connectors configured in the OMAG Server, depending on the severity of the audit log record and the connector's supported severities.
+The [audit log](/concepts/audit-log) running in an [OMAG Server](/concepts/omag-server) is implemented by the [Open Metadata Repository Services (OMRS)](/services/omrs).  It is called `OMRSAuditLog` and extends the `AuditLog` class defined in the [Audit Log Framework (ALF)](/frameworks/alf/overview).  The ALF supports an audit log with a single destination, which is an `AuditLogDestination`.  The OMRS extends this capability with `OMRSAuditLogDestination`, which acts as an audit log record distributor that passes every audit log record to each of the [audit log destination connectors](/concepts/audit-log-destination-connector) configured in the OMAG Server.  Each connector then decides whether to keep the record based on its severity and the connector's supported severities.
 
-The OMRS also defines the list of severities used by Egeria and extends the audit log record to include details of the originating server.  It adds these values to each audit log record before it is passed to any of the audit log destination connectors.
+Before passing a record to the connectors, `OMRSAuditLogDestination` adds details of the originating server (server name, server type, organization name and metadata collection id) to the record.  The severities themselves are defined by the `AuditLogRecordSeverityLevel` enum in the ALF (`Information`, `Event`, `Decision`, `Action`, `Error`, `Exception`, `Security`, `Startup`, `Shutdown`, `Asset`, `Types` and so on).
 
-The [audit log destination connector](/concepts/audit-log-destination-connector) interface is defined in the *repository-services-api* module in the [org.odpi.openmetadata.repositoryservices.connectors.stores.auditlogstore :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/auditlogstore){ target=gh } Java package.
+```mermaid
+flowchart LR
+    C[Server component] -->|logMessage| AL[OMRSAuditLog]
+    AL --> D[OMRSAuditLogDestination]
+    D -->|storeLogRecord| S1[Audit log destination connector 1]
+    D -->|storeLogRecord| S2[Audit log destination connector 2]
+    D -->|storeLogRecord| S3[Audit log destination connector ...]
+```
+
+The audit log destination connector interface is defined in the *repository-services-apis* module in the [org.odpi.openmetadata.repositoryservices.connectors.stores.auditlogstore :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/auditlogstore){ target=gh } Java package.
 
 In that package you will see the following Java classes:
 
-* `OMRSAuditLogRecord` - provides a carrier for details about a single log record in the OMRS audit log.  It extends the `AuditLogRecord` class from the ALF with deprecated fields from the original OMRS implementation to provide backward compatible support to original implementation of the audit log destination connectors.
+* `OMRSAuditLogRecord` - provides a carrier for details about a single log record in the OMRS audit log.  It extends the `AuditLogRecord` class from the ALF with deprecated fields from the original OMRS implementation to provide backward compatible support to the original implementation of the audit log destination connectors.
 * `OMRSAuditLogRecordOriginator` - describes the server that originated an audit log record.  This is useful if an organization is aggregating log records from different servers together into a single physical destination.
 * `OMRSAuditLogReportingComponent` describes the component issuing the audit log record.  It implements the `ComponentDescription` interface from the ALF.
 * `OMRSAuditLogStore` is the main interface of the audit log destination connector.  It includes the following methods:
 
-   * `getDestinationName` - used by the OMRS in its logging.
-   * `getSupportedSeverities` - returns the list of audit log record severities that have been configured for this destination instance.  These are passed to the connector in its [configuration properties](/concepts/configuration-properties) passed in its [connection](/concepts/connection) that is set up in the server's [configuration document](/concepts/configuration-document).  The name of the property is `supportedSeverities`.
-   * `storeLogRecord` - called for each log record that has a severity from the supported severities.
-   * `getAuditLogRecord` - optional method to retrieve a specific log record.
-   * `getAuditLogRecordsByTimeStamp` - optional method to retrieve a list of log records written in a specified time period.  The offset and maximumRecords parameters support paging.
-   * `getAuditLogRecordsBySeverity` - optional method to retrieve a list of log records that have a specific severity.  The offset and maximumRecords parameters support paging.
-   * `getAuditLogRecordsByComponent` - optional method to retrieve a list of log records originating from a specific component.  The offset and maximumRecords parameters support paging.
+    * `getDestinationName` - used by the OMRS in its logging and in the audit log report.
+    * `getSupportedSeverities` - returns the list of audit log record severities that have been configured for this destination instance.  These are passed to the connector in its [configuration properties](/concepts/configuration-properties) passed in its [connection](/concepts/connection) that is set up in the server's [configuration document](/concepts/configuration-document).  The name of the property is `supportedSeverities`.
+    * `storeLogRecord` - called for every log record written to the audit log.
+    * `getAuditLogRecord` - optional method to retrieve a specific log record.
+    * `getAuditLogRecordsByTimeStamp` - optional method to retrieve a list of log records written in a specified time period.  The offset and maximumRecords parameters support paging.
+    * `getAuditLogRecordsBySeverity` - optional method to retrieve a list of log records that have a specific severity.  The offset and maximumRecords parameters support paging.
+    * `getAuditLogRecordsByComponent` - optional method to retrieve a list of log records originating from a specific component.  The offset and maximumRecords parameters support paging.
 
-* `OMRSAuditLogStoreConnectorBase` is the abstract base class for the audit log destination connector.  It implements `OMRSAuditLogStore` and provides default methods for all but `storeLogRecord`.  It also implements `initialize` to extract the `supportedSeverities` from the connection. In addition it includes the following protected methods to aid the writer of a connector.
+* `OMRSAuditLogStoreConnectorBase` is the abstract base class for the audit log destination connector.  It extends `ConnectorBase` from the [Open Connector Framework (OCF)](/frameworks/ocf/overview) and implements `OMRSAuditLogStore`, providing default methods for all but `storeLogRecord(OMRSAuditLogRecord)`.  The default query methods throw `FunctionNotSupportedException`.  It also implements `initialize` to set the destination name from the display name of the connection (or its connector type) and to extract the `supportedSeverities` from the connection's configuration properties.  In addition, it includes the following protected methods to aid the writer of a connector:
 
-  * `validateLogRecord` - validates that a new log record is properly filled out and throws an `InvalidParameterException` if not.
-  * `isSupportedSeverity` - checks whether an incoming log record has a supported severity.
-  * `getJSONLogRecord` - converts a log record to a JSON structure.
-  
-* `OMRSAuditLogStoreProviderBase` is an abstract base class for the audit log destination connector's connector provider.  It extends `ConnectorProviderBase` and a method called `getRecognizedConfigurationProperties` that is used to set the `recognizedConfigurationProperties` in the connector type.
+    * `validateLogRecord` - validates that a new log record is properly filled out (it has originator properties and an originator component) and throws an `InvalidParameterException` if not.
+    * `isSupportedSeverity` - checks whether an incoming log record has a supported severity.  If `supportedSeverities` is not set, or is an empty list, all severities are supported.
+    * `getJSONLogRecord` - converts a log record to a JSON string.
+
+* `OMRSAuditLogStoreProviderBase` is an abstract base class for the audit log destination connector's connector provider.  It extends `OpenConnectorProviderBase` and defines the `supportedSeveritiesProperty` constant (`supportedSeverities`) along with a protected method called `getRecognizedConfigurationProperties` that returns a list containing this property name.
+
+!!! info "Severity filtering is done by the connector"
+    `OMRSAuditLogDestination` calls `storeLogRecord` on every configured connector for every log record.  It is the connector's responsibility to call `isSupportedSeverity` (or apply its own filtering) so that only records with a configured severity are written to its destination.
 
 ## Example Implementations
 
-Implementations of this type of connector are located in the [adapters/open-connectors/repository-services-connectors/audit-log-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors){ target=gh } module.
+Implementations of this type of connector are located in the [adapters/open-connectors/repository-services-connectors/audit-log-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors){ target=gh } module.  They write audit log records to the console (`ConsoleAuditLogStoreConnector`), to the console with the full event payload (`EventDisplayAuditLogStoreConnector`), to a directory of JSON files (`FileBasedAuditLogStoreConnector`), to the SLF4J logging ecosystem (`SLF4JAuditLogStoreConnector`) and to an event topic (`EventTopicAuditLogStoreConnector`).
+
+!!! tip "Observing activity from the audit log"
+    The audit log records published to an event topic are also the source of Egeria's metadata observability.  The *Pepys Activity Observer* integration connector in the [nanny-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/nanny-connectors){ target=gh } module listens to the topics that the OMAG Servers write their audit logs to and maintains the `UsageActivity` classification of the elements whose use is reported there.  See [Metadata Observability](/features/metadata-observability/overview) for details.  If you want to analyse how open metadata is used, consider building on this rather than writing a new audit log destination connector.
 
 ## Build Dependencies
 
@@ -48,104 +63,65 @@ Implementations of this type of connector are located in the [adapters/open-conn
             <groupId>org.odpi.egeria</groupId>
             <artifactId>open-connector-framework</artifactId>
         </dependency>
-        
-         <dependency>
+
+        <dependency>
+            <groupId>org.odpi.egeria</groupId>
+            <artifactId>audit-log-framework</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.odpi.egeria</groupId>
             <artifactId>repository-services-apis</artifactId>
-         </dependency>
+        </dependency>
 
     </dependencies>
     ```
 
 === "gradle"
 
-    ```xml
+    ```
     dependencies {
-        implementation project(':open-metadata-implementation:frameworks:open-connector-framework')
-        implementation project(':open-metadata-implementation:repository-services:repository-services-apis')
+        compileOnly project(':open-metadata-implementation:frameworks:open-connector-framework')
+        compileOnly project(':open-metadata-implementation:frameworks:audit-log-framework')
+        compileOnly project(':open-metadata-implementation:repository-services:repository-services-apis')
     }
-    ```    
+    ```
 
 ## Writing the Connector Provider
 
-The connector provider for an audit log destination connector extends the `OMRSAuditLogStoreProvider` implements the following interface:
+--8<-- "docs/guides/developer/implementing-a-connector-provider.md"
 
-```
-org.odpi.openmetadata.frameworks.connectors.ConnectorProvider
-```
-
-There is a base class that provides much of the implementation for a connector provider.
-
-```
-org.odpi.openmetadata.frameworks.connectors.ConnectorProviderBase
-```
-
-This assumes:
-
-- There is a single connector implementation class for the connector.
-- The connector is instantiated with the default constructor. This means all of its configuration information is contained in the [Connection](/concepts/connection) object supplied on the `initialize()` method.
-
-If your connector implementation matches these requirements, its connector provider implementation need only implement a constructor to configure the base class's function with details of itself and the Java class of the connector it needs using:
-               
-- a GUID for the [connector type](/concepts/connector-type)
-- a name for the connector type.
-- a description of what the connector is for and how to configure it.
-- the connector class it instantiates.
-- a list of the additional properties, configuration properties and secured properties needed to configure instances of the connector.
-- a description of the connector for its audit log (if the connector implements `AuditLoggingComponent`).
+The connector provider for an audit log destination connector extends `OMRSAuditLogStoreProviderBase` and passes the `supportedSeveritiesProperty` as one of its recognized configuration properties.  This is how the console audit log destination's provider is written:
 
 ```java
 /**
- * XXXAuditLogDestinationProvider is the OCF connector provider for the XXX audit log destination  connector.
+ * XXXAuditLogStoreProvider is the OCF connector provider for the XXX audit log destination connector.
  */
-public class XXXAuditLogDestinationProvider extends OMRSAuditLogStoreProvider
+public class XXXAuditLogStoreProvider extends OMRSAuditLogStoreProviderBase
 {
     /*
-     * Unique identifier for the connector type.
+     * Class of the connector.
      */
-    private static final String connectorTypeGUID      = "Add unique GUID here";
-
-    /*
-     * Descriptive information about the connector for the connector type and audit log.
-     */
-    private static final String connectorQualifiedName = "MyOrg:XXXAuditLogDestinationConnector";
-    private static final String connectorDisplayName   = "XXX Audit Log Destination Connector";
-    private static final String connectorDescription   = "Connector supports ... add details here.";
+    private static final String connectorClassName = "packagename.XXXAuditLogStoreConnector";
 
     /**
-     * Constructor used to initialize the ConnectorProviderBase super class.
+     * Constructor used to initialize the OpenConnectorProviderBase with the Java class name of the specific
+     * audit log store implementation.
      */
-    public XXXAuditLogDestinationProvider()
+    public XXXAuditLogStoreProvider()
     {
-        super();
-
-        /*
-         * Set up the class name of the connector that this provider creates.
-         */
-        String connectorClassName = "packagename.XXXStoreConnector";
-        super.setConnectorClassName(connectorClassName);
-
-        /*
-         * Set up the connector type that should be included in a connection used to configure this connector.
-         */
-        ConnectorType connectorType = new ConnectorType();
-        connectorType.setType(ConnectorType.getConnectorTypeType());
-        connectorType.setGUID(connectorTypeGUID);
-        connectorType.setQualifiedName(connectorQualifiedName);
-        connectorType.setDisplayName(connectorDisplayName);
-        connectorType.setDescription(connectorDescription);
-        connectorType.setConnectorProviderClassName(this.getClass().getName());
-        
-        connectorType.setRecognizedConfigurationProperties(super.getRecognizedConfigurationProperties);
- 
-        super.connectorTypeBean = connectorType;
+        super(MyOrgConnectorDefinition.XXX_AUDIT_LOG_DESTINATION_CONNECTOR,
+              connectorClassName,
+              Collections.singletonList(supportedSeveritiesProperty));
     }
 }
 ```
 
+`MyOrgConnectorDefinition` is your own enum implementing `OpenConnectorDefinition`.  Egeria's own audit log destinations are described by values such as `CONSOLE_AUDIT_LOG_DESTINATION_CONNECTOR` and `FILE_AUDIT_LOG_DESTINATION_CONNECTOR` in `EgeriaOpenConnectorDefinition`, with a deployed implementation type of `AUDIT_LOG_DESTINATION_CONNECTOR`.
+
 ## Writing the Connector
 
-The audit log destination needs to implement the `storeLogRecord` method.  This needs to efficiently move the log record into the destination.  The code snippet below shows the use of the super class methods to determine which record to process.
+The audit log destination connector extends `OMRSAuditLogStoreConnectorBase` and needs to implement the `storeLogRecord` method.  This needs to efficiently move the log record into the destination.  The code snippet below shows the use of the super class methods to determine which records to process.
 
 ```java
     /**
@@ -171,8 +147,12 @@ The audit log destination needs to implement the `storeLogRecord` method.  This 
     }
 ```
 
-If the destination supports querying then you can also override the query methods: `getAuditLogRecord`, `getAuditLogRecordByTimeStamp`, `getAuditLogRecordBySeverity` and `getAuditLogRecordByComponent`.
+If the destination supports querying then you can also override the query methods: `getAuditLogRecord`, `getAuditLogRecordsByTimeStamp`, `getAuditLogRecordsBySeverity` and `getAuditLogRecordsByComponent`.
 
 Finally, the connector should use the `start` and `disconnect` methods to initialize and close down the access to the destination technology.
+
+## Configuring the Connector
+
+Once the connector's JAR file is on the OMAG Server Platform's classpath, it is added to a server's configuration document with a `POST` request to `/open-metadata/admin-services/servers/{serverName}/audit-log-destinations/connection`, passing the connection for the connector in the request body.  Set `supportedSeverities` in the connection's configuration properties to the list of severity names that the destination should receive.  See [Configuring the audit log](/guides/admin/servers/by-section/repository-services-section) for the related administration commands.
 
 --8<-- "snippets/abbr.md"

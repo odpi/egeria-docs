@@ -14,18 +14,23 @@ Search methods can be thought of as having 2 phases:
 
 ### Repository mechanisms
 
-Egeria's [native metadata repositories](/concepts/repository-connector) have 2 mechanisms to retrieve metadata illustrated in the diagram below.  There is a graph store and an index store.
+Egeria's [native metadata repositories](/concepts/repository-connector) (the PostgreSQL repository connector and the in-memory repository connector) support 2 kinds of retrieval, illustrated in the diagram below.  Conceptually, there is a graph store and an index store.
 
 ![Mechanisms for retrieving metadata](retrieving-metadata-mechanisms.svg)
-> An Egeria native repository has a graph store and an index store.
+> An Egeria native repository supports both navigational (graph) and value-based (index) retrieval.
 
-The **graph store** supports requests to retrieve metadata that involves navigating from a starting point to related instances.  For example, a request to retrieve all the glossary terms for a glossary involves locating the glossary entity and navigating via the [TermAnchor relationship](/types/3/0330-Terms) to the glossary terms.
+The **graph store** supports requests to retrieve metadata that involves navigating from a starting point to related instances.  For example, a request to retrieve all the glossary terms for a [glossary](/types/3/0310-Glossary) involves locating the glossary entity and navigating via the [CollectionMembership relationship](/types/0/0021-Collections) to the glossary terms.
 
-![Navigating from a glossary to its glossary terms](retrieving-metadata-glossary-terms-query.svg)
+```mermaid
+flowchart LR
+    G["Glossary"] -- CollectionMembership --> T1["GlossaryTerm"]
+    G -- CollectionMembership --> T2["GlossaryTerm"]
+    G -- CollectionMembership --> T3["GlossaryTerm"]
+```
 
 The **index store** contains lists of values with links to the instance they came from.  It is used to locate instances that have particular values.  For example, a request to retrieve all glossary terms with a particular name would use the index store.  The terms returned could come from any glossary.
 
-Within the index store, there will be many indexes created by Egeria to speed up metadata searches.  For example, a graph-based repository connector builds an index for each primitive property in the type system as well as the standard header properties - such as guid, createTime, ...  It then maps this call down onto whatever search technology is configured.
+How these mechanisms are implemented depends on the repository.  For example, the PostgreSQL repository connector stores each entity, relationship and classification in its own table, with their property values in separate `entity_property_value`, `relationship_property_value` and `classification_property_value` tables.  Navigational requests follow the `end1`/`end2` links in the relationship table, and value searches are mapped onto SQL queries over the property value tables.
 
 ### Filtering
 
@@ -59,35 +64,40 @@ The example above combined a value search with a navigational one.  There are ot
 
 It is possible that the caller wants to retrieve a lot of metadata, too much in fact to be retrieved in one request.  Therefore, Egeria's retrieval requests include paging.  This is expressed using 2 parameters:
 
-* A starting point in the list of results (called elementStart, startingFrom, startFrom depending on the API) to return.
-* The maximum number of results to return (called maxElements or pageSize depending on the API).
+* A starting point in the list of results to return.  This is `startFrom` on the view services and in the Open Metadata Framework's `PagingOptions`, and `fromEntityElement`/`fromRelationshipElement` on the repository services.
+* The maximum number of results to return, called `pageSize`.
 
 Every server limits the maximum number of elements that can be returned, so if the caller requests too much, or a page size of 0, the server's maximum is used.
 
-The caller then codes a loop that retrieves the results, incrementing the starting point by the page size each time until a null result is returned.  
+The caller then codes a loop that retrieves the results, incrementing the starting point by the page size each time until a null result is returned.
 
 It is possible that the caller may be returned an empty list on some iterations.  This means all the values returned by the repository have been filtered out and the caller should increment the starting point and continue to retrieve new results.
 
 ![Paging with filtering](retrieving-metadata-paging.svg)
 
-In order for this loop to work, the caller needs to know the real paging size used.  Therefore, the page size value used by caller's should be established as a value lower than that set by the servers.   The purpose of the server's maximum page size is to prevent rogue request from impacting the server.
+In order for this loop to work, the caller needs to know the real paging size used.  Therefore, the page size value used by callers should be established as a value lower than that set by the servers.   The purpose of the server's maximum page size is to prevent rogue requests from impacting the server.
 
 
 ## Choosing the API to use
 
 Egeria APIs each have their own data models which affects the structure of information returned on a retrieval call.
 
-For example, the repository services (OMRS) return entity and relationship instances.  The view services (OMVSs) return assets, glossary terms, connections, ... elements.
+For example, the repository services (OMRS) return entity and relationship instances.  The view services (OMVSs) return *metadata elements* that describe assets, glossary terms, connections, ... along with their related elements.
 
 Often the results returned by an OMVS includes information from multiple OMRS instances.  These are filled in via additional navigational retrieval requests once the initial retrieval from the repository services has returned a selection of OMRS instances.
 
-The most perfect, rich result set from an OMVS for your needs, may involve many requests to the repositories. If an OMVS query seems to be taking a lot of time, it might just be that it is doing a lot of work. However, if too much information is being returned, it may be that the API call is not the best choice for your needs, or the options ned to be adjusted to prune the results.  For example, if you are only processing the main element and do not care about its relationships, set `graphQueryDepth=0` in the get/query/search options.
+The most perfect, rich result set from an OMVS for your needs, may involve many requests to the repositories. If an OMVS query seems to be taking a lot of time, it might just be that it is doing a lot of work. However, if too much information is being returned, it may be that the API call is not the best choice for your needs, or the options need to be adjusted to prune the results.  The get/query/search options (the `GetOptions` class and its subclasses in the [Open Metadata Framework](/frameworks/omf/overview)) include:
+
+* `graphQueryDepth` - the maximum number of relationships away from the starting element that the request traverses to fill in related elements.  The default is 5.  If you are only processing the main element and do not care about its relationships, set `graphQueryDepth=0`.
+* `relationshipsPageSize` - the maximum number of relationships of each kind returned with an element.  Zero means up to the server's maximum page size.
+* `includeOnlyRelationships` and `skipRelationships` - lists of relationship type names that restrict which relationships are returned.
+* `maxMermaidNodeCount` - the maximum number of nodes in any [mermaid](https://mermaid.js.org/) graph returned with the element.
 
 ## Metadata elements
 
-Most OMASs return *metadata elements* on their APIs.  In its simplest form, a metadata element maps to a single OMRS instance (typically an entity) and includes an *element header* and its *properties*.
+The view services return *metadata elements* on their APIs.  In its simplest form, a metadata element maps to a single OMRS instance (typically an entity) and includes an *element header* and its *properties*.
 
-* The element header comes from the header of the OMRS instance. This information is managed by the OMRS. 
+* The element header comes from the header of the OMRS instance. This information is managed by the OMRS.
 * The properties are managed by the caller.  They are used when creating/updating the OMRS instance and are different for each type of instance.  The types of the properties for a particular type of instance are defined in the [Open Metadata Types](/types).
 
 The illustration below shows the typical structure of a metadata element that is populated from an OMRS entity instance.
@@ -96,21 +106,111 @@ Notice the element header includes the entity's classifications.
 
 ![Metadata Element Structure](retrieving-metadata-metadata-element.svg)
 
-As an example, these are the properties for an [Endpoint](/types/0/0026-Endpoints) metadata element from [Connection Maker](/services/omvs/connection-maker/overview)'s interface.
+Most view service operations return an `OpenMetadataRootElement` (package `org.odpi.openmetadata.frameworks.openmetadata.metadataelements`) for each element.  It has the element header (`elementHeader`), a properties bean (`properties`) whose class matches the element's type - for example `SoftwareServerProperties` for a *SoftwareServer* - and, depending on the request, lists of related elements and [mermaid](https://mermaid.js.org/) graphs (such as `mermaidGraph`) that visualize the element and its relationships.
 
-![EndpointElement](retrieving-metadata-endpoint-element.svg)
+```mermaid
+classDiagram
+    class MetadataElement {
+        <<interface>>
+    }
+    class AttributedMetadataElement {
+        ElementHeader elementHeader
+        List~RelatedMetadataElementSummary~ externalReferences
+        List~RelatedMetadataElementSummary~ memberOfCollections
+        RelatedMetadataElementSummary connectorType
+        RelatedMetadataElementSummary endpoint
+        List~RelatedMetadataElementSummary~ certifications
+        ...
+    }
+    class OpenMetadataRootElement {
+        OpenMetadataRootProperties properties
+        Map specification
+        String mermaidGraph
+        ...
+    }
+    MetadataElement <|.. AttributedMetadataElement
+    AttributedMetadataElement <|-- OpenMetadataRootElement
+```
 
 ### Element header
 
-The structure of the element header is defined by the Open Connector Framework (OCF).  It includes:
+The structure of the element header is defined by the `ElementHeader` class in the Open Metadata Framework (OMF).  It extends `ElementControlHeader`, which it shares with classifications and relationships.  It includes:
 
-* Element status - the status of the element is its lifecycle state.  Most elements are in either ACTIVE or DELETED status.  Some types of entities have an [extended lifecycle](/concepts/instance-status).
-* Element type - the type defines what the entity represents, and (from its type definition) which properties can be stored in the entity.
-* Element origin - the origin defines the element's [provenance](/features/metadata-provenance/overview).
-* Element versions - the versions identify which version and who is responsible for making the changes to bring it to its current version.
-* If the OMRS instance is an entity, a list of its classifications.
+* Element status (`status`) - the status of the element is its lifecycle state.  Most elements are in either ACTIVE or DELETED status.  Some types of entities have an [extended lifecycle](/concepts/instance-status).
+* Element type (`type`) - the type defines what the entity represents, and (from its type definition) which properties can be stored in the entity.  It includes the type's name, its super types and its description.
+* Element origin (`origin`) - the origin defines the element's [provenance](/features/metadata-provenance/overview).
+* Element versions (`versions`) - the versions identify which version and who is responsible for making the changes to bring it to its current version.
+* The unique identifier (`guid`) of the element.
+* The element's classifications.  The commonly used classifications have their own field, named after the classification - for example `anchor` (*Anchors*), `zoneMembership`, `confidentiality`, `ownership`, `memento`, `template` and `usageActivity`.  Classifications that can appear more than once have a list, such as `collectionKinds` and `executionPoints`, and any other classifications are in `otherClassifications`.
 
-![ElementHeader](retrieving-metadata-element-header.svg)
+```mermaid
+classDiagram
+    class ElementControlHeader {
+        long headerVersion
+        ElementStatus status
+        ElementType type
+        ElementOrigin origin
+        ElementVersions versions
+    }
+    class ElementHeader {
+        String guid
+        ElementClassification anchor
+        ElementClassification zoneMembership
+        ElementClassification ownership
+        ElementClassification memento
+        ElementClassification usageActivity
+        List~ElementClassification~ collectionKinds
+        List~ElementClassification~ otherClassifications
+        ...
+    }
+    ElementControlHeader <|-- ElementHeader
+```
+
+This is an abbreviated element returned from the [Runtime Manager](/services/omvs/runtime-manager/overview) for the `qs-metadata-store` server.  Notice the *Anchors* classification is returned in the `anchor` field of the element header.
+
+```json
+{
+  "class": "OpenMetadataRootElement",
+  "elementHeader": {
+    "class": "ElementHeader",
+    "status": "ACTIVE",
+    "type": {
+      "typeName": "SoftwareServer",
+      "superTypeNames": ["ITInfrastructure", "Infrastructure", "Asset", "Referenceable", "OpenMetadataRoot"],
+      "typeCategory": "ENTITY_DEF"
+    },
+    "origin": {
+      "sourceServer": "qs-metadata-store",
+      "originCategory": "LOCAL_COHORT",
+      "homeMetadataCollectionName": "qs-metadata-store"
+    },
+    "versions": {
+      "createdBy": "omagspcatnpa",
+      "createTime": "2026-10-25T10:25:42.604+00:00",
+      "version": 9
+    },
+    "guid": "81aee2d5-151f-4f61-b8ad-b22785cd6ffd",
+    "anchor": {
+      "class": "ElementClassification",
+      "classificationName": "Anchors",
+      "classificationOrigin": "ASSIGNED",
+      "classificationProperties": {
+        "class": "AnchorsProperties",
+        "anchorTypeName": "SoftwareServer",
+        "anchorDomainName": "Asset"
+      }
+    }
+  },
+  "properties": {
+    "class": "SoftwareServerProperties",
+    "typeName": "SoftwareServer",
+    "qualifiedName": "Metadata Access Store::https://localhost:9443::qs-metadata-store",
+    "displayName": "qs-metadata-store from Coco Pharmaceuticals on https://localhost:9443",
+    "deployedImplementationType": "Metadata Access Store",
+    "deploymentStatus": "ACTIVE"
+  }
+}
+```
 
 ### Element classification
 
@@ -120,33 +220,23 @@ Classifications are structured as follows.  Notice they include the same header 
 
 ### Composite metadata elements
 
-Metadata elements can include information from multiple OMRS instances.  For example, this is the connection element from Connection Maker API.  Besides it own properties, a valid [connection](/concepts/connection) is always linked to a connector type.  It may have a link to an endpoint and may be linked to other embedded connections.  The connection element therefore includes information about these important linked objects.
+Metadata elements can include information from multiple OMRS instances.  The `AttributedMetadataElement` class, which `OpenMetadataRootElement` extends, has a field for each kind of relationship that the element may have, named for the role the related element plays.  Each field holds a `RelatedMetadataElementSummary` (or a list of them) for the relationships that were retrieved.
 
-![ConnectionElement](retrieving-metadata-connection-element.svg)
+For example, a valid [connection](/concepts/connection) is always linked to a connector type.  It may have a link to an endpoint and may be linked to other embedded connections.  When a connection is retrieved through the [Connection Maker](/services/omvs/connection-maker/overview) API, these linked objects are returned in the `connectorType`, `endpoint` and `embeddedConnections` fields of the connection's metadata element.
 
 #### Element stub
 
-The element stub is created from the part of a relationship that describes the entity at one of the ends of the relationship.  In OMRS, this is called an *entity proxy*.
+An element stub (class `ElementStub`) identifies an element without returning its properties.  It is the element header plus the element's `uniqueName`.  It is created from the part of a relationship that describes the entity at one of the ends of the relationship.  In OMRS, this is called an *entity proxy*.
 
-Often an element stub is included in the metadata element because the relationship needed to be retrieved to satisfy another part of the request, and the caller may wish to retrieve the linked entity in a subsequent call. This is more efficient using the unique identifier (guid) of the entity.  So since the information has already been retrieved, and may be useful later, it is included.
+An element stub is used when the relationship needed to be retrieved to satisfy another part of the request, and the caller may wish to retrieve the linked entity in a subsequent call.  This is more efficient using the unique identifier (guid) of the entity.  So since the information has already been retrieved, and may be useful later, it is included.
 
-![ElementHeader](retrieving-metadata-element-stub.svg)
+### Supplementary properties
 
-### Composite properties
-
-Some metadata elements may look like they are returning a single OMRS instance, but in fact represent a collection of instances that are maintained through a composite properties object.
-
-For example, this is asset element from the Asset Maker API.
-
-![AssetElement](retrieving-metadata-asset-element.svg)
-
-Its properties object is as follows:
-
-![AssetProperties](retrieving-metadata-asset-properties.svg)
-
-The contents of the asset properties are stored using an asset and a glossary term.
+Some elements, such as assets catalogued from a third party technology, are read-only for the people that use them.  A steward or owner can still maintain additional descriptive properties about such an element by linking it to a glossary term using the [SupplementaryProperties](/types/3/0395-Supplementary-Properties) relationship.
 
 ![SupplementaryProperties relationship linking an asset to a glossary term](retrieving-metadata-supplementary-properties.svg)
+
+When the element is retrieved, the linked glossary term is returned in the `supplementaryProperties` field of its metadata element.
 
 ### Relationship metadata elements
 
@@ -154,40 +244,52 @@ Some metadata elements represent a relationship.  For example, a certification f
 
 ![Certification relationship with CertificationType entity](retrieving-metadata-certification-relationship.svg)
 
-In the corresponding metadata element, both the certification relationship and the certification type entity are represented.
-
-![CertificationElement](retrieving-metadata-certification-element.svg)
+When the certified element is retrieved, each certification is returned in the `certifications` field of its metadata element.  Both the certification relationship and the certification type entity are represented: the entry is a related element (described below) whose `relationshipHeader` and `relationshipProperties` come from the *Certification* relationship, and whose `relatedElement` is the *CertificationType*.
 
 #### Related element
 
 Some retrieval methods that navigate relationships may link to entities of multiple types - for example when the members of a [Collection](/types/0/0021-Collections) are returned, they may be any type of referenceable entity.
 
-These related instances could be returned as an element stub as used in the [connection element](#composite-metadata-elements).  However, this does not return the properties from the relationship.
+If the relationship properties are needed, as well as the related entity, then a *related element* (class `RelatedMetadataElementSummary`) is used.  This is also the class used for the related elements in a [composite metadata element](#composite-metadata-elements).
 
-If the relationship properties are needed then a *related element* is used.
+```mermaid
+classDiagram
+    class RelatedMetadataElementSummary {
+        ElementHeader relationshipHeader
+        RelationshipBeanProperties relationshipProperties
+        Date effectiveFromTime
+        Date effectiveToTime
+        MetadataElementSummary relatedElement
+        boolean relatedElementAtEnd1
+    }
+    class MetadataElementSummary {
+        ElementHeader elementHeader
+        OpenMetadataRootProperties properties
+    }
+    RelatedMetadataElementSummary --> MetadataElementSummary : relatedElement
+```
 
-![RelatedElement](retrieving-metadata-related-element.svg)
+`relatedElementAtEnd1` tells you which end of the relationship the related element is at.
 
 ## Retrieval requests
 
-The open metadata repositories support for following retrieval requests:
+The open metadata repositories support the following retrieval requests (the method names are from the repository services' `OMRSMetadataCollection` interface):
 
 * Value-based queries:
 
-    * Get an instance (entity or relationship) by its unique identifier (guid).
-    * Get all the entities of a particular type that have a specific classification with specific properties set to specific values.
-    * Get all the entities of a particular type that have specific properties set to specific values.
-    * Get all the relationships of a particular type that have specific properties set to specific values.
-    * Get all the entities of a particular type that have any property set to a specific value.
-    * Get all the relationship of a particular type that have any property set to a specific value.
-    * Get all the entities of a particular type that have a combination of properties set to a specific values.
-    * Get all the relationship of a particular type that have a combination of properties set to a specific values.
+    * Get an instance (entity or relationship) by its unique identifier (guid) - `getEntityDetail`, `getEntitySummary`, `getRelationship`.
+    * Get all the entities of a particular type that have specific properties set to specific values - `findEntitiesByProperty`.
+    * Get all the relationships of a particular type that have specific properties set to specific values - `findRelationshipsByProperty`.
+    * Get all the entities of a particular type that have a specific classification with specific properties set to specific values - `findEntitiesByClassification`.
+    * Get all the entities of a particular type that have any property set to a specific value - `findEntitiesByPropertyValue`.
+    * Get all the relationships of a particular type that have any property set to a specific value - `findRelationshipsByPropertyValue`.
+    * Get all the entities (or relationships) of a particular type that match a combination of property and classification conditions - `findEntities`, `findRelationships`.  `countEntities` returns the number of entities that would match.
 
 * Navigational queries:
-    * Get all the relationships connected to an entity.
-    * Get the graph of instances that are connected to an entity.
-    * Get the entities that link two entities together.
-    * Get all entities of a specific type that are connected to a starting entity either directly or indirectly.
+    * Get all the relationships connected to an entity - `getRelationshipsForEntity`.
+
+* Historical queries:
+    * Get the versions of an instance over a period of time - `getEntityDetailHistory`, `getRelationshipHistory`, `getClassificationHistory`.
 
 The OMVS APIs are then built up from these basic building block queries.
 

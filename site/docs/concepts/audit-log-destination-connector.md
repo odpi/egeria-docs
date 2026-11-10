@@ -33,7 +33,8 @@ Below are the connector implementations provided by Egeria
 
 * [Console Event Display Audit log Destination :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-console-event-display-connector){ target=gh } displays the content of events in the console when they are both received and sent.
 
-* [PostgreSQL Audit Log Destination :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/audit-log-connectors/audit-log-postgres-connector){ target=gh } stores audit logs in a PostgreSQL database.
+!!! tip "Observing activity"
+    To analyse the activity recorded in the audit log - for example, to see which metadata elements are most used - use the [Pepys Activity Observer and the Lovelace services](/features/metadata-observability/overview), which turn audit log records published on an event topic into open metadata.
 
 ??? education "Further information relating to Audit Log Destination Connectors"
 

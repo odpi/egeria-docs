@@ -119,13 +119,13 @@ Your integration connector needs to be able to map between the elements in the t
 ??? tip "What if there is not a one-to-one correspondence between elements"
     The integration context supports [external identifiers](/features/external-identifiers/overview) which can help to correlate complex relationships between the third party technology and open metadata.  Retrieve the client with `integrationContext.getExternalIdClient()`.
 
-Wherever the elements you create are standard - a database, a file, a topic - consider [templated cataloguing](/features/templated-cataloguing/overview) rather than building the elements property by property.  Templates are supplied on the connector's configuration properties and on each *CatalogTarget* relationship, and are retrieved with `getTemplates()`.
+Wherever the elements you create are standard - a database, a file, a topic - consider [templated cataloguing](/features/templated-cataloguing/overview) rather than building the elements property by property.  Templates are supplied on each *CatalogTarget* relationship as a map of template name to template GUID, and the catalog target processor retrieves them with `getTemplates()`.
 
 ## Controlling external source metadata provenance
 
-The configuration for an integration connector includes a *metadataSourceQualifiedName*.  The default value is null which means store the metadata in any [metadata collection](/concepts/metadata-collection) that is owned by the locally connected cohorts.  Alternatively, it specifies the [qualifiedName](/concepts/referenceable) of a [software capability](/concepts/software-capability) entity that represents the third party technology.   This is automatically catalogued by the integration daemon if it is not found in the open metadata ecosystem.  The guid and qualifiedName of this entity is used to identify the [external metadata collection](/concepts/metadata-collection) that any open metadata elements created by the integration connector will be stored in.  This prevents processes other than the integration connector from modifying the metadata elements.
+The *RegisteredIntegrationConnector* relationship that links an integration connector into its [integration group](/concepts/integration-group) has a *metadataCollectionQualifiedName* property.  The default value is null, which means the metadata created by the connector is stored with local cohort provenance.  Alternatively, it names a [metadata collection](/concepts/metadata-collection) for the metadata that the connector maintains.  When the connector's context is set up, the integration daemon looks for a *MetadataCollection* asset with this qualified name and creates one if it is not found.  The guid and qualifiedName of this element identify the external metadata collection that any open metadata elements created by the integration connector are stored in, giving them [external source metadata provenance](/features/metadata-provenance/overview).  This prevents processes other than the integration connector from modifying the metadata elements.
 
-Each *CatalogTarget* relationship can supply its own *metadataSourceQualifiedName*.  This means that the metadata gathered from each piece of third party technology is held in its own metadata collection, even though one connector instance created it all.
+Each *CatalogTarget* relationship can supply its own *metadataCollectionQualifiedName*, which overrides the connector's value for that target.  This means that the metadata gathered from each piece of third party technology is held in its own metadata collection, even though one connector instance created it all.  The resolved values are available from the context's `getMetadataSourceQualifiedName()` and `getMetadataSourceGUID()` methods.
 
 ## Writing the connector provider
 
@@ -229,7 +229,7 @@ The [integration context](/guides/developer/integration-connectors/integration-c
 
 An integration connector that is listening for events from the open metadata ecosystem implements the listener interface [OpenMetadataEventListener](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/events/OpenMetadataEventListener.html).  This interface has a `processEvent()` method that takes an [OpenMetadataOutTopicEvent](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/openmetadata/events/OpenMetadataOutTopicEvent.html).
 
-If your connector extends `DynamicIntegrationConnectorBase`, simply declaring that it implements `OpenMetadataEventListener` is enough.  The base class registers the listener at the end of the first `refresh()`, implements `processEvent()`, and passes each event on to any catalog target processor that also implements `OpenMetadataEventListener`.  Delaying the registration until the first refresh has completed reduces the flood of events caused by the connector's own initial synchronization.
+If your connector extends `DynamicIntegrationConnectorBase`, simply declaring that it implements `OpenMetadataEventListener` is enough.  The base class registers the listener at the end of the first `refresh()`, implements `processEvent()`, and passes each event on to any catalog target processor that also implements `OpenMetadataEventListener`.  The listener is only registered when the connector's permitted synchronization is `TO_THIRD_PARTY` or `BOTH_DIRECTIONS`, since these are the only settings where open metadata changes need to be pushed out.  Delaying the registration until the first refresh has completed reduces the flood of events caused by the connector's own initial synchronization.
 
 If you are registering the listener yourself, do it in the `start()` method:
 
@@ -268,7 +268,7 @@ The `noRefreshInProgress()` call is used to ensure this connector ignores events
 
 ### Listening for events from the third party technology
 
-The [OpenLineage Event Receiver Integration Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-event-receiver-integration-connector){ target=gh } shows how to receive events from an event broker such as [Apache Kafka](https://kafka.apache.org/).  Each of its catalog targets is a topic, and the resource connector created for the target is an [Open Metadata Topic Connector](/concepts/open-metadata-topic-connector).  Its catalog target processor implements [OpenMetadataTopicListener](https://odpi.github.io/egeria/org/odpi/openmetadata/repositoryservices/connectors/openmetadatatopic/OpenMetadataTopicListener.html) and registers itself with the topic connector:
+The [OpenLineage Event Receiver Integration Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-event-receiver-integration-connector){ target=gh } shows how to receive events from an event broker such as [Apache Kafka](https://kafka.apache.org/).  Each of its catalog targets is a topic, and the resource connector created for the target is an [Open Metadata Topic Connector](/concepts/open-metadata-topic-connector).  The integration connector implements [OpenMetadataTopicListener](https://odpi.github.io/egeria/org/odpi/openmetadata/repositoryservices/connectors/openmetadatatopic/OpenMetadataTopicListener.html) and passes itself to each catalog target processor, which registers it with the topic connector:
 
 ```java
         if (super.getConnectorToTarget() instanceof OpenMetadataTopicConnector topicConnector)
@@ -286,7 +286,7 @@ Once `topicConnector.start()` is called, the connector will receive events from 
 
 !!! attention "Do not create threads in your integration connector"
     Each integration connector runs in its own thread. Integration connectors should not create additional threads because this makes it difficult for Egeria to properly shut down the integration daemon independently of the OMAG Server Platform.
-    If the connector needs to make blocking calls to the third party technology, it should implement the `engage()` method and set the `usesBlockingCalls` property in its configuration to `true`. When the `engage()` method is called on the thread, it should issue one blocking call and return.  The integration daemon will check that it is not in shutdown and if it is still running, it calls `engage()` again.
+    If the connector needs to make blocking calls to the third party technology, it should implement the `engage()` method and set the `usesBlockingCalls` property of its *IntegrationConnector* element to `true`. When the `engage()` method is called on the thread, it should issue one blocking call and return.  The integration daemon will check that it is not in shutdown and if it is still running, it calls `engage()` again.
 
 ### Exceptions and error handling
 
@@ -315,7 +315,7 @@ Your integration connector implementation should be built and packaged in a *jar
 
 The connector jar file (and any jar files for the dependent third party client libraries not included in your connector's jar file) need to be added to the [OMAG Server Platform](/concepts/omag-server-platform) class path.  The easiest way to do this is to copy the JAR files into the `extra` directory of your OMAG Server Platform's [assembly](/education/tutorials/building-egeria-tutorial/overview).
 
-Once you have installed the connector, configure it in the integration daemon, connected to a metadata access store.
+Once you have installed the connector, describe it in an *IntegrationConnector* element and add it to an [integration group](/concepts/integration-group) that your integration daemon is configured to run.  The integration daemon reads the integration group from its metadata access store.
 
 ![Figure 6](testing.svg)
 

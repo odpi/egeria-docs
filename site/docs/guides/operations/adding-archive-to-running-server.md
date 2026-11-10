@@ -1,19 +1,25 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
+# Adding an archive to a running Metadata Access Store
 
-## Adding an archive to a running Metadata Access Store
+[Open Metadata Archives](/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [Cohort Members](/concepts/cohort-member).
 
-[Open Metadata Archives](/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [Cohort Members](/concepts/cohort-member.md).
-
-Archives can be [added to the configuration document](/concepts/open-metadata-archive/#configure-metadata-to-load-on-startup) of a server to ensure their content is loaded each time the server is started.  This is intended for:
+Archives can be [added to the configuration document](/guides/admin/servers/by-section/repository-services-section#adding-an-archive-to-the-configuration-document) of a server to ensure their content is loaded each time the server is started.  This is intended for:
 
 - Archives containing type definitions.
 - Archives containing instances for repositories that do not store the archive content but keep it in memory.
 
 An archive may be loaded multiple times, however, its content is only added to the local repository if the repository does not have the content (or a later version) already.
 
-Archives can also be loaded to a running server using the following commands.
+Archives can also be loaded into a running server without a restart, in any of these ways:
+
+* `hey_egeria_ops tell repository load-archive`;
+* pyegeria - `RuntimeManager.add_archive_file()`;
+* the Runtime Manager view service, through a view server;
+* the platform services calls below, which go straight to the platform.
+
+[Loading open metadata archives](/guides/operations/overview#operating-servers) in the Operations Guide compares these options.  Each REST call needs a bearer token from the platform's token service, passed in an `Authorization: Bearer {{token}}` header - see [REST APIs](/guides/operations/overview#rest-apis).
 
 Typically, an open metadata archive is stored as JSON format in a file. To load such a file use the following command:
 

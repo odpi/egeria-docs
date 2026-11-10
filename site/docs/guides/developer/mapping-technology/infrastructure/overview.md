@@ -70,12 +70,7 @@ The servers are represented by *SoftwareServers*.  Software capabilities can be 
 ![Figure 8](configurable-software-server-platform.svg)
 > **Figure 8:** The metadata elements to represent a configurable software server platform
 
-Egeria's [OMAG Server Platform](/concepts/omag-server-platform) is an example of this type of technology. This is illustrated in figure 9.  The software servers are [OMAG Servers](/concepts/omag-server) and the registered services are software capabilities of type *SoftwareService*.  More specifically:
-
-* Open Metadata Access Services (OMASs) are software capabilities of type  *MetadataAccessService*
-* Open Metadata Engine Services (OMESs) are software capabilities of type *EngineHostingService*
-* Open Metadata View Services (OMVSs) are software capabilities of type
-*UserViewService*.  
+Egeria's [OMAG Server Platform](/concepts/omag-server-platform) is an example of this type of technology. This is illustrated in figure 9.  The software servers are [OMAG Servers](/concepts/omag-server) and the registered services are software capabilities of type *SoftwareService*.  The kind of OMAG Server - for example *Metadata Access Store*, *Integration Daemon*, *Engine Host* or *View Server* - is recorded in the *deployedImplementationType* property of the *SoftwareServer* element.
 
 ![Figure 9](omag-server-platform-stack.svg)
 > **Figure 9:** The OMAG server platform
@@ -88,50 +83,58 @@ Hosts, software server platforms and software servers are all types of *ITInfras
 
 The *DeployedOn* relationship is between an IT infrastructure asset and an asset that represented its real world counterpart's deployment destination.  This means that the deployment "stack" can be represented with as many levels as needed to describe the environment.  At the base of the stack, it is possible to link an asset of type *Infrastructure* (rather than *ITInfrastructure*) to show the physical deployment of the software.
 
-### Server Purposes
+### Server purposes
 
-IT Infrastructure assets can be associated with *ServerPurpose* classification to further clarify the role that its real-world counterpart is performing.  The server purposes are:
+The role that a software server is performing is captured in the *deployedImplementationType* property of its *SoftwareServer* element, using one of the [deployed implementation types](/concepts/deployed-implementation-type) defined in Egeria's reference data.  General purpose values include:
 
-* *ApplicationServer* - hosting application logic.
-* *Webserver* - hosting endpoint for HTTP requests.
-* *DatabaseServer* - hosting a database management system (DBMS).
-* *IntegrationServer* - hosting data movement processes.
-* *MetadataServer* - manages and stores a collection of metadata.
-* *RepositoryProxy* - Acts as an adapter for a metadata server, translating requests between different APIs, formats and protocols.
-* *StewardshipServer* - hosting stewardship processes.
-* *GovernanceDaemon* - hosting automated governance processing.
+* *Database Server* - hosting a database management system (DBMS).
+* *Integration Server* - hosting data movement processes, with *Apache Airflow Server* as a more specific value.
+* *Metadata Server* - manages and stores a collection of metadata, with *Marquez Server* and *Apache Superset* as more specific values.
+
+Egeria's own server types use the values *OMAG Server*, *Metadata Access Server*, *Metadata Access Store*, *Integration Daemon*, *Engine Host* and *View Server*, and the platform that hosts them is an *OMAG Server Platform*.  Integration connectors for other technologies define their own values - for example *PostgreSQL Server*.
 
 ### Software Capabilities
 
-There are many types of software capability. The list below
-contains the Software Capabilities defined in the open metadata types.
+There are many types of software capability.  The list below shows the subtypes of *SoftwareCapability* defined in the open metadata types.
 
-* *APIManager* - A capability that manages callable APIs that typically delegate onto Software Services.
-* *Application* - A capability supporting a specific business function.
-* *Catalog* - A capability that manages collections of descriptions about people, places, digital assets, things, ...
-* *DataManager* - A capability that manages collections of data.
-    * *Database Manager* - A capability that manages data organized as relational schemas.
+* *APIManager* - A capability that manages callable APIs.
+    * *RESTAPIManager* - A capability that supports REST APIs in a server.
+* *Application* - A server capability supporting a specific business function.
+* *AuthorizationManager* - A capability that supports the authorization of requests.
+* *CohortMember* - A capability enabling a server to access an open metadata repository cohort.
+* *DataManager* - A capability that manages collections of stored data.
+    * *DatabaseManager* - A capability that manages data organized as relational schemas.
+    * *DataAccessManager* - A capability that manages data organized as structured schemas by linking them to the data stores that hold the data.
 * *Engine* - A programmable engine for running automated processes.
-    * *Workflow Engine* - An engine capable of running a mixture of human and automated tasks as part of a workflow process.
-    * *Reporting Engine* - An engine capable of creating reports by combining information from multiple data sets.
-    * *Analytics Engine* - An engine capable of running analytics models using data from one or more data sets.
-    * *Data Movement Engine* - An engine capable of copying data from one data store to another.
-    * *Data Virtualization Engine* - An engine capable of creating new data sets by dynamically combining data from one or more data stores or data sets.
+    * *WorkflowEngine* - An engine capable of running a mixture of human and automated tasks as part of a workflow process.
+    * *ReportingEngine* - An engine capable of creating reports by combining information from multiple data sets.
+    * *AnalyticsEngine* - An engine capable of running analytics models using data from one or more data sets.
+    * *DataMovementEngine* - An engine capable of copying data from one data store to another.
+    * *DataVirtualizationEngine* - An engine capable of creating new data sets by dynamically combining data from one or more data stores or data sets.
+    * *GovernanceEngine* - A collection of related governance services of the same type.
+        * *GovernanceActionEngine* - A collection of related governance services supporting the Open Governance Framework (OGF).
+        * *SurveyActionEngine* - A collection of related governance services supporting the Open Survey Framework (OSF).
+        * *WatchdogActionEngine* - A collection of related governance services supporting the Open Watchdog Framework (OWF).
+        * *ExplorerActionEngine* - A governance engine supported by tools such as the Resource Explorer.
+        * *RepositoryGovernanceEngine* - A governance engine for open metadata repositories.
 * *EventBroker* - A capability that supports event-based services, typically around topics.
-* *Software Services* - A capability that provides externally callable functions to other services.
-    * *Application Service* - A software service that supports a reusable business function.
-    * *Metadata Integration Service* - A software service that exchanges metadata between servers.
-    * *Metadata Access Service* - A software service that provides access to stored metadata.
-    * *Engine Hosting Service* - A software service that provides services that delegate to a hosted engine.
-    * *User View Service* - A software service that provides user interfaces access to digital resources.
-* *Network Gateway* - A connection point enabling network traffic to pass between two networks.
-* *Enterprise Access Layer* - Repository services for the Open Metadata Access Services (OMAS) supporting federated queries and aggregated events from the connected cohorts.
-* *Cohort Member* - A capability enabling a server to access an open metadata repository cohort.
-* *Governance Engine* - A collection of related governance services of the same type.
-    * *Governance Action Engine* - A collection of related governance services supporting the Open Governance Framework (OGF).
-    * *Survey Action Engine* - A collection of related governance services supporting the Open Survey Framework (OSF).
-    * *Watchdog Action Engine* - A collection of related governance services supporting the Open Watchdog Framework (OWF).
-    * *Repository Governance Engine* - A collection of related governance services supporting the Open Metadta Repository Service (OMRS).
+* *EventManager* - A capability that sends and/or receives events as part of its software function.
+* *IntegrationGroup* - A collection of integration connectors to run together.
+* *InventoryCatalog* - A capability that manages collections of descriptions about people, places, digital assets, things, ...
+* *NetworkGateway* - A connection point enabling network traffic to pass between two networks.
+* *ResourceManager* - A manager of resources.
+    * *FileSystem* - A store of files organized into a hierarchy of file folders.
+    * *FileManager* - A manager of a collection of files and folders.
+    * *ContentCollectionManager* - A manager of controlled documents and related media.
+    * *ChangeManagementLibrary* - A managed collection of requirements, defects and proposed changes to a project.
+    * *SoftwareLibrary* - A collection of software modules.
+    * *SourceControlLibrary* - A software source code library that provides version control.
+    * *MasterDataManager* - A system that manages the consolidation and reconciliation of master data.
+    * *NotificationManager* - A capability that distributes events from a topic to its subscriber list.
+    * *UserAccessDirectory* - A system that stores the access rights and groups for users.
+    * *UserProfileManager* - A system that stores descriptions of individuals and their roles/interests in an organization.
+* *SoftwareService* - A capability that provides externally callable functions to other services.
+* *UserAuthenticationManager* - A capability that supports the identification/authentication of users.
 
 ### Types of endpoints
 
@@ -139,15 +142,11 @@ An *Endpoint* describes the address (URL, port etc) of a component that can be c
 
 Figure 10 shows some examples.  The relationships used to link the endpoint indicate how it is used.
 
-* *ConnectionEndpoint* links an endpoint to a connection.  The connection provides the information used to connect to the [resource](/concepts/resource) described by an asset.
+* *ConnectToEndpoint* links a connection to an endpoint.  The connection provides the information used to connect to the [resource](/concepts/resource) described by an asset.
 
-* *ServerEndpoint* indicates that the real-world counterpart of an IT infrastructure asset is called for requests at this address. The REST API paths are examples of server endpoints. So is Egeria's [platform ULR root](/concepts/platform-url-root).
+* *ServerEndpoint* indicates that the real-world counterpart of an IT infrastructure asset is called for requests at this address. The REST API paths are examples of server endpoints. So is Egeria's [platform URL root](/concepts/platform-url-root).
 
-* *NetworkEndpoint* indicates that the endpoint address represents a connection to the network.
-
-* *VisibleEndpoint* indicates that the endpoint address is visible through the linked network.  
-
-The *NetworkEndpoint* and *VisibleEndpoint* are used in threat modelling.
+* *VisibleEndpoint* indicates that the endpoint address is visible through the linked *Network*.  It is used in threat modelling.
 
 ![Figure 10](types-of-endpoints.svg)
 > **Figure 10:** Types of endpoints
@@ -179,11 +178,11 @@ In addition, the IT Infrastructure assets can be linked to governance metadata a
 * External References - links to external online documentation can be added.
 * Non-personal accounts (NPAs) - *ITProfiles* and *UserIdentities* can be set up to describe system users and assigned to the IT Infrastructure assets that are using them.
 
-## Infrastructure Managers (external sources)
+## Infrastructure managers (external sources)
 
-When capturing metadata from deployment artifacts that are managed wholly by a specific technology or automated process, this technology should be catalogued as a *SoftwareCapability* and its guid and qualifiedName passed as the infrastructureManagerGUID and infrastructureManagerName parameters on the API.  This will mark the metadata elements as managed by an external source which makes the metadata read-only to all but the caller responsible for cataloguing the artifact.
+When capturing metadata from deployment artifacts that are managed wholly by a specific technology or automated process, the metadata should be stored in a [metadata collection](/concepts/metadata-collection) that represents that technology.  For an [integration connector](/concepts/integration-connector), this is set with the *metadataCollectionQualifiedName* property of its *RegisteredIntegrationConnector* or *CatalogTarget* relationship, and the context then supplies the external source GUID and name on every request through the `MetadataSourceOptions` (`externalSourceGUID` and `externalSourceName`).  This marks the metadata elements as managed by an external source, which makes the metadata read-only to all but the process responsible for cataloguing the artifact.
 
-Where Egeria is the primary catalog of the infrastructure metadata, or deployment artifacts that the metadata is derived from are either manually created or maintained by multiple process, the infrastructure manager identifiers are left blank so the resulting metadata elements are editable by any authorized caller.
+Where Egeria is the primary catalog of the infrastructure metadata, or the deployment artifacts that the metadata is derived from are either manually created or maintained by multiple processes, the external source is left blank so the resulting metadata elements are editable by any authorized caller.
 
 See [Metadata Provenance](/features/metadata-provenance/overview)
 for more information about the use of external source identifiers.

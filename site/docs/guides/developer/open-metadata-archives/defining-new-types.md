@@ -3,88 +3,54 @@
 
 # Defining new types
 
-Egeria supports a [wide variety of open metadata types](/types) that cover a broad range of metadata.  These types can be extended through the normal contribution process of the Egeria project.   It is also possible to create your own type definitions that can be exchanged across the [open metadata repository cohort](/concepts/cohort-member) and may also be maintained through Egeria's APIs using [extended properties](/parameters/overview/#extended-properties).
+Egeria supports a [wide variety of open metadata types](/types) that cover a broad range of metadata.  These types can be extended through the normal contribution process of the Egeria project.   It is also possible to create your own type definitions that can be exchanged across the [open metadata repository cohort](/concepts/cohort-member) and may also be maintained through Egeria's APIs using [extended properties](/parameters/overview/#typename-and-extendedproperties).
 
 Type definitions need to be governed because they must be consistent across a cohort - during the whole time that one or more instances of the type are stored in the repositories.
 
 ## Dynamic definitions of types not recommended
 
-Egeria does have an API for dynamically defining types, but it is recommended that you only use it went experimenting with types and instances.  Instead, you should manage your types in an [open metadata archive](/concepts/open-metadata-archive) that is loaded in the [metadata access servers](/concepts/metadata-access-server) during [each server start up](/guides/admin/servers/by-section/repository-services-section#configuring-the-open-metadata-archives-to-load-on-server-startup).
+Egeria does have APIs for dynamically defining types (for example, the `addTypeDef` operation of the [Metadata Expert](/services/omvs/metadata-expert/overview) view service), but it is recommended that you only use them when experimenting with types and instances.  Instead, you should manage your types in an [open metadata archive](/concepts/open-metadata-archive) that is loaded in the [metadata access servers](/concepts/metadata-access-server) during [each server start up](/guides/admin/servers/by-section/repository-services-section).
 
 ## Creating your own type archive
 
-A type archive is created using a Java program that uses the [repository services archive utilities](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-archive-utilities) to add your new type definitions to an open metadata archive file.
+A type archive is created using a Java program that uses the [repository services archive utilities :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/repository-services/repository-services-archive-utilities){ target=gh } to add your new type definitions to an open metadata archive file.  This is the same approach that Egeria uses for its own [open metadata types](/types) (see [how the open metadata types archive is structured](#how-the-open-metadata-types-archive-is-structured) below).
 
-
-Begin by setting up your build file - this is an example using Maven.  The Java class where the `main()` method is located is called `cocopharma.openmetadata.types.CocoTypesArchiveUtility` in this example.
+Begin by setting up your build file - this is an example using Gradle, modelled on the build file of the [coco-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/sample-metadata/coco-metadata-archives){ target=gh } module.  Egeria's libraries are published to Maven Central with the group `org.odpi.egeria`, so the same dependencies can be used from Maven.  The Java class where the `main()` method is located is `org.odpi.openmetadata.samples.archiveutilities.types.CocoTypesArchiveWriter` in this example.
 
 ??? example "Build file"
-    ```
-    
-    <?xml version="1.0" encoding="UTF-8"?>
-    
-    <!-- SPDX-License-Identifier: Apache-2.0 -->
-    <!-- Copyright Contributors to the ODPi Egeria project. -->
-    
-    <project xmlns="http://maven.apache.org/POM/4.0.0"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
-        <modelVersion>4.0.0</modelVersion>
-    
-        <name>My Types Utility</name>
-        <description>
-            This package builds the open metadata type archive for my extended types.
-        </description>
-    
-        <artifactId>my-types-utility</artifactId>
-    
-        <dependencies>
-            <dependency>
-                <groupId>org.odpi.egeria</groupId>
-                <artifactId>repository-services-apis</artifactId>
-            </dependency>
-    
-            <dependency>
-                <groupId>org.odpi.egeria</groupId>
-                <artifactId>repository-services-archive-utilities</artifactId>
-            </dependency>
-    
-            <dependency>
-                <groupId>org.odpi.egeria</groupId>
-                <artifactId>open-metadata-types</artifactId>
-            </dependency>
-        
-        </dependencies>
-    
-        <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <id>assemble-all</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>single</goal>
-                            </goals>
-                            <configuration>
-                                <descriptorRefs>
-                                    <descriptorRef>jar-with-dependencies</descriptorRef>
-                                </descriptorRefs>
-                                <archive>
-                                    <manifest>
-                                        <mainClass>org.odpi.openmetadata.samples.archiveutilities.types.CocoTypesArchiveWriter</mainClass>
-                                    </manifest>
-                                </archive>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </build>
-    </project>
+    ```groovy
+    /*
+     * SPDX-License-Identifier: Apache-2.0
+     */
+
+    plugins {
+        id 'java'
+        id 'application'
+        id 'com.gradleup.shadow' version '9.6.1'
+    }
+
+    description = 'Builds the open metadata type archive for my extended types.'
+
+    def egeriaVersion = '6.2'   // the Egeria release you are building against
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation "org.odpi.egeria:repository-services-apis:${egeriaVersion}"
+        implementation "org.odpi.egeria:repository-services-archive-utilities:${egeriaVersion}"
+        implementation "org.odpi.egeria:open-metadata-types:${egeriaVersion}"
+        implementation "org.odpi.egeria:content-pack-helpers:${egeriaVersion}"   // for ArchiveVersionStabilizer
+    }
+
+    application {
+        mainClass = 'org.odpi.openmetadata.samples.archiveutilities.types.CocoTypesArchiveWriter'
+    }
+
+    shadowJar {
+        archiveClassifier = 'jar-with-dependencies'
+    }
     ```
 
 The next example shows the code to build four new types:
@@ -92,9 +58,11 @@ The next example shows the code to build four new types:
 * *BiopsyScope* - An EnumDef that holds an enumeration.
 * *BiopsyReport* - An EntityDef describing a new type of entity.
 * *BiopsySupportingEvidence* - A RelationshipDef describing a type of relationship that links the biopsy report to a Referenceable element that describes the subject of the report.
-* *ReviewedByClinicalTrials* - A ClassificationDef that describes a new classification that indicated an element has been reviewed by the clinical trials team.  It captures details about the reviewer and their findings.
+* *ReviewedByClinicalTrials* - A ClassificationDef that describes a new classification that indicates an element has been reviewed by the clinical trials team.  It captures details about the reviewer and their findings.
 
-There are three main components.  A builder that constructs the archive in memory; a helper that constructs each element for the archive and a writer that first calls the builder to extract the content and writes it to a file in JSON.
+There are three main components.  A builder (`OMRSArchiveBuilder`) that constructs the archive in memory; a helper (`OMRSArchiveHelper`) that constructs each element for the archive; and a writer (a subclass of `OMRSArchiveWriter`) that first calls the builder to extract the content and then writes it to a file in JSON.
+
+The open metadata types archive is passed to the builder as a dependent archive.  This is what allows `archiveBuilder.getEntityDef("Document")` to find the supertype of the new `BiopsyReport` entity type, and the `Referenceable` and `Asset` types used by the new relationship and classification.
 
 ??? example "Java program to build new types"
     ```java
@@ -118,7 +86,9 @@ There are three main components.  A builder that constructs the archive in memor
     import org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore.properties.typedefs.RelationshipEndDef;
     import org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore.properties.typedefs.TypeDefAttribute;
     import org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore.properties.typedefs.TypeDefLink;
+    import org.odpi.openmetadata.samples.archiveutilities.ArchiveVersionStabilizer;
     
+    import java.io.File;
     import java.util.ArrayList;
     import java.util.Date;
     import java.util.List;
@@ -130,14 +100,14 @@ There are three main components.  A builder that constructs the archive in memor
      */
     public class CocoTypesArchiveWriter extends OMRSArchiveWriter
     {
-        private static final String cocoTypesArchiveFileName = "CocoTypesArchive.json";
+        private static final String cocoTypesArchiveFileName = "CocoTypesArchive.omarchive";
     
         /*
          * This is the header information for the archive.
          */
         private static final String                  archiveGUID        = "50874908-01f1-47e2-83ea-e571109a946e";
         private static final String                  archiveName        = "CocoTypes";
-        private static final String                  archiveLicense     = "Apache-2.0";
+        private static final String                  archiveLicense     = "Apache 2.0";
         private static final String                  archiveDescription = "Specialized types for Coco Pharmaceuticals.";
         private static final OpenMetadataArchiveType archiveType        = OpenMetadataArchiveType.CONTENT_PACK;
         private static final String                  originatorName     = "Egeria Project";
@@ -146,7 +116,7 @@ There are three main components.  A builder that constructs the archive in memor
         /*
          * Specific values for initializing TypeDefs
          */
-        private static final long   versionNumber = 1L;
+        private static final long   versionNumber = new Date().getTime();
         private static final String versionName   = "1.0";
     
     
@@ -485,17 +455,92 @@ There are three main components.  A builder that constructs the archive in memor
             {
                 System.out.println("Writing to file: " + cocoTypesArchiveFileName);
     
-                super.writeOpenMetadataArchive(cocoTypesArchiveFileName, this.getOpenMetadataArchive());
+                super.writeOpenMetadataArchive(cocoTypesArchiveFileName, this.getStabilizedArchive(cocoTypesArchiveFileName));
             }
             catch (Exception error)
             {
                 System.out.println("error is " + error);
             }
         }
-    }
     
+    
+        /**
+         * Generates and writes out the open metadata archive created in the builder.
+         *
+         * @param folderName name of the folder to add the archive into
+         */
+        public void writeOpenMetadataArchive(String folderName)
+        {
+            try
+            {
+                String pathName = cocoTypesArchiveFileName;
+    
+                if (folderName != null)
+                {
+                    pathName = folderName + "/" + cocoTypesArchiveFileName;
+                }
+    
+                System.out.println("Writing to file: " + pathName);
+                super.writeOpenMetadataArchive(pathName, this.getStabilizedArchive(pathName));
+            }
+            catch (Exception error)
+            {
+                System.out.println("error is " + error);
+            }
+        }
+    
+    
+        /**
+         * Return the archive to write, with the types that are unchanged since the edition already at the path keeping
+         * their previous versions.  The version number above is the build time, and a type's version is what tells the
+         * servers of a cohort that it has been updated, so stamping unchanged types with it on every build announced
+         * changes that had not happened.
+         *
+         * @param pathName path the archive is about to be written to
+         * @return archive
+         */
+        private OpenMetadataArchive getStabilizedArchive(String pathName)
+        {
+            OpenMetadataArchive openMetadataArchive = this.getOpenMetadataArchive();
+    
+            if (new File(pathName).exists())
+            {
+                new ArchiveVersionStabilizer().stabilizeVersions(openMetadataArchive, super.readOpenMetadataArchive(pathName));
+            }
+    
+            return openMetadataArchive;
+        }
+    
+    
+        /**
+         * Main program to write the archive into the current directory.  (In egeria.git this class has no main
+         * method - it is run by CocoArchivesWriter, which calls writeOpenMetadataArchive("content-packs").)
+         *
+         * @param args ignored
+         */
+        public static void main(String[] args)
+        {
+            new CocoTypesArchiveWriter().writeOpenMetadataArchive(null);
+        }
+    }
     ```
-This example is located in the `egeria.git` repository in the [coco-metadata-archives](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/sample-metadata/coco-metadata-archives) module.
 
+This example is located in the `egeria.git` repository in the [coco-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/sample-metadata/coco-metadata-archives){ target=gh } module, and its output is `content-packs/CocoTypesArchive.omarchive`.  The `main()` method has been added for this page.
+
+Notice how the version number of the types is handled.  The `versionNumber` passed to `OMRSArchiveHelper` is the time of the build, and a type's version is what tells the servers of a cohort that the type has been updated.  So before writing the archive, `getStabilizedArchive()` reads back the previous edition of the archive (with `readOpenMetadataArchive()` from `OMRSArchiveWriter`) and uses `ArchiveVersionStabilizer` (from the [content-pack-helpers :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/content-pack-helpers){ target=gh } module) to give each type that has not changed the version it had before.
+
+!!! attention "Changing your types"
+    Once instances of a type have been stored, the type should only change through a `TypeDefPatch`, rather than by editing the original definition.  `OMRSArchiveBuilder` has `getPatchForType()` to start a patch for an existing type and `addTypeDefPatch()` to add it to the archive.  This is how the open metadata types themselves are updated from one release to the next.
+
+## How the open metadata types archive is structured
+
+Egeria's own types are built in the same way, by the [open-metadata-types :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types){ target=gh } module:
+
+* `OpenMetadataTypesArchive` holds the archive header (its archive GUID is `bce3b0a0-662a-4f87-b8dc-844078a11a6e`, the value that appears in the `dependsOnArchives` property of archives that build on the open metadata types) and the new and changed types for the release currently in development.
+* There is a class for each earlier release, from `OpenMetadataTypesArchive1_2` (types added before release 1.3) through to `OpenMetadataTypesArchive6_2`.  The types in these classes are approved and can only change through patches in a later class.
+* Each class is constructed with the shared `OMRSArchiveBuilder`.  Its `getOriginalTypes()` method first creates the class for the previous release and calls its `getOriginalTypes()`, and then adds its own new types (`addEntityDef()`, `addRelationshipDef()`, `addClassificationDef()`, `addEnumDef()`) and patches (`addTypeDefPatch()`).  So calling `new OpenMetadataTypesArchive().getOpenMetadataArchive()` builds the complete set of types, release by release.
+* `OpenMetadataTypesArchiveAccessor` provides methods to look up the type definitions in the resulting archive by name.  `OpenMetadataTypesArchiveWriter` writes the archive out as `content-packs/OpenMetadataTypes.omarchive`; it is run by `OpenMetadataTypesArchiveUtility` in the [open-metadata-types-utility :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/open-metadata-types-utility){ target=gh } module.  The file is for servers that do not use the Egeria libraries, which load the open metadata types automatically.
+
+Within each class, the code is organized by [type model area](/types) - for example `add0482StatementsOfApplicability()` or `update0239Reports()` - and the type and property names come from the `OpenMetadataType` and `OpenMetadataProperty` enums in the Open Metadata Framework.
 
 --8<-- "snippets/abbr.md"

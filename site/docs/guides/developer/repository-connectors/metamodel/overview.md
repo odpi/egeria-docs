@@ -10,13 +10,15 @@ OMRS's metamodel defines the structures used to represent metadata, and can be b
 - Type Definitions (`TypeDef`s and `AttributeTypeDef`s)
 - Instances
 
+The Java classes for these structures are in the *repository-services-apis* module, in the `properties.typedefs` and `properties.instances` sub-packages of `org.odpi.openmetadata.repositoryservices.connectors.stores.metadatacollectionstore`.
+
 ## Type definitions
 
-`TypeDef`s define the general characteristics that are used to describe any general type -- whether native or not -- and typically fit into one of the following three general types (`TypeDefCategory`):
+`TypeDef`s define the general characteristics that are used to describe any general type -- whether native or not -- and fit into one of the following three general types (`TypeDefCategory`):
 
-- `EntityDef`: the definition of a type of entity
-- `RelationshipDef`: the definition of a type of relationship
-- `ClassificationDef`: the definition of a type of classification
+- `EntityDef` (`ENTITY_DEF`): the definition of a type of entity
+- `RelationshipDef` (`RELATIONSHIP_DEF`): the definition of a type of relationship
+- `ClassificationDef` (`CLASSIFICATION_DEF`): the definition of a type of classification
 
 `TypeDef`s are implemented as Java classes in Egeria (those in *italics* are abstract).
 
@@ -25,75 +27,109 @@ OMRS's metamodel defines the structures used to represent metadata, and can be b
 ??? example "Examples of type definitions"
     For example, the native [open metadata types](/types) that Egeria defines include:
 
-    - a generic [`Referenceable`](/types/0/0010-Base-Model/#referenceable) entity type,
-    - a `GlossaryCategory` entity type,
-    - a `GlossaryTerm` entity type,
+    - a generic [`Referenceable`](/types/0/0010-Base-Model/#referenceable-entity) entity type,
+    - a [`GlossaryTerm`](/types/3/0330-Terms) entity type,
+    - a [`Glossary`](/types/3/0310-Glossary) entity type,
     - (and many others!)
 
     Rather than being another set of classes that *inherit* from the general TypeDef classes (`EntityDef`, `RelationshipDef`, `ClassificationDef`), these open types are *instantiated objects* of one of those TypeDef classes (in the above examples, of the `EntityDef` class).
 
-    A set of `TypeDefAttribute`s within the TypeDef defines the list of additional characteristics (properties) that each of these entity types can possess -- things like names, descriptions, etc -- which may naturally vary from one entity type to another. (These property-level definitions are `AttributeTypeDef`s.)
+    A set of `TypeDefAttribute`s within the TypeDef defines the list of additional characteristics (properties) that each of these entity types can possess -- things like names, descriptions, etc -- which may naturally vary from one entity type to another. (The type of each property is described by an `AttributeTypeDef`.)
 
-    An example of a `RelationshipDef` is the linkage between `GlossaryTerm` and `GlossaryCategory` known as a `TermCategorization`, which is further defined to allow any number of linkages between the two, in either direction. Again, the `TermCategorization` will be an instantiated object of the class `RelationshipDef`, with various properties configured on it to define the endpoints of the relationship.
+    An example of a `RelationshipDef` is the [`CollectionMembership`](/types/0/0021-Collections) relationship that links a `Collection` (such as a `Glossary`, which is a type of collection) to each of its members, which may be any `Referenceable` (such as a `GlossaryTerm`).  It allows any number of linkages in either direction.  Again, `CollectionMembership` is an instantiated object of the class `RelationshipDef`, with a `RelationshipEndDef` for each end of the relationship.
 
-    An example `ClassificationDef` is `Confidentiality`: that can apply to any `Referenceable` entity (hence including both `GlossaryTerm` and `GlossaryCategory`, as both of these extend the `Referenceable` entity type).
+    An example `ClassificationDef` is [`Confidentiality`](/types/4/0422-Governed-Data-Classifications): it can apply to any `Referenceable` entity (hence including both `GlossaryTerm` and `Glossary`, as both of these extend the `Referenceable` entity type).
 
-    ![Example type definitions](metadata-meta-model-typedef-examples.svg)
-
-??? example "Example: `Referenceable`"
-    For example, `Referenceable` is defined as follows:
-
-    ```java linenums="1"
-    final String guid            = "a32316b8-dc8c-48c5-b12b-71c1b2a080bf";
-    final String name            = "Referenceable";
-    final String description     = "An open metadata entity that has a unique identifier.";
-    final String descriptionGUID = null;
-    
-    // The EntityDef object itself
-    EntityDef entityDef = archiveHelper.getDefaultEntityDef(guid,
-                                                            name,
-                                                            null,
-                                                            description,
-                                                            descriptionGUID);
-    
-    List<TypeDefAttribute> properties = new ArrayList<>();
-    TypeDefAttribute       property;
-    
-    final String attribute1Name            = "qualifiedName";
-    final String attribute1Description     = "Unique identifier for the entity.";
-    final String attribute1DescriptionGUID = null;
-    final String attribute2Name            = "additionalProperties";
-    final String attribute2Description     = "Additional properties for the element.";
-    final String attribute2DescriptionGUID = null;
-    
-    // The TypeDefAttributes that define the properties of the Referenceable (EntityDef) object
-    property = archiveHelper.getStringTypeDefAttribute(attribute1Name,
-                                                       attribute1Description,
-                                                       attribute1DescriptionGUID);
-    property.setUnique(true);
-    properties.add(property);
-    property = archiveHelper.getMapStringStringTypeDefAttribute(attribute2Name,
-                                                                attribute2Description,
-                                                                attribute2DescriptionGUID);
-    properties.add(property);
-    
-    entityDef.setPropertiesDefinition(properties);
+    ```mermaid
+    flowchart TB
+        subgraph EntityDefs
+            OMR["OpenMetadataRoot : EntityDef"]
+            REF["Referenceable : EntityDef"]
+            AR["AuthoredReferenceable : EntityDef"]
+            COL["Collection : EntityDef"]
+            GT["GlossaryTerm : EntityDef"]
+            GL["Glossary : EntityDef"]
+            OMR -->|superType| REF
+            REF -->|superType| AR
+            REF -->|superType| COL
+            AR -->|superType| GT
+            COL -->|superType| GL
+        end
+        subgraph RelationshipDefs
+            CM["CollectionMembership : RelationshipDef"]
+        end
+        subgraph ClassificationDefs
+            CONF["Confidentiality : ClassificationDef"]
+        end
+        CM -->|"endDef1 (memberOfCollections)"| COL
+        CM -->|"endDef2 (collectionMembers)"| REF
+        CONF -->|validEntityDefs| REF
     ```
 
-    And this results in a JSON structure like the following:
+??? example "Example: `Referenceable`"
+    For example, `Referenceable` is defined in `OpenMetadataTypesArchive1_2` in the *open-metadata-types* module as follows.  The descriptive values for the type (its GUID, name, description and so on) come from `OpenMetadataType.REFERENCEABLE`, and the definitions of its attributes come from the `OpenMetadataProperty` enum, both in the [Open Metadata Framework (OMF)](/frameworks/omf/overview).
+
+    ```java linenums="1"
+    private EntityDef getReferenceableEntity()
+    {
+        /*
+         * Build the Entity
+         */
+        EntityDef entityDef = archiveHelper.getDefaultEntityDef(OpenMetadataType.REFERENCEABLE,
+                                                                this.archiveBuilder.getEntityDef(OpenMetadataType.OPEN_METADATA_ROOT.typeName));
+
+        /*
+         * Build the attributes
+         */
+        List<TypeDefAttribute> properties = new ArrayList<>();
+        TypeDefAttribute       property;
+
+        property = archiveHelper.getTypeDefAttribute(OpenMetadataProperty.QUALIFIED_NAME);
+
+        property.setUnique(true);
+        property.setValuesMaxCount(1);
+        property.setValuesMinCount(1);
+        property.setAttributeCardinality(AttributeCardinality.ONE_ONLY);
+        properties.add(property);
+
+        properties.add(archiveHelper.getTypeDefAttribute(OpenMetadataProperty.IDENTIFIER));
+        properties.add(archiveHelper.getTypeDefAttribute(OpenMetadataProperty.DISPLAY_NAME));
+        properties.add(archiveHelper.getTypeDefAttribute(OpenMetadataProperty.DESCRIPTION));
+        properties.add(archiveHelper.getTypeDefAttribute(OpenMetadataProperty.VERSION_IDENTIFIER));
+        properties.add(archiveHelper.getTypeDefAttribute(OpenMetadataProperty.CATEGORY));
+        properties.add(archiveHelper.getTypeDefAttribute(OpenMetadataProperty.URL));
+        properties.add(archiveHelper.getTypeDefAttribute(OpenMetadataProperty.ADDITIONAL_PROPERTIES));
+
+        entityDef.setPropertiesDefinition(properties);
+
+        return entityDef;
+    }
+    ```
+
+    And this results in a JSON structure like the following, as returned by a metadata access store.  To keep the example short, only the `qualifiedName` and `additionalProperties` attributes are shown; the other six attributes follow the same pattern as `qualifiedName`.
 
     ```json linenums="1"
     {
       "class": "EntityDef",
+      "headerVersion": 1,
       "guid": "a32316b8-dc8c-48c5-b12b-71c1b2a080bf",
       "name": "Referenceable",
+      "status": "ACTIVE_TYPEDEF",
       "version": 1,
-      "versionName": "1.0",
+      "versionName": "6.3-SNAPSHOT",
       "category": "ENTITY_DEF",
+      "superType": {
+        "headerVersion": 1,
+        "guid": "4e7761e8-3969-4627-8f40-bfe3cde85a1d",
+        "name": "OpenMetadataRoot",
+        "status": "ACTIVE_TYPEDEF"
+      },
       "description": "An open metadata entity that has a unique identifier.",
+      "descriptionGUID": "d9a26761-40ba-441d-9981-cc8f137fe379",
+      "descriptionWiki": "https://egeria-project.org/types/0/0010-Base-Model/",
       "origin": "bce3b0a0-662a-4f87-b8dc-844078a11a6e",
-      "createdBy": "ODPi Egeria (OMRS)",
-      "createTime": 1516313040008,
+      "createdBy": "ODPi Egeria",
+      "createTime": "2020-01-01T13:42:11.090+00:00",
       "validInstanceStatusList": [
         "ACTIVE",
         "DELETED"
@@ -101,33 +137,40 @@ OMRS's metamodel defines the structures used to represent metadata, and can be b
       "initialStatus": "ACTIVE",
       "propertiesDefinition": [
         {
+          "headerVersion": 1,
           "attributeName": "qualifiedName",
           "attributeType": {
             "class": "PrimitiveDef",
+            "headerVersion": 1,
             "version": 1,
-            "versionName": "1.0",
+            "versionName": "6.3-SNAPSHOT",
             "category": "PRIMITIVE",
             "guid": "b34a64b9-554a-42b1-8f8a-7d5c2339f9c4",
             "name": "string",
             "primitiveDefCategory": "OM_PRIMITIVE_TYPE_STRING"
           },
-          "attributeDescription": "Unique identifier for the entity.",
-          "valuesMinCount": 0,
+          "attributeStatus": "ACTIVE_ATTRIBUTE",
+          "attributeDescription": "Unique name for the element.",
+          "attributeDescriptionGUID": "e31e5b9b-0f96-42a9-8e67-0e3fc66ad305",
+          "valuesMinCount": 1,
           "valuesMaxCount": 1,
           "indexable": true,
-          "attributeCardinality": "AT_MOST_ONE",
-          "unique": true
+          "unique": true,
+          "attributeCardinality": "ONE_ONLY"
         },
         {
+          "headerVersion": 1,
           "attributeName": "additionalProperties",
           "attributeType": {
             "class": "CollectionDef",
+            "headerVersion": 1,
             "version": 1,
-            "versionName": "1.0",
+            "versionName": "6.3-SNAPSHOT",
             "category": "COLLECTION",
             "guid": "005c7c14-ac84-4136-beed-959401b041f8",
             "name": "map<string,string>",
-            "description": "A map from String to String.",
+            "description": "A map from string to string.",
+            "descriptionGUID": "f285d0ca-50ab-4564-b129-c7e3ba4e8545",
             "collectionDefCategory": "OM_COLLECTION_MAP",
             "argumentCount": 2,
             "argumentTypes": [
@@ -135,12 +178,14 @@ OMRS's metamodel defines the structures used to represent metadata, and can be b
               "OM_PRIMITIVE_TYPE_STRING"
             ]
           },
+          "attributeStatus": "ACTIVE_ATTRIBUTE",
           "attributeDescription": "Additional properties for the element.",
+          "attributeDescriptionGUID": "534b5665-73d4-4bdc-b83b-1a8fed19dba3",
           "valuesMinCount": 0,
           "valuesMaxCount": 1,
           "indexable": true,
-          "attributeCardinality": "AT_MOST_ONE",
-          "unique": false
+          "unique": false,
+          "attributeCardinality": "AT_MOST_ONE"
         }
       ]
     }
@@ -148,7 +193,7 @@ OMRS's metamodel defines the structures used to represent metadata, and can be b
 
 ## Instances
 
-Instances define individual instantiations of the TypeDefs: for example, individual `GlossaryTerm` entities (like "Address Line 1") or `GlossaryCategory` entities (like "Coco Pharmaceuticals"), `Confidentiality` classifications (like "Sensitive"), etc.
+Instances define individual instantiations of the TypeDefs: for example, individual `GlossaryTerm` entities (like "Address Line 1") or `Glossary` entities (like "Coco Pharmaceuticals Terms"), `Confidentiality` classifications (like one with a level of "Sensitive"), etc.
 
 Implemented instances will generally be objects of one of the following classes:
 
@@ -186,141 +231,124 @@ Instances as a concept are implemented as generic Java classes in Egeria (those 
 
     The `InstanceProperties` associated with the `EntityDetail`, `Relationship` and `Classification` objects give the further detail on the object (ie. its name, summary, etc).
 
-    - To represent a "Sensitive Confidentiality" concept that can be used to classify other information (like "Address Line 1"), we could have a "Confidentiality" `Classification` defined with a specific level ("Sensitive") through its `InstanceProperties`
-    - To represent the linkage between "Address Line 1" and a specific category location (like "Coco Pharmaceuticals/Terms") we could have a `Relationship` representing the `TermCategorization` with one end pointing to an `EntityProxy` for "Address Line 1" and one end pointing to an `EntityProxy` for "Coco Pharmaceuticals/Terms"
+    - To mark "Address Line 1" as sensitive, we could add a `Confidentiality` `Classification` to it whose `InstanceProperties` set the `confidentialityLevel` property to 3, which is the ordinal for "Sensitive" in the `ConfidentialityLevel` reference data.
+    - To represent the membership of "Address Line 1" in a glossary (like "Coco Pharmaceuticals Terms") we could have a `CollectionMembership` `Relationship` with one end pointing to an `EntityProxy` for "Coco Pharmaceuticals Terms" and the other end pointing to an `EntityProxy` for "Address Line 1".
 
-    ![Example instances (using open metadata types)](metadata-meta-model-instances-examples.svg)
+    ```mermaid
+    flowchart LR
+        subgraph AL1 ["Address Line 1"]
+            ES["Address Line 1 : EntitySummary"]
+            ED["Address Line 1 : EntityDetail"]
+            EP["AL1Proxy : EntityProxy"]
+            EDP["AL1Properties : InstanceProperties"]
+            EPP["AL1UniqueProperties : InstanceProperties"]
+            ED --- EDP
+            EP --- EPP
+        end
+        SC["SensitiveConfidentiality : Classification"]
+        SCP["SCProperties : InstanceProperties"]
+        SC --- SCP
+        ES --- SC
+        ED --- SC
+        CMR["AL1Membership : Relationship"]
+        GP["TermsProxy : EntityProxy"]
+        GPP["TermsUniqueProperties : InstanceProperties"]
+        GP --- GPP
+        CMR -->|entityOneProxy| GP
+        CMR -->|entityTwoProxy| EP
+    ```
 
 ??? example "Code example for creating the various types"
-    As code, this example could be implemented using something like the following:
+    As code, this example could be implemented using the [repository helper](/concepts/repository-helper) that the OMRS passes to a repository connector.  `sourceName`, `userId`, `metadataCollectionId` and `metadataCollectionName` are supplied by the calling code.
 
     ```java linenums="1"
-    // ENTITIES
-    
-    // Summary-level entity information (see end of CLASSIFICATION section for adding Classifications)
-    EntitySummary summary = new EntitySummary();
-    summary.setGUID(guid);
-    summary.setCreatedBy("...user...");
-    summary.setCreateTime(new Date(...));
-    summary.setUpdatedBy("...user...");
-    summary.setUpdateTime(new Date(...));
-    
-    // Detailed-level entity information (see end of CLASSIFICATION section for adding Classifications)
-    EntityDetail detail = repositoryConnector.getRepositoryHelper().getSkeletonEntity(
-            sourceName,
-            omrsRepositoryConnector.getMetadataCollectionId(),
-            InstanceProvenanceType.LOCAL_COHORT,
-            userId,
-            "GlossaryTerm"
-    );
-    
-    detail.setStatus(InstanceStatus.ACTIVE);
-    detail.setGUID(guid);
-    detail.setCreatedBy("...user...");
-    detail.setCreateTime(new Date(...));
-    detail.setUpdatedBy("...user...");
-    detail.setUpdateTime(new Date(...));
-    
-    InstanceProperties instanceProperties = new InstanceProperties();
-    PrimitivePropertyValue propertyValue = new PrimitivePropertyValue();
-    PrimitiveDef primitiveDef = new PrimitiveDef();
-    primitiveDef.setPrimitiveDefCategory(PrimitiveDefCategory.OM_PRIMITIVE_TYPE_STRING);
-    propertyValue.setPrimitiveValue("Address Line 1");
-    propertyValue.setPrimitiveDefCategory(primitiveDef.getPrimitiveDefCategory());
-    propertyValue.setTypeGUID(primitiveDef.getGUID());
-    propertyValue.setTypeName(primitiveDef.getName());
-    
-    instanceProperties.setProperty("qualifiedName", propertyValue);
-    
-    propertyValue.setPrimitiveValue("Street and street number");
-    instanceProperties.setProperty("summary", propertyValue);
-    
+    final String methodName = "createExample";
+
+    OMRSRepositoryHelper repositoryHelper = repositoryConnector.getRepositoryHelper();
+
+    // ENTITY
+
+    // The skeleton entity has its header and type information filled out, including a new GUID.
+    EntityDetail detail = repositoryHelper.getSkeletonEntity(sourceName,
+                                                             metadataCollectionId,
+                                                             metadataCollectionName,
+                                                             InstanceProvenanceType.LOCAL_COHORT,
+                                                             userId,
+                                                             "GlossaryTerm");
+
+    InstanceProperties instanceProperties = repositoryHelper.addStringPropertyToInstance(sourceName,
+                                                                                         null,
+                                                                                         "qualifiedName",
+                                                                                         "GlossaryTerm::Address Line 1",
+                                                                                         methodName);
+    instanceProperties = repositoryHelper.addStringPropertyToInstance(sourceName,
+                                                                      instanceProperties,
+                                                                      "displayName",
+                                                                      "Address Line 1",
+                                                                      methodName);
+    instanceProperties = repositoryHelper.addStringPropertyToInstance(sourceName,
+                                                                      instanceProperties,
+                                                                      "summary",
+                                                                      "Street and street number",
+                                                                      methodName);
+
     detail.setProperties(instanceProperties);
-    
+
     // CLASSIFICATION
-    
-    InstanceProperties properties = new InstanceProperties();
-    
-    // The "Sensitive" level for the classification
-    EnumPropertyValue level = new EnumPropertyValue();
-    level.setSymbolicName("Sensitive");
-    properties.setProperty("level", level);
-    
-    // Creating a new classification, of "Confidentiality", applying to "Referenceable", with
-    // the "Sensitive" level defined above
-    Classification classification = omrsRepositoryConnector.getRepositoryHelper().getNewClassification(
-            sourceName,
-            userId,
-            "Confidentiality",
-            "Referenceable",
-            ClassificationOrigin.ASSIGNED,
-            null,
-            properties
-    );
-    
-    ArrayList<Classificaton> classifications = new ArrayList<>();
+
+    // The "Sensitive" level for the classification (ordinal 3 in ConfidentialityLevel)
+    InstanceProperties classificationProperties = repositoryHelper.addIntPropertyToInstance(sourceName,
+                                                                                            null,
+                                                                                            "confidentialityLevel",
+                                                                                            3,
+                                                                                            methodName);
+
+    // Creating a new Confidentiality classification for a GlossaryTerm entity, with the "Sensitive" level defined above
+    Classification classification = repositoryHelper.getNewClassification(sourceName,
+                                                                          metadataCollectionId,
+                                                                          InstanceProvenanceType.LOCAL_COHORT,
+                                                                          userId,
+                                                                          "Confidentiality",
+                                                                          "GlossaryTerm",
+                                                                          ClassificationOrigin.ASSIGNED,
+                                                                          null,
+                                                                          classificationProperties);
+
+    List<Classification> classifications = new ArrayList<>();
     classifications.add(classification);
-    
-    // ... adding the Classification(s) to the Entity(Summary|Detail)
-    summary.setClassifications(classifications);
+
+    // ... adding the Classification(s) to the entity
     detail.setClassifications(classifications);
-    
+
     // RELATIONSHIP
-    
-    // Define the qualifiedName property with the unique name for the first end of the relationship
-    // (the GlossaryCategory end of the relationship)
-    InstanceProperties uniqueProperties1 = new InstanceProperties();
-    PrimitivePropertyValue propertyValue = new PrimitivePropertyValue();
-    PrimitiveDef primitiveDef = new PrimitiveDef();
-    primitiveDef.setPrimitiveDefCategory(PrimitiveDefCategory.OM_PRIMITIVE_TYPE_STRING);
-    propertyValue.setPrimitiveValue("Coco Pharmaceuticals/Terms");
-    propertyValue.setPrimitiveDefCategory(primitiveDef.getPrimitiveDefCategory());
-    propertyValue.setTypeGUID(primitiveDef.getGUID());
-    propertyValue.setTypeName(primitiveDef.getName());
-    uniqueProperties1.setProperty("qualifiedName", propertyValue);
-    
-    EntityProxy entityProxy1 = omrsRepositoryConnector.getRepositoryHelper().getNewEntityProxy(
-            sourceName,
-            omrsRepositoryConnector.getMetadataCollectionId(),
-            InstanceProvenanceType.LOCAL_COHORT,
-            userId,
-            "GlossaryCategory",
-            uniqueProperties1,
-            null
-    );
-    
-    // Define the qualifiedName property with the unique name of the second end of the relationship
-    // (the GlossaryTerm end of the relationship)
-    InstanceProperties uniqueProperties2 = new InstanceProperties();
-    primitiveDef.setPrimitiveDefCategory(PrimitiveDefCategory.OM_PRIMITIVE_TYPE_STRING);
-    propertyValue.setPrimitiveValue("Address Line 1");
-    propertyValue.setPrimitiveDefCategory(primitiveDef.getPrimitiveDefCategory());
-    propertyValue.setTypeGUID(primitiveDef.getGUID());
-    propertyValue.setTypeName(primitiveDef.getName());
-    uniqueProperties2.setProperty("qualifiedName", propertyValue);
-    
-    EntityProxy entityProxy2 = omrsRepositoryConnector.getRepositoryHelper().getNewEntityProxy(
-            sourceName,
-            omrsRepositoryConnector.getMetadataCollectionId(),
-            InstanceProvenanceType.LOCAL_COHORT,
-            userId,
-            "GlossaryTerm",
-            uniqueProperties2,
-            null
-    );
-    
-    // Define the relationship between the two EntityProxy objects instantiated above
-    Relationship omrsRelationship = new Relationship();
-    InstanceProperties relationshipProperties = new InstanceProperties();
-    PrimitivePropertyValue relationProperty = new PrimitivePropertyValue();
-    
-    relationProperty.setTypeGUID("...");
-    relationProperty.setTypeName("???");
-    relationshipProperties.setProperty("TermCategorization", relationProperty);
-    omrsRelationship.setProperties(relationshipProperties);
-    omrsRelationship.setEntityOneProxy(entityProxy1);
-    omrsRelationship.setEntityTwoProxy(entityProxy2);
-    omrsRelationship.setGUID("...");
+
+    // The proxy for the glossary end of the relationship is built from its unique properties
+    InstanceProperties glossaryUniqueProperties = repositoryHelper.addStringPropertyToInstance(sourceName,
+                                                                                               null,
+                                                                                               "qualifiedName",
+                                                                                               "Glossary::Coco Pharmaceuticals Terms",
+                                                                                               methodName);
+
+    EntityProxy glossaryProxy = repositoryHelper.getNewEntityProxy(sourceName,
+                                                                   metadataCollectionId,
+                                                                   InstanceProvenanceType.LOCAL_COHORT,
+                                                                   userId,
+                                                                   "Glossary",
+                                                                   glossaryUniqueProperties,
+                                                                   null);
+
+    // The proxy for the glossary term end of the relationship can be built from its EntityDetail
+    EntityProxy termProxy = repositoryHelper.getNewEntityProxy(sourceName, detail);
+
+    // Define the relationship between the two EntityProxy objects - end 1 is the collection and end 2 is the member
+    Relationship relationship = repositoryHelper.getNewRelationship(sourceName,
+                                                                    metadataCollectionId,
+                                                                    InstanceProvenanceType.LOCAL_COHORT,
+                                                                    userId,
+                                                                    "CollectionMembership",
+                                                                    null);
+    relationship.setEntityOneProxy(glossaryProxy);
+    relationship.setEntityTwoProxy(termProxy);
     ```
 
 --8<-- "snippets/abbr.md"

@@ -21,6 +21,6 @@ It then calls the [local repository instance event processor](/services/omrs/com
 
 A description of the utilities for building archives can be found in the [open-metadata-archives :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives){ target=gh } modules.
 
-Details for configuring a metadata server to load archives can be found in the [administration guide](/guides/admin/servers/by-section/repository-services-section/#configuring-the-open-metadata-archives-to-load-on-server-startup).
+Details for configuring a metadata server to load archives can be found in the [administration guide](/guides/admin/servers/by-section/repository-services-section).
 
 --8<-- "snippets/abbr.md"

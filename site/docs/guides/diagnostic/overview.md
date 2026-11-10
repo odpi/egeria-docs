@@ -3,9 +3,26 @@
 
 # Egeria diagnostic guide
 
-This guide focuses on diagnosing and fixing issues running Egeria's [OMAG Server Platform](/concepts/omag-server-platform) and the [OMAG Servers](/concepts/omag-server) that run on it.
+This guide focuses on diagnosing and fixing issues running Egeria's [OMAG Server Platform](/concepts/omag-server-platform), the [OMAG Servers](/concepts/omag-server) that run on it, the connectors they host, and the infrastructure they depend on - Apache Kafka and PostgreSQL.
 
-If you are having problems building Egeria, please see the [Building Egeria](/education/tutorials/building-egeria-tutorial/overview) tutorial.
+If you are having problems building Egeria, please see the [Building Egeria](/education/tutorials/building-egeria-tutorial/overview) tutorial.  For routine checks and controls (starting servers, restarting connectors) see the [Operations Guide](/guides/operations/overview), and for watching a deployment over time see the [Monitoring and Tuning Guide](/guides/monitoring/overview).
+
+## Where to start
+
+Most problems show themselves in one part of the deployment first.  This table points to the most useful diagnostics for each.
+
+| Where the problem shows | Look first at | More help |
+|---|---|---|
+| The platform does not start, or is unreachable | The platform's console output; `GET /open-metadata/platform-services/server-platform/origin` | [Platform start-up errors](/guides/diagnostic/examples-of-platform-start-up-errors) |
+| A server does not start | The server's audit log (`Startup` and `Error` records); the server status in Egeria Operations or `hey_egeria_ops show servers startup` | [Server start-up errors](/guides/diagnostic/examples-of-server-start-up-errors) |
+| A user cannot log on, or a request is refused | The `Security` records in the audit log | [Logon problems](/guides/diagnostic/logon-problems), [Security Guide](/guides/security/overview) |
+| A REST call (from a UI, pyegeria or your own code) fails | The exception in the response - it names the message, cause and fix | [REST API errors](/guides/diagnostic/examples-of-common-rest-api-errors), [Tracing REST calls](/guides/diagnostic/tracing-rest-calls) |
+| A user interface or pyegeria call is slow, empty or wrong | The [view server](/concepts/view-server) audit log, then the metadata access store it calls | [Metadata access store diagnostics](/guides/diagnostic/metadata-access-server-diagnostic-guide) |
+| Metadata is missing, stale or wrong | The connector that maintains it; the metadata access store's repository | [Integration daemon diagnostics](/guides/diagnostic/integration-daemon-diagnostic-guide), [Metadata access store diagnostics](/guides/diagnostic/metadata-access-server-diagnostic-guide) |
+| An integration connector is `FAILED` or not refreshing | The integration daemon's audit log; the connector's status and catalog targets | [Integration daemon diagnostics](/guides/diagnostic/integration-daemon-diagnostic-guide) |
+| Engine actions fail or never start | The engine action's completion message and guards in Egeria Operations; the [engine host](/concepts/engine-host) audit log | [Operating governance engines](/guides/operations/overview#operating-governance-engines) |
+| Servers stop hearing about each other's changes | Kafka consumer groups and topics; `OCF-KAFKA-TOPIC-CONNECTOR` messages | [PostgreSQL and Kafka diagnostics](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide), [Cohort errors](/guides/diagnostic/examples-of-cohort-errors) |
+| Repository errors, timeouts or slow queries | `POSTGRES-REPOSITORY-CONNECTOR` and `JDBC-RESOURCE-CONNECTOR` messages; PostgreSQL's own statistics | [PostgreSQL and Kafka diagnostics](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide) |
 
 
 ## The diagnosis process
@@ -39,13 +56,16 @@ So now consider each phase of the process.
         * A server failed to start
         * A server failed while it was running
         * A connector within a server failed to start up properly
-        * A connector within a server detected and error
+        * A connector within a server detected an error
+        * An integration connector has stopped refreshing, or is not picking up a catalog target
+        * An engine action failed, or is not being run
         * A request to a server failed with an exception
         * A request to a server hangs
         * A request to a server produces the wrong results
         * A server is failing to join a cohort
-        * Metadata is not being shared across the cohort
+        * Metadata is not being shared across the cohort, or other servers are not reacting to changes
         * Requests are running slowly
+        * A dependent service (Kafka, PostgreSQL, a secrets store, a third party technology) is failing
             
     * **Gather diagnostics** - This is where you are looking to capture the evidence that may identify both the source of the error and the nature of the failure. The different types of diagnostics that are available are described in [Diagnostic Sources](/guides/diagnostic/diagnostic-sources). If the problem is in the Egeria code, rather than its runtime environment, then the [Egeria diagnostics may also define how to fix the problem](/guides/diagnostic/ffdc).
     
@@ -83,12 +103,16 @@ The description above is an overview of what to do to diagnose and fix a problem
 * [Examples of OMAG Server startup errors](/guides/diagnostic/examples-of-server-start-up-errors)
 * [Examples of Open Metadata Repository Cohort errors](/guides/diagnostic/examples-of-cohort-errors)
 * [Examples of REST API call failures](/guides/diagnostic/examples-of-common-rest-api-errors)
+* [Diagnosing the metadata access store](/guides/diagnostic/metadata-access-server-diagnostic-guide)
+* [Diagnosing the integration daemon](/guides/diagnostic/integration-daemon-diagnostic-guide)
+* [Diagnosing PostgreSQL and Kafka](/guides/diagnostic/postgresql-and-kafka-diagnostic-guide)
 
 
 ## Further information
 
+* [Diagnostic Sources](/guides/diagnostic/diagnostic-sources) and [Diagnostic APIs](/guides/diagnostic/diagnostic-apis)
 * [First Failure Data Capture (FFDC)](/guides/diagnostic/ffdc)
-* [Integration Daemon Diagnostics Guide](/guides/diagnostic/integration-daemon-diagnostic-guide)
+* [Operations Guide](/guides/operations/overview) and [Monitoring and Tuning Guide](/guides/monitoring/overview)
 * [Administration Guide](/guides/admin)
 
 --8<-- "snippets/abbr.md"

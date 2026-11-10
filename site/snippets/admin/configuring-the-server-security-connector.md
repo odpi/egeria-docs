@@ -7,7 +7,7 @@ Metadata that is being aggregated from different sources is likely to need compr
 
 Egeria provides [fine-grained security control for metadata access](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/common-services/metadata-security). It is implemented in a [server metadata security connector](/concepts/server-metadata-security-connector) that is called whenever requests are made for to the server.
 
-Security is configured for a specific [OMAG Server](/concepts/omag-server) by adding a connection for this connector to the server's [configuration document](/concepts/configuration-document)using the following command.
+Security is configured for a specific [OMAG Server](/concepts/omag-server) by adding a connection for this connector to the server's [configuration document](/concepts/configuration-document) using the following command.
 
 !!! post "POST - configure security connector"
     ```
@@ -26,18 +26,37 @@ Security is configured for a specific [OMAG Server](/concepts/omag-server) by ad
     }
     ```
 
-??? example "Example: set up the sample server security connector"
-    For example, this is the connection that would set up the [server security connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors){ target=gh }:
+??? example "Example: set up the Open Metadata Access Security Connector"
+    For example, this is the connection that sets up the [Open Metadata Access Security Connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors/open-metadata-access-security-connector){ target=gh }.  It is a `VirtualConnection` because the security connector reads its users, groups and access controls from a [secrets store](/concepts/secrets-store-connector), whose connection is embedded inside it.  The quickstart uses the YAML secrets store connector, and fills in the values written as `~{...}~` from its server properties.
 
     ```json
     {
-        "class": "Connection",
+        "class": "VirtualConnection",
         "connectorType": {
             "class": "ConnectorType",
-            "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.samples.OpenMetadataServerSecurityProvider"
-        }
+            "connectorProviderClassName": "org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider"
+        },
+        "embeddedConnections": [{
+            "class": "EmbeddedConnection",
+            "embeddedConnection": {
+                "class": "Connection",
+                "connectorType": {
+                    "class": "ConnectorType",
+                    "connectorProviderClassName": "~{secretsStoreProvider}~"
+                },
+                "endpoint": {
+                    "class": "Endpoint",
+                    "networkAddress": "~{userDirectorySecretsStore}~"
+                },
+                "configurationProperties": {
+                    "secretsCollectionName": "~{userDirectorySecretsCollectionName}~"
+                }
+            }
+        }]
     }
     ```
+
+    The [Security Guide](/guides/security/overview#the-server-metadata-security-connector) explains how this connector checks each request.
 
 ### Determine configured security
 

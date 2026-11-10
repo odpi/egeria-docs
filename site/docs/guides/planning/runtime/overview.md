@@ -73,14 +73,19 @@ More importantly, it helps with the definition of the organization's [governance
 This is a checklist of planning tasks for the deployment of your OMAG Server Platforms and OMAG Servers:
 
 - [ ] [Set up unique certificates](/guides/admin/configuring-the-omag-server-platform/#transport-layer-security-tls) for your OMAG Server Platforms.
-- [ ] [Use an encrypted configuration document store](/guides/admin/configuring-the-omag-server-platform/#configuration-store) for your platforms since configuration documents can have certificates and passwords in them.
+- [ ] [Use an encrypted configuration document store](/guides/admin/configuring-the-omag-server-platform/#configuration-document-store) for your platforms since configuration documents can have certificates and passwords in them.
 - [ ] [Implement the metadata security connectors for your organization](/features/metadata-security/overview) to ensure only authorized users access metadata.
-- [ ] Choose and [configure the audit log destinations](/guides/admin/servers/by-section/repository-services-section/#configuring-the-audit-log) for your OMAG Servers.
+- [ ] Choose and [configure the audit log destinations](/guides/admin/servers/by-section/repository-services-section/#configure-the-audit-log) for your OMAG Servers.
 - [ ] Ensure you have at least one [Egeria metadata access store](/guides/admin/servers/by-server-type/configuring-a-metadata-access-store) in each of your [open metadata repository cohorts](/services/omrs/cohort).
 - [ ] [Assign a separate user id for each of your servers](/guides/admin/servers/by-section/basic-server-properties-section) and ensure they are defined in your user directory and are authorized users according to the metadata security connectors.
 - [ ] Consider where you need to have [multiple instances of the same server running to give continuous availability](/guides/admin).
 - [ ] Plan your use of the [event bus](/concepts/event-bus): which technology to use (Apache Kafka is the default) and the names of the topics that your OMAG Servers will use.
 - [ ] Design the [governance zones](/concepts/governance-zone) that you want to use to control the visibility of assets to different communities of users - or processes.
+- [ ] Size and place the PostgreSQL database for each metadata access store, including its connection pool, and plan its [backups](/guides/monitoring/overview#backups).
+- [ ] Plan who will look after Apache Kafka, its retention settings and its consumer groups - see [Apache Kafka](/guides/monitoring/overview#apache-kafka) in the Monitoring and Tuning Guide.
+- [ ] Agree a policy for [purging soft-deleted metadata](/guides/monitoring/overview#managing-deleted-metadata), and schedule a job to apply it.
+- [ ] Decide how the deployment will be [operated](/guides/operations/overview) - through the portal, `hey_egeria`, pyegeria scripts or the REST APIs - and who needs access to each.
+- [ ] Work through the [hardening checklist](/guides/security/overview#hardening-checklist) in the Security Guide before the deployment holds real metadata.
 
 ## Container platform deployment
 
@@ -94,8 +99,8 @@ Kubernetes (or k8s) is de-facto standard platform for deploying, scaling and man
 
 > It is very important to note that whether you choose to run server on a native OMAG platform or in a standalone container runtime, the same functional principles apply - all servers are interoperable and comply to the open metadata exchange protocols.
 
-## More detail to follow
+## Next steps
 
-The text above is a very high level overview of the planning process. More detail will be added to this guide as time permits.
+Once the runtime is designed, the [Administration Guide](/guides/admin) describes how to configure it.  When it is running, the [Operations Guide](/guides/operations/overview), [Monitoring and Tuning Guide](/guides/monitoring/overview), [Diagnostic Guide](/guides/diagnostic/overview) and [Security Guide](/guides/security/overview) describe how to look after it.
 
 --8<-- "snippets/abbr.md"

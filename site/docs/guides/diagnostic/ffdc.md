@@ -275,7 +275,7 @@ Below is an example of the types of information captured in an audit log record.
 
 ## Further information
 
-* [Configuring the audit log destinations](/guides/admin/servers/by-section/repository-services-section/#configuring-the-audit-log).
+* [Configuring the audit log destinations](/guides/admin/servers/by-section/repository-services-section/#configure-the-audit-log).
 
 
 --8<-- "snippets/abbr.md"

@@ -333,12 +333,12 @@ It is defined in the [core content pack](/content-packs/core-content-pack/overvi
 | **Provider class** | `org.odpi.openmetadata.adapters.connectors.mendel.MendelAutomatedDuplicateManagerProvider` |
 | **Connector userId** | `mendelnpa` |
 | **Refresh interval** | 24 hours |
-| **Configuration property** | `duplicateClusterSize` - the number of validated peer duplicates that must be linked together before they are consolidated into a single element.  The default is 3; a configured value of 1 or less falls back to that default, since a cluster of one is a single element. |
+| **Configuration properties** | `duplicateClusterSize` - the number of validated peer duplicates that must be linked together before they are consolidated into a single element.  The default is 3; a configured value of 1 or less falls back to that default, since a cluster of one is a single element.<br>`duplicateRelationshipTypes` - the relationship types whose [exact duplicates](#removing-exact-duplicates) are removed.  The core content pack sets *AgreementItem* and *ExternalReferenceLink*.<br>`duplicateAttachmentTypes` - the relationship types whose exact duplicate attached elements are removed.  The core content pack sets *SearchKeywordLink*.<br>`reportDuplicatesOnly` - report the exact duplicates rather than remove them.  The default is `false`. |
 | **Audit log messages** | `MENDEL-DUPLICATE-MANAGER-` |
 
 Mendel works across the whole open metadata ecosystem rather than through [catalog targets](/concepts/catalog-target), and every read and write it makes sets `forDuplicateProcessing` to `true`.  A connector that manages duplicates has to be able to see them: reading [the combined view](#requests-that-do-not-deduplicate) would mean seeing one element where there are three, with the relationships of all three merged onto it, which is neither what is stored nor what needs changing.
 
-Each refresh retrieves every `PeerDuplicateLink` relationship in the ecosystem and makes four passes over that one snapshot.
+Each refresh retrieves every `PeerDuplicateLink` relationship in the ecosystem and makes four passes over that one snapshot, and then [removes the exact duplicates](#removing-exact-duplicates) of the configured types.
 
 ```mermaid
 flowchart TD
@@ -478,6 +478,23 @@ The rest is dropped because the consolidated entity's type cannot hold it.  This
 | `MENDEL-DUPLICATE-MANAGER-0016` | A property of a classification that the classification's own type does not define - which happens when a member was created against a different version of the open metadata types. |
 
 Where nothing is known about a type - its properties are not available, or a classification does not say which entities it can attach to - the value is passed on and the repository has the final say.
+
+#### Removing exact duplicates
+
+After the four passes, each refresh removes the exact duplicates of the types named in its configuration.  These are not the peer duplicates that the rest of this page describes - separately created descriptions of the same thing, which may disagree - but identical copies made when a process adds the same thing more than once, typically a connector that links or attaches everything again each time it catalogues a document.  There is nothing to decide about an identical copy, so no steward is involved: the oldest is kept and the rest are deleted.
+
+* **Duplicate relationships.**  For each type in `duplicateRelationshipTypes`, every relationship of that type is retrieved, and relationships that connect the same two elements and have the same properties and effectivity dates are grouped together.
+* **Duplicate attached elements.**  For each type in `duplicateAttachmentTypes`, Mendel finds the elements at end 1 with more than one attachment of that type and retrieves their attached elements.  Attached elements of the same type, with the same properties, attached through relationships with the same properties, are grouped together.  Only elements anchored to the element they are attached to are considered, so an element shared with something else is never deleted.  Deleting an attached element also deletes the relationship that attaches it.
+
+Every property has to match, so elements that carry a unique name, such as a *qualifiedName*, never count as duplicates of each other.  When copies were created at the same time, the one kept is decided by its unique identifier, so a later refresh keeps the same one.  The duplicates are deleted with the server's default delete method, so a soft-deleted copy can be restored.
+
+| Audit log message | Meaning |
+|---|---|
+| `MENDEL-DUPLICATE-MANAGER-0019` | `reportDuplicatesOnly` is set: the number of duplicates and groups found for a type, with examples of the largest groups.  Nothing is deleted. |
+| `MENDEL-DUPLICATE-MANAGER-0020` | The number of duplicates deleted for a type, and the number of groups they came from. |
+| `MENDEL-DUPLICATE-MANAGER-0021` | The duplicates of a type could not be removed - for example, the type name is not known.  The other types are still processed, and the type is tried again on the next refresh. |
+
+Duplicates that reappear on every refresh mean that something is still creating them: the audit log messages say which type to look at.
 
 #### Reacting to duplicate links as they appear
 

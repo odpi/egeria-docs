@@ -19,7 +19,7 @@ This guide explains how to configure the OMAG Server Platform and the different 
 
     and once you have your OMAG Servers configured:
 
-    - [Operating an OMAG Server](/guides/operations/overview/#operating-an-omag-server)
+    - [Operating an OMAG Server](/guides/operations/overview#operating-servers)
 
 ## OMAG subsystems
 
@@ -54,7 +54,7 @@ Once the configuration document is in place, the OMAG Server can be activated an
 ??? education "Further information"
     - [Configuring the OMAG Server Platform](/guides/admin/configuring-the-omag-server-platform)
     - [Configuring an OMAG Server](/guides/admin/servers)
-    - [Operating the OMAG Server](/guides/operations/overview/#operating-an-omag-server)
+    - [Operating the OMAG Server](/guides/operations/overview#operating-servers)
 
 
 --8<-- "snippets/abbr.md"

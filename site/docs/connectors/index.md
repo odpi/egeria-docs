@@ -62,6 +62,7 @@ Nanny connectors are used to monitor the health of the Egeria platform and open 
 * [Baudot Subscription Manager](/frameworks/owf/overview/#watching-through-a-notification-type) manages the subscriptions to those products and issues the resulting notifications.
 * [Wedgwood Data Provisioner](/patterns/harvest-and-publish/overview) provisions the product data into the destination that the subscriber supplied.
 * [Liskov Data Sharing Hub Manager](/patterns/harvest-and-publish/overview/#the-liskov-data-sharing-hub-manager) maintains the data dictionary of a data sharing hub, and keeps the members of the hub catalogued and surveyed.
+* [Pasteur Action History Cleanup :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/nanny-connectors#pasteur-action-history-cleanup){ target=gh } removes the finished [actions](/concepts/action) - engine actions, governance action process instances, to dos and the like - once the number of days configured for their type has passed since they completed, so the action history does not grow without bound.
 
 ## Runtime connectors
 

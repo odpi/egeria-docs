@@ -16,6 +16,7 @@ All the code you write to implement these should exist in its own module, and as
 
 - [Open Connector Framework (OCF)](/frameworks/ocf/overview)
 - [Audit Log Framework (ALF)](/frameworks/alf/overview)
+- [Open Metadata Framework (OMF)](/frameworks/omf/overview) - the OCF exposes some of its types, such as its exceptions, on its API
 - Specific interfaces used by the type of connector
 
 !!! tip "No dependency on Egeria's OMAG Server Platform"
@@ -27,29 +28,33 @@ Begin by identifying and designing the properties needed to connect to your tool
 
 ## Code the connector provider
 
---8<-- "docs/guides/developer/connector-provider-into.md"
---8<-- "docs/guides/developer/implemented-a-connector-provider.md"
+--8<-- "docs/guides/developer/connector-provider-intro.md"
+--8<-- "docs/guides/developer/implementing-a-connector-provider.md"
 
-!!! tip "Connectors implement Egeria interfaces, not vice versa"
-    Note that the code of all of these connector implementations exists outside Egeria itself (in separate code repositories), and there are no direct dependencies within Egeria on these external repositories or connectors.
+!!! tip "Digital resource connectors do not need to be part of Egeria"
+    Connectors can be built in separate code repositories, and Egeria has no direct dependencies on them.  They are loaded at runtime using the connector provider class name in the connection's connector type.
 
 All connectors can be configured with the network address and credential information needed to access the underlying tool or system. Therefore, you do not need to explicitly list properties for such basic details. However, the names of any additional configuration properties that may be useful to a specific type of connector can be described through the `recognizedConfigurationProperties` of the connector type.
 
 ### Implementation pattern
 
-- Extend a *connector provider* base class specific to your connector's interface.
-- Define `static final` class members for the GUID, name, description and the names of any additional configuration properties.
-- Write a single public constructor, with no parameters, that:
-    - Calls `super.setConnectorClassName()` with the name of your connector class.
-    - Creates a new `ConnectorType` object, sets it characteristics to the `static final` class members, and uses `.setConnectorProviderClassName()` to set the name of the connector provider class itself.
-    - (Optional) Creates a list of additional configuration properties from the `static final` class members, and uses `.setRecognizedConfigurationProperties()` to add these to the connector type.
-    - Sets `super.connectorTypeBean = connectorType`.
+- Extend `OpenConnectorProviderBase`.
+- Describe the connector in an `OpenConnectorDefinition` (typically an enum value) giving its component identifier, connector type GUID, names, description, connector provider class name, development status and supported asset/deployed implementation types.
+- Define `static final` class members for the connector class name and the names of any additional configuration properties.
+- Write a single public constructor, with no parameters, that calls `super()` with the connector definition, the connector class name, the list of recognized configuration property names and, optionally, the list of interfaces that the connector implements.
+- (Optional) Set up the `supportedTechnologyTypes` and `supportedConfigurationProperties` that describe the connector to the tools that configure it.
 
 ## Understand the connector interface
 
-Now that you have the *connector provider* to instantiate your *connector*, you need to understand what your connector actually needs to do. For a service to use your connector, the connector must omplement the Open Connector Framework methods plus the specific API used to access the resource.
+Now that you have the *connector provider* to instantiate your *connector*, you need to understand what your connector actually needs to do. For a service to use your connector, the connector must implement the Open Connector Framework methods plus the specific API used to access the resource.
 
-How would you know to extend these base classes? The *connector provider* implementations in the previous step each extended a base class specific to the type of connector they provide ([`IntegrationConnectorProvider` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/connectors/IntegrationConnectorProvider.java){ target=gh } and [`OMRSRepositoryConnectorProviderBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/repositoryconnector/OMRSRepositoryConnectorProviderBase.java){ target=gh }). These *connector* base classes ([`IntegrationConnectorBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/connectors/IntegrationConnectorBase.java){ target=gh } and [`OMRSRepositoryConnector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/repository-services/repository-services-apis/src/main/java/org/odpi/openmetadata/repositoryservices/connectors/stores/metadatacollectionstore/repositoryconnector/OMRSRepositoryConnector.java){ target=gh }) are in the same package structure as those *connector provider* base classes.
+A digital resource connector typically extends the OCF's `ConnectorBase` class (which supplies the OCF methods) and implements a Java interface that describes the operations that can be performed on the resource.  The name of this interface is passed to the connector provider's base class so that it is listed in the `connectorInterfaces` of the connector type.
+
+!!! example "Example: basic file store connector"
+    The [`BasicFileStoreConnector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector/src/main/java/org/odpi/openmetadata/adapters/connectors/datastore/basicfile/BasicFileStoreConnector.java){ target=gh } extends `ConnectorBase` and implements the [`BasicFileStore` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector/src/main/java/org/odpi/openmetadata/adapters/connectors/datastore/basicfile/BasicFileStore.java){ target=gh } interface, which offers methods such as `getFile()`, `getFileName()` and `getLastUpdateDate()`.  Its provider, [`BasicFileStoreProvider` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/file-connectors/basic-file-connector/src/main/java/org/odpi/openmetadata/adapters/connectors/datastore/basicfile/BasicFileStoreProvider.java){ target=gh }, passes `BasicFileStore` as the connector's interface.
+
+!!! example "Example: JDBC resource connector"
+    The [`JDBCResourceConnector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/jdbc-resource-connector/src/main/java/org/odpi/openmetadata/adapters/connectors/resource/jdbc/JDBCResourceConnector.java){ target=gh } extends `ConnectorBase` and implements `AuditLoggingComponent` so that it receives an audit log.  Its provider, [`JDBCResourceConnectorProvider` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-store-connectors/jdbc-resource-connector/src/main/java/org/odpi/openmetadata/adapters/connectors/resource/jdbc/JDBCResourceConnectorProvider.java){ target=gh }, passes the names from `JDBCConfigurationProperty` as its recognized configuration properties.
 
 
 ## Code the connector itself
@@ -58,26 +63,30 @@ Which brings you to writing the *connector* itself. Now that you understand the 
 
 Implement the connector by:
 
-1. Retrieving *connection* information provided by the configuration. The default method for `initialize()` saves the connection object used to create the connector. If your connector needs to override the `initialize()` method, it should call `super.initialize()` to capture the connection properties for the base classes.
-2. Implementing the `start()` method, where the main logic for your connector runs. Use the configuration details from the connection object to connect to your underlying technology. If the connector is long-running, this may be the time to start up a separate thread. However, this has to conform the rules laid down for the category of connector you are implementing.
+1. Retrieving *connection* information provided by the configuration. The default method for `initialize()` saves the connection object used to create the connector in the protected `connectionBean` variable. If your connector needs to override the `initialize()` method, it should call `super.initialize()` to capture the connection properties for the base classes.
+2. Implementing the `start()` method. Use the configuration details from the connection object to connect to your underlying technology.  Call `super.start()` so that `ConnectorBase` records that the connector is active.
 3. Using pre-existing, technology-specific clients and APIs to talk to your underlying technology.
-4. Translating the underlying technology's representation of information into the open metadata representation used by the connector interface itself.
+4. Implementing the methods of the connector's interface, translating between the underlying technology's representation of information and the representation used by the interface.
+5. Implementing the `disconnect()` method to release any resources, calling `super.disconnect()`.
 
-For the first point, you can retrieve general connection information like:
+For the first point, you can retrieve general connection information from the [`Connection` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/properties/beans/Connection.java){ target=gh } object (returned by `getConnection()` or stored in `connectionBean`) like:
 
-- the server address and protocol, by first retrieving the embedded [`EndpointProperties` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-metadata-framework/src/main/java/org/odpi/openmetadata/frameworks/openmetadata/properties/connections/EndpointProperties.java){ target=gh } with `getEndpoint()`:
-    - retrieving the protocol by calling `getProtocol()` on the `EndpointProperties`
-    - retrieving the address by calling `getAddress()` on the `EndpointProperties`
-- the user Id, by calling `getUserId()` on the [`ConnectionProperties` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-metadata-framework/src/main/java/org/odpi/openmetadata/frameworks/openmetadata/properties/connections/ConnectionProperties.java){ target=gh }
-- the password, by calling either `getClearPassword()` or `getEncryptedPassword()` on the `ConnectionProperties`, depending on what your underlying technology can handle
+- the server address and protocol, by first retrieving the embedded [`Endpoint` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-connector-framework/src/main/java/org/odpi/openmetadata/frameworks/connectors/properties/beans/Endpoint.java){ target=gh } with `getEndpoint()`:
+    - retrieving the protocol by calling `getProtocol()` on the `Endpoint`
+    - retrieving the address by calling `getNetworkAddress()` on the `Endpoint`
+- the user Id, by calling `getUserId()` on the `Connection`
+- the password, by calling either `getClearPassword()` or `getEncryptedPassword()` on the `Connection`, depending on what your underlying technology can handle
+- any secured properties, by calling `getSecuredProperties()` on the `Connection`
 
-Use these details to connect to and authenticate against your underlying technology, even when it is running on a different system from the connector itself. Of course, check for `null` objects (like the `EndpointProperties`) as well before blindly operating on them.
+Use these details to connect to and authenticate against your underlying technology, even when it is running on a different system from the connector itself. Of course, check for `null` objects (like the `Endpoint`) as well before blindly operating on them.
 
 Retrieve additional properties by:
 
-- calling `getConfigurationProperties()` on the `ConnectionProperties`, which returns a `Map<String, Object>`
+- calling `getConfigurationProperties()` on the `Connection`, which returns a `Map<String, Object>`
 - calling `get(name)` against that `Map<>` with the name of each additional property of interest
 
-Implementation of the remaining points (2-3) will vary widely depending on the specific technology being used. See the examples previously linked to delve deeper.
+Alternatively, use the helper methods inherited from `ConnectorBase`, such as `getStringConfigurationProperty()`, `getBooleanConfigurationProperty()`, `getIntConfigurationProperty()` and `getArrayConfigurationProperty()`.
+
+Implementation of the remaining points will vary widely depending on the specific technology being used. See the examples previously linked to delve deeper.
 
 --8<-- "snippets/abbr.md"

@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-### Set up OMAG Server Platform in intelliJ
+### Set up OMAG Server Platform in IntelliJ
 
 The next set of instructions makes it easy to start and stop an OMAG Server Platform from IntelliJ.
 
@@ -17,9 +17,9 @@ Select `JAR Application`:
 
 ![select jar application](select-jar-application.png)
 
-Fill in the properties based on the directory where you installed egeria.  In this example, egeria was installed in directory `/egeria-install/egeria-platform-5.0-distribution.tar.gz/` and so the settings are:
+Fill in the properties based on the directory where you installed egeria.  The settings are:
 
-* Path to JAR: `{install directory}/assembly/platform/omag-server-platform-5.0.jar`
+* Path to JAR: `{install directory}/assembly/platform/omag-server-platform-{release}.jar` - for example, `omag-server-platform-6.2.jar`
 * VM Options: `-Dloader.path=lib,extra`
 * Working Directory: `{install directory}/assembly/platform`
 
@@ -39,28 +39,23 @@ A new panel appears in the IntelliJ window showing the platform is starting up.
 
 When you see the message `OMAG server platform ready for more configuration` then the platform has initialized.
 
-Egeria's assembly includes a utility called `EgeriaPlatformReport` that queries the status of an OMAG Server Platform.  It is useful to set up to check that your platform is running correctly.
+### Check the platform is running
 
-Select `Edit Configurations` to create another `JAR Application`.  This time call it `PlatformReport`.  The JAR file is called `{install directory}/assembly/etc/reports/egeria-platform-report.jar`
+Egeria's assembly includes collections of HTTP requests for IntelliJ's HTTP client in the `{install directory}/assembly/opt/http-client-collections` directory.  The `Egeria-platform-services.http` collection calls the [Platform Services](/services/platform-services/overview) and is useful to check that your platform is running correctly.
 
-![location of platform report jar](location-of-platform-report.png)
+Open `Egeria-platform-services.http` in IntelliJ.  The variables at the top of the file set the platform URL (`@baseURL=https://localhost:7443`) and the user that calls the platform.  Run the `Get OMAG Server Platform Origin` request by clicking on the green triangle next to it.  This request does not need a bearer token, so it is a simple check that the platform is running.  The response is:
 
-Leave the `Working Directory` to default to your project directory.  If you are using Version 4.3 of Egeria, set the VM Options to `-Dstrict.ssl=false`; for release V5.0 and beyond, you can leave them blank.
+```text
+Egeria OMAG Server Platform (version {release})
+```
 
-=== "V4.3 and before"
-    ![platform report settings](platform-report-settings-4-3.png)
+The other requests in the collection need a bearer token.  Run the `Token (RequestBody)` request at the top of the file first - it stores the token it receives in the `token` variable used by the later requests.  For example, `Get all active servers` lists the servers running on the platform.  At this stage there are none.
 
-=== "V5.0 and beyond"
-    ![platform report settings](platform-report-settings-4-4.png)
+??? tip "SSL errors from the HTTP client"
+    The platform uses a self-signed certificate.  If IntelliJ's HTTP client rejects it, select the `Egeria` environment from the dropdown at the top of the `.http` file and add the following to that environment in the `http-client.private.env.json` file in the same directory:
 
-When you click `OK`, then `PlatformReport` appears in the dropdown run menu.  Press the green triangle to run the report and a new tab appears in the panel of the IntelliJ window where the platform is running.
-
-![Run platform report](run-platform-report.png)
-
-Also notice that a new markdown file called `egeria-platform-report.md` has appeared in your project files that includes the details of the platform report as a markdown file.
-
-The platform report provides details of the current status of the platform.  Each time you run the report, a new copy of `egeria-platform-report.md` is created
-
-If you open `egeria-platform-report.md` you can see a formatted version of the report.
-
-![markdown version of the report](platform-report-as-markdown.png)
+    ```json
+    "SSLConfiguration": {
+      "verifyHostCertificate": false
+    }
+    ```

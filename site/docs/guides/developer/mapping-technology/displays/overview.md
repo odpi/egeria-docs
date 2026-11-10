@@ -22,7 +22,7 @@ Figure 1 shows the types of metadata for forms and reports that integration conn
 > **Figure 1:** Forms and Reports metadata
 
 Either can be represented as a set of nested **DataContainers** with specific input and output
-**DataFields** use to represent the individual data items. 
+**DataFields** used to represent the individual data items. 
 
 
 ## Queries
@@ -37,8 +37,7 @@ Queries can also be represented as a set of nested data containers and data fiel
 
 ## Open Metadata Types
 
-Figure 3 shows the open metadata types used to represent the metadata for forms, reports and queries
-created through this service.
+Figure 3 shows the open metadata types used to represent the metadata for forms, reports and queries.
 
 ![Figure 3 - Form](form-open-metadata-types.svg)
 <br><br>
@@ -53,10 +52,10 @@ The principle asset types are
 [InformationView](/types/2/0235-Information-View)
 for forms, reports and queries respectively.
 
-If a SoftwareCapability such as an
-[Application](/types/0/0050-Applications-and-Processes) or 
-[ReportingEngine](/types/0/0055-Data-Processing-Engines) is defined,
-any asset created is automatically linked to it using the
+If the SoftwareCapability that hosts them - such as an
+[Application](/types/0/0050-Applications-and-Processes) or
+[ReportingEngine](/types/0/0055-Data-Processing-Engines) - is catalogued,
+link each asset to it using the
 [CapabilityAssetUse](/types/0/0045-Servers-and-Assets)
 relationship.
 
@@ -65,31 +64,30 @@ When a **DataContainer** is created for a report or a form, it is represented as
 **DataFields** are created as
 [DisplayDataField](/types/5/0537-Display-Schemas) entities.
 
-The **DataContainers** and **DataFields** for a queries are represented as
+The **DataContainers** and **DataFields** for queries are represented as
 [QueryDataContainer](/types/5/0537-Display-Schemas) and
 [QueryDataField](/types/5/0537-Display-Schemas) respectively.
 
-All of these types are subtypes of schema attributes that
+All of these types are subtypes of schema attribute that use
 the [TypeEmbeddedAttribute](/types/5/0505-Schema-Attributes)
 classification [method for defining the schema type](/concepts/schema).
 
 The different subtypes enable metadata searches to narrow the results to this type of display metadata.
 
-When a data container or a data field is attached to a form or report asset, the service automatically inserts the
+Between a form or report asset and its top-level data containers/fields sit the
 [Schema](/types/5/0503-Asset-Schema) relationship,
-[DisplaySchemaType](/types/5/0537-Display-Schemas) entity and
-[AttributeForSchema](/types/5/0505-Schema-Attributes) relationship
-in between the asset entity and the data container/field entity if not already in place.
+[DisplayDataSchemaType](/types/5/0537-Display-Schemas) entity and
+[AttributeForSchema](/types/5/0505-Schema-Attributes) relationship.
 
 Similarly, the combination of
 [Schema](/types/5/0503-Asset-Schema) relationship,
 [QuerySchemaType](/types/5/0537-Display-Schemas) entity and
-[AttributeForSchema](/types/5/0505-Schema-Attributes.svg) relationship
-is inserted between a query and a data container/field.
+[AttributeForSchema](/types/5/0505-Schema-Attributes) relationship
+sits between a query and its top-level data containers/fields.
 
 When a data field/container is nested inside another, it is 
 linked to the structure using the
-[NestedSchemaAttribute](/types/5/0505-Schema-Attributes.svg) relationship.
+[NestedSchemaAttribute](/types/5/0505-Schema-Attributes) relationship.
 
 
 --8<-- "snippets/abbr.md"

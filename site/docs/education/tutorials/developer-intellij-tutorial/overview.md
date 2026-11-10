@@ -11,7 +11,6 @@ This tutorial explains how to set up IntelliJ so that you can develop new connec
 ## Prerequisite tasks
 
 * [Set up Egeria](/education/tutorials/building-egeria-tutorial/overview)
-* [Install and start Apache Kafka](/education/tutorials/kafka-tutorial/overview)
 
 ## Tutorial tasks
 

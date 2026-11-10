@@ -3,31 +3,38 @@
 
 # Server Platform Origin Service
 
-The server platform origin service is a simple REST API that returns basic information about an
-[Open Metadata and governance (OMAG) Server Platform](/concepts/omag-server-platform).
+The server platform origin service is a simple REST API that returns basic information about an [Open Metadata and Governance (OMAG) Server Platform](/concepts/omag-server-platform).
 
-It is often used by operational scripts controlling the start-up and shutdown of
-OMAG Server Platforms to determine if the server platform is running.
+Operational scripts often call it while starting or shutting down a platform, to find out whether the platform is running.
 
-There is a single operation on this service called `server-platform/origin`.
+The service has a single operation:
 
-The format of the operation is:
-
-```text
-{serverPlatformURLroot}/open-metadata/platform-services/users/{userId}/server-platform/origin
+```
+###
+# @name platformOrigin
+GET {{baseURL}}/open-metadata/platform-services/server-platform/origin
 ```
 
-where `{serverPlatformURLroot}` is typically the host name and port number for the server platform's
-network endpoint and `{userId}` is the userId of an authorized administrator.
+`{{baseURL}}` is the platform's network address - typically its host name and port number, such as `https://localhost:9443`.
 
-The response is a single string describing the implementation and version of the server platform.
+The origin is one of the few platform calls that does not need a bearer token.  A script can therefore check that the platform is up before it asks for a token.
 
-For example, this is the response from the OMAG Server Platform that has an endpoint of `https://localhost:7443`.  Gary Geeke (`garygeeke`) is the administrator.
+The response is a single string describing the implementation and version of the platform.  For example:
 
 ```bash
-$ curl --insecure -X GET https://localhost:7443/open-metadata/platform-services/users/garygeeke/server-platform/origin
-Egeria OMAG Server Platform (version 4.2)
+curl --insecure https://localhost:9443/open-metadata/platform-services/server-platform/origin
 ```
 
+```
+Egeria OMAG Server Platform (version 6.3-SNAPSHOT)
+```
 
----8<-- "snippets/abbr.md"
+The `--insecure` option is only needed when the platform uses a self-signed certificate, as the samples do.
+
+## Other ways to get the origin
+
+* pyegeria - `get_platform_origin()` on any of its clients.
+* `GET {{baseURL}}/api/about` also needs no token.  It returns a JSON description of the platform's build, including `version` and the build `time`.
+* Once you have a token, the [Diagnostic APIs](/guides/diagnostic/diagnostic-apis#is-the-platform-running) describe the calls that return the platform's start time and the servers running on it.
+
+--8<-- "snippets/abbr.md"

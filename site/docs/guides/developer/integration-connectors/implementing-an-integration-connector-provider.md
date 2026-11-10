@@ -61,8 +61,8 @@ public class XXXStoreProvider extends IntegrationConnectorProvider
         super.supportedConfigurationProperties = XXXConfigurationProperty.getConfigurationPropertyTypes();
 
         /*
-         * Optional: how often refresh() should be called, in minutes.  Zero means only at start up
-         * and when explicitly requested.  The default is 60.
+         * Optional: the default for how often refresh() should be called, in minutes.  Zero means only
+         * at start up and when explicitly requested.  The default is 60.
          */
         super.setRefreshTimeInterval(30L);
     }
@@ -102,6 +102,7 @@ The catalog target processor should still validate the element it is given, sinc
 
 ### Refresh interval and blocking calls
 
-- `setRefreshTimeInterval(minutes)` sets the default number of minutes between calls to `refresh()`.  Zero means `refresh()` is only called at start up and when an operator explicitly requests it.  The value can be overridden in the connector's configuration.
-- `setUsesBlockingCalls(true)` tells the integration daemon to run the connector on its own thread and to call `engage()` rather than `refresh()`.
+- `setRefreshTimeInterval(minutes)` records the default number of minutes between calls to `refresh()` (60 if it is not set).  Zero means `refresh()` is only called at start up and when an operator explicitly requests it.
+- `setUsesBlockingCalls(true)` records that the connector should run on its own thread and have `engage()` called rather than `refresh()`.
 
+These values describe the connector's intended defaults, and are returned in the connector report from the integration daemon's `validate-connector` REST call.  At runtime, the integration daemon takes the refresh interval from the *refreshTimeInterval* property of the connector's *RegisteredIntegrationConnector* relationship, and the blocking calls setting from the *usesBlockingCalls* property of its *IntegrationConnector* element, so make sure the content pack that describes your connector sets them to match.

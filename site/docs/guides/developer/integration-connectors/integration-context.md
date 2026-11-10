@@ -22,7 +22,7 @@ flowchart TD
     _(OMF)_
     the open metadata clients, activity reports, file utilities`"] --> B["`**IntegrationContext**
     _(OIF)_
-    permitted synchronization, event listeners, refresh state, open lineage`"]
+    permitted synchronization, event listeners, refresh state, open lineage, Bitol documents`"]
     B --> C["`**CatalogTargetContext**
     _(OIF)_
     scoped to a single catalog target`"]
@@ -82,7 +82,7 @@ For a connector that supports [catalog targets](/guides/developer/integration-co
 
 * `getPermittedSynchronization()` returns the direction that metadata is allowed to flow for this connector or catalog target - `FROM_THIRD_PARTY`, `TO_THIRD_PARTY`, `BOTH_DIRECTIONS` or `OTHER`.  Check it before writing to either side.
 * `elementShouldBeCatalogued(elementName, excludedNames, includedNames)` applies the standard include/exclude list semantics used by Egeria's connectors, so that operators get consistent behaviour.  The include list takes precedence over the exclude list.
-* `getMetadataSourceQualifiedName()` and `getMetadataSourceGUID()` identify the [software capability](/concepts/software-capability) that owns the [metadata collection](/concepts/metadata-collection) the connector is maintaining.  When these are set, new elements are created with [external metadata provenance](/features/metadata-provenance/overview), which stops other tools from changing them.
+* `getMetadataSourceQualifiedName()` and `getMetadataSourceGUID()` identify the *MetadataCollection* asset that represents the [metadata collection](/concepts/metadata-collection) the connector (or catalog target) is maintaining.  The name comes from the *metadataCollectionQualifiedName* property of the *RegisteredIntegrationConnector* relationship, or of the *CatalogTarget* relationship for a `CatalogTargetContext`.  When these are set, new elements are created with [external metadata provenance](/features/metadata-provenance/overview), which stops other tools from changing them.  When they are null, the provenance is local cohort.
 * `getIntegrationConnectorGUID()` returns the unique identifier of the *IntegrationConnector* element that describes this running connector - needed if the connector wants to manage its own [catalog targets](/guides/developer/integration-connectors/self-registering-integration-connectors).
 * `getMaxPageSize()` returns the largest number of results the server will return, for paging loops.
 
@@ -115,7 +115,7 @@ Connectors that extend `DynamicIntegrationConnectorBase` get all of this for fre
 ## Refresh scheduling
 
 * `getRefreshStartTime()` - when the current refresh began.
-* `getNextScheduledRefreshTime()` - the earliest time the next refresh will run (null if refresh is only driven by explicit requests).
+* `getNextScheduledRefreshTime()` - the earliest time the next refresh will run (null if the refresh interval is zero, so refresh is only driven by start up and explicit requests).
 * `getMinMinutesBetweenRefresh()` - the configured interval.
 
 These are useful for deciding how much work to attempt in one pass, and for writing meaningful audit log messages.
@@ -127,7 +127,7 @@ Comparing a large third party inventory with open metadata, page by page, is fid
 * [`MetadataCollectionIterator` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/iterator/MetadataCollectionIterator.java){ target=gh } walks every element of a particular type within a metadata collection.
 * [`RelatedElementsIterator` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/iterator/RelatedElementsIterator.java){ target=gh } walks the elements related to a particular element.
 
-Each call to `getNextMember()` returns a `MemberElement`.  Ask it what to do with `getMemberAction()`, passing the creation and update times of the equivalent element in the third party technology.  It returns a `MemberAction` value - `CREATE_INSTANCE_IN_OPEN_METADATA`, `UPDATE_INSTANCE_IN_OPEN_METADATA`, `DELETE_INSTANCE_IN_OPEN_METADATA`, the three equivalents for the third party technology, or `NO_ACTION` - taking the permitted synchronization and the relative ages of the two copies into account.  `getMemberByQualifiedName()` looks up a specific element, and `moreToReceive()` controls the loop.
+Each call to `getNextMember()` returns a `MemberElement`.  Ask it what to do with `getMemberAction()`, passing the creation and update times of the equivalent element in the third party technology.  It returns a `MemberAction` value - `CREATE_INSTANCE_IN_OPEN_METADATA`, `UPDATE_INSTANCE_IN_OPEN_METADATA`, `DELETE_INSTANCE_IN_OPEN_METADATA`, the three equivalents for the third party technology, `NO_ACTION` or `UNKNOWN_ACTION` - taking the permitted synchronization, any external identifier recorded for the element, and the relative ages of the two copies into account.  The iterators are constructed with the GUID of the metadata collection, the catalog target name, the connector name, the open metadata type name, the integration context, the target's permitted synchronization, the maximum page size and the audit log.  `getMemberByQualifiedName()` looks up a specific element, and `moreToReceive()` controls the loop.
 
 ## External identifiers
 
@@ -158,7 +158,21 @@ An integration connector often finds things that need a person's attention.  Rat
 
 ## Open lineage
 
-Connectors that handle [open lineage](/features/lineage-management/overview) events use `registerOpenLineageListener()` to receive them and `publishOpenLineageRunEvent()` to distribute them to the registered listeners.  This is how the OpenLineage receiver and the OpenLineage log store connectors work together inside one integration daemon.
+Connectors that handle [open lineage](/features/lineage-management/overview) events implement [`OpenLineageEventListener` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/openlineage/OpenLineageEventListener.java){ target=gh } and call `registerOpenLineageListener()` to receive them.  The listener's `processOpenLineageRunEvent()` method is called for each run event; `processOpenLineageJobEvent()` and `processOpenLineageDataSetEvent()` have default implementations that you override if you want job and dataset events too.
+
+A connector distributes events to the registered listeners with `publishOpenLineageRunEvent()` (taking either the raw JSON string or an `OpenLineageRunEvent` bean), `publishOpenLineageJobEvent()` and `publishOpenLineageDataSetEvent()`.  Events can also be posted to the integration daemon's `publish-open-lineage-event` REST API.  This is how the OpenLineage receiver and the OpenLineage log store connectors work together inside one integration daemon.
+
+## Bitol data contracts and data products
+
+The same pattern is used for documents that follow the Bitol Open Data Contract Standard (ODCS) and Open Data Product Standard (ODPS).  A connector implements [`BitolDocumentListener` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/bitol/BitolDocumentListener.java){ target=gh } - overriding `processDataContract()` and/or `processDataProduct()` - and registers it with `registerBitolListener()`.
+
+Documents are published to the listeners with:
+
+* `publishBitolDocument(rawDocument)` - parses a document of either kind and routes it by its *kind* property.
+* `publishDataContract()` and `publishDataProduct()` - take either the raw document or the `DataContract` / `DataProduct` bean.
+* `publishGeneratedDataContract()` and `publishGeneratedDataProduct()` - for documents that the connector generated from open metadata.  These are not passed to the listeners that catalog documents into open metadata, since the elements they describe are already catalogued.
+
+The integration daemon also offers `publish-data-contract` and `publish-data-product` REST APIs that feed the same listeners.
 
 ## Utilities
 

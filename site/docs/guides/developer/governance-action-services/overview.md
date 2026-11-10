@@ -10,7 +10,7 @@ It is passed a *governance action context* as it is started. This provides acces
 !!! attention "One base class, not six"
     Earlier releases asked you to choose one of six base classes - `GeneralGovernanceActionService`, `WatchdogGovernanceActionService`, `ProvisioningGovernanceActionService`, `VerificationGovernanceActionService`, `TriageGovernanceActionService` or `RemediationGovernanceActionService` - and each gave you a different subset of the context methods.
 
-    The five specialized base classes have been removed.  Every governance action service now extends [`GeneralGovernanceActionService`](#writing-the-governance-action-service-connector) and gets the complete context.  Verification, triage, remediation and provisioning are still useful names for *what a service does* - and are still used to describe Egeria's own services - but they are no longer a decision you make in code.
+    The five specialized base classes have been removed.  Every governance action service now extends [`GeneralGovernanceActionService`](#writing-the-governance-action-service-connector) and gets the complete context.  (The OGF still contains the `ProvisioningGovernanceContext`, `VerificationGovernanceContext` and `WatchdogGovernanceContext` interfaces, but they are implemented by the one `GovernanceActionContext` class that every service receives.)  Verification, triage, remediation and provisioning are still useful names for *what a service does* - and are still used to describe Egeria's own services - but they are no longer a decision you make in code.
 
     Watching for a situation to occur has moved out of OGF altogether.  It is now a [watchdog action service](/guides/developer/watchdog-action-services/overview) with its own framework and its own engine service, because it is long-running rather than atomic.
 
@@ -89,7 +89,7 @@ These describe the shape of the work, and are worth knowing because they determi
 
 The connector provider for your governance action service is the factory method that creates an instance of it.  It also describes the service's *specification*: the [governance request types](/concepts/governance-request-type) and request parameters it understands, the [action targets](/concepts/action-target) it expects and produces, the [guards](/concepts/guard) it returns, and the configuration properties that adapt it.  This is what lets a tool configuring [engine actions](/concepts/engine-action) or [governance action processes](/concepts/governance-action-process) offer your service correctly and validate how it is being called.
 
-Each connector provider extends [`GovernanceActionServiceProviderBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-governance-framework/src/main/java/org/odpi/openmetadata/frameworks/opengovernance/GovernanceActionServiceProviderBase.java){ target=gh }.
+Each connector provider extends [`GovernanceActionServiceProviderBase` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-governance-framework/src/main/java/org/odpi/openmetadata/frameworks/opengovernance/GovernanceActionServiceProviderBase.java){ target=gh }, which extends `GovernanceServiceProviderBase` (where the governance-specific fields below are declared) and `OpenConnectorProviderBase` (which adds `supportedTechnologyTypes` and `supportedConfigurationProperties`).
 
 | Field | Description |
 |---|---|
@@ -163,6 +163,8 @@ It also needs to implement the standard [Open Connector Framework (OCF)](/framew
 * *disconnect* - an optional method to free up any runtime resources that the governance action service is using.  It is called after the governance action service records a completion status, or if it throws an exception from the *start* method.
 
 !!! attention "Record a completion status before disconnect returns"
+    The [Governance Action OMES](/services/omes/governance-action/overview) checks for a completion status when `start()` returns.  If there is one, it disconnects the service.  If there is not, it logs that the service has returned and leaves it running, on the assumption that it is still working on another thread.  If `start()` throws an exception and no status has been recorded, the OMES records `FAILED` with the `service-failed` guard for you.
+
     If `disconnect()` completes before the service has recorded its completion status, the engine action is treated as unfinished and the service is restarted - either at the administrator's request, or the next time the server starts.  If you do not want your service restarted, be sure it has recorded a completion status.
 
 Here is the complete implementation of the [Create Asset Governance Action Service :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/stewardship/CreateAssetGovernanceActionConnector.java){ target=gh }, which creates an asset from a template and passes its GUID on as an action target:
@@ -196,6 +198,8 @@ public class CreateAssetGovernanceActionConnector extends GeneralGovernanceActio
             {
                 String assetGUID = governanceContext.getOpenMetadataStore().getMetadataElementFromTemplate(...);
 
+                OpenMetadataElement assetElement = governanceContext.getOpenMetadataStore().getMetadataElementByGUID(assetGUID);
+
                 NewActionTarget newActionTarget = new NewActionTarget();
 
                 newActionTarget.setActionTargetGUID(assetGUID);
@@ -208,7 +212,12 @@ public class CreateAssetGovernanceActionConnector extends GeneralGovernanceActio
                 outputGuards.add(ManageAssetGuard.SET_UP_COMPLETE.getName());
             }
 
-            auditLog.logMessage(methodName, messageDefinition);
+            logRecord(methodName, messageDefinition);
+
+            if (outputActionTargets.isEmpty())
+            {
+                outputActionTargets = null;
+            }
 
             governanceContext.recordCompletionStatus(completionStatus, outputGuards, null, outputActionTargets, messageDefinition);
         }
@@ -231,7 +240,8 @@ Notice the shape: work out what to do, do it, choose a guard and its matching co
 
 * `getActionTarget(name)` and `getAllActionTargets(name)` pick the action target(s) with a given name out of the list, rather than iterating it yourself.
 * `getProperty(name, defaultValue)` looks for a value first in the request parameters, then in the connection's configuration properties, then falls back to the default.  This is the standard precedence: what the caller asked for beats how the service was configured.
-* `getStringRequestParameter()`, `getBooleanRequestParameter()`, `getIntRequestParameter()`, `getLongRequestParameter()` and `getArrayRequestParameter()` read typed values out of the request parameters.
+* `getStringRequestParameter()`, `getBooleanRequestParameter()`, `getIntRequestParameter()`, `getLongRequestParameter()` and `getArrayRequestParameter()` read typed values out of a request parameters map - pass it `governanceContext.getRequestParameters()` along with the property name and a default value.
+* `logRecord(methodName, messageDefinition)` (from the OCF `ConnectorBase`) writes a message to the audit log, if one has been supplied.
 * `handleUnexpectedException(methodName, error)` wraps an unexpected exception in a standard `ConnectorCheckedException`.
 
 ## The governance action context
@@ -299,10 +309,14 @@ Governance action engines are hosted by the [Governance Action OMES](/services/o
 
 The [governance-action-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh } module holds Egeria's own governance action services, grouped by the kind of work they do:
 
-* *verification* - [Verify Asset :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/verification){ target=gh } checks that an asset is set up correctly.
-* *remediation* - [Origin Seeker, Zone Publisher, Retention Classifier and the duplicate linkers :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/remediation){ target=gh } update open metadata.
-* *provisioning* - [Move, Copy or Delete File :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/move-copy-file-provisioning-governance-action-service.md){ target=gh } provisions a resource and records the lineage.
-* *stewardship* - [Create Asset, Delete Asset, Catalog Target Asset, Wait for Steward and Days of Week :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/stewardship){ target=gh } are small building blocks for governance action processes.
+* *verification* - [Verify Asset and Type Detector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/verification){ target=gh } check that an asset is set up correctly.
+* *remediation* - [Origin Seeker, Origin Setter, Owner Setter, Zone Publisher, Anchors Zone Resynchronizer, Retention Classifier and the Qualified Name Peer Duplicate linker :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/remediation){ target=gh } update open metadata.
+* *provisioning* - [Move, Copy or Delete File :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/docs/move-copy-file-provisioning-governance-action-service.md){ target=gh } and [Provision Tabular Data Set :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/provisioning){ target=gh } provision a resource and record the lineage.
+* *stewardship* - [Create Asset, Delete Asset, Catalog Target Asset, Evaluate Annotations, Incident Reporter, Steward Informer, Wait for Steward, Write Audit Log Message and Days of Week :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/stewardship){ target=gh } are small building blocks for governance action processes.
+
+The same module also holds the Generic Element and Generic Folder watchdogs in its `watchdog` package.  Despite their class names, these are [watchdog action services](/guides/developer/watchdog-action-services/overview) built on the OWF, not governance action services.
+
+The [Provision Unity Catalog governance action service :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/data-manager-connectors/unity-catalog-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/unitycatalog/provision){ target=gh }, whose provider is shown above, is an example of a governance action service that lives alongside the other connectors for its technology.
 
 The [Coco Pharmaceuticals clinical trial samples :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-samples/governance-action-samples/src/main/java/org/odpi/openmetadata/samples/governanceactions/clinicaltrials){ target=gh } show a set of governance action services working together in a realistic multi-step process.
 

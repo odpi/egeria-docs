@@ -19,7 +19,7 @@ This has a big effect on operations:
 * The connector is deployed once - typically by loading a [content pack](/content-packs) into the metadata access store at start up - and it then runs in an [integration group](/concepts/integration-group).
 * When someone wants a new database catalogued, they attach the database's asset to the connector with a *CatalogTarget* relationship.  No configuration change, no restart.
 * Connection details, including credentials, are defined once on the asset and reused by every connector, [survey action service](/concepts/survey-action-service) and [governance action service](/concepts/governance-action-service) that works with that resource.
-* Each catalog target can carry its own configuration properties, templates, metadata source name and permitted synchronization, so one running connector can treat each of its targets differently.
+* Each catalog target can carry its own configuration properties, templates, metadata collection name, connection name, permitted synchronization and delete method, so one running connector can treat each of its targets differently.
 
 It also changes the way the connector is built.  The per-resource logic that used to live in the connector's `refresh()` method moves into a *catalog target processor*.
 
@@ -50,11 +50,16 @@ There are two classes to write (plus the [connector provider](/guides/developer/
 
 The base class does the rest.  On each `refresh()` it:
 
-1. Retrieves the current list of *CatalogTarget* relationships attached to the connector's element.
-2. For each new one, creates a [digital resource connector](/concepts/digital-resource-connector) for the target asset (if the target is an asset with a connection), calls your `getNewRequestedCatalogTargetSkeleton()` method to create the processor, overlays the configuration properties, starts the resource connector and calls `start()` on the processor.
-3. For each one whose relationship properties have changed, disconnects the old resource connector and repeats step 2 with the new values.
-4. Calls `refresh()` on every processor, catching and logging exceptions so that one failing target does not stop the others.
-5. Registers an open metadata event listener (once the first refresh is complete) if the connector implements `OpenMetadataEventListener`, and passes each event to any processor that implements `OpenMetadataEventListener`.
+1. Retrieves the current list of *CatalogTarget* relationships attached to the connector's element.  Only the header and properties of each target element are retrieved at this point - the rest of the element's graph is read on demand by the processor (see below).
+2. For each new one, creates a [digital resource connector](/concepts/digital-resource-connector) for the target asset (if the target is an asset with a connection), calls your `getNewRequestedCatalogTargetSkeleton()` method to create the processor, overlays the configuration properties, defaults the permitted synchronization to the connector's value, starts the resource connector and calls `start()` on the processor.
+3. For each one whose relationship has changed (its version is different from the last refresh), disconnects the old resource connector and creates a new processor from the new values.
+4. Calls `refresh()` on every processor, catching and logging exceptions so that one failing target does not stop the others.  Any target element read on demand during the previous refresh is discarded first, so each refresh works from current metadata.
+5. Registers an open metadata event listener (once the first refresh is complete) if the connector implements `OpenMetadataEventListener` and its permitted synchronization is `TO_THIRD_PARTY` or `BOTH_DIRECTIONS`, and passes each event to any processor that implements `OpenMetadataEventListener`.
+
+These steps are implemented by the [`RequestedCatalogTargetsManager` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-integration-framework/src/main/java/org/odpi/openmetadata/frameworks/integration/connectors/RequestedCatalogTargetsManager.java){ target=gh }, available to your connector as the `catalogTargetsManager` variable.
+
+??? info "Catalog targets in a cohort of integration daemons"
+    The *IntegrationConnector* element is usually shipped in a content pack, so every integration daemon running the same connector asks for the catalog targets of the same element.  If their metadata access stores are in the same [cohort](/concepts/cohort-member), each daemon would see every other daemon's catalog targets too.  A connector can call `catalogTargetsManager.setLocalMetadataCollectionId()` with the metadata collection id of its own metadata access store; the manager then only processes the *CatalogTarget* relationships whose home metadata collection matches, and logs the targets it leaves to other daemons.  Until the identifier is supplied, nothing is filtered.  The [OMAG Server Platform Catalog Connector :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/egeria-system-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/egeriainfrastructure/platform/catalog/OMAGServerPlatformCatalogConnector.java){ target=gh } is an example.
 
 ## Writing the integration connector
 
@@ -110,19 +115,22 @@ The processor extends [`CatalogTargetProcessorBase` :material-github:](https://g
 | Method | Description |
 |---|---|
 | `getCatalogTargetName()` | The name given to this target by the person who attached it.  Use it in audit log messages so operators can tell the targets apart. |
-| `getCatalogTargetElement()` | The `OpenMetadataRootElement` for the element at the other end of the *CatalogTarget* relationship, including its classifications, its attached software capabilities and its related elements. |
+| `getCatalogTargetElementHeader()` | The header (GUID, type, classifications, versions) of the element at the other end of the *CatalogTarget* relationship.  It was retrieved with the catalog target, so it costs nothing - use it when the identity of the element is all you need. |
+| `getCatalogTargetElement()` | The `OpenMetadataRootElement` for the target element read in full, with its related elements to the default graph depth.  It is read from open metadata the first time it is requested in a refresh and then cached for the rest of that refresh. |
+| `getCatalogTargetElement(GetOptions)` | The target element read with the supplied options - for example, a graph query depth of 1 and only the *SupportedSoftwareCapability* relationships.  For a target with a large schema this is much cheaper than a full read. |
 | `getConnectorToTarget()` | The [digital resource connector](/concepts/digital-resource-connector) created from the target asset's connection, already started.  It is null if the target is not an asset, or has no connection. |
 | `getConfigurationProperties()` | The connector's own configuration properties, overlaid with the configuration properties from the *CatalogTarget* relationship.  The relationship's values win. |
 | `getTemplates()` | Map of template name to template GUID for [templated cataloguing](/features/templated-cataloguing/overview). |
 | `getPermittedSynchronization()` | The direction metadata is allowed to flow for this target.  Defaults to the connector's setting. |
-| `getMetadataSourceQualifiedName()` | The qualified name of the [software capability](/concepts/software-capability) that owns the metadata created for this target. |
-| `getDeleteMethod()` | Whether deletes for this target should be soft-deletes, archives or purges. |
+| `getMetadataCollectionQualifiedName()` | The qualified name of the [metadata collection](/concepts/metadata-collection) that owns the metadata created for this target, if it overrides the connector's value. |
+| `getConnectionName()` | The qualified name of a connection to use for the resource, if it is not the connection of the target asset. |
+| `getDeleteMethod()` | The delete method policy for this target. |
 | `getRelationshipGUID()` | Unique identifier of the *CatalogTarget* relationship itself - useful if the connector needs to update it. |
 | `integrationContext` | The [`CatalogTargetContext`](/guides/developer/integration-connectors/integration-context) for this target.  It is already set up with the correct metadata source and permitted synchronization. |
 
 ### The start method
 
-`start()` is called once, when the catalog target is first seen (and again if the relationship is updated).  This is where to validate the target and extract the values that do not change between refreshes.  From the [Kafka Topic Catalog Target Processor :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-kafka-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/apachekafka/integration/KafkaTopicCatalogTargetProcessor.java){ target=gh }:
+`start()` is called once, when the catalog target is first seen.  This is where to validate the target and extract the values that do not change between refreshes.  From the [Kafka Topic Catalog Target Processor :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/system-connectors/apache-kafka-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/apachekafka/integration/KafkaTopicCatalogTargetProcessor.java){ target=gh }:
 
 ```java
     @Override
@@ -148,13 +156,18 @@ The processor extends [`CatalogTargetProcessorBase` :material-github:](https://g
             super.throwMissingConnectionInfo(OpenMetadataProperty.NETWORK_ADDRESS.name, methodName);
         }
 
-        if (propertyHelper.isTypeOf(this.getCatalogTargetElement().getElementHeader(), OpenMetadataType.SOFTWARE_SERVER.typeName))
+        /*
+         * Read the target element with just its supported software capabilities attached.
+         */
+        OpenMetadataRootElement catalogTargetElement = this.getCatalogTargetElementWithCapabilities();
+
+        if (propertyHelper.isTypeOf(catalogTargetElement.getElementHeader(), OpenMetadataType.SOFTWARE_SERVER.typeName))
         {
-            eventBrokerGUID = this.getEventBrokerGUID(this.getCatalogTargetElement());
+            eventBrokerGUID = this.getEventBrokerGUID(catalogTargetElement);
         }
-        else if (propertyHelper.isTypeOf(this.getCatalogTargetElement().getElementHeader(), OpenMetadataType.EVENT_BROKER.typeName))
+        else if (propertyHelper.isTypeOf(catalogTargetElement.getElementHeader(), OpenMetadataType.EVENT_BROKER.typeName))
         {
-            eventBrokerGUID = this.getCatalogTargetElement().getElementHeader().getGUID();
+            eventBrokerGUID = catalogTargetElement.getElementHeader().getGUID();
         }
         else
         {
@@ -162,8 +175,11 @@ The processor extends [`CatalogTargetProcessorBase` :material-github:](https://g
                                                               OpenMetadataType.EVENT_BROKER.typeName).toString(),
                                                 methodName);
         }
+        :
     }
 ```
+
+The private `getCatalogTargetElementWithCapabilities()` method builds a `GetOptions` from `integrationContext.getClassificationExplorerClient().getGetOptions()`, sets the graph query depth to 1 and restricts the relationships to *SupportedSoftwareCapability*, then calls `getCatalogTargetElement(getOptions)`.
 
 `CatalogTargetProcessorBase` supplies a family of helper methods for this validation work, so that all connectors report the same problems in the same way:
 
@@ -176,7 +192,7 @@ It also supplies methods to extract typed values from the combined configuration
 
 ### The refresh method
 
-`refresh()` does the metadata exchange for this one target.  Because the base class calls it inside a try/catch, an exception thrown here takes only this target out of action for this pass, not the whole connector.
+`refresh()` does the metadata exchange for this one target.  Because the base class calls it inside a try/catch, an exception thrown here takes only this target out of action for this pass, not the whole connector.  This example is from the [PostgreSQL Server Catalog Target Processor :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/data-manager-connectors/postgres-server-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/postgres/catalog/PostgresServerCatalogTargetProcessor.java){ target=gh }:
 
 ```java
     @Override
@@ -184,15 +200,23 @@ It also supplies methods to extract typed values from the combined configuration
     {
         final String methodName = "refresh";
 
-        if (propertyHelper.isTypeOf(this.getCatalogTargetElement().getElementHeader(),
+        if (propertyHelper.isTypeOf(this.getCatalogTargetElementHeader(),
                                     PostgresDeployedImplementationType.POSTGRESQL_SERVER.getAssociatedTypeName()))
         {
             JDBCResourceConnector assetConnector = null;
 
             try
             {
-                String                  databaseServerGUID = this.getCatalogTargetElement().getElementHeader().getGUID();
-                OpenMetadataRootElement databaseManager    = this.getDatabaseManager(databaseServerGUID, this.getCatalogTargetElement());
+                /*
+                 * Only the server's properties and its supported software capabilities are used.
+                 */
+                GetOptions serverGetOptions = integrationContext.getClassificationExplorerClient().getGetOptions();
+
+                serverGetOptions.setGraphQueryDepth(1);
+                serverGetOptions.setIncludeOnlyRelationships(List.of(OpenMetadataType.SUPPORTED_SOFTWARE_CAPABILITY_RELATIONSHIP.typeName));
+
+                String                  databaseServerGUID = this.getCatalogTargetElementHeader().getGUID();
+                OpenMetadataRootElement databaseManager    = this.getDatabaseManager(databaseServerGUID, this.getCatalogTargetElement(serverGetOptions));
 
                 Connector connector = integrationContext.getConnectedAssetContext().getConnectorForAsset(databaseServerGUID, auditLog);
 
@@ -207,12 +231,12 @@ It also supplies methods to extract typed values from the combined configuration
             }
             catch (Exception exception)
             {
-                auditLog.logException(methodName,
-                                      PostgresAuditCode.UNEXPECTED_EXCEPTION.getMessageDefinition(connectorName,
-                                                                                                  exception.getClass().getName(),
-                                                                                                  methodName,
-                                                                                                  exception.getMessage()),
-                                      exception);
+                logExceptionRecord(methodName,
+                                   PostgresAuditCode.UNEXPECTED_EXCEPTION.getMessageDefinition(connectorName,
+                                                                                               exception.getClass().getName(),
+                                                                                               methodName,
+                                                                                               exception.getMessage()),
+                                   exception);
             }
             finally
             {
@@ -273,17 +297,12 @@ Events from the *third party* technology are handled differently: register the l
 
         if (super.getConnectorToTarget() instanceof OpenMetadataTopicConnector topicConnector)
         {
-            topicConnector.registerListener(listener);
-
-            if (! topicConnector.isActive())
-            {
-                topicConnector.start();
-            }
+            this.registerTopicConnector(topicConnector, listener);
         }
     }
 ```
 
-Its `refresh()` method does nothing, because all of its work is event-driven.
+The `registerTopicConnector()` method calls `topicConnector.registerListener(listener)`, logs the topic's network address, and starts the topic connector if it is not already active.  The listener is the integration connector itself, which implements `OpenMetadataTopicListener`.  Its `refresh()` method does nothing, because all of its work is event-driven.
 
 ### Being notified when the catalog targets change
 
@@ -301,9 +320,9 @@ The [connector provider](/guides/developer/integration-connectors/#writing-the-c
 
 ## Naming the metadata source
 
-Each catalog target can name the [software capability](/concepts/software-capability) that acts as the [metadata collection](/concepts/metadata-collection) for the metadata created from it - the `metadataSourceQualifiedName` property on the *CatalogTarget* relationship.  This means metadata from the sales database and metadata from the finance database can be held in separate metadata collections, even though a single connector instance created both.
+Each catalog target can name the [metadata collection](/concepts/metadata-collection) for the metadata created from it - the `metadataCollectionQualifiedName` property on the *CatalogTarget* relationship.  If it is not set, the value from the connector's *RegisteredIntegrationConnector* relationship is used.  `IntegrationContext.getCatalogTargetContext()` looks up (or creates) the *MetadataCollection* asset and builds the processor's `CatalogTargetContext` with it, so metadata from the sales database and metadata from the finance database can be held in separate metadata collections, even though a single connector instance created both.  The [external source metadata provenance](/features/metadata-provenance/overview) that results prevents other tools from changing the metadata that this connector maintains.
 
-`CatalogTargetProcessorBase` provides `setUpMetadataSource()` and `setUpSoftwareCapability()` to locate (or create) these elements.  The [external source metadata provenance](/features/metadata-provenance/overview) that results prevents other tools from changing the metadata that this connector maintains.
+`CatalogTargetProcessorBase` also provides `setUpMetadataSource()` and `setUpSoftwareCapability()`, used by connectors that catalog a server.  `setUpMetadataSource()` looks for an *InventoryCatalog* [software capability](/concepts/software-capability) on the target server, creating it if necessary along with a *MetadataCollection* asset, and stores the result in the `metadataCollectionGUID` and `metadataCollectionName` variables.  `setUpSoftwareCapability()` does the same for any named software capability type and returns its GUID.
 
 ## Migrating an existing connector
 
@@ -313,7 +332,7 @@ To convert a connector that predates catalog targets:
 2. Create a new class extending `CatalogTargetProcessorBase` and move the body of `refresh()` into it, along with any instance variables it uses.
 3. Move the parts of `start()` that relate to a specific resource into the processor's `start()` method.  Anything that reads the connector's own configuration stays behind.
 4. Implement `getNewRequestedCatalogTargetSkeleton()` on the connector to return an instance of the new processor.
-5. Replace `getContext()` with the `integrationContext` variable, and `connectionProperties` with `connectionBean`.
+5. Replace `getContext()` with the `integrationContext` variable, and `connectionProperties` with `connectionBean`.  Inside the processor, `integrationContext` is the target's `CatalogTargetContext`.
 6. Replace direct use of the endpoint from the connector's connection with `getConnectorToTarget()`, or with the network address from the target asset's connection.
 7. Declare the supported catalog target types in the connector provider.
 

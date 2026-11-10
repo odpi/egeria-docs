@@ -3,6 +3,8 @@
 
 
 ??? example "Example of the header from the [Core Content Pack :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-resources/open-metadata-archives/core-content-pack){ target=gh }"
+    This is the start of `content-packs/CoreContentPack.omarchive`.  The `dependsOnArchives` property lists the GUID of the open metadata types archive (`OpenMetadataTypesArchive`), whose types the content pack's instances use.  The content pack defines no new types, so it has no `archiveTypeStore`; its `archiveInstanceStore` holds lists of `entities`, `relationships` and `classifications` (shown empty here).
+
     ```json
     {
       "class":"OpenMetadataArchive",
@@ -15,10 +17,15 @@
               "archiveType":"CONTENT_PACK",
               "originatorName":"Egeria Project",
               "originatorLicense":"Apache 2.0",
-              "creationDate":1786986613752,
+              "creationDate":1775025949989,
               "dependsOnArchives":["bce3b0a0-662a-4f87-b8dc-844078a11a6e"]
-          }, 
-       "archiveTypeStore":{},
-       "archiveInstanceStore":{}
+          },
+       "archiveInstanceStore":
+          {
+              "class":"OpenMetadataArchiveInstanceStore",
+              "entities":[],
+              "relationships":[],
+              "classifications":[]
+          }
     }
     ```

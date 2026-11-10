@@ -1,132 +1,109 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
+# Types of APIs and Platform Deployment
 
-In the `omag-server-platform` assembly, there is a jar file called `egeria-platform-report.jar` under the `etc/reports` directory.  This contains a utility that reports on the status of a running OMAG Server Platform.
+Once your [OMAG Server Platform](/concepts/omag-server-platform) is running, you can query it to find out how it is deployed and which services it offers.  This uses the [Platform Services](/services/platform-services/overview), which are one of the platform APIs.  Egeria's APIs fall into two groups:
 
-??? beginner "Run `EgeriaPlatformReport`"
-    Select `EgeriaPlatformReport` and then `Run 'EgeriaPlatformReport...main()'` from the right-mouse menu.
+* **Platform APIs** - configure and operate the platform and the [OMAG Servers](/concepts/omag-server) it hosts.  Their REST paths begin `{{platformURLRoot}}/open-metadata/platform-services/...` or `{{platformURLRoot}}/open-metadata/admin-services/...`.
+* **Server APIs** - offered by the [registered services](/services) running inside a server.  For example, the [view services](/services/omvs) in a [view server](/concepts/view-server) have REST paths that begin `{{platformURLRoot}}/servers/{{viewServer}}/api/open-metadata/{{serviceURLMarker}}/...`.
 
-    A new *Run* tab appears next to `EgeriaPlatform`.  `EgeriaPlatformReport` runs but fails:
+The requests below are in the `Egeria-platform-services.http` collection, which is in the assembly's `opt/http-client-collections` directory.  Every request except the first needs a bearer token in its `Authorization` header - see [REST APIs](/guides/developer/rest-apis) for how to obtain one.
 
-    ```bash
-    /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -jar /egeria-install/egeria-platform-5.0-distribution.tar.gz/assembly/etc/reports/egeria-platform-report.jar
-    ===============================
-    OMAG Server Platform Report:    Mon Sep 04 18:00:51 BST 2023
-    ===============================
-    Running against platform: https://localhost:7443
-    Using userId: garygeeke
-    
-    Platform report for: https://localhost:7443
-    Platform deployment
-    There was an org.odpi.openmetadata.frameworks.connectors.ffdc.PropertyServerException exception when calling the platform.  Error message is: OMAG-COMMON-503-001 A client-side exception was received from API call getPlatformOrigin to OMAG Server EgeriaPlatform at https://localhost:7443.  The error message was CLIENT-SIDE-REST-API-CONNECTOR-503-002 A client-side exception org.springframework.web.client.ResourceAccessException was received by method getPlatformOrigin from API call https://localhost:7443/open-metadata/platform-services/users/{1}/server-platform/origin to server EgeriaPlatform on platform https://localhost:7443.  The error message was I/O error on GET request for "https://localhost:7443/open-metadata/platform-services/users/garygeeke/server-platform/origin": PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
-    
-    Process finished with exit code 255   
+??? beginner "Check the platform is running"
+    The platform origin is the simplest request, and needs no token:
+
     ```
-    This is because it does not have a valid security certification.  You will notice that IntelliJ has added a new configuration for `EgeriaPlatformReport'
-
-??? beginner "Set up VM Options"
-    
-    ![egeria-platform-report configuration](/education/tutorials/egeria-platform-report-configuration.png)
-
-    Click on the white down arrow of the configurations box and select `Edit Configurations...`.  Select the configuration for `EgeriaPlatformReport` to show its configuration form.
-    
-    Add `-Dstrict.ssl=false` to the `VM Options` and click `OK` to save the configuration.  This turns off the need for a certificate. 
-    
-    ??? tip "Don't see VM Options in the configuration form?"
-        You may need to use the `Modify Options` dropdown to `Add VM Options` to your configuration form.
-        ![Add VM Options](/education/tutorials/intellij-vm-options.png)
-    
-    ![egeria-platform-report configuration fixed](/education/tutorials/egeria-platform-report-configuration-fixed.png)
-
-??? beginner "Rerun `EgeriaPlatformReport`"
-
-    Re-run `EgeriaPlatformReport` by clicking on the green arrow on the *Run* tab.  There is more output this time even though it still seems to fail in the end. It begins with the report header that records the platform it is running against.
-    
-    ```bash
-    /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java -Dstrict.ssl=false -Dfile.encoding=UTF-8 -jar /Users/mandy-chessell/egeria-install/egeria-platform-5.0-distribution.tar.gz/assembly/etc/reports/egeria-platform-report.jar
-    ===============================
-    OMAG Server Platform Report:    Mon Sep 04 19:38:03 BST 2023
-    ===============================
-    Running against platform: https://localhost:7443
-    Using userId: garygeeke
-    
-    Platform report for: https://localhost:7443
+    GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/origin
     ```
-    
-    Then `EgeriaPlatfromReport` starts to call the Egeria APIs that are used for configuring and managing the OMAG Server Platform.
-    
-    ```bash
-    Platform deployment
-      Egeria version: Egeria OMAG Server Platform (version 5.0)
-      Configuration document store connector: <null>
-      Platform security connector: <null>
+
+    It returns the name and version of the platform:
+
+    ```text
+    Egeria OMAG Server Platform (version 6.3-SNAPSHOT)
     ```
-    
-    The `Egeria version` is retrieved using the `getPlatformOrigin` method of the [Platform Services](/services/platform-services/overview/).
-    
+
+    The equivalent Java call uses the `PlatformServicesClient`:
+
     ```java linenums="1"
-    PlatformServicesClient platformServicesClient = new PlatformServicesClient("MyPlatform", platformURLRoot);
-         
-    String platformOrigin = platformServicesClient.getPlatformOrigin(clientUserId);
-    ```
-    The connectors configured for the platform are retrieved using the platform services client and [Administration Service's `OMAGServerPlatformConfigurationClient`](/services/admin-services/overview/#configuring-the-omag-server-platform){ target=dojo-support }
-    
-    ```java linenums="1"
-    OMAGServerPlatformConfigurationClient platformConfigurationClient   = new OMAGServerPlatformConfigurationClient(clientUserId, platformURLRoot);
-    
-    Connection configurationStoreConnection = platformConfigurationClient.getConfigurationStoreConnection();
-    Connection platformSecurityConnection   = platformServicesClient.getPlatformSecurityConnection();
-    ```
-    
-    Next is the list of *Registered services*.  These are optional services that can be plugged into the `OMAG Server Platform` and provide the services to retrieve and maintain/govern open metadata. The list that you see is the default set of services installed with the platform.  
+    PlatformServicesClient platformServicesClient = new PlatformServicesClient("MyPlatform",
+                                                                               platformURLRoot,
+                                                                               secretStoreProvider,
+                                                                               secretStoreLocation,
+                                                                               secretStoreCollection,
+                                                                               delegatingUserId,
+                                                                               auditLog);
 
-    ??? beginner "List of registered services from `EgeriaPlatformReport`"
-        
-        ```bash      
-           Registered services
-              Data Manager OMAS: Capture changes to the data stores and data set managed by a data manager such as a database server, content manager or file system.
-              Design Model OMAS: Exchange design model content with tools and standard packages
-              Asset Manager OMAS: Manage metadata from a third party asset manager
-              IT Infrastructure OMAS: Manage information about the deployed IT infrastructure
-              Data Science OMAS: Create and manage data science definitions and models
-              Community Profile OMAS: Define personal profile and collaborate
-              Digital Architecture OMAS: Design of the digital services for an organization
-              Asset Owner OMAS: Manage an asset
-              Stewardship Action OMAS: Manage exceptions and actions from open governance
-              Governance Program OMAS: Manage the governance program
-              Digital Service OMAS: Manage a digital service through its lifecycle
-              Asset Lineage OMAS: Store asset lineage
-              Asset Consumer OMAS: Access assets through connectors
-              DevOps OMAS: Manage a DevOps pipeline
-              Software Developer OMAS: Interact with software development tools
-              Project Management OMAS: Manage governance related projects
-              Governance Server OMAS: Set up an operational governance engine
-              Data Privacy OMAS: Manage governance of privacy
-              Security Manager OMAS: Manages exchange of metadata with a security service
-              Governance Action OMES: Executes requested governance action services to monitor, assess and maintain metadata and its real-world counterparts.
-              Repository Governance OMES: Dynamically governance open metadata repositories in the connected cohorts.
-              Survey Action OMES: Analyses the content of an asset's real world counterpart, generates annotations in an open discovery report that is attached to the asset in the open metadata repositories.
-              Glossary Manager OMVS: Create glossary terms and organize them into categories as part of a controlled workflow process. It supports the editing glossary and multiple states.
-              My Profile OMVS: Manage information about the logged on user as well as their preferences.
-              Glossary Browser OMVS: View glossary terms and categories within a glossary.
-        ```
-    The registered are also retrieved through the [Platform Services](/services/platform-services/overview){ target=dojo-support } using the `getXXXServices` method as follows:
-    
-    ```java linenums="1"
-    List<RegisteredOMAGService> registeredOMASs = platformServicesClient.getAccessServices(clientUserId);
-    List<RegisteredOMAGService> registeredOMESs = platformServicesClient.getEngineServices(clientUserId);
-    List<RegisteredOMAGService> registeredOMVSs = platformServicesClient.getViewServices(clientUserId);
+    String platformOrigin = platformServicesClient.getPlatformOrigin();
     ```
-??? beginner "Observe no servers from `EgeriaPlatformReport`"
-    
-    Finally, `EgeriaPlatformReport` calls the [Administration Services](/services/admin-services/overview){ target=dojo-support } to request the list of configured servers.  At this stage, there are none.
-    ```bash      
-       Platform servers
-          None
-    
-    Process finished with exit code 0
-    ```
-    The next step will create a server configuration document that will also create the configuration directory and the report will start to show servers.  
 
-    `EgeriaPlatformReport` also creates a [markdown](/guides/contributor/markdown) document called `egeria-platform-report.md` that contains its output.  This [version of egeria-platform-report.md](/education/tutorials/egeria-platform-report-no-servers) is included for your reference.        
+??? beginner "List the registered services"
+    *Registered services* are optional services that are plugged into the platform and provide the services to retrieve, maintain and govern open metadata.  They are listed by type:
+
+    ```
+    GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/access-services
+    GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/engine-services
+    GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/view-services
+    ```
+
+    The default platform has three access services, which run in a [metadata access server](/concepts/metadata-access-server):
+
+    | Service                            | Description                                                                                                                          |
+    |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+    | Connected Asset Services           | Common metadata services for the Open Connector Framework (OCF).                                                                     |
+    | Open Metadata Store Services       | Provides generic open metadata retrieval and management services for the Open Frameworks and Open Metadata Access Services (OMASs). |
+    | Open Governance Framework Services | Support open governance services.                                                                                                    |
+
+    It has four engine services, which run in an [engine host](/concepts/engine-host):
+
+    | Service                    | Description                                                                                                                                                   |
+    |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Governance Action OMES     | Executes requested governance action services to monitor, assess and maintain metadata and its real-world counterparts.                                       |
+    | Repository Governance OMES | Dynamically govern open metadata repositories in the connected cohorts.                                                                                       |
+    | Survey Action OMES         | Analyses the content of an asset's real world counterpart (resource), generates annotations in a survey report that is attached to the asset in the open metadata repositories. |
+    | Watchdog Action OMES       | Monitors for particular situations/events and notifies registered subscribers.                                                                                |
+
+    It also has around forty view services, which run in a view server and provide the APIs used by the [Python clients](/guides/developer/python-clients/overview) and user interfaces.  Each entry in the response describes one service.  For example:
+
+    ```json
+    {
+        "serviceId": 233,
+        "serviceName": "Community Matters API",
+        "serviceDevelopmentStatus": "STABLE",
+        "serviceURLMarker": "community-matters",
+        "serviceDescription": "Manages the definitions of communities, their leaders and membership.",
+        "serviceWiki": "https://egeria-project.org/services/omvs/community-matters/overview/",
+        "serverType": "View Server",
+        "partnerServiceName": "Open Metadata Store Services",
+        "partnerServerType": "Metadata Access Server"
+    }
+    ```
+
+    The `partnerServiceName` shows which access service the view service calls to retrieve and maintain metadata.
+
+    In Java, the same lists come from `getAccessServices()`, `getEngineServices()` and `getViewServices()` on the `PlatformServicesClient`.
+
+??? beginner "List the servers on the platform"
+    The platform can also list the servers that are running on it:
+
+    ```
+    GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/servers/active
+    ```
+
+    On a newly installed platform with no servers configured, the list is empty.  Once servers are configured and started, they appear in the list.  For example, the quickstart environment returns:
+
+    ```json
+    {
+        "class": "ServerListResponse",
+        "relatedHTTPCode": 200,
+        "serverList": ["qs-engine-host", "qs-integration-daemon", "qs-metadata-store", "qs-view-server", "qs-nanny-daemon"]
+    }
+    ```
+
+    `GET .../servers` lists every server that has run on the platform since it started, and `GET .../servers/{serverName}/status` returns the start and stop history of a server.
+
+!!! tip "Reports on platforms and servers"
+    Once a view server is running, the [Runtime Manager](/services/omvs/runtime-manager/overview) view service can produce a report on a platform (`GET .../runtime-manager/platforms/{platformGUID}/report`) or a running server (`GET .../runtime-manager/omag-servers/{serverGUID}/instance/report`) that combines these details.
+
+
+--8<-- "snippets/abbr.md"

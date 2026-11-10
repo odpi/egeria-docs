@@ -21,8 +21,9 @@ The platform services provide the methods for:
 * Querying the origin and capabilities of the [OMAG Server Platform](/concepts/omag-server-platform).
 * Starting and stopping OMAG Servers on the platform and shutting down the platform itself.
 * Discovering information about the [OMAG Servers](/concepts/omag-server) that the platform is hosting.
-* Dynamically setting up the [platform metadata security connector](/concepts/platform-metadata-security-connector).
-* Shutting down the OMAG Server Platform
+* Dynamically setting up the [platform metadata security connector](/concepts/platform-metadata-security-connector), and maintaining the user accounts and security access controls it uses.
+* Adding [open metadata archives](/concepts/open-metadata-archive) to a running server.
+* Shutting down the OMAG Server Platform.
 
 These methods are available through a Java client, or directly by calling the REST API.
 
@@ -30,7 +31,7 @@ These methods are available through a Java client, or directly by calling the RE
 
 ## Platform services client
 
-The Platform Services client is called `PlatformServicesClient`. It is located in the `platform-services-client` module and use definitions from the `platform-services-api`.
+The Platform Services client is called `PlatformServicesClient`. It is located in the `platform-services-client` module and uses definitions from the `platform-services-api`, `server-operations-api` and `admin-services-api` modules.
 
 --8<-- "docs/guides/developer/java-clients/platform-constructor-parameters.md"
 
@@ -38,14 +39,22 @@ Below is an example of the code used to construct the `PlatformServicesClient`.
 
 ??? example "Example: Creating a platform services client"
     ```java linenums="1"
-    PlatformServicesClient platformServicesClient = new PlatformServicesClient("MyPlatform", platformURLRoot);
+    PlatformServicesClient platformServicesClient = new PlatformServicesClient("MyPlatform",
+                                                                               platformURLRoot,
+                                                                               secretStoreProvider,
+                                                                               secretStoreLocation,
+                                                                               secretStoreCollection,
+                                                                               delegatingUserId,
+                                                                               auditLog);
     ```
 
-Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/platformservices/client/PlatformServicesClient.html).  All calls take the userId of the caller.  Methods that are specific to an OMAG server will also take the server name as a parameter.
+Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/platformservices/client/PlatformServicesClient.html).  The caller is identified by the bearer token that the client obtains using the secrets from its secrets store, so the methods do not take a userId.  Methods that are specific to an OMAG server take the server name as a parameter.
+
+Every REST call must carry that bearer token in its `Authorization` header.  The REST paths all begin `{{platformURLRoot}}/open-metadata/platform-services/server-platform` and accept an optional `delegatingUserId` request parameter.
 
 ## Querying the origin and capabilities of the platform
 
-The OMAG Server Platform can be built in a variety of ways, both expanding and removing the services delivered by the Egeria community.  Therefore it is useful to be able to query a particular OMAG Server Plaftorm to discover what it can do.
+The OMAG Server Platform can be built in a variety of ways, both expanding and removing the services delivered by the Egeria community.  Therefore it is useful to be able to query a particular OMAG Server Platform to discover what it can do.
 
 ### Platform origin
 
@@ -56,14 +65,14 @@ The platform origin method is used to confirm that the platform is running, and 
     === "Java"
     
         ```java linenums="1"
-        String platformOrigin = platformServicesClient.getPlatformOrigin(clientUserId);
+        String platformOrigin = platformServicesClient.getPlatformOrigin();
         ```
     
     === "REST API"
     
-        !!! post "getServerPlatformOrigin"
+        !!! get "getServerPlatformOrigin"
             ```
-            POST {{platformURLRoot}}/open-metadata/platfrom-services/server-platform/origin
+            GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/origin
             ```
     
 
@@ -71,7 +80,7 @@ The call returns a string value of:
 ```text
 Egeria OMAG Server Platform (version {release})
 ```
-It is a simple check that the platform is running.
+It is a simple check that the platform is running.  The client also offers `getPlatformStartTime()`, `getPlatformBuildProperties()` and `getPublicProperties()`.
 
 ### Registered services
 
@@ -82,18 +91,24 @@ It is also possible to list the [registered services](/services/#registered-serv
     === "Java"
 
         ```java linenums="1"
-        List<RegisteredOMAGService> registeredOMASs = platformServicesClient.getAccessServices(clientUserId);
-        List<RegisteredOMAGService> registeredOMESs = platformServicesClient.getEngineServices(clientUserId);
-        List<RegisteredOMAGService> registeredOMVSs = platformServicesClient.getViewServices(clientUserId);
+        List<RegisteredOMAGService> registeredOMASs = platformServicesClient.getAccessServices();
+        List<RegisteredOMAGService> registeredOMESs = platformServicesClient.getEngineServices();
+        List<RegisteredOMAGService> registeredOMVSs = platformServicesClient.getViewServices();
+        List<RegisteredOMAGService> governanceServices = platformServicesClient.getGovernanceServices();
+        List<RegisteredOMAGService> commonServices = platformServicesClient.getCommonServices();
+        List<RegisteredOMAGService> allServices = platformServicesClient.getAllServices();
         ```
 
     === "REST API"
     
         !!! get "getRegisteredServices"
             ```
-            GET {{platformURLRoot}}/open-metadata/platfrom-services/registered-services/access-services
-            GET {{platformURLRoot}}/open-metadata/platfrom-services/registered-services/engine-services
-            GET {{platformURLRoot}}/open-metadata/platfrom-services/registered-services/view-services
+            GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/access-services
+            GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/engine-services
+            GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/view-services
+            GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/governance-services
+            GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services/common-services
+            GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/registered-services
             ```
 
 Each entry in `RegisteredOMAGService` details:
@@ -107,7 +122,7 @@ Each entry in `RegisteredOMAGService` details:
 
 ### Supported connectors
 
-It is possible to validate whether a specific connector's implementation is included in the OMAG Server Platform's classpath by using the getConnectorType method.  This takes the class name of the connector's provider class.  It tries to create an instance of the connector and returns it supported connector type.
+It is possible to validate whether a specific connector's implementation is included in the OMAG Server Platform's classpath by using the getConnectorType method.  This takes the class name of the connector's provider class.  It checks that the connector provider is on the platform's class path and returns the connector type it supports.  It does not validate that the connector will load and initialize.
 
 ??? example "Example: Retrieving a connector type"
     The example retrieves the connector type for the Open Metadata Access Security Connector, which the quickstart uses as its platform metadata security connector.  Its connector provider class is `org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider`.
@@ -115,15 +130,15 @@ It is possible to validate whether a specific connector's implementation is incl
     === "Java"
     
         ```java linenums="1"
-        ConnectorType connectorType = platformServicesClient.getConnectorType(clientUserId, "org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider");
+        ConnectorType connectorType = platformServicesClient.getConnectorType("org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider");
         ```
         [Javadoc for ConnectorType](https://odpi.github.io/egeria/org/odpi/openmetadata/frameworks/connectors/properties/beans/ConnectorType.html)
     
     === "REST API"
     
-        !!! post "getConnectorType"
+        !!! get "getConnectorType"
             ```
-            POST {{platformURLRoot}}/open-metadata/platform-services/users/{{user}}/server-platform/connector-types/org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider
+            GET {{platformURLRoot}}/open-metadata/platform-services/server-platform/connector-types/org.odpi.openmetadata.metadatasecurity.accessconnector.OpenMetadataAccessSecurityProvider
             ```
         Returns
         ```json
@@ -157,72 +172,49 @@ It is possible to validate whether a specific connector's implementation is incl
 
 ## Starting OMAG Servers and stopping OMAG Servers
 
-
-
-The code sample shows the method calls to start and stop named OMAG Servers.
+A server is started either from the configuration document stored by the platform's [configuration document store](/concepts/configuration-document/#storage), or from a configuration document passed on the request.  The code sample shows the method calls to start and stop named OMAG Servers.
 
 ??? example "Example: starting and stopping servers"
     ```java linenums="1"
-        /**
-         * Start the named server on the platform.  This will fail if the platform is not running,
-         * or if the user is not authorized to issue operations requests to the platform or if the
-         * server is not configured.
-         *
-         * @param serverName string name
-         */
-        private void startServer(String serverName)
-        {
-            try
-            {
-                PlatformServiceClient client = new PlatformServiceClient(serverName, platformURLRoot);
-    
-                System.out.println("Starting " + serverName + " ...");
-                System.out.println(client.activateWithStoredConfig(clientUserId));
-            }
-            catch (Exception error)
-            {
-                System.out.println("There was an " + error.getClass().getName() + " exception when calling the platform.  Error message is: " + error.getMessage());
-            }
-        }
-        
-        
-        /**
-         * Stop the requested server.    This will fail if the server or the platform is not running,
-         * or if the user is not authorized to issue operations requests to the platform.
-         *
-         * @param serverName string name
-         */
-        private void stopServer(String serverName)
-        {
-            try
-            {
-                PlatformServiceClient client = new PlatformServiceClient(serverName, platformURLRoot);
-     
-                System.out.println("Stopping " + serverName + " ...");
-     
-                client.deactivateTemporarily(clientUserId);
-     
-                System.out.println(serverName + " stopped.");
-            }
-            catch (Exception error)
-            {
-                System.out.println("There was an " + error.getClass().getName() + " exception when calling the platform.  Error message is: " + error.getMessage());
-            }
-        }
+    /*
+     * Start the named server using its stored configuration document.
+     * The returned string lists the services that started.
+     */
+    System.out.println(platformServicesClient.activateWithStoredConfig(serverName));
+
+    /*
+     * Stop the named server.  It remains known to the platform.
+     */
+    platformServicesClient.shutdownServer(serverName);
     ```
-            
+
+| Java method                         | REST API                                                     | Purpose                                                                 |
+|-------------------------------------|--------------------------------------------------------------|-------------------------------------------------------------------------|
+| `activateWithStoredConfig`          | `POST .../servers/{serverName}/instance`                     | Start a server using its stored configuration document.                 |
+| `activateWithSuppliedConfig`        | `POST .../servers/{serverName}/instance/configuration`       | Start a server using the configuration document in the request body.    |
+| `shutdownServer`                    | `DELETE .../servers/{serverName}/instance`                   | Stop a server.                                                          |
+| `shutdownAllServers`                | `DELETE .../servers/instance`                                | Stop all servers running on the platform.                               |
+| `shutdownAndUnregisterServer`       | `DELETE .../servers/{serverName}`                            | Stop a server and remove it from any cohorts it is registered with.     |
+| `shutdownAndUnregisterAllServers`   | `DELETE .../servers`                                         | Stop all servers and remove them from their cohorts.                    |
+
+Where `...` is `{{platformURLRoot}}/open-metadata/platform-services/server-platform`.
+
+### Adding an open metadata archive to a running server
+
+An [open metadata archive](/concepts/open-metadata-archive) can be loaded into a running server's repository with `addOpenMetadataArchiveFile(serverName, fileName)` (`POST .../servers/{serverName}/instance/open-metadata-archives/file`, with the file name as the request body) or `addOpenMetadataArchive(serverName, connection)` (`POST .../servers/{serverName}/instance/open-metadata-archives/connection`).  See [adding an archive to a running server](/guides/operations/adding-archive-to-running-server).
+
 ## Querying the status of the OMAG Servers on the platform
 
 ### Known servers
 
-The *known servers* are those servers that have run on the platform since it started.  The `getKnownServers` method returns a list of server names which is useful for stepping through each of the servers in a `for` loop.
+The *known servers* are those servers that have run on the platform since it started.  The `getKnownServers` method returns a list of server names which is useful for stepping through each of the servers in a `for` loop (`GET .../servers`).  Use `isServerKnown(serverName)` to test for a single server.
 
 ??? example "Example: Retrieving the list of known servers"
 
     === "Java"
     
         ```java linenums="1"
-        List<String> serverList = platformServicesClient.getKnownServers(clientUserId);
+        List<String> serverList = platformServicesClient.getKnownServers();
     
         if (serverList != null)
         {
@@ -240,11 +232,11 @@ The *known servers* are those servers that have run on the platform since it sta
 
 ### Active servers
 
-The *active servers* are those servers running on the platform. The `getActiveServers` returns a list of names of the servers running when the request was made.
+The *active servers* are those servers running on the platform. The `getActiveServers` returns a list of names of the servers running when the request was made (`GET .../servers/active`).
 
 ??? example "Example: Retrieving the list of active servers"
     ```java linenums="1"
-    List<String> serverList = platformServicesClient.getActiveServers(clientUserId);
+    List<String> serverList = platformServicesClient.getActiveServers();
 
     if (serverList != null)
     {
@@ -265,13 +257,14 @@ Once you have the `serverName`, you can query the status of an OMAG Server runni
 
 ??? example "Example: Retrieving a server's status"
     ```java linenums="1"
-    ServerStatus platformServerStatus = platformServicesClient.getServerStatus(clientUserId, serverName);
+    ServerStatus platformServerStatus = platformServicesClient.getServerStatus(serverName);
     ```
 
 The `platformServerStatus` returned includes:
 
 - `serverName` - Name of the server.
-- `isActive` - Boolean flag indicating whether it is active (running) on the server.
+- `serverType` - The type of the server.
+- `isActive` - Boolean flag indicating whether it is active (running) on the platform.
 - `serverStartTime` - The most recent date/time that the server started.
 - `serverEndTime` - The most recent date/time that the server stopped.
 - `serverHistory` - The list of start and stop times for the previous restarts of the server.
@@ -280,27 +273,26 @@ This helps to ascertain when the server was available.
 
 ### Querying the active server status
 
-It is also able to retrieve the status of the services running within an active server.
+It is also possible to retrieve the status of the services running within an active server (`GET .../servers/{serverName}/instance/status`).  The `getActiveConfiguration(serverName)` method returns the configuration document the running server was started with, and `getActiveServicesForServer(serverName)` returns the names of its active services.
 
 ??? example "Example: retrieving the status of the services in an active server"
     ```java linenums="1"
+    ServerServicesStatus serverServicesStatus = platformServicesClient.getActiveServerStatus(serverName);
 
-    ServerServicesStatus serverServicesStatus = serverOperationsClient.getServerStatus();
-    
-    if (adminServerStatus != null)
+    if (serverServicesStatus != null)
     {
-        System.out.println(adminServerStatus.getServerActiveStatus());
-        System.out.println(adminServerStatus.getServerType());
-        System.out.println(adminServerStatus.getServices());
+        System.out.println(serverServicesStatus.getServerActiveStatus());
+        System.out.println(serverServicesStatus.getServerType());
+        System.out.println(serverServicesStatus.getServices());
     }
-    ````
+    ```
 
-The status of the server (and its nested services) is one of 5 values:
+The status of the server (and its nested services) is one of 5 values from the `ServerActiveStatus` enum:
 
 - Unknown - The state of the server is unknown.  This is equivalent to a null value.
 - Starting - The server is starting.
 - Running - The server has completed start up and is running.
-- Stopping - The server has received a request to shutdown.
+- Stopping - The server has received a request to shut down.
 - Inactive - The server is not running.
 
 The server type is derived by the platform services when it starts the server.  It is based on an assessment of the capabilities requested in the configuration document.
@@ -308,25 +300,24 @@ The server type is derived by the platform services when it starts the server.  
 !!! education "Further information"
 
     * The [administration guide](/guides/admin) describes how to use the administration services to configure OMAG Server Platforms and OMAG Servers.
-    * The [operations guide](/guides/operations/overview) describes how to use the platfrom services to start/stop OMAG Servers on OMAG Server Platforms and retrieve diagnostics.
+    * The [operations guide](/guides/operations/overview) describes how to use the platform services to start/stop OMAG Servers on OMAG Server Platforms and retrieve diagnostics.
 
 ## Dynamically configuring the platform metadata security connector
 
 The [OMAG Server Platform](/concepts/omag-server-platform) provides both configuration and diagnostic services for [OMAG Servers](/concepts/omag-server) which in themselves provide access to a wide variety of information and control points.  Therefore, it is necessary to provide authorization services relating to the dynamic management of the platform.
 
-Egeria provides [a platform security authorization capability](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/common-services/metadata-security). It is implemented in a [platform metadata security connector](/concepts/platform-metadata-security-connector) that is called whenever requests are made to the server platform services.
+Egeria provides [a platform security authorization capability](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/common-services/metadata-security){ target=gh }. It is implemented in a [platform metadata security connector](/concepts/platform-metadata-security-connector) that is called whenever requests are made to the server platform services.
 
-Security is configured for a specific platform once it is running by using the following command.
+Security is configured for a specific platform once it is running by using the following command.  The Java equivalents are `setPlatformSecurityConnection(connection)`, `getPlatformSecurityConnection()` and `clearPlatformSecurityConnection()`.
 
-#### Determine configured security
+#### Configure security
 
 !!! post "POST - configure platform metadata security connector"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/platform/security/connection
+    {{platformURLRoot}}/open-metadata/platform-services/server-platform/security/connection
     ```
 
-    The request body should be a connection object used to create the platform security connector and
-    the [platform URL root](/concepts/omag-server/#platform-url-root) of the platform.
+    The request body is a `PlatformSecurityRequestBody` containing the connection object used to create the platform security connector.
 
 ??? example "Example: sample platform security connector"
     For example, this is the request body that would set up the [platform security connector :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors){ target=gh }:
@@ -334,7 +325,6 @@ Security is configured for a specific platform once it is running by using the f
     ```json
     {
         "class": "PlatformSecurityRequestBody",
-        "urlRoot": "{{platformURLRoot}}",
         "platformSecurityConnection" : 
         {
     	    "class": "Connection",
@@ -353,7 +343,7 @@ It is possible to query the setting of the platform security connector using the
 
 !!! get "GET - retrieve configured platform security"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/platform/security/connection
+    {{platformURLRoot}}/open-metadata/platform-services/server-platform/security/connection
     ```
 
     ??? success "Response indicating no security"
@@ -387,14 +377,28 @@ It is possible to remove the configuration for the connector using the following
 
 !!! delete "DELETE - remove configured platform security"
     ```
-    {{platformURLRoot}}/open-metadata/admin-services/platform/security/connection
+    {{platformURLRoot}}/open-metadata/platform-services/server-platform/security/connection
     ```
 
 This removes all authorization checking from the platform services.
 
+### User accounts and security access controls
+
+The platform metadata security connector may maintain its own user accounts and security access controls.  These are managed through the following methods (under `.../security`):
+
+| Java method                                            | REST API                                                    |
+|--------------------------------------------------------|-------------------------------------------------------------|
+| `setUserAccount(OpenMetadataUserAccount)`              | `POST .../security/user-accounts`                           |
+| `getUserAccount(accountUserId)`                        | `GET .../security/user-accounts/{accountUserId}`            |
+| `deleteUserAccount(accountUserId)`                     | `DELETE .../security/user-accounts/{accountUserId}`         |
+| `getUserList(UserAccountStatus, UserAccountType)`      | `GET .../security/user-list`                                |
+| `setSecurityAccessControl(OpenMetadataSecurityAccessControl)` | `POST .../security/security-access-controls`         |
+| `getSecurityAccessControl(controlName)`                | `GET .../security/security-access-controls/{controlName}`   |
+| `deleteSecurityAccessControl(controlName)`             | `DELETE .../security/security-access-controls/{controlName}` |
+
 ## Shutting down the OMAG Server Platform
 
-In release 4.2 we introduced a new method to shut down an OMAG Server Platform.  This allows a remote client to terminate the OMAG Server Platform.  When this method is called , the platform terminates immediately and a "connection closed" error response is returned to the caller.
+The `shutdownPlatform()` method allows a remote client to terminate the OMAG Server Platform.  When this method is called, the platform terminates immediately and a "connection closed" error response is returned to the caller.
 
 ??? example "Example: Shutting down an OMAG Server Platform"
 
@@ -403,7 +407,7 @@ In release 4.2 we introduced a new method to shut down an OMAG Server Platform. 
         ```java linenums="1"
         try
         {
-            platformServicesClient.shutdownPlatform(clientUserId);
+            platformServicesClient.shutdownPlatform();
         }
         catch (Exception platformGone)
         {
@@ -414,7 +418,7 @@ In release 4.2 we introduced a new method to shut down an OMAG Server Platform. 
     
         !!! delete "shutdownPlatform"
             ```
-            DELETE {{platformURLRoot}}/open-metadata/platfrom-services/server-platform/instance
+            DELETE {{platformURLRoot}}/open-metadata/platform-services/server-platform/instance
             ```
 
 

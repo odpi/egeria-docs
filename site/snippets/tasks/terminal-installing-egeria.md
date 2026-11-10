@@ -95,12 +95,12 @@ configuration-file-store-connector-4.3.jar                      inmemory-reposit
 ```
 The `platform/extra` directory is where connectors from other repositories are added (including those that you write yourself).  Copy the jar files for any additional connectors you want to use into the `extra` directory.  The connectors available for Egeria are listed in the [Connector Catalog](/connectors).
 
-The `opt` and `etc` directories contain additional content that can used with the platform.  For example, the `etc/reports` directory contains java programs that describe different aspects of the platform.
+The `opt` and `etc` directories contain additional content that can be used with the platform.  For example, the `etc/reports` directory contains a java program that lists the components and connectors shipped by Egeria, along with the component identifiers they use when they register with the audit log.
 ```bash
 ls etc/reports
 ```
 ```bash
-README.md       component-id-report.jar         database-report.jar             egeria-platform-report.jar
+README.md       component-id-report.jar
 ```
 The `opt/content-packs` directory contains [Open Metadata Archives](/concepts/open-metadata-archive) that provide sample open metadata content.  The `README.md` describes their content.
 ```bash

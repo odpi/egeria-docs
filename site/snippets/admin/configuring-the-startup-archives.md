@@ -3,11 +3,11 @@
 
 ## Configure metadata to load on startup
 
-[Open metadata archives](/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [cohort members](/concepts/cohort-members).
+[Open metadata archives](/concepts/open-metadata-archive) contain pre-canned metadata types and instances for [cohort members](/concepts/cohort-member).
 
 Archives can be [added to the configuration document](#adding-an-archive-to-the-configuration-document) of a server to ensure their content is loaded each time the server is started. This is intended for repositories that do not store the archive content but keep it in memory.
 
-Archives can also be [loaded to a running server](/guides/operations/adding-archive-to-a-running-server).
+Archives can also be [loaded to a running server](/guides/operations/adding-archive-to-running-server).
 
 ![Metadata Archive Section in Configuration Document](/guides/admin/servers/by-section/metadata-archives-section.svg)
 

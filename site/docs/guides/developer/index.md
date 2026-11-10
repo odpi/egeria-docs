@@ -41,15 +41,29 @@ The platform APIs fall into three categories:
 * Starting and stopping OMAG Servers
 * Querying the status of the platform and its servers.
 
-The Java clients for a specific platform API are located in its `-client` module.
+The Java clients for a specific platform API are located in its `-client` module.  For example, the clients for the [Administration Services](/services/admin-services/overview) are in the `admin-services-client` module.
 
---8<-- "docs/guides/developer/java-clients/platform-constructor-parameters.md"
+Each Java client has multiple constructors.  The parameters are passed in different combinations to control security and logging.  For example, the configuration clients from the administration services take:
+
+* `serverName` - the name of the OMAG Server to configure.
+* `serverPlatformRootURL` - the [platform url root](/concepts/platform-url-root) of the OMAG Server Platform.
+* `secretStoreProvider`, `secretStoreLocation` and `secretStoreCollection` - the class name of the connector provider for a [secrets store connector](/concepts/secrets-store-connector), the location of the secrets store and the name of the collection of secrets within it.  The client uses these secrets to authenticate with the platform.  Alternatively, a map of already initialized secrets store connectors can be passed (`secretsStoreConnectorMap`).
+* `delegatingUserId` - the optional user identifier of the external user that the client is making the request on behalf of.
+* `auditLog` - logging destination for audit log messages.
+
+The constructor may throw `InvalidParameterException` if there is an issue setting up the client-side components based on the supplied parameters.
 
 Below is an example of using the [Administration Services](/services/admin-services/overview) to construct its `MetadataAccessStoreConfigurationClient` client.  As the name suggests, this client is used to configure a new [metadata access store](/concepts/metadata-access-store) server.
 
 ??? example "Example: Creating the configuration client for a Metadata Access Store"
     ```java linenums="1"
-    MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(clientUserId, serverName, platformURLRoot);
+    MetadataAccessStoreConfigurationClient client = new MetadataAccessStoreConfigurationClient(serverName,
+                                                                                               platformURLRoot,
+                                                                                               secretStoreProvider,
+                                                                                               secretStoreLocation,
+                                                                                               secretStoreCollection,
+                                                                                               delegatingUserId,
+                                                                                               auditLog);
     ```
 
 Once the client is created, use it to call the API it offers which is documented using [Javadoc](https://odpi.github.io/egeria/org/odpi/openmetadata/adminservices/client/MetadataAccessStoreConfigurationClient.html){ target=javadoc }.  
@@ -87,10 +101,12 @@ Egeria has extended the basic concept of the OCF connector and created specializ
 | Integration Connector                         | Implements metadata exchange with third party tools.                             | [Building Integration Connectors](/guides/developer/integration-connectors)          | [integration-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/integration-connectors){ target=gh }                                                                      |
 | Survey Action Service                         | Implements automated metadata discovery.                                         | [Building Survey Action Services](/guides/developer/survey-action-services/overview)          | [file-survey-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/file-survey-connectors){ target=gh }                                                                  |
 | Governance Action Service                     | Implements automated governance.                                                 | [Building Governance Action Services](/guides/developer/governance-action-services/overview)  | [governance-action-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors){ target=gh }                                                          |
+| Watchdog Action Service                       | Monitors open metadata for a situation and notifies those who need to know.      | [Building Watchdog Action Services](/guides/developer/watchdog-action-services/overview)      | [watchdog :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/governance-action-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/governanceactions/watchdog){ target=gh } |
+| Repository Governance Service                 | Maintains open metadata archives from the content of the repositories.           | [Building Repository Governance Services](/guides/developer/repository-governance-services/overview) | [dynamic-archiver-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/dynamic-archiver-connectors){ target=gh } |
 | Configuration Document Store                  | Persists the configuration document for an OMAG Server.                          | [Configuration Document Store Connectors](/concepts/configuration-document/#storage)          | [configuration-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/configuration-store-connectors){ target=gh }                                                      |
 | Platform Security Connector                   | Manages service authorization for the OMAG Server Platform.                      | [Metadata Security Connectors](/features/metadata-security)                                   | [metadata-security-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors){ target=gh }                                                              |
 | Server Security Connector                     | Manages service and metadata instance authorization for an OMAG Server.          | [Metadata Security Connectors](/features/metadata-security)                                   | [metadata-security-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors){ target=gh }                                                              |
-| Secrets Store Connector                       | Retrieves secrets (passwords, certificates, ...) from a secure store at runtime. | [Secrets Store Connectors](/concepts/secrets-store-connector)                                 | [metadata-security-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/metadata-security-connectors){ target=gh }                                                              |
+| Secrets Store Connector                       | Retrieves secrets (passwords, certificates, ...) from a secure store at runtime. | [Secrets Store Connectors](/concepts/secrets-store-connector)                                 | [secrets-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/secrets-store-connectors){ target=gh }                                                                      |
 | Metadata Collection (repository) Store        | Interfaces with a metadata repository API for retrieving and storing metadata.   | [OMRS Repository Connectors](/concepts/repository-connector)                                  | [open-metadata-collection-store-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-collection-store-connectors){ target=gh } |
 | Metadata Collection (repository) Event Mapper | Maps events from a third party metadata repository to open metadata events.      | [OMRS Event Mappers](/concepts/event-mapper-connector)                                        | none                                                                                                                                                                                                                                                |
 | Open Metadata Archive Store                   | Reads an open metadata archive from a particular type of store.                  | [OMRS Open Metadata Archive Store Connector](/concepts/open-metadata-archive-store-connector) | [open-metadata-archive-connectors :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/adapters/open-connectors/repository-services-connectors/open-metadata-archive-connectors){ target=gh }                   |
@@ -114,17 +130,19 @@ You can write your own connectors to integrate additional types of technology or
   
 Registered services are optional services that plug into Egeria's [OMAG Server Platform](/concepts/omag-server-platform). There are 3 types:
   
-  - [Open Metadata Access Services (OMAS)](/services/omas) provide specialized APIs and events for retrieving and maintaining open metadata.  These services run in a [Metadata Access Server](/concepts/metadata-access-server).
+  - [Open Metadata Access Services (OMAS)](/services/omas) provide the shared metadata management services used by Egeria's frameworks.  These services run in a [Metadata Access Server](/concepts/metadata-access-server).  Today there are three: OCF Metadata Management (the Connected Asset Services), GAF Metadata Management (the Open Governance Framework services) and OMF Metadata Management (the Open Metadata Store Services).  They are listed in the `AccessServiceDescription` enum.
   
-  - [Open Metadata Engine Services (OMES)](/services/omes) provide specialist APIs that support specific types of governance engines.  These services run in an [Engine Host](/concepts/engine-host) and call an OMAS to retrieve and maintain open metadata.
+  - [Open Metadata Engine Services (OMES)](/services/omes) provide specialist APIs that support specific types of governance engines.  These services run in an [Engine Host](/concepts/engine-host) and call the access services in a metadata access server to retrieve and maintain open metadata.  They are listed in the `EngineServiceDescription` enum.
    
-  - [Open Metadata View Services (OMVS)](/services/omvs) provide specialist REST APIs for browser-based user interfaces (UIs).  These services run in a [View Server](/concepts/view-server) and call an OMAS to retrieve and maintain open metadata.
+  - [Open Metadata View Services (OMVS)](/services/omvs) provide specialist REST APIs for browser-based user interfaces (UIs) and the Python clients.  These services run in a [View Server](/concepts/view-server) and call the access services in a metadata access server to retrieve and maintain open metadata.  They are listed in the `ViewServiceDescription` enum.
 
-There are many choices of registered services within the Egeria project.  However, you may add your own. The recommended modules for registered services (required if it is to be contributed to the Egeria project) are shown in the table below:
+The `AccessServiceDescription`, `EngineServiceDescription` and `ViewServiceDescription` enums are in the `org.odpi.openmetadata.adminservices.configuration.registration` package of the `admin-services-api` module.  A new registered service needs an entry in the appropriate enum.  In recent releases, new function has been added as view services.
+
+The modules used by each type of registered service in the Egeria project are shown in the table below:
 
 | Module naming                 | Description                                              | OMAS | OMES | OMVS |
 |-------------------------------|----------------------------------------------------------|------|------|------|
-| *moduleName*-api              | Client java interface(s), property beans and rest beans. | CP   | CP   | P    |
+| *moduleName*-api              | Client java interface(s), property beans and rest beans. | CP   | CP   | N    |
 | *moduleName*-client           | Java client implementation.                              | CP   | C    | N    |
 | *moduleName*-topic-connectors | Java connectors for sending and receiving events.        | OCP  | N    | N    |
 | *moduleName*-server           | Server-side REST and event management implementation.    | P    | P    | P    |
@@ -138,7 +156,19 @@ There are many choices of registered services within the Egeria project.  Howeve
 * OCP - Optional and when provided runs in external clients plus in the OMAG Server Platform.
 * N - Not implemented/needed.
 
-The modules for each registered service that need to run in the OMAG Server Platform are delivered in their own jar that is available to the OMAG Server Platform via the CLASSPATH.  Inside the registered service's spring jar are one or more REST APIs implemented using [Spring Annotations](/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds, and they are [initialized as part of the platform's capabilities](/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  The client module of an OMAS is loaded by an OMES or OMVS registered service that is dependent on the OMAS to get access to open metadata.
+A view service has no `-api` or `-client` module because its callers use its REST API directly, or through the [Python clients](/guides/developer/python-clients/overview).  Its `-server` module calls the access services through Java clients such as `EgeriaOpenMetadataStoreClient` from the OMF Metadata Management `omf-metadata-client` module, often wrapped in one of the handler classes from the [Open Metadata Framework (OMF)](/frameworks/omf/overview).
+
+The `-server` module of a registered service typically contains:
+
+* An admin class that extends the admin base class for its type of service (`AccessServiceAdmin`, `EngineServiceAdmin` or `ViewServiceAdmin`).  The admin services call its `initialize()` method when the server starts and its `shutdown()` method when the server stops.
+* A registration class that passes a registration entry (for example, a `ViewServiceRegistrationEntry` naming the enum value and the admin class) to the platform's registration class (for example, `OMAGViewServiceRegistration.registerViewService()`).
+* An instance class that holds the service's resources for each server, an instance handler that retrieves the instance for a server (and calls the registration class), and a REST services class that implements the REST API.  The REST services class of a view service extends `TokenController`, whose `getUser()` method returns the caller's identity from the bearer token passed on the request.
+
+For example, the [Data Officer OMVS :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/view-services/data-officer){ target=gh } has `DataOfficerAdmin`, `DataOfficerRegistration`, `DataOfficerInstance`, `DataOfficerInstanceHandler` and `DataOfficerRESTServices` classes in its `data-officer-server` module, and the `DataOfficerResource` class in its `data-officer-spring` module.
+
+Inside the registered service's spring module are one or more REST APIs implemented using [Spring Annotations](/guides/contributor/runtime/#spring).  On start up, the OMAG Server Platform issues a *Component Scan* of the `org.odpi.openmetadata.*` packages to gather details of its REST APIs.  This process loads the spring module which in turn loads the server and api modules of registered services it finds, and they are [initialized as part of the platform's capabilities](/concepts/omag-server-platform/#inside-the-omag-server-platform) and are callable via the platform's root URL and port.  To be found, the spring module must be on the platform's CLASSPATH: Egeria's own registered services are added as `runtimeOnly` dependencies in the `build.gradle` file of the [platform-chassis-spring :material-github:](https://github.com/odpi/egeria/tree/main/open-metadata-implementation/platform-chassis/platform-chassis-spring){ target=gh } module.
+
+For a step-by-step walk through of writing a new view service, from its `ViewServiceDescription` entry to calling it from an HTTP client collection, see [Writing an Open Metadata View Service](/guides/developer/view-services/overview).
 
 The best guide for building registered services are the existing implementations found in [egeria.git](https://github.com/odpi/egeria/tree/main/open-metadata-implementation){ target=gh }.  You can see the way the code is organized and the services that they depend on.
 
@@ -147,12 +177,12 @@ The best guide for building registered services are the existing implementations
 ### Which build tool?
 Egeria's approach is to use [Gradle](https://gradle.org/){ target = gradle } to build Egeria extensions, and Egeria itself. 
 
-We are migrating our own repositories over to Gradle as we see the following [benefits](https://gradle.org/maven-vs-gradle/){ target = gradle }:
+Egeria's own code is built with Gradle because of the following [benefits](https://gradle.org/maven-vs-gradle/){ target = gradle }:
 
  - Much quicker builds due to caching, incremental compile,change detection, parallelism
  - better flexibility in defining build tasks
  - A more vibrant community with current [discussions](https://discuss.gradle.org){ target = gradle }
-- 
+
 Our examples will focus on Gradle, but you may also use [Maven](https://maven.apache.org){ target = maven}. 
 
 
@@ -160,7 +190,7 @@ Our examples will focus on Gradle, but you may also use [Maven](https://maven.ap
 
 Egeria core libraries, and other java-oriented artifacts created by the Egeria team are published to [Maven Central](https://search.maven.org){ target = maven } (technically this is in fact just an index)
 
- - Code releases (for example '3.14') go to the *Releases* repository, and will typically be picked up by default by Java build tools
+ - Code releases (for example '6.2') go to the *Releases* repository, and will typically be picked up by default by Java build tools
  - Snaphots, which are typically produced by Egeria projects as part of code merge, go to the *Snapshots* repository. This typically needs configuration in a build file
 
 Additionally, when compilation is done locally, a local repository may be populated with artifacts. It is not recommended to use a local build for dependencies in code you develop unless working on core Egeria libraries.
@@ -169,7 +199,7 @@ It is recommended to:
 
  - Depend on releases if possible (ie unless requiring a new feature/fix in code being developed). This is *essential* if your extension is to be stable and read to use
  - Use snapshots if requiring unreleased artifacts, but be aware that the contents can change, or go away
- - Only use a local repository if actively making simultaneous changes to multiple repos, for example if developing a new OMAS alongside an integration connector. It's inadvisable to check in code with any dependency on local repositories or jars as behaviour will differ depending on the local environment.
+ - Only use a local repository if actively making simultaneous changes to multiple repos, for example if developing a new view service alongside an integration connector. It's inadvisable to check in code with any dependency on local repositories or jars as behaviour will differ depending on the local environment.
 
 ### Example build.gradle fragments
 
@@ -177,8 +207,8 @@ It is recommended to:
 repositories {
     // If only using mavenCentral you likely will not need a repository section at all
     mavenCentral()
-    // Uncomment to use snapshots ie egeria 3.15-SNAPSHOT
-    //maven { url("https://oss.sonatype.org/content/repositories/snapshots") }
+    // Uncomment to use snapshots ie egeria 6.3-SNAPSHOT
+    //maven { url("https://central.sonatype.com/repository/maven-snapshots/") }
     // Uncomment to pick up from local ~/.m2 - but can be unpredictable. recommend to use maven central and snapshots
     // mavenLocal()
 }
@@ -193,7 +223,7 @@ configurations.all {
 ```
 ## Keep up to date
 
-Aim to keep new connectors, applications etc up to date with Egeria releases, and ensure the version is current when initially creating and contributing
+Aim to keep new connectors, applications etc up to date with Egeria releases, and ensure the version is current when initially creating and contributing.
 
 If your code is hosted on GitHub, [Dependabot](https://github.com/dependabot){ target = gh } is a useful tool for keeping all your dependencies up to date, including on Egeria artifacts.
 
@@ -209,15 +239,15 @@ A [dependency](https://docs.gradle.org/current/userguide/declaring_dependencies.
 ```
 # Use variables to keep things clear
 ext {
-    egeriaversion = '3.12'
-    thriftversion = '0.13.0
+    egeriaversion = '6.2'
+    thriftversion = '0.13.0'
 }
 # Setup constraints
 dependencies {
      constraints {
           // this will ensure a consistent version used whenever we refer to this dependency
           implementation "org.odpi.egeria:audit-log-framework:${egeriaversion}"
-          implementation 'org.apache.thrift:libthrift${thriftversion}'
+          implementation "org.apache.thrift:libthrift:${thriftversion}"
           }
      // This will inherit from our egeria dependency constraints
      implementation platform("org.odpi.egeria:egeria:${egeriaversion}")
@@ -266,7 +296,7 @@ Other techniques to avoid this issue include:
 ### Example build.gradle fragment
 ```
      compileOnly "org.odpi.egeria:open-connector-framework"
-     implementation 'org.apache.thrift:libthrift"
+     implementation "org.apache.thrift:libthrift"
 ```
 ## Complex dependency manipulation
 
@@ -285,8 +315,8 @@ It focuses on providing five types of integration interfaces.
 
 - [Connectors](#what-is-a-connector) that translate between third party APIs and open metadata APIs. These connectors are hosted in the Egeria servers and support the active exchange of metadata with these technologies.
 - [Connectors](/guides/developer/using-connectors) for accessing popular type of data sources that also retrieve open metadata about the data source. This allows applications and tools to understand the structure, meaning, profile, quality and lineage of the data they are using.
-- Python clients for applications to call the [REST](/services/omvs) interfaces, each of which are crafted for particular types of technology. These interfaces support both synchronous APIs, inbound event notifications and outbound asynchronous events.
-- [REST APIs](/services/omvs) for the Egeria Services. These include the [access services](/services/omas), admin services and [platform services](/services/platform-services/overview).
+- [Python clients](/guides/developer/python-clients/overview) for applications to call the [view services' REST](/services/omvs) interfaces, each of which are crafted for particular types of user and task.
+- REST APIs for the Egeria Services. These include the [view services](/services/omvs), [access services](/services/omas), [admin services](/services/admin-services/overview) and [platform services](/services/platform-services/overview).
 - Kafka topics with JSON payloads for asynchronous communication (both in and out) with the open metadata ecosystem.
   [Learn more ...](/concepts/out-topic)
 

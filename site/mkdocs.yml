@@ -177,6 +177,7 @@ nav:
               - Governance Pack Introduction: guides/developer/open-metadata-archives/governance-pack-intro.md
               - Open Metadata Types: guides/developer/open-metadata-archives/defining-new-types.md
           - Building Utilities: guides/developer/building-utilities/overview.md
+          - Building View Services: guides/developer/view-services/overview.md
           - Building Connectors:
               - Integration Connectors:
                     - Anatomy: guides/developer/integration-connectors/index.md
@@ -309,11 +310,6 @@ nav:
           - Setting up Egeria: education/tutorials/building-egeria-tutorial/overview.md
           - Developing with Egeria:
               - Setting up IntelliJ: education/tutorials/developer-intellij-tutorial/overview.md
-              - Create a Test Metadata Store: education/tutorials/developer-intellij-tutorial/create-test-metadata-store.md
-              - Platform Report - No Servers: education/tutorials/developer-intellij-tutorial/egeria-platform-report-no-servers.md
-              - Platform Report - Server Configured: education/tutorials/developer-intellij-tutorial/egeria-platform-report-server-config.md
-              - Platform Report - Server Running: education/tutorials/developer-intellij-tutorial/egeria-platform-report-server-running.md
-              - Platform Report - No Config Files: guides/developer/dev-projects/egeria-platform-report-no-config-files.md
               - Testing Egeria: education/tutorials/testing-egeria-tutorial.md
           - Downloading Egeria: education/tutorials/downloading-egeria/overview.md
           - Using Egeria:
@@ -322,11 +318,7 @@ nav:
               - Reports and Utilities: education/tutorials/omag-client-tutorial.md
               - Sample Clients: education/tutorials/running-samples-tutorial.md
               - Types of APIs and Platform Deployment: education/tutorials/running-from-assembly-tutorial/different-types-of-apis-platform-deployment.md
-              - Platform Reports:
-                  - No Servers Configured: education/tutorials/egeria-platform-report-no-servers.md
-                  - Metadata Store Configured: education/tutorials/egeria-platform-report-mds1-configured.md
-                  - Metadata Store Running: education/tutorials/egeria-platform-report-mds1-running.md
-                  - Running the Platform in IntelliJ: education/tutorials/intellij-run-omag-server-platform.md
+              - Running the Platform in IntelliJ: education/tutorials/intellij-run-omag-server-platform.md
           - Tools:
               - Git and GitHub: education/tutorials/git-and-git-hub-tutorial/overview.md
               - Using Docker: education/tutorials/docker-tutorial/overview.md

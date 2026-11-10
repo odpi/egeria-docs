@@ -91,14 +91,16 @@ The constructor then declares what this particular survey does.  This is the *sp
 | Field | Description |
 |---|---|
 | `supportedActionTargetTypes` | The elements the survey expects to be given, each with a name, description, open metadata type and [deployed implementation type](/concepts/deployed-implementation-type). |
-| `supportedAnalysisSteps` | The [analysis steps](#analysis-steps) this survey performs, so a caller can ask it to stop early. |
+| `supportedAnalysisSteps` | The [analysis steps](#analysis-steps) this survey performs. |
 | `producedAnnotationTypes` | The [annotation](/concepts/survey-report/#annotations) types this survey can produce, with their descriptions, so a consumer knows what to expect in the survey report. |
 | `supportedTechnologyTypes` | The technologies this survey knows how to analyse. |
 | `supportedRequestTypes` / `supportedRequestParameters` | The request types and request parameters that change its behaviour. |
 | `producedGuards` | The [guards](/concepts/guard) it can return. |
 | `supportedConfigurationProperties` | Full descriptions of any configuration properties on its connection. |
 
-The `SurveyActionServiceProvider` constructor already sets `supportedRequestParameters`, `producedGuards` and `producedActionTargetTypes` to the OSF standard values, so you only override the ones your service changes.
+The `SurveyActionServiceProvider` constructor already sets `supportedRequestParameters`, `producedGuards` and `producedActionTargetTypes` to the OSF standard values (from `SurveyRequestParameter`, `SurveyActionGuard.getSimpleSurveyGuardTypes()` and `SurveyActionTarget`), so you only override the ones your service changes.
+
+Finish the constructor by calling `setFinalAnalysisSteps()` with the analysis steps your service can stop after, in the order it runs them.  This advertises them as the valid values of the `finalAnalysisStep` request parameter *and* configuration property, adding both to `supportedRequestParameters`, `supportedConfigurationProperties` and the recognized configuration properties of the connector type.  Call it last, after those lists have been set up, because it merges into whatever is already there.
 
 Here is the complete connector provider for the [File Survey Action Service :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/file-survey-connectors/src/main/java/org/odpi/openmetadata/adapters/connectors/surveyaction/surveyfile/FileSurveyServiceProvider.java){ target=gh }:
 
@@ -132,6 +134,9 @@ public class FileSurveyServiceProvider extends SurveyActionServiceProvider
         super.producedAnnotationTypes = SurveyFileAnnotationType.getFileSurveyAnnotationTypeTypes();
         super.supportedTechnologyTypes = SupportedTechnologyType.getSupportedTechnologyTypes(
                                             new DeployedImplementationTypeDefinition[]{DeployedImplementationType.DATA_FILE});
+
+        super.setFinalAnalysisSteps(new AnalysisStep[] {
+                                            AnalysisStep.CHECK_ASSET, AnalysisStep.MEASURE_RESOURCE});
     }
 }
 ```
@@ -145,13 +150,13 @@ This base class handles the survey context, any nested connectors and the audit 
 * `surveyActionServiceName` - the qualified name of the survey action service from the open metadata definition.  Use it in audit log messages and exceptions.
 * `surveyContext` - the [survey context](#survey-context) that provides methods for querying and storing survey metadata.
 * `auditLog` - audit logging destination.
-* `connector` - a slot for the [digital resource connector](/concepts/digital-resource-connector) used to read the resource; the base class disconnects it for you.
+* `connector` - a slot for the [digital resource connector](/concepts/digital-resource-connector) used to read the resource; the base class `disconnect()` disconnects it, and the survey context, for you.
 * `embeddedConnectors` - connectors created from connections nested in the survey action service connection.  These are typically survey action services that are embedded because this survey action service is a [survey action pipeline](#survey-action-pipelines).
 * `propertyHelper` - utility for reading values out of open metadata elements.
 
 There are two methods that you need to implement:
 
-* `start()` - this method is where all the work takes place. It retrieves any configuration properties from the connection, uses the survey context to access the asset and its [connector to the digital resource](/concepts/digital-resource-connector).  As it analyses the content of the digital resource, it adds its results to the annotation store retrieved from the survey context.  The annotations are immediately stored in one of the open metadata repositories.  Always call `super.start()` first - it validates that the survey context has been set up.
+* `start()` - this method is where all the work takes place. It retrieves any configuration properties from the connection, uses the survey context to access the asset and its [connector to the digital resource](/concepts/digital-resource-connector).  As it analyses the content of the digital resource, it adds its results to the annotation store retrieved from the survey context.  The annotations are immediately stored in one of the open metadata repositories.  Always call `super.start()` first - it validates that the survey context has been set up and reads the `finalAnalysisStep` value (see [analysis steps](#analysis-steps)).
 
 * `disconnect()` - this method is called either because the survey action service has completed running, or because its server is shutting down.  The survey action service implementation should release any resources it is using - for example by calling the disconnect method on the digital resource connector it is using.
 
@@ -176,6 +181,12 @@ public class FileSurveyService extends SurveyActionServiceConnector
              * the cast will fail.
              */
             connector = performCheckAssetAnalysisStep(BasicFileStore.class, OpenMetadataType.DATA_FILE.typeName);
+
+            if (super.isFinalAnalysisStep())
+            {
+                return;
+            }
+
             BasicFileStore assetConnector = (BasicFileStore)connector;
 
             File file = assetConnector.getFile();
@@ -223,16 +234,20 @@ public class FileSurveyService extends SurveyActionServiceConnector
 
 * `performCheckAssetAnalysisStep(expectedConnectorClass, expectedAssetType)` records the *Check Asset* analysis step, validates that the action target is the expected open metadata type, creates the resource connector from the asset's connection and checks that it is the class the survey needs.  There is also an overload that takes just the expected asset type name.  Failures produce standard error messages rather than a raw `ClassCastException`.
 * `handleUnexpectedException(methodName, error)` wraps an unexpected exception in a `ConnectorCheckedException` with a standard message.
-* `getRootSchemaType(assetElement)` and `throwMissingSchemaType(assetGUID)` help surveys that need the asset's schema.
+* `isFinalAnalysisStep()` returns true when the analysis step most recently set in the annotation store is the one named by `finalAnalysisStep`.  Call it at the end of each step, once that step's results are stored, and return if it is true.
+* `getArrayRequestOrConfigurationProperty(propertyName, defaultValue)` reads a comma-separated list (such as `includeSchemaNames`) from the request parameters, falling back to the connection's configuration properties.  Request parameters reach the service through the survey context, not its connection, so reading only the configuration properties would silently ignore what the requester asked for.
+* `getRootSchemaType(assetElement, schemaTypeName)` and `throwMissingSchemaType(assetGUID)` help surveys that need the asset's schema.
 * `writePropertyListInventory()`, `writeNameListInventory()`, `writeNameCountInventory()` and `writeNameDescriptionInventory()` write an inventory to a CSV file and return the *Resource Profile Log* annotation that points to it.  Use these when the results are too large to store directly in open metadata.
 * `getJSONProperties(properties)` converts a properties object to a JSON string, for annotations that carry structured payloads.
-* `setUpAnnotation(annotation, annotationType)` fills in the standard fields of an annotation from its [annotation type](#annotation-types) definition.
+* `setUpAnnotation(annotation, annotationType)` fills in the standard fields of an annotation from its [annotation type](#annotation-types) definition - including a unique qualified name built from the asset GUID, the annotation type and a timestamp.  When a survey produces several annotations of the same type in one report (one per column profiled, say), use the overload that also takes a `subjectName`.  It is added to the qualified name and display name, so the annotations do not clash on the unique `qualifiedName` property and fail the survey.  There are also overloads that take an annotation type name rather than an `AnnotationType` value.
 
 ### Analysis steps
 
-A survey is divided into named *analysis steps* - `Check Asset`, `Measure Resource`, `Schema Extraction`, `Profile Data`, `Produce Inventory`, `Schema Validation`, `Data Validation` and others, defined by the [`AnalysisStep` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-survey-framework/src/main/java/org/odpi/openmetadata/frameworks/opensurvey/controls/AnalysisStep.java){ target=gh } enum.
+A survey is divided into named *analysis steps* - `Check Asset`, `Check Action Targets`, `Check Request Parameters`, `Measure Resource`, `Schema Extraction`, `Profile Data`, `Profiling Associated Resources`, `Produce Inventory`, `Produce Actions`, `Schema Validation` and `Data Validation` - defined by the [`AnalysisStep` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-survey-framework/src/main/java/org/odpi/openmetadata/frameworks/opensurvey/controls/AnalysisStep.java){ target=gh } enum.
 
-Call `annotationStore.setAnalysisStep(...)` as your service moves from one step to the next.  Every annotation created after that call is tagged with the step, which lets a consumer of the survey report understand where each finding came from, and lets a caller use the `finalAnalysisStep` request parameter to ask for a cheaper, partial survey.  Declare the steps your service supports in `supportedAnalysisSteps` on the connector provider.
+Call `annotationStore.setAnalysisStep(...)` as your service moves from one step to the next.  Every annotation created after that call is tagged with the step, which lets a consumer of the survey report understand where each finding came from.  Declare the steps your service supports in `supportedAnalysisSteps` on the connector provider.
+
+A caller can ask for a cheaper, partial survey with the `finalAnalysisStep` request parameter (or the same-named configuration property on the service's connection - the request parameter wins).  The base class does not stop the survey for you: your `start()` method calls `isFinalAnalysisStep()` after each step, as the File Survey Action Service above does after *Check Asset*, and returns when it is true.  A survey that never reaches the requested step runs to completion.  Advertise the steps that can be used as a stopping point with `setFinalAnalysisSteps()` on the connector provider.
 
 ### Annotation types
 
@@ -246,7 +261,7 @@ The survey context provides the *survey action service* with access to informati
 
 ![Structure of the survey context](/frameworks/osf/survey-context.svg)
 
-`SurveyContext` extends `ConnectorContextBase` - the same base class used by the [integration context](/guides/developer/integration-connectors/integration-context) and the [governance action context](/guides/developer/governance-action-services/overview).  This means a survey action service has the full set of open metadata clients available to it (`getAssetClient()`, `getSchemaTypeClient()`, `getGlossaryTermClient()`, `getOpenMetadataStore()` and the rest), plus the file classifier, the name-case converters, and the ability to raise [To Dos](/concepts/to-do), [incident reports](/concepts/incident-report) and context events.
+`SurveyContext` extends `ConnectorContextBase` - the same base class used by the [integration context](/guides/developer/integration-connectors/integration-context) and the [governance action context](/guides/developer/governance-action-services/overview).  This means a survey action service has the full set of open metadata clients available to it (`getAssetClient()`, `getSchemaTypeClient()`, `getGlossaryTermClient()`, `getOpenMetadataStore()` and the rest), plus the file classifier and the ability to raise [To Dos](/concepts/to-do), [incident reports](/concepts/incident-report) and context events.
 
 On top of that, it adds the survey-specific methods:
 
@@ -258,6 +273,7 @@ On top of that, it adds the survey-specific methods:
 | `getRequestParameters()` | The name-value properties supplied when the survey was requested. |
 | `getActionTargetElements()` | Any additional elements the survey was given to work with. |
 | `getRequesterUserId()` | Who asked for the survey. |
+| `getSurveyActionServiceName()` | The qualified name of the running survey action service. |
 | `elementShouldBeSurveyed(name, excluded, included)` | Applies the standard include/exclude list semantics, so all surveys filter consistently. |
 | `recordCompletionStatus(...)` | Declares that the survey has finished - see [completion](#completing-the-survey). |
 
@@ -271,7 +287,7 @@ The survey report itself is created for you when the service starts; the annotat
 * `addAnnotationExtension(parentAnnotationGUID, ...)` - add an annotation that elaborates on another one.
 * `updateAnnotation()` / `deleteAnnotation()` / `getAnnotation()`.
 * `getAnnotationsForElement()`, `getNewAnnotations()`, `getExtendedAnnotations()` - retrieve what is already there, including annotations from earlier surveys.
-* `linkRequestForActionTarget()` - point a *Request for Action* annotation at the element that needs attention.
+* `linkRequestForActionTarget()` / `detachRequestForActionTarget()` - point a *Request for Action* annotation at the element that needs attention, or remove that link.
 * `setAnalysisStep()` - see [analysis steps](#analysis-steps).
 * `setReportQualifiedName()`, `setReportDisplayName()`, `setSurveyDescription()`, `setSurveyPurpose()`, `setCompletionMessage()` - describe the report for the people who will read it.
 
@@ -310,13 +326,13 @@ The OSF defines the standard guards in [`SurveyActionGuard` :material-github:](h
 | `data-certified` / `data-not-certified` | ACTIONED | Used by surveys that run quality checks and certify the data. |
 | `missing-certification-type` / `missing-schema-type` | INVALID | The information needed to validate the data was not supplied. |
 
-A service that does not call `recordCompletionStatus()` is treated as having completed successfully when `start()` returns.  Declaring the status explicitly is better, because the guards are what a [governance action process](/concepts/governance-action-process) uses to decide what runs next.
+The [Survey Action OMES](/services/omes/survey-action/overview) fills in anything the service leaves out.  If `start()` returns without a completion status, it records `ACTIONED` with the `survey-completed` guard; if `start()` throws an exception, it records `FAILED` with the `survey-failed` guard.  It also supplies a standard completion message if none was given.  Declaring the status explicitly is better, because the guards are what a [governance action process](/concepts/governance-action-process) uses to decide what runs next.
 
 ## Survey action pipelines
 
 A *survey action pipeline* is a survey action service that runs other survey action services.  Extend [`SurveyActionPipelineConnector` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-survey-framework/src/main/java/org/odpi/openmetadata/frameworks/opensurvey/SurveyActionPipelineConnector.java){ target=gh } and implement `runSurveyPipeline()`.  The nested services are supplied as embedded connections in the pipeline's [virtual connection](/concepts/connection/#virtual-connections), and the base class turns them into `SurveyActionServiceConnector` instances for you.
 
-The OSF ships [`SequentialSurveyPipeline` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-survey-framework/src/main/java/org/odpi/openmetadata/frameworks/opensurvey/SequentialSurveyPipeline.java){ target=gh }, which runs each embedded survey in turn against the same survey context, so all of their annotations land in one survey report.
+The OSF ships [`SequentialSurveyPipeline` :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/frameworks/open-survey-framework/src/main/java/org/odpi/openmetadata/frameworks/opensurvey/SequentialSurveyPipeline.java){ target=gh }, which runs each embedded survey in turn against the same survey context, so all of their annotations land in one survey report.  Because the embedded services share the survey context, they also share the `finalAnalysisStep` request parameter: once one of them reports that it has reached the final analysis step, the rest of the pipeline is not run.
 
 ## Deploying and running your survey action service
 

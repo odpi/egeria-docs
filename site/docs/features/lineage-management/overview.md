@@ -274,7 +274,9 @@ The numbers on the diagram refer to the notes below.
 
 8. The [File-based Open Lineage Log Store :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#file-based-open-lineage-log-store-integration-connector){ target=gh } registers a listener for Open Lineage events and stores each event received as a file in a nominated folder on the file system.
 
-9. The [Open Lineage Cataloguer :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-cataloguer-integration-connector){ target=gh } registers a listener for Open Lineage events and ensures the jobs describe in them are catalogued as [Processes](/types/2/0215-Software-Components) in open metadata.  Depending on its configuration, it may also catalog each run as a *TransientEmbeddedProcess* entity linked to the job's process entity.
+9. The [PostgreSQL-based Open Lineage Log Store :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#postgres-based-open-lineage-log-store-integration-connector){ target=gh } registers a listener for Open Lineage events and stores each event received in the PostgreSQL database schema(s) registered as catalog targets in the open metadata ecosystem.
+
+10. The [Open Lineage Cataloguer :material-github:](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/adapters/open-connectors/integration-connectors/openlineage-integration-connectors/README.md#open-lineage-cataloguer-integration-connector){ target=gh } registers a listener for Open Lineage events and ensures the jobs describe in them are catalogued as [Processes](/types/2/0215-Software-Components) in open metadata.  Depending on its configuration, it may also catalog each run as a *TransientEmbeddedProcess* entity linked to the job's process entity.
 
 ### Open Lineage Log Store
 

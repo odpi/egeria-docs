@@ -110,18 +110,27 @@ This action graph shows the governance engine that runs a step in the process th
 
 ```mermaid
 ---
-title: GovernanceActionProcessStep Actions - create-digital-subscription (EgeriaGovernance) [2fbd4589-7f0c-4554-9f3c-871e01b3a1c7]
+title: Actions associated with Asset - GeneralFilesMonitorIntegrationConnector [1b98cdac-dd0a-4621-93db-99ef5a1098bc]
 ---
-flowchart TD
+flowchart LR
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
 
-1@{ shape: rounded, label: "*Governance Action Process Step*
-**create-digital-subscription (EgeriaGovernance)**"}
-2@{ shape: rounded, label: "*Governance Action Engine*
-**Egeria Governance Engine**"}
-1==>|"Governance Action Executor"|2
+1@{ shape: rounded, label: "*Integration Connector*
+**GeneralFilesMonitorIntegrationConnector**"}
+2@{ shape: tag-rect, label: "*Governance Action Type*
+**set-up-clinical-trial (ClinicalTrials@CocoPharmaceuticals)**"}
+2==>|"landingAreaConnector [Target For Governance Action]"|1
+3@{ shape: tag-rect, label: "*Governance Action Type*
+**catalog-file-folder (FileGovernance)**"}
+3==>|"integrationConnector [Target For Governance Action]"|1
+4@{ shape: rounded, label: "*Governance Action Process Step*
+**Connect new asset to integration connector**"}
+4==>|"integrationConnector [Target For Governance Action]"|1
 style 1 color:#000000, fill:#e0ab18, stroke:#004563
-style 2 color:#000000, fill:#39add1, stroke:#004563
+style 2 color:#000000, fill:#40E0D0, stroke:#000000
+style 3 color:#000000, fill:#40E0D0, stroke:#000000
+style 4 color:#FFFFFF, fill:#3079ab, stroke:#000000
+
 ```
 
 For an asset returned by `getAssetGraph`, the action graph is widened to cover the actions on any of the asset's anchored elements as well as the asset itself; its title is then *Actions associated with Asset*.

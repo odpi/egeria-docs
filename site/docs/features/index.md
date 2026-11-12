@@ -6,6 +6,7 @@
 The Egeria features describe the value-add features that Egeria adds to its ability to synchronize metadata between different tools and catalogues.
 
 - [Anchor Management](/features/anchor-management/overview) - grouping metadata elements into larger objects so that they can share a common lifecycle.
+- [Asset Description Exchange](/features/asset-description-exchange/overview) - exchanging descriptions of assets with other organizations using the W3C Data Catalog Vocabulary (DCAT): cataloguing the descriptions they publish, and publishing descriptions of the assets in the DCAT Publishing Catalog.
 - [Cohort Operation](/features/cohort-operation/overview) - How does an open metadata repository cohort work.
 - [Duplicate Management](/features/duplicate-management/overview) - linking metadata elements that represent the same [digital resource](/concepts/digital-resource) so that these duplicates are automatically merged and do not bloat metadata query results.
 - [Effectivity Dating](/features/effectivity-dates/overview) - adding an optional start and end date to metadata elements to limit *when* they can be returned on a metadata query.

@@ -19,6 +19,7 @@ The Asset Catalog API supports the following key features:
 * **Lineage Graphs**: Explore the lineage of an asset to understand how data flows in and out of it,
   including relationships from the asset itself and its anchored schema elements.
 * **Supported Types**: Query the subtypes of assets supported by the ecosystem.
+* **DCAT Exchange**: Catalog the datasets, data services and catalogs described in a W3C Data Catalog Vocabulary (DCAT) document, and retrieve the DCAT description of an asset.
 
 ## API Operations
 
@@ -86,10 +87,81 @@ For example, this request returns the lineage within three hops of the asset, fo
 }
 ```
 
+## Exchanging DCAT descriptions of assets
+
+The W3C [Data Catalog Vocabulary (DCAT)](https://www.w3.org/TR/vocab-dcat-3/) is the standard that governments and many other organizations use to describe the data assets that they make available.  The Asset Catalog API has three requests that [exchange asset descriptions](/features/asset-description-exchange/overview) in the JSON-LD serialization of DCAT version 3.  The mapping between DCAT and open metadata is described in the [feature overview](/features/asset-description-exchange/overview/#mapping-to-open-metadata).
+
+### Cataloguing a DCAT document
+
+A DCAT document is catalogued directly with:
+
+```
+POST {{baseURL}}/servers/{{viewServer}}/api/open-metadata/asset-catalog/assets/dcat/import-document
+```
+
+The request body is the JSON-LD document.  Each dataset it describes becomes a *DataSet* asset with an asset for each of its distributions, each data service becomes a *DeployedAPI* and each catalog becomes a *CollectionFolder*.  The unique identifiers (GUIDs) of these elements are returned.  Sending the same description again updates the elements rather than creating new ones.
+
+For example, this document describes a dataset with two distributions: a CSV file to download, which is catalogued as a *DataFile*, and an API, which is catalogued as a *DataStore*.
+
+```json
+{
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#"
+  },
+  "@id": "https://data.example.gov/dataset/air-quality-2025",
+  "@type": "dcat:Dataset",
+  "dct:title": "Air quality measurements 2025",
+  "dct:description": "Hourly readings of nitrogen dioxide, ozone and particulates from the national monitoring network.",
+  "dct:identifier": "air-quality-2025",
+  "dct:publisher": { "@type": "foaf:Organization", "foaf:name": "Environment Agency" },
+  "dcat:contactPoint": { "@type": "vcard:Organization", "vcard:fn": "Open Data Helpdesk", "vcard:hasEmail": { "@id": "mailto:opendata@environment.example.gov" } },
+  "dcat:keyword": [ "air quality", "pollution" ],
+  "dct:license": { "@id": "https://creativecommons.org/licenses/by/4.0/" },
+  "dcat:landingPage": { "@id": "https://data.example.gov/air-quality" },
+  "dcat:distribution": [
+    {
+      "@type": "dcat:Distribution",
+      "dct:title": "Air quality 2025 (CSV)",
+      "dcat:downloadURL": { "@id": "https://data.example.gov/files/air-quality-2025.csv" },
+      "dct:format": "CSV"
+    },
+    {
+      "@type": "dcat:Distribution",
+      "dct:title": "Air quality 2025 (API)",
+      "dcat:accessURL": { "@id": "https://api.example.gov/air-quality/v1" }
+    }
+  ]
+}
+```
+
+### Sending a DCAT document to an integration daemon
+
+A DCAT document is sent to an [integration daemon](/concepts/integration-daemon) with:
+
+```
+POST {{baseURL}}/servers/{{viewServer}}/api/open-metadata/asset-catalog/integration-daemons/{{integrationDaemonGUID}}/dcat/publish-document
+```
+
+The request body is the JSON-LD document, and *integrationDaemonGUID* is the unique identifier of the integration daemon's *SoftwareServer* asset in the catalog.  The integration daemon passes the document to the integration connectors that have registered a listener for DCAT documents, such as the DCAT Cataloguer from the [DCAT Content Pack](/content-packs/dcat-content-pack/overview), which catalogs the datasets, data services and catalogs that the document describes.  Nothing is returned, since the document is processed by the integration daemon.
+
+### Retrieving the DCAT description of an asset
+
+The DCAT description of an asset is retrieved with:
+
+```
+GET {{baseURL}}/servers/{{viewServer}}/api/open-metadata/asset-catalog/assets/{{assetGUID}}/dcat-document
+```
+
+A *DeployedAPI* is described as a `dcat:DataService`.  Any other type of asset is described as a `dcat:Dataset`; a data set's distributions are the assets that supply its data.  The *document* property of the response is a complete JSON-LD document, including its context.  The asset does not need to be a member of the [DCAT Publishing Catalog](/features/asset-description-exchange/overview/#publishing-descriptions) - that collection controls which assets the DCAT Publisher writes to the file system.
+
 ## Further information
 
 * [Asset Concept](/concepts/asset/)
 * [Lineage Management](/features/lineage-management/overview/)
+* [Exchanging Asset Descriptions](/features/asset-description-exchange/overview/)
 
 Sample requests for the REST API can be found in [Egeria-api-asset-catalog.http](https://github.com/odpi/egeria/blob/main/open-metadata-implementation/view-services/asset-catalog/Egeria-api-asset-catalog.http).
 

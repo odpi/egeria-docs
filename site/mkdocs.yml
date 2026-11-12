@@ -116,6 +116,7 @@ nav:
               - Files Content Pack: content-packs/files-content-pack/overview.md
               - Open Lineage Content Pack: content-packs/open-lineage-content-pack/overview.md
               - Bitol Content Pack: content-packs/bitol-content-pack/overview.md
+              - DCAT Content Pack: content-packs/dcat-content-pack/overview.md
               - Organization Insight Content Pack: content-packs/organization-insight-content-pack/overview.md
               - Products Content Pack: content-packs/products-content-pack/overview.md
               - Security Content Pack: content-packs/security-content-pack/overview.md
@@ -390,6 +391,7 @@ nav:
   - Features:
         - Features Overview: features/index.md
         - Anchor Management: features/anchor-management/overview.md
+        - Asset Description Exchange: features/asset-description-exchange/overview.md
         - Cohort Operation: features/cohort-operation/overview.md
         - Digital Product Management: features/digital-product-management/overview.md
         - Duplicate Management: features/duplicate-management/overview.md

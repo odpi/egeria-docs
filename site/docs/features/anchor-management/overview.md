@@ -18,6 +18,19 @@ The anchor is also important in [templated cataloguing](/features/templated-cata
 
 Finally, the organization of metadata elements using anchors is helpful in scoping searches.
 
+## Searching within anchors
+
+The [Anchors](#anchors-classification) classification also records the anchor's *domain* (the open metadata type that its anchor descends from, such as *Asset*) and the *scope* elements it sits under.  This means a search can be restricted to the elements anchored within a particular domain or scope, and the results organized by anchor:
+
+* *findElementsInAnchorDomain* in [Metadata Expert](/services/omvs/metadata-expert/overview) searches elements anchored within a named domain.
+* *findElementsInAnchorScope* in [Metadata Expert](/services/omvs/metadata-expert/overview) searches elements anchored under a scope element.
+* *findInAssetDomain* in [Asset Catalog](/services/omvs/asset-catalog/overview) searches elements anchored to assets.
+
+Each result describes an anchor and lists the elements anchored to it that matched the search string.
+
+!!! warning "Paging counts matching elements, not anchors"
+    The paging parameters (*startFrom* and *pageSize*) apply to the matching elements, before they are grouped by anchor.  A page may therefore hold fewer anchors than *pageSize*, and an anchor whose matches fall on more than one page is returned on each of those pages, with the matches from that page.  Within a page, anchors are listed in the order of their first matching element.
+
 ## Anchors classification
 
 The [Anchors](/types/0/0010-Base-Model/#anchors-classification) classification contains the unique identifier (GUID) of an anchor entity.  A GUID is attached to an anchored entity which makes it easier to navigate from an anchored entity to other entities anchored to it.

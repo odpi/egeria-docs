@@ -57,6 +57,5 @@ The *ZoneMembershipProfile* classification is used to record the number of eleme
     * The access control enabled by the governance zones is implemented in the [security connectors](/features/metadata-security/overview).
     * The *ZoneMembershipProfile* classification is updated by a [Lovelace service](/patterns/metadata-insight/overview).
 
-* *securityGroups* - List of security group names.
 
 --8<-- "snippets/abbr.md"

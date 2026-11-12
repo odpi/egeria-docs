@@ -67,6 +67,7 @@ A schema element that nests another schema type in its parent.
 * *length* - Length of the data field (zero means unlimited).
 * *isNullable* - Accepts null values or not.
 * *precision* - Number of digits after the decimal point.
+* *defaultValueOverride* - Initial value for the attribute, overriding the default value of its type.
 * *namespacePath* - Prefix for element names to ensure uniqueness.
 
 ## AttributeForSchema relationship

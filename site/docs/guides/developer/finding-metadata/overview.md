@@ -3,7 +3,7 @@
 
 # Finding and retrieving metadata
 
-This section describes how to retrieve metadata from the open metadata ecosystem.  The metadata is stored in all the open metadata repositories connected to the server you are calling via one or more [Open Metadata Repository Cohorts](/features/cohort-operation/overview).
+This section describes how to retrieve metadata from the open metadata ecosystem.  The metadata is stored in all the open metadata repositories connected to the server you are calling via one or more [Open Metadata Repository Cohorts](/features/cohort-operation/overview).  Creating, updating and deleting metadata is covered in [Maintaining Metadata](/guides/developer/maintaining-metadata/overview).
 
 ## Mechanisms to retrieve metadata
 

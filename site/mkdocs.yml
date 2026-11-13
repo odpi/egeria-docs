@@ -162,6 +162,7 @@ nav:
       - Developer Guide:
           - Developer Guide: guides/developer/index.md
           - Retrieving Metadata: guides/developer/finding-metadata/overview.md
+          - Maintaining Metadata: guides/developer/maintaining-metadata/overview.md
           - Mapping Technology:
                 - Mapping Technology: guides/developer/mapping-technology/index.md
                 - Data Managers: guides/developer/mapping-technology/data-manager.md

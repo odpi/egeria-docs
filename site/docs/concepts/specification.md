@@ -14,9 +14,9 @@ Egeria's templates, connectors and governance actions fit into this category. Th
 There are two types of specification properties for templates:
 
 * *replacementAttribute* - Name of attribute that should be provided when using the attached template.  Replacement attributes map to the root entity of the template, or, the first occurrence of the attribute in attached relationships, classifications or entities.
-* *placeholderProperty* - Placeholder names are located through the attribute values found in a template.  They are identified with double braces, for example {{variableName}}.  The value supplied is substituted for the placeholder variable.
+* *placeholderProperty* - Placeholder names are located through the attribute values found in a template.  They are identified with a tilde and curly brace at each end, for example `~{variableName}~`.  The value supplied is substituted for the placeholder variable.
 
-They can be attached to a template, and maintained through the [Valid Metadata API](/services/omvs/valid-metadata/overview).
+Each specification property is a *SpecificationPropertyValue* entity linked to the template's anchor element by a *SpecificationPropertyAssignment* relationship.  They can be maintained through the [Valid Metadata API](/services/omvs/valid-metadata/overview).
 
 ## Integration Connector Specifications
 
@@ -31,7 +31,7 @@ They are attached to the [Integration Connector](/types/4/0464-Dynamic-Integrati
 
 ## Governance Service Specifications
 
-[Governance Services](/concepts/governance-service) provide the implementation of [governance actions](/concepts/governance-action).  They are highly configurable and tis reflects in their specification which includes:
+[Governance Services](/concepts/governance-service) provide the implementation of [governance actions](/concepts/governance-action).  They are highly configurable and this is reflected in their specification which includes:
 
 * *Supported Request Type* - Description of a request type used to describe a request to a governance engine/service.
 * *Supported Request Parameters* - these are the different types of request parameters that can be used to affect the behaviour of the governance service.
@@ -48,7 +48,7 @@ They are attached to the [Integration Connector](/types/4/0464-Dynamic-Integrati
 ???+ info "Further information"
     * Retrieval of the specifications for templates, connectors and governance actions is possible through the [Automated Curation API](/services/omvs/automated-curation/overview).
     * The [Valid Metadata API](/services/omvs/valid-metadata/overview) supports maintenance of such specifications.
-    * The open metadata types for specifications are defined in model [0545 - Reference Data](/types/5/0545-Reference-data).
+    * The open metadata types for specifications are defined in model [0545 - Reference Data](/types/5/0545-Reference-Data).
 
 --8<-- "snippets/abbr.md"
 

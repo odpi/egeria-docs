@@ -115,6 +115,7 @@ nav:
               - Egeria Content Pack: content-packs/egeria-content-pack/overview.md
               - Files Content Pack: content-packs/files-content-pack/overview.md
               - Open Lineage Content Pack: content-packs/open-lineage-content-pack/overview.md
+              - Open Lineage File Store Content Pack: content-packs/open-lineage-file-store-content-pack/overview.md
               - Bitol Content Pack: content-packs/bitol-content-pack/overview.md
               - DCAT Content Pack: content-packs/dcat-content-pack/overview.md
               - Organization Insight Content Pack: content-packs/organization-insight-content-pack/overview.md
@@ -157,6 +158,7 @@ nav:
               - Template Catalog Overview: catalog-templates/index.md
               - Unity Catalog Templates: catalog-templates/unity-catalog-templates.md
               - PostgreSQL Templates: catalog-templates/postgres-server-templates.md
+              - Relational Database Templates: catalog-templates/relational-database-templates.md
       - Developer Guide:
           - Developer Guide: guides/developer/index.md
           - Retrieving Metadata: guides/developer/finding-metadata/overview.md
